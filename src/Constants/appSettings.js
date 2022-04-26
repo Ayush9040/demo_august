@@ -1,0 +1,1 @@
+export const authServerClientId = 'dev-tyi-lms-ecom'
