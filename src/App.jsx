@@ -5,7 +5,6 @@ import {
 
 import { MainRoutes } from './Constants/routes'
 
-
 const App = () => {
   return (
     <Routes>
