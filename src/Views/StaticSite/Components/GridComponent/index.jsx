@@ -1,6 +1,6 @@
 import React from 'react'
 import './style.scss'
-import { harmonyImagesData, fondationDayImagesData } from '../../assets/images/media/imagesData'
+import {harmonyImagesData,fondationDayImagesData} from "../../Views/Media"
 import Carousel from 'react-gallery-carousel'
 import 'react-gallery-carousel/dist/index.css'
 

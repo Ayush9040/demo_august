@@ -6,13 +6,10 @@ import GridComponent from '../../Components/GridComponent'
 import { FondationDayGridComponent } from '../../Components/GridComponent'
 import CommonBtn from '../../Components/commonbtn'
 import GalleryModal from '../../Components/GalleryModal'
-import {
-  harmonyImagesData,
-  fondationDayImagesData,
-} from '../../assets/images/media/imagesData'
 import Carousel from 'react-gallery-carousel'
 import 'react-gallery-carousel/dist/index.css'
 import { faL } from '@fortawesome/free-solid-svg-icons'
+import baseDomain, { mediaAssets } from '../../assets/images/imageAsset'
 
 const MediaGallery = () => {
   const [gallery, setGallery] = useState()
@@ -22,6 +19,26 @@ const MediaGallery = () => {
   //   setGallery(true)
   //   console.log(gallery)
   // }
+
+  const harmonyImagesData=[
+    baseDomain+mediaAssets.mediaAsset1,
+    baseDomain+mediaAssets.mediaAsset2,
+    baseDomain+mediaAssets.mediaAsset3,
+    baseDomain+mediaAssets.mediaAsset4,
+    baseDomain+mediaAssets.mediaAsset5,
+    baseDomain+mediaAssets.mediaAsset6,
+    baseDomain+mediaAssets.mediaAsset7,
+    baseDomain+mediaAssets.mediaAsset8,
+    baseDomain+mediaAssets.mediaAsset9,
+  ]
+
+  const fondationDayImagesData=[
+    baseDomain+mediaAssets.mediaAsset10,
+    baseDomain+mediaAssets.mediaAsset11,
+    baseDomain+mediaAssets.mediaAsset12,
+    baseDomain+mediaAssets.mediaAsset13,
+    baseDomain+mediaAssets.mediaAsset14,
+  ]
 
   const disableCarousel = () => {
     setViewCarousel(!viewCarousel)
