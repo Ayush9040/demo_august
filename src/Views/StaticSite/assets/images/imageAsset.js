@@ -204,46 +204,82 @@ export const alumniAssets = {
 
   // Support-AnnamBrahma
 
-  supportAssets1:'Alumni/Support/Annam Brahma/img-1.jpg',
-  supportAssets2:'Alumni/Support/Annam Brahma/img-2.jpg',
-  supportAssets3:'Alumni/Support/Annam Brahma/img-3.jpg',
-  supportAssets4:'Alumni/Support/Annam Brahma/img-4.jpg',
-  supportAssets5:'Alumni/Support/Annam Brahma/img-5.jpg',
+  supportAssets1: 'Alumni/Support/Annam Brahma/img-1.jpg',
+  supportAssets2: 'Alumni/Support/Annam Brahma/img-2.jpg',
+  supportAssets3: 'Alumni/Support/Annam Brahma/img-3.jpg',
+  supportAssets4: 'Alumni/Support/Annam Brahma/img-4.jpg',
+  supportAssets5: 'Alumni/Support/Annam Brahma/img-5.jpg',
 
   // Upcoming Events
 
-  eventsAssetsTitle:'Alumni/Upcoming Events/upcoming-events.jpg',
-  eventsAssets1:'Alumni/Upcoming Events/upcoming-event-1.jpg',
-  eventsAssets2:'Alumni/Upcoming Events/upcoming-event-2.jpg',
-  eventsAssets3:'Alumni/Upcoming Events/upcoming-event-3.jpg',
+  eventsAssetsTitle: 'Alumni/Upcoming Events/upcoming-events.jpg',
+  eventsAssets1: 'Alumni/Upcoming Events/upcoming-event-1.jpg',
+  eventsAssets2: 'Alumni/Upcoming Events/upcoming-event-2.jpg',
+  eventsAssets3: 'Alumni/Upcoming Events/upcoming-event-3.jpg',
+
+  // AlumniDay
+  alumniDayAssets1: 'Alumni/Alumni Day/alumniGallery0.jpg',
+  alumniDayAssets2: 'Alumni/Alumni Day/alumniGallery1.jpg',
+  alumniDayAssets3: 'Alumni/Alumni Day/alumniGallery2.jpg',
+  alumniDayAssets4: 'Alumni/Alumni Day/alumniGallery3.jpg',
+  alumniDayAssets5: 'Alumni/Alumni Day/alumniGallery3.jpg',
 }
 
 //  Museum
 export const museumAssets = {
   // Virual Tour
-  virualAssets:'Museum/Virtual Tour/Virtual-3.jpg',
+  virualAssets: 'Museum/Virtual Tour/Virtual-3.jpg',
 
   // gallery
 
-  meseumAssets1:'Museum/Gallery/m_1.jpg',
-  meseumAssets2:'Museum/Gallery/m_2.jpg',
-  meseumAssets3:'Museum/Gallery/m_3.jpg',
-  meseumAssets4:'Museum/Gallery/m_4.jpg',
-  meseumAssets5:'Museum/Gallery/m_5.jpg',
-  meseumAssets6:'Museum/Gallery/m_6.jpg',
-  meseumAssets7:'Museum/Gallery/m_7.jpg',
-  meseumAssets8:'Museum/Gallery/m_8.jpg',
-  meseumAssets9:'Museum/Gallery/m_9.jpg',
-  meseumAssets10:'Museum/Gallery/m_10.jpg',
-  meseumAssets11:'Museum/Gallery/m_11.jpg',
-  meseumAssets12:'Museum/Gallery/m_12.jpg',
-  meseumAssets13:'Museum/Gallery/m_13.jpg',
-  meseumAssets14:'Museum/Gallery/m_14.jpg',
-  meseumAssets15:'Museum/Gallery/m_15.jpg',
-  meseumAssets16:'Museum/Gallery/m_16.jpg',
-  meseumAssets17:'Museum/Gallery/m_17.jpg',
-  meseumAssets18:'Museum/Gallery/m_18.jpg',
+  meseumAssets1: 'Museum/Gallery/m_1.jpg',
+  meseumAssets2: 'Museum/Gallery/m_2.jpg',
+  meseumAssets3: 'Museum/Gallery/m_3.jpg',
+  meseumAssets4: 'Museum/Gallery/m_4.jpg',
+  meseumAssets5: 'Museum/Gallery/m_5.jpg',
+  meseumAssets6: 'Museum/Gallery/m_6.jpg',
+  meseumAssets7: 'Museum/Gallery/m_7.jpg',
+  meseumAssets8: 'Museum/Gallery/m_8.jpg',
+  meseumAssets9: 'Museum/Gallery/m_9.jpg',
+  meseumAssets10: 'Museum/Gallery/m_10.jpg',
+  meseumAssets11: 'Museum/Gallery/m_11.jpg',
+  meseumAssets12: 'Museum/Gallery/m_12.jpg',
+  meseumAssets13: 'Museum/Gallery/m_13.jpg',
+  meseumAssets14: 'Museum/Gallery/m_14.jpg',
+  meseumAssets15: 'Museum/Gallery/m_15.jpg',
+  meseumAssets16: 'Museum/Gallery/m_16.jpg',
+  meseumAssets17: 'Museum/Gallery/m_17.jpg',
+  meseumAssets18: 'Museum/Gallery/m_18.jpg',
+}
+//  Donation
+export const donationAssets = {
+  // annam-brahma
+  annamAssets: 'Donation/Annam-brahma/Annam-Brahma-1.jpg',
+
+  // bamc-school
+  bmcAssets: 'Donation/BMC-school/bmc-7.jpg',
+  
+  // children
+  childrenAssets: 'Donation/special-children/cover-special.jpg',
+
+  // community
+  communityAssets: 'Donation/Annam-brahma/Annam-Brahma-1.jpg',
+
+  // police
+  policeAssets: 'Donation/mumbai-police/police-4.jpg',
+
+  // trucksana
+  truckasanaAssets: 'Donation/trucksana/truckasana-1.jpg',
+
+  // underprivileged
+  underprivilegedAssets: 'Donation/BMC-school/bmc-7.jpg',
+}
+//  gifting
+
+export const giftingAssets ={
+  widsomassets:'Gifting/gift-wisdom.jpg',
+  careerAssets:'Gifting/gift-acareer.jpg',
+  nispandAssets:'Gifting/gift nispand.jpg',
+  healthAssets:'Gifting/Gift health & wellness.jpg',
 
 }
-
-

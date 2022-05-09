@@ -1,12 +1,10 @@
 import React, { useState } from 'react'
-import { legacy2 } from '../../assets/icons/icon'
+
 import CommonBanner from '../../Components/Common-banner'
 import './style.scss'
-// import OurOfferings from '../../Components/OurOfferings';
-import Wisdom from '../../assets/images/gift wisdom.jpg'
-import Career from '../../assets/images/gift acareer.jpg'
-import Health from '../../assets/images/Gift health & wellness.jpg'
 import SectionComponent from '../../Components/SectionComponent/index'
+import { baseDomain , giftingAssets } from '../../assets/images/imageAsset'
+
 const Gifting = () => {
   const [payment, setPayment] = useState()
   const [details, setDetails] = useState()
@@ -33,7 +31,7 @@ const Gifting = () => {
         />
         <SectionComponent
           page="Gifting"
-          image={Career}
+          image={baseDomain + giftingAssets.careerAssets}
           title="Gift Career"
           description={`Lorem Ipsum is simply dummy text of the printing and
 typesetting industry. Lorem Ipsum has been the industry's
@@ -51,7 +49,7 @@ Lorem Ipsum.`}
         />
         <SectionComponent
           page="Gifting"
-          image={Health}
+          image={baseDomain + giftingAssets.careerAssets}
           title="Gift health & wellness"
           description={`Lorem Ipsum is simply dummy text of the printing and
 typesetting industry. Lorem Ipsum has been the industry's
@@ -69,7 +67,7 @@ Lorem Ipsum.`}
         />
         <SectionComponent
           page="Gifting"
-          image={Wisdom}
+          image={baseDomain + giftingAssets.widsomassets}
           title="Gift wisdom"
           description={`Lorem Ipsum is simply dummy text of the printing and
 typesetting industry. Lorem Ipsum has been the industry's
@@ -87,6 +85,7 @@ Lorem Ipsum.`}
         />
         <SectionComponent
           page="Gifting"
+          image={baseDomain + giftingAssets.nispandAssets}
           title="Gift Nispand"
           description={`Lorem Ipsum is simply dummy text of the printing and
 typesetting industry. Lorem Ipsum has been the industry's
