@@ -1,6 +1,7 @@
 import React from 'react'
 import Heading from '../Heading'
 import { legacy, filler } from '../../assets/icons/icon'
+import {baseDomain,homeAssets} from "../../assets/images/imageAsset"
 // import founderGuru from '../../assets/images/madhavdasji.jpg'
 // import founder from '../../assets/images/ShriYogendraj.jpg'
 // import mother from '../../assets/images/Sitadevi.jpg'
@@ -13,6 +14,7 @@ import CommonBtn from '../commonbtn'
 import { Link } from 'react-router-dom'
 
 const Legacy = () => {
+
   return (
     <>
       <div className="legacy-container global-padding">
@@ -36,8 +38,9 @@ const Legacy = () => {
         </div>
         <div className="photo-container-wrapper">
           <div className="photo-container global-top-margin">
+            
             <div className="legacy-card">
-              <img src='http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Home/Legacy/Madhavdasji.jpg' />
+              <img src={baseDomain+homeAssets.homeAsset1}/>
               <div className="legacy-card-content">
                 <h4>Paramhamsa Madhavadasji</h4>
                 <h5>Founder&apos;s Guru</h5>
@@ -45,7 +48,7 @@ const Legacy = () => {
               </div>
             </div>
             <div className="legacy-card">
-              <img src='http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Home/Legacy/ShriYogendraj.jpg' />
+              <img src={baseDomain+homeAssets.homeAsset2} />
               <div className="legacy-card-content">
                 <h4>Shri Yogendraj</h4>
                 <h5>Founder</h5>
@@ -53,7 +56,7 @@ const Legacy = () => {
               </div>
             </div>
             <div className="legacy-card">
-              <img src='http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Home/Legacy/Sitadevi.jpg' />
+              <img src={baseDomain+homeAssets.homeAsset3} />
               <div className="legacy-card-content">
                 <h4>Smt. Sitadevi Yogendra</h4>
                 <h5>Mother</h5>
@@ -64,7 +67,7 @@ const Legacy = () => {
 
           <div className="photo-container global-top-margin">
             <div className="legacy-card">
-              <img src='http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Home/Legacy/Jayadeva.jpg' />
+              <img src={baseDomain+homeAssets.homeAsset4} />
               <div className="legacy-card-content">
                 <h4>Dr. Jayadeva Yogendra</h4>
                 <h5>President</h5>
@@ -72,7 +75,7 @@ const Legacy = () => {
               </div>
             </div>
             <div className="legacy-card">
-              <img src='http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Home/Legacy/Hansaji.jpg' />
+              <img src={baseDomain+homeAssets.homeAsset5} />
               <div className="legacy-card-content">
                 <h4>Smt. Hansaji J Yogendra</h4>
                 <h5>Director</h5>
@@ -80,7 +83,7 @@ const Legacy = () => {
               </div>
             </div>
             <div className="legacy-card">
-              <img src='http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Home/Legacy/Hrishi%20.jpg' />
+              <img src={baseDomain+homeAssets.homeAsset6} />
               <div className="legacy-card-content">
                 <h4>Shri Hrishi J Yogendra</h4>
                 <h5>Director</h5>

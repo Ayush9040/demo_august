@@ -2,6 +2,9 @@ import React from 'react'
 import CommonBannerAboutUs from '../../Components/CommonBannerAboutUs'
 import { graphql } from 'gatsby'
 import Tyi from '../../assets/images/why_tyi.png'
+import baseDomain, { aboutAssets } from '../../assets/images/imageAsset'
+
+l
 
 const Blessings = ({ location }) => {
   console.log('tyi', Tyi)
@@ -13,7 +16,7 @@ const Blessings = ({ location }) => {
           Logo={false}
           Navigation={true}
           PageType="blessings"
-          BgImage={Tyi}
+          BgImage={baseDomain+aboutAssets.aboutAsset43}
           Heading="Dr Hansaji’s Blessings"
           isOnlyBanner={false}
           innerNav={true}

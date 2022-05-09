@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import Heading from '../Heading'
 import TimePeriodSelector from './TimePeriodSelector'
 import { facts, divider } from '../../assets/icons/icon'
+import {} from ".././"
 import './style.scss'
 
 import Images from './imageRepo'

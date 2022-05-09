@@ -7,6 +7,7 @@ import { experience } from '../../assets/icons/icon'
 import './style.scss'
 import CommonBtn from '../commonbtn'
 import { experienceData } from '../../utils/ExpirienceData'
+import baseDomain, { homeAssets } from '../../assets/images/imageAsset'
 
 const Experience = () => {
   let settings = {
@@ -43,7 +44,7 @@ const Experience = () => {
             <CommonBtn text={'View All'} />
           </div>
           <div className="carousel-image">
-            <img src="http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Home/Experience/shriramnathkovid.png" />
+            <img src={baseDomain+homeAssets.homeAsset55}/>
           </div>
         </div>
         <div className="experience-carousel global-padding">
@@ -70,7 +71,7 @@ const Experience = () => {
             <CommonBtn text={'View All'} />
           </div>
           <div className="carousel-image">
-            <img src="http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Home/Experience/Modiji.jpg" />
+            <img src={baseDomain+homeAssets.homeAsset56} />
           </div>
         </div>
         <div className="experience-carousel global-padding">
@@ -96,7 +97,7 @@ const Experience = () => {
             <CommonBtn text={'View All'} />
           </div>
           <div className="carousel-image">
-            <img src="http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Home/Experience/Naiduji.jpg" />
+            <img src={baseDomain+homeAssets.homeAsset56} />
           </div>
         </div>
         <div className="experience-carousel global-padding">
@@ -122,7 +123,7 @@ const Experience = () => {
             <CommonBtn text={'View All'} />
           </div>
           <div className="carousel-image">
-            <img src="http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Home/Experience/Amitabh-Bachchan.jpg" />
+            <img src={baseDomain+homeAssets.homeAsset56} />
           </div>
         </div>
       </Slider>

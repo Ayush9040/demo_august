@@ -18,13 +18,14 @@ import {
   mobile,
 } from '../../assets/icons/icon'
 import { Link } from 'react-router-dom'
+import baseDomain, { homeAssets } from '../../assets/images/imageAsset'
 const Footer = () => {
   return (
     <div className='footer-container global-padding'>
       <div className='logo-description'>
         <div className='logo'>
           {/* <StaticImage src='../../assets/images/tyi.png' /> */}
-          <img src='http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Home/tyi.png' />
+          <img src={baseDomain+homeAssets.homeAsset70} />
         </div>
         <br />
 

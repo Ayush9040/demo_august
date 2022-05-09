@@ -34,27 +34,41 @@
 // import image2017 from '../../assets/images/facts/2017_.jpg'
 // import image2017_1 from '../../assets/images/facts/2017-1.jpg'
 
+import baseDomain, { homeAssets } from "../../assets/images/imageAsset";
+
 export default {
   /* Adding 6 images to the array as per design */
   images1990: [
-    'http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Home/Facts/1916.jpg',
-    'http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Home/Facts/1918.jpg',
-    'http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Home/Facts/1920.jpg',
-    'http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Home/Facts/1921.jpg',
-    'http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Home/Facts/1924.jpg',
-    'http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Home/Facts/1928.jpg',
+    baseDomain+homeAssets.homeAsset31,
+    baseDomain+homeAssets.homeAsset32,
+    baseDomain+homeAssets.homeAsset33,
+    baseDomain+homeAssets.homeAsset34,
+    baseDomain+homeAssets.homeAsset35,
+    baseDomain+homeAssets.homeAsset36,
+    
   ],
   images2000: [
-    'http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Home/Facts/2000%20%281%29.jpg',
-    'http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Home/Facts/2010%20%281%29.jpg',
+    baseDomain+homeAssets.homeAsset37,
+    baseDomain+homeAssets.homeAsset38,
+    baseDomain+homeAssets.homeAsset39,
+    baseDomain+homeAssets.homeAsset40,
+    baseDomain+homeAssets.homeAsset41,
+    baseDomain+homeAssets.homeAsset42,
   ],
   images2010: [
-    'http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Home/Facts/2011.jpg',
-    'http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Home/Facts/2012_%20%281%29.jpg',
-    'http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Home/Facts/2014_.jpg',
-    'http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Home/Facts/2015%20%281%29.jpg',
-    'http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Home/Facts/2016-1.jpg',
-    'http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Home/Facts/2016.jpg',
+    baseDomain+homeAssets.homeAsset43,
+    baseDomain+homeAssets.homeAsset44,
+    baseDomain+homeAssets.homeAsset45,
+    baseDomain+homeAssets.homeAsset46,
+    baseDomain+homeAssets.homeAsset47,
+    baseDomain+homeAssets.homeAsset48,
   ],
-  images2020: [],
+  images2020: [
+    baseDomain+homeAssets.homeAsset49,
+    baseDomain+homeAssets.homeAsset50,
+    baseDomain+homeAssets.homeAsset51,
+    baseDomain+homeAssets.homeAsset52,
+    baseDomain+homeAssets.homeAsset53,
+    baseDomain+homeAssets.homeAsset54,
+  ],
 }

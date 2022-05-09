@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Heading from '../Heading'
 import './style.scss'
 import { courses, filler } from '../../assets/icons/icon'
+import {baseDomain,homeAssets} from "../../assets/images/imageAsset"
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import Slider from 'react-slick'
@@ -109,35 +110,35 @@ const OurOfferings = props => {
           <Slider {...settings}>
             <div className="course-offered">
               <img
-                src="http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Home/Offerings/7dayscamp.jpg"
+                src={baseDomain+homeAssets.homeAsset7}
                 placeholder="none"
               />
               <h4>7-day Yoga Health Camp</h4>
             </div>
             <div className="course-offered">
               <img
-                src="http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Home/Offerings/21days.jpg"
+                src={baseDomain+homeAssets.homeAsset8}
                 placeholder="none"
               />
               <h4>21-Day Better Living Course</h4>
             </div>
             <div className="course-offered">
               <img
-                src="http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Home/Offerings/200hrsTTC.jpg"
+                src={baseDomain+homeAssets.homeAsset9}
                 placeholder="none"
               />
               <h4>Regular Asana Classes</h4>
             </div>
             <div className="course-offered">
               <img
-                src="http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Home/Offerings/Childrencamp.jpg"
+                src={baseDomain+homeAssets.homeAsset10}
                 placeholder="none"
               />
               <h4>Children’s Regular Classes</h4>
             </div>
             <div className="course-offered">
               <img
-                src="http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Home/Offerings/900hrs.jpg"
+                src={baseDomain+homeAssets.homeAsset11}
                 placeholder="none"
               />
               <h4>7-month TTC</h4>

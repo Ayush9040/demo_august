@@ -2,6 +2,7 @@ import React from 'react'
 import CommonBtn from '../commonbtn'
 import NispandIcon from '../../assets/images/nispand-icon.png'
 import './style.scss'
+import baseDomain, { homeAssets } from '../../assets/images/imageAsset'
 
 const Nispand = () => {
   return (
@@ -35,19 +36,19 @@ const Nispand = () => {
           <br />
           <div className="google-app-store">
             <div className="google">
-              <img src="http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Home/Nispand/google-play-logo-10628.png" />
+              <img src={baseDomain+homeAssets.homeAsset22} />
             </div>
             <div className="apple">
               <img
                 width={'93%'}
-                src="http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Home/Nispand/AppStore.png"
+                src={baseDomain+homeAssets.homeAsset23}
               />
             </div>
           </div>
         </div>
       </div>
       <div className="app-preview">
-        <img src="http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Home/Nispand/nispandApp.png" />
+        <img src={baseDomain+homeAssets.homeAsset24} />
       </div>
     </div>
   )
