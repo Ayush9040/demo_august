@@ -92,6 +92,11 @@ export const homeAssets = {
 
 export const aboutAssets={
   aboutAsset1:"/About/Overview/about-overview.jpg",
+
+
+
+  // shree Yogendra jI
+
   aboutAsset2:"/About/Our Legacy/Shree Yogendra ji/r.jpg",
   aboutAsset3:"/About/Our Legacy/Shree Yogendra ji/l.jpg",
   aboutAsset4:"/About/Our Legacy/Shree Yogendra ji/1.jpg",
@@ -100,7 +105,14 @@ export const aboutAssets={
   aboutAsset7:"/About/Our Legacy/Shree Yogendra ji/4.jpg",
   aboutAsset8:"/About/Our Legacy/Shree Yogendra ji/5.jpg",
   aboutAsset9:"/About/Our Legacy/Shree Yogendra ji/6.jpg",
+
+  // Madhavdas Ji
+
   aboutAsset10:"/About/Our Legacy/Paramhamsa Madhavadas ji/Madhavdasji.jpg",
+
+
+  // sitaDevi Ji
+
   aboutAsset11:"/About/Our Legacy/Smt. Sitadevi Ji/l.jpg",
   aboutAsset12:"/About/Our Legacy/Smt. Sitadevi Ji/r.jpg",
   aboutAsset13:"/About/Our Legacy/Smt. Sitadevi Ji/1.jpg",
@@ -109,6 +121,10 @@ export const aboutAssets={
   aboutAsset16:"/About/Our Legacy/Smt. Sitadevi Ji/4.jpg",
   aboutAsset17:"/About/Our Legacy/Smt. Sitadevi Ji/5.jpg",
   aboutAsset18:"/About/Our Legacy/Smt. Sitadevi Ji/6.jpg",
+
+
+  // jayadeva Yogendra
+
   aboutAsset19:"/About/Our Legacy/Dr. Jayadeva Yogendra/l.jpg",
   aboutAsset20:"/About/Our Legacy/Dr. Jayadeva Yogendra/r.jpg",
   aboutAsset21:"/About/Our Legacy/Dr. Jayadeva Yogendra/1.jpg",
@@ -117,6 +133,9 @@ export const aboutAssets={
   aboutAsset24:"/About/Our Legacy/Dr. Jayadeva Yogendra/4.jpg",
   aboutAsset25:"/About/Our Legacy/Dr. Jayadeva Yogendra/5.jpg",
   aboutAsset26:"/About/Our Legacy/Dr. Jayadeva Yogendra/6.jpg",
+  
+  // hansaji Yogengra
+  
   aboutAsset27:"/About/Our Legacy/Dr. Hansaji Yogendra/1 left side .jpg",
   aboutAsset28:"/About/Our Legacy/Dr. Hansaji Yogendra/2nd right side.jpg",
   aboutAsset29:"/About/Our Legacy/Dr. Hansaji Yogendra/1.jpg",
@@ -125,6 +144,9 @@ export const aboutAssets={
   aboutAsset32:"/About/Our Legacy/Dr. Hansaji Yogendra/4.jpg",
   aboutAsset33:"/About/Our Legacy/Dr. Hansaji Yogendra/5.jpg",
   aboutAsset34:"/About/Our Legacy/Dr. Hansaji Yogendra/6.jpg",
+  
+  // harishji
+  
   aboutAsset35:"/About/Our Legacy/Harish Ji/l.jpg",
   aboutAsset36:"/About/Our Legacy/Harish Ji/r.jpg",
   aboutAsset37:"/About/Our Legacy/Harish Ji/1.jpg",
@@ -133,6 +155,8 @@ export const aboutAssets={
   aboutAsset40:"/About/Our Legacy/Harish Ji/4.jpg",
   aboutAsset41:"/About/Our Legacy/Harish Ji/5.jpg",
   aboutAsset42:"/About/Our Legacy/Harish Ji/6.jpg",
+
+  // blessings
   aboutAsset43:"/About/Pujya Maa Dr Hansaji’s blessings/why_tyi.png",
 
   // legacy images 
@@ -143,13 +167,40 @@ export const aboutAssets={
   aboutAsset47:"/About/Our Legacy/l-3.jpg",
   aboutAsset48:"/About/Our Legacy/l-4.jpg",
   aboutAsset49:"/About/Our Legacy/l-5.jpg",
+  
+}
 
-  // videos
+export const mediaAssets={
+  
 
-  
-  
-  
-  
+  // gallery
+
+
+      // harmony-sec
+  mediaAsset1:"/Media/gallery/harmony/image1.jpg",
+  mediaAsset2:"/Media/gallery/harmony/image2.jpg",
+  mediaAsset3:"/Media/gallery/harmony/image3.jpg",
+  mediaAsset4:"/Media/gallery/harmony/image4.jpg",
+  mediaAsset5:"/Media/gallery/harmony/image5.jpg",
+  mediaAsset6:"/Media/gallery/harmony/image6.jpg",
+  mediaAsset7:"/Media/gallery/harmony/image7.jpg",
+  mediaAsset8:"/Media/gallery/harmony/image8.jpg",
+  mediaAsset9:"/Media/gallery/harmony/image9.jpg",
+
+
+      // 99foundation sec
+  mediaAsset10:"/Media/gallery/99FoundationDay/img1.jpg",
+  mediaAsset11:"/Media/gallery/99FoundationDay/img2.jpg",
+  mediaAsset12:"/Media/gallery/99FoundationDay/img3.jpg",
+  mediaAsset13:"/Media/gallery/99FoundationDay/img4.jpg",
+  mediaAsset14:"/Media/gallery/99FoundationDay/img5.jpg",
+
+  // news
+
+ 
+
+  // events
+
 }
 
 
