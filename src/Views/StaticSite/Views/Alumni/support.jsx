@@ -1,12 +1,9 @@
 import React, { useState } from 'react'
-import AlumniGrid from '../../Components/AlumniGrid'
 import AlumiNav from '../../Components/AlumniNav'
 import CommonBanner from '../../Components/Common-banner'
 import Donation from '../../Components/Donation'
 import SocialInitiatives from '../../Components/SocialInitiatives'
 import SocialInitiativesGallery from '../../Components/SocialInitiatives/SocialInitiativesGallery'
-import AlumniGallery from './alumni-gallery'
-// import support from '../../assets/images/support.jpg'
 
 const Support = () => {
   const [imageChanger, setImageChanger] = useState(0)

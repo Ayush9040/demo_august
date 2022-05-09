@@ -1,10 +1,9 @@
 import React from 'react'
-import SeminarImg from '../../assets/images/seminar.png'
 import CommonBannerNav1 from '../../Components/AlumniNav'
 import { share } from '../../assets/icons/icon'
 import './style.scss'
 import SeminarCard from '../../Components/SeminarCard'
-
+import { baseDomain , alumniAssets } from '../../assets/images/imageAsset'
 const Seminar = () => {
   return (
     <div className="seminar-series">
@@ -33,7 +32,7 @@ const Seminar = () => {
           <img
             className="seminar-iamge"
             alt="Upcoming Seminar"
-            src={SeminarImg}
+            src={baseDomain + alumniAssets.eventsAssetsTitle}
           />
         </div>
       </div>
@@ -42,15 +41,15 @@ const Seminar = () => {
         <div className="seminars-card-container">
           <SeminarCard
             title={'500 hrs TTC'}
-            bgImage={require('../../assets/images/upcoming-event-1.jpg')}
+            bgImage={baseDomain + alumniAssets.eventsAssets1}
           />
           <SeminarCard
             title={'Pregnancy Camp'}
-            bgImage={require('../../assets/images/upcoming-event-2.jpg')}
+            bgImage={baseDomain + alumniAssets.eventsAssets2}
           />
           <SeminarCard
             title={'Regular Asana Class'}
-            bgImage={require('../../assets/images/upcoming-event-3.jpg')}
+            bgImage={baseDomain + alumniAssets.eventsAssets3}
           />
         </div>
       </div>

@@ -3,7 +3,7 @@ import PublicationNav from '../../Components/PublicationNav'
 import './style.scss'
 import { breakIcon } from '../../assets/icons/icon'
 import CommonBtn from '../../Components/commonbtn'
-
+import { baseDomain , publicationAssests } from '../../assets/images/imageAsset'
 const YogaTotalHealth = () => {
   return (
     <div className="yoga-total-health">
@@ -12,7 +12,7 @@ const YogaTotalHealth = () => {
       </div>
       <div className="publication-intro">
         <div className="mag-preview">
-          <img src='http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Publications/Yoga%20%26%20Total%20Health/YTH-main.png' />
+          <img src={baseDomain + publicationAssests.publicationAssests7} />
         </div>
         <div className="mag-details">
           <div className="journal">
