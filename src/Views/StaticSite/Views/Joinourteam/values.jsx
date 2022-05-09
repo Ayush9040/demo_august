@@ -1,10 +1,8 @@
 import React from 'react'
 import CommonBanner from '../../Components/Common-banner'
-import values from '../../assets/images/values.png'
-// import Meditation from "../../assets/images/teaching_meditation.png"
-import OurValues from '../../assets/images/our-values.jpg'
+// import values from '../../assets/images/values.png'
 import './styles.scss'
-// import "../../Components/Common-banner/styles.scss"
+import baseDomain,{ volunteerAssets } from '../../assets/images/imageAsset'
 
 const Values = () => {
   return (
@@ -15,7 +13,7 @@ const Values = () => {
           Logo={false}
           Navigation={true}
           PageType="Values"
-          BgImage={values}
+          // BgImage={values}
           Heading="Values"
           isOnlyBanner={false}
           innerNav={true}
@@ -40,7 +38,7 @@ const Values = () => {
           </p>
         </div>
         <div className="image-content">
-          <img src={OurValues} />
+          <img src={baseDomain+volunteerAssets.valuesAssets} />
         </div>
       </div>
     </>

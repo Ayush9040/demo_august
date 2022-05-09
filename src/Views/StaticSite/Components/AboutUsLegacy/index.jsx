@@ -4,13 +4,14 @@ import './styles.scss'
 // import founderGuru from '../../assets/images/Founder.png'
 import CommonBtn from '../commonbtn'
 import CommonBannerNavAboutUs from '../CommonBannerNavAboutUs'
-import l0 from '../../assets/images/our-legacy/l-0.jpg'
-import l1 from '../../assets/images/our-legacy/l-1.jpg'
-import l2 from '../../assets/images/our-legacy/l-2.jpg'
-import l3 from '../../assets/images/our-legacy/l-3.jpg'
-import l4 from '../../assets/images/our-legacy/l-4.jpg'
-import l5 from '../../assets/images/our-legacy/l-5.jpg'
+// import l0 from '../../assets/images/our-legacy/l-0.jpg'
+// import l1 from '../../assets/images/our-legacy/l-1.jpg'
+// import l2 from '../../assets/images/our-legacy/l-2.jpg'
+// import l3 from '../../assets/images/our-legacy/l-3.jpg'
+// import l4 from '../../assets/images/our-legacy/l-4.jpg'
+// import l5 from '../../assets/images/our-legacy/l-5.jpg'
 import { Link } from 'react-router-dom'
+import baseDomain, { aboutAssets } from '../../assets/images/imageAsset'
 
 const CommonBannerLegacy = ({
   Navigation,
@@ -22,6 +23,14 @@ const CommonBannerLegacy = ({
   innerNav,
 }) => {
   const [activeFounder, setActiveFounder] = useState(0)
+
+  let l0=baseDomain+aboutAssets.aboutAsset44
+  let l1=baseDomain+aboutAssets.aboutAsset45
+  let l2=baseDomain+aboutAssets.aboutAsset46
+  let l3=baseDomain+aboutAssets.aboutAsset47
+  let l4=baseDomain+aboutAssets.aboutAsset48
+  let l5=baseDomain+aboutAssets.aboutAsset49
+  
 
   const founderData = [
     {

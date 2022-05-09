@@ -4,6 +4,7 @@ import { newsletter } from '../../assets/icons/icon'
 import CommonBtn from '../commonbtn'
 import './style.scss'
 import { Link } from 'react-router-dom'
+import baseDomain,{ homeAssets } from '../../assets/images/imageAsset'
 
 const NewsLetter = () => {
   return (
@@ -11,19 +12,19 @@ const NewsLetter = () => {
       <div className="magezines">
         <div className="images">
           <div className="image">
-            <img src='http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Home/NewsLetter/Yogasattva-jan.jpg' />
+            <img src={baseDomain+homeAssets.homeAsset67} />
             <br />
             <br />
             <p>January 2022</p>
           </div>
           <div className="image">
-            <img src='http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Home/NewsLetter/Yogasattva-Feb.jpg' />
+            <img src={baseDomain+homeAssets.homeAsset67}/>
             <br />
             <br />
             <p>Feburary 2022</p>
           </div>
           <div className="image">
-            <img src='http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Home/NewsLetter/Yogasattva-March.jpg' />
+            <img src={baseDomain+homeAssets.homeAsset67} />
             <br />
             <br />
             <p>March 2022</p>

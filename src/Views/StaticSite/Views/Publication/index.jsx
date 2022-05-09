@@ -3,7 +3,7 @@ import PublicationNav from '../../Components/PublicationNav'
 import './style.scss'
 import { breakIcon } from '../../assets/icons/icon'
 import CommonBtn from '../../Components/commonbtn'
-import { baseDomain , publicationAssests } from '../../assets/images/imageAsset'
+import baseDomain,{ publicationAssests } from '../../assets/images/imageAsset'
 const YogaTotalHealth = () => {
   return (
     <div className="yoga-total-health">

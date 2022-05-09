@@ -2,7 +2,7 @@ import React from 'react'
 import SectionComponent from '../../Components/SectionComponent'
 import DonationNavBar from '../../Components/donationNavbar'
 import Donation from '../../Components/Donation'
-import { baseDomain , donationAssets } from '../../assets/images/imageAsset'
+import baseDomain,{ donationAssets } from '../../assets/images/imageAsset'
 const Underprivileged = () => {
   return (
     <div>

@@ -2,7 +2,7 @@ import React from 'react'
 import Donation from '../../Components/Donation'
 import DonationNavBar from '../../Components/donationNavbar'
 import SectionComponent from '../../Components/SectionComponent'
-import { baseDomain , donationAssets } from '../../assets/images/imageAsset'
+import baseDomain,{ donationAssets } from '../../assets/images/imageAsset'
 const AnnamBrahmha = () => {
   return (
     <div className="annam-page">

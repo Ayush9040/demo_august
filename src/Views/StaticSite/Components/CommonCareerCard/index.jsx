@@ -2,14 +2,17 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import './styles.scss'
 
-const CareerCard = ({ cardTitle, index, link }) => {
+const CareerCard = ({ cardTitle, bgImg, link }) => {
   return (
     <>
-      <div className={`our-card-container bg-img-${index}`}>
-        <h3 className="job-title">{cardTitle}</h3>
+      <div
+        className='our-card-container'
+        style={{ backgroundImage: `url(${bgImg})` }}
+      >
+        <h3 className='job-title'>{cardTitle}</h3>
         {/* <CommonBtn text={"Explore"} /> */}
         <Link>
-          <button className="our-card-btn">Explore</button>
+          <button className='our-card-btn'>Explore</button>
         </Link>
       </div>
     </>

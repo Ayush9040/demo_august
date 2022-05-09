@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import CommonBanner from '../../Components/Common-banner'
 import './style.scss'
 import SectionComponent from '../../Components/SectionComponent/index'
-import { baseDomain , giftingAssets } from '../../assets/images/imageAsset'
+import baseDomain,{ giftingAssets } from '../../assets/images/imageAsset'
 
 const Gifting = () => {
   const [payment, setPayment] = useState()

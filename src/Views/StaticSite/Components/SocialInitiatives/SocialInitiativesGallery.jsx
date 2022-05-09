@@ -1,6 +1,6 @@
 import React from 'react'
 import './style.scss'
-import { baseDomain , alumniAssets } from '../../assets/images/imageAsset'
+import baseDomain,{ alumniAssets } from '../../assets/images/imageAsset'
 
 const SocialInitiativesGallery = ({ notEvent,imageChanger }) => {
 

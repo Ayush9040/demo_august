@@ -1,13 +1,16 @@
 import React from 'react'
 import OurLegacyModal from '../../../Components/OurLegacyModal'
-import leftImg from '../../../assets/images/our-legacy/dr-hansaji-yogendra/l.jpg'
-import rightImg from '../../../assets/images/our-legacy/dr-hansaji-yogendra/r.jpg'
-import g1 from '../../../assets/images/our-legacy/dr-hansaji-yogendra/1.jpg'
-import g2 from '../../../assets/images/our-legacy/dr-hansaji-yogendra/2.jpg'
-import g3 from '../../../assets/images/our-legacy/dr-hansaji-yogendra/3.jpg'
-import g4 from '../../../assets/images/our-legacy/dr-hansaji-yogendra/4.jpg'
-import g5 from '../../../assets/images/our-legacy/dr-hansaji-yogendra/5.jpg'
-import g6 from '../../../assets/images/our-legacy/dr-hansaji-yogendra/6.jpg'
+
+
+let leftImg=baseDomain+aboutAssets.aboutAsset27
+let rightImg=baseDomain+aboutAssets.aboutAsset28
+  
+let g1=baseDomain+aboutAssets.aboutAsset29
+let g2=baseDomain+aboutAssets.aboutAsset30
+let g3=baseDomain+aboutAssets.aboutAsset31
+let g4=baseDomain+aboutAssets.aboutAsset32
+let g5=baseDomain+aboutAssets.aboutAsset33
+let g6=baseDomain+aboutAssets.aboutAsset34
 
 export default function HarishJi() {
   const data = {

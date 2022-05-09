@@ -3,7 +3,7 @@ import CommonBannerNav1 from '../../Components/AlumniNav'
 import { share } from '../../assets/icons/icon'
 import './style.scss'
 import SeminarCard from '../../Components/SeminarCard'
-import { baseDomain , alumniAssets } from '../../assets/images/imageAsset'
+import baseDomain,{ alumniAssets } from '../../assets/images/imageAsset'
 const Seminar = () => {
   return (
     <div className="seminar-series">

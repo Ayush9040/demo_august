@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import AlumniGrid from '../../Components/AlumniGrid'
 import CommonBannerNav1 from '../../Components/AlumniNav'
-import { baseDomain, alumniAssets } from '../../assets/images/imageAsset'
+import baseDomain,{ alumniAssets } from '../../assets/images/imageAsset'
 
 const AlumniGallery = () => {
   const galleryImages = {

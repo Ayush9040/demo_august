@@ -3,7 +3,7 @@ import CommonBanner from '../../Components/Common-banner'
 import './style.scss'
 import './style.scss'
 import SectionComponent from '../../Components/SectionComponent'
-import { baseDomain , donationAssets } from '../../assets/images/imageAsset'
+import baseDomain,{ donationAssets } from '../../assets/images/imageAsset'
 const AnnamBramha = () => {
   const pageData = [
     {

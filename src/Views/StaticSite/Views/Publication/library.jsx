@@ -1,7 +1,6 @@
 import React from 'react'
 import PublicationNav from '../../Components/PublicationNav'
-import heroImg from '../../assets/images/library/hero.jpg'
-import { baseDomain , publicationAssests } from '../../assets/images/imageAsset'
+import baseDomain,{ publicationAssests } from '../../assets/images/imageAsset'
 
 const library = () => {
   return (
@@ -15,7 +14,7 @@ const library = () => {
             <div className="cardImg">
               <div>
                 <img
-                  src={heroImg}
+                  src={baseDomain+publicationAssests.libraryAsset}
                   alt=""
                   style={{
                     width: '100%',

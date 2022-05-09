@@ -3,6 +3,7 @@ import CommonBanner from '../../Components/Common-banner'
 import benefits from '../../assets/images/benifits.png'
 import './styles.scss'
 import CareerCard from '../../Components/CommonCareerCard'
+import baseDomain,{ volunteerAssets } from '../../assets/images/imageAsset'
 // import "../../Components/Common-banner/styles.scss"
 
 const Volunteer = () => {
@@ -26,10 +27,10 @@ const Volunteer = () => {
           <div className="bottom-line"></div>
         </div>
         <div className="career-cards">
-          <CareerCard cardTitle="Annam Brahma" index={1} />
-          <CareerCard cardTitle="BMC Schools" index={2} />
-          <CareerCard cardTitle="Traffic Police" index={3} />
-          <CareerCard cardTitle="Tree Plantation" index={4} />
+          <CareerCard cardTitle="Annam Brahma" bgImg={baseDomain+volunteerAssets.volunteerAssets1} />
+          <CareerCard cardTitle="BMC Schools" bgImg={baseDomain+volunteerAssets.volunteerAssets2} />
+          <CareerCard cardTitle="Traffic Police" bgImg={baseDomain+volunteerAssets.volunteerAssets3} />
+          <CareerCard cardTitle="Tree Plantation" bgImg={baseDomain+volunteerAssets.volunteerAssets4} />
         </div>
       </div>
     </>

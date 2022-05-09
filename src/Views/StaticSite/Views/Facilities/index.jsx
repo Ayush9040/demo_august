@@ -5,7 +5,7 @@ import 'slick-carousel/slick/slick-theme.css'
 import Slider from 'react-slick'
 import './style.scss'
 
-import { baseDomain, facilitiyAssets } from '../../assets/images/imageAsset'
+import baseDomain,{ facilitiyAssets } from '../../assets/images/imageAsset'
 const Facilities = () => {
   const [activeSlide, setActiveSlide] = useState(0)
   let settings = {

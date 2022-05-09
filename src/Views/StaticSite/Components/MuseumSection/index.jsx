@@ -8,7 +8,6 @@ import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import CommonGrid from '../GalleryGrid'
 import Location from './Location'
-import founderGuru from '../../assets/images/founderGuru.png'
 import { Link } from 'react-router-dom'
 import CommonBtn from '../commonbtn'
 const Museum = () => {
@@ -59,7 +58,7 @@ const Museum = () => {
                     <CommonBtn text={'Take a virtual tour'} />
                   </Link>
                 </div>
-                <div className="museum-card-image"></div>
+                <div className="museum-card-image" ></div>
               </div>
             </div>
           )

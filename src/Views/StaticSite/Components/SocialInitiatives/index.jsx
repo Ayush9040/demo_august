@@ -8,12 +8,13 @@ import { socialData } from '../../utils/socialData'
 import CommonBtn from '../commonbtn'
 
 import './style.scss'
+import baseDomain,{ homeAssets } from '../../assets/images/imageAsset'
 
 const SocialInitiatives = ({ alumni,setImageChanger,imageChanger }) => {
 
-  const AnnamBrahma = 'http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Home/Social%20Initiatives/SocialAnnamBhrama.jpg'
-  const Police = 'http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Home/Social%20Initiatives/SocialPolice.jpg'
-  const BMC = 'http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Home/Social%20Initiatives/SocialBMCSchools.jpg'
+  const AnnamBrahma = `${baseDomain}${homeAssets.homeAsset19}`
+  const Police = `${baseDomain}${homeAssets.homeAsset20}`
+  const BMC = `${baseDomain}${homeAssets.homeAsset21}`
   let images = [AnnamBrahma,Police,BMC]
 
   const [image,setImage]=useState(AnnamBrahma)

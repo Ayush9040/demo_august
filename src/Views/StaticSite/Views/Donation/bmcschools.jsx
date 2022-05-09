@@ -1,7 +1,7 @@
 import React from 'react'
 
 import SectionComponent from '../../Components/SectionComponent'
-import { baseDomain , donationAssets } from '../../assets/images/imageAsset'
+import baseDomain,{ donationAssets } from '../../assets/images/imageAsset'
 import DonationNavBar from '../../Components/donationNavbar'
 import Donation from '../../Components/Donation'
 const Bmcschools = () => {

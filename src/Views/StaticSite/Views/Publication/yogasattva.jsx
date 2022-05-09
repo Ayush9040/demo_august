@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import './style.scss'
-import { baseDomain, publicationAssests } from '../../assets/images/imageAsset'
+import baseDomain,{ publicationAssests } from '../../assets/images/imageAsset'
 import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'

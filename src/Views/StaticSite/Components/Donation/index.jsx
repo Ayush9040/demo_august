@@ -2,7 +2,6 @@ import React from 'react'
 import CommonBtn from '../commonbtn'
 import './style.scss'
 import { experience } from '../../assets/icons/icon'
-import Meditation from '../../assets/images/teaching_meditation.png'
 const Donation = ({ supportText, page }) => {
   return (
     <>
