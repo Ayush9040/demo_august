@@ -1,0 +1,104 @@
+.videos-container{
+    width: 90%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding-bottom: 0;
+.video-background{
+    background-color: #EBB38A87;
+    padding-bottom: 5rem;
+    .videos-header{
+        display: grid;
+        grid-template-columns: 40% 60%;
+        padding: 3rem 0;
+        align-items: center;
+        margin: 0 auto;
+        .videos-description{
+            width: 50%;
+        }
+    }
+    .featured-videos{
+        display: flex;
+        gap: 3rem;
+        margin: 0 -3% 0 -3%;
+        div{
+            min-width: 200px;
+            min-height: 100%;
+        }
+    }
+    .global-common-btn{
+        margin: 5rem auto;
+    }
+}
+}
+
+.svg-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+.image-cont {
+    position: relative;
+    img{
+        width: 100%;
+    }
+}
+
+[role='button']{
+    cursor: pointer;
+}
+
+.video-overlay{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0, 0.9);
+    z-index: 9999;
+    .video-player-container{
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        iframe{
+            width: 100%;
+            height: 60vw;
+        }
+
+        .close-btn{
+            font-size: 22px;
+            color: white;
+            align-self: flex-end;
+            margin-right: 10px;
+            padding: 5px 10px; 
+            border-radius: 10px;
+            border: 1px solid gray;
+        }
+    }
+}
+
+@media (max-width:768px){
+    .videos-container{
+        width: 100%;
+        .video-background{
+            .videos-header{
+                grid-template-columns: 100%;
+                .videos-description{
+                    width: 80%;
+                    margin: 5rem auto 2rem auto;
+                }
+            }
+            .featured-videos{
+                flex-wrap: wrap;
+                width: 80%;
+                margin: 0 auto;
+            }
+        }
+    }
+}

@@ -1,0 +1,50 @@
+.navbar-container {
+    z-index: 99;
+    position: absolute;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    padding: 2rem;
+    box-sizing: border-box;
+    div{
+        width: 100%;
+    }
+    .hamburger svg{
+        cursor: pointer;
+    }
+    .title-logo{
+        img{
+            width: 80%;
+            margin: 0 auto;
+            object-fit: contain!important;
+        }
+    }
+    .quick-actions{
+        ul{
+            list-style: none;
+            display: flex;
+            justify-content: flex-end;
+            padding-left: 0;
+            li{
+                margin: 0 1rem;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+@media (max-width:768px){
+    .quick-actions{
+        display: none;
+    }
+}
+
+// mobile responsive
+@media (max-width:500px){
+    .navbar-container{
+        .hamburger{
+            width: auto;
+        }
+    }
+}

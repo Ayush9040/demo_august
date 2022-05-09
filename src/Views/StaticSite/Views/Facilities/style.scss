@@ -1,0 +1,175 @@
+.facilities-page-container{
+    .facilities-navigation-lg{
+        margin: 5rem 0rem;
+        ul {
+            display: flex;
+            width: 50%;
+            align-items: center;
+            justify-content: center;
+            list-style: none;
+            margin: 0 auto;
+            padding: 0;
+            flex-wrap: wrap;
+        }
+        ul li {
+            font-size: 1.75rem;
+            // margin: 0 0.5rem;
+            border-right: 1px solid #000;
+            padding: 0rem 0.7rem;
+            margin: 0.5rem 0;
+            cursor: pointer;
+           span{
+            &.active{
+                font-weight: 700;
+                border-bottom: 3px solid var(--brick-red);
+            }
+           }
+        }
+    }
+.facilities-info{
+    padding: 5rem 0rem;
+    background: #CECECE4D;
+    .slick-slide:not(.slick-center){
+        .facility-image{
+            opacity: 0.53;
+        }
+        .facility-description{
+            display: none;
+        }
+      }
+}
+.facilities-slide{
+     text-align: center;
+ }
+.facility-image{
+     width: fit-content;
+    img{
+        width: 70%;
+        margin: 0 auto;
+    }
+ }
+.facility-description{
+     width: 60%;
+     margin: 0 auto;
+     h2{
+         display: inline-block;
+         font-weight:700 ;
+         border-bottom: 3px solid var(--brick-red);
+         margin: 15rem auto 2rem;
+
+     }
+     p{
+        margin: 0rem auto 4rem;
+     }
+ }
+ .global-common-btn{
+     margin:0 auto;
+ }
+ .slick-center{
+      .facility-image{
+        -webkit-transform: scale(1.5);
+        -moz-transform: scale(1.5);
+        transform: scale(1.5);
+      }
+ }
+
+}
+.additional-info{
+    background-color: #CECECE;
+    padding: 5rem;
+    .information{
+        display: flex;
+        justify-content: space-between;
+    }
+    ul {
+        width: 30%;
+        align-items: center;
+        list-style: none;
+        padding: 0;
+        flex-wrap: wrap;
+    }
+    ul li {
+        font-size: 1.5rem;
+        // margin: 0 0.5rem;
+
+        padding: 0rem 0.7rem;
+        margin: 3rem 0;
+        cursor: pointer;
+    }
+    .additional-info-nav {
+        display: flex;
+        width: 40%;
+        align-items: center;
+        list-style: none;
+        // margin: 0 auto;
+        margin-top: 5rem;
+        padding: 0;
+        flex-wrap: wrap;
+    }
+    .additional-info-nav li {
+        font-size: 2rem;
+        // margin: 0 0.5rem;
+        border-right: 1px solid #000;
+        padding: 0rem 0.7rem;
+        margin: 0.5rem 0;
+        cursor: pointer;
+    }
+}
+
+// @media(max-width:768px){
+//     .facilities-container{
+//         .career-navigation-lg{
+//             display: block;
+//         }
+//     }
+// }
+@media(max-width:900px){
+    .facilities-page-container{
+        .facilities-info{
+            padding: 0 1rem;
+        }
+        .facilities-navigation-lg{
+            margin: 3rem 0;
+            ul{
+                width: 100%;
+            }
+        }.facility-image{
+            width: fit-content;
+           img{
+               width: 100%;
+               margin: 0 auto;
+           }
+        }
+       .facility-description{
+            width: 100%;
+            margin: 0 auto;
+            h2{
+                display: inline-block;
+                font-weight:700 ;
+                border-bottom: 3px solid var(--brick-red);
+                margin: 10rem auto 2rem;
+       
+            }
+            p{
+               margin: 0rem auto 4rem;
+            }
+        }
+        .additional-info{
+            .additional-info-nav{
+                width: 100%;
+            }
+            .information{
+                flex-direction: column;
+                ul{
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .facilities-page-container .facilities-info .slick-slide:not(.slick-center) .facility-image{
+        opacity: 1;
+    }
+    .facilities-page-container .facilities-info .slick-slide:not(.slick-center) .facility-description{
+        display: block;
+    }
+}

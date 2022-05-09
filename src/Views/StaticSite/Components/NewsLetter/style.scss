@@ -1,0 +1,158 @@
+.newsletter-container{
+    display: grid;
+    grid-template-columns: 60% 40%;
+    justify-content: center;
+    align-items: center;
+    background: #F4F4F4;
+    .magezines{
+        margin-right: 0px;
+      .images{
+          display: flex;
+          justify-content: space-between;
+          flex-wrap: wrap;
+          .image{
+              max-width: 150px;
+              &:first-child{
+                img{
+                    border: 3px solid var(--brick-red);
+              }
+              }
+            img{
+                    box-sizing: border-box;
+                      padding: 0.25rem;
+                      width: 100%;
+            }
+              }
+              p{
+                  font-size: 1.75rem;
+                //   font-weight: 700;
+              }
+      
+          }
+      }
+
+      .description{
+          width: 80%;
+          margin: 5rem 0;
+      }
+    }
+
+    .subscription{
+        width: 80%;
+        margin-left: 5rem;
+        .subscription-form{
+            padding: 2rem 0 0;
+            input{
+                display: block;
+                width: 70%;
+                padding: 2rem 4rem 1rem 0rem;
+                font-size: 1.5rem;
+                border: none;
+                border-bottom: 2px solid gray;
+                background: transparent;
+                &:focus{
+                    border-bottom: 2px solid gray;
+                    box-shadow: none;
+                    outline: none;
+                }
+            }
+        }
+        .heading-container{
+            margin-left: 0;
+        }
+        .global-common-btn{
+            margin: 5rem 0;
+        }
+    }
+
+@media(min-width:1920px){
+    .newsletter-container .magezines{
+        width: 80%;
+        margin: 0 auto;
+        .images{
+            justify-content:left;
+            grid-gap: 1rem;
+            
+            .image{
+                min-width: 250px;
+            }
+        }
+    }
+}
+@media(max-width:1920px){
+    .newsletter-container .magezines{
+        width: 80%;
+        margin: 0 auto;
+        .images{
+            justify-content:left;
+            grid-gap: 1rem;
+            
+            .image{
+                min-width: 250px;
+            }
+        }
+    }
+}
+
+@media(max-width:1800px){
+    .newsletter-container .magezines{
+        width: 90%;
+        margin: 0 auto;
+        .images{
+            justify-content:center;
+            grid-gap: 2rem;
+            
+            .image{
+                min-width: 180px;
+            }
+        }
+        .description{
+            margin: 5rem auto;
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    .newsletter-container .magezines .images {
+        justify-content: space-evenly
+    }
+    .newsletter-container .magezines .images {
+        gap: 5rem;
+    }
+}
+
+@media (max-width:900px){
+    .newsletter-container{
+        grid-template-columns: 100%;
+        .magezines{
+            width: 100%;
+            .images{
+                justify-content: space-between;
+                .image{
+                    min-width: 150px;
+                }
+            }
+        }
+        .subscription{
+            margin-top: 5rem;
+            .heading-container
+            {
+                margin: 0 auto;
+            }
+            .subscription-form{
+                padding: 2rem;
+                input{
+                    width: 80%;
+                    margin: 0 auto;
+                }
+            }
+            .global-common-btn{
+                margin: 2rem auto;
+            }
+        }
+    }
+
+    .newsletter-container .magezines .description {
+        margin: 5rem auto;
+    }
+}

@@ -1,0 +1,53 @@
+.our-card-container {
+    height: 30rem;
+    width: 28rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: end;
+    margin: 0 auto 2rem;
+    h3 {   
+        margin: 1.2rem 0;
+        font-size: 2rem;
+    }
+    button {
+        width: max-content;
+        color: #fff;
+        border: 1px solid #fff;
+        padding: 0.5rem 2rem;
+        border-radius: 5rem;
+        background: none;
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin-bottom: 1.5rem;
+        cursor: pointer;
+    }
+}
+.bg-img-1{
+    background: url(../../assets/images/volunteer-1.jpg)  no-repeat center / cover;
+    color: #fff;
+}
+.bg-img-2{
+    background: url(../../assets/images/volunteer-2.jpg)  no-repeat center / cover;
+    color: #fff;
+}
+.bg-img-3{
+    background: url(../../assets/images/volunteer-3.jpg)  no-repeat center / cover;
+    color: #fff;
+}
+.bg-img-4{
+    background: url(../../assets/images/planting-modified.jpg)  no-repeat center / cover;
+    color: #fff;
+}
+@media (max-width: "1000px") {
+    .our-card-container {
+        height: 28rem;
+        width: 23rem;
+    }
+}
+@media (max-width: "768px") {
+    .our-card-container {
+        height: 30rem;
+        width: 25rem;
+    }
+}

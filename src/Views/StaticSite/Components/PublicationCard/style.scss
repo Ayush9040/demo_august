@@ -1,0 +1,64 @@
+.publication-card{
+    width: 90%;
+    margin: 0 auto;
+    height: 630px;
+    border-radius: 60px;
+    background-color: #fff;
+}
+.book-image{
+    width: 100%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    &>div{
+        width: 150px;
+        height: 150px;
+        background-color: gray;
+        border-radius: 50%;
+    }
+    &>h4{
+        font-weight: bold;
+        position: absolute;
+        font-size: 1.7rem;
+        bottom: 5%;
+        right: 5%;
+
+    }
+}
+.book-details{
+    width: 100%;
+    height: 40%;
+    border-radius: 0  0 60px 60px;
+    padding: 2rem;
+    box-sizing: border-box;
+    &>h2{
+        font-weight: 700;
+        color: #fff;
+    }
+    .global-common-btn{
+        margin-left: auto;
+        margin-right: 0;
+        color: #fff;
+        border-color: #fff;
+    }
+}
+
+@media(max-width:1600px){
+    .publication-card{
+        height: 500px;
+    }
+}
+
+@media(max-width:768px){
+    .publication-card{
+        width: 100%;
+        height: 400px;
+    }
+}
+@media(max-width:420px){
+    .publication-card{
+        height: 450px;
+    }
+}

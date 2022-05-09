@@ -1,0 +1,137 @@
+.media-content {
+    position: relative;
+    margin: 15rem 0 0;
+    padding: 10rem;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    background-color: #389992;
+    box-sizing: border-box;
+    padding-bottom: 0;
+}
+.media-content {
+    background: #389992;
+    .newsletter-content {
+        .options {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            button {
+                display: block;
+                border-radius: 50px;
+                color: #fff;
+                border: 3px solid #fff;
+                padding: 1rem 2rem;
+                background: none;
+                font-size: 1.5rem;
+                font-weight: 700;
+                cursor: pointer;
+            }
+            svg{
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.media-content.inverted{
+    .newsletter-content{
+        order: 1;
+    }
+    .newsletter-image{
+        h3{
+            text-align: left;
+        }
+    }
+}
+.newsletter-image {
+    justify-content: center;
+    flex-direction: column;
+    top: -23rem;
+    h3{
+        text-align: right;
+        margin-right: 25%;
+        font-size: 1.75rem;
+        font-weight: bold;
+    }
+    img {
+        width: 80%;
+        border-radius: 40px;
+    }
+}
+
+
+.upcoming-seminars{
+    width: fit-content;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    h3{
+        display: inline-block;
+        font-size: 2.5rem;
+        font-weight: 700;
+    }
+}
+.seminars-card-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding-bottom: 5rem;
+}
+
+@media (max-width: 900px) {
+
+        .media-content{
+            margin: 10rem 0;
+        }
+        .newsletter-content {
+            top: auto;
+            left: auto;
+            width: 100%;
+            h2 {
+                color: #fff;
+                .newsletter-date {
+                    color: #fff;
+                }
+            }
+        }
+        .newsletter-image {
+            margin-top: 5rem;
+            top: auto;
+            left: auto;
+            text-align: center;
+            margin-bottom: 4rem;
+            h3{
+                margin: 0 auto;
+                color: #fff;
+                margin-bottom: 2rem;
+            }
+            img{
+                margin: 0 auto;
+            }
+        }
+}
+
+@media(max-width:500px){
+    .media-content{
+        margin: 8rem 0;
+    }
+    .newsletter-image {
+        img {
+            width: 100%;
+        }
+    }
+    .newsletter-content {
+        h2 {
+            .newsletter-title {
+                font-size: 2.5rem;
+            }
+        }
+    }
+}
+
+@media(max-width:420px){
+    .media-content{
+        margin: 2rem 0;
+    }
+}

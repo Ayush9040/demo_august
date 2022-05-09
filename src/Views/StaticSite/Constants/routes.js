@@ -1,4 +1,36 @@
+import OurLegacyModal from '../Components/OurLegacyModal'
+import AboutUs from '../Views/About/index'
+import OurLegacy from '../Views/About/our-legacy'
+import Seminar from '../Views/Alumni'
+import AlumniGallery from '../Views/Alumni/alumni-gallery'
+import Support from '../Views/Alumni/support'
+import Courses from '../Views/Courses'
+import SingleCourse from '../Views/Courses/course-name'
+import TTCCourse from '../Views/Courses/ttc-courses'
+import AnnamBramha from '../Views/Donation'
+import AnnamBrahmha from '../Views/Donation/annam-brahma'
+import Bmcschools from '../Views/Donation/bmcschools'
+import Children from '../Views/Donation/children'
+import Community from '../Views/Donation/community'
+import Police from '../Views/Donation/police'
+import Truckasana from '../Views/Donation/truckasana'
+import Underprivileged from '../Views/Donation/underprivileged'
+import Facilities from '../Views/Facilities'
+import FAQ from '../Views/Faq'
+import Gifting from '../Views/Gifting'
 import Home from '../Views/Home'
+import Volunteer from '../Views/Joinourteam'
+import Values from '../Views/Joinourteam/values'
+import MediaGallery from '../Views/Media'
+import MediaEvents from '../Views/Media/events'
+import News from '../Views/Media/news'
+import MuseumPage from '../Views/Museum/index.jsx'
+import YogaTotalHealth from '../Views/Publication'
+import Books from '../Views/Publication/books'
+import EBooks from '../Views/Publication/e-books'
+import library from '../Views/Publication/library'
+import Yogasattva from '../Views/Publication/yogasattva'
+import Shop from '../Views/Shop'
 
 const staticSiteRoutes = [
   {
@@ -8,7 +40,311 @@ const staticSiteRoutes = [
     id: 'statisSiteHome',
     routePath: '/',
     name: 'Home',
-  }
+  },
+  {
+    Component: Courses,
+    path: '/courses',
+    exact: true,
+    id: 'statisSiteCourses',
+    routePath: '/courses',
+    name: 'Courses',
+  },
+  {
+    Component: SingleCourse,
+    path: '/courses/course_name',
+    exact: true,
+    id: 'statisSiteCourse',
+    routePath: '/courses/course_name',
+    name: 'Course',
+  },
+  {
+    Component: TTCCourse,
+    path: '/courses/ttc-course',
+    exact: true,
+    id: 'statisSiteTTC',
+    routePath: '/courses/ttc-course',
+    name: 'TTC',
+  },
+  {
+    Component: AboutUs,
+    path: '/about',
+    exact: true,
+    id: 'statisSiteAbout',
+    routePath: '/about',
+    name: 'About',
+  },
+  {
+    Component: OurLegacy,
+    path: '/our-legacy',
+    exact: true,
+    id: 'statisSiteOurLegacy',
+    routePath: '/our-legacy',
+    name: 'OurLegacy',
+  },
+  {
+    Component: OurLegacyModal,
+    path: '/our-legacy/smt-sitadevi-ji',
+    exact: true,
+    id: 'statisSiteSitadeviJi',
+    routePath: '/our-legacy/smt-sitadevi-ji',
+    name: 'SitadeviJi',
+  },
+  {
+    Component: OurLegacyModal,
+    path: '/our-legacy/dr-jayadeva-yogendra',
+    exact: true,
+    id: 'statisSiteDrJayadeva',
+    routePath: '/our-legacy/dr-jayadeva-yogendra',
+    name: 'DrJayadeva',
+  },
+  {
+    Component: OurLegacyModal,
+    path: '/our-legacy/dr-hansaji-yogendra',
+    exact: true,
+    id: 'statisSiteDrHansaji',
+    routePath: '/our-legacy/dr-hansaji-yogendra',
+    name: 'DrHansaji',
+  },
+  {
+    Component: OurLegacyModal,
+    path: '/our-legacy/harish-ji',
+    exact: true,
+    id: 'statisSiteHarishJi',
+    routePath: '/our-legacy/harish-ji',
+    name: 'HarishJi',
+  },
+  {
+    Component: OurLegacyModal,
+    path: '/our-legacy/paramhamsa-madhavdas-ji',
+    exact: true,
+    id: 'statisSiteMadhavdasJi',
+    routePath: '/our-legacy/paramhamsa-madhavdas-ji',
+    name: 'MadhavdasJi',
+  },
+  {
+    Component: OurLegacyModal,
+    path: '/our-legacy/shree-yagendra-ji',
+    exact: true,
+    id: 'statisSiteYagendraJi',
+    routePath: '/our-legacy/shree-yagendra-ji',
+    name: 'YagendraJi',
+  },
+  {
+    Component: OurLegacyModal,
+    path: '/our-legacy/shree-yagendra-ji',
+    exact: true,
+    id: 'statisSiteYagendraJi',
+    routePath: '/our-legacy/shree-yagendra-ji',
+    name: 'YagendraJi',
+  },
+  {
+    Component: YogaTotalHealth,
+    path: '/publication',
+    exact: true,
+    id: 'statisSitePublication',
+    routePath: '/publication',
+    name: 'Publication',
+  },
+  {
+    Component: Yogasattva,
+    path: '/publication/yogasattva',
+    exact: true,
+    id: 'statisSiteYogasattva',
+    routePath: '/publication/yogasattva',
+    name: 'Yogasattva',
+  },
+  {
+    Component: Books,
+    path: '/publication/books',
+    exact: true,
+    id: 'statisSiteBooks',
+    routePath: '/publication/books',
+    name: 'Books',
+  },
+  {
+    Component: EBooks,
+    path: '/publication/e-books',
+    exact: true,
+    id: 'statisSiteEBooks',
+    routePath: '/publication/e-books',
+    name: 'EBooks',
+  },
+  {
+    Component: library,
+    path: '/publication/library',
+    exact: true,
+    id: 'statisSiteLibrary',
+    routePath: '/publication/library',
+    name: 'Library',
+  },
+  {
+    Component: MediaGallery,
+    path: '/media',
+    exact: true,
+    id: 'statisSiteMedia',
+    routePath: '/media',
+    name: 'Media',
+  },
+  {
+    Component: News,
+    path: '/media/news',
+    exact: true,
+    id: 'statisSiteNews',
+    routePath: '/media/news',
+    name: 'News',
+  },
+  {
+    Component: MediaEvents,
+    path: '/media/events',
+    exact: true,
+    id: 'statisSiteEvent',
+    routePath: '/media/events',
+    name: 'Event',
+  },
+  {
+    Component: MuseumPage,
+    path: '/museum',
+    exact: true,
+    id: 'statisSiteMuseum',
+    routePath: '/museum',
+    name: 'Museum',
+  },
+  {
+    Component: Facilities ,
+    path: '/facilites',
+    exact: true,
+    id: 'statisSiteFacilites',
+    routePath: '/facilites',
+    name: 'Facilites',
+  },
+  {
+    Component: Shop ,
+    path: '/shop',
+    exact: true,
+    id: 'statisSiteShop',
+    routePath: '/shop',
+    name: 'Shop',
+  },
+  {
+    Component: Gifting,
+    path: '/gifting',
+    exact: true,
+    id: 'statisSiteGifting',
+    routePath: '/gifting',
+    name: 'Gifting',
+  },
+  {
+    Component: AnnamBramha,
+    path: '/donation',
+    exact: true,
+    id: 'statisSiteDonation',
+    routePath: '/donation',
+    name: 'Donation',
+  },
+  {
+    Component: AnnamBrahmha,
+    path: '/donation/annam-brahma',
+    exact: true,
+    id: 'statisSiteAnnamBrahma',
+    routePath: '/donation/annam-brahma',
+    name: 'AnnamBrahma',
+  },
+  {
+    Component: Bmcschools,
+    path: '/donation/bmcschools',
+    exact: true,
+    id: 'statisSiteBMCSchools',
+    routePath: '/donation/bmcschools',
+    name: 'BMCSchools',
+  },
+  {
+    Component: Children,
+    path: '/donation/children',
+    exact: true,
+    id: 'statisSiteChildren',
+    routePath: '/donation/children',
+    name: 'Children',
+  },
+  {
+    Component: Community,
+    path: '/donation/community',
+    exact: true,
+    id: 'statisSiteCommunity',
+    routePath: '/donation/community',
+    name: 'Community',
+  },
+  {
+    Component: Police,
+    path: '/donation/police',
+    exact: true,
+    id: 'statisSitePolice',
+    routePath: '/donation/police',
+    name: 'Police',
+  },
+  {
+    Component: Truckasana,
+    path: '/donation/truckasana',
+    exact: true,
+    id: 'statisSiteTruckasana',
+    routePath: '/donation/truckasana',
+    name: 'Truckasana',
+  },
+  {
+    Component: Underprivileged,
+    path: '/donation/unprivileged',
+    exact: true,
+    id: 'statisSiteUnderPrivileged',
+    routePath: '/donation/unprivileged',
+    name: 'Privileged',
+  },
+  {
+    Component: Seminar,
+    path: '/alumni',
+    exact: true,
+    id: 'statisSiteUnderAlumni',
+    routePath: '/alumni',
+    name: 'Alumni',
+  },
+  {
+    Component: AlumniGallery,
+    path: '/alumni/alumni-gallery',
+    exact: true,
+    id: 'statisSiteUnderAlumniGallery',
+    routePath: '/alumni/alumni-gallery',
+    name: 'AlumniGallery',
+  },
+  {
+    Component: Support,
+    path: '/alumni/support',
+    exact: true,
+    id: 'statisSiteUnderSupport',
+    routePath: '/alumni/support',
+    name: 'Support',
+  },
+  {
+    Component: FAQ,
+    path: '/faqs',
+    exact: true,
+    id: 'statisSiteUnderFAQ',
+    routePath: '/faqs',
+    name: 'FAQ',
+  },
+  {
+    Component: Volunteer,
+    path: '/join-our-team',
+    exact: true,
+    id: 'statisSiteUnderJoin',
+    routePath: '/join-our-team',
+    name: 'Join',
+  },
+  {
+    Component: Values,
+    path: '/join-our-team/values',
+    exact: true,
+    id: 'statisSiteUnderValues',
+    routePath: '/join-our-team/values',
+    name: 'Values',
+  },
 ]
 
 export default staticSiteRoutes

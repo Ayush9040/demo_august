@@ -1,0 +1,53 @@
+.gallery-modal{
+    width: 100vw;
+    min-height: 100vh;
+    z-index: 10000;
+    position: relative;
+    top: 0;
+    left: 0;
+    text-align: center;
+    background-color: #332421;
+    .common-gallery{
+        margin-top: 5rem;
+        .common-gallery-grid{
+            display: grid;
+            grid-template-columns: 26% 20% 26% 20%;
+            gap: 1%;
+            justify-content: space-evenly;
+            .common-grid-1{
+                background-color: rgb(214, 205, 205);
+                height: 200px;
+            }
+            .common-grid-2{ 
+                display: grid;
+                gap: 2%;
+                grid-template-rows: 40% 40%;  
+                .sub-grid-1{
+                height: 77px;
+                background-color: rgb(214, 205, 205);
+                }
+            .sub-grid-2{
+                height: 116px;
+                background-color: rgb(214, 205, 205);
+            }
+            }
+        }
+    }
+}
+.close{
+    font-size: 2rem;
+    font-weight: 500;
+    color: #fff;
+    text-align: right;
+    width: 96%;
+    padding-top: 2rem;
+    span{
+        cursor: pointer;
+    }
+}
+.other-images{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    padding: 0 2rem;
+    padding-bottom: 3rem;
+}

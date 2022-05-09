@@ -1,0 +1,189 @@
+.common-container {
+    // height: 100vh;
+    width: 100vw;
+    // position: relative;
+    // height: 100%;
+    .navigation-container {
+        padding-top: 1rem;
+    // position: absolute;
+    z-index: 9;
+    width: 100%;
+}
+// .img-container{
+//     width: 100%;
+//     img {
+//         z-index: -1;
+//         position: absolute;
+//         width: 100%;
+//     }
+// }
+.banner-container {
+    color: #fff;
+    // position: absolute;
+    z-index: 9;
+    width: 50%;
+    padding-top: 5%;
+    margin-left: 50%;
+    .banner-text {
+        width: 50%!important;
+        font-size: 1.7rem;
+        padding-bottom: 10rem;
+        &.blessing-text{
+            text-align: left;
+        }
+        &>p{
+            font-size: 2rem;
+        }
+    }
+}
+.banner-heading {
+    font-size: 2.5rem;
+    font-weight: bolder;
+    margin-bottom: 0.5rem;
+    width: max-content;
+    text-align: left;
+}
+.bottom-line {
+    height: 3px;
+    border-radius: 200%;
+    width: 100%;    
+    background: white;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+}
+}
+
+//images
+.Overview-container {
+    background-image: linear-gradient(to bottom, rgba(22,156,140, .7), rgba(22,156,140, .8)), url("../../assets/images/overview.jpg");
+    background-position: center;
+    background-size: cover;
+    
+}
+
+.about-legacy-container {
+    background-image: url("../../assets/images/benifits.png");
+    background-position: center;
+    background-size: cover;
+    
+}
+.blessings-container {
+    background: url("../../assets/images/blessings.png") no-repeat center / cover;
+    // height: 100vh;
+    background-attachment: fixed;
+}
+.OurCareers-container {
+    background: url("../../assets/images/our_careers.png") no-repeat center / cover;
+}
+.Values-container {
+    background: url("../../assets/images/values.png") no-repeat center / cover;
+}
+.Volunteer-container {
+    background-color: url("../../assets/images/volunteer_with_us.png") no-repeat center / cover;
+}
+.faq-container{
+    background: url("../../assets/images/faqs.png") no-repeat center / cover ;
+}
+//if other content is there other than banner
+.common-container-responsive {
+//     position: relative;
+//     background: none;
+//     height: 100%;
+//     .navigation-container-responsive {
+//         position: absolute;
+//     }
+    .banner-container-responsive {
+        margin-left: 0;
+        padding-top: 15%;
+        text-align: center;
+        width: 100%;
+        padding-top: 5%;
+        .banner-text {
+            margin: 0 auto;
+            width: 30%;
+        }
+        // .banner-heading {
+        //     margin-left: 0!important;
+        // }
+    }
+}
+
+.common-container .banner-container .blessing-text{
+    margin-left: 15%!important;
+    text-align: left!important;
+    width: 40%!important;
+    
+    p{
+        margin-bottom: 20px;
+    }
+}
+// .common-container-responsive .banner-container-responsive {
+//     width: 100%;
+// }
+@media (max-width: "1000px") {
+    .common-container .banner-container .banner-text {
+        font-size: 1.3rem;
+    }
+}
+@media (max-width: "768px") {
+    .common-container .banner-container .banner-text {
+        margin: 0 auto;
+        width: 60%;
+        text-align: center;
+        font-size: 1.3rem;
+        padding-top: 0;
+    }
+    .common-container .banner-container .banner-heading {
+        margin: 0.5rem auto;
+    }
+    .common-container .banner-container {
+        width: 100%;
+        padding-top: 11%;
+        margin-left: 0;
+    }
+}
+
+@media (max-width: "570px") {
+    .common-container .banner-container .banner-text {
+        margin: 0 auto;
+        width: 80%!important;
+        text-align: center;
+        font-size: 1rem;
+        padding-top: 0;
+        p{
+            font-size: 1.5rem;
+        }
+    }
+    .common-container .banner-container .banner-heading {
+        font-size: 1.5rem !important;
+    }
+    .common-container .navigation-container .common-nav-container .mega-nav .hamburger svg {
+        width: 20px !important;
+    }
+    // .common-container .banner-container {
+    //     padding-top: 13%;
+    // }
+    .common-container .banner-container .blessing-text{
+        margin-left: auto!important;
+        margin: 0 auto!important;
+        text-align: center!important;
+        width: 90%!important;
+        p{
+            font-size: 1.5rem;
+        }
+    }
+    .common-container.blessings-container .banner-container .banner-heading.about-heading {
+        font-size: 1.5rem !important;
+        margin-left: auto!important;
+    }
+}
+
+@media (max-width: "420px") {
+    .common-container.blessings-container .banner-container .banner-heading.about-heading {
+        font-size: 1.75rem !important;
+        margin-left: auto!important;
+    }
+    // .common-container .banner-container {
+    //     padding-top: 13%;
+    // }
+}

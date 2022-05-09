@@ -1,0 +1,79 @@
+import React from 'react'
+import PublicationNav from '../../Components/PublicationNav'
+import Library1 from '../../assets/images/Library-1.jpg'
+import Library2 from '../../assets/images/Library-2.jpg'
+import Library3 from '../../assets/images/Library-3.jpg'
+import Library4 from '../../assets/images/Library-4.jpg'
+import Library5 from '../../assets/images/Library-5.jpg'
+import Library6 from '../../assets/images/Library-6.jpg'
+import heroImg from '../../assets/images/library/hero.jpg'
+
+const library = () => {
+  return (
+    <div className="library-container">
+      <div className="background">
+        <PublicationNav title={'library'} />
+      </div>
+      <div className="library-grid">
+        <div className="library-cards">
+          <div className="cardDesc">
+            <div className="cardImg">
+              <div>
+                <img
+                  src={heroImg}
+                  alt=""
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    borderRadius: '20px',
+                  }}
+                />
+              </div>
+            </div>
+            <div className="cardTxt">
+              <p>
+                A treasure of priceless books. The Yoga Institute contains a
+                magnificent selection of books by famous authors from all
+                domains. It has a wide range of books, from 1000 years old
+                authored books to modern publications. Philosophy, health &
+                wellness, yoga & mind, spirituality, and ancient scriptures are
+                just a few of the categories available in the extensive
+                collection.
+              </p>
+            </div>
+          </div>
+          <div className="more-cards">
+            <div className="card-1">
+              {/* <StaticImage src="../../assets/images/m_1.jpg" />
+               */}
+              <img src={Library1} alt="" />
+            </div>
+            <div className="card-1">
+              {/* <StaticImage src="../../assets/images/Library-2.jpg" /> */}
+              <img src={Library2} alt="" />
+            </div>
+            <div className="card-1">
+              {/* <StaticImage src="../../assets/images/Library-3.jpg" />
+               */}
+              <img src={Library3} alt="" />
+            </div>
+            <div className="card-1">
+              {/* <StaticImage src="../../assets/images/Library-4.jpg" /> */}
+              <img src={Library4} alt="" />
+            </div>
+            <div className="card-1">
+              {/* <StaticImage src="../../assets/images/Library-5.jpg" /> */}
+              <img src={Library5} alt="" />
+            </div>
+            <div className="card-1">
+              {/* <StaticImage src="../../assets/images/Library-6.jpg" /> */}
+              <img src={Library6} alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+export default library

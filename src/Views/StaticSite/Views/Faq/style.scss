@@ -1,0 +1,45 @@
+.faq-ques{
+    padding: 5rem 2rem;
+}
+.accordion__item{
+border-bottom: 1px solid #aaa;
+padding: 2rem 0;
+}
+.accordion__heading{
+    width: 70%;
+    margin: 0 auto 1rem;
+    cursor: pointer;
+    p{
+        font-weight: 700;
+    }
+}
+.accordion__panel{
+    width: 70%;
+    margin: 0 auto; 
+}
+
+.accordion__button:before {
+    display: none;
+}
+
+.accordion__button p {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.accordion__button p:after {
+    display: inline-block;
+    content: '\25BC';
+    height: 10px;
+    width: 10px;
+    margin-right: 12px;
+    // border-bottom: 2px solid currentColor;
+    // border-right: 2px solid currentColor;
+    color: var(--brick-red);
+    transform: rotate(-90deg);
+}
+
+.accordion__button[aria-expanded='true'] p::after,
+.accordion__button[aria-selected='true'] p::after {
+    transform: rotate(0deg);
+}

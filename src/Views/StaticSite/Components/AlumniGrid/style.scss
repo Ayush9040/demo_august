@@ -1,0 +1,98 @@
+.alumni-grid{
+    width: 80%;
+    margin: 5rem auto;
+    p{
+        font-weight: bolder;
+        font-size: 1.75rem;
+        margin-bottom: 2rem;
+    }
+    h4{
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+}
+.alumni-event-grid{
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    gap: 0.5%;
+    height: 760px;
+    img{
+        width: 100%;
+    }
+}
+.grid-element-1{
+ width: 25%;
+ display: flex;
+ flex-direction: column;
+ gap: 1%;
+ height: 100%;
+ .event-1{
+    height: 70%;
+    // background: url('../../assets/images/alumniGallery0.jpg') no-repeat center / cover ;
+    
+    img{
+        height:100% ;
+        object-fit: cover;
+    }
+ }
+ .event-2{
+    height: 30%;
+    // background: url('../../assets/images/alumniGallery1.png') no-repeat center / cover ;
+    img{
+        height: 100%;
+        object-fit: cover;
+    }
+ }
+}
+.grid-element-2{
+    width: 50%;
+    height: 100%;
+    .event-3{
+        height: 100%;
+        // background: url('../../assets/images/alumniGallery2.jpg') 
+        img{
+            height: 100%;
+
+            object-fit: cover ;
+        }
+    }
+}
+.grid-element-3{
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    gap: 1%;
+    .event-5{
+        height: 70%;
+        // background: url('../../assets/images/alumniGallery3.jpg') no-repeat center / cover ;
+        img{
+            height: 100%;
+            object-fit: cover;
+        }
+     }
+     .event-4{
+        height: 30%;
+        // background: url('../../assets/images/alumniGallery4.jpg') no-repeat center / cover ;
+        img{
+            height: 100%;
+            object-fit: cover;
+        }
+     }
+}
+@media(max-width:1536px){
+    .alumni-event-grid{
+        height: 600px;
+    }
+}
+@media(max-width:1000px){
+    .alumni-event-grid{
+        height: 400px;
+    }
+}
+@media(max-width:768px){
+    .alumni-event-grid{
+        height: 200px;
+    }
+}
