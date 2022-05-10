@@ -3,7 +3,8 @@ import CommonBannerNav from '../../Components/CommonBannerNav'
 import baseDomain, { alumniAssets } from '../../assets/images/imageAsset'
 import './style.scss'
 import Heading from '../../Components/Heading'
-import BlogGallery from './BlogGallery'
+import BlogGallery from '../../Components/BlogGallery'
+
 const BlogAnother = () => {
   return (
     <>

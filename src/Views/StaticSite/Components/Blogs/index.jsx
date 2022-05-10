@@ -11,6 +11,7 @@ import BlogCard2 from './BlogCard/BlogCart2'
 import BlogCard3 from './BlogCard/BlogCart3'
 import BlogCard4 from './BlogCard/BlogCart4'
 import BlogCard5 from './BlogCard/BlogCart5'
+import { Link } from 'react-router-dom'
 
 const Blog = () => {
   let settings = {
@@ -53,7 +54,9 @@ const Blog = () => {
               philosophies, and even life choices
             </p>
           </div>
-          <CommonBtn text={'View All'} />
+          <Link to="/blogs">
+            <CommonBtn text={'View All'} />
+          </Link>
         </div>
         <div className="blog-carousel">
           <Slider {...settings}>

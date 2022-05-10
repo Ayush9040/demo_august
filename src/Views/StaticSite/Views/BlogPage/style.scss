@@ -132,34 +132,6 @@
   }
 }
 
-//BlogGallery
-
-.gallery-blog-container {
-  background-color: #fff !important;
-  .gallery-blog {
-    display: grid;
-    grid-template-columns: 25% 50% 25%;
-    width: 65%;
-    margin: 15rem auto;
-    justify-content: center;
-    column-gap: 2rem;
-    row-gap: 3rem;
-    .gallery-grid-1 {
-      .sub-image-1 {
-        background: rgb(241, 238, 238);
-        height: 370px;
-      }
-      .sub-image-2 {
-        background: rgb(241, 238, 238);
-        height: 210px;
-      }
-    }
-    .gallery-grid {
-      background: rgb(241, 238, 238);
-      height: 600px;
-    }
-  }
-}
 
 @media (max-width: 900px) {
   .alumni-content {
@@ -201,24 +173,6 @@
       grid-template-columns: 100%;
     }
   }
-  .gallery-blog-container {
-    .gallery-blog {
-      grid-template-columns: 25% 50% 25%;
-      gap: 1rem;
-      .gallery-grid-1 {
-        .sub-image-1 {
-          height: 100px;
-          width: 100%;
-        }
-        .sub-image-2 {
-          height: 150px;
-        }
-      }
-      .gallery-grid {
-        height: 260px;
-      }
-    }
-  }
 }
 
 @media (max-width: 750px) {
@@ -255,10 +209,7 @@
       }
     }
   }
-  .gallery-blog-container {
-    margin: 0 !important;
-    width: 100% !important;
-  }
+
   .blog-container {
     .blog-grid {
       grid-template-columns: 100%;
@@ -287,25 +238,7 @@
       grid-template-columns: 100%;
     }
   }
-  .gallery-blog-container {
-    margin: 0 !important;
-    width: 100% !important;
-    .gallery-blog {
-      grid-template-columns: 25% 50% 25%;
-      width: 100% !important;
-      gap: 1rem;
-      .gallery-grid-1 {
-        .sub-image-1 {
-          height: 100px;
-          width: 100%;
-        }
-        .sub-image-2 {
-          height: 150px;
-        }
-      }
-      .gallery-grid {
-        height: 260px;
-      }
-    }
-  }
+  
 }
+
+

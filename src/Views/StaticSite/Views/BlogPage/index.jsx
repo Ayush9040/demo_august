@@ -5,6 +5,7 @@ import './style.scss'
 import SeminarCard from '../../Components/SeminarCard'
 import baseDomain, { alumniAssets } from '../../assets/images/imageAsset'
 import CommonBannerNavPrimary from '../../Components/CommonBannerNavPrimary'
+import { Link } from 'react-router-dom'
 const BlogPage = () => {
   return (
     <div className="main-blog">
@@ -26,7 +27,9 @@ const BlogPage = () => {
               et dignissim ligula cursus ut.
             </p>
             <div className="options">
-              <button>Read Story</button>
+              <Link to="/blogs/blog-name">
+                <button>Read Story</button>
+              </Link>
               <div className="share-icon">{share}</div>
             </div>
           </div>
@@ -57,7 +60,6 @@ const BlogPage = () => {
           </div>
         </div>
       </div>
-    
     </div>
   )
 }

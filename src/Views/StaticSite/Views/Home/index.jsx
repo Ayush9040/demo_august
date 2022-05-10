@@ -17,7 +17,7 @@ import BlogAnother from '../BlogPage/Blog'
 const Home = ({ data }) => {
   return (
     <>
-      {/* <HeroSection />
+      <HeroSection />
       <Legacy />
       <OurOfferings />
       <Activity />
@@ -28,9 +28,8 @@ const Home = ({ data }) => {
       <Blog />
       <VideosSection />
       <NewsLetter />
-      <Footer /> */}
-      <BlogPage/>
-      <BlogAnother/>
+      <Footer />
+      
     </>
   )
 }
