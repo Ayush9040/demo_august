@@ -82,6 +82,11 @@
 @media (max-width: "1920px") {
     .card-container {
         width: 95%;
+        .card-image{
+            img{
+                height: 600px;
+            }
+        }
     }
     .activity-wrapper {
         margin: 5rem auto;
@@ -108,6 +113,16 @@
     .heading-container .heading-content .heading-logo{
         svg{
             height: 80px;
+        }
+    }
+}
+
+@media (max-width:1600px){
+    .card-container{
+        .card-image{
+            img{
+                height: 500px;
+            }
         }
     }
 }

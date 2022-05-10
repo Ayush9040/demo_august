@@ -130,10 +130,10 @@ const staticSiteRoutes = [
   },
   {
     Component: MadhavJi,
-    path: '/about/our-legacy/paramhamsa-madhavdas-ji',
+    path: '/about/our-legacy/paramhamsa-madhavadas-ji',
     exact: true,
     id: 'statisSiteMadhavdasJi',
-    routePath: '/about/our-legacy/paramhamsa-madhavdas-ji',
+    routePath: '/about/our-legacy/paramhamsa-madhavadas-ji',
     name: 'MadhavdasJi',
   },
   {

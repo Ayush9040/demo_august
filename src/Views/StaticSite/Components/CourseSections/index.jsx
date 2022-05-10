@@ -77,7 +77,7 @@ const CourseSection = ({ title, showRangeSlider, color, cardData }) => {
           </AccordionItem>
         </Accordion>
       )
-    case 'Camps':
+    case 'Camps & Workshops':
       return (
         <div className="course-list-content">
           <h4>
@@ -95,7 +95,7 @@ const CourseSection = ({ title, showRangeSlider, color, cardData }) => {
           </h4>
         </div>
       )
-    case 'Workshops':
+    case 'Most Popular':
       return (
         <div className="course-list-content">
           <p>
@@ -123,7 +123,7 @@ const CourseSection = ({ title, showRangeSlider, color, cardData }) => {
       <div className="course-list">
         <div className="course-title">
           <h1>{title}</h1>
-          {(title === 'Workshops' || title === 'Classes') && (
+          {(title === 'Most Popular' || title === 'Classes') && (
             <div className="concave-border"></div>
           )}
         </div>

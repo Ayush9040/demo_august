@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import CommonBannerNavAboutUs from '../CommonBannerNavAboutUs'
 import CommonBannerNavPrimary from '../CommonBannerNavPrimary'
-import CommonBtn from '../commonbtn'
 import GridComponent from '../GridComponent'
 import './style.scss'
 
@@ -51,7 +50,6 @@ const OurLegacyModal = ({ data }) => {
           Millions of lives have been touched and benefitted from this purity of vision. Generations later, the torch of yoga lit by Shri Yogendraji continues to illuminate the path of humanity. The legacy continues…
           </p> */}
             </div>
-            <CommonBtn text={'Read More'} />
           </div>
           <div className="detail-main-image">
             <img src={data.rightImg} alt="" />

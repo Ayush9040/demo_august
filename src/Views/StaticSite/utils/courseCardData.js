@@ -8,14 +8,14 @@ export const courseCardData = [
       { title: '900 hour 3 Months Online Weekend - 18th Dec 2021' }]
   },
   {
-    title: 'Camps',
+    title: 'Camps & Workshops',
     color: '#CE9B51',
     cardData: [{ title: 'Stress Management Camp' }
       , { title: 'Meditation Camp' },
       { title: 'Diabetes Camp' }]
   },
   {
-    title: 'Workshops',
+    title: 'Most Popular',
     color: '#6E9596',
     cardData: [{ title: 'Weight Management Workshop' },
       { title: 'Cardiac Hypertension Health Workshop' },
