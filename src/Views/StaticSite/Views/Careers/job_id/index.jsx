@@ -1,64 +1,64 @@
 import React from 'react'
-import CommonBannerNavPrimary from '../../../components/CommonBannerNavPrimary';
-import './style.scss';
+import CommonBannerNavPrimary from '../../../components/CommonBannerNavPrimary'
+import './style.scss'
 // import Amitabh from '../../../assets/images/Amitabh-Bachchan.jpg';
-import { Job } from '../../../utils/JobDetails';
+import { Job } from '../../../utils/JobDetails'
 
 const SingleJob = () => {
-    return (
-        <div className='single-job' >
-            <CommonBannerNavPrimary innerNav={false} />
-            <div className='job-details' >
-                <div className='job-description'>
-                    <div className='job-img' >
-                        <img src={Job.jobThumbnail.default} alt={'title'} />
-                    </div>
-                    <div className='job-info' >
-                        <h1>{Job.jobTitle}
-                            <div className='bottom-line' ></div>
-                        </h1>
-                        <p>{Job.jobDescription}</p>
-                    </div>
-                </div>
-                <div className='job-application' >
-                    <div className='job-requirements' >
-                        <ul>
-                            {Job.jobRequirements.map(item=>(<li><span>Requirement:</span>{item}</li>))}
-                        </ul>
-                    </div>
-                    <div className='job-form' >
-                        <form>
-                            <fieldset>
-                                <input type={'text'} placeholder={'Name'} />
-                            </fieldset>
-                            <fieldset>
-                                <input type={'email'} placeholder={'Email'} />
-                            </fieldset>
-                            <div className='uploads' >
-                            <fieldset>
-                                <label htmlFor='image' >
-                                Upload Image
-                                <input type={'image'} id='image' placeholder='Upload Image' />
-                                </label>
-                            </fieldset>
-                            <fieldset>
-                                <label htmlFor='resume' >
-                                Upload Resume
-                                <input type={'file'} id='resume' placeholder='Upload Resume' />
-                                </label>
-                                <br/>
-                                <small>Please ensure the file is under 2 MB</small>
-                            </fieldset>
-                            </div>
-                            <fieldset>
-                                <input id='apply' type={'submit'} />
-                            </fieldset>
-                        </form>
-                    </div>
-                </div>
-            </div>
+  return (
+    <div className='single-job' >
+      <CommonBannerNavPrimary innerNav={false} />
+      <div className='job-details' >
+        <div className='job-description'>
+          <div className='job-img' >
+            <img src={Job.jobThumbnail.default} alt={'title'} />
+          </div>
+          <div className='job-info' >
+            <h1>{Job.jobTitle}
+              <div className='bottom-line' ></div>
+            </h1>
+            <p>{Job.jobDescription}</p>
+          </div>
         </div>
-    )
+        <div className='job-application' >
+          <div className='job-requirements' >
+            <ul>
+              {Job.jobRequirements.map(item=>(<li><span>Requirement:</span>{item}</li>))}
+            </ul>
+          </div>
+          <div className='job-form' >
+            <form>
+              <fieldset>
+                <input type={'text'} placeholder={'Name'} />
+              </fieldset>
+              <fieldset>
+                <input type={'email'} placeholder={'Email'} />
+              </fieldset>
+              <div className='uploads' >
+                <fieldset>
+                  <label htmlFor='image' >
+                                Upload Image
+                    <input type={'image'} id='image' placeholder='Upload Image' />
+                  </label>
+                </fieldset>
+                <fieldset>
+                  <label htmlFor='resume' >
+                                Upload Resume
+                    <input type={'file'} id='resume' placeholder='Upload Resume' />
+                  </label>
+                  <br/>
+                  <small>Please ensure the file is under 2 MB</small>
+                </fieldset>
+              </div>
+              <fieldset>
+                <input id='apply' type={'submit'} />
+              </fieldset>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
 }
 
-export default SingleJob;
+export default SingleJob

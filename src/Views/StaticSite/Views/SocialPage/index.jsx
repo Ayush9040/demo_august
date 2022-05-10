@@ -1,17 +1,34 @@
 import React from 'react'
-import CommonBannerNavPrimary from '../../Components/CommonBannerNavPrimary'
+import CommonBanner from '../../Components/Common-banner'
 import SectionComponent from '../../Components/SectionComponent'
-import baseDomain, { homeAssets } from '../../assets/images/imageAsset'
+import { socialPageData } from '../../utils/socialPageData'
 import './style.scss'
 
 const SocialResponsibility = () => {
   return (
     <div className='social-res-internal'>
-      <CommonBannerNavPrimary />
-      <SectionComponent
-        image={baseDomain + homeAssets.homeAsset19}
-        description={'Annam Brahma is a social initiative aimed at serving fresh, nutritious, and healthy food to the underprivileged citizens of the country without discrimination. The food is served to over 1000 people daily, 365 days a year. '}
+      <CommonBanner
+        isLeftContent={false}
+        Logo={false}
+        Navigation={true}
+        PageType='gifting'
+        Heading='Gifting'
+        isOnlyBanner={false}
+        innerNav={false}
+        description={
+          'From the very beginning, it has been very important for TYI to balance the potential of sharing the awareness of yoga with social responsibility, as well as find and encourage a way to give back to the community. '
+        }
       />
+      <div className='social-res-sections'>
+        {socialPageData.map((item, i) => (
+          <SectionComponent
+            key={i}
+            title={item.title}
+            image={item.image}
+            description={item.description}
+          />
+        ))}
+      </div>
     </div>
   )
 }

@@ -501,4 +501,16 @@ export const volunteerAssets = {
   valuesAssets: '/Volunteer/our-values.jpg',
 }
 
+export const socialResponsibilityAssets = {
+  annamBrahma:'/SocialResponsibility/Annam-brahma-cover.jpg',
+  bmcSchool:'/SocialResponsibility/BMC-school-cover.jpg',
+  police:'/SocialResponsibility/Copy _of_IMG_0166.jpg',
+  schoolChildren:'/SocialResponsibility/School_children_cover.jpg',
+  specialChildren:'/SocialResponsibility/Special_children_cover.jpg',
+  trafficPolice:'/SocialResponsibility/Traffic_police_rename.jpg',
+  truckAsana:'/SocialResponsibility/Truckasana_cover (1).jpg',
+  palnting:'/SocialResponsibility/planting_cover.jpg',
+  transgender:'/SocialResponsibility/transgender_cover.jpg'
+}
+
 export default baseDomain
