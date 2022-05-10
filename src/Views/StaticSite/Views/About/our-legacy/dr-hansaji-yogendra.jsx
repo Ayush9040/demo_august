@@ -1,5 +1,6 @@
 import React from 'react'
 import OurLegacyModal from '../../../Components/OurLegacyModal'
+import baseDomain,{ aboutAssets } from '../../../assets/images/imageAsset.js'
 
 
 let leftImg=baseDomain+aboutAssets.aboutAsset27

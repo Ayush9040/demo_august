@@ -1,13 +1,13 @@
 import React from 'react'
 import OurLegacyModal from '../../../Components/OurLegacyModal'
-import l1 from '../../../assets/images/our-legacy/l-1.jpg'
+import baseDomain,{ aboutAssets } from '../../../assets/images/imageAsset.js'
 
 export default function HarishJi() {
   const data = {
     name: 'Paramhamsa Madhavadas ji',
     desc: [''],
     route: 'paramhamsa-madhavadas-ji',
-    leftImg: l1,
+    leftImg: baseDomain+aboutAssets.aboutAsset10,
     rightImg: null,
     gallery: [],
   }

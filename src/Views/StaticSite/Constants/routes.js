@@ -1,4 +1,10 @@
-import OurLegacyModal from '../Components/OurLegacyModal'
+// import OurLegacyModal from '../Components/OurLegacyModal'
+import MadhavJi from '../Views/About/our-legacy/paramhamsa-madhavadas-ji.jsx'
+import Yogendra from '../Views/About/our-legacy/shree-yogendra-ji'
+import Jayadev from '../Views/About/our-legacy/dr-jayadeva-yogendra.jsx'
+import Sitadevi from '../Views/About/our-legacy/smt-sitadevi-ji.jsx'
+import Hansaji from '../Views/About/our-legacy/dr-hansaji-yogendra'
+import Hirish from '../Views/About/our-legacy/harish-ji'
 import Blessings from '../Views/About/blessings'
 import AboutUs from '../Views/About/index'
 import OurLegacy from '../Views/About/our-legacy'
@@ -91,7 +97,7 @@ const staticSiteRoutes = [
     name: 'Blessings',
   },
   {
-    Component: OurLegacyModal,
+    Component: Sitadevi,
     path: '/about/our-legacy/smt-sitadevi-ji',
     exact: true,
     id: 'statisSiteSitadeviJi',
@@ -99,7 +105,7 @@ const staticSiteRoutes = [
     name: 'SitadeviJi',
   },
   {
-    Component: OurLegacyModal,
+    Component: Jayadev,
     path: '/about/our-legacy/dr-jayadeva-yogendra',
     exact: true,
     id: 'statisSiteDrJayadeva',
@@ -107,7 +113,7 @@ const staticSiteRoutes = [
     name: 'DrJayadeva',
   },
   {
-    Component: OurLegacyModal,
+    Component: Hansaji,
     path: '/about/our-legacy/dr-hansaji-yogendra',
     exact: true,
     id: 'statisSiteDrHansaji',
@@ -115,7 +121,7 @@ const staticSiteRoutes = [
     name: 'DrHansaji',
   },
   {
-    Component: OurLegacyModal,
+    Component: Hirish,
     path: '/about/our-legacy/harish-ji',
     exact: true,
     id: 'statisSiteHarishJi',
@@ -123,7 +129,7 @@ const staticSiteRoutes = [
     name: 'HarishJi',
   },
   {
-    Component: OurLegacyModal,
+    Component: MadhavJi,
     path: '/about/our-legacy/paramhamsa-madhavdas-ji',
     exact: true,
     id: 'statisSiteMadhavdasJi',
@@ -131,7 +137,7 @@ const staticSiteRoutes = [
     name: 'MadhavdasJi',
   },
   {
-    Component: OurLegacyModal,
+    Component: Yogendra,
     path: '/about/our-legacy/shree-yogendra-ji',
     exact: true,
     id: 'statisSiteYagendraJi',
@@ -139,7 +145,7 @@ const staticSiteRoutes = [
     name: 'YagendraJi',
   },
   {
-    Component: OurLegacyModal,
+    Component: Yogendra,
     path: '/about/our-legacy/shree-yagendra-ji',
     exact: true,
     id: 'statisSiteYagendraJi',
