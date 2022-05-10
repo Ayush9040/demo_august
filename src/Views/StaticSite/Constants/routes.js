@@ -38,6 +38,7 @@ import EBooks from '../Views/Publication/e-books'
 import library from '../Views/Publication/library'
 import Yogasattva from '../Views/Publication/yogasattva'
 import Shop from '../Views/Shop'
+import SocialResponsibility from '../Views/SocialPage/index.jsx'
 
 const staticSiteRoutes = [
   {
@@ -47,6 +48,14 @@ const staticSiteRoutes = [
     id: 'statisSiteHome',
     routePath: '/',
     name: 'Home',
+  },
+  {
+    Component: SocialResponsibility,
+    path: '/social-responsibility',
+    exact: true,
+    id: 'statisSiteSocial',
+    routePath: '/social-responsibility',
+    name: 'Social',
   },
   {
     Component: Courses,
