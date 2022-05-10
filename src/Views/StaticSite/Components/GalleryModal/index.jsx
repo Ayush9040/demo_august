@@ -1,5 +1,5 @@
 import React from 'react'
-import InaguralCeremony from '../../assets/images/igceremony.jpg'
+import baseDomain,{ mediaAssets } from '../../assets/images/imageAsset'
 import GridComponent from '../GridComponent'
 import './style.scss'
 
@@ -11,7 +11,7 @@ const GalleryModal = ({ setGallery }) => {
       </div>
       <div className="gallery-content">
         <div className="main-image">
-          <img src={InaguralCeremony} alt="inagural-ceremony" />
+          <img src={baseDomain+mediaAssets.igCeremony} alt="inagural-ceremony" />
         </div>
         <div className="other-images">
           <GridComponent />

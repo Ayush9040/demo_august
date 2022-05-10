@@ -41,7 +41,7 @@ const AlumiNav = ({ title }) => {
                   Support your Alma Mater
                 </li>
               </Link>
-              <Link>
+              <Link to='/' >
                 <li
                   className={title === 'Contact' ? 'nav-active' : ''}
                   style={{ borderRight: '0' }}
@@ -73,7 +73,7 @@ const AlumiNav = ({ title }) => {
                 Support your Alma Mater
               </li>
             </Link>
-            <Link>
+            <Link to='/' >
               <li
                 className={title === 'Contact' ? 'nav-active' : ''}
                 style={{ borderRight: '0' }}

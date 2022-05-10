@@ -49,7 +49,7 @@ Lorem Ipsum.`}
         />
         <SectionComponent
           page="Gifting"
-          image={baseDomain + giftingAssets.careerAssets}
+          image={baseDomain + giftingAssets.healthAssets}
           title="Gift health & wellness"
           description={`Lorem Ipsum is simply dummy text of the printing and
 typesetting industry. Lorem Ipsum has been the industry's

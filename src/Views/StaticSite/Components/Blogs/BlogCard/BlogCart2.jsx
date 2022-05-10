@@ -6,7 +6,7 @@ const BlogCard2 = () => {
   return (
     <div className="blog-card">
       <div className="blog-card-image">
-        <img src={baseDomain+homeAssets.homeAsset59} />
+        <img src={baseDomain+homeAssets.homeAsset60} />
       </div>
       <div className="blog-card-text">
         <h2>Title</h2>

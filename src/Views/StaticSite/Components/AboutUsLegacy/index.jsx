@@ -135,7 +135,7 @@ const CommonBannerLegacy = ({
       img: l5,
     },
   ]
-
+  console.log(l0,'img')
   return (
     <>
       <div className="about-us-container">
@@ -176,7 +176,8 @@ const CommonBannerLegacy = ({
                 <br />
                 <br />
                 <br />
-                <p>{founderData[activeFounder].desc[1]}</p>
+                {founderData[activeFounder].desc[1]}
+                <br/>
                 <Link
                   to={'/about/our-legacy/' + founderData[activeFounder].route}
                 >

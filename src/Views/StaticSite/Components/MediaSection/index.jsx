@@ -1,8 +1,9 @@
 import React from 'react'
 import SeminarCard from '../SeminarCard'
 import './style.scss'
-import SeminarImg from '../../assets/images/seminar.png'
+// import SeminarImg from '../../assets/images/seminar.png'
 import { share } from '../../assets/icons/icon'
+import baseDomain,{ mediaAssets,alumniAssets } from '../../assets/images/imageAsset'
 
 const MediaSection = ({
   subHeading,
@@ -36,7 +37,7 @@ const MediaSection = ({
         </div>
         <div className="newsletter-image">
           <h3>{subHeading}</h3>
-          <img className="seminar-iamge" src={SeminarImg} />
+          <img className="seminar-iamge" src={baseDomain + mediaAssets.seminarImg} />
         </div>
       </div>
       {upcomingEvents && (
@@ -47,15 +48,15 @@ const MediaSection = ({
           <div className="seminars-card-container">
             <SeminarCard
               title={'500 hrs TTC'}
-              bgImage={require('../../assets/images/upcoming-event-1.jpg')}
+              bgImage={baseDomain+alumniAssets.eventsAssets1}
             />
             <SeminarCard
               title={'Pregnancy Camp'}
-              bgImage={require('../../assets/images/upcoming-event-2.jpg')}
+              bgImage={baseDomain+alumniAssets.eventsAssets2}
             />
             <SeminarCard
               title={'Regular Asana Class'}
-              bgImage={require('../../assets/images/upcoming-event-3.jpg')}
+              bgImage={baseDomain+alumniAssets.eventsAssets3}
             />
           </div>
         </div>

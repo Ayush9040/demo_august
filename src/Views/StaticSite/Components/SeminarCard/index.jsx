@@ -24,7 +24,7 @@ const SeminarCard = ({ title, bgImage, textContent }) => {
   return (
     <div className={'seminar-card'}>
       <div className="seminar-card-image">
-        <img src={bgImage.default} />
+        <img src={bgImage} />
       </div>
       <div className="seminar-card-content">
         <h2>

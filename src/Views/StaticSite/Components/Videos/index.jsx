@@ -50,7 +50,7 @@ const VideosSection = () => {
             }
           >
             <div className="svg-container">{videos2}</div>
-            <img src={baseDomain+homeAssets.homeAsset65}/>
+            <img src={baseDomain+homeAssets.homeAsset66}/>
           </div>
         </div>
         <a

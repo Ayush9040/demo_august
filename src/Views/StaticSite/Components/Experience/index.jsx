@@ -97,7 +97,7 @@ const Experience = () => {
             <CommonBtn text={'View All'} />
           </div>
           <div className="carousel-image">
-            <img src={baseDomain+homeAssets.homeAsset56} />
+            <img src={baseDomain+homeAssets.homeAsset57} />
           </div>
         </div>
         <div className="experience-carousel global-padding">
@@ -123,7 +123,7 @@ const Experience = () => {
             <CommonBtn text={'View All'} />
           </div>
           <div className="carousel-image">
-            <img src={baseDomain+homeAssets.homeAsset56} />
+            <img src={baseDomain+homeAssets.homeAsset58} />
           </div>
         </div>
       </Slider>

@@ -59,17 +59,17 @@ export const homeAssets = {
   homeAsset54: '/Home/Facts/2020-onwards/6.jpg',
 
   homeAsset55: '/Home/Experience/shriramnathkovid.png',
-  homeAsset56: '/Home/Experience/shriramnathkovid.png',
+  homeAsset56: '/Home/Experience/Modiji.jpg',
   homeAsset57: '/Home/Experience/Naiduji.jpg',
   homeAsset58: '/Home/Experience/Amitabh-Bachchan.jpg',
 
   // blogs
 
   homeAsset59: '/Home/Blogs/blog1.jpg',
-  homeAsset60: '/Home/Blogs/blog2.jpg',
-  homeAsset61: '/Home/Blogs/blog3.jpg',
-  homeAsset62: '/Home/Blogs/blog4.jpg',
-  homeAsset63: '/Home/Blogs/blog5.jpg',
+  homeAsset60: '/Home/Blogs/Blog2.jpg',
+  homeAsset61: '/Home/Blogs/Blog3.jpg',
+  homeAsset62: '/Home/Blogs/Blog4.jpg',
+  homeAsset63: '/Home/Blogs/Blog5.jpg',
 
   // videos
 
@@ -98,12 +98,129 @@ export const facilitiyAssets = {
   facilitiyAssets2: '/Facilities/Conference Room/conferenceroom.jpg',
   facilitiyAssets1: '/Facilities/Hostels/hostel.jpg',
   facilitiyAssets3: '/Facilities/Library/library_.jpg',
-  facilitiyAssets4: '/Facilities/Book Store/bookstore_.jpg',
-  facilitiyAssets5: '/Facilities/Yogic Halls/yogahalls.jpg',
-  facilitiyAssets6: '/Facilities/Rooftop Space/rooftop.jpg',
-  facilitiyAssets7: '/Facilities/Dining Hall – Naivedyam/dininghall.jpg',
-  facilitiyAssets8: '/Facilities/Nature Trail/naturetrail_.jpg',
+  facilitiyAssets4: '/Facilities/Book%20Store/bookstore_.jpg',
+  facilitiyAssets5: '/Facilities/Yogic%20Halls/yogahalls.jpg',
+  facilitiyAssets6: '/Facilities/Rooftop%20Space/rooftop.jpg',
+  facilitiyAssets7: '/Facilities/Dining%20Hall%20–%20Naivedyam/dininghall.jpg',
+  facilitiyAssets8: '/Facilities/Nature%20Trail/naturetrail_.jpg',
   facilitiyAssets9: '/Facilities/Gazebo/Gazebo_.jpg',
+  facilitiyAssets10:'/Facilities/KailashTree/tree.jpg',
+  homeAsset70:'/Home/Footer/tyi.png'
+
+} 
+
+export const aboutAssets={
+  aboutAsset1:'/About/Overview/about-overview.jpg',
+
+
+
+  // shree Yogendra jI
+
+  aboutAsset2:'/About/Our%20Legacy/Shree%20Yogendra%20ji/r.jpg',
+  aboutAsset3:'/About/Our%20Legacy/Shree%20Yogendra%20ji/l.jpg',
+  aboutAsset4:'/About/Our%20Legacy/Shree%20Yogendra%20ji/1.jpg',
+  aboutAsset5:'/About/Our%20Legacy/Shree%20Yogendra%20ji/2.jpg',
+  aboutAsset6:'/About/Our%20Legacy/Shree%20Yogendra%20ji/3.jpg',
+  aboutAsset7:'/About/Our%20Legacy/Shree%20Yogendra%20ji/4.jpg',
+  aboutAsset8:'/About/Our%20Legacy/Shree%20Yogendra%20ji/5.jpg',
+  aboutAsset9:'/About/Our%20Legacy/Shree%20Yogendra%20ji/6.jpg',
+
+  // Madhavdas Ji
+
+  aboutAsset10:'/About/Our%20Legacy/Paramhamsa%20Madhavadas%20ji/Madhavdasji.jpg',
+
+
+  // sitaDevi Ji
+
+  aboutAsset11:'/About/Our%20Legacy/Smt.%20Sitadevi%20Ji/l.jpg',
+  aboutAsset12:'/About/Our%20Legacy/Smt.%20Sitadevi%20Ji/r.jpg',
+  aboutAsset13:'/About/Our%20Legacy/Smt.%20Sitadevi%20Ji/1.jpg',
+  aboutAsset14:'/About/Our%20Legacy/Smt.%20Sitadevi%20Ji/2.jpg',
+  aboutAsset15:'/About/Our%20Legacy/Smt.%20Sitadevi%20Ji/3.jpg',
+  aboutAsset16:'/About/Our%20Legacy/Smt.%20Sitadevi%20Ji/4.jpg',
+  aboutAsset17:'/About/Our%20Legacy/Smt.%20Sitadevi%20Ji/5.jpg',
+  aboutAsset18:'/About/Our%20Legacy/Smt.%20Sitadevi%20Ji/6.jpg',
+
+
+  // jayadeva Yogendra
+
+  aboutAsset19:'/About/Our%20Legacy/Dr.%20Jayadeva%20Yogendra/l.jpg',
+  aboutAsset20:'/About/Our%20Legacy/Dr.%20Jayadeva%20Yogendra/r.jpg',
+  aboutAsset21:'/About/Our%20Legacy/Dr.%20Jayadeva%20Yogendra/1.jpg',
+  aboutAsset22:'/About/Our%20Legacy/Dr.%20Jayadeva%20Yogendra/2.jpg',
+  aboutAsset23:'/About/Our%20Legacy/Dr.%20Jayadeva%20Yogendra/3.jpg',
+  aboutAsset24:'/About/Our%20Legacy/Dr.%20Jayadeva%20Yogendra/4.jpg',
+  aboutAsset25:'/About/Our%20Legacy/Dr.%20Jayadeva%20Yogendra/5.jpg',
+  aboutAsset26:'/About/Our%20Legacy/Dr.%20Jayadeva%20Yogendra/6.jpg',
+  
+  // hansaji Yogengra
+  
+  aboutAsset27:'/About/Our%20Legacy/Dr.%20Hansaji%20Yogendra/1 left side .jpg',
+  aboutAsset28:'/About/Our%20Legacy/Dr.%20Hansaji%20Yogendra/2nd right side.jpg',
+  aboutAsset29:'/About/Our%20Legacy/Dr.%20Hansaji%20Yogendra/1.jpg',
+  aboutAsset30:'/About/Our%20Legacy/Dr.%20Hansaji%20Yogendra/2.jpg',
+  aboutAsset31:'/About/Our%20Legacy/Dr.%20Hansaji%20Yogendra/3.jpg',
+  aboutAsset32:'/About/Our%20Legacy/Dr.%20Hansaji%20Yogendra/4.jpg',
+  aboutAsset33:'/About/Our%20Legacy/Dr.%20Hansaji%20Yogendra/5.jpg',
+  aboutAsset34:'/About/Our%20Legacy/Dr.%20Hansaji%20Yogendra/6.jpg',
+  
+  // harishji
+  
+  aboutAsset35:'/About/Our%20Legacy/Harish%20Ji/l.jpg',
+  aboutAsset36:'/About/Our%20Legacy/Harish%20Ji/r.jpg',
+  aboutAsset37:'/About/Our%20Legacy/Harish%20Ji/1.jpg',
+  aboutAsset38:'/About/Our%20Legacy/Harish%20Ji/2.jpg',
+  aboutAsset39:'/About/Our%20Legacy/Harish%20Ji/3.jpg',
+  aboutAsset40:'/About/Our%20Legacy/Harish%20Ji/4.jpg',
+  aboutAsset41:'/About/Our%20Legacy/Harish%20Ji/5.jpg',
+  aboutAsset42:'/About/Our%20Legacy/Harish%20Ji/6.jpg',
+
+  // blessings
+  aboutAsset43:'/About/Pujya%20Maa%20Dr%20Hansaji’s%20blessings/why_tyi.png',
+
+  // legacy images 
+
+  aboutAsset44:'/About/Our%20Legacy/l-0.jpg',
+  aboutAsset45:'/About/Our%20Legacy/l-1.jpg',
+  aboutAsset46:'/About/Our%20Legacy/l-2.jpg',
+  aboutAsset47:'/About/Our%20Legacy/l-3.jpg',
+  aboutAsset48:'/About/Our%20Legacy/l-4.jpg',
+  aboutAsset49:'/About/Our%20Legacy/l-5.jpg',
+  
+}
+
+export const mediaAssets={
+  
+
+  // gallery
+  seminarImg:'/Media/gallery/seminar.png',
+  igCeremony:'/Media/gallery/igceremony.jpg',
+
+  // harmony-sec
+  mediaAsset1:'/Media/gallery/harmony/image1.jpg',
+  mediaAsset2:'/Media/gallery/harmony/image2.jpg',
+  mediaAsset3:'/Media/gallery/harmony/image3.jpg',
+  mediaAsset4:'/Media/gallery/harmony/image4.jpg',
+  mediaAsset5:'/Media/gallery/harmony/image5.jpg',
+  mediaAsset6:'/Media/gallery/harmony/image6.jpg',
+  mediaAsset7:'/Media/gallery/harmony/image7.jpg',
+  mediaAsset8:'/Media/gallery/harmony/image8.jpg',
+  mediaAsset9:'/Media/gallery/harmony/image9.jpg',
+
+
+  // 99foundation sec
+  mediaAsset10:'/Media/gallery/99FoundationDay/img1.jpg',
+  mediaAsset11:'/Media/gallery/99FoundationDay/img2.jpg',
+  mediaAsset12:'/Media/gallery/99FoundationDay/img3.jpg',
+  mediaAsset13:'/Media/gallery/99FoundationDay/img4.jpg',
+  mediaAsset14:'/Media/gallery/99FoundationDay/img5.jpg',
+
+  // news
+
+ 
+
+  // events
+
 }
 
 // Publication
@@ -173,37 +290,37 @@ export const publicationAssests = {
 
   // YTH
   // 2018
-  ythAssets1: '/Publications/Yogsattava/previous Issues/2018/yth2018-1.jpg',
-  ythAssets2: '/Publications/Yogsattava/previous Issues/2018/yth2018-2.jpg',
-  ythAssets3: '/Publications/Yogsattava/previous Issues/2018/yth2018-3.jpg',
-  ythAssets4: '/Publications/Yogsattava/previous Issues/2018/yth2018-4.jpg',
-  ythAssets5: '/Publications/Yogsattava/previous Issues/2018/yth2018-5.jpg',
-  ythAssets6: '/Publications/Yogsattava/previous Issues/2018/yth2018-6.jpg',
+  ythAssets1: '/Publications/Yogsattava/PreviousIssues/2018/yth2018-1.jpg',
+  ythAssets2: '/Publications/Yogsattava/PreviousIssues/2018/yth2018-2.jpg',
+  ythAssets3: '/Publications/Yogsattava/PreviousIssues/2018/yth2018-3.jpg',
+  ythAssets4: '/Publications/Yogsattava/PreviousIssues/2018/yth2018-4.jpg',
+  ythAssets5: '/Publications/Yogsattava/PreviousIssues/2018/yth2018-5.jpg',
+  ythAssets6: '/Publications/Yogsattava/PreviousIssues/2018/yth2018-6.jpg',
 
   // 2019
 
-  ythAssets7: '/Publications/Yogsattava/previous Issues/2019/yth2019-1.jpg',
-  ythAssets8: '/Publications/Yogsattava/previous Issues/2019/yth2019-2.jpg',
-  ythAssets9: '/Publications/Yogsattava/previous Issues/2019/yth2019-3.jpg',
-  ythAssets10: '/Publications/Yogsattava/previous Issues/2019/yth2019-4.jpg',
-  ythAssets11: '/Publications/Yogsattava/previous Issues/2019/yth2019-5.jpg',
-  ythAssets12: '/Publications/Yogsattava/previous Issues/2019/yth2019-6.jpg',
+  ythAssets7: '/Publications/Yogsattava/PreviousIssues/2019/yth2019-1.jpg',
+  ythAssets8: '/Publications/Yogsattava/PreviousIssues/2019/yth2019-2.jpg',
+  ythAssets9: '/Publications/Yogsattava/PreviousIssues/2019/yth2019-3.jpg',
+  ythAssets10: '/Publications/Yogsattava/PreviousIssues/2019/yth2019-4.jpg',
+  ythAssets11: '/Publications/Yogsattava/PreviousIssues/2019/yth2019-5.jpg',
+  ythAssets12: '/Publications/Yogsattava/PreviousIssues/2019/yth2019-6.jpg',
 
   // 2020
-  ythAssets13: '/Publications/Yogsattava/previous Issues/2020/yth2020-1.jpg',
-  ythAssets14: '/Publications/Yogsattava/previous Issues/2020/yth2020-2.jpg',
-  ythAssets15: '/Publications/Yogsattava/previous Issues/2020/yth2020-3.jpg',
-  ythAssets16: '/Publications/Yogsattava/previous Issues/2020/yth2020-4.jpg',
-  ythAssets17: '/Publications/Yogsattava/previous Issues/2020/yth2020-5.jpg',
-  ythAssets18: '/Publications/Yogsattava/previous Issues/2020/yth2020-6.jpg',
+  ythAssets13: '/Publications/Yogsattava/PreviousIssues/2020/yth2020-1.jpg',
+  ythAssets14: '/Publications/Yogsattava/PreviousIssues/2020/yth2020-2.jpg',
+  ythAssets15: '/Publications/Yogsattava/PreviousIssues/2020/yth2020-3.jpg',
+  ythAssets16: '/Publications/Yogsattava/PreviousIssues/2020/yth2020-4.jpg',
+  ythAssets17: '/Publications/Yogsattava/PreviousIssues/2020/yth2020-5.jpg',
+  ythAssets18: '/Publications/Yogsattava/PreviousIssues/2020/yth2020-6.jpg',
 
   // 2021
-  ythAssets19: '/Publications/Yogsattava/previous Issues/2021/yth2021-1.jpg',
-  ythAssets20: '/Publications/Yogsattava/previous Issues/2021/yth2021-2.jpg',
-  ythAssets21: '/Publications/Yogsattava/previous Issues/2021/yth2021-3.jpg',
-  ythAssets22: '/Publications/Yogsattava/previous Issues/2021/yth2021-4.jpg',
-  ythAssets23: '/Publications/Yogsattava/previous Issues/2021/yth2021-5.jpg',
-  ythAssets24: '/Publications/Yogsattava/previous Issues/2021/yth2021-6.jpg',
+  ythAssets19: '/Publications/Yogsattava/PreviousIssues/2021/yth2021-1.jpg',
+  ythAssets20: '/Publications/Yogsattava/PreviousIssues/2021/yth2021-2.jpg',
+  ythAssets21: '/Publications/Yogsattava/PreviousIssues/2021/yth2021-3.jpg',
+  ythAssets22: '/Publications/Yogsattava/PreviousIssues/2021/yth2021-4.jpg',
+  ythAssets23: '/Publications/Yogsattava/PreviousIssues/2021/yth2021-5.jpg',
+  ythAssets24: '/Publications/Yogsattava/PreviousIssues/2021/yth2021-6.jpg',
 
   //Library
   libraryAsset:'/Publications/Library/hero.jpg'
@@ -212,88 +329,88 @@ export const publicationAssests = {
 export const alumniAssets = {
   // Alumni-Gallery
   // 2017
-  galleryAssets1: '/Alumni/Alumni Gallery/2017/2017-1.jpg',
-  galleryAssets2: '/Alumni/Alumni Gallery/2017/2017-2.jpg',
-  galleryAssets3: '/Alumni/Alumni Gallery/2017/2017-3.jpg',
-  galleryAssets4: '/Alumni/Alumni Gallery/2017/2017-4.jpg',
-  galleryAssets5: '/Alumni/Alumni Gallery/2017/2017-5.jpg',
-  galleryAssets6: '/Alumni/Alumni Gallery/2017/2017-6.jpg',
-  galleryAssets7: '/Alumni/Alumni Gallery/2017/2017-7.jpg',
-  galleryAssets8: '/Alumni/Alumni Gallery/2017/2017-8.jpg',
-  galleryAssets9: '/Alumni/Alumni Gallery/2017/2017-9.jpg',
-  galleryAssets10: '/Alumni/Alumni Gallery/2017/2017-10.jpg',
-  galleryAssets11: '/Alumni/Alumni Gallery/2017/2017-11.jpg',
-  galleryAssets12: '/Alumni/Alumni Gallery/2017/2017-12.jpg',
+  galleryAssets1: '/Alumni/Alumni%20Gallery/2017/2017-1.jpg',
+  galleryAssets2: '/Alumni/Alumni%20Gallery/2017/2017-2.jpg',
+  galleryAssets3: '/Alumni/Alumni%20Gallery/2017/2017-3.jpg',
+  galleryAssets4: '/Alumni/Alumni%20Gallery/2017/2017-4.jpg',
+  galleryAssets5: '/Alumni/Alumni%20Gallery/2017/2017-5.jpg',
+  galleryAssets6: '/Alumni/Alumni%20Gallery/2017/2017-6.jpg',
+  galleryAssets7: '/Alumni/Alumni%20Gallery/2017/2017-7.jpg',
+  galleryAssets8: '/Alumni/Alumni%20Gallery/2017/2017-8.jpg',
+  galleryAssets9: '/Alumni/Alumni%20Gallery/2017/2017-9.jpg',
+  galleryAssets10: '/Alumni/Alumni%20Gallery/2017/2017-10.jpg',
+  galleryAssets11: '/Alumni/Alumni%20Gallery/2017/2017-11.jpg',
+  galleryAssets12: '/Alumni/Alumni%20Gallery/2017/2017-12.jpg',
 
   // 2018
-  galleryAssets13: '/Alumni/Alumni Gallery/2018/2018-1.jpg',
-  galleryAssets14: '/Alumni/Alumni Gallery/2018/2018-2.jpg',
-  galleryAssets15: '/Alumni/Alumni Gallery/2018/2018-3.jpg',
-  galleryAssets16: '/Alumni/Alumni Gallery/2018/2018-4.jpg',
-  galleryAssets17: '/Alumni/Alumni Gallery/2018/2018-5.jpg',
-  galleryAssets18: '/Alumni/Alumni Gallery/2018/2018-6.jpg',
-  galleryAssets19: '/Alumni/Alumni Gallery/2018/2018-7.jpg',
-  galleryAssets20: '/Alumni/Alumni Gallery/2018/2018-8.jpg',
-  galleryAssets21: '/Alumni/Alumni Gallery/2018/2018-9.jpg',
-  galleryAssets22: '/Alumni/Alumni Gallery/2018/2018-10.jpg',
-  galleryAssets23: '/Alumni/Alumni Gallery/2018/2018-11.jpg',
-  galleryAssets24: '/Alumni/Alumni Gallery/2018/2018-12.jpg',
+  galleryAssets13: '/Alumni/Alumni%20Gallery/2018/2018-1.jpg',
+  galleryAssets14: '/Alumni/Alumni%20Gallery/2018/2018-2.jpg',
+  galleryAssets15: '/Alumni/Alumni%20Gallery/2018/2018-3.jpg',
+  galleryAssets16: '/Alumni/Alumni%20Gallery/2018/2018-4.jpg',
+  galleryAssets17: '/Alumni/Alumni%20Gallery/2018/2018-5.jpg',
+  galleryAssets18: '/Alumni/Alumni%20Gallery/2018/2018-6.jpg',
+  galleryAssets19: '/Alumni/Alumni%20Gallery/2018/2018-7.jpg',
+  galleryAssets20: '/Alumni/Alumni%20Gallery/2018/2018-8.jpg',
+  galleryAssets21: '/Alumni/Alumni%20Gallery/2018/2018-9.jpg',
+  galleryAssets22: '/Alumni/Alumni%20Gallery/2018/2018-10.jpg',
+  galleryAssets23: '/Alumni/Alumni%20Gallery/2018/2018-11.jpg',
+  galleryAssets24: '/Alumni/Alumni%20Gallery/2018/2018-12.jpg',
 
   // 2019
-  galleryAssets25: '/Alumni/Alumni Gallery/2019/2019-1.jpg',
-  galleryAssets26: '/Alumni/Alumni Gallery/2019/2019-1.jpg',
-  galleryAssets27: '/Alumni/Alumni Gallery/2019/2019-1.jpg',
-  galleryAssets28: '/Alumni/Alumni Gallery/2019/2019-1.jpg',
-  galleryAssets29: '/Alumni/Alumni Gallery/2019/2019-1.jpg',
-  galleryAssets30: '/Alumni/Alumni Gallery/2019/2019-1.jpg',
-  galleryAssets31: '/Alumni/Alumni Gallery/2019/2019-1.jpg',
-  galleryAssets32: '/Alumni/Alumni Gallery/2019/2019-1.jpg',
-  galleryAssets33: '/Alumni/Alumni Gallery/2019/2019-1.jpg',
-  galleryAssets34: '/Alumni/Alumni Gallery/2019/2019-1.jpg',
-  galleryAssets35: '/Alumni/Alumni Gallery/2019/2019-1.jpg',
-  galleryAssets36: '/Alumni/Alumni Gallery/2019/2019-1.jpg',
+  galleryAssets25: '/Alumni/Alumni%20Gallery/2019/2019-1.jpg',
+  galleryAssets26: '/Alumni/Alumni%20Gallery/2019/2019-1.jpg',
+  galleryAssets27: '/Alumni/Alumni%20Gallery/2019/2019-1.jpg',
+  galleryAssets28: '/Alumni/Alumni%20Gallery/2019/2019-1.jpg',
+  galleryAssets29: '/Alumni/Alumni%20Gallery/2019/2019-1.jpg',
+  galleryAssets30: '/Alumni/Alumni%20Gallery/2019/2019-1.jpg',
+  galleryAssets31: '/Alumni/Alumni%20Gallery/2019/2019-1.jpg',
+  galleryAssets32: '/Alumni/Alumni%20Gallery/2019/2019-1.jpg',
+  galleryAssets33: '/Alumni/Alumni%20Gallery/2019/2019-1.jpg',
+  galleryAssets34: '/Alumni/Alumni%20Gallery/2019/2019-1.jpg',
+  galleryAssets35: '/Alumni/Alumni%20Gallery/2019/2019-1.jpg',
+  galleryAssets36: '/Alumni/Alumni%20Gallery/2019/2019-1.jpg',
 
   // 2020
-  galleryAssets37: '/Alumni/Alumni Gallery/2020/2020-1.jpg',
-  galleryAssets38: '/Alumni/Alumni Gallery/2020/2020-2.jpg',
-  galleryAssets39: '/Alumni/Alumni Gallery/2020/2020-3.jpg',
-  galleryAssets40: '/Alumni/Alumni Gallery/2020/2020-4.jpg',
-  galleryAssets41: '/Alumni/Alumni Gallery/2020/2020-5.jpg',
-  galleryAssets42: '/Alumni/Alumni Gallery/2020/2020-6.jpg',
-  galleryAssets43: '/Alumni/Alumni Gallery/2020/2020-7.jpg',
-  galleryAssets44: '/Alumni/Alumni Gallery/2020/2020-8.jpg',
-  galleryAssets45: '/Alumni/Alumni Gallery/2020/2020-9.jpg',
-  galleryAssets46: '/Alumni/Alumni Gallery/2020/2020-10.jpg',
-  galleryAssets47: '/Alumni/Alumni Gallery/2020/2020-11.jpg',
-  galleryAssets48: '/Alumni/Alumni Gallery/2020/2020-12.jpg',
+  galleryAssets37: '/Alumni/Alumni%20Gallery/2020/2020-1.jpg',
+  galleryAssets38: '/Alumni/Alumni%20Gallery/2020/2020-2.jpg',
+  galleryAssets39: '/Alumni/Alumni%20Gallery/2020/2020-3.jpg',
+  galleryAssets40: '/Alumni/Alumni%20Gallery/2020/2020-4.jpg',
+  galleryAssets41: '/Alumni/Alumni%20Gallery/2020/2020-5.jpg',
+  galleryAssets42: '/Alumni/Alumni%20Gallery/2020/2020-6.jpg',
+  galleryAssets43: '/Alumni/Alumni%20Gallery/2020/2020-7.jpg',
+  galleryAssets44: '/Alumni/Alumni%20Gallery/2020/2020-8.jpg',
+  galleryAssets45: '/Alumni/Alumni%20Gallery/2020/2020-9.jpg',
+  galleryAssets46: '/Alumni/Alumni%20Gallery/2020/2020-10.jpg',
+  galleryAssets47: '/Alumni/Alumni%20Gallery/2020/2020-11.jpg',
+  galleryAssets48: '/Alumni/Alumni%20Gallery/2020/2020-12.jpg',
 
   // 2021
-  galleryAssets49: '/Alumni/Alumni Gallery/2021/2021-1.jpg',
-  galleryAssets50: '/Alumni/Alumni Gallery/2021/2021-2.jpg',
-  galleryAssets51: '/Alumni/Alumni Gallery/2021/2021-3.jpg',
-  galleryAssets52: '/Alumni/Alumni Gallery/2021/2021-4.jpg',
-  galleryAssets53: '/Alumni/Alumni Gallery/2021/2021-5.jpg',
-  galleryAssets54: '/Alumni/Alumni Gallery/2021/2021-6.jpg',
-  galleryAssets55: '/Alumni/Alumni Gallery/2021/2021-7.jpg',
-  galleryAssets56: '/Alumni/Alumni Gallery/2021/2021-8.jpg',
-  galleryAssets57: '/Alumni/Alumni Gallery/2021/2021-9.jpg',
-  galleryAssets58: '/Alumni/Alumni Gallery/2021/2021-10.jpg',
-  galleryAssets59: '/Alumni/Alumni Gallery/2021/2021-11.jpg',
-  galleryAssets60: '/Alumni/Alumni Gallery/2021/2021-12.jpg',
+  galleryAssets49: '/Alumni/Alumni%20Gallery/2021/2021-1.jpg',
+  galleryAssets50: '/Alumni/Alumni%20Gallery/2021/2021-2.jpg',
+  galleryAssets51: '/Alumni/Alumni%20Gallery/2021/2021-3.jpg',
+  galleryAssets52: '/Alumni/Alumni%20Gallery/2021/2021-4.jpg',
+  galleryAssets53: '/Alumni/Alumni%20Gallery/2021/2021-5.jpg',
+  galleryAssets54: '/Alumni/Alumni%20Gallery/2021/2021-6.jpg',
+  galleryAssets55: '/Alumni/Alumni%20Gallery/2021/2021-7.jpg',
+  galleryAssets56: '/Alumni/Alumni%20Gallery/2021/2021-8.jpg',
+  galleryAssets57: '/Alumni/Alumni%20Gallery/2021/2021-9.jpg',
+  galleryAssets58: '/Alumni/Alumni%20Gallery/2021/2021-10.jpg',
+  galleryAssets59: '/Alumni/Alumni%20Gallery/2021/2021-11.jpg',
+  galleryAssets60: '/Alumni/Alumni%20Gallery/2021/2021-12.jpg',
 
   // 2022
-  galleryAssets61: '/Alumni/Alumni Gallery/2022/2022-1.jpg',
-  galleryAssets62: '/Alumni/Alumni Gallery/2022/2022-2.jpg',
-  galleryAssets63: '/Alumni/Alumni Gallery/2022/2022-3.jpg',
-  galleryAssets64: '/Alumni/Alumni Gallery/2022/2022-4.jpg',
-  galleryAssets65: '/Alumni/Alumni Gallery/2022/2022-5.jpg',
-  galleryAssets66: '/Alumni/Alumni Gallery/2022/2022-6.jpg',
-  galleryAssets67: '/Alumni/Alumni Gallery/2022/2022-7.jpg',
-  galleryAssets68: '/Alumni/Alumni Gallery/2022/2022-8.jpg',
-  galleryAssets69: '/Alumni/Alumni Gallery/2022/2022-9.jpg',
-  galleryAssets70: '/Alumni/Alumni Gallery/2022/2022-10.jpg',
-  galleryAssets71: '/Alumni/Alumni Gallery/2022/2022-11.jpg',
-  galleryAssets72: '/Alumni/Alumni Gallery/2022/2022-12.jpg',
+  galleryAssets61: '/Alumni/Alumni%20Gallery/2022/2022-1.jpg',
+  galleryAssets62: '/Alumni/Alumni%20Gallery/2022/2022-2.jpg',
+  galleryAssets63: '/Alumni/Alumni%20Gallery/2022/2022-3.jpg',
+  galleryAssets64: '/Alumni/Alumni%20Gallery/2022/2022-4.jpg',
+  galleryAssets65: '/Alumni/Alumni%20Gallery/2022/2022-5.jpg',
+  galleryAssets66: '/Alumni/Alumni%20Gallery/2022/2022-6.jpg',
+  galleryAssets67: '/Alumni/Alumni%20Gallery/2022/2022-7.jpg',
+  galleryAssets68: '/Alumni/Alumni%20Gallery/2022/2022-8.jpg',
+  galleryAssets69: '/Alumni/Alumni%20Gallery/2022/2022-9.jpg',
+  galleryAssets70: '/Alumni/Alumni%20Gallery/2022/2022-10.jpg',
+  galleryAssets71: '/Alumni/Alumni%20Gallery/2022/2022-11.jpg',
+  galleryAssets72: '/Alumni/Alumni%20Gallery/2022/2022-12.jpg',
 
   // Support-AnnamBrahma
 
@@ -375,70 +492,13 @@ export const giftingAssets = {
   healthAssets: '/Gifting/Gift health & wellness.jpg',
 }
 
-export const aboutAssets = {
-  aboutAsset1: '/About/Overview/about-overview.jpg',
-  aboutAsset2: '/About/Our Legacy/Shree Yogendra ji/r.jpg',
-  aboutAsset3: '/About/Our Legacy/Shree Yogendra ji/l.jpg',
-  aboutAsset4: '/About/Our Legacy/Shree Yogendra ji/1.jpg',
-  aboutAsset5: '/About/Our Legacy/Shree Yogendra ji/2.jpg',
-  aboutAsset6: '/About/Our Legacy/Shree Yogendra ji/3.jpg',
-  aboutAsset7: '/About/Our Legacy/Shree Yogendra ji/4.jpg',
-  aboutAsset8: '/About/Our Legacy/Shree Yogendra ji/5.jpg',
-  aboutAsset9: '/About/Our Legacy/Shree Yogendra ji/6.jpg',
-  aboutAsset10: '/About/Our Legacy/Paramhamsa Madhavadas ji/Madhavdasji.jpg',
-  aboutAsset11: '/About/Our Legacy/Smt. Sitadevi Ji/l.jpg',
-  aboutAsset12: '/About/Our Legacy/Smt. Sitadevi Ji/r.jpg',
-  aboutAsset13: '/About/Our Legacy/Smt. Sitadevi Ji/1.jpg',
-  aboutAsset14: '/About/Our Legacy/Smt. Sitadevi Ji/2.jpg',
-  aboutAsset15: '/About/Our Legacy/Smt. Sitadevi Ji/3.jpg',
-  aboutAsset16: '/About/Our Legacy/Smt. Sitadevi Ji/4.jpg',
-  aboutAsset17: '/About/Our Legacy/Smt. Sitadevi Ji/5.jpg',
-  aboutAsset18: '/About/Our Legacy/Smt. Sitadevi Ji/6.jpg',
-  aboutAsset19: '/About/Our Legacy/Dr. Jayadeva Yogendra/l.jpg',
-  aboutAsset20: '/About/Our Legacy/Dr. Jayadeva Yogendra/r.jpg',
-  aboutAsset21: '/About/Our Legacy/Dr. Jayadeva Yogendra/1.jpg',
-  aboutAsset22: '/About/Our Legacy/Dr. Jayadeva Yogendra/2.jpg',
-  aboutAsset23: '/About/Our Legacy/Dr. Jayadeva Yogendra/3.jpg',
-  aboutAsset24: '/About/Our Legacy/Dr. Jayadeva Yogendra/4.jpg',
-  aboutAsset25: '/About/Our Legacy/Dr. Jayadeva Yogendra/5.jpg',
-  aboutAsset26: '/About/Our Legacy/Dr. Jayadeva Yogendra/6.jpg',
-  aboutAsset27: '/About/Our Legacy/Dr. Hansaji Yogendra/1 left side .jpg',
-  aboutAsset28: '/About/Our Legacy/Dr. Hansaji Yogendra/2nd right side.jpg',
-  aboutAsset29: '/About/Our Legacy/Dr. Hansaji Yogendra/1.jpg',
-  aboutAsset30: '/About/Our Legacy/Dr. Hansaji Yogendra/2.jpg',
-  aboutAsset31: '/About/Our Legacy/Dr. Hansaji Yogendra/3.jpg',
-  aboutAsset32: '/About/Our Legacy/Dr. Hansaji Yogendra/4.jpg',
-  aboutAsset33: '/About/Our Legacy/Dr. Hansaji Yogendra/5.jpg',
-  aboutAsset34: '/About/Our Legacy/Dr. Hansaji Yogendra/6.jpg',
-  aboutAsset35: '/About/Our Legacy/Harish Ji/l.jpg',
-  aboutAsset36: '/About/Our Legacy/Harish Ji/r.jpg',
-  aboutAsset37: '/About/Our Legacy/Harish Ji/1.jpg',
-  aboutAsset38: '/About/Our Legacy/Harish Ji/2.jpg',
-  aboutAsset39: '/About/Our Legacy/Harish Ji/3.jpg',
-  aboutAsset40: '/About/Our Legacy/Harish Ji/4.jpg',
-  aboutAsset41: '/About/Our Legacy/Harish Ji/5.jpg',
-  aboutAsset42: '/About/Our Legacy/Harish Ji/6.jpg',
-  aboutAsset43: '/About/Pujya Maa Dr Hansaji’s blessings/why_tyi.png',
-
-  // legacy images
-
-  aboutAsset44: '/About/Our Legacy/l-0.jpg',
-  aboutAsset45: '/About/Our Legacy/l-1.jpg',
-  aboutAsset46: '/About/Our Legacy/l-2.jpg',
-  aboutAsset47: '/About/Our Legacy/l-3.jpg',
-  aboutAsset48: '/About/Our Legacy/l-4.jpg',
-  aboutAsset49: '/About/Our Legacy/l-5.jpg',
-
-  // videos
-}
-
 export const volunteerAssets = {
   volunteerAssets1: '/Volunteer/Annam-Brahma/annam-1.jpg',
   volunteerAssets2: '/Volunteer/Bmc-Schools/volunteer-bmc.jpg',
   volunteerAssets3: '/Volunteer/Traffic-police/volunteer-3.jpg',
   volunteerAssets4: '/Volunteer/Trees-plantation/planting-modified.jpg',
   //values
-  valuesAssets: 'Volunteer/our-values.jpg',
+  valuesAssets: '/Volunteer/our-values.jpg',
 }
 
 export default baseDomain

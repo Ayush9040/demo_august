@@ -118,7 +118,7 @@ const Facilities = () => {
           >
             <span className={activeSlide === 8 && 'active'}>Gazebo</span>
           </li>
-          {/* <li
+          <li
             onClick={() => {
               slider.current.slickGoTo(9, false)
             }}
@@ -126,7 +126,7 @@ const Facilities = () => {
           >
             <span className={activeSlide ===9 && 'active'}>Kailashpati Tree
             </span>
-          </li> */}
+          </li>
         </ul>
       </div>
       <div className="facilities-info">
@@ -281,9 +281,9 @@ const Facilities = () => {
               {/* <CommonBtn text={"Take a virtual tour"} /> */}
             </div>
           </div>
-          {/* <div className="facilities-slide">
+          <div className="facilities-slide">
             <div className="facility-image">
-              <img src={Hostel} />
+              <img src={baseDomain+facilitiyAssets.facilitiyAssets10} />
             </div>
             <div className="facility-description">
               <h2>Kailashpati Tree
@@ -291,9 +291,9 @@ const Facilities = () => {
               <p>
               The favourite spot of most sadhakas on campus, the Kailashpati tree has graced us with its presence for many years. It is the best spot to meditate at, to soak in its spiritual vibrations. The lovely fragrance of its flowers is the perfect accompaniment to whatever activity you are pursuing under the tree. Come, take the divine blessings from the tree!
               </p>
-              <CommonBtn text={"Take a virtual tour"} />
+              {/* <CommonBtn text={"Take a virtual tour"} /> */}
             </div>
-          </div> */}
+          </div>
         </Slider>
       </div>
       <div className="additional-info">
