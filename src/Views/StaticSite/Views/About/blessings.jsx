@@ -1,7 +1,9 @@
 import React from 'react'
 import CommonBannerAboutUs from '../../Components/CommonBannerAboutUs'
-import { graphql } from 'gatsby'
 import Tyi from '../../assets/images/why_tyi.png'
+import baseDomain, { aboutAssets } from '../../assets/images/imageAsset'
+
+
 
 const Blessings = ({ location }) => {
   console.log('tyi', Tyi)
@@ -13,7 +15,7 @@ const Blessings = ({ location }) => {
           Logo={false}
           Navigation={true}
           PageType="blessings"
-          BgImage={Tyi}
+          BgImage={baseDomain+aboutAssets.aboutAsset43}
           Heading="Dr Hansaji’s Blessings"
           isOnlyBanner={false}
           innerNav={true}
@@ -26,20 +28,3 @@ const Blessings = ({ location }) => {
 
 export default Blessings
 
-export const career = graphql`
-  fragment career on File {
-    childImageSharp {
-      fluid {
-        ...GatsbyImageSharpFluid
-      }
-    }
-  }
-`
-
-export const query = graphql`
-  query {
-    whttyi: file(relativePath: { eq: "why_tyi.png" }) {
-      ...career
-    }
-  }
-`

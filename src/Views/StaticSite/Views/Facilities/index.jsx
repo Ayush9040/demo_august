@@ -1,19 +1,11 @@
-import React, { useState, useRef, useEffect } from 'react'
+import React, { useState, useRef } from 'react'
 import CommonBanner from '../../Components/Common-banner'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import Slider from 'react-slick'
 import './style.scss'
-import CommonBtn from '../../Components/commonbtn'
-import Hostel from '../../assets/images/hostel.jpg'
-import conference from '../../assets/images/conferenceroom.jpg'
-import bookstore from '../../assets/images/bookstore_.jpg'
-import library from '../../assets/images/library_.jpg'
-import dinning from '../../assets/images/dininghall.jpg'
-import Gazebo from '../../assets/images/Gazebo_.jpg'
-import rooftop from '../../assets/images/rooftop.jpg'
-import yogahalls from '../../assets/images/yogahalls.jpg'
-import naturetrail from '../../assets/images/naturetrail_.jpg'
+
+import baseDomain,{ facilitiyAssets } from '../../assets/images/imageAsset'
 const Facilities = () => {
   const [activeSlide, setActiveSlide] = useState(0)
   let settings = {
@@ -126,7 +118,7 @@ const Facilities = () => {
           >
             <span className={activeSlide === 8 && 'active'}>Gazebo</span>
           </li>
-          {/* <li
+          <li
             onClick={() => {
               slider.current.slickGoTo(9, false)
             }}
@@ -134,7 +126,7 @@ const Facilities = () => {
           >
             <span className={activeSlide ===9 && 'active'}>Kailashpati Tree
             </span>
-          </li> */}
+          </li>
         </ul>
       </div>
       <div className="facilities-info">
@@ -147,7 +139,7 @@ const Facilities = () => {
         >
           <div className="facilities-slide">
             <div className="facility-image">
-              <img src={Hostel} />
+              <img src={baseDomain + facilitiyAssets.facilitiyAssets1} />
             </div>
             <div className="facility-description">
               <h2>Hostels</h2>
@@ -164,7 +156,7 @@ const Facilities = () => {
           </div>
           <div className="facilities-slide">
             <div className="facility-image">
-              <img src={conference} />
+              <img src={baseDomain + facilitiyAssets.facilitiyAssets2} />
             </div>
             <div className="facility-description">
               <h2>Conference Room</h2>
@@ -177,7 +169,7 @@ const Facilities = () => {
           </div>
           <div className="facilities-slide">
             <div className="facility-image">
-              <img src={library} />
+              <img src={baseDomain + facilitiyAssets.facilitiyAssets3} />
             </div>
             <div className="facility-description">
               <h2>Library</h2>
@@ -196,7 +188,7 @@ const Facilities = () => {
           </div>
           <div className="facilities-slide">
             <div className="facility-image">
-              <img src={bookstore} />
+              <img src={baseDomain + facilitiyAssets.facilitiyAssets4} />
             </div>
             <div className="facility-description">
               <h2>Book Store</h2>
@@ -215,7 +207,7 @@ const Facilities = () => {
 
           <div className="facilities-slide">
             <div className="facility-image">
-              <img src={yogahalls} />
+              <img src={baseDomain + facilitiyAssets.facilitiyAssets5} />
             </div>
             <div className="facility-description">
               <h2>Yogic Halls</h2>
@@ -229,7 +221,7 @@ const Facilities = () => {
           </div>
           <div className="facilities-slide">
             <div className="facility-image">
-              <img src={rooftop} />
+              <img src={baseDomain + facilitiyAssets.facilitiyAssets6} />
             </div>
             <div className="facility-description">
               <h2>Rooftop Space</h2>
@@ -243,7 +235,7 @@ const Facilities = () => {
           </div>
           <div className="facilities-slide">
             <div className="facility-image">
-              <img src={dinning} />
+              <img src={baseDomain + facilitiyAssets.facilitiyAssets7} />
             </div>
             <div className="facility-description">
               <h2>Dining Hall – Naivedyam</h2>
@@ -259,7 +251,7 @@ const Facilities = () => {
           </div>
           <div className="facilities-slide">
             <div className="facility-image">
-              <img src={naturetrail} />
+              <img src={baseDomain + facilitiyAssets.facilitiyAssets8} />
             </div>
             <div className="facility-description">
               <h2>Nature Trail</h2>
@@ -274,7 +266,7 @@ const Facilities = () => {
           </div>
           <div className="facilities-slide">
             <div className="facility-image">
-              <img src={Gazebo} />
+              <img src={baseDomain + facilitiyAssets.facilitiyAssets9} />
             </div>
             <div className="facility-description">
               <h2>Gazebo</h2>
@@ -289,9 +281,9 @@ const Facilities = () => {
               {/* <CommonBtn text={"Take a virtual tour"} /> */}
             </div>
           </div>
-          {/* <div className="facilities-slide">
+          <div className="facilities-slide">
             <div className="facility-image">
-              <img src={Hostel} />
+              <img src={baseDomain+facilitiyAssets.facilitiyAssets10} />
             </div>
             <div className="facility-description">
               <h2>Kailashpati Tree
@@ -299,9 +291,9 @@ const Facilities = () => {
               <p>
               The favourite spot of most sadhakas on campus, the Kailashpati tree has graced us with its presence for many years. It is the best spot to meditate at, to soak in its spiritual vibrations. The lovely fragrance of its flowers is the perfect accompaniment to whatever activity you are pursuing under the tree. Come, take the divine blessings from the tree!
               </p>
-              <CommonBtn text={"Take a virtual tour"} />
+              {/* <CommonBtn text={"Take a virtual tour"} /> */}
             </div>
-          </div> */}
+          </div>
         </Slider>
       </div>
       <div className="additional-info">

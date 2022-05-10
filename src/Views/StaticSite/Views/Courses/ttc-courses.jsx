@@ -1,9 +1,11 @@
 import React from 'react'
+import baseDomain, { courseAssets } from '../../assets/images/imageAsset'
 import CommonBannerNavPrimary from '../../Components/CommonBannerNavPrimary'
 import CourseDetails from '../../Components/CourseDetails'
-import TTC from '../../assets/images/900hrs.jpg'
+// import TTC from '../../assets/images/900hrs.jpg'
 
 const TTCCourse = () => {
+  let TTC = baseDomain + courseAssets.courseAsset2
   return (
     <div>
       <CommonBannerNavPrimary innerNav={false} />

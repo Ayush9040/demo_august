@@ -6,13 +6,10 @@ import GridComponent from '../../Components/GridComponent'
 import { FondationDayGridComponent } from '../../Components/GridComponent'
 import CommonBtn from '../../Components/commonbtn'
 import GalleryModal from '../../Components/GalleryModal'
-import {
-  harmonyImagesData,
-  fondationDayImagesData,
-} from '../../assets/images/media/imagesData'
 import Carousel from 'react-gallery-carousel'
 import 'react-gallery-carousel/dist/index.css'
 import { faL } from '@fortawesome/free-solid-svg-icons'
+import { harmonyImagesData,foundationDayImageData } from '../../assets/images/media/mediaAsset'
 
 const MediaGallery = () => {
   const [gallery, setGallery] = useState()
@@ -22,6 +19,7 @@ const MediaGallery = () => {
   //   setGallery(true)
   //   console.log(gallery)
   // }
+
 
   const disableCarousel = () => {
     setViewCarousel(!viewCarousel)

@@ -2,33 +2,32 @@ import React from 'react'
 import CommonBannerAboutUs from '../../Components/CommonBannerAboutUs'
 import benefits from '../../assets/images/benifits.png'
 // import Meditation from "../../assets/images/teaching_meditation.png"
-import Overview from '../../assets/images/about-overview.jpg'
+import baseDomain, { aboutAssets } from '../../assets/images/imageAsset'
 import './styles.scss'
-
 
 const AboutUs = () => {
   return (
     <>
-      <div className="Overview-container">
+      <div className='Overview-container'>
         <CommonBannerAboutUs
           isLeftContent={false}
           Logo={false}
           Navigation={true}
-          PageType="Overview"
+          PageType='Overview'
           BgImage={benefits}
-          Heading="Overview"
+          Heading='Overview'
           isOnlyBanner={false}
           innerNav={true}
         />
       </div>
-      <div className="content-container pd-career">
-        <div className="image-content">
-          <img src={Overview} />
+      <div className='content-container pd-career'>
+        <div className='image-content'>
+          <img src={baseDomain + aboutAssets.aboutAsset1} />
         </div>
-        <div className="text-content-right tyi-text-container">
-          <div className="banner-heading">
+        <div className='text-content-right tyi-text-container'>
+          <div className='banner-heading'>
             <h1>The Yoga Institute</h1>
-            <div className="bottom-line"></div>
+            <div className='bottom-line'></div>
           </div>
           <p>The Enduring Foundation Spirit</p>
           <p>

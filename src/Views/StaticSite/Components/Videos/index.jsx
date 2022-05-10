@@ -3,6 +3,7 @@ import Heading from '../Heading'
 import './style.scss'
 import { videos, videos2 } from '../../assets/icons/icon'
 import CommonBtn from '../commonbtn'
+import baseDomain, { homeAssets } from '../../assets/images/imageAsset'
 
 const VideosSection = () => {
 
@@ -29,7 +30,7 @@ const VideosSection = () => {
             }
           >
             <div className="svg-container">{videos2}</div>
-            <img src="http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Home/Videos/v1.jpg" />
+            <img src={baseDomain+homeAssets.homeAsset64} />
           </div>
           <div
             className="image-cont"
@@ -39,7 +40,7 @@ const VideosSection = () => {
             }
           >
             <div className="svg-container">{videos2}</div>
-            <img src="http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Home/Videos/v2.jpg" />
+            <img src={baseDomain+homeAssets.homeAsset65} />
           </div>
           <div
             className="image-cont"
@@ -49,7 +50,7 @@ const VideosSection = () => {
             }
           >
             <div className="svg-container">{videos2}</div>
-            <img src="http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Home/Videos/v3.jpg" />
+            <img src={baseDomain+homeAssets.homeAsset66}/>
           </div>
         </div>
         <a

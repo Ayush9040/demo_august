@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
-import CourseImg from '../../assets/images/course (2).png'
+// import CourseImg from '../../assets/images/course (2).png'
 import './style.scss'
 import { star, global, network, chat } from '../../assets/icons/icon'
 import CommonBtn from '../commonbtn'
-import DetailImg from '../../assets/images/detailImg.png'
+// import DetailImg from '../../assets/images/detailImg.png'
+import baseDomain,{ courseAssets } from '../../assets/images/imageAsset'
 const CourseDetails = ({ name, heroImg, description }) => {
   const [detail, setDetail] = useState(1)
 
@@ -63,7 +64,7 @@ const CourseDetails = ({ name, heroImg, description }) => {
           <CommonBtn text={'Enroll Now'} />
         </div>
         <div className="course-cover">
-          <img src={heroImg ? heroImg : CourseImg} />
+          <img src={baseDomain + courseAssets.courseAsset2} />
         </div>
       </div>
       <div className="details-section">
@@ -130,7 +131,7 @@ const CourseDetails = ({ name, heroImg, description }) => {
                 </ul>
               </div>
               <div>
-                <img src={DetailImg} />
+                <img src={baseDomain+courseAssets.courseAsset4} />
               </div>
             </div>
           )}

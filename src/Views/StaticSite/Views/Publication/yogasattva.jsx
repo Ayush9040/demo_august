@@ -1,92 +1,13 @@
 import React, { useState } from 'react'
-import CommonBanner from '../../Components/Common-banner'
 import './style.scss'
-// import magzine from "../../assets/images/magazine-1.png"
-// import magzine1 from "../../assets/images/magazine-1.png"
-// import magzine2 from "../../assets/images/magazine-2.png"
-// import magzine3 from "../../assets/images/magazine-3.png"
-
-// new images
-// 2017
-import yogaSattava1 from '../../assets/images/yogasattva/2017/yogasattava2017-1.jpg'
-import yogaSattava2 from '../../assets/images/yogasattva/2017/yogasattava2017-2.jpg'
-import yogaSattava3 from '../../assets/images/yogasattva/2017/yogasattava2017-3.jpg'
-import yogaSattava4 from '../../assets/images/yogasattva/2017/yogasattava2017-4.jpg'
-
-// 2018
-import yogaSattava5 from '../../assets/images/yogasattva/2018/yogasattava2018-1.jpg'
-import yogaSattava6 from '../../assets/images/yogasattva/2018/yogasattava2018-2.jpg'
-import yogaSattava7 from '../../assets/images/yogasattva/2018/yogasattava2018-3.jpg'
-import yogaSattava8 from '../../assets/images/yogasattva/2018/yogasattava2018-4.jpg'
-
-// 2019
-import yogaSattava9 from '../../assets/images/yogasattva/2019/yogasattava2019-1.jpg'
-import yogaSattava10 from '../../assets/images/yogasattva/2019/yogasattava2019-2.jpg'
-import yogaSattava11 from '../../assets/images/yogasattva/2019/yogasattava2019-3.jpg'
-import yogaSattava12 from '../../assets/images/yogasattva/2019/yogasattava2019-4.jpg'
-
-// 2020
-
-import yogaSattava13 from '../../assets/images/yogasattva/2020/yogasattava2020-1.jpg'
-import yogaSattava14 from '../../assets/images/yogasattva/2020/yogasattava2020-2.jpg'
-import yogaSattava15 from '../../assets/images/yogasattva/2020/yogasattava2020-3.jpg'
-import yogaSattava16 from '../../assets/images/yogasattva/2020/yogasattava2020-4.jpg'
-
-// 2021
-
-import yogaSattava17 from '../../assets/images/yogasattva/2021/yogasattava2021-1.jpg'
-import yogaSattava18 from '../../assets/images/yogasattva/2021/yogasattava2021-2.jpg'
-import yogaSattava19 from '../../assets/images/yogasattva/2021/yogasattava2021-3.jpg'
-import yogaSattava20 from '../../assets/images/yogasattva/2021/yogasattava2021-4.jpg'
-
-//
-//yth2018
-import ythImage1 from '../../assets/images/yogasattva/yth/2018/yth2018-1.jpg'
-import ythImage2 from '../../assets/images/yogasattva/yth/2018/yth2018-2.jpg'
-import ythImage3 from '../../assets/images/yogasattva/yth/2018/yth2018-3.jpg'
-import ythImage4 from '../../assets/images/yogasattva/yth/2018/yth2018-4.jpg'
-import ythImage5 from '../../assets/images/yogasattva/yth/2018/yth2018-5.jpg'
-import ythImage6 from '../../assets/images/yogasattva/yth/2018/yth2018-6.jpg'
-
-//yth 2019
-import ythImage7 from '../../assets/images/yogasattva/yth/2019/yth2019-1.jpg'
-import ythImage8 from '../../assets/images/yogasattva/yth/2019/yth2019-2.jpg'
-import ythImage9 from '../../assets/images/yogasattva/yth/2019/yth2019-3.jpg'
-import ythImage10 from '../../assets/images/yogasattva/yth/2019/yth2019-4.jpg'
-import ythImage11 from '../../assets/images/yogasattva/yth/2019/yth2019-5.jpg'
-import ythImage12 from '../../assets/images/yogasattva/yth/2019/yth2019-6.jpg'
-
-// yth 2020
-import ythImage13 from '../../assets/images/yogasattva/yth/2020/yth2020-1.jpg'
-import ythImage14 from '../../assets/images/yogasattva/yth/2020/yth2020-2.jpg'
-import ythImage15 from '../../assets/images/yogasattva/yth/2020/yth2020-3.jpg'
-import ythImage16 from '../../assets/images/yogasattva/yth/2020/yth2020-4.jpg'
-import ythImage17 from '../../assets/images/yogasattva/yth/2020/yth2020-5.jpg'
-import ythImage18 from '../../assets/images/yogasattva/yth/2020/yth2020-6.jpg'
-
-// yth 2021
-import ythImage19 from '../../assets/images/yogasattva/yth/2021/yth2021-1.jpg'
-import ythImage20 from '../../assets/images/yogasattva/yth/2021/yth2021-2.jpg'
-import ythImage21 from '../../assets/images/yogasattva/yth/2021/yth2021-3.jpg'
-import ythImage22 from '../../assets/images/yogasattva/yth/2021/yth2021-4.jpg'
-import ythImage23 from '../../assets/images/yogasattva/yth/2021/yth2021-5.jpg'
-import ythImage24 from '../../assets/images/yogasattva/yth/2021/yth2021-6.jpg'
-
-// images array
-
+import baseDomain,{ publicationAssests } from '../../assets/images/imageAsset'
 import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import PublicationDateNav from '../../Components/PublicationDateNav'
 import PublicationNav from '../../Components/PublicationNav'
+
 const Yogasattva = () => {
-  let settings = {
-    dots: true,
-    speed: 1000,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: false,
-  }
   let setting2 = {
     dots: true,
     speed: 1000,
@@ -94,27 +15,40 @@ const Yogasattva = () => {
     slidesToScroll: 1,
     arrows: false,
   }
-  const numberofSlides = [1, 2]
 
   // myimages
   const images = {
-    2018: [ythImage1, ythImage2, ythImage3, ythImage4, ythImage5, ythImage6],
-    2019: [ythImage7, ythImage8, ythImage9, ythImage10, ythImage11, ythImage12],
+    2018: [
+      baseDomain + publicationAssests.ythAssets1,
+      baseDomain + publicationAssests.ythAssets2,
+      baseDomain + publicationAssests.ythAssets3,
+      baseDomain + publicationAssests.ythAssets4,
+      baseDomain + publicationAssests.ythAssets5,
+      baseDomain + publicationAssests.ythAssets6,
+    ],
+    2019: [
+      baseDomain + publicationAssests.ythAssets7,
+      baseDomain + publicationAssests.ythAssets8,
+      baseDomain + publicationAssests.ythAssets9,
+      baseDomain + publicationAssests.ythAssets10,
+      baseDomain + publicationAssests.ythAssets11,
+      baseDomain + publicationAssests.ythAssets12,
+    ],
     2020: [
-      ythImage13,
-      ythImage14,
-      ythImage15,
-      ythImage16,
-      ythImage17,
-      ythImage18,
+      baseDomain + publicationAssests.ythAssets13,
+      baseDomain + publicationAssests.ythAssets14,
+      baseDomain + publicationAssests.ythAssets15,
+      baseDomain + publicationAssests.ythAssets16,
+      baseDomain + publicationAssests.ythAssets17,
+      baseDomain + publicationAssests.ythAssets18,
     ],
     2021: [
-      ythImage19,
-      ythImage20,
-      ythImage21,
-      ythImage22,
-      ythImage23,
-      ythImage24,
+      baseDomain + publicationAssests.ythAssets19,
+      baseDomain + publicationAssests.ythAssets20,
+      baseDomain + publicationAssests.ythAssets21,
+      baseDomain + publicationAssests.ythAssets22,
+      baseDomain + publicationAssests.ythAssets23,
+      baseDomain + publicationAssests.ythAssets24,
     ],
   }
 
@@ -134,34 +68,94 @@ const Yogasattva = () => {
         </p>
         <Slider {...setting2}>
           <div className="yogasattva-image">
-            <img src='http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Publications/Yogsattava/Newsletter/2017/yogasattava2017-1.jpg' alt="" />
-            <img src='http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Publications/Yogsattava/Newsletter/2017/yogasattava2017-2.jpg' alt="" />
-            <img src='http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Publications/Yogsattava/Newsletter/2017/yogasattava2017-3.jpg' alt="" />
-            <img src='http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Publications/Yogsattava/Newsletter/2017/yogasattava2017-4.jpg' alt="" />
+            <img
+              src={baseDomain + publicationAssests.newsletterAssests1}
+              alt=""
+            />
+            <img
+              src={baseDomain + publicationAssests.newsletterAssests2}
+              alt=""
+            />
+            <img
+              src={baseDomain + publicationAssests.newsletterAssests3}
+              alt=""
+            />
+            <img
+              src={baseDomain + publicationAssests.newsletterAssests4}
+              alt=""
+            />
           </div>
           <div className="yogasattva-image">
-            <img src={yogaSattava5} alt="" />
-            <img src={yogaSattava6} alt="" />
-            <img src={yogaSattava7} alt="" />
-            <img src={yogaSattava8} alt="" />
+            <img
+              src={baseDomain + publicationAssests.newsletterAssests5}
+              alt=""
+            />
+            <img
+              src={baseDomain + publicationAssests.newsletterAssests6}
+              alt=""
+            />
+            <img
+              src={baseDomain + publicationAssests.newsletterAssests7}
+              alt=""
+            />
+            <img
+              src={baseDomain + publicationAssests.newsletterAssests8}
+              alt=""
+            />
           </div>
           <div className="yogasattva-image">
-            <img src={yogaSattava9} alt="" />
-            <img src={yogaSattava10} alt="" />
-            <img src={yogaSattava11} alt="" />
-            <img src={yogaSattava12} alt="" />
+            <img
+              src={baseDomain + publicationAssests.newsletterAssests9}
+              alt=""
+            />
+            <img
+              src={baseDomain + publicationAssests.newsletterAssests10}
+              alt=""
+            />
+            <img
+              src={baseDomain + publicationAssests.newsletterAssests11}
+              alt=""
+            />
+            <img
+              src={baseDomain + publicationAssests.newsletterAssests12}
+              alt=""
+            />
           </div>
           <div className="yogasattva-image">
-            <img src={yogaSattava13} alt="" />
-            <img src={yogaSattava14} alt="" />
-            <img src={yogaSattava15} alt="" />
-            <img src={yogaSattava16} alt="" />
+            <img
+              src={baseDomain + publicationAssests.newsletterAssests13}
+              alt=""
+            />
+            <img
+              src={baseDomain + publicationAssests.newsletterAssests14}
+              alt=""
+            />
+            <img
+              src={baseDomain + publicationAssests.newsletterAssests15}
+              alt=""
+            />
+            <img
+              src={baseDomain + publicationAssests.newsletterAssests16}
+              alt=""
+            />
           </div>
           <div className="yogasattva-image">
-            <img src={yogaSattava17} alt="" />
-            <img src={yogaSattava18} alt="" />
-            <img src={yogaSattava19} alt="" />
-            <img src={yogaSattava20} alt="" />
+            <img
+              src={baseDomain + publicationAssests.newsletterAssests17}
+              alt=""
+            />
+            <img
+              src={baseDomain + publicationAssests.newsletterAssests18}
+              alt=""
+            />
+            <img
+              src={baseDomain + publicationAssests.newsletterAssests19}
+              alt=""
+            />
+            <img
+              src={baseDomain + publicationAssests.newsletterAssests20}
+              alt=""
+            />
           </div>
         </Slider>
       </div>
@@ -204,23 +198,23 @@ const Yogasattva = () => {
           <div className="previous-container">
             {bold === 1 ? (
               <>
-                {images[2018].map((image,i) => (
+                {images[2018].map((image, i) => (
                   <div key={i} className="preivous-box">
-                    <img  src={image} alt="root-image" />
+                    <img src={image} alt="root-image" />
                   </div>
                 ))}
               </>
             ) : bold === 2 ? (
               <>
-                {images[2019].map((image,i) => (
-                  <div  key={i} className="preivous-box">
+                {images[2019].map((image, i) => (
+                  <div key={i} className="preivous-box">
                     <img src={image} alt="root-image" />
                   </div>
                 ))}
               </>
             ) : bold === 3 ? (
               <>
-                {images[2020].map((image,i) => (
+                {images[2020].map((image, i) => (
                   <div key={i} className="preivous-box">
                     <img src={image} alt="root-image" />
                   </div>
@@ -228,7 +222,7 @@ const Yogasattva = () => {
               </>
             ) : (
               <>
-                {images[2021].map((image,i) => (
+                {images[2021].map((image, i) => (
                   <div key={i} className="preivous-box">
                     <img src={image} alt="root-image" />
                   </div>

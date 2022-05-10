@@ -6,7 +6,7 @@ import GridComponent from '../GridComponent'
 import './style.scss'
 
 const OurLegacyModal = ({ data }) => {
-  // console.log("data",data)
+
 
   const [activeFouderTile, setActiveFouderTile] = useState(0)
 

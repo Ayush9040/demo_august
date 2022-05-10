@@ -1,11 +1,12 @@
 import React from 'react'
+import baseDomain, { homeAssets } from '../../../assets/images/imageAsset'
 import './style.scss'
 
 const BlogCard = () => {
   return (
     <div className="blog-card">
       <div className="blog-card-image">
-        <img src="http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Home/Blogs/blog1.jpg" />
+        <img src={baseDomain+homeAssets.homeAsset59} />
       </div>
       <div className="blog-card-text">
         <h2>Title</h2>

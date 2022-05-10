@@ -1,15 +1,20 @@
 import React from 'react'
+import baseDomain, { aboutAssets } from '../../../assets/images/imageAsset'
 import OurLegacyModal from '../../../Components/OurLegacyModal'
-import leftImg from '../../../assets/images/our-legacy/smt-sitadevi-ji/l.jpg'
-import rightImg from '../../../assets/images/our-legacy/smt-sitadevi-ji/r.jpg'
-import g1 from '../../../assets/images/our-legacy/smt-sitadevi-ji/1.jpg'
-import g2 from '../../../assets/images/our-legacy/smt-sitadevi-ji/2.jpg'
-import g3 from '../../../assets/images/our-legacy/smt-sitadevi-ji/3.jpg'
-import g4 from '../../../assets/images/our-legacy/smt-sitadevi-ji/4.jpg'
-import g5 from '../../../assets/images/our-legacy/smt-sitadevi-ji/5.jpg'
-import g6 from '../../../assets/images/our-legacy/smt-sitadevi-ji/6.jpg'
+
 
 export default function SmtSitadeviJi() {
+
+  let leftImg=baseDomain+aboutAssets.aboutAsset11
+  let rightImg=baseDomain+aboutAssets.aboutAsset12
+  
+  let g1=baseDomain+aboutAssets.aboutAsset13
+  let g2=baseDomain+aboutAssets.aboutAsset14
+  let g3=baseDomain+aboutAssets.aboutAsset15
+  let g4=baseDomain+aboutAssets.aboutAsset16
+  let g5=baseDomain+aboutAssets.aboutAsset17
+  let g6=baseDomain+aboutAssets.aboutAsset18
+
   const data = {
     name: 'Smt. Sitadevi Ji',
     route: 'smt-sitadevi-ji',

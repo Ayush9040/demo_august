@@ -1,13 +1,16 @@
 import React from 'react'
 import OurLegacyModal from '../../../Components/OurLegacyModal'
-import leftImg from '../../../assets/images/our-legacy/harish-ji/l.jpg'
-import rightImg from '../../../assets/images/our-legacy/harish-ji/r.jpg'
-import g1 from '../../../assets/images/our-legacy/harish-ji/1.jpg'
-import g2 from '../../../assets/images/our-legacy/harish-ji/2.jpg'
-import g3 from '../../../assets/images/our-legacy/harish-ji/3.jpg'
-import g4 from '../../../assets/images/our-legacy/harish-ji/4.jpg'
-import g5 from '../../../assets/images/our-legacy/harish-ji/5.jpg'
-import g6 from '../../../assets/images/our-legacy/harish-ji/6.jpg'
+
+
+let leftImg=`${baseDomain+aboutAssets.aboutAsset35}`
+let rightImg=`${baseDomain+aboutAssets.aboutAsset36}`
+  
+let g1=baseDomain+aboutAssets.aboutAsset37
+let g2=baseDomain+aboutAssets.aboutAsset38
+let g3=baseDomain+aboutAssets.aboutAsset39
+let g4=baseDomain+aboutAssets.aboutAsset40
+let g5=baseDomain+aboutAssets.aboutAsset41
+let g6=baseDomain+aboutAssets.aboutAsset42
 
 export default function HarishJi() {
   const data = {

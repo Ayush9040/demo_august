@@ -1,6 +1,6 @@
 import React from 'react'
 import './style.scss'
-import { harmonyImagesData, fondationDayImagesData } from '../../assets/images/media/imagesData'
+import { harmonyImagesData,fondationDayImagesData } from '../../assets/images/media/mediaAsset'
 import Carousel from 'react-gallery-carousel'
 import 'react-gallery-carousel/dist/index.css'
 
@@ -9,15 +9,15 @@ const GridComponent = ({ imgs = [] }) => {
     <div>
       <div className="common-gallery">
         <div className="common-gallery-grid">
-          <img className="common-grid-1" src={harmonyImagesData[0]}  />
+          <img className="common-grid-1" src={imgs.length!==0 ? imgs[0]:harmonyImagesData[0]}  />
           <div className="common-grid-2">
-            <img className="sub-grid-1"  src={harmonyImagesData[1]}  />
-            <img className="sub-grid-2"  src={harmonyImagesData[2]}  />
+            <img className="sub-grid-1"  src={imgs.length!==0 ? imgs[1]:harmonyImagesData[1]}  />
+            <img className="sub-grid-2"  src={imgs.length!==0 ? imgs[2]:harmonyImagesData[2]}  />
           </div>
-          <img className="common-grid-1"  src={harmonyImagesData[4]}  />
+          <img className="common-grid-1"  src={imgs.length!==0 ? imgs[3]:harmonyImagesData[4]}  />
           <div className="common-grid-2">
-            <img className="sub-grid-1"   src={harmonyImagesData[3]}  /> 
-            <img className="sub-grid-2"  src={harmonyImagesData[5]}   /> 
+            <img className="sub-grid-1"   src={imgs.length!==0 ? imgs[4]:harmonyImagesData[3]}  /> 
+            <img className="sub-grid-2"  src={imgs.length!==0 ? imgs[5]:harmonyImagesData[5]}   /> 
           </div>
         </div>
       </div>

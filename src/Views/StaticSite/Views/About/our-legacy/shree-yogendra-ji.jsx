@@ -1,15 +1,25 @@
 import React from 'react'
 import OurLegacyModal from '../../../Components/OurLegacyModal'
-import leftImg from '../../../assets/images/our-legacy/shree-yogendra-ji/l.jpg'
-import rightImg from '../../../assets/images/our-legacy/shree-yogendra-ji/r.jpg'
-import g1 from '../../../assets/images/our-legacy/shree-yogendra-ji/1.jpg'
-import g2 from '../../../assets/images/our-legacy/shree-yogendra-ji/2.jpg'
-import g3 from '../../../assets/images/our-legacy/shree-yogendra-ji/3.jpg'
-import g4 from '../../../assets/images/our-legacy/shree-yogendra-ji/4.jpg'
-import g5 from '../../../assets/images/our-legacy/shree-yogendra-ji/5.jpg'
-import g6 from '../../../assets/images/our-legacy/shree-yogendra-ji/6.jpg'
+
+
+import baseDomain from '../../../assets/images/imageAsset'
+import { aboutAssets } from '../../../assets/images/imageAsset'
+
+
 
 export default function HarishJi() {
+
+  let leftImg=baseDomain+aboutAssets.aboutAsset1
+  let rightImg=baseDomain+aboutAssets.aboutAsset2
+  
+  let g1=baseDomain+aboutAssets.aboutAsset3
+  let g2=baseDomain+aboutAssets.aboutAsset4
+  let g3=baseDomain+aboutAssets.aboutAsset5
+  let g4=baseDomain+aboutAssets.aboutAsset6
+  let g5=baseDomain+aboutAssets.aboutAsset7
+  let g6=baseDomain+aboutAssets.aboutAsset8
+  
+
   const data = {
     name: 'Shree Yogendra ji',
     route: 'shree-yogendra-ji',
