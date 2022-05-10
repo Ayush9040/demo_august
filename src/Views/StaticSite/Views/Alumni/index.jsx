@@ -14,7 +14,7 @@ const Seminar = () => {
             <span className="newsletter-title">Title</span>
             <span className="newsletter-date">00/00/00</span>
           </h2>
-          <p>
+          <p style={{ color:'black' }}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec
             ante id nunc vehicula pharetra nec vitae est. Sed diam dui, luctus
             sed velit quis, placerat consequat felis. Vivamus cursus in mauris

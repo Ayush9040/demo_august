@@ -1,0 +1,311 @@
+.main-blog {
+  h1 {
+    font-weight: bold;
+    font-size: 3rem;
+  }
+  .custom-border {
+    margin-top: 0;
+  }
+}
+
+.blog-series {
+  .alumni-content {
+    background: #96bcee;
+    .newsletter-content {
+      width: 70% !important;
+      margin: 0 auto;
+      .options {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        button {
+          display: block;
+          border-radius: 50px;
+          color: #fff;
+          border: 3px solid #fff;
+          padding: 1rem 2rem;
+          background: none;
+          font-size: 1.5rem;
+          font-weight: 700;
+          cursor: pointer;
+        }
+        svg {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  .newsletter-image {
+    justify-content: center;
+    flex-direction: column;
+    top: -18rem;
+    h3 {
+      text-align: right;
+      margin-right: 25%;
+      font-size: 1.75rem;
+      font-weight: bold;
+    }
+    img {
+      width: 80%;
+      border-radius: 40px;
+    }
+  }
+}
+.upcoming-blogs {
+  width: fit-content;
+  margin: 3rem auto;
+  display: flex;
+  flex-direction: column;
+
+  h3 {
+    display: inline-block;
+    font-size: 2.5rem;
+    font-weight: 700;
+  }
+}
+.blog-card-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding-bottom: 5rem;
+  .seminar-card {
+    height: max-content;
+    .seminar-card-image {
+      width: fit-content;
+      background-color: darkgray;
+    }
+  }
+}
+//Sub Blog
+.blog-page-container {
+  background: #96bcee;
+  h1 {
+    color: white;
+    font-size: 3rem;
+    margin-top: 5rem;
+  }
+  .custom-border {
+    background: #fff;
+    margin-top: 1px;
+    margin-left: 0.8rem;
+  }
+  .blog-series {
+    .newsletter-title {
+      color: white;
+    }
+    .newsletter-date {
+      color: #fff;
+    }
+    .newsletter-content {
+      p {
+        color: #fff;
+      }
+    }
+  }
+}
+
+.blog-container {
+  .blog-grid {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 70%;
+    margin: 4rem auto;
+    gap: 3rem;
+    justify-content: center;
+    .blog-text {
+      p {
+        font-size: 1.8rem;
+        color: black;
+        font-weight: 500;
+      }
+    }
+    .blog-image {
+      img {
+        height: 100%;
+        width: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-radius: 25px;
+      }
+    }
+  }
+}
+
+//BlogGallery
+
+.gallery-blog-container {
+  background-color: #fff !important;
+  .gallery-blog {
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+    width: 65%;
+    margin: 15rem auto;
+    justify-content: center;
+    column-gap: 2rem;
+    row-gap: 3rem;
+    .gallery-grid-1 {
+      .sub-image-1 {
+        background: rgb(241, 238, 238);
+        height: 370px;
+      }
+      .sub-image-2 {
+        background: rgb(241, 238, 238);
+        height: 210px;
+      }
+    }
+    .gallery-grid {
+      background: rgb(241, 238, 238);
+      height: 600px;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .alumni-content {
+    grid-template-columns: 100%;
+    h2 {
+      color: #fff;
+    }
+  }
+  .blog-series {
+    .alumni-content {
+      margin: 10rem 0;
+    }
+    .newsletter-content {
+      top: auto;
+      left: auto;
+      width: 100%;
+      h2 {
+        color: #fff;
+        .newsletter-date {
+          color: #fff;
+        }
+      }
+    }
+    .newsletter-image {
+      margin-top: 5rem;
+      top: auto;
+      left: auto;
+      text-align: center;
+      margin-bottom: 4rem;
+      h3 {
+        margin: 0 auto;
+        color: #fff;
+        margin-bottom: 2rem;
+      }
+    }
+  }
+  .blog-container {
+    .blog-grid {
+      grid-template-columns: 100%;
+    }
+  }
+  .gallery-blog-container {
+    .gallery-blog {
+      grid-template-columns: 25% 50% 25%;
+      gap: 1rem;
+      .gallery-grid-1 {
+        .sub-image-1 {
+          height: 100px;
+          width: 100%;
+        }
+        .sub-image-2 {
+          height: 150px;
+        }
+      }
+      .gallery-grid {
+        height: 260px;
+      }
+    }
+  }
+}
+
+@media (max-width: 750px) {
+  .upcoming-blogs {
+    h3 {
+      margin-left: 13rem;
+    }
+  }
+  .blog-container {
+    .blog-grid {
+      grid-template-columns: 100%;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .alumni-content {
+    padding: 5rem;
+  }
+  .blog-series {
+    .alumni-content {
+      margin: 8rem 0;
+    }
+    .newsletter-image {
+      img {
+        width: 100%;
+      }
+    }
+    .newsletter-content {
+      h2 {
+        .newsletter-title {
+          font-size: 2.5rem;
+        }
+      }
+    }
+  }
+  .gallery-blog-container {
+    margin: 0 !important;
+    width: 100% !important;
+  }
+  .blog-container {
+    .blog-grid {
+      grid-template-columns: 100%;
+    }
+  }
+}
+
+@media (max-width: 420px) {
+  .blog-series {
+    .alumni-content {
+      margin: 2rem 0;
+    }
+  }
+  .newsletter-content {
+    .newsletter-date {
+      font-size: 1.5rem;
+    }
+  }
+  .upcoming-blogs {
+    h3 {
+      margin-left: 5rem !important;
+    }
+  }
+  .blog-container {
+    .blog-grid {
+      grid-template-columns: 100%;
+    }
+  }
+  .gallery-blog-container {
+    margin: 0 !important;
+    width: 100% !important;
+    .gallery-blog {
+      grid-template-columns: 25% 50% 25%;
+      width: 100% !important;
+      gap: 1rem;
+      .gallery-grid-1 {
+        .sub-image-1 {
+          height: 100px;
+          width: 100%;
+        }
+        .sub-image-2 {
+          height: 150px;
+        }
+      }
+      .gallery-grid {
+        height: 260px;
+      }
+    }
+  }
+}
