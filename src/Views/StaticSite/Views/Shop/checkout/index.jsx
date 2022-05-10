@@ -27,8 +27,9 @@ const Checkout = () => {
         />
       </div>
       <div>
-        {arr.map((item) => (
-          <CheckoutCard />
+        {arr.map((item, i) => (
+
+          <CheckoutCard key={i}/>
         ))}
       </div>
       <div className="total-container">

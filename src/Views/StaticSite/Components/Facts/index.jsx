@@ -3,7 +3,8 @@ import Heading from '../Heading'
 import TimePeriodSelector from './TimePeriodSelector'
 import { facts, divider } from '../../assets/icons/icon'
 import './style.scss'
-
+import CommonBtn from '../commonbtn'
+import { Link } from 'react-router-dom'
 import Images from './imageRepo'
 
 const Facts = () => {
@@ -30,6 +31,9 @@ const Facts = () => {
             'The Yoga Institute'. Discover fascinating facts about Shri.Yogendra
             ji, Mother Sita Devi, Dr. Jayadeva, and Dr. Hansaji Yogendra, among
             others.`}
+            <Link to="/our-facts/">
+              <CommonBtn text="Explore More" />
+            </Link>
           </p>
         </div>
       </div>
@@ -50,6 +54,7 @@ const Facts = () => {
               <StaticImage src='../../assets/images/gallery-3.png' className='grid-img-6' />
             {/* </div> */}
 
+
           {Images[imageObjMap[decade]].map((img, idx) => (
             <img key={idx} src={img} className={'grid-img-' + (idx + 1)} />
           ))}
@@ -58,6 +63,7 @@ const Facts = () => {
           <input type={'range'} min={0} max={100} value={0} />
         </div>
       </div>
+
       <div className="divider">{divider}</div>
     </div>
   )
