@@ -132,8 +132,8 @@ const MegaMenu = ({ setNav }) => {
               <li>Asana Regular Classes for Men</li>
               <li>Asana Regular Classes for Women</li>
               <li>Weekend Yoga Regular Classes</li>
-              <li>Children's Regular Class</li>
-              <li>Children's Weekend Class</li>
+              <li>Children&apos;s Regular Class</li>
+              <li>Children&apos;s Weekend Class</li>
               <li>Yog Prayas</li>
               <li>Meditation Course</li>
               <li>Regular Meditation Classes</li>

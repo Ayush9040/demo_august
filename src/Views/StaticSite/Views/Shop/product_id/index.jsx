@@ -58,8 +58,8 @@ const ProductDetail = () => {
                 Available in multiple colours
               </h5>
               <div>
-                {colors.map((item) => (
-                  <span
+                {colors.map((item,i) => (
+                  <span key={i}
                     className="dot"
                     style={{ backgroundColor: `${item}` }}
                   ></span>
