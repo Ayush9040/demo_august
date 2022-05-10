@@ -4,7 +4,7 @@ import baseDomain, { alumniAssets } from '../../assets/images/imageAsset'
 import './style.scss'
 import Heading from '../../Components/Heading'
 import BlogGallery from './BlogGallery'
-const Blog = () => {
+const BlogAnother = () => {
   return (
     <>
       <div className="blog-page-container">
@@ -68,4 +68,4 @@ const Blog = () => {
   )
 }
 
-export default Blog
+export default BlogAnother
