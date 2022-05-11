@@ -1,0 +1,50 @@
+.checkout-container {
+    width: 90%;
+    height: auto;
+    margin: 2rem auto;
+}
+
+.search-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    align-items: center;
+  }
+  
+  .search-input {
+    border-radius: 3rem;
+    height: 35px;
+    padding: 1rem;
+    width: 20rem;
+    border: 1px solid grey;
+  }
+
+.heading-2 {
+    font-size: 1.5rem;
+}
+
+.total-container {
+margin-top: 1rem;
+}
+
+.font-2 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.checkout-button {
+  padding: 0.8rem;
+  border-radius: 2rem;
+  border: 1px solid black;
+  width: 10rem;
+  font-weight: 700;
+  background-color: white;
+  margin-top: 1rem;
+}
+
+.align-items-end {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}

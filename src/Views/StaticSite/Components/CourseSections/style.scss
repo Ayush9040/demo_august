@@ -1,0 +1,187 @@
+.course-section {
+    display: flex;
+    padding: 10rem 5rem;
+    justify-content: center;
+    gap: 5rem;
+
+    &:nth-child(odd) {
+        flex-direction: row-reverse;
+    }
+    .course-list{
+        min-width: 520px;
+        .course-title{
+            display: inline-block;
+            box-sizing: border-box;
+            h1{
+                display: flex;
+                justify-content: space-between;
+                &::after{
+                    display: inline-block;
+                    content: '\25BC';
+                    font-size: 2rem;
+                    height: 10px;
+                    width: 10px;
+                    margin-top: 2.7rem;
+                    color: var(--brick-red);
+                    transform: rotate(-90deg);
+                }
+            }
+        }
+        .concave-border{
+            margin-top: 1rem;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg,#fff,var(--brick-red),var(--brick-red),#fff);
+            border-radius: 100%;
+        }
+ 
+        p{
+            max-width: 505px;
+            margin: 3rem 0;
+        }
+        ul{
+            list-style: none;
+            padding-left: 0;
+            li{
+                margin: 1rem 0;
+            }
+            &:nth-child(1){
+                li{
+                    font-size: 1.75rem;
+                    margin: 2rem 0;
+                }
+            }
+        }
+        .course-list-content{
+            .global-common-btn{
+                margin-top: 5rem;
+            }
+        }
+    }
+    .accordion__item {
+        padding: 1rem 0 0;
+        border: none;
+    }
+    .accordion__heading {
+        width: 70%;
+        margin-left: 0;
+        margin-bottom:1rem;
+        cursor: pointer;
+        p {
+            font-weight: 700;
+            margin: 0 0;
+        }
+    }
+    .accordion__panel {
+        width: 70%;
+        margin: 0 auto;
+        margin-left: 0;
+    }
+
+    .accordion__button:before {
+        display: none;
+    }
+
+    .accordion__button p {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .accordion__button p:after {
+        display: inline-block;
+        content: "\25BC";
+        height: 10px;
+        width: 10px;
+        margin-right: 12px;
+        margin-top: 2rem;
+        vertical-align: middle;
+        color: var(--brick-red);
+        transform: rotate(-90deg);
+    }
+
+    .accordion__button[aria-expanded="true"] p::after,
+    .accordion__button[aria-selected="true"] p::after {
+        margin-top: 0;
+        transform: rotate(0deg);
+    }
+    .rangeslider-vertical{
+        margin-top: 3rem;
+        height: 400px;
+        max-width: 2px;
+    }
+    .rangeslider-vertical .rangeslider__fill {
+        transform: rotate(180deg);
+        width: 100%;
+        background-color: var(--brick-red);
+    }
+    .rangeslider-vertical .rangeslider__handle{
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        border:1px solid var(--brick-red);
+        // transform: rotate(180deg);
+    }
+    .rangeslider-vertical .rangeslider__labels{
+        width: 25px;
+    }
+    .course-cards{
+        width: 60%;
+        display: flex;
+        justify-content: flex-end;
+        gap: 2rem;
+    }
+}
+
+@media(max-width:1400px){
+    .course-section{
+        .course-list{
+            min-width: 350px;
+        }
+    }
+}
+@media(max-width:1000px){
+    .course-section{
+        flex-wrap: wrap;
+        .vertical-scrollbar{
+            display: none;
+        }
+        .course-list{
+            text-align: center;
+        }
+        .course-cards{
+            justify-content: center;
+            width: 100%;
+        }
+        .global-common-btn{
+            margin: 3rem auto;
+        }
+        .accordion__heading{
+            margin: 0 auto 1rem;
+        }
+        .accordion__panel{
+            margin: 0 auto 1rem;
+        }
+    }
+}
+@media(max-width:620px){
+    .course-section{
+        .course-cards{
+            flex-direction: column;
+            min-width: 100%;
+        }
+    }
+}
+
+@media(max-width:420px){
+    .course-section{
+        .course-list{
+            .course-title{
+                h1{
+                    &::after{
+                        margin-top: 1.45rem;
+                    }
+                }
+            }
+        }
+    }
+}

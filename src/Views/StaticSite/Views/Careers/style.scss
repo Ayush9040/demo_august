@@ -1,0 +1,26 @@
+.careers-page{
+  .job-title{
+      color: #000;
+  }
+  .jobs-container{
+      padding: 5rem;
+      text-align: center;
+      h1{
+          display: inline-block;
+          margin: 0 auto;
+      }
+      .jobs-card-container{
+          display: grid;
+          grid-template-columns: repeat(3,1fr);
+          justify-content: center;
+          box-sizing: border-box;
+          width: 70%;
+          margin: 0 auto;
+          margin-top: 3rem;
+      }
+      .our-card-btn{
+          color: #000;
+          border-color: #000;
+      }
+  }
+}

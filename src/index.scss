@@ -1,5 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+:root {
+  --primary-color: #ebb38a;
+  --brick-red: #ca4625;
+  --brick-red-1: #bc4f31;
+  --ocean-blue: #a2c8d6;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+html {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  overflow-x: hidden;
+}
+.global-padding {
+  padding: 5rem 5rem 2rem 5rem;
+}
+.global-top-margin {
+  margin-top: 3rem;
+}
+.global-common-btn {
+  width: max-content;
+  border: 3px solid black;
+  padding: 1rem 2rem;
+  border-radius: 5rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 2rem;
+  cursor: pointer;
+}
+
+h1 {
+  margin: 0;
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+h2 {
+  margin: 0;
+  font-weight: 400;
+  font-size: 3rem;
+}
+
+h4 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+h5 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+h6 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+p {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 400;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.slick-dots {
+  padding-bottom: 5rem !important;
+  bottom: -40px !important;
+  position: relative !important;
+}
+
+.slick-dots li {
+  margin: 0 2rem !important;
+}
+
+.slick-dots li.slick-active button::before {
+  opacity: 1 !important;
+  color: var(--brick-red) !important;
+}
+
+.slick-dots li button::before {
+  font-size: 1.5rem !important;
+}
+
+.filler-logo {
+  padding: 0 4rem;
+  z-index: -1;
+}
+
+.filler-logo svg {
+  width: 25%;
+}
+
+.user-container {
+  cursor: pointer;
+}
+@media (max-width: 1920px) {
+  html {
+    font-size: 80%;
+  }
+  .global-common-btn {
+    padding: 1.5rem 2rem;
+    font-size: 1.5rem;
+    margin-top: 5rem;
+  }
+  .global-top-margin {
+    margin-top: 1rem;
+  }
+  .slick-dots li {
+    margin: 0 3rem !important;
+  }
+}
+
+@media (max-width: 1800px) {
+  html {
+    font-size: 62.5%;
+  }
+  .global-common-btn {
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+  }
+  .global-top-margin {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 900px) {
+  html {
+    font-size: 55%;
+  }
+  .slick-dots li {
+    margin: 0 1rem !important;
+  }
+}
+
+@media (max-width: 420px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  p {
+    font-size: 1.5rem;
+  }
+  .global-padding {
+    padding: 5rem 1.5rem;
+  }
 }

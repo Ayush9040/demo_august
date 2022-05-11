@@ -1,0 +1,22 @@
+.social-res-internal{
+  .image-content img {
+    border-radius: 0px 200px;
+    width: 80%;
+    height: 100%;
+    margin-left: 5%;
+    }
+    .donate-button-new{
+      display: none;
+    }
+    .social-res-sections{
+      .content-container{
+display: flex;
+&>div{
+  width: 100%;
+}
+      }
+      &>div:nth-child(even) .content-container{
+        flex-direction: row-reverse;
+}
+    }
+}

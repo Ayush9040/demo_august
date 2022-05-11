@@ -1,0 +1,48 @@
+.content-container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 2rem;
+}
+.pd-career {
+    padding: 5rem 10rem;
+}
+.text-content {
+    padding: 2rem 5rem 0 0;
+    font-size: 1.5rem;
+    width: 100%;
+
+}
+.text-content-right {
+    padding: 0rem 0rem 5rem 2rem;
+    margin-top: 1rem;
+    p{
+        font-size: 1.75rem;
+    }
+}
+.banner-heading {
+    margin: 0;
+    font-size: 2.5rem;
+    width: max-content;
+    font-weight: bolder;
+    h1{
+        font-size: 3rem;
+        display: inline-block;
+    }
+}
+.bottom-line {
+    height: 3px;
+    border-radius: 200%;
+    width: 100%;    
+    background: #BC4F31;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+}
+.image-content {
+    padding: 1rem;
+    width: 100%;
+}
+.image-content img {
+border-radius: 50px;
+width: 95%;
+margin-left: 5%;
+}

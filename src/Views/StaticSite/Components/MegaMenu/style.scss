@@ -1,0 +1,114 @@
+.mega-menu-container{
+    display: grid;
+    grid-template-columns: 30% 70%;
+    background-color: #fff;
+    transition: 1s linear;
+    ul{
+        list-style: none;
+        padding-left: 0;
+ 
+    }
+    .left-menu{
+        padding: 3rem 2rem 7rem;
+        padding-left: 5rem;
+        
+        .cross{
+            cursor: pointer;
+        }
+        .menu-logo{
+            svg{
+                width: 20%;
+            }
+        }
+        ul{
+            a{
+                text-decoration: none;
+                color: #000;
+            }
+            li{
+                font-size: 2rem;
+                margin:  0;
+                cursor: pointer;
+                width: fit-content;
+                .bottom-line{
+                    visibility: hidden
+                };
+                &:hover{
+                    // border-bottom: 2px solid var(--brick-red);
+                    font-weight: 700;
+                    .bottom-line{
+                        visibility: visible;
+                    }
+                }
+            }
+        }
+    }
+    .right-menu{
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        background-color: #ddc2ad7a;
+        padding: 7rem 0 0 2rem;
+       column-gap: 1rem;
+        .single-menu{
+            h3{
+                font-size: 1.5rem;
+            }
+            ul{
+                li{
+                    font-size: 1.25rem;
+                    margin: 1rem 0;
+                }
+            }
+            .text-bold{
+                font-weight: bold;
+                font-size: 1.5rem;
+            }
+
+        }
+        .filler{
+            position: relative;
+            margin-top: 10rem;
+            margin-left: -8rem;
+            
+        }
+    }
+}
+
+@media (max-width: 1200px) { 
+    .mega-menu-container .right-menu {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .mega-menu-container .left-menu ul li {
+        font-size: 1.5rem;
+    }
+    
+}
+@media (max-width: 768px) {
+    .mega-menu-container .left-menu ul li {
+        font-size: 1.25rem;
+    }
+    
+}
+@media (max-width: 500px) {
+    .mega-menu-container{
+        display: block;
+    }
+    .mega-menu-container .right-menu {
+        grid-template-columns: 1fr;
+        margin-bottom: 2rem;
+        padding-bottom: 2rem;
+        display: none;
+    }
+    .mega-menu-container .left-menu{
+        height: 100vh;
+        // position: fixed;
+    }
+    .mega-menu-container .left-menu ul li {
+        font-size: 2rem;
+    }
+    .mega-menu-container .right-menu .filler {
+        display: none;
+    }
+    
+}

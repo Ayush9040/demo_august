@@ -50,7 +50,7 @@
         //     "minProperties": true
         // }],
         "max-len": ["error", {
-                "code": 130,
+                "code": 13000,
                 "tabWidth": 2
             }
         ],

@@ -1,0 +1,106 @@
+//benifits
+.content-container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    // gap: 5rem;
+}
+.pd-career {
+    padding: 10rem;
+}
+.text-content {
+    padding: 2rem 5rem 0 0;
+    margin-top: 3rem;
+    font-size: 1.5rem;
+}
+.tyi-text-container > p{
+    margin-bottom: 20px;
+}
+.text-content-right {
+    padding: 0rem 0rem 5rem 2rem;
+    font-size: 1.5rem;
+    margin-top: 3rem;
+}
+.banner-heading {
+    margin: 0;
+    font-size: 2.5rem;
+    width: max-content;
+    font-weight: bolder;
+}
+.bottom-line {
+    height: 3px;
+    border-radius: 200%;
+    width: 100%;    
+    background: #BC4F31;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+}
+.image-content {
+    padding: 1rem;
+}
+.image-content img {
+border-radius: 50px;
+width: 95%;
+margin-left: 5%;
+}
+//blessings
+.blessings-container{
+    .common-container{
+         .banner-container{
+         .banner-heading{
+             margin-left: 0!important;
+         }
+    }
+}
+}
+
+@media (max-width: "900px") {
+    .image-content {
+        padding: 0
+    }
+    .text-content {
+        font-size: 1.3rem;
+    }
+}
+@media (max-width: "768px") {
+    .blessings-container{
+        .common-container{
+             .banner-container{
+             margin-left: 0;
+        }
+    }
+    }
+    
+.content-container {
+    grid-template-columns: 1fr;
+    &:nth-child(3){
+        display: flex!important;
+        flex-direction: column-reverse;
+    }
+}
+.text-content {
+    padding: 5rem;
+    text-align: center;
+}
+.banner-heading {
+    margin: 0 auto;
+}
+.pd-career {
+padding: 5rem;
+}
+}
+
+//our-career
+.career-cards {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+.bh-center {
+    margin: 0 auto 2rem auto ;
+}
+
+@media (max-width: "768px") {
+    .career-cards {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+}
