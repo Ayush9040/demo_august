@@ -4,7 +4,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    justify-content: end;
+    justify-content: flex-end;
     margin: 0 auto 2rem;
     h3 {   
         margin: 1.2rem 0;
@@ -26,28 +26,14 @@
 .our-card-container{
     background: no-repeat center / cover ;
 }
-// .bg-img-1{
-//     background: url(../../assets/images/volunteer-1.jpg)  no-repeat center / cover;
-//     color: #fff;
-// }
-// .bg-img-2{
-//     background: url(../../assets/images/volunteer-2.jpg)  no-repeat center / cover;
-//     color: #fff;
-// }
-// .bg-img-3{
-//     background: url(../../assets/images/volunteer-3.jpg)  no-repeat center / cover;
-//     color: #fff;
-// }
-// .bg-img-4{
-//     background: url(../../assets/images/planting-modified.jpg)  no-repeat center / cover;
-//     color: #fff;
-// }
+
 @media (max-width: "1000px") {
     .our-card-container {
         height: 28rem;
         width: 23rem;
     }
 }
+
 @media (max-width: "768px") {
     .our-card-container {
         height: 30rem;
