@@ -23,6 +23,7 @@ const OurFacts = () => {
     2: 'text2010',
     3: 'text2020',
   }
+ 
   return (
     <>
       <CommonBannerNavPrimary />
@@ -33,17 +34,25 @@ const OurFacts = () => {
               smallText={'The Yoga Institute Facts'}
             />
             <TimePeriodSelector onDecadeChange={setDecade} />
-            <div className="ourfacts-text flex">
-              <p>
+            <div className="our-facts-text ">
+              {/* <p>
                 {`Uncover both ancient and new interesting facts about your very own,
             'The Yoga Institute'. Discover fascinating facts about Shri. Yogendra
             ji, Mother Sita Devi, Dr. Jayadeva, and Dr. Hansaji Yogendra, among
             others.`}
-              </p>
+              </p> */}
               {FactsDecadeText[textObjMap[decade]].map((h2, idtxt) => {
-                return (
-                  <h2 key={idtxt} src={h2} />
-                )
+                if(idtxt===0){return (
+                  <div key={idtxt} className='decade-year'>
+                    <span>{h2}</span>
+                  </div>
+                )}
+                else{
+                  return (
+                    <p key={idtxt} className='decade-para'>{h2}</p>
+                  )
+                }
+                
               })}
             </div>
           </div>
