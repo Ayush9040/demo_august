@@ -44,6 +44,7 @@ import BlogAnother from '../Views/BlogPage/Blog.jsx'
 import OurFacts from '../Views/Facts/index'
 import AllExperience from '../Views/Experience/index.js'
 import SignIn from '../Views/SignIn/index.jsx'
+import Careers from '../Views/Careers/index.jsx'
 
 const staticSiteRoutes = [
   {
@@ -422,6 +423,14 @@ const staticSiteRoutes = [
     id: 'statisSiteUnderSignIn',
     routePath: '/sign-in',
     name: 'SignIn',
+  },
+  {
+    Component: Careers ,
+    path: '/careers',
+    exact: true,
+    id: 'statisSiteUnderCareers',
+    routePath: '/careers',
+    name: 'Careers',
   }
 ]
 
