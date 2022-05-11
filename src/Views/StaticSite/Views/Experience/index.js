@@ -1,3 +1,4 @@
+import { Search } from '../../assets/icons/icon'
 import CommonBannerNavPrimary from '../../Components/CommonBannerNavPrimary'
 import { listData } from './data'
 import './style.scss'
@@ -8,9 +9,10 @@ const AllExperience = () => {
       <CommonBannerNavPrimary />
       <div className="banner-container">
         <div className="experience-banner-heading">
-          Experience
+          The Yoga Institute Experience
           <div className="experience-bottom-line"></div>
         </div>
+        <div className='exp-search' >{Search}</div>
       </div>
       <div className="centered">
         <section className="cards">

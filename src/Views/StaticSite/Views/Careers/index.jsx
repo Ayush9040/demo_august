@@ -1,8 +1,8 @@
 import React from 'react'
 import CommonBanner from '../../components/Common-banner/index'
 import CareerCard from '../../components/CommonCareerCard'
-import './style.scss';
-import { career } from '../../utils/careerData';
+import './style.scss'
+import { career } from '../../utils/careerData'
 
 const Careers = () => {
   return (
@@ -18,10 +18,10 @@ const Careers = () => {
         innerNav={false}
       />
       <div className='jobs-container' >
-          <h1>Join us<div className='bottom-line' ></div></h1>
-          <div className='jobs-card-container' >
-       {career?.map(item=>(   <CareerCard cardTitle={item.jobTitle} bgImage={item.bgImage} />))}
-          </div>
+        <h1>Join us<div className='bottom-line' ></div></h1>
+        <div className='jobs-card-container' >
+          {career?.map((item,i)=>(   <CareerCard key={i} cardTitle={item.jobTitle} bgImage={item.bgImage} />))}
+        </div>
       </div>
 
     </div>

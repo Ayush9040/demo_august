@@ -21,7 +21,7 @@ export const listData=[
   },
   {
     name:'Shri Amitabh Bachchan',
-    image:baseDomain+experienceAssets.naiduji,
+    image:baseDomain+experienceAssets.amitabhBacchan,
     designation:'Actor',
     message:'The classic book, "Yoga for All" written by Dr. Hansaji is a humble recognition of the need in modern society for guidance towards a way of living that is in greater harmony with our natural surroundings and more synergistic with our fellow beings'
   },

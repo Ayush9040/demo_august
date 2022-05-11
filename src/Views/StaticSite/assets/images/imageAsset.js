@@ -506,9 +506,9 @@ export const volunteerAssets = {
 
 export const experienceAssets={
   ajankiya:'/Home/Experience/Ajinkya.jpg',
-  amitabhBacchan:'Home/Experience/AmitabhBachchan.jpg',
+  amitabhBacchan:'/Home/Experience/AmitabhBachchan.jpg',
   dishaVakhani:'/Home/Experience/Disha%20Vakhani.jpg',
-  madanBahal:'Home/Experience/Madan Bahal.jpg',
+  madanBahal:'/Home/Experience/Madan Bahal.jpg',
   modiji:'/Home/Experience/Modiji.jpg',
   naiduji:'/Home/Experience/Naiduji.jpg',
   nirmalGangwal:'/Home/Experience/Nirmal-Gangwal.png',
@@ -520,7 +520,7 @@ export const experienceAssets={
   ankitaSood:'/Home/Experience/ankita sood.jpg',
   carlo:'/Home/Experience/carlo.jpeg',
   kavita:'/Home/Experience/kavita.jpg',
-  natalia:'Home/Experience/natalia.JPG',
+  natalia:'/Home/Experience/natalia.JPG',
   kovindji:'/Home/Experience/shriramnathkovid.png',
   veronica:'/Home/Experience/veronica.JPG'
 

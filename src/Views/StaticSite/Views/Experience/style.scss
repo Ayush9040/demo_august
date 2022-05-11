@@ -2,6 +2,8 @@
 .banner-container{
   text-align: center;
   .experience-banner-heading{
+    display: inline-block;
+    margin: 0 auto;
     font-size: 2.5rem;
     font-weight: bolder;
     .experience-bottom-line{
@@ -17,12 +19,15 @@
   }
   
 }
+.exp-search{
+  text-align: center;
+}
 
 .cards {
   display: grid;
   justify-content: space-between;
   grid-template-columns: repeat(2,1fr);
-  margin: 0 10px;
+  margin: 3rem 10px 10px;
 
   
  
