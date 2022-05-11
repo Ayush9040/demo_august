@@ -38,6 +38,11 @@ import EBooks from '../Views/Publication/e-books'
 import library from '../Views/Publication/library'
 import Yogasattva from '../Views/Publication/yogasattva'
 import Shop from '../Views/Shop'
+import SocialResponsibility from '../Views/SocialPage/index.jsx'
+import BlogPage from '../Views/BlogPage/index.jsx'
+import BlogAnother from '../Views/BlogPage/Blog.jsx'
+import OurFacts from '../Views/Facts/index'
+import AllExperience from '../Views/Experience/index.js'
 
 const staticSiteRoutes = [
   {
@@ -47,6 +52,14 @@ const staticSiteRoutes = [
     id: 'statisSiteHome',
     routePath: '/',
     name: 'Home',
+  },
+  {
+    Component: SocialResponsibility,
+    path: '/social-responsibility',
+    exact: true,
+    id: 'statisSiteSocial',
+    routePath: '/social-responsibility',
+    name: 'Social',
   },
   {
     Component: Courses,
@@ -225,7 +238,7 @@ const staticSiteRoutes = [
     name: 'Museum',
   },
   {
-    Component: Facilities ,
+    Component: Facilities,
     path: '/facilities',
     exact: true,
     id: 'statisSiteFacilities',
@@ -233,7 +246,7 @@ const staticSiteRoutes = [
     name: 'Facilities',
   },
   {
-    Component: Shop ,
+    Component: Shop,
     path: '/shop',
     exact: true,
     id: 'statisSiteShop',
@@ -368,6 +381,39 @@ const staticSiteRoutes = [
     routePath: '/faq',
     name: 'FAQ',
   },
+  {
+    Component: BlogPage ,
+    path: '/blogs',
+    exact: true,
+    id: 'statisSiteUnderBlogs',
+    routePath: '/blogs',
+    name: 'Blogs',
+  },
+  {
+    Component: BlogAnother ,
+    path: '/blogs/blog-name',
+    exact: true,
+    id: 'statisSiteUnderBlog',
+    routePath: '/blogs/blog-name',
+    name: 'Blog',
+
+  },
+  {
+    Component: OurFacts,
+    path: '/our-facts',
+    exact: true,
+    id: 'statisSiteUnderFacts',
+    routePath: '/our-facts',
+    name: 'Facts',
+  },
+  {
+    Component: AllExperience,
+    path: '/experience',
+    exact: true,
+    id: 'statisSiteUnderExperience',
+    routePath: '/experience',
+    name: 'Experience',
+  }
 ]
 
 export default staticSiteRoutes

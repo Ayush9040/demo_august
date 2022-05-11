@@ -1,10 +1,8 @@
-import { Link } from 'react-router-dom'
 import React,{ useEffect, useState } from 'react'
 import { arrowIcon } from '../../assets/icons/icon'
 import CommonBannerNav1 from '../../Components/CommonBannerShop'
 import MenuToolTip from '../../Components/MenuTooltip/MenuTooltip'
 import ShopCard from '../../Components/ShopCard/ShopCard'
-import { productData } from '../../utils/productData'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import Slider from 'react-slick'
@@ -19,7 +17,7 @@ const Shop = () => {
   const[categories,setCategories]=useState([])
 
   useEffect(()=>{
-    const response = axios.get('https://ecom-dev-be.theyogainstituteonline.org/v1/product/publishedproduct')
+    axios.get('https://ecom-dev-be.theyogainstituteonline.org/v1/product/publishedproduct')
       .then(data=> data.data)
       .then(data=>{setProduct(data.data);return data.data})
     axios.get('https://ecom-dev-be.theyogainstituteonline.org/v1/category').then(data=>data.data).then(data=>{setCategories(data.data)})
