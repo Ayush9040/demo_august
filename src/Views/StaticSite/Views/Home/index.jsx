@@ -11,8 +11,6 @@ import VideosSection from '../../Components/Videos'
 import NewsLetter from '../../Components/NewsLetter'
 import Footer from '../../Components/Footer'
 import Blog from '../../Components/Blogs'
-import BlogPage from '../BlogPage'
-import BlogAnother from '../BlogPage/Blog'
 
 const Home = ({ data }) => {
   return (
@@ -29,7 +27,6 @@ const Home = ({ data }) => {
       <VideosSection />
       <NewsLetter />
       <Footer />
-      
     </>
   )
 }

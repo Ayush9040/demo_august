@@ -40,6 +40,7 @@ import Yogasattva from '../Views/Publication/yogasattva'
 import Shop from '../Views/Shop'
 import BlogPage from '../Views/BlogPage/index.jsx'
 import BlogAnother from '../Views/BlogPage/Blog.jsx'
+import SignIn from '../Views/SignIn/index.jsx'
 
 const staticSiteRoutes = [
   {
@@ -385,6 +386,14 @@ const staticSiteRoutes = [
     id: 'statisSiteUnderBlog',
     routePath: '/blogs/blog-name',
     name: 'Blog',
+  },
+  {
+    Component: SignIn ,
+    path: '/sign-in',
+    exact: true,
+    id: 'statisSiteUnderSignIn',
+    routePath: '/sign-in',
+    name: 'SignIn',
   },
 ]
 
