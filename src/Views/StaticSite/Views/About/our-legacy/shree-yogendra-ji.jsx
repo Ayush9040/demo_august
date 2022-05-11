@@ -5,7 +5,7 @@ import baseDomain from '../../../assets/images/imageAsset'
 import { aboutAssets } from '../../../assets/images/imageAsset'
 
 export default function HarishJi() {
-  let leftImg = baseDomain + aboutAssets.aboutAsset1
+  let leftImg = baseDomain + aboutAssets.aboutAsset3
   let rightImg = baseDomain + aboutAssets.aboutAsset2
 
   let g1 = baseDomain + aboutAssets.aboutAsset3
