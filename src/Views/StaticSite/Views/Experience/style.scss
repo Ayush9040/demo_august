@@ -1,23 +1,25 @@
-
-.banner-container{
+.banner-container {
   text-align: center;
   .experience-banner-heading{
     display: inline-block;
     margin: 0 auto;
     font-size: 2.5rem;
     font-weight: bolder;
-    .experience-bottom-line{
-    height: 4px;
-    border-radius: 200%;
-    width: 100%;
-    background: linear-gradient(90deg, transparent, #CA472D, #CA472D, transparent);
-    margin-top: 0.5rem;
-    margin-bottom: 1rem;
-
+    .experience-bottom-line {
+      height: 4px;
+      border-radius: 200%;
+      width: 100%;
+      background: linear-gradient(
+        90deg,
+        transparent,
+        #ca472d,
+        #ca472d,
+        transparent
+      );
+      margin-top: 0.5rem;
+      margin-bottom: 1rem;
     }
-    
   }
-  
 }
 .exp-search{
   text-align: center;
@@ -29,11 +31,7 @@
   grid-template-columns: repeat(2,1fr);
   margin: 3rem 10px 10px;
 
-  
- 
-  
-
-  .carding{
+  .carding {
     display: flex;
     justify-content: center;
     // align-items: center;
@@ -41,50 +39,56 @@
     border: none;
     background-color: #ffffff;
     margin: 10px 10px;
-    .left{
-      img{
-       width: 250px;
-       height: 220px;
-       object-fit: cover;
-       border-radius: 10px;
+    .left {
+      img {
+        width: 250px;
+        height: 220px;
+        object-fit: cover;
+        border-radius: 10px;
       }
     }
-    .right{
-      padding:20px 10px;
-      .heading{
+    .right {
+      padding: 20px 10px;
+      .heading {
         font-size: 1.6rem;
         font-weight: bold;
         padding: 0 0 20px 10px;
-        span{
-          color: #CC4D2E;
+        span {
+          color: #cc4d2e;
         }
-        
       }
-      
-      .content{
+
+      .content {
         font-size: 1.4rem;
         padding: 0 0 20px 10px;
+        text-align: justify;
       }
     }
   }
-  
-} 
-   
-
-@media (max-width: "900px"){
-  .cards {
-    display: grid;
-    justify-content: space-between;
-    grid-template-columns: repeat(2,1fr);
-    margin: 0 10px;
-  }  
 }
 
-@media (max-width: "768px"){
+@media (max-width: '900px') {
   .cards {
     display: grid;
     justify-content: space-between;
-    grid-template-columns: repeat(1,1fr);
+    grid-template-columns: repeat(1, 1fr);
     margin: 0 10px;
-  }  
-} 
+  }
+}
+
+@media (max-width: '500px') {
+  .cards {
+    .carding {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      flex-wrap: wrap;
+      .right {
+        text-align: center;
+        .content {
+          text-align: justify;
+        }
+      }
+    }
+  }
+}
