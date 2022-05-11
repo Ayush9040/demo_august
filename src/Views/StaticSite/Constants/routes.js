@@ -38,6 +38,7 @@ import EBooks from '../Views/Publication/e-books'
 import library from '../Views/Publication/library'
 import Yogasattva from '../Views/Publication/yogasattva'
 import Shop from '../Views/Shop'
+import AllExperience from '../Views/Experience/index.js'
 
 const staticSiteRoutes = [
   {
@@ -367,6 +368,14 @@ const staticSiteRoutes = [
     id: 'statisSiteUnderFAQ',
     routePath: '/faq',
     name: 'FAQ',
+  },
+  {
+    Component: AllExperience,
+    path: '/experience',
+    exact: true,
+    id: 'statisSiteUnderExperience',
+    routePath: '/experience',
+    name: 'Experience',
   },
 ]
 

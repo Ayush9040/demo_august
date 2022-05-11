@@ -58,6 +58,8 @@ export const homeAssets = {
   homeAsset53: '/Home/Facts/2020-onwards/5.jpg',
   homeAsset54: '/Home/Facts/2020-onwards/6.jpg',
 
+  // experience
+
   homeAsset55: '/Home/Experience/shriramnathkovid.png',
   homeAsset56: '/Home/Experience/Modiji.jpg',
   homeAsset57: '/Home/Experience/Naiduji.jpg',
@@ -499,6 +501,30 @@ export const volunteerAssets = {
   volunteerAssets4: '/Volunteer/Trees-plantation/planting-modified.jpg',
   //values
   valuesAssets: '/Volunteer/our-values.jpg',
+}
+
+
+export const experienceAssets={
+  ajankiya:'/Home/Experience/Ajinkya.jpg',
+  amitabhBacchan:'Home/Experience/AmitabhBachchan.jpg',
+  dishaVakhani:'/Home/Experience/Disha%20Vakhani.jpg',
+  madanBahal:'Home/Experience/Madan Bahal.jpg',
+  modiji:'/Home/Experience/Modiji.jpg',
+  naiduji:'/Home/Experience/Naiduji.jpg',
+  nirmalGangwal:'/Home/Experience/Nirmal-Gangwal.png',
+  ritutaDiwekar:'/Home/Experience/RUJUTA%20DIWEKAR.jpg',
+  shilpaShirodkar:'/Home/Experience/Shilpa%20Shirodkar.jpg',
+  shivKumarSharma:'/Home/Experience/Shivkumar%20Sharma.jpg',
+  shwetaTiwari:'/Home/Experience/Shweta%20Tiwari.jpg',
+  sukhwinderSingh:'/Home/Experience/Sukhwinder%20Singh.jpg',
+  ankitaSood:'/Home/Experience/ankita sood.jpg',
+  carlo:'/Home/Experience/carlo.jpeg',
+  kavita:'/Home/Experience/kavita.jpg',
+  natalia:'Home/Experience/natalia.JPG',
+  kovindji:'/Home/Experience/shriramnathkovid.png',
+  veronica:'/Home/Experience/veronica.JPG'
+
+
 }
 
 export default baseDomain
