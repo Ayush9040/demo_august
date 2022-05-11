@@ -42,6 +42,7 @@ import SocialResponsibility from '../Views/SocialPage/index.jsx'
 import BlogPage from '../Views/BlogPage/index.jsx'
 import BlogAnother from '../Views/BlogPage/Blog.jsx'
 import OurFacts from '../Views/Facts/index'
+import AllExperience from '../Views/Experience/index.js'
 
 const staticSiteRoutes = [
   {
@@ -405,6 +406,14 @@ const staticSiteRoutes = [
     routePath: '/our-facts',
     name: 'Facts',
   },
+  {
+    Component: AllExperience,
+    path: '/experience',
+    exact: true,
+    id: 'statisSiteUnderExperience',
+    routePath: '/experience',
+    name: 'Experience',
+  }
 ]
 
 export default staticSiteRoutes

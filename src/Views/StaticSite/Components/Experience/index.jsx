@@ -8,6 +8,7 @@ import './style.scss'
 import CommonBtn from '../commonbtn'
 import { experienceData } from '../../utils/ExpirienceData'
 import baseDomain, { homeAssets } from '../../assets/images/imageAsset'
+import { Link } from 'react-router-dom'
 
 const Experience = () => {
   let settings = {
@@ -41,7 +42,9 @@ const Experience = () => {
                 </q>
               </p>
             </div>
-            <CommonBtn text={'View All'} />
+            <Link to="/experience" >
+              <CommonBtn text={'View All'} />
+            </Link>
           </div>
           <div className="carousel-image">
             <img src={baseDomain+homeAssets.homeAsset55}/>
@@ -68,7 +71,9 @@ const Experience = () => {
                 </q>
               </p>
             </div>
-            <CommonBtn text={'View All'} />
+            <Link to="/experience" >
+              <CommonBtn text={'View All'} />
+            </Link>
           </div>
           <div className="carousel-image">
             <img src={baseDomain+homeAssets.homeAsset56} />
@@ -94,7 +99,9 @@ const Experience = () => {
                 </q>
               </p>
             </div>
-            <CommonBtn text={'View All'} />
+            <Link to="/experience" >
+              <CommonBtn text={'View All'} />
+            </Link>
           </div>
           <div className="carousel-image">
             <img src={baseDomain+homeAssets.homeAsset57} />
@@ -120,7 +127,9 @@ const Experience = () => {
                 </q>
               </p>
             </div>
-            <CommonBtn text={'View All'} />
+            <Link to="/experience" >
+              <CommonBtn text={'View All'} />
+            </Link>
           </div>
           <div className="carousel-image">
             <img src={baseDomain+homeAssets.homeAsset58} />
