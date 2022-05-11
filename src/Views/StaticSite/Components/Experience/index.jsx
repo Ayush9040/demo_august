@@ -6,7 +6,6 @@ import Heading from '../Heading'
 import { experience } from '../../assets/icons/icon'
 import './style.scss'
 import CommonBtn from '../commonbtn'
-import { experienceData } from '../../utils/ExpirienceData'
 import baseDomain, { homeAssets } from '../../assets/images/imageAsset'
 import { Link } from 'react-router-dom'
 

@@ -4,7 +4,7 @@ import { Hamburger, User, legacy1, Cart } from '../../assets/icons/icon'
 import './styles.scss'
 import { Link } from 'react-router-dom'
 
-const CommonBannerNav2 = ({ title }) => {
+const CommonBannerNav2 = () => {
   const [nav, setNav] = useState(false)
   return (
     <>

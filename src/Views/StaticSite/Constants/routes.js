@@ -43,6 +43,7 @@ import BlogPage from '../Views/BlogPage/index.jsx'
 import BlogAnother from '../Views/BlogPage/Blog.jsx'
 import OurFacts from '../Views/Facts/index'
 import AllExperience from '../Views/Experience/index.js'
+import SignIn from '../Views/SignIn/index.jsx'
 
 const staticSiteRoutes = [
   {
@@ -413,6 +414,14 @@ const staticSiteRoutes = [
     id: 'statisSiteUnderExperience',
     routePath: '/experience',
     name: 'Experience',
+  },
+  {
+    Component: SignIn ,
+    path: '/sign-in',
+    exact: true,
+    id: 'statisSiteUnderSignIn',
+    routePath: '/sign-in',
+    name: 'SignIn',
   }
 ]
 
