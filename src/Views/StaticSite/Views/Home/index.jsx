@@ -27,6 +27,7 @@ const Home = ({ data }) => {
       <VideosSection />
       <NewsLetter />
       <Footer />
+      
     </>
   )
 }
