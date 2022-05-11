@@ -41,6 +41,7 @@ import Shop from '../Views/Shop'
 import SocialResponsibility from '../Views/SocialPage/index.jsx'
 import BlogPage from '../Views/BlogPage/index.jsx'
 import BlogAnother from '../Views/BlogPage/Blog.jsx'
+import OurFacts from '../Views/Facts/index'
 
 const staticSiteRoutes = [
   {
@@ -236,7 +237,7 @@ const staticSiteRoutes = [
     name: 'Museum',
   },
   {
-    Component: Facilities ,
+    Component: Facilities,
     path: '/facilities',
     exact: true,
     id: 'statisSiteFacilities',
@@ -244,7 +245,7 @@ const staticSiteRoutes = [
     name: 'Facilities',
   },
   {
-    Component: Shop ,
+    Component: Shop,
     path: '/shop',
     exact: true,
     id: 'statisSiteShop',
@@ -394,6 +395,15 @@ const staticSiteRoutes = [
     id: 'statisSiteUnderBlog',
     routePath: '/blogs/blog-name',
     name: 'Blog',
+
+  },
+  {
+    Component: OurFacts,
+    path: '/our-facts',
+    exact: true,
+    id: 'statisSiteUnderFacts',
+    routePath: '/our-facts',
+    name: 'Facts',
   },
 ]
 
