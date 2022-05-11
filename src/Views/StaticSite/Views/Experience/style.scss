@@ -1,6 +1,4 @@
 
-
-
 .banner-container{
   text-align: center;
   .experience-banner-heading{
@@ -66,4 +64,22 @@
   }
   
 } 
+   
 
+@media (max-width: "900px"){
+  .cards {
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: repeat(2,1fr);
+    margin: 0 10px;
+  }  
+}
+
+@media (max-width: "768px"){
+  .cards {
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: repeat(1,1fr);
+    margin: 0 10px;
+  }  
+} 
