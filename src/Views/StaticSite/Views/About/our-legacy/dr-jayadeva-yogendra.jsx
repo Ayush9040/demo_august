@@ -15,6 +15,8 @@ export default function HarishJi() {
   const data = {
     name: 'Dr. Jayadeva Yogendra',
     route: 'dr-jayadeva-yogendra',
+    founder: ['President'],
+    year: '1929 - 2018',
     desc: [
       `
           Dr. Jayadeva Yogendra, fondly known as Dr. Sahab, was a true yogi who showed the world how to live a balanced and a perfect yogic life. He served as the President of The Yoga Institute and continued his father’s legacy with aplomb until he took his samadhi in 2018.  Dr. Jayadeva’s teachings, filled with deep wisdom, shows the right path, and provides answers to all the problems of people even to this day. 

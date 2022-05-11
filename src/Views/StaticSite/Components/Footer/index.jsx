@@ -24,7 +24,6 @@ const Footer = () => {
     <div className='footer-container global-padding'>
       <div className='logo-description'>
         <div className='logo'>
-          {/* <StaticImage src='../../assets/images/tyi.png' /> */}
           <img src={baseDomain+homeAssets.homeAsset70} />
         </div>
         <br />
@@ -116,7 +115,6 @@ const Footer = () => {
             <Link to='/donation'>
               <li>Social Initiatives</li>
             </Link>
-            {/* <li>Yoga Explore</li> */}
             <Link to='/courses'>
               <li>Corporate Wellness</li>
             </Link>

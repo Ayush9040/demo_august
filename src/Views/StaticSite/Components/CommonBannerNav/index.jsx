@@ -20,9 +20,7 @@ const CommonBannerNav = ({ innerNav }) => {
           {innerNav && (
             <div className="career-navigation-sm">
               <ul>
-                {/* <Link to="/careers"><li className={`${currentPathname === "/careers" && "nav-active"}`}>Why TYI</li></Link>
-          <Link to="/careers/benefits"><li className={`${currentPathname === "/careers/benefits" && "nav-active"}`}>Benefits</li></Link>
-          <Link to="/careers/ourcareer"><li className={`${currentPathname === "/careers/ourcareer" && "nav-active"}`}>Our Careers</li></Link> */}
+      
                 <Link to="/join-our-team">
                   <li
                     className={`${
@@ -46,7 +44,9 @@ const CommonBannerNav = ({ innerNav }) => {
               </ul>
             </div>
           )}
-          <div className="user-container">{CommonUser}</div>
+          <Link to="/sign-in">
+            <div className="user-container">{CommonUser}</div>
+          </Link>
         </div>
         {innerNav && (
           <div className="career-navigation-lg ">

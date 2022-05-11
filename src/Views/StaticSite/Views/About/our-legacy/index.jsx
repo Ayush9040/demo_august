@@ -1,7 +1,6 @@
 import React from 'react'
 import CommonBannerLegacy from '../../../Components/AboutUsLegacy'
 import benefits from '../../../assets/images/benifits.png'
-import OurLegacyModal from '../../../Components/OurLegacyModal'
 
 const OurLegacy = () => {
   return (

@@ -1,6 +1,5 @@
 import React from 'react'
 import CommonBanner from '../../Components/Common-banner'
-// import values from '../../assets/images/values.png'
 import './styles.scss'
 import baseDomain,{ volunteerAssets } from '../../assets/images/imageAsset'
 
@@ -13,7 +12,6 @@ const Values = () => {
           Logo={false}
           Navigation={true}
           PageType="Values"
-          // BgImage={values}
           Heading="Values"
           isOnlyBanner={false}
           innerNav={true}

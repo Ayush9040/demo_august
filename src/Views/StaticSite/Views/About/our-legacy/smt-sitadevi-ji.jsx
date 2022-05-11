@@ -18,6 +18,8 @@ export default function SmtSitadeviJi() {
   const data = {
     name: 'Smt. Sitadevi Ji',
     route: 'smt-sitadevi-ji',
+    founder: ['Mother'],
+    year: '1912 - 2008',
     desc: [
       `
             Smt. Sitadevi Yogendra, fondly known as Mother, married Shri Yogendraji in 1927 and joined him in his mission of spreading the knowledge of yoga in the world. Smt. Sitadevi was instrumental in the establishment of the institute. Not only did she stood along Yogendra ji in managing day-to-day activities, but she also began teaching women and children at The Yoga Institute. Sitadevi ji worked tirelessly to empower women and make them aware about the benefits of maintaining good physical and mental health.  

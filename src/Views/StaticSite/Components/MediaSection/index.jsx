@@ -1,7 +1,6 @@
 import React from 'react'
 import SeminarCard from '../SeminarCard'
 import './style.scss'
-// import SeminarImg from '../../assets/images/seminar.png'
 import { share } from '../../assets/icons/icon'
 import baseDomain,{ mediaAssets,alumniAssets } from '../../assets/images/imageAsset'
 

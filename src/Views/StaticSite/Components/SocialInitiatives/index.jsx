@@ -11,7 +11,7 @@ import './style.scss'
 import baseDomain, { homeAssets } from '../../assets/images/imageAsset'
 import { Link } from 'react-router-dom'
 
-const SocialInitiatives = ({ alumni, setImageChanger, imageChanger }) => {
+const SocialInitiatives = ({ alumni, setImageChanger }) => {
   const AnnamBrahma = `${baseDomain}${homeAssets.homeAsset19}`
   const Police = `${baseDomain}${homeAssets.homeAsset20}`
   const BMC = `${baseDomain}${homeAssets.homeAsset21}`
@@ -33,7 +33,6 @@ const SocialInitiatives = ({ alumni, setImageChanger, imageChanger }) => {
     },
   }
 
-  console.log(imageChanger, 'hello')
 
   return (
     <div className='social-initiative-container global-padding'>

@@ -25,7 +25,7 @@ const AlumiNav = ({ title }) => {
           </div>
           <div className={`career-navigation-sm ${title}`}>
             <ul>
-              {/* <Link to="/alumni"><li className={title === 'Newsletter' ? 'nav-active' : ''}>Newsletter</li></Link> */}
+        
               <Link to="/alumni">
                 <li className={title === 'Seminar' ? 'nav-active' : ''}>
                   Upcoming Events
@@ -41,7 +41,7 @@ const AlumiNav = ({ title }) => {
                   Support your Alma Mater
                 </li>
               </Link>
-              <Link to='/' >
+              <Link to="/">
                 <li
                   className={title === 'Contact' ? 'nav-active' : ''}
                   style={{ borderRight: '0' }}
@@ -52,12 +52,14 @@ const AlumiNav = ({ title }) => {
             </ul>
           </div>
           <div className="user-container">
-            {title === 'Support' ? CommonUser : CommonUser1}
+            <Link to="/sign-in">
+              {title === 'Support' ? CommonUser : CommonUser1}
+            </Link>
           </div>
         </div>
         <div className={`career-navigation-lg ${title}`}>
           <ul>
-            {/* <Link to="/alumni"><li className={title === 'Newsletter' ? 'nav-active' : ''}>Newsletter</li></Link> */}
+          
             <Link to="/alumni">
               <li className={title === 'Seminar' ? 'nav-active' : ''}>
                 Upcoming Events
@@ -73,7 +75,7 @@ const AlumiNav = ({ title }) => {
                 Support your Alma Mater
               </li>
             </Link>
-            <Link to='/' >
+            <Link to="/">
               <li
                 className={title === 'Contact' ? 'nav-active' : ''}
                 style={{ borderRight: '0' }}

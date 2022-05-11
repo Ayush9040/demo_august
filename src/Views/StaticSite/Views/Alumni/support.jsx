@@ -11,11 +11,9 @@ const Support = () => {
   return (
     <div className="support-alma-container">
       <CommonBanner
-        // location={location}
         Logo={false}
         Navigation={true}
         PageType="support"
-        // BgImage={support}
         Heading="Support Your Alma Mater"
         isOnlyBanner={false}
         innerNav={true}

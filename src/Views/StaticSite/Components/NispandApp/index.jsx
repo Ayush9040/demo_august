@@ -1,6 +1,5 @@
 import React from 'react'
 import CommonBtn from '../commonbtn'
-// import NispandIcon from '../../assets/images/nispand-icon.png'
 import './style.scss'
 import baseDomain, { homeAssets } from '../../assets/images/imageAsset'
 

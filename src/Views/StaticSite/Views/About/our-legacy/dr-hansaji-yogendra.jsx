@@ -17,6 +17,8 @@ export default function HarishJi() {
   const data = {
     name: 'Dr. Hansaji Yogendra',
     route: 'dr-hansaji-yogendra',
+    founder: ['Director'],
+    year: '1947',
 
     desc: [
       `

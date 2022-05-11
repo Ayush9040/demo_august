@@ -1,7 +1,6 @@
 import React from 'react'
 import Modal from 'react-modal'
 import { cross } from '../../assets/icons/icon'
-import CheckoutCard from '../CheckoutCard'
 import './PaymentModal.css'
 
 const customStyles = {

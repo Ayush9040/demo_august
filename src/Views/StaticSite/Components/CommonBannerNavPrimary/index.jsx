@@ -70,7 +70,10 @@ const CommonBannerNavPrimary = ({ innerNav }) => {
               </ul>
             </div>
           )}
-          <div className="user-container">{User}</div>
+
+          <Link to="/sign-in">
+            <div className="user-container">{User}</div>
+          </Link>
         </div>
         {innerNav && (
           <div className="career-navigation-lg">

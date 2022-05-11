@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import MegaMenu from '../MegaMenu'
-import { Hamburger, User, legacy1, Cart } from '../../assets/icons/icon'
+import { Hamburger, User, legacy1 } from '../../assets/icons/icon'
 import { Link, useLocation } from 'react-router-dom'
 const DonationNavBar = ({ innerNav }) => {
   const [nav, setNav] = useState(false)
@@ -68,7 +68,9 @@ const DonationNavBar = ({ innerNav }) => {
               </ul>
             </div>
           )}
-          <div className="user-container">{User}</div>
+          <Link to="/sign-in">
+            <div className="user-container">{User}</div>
+          </Link>
         </div>
         {innerNav && (
           <div className="career-navigation-lg">

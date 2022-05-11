@@ -1,28 +1,25 @@
 import React from 'react'
 import OurLegacyModal from '../../../Components/OurLegacyModal'
 
-
 import baseDomain from '../../../assets/images/imageAsset'
 import { aboutAssets } from '../../../assets/images/imageAsset'
 
-
-
 export default function HarishJi() {
+  let leftImg = baseDomain + aboutAssets.aboutAsset1
+  let rightImg = baseDomain + aboutAssets.aboutAsset2
 
-  let leftImg=baseDomain+aboutAssets.aboutAsset1
-  let rightImg=baseDomain+aboutAssets.aboutAsset2
-  
-  let g1=baseDomain+aboutAssets.aboutAsset3
-  let g2=baseDomain+aboutAssets.aboutAsset4
-  let g3=baseDomain+aboutAssets.aboutAsset5
-  let g4=baseDomain+aboutAssets.aboutAsset6
-  let g5=baseDomain+aboutAssets.aboutAsset7
-  let g6=baseDomain+aboutAssets.aboutAsset8
-  
+  let g1 = baseDomain + aboutAssets.aboutAsset3
+  let g2 = baseDomain + aboutAssets.aboutAsset4
+  let g3 = baseDomain + aboutAssets.aboutAsset5
+  let g4 = baseDomain + aboutAssets.aboutAsset6
+  let g5 = baseDomain + aboutAssets.aboutAsset7
+  let g6 = baseDomain + aboutAssets.aboutAsset8
 
   const data = {
     name: 'Shree Yogendra ji',
     route: 'shree-yogendra-ji',
+    founder: ['Founder'],
+    year: '1897 - 1989',
 
     desc: [
       `Shri Yogendra Ji is laid down the foundation of The Yoga Institute, the oldest organized yoga center in the world, in 1918. He is the architect of the evolution of Yoga that has happened in the world in the last 100 years. Furthermore, the western world was introduced to Yoga, for the first time ever, when Yogendra Ji set up the first yoga center in New York, America in 1920. 

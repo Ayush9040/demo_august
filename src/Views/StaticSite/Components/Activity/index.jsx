@@ -1,6 +1,6 @@
 import React from 'react'
 import Heading from '../Heading'
-import { highlights, filler } from '../../assets/icons/icon'
+import { highlights } from '../../assets/icons/icon'
 import Activitycard from './Activitycard'
 import { activityData } from '../../utils/ActivityData'
 import './styles.scss'
@@ -45,7 +45,6 @@ const Activity = () => {
         <div className='activity-card-container'>
           <Slider {...settings}>
             {activityData.map((item, i) => {
-              console.log(item, 'ABCD')
               return (
                 <Activitycard
                   key={i}

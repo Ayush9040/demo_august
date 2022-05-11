@@ -189,10 +189,7 @@ const Yogasattva = () => {
         </div>
         <h3>Previous issues :</h3>
 
-        {/* <Slider {...settings}> */}
-        {/* {numberofSlides.map(() => { */}
-        {/* return ( */}
-        {/* {bold==1?{images}:<>transparse</>} */}
+   
 
         <div>
           <div className="previous-container">

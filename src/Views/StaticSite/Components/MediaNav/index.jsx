@@ -25,7 +25,7 @@ const MediaNav = ({ title }) => {
           </div>
           <div className={`career-navigation-sm ${title}`}>
             <ul>
-              {/* <Link to="/alumni"><li className={title === 'Newsletter' ? 'nav-active' : ''}>Newsletter</li></Link> */}
+             
               <Link to="/media">
                 <li className={title === 'Gallery' ? 'nav-active' : ''}>
                   Gallery
@@ -45,12 +45,12 @@ const MediaNav = ({ title }) => {
             </ul>
           </div>
           <div className="user-container">
-            {title === 'Gallery' ? CommonUser : User}
+            <Link to="/sign-in">{title === 'Gallery' ? CommonUser : User}</Link>
           </div>
         </div>
         <div className={`career-navigation-lg ${title}`}>
           <ul>
-            {/* <Link to="/alumni"><li className={title === 'Newsletter' ? 'nav-active' : ''}>Newsletter</li></Link> */}
+           
             <Link to="/media">
               <li className={title === 'Gallery' ? 'nav-active' : ''}>
                 Gallery
