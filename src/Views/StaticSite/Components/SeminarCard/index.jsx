@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react'
 import './style.scss'
 import { share1 } from '../../assets/icons/icon'
 
-const SeminarCard = ({ title, bgImage, textContent }) => {
-  let description = textContent
-    ? textContent
+const SeminarCard = ({ title, bgImage, desc }) => {
+  let description = desc
+    ? desc
     : `Lorem ipsum dolor sit amet, consectetur adipiscing
     elit. Nullam nec ante id nunc vehicula pharetra nec
     vitae est. Sed diam dui, luctus sed velit quis,
@@ -16,8 +16,8 @@ const SeminarCard = ({ title, bgImage, textContent }) => {
 
   const [textTitle, setTextTitle] = useState(false)
   useEffect(() => {
-    description.split('').length > 100
-      ? setTextTitle(description.substring(0, 100) + '...')
+    description.split('').length > 80
+      ? setTextTitle(description.substring(0, 80) + '...')
       : setTextTitle(description)
   })
   return (

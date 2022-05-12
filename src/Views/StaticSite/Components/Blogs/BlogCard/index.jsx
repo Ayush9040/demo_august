@@ -1,19 +1,17 @@
 import React from 'react'
-import baseDomain, { homeAssets } from '../../../assets/images/imageAsset'
 import './style.scss'
 
-const BlogCard = () => {
+const BlogCard = ({ blogs }) => {
   return (
     <div className="blog-card">
       <div className="blog-card-image">
-        <img src={baseDomain+homeAssets.homeAsset59} />
+        <img src={blogs.img} />
       </div>
       <div className="blog-card-text">
-        <h2>Title</h2>
+        <p className='title'>{blogs.title.length>20?blogs.title.substring(0,20)+'...':blogs.title}</p>
         <br />
         <p>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry.
+          {blogs.description.length>40?blogs.description.substring(0,40)+'...':blogs.description}
         </p>
       </div>
     </div>

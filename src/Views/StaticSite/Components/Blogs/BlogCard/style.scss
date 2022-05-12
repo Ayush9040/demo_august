@@ -17,9 +17,10 @@
         color: #fff;
         border-radius: 0px 0px 25px 25px;
         padding: 2rem;
-        h2{
+        .title{
             font-weight: 700;
-            font-size: 3rem;
+            font-size: 1.8rem;
+            min-height:20px;
         }
     }
 }

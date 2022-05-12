@@ -7,11 +7,8 @@ import { blog } from '../../assets/icons/icon'
 import CommonBtn from '../commonbtn'
 import BlogCard from './BlogCard'
 import './style.scss'
-import BlogCard2 from './BlogCard/BlogCart2'
-import BlogCard3 from './BlogCard/BlogCart3'
-import BlogCard4 from './BlogCard/BlogCart4'
-import BlogCard5 from './BlogCard/BlogCart5'
 import { Link } from 'react-router-dom'
+import { blogData } from './blogData'
 
 const Blog = () => {
   let settings = {
@@ -42,11 +39,11 @@ const Blog = () => {
     ],
   }
   return (
-    <div className='blog-container global-padding'>
-      <div className='blog-content'>
-        <div className='blog-header'>
+    <div className="blog-container global-padding">
+      <div className="blog-content">
+        <div className="blog-header">
           <Heading logo={blog} smallText={'Latest'} largeText={'Blog'} />
-          <div className='blog-description'>
+          <div className="blog-description">
             <p>
               Upgrade your yoga and wellness knowledge by reading our most
               recent blogs, which cover a wide range of holistic health and
@@ -54,17 +51,17 @@ const Blog = () => {
               philosophies, and even life choices
             </p>
           </div>
-          <Link to='/blogs'>
+          <Link to="/blogs">
             <CommonBtn text={'View All'} />
           </Link>
         </div>
-        <div className='blog-carousel'>
+        <div className="blog-carousel">
           <Slider {...settings}>
-            <BlogCard />
-            <BlogCard2 />
-            <BlogCard3 />
-            <BlogCard4 />
-            <BlogCard5 />
+            {blogData.map((blogs) => (
+              <div key={blog.title}>
+                <BlogCard blogs={blogs} />
+              </div>
+            ))}
           </Slider>
         </div>
       </div>

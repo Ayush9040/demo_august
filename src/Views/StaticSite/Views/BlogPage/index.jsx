@@ -3,7 +3,7 @@ import Heading from '../../Components/Heading'
 import { share } from '../../assets/icons/icon'
 import './style.scss'
 import SeminarCard from '../../Components/SeminarCard'
-import baseDomain, { alumniAssets } from '../../assets/images/imageAsset'
+import baseDomain, { alumniAssets, homeAssets } from '../../assets/images/imageAsset'
 import CommonBannerNavPrimary from '../../Components/CommonBannerNavPrimary'
 import { Link } from 'react-router-dom'
 const BlogPage = () => {
@@ -15,16 +15,14 @@ const BlogPage = () => {
         <div className="alumni-content" id="seminar">
           <div className="newsletter-content">
             <h2>
-              <span className="newsletter-title">Title</span>
+              <span className="newsletter-title">7 home remedies for anaemia</span>
               <span className="newsletter-date">01/01/2022</span>
             </h2>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-              nec ante id nunc vehicula pharetra nec vitae est. Sed diam dui,
-              luctus sed velit quis, placerat consequat felis. Vivamus cursus in
-              mauris at dignissim. Etiam venenatis semper pharetra. Duis ut diam
-              eros. In hac habitasse platea dictumst. Nam tincidunt nisi metus,
-              et dignissim ligula cursus ut.
+            If you want to get your anaemia under control, do give these amazing and effective home remedies a try!
+            If you want to get your anaemia under control, do give these amazing and effective home remedies a try!
+            If you want to get your anaemia under control, do give these amazing and effective home remedies a try!
+
             </p>
             <div className="options">
               <Link to="/blogs/blog-name">
@@ -37,7 +35,7 @@ const BlogPage = () => {
             <img
               className="blog-image"
               alt="Upcoming Seminar"
-              src={baseDomain + alumniAssets.eventsAssetsTitle}
+              src={baseDomain + homeAssets.homeAsset60}
             />
           </div>
         </div>
@@ -46,16 +44,19 @@ const BlogPage = () => {
           <h3>Other Blogs</h3>
           <div className="blog-card-container">
             <SeminarCard
-              title={'Title'}
-              bgImage={baseDomain + alumniAssets.eventsAssets1}
+              title={'7 home remidies for Anaemia'}
+              bgImage={baseDomain + homeAssets.homeAsset60}
+              desc={'If you want to get your anaemia under control, do give these amazing and effective home remedies a try!'}
             />
             <SeminarCard
-              title={'Title'}
-              bgImage={baseDomain + alumniAssets.eventsAssets2}
+              title={'How to increase lung capacity'}
+              bgImage={baseDomain + homeAssets.homeAsset62}
+              desc={'The lungs are our givers of life. To increase their capacity, here’s what you can do!'}
             />
             <SeminarCard
-              title={'Title'}
-              bgImage={baseDomain + alumniAssets.eventsAssets3}
+              title={'Yoga for back pain'}
+              bgImage={baseDomain + homeAssets.homeAsset63}
+              desc={'Want to relieve your back troubles? You can do it in no time with these amazing yoga poses!'}
             />
           </div>
         </div>

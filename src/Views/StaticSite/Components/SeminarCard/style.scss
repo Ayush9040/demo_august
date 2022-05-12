@@ -20,7 +20,7 @@
 .seminar-title{
     font-size: 2rem;
     font-weight: bold;
-    height: 5rem;
+    
     width: 90%;
 }
 .seminar-date{
@@ -30,7 +30,8 @@
 }
 .seminar-card-image{
     box-sizing: border-box;
-    width: 27rem;
+    // width: 27rem;
+    width: 100%;
     height: 23rem;
     border-radius: 20px;
     // background-color: #555;
@@ -74,4 +75,55 @@
         width: 28rem;
         height: 24rem;
     }
+    
+}
+
+@media(max-width:480px){
+    .seminar-card{
+        width: 30rem;
+        height: 45rem;
+        .seminar-card-image{
+            box-sizing: border-box;
+            width: 28rem;
+            height: 24rem;
+        }
+        .seminar-card-content{
+            span{
+                min-height: 4rem;
+            }
+        }
+        
+    }
+    
+   
+}
+
+
+@media(min-width:1800px){
+    .seminar-card{
+        max-width: 500px;
+        width: 50rem;
+        height: 50rem !important;
+        .seminar-card-image{
+            box-sizing: border-box;
+            // width: 28rem;
+            width: 100%;
+            height: 24rem;
+        }
+        .seminar-card-content{
+            .seminar-title{
+                min-height: 7rem;
+                font-size: 2rem;
+                
+            }
+            .seminar-date{
+                font-size: 1.6rem;
+            }
+            p{
+                font-size: 1.4rem;
+            }
+        }
+        
+    }
+
 }
