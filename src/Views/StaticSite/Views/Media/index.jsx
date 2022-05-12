@@ -12,10 +12,7 @@ import { harmonyImagesData } from '../../assets/images/media/mediaAsset'
 const MediaGallery = () => {
   const [viewCarousel, setViewCarousel] = useState(false)
 
-  // const manageGallery = ()=>{
-  //   setGallery(true)
-  //   console.log(gallery)
-  // }
+
 
 
   const disableCarousel = () => {
@@ -101,7 +98,6 @@ const MediaGallery = () => {
         </div>
       </div>
 
-      {/* {<GalleryModal setGallery={setGallery} />} */}
     </div>
   )
 }

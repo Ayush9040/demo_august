@@ -39,22 +39,6 @@ const Facts = () => {
       </div>
       <div className="facts-gallery">
         <div className="facts-gallery-grid">
-          {/* <div className='gallery-images-1' > * /}
-              <img src={image} className='grid-img-1' />
-              <StaticImage src='../../assets/images/gallery-2.png' className='grid-img-2' />
-             {/* </div> */}
-          {/* <div className='gallery-images-2' > * /}
-              <StaticImage src='../../assets/images/gallery-3.png' className='grid-img-3' />
-            {/* </div> */}
-          {/* <div className='gallery-images-1' > * / }
-              <StaticImage src='../../assets/images/gallery-1.png' className='grid-img-4' />
-              <StaticImage src='../../assets/images/gallery-2.png' className='grid-img-5' />
-            {/* </div> */}
-          {/* <div className='gallery-images-2' > * /}
-              <StaticImage src='../../assets/images/gallery-3.png' className='grid-img-6' />
-            {/* </div> */}
-
-
           {Images[imageObjMap[decade]].map((img, idx) => (
             <img key={idx} src={img} className={'grid-img-' + (idx + 1)} />
           ))}

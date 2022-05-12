@@ -4,7 +4,6 @@ import baseDomain,{ alumniAssets } from '../../assets/images/imageAsset'
 
 const SocialInitiativesGallery = ({ notEvent,imageChanger }) => {
 
-  console.log(imageChanger,'GridChanges')
   return (
     <>
       {imageChanger===0?<div className='alumni-grid' >

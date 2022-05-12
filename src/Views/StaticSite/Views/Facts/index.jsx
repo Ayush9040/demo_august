@@ -85,9 +85,7 @@ const OurFacts = () => {
               <img key={idx} src={img} className={'grid-img-' + (idx + 1)} />
             ))}
           </div>
-          {/* <div className="slider">
-            <input type={'range'} min={0} max={100} value={0} />
-          </div> */}
+    
         </div>
         <div className='divider'>{divider}</div>
       </div>

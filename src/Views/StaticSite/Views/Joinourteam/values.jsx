@@ -1,6 +1,5 @@
 import React from 'react'
 import CommonBanner from '../../Components/Common-banner'
-// import values from '../../assets/images/values.png'
 import './styles.scss'
 import baseDomain, { volunteerAssets } from '../../assets/images/imageAsset'
 

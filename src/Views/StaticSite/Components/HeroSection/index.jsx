@@ -6,7 +6,6 @@ const HeroSection = () => {
   return (
     <div className="landing-page-container">
       <Navbar />
-      {/* <img src={LandingImage} /> */}
     </div>
   )
 }

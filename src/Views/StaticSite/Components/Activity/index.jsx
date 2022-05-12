@@ -45,7 +45,6 @@ const Activity = () => {
         <div className='activity-card-container'>
           <Slider {...settings}>
             {activityData.map((item, i) => {
-              console.log(item, 'ABCD')
               return (
                 <Activitycard
                   key={i}

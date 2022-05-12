@@ -70,7 +70,9 @@ const CommonBannerShop = ({ innerNav }) => {
             </div>
           )}
           <div className="user-container">
-            <Link to="/shop/checkout">{Cart}</Link>&ensp;&ensp;{User}
+            <Link to="/shop/checkout">{Cart}</Link>&ensp;&ensp;
+            <Link to = '/sign-in'> {User}</Link>
+           
           </div>
         </div>
         {innerNav && (

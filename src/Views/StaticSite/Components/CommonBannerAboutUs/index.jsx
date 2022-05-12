@@ -2,14 +2,7 @@ import React from 'react'
 import CommonBannerNavAboutUs from '../CommonBannerNavAboutUs'
 import './styles.scss'
 
-// const BlessingContainer = ({ Heading }) => (
-//   <div className="blessing-container">
-//     <div className="banner-heading">
-//       {Heading}
-//       <div className="bottom-line" />
-//     </div>
-//   </div>
-// )
+
 
 const CommonBannerAboutUs = ({
   Navigation,
@@ -50,10 +43,7 @@ const CommonBannerAboutUs = ({
             <CommonBannerNavAboutUs innerNav={true} />
           </div>
         )}
-        {/* <div className='img-container'> */}
-        {/* {!isOnlyBanner && <img src={BgImage} />} */}
-        {/* <Image fluid={BgImage} /> */}
-        {/* </div> */}
+       
         {
           <div
             className={`banner-container ${

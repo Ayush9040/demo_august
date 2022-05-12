@@ -15,7 +15,6 @@ import CommonBtn from '../commonbtn'
 const CourseSection = ({ title, showRangeSlider, color, cardData }) => {
   const [customVal, setCustomVal] = useState(0)
 
-
   const content = () => {
     switch (title) {
     case 'Teacher Training Courses':
@@ -134,7 +133,14 @@ const CourseSection = ({ title, showRangeSlider, color, cardData }) => {
       )}
       <div className="course-cards">
         {cardData.map((item, i) => {
-          return <CourseCard key={i} color={color} index={i} courseTitle={item.title} />
+          return (
+            <CourseCard
+              key={i}
+              color={color}
+              index={i}
+              courseTitle={item.title}
+            />
+          )
         })}
       </div>
     </div>

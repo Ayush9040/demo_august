@@ -1,5 +1,4 @@
 import React from 'react'
-
 import CommonBanner from '../../Components/Common-banner'
 import './style.scss'
 import SectionComponent from '../../Components/SectionComponent/index'

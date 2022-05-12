@@ -11,7 +11,6 @@ const ShopCard = ({
 }) => {
   let colorA = '#CE7780'
   let colorB = '#9A565B'
-  console.log(currency)
 
   return (
     <div className="card">
@@ -20,7 +19,6 @@ const ShopCard = ({
           className="card-img"
           src={thumbnail}
           alt="Avatar"
-          // style={{ width: "100%", height: "100%" }}
         />
       </div>
       <div

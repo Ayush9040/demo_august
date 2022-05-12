@@ -6,14 +6,9 @@ import './style.scss'
 import CourseSection from '../../Components/CourseSections'
 import CommonBtn from '../../Components/commonbtn'
 import { courseCardData } from '../../utils/courseCardData'
-// import MadanBahal from '../../assets/images/Courses/Alumni/madan-bahal.jpg'
-// import Nirmal from '../../assets/images/Courses/Alumni/nirmal.png'
-// import Sukhwindar from '../../assets/images/Courses/Alumni/Sukhwindar.jpg'
-// import Shivkumar from '../../assets/images/Courses/Alumni/shivkumar-sharma.jpg'
 import { Link } from 'react-router-dom'
 
 const Courses = () => {
-  console.log(courseCardData)
 
   return (
     <div className='courses-container'>
@@ -112,7 +107,6 @@ const Courses = () => {
           </p>
           <div className='alumins'>
             <div className='alum-card'>
-              {/* <div className='alum-image' ></div> */}
               <img className='alum-image' src='http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Courses/Alumni/Madan%20Bahal.jpg' alt='Madan Bahal' />
               <br />
               <h4 className='alum-name'>Madan Bahal</h4>
@@ -121,7 +115,6 @@ const Courses = () => {
               <p className='alum-year'>1989</p>
             </div>
             <div className='alum-card'>
-              {/* <div className='alum-image' ></div> */}
               <img className='alum-image' src='http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Courses/Alumni/Nirmal-Gangwal.png' alt='Nirmal' />
               <br />
               <h4 className='alum-name'>Nirmal Gangwal</h4>
@@ -130,7 +123,6 @@ const Courses = () => {
               <p className='alum-year'>Year</p>
             </div>
             <div className='alum-card'>
-              {/* <div className='alum-image' ></div> */}
               <img className='alum-image' src='http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Courses/Alumni/Sukhwinder%20Singh.jpg' alt='Sukhwinder' />
               <br />
               <h4 className='alum-name'>Sukhwinder Singh</h4>
@@ -139,7 +131,6 @@ const Courses = () => {
               <p className='alum-year'>Year</p>
             </div>
             <div className='alum-card'>
-              {/* <div className='alum-image' ></div> */}
               <img
                 className='alum-image'
                 src='http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Courses/Alumni/Shivkumar%20Sharma.jpg'

@@ -32,8 +32,7 @@ const CommonGrid = () => {
           </p>
         </div>
         <Slider {...settings}>
-          {/* {numberofSlides.map(() => {
-            return ( */}
+        
           <div className="common-gallery">
             <div className="common-gallery-grid">
               <div className="common-grid-1">
@@ -116,9 +115,6 @@ const CommonGrid = () => {
               </div>
             </div>
           </div>
-
-          {/* )
-          })} */}
         </Slider>
       </div>
     </>

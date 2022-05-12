@@ -28,10 +28,10 @@ const PublicationNav = ({ title }) => {
                   Yogsattva
                 </li>
               </Link>
-              <Link to='' >
+              <Link to="">
                 <li className={title === 'books' ? 'nav-active' : ''}>Books</li>
               </Link>
-              <Link to=''>
+              <Link to="">
                 <li className={title === 'ebooks' ? 'nav-active' : ''}>
                   Free E-Books
                 </li>
@@ -46,7 +46,10 @@ const PublicationNav = ({ title }) => {
               </Link>
             </ul>
           </div>
-          <div className="user-container">{CommonUser}</div>
+
+          <div className="user-container">
+            <Link to="/sign-in"> {CommonUser}</Link>
+          </div>
         </div>
         <div className="career-navigation-lg">
           <ul>
@@ -60,10 +63,10 @@ const PublicationNav = ({ title }) => {
                 Yogsattva
               </li>
             </Link>
-            <Link to='' >
+            <Link to="">
               <li className={title === 'books' ? 'nav-active' : ''}>Books</li>
             </Link>
-            <Link to='' >
+            <Link to="">
               <li className={title === 'ebooks' ? 'nav-active' : ''}>
                 Free E-Books
               </li>

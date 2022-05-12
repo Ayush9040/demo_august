@@ -1,9 +1,7 @@
 import React, { useState } from 'react'
-// import CourseImg from '../../assets/images/course (2).png'
 import './style.scss'
 import { star, global, network, chat } from '../../assets/icons/icon'
 import CommonBtn from '../commonbtn'
-// import DetailImg from '../../assets/images/detailImg.png'
 import baseDomain,{ courseAssets } from '../../assets/images/imageAsset'
 const CourseDetails = ({ name, description }) => {
   const [detail, setDetail] = useState(1)

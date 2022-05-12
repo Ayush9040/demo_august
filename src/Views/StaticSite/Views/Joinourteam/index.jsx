@@ -4,7 +4,6 @@ import benefits from '../../assets/images/benifits.png'
 import './styles.scss'
 import CareerCard from '../../Components/CommonCareerCard'
 import baseDomain,{ volunteerAssets } from '../../assets/images/imageAsset'
-// import "../../Components/Common-banner/styles.scss"
 
 const Volunteer = () => {
   return (

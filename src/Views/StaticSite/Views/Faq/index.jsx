@@ -1,8 +1,6 @@
 import React from 'react'
 import CommonBanner from '../../Components/Common-banner'
 import faqs from '../../assets/images/benifits.png'
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { faChevronRight, faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import {
   Accordion,
   AccordionItem,

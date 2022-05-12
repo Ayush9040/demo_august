@@ -1,15 +1,7 @@
 import React, { useState } from 'react'
-// import CommonBannerNav from '../CommonBannerNav'
 import './styles.scss'
-// import founderGuru from '../../assets/images/Founder.png'
 import CommonBtn from '../commonbtn'
 import CommonBannerNavAboutUs from '../CommonBannerNavAboutUs'
-// import l0 from '../../assets/images/our-legacy/l-0.jpg'
-// import l1 from '../../assets/images/our-legacy/l-1.jpg'
-// import l2 from '../../assets/images/our-legacy/l-2.jpg'
-// import l3 from '../../assets/images/our-legacy/l-3.jpg'
-// import l4 from '../../assets/images/our-legacy/l-4.jpg'
-// import l5 from '../../assets/images/our-legacy/l-5.jpg'
 import { Link } from 'react-router-dom'
 import baseDomain, { aboutAssets } from '../../assets/images/imageAsset'
 
@@ -21,17 +13,18 @@ const CommonBannerLegacy = ({
 }) => {
   const [activeFounder, setActiveFounder] = useState(0)
 
-  let l0=baseDomain+aboutAssets.aboutAsset44
-  let l1=baseDomain+aboutAssets.aboutAsset45
-  let l2=baseDomain+aboutAssets.aboutAsset46
-  let l3=baseDomain+aboutAssets.aboutAsset47
-  let l4=baseDomain+aboutAssets.aboutAsset48
-  let l5=baseDomain+aboutAssets.aboutAsset49
-  
+  let l0 = baseDomain + aboutAssets.aboutAsset44
+  let l1 = baseDomain + aboutAssets.aboutAsset45
+  let l2 = baseDomain + aboutAssets.aboutAsset46
+  let l3 = baseDomain + aboutAssets.aboutAsset47
+  let l4 = baseDomain + aboutAssets.aboutAsset48
+  let l5 = baseDomain + aboutAssets.aboutAsset49
 
   const founderData = [
     {
       name: 'Shree Yogendra ji',
+      founder: ['Founder'],
+      year: '1897 - 1989',
       route: 'shree-yogendra-ji',
 
       desc: [
@@ -62,7 +55,11 @@ const CommonBannerLegacy = ({
     },
     {
       name: 'Paramhamsa Madhavadas ji',
-      desc: ['Born in Bengal in 1798, Paramahamsa Madhavdas Ji was a true Yoga Master hailing from the Mukhopadhyaya family. During his long life of 123 years, he was notably responsible for the revival of yogic practices which had vanished from India at the time. His childhood and upbringing inspired in him a devotional faith towards yoga. He left home at the tender age of 23 to study various Hatha yoga techniques and the health advantages of Yoga practices in order to promote spiritual health and growth of consciousness.'],
+      founder: ['Founders Guru'],
+      year: '1798-1921',
+      desc: [
+        'Born in Bengal in 1798, Paramahamsa Madhavdas Ji was a true Yoga Master hailing from the Mukhopadhyaya family. During his long life of 123 years, he was notably responsible for the revival of yogic practices which had vanished from India at the time. His childhood and upbringing inspired in him a devotional faith towards yoga. He left home at the tender age of 23 to study various Hatha yoga techniques and the health advantages of Yoga practices in order to promote spiritual health and growth of consciousness.',
+      ],
       route: 'paramhamsa-madhavadas-ji',
       img: l1,
     },
@@ -70,6 +67,8 @@ const CommonBannerLegacy = ({
     {
       name: 'Smt. Sitadevi Ji',
       route: 'smt-sitadevi-ji',
+      founder: ['Mother'],
+      year: '1912 - 2008',
       desc: [
         `
           Smt. Sitadevi Yogendra, fondly known as Mother, married Shri Yogendraji in 1927 and joined him in his mission of spreading the knowledge of yoga in the world. Smt. Sitadevi was instrumental in the establishment of the institute. Not only did she stood along Yogendra ji in managing day-to-day activities, but she also began teaching women and children at The Yoga Institute. Sitadevi ji worked tirelessly to empower women and make them aware about the benefits of maintaining good physical and mental health.  
@@ -84,6 +83,8 @@ const CommonBannerLegacy = ({
     {
       name: 'Dr. Jayadeva Yogendra',
       route: 'dr-jayadeva-yogendra',
+      founder: ['President'],
+      year: '1929 - 2018',
       desc: [
         `
         Dr. Jayadeva Yogendra, fondly known as Dr. Sahab, was a true yogi who showed the world how to live a balanced and a perfect yogic life. He served as the President of The Yoga Institute and continued his father’s legacy with aplomb until he took his samadhi in 2018.  Dr. Jayadeva’s teachings, filled with deep wisdom, shows the right path, and provides answers to all the problems of people even to this day. 
@@ -108,6 +109,8 @@ const CommonBannerLegacy = ({
     {
       name: 'Dr. Hansaji Yogendra',
       route: 'dr-hansaji-yogendra',
+      founder: ['Director'],
+      year: '1947',
 
       desc: [
         `
@@ -126,13 +129,14 @@ const CommonBannerLegacy = ({
       img: l4,
     },
     {
-      name: 'Harish Ji',
+      name: 'Hrishi J Yogendra',
       route: 'harish-ji',
+      founder: ['Director'],
+      year: '1988',
       desc: [''],
       img: l5,
     },
   ]
-  console.log(l0,'img')
   return (
     <>
       <div className="about-us-container">
@@ -166,7 +170,11 @@ const CommonBannerLegacy = ({
                   {founderData[activeFounder].name}
                   <div className="bottom-line"></div>
                 </div>
-                <div className="pos-date">founder</div>
+                <div className="pos-date">
+                  {founderData[activeFounder].founder} <br />
+
+                  <span style={{ fontSize:'10px' }}>{founderData [activeFounder].year}</span>
+                </div>
               </div>
               <p style={{ textAlign: 'left', paddingBottom: '30px' }}>
                 {founderData[activeFounder].desc[0]}
@@ -174,7 +182,7 @@ const CommonBannerLegacy = ({
                 <br />
                 <br />
                 {founderData[activeFounder].desc[1]}
-                <br/>
+                <br />
                 <Link
                   to={'/about/our-legacy/' + founderData[activeFounder].route}
                 >

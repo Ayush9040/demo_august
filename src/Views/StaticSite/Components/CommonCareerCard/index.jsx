@@ -10,7 +10,6 @@ const CareerCard = ({ cardTitle, bgImg }) => {
         style={{ backgroundImage: `url(${bgImg})` }}
       >
         <h3 className='job-title'>{cardTitle}</h3>
-        {/* <CommonBtn text={"Explore"} /> */}
         <Link to='' >
           <button className='our-card-btn'>Explore</button>
         </Link>

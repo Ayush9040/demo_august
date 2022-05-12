@@ -14,9 +14,7 @@ const Location = () => {
             <p>Open EveryDay<br></br>
               6:30 AM - 8:00 PM</p>
           </div>
-          {/* <div className="location-sub-grid-2">
-            <p>The Yoga Institute, Shri Yogendra Marg, Prabhat Colony, Santacruz East, Mumbai – 400055 India. </p>
-          </div> */}
+      
         </div>
       </div>
       <div className="location-grid-2">
