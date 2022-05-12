@@ -3,7 +3,7 @@ import Heading from '../../Components/Heading'
 import { share } from '../../assets/icons/icon'
 import './style.scss'
 import SeminarCard from '../../Components/SeminarCard'
-import baseDomain, { alumniAssets, homeAssets } from '../../assets/images/imageAsset'
+import baseDomain, { homeAssets } from '../../assets/images/imageAsset'
 import CommonBannerNavPrimary from '../../Components/CommonBannerNavPrimary'
 import { Link } from 'react-router-dom'
 const BlogPage = () => {
