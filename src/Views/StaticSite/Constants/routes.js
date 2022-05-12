@@ -444,10 +444,10 @@ const staticSiteRoutes = [
   },
   {
     Component: VolunteerJob ,
-    path: '/join-our-team/job-id',
+    path: '/join-our-team/program-id',
     exact: true,
     id: 'statisSiteUnderVolunteerJob',
-    routePath: '/join-our-team/job-id',
+    routePath: '/join-our-team/program-id',
     name: 'VolunteerJob',
   }
   

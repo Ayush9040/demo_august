@@ -20,7 +20,7 @@ const Careers = () => {
       <div className='jobs-container' >
         <h1>Join us<div className='bottom-line' ></div></h1>
         <div className='jobs-card-container' >
-          {career?.map((item,i)=>{ return <CareerCard key={i} cardTitle={item.jobTitle} bgImg={item.bgImage} />})}
+          {career?.map((item,i)=>{ return <CareerCard link={'/careers/job-id'} key={i} cardTitle={item.jobTitle} bgImg={item.bgImage} />})}
         </div>
       </div>
 
