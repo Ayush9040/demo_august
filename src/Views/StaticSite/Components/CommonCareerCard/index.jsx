@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import './styles.scss'
 
-const CareerCard = ({ cardTitle, bgImg, link }) => {
+const CareerCard = ({ cardTitle, bgImg }) => {
   return (
     <>
       <div

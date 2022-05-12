@@ -1,7 +1,6 @@
 import React from 'react'
 import './style.scss'
 import { harmonyImagesData,fondationDayImagesData } from '../../assets/images/media/mediaAsset'
-import Carousel from 'react-gallery-carousel'
 import 'react-gallery-carousel/dist/index.css'
 
 const GridComponent = ({ imgs = [] }) => {
@@ -27,7 +26,7 @@ const GridComponent = ({ imgs = [] }) => {
 
 export default GridComponent
 
-export const FondationDayGridComponent = ({ imgs }) => {
+export const FondationDayGridComponent = () => {
   return (
     <div>
       <div className="common-gallery">

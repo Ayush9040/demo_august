@@ -3,11 +3,11 @@ import CommonBannerNav from '../CommonBannerNav'
 import './styles.scss'
 const CommonBannerFacts = ({
   Navigation,
-  BgImage,
+ 
   PageType,
   Heading,
   isOnlyBanner,
-  isLeftContent,
+ 
   innerNav,
   children,
   description,

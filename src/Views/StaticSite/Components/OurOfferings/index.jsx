@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import Heading from '../Heading'
 import './style.scss'
 import { courses, filler } from '../../assets/icons/icon'
@@ -9,7 +9,7 @@ import Slider from 'react-slick'
 import CommonBtn from '../commonbtn'
 import { Link } from 'react-router-dom'
 
-const OurOfferings = props => {
+const OurOfferings = () => {
   const carouselData = [
     {
       name: '7-day Yoga Health Camp',
@@ -85,7 +85,6 @@ const OurOfferings = props => {
       setPrice(carouselData[index].price)
     },
   }
-  const [showCourseDetails, setCourseDetails] = useState(false)
   return (
     <div className="our-offerings-section">
       <div className="our-offerings-container offering-padding">

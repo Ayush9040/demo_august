@@ -15,11 +15,8 @@ import baseDomain, { aboutAssets } from '../../assets/images/imageAsset'
 
 const CommonBannerLegacy = ({
   Navigation,
-  BgImage,
   PageType,
-  Heading,
   isOnlyBanner,
-  isLeftContent,
   innerNav,
 }) => {
   const [activeFounder, setActiveFounder] = useState(0)

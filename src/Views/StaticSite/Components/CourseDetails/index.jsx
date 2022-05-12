@@ -5,7 +5,7 @@ import { star, global, network, chat } from '../../assets/icons/icon'
 import CommonBtn from '../commonbtn'
 // import DetailImg from '../../assets/images/detailImg.png'
 import baseDomain,{ courseAssets } from '../../assets/images/imageAsset'
-const CourseDetails = ({ name, heroImg, description }) => {
+const CourseDetails = ({ name, description }) => {
   const [detail, setDetail] = useState(1)
 
   let options = ['Program Details', 'Curriculam','Teaching & Certification', 'Our Unique Offerings','Registration', 'FAQ']

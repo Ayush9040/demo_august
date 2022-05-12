@@ -13,12 +13,9 @@ import './styles.scss'
 
 const CommonBannerAboutUs = ({
   Navigation,
-  BgImage,
   PageType,
   Heading,
   isOnlyBanner,
-  isLeftContent,
-  innerNav,
   isBlessing,
 }) => {
   console.log(PageType)

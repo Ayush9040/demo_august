@@ -2,7 +2,6 @@ import React from 'react'
 import './styles.css'
 import { CartButton } from '../../assets/icons/icon'
 import { Link } from 'react-router-dom'
-import { productData } from '../../utils/productData'
 
 const ShopCard = ({
   title = 'Yoga chakra Mat Balance your mind',

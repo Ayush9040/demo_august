@@ -15,15 +15,6 @@ import CommonBtn from '../commonbtn'
 const CourseSection = ({ title, showRangeSlider, color, cardData }) => {
   const [customVal, setCustomVal] = useState(0)
 
-  const labels = {
-    1: '1',
-    2: '2',
-    3: '3',
-    4: '4',
-    5: '5',
-  }
-
-  const arr = [0, 1, 2]
 
   const content = () => {
     switch (title) {

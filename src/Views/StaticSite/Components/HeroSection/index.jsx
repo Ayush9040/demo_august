@@ -2,7 +2,7 @@ import React from 'react'
 import './style.scss'
 import Navbar from '../Navbar'
 
-const HeroSection = ({ landingImage }) => {
+const HeroSection = () => {
   return (
     <div className="landing-page-container">
       <Navbar />

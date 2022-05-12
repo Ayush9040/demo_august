@@ -1,5 +1,4 @@
-import React, { useState } from 'react'
-import CommonBannerNavAboutUs from '../CommonBannerNavAboutUs'
+import React from 'react'
 import CommonBannerNavPrimary from '../CommonBannerNavPrimary'
 import GridComponent from '../GridComponent'
 import './style.scss'
@@ -7,9 +6,7 @@ import './style.scss'
 const OurLegacyModal = ({ data }) => {
 
 
-  const [activeFouderTile, setActiveFouderTile] = useState(0)
-
-  const founderData = {}
+  
 
   return (
     <>

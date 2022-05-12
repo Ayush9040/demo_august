@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import { legacy2, cross, filler } from '../../assets/icons/icon'
 import './style.scss'
 import { Link } from 'react-router-dom'

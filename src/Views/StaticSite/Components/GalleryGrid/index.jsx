@@ -16,7 +16,6 @@ const CommonGrid = () => {
     slidesToScroll: 1,
     centerPadding: '70px',
   }
-  const numberofSlides = [1, 2, 3]
   return (
     <>
       <div className="gallery-container">
