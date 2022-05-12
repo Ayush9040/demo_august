@@ -64,7 +64,29 @@
                 font-weight: bold;
                 font-size: 1.5rem;
             }
-
+           .navigation-ul{
+            a{
+                text-decoration: none;
+                color: #000;
+            }
+            li{
+                font-size: 1.75rem;
+                margin:  0;
+                font-weight: 700;
+                cursor: pointer;
+                width: fit-content;
+                .bottom-line{
+                    visibility: hidden
+                };
+                &:hover{
+                    // border-bottom: 2px solid var(--brick-red);
+                    font-weight: 700;
+                    .bottom-line{
+                        visibility: visible;
+                    }
+                }
+            }
+           }
         }
         .filler{
             position: relative;
