@@ -60,7 +60,7 @@ const Facts = () => {
           ))}
         </div>
         <div className="slider">
-          <input type={'range'} min={0} max={100} value={0} />
+          <input type={'range'} min={0} max={3} value={decade}  onChange={()=>decade<3 ? setDecade(decade+1):setDecade(0)}/>
         </div>
       </div>
 
