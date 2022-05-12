@@ -1,6 +1,6 @@
 import React from 'react'
-import CommonBanner from '../../components/Common-banner/index'
-import CareerCard from '../../components/CommonCareerCard'
+import CommonBanner from '../../Components/Common-banner/index'
+import CareerCard from '../../Components/CommonCareerCard'
 import './style.scss'
 import { career } from '../../utils/careerData'
 
@@ -20,7 +20,7 @@ const Careers = () => {
       <div className='jobs-container' >
         <h1>Join us<div className='bottom-line' ></div></h1>
         <div className='jobs-card-container' >
-          {career?.map((item,i)=>(   <CareerCard key={i} cardTitle={item.jobTitle} bgImage={item.bgImage} />))}
+          {career?.map((item,i)=>{ return <CareerCard key={i} cardTitle={item.jobTitle} bgImg={item.bgImage} />})}
         </div>
       </div>
 

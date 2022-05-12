@@ -1,5 +1,4 @@
 import React from 'react'
-// import AnnamBrahma from '../../assets/images/annam-brahma.jpg'
 import './style.scss'
 import { Link } from 'react-router-dom'
 

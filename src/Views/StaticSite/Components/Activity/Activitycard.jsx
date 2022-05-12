@@ -3,12 +3,10 @@ import React, { useEffect, useState } from 'react'
 const Activitycard = ({ title, description, images }) => {
   const [textTitle, setTextTitle] = useState(false)
   useEffect(() => {
-    console.log(description.split('').length > 100)
     description.split('').length > 100
       ? setTextTitle(description.substring(0, 100) + '...')
       : setTextTitle(description)
   })
-  console.log(textTitle)
 
   return (
     <>

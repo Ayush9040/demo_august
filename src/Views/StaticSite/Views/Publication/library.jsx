@@ -1,6 +1,6 @@
 import React from 'react'
 import PublicationNav from '../../Components/PublicationNav'
-import baseDomain,{ publicationAssests } from '../../assets/images/imageAsset'
+import baseDomain, { publicationAssests } from '../../assets/images/imageAsset'
 
 const library = () => {
   return (
@@ -14,7 +14,7 @@ const library = () => {
             <div className="cardImg">
               <div>
                 <img
-                  src={baseDomain+publicationAssests.libraryAsset}
+                  src={baseDomain + publicationAssests.libraryAsset}
                   alt=""
                   style={{
                     width: '100%',
@@ -38,30 +38,40 @@ const library = () => {
           </div>
           <div className="more-cards">
             <div className="card-1">
-              {/* <StaticImage src="../../assets/images/m_1.jpg" />
-               */}
-              <img src={baseDomain + publicationAssests.publicationAssests1} alt="" />
+              <img
+                src={baseDomain + publicationAssests.publicationAssests1}
+                alt=""
+              />
             </div>
             <div className="card-1">
-              {/* <StaticImage src="../../assets/images/Library-2.jpg" /> */}
-              <img src={baseDomain + publicationAssests.publicationAssests2} alt="" />
+              <img
+                src={baseDomain + publicationAssests.publicationAssests2}
+                alt=""
+              />
             </div>
             <div className="card-1">
-              {/* <StaticImage src="../../assets/images/Library-3.jpg" />
-               */}
-              <img src={baseDomain + publicationAssests.publicationAssests3} alt="" />
+              <img
+                src={baseDomain + publicationAssests.publicationAssests3}
+                alt=""
+              />
             </div>
             <div className="card-1">
-              {/* <StaticImage src="../../assets/images/Library-4.jpg" /> */}
-              <img src={baseDomain + publicationAssests.publicationAssests4} alt="" />
+              <img
+                src={baseDomain + publicationAssests.publicationAssests4}
+                alt=""
+              />
             </div>
             <div className="card-1">
-              {/* <StaticImage src="../../assets/images/Library-5.jpg" /> */}
-              <img src={baseDomain + publicationAssests.publicationAssests5} alt="" />
+              <img
+                src={baseDomain + publicationAssests.publicationAssests5}
+                alt=""
+              />
             </div>
             <div className="card-1">
-              {/* <StaticImage src="../../assets/images/Library-6.jpg" /> */}
-              <img src={baseDomain + publicationAssests.publicationAssests6} alt="" />
+              <img
+                src={baseDomain + publicationAssests.publicationAssests6}
+                alt=""
+              />
             </div>
           </div>
         </div>

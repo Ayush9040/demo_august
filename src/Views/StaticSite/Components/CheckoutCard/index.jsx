@@ -12,7 +12,6 @@ const CheckoutCard = () => {
           className="checkout-card-img"
           src={productData.img}
           alt="Avatar"
-          // style={{ width: "100%" }}
         />
       </div>
       <div className="checkout-card-right-section">

@@ -2,7 +2,6 @@ import React from 'react'
 import './styles.css'
 import { CartButton } from '../../assets/icons/icon'
 import { Link } from 'react-router-dom'
-import { productData } from '../../utils/productData'
 
 const ShopCard = ({
   title = 'Yoga chakra Mat Balance your mind',
@@ -12,7 +11,6 @@ const ShopCard = ({
 }) => {
   let colorA = '#CE7780'
   let colorB = '#9A565B'
-  console.log(currency)
 
   return (
     <div className="card">
@@ -21,7 +19,6 @@ const ShopCard = ({
           className="card-img"
           src={thumbnail}
           alt="Avatar"
-          // style={{ width: "100%", height: "100%" }}
         />
       </div>
       <div

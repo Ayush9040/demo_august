@@ -1,5 +1,4 @@
-import React, { useState } from 'react'
-import CommonBannerNavAboutUs from '../CommonBannerNavAboutUs'
+import React from 'react'
 import CommonBannerNavPrimary from '../CommonBannerNavPrimary'
 import GridComponent from '../GridComponent'
 import './style.scss'
@@ -7,9 +6,7 @@ import './style.scss'
 const OurLegacyModal = ({ data }) => {
 
 
-  const [activeFouderTile, setActiveFouderTile] = useState(0)
-
-  const founderData = {}
+  
 
   return (
     <>
@@ -27,9 +24,9 @@ const OurLegacyModal = ({ data }) => {
                   <div className="bottom-line"></div>
                 </div>
                 <div className="position-right">
-                  <p>Founder</p>
+                  <p>{data.founder}</p>
                   <br />
-                  1897 - 1989
+                  {data.year}
                 </div>
               </div>
               <p>{data.desc[0]}</p>
@@ -43,12 +40,6 @@ const OurLegacyModal = ({ data }) => {
             <div className="detail-top-text">
               <p>{data.desc[2]}</p>
               <p>{data.desc[3]}</p>
-              {/* <p>
-          Shri Yogendra Ji published the world’s first yoga journal. He pioneered the use of yoga for therapeutic purposes. His concept of breath and movement co-ordination has impacted millions. He has written many authoritative texts on yoga based on his experience, research work and ancient scriptures. Some of his books are preserved in the Crypt of Civilization for posterity; they are to be opened after 6000 years. His one thought of starting The Yoga Institute has contributed to the growth of yoga, as well as peace, harmony, wellbeing, and positivity, across nations.
-          </p>
-          <p>
-          Millions of lives have been touched and benefitted from this purity of vision. Generations later, the torch of yoga lit by Shri Yogendraji continues to illuminate the path of humanity. The legacy continues…
-          </p> */}
             </div>
           </div>
           <div className="detail-main-image">

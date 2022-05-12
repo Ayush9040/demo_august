@@ -6,9 +6,7 @@ const PageView = () => {
   const location = useLocation()
   const ecomRoute = getEcomRoute(location)
 
-  if(!ecomRoute){
-    console.log('Show error page')
-  }
+
 
   return (
     <div>

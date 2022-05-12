@@ -53,7 +53,9 @@ const CommonBannerNavAboutUs = ({ innerNav }) => {
               </ul>
             </div>
           )}
-          <div className="user-container">{CommonUser}</div>
+          <Link to="/sign-in">
+            <div className="user-container">{CommonUser}</div>
+          </Link>
         </div>
         {innerNav && (
           <div className="career-navigation-lg">

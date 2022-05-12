@@ -3,11 +3,9 @@ import CommonBannerNav from '../CommonBannerNav'
 import './styles.scss'
 const CommonBanner = ({
   Navigation,
-  BgImage,
   PageType,
   Heading,
   isOnlyBanner,
-  isLeftContent,
   innerNav,
   children,
   description,
@@ -24,10 +22,7 @@ const CommonBanner = ({
             {children ? children : <CommonBannerNav innerNav={innerNav} />}
           </div>
         )}
-        {/* <div className='img-container'> */}
-        {/* {!isOnlyBanner && <img src={BgImage} />} */}
-        {/* <Image fluid={BgImage} /> */}
-        {/* </div> */}
+       
         <div
           className={`banner-container ${
             !isOnlyBanner && 'banner-container-responsive'

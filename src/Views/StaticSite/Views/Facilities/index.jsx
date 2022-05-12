@@ -42,7 +42,6 @@ const Facilities = () => {
         Logo={false}
         Navigation={true}
         PageType="facilities"
-        // BgImage={faqs}
         Heading="Facilities"
         isOnlyBanner={false}
         innerNav={false}
@@ -151,7 +150,6 @@ const Facilities = () => {
                 ensures that the students are comfortable and are provided with
                 a congenial environment to pursue their yogic interests.
               </p>
-              {/* <CommonBtn text={"Take a virtual tour"} /> */}
             </div>
           </div>
           <div className="facilities-slide">
@@ -164,7 +162,6 @@ const Facilities = () => {
                 The spacious and well-equipped conference room can be availed
                 for conducting meetings and discussions.
               </p>
-              {/* <CommonBtn text={"Take a virtual tour"} /> */}
             </div>
           </div>
           <div className="facilities-slide">
@@ -183,7 +180,6 @@ const Facilities = () => {
                 library creates the right atmosphere for your learning and
                 knowledge.
               </p>
-              {/* <CommonBtn text={"Take a virtual tour"} /> */}
             </div>
           </div>
           <div className="facilities-slide">
@@ -201,7 +197,6 @@ const Facilities = () => {
                 Explore the huge collection of our merchandise, souvenirs and
                 remembrance items.
               </p>
-              {/* <CommonBtn text={"Take a virtual tour"} /> */}
             </div>
           </div>
 
@@ -216,7 +211,6 @@ const Facilities = () => {
                 spiritual energy of more than 100 years. Come experience this
                 energy and see the change within yourself.
               </p>
-              {/* <CommonBtn text={"Take a virtual tour"} /> */}
             </div>
           </div>
           <div className="facilities-slide">
@@ -230,7 +224,6 @@ const Facilities = () => {
                 flowers that will create a perfect atmosphere to meditate. It is
                 a place to breathe fully and embrace the vastness of the cosmos.
               </p>
-              {/* <CommonBtn text={"Take a virtual tour"} /> */}
             </div>
           </div>
           <div className="facilities-slide">
@@ -246,7 +239,6 @@ const Facilities = () => {
                 carefully curated to enrich the yogic experience and help with
                 practice.
               </p>
-              {/* <CommonBtn text={"Take a virtual tour"} /> */}
             </div>
           </div>
           <div className="facilities-slide">
@@ -261,7 +253,6 @@ const Facilities = () => {
                 blissful experience immersed in the flora and fauna of the
                 Institute.
               </p>
-              {/* <CommonBtn text={"Take a virtual tour"} /> */}
             </div>
           </div>
           <div className="facilities-slide">
@@ -278,7 +269,6 @@ const Facilities = () => {
                 also great opportunity to take in the peace at this relaxation
                 area.
               </p>
-              {/* <CommonBtn text={"Take a virtual tour"} /> */}
             </div>
           </div>
           <div className="facilities-slide">
@@ -291,7 +281,6 @@ const Facilities = () => {
               <p>
               The favourite spot of most sadhakas on campus, the Kailashpati tree has graced us with its presence for many years. It is the best spot to meditate at, to soak in its spiritual vibrations. The lovely fragrance of its flowers is the perfect accompaniment to whatever activity you are pursuing under the tree. Come, take the divine blessings from the tree!
               </p>
-              {/* <CommonBtn text={"Take a virtual tour"} /> */}
             </div>
           </div>
         </Slider>

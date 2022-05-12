@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { legacy2, cross, filler } from '../../assets/icons/icon'
 import './style.scss'
 import { Link } from 'react-router-dom'
@@ -18,6 +18,7 @@ const MegaMenu = ({ setNav }) => {
     { name: 'TYI ONLINE', link: '', id: 11 },
     { name: 'ALUMNI', link: '/alumni', id: 12 },
     { name: 'JOIN OUR TEAM', link: '/join-our-team', id: 13 },
+    { name: 'CAREERS', link: '/careers', id: 14 },
     { name: 'FAQs', link: '/faq', id: 14 },
     {
       name: 'LOCATE US',
@@ -25,10 +26,6 @@ const MegaMenu = ({ setNav }) => {
       id: 15,
     },
   ]
-
-  useEffect(() => {
-    console.log(document.getElementsByClassName('navigation-ul'))
-  })
 
   return (
     <div className="mega-menu-container">

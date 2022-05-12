@@ -12,15 +12,19 @@
           flex-wrap: wrap;
           .image{
               max-width: 150px;
-              &:first-child{
-                img{
-                    border: 3px solid var(--brick-red);
-              }
-              }
+            //   &:first-child{
+            //     img{
+            //         border: 3px solid var(--brick-red);
+            //   }
+            //   }
             img{
                     box-sizing: border-box;
                       padding: 0.25rem;
                       width: 100%;
+                      cursor: pointer;
+                      &:hover,&:focus{
+                        border: 3px solid var(--brick-red);
+                      }
             }
               }
               p{

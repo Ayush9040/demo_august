@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import React,{ useEffect, useState } from 'react'
 import { arrowIcon } from '../../assets/icons/icon'
 import CommonBannerNav1 from '../../Components/CommonBannerShop'
@@ -23,9 +24,7 @@ const Shop = () => {
     axios.get('https://ecom-dev-be.theyogainstituteonline.org/v1/category').then(data=>data.data).then(data=>{setCategories(data.data)})
   },[])
 
-  console.log(product,'SSS')
-  console.log(categories,'categories')
-  console.log(key)
+
   const settings = {
     dots: true,
     infinite: true,
@@ -71,35 +70,6 @@ const Shop = () => {
           {product?.map((item,i)=>{
             return <ShopCard key={i} title={item.name} currency={item.currency} thumbnail={item.productThumbnail} price={item.price} />
           })}
-          {/* {
-            categories?.map(item=>{
-              return <ShopCard title={item.name} price={item.price} />
-            })
-          } */}
-          {/* <Link to="/shop/product_id" >
-            <ShopCard />
-          </Link>
-          <Link to="/shop/product_id" >
-            <ShopCard />
-          </Link>        
-              <Link to="/shop/product_id" >
-            <ShopCard />
-          </Link>   
-                   <Link to="/shop/product_id" >
-            <ShopCard />
-          </Link>     
-                 <Link to="/shop/product_id" >
-            <ShopCard />
-          </Link>        
-              <Link to="/shop/product_id" >
-            <ShopCard />
-            </Link> 
-                       <Link to="/shop/product_id" >
-            <ShopCard />
-            </Link>       
-                 <Link to="/shop/product_id" >
-            <ShopCard />
-            </Link> */}
         </div>
       </div>
     </div>
