@@ -11,7 +11,7 @@ const CareerCard = ({ cardTitle, bgImg }) => {
       >
         <h3 className='job-title'>{cardTitle}</h3>
         {/* <CommonBtn text={"Explore"} /> */}
-        <Link to='/careers/job-id' >
+        <Link to='/join-our-team/job-id' >
           <button className='our-card-btn'>Explore</button>
         </Link>
       </div>

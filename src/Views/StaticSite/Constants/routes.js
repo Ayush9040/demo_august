@@ -46,6 +46,7 @@ import AllExperience from '../Views/Experience/index.js'
 import SignIn from '../Views/SignIn/index.jsx'
 import Careers from '../Views/Careers/index.jsx'
 import SingleJob from '../Components/SingleJobPage/index.jsx'
+import VolunteerJob from '../Views/Joinourteam/volunteerJob.jsx'
 
 const staticSiteRoutes = [
   {
@@ -440,7 +441,16 @@ const staticSiteRoutes = [
     id: 'statisSiteUnderSingleJob',
     routePath: '/careers/job-id',
     name: 'SingleJob',
+  },
+  {
+    Component: VolunteerJob ,
+    path: '/join-our-team/job-id',
+    exact: true,
+    id: 'statisSiteUnderVolunteerJob',
+    routePath: '/join-our-team/job-id',
+    name: 'VolunteerJob',
   }
+  
 ]
 
 export default staticSiteRoutes
