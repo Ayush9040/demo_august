@@ -1,18 +1,15 @@
-import React, { useState } from 'react'
+import React,{ useState } from 'react'
 import './style.scss'
 import MediaSection from '../../Components/MediaSection'
 import MediaNav from '../../Components/MediaNav'
 import GridComponent from '../../Components/GridComponent'
 import { FondationDayGridComponent } from '../../Components/GridComponent'
 import CommonBtn from '../../Components/commonbtn'
-import GalleryModal from '../../Components/GalleryModal'
 import Carousel from 'react-gallery-carousel'
 import 'react-gallery-carousel/dist/index.css'
-import { faL } from '@fortawesome/free-solid-svg-icons'
-import { harmonyImagesData,foundationDayImageData } from '../../assets/images/media/mediaAsset'
+import { harmonyImagesData } from '../../assets/images/media/mediaAsset'
 
 const MediaGallery = () => {
-  const [gallery, setGallery] = useState()
   const [viewCarousel, setViewCarousel] = useState(false)
 
   // const manageGallery = ()=>{
