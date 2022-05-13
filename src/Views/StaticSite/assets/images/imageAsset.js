@@ -199,6 +199,7 @@ export const mediaAssets={
   igCeremony:'/Media/gallery/igceremony.jpg',
 
   // harmony-sec
+  mediaAssetsHero:'Media/gallery/99FoundationDay/Hero image .jpg',
   mediaAsset1:'/Media/gallery/harmony/image1.jpg',
   mediaAsset2:'/Media/gallery/harmony/image2.jpg',
   mediaAsset3:'/Media/gallery/harmony/image3.jpg',
