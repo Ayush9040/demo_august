@@ -75,10 +75,10 @@ const staticSiteRoutes = [
   },
   {
     Component: SingleCourse,
-    path: '/courses/course-name',
+    path: '/courses/:courseId',
     exact: true,
     id: 'statisSiteCourse',
-    routePath: '/courses/course-name',
+    routePath: '/courses/:courseId',
     name: 'Course',
   },
   {
