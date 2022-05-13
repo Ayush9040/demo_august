@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { legacy2, cross, filler } from '../../assets/icons/icon'
+import { legacy2, cross, filler, filler1 } from '../../assets/icons/icon'
 import './style.scss'
 import { Link } from 'react-router-dom'
 
@@ -22,7 +22,7 @@ const MegaMenu = ({ setNav }) => {
     },
     { name: 'NEWS,EVENTS & MEDIA', link: '/media', id: 4, key: 'NEWS' },
     { name: 'MUSEUM OF CLASSICAL YOGA', link: '/museum', id: 5, key: 'MUSEUM' },
-    { name: 'FACILITIES', link: '/facilities', id: 6 },
+    { name: 'FACILITIES', link: '/facilities', id: 6,  key: 'FACILITIES' },
     { name: 'SHOP', link: '/shop', id: 7, key: 'SHOP' },
     { name: 'GIFTING', link: '/gifting', id: 8, key: 'GIFTING' },
     { name: 'DONATION', link: '/donation', id: 9, key: 'DONATION' },
@@ -60,6 +60,42 @@ const MegaMenu = ({ setNav }) => {
       { menu: 'Free E-Books', link: '/publication/e-books' },
       { menu: 'Library', link: '/publication/library' },
     ],
+    MUSEUM: [
+      { menu: 'Overview', link: '/museum' },
+      { menu: 'Virual Tour', link: '/museum' },
+      { menu: 'Gallery', link: '/museum' },
+      { menu: 'location', link: '/museum' },
+    ],
+    FACILITIES: [
+      { menu: 'Overview', link: '/facilities' },
+      { menu: 'Facilities', link: '/facilities' },
+      { menu: 'Rules and Regulations', link: '/facilities' },
+    ],
+    SHOP: [
+      { menu: 'All Categories', link: '/shop' },
+      { menu: 'Books', link: '/shop' },
+      { menu: 'T-shirts', link: '/shop' },
+      { menu: 'Mats', link: '/shop' },
+      { menu: 'Bags', link: '/shop' },
+      { menu: 'Snacks', link: '/shop' },
+    ],
+    GIFTING: [
+      { menu: 'Overview', link: '/Gifting' },
+      { menu: 'Gift Career', link: '/Gifting' },
+      { menu: 'Gift Health and Wellness', link: '/Gifting' },
+      { menu: 'Gidt wisdom', link: '/Gifting' },
+      { menu: 'Gift Nispand', link: '/Gifting' },
+    ],
+    DONATION: [
+      { menu: 'Overview', link: '/donation' },
+      { menu: 'Annam brahma', link: '/donation' },
+      { menu: 'Truckasana', link: '/donation' },
+      { menu: 'Yoga for the Underprivileged', link: '/donation' },
+      { menu: 'Yoga for Transgender Community', link: '/donation' },
+      { menu: 'Yoga for Children with special needs', link: '/donation' },
+      { menu: 'Underprivileged Children in BMC schools', link: '/donation' },
+      { menu: 'Police', link: '/donation' },
+    ],
     NEWS: [
       { menu: 'Gallery', link: '/media' },
       { menu: 'News', link: '/media/news' },
@@ -76,20 +112,20 @@ const MegaMenu = ({ setNav }) => {
     ],
   }
   return (
-    <div className='mega-menu-container'>
-      <div className='left-menu'>
+    <div className="mega-menu-container">
+      <div className="left-menu">
         <div
-          className='cross'
+          className="cross"
           onClick={() => {
             setNav(false)
           }}
         >
           {cross}
         </div>
-        <div className='menu-logo'>
-          <Link to='/'>{legacy2}</Link>
+        <div className="menu-logo">
+          <Link to="/">{legacy2}</Link>
         </div>
-        <ul className='navigation-ul'>
+        <ul className="navigation-ul">
           {navItems &&
             navItems.map((item, i) => {
               if (item.name !== 'LOCATE US') {
@@ -109,7 +145,7 @@ const MegaMenu = ({ setNav }) => {
                           background:
                             'linear-gradient(90deg,#fff,#BC4F31,#BC4F31,#fff)',
                         }}
-                        className='bottom-line'
+                        className="bottom-line"
                       ></div>
                     </li>
                   </Link>
@@ -117,9 +153,9 @@ const MegaMenu = ({ setNav }) => {
               } else {
                 return (
                   <a
-                    href='https://goo.gl/maps/bxH6SifrXjXAhteV7'
-                    target='_blank'
-                    rel='noreferrer'
+                    href="https://goo.gl/maps/bxH6SifrXjXAhteV7"
+                    target="_blank"
+                    rel="noreferrer"
                   >
                     <li>
                       {item.name}
@@ -129,7 +165,7 @@ const MegaMenu = ({ setNav }) => {
                           background:
                             'linear-gradient(90deg,#fff,#BC4F31,#BC4F31,#fff)',
                         }}
-                        className='bottom-line'
+                        className="bottom-line"
                       ></div>
                     </li>
                   </a>
@@ -138,37 +174,37 @@ const MegaMenu = ({ setNav }) => {
             })}
         </ul>
       </div>
-      <div className='right-menu'>
+      <div className={ menuItem==='COURSES' ? 'right-menu':'right-menu sub-menu'}>
         {menuItem === 'COURSES' && (
           <>
-            <div className='single-menu'>
+            <div className="single-menu">
               <h3>TEACHERS TRAINING</h3>
               <ul>
-                <li className='text-bold'>200 Hour Courses</li>
+                <li className="text-bold">200 Hour Courses</li>
                 <li>Two Months Training Course - On Campus</li>
                 <li>Weekend Training Course - 3 Months / Online - English</li>
                 <li>One Month Training Course - Online / On Campus</li>
                 <li>Two Month Training Course - Part Time/ Online - Hindi</li>
                 <li>Teacher Training Course - Part Time/ Online- English</li>
-                <li className='text-bold'>500 Hour Courses</li>
+                <li className="text-bold">500 Hour Courses</li>
                 <li>Three Months Teacher Training Course</li>
-                <li className='text-bold'>900 Hour Courses</li>
+                <li className="text-bold">900 Hour Courses</li>
                 <li>Four Months Teacher Training Course</li>
                 <li>Yoga Teachers Training Course - 7 Months</li>
                 <li>Yoga Teachers Training Course - 9 Months - Hindi</li>
                 <li>Yoga Teachers Training Course - 12 Months - English</li>
                 <li>Yoga Teachers Training Course - 24 Months</li>
-                <li className='text-bold'>Certificate Yoga Therapy Course</li>
-                <li className='text-bold'>
+                <li className="text-bold">Certificate Yoga Therapy Course</li>
+                <li className="text-bold">
                   Certificate Program on Yoga for Cancer
                 </li>
-                <li className='text-bold'>
+                <li className="text-bold">
                   Certificate Course on Advanced <br />
                   Pranayama Techniques
                 </li>
               </ul>
             </div>
-            <div className='single-menu'>
+            <div className="single-menu">
               <h3>CAMPS</h3>
               <ul>
                 <li>Stress Management Camp</li>
@@ -196,7 +232,7 @@ const MegaMenu = ({ setNav }) => {
                 </ul>
               </ul>
             </div>
-            <div className='single-menu'>
+            <div className="single-menu">
               <h3>WORKSHOPS</h3>
               <ul>
                 <li>Weight Management Workshop</li>
@@ -210,13 +246,13 @@ const MegaMenu = ({ setNav }) => {
                 <li>Senior Citizen</li>
                 <li>Respiratory</li>
               </ul>
-              <div className='filler'>{filler}</div>
+              <div className="filler">{filler}</div>
             </div>
           </>
         )}
         {menuItem !== 'COURSES' && (
-          <div className='single-menu'>
-            <ul className='navigation-ul'>
+          <div className="single-menu">
+            <ul className="navigation-ul">
               {subMenu[menuItem]?.map((item, i) => {
                 return (
                   <Link to={`${item.link}`} key={i}>
@@ -228,13 +264,14 @@ const MegaMenu = ({ setNav }) => {
                           background:
                             'linear-gradient(90deg,#fff,#BC4F31,#BC4F31,#fff)',
                         }}
-                        className='bottom-line'
+                        className="bottom-line"
                       ></div>
                     </li>
                   </Link>
                 )
               })}
             </ul>
+            <div style={{ position:'fixed', bottom:'80px', width:'200px' }}>{filler1}</div>
           </div>
         )}
       </div>
