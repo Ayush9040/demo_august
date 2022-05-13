@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import './styles.scss'
 
-const CareerCard = ({ cardTitle, bgImg }) => {
+const CareerCard = ({ cardTitle, bgImg,link }) => {
   return (
     <>
       <div
@@ -11,7 +11,7 @@ const CareerCard = ({ cardTitle, bgImg }) => {
       >
         <h3 className='job-title'>{cardTitle}</h3>
         {/* <CommonBtn text={"Explore"} /> */}
-        <Link to='/careers/job-id' >
+        <Link to={link} >
           <button className='our-card-btn'>Explore</button>
         </Link>
       </div>

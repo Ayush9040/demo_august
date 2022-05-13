@@ -1,0 +1,35 @@
+.volunteer-contents{
+  width: 90%;
+  margin: 3rem auto;
+  justify-content: center;
+  .heading-container{
+    margin-left: 10rem;
+    h2{
+      font-size: 2rem;
+      font-weight: bolder;
+    }
+    .custom-border{
+      margin-top: 0;
+    }
+  }
+  .faq-contents{
+    margin-top: 8rem;
+    .accordion__button p {
+      width: 86%;
+      
+  }
+  .accordion__button p:after {
+     margin-right: 85rem;
+     margin-top: 1rem;
+  }
+.accordion__heading{
+  width: 85%;
+}
+.accordion__panel{
+  width: 85%;
+  margin: 0 auto; 
+
+}
+
+  }
+}

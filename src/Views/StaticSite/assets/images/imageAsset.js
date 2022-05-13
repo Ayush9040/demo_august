@@ -421,6 +421,7 @@ export const alumniAssets = {
   supportAssets3: '/Alumni/Support/Annam Brahma/img-3.jpg',
   supportAssets4: '/Alumni/Support/Annam Brahma/img-4.jpg',
   supportAssets5: '/Alumni/Support/Annam Brahma/img-5.jpg',
+  supportAssets6: '/Alumni/Support/Annam Brahma/img-6.jpg',
   // Upcoming Events
 
   eventsAssetsTitle: '/Alumni/Upcoming Events/upcoming-events.jpg',
