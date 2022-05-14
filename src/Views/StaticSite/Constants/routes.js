@@ -23,7 +23,7 @@ import Police from '../Views/Donation/police'
 import Truckasana from '../Views/Donation/truckasana'
 import Underprivileged from '../Views/Donation/underprivileged'
 import Facilities from '../Views/Facilities'
-import FAQ from '../Views/Faq'
+import FAQ from '../Components/Faq'
 import Gifting from '../Views/Gifting'
 import Home from '../Views/Home'
 import Volunteer from '../Views/Joinourteam'
@@ -377,14 +377,14 @@ const staticSiteRoutes = [
     routePath: '/join-our-team/values',
     name: 'Values',
   },
-  {
-    Component: FAQ,
-    path: '/faq',
-    exact: true,
-    id: 'statisSiteUnderFAQ',
-    routePath: '/faq',
-    name: 'FAQ',
-  },
+  // {
+  //   Component: FAQ,
+  //   path: '/faq',
+  //   exact: true,
+  //   id: 'statisSiteUnderFAQ',
+  //   routePath: '/faq',
+  //   name: 'FAQ',
+  // },
   {
     Component: BlogPage ,
     path: '/blogs',
@@ -444,10 +444,10 @@ const staticSiteRoutes = [
   },
   {
     Component: VolunteerJob ,
-    path: '/join-our-team/program-id',
+    path: '/join-our-team/:id',
     exact: true,
     id: 'statisSiteUnderVolunteerJob',
-    routePath: '/join-our-team/program-id',
+    routePath: '/join-our-team/:id',
     name: 'VolunteerJob',
   }
   
