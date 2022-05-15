@@ -70,8 +70,9 @@
 }
 
 .donate-button-new {
-  padding: 20px 50px 20px 50px;
+  padding: 20px 40px;
   border: none;
+  font-size:  2rem;
   background: #cc4625;
   color: #ffffff;
   display: block;
@@ -81,7 +82,7 @@
 }
 
 .brahma-container {
-  & :nth-child(even) {
+  & :nth-child(odd) {
     .content-container {
       flex-direction: row-reverse;
     }

@@ -32,7 +32,8 @@
             transition: all 2s;
             img{
                 width: 90%;
-                height: 600px;
+                height: 100%;
+                object-fit: cover;
                 border-radius: 50px;
             }
             h4{
@@ -283,7 +284,7 @@
 @media (max-width: 500px){
     .course-offered{
         img{
-            border-radius: 6px !important;
+            border-radius: 20px !important;
         }
     }
 }

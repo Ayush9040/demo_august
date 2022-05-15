@@ -32,7 +32,7 @@ const SeminarCard = ({ title, bgImage, desc }) => {
         </h2>
         <p>{textTitle}</p>
         <div className="options">
-          <button>View Story</button>
+          <button>View Details</button>
           <div className="share-icon">{share1}</div>
         </div>
       </div>
