@@ -9,6 +9,7 @@ import BlogCard from './BlogCard'
 import './style.scss'
 import { Link } from 'react-router-dom'
 import { blogData } from './blogData'
+import { allBlogData } from '../../utils/blogData'
 
 const Blog = () => {
   let settings = {
@@ -57,7 +58,7 @@ const Blog = () => {
         </div>
         <div className="blog-carousel">
           <Slider {...settings}>
-            {blogData.map((blogs) => (
+            {allBlogData.map((blogs) => (
               <div key={blog.title}>
                 <BlogCard blogs={blogs} />
               </div>

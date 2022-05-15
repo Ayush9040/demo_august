@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import './style.scss'
 import { share1 } from '../../assets/icons/icon'
 
-const SeminarCard = ({ title, bgImage, desc }) => {
+const SeminarCard = ({ title, bgImage, desc, url='' }) => {
   let description = desc
     ? desc
     : `Lorem ipsum dolor sit amet, consectetur adipiscing
@@ -22,18 +23,20 @@ const SeminarCard = ({ title, bgImage, desc }) => {
   })
   return (
     <div className={'seminar-card'}>
-      <div className="seminar-card-image">
+      <div className='seminar-card-image'>
         <img src={bgImage} />
       </div>
-      <div className="seminar-card-content">
+      <div className='seminar-card-content'>
         <h2>
-          <span className="seminar-title">{title}</span>
-          <span className="seminar-date">01/01/2022</span>
+          <span className='seminar-title'>{title}</span>
+          <span className='seminar-date'>01/01/2022</span>
         </h2>
         <p>{textTitle}</p>
-        <div className="options">
-          <button>View Story</button>
-          <div className="share-icon">{share1}</div>
+        <div className='options'>
+          <Link to={url}>
+            <button>View Story</button>
+          </Link>
+          <div className='share-icon'>{share1}</div>
         </div>
       </div>
     </div>

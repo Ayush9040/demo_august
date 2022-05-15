@@ -395,10 +395,10 @@ const staticSiteRoutes = [
   },
   {
     Component: BlogAnother ,
-    path: '/blogs/blog-name',
+    path: '/blogs/:blogId',
     exact: true,
     id: 'statisSiteUnderBlog',
-    routePath: '/blogs/blog-name',
+    routePath: '/blogs/:blogId',
     name: 'Blog',
 
   },
