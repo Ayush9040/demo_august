@@ -63,7 +63,7 @@ export const homeAssets = {
   homeAsset55: '/Home/Experience/shriramnathkovid.png',
   homeAsset56: '/Home/Experience/Modiji.jpg',
   homeAsset57: '/Home/Experience/Naiduji.jpg',
-  homeAsset58: '/Home/Experience/Amitabh-Bachchan.jpg',
+  homeAsset58: '/Home/Experience/AmitabhBachchan.jpg',
 
   // blogs
 
