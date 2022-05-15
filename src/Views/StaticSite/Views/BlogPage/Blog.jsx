@@ -17,6 +17,7 @@ const BlogAnother = () => {
   const { blogId } = useParams()
   const [pageData, setPageData] = useState({})
   useEffect(() => {
+    window.scrollTo(0,0)
     setPageData(allBlogData.find((item) => blogId === item.id))
   }, [])
 

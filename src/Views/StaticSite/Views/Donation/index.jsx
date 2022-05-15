@@ -3,7 +3,7 @@ import CommonBanner from '../../Components/Common-banner'
 import './style.scss'
 import './style.scss'
 import SectionComponent from '../../Components/SectionComponent'
-import baseDomain,{ donationAssets } from '../../assets/images/imageAsset'
+import baseDomain, { donationAssets } from '../../assets/images/imageAsset'
 const AnnamBramha = () => {
   // const pageData = [
   //   {
@@ -50,10 +50,13 @@ const AnnamBramha = () => {
           isLeftContent={false}
           Logo={false}
           Navigation={true}
-          PageType='gifting'
+          PageType='donation'
           Heading='Donation'
           isOnlyBanner={false}
           innerNav={false}
+          description={
+            'Come join us in spreading a health and well –being and social revolution through yoga.  Let’s be part of the change towards balanced, calm and content lives in particular and society in general. The Institute subscribes to Yoga not simple as a set of theoretical principles but as a way of life focused on healthy living, active living and spiritual well-being for all. Become a part of The Yoga Institute’s 100 year old legacy of Yoga in the service of humanity. Connect with our endeavors to reduce hunger, increase access and empower lives. Let Yoga be a matter of right for everyone. Join us now.'
+          }
         />
         <SectionComponent
           url='/donation/annam-brahma'

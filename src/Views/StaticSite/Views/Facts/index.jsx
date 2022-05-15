@@ -25,7 +25,7 @@ const OurFacts = () => {
   return (
     <>
       <CommonBannerNavPrimary />
-      <div className='ourfacts-container global-padding flex'>
+      <div className='ourfacts-container flex'>
         <div className='ourfacts-header'>
           <div className='ourfacts-header-text'>
             <Heading smallText={'The Yoga Institute Facts'} />
