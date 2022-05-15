@@ -16,7 +16,7 @@ const VideosSection = () => {
           <Heading logo={videos} smallText={'Featured'} largeText={'Videos'} />
           <div className="videos-description">
             <p>
-              a magnificent collection of Dr. Hansaji Yogendra’s wisdom, all in
+              A magnificent collection of Dr. Hansaji Yogendra’s wisdom, all in
               one place
             </p>
           </div>

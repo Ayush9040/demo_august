@@ -3,7 +3,7 @@ import CommonBanner from '../../Components/Common-banner'
 import benefits from '../../assets/images/benifits.png'
 import './styles.scss'
 import CareerCard from '../../Components/CommonCareerCard'
-import baseDomain, { volunteerAssets } from '../../assets/images/imageAsset'
+// import baseDomain, { volunteerAssets } from '../../assets/images/imageAsset'
 import { volunteerData } from '../../utils/volunteerData'
 
 const Volunteer = () => {

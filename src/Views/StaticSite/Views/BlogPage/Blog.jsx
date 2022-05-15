@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import CommonBannerNav from '../../Components/CommonBannerNav'
-import baseDomain, { alumniAssets } from '../../assets/images/imageAsset'
+// import baseDomain, { alumniAssets } from '../../assets/images/imageAsset'
 import './style.scss'
 import Heading from '../../Components/Heading'
 import BlogGallery from '../../Components/BlogGallery'

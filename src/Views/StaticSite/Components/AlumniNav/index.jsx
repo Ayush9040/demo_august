@@ -1,14 +1,11 @@
 import React, { useState } from 'react'
 import MegaMenu from '../MegaMenu'
 import {
-  CommonHamburger1,
   CommonHamburger,
   Hamburger,
-  CommonUser1,
   CommonUser,
   User,
   legacy1,
-  MainLogo1,
   MainLogo,
 } from '../../assets/icons/icon'
 import './styles.scss'

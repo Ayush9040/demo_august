@@ -8,7 +8,7 @@ import CommonBtn from '../commonbtn'
 import BlogCard from './BlogCard'
 import './style.scss'
 import { Link } from 'react-router-dom'
-import { blogData } from './blogData'
+// import { blogData } from './blogData'
 import { allBlogData } from '../../utils/blogData'
 
 const Blog = () => {

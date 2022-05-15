@@ -488,6 +488,9 @@ export const donationAssets = {
 
   // underprivileged
   underprivilegedAssets: '/Donation/BMC-school/bmc-7.jpg',
+
+  //transgender
+  transgender: '/Donation/transgender/transgender-cover.jpg',
 }
 //  gifting
 

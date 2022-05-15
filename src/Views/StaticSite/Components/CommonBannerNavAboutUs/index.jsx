@@ -20,7 +20,7 @@ const CommonBannerNavAboutUs = ({ innerNav }) => {
             <Link to="/">{MainLogo}</Link>
           </div>
           {innerNav && (
-            <div className="career-navigation-sm">
+            <div className="career-navigation-sm about-nav">
               <ul>
                 <Link to="/about">
                   <li
@@ -58,7 +58,7 @@ const CommonBannerNavAboutUs = ({ innerNav }) => {
           </Link>
         </div>
         {innerNav && (
-          <div className="career-navigation-lg">
+          <div className="career-navigation-lg about-nav">
             <ul>
               <Link to="/about">
                 <li

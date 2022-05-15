@@ -7,7 +7,7 @@ import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import CommonGrid from '../GalleryGrid'
 import Location from './Location'
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 import CommonBtn from '../commonbtn'
 const Museum = () => {
   const intro =

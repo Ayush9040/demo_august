@@ -3,11 +3,11 @@ import './style.scss'
 import MediaSection from '../../Components/MediaSection'
 import MediaNav from '../../Components/MediaNav'
 import GridComponent from '../../Components/GridComponent'
-import { FondationDayGridComponent } from '../../Components/GridComponent'
+// import { FondationDayGridComponent } from '../../Components/GridComponent'
 import CommonBtn from '../../Components/commonbtn'
 import Carousel from 'react-gallery-carousel'
 import 'react-gallery-carousel/dist/index.css'
-import { harmonyImagesData } from '../../assets/images/media/mediaAsset'
+// import { harmonyImagesData } from '../../assets/images/media/mediaAsset'
 import { mediaData } from '../../utils/mediaData'
 
 const MediaGallery = () => {

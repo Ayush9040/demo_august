@@ -17,6 +17,7 @@ const AboutUs = () => {
           Heading='Overview'
           isOnlyBanner={false}
           innerNav={true}
+          description='We are the oldest organized Yoga center in the world. Our legacy of over 100 years, which was started by Shri Yogendra Ji in 1918, is carried forward to this day. The Yoga Institute has incorporated the essence of all classical and traditional systems like Karma Yoga, Bhakti Yoga, Hatha Yoga, Mantra Yoga, Laya Yoga etc., so that people get the benefits of all of these rather than just one. Our beloved and esteemed Director, Dr. Hansaji Yogendra, spearheads the efforts of the Institute in her unique and powerful way. Hansama has touched the lives of millions through her graceful and simplistic teachings.'
         />
       </div>
       <div className='content-container pd-career'>

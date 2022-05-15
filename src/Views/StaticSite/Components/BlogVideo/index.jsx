@@ -1,6 +1,6 @@
 import React from 'react'
 
-const BlogVideo = ({ width,height,url }) => {
+const BlogVideo = ({ url }) => {
   return (
     <div className='blog-video'>
       <iframe

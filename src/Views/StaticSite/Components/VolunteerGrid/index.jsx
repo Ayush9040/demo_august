@@ -1,11 +1,11 @@
 import React from 'react'
-import {
-  Accordion,
-  AccordionItem,
-  AccordionItemHeading,
-  AccordionItemButton,
-  AccordionItemPanel,
-} from 'react-accessible-accordion'
+// import {
+//   Accordion,
+//   AccordionItem,
+//   AccordionItemHeading,
+//   AccordionItemButton,
+//   AccordionItemPanel,
+// } from 'react-accessible-accordion'
 import baseDomain, { alumniAssets } from '../../assets/images/imageAsset'
 import Heading from '../Heading'
 import './style.scss'
