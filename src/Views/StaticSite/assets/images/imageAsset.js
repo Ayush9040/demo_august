@@ -97,8 +97,8 @@ export const courseAssets = {
 }
 
 export const facilitiyAssets = {
-  facilitiyAssets2: '/Facilities/Conference Room/conferenceroom.jpg',
   facilitiyAssets1: '/Facilities/Hostels/hostel.jpg',
+  facilitiyAssets2: '/Facilities/Conference Room/conferenceroom.jpg',
   facilitiyAssets3: '/Facilities/Library/library_.jpg',
   facilitiyAssets4: '/Facilities/Book%20Store/bookstore_.jpg',
   facilitiyAssets5: '/Facilities/Yogic%20Halls/yogahalls.jpg',
