@@ -35,6 +35,7 @@ const MediaGallery = () => {
           description={
             '“World Harmony Begins Within” Glimpses of The Yoga Institute\'s most exciting and social event ‘Harmony Fest’, held to commemorate 100 years of transforming lives. The event was graced by the president of India, Shri Ram Nath Kovind. The chief guest and other personnel shared their insightful thoughts with the massive audiences who attended the event, spreading a wave of encouragement and optimism.'
           }
+          image={mediaData?.[0]?.images?.[0]}
         />
       </div>
       {mediaData?.map((item) => {

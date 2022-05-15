@@ -218,6 +218,35 @@ export const mediaAssets={
   mediaAsset13:'/Media/gallery/99FoundationDay/img4.jpg',
   mediaAsset14:'/Media/gallery/99FoundationDay/img5.jpg',
 
+  //101foundation day
+  mediaAssets15:'/Media/gallery/foundationday-101/f101_1.JPG',
+  mediaAssets16:'/Media/gallery/foundationday-101/f101_2.JPG',
+  mediaAssets17:'/Media/gallery/foundationday-101/f101_3.JPG',
+  mediaAssets18:'/Media/gallery/foundationday-101/f101_4.JPG',
+  mediaAssets19:'/Media/gallery/foundationday-101/f101_5.JPG',
+  mediaAssets20:'/Media/gallery/foundationday-101/f101_6.JPG',
+  mediaAssets21:'/Media/gallery/foundationday-101/f101_7.JPG',
+  mediaAssets22:'/Media/gallery/foundationday-101/f101_8.JPG',
+  mediaAssets23:'/Media/gallery/foundationday-101/f101_9.JPG',
+  mediaAssets24:'/Media/gallery/foundationday-101/f101_10.JPG',
+
+  //gff-2018
+  mediaAsset25:'/Media/gallery/gff-2018/gff_1.JPG',
+  mediaAsset26:'/Media/gallery/gff-2018/gff_2.JPG',
+  mediaAsset27:'/Media/gallery/gff-2018/gff_3.JPG',
+  mediaAsset28:'/Media/gallery/gff-2018/gff_4.JPG',
+  mediaAsset29:'/Media/gallery/gff-2018/gff_5.JPG',
+
+  //98th foundation day
+  mediaAsset30:'/Media/gallery/foundation-98/f98_1.jpg',
+  mediaAsset31:'/Media/gallery/foundation-98/f98_2.jpg',
+  mediaAsset32:'/Media/gallery/foundation-98/f98_3.jpg',
+  mediaAsset33:'/Media/gallery/foundation-98/f98_4.jpg',
+  mediaAsset34:'/Media/gallery/foundation-98/f98_5.jpg',
+  mediaAsset35:'/Media/gallery/foundation-98/f98_6.jpg',
+  mediaAsset36:'/Media/gallery/foundation-98/f98_7.jpg',
+  mediaAsset37:'/Media/gallery/foundation-98/f98_8.jpg'
+
   // news
 
  

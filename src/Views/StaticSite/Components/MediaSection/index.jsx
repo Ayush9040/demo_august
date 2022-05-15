@@ -11,6 +11,7 @@ const MediaSection = ({
   upcomingEvents = true,
   description,
   title,
+  image
 }) => {
   return (
     <div className="common-media-section">
@@ -36,7 +37,7 @@ const MediaSection = ({
         </div>
         <div className="newsletter-image">
           <h3>{subHeading}</h3>
-          <img className="seminar-iamge" src={baseDomain + mediaAssets.seminarImg} />
+          <img className="seminar-iamge" src={image ?image :baseDomain + mediaAssets.seminarImg} />
         </div>
       </div>
       {upcomingEvents && (
