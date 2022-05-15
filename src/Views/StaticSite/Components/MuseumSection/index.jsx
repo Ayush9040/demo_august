@@ -44,9 +44,9 @@ const Museum = () => {
                     Want to see what the Shri Yogendra Museum looks like from
                     the inside? Here’s your chance to take on a virtual tour;
                   </p>
-                  <Link to="https://artsandculture.google.com/story/QgVhfXAZr-CxIA">
+                  <a href="https://artsandculture.google.com/story/QgVhfXAZr-CxIA" target='_blank' rel="noreferrer" >
                     <CommonBtn text={'Take a virtual tour'} />
-                  </Link>
+                  </a>
                 </div>
                 <div className="museum-card-image" ></div>
               </div>
