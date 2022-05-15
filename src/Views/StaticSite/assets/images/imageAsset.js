@@ -63,7 +63,7 @@ export const homeAssets = {
   homeAsset55: '/Home/Experience/shriramnathkovid.png',
   homeAsset56: '/Home/Experience/Modiji.jpg',
   homeAsset57: '/Home/Experience/Naiduji.jpg',
-  homeAsset58: '/Home/Experience/Amitabh-Bachchan.jpg',
+  homeAsset58: '/Home/Experience/AmitabhBachchan.jpg',
 
   // blogs
 
@@ -199,6 +199,7 @@ export const mediaAssets={
   igCeremony:'/Media/gallery/igceremony.jpg',
 
   // harmony-sec
+  mediaAssetsHero:'Media/gallery/99FoundationDay/Hero image .jpg',
   mediaAsset1:'/Media/gallery/harmony/image1.jpg',
   mediaAsset2:'/Media/gallery/harmony/image2.jpg',
   mediaAsset3:'/Media/gallery/harmony/image3.jpg',

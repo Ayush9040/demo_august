@@ -1,40 +1,53 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import CommonBannerNavPrimary from '../../Components/CommonBannerNavPrimary'
 import VolunteerGrid from '../../Components/VolunteerGrid'
-// import CommonBannerNavPrimary from '../CommonBannerNavPrimary'
-// import './style.scss'
-// import Amitabh from '../../../assets/images/Amitabh-Bachchan.jpg';
 import { Volunteer } from '../../utils/JobDetails'
+import { volunteerData } from '../../utils/volunteerData'
+import { useParams } from 'react-router-dom'
+import FAQ from '../../Components/Faq'
 
 const VolunteerJob = () => {
+  const { id } = useParams()
+  const [program, setProgram] = useState({})
+  useEffect(() => {
+    setProgram(volunteerData.find((item) => id === item.id))
+  }, [])
+
+  console.log(
+    'data',
+    volunteerData.find((item) => id === item.id)
+  )
+
   return (
-    <div className="single-job">
+    <div className='single-job'>
       <CommonBannerNavPrimary innerNav={false} /> <br />
-      <div className="job-details">
-        <div className="job-description">
-          <div className="job-img">
-            <img src={Volunteer.jobThumbnail} alt={'title'} />
+      <div className='job-details'>
+        <div className='job-description'>
+          <div className='job-img'>
+            <img src={program?.image} alt={'title'} />
           </div>
-          <div className="job-info">
+          <div className='job-info'>
             <h1>
-              {Volunteer.jobTitle}
-              <div className="bottom-line"></div>
+              {program?.name}
+              <div className='bottom-line'></div>
             </h1>
-            <p>{Volunteer.jobDescription}</p>
+            <p>{program?.description}</p>
           </div>
         </div>
-        <div className="job-application">
-          <div className="job-requirements">
+        <div className='job-application'>
+          <div className='job-requirements'>
             <ul>
-              {Volunteer.jobRequirements.map((item, i) => (
-                <li key={i}>
-                  <span>Requirement:</span>
-                  {item}
-                </li>
-              ))}
+              {program?.reqirements?.map((item, i) => {
+                return (
+                  <li key={i}>
+                    <span>Requirement:</span>
+                    {item}
+                  </li>
+                )
+              })}
             </ul>
           </div>
-          <div className="job-form">
+          <div className='job-form'>
             <form>
               <fieldset>
                 <input type={'text'} placeholder={'Name'} />
@@ -42,24 +55,24 @@ const VolunteerJob = () => {
               <fieldset>
                 <input type={'email'} placeholder={'Email'} />
               </fieldset>
-              <div className="uploads">
+              <div className='uploads'>
                 <fieldset>
-                  <label htmlFor="image">
+                  <label htmlFor='image'>
                     Upload Image
                     <input
                       type={'image'}
-                      id="image"
-                      placeholder="Upload Image"
+                      id='image'
+                      placeholder='Upload Image'
                     />
                   </label>
                 </fieldset>
                 <fieldset>
-                  <label htmlFor="resume">
+                  <label htmlFor='resume'>
                     Upload Resume
                     <input
                       type={'file'}
-                      id="resume"
-                      placeholder="Upload Resume"
+                      id='resume'
+                      placeholder='Upload Resume'
                     />
                   </label>
                   <br />
@@ -67,13 +80,14 @@ const VolunteerJob = () => {
                 </fieldset>
               </div>
               <fieldset>
-                <input id="apply" type={'submit'} />
+                <input id='apply' type={'submit'} />
               </fieldset>
             </form>
           </div>
         </div>
       </div>
-      <VolunteerGrid/>
+      <VolunteerGrid />
+      <FAQ questions={program?.faq} />
     </div>
   )
 }
