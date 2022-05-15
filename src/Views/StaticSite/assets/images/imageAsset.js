@@ -466,6 +466,8 @@ export const museumAssets = {
 }
 //  Donation
 export const donationAssets = {
+  // background
+  donationAsset1:'/Donation/background/background-donation.jpg',
   // annam-brahma
   annamAssets: '/Donation/Annam-brahma/Annam-Brahma-1.jpg',
 

@@ -84,7 +84,7 @@ const Facilities = () => {
               slider.current.slickGoTo(4, false)
             }}
           >
-            <span className={activeSlide === 4 && 'active'}>Yogic Halls</span>
+            <span className={activeSlide === 4 && 'active'}>Yoga Halls</span>
           </li>
 
           <li
@@ -100,7 +100,7 @@ const Facilities = () => {
             }}
           >
             <span className={activeSlide === 6 && 'active'}>
-              Dining Hall – Naivedyam
+              Dining Hall
             </span>
           </li>
           <li

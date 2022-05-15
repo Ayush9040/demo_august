@@ -35,7 +35,7 @@ const CommonBanner = ({
             </div>
             {description
               ? description
-              : 'The Yoga Institute campus is filled with spiritual energy, power and positive vibrations developed over 103 years of goodness and positivity. Being in the Institute campus is enough to purify your aura and calm your mind. The energies of legendary yogis Shri Yogendraji and Dr. Sahab permeate the senses. Every element here is full of this vibrant energy. Over the years, many yogis and rishis have visited the Institute and added their own spiritual aura. Whoever visits The Yoga Institute, benefits in a special spiritual way. They feel a deep connect with the energy of this place. The campus has positive energies which positively impacts the brain waves. This is a place of silence, positivity and spiritual vibrations which are strong enough to cleanse your aura and stabilize your mind. Every element of The Yoga Institute campus radiates mystical vibrations which can permeate deep into yourself.'}
+              : 'Celebrate the Joy of Giving and bring smiles and happiness to the lives of others. The Yoga Institute’s gifting initiative enables you to support the ones you love with the gift of wisdom, a new career, or the invaluable gift of health and wellness. To uplift and cheer your loved ones, choose from a variety of courses, camps, books, and other options. Gift now!'}
           </div>
         </div>
       </div>

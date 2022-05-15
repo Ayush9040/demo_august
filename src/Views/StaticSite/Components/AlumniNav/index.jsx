@@ -3,8 +3,11 @@ import MegaMenu from '../MegaMenu'
 import {
   CommonHamburger1,
   CommonHamburger,
+  Hamburger,
   CommonUser1,
   CommonUser,
+  User,
+  legacy1,
   MainLogo1,
   MainLogo,
 } from '../../assets/icons/icon'
@@ -18,14 +21,13 @@ const AlumiNav = ({ title }) => {
       <div className="alumni-nav-container">
         <div className="mega-nav">
           <div className="hamburger" onClick={() => setNav(!nav)}>
-            {title === 'Support' ? CommonHamburger : CommonHamburger1}
+            {title === 'Support' ? CommonHamburger : Hamburger}
           </div>
           <div className="main-logo">
-            <Link to="/">{title === 'Support' ? MainLogo : MainLogo1}</Link>
+            <Link to="/">{title === 'Support' ? MainLogo : legacy1}</Link>
           </div>
           <div className={`career-navigation-sm ${title}`}>
             <ul>
-        
               <Link to="/alumni">
                 <li className={title === 'Seminar' ? 'nav-active' : ''}>
                   Upcoming Events
@@ -53,7 +55,7 @@ const AlumiNav = ({ title }) => {
           </div>
           <div className="user-container">
             <Link to="/sign-in">
-              {title === 'Support' ? CommonUser : CommonUser1}
+              {title === 'Support' ? CommonUser : User}
             </Link>
           </div>
         </div>

@@ -28,7 +28,7 @@ const Seminar = () => {
           </div>
         </div>
         <div className="newsletter-image">
-          <h3>Upcoming Seminars</h3>
+        
           <img
             className="seminar-iamge"
             alt="Upcoming Seminar"
