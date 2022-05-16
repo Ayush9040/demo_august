@@ -3,10 +3,9 @@ name: Deployment
 on:
  issues:
    types: [opened]
- push:
    branches:
-     - '*'
-
+     - static-staging
+     - main
 jobs:
   prod-check:
     if: ${{ github.event.issue.title == 'deploy staging' &&  github.ref == 'refs/heads/static-staging' }}
