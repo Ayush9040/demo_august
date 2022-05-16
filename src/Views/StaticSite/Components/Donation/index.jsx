@@ -5,7 +5,7 @@ import { experience } from '../../assets/icons/icon'
 const Donation = ({ supportText, page }) => {
   return (
     <>
-      <div className='donation-container global-padding'>
+      <div className='donation-container-1 global-padding'>
         <div className='donation-buttons'>
           <div className='input-box'>
             <h1>{supportText}</h1>
