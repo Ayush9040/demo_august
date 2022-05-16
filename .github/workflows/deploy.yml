@@ -1,0 +1,31 @@
+name: Deployment
+
+on:
+ issues:
+   types: [opened]
+
+jobs:
+  prod-check:
+    if: ${{ github.event.issue.title == 'deploy staging' &&  github.ref == 'refs/heads/static-staging' }}
+    runs-on: ubuntu-latest
+    steps:  
+    - uses: actions/checkout@v3
+    - name: Use Node.js 14.18.1
+      uses: actions/setup-node@v3
+      with:
+        node-version: 14.18.1
+        cache: 'npm'
+        cache-dependency-path: './package.json'
+    - run: yarn
+    - run: yarn run build 
+    
+    - name: parent working directory
+      run: pwd
+    
+    - if: startsWith(github.event.issue.title, 'deploy statging') != 'true'
+      name: Close Issue
+      uses: peter-evans/close-issue@v2
+      with:
+        comment: |
+          Issue title must start with 'deploy staging'.
+          Auto-closing this issue.
