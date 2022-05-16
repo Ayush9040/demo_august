@@ -1,7 +1,9 @@
+// c200Hr, c500Hr, c900Hr, camp, mostPopular, classes
 export const c200h = {
   '1':{ 
     // add cource image
     // add any other images also
+    key: 'c200Hr',
     id: '1',
     name: '200 Hours TTC–Online–English',
     deatils: 'With over 1,00,000 successfully certified students, the 200 Hours Teacher Training Course at The Yoga Institute covers the nuances of Traditional Yoga. This includes an introduction to the study of principal Yoga Asanas, Pranayamas, Meditation, Kriyas, Patanjali’s Yoga Sutra, and Hatha Yoga Pradipika. Further, complete immersion into practical experiences of the concept studies, public speaking, the methodology of teaching, etc. are covered. Strategically designed by the founder Shri Yogendraji, Smt. Sita Devi Yogendra, Dr. Jayadeva Yogendra, and Dr. Hansaji J Yogendra, the course serves as a valuable ‘life school’ to those seeking balance and fulfilment in life.',
@@ -65,5 +67,5 @@ export const c200h = {
         'This one-of-a-kind experience will groom you to calmly and mindfully handle people and situations',
       ]
     }
-  }
+  }, 
 }

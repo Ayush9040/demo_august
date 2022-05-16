@@ -47,6 +47,7 @@ import SignIn from '../Views/SignIn/index.jsx'
 import Careers from '../Views/Careers/index.jsx'
 import SingleJob from '../Components/SingleJobPage/index.jsx'
 import VolunteerJob from '../Views/Joinourteam/volunteerJob.jsx'
+import BrowseCourses from '../Components/BrowseCourses/index.jsx'
 
 const staticSiteRoutes = [
   {
@@ -71,6 +72,14 @@ const staticSiteRoutes = [
     exact: true,
     id: 'statisSiteCourses',
     routePath: '/courses',
+    name: 'Courses',
+  },
+  {
+    Component: BrowseCourses,
+    path: '/courses/:type',
+    exact: true,
+    id: 'statisSiteCourses',
+    routePath: '/courses/:type',
     name: 'Courses',
   },
   {
@@ -449,7 +458,10 @@ const staticSiteRoutes = [
     id: 'statisSiteUnderVolunteerJob',
     routePath: '/join-our-team/:id',
     name: 'VolunteerJob',
-  }  
+  },
+  {
+    path:'/courses/:type'
+  } 
 ]
 
 export default staticSiteRoutes

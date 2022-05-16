@@ -11,6 +11,7 @@ import {
   AccordionItemPanel,
 } from 'react-accessible-accordion'
 import CommonBtn from '../commonbtn'
+import { Link } from 'react-router-dom'
 
 const CourseSection = ({ title, showRangeSlider, color, cardData }) => {
   const [customVal, setCustomVal] = useState(0)
@@ -29,17 +30,27 @@ const CourseSection = ({ title, showRangeSlider, color, cardData }) => {
             <AccordionItemPanel>
               <h4>
                 <ul>
-                  <li>Two Months Training Course - On Campus</li>
-                  <li>
-                      Weekend Training Course - 3 Months / Online - English
-                  </li>
-                  <li>One Month Training Course - Online / On Campus</li>
-                  <li>
-                      Two Month Training Course - Part Time/ Online - Hindi
-                  </li>
-                  <li>
-                      Teacher Training Course - Part Time/ Online- English
-                  </li>
+                  <Link to='/courses/2-month'>
+                    <li>Two Months Training Course - On Campus</li>
+                  </Link>
+                  <Link to='/courses/3-months'>
+                    <li>
+                        Weekend Training Course - 3 Months / Online - English
+                    </li>
+                  </Link>
+                  <Link to='/courses/1-month'>
+                    <li>One Month Training Course - Online / On Campus</li>
+                  </Link>
+                  <Link to='/courses/2-month'>
+                    <li>
+                        Two Month Training Course - Part Time/ Online - Hindi
+                    </li>
+                  </Link>
+                  <Link to='/courses/ttc'>
+                    <li>
+                        Teacher Training Course - Part Time/ Online- English
+                    </li>
+                  </Link>
                 </ul>
               </h4>
             </AccordionItemPanel>
@@ -69,7 +80,7 @@ const CourseSection = ({ title, showRangeSlider, color, cardData }) => {
       )
     case 'Camps & Workshops':
       return (
-        <div className="course-list-content">
+        <div className='course-list-content'>
           <h4>
             <ul>
               <li>Stress Management Camp</li>
@@ -87,7 +98,7 @@ const CourseSection = ({ title, showRangeSlider, color, cardData }) => {
       )
     case 'Most Popular':
       return (
-        <div className="course-list-content">
+        <div className='course-list-content'>
           <p>
               Lorem Ipsum is simply dummy text of the printing and typesetting
               ndustry.
@@ -97,7 +108,7 @@ const CourseSection = ({ title, showRangeSlider, color, cardData }) => {
       )
     case 'Classes':
       return (
-        <div className="course-list-content">
+        <div className='course-list-content'>
           <p>
               Lorem Ipsum is simply dummy text of the printing and typesetting
               ndustry.
@@ -109,29 +120,29 @@ const CourseSection = ({ title, showRangeSlider, color, cardData }) => {
   }
 
   return (
-    <div className="course-section">
-      <div className="course-list">
-        <div className="course-title">
+    <div className='course-section'>
+      <div className='course-list'>
+        <div className='course-title'>
           <h1>{title}</h1>
           {(title === 'Most Popular' || title === 'Classes') && (
-            <div className="concave-border"></div>
+            <div className='concave-border'></div>
           )}
         </div>
         {content()}
       </div>
       {showRangeSlider === true && (
-        <div className="vertical-scrollbar">
+        <div className='vertical-scrollbar'>
           <Slider
             min={1}
             max={5}
-            orientation="vertical"
+            orientation='vertical'
             value={customVal}
             onChange={(value) => setCustomVal(value)}
             reverse={true}
           />
         </div>
       )}
-      <div className="course-cards">
+      <div className='course-cards'>
         {cardData.map((item, i) => {
           return (
             <CourseCard
