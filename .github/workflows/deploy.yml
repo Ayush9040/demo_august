@@ -22,7 +22,7 @@ jobs:
     - name: parent working directory
       run: pwd
     
-    - if: startsWith(github.event.issue.title, 'deploy statging') != 'true'
+    - if: startsWith(github.event.issue.title, 'deploy staging') != 'true'
       name: Close Issue
       uses: peter-evans/close-issue@v2
       with:
