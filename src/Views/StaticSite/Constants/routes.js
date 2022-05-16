@@ -449,8 +449,7 @@ const staticSiteRoutes = [
     id: 'statisSiteUnderVolunteerJob',
     routePath: '/join-our-team/:id',
     name: 'VolunteerJob',
-  }
-  
+  }  
 ]
 
 export default staticSiteRoutes

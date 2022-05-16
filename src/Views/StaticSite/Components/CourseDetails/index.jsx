@@ -3,8 +3,12 @@ import './style.scss'
 import { star, global, network, chat } from '../../assets/icons/icon'
 import CommonBtn from '../commonbtn'
 import baseDomain,{ courseAssets } from '../../assets/images/imageAsset'
-const CourseDetails = ({ name, description }) => {
+const CourseDetails = ({ name: nameProp, description, pageDate }) => {
   const [detail, setDetail] = useState(1)
+
+  const { name, deatils, benefits, duration, date, timings, fees, prerequisites, curriculum, unique } = pageDate
+
+  console.log(unique, pageDate)
 
   let options = ['Program Details', 'Curriculam','Teaching & Certification', 'Our Unique Offerings','Registration', 'FAQ']
 
@@ -37,10 +41,15 @@ const CourseDetails = ({ name, description }) => {
     <div className="course-detail-page">
       <div className="main-section" style={{ background: '#C9705F' }}>
         <div className="course-info">
-          <p>Browse &gt; Teacher Training Courses</p>
+          {/* <p>Browse &gt; Teacher Training Courses</p> */}
           <h1>
             {name ? (
-              name
+              <span>
+                {name}
+                <br />{duration}
+                <br />
+                {date}
+              </span>
             ) : (
               <span>
                 500 Hour
@@ -51,8 +60,8 @@ const CourseDetails = ({ name, description }) => {
             )}
           </h1>
           <p>
-            {description
-              ? description
+            {timings
+              ? timings
               : 'Lorem Ipsum is simply dummy text of the printing and typesetting Industry.'}
           </p>
           <div className="ratings">
@@ -87,17 +96,7 @@ const CourseDetails = ({ name, description }) => {
           {detail === 1 && (
             <div className="course-about">
               <div>
-                With over 1,00,000 successfully certified students, the 200
-                Hours Teacher Training Course at The Yoga Institute covers the
-                nuances of Traditional Yoga. This includes an introduction to
-                the study of principal Yoga Asanas, Pranayamas, Meditation,
-                Kriyas, Patanjali’s Yoga Sutra, and Hatha Yoga Pradipika.
-                Further, complete immersion into practical experiences of the
-                concept studies, public speaking, the methodology of teaching,
-                etc. are covered. Strategically designed by the founder Shri
-                Yogendraji, Smt. Sita Devi Yogendra, Dr. Jayadeva Yogendra, and
-                Dr. Hansaji J Yogendra, the course serves as a valuable ‘life
-                school’ to those seeking balance and fulfilment in life.
+                {deatils}
               </div>
               <div>
                 <ul>
@@ -117,19 +116,17 @@ const CourseDetails = ({ name, description }) => {
           {detail === 2 && (
             <div className="course-benefits">
               <div>
-                <ul>
-                  <li>
-                    You will learn the tools to master your physical, mental and
-                    spiritual well-being. You will see a marked improvement in
-                    your life, relationships and work.
-                  </li>
-                  <li>
-                    A new career avenue opens up for you where you can pass on
-                    the knowledge to others and facilitate their wellness
-                    journeys. The art of Yoga is something you can teach
-                    anywhere, no matter where you are.
-                  </li>
-                </ul>
+                <p>{curriculum?.description}</p>
+                {curriculum?.points?.map(({ title, points }) => (
+                  <>
+                    <h4>{title}</h4>
+                    <ul>
+                      {points?.map((itm) => (
+                        <li key={itm}>{itm}</li>
+                      ))}
+                    </ul>
+                  </>
+                ))}
               </div>
               <div>
                 <img src={baseDomain+courseAssets.courseAsset4} />
@@ -344,17 +341,9 @@ const CourseDetails = ({ name, description }) => {
           <div className='our-offerings'>
             <h2>Our Unique Offerings</h2>
             <ul>
-              <li>You will have an opportunity to directly interact with spiritual Guru Dr. Hansaji Yogendra. She is available to attend to your queries and give counsel.   
-              </li>
-              <li>Our expert trainers for the course, over 40 in number, have mastered the yogic way of life and are proficient in passing on their learnings in a simple and practical way. Armed with decades of experience, they offer tremendous value and insight to new learners.
-              </li>
-              <li>
-              Apart from the main yoga curriculum, you will learn immensely from the class experience itself. You will meet people with diverse backgrounds and experiences that you can gain insights from. There will be sadhakas of all age groups – right from teenagers to senior citizens. Every person has had a unique experience in life and it will be enriching to know all these stories.
-              </li>
-              <li>
-              This one-of-a-kind experience will groom you to calmly and mindfully handle people and situations 
-
-              </li>
+              {unique?.points?.map(({ itm }) => (
+                <li key={itm}>{itm}</li> 
+              ))}
             </ul>
           </div>
         </div>

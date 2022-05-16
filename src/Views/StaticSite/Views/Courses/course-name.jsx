@@ -1,14 +1,20 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom' 
 import CommonBannerNavPrimary from '../../Components/CommonBannerNavPrimary'
 import CourseDetails from '../../Components/CourseDetails'
 
+import { c200h } from '../../Constants/courses/c200hr'
+
 const SingleCourse = () => {
   const { courseId } = useParams()
-  // const [pageDate, setPageData] = useState({})
+  const [pageDate, setPageData] = useState({})
+  const [isLoading, setIsLoadding] = useState(false)
+  
   
   useEffect(() =>{
-    console.log(courseId)
+    setIsLoadding(true)
+    setPageData(c200h[courseId])
+    setIsLoadding(false)
   }, [])
 
   return (
@@ -17,7 +23,7 @@ const SingleCourse = () => {
       <CommonBannerNavPrimary innerNav={false} />
       <br />
       <br />
-      <CourseDetails />
+      {!isLoading && <CourseDetails pageDate={pageDate} />}
     </div>
   )
 }
