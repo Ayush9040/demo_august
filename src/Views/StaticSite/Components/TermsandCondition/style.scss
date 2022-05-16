@@ -1,0 +1,30 @@
+.terms-container{
+  background: rgb(78, 105, 150)
+}
+.terms-and-conditions{
+  width: 90%;
+  margin: 2rem auto;
+  h2{
+    font-size: 26px;
+    font-weight: bolder;
+    margin-top: 7rem;
+
+  }
+  p{
+    font-size: 20px;
+    font-weight: 500;
+   
+  }
+}
+@media (max-width:900px){
+  .terms-and-conditions{
+    
+      h2{
+        font-size: 20px;
+      }
+      p{
+        font-size: 14px;
+      }
+    
+  }
+}

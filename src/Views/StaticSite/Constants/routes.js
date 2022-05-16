@@ -48,6 +48,9 @@ import Careers from '../Views/Careers/index.jsx'
 import SingleJob from '../Components/SingleJobPage/index.jsx'
 import VolunteerJob from '../Views/Joinourteam/volunteerJob.jsx'
 import BrowseCourses from '../Components/BrowseCourses/index.jsx'
+import TermsCondition from '../Components/TermsandCondition/index.jsx'
+import PrivacyPolicy from '../Components/PrivacyPolicy/index.jsx'
+import Affiliations from '../Components/Affiliations/index.jsx'
 
 const staticSiteRoutes = [
   {
@@ -395,7 +398,7 @@ const staticSiteRoutes = [
   //   name: 'FAQ',
   // },
   {
-    Component: BlogPage ,
+    Component: BlogPage,
     path: '/blogs',
     exact: true,
     id: 'statisSiteUnderBlogs',
@@ -403,13 +406,12 @@ const staticSiteRoutes = [
     name: 'Blogs',
   },
   {
-    Component: BlogAnother ,
+    Component: BlogAnother,
     path: '/blogs/:blogId',
     exact: true,
     id: 'statisSiteUnderBlog',
     routePath: '/blogs/:blogId',
     name: 'Blog',
-
   },
   {
     Component: OurFacts,
@@ -428,7 +430,7 @@ const staticSiteRoutes = [
     name: 'Experience',
   },
   {
-    Component: SignIn ,
+    Component: SignIn,
     path: '/sign-in',
     exact: true,
     id: 'statisSiteUnderSignIn',
@@ -436,7 +438,7 @@ const staticSiteRoutes = [
     name: 'SignIn',
   },
   {
-    Component: Careers ,
+    Component: Careers,
     path: '/careers',
     exact: true,
     id: 'statisSiteUnderCareers',
@@ -444,7 +446,7 @@ const staticSiteRoutes = [
     name: 'Careers',
   },
   {
-    Component: SingleJob ,
+    Component: SingleJob,
     path: '/careers/job-id',
     exact: true,
     id: 'statisSiteUnderSingleJob',
@@ -452,7 +454,7 @@ const staticSiteRoutes = [
     name: 'SingleJob',
   },
   {
-    Component: VolunteerJob ,
+    Component: VolunteerJob,
     path: '/join-our-team/:id',
     exact: true,
     id: 'statisSiteUnderVolunteerJob',
@@ -460,8 +462,32 @@ const staticSiteRoutes = [
     name: 'VolunteerJob',
   },
   {
-    path:'/courses/:type'
-  } 
+    path: '/courses/:type',
+  },
+  {
+    Component: TermsCondition,
+    path: '/terms&condition',
+    exact: true,
+    id: 'statisSiteUnderTermsCondition',
+    routePath: '/terms&condition',
+    name: 'TermsCondition',
+  },
+  {
+    Component: PrivacyPolicy,
+    path: '/privacy&policy',
+    exact: true,
+    id: 'statisSiteUnderPrivacyPolicy',
+    routePath: '/privacy&policy',
+    name: 'PrivacyPolicy',
+  },
+  {
+    Component: Affiliations,
+    path: '/affiliations',
+    exact: true,
+    id: 'statisSiteUnderAffiliations',
+    routePath: '/affiliations',
+    name: 'Affiliations',
+  },
 ]
 
 export default staticSiteRoutes
