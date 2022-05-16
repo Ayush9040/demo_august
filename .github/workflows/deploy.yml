@@ -3,15 +3,15 @@ name: Deployment
 on:
  issues:
    types: [opened]
-   branches:
-     - static-staging
-     - main
+   
 jobs:
   prod-check:
-    if: ${{ github.event.issue.title == 'deploy staging' &&  github.ref == 'refs/heads/static-staging' }}
+    if: ${{ github.event.issue.title == 'deploy staging' }}
     runs-on: ubuntu-latest
     steps:  
     - uses: actions/checkout@v3
+      with:
+        ref: 'static-staging'
     - name: Use Node.js 14.18.1
       uses: actions/setup-node@v3
       with:
