@@ -3,6 +3,9 @@ name: Deployment
 on:
  issues:
    types: [opened]
+ push:
+   branches:
+     - '*'
 
 jobs:
   prod-check:
