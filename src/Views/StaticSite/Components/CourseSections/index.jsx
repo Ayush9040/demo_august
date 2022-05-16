@@ -30,23 +30,23 @@ const CourseSection = ({ title, showRangeSlider, color, cardData }) => {
             <AccordionItemPanel>
               <h4>
                 <ul>
-                  <Link to='/courses/2-month'>
+                  <Link to='/courses/browse/2-month'>
                     <li>Two Months Training Course - On Campus</li>
                   </Link>
-                  <Link to='/courses/3-months'>
+                  <Link to='/courses/browse/3-months'>
                     <li>
                         Weekend Training Course - 3 Months / Online - English
                     </li>
                   </Link>
-                  <Link to='/courses/1-month'>
+                  <Link to='/courses/browse/1-month'>
                     <li>One Month Training Course - Online / On Campus</li>
                   </Link>
-                  <Link to='/courses/2-month'>
+                  <Link to='/courses/browse/2-month'>
                     <li>
                         Two Month Training Course - Part Time/ Online - Hindi
                     </li>
                   </Link>
-                  <Link to='/courses/ttc'>
+                  <Link to='/courses/browse/ttc'>
                     <li>
                         Teacher Training Course - Part Time/ Online- English
                     </li>

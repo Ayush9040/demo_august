@@ -76,10 +76,10 @@ const staticSiteRoutes = [
   },
   {
     Component: BrowseCourses,
-    path: '/courses/:type',
+    path: '/courses/browse/:type',
     exact: true,
     id: 'statisSiteCourses',
-    routePath: '/courses/:type',
+    routePath: '/courses/browse/:type',
     name: 'Courses',
   },
   {

@@ -35,6 +35,7 @@ const MegaMenu = ({ setNav }) => {
       name: 'LOCATE US',
       link: 'https://goo.gl/maps/bxH6SifrXjXAhteV7',
       id: 14,
+      key:'LOCATE'
     },
   ]
 
@@ -156,6 +157,7 @@ const MegaMenu = ({ setNav }) => {
                     href="https://goo.gl/maps/bxH6SifrXjXAhteV7"
                     target="_blank"
                     rel="noreferrer"
+                    onMouseOver={()=>{setMenuItem(item.key)}}
                   >
                     <li>
                       {item.name}
