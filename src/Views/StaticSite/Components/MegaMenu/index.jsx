@@ -7,36 +7,32 @@ const MegaMenu = ({ setNav }) => {
   const [menuItem, setMenuItem] = useState('COURSES')
 
   const navItems = [
-    { name: 'COURSES', link: '/courses', id: 1, key: 'COURSES' },
-    {
-      name: 'PUBLICATIONS',
-      link: '/publication',
-      id: 2,
-      key: 'PUBLICATIONS',
-    },
+    
     {
       name: 'ABOUT',
       link: '/about',
-      id: 3,
+      id: 1,
       key: 'ABOUT',
     },
-    { name: 'NEWS,EVENTS & MEDIA', link: '/media', id: 4, key: 'NEWS' },
-    { name: 'MUSEUM OF CLASSICAL YOGA', link: '/museum', id: 5, key: 'MUSEUM' },
-    { name: 'FACILITIES', link: '/facilities', id: 6,  key: 'FACILITIES' },
-    { name: 'SHOP', link: '/shop', id: 7, key: 'SHOP' },
-    { name: 'GIFTING', link: '/gifting', id: 8, key: 'GIFTING' },
-    { name: 'DONATION', link: '/donation', id: 9, key: 'DONATION' },
-    { name: 'NISPAND', link: '', id: 10, key: 'NISPAND' },
-    { name: 'TYI ONLINE', link: '', id: 11, key: 'ONLINE' },
+    { name: 'COURSES', link: '/courses', id: 2, key: 'COURSES' },
+    { name: 'FACILITIES', link: '/facilities', id: 3,  key: 'FACILITIES' },
+    { name: 'MUSEUM', link: '/museum', id: 4, key: 'MUSEUM' },
+    { name: 'DONATE', link: '/donation', id: 5, key: 'DONATION' },
+    { name: 'GIFTING', link: '/gifting', id: 6, key: 'GIFTING' },
+    { name: 'NISPAND', link: '', id: 7, key: 'NISPAND' },
+    { name: 'TYI ONLINE', link: '', id: 8, key: 'ONLINE' },
+    {
+      name: 'PUBLICATIONS',
+      link: '/publication',
+      id: 9,
+      key: 'PUBLICATIONS',
+    },
+    { name: 'SHOP', link: '/shop', id: 10, key: 'SHOP' },
+    { name: 'NEWS,EVENTS & MEDIA', link: '/media', id: 11, key: 'NEWS' },
     { name: 'ALUMNI', link: '/alumni', id: 12, key: 'ALUMNI' },
     { name: 'VOLUNTEER', link: '/join-our-team', id: 13, key: 'VOLUNTEER' },
-    // { name: 'CAREERS', link: '/careers', id: 14, key: 'CAREERS' },
-    {
-      name: 'LOCATE US',
-      link: 'https://goo.gl/maps/bxH6SifrXjXAhteV7',
-      id: 14,
-      key:'LOCATE'
-    },
+  
+    
   ]
 
   const subMenu = {
