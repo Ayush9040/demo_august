@@ -180,7 +180,7 @@ const CommonBannerLegacy = ({
                 </div>
                 <div className="pos-date">
                   {founderData[activeFounder].founder} <br />
-                  <span style={{ fontSize: '10px' }}>
+                  <span style={{ fontSize: '13px' }}>
                     {founderData[activeFounder].year}
                   </span>
                 </div>
