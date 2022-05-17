@@ -12,7 +12,7 @@ const SocialResponsibility = () => {
         Logo={false}
         Navigation={true}
         PageType='gifting'
-        Heading='Gifting'
+        Heading='Social Responsibility'
         isOnlyBanner={false}
         innerNav={false}
         description={
