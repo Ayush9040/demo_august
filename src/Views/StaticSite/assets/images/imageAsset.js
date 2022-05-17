@@ -94,6 +94,96 @@ export const courseAssets = {
   courseAsset2: '/Courses/courses-hero (1).jpg',
   courseAsset3: '/Courses/course (1).png',
   courseAsset4: '/Courses/detailImg.png',
+  courseAsset5: '/Courses/courses_More_than_just_learning.jpg',
+  // camps
+  courseAsset6: '/Courses/Camps/Cardiac_&_Hypertension_camp .jpg',
+  courseAsset7: '/Courses/Camps/Diabetes_camp.jpg',
+  courseAsset8: '/Courses/Camps/Life_Management_Camp.jpg',
+  courseAsset9: '/Courses/Camps/Meditation_Camp.jpg',
+  courseAsset10:'/Courses/Camps/Orthopaedic_Camp_for_Back_and_Joint_Disorders.jpg',
+  courseAsset11: '/Courses/Camps/Pregnancy_Camp_for_Ante _&_Post_Natal.jpg',
+  courseAsset12: '/Courses/Camps/Senior_Citizens_Camp.jpg',
+  courseAsset13: '/Courses/Camps/Stress_management.jpg',
+  courseAsset14: '/Courses/Camps/Weight_management.jpg',
+  courseAsset15: '/Courses/Camps/Weight_management.jpg',
+  courseAsset16: '/Courses/Camps/Weight_management.jpg',
+
+  // certificate
+
+  courseAsset17: '/Courses/Certificate/Department of Ayush.png',
+  courseAsset18: '/Courses/Certificate/Yoga Alliance.png',
+  courseAsset19: '/Courses/Certificate/Yoga Certification Board.png',
+
+  // class
+  courseAsset20: '/Courses/Class/Advanced_regular_asana_class_tyi_teachers.jpg',
+  courseAsset21: '/Courses/Class/Samattvam.jpg',
+  courseAsset22: '/Courses/Class/Weekend_regular_class.jpg',
+  courseAsset23: '/Courses/Class/Yog prayas(1).jpg',
+  courseAsset24: '/Courses/Class/certificate course_on_advance_pranayama_techniques.jpg',
+  courseAsset25: '/Courses/Class/couples_class.jpg',
+  courseAsset26: '/Courses/Class/couples_class.jpg',
+  courseAsset27: '/Courses/Class/mens_class.jpg',
+  courseAsset28: '/Courses/Class/online_meditation_course.jpg',
+  courseAsset29: '/Courses/Class/womens_class.jpg',
+  courseAsset30: '/Courses/Class/yog_prayas.jpg',
+  courseAsset31: '/Courses/Class/yoga_therapy.jpg',
+  courseAsset32: '/Courses/Class/yogasutra_class.jpg',
+
+  // most popular
+
+  courseAsset33: '/Courses/Most_popular/200_hrs_TTC.jpg',
+  courseAsset34: '/Courses/Most_popular/21_days.jpg',
+  courseAsset35: '/Courses/Most_popular/7 days_health_camp.jpg',
+  courseAsset36: '/Courses/Most_popular/900_hrs_TTC.jpg',
+  courseAsset37: '/Courses/Most_popular/Pranayama_workshop.jpg',
+
+  // ttc
+  courseAsset38: '/Courses/TTC/200_hrs_TTC.jpg',
+  courseAsset39: '/Courses/TTC/500_hrs_TTC.jpg',
+  courseAsset40: '/Courses/TTC/900_hrs_TTC.jpg',
+
+
+  // ttc ->   alumni
+
+  courseAsset41: '/Courses/TTC/Alumni/Almuni_pictures_and_word_file/Ajinkya.jpg',
+  courseAsset42: '/Courses/TTC/Alumni/Almuni_pictures_and_word_file/Disha_Vakhani.jpg',
+  courseAsset43: '/Courses/TTC/Alumni/Almuni_pictures_and_word_file/Disha_Vakhani.jpg',
+  courseAsset44: '/Courses/TTC/Alumni/Almuni_pictures_and_word_file/Nirmal-Gangwal.png',
+  courseAsset45: '/Courses/TTC/Alumni/Almuni_pictures_and_word_file/Premchand_Godha.jpg',
+  courseAsset46: '/Courses/TTC/Alumni/Almuni_pictures_and_word_file/RUJUTA_DIWEKAR.jpg',
+  courseAsset47: '/Courses/TTC/Alumni/Almuni_pictures_and_word_file/Shilpa_Shirodkar.jpg',
+  courseAsset48: '/Courses/TTC/Alumni/Almuni_pictures_and_word_file/Shivkumar_Sharma.jpg',
+  courseAsset49: '/Courses/TTC/Alumni/Almuni_pictures_and_word_file/Shweta_Tiwari.jpg',
+  courseAsset50: '/Courses/TTC/Alumni/Almuni_pictures_and_word_file/Sukhwinder_Singh.jpg',
+  courseAsset51: '/Courses/TTC/Alumni/Almuni_pictures_and_word_file/ankita sood.jpg',
+  courseAsset52: '/Courses/TTC/Alumni/Almuni_pictures_and_word_file/carlo.jpeg',
+  courseAsset53: '/Courses/TTC/Alumni/Almuni_pictures_and_word_file/kavita.jpg',
+  courseAsset54: '/Courses/TTC/Alumni/Almuni_pictures_and_word_file/natalia.JPG',
+  courseAsset55: '/Courses/TTC/Alumni/Almuni_pictures_and_word_file/veronica.jpg',
+
+  // workShops
+
+  courseAsset56: '/Courses/Workshops/Food_and_nutrition .jpg',
+  courseAsset57: '/Courses/Workshops/digestion_camp.jpg',
+  courseAsset58: '/Courses/Workshops/pranayama_workshop.jpg',
+
+
+  // tyi activities 
+
+  courseAsset59: '/Courses/tyi_activities/2_year_ttc.jpg',
+  courseAsset60: '/Courses/tyi_activities/Copy_of_900_hrs_TTC.jpg',
+  courseAsset61: '/Courses/tyi_activities/corporate_slider.jpg',
+  courseAsset62: '/Courses/tyi_activities/corporate_workshop.jpg',
+  courseAsset63: '/Courses/tyi_activities/couple_class.jpg',
+  courseAsset64: '/Courses/tyi_activities/home_tuitions.jpg',
+  courseAsset65: '/Courses/tyi_activities/ortho_camp.jpg',
+  courseAsset66: '/Courses/tyi_activities/womens_camp.jpg',
+  
+
+  // 
+
+
+
 }
 
 export const facilitiyAssets = {
@@ -573,5 +663,8 @@ export const experienceAssets={
 
 
 }
+
+
+
 
 export default baseDomain
