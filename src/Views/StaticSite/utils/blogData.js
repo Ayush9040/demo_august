@@ -1,11 +1,13 @@
+import { type } from '@testing-library/user-event/dist/type'
 import baseDomain, { homeAssets } from '../assets/images/imageAsset'
+import BlogLink from '../Components/BlogLink'
 export const allBlogData = [
   {
     id: 'blog_1',
     date: '01/01/22',
     title: '7 Home Remedies for Anaemia | Foods to Eat | Yoga for Anaemia',
     metaDescription:
-      'Anemia is a condition in which your body lacks enough healthy red blood cells to function properly. You often feel tired, fatigue, headaches, chest pain, and dizziness. Your hands and feet may become cold. Blood loss, nutritional deficiencies, intestinal disorders, menstruation, pregnancy, and the body\'s inability to produce red blood cells often increases the risk of anemia. A healthy diet and lifestyle can help you avoid or better manage your anemic condition.',
+      'Anemia is a condition in which your body lacks enough healthy red blood cells to function properly. You often feel tired, fatigue, headaches, chest pain, and dizziness. Your hands and feet may become cold. Blood loss, nutritional deficiencies, intestinal disorders, menstruation, pregnancy, and the body inability to produce red blood cells often increases the risk of anemia. A healthy diet and lifestyle can help you avoid or better manage your anemic condition.',
     image: `${baseDomain}${homeAssets.homeAsset60}`,
     body: [
       {
@@ -17,8 +19,7 @@ export const allBlogData = [
         component: 'points',
         points: [
           [
-            `Honey- Start your day with a glass of lukewarm water of lemon juice and honey. Honey is an excellent source of iron, copper, and manganese. Vitamin C found in citrus fruits such as lemons, oranges, and sweet lime, helps the blood absorb more iron. You can also consume it by drizzling it over apples and bananas.
-        `,
+            'Honey- Start your day with a glass of lukewarm water of lemon juice and honey. Honey is an excellent source of iron, copper, and manganese. Vitamin C found in citrus fruits such as lemons, oranges, and sweet lime, helps the blood absorb more iron. You can also consume it by drizzling it over apples and bananas.',
           ],
           [
             'Beetroot- Having one glass of beetroot juice daily has proven to cure your anemia. Beets are rich in iron, magnesium, copper and vitamins B1, B2, B6, B12, and C . Beets\' high nutrient content increases the development of red blood cells in the body and improves hemoglobin levels.',
@@ -694,37 +695,850 @@ export const allBlogData = [
           [
             'Intercostal breathing (Pranayama for Friday)',
             {
-              type:'unordered',
-              list:['Sit in sukhasana or padmasana','Focus at one point and gently close your eyes.','Place both your hands on the side of the rib cage. Feel the rib cage.','It should look as if you are hold the rib cage from the sides.','Slowly inhale for 6 counts. You should feel your ribcage is expanding.','Gently exhale for 6 counts and as you exhale the rib cage contracts.','Repeat it for 5 to 10 times.']
+              type: 'unordered',
+              list: [
+                'Sit in sukhasana or padmasana',
+                'Focus at one point and gently close your eyes.',
+                'Place both your hands on the side of the rib cage. Feel the rib cage.',
+                'It should look as if you are hold the rib cage from the sides.',
+                'Slowly inhale for 6 counts. You should feel your ribcage is expanding.',
+                'Gently exhale for 6 counts and as you exhale the rib cage contracts.',
+                'Repeat it for 5 to 10 times.',
+              ],
             },
             {
-              type:'iframe',
-              url:'https://www.youtube.com/embed/rM4p1L_4c9s'
-            }
+              type: 'iframe',
+              url: 'https://www.youtube.com/embed/rM4p1L_4c9s',
+            },
           ],
         ],
       },
       {
-        component:'blogParagraph',
-        pText:'Each pranayama benefits the respiratory system. Along with that it detox your entire body from within. '
+        component: 'blogParagraph',
+        pText:
+          'Each pranayama benefits the respiratory system. Along with that it detox your entire body from within. ',
       },
       {
-        component:'blogParagraph',
-        pText:'Start practicing pranayama each day and you will feel your physical, mental and social health in improving. Just like pranayama helps us we should find a way where earth too can breathe and detoxify itself.'
+        component: 'blogParagraph',
+        pText:
+          'Start practicing pranayama each day and you will feel your physical, mental and social health in improving. Just like pranayama helps us we should find a way where earth too can breathe and detoxify itself.',
       },
       {
-        component:'blogParagraph',
-        pText:'So this World health day, spread the message of healthy you, healthy world.'
+        component: 'blogParagraph',
+        pText:
+          'So this World health day, spread the message of healthy you, healthy world.',
       },
       {
-        component:'blogParagraph',
-        pText:'Check out our Health Camps Details'
+        component: 'blogParagraph',
+        pText: 'Check out our Health Camps Details',
       },
       {
-        component:'blogLink',
-        text:'Click Here!',
-        url:'https://theyogainstitute.org/specific-health-camps/'
-      }
+        component: 'blogLink',
+        text: 'Click Here!',
+        url: 'https://theyogainstitute.org/specific-health-camps/',
+      },
+    ],
+  },
+  {
+    id: 'blog_9',
+    date: '01/01/22',
+    title: '5 Best Healthy Fats Food',
+    metaDescription:
+      'The word “fat” rings the bell of having a negative effect on the body. Specifically related to rise in cholesterol levels, obesity and risk of heart diseases.',
+    image: `${baseDomain}${homeAssets.homeAsset61}`,
+    body: [
+      {
+        component: 'blogParagraph',
+        pText:
+          'For these reasons, many people avoid fats entirely, which is wrong. But the fact is Fats are essential for our body.',
+      },
+      {
+        component: 'blogParagraph',
+        pText:
+          'Dietary fats are necessary for overall health, especially when one gets older. Sufficient intake of fat is required. Good and high fat foods provides energy, protects internal organs, supports cell growth, decreases cholesterol and blood pressure, and aids in nutrient absorption. Complete elimination of fats means depriving body with the required nutrients.',
+      },
+      {
+        component: 'blogVideo',
+        url: '',
+      },
+      {
+        component: 'blogParagraph',
+        pText:
+          'Foods high in "healthy" unsaturated fats should be eaten. Unsaturated fats are of two types - Monounsaturated fats and Polyunsaturated fats. Limit foods high in unhealthy saturated fats because saturated fat increases bad cholesterol levels. Avoid foods that are made with "extremely unhealthy" trans-fat.',
+      },
+      {
+        component: 'blogParagraph',
+        pText:
+          'Below are the healthy fat foods that are rich in unsaturated fats and should be included in the regular diet. ',
+      },
+      {
+        component: 'points',
+        points: [
+          [
+            {
+              type: 'ordered',
+              list: [
+                'Sunflower Oil - Sunflower oil is a multi-purpose cooking oil and one of the best heart-healthy cooking oils with the largest polyunsaturated fat content of around 69%. It also has around 20% monounsaturated fat content and a low saturated fat content of around 11%. ',
+                'Sunflower Oil is one of the healthiest choices for people with heart problems since it contains high amounts of polyunsaturated fat and is considered good fat food. This has a greater favorable impact on the heart than monounsaturated fat.',
+                'Other oils that are a good source of polyunsaturated fats include oils of - flaxseeds, safflower, sohttps://www.youtube.com/embed/CBPlrX9j8SUybean, and corn oils; and a good source of monounsaturated fats include olive, canola, and peanut oils. ',
+                'Sesame seeds - Sesame oil is rich in linoleic and oleic acids. Linoleic acid is an omega-6 fatty acid that is polyunsaturated fat. On the other hand, oleic acid is an omega-9 fatty acid that is monounsaturated fat. More than half of a sesame seed is composed of oil, hence it is a good source of healthy saturated fats. Around 14 grams of black sesame seeds contain 9 gms of fats. ',
+                'Sprinkle 2 teaspoons of roasted sesame seeds onto fruits or salad platter, or prepare ladoos of roasted and crushed sesame seeds with dates and have them as snacks.',
+                'Walnuts - Walnuts have a fat content of approximately 65 percent by weight. Walnuts, despite of high fat and calorie content, do not increase the risk of obesity when substituted with other foods. Walnuts are higher in polyunsaturated fats than most other nuts. The most prevalent is linoleic acid, an omega-6 fatty acid. It also has a high concentration of omega-3 fats alpha-linolenic acid of about 8–14%. These healthy fats help to decrease overall cholesterol and bad cholesterol levels. ',
+                'Olives - Olives are a good source of oleate. The main fatty acid in olive oil is a monounsaturated fat called oleic acid. 73% of the total oil content consists of oleic acid. Oleic acid possesses many health benefits, such as reducing inflammation, risk of heart diseases, and risk of early death linked to high-carbohydrate diets. Eating olives raw as a snack or sprinkling virgin olive oil over salads and rolls, both are equally beneficial.',
+                'Flax Seeds - Flaxseed has earned the name of super food due to its several health benefits. Flax seeds are an excellent source of omega-3 fatty acids. They are high in alpha-linolenic acid, an omega-3 fatty acid, derived primarily from plants. Alpha-linolenic acid is one of two necessary fatty acids that must be obtained from food because body does not produce them. Plant-based Alpha-linolenic acid has been related to a lower risk of stroke and improved heart health.',
+                'Avocado - Avocados, unlike most other fruits, have a high-fat content, around 15% by weight. But it consists primarily of monounsaturated fat which is a "healthy" fat that can help lower bad cholesterol. Oleic acid, the same fatty acid found in olives and olive oil, makes up the majority of the monounsaturated fat in avocados. It also contains small amounts of saturated and polyunsaturated fats. ',
+              ],
+            },
+          ],
+        ],
+      },
+      {
+        component: 'blogParagraph',
+        ptext:
+          'Above are the foods are rich sources of healthy unsaturated fats. Consume it wisely instead of eliminating it completely. Stay Healthy, Stay Safe!',
+      },
+    ],
+  },
+  {
+    id: 'blog_10',
+    date: '01/01/22',
+    title: '5 Best Natural Anti-Ageing Techniques',
+    metaDescription:
+      'Ageing is a natural process that cannot be avoided. Hectic lifestyles, unhealthy eating habits, and irregular sleeping patterns, however, have escalated the aging process. People in their early twenties show signs of Ageing such as wrinkles, grey hair, and body weakness and aches, even if they don not have any medical condition',
+    image: `${baseDomain}${homeAssets.homeAsset61}`,
+    body: [
+      {
+        component: 'blogVideo',
+        url: '',
+      },
+      {
+        component: 'blogParagraph',
+        pText:
+          'To slow down unnatural Ageing here are 5 best natural anti-Ageing tips:',
+      },
+      {
+        component: 'points',
+        points: [
+          [
+            'Essential anti- Ageing Vitamins - ',
+            {
+              type: 'unordered',
+              list: [
+                'Vitamin A - Vitamin A helps to maintain the health of the skin and mucous membranes that line the nose, sinuses, and mouth. It increases the formation of collagen, which helps to minimize fine lines and wrinkles.',
+                'Vitamin C - Vitamin C prevents the early formation of wrinkles as well as skin dryness. Vitamin C also helps in the development of collagen. Collagen improves skin health and prevents it from sagging. ',
+                'Vitamin D - Vitamin D deficiency can result in skin burns more quickly when exposed to the sun. Sun exposure is one of the leading external causes of fine lines and pigmentation. Therefore, it is essential to have enough vitamin D in your body which may help you avoid premature skin Ageing.',
+                'Vitamin E and vitamin K are also considered vital vitamins for anti-aging. Natural and organic foods, such as fresh fruits and vegetables, nuts and seeds, citrus fruits, and dairy products, are the best sources to get these vitamins.',
+              ],
+            },
+          ],
+          [
+            'Efficient breathing techniques to slow Ageing - ',
+
+            'Pranayamas have a sedative effect on the nervous system. When you take slow, steady breaths, your mind becomes calm, which reduces stress and anxiety. The animal kingdom tells us a lot about the relationship between breath and aging. Animals with a fast breathing rhythm, such as dogs, have a shorter lifespan than animals that take long, deep breaths, such as tortoises. Efficient breathing improves the level of oxygen that keeps each cell healthy and rejuvenated. ',
+
+            'Practice pranayamas like Equal breathing, Intercostal breathing, Clavicle breathing, Abdominal breathing, and alternate nostril breathing regularly to slow down the aging process. It is the best natural anti- Ageing technique.',
+          ],
+          [
+            'Exercise to prevent aging - ',
+            'The body ages sooner if we don not use it at full potential. Joints often becomes stiff and loose its mobility, due to sedentary lifestyle. Similarly, if muscles are not exercised enough, they lose strength and flexibility, thus staying active is important. Dedicating time to exercise prevents cellular Ageing and slows down the degenerative process.',
+            'Yoga asanas promote deep muscular stretch, internal organ massage helping in maintaining the spine, extremities, and internal organs healthy. Practice asana such as Parvatasana, Dhanurvakrasana, Shalabhasana, Yashtikasana, Viparitkarni, Paschimottanasana, Bhujangasana, Hastapadasana, and Halasana daily.',
+          ],
+          [
+            'Sleep to reverse aging',
+            'Body is repaired on its own while sleeping. This aids in the restoration of skin suppleness and overall health. Skin produces new collagen while sleeping, which prevents sagging. Additionally, sleep creates anti-inflammatory cytokines, which aid in the healing and reduction of damage caused by sun exposure or pollution throughout the day. Sleep deprivation can cause skin problems such as dryness and fine wrinkles. Taking a goodnight sleep for 7 to 8 hours is the best anti-aging secret.',
+          ],
+          [
+            'Do not let stress overpower you - ',
+            'Stress is a major cause of Ageing. Mind and body are intertwined. Thus, avoid overthinking and worrying, this will not lead to any solution but only cause harm. Make efforts each day to remain positive.',
+            {
+              type: 'iframe',
+              url: 'https://www.youtube.com/embed/CBPlrX9j8SU',
+            },
+            'From proper rest to good natural anti-Ageing foods and a fitness routine; everything is extremely crucial. Always take a holistic approach to reverse or slow down the aging process. ',
+          ],
+        ],
+      },
+    ],
+  },
+  {
+    id: 'blog_11',
+    date: '01/01/22',
+    title: '5 Yoga Poses to do Before You Go To Sleep',
+    metaDescription:
+      'People these days complain a lot about not getting enough sleep or unable to fall asleep even after physical exhaustion. Either there is discomfort while lying down or mind is wandering. Yoga techniques help to relieve this discomfort and induce calmness, ensuring good night’s sleep.',
+    image: `${baseDomain}${homeAssets.homeAsset61}`,
+    body: [
+      {
+        component: 'blogVideo',
+        url: 'https://www.youtube.com/embed/JQ7UsFZ3SKU',
+      },
+      {
+        component: 'blogParagraph',
+        pText:
+          'Here are the 5 best yoga poses to do before bed for a sound sleep. The bedtime yoga had many benefits. Keep a minimum gap of 2 hours between dinner and sleep because these asanas are to be practiced after 2 hours..',
+      },
+      {
+        component: 'points',
+        points: [
+          [
+            'Vajrasana',
+            'Vajrasana is the only posture that can be practiced after a meal. It improves blood circulation to the abdominal region thus improving digestion. Sit in Vajrasana for 5 to 10 mins after dinner, providing ease in all digestion-related problems like acidity, constipation and help you sleep peacefully. It will also help relieve severe lower back discomfort, after a long tiring day of sitting at work. It’s the easiest yoga pose for good sleep.',
+            {
+              type: 'unordered',
+              list: [
+                'Sit in a kneeling position on the bed or mattress, toes touching each other and the heels apart.',
+                'Lower the body and sit comfortably on the hollow formed.',
+                'Keep the body erect and the abdomen held in normal contour.',
+                'Place the hands upon knees with palms facing downwards.',
+                'Close the eyes and passively observe the breath',
+              ],
+            },
+          ],
+          [
+            'Yashtikasana ',
+            'Yashtikasana is an excellent technique that helps in an overall relaxation to the body and mind. It provides adequate stretch to the spine that helps in alleviating back pain. It facilitates maximum stretching of body, providing relief in muscle tightness and discomfort that prevents from getting a good sleep. This yoga pose can be practiced before bed.',
+            {
+              type: 'unordered',
+              list: [
+                'Lie on the back with legs fully extended, feet together, and hands at the sides, palms facing down.',
+                'Raise both the hands together above the head on the ground, stretching them.',
+                'Simultaneously, toes pointing downwards away from the body as if the upper body is pulled upwards and the lower body downwards with the stomach stretched between. ',
+                'The stretched position should be held for six seconds. Relax hands and toes, not returning to the starting position but retaining the hands above the head on the floor.',
+                'Repeat the stretching 4 to 5 times, pausing for three seconds in between each round.',
+              ],
+            },
+          ],
+          [
+            'Viparitkarni',
+            'Viparitkarni provides the wholesome effects of gravity. It benefits the various organs of the body above the waist, including the vital endocrine glands. There are favorable changes due to the increased interchange of blood in the upper part of the body. It provides excellent stretch in the neck, torso and legs.',
+            {
+              type: 'unordered',
+              list: [
+                'Lie down on the back with hands on the sides. Now exhaling, slowly raise the legs up. Hold the body with hands on the back for support.',
+                'Stay in this pose from a few seconds to a maximum of 2 minutes depending on comfort level with breathe normal.',
+                'Inhale and gently lower the hips with the support of hands.',
+              ],
+            },
+          ],
+          [
+            'Leg lift in Dhradasana',
+            'Lower body muscles get stiff and experience back pain, knee pain, or foot paindue to long sitting hours. Along with sitting, improper posture, wrong footwear, or even uncomfortable chairs can aggravate these problems. This simple exercise of lying in Dhradasana stretches the inner thigh muscles and relieve tension from the legs.',
+            {
+              type: 'unordered',
+              list: [
+                'While lying in Dhradasana lift the left leg one foot higher and hold for 10 counts.',
+                'Similarly, keep lifting the leg one foot higher until leg is perpendicular to the body',
+                'Then bring the leg down gently.',
+                'Repeat with the other leg. Do the cycle 3 to 5 times.',
+              ],
+            },
+            'This can be practiced during afternoon naps for good relaxation.',
+          ],
+          [
+            'Reclined Bhadrasana',
+            'Reclined Bhadrasana helps to calm the mind as well as improves blood flow to the lower body. This simple stretch also provides an intense stretch to the thigh muscles and relieves discomfort.',
+            {
+              type: 'unordered',
+              list: [
+                'Lying down and bend both your legs inwards at the knees and join the soles of the feet.',
+                'Press the knees down towards the floor with the hands.',
+                'Interlock the fingers and put hands on the stomach and practice normal breathing.',
+              ],
+            },
+            'After completing these asanas, lie down in a Shavasana and prepare to sleep. This will relieve physical or mental fatigue. Shavasana induces a meditative effect. It invigorates the entire body and mind, ensuring you wake up fresh and energetic. Consciously relax one body part at a time. Once completed relaxing the entire body, maintain this relaxed state for about 10 to 15 minutes. This is best guide to bedtime yoga for stress and tension.',
+            {
+              type: 'iframe',
+              url: 'https://www.youtube.com/embed/RKMfgFvofac',
+            },
+            'The benefits of yoga before bed are countless. All of these yoga poses, along with deep, conscious breathing, will help to calm the thoughts and let go of tension. With 5 minutes of bedtime yoga induce a good night sleep and feel the difference.',
+          ],
+        ],
+      },
+    ],
+  },
+  {
+    id: 'blog_12',
+    date: '01/01/22',
+    title: 'Best Yoga Mudras to get Rid of Pimples Naturally at Home',
+    metaDescription:
+      'We all should be extremely careful about our health and hygiene. But unfortunately, the most ignored organ is the skin organ, especially the face. We tend to ignore it by not taking proper care of it. Because of this, a disease like acne comes up and one of its painful symptoms is pimples. ',
+    image: `${baseDomain}${homeAssets.homeAsset61}`,
+    body: [
+      {
+        component: 'blogParagraph',
+        pText:
+          'Pimples are usually caused due to clogged hair follicles or pores of the skin due to excessive oil, dust, dirt, dead skin, or bacterial infection. There is redness and inflammation. Pimples are not only painful but it also is the cause of low self-esteem and lack of confidence.',
+      },
+      {
+        component: 'blogVideo',
+        width: '560',
+        height: '315',
+        url: 'https://www.youtube.com/embed/jXV9cY2fYbU',
+      },
+      {
+        component: 'blogParagraph',
+        pText: 'Causes for Pimples',
+      },
+      {
+        component: 'points',
+        points: [
+          [
+            'Hormonal changes: During puberty and in mid-life, hormonal changes are at their peak. This causes secretions of oil in the glands which lead to pimples.',
+          ],
+          [
+            'Medicine: The regular administration of medicines that contains lithium, steroids or testosterone causes pimples',
+          ],
+          [
+            'Unhealthy Food habits: eating spicy, oily, and carbohydrate-dominating food affects the skin. Pimples on the face mean your digestive system is compromised.',
+          ],
+          [
+            'Stress: this can be a cause of pimples as during stress one fails to take care of the skin which in turn causes effects adversely.',
+          ],
+        ],
+      },
+      {
+        component: 'blogParagraph',
+        pText:
+          'If pimples are not taken into account immediately then it can cause scarring or hyper-pigmentation.There are many remedies available right from topical to internal cleansing to cure and prevent acne. Yoga has many techniques to offer that help to detoxify the body and also take care of skin health. ',
+      },
+      {
+        component: 'blogParagraph',
+        pText: 'Facial Yoga for Acne or pimples.',
+      },
+      {
+        component: 'points',
+        points: [
+          [
+            'Filling Air in the mouth:',
+            {
+              type: 'unordered',
+              list: [
+                'Inhale through the mouth and inflate the cheeks with air. Hold it for 6 counts',
+                'Now, Shift the air to the right cheek and hold it 6 counts.',
+                'Shift the Air to the left side and hold it for 6 counts.',
+              ],
+            },
+          ],
+          [
+            'Holding the Air:',
+            {
+              type: 'unordered',
+              list: [
+                'Fill air in the mouth',
+                'With the help of the index finger press the lips to create pressure by holding the breath.',
+              ],
+            },
+          ],
+          [],
+        ],
+      },
+      {
+        component: 'blogParagraph',
+        pText: 'Below is the list of Best Yoga for Pimples and Acne',
+      },
+      {
+        component: 'blogParagraph',
+        pText:
+          'The whole idea is to improve blood circulation in the facial region to reduce acne problems.',
+      },
+      {
+        component: 'points',
+        points: [
+          [
+            'Matsyasana: This is one of the best yoga for pimples and it is most effective.',
+
+            {
+              type: 'unordered',
+              list: [
+                'Sit in padmasana or sukhasana',
+                'Recline back gently and with the help of hands lie down on the mat.',
+                'Now hold both the hands above the head, bending at the elbows.',
+                'Stay in this posture for 30 seconds to 1 min',
+                'Slowly release the posture and come back to the starting position.',
+              ],
+            },
+          ],
+        ],
+      },
+      {
+        component: 'points',
+        points: [
+          [
+            'Bhujangasana This asana detoxifies the body and smoothens the skin.',
+            {
+              type: 'unordered',
+              list: [
+                'Lie down on the stomach',
+                'Relax your body and place the hands near your chest',
+                'Inhale and lift the upper torso.',
+                'Hold it for 6 counts.',
+                'With exhalation, gently reach back to the starting position.',
+                'Repeat it 3 times.',
+              ],
+            },
+          ],
+        ],
+      },
+      {
+        component: 'points',
+        points: [
+          [
+            'Halasana:',
+            {
+              type: 'unordered',
+              list: [
+                'Lie down in a supine position on a mat with hands on the sides.',
+                'Inhale and raise both legs. Form a right angle.',
+                'Exhale and lower the legs towards and above the head forming a semi-circular arc. Try the toes to touch the floor.',
+                'Use the hands to support the pelvic when one raises itself.',
+                'Once the toes touch the floor bring the hands to the starting position.',
+                'Try to keep the legs straight.',
+              ],
+            },
+          ],
+        ],
+      },
+      {
+        component: 'blogVideo',
+        url: 'https://www.youtube.com/embed/QI6c5RhN-Hg',
+      },
+      {
+        component: 'blogParagraph',
+        upText:
+          'Pranayama for Acne and pimples: when we consider yoga for facial hygiene, pranayama should be given priority. Below are the top 2 pranayama that works wonders for facial health.',
+      },
+      {
+        component: 'points',
+        points: [
+          [
+            'Sheetali pranayama:',
+            {
+              type: 'unordered',
+              list: [
+                'Curl the tongue from the side in the upwards direction.',
+                'Inhale through the mouth and hold it for 6 seconds.',
+                'Exhale through nostrils.',
+                'Repeat it 5 times.',
+              ],
+            },
+          ],
+        ],
+      },
+      {
+        component: 'points',
+        points: [
+          [
+            'Anulom Vilom Pranayama',
+            {
+              type: 'unordered',
+              list: [
+                'Cover the right nostril with the right thumb.',
+                'Inhale from the left nostril for 2 counts',
+
+                'Now cover both nostrils and hold it for 4 counts.',
+                'Remove the right thumb to release the right nostril, keeping the left nostril covered.',
+                'Exhale from the right side for 2 counts.',
+                'Then, Inhale from the right side for 2 counts. ',
+                'Cover both the nostrils and hold it for 4 counts.',
+                'Now, keep the right nostril covered and release the left side. Exhale for 2 counts.',
+                'Cover both the nostrils again and hold it for 2 seconds. This completes one single round.',
+              ],
+            },
+          ],
+        ],
+      },
+      {
+        component: 'blogParagraph',
+        pText:
+          'Apart from Asana and pranayama, yoga also teaches the science of mudra, which aids in the physical body to a great extent. There is a couple of yoga mudra which improve overall skin health.',
+      },
+      {
+        component: 'points',
+        points: [
+          [
+            'Varun Mudra: this is the best yoga mudra for acne and pimples. Apart from this mudra brings suppleness to the skin making it look perfect.',
+            {
+              type: 'unordered',
+              list: [
+                'Sit in Sukhasana with back straight.',
+                'With a little finger, touch the thumb lightly.',
+                'There is no prescribed time to this mudra.',
+              ],
+            },
+          ],
+        ],
+      },
+      {
+        component: 'blogParaGraph',
+        pText:
+          'This mudra balances the water in the body. Which in turn increases the circulation of the fluid in the body. This keeps the skin hydrated, avoiding it from drying and skin infections.',
+      },
+      {
+        component: 'points',
+        points: [
+          [
+            'Prithvi Mudra: It is of utmost importance to balance the earth element in the body to get acne-free and glowing skin.',
+            {
+              type: 'unordered',
+              list: [
+                'Sit straight in sukhasana ',
+                'Touch the ring finger lightly with the thumb. Keeping the other fingers straight.',
+                'Hold this mudra with normal breathing and full concentration.',
+              ],
+            },
+          ],
+        ],
+      },
+      {
+        component: 'blogParagraph',
+        pText:
+          'Both these mudras can be practiced for 15 min in total to find the great difference in the body.',
+      },
+      {
+        component: 'blogVideo',
+        url: 'https://www.youtube.com/embed/BAqsl50pSVM',
+      },
+      {
+        component: 'blogParagraph',
+        pText:
+          'Acne and pimples are the most common problems faced by all. Though it is majorly faced by women or girls due to heavy hormonal changes. But even males face this problem. Along with the regular practice of yoga techniques mentioned above, one should also take a good amount of liquid and healthy food. Taking care of the skin should not be ignored at any level. ',
+      },
+      {
+        component: 'blogParagraph',
+        pText:
+          'Try these amazing yoga techniques and do let us know how you feel.',
+      },
+    ],
+  },
+  {
+    id: 'blog_13',
+    date: '01/01/22',
+    title: 'How Much Distance we should walk daily',
+    metaDescription:
+      'Walking will take you to good health one step at a time. A daily morning or evening walk might be quite beneficial to your overall health. Walking not only helps you reduce weight, but also reap many more scientifically-proven benefits.',
+    image: `${baseDomain}${homeAssets.homeAsset60}`,
+    body: [
+      {
+        component: 'blogParagaph',
+        pText:
+          'A faster pace can help you to lose calories quickly. But how much should one walk in a day, to gain all these benefits? ',
+      },
+      {
+        component: 'blogParagaph',
+        pText:
+          'Walking too slowly or too quickly might be harmful to the body rather than beneficial. According to studies, if you can walk at least 100 steps per minute, you’re walking fast enough to gain visible fitness benefits. There is no ideal distance to walk every day, it all depends on your body weight, age, and medical condition.',
+      },
+      {
+        component: 'blogParagaph',
+        pText:
+          'So today, we will discuss how much you should walk depending on your health.',
+      },
+      {
+        component: 'blogVideo',
+        url: 'https://www.youtube.com/embed/KXJfcr7Vb-k',
+      },
+      {
+        component: 'blogParagaph',
+        pText:
+          'Lower Blood Sugar Levels - Walking is a wonderful technique to help regulate blood sugar levels in Diabetic patients with type 2 diabetes or gestational diabetes, or prediabetics condition. Walk for 15- 30 minutes after every meal to control post-meal blood sugar, especially when meals contain a substantial amount of carbohydrates. Make walking after meals part of your daily routine. After every meal walk to lower blood sugar level, test it and ensure it has not gone too low.',
+      },
+      {
+        component: 'blogParagraph',
+        pText:
+          ' Reduce obesity- Walking is a non-strenuous form of cardio. Walk for an hour every day or 30 minutes twice a day to burn those extra calories. If you are not used to walking regularly, start with 20 to 30 minutes and gradually increase your duration and pace to increase the number of calories you burn. Most importantly, walking helps to lose weight fast, but ensure to reduce the calorie intake.',
+      },
+      {
+        component: 'blogParagraph',
+        pText:
+          'Muscular stability- Walking regularly can help to prevent bone loss and the risk of osteoporosis. To gradually enhance muscle-building, walk  10,000 steps per day, which is approximately 8 kilometers. Walking tones the muscles in your legs and abdomen. It improves your range of motion by transferring weight and pressure from your joints to your muscles. Walking promotes blood circulation and muscle flexibility by moving and compressing the joints. As your bones strengthen, you are less likely to fall and fracture your leg or hand.',
+      },
+      {
+        component: 'blogParagraph',
+        pText:
+          'Boost your mood- Walking promotes the release of brain chemicals called endorphins that stimulate relaxation and improve our mood. Go for a stroll at a comfortable pace to relax and reduce anxiety. Daily go for a walk early in the morning for 20 to 30 minutes and observe the environment around you; enjoy the trees, flowers, birds, and sky. Exposure to nature will refresh your mood. Or when you are strolling past storefronts or in the mall while window shopping, enjoy the wonderful things kept and distract yourself from worries.',
+      },
+      {
+        component: 'blogVideo',
+        url: 'https://www.youtube.com/embed/iCZsq34BBcQ',
+      },
+      {
+        component: 'blogParagraph',
+        pText:
+          'Walking regularly improves ones health and longevity. So take a 30-minute or longer walk every day, or at least a few times a week. However, keep in mind that you should start walking at a distance that is comfortable for you and gradually increase your distance and pace over time.',
+      },
+      {
+        component: 'blogParagraph',
+        pText: 'Keep Walking, Stay Healthy!',
+      },
+    ],
+  },
+  {
+    id: 'blog_14',
+    date: '01/01/22',
+    title: 'How to Reduce Back Fat Naturally by Yoga - Home Remedies',
+    metaDescription:
+      ' Each one of us wishes for a body which can help us look better and enhance our personality. There are different sites where the fat deposition can be tricky and one may not understand how to get rid of it. One of them is the fat on the back. The areas where majority of the fat deposits are around the shoulder blades and on the waist (these are popularly known as love handles)',
+    image: `${baseDomain}${homeAssets.homeAsset60}`,
+    body: [
+      {
+        component: 'blogVideo',
+        url: 'https://www.youtube.com/embed/VQk1rjN6yP8',
+      },
+      {
+        component: 'blogParagraph',
+        pText:
+          'When there is more intake of food and lack of exercise the fat starts accumulating at these sites. It is only when you wear certain kinds of clothes or see you photograph you realise that you have gained extra fat. The body then requires proper toning.',
+      },
+      {
+        component: 'blogParagraph',
+        pText:
+          'Let us explore what are the reason for fat deposition on the back',
+      },
+      {
+        component: 'points',
+        points: [
+          ['Lack of exercise'],
+          ['Sedentary lifestyle'],
+          [
+            'Intake of high sodium and sugar food. These foods contribute to bloating of the body due to inflammation. ',
+          ],
+          ['Certain kinds of clothes cause bulging of the back.'],
+          [
+            'The way you sit is also very important. Any defect in posture can give fat on the back.',
+          ],
+          ['Genetic makeup like height plays a very important role.'],
+          [
+            'Overall, the fat on the back can depend on height, weight gain, diet, exercise, and activity level.',
+          ],
+        ],
+      },
+      {
+        component: 'subHeading',
+        boldText: 'Must Read:',
+      },
+      {
+        component: 'blogLink',
+        url: 'https://theyogainstitute.org/get-rid-of-stubborn-belly-fat/',
+        text: 'How to get rid of stubborn belly fat using simple Yoga Asana?',
+      },
+      {
+        component: 'blogParagraph',
+        pText:
+          'The fat deposition on the back can really affect the confidence. One started to avoid wearing the clothes of their choice. The feel good factor is affected. Along with that the range of motion of hands also reduces.',
+      },
+      {
+        component: 'blogParagraph',
+        pText:
+          'Let us see what are the other side effects of gaining fat on the back:',
+      },
+      {
+        component: 'points',
+        points: [
+          [
+            'Unnecessary pressure created on the back, affecting the spine and causing spinal discomfort.',
+          ],
+          [
+            'The natural shock absorbing capacity and curvature of the spine reduces.',
+          ],
+          ['There are chances of slip disc or pinching of the disc.'],
+          ['Extreme lower back pain'],
+          [
+            'If the fat deposition is more than there is a fear of osteoarthritis.',
+          ],
+        ],
+      },
+      {
+        component: 'blogParagraph',
+        pText:
+          'Majority not the side effects are related to spine and cause of serious issues. Thus do not take the fat on the back lightly. Instead just work toward it. Due to the structure of the body, the fat deposition is more seen in females. That does not really mean Men do not have it.',
+      },
+      {
+        component: 'blogParagraph',
+        pText:
+          'The best home remedy to reduce back fat is Yoga. There are many spot posture, as well as general posture which can be considered as yoga for fat on the back and love handles.',
+      },
+      {
+        component: 'points',
+        points: [
+          [
+            'Dhanurasana',
+            {
+              type: 'unordered',
+              list: [
+                'Lie on your stomach on the mat.',
+                'Bend your legs from the knees and try to hold the toes of your feet',
+                'Inhale and raise your legs and body upwards. Hold it for 4 counts.',
+                'Exhale and release the posture.',
+                'Come to the initial position.',
+                'Repeat this for 3 more times.',
+                'his is the best asana in Yoga to reduce back fat. ',
+              ],
+            },
+          ],
+          [
+            'Shalabhasana: ',
+            {
+              type: 'unordered',
+              list: [
+                'Lie on your stomach on the mat.',
+                'Hands on the sides with palm facing downwards.',
+                'Legs should be stretched out.',
+                'Inhaling, raise your upper body as well as legs up. You can also simply raise your legs up and chin on the floor.',
+                'Make sure that knees do not bend',
+                'Balance the weight on the palms',
+                'Hold it for 4 counts.',
+                'Exhale and release the posture.',
+                'Come to the initial position.',
+                'Repeat this for 3 more times. ',
+              ],
+            },
+          ],
+          [
+            'Naukasana',
+            {
+              type: 'unordered',
+              list: [
+                'Lie down on your back on the mat. ',
+                'Legs should be stretched out.',
+                'Hands on the side of the body.',
+                'Inhale at the place and then exhaling lift your upper body as well as legs up in the air.',
+                'Hands should be stretched out in front of you parallel to each other.',
+                'Hold this for 6 counts.',
+                'Inhale and release the posture.',
+                'Come to the initial position.',
+                'Repeat this for 3 more times',
+              ],
+            },
+          ],
+          [
+            'Trikonasana:',
+            {
+              type: 'unordered',
+              list: [
+                'Stand straight on the mat.',
+                'Slowly make a gap of 3 to 4 feet in between to feet. Depending on your height.',
+                'Stretch the hands on the sides, palm facing downwards.',
+                'Turn the ankle of the right foot outwards to the right side and the ankle of the left foot inwards to the right.',
+                'Inhale and bend it to the right and try to touch the right foot with the right hand.',
+                'Left hand will be upwards in the air.',
+                'Hold it for 4 counts.',
+                'Exhale and come back to the Initial position.',
+                'Repeat the same on the left side.',
+                'Repeat the whole set for 3 more times',
+                'This particular asana in Yoga is for love handles.',
+              ],
+            },
+          ],
+          [
+            'Plank pose:',
+            {
+              type: 'unordered',
+              list: [
+                'Lie down on the stomach.',
+                'Stretch the legs out.',
+                'Bend the elbows in such a way that palms are on the floor.',
+                'Make sure that shoulders and elbows are in one line.',
+                'Curl the toes to touch the floor.',
+                'Lift the whole body and maintain the weight on palms, elbows and toes.',
+                'Hold it for 15 seconds.',
+                'Gently release the posture.',
+                'Increase the time after regular practice.',
+                'Repeat it 3 times.',
+              ],
+            },
+          ],
+        ],
+      },
+      {
+        component: 'blogParagraph',
+        pText:
+          'Alongside the physical fitness, one should also focus on intake of the food. The excess fat deposition takes place due to high caloric food. Try to avoid oily, carbohydrates rich food, and packaged food. This will have a great impact on the fat at the back and love handles.',
+      },
+      {
+        component: 'blogVideo',
+        url: 'https://www.youtube.com/embed/_W66bCxaRCM',
+      },
+      {
+        component: 'blogParagraph',
+        pText:
+          'Practice this set of asana to reduce the back fat at home especially for female candidates. You will never have a question on how to reduce back fat by yoga when you follow the above mentioned asana.',
+      },
+    ],
+  },
+  {
+    id: 'blog_15',
+    date: '01/01/22',
+    title: 'Top 5 Non-Dairy Calcium-Rich Foods',
+    metaDescription:
+      'It is believed that milk is the best source of calcium. However, many people cannot consume milk or milk products. Dairy products can cause acidity or bloating problems in many. Vegans also avoid having any animal products including dairy products, honey, and so on. ',
+    image: `${baseDomain}${homeAssets.homeAsset60}`,
+    body: [
+      {
+        component: 'blogParagraph',
+        pText:
+          'Calcium is a mineral that is essential for the production and maintenance of healthy teeth and bones. Apart from these significant benefits, calcium aids in:',
+      },
+      {
+        component: 'bullets',
+        bulletPoints: [
+          'Blood Clotting',
+          'Maintaining a normal heartbeat',
+          'Contraction and relaxation of muscles',
+          'Releasing hormones and other chemicals',
+          'Sending and receiving nerve signals',
+        ],
+      },
+      {
+        component: 'blogVideo',
+        url: 'https://www.youtube.com/embed/44DqBysYW-w',
+      },
+      {
+        component: 'blogParagraph',
+        pText:
+          'Here are the top 5 non-dairy calcium-rich foods that every lactose intolerant or vegan can consume.',
+      },
+      {
+        component: 'points',
+        points: [
+          [
+            'Moringa Leaves - ',
+            'Moringa leaves, or drumstick leaves, are abundant in calcium, which helps increase bone mass and structural strength. Moringa leaves contain 4 times the calcium content of milk and Moringa powder contains 17 times the calcium content of milk. Moringa powder contains 150 mg of calcium every 10-gram serving, which is 15% of the recommended daily value. Moringa leaf powder is given to pregnant women as they are usually at risk of calcium deficiency which can be harmful to both the mother and the baby. During pregnancy, about 6 spoonful of moringa leaf powder can meet a womans daily iron and calcium requirements.',
+            'Moringa powder is easily available at an ayurvedic store. When available in the market try to cook fresh moringa leaves. Moringa leaves dosa or paratha, or a simple curry when consume once a week improves calcium levels in the body. It is one of the best non-dairy foods that provide calcium.',
+          ],
+          [
+            'Dried Figs -',
+            'Another non- dairy food is Dried figs. It contains a higher calcium value than other dried fruits. Just 2 figs contain around 65 mg of calcium. In fact, one ounce of dried figs contains 5% of the daily value for calcium. This highly nutritious dried fruit should be added to the diet. ',
+          ],
+          [
+            'Soya Products - Soy Milk and Tofu',
+            'Soybeans are rich in calcium. One cup that is approximately 175 grams of cooked soybeans provides 18.5% of the recommended daily value. Soy products such as soy milk and tofu are also great sources of calcium.',
+            'Soy milk is naturally lactose-free. Hence, it is an excellent substitute for cow milk. Each cup of soy milk contains 300 mg of calcium. Tofu is made by solidifying soy milk, usually using calcium phosphate. Hence, 100 grams of tofu contains 350 mg of calcium. ',
+            'Add soya and soy products in the meal plans regularly.  Soy milk for breakfast or simple soybean gravy for lunch or tofu in salads during dinner time are some good options.',
+          ],
+          [
+            'Broccoli',
+            'Broccoli is a calcium-rich cruciferous vegetable. The calcium content of a cup of boiled broccoli is 62 mg. In comparison to spinach, broccoli calcium absorption is 50–60% higher. Spinach, despite its high calcium content, includes oxalate, a chemical that inhibits calcium absorption. So, while eating spinach, squeeze lemon because the citric acid aids in calcium breakdown and absorption.',
+            'Broccoli can be consumed in various ways. Broccoli can be stir-fried with other vegetables such as carrots, peas, or potatoes or boiled broccoli with basic seasoning like black pepper to taste, or broccoli sabzi.',
+          ],
+          [
+            'Amaranth - Amaranth is a type of grain that has high amounts of calcium. Amaranth grain contains nearly four times the calcium of other grains; 100 gm of amaranth grain provides 159 mg of calcium. Regular consumption of amaranth can improve bone health',
+            'Different types of dishes made from amaranth grain are tikkis, lavash, porridge, and more.'
+          ],
+        ],
+      },
+      {
+        component: 'blogVideo',
+        url: 'https://www.youtube.com/embed/Ajo1jO8oFnQ',
+      },
+      {
+        component: 'blogParagraph',
+        pText:
+          'Calcium is an essential nutrient, these non-dairy calcium-rich foods for Vegan or lactose intolerant person fulfills their daily calcium requirements. Consuming enough calcium helps to strengthen bone strength, which helps to prevent bone demineralization and osteoporosis.',
+      },
+      {
+        component: 'blogParagraph',
+        pText: 'Eat Healthy, Stay Healthy! ',
+      },
     ],
   },
 ]
