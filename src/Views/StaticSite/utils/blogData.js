@@ -809,7 +809,7 @@ export const allBlogData = [
     body: [
       {
         component: 'blogVideo',
-        url: '',
+        url: 'https://www.youtube.com/embed/o7ysNwNLHWg',
       },
       {
         component: 'blogParagraph',
