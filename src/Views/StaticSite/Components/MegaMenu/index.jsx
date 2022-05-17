@@ -131,6 +131,7 @@ const MegaMenu = ({ setNav }) => {
                     onMouseOver={() => {
                       setMenuItem(item.key)
                     }}
+                    onClick={()=>{setNav(false)}}
                     to={`${item.link}`}
                     key={i}
                   >
@@ -253,7 +254,7 @@ const MegaMenu = ({ setNav }) => {
             <ul className="navigation-ul">
               {subMenu[menuItem]?.map((item, i) => {
                 return (
-                  <Link to={`${item.link}`} key={i}>
+                  <Link onClick={()=>{setNav(false)}} to={`${item.link}`} key={i}>
                     <li>
                       {item.menu}
                       <div
