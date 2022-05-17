@@ -36,6 +36,7 @@ const NewsLetter = () => {
             at spreading yoga philosophy to mankind. It has scholarly articles
             by Dr Jayadeva and Smt. Hansaji.
           </p>
+          <CommonBtn text={'Explore More'} />
         </div>
       </div>
       <div className="subscription">
