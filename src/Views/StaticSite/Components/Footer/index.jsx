@@ -125,7 +125,7 @@ const Footer = () => {
             <Link to="">
               <li>Corporate wellness</li>
             </Link>
-            <Link to="">
+            <Link to="/affiliations">
               <li>Affiliations</li>
             </Link>
             <li>Careers</li>
@@ -135,10 +135,11 @@ const Footer = () => {
           </ul>
           <div className="carrier-list">
             <ul>
-              <Link to="">
+              <Link to="/terms&condition">
                 <li>Terms & Conditions</li>
               </Link>
-              <li>Privacy Policy</li>
+              <Link to = '/privacy&policy'><li>Privacy Policy</li></Link>
+              
               <a
                 href="https://goo.gl/maps/bxH6SifrXjXAhteV7"
                 target="_blank"
