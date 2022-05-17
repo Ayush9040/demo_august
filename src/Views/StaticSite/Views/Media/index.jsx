@@ -45,7 +45,6 @@ const MediaGallery = () => {
             key={item.id}
             style={{ position: 'relative' }}
           >
-            <GridComponent imgs={item.images} />
             <div className='view-album'>
               <h3>
                 {item.title}
@@ -61,6 +60,8 @@ const MediaGallery = () => {
                 <CommonBtn text={'View Album'} />
               </div>
             </div>
+            <GridComponent imgs={item.images} />
+            
             {viewCarousel === item.id && (
               <>
                 <div
