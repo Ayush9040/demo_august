@@ -17,6 +17,11 @@
     p{
         margin-top: 2rem;
     }
+
+    .globalButtonParent{
+      display: flex;
+      justify-content: right;
+    }
 }
 .facts-gallery{
     margin-top: 3rem;
@@ -186,7 +191,6 @@
       svg{
         width: 90%;
       }
-    }
   }
     .facts-header{
         // grid-template-columns: 100%
@@ -200,4 +204,6 @@
     margin: 2rem auto;
 
     }
+    
+}
 }

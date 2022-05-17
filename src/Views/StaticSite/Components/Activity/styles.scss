@@ -1,4 +1,4 @@
-.activity-container {
+    .activity-container {
     display: grid;
     grid-template-columns: 60% 40%;
     margin: 0rem 5rem 5rem;
@@ -35,27 +35,27 @@
     justify-content: center;
 }
 
-.card-container:hover{ 
-    .card-content-activity {
-    box-sizing: border-box;
-    height: 97%;
-    // top: auto;
-    padding: 6rem 4rem;
-    transition: height 1s;
-    // margin: 0 0.8rem 0.8rem;
-}}
+// .card-container:hover{ 
+//     .card-content-activity {
+//     box-sizing: border-box;
+//     height: 97%;
+//     // top: auto;
+//     padding: 6rem 4rem;
+//     transition: height 1s;
+//     // margin: 0 0.8rem 0.8rem;
+// }}
 
 .card-content-activity .explore {
-    display: none;
-}
-
-.card-container:hover .card-content-activity .explore {
     display: block;
 }
 
+// .card-container:hover .card-content-activity .explore {
+//     display: block;
+// }
+
 .card-container h1 {
-    font-size: 2.5rem;
-    margin: 0.5rem 0;
+    font-size: 2.35rem;
+    margin: 0.9rem 0 0;
 }
 .card-container h4 {
     font-size: 1.5rem !important;
@@ -92,7 +92,7 @@
         margin: 5rem auto;
     }
     .card-content-activity {
-        height: 30%;
+        height: 25%;    
     }
     .heading-container .heading-content .heading-logo{
         svg{
@@ -108,7 +108,7 @@
         margin: 0 auto;
     }
     .card-content-activity {
-        height: 45%;
+        height: 30%;
     }
     .heading-container .heading-content .heading-logo{
         svg{
