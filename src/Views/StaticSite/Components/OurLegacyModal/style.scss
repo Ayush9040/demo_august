@@ -16,7 +16,7 @@
     width: 90vw;
     height: max-content;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: flex-start;
 }
 @media screen and (max-width:700px) {
@@ -39,7 +39,7 @@
     align-items: flex-start;
     justify-content: center;
     flex-direction: column;
-    padding: 1rem;
+    padding: 2rem;
     font-family: sans-serif;
     
 }
@@ -82,4 +82,8 @@
 
 .detail-top-text > p{
     margin-bottom: 20px;
+}
+
+.position-year{
+    font-size: 14px;
 }
