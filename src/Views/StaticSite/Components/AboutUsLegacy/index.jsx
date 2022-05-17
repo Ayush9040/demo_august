@@ -3,7 +3,7 @@ import './styles.scss'
 import CommonBtn from '../commonbtn'
 import CommonBannerNavAboutUs from '../CommonBannerNavAboutUs'
 import { Link } from 'react-router-dom'
-import baseDomain, { aboutAssets } from '../../assets/images/imageAsset'
+import baseDomain, { aboutAssets,homeAssets } from '../../assets/images/imageAsset'
 
 const CommonBannerLegacy = ({
   Navigation,
@@ -14,7 +14,7 @@ const CommonBannerLegacy = ({
   const [activeFounder, setActiveFounder] = useState(0)
 
   let l0 = baseDomain + aboutAssets.aboutAsset44
-  let l1 = baseDomain + aboutAssets.aboutAsset45
+  let l1 = baseDomain+homeAssets.homeAsset1
   let l2 = baseDomain + aboutAssets.aboutAsset46
   let l3 = baseDomain + aboutAssets.aboutAsset47
   let l4 = baseDomain + aboutAssets.aboutAsset48
@@ -180,7 +180,7 @@ const CommonBannerLegacy = ({
                 </div>
                 <div className="pos-date">
                   {founderData[activeFounder].founder} <br />
-                  <span style={{ fontSize: '13px' }}>
+                  <span style={{ fontSize: '16px' }}>
                     {founderData[activeFounder].year}
                   </span>
                 </div>
