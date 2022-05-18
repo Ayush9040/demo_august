@@ -58,7 +58,7 @@ const data=
     <ul>
       <li>Kindly partake the simple vegetarian non-spicy food that is served in the dining hall.</li>
       <li>All meals should be had during meal times only.</li>
-      <ul>
+      <ul className='dining-hall' >
         <li>Breakfast 8.00 a.m. to 9.00 a.m.</li>
         <li>Lunch 12.00 noon to 1:00 p.m.</li>
         <li>Tea and snacks 4.00 p.m. to 5.00 p.m.</li>

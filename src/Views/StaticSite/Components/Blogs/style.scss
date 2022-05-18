@@ -105,6 +105,11 @@
 grid-template-columns: 100%;
 width: 100%;
 box-sizing: border-box;
+.blog-header{
+    p{
+        width: 100%;
+    }
+}
 .blog-carousel{
     .slick-list{
         right: 0%;
