@@ -31,8 +31,6 @@ const Nispand = () => {
         <CommonBtn text={'Explore More'} />
         <div className="download-options">
           <h4>GET IT NOW!</h4>
-          <br />
-          <br />
           <div className="google-app-store">
             <div className="google">
               <img src={baseDomain+homeAssets.homeAsset22} />

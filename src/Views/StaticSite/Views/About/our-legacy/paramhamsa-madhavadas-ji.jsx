@@ -1,6 +1,6 @@
 import React from 'react'
 import OurLegacyModal from '../../../Components/OurLegacyModal'
-import baseDomain, { aboutAssets } from '../../../assets/images/imageAsset.js'
+import baseDomain, { aboutAssets, homeAssets } from '../../../assets/images/imageAsset.js'
 
 export default function HarishJi() {
   const data = {
@@ -14,7 +14,7 @@ export default function HarishJi() {
     `,
     ],
     route: 'paramhamsa-madhavadas-ji',
-    leftImg: baseDomain + aboutAssets.aboutAsset10,
+    leftImg: baseDomain+homeAssets.homeAsset1,
     rightImg: null,
     gallery: [],
   }

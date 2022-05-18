@@ -58,11 +58,16 @@ const Blog = () => {
         </div>
         <div className="blog-carousel">
           <Slider {...settings}>
-            {allBlogData.map((blogs) => (
-              <div key={blog.title}>
-                <BlogCard blogs={blogs} />
-              </div>
-            ))}
+            {allBlogData.map((blogs, index) => {
+              if (index < 5) {
+                return (
+                  <div key={blogs.title}>
+                    <BlogCard blogs={blogs} />
+                  </div>
+                )
+              }
+              return
+            })}
           </Slider>
         </div>
       </div>
