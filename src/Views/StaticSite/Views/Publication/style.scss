@@ -93,8 +93,11 @@
     .books-grid{
         width: 80%;
         margin: 0 auto;
-        display: grid;
-        grid-template-columns: repeat(3,1fr);
+        // display: grid;
+        // grid-template-columns: repeat(3,1fr);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
         gap: 3rem;
         padding: 5rem;
         background-color: #EDEEF0;
@@ -274,10 +277,10 @@
             background: var(--brick-red);
         }
     }
-    .books-grid{
-        grid-template-columns: repeat(2,1fr);
-        top: -25rem;
-    }
+    // .books-grid{
+    //     grid-template-columns: repeat(2,1fr);
+    //     top: -25rem;
+    // }
     .library-grid{
         top: -25rem;
     }
@@ -343,10 +346,10 @@
             margin: 0 auto;
         }
     } 
-    .books-grid{
-        grid-template-columns: repeat(1,1fr);
-        padding: 2rem;
-    }
+    // .books-grid{
+    //     grid-template-columns: repeat(1,1fr);
+    //     padding: 2rem;
+    // }
     .cardImg{
         &>div{
             height: 300px;
