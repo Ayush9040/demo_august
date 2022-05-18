@@ -107,7 +107,7 @@ const Courses = () => {
           </p>
           <div className='alumins'>
             <div className='alum-card'>
-              <img className='alum-image' src='http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Courses/Alumni/Madan%20Bahal.jpg' alt='Madan Bahal' />
+              <img className='alum-image' src='http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Courses/TTC/Alumni/Almuni_pictures_and_word_file/Madan_Bahal.jpg' alt='Madan Bahal' />
               <br />
               <h4 className='alum-name'>Madan Bahal</h4>
               <br />
@@ -115,7 +115,7 @@ const Courses = () => {
               <p className='alum-year'>1989</p>
             </div>
             <div className='alum-card'>
-              <img className='alum-image' src='http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Courses/Alumni/Nirmal-Gangwal.png' alt='Nirmal' />
+              <img className='alum-image' src='http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Courses/TTC/Alumni/Almuni_pictures_and_word_file/Nirmal-Gangwal.png' alt='Nirmal' />
               <br />
               <h4 className='alum-name'>Nirmal Gangwal</h4>
               <br />
@@ -123,7 +123,7 @@ const Courses = () => {
               <p className='alum-year'>Year</p>
             </div>
             <div className='alum-card'>
-              <img className='alum-image' src='http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Courses/Alumni/Sukhwinder%20Singh.jpg' alt='Sukhwinder' />
+              <img className='alum-image' src='http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Courses/TTC/Alumni/Almuni_pictures_and_word_file/Sukhwinder_Singh.jpg' alt='Sukhwinder' />
               <br />
               <h4 className='alum-name'>Sukhwinder Singh</h4>
               <br />
@@ -133,7 +133,7 @@ const Courses = () => {
             <div className='alum-card'>
               <img
                 className='alum-image'
-                src='http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Courses/Alumni/Shivkumar%20Sharma.jpg'
+                src='http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Courses/TTC/Alumni/Almuni_pictures_and_word_file/Shivkumar_Sharma.jpg'
                 alt='Pt. Shivkumar Sharma'
               />
               <br />
