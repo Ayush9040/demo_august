@@ -1,5 +1,6 @@
 import React from 'react'
 import CommonBanner from '../Common-banner'
+import data from './data'
 import './style.scss'
 
 const TermsCondition = () => {
@@ -21,28 +22,22 @@ const TermsCondition = () => {
         />
       </div>
       <div className="terms-and-conditions">
-        <h2>1. Terms and Conditions</h2>
-        <p>{ termsAndCondition}
-        </p>
-        <h2>2. Terms and Conditions</h2>
-        <p>{ termsAndCondition}
-        </p>
-        <h2>3. Terms and Conditions</h2>
-        <p>{ termsAndCondition}
-        </p>
-        <h2>4. Terms and Conditions</h2>
-        <p>{ termsAndCondition}
-        </p>
-        <h2>5. Terms and Conditions</h2>
-        <p>{ termsAndCondition}
-        </p>
-        <h2>6. Terms and Conditions</h2>
-        <p>{ termsAndCondition}
-        </p>
-        <h2>7. Terms and Conditions</h2>
-        <p>{ termsAndCondition}
-        </p>
+        {
+          data.map((value)=>
+          {console.log(value,'aakash')
+            return(
+              <div key={value.heading}>
+                
+                <h2>{value.heading}</h2>
+                <p>{value.points}</p>
+              </div>
+            )
+          }
+          )
+        }
+        
       </div>
+      <p>Students found violating these instructions wilfully or whose presence is considered undesirable, for any reason, will be asked to leave immediately by the Course Coordinator without giving any reason or prior notice. It goes without saying that fees will not be refunded.</p>
     </>
   )
 }
