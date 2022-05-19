@@ -28,10 +28,10 @@ const PublicationNav = ({ title }) => {
                   Yogsattva
                 </li>
               </Link>
-              <Link to="">
+              <Link to="/publication/books">
                 <li className={title === 'books' ? 'nav-active' : ''}>Books</li>
               </Link>
-              <Link to="">
+              <Link to="/publication/e-books">
                 <li className={title === 'ebooks' ? 'nav-active' : ''}>
                   Free E-Books
                 </li>
@@ -63,10 +63,10 @@ const PublicationNav = ({ title }) => {
                 Yogsattva
               </li>
             </Link>
-            <Link to="">
+            <Link to="/publication/books">
               <li className={title === 'books' ? 'nav-active' : ''}>Books</li>
             </Link>
-            <Link to="">
+            <Link to="/publication/e-books">
               <li className={title === 'ebooks' ? 'nav-active' : ''}>
                 Free E-Books
               </li>

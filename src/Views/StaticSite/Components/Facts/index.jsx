@@ -31,10 +31,15 @@ const Facts = () => {
             'The Yoga Institute'. Discover fascinating facts about Shri.Yogendra
             ji, Mother Sita Devi, Dr. Jayadeva, and Dr. Hansaji Yogendra, among
             others.`}
-            <Link to="/our-facts/">
-              <CommonBtn text="Explore More" />
-            </Link>
+           
           </p>
+          <div className='globalButtonParent'>
+            <div>
+              <Link to='/our-facts/'>
+                <CommonBtn text='Explore More' />
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
       <div className="facts-gallery">

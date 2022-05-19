@@ -94,6 +94,96 @@ export const courseAssets = {
   courseAsset2: '/Courses/courses-hero (1).jpg',
   courseAsset3: '/Courses/course (1).png',
   courseAsset4: '/Courses/detailImg.png',
+  courseAsset5: '/Courses/courses_More_than_just_learning.jpg',
+  // camps
+  courseAsset6: '/Courses/Camps/Cardiac_&_Hypertension_camp .jpg',
+  courseAsset7: '/Courses/Camps/Diabetes_camp.jpg',
+  courseAsset8: '/Courses/Camps/Life_Management_Camp.jpg',
+  courseAsset9: '/Courses/Camps/Meditation_Camp.jpg',
+  courseAsset10:'/Courses/Camps/Orthopaedic_Camp_for_Back_and_Joint_Disorders.jpg',
+  courseAsset11: '/Courses/Camps/Pregnancy_Camp_for_Ante _&_Post_Natal.jpg',
+  courseAsset12: '/Courses/Camps/Senior_Citizens_Camp.jpg',
+  courseAsset13: '/Courses/Camps/Stress_management.jpg',
+  courseAsset14: '/Courses/Camps/Weight_management.jpg',
+  courseAsset15: '/Courses/Camps/Weight_management.jpg',
+  courseAsset16: '/Courses/Camps/Weight_management.jpg',
+
+  // certificate
+
+  courseAsset17: '/Courses/Certificate/Department of Ayush.png',
+  courseAsset18: '/Courses/Certificate/Yoga Alliance.png',
+  courseAsset19: '/Courses/Certificate/Yoga Certification Board.png',
+
+  // class
+  courseAsset20: '/Courses/Class/Advanced_regular_asana_class_tyi_teachers.jpg',
+  courseAsset21: '/Courses/Class/Samattvam.jpg',
+  courseAsset22: '/Courses/Class/Weekend_regular_class.jpg',
+  courseAsset23: '/Courses/Class/Yog prayas(1).jpg',
+  courseAsset24: '/Courses/Class/certificate course_on_advance_pranayama_techniques.jpg',
+  courseAsset25: '/Courses/Class/couples_class.jpg',
+  courseAsset26: '/Courses/Class/couples_class.jpg',
+  courseAsset27: '/Courses/Class/mens_class.jpg',
+  courseAsset28: '/Courses/Class/online_meditation_course.jpg',
+  courseAsset29: '/Courses/Class/womens_class.jpg',
+  courseAsset30: '/Courses/Class/yog_prayas.jpg',
+  courseAsset31: '/Courses/Class/yoga_therapy.jpg',
+  courseAsset32: '/Courses/Class/yogasutra_class.jpg',
+
+  // most popular
+
+  courseAsset33: '/Courses/Most_popular/200_hrs_TTC.jpg',
+  courseAsset34: '/Courses/Most_popular/21_days.jpg',
+  courseAsset35: '/Courses/Most_popular/7 days_health_camp.jpg',
+  courseAsset36: '/Courses/Most_popular/900_hrs_TTC.jpg',
+  courseAsset37: '/Courses/Most_popular/Pranayama_workshop.jpg',
+
+  // ttc
+  courseAsset38: '/Courses/TTC/200_hrs_TTC.jpg',
+  courseAsset39: '/Courses/TTC/500_hrs_TTC.jpg',
+  courseAsset40: '/Courses/TTC/900_hrs_TTC.jpg',
+
+
+  // ttc ->   alumni
+
+  courseAsset41: '/Courses/TTC/Alumni/Almuni_pictures_and_word_file/Ajinkya.jpg',
+  courseAsset42: '/Courses/TTC/Alumni/Almuni_pictures_and_word_file/Disha_Vakhani.jpg',
+  courseAsset43: '/Courses/TTC/Alumni/Almuni_pictures_and_word_file/Disha_Vakhani.jpg',
+  courseAsset44: '/Courses/TTC/Alumni/Almuni_pictures_and_word_file/Nirmal-Gangwal.png',
+  courseAsset45: '/Courses/TTC/Alumni/Almuni_pictures_and_word_file/Premchand_Godha.jpg',
+  courseAsset46: '/Courses/TTC/Alumni/Almuni_pictures_and_word_file/RUJUTA_DIWEKAR.jpg',
+  courseAsset47: '/Courses/TTC/Alumni/Almuni_pictures_and_word_file/Shilpa_Shirodkar.jpg',
+  courseAsset48: '/Courses/TTC/Alumni/Almuni_pictures_and_word_file/Shivkumar_Sharma.jpg',
+  courseAsset49: '/Courses/TTC/Alumni/Almuni_pictures_and_word_file/Shweta_Tiwari.jpg',
+  courseAsset50: '/Courses/TTC/Alumni/Almuni_pictures_and_word_file/Sukhwinder_Singh.jpg',
+  courseAsset51: '/Courses/TTC/Alumni/Almuni_pictures_and_word_file/ankita sood.jpg',
+  courseAsset52: '/Courses/TTC/Alumni/Almuni_pictures_and_word_file/carlo.jpeg',
+  courseAsset53: '/Courses/TTC/Alumni/Almuni_pictures_and_word_file/kavita.jpg',
+  courseAsset54: '/Courses/TTC/Alumni/Almuni_pictures_and_word_file/natalia.JPG',
+  courseAsset55: '/Courses/TTC/Alumni/Almuni_pictures_and_word_file/veronica.jpg',
+
+  // workShops
+
+  courseAsset56: '/Courses/Workshops/Food_and_nutrition .jpg',
+  courseAsset57: '/Courses/Workshops/digestion_camp.jpg',
+  courseAsset58: '/Courses/Workshops/pranayama_workshop.jpg',
+
+
+  // tyi activities 
+
+  courseAsset59: '/Courses/tyi_activities/2_year_ttc.jpg',
+  courseAsset60: '/Courses/tyi_activities/Copy_of_900_hrs_TTC.jpg',
+  courseAsset61: '/Courses/tyi_activities/corporate_slider.jpg',
+  courseAsset62: '/Courses/tyi_activities/corporate_workshop.jpg',
+  courseAsset63: '/Courses/tyi_activities/couple_class.jpg',
+  courseAsset64: '/Courses/tyi_activities/home_tuitions.jpg',
+  courseAsset65: '/Courses/tyi_activities/ortho_camp.jpg',
+  courseAsset66: '/Courses/tyi_activities/womens_camp.jpg',
+  
+
+  // 
+
+
+
 }
 
 export const facilitiyAssets = {
@@ -197,6 +287,16 @@ export const mediaAssets={
   // gallery
   seminarImg:'/Media/gallery/seminar.png',
   igCeremony:'/Media/gallery/igceremony.jpg',
+  mediaAssets198: 'Media/gallery/igceremony.jpg',
+  mediaAssets199: 'Media/gallery/media_1.jpg',
+  mediaAssets200: 'Media/gallery/media_2.jpg',
+  mediaAssets201: 'Media/gallery/media_3.jpg',
+  mediaAssets202: 'Media/gallery/media_4.jpg',
+  mediaAssets203: 'Media/gallery/media_5.jpg',
+  mediaAssets204: 'Media/gallery/media_6.jpg',
+  mediaAssets205: 'Media/gallery/media_7.jpg',
+  mediaAssets206: 'Media/gallery/media_8.jpg',
+  mediaAssets207: 'Media/gallery/seminar.png',
 
   // harmony-sec
   mediaAssetsHero:'Media/gallery/99FoundationDay/Hero image .jpg',
@@ -231,11 +331,11 @@ export const mediaAssets={
   mediaAssets24:'/Media/gallery/foundationday-101/f101_10.JPG',
 
   //gff-2018
-  mediaAsset25:'/Media/gallery/gff-2018/gff_1.JPG',
-  mediaAsset26:'/Media/gallery/gff-2018/gff_2.JPG',
-  mediaAsset27:'/Media/gallery/gff-2018/gff_3.JPG',
-  mediaAsset28:'/Media/gallery/gff-2018/gff_4.JPG',
-  mediaAsset29:'/Media/gallery/gff-2018/gff_5.JPG',
+  mediaAsset25:'/Media/gallery/gff-2018/gff_1.jpeg',
+  mediaAsset26:'/Media/gallery/gff-2018/gff_2.jpeg',
+  mediaAsset27:'/Media/gallery/gff-2018/gff_3.jpeg',
+  mediaAsset28:'/Media/gallery/gff-2018/gff_4.jpeg',
+  mediaAsset29:'/Media/gallery/gff-2018/gff_5.jpeg',
 
   //98th foundation day
   mediaAsset30:'/Media/gallery/foundation-98/f98_1.jpg',
@@ -245,7 +345,235 @@ export const mediaAssets={
   mediaAsset34:'/Media/gallery/foundation-98/f98_5.jpg',
   mediaAsset35:'/Media/gallery/foundation-98/f98_6.jpg',
   mediaAsset36:'/Media/gallery/foundation-98/f98_7.jpg',
-  mediaAsset37:'/Media/gallery/foundation-98/f98_8.jpg'
+  mediaAsset37:'/Media/gallery/foundation-98/f98_8.jpg',
+
+  //120th_birth_Anniversary_of_Shri_Yogendraji_Founder_2017
+
+  mediaAssets38: '/Media/gallery/%20120th_birth_Anniversary_of_Shri_Yogendraji_Founder_2017/Hero%20image.jpeg',
+  mediaAssets39: '/Media/gallery/%20120th_birth_Anniversary_of_Shri_Yogendraji_Founder_2017/IMG_8890.jpeg',
+  mediaAssets41: '/Media/gallery/%20120th_birth_Anniversary_of_Shri_Yogendraji_Founder_2017/IMG_8920.jpeg',
+  mediaAssets42: '/Media/gallery/%20120th_birth_Anniversary_of_Shri_Yogendraji_Founder_2017/IMG_8950.jpeg',
+  mediaAssets40: '/Media/gallery/%20120th_birth_Anniversary_of_Shri_Yogendraji_Founder_2017/IMG_8913.jpeg',
+  mediaAssets43: '/Media/gallery/%20120th_birth_Anniversary_of_Shri_Yogendraji_Founder_2017/IMG_8966.jpeg',
+  mediaAssets44: '/Media/gallery/%20120th_birth_Anniversary_of_Shri_Yogendraji_Founder_2017/IMG_8979.jpeg',
+  mediaAssets45: '/Media/gallery/%20120th_birth_Anniversary_of_Shri_Yogendraji_Founder_2017/IMG_8983.jpeg',
+  mediaAssets46: '/Media/gallery/%20120th_birth_Anniversary_of_Shri_Yogendraji_Founder_2017/IMG_9006.jpeg',
+  mediaAssets47: '/Media/gallery/%20120th_birth_Anniversary_of_Shri_Yogendraji_Founder_2017/IMG_9007.jpeg',
+  mediaAssets48: '/Media/gallery/%20120th_birth_Anniversary_of_Shri_Yogendraji_Founder_2017/IMG_9020.jpeg',
+  mediaAssets49: '/Media/gallery/%20120th_birth_Anniversary_of_Shri_Yogendraji_Founder_2017/IMG_9022.jpeg',
+  mediaAssets50: '/Media/gallery/%20120th_birth_Anniversary_of_Shri_Yogendraji_Founder_2017/IMG_9025.jpeg',
+  mediaAssets51: '/Media/gallery/%20120th_birth_Anniversary_of_Shri_Yogendraji_Founder_2017/IMG_9026.jpeg',
+  mediaAssets52: '/Media/gallery/%20120th_birth_Anniversary_of_Shri_Yogendraji_Founder_2017/IMG_9060.jpeg',
+  mediaAssets53: '/Media/gallery/%20120th_birth_Anniversary_of_Shri_Yogendraji_Founder_2017/IMG_9061.jpeg',
+  mediaAssets54: '/Media/gallery/%20120th_birth_Anniversary_of_Shri_Yogendraji_Founder_2017/IMG_9129.jpeg',
+  mediaAssets55: '/Media/gallery/%20120th_birth_Anniversary_of_Shri_Yogendraji_Founder_2017/IMG_9146.jpeg',
+  mediaAssets56: '/Media/gallery/%20120th_birth_Anniversary_of_Shri_Yogendraji_Founder_2017/IMG_9148.jpeg',
+  mediaAssets57: '/Media/gallery/%20120th_birth_Anniversary_of_Shri_Yogendraji_Founder_2017/IMG_9178.jpeg',
+
+  //05052018
+
+  mediaAssets58: '/Media/gallery/05052018/IMG-20180507-WA0013.jpg',
+  mediaAssets59: '/Media/gallery/05052018/IMG-20180507-WA0014.jpg',
+  mediaAssets60: '/Media/gallery/05052018/IMG_6125.jpeg',
+  mediaAssets61: '/Media/gallery/05052018/IMG_6137.jpeg',
+  mediaAssets62: '/Media/gallery/05052018/IMG_6427.jpeg',
+  mediaAssets63: '/Media/gallery/05052018/IMG_6428.jpeg',
+
+  //2009 Mayor_of_mumbai_shraddha_jadhav
+
+  mediaAssets64: '/Media/gallery/2009/Mayor_of_mumbai_shraddha_jadhav/mayor_1.jpeg',
+  mediaAssets65: '/Media/gallery/2009/Mayor_of_mumbai_shraddha_jadhav/mayor_2.jpeg',
+  mediaAssets66: '/Media/gallery/2009/Mayor_of_mumbai_shraddha_jadhav/mayor_3.jpeg',
+  mediaAssets67: '/Media/gallery/2009/Mayor_of_mumbai_shraddha_jadhav/mayor_4.jpeg',
+  mediaAssets68: '/Media/gallery/2009/Mayor_of_mumbai_shraddha_jadhav/mayor_5.jpeg',
+  mediaAssets69: '/Media/gallery/2009/Mayor_of_mumbai_shraddha_jadhav/mayor_6.jpeg',
+  mediaAssets70: '/Media/gallery/2009/Mayor_of_mumbai_shraddha_jadhav/mayor_7.jpeg',
+  mediaAssets71: '/Media/gallery/2009/Mayor_of_mumbai_shraddha_jadhav/mayor_8.jpeg',
+
+  //Mumbai_Police_Commissioner_D_Sivanandan_2009
+
+  mediaAssets72: '/Media/gallery/2009/Mumbai_Police_Commissioner_D_Sivanandan_2009/Com_1.jpeg',
+  mediaAssets73: '/Media/gallery/2009/Mumbai_Police_Commissioner_D_Sivanandan_2009/Com_10.JPG',
+  mediaAssets74: '/Media/gallery/2009/Mumbai_Police_Commissioner_D_Sivanandan_2009/Com_2.JPG',
+  mediaAssets75: '/Media/gallery/2009/Mumbai_Police_Commissioner_D_Sivanandan_2009/Com_3.JPG',
+  mediaAssets76: '/Media/gallery/2009/Mumbai_Police_Commissioner_D_Sivanandan_2009/Com_4.JPG',
+  mediaAssets77: '/Media/gallery/2009/Mumbai_Police_Commissioner_D_Sivanandan_2009/Com_5.JPG',
+  mediaAssets78: '/Media/gallery/2009/Mumbai_Police_Commissioner_D_Sivanandan_2009/Com_6.JPG',
+  mediaAssets79: '/Media/gallery/2009/Mumbai_Police_Commissioner_D_Sivanandan_2009/Com_9.JPG',
+  mediaAssets80: '/Media/gallery/2009/Mumbai_Police_Commissioner_D_Sivanandan_2009/com_11.jpeg',
+  mediaAssets81: '/Media/gallery/2009/Mumbai_Police_Commissioner_D_Sivanandan_2009/com_12.jpeg',
+  //mediaAssets81: 'Media/gallery/2009/Mumbai_Police_Commissioner_D_Sivanandan_2009/com_13.jpeg',
+
+  //Annam_brahma_anuradha_ji 
+
+  mediaAssets82: '/Media/gallery/Annam_brahma_anuradha_ji/Hero image.jpeg',
+  mediaAssets83: '/Media/gallery/Annam_brahma_anuradha_ji/DSC02916.jpeg',
+  mediaAssets84: '/Media/gallery/Annam_brahma_anuradha_ji/DSC02952.jpeg',
+  mediaAssets85: '/Media/gallery/Annam_brahma_anuradha_ji/DSC02995.jpeg',
+  mediaAssets86: '/Media/gallery/Annam_brahma_anuradha_ji/DSC03009.jpeg',
+  mediaAssets87: '/Media/gallery/Annam_brahma_anuradha_ji/DSC03051.jpeg',
+  mediaAssets88: '/Media/gallery/Annam_brahma_anuradha_ji/DSC03165.jpeg',
+  mediaAssets89: '/Media/gallery/Annam_brahma_anuradha_ji/DSC03199.jpeg',
+  mediaAssets90: '/Media/gallery/Annam_brahma_anuradha_ji/DSC03223.jpeg',
+  mediaAssets91: '/Media/gallery/Annam_brahma_anuradha_ji/DSC03240.jpeg',
+
+  //Ayuryog_Expo_7th_&_10th_Nov_2019
+
+  mediaAssets92: '/Media/gallery/Ayuryog_Expo_7th_&_10th_Nov_2019/021A4050.jpg',
+  mediaAssets93: '/Media/gallery/Ayuryog_Expo_7th_&_10th_Nov_2019/021A4108.jpg',
+  mediaAssets94: '/Media/gallery/Ayuryog_Expo_7th_&_10th_Nov_2019/021A4125.jpg',
+  mediaAssets95: '/Media/gallery/Ayuryog_Expo_7th_&_10th_Nov_2019/021A4213.jpg',
+  mediaAssets96: '/Media/gallery/Ayuryog_Expo_7th_&_10th_Nov_2019/021A4217.jpg',
+  mediaAssets97: '/Media/gallery/Ayuryog_Expo_7th_&_10th_Nov_2019/1.jpeg',
+  mediaAssets98: '/Media/gallery/Ayuryog_Expo_7th_&_10th_Nov_2019/2.jpeg',
+  mediaAssets99: '/Media/gallery/Ayuryog_Expo_7th_&_10th_Nov_2019/3.jpeg',
+  mediaAssets100: '/Media/gallery/Ayuryog_Expo_7th_&_10th_Nov_2019/4.jpeg',
+  mediaAssets101: '/Media/gallery/Ayuryog_Expo_7th_&_10th_Nov_2019/5.jpeg',
+  mediaAssets102: '/Media/gallery/Ayuryog_Expo_7th_&_10th_Nov_2019/6.jpeg',
+  mediaAssets103: '/Media/gallery/Ayuryog_Expo_7th_&_10th_Nov_2019/7.jpeg',
+  mediaAssets104: '/Media/gallery/Ayuryog_Expo_7th_&_10th_Nov_2019/8.jpeg',
+  mediaAssets105: '/Media/gallery/Ayuryog_Expo_7th_&_10th_Nov_2019/9.jpeg',
+  mediaAssets106: '/Media/gallery/Ayuryog_Expo_7th_&_10th_Nov_2019/10.jpeg',
+  mediaAssets107: '/Media/gallery/Ayuryog_Expo_7th_&_10th_Nov_2019/11.jpeg',
+  mediaAssets108: '/Media/gallery/Ayuryog_Expo_7th_&_10th_Nov_2019/12.jpeg',
+  mediaAssets109: '/Media/gallery/Ayuryog_Expo_7th_&_10th_Nov_2019/13.jpeg',
+  mediaAssets110: '/Media/gallery/Ayuryog_Expo_7th_&_10th_Nov_2019/A15I1216.jpg',
+  mediaAssets111: '/Media/gallery/Ayuryog_Expo_7th_&_10th_Nov_2019/A15I1221.jpg',
+  mediaAssets112: '/Media/gallery/Ayuryog_Expo_7th_&_10th_Nov_2019/A15I1265.jpg',
+  mediaAssets113: '/Media/gallery/Ayuryog_Expo_7th_&_10th_Nov_2019/A15I1267.jpg',
+  mediaAssets114: '/Media/gallery/Ayuryog_Expo_7th_&_10th_Nov_2019/A15I1286.jpg',
+  mediaAssets115: '/Media/gallery/Ayuryog_Expo_7th_&_10th_Nov_2019/A15I1380.jpg',
+  mediaAssets116: '/Media/gallery/Ayuryog_Expo_7th_&_10th_Nov_2019/A15I1385.jpg',
+  mediaAssets117: '/Media/gallery/Ayuryog_Expo_7th_&_10th_Nov_2019/A15I1511.jpg',
+  mediaAssets118: '/Media/gallery/Ayuryog_Expo_7th_&_10th_Nov_2019/A15I2074.jpg',
+  mediaAssets119: '/Media/gallery/Ayuryog_Expo_7th_&_10th_Nov_2019/Hero image.jpg',
+
+  //Bharat_Gaurav_Award
+  
+
+  mediaAssets120: '/Media/gallery/Bharat_Gaurav_Award_2019/Hero_image.JPG',
+  mediaAssets121: '/Media/gallery/Bharat_Gaurav_Award_2019/DSC_6672.JPG',
+  mediaAssets122: '/Media/gallery/Bharat_Gaurav_Award_2019/DSC_6894.JPG',
+
+  //Decade
+
+  mediaAssets123: '/Media/gallery/Decade/decade_1.jpg',
+  mediaAssets124: '/Media/gallery/Decade/decade_2.JPG',
+  mediaAssets125: '/Media/gallery/Decade/decade_3.jpg',
+  mediaAssets126: '/Media/gallery/Decade/decade_4.JPG',
+  mediaAssets127: '/Media/gallery/Decade/decade_5.jpg',
+  mediaAssets128: '/Media/gallery/Decade/decade_6.jpg',
+  mediaAssets129: '/Media/gallery/Decade/decade_7.jpg',
+
+  //Goa_PES_college_Pics_26th_Nov_2019
+
+  mediaAssets130: '/Media/gallery/Goa_PES_college_Pics_26th_Nov_2019/goa_1.jpg',
+  mediaAssets131: '/Media/gallery/Goa_PES_college_Pics_26th_Nov_2019/goa_2.jpg',
+  mediaAssets132: '/Media/gallery/Goa_PES_college_Pics_26th_Nov_2019/goa_3.jpg',
+  mediaAssets133: '/Media/gallery/Goa_PES_college_Pics_26th_Nov_2019/goa_4.jpg',
+  mediaAssets134: '/Media/gallery/Goa_PES_college_Pics_26th_Nov_2019/goa_5.jpg',
+
+  //Golden_Book_of_World_Record_Award Meeting
+
+  mediaAssets135: '/Media/gallery/Golden_Book_of_World_Record_Award%20Meeting_18022016/IMG_0681.jpg',
+  mediaAssets136: '/Media/gallery/Golden_Book_of_World_Record_Award%20Meeting_18022016/IMG_0682.jpg',
+
+  //Hansaji_birthday_2021
+
+  mediaAssets137: '/Media/gallery/Hansaji_birthday_2021/Hero image.jpeg',
+  mediaAssets138: '/Media/gallery/Hansaji_birthday_2021/DSC07776.jpeg',
+  mediaAssets139: '/Media/gallery/Hansaji_birthday_2021/DSC07776.jpeg',
+  mediaAssets140: '/Media/gallery/Hansaji_birthday_2021/DSC07728.jpeg',
+
+  //Hansajis_70th_Birthday
+
+  mediaAssets141: '/Media/gallery/Hansajis_70th_Birthday/Hero image.jpg',
+  mediaAssets142: '/Media/gallery/Hansajis_70th_Birthday/hansaji_70_1.jpg',
+  mediaAssets143: '/Media/gallery/Hansajis_70th_Birthday/hansaji_70_2.jpg',
+  mediaAssets144: '/Media/gallery/Hansajis_70th_Birthday/hansaji_70_3.jpg',
+  mediaAssets145: '/Media/gallery/Hansajis_70th_Birthday/hansaji_70_4.jpg',
+  mediaAssets146: '/Media/gallery/Hansajis_70th_Birthday/hansaji_70_5.jpg',
+
+  //IIT_29th_Feb_2020_Hansaji
+
+  mediaAssets147: '/Media/gallery/IIT_29th_Feb_2020_Hansaji/868A0965.jpeg',
+  mediaAssets148: '//Media/gallery/IIT_29th_Feb_2020_Hansaji/868A0969.jpeg',
+  mediaAssets149: '//Media/gallery/IIT_29th_Feb_2020_Hansaji/868A0970.jpeg',
+  mediaAssets150: '//Media/gallery/IIT_29th_Feb_2020_Hansaji/868A0972.jpeg',
+  mediaAssets151: '//Media/gallery/IIT_29th_Feb_2020_Hansaji/868A0974.jpeg',
+  mediaAssets152: '//Media/gallery/IIT_29th_Feb_2020_Hansaji/868A0976.jpeg',
+  mediaAssets153: '/Media/gallery/IIT_29th_Feb_2020_Hansaji/868A0980.jpeg',
+
+  //Mass_Yoga_Bhopal
+
+  mediaAssets154: '/Media/gallery/Mass_Yoga_Bhopal/bhopal_1.jpeg',
+  mediaAssets155: '/Media/gallery/Mass_Yoga_Bhopal/bhopal_2.jpeg',
+  mediaAssets156: '/Media/gallery/Mass_Yoga_Bhopal/bhopal_3.jpeg',
+  mediaAssets157: '/Media/gallery/Mass_Yoga_Bhopal/bhopal_4.jpeg',
+  mediaAssets158: '/Media/gallery/Mass_Yoga_Bhopal/bhopal_5.jpeg',
+  mediaAssets159: '/Media/gallery/Mass_Yoga_Bhopal/bhopal_6.jpg',
+
+  //Pranab_Mukherjee
+
+  mediaAssets160: '/Media/gallery/Pranab_Mukherjee_Aug_2019/Hero_image.jpg',
+  mediaAssets161: '/Media/gallery/Pranab_Mukherjee_Aug_2019/IMG_4248.JPG',
+  mediaAssets162: '/Media/gallery/Pranab_Mukherjee_Aug_2019/IMG_4253.JPG',
+  mediaAssets163: '/Media/gallery/Pranab_Mukherjee_Aug_2019/IMG_4261.JPG',
+
+  //Shri_Amitabh_Gupta_Add_CP
+
+  mediaAssets164: '/Media/gallery/Shri_Amitabh_Gupta_Add_CP_2010/amit_g_1.JPG',
+  mediaAssets165: '/Media/gallery/Shri_Amitabh_Gupta_Add_CP_2010/amit_g_2.JPG',
+  mediaAssets166: '/Media/gallery/Shri_Amitabh_Gupta_Add_CP_2010/amit_g_3.JPG',
+  mediaAssets167: '/Media/gallery/Shri_Amitabh_Gupta_Add_CP_2010/amit_g_4.JPG',
+  mediaAssets168: '/Media/gallery/Shri_Amitabh_Gupta_Add_CP_2010/amit_g_5.JPG',
+  mediaAssets169: '/Media/gallery/Shri_Amitabh_Gupta_Add_CP_2010/amit_g_6.JPG',
+  mediaAssets170: '/Media/gallery/Shri_Amitabh_Gupta_Add_CP_2010/amit_g_7.JPG',
+  mediaAssets171: '/Media/gallery/Shri_Amitabh_Gupta_Add_CP_2010/amit_g_8.JPG',
+
+  //Shri_Anupam_Kher_&_Pandit_Shiv_Kumar_Sharma_&_Shri_Sukhwinder_Singh
+
+  mediaAssets172: '/Media/gallery/Shri_Anupam_Kher_&_Pandit_Shiv_Kumar_Sharma_&_Shri_Sukhwinder_Singh_2012/Hero_image.jpeg',
+  mediaAssets173: '/Media/gallery/Shri_Anupam_Kher_&_Pandit_Shiv_Kumar_Sharma_&_Shri_Sukhwinder_Singh_2012/DSCN0212.jpeg',
+  mediaAssets174: '/Media/gallery/Shri_Anupam_Kher_&_Pandit_Shiv_Kumar_Sharma_&_Shri_Sukhwinder_Singh_2012/DSCN0214.jpeg',
+  mediaAssets175: '/Media/gallery/Shri_Anupam_Kher_&_Pandit_Shiv_Kumar_Sharma_&_Shri_Sukhwinder_Singh_2012/DSCN0221.jpeg',
+  mediaAssets176: '/Media/gallery/Shri_Anupam_Kher_&_Pandit_Shiv_Kumar_Sharma_&_Shri_Sukhwinder_Singh_2012/DSCN0412.jpeg',
+  mediaAssets177: '/Media/gallery/Shri_Anupam_Kher_&_Pandit_Shiv_Kumar_Sharma_&_Shri_Sukhwinder_Singh_2012/DSCN0413.jpeg',
+  mediaAssets178: '/Media/gallery/Shri_Anupam_Kher_&_Pandit_Shiv_Kumar_Sharma_&_Shri_Sukhwinder_Singh_2012/DSCN0514.jpeg',
+  mediaAssets179: '/Media/gallery/Shri_Anupam_Kher_&_Pandit_Shiv_Kumar_Sharma_&_Shri_Sukhwinder_Singh_2012/DSCN0663.jpeg',
+
+  //Shri_Pradeep_Sonawane_&_Shri_Suresh_Bharwani 
+
+  mediaAssets180: '/Media/gallery/Shri_Pradeep_Sonawane_&_Shri_Suresh_Bharwani_2014/IMG_6622.jpeg',
+  mediaAssets181: '/Media/gallery/Shri_Pradeep_Sonawane_&_Shri_Suresh_Bharwani_2014/IMG_6625.jpeg',
+  mediaAssets182: '/Media/gallery/Shri_Pradeep_Sonawane_&_Shri_Suresh_Bharwani_2014/IMG_6626.jpeg',
+  mediaAssets183: '/Media/gallery/Shri_Pradeep_Sonawane_&_Shri_Suresh_Bharwani_2014/IMG_6627.jpeg',
+  mediaAssets184: '/Media/gallery/Shri_Pradeep_Sonawane_&_Shri_Suresh_Bharwani_2014/IMG_6631.jpeg',
+
+  //Shri_Sukhwinder_Singh_&_Shri_Rajan_Saxena
+
+  mediaAssets185: '/Media/gallery/Shri_Sukhwinder_Singh_&_Shri_Rajan_Saxena_2015/Shuk_1.jpeg',
+  mediaAssets186: '/Media/gallery/Shri_Sukhwinder_Singh_&_Shri_Rajan_Saxena_2015/Shuk_2.jpeg',
+  mediaAssets187: '/Media/gallery/Shri_Sukhwinder_Singh_&_Shri_Rajan_Saxena_2015/Shuk_3.jpeg',
+  mediaAssets188: '/Media/gallery/Shri_Sukhwinder_Singh_&_Shri_Rajan_Saxena_2015/Shuk_4.jpeg',
+  mediaAssets189: '/Media/gallery/Shri_Sukhwinder_Singh_&_Shri_Rajan_Saxena_2015/Shuk_5.jpeg',
+  mediaAssets190: '/Media/gallery/Shri_Sukhwinder_Singh_&_Shri_Rajan_Saxena_2015/Shuk_6.jpeg',
+  mediaAssets191: '/Media/gallery/Shri_Sukhwinder_Singh_&_Shri_Rajan_Saxena_2015/Shuk_7.jpeg',
+  mediaAssets192: '/Media/gallery/Shri_Sukhwinder_Singh_&_Shri_Rajan_Saxena_2015/Shuk_8.jpeg',
+  mediaAssets193: '/Media/gallery/Shri_Sukhwinder_Singh_&_Shri_Rajan_Saxena_2015/Shuk_9.jpeg',
+  mediaAssets194: '/Media/gallery/Shri_Sukhwinder_Singh_&_Shri_Rajan_Saxena_2015/Shuk_10.jpeg',
+  mediaAssets195: '/Media/gallery/Shri_Sukhwinder_Singh_&_Shri_Rajan_Saxena_2015/Shuk_11.jpeg',
+
+  //Suresh_Prabhu-Dr_Saabs_birthday
+
+  mediaAssets196: '/Media/gallery/Suresh_Prabhu-Dr_Saabs_birthday/Hero_image.jpg',
+  mediaAssets197: '/Media/gallery/Suresh_Prabhu-Dr_Saabs_birthday/dr_1.jpg',
+
+  //
+
+ 
+  
+
 
   // news
 
@@ -573,5 +901,8 @@ export const experienceAssets={
 
 
 }
+
+
+
 
 export default baseDomain

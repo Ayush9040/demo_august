@@ -48,10 +48,11 @@
         position: relative;
         display: grid;
         grid-template-columns: repeat(3,1fr);
-        background-color: rgba($color: #ddc2ad7a, $alpha: 1.0);
+        width: 100%;
+        background-color: rgba($color: #F4EBE7, $alpha: 1.0);
         padding: 7rem 0 0 2rem;
        column-gap: 1rem;
-       max-width:fit-content;
+       //max-width:fit-content;
         .single-menu{
             h3{
                 font-size: 1.5rem;
@@ -99,11 +100,13 @@
     }
     .sub-menu{
         display: block;
-        background-color: rgba($color: #ddc2ad7a, $alpha: 1.0);
-        padding: 7rem 20rem 0 10rem;
+        width: 27%;
+        background-color: rgba($color: #F4EBE7, $alpha: 1.0);
+        padding: 7rem 2rem 0 2rem;
        column-gap: 1rem;
-       max-width:fit-content;
+       max-width:27%;
         .single-menu{
+            margin-bottom: 3rem;
             h3{
                 font-size: 1.5rem;
             }
