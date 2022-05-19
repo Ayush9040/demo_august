@@ -1,22 +1,26 @@
 .publication-card{
-    width: 90%;
+    width: 320px;
+    min-width: 320px;
     margin: 0 auto;
-    height: 630px;
+    // height: 630px;
     border-radius: 60px;
     background-color: #fff;
+    overflow: hidden;
 }
 .book-image{
     width: 100%;
-    height: 60%;
+    // height: 60%;
+    height: 250px;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
-    &>div{
-        width: 150px;
-        height: 150px;
-        background-color: gray;
-        border-radius: 50%;
+    
+    &>img{
+        width: 100%;
+        height: 100%;
+        // background-color: gray;
+        object-fit: fill;
     }
     &>h4{
         font-weight: bold;
@@ -29,36 +33,42 @@
 }
 .book-details{
     width: 100%;
-    height: 40%;
-    border-radius: 0  0 60px 60px;
+    // height: 40%;
+
+    // height: 150px;
+    // border-radius: 0  0 60px 60px;
     padding: 2rem;
     box-sizing: border-box;
-    &>h2{
+    &>p{
+        font-size: 1.75rem;
         font-weight: 700;
         color: #fff;
+        min-height: 60px;
     }
     .global-common-btn{
         margin-left: auto;
         margin-right: 0;
+        margin-top: 0px;
+        padding: 1rem 1.5rem;
         color: #fff;
         border-color: #fff;
     }
 }
 
-@media(max-width:1600px){
-    .publication-card{
-        height: 500px;
-    }
-}
+// @media(max-width:1600px){
+//     .publication-card{
+//         height: 500px;
+//     }
+// }
 
-@media(max-width:768px){
-    .publication-card{
-        width: 100%;
-        height: 400px;
-    }
-}
-@media(max-width:420px){
-    .publication-card{
-        height: 450px;
-    }
-}
+// @media(max-width:768px){
+//     .publication-card{
+//         width: 100%;
+//         height: 400px;
+//     }
+// }
+// @media(max-width:420px){
+//     .publication-card{
+//         height: 450px;
+//     }
+// }
