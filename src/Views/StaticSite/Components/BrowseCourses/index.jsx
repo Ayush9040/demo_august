@@ -64,7 +64,7 @@ const BrowseCourses = () => {
             </AccordionItem>
           </Accordion>
         </div>
-        {/* <div className="course-grid">
+        <div className="course-grid">
           <CourseCard
             color={'#cd4576'}
             index={'1'}
@@ -110,7 +110,7 @@ const BrowseCourses = () => {
             index={'1'}
             courseTitle={'Course Name'}
           />
-        </div> */}
+        </div>
         <div className='course-grid' >
           
         </div>
