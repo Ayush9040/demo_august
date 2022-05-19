@@ -23,8 +23,8 @@ const CourseDetails = ({ pageDate }) => {
   } = pageDate
 
   //console.log(unique, pageDate)
-  console.log(fees,'fees')
-  console.log(prerequisites,'prereq')
+  console.log(fees, 'fees')
+  console.log(prerequisites, 'prereq')
   console.log(benefits, 'benefits')
   console.log(curriculum, 'curriculum')
   console.log(unique, 'unique')
@@ -150,9 +150,10 @@ const CourseDetails = ({ pageDate }) => {
                     <div key={title}>
                       <h4>{title}</h4>
                       <ul>
-                        {points?.map((itm) => (
-                          <li key={itm}>{itm}</li>
-                        ))}
+                        {points?.map((itm) => {
+                          if (typeof itm !== 'object')
+                            return <li key={itm}>{itm}</li>
+                        })}
                       </ul>
                     </div>
                   )
@@ -165,9 +166,9 @@ const CourseDetails = ({ pageDate }) => {
               <p>{TeachingAndCertification?.description}</p>
 
               <ul>
-                {TeachingAndCertification?.points?.map(({ title, points }) => (
+                {TeachingAndCertification?.points?.map(({ title, points, description }) => (
                   <li key={title}>
-                    <span>{title}</span>
+                    <span>{title || description}</span>
                     <dl>
                       {points?.map((itm) => (
                         <dt key={itm}>{itm}</dt>

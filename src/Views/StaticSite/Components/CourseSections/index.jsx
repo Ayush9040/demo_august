@@ -31,27 +31,25 @@ const CourseSection = ({ title, showRangeSlider, color, data }) => {
             <AccordionItemPanel>
               <h4>
                 <ul>
-                  <Link to='/courses/browse/2-month'>
-                    <li>Two Months Training Course - On Campus</li>
-                  </Link>
-                  <Link to='/courses/browse/3-months'>
-                    <li>
+                  <li>Two Months Training Course - On Campus</li>
+                
+                 
+                  <li>
                         Weekend Training Course - 3 Months / Online - English
-                    </li>
-                  </Link>
-                  <Link to='/courses/browse/1-month'>
-                    <li>One Month Training Course - Online / On Campus</li>
-                  </Link>
-                  <Link to='/courses/browse/2-month'>
-                    <li>
+                  </li>
+                  
+                
+                  <li>One Month Training Course - Online / On Campus</li>
+               
+    
+                  <li>
                         Two Month Training Course - Part Time/ Online - Hindi
-                    </li>
-                  </Link>
-                  <Link to='/courses/browse/ttc'>
-                    <li>
+                  </li>
+           
+                  <li>
                         Teacher Training Course - Part Time/ Online- English
-                    </li>
-                  </Link>
+                  </li>
+           
                 </ul>
               </h4>
             </AccordionItemPanel>
@@ -124,7 +122,7 @@ const CourseSection = ({ title, showRangeSlider, color, data }) => {
     <div className='course-section'>
       <div className='course-list'>
         <div className='course-title'>
-          <h1>{title}</h1>
+          { title === 'Teacher Training Courses' ? <Link to={'/courses/browse/ttc'} ><h1>{title}</h1></Link>: <h1>{title}</h1>}
           {(title === 'Most Popular' || title === 'Classes') && (
             <div className='concave-border'></div>
           )}
