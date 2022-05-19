@@ -7,7 +7,6 @@ const MegaMenu = ({ setNav }) => {
   const [menuItem, setMenuItem] = useState('COURSES')
 
   const navItems = [
-    
     {
       name: 'ABOUT',
       link: '/about',
@@ -15,7 +14,7 @@ const MegaMenu = ({ setNav }) => {
       key: 'ABOUT',
     },
     { name: 'COURSES', link: '/courses', id: 2, key: 'COURSES' },
-    { name: 'FACILITIES', link: '/facilities', id: 3,  key: 'FACILITIES' },
+    { name: 'FACILITIES', link: '/facilities', id: 3, key: 'FACILITIES' },
     { name: 'MUSEUM', link: '/museum', id: 4, key: 'MUSEUM' },
     { name: 'DONATE', link: '/donation', id: 5, key: 'DONATION' },
     { name: 'GIFTING', link: '/gifting', id: 6, key: 'GIFTING' },
@@ -31,8 +30,6 @@ const MegaMenu = ({ setNav }) => {
     { name: 'NEWS,EVENTS & MEDIA', link: '/media', id: 11, key: 'NEWS' },
     { name: 'ALUMNI', link: '/alumni', id: 12, key: 'ALUMNI' },
     { name: 'VOLUNTEER', link: '/join-our-team', id: 13, key: 'VOLUNTEER' },
-  
-    
   ]
 
   const subMenu = {
@@ -109,20 +106,20 @@ const MegaMenu = ({ setNav }) => {
     ],
   }
   return (
-    <div className="mega-menu-container">
-      <div className="left-menu">
+    <div className='mega-menu-container'>
+      <div className='left-menu'>
         <div
-          className="cross"
+          className='cross'
           onClick={() => {
             setNav(false)
           }}
         >
           {cross}
         </div>
-        <div className="menu-logo">
-          <Link to="/">{legacy2}</Link>
+        <div className='menu-logo'>
+          <Link to='/'>{legacy2}</Link>
         </div>
-        <ul className="navigation-ul">
+        <ul className='navigation-ul'>
           {navItems &&
             navItems.map((item, i) => {
               if (item.name !== 'LOCATE US') {
@@ -131,7 +128,9 @@ const MegaMenu = ({ setNav }) => {
                     onMouseOver={() => {
                       setMenuItem(item.key)
                     }}
-                    onClick={()=>{setNav(false)}}
+                    onClick={() => {
+                      setNav(false)
+                    }}
                     to={`${item.link}`}
                     key={i}
                   >
@@ -143,7 +142,7 @@ const MegaMenu = ({ setNav }) => {
                           background:
                             'linear-gradient(90deg,#fff,#BC4F31,#BC4F31,#fff)',
                         }}
-                        className="bottom-line"
+                        className='bottom-line'
                       ></div>
                     </li>
                   </Link>
@@ -151,10 +150,12 @@ const MegaMenu = ({ setNav }) => {
               } else {
                 return (
                   <a
-                    href="https://goo.gl/maps/bxH6SifrXjXAhteV7"
-                    target="_blank"
-                    rel="noreferrer"
-                    onMouseOver={()=>{setMenuItem(item.key)}}
+                    href='https://goo.gl/maps/bxH6SifrXjXAhteV7'
+                    target='_blank'
+                    rel='noreferrer'
+                    onMouseOver={() => {
+                      setMenuItem(item.key)
+                    }}
                   >
                     <li>
                       {item.name}
@@ -164,7 +165,7 @@ const MegaMenu = ({ setNav }) => {
                           background:
                             'linear-gradient(90deg,#fff,#BC4F31,#BC4F31,#fff)',
                         }}
-                        className="bottom-line"
+                        className='bottom-line'
                       ></div>
                     </li>
                   </a>
@@ -173,37 +174,43 @@ const MegaMenu = ({ setNav }) => {
             })}
         </ul>
       </div>
-      <div className={ menuItem==='COURSES' ? 'right-menu':'right-menu sub-menu'}>
+      <div
+        className={
+          menuItem === 'COURSES' ? 'right-menu' : 'right-menu sub-menu'
+        }
+      >
         {menuItem === 'COURSES' && (
           <>
-            <div className="single-menu">
+            <div className='single-menu'>
               <h3>TEACHERS TRAINING</h3>
               <ul>
-                <li className="text-bold">200 Hour Courses</li>
+                <li className='text-bold'>200 Hour Courses</li>
                 <li>Two Months Training Course - On Campus</li>
                 <li>Weekend Training Course - 3 Months / Online - English</li>
                 <li>One Month Training Course - Online / On Campus</li>
                 <li>Two Month Training Course - Part Time/ Online - Hindi</li>
-                <li>Teacher Training Course - Part Time/ Online- English</li>
-                <li className="text-bold">500 Hour Courses</li>
-                <li>Three Months Teacher Training Course</li>
-                <li className="text-bold">900 Hour Courses</li>
+                <li style={{ marginBottom: '1.5rem' }}>
+                  Teacher Training Course - Part Time/ Online- English
+                </li>
+                <li className='text-bold'>500 Hour Courses</li>
+                <li style={{ marginBottom: '1.5rem' }} >Three Months Teacher Training Course</li>
+                <li className='text-bold'>900 Hour Courses</li>
                 <li>Four Months Teacher Training Course</li>
                 <li>Yoga Teachers Training Course - 7 Months</li>
                 <li>Yoga Teachers Training Course - 9 Months - Hindi</li>
                 <li>Yoga Teachers Training Course - 12 Months - English</li>
                 <li>Yoga Teachers Training Course - 24 Months</li>
-                <li className="text-bold">Certificate Yoga Therapy Course</li>
-                <li className="text-bold">
+                <li className='text-bold' style={{ marginBottom: '1.5rem' }} >Certificate Yoga Therapy Course</li>
+                <li className='text-bold' style={{ marginBottom: '1.5rem' }} >
                   Certificate Program on Yoga for Cancer
                 </li>
-                <li className="text-bold">
+                <li className='text-bold' style={{ marginBottom: '1.5rem' }} >
                   Certificate Course on Advanced <br />
                   Pranayama Techniques
                 </li>
               </ul>
             </div>
-            <div className="single-menu">
+            <div className='single-menu'>
               <h3>CAMPS</h3>
               <ul>
                 <li>Stress Management Camp</li>
@@ -214,7 +221,7 @@ const MegaMenu = ({ setNav }) => {
                 <li>7 Days Health Camp Hindi</li>
                 <li>21 Days Better Living Course English - Morning</li>
                 <li>21 Days Better Living Course English - Evening</li>
-                <li>21 Days Better Living Course Hindi - Evening</li>
+                <li style={{ marginBottom: '1.5rem' }} >21 Days Better Living Course Hindi - Evening</li>
                 <h3>ASANA REGULAR CLASSES</h3>
                 <ul>
                   <li>Asana Regular Classes for Men</li>
@@ -225,13 +232,13 @@ const MegaMenu = ({ setNav }) => {
                   <li>Yog Prayas</li>
                   <li>Meditation Course</li>
                   <li>Regular Meditation Classes</li>
-                  <li>
+                  <li style={{ marginBottom: '1.5rem' }} >
                     Advance Regular Yoga Classes <br /> – TYI Teachers
                   </li>
                 </ul>
               </ul>
             </div>
-            <div className="single-menu">
+            <div className='single-menu'>
               <h3>WORKSHOPS</h3>
               <ul>
                 <li>Weight Management Workshop</li>
@@ -245,16 +252,22 @@ const MegaMenu = ({ setNav }) => {
                 <li>Senior Citizen</li>
                 <li>Respiratory</li>
               </ul>
-              <div className="filler">{filler}</div>
+              <div className='filler'>{filler}</div>
             </div>
           </>
         )}
         {menuItem !== 'COURSES' && (
-          <div className="single-menu">
-            <ul className="navigation-ul">
+          <div className='single-menu'>
+            <ul className='navigation-ul'>
               {subMenu[menuItem]?.map((item, i) => {
                 return (
-                  <Link onClick={()=>{setNav(false)}} to={`${item.link}`} key={i}>
+                  <Link
+                    onClick={() => {
+                      setNav(false)
+                    }}
+                    to={`${item.link}`}
+                    key={i}
+                  >
                     <li>
                       {item.menu}
                       <div
@@ -263,14 +276,16 @@ const MegaMenu = ({ setNav }) => {
                           background:
                             'linear-gradient(90deg,#fff,#BC4F31,#BC4F31,#fff)',
                         }}
-                        className="bottom-line"
+                        className='bottom-line'
                       ></div>
                     </li>
                   </Link>
                 )
               })}
             </ul>
-            <div style={{ position:'fixed', bottom:'80px', width:'200px' }}>{filler1}</div>
+            <div style={{ position: 'fixed', bottom: '80px', width: '200px' }}>
+              {filler1}
+            </div>
           </div>
         )}
       </div>
