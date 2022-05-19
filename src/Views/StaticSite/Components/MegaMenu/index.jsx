@@ -56,7 +56,7 @@ const MegaMenu = ({ setNav }) => {
     ],
     MUSEUM: [
       { menu: 'Overview', link: '/museum' },
-      { menu: 'Virual Tour', link: '/museum' },
+      { menu: 'Virtual Tour', link: '/museum' },
       { menu: 'Gallery', link: '/museum' },
       { menu: 'location', link: '/museum' },
     ],
@@ -77,7 +77,7 @@ const MegaMenu = ({ setNav }) => {
       { menu: 'Overview', link: '/Gifting' },
       { menu: 'Gift Career', link: '/Gifting' },
       { menu: 'Gift Health and Wellness', link: '/Gifting' },
-      { menu: 'Gidt wisdom', link: '/Gifting' },
+      { menu: 'Gift wisdom', link: '/Gifting' },
       { menu: 'Gift Nispand', link: '/Gifting' },
     ],
     DONATION: [
