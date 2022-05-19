@@ -1,6 +1,7 @@
 import React from 'react'
 import CommonBanner from '../Common-banner'
 import './style.scss'
+import data from './data.js'
 
 const PrivacyPolicy = () => {
   let description =
@@ -20,27 +21,20 @@ const PrivacyPolicy = () => {
         />
       </div>
       <div className="terms-and-conditions">
-        <h2>1. Privacy Policy</h2>
-        <p>{Privacy}
-        </p>
-        <h2>2. Privacy Policy</h2>
-        <p>{Privacy}
-        </p>
-        <h2>3. Privacy Policy</h2>
-        <p>{Privacy}
-        </p>
-        <h2>4. Privacy Policy</h2>
-        <p>{Privacy}
-        </p>
-        <h2>5. Privacy Policy</h2>
-        <p>{Privacy}
-        </p>
-        <h2>6. Privacy Policy</h2>
-        <p>{Privacy}
-        </p>
-        <h2>7. Privacy Policy</h2>
-        <p>{Privacy}
-        </p>
+        {
+          data.map((value)=>
+          {
+            return(
+              <div key={value.title}>
+                <h2>{value.title}</h2>
+                <p>{value.policy}</p>
+              </div>
+            )
+          }
+          )
+        
+        }
+        <p>Hello</p>
       </div>
     </>
   )

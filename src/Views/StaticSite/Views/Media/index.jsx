@@ -46,7 +46,7 @@ const MediaGallery = () => {
             style={{ position: 'relative' }}
           >
             <div className='view-album'>
-              <h3>
+              <h3 >
                 {item.title}
                 <br />
                 <p>1 Albums</p>
