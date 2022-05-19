@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
 import Heading from '../../Components/Heading'
-import TimePeriodSelector from '../../Components/Facts/TimePeriodSelector'
+import TimePeriodSelector from '../../Components/TimePeriodSelector'
 import { divider } from '../../assets/icons/icon'
 import './style.scss'
 import Images from '../../Components/Facts/imageRepo'
 import CommonBannerNavPrimary from '../../Components/CommonBannerNavPrimary'
 import FactsDecadeText from '../../Components/Facts/FactsDecadeText'
+import factsImagesWithDateRange from '../../assets/data/factsImagesWithDateRange'
 
 const OurFacts = () => {
   const [decade, setDecade] = useState(0)
@@ -29,7 +30,7 @@ const OurFacts = () => {
         <div className='ourfacts-header'>
           <div className='ourfacts-header-text'>
             <Heading smallText={'The Yoga Institute Facts'} />
-            <TimePeriodSelector onDecadeChange={setDecade} />
+            <TimePeriodSelector onDecadeChange={setDecade} dateRange={factsImagesWithDateRange} />
             <div className='our-facts-text '>
               {/* <p>
                 {`Uncover both ancient and new interesting facts about your very own,

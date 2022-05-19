@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 import './style.scss'
 
 const BlogCard = ({ blogs }) => {
-  console.log(blogs, 'blogs')
   return (
     <Link to={`/blogs/${blogs?.id}`}>
       <div className='blog-card'>

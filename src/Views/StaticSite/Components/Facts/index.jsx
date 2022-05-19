@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
 import Heading from '../Heading'
-import TimePeriodSelector from './TimePeriodSelector'
+import TimePeriodSelector from '../TimePeriodSelector'
 import { facts, divider } from '../../assets/icons/icon'
 import './style.scss'
 import CommonBtn from '../commonbtn'
 import { Link } from 'react-router-dom'
 import Images from './imageRepo'
+import factsImagesWithDateRange from '../../assets/data/factsImagesWithDateRange'
 
 const Facts = () => {
   const [decade, setDecade] = useState(0)
@@ -19,7 +20,7 @@ const Facts = () => {
   return (
     <div className="facts-container global-padding">
       <div className="facts-header">
-        <TimePeriodSelector onDecadeChange={setDecade} />
+        <TimePeriodSelector onDecadeChange={setDecade} dateRange={factsImagesWithDateRange} />
         <div className="facts-header-text">
           <Heading
             logo={facts}
