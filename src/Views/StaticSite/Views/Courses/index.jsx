@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import CommonBannerNavPrimary from '../../Components/CommonBannerNavPrimary'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
@@ -7,6 +7,8 @@ import CourseSection from '../../Components/CourseSections'
 import CommonBtn from '../../Components/commonbtn'
 import { courseCardData } from '../../utils/courseCardData'
 import { Link } from 'react-router-dom'
+
+import { courseArray, course200H, camps, course900H, classes } from '../../Constants/courses/c200hr'
 
 const Courses = () => {
 

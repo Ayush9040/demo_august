@@ -3,10 +3,10 @@ import './style.scss'
 import { star, global, network, chat } from '../../assets/icons/icon'
 import CommonBtn from '../commonbtn'
 import baseDomain,{ courseAssets } from '../../assets/images/imageAsset'
-const CourseDetails = ({ name: nameProp, description, pageDate }) => {
+const CourseDetails = ({ pageDate }) => {
   const [detail, setDetail] = useState(1)
 
-  const { name, deatils, benefits, duration, date, timings, fees, prerequisites, curriculum, unique } = pageDate
+  const { name, deatils, benefits, duration, date, timings, fees, prerequisites, curriculum, unique, TeachingAndCertification } = pageDate
 
   console.log(unique, pageDate)
 
@@ -135,69 +135,21 @@ const CourseDetails = ({ name: nameProp, description, pageDate }) => {
           )}
           {detail === 3 && (
             <div className="course-curriculam">
+
+              <p>{TeachingAndCertification?.description}</p>
+
               <ul>
-                
-                <li>
-                  
-                  <span>KNOWLEDGE</span>
-                  <dl>
-                    <dt>Introduction to Yoga and Yogic Practices.</dt>
-                    <dt>Introduction to Hatha Yoga.</dt>
-                    <dd>
-                      Introduction to important Hatha Yoga Texts with special
-                      reference to Hatha Yoga Pradipika.
-                    </dd>
-                    <dt>Introduction to Patanjali Yoga Sutras.</dt>
-                    <dt>Bhavas of the Buddhi – Basis of Yoga Education</dt>
-                    <dt>Introduction to Anatomy and Physiology</dt>
-                    <dt>Introduction to Human Systems, Yoga and Health</dt>
-                    <dt>
-                      Yoga for wellness – prevention and promotion of positive
-                      health
-                    </dt>
-                    <dt>Yoga and stress management.</dt>
-                  </dl>
-                </li>
-                <li>
-                  <span>SKILL</span>
-                  <dl>
-                    <dt>Sahajbhava Asanas</dt>
-                    <dt>Shat Karmas</dt>
-                    <dt>Surya Namaskar (Sun Salutation)</dt>
-                    <dt>Asanas</dt>
-                    <dd>
-                      Knowledge of selected postures and demonstrated ability to
-                      perform these postures – meditative and cultural (dynamic
-                      and static versions).
-                    </dd>
-                    <dd>
-                      Selected psychophysical and conceptual techniques
-                      pioneered by The Yoga Institute.
-                    </dd>
-                    <dt>Pranayamas</dt>
-                    <dd>
-                      Knowledge, teaching, and demonstrated ability to select
-                      Pranayamas.
-                    </dd>
-                    <dt>Practices leading to Meditation</dt>
-                    <dt>Communication and Teaching Practice</dt>
-                    <dd>
-                      Understanding and practice of basic skills of public
-                      speaking.
-                    </dd>
-                    <dd>
-                      Familiarity and demonstration ability to apply teaching
-                      methods.
-                    </dd>
-                    <dd>Adapt the above to unique styles of learning.</dd>
-                    <dd>Provide supportive and effective feedback.</dd>
-                    <dd>
-                      Acknowledge the aspirant’s progress and ability to cope
-                      with difficulties.
-                    </dd>
-                    <dt>Principles and skills for working with groups.</dt>
-                  </dl>
-                </li>
+                {
+                  TeachingAndCertification?.points?.map(({ title, points }) => (
+                    <li key={title}>
+                      <span>{title}</span>
+                      <dl>
+                        {points?.map((itm) => (
+                          <dt key={itm}>{itm}</dt>
+                        ))}
+                      </dl>
+                    </li>
+                  ))}
               </ul>
             </div>
           )}
