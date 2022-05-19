@@ -41,8 +41,8 @@
 
         row-gap: 4rem;
         button {
-          height: 30px;
-          width: 100px;
+          height: 55px;
+          width: 130px;
           font-size: 2rem;
           border-radius: 90px;
           font-weight: 500;
@@ -57,8 +57,8 @@
         margin-top: 5rem;
         padding:1em;
         &>input {
-          height: 40px;
-          width: 160px;
+          height: 60px;
+          width: 195px;
           max-width: 300px;
           font-size: 2rem;
           border-radius: 90px;
@@ -67,6 +67,7 @@
           border: 1px solid #aaa;
           color: #000;
           text-align: center;
+          padding: 2rem 1rem;
           &::placeholder{
             color: #aaa;
           }
@@ -150,12 +151,12 @@
         background-color: var(--brick-red);
         color: white;
         padding: 0 auto;
-        font-size: 1.7rem;
+        font-size: 2rem;
         width: 70%;
         text-align: center;
         .global-common-btn-content {
-          margin-top: 10px;
-          margin-bottom: 10px;
+          // margin-top: 10px;
+          // margin-bottom: 10px;
         }
       }
     }
