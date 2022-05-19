@@ -18,10 +18,12 @@
         font-size: 1.8rem;
         width: 60%;
         text-align: center;
-        .global-common-btn-content {
-          margin-top: 10px;
-          margin-bottom: 10px;
-        }
+        margin: 0 auto; 
+        // .global-common-btn-content {
+        
+        //   margin-top: 10px;
+        //   margin-bottom: 10px;
+        // }
       }
     }
     .input-box {
@@ -119,9 +121,9 @@
       grid-template-columns: 33% 33% 33%;
       margin-top: 50px;
       justify-content: center;
-      column-gap: 9rem;
+      // column-gap: 9rem;
       .donation-logos {
-        width: 90%;
+        width: 70%;
         text-align: center;
         margin: 2rem auto;
         svg {
@@ -154,6 +156,7 @@
         font-size: 2rem;
         width: 70%;
         text-align: center;
+        margin: 5rem auto; 
         .global-common-btn-content {
           // margin-top: 10px;
           // margin-bottom: 10px;
