@@ -1,6 +1,6 @@
-import { type } from '@testing-library/user-event/dist/type'
+
 import baseDomain, { homeAssets } from '../assets/images/imageAsset'
-import BlogLink from '../Components/BlogLink'
+
 export const allBlogData = [
   {
     id: 'blog_1',

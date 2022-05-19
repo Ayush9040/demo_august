@@ -13,8 +13,9 @@ import {
 import CommonBtn from '../commonbtn'
 import { Link } from 'react-router-dom'
 
-const CourseSection = ({ title, showRangeSlider, color, cardData }) => {
+const CourseSection = ({ title, showRangeSlider, color, data }) => {
   const [customVal, setCustomVal] = useState(0)
+  console.log(data, 'course-data')
 
   const content = () => {
     switch (title) {
@@ -143,15 +144,20 @@ const CourseSection = ({ title, showRangeSlider, color, cardData }) => {
         </div>
       )}
       <div className='course-cards'>
-        {cardData.map((item, i) => {
-          return (
-            <CourseCard
-              key={i}
-              color={color}
-              index={i}
-              courseTitle={item.title}
-            />
-          )
+        {data.map((item, i) => {
+          if (i < 3) {
+            return (
+              <CourseCard
+                key={i}
+                color={color}
+                index={i}
+                courseTitle={item.name}
+                description={item.deatils}
+                path={item.id}
+              />
+            )
+          }
+          return
         })}
       </div>
     </div>

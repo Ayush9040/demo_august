@@ -1,6 +1,6 @@
 import React from 'react'
 import OurLegacyModal from '../../../Components/OurLegacyModal'
-import baseDomain, { aboutAssets, homeAssets } from '../../../assets/images/imageAsset.js'
+import baseDomain, { homeAssets } from '../../../assets/images/imageAsset.js'
 
 export default function HarishJi() {
   const data = {

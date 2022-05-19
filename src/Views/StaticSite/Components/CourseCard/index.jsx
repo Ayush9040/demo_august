@@ -4,12 +4,13 @@ import { star } from '../../assets/icons/icon'
 import CommonBtn from '../commonbtn'
 import './style.scss'
 
-const CourseCard = ({ color, index, courseTitle }) => {
+const CourseCard = ({ color, index, courseTitle, description, path }) => {
+
   return (
-    <div className="course-card">
-      <div className="course-card-image">
+    <div className='course-card'>
+      <div className='course-card-image'>
         <img src='http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Courses/course%20%281%29.png' />
-        <div className="stars">
+        <div className='stars'>
           {star}
           {star}
           {star}
@@ -18,17 +19,16 @@ const CourseCard = ({ color, index, courseTitle }) => {
         </div>
       </div>
       <div
-        className="course-card-content"
+        className='course-card-content'
         style={{
           background: color + `${index === 0 ? 'B3' : index === 1 ? 'CC' : ''}`,
         }}
       >
         <h4>{courseTitle}</h4>
         <h3>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          ndustry.
+          {description?.length > 40 ? description?.substring(0, 40) : description}
         </h3>
-        <Link to="/courses/course-name/">
+        <Link to={`/courses/${path}/`}>
           <CommonBtn text={'Explore'} />
         </Link>
       </div>
