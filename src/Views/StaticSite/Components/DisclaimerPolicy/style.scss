@@ -1,0 +1,198 @@
+.main-container {
+  border: 2px solid black;
+  margin: 2rem;
+  border-radius: 20px;
+
+  .heading-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10rem 0 2rem 0;
+  }
+  .mid-content {
+    padding: 0 30rem;
+    height: 600px;
+    overflow-y: scroll;
+    p {
+      font-size: 2rem;
+    }
+    ol {
+      font-size: 1.5rem;
+      padding-left: 1.5rem;
+    }
+  }
+  .mid-bottom {
+    padding: 0rem 10rem;
+    padding-top: 1rem;
+    p {
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+    .terms-conditions {
+      display: flex;
+      align-items: center;
+      padding: 2rem 40rem;
+      input {
+        height: 40px;
+        width: 30px;
+      }
+      p {
+        font-size: 1.6rem;
+        padding-left: 1rem;
+      }
+    }
+  }
+  .bottom-content {
+    padding: 0rem 30rem;
+    p {
+      font-size: 2rem;
+      font-weight: 600;
+    }
+    ol {
+      font-size: 1.7rem;
+      padding-left: 1.5rem;
+      padding-bottom: 1rem;
+    }
+    .voluntarily {
+      font-size: 2rem;
+      font-weight: 600;
+      padding-bottom: 1rem;
+    }
+  }
+  .last-section {
+    padding: 1rem 10rem;
+    .last {
+      input {
+        border: none;
+        size: 120;
+        font-size: 1.8rem;
+      }
+      input:focus {
+        outline: none;
+      }
+    }
+    .signature-section {
+      display: flex;
+      margin-right: 0;
+      margin-left: auto;
+      padding: 2rem;
+      width: 40%;
+      p {
+        padding-left: 2rem;
+        text-align: center;
+      }
+      .signature {
+        float: right;
+        width: 600px;
+        height: 120px;
+        border: 1px solid gray;
+        input {
+          display: none;
+        }
+      }
+    }
+  }
+  .privacy-button {
+    padding-top: 2rem;
+    padding-bottom: 5rem;
+    button {
+      display: block;
+      padding: 1rem 2rem;
+      font-size: 2rem;
+      border-radius: 20px;
+      margin: 0 auto;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .main-container {
+    .mid-content {
+      padding: 2rem 2rem;
+    }
+    .mid-bottom {
+      padding: 2rem;
+      .terms-conditions {
+        padding: 2rem 1rem;
+      }
+    }
+    .bottom-content {
+      padding: 2rem;
+    }
+    .last-section {
+      padding: 1rem;
+      .last {
+        padding: 0 1rem;
+        input {
+          size: 70;
+        }
+      }
+      .signature-section {
+        width: 100%;
+        align-items: center;
+        p {
+          padding-right: 20px;
+          text-align: left  ;
+        }
+        .signature {
+          width: 285px;
+          height: 80px;
+        }
+      }
+      .privacy-button{
+        padding: 2rem 0;
+        button{
+          padding: 1rem 1.5rem; 
+          font-size: 1.6rem;
+        }
+      }
+    }
+  }
+}
+
+
+@media (max-width: 1200px) {
+  .main-container {
+    .mid-content {
+      padding: 2rem 2rem;
+    }
+    .mid-bottom {
+      padding: 2rem;
+      .terms-conditions {
+        padding: 2rem 1rem;
+      }
+    }
+    .bottom-content {
+      padding: 2rem;
+    }
+    .last-section {
+      padding: 1rem;
+      .last {
+        padding: 0 1rem;
+        input {
+          size: 70;
+        }
+      }
+      .signature-section {
+        width: 50%;
+        align-items: center;
+        p {
+          padding-right: 20px;
+          text-align: left  ;
+        }
+        .signature {
+          width: 285px;
+          height: 80px;
+        }
+      }
+      .privacy-button{
+        padding: 4rem 0 4rem 0;
+        button{
+          padding: 1rem 2rem; 
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+}
