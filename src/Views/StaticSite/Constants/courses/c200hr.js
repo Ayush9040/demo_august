@@ -6,6 +6,8 @@ export const c200h = {
     key: 'c200Hr',
     id: '1',
     name: '200 Hours TTC–Online–English',
+    mostPopular:false,
+    colorCode:'#E38F73',
     deatils:
       'With over 1,00,000 successfully certified students, the 200 Hours Teacher Training Course at The Yoga Institute covers the nuances of Traditional Yoga. This includes an introduction to the study of principal Yoga Asanas, Pranayamas, Meditation, Kriyas, Patanjali’s Yoga Sutra, and Hatha Yoga Pradipika. Further, complete immersion into practical experiences of the concept studies, public speaking, the methodology of teaching, etc. are covered. Strategically designed by the founder Shri Yogendraji, Smt. Sita Devi Yogendra, Dr. Jayadeva Yogendra, and Dr. Hansaji J Yogendra, the course serves as a valuable ‘life school’ to those seeking balance and fulfilment in life.',
     benefits: [
@@ -93,6 +95,8 @@ export const c200h = {
     key: 'c200Hr',
     id: '2',
     name: '200 HRS TTC (1 Month) online',
+    mostPopular:false,
+    colorCode:'#D88068',
     deatils:
       'With over 1,00,000 successfully certified students, the 200 Hours Teacher Training Course at The Yoga Institute covers the nuances of Traditional Yoga. This includes an introduction to the study of principal Yoga Asanas, Pranayamas, Meditation, Kriyas, Patanjali’s Yoga Sutra, and Hatha Yoga Pradipika. Further, complete immersion into practical experiences of the concept studies, public speaking, the methodology of teaching, etc. are covered. Strategically designed by the founder Shri Yogendraji, Smt. Sita Devi Yogendra, Dr. Jayadeva Yogendra, and Dr. Hansaji J Yogendra, the course serves as a valuable ‘life school’ to those seeking balance and fulfilment in life.',
     benefits: [
@@ -181,6 +185,8 @@ export const c200h = {
     key: 'c200Hr',
     id: '3',
     name: '200 HRS TTC (2 months) online ',
+    mostPopular:false,
+    colorCode:'#C9705F',
     deatils:
       'With over 1,00,000 successfully certified students, the 200 Hours Teacher Training Course at The Yoga Institute covers the nuances of Traditional Yoga. This includes an introduction to the study of principal Yoga Asanas, Pranayamas, Meditation, Kriyas, Patanjali’s Yoga Sutra, and Hatha Yoga Pradipika. Further, complete immersion into practical experiences of the concept studies, public speaking, the methodology of teaching, etc. are covered. Strategically designed by the founder Shri Yogendraji, Smt. Sita Devi Yogendra, Dr. Jayadeva Yogendra, and Dr. Hansaji J Yogendra, the course serves as a valuable ‘life school’ to those seeking balance and fulfilment in life.',
     benefits: [
@@ -269,6 +275,8 @@ export const c200h = {
     key: 'c200Hr',
     id: '4',
     name: '200 HRS TTC (3 Months) online',
+    mostPopular:false,
+    colorCode:'#E38F73',
     deatils:
       'With over 1,00,000 successfully certified students, the 200 Hours Teacher Training Course at The Yoga Institute covers the nuances of Traditional Yoga. This includes an introduction to the study of principal Yoga Asanas, Pranayamas, Meditation, Kriyas, Patanjali’s Yoga Sutra, and Hatha Yoga Pradipika. Further, complete immersion into practical experiences of the concept studies, public speaking, the methodology of teaching, etc. are covered. Strategically designed by the founder Shri Yogendraji, Smt. Sita Devi Yogendra, Dr. Jayadeva Yogendra, and Dr. Hansaji J Yogendra, the course serves as a valuable ‘life school’ to those seeking balance and fulfilment in life.',
     benefits: [
@@ -358,6 +366,8 @@ export const c200h = {
     key: 'c200Hr',
     id: '5',
     name: '200 HRS TTC (2 months) online',
+    mostPopular:false,
+    colorCode:'#D88068',
     deatils:
       'With over 1,00,000 successfully certified students, the 200 Hours Teacher Training Course at The Yoga Institute covers the nuances of Traditional Yoga. This includes an introduction to the study of principal Yoga Asanas, Pranayamas, Meditation, Kriyas, Patanjali’s Yoga Sutra, and Hatha Yoga Pradipika. Further, complete immersion into practical experiences of the concept studies, public speaking, the methodology of teaching, etc. are covered. Strategically designed by the founder Shri Yogendraji, Smt. Sita Devi Yogendra, Dr. Jayadeva Yogendra, and Dr. Hansaji J Yogendra, the course serves as a valuable ‘life school’ to those seeking balance and fulfilment in life.',
     benefits: [
@@ -446,6 +456,9 @@ export const c200h = {
     key: 'CAMPS',
     id: '6',
     name: 'Bhava Workshop',
+    mostPopular:false,
+    colorCode:'#EDBE66',
+    details:'Effective tools and techniques to help you manage your life',
     queDetails: [
       [
         'Who is this workshop for?',
@@ -491,6 +504,9 @@ export const c200h = {
     key: 'CAMPS',
     id: '7',
     name: 'Cardiac & Hypertension Workshop / Health Camp',
+    mostPopular:false,
+    colorCode:'#DDAB5B',
+    details:'Powerful and effective asana, pranayama, and relaxation techniques to alleviate heart ailments',
     queDetails: [
       [
         'Who is this workshop for?',
@@ -540,6 +556,9 @@ export const c200h = {
     key: 'CAMPS',
     id: '8',
     name: 'Diabetes Health Camp',
+    mostPopular:false,
+    colorCode:'#CE9B51',
+    details:'Wholesome tools and techniques to help you manage your condition completely',
     queDetails: [
       [
         'Who is this workshop for?',
@@ -590,6 +609,9 @@ export const c200h = {
     key: 'CAMPS',
     id: '9',
     name: 'Diet Workshop',
+    mostPopular:false,
+    colorCode:'#EDBE66',
+    details:'Effective tools and techniques to help you manage your life',
     queDetails: [
       [
         'Who is this workshop for?',
@@ -641,6 +663,9 @@ export const c200h = {
     key: 'CAMPS',
     id: '10',
     name: 'Digestion Camp',
+    mostPopular:false,
+    colorCode:'#DDAB5B',
+    details:'Yoga Sadhana: Specific pranayama, and relaxation techniques to enhance your wellbeing',
     queDetails: [
       [
         'Who is this workshop for?',
@@ -691,6 +716,9 @@ export const c200h = {
     key: 'CAMPS',
     id: '11',
     name: 'Health Camp for Back and Joint Disorders',
+    mostPopular:false,
+    colorCode:'#CE9B51',
+    details:'Diet guidelines to manage your condition and health',
     queDetails: [
       [
         'Who is this workshop for?',
@@ -741,6 +769,9 @@ export const c200h = {
     key: 'CAMPS',
     id: '12',
     name: 'Karma Yoga',
+    mostPopular:false,
+    colorCode:'#EDBE66',
+    details:'Effective tools and techniques to help you manage your life',
     queDetails: [
       [
         'Who is this workshop for?',
@@ -792,6 +823,9 @@ export const c200h = {
     key: 'CAMPS',
     id: '13',
     name: 'Life Management Camp',
+    mostPopular:false,
+    colorCode:'#DDAB5B',
+    details:'Effective tools and techniques to help you manage your life',
     queDetails: [
       [
         'Who is this workshop for?',
@@ -843,6 +877,9 @@ export const c200h = {
     key: 'CAMPS',
     id: '14',
     name: 'Meditation Camp',
+    mostPopular:false,
+    colorCode:'#CE9B51',
+    details:'Effective tools and techniques to help you manage your life',
     queDetails: [
       [
         'Who is this workshop for?',
@@ -894,6 +931,9 @@ export const c200h = {
     key: 'CAMPS',
     id: '15',
     name: 'Pranayama Workshop',
+    mostPopular:false,
+    colorCode:'#EDBE66',
+    details:'Effective tools and techniques to help you manage your life',
     queDetails: [
       [
         'Who is this workshop for?',
@@ -945,6 +985,9 @@ export const c200h = {
     key: 'CAMPS',
     id: '16',
     name: 'Pregnancy Camp',
+    mostPopular:false,
+    colorCode:'#DDAB5B',
+    details:'Specific pranayama, asana and relaxation techniques to enhance your state of mind',
     queDetails: [
       [
         'Who is this workshop for?',
@@ -996,6 +1039,9 @@ export const c200h = {
     key: 'CAMPS',
     id: '17',
     name: 'Respiratory Workshop',
+    mostPopular:false,
+    colorCode:'#CE9B51',
+    details:'Specific pranayama, asana and relaxation techniques to enhance your state of mind',
     queDetails: [
       [
         'Who is this workshop for?',
@@ -1047,6 +1093,9 @@ export const c200h = {
     key: 'CAMPS',
     id: '18',
     name: 'Senior Citizen Workshop',
+    mostPopular:false,
+    colorCode:'#EDBE66',
+    details:'Effective tools and techniques to help you manage your life',
     queDetails: [
       [
         'Who is this workshop for?',
@@ -1098,6 +1147,9 @@ export const c200h = {
     key: 'CAMPS',
     id: '19',
     name: 'Stress Management Workshop',
+    mostPopular:false,
+    colorCode:'#DDAB5B',
+    details:'Yoga Sadhana: Specific pranayama, and relaxation techniques to enhance your wellbeing',
     queDetails: [
       [
         'Who is this workshop for?',
@@ -1150,6 +1202,9 @@ export const c200h = {
     key: 'CAMPS',
     id: '20',
     name: 'Weight Management Workshop',
+    mostPopular:false,
+    colorCode:'#CE9B51',
+    details:'Specific pranayama, and relaxation techniques to enhance your health',
     queDetails: [
       [
         'Who is this workshop for?',
@@ -1202,6 +1257,9 @@ export const c200h = {
     key: 'CAMPS',
     id: '21',
     name: 'Women’s Camp',
+    mostPopular:false,
+    colorCode:'#EDBE66',
+    details:'Wholesome tools and techniques to help you manage your health',
     queDetails: [
       [
         'Who is this workshop for?',
@@ -1254,6 +1312,8 @@ export const c200h = {
     key: 'c900Hr',
     id: '22',
     name: '900 Hours TTC – Online – Hindi',
+    mostPopular:false,
+    colorCode:'#E38F73',
     details:
       'With over 1,00,000/ 50,000 successfully certified students since 1918, the 1 Year Teacher Training Course (Hindi) at The Yoga Institute is an in-depth study of classical Ashtanga yoga (Eightfold Path Yoga). It teaches core yoga philosophy with a comprehensive approach to the science and technology of yoga. Strategically designed by the founder Shri Yogendraji, Smt. Sita Devi Yogendra, Dr. Jayadeva Yogendra, and Dr. Hansaji J Yogendra, the course serves as a valuable life school to those seeking balance and fulfilment in life. This course is ideal for those who have daily commitments at home, like homemakers. With the suitable schedule of this course, they can have access to advanced yoga training at their convenience and can become certified yoga trainers within one year.',
     benefits: [
@@ -1438,6 +1498,8 @@ export const c200h = {
     key: 'c900Hr',
     id: '23',
     name: '900 Hours TTC – Online – English',
+    mostPopular:false,
+    colorCode:'#D88068',
     details:
       'With over 1,00,000/ 50,000 successfully certified students since 1918, the 1 Year Teacher Training Course (Hindi) at The Yoga Institute is an in-depth study of classical Ashtanga yoga (Eightfold Path Yoga). It teaches core yoga philosophy with a comprehensive approach to the science and technology of yoga. Strategically designed by the founder Shri Yogendraji, Smt. Sita Devi Yogendra, Dr. Jayadeva Yogendra, and Dr. Hansaji J Yogendra, the course serves as a valuable life school to those seeking balance and fulfilment in life. This course is ideal for those who have daily commitments at home, like homemakers. With the suitable schedule of this course, they can have access to advanced yoga training at their convenience and can become certified yoga trainers within one year.',
     benefits: [
@@ -1622,6 +1684,8 @@ export const c200h = {
     key: 'c900Hr',
     id: '24',
     name: '900 Hours TTC – Online – English',
+    mostPopular:false,
+    colorCode:'#C9705F',
     details:
       'With over 1,00,000/ 50,000 successfully certified students since 1918, the 1 Year Teacher Training Course (Hindi) at The Yoga Institute is an in-depth study of classical Ashtanga yoga (Eightfold Path Yoga). It teaches core yoga philosophy with a comprehensive approach to the science and technology of yoga. Strategically designed by the founder Shri Yogendraji, Smt. Sita Devi Yogendra, Dr. Jayadeva Yogendra, and Dr. Hansaji J Yogendra, the course serves as a valuable life school to those seeking balance and fulfilment in life. This course is ideal for those who have daily commitments at home, like homemakers. With the suitable schedule of this course, they can have access to advanced yoga training at their convenience and can become certified yoga trainers within one year.',
     benefits: [
@@ -1806,6 +1870,8 @@ export const c200h = {
     key: 'c900Hr',
     id: '25',
     name: '900 Hours TTC – Online – English',
+    mostPopular:false,
+    colorCode:'#E38F73',
     details:
       'With over 1,00,000/ 50,000 successfully certified students since 1918, the 1 Year Teacher Training Course (Hindi) at The Yoga Institute is an in-depth study of classical Ashtanga yoga (Eightfold Path Yoga). It teaches core yoga philosophy with a comprehensive approach to the science and technology of yoga. Strategically designed by the founder Shri Yogendraji, Smt. Sita Devi Yogendra, Dr. Jayadeva Yogendra, and Dr. Hansaji J Yogendra, the course serves as a valuable life school to those seeking balance and fulfilment in life. This course is ideal for those who have daily commitments at home, like homemakers. With the suitable schedule of this course, they can have access to advanced yoga training at their convenience and can become certified yoga trainers within one year.',
     benefits: [
@@ -1990,6 +2056,8 @@ export const c200h = {
     key: 'classes',
     id: '26',
     name: 'Certificate course on advanced pranayama techniques',
+    mostPopular:false,
+    colorCode:'#D3A29D',
     deatils:
       'Now that you have mastered the basics of pranayama practices, it is time to go one step ahead! The certificate course on advanced pranayama techniques by The Yoga Institute will help you get the hang of various advanced pranayama techniques along with the right teaching methodology to teach these techniques efficiently. Pranayamas are powerful yogic breathing techniques that boost your body’s bioenergy as well as strengthen both body and mind. Maharishi Patanjali mentions in his text “Yoga Darshanam” which was written around 2500 years ago that pranayamas are powerful techniques to achieve the highest degree of awareness and profound meditative state. It prepares you for deep meditation.',
     benefits: [
@@ -2018,6 +2086,8 @@ export const c200h = {
     key: 'classes',
     id: '27',
     name: ' Advanced Regular Asana Class',
+    mostPopular:false,
+    colorCode:'#C48E8C',
     deatils:
       'So, you have finished with your basic or advanced yoga teacher training course! Good job! Now you wish to continue your association with The Yoga Institute and we have just the right offering for you. Here is an opportunity to stay updated and connected with the gurus, expert teachers, and advanced asana practices of The Yoga Institute. This course shall help you to maintain the continuity with our TTC practices and techniques. Join us to stay with our Gurus and expert teachers forever.',
     benefits: [
@@ -2058,6 +2128,8 @@ export const c200h = {
     key: 'classes',
     id: '28',
     name: 'Meditation class',
+    mostPopular:false,
+    colorCode:'#B77E7E',
     deatils:
       'Simple recommendations are provided in these meditation workshops to demonstrate how meditation can lead to a meditative state throughout the day, assisting in job and life efficiency. Recent research has demonstrated that frequent meditation improves brain waves.',
     benefits: [
@@ -2091,6 +2163,8 @@ export const c200h = {
     key: 'classes',
     id: '29',
     name: 'MEN’S class',
+    mostPopular:false,
+    colorCode:'#D3A29D',
     deatils:
       'This is a special men-only regular asana class conducted by The Yoga Institute. The classes cover Asanas, Pranayamas, Kriyas, diet and Yogic lifestyle recommendations, personal attention on health and counselling on other aspects of life.',
     benefits: [
@@ -2130,6 +2204,8 @@ export const c200h = {
     key: 'classes',
     id: '30',
     name: 'Weekend Regular Class',
+    mostPopular:false,
+    colorCode:'#C48E8C',
     deatils:
       'Struggling to meet your yoga goals during the week? No worries, we got you! You have the option to register for regular weekend yoga class with The Yoga Institute. These are regular classes for those who are unable to attend on weekdays owing to other obligations. Weekend Yoga Regular Class is an excellent course for daily yoga practise. Asanas, Pranayamas, Kriyas, and food and Yogic lifestyle suggestions are all covered in these classes. Participants are divided into groups based on their health status, and each group receives distinct training. In addition, as needed, all students receive individual attention.',
     benefits: [
@@ -2167,6 +2243,8 @@ export const c200h = {
     key: 'classes',
     id: '31',
     name: 'WOMEN’S class',
+    mostPopular:false,
+    colorCode:'#B77E7E',
     deatils:
       'This is a special women-only regular asana class conducted by The Yoga Institute. The classes cover Asanas, Pranayamas, Kriyas, diet and Yogic lifestyle recommendations, personal attention on health and counselling on other aspects of life. ',
     benefits: [
@@ -2206,6 +2284,8 @@ export const c200h = {
     key: 'classes',
     id: '32',
     name: 'YOG PRAYAS',
+    mostPopular:false,
+    colorCode:'#D3A29D',
     deatils:
       'This is for people who are looking forward to yogic progress after being familiar with basic Yogasanas. The focused Sadhaka’s, who just doesn’t want to become Yoga Professional, but aims for an even bigger goal, SELF DEVELOPMENT.',
     benefits: [
