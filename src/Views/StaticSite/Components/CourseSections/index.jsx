@@ -32,24 +32,20 @@ const CourseSection = ({ title, showRangeSlider, color, data }) => {
               <h4>
                 <ul>
                   <li>Two Months Training Course - On Campus</li>
-                
-                 
+
                   <li>
-                        Weekend Training Course - 3 Months / Online - English
+                      Weekend Training Course - 3 Months / Online - English
                   </li>
-                  
-                
+
                   <li>One Month Training Course - Online / On Campus</li>
-               
-    
+
                   <li>
-                        Two Month Training Course - Part Time/ Online - Hindi
+                      Two Month Training Course - Part Time/ Online - Hindi
                   </li>
-           
+
                   <li>
-                        Teacher Training Course - Part Time/ Online- English
+                      Teacher Training Course - Part Time/ Online- English
                   </li>
-           
                 </ul>
               </h4>
             </AccordionItemPanel>
@@ -122,7 +118,13 @@ const CourseSection = ({ title, showRangeSlider, color, data }) => {
     <div className='course-section'>
       <div className='course-list'>
         <div className='course-title'>
-          { title === 'Teacher Training Courses' ? <Link to={'/courses/browse/ttc'} ><h1>{title}</h1></Link>: <h1>{title}</h1>}
+          {title === 'Teacher Training Courses' ? (
+            <Link to={'/courses/browse/ttc'}>
+              <h1>{title}</h1>
+            </Link>
+          ) : (
+            <h1>{title}</h1>
+          )}
           {(title === 'Most Popular' || title === 'Classes') && (
             <div className='concave-border'></div>
           )}
@@ -142,21 +144,42 @@ const CourseSection = ({ title, showRangeSlider, color, data }) => {
         </div>
       )}
       <div className='course-cards'>
-        {data.map((item, i) => {
-          if (i < 3) {
-            return (
-              <CourseCard
-                key={i}
-                color={color}
-                index={i}
-                courseTitle={item.name}
-                description={item.deatils}
-                path={item.id}
-              />
-            )
-          }
-          return
-        })}
+        {title === 'Most Popular'
+          ? data
+            .filter((item) => item.mostPopular===true )
+            .map((item, i) => {
+              
+              if (i < 3) {
+                return (
+                  <CourseCard
+                    key={i}
+                    color={color}
+                    index={i}
+                    courseTitle={item.name}
+                    description={item.deatils}
+                    path={item.id}
+                    img={item.image}
+                  />
+                )
+              }
+              return
+            })
+          : data.map((item, i) => {
+            if (i < 3) {
+              return (
+                <CourseCard
+                  key={i}
+                  color={color}
+                  index={i}
+                  courseTitle={item.name}
+                  description={item.deatils}
+                  path={item.id}
+                  img={item.image}
+                />
+              )
+            }
+            return
+          })}
       </div>
     </div>
   )
