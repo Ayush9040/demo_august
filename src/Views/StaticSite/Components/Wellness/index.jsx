@@ -1,6 +1,9 @@
 import React from 'react'
 import CommonBanner from '../Common-banner'
 import './style.scss'
+import './data'
+//import SocialInitiatives from '/home/nex-g/Desktop/tyi-user-webapp/src/Views/StaticSite/Components/SocialInitiatives/index.jsx'
+import Programs from './Programs'
 
 const wellness = () => {
   return (
@@ -20,6 +23,8 @@ const wellness = () => {
         with your inner self while also keeping your mind on track. The ability to persevere is what distin-
         guishes successful leaders and managers from the others."
       />
+      <Programs/>
+
       <p className="offering-heading">Our offerings</p>
       <hr className="line"></hr>
       <div className="offering-para1">
