@@ -19,6 +19,7 @@ const CommonBanner = ({
           !isOnlyBanner && 'common-container-responsive'
         }`}
       >
+        <div className='overlay'></div>
         <img src={bannerImg ? bannerImg : DefaultImg} />
         {Navigation && (
           <div className={'navigation-container'}>
