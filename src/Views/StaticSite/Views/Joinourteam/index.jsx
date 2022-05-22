@@ -5,6 +5,7 @@ import './styles.scss'
 import CareerCard from '../../Components/CommonCareerCard'
 // import baseDomain, { volunteerAssets } from '../../assets/images/imageAsset'
 import { volunteerData } from '../../utils/volunteerData'
+import VolunteerImg from '../../assets/images/volunteer_with_us.png'
 
 const Volunteer = () => {
   return (
@@ -19,6 +20,7 @@ const Volunteer = () => {
           Heading='Volunteer with us'
           isOnlyBanner={false}
           innerNav={true}
+          bannerImg={VolunteerImg}
         />
       </div>
       <div className='our-container pd-career'>

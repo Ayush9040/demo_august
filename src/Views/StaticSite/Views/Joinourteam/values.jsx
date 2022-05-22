@@ -2,7 +2,7 @@ import React from 'react'
 import CommonBanner from '../../Components/Common-banner'
 import './styles.scss'
 import baseDomain, { volunteerAssets } from '../../assets/images/imageAsset'
-
+import ValuesImg from '../../assets/images/values.png'
 const Values = () => {
   return (
     <>
@@ -15,6 +15,7 @@ const Values = () => {
           Heading='Values'
           isOnlyBanner={false}
           innerNav={true}
+          bannerImg={ValuesImg}
         />
       </div>
       <div className='content-container pd-career'>

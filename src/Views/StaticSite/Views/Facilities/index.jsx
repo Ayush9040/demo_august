@@ -4,6 +4,7 @@ import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import Slider from 'react-slick'
 import './style.scss'
+import FacilitiesImg from '../../assets/images/facilities-02.png'
 
 import baseDomain, { facilitiyAssets } from '../../assets/images/imageAsset'
 const Facilities = () => {
@@ -47,6 +48,7 @@ const Facilities = () => {
         isOnlyBanner={false}
         innerNav={false}
         description={description}
+        bannerImg={FacilitiesImg}
       />
       <div className="facilities-navigation-lg">
         <ul>
