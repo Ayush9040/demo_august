@@ -1,5 +1,6 @@
 import React from 'react'
 import CommonBannerNav from '../CommonBannerNav'
+import DefaultImg from '../../assets/images/museum1_.jpg'
 import './styles.scss'
 const CommonBanner = ({
   Navigation,
@@ -9,6 +10,7 @@ const CommonBanner = ({
   innerNav,
   children,
   description,
+  bannerImg
 }) => {
   return (
     <>
@@ -17,6 +19,7 @@ const CommonBanner = ({
           !isOnlyBanner && 'common-container-responsive'
         }`}
       >
+        <img src={bannerImg ? bannerImg : DefaultImg} />
         {Navigation && (
           <div className={'navigation-container'}>
             {children ? children : <CommonBannerNav innerNav={innerNav} />}

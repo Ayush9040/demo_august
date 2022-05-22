@@ -47,49 +47,32 @@
 }
 
 //images
-.Benefits-container {
-    background: url("../../assets/images/benifits.png") no-repeat center / cover;
+
+.museum-banner-container,.facilities-container, 
+.gifting-container, .faq-container, .volunteer-container, 
+.OurCareers-container, .why-tyi-container, 
+.Benefits-container, .Values-container, 
+.support-container, .donation-container, .affiliation-container{
+    position: relative;
 }
-.why-tyi-container {
-    background: url("../../assets/images/why_tyi.png") no-repeat center / cover;
-    height: 100vh;
+.museum-banner-container img,.facilities-container img, 
+.gifting-container img, .faq-container img, .volunteer-container img, 
+.OurCareers-container img, .why-tyi-container img, 
+.Benefits-container img, .Values-container img, 
+.support-container img, .donation-container img, .affiliation-container img{
+    position: absolute;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
 }
-.OurCareers-container {
-    background: url("../../assets/images/our_careers.png") no-repeat center / cover;
-}
-.Values-container {
-    background: url("../../assets/images/values.png") no-repeat center / cover;
-}
-.Volunteer-container {
-    background: url("../../assets/images/volunteer_with_us.png") no-repeat center / cover;
-}
-.faq-container{
-    background: url("../../assets/images/faqs.png") no-repeat center / cover ;
-}
-.gifting-container{
-    background: url('../../assets//images/gifting2a-02.png') no-repeat center / cover ;
-}
-.facilities-container{
-    background: url("../../assets/images/facilities-02.png") no-repeat center / cover ;
-}
-.museum-banner-container{
-    background: url('../../assets//images/museum-1.png') no-repeat center / cover ;
-}
-.support-container{
-    background: url('../../assets//images/gifting2a-02.png') no-repeat center / cover ;
-}
-.donation-container{
-    background: url('../../assets/images//dontion_bg.jpg') no-repeat center / cover ;
-}
+
 .terms-container{
     background: rgb(78, 105, 150)
   }
   .privacy-container{
       background: rgb(238, 130, 130);
   }
-  .affiliation-container{
-    background: url('../../assets/images/why_tyi.png') no-repeat center / cover;
-}
+
 //if other content is there other than banner
 .common-container-responsive {
 //     position: relative;
