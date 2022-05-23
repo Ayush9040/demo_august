@@ -867,6 +867,131 @@ export const volunteerAssets = {
   valuesAssets: '/Volunteer/our-values.jpg',
 }
 
+
+// home => facts Assets
+
+
+export const factAssets={
+  
+  // 1916-1936
+  factAsset1: '/Home/Facts/1916-1936/1916.jpg',
+  factAsset2:'/Home/Facts/1916-1936/1918.jpg',
+  factAsset3:'/Home/Facts/1916-1936/1920.jpg',
+  factAsset4:'/Home/Facts/1916-1936/1921.jpg',
+  factAsset5:'/Home/Facts/1916-1936/1924.jpg',
+  factAsset6:'/Home/Facts/1916-1936/1928.jpg',
+  factAsset7:'/Home/Facts/1916-1936/1933.jpg',
+  factAsset8:'/Home/Facts/1916-1936/1933_1.jpg',
+  factAsset9:'/Home/Facts/1916-1936/1934.jpg',
+
+  // 1936-56
+  factAsset10: '/Home/Facts/1936-1956/1940.jpg',
+  factAsset11:'/Home/Facts/1936-1956/1941.jpg',
+  factAsset12:'/Home/Facts/1936-1956/1948.jpg',
+  factAsset13:'/Home/Facts/1936-1956/1951.jpg',
+  
+  // 1956-76
+
+  factAsset14:'/Home/Facts/1956-1976/1958.jpg',
+  factAsset15:'/Home/Facts/1956-1976/1961.jpg',
+  factAsset16:'/Home/Facts/1956-1976/1963.jpg',
+  factAsset17:'/Home/Facts/1956-1976/1963_1.jpg',
+  factAsset18:'/Home/Facts/1956-1976/1970.jpg',
+  factAsset19:'/Home/Facts/1956-1976/1972.jpg',
+
+  // 1990-2000
+
+  factAsset20:'/Home/Facts/1990-2000/1.jpg',
+  factAsset21:'/Home/Facts/1990-2000/2.jpg',
+  factAsset22:'/Home/Facts/1990-2000/3.jpg',
+  factAsset23:'/Home/Facts/1990-2000/4.jpg',
+  factAsset24:'/Home/Facts/1990-2000/5.jpg',
+  factAsset25:'/Home/Facts/1990-2000/6.jpg',
+  factAsset26:'/Home/Facts/1990-2000/7.jpg',
+  factAsset27:'/Home/Facts/1990-2000/8.jpg',
+  factAsset28:'/Home/Facts/1990-2000/9.jpg',
+  factAsset29:'/Home/Facts/1990-2000/10.jpg',
+  factAsset30:'/Home/Facts/1990-2000/11.jpg',
+  factAsset31:'/Home/Facts/1990-2000/12.jpg',
+  factAsset32:'/Home/Facts/1990-2000/13.jpg',
+  factAsset33:'/Home/Facts/1990-2000/14.jpg',
+  factAsset34:'/Home/Facts/1990-2000/15.jpg',
+  factAsset35:'/Home/Facts/1990-2000/16.jpg',
+  factAsset36:'/Home/Facts/1990-2000/17.jpg',
+  factAsset38:'/Home/Facts/1990-2000/18.jpg',
+  factAsset39:'/Home/Facts/1990-2000/19.jpg',
+  factAsset40:'/Home/Facts/1990-2000/20.jpg',
+  factAsset41:'/Home/Facts/1990-2000/21.jpg',
+  factAsset42:'/Home/Facts/1990-2000/22.jpg',
+  factAsset43:'/Home/Facts/1990-2000/23.jpg',
+  factAsset44:'/Home/Facts/1990-2000/24.jpg',
+  factAsset45:'/Home/Facts/1990-2000/25.jpg',
+  factAsset46:'/Home/Facts/1990-2000/26.jpg',
+
+  // 2000-2010
+
+  factAsset47:'/Home/Facts/2000-2010/1.jpg',
+  factAsset48:'/Home/Facts/2000-2010/2.jpg',
+  factAsset49:'/Home/Facts/2000-2010/3.jpg',
+  factAsset50:'/Home/Facts/2000-2010/4.jpg',
+  factAsset51:'/Home/Facts/2000-2010/5.jpg',
+  factAsset52:'/Home/Facts/2000-2010/6.jpg',
+  factAsset53:'/Home/Facts/2000-2010/7.jpg',
+  factAsset54:'/Home/Facts/2000-2010/8.jpg',
+
+  // 2010-2020
+  factAsset55:'/Home/Facts/2010-2020/1.jpg',
+  factAsset56:'/Home/Facts/2010-2020/2.jpg',
+  factAsset57:'/Home/Facts/2010-2020/3.jpg',
+  factAsset58:'/Home/Facts/2010-2020/4.jpg',
+  factAsset59:'/Home/Facts/2010-2020/5.jpg',
+  factAsset60:'/Home/Facts/2010-2020/6.jpg',
+  factAsset61:'/Home/Facts/2010-2020/7.jpg',
+  factAsset62:'/Home/Facts/2010-2020/8.jpg',
+  factAsset63:'/Home/Facts/2010-2020/9.jpg',
+  factAsset64:'/Home/Facts/2010-2020/10.jpg',
+  factAsset65:'/Home/Facts/2010-2020/11.jpg',
+  factAsset66:'/Home/Facts/2010-2020/12.jpg',
+  factAsset67:'/Home/Facts/2010-2020/13.jpg',
+  factAsset68:'/Home/Facts/2010-2020/14.jpg',
+  factAsset69:'/Home/Facts/2010-2020/15.jpg',
+  factAsset70:'/Home/Facts/2010-2020/16.jpg',
+  factAsset71:'/Home/Facts/2010-2020/17.jpg',
+  factAsset72:'/Home/Facts/2010-2020/18.jpg',
+  factAsset73:'/Home/Facts/2010-2020/19.jpg',
+  factAsset74:'/Home/Facts/2010-2020/20.jpg',
+
+  // 2020-onwards
+  factAsset75:'/Home/Facts/2020-onwards/1.jpg',
+  factAsset76:'/Home/Facts/2020-onwards/2.jpg',
+  factAsset77:'/Home/Facts/2020-onwards/3.jpg',
+  factAsset78:'/Home/Facts/2020-onwards/4.jpg',
+  factAsset79:'/Home/Facts/2020-onwards/5.jpg',
+  factAsset80:'/Home/Facts/2020-onwards/6.jpg',
+  factAsset81:'/Home/Facts/2020-onwards/7.jpg',
+  factAsset82:'/Home/Facts/2020-onwards/8.jpg',
+  factAsset83:'/Home/Facts/2020-onwards/9.jpg',
+  factAsset84:'/Home/Facts/2020-onwards/10.jpg',
+  factAsset85:'/Home/Facts/2020-onwards/11.jpg',
+  factAsset86:'/Home/Facts/2020-onwards/12.jpg',
+  factAsset87:'/Home/Facts/2020-onwards/13.jpg',
+  factAsset88:'/Home/Facts/2020-onwards/14.jpg',
+  factAsset89:'/Home/Facts/2020-onwards/15.jpg',
+  factAsset90:'/Home/Facts/2020-onwards/16.jpg',
+  factAsset91:'/Home/Facts/2020-onwards/17.jpg',
+  factAsset92:'/Home/Facts/2020-onwards/18.jpg',
+  factAsset93:'/Home/Facts/2020-onwards/19.jpg',
+  factAsset94:'/Home/Facts/2020-onwards/20.jpg',
+  factAsset95:'/Home/Facts/2020-onwards/21.jpg',
+  factAsset96:'/Home/Facts/2020-onwards/22.jpg',
+  factAsset97:'/Home/Facts/2020-onwards/23.jpg',
+
+  
+
+
+}
+
+
 export const socialResponsibilityAssets = {
   annamBrahma:'/SocialResponsibility/Annam-brahma-cover.jpg',
   bmcSchool:'/SocialResponsibility/BMC-school-cover.jpg',

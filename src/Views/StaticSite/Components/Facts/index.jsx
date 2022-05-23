@@ -8,26 +8,19 @@ import { Link } from 'react-router-dom'
 import useFacts from '../../utils/hooks/useFacts'
 
 const Facts = () => {
-  const {
-    rangeIndex,
-    selectedRange,
-    dateRange,
-    handleNavigate
-  } = useFacts()
+  const { rangeIndex, selectedRange, dateRange, handleNavigate } = useFacts()
 
   return (
-    <div className="facts-container global-padding">
-      <div className="facts-header">
+    <div className='facts-container global-padding'>
+      <div className='facts-header'>
         <TimePeriodSelector />
-        <div className="facts-header-text">
+        <div className='facts-header-text'>
           <Heading
             logo={facts}
             smallText={'The Yoga Institute'}
             largeText={'Facts'}
           />
-          <p>
-            {selectedRange.description}
-          </p>
+          <p>{selectedRange.description}</p>
           <div className='globalButtonParent'>
             <div>
               <Link to={`/our-facts/?range=${rangeIndex}`}>
@@ -37,24 +30,29 @@ const Facts = () => {
           </div>
         </div>
       </div>
-      <div className="facts-gallery">
-        <div className="facts-gallery-grid">
-          {selectedRange.images.map((img, idx) => (
-            <img key={idx} src={img} className={'grid-img-' + (idx + 1)} />
-          ))}
+      <div className='facts-gallery'>
+        <div className='facts-gallery-grid'>
+          {selectedRange.images.map((img, idx) => {
+            if (idx < 6) {
+              return (
+                <img key={idx} src={img} className={'grid-img-' + (idx + 1)} />
+              )
+            }
+            return
+          })}
         </div>
-        <div className="slider">
+        <div className='slider'>
           <input
             type={'range'}
             min={0}
             max={dateRange.length - 1}
-            value={rangeIndex} 
-            onChange={(e)=> handleNavigate(e.target.value)}
+            value={rangeIndex}
+            onChange={(e) => handleNavigate(e.target.value)}
           />
         </div>
       </div>
 
-      <div className="divider">{divider}</div>
+      <div className='divider'>{divider}</div>
     </div>
   )
 }
