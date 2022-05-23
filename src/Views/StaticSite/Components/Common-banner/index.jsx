@@ -27,7 +27,7 @@ const CommonBanner = ({
           style={{
             width: '100%',
             height: '100%',
-            background: `${overlay}80`,
+            background: `${overlay}D4`,
           }}
         >
           {/* <img src={bannerImg ? bannerImg : DefaultImg} /> */}

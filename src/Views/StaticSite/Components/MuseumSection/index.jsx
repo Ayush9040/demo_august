@@ -32,7 +32,7 @@ const Museum = () => {
           description={intro}
           //bannerImg={museumBanner}
           bannerImg={`${baseDomain}${background.museum}`}
-          overlay="#FF0000"
+          overlay="#B08261"
         />
       </div>
 
