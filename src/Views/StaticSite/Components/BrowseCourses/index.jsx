@@ -6,12 +6,14 @@ import {
   AccordionItemButton,
   AccordionItemPanel,
 } from 'react-accessible-accordion'
+import CommonBannerNavPrimary from '../CommonBannerNavPrimary'
 import CourseCard from '../CourseCard'
 import './style.scss'
 
 const BrowseCourses = () => {
   return (
     <div className="browse-courses">
+      <CommonBannerNavPrimary/>
       <div className="breadcrumbs">
         <p>Browse &gt; Teachers Training Course</p>
       </div>
@@ -108,6 +110,9 @@ const BrowseCourses = () => {
             index={'1'}
             courseTitle={'Course Name'}
           />
+        </div>
+        <div className='course-grid' >
+          
         </div>
       </div>
     </div>

@@ -8,7 +8,12 @@ import CommonBtn from '../../Components/commonbtn'
 import { courseCardData } from '../../utils/courseCardData'
 import { Link } from 'react-router-dom'
 
+import { course200H, camps, course900H, classes } from '../../Constants/courses/c200hr'
+
 const Courses = () => {
+  let hourCourse = [...course200H,...course900H]
+
+  let data = [hourCourse,camps,course900H,classes]
 
   return (
     <div className='courses-container'>
@@ -50,6 +55,7 @@ const Courses = () => {
               key={i}
               title={item.title}
               color={item.color}
+              data={data[i]}
               showRangeSlider={
                 item.title === 'Teacher Training Courses' ? true : false
               }

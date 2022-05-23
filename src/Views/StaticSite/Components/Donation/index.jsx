@@ -15,7 +15,7 @@ const Donation = ({ supportText, page }) => {
               <button>₹ 1000</button>
               <button>₹ 2000</button>
               <button>₹ 3000</button>
-              <button>₹ 500</button>
+              <button>₹ 5000</button>
             </div>
             <div className='enter-button'>
               <input type={'number'} placeholder='Enter Amount' />

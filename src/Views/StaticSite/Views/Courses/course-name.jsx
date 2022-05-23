@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom' 
 import CommonBannerNavPrimary from '../../Components/CommonBannerNavPrimary'
 import CourseDetails from '../../Components/CourseDetails'
-
 import { c200h } from '../../Constants/courses/c200hr'
 
 const SingleCourse = () => {
