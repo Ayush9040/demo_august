@@ -360,8 +360,7 @@ const factsImagesWithDateRange = [
       baseDomain + factAssets.factAsset96,
       baseDomain + factAssets.factAsset97,
     ],
-    description:
-      ' Uncover both ancient and new interesting facts about your very own, "The Yoga Institute". Discover fascinating facts about Shri. Yogendra ji, Mother Sita Devi, Dr. Jayadeva, and Dr. Hansaji Yogendra, among others.',
+    description:[]
   },
 ]
 

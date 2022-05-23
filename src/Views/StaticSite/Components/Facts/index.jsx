@@ -20,7 +20,12 @@ const Facts = () => {
             smallText={'The Yoga Institute'}
             largeText={'Facts'}
           />
-          <p>{selectedRange.description}</p>
+          <p>
+            Uncover both ancient and new interesting facts about your very own,
+            &apos;The Yoga Institute&apos;. Discover fascinating facts about Shri.Yogendra
+            ji, Mother Sita Devi, Dr. Jayadeva, and Dr. Hansaji Yogendra, among
+            others.
+          </p>
           <div className='globalButtonParent'>
             <div>
               <Link to={`/our-facts/?range=${rangeIndex}`}>
@@ -32,7 +37,7 @@ const Facts = () => {
       </div>
       <div className='facts-gallery'>
         <div className='facts-gallery-grid'>
-          {selectedRange.images.map((img, idx) => {
+          {selectedRange?.images.map((img, idx) => {
             if (idx < 6) {
               return (
                 <img key={idx} src={img} className={'grid-img-' + (idx + 1)} />

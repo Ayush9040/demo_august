@@ -31,7 +31,6 @@ const OurFacts = () => {
                   return (
                     <>
                       <h3>{desc?.date}</h3>
-                      <br />
                       <p>{desc?.data}</p>
                       <br />
                     </>
