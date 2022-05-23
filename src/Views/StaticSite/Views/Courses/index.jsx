@@ -8,12 +8,12 @@ import CommonBtn from '../../Components/commonbtn'
 import { courseCardData } from '../../utils/courseCardData'
 import { Link } from 'react-router-dom'
 
-import { course200H, camps, course900H, classes } from '../../Constants/courses/c200hr'
+import { courseArray,course200H, camps, classes } from '../../Constants/courses/c200hr'
 
 const Courses = () => {
-  let hourCourse = [...course200H,...course900H]
+  //let hourCourse = [...course200H,...course900H]
 
-  let data = [hourCourse,camps,course900H,classes]
+  let data = [course200H,camps,courseArray,classes]
 
   return (
     <div className='courses-container'>

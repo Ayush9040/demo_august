@@ -4,12 +4,12 @@ import { star } from '../../assets/icons/icon'
 import CommonBtn from '../commonbtn'
 import './style.scss'
 
-const CourseCard = ({ color, index, courseTitle, description, path }) => {
+const CourseCard = ({ color, index, courseTitle, description, path, img='http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Courses/course%20%281%29.png' }) => {
 
   return (
     <div className='course-card'>
       <div className='course-card-image'>
-        <img src='http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Courses/course%20%281%29.png' />
+        <img src={img} />
         <div className='stars'>
           {star}
           {star}

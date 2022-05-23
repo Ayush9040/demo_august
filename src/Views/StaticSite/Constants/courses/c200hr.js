@@ -1,12 +1,15 @@
 // c200Hr, c500Hr, c900Hr, camp, mostPopular, classes
+
+import baseDomain, { courseAssets } from '../../assets/images/imageAsset'
+
 export const c200h = {
   1: {
-    image: '',
+    image: `${baseDomain}${courseAssets.courseAsset38}`,
     images: [''],
     key: 'c200Hr',
     id: '1',
     name: '200 Hours TTC–Online–English',
-    mostPopular:false,
+    mostPopular:true,
     colorCode:'#E38F73',
     deatils:
       'With over 1,00,000 successfully certified students, the 200 Hours Teacher Training Course at The Yoga Institute covers the nuances of Traditional Yoga. This includes an introduction to the study of principal Yoga Asanas, Pranayamas, Meditation, Kriyas, Patanjali’s Yoga Sutra, and Hatha Yoga Pradipika. Further, complete immersion into practical experiences of the concept studies, public speaking, the methodology of teaching, etc. are covered. Strategically designed by the founder Shri Yogendraji, Smt. Sita Devi Yogendra, Dr. Jayadeva Yogendra, and Dr. Hansaji J Yogendra, the course serves as a valuable ‘life school’ to those seeking balance and fulfilment in life.',
@@ -90,7 +93,7 @@ export const c200h = {
     },
   },
   2: {
-    image: '',
+    image: `${baseDomain}${courseAssets.courseAsset38}`,
     images: [''],
     key: 'c200Hr',
     id: '2',
@@ -180,7 +183,7 @@ export const c200h = {
     },
   },
   3: {
-    image: '',
+    image: `${baseDomain}${courseAssets.courseAsset38}`,
     images: [''],
     key: 'c200Hr',
     id: '3',
@@ -270,7 +273,7 @@ export const c200h = {
     },
   },
   4: {
-    image: '',
+    image: `${baseDomain}${courseAssets.courseAsset38}`,
     images: [''],
     key: 'c200Hr',
     id: '4',
@@ -361,7 +364,7 @@ export const c200h = {
     },
   },
   5: {
-    image: '',
+    image: `${baseDomain}${courseAssets.courseAsset38}`,
     images: [''],
     key: 'c200Hr',
     id: '5',
@@ -451,7 +454,7 @@ export const c200h = {
     },
   },
   6: {
-    image: '',
+    image: `${baseDomain}${courseAssets.courseAsset8}`,
     images: ['', ''],
     key: 'CAMPS',
     id: '6',
@@ -499,12 +502,12 @@ export const c200h = {
     },
   },
   7: {
-    image: '',
+    image: `${baseDomain}${courseAssets.courseAsset6}`,
     images: [''],
     key: 'CAMPS',
     id: '7',
+    mostPopular:true,
     name: 'Cardiac & Hypertension Workshop / Health Camp',
-    mostPopular:false,
     colorCode:'#DDAB5B',
     details:'Powerful and effective asana, pranayama, and relaxation techniques to alleviate heart ailments',
     queDetails: [
@@ -551,7 +554,7 @@ export const c200h = {
     },
   },
   8: {
-    image: '',
+    image: `${baseDomain}${courseAssets.courseAsset7}`,
     images: [''],
     key: 'CAMPS',
     id: '8',
@@ -604,7 +607,7 @@ export const c200h = {
     },
   },
   9: {
-    image: '',
+    image: `${baseDomain}${courseAssets.courseAsset13}`,
     images: [''],
     key: 'CAMPS',
     id: '9',
@@ -658,7 +661,7 @@ export const c200h = {
     },
   },
   10: {
-    image: '',
+    image: `${baseDomain}${courseAssets.courseAsset13}`,
     images: [''],
     key: 'CAMPS',
     id: '10',
@@ -711,7 +714,7 @@ export const c200h = {
     },
   },
   11: {
-    image: '',
+    image: `${baseDomain}${courseAssets.courseAsset10}`,
     images: [''],
     key: 'CAMPS',
     id: '11',
@@ -764,7 +767,7 @@ export const c200h = {
     },
   },
   12: {
-    image: '',
+    image: `${baseDomain}${courseAssets.courseAsset8}`,
     images: [''],
     key: 'CAMPS',
     id: '12',
@@ -818,7 +821,7 @@ export const c200h = {
     },
   },
   13: {
-    image: '',
+    image: `${baseDomain}${courseAssets.courseAsset8}`,
     images: [''],
     key: 'CAMPS',
     id: '13',
@@ -872,7 +875,7 @@ export const c200h = {
     },
   },
   14: {
-    image: '',
+    image: `${baseDomain}${courseAssets.courseAsset9}`,
     images: [''],
     key: 'CAMPS',
     id: '14',
@@ -926,7 +929,7 @@ export const c200h = {
     },
   },
   15: {
-    image: '',
+    image: `${baseDomain}${courseAssets.courseAsset13}`,
     images: [''],
     key: 'CAMPS',
     id: '15',
@@ -980,7 +983,7 @@ export const c200h = {
     },
   },
   16: {
-    image: '',
+    image: `${baseDomain}${courseAssets.courseAsset11}`,
     images: [''],
     key: 'CAMPS',
     id: '16',
@@ -1307,12 +1310,12 @@ export const c200h = {
     },
   },
   22: {
-    image: '',
+    image: `${baseDomain}${courseAssets.courseAsset40}`,
     images: [''],
     key: 'c900Hr',
+    mostPopular:true,
     id: '22',
     name: '900 Hours TTC – Online – Hindi',
-    mostPopular:false,
     colorCode:'#E38F73',
     details:
       'With over 1,00,000/ 50,000 successfully certified students since 1918, the 1 Year Teacher Training Course (Hindi) at The Yoga Institute is an in-depth study of classical Ashtanga yoga (Eightfold Path Yoga). It teaches core yoga philosophy with a comprehensive approach to the science and technology of yoga. Strategically designed by the founder Shri Yogendraji, Smt. Sita Devi Yogendra, Dr. Jayadeva Yogendra, and Dr. Hansaji J Yogendra, the course serves as a valuable life school to those seeking balance and fulfilment in life. This course is ideal for those who have daily commitments at home, like homemakers. With the suitable schedule of this course, they can have access to advanced yoga training at their convenience and can become certified yoga trainers within one year.',
@@ -1493,7 +1496,7 @@ export const c200h = {
     },
   },
   23: {
-    image: '',
+    image: `${baseDomain}${courseAssets.courseAsset40}`,
     images: [''],
     key: 'c900Hr',
     id: '23',
@@ -1679,7 +1682,7 @@ export const c200h = {
     },
   },
   24: {
-    image: '',
+    image: `${baseDomain}${courseAssets.courseAsset40}`,
     images: [''],
     key: 'c900Hr',
     id: '24',
@@ -1865,7 +1868,7 @@ export const c200h = {
     },
   },
   25: {
-    image: '',
+    image: `${baseDomain}${courseAssets.courseAsset40}`,
     images: [''],
     key: 'c900Hr',
     id: '25',
@@ -2051,7 +2054,7 @@ export const c200h = {
     },
   },
   26: {
-    // add course image
+    image: '',
     // add any other images also
     key: 'classes',
     id: '26',
@@ -2081,7 +2084,7 @@ export const c200h = {
     },
   },
   27: {
-    img: '',
+    image:'',
     // add any other images also
     key: 'classes',
     id: '27',
@@ -2123,7 +2126,7 @@ export const c200h = {
     },
   },
   28: {
-    img: '',
+    image:'',
     // add any other images also
     key: 'classes',
     id: '28',
@@ -2158,7 +2161,7 @@ export const c200h = {
     },
   },
   29: {
-    img: '',
+    image:'',
     // add any other images also
     key: 'classes',
     id: '29',
@@ -2199,7 +2202,7 @@ export const c200h = {
     },
   },
   30: {
-    img: '',
+    image:'',
     // add any other images also
     key: 'classes',
     id: '30',
@@ -2238,7 +2241,7 @@ export const c200h = {
     },
   },
   31: {
-    img: '',
+    image:'',
     // add any other images also
     key: 'classes',
     id: '31',
@@ -2279,7 +2282,7 @@ export const c200h = {
     },
   },
   32: {
-    img: '',
+    image:'',
     // add any other images also
     key: 'classes',
     id: '32',
@@ -2330,12 +2333,8 @@ export const c200h = {
   },
 }
 
-
 export const courseArray = Object.values(c200h)
-export const course200H = courseArray.filter(({ key }) => key === 'c200Hr') 
-export const camps = courseArray.filter(({ key }) => key === 'CAMPS') 
-export const course900H = courseArray.filter(({ key }) => key === 'c900Hr') 
+export const course200H = courseArray.filter(({ key }) => key === 'c200Hr')
+export const camps = courseArray.filter(({ key }) => key === 'CAMPS')
+export const course900H = courseArray.filter(({ key }) => key === 'c900Hr')
 export const classes = courseArray.filter(({ key }) => key === 'classes')
-
-
-
