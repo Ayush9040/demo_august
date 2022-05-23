@@ -1,5 +1,9 @@
 const baseDomain = 'http://ecom-static-site.oss-ap-south-1.aliyuncs.com'
 
+export const background = {
+  
+}
+
 export const homeAssets = {
   homeAsset1: '/Home/Legacy/Madhavdasji.jpg',
   homeAsset2: '/Home/Legacy/ShriYogendraj.jpg',

@@ -11,6 +11,7 @@ const CommonBanner = ({
   children,
   description,
   bannerImg,
+  overlay = '#000000',
 }) => {
   return (
     <>
@@ -25,7 +26,7 @@ const CommonBanner = ({
           style={{
             width: '100%',
             height: '100%',
-            
+            background: `${overlay}80`,
           }}
         >
           {/* <img src={bannerImg ? bannerImg : DefaultImg} /> */}
