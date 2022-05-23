@@ -1,0 +1,307 @@
+.main_container {
+  height: 95%;
+  width: 95%;
+  border: 1px solid black;
+  border-radius: 20px;
+  margin: 2%;
+  justify-content: center;
+}
+
+.details {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.placeholder {
+  margin: 10px;
+  width: 100%;
+  border: 1px solid #606060;
+  border-radius: 30px;
+  height: 37px;
+}
+
+.radio_text {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  justify-content: center;
+}
+
+.left {
+  margin: 50px 90px 30px 90px;
+}
+
+.right {
+  margin: 50px 90px 30px 90px;
+}
+
+.label {
+  font-size: 17px;
+  color: #606060;
+  margin: 17px 17px 17px 17px;
+  width: 50%;
+}
+
+.pesudo {
+  font-size: 17px;
+  color: #606060;
+  margin: 17px;
+  //width: 50%
+}
+
+::placeholder {
+  font-size: 17px;
+  padding-left: 20px;
+}
+
+.next_1 {
+  border: 1px solid #606060;
+  height: 37px;
+  width: 80px;
+  color: black;
+  border-radius: 30px;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 6px 22px;
+  float: right;
+  margin-top: 2%;
+  margin-right: 30px;
+  background-color: white;
+}
+
+.back {
+  border: 1px solid #606060;
+  height: 37px;
+  width: 80px;
+  color: black;
+  border-radius: 30px;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 6px 22px;
+  float: left;
+  margin-left: 30px;
+  margin-top: 2%;
+  background-color: white;
+}
+
+.other {
+  height: 95%;
+  width: 95%;
+  margin: 2%;
+}
+
+.other_1 {
+  margin: 50px 45px 30px 15px;
+}
+
+.text {
+  width: 97%;
+  height: 45%;
+  border: 1px solid #606060;
+}
+
+.text_box {
+  display: inline-block;
+  width: 97%;
+  height: 370px;
+  margin-top: 7px;
+  margin-bottom: 10px;
+  border: 1px solid #606060;
+}
+
+.underline {
+  border: 0;
+  border-bottom: 1px solid #606060;
+  width: 97%;
+  margin: 10px;
+}
+
+input[type='radio'] {
+  box-sizing: border-box;
+  appearance: none;
+  background: white;
+  outline: 1px solid #606060;
+  width: 16px;
+  height: 16px;
+}
+
+.flex_box {
+  display: flex;
+}
+
+.place_holder_flex {
+  margin: 10px;
+  border: 1px solid #606060;
+  border-radius: 30px;
+  height: 37px;
+  width: 45%;
+}
+
+.flex-container {
+  display: flex;
+  align-items: center;
+}
+
+.button {
+  float: right;
+  padding-left: 30px;
+}
+
+.button_2 {
+  height: 30px;
+  width: 30px;
+  border: 1px solid #606060;
+  background-color: white;
+  font-size: 20px;
+  color: #606060;
+  cursor: pointer;
+}
+
+.enrollment_logo {
+  svg {
+    height: 80px;
+    width: 125px;
+  }
+}
+
+#dob {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  input {
+    border: none;
+  }
+}
+
+#DOB_box{
+  width: 200px;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  //grid-row : 2;
+  grid-column: 1 / 7;
+  margin-bottom: 10px;
+  //align-items: center;
+}
+
+.header {
+  //grid-row: 1;
+  grid-column: 1/7;
+  margin-left: 60px;
+  margin-top: 40px;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+.student {
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.x {
+  float: right;
+  font-size: 15px;
+  font-weight: 900;
+  display: flex;
+  padding-right: 40px;
+  border: none;
+  background-color: white;
+  cursor: pointer;
+}
+
+@media (max-width: '900px') {
+  .right {
+    .placeholder {
+      .pesudo {
+        font-size: 15px;
+      }
+    }
+  }
+
+  ::placeholder {
+    font-size: 15px;
+  }
+
+  .left_flex_contanier {
+    .flex_box {
+      display: inline;
+      .label {
+        font-size: 15px;
+      }
+    }
+  }
+
+  .left {
+    margin: 50px 30px 30px 30px;
+  }
+
+  .right {
+    margin: 50px 30px 30px 30px;
+  }
+
+  .footer {
+    margin-bottom: 1px;
+    .next_1 {
+      margin-top: 3%;
+      margin-right: 15px;
+    }
+    .back {
+      margin-top: 3%;
+      margin-left: 15px;
+    }
+  }
+
+  .other_1 {
+    margin: 30px 10px 30px 30px;
+  }
+
+  .label {
+    font-size: 15px;
+  }
+
+  .radio_text {
+    display: inline;
+  }
+
+  .text_box {
+    height: 200px;
+  }
+
+  .enrollment_logo {
+    svg {
+      height: 65px;
+      width: 100px;
+    }
+  }
+
+  @media (max-width: '786px') {
+    .flex_box {
+      .place_holder_flex {
+        width: 35%;
+      }
+    }
+
+    .enrollment_logo {
+      svg {
+        height: 65px;
+        width: 100px;
+      }
+    }
+
+    .footer {
+      margin-bottom: 7px;
+    }
+
+    .text_box {
+      height: 170px;
+    }
+
+    #DOB_box{
+      width: 150px;
+    }
+  }
+}

@@ -11,6 +11,7 @@ import VideosSection from '../../Components/Videos'
 import NewsLetter from '../../Components/NewsLetter'
 import Footer from '../../Components/Footer'
 import Blog from '../../Components/Blogs'
+import Enrollment from '../../Components/EnrollmentForm'
 
 const Home = () => {
   return (
