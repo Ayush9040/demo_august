@@ -24,12 +24,12 @@ const SingleJob = () => {
         <div className='job-application'>
           <div className='job-requirements'>
             <ul>
-              {Job.jobRequirements.map((item, i) => (
+              {/* {Job.jobRequirements.map((item, i) => (
                 <li key={i}>
                   <span>Requirement:</span>
                   {item}
                 </li>
-              ))}
+              ))} */}
             </ul>
           </div>
           <div className='job-form'>
