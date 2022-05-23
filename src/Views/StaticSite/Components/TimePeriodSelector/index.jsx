@@ -20,7 +20,7 @@ const TimePeriodSelector = () => {
             <div
               key={item.range}
               className={`decades-option ${item.range === selectedRange?.range ? 'selected' : `other-${index}`}`}
-              onClick={() => handleNavigate(index)}
+              onClick={() => handleNavigate(item.key)}
             >
               <h4>
                 {item.start}
