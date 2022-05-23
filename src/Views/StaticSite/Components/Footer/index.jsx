@@ -122,7 +122,7 @@ const Footer = () => {
       <div className="contact">
         <div className="menu">
           <ul>
-            <Link to="">
+            <Link to="/wellness">
               <li>Corporate wellness</li>
             </Link>
             <Link to="/affiliations">
