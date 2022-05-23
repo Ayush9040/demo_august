@@ -8,7 +8,7 @@ const Enrollment = () => {
 
   return (
     <>
-      <div className="main_container">
+      <div className="enrollment_container ">
         <div className="header">
           <button className="x">x</button>
           <div className="student">Student Enrollment</div>

@@ -51,6 +51,7 @@ import BrowseCourses from '../Components/BrowseCourses/index.jsx'
 import TermsCondition from '../Components/TermsandCondition/index.jsx'
 import PrivacyPolicy from '../Components/PrivacyPolicy/index.jsx'
 import Affiliations from '../Components/Affiliations/index.jsx'
+import Enrollment from '../Components/EnrollmentForm/index.jsx'
 
 const staticSiteRoutes = [
   {
@@ -487,6 +488,14 @@ const staticSiteRoutes = [
     id: 'statisSiteUnderAffiliations',
     routePath: '/affiliations',
     name: 'Affiliations',
+  },
+  {
+    Component: Enrollment,
+    path: '/enrollment',
+    exact: true,
+    id: 'statisSiteUnderEnrollment',
+    routePath: '/enrollment',
+    name: 'Enrollment',
   },
 ]
 
