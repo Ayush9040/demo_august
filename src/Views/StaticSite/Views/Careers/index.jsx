@@ -4,6 +4,7 @@ import CareerCard from '../../Components/CommonCareerCard'
 import './style.scss'
 import { career } from '../../utils/careerData'
 import CareerImg from '../../assets/images/our_careers.png'
+import baseDomain, { background } from '../../assets/images/imageAsset'
 
 
 const Careers = () => {
@@ -18,7 +19,7 @@ const Careers = () => {
         Heading="Our Careers"
         isOnlyBanner={false}
         innerNav={false}
-        bannerImg={CareerImg}
+        bannerImg={`${baseDomain}${background.volunteer}`}
       />
       <div className='jobs-container' >
         <h1>Join us<div className='bottom-line' ></div></h1>

@@ -13,6 +13,7 @@ const CommonBanner = ({
   bannerImg,
   overlay = '#000000',
 }) => {
+  //console.log(bannerImg, 'museum')
   return (
     <>
       <div

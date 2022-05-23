@@ -5,8 +5,12 @@ import 'slick-carousel/slick/slick-theme.css'
 import Slider from 'react-slick'
 import './style.scss'
 import FacilitiesImg from '../../assets/images/facilities-02.png'
+import baseDomain, {
+  background,
+  facilitiyAssets,
+} from '../../assets/images/imageAsset'
 
-import baseDomain, { facilitiyAssets } from '../../assets/images/imageAsset'
+//import baseDomain, { facilitiyAssets } from '../../assets/images/imageAsset'
 const Facilities = () => {
   const [show, setShow] = useState(0)
   const [activeSlide, setActiveSlide] = useState(0)
@@ -48,7 +52,10 @@ const Facilities = () => {
         isOnlyBanner={false}
         innerNav={false}
         description={description}
-        bannerImg={FacilitiesImg}
+        //bannerImg={FacilitiesImg}
+
+        bannerImg={`${baseDomain}${background.facilities}`}
+        overlay="#FF0000"
       />
       <div className="facilities-navigation-lg">
         <ul>

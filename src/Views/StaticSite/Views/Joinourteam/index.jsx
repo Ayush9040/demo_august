@@ -3,32 +3,35 @@ import CommonBanner from '../../Components/Common-banner'
 import benefits from '../../assets/images/benifits.png'
 import './styles.scss'
 import CareerCard from '../../Components/CommonCareerCard'
-// import baseDomain, { volunteerAssets } from '../../assets/images/imageAsset'
+import baseDomain, {
+  volunteerAssets,
+  background,
+} from '../../assets/images/imageAsset'
 import { volunteerData } from '../../utils/volunteerData'
 import VolunteerImg from '../../assets/images/volunteer_with_us.png'
 
 const Volunteer = () => {
   return (
     <>
-      <div className='Benefits-container'>
+      <div className="Benefits-container">
         <CommonBanner
           isLeftContent={false}
           Logo={false}
           Navigation={true}
-          PageType='Volunteer'
+          PageType="Volunteer"
           BgImage={benefits}
-          Heading='Volunteer with us'
+          Heading="Volunteer with us"
           isOnlyBanner={false}
           innerNav={true}
-          bannerImg={VolunteerImg}
+          bannerImg={`${baseDomain}${background.volunteer}`}
         />
       </div>
-      <div className='our-container pd-career'>
-        <div className='banner-heading bh-center'>
+      <div className="our-container pd-career">
+        <div className="banner-heading bh-center">
           Volunteer Programmes
-          <div className='bottom-line'></div>
+          <div className="bottom-line"></div>
         </div>
-        <div className='career-cards'>
+        <div className="career-cards">
           {/* <CareerCard
             link={'/join-our-team/program-id'}
             cardTitle='Annam Brahma'
@@ -50,12 +53,14 @@ const Volunteer = () => {
             bgImg={baseDomain + volunteerAssets.volunteerAssets4}
           /> */}
           {volunteerData.map((item, i) => {
-            return <CareerCard
-              key={i}
-              link={`/join-our-team/${item.id}`}
-              cardTitle={item.name}
-              bgImg={item.image}
-            />
+            return (
+              <CareerCard
+                key={i}
+                link={`/join-our-team/${item.id}`}
+                cardTitle={item.name}
+                bgImg={item.image}
+              />
+            )
           })}
         </div>
       </div>

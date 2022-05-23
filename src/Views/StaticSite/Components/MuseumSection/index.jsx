@@ -9,7 +9,10 @@ import CommonGrid from '../GalleryGrid'
 import Location from './Location'
 // import { Link } from 'react-router-dom'
 import CommonBtn from '../commonbtn'
-import baseDomain, { museumAssets } from '../../assets/images/imageAsset'
+import baseDomain, {
+  museumAssets,
+  background,
+} from '../../assets/images/imageAsset'
 import museumBanner from '../../assets/images/museum-1.png'
 const Museum = () => {
   const intro =
@@ -22,30 +25,32 @@ const Museum = () => {
           isLeftContent={false}
           Logo={false}
           Navigation={true}
-          PageType='museum-banner'
+          PageType="museum-banner"
           BgImage={Virtual}
-          Heading='Museum of Classical Yoga'
+          Heading="Museum of Classical Yoga"
           isOnlyBanner={false}
           description={intro}
-          bannerImg={museumBanner}
+          //bannerImg={museumBanner}
+          bannerImg={`${baseDomain}${background.museum}`}
+          overlay="#FF0000"
         />
       </div>
 
-      <div className='museum-heading'>
+      <div className="museum-heading">
         <Heading largeText={'Virual Tour'} />
         <br />
       </div>
-      <div className='museum-container'>
-        <div className='museum-card-wrapper'>
-          <div className='museum-card'>
-            <img src={baseDomain + museumAssets.virualAssets} alt='' />
+      <div className="museum-container">
+        <div className="museum-card-wrapper">
+          <div className="museum-card">
+            <img src={baseDomain + museumAssets.virualAssets} alt="" />
           </div>
         </div>
-        <p className='vt_text'>
+        <p className="vt_text">
           Want to see what the Shri Yogendra Museum looks like from the inside?
           Here’s your chance to take on a virtual tour;
         </p>
-        <a href='https://artsandculture.google.com/story/QgVhfXAZr-CxIA'>
+        <a href="https://artsandculture.google.com/story/QgVhfXAZr-CxIA">
           <CommonBtn text={'Take a virtual tour'} />
         </a>
       </div>
