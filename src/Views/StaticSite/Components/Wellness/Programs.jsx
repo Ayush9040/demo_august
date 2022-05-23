@@ -11,7 +11,7 @@ import './style.scss'
 import baseDomain, { homeAssets } from '../../assets/images/imageAsset'
 import { Link } from 'react-router-dom'
 
-const Programs = ({ alumni, setImageChanger }) => {
+const Programs = ({ setImageChanger }) => {
   const AnnamBrahma = `${baseDomain}${homeAssets.homeAsset19}`
   const Police = `${baseDomain}${homeAssets.homeAsset20}`
   const BMC = `${baseDomain}${homeAssets.homeAsset21}`

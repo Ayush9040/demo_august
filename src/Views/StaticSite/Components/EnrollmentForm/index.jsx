@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { filler, filler1 } from '../../assets/icons/icon'
+import { filler1 } from '../../assets/icons/icon'
 import './styles.scss'
 //import { Link } from 'react-router-dom'
 
