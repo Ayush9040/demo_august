@@ -1,59 +1,58 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Heading from '../Heading'
-import TimePeriodSelector from './TimePeriodSelector'
+import TimePeriodSelector from '../TimePeriodSelector'
 import { facts, divider } from '../../assets/icons/icon'
 import './style.scss'
 import CommonBtn from '../commonbtn'
 import { Link } from 'react-router-dom'
-import Images from './imageRepo'
+import useFacts from '../../utils/hooks/useFacts'
 
 const Facts = () => {
-  const [decade, setDecade] = useState(0)
-  const imageObjMap = {
-    0: 'images1990',
-    1: 'images2000',
-    2: 'images2010',
-    3: 'images2020',
-  }
+  const { rangeIndex, selectedRange, dateRange, handleNavigate } = useFacts()
 
   return (
-    <div className="facts-container global-padding">
-      <div className="facts-header">
-        <TimePeriodSelector onDecadeChange={setDecade} />
-        <div className="facts-header-text">
+    <div className='facts-container global-padding'>
+      <div className='facts-header'>
+        <TimePeriodSelector />
+        <div className='facts-header-text'>
           <Heading
             logo={facts}
             smallText={'The Yoga Institute'}
             largeText={'Facts'}
           />
-          <p>
-            {`Uncover both ancient and new interesting facts about your very own,
-            'The Yoga Institute'. Discover fascinating facts about Shri.Yogendra
-            ji, Mother Sita Devi, Dr. Jayadeva, and Dr. Hansaji Yogendra, among
-            others.`}
-           
-          </p>
+          <p>{selectedRange.description}</p>
           <div className='globalButtonParent'>
             <div>
-              <Link to='/our-facts/'>
+              <Link to={`/our-facts/?range=${rangeIndex}`}>
                 <CommonBtn text='Explore More' />
               </Link>
             </div>
           </div>
         </div>
       </div>
-      <div className="facts-gallery">
-        <div className="facts-gallery-grid">
-          {Images[imageObjMap[decade]].map((img, idx) => (
-            <img key={idx} src={img} className={'grid-img-' + (idx + 1)} />
-          ))}
+      <div className='facts-gallery'>
+        <div className='facts-gallery-grid'>
+          {selectedRange.images.map((img, idx) => {
+            if (idx < 6) {
+              return (
+                <img key={idx} src={img} className={'grid-img-' + (idx + 1)} />
+              )
+            }
+            return
+          })}
         </div>
-        <div className="slider">
-          <input type={'range'} min={0} max={3} value={decade}  onChange={()=>decade<3 ? setDecade(decade+1):setDecade(0)}/>
+        <div className='slider'>
+          <input
+            type={'range'}
+            min={0}
+            max={dateRange.length - 1}
+            value={rangeIndex}
+            onChange={(e) => handleNavigate(e.target.value)}
+          />
         </div>
       </div>
 
-      <div className="divider">{divider}</div>
+      <div className='divider'>{divider}</div>
     </div>
   )
 }

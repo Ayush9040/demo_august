@@ -39,16 +39,24 @@
     height: 150px;
     cursor: pointer;
     margin: 0 auto;
-    // opacity: 0.5;
-    // &:first-child{
-    //     opacity: 0.75!important;
-    // }
-    // &:nth-child(2){
-    //     opacity: 0.75!important;
-    // }
-    // &:last-child{
-    //     opacity: 0.25!important
-    // }
+
+    &.selected {
+        border-radius: 100px;
+        border: 5px solid rgb(202, 70, 37);
+        opacity: 1;
+    }
+    &.other-0 {
+        opacity: 0.75!important;
+    }
+    &.other-1 {
+        opacity: 0.75!important;
+    }
+    &.other-2 {
+        opacity: 0.50!important;
+    }
+    &.other-3 {
+        opacity: 0.25!important;
+    }
 }
 
 .decades-option h4{
@@ -72,6 +80,7 @@
         color: #aaa;
         margin: 0;
     }
+
 }
 
 .o-1 {
