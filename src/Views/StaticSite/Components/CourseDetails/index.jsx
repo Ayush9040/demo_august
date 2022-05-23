@@ -41,26 +41,26 @@ const CourseDetails = ({ pageDate }) => {
 
   const selectMenu = (name) => {
     switch (name) {
-      case 'Program Details':
-        setDetail(1)
-        break
-      case 'Curriculam':
-        setDetail(2)
-        break
-      case 'Teaching & Certification':
-        setDetail(3)
-        break
-      case 'Our Unique Offerings':
-        setDetail(4)
-        break
-      case 'Registration':
-        setDetail(5)
-        break
-      case 'FAQ':
-        setDetail(6)
-        break
-      default:
-        setDetail(1)
+    case 'Program Details':
+      setDetail(1)
+      break
+    case 'Curriculam':
+      setDetail(2)
+      break
+    case 'Teaching & Certification':
+      setDetail(3)
+      break
+    case 'Our Unique Offerings':
+      setDetail(4)
+      break
+    case 'Registration':
+      setDetail(5)
+      break
+    case 'FAQ':
+      setDetail(6)
+      break
+    default:
+      setDetail(1)
     }
   }
 
