@@ -1,7 +1,7 @@
 const baseDomain = 'http://ecom-static-site.oss-ap-south-1.aliyuncs.com'
 
 export const background = {
-  
+  donation:'/backgrounds/donation_bg.jpg',
 }
 
 export const homeAssets = {
