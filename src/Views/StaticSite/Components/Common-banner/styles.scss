@@ -3,6 +3,7 @@
     width: 100vw;
     // position: relative;
     // height: 100%;
+    background: no-repeat center / cover;
     .navigation-container {
         padding-top: 1rem;
     // position: absolute;
@@ -48,31 +49,31 @@
 
 //images
 
-.museum-banner-container,.facilities-container, 
-.gifting-container, .faq-container, .volunteer-container, 
-.OurCareers-container, .why-tyi-container, 
-.Benefits-container, .Values-container, 
-.support-container, .donation-container, .affiliation-container{ 
-    position: relative;
-}
-.museum-banner-container img,.facilities-container img, 
-.gifting-container img, .faq-container img, .volunteer-container img, 
-.OurCareers-container img, .why-tyi-container img, 
-.Benefits-container img, .Values-container img, 
-.support-container img, .donation-container img, .affiliation-container img{
-    position: absolute;
-    z-index: -2;
-    height: 100%;
-    width: 100%;
-}
+// .museum-banner-container,.facilities-container, 
+// .gifting-container, .faq-container, .volunteer-container, 
+// .OurCareers-container, .why-tyi-container, 
+// .Benefits-container, .Values-container, 
+// .support-container, .donation-container, .affiliation-container{ 
+//     position: relative;
+// }
+// .museum-banner-container img,.facilities-container img, 
+// .gifting-container img, .faq-container img, .volunteer-container img, 
+// .OurCareers-container img, .why-tyi-container img, 
+// .Benefits-container img, .Values-container img, 
+// .support-container img, .donation-container img, .affiliation-container img{
+//     position: absolute;
+//     z-index: -2;
+//     height: 100%;
+//     width: 100%;
+// }
 
-.overlay{
-    position: absolute;
-    z-index: -1;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.5);
-}
+// .overlay{
+//     position: absolute;
+//     z-index: -1;
+//     width: 100%;
+//     height: 100%;
+//     background-color: rgba(0,0,0,0.5);
+// }
 
 .terms-container{
     background: rgb(78, 105, 150)
