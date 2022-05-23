@@ -2,6 +2,7 @@ import React from 'react'
 import CommonBanner from '../Common-banner'
 import './style.scss'
 import data from './data.js'
+import baseDomain, { background } from '../../assets/images/imageAsset'
 
 const PrivacyPolicy = () => {
   let description =
@@ -18,6 +19,7 @@ const PrivacyPolicy = () => {
           PageType="privacy"
           Heading="Privacy Policy"
           description={description}
+          bannerImg={`${baseDomain}${background.volunteer}`}
         />
       </div>
       <div className="terms-and-conditions">

@@ -3,6 +3,7 @@ import CommonBanner from '../../Components/Common-banner'
 import SectionComponent from '../../Components/SectionComponent'
 import { socialPageData } from '../../utils/socialPageData'
 import './style.scss'
+import GiftingImg from '../../assets/images/gifting2a-02.png'
 
 const SocialResponsibility = () => {
   return (
@@ -18,6 +19,7 @@ const SocialResponsibility = () => {
         description={
           'From the very beginning, it has been very important for TYI to balance the potential of sharing the awareness of yoga with social responsibility, as well as find and encourage a way to give back to the community. '
         }
+        bannerImg={GiftingImg}
       />
       <div className='social-res-sections'>
         {socialPageData.map((item, i) => (

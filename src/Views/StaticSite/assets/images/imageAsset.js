@@ -1,5 +1,14 @@
 const baseDomain = 'http://ecom-static-site.oss-ap-south-1.aliyuncs.com'
 
+export const background = {
+  donation:'/backgrounds/donation_bg.jpg',
+  facilities : '/backgrounds/facilities_bg.jpg',
+  gifting: '/backgrounds/gifting_bg.jpg',
+  museum : '/backgrounds/museum_bg.jpg',
+  volunteer : '/backgrounds/volunteer_bg.jpg',
+  
+}
+
 export const homeAssets = {
   homeAsset1: '/Home/Legacy/Madhavdasji.jpg',
   homeAsset2: '/Home/Legacy/ShriYogendraj.jpg',

@@ -1,7 +1,9 @@
 import React from 'react'
+//import baseDomain, { background } from '../../assets/images/imageAsset'
 import CommonBanner from '../Common-banner'
 import data from './data'
 import './style.scss'
+import baseDomain, { background } from '../../assets/images/imageAsset'
 
 const TermsCondition = () => {
   let description =
@@ -19,6 +21,7 @@ const TermsCondition = () => {
           PageType='terms'
           Heading='Terms and conditions'
           description={description}
+          bannerImg={`${baseDomain}${background.volunteer}`}
         />
       </div>
       <div className='terms-and-conditions'>
