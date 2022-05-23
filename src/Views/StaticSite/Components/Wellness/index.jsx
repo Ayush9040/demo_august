@@ -7,28 +7,30 @@ import Programs from './Programs'
 
 const wellness = () => {
   return (
-    <div className="">
+    <div className=''>
       <CommonBanner
         isLeftContent={false}
         Logo={false}
         Navigation={true}
-        PageType="gifting"
-        Heading="Yoga for corporate wellness"
+        PageType='gifting'
+        Heading='Yoga for corporate wellness'
         isOnlyBanner={false}
         innerNav={false}
-        description="Employees are the foundation of any business and the driving force behind its success.The Yoga Institute Corporate Wellness Programs are aimed to enhance and encourage a compre-
+        description='Employees are the foundation of any business and the driving force behind its success.The Yoga Institute Corporate Wellness Programs are aimed to enhance and encourage a compre-
         hensive approach to employee well-being by fostering a healthy and happy workplace culture. We provide wellness solutions that go beyond traditional wellness programs to improve physical,
         mental, and emotional health, work/life balance, the ability to handle stress and challenges, team cooperation, focus, and productivity, and optimize human resource investments while boosting employee morale and engagement.Yoga practices, which include routine and discipline, help you to cultivate a conscious relationship
 
         with your inner self while also keeping your mind on track. The ability to persevere is what distin-
-        guishes successful leaders and managers from the others."
+        guishes successful leaders and managers from the others.'
       />
-      <Programs/>
+      <Programs />
 
-      <p className="offering-heading">Our offerings</p>
-      <hr className="line"></hr>
-      <div className="offering-para1">
-        <p className="para1">
+      <p className='offering-heading'>
+        Our offerings
+        <div className='bottom-line line'></div>
+      </p>
+      <div className='offering-para1'>
+        <p className='para1'>
           We offer both regular yoga classes and customized programs that are
           specifically tailored to your requirements. Please get in touch with
           us to discuss the best solution for your employees and team members.
@@ -42,17 +44,17 @@ const wellness = () => {
         </p>
         <img
           className='para1-img'
-          src="https://img4.nbstatic.in/tr:w-500/6049a3ce79600c000c8c19f1.jpg"
-          alt=""
+          src='https://img4.nbstatic.in/tr:w-500/6049a3ce79600c000c8c19f1.jpg'
+          alt=''
         />
       </div>
-      <div className="offering-para2">
+      <div className='offering-para2'>
         <img
           className='para2-img'
-          src="https://www.betterup.com/hs-fs/hubfs/Imported_Blog_Media/employee%20wellness%20-%20wheel%20showing%20the%20components%20of%20wellness-1.png?width=1999&height=1143&name=employee%20wellness%20-%20wheel%20showing%20the%20components%20of%20wellness-1.png"
-          alt=""
+          src='https://www.betterup.com/hs-fs/hubfs/Imported_Blog_Media/employee%20wellness%20-%20wheel%20showing%20the%20components%20of%20wellness-1.png?width=1999&height=1143&name=employee%20wellness%20-%20wheel%20showing%20the%20components%20of%20wellness-1.png'
+          alt=''
         />
-        <p className="para2">
+        <p className='para2'>
           Encourage your staff to keep healthy and productive even if they work
           from home. When working remotely, many people find it difficult to
           strike a balance between work and personal life. Yoga is a great way

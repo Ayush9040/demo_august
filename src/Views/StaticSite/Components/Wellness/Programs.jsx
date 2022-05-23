@@ -42,8 +42,8 @@ const Programs = ({ alumni, setImageChanger }) => {
       <div className='wellness-initiative-content'>
         <Heading
           // logo={responsibility}
-          smallText={'Social'}
-          largeText={alumni ? 'Responsibility' : 'Initiatives'}
+          smallText={'Positive Implications of'}
+          largeText={'wellness programs at work'}
         />
         <div className='wellness-initiative-carousel'>
           <Slider {...settings}>
