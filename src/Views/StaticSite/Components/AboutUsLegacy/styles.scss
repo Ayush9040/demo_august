@@ -16,7 +16,7 @@
 //         position: absolute;
 //         width: 100%;
 //     }
-// }
+
 .banner-container {
     color: #fff;
     // position: absolute;
@@ -126,9 +126,9 @@
     }
 }
 
-// .legacy-content{
-//     // height: 80%;
-// }
+.legacy-content{
+    background: url("../../assets/images/benifits.png") no-repeat center / cover!important;
+}
 .other-members{
     width: 100%;
     height: 20%;

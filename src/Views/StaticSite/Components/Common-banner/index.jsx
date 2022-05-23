@@ -10,7 +10,7 @@ const CommonBanner = ({
   innerNav,
   children,
   description,
-  bannerImg,
+  bannerImg = DefaultImg,
   overlay = '#000000',
 }) => {
   //console.log(bannerImg, 'museum')

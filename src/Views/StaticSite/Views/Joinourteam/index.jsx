@@ -4,11 +4,10 @@ import benefits from '../../assets/images/benifits.png'
 import './styles.scss'
 import CareerCard from '../../Components/CommonCareerCard'
 import baseDomain, {
-  volunteerAssets,
   background,
 } from '../../assets/images/imageAsset'
 import { volunteerData } from '../../utils/volunteerData'
-import VolunteerImg from '../../assets/images/volunteer_with_us.png'
+//import VolunteerImg from '../../assets/images/volunteer_with_us.png'
 
 const Volunteer = () => {
   return (

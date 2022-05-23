@@ -3,7 +3,7 @@ import CommonBanner from '../../Components/Common-banner'
 import './style.scss'
 import SectionComponent from '../../Components/SectionComponent/index'
 //import baseDomain,{ giftingAssets } from '../../assets/images/imageAsset'
-import GiftingImg from '../../assets/images/gifting2a-02.png'
+//import GiftingImg from '../../assets/images/gifting2a-02.png'
 import baseDomain, {
   background,
   giftingAssets,

@@ -4,7 +4,7 @@ import CommonBanner from '../../Components/Common-banner'
 import Donation from '../../Components/Donation'
 import SocialInitiatives from '../../Components/SocialInitiatives'
 import SocialInitiativesGallery from '../../Components/SocialInitiatives/SocialInitiativesGallery'
-import SupportImg from '../../assets/images/gifting2a-02.png'
+//import SupportImg from '../../assets/images/gifting2a-02.png'
 import baseDomain, { background } from '../../assets/images/imageAsset'
 const Support = () => {
   const [imageChanger, setImageChanger] = useState(0)

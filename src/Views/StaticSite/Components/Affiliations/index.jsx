@@ -3,7 +3,7 @@ import CommonBanner from '../Common-banner'
 import Heading from '../Heading'
 import './style.scss'
 import baseDomain, { giftingAssets, background } from '../../assets/images/imageAsset'
-import AffiliationImg from '../../assets/images/why_tyi.png'
+//import AffiliationImg from '../../assets/images/why_tyi.png'
 const Affiliations = () => {
   let desc= 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, seddiam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam,quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.'
   return (
