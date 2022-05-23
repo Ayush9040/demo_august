@@ -449,10 +449,10 @@ const staticSiteRoutes = [
   },
   {
     Component: SingleJob,
-    path: '/careers/job-id',
+    path: '/careers/:jobid',
     exact: true,
     id: 'statisSiteUnderSingleJob',
-    routePath: '/careers/job-id',
+    routePath: '/careers/:jobid',
     name: 'SingleJob',
   },
   {
