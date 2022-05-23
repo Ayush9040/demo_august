@@ -87,64 +87,8 @@ const factsImagesWithDateRange = [{
   description: ' Uncover both ancient and new interesting facts about your very own, "The Yoga Institute". Discover fascinating facts about Shri. Yogendra ji, Mother Sita Devi, Dr. Jayadeva, and Dr. Hansaji Yogendra, among others.'
 },
 {
-  range: '2020-2030',
+  range: '2020-Onwards',
   start: '2020',
-  end: '2030',
-  images: [
-    baseDomain+homeAssets.homeAsset43,
-    baseDomain+homeAssets.homeAsset44,
-    baseDomain+homeAssets.homeAsset45,
-    baseDomain+homeAssets.homeAsset46,
-    baseDomain+homeAssets.homeAsset47,
-    baseDomain+homeAssets.homeAsset48,
-  ],
-  description: ' Uncover both ancient and new interesting facts about your very own, "The Yoga Institute". Discover fascinating facts about Shri. Yogendra ji, Mother Sita Devi, Dr. Jayadeva, and Dr. Hansaji Yogendra, among others.'
-},
-{
-  range: '2040-2050',
-  start: '2050',
-  end: '2050',
-  images: [
-    baseDomain+homeAssets.homeAsset49,
-    baseDomain+homeAssets.homeAsset50,
-    baseDomain+homeAssets.homeAsset51,
-    baseDomain+homeAssets.homeAsset52,
-    baseDomain+homeAssets.homeAsset53,
-    baseDomain+homeAssets.homeAsset54,
-  ],
-  description: ' Uncover both ancient and new interesting facts about your very own, "The Yoga Institute". Discover fascinating facts about Shri. Yogendra ji, Mother Sita Devi, Dr. Jayadeva, and Dr. Hansaji Yogendra, among others.'
-},
-{
-  range: '2050-2060',
-  start: '2050',
-  end: '2060',
-  images: [
-    baseDomain+homeAssets.homeAsset31,
-    baseDomain+homeAssets.homeAsset32,
-    baseDomain+homeAssets.homeAsset33,
-    baseDomain+homeAssets.homeAsset34,
-    baseDomain+homeAssets.homeAsset35,
-    baseDomain+homeAssets.homeAsset36,
-  ],
-  description: ' Uncover both ancient and new interesting facts about your very own, "The Yoga Institute". Discover fascinating facts about Shri. Yogendra ji, Mother Sita Devi, Dr. Jayadeva, and Dr. Hansaji Yogendra, among others.'
-},
-{
-  range: '2060-2070',
-  start: '2070',
-  end: '2080',
-  images: [
-    baseDomain+homeAssets.homeAsset37,
-    baseDomain+homeAssets.homeAsset38,
-    baseDomain+homeAssets.homeAsset39,
-    baseDomain+homeAssets.homeAsset40,
-    baseDomain+homeAssets.homeAsset41,
-    baseDomain+homeAssets.homeAsset42,
-  ],
-  description: ' Uncover both ancient and new interesting facts about your very own, "The Yoga Institute". Discover fascinating facts about Shri. Yogendra ji, Mother Sita Devi, Dr. Jayadeva, and Dr. Hansaji Yogendra, among others.'
-},
-{
-  range: '2070-Onwards',
-  start: '2070',
   end: 'Onwards',
   images: [
     baseDomain+homeAssets.homeAsset43,
@@ -155,6 +99,63 @@ const factsImagesWithDateRange = [{
     baseDomain+homeAssets.homeAsset48,
   ],
   description: ' Uncover both ancient and new interesting facts about your very own, "The Yoga Institute". Discover fascinating facts about Shri. Yogendra ji, Mother Sita Devi, Dr. Jayadeva, and Dr. Hansaji Yogendra, among others.'
-}]
+},
+// {
+//   range: '2040-2050',
+//   start: '2050',
+//   end: '2050',
+//   images: [
+//     baseDomain+homeAssets.homeAsset49,
+//     baseDomain+homeAssets.homeAsset50,
+//     baseDomain+homeAssets.homeAsset51,
+//     baseDomain+homeAssets.homeAsset52,
+//     baseDomain+homeAssets.homeAsset53,
+//     baseDomain+homeAssets.homeAsset54,
+//   ],
+//   description: ' Uncover both ancient and new interesting facts about your very own, "The Yoga Institute". Discover fascinating facts about Shri. Yogendra ji, Mother Sita Devi, Dr. Jayadeva, and Dr. Hansaji Yogendra, among others.'
+// },
+// {
+//   range: '2050-2060',
+//   start: '2050',
+//   end: '2060',
+//   images: [
+//     baseDomain+homeAssets.homeAsset31,
+//     baseDomain+homeAssets.homeAsset32,
+//     baseDomain+homeAssets.homeAsset33,
+//     baseDomain+homeAssets.homeAsset34,
+//     baseDomain+homeAssets.homeAsset35,
+//     baseDomain+homeAssets.homeAsset36,
+//   ],
+//   description: ' Uncover both ancient and new interesting facts about your very own, "The Yoga Institute". Discover fascinating facts about Shri. Yogendra ji, Mother Sita Devi, Dr. Jayadeva, and Dr. Hansaji Yogendra, among others.'
+// },
+// {
+//   range: '2060-2070',
+//   start: '2070',
+//   end: '2080',
+//   images: [
+//     baseDomain+homeAssets.homeAsset37,
+//     baseDomain+homeAssets.homeAsset38,
+//     baseDomain+homeAssets.homeAsset39,
+//     baseDomain+homeAssets.homeAsset40,
+//     baseDomain+homeAssets.homeAsset41,
+//     baseDomain+homeAssets.homeAsset42,
+//   ],
+//   description: ' Uncover both ancient and new interesting facts about your very own, "The Yoga Institute". Discover fascinating facts about Shri. Yogendra ji, Mother Sita Devi, Dr. Jayadeva, and Dr. Hansaji Yogendra, among others.'
+// },
+// {
+//   range: '2070-Onwards',
+//   start: '2070',
+//   end: 'Onwards',
+//   images: [
+//     baseDomain+homeAssets.homeAsset43,
+//     baseDomain+homeAssets.homeAsset44,
+//     baseDomain+homeAssets.homeAsset45,
+//     baseDomain+homeAssets.homeAsset46,
+//     baseDomain+homeAssets.homeAsset47,
+//     baseDomain+homeAssets.homeAsset48,
+//   ],
+//   description: ' Uncover both ancient and new interesting facts about your very own, "The Yoga Institute". Discover fascinating facts about Shri. Yogendra ji, Mother Sita Devi, Dr. Jayadeva, and Dr. Hansaji Yogendra, among others.'
+// }
+]
 
 export default factsImagesWithDateRange
