@@ -3,7 +3,7 @@ import Heading from '../Heading'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import Slider from 'react-slick'
-import { responsibility } from '../../assets/icons/icon'
+//import { responsibility } from '../../assets/icons/icon'
 import { socialData } from '../../utils/socialData'
 import CommonBtn from '../commonbtn'
 
