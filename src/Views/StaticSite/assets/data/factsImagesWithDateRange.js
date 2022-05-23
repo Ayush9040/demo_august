@@ -1,5 +1,5 @@
 import baseDomain, { factAssets } from '../images/imageAsset'
-import { factsDesc } from './factsdesc'
+//import { factsDesc } from './factsdesc'
 
 const factsImagesWithDateRange = [
   {
