@@ -21,7 +21,7 @@ const CourseCard = ({ color, index, courseTitle, description, path, img='http://
       <div
         className='course-card-content'
         style={{
-          background: color + `${index === 0 ? 'B3' : index === 1 ? 'CC' : ''}`,
+          background: color,
         }}
       >
         <h4>{courseTitle}</h4>

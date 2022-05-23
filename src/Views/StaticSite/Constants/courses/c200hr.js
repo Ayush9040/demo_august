@@ -1037,7 +1037,7 @@ export const c200h = {
     // date: '1st February 2022 to 28th February 2022',
   },
   17: {
-    image: '',
+    image: `${baseDomain}${courseAssets.courseAsset12}`,
     images: [''],
     key: 'CAMPS',
     id: '17',
@@ -1091,7 +1091,7 @@ export const c200h = {
     },
   },
   18: {
-    image: '',
+    image: `${baseDomain}${courseAssets.courseAsset12}`,
     images: [''],
     key: 'CAMPS',
     id: '18',
