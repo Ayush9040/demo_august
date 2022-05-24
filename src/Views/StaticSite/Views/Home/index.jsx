@@ -11,6 +11,7 @@ import VideosSection from '../../Components/Videos'
 import NewsLetter from '../../Components/NewsLetter'
 import Footer from '../../Components/Footer'
 import Blog from '../../Components/Blogs'
+import DisclaimerPolicy from '../../Components/DisclaimerPolicy'
 
 const Home = () => {
   return (
@@ -26,6 +27,7 @@ const Home = () => {
       <Blog />
       <VideosSection />
       <NewsLetter />
+      <DisclaimerPolicy />
       <Footer />
     </>
   )
