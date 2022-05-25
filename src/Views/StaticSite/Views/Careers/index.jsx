@@ -2,7 +2,7 @@ import React from 'react'
 import CommonBanner from '../../Components/Common-banner/index'
 import CareerCard from '../../Components/CommonCareerCard'
 import './style.scss'
-import { career } from '../../utils/careerData'
+//import { career } from '../../utils/careerData'
 //import CareerImg from '../../assets/images/our_careers.png'
 import baseDomain, { background } from '../../assets/images/imageAsset'
 
