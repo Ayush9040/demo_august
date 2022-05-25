@@ -1,0 +1,145 @@
+.account-header{
+  font-weight: 1000;
+}
+.edit-main {
+  text-align: center;
+  .personal-info {
+    font-weight: 10;
+    font-size: 1.8rem;
+    padding: 1rem 0;
+    color:#606060;
+  }
+  .account-input {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 250px;
+    input {
+      padding: 10px;
+      border-radius: 20px;
+      border: 1px solid #606060;
+      margin: 0.5rem;
+      text-align: center;
+    }
+    
+    
+  }
+  hr
+    {
+      width:80%;
+      margin: 2rem auto;
+    }
+  .former-input {
+    .former-l1 {
+      justify-content: center;
+      display: flex;
+      padding: 1rem;
+      align-items: center;
+      .former-p {
+        font-size: 1.5rem;
+        color: #606060;
+      }
+      .former-radio {
+        padding: 1rem 5rem;
+        display: flex;
+        align-items: center;
+        p {
+          padding-left: 2rem;
+          padding-right: 0.5rem;
+          font-size: 1.5rem;
+          color: #606060;
+        }
+        input {
+          padding: 10px;
+          border: 1px solid #606060;
+          margin: 0.5rem;
+          text-align: center;
+          color: #606060;
+          appearance: none;
+          
+        }
+       input[type='radio']:checked {
+          background: #606060;
+        }
+      }
+    }
+    .year-course {
+      display: flex;
+      flex-direction: column;
+      margin: auto;
+      width: 250px;
+      input {
+        padding: 10px;
+        border-radius: 20px;
+        border: 1px solid #606060;
+        margin: 0.5rem;
+        text-align: center;
+        color: #606060;
+      }
+    }
+    .subscribe {
+      justify-content: center;
+      display: flex;
+      padding: 1rem;
+      align-items: center;
+      .subscribe-p {
+        font-size: 1.5rem;
+        padding-right: 1rem;
+        color: #606060;
+      }
+      p {
+        font-size: 1.5rem;
+        padding-left: 2rem;
+        padding-right: 0.5rem;
+        color: #606060;
+      }
+      input {
+        padding: 10px;
+        border: 1px solid #606060;
+        margin: 0.5rem;
+        text-align: center;
+        color: #606060;
+        appearance: none;
+        
+      }
+     input[type='radio']:checked {
+        background: #606060;
+      }
+    }
+  }
+  .shipping {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 250px;
+    p
+    {
+      font-size: 1.5rem;
+      padding: 1rem;
+      color: #606060;
+    }
+    input {
+      padding: 10px;
+      border-radius: 20px;
+      border: 1px solid #606060;
+      margin: 0.5rem;
+      text-align: center;
+      color: #606060;
+      
+      
+    }
+    .continue-button
+    {
+      .global-common-btn{
+        margin: 1rem auto;
+        border-style: none;
+        background-color: var(--brick-red);
+        color: white;
+      }
+    }
+  }
+}
+@media(max-width:800px)
+{
+  
+}
