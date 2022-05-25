@@ -211,8 +211,8 @@ export const facilitiyAssets = {
 } 
 
 export const careerAssets={
-  careerAsset1: '/Home/Footer/careers/content writer.png',
-  careerAsset2: '/Home/Footer/careers/video editor.png'
+  careerAsset1: '/Home/Footer/careers/content%20writer.png',
+  careerAsset2: '/Home/Footer/careers/video%20editor.png'
 }
 
 export const aboutAssets={
