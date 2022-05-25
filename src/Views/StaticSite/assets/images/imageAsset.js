@@ -153,6 +153,7 @@ export const courseAssets = {
 
 
   // ttc ->   alumni
+  
 
   courseAsset41: '/Courses/TTC/Alumni/Almuni_pictures_and_word_file/Ajinkya.jpg',
   courseAsset42: '/Courses/TTC/Alumni/Almuni_pictures_and_word_file/Disha_Vakhani.jpg',

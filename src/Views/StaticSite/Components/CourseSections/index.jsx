@@ -169,7 +169,7 @@ const CourseSection = ({ title, showRangeSlider, color, data }) => {
               return (
                 <CourseCard
                   key={i}
-                  color={color}
+                  color={item.colorCode}
                   index={i}
                   courseTitle={item.name}
                   description={item.deatils}
