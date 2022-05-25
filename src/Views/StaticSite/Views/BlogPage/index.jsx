@@ -17,16 +17,10 @@ const BlogPage = () => {
         <div className="alumni-content" id="seminar">
           <div className="newsletter-content">
             <h2>
-              <span className="newsletter-title">
-                7 home remedies for anaemia
-              </span>
-              <span className="newsletter-date">01/01/2022</span>
+              <span className="newsletter-title">{allBlogData[0].title}</span>
+              <span className="newsletter-date">{allBlogData[0].date}</span>
             </h2>
-            <p>
-              {allBlogData[0].date}
-              {allBlogData[0].title}
-              {allBlogData[0].metaDescription}
-            </p>
+            <p>{allBlogData[0].metaDescription}</p>
             <div className="options">
               <Link to={`/blogs/${allBlogData[0].id}`}>
                 <button>Read Story</button>
