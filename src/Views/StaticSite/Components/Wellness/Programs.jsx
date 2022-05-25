@@ -61,12 +61,6 @@ const Programs = ({ setImageChanger }) => {
             })}
           </Slider>
         </div>
-        <br />
-        <br />
-        <br />
-        <Link to='/social-responsibility'>
-          <CommonBtn text={'Explore More'} />
-        </Link>
       </div>
     </div>
   )

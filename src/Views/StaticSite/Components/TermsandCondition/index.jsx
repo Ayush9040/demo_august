@@ -22,6 +22,7 @@ const TermsCondition = () => {
           Heading='Terms and conditions'
           description={description}
           bannerImg={`${baseDomain}${background.volunteer}`}
+          overlay='#4F65A0'
         />
       </div>
       <div className='terms-and-conditions'>
@@ -33,13 +34,13 @@ const TermsCondition = () => {
             </div>
           )
         })}
+        <p className='t-c-notes' >
+          Students found violating these instructions wilfully or whose presence
+          is considered undesirable, for any reason, will be asked to leave
+          immediately by the Course Coordinator without giving any reason or
+          prior notice. It goes without saying that fees will not be refunded.
+        </p>
       </div>
-      <p>
-        Students found violating these instructions wilfully or whose presence
-        is considered undesirable, for any reason, will be asked to leave
-        immediately by the Course Coordinator without giving any reason or prior
-        notice. It goes without saying that fees will not be refunded.
-      </p>
     </>
   )
 }

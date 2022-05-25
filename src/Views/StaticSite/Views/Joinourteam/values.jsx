@@ -16,7 +16,7 @@ const Values = () => {
           isOnlyBanner={false}
           innerNav={true}
           bannerImg={`${baseDomain}${background.volunteer}`}
-          overlay='#C88068'
+          overlay='#C88068D4'
         />
       </div>
       <div className='content-container pd-career'>

@@ -24,6 +24,7 @@ const Careers = () => {
         isOnlyBanner={false}
         innerNav={false}
         bannerImg={`${baseDomain}${background.volunteer}`}
+        overlay='#DDAE66D4'
       />
       <div className="jobs-container">
         <h1>

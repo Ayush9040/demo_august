@@ -21,16 +21,16 @@ import { Link } from 'react-router-dom'
 import baseDomain, { homeAssets } from '../../assets/images/imageAsset'
 const Footer = () => {
   return (
-    <div className="footer-container global-padding">
-      <div className="logo-description">
-        <div className="logo">
-          <a href="https://theyogainstitute.org/">
+    <div className='footer-container global-padding'>
+      <div className='logo-description'>
+        <div className='logo'>
+          <a href='https://theyogainstitute.org/'>
             <img src={baseDomain + homeAssets.homeAsset70} />
           </a>
         </div>
         <br />
 
-        <div className="footer-description">
+        <div className='footer-description'>
           <p>
             The Yoga Institute, Santacruz(East), Mumbai, India was founded in
             1918 by Shri Yogendraji, and is the oldest centre of yoga in the
@@ -39,111 +39,115 @@ const Footer = () => {
         </div>
         <br />
 
-        <div className="social-icons-container">
+        <div className='social-icons-container'>
           <ul>
             <a
-              href="https://twitter.com/tyi_official?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
-              target="_blank"
-              rel="noreferrer"
+              href='https://twitter.com/tyi_official?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor'
+              target='_blank'
+              rel='noreferrer'
             >
               <li>{twitter}</li>
             </a>
             <a
-              href="https://www.youtube.com/c/theyogainstituteofficial"
-              target="_blank"
-              rel="noreferrer"
+              href='https://www.youtube.com/c/theyogainstituteofficial'
+              target='_blank'
+              rel='noreferrer'
             >
               <li>{youtube}</li>
             </a>
-            <a href="https://www.youtube.com/c/theyogainstituteofficial">
+            <a href='https://www.youtube.com/c/theyogainstituteofficial'>
               <li>{youtubehindi}</li>
             </a>
             <a
-              href="https://www.linkedin.com/company/theyogainstituteofficial/"
-              target="_blank"
-              rel="noreferrer"
+              href='https://www.linkedin.com/company/theyogainstituteofficial/'
+              target='_blank'
+              rel='noreferrer'
             >
               <li>{linkedin}</li>
             </a>
             <a
-              href="https://www.facebook.com/theyogainstituteofficial/."
-              target="_blank"
-              rel="noreferrer"
+              href='https://www.facebook.com/theyogainstituteofficial/.'
+              target='_blank'
+              rel='noreferrer'
             >
               <li>{facebook}</li>
             </a>
             <a
-              href="https://www.instagram.com/theyogainstituteofficial/"
-              target="_blank"
-              rel="noreferrer"
+              href='https://www.instagram.com/theyogainstituteofficial/'
+              target='_blank'
+              rel='noreferrer'
             >
               <li>{instagram}</li>
             </a>
             <a
-              href="https://www.instagram.com/theyogainstituteofficial/"
-              target="_blank"
-              rel="noreferrer"
+              href='https://www.instagram.com/theyogainstituteofficial/'
+              target='_blank'
+              rel='noreferrer'
             >
               <li>{instagramhindi}</li>
             </a>
           </ul>
         </div>
       </div>
-      <div className="heading-footer-container">
-        <div className="footer-content">
-          <div className="footer-logo">{years}</div>
-          <div className="footer-text">
+      <div className='heading-footer-container'>
+        <div className='footer-content'>
+          <div className='footer-logo'>{years}</div>
+          <div className='footer-text'>
             <p>102+</p>
             <span>Number of Years</span>
           </div>
         </div>
-        <div className="footer-content">
-          <div className="footer-logo">{lives}</div>
-          <div className="footer-text">
+        <div className='footer-content'>
+          <div className='footer-logo'>{lives}</div>
+          <div className='footer-text'>
             <p>10cr+</p>
             <span>Lives Touched</span>
           </div>
         </div>
-        <div className="footer-content">
-          <div className="footer-logo">{teachers}</div>
-          <div className="footer-text">
+        <div className='footer-content'>
+          <div className='footer-logo'>{teachers}</div>
+          <div className='footer-text'>
             <p>1L+</p>
             <span>Teachers Certified</span>
           </div>
         </div>
-        <div className="footer-content">
-          <div className="footer-logo">{publication}</div>
-          <div className="footer-text">
+        <div className='footer-content'>
+          <div className='footer-logo'>{publication}</div>
+          <div className='footer-text'>
             <p>500+</p>
             <span>Publications</span>
           </div>
         </div>
       </div>
-      <div className="contact">
-        <div className="menu">
+      <div className='contact'>
+        <div className='menu'>
           <ul>
-            <Link to="/wellness">
+            <Link to='/wellness'>
               <li>Corporate wellness</li>
             </Link>
-            <Link to="/affiliations">
+            <Link to='/affiliations'>
               <li>Affiliations</li>
             </Link>
-            <li>Careers</li>
-            <Link to="">
+            <Link to='/careers'>
+              <li>Careers</li>
+            </Link>
+            <Link to=''>
               <li>CSR</li>
             </Link>
           </ul>
-          <div className="carrier-list">
+          <div className='carrier-list'>
             <ul>
-              <Link to="/terms&condition">
+              <Link to='/terms&condition'>
                 <li>Terms & Conditions</li>
               </Link>
-              <Link to = '/privacy&policy'><li>Privacy Policy</li></Link>
-              
+              <Link to='/privacy&policy'>
+                <li>Privacy Policy</li>
+              </Link>
+
               <a
-                href="https://goo.gl/maps/bxH6SifrXjXAhteV7"
-                target="_blank"
-                rel="noreferrer"
+                href='https://goo.gl/maps/bxH6SifrXjXAhteV7'
+                target='_blank'
+                rel='noreferrer'
               >
                 <li>Locate us</li>
               </a>
@@ -153,7 +157,7 @@ const Footer = () => {
         <br />
         <br />
 
-        <div className="logo-content">
+        <div className='logo-content'>
           {location1}
           <p>
             Shri Yogendra Marg, Prabhat Colony, Santacruz East, Mumbai - 400055

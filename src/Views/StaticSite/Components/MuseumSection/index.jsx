@@ -32,12 +32,12 @@ const Museum = () => {
           description={intro}
           //bannerImg={museumBanner}
           bannerImg={`${baseDomain}${background.museum}`}
-          overlay="#B08261"
+          overlay="#B08261D4"
         />
       </div>
 
       <div className="museum-heading">
-        <Heading largeText={'Virual Tour'} />
+        <Heading largeText={'Virtual Tour'} />
         <br />
       </div>
       <div className="museum-container">

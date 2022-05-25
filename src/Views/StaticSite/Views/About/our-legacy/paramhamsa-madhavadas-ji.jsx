@@ -4,7 +4,7 @@ import baseDomain, { homeAssets } from '../../../assets/images/imageAsset.js'
 
 export default function HarishJi() {
   const data = {
-    name: 'Paramhamsa Madhavadas ji',
+    name: 'Paramhamsa Madhavdas ji',
     founder: ['Founder Guru'],
     year: '1798-1921',
     desc: [

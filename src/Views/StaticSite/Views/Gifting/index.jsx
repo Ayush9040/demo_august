@@ -38,7 +38,7 @@ const Gifting = () => {
           //bannerImg={GiftingImg}
 
           bannerImg={`${baseDomain}${background.gifting}`}
-          overlay="#FF0000"
+          overlay="#61829DD4"
         />
         <SectionComponent
           page="Gifting"

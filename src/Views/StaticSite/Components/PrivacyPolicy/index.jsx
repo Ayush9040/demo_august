@@ -20,6 +20,7 @@ const PrivacyPolicy = () => {
           Heading="Privacy Policy"
           description={description}
           bannerImg={`${baseDomain}${background.volunteer}`}
+          overlay='#E38F73'
         />
       </div>
       <div className="terms-and-conditions">
@@ -36,7 +37,6 @@ const PrivacyPolicy = () => {
           )
         
         }
-        <p>Hello</p>
       </div>
     </>
   )

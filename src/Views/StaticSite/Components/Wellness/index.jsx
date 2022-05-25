@@ -4,6 +4,7 @@ import './style.scss'
 import './data'
 //import SocialInitiatives from '/home/nex-g/Desktop/tyi-user-webapp/src/Views/StaticSite/Components/SocialInitiatives/index.jsx'
 import Programs from './Programs'
+import CommonBtn from '../commonbtn'
 
 const wellness = () => {
   return (
@@ -60,6 +61,7 @@ const wellness = () => {
           strike a balance between work and personal life. Yoga is a great way
           to relieve physical strain and emotional stress, making your employees
           happier, healthier, and more productive.
+          <CommonBtn text={'Get in touch'} />
         </p>
       </div>
     </div>

@@ -1,9 +1,11 @@
 .terms-container{
-  background: rgb(78, 105, 150)
+  background: rgb(78, 105, 150);
+
 }
 .terms-and-conditions{
   width: 90%;
   margin: 2rem auto;
+  padding-bottom: 3rem;
   h2{
     font-size: 22px;
     font-weight: bolder;
@@ -13,7 +15,9 @@
   p{
     font-size: 18px;
     font-weight: 500;
-   
+  }
+  .t-c-notes{
+    margin-top: 5rem;
   }
 }
 .dining-hall{

@@ -25,7 +25,7 @@ const PublicationNav = ({ title }) => {
               </Link>
               <Link to="/publication/yogasattva">
                 <li className={title === 'yogasattva' ? 'nav-active' : ''}>
-                  Yogsattva
+                  Yogasattva
                 </li>
               </Link>
               <Link to="/publication/books">
@@ -60,7 +60,7 @@ const PublicationNav = ({ title }) => {
             </Link>
             <Link to="/publication/yogasattva">
               <li className={title === 'yogasattva' ? 'nav-active' : ''}>
-                Yogsattva
+                Yogasattva
               </li>
             </Link>
             <Link to="/publication/books">

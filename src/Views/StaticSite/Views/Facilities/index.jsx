@@ -58,7 +58,7 @@ const Facilities = () => {
         //bannerImg={FacilitiesImg}
 
         bannerImg={`${baseDomain}${background.facilities}`}
-        overlay="#46AEC6"
+        overlay="#46AEC6D4"
       />
       <div className="facilities-navigation-lg">
         <ul>
