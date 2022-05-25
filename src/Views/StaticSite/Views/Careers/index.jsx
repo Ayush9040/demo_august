@@ -2,9 +2,11 @@ import React, { useEffect } from 'react'
 import CommonBanner from '../../Components/Common-banner/index'
 import CareerCard from '../../Components/CommonCareerCard'
 import './style.scss'
-import { career } from '../../utils/careerData'
+//import { career } from '../../utils/careerData'
 //import CareerImg from '../../assets/images/our_careers.png'
 import baseDomain, { background } from '../../assets/images/imageAsset'
+
+import { Job } from '../../utils/JobDetails'
 
 const Careers = () => {
   useEffect(() => {
@@ -28,13 +30,25 @@ const Careers = () => {
           Join us<div className="bottom-line"></div>
         </h1>
         <div className="jobs-card-container">
-          {career?.map((item, i) => {
+          {/* {career?.map((item, i) => {
             return (
               <CareerCard
                 link={`/careers/${item.jobId}`}
                 key={i}
                 cardTitle={item.jobTitle}
                 bgImg={item.bgImage}
+              />
+            )
+          })} */}
+
+          {Job.map((job, i) => {
+            console.log(job,'hello')
+            return (
+              <CareerCard
+                link={`/careers/${job.jobId}`}
+                key={i}
+                cardTitle={job.jobTitle}
+                bgImg={job.jobThumbnail}
               />
             )
           })}

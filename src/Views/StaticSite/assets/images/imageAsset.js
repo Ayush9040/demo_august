@@ -210,6 +210,11 @@ export const facilitiyAssets = {
 
 } 
 
+export const careerAssets={
+  careerAsset1: '/Home/Footer/careers/content%20writer.png',
+  careerAsset2: '/Home/Footer/careers/video%20editor.png'
+}
+
 export const aboutAssets={
   aboutAsset1:'/About/Overview/about-overview.jpg',
 

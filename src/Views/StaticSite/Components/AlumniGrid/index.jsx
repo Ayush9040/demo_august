@@ -4,7 +4,7 @@ import baseDomain, { alumniAssets } from '../../assets/images/imageAsset'
 
 const AlumniGrid = ({ notEvent }) => {
   return (
-    <div className='alumni-grid'>
+    <div className='alumni-grid'> 
       {!notEvent && <p>Alumni Day</p>}
       {!notEvent && <h4>01/01/22</h4>}
       <div className='alumni-event-grid'>

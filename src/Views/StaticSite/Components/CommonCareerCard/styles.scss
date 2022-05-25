@@ -1,11 +1,13 @@
 .our-card-container {
     height: 30rem;
     width: 28rem;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: flex-end;
     margin: 0 auto 2rem;
+    &>div{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
     h3 {   
         margin: 1.2rem 0;
         font-size: 2rem;
