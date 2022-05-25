@@ -2,7 +2,7 @@ import React from 'react'
 import CommonBtn from '../commonbtn'
 import './style.scss'
 import baseDomain, { homeAssets } from '../../assets/images/imageAsset'
-import { Link } from 'react-router-dom'
+//import { Link } from 'react-router-dom'
 
 const Nispand = () => {
   return (
