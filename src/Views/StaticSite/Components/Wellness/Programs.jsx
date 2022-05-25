@@ -5,11 +5,10 @@ import 'slick-carousel/slick/slick-theme.css'
 import Slider from 'react-slick'
 //import { responsibility } from '../../assets/icons/icon'
 import { socialData } from '../../utils/socialData'
-import CommonBtn from '../commonbtn'
 
 import './style.scss'
 import baseDomain, { homeAssets } from '../../assets/images/imageAsset'
-import { Link } from 'react-router-dom'
+
 
 const Programs = ({ setImageChanger }) => {
   const AnnamBrahma = `${baseDomain}${homeAssets.homeAsset19}`
