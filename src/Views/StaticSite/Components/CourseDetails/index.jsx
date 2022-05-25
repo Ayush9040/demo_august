@@ -9,6 +9,7 @@ const CourseDetails = ({ pageDate }) => {
   const [detail, setDetail] = useState(1)
 
   const {
+    image,
     name,
     deatils,
     benefits,
@@ -21,14 +22,6 @@ const CourseDetails = ({ pageDate }) => {
     unique,
     TeachingAndCertification,
   } = pageDate
-
-  //console.log(unique, pageDate)
-  console.log(fees, 'fees')
-  console.log(prerequisites, 'prereq')
-  console.log(benefits, 'benefits')
-  console.log(curriculum, 'curriculum')
-  console.log(unique, 'unique')
-  console.log(TeachingAndCertification, 'TeachingAndCertification')
 
   let options = [
     'Program Details',
@@ -65,9 +58,9 @@ const CourseDetails = ({ pageDate }) => {
   }
 
   return (
-    <div className="course-detail-page">
-      <div className="main-section" style={{ background: '#C9705F' }}>
-        <div className="course-info">
+    <div className='course-detail-page'>
+      <div className='main-section' style={{ background: '#C9705F' }}>
+        <div className='course-info'>
           {/* <p>Browse &gt; Teacher Training Courses</p> */}
           <h1>
             {name ? (
@@ -92,23 +85,30 @@ const CourseDetails = ({ pageDate }) => {
               ? timings
               : 'Lorem Ipsum is simply dummy text of the printing and typesetting Industry.'}
           </p>
-          <div className="ratings">
+          <div className='ratings'>
             {star}
             {star}
             {star}
             {star}
             {star}
           </div>
-          <CommonBtn text={'Enroll Now'} />
+          <div className='course-options'>
+            <CommonBtn text={'Enroll Now'} />
+            <CommonBtn text={'Gift Now'} />
+          </div>
         </div>
-        <div className="course-cover">
-          <img src={baseDomain + courseAssets.courseAsset2} />
+        <div className='course-cover'>
+          {image ? (
+            <img src={image} />
+          ) : (
+            <img src={baseDomain + courseAssets.courseAsset2} />
+          )}
         </div>
       </div>
-      <div className="details-section">
-        <div className="nav-options">
-          <div className="career-navigation-lg">
-            <ul className="innerNav">
+      <div className='details-section'>
+        <div className='nav-options'>
+          <div className='career-navigation-lg'>
+            <ul className='innerNav'>
               {options.map((item, idx) => (
                 <li
                   onClick={() => {
@@ -122,25 +122,25 @@ const CourseDetails = ({ pageDate }) => {
             </ul>
           </div>
           {detail === 1 && (
-            <div className="course-about">
+            <div className='course-about'>
               <div>{deatils}</div>
               <div>
                 <ul>
                   <li>
-                    <span className="bullet">{global}</span>Online Course
+                    <span className='bullet'>{global}</span>Online Course
                   </li>
                   <li>
-                    <span className="bullet">{network}</span>Beginner Level
+                    <span className='bullet'>{network}</span>Beginner Level
                   </li>
                   <li>
-                    <span className="bullet">{chat}</span>English
+                    <span className='bullet'>{chat}</span>English
                   </li>
                 </ul>
               </div>
             </div>
           )}
           {detail === 2 && (
-            <div className="course-benefits">
+            <div className='course-benefits'>
               <div>
                 <p>{curriculum?.description}</p>
                 {curriculum?.points?.map(({ title, points }) => {
@@ -162,7 +162,7 @@ const CourseDetails = ({ pageDate }) => {
             </div>
           )}
           {detail === 3 && (
-            <div className="course-curriculam">
+            <div className='course-curriculam'>
               <p>{TeachingAndCertification?.description}</p>
 
               <ul>
@@ -188,7 +188,7 @@ const CourseDetails = ({ pageDate }) => {
             </div>
           )}
           {detail === 4 && (
-            <div className="our-offerings">
+            <div className='our-offerings'>
               <ul>
                 <li>
                   You will have an opportunity to directly interact with
@@ -220,8 +220,8 @@ const CourseDetails = ({ pageDate }) => {
           )}
         </div>
 
-        <div className="mob-view">
-          <div className="course-about">
+        <div className='mob-view'>
+          <div className='course-about'>
             <h2>Program Details</h2>
             <div>
               With over 1,00,000 successfully certified students, the 200 Hours
@@ -239,18 +239,18 @@ const CourseDetails = ({ pageDate }) => {
             <div>
               <ul>
                 <li>
-                  <span className="bullet">{global}</span>Online Course
+                  <span className='bullet'>{global}</span>Online Course
                 </li>
                 <li>
-                  <span className="bullet">{network}</span>Beginner Level
+                  <span className='bullet'>{network}</span>Beginner Level
                 </li>
                 <li>
-                  <span className="bullet">{chat}</span>English
+                  <span className='bullet'>{chat}</span>English
                 </li>
               </ul>
             </div>
           </div>
-          <div className="course-benefits">
+          <div className='course-benefits'>
             <div>
               <h2>Curriculum</h2>
               <ul>
@@ -271,7 +271,7 @@ const CourseDetails = ({ pageDate }) => {
               <img src={baseDomain + courseAssets.courseAsset4} />
             </div>
           </div>
-          <div className="course-curriculam">
+          <div className='course-curriculam'>
             <ul>
               <h2>Teaching and Certification</h2>
               <li>
@@ -336,7 +336,7 @@ const CourseDetails = ({ pageDate }) => {
               </li>
             </ul>
           </div>
-          <div className="our-offerings">
+          <div className='our-offerings'>
             <h2>Our Unique Offerings</h2>
             <ul>
               {unique?.points?.map(({ itm }) => (
