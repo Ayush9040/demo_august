@@ -25,17 +25,19 @@
         box-sizing: border-box;
         color: #fff;
         padding: 2rem;
+        height: 20rem;
         h4{
             font-weight: 700;
-            min-height: 3rem;
+            min-height: 4rem;
+            width: 120%;
         }
         h3{
             font-size: 1.25rem;
-            margin: 2rem auto;
+            margin: 1rem auto;
         }
         a{
             color: #fff;
-            text-decoration: none;        
+            text-decoration: none;   
         }
         .global-common-btn{
             border-color: white;

@@ -1145,7 +1145,7 @@ export const c200h = {
     },
   },
   19: {
-    image: '',
+    image: `${baseDomain}${courseAssets.courseAsset12}`,
     images: [''],
     key: 'CAMPS',
     id: '19',
@@ -1200,7 +1200,7 @@ export const c200h = {
     },
   },
   20: {
-    image: '',
+    image: `${baseDomain}${courseAssets.courseAsset12}`,
     images: [''],
     key: 'CAMPS',
     id: '20',
@@ -1255,7 +1255,7 @@ export const c200h = {
     },
   },
   21: {
-    image: '',
+    image: `${baseDomain}${courseAssets.courseAsset12}`,
     images: [''],
     key: 'CAMPS',
     id: '21',
@@ -2054,7 +2054,7 @@ export const c200h = {
     },
   },
   26: {
-    image: '',
+    image: `${baseDomain}${courseAssets.courseAsset12}`,
     // add any other images also
     key: 'classes',
     id: '26',
@@ -2084,7 +2084,7 @@ export const c200h = {
     },
   },
   27: {
-    image:'',
+    image: `${baseDomain}${courseAssets.courseAsset12}`,
     // add any other images also
     key: 'classes',
     id: '27',
@@ -2126,7 +2126,7 @@ export const c200h = {
     },
   },
   28: {
-    image:'',
+    image: `${baseDomain}${courseAssets.courseAsset12}`,
     // add any other images also
     key: 'classes',
     id: '28',
@@ -2161,7 +2161,7 @@ export const c200h = {
     },
   },
   29: {
-    image:'',
+    image: `${baseDomain}${courseAssets.courseAsset12}`,
     // add any other images also
     key: 'classes',
     id: '29',
@@ -2202,7 +2202,7 @@ export const c200h = {
     },
   },
   30: {
-    image:'',
+    image: `${baseDomain}${courseAssets.courseAsset12}`,
     // add any other images also
     key: 'classes',
     id: '30',
@@ -2241,7 +2241,7 @@ export const c200h = {
     },
   },
   31: {
-    image:'',
+    image: `${baseDomain}${courseAssets.courseAsset12}`,
     // add any other images also
     key: 'classes',
     id: '31',
@@ -2282,7 +2282,7 @@ export const c200h = {
     },
   },
   32: {
-    image:'',
+    image: `${baseDomain}${courseAssets.courseAsset12}`,
     // add any other images also
     key: 'classes',
     id: '32',
