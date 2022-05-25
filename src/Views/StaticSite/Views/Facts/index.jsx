@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Heading from '../../Components/Heading'
 import TimePeriodSelector from '../../Components/TimePeriodSelector'
 import { divider } from '../../assets/icons/icon'
@@ -7,6 +7,9 @@ import CommonBannerNavPrimary from '../../Components/CommonBannerNavPrimary'
 import useFacts from '../../utils/hooks/useFacts'
 
 const OurFacts = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
   const { selectedRange } = useFacts()
 
   return (

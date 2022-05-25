@@ -1,10 +1,13 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import CommonBannerNav1 from '../../Components/AlumniNav'
 import { share } from '../../assets/icons/icon'
 import './style.scss'
 import SeminarCard from '../../Components/SeminarCard'
-import baseDomain,{ alumniAssets } from '../../assets/images/imageAsset'
+import baseDomain, { alumniAssets } from '../../assets/images/imageAsset'
 const Seminar = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
   return (
     <div className="seminar-series">
       <CommonBannerNav1 title={'Seminar'} />
@@ -28,7 +31,6 @@ const Seminar = () => {
           </div>
         </div>
         <div className="newsletter-image">
-        
           <img
             className="seminar-iamge"
             alt="Upcoming Seminar"

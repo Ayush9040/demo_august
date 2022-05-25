@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+
 import HeroSection from '../../Components/HeroSection'
 import Legacy from '../../Components/Legacy'
 import Activity from '../../Components/Activity'
@@ -13,6 +14,9 @@ import Footer from '../../Components/Footer'
 import Blog from '../../Components/Blogs'
 
 const Home = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
   return (
     <>
       <HeroSection />

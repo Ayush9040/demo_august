@@ -1,15 +1,16 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import CommonBanner from '../../Components/Common-banner'
 import benefits from '../../assets/images/benifits.png'
 import './styles.scss'
 import CareerCard from '../../Components/CommonCareerCard'
-import baseDomain, {
-  background,
-} from '../../assets/images/imageAsset'
+import baseDomain, { background } from '../../assets/images/imageAsset'
 import { volunteerData } from '../../utils/volunteerData'
 //import VolunteerImg from '../../assets/images/volunteer_with_us.png'
 
 const Volunteer = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
   return (
     <>
       <div className="Benefits-container">
@@ -23,7 +24,7 @@ const Volunteer = () => {
           isOnlyBanner={false}
           innerNav={true}
           bannerImg={`${baseDomain}${background.volunteer}`}
-          overlay='#80729B'
+          overlay="#80729B"
         />
       </div>
       <div className="our-container pd-career">

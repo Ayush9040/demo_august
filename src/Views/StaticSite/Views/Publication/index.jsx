@@ -1,11 +1,15 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import PublicationNav from '../../Components/PublicationNav'
 import './style.scss'
 import { breakIcon } from '../../assets/icons/icon'
 import CommonBtn from '../../Components/commonbtn'
-import baseDomain,{ publicationAssests } from '../../assets/images/imageAsset'
+import baseDomain, { publicationAssests } from '../../assets/images/imageAsset'
 const YogaTotalHealth = () => {
-  return (
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
+  return(
     <div className="yoga-total-health">
       <div className="background">
         <PublicationNav title={'yoga-health'} />
