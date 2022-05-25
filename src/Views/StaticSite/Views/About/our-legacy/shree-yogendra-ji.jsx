@@ -16,7 +16,7 @@ export default function HarishJi() {
   let g6 = baseDomain + aboutAssets.aboutAsset8
 
   const data = {
-    name: 'Shree Yogendra ji',
+    name: 'Shri Yogendra ji',
     route: 'shree-yogendra-ji',
     founder: ['Founder'],
     year: '1897 - 1989',
