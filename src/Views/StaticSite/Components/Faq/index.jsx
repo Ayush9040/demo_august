@@ -57,9 +57,9 @@ const FAQ = ({ questions=[] }) => {
       /> */}
       <Heading smallText={'FAQ'} />
       <div className='faq-ques' >
-        <Accordion dangerouslySetExpanded={0} preExpanded={[0]}>
+        <Accordion preExpanded={[0]}>
           {questions && questions.map((item, i) => (
-            <AccordionItem  uuid={i}  key={i} >
+            <AccordionItem dangerouslySetExpanded={i===0 ? true:false}  uuid={i}  key={i} >
               <AccordionItemHeading>
                 <AccordionItemButton>
                   <p>{item.ques}</p>
