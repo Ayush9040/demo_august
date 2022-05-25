@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import React,{ useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { arrowIcon } from '../../assets/icons/icon'
 import CommonBannerNav1 from '../../Components/CommonBannerShop'
 import MenuToolTip from '../../Components/MenuTooltip/MenuTooltip'
@@ -11,19 +11,32 @@ import './styles.css'
 import axios from 'axios'
 
 const Shop = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
 
-  const [key,setKey]=useState()
+  const [key, setKey] = useState()
 
-  const[product,setProduct]=useState([])
-  const[categories,setCategories]=useState([])
+  const [product, setProduct] = useState([])
+  const [categories, setCategories] = useState([])
 
-  useEffect(()=>{
-    axios.get('https://ecom-dev-be.theyogainstituteonline.org/v1/product/publishedproduct')
-      .then(data=> data.data)
-      .then(data=>{setProduct(data.data);return data.data})
-    axios.get('https://ecom-dev-be.theyogainstituteonline.org/v1/category').then(data=>data.data).then(data=>{setCategories(data.data)})
-  },[])
-
+  useEffect(() => {
+    axios
+      .get(
+        'https://ecom-dev-be.theyogainstituteonline.org/v1/product/publishedproduct'
+      )
+      .then((data) => data.data)
+      .then((data) => {
+        setProduct(data.data)
+        return data.data
+      })
+    axios
+      .get('https://ecom-dev-be.theyogainstituteonline.org/v1/category')
+      .then((data) => data.data)
+      .then((data) => {
+        setCategories(data.data)
+      })
+  }, [])
 
   const settings = {
     dots: true,
@@ -34,12 +47,13 @@ const Shop = () => {
     arrows: false,
   }
 
-
-
   return (
     <div className="shop-container">
       <CommonBannerNav1 innerNav={false} />
-      <br /><br /><br /><br />
+      <br />
+      <br />
+      <br />
+      <br />
       <div className="search-container">
         <MenuToolTip setKey={setKey} />
         <input
@@ -51,15 +65,21 @@ const Shop = () => {
         />
       </div>
       <div className="shop-card-container">
-        <Slider {...settings} >
+        <Slider {...settings}>
           <div className="banner-section">
-            <h1 className="text-align-center shop-header-text">Featured Banner Section</h1>
-          </div>        
+            <h1 className="text-align-center shop-header-text">
+              Featured Banner Section
+            </h1>
+          </div>
           <div className="banner-section">
-            <h1 className="text-align-center shop-header-text">Featured Banner Section</h1>
-          </div>        
+            <h1 className="text-align-center shop-header-text">
+              Featured Banner Section
+            </h1>
+          </div>
           <div className="banner-section">
-            <h1 className="text-align-center shop-header-text">Featured Banner Section</h1>
+            <h1 className="text-align-center shop-header-text">
+              Featured Banner Section
+            </h1>
           </div>
         </Slider>
         <div className="sort-container">
@@ -67,8 +87,16 @@ const Shop = () => {
           <span className="change-svg-width">{arrowIcon}</span>
         </div>
         <div className="render-cards">
-          {product?.map((item,i)=>{
-            return <ShopCard key={i} title={item.name} currency={item.currency} thumbnail={item.productThumbnail} price={item.price} />
+          {product?.map((item, i) => {
+            return (
+              <ShopCard
+                key={i}
+                title={item.name}
+                currency={item.currency}
+                thumbnail={item.productThumbnail}
+                price={item.price}
+              />
+            )
           })}
         </div>
       </div>

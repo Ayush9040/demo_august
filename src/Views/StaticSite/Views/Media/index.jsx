@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './style.scss'
 import MediaSection from '../../Components/MediaSection'
 import MediaNav from '../../Components/MediaNav'
@@ -11,6 +11,9 @@ import 'react-gallery-carousel/dist/index.css'
 import { mediaData } from '../../utils/mediaData'
 
 const MediaGallery = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
   const [viewCarousel, setViewCarousel] = useState()
   const [modalData, setModalData] = useState()
 
@@ -23,15 +26,15 @@ const MediaGallery = () => {
   // }))
 
   return (
-    <div className='media-gallery-section'>
-      <div className='media-gallery'>
+    <div className="media-gallery-section">
+      <div className="media-gallery">
         <MediaNav title={'Gallery'} />
         <MediaSection
           upcomingEvents={false}
           subHeading={''}
           invert={true}
           sectionColor={'#D58173'}
-          title='Harmony Fest'
+          title="Harmony Fest"
           description={
             '“World Harmony Begins Within” Glimpses of The Yoga Institute\'s most exciting and social event ‘Harmony Fest’, held to commemorate 100 years of transforming lives. The event was graced by the president of India, Shri Ram Nath Kovind. The chief guest and other personnel shared their insightful thoughts with the massive audiences who attended the event, spreading a wave of encouragement and optimism.'
           }
@@ -41,12 +44,12 @@ const MediaGallery = () => {
       {mediaData?.map((item) => {
         return (
           <div
-            className='albums'
+            className="albums"
             key={item.id}
             style={{ position: 'relative' }}
           >
-            <div className='view-album'>
-              <h3 >
+            <div className="view-album">
+              <h3>
                 {item.title}
                 <br />
                 <p>1 Albums</p>
@@ -61,7 +64,7 @@ const MediaGallery = () => {
               </div>
             </div>
             <GridComponent imgs={item.images} />
-            
+
             {viewCarousel === item.id && (
               <>
                 <div

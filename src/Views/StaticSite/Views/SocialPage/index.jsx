@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import CommonBanner from '../../Components/Common-banner'
 import SectionComponent from '../../Components/SectionComponent'
 import { socialPageData } from '../../utils/socialPageData'
@@ -6,14 +6,17 @@ import './style.scss'
 import GiftingImg from '../../assets/images/gifting2a-02.png'
 
 const SocialResponsibility = () => {
+  useEffect(() => {
+    window.useEffect(0, 0)
+  }, [])
   return (
-    <div className='social-res-internal'>
+    <div className="social-res-internal">
       <CommonBanner
         isLeftContent={false}
         Logo={false}
         Navigation={true}
-        PageType='gifting'
-        Heading='Social Responsibility'
+        PageType="gifting"
+        Heading="Social Responsibility"
         isOnlyBanner={false}
         innerNav={false}
         description={
@@ -21,7 +24,7 @@ const SocialResponsibility = () => {
         }
         bannerImg={GiftingImg}
       />
-      <div className='social-res-sections'>
+      <div className="social-res-sections">
         {socialPageData.map((item, i) => (
           <SectionComponent
             key={i}

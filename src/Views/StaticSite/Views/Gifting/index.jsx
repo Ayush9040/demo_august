@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import CommonBanner from '../../Components/Common-banner'
 import './style.scss'
 import SectionComponent from '../../Components/SectionComponent/index'
@@ -10,6 +10,9 @@ import baseDomain, {
 } from '../../assets/images/imageAsset'
 
 const Gifting = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
   // const [payment, setPayment] = useState()
   // const [details, setDetails] = useState()
 
