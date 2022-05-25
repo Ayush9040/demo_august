@@ -46,7 +46,8 @@ export const volunteerData = [
     id: 'vp_2',
     name: 'Teacher',
     image: `${baseDomain}${socialResponsibilityAssets.annamBrahma}`,
-    description: '\'The Yoga Institute actively works to bring the benefits of yoga into every home around the world. Our teachers selflessly contribute to this effort by conducting classes to spread the Institute\'s values and wisdom or hosting several camps for the specially-abled, the elderly, and many others. Students who have completed a course from the institute and desire to share their learnings can volunteer to teach yoga at the institute or its branches across India to spread the gift of mind-body wellness.\'',
+    description:
+      '\'The Yoga Institute actively works to bring the benefits of yoga into every home around the world. Our teachers selflessly contribute to this effort by conducting classes to spread the Institute\'s values and wisdom or hosting several camps for the specially-abled, the elderly, and many others. Students who have completed a course from the institute and desire to share their learnings can volunteer to teach yoga at the institute or its branches across India to spread the gift of mind-body wellness.\'',
     reqirements: ['req1', 'req2', 'req3', 'req4'],
     gallery: [
       {

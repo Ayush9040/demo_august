@@ -1,6 +1,6 @@
 import React from 'react'
 import Heading from '../../Components/Heading'
-import { blog, share } from '../../assets/icons/icon'
+import { share } from '../../assets/icons/icon'
 import './style.scss'
 import SeminarCard from '../../Components/SeminarCard'
 import baseDomain, { homeAssets } from '../../assets/images/imageAsset'
