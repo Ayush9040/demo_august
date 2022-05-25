@@ -53,7 +53,7 @@ const OurOfferings = () => {
     },
   ]
   const [smallDescription, setSmallDescription] = useState(
-    carouselData[0].description
+    carouselData[0].description.substring(0, 120) + '...'
   )
 
   const [ redirect,setRedirect]=useState(carouselData[0].redirect)
@@ -79,7 +79,7 @@ const OurOfferings = () => {
       },
     ],
     afterChange: index => {
-      setSmallDescription(carouselData[index].description)
+      setSmallDescription(carouselData[index].description.substring(0, 110) + '...')
       setRedirect(carouselData[index].redirect)
       setTimeline(carouselData[index].timeline)
       setPrice(carouselData[index].price)

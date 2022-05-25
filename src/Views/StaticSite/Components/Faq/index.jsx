@@ -57,18 +57,18 @@ const FAQ = ({ questions=[] }) => {
       /> */}
       <Heading smallText={'FAQ'} />
       <div className='faq-ques' >
-        <Accordion allowZeroExpanded>
+        <Accordion dangerouslySetExpanded={0} preExpanded={[0]}>
           {questions && questions.map((item, i) => (
-            <AccordionItem key={i} >
+            <AccordionItem  uuid={i}  key={i} >
               <AccordionItemHeading>
                 <AccordionItemButton>
-                  <p>{item.ques}&nbsp;{i+1}</p>
+                  <p>{item.ques}</p>
                 </AccordionItemButton>
               </AccordionItemHeading>
               <AccordionItemPanel>
-                <h4>
+                <p>
                   {item.ans}
-                </h4>
+                </p>
               </AccordionItemPanel>
             </AccordionItem>
           ))}
