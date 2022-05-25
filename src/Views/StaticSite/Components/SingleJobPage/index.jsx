@@ -1,24 +1,31 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import CommonBannerNavPrimary from '../CommonBannerNavPrimary'
 import './style.scss'
-// import Amitabh from '../../../assets/images/Amitabh-Bachchan.jpg';
+import { useParams } from 'react-router-dom'
 import { Job } from '../../utils/JobDetails'
 
 const SingleJob = () => {
+  const { jobid } = useParams()
+  const[job, setJob] = useState({})
+
+  useEffect(() => {
+    setJob(Job.find((item) => item.jobId === jobid))
+  })
+
   return (
     <div className='single-job'>
       <CommonBannerNavPrimary innerNav={false} />
       <div className='job-details'>
         <div className='job-description'>
           <div className='job-img'>
-            <img src={Job.jobThumbnail} alt={'title'} />
+            <img src={job.jobThumbnail} alt={'title'} />
           </div>
           <div className='job-info'>
             <h1>
-              {Job.jobTitle}
+              {job.jobTitle}
               <div className='bottom-line'></div>
             </h1>
-            <p>{Job.jobDescription}</p>
+            <p>{job.jobDescription}</p>
           </div>
         </div>
         <div className='job-application'>

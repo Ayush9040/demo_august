@@ -13,7 +13,7 @@ import {
 import CommonBtn from '../commonbtn'
 import { Link } from 'react-router-dom'
 
-const CourseSection = ({ title, showRangeSlider, color, data }) => {
+const CourseSection = ({ title, showRangeSlider, color, data, pathParam }) => {
   const [customVal, setCustomVal] = useState(0)
   console.log(data, 'course-data')
 
@@ -98,7 +98,9 @@ const CourseSection = ({ title, showRangeSlider, color, data }) => {
               Lorem Ipsum is simply dummy text of the printing and typesetting
               ndustry.
           </p>
-          <CommonBtn text={'Explore all'} />
+          <Link to='/courses/browse/most-popular'>
+            <CommonBtn text={'Explore all'} />
+          </Link>
         </div>
       )
     case 'Classes':
@@ -108,7 +110,9 @@ const CourseSection = ({ title, showRangeSlider, color, data }) => {
               Lorem Ipsum is simply dummy text of the printing and typesetting
               ndustry.
           </p>
-          <CommonBtn text={'Explore all'} />
+          <Link to='/courses/browse/classes'>
+            <CommonBtn text={'Explore all'} />
+          </Link>
         </div>
       )
     }
@@ -118,13 +122,9 @@ const CourseSection = ({ title, showRangeSlider, color, data }) => {
     <div className='course-section'>
       <div className='course-list'>
         <div className='course-title'>
-          {title === 'Teacher Training Courses' ? (
-            <Link to={'/courses/browse/ttc'}>
-              <h1>{title}</h1>
-            </Link>
-          ) : (
+          <Link to={`/courses/browse/${pathParam}`}>
             <h1>{title}</h1>
-          )}
+          </Link>
           {(title === 'Most Popular' || title === 'Classes') && (
             <div className='concave-border'></div>
           )}
@@ -146,9 +146,8 @@ const CourseSection = ({ title, showRangeSlider, color, data }) => {
       <div className='course-cards'>
         {title === 'Most Popular'
           ? data
-            .filter((item) => item.mostPopular===true )
+            .filter((item) => item.mostPopular === true)
             .map((item, i) => {
-              
               if (i < 3) {
                 return (
                   <CourseCard

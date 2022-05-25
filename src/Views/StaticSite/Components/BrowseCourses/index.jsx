@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import {
   Accordion,
   AccordionItem,
@@ -7,18 +7,39 @@ import {
   AccordionItemPanel,
 } from 'react-accessible-accordion'
 import CommonBannerNavPrimary from '../CommonBannerNavPrimary'
+import { useParams } from 'react-router-dom'
+import { courseArray } from '../../Constants/courses/c200hr'
 import CourseCard from '../CourseCard'
 import './style.scss'
 
 const BrowseCourses = () => {
+  const { type } = useParams()
+  console.log(type, 'type')
+  const [category, setCategory] = useState()
+  useEffect(() => {
+    if (type === 'ttc') {
+      setCategory(
+        courseArray.filter(
+          (item) => item.key === 'c200Hr' || item.key === 'c900Hr'
+        )
+      )
+    } else if (type === 'most-popular') {
+      setCategory(courseArray.filter((item) => item.mostPopular === true))
+    } else if (type === 'camps-workshops') {
+      setCategory(courseArray.filter((item) => item.key === 'CAMPS'))
+    } else {
+      setCategory(courseArray.filter((item) => item.key === type))
+    }
+  }, [])
+
   return (
-    <div className="browse-courses">
-      <CommonBannerNavPrimary/>
-      <div className="breadcrumbs">
+    <div className='browse-courses'>
+      <CommonBannerNavPrimary />
+      <div className='breadcrumbs'>
         <p>Browse &gt; Teachers Training Course</p>
       </div>
-      <div className="popular-courses">
-        <div className="course-accordian">
+      <div className='popular-courses'>
+        <div className='course-accordian'>
           <Accordion allowZeroExpanded>
             <AccordionItem>
               <AccordionItemHeading>
@@ -44,75 +65,31 @@ const BrowseCourses = () => {
             <AccordionItem>
               <AccordionItemHeading>
                 <AccordionItemButton>
-                  <p>Camps</p>
+                  <p>Camps & Workshops</p>
                 </AccordionItemButton>
               </AccordionItemHeading>
             </AccordionItem>
             <AccordionItem>
               <AccordionItemHeading>
                 <AccordionItemButton>
-                  <p>Workshops</p>
-                </AccordionItemButton>
-              </AccordionItemHeading>
-            </AccordionItem>
-            <AccordionItem>
-              <AccordionItemHeading>
-                <AccordionItemButton>
-                  <p>Other Classes</p>
+                  <p>Classes</p>
                 </AccordionItemButton>
               </AccordionItemHeading>
             </AccordionItem>
           </Accordion>
         </div>
-        <div className="course-grid">
-          <CourseCard
-            color={'#cd4576'}
-            index={'1'}
-            courseTitle={'Course Name'}
-          />
-          <CourseCard
-            color={'#cd4576'}
-            index={'1'}
-            courseTitle={'Course Name'}
-          />
-          <CourseCard
-            color={'#cd4576'}
-            index={'1'}
-            courseTitle={'Course Name'}
-          />
-          <CourseCard
-            color={'#cd4576'}
-            index={'1'}
-            courseTitle={'Course Name'}
-          />
-          <CourseCard
-            color={'#cd4576'}
-            index={'1'}
-            courseTitle={'Course Name'}
-          />
-          <CourseCard
-            color={'#cd4576'}
-            index={'1'}
-            courseTitle={'Course Name'}
-          />
-          <CourseCard
-            color={'#cd4576'}
-            index={'1'}
-            courseTitle={'Course Name'}
-          />
-          <CourseCard
-            color={'#cd4576'}
-            index={'1'}
-            courseTitle={'Course Name'}
-          />
-          <CourseCard
-            color={'#cd4576'}
-            index={'1'}
-            courseTitle={'Course Name'}
-          />
-        </div>
-        <div className='course-grid' >
-          
+        <div className='course-grid'>
+          {category?.map((item, i) => (
+            <CourseCard
+              key={i}
+              color={item.colorCode}
+              index={i}
+              courseTitle={item.name}
+              description={item.deatils}
+              path={item.id}
+              img={item.image}
+            />
+          ))}
         </div>
       </div>
     </div>

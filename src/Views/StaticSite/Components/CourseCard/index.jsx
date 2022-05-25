@@ -33,7 +33,7 @@ const CourseCard = ({
         <h4>{courseTitle}</h4>
         <h3>
           {description?.length > 40
-            ? description?.substring(0, 40)
+            ? description?.substring(0, 40)+'...'
             : description}
         </h3>
         <Link to={`/courses/${path}/`}>

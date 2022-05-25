@@ -1,6 +1,6 @@
 .course-card{
     display: inline-block;
-    width: 350px;
+    width: 320px;
     position: relative;
     flex: 1;
     img{
@@ -37,7 +37,7 @@
         }
         h3{
             font-size: 1.25rem;
-            margin: 1rem auto;
+            margin: 1rem 0;
         }
         a{
             color: #fff;
@@ -46,6 +46,7 @@
         .global-common-btn{
             border-color: white;
             cursor: pointer;
+            margin-top: 0;
         }
     }
 }
