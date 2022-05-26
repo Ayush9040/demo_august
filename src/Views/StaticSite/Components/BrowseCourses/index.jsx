@@ -85,7 +85,7 @@ const BrowseCourses = () => {
               color={item.colorCode}
               index={i}
               courseTitle={item.name}
-              description={item.deatils}
+              description={item.details}
               path={item.id}
               img={item.image}
             />

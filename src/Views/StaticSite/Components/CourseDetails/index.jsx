@@ -11,7 +11,7 @@ const CourseDetails = ({ pageDate }) => {
   const {
     image,
     name,
-    deatils,
+    details,
     benefits,
     duration,
     date,
@@ -125,7 +125,7 @@ const CourseDetails = ({ pageDate }) => {
           </div>
           {detail === 1 && (
             <div className='course-about'>
-              <div>{deatils}</div>
+              <div>{details}</div>
               <div>
                 <ul>
                   <li>
