@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 import {
   Accordion,
   AccordionItem,
@@ -16,6 +17,20 @@ const BrowseCourses = () => {
   const { type } = useParams()
   console.log(type, 'type')
   const [category, setCategory] = useState()
+  const [breadcrumbs, setBreadcrumbs] = useState()
+  const ChangeContent = () => {
+    if (type === 'ttc') {
+      setBreadcrumbs('Teacher Training Course')
+    } else if (type === 'most-popular') {
+      setBreadcrumbs('Most Popular')
+    } else if (type === 'camps-workshops') {
+      setBreadcrumbs('Camps & Workshops')
+    } else if (type === 'classes') {
+      setBreadcrumbs('Classes')
+    }
+    return breadcrumbs
+
+  }
   useEffect(() => {
     if (type === 'ttc') {
       setCategory(
@@ -30,55 +45,93 @@ const BrowseCourses = () => {
     } else {
       setCategory(courseArray.filter((item) => item.key === type))
     }
-  }, [])
+    ChangeContent()
+  }, [type])
+
+  console.log(category, 'category')
 
   return (
-    <div className='browse-courses'>
+    <div className="browse-courses">
       <CommonBannerNavPrimary />
-      <div className='breadcrumbs'>
-        <p>Browse &gt; Teachers Training Course</p>
+      <div className="breadcrumbs">
+        <p>Browse &gt; {breadcrumbs}</p>
       </div>
-      <div className='popular-courses'>
-        <div className='course-accordian'>
+      <div className="popular-courses">
+        <div className="course-accordian">
           <Accordion allowZeroExpanded>
             <AccordionItem>
               <AccordionItemHeading>
                 <AccordionItemButton>
-                  <p>Most Popular</p>
+                  <Link to="/courses/browse/most-popular">
+                    <p> Most Popular Course </p>
+                  </Link>
                 </AccordionItemButton>
               </AccordionItemHeading>
             </AccordionItem>
             <AccordionItem>
               <AccordionItemHeading>
                 <AccordionItemButton>
-                  <p>Teachers Training Course</p>
+                  <Link to="/courses/browse/ttc">
+                    <p>Teachers Training Course</p>
+                  </Link>
                 </AccordionItemButton>
               </AccordionItemHeading>
               <AccordionItemPanel>
                 <ul>
-                  <li>200 Hour Courses</li>
-                  <li>500 Hour Courses</li>
-                  <li>900 Hour Courses</li>
+                  <li
+                    style={{ cursor: 'pointer' }}
+                    onClick={() => {
+                      setCategory(
+                        courseArray.filter((item) => item.key === 'c200Hr')
+                      )
+                    }}
+                  >
+                    200 Hour Courses{' '}
+                  </li>
+                  <li
+                    style={{ cursor: 'pointer' }}
+                    onClick={() => {
+                      setCategory(
+                        courseArray.filter((item) => item.key === 'c500Hr')
+                      )
+                    }}
+                  >
+                    500 Hour Courses
+                  </li>
+                  <li
+                    style={{ cursor: 'pointer' }}
+                    onClick={() => {
+                      setCategory(
+                        courseArray.filter((item) => item.key === 'c900Hr')
+                      )
+                    }}
+                  >
+                    900 Hour Courses
+                  </li>
                 </ul>
               </AccordionItemPanel>
             </AccordionItem>
             <AccordionItem>
               <AccordionItemHeading>
                 <AccordionItemButton>
-                  <p>Camps & Workshops</p>
+                  <Link to="/courses/browse/camps-workshops">
+                    <p>Camps & Workshops</p>
+                  </Link>
                 </AccordionItemButton>
               </AccordionItemHeading>
             </AccordionItem>
             <AccordionItem>
               <AccordionItemHeading>
                 <AccordionItemButton>
-                  <p>Classes</p>
+                  <Link to="/courses/browse/classes">
+                    <p>Classes</p>
+                  </Link>
                 </AccordionItemButton>
               </AccordionItemHeading>
             </AccordionItem>
           </Accordion>
         </div>
-        <div className='course-grid'>
+        <div className="course-grid">
           {category?.map((item, i) => (
             <CourseCard
               key={i}
