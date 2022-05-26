@@ -29,7 +29,8 @@ const Enrollment = () => {
     medicalstatus: '',
     sourceinfo: '',
     source:'',
-    purpose:''
+    purpose:'',
+    sourceinfo:''
   })
 
   return (
@@ -527,6 +528,7 @@ const Enrollment = () => {
                     className="underline"
                     type="text"
                     placeholder="Any other source please specify"
+                    onChange={ (e)=>{setFormData({ ...formData, sourceinfo:e.target.value })} }
                   />
                 </div>
               </div>
