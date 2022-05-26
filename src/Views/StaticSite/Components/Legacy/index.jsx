@@ -35,7 +35,7 @@ const Legacy = () => {
             <div className="legacy-card">
               <img src={baseDomain+homeAssets.homeAsset1}/>
               <div className="legacy-card-content">
-                <h4>Paramhamsa Madhavadasji</h4>
+                <h4>Paramhamsa Madhavdasji</h4>
                 <h5>Founder&apos;s Guru</h5>
                 <h6>1798-1921</h6>
               </div>

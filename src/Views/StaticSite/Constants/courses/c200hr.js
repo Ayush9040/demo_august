@@ -459,7 +459,7 @@ export const c200h = {
     key: 'CAMPS',
     id: '6',
     name: 'Bhava Workshop',
-    mostPopular:false,
+    mostPopular:true,
     colorCode:'#EDBE66',
     details:'Effective tools and techniques to help you manage your life',
     queDetails: [
@@ -1037,7 +1037,7 @@ export const c200h = {
     // date: '1st February 2022 to 28th February 2022',
   },
   17: {
-    image: `${baseDomain}${courseAssets.courseAsset12}`,
+    image: `${baseDomain}${courseAssets.courseAsset6}`,
     images: [''],
     key: 'CAMPS',
     id: '17',
@@ -1145,7 +1145,7 @@ export const c200h = {
     },
   },
   19: {
-    image: `${baseDomain}${courseAssets.courseAsset12}`,
+    image: `${baseDomain}${courseAssets.courseAsset15}`,
     images: [''],
     key: 'CAMPS',
     id: '19',
@@ -1200,7 +1200,7 @@ export const c200h = {
     },
   },
   20: {
-    image: `${baseDomain}${courseAssets.courseAsset12}`,
+    image: `${baseDomain}${courseAssets.courseAsset14}`,
     images: [''],
     key: 'CAMPS',
     id: '20',
@@ -1255,7 +1255,7 @@ export const c200h = {
     },
   },
   21: {
-    image: `${baseDomain}${courseAssets.courseAsset12}`,
+    image: `${baseDomain}${courseAssets.courseAsset6}`,
     images: [''],
     key: 'CAMPS',
     id: '21',
@@ -2054,12 +2054,12 @@ export const c200h = {
     },
   },
   26: {
-    image: `${baseDomain}${courseAssets.courseAsset12}`,
+    image: `${baseDomain}${courseAssets.courseAsset24}`,
     // add any other images also
     key: 'classes',
     id: '26',
     name: 'Certificate course on advanced pranayama techniques',
-    mostPopular:false,
+    mostPopular:true,
     colorCode:'#D3A29D',
     deatils:
       'Now that you have mastered the basics of pranayama practices, it is time to go one step ahead! The certificate course on advanced pranayama techniques by The Yoga Institute will help you get the hang of various advanced pranayama techniques along with the right teaching methodology to teach these techniques efficiently. Pranayamas are powerful yogic breathing techniques that boost your body’s bioenergy as well as strengthen both body and mind. Maharishi Patanjali mentions in his text “Yoga Darshanam” which was written around 2500 years ago that pranayamas are powerful techniques to achieve the highest degree of awareness and profound meditative state. It prepares you for deep meditation.',
@@ -2084,7 +2084,7 @@ export const c200h = {
     },
   },
   27: {
-    image: `${baseDomain}${courseAssets.courseAsset12}`,
+    image: `${baseDomain}${courseAssets.courseAsset20}`,
     // add any other images also
     key: 'classes',
     id: '27',
@@ -2126,7 +2126,7 @@ export const c200h = {
     },
   },
   28: {
-    image: `${baseDomain}${courseAssets.courseAsset12}`,
+    image: `${baseDomain}${courseAssets.courseAsset28}`,
     // add any other images also
     key: 'classes',
     id: '28',
@@ -2161,7 +2161,7 @@ export const c200h = {
     },
   },
   29: {
-    image: `${baseDomain}${courseAssets.courseAsset12}`,
+    image: `${baseDomain}${courseAssets.courseAsset27}`,
     // add any other images also
     key: 'classes',
     id: '29',
@@ -2202,7 +2202,7 @@ export const c200h = {
     },
   },
   30: {
-    image: `${baseDomain}${courseAssets.courseAsset12}`,
+    image: `${baseDomain}${courseAssets.courseAsset22}`,
     // add any other images also
     key: 'classes',
     id: '30',
@@ -2241,7 +2241,7 @@ export const c200h = {
     },
   },
   31: {
-    image: `${baseDomain}${courseAssets.courseAsset12}`,
+    image: `${baseDomain}${courseAssets.courseAsset29}`,
     // add any other images also
     key: 'classes',
     id: '31',
@@ -2282,7 +2282,7 @@ export const c200h = {
     },
   },
   32: {
-    image: `${baseDomain}${courseAssets.courseAsset12}`,
+    image: `${baseDomain}${courseAssets.courseAsset30}`,
     // add any other images also
     key: 'classes',
     id: '32',
