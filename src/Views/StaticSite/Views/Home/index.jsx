@@ -1,5 +1,4 @@
-import React, { useEffect } from 'react'
-
+import React from 'react'
 import HeroSection from '../../Components/HeroSection'
 import Legacy from '../../Components/Legacy'
 import Activity from '../../Components/Activity'
@@ -12,12 +11,8 @@ import VideosSection from '../../Components/Videos'
 import NewsLetter from '../../Components/NewsLetter'
 import Footer from '../../Components/Footer'
 import Blog from '../../Components/Blogs'
-//import DisclaimerPolicy from '../../Components/DisclaimerPolicy'
 
 const Home = () => {
-  useEffect(() => {
-    window.scrollTo(0, 0)
-  }, [])
   return (
     <>
       <HeroSection />
@@ -31,7 +26,6 @@ const Home = () => {
       <Blog />
       <VideosSection />
       <NewsLetter />
-      {/* <DisclaimerPolicy /> */}
       <Footer />
     </>
   )
