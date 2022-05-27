@@ -75,7 +75,7 @@ const AlumiNav = ({ title }) => {
                 Support your Alma Mater
               </li>
             </Link>
-            <Link to="/">
+            <Link to="/#footer">
               <li
                 className={title === 'Contact' ? 'nav-active' : ''}
                 style={{ borderRight: '0' }}

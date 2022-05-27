@@ -664,6 +664,16 @@ export const publicationAssests = {
     '/Publications/Yogsattava/Newsletter/2021/yogasattava2021-4.jpg',
 
   // YTH
+
+  //2017
+  ythAssets25: '/Publications/Yogsattava/PreviousIssues/2017/YogaSattva.jpg',
+  ythAssets26: '/Publications/Yogsattava/PreviousIssues/2017/YogaSattva1.jpg',
+  ythAssets27: '/Publications/Yogsattava/PreviousIssues/2017/YogaSattva2.jpg',
+  ythAssets28: '/Publications/Yogsattava/PreviousIssues/2017/yogasattva3.jpg',
+  ythAssets29: '/Publications/Yogsattava/PreviousIssues/2017/yogasattva4.jpg',
+  ythAssets30: '/Publications/Yogsattava/PreviousIssues/2017/yogasattva5.jpg',
+  ythAssets31: '/Publications/Yogsattava/PreviousIssues/2017/yogasattva6.jpg',
+ 
   // 2018
   ythAssets1: '/Publications/Yogsattava/PreviousIssues/2018/yth2018-1.jpg',
   ythAssets2: '/Publications/Yogsattava/PreviousIssues/2018/yth2018-2.jpg',

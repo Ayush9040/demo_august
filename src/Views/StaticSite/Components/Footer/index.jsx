@@ -21,7 +21,7 @@ import { Link } from 'react-router-dom'
 import baseDomain, { homeAssets } from '../../assets/images/imageAsset'
 const Footer = () => {
   return (
-    <div className='footer-container global-padding'>
+    <div id='footer' className='footer-container global-padding'>
       <div className='logo-description'>
         <div className='logo'>
           <a href='https://theyogainstitute.org/'>
