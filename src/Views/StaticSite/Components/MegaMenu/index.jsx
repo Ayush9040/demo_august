@@ -55,15 +55,25 @@ const MegaMenu = ({ setNav }) => {
       { menu: 'Library', link: '/publication/library' },
     ],
     MUSEUM: [
-      { menu: 'Overview', link: '/museum' },
-      { menu: 'Virtual Tour', link: '/museum' },
-      { menu: 'Gallery', link: '/museum' },
-      { menu: 'location', link: '/museum' },
+      { menu: 'Overview', link: '/museum/' },
+      { menu: 'Virtual Tour', link: '/museum/#virtual_tour' },
+      { menu: 'Gallery', link: '/museum/#gallery' },
+      { menu: 'location', link: '/museum/#location' },
     ],
     FACILITIES: [
       { menu: 'Overview', link: '/facilities' },
-      { menu: 'Facilities', link: '/facilities' },
-      { menu: 'Rules and Regulations', link: '/facilities' },
+      //{ menu: 'Facilities', link: '/facilities/#preview' },
+      { menu: 'Hostels', link: '/facilities/#hostel' },
+      { menu: 'Conference Room', link: '/facilities/#conference-room' },
+      { menu: 'Library', link: '/facilities/#library' },
+      { menu: 'Book Store', link: '/facilities/#book-store' },
+      { menu: 'Yoga Halls', link: '/facilities/#yoga-halls' },
+      { menu: 'Rooftop Space', link: '/facilities/#rooftop-space' },
+      { menu: 'Dining Hall', link: '/facilities/#dining-hall' },
+      { menu: 'Nature Trail', link: '/facilities/#nature-trail' },
+      { menu: 'Gazebo', link: '/facilities/#gazebo' },
+      { menu: 'Kailashpati Tree', link: '/facilities/#kailaspati-tree' },
+      { menu: 'Rules and Regulations', link: '/facilities/#information' },
     ],
     SHOP: [
       { menu: 'All Categories', link: '/shop' },
@@ -75,20 +85,35 @@ const MegaMenu = ({ setNav }) => {
     ],
     GIFTING: [
       { menu: 'Overview', link: '/Gifting' },
-      { menu: 'Gift Career', link: '/Gifting' },
-      { menu: 'Gift Health and Wellness', link: '/Gifting' },
-      { menu: 'Gift wisdom', link: '/Gifting' },
-      { menu: 'Gift Nispand', link: '/Gifting' },
+      { menu: 'Gift Career', link: '/Gifting/#gift-career' },
+      {
+        menu: 'Gift Health and Wellness',
+        link: '/Gifting/#Gift-health&wellness',
+      },
+      { menu: 'Gift wisdom', link: '/Gifting/#gift-wisdom' },
+      { menu: 'Gift Nispand', link: '/Gifting/#gift-nispand' },
     ],
     DONATION: [
       { menu: 'Overview', link: '/donation' },
-      { menu: 'Annam brahma', link: '/donation' },
-      { menu: 'Truckasana', link: '/donation' },
-      { menu: 'Yoga for the Underprivileged', link: '/donation' },
-      { menu: 'Yoga for Transgender Community', link: '/donation' },
-      { menu: 'Yoga for Children with special needs', link: '/donation' },
-      { menu: 'Underprivileged Children in BMC schools', link: '/donation' },
-      { menu: 'Police', link: '/donation' },
+      { menu: 'Annam brahma', link: '/donation/#annam-brahma' },
+      { menu: 'Truckasana', link: '/donation/#truckasana' },
+      {
+        menu: 'Yoga for the Underprivileged',
+        link: '/donation/#yoga-for-underprivileged',
+      },
+      {
+        menu: 'Yoga for Transgender Community',
+        link: '/donation/#yoga-for-transgender',
+      },
+      {
+        menu: 'Yoga for Children with special needs',
+        link: '/donation/#yoga-for-special-needs',
+      },
+      {
+        menu: 'Underprivileged Children in BMC schools',
+        link: '/donation/#underprivileged-children',
+      },
+      { menu: 'Police', link: '/donation/#police' },
     ],
     NEWS: [
       { menu: 'Gallery', link: '/media' },
@@ -106,20 +131,20 @@ const MegaMenu = ({ setNav }) => {
     ],
   }
   return (
-    <div className='mega-menu-container'>
-      <div className='left-menu'>
+    <div className="mega-menu-container">
+      <div className="left-menu">
         <div
-          className='cross'
+          className="cross"
           onClick={() => {
             setNav(false)
           }}
         >
           {cross}
         </div>
-        <div className='menu-logo'>
-          <Link to='/'>{legacy2}</Link>
+        <div className="menu-logo">
+          <Link to="/">{legacy2}</Link>
         </div>
-        <ul className='navigation-ul'>
+        <ul className="navigation-ul">
           {navItems &&
             navItems.map((item, i) => {
               if (item.name !== 'LOCATE US') {
@@ -142,7 +167,7 @@ const MegaMenu = ({ setNav }) => {
                           background:
                             'linear-gradient(90deg,#fff,#BC4F31,#BC4F31,#fff)',
                         }}
-                        className='bottom-line'
+                        className="bottom-line"
                       ></div>
                     </li>
                   </Link>
@@ -150,9 +175,9 @@ const MegaMenu = ({ setNav }) => {
               } else {
                 return (
                   <a
-                    href='https://goo.gl/maps/bxH6SifrXjXAhteV7'
-                    target='_blank'
-                    rel='noreferrer'
+                    href="https://goo.gl/maps/bxH6SifrXjXAhteV7"
+                    target="_blank"
+                    rel="noreferrer"
                     onMouseOver={() => {
                       setMenuItem(item.key)
                     }}
@@ -165,7 +190,7 @@ const MegaMenu = ({ setNav }) => {
                           background:
                             'linear-gradient(90deg,#fff,#BC4F31,#BC4F31,#fff)',
                         }}
-                        className='bottom-line'
+                        className="bottom-line"
                       ></div>
                     </li>
                   </a>
@@ -181,10 +206,10 @@ const MegaMenu = ({ setNav }) => {
       >
         {menuItem === 'COURSES' && (
           <>
-            <div className='single-menu'>
+            <div className="single-menu">
               <h3>TEACHERS TRAINING</h3>
               <ul>
-                <li className='text-bold'>200 Hour Courses</li>
+                <li className="text-bold">200 Hour Courses</li>
                 <li>Two Months Training Course - On Campus</li>
                 <li>Weekend Training Course - 3 Months / Online - English</li>
                 <li>One Month Training Course - Online / On Campus</li>
@@ -192,25 +217,29 @@ const MegaMenu = ({ setNav }) => {
                 <li style={{ marginBottom: '1.5rem' }}>
                   Teacher Training Course - Part Time/ Online- English
                 </li>
-                <li className='text-bold'>500 Hour Courses</li>
-                <li style={{ marginBottom: '1.5rem' }} >Three Months Teacher Training Course</li>
-                <li className='text-bold'>900 Hour Courses</li>
+                <li className="text-bold">500 Hour Courses</li>
+                <li style={{ marginBottom: '1.5rem' }}>
+                  Three Months Teacher Training Course
+                </li>
+                <li className="text-bold">900 Hour Courses</li>
                 <li>Four Months Teacher Training Course</li>
                 <li>Yoga Teachers Training Course - 7 Months</li>
                 <li>Yoga Teachers Training Course - 9 Months - Hindi</li>
                 <li>Yoga Teachers Training Course - 12 Months - English</li>
                 <li>Yoga Teachers Training Course - 24 Months</li>
-                <li className='text-bold' style={{ marginBottom: '1.5rem' }} >Certificate Yoga Therapy Course</li>
-                <li className='text-bold' style={{ marginBottom: '1.5rem' }} >
+                <li className="text-bold" style={{ marginBottom: '1.5rem' }}>
+                  Certificate Yoga Therapy Course
+                </li>
+                <li className="text-bold" style={{ marginBottom: '1.5rem' }}>
                   Certificate Program on Yoga for Cancer
                 </li>
-                <li className='text-bold' style={{ marginBottom: '1.5rem' }} >
+                <li className="text-bold" style={{ marginBottom: '1.5rem' }}>
                   Certificate Course on Advanced <br />
                   Pranayama Techniques
                 </li>
               </ul>
             </div>
-            <div className='single-menu'>
+            <div className="single-menu">
               <h3>CAMPS</h3>
               <ul>
                 <li>Stress Management Camp</li>
@@ -221,7 +250,9 @@ const MegaMenu = ({ setNav }) => {
                 <li>7 Days Health Camp Hindi</li>
                 <li>21 Days Better Living Course English - Morning</li>
                 <li>21 Days Better Living Course English - Evening</li>
-                <li style={{ marginBottom: '1.5rem' }} >21 Days Better Living Course Hindi - Evening</li>
+                <li style={{ marginBottom: '1.5rem' }}>
+                  21 Days Better Living Course Hindi - Evening
+                </li>
                 <h3>ASANA REGULAR CLASSES</h3>
                 <ul>
                   <li>Asana Regular Classes for Men</li>
@@ -232,13 +263,13 @@ const MegaMenu = ({ setNav }) => {
                   <li>Yog Prayas</li>
                   <li>Meditation Course</li>
                   <li>Regular Meditation Classes</li>
-                  <li style={{ marginBottom: '1.5rem' }} >
+                  <li style={{ marginBottom: '1.5rem' }}>
                     Advance Regular Yoga Classes <br /> – TYI Teachers
                   </li>
                 </ul>
               </ul>
             </div>
-            <div className='single-menu'>
+            <div className="single-menu">
               <h3>WORKSHOPS</h3>
               <ul>
                 <li>Weight Management Workshop</li>
@@ -252,13 +283,13 @@ const MegaMenu = ({ setNav }) => {
                 <li>Senior Citizen</li>
                 <li>Respiratory</li>
               </ul>
-              <div className='filler'>{filler}</div>
+              <div className="filler">{filler}</div>
             </div>
           </>
         )}
         {menuItem !== 'COURSES' && (
-          <div className='single-menu'>
-            <ul className='navigation-ul'>
+          <div className="single-menu">
+            <ul className="navigation-ul">
               {subMenu[menuItem]?.map((item, i) => {
                 return (
                   <Link
@@ -276,7 +307,7 @@ const MegaMenu = ({ setNav }) => {
                           background:
                             'linear-gradient(90deg,#fff,#BC4F31,#BC4F31,#fff)',
                         }}
-                        className='bottom-line'
+                        className="bottom-line"
                       ></div>
                     </li>
                   </Link>

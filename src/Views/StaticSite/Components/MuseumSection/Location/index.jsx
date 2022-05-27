@@ -3,7 +3,7 @@ import Heading from '../../Heading'
 import './style.scss'
 const Location = () => {
   return (
-    <div className="location-container global-padding" id='location' >
+    <div className="location-container global-padding" >
       <div className="location-grid-1 ">
         <Heading largeText={'Location'} />
         <p className="location-text">
