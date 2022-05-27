@@ -114,7 +114,7 @@ const CourseDetails = ({ pageDate }) => {
           </div>
           <div className="course-options">
             <CommonBtn text={'Enroll Now'} />
-            <CommonBtn text={'Gift Now'} />
+            <CommonBtn text={'Gift Course'} />
           </div>
         </div>
         <div className="course-cover">
