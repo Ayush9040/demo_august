@@ -11,7 +11,7 @@ export const c200h = {
     name: '200 Hours TTC–Online–English',
     mostPopular:true,
     colorCode:'#E38F73',
-    deatils:
+    details:
       'With over 1,00,000 successfully certified students, the 200 Hours Teacher Training Course at The Yoga Institute covers the nuances of Traditional Yoga. This includes an introduction to the study of principal Yoga Asanas, Pranayamas, Meditation, Kriyas, Patanjali’s Yoga Sutra, and Hatha Yoga Pradipika. Further, complete immersion into practical experiences of the concept studies, public speaking, the methodology of teaching, etc. are covered. Strategically designed by the founder Shri Yogendraji, Smt. Sita Devi Yogendra, Dr. Jayadeva Yogendra, and Dr. Hansaji J Yogendra, the course serves as a valuable ‘life school’ to those seeking balance and fulfilment in life.',
     benefits: [
       'You will learn the tools to master your physical, mental and spiritual well-being. You will see a marked improvement in your life, relationships and work.',
@@ -100,7 +100,7 @@ export const c200h = {
     name: '200 HRS TTC (1 Month) online',
     mostPopular:false,
     colorCode:'#D88068',
-    deatils:
+    details:
       'With over 1,00,000 successfully certified students, the 200 Hours Teacher Training Course at The Yoga Institute covers the nuances of Traditional Yoga. This includes an introduction to the study of principal Yoga Asanas, Pranayamas, Meditation, Kriyas, Patanjali’s Yoga Sutra, and Hatha Yoga Pradipika. Further, complete immersion into practical experiences of the concept studies, public speaking, the methodology of teaching, etc. are covered. Strategically designed by the founder Shri Yogendraji, Smt. Sita Devi Yogendra, Dr. Jayadeva Yogendra, and Dr. Hansaji J Yogendra, the course serves as a valuable ‘life school’ to those seeking balance and fulfilment in life.',
     benefits: [
       'You will learn the tools to master your physical, mental and spiritual well-being. You will see a marked improvement in your life, relationships and work.',
@@ -190,7 +190,7 @@ export const c200h = {
     name: '200 HRS TTC (2 months) online ',
     mostPopular:false,
     colorCode:'#C9705F',
-    deatils:
+    details:
       'With over 1,00,000 successfully certified students, the 200 Hours Teacher Training Course at The Yoga Institute covers the nuances of Traditional Yoga. This includes an introduction to the study of principal Yoga Asanas, Pranayamas, Meditation, Kriyas, Patanjali’s Yoga Sutra, and Hatha Yoga Pradipika. Further, complete immersion into practical experiences of the concept studies, public speaking, the methodology of teaching, etc. are covered. Strategically designed by the founder Shri Yogendraji, Smt. Sita Devi Yogendra, Dr. Jayadeva Yogendra, and Dr. Hansaji J Yogendra, the course serves as a valuable ‘life school’ to those seeking balance and fulfilment in life.',
     benefits: [
       'You will learn the tools to master your physical, mental and spiritual well-being. You will see a marked improvement in your life, relationships and work.',
@@ -280,7 +280,7 @@ export const c200h = {
     name: '200 HRS TTC (3 Months) online',
     mostPopular:false,
     colorCode:'#E38F73',
-    deatils:
+    details:
       'With over 1,00,000 successfully certified students, the 200 Hours Teacher Training Course at The Yoga Institute covers the nuances of Traditional Yoga. This includes an introduction to the study of principal Yoga Asanas, Pranayamas, Meditation, Kriyas, Patanjali’s Yoga Sutra, and Hatha Yoga Pradipika. Further, complete immersion into practical experiences of the concept studies, public speaking, the methodology of teaching, etc. are covered. Strategically designed by the founder Shri Yogendraji, Smt. Sita Devi Yogendra, Dr. Jayadeva Yogendra, and Dr. Hansaji J Yogendra, the course serves as a valuable ‘life school’ to those seeking balance and fulfilment in life.',
     benefits: [
       'You will learn the tools to master your physical, mental and spiritual well-being. You will see a marked improvement in your life, relationships and work.',
@@ -371,7 +371,7 @@ export const c200h = {
     name: '200 HRS TTC (2 months) online',
     mostPopular:false,
     colorCode:'#D88068',
-    deatils:
+    details:
       'With over 1,00,000 successfully certified students, the 200 Hours Teacher Training Course at The Yoga Institute covers the nuances of Traditional Yoga. This includes an introduction to the study of principal Yoga Asanas, Pranayamas, Meditation, Kriyas, Patanjali’s Yoga Sutra, and Hatha Yoga Pradipika. Further, complete immersion into practical experiences of the concept studies, public speaking, the methodology of teaching, etc. are covered. Strategically designed by the founder Shri Yogendraji, Smt. Sita Devi Yogendra, Dr. Jayadeva Yogendra, and Dr. Hansaji J Yogendra, the course serves as a valuable ‘life school’ to those seeking balance and fulfilment in life.',
     benefits: [
       'You will learn the tools to master your physical, mental and spiritual well-being. You will see a marked improvement in your life, relationships and work.',
@@ -459,7 +459,7 @@ export const c200h = {
     key: 'CAMPS',
     id: '6',
     name: 'Bhava Workshop',
-    mostPopular:false,
+    mostPopular:true,
     colorCode:'#EDBE66',
     details:'Effective tools and techniques to help you manage your life',
     queDetails: [
@@ -1037,7 +1037,7 @@ export const c200h = {
     // date: '1st February 2022 to 28th February 2022',
   },
   17: {
-    image: `${baseDomain}${courseAssets.courseAsset12}`,
+    image: `${baseDomain}${courseAssets.courseAsset6}`,
     images: [''],
     key: 'CAMPS',
     id: '17',
@@ -1145,7 +1145,7 @@ export const c200h = {
     },
   },
   19: {
-    image: `${baseDomain}${courseAssets.courseAsset12}`,
+    image: `${baseDomain}${courseAssets.courseAsset15}`,
     images: [''],
     key: 'CAMPS',
     id: '19',
@@ -1200,7 +1200,7 @@ export const c200h = {
     },
   },
   20: {
-    image: `${baseDomain}${courseAssets.courseAsset12}`,
+    image: `${baseDomain}${courseAssets.courseAsset14}`,
     images: [''],
     key: 'CAMPS',
     id: '20',
@@ -1255,7 +1255,7 @@ export const c200h = {
     },
   },
   21: {
-    image: `${baseDomain}${courseAssets.courseAsset12}`,
+    image: `${baseDomain}${courseAssets.courseAsset6}`,
     images: [''],
     key: 'CAMPS',
     id: '21',
@@ -2054,14 +2054,14 @@ export const c200h = {
     },
   },
   26: {
-    image: `${baseDomain}${courseAssets.courseAsset12}`,
+    image: `${baseDomain}${courseAssets.courseAsset24}`,
     // add any other images also
     key: 'classes',
     id: '26',
     name: 'Certificate course on advanced pranayama techniques',
-    mostPopular:false,
+    mostPopular:true,
     colorCode:'#D3A29D',
-    deatils:
+    details:
       'Now that you have mastered the basics of pranayama practices, it is time to go one step ahead! The certificate course on advanced pranayama techniques by The Yoga Institute will help you get the hang of various advanced pranayama techniques along with the right teaching methodology to teach these techniques efficiently. Pranayamas are powerful yogic breathing techniques that boost your body’s bioenergy as well as strengthen both body and mind. Maharishi Patanjali mentions in his text “Yoga Darshanam” which was written around 2500 years ago that pranayamas are powerful techniques to achieve the highest degree of awareness and profound meditative state. It prepares you for deep meditation.',
     benefits: [
       'Knowledge of nadi system and energy channels',
@@ -2084,14 +2084,14 @@ export const c200h = {
     },
   },
   27: {
-    image: `${baseDomain}${courseAssets.courseAsset12}`,
+    image: `${baseDomain}${courseAssets.courseAsset20}`,
     // add any other images also
     key: 'classes',
     id: '27',
     name: ' Advanced Regular Asana Class',
     mostPopular:false,
     colorCode:'#C48E8C',
-    deatils:
+    details:
       'So, you have finished with your basic or advanced yoga teacher training course! Good job! Now you wish to continue your association with The Yoga Institute and we have just the right offering for you. Here is an opportunity to stay updated and connected with the gurus, expert teachers, and advanced asana practices of The Yoga Institute. This course shall help you to maintain the continuity with our TTC practices and techniques. Join us to stay with our Gurus and expert teachers forever.',
     benefits: [
       // 'Knowledge of nadi system and energy channels',
@@ -2126,14 +2126,14 @@ export const c200h = {
     },
   },
   28: {
-    image: `${baseDomain}${courseAssets.courseAsset12}`,
+    image: `${baseDomain}${courseAssets.courseAsset28}`,
     // add any other images also
     key: 'classes',
     id: '28',
     name: 'Meditation class',
     mostPopular:false,
     colorCode:'#B77E7E',
-    deatils:
+    details:
       'Simple recommendations are provided in these meditation workshops to demonstrate how meditation can lead to a meditative state throughout the day, assisting in job and life efficiency. Recent research has demonstrated that frequent meditation improves brain waves.',
     benefits: [
       // 'The science behind meditation',
@@ -2161,14 +2161,14 @@ export const c200h = {
     },
   },
   29: {
-    image: `${baseDomain}${courseAssets.courseAsset12}`,
+    image: `${baseDomain}${courseAssets.courseAsset27}`,
     // add any other images also
     key: 'classes',
     id: '29',
     name: 'MEN’S class',
     mostPopular:false,
     colorCode:'#D3A29D',
-    deatils:
+    details:
       'This is a special men-only regular asana class conducted by The Yoga Institute. The classes cover Asanas, Pranayamas, Kriyas, diet and Yogic lifestyle recommendations, personal attention on health and counselling on other aspects of life.',
     benefits: [
       'The science behind meditation',
@@ -2202,14 +2202,14 @@ export const c200h = {
     },
   },
   30: {
-    image: `${baseDomain}${courseAssets.courseAsset12}`,
+    image: `${baseDomain}${courseAssets.courseAsset22}`,
     // add any other images also
     key: 'classes',
     id: '30',
     name: 'Weekend Regular Class',
     mostPopular:false,
     colorCode:'#C48E8C',
-    deatils:
+    details:
       'Struggling to meet your yoga goals during the week? No worries, we got you! You have the option to register for regular weekend yoga class with The Yoga Institute. These are regular classes for those who are unable to attend on weekdays owing to other obligations. Weekend Yoga Regular Class is an excellent course for daily yoga practise. Asanas, Pranayamas, Kriyas, and food and Yogic lifestyle suggestions are all covered in these classes. Participants are divided into groups based on their health status, and each group receives distinct training. In addition, as needed, all students receive individual attention.',
     benefits: [
       'The science behind meditation',
@@ -2241,14 +2241,14 @@ export const c200h = {
     },
   },
   31: {
-    image: `${baseDomain}${courseAssets.courseAsset12}`,
+    image: `${baseDomain}${courseAssets.courseAsset29}`,
     // add any other images also
     key: 'classes',
     id: '31',
     name: 'WOMEN’S class',
     mostPopular:false,
     colorCode:'#B77E7E',
-    deatils:
+    details:
       'This is a special women-only regular asana class conducted by The Yoga Institute. The classes cover Asanas, Pranayamas, Kriyas, diet and Yogic lifestyle recommendations, personal attention on health and counselling on other aspects of life. ',
     benefits: [
       // 'The science behind meditation',
@@ -2282,14 +2282,14 @@ export const c200h = {
     },
   },
   32: {
-    image: `${baseDomain}${courseAssets.courseAsset12}`,
+    image: `${baseDomain}${courseAssets.courseAsset30}`,
     // add any other images also
     key: 'classes',
     id: '32',
     name: 'YOG PRAYAS',
     mostPopular:false,
     colorCode:'#D3A29D',
-    deatils:
+    details:
       'This is for people who are looking forward to yogic progress after being familiar with basic Yogasanas. The focused Sadhaka’s, who just doesn’t want to become Yoga Professional, but aims for an even bigger goal, SELF DEVELOPMENT.',
     benefits: [
       'Focus for practice',

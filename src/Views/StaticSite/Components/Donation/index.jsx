@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import CommonBtn from '../commonbtn'
 import './style.scss'
-import { experience } from '../../assets/icons/icon'
+import { ACH, cheque, donation } from '../../assets/icons/icon'
 const Donation = ({ supportText, page }) => {
   const [amount, setAmount] = useState(0)
 
@@ -112,7 +112,7 @@ const Donation = ({ supportText, page }) => {
           <h1>Offline Options</h1>
           <div className="offline-grid ">
             <div className="donation-logos">
-              {experience}
+              {ACH}
               <h2>ACH/ECS</h2>
               <br />
               <br />
@@ -123,7 +123,7 @@ const Donation = ({ supportText, page }) => {
               </p>
             </div>
             <div className="donation-logos">
-              {experience}
+              {cheque}
               <h2>Cheque / Demand Draft</h2>
               <br />
               <br />
@@ -135,7 +135,7 @@ const Donation = ({ supportText, page }) => {
             </div>
 
             <div className="donation-logos">
-              {experience}
+              {donation}
               <h2>In Kind Donation</h2>
               <br />
               <br />
