@@ -7,7 +7,7 @@ import GiftingImg from '../../assets/images/gifting2a-02.png'
 
 const SocialResponsibility = () => {
   useEffect(() => {
-    window.useEffect(0, 0)
+    window.scrollTo(0, 0)
   }, [])
   return (
     <div className="social-res-internal">
