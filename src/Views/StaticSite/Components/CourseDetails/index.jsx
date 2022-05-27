@@ -24,12 +24,30 @@ const CourseDetails = ({ pageDate }) => {
   } = pageDate
 
   let options = [
-    'Program Details',
-    'Curriculam',
-    'Teaching & Certification',
-    'Our Unique Offerings',
-    'Registration',
-    'FAQ',
+    {
+      id: 'ProgramID',
+      title: 'Program Details',
+    },
+    {
+      id: 'CurriculamID',
+      title: 'Curriculam',
+    },
+    {
+      id: 'TeachingID',
+      title: 'Teaching & Certification',
+    },
+    {
+      id: 'UniqueID',
+      title: 'Our Unique Offerings',
+    },
+    {
+      id: 'RegistrationID',
+      title: 'Registration',
+    },
+    {
+      id: 'FaqID',
+      title: 'FAQ',
+    },
   ]
   console.log(benefits)
   console.log(fees)
@@ -60,9 +78,9 @@ const CourseDetails = ({ pageDate }) => {
   }
 
   return (
-    <div className='course-detail-page'>
-      <div className='main-section' style={{ background: '#C9705F' }}>
-        <div className='course-info'>
+    <div className="course-detail-page">
+      <div className="main-section" style={{ background: '#C9705F' }}>
+        <div className="course-info">
           {/* <p>Browse &gt; Teacher Training Courses</p> */}
           <h1>
             {name ? (
@@ -87,19 +105,19 @@ const CourseDetails = ({ pageDate }) => {
               ? timings
               : 'Lorem Ipsum is simply dummy text of the printing and typesetting Industry.'}
           </p>
-          <div className='ratings'>
+          <div className="ratings">
             {star}
             {star}
             {star}
             {star}
             {star}
           </div>
-          <div className='course-options'>
+          <div className="course-options">
             <CommonBtn text={'Enroll Now'} />
             <CommonBtn text={'Gift Now'} />
           </div>
         </div>
-        <div className='course-cover'>
+        <div className="course-cover">
           {image ? (
             <img src={image} />
           ) : (
@@ -107,124 +125,142 @@ const CourseDetails = ({ pageDate }) => {
           )}
         </div>
       </div>
-      <div className='details-section'>
-        <div className='nav-options'>
-          <div className='career-navigation-lg'>
-            <ul className='innerNav'>
+      <div className="details-section">
+        <div className="nav-options">
+          <div className="career-navigation-lg">
+            <ul className="innerNav">
               {options.map((item, idx) => (
-                <li
-                  onClick={() => {
-                    selectMenu(item)
-                  }}
-                  key={idx}
-                >
-                  <em className={idx + 1 === detail && 'active'}>{item}</em>
-                </li>
+                <a key={item.id} href={`#${item.id}`}>
+                  <li
+                    onClick={() => {
+                      selectMenu(item)
+                    }}
+                    key={idx}
+                  >
+                    <em className={idx + 1 === detail && 'active'}>
+                      {item.title}
+                    </em>
+                  </li>
+                </a>
               ))}
             </ul>
           </div>
-          {detail === 1 && (
-            <div className='course-about'>
-              <div>{details}</div>
-              <div>
-                <ul>
-                  <li>
-                    <span className='bullet'>{global}</span>Online Course
-                  </li>
-                  <li>
-                    <span className='bullet'>{network}</span>Beginner Level
-                  </li>
-                  <li>
-                    <span className='bullet'>{chat}</span>English
-                  </li>
-                </ul>
-              </div>
-            </div>
-          )}
-          {detail === 2 && (
-            <div className='course-benefits'>
-              <div>
-                <p>{curriculum?.description}</p>
-                {curriculum?.points?.map(({ title, points }) => {
-                  console.log(points, 'p')
-                  console.log(title, 'title')
-                  return (
-                    <div key={title}>
-                      <h4>{title}</h4>
-                      <ul>
-                        {points?.map((itm) => {
-                          if (typeof itm !== 'object')
-                            return <li key={itm}>{itm}</li>
-                        })}
-                      </ul>
-                    </div>
-                  )
-                })}
-              </div>
-            </div>
-          )}
-          {detail === 3 && (
-            <div className='course-curriculam'>
-              <p>{TeachingAndCertification?.description}</p>
 
-              <ul>
-                {TeachingAndCertification?.points?.map(
-                  ({ title, points, description }) => {
-                    console.log(points, 'tcpoints')
-                    return (
-                      <li key={title}>
-                        <span>{title || description}</span>
-                        <dl>
-                          {points?.map((itm) => {
-                            if (typeof itm !== 'object') {
-                              return <dt key={itm}>{itm}</dt>
-                            }
-                            return
-                          })}
-                        </dl>
-                      </li>
-                    )
-                  }
-                )}
-              </ul>
-            </div>
-          )}
-          {detail === 4 && (
-            <div className='our-offerings'>
+          <div className="course-about" id="ProgramID">
+            <h3>
+              <u>
+                <b>Program Details</b>
+              </u>
+            </h3>
+            <div>{details}</div>
+            <div>
               <ul>
                 <li>
-                  You will have an opportunity to directly interact with
-                  spiritual Guru Dr. Hansaji Yogendra. She is available to
-                  attend to your queries and give counsel.
+                  <span className="bullet">{global}</span>Online Course
                 </li>
                 <li>
-                  Our expert trainers for the course, over 40 in number, have
-                  mastered the yogic way of life and are proficient in passing
-                  on their learnings in a simple and practical way. Armed with
-                  decades of experience, they offer tremendous value and insight
-                  to new learners.
+                  <span className="bullet">{network}</span>Beginner Level
                 </li>
                 <li>
-                  Apart from the main yoga curriculum, you will learn immensely
-                  from the class experience itself. You will meet people with
-                  diverse backgrounds and experiences that you can gain insights
-                  from. There will be sadhakas of all age groups – right from
-                  teenagers to senior citizens. Every person has had a unique
-                  experience in life and it will be enriching to know all these
-                  stories.
-                </li>
-                <li>
-                  This one-of-a-kind experience will groom you to calmly and
-                  mindfully handle people and situations
+                  <span className="bullet">{chat}</span>English
                 </li>
               </ul>
             </div>
-          )}
+          </div>
+
+          <div className="course-benefits" id="CurriculamID">
+            <div>
+              <h3 style={{ textAlign: 'left' }}>
+                <u>
+                  <b>Curriculam</b>
+                </u>
+              </h3>
+              <p style={{ textAlign: 'left' }}>{curriculum?.description}</p>
+              {curriculum?.points?.map(({ title, points }) => {
+                console.log(points, 'p')
+                console.log(title, 'title')
+                return (
+                  <div key={title}>
+                    <h4>{title}</h4>
+                    <ul>
+                      {points?.map((itm) => {
+                        if (typeof itm !== 'object')
+                          return <li key={itm}>{itm}</li>
+                      })}
+                    </ul>
+                  </div>
+                )
+              })}
+            </div>
+          </div>
+          <div className="course-curriculam" id="TeachingID">
+            <h3>
+              <u>
+                <b>Teaching & Certification</b>
+              </u>
+            </h3>
+            <p>{TeachingAndCertification?.description}</p>
+
+            <ul>
+              {TeachingAndCertification?.points?.map(
+                ({ title, points, description }) => {
+                  console.log(points, 'tcpoints')
+                  return (
+                    <li key={title}>
+                      <span>{title || description}</span>
+                      <dl>
+                        {points?.map((itm) => {
+                          if (typeof itm !== 'object') {
+                            return <dt key={itm}>{itm}</dt>
+                          }
+                          return
+                        })}
+                      </dl>
+                    </li>
+                  )
+                }
+              )}
+            </ul>
+          </div>
+          <div className="our-offerings" id="UniqueID">
+            <h3>
+              <u>
+                <b>Our Unique Offerings</b>
+              </u>
+            </h3>
+            <ul>
+              <li>
+                You will have an opportunity to directly interact with spiritual
+                Guru Dr. Hansaji Yogendra. She is available to attend to your
+                queries and give counsel.
+              </li>
+              <li>
+                Our expert trainers for the course, over 40 in number, have
+                mastered the yogic way of life and are proficient in passing on
+                their learnings in a simple and practical way. Armed with
+                decades of experience, they offer tremendous value and insight
+                to new learners.
+              </li>
+              <li>
+                Apart from the main yoga curriculum, you will learn immensely
+                from the class experience itself. You will meet people with
+                diverse backgrounds and experiences that you can gain insights
+                from. There will be sadhakas of all age groups – right from
+                teenagers to senior citizens. Every person has had a unique
+                experience in life and it will be enriching to know all these
+                stories.
+              </li>
+              <li>
+                This one-of-a-kind experience will groom you to calmly and
+                mindfully handle people and situations
+              </li>
+            </ul>
+          </div>
         </div>
 
-        <div className='mob-view'>
-          <div className='course-about'>
-            <h2>Program Details</h2>
+        {/* <div className="mob-view">
+          <div className="course-about">
+            <h2 id='ProgramID'>Program Details</h2>
             <div>
               With over 1,00,000 successfully certified students, the 200 Hours
               Teacher Training Course at The Yoga Institute covers the nuances
@@ -241,20 +277,20 @@ const CourseDetails = ({ pageDate }) => {
             <div>
               <ul>
                 <li>
-                  <span className='bullet'>{global}</span>Online Course
+                  <span className="bullet">{global}</span>Online Course
                 </li>
                 <li>
-                  <span className='bullet'>{network}</span>Beginner Level
+                  <span className="bullet">{network}</span>Beginner Level
                 </li>
                 <li>
-                  <span className='bullet'>{chat}</span>English
+                  <span className="bullet">{chat}</span>English
                 </li>
               </ul>
             </div>
           </div>
-          <div className='course-benefits'>
+          <div className="course-benefits">
             <div>
-              <h2>Curriculum</h2>
+              <h2 id='curriculumID'>Curriculum</h2>
               <ul>
                 <li>
                   You will learn the tools to master your physical, mental and
@@ -273,9 +309,9 @@ const CourseDetails = ({ pageDate }) => {
               <img src={baseDomain + courseAssets.courseAsset4} />
             </div>
           </div>
-          <div className='course-curriculam'>
+          <div className="course-curriculam">
             <ul>
-              <h2>Teaching and Certification</h2>
+              <h2 id='TeachingID'>Teaching and Certification</h2>
               <li>
                 <span>KNOWLEDGE</span>
                 <dl>
@@ -338,15 +374,15 @@ const CourseDetails = ({ pageDate }) => {
               </li>
             </ul>
           </div>
-          <div className='our-offerings'>
-            <h2>Our Unique Offerings</h2>
+          <div className="our-offerings">
+            <h2 id='UniqueID'>Our Unique Offerings</h2>
             <ul>
               {unique?.points?.map(({ itm }) => (
                 <li key={itm}>{itm}</li>
               ))}
             </ul>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   )
