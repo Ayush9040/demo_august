@@ -2,7 +2,10 @@ import React from 'react'
 import SeminarCard from '../SeminarCard'
 import './style.scss'
 import { share } from '../../assets/icons/icon'
-import baseDomain,{ mediaAssets,alumniAssets } from '../../assets/images/imageAsset'
+import baseDomain, {
+  mediaAssets,
+  alumniAssets,
+} from '../../assets/images/imageAsset'
 
 const MediaSection = ({
   subHeading,
@@ -11,7 +14,7 @@ const MediaSection = ({
   upcomingEvents = true,
   description,
   title,
-  image
+  // image,
 }) => {
   return (
     <div className="common-media-section">
@@ -23,7 +26,7 @@ const MediaSection = ({
         <div className="newsletter-content">
           <h2>
             <span className="newsletter-title">{title ? title : 'Title'}</span>
-            <span className="newsletter-date">00/00/00</span>
+            <span className="newsletter-date">01/01/2022</span>
           </h2>
           <p>
             {description
@@ -31,13 +34,16 @@ const MediaSection = ({
               : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec ante id nunc vehicula pharetra necvitae est. Sed diam dui, luctus sed velit quis,placerat consequat felis. Vivamus cursus in mauris at dignissim. Etiam venenatis semper pharetra. Duis ut diam eros. In hac habitasse platea dictumst. Nam tincidunt nisi metus, et dignissim ligula cursus ut.'}
           </p>
           <div className="options">
-            <button>View Story</button>
+            <button>View Album</button>
             <div className="share-icon">{share}</div>
           </div>
         </div>
         <div className="newsletter-image">
           <h3>{subHeading}</h3>
-          <img className="seminar-iamge" src={image ?image :baseDomain + mediaAssets.seminarImg} />
+          <img
+            className="seminar-iamge"
+            src={`${baseDomain}${mediaAssets.igCeremony}`}
+          />
         </div>
       </div>
       {upcomingEvents && (
@@ -48,15 +54,15 @@ const MediaSection = ({
           <div className="seminars-card-container">
             <SeminarCard
               title={'500 hrs TTC'}
-              bgImage={baseDomain+alumniAssets.eventsAssets1}
+              bgImage={baseDomain + alumniAssets.eventsAssets1}
             />
             <SeminarCard
               title={'Pregnancy Camp'}
-              bgImage={baseDomain+alumniAssets.eventsAssets2}
+              bgImage={baseDomain + alumniAssets.eventsAssets2}
             />
             <SeminarCard
               title={'Regular Asana Class'}
-              bgImage={baseDomain+alumniAssets.eventsAssets3}
+              bgImage={baseDomain + alumniAssets.eventsAssets3}
             />
           </div>
         </div>
