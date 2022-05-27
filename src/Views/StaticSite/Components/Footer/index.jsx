@@ -131,7 +131,7 @@ const Footer = () => {
             <Link to='/careers'>
               <li>Careers</li>
             </Link>
-            <Link to=''>
+            <Link to='/csr'>
               <li>CSR</li>
             </Link>
           </ul>
