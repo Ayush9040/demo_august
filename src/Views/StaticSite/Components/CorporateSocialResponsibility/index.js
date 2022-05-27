@@ -11,7 +11,7 @@ const CorporateSocialResponsibilty = () => {
         Logo={false}
         Navigation={true}
         PageType="privacy"
-        Heading="Privacy Policy"
+        Heading="Corporate Social Responsibilty"
         description="For over many decades, The Yoga Institute has been conducting CSR initiatives on behalf of corporations and organizations who are looking to make a difference in their society and the people who are in need of it. If you are an organization looking to make an impact, please consider associating with us for the same. We are mindful to keep administrative and other organizational costs low so that a major chunk of your resources is well utilized for those who are actually in need. Our uniqueness we utilize maximum resources for maximum welfare and benefit of humanity. We focus on the Sustainable Development Goals specified by the United Nations’ General Assembly."
         // bannerImg={`${baseDomain}${background.volunteer}`}
         overlay="#E38F73"
