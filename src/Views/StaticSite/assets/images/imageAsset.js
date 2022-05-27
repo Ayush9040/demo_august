@@ -146,7 +146,7 @@ export const courseAssets = {
   courseAsset36: '/Courses/Most_popular/900_hrs_TTC.jpg',
   courseAsset37: '/Courses/Most_popular/Pranayama_workshop.jpg',
 
-  // ttc
+  // ttc 
   courseAsset38: '/Courses/TTC/200_hrs_TTC.jpg',
   courseAsset39: '/Courses/TTC/500_hrs_TTC.jpg',
   courseAsset40: '/Courses/TTC/900_hrs_TTC.jpg',
@@ -916,13 +916,13 @@ export const factAssets={
 
   // 1990-2000
 
-  factAsset20:'/Home/Facts/1990-2000/1.jpg',
-  factAsset21:'/Home/Facts/1990-2000/2.jpg',
-  factAsset22:'/Home/Facts/1990-2000/3.jpg',
-  factAsset23:'/Home/Facts/1990-2000/4.jpg',
-  factAsset24:'/Home/Facts/1990-2000/5.jpg',
-  factAsset25:'/Home/Facts/1990-2000/6.jpg',
-  factAsset26:'/Home/Facts/1990-2000/7.jpg',
+  factAsset20:'/Home/Facts/1990-2000/1986.jpg',
+  factAsset21:'/Home/Facts/1990-2000/1986_1.jpg',
+  factAsset22:'/Home/Facts/1990-2000/1987.jpg',
+  factAsset23:'/Home/Facts/1990-2000/1987_1.jpg',
+  factAsset24:'/Home/Facts/1990-2000/1987_2.jpg',
+  factAsset25:'/Home/Facts/1990-2000/1990.jpg',
+  factAsset26:'/Home/Facts/1990-2000/1997.jpg',
   factAsset27:'/Home/Facts/1990-2000/8.jpg',
   factAsset28:'/Home/Facts/1990-2000/9.jpg',
   factAsset29:'/Home/Facts/1990-2000/10.jpg',
