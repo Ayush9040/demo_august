@@ -48,11 +48,18 @@
         display: none;
     }
     .Gallery{
+        position: relative;
         a{
             color:#fff;
         }
         ul li {
             border-color: #fff;
+        }
+        #gallery-toggle{
+            position: absolute;
+            right: 0%;
+            color: rgb(255, 255, 255);
+            width: fit-content;
         }
     }
     @media (max-width: "900px") {

@@ -18,7 +18,7 @@ const MegaMenu = ({ setNav }) => {
     { name: 'MUSEUM', link: '/museum', id: 4, key: 'MUSEUM' },
     { name: 'DONATE', link: '/donation', id: 5, key: 'DONATION' },
     { name: 'GIFTING', link: '/gifting', id: 6, key: 'GIFTING' },
-    { name: 'NISPAND', link: '', id: 7, key: 'NISPAND' },
+    { name: 'NISPAND', link: 'https://nispand.com/', id: 7, key: 'NISPAND' },
     { name: 'TYI ONLINE', link: '', id: 8, key: 'ONLINE' },
     {
       name: 'PUBLICATIONS',
@@ -147,7 +147,7 @@ const MegaMenu = ({ setNav }) => {
         <ul className="navigation-ul">
           {navItems &&
             navItems.map((item, i) => {
-              if (item.name !== 'LOCATE US') {
+              if (item.name!=='NISPAND') {
                 return (
                   <Link
                     onMouseOver={() => {
@@ -175,7 +175,7 @@ const MegaMenu = ({ setNav }) => {
               } else {
                 return (
                   <a
-                    href="https://goo.gl/maps/bxH6SifrXjXAhteV7"
+                    href={item.link}
                     target="_blank"
                     rel="noreferrer"
                     onMouseOver={() => {

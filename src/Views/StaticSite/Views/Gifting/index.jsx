@@ -61,7 +61,7 @@ const Gifting = () => {
         <SectionComponent
           page="Gifting"
           image={baseDomain + giftingAssets.healthAssets}
-          title="Gift health & wellness"
+          title="Gift Health & Wellness"
           description={
             'The best gift we can ever give is the gift of health. Health is not simply the absence of disease; it is more profoundly the presence of well-being, balance, and contentment. The Institutes signature 7-Day Health Camp or 21-Day Better Living Course is a wonderful gift to nurture the health and wellness of our loved ones. Sign up your parents, grandparents, friends, relatives, or coworkers to assist them in overcoming any physical discomforts, mental stress, or emotional tension and enjoy a Healthy & Happy Life.'
           }
@@ -70,7 +70,7 @@ const Gifting = () => {
         <SectionComponent
           page="Gifting"
           image={baseDomain + giftingAssets.widsomassets}
-          title="Gift wisdom"
+          title="Gift Wisdom"
           description={
             'They say you can’t buy wisdom. They’re right! But you can surely give the gift of wisdom. Browse through our extensive collection of books. Some of our titles are Yoga Sutras of Patanjali, Recipes of Happiness, Sattvik Cooking, Yoga for Back and Joint Disorders, and many more. Our publications offer exhaustive options that range from vedic philosophy, principles of yoga to modern fusion recipes with a healthy twist. Choose now!'
           }

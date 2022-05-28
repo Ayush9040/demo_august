@@ -104,7 +104,7 @@ const AlumniGallery = () => {
             style={{ width: '100%', textAlign: 'center', marginBottom: '2rem' }}
           >
             <h4>
-              <span style={{ fontWeight: 'bold', border: 'none' }}>Batch:</span>
+              <span style={{ fontWeight: 'bold', border: 'none' }}>Batch Year:</span>
               &ensp;
               <span
                 style={

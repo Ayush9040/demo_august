@@ -15,26 +15,25 @@ const MediaNav = ({ title }) => {
   const [nav, setNav] = useState(false)
   return (
     <>
-      <div className="media-nav-container">
-        <div className="mega-nav">
-          <div className="hamburger" onClick={() => setNav(!nav)}>
+      <div className='media-nav-container'>
+        <div className='mega-nav'>
+          <div className='hamburger' onClick={() => setNav(!nav)}>
             {title === 'Gallery' ? CommonHamburger : Hamburger}
           </div>
-          <div className="main-logo">
-            <Link to="/">{title === 'Gallery' ? MainLogo : legacy1}</Link>
+          <div className='main-logo'>
+            <Link to='/'>{title === 'Gallery' ? MainLogo : legacy1}</Link>
           </div>
           <div className={`career-navigation-sm ${title}`}>
             <ul>
-             
-              <Link to="/media">
+              <Link to='/media'>
                 <li className={title === 'Gallery' ? 'nav-active' : ''}>
                   Gallery
                 </li>
               </Link>
-              <Link to="/media/news">
+              <Link to='/media/news'>
                 <li className={title === 'News' ? 'nav-active' : ''}>News</li>
               </Link>
-              <Link to="/media/events">
+              <Link to='/media/events'>
                 <li
                   className={title === 'Events' ? 'nav-active' : ''}
                   style={{ borderRight: '0' }}
@@ -44,22 +43,25 @@ const MediaNav = ({ title }) => {
               </Link>
             </ul>
           </div>
-          <div className="user-container">
-            <Link to="/sign-in">{title === 'Gallery' ? CommonUser : User}</Link>
+          <div className='user-container'>
+            <Link to='/sign-in'>{title === 'Gallery' ? CommonUser : User}</Link>
           </div>
         </div>
         <div className={`career-navigation-lg ${title}`}>
+          { title === 'Gallery' && <ul id='gallery-toggle' >
+            <li>Images</li>
+            <li style={{ borderRight: '0' }} >Videos</li>
+          </ul>}
           <ul>
-           
-            <Link to="/media">
+            <Link to='/media'>
               <li className={title === 'Gallery' ? 'nav-active' : ''}>
                 Gallery
               </li>
             </Link>
-            <Link to="/media/news">
+            <Link to='/media/news'>
               <li className={title === 'News' ? 'nav-active' : ''}>News</li>
             </Link>
-            <Link to="/media/events">
+            <Link to='/media/events'>
               <li
                 className={title === 'Events' ? 'nav-active' : ''}
                 style={{ borderRight: '0' }}

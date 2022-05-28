@@ -39,19 +39,22 @@ const Seminar = () => {
         </div>
       </div>
       <div className="upcoming-seminars">
-        <h3>Upcoming Seminars</h3>
+        <h3>Upcoming Events</h3>
         <div className="seminars-card-container">
           <SeminarCard
             title={'500 hrs TTC'}
             bgImage={baseDomain + alumniAssets.eventsAssets1}
+            btnText={'View Details'}
           />
           <SeminarCard
             title={'Pregnancy Camp'}
             bgImage={baseDomain + alumniAssets.eventsAssets2}
+            btnText={'View Details'}
           />
           <SeminarCard
             title={'Regular Asana Class'}
             bgImage={baseDomain + alumniAssets.eventsAssets3}
+            btnText={'View Details'}
           />
         </div>
       </div>

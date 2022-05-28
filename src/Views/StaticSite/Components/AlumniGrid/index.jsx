@@ -1,6 +1,7 @@
 import React from 'react'
 import './style.scss'
 import baseDomain, { alumniAssets } from '../../assets/images/imageAsset'
+import CommonBtn from '../commonbtn'
 
 const AlumniGrid = ({ notEvent }) => {
   return (
@@ -30,6 +31,7 @@ const AlumniGrid = ({ notEvent }) => {
           </div>
         </div>
       </div>
+      <CommonBtn text={'View Album'} />
     </div>
   )
 }

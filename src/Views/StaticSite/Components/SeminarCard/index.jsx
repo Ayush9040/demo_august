@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import './style.scss'
 import { share1 } from '../../assets/icons/icon'
 
-const SeminarCard = ({ title, bgImage, desc, url='' }) => {
+const SeminarCard = ({ title, bgImage, desc, url='', btnText='View Story' }) => {
   let description = desc
     ? desc
     : `Lorem ipsum dolor sit amet, consectetur adipiscing
@@ -34,7 +34,7 @@ const SeminarCard = ({ title, bgImage, desc, url='' }) => {
         <p>{textTitle}</p>
         <div className='options'>
           <Link to={url}>
-            <button>View Story</button>
+            <button>{ btnText }</button>
           </Link>
           <div className='share-icon'>{share1}</div>
         </div>

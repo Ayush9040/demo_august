@@ -7,15 +7,21 @@ const Donation = ({ supportText, page }) => {
 
   return (
     <>
-      <div className="donation-container-1 global-padding">
-        <div className="donation-buttons">
-          <div className="input-box">
+      <div className='donation-container-1 global-padding'>
+        <div className='donation-buttons'>
+          <div className='input-box'>
             <h1>{supportText}</h1>
-            <div className="button-flex">
+            <div className='button-flex'>
               <button
                 onClick={() => setAmount(100)}
                 style={
-                  amount === 100 ? { color: 'black', fontWeight: 'bolder', border:'3px solid black' } : {}
+                  amount === 100
+                    ? {
+                      color: 'black',
+                      fontWeight: 'bolder',
+                      border: '3px solid black',
+                    }
+                    : {}
                 }
               >
                 ₹ 100
@@ -23,7 +29,13 @@ const Donation = ({ supportText, page }) => {
               <button
                 onClick={() => setAmount(500)}
                 style={
-                  amount === 500 ? { color: 'black', fontWeight: 'bolder' ,border:'3px solid black'  } : {}
+                  amount === 500
+                    ? {
+                      color: 'black',
+                      fontWeight: 'bolder',
+                      border: '3px solid black',
+                    }
+                    : {}
                 }
               >
                 ₹ 500
@@ -31,7 +43,13 @@ const Donation = ({ supportText, page }) => {
               <button
                 onClick={() => setAmount(1000)}
                 style={
-                  amount === 1000 ? { color: 'black', fontWeight: 'bolder' ,border:'3px solid black'  } : {}
+                  amount === 1000
+                    ? {
+                      color: 'black',
+                      fontWeight: 'bolder',
+                      border: '3px solid black',
+                    }
+                    : {}
                 }
               >
                 ₹ 1000
@@ -39,7 +57,13 @@ const Donation = ({ supportText, page }) => {
               <button
                 onClick={() => setAmount(2000)}
                 style={
-                  amount === 2000 ? { color: 'black', fontWeight: 'bolder' ,border:'3px solid black'  } : {}
+                  amount === 2000
+                    ? {
+                      color: 'black',
+                      fontWeight: 'bolder',
+                      border: '3px solid black',
+                    }
+                    : {}
                 }
               >
                 ₹ 2000
@@ -47,7 +71,13 @@ const Donation = ({ supportText, page }) => {
               <button
                 onClick={() => setAmount(3000)}
                 style={
-                  amount === 3000 ? { color: 'black', fontWeight: 'bolder', border:'3px solid black'  } : {}
+                  amount === 3000
+                    ? {
+                      color: 'black',
+                      fontWeight: 'bolder',
+                      border: '3px solid black',
+                    }
+                    : {}
                 }
               >
                 ₹ 3000
@@ -55,63 +85,75 @@ const Donation = ({ supportText, page }) => {
               <button
                 onClick={() => setAmount(5000)}
                 style={
-                  amount === 5000 ? { color: 'black', fontWeight: 'bolder', border:'3px solid black'  } : {}
+                  amount === 5000
+                    ? {
+                      color: 'black',
+                      fontWeight: 'bolder',
+                      border: '3px solid black',
+                    }
+                    : {}
                 }
               >
                 ₹ 5000
               </button>
             </div>
-            <div className="enter-button">
+            <div className='enter-button'>
               <input
                 type={'number'}
                 value={amount}
-                placeholder="Enter Amount"
+                placeholder='Enter Amount'
                 onChange={(e) => setAmount(e.target.value)}
               />
             </div>
 
-            <div className="checkboxes">
+            <div className='checkboxes'>
               <label>
-                <input type="checkbox" />
+                <input type='checkbox' />
                 <span>One time</span>
               </label>
 
               <label>
-                <input type="checkbox" />
+                <input type='checkbox' />
                 <span>Monthly</span>
               </label>
               <label>
-                <input type="checkbox" />
+                <input type='checkbox' />
                 <span>Annually</span>
               </label>
             </div>
             {page === 'alumni' && (
-              <div className="citizen">
-                <h1>Select Citizenship:</h1>
-                <div className="checkboxes">
+              <div className='citizen'>
+                <h1>Select Citizenship</h1>
+                <div className='checkboxes'>
                   <label>
-                    <input type="checkbox" />
+                    <input type='checkbox' />
                     <span>Indian Citizen</span>
                   </label>
 
                   <label>
-                    <input type="checkbox" />
+                    <input type='checkbox' />
                     <span>Foreign Citizen</span>
                   </label>
                 </div>
               </div>
             )}
           </div>
-
-          <div className="donate-button">
+          {page === 'alumni' && (
+            <h4 style={{ fontWeight:'bolder' }} >
+              Select the option `&quot;Indian citizen`&quot; if you want to
+              donate using debit card/credit card/net banking issued in India or
+              else select the option `&quot;Foreign citizen`&quot;
+            </h4>
+          )}
+          <div className='donate-button'>
             <CommonBtn text={'Donate'} />
           </div>
         </div>
 
-        <div className="offline-option global-padding">
+        <div className='offline-option global-padding'>
           <h1>Offline Options</h1>
-          <div className="offline-grid ">
-            <div className="donation-logos">
+          <div className='offline-grid '>
+            <div className='donation-logos'>
               {ACH}
               <h2>ACH/ECS</h2>
               <br />
@@ -122,7 +164,7 @@ const Donation = ({ supportText, page }) => {
                 House) / ECS (Electronic Clearing Service)
               </p>
             </div>
-            <div className="donation-logos">
+            <div className='donation-logos'>
               {cheque}
               <h2>Cheque / Demand Draft</h2>
               <br />
@@ -134,7 +176,7 @@ const Donation = ({ supportText, page }) => {
               </p>
             </div>
 
-            <div className="donation-logos">
+            <div className='donation-logos'>
               {donation}
               <h2>In Kind Donation</h2>
               <br />
@@ -145,12 +187,12 @@ const Donation = ({ supportText, page }) => {
               </p>
             </div>
           </div>
-          <div className="enquire-button">
+          <div className='enquire-button'>
             <CommonBtn text={'Enquire now'} />
           </div>
         </div>
 
-        <div className="terms-condition">
+        <div className='terms-condition'>
           <h1>Terms and conditions:</h1>
           <br />
           <br />

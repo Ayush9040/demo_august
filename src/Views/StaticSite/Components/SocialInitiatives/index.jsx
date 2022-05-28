@@ -36,12 +36,12 @@ const SocialInitiatives = ({ alumni, setImageChanger }) => {
 
   return (
     <div className='social-initiative-container global-padding'>
-      <div className='social-initiative-image'>
+      <div className='social-initiative-image' id={ alumni ? 'support-page' :''} >
         <img src={image} />
       </div>
       <div className='social-initiative-content'>
         <Heading
-          logo={responsibility}
+          logo={alumni ? '' : responsibility}
           smallText={'Social'}
           largeText={alumni ? 'Responsibility' : 'Initiatives'}
         />
@@ -64,9 +64,9 @@ const SocialInitiatives = ({ alumni, setImageChanger }) => {
         <br />
         <br />
         <br />
-        <Link to='/social-responsibility'>
+        {!alumni && <Link to='/social-responsibility'>
           <CommonBtn text={'Explore More'} />
-        </Link>
+        </Link>}
       </div>
     </div>
   )
