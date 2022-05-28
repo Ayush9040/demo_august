@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import HeroSection from '../../Components/HeroSection'
 import Legacy from '../../Components/Legacy'
 import Activity from '../../Components/Activity'
@@ -11,8 +11,20 @@ import VideosSection from '../../Components/Videos'
 import NewsLetter from '../../Components/NewsLetter'
 import Footer from '../../Components/Footer'
 import Blog from '../../Components/Blogs'
+import { useLocation } from 'react-router-dom'
 
 const Home = () => {
+  const route = useLocation()
+  console.log(route.hash.substring(1, route.hash.length))
+  useEffect(() => {
+    if (route.hash) {
+      document
+        .getElementById(`${route.hash.substring(1, route.hash.length)}`)
+        .scrollIntoView()
+    } else {
+      scrollTo(0, 0)
+    }
+  })
   return (
     <>
       <HeroSection />
