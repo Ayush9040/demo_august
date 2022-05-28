@@ -52,6 +52,7 @@ const CourseDetails = ({ pageDate }) => {
   console.log(benefits)
   console.log(fees)
   console.log(prerequisites)
+  console.log(unique)
   const selectMenu = (name) => {
     switch (name) {
     case 'Program Details':

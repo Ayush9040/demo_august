@@ -21,8 +21,6 @@ const Home = () => {
       document
         .getElementById(`${route.hash.substring(1, route.hash.length)}`)
         .scrollIntoView()
-    } else {
-      scrollTo(0, 0)
     }
   })
   return (

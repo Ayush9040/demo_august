@@ -99,7 +99,7 @@ const Facilities = () => {
         bannerImg={`${baseDomain}${background.facilities}`}
         overlay="#46AEC6D4"
       />
-      <div className="facilities-navigation-lg" id="preview">
+      <div className="facilities-navigation-lg">
         <ul>
           <li
             onClick={() => {
@@ -210,7 +210,7 @@ const Facilities = () => {
           </li>
         </ul>
       </div>
-      <div className="facilities-info">
+      <div className="facilities-info"  id="preview" >
         <Slider
           ref={slider}
           {...settings}
