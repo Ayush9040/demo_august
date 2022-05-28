@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import CommonBanner from '../Common-banner'
 import Virtual from '../../assets/images/museum-1.png'
 import Heading from '../Heading'
@@ -8,6 +8,7 @@ import 'slick-carousel/slick/slick-theme.css'
 import CommonGrid from '../GalleryGrid'
 import Location from './Location'
 // import { Link } from 'react-router-dom'
+import { useLocation } from 'react-router-dom'
 import CommonBtn from '../commonbtn'
 import baseDomain, {
   museumAssets,
@@ -15,6 +16,17 @@ import baseDomain, {
 } from '../../assets/images/imageAsset'
 //import museumBanner from '../../assets/images/museum-1.png'
 const Museum = () => {
+  const route = useLocation()
+  console.log(route.hash.substring(1, route.hash.length))
+  useEffect(() => {
+    if (route.hash) {
+      document
+        .getElementById(`${route.hash.substring(1, route.hash.length)}`)
+        .scrollIntoView()
+    } else {
+      scrollTo(0, 0)
+    }
+  })
   const intro =
     'The world’s first yoga museum, Shri Yogendra Museum of Classical Yoga, defines classical yoga and its ancient and rich history. Inaugurated in 1987, by Shri Giani Zail Singh, then President of India, it presents a historical and balanced view of Yoga, and takes you through a journey of it. The museum has an array of indoor and outdoor displays, containing the History of Yoga, sections on Raja Yoga (with special reference to Patanjali Yoga Sutra), Bhakti Yoga, Mantra Yoga, Tantra Yoga, Kriyas, ancient versus modern structure of Asanas (specially elaborated – through a long and patient study of the Asana structure of The Yoga Institute), Founder Shri Yogendra Ji’s historic personal effects and useful yogic tools.'
   // const numberofSlides = [1]
@@ -36,7 +48,7 @@ const Museum = () => {
         />
       </div>
 
-      <div className="museum-heading">
+      <div className="museum-heading" id="virtual_tour">
         <Heading largeText={'Virtual Tour'} />
         <br />
       </div>
@@ -54,8 +66,12 @@ const Museum = () => {
           <CommonBtn text={'Take a virtual tour'} />
         </a>
       </div>
-      <CommonGrid />
-      <Location />
+      <div id="gallery">
+        <CommonGrid />
+      </div>
+      <div id="location">
+        <Location />
+      </div>
     </>
   )
 }

@@ -25,6 +25,7 @@ const SingleJob = () => {
               {job.jobTitle}
               <div className='bottom-line'></div>
             </h1>
+            <p><q><i>{job.jobQuote}</i></q></p>
             <p>{job.jobDescription}</p>
           </div>
         </div>

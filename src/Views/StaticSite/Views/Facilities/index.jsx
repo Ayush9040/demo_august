@@ -3,12 +3,15 @@ import CommonBanner from '../../Components/Common-banner'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import Slider from 'react-slick'
+import { useLocation } from 'react-router-dom'
 import './style.scss'
+import { Link } from 'react-router-dom'
 //import FacilitiesImg from '../../assets/images/facilities-02.png'
 import baseDomain, {
   background,
   facilitiyAssets,
 } from '../../assets/images/imageAsset'
+//import { faL } from '@fortawesome/free-solid-svg-icons'
 
 //import baseDomain, { facilitiyAssets } from '../../assets/images/imageAsset'
 const Facilities = () => {
@@ -38,9 +41,45 @@ const Facilities = () => {
   }
 
   const slider = useRef(null)
+  const route = useLocation()
+  console.log(route)
+  console.log(slider.current, 'current')
   useEffect(() => {
-    window.scrollTo(0, 0)
+    if (route.hash === '#information') {
+      document
+        .getElementById(`${route.hash.substring(1, route.hash.length)}`)
+        .scrollIntoView()
+    } else if (route.hash !== '') {
+      document.getElementById('preview').scrollIntoView()
+    } else {
+      scrollTo(0, 0)
+    }
   }, [])
+  useEffect(() => {
+    switch (route.hash.substring(1, route.hash.length)) {
+    case 'hostels':
+      return slider.current.slickGoTo(0, false)
+    case 'conference-room':
+      return slider.current.slickGoTo(1, false)
+    case 'library':
+      return slider.current.slickGoTo(2, false)
+    case 'book-store':
+      return slider.current.slickGoTo(3, false)
+    case 'yoga-halls':
+      return slider.current.slickGoTo(4, false)
+    case 'rooftop-space':
+      return slider.current.slickGoTo(5, false)
+    case 'dining-hall':
+      return slider.current.slickGoTo(6, false)
+    case 'nature-trail':
+      return slider.current.slickGoTo(7, false)
+    case 'gazebo':
+      return slider.current.slickGoTo(8, false)
+    case 'Kailashpati-tree':
+      return slider.current.slickGoTo(9, false)
+    }
+  }, [route.hash])
+
   let description =
     'To ensure absolute comfort to our students and sadhakas, we provide a host of facilities. You can avail of accommodation services, relax at the gazebo, meditate peacefully in the pods, shop merchandise at the Book Store, eat a sattvic meal at the Naivedyam, and a lot more. All our facilities have been specially designed to give you a blissful and tranquil experience. Explore below!'
 
@@ -60,44 +99,57 @@ const Facilities = () => {
         bannerImg={`${baseDomain}${background.facilities}`}
         overlay="#46AEC6D4"
       />
-      <div className="facilities-navigation-lg">
+      <div className="facilities-navigation-lg" id="preview">
         <ul>
           <li
             onClick={() => {
               slider.current.slickGoTo(0, false)
             }}
           >
-            <span className={activeSlide === 0 && 'active'}>Hostels</span>
+            <Link to="/facilities/#hostel">
+              <span className={activeSlide === 0 && 'active'}>Hostels</span>
+            </Link>
           </li>
+
           <li
             onClick={() => {
               slider.current.slickGoTo(1, false)
             }}
           >
-            <span className={activeSlide === 1 && 'active'}>
-              Conference Room
-            </span>
+            <Link to="/facilities/#conference-room">
+              <span className={activeSlide === 1 && 'active'}>
+                Conference Room
+              </span>
+            </Link>
           </li>
+
           <li
             onClick={() => {
               slider.current.slickGoTo(2, false)
             }}
           >
-            <span className={activeSlide === 2 && 'active'}>Library</span>
+            <Link to="/facilities/#library">
+              <span className={activeSlide === 2 && 'active'}>Library</span>
+            </Link>
           </li>
+
           <li
             onClick={() => {
               slider.current.slickGoTo(3, false)
             }}
           >
+            <Link to="/facilities/#book-store"></Link>
             <span className={activeSlide === 3 && 'active'}>Book Store</span>
           </li>
+
           <li
             onClick={() => {
               slider.current.slickGoTo(4, false)
             }}
           >
-            <span className={activeSlide === 4 && 'active'}>Yoga Halls</span>
+            <Link to="/facilities/#yoga-halls">
+              <span className={activeSlide === 4 && 'active'}>Yoga Halls</span>
+            </Link>
           </li>
 
           <li
@@ -105,37 +157,56 @@ const Facilities = () => {
               slider.current.slickGoTo(5, false)
             }}
           >
-            <span className={activeSlide === 5 && 'active'}>Rooftop Space</span>
+            <Link to="/facilities/#rooftop-space">
+              <span className={activeSlide === 5 && 'active'}>
+                Rooftop Space
+              </span>
+            </Link>
           </li>
+
           <li
             onClick={() => {
               slider.current.slickGoTo(6, false)
             }}
           >
-            <span className={activeSlide === 6 && 'active'}>Dining Hall</span>
+            <Link to="/facilities/#dining-hall">
+              <span className={activeSlide === 6 && 'active'}>Dining Hall</span>
+            </Link>
           </li>
+
           <li
             onClick={() => {
               slider.current.slickGoTo(7, false)
             }}
           >
-            <span className={activeSlide === 7 && 'active'}>Nature Trail</span>
+            {' '}
+            <Link to="/facilities/#nature-trail">
+              <span className={activeSlide === 7 && 'active'}>
+                Nature Trail
+              </span>
+            </Link>
           </li>
+
           <li
             onClick={() => {
               slider.current.slickGoTo(8, false)
             }}
           >
-            <span className={activeSlide === 8 && 'active'}>Gazebo</span>
+            <Link to="/facilities/#gazebo">
+              <span className={activeSlide === 8 && 'active'}>Gazebo</span>
+            </Link>
           </li>
+
           <li
             onClick={() => {
               slider.current.slickGoTo(9, false)
             }}
           >
-            <span className={activeSlide === 9 && 'active'}>
-              Kailashpati Tree
-            </span>
+            <Link to="/facilities/#kailaspati-tree">
+              <span className={activeSlide === 9 && 'active'}>
+                Kailashpati Tree
+              </span>
+            </Link>
           </li>
         </ul>
       </div>
@@ -147,7 +218,7 @@ const Facilities = () => {
             setActiveSlide(newIndex)
           }}
         >
-          <div className="facilities-slide">
+          <div id="hostel" className="facilities-slide">
             <div className="facility-image">
               <img src={baseDomain + facilitiyAssets.facilitiyAssets1} />
             </div>
@@ -163,7 +234,7 @@ const Facilities = () => {
               </p>
             </div>
           </div>
-          <div className="facilities-slide">
+          <div id="conference-room" className="facilities-slide">
             <div className="facility-image">
               <img src={baseDomain + facilitiyAssets.facilitiyAssets2} />
             </div>
@@ -175,7 +246,7 @@ const Facilities = () => {
               </p>
             </div>
           </div>
-          <div className="facilities-slide">
+          <div id="library" className="facilities-slide">
             <div className="facility-image">
               <img src={baseDomain + facilitiyAssets.facilitiyAssets3} />
             </div>
@@ -193,7 +264,7 @@ const Facilities = () => {
               </p>
             </div>
           </div>
-          <div className="facilities-slide">
+          <div id="book-store" className="facilities-slide">
             <div className="facility-image">
               <img src={baseDomain + facilitiyAssets.facilitiyAssets4} />
             </div>
@@ -210,8 +281,7 @@ const Facilities = () => {
               </p>
             </div>
           </div>
-
-          <div className="facilities-slide">
+          <div id="yoga-halls" className="facilities-slide">
             <div className="facility-image">
               <img src={baseDomain + facilitiyAssets.facilitiyAssets5} />
             </div>
@@ -224,7 +294,7 @@ const Facilities = () => {
               </p>
             </div>
           </div>
-          <div className="facilities-slide">
+          <div id="rooftop-space" className="facilities-slide">
             <div className="facility-image">
               <img src={baseDomain + facilitiyAssets.facilitiyAssets6} />
             </div>
@@ -237,7 +307,7 @@ const Facilities = () => {
               </p>
             </div>
           </div>
-          <div className="facilities-slide">
+          <div id="dining-hall" className="facilities-slide">
             <div className="facility-image">
               <img src={baseDomain + facilitiyAssets.facilitiyAssets7} />
             </div>
@@ -252,7 +322,7 @@ const Facilities = () => {
               </p>
             </div>
           </div>
-          <div className="facilities-slide">
+          <div id="nature-trail" className="facilities-slide">
             <div className="facility-image">
               <img src={baseDomain + facilitiyAssets.facilitiyAssets8} />
             </div>
@@ -266,7 +336,7 @@ const Facilities = () => {
               </p>
             </div>
           </div>
-          <div className="facilities-slide">
+          <div id="gazebo" className="facilities-slide">
             <div className="facility-image">
               <img src={baseDomain + facilitiyAssets.facilitiyAssets9} />
             </div>
@@ -282,7 +352,7 @@ const Facilities = () => {
               </p>
             </div>
           </div>
-          <div className="facilities-slide">
+          <div id="kailaspati-tree" className="facilities-slide">
             <div className="facility-image">
               <img src={baseDomain + facilitiyAssets.facilitiyAssets10} />
             </div>
@@ -300,7 +370,7 @@ const Facilities = () => {
           </div>
         </Slider>
       </div>
-      <div className="additional-info">
+      <div className="additional-info" id="information">
         <ul className="additional-info-nav">
           <li
             onClick={() => setShow(0)}

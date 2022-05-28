@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import './style.scss'
-import baseDomain,{ publicationAssests } from '../../assets/images/imageAsset'
+import baseDomain, { publicationAssests } from '../../assets/images/imageAsset'
 import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
@@ -18,6 +18,15 @@ const Yogasattva = () => {
 
   // myimages
   const images = {
+    2017: [
+      baseDomain + publicationAssests.ythAssets25,
+      baseDomain + publicationAssests.ythAssets26,
+      baseDomain + publicationAssests.ythAssets27,
+      baseDomain + publicationAssests.ythAssets28,
+      baseDomain + publicationAssests.ythAssets29,
+      baseDomain + publicationAssests.ythAssets30,
+      baseDomain + publicationAssests.ythAssets31,
+    ],
     2018: [
       baseDomain + publicationAssests.ythAssets1,
       baseDomain + publicationAssests.ythAssets2,
@@ -189,13 +198,11 @@ const Yogasattva = () => {
         </div>
         <h3>Previous issues :</h3>
 
-   
-
         <div>
           <div className="previous-container">
             {bold === 1 ? (
               <>
-                {images[2018].map((image, i) => (
+                {images[2017].map((image, i) => (
                   <div key={i} className="preivous-box">
                     <img src={image} alt="root-image" />
                   </div>
@@ -203,13 +210,21 @@ const Yogasattva = () => {
               </>
             ) : bold === 2 ? (
               <>
-                {images[2019].map((image, i) => (
+                {images[2018].map((image, i) => (
                   <div key={i} className="preivous-box">
                     <img src={image} alt="root-image" />
                   </div>
                 ))}
               </>
             ) : bold === 3 ? (
+              <>
+                {images[2019].map((image, i) => (
+                  <div key={i} className="preivous-box">
+                    <img src={image} alt="root-image" />
+                  </div>
+                ))}
+              </>
+            ) : bold === 4 ? (
               <>
                 {images[2020].map((image, i) => (
                   <div key={i} className="preivous-box">

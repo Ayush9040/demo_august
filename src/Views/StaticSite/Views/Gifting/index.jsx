@@ -4,15 +4,24 @@ import './style.scss'
 import SectionComponent from '../../Components/SectionComponent/index'
 //import baseDomain,{ giftingAssets } from '../../assets/images/imageAsset'
 //import GiftingImg from '../../assets/images/gifting2a-02.png'
+import { useLocation } from 'react-router-dom'
 import baseDomain, {
   background,
   giftingAssets,
 } from '../../assets/images/imageAsset'
 
 const Gifting = () => {
+  const route = useLocation()
+  console.log(route)
   useEffect(() => {
-    window.scrollTo(0, 0)
-  }, [])
+    if (route.hash) {
+      document
+        .getElementById(`${route.hash.substring(1, route.hash.length)}`)
+        .scrollIntoView()
+    } else {
+      scrollTo(0, 0)
+    }
+  })
   // const [payment, setPayment] = useState()
   // const [details, setDetails] = useState()
 
@@ -47,6 +56,7 @@ const Gifting = () => {
           description={
             'Gift a Career is a special and brilliant way to assist someone to become self-reliant. Gifting your loved ones or someone in need of a direction, any of the Institute    transformational teacher training courses will provide them with a guiding light toward a successful and sufficient earning career path. Explore the extensive range of basic, intermediate, and advanced courses available to assist someone in becoming a certified yoga instructor. '
           }
+          sectionId="gift-career"
         />
         <SectionComponent
           page="Gifting"
@@ -55,6 +65,7 @@ const Gifting = () => {
           description={
             'The best gift we can ever give is the gift of health. Health is not simply the absence of disease; it is more profoundly the presence of well-being, balance, and contentment. The Institutes signature 7-Day Health Camp or 21-Day Better Living Course is a wonderful gift to nurture the health and wellness of our loved ones. Sign up your parents, grandparents, friends, relatives, or coworkers to assist them in overcoming any physical discomforts, mental stress, or emotional tension and enjoy a Healthy & Happy Life.'
           }
+          sectionId="Gift-health&wellness"
         />
         <SectionComponent
           page="Gifting"
@@ -63,6 +74,7 @@ const Gifting = () => {
           description={
             'They say you can’t buy wisdom. They’re right! But you can surely give the gift of wisdom. Browse through our extensive collection of books. Some of our titles are Yoga Sutras of Patanjali, Recipes of Happiness, Sattvik Cooking, Yoga for Back and Joint Disorders, and many more. Our publications offer exhaustive options that range from vedic philosophy, principles of yoga to modern fusion recipes with a healthy twist. Choose now!'
           }
+          sectionId="gift-wisdom"
         />
         <SectionComponent
           page="Gifting"
@@ -71,6 +83,7 @@ const Gifting = () => {
           description={
             'Give someone you love the gift of peace, calm and utter bliss with Nispand. Nispand has the worlds largest collection of more than 1000 guided meditation sessions. These help you with stress management, insomnia, relationships, emotions, work-productivity, lifestyle diseases and a host of modern lifestyle challenges. Gift Nispand subscription and grant your family member, friend or colleague to experience precious moments of mental peace amidst their hectic lives.'
           }
+          sectionId="gift-nispand"
         />
       </div>
     </>

@@ -146,7 +146,7 @@ export const courseAssets = {
   courseAsset36: '/Courses/Most_popular/900_hrs_TTC.jpg',
   courseAsset37: '/Courses/Most_popular/Pranayama_workshop.jpg',
 
-  // ttc
+  // ttc 
   courseAsset38: '/Courses/TTC/200_hrs_TTC.jpg',
   courseAsset39: '/Courses/TTC/500_hrs_TTC.jpg',
   courseAsset40: '/Courses/TTC/900_hrs_TTC.jpg',
@@ -302,28 +302,45 @@ export const mediaAssets={
   // gallery
   seminarImg:'/Media/gallery/seminar.png',
   igCeremony:'/Media/gallery/igceremony.jpg',
-  mediaAssets198: 'Media/gallery/igceremony.jpg',
-  mediaAssets199: 'Media/gallery/media_1.jpg',
-  mediaAssets200: 'Media/gallery/media_2.jpg',
-  mediaAssets201: 'Media/gallery/media_3.jpg',
-  mediaAssets202: 'Media/gallery/media_4.jpg',
-  mediaAssets203: 'Media/gallery/media_5.jpg',
-  mediaAssets204: 'Media/gallery/media_6.jpg',
-  mediaAssets205: 'Media/gallery/media_7.jpg',
-  mediaAssets206: 'Media/gallery/media_8.jpg',
-  mediaAssets207: 'Media/gallery/seminar.png',
+  mediaAssets198: '/Media/gallery/igceremony.jpg',
+  mediaAssets199: '/Media/gallery/media_1.jpg',
+  mediaAssets200: '/Media/gallery/media_2.jpg',
+  mediaAssets201: '/Media/gallery/media_3.jpg',
+  mediaAssets202: '/Media/gallery/media_4.jpg',
+  mediaAssets203: '/Media/gallery/media_5.jpg',
+  mediaAssets204: '/Media/gallery/media_6.jpg',
+  mediaAssets205: '/Media/gallery/media_7.jpg',
+  mediaAssets206: '/Media/gallery/media_8.jpg',
+  mediaAssets207: '/Media/gallery/seminar.png',
 
   // harmony-sec
   mediaAssetsHero:'Media/gallery/99FoundationDay/Hero image .jpg',
-  mediaAsset1:'/Media/gallery/harmony/image1.jpg',
-  mediaAsset2:'/Media/gallery/harmony/image2.jpg',
-  mediaAsset3:'/Media/gallery/harmony/image3.jpg',
-  mediaAsset4:'/Media/gallery/harmony/image4.jpg',
-  mediaAsset5:'/Media/gallery/harmony/image5.jpg',
-  mediaAsset6:'/Media/gallery/harmony/image6.jpg',
-  mediaAsset7:'/Media/gallery/harmony/image7.jpg',
-  mediaAsset8:'/Media/gallery/harmony/image8.jpg',
-  mediaAsset9:'/Media/gallery/harmony/image9.jpg',
+  mediaAsset1:'/Media/gallery/harmony/har_1.jpg',
+  mediaAsset2:'/Media/gallery/harmony/har_2.jpg',
+  mediaAsset3:'/Media/gallery/harmony/har_3.jpg',
+  mediaAsset4:'/Media/gallery/harmony/har_4.jpg',
+  mediaAsset5:'/Media/gallery/harmony/har_5.jpg',
+  mediaAsset6:'/Media/gallery/harmony/har_6.jpg',
+  mediaAsset7:'/Media/gallery/harmony/har_7.jpg',
+  mediaAsset8:'/Media/gallery/harmony/har_8.jpg',
+  mediaAsset9:'/Media/gallery/harmony/har_9.jpg',
+  mediaAsset208:'/Media/gallery/harmony/har_10.jpg',
+  mediaAsset209:'/Media/gallery/harmony/har_11.jpg',
+  mediaAsset210:'/Media/gallery/harmony/har_12.jpg',
+  mediaAsset211:'/Media/gallery/harmony/har_13.JPG',
+  mediaAsset212:'/Media/gallery/harmony/har_14.JPG',
+  mediaAsset213:'/Media/gallery/harmony/har_15.JPG',
+  mediaAsset214:'/Media/gallery/harmony/har_16.JPG',
+  mediaAsset215:'/Media/gallery/harmony/har_17.JPG',
+  mediaAsset216:'/Media/gallery/harmony/har_18.JPG',
+  mediaAsset217:'/Media/gallery/harmony/har_19.JPG',
+  mediaAsset218:'/Media/gallery/harmony/har_20.jpg',
+  mediaAsset219:'/Media/gallery/harmony/har_21.JPG',
+  mediaAsset220:'/Media/gallery/harmony/har_22.JPG',
+  mediaAsset221:'/Media/gallery/harmony/har_23.JPG',
+  mediaAsset222:'/Media/gallery/harmony/har_24.JPG',
+  mediaAsset223:'/Media/gallery/harmony/har_25.JPG',
+ 
 
 
   // 99foundation sec
@@ -664,6 +681,16 @@ export const publicationAssests = {
     '/Publications/Yogsattava/Newsletter/2021/yogasattava2021-4.jpg',
 
   // YTH
+
+  //2017
+  ythAssets25: '/Publications/Yogsattava/PreviousIssues/2017/YogaSattva.jpg',
+  ythAssets26: '/Publications/Yogsattava/PreviousIssues/2017/YogaSattva1.jpg',
+  ythAssets27: '/Publications/Yogsattava/PreviousIssues/2017/YogaSattva2.jpg',
+  ythAssets28: '/Publications/Yogsattava/PreviousIssues/2017/yogasattva3.jpg',
+  ythAssets29: '/Publications/Yogsattava/PreviousIssues/2017/yogasattva4.jpg',
+  ythAssets30: '/Publications/Yogsattava/PreviousIssues/2017/yogasattva5.jpg',
+  ythAssets31: '/Publications/Yogsattava/PreviousIssues/2017/yogasattva6.jpg',
+ 
   // 2018
   ythAssets1: '/Publications/Yogsattava/PreviousIssues/2018/yth2018-1.jpg',
   ythAssets2: '/Publications/Yogsattava/PreviousIssues/2018/yth2018-2.jpg',
@@ -916,13 +943,13 @@ export const factAssets={
 
   // 1990-2000
 
-  factAsset20:'/Home/Facts/1990-2000/1.jpg',
-  factAsset21:'/Home/Facts/1990-2000/2.jpg',
-  factAsset22:'/Home/Facts/1990-2000/3.jpg',
-  factAsset23:'/Home/Facts/1990-2000/4.jpg',
-  factAsset24:'/Home/Facts/1990-2000/5.jpg',
-  factAsset25:'/Home/Facts/1990-2000/6.jpg',
-  factAsset26:'/Home/Facts/1990-2000/7.jpg',
+  factAsset20:'/Home/Facts/1990-2000/1986.jpg',
+  factAsset21:'/Home/Facts/1990-2000/1986_1.jpg',
+  factAsset22:'/Home/Facts/1990-2000/1987.jpg',
+  factAsset23:'/Home/Facts/1990-2000/1987_1.jpg',
+  factAsset24:'/Home/Facts/1990-2000/1987_2.jpg',
+  factAsset25:'/Home/Facts/1990-2000/1990.jpg',
+  factAsset26:'/Home/Facts/1990-2000/1997.jpg',
   factAsset27:'/Home/Facts/1990-2000/8.jpg',
   factAsset28:'/Home/Facts/1990-2000/9.jpg',
   factAsset29:'/Home/Facts/1990-2000/10.jpg',
