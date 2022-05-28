@@ -53,6 +53,7 @@ import PrivacyPolicy from '../Components/PrivacyPolicy/index.jsx'
 import Affiliations from '../Components/Affiliations/index.jsx'
 import Enrollment from '../Components/EnrollmentForm/index.jsx'
 import wellness from '../Components/Wellness/index.jsx'
+import CorporateSocialResponsibilty from '../Components/CorporateSocialResponsibility/index.js'
 
 const staticSiteRoutes = [
   {
@@ -496,7 +497,7 @@ const staticSiteRoutes = [
     exact: true,
     id: 'statisSiteUnderEnrollment',
     routePath: '/enrollment',
-    name: 'Enrollment'
+    name: 'Enrollment',
   },
   {
     Component: wellness,
@@ -505,6 +506,14 @@ const staticSiteRoutes = [
     id: 'statisSiteUnderWellness',
     routePath: '/wellness',
     name: 'Wellness',
+  },
+  {
+    Component: CorporateSocialResponsibilty,
+    path: '/csr',
+    exact: true,
+    id: 'statisSiteUnderCsr',
+    routePath: '/csr',
+    name: 'csr',
   },
 ]
 

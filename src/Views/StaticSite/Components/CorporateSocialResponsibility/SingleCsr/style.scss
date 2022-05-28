@@ -1,0 +1,134 @@
+.csr-main-container {
+  .csr-heading {
+    margin: 0 auto;
+    display: block;
+    width: fit-content;
+    .csr-bottom-line {
+      height: 4px;
+      border-radius: 200%;
+      width: 100%;
+      background: linear-gradient(
+        90deg,
+        transparent,
+        rgb(218, 56, 56),
+        rgb(194, 42, 42),
+        transparent
+      );
+      margin-top: 0.5rem;
+      margin-bottom: 1rem;
+    }
+  }
+  .sub-div {
+    background-color: #bc7160;
+    height: 600px;
+    margin-top: 25rem;
+    .sub-div-img {
+      width: 60%;
+      margin: 0 auto;
+      img {
+        width: 100%;
+        height: 100%;
+        margin-top: -20rem;
+        border-radius: 50px;
+      }
+    }
+  }
+  .last-div {
+    padding: 2rem 20rem;
+    p {
+      font-size: 2.6rem;
+      padding-bottom: 3rem;
+      text-align: center;
+    }
+  }
+  .csr-single-btn {
+    padding-bottom: 20rem;
+    button {
+      font-size: 2rem;
+      background-color: #c1462b;
+      padding: 1.5rem;
+      color: #fff;
+      border-radius: 40px;
+      display: block;
+      margin: 2rem auto;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 1200px) {
+  .csr-main-container{
+    .sub-div{
+      height: 400px;     
+      .sub-div-img{
+        width: 80%;
+        img{
+          margin-top: 4.5rem;
+          margin-top: -20rem;
+         
+        }
+      }
+    }
+    .last-div{
+      padding: 2rem 3rem;
+    }
+    .csr-single-btn{
+      padding-bottom: 2rem;
+    }
+  }
+}
+
+
+@media only screen and (max-width: 900px) {
+  .csr-main-container{
+    .sub-div{
+      height: 400px;     
+      .sub-div-img{
+        width: 80%;
+        img{
+          margin-top: 4.5rem;
+          margin-top: -20rem;
+         
+        }
+      }
+    }
+    .last-div{
+      padding: 2rem 3rem;
+    }
+    .csr-single-btn{
+      padding-bottom: 2rem;
+    }
+  }
+}
+
+
+
+@media only screen and (max-width: 480px) {
+  .csr-main-container{
+    .sub-div{
+      margin-top: 3rem;
+      height: 300px;
+      .sub-div-img{
+        width: 80%;
+        img{
+          margin-top: 4.5rem;
+         
+        }
+      }
+    }
+    .last-div{
+      padding: 2rem 3rem;
+    }
+    .csr-single-btn{
+      padding-bottom: 2rem;
+    }
+  }
+}
+
+
