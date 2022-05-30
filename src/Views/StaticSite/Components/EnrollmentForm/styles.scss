@@ -17,6 +17,14 @@
     border-radius: 30px;
     height: 37px;
   }
+  .experienced-lists {
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+  .experienced-lists p {
+    font-size: 1.3rem;
+  }
   
   .radio_text {
     display: flex;

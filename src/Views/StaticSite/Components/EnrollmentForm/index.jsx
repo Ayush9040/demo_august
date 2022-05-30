@@ -5,6 +5,7 @@ import './styles.scss'
 
 const Enrollment = () => {
   const [bold, setBold] = useState(0)
+  const [listData, setListData]= useState([])
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -32,6 +33,17 @@ const Enrollment = () => {
     purpose:'',
     info:''
   })
+  
+  const listDetailHandler = () => {
+    setListData(oldData => [ ...oldData, {
+      companyName:formData.company,
+      leavejob:formData.leavejob,
+      resignition:formData.resignition
+    }])
+    setFormData({ ...formData, resignition: '', company: '', leavejob: '' })
+  }
+
+
 
   return (
     <>
@@ -314,18 +326,20 @@ const Enrollment = () => {
                     <input
                       className="placeholder"
                       type="text"
+                      value={formData.company}
                       placeholder="Company Name"
                       onChange={(e) => { setFormData({ ...formData, company: e.target.value }) }}
                     />
                     <input
                       className="placeholder"
                       type="text"
+                      value={formData.leavejob}
                       placeholder="Role when leaving the job"
                       onChange={(e) => { setFormData({ ...formData, leavejob: e.target.value }) }}
                     />
                   </div>
                   <div className="button">
-                    <button className="button_2">+</button>
+                    <button className="button_2" onClick={()=> {listDetailHandler()}}>+</button>
                   </div>
                 </div>
                 <div className="left_flex_contanier">
@@ -336,6 +350,7 @@ const Enrollment = () => {
                         className="place_holder_flex"
                         type="text"
                         placeholder="Year"
+                        value={formData.resignition}
                         onChange={(e) => { setFormData({ ...formData, resignition: e.target.value }) }}
                       />
                     </label>
@@ -343,7 +358,15 @@ const Enrollment = () => {
                 </div>
               </div>
               <div className="right">
-                <div className="label">Listed Work Experience :</div>
+                <div className="label">Listed Work Experience :
+                  {listData.map((item, key)=>{
+                    return <div  className='experienced-lists' key = {key}>
+                      <p>{item.companyName}</p>
+                      <p>{item.leavejob}</p>
+                      <p>{item.resignition}</p>
+                    </div>
+                  })}
+                </div>
               </div>
             </div>
             <div className="footer">
