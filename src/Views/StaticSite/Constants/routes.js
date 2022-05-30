@@ -54,6 +54,7 @@ import Affiliations from '../Components/Affiliations/index.jsx'
 import Enrollment from '../Components/EnrollmentForm/index.jsx'
 import wellness from '../Components/Wellness/index.jsx'
 import CorporateSocialResponsibilty from '../Components/CorporateSocialResponsibility/index.js'
+import SignUp from '../Views/Signup/index.js'
 
 const staticSiteRoutes = [
   {
@@ -514,6 +515,14 @@ const staticSiteRoutes = [
     id: 'statisSiteUnderCsr',
     routePath: '/csr',
     name: 'csr',
+  },
+  {
+    Component: SignUp,
+    path: '/sign-up',
+    exact: true,
+    id: 'statisSiteUnderSignUp',
+    routePath: '/sign-up',
+    name: 'SignUp',
   },
 ]
 
