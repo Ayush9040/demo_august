@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import CommonBannerNav2 from '../../Components/EcomNav'
 import { mail, lock } from '../../assets/icons/icon'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -17,6 +17,7 @@ const SignUp = () => {
   })
 
   const [empty, setEmpty] = useState(false)
+  console.log(empty)
 
   // useEffect(() => {
   //   window.scrollTo(0, 0)
