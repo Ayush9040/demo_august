@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGoogle, faFacebook } from '@fortawesome/free-brands-svg-icons'
 import './style.scss'
 import CommonBtn from '../../Components/commonbtn'
+import { Link } from 'react-router-dom'
 
 const SignIn = () => {
   useEffect(() => {
@@ -36,7 +37,9 @@ const SignIn = () => {
           </label>
         </form>
         <div className="social-logins guest">
-          <h3>Continue as a guest</h3>
+          <Link to='/sign-up' >
+            <h3>Create Account</h3>
+          </Link>
         </div>
         <div className="social-logins google">
           <h3>
