@@ -20,11 +20,11 @@ const MediaGallery = () => {
   const disableCarousel = () => {
     setViewCarousel(false)
   }
-
+  console.log(viewCarousel,'abc')
+  console.log(modalData,'xyz')
   // const images = harmonyImagesData.map((number) => ({
   //   src: number,
   // }))
-
   return (
     <div className="media-gallery-section">
       <div className="media-gallery">
@@ -34,75 +34,114 @@ const MediaGallery = () => {
           subHeading={''}
           invert={true}
           sectionColor={'#D58173'}
-          title="Harmony Fest"
-          description={
-            '“World Harmony Begins Within” Glimpses of The Yoga Institute\'s most exciting and social event ‘Harmony Fest’, held to commemorate 100 years of transforming lives. The event was graced by the president of India, Shri Ram Nath Kovind. The chief guest and other personnel shared their insightful thoughts with the massive audiences who attended the event, spreading a wave of encouragement and optimism.'
-          }
+          title={mediaData[0]?.title}
+          description={mediaData[0]?.description}
           image={mediaData?.[0]?.images?.[0]}
+          setModalData={setModalData}
+          setViewCarousel={setViewCarousel}
+          itemId={mediaData[0]?.id}
+          itemImages={mediaData[0]?.images}
         />
       </div>
-      {mediaData?.map((item) => {
-        return (
-          <div
-            className="albums"
-            key={item.id}
-            style={{ position: 'relative' }}
-          >
-            <div className="view-album">
-              <h3>
-                {item.title}
-                <br />
-                <p>1 Albums</p>
-              </h3>
-              <div
-                onClick={() => {
-                  setViewCarousel(item.id)
-                  setModalData(item?.images.map((number) => ({ src: number })))
-                }}
-              >
-                <CommonBtn text={'View Album'} />
+      {mediaData?.map((item, index) => {
+        if (index >= 1) {
+          return (
+            <div
+              className="albums"
+              key={item.id}
+              style={{ position: 'relative' }}
+            >
+              <div className="view-album">
+                <h3>
+                  {item.title}
+                  <br />
+                  <p>1 Albums</p>
+                </h3>
+                <div
+                  onClick={() => {
+                    setViewCarousel(item.id)
+                    setModalData(
+                      item?.images.map((number) => ({ src: number }))
+                    )
+                  }}
+                >
+                  <CommonBtn text={'View Album'} />
+                </div>
               </div>
-            </div>
-            <GridComponent imgs={item.images} />
+              <GridComponent imgs={item.images} />
 
-            {viewCarousel === item.id && (
-              <>
-                <div
-                  style={{
-                    position: 'absolute',
-                    top: '-8%',
-                    right: '10px',
-                    zIndex: '10000',
-                  }}
-                >
-                  <p
-                    style={{ cursor: 'pointer', color: 'white' }}
-                    onClick={disableCarousel}
+              {(viewCarousel === item.id)  && (
+                <>
+                  <div
+                    style={{
+                      position: 'absolute',
+                      top: '-8%',
+                      right: '10px',
+                      zIndex: '10000',
+                    }}
                   >
-                    Close
-                  </p>
-                </div>
-                <div
-                  style={{
-                    height: 800,
-                    width: '100%',
-                    position: 'absolute',
-                    top: 0,
-                    boxShadow: 'rgb(0 0 0 / 94%) 248px 161px 327px 383px',
-                    zIndex: '9999',
-                  }}
-                >
-                  <Carousel
-                    images={modalData}
-                    style={{ height: '100%', width: '100%' }}
-                  />
-                </div>
-              </>
-            )}
-          </div>
-        )
+                    <p
+                      style={{ cursor: 'pointer', color: 'white' }}
+                      onClick={disableCarousel}
+                    >
+                      Close
+                    </p>
+                  </div>
+                  <div
+                    style={{
+                      height: 800,
+                      width: '100%',
+                      position: 'absolute',
+                      top: 0,
+                      boxShadow: 'rgb(0 0 0 / 94%) 248px 161px 327px 383px',
+                      zIndex: '9999',
+                    }}
+                  >
+                    <Carousel
+                      images={modalData}
+                      style={{ height: '100%', width: '100%' }}
+                    />
+                  </div>
+                </>
+              )}
+            </div>
+          )
+        }
       })}
-
+      {(viewCarousel ===  mediaData[0]?.id)  && (
+        <>
+          <div
+            style={{
+              position: 'absolute',
+              top: '0%',
+              right: '10px',
+              zIndex: '10000',
+            }}
+          >
+            <p
+              style={{ cursor: 'pointer', color: 'white' }}
+              onClick={disableCarousel}
+            >
+                      Close
+            </p>
+          </div>
+          <div
+            style={{
+              height: 800,
+              width: '100%',
+              position: 'absolute',
+              top: '30px',
+              boxShadow: 'rgb(0 0 0 / 94%) 248px 161px 327px 383px',
+              zIndex: '9999',
+            }}
+          >
+            <Carousel
+              images={modalData}
+              style={{ height: '100%', width: '100%' }}
+            />
+          </div>
+        </>
+      )}
       {/* <div className='albums' style={{ position: 'relative' }}>
         <GridComponent />
         <div className='view-album'>
