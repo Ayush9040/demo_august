@@ -1,0 +1,49 @@
+* {
+  .main_big_box {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .big_box {
+      width: 500px;
+      height: 300px;
+      border: 2px solid #606060;
+      border-radius: 30px;
+      .enter_label {
+        font-size: 23px;
+        font-weight: 700;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 40px;
+        .otp_input {
+          padding: 12px;
+          font-size: 1.5rem;
+          border: 2px solid #606060;
+          margin: 20px;
+          border-radius: 20px;
+          text-align: center;
+        }
+      }
+      .verify {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .verify_button {
+          border: 2px solid #606060;
+          height: 37px;
+          width: 130px;
+          color: black;
+          border-radius: 30px;
+          font-size: 15px;
+          font-weight: 800;
+          //padding: 6px 22px;
+          background-color: white;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
