@@ -6,6 +6,7 @@ import './styles.scss'
 const Enrollment = () => {
   const [bold, setBold] = useState(0)
   const [listData, setListData]= useState([])
+  const [qualificationData, setQualificationData] = useState([])
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -41,6 +42,15 @@ const Enrollment = () => {
       resignition:formData.resignition
     }])
     setFormData({ ...formData, resignition: '', company: '', leavejob: '' })
+  }
+
+  const QualificationDetailHandler = () => {
+    setQualificationData(oldData => [ ...oldData, {
+      schoolName:formData.school,
+      courseName:formData.course,
+      completionYear:formData.completion
+    }])
+    setFormData({ ...formData, school: '', course: '', completion: '' })
   }
 
 
@@ -265,17 +275,19 @@ const Enrollment = () => {
                       className="placeholder"
                       type="text"
                       placeholder="School / College"
+                      value={formData.school}
                       onChange={(e) => { setFormData({ ...formData, school: e.target.value }) }}
                     />
                     <input
                       className="placeholder"
                       type="text"
                       placeholder="Course"
+                      value={formData.course}
                       onChange={(e) => { setFormData({ ...formData, course: e.target.value }) }}
                     />
                   </div>
                   <div className="button">
-                    <button className="button_2">+</button>
+                    <button className="button_2" onClick={() => {QualificationDetailHandler()}}>+</button>
                   </div>
                 </div>
 
@@ -287,6 +299,7 @@ const Enrollment = () => {
                         className="place_holder_flex"
                         type="text"
                         placeholder="Year"
+                        value={formData.completion}
                         onChange={(e) => { setFormData({ ...formData, completion: e.target.value }) }}
                       />
                     </label>
@@ -294,7 +307,15 @@ const Enrollment = () => {
                 </div>
               </div>
               <div className="right">
-                <div className="label">Listed Qualifications :</div>
+                <div className="label">Listed Qualifications :
+                  {qualificationData.map((items, key) => {
+                    return <div className='qualification-lists' key={key}>
+                      <p>{items.schoolName}</p>
+                      <p>{items.courseName}</p>
+                      <p>{items.completionYear}</p>
+                    </div>
+                  })}
+                </div>
               </div>
             </div>
             <div className="footer">

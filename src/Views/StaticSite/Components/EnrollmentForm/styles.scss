@@ -23,9 +23,18 @@
     flex-direction: column;
   }
   .experienced-lists p {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
   }
-  
+
+  .qualification-lists {
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .qualification-lists p {
+    font-size: 1.5rem;
+  }
   .radio_text {
     display: flex;
     justify-content: space-between;
