@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './style.scss'
 import { star, global, network, chat } from '../../assets/icons/icon'
 import CommonBtn from '../commonbtn'
@@ -7,6 +7,10 @@ import baseDomain, { courseAssets } from '../../assets/images/imageAsset'
 
 const CourseDetails = ({ pageDate }) => {
   const [detail, setDetail] = useState(1)
+
+  useEffect(()=>{
+    window.scrollTo(0,0)
+  },[])
 
   const {
     image,
