@@ -1,28 +1,31 @@
 .form-content{
-
-  label{
-    display: flex;
-    align-items: center;
-    padding: 2rem;
-    border: 1px solid black;
-    border-radius: 20px;
-    svg{
-      width: 30px!important;
-      height: 30px!important;
-      
-    }
-
-    input{
-      padding-left: 20px;
-      font-size: 1.8rem;
-      border: none;
-      width: 100%;
-      
-     
-      
-    }
-    input:focus{
-      outline: none;
+  form{
+    label{
+      display: flex;
+      align-items: center;
+      padding: 2rem;
+      border: 1px solid #606060;
+      border-radius: 20px;
+      width: 40%  ;
+      svg{
+        width: 30px!important;
+        height: 30px!important;
+        
+      }
+  
+      input{
+        padding-left: 20px;
+        font-size: 1.8rem;
+        border: none;
+        width: 100%;
+        
+       
+        
+      }
+      input:focus{
+        outline: none;  
+      }
     }
   }
+  
 }

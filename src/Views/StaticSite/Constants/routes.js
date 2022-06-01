@@ -54,7 +54,7 @@ import Affiliations from '../Components/Affiliations/index.jsx'
 import Enrollment from '../Components/EnrollmentForm/index.jsx'
 import wellness from '../Components/Wellness/index.jsx'
 import CorporateSocialResponsibilty from '../Components/CorporateSocialResponsibility/index.js'
-import SignUp from '../Views/Signup/index.js'
+import SignUp from '../Views/Signup'
 
 const staticSiteRoutes = [
   {

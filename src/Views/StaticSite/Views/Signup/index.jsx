@@ -6,11 +6,11 @@ import { faGoogle, faFacebook } from '@fortawesome/free-brands-svg-icons'
 import './style.scss'
 import CommonBtn from '../../Components/commonbtn'
 import InputComponent from '../../Components/InputComponent'
+import { validateEmail, validatePassword } from '../../../../helpers'
 
 const SignUp = () => {
   const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
+    userName: '',
     email: '',
     password: '',
     confirmPassword: '',
@@ -24,45 +24,44 @@ const SignUp = () => {
 
   console.log(formData, 'sahil')
 
-  const handleSubmit=()=>{
-    if (formData.firstName === '') setEmpty(true)
-    else if (formData.lastName === '') setEmpty(true)
-    else if (formData.email === '') setEmpty(true)
-    else if (formData.password==='') setEmpty(true)
-    else if (formData.confirmPassword==='') setEmpty(true)
-    else if (formData.confirmPassword!==formData.password) setEmpty('true')
+  const handleSubmit = () => {
+    console.log('working')
+    if (formData.firstName === '') {
+      return setEmpty(true)
+    } else if (formData.lastName === '') return setEmpty(true)
+    else if (!validateEmail(formData.email)) {
+      console.log('email error')
+      return setEmpty(true)
+    } else if (!validatePassword(formData.password)) {
+      return setEmpty(true)
+    } else if (formData.confirmPassword !== formData.password)
+      return setEmpty(true)
+    console.log('calling api')
   }
 
   return (
     <div className="signin-container">
       <CommonBannerNav2 />
       <div className="signin-form">
-        <form onSubmit={handleSubmit} > 
+        <form>
           <h1>Sign Up</h1>
+
           <InputComponent
             type="text"
-            placeholder="First Name"
-           
-            icon={lock}
-            form={formData}
-            setField={setFormData}
-            keyName='firstName'
-          />
-          <InputComponent
-            type="text"
-            placeholder="Last Name"
+            placeholder="User Name"
             form={formData}
             icon={lock}
             setField={setFormData}
-            keyName='lastName'
+            keyName="userName"
           />
+
           <InputComponent
             type="email"
             placeholder="Email Address"
             form={formData}
             icon={mail}
             setField={setFormData}
-            keyName='email'
+            keyName="email"
           />
           <InputComponent
             type="password"
@@ -70,7 +69,7 @@ const SignUp = () => {
             form={formData}
             icon={lock}
             setField={setFormData}
-            keyName='password'
+            keyName="password"
           />
           <InputComponent
             type="password"
@@ -78,9 +77,9 @@ const SignUp = () => {
             form={formData}
             icon={lock}
             setField={setFormData}
-            keyName='confirmPassword'
+            keyName="confirmPassword"
           />
-          <label className="signin-btn">
+          <label className="signin-btn" onClick={handleSubmit}>
             <CommonBtn text={'Sign Up'} />
           </label>
         </form>
