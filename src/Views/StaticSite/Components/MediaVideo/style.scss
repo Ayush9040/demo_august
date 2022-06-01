@@ -38,9 +38,15 @@
         flex: 1;
         .more-videos {
           padding-bottom: 1rem;
+          // width: 200px;
+          // height: 100px;
           display: flex;
           img {
             width: 200px;
+            height: 100px;
+          }
+          .right_side_vedio{
+            width: 160px;
             height: 100px;
           }
           h4 {
