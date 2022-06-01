@@ -6,6 +6,7 @@ import baseDomain, {
   mediaAssets,
   alumniAssets,
 } from '../../assets/images/imageAsset'
+//import { setViewCarousel,setViewCarousel } from '../home/nex-g/Desktop/tyi-user-webapp/src/Views/StaticSite/Views/Media/index.jsx'
 
 const MediaSection = ({
   subHeading,
@@ -14,6 +15,11 @@ const MediaSection = ({
   upcomingEvents = true,
   description,
   title,
+  setViewCarousel,
+  setModalData,
+  itemImages,
+  itemId,
+  
   // image,
 }) => {
   return (
@@ -34,7 +40,10 @@ const MediaSection = ({
               : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec ante id nunc vehicula pharetra necvitae est. Sed diam dui, luctus sed velit quis,placerat consequat felis. Vivamus cursus in mauris at dignissim. Etiam venenatis semper pharetra. Duis ut diam eros. In hac habitasse platea dictumst. Nam tincidunt nisi metus, et dignissim ligula cursus ut.'}
           </p>
           <div className="options">
-            <button>View Album</button>
+            <button onClick={()=>{
+              setViewCarousel && setViewCarousel(itemId)
+              setModalData && setModalData(itemImages?.map(number=>({ src:number })))
+            }} >View Album</button>
             <div className="share-icon">{share}</div>
           </div>
         </div>

@@ -27,26 +27,32 @@ const CourseDetails = ({ pageDate }) => {
     {
       id: 'ProgramID',
       title: 'Program Details',
+      key: 1,
     },
     {
       id: 'CurriculamID',
       title: 'Curriculam',
+      key: 2,
     },
     {
       id: 'TeachingID',
       title: 'Teaching & Certification',
+      key: 3,
     },
     {
       id: 'UniqueID',
       title: 'Our Unique Offerings',
+      key: 4,
     },
     {
       id: 'RegistrationID',
       title: 'Registration',
+      key: 5,
     },
     {
       id: 'FaqID',
       title: 'FAQ',
+      key: 6,
     },
   ]
   console.log(benefits)
@@ -134,13 +140,13 @@ const CourseDetails = ({ pageDate }) => {
                 <a key={item.id} href={`#${item.id}`}>
                   <li
                     onClick={() => {
-                      selectMenu(item)
+                      selectMenu(item.title)
                     }}
                     key={idx}
                   >
                     <em className={idx + 1 === detail && 'active'}>
                       {item.title}
-                    </em>
+                    </em>&nbsp;
                   </li>
                 </a>
               ))}
