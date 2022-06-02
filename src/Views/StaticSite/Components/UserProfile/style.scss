@@ -1,0 +1,60 @@
+.user-profile{
+  width: 100vw;
+  height: 100vh;
+}
+.profile-grid{
+  display: flex;
+  padding: 5rem 20rem;
+  height: 90%;
+  gap: 3rem;
+  .profile-nav{
+    width: fit-content;
+    height: 100%;
+  .profile-nav-container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 2rem 3rem;
+    height: 100%;
+    border: 1px solid #606060;
+    border-radius: 24px;
+    position: relative;
+    #profile-picture{
+      width: 150px;
+      height: 150px;
+      background-color: #aaa;
+      border-radius: 50%;
+      margin-bottom: 2rem;
+    }
+    ul{
+      list-style: none;
+      padding-left: 0;
+      li{
+        font-size: 2rem;
+        font-weight: 700;
+        margin:  0 0 2rem;
+        cursor: pointer;
+        width: fit-content;
+        .bottom-line{
+            visibility: hidden
+        };
+        &:hover{
+            font-weight: 700;
+            .bottom-line{
+                visibility: visible;
+            }
+        }
+
+    }
+    }
+    #edit-account{
+      position: absolute;
+      bottom: 20px;
+    }
+  }
+}
+  .profile-data{
+    width: 70%;
+    
+  }
+}
