@@ -55,6 +55,80 @@
 }
   .profile-data{
     width: 70%;
-    
+    height: 100%;
+    .profile-overview{
+      height: 100%;
+      #order-list{
+        display: flex;
+        gap: 2rem;
+        height: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width:1200px){
+  .user-profile{
+    height: auto;
+  }
+  .profile-grid{
+    flex-wrap: wrap;
+    padding: 5rem;
+    .profile-nav{
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      .profile-nav-container{
+        flex-direction: row;
+        justify-content: center;
+        ul{
+          display: flex;
+          li{
+            margin: 0 1rem;
+          }
+        }
+      }
+
+    }
+    .profile-data{
+      width: 100%;
+    }
+  }
+}
+
+@media(max-width:640px){
+.profile-grid{
+  .profile-nav{
+    .profile-nav-container{
+      flex-wrap: wrap;
+      ul{
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+}
+
+@media(max-width:500px){
+  .user-profile{
+    padding: 2rem;
+  }
+  .profile-grid{
+    .profile-nav{
+      .profile-nav-container{
+        justify-content: center;
+        ul{
+          justify-content: center;
+          flex-wrap: wrap;
+        }
+      }
+    }
+    .profile-data{
+      .profile-overview{
+        #order-list{
+          flex-wrap: wrap;
+        }
+      }
+    }
   }
 }

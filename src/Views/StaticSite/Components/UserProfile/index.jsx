@@ -1,30 +1,84 @@
-import React from 'react'
+import React, { useState } from 'react'
 import CommonBannerNavPrimary from '../CommonBannerNavPrimary'
+import HistoryList from '../HistoryList'
 import './style.scss'
 
 const UserProfile = () => {
+  const [module, setModule] = useState(0)
+
+  const navItems = [
+    { option: 'Full Name', key: 0 },
+    { option: 'Courses', key: 1 },
+    { option: 'Orders', key: 2 },
+    { option: 'Alumni', key: 3 },
+  ]
+
   return (
-    <div className='user-profile' >
-      <CommonBannerNavPrimary/>
-      <div className='profile-grid' >
-        <div className='profile-nav' >
-          <div className='profile-nav-container' >
-            <div id='profile-picture' ></div>
+    <div className='user-profile'>
+      <CommonBannerNavPrimary />
+      <div className='profile-grid'>
+        <div className='profile-nav'>
+          <div className='profile-nav-container'>
+            <div id='profile-picture'></div>
             <ul>
-              <li>Full Name
-                <div className="bottom-line"></div>
-              </li>
-              <li>Courses<div className="bottom-line"></div></li>
-              <li>Orders<div className="bottom-line"></div></li>
-              <li>Alumni<div className="bottom-line"></div></li>
+              {navItems.map((item) => (
+                <li
+                  onClick={() => {
+                    setModule(item.key)
+                  }}
+                  key={item.key}
+                >
+                  {item.option}
+                  <div style={module===item.key ? { visibility:'visible' }:{}} className='bottom-line'></div>
+                </li>
+              ))}
             </ul>
-            <div id='edit-account' ><span>Edit Account|FAQs</span> </div>
+            <div id='edit-account'>
+              <span>Edit Account|FAQs</span>{' '}
+            </div>
           </div>
         </div>
-        <div className='profile-data' >
-          <div className='profile-overview' >
-            <h1 style={{ display:'inline-block' }} >Overview</h1>
-          </div>
+        <div className='profile-data'>
+          {module === 0 && (
+            <div className='profile-overview'>
+              <h1 style={{ display: 'inline-block' }}>Overview</h1>
+              <div id='order-list'>
+                <HistoryList
+                  title='Courses'
+                  data={[]}
+                  options={['All', 'Completed', 'On-going']}
+                />
+                <HistoryList
+                  title='Orders'
+                  data={[]}
+                  options={['All', 'Delivered', 'On-going']}
+                />
+              </div>
+            </div>
+          )}
+          {module === 1 && (
+            <div className='user-courses profile-overview'>
+              <HistoryList
+                title='Courses'
+                data={[]}
+                options={['All', 'Completed', 'On-going']}
+              />
+            </div>
+          )}
+          {module === 2 && (
+            <div className='user-orders profile-overview'>
+              <HistoryList
+                title='Orders'
+                data={[]}
+                options={['All', 'Delivered', 'On-going']}
+              />
+            </div>
+          )}
+          {module === 3 && (
+            <div className='user-testimony profile-overview' >
+              <div id='testimony' ></div>
+            </div>
+          )}
         </div>
       </div>
     </div>
