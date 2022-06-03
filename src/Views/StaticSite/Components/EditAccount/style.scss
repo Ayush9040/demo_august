@@ -7,23 +7,36 @@
     padding-bottom: 20px;
     label {
       margin-top: 20px;
+      width: 285px;
       input {
         text-align: center;
-        font-size: 2.5rem;
+        font-size: 2rem;
       }
     }
     select {
       margin-top: 20px;
       padding: 1rem;
-      width: 40%;
+      width: 285px;
       border-radius: 20px;
-      font-size: 2.5rem;
+      font-size: 2rem;
       color: #767794;
       background-color: white;
       text-align: center;
-
+      ::after {
+        width: 0;
+        height: 0;
+        border-left: 6px solid transparent;
+        border-right: 6px solid transparent;
+        border-top: 6px solid #f00;
+        position: absolute;
+        top: 40%;
+        right: 5px;
+        content: '';
+        z-index: 98;
+      }
       options {
         color: black;
+        font-size: 2rem;
       }
     }
   }
@@ -71,20 +84,20 @@
       }
     }
     .year-course {
-  
-  .year-student{
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    label{
-      width: fit-content;
-    }
-  }
-      label {
-        margin-bottom: 20px;
-        input {
-          text-align: center;
-          font-size: 2.5rem;
+      .year-student {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        .form-content {
+          width: 20%;
+          label {
+            margin-bottom: 20px;
+            input {
+              text-align: center;
+              font-size: 2rem;
+              text-align: center;
+            }
+          }
         }
       }
     }
@@ -98,14 +111,11 @@
     border: 2px solid black;
     font-size: 1.8rem;
     border-radius: 20px;
-    padding: 5px 40px ;
-    background-color: #CC4625;
+    padding: 5px 40px;
+    background-color: #cc4625;
     color: white;
   }
 }
-
-
-
 
 // .edit-main{
 //   text-align: center;
@@ -124,7 +134,7 @@
 //         }
 
 //       }
-      
+
 //     }
 //     select{
 //       margin-top: 20px;

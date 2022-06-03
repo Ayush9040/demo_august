@@ -124,6 +124,7 @@ const EditAccount = () => {
               <option value="female">Female</option>
               <option value="other">other</option>
             </select>
+            <br />
             {empty === 4 && (
               <small style={{ color: 'red', marginLeft: '0' }}>
                 *Please Enter The Gender!
@@ -161,11 +162,11 @@ const EditAccount = () => {
               <option value="australia">Australia</option>
               <option value="usa">USA</option>
             </select>
+            <br />
 
             {empty === 6 && (
               <small style={{ color: 'red', marginLeft: '0' }}>
                 *Please Select the Country!
-                <br />
               </small>
             )}
           </>
@@ -173,10 +174,8 @@ const EditAccount = () => {
           <>
             <select
               name="state"
-              onChange={() =>
-                setFormData((e) =>
-                  setFormData({ ...formData, state: e.target.value })
-                )
+              onChange={(e) =>
+                setFormData({ ...formData, state: e.target.value })
               }
             >
               <option value="none" selected>
@@ -216,9 +215,17 @@ const EditAccount = () => {
             <div className="former-radio">
               <p>Yes</p>
               {/* <nbsp /> */}
-              <input type="radio" name="option" />
+              <input
+                onChange={() => setFormData({ ...formData, alumni: 'yes' })}
+                type="radio"
+                name="option"
+              />
               <p>No</p>
-              <input type="radio" name="option" />
+              <input
+                onChange={() => setFormData({ ...formData, alumni: 'no' })}
+                type="radio"
+                name="option"
+              />
             </div>
           </div>
           <div className="year-course">
