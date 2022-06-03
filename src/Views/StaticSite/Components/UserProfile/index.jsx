@@ -76,7 +76,12 @@ const UserProfile = () => {
           )}
           {module === 3 && (
             <div className='user-testimony profile-overview' >
-              <div id='testimony' ></div>
+              <div id='testimony' >
+                <h1 className='Alumini-heading'>Alumini</h1>
+                <p className='Alumini-paragraph'>Write a testimony</p>
+                <textarea rows='8' cols='40' className='Alumini-text' />
+                <button className='Alumini-button'>Submit</button>
+              </div>
             </div>
           )}
         </div>
