@@ -11,10 +11,10 @@ import { Link } from 'react-router-dom'
 import {
   courseArray,
   course200H,
+  camps,
   classes,
 } from '../../Constants/courses/c200hr'
 
-import { campArray } from '../../Constants/courses/camps'
 
 const Courses = () => {
   useEffect(() => {
@@ -22,7 +22,7 @@ const Courses = () => {
   }, [])
   //let hourCourse = [...course200H,...course900H]
 
-  let data = [course200H, campArray, courseArray, classes]
+  let data = [course200H, camps, courseArray, classes]
 
   const setPathParam = (title) => {
     if (title === 'Teacher Training Courses') {
