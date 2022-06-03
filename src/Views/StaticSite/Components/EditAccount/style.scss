@@ -1,145 +1,135 @@
-.account-header{
-  font-weight: 1000;
-}
 .edit-main {
-  text-align: center;
   .personal-info {
-    font-weight: 10;
     font-size: 1.8rem;
-    padding: 1rem 0;
-    color:#606060;
   }
+  text-align: center;
   .account-input {
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-    width: 250px;
-    input {
-      padding: 10px;
-      border-radius: 20px;
-      border: 1px solid #606060;
-      margin: 0.5rem;
-      text-align: center;
-    }
-    
-    
-  }
-  hr
-    {
-      width:80%;
-      margin: 2rem auto;
-    }
-  .former-input {
-    .former-l1 {
-      justify-content: center;
-      display: flex;
-      padding: 1rem;
-      align-items: center;
-      .former-p {
-        font-size: 1.5rem;
-        color: #606060;
+    padding-bottom: 20px;
+    label {
+      margin-top: 20px;
+      input {
+        text-align: center;
+        font-size: 2.5rem;
       }
-      .former-radio {
-        padding: 1rem 5rem;
-        display: flex;
-        align-items: center;
-        p {
-          padding-left: 2rem;
-          padding-right: 0.5rem;
-          font-size: 1.5rem;
-          color: #606060;
-        }
-        input {
-          padding: 10px;
-          border: 1px solid #606060;
-          margin: 0.5rem;
-          text-align: center;
-          color: #606060;
-          appearance: none;
-          
-        }
-       input[type='radio']:checked {
-          background: #606060;
-        }
+    }
+    select {
+      margin-top: 20px;
+      padding: 1rem;
+      width: 40%;
+      border-radius: 20px;
+      font-size: 2.5rem;
+      color: #767794;
+      background-color: white;
+      text-align: center;
+
+      options {
+        color: black;
+      }
+    }
+  }
+  .former-input {
+    padding-top: 20px;
+    .former-l1 {
+      display: flex;
+      text-align: center;
+      justify-content: center;
+      gap: 60px;
+      padding: 20px 0;
+      .former-p {
+        font-size: 1.4rem;
+      }
+    }
+    .former-radio {
+      display: flex;
+      gap: 20px;
+      input[type='radio'] {
+        appearance: none;
+        border: 1px solid #d3d3d3;
+        width: 30px;
+        height: 30px;
+        content: none;
+        outline: none;
+        margin: 0;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      }
+
+      input[type='radio']:checked {
+        appearance: none;
+        outline: none;
+        padding: 0;
+        content: none;
+        border: none;
+      }
+
+      input[type='radio']:checked::before {
+        position: absolute;
+        color: green !important;
+        content: '\00A0\2713\00A0' !important;
+        border: 1px solid #d3d3d3;
+        font-weight: bolder;
+        font-size: 21px;
       }
     }
     .year-course {
-      display: flex;
-      flex-direction: column;
-      margin: auto;
-      width: 250px;
-      input {
-        padding: 10px;
-        border-radius: 20px;
-        border: 1px solid #606060;
-        margin: 0.5rem;
-        text-align: center;
-        color: #606060;
-      }
-    }
-    .subscribe {
-      justify-content: center;
-      display: flex;
-      padding: 1rem;
-      align-items: center;
-      .subscribe-p {
-        font-size: 1.5rem;
-        padding-right: 1rem;
-        color: #606060;
-      }
-      p {
-        font-size: 1.5rem;
-        padding-left: 2rem;
-        padding-right: 0.5rem;
-        color: #606060;
-      }
-      input {
-        padding: 10px;
-        border: 1px solid #606060;
-        margin: 0.5rem;
-        text-align: center;
-        color: #606060;
-        appearance: none;
-        
-      }
-     input[type='radio']:checked {
-        background: #606060;
-      }
-    }
-  }
-  .shipping {
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-    width: 250px;
-    p
-    {
-      font-size: 1.5rem;
-      padding: 1rem;
-      color: #606060;
-    }
-    input {
-      padding: 10px;
-      border-radius: 20px;
-      border: 1px solid #606060;
-      margin: 0.5rem;
-      text-align: center;
-      color: #606060;
-      
-      
-    }
-    .continue-button
-    {
-      .global-common-btn{
-        margin: 1rem auto;
-        border-style: none;
-        background-color: var(--brick-red);
-        color: white;
+      label {
+        margin-bottom: 20px;
+        input {
+          text-align: center;
+          font-size: 2.5rem;
+        }
       }
     }
   }
 }
-@media(max-width:800px)
-{
-  
+
+.save-button {
+  text-align: center;
+  margin-top: 40px;
+  span {
+    border: 2px solid black;
+    font-size: 1.8rem;
+    border-radius: 20px;
+    padding: 5px 40px ;
+    background-color: #CC4625;
+    color: white;
+  }
 }
+
+
+
+
+// .edit-main{
+//   text-align: center;
+//   .personal-info{
+//     font-size: 1.8rem;
+//   }
+//   .account-input{
+//     margin-bottom: 20px;
+//     .form-content{
+//       form{
+//         label{
+//           margin-top: 20px;
+//           input{
+//             text-align: center;
+//           }
+//         }
+
+//       }
+      
+//     }
+//     select{
+//       margin-top: 20px;
+//       padding: 1rem;
+//       width: 40%;
+//       text-align: center;
+//       border-radius: 20px;
+//       font-size: 1.8rem;
+//       background-color: #fff;
+
+//       option{
+//         font-size: 1rem;
+//         width: 40%;
+//       }
+//     }
+//   }
+// }
