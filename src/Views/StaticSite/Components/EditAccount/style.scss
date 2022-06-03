@@ -71,6 +71,15 @@
       }
     }
     .year-course {
+  
+  .year-student{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    label{
+      width: fit-content;
+    }
+  }
       label {
         margin-bottom: 20px;
         input {
