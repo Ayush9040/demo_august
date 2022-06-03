@@ -9,10 +9,9 @@ import { Link } from 'react-router-dom'
 import InputComponent from '../../Components/InputComponent'
 
 const SignIn = () => {
-
-  const [formData,setFormData] = useState({
-    name:'',
-    password: ''
+  const [formData, setFormData] = useState({
+    name: '',
+    password: '',
   })
 
   useEffect(() => {
@@ -25,6 +24,7 @@ const SignIn = () => {
         <form>
           <h1>Sign In</h1>
           <InputComponent
+            icon={mail}
             type="text"
             placeholder="Name"
             form={formData}
@@ -32,6 +32,7 @@ const SignIn = () => {
             keyName="name"
           />
           <InputComponent
+            icon={lock}
             type="text"
             placeholder="Password"
             form={formData}
@@ -51,7 +52,7 @@ const SignIn = () => {
           </label>
         </form>
         <div className="social-logins guest">
-          <Link to='/sign-up' >
+          <Link to="/sign-up">
             <h3>Create Account</h3>
           </Link>
         </div>
