@@ -7,7 +7,6 @@ import {
   CommonUser,
   legacy1,
   MainLogo,
-  // title,
 } from '../../assets/icons/icon'
 import './style.scss'
 import { Link, useLocation } from 'react-router-dom'
