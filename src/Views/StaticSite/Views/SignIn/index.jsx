@@ -30,6 +30,7 @@ const SignIn = () => {
             form={formData}
             setField={setFormData}
             keyName="name"
+            icon={mail}
           />
           <InputComponent
             type="text"
@@ -37,6 +38,7 @@ const SignIn = () => {
             form={formData}
             setField={setFormData}
             keyName="password"
+            icon={lock}
           />
           <label className="other-options">
             <div className="remember-me">

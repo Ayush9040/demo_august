@@ -15,6 +15,7 @@ import {
   classes,
 } from '../../Constants/courses/c200hr'
 
+
 const Courses = () => {
   useEffect(() => {
     window.scrollTo(0, 0)
