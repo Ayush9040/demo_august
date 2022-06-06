@@ -15,6 +15,7 @@ import { Link } from 'react-router-dom'
 
 const CourseSection = ({ title, showRangeSlider, color, data, pathParam }) => {
   const [customVal, setCustomVal] = useState(0)
+
   console.log(data, 'course-data')
 
   const content = () => {
@@ -22,7 +23,9 @@ const CourseSection = ({ title, showRangeSlider, color, data, pathParam }) => {
     case 'Teacher Training Courses':
       return (
         <Accordion allowZeroExpanded allowMultipleExpanded>
-          <AccordionItem>
+          <AccordionItem
+            dangerouslySetExpanded={customVal === 1 ? true : false}
+          >
             <AccordionItemHeading>
               <AccordionItemButton>
                 <p>200 Hour Courses</p>
@@ -50,7 +53,9 @@ const CourseSection = ({ title, showRangeSlider, color, data, pathParam }) => {
               </h4>
             </AccordionItemPanel>
           </AccordionItem>
-          <AccordionItem>
+          <AccordionItem
+            dangerouslySetExpanded={customVal === 2 ? true : false}
+          >
             <AccordionItemHeading>
               <AccordionItemButton>
                 <p>500 Hour Courses</p>
@@ -64,7 +69,9 @@ const CourseSection = ({ title, showRangeSlider, color, data, pathParam }) => {
               </h4>
             </AccordionItemPanel>
           </AccordionItem>
-          <AccordionItem>
+          <AccordionItem
+            dangerouslySetExpanded={customVal === 3 ? true : false}
+          >
             <AccordionItemHeading>
               <AccordionItemButton>
                 <p>900 Hour Courses</p>
@@ -75,7 +82,7 @@ const CourseSection = ({ title, showRangeSlider, color, data, pathParam }) => {
       )
     case 'Camps & Workshops':
       return (
-        <div className='course-list-content'>
+        <div className="course-list-content">
           <h4>
             <ul>
               <li>Stress Management Camp</li>
@@ -93,24 +100,24 @@ const CourseSection = ({ title, showRangeSlider, color, data, pathParam }) => {
       )
     case 'Most Popular':
       return (
-        <div className='course-list-content'>
+        <div className="course-list-content">
           <p>
               Lorem Ipsum is simply dummy text of the printing and typesetting
               ndustry.
           </p>
-          <Link to='/courses/browse/most-popular'>
+          <Link to="/courses/browse/most-popular">
             <CommonBtn text={'Explore all'} />
           </Link>
         </div>
       )
     case 'Classes':
       return (
-        <div className='course-list-content'>
+        <div className="course-list-content">
           <p>
               Lorem Ipsum is simply dummy text of the printing and typesetting
               ndustry.
           </p>
-          <Link to='/courses/browse/classes'>
+          <Link to="/courses/browse/classes">
             <CommonBtn text={'Explore all'} />
           </Link>
         </div>
@@ -119,31 +126,31 @@ const CourseSection = ({ title, showRangeSlider, color, data, pathParam }) => {
   }
 
   return (
-    <div className='course-section'>
-      <div className='course-list'>
-        <div className='course-title'>
+    <div className="course-section">
+      <div className="course-list">
+        <div className="course-title">
           <Link to={`/courses/browse/${pathParam}`}>
             <h1>{title}</h1>
           </Link>
           {(title === 'Most Popular' || title === 'Classes') && (
-            <div className='concave-border'></div>
+            <div className="concave-border"></div>
           )}
         </div>
         {content()}
       </div>
       {showRangeSlider === true && (
-        <div className='vertical-scrollbar'>
+        <div className="vertical-scrollbar">
           <Slider
             min={1}
-            max={5}
-            orientation='vertical'
+            max={3}
+            orientation="vertical"
             value={customVal}
             onChange={(value) => setCustomVal(value)}
             reverse={true}
           />
         </div>
       )}
-      <div className='course-cards'>
+      <div className="course-cards">
         {title === 'Most Popular'
           ? data
             .filter((item) => item.mostPopular === true)

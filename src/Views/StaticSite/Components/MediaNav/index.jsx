@@ -7,7 +7,7 @@ import {
   CommonUser,
   legacy1,
   MainLogo,
-  title
+ 
 } from '../../assets/icons/icon'
 import './style.scss'
 import { Link } from 'react-router-dom'
