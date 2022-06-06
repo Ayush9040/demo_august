@@ -38,7 +38,6 @@ const Home = () => {
       <VideosSection />
       <NewsLetter />
       <Footer />
-      <MediaVideo/>
     </>
   )
 }
