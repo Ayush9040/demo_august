@@ -23,8 +23,7 @@ const MediaVideo = () => {
           </div>
 
           <div className="right-video">
-            {data.map((point, idx) => {
-              console.log(idx)
+            {data.map((point) => {
               return (
                 <div
                   className="more-videos"

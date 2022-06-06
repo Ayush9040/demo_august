@@ -30,7 +30,6 @@ const SignIn = () => {
             form={formData}
             setField={setFormData}
             keyName="name"
-            icon={mail}
           />
           <InputComponent
             icon={lock}
@@ -39,7 +38,6 @@ const SignIn = () => {
             form={formData}
             setField={setFormData}
             keyName="password"
-            icon={lock}
           />
           <label className="other-options">
             <div className="remember-me">
@@ -55,7 +53,7 @@ const SignIn = () => {
         </form>
         <div className="social-logins guest">
           <Link to="/sign-up">
-            <h3>Create Account</h3>
+            <h3>Sign Up</h3>
           </Link>
         </div>
         <div className="social-logins google">
