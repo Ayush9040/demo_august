@@ -9,7 +9,6 @@ const InputComponent = ({
   keyName,
   form,
 }) => {
-  console.log(form, 'form')
   return (
     <div className="form-content">
       <form>

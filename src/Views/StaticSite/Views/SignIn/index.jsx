@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import CommonBannerNav2 from '../../Components/EcomNav'
 import { mail, lock } from '../../assets/icons/icon'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -6,8 +6,15 @@ import { faGoogle, faFacebook } from '@fortawesome/free-brands-svg-icons'
 import './style.scss'
 import CommonBtn from '../../Components/commonbtn'
 import { Link } from 'react-router-dom'
+import InputComponent from '../../Components/InputComponent'
 
 const SignIn = () => {
+
+  const [formData,setFormData] = useState({
+    name:'',
+    password: ''
+  })
+
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
@@ -17,14 +24,20 @@ const SignIn = () => {
       <div className="signin-form">
         <form>
           <h1>Sign In</h1>
-          <label>
-            {mail}
-            <input type={'text'} placeholder="Name" />
-          </label>
-          <label>
-            {lock}
-            <input type={'password'} placeholder="Password" />
-          </label>
+          <InputComponent
+            type="text"
+            placeholder="Name"
+            form={formData}
+            setField={setFormData}
+            keyName="name"
+          />
+          <InputComponent
+            type="text"
+            placeholder="Password"
+            form={formData}
+            setField={setFormData}
+            keyName="password"
+          />
           <label className="other-options">
             <div className="remember-me">
               <input type={'checkbox'} />
@@ -34,6 +47,7 @@ const SignIn = () => {
           </label>
           <label className="signin-btn">
             <CommonBtn text={'Sign In'} />
+            <CommonBtn text={'Continue as a guest'} isColor={'#EA4335'} />
           </label>
         </form>
         <div className="social-logins guest">
