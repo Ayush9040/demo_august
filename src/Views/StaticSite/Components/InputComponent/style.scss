@@ -3,11 +3,13 @@
     label{
       display: flex;
       align-items: center;
-      padding: 2rem;
+      padding: 1rem 2rem;
       border: 1px solid #606060;
-      border-radius: 20px;
-      width: 40%  ;
+      border-radius: 50px;
+      width: 400px  ;
+      //max-width: 300px;
       margin: 0 auto;
+      height: 50px;
       svg{
         width: 30px!important;
         height: 30px!important;
@@ -15,13 +17,11 @@
       }
   
       input{
-        padding-left: 20px;
+        // padding-left: 20px;
         font-size: 1.8rem;
         border: none;
         width: 100%;
-        
-       
-        
+        text-align: center; 
       }
       input:focus{
         outline: none;  
@@ -29,4 +29,14 @@
     }
   }
   
+}
+
+@media (max-width:420px){
+  .form-content{
+    form{
+      label{
+       width: 300px;
+      }
+    }
+  }
 }
