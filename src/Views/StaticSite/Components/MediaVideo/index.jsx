@@ -10,7 +10,7 @@ const MediaVideo = () => {
   console.log(videoURL, 'url')
   return (
     <>
-      <div className="main-div">
+      <div className="media-main-div">
         <MediaNav title="Gallery" />
         <div className="Featured">Featured Video</div>
         <div className="all-videos">
@@ -31,8 +31,10 @@ const MediaVideo = () => {
                   onClick={() => setvideoURL(point.link)}
                   key={point.id}
                 >
-                  <img className="right_side_vedio" src={point.thumbnail} />
-                  <div>
+                  <div className="right_side_video">
+                    <img  src={point.thumbnail} />
+                  </div>
+                  <div style={{ width:'100%' }} >
                     <h4>{point.title}</h4>
                     <h6>{point.views}</h6>
                   </div>

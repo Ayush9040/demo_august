@@ -55,6 +55,7 @@ import Enrollment from '../Components/EnrollmentForm/index.jsx'
 import wellness from '../Components/Wellness/index.jsx'
 import CorporateSocialResponsibilty from '../Components/CorporateSocialResponsibility/index.js'
 import SignUp from '../Views/Signup'
+import MediaVideo from '../Components/MediaVideo/index.jsx'
 
 const staticSiteRoutes = [
   {
@@ -523,6 +524,14 @@ const staticSiteRoutes = [
     id: 'statisSiteUnderSignUp',
     routePath: '/sign-up',
     name: 'SignUp',
+  },
+  {
+    Component: MediaVideo,
+    path: '/media/video',
+    exact: true,
+    id: 'statisSiteUnderMediaVideo',
+    routePath: '/media/video',
+    name: 'MediaVideo',
   },
 ]
 
