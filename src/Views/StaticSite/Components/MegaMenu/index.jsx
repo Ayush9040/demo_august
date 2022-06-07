@@ -234,7 +234,7 @@ const MegaMenu = ({ setNav }) => {
                   Certificate Program on Yoga for Cancer
                 </li>
                 <li className="text-bold" style={{ marginBottom: '1.5rem' }}>
-                  Certificate Course on Advanced <br />
+                  Certificate Course on Advanced 
                   Pranayama Techniques
                 </li>
               </ul>
@@ -264,7 +264,7 @@ const MegaMenu = ({ setNav }) => {
                   <li>Meditation Course</li>
                   <li>Regular Meditation Classes</li>
                   <li style={{ marginBottom: '1.5rem' }}>
-                    Advance Regular Yoga Classes <br /> – TYI Teachers
+                    Advance Regular Yoga Classes – TYI Teachers
                   </li>
                 </ul>
               </ul>
@@ -274,7 +274,7 @@ const MegaMenu = ({ setNav }) => {
               <ul>
                 <li>Weight Management Workshop</li>
                 <li>
-                  Cardiac and Hypertension Health <br /> Workshop
+                  Cardiac and Hypertension Health Workshop
                 </li>
                 <li>Wellness -Womens</li>
                 <li>Food and Nutrition Workshop</li>

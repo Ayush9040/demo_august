@@ -105,7 +105,6 @@ const EditAccount = () => {
             {empty === 3 && (
               <small style={{ color: 'red', marginLeft: '0' }}>
                 *Please Enter Valid Email!
-                <br />
               </small>
             )}
           </>
@@ -124,7 +123,7 @@ const EditAccount = () => {
               <option value="female">Female</option>
               <option value="other">other</option>
             </select>
-            <br />
+
             {empty === 4 && (
               <small style={{ color: 'red', marginLeft: '0' }}>
                 *Please Enter The Gender!
@@ -143,7 +142,6 @@ const EditAccount = () => {
             {empty === 5 && (
               <small style={{ color: 'red', marginLeft: '0' }}>
                 *Please Enter The phone number!
-                <br />
               </small>
             )}
           </>
@@ -162,7 +160,6 @@ const EditAccount = () => {
               <option value="australia">Australia</option>
               <option value="usa">USA</option>
             </select>
-            <br />
 
             {empty === 6 && (
               <small style={{ color: 'red', marginLeft: '0' }}>
@@ -170,7 +167,7 @@ const EditAccount = () => {
               </small>
             )}
           </>
-          <br />
+
           <>
             <select
               name="state"
@@ -207,7 +204,7 @@ const EditAccount = () => {
             )}
           </>
         </div>
-        <br />
+
         <hr />
         <div className="former-input">
           <div className="former-l1">

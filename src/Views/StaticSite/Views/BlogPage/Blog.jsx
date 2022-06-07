@@ -55,7 +55,7 @@ const BlogAnother = () => {
   return (
     <>
       <div className='blog-page-container'>
-        <br />
+        
         <CommonBannerNav />
         <Heading largeText={'Blog'} />
         <div className='blog-series'>
