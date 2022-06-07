@@ -204,7 +204,7 @@ const EditAccount = () => {
             )}
           </>
         </div>
-        <br />
+
         <hr />
         <div className="former-input">
           <div className="former-l1">
