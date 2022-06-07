@@ -92,7 +92,7 @@ const BlogAnother = () => {
               eros. In hac habitasse platea dictumst. Nam tincidunt nisi metus,
               et dignissim ligula cursus ut.
             </p>{' '}
-            <br />
+            
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
               nec ante id nunc vehicula pharetra nec vitae est. Sed diam dui,
