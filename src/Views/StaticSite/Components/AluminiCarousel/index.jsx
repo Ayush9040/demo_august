@@ -5,8 +5,9 @@ import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import './style.scss'
+import CommonBtn from '../commonbtn'
 
-const Carousel = () => {
+const AlumniCarousel = () => {
   let settings = {
     dots: true,
     arrows: false,
@@ -18,7 +19,7 @@ const Carousel = () => {
   }
 
   return (
-    <div className="main-div">
+    <div className="alumni-main-div">
       <div className="alumini-carousel-heading">Alumini</div>
       <Slider {...settings}>
         {data.map((item, idx) => {
@@ -40,9 +41,10 @@ const Carousel = () => {
           return
         })}
       </Slider>
-      <AlumniGrid />
+      <AlumniGrid notEvent={true} />
+      <CommonBtn text={'Explore All'} />
     </div>
   )
 }
 
-export default Carousel
+export default AlumniCarousel

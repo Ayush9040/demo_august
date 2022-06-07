@@ -31,7 +31,7 @@ const AlumniGrid = ({ notEvent }) => {
           </div>
         </div>
       </div>
-      <CommonBtn text={'View Album'} />
+      {!notEvent && <CommonBtn text={'View Album'} />}
     </div>
   )
 }
