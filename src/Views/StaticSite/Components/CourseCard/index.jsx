@@ -1,7 +1,8 @@
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import React from 'react'
 import { star } from '../../assets/icons/icon'
 import CommonBtn from '../commonbtn'
+import SelectDropDown from '../Select Dropdown'
 import './style.scss'
 
 const CourseCard = ({
@@ -36,9 +37,13 @@ const CourseCard = ({
             ? description?.substring(0, 40)+'...'
             : description}
         </h3>
-        <Link to={`/courses/${path}/`}>
-          <CommonBtn text={'Explore'} />
-        </Link>
+        <SelectDropDown text = {'Select Dates'} />
+        <div className='Button-class'>
+          <Link to={`/courses/${path}/`}>
+            <CommonBtn text={'View Details'} />
+          </Link>
+          <CommonBtn text={'Enroll Now'} />
+        </div> 
       </div>
     </div>
   )

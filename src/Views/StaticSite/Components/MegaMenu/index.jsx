@@ -19,7 +19,7 @@ const MegaMenu = ({ setNav }) => {
     { name: 'DONATE', link: '/donation', id: 5, key: 'DONATION' },
     { name: 'GIFTING', link: '/gifting', id: 6, key: 'GIFTING' },
     { name: 'NISPAND', link: 'https://nispand.com/', id: 7, key: 'NISPAND' },
-    { name: 'TYI ONLINE', link: '', id: 8, key: 'ONLINE' },
+    { name: 'TYI Online', link: '', id: 8, key: 'Online' },
     {
       name: 'PUBLICATIONS',
       link: '/publication',
@@ -147,7 +147,7 @@ const MegaMenu = ({ setNav }) => {
         <ul className="navigation-ul">
           {navItems &&
             navItems.map((item, i) => {
-              if (item.name!=='NISPAND') {
+              if (item.name !== 'NISPAND') {
                 return (
                   <Link
                     onMouseOver={() => {
@@ -209,81 +209,93 @@ const MegaMenu = ({ setNav }) => {
             <div className="single-menu">
               <h3>TEACHERS TRAINING</h3>
               <ul>
-                <li className="text-bold">200 Hour Courses</li>
-                <li>Two Months Training Course - On Campus</li>
-                <li>Weekend Training Course - 3 Months / Online - English</li>
-                <li>One Month Training Course - Online / On Campus</li>
-                <li>Two Month Training Course - Part Time/ Online - Hindi</li>
-                <li style={{ marginBottom: '1.5rem' }}>
-                  Teacher Training Course - Part Time/ Online- English
-                </li>
-                <li className="text-bold">500 Hour Courses</li>
-                <li style={{ marginBottom: '1.5rem' }}>
-                  Three Months Teacher Training Course
+                <li className="text-bold">200 Hour TTC (Basic)</li>
+                <li>Batch 1 - 1 Month TTC-Online & on Campus-English</li>
+                <li>Batch 2 - 2 Months TTC-On Campus-English</li>
+                <li>Batch 3 - 2 Months TTC-Online-English</li>
+                <li>Batch 4 - 2 Months TTC-Online-Hindi</li>
+                <li>Batch 5 - 2 Months TTC-Online-English</li>
+                <li>Batch 6 - 3 Months Weekend TTC-Online-English</li>
+    
+                <li className="text-bold">500 Hour Courses TTC (intermediate)</li>
+                <li style={{ marginBottom: '2rem' }}>
+                  3 Months TTC-Online-English
                 </li>
                 <li className="text-bold">900 Hour Courses</li>
-                <li>Four Months Teacher Training Course</li>
-                <li>Yoga Teachers Training Course - 7 Months</li>
-                <li>Yoga Teachers Training Course - 9 Months - Hindi</li>
-                <li>Yoga Teachers Training Course - 12 Months - English</li>
-                <li>Yoga Teachers Training Course - 24 Months</li>
-                <li className="text-bold" style={{ marginBottom: '1.5rem' }}>
+                <li>3 Months TTC-On Campus-English</li>
+                <li>4 Months TTC-On Campus-English</li>
+                <li>7 Months TTC-Online & On Campus-English</li>
+                <li>1 Year TTC-Online & On Campus-Hindi</li>
+                <li>2 Years TTC-Online & On Campus-English</li>
+                <li className="text-bold" style={{ marginBottom: '2rem' }}>
                   Certificate Yoga Therapy Course
                 </li>
-                <li className="text-bold" style={{ marginBottom: '1.5rem' }}>
+                <li className="text-bold" style={{ marginBottom: '2rem' }}>
                   Certificate Program on Yoga for Cancer
                 </li>
-                <li className="text-bold" style={{ marginBottom: '1.5rem' }}>
+                <li className="text-bold" style={{ marginBottom: '2rem' }}>
+                  Certificate Program for Yoga for Lung <br /> Cancer - Online
+                </li>
+                <li className="text-bold" style={{ marginBottom: '2rem' }}>
                   Certificate Course on Advanced <br />
                   Pranayama Techniques
+                </li>
+                <li className="text-bold" style={{ marginBottom: '2rem' }}>
+                  Certificate Course on Yoga Sutra-Online
                 </li>
               </ul>
             </div>
             <div className="single-menu">
-              <h3>CAMPS</h3>
+              <h3>21 DAYS BETTER LIVING COURSE</h3>
               <ul>
-                <li>Stress Management Camp</li>
-                <li>Meditation Camp</li>
-                <li>Diabetes Camp</li>
-                <li>Pregnancy Camp for Ante & Post Natal</li>
-                <li>7 Days Health Camp English</li>
-                <li>7 Days Health Camp Hindi</li>
-                <li>21 Days Better Living Course English - Morning</li>
-                <li>21 Days Better Living Course English - Evening</li>
-                <li style={{ marginBottom: '1.5rem' }}>
-                  21 Days Better Living Course Hindi - Evening
-                </li>
-                <h3>ASANA REGULAR CLASSES</h3>
+                <li>Batch 1 - 21-Days BLC - Morning <br /> On Campus-English</li>
+                <li>Batch 2 - 21-Days BLC - Evening <br /> Online & On Campus-English</li>
+                <li>Batch 3 - 21-Days BLC - Evening <br /> Online & On Campus-Hindi</li>
+                <li>Batch 4 - 21-Days BLC-Morning-Online <br />English</li>
+
+                <h3 style={{ marginBottom: '2rem' }}>Samattvam (Health Checkup)</h3>
+                <h3 style={{ marginBottom: '2rem' }}>Satsang</h3>
+                <h3 style={{ marginBottom: '2rem' }}>REGULAR CLASSES</h3>
                 <ul>
-                  <li>Asana Regular Classes for Men</li>
-                  <li>Asana Regular Classes for Women</li>
-                  <li>Weekend Yoga Regular Classes</li>
-                  <li>Children&apos;s Regular Class</li>
-                  <li>Children&apos;s Weekend Class</li>
-                  <li>Yog Prayas</li>
-                  <li>Meditation Course</li>
-                  <li>Regular Meditation Classes</li>
-                  <li style={{ marginBottom: '1.5rem' }}>
-                    Advance Regular Yoga Classes <br /> – TYI Teachers
-                  </li>
+                  <li>Asana Regular Classes for Men - On Campus</li>
+                  <li>Asana Regular Classes for Women - On Campus</li>
+                  <li>Weekend Asana Classes (Men & Women) - On Campus</li>
+                  <li>Weekend Asana Classes (Men & Women) - Online</li>
+                  <li>Children&apos;s Regular Clasees - On Campus</li>
+                  <li>Children&apos;s Weekend Clasees - On Campus</li>
+                  <li>Advanced Asana Regular Class - Online <br />
+                  (Only for TYI Teachers)</li>
+                  <li>Yog-Prayas-Online</li>
+                  <li>Meditation Foundation Course-Online</li>
+                  <li>Regular Foundation Course-Online</li>
+                  <li>Anand Sadhna Online & OnCampus</li>
+                  <li>Couple&apos;s Classes-Online</li>
                 </ul>
               </ul>
             </div>
             <div className="single-menu">
-              <h3>WORKSHOPS</h3>
+              <h3>7 DAYS HEALTH CAMP</h3>
               <ul>
-                <li>Weight Management Workshop</li>
-                <li>
-                  Cardiac and Hypertension Health <br /> Workshop
-                </li>
-                <li>Wellness -Womens</li>
-                <li>Food and Nutrition Workshop</li>
-                <li>Back & Joint Disorder Workshop</li>
-                <li>Weight Management Workshop</li>
-                <li>Senior Citizen</li>
-                <li>Respiratory</li>
+                <li>7 Days Health Camp - On Campus - English</li>
+                <li>7 Days Health Camp - On Campus - Hindi</li>
               </ul>
-              <div className="filler">{filler}</div>
+              <h3>CAMPS & WORKSHOPS</h3>
+              <ul>
+                <li>Stress Management Camp</li>
+                <li>Weight Management Workshop</li>
+                <li>Pregnancy Camp For Ante & Post Natal</li>
+                <li>Cardiac & Hypertension Workshop</li>
+                <li>Back & Joint Disorder Workshop</li>
+                <li>Prayanama Workshop</li>
+                <li>Women&apos;s Camp</li>
+                <li>Respiratory Workshop</li>
+                <li>Life Management Camp</li>
+                <li>Senior citizen Workshop</li>
+                <li>Diet Workshop</li>
+              </ul>
+              <h3 style={{ marginBottom: '2rem' }}>Corporate Workshop</h3>
+              <h3 style={{ marginBottom: '2rem' }}>Home Tutions</h3>
+              <div className="filler" style={{ position: 'relative', marginTop: '3rem' }}>{filler}</div>
             </div>
           </>
         )}
@@ -314,7 +326,7 @@ const MegaMenu = ({ setNav }) => {
                 )
               })}
             </ul>
-            <div style={{ position: 'fixed', bottom: '80px', width: '200px' }}>
+            <div className='menu-filler-icon' style={{ position: 'fixed', bottom: '80px', width: '200px' }}>
               {filler1}
             </div>
           </div>
