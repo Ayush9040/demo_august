@@ -13,7 +13,6 @@ import Footer from '../../Components/Footer'
 import Blog from '../../Components/Blogs'
 import { useLocation } from 'react-router-dom'
 
-
 const Home = () => {
   const route = useLocation()
   console.log(route.hash.substring(1, route.hash.length))

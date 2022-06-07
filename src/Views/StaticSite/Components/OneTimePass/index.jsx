@@ -13,7 +13,7 @@ const OneTimePass = () => {
       return setOtpEmpty(1)
     }
   }
-  console.log(otp.otp)
+  console.log(otpEmpty)
 
   return (
     <>

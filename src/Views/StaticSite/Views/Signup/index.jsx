@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import CommonBannerNav2 from '../../Components/EcomNav'
 //import { mail, lock } from '../../assets/icons/icon'
+import { Link } from 'react-router-dom'
 import './style.scss'
 import CommonBtn from '../../Components/commonbtn'
 import InputComponent from '../../Components/InputComponent'
@@ -20,7 +21,7 @@ const SignUp = () => {
     window.scrollTo(0, 0)
   }, [])
 
-  console.log(formData, 'sahil')
+
 
   const handleSubmit = () => {
     if (formData.name === '') {
@@ -100,11 +101,12 @@ const SignUp = () => {
               </small>
             )}
           </div>
-          <label className="signin-btn" onClick={handleSubmit}>
-            <CommonBtn text={'Sign Up'} />
+          <label className="signin-btn" id='sign-up' onClick={handleSubmit}>
+            <CommonBtn text={'Submit'} />
           </label>
         </form>
       </div>
+      <p style={{ textAlign:'center' }} >Already a user ? <Link to='/sign-in' ><span style={{ color:'#CC4625' }} >Sign-In</span></Link></p>
     </div>
   )
 }

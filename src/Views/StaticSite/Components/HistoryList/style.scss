@@ -1,0 +1,43 @@
+.history-list{
+  width: 300px;
+  background-color: #EDEEF0;
+  border-radius: 17px;
+  padding: 2rem;
+  height: 90%;
+
+  .filter-history{
+    display: flex;
+    justify-content: space-between;
+    p{
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
+    #filter{
+      border: none;
+      background: none;
+      color: #BE4F31;
+      &:focus{
+        border: none;
+      }
+      &:focus-visible{
+        border: none;
+      }
+      option{
+        border: #606060;
+      }
+    }
+  }
+  .history-listitems{
+    overflow-y: scroll;
+    height: 100%;
+  }
+}
+.history-listitems::-webkit-scrollbar {
+  display: none;
+}
+
+@media(max-width:500px){
+  .history-list{
+    height: 400px;
+  }
+}
