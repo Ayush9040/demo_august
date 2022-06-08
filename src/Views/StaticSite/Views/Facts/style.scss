@@ -42,6 +42,7 @@
        display: flex;
        justify-content: center;
        align-items: center;
+       flex-direction: column;
        width: 200px;
        height: 200px;
       border: 8px solid rgb(202, 70, 37);
@@ -56,6 +57,9 @@
    .decade-para{
      flex: .65;
         text-align: left; 
+        p{
+          margin-bottom: 10px;
+        }
    }
  }
 }

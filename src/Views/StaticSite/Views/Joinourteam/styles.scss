@@ -35,6 +35,12 @@ width: 95%;
 margin-left: 5%;
 }
 
+.Benefits-container ~ .content-container{
+    p{
+        margin-bottom: 10px;
+    }
+}
+
 @media (max-width: "900px") {
     .image-content {
         padding: 0

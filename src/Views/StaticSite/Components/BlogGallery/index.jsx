@@ -6,7 +6,7 @@ const BlogGallery = () => {
       <div className="gallery-blog-container">
         <div className="gallery-blog">
           <div className="gallery-grid-1">
-            <div className="sub-image-1"></div> <br />
+            <div className="sub-image-1"></div>
             <div className="sub-image-2"></div>
           </div>
           <div className="gallery-grid">
@@ -14,7 +14,6 @@ const BlogGallery = () => {
           </div>
           <div className="gallery-grid-1">
             <div className="sub-image-2"></div>
-            <br />
             <div className="sub-image-1"></div>
           </div>
         </div>

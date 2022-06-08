@@ -20,7 +20,7 @@ const VolunteerJob = () => {
 
   return (
     <div className='single-job'>
-      <CommonBannerNavPrimary innerNav={false} /> <br />
+      <CommonBannerNavPrimary innerNav={false} /> 
       <div className='job-details'>
         <div className='job-description'>
           <div className='job-img'>
@@ -75,7 +75,6 @@ const VolunteerJob = () => {
                       placeholder='Upload Resume'
                     />
                   </label>
-                  <br />
                   <small>Please ensure the file is under 2 MB</small>
                 </fieldset>
               </div>

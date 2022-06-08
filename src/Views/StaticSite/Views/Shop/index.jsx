@@ -50,10 +50,7 @@ const Shop = () => {
   return (
     <div className="shop-container">
       <CommonBannerNav1 innerNav={false} />
-      <br />
-      <br />
-      <br />
-      <br />
+     
       <div className="search-container">
         <MenuToolTip setKey={setKey} />
         <input

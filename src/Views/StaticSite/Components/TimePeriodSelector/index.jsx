@@ -24,7 +24,9 @@ const TimePeriodSelector = () => {
             >
               <h4>
                 {item.start}
-                <br />-<br />
+              </h4>
+              <h4>-</h4>
+              <h4>
                 {item.end}
               </h4>
             </div>

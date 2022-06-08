@@ -1,6 +1,6 @@
 .banner-container {
   text-align: center;
-  .experience-banner-heading{
+  .experience-banner-heading {
     display: inline-block;
     margin: 0 auto;
     font-size: 2.5rem;
@@ -21,14 +21,14 @@
     }
   }
 }
-.exp-search{
+.exp-search {
   text-align: center;
 }
 
 .cards {
   display: grid;
   justify-content: space-between;
-  grid-template-columns: repeat(2,1fr);
+  grid-template-columns: repeat(2, 1fr);
   margin: 3rem 10px 10px;
 
   .carding {
@@ -52,10 +52,15 @@
       .heading {
         font-size: 1.6rem;
         font-weight: bold;
-        padding: 0 0 20px 10px;
-        span {
-          color: #cc4d2e;
-        }
+        padding-left: 10px;
+      }
+      span {
+        display: block;
+        color: #cc4d2e;
+        font-size: 1.6rem;
+        font-weight: bold;
+        margin-bottom: 20px;
+        padding-left: 10px;
       }
 
       .content {

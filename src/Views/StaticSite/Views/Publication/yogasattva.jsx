@@ -172,14 +172,8 @@ const Yogasattva = () => {
         <p>
           The Yoga Institute, the world’s oldest organized yoga center, is
           spreading awareness of Yoga worldwide via free subscriptions to
-          YogaSattva. Conceptualized to deliver news and updates of The Yoga
-          Institute in a digital format, it also has an abundance of scholarly
-          articles on Yoga along with the wisdom of Dr. Jayadeva and Hansaji.
-          Pranee Yogendra, the editor of YogaSattva, contributes each month to
-          give the classic magazine a fresh and dynamic flavor in this digital
-          age.
+          YogaSattva.
         </p>
-        <br />
 
         <p>
           Conceptualised to deliver news and updates of The Yoga Institute in a
@@ -187,7 +181,6 @@ const Yogasattva = () => {
           on Yoga along with the wisdom of Dr. Jayadeva and Hansaji.
         </p>
         <p>
-          <br />
           YogaSattva adds a new dimension to the world of Yoga in this digital
           era.
         </p>

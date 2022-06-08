@@ -12,7 +12,6 @@ import NewsLetter from '../../Components/NewsLetter'
 import Footer from '../../Components/Footer'
 import Blog from '../../Components/Blogs'
 import { useLocation } from 'react-router-dom'
-//import UserProfile from '../../Components/UserProfile'
 
 const Home = () => {
   const route = useLocation()

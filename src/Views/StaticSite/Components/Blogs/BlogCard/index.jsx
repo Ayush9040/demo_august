@@ -15,7 +15,6 @@ const BlogCard = ({ blogs }) => {
               ? blogs.title.substring(0, 20) + '...'
               : blogs.title}
           </p>
-          <br />
           <p>
             {blogs.metaDescription.length > 40
               ? blogs.metaDescription.substring(0, 40) + '...'
