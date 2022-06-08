@@ -139,9 +139,9 @@ const Courses = () => {
                 src="http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Courses/TTC/Alumni/Almuni_pictures_and_word_file/Madan_Bahal.jpg"
                 alt="Madan Bahal"
               />
-              <br />
+              
               <h4 className="alum-name">Madan Bahal</h4>
-              <br />
+              
               <p className="alum-designation"> MD, Adfactors</p>
               <p className="alum-year">1989</p>
             </div>
@@ -151,9 +151,9 @@ const Courses = () => {
                 src="http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Courses/TTC/Alumni/Almuni_pictures_and_word_file/Nirmal-Gangwal.png"
                 alt="Nirmal"
               />
-              <br />
+              
               <h4 className="alum-name">Nirmal Gangwal</h4>
-              <br />
+              
               <p className="alum-designation">MD,Brescon Corporate Advisor</p>
               <p className="alum-year">Year</p>
             </div>
@@ -163,9 +163,9 @@ const Courses = () => {
                 src="http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Courses/TTC/Alumni/Almuni_pictures_and_word_file/Sukhwinder_Singh.jpg"
                 alt="Sukhwinder"
               />
-              <br />
+              
               <h4 className="alum-name">Sukhwinder Singh</h4>
-              <br />
+              
               <p className="alum-designation">Playback singer</p>
               <p className="alum-year">Year</p>
             </div>
@@ -175,9 +175,9 @@ const Courses = () => {
                 src="http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Courses/TTC/Alumni/Almuni_pictures_and_word_file/Shivkumar_Sharma.jpg"
                 alt="Pt. Shivkumar Sharma"
               />
-              <br />
+              
               <h4 className="alum-name">Pt. Shivkumar Sharma</h4>
-              <br />
+              
               <p className="alum-designation">Renowned Santoor Maestro</p>
               <p className="alum-year">Year</p>
             </div>
