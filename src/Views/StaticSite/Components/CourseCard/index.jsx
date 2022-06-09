@@ -1,4 +1,4 @@
-import { Link, useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import React from 'react'
 import { star } from '../../assets/icons/icon'
 import CommonBtn from '../commonbtn'

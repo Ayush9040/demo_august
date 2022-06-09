@@ -91,7 +91,7 @@ export const breakIcon = (
 )
 
 export const filler = (
-  <svg xmlns="http://www.w3.org/2000/svg" id="a" viewBox="0 0 96.38 50" style={{ position: 'relative', bottom: '13rem' }}>
+  <svg xmlns="http://www.w3.org/2000/svg" id="a" viewBox="0 0 96.38 50">
     <g opacity=".15" className="c">
       <path
         fill="#ebb38a"

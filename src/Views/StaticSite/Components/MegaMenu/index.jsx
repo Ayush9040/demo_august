@@ -19,7 +19,7 @@ const MegaMenu = ({ setNav }) => {
     { name: 'DONATE', link: '/donation', id: 5, key: 'DONATION' },
     { name: 'GIFTING', link: '/gifting', id: 6, key: 'GIFTING' },
     { name: 'NISPAND', link: 'https://nispand.com/', id: 7, key: 'NISPAND' },
-    { name: 'TYI Online', link: '', id: 8, key: 'Online' },
+    { name: 'TYI ONLINE', link: '', id: 8, key: 'ONLINE' },
     {
       name: 'PUBLICATIONS',
       link: '/publication',
