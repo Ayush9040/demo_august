@@ -5,6 +5,7 @@ import CommonBtn from '../commonbtn'
 import SelectDropDown from '../Select Dropdown'
 import './style.scss'
 
+
 const CourseCard = ({
   color,
   courseTitle,
@@ -13,6 +14,20 @@ const CourseCard = ({
   img = 'http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Courses/course%20%281%29.png',
 }) => {
   console.log(color, 'clr')
+  
+  const selectStyles = {
+    width : 'max-content',
+    background : 'rgb(227, 143, 115)',
+    border : '3px solid white',
+    color: '#fff',
+    padding: '1rem 2rem',
+    borderRadius: '5rem',
+    fontSize: '1.5rem',
+    fontWeight: 'bold',
+    marginTop: '1rem',
+    outline: 'none',
+    cursor: 'pointer'
+  }
   return (
     <div className="course-card">
       <div className="course-card-image">
@@ -37,7 +52,7 @@ const CourseCard = ({
             ? description?.substring(0, 40)+'...'
             : description}
         </h3>
-        <SelectDropDown text = {'Select Dates'} />
+        <SelectDropDown text = {'Select Dates'} isStyles = {selectStyles} />
         <div className='Button-class'>
           <Link to={`/courses/${path}/`}>
             <CommonBtn text={'View Details'} />
