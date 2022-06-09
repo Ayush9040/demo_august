@@ -12,10 +12,7 @@ const Checkout = () => {
   return (
     <div className="checkout-container" id="checkout-container">
       <CommonBannerShop innerNav={false} />
-      <br />
-      <br />
-      <br />
-      <br />
+
       <div className="search-container">
         <h2 className="heading-1">Cart</h2>
         <input

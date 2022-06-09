@@ -11,8 +11,12 @@ const BlogPage = () => {
   console.log(allBlogData, '4')
   return (
     <div className="main-blog">
-      <CommonBannerNavPrimary innerNav={false} /> <br /> <br />
-      <Heading largeText={'Blog'} />
+      <CommonBannerNavPrimary innerNav={false} />
+      <div className="blog-heading">
+        
+        <Heading largeText={'Blog'} />
+      </div>
+
       <div className="blog-series">
         <div className="alumni-content" id="seminar">
           <div className="newsletter-content">

@@ -156,8 +156,7 @@ const Donation = ({ supportText, page }) => {
             <div className='donation-logos'>
               {ACH}
               <h2>ACH/ECS</h2>
-              <br />
-              <br />
+             
               <p>
                 All donations for The Yoga Institute projects can be made as a
                 regular monthly contribution through ACH (Automatic Clearing
@@ -167,8 +166,7 @@ const Donation = ({ supportText, page }) => {
             <div className='donation-logos'>
               {cheque}
               <h2>Cheque / Demand Draft</h2>
-              <br />
-              <br />
+             
               <p>
                 All donations are exempt from Income Tax under Section 80G of
                 the Income Tax Act. Cheques and DDs are to be drawn in favour of
@@ -179,8 +177,7 @@ const Donation = ({ supportText, page }) => {
             <div className='donation-logos'>
               {donation}
               <h2>In Kind Donation</h2>
-              <br />
-              <br />
+              
               <p>
                 Another way to help The Yoga Institute activities is through
                 in-kind, non-cash donations.
@@ -194,8 +191,6 @@ const Donation = ({ supportText, page }) => {
 
         <div className='terms-condition'>
           <h1>Terms and conditions:</h1>
-          <br />
-          <br />
           <p>
             {`            Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text

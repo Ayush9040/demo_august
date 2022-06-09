@@ -10,12 +10,14 @@
   justify-content: space-between;
   margin-bottom: 2rem;
   align-items: center;
+  margin-top: 50px;
 }
 
 .details-card-container {
   background-color: lightgrey;
   padding: 3rem;
   border-radius: 1rem;
+  margin-top: 20px;
 }
 
 .details-card {

@@ -68,7 +68,7 @@ const SingleJob = () => {
                       placeholder='Upload Resume'
                     />
                   </label>
-                  <br />
+                  
                   <small>Please ensure the file is under 2 MB</small>
                 </fieldset>
               </div>

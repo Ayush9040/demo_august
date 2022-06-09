@@ -7,10 +7,7 @@ const AnnamBrahmha = () => {
   return (
     <div className="annam-page">
       <DonationNavBar />
-      <br />
-      <br />
-      <br />
-      <br />
+      <div style={{ height:'50px' }} ></div>
       <SectionComponent
         image={baseDomain + donationAssets.annamAssets}
         title="Annam Brahma"

@@ -39,6 +39,9 @@ body {
   margin-top: 2rem;
   cursor: pointer;
   margin-left: 0.5rem;
+  .global-common-btn-content{
+    min-width: fit-content;
+  }
 }
 
 h1 {
@@ -110,6 +113,9 @@ a {
 
 .user-container {
   cursor: pointer;
+}
+.form-field{
+  margin: 2rem auto;
 }
 
 

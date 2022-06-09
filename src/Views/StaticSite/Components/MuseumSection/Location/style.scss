@@ -6,7 +6,6 @@
     }
     p{
         font-size: 20px;
-        margin-top: 3rem;
         font-weight: 500;
     }
     display: grid;
@@ -18,6 +17,12 @@
         height: 300px;
         // margin-left: 30rem;
         padding-left: 30rem;
+        .location-sub-container{
+            .location-sub-grid-1{
+                margin-top: 3rem;
+               
+            }
+        }
     .heading-container{
         margin-left: 0.1rem;
         .heading-text{

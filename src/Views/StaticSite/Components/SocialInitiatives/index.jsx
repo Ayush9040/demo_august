@@ -53,7 +53,7 @@ const SocialInitiatives = ({ alumni, setImageChanger }) => {
               return (
                 <div key={i} className='social-initiative-wrap'>
                   <h1>{item.title}</h1>
-                  <br />
+                 
                   <p>{item.description}</p>
                   {item.url}
                 </div>
@@ -61,9 +61,7 @@ const SocialInitiatives = ({ alumni, setImageChanger }) => {
             })}
           </Slider>
         </div>
-        <br />
-        <br />
-        <br />
+        
         {!alumni && <Link to='/social-responsibility'>
           <CommonBtn text={'Explore More'} />
         </Link>}

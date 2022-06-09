@@ -12,10 +12,6 @@ const ProductDetail = () => {
   return (
     <div className="details-container">
       <CommonBannerShop innerNav={false} />
-      <br />
-      <br />
-      <br />
-      <br />
       <div className="details-search-container">
         <MenuToolTip />
         <input
@@ -38,7 +34,6 @@ const ProductDetail = () => {
           {productData.category} &gt; {productData.name}
         </span>
       </div>
-      <br />
       <div className="details-card-container">
         <div className="details-card">
           <div className="details-card-first-section">

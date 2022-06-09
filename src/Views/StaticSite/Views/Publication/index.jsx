@@ -56,22 +56,16 @@ const YogaTotalHealth = () => {
       </div>
       <div className="publication-sub">
         <div className="break-icon">{breakIcon}</div>
-        <br />
-        <br />
         <p>
           {`To subscribe for ‘Yoga & Total Health Monthly Magazine’ click the
           button below.`}
         </p>
-        <br />
-        <br />
         <CommonBtn text={'Subscribe Now (E-Mag)'} />
         <CommonBtn text={'Hard Copy'} />
         <p>
           For complaints or non-receipt of journal, write to –
           bookstore@theyogainstitute.org
         </p>
-        <br />
-        <br />
         <p>
           For Letters to the Editor, contributing articles and photographs,
           write to – yogatotalhealth@theyogainstitute.org

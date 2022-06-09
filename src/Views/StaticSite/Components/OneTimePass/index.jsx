@@ -13,15 +13,15 @@ const OneTimePass = () => {
       return setOtpEmpty(1)
     }
   }
-  console.log(otp.otp)
+  console.log(otpEmpty)
 
   return (
     <>
       <div className="main_big_box">
         <div className="big_box">
           <div className="second_box">
-            <div className="enter_label" htmlFor="">
-              Enter OTP <br />
+            <div className="enter_label">
+              Enter OTP 
             </div>
             <div>
               <InputComponent
