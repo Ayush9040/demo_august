@@ -6,7 +6,7 @@ const DisclaimerPolicy = () => {
   return (
     <div className="main-container">
       <div className="heading-content">
-        <img src={baseDomain+homeAssets.homeAsset70} />
+        <img src={`${baseDomain}${homeAssets.homeAsset70}`} />
         <p>Disclaimer Policy</p>
       </div>
       <div className="mid-content">

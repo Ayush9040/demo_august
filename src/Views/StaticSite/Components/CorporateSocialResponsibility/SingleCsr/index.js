@@ -16,7 +16,7 @@ const SingleCsr = () => {
       </div>
       <div className="sub-div">
         <div className="sub-div-img">
-          <img src={baseDomain + homeAssets.homeAsset10} />
+          <img src={`${baseDomain}${homeAssets.homeAsset10}`} />
         </div>
       </div>
       <div className="last-div">

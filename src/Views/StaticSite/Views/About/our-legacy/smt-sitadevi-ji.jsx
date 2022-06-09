@@ -5,15 +5,15 @@ import OurLegacyModal from '../../../Components/OurLegacyModal'
 
 export default function SmtSitadeviJi() {
 
-  let leftImg=baseDomain+aboutAssets.aboutAsset11
-  let rightImg=baseDomain+aboutAssets.aboutAsset12
+  let leftImg=`${baseDomain}${aboutAssets.aboutAsset11}`
+  let rightImg=`${baseDomain}${aboutAssets.aboutAsset12}`
   
-  let g1=baseDomain+aboutAssets.aboutAsset13
-  let g2=baseDomain+aboutAssets.aboutAsset14
-  let g3=baseDomain+aboutAssets.aboutAsset15
-  let g4=baseDomain+aboutAssets.aboutAsset16
-  let g5=baseDomain+aboutAssets.aboutAsset17
-  let g6=baseDomain+aboutAssets.aboutAsset18
+  let g1=`${baseDomain}${aboutAssets.aboutAsset13}`
+  let g2=`${baseDomain}${aboutAssets.aboutAsset14}`
+  let g3=`${baseDomain}${aboutAssets.aboutAsset15}`
+  let g4=`${baseDomain}${aboutAssets.aboutAsset16}`
+  let g5=`${baseDomain}${aboutAssets.aboutAsset17}`
+  let g6=`${baseDomain}${aboutAssets.aboutAsset18}`
 
   const data = {
     name: 'Smt. Sitadevi Ji',

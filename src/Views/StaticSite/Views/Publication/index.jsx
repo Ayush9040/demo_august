@@ -16,7 +16,7 @@ const YogaTotalHealth = () => {
       </div>
       <div className="publication-intro">
         <div className="mag-preview">
-          <img src={baseDomain + publicationAssests.publicationAssests7} />
+          <img src={`${baseDomain}${publicationAssests.publicationAssests7}`} />
         </div>
         <div className="mag-details">
           <div className="journal">

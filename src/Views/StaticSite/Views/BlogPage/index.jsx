@@ -32,7 +32,7 @@ const BlogPage = () => {
             <img
               className="blog-image"
               alt="Upcoming Seminar"
-              src={baseDomain + homeAssets.homeAsset60}
+              src={`${baseDomain}${homeAssets.homeAsset60}`}
             />
           </div>
         </div>

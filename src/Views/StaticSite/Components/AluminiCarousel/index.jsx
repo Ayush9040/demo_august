@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import AlumniGrid from '../AlumniGrid'
 import { data } from './data'
 import Slider from 'react-slick'
@@ -8,6 +8,9 @@ import './style.scss'
 import CommonBtn from '../commonbtn'
 
 const AlumniCarousel = () => {
+
+  const [alumImgs,setAlumImgs]=useState(data[0].img)
+
   let settings = {
     dots: true,
     arrows: false,
@@ -16,6 +19,10 @@ const AlumniCarousel = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     centerPadding: '70px',
+    beforeChange:(oldIndex,index)=>{
+      console.log(data.find(item=>item.id===index).img)
+      setAlumImgs(data.find(item=>item.id===index).img)
+    }
   }
 
   return (
@@ -35,13 +42,37 @@ const AlumniCarousel = () => {
                     <p>{item.info}</p>
                   </div>
                 </div>
+                {/* <div className="alumini-carousel-grid">
+                  <div className="alumni-carousel-event-grid">
+                    <div className="grid-element-1">
+                      <div className="event-1">
+                        <img src={item.alluminiImg} />
+                      </div>
+                      <div className="event-2">
+                        <img src={item.alluminiImg} />
+                      </div>
+                    </div>
+                    <div className="grid-element-2">
+                      <div className="event-3">
+                        <img src={item.alluminiImg} />
+                      </div>
+                    </div>
+                    <div className="grid-element-3">
+                      <div className="event-4">
+                        <img src={item.alluminiImg} />
+                      </div>
+                      <div className="event-5">
+                        <img src={item.alluminiImg} />
+                      </div>
+                    </div>
+                  </div>
+                </div> */}
               </div>
             )
           }
-          return
         })}
       </Slider>
-      <AlumniGrid notEvent={true} />
+      <AlumniGrid images={alumImgs} notEvent={true} />
       <CommonBtn text={'Explore All'} />
     </div>
   )

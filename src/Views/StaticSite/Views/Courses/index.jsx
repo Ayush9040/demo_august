@@ -14,6 +14,7 @@ import {
   camps,
   classes,
 } from '../../Constants/courses/c200hr'
+import AlumniCarousel from '../../Components/AluminiCarousel'
 
 
 const Courses = () => {
@@ -126,7 +127,7 @@ const Courses = () => {
           </div>
         </div>
       </div>
-      <div className='course-alumni-section'>
+      {/* <div className='course-alumni-section'>
         <div className='courses-alumni-content'>
           <h1>Alumni</h1>
           <p>
@@ -187,7 +188,8 @@ const Courses = () => {
         <Link to=''>
           <CommonBtn text={'Explore all'} />
         </Link>
-      </div>
+      </div> */}
+      <AlumniCarousel/>
     </div>
   )
 }

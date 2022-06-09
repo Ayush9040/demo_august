@@ -2,7 +2,7 @@ import baseDomain, { experienceAssets } from '../../assets/images/imageAsset'
 
 export const data=[
   {
-    id:1,
+    id:0,
     alluminiImg:`${baseDomain}${experienceAssets.madanBahal}`,
     name:'Madan Bahal',
     post:' MD, Adfactors',
@@ -16,7 +16,7 @@ export const data=[
     ]
   },
   {
-    id:2,
+    id:1,
     alluminiImg:`${baseDomain}${experienceAssets.nirmalGangwal}`,
     name:'Nirmal Gangwal',
     post:' MD,Brescon Corporate Advisor',
@@ -30,7 +30,7 @@ export const data=[
     ]
   },
   {
-    id:3,
+    id:2,
     alluminiImg:`${baseDomain}${experienceAssets.sukhwinderSingh}`,
     name:'Sukhwinder Singh',
     post:'Playback singer',
@@ -44,7 +44,7 @@ export const data=[
     ]
   },
   {
-    id:4,
+    id:3,
     alluminiImg:`${baseDomain}${experienceAssets.shivKumarSharma}`,
     name:'Pt. Shivkumar Sharma',
     post:'Renowned Santoor Maestro',
@@ -58,7 +58,7 @@ export const data=[
     ]
   },
   {
-    id:5,
+    id:4,
     alluminiImg:`${baseDomain}${experienceAssets.shwetaTiwari}`,
     name:'Shweta Tiwari',
     post:'Film actress',
@@ -79,7 +79,7 @@ export const data=[
   //   info:'My experience through The Yoga Institute has been very special and beautiful. I came just for a course and I feel intimately connected with this place because it touched my heart. The 3 Months TTC that I have done has been fantastic, management, office workers, students, teachers, energy, theory, practical exercises, food everything with a powerful insight to bring the development of a healthy lifestyle through one of the oldest philosophy in the world Samkhya. Yoga is such a powerful ancient knowledge handed by the founder Shri Yogendraji "the guru" and keeping on with the actual family members that they are maintaining a high energy environment with an awesome personality and taking care of all the members of the Institute.'
   // },
   {
-    id:6,
+    id:5,
     alluminiImg:`${baseDomain}${experienceAssets.premchandgodha}`,
     name:'Premchand Godha',
     post:' MD, IPCA Laboratories',
@@ -93,7 +93,7 @@ export const data=[
     ]
   },
   {
-    id:7,
+    id:6,
     alluminiImg:`${baseDomain}${experienceAssets.shilpaShirodkar}`,
     name:'Shilpa Shirodkar',
     post:'Film Actor',
@@ -107,7 +107,7 @@ export const data=[
     ]
   },
   {
-    id:8,
+    id:7,
     alluminiImg:`${baseDomain}${experienceAssets.ankitaSood}`,
     name:'Ankita Sood',
     post:'Student at The Yoga Institute',
@@ -121,7 +121,7 @@ export const data=[
     ]
   },
   {
-    id:9,
+    id:8,
     alluminiImg:`${baseDomain}${experienceAssets.dishaVakhani}`,
     name:'Disha Vakani',
     post:'Film actress',
@@ -135,7 +135,7 @@ export const data=[
     ]
   },
   {
-    id:10,
+    id:9,
     alluminiImg:`${baseDomain}${experienceAssets.ajankiya}`,
     name:'Ajinkya Mehr',
     post:'',
@@ -149,7 +149,7 @@ export const data=[
     ]
   },
   {
-    id:11,
+    id:10,
     alluminiImg:`${baseDomain}${experienceAssets.carlo}`,
     name:'Carlo Donini',
     post:'Student from Italy',
@@ -163,7 +163,7 @@ export const data=[
     ]
   },
   {
-    id:12,
+    id:11,
     alluminiImg:`${baseDomain}${experienceAssets.rujutaDiwekar}`,
     name:'RUJUTA DIWEKAR',
     post:'CELEBRITY NUTRITIONIST',
@@ -177,7 +177,7 @@ export const data=[
     ]
   },
   {
-    id:13,
+    id:12,
     alluminiImg:`${baseDomain}${experienceAssets.veronica}`,
     name:'VERONICA RELANO',
     post:'STUDENT FROM SPAIN',
@@ -192,7 +192,7 @@ export const data=[
     ]
   },
   {
-    id:14,
+    id:13,
     alluminiImg:`${baseDomain}${experienceAssets.natalia}`,
     name:'NATALIA ROLDAN',
     post:'STUDENT FROM ARGENTINA',
@@ -206,7 +206,7 @@ export const data=[
     ]
   },
   {
-    id:15,
+    id:14,
     alluminiImg:`${baseDomain}${experienceAssets.kavita}`,
     name:'KAVITA RAYIRATH',
     post:'SADHAKA AT THE YOGA INSTITUTE',

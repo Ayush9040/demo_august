@@ -5,15 +5,15 @@ import baseDomain from '../../../assets/images/imageAsset'
 import { aboutAssets } from '../../../assets/images/imageAsset'
 
 export default function HarishJi() {
-  let leftImg = baseDomain + aboutAssets.aboutAsset3
-  let rightImg = baseDomain + aboutAssets.aboutAsset2
+  let leftImg = `${baseDomain}${aboutAssets.aboutAsset3}`
+  let rightImg = `${baseDomain}${aboutAssets.aboutAsset2}`
 
-  let g1 = baseDomain + aboutAssets.aboutAsset3
-  let g2 = baseDomain + aboutAssets.aboutAsset4
-  let g3 = baseDomain + aboutAssets.aboutAsset5
-  let g4 = baseDomain + aboutAssets.aboutAsset6
-  let g5 = baseDomain + aboutAssets.aboutAsset7
-  let g6 = baseDomain + aboutAssets.aboutAsset8
+  let g1 = `${baseDomain}${aboutAssets.aboutAsset3}`
+  let g2 = `${baseDomain}${aboutAssets.aboutAsset4}`
+  let g3 = `${baseDomain}${aboutAssets.aboutAsset5}`
+  let g4 = `${baseDomain}${aboutAssets.aboutAsset6}`
+  let g5 = `${baseDomain}${aboutAssets.aboutAsset7}`
+  let g6 = `${baseDomain}${aboutAssets.aboutAsset8}`
 
   const data = {
     name: 'Shri Yogendra ji',

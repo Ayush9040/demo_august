@@ -109,35 +109,35 @@ const OurOfferings = () => {
           <Slider {...settings}>
             <div className="course-offered">
               <img
-                src={baseDomain+homeAssets.homeAsset7}
+                src={`${baseDomain}${homeAssets.homeAsset7}`}
                 placeholder="none"
               />
               <h4>7-day Yoga Health Camp</h4>
             </div>
             <div className="course-offered">
               <img
-                src={baseDomain+homeAssets.homeAsset8}
+                src={`${baseDomain}${homeAssets.homeAsset8}`}
                 placeholder="none"
               />
               <h4>21-Day Better Living Course</h4>
             </div>
             <div className="course-offered">
               <img
-                src={baseDomain+homeAssets.homeAsset9}
+                src={`${baseDomain}${homeAssets.homeAsset9}`}
                 placeholder="none"
               />
               <h4>Regular Asana Classes</h4>
             </div>
             <div className="course-offered">
               <img
-                src={baseDomain+homeAssets.homeAsset10}
+                src={`${baseDomain}${homeAssets.homeAsset10}`}
                 placeholder="none"
               />
               <h4>Children’s Regular Classes</h4>
             </div>
             <div className="course-offered">
               <img
-                src={baseDomain+homeAssets.homeAsset11}
+                src={`${baseDomain}${homeAssets.homeAsset11}`}
                 placeholder="none"
               />
               <h4>7-month TTC</h4>

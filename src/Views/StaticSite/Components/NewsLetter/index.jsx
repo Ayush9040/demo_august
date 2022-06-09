@@ -12,19 +12,19 @@ const NewsLetter = () => {
       <div className='magezines'>
         <div className='images'>
           <div className='image'>
-            <img src={baseDomain + homeAssets.homeAsset67} />
+            <img src={`${baseDomain}${homeAssets.homeAsset67}`} />
             <br />
             <br />
             <p>January 2022</p>
           </div>
           <div className='image'>
-            <img src={baseDomain + homeAssets.homeAsset68} />
+            <img src={`${baseDomain}${homeAssets.homeAsset68}`} />
             <br />
             <br />
             <p>Feburary 2022</p>
           </div>
           <div className='image'>
-            <img src={baseDomain + homeAssets.homeAsset69} />
+            <img src={`${baseDomain}${homeAssets.homeAsset69}`} />
             <br />
             <br />
             <p>March 2022</p>

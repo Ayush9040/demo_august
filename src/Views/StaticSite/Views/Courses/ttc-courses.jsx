@@ -4,7 +4,7 @@ import CommonBannerNavPrimary from '../../Components/CommonBannerNavPrimary'
 import CourseDetails from '../../Components/CourseDetails'
 
 const TTCCourse = () => {
-  let TTC = baseDomain + courseAssets.courseAsset2
+  let TTC = `${baseDomain}${courseAssets.courseAsset2}`
   return (
     <div>
       <CommonBannerNavPrimary innerNav={false} />

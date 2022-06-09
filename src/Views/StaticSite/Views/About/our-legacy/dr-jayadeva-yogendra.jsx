@@ -6,12 +6,12 @@ export default function HarishJi() {
   let leftImg=baseDomain+aboutAssets.aboutAsset19
   let rightImg=baseDomain+aboutAssets.aboutAsset20
   
-  let g1=baseDomain+aboutAssets.aboutAsset21
-  let g2=baseDomain+aboutAssets.aboutAsset22
-  let g3=baseDomain+aboutAssets.aboutAsset23
-  let g4=baseDomain+aboutAssets.aboutAsset24
-  let g5=baseDomain+aboutAssets.aboutAsset25
-  let g6=baseDomain+aboutAssets.aboutAsset26
+  let g1=`${baseDomain}${aboutAssets.aboutAsset21}`
+  let g2=`${baseDomain}${aboutAssets.aboutAsset22}`
+  let g3=`${baseDomain}${aboutAssets.aboutAsset23}`
+  let g4=`${baseDomain}${aboutAssets.aboutAsset24}`
+  let g5=`${baseDomain}${aboutAssets.aboutAsset25}`
+  let g6=`${baseDomain}${aboutAssets.aboutAsset26}`
   const data = {
     name: 'Dr. Jayadeva Yogendra',
     route: 'dr-jayadeva-yogendra',

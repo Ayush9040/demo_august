@@ -34,7 +34,7 @@ const Seminar = () => {
           <img
             className="seminar-iamge"
             alt="Upcoming Seminar"
-            src={baseDomain + alumniAssets.eventsAssetsTitle}
+            src={`${baseDomain}${alumniAssets.eventsAssetsTitle}`}
           />
         </div>
       </div>
@@ -43,17 +43,17 @@ const Seminar = () => {
         <div className="seminars-card-container">
           <SeminarCard
             title={'500 hrs TTC'}
-            bgImage={baseDomain + alumniAssets.eventsAssets1}
+            bgImage={`${baseDomain}${alumniAssets.eventsAssets1}`}
             btnText={'View Details'}
           />
           <SeminarCard
             title={'Pregnancy Camp'}
-            bgImage={baseDomain + alumniAssets.eventsAssets2}
+            bgImage={`${baseDomain}${alumniAssets.eventsAssets2}`}
             btnText={'View Details'}
           />
           <SeminarCard
             title={'Regular Asana Class'}
-            bgImage={baseDomain + alumniAssets.eventsAssets3}
+            bgImage={`${baseDomain}${alumniAssets.eventsAssets3}`}
             btnText={'View Details'}
           />
         </div>
