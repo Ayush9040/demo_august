@@ -51,9 +51,9 @@
         width: 100%;
         background-color: rgba($color: #F4EBE7, $alpha: 1.0);
         padding: 4rem 0 0 2rem;
-       column-gap: 5rem;
-       min-height: 100vh;
-       height: max-content;
+        column-gap: 5rem;
+        height: 100vh;
+        overflow: scroll;
     //    max-width:fit-content;
         .single-menu{
             width: 100%;

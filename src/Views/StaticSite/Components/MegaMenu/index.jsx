@@ -234,11 +234,10 @@ const MegaMenu = ({ setNav }) => {
                   Certificate Program on Yoga for Cancer
                 </li>
                 <li className="text-bold" style={{ marginBottom: '2rem' }}>
-                  Certificate Program for Yoga for Lung <br /> Cancer - Online
+                  Certificate Program for Yoga for Lung Cancer - Online
                 </li>
                 <li className="text-bold" style={{ marginBottom: '2rem' }}>
-                  Certificate Course on Advanced <br />
-                  Pranayama Techniques
+                  Certificate Course on Advanced Pranayama Techniques
                 </li>
                 <li className="text-bold" style={{ marginBottom: '2rem' }}>
                   Certificate Course on Yoga Sutra-Online
@@ -248,10 +247,10 @@ const MegaMenu = ({ setNav }) => {
             <div className="single-menu">
               <h3>21 DAYS BETTER LIVING COURSE</h3>
               <ul>
-                <li>Batch 1 - 21-Days BLC - Morning <br /> On Campus-English</li>
-                <li>Batch 2 - 21-Days BLC - Evening <br /> Online & On Campus-English</li>
-                <li>Batch 3 - 21-Days BLC - Evening <br /> Online & On Campus-Hindi</li>
-                <li>Batch 4 - 21-Days BLC-Morning-Online <br />English</li>
+                <li>Batch 1 - 21-Days BLC - Morning  On Campus-English</li>
+                <li>Batch 2 - 21-Days BLC - Evening  Online & On Campus-English</li>
+                <li>Batch 3 - 21-Days BLC - Evening  Online & On Campus-Hindi</li>
+                <li>Batch 4 - 21-Days BLC-Morning-Online English</li>
 
                 <h3 style={{ marginBottom: '2rem' }}>Samattvam (Health Checkup)</h3>
                 <h3 style={{ marginBottom: '2rem' }}>Satsang</h3>
@@ -263,7 +262,7 @@ const MegaMenu = ({ setNav }) => {
                   <li>Weekend Asana Classes (Men & Women) - Online</li>
                   <li>Children&apos;s Regular Clasees - On Campus</li>
                   <li>Children&apos;s Weekend Clasees - On Campus</li>
-                  <li>Advanced Asana Regular Class - Online <br />
+                  <li>Advanced Asana Regular Class - Online  
                   (Only for TYI Teachers)</li>
                   <li>Yog-Prayas-Online</li>
                   <li>Meditation Foundation Course-Online</li>
