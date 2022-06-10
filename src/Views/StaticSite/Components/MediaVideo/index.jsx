@@ -1,17 +1,41 @@
 import React, { useState } from 'react'
 import { data } from './data'
 import './style.scss'
-import MediaNav from '../MediaNav'
+// import MediaNav from '../MediaNav'
+import InnerNavComponent from '../InnerNavComponent'
 
 const MediaVideo = () => {
   const [videoURL, setvideoURL] = useState(
     'https://www.youtube.com/embed/jwDhDbeShQw'
   )
   console.log(videoURL, 'url')
+  const GalleryVideo = {
+    title: 'gallery',
+    color: 'white',
+    menuColor: 'white',
+    menuItems: [
+      {
+        innerTitle: 'gallery',
+        url: '/media',
+        name: 'Gallery',
+      },
+      {
+        innerTitle: 'news',
+        url: '/media/news',
+        name: 'News',
+      },
+      {
+        innerTitle: 'events',
+        url: '/media/events',
+        name: 'Events',
+      },
+    ],
+  }
   return (
     <>
       <div className="media-main-div">
-        <MediaNav title="Gallery" />
+        {/* <MediaNav title="Gallery" /> */}
+        <InnerNavComponent abc={GalleryVideo}/>
         <div className="Featured">Featured Video</div>
         <div className="all-videos">
           <div className="play-setion">

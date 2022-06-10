@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import './styles.scss'
 import CommonBtn from '../commonbtn'
-import CommonBannerNavAboutUs from '../CommonBannerNavAboutUs'
+// import CommonBannerNavAboutUs from '../CommonBannerNavAboutUs'
+// import InnerNavComponent from '../../Components/InnerNavComponent'
 import { Link } from 'react-router-dom'
 import baseDomain, {
   aboutAssets,
@@ -12,7 +13,7 @@ const CommonBannerLegacy = ({
   Navigation,
   PageType,
   isOnlyBanner,
-  innerNav,
+  children
 }) => {
   const [activeFounder, setActiveFounder] = useState(0)
 
@@ -144,6 +145,7 @@ const CommonBannerLegacy = ({
       img: l5,
     },
   ]
+  
   return (
     <>
       <div className="about-us-container">
@@ -154,7 +156,8 @@ const CommonBannerLegacy = ({
         >
           {Navigation && (
             <div className={'navigation-container'}>
-              <CommonBannerNavAboutUs innerNav={innerNav} />
+              {/* <CommonBannerNavAboutUs innerNav={innerNav} /> */}
+              {children}
             </div>
           )}
           <div

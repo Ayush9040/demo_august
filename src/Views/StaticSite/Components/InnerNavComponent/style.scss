@@ -16,12 +16,21 @@
       list-style: none;
       margin: 0 auto;
       padding: 0;
+      a{
+        &:last-child{
+            li{
+                border: none!important;
+            }
+        }
+      }
+
   }
   ul li {
       font-size: 1.5rem;
       // margin: 0 0.5rem;
       
       padding: 0 0.7rem;
+ 
   }
   .mega-nav {
   display: flex;
@@ -40,6 +49,28 @@
   }
   .career-navigation-sm {
       display: none;
+  }
+  #toggles{
+    position: relative;
+    a{
+        color:#fff;
+            &:last-child{
+                li{
+                    border: none!important;
+                }
+            }
+    }
+    ul li {
+        border-color: #fff;
+        border-right: 1px solid #fff;
+
+    }
+    #gallery-toggle{
+        position: absolute;
+        right: 0%;
+        color: rgb(255, 255, 255);
+        width: fit-content;
+    }
   }
   
   @media (max-width: "900px") {

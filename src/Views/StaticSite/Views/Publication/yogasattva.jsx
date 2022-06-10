@@ -5,7 +5,8 @@ import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import PublicationDateNav from '../../Components/PublicationDateNav'
-import PublicationNav from '../../Components/PublicationNav'
+// import PublicationNav from '../../Components/PublicationNav'
+import InnerNavComponent from '../../Components/InnerNavComponent'
 
 const Yogasattva = () => {
   let setting2 = {
@@ -15,6 +16,38 @@ const Yogasattva = () => {
     slidesToScroll: 1,
     arrows: false,
   }
+  const publicationSattva = {
+    title:'library',
+    color:'white',
+    menuColor:'white',
+    menuItems:[
+      {
+        innerTitle:'yoga-health',
+        url:'/publication',
+        name:'Yoga and Total Health'
+      },
+      {
+        innerTitle:'yogasttav',
+        url:'/publication/yogasattva',
+        name:'Yogasattava'
+      },
+      {
+        innerTitle:'books',
+        url:'/publication/books',
+        name:'Books'
+      },
+      {
+        innerTitle:'ebooks',
+        url:'/publication/e-books',
+        name:'E-books'
+      },
+      {
+        innerTitle:'library',
+        url:'/publication/library',
+        name:'Library'
+      }
+    ]
+  } 
 
   // myimages
   const images = {
@@ -67,7 +100,8 @@ const Yogasattva = () => {
     <>
       <div className="yogasattva-container">
         <div className="background">
-          <PublicationNav title={'yogasattva'} />
+          {/* <PublicationNav title={'yogasattva'} /> */}
+          <InnerNavComponent abc={publicationSattva} />
         </div>
       </div>
       <div className="yogasattva-content">

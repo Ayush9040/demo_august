@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import PublicationCard from '../../Components/PublicationCard'
-import PublicationNav from '../../Components/PublicationNav'
+// import PublicationNav from '../../Components/PublicationNav'
 import axios from 'axios'
-
+import InnerNavComponent from '../../Components/InnerNavComponent'
 const Books = () => {
   const [product, setProduct] = useState([])
   const [categories, setCategories] = useState([])
@@ -73,11 +73,44 @@ const Books = () => {
   //   'Marriage – a spiritual journey',
   // ]
   console.log(categories)
-  
+  const yogaBooks = {
+    title: 'books',
+    color: 'white',
+    menuColor: 'white',
+    menuItems: [
+      {
+        innerTitle: 'yoga-health',
+        url: '/publication',
+        name: 'Yoga and Total Health',
+      },
+      {
+        innerTitle: 'yogasttav',
+        url: '/publication/yogasattva',
+        name: 'Yogasattava',
+      },
+      {
+        innerTitle: 'books',
+        url: '/publication/books',
+        name: 'Books',
+      },
+      {
+        innerTitle: 'ebooks',
+        url: '/publication/e-books',
+        name: 'E-books',
+      },
+      {
+        innerTitle:'library',
+        url:'/publication/library',
+        name:'Library'
+      }
+    ],
+  }
+
   return (
-    <div className='books-container'>
-      <div className='background'>
-        <PublicationNav title={'books'} />
+    <div className="books-container">
+      <div className="background">
+        {/* <PublicationNav title={'books'} /> */}
+        <InnerNavComponent abc={yogaBooks} />
         <p>
           {`A massive collection of a varied range of books written by Shri
           Yogendraji, Mother Sita Devi, Dr. Jayadeva, and Dr. Hansaji. Each book
@@ -85,13 +118,13 @@ const Books = () => {
           your life and achieve mind-body balance in today's fast-paced world.`}
         </p>
       </div>
-      <div className='books-grid'>
+      <div className="books-grid">
         {product.map((item, i) => {
           if (item.categoryId === '626bb3a23916070012713dd1') {
             return (
               <PublicationCard
                 key={i}
-                productImg = {item.productThumbnail}
+                productImg={item.productThumbnail}
                 name={item.name}
                 price={item.price}
                 currency={item.currency}
