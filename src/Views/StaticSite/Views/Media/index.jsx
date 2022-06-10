@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import './style.scss'
 import MediaSection from '../../Components/MediaSection'
-import MediaNav from '../../Components/MediaNav'
+// import MediaNav from '../../Components/MediaNav'
 import GridComponent from '../../Components/GridComponent'
 // import { FondationDayGridComponent } from '../../Components/GridComponent'
 import CommonBtn from '../../Components/commonbtn'

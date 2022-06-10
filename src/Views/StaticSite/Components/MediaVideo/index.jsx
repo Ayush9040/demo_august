@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { data } from './data'
 import './style.scss'
-import MediaNav from '../MediaNav'
+// import MediaNav from '../MediaNav'
 import InnerNavComponent from '../InnerNavComponent'
 
 const MediaVideo = () => {

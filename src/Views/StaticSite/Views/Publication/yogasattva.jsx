@@ -5,7 +5,7 @@ import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import PublicationDateNav from '../../Components/PublicationDateNav'
-import PublicationNav from '../../Components/PublicationNav'
+// import PublicationNav from '../../Components/PublicationNav'
 import InnerNavComponent from '../../Components/InnerNavComponent'
 
 const Yogasattva = () => {

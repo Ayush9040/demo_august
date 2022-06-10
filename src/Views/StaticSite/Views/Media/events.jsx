@@ -1,6 +1,6 @@
 import React from 'react'
 import InnerNavComponent from '../../Components/InnerNavComponent'
-import MediaNav from '../../Components/MediaNav'
+// import MediaNav from '../../Components/MediaNav'
 import MediaSection from '../../Components/MediaSection'
 
 const MediaEvents = () => {

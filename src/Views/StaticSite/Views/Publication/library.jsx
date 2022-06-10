@@ -1,5 +1,5 @@
 import React from 'react'
-import PublicationNav from '../../Components/PublicationNav'
+// import PublicationNav from '../../Components/PublicationNav'
 import baseDomain, { publicationAssests } from '../../assets/images/imageAsset'
 import InnerNavComponent from '../../Components/InnerNavComponent'
 
