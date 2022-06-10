@@ -170,48 +170,48 @@ const AlumniGallery = () => {
           <div className="tiles-grid">
             {bold === 1 ? (
               <>
-                {galleryImages[2022].map((image) => (
-                  <div className="tile" key={image}>
+                {galleryImages[2022].map((image,idx) => (
+                  <div className="tile" key={idx}>
                     <img src={image} alt="root-image" />
                   </div>
                 ))}
               </>
             ) : bold === 2 ? (
               <>
-                {galleryImages[2021].map((image) => (
-                  <div className="tile" key={image}>
+                {galleryImages[2021].map((image, idx) => (
+                  <div className="tile" key={idx}>
                     <img src={image} alt="root-image" />
                   </div>
                 ))}
               </>
             ) : bold === 3 ? (
               <>
-                {galleryImages[2020].map((image) => (
-                  <div className="tile" key={image}>
+                {galleryImages[2020].map((image, idx) => (
+                  <div className="tile" key={idx}>
                     <img src={image} alt="root-image" />
                   </div>
                 ))}
               </>
             ) : bold === 4 ? (
               <>
-                {galleryImages[2019].map((image) => (
-                  <div className="tile" key={image}>
+                {galleryImages[2019].map((image, idx) => (
+                  <div className="tile" key={idx}>
                     <img src={image} alt="root-image" />
                   </div>
                 ))}
               </>
             ) : bold === 5 ? (
               <>
-                {galleryImages[2018].map((image) => (
-                  <div className="tile" key={image}>
+                {galleryImages[2018].map((image, idx) => (
+                  <div className="tile" key={idx}>
                     <img src={image} alt="root-image" />
                   </div>
                 ))}
               </>
             ) : (
               <>
-                {galleryImages[2017].map((image) => (
-                  <div className="tile" key={image}>
+                {galleryImages[2017].map((image, idx) => (
+                  <div className="tile" key={idx}>
                     <img src={image} alt="root-image" />
                   </div>
                 ))}

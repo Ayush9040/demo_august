@@ -52,10 +52,11 @@ import PrivacyPolicy from '../Components/PrivacyPolicy/index.jsx'
 import Affiliations from '../Components/Affiliations/index.jsx'
 import Enrollment from '../Components/EnrollmentForm/index.jsx'
 import wellness from '../Components/Wellness/index.jsx'
-import CorporateSocialResponsibilty from '../Components/CorporateSocialResponsibility/index.js'
+import CorporateSocialResponsibilty from '../Components/CorporateSocialResponsibility/index.jsx'
+import SingleCsr from '../Components/CorporateSocialResponsibility/SingleCsr/index.jsx'
 import SignUp from '../Views/Signup'
-import MediaVideo from '../Components/MediaVideo/index.jsx'
 
+import MediaVideo from '../Components/MediaVideo/index.jsx'
 const staticSiteRoutes = [
   {
     Component: Home,
@@ -523,6 +524,14 @@ const staticSiteRoutes = [
     id: 'statisSiteUnderMediaVideo',
     routePath: '/media/video',
     name: 'MediaVideo',
+  },
+  {
+    Component: SingleCsr,
+    path: '/csr/:csrId',
+    exact: true,
+    id: 'statisSiteUnderSingleCsr',
+    routePath: '/csr/:csrId',
+    name: 'SingleCsr',
   },
 ]
 
