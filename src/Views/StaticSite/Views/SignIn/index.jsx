@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import CommonBannerNav2 from '../../Components/EcomNav'
-import { mail, lock } from '../../assets/icons/icon'
+//import { mail, lock } from '../../assets/icons/icon'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGoogle, faFacebook } from '@fortawesome/free-brands-svg-icons'
 import './style.scss'

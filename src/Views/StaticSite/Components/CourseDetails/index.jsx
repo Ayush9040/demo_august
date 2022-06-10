@@ -3,6 +3,7 @@ import './style.scss'
 import { star, global, network, chat } from '../../assets/icons/icon'
 import CommonBtn from '../commonbtn'
 import baseDomain, { courseAssets } from '../../assets/images/imageAsset'
+import { Link } from 'react-router-dom'
 //import { useParams } from 'react-router-dom'
 
 const CourseDetails = ({ pageDate }) => {
@@ -13,6 +14,7 @@ const CourseDetails = ({ pageDate }) => {
   },[])
 
   const {
+    id,
     image,
     name,
     details,
@@ -124,7 +126,7 @@ const CourseDetails = ({ pageDate }) => {
             {star}
           </div>
           <div className="course-options">
-            <CommonBtn text={'Enroll Now'} />
+            <Link to={`/enrollment/${id}`}><CommonBtn text={'Enroll Now'} /></Link>
             <CommonBtn text={'Gift Course'} />
           </div>
         </div>
