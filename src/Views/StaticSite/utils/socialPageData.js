@@ -16,7 +16,7 @@ export const socialPageData = [
     description: `The trucking industry is the backbone of our nation’s
     economy, however the stressful and demanding nature of
     the work of truckers impacts their spine adversely along with
-    other factors of physical and mental well-being.<br/>
+    other factors of physical and mental well-being.
     In-depth research study covering over 1000 truckers was
     carried out by The Yoga Institute in collaboration with
     Castrol India, to understand the health issues faced by

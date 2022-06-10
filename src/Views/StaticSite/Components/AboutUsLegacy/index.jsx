@@ -3,7 +3,10 @@ import './styles.scss'
 import CommonBtn from '../commonbtn'
 import CommonBannerNavAboutUs from '../CommonBannerNavAboutUs'
 import { Link } from 'react-router-dom'
-import baseDomain, { aboutAssets,homeAssets } from '../../assets/images/imageAsset'
+import baseDomain, {
+  aboutAssets,
+  homeAssets,
+} from '../../assets/images/imageAsset'
 
 const CommonBannerLegacy = ({
   Navigation,
@@ -134,12 +137,8 @@ const CommonBannerLegacy = ({
       founder: ['Director'],
       year: '1988',
       desc: [
-        'Born on 5th January 1988 to two visionaries, Dr. Jayadeva and Dr. Hansaji Yogendra, Hrishi Jayadeva Hansaji Yogendra is the third generation of Yogendra lineage. As the Assistant Director & Secretory of The Yoga Institute, Hrishi is using his advantage of standing on the shoulders of giants only to further the vision and the spread the teachings of the Gurus at The Yoga Institute.'
-        ,
-
-        'After completing his Masters, Hrishi immersed himself completely in understanding the workings of the Institute and the impact its teachings have on the millions of lives over the years. He realised the immense need of utilising the fast-evolving digital landscape to spread the authentic teachings of the Founders to the furthest reaches of the world and help millions more benefit from it.'
-        ,
-        
+        'Born on 5th January 1988 to two visionaries, Dr. Jayadeva and Dr. Hansaji Yogendra, Hrishi Jayadeva Hansaji Yogendra is the third generation of Yogendra lineage. As the Assistant Director & Secretory of The Yoga Institute, Hrishi is using his advantage of standing on the shoulders of giants only to further the vision and the spread the teachings of the Gurus at The Yoga Institute.',
+        'After completing his Masters, Hrishi immersed himself completely in understanding the workings of the Institute and the impact its teachings have on the millions of lives over the years. He realised the immense need of utilising the fast-evolving digital landscape to spread the authentic teachings of the Founders to the furthest reaches of the world and help millions more benefit from it.',
         'Today, Hrishi is tirelessly spearheading all the operations at the Institute with a simple goal of creating a lasting impact on the mankind. Under his leadership the Institute accelerated its reach through various digital and social media initiatives and reforms, that have helped millions of people rise and transform their lives, mentally, emotionally, physically, and spiritually. He also serves the Yoga community as the Vice President of the International board of Yoga.',
       ],
       img: l5,
@@ -179,19 +178,17 @@ const CommonBannerLegacy = ({
                   <div className="bottom-line"></div>
                 </div>
                 <div className="pos-date">
-                  {founderData[activeFounder].founder} <br />
-                  <span style={{ fontSize: '16px' }}>
+                  {founderData[activeFounder].founder} 
+                  <p style={{ fontSize: '16px',  }}>
                     {founderData[activeFounder].year}
-                  </span>
+                  </p>
                 </div>
               </div>
               <p style={{ textAlign: 'left', paddingBottom: '30px' }}>
-                {founderData[activeFounder].desc[0]}
-                <br />
-                <br />
-                <br />
-                {founderData[activeFounder].desc[1]}
-                <br />
+                <div id='founder-para1'>{founderData[activeFounder].desc[0]}</div>
+
+                <div id='founder-para2' >{founderData[activeFounder].desc[1]}</div>
+                
                 <Link
                   to={'/about/our-legacy/' + founderData[activeFounder].route}
                 >

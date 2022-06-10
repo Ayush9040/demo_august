@@ -21,7 +21,7 @@ const CommonGrid = () => {
       <div className="gallery-container">
         <div className="museum-heading global-padding">
           <Heading largeText={'Gallery'} />
-          <br />
+          
         </div>
         <div className="museum-text">
           <p>

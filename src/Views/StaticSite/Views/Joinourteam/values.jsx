@@ -22,10 +22,9 @@ const Values = () => {
       <div className='content-container pd-career'>
         <div className='text-content'>
           <p>
-            {`Life is not measured by how much you have attained for yourself; but rather by how much you have given to others. - Dr. Hansaji.J.Yogendra
-           `}
+          Life is not measured by how much you have attained for yourself; but rather by how much you have given to others. - Dr. Hansaji.J.Yogendra
+
           </p>
-          <br/>
           <p>
             Volunteer for social causes or for the Institute&apos;s internal
             activities by selflessly sharing your most valuable resources: Time
@@ -33,7 +32,6 @@ const Values = () => {
             this concept of giving to uplift the poor and underprivileged in
             society.
           </p>
-          <br/>
           <p>
             These programmes function only on the concept of selflessness and
             kindness. Along with helping the needy, volunteers engage in a

@@ -6,6 +6,7 @@ export const background = {
   gifting: '/backgrounds/gifting_bg.jpg',
   museum : '/backgrounds/museum_bg.jpg',
   volunteer : '/backgrounds/volunteer_bg.jpg',
+  faqs:'/backgrounds/faqs.jpg'
   
 }
 

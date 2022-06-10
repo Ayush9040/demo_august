@@ -54,7 +54,6 @@ const MediaGallery = () => {
               <div className="view-album">
                 <h3>
                   {item.title}
-                  <br />
                   <p>1 Albums</p>
                 </h3>
                 <div
@@ -142,66 +141,6 @@ const MediaGallery = () => {
           </div>
         </>
       )}
-      {/* <div className='albums' style={{ position: 'relative' }}>
-        <GridComponent />
-        <div className='view-album'>
-          <h3>
-            Harmony Fest
-            <br />
-            <p>1 Albums</p>
-          </h3>
-          <div onClick={() => setViewCarousel(!viewCarousel)}>
-            <CommonBtn text={'View Album'} />
-          </div>
-        </div>
-        {viewCarousel && (
-          <>
-            <div
-              style={{
-                position: 'absolute',
-                top: '-8%',
-                right: '10px',
-                zIndex: '999',
-              }}
-            >
-              <p
-                style={{ cursor: 'pointer', color: 'white' }}
-                onClick={disableCarousel}
-              >
-                Close
-              </p>
-            </div>
-            <div
-              style={{
-                height: 800,
-                width: '100%',
-                position: 'absolute',
-                top: 0,
-                boxShadow: 'rgb(0 0 0 / 94%) 248px 161px 327px 383px',
-              }}
-            >
-              <Carousel
-                images={images}
-                style={{ height: '100%', width: '100%' }}
-              />
-            </div>
-          </>
-        )}
-      </div>
-      <div className='albums'>
-        <FondationDayGridComponent />
-        <div className='view-album'>
-          <h3>
-            99th Foundation
-            <br />
-            <p>1 Albums</p>
-          </h3>
-          <div onClick={() => setViewCarousel(!viewCarousel)}>
-            <CommonBtn text={'View Album'} />
-          </div>
-        </div>
-      </div> */}
-      
     </div>
   )
 }

@@ -70,6 +70,10 @@
             width: 100%;
             border-radius: 50px;
         }
+        .intro-p
+        {
+            padding-bottom: 2rem;
+        }
     }
     .certifications{
         padding: 0 10rem 5rem;
@@ -136,11 +140,21 @@
                     background-color: #fff;
                     object-fit: cover;
                 }
+                .alum-name{
+                    margin:1rem auto;
+                }
             }
         }
         .global-common-btn{
             margin: 5rem auto 0;
         }
+    }
+
+}
+
+.single-course{
+    .course-detail-page{
+        margin-top: 20px;
     }
 }
 

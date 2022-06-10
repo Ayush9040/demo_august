@@ -50,7 +50,7 @@ const Museum = () => {
 
       <div className="museum-heading" id="virtual_tour">
         <Heading largeText={'Virtual Tour'} />
-        <br />
+        
       </div>
       <div className="museum-container">
         <div className="museum-card-wrapper">

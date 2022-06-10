@@ -13,7 +13,6 @@ import AlumniGallery from '../Views/Alumni/alumni-gallery'
 import Support from '../Views/Alumni/support'
 import Courses from '../Views/Courses'
 import SingleCourse from '../Views/Courses/course-name'
-import TTCCourse from '../Views/Courses/ttc-courses'
 import AnnamBramha from '../Views/Donation'
 import AnnamBrahmha from '../Views/Donation/annam-brahma'
 import Bmcschools from '../Views/Donation/bmcschools'
@@ -97,14 +96,6 @@ const staticSiteRoutes = [
     id: 'statisSiteCourse',
     routePath: '/courses/:courseId',
     name: 'Course',
-  },
-  {
-    Component: TTCCourse,
-    path: '/courses/ttc-course',
-    exact: true,
-    id: 'statisSiteTTC',
-    routePath: '/courses/ttc-course',
-    name: 'TTC',
   },
   {
     Component: AboutUs,

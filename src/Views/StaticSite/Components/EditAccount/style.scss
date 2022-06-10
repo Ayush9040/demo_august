@@ -14,10 +14,12 @@
       }
     }
     select {
+      display: block;
+      margin: 0 auto;
       margin-top: 20px;
       padding: 1rem;
       width: 285px;
-      border-radius: 20px;
+      border-radius: 50px;
       font-size: 2rem;
       color: #767794;
       background-color: white;
@@ -31,7 +33,7 @@
         position: absolute;
         top: 40%;
         right: 5px;
-        content: '';
+        content: '>';
         z-index: 98;
       }
       options {
@@ -89,9 +91,9 @@
         justify-content: center;
         gap: 20px;
         .form-content {
-          width: 20%;
           label {
             margin-bottom: 20px;
+            width: 300px;
             input {
               text-align: center;
               font-size: 2rem;
@@ -151,3 +153,29 @@
 //     }
 //   }
 // }
+
+@media (max-width: '700px') {
+  .edit-main .former-input .year-course .year-student .form-content label {
+    margin-bottom: 20px;
+    width: 200px;
+  }
+}
+
+@media (max-width: '480px') {
+  .edit-main {
+    .former-input {
+      .year-course {
+        .year-student {
+          flex-direction: column;
+          gap: 0;
+          .form-content {
+            label {
+              margin-bottom: 20px;
+              width: 300px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

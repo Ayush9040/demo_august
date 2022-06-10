@@ -16,7 +16,7 @@ const Legacy = () => {
           smallText={'World’s Oldest'}
           largeText={'Yoga Institute'}
         />
-        <br />
+       
         <div className="legacy-text">
           <p>
             {`The Yoga Institute, world's first yoga center, was established in

@@ -17,10 +17,12 @@
         color: #fff;
         border-radius: 0px 0px 25px 25px;
         padding: 2rem;
+
         .title{
             font-weight: 700;
             font-size: 1.8rem;
             min-height:20px;
+            padding-bottom: 10px;
         }
     }
 }
@@ -33,7 +35,15 @@
 
 @media(max-width:1300px){
     .blog-card{
+        .blog-card-image{
+            img{
+                object-fit: cover;
+                height: 100%;
+            }
+        }
         .blog-card-text{
+            padding-top: 10px;
+            padding-left: 20px;
             h2{
                 font-size: 2.5rem;
             }

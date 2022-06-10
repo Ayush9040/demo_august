@@ -9,6 +9,9 @@
     column-gap: 2rem;
     row-gap: 3rem;
     .gallery-grid-1 {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;;
       .sub-image-1 {
         background: rgb(241, 238, 238);
         height: 370px;
@@ -31,6 +34,7 @@
       grid-template-columns: 25% 50% 25%;
       gap: 1rem;
       .gallery-grid-1 {
+        gap: 1rem;
         .sub-image-1 {
           height: 100px;
           width: 100%;
