@@ -136,7 +136,7 @@ const CourseDetails = ({ pageDate }) => {
           {image ? (
             <img src={image} />
           ) : (
-            <img src={baseDomain + courseAssets.courseAsset2} />
+            <img src={`${baseDomain}${courseAssets.courseAsset2}`} />
           )}
         </div>
       </div>

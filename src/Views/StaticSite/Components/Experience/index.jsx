@@ -46,7 +46,7 @@ const Experience = () => {
             </Link>
           </div>
           <div className="carousel-image">
-            <img src={baseDomain+homeAssets.homeAsset55}/>
+            <img src={`${baseDomain}${homeAssets.homeAsset55}`}/>
           </div>
         </div>
         <div className="experience-carousel global-padding">
@@ -75,7 +75,7 @@ const Experience = () => {
             </Link>
           </div>
           <div className="carousel-image">
-            <img src={baseDomain+homeAssets.homeAsset56} />
+            <img src={`${baseDomain}${homeAssets.homeAsset56}`} />
           </div>
         </div>
         <div className="experience-carousel global-padding">
@@ -103,7 +103,7 @@ const Experience = () => {
             </Link>
           </div>
           <div className="carousel-image">
-            <img src={baseDomain+homeAssets.homeAsset57} />
+            <img src={`${baseDomain}${homeAssets.homeAsset57}`} />
           </div>
         </div>
         <div className="experience-carousel global-padding">
@@ -131,7 +131,7 @@ const Experience = () => {
             </Link>
           </div>
           <div className="carousel-image">
-            <img src={baseDomain+homeAssets.homeAsset58} />
+            <img src={`${baseDomain}${homeAssets.homeAsset58}`} />
           </div>
         </div>
       </Slider>

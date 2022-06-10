@@ -19,45 +19,45 @@ const Yogasattva = () => {
   // myimages
   const images = {
     2017: [
-      baseDomain + publicationAssests.ythAssets25,
-      baseDomain + publicationAssests.ythAssets26,
-      baseDomain + publicationAssests.ythAssets27,
-      baseDomain + publicationAssests.ythAssets28,
-      baseDomain + publicationAssests.ythAssets29,
-      baseDomain + publicationAssests.ythAssets30,
-      baseDomain + publicationAssests.ythAssets31,
+      `${baseDomain}${publicationAssests.ythAssets25}`,
+      `${baseDomain}${publicationAssests.ythAssets26}`,
+      `${baseDomain}${publicationAssests.ythAssets27}`,
+      `${baseDomain}${publicationAssests.ythAssets28}`,
+      `${baseDomain}${publicationAssests.ythAssets29}`,
+      `${baseDomain}${publicationAssests.ythAssets30}`,
+      `${baseDomain}${publicationAssests.ythAssets31}`,
     ],
     2018: [
-      baseDomain + publicationAssests.ythAssets1,
-      baseDomain + publicationAssests.ythAssets2,
-      baseDomain + publicationAssests.ythAssets3,
-      baseDomain + publicationAssests.ythAssets4,
-      baseDomain + publicationAssests.ythAssets5,
-      baseDomain + publicationAssests.ythAssets6,
+      `${baseDomain}${publicationAssests.ythAssets1}`,
+      `${baseDomain}${publicationAssests.ythAssets2}`,
+      `${baseDomain}${publicationAssests.ythAssets3}`,
+      `${baseDomain}${publicationAssests.ythAssets4}`,
+      `${baseDomain}${publicationAssests.ythAssets5}`,
+      `${baseDomain}${publicationAssests.ythAssets6}`,
     ],
     2019: [
-      baseDomain + publicationAssests.ythAssets7,
-      baseDomain + publicationAssests.ythAssets8,
-      baseDomain + publicationAssests.ythAssets9,
-      baseDomain + publicationAssests.ythAssets10,
-      baseDomain + publicationAssests.ythAssets11,
-      baseDomain + publicationAssests.ythAssets12,
+      `${baseDomain}${publicationAssests.ythAssets7}`,
+      `${baseDomain}${publicationAssests.ythAssets8}`,
+      `${baseDomain}${publicationAssests.ythAssets9}`,
+      `${baseDomain}${publicationAssests.ythAssets10}`,
+      `${baseDomain}${publicationAssests.ythAssets11}`,
+      `${baseDomain}${publicationAssests.ythAssets12}`,
     ],
     2020: [
-      baseDomain + publicationAssests.ythAssets13,
-      baseDomain + publicationAssests.ythAssets14,
-      baseDomain + publicationAssests.ythAssets15,
-      baseDomain + publicationAssests.ythAssets16,
-      baseDomain + publicationAssests.ythAssets17,
-      baseDomain + publicationAssests.ythAssets18,
+      `${baseDomain}${publicationAssests.ythAssets13}`,
+      `${baseDomain}${publicationAssests.ythAssets14}`,
+      `${baseDomain}${publicationAssests.ythAssets15}`,
+      `${baseDomain}${publicationAssests.ythAssets16}`,
+      `${baseDomain}${publicationAssests.ythAssets17}`,
+      `${baseDomain}${publicationAssests.ythAssets18}`,
     ],
     2021: [
-      baseDomain + publicationAssests.ythAssets19,
-      baseDomain + publicationAssests.ythAssets20,
-      baseDomain + publicationAssests.ythAssets21,
-      baseDomain + publicationAssests.ythAssets22,
-      baseDomain + publicationAssests.ythAssets23,
-      baseDomain + publicationAssests.ythAssets24,
+      `${baseDomain}${publicationAssests.ythAssets19}`,
+      `${baseDomain}${publicationAssests.ythAssets20}`,
+      `${baseDomain}${publicationAssests.ythAssets21}`,
+      `${baseDomain}${publicationAssests.ythAssets22}`,
+      `${baseDomain}${publicationAssests.ythAssets23}`,
+      `${baseDomain}${publicationAssests.ythAssets24}`,
     ],
   }
 
@@ -78,91 +78,91 @@ const Yogasattva = () => {
         <Slider {...setting2}>
           <div className="yogasattva-image">
             <img
-              src={baseDomain + publicationAssests.newsletterAssests1}
+              src={`${baseDomain}${publicationAssests.newsletterAssests1}`}
               alt=""
             />
             <img
-              src={baseDomain + publicationAssests.newsletterAssests2}
+              src={`${baseDomain}${publicationAssests.newsletterAssests2}`}
               alt=""
             />
             <img
-              src={baseDomain + publicationAssests.newsletterAssests3}
+              src={`${baseDomain}${publicationAssests.newsletterAssests3}`}
               alt=""
             />
             <img
-              src={baseDomain + publicationAssests.newsletterAssests4}
-              alt=""
-            />
-          </div>
-          <div className="yogasattva-image">
-            <img
-              src={baseDomain + publicationAssests.newsletterAssests5}
-              alt=""
-            />
-            <img
-              src={baseDomain + publicationAssests.newsletterAssests6}
-              alt=""
-            />
-            <img
-              src={baseDomain + publicationAssests.newsletterAssests7}
-              alt=""
-            />
-            <img
-              src={baseDomain + publicationAssests.newsletterAssests8}
+              src={`${baseDomain}${publicationAssests.newsletterAssests4}`}
               alt=""
             />
           </div>
           <div className="yogasattva-image">
             <img
-              src={baseDomain + publicationAssests.newsletterAssests9}
+              src={`${baseDomain}${publicationAssests.newsletterAssests5}`}
               alt=""
             />
             <img
-              src={baseDomain + publicationAssests.newsletterAssests10}
+              src={`${baseDomain}${publicationAssests.newsletterAssests6}`}
               alt=""
             />
             <img
-              src={baseDomain + publicationAssests.newsletterAssests11}
+              src={`${baseDomain}${publicationAssests.newsletterAssests7}`}
               alt=""
             />
             <img
-              src={baseDomain + publicationAssests.newsletterAssests12}
-              alt=""
-            />
-          </div>
-          <div className="yogasattva-image">
-            <img
-              src={baseDomain + publicationAssests.newsletterAssests13}
-              alt=""
-            />
-            <img
-              src={baseDomain + publicationAssests.newsletterAssests14}
-              alt=""
-            />
-            <img
-              src={baseDomain + publicationAssests.newsletterAssests15}
-              alt=""
-            />
-            <img
-              src={baseDomain + publicationAssests.newsletterAssests16}
+              src={`${baseDomain}${publicationAssests.newsletterAssests8}`}
               alt=""
             />
           </div>
           <div className="yogasattva-image">
             <img
-              src={baseDomain + publicationAssests.newsletterAssests17}
+              src={`${baseDomain}${publicationAssests.newsletterAssests9}`}
               alt=""
             />
             <img
-              src={baseDomain + publicationAssests.newsletterAssests18}
+              src={`${baseDomain}${publicationAssests.newsletterAssests10}`}
               alt=""
             />
             <img
-              src={baseDomain + publicationAssests.newsletterAssests19}
+              src={`${baseDomain}${publicationAssests.newsletterAssests11}`}
               alt=""
             />
             <img
-              src={baseDomain + publicationAssests.newsletterAssests20}
+              src={`${baseDomain}${publicationAssests.newsletterAssests12}`}
+              alt=""
+            />
+          </div>
+          <div className="yogasattva-image">
+            <img
+              src={`${baseDomain}${publicationAssests.newsletterAssests13}`}
+              alt=""
+            />
+            <img
+              src={`${baseDomain}${publicationAssests.newsletterAssests14}`}
+              alt=""
+            />
+            <img
+              src={`${baseDomain}${publicationAssests.newsletterAssests15}`}
+              alt=""
+            />
+            <img
+              src={`${baseDomain}${publicationAssests.newsletterAssests16}`}
+              alt=""
+            />
+          </div>
+          <div className="yogasattva-image">
+            <img
+              src={`${baseDomain}${publicationAssests.newsletterAssests17}`}
+              alt=""
+            />
+            <img
+              src={`${baseDomain}${publicationAssests.newsletterAssests18}`}
+              alt=""
+            />
+            <img
+              src={`${baseDomain}${publicationAssests.newsletterAssests19}`}
+              alt=""
+            />
+            <img
+              src={`${baseDomain}${publicationAssests.newsletterAssests20}`}
               alt=""
             />
           </div>

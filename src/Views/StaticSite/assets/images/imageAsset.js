@@ -1055,7 +1055,7 @@ export const experienceAssets={
   modiji:'/Home/Experience/Modiji.jpg',
   naiduji:'/Home/Experience/Naiduji.jpg',
   nirmalGangwal:'/Home/Experience/Nirmal-Gangwal.png',
-  ritutaDiwekar:'/Home/Experience/RUJUTA%20DIWEKAR.jpg',
+  rujutaDiwekar:'/Home/Experience/RUJUTA%20DIWEKAR.jpg',
   shilpaShirodkar:'/Home/Experience/Shilpa%20Shirodkar.jpg',
   shivKumarSharma:'/Home/Experience/Shivkumar%20Sharma.jpg',
   shwetaTiwari:'/Home/Experience/Shweta%20Tiwari.jpg',
@@ -1065,7 +1065,8 @@ export const experienceAssets={
   kavita:'/Home/Experience/kavita.jpg',
   natalia:'/Home/Experience/natalia.JPG',
   kovindji:'/Home/Experience/shriramnathkovid.png',
-  veronica:'/Home/Experience/veronica.JPG'
+  veronica:'/Home/Experience/veronica.JPG',
+  premchandgodha:'/Home/Experience/Premchand%20Godha.jpg'
 
 
 }

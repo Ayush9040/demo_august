@@ -220,7 +220,7 @@ const Facilities = () => {
         >
           <div id="hostel" className="facilities-slide">
             <div className="facility-image">
-              <img src={baseDomain + facilitiyAssets.facilitiyAssets1} />
+              <img src={`${baseDomain}${facilitiyAssets.facilitiyAssets1}`} />
             </div>
             <div className="facility-description">
               <h2>Hostels</h2>
@@ -236,7 +236,7 @@ const Facilities = () => {
           </div>
           <div id="conference-room" className="facilities-slide">
             <div className="facility-image">
-              <img src={baseDomain + facilitiyAssets.facilitiyAssets2} />
+              <img src={`${baseDomain}${facilitiyAssets.facilitiyAssets2}`} />
             </div>
             <div className="facility-description">
               <h2>Conference Room</h2>
@@ -248,7 +248,7 @@ const Facilities = () => {
           </div>
           <div id="library" className="facilities-slide">
             <div className="facility-image">
-              <img src={baseDomain + facilitiyAssets.facilitiyAssets3} />
+              <img src={`${baseDomain}${facilitiyAssets.facilitiyAssets3}`} />
             </div>
             <div className="facility-description">
               <h2>Library</h2>
@@ -266,7 +266,7 @@ const Facilities = () => {
           </div>
           <div id="book-store" className="facilities-slide">
             <div className="facility-image">
-              <img src={baseDomain + facilitiyAssets.facilitiyAssets4} />
+              <img src={`${baseDomain}${facilitiyAssets.facilitiyAssets4}`} />
             </div>
             <div className="facility-description">
               <h2>Book Store</h2>
@@ -283,7 +283,7 @@ const Facilities = () => {
           </div>
           <div id="yoga-halls" className="facilities-slide">
             <div className="facility-image">
-              <img src={baseDomain + facilitiyAssets.facilitiyAssets5} />
+              <img src={`${baseDomain}${facilitiyAssets.facilitiyAssets5}`} />
             </div>
             <div className="facility-description">
               <h2>Yogic Halls</h2>
@@ -296,7 +296,7 @@ const Facilities = () => {
           </div>
           <div id="rooftop-space" className="facilities-slide">
             <div className="facility-image">
-              <img src={baseDomain + facilitiyAssets.facilitiyAssets6} />
+              <img src={`${baseDomain}${facilitiyAssets.facilitiyAssets6}`} />
             </div>
             <div className="facility-description">
               <h2>Rooftop Space</h2>
@@ -309,7 +309,7 @@ const Facilities = () => {
           </div>
           <div id="dining-hall" className="facilities-slide">
             <div className="facility-image">
-              <img src={baseDomain + facilitiyAssets.facilitiyAssets7} />
+              <img src={`${baseDomain}${facilitiyAssets.facilitiyAssets7}`}/>
             </div>
             <div className="facility-description">
               <h2>Dining Hall – Naivedyam</h2>
@@ -324,7 +324,7 @@ const Facilities = () => {
           </div>
           <div id="nature-trail" className="facilities-slide">
             <div className="facility-image">
-              <img src={baseDomain + facilitiyAssets.facilitiyAssets8} />
+              <img src={`${baseDomain}${facilitiyAssets.facilitiyAssets8}`} />
             </div>
             <div className="facility-description">
               <h2>Nature Trail</h2>
@@ -338,7 +338,7 @@ const Facilities = () => {
           </div>
           <div id="gazebo" className="facilities-slide">
             <div className="facility-image">
-              <img src={baseDomain + facilitiyAssets.facilitiyAssets9} />
+              <img src={`${baseDomain}${facilitiyAssets.facilitiyAssets9}`} />
             </div>
             <div className="facility-description">
               <h2>Gazebo</h2>
@@ -354,7 +354,7 @@ const Facilities = () => {
           </div>
           <div id="kailaspati-tree" className="facilities-slide">
             <div className="facility-image">
-              <img src={baseDomain + facilitiyAssets.facilitiyAssets10} />
+              <img src={`${baseDomain}${facilitiyAssets.facilitiyAssets10}`} />
             </div>
             <div className="facility-description">
               <h2>Kailashpati Tree</h2>

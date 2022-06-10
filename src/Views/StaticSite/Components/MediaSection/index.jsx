@@ -63,15 +63,15 @@ const MediaSection = ({
           <div className="seminars-card-container">
             <SeminarCard
               title={'500 hrs TTC'}
-              bgImage={baseDomain + alumniAssets.eventsAssets1}
+              bgImage={`${baseDomain}${alumniAssets.eventsAssets1}`}
             />
             <SeminarCard
               title={'Pregnancy Camp'}
-              bgImage={baseDomain + alumniAssets.eventsAssets2}
+              bgImage={`${baseDomain}${alumniAssets.eventsAssets2}`}
             />
             <SeminarCard
               title={'Regular Asana Class'}
-              bgImage={baseDomain + alumniAssets.eventsAssets3}
+              bgImage={`${baseDomain}${alumniAssets.eventsAssets3}`}
             />
           </div>
         </div>

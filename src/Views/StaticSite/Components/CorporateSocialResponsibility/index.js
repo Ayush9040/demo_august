@@ -54,7 +54,7 @@ const CorporateSocialResponsibilty = () => {
       <div className="last-container">
         <div className="content-container-section">
           <div className="image-container">
-            <img src={baseDomain + homeAssets.homeAsset10} />
+            <img src={`${baseDomain}${homeAssets.homeAsset10}`} />
           </div>
           <div className="description-content">
             <div className="header">
@@ -83,7 +83,7 @@ const CorporateSocialResponsibilty = () => {
         </div>
         <div className="content-container-section">
           <div className="image-container">
-            <img src={baseDomain + homeAssets.homeAsset10} />
+            <img src={`${baseDomain}${homeAssets.homeAsset10}`} />
           </div>
           <div className="description-content">
             <div className="header">

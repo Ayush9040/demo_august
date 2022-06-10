@@ -15,7 +15,7 @@ const Blessings = ({ location }) => {
           Logo={false}
           Navigation={true}
           PageType="blessings"
-          BgImage={baseDomain+aboutAssets.aboutAsset43}
+          BgImage={`${baseDomain}${aboutAssets.aboutAsset43}`}
           Heading="Dr Hansaji’s Blessings"
           isOnlyBanner={false}
           innerNav={true}

@@ -14,7 +14,7 @@ const library = () => {
             <div className="cardImg">
               <div>
                 <img
-                  src={baseDomain + publicationAssests.libraryAsset}
+                  src={`${baseDomain}${publicationAssests.libraryAsset}`}
                   alt=""
                   style={{
                     width: '100%',
@@ -39,37 +39,37 @@ const library = () => {
           <div className="more-cards">
             <div className="card-1">
               <img
-                src={baseDomain + publicationAssests.publicationAssests1}
+                src={`${baseDomain}${publicationAssests.publicationAssests1}`}
                 alt=""
               />
             </div>
             <div className="card-1">
               <img
-                src={baseDomain + publicationAssests.publicationAssests2}
+                src={`${baseDomain}${publicationAssests.publicationAssests2}`}
                 alt=""
               />
             </div>
             <div className="card-1">
               <img
-                src={baseDomain + publicationAssests.publicationAssests3}
+                src={`${baseDomain}${publicationAssests.publicationAssests3}`}
                 alt=""
               />
             </div>
             <div className="card-1">
               <img
-                src={baseDomain + publicationAssests.publicationAssests4}
+                src={`${baseDomain}${publicationAssests.publicationAssests4}`}
                 alt=""
               />
             </div>
             <div className="card-1">
               <img
-                src={baseDomain + publicationAssests.publicationAssests5}
+                src={`${baseDomain}${publicationAssests.publicationAssests5}`}
                 alt=""
               />
             </div>
             <div className="card-1">
               <img
-                src={baseDomain + publicationAssests.publicationAssests6}
+                src={`${baseDomain}${publicationAssests.publicationAssests6}`}
                 alt=""
               />
             </div>

@@ -47,7 +47,7 @@ const Values = () => {
           </p>
         </div>
         <div className='image-content'>
-          <img src={baseDomain + volunteerAssets.valuesAssets} />
+          <img src={`${baseDomain}${volunteerAssets.valuesAssets}`} />
         </div>
       </div>
     </>

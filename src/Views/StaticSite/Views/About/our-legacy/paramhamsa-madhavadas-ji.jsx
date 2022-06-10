@@ -14,7 +14,7 @@ export default function HarishJi() {
     `,
     ],
     route: 'paramhamsa-madhavadas-ji',
-    leftImg: baseDomain+homeAssets.homeAsset1,
+    leftImg: `${baseDomain}${homeAssets.homeAsset1}`,
     rightImg: null,
     gallery: [],
   }
