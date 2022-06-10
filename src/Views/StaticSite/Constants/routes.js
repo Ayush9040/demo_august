@@ -486,10 +486,10 @@ const staticSiteRoutes = [
   },
   {
     Component: Enrollment,
-    path: '/enrollment',
+    path: '/enrollment/:courseId',
     exact: true,
     id: 'statisSiteUnderEnrollment',
-    routePath: '/enrollment',
+    routePath: '/enrollment/:courseId',
     name: 'Enrollment',
   },
   {

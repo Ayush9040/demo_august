@@ -53,9 +53,10 @@ const SingleJob = () => {
                   <label htmlFor='image'>
                     Upload Image
                     <input
-                      type={'image'}
+                      type={'file'}
                       id='image'
                       placeholder='Upload Image'
+                      accept="image/*"
                     />
                   </label>
                 </fieldset>

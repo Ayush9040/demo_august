@@ -5,18 +5,169 @@
   border-radius: 20px;
   margin: 2%;
   justify-content: center;
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  input[type='number'] {
+    -moz-appearance: textfield;
+  }
+  .age_ofChild {
+    position: relative;
+  }
+  .header {
+    grid-column: 1/7;
+    margin-left: 60px;
+    margin-top: 40px;
+    font-size: 25px;
+    cursor: pointer;
+    .header_ul {
+      display: flex;
+      list-style: none;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
+  }
+  .flex_box {
+    display: flex;
+    align-items: center;
+  }
+  .left_flex_contanier {
+    .flex_box {
+      padding-right: 65px;
+      .year-of-comp {
+        display: flex;
+        align-items: center;
+      }
+    }
+    .uploads {
+      display: flex;
+      justify-content: center;
+      gap: 100px;
+      padding-left: 0;
+      & > fieldset {
+        margin-top: 17px;
+        width: 22%;
+        border: none;
+      }
+      label {
+        width: 100%;
+        min-width: 270px;
+        display: block;
+        box-sizing: border-box;
+        padding: 1rem 2rem;
+        font-size: 2rem;
+        border: 2px solid #606060;
+        color: #606060;
+        border-radius: 50px;
+        text-align: center;
+        margin: 0;
+        input {
+          display: none;
+        }
+      }
+      small {
+        color: #121111;
+        float: right;
+        padding-right: 2rem;
+        font-size: 1.3rem;
+      }
+    }
+  }
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    grid-column: 1 / 7;
+    margin-bottom: 10px;
+    .next_1 {
+      border: 1px solid #606060;
+      height: 37px;
+      width: 80px;
+      color: black;
+      border-radius: 30px;
+      font-size: 15px;
+      font-weight: 500;
+      padding: 0;
+      float: right;
+      margin-top: 2%;
+      margin-right: 30px;
+      background-color: white;
+    }
+    .enrollment_logo {
+      svg {
+        height: 80px;
+        width: 125px;
+      }
+    }
+    .back {
+      border: 1px solid #606060;
+      height: 37px;
+      width: 80px;
+      color: black;
+      border-radius: 30px;
+      font-size: 15px;
+      font-weight: 500;
+      padding: 0;
+      float: left;
+      margin-left: 30px;
+      margin-top: 2%;
+      background-color: white;
+    }
+  }
   .details {
     display: grid;
     grid-template-columns: 50% 50%;
+
+    .right {
+      .date_div {
+        margin-right: 55px;
+        /* placeholder text style */
+        input[type='date']::-webkit-datetime-edit-text,
+        input[type='date']::-webkit-datetime-edit-month-field,
+        input[type='date']::-webkit-datetime-edit-day-field,
+        input[type='date']::-webkit-datetime-edit-year-field {
+          color: #606060;
+        }
+
+        /* regular text style */
+        input[type='date'].date-input--has-value::-webkit-datetime-edit-text,
+        input[type='date'].date-input--has-value::-webkit-datetime-edit-month-field,
+        input[type='date'].date-input--has-value::-webkit-datetime-edit-day-field,
+        input[type='date'].date-input--has-value::-webkit-datetime-edit-year-field {
+          color: #000!important;
+        }
+      }
+      .button_div {
+        display: inline-block;
+        position: absolute;
+        top: 45%;
+        right: -60px;
+        .button_2 {
+          height: 30px;
+          width: 30px;
+          border: 1px solid #606060;
+          background-color: white;
+          font-size: 20px;
+          color: #606060;
+          cursor: pointer;
+        }
+      }
+      .num_of_child {
+        padding-left: 70px;
+      }
+    }
+    label {
+      width: 100%;
+      max-width: 100%;
+      margin: 20px;
+      input {
+        text-align: left;
+      }
+    }
   }
-  
-  .placeholder {
-    margin: 10px;
-    width: 100%;
-    border: 1px solid #606060;
-    border-radius: 30px;
-    height: 37px;
-  }
+
   .experienced-lists {
     margin: 1rem;
     display: flex;
@@ -39,85 +190,166 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 10px;
-    justify-content: center;
-    input[type="radio"]:checked {
-      background-color: black;
+
+    .label_1 {
+      font-size: 25px;
+      color: #606060;
+    }
   }
-  }
-  
+
   .left {
     margin: 50px 90px 30px 90px;
+    .flex-container {
+      display: flex;
+      align-items: center;
+      .button {
+        float: right;
+        padding-left: 30px;
+        .button_2 {
+          height: 30px;
+          width: 30px;
+          border: 1px solid #606060;
+          background-color: white;
+          font-size: 20px;
+          color: #606060;
+          cursor: pointer;
+          padding: 0;
+        }
+      }
+    }
   }
-  
+
   .right {
     margin: 50px 90px 30px 90px;
   }
-  
+
   .label {
-    font-size: 17px;
+    font-size: 25px;
     color: #606060;
     margin: 17px 17px 17px 17px;
     width: 50%;
   }
-  
+
+  .label_1 {
+    font-size: 25px;
+    color: #606060;
+    margin: 17px 17px 17px 17px;
+    width: 50%;
+    align-items: center;
+    display: flex;
+  }
+
   .pesudo {
     font-size: 17px;
     color: #606060;
     margin: 17px;
-    //width: 50%
   }
-  
-  ::placeholder {
-    font-size: 17px;
-    padding-left: 20px;
-  }
-  
-  .next_1 {
-    border: 1px solid #606060;
-    height: 37px;
-    width: 80px;
-    color: black;
-    border-radius: 30px;
-    font-size: 15px;
-    font-weight: 500;
-    padding: 6px 22px;
-    float: right;
-    margin-top: 2%;
-    margin-right: 30px;
-    background-color: white;
-  }
-  
-  .back {
-    border: 1px solid #606060;
-    height: 37px;
-    width: 80px;
-    color: black;
-    border-radius: 30px;
-    font-size: 15px;
-    font-weight: 500;
-    padding: 6px 22px;
-    float: left;
-    margin-left: 30px;
-    margin-top: 2%;
-    background-color: white;
-  }
-  
+
   .other {
     height: 95%;
     width: 95%;
     margin: 2%;
+    .last_div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      .uploads {
+        display: flex;
+        justify-content: center;
+
+        gap: 40px;
+        & > fieldset {
+          margin-top: 17px;
+          width: 22%;
+          border: none;
+        }
+        label {
+          width: 100%;
+          display: block;
+          box-sizing: border-box;
+          padding: 1rem 2rem;
+          font-size: 1.25rem;
+          border: 2px solid #606060;
+          color: #606060;
+          border-radius: 50px;
+          text-align: center;
+          input {
+            display: none;
+          }
+        }
+        small {
+          color: #121111;
+          float: right;
+          padding-right: 2rem;
+          font-size: 0.9rem;
+        }
+      }
+      .last_radio_button {
+        display: flex;
+        justify-content: center;
+        gap: 17px;
+        .label_1 {
+          font-size: 17px;
+          color: #606060;
+          margin: 0px;
+          width: 100%;
+          min-width: 150px;
+          align-items: center;
+          display: flex;
+          margin-top: 17px;
+          margin-bottom: 17px;
+        }
+      }
+    }
+    .details_box {
+      border: 1px solid #606060;
+      border-radius: 10px;
+      width: 600px;
+      height: 200px;
+      background-color: #edeef0;
+      border: none;
+      .details_course_box {
+        display: flex;
+        position: relative;
+        .current_duration {
+          margin-top: 70px;
+          font-weight: bold;
+          font-size: 1.5rem;
+          text-align: right;
+        }
+        .current_fees {
+          position: absolute;
+          top: 80%;
+          right: 5%;
+          font-weight: bold;
+          font-size: 1.5rem;
+        }
+        .detail_image_box {
+          width: 250px;
+          height: 195px;
+          img {
+            width: 100%;
+            height: 100%;
+            padding: 17px;
+            border-radius: 30px;
+          }
+        }
+      }
+    }
   }
-  
+
   .other_1 {
     margin: 50px 45px 30px 15px;
   }
-  
+
   .text {
     width: 97%;
     height: 45%;
     border: 1px solid #606060;
   }
-  
+
   .text_box {
     display: inline-block;
     width: 97%;
@@ -125,104 +357,62 @@
     margin-top: 7px;
     margin-bottom: 10px;
     border: 1px solid #606060;
+    padding: 30px;
   }
-  
+
   .underline {
     border: 0;
     border-bottom: 1px solid #606060;
     width: 97%;
     margin: 10px;
   }
-  
+
   input[type='radio'] {
-    box-sizing: border-box;
     appearance: none;
-    background: white;
-    outline: 1px solid #606060;
-    width: 16px;
-    height: 16px;
-  }
-  
-  .flex_box {
-    display: flex;
-  }
-  
-  .place_holder_flex {
-    margin: 10px;
-    border: 1px solid #606060;
-    border-radius: 30px;
-    height: 37px;
-    width: 45%;
-  }
-  
-  .flex-container {
-    display: flex;
-    align-items: center;
-  }
-  
-  .button {
-    float: right;
-    padding-left: 30px;
-  }
-  
-  .button_2 {
-    height: 30px;
+    border: 1px solid #d3d3d3;
     width: 30px;
-    border: 1px solid #606060;
-    background-color: white;
-    font-size: 20px;
-    color: #606060;
-    cursor: pointer;
+    height: 30px;
+    content: none;
+    outline: none;
+    margin: 0;
   }
-  
-  .enrollment_logo {
-    svg {
-      height: 80px;
-      width: 125px;
-    }
+  input[type='radio']:checked {
+    appearance: none;
+    outline: none;
+    padding: 0;
+    content: none;
+    border: none;
   }
-  
+  input[type='radio']:checked::before {
+    position: absolute;
+    color: green !important;
+    content: '\00A0\2713\00A0' !important;
+    border: 1px solid #d3d3d3;
+    font-weight: bolder;
+    font-size: 21px;
+  }
+
   #dob {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    position: relative;
     width: 100%;
-    input {
-      border: none;
+    .form-content {
+      width: 100%;
+    }
+    label {
+      width: 100%;
+      max-width: 100%;
     }
   }
-  
-  #DOB_box{
-    width: 200px;
-  }
-  
-  .footer {
-    display: flex;
-    justify-content: space-between;
-    //grid-row : 2;
-    grid-column: 1 / 7;
-    margin-bottom: 10px;
-    //align-items: center;
-  }
-  
-  .header {
-    //grid-row: 1;
-    grid-column: 1/7;
-    margin-left: 60px;
-    margin-top: 40px;
-    font-size: 17px;
-    cursor: pointer;
-  }
-  
+
   .student {
     font-weight: 600;
-    font-size: 20px;
+    font-size: 25px;
     margin-bottom: 15px;
   }
-  
+
   .x {
     float: right;
-    font-size: 15px;
+    font-size: 20px;
     font-weight: 900;
     display: flex;
     padding-right: 40px;
@@ -230,106 +420,429 @@
     background-color: white;
     cursor: pointer;
   }
-  
-
-
-
-
+}
+@media (max-width: '1850px') {
+  .enrollment_container {
+    .left_flex_contanier {
+      .uploads {
+        gap: 50px;
+      }
+    }
+  }
+}
+@media (max-width: '1700px') {
+  .enrollment_container {
+    .left_flex_contanier {
+      .uploads {
+        label {
+          min-width: 200px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: '1500px') {
+  .enrollment_container {
+    .label {
+      font-size: 18px;
+    }
+  }
 }
 
+@media (max-width: '1400px') {
+  .enrollment_container {
+    .left_flex_contanier {
+      .uploads {
+        gap: 25px;
+        label {
+          min-width: 170px;
+          font-size: 1.6rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: '1374px') {
+  .enrollment_container {
+    .other {
+      .last_div {
+        .uploads {
+          & > fieldset {
+            width: 30%;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: '1200px') {
+  .enrollment_container {
+    .left_flex_contanier {
+      .uploads {
+        display: block;
+        padding-left: 90px;
+      }
+    }
+  }
+}
+@media (max-width: '1150px') {
+  .enrollment_container {
+    .details {
+      .right {
+        .date_div {
+          margin-right: 0;
+        }
+        .num_of_child {
+          padding-left: 40px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: '1000px') {
+  .enrollment_container {
+    .left_flex_contanier {
+      .uploads {
+        padding-left: 25px;
+      }
+      .flex_box {
+        display: block;
+      }
+    }
+    .label {
+      width: 100%;
+    }
+  }
+}
+@media (max-width: '890px') {
+  .enrollment_container {
+    .details {
+      .right {
+        .date_div {
+          margin-right: 35px;
+        }
+      }
+    }
+  }
+}
 @media (max-width: '900px') {
-.enrollment_container{
-  .right {
-    .placeholder {
-      .pesudo {
+  .enrollment_container {
+    .left {
+      margin: 20px 30px 20px 30px;
+      .flex-container {
+        .button {
+          .button_2 {
+            height: 23px;
+            width: 23px;
+          }
+        }
+      }
+    }
+    .details {
+      .right {
+        .placeholder {
+          .pesudo {
+            font-size: 15px;
+          }
+        }
+        .button_div {
+          padding-left: 95%;
+          .button_2 {
+            width: 23px;
+            height: 23px;
+          }
+        }
+        .num_of_child {
+          padding-left: 35px;
+        }
+        margin: 20px 30px 20px 30px;
+        input[type='radio'] {
+          width: 17px;
+          height: 17px;
+        }
+        input[type='radio']:checked::before {
+          font-size: 15px;
+        }
+      }
+    }
+
+    .label {
+      font-size: 15px;
+    }
+
+    .left_flex_contanier {
+      .uploads {
+        gap: 18px;
+        label {
+          min-width: 130px;
+          font-size: 1.3rem;
+        }
+      }
+    }
+    .header {
+      font-size: 16px;
+      .header_ul {
+        justify-content: center;
+      }
+      .student {
+        font-size: 18px;
+      }
+    }
+    .radio_text {
+      .label_1 {
+        font-size: 14px;
+      }
+    }
+    .other {
+      .last_div {
+        .uploads {
+          & > fieldset {
+            width: 30%;
+          }
+          label {
+            font-size: 1.1rem;
+          }
+        }
+      }
+    }
+    .footer {
+      margin-bottom: 0;
+      .next_1 {
+        height: 30px;
+        width: 65px;
+        margin-top: 3%;
+      }
+      .enrollment_logo {
+        svg {
+          height: 65px;
+          width: 105px;
+        }
+      }
+      .back {
+        height: 30px;
+        width: 65px;
+        margin-top: 3%;
+      }
+    }
+    ::placeholder {
+      font-size: 15px;
+    }
+
+    .left_flex_contanier {
+      .flex_box {
+        .label {
+          font-size: 15px;
+        }
+      }
+    }
+
+    .other {
+      .details_box {
+        width: 420px;
+        height: 130px;
+        .details_course_box {
+          .current_duration {
+            margin-top: 50px;
+            font-weight: bold;
+            font-size: 1.2rem;
+            text-align: right;
+          }
+          .current_fees {
+            font-size: 1.2rem;
+          }
+          .detail_image_box {
+            width: 170px;
+            height: 130px;
+            img {
+              width: 100%;
+              height: 100%;
+              padding: 9px;
+              border-radius: 20px;
+            }
+          }
+        }
+      }
+      input[type='radio'] {
+        width: 17px;
+        height: 17px;
+      }
+      input[type='radio']:checked::before {
         font-size: 15px;
+      }
+
+      .other_1 {
+        margin: 30px 10px 30px 30px;
+      }
+
+      .text_box {
+        height: 200px;
+      }
+
+      .enrollment_logo {
+        svg {
+          height: 65px;
+          width: 100px;
+        }
       }
     }
   }
-
-  ::placeholder {
-    font-size: 15px;
-  }
-
-  .left_flex_contanier {
-    .flex_box {
-      display: inline;
-      .label {
-        font-size: 15px;
-      }
-    }
-  }
-
-  .left {
-    margin: 50px 30px 30px 30px;
-  }
-
-  .right {
-    margin: 50px 30px 30px 30px;
-  }
-
-  .footer {
-    margin-bottom: 1px;
-    .next_1 {
-      margin-top: 3%;
-      margin-right: 15px;
-    }
-    .back {
-      margin-top: 3%;
-      margin-left: 15px;
-    }
-  }
-
-  .other_1 {
-    margin: 30px 10px 30px 30px;
-  }
-
-  .label {
-    font-size: 15px;
-  }
-
-  .radio_text {
-    display: inline;
-  }
-
-  .text_box {
-    height: 200px;
-  }
-
-  .enrollment_logo {
-    svg {
-      height: 65px;
-      width: 100px;
-    }
-  }
-}
 }
 
 @media (max-width: '786px') {
-.enrollment_container{
-  .flex_box {
-    .place_holder_flex {
-      width: 35%;
+  .enrollment_container {
+    .left {
+      .flex-container {
+        .button {
+          .button_2 {
+            height: 20px;
+            width: 20px;
+          }
+        }
+      }
     }
-  }
-
-  .enrollment_logo {
-    svg {
-      height: 65px;
-      width: 100px;
+    .footer {
+      margin-bottom: 0;
+      .next_1 {
+        height: 30px;
+        width: 65px;
+        margin-top: 4%;
+        font-size: 13px;
+      }
+      .enrollment_logo {
+        svg {
+          height: 55px;
+          width: 95px;
+        }
+      }
+      .back {
+        height: 30px;
+        width: 65px;
+        margin-top: 4%;
+        font-size: 13px;
+      }
     }
-  }
+    .left_flex_contanier {
+      .uploads {
+        gap: 37px;
+        label {
+          min-width: 105px;
+          font-size: 1rem;
+        }
+      }
+    }
+    .header {
+      font-size: 15px;
+    }
+    .label {
+      font-size: 14px;
+    }
+    .radio_text {
+      padding-left: 35px;
+      .label_1 {
+        font-size: 13px;
+      }
+    }
+    .flex_box {
+      .place_holder_flex {
+        width: 35%;
+      }
+    }
 
-  .footer {
-    margin-bottom: 7px;
-  }
+    .other {
+      .last_div {
+        .uploads {
+          label {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+    .enrollment_logo {
+      svg {
+        height: 65px;
+        width: 100px;
+      }
+    }
 
-  .text_box {
-    height: 170px;
-  }
+    input[type='radio'] {
+      width: 15px;
+      height: 15px;
+    }
+    input[type='radio']:checked::before {
+      font-size: 13px;
+    }
+    .footer {
+      margin-bottom: 7px;
+    }
 
-  #DOB_box{
-    width: 150px;
+    .text_box {
+      height: 170px;
+    }
+
+    #DOB_box {
+      width: 150px;
+    }
   }
 }
+
+@media (max-width: '670px') {
+  .enrollment_container {
+    .flex_box {
+      display: inline;
+    }
+    .radio_text {
+      padding-left: 0;
+    }
+  }
+}
+
+@media (max-width: '600px') {
+  .enrollment_container {
+    .radio_text {
+      display: block;
+    }
+  }
+}
+
+@media (max-width: '500px') {
+  .enrollment_container {
+    .details {
+      display: block;
+      .right {
+        .button_div {
+          top: 55%;
+        }
+        .num_of_child {
+          padding-left: 0;
+        }
+      }
+    }
+    .radio_text {
+      padding-left: 60px;
+    }
+    .left {
+      margin: 20px 60px 20px 30px;
+    }
+  }
+}
+
+@media (max-width: '460px') {
+  .enrollment_container {
+    .other {
+      .details_box {
+        width: 330px;
+        height: 130px;
+        .details_course_box {
+          .detail_image_box {
+            img {
+              padding: 9px;
+              border-radius: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
 }
