@@ -184,30 +184,35 @@ const Enrollment = () => {
             >
               {' '}
               Personal Details |{' '}
+              { bold===0 && <div className='bottom-line' ></div>}
             </li>
             <li
               style={bold === 1 ? { fontWeight: '600' } : {}}
               onClick={() => setBold(1)}
             >
               Academic Qualifications |{' '}
+              { bold===1 && <div className='bottom-line' ></div>}
             </li>
             <li
               style={bold === 2 ? { fontWeight: '600' } : {}}
               onClick={() => setBold(2)}
             >
               Work Experience |{' '}
+              { bold===2 && <div className='bottom-line' ></div>}
             </li>
             <li
               style={bold === 3 ? { fontWeight: '600' } : {}}
               onClick={() => setBold(3)}
             >
               Other |
+              { bold===3 && <div className='bottom-line' ></div>}
             </li>
             <li
               style={bold === 4 ? { fontWeight: 600 } : {}}
               onClick={() => setBold(4)}
             >
               Cousre Details
+              { bold===4 && <div className='bottom-line' ></div>}
             </li>
           </ul>
         </div>
@@ -383,7 +388,7 @@ const Enrollment = () => {
                 <div className="date_div">
                   <div>
                     <InputComponent
-                      type="number"
+                      type="date"
                       placeholder="DD / MM / YYYY"
                       form={formData}
                       setField={setFormData}

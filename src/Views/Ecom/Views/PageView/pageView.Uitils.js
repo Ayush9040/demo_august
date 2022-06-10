@@ -1,3 +1,5 @@
+
+
 export const getEcomRoute = (location) =>{
   let exactPath = null
 

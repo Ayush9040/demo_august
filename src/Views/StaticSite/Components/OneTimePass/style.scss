@@ -1,4 +1,4 @@
-* {
+
   .main_big_box {
     width: 100vw;
     height: 100vh;
@@ -45,5 +45,14 @@
         }
       }
     }
-  }
+    input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+  }

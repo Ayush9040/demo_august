@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import MegaMenu from '../MegaMenu'
 import {
   Hamburger,
@@ -7,13 +7,25 @@ import {
   CommonUser,
   legacy1,
   MainLogo,
-  //title
 } from '../../assets/icons/icon'
 import './style.scss'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 
 const MediaNav = ({ title }) => {
   const [nav, setNav] = useState(false)
+
+  const [bold, setBold] = useState(0)
+
+  const location = useLocation()
+
+  useEffect(() => {
+    if (location.pathname === '/media/video') {
+      setBold(1)
+    } else {
+      setBold(0)
+    }
+  }, [])
+
   return (
     <>
       <div className="media-nav-container">
@@ -51,8 +63,20 @@ const MediaNav = ({ title }) => {
         <div className={`career-navigation-lg ${title}`}>
           {title === 'Gallery' && (
             <ul id="gallery-toggle">
-              <li>Images</li>
-              <li style={{ borderRight: '0' }}>Videos</li>
+              <Link to="/media">
+                <li style={bold === 0 ? { fontWeight: 'bold' } : {}}>Images</li>
+              </Link>
+              <Link to="/media/video">
+                <li
+                  style={
+                    bold === 1
+                      ? { borderRight: '0', fontWeight: 'bold' }
+                      : { borderRight: '0' }
+                  }
+                >
+                  Videos
+                </li>
+              </Link>
             </ul>
           )}
           <ul>

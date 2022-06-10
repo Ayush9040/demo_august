@@ -16,9 +16,7 @@ const CommonBannerAboutUs = ({
   const pageData = {
     blessings: `
       <p>Namaskar! 
-      <br/>
-      <br/>
-      <i>“Give every day the chance to become the most beautiful day of your life.”</i>
+      <i style='display:block;margin-top:20px;' >“Give every day the chance to become the most beautiful day of your life.”</i>
       </p>
       <p>
       Life is beautiful; it should be experienced with an abundance of joy and prosperity. But worry is a master-thief who constantly steals from us our moments of joy, our time with those we love most and our bliss. Caught in unending cycles of worry, we neglect what we should cherish most.  But the power to choose beauty, to choose joy, to make everyday beautiful is available to you in the art and science of Yoga. 

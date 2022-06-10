@@ -25,7 +25,6 @@ const OurLegacyModal = ({ data }) => {
                 </div>
                 <div className="position-right">
                   <p>{data.founder}</p>
-                  <br />
                   <span className="position-year">{data.year}</span>
                   
                 </div>

@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
+import { validateEmail } from '../../../../helpers'
 import CommonBannerNavPrimary from '../CommonBannerNavPrimary'
-import CommonBtn from '../commonbtn'
+
+import InputComponent from '../InputComponent'
 import './style.scss'
 const EditAccount = () => {
   const [formData, setFormData] = useState({
@@ -14,38 +16,46 @@ const EditAccount = () => {
     city: '',
     year: '',
     course: '',
-    name: '',
-    addLine1: '',
-    addLine2: '',
-    shipCountry: '',
-    shipState: '',
-    shipCity: '',
-    pinCode: '',
+    studentId: '',
+    alumni: '',
   })
 
-  const [empty,setEmpty]=useState(false)
+  const [empty, setEmpty] = useState(0)
 
   console.log(formData)
 
   const submitForm = () => {
-    if (formData.firstName === '') setEmpty(true)
-    else if (formData.lastName === '') setEmpty(true)
-    else if (formData.email === '') setEmpty(true)
-    else if (formData.gender === '') setEmpty(true)
-    else if (formData.phoneNum === '') setEmpty(true)
-    else if (formData.country === '') setEmpty(true)
-    else if (formData.state === '') setEmpty(true)
-    else if (formData.city === '') setEmpty(true)
-    else if (formData.year === '') setEmpty(true)
-    else if (formData.course === '') setEmpty(true)
-    else if (formData.name === '') setEmpty(true)
-    else if (formData.addLine1 === '') setEmpty(true)
-    else if (formData.addLine2 === '') setEmpty(true)
-    else if (formData.shipCountry === '') setEmpty(true)
-    else if (formData.shipState === '') setEmpty(true)
-    else if (formData.shipCity === '') setEmpty(true)
-    else if (formData.pinCode === '') setEmpty(true)
+    if (formData.firstName === '') {
+      return setEmpty(1)
+    } else if (formData.lastName === '') {
+      return setEmpty(2)
+    } else if (!validateEmail(formData.email)) {
+      console.log('invalid email')
+      return setEmpty(3)
+    } else if (formData.gender === '') {
+      return setEmpty(4)
+    } else if (formData.phoneNum === '') {
+      return setEmpty(5)
+    } else if (formData.country === '') {
+      return setEmpty(6)
+    } else if (formData.state === '') {
+      return setEmpty(7)
+    } else if (formData.city === '') {
+      return setEmpty(8)
+    } else if (formData.year === '') {
+      return setEmpty(9)
+    } else if (formData.course === '') {
+      return setEmpty(10)
+    } else if (formData.studentId === '') {
+      return setEmpty(11)
+    } else if (formData.alumni === '') {
+      return setEmpty(12)
+    }
+    console.log('form submitted ')
+    setEmpty(0)
   }
+
+  console.log(formData.gender)
 
   return (
     <>
@@ -55,72 +65,146 @@ const EditAccount = () => {
         <h2 className="account-header">Edit Account</h2>
         <div className="personal-info">Personal Info</div>
         <div className="account-input">
-          <input
-            type="text"
-            placeholder="First Name"
-            value={formData.firstName}
-            onChange={(e) => {
-              setFormData({ ...formData, firstName: e.target.value })
-            }}
-          />
-          <input
-            type="text"
-            placeholder="Last Name"
-            value={formData.lastName}
-            onChange={(e) => {
-              setFormData({ ...formData, lastName: e.target.value })
-            }}
-          />
-          <input
-            type="text"
-            placeholder="Email Id"
-            value={formData.email}
-            onChange={(e) => {
-              setFormData({ ...formData, email: e.target.value })
-            }}
-          />
-          <input
-            type="text"
-            placeholder="Gender"
-            value={formData.gender}
-            onChange={(e) => {
-              setFormData({ ...formData, gender: e.target.value })
-            }}
-          />
-          <input
-            type="text"
-            placeholder="Phone Number"
-            value={formData.phoneNum}
-            onChange={(e) => {
-              setFormData({ ...formData, phoneNum: e.target.value })
-            }}
-          />
-          <input
-            type="text"
-            placeholder="Country"
-            className="input-text"
-            value={formData.country}
-            onChange={(e) => {
-              setFormData({ ...formData, country: e.target.value })
-            }}
-          />
-          <input
-            type="text"
-            placeholder="State"
-            value={formData.state}
-            onChange={(e) => {
-              setFormData({ ...formData, state: e.target.value })
-            }}
-          />
-          <input
-            type="text"
-            placeholder="City"
-            value={formData.city}
-            onChange={(e) => {
-              setFormData({ ...formData, city: e.target.value })
-            }}
-          />
+          <>
+            <InputComponent
+              type="text"
+              placeholder="First Name"
+              form={formData}
+              setField={setFormData}
+              keyName="firstName"
+            />
+            {empty === 1 && (
+              <small style={{ color: 'red', marginLeft: '0' }}>
+                *Please Enter First Name Name!
+              </small>
+            )}
+          </>
+          <>
+            <InputComponent
+              type="text"
+              placeholder="Last Name"
+              form={formData}
+              setField={setFormData}
+              keyName="lastName"
+            />
+            {empty === 2 && (
+              <small style={{ color: 'red', marginLeft: '0' }}>
+                *Please Enter Last Name Name!
+              </small>
+            )}
+          </>
+
+          <>
+            <InputComponent
+              type="email"
+              placeholder="Email"
+              form={formData}
+              setField={setFormData}
+              keyName="email"
+            />
+            {empty === 3 && (
+              <small style={{ color: 'red', marginLeft: '0' }}>
+                *Please Enter Valid Email!
+              </small>
+            )}
+          </>
+
+          <>
+            <select
+              name="gender"
+              onChange={(e) =>
+                setFormData({ ...formData, gender: e.target.value })
+              }
+            >
+              <option value="none" selected>
+                Gender
+              </option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+              <option value="other">other</option>
+            </select>
+
+            {empty === 4 && (
+              <small style={{ color: 'red', marginLeft: '0' }}>
+                *Please Enter The Gender!
+              </small>
+            )}
+          </>
+
+          <>
+            <InputComponent
+              type="text"
+              placeholder="Phone Number"
+              form={formData}
+              setField={setFormData}
+              keyName="phoneNum"
+            />
+            {empty === 5 && (
+              <small style={{ color: 'red', marginLeft: '0' }}>
+                *Please Enter The phone number!
+              </small>
+            )}
+          </>
+
+          <>
+            <select
+              name="country"
+              onChange={(e) =>
+                setFormData({ ...formData, country: e.target.value })
+              }
+            >
+              <option value="none" selected>
+                Country
+              </option>
+              <option value="india">India</option>
+              <option value="australia">Australia</option>
+              <option value="usa">USA</option>
+            </select>
+
+            {empty === 6 && (
+              <small style={{ color: 'red', marginLeft: '0' }}>
+                *Please Select the Country!
+              </small>
+            )}
+          </>
+
+          <>
+            <select
+              name="state"
+              onChange={(e) =>
+                setFormData({ ...formData, state: e.target.value })
+              }
+            >
+              <option value="none" selected>
+                State
+              </option>
+              <option value="delhi">delhi</option>
+              <option value="mumbai">mumbai</option>
+              <option value="kolkata">kolkata</option>
+            </select>
+
+            {empty === 7 && (
+              <small style={{ color: 'red', marginLeft: '0' }}>
+                *Please Select the Country!
+              </small>
+            )}
+          </>
+          <>
+            <InputComponent
+              type="text"
+              placeholder="City"
+              form={formData}
+              setField={setFormData}
+              keyName="city"
+            />
+            {empty === 8 && (
+              <small style={{ color: 'red', marginLeft: '0' }}>
+                *Please Enter The City!
+              </small>
+            )}
+          </>
         </div>
+
         <hr />
         <div className="former-input">
           <div className="former-l1">
@@ -128,104 +212,69 @@ const EditAccount = () => {
             <div className="former-radio">
               <p>Yes</p>
               {/* <nbsp /> */}
-              <input type="radio" name="option" />
+              <input
+                onChange={() => setFormData({ ...formData, alumni: 'yes' })}
+                type="radio"
+                name="option"
+              />
               <p>No</p>
-              <input type="radio" name="option" />
+              <input
+                onChange={() => setFormData({ ...formData, alumni: 'no' })}
+                type="radio"
+                name="option"
+              />
             </div>
           </div>
           <div className="year-course">
-            <input
-              type="text"
-              placeholder="Year"
-              value={formData.year}
-              onChange={(e) => {
-                setFormData({ ...formData, year: e.target.value })
-              }}
-            />
-            <input
-              type="text"
-              placeholder="Course"
-              value={formData.course}
-              onChange={(e) => {
-                setFormData({ ...formData, course: e.target.value })
-              }}
-            />
-          </div>
-          <div className="subscribe">
-            <div className="subscribe-p">
-              Would you like to subscribe to the alumini newsletter?
+            <div className="year-student">
+              <>
+                <InputComponent
+                  type="text"
+                  placeholder="Year"
+                  form={formData}
+                  setField={setFormData}
+                  keyName="year"
+                />
+                {empty === 9 && (
+                  <small style={{ color: 'red', marginLeft: '0' }}>
+                    *Please Enter The City!
+                  </small>
+                )}
+              </>
+              <>
+                <InputComponent
+                  type="text"
+                  placeholder="studentID"
+                  form={formData}
+                  setField={setFormData}
+                  keyName="studentId"
+                />
+                {empty === 10 && (
+                  <small style={{ color: 'red', marginLeft: '0' }}>
+                    *Please Enter The Student ID!
+                  </small>
+                )}
+              </>
             </div>
-            <p>Yes</p>
-            <input type="radio" name="option1" />
-            <p>No</p>
-            <input type="radio" name="option1" />
+            <>
+              <InputComponent
+                type="text"
+                placeholder="Course"
+                form={formData}
+                setField={setFormData}
+                keyName="course"
+              />
+              {empty === 11 && (
+                <small style={{ color: 'red', marginLeft: '0' }}>
+                  *Please Enter The Course
+                </small>
+              )}
+            </>
           </div>
         </div>
-        <hr />
-        <div className="shipping">
-          <p>Shipping Details</p>
-          <input
-            type="text"
-            placeholder="Name"
-            value={formData.name}
-            onChange={(e) => {
-              setFormData({ ...formData, name: e.target.value })
-            }}
-          />
-          <input
-            type="text"
-            placeholder="Address Line 1"
-            value={formData.addLine1}
-            onChange={(e) => {
-              setFormData({ ...formData, addLine1: e.target.value })
-            }}
-          />
-          <input
-            type="text"
-            placeholder="Address Line 2"
-            value={formData.addLine2}
-            onChange={(e) => {
-              setFormData({ ...formData, addLine2: e.target.value })
-            }}
-          />
-          <input
-            type="text"
-            placeholder="Country"
-            value={formData.shipCountry}
-            onChange={(e) => {
-              setFormData({ ...formData, shipCountry: e.target.value })
-            }}
-          />
-          <input
-            type="text"
-            placeholder="State"
-            value={formData.shipState}
-            onChange={(e) => {
-              setFormData({ ...formData, shipState: e.target.value })
-            }}
-          />
-          <input
-            type="text"
-            placeholder="City"
-            value={formData.shipCity}
-            onChange={(e) => {
-              setFormData({ ...formData, shipCity: e.target.value })
-            }}
-          />
-          <input
-            type="text"
-            placeholder="Pin Code"
-            value={formData.pinCode}
-            onChange={(e) => {
-              setFormData({ ...formData, pinCode: e.target.value })
-            }}
-          />
-          <div className="continue-button">
-            <div onClick={submitForm}>
-              <CommonBtn text={'Continue'} />
-            </div>
-          </div>
-        </div>
+      </div>
+      <div className="save-button">
+        <span onClick={submitForm}>Save</span>
       </div>
     </>
   )

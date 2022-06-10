@@ -17,11 +17,8 @@ const SingleCourse = () => {
   }, [])
 
   return (
-    <div>
-      {courseId}
+    <div className='single-course'>
       <CommonBannerNavPrimary innerNav={false} />
-      <br />
-      <br />
       {!isLoading && <CourseDetails pageDate={pageDate} />}
     </div>
   )

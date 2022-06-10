@@ -12,7 +12,6 @@ import NewsLetter from '../../Components/NewsLetter'
 import Footer from '../../Components/Footer'
 import Blog from '../../Components/Blogs'
 import { useLocation } from 'react-router-dom'
-import MediaVideo from '../../Components/MediaVideo'
 const Home = () => {
   const route = useLocation()
   console.log(route.hash.substring(1, route.hash.length))
@@ -37,7 +36,6 @@ const Home = () => {
       <VideosSection />
       <NewsLetter />
       <Footer />
-      <MediaVideo />
     </>
   )
 }

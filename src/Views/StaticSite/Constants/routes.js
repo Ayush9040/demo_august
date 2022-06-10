@@ -13,7 +13,6 @@ import AlumniGallery from '../Views/Alumni/alumni-gallery'
 import Support from '../Views/Alumni/support'
 import Courses from '../Views/Courses'
 import SingleCourse from '../Views/Courses/course-name'
-import TTCCourse from '../Views/Courses/ttc-courses'
 import AnnamBramha from '../Views/Donation'
 import AnnamBrahmha from '../Views/Donation/annam-brahma'
 import Bmcschools from '../Views/Donation/bmcschools'
@@ -55,6 +54,7 @@ import Enrollment from '../Components/EnrollmentForm/index.jsx'
 import wellness from '../Components/Wellness/index.jsx'
 import CorporateSocialResponsibilty from '../Components/CorporateSocialResponsibility/index.js'
 import SignUp from '../Views/Signup'
+import MediaVideo from '../Components/MediaVideo/index.jsx'
 
 const staticSiteRoutes = [
   {
@@ -96,14 +96,6 @@ const staticSiteRoutes = [
     id: 'statisSiteCourse',
     routePath: '/courses/:courseId',
     name: 'Course',
-  },
-  {
-    Component: TTCCourse,
-    path: '/courses/ttc-course',
-    exact: true,
-    id: 'statisSiteTTC',
-    routePath: '/courses/ttc-course',
-    name: 'TTC',
   },
   {
     Component: AboutUs,
@@ -523,6 +515,14 @@ const staticSiteRoutes = [
     id: 'statisSiteUnderSignUp',
     routePath: '/sign-up',
     name: 'SignUp',
+  },
+  {
+    Component: MediaVideo,
+    path: '/media/video',
+    exact: true,
+    id: 'statisSiteUnderMediaVideo',
+    routePath: '/media/video',
+    name: 'MediaVideo',
   },
 ]
 

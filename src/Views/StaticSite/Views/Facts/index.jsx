@@ -23,9 +23,13 @@ const OurFacts = () => {
             <div className="our-facts-text ">
               <div className="decade-year">
                 <span>
-                  {selectedRange.start}
-                  <br />-<br />
-                  {selectedRange.end}
+                  <div>
+                    {selectedRange.start}
+                  </div>
+                  <div>-</div>
+                  <div>
+                    {selectedRange.end}
+                  </div>
                 </span>
               </div>
               <p className="decade-para">
@@ -35,7 +39,6 @@ const OurFacts = () => {
                     <>
                       <h3>{desc?.date}</h3>
                       <p>{desc?.data}</p>
-                      <br />
                     </>
                   )
                 })}

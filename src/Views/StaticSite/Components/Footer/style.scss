@@ -16,10 +16,15 @@
     display: block;
     margin-top: 3rem;
     margin-left: 1rem;
+    
     .logo {
+      margin-bottom: 10px;
       img {
         width: 40%;
       }
+    }
+    .footer-description{
+      margin-bottom: 20px;
     }
     .social-icons-container {
       width: 75%;
@@ -94,6 +99,7 @@
     .menu {
       display: flex;
       box-sizing: border-box;
+      margin-bottom: 20px;
       ul {
         padding-left: 0;
         list-style: none;

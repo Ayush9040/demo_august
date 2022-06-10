@@ -28,7 +28,7 @@ const Footer = () => {
             <img src={baseDomain + homeAssets.homeAsset70} />
           </a>
         </div>
-        <br />
+       
 
         <div className='footer-description'>
           <p>
@@ -37,7 +37,7 @@ const Footer = () => {
             world
           </p>
         </div>
-        <br />
+        
 
         <div className='social-icons-container'>
           <ul>
@@ -154,8 +154,7 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-        <br />
-        <br />
+        
 
         <div className='logo-content'>
           {location1}

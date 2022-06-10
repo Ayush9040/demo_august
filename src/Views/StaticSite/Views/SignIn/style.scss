@@ -3,6 +3,7 @@
     margin: 5rem auto 0;
     text-align: center;
     form{
+        margin-top: 20px;
         label{
             display: flex;
             align-items: center;
@@ -17,7 +18,7 @@
         }
         input{
             border: none;
-            margin-left: 1rem;
+            //margin-left: 1rem;
             font-size: 1.25rem;
             &:focus{
                 border: none;
@@ -42,9 +43,21 @@
         align-items: center;
     }
     .signin-btn{
+        display: flex;
+        justify-content: center;
+        gap: 10px;
         border: none;
+        height: fit-content;
+        width: 100%;
+        text-align: center;
         &>div{
-            margin: 0 auto;
+            width: 250px;
+            margin: 0;   
+        }
+        .global-common-btn{
+            &:last-child{
+                border: 3px solid #EA4335;
+            }
         }
     }
     .social-logins{
@@ -82,6 +95,31 @@
         }
         .social-logins{
             width: 50%;
+        }
+    }
+}
+
+@media(max-width:480px){
+    .signin-form{
+        width: 100%;
+        form{
+            label{
+                width: 60%;
+            }
+        }
+        .social-logins{
+            width: 50%;
+        }
+        .signin-btn{
+            border: none;
+            flex-wrap: wrap;
+             
+            // .global-common-btn{
+            //     &:first-child{
+            //         padding: 1rem 7rem;
+            //     }
+            // }
+            
         }
     }
 }

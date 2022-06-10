@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import CommonBannerNav2 from '../../Components/EcomNav'
 //import { mail, lock } from '../../assets/icons/icon'
+import { Link } from 'react-router-dom'
 import './style.scss'
 import CommonBtn from '../../Components/commonbtn'
 import InputComponent from '../../Components/InputComponent'
@@ -20,13 +21,12 @@ const SignUp = () => {
     window.scrollTo(0, 0)
   }, [])
 
-  console.log(formData, 'sahil')
+
 
   const handleSubmit = () => {
     if (formData.name === '') {
       return setEmpty(1)
-    }
-    else if (!validateEmail(formData.email)) {
+    } else if (!validateEmail(formData.email)) {
       console.log('email error')
       return setEmpty(2)
     } else if (!validatePassword(formData.password)) {
@@ -34,6 +34,7 @@ const SignUp = () => {
     } else if (formData.confirmPassword !== formData.password)
       return setEmpty(4)
     console.log('calling api')
+    setEmpty(0)
   }
 
   return (
@@ -43,7 +44,7 @@ const SignUp = () => {
         <form>
           <h1>Sign Up</h1>
 
-          <div className='form-field' >
+          <div className="form-field">
             <InputComponent
               type="text"
               placeholder="Name"
@@ -51,9 +52,13 @@ const SignUp = () => {
               setField={setFormData}
               keyName="name"
             />
-            {empty===1 && <small style={{ color:'red',marginLeft:'0' }} >*Please Enter Name!</small>}
+            {empty === 1 && (
+              <small style={{ color: 'red', marginLeft: '0' }}>
+                *Please Enter Name!
+              </small>
+            )}
           </div>
-          <div className='form-field' >
+          <div className="form-field">
             <InputComponent
               type="email"
               placeholder="Email Address"
@@ -61,9 +66,13 @@ const SignUp = () => {
               setField={setFormData}
               keyName="email"
             />
-            {empty===2 && <small style={{ color:'red',marginLeft:'0' }} >*Please Enter Valid Email!</small>}
+            {empty === 2 && (
+              <small style={{ color: 'red', marginLeft: '0' }}>
+                *Please Enter Valid Email!
+              </small>
+            )}
           </div>
-          <div className='form-field' >
+          <div className="form-field">
             <InputComponent
               type="password"
               placeholder="Password"
@@ -71,9 +80,14 @@ const SignUp = () => {
               setField={setFormData}
               keyName="password"
             />
-            {empty===3 && <small style={{ color:'red',marginLeft:'0' }} >*Password must be 8 characters long and should include uppercase,lowecare,number and a symbol</small>}
+            {empty === 3 && (
+              <small style={{ color: 'red', marginLeft: '0' }}>
+                *Password must be 8 characters long and should include
+                uppercase,lowecare,number and a symbol
+              </small>
+            )}
           </div>
-          <div className='form-field' >
+          <div className="form-field">
             <InputComponent
               type="password"
               placeholder=" Confirm Password"
@@ -81,13 +95,18 @@ const SignUp = () => {
               setField={setFormData}
               keyName="confirmPassword"
             />
-            {empty===4 && <small style={{ color:'red',marginLeft:'0' }} >*Passwords are not matching!</small>}
+            {empty === 4 && (
+              <small style={{ color: 'red', marginLeft: '0' }}>
+                *Passwords are not matching!
+              </small>
+            )}
           </div>
-          <label className="signin-btn" onClick={handleSubmit}>
-            <CommonBtn text={'Sign Up'} />
+          <label className="signin-btn" id='sign-up' onClick={handleSubmit}>
+            <CommonBtn text={'Submit'} />
           </label>
         </form>
       </div>
+      <p style={{ textAlign:'center' }} >Already a user ? <Link to='/sign-in' ><span style={{ color:'#CC4625' }} >Sign-In</span></Link></p>
     </div>
   )
 }
