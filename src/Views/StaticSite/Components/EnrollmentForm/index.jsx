@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { filler1 } from '../../assets/icons/icon'
+import { filler1, upload } from '../../assets/icons/icon'
 import './styles.scss'
 import { courseArray } from '../../Constants/courses/c200hr'
 import { useParams } from 'react-router-dom'
@@ -172,7 +172,7 @@ const Enrollment = () => {
     <>
       <div className="enrollment_container ">
         <div className="header">
-          <Link to='/courses'>
+          <Link to="/courses">
             <button className="x">x</button>
           </Link>
           <div className="student">Student Enrollment</div>
@@ -184,35 +184,34 @@ const Enrollment = () => {
             >
               {' '}
               Personal Details |{' '}
-              { bold===0 && <div className='bottom-line' ></div>}
+              {bold === 0 && <div className="bottom-line"></div>}
             </li>
             <li
               style={bold === 1 ? { fontWeight: '600' } : {}}
               onClick={() => setBold(1)}
             >
               Academic Qualifications |{' '}
-              { bold===1 && <div className='bottom-line' ></div>}
+              {bold === 1 && <div className="bottom-line"></div>}
             </li>
             <li
               style={bold === 2 ? { fontWeight: '600' } : {}}
               onClick={() => setBold(2)}
             >
               Work Experience |{' '}
-              { bold===2 && <div className='bottom-line' ></div>}
+              {bold === 2 && <div className="bottom-line"></div>}
             </li>
             <li
               style={bold === 3 ? { fontWeight: '600' } : {}}
               onClick={() => setBold(3)}
             >
-              Other |
-              { bold===3 && <div className='bottom-line' ></div>}
+              Other |{bold === 3 && <div className="bottom-line"></div>}
             </li>
             <li
               style={bold === 4 ? { fontWeight: 600 } : {}}
               onClick={() => setBold(4)}
             >
               Cousre Details
-              { bold===4 && <div className='bottom-line' ></div>}
+              {bold === 4 && <div className="bottom-line"></div>}
             </li>
           </ul>
         </div>
@@ -553,6 +552,9 @@ const Enrollment = () => {
                           placeholder="Upload Image"
                           accept="image/*"
                         />
+                        &ensp;
+                        &ensp;
+                        {upload}
                       </label>
                     </fieldset>
                     <fieldset>
@@ -563,6 +565,9 @@ const Enrollment = () => {
                           id="resume"
                           placeholder="Upload Resume"
                         />
+                        &ensp;
+                        &ensp;
+                        {upload}
                       </label>
                       <br />
                       <small>Please ensure the file is under 2 MB</small>
