@@ -499,7 +499,7 @@ const Enrollment = () => {
             <div className="details">
               <div className="left">
                 <div className="flex-container">
-                  <div>
+                  <div className='career-history' >
                     <InputComponent
                       type="text"
                       placeholder="School/College"
@@ -613,7 +613,7 @@ const Enrollment = () => {
             <div className="details">
               <div className="left">
                 <div className="flex-container">
-                  <div style={{ width: '99%' }}>
+                  <div className='career-history' >
                     <InputComponent
                       type="text"
                       placeholder="Company Name"
