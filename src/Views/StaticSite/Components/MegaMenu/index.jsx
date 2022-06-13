@@ -216,7 +216,7 @@ const MegaMenu = ({ setNav }) => {
                 <li>Batch 4 - 2 Months TTC-Online-Hindi</li>
                 <li>Batch 5 - 2 Months TTC-Online-English</li>
                 <li>Batch 6 - 3 Months Weekend TTC-Online-English</li>
-    
+
                 <li className="text-bold">500 Hour Courses TTC (intermediate)</li>
                 <li style={{ marginBottom: '2rem' }}>
                   3 Months TTC-Online-English
@@ -262,8 +262,8 @@ const MegaMenu = ({ setNav }) => {
                   <li>Weekend Asana Classes (Men & Women) - Online</li>
                   <li>Children&apos;s Regular Clasees - On Campus</li>
                   <li>Children&apos;s Weekend Clasees - On Campus</li>
-                  <li>Advanced Asana Regular Class - Online  
-                  (Only for TYI Teachers)</li>
+                  <li>Advanced Asana Regular Class - Online
+                    (Only for TYI Teachers)</li>
                   <li>Yog-Prayas-Online</li>
                   <li>Meditation Foundation Course-Online</li>
                   <li>Regular Foundation Course-Online</li>
