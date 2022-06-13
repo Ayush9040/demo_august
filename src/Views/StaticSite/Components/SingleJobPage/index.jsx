@@ -63,7 +63,7 @@ const SingleJob = () => {
                       placeholder="Upload Image"
                       accept="image/*"
                     />
-                    &ensp; &ensp;
+                    &ensp;
                     {upload}
                   </label>
                 </fieldset>
@@ -75,7 +75,7 @@ const SingleJob = () => {
                       id="resume"
                       placeholder="Upload Resume"
                     />
-                    &ensp; &ensp;
+                    &ensp;
                     {upload}
                   </label>
 

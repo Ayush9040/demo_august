@@ -66,7 +66,7 @@ const VolunteerJob = () => {
                       placeholder="Upload Image"
                       accept="image/*"
                     />
-                    &ensp; &ensp;
+                    &ensp; 
                     {upload}
                   </label>
                 </fieldset>
@@ -78,7 +78,7 @@ const VolunteerJob = () => {
                       id="resume"
                       placeholder="Upload Resume"
                     />
-                    &ensp; &ensp;
+                    &ensp; 
                     {upload}
                   </label>
                   <small>Please ensure the file is under 2 MB</small>
