@@ -1072,6 +1072,13 @@ export const experienceAssets={
 }
 
 
+export const CSR ={
+  peace:'/CSR/peace-justice.png',
+  hunger:'/CSR/zero-hunger.png',
+  responsible:'/CSR/responsible1.png',
+  health:'/CSR/good-health.png'
+}
+
 
 
 export default baseDomain

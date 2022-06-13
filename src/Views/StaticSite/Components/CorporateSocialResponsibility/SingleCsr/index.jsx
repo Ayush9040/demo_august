@@ -38,31 +38,6 @@ const SingleCsr = () => {
             </>
           )
         })}
-
-        {/* <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec
-          ante id nunc vehicula pharetra nec vitae est. Sed diam dui, luctus sed
-          velit quis, placerat consequat felis. Vivamus cursus in mauris at
-          dignissim. Etiam venenatis semper pharetra. Duis ut diam eros. In hac
-          habitasse platea dictumst. Nam tincidunt nisi metus, et dignissim
-          ligula cursus ut.
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec
-          ante id nunc vehicula pharetra nec vitae est. Sed diam dui, luctus sed
-          velit quis, placerat consequat felis. Vivamus cursus in mauris at
-          dignissim. Etiam venenatis semper pharetra. Duis ut diam eros. In hac
-          habitasse platea dictumst. Nam tincidunt nisi metus, et dignissim
-          ligula cursus ut.
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec
-          ante id nunc vehicula pharetra nec vitae est. Sed diam dui, luctus sed
-          velit quis, placerat consequat felis. Vivamus cursus in mauris at
-          dignissim. Etiam venenatis semper pharetra. Duis ut diam eros. In hac
-          habitasse platea dictumst. Nam tincidunt nisi metus, et dignissim
-          ligula cursus ut.
-        </p> */}
       </div>
       <div className="csr-single-btn">
         <button onClick={() => setShowModal(true)}> Support Us</button>

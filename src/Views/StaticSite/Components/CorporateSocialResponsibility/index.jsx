@@ -1,9 +1,10 @@
 import React from 'react'
 //import { Link } from 'react-router-dom'
-//import baseDomain, { homeAssets } from '../../assets/images/imageAsset'
+import baseDomain from '../../assets/images/imageAsset'
 import CommonBanner from '../Common-banner'
 import './style.scss'
 import CsrBlock from './data'
+import { CSR } from '../../assets/images/imageAsset'
 import { Link } from 'react-router-dom'
 
 const CorporateSocialResponsibilty = () => {
@@ -27,26 +28,26 @@ const CorporateSocialResponsibilty = () => {
         </div>
         <div className="csr-svg-section">
           <div className="svg-one">
-            <img src="" />
+            <img src={`${baseDomain}${CSR.hunger}`} />
             <p>Zero Hunger</p>
           </div>
           <div className="svg-one">
-            <img src="" />
+            <img src={`${baseDomain}${CSR.health}`}/>
             <p>Good health and well-being</p>
           </div>
           <div className="svg-one">
-            <img src="" />
+            <img src={`${baseDomain}${CSR.responsible}`} />
             <p>Responsible consumption and production</p>
           </div>
           <div className="svg-one">
-            <img src="" />
+            <img src={`${baseDomain}${CSR.peace}`} />
             <p>Peace, justice and strong institutions</p>
           </div>
         </div>
         <div className="csr-mid-last">
           <p>
             The Yoga Institute has been working selflessly for people all around
-            the world in accor- dance with the Founder&apos;s values. We conduct
+            the world in accordance with the Founder&apos;s values. We conduct
             CSR programs where a large number of volunteers and sadhakas from
             the global landscape come together for social activities. We are in
             collaboration with several non-profit organizations to create
@@ -77,7 +78,7 @@ const CorporateSocialResponsibilty = () => {
                   <div className="last-btn">
                     <Link to={`/csr/${support.id}`} >
                       <span className="btn-div">
-                        <button>View Story</button>
+                        <button className='view_btn'>View Story</button>
                       </span>
                     </Link>
                   </div>
