@@ -12,6 +12,9 @@ import NewsLetter from '../../Components/NewsLetter'
 import Footer from '../../Components/Footer'
 import Blog from '../../Components/Blogs'
 import { useLocation } from 'react-router-dom'
+import AlertModal from '../../Components/AlertModal'
+import Pagenotfound from '../../Components/404 Error'
+import Greeting from '../../Components/Greetings'
 
 const Home = () => {
   const route = useLocation()
@@ -25,6 +28,9 @@ const Home = () => {
   })
   return (
     <>
+      <AlertModal message={{ type: 'Message', message : 'Something went wrong' }}/>
+      <Pagenotfound />
+      <Greeting />
       <HeroSection />
       <Legacy />
       <OurOfferings />
