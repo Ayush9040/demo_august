@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
 import './style.scss'
+// import axios from 'axios'
 import {
   Hamburger,
   User,
@@ -12,6 +13,7 @@ import {
   // legacy2,
   MainLogo,
   MainLogo1,
+  Cart,
 } from '../../assets/icons/icon'
 import { Link } from 'react-router-dom'
 import MegaMenu from '../MegaMenu'
@@ -20,7 +22,6 @@ const InnerNavComponent = ({ abc }) => {
   const [nav, setNav] = useState(false)
 
   const [bold, setBold] = useState(0)
-
   const location = useLocation()
 
   useEffect(() => {
@@ -70,6 +71,14 @@ const InnerNavComponent = ({ abc }) => {
             </ul>
           </div>
           <div className="user-container">
+            
+            {abc.title==='Shop'
+              ?    <Link to='/shop'>        
+                { Cart } </Link>
+              :null
+            }
+           
+
             <Link to="/sign-in">
               {abc.color === 'orange'
                 ? User
@@ -80,7 +89,10 @@ const InnerNavComponent = ({ abc }) => {
           </div>
         </div>
 
-        <div className={'career-navigation-lg'} id={abc.title==='gallery' ? 'toggles' :''} >
+        <div
+          className={'career-navigation-lg'}
+          id={abc.title === 'gallery' ? 'toggles' : ''}
+        >
           {abc.title === 'gallery' && (
             <ul id="gallery-toggle">
               <Link to="/media">
@@ -104,7 +116,9 @@ const InnerNavComponent = ({ abc }) => {
               return (
                 <Link key={items.title} to={items.url}>
                   <li
-                    className={abc.title === items.innerTitle ? 'nav-active' : ''}
+                    className={
+                      abc.title === items.innerTitle ? 'nav-active' : ''
+                    }
                     style={
                       abc.menuColor === 'black'
                         ? { color: 'black', borderRight: '1px solid black' }

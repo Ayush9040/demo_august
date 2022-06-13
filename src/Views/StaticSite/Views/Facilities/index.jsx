@@ -11,6 +11,7 @@ import baseDomain, {
   background,
   facilitiyAssets,
 } from '../../assets/images/imageAsset'
+import InnerNavComponent from '../../Components/InnerNavComponent'
 //import { faL } from '@fortawesome/free-solid-svg-icons'
 
 //import baseDomain, { facilitiyAssets } from '../../assets/images/imageAsset'
@@ -82,7 +83,12 @@ const Facilities = () => {
 
   let description =
     'To ensure absolute comfort to our students and sadhakas, we provide a host of facilities. You can avail of accommodation services, relax at the gazebo, meditate peacefully in the pods, shop merchandise at the Book Store, eat a sattvic meal at the Naivedyam, and a lot more. All our facilities have been specially designed to give you a blissful and tranquil experience. Explore below!'
-
+  const FactBan = {
+    title: 'Facilities',
+    color: 'white',
+    menuColor: 'white',
+    menuItems: [],
+  }
   return (
     <div className="facilities-page-container">
       <CommonBanner
@@ -98,7 +104,9 @@ const Facilities = () => {
 
         bannerImg={`${baseDomain}${background.facilities}`}
         overlay="#46AEC6D4"
-      />
+      >
+        <InnerNavComponent abc={FactBan}/>
+      </CommonBanner>
       <div className="facilities-navigation-lg">
         <ul>
           <li
@@ -210,7 +218,7 @@ const Facilities = () => {
           </li>
         </ul>
       </div>
-      <div className="facilities-info"  id="preview" >
+      <div className="facilities-info" id="preview">
         <Slider
           ref={slider}
           {...settings}
@@ -309,7 +317,7 @@ const Facilities = () => {
           </div>
           <div id="dining-hall" className="facilities-slide">
             <div className="facility-image">
-              <img src={`${baseDomain}${facilitiyAssets.facilitiyAssets7}`}/>
+              <img src={`${baseDomain}${facilitiyAssets.facilitiyAssets7}`} />
             </div>
             <div className="facility-description">
               <h2>Dining Hall – Naivedyam</h2>

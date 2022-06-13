@@ -9,6 +9,7 @@ import baseDomain, {
   background,
   giftingAssets,
 } from '../../assets/images/imageAsset'
+import InnerNavComponent from '../../Components/InnerNavComponent'
 
 const Gifting = () => {
   const route = useLocation()
@@ -32,7 +33,12 @@ const Gifting = () => {
   //     setDetails(false)
   //   }
   // }
-
+  const GiftingBan = {
+    title: 'Career',
+    color: 'white',
+    menuColor: 'white',
+    menuItems: [],
+  }
   return (
     <>
       <div className="gifting-main-container">
@@ -48,7 +54,9 @@ const Gifting = () => {
 
           bannerImg={`${baseDomain}${background.gifting}`}
           overlay="#61829DD4"
-        />
+        >
+          <InnerNavComponent abc={GiftingBan}/>
+        </CommonBanner>
         <SectionComponent
           page="Gifting"
           image={`${baseDomain}${giftingAssets.careerAssets}`}

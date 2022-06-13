@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import AlumniGrid from '../../Components/AlumniGrid'
 import CommonBannerNav1 from '../../Components/AlumniNav'
 import baseDomain, { alumniAssets } from '../../assets/images/imageAsset'
+import InnerNavComponent from '../../Components/InnerNavComponent'
 
 const AlumniGallery = () => {
   const galleryImages = {
@@ -99,10 +100,37 @@ const AlumniGallery = () => {
     `${baseDomain}${alumniAssets.alumniDayAssets4}`,
     `${baseDomain}${alumniAssets.alumniDayAssets5}`,
   ]
-
+  const AlumniGalleryBar = {
+    title: 'alumni-gallery',
+    color: 'orange',
+    menuColor: 'black',
+    menuItems: [
+      {
+        innerTitle: 'alumni-events',
+        url: '/alumni',
+        name: 'Upcoming Events',
+      },
+      {
+        innerTitle: 'alumni-gallery',
+        url: '/alumni/alumni-gallery',
+        name: 'Alumni Gallery',
+      },
+      {
+        innerTitle: 'alma-master',
+        url: '/alumni/support',
+        name: 'Support Your Alma Master',
+      },
+      {
+        innerTitle:'alumni-contact',
+        url:'/#footer',
+        name:'Contact'
+      }
+    ],
+  }
   return (
     <div className="contact-container">
-      <CommonBannerNav1 title={'AlumniGallery'} />
+      {/* <CommonBannerNav1 title={'AlumniGallery'} /> */}
+      <InnerNavComponent abc={AlumniGalleryBar}/>
       <AlumniGrid images={alumgalleryImgs} notEvent={false} />
       <div className="contact-tiles">
         <div className="tiles-container">

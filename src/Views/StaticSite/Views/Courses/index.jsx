@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import CommonBannerNavPrimary from '../../Components/CommonBannerNavPrimary'
+//import CommonBannerNavPrimary from '../../Components/CommonBannerNavPrimary'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
 import './style.scss'
@@ -15,11 +15,18 @@ import {
   classes,
 } from '../../Constants/courses/c200hr'
 import AlumniCarousel from '../../Components/AluminiCarousel'
+import InnerNavComponent from '../../Components/InnerNavComponent'
 
 const Courses = () => {
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
+  const CoursesBan = {
+    title: 'Career',
+    color: 'orange',
+    menuColor: 'orange',
+    menuItems: [],
+  }
   //let hourCourse = [...course200H,...course900H]
 
   let data = [course200H, camps, courseArray, classes]
@@ -38,7 +45,8 @@ const Courses = () => {
 
   return (
     <div className="courses-container">
-      <CommonBannerNavPrimary innerNav={false} />
+      {/* <CommonBannerNavPrimary innerNav={false} /> */}
+      <InnerNavComponent abc={CoursesBan}/>
       <div className="search">
         <h1>Courses</h1>
         <div className="search-bar">
