@@ -499,7 +499,7 @@ const Enrollment = () => {
             <div className="details">
               <div className="left">
                 <div className="flex-container">
-                  <div style={{ width: '99%' }}>
+                  <div>
                     <InputComponent
                       type="text"
                       placeholder="School/College"
@@ -553,7 +553,6 @@ const Enrollment = () => {
                           accept="image/*"
                         />
                         &ensp;
-                        &ensp;
                         {upload}
                       </label>
                     </fieldset>
@@ -565,7 +564,6 @@ const Enrollment = () => {
                           id="resume"
                           placeholder="Upload Resume"
                         />
-                        &ensp;
                         &ensp;
                         {upload}
                       </label>
@@ -668,6 +666,8 @@ const Enrollment = () => {
                           placeholder="Upload Image"
                           accept="image/*"
                         />
+                        &ensp;
+                        {upload}
                       </label>
                     </fieldset>
                     <fieldset>
@@ -678,6 +678,8 @@ const Enrollment = () => {
                           id="resume"
                           placeholder="Upload Resume"
                         />
+                        &ensp;
+                        {upload}
                       </label>
                       <br />
                       <small>Please ensure the file is under 2 MB</small>
