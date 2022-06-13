@@ -309,10 +309,10 @@ const staticSiteRoutes = [
   },
   {
     Component: Volunteer,
-    path: '/join-our-team',
+    path: '/volunteer',
     exact: true,
     id: 'statisSiteUnderJoin',
-    routePath: '/join-our-team',
+    routePath: '/volunteer',
     name: 'Join',
   },
   {

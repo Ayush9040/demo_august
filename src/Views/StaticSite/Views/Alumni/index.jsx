@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import CommonBannerNav1 from '../../Components/AlumniNav'
+// import CommonBannerNav1 from '../../Components/AlumniNav'
 import { share } from '../../assets/icons/icon'
 import './style.scss'
 import SeminarCard from '../../Components/SeminarCard'
