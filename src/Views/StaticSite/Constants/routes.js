@@ -318,10 +318,10 @@ const staticSiteRoutes = [
   },
   {
     Component: Values,
-    path: '/join-our-team/values',
+    path: '/volunteer/values',
     exact: true,
     id: 'statisSiteUnderValues',
-    routePath: '/join-our-team/values',
+    routePath: '/volunteer/values',
     name: 'Values',
   },
   // {
@@ -390,10 +390,10 @@ const staticSiteRoutes = [
   },
   {
     Component: VolunteerJob,
-    path: '/join-our-team/:id',
+    path: '/volunteer/:id',
     exact: true,
     id: 'statisSiteUnderVolunteerJob',
-    routePath: '/join-our-team/:id',
+    routePath: '/volunteer/:id',
     name: 'VolunteerJob',
   },
   {

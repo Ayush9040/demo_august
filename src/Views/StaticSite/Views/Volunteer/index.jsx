@@ -19,12 +19,12 @@ const Volunteer = () => {
     menuItems: [
       {
         innerTitle: 'volunteer-with-us',
-        url: '/join-our-team',
+        url: '/volunteer',
         name: 'Volunteer With Us',
       },
       {
         innerTitle: 'volunteer-values',
-        url: '/join-our-team/values',
+        url: '/volunteer/values',
         name: 'Values',
       },
     ],
@@ -54,22 +54,22 @@ const Volunteer = () => {
         </div>
         <div className="career-cards">
           {/* <CareerCard
-            link={'/join-our-team/program-id'}
+            link={'/volunteer/program-id'}
             cardTitle='Annam Brahma'
             bgImg={baseDomain + volunteerAssets.volunteerAssets1}
           />
           <CareerCard
-            link={'/join-our-team/program-id'}
+            link={'/volunteer/program-id'}
             cardTitle='BMC Schools'
             bgImg={baseDomain + volunteerAssets.volunteerAssets2}
           />
           <CareerCard
-            link={'/join-our-team/program-id'}
+            link={'/volunteer/program-id'}
             cardTitle='Traffic Police'
             bgImg={baseDomain + volunteerAssets.volunteerAssets3}
           />
           <CareerCard
-            link={'/join-our-team/program-id'}
+            link={'/volunteer/program-id'}
             cardTitle='Tree Plantation'
             bgImg={baseDomain + volunteerAssets.volunteerAssets4}
           /> */}
@@ -77,7 +77,7 @@ const Volunteer = () => {
             return (
               <CareerCard
                 key={i}
-                link={`/join-our-team/${item.id}`}
+                link={`/volunteer/${item.id}`}
                 cardTitle={item.name}
                 bgImg={item.image}
               />

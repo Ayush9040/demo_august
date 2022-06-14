@@ -12,12 +12,12 @@ const Values = () => {
     menuItems: [
       {
         innerTitle: 'volunteer-with-us',
-        url: '/join-our-team',
+        url: '/volunteer',
         name: 'Volunteer With Us',
       },
       {
         innerTitle: 'volunteer-values',
-        url: '/join-our-team/values',
+        url: '/volunteer/values',
         name: 'Values',
       },
     ],
