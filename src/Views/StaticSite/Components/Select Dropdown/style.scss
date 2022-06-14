@@ -1,0 +1,17 @@
+.Dates-dropdown{
+  border: none;
+}
+
+@media(max-width:620px){
+  .course-card{
+      width: 100%;
+  }
+  .Select-dropdown{
+      border-color: white;
+      cursor: pointer;
+      margin-top: 2rem;
+      position: relative;
+      display: flex;
+      left: 20rem;
+  }
+}

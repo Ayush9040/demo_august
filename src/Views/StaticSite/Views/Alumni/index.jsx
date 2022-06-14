@@ -1,16 +1,45 @@
 import React, { useEffect } from 'react'
-import CommonBannerNav1 from '../../Components/AlumniNav'
+// import CommonBannerNav1 from '../../Components/AlumniNav'
 import { share } from '../../assets/icons/icon'
 import './style.scss'
 import SeminarCard from '../../Components/SeminarCard'
 import baseDomain, { alumniAssets } from '../../assets/images/imageAsset'
+import InnerNavComponent from '../../Components/InnerNavComponent'
 const Seminar = () => {
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
+  const AlumniBar = {
+    title: 'alumni-events',
+    color: 'orange',
+    menuColor: 'black',
+    menuItems: [
+      {
+        innerTitle: 'alumni-events',
+        url: '/alumni',
+        name: 'Upcoming Events',
+      },
+      {
+        innerTitle: 'alumni-gallery',
+        url: '/alumni/alumni-gallery',
+        name: 'Alumni Gallery',
+      },
+      {
+        innerTitle: 'alma-master',
+        url: '/alumni/support',
+        name: 'Support Your Alma Master',
+      },
+      {
+        innerTitle:'alumni-contact',
+        url:'/#footer',
+        name:'Contact'
+      }
+    ],
+  }
   return (
     <div className="seminar-series">
-      <CommonBannerNav1 title={'Seminar'} />
+      {/* <CommonBannerNav1 title={'Seminar'} /> */}
+      <InnerNavComponent abc={AlumniBar}/>
       <div className="alumni-content" id="seminar">
         <div className="newsletter-content">
           <h2>

@@ -7,11 +7,18 @@ import './style.scss'
 import baseDomain, { background } from '../../assets/images/imageAsset'
 
 import { Job } from '../../utils/JobDetails'
+import InnerNavComponent from '../../Components/InnerNavComponent'
 
 const Careers = () => {
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
+  const CareerBan = {
+    title: 'Career',
+    color: 'white',
+    menuColor: 'white',
+    menuItems: [],
+  }
   return (
     <div className="careers-page">
       <CommonBanner
@@ -25,7 +32,9 @@ const Careers = () => {
         innerNav={false}
         bannerImg={`${baseDomain}${background.volunteer}`}
         overlay='#DDAE66D4'
-      />
+      >
+        <InnerNavComponent abc={CareerBan}/>
+      </CommonBanner>
       <div className="jobs-container">
         <h1>
           Join us<div className="bottom-line"></div>

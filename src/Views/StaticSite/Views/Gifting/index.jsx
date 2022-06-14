@@ -10,6 +10,7 @@ import baseDomain, {
   //giftingAssets,
 } from '../../assets/images/imageAsset'
 import GiftingData from './data'
+import InnerNavComponent from '../../Components/InnerNavComponent'
 
 const Gifting = () => {
   const [gifting, setGifitng] = useState(GiftingData)
@@ -34,7 +35,12 @@ const Gifting = () => {
   //     setDetails(false)
   //   }
   // }
-
+  const GiftingBan = {
+    title: 'Career',
+    color: 'white',
+    menuColor: 'white',
+    menuItems: [],
+  }
   return (
     <>
       <div className="gifting-main-container">
@@ -50,8 +56,10 @@ const Gifting = () => {
 
           bannerImg={`${baseDomain}${background.gifting}`}
           overlay="#61829DD4"
-        />
-        {gifting.map((item) => {
+        >
+          <InnerNavComponent abc={GiftingBan}/>
+        </CommonBanner>
+                {gifting.map((item) => {
           return (
             <>
               <SectionComponent

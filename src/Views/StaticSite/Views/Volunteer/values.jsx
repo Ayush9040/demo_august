@@ -2,8 +2,26 @@ import React from 'react'
 import CommonBanner from '../../Components/Common-banner'
 import './styles.scss'
 import baseDomain, { volunteerAssets, background } from '../../assets/images/imageAsset'
+import InnerNavComponent from '../../Components/InnerNavComponent'
 //import ValuesImg from '../../assets/images/values.png'
 const Values = () => {
+  const ValuesBar = {
+    title: 'volunteer-values',
+    color: 'white',
+    menuColor: 'white',
+    menuItems: [
+      {
+        innerTitle: 'volunteer-with-us',
+        url: '/volunteer',
+        name: 'Volunteer With Us',
+      },
+      {
+        innerTitle: 'volunteer-values',
+        url: '/volunteer/values',
+        name: 'Values',
+      },
+    ],
+  }
   return (
     <>
       <div className='Benefits-container'>
@@ -17,7 +35,9 @@ const Values = () => {
           innerNav={true}
           bannerImg={`${baseDomain}${background.volunteer}`}
           overlay='#C88068D4'
-        />
+        >
+          <InnerNavComponent abc={ValuesBar}/>
+        </CommonBanner>
       </div>
       <div className='content-container pd-career'>
         <div className='text-content'>

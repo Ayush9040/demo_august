@@ -13,20 +13,12 @@ import AlumniGallery from '../Views/Alumni/alumni-gallery'
 import Support from '../Views/Alumni/support'
 import Courses from '../Views/Courses'
 import SingleCourse from '../Views/Courses/course-name'
-import AnnamBramha from '../Views/Donation'
-import AnnamBrahmha from '../Views/Donation/annam-brahma'
-import Bmcschools from '../Views/Donation/bmcschools'
-import Children from '../Views/Donation/children'
-import Community from '../Views/Donation/community'
-import Police from '../Views/Donation/police'
-import Truckasana from '../Views/Donation/truckasana'
-import Underprivileged from '../Views/Donation/underprivileged'
 import Facilities from '../Views/Facilities'
 import FAQ from '../Components/Faq'
 import Gifting from '../Views/Gifting'
 import Home from '../Views/Home'
-import Volunteer from '../Views/Joinourteam'
-import Values from '../Views/Joinourteam/values'
+import Volunteer from '../Views/Volunteer'
+import Values from '../Views/Volunteer/values'
 import MediaGallery from '../Views/Media'
 import MediaEvents from '../Views/Media/events'
 import News from '../Views/Media/news'
@@ -45,7 +37,7 @@ import AllExperience from '../Views/Experience/index.js'
 import SignIn from '../Views/SignIn/index.jsx'
 import Careers from '../Views/Careers/index.jsx'
 import SingleJob from '../Components/SingleJobPage/index.jsx'
-import VolunteerJob from '../Views/Joinourteam/volunteerJob.jsx'
+import VolunteerJob from '../Views/Volunteer/volunteerJob.jsx'
 import BrowseCourses from '../Components/BrowseCourses/index.jsx'
 import TermsCondition from '../Components/TermsandCondition/index.jsx'
 import PrivacyPolicy from '../Components/PrivacyPolicy/index.jsx'
@@ -55,8 +47,10 @@ import wellness from '../Components/Wellness/index.jsx'
 import CorporateSocialResponsibilty from '../Components/CorporateSocialResponsibility/index.jsx'
 import SingleCsr from '../Components/CorporateSocialResponsibility/SingleCsr/index.jsx'
 import SignUp from '../Views/Signup'
-
 import MediaVideo from '../Components/MediaVideo/index.jsx'
+import SingleDonation from '../Components/SingleDonation/index.jsx'
+import DonationPage from '../Views/Donation'
+
 const staticSiteRoutes = [
   {
     Component: Home,
@@ -275,68 +269,12 @@ const staticSiteRoutes = [
     name: 'Gifting',
   },
   {
-    Component: AnnamBramha,
+    Component: DonationPage,
     path: '/donation',
     exact: true,
     id: 'statisSiteDonation',
     routePath: '/donation',
     name: 'Donation',
-  },
-  {
-    Component: AnnamBrahmha,
-    path: '/donation/annam-brahma',
-    exact: true,
-    id: 'statisSiteAnnamBrahma',
-    routePath: '/donation/annam-brahma',
-    name: 'AnnamBrahma',
-  },
-  {
-    Component: Bmcschools,
-    path: '/donation/bmcschools',
-    exact: true,
-    id: 'statisSiteBMCSchools',
-    routePath: '/donation/bmcschools',
-    name: 'BMCSchools',
-  },
-  {
-    Component: Children,
-    path: '/donation/children',
-    exact: true,
-    id: 'statisSiteChildren',
-    routePath: '/donation/children',
-    name: 'Children',
-  },
-  {
-    Component: Community,
-    path: '/donation/community',
-    exact: true,
-    id: 'statisSiteCommunity',
-    routePath: '/donation/community',
-    name: 'Community',
-  },
-  {
-    Component: Police,
-    path: '/donation/police',
-    exact: true,
-    id: 'statisSitePolice',
-    routePath: '/donation/police',
-    name: 'Police',
-  },
-  {
-    Component: Truckasana,
-    path: '/donation/truckasana',
-    exact: true,
-    id: 'statisSiteTruckasana',
-    routePath: '/donation/truckasana',
-    name: 'Truckasana',
-  },
-  {
-    Component: Underprivileged,
-    path: '/donation/unprivileged',
-    exact: true,
-    id: 'statisSiteUnderPrivileged',
-    routePath: '/donation/unprivileged',
-    name: 'Privileged',
   },
   {
     Component: Seminar,
@@ -372,18 +310,18 @@ const staticSiteRoutes = [
   },
   {
     Component: Volunteer,
-    path: '/join-our-team',
+    path: '/volunteer',
     exact: true,
     id: 'statisSiteUnderJoin',
-    routePath: '/join-our-team',
+    routePath: '/volunteer',
     name: 'Join',
   },
   {
     Component: Values,
-    path: '/join-our-team/values',
+    path: '/volunteer/values',
     exact: true,
     id: 'statisSiteUnderValues',
-    routePath: '/join-our-team/values',
+    routePath: '/volunteer/values',
     name: 'Values',
   },
   // {
@@ -452,10 +390,10 @@ const staticSiteRoutes = [
   },
   {
     Component: VolunteerJob,
-    path: '/join-our-team/:id',
+    path: '/volunteer/:id',
     exact: true,
     id: 'statisSiteUnderVolunteerJob',
-    routePath: '/join-our-team/:id',
+    routePath: '/volunteer/:id',
     name: 'VolunteerJob',
   },
   {
@@ -524,6 +462,14 @@ const staticSiteRoutes = [
     id: 'statisSiteUnderMediaVideo',
     routePath: '/media/video',
     name: 'MediaVideo',
+  },
+  {
+    Component: SingleDonation,
+    path: '/donation/:donationId',
+    exact: true,
+    id: 'statisSiteUnderSingleDonation',
+    routePath: '/donation/:donationId',
+    name: 'SingleDonation',
   },
   {
     Component: SingleCsr,

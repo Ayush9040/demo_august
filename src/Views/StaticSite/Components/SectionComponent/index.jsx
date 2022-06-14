@@ -27,7 +27,7 @@ const SectionComponent = ({
             <p>{description}</p>
           </div>
           {page === 'Donation' ? (
-            <Link to={url ? url:''}>
+            <Link to={url ? url :''}>
               <button className="donate-button-new">Donate</button>
             </Link>
           ) : (

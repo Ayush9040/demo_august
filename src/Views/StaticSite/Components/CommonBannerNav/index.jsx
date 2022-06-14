@@ -21,19 +21,19 @@ const CommonBannerNav = ({ innerNav }) => {
             <div className="career-navigation-sm">
               <ul>
       
-                <Link to="/join-our-team">
+                <Link to="/volunteer">
                   <li
                     className={`${
-                      currentPathname === '/join-our-team' && 'nav-active'
+                      currentPathname === '/volunteer' && 'nav-active'
                     }`}
                   >
                     Volunteer with us
                   </li>
                 </Link>
-                <Link to="/join-our-team/values">
+                <Link to="/volunteer/values">
                   <li
                     className={`${
-                      currentPathname === '/join-our-team/values' &&
+                      currentPathname === '/volunteer/values' &&
                       'nav-active'
                     }`}
                     style={{ borderRight: '0' }}
@@ -54,19 +54,19 @@ const CommonBannerNav = ({ innerNav }) => {
               {/* <Link to="/careers"><li className={`${currentPathname === "/careers" && "nav-active"}`}>Why TYI</li></Link>
           <Link to="/careers/benefits"><li className={`${currentPathname === "/careers/benefits" && "nav-active"}`}>Benefits</li></Link>
           <Link to="/careers/ourcareer"><li className={`${currentPathname === "/careers/ourcareer" && "nav-active"}`}>Our Careers</li></Link> */}
-              <Link to="/join-our-team">
+              <Link to="/volunteer">
                 <li
                   className={`${
-                    currentPathname === '/join-our-team' && 'nav-active'
+                    currentPathname === '/volunteer' && 'nav-active'
                   }`}
                 >
                   Volunteer with us
                 </li>
               </Link>
-              <Link to="/join-our-team/values">
+              <Link to="/volunteer/values">
                 <li
                   className={`${
-                    currentPathname === '/join-our-team/values' && 'nav-active'
+                    currentPathname === '/volunteer/values' && 'nav-active'
                   }`}
                   style={{ borderRight: '0' }}
                 >
