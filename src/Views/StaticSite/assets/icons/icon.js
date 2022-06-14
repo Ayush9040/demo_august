@@ -103,7 +103,7 @@ export const filler = (
 )
 
 export const filler1 = (
-  <svg xmlns="http://www.w3.org/2000/svg" id="a" viewBox="0 0 96.38 50">
+  <svg xmlns="http://www.w3.org/2000/svg" id="a" viewBox="0 0 96.38 50" >
     <g opacity=".75" className="c">
       <path
         fill="#ebb38a"
