@@ -9,6 +9,7 @@ import 'slick-carousel/slick/slick-theme.css'
 import Slider from 'react-slick'
 import './styles.css'
 import axios from 'axios'
+import InnerNavComponent from '../../Components/InnerNavComponent'
 
 const Shop = () => {
   useEffect(() => {
@@ -46,11 +47,17 @@ const Shop = () => {
     slidesToScroll: 1,
     arrows: false,
   }
-
+  const ShopBan = {
+    title: 'Shop',
+    color: 'orange',
+    menuColor: 'orange',
+    menuItems: [],
+  }
   return (
     <div className="shop-container">
-      <CommonBannerNav1 innerNav={false} />
-     
+      {/* <CommonBannerNav1 innerNav={false} /> */}
+      <InnerNavComponent abc={ShopBan}/>
+
       <div className="search-container">
         <MenuToolTip setKey={setKey} />
         <input

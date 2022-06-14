@@ -1,5 +1,5 @@
 import React from 'react'
-import CommonBannerNavAboutUs from '../CommonBannerNavAboutUs'
+//import CommonBannerNavAboutUs from '../CommonBannerNavAboutUs'
 import './styles.scss'
 
 
@@ -10,6 +10,7 @@ const CommonBannerAboutUs = ({
   Heading,
   isOnlyBanner,
   isBlessing,
+  children
 }) => {
   console.log(PageType)
 
@@ -38,7 +39,8 @@ const CommonBannerAboutUs = ({
       >
         {Navigation && (
           <div className={'navigation-container'}>
-            <CommonBannerNavAboutUs innerNav={true} />
+            {/* <CommonBannerNavAboutUs innerNav={true} /> */}
+            {children}
           </div>
         )}
        

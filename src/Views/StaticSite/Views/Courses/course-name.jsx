@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom' 
-import CommonBannerNavPrimary from '../../Components/CommonBannerNavPrimary'
+//import CommonBannerNavPrimary from '../../Components/CommonBannerNavPrimary'
 import CourseDetails from '../../Components/CourseDetails'
+import InnerNavComponent from '../../Components/InnerNavComponent'
 import { c200h } from '../../Constants/courses/c200hr'
 
 const SingleCourse = () => {
@@ -15,10 +16,16 @@ const SingleCourse = () => {
     setPageData(c200h[courseId])
     setIsLoadding(false)
   }, [])
-
+  const CareerNameBan = {
+    title: 'Career',
+    color: 'orange',
+    menuColor: 'orange',
+    menuItems: [],
+  }
   return (
     <div className='single-course'>
-      <CommonBannerNavPrimary innerNav={false} />
+      {/* <CommonBannerNavPrimary innerNav={false} /> */}
+      <InnerNavComponent abc={CareerNameBan}/>
       {!isLoading && <CourseDetails pageDate={pageDate} />}
     </div>
   )

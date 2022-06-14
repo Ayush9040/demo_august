@@ -19,7 +19,7 @@ const VolunteerGrid = () => {
           <div className="common-gallery-grid">
             <div className="common-grid-1">
               <img
-                src={baseDomain + alumniAssets.supportAssets1}
+                src={`${baseDomain}${alumniAssets.supportAssets1}`}
                 alt=""
                 className="img-main"
               />
@@ -27,29 +27,29 @@ const VolunteerGrid = () => {
             <div className="common-grid-2">
               <div className="sub-grid-1">
                 <img
-                  src={baseDomain + alumniAssets.supportAssets2}
+                  src={`${baseDomain}${alumniAssets.supportAssets2}`}
                   alt="gallery"
                 />
               </div>
               <div className="sub-grid-2">
                 <img
-                  src={baseDomain + alumniAssets.supportAssets3}
+                  src={`${baseDomain}${alumniAssets.supportAssets3}`}
                   alt="gallery"
                 />
               </div>
             </div>
             <div className="common-grid-1">
               <img
-                src={baseDomain + alumniAssets.supportAssets4}
+                src={`${baseDomain}${alumniAssets.supportAssets4}`}
                 className="img-main"
               />
             </div>
             <div className="common-grid-2">
               <div className="sub-grid-1">
-                <img src={baseDomain + alumniAssets.supportAssets5} alt="" />
+                <img src={`${baseDomain}${alumniAssets.supportAssets5}`} alt="" />
               </div>
               <div className="sub-grid-2">
-                <img src={baseDomain + alumniAssets.supportAssets6} alt="" />
+                <img src={`${baseDomain}${alumniAssets.supportAssets6}`} alt="" />
               </div>
             </div>
           </div>

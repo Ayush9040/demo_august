@@ -1,12 +1,12 @@
 import React, { useEffect } from 'react'
-import CommonBannerNavPrimary from '../../Components/CommonBannerNavPrimary'
+//import CommonBannerNavPrimary from '../../Components/CommonBannerNavPrimary'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
 import './style.scss'
 import CourseSection from '../../Components/CourseSections'
-import CommonBtn from '../../Components/commonbtn'
+//import CommonBtn from '../../Components/commonbtn'
 import { courseCardData } from '../../utils/courseCardData'
-import { Link } from 'react-router-dom'
+//import { Link } from 'react-router-dom'
 
 import {
   courseArray,
@@ -14,11 +14,19 @@ import {
   camps,
   classes,
 } from '../../Constants/courses/c200hr'
+import AlumniCarousel from '../../Components/AluminiCarousel'
+import InnerNavComponent from '../../Components/InnerNavComponent'
 
 const Courses = () => {
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
+  const CoursesBan = {
+    title: 'Career',
+    color: 'orange',
+    menuColor: 'orange',
+    menuItems: [],
+  }
   //let hourCourse = [...course200H,...course900H]
 
   let data = [course200H, camps, courseArray, classes]
@@ -37,7 +45,8 @@ const Courses = () => {
 
   return (
     <div className="courses-container">
-      <CommonBannerNavPrimary innerNav={false} />
+      {/* <CommonBannerNavPrimary innerNav={false} /> */}
+      <InnerNavComponent abc={CoursesBan}/>
       <div className="search">
         <h1>Courses</h1>
         <div className="search-bar">
@@ -125,8 +134,8 @@ const Courses = () => {
           </div>
         </div>
       </div>
-      <div className="course-alumni-section">
-        <div className="courses-alumni-content">
+      {/* <div className='course-alumni-section'>
+        <div className='courses-alumni-content'>
           <h1>Alumni</h1>
           <p>
             Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -186,7 +195,8 @@ const Courses = () => {
         <Link to="">
           <CommonBtn text={'Explore all'} />
         </Link>
-      </div>
+      </div> */}
+      <AlumniCarousel/>
     </div>
   )
 }

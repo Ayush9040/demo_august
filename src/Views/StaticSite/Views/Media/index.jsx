@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import './style.scss'
 import MediaSection from '../../Components/MediaSection'
-import MediaNav from '../../Components/MediaNav'
+// import MediaNav from '../../Components/MediaNav'
 import GridComponent from '../../Components/GridComponent'
 // import { FondationDayGridComponent } from '../../Components/GridComponent'
 import CommonBtn from '../../Components/commonbtn'
@@ -9,6 +9,7 @@ import Carousel from 'react-gallery-carousel'
 import 'react-gallery-carousel/dist/index.css'
 // import { harmonyImagesData } from '../../assets/images/media/mediaAsset'
 import { mediaData } from '../../utils/mediaData'
+import InnerNavComponent from '../../Components/InnerNavComponent'
 
 const MediaGallery = () => {
   useEffect(() => {
@@ -25,10 +26,33 @@ const MediaGallery = () => {
   // const images = harmonyImagesData.map((number) => ({
   //   src: number,
   // }))
+  const Gallery = {
+    title: 'gallery',
+    color: 'white',
+    menuColor: 'white',
+    menuItems: [
+      {
+        innerTitle: 'gallery',
+        url: '/media',
+        name: 'Gallery',
+      },
+      {
+        innerTitle: 'news',
+        url: '/media/news',
+        name: 'News',
+      },
+      {
+        innerTitle: 'events',
+        url: '/media/events',
+        name: 'Events',
+      },
+    ],
+  }
   return (
     <div className="media-gallery-section">
       <div className="media-gallery">
-        <MediaNav title={'Gallery'} />
+        {/* <MediaNav title={'Gallery'} /> */}
+        <InnerNavComponent abc={Gallery}/>
         <MediaSection
           upcomingEvents={false}
           subHeading={''}

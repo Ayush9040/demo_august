@@ -30,7 +30,7 @@ const VideosSection = () => {
             }
           >
             <div className="svg-container">{videos2}</div>
-            <img src={baseDomain+homeAssets.homeAsset64} />
+            <img src={`${baseDomain}${homeAssets.homeAsset64}`} />
           </div>
           <div
             className="image-cont"
@@ -40,7 +40,7 @@ const VideosSection = () => {
             }
           >
             <div className="svg-container">{videos2}</div>
-            <img src={baseDomain+homeAssets.homeAsset65} />
+            <img src={`${baseDomain}${homeAssets.homeAsset65}`} />
           </div>
           <div
             className="image-cont"
@@ -50,7 +50,7 @@ const VideosSection = () => {
             }
           >
             <div className="svg-container">{videos2}</div>
-            <img src={baseDomain+homeAssets.homeAsset66}/>
+            <img src={`${baseDomain}${homeAssets.homeAsset66}`}/>
           </div>
         </div>
         <a

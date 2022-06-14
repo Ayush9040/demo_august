@@ -1,9 +1,17 @@
 import React, { useState } from 'react'
 import './style.scss'
+import { ACH, cheque, donation } from '../../../assets/icons/icon'
+import InputComponent from '../../InputComponent'
 
 const CsrModal = ({ showModal, setShowModal }) => {
   const [modalvalue, setModalValue] = useState(0)
   const [amount, setAmount] = useState(0)
+  const [csrForm, setCsrForm] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    organisation: '',
+  })
 
   if (showModal === false) {
     return null
@@ -25,14 +33,47 @@ const CsrModal = ({ showModal, setShowModal }) => {
           {modalvalue === 0 ? (
             <>
               <div className="modal-header">
-                <h1>Title</h1>
+                <h1>Tree Plantation Drive</h1>
                 <div className="bottom-line"></div>
               </div>
               <div className="input-data">
-                <input placeholder="Name" />
-                <input placeholder="Email Id" />
-                <input placeholder="Contact Number" />
-                <input placeholder="Organistion" />
+                
+                <div className='modal_input'>
+                  <InputComponent
+                    placeholder="Name"
+                    type="text"
+                    form={csrForm}
+                    setField={setCsrForm}
+                    keyName="name"
+                  />
+                </div>
+                <div className='modal_input'>
+                  <InputComponent
+                    placeholder="Email ID"
+                    type="email"
+                    form={csrForm}
+                    setField={setCsrForm}
+                    keyName="email"
+                  />
+                </div>
+                <div className='modal_input'>
+                  <InputComponent
+                    placeholder="Contact Number"
+                    type="number"
+                    form={csrForm}
+                    setField={setCsrForm}
+                    keyName="phone"
+                  />
+                </div>
+                <div className='modal_input'>
+                  <InputComponent
+                    placeholder="Organisation"
+                    type="text"
+                    form={csrForm}
+                    setField={setCsrForm}
+                    keyName="organisation"
+                  />
+                </div>
               </div>
               <button onClick={() => setModalValue(1)}>Next</button>
             </>
@@ -178,7 +219,7 @@ const CsrModal = ({ showModal, setShowModal }) => {
                   ></div>
                 </div>
 
-                <button className='support-btn'>Support the cause</button>
+                <button className="support-btn">Support the cause</button>
               </div>
             </>
           ) : (
@@ -193,7 +234,7 @@ const CsrModal = ({ showModal, setShowModal }) => {
                   </div>
                   <div className="mid-section">
                     <div className="payment-one">
-                      {/* svg */}
+                      {ACH}
                       <p className="header">ACH/ECS</p>
                       <p>
                         All donations for The Yoga Institute projects can be
@@ -202,8 +243,8 @@ const CsrModal = ({ showModal, setShowModal }) => {
                         Service)
                       </p>
                     </div>
-                    <div className="payment-two">
-                      {/* svg */}
+                    <div className="payment-one">
+                      {cheque}
                       <p className="header">Cheque / Demand Draft</p>
                       <p>
                         All donations are exempt from Income Tax under Section
@@ -211,8 +252,8 @@ const CsrModal = ({ showModal, setShowModal }) => {
                         drawn in favour of The Yoga Institute.
                       </p>
                     </div>
-                    <div className="payment-three">
-                      {/* svg */}
+                    <div className="payment-one">
+                      {donation}
                       <p className="header">In Kind Donation</p>
                       <p>
                         Another way to help The Yoga Institute activities is

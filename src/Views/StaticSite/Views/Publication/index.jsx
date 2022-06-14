@@ -1,22 +1,57 @@
 import React, { useEffect } from 'react'
-import PublicationNav from '../../Components/PublicationNav'
+// import PublicationNav from '../../Components/PublicationNav'
 import './style.scss'
 import { breakIcon } from '../../assets/icons/icon'
 import CommonBtn from '../../Components/commonbtn'
 import baseDomain, { publicationAssests } from '../../assets/images/imageAsset'
+import InnerNavComponent from '../../Components/InnerNavComponent'
 const YogaTotalHealth = () => {
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
 
+  const yogaHealth = {
+    title:'yoga-health',
+    color:'white',
+    menuColor:'white',
+    menuItems:[
+      {
+        innerTitle:'yoga-health',
+        url:'/publication',
+        name:'Yoga and Total Health'
+      },
+      {
+        innerTitle:'yogasttav',
+        url:'/publication/yogasattva',
+        name:'Yogasattava'
+      },
+      {
+        innerTitle:'books',
+        url:'/publication/books',
+        name:'Books'
+      },
+      {
+        innerTitle:'ebooks',
+        url:'/publication/e-books',
+        name:'E-books'
+      },
+      {
+        innerTitle:'library',
+        url:'/publication/library',
+        name:'Library'
+      }
+    ]
+  }
+
   return(
     <div className="yoga-total-health">
       <div className="background">
-        <PublicationNav title={'yoga-health'} />
+        {/* <PublicationNav title={'yoga-health'} /> */}
+        <InnerNavComponent abc={yogaHealth} />
       </div>
       <div className="publication-intro">
         <div className="mag-preview">
-          <img src={baseDomain + publicationAssests.publicationAssests7} />
+          <img src={`${baseDomain}${publicationAssests.publicationAssests7}`} />
         </div>
         <div className="mag-details">
           <div className="journal">

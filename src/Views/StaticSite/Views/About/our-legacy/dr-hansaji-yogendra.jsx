@@ -6,12 +6,12 @@ import baseDomain,{ aboutAssets } from '../../../assets/images/imageAsset.js'
 let leftImg=baseDomain+aboutAssets.aboutAsset27
 let rightImg=baseDomain+aboutAssets.aboutAsset28
   
-let g1=baseDomain+aboutAssets.aboutAsset29
-let g2=baseDomain+aboutAssets.aboutAsset30
-let g3=baseDomain+aboutAssets.aboutAsset31
-let g4=baseDomain+aboutAssets.aboutAsset32
-let g5=baseDomain+aboutAssets.aboutAsset33
-let g6=baseDomain+aboutAssets.aboutAsset34
+let g1=`${baseDomain}${aboutAssets.aboutAsset29}`
+let g2=`${baseDomain}${aboutAssets.aboutAsset30}`
+let g3=`${baseDomain}${aboutAssets.aboutAsset31}`
+let g4=`${baseDomain}${aboutAssets.aboutAsset32}`
+let g5=`${baseDomain}${aboutAssets.aboutAsset33}`
+let g6=`${baseDomain}${aboutAssets.aboutAsset34}`
 
 export default function HarishJi() {
   const data = {

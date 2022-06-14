@@ -9,7 +9,7 @@ export const socialPageData = [
     fresh, nutritious, and healthy food to the underprivileged
     citizens of the country without discrimination. The food is
     served to over 1000 people daily, 365 days a year.`,
-    image: baseDomain + socialResponsibilityAssets.annamBrahma,
+    image: `${baseDomain}${socialResponsibilityAssets.annamBrahma}`,
   },
   {
     title: 'Truckasana',
@@ -23,7 +23,7 @@ export const socialPageData = [
     truckers. Based on the findings, The Yoga Institute devised
     Truck Aasana, a unique Yoga regime that truckers can do
     easily with their routine as well as on the move.`,
-    image: baseDomain + socialResponsibilityAssets.truckAsana,
+    image: `${baseDomain}${socialResponsibilityAssets.truckAsana}`,
   },
   {
     title: 'Yoga for transgender community',
@@ -33,7 +33,7 @@ export const socialPageData = [
     and also lack of access to quality care. Yoga encourages
     them to derive enormous benefits and experience a sense of
     well-being for a lifetime.`,
-    image: baseDomain + socialResponsibilityAssets.transgender,
+    image: `${baseDomain}${socialResponsibilityAssets.transgender}`,
   },
   {
     title: 'Yoga for special need kids',
@@ -46,7 +46,7 @@ export const socialPageData = [
     Institute of Speech and Hearing Disabilities, Rangoonwala
     Foundation, Reach Out, etc. are all duly exposed to the
     yogic way of life.`,
-    image: baseDomain + socialResponsibilityAssets.specialChildren,
+    image: `${baseDomain}${socialResponsibilityAssets.specialChildren}`,
   },
   {
     title: 'Tree Plantation drive',
@@ -56,7 +56,7 @@ export const socialPageData = [
     undertaken to plant more trees and to expand the green
     cover. Through these efforts, we raise awareness locally and
     work to preserve our environment for generations to come.`,
-    image: baseDomain + socialResponsibilityAssets.palnting,
+    image:`${baseDomain}${socialResponsibilityAssets.palnting}`,
   },
   {
     title: 'Police',
@@ -69,6 +69,6 @@ export const socialPageData = [
     through these programmes to enhance their ability to
     manage and eventually overcome PTSD and similar
     psychological and physical ailments.`,
-    image: baseDomain + socialResponsibilityAssets.police,
+    image: `${baseDomain}${socialResponsibilityAssets.police}`,
   },
 ]

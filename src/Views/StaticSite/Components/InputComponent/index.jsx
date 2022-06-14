@@ -8,17 +8,22 @@ const InputComponent = ({
   setField,
   keyName,
   form,
+  css,
+  minnum,
+  maxnum,
 }) => {
   return (
     <div className="form-content">
       <form>
-        <label>
+        <label style={css}>
           {icon}
           <input
             type={type}
             placeholder={placeholder}
-            // value={form.name}
+            value={form[keyName]}
             name={keyName}
+            max={maxnum}
+            min={minnum}
             onChange={(e) => setField({ ...form, [keyName]: e.target.value })}
           />
         </label>

@@ -11,7 +11,7 @@ const GalleryModal = ({ setGallery }) => {
       </div>
       <div className="gallery-content">
         <div className="main-image">
-          <img src={baseDomain+mediaAssets.igCeremony} alt="inagural-ceremony" />
+          <img src={`${baseDomain}${mediaAssets.igCeremony}`}alt="inagural-ceremony" />
         </div>
         <div className="other-images">
           <GridComponent />

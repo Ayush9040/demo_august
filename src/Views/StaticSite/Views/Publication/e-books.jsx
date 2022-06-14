@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import PublicationCard from '../../Components/PublicationCard'
-import PublicationNav from '../../Components/PublicationNav'
+// import PublicationNav from '../../Components/PublicationNav'
 import axios from 'axios'
 import './style.scss'
+import InnerNavComponent from '../../Components/InnerNavComponent'
 
 const EBooks = () => {
   const [product, setProduct] = useState([])
@@ -26,10 +27,45 @@ const EBooks = () => {
         setCategories(data.data)
       })
   }, [])
+  const yogaEbooks = {
+    title:'ebooks',
+    color:'white',
+    menuColor:'white',
+    menuItems:[
+      {
+        innerTitle:'yoga-health',
+        url:'/publication',
+        name:'Yoga and Total Health'
+      },
+      {
+        innerTitle:'yogasttav',
+        url:'/publication/yogasattva',
+        name:'Yogasattava'
+      },
+      {
+        innerTitle:'books',
+        url:'/publication/books',
+        name:'Books'
+      },
+      {
+        innerTitle:'ebooks',
+        url:'/publication/e-books',
+        name:'E-books'
+      },
+      {
+        innerTitle:'library',
+        url:'/publication/library',
+        name:'Library'
+      }
+    ]
+  }
+
+
   return (
     <div className='e-books-container'>
       <div className='background'>
-        <PublicationNav title={'ebooks'} />
+        {/* <PublicationNav title={'ebooks'} /> */}
+        <InnerNavComponent abc={yogaEbooks} />
         <p>
           With just one click, get free access to these deeply rooted and
           knowledgeable e-books. These books can transport you to another era or

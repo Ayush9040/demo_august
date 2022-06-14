@@ -761,17 +761,17 @@ export const alumniAssets = {
 
   // 2019
   galleryAssets25: '/Alumni/Alumni%20Gallery/2019/2019-1.jpg',
-  galleryAssets26: '/Alumni/Alumni%20Gallery/2019/2019-1.jpg',
-  galleryAssets27: '/Alumni/Alumni%20Gallery/2019/2019-1.jpg',
-  galleryAssets28: '/Alumni/Alumni%20Gallery/2019/2019-1.jpg',
-  galleryAssets29: '/Alumni/Alumni%20Gallery/2019/2019-1.jpg',
-  galleryAssets30: '/Alumni/Alumni%20Gallery/2019/2019-1.jpg',
-  galleryAssets31: '/Alumni/Alumni%20Gallery/2019/2019-1.jpg',
-  galleryAssets32: '/Alumni/Alumni%20Gallery/2019/2019-1.jpg',
-  galleryAssets33: '/Alumni/Alumni%20Gallery/2019/2019-1.jpg',
-  galleryAssets34: '/Alumni/Alumni%20Gallery/2019/2019-1.jpg',
-  galleryAssets35: '/Alumni/Alumni%20Gallery/2019/2019-1.jpg',
-  galleryAssets36: '/Alumni/Alumni%20Gallery/2019/2019-1.jpg',
+  galleryAssets26: '/Alumni/Alumni%20Gallery/2019/2019-2.jpg',
+  galleryAssets27: '/Alumni/Alumni%20Gallery/2019/2019-3.jpg',
+  galleryAssets28: '/Alumni/Alumni%20Gallery/2019/2019-4.jpg',
+  galleryAssets29: '/Alumni/Alumni%20Gallery/2019/2019-5.jpg',
+  galleryAssets30: '/Alumni/Alumni%20Gallery/2019/2019-6.jpg',
+  galleryAssets31: '/Alumni/Alumni%20Gallery/2019/2019-7.jpg',
+  galleryAssets32: '/Alumni/Alumni%20Gallery/2019/2019-8.jpg',
+  galleryAssets33: '/Alumni/Alumni%20Gallery/2019/2019-9.jpg',
+  galleryAssets34: '/Alumni/Alumni%20Gallery/2019/2019-10.jpg',
+  galleryAssets35: '/Alumni/Alumni%20Gallery/2019/2019-11.jpg',
+  galleryAssets36: '/Alumni/Alumni%20Gallery/2019/2019-12.jpg',
 
   // 2020
   galleryAssets37: '/Alumni/Alumni%20Gallery/2020/2020-1.jpg',
@@ -1055,7 +1055,7 @@ export const experienceAssets={
   modiji:'/Home/Experience/Modiji.jpg',
   naiduji:'/Home/Experience/Naiduji.jpg',
   nirmalGangwal:'/Home/Experience/Nirmal-Gangwal.png',
-  ritutaDiwekar:'/Home/Experience/RUJUTA%20DIWEKAR.jpg',
+  rujutaDiwekar:'/Home/Experience/RUJUTA%20DIWEKAR.jpg',
   shilpaShirodkar:'/Home/Experience/Shilpa%20Shirodkar.jpg',
   shivKumarSharma:'/Home/Experience/Shivkumar%20Sharma.jpg',
   shwetaTiwari:'/Home/Experience/Shweta%20Tiwari.jpg',
@@ -1065,11 +1065,19 @@ export const experienceAssets={
   kavita:'/Home/Experience/kavita.jpg',
   natalia:'/Home/Experience/natalia.JPG',
   kovindji:'/Home/Experience/shriramnathkovid.png',
-  veronica:'/Home/Experience/veronica.JPG'
+  veronica:'/Home/Experience/veronica.JPG',
+  premchandgodha:'/Home/Experience/Premchand%20Godha.jpg'
 
 
 }
 
+
+export const CSR ={
+  peace:'/CSR/peace-justice.png',
+  hunger:'/CSR/zero-hunger.png',
+  responsible:'/CSR/responsible1.png',
+  health:'/CSR/good-health.png'
+}
 
 
 

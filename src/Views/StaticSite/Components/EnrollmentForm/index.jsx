@@ -1,14 +1,60 @@
-import React, { useState } from 'react'
-import { filler1 } from '../../assets/icons/icon'
+import React, { useState, useEffect } from 'react'
+import { filler1, upload } from '../../assets/icons/icon'
 import './styles.scss'
-//import { Link } from 'react-router-dom'
+import { courseArray } from '../../Constants/courses/c200hr'
+import { useParams } from 'react-router-dom'
+import InputComponent from '../InputComponent'
+import { validateEmail } from '../../../../helpers'
+import { Link } from 'react-router-dom'
 
 const Enrollment = () => {
+  const { courseId } = useParams()
+  const [currentCourse, setCurrentCourse] = useState({})
+
+  useEffect(() => {
+    setCurrentCourse(courseArray.find((item) => item.id === courseId))
+  }, [])
+
+  console.log(currentCourse, 'ccc')
+
+  const [empty, setEmpty] = useState(0)
+
+  const newChild = [
+    {
+      placeholder: '',
+      setField: '',
+      keyName: '',
+      type: 'text',
+      value: '',
+      id: 1,
+    },
+  ]
+
+  const [newField, setNewField] = useState(newChild)
+
+  const AddNewChild = () => {
+    setNewField((s) => {
+      return [
+        ...s,
+        {
+          placeholder: '',
+          setField: '',
+          keyName: '',
+          type: 'text',
+          value: '',
+        },
+      ]
+    })
+  }
+
   const [bold, setBold] = useState(0)
-  const [listData, setListData]= useState([])
+  const [yearEmpty, setYearEmpty] = useState(0)
+  const [resgin, setResgin] = useState(0)
+  const [listData, setListData] = useState([])
   const [qualificationData, setQualificationData] = useState([])
   const [formData, setFormData] = useState({
     name: '',
+    phone: '',
     email: '',
     address1: '',
     address2: '',
@@ -30,63 +76,142 @@ const Enrollment = () => {
     resignition: '',
     medicalstatus: '',
     sourceinfo: '',
-    source:'',
-    purpose:'',
-    info:''
+    source: '',
+    purpose: '',
+    info: '',
+    residental: '',
   })
-  
+
   const listDetailHandler = () => {
-    setListData(oldData => [ ...oldData, {
-      companyName:formData.company,
-      leavejob:formData.leavejob,
-      resignition:formData.resignition
-    }])
+    if (formData.resignition.length !== 4) {
+      return setResgin(1)
+    } else
+      setListData((oldData) => [
+        ...oldData,
+        {
+          companyName: formData.company,
+          leavejob: formData.leavejob,
+          resignition: formData.resignition,
+        },
+      ])
     setFormData({ ...formData, resignition: '', company: '', leavejob: '' })
   }
+  console.log(resgin)
 
   const QualificationDetailHandler = () => {
-    setQualificationData(oldData => [ ...oldData, {
-      schoolName:formData.school,
-      courseName:formData.course,
-      completionYear:formData.completion
-    }])
+    if (formData.completion.length !== 4) {
+      return setYearEmpty(1)
+    } else
+      setQualificationData((oldData) => [
+        ...oldData,
+        {
+          schoolName: formData.school,
+          courseName: formData.course,
+          completionYear: formData.completion,
+        },
+      ])
     setFormData({ ...formData, school: '', course: '', completion: '' })
   }
+  console.log(yearEmpty)
 
+  const handleEmpty1 = () => {
+    if (formData.name === '') {
+      return setEmpty(1)
+    } else if (formData.phone === '') {
+      return setEmpty(2)
+    } else if (!validateEmail(formData.email)) {
+      return setEmpty(3)
+    } else if (formData.address1 === '') {
+      return setEmpty(4)
+    } else if (formData.address2 === '') {
+      return setEmpty(5)
+    } else if (formData.country === '') {
+      return setEmpty(6)
+    } else if (formData.state === '') {
+      return setEmpty(7)
+    } else if (formData.city === '') {
+      return setEmpty(8)
+    } else if (formData.pincode === '') {
+      return setEmpty(9)
+    } else if (formData.DOB === '') {
+      return setEmpty(10)
+    } else if (formData.nationality === '') {
+      return setEmpty(11)
+    } else if (formData.children === '') {
+      return setEmpty(12)
+    } else if (formData.age1 === '') {
+      return setEmpty(13)
+    } else if (formData.gender === '') {
+      return setEmpty(15)
+    } else {
+      setBold(1)
+    }
+  }
 
+  const handleEmpty2 = () => {
+    if (qualificationData.length === 0) {
+      return setEmpty(1)
+    } else setBold(2)
+  }
+
+  const handleEmpty3 = () => {
+    if (listData.length === 0) {
+      return setEmpty(1)
+    } else setBold(3)
+  }
+
+  const handleEmpty4 = () => {
+    if (formData.source === '') {
+      return setEmpty(1)
+    } else if (formData.sourceinfo === '') {
+      return setEmpty(2)
+    } else setBold(4)
+  }
 
   return (
     <>
       <div className="enrollment_container ">
         <div className="header">
-          <button className="x">x</button>
+          <Link to="/courses">
+            <button className="x">x</button>
+          </Link>
           <div className="student">Student Enrollment</div>
 
-          <ul style={{ display: 'flex', listStyle: 'none' }}>
+          <ul className="header_ul">
             <li
               style={bold === 0 ? { fontWeight: '600' } : {}}
               onClick={() => setBold(0)}
             >
               {' '}
               Personal Details |{' '}
+              {bold === 0 && <div className="bottom-line"></div>}
             </li>
             <li
               style={bold === 1 ? { fontWeight: '600' } : {}}
               onClick={() => setBold(1)}
             >
               Academic Qualifications |{' '}
+              {bold === 1 && <div className="bottom-line"></div>}
             </li>
             <li
               style={bold === 2 ? { fontWeight: '600' } : {}}
               onClick={() => setBold(2)}
             >
               Work Experience |{' '}
+              {bold === 2 && <div className="bottom-line"></div>}
             </li>
             <li
               style={bold === 3 ? { fontWeight: '600' } : {}}
               onClick={() => setBold(3)}
             >
-              Other
+              Other |{bold === 3 && <div className="bottom-line"></div>}
+            </li>
+            <li
+              style={bold === 4 ? { fontWeight: 600 } : {}}
+              onClick={() => setBold(4)}
+            >
+              Cousre Details
+              {bold === 4 && <div className="bottom-line"></div>}
             </li>
           </ul>
         </div>
@@ -97,85 +222,149 @@ const Enrollment = () => {
               <div className="left">
                 <form>
                   <div>
-                    <input
-                      className="placeholder"
+                    <InputComponent
                       type="text"
                       placeholder="Name"
-                      onChange={(e) => { setFormData({ ...formData, name: e.target.value }) }}
+                      form={formData}
+                      setField={setFormData}
+                      keyName="name"
                     />
+                    {empty === 1 && (
+                      <small style={{ color: 'red', marginLeft: '0' }}>
+                        *Please Enter Name!
+                      </small>
+                    )}
                   </div>
                   <div>
-                    <input
-                      className="placeholder"
+                    <InputComponent
+                      type="number"
+                      placeholder="Phone Number"
+                      form={formData}
+                      setField={setFormData}
+                      keyName="phone"
+                    />
+                    {empty === 2 && (
+                      <small style={{ color: 'red', marginLeft: '0' }}>
+                        *Please Enter Phone Number!
+                      </small>
+                    )}
+                  </div>
+                  <div>
+                    <InputComponent
                       type="text"
-                      placeholder="Email ID"
-                      onChange={(e) => { setFormData({ ...formData, email: e.target.value }) }}
+                      placeholder="Email"
+                      form={formData}
+                      setField={setFormData}
+                      keyName="email"
                     />
+                    {empty === 3 && (
+                      <small style={{ color: 'red', marginLeft: '0' }}>
+                        *Please Enter Email!
+                      </small>
+                    )}
                   </div>
                   <div>
-                    <input
-                      className="placeholder"
+                    <InputComponent
                       type="text"
                       placeholder="Address Line 1"
-                      onChange={(e) => { setFormData({ ...formData, address1: e.target.value }) }}
+                      form={formData}
+                      setField={setFormData}
+                      keyName="address1"
                     />
+                    {empty === 4 && (
+                      <small style={{ color: 'red', marginLeft: '0' }}>
+                        *Please Enter Address!
+                      </small>
+                    )}
                   </div>
                   <div>
-                    <input
-                      className="placeholder"
+                    <InputComponent
                       type="text"
                       placeholder="Address Line 2"
-                      onChange={(e) => { setFormData({ ...formData, address2: e.target.value }) }}
-                    />
+                      form={formData}
+                      setField={setFormData}
+                      keyName="address2"
+                    />{' '}
+                    {empty === 5 && (
+                      <small style={{ color: 'red', marginLeft: '0' }}>
+                        *Please Enter Address!
+                      </small>
+                    )}
                   </div>
                   <div>
-                    <input
-                      className="placeholder"
+                    <InputComponent
                       type="text"
                       placeholder="Country"
-                      onChange={(e) => { setFormData({ ...formData, country: e.target.value }) }}
-                    />
+                      form={formData}
+                      setField={setFormData}
+                      keyName="country"
+                    />{' '}
+                    {empty === 6 && (
+                      <small style={{ color: 'red', marginLeft: '0' }}>
+                        *Please Enter Your Country!
+                      </small>
+                    )}
                   </div>
                   <div>
-                    <input
-                      className="placeholder"
+                    <InputComponent
                       type="text"
                       placeholder="State"
-                      onChange={(e) => { setFormData({ ...formData, state: e.target.value }) }}
-                    />
+                      form={formData}
+                      setField={setFormData}
+                      keyName="state"
+                    />{' '}
+                    {empty === 7 && (
+                      <small style={{ color: 'red', marginLeft: '0' }}>
+                        *Please Enter Your State!
+                      </small>
+                    )}
                   </div>
                   <div>
-                    <input
-                      className="placeholder"
+                    <InputComponent
                       type="text"
                       placeholder="City"
-                      onChange={(e) => { setFormData({ ...formData, city: e.target.value }) }}
-                    />
+                      form={formData}
+                      setField={setFormData}
+                      keyName="city"
+                    />{' '}
+                    {empty === 8 && (
+                      <small style={{ color: 'red', marginLeft: '0' }}>
+                        *Please Enter Your City!
+                      </small>
+                    )}
                   </div>
                   <div>
-                    <input
-                      className="placeholder"
-                      type="text"
+                    <InputComponent
+                      type="number"
                       placeholder="Pincode"
-                      onChange={(e) => { setFormData({ ...formData, pincode: e.target.value }) }}
+                      form={formData}
+                      setField={setFormData}
+                      keyName="pincode"
                     />
+                    {empty === 9 && (
+                      <small style={{ color: 'red', marginLeft: '0' }}>
+                        *Please Enter Pincode!
+                      </small>
+                    )}
                   </div>
                 </form>
               </div>
               <div className="right">
                 <div className="radio_text">
-                  <label className="label">
+                  <label className="label_1">
                     Male&nbsp;
-                    <input type="radio"
+                    <input
+                      type="radio"
                       value="male"
                       name="gender"
                       onChange={(e) => {
                         if (e.target.checked) {
                           setFormData({ ...formData, gender: e.target.value })
                         }
-                      }} />
+                      }}
+                    />
                   </label>
-                  <label className="label">
+                  <label className="label_1">
                     Female&nbsp;
                     <input
                       className="radio"
@@ -189,62 +378,107 @@ const Enrollment = () => {
                       }}
                     />
                   </label>
+                  {empty === 15 && (
+                    <small style={{ color: 'red', marginLeft: '0' }}>
+                      *Please Select One Otpion!
+                    </small>
+                  )}
                 </div>
-                <div>
+                <div className="date_div">
                   <div>
-                    <label className="placeholder" id="dob">
-                      <input
-                        type="text" id="DOB_box" placeholder="DOB"
-                        onChange={(e) => { setFormData({ ...formData, DOB: e.target.value }) }}
-                      />
-                      <span className="pesudo"> dd | mm | yyyy</span>
-                    </label>
+                    <InputComponent
+                      type="date"
+                      placeholder="DD / MM / YYYY"
+                      form={formData}
+                      setField={setFormData}
+                      keyName="DOB"
+                    />{' '}
+                    {empty === 10 && (
+                      <small style={{ color: 'red', marginLeft: '0' }}>
+                        *Please Enter Your DOB
+                      </small>
+                    )}
                   </div>
                   <div>
-                    <input
-                      className="placeholder"
+                    <InputComponent
                       type="text"
                       placeholder="Nationality"
-                      onChange={(e) => { setFormData({ ...formData, nationality: e.target.value }) }}
+                      form={formData}
+                      setField={setFormData}
+                      keyName="nationality"
                     />
+                    {empty === 11 && (
+                      <small style={{ color: 'red', marginLeft: '0' }}>
+                        *Please Enter Your DOB
+                      </small>
+                    )}
                   </div>
 
-                  <div>
+                  <div className="num_of_child">
                     <div className="flex_box">
-                      <label className="label" htmlFor="">
-                        Number of children
-                      </label>
-                      <input
-                        className="place_holder_flex"
-                        type="text"
-                        name="children"
-                        id="children"
-                        onChange={(e) => { setFormData({ ...formData, age1: e.target.value }) }}
-                      />
+                      <div className="year-of-comp label">
+                        Number of Children
+                      </div>
+                      <InputComponent
+                        type="number"
+                        placeholder=""
+                        form={formData}
+                        setField={setFormData}
+                        keyName="children"
+                      />{' '}
+                      {empty === 12 && (
+                        <small style={{ color: 'red', marginLeft: '0' }}>
+                          *Please Enter !
+                        </small>
+                      )}
                     </div>
-                    <div className="flex_box">
-                      <label className="label" htmlFor="">
-                        Age of child 1
-                      </label>
-                      <input
-                        className="place_holder_flex"
-                        type="text"
-                        name="age1"
-                        id="age1"
-                        onChange={(e) => { setFormData({ formData, age1: e.target.value }) }}
-                      />
-                    </div>
-                    <div className="flex_box">
-                      <label className="label" htmlFor="">
-                        Age of child 2
-                      </label>{' '}
-                      <input
-                        className="place_holder_flex"
-                        type="text"
-                        name="age2"
-                        id="age2"
-                        onChange={(e) => { setFormData({ ...formData, age2: e.target.value }) }}
-                      />
+                    <div>
+                      <div className="age_ofChild">
+                        <div className="flex_box">
+                          <div className="year-of-comp label">
+                            Age of child 1
+                          </div>
+                          <InputComponent
+                            type="number"
+                            placeholder=""
+                            form={formData}
+                            setField={setFormData}
+                            keyName="age1"
+                          />{' '}
+                          {empty === 13 && (
+                            <small style={{ color: 'red', marginLeft: '0' }}>
+                              *Please Enter!
+                            </small>
+                          )}
+                        </div>
+
+                        {newField.map((i, idx) => {
+                          return (
+                            <>
+                              <div className="flex_box">
+                                <div className="year-of-comp label">
+                                  Age of child {idx + 2}
+                                </div>
+                                <div key={i} />
+                                <InputComponent
+                                  placeholder=""
+                                  type="number"
+                                  form={formData}
+                                  setField={setFormData}
+                                  keyName={`age${idx + 2}`}
+                                  id={i}
+                                />
+                              </div>
+                            </>
+                          )
+                        })}
+                        <div className="button_div">
+                          {' '}
+                          <button className="button_2" onClick={AddNewChild}>
+                            +
+                          </button>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -255,12 +489,7 @@ const Enrollment = () => {
                 Back
               </button>
               <div className="enrollment_logo">{filler1}</div>
-              <button
-                className="next_1"
-                onClick={() => {
-                  setBold(1)
-                }}
-              >
+              <button className="next_1" onClick={handleEmpty1}>
                 Next
               </button>
             </div>
@@ -270,52 +499,98 @@ const Enrollment = () => {
             <div className="details">
               <div className="left">
                 <div className="flex-container">
-                  <div style={{ width: '99%' }}>
-                    <input
-                      className="placeholder"
+                  <div className='career-history' >
+                    <InputComponent
                       type="text"
-                      placeholder="School / College"
+                      placeholder="School/College"
+                      form={formData}
+                      setField={setFormData}
+                      keyName="school"
                       value={formData.school}
-                      onChange={(e) => { setFormData({ ...formData, school: e.target.value }) }}
                     />
-                    <input
-                      className="placeholder"
+
+                    <InputComponent
                       type="text"
                       placeholder="Course"
+                      form={formData}
+                      setField={setFormData}
+                      keyName="course"
                       value={formData.course}
-                      onChange={(e) => { setFormData({ ...formData, course: e.target.value }) }}
                     />
                   </div>
                   <div className="button">
-                    <button className="button_2" onClick={() => {QualificationDetailHandler()}}>+</button>
+                    <button
+                      className="button_2"
+                      onClick={() => {
+                        QualificationDetailHandler()
+                      }}
+                    >
+                      +
+                    </button>
                   </div>
                 </div>
 
                 <div className="left_flex_contanier">
                   <div className="flex_box">
-                    <label className="label ">
-                      Year of completion
-                      <input
-                        className="place_holder_flex"
-                        type="text"
-                        placeholder="Year"
-                        value={formData.completion}
-                        onChange={(e) => { setFormData({ ...formData, completion: e.target.value }) }}
-                      />
-                    </label>
+                    <div className="year-of-comp label">Year of completion</div>
+                    <InputComponent
+                      type="number"
+                      placeholder="Year"
+                      form={formData}
+                      setField={setFormData}
+                      keyName="completion"
+                      value={formData.completion}
+                    />{' '}
+                  </div>
+                  <div className="uploads">
+                    <fieldset>
+                      <label htmlFor="image">
+                        Upload Image
+                        <input
+                          type={'file'}
+                          id="image"
+                          placeholder="Upload Image"
+                          accept="image/*"
+                        />
+                        &ensp;
+                        {upload}
+                      </label>
+                    </fieldset>
+                    <fieldset>
+                      <label htmlFor="resume">
+                        Upload Resume
+                        <input
+                          type={'file'}
+                          id="resume"
+                          placeholder="Upload Resume"
+                        />
+                        &ensp;
+                        {upload}
+                      </label>
+                      <br />
+                      <small>Please ensure the file is under 2 MB</small>
+                    </fieldset>
                   </div>
                 </div>
               </div>
               <div className="right">
-                <div className="label">Listed Qualifications :
+                <div className="label">
+                  Listed Qualifications :
                   {qualificationData.map((items, key) => {
-                    return <div className='qualification-lists' key={key}>
-                      <p>{items.schoolName}</p>
-                      <p>{items.courseName}</p>
-                      <p>{items.completionYear}</p>
-                    </div>
+                    return (
+                      <div className="qualification-lists" key={key}>
+                        <p>{items.schoolName}</p>
+                        <p>{items.courseName}</p>
+                        <p>{items.completionYear}</p>
+                      </div>
+                    )
                   })}
                 </div>
+                {empty === 1 && (
+                  <small style={{ color: 'red', marginLeft: '0' }}>
+                    *Please Enter Your Deatils!
+                  </small>
+                )}
               </div>
             </div>
             <div className="footer">
@@ -328,12 +603,7 @@ const Enrollment = () => {
                 Back
               </button>
               <div className="enrollment_logo">{filler1}</div>
-              <button
-                className="next_1"
-                onClick={() => {
-                  setBold(2)
-                }}
-              >
+              <button className="next_1" onClick={handleEmpty2}>
                 Next
               </button>
             </div>
@@ -343,51 +613,98 @@ const Enrollment = () => {
             <div className="details">
               <div className="left">
                 <div className="flex-container">
-                  <div style={{ width: '99%' }}>
-                    <input
-                      className="placeholder"
+                  <div className='career-history' >
+                    <InputComponent
                       type="text"
-                      value={formData.company}
                       placeholder="Company Name"
-                      onChange={(e) => { setFormData({ ...formData, company: e.target.value }) }}
+                      form={formData}
+                      setField={setFormData}
+                      keyName="company"
+                      value={formData.company}
                     />
-                    <input
-                      className="placeholder"
+                    <InputComponent
                       type="text"
+                      placeholder="Role when leaving the company"
+                      form={formData}
+                      setField={setFormData}
+                      keyName="leavejob"
                       value={formData.leavejob}
-                      placeholder="Role when leaving the job"
-                      onChange={(e) => { setFormData({ ...formData, leavejob: e.target.value }) }}
-                    />
+                    />{' '}
                   </div>
                   <div className="button">
-                    <button className="button_2" onClick={()=> {listDetailHandler()}}>+</button>
+                    <button
+                      className="button_2"
+                      onClick={() => {
+                        listDetailHandler()
+                      }}
+                    >
+                      +
+                    </button>
                   </div>
                 </div>
                 <div className="left_flex_contanier">
                   <div className="flex_box">
-                    <label className="label ">
-                      Year of resignition
-                      <input
-                        className="place_holder_flex"
-                        type="text"
-                        placeholder="Year"
-                        value={formData.resignition}
-                        onChange={(e) => { setFormData({ ...formData, resignition: e.target.value }) }}
-                      />
-                    </label>
+                    <div className="year-of-comp label">
+                      Year of Resginition
+                    </div>
+                    <InputComponent
+                      type="number"
+                      placeholder="Year"
+                      form={formData}
+                      setField={setFormData}
+                      keyName="resignition"
+                      value={formData.resignition}
+                    />
+                  </div>
+                  <div className="uploads">
+                    <fieldset>
+                      <label htmlFor="image">
+                        Upload Image
+                        <input
+                          type={'file'}
+                          id="image"
+                          placeholder="Upload Image"
+                          accept="image/*"
+                        />
+                        &ensp;
+                        {upload}
+                      </label>
+                    </fieldset>
+                    <fieldset>
+                      <label htmlFor="resume">
+                        Upload Resume
+                        <input
+                          type={'file'}
+                          id="resume"
+                          placeholder="Upload Resume"
+                        />
+                        &ensp;
+                        {upload}
+                      </label>
+                      <br />
+                      <small>Please ensure the file is under 2 MB</small>
+                    </fieldset>
                   </div>
                 </div>
               </div>
               <div className="right">
-                <div className="label">Listed Work Experience :
-                  {listData.map((item, key)=>{
-                    return <div  className='experienced-lists' key = {key}>
-                      <p>{item.companyName}</p>
-                      <p>{item.leavejob}</p>
-                      <p>{item.resignition}</p>
-                    </div>
+                <div className="label">
+                  Listed Work Experience :
+                  {listData.map((item, key) => {
+                    return (
+                      <div className="experienced-lists" key={key}>
+                        <p>{item.companyName}</p>
+                        <p>{item.leavejob}</p>
+                        <p>{item.resignition}</p>
+                      </div>
+                    )
                   })}
                 </div>
+                {empty === 1 && (
+                  <small style={{ color: 'red', marginLeft: '0' }}>
+                    *Please Enter Your Deatils!
+                  </small>
+                )}
               </div>
             </div>
             <div className="footer">
@@ -400,12 +717,7 @@ const Enrollment = () => {
                 Back
               </button>
               <div className="enrollment_logo">{filler1}</div>
-              <button
-                className="next_1"
-                onClick={() => {
-                  setBold(3)
-                }}
-              >
+              <button className="next_1" onClick={handleEmpty3}>
                 Next
               </button>
             </div>
@@ -418,12 +730,11 @@ const Enrollment = () => {
                   <div>
                     <label className="label">
                       Medical History & Current Health Issues :
-                      <input
+                      <textarea
                         className="text_box"
                         type="text"
                         rows="5"
                         cols="40"
-                        onChange={(e) => { setFormData({ ...formData, medicalstatus: e.target.value }) }}
                       />
                     </label>
                   </div>
@@ -431,135 +742,185 @@ const Enrollment = () => {
                     <div className="label">How do you hear about us?</div>
                     <div>
                       <form className="radio_text">
-                        <label className="label">
+                        <label className="label_1">
                           Internet&nbsp;
-                          <input 
-                            type="radio" 
-                            value="internet" 
-                            name="source" 
-                            onChange={(e)=>{
-                              if(e.target.checked) {
-                                setFormData({ ...formData, source: e.target.value })
+                          <input
+                            type="radio"
+                            value="internet"
+                            name="source"
+                            onChange={(e) => {
+                              if (e.target.checked) {
+                                setFormData({
+                                  ...formData,
+                                  source: e.target.value,
+                                })
                               }
-                            }} 
+                            }}
                           />
                         </label>
-                        <label className="label">
+                        <label className="label_1">
                           Print Media&nbsp;
-                          <input 
-                            type="radio" 
-                            value="media" 
-                            name="source" 
-                            onChange={(e)=>{
-                              if(e.target.checked) {
-                                setFormData({ ...formData, source: e.target.value })
+                          <input
+                            type="radio"
+                            value="media"
+                            name="source"
+                            onChange={(e) => {
+                              if (e.target.checked) {
+                                setFormData({
+                                  ...formData,
+                                  source: e.target.value,
+                                })
                               }
-                            }} 
+                            }}
                           />
                         </label>
-                        <label className="label">
+                        <label className="label_1">
                           Friends/Relatives&nbsp;
-                          <input 
-                            type="radio" 
-                            value="friends" 
-                            name="source" 
-                            onChange={(e)=>{
-                              if(e.target.checked) {
-                                setFormData({ ...formData, source: e.target.value })
+                          <input
+                            type="radio"
+                            value="friends"
+                            name="source"
+                            onChange={(e) => {
+                              if (e.target.checked) {
+                                setFormData({
+                                  ...formData,
+                                  source: e.target.value,
+                                })
                               }
-                            }} 
+                            }}
                           />
                         </label>
-                        <label className="label">
+                        <label className="label_1">
                           Events&nbsp;
-                          <input 
-                            type="radio" 
-                            value="events" 
-                            name="source" 
-                            onChange={(e)=>{
-                              if(e.target.checked) {
-                                setFormData({ ...formData, source: e.target.value })
+                          <input
+                            type="radio"
+                            value="events"
+                            name="source"
+                            onChange={(e) => {
+                              if (e.target.checked) {
+                                setFormData({
+                                  ...formData,
+                                  source: e.target.value,
+                                })
                               }
-                            }} 
+                            }}
                           />
                         </label>
-                        <label className="label">
+                        <label className="label_1">
                           Others&nbsp;
-                          <input 
-                            type="radio" 
-                            value="others" 
-                            name="source" 
-                            onChange={(e)=>{
-                              if(e.target.checked) {
-                                setFormData({ ...formData, source: e.target.value })
+                          <input
+                            type="radio"
+                            value="others"
+                            name="source"
+                            onChange={(e) => {
+                              if (e.target.checked) {
+                                setFormData({
+                                  ...formData,
+                                  source: e.target.value,
+                                })
                               }
-                            }} 
+                            }}
                           />
                         </label>
+                        {empty === 1 && (
+                          <small style={{ color: 'red', marginLeft: '0' }}>
+                            *Please select one!
+                          </small>
+                        )}
                       </form>
                     </div>
                   </div>
                 </div>
                 <div>
                   <input
-                    className="underline"
+                    className="underline label"
                     type="text"
                     placeholder="Any other source please specify"
-                    onChange={(e) => { setFormData({ ...formData, sourceinfo: e.target.value }) }}
+                    onChange={(e) => {
+                      setFormData({ ...formData, sourceinfo: e.target.value })
+                    }}
                   />
+                  {empty === 2 && (
+                    <small style={{ color: 'red', marginLeft: '0' }}>
+                      *Please Specify!
+                    </small>
+                  )}
                 </div>
-                <div className="radio_heading">
+                {/* <div className="radio_heading">
                   <div className="label">Purpose of joining this program</div>
 
                   <div className="radio_text">
-                    <label className="label">
+                    <label className="label_1">
                       Self-Development&nbsp;
-                      <input type="radio" />
+                      <input
+                        type="radio"
+                        name="purpose"
+                        onChange={(e) => {
+                          if (e.target.checked) {
+                            setFormData({
+                              ...formData,
+                              purpose: e.target.value,
+                            })
+                          }
+                        }}
+                      />
                     </label>
-                    <label className="label">
+                    <label className="label_1">
                       Fitness&nbsp;
-                      <input 
-                        type="radio" 
-                        name="purpose" 
-                        onChange={(e)=>{
-                          if(e.target.checked) {
-                            setFormData({ ...formData,purpose:e.target.value })
+                      <input
+                        type="radio"
+                        name="purpose"
+                        onChange={(e) => {
+                          if (e.target.checked) {
+                            setFormData({
+                              ...formData,
+                              purpose: e.target.value,
+                            })
                           }
                         }}
                       />
                     </label>
-                    <label className="label">
+                    <label className="label_1">
                       Career&nbsp;
-                      <input   
-                        type="radio" 
-                        name="purpose" 
-                        onChange={(e)=>{
-                          if(e.target.checked) {
-                            setFormData({ ...formData,purpose:e.target.value })
+                      <input
+                        type="radio"
+                        name="purpose"
+                        onChange={(e) => {
+                          if (e.target.checked) {
+                            setFormData({
+                              ...formData,
+                              purpose: e.target.value,
+                            })
                           }
                         }}
                       />
                     </label>
-                    <label className="label">
+                    <label className="label_1">
                       Health&nbsp;
-                      <input 
-                        type="radio" 
-                        name="purpose" 
-                        onChange={(e)=>{
-                          if(e.target.checked) {
-                            setFormData({ ...formData,purpose:e.target.value })
+                      <input
+                        type="radio"
+                        name="purpose"
+                        onChange={(e) => {
+                          if (e.target.checked) {
+                            setFormData({
+                              ...formData,
+                              purpose: e.target.value,
+                            })
                           }
                         }}
                       />
                     </label>
-                    <label className="label">
+                    <label className="label_1">
                       Others&nbsp;
-                      <input 
-                        type="radio" 
-                        name="purpose" 
-                        onChange={(e)=>{
-                          if(e.target.checked) {
-                            setFormData({ ...formData,purpose:e.target.value })
+                      <input
+                        type="radio"
+                        name="purpose"
+                        onChange={(e) => {
+                          if (e.target.checked) {
+                            setFormData({
+                              ...formData,
+                              purpose: e.target.value,
+                            })
                           }
                         }}
                       />
@@ -572,9 +933,11 @@ const Enrollment = () => {
                     className="underline"
                     type="text"
                     placeholder="Any other source please specify"
-                    onChange={ (e)=>{setFormData({ ...formData,info:e.target.value })} }
+                    onChange={(e) => {
+                      setFormData({ ...formData, info: e.target.value })
+                    }}
                   />
-                </div>
+                </div> */}
               </div>
             </div>
             <div className="footer">
@@ -587,14 +950,148 @@ const Enrollment = () => {
                 Back
               </button>
               <div className="enrollment_logo">{filler1}</div>
-              <button className="next_1">Submit</button>
+              <button className="next_1" onClick={handleEmpty4}>
+                Next
+              </button>
+            </div>
+          </div>
+        ) : bold === 4 ? (
+          <div>
+            <div className="other">
+              <div className="last_div">
+                <div className="details_box">
+                  {' '}
+                  <div className="details_course_box">
+                    <div className="detail_image_box">
+                      <img src={currentCourse?.image} alt="" />
+                    </div>
+                    <div className="current_duration">
+                      {currentCourse?.duration}
+                      {currentCourse?.date}
+                      <div className="current_fees">{currentCourse?.fees}</div>
+                    </div>
+                  </div>
+                </div>
+                <div className="label">Please select one of these options</div>
+                <form>
+                  <div className="last_radio_button">
+                    <label htmlFor="" className="label_1">
+                      <input
+                        type="radio"
+                        name="resident"
+                        value="residental"
+                        onChange={(e) => {
+                          if (e.target.checked) {
+                            setFormData({
+                              ...formData,
+                              residental: e.target.value,
+                            })
+                          }
+                        }}
+                      />{' '}
+                      &nbsp; Resident
+                    </label>
+                    <label htmlFor="" className="label_1">
+                      <input
+                        type="radio"
+                        name="resident"
+                        value="residental"
+                        onChange={(e) => {
+                          if (e.target.checked) {
+                            setFormData({
+                              ...formData,
+                              residental: e.target.value,
+                            })
+                          }
+                        }}
+                      />{' '}
+                      &nbsp; Online
+                    </label>
+                  </div>
+                  <div className="last_radio_button">
+                    <label htmlFor="" className="label_1">
+                      <input
+                        type="radio"
+                        name="resident"
+                        value="residental"
+                        onChange={(e) => {
+                          if (e.target.checked) {
+                            setFormData({
+                              ...formData,
+                              residental: e.target.value,
+                            })
+                          }
+                        }}
+                      />{' '}
+                      &nbsp; Non-Resident
+                    </label>
+                    <label htmlFor="" className="label_1">
+                      <input
+                        type="radio"
+                        name="resident"
+                        value="residental"
+                        onChange={(e) => {
+                          if (e.target.checked) {
+                            setFormData({
+                              ...formData,
+                              residental: e.target.value,
+                            })
+                          }
+                        }}
+                      />{' '}
+                      &nbsp; On Campus
+                    </label>
+                  </div>
+                </form>
+                {/* <div className='upload_box'> */}
+                <div className="label">
+                  Please upload the relevent TYI certificate pre requisite
+                  <div className="uploads">
+                    <fieldset>
+                      <label htmlFor="image">
+                        Upload Image
+                        <input
+                          type={'file'}
+                          id="image"
+                          placeholder="Upload Image"
+                          accept="image/*"
+                        />
+                      </label>
+                    </fieldset>
+                    <fieldset>
+                      <label htmlFor="resume">
+                        Upload Resume
+                        <input
+                          type={'file'}
+                          id="resume"
+                          placeholder="Upload Resume"
+                        />
+                      </label>
+                      <br />
+                      <small>Please ensure the file is under 2 MB</small>
+                    </fieldset>
+                  </div>
+                  {/* </div> */}
+                </div>
+              </div>
+            </div>
+
+            <div className="footer">
+              <button
+                className="back"
+                onClick={() => {
+                  setBold(3)
+                }}
+              >
+                Back
+              </button>
+              <div className="enrollment_logo">{filler1}</div>
+              <button className="next_1">Sumbit</button>
             </div>
           </div>
         ) : (
           ''
         )}
-
-        {/* new */}
       </div>
     </>
   )

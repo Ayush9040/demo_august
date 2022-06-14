@@ -10,6 +10,9 @@
   justify-content: center;
 
   .modal-content {
+    .modal_input{
+      margin: 20px;
+    }
     .close-btn-container {
       text-align: right;
       .close-btn {
@@ -44,19 +47,30 @@
         margin-bottom: 1rem;
       }
     }
+    // .main-container-last {
+    //   .last-sub-container {
+    //     .mid-section {
+    //       .payment-one {
+    //         width: 70%;
+    //         text-align: center;
+    //         margin: 2rem auto;
+    //       }
+    //     }
+    //   }
+    // }
   }
-  .input-data {
-    display: flex;
-    flex-direction: column;
-    padding: 2rem 20rem;
-    input {
-      padding: 20px;
-      margin-bottom: 2rem;
-      border-radius: 30px;
-      font-size: 2rem;
-      text-align: center;
-    }
-  }
+  // .input-data {
+  //   display: flex;
+  //   flex-direction: column;
+  //   padding: 2rem 20rem;
+  //   input {
+  //     padding: 20px;
+  //     margin-bottom: 2rem;
+  //     border-radius: 30px;
+  //     font-size: 2rem;
+  //     text-align: center;
+  //   }
+  // }
   .donation-buttons {
     display: block;
     box-sizing: border-box;
@@ -72,6 +86,7 @@
       border-radius: 25px;
       background-color: #cc472e;
       color: #fff;
+      border: none;
     }
     .donate-button {
       margin: 10rem auto;
@@ -150,8 +165,10 @@
       margin: 0;
     }
     .checkboxes {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      //grid-template-columns: repeat(3, 1fr);
       column-gap: 1px;
       width: 50%;
       margin: 5rem auto;
@@ -176,7 +193,7 @@
     .checkboxes label {
       display: block;
       font-size: 1.5rem;
-      // margin-left: 10%;
+      padding: 5px;
       span {
         margin-left: 20px;
       }
@@ -196,6 +213,7 @@
     padding: 10px 30px;
     font-size: 1.8rem;
     border-radius: 25px;
+    background: transparent;
   }
 
   .main-container-last {
@@ -209,12 +227,19 @@
         justify-content: space-between;
         text-align: center;
         gap: 2rem;
-        &>div{
+        padding-top: 6rem;
+        & > div {
           width: 100%;
+        }
+        .payment-one {
+          width: 70%;
+          text-align: center;
+          margin: 2rem auto;
         }
         .header {
           font-size: 2rem;
           font-weight: bold;
+          padding-bottom: 2rem;
         }
         p {
           font-size: 1.6rem;
@@ -238,24 +263,22 @@
   align-items: center;
 }
 
-
-
 @media only screen and (max-width: 700px) {
-  .modal{
-    .input-data{
+  .modal {
+    .input-data {
       padding: 1rem 2rem;
 
-      input{
+      input {
         padding: 10px;
       }
     }
-    .donation-buttons{
-      .csr-block{
+    .donation-buttons {
+      .csr-block {
         flex-direction: column;
-        .input-box{
+        .input-box {
           width: 90%;
-          .button-flex{
-            button{
+          .button-flex {
+            button {
               padding: 10px 20px;
               font-size: 1.4rem;
             }
@@ -263,9 +286,9 @@
         }
       }
     }
-    .main-container-last{
-      .last-sub-container{
-        .mid-section{
+    .main-container-last {
+      .last-sub-container {
+        .mid-section {
           flex-direction: column;
         }
       }

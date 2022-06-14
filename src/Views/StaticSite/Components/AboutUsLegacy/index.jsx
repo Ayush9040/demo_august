@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import './styles.scss'
 import CommonBtn from '../commonbtn'
-import CommonBannerNavAboutUs from '../CommonBannerNavAboutUs'
+// import CommonBannerNavAboutUs from '../CommonBannerNavAboutUs'
+// import InnerNavComponent from '../../Components/InnerNavComponent'
 import { Link } from 'react-router-dom'
 import baseDomain, {
   aboutAssets,
@@ -12,16 +13,16 @@ const CommonBannerLegacy = ({
   Navigation,
   PageType,
   isOnlyBanner,
-  innerNav,
+  children
 }) => {
   const [activeFounder, setActiveFounder] = useState(0)
 
-  let l0 = baseDomain + aboutAssets.aboutAsset44
-  let l1 = baseDomain + homeAssets.homeAsset1
-  let l2 = baseDomain + aboutAssets.aboutAsset46
-  let l3 = baseDomain + aboutAssets.aboutAsset47
-  let l4 = baseDomain + aboutAssets.aboutAsset48
-  let l5 = baseDomain + aboutAssets.aboutAsset49
+  let l0 = `${baseDomain}${aboutAssets.aboutAsset44}`
+  let l1 = `${baseDomain}${homeAssets.homeAsset1}`
+  let l2 = `${baseDomain}${aboutAssets.aboutAsset46}`
+  let l3 = `${baseDomain}${aboutAssets.aboutAsset47}`
+  let l4 = `${baseDomain}${aboutAssets.aboutAsset48}`
+  let l5 = `${baseDomain}${aboutAssets.aboutAsset49}`
 
   const founderData = [
     {
@@ -144,6 +145,7 @@ const CommonBannerLegacy = ({
       img: l5,
     },
   ]
+  
   return (
     <>
       <div className="about-us-container">
@@ -154,7 +156,8 @@ const CommonBannerLegacy = ({
         >
           {Navigation && (
             <div className={'navigation-container'}>
-              <CommonBannerNavAboutUs innerNav={innerNav} />
+              {/* <CommonBannerNavAboutUs innerNav={innerNav} /> */}
+              {children}
             </div>
           )}
           <div

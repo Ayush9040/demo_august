@@ -29,7 +29,7 @@ const MegaMenu = ({ setNav }) => {
     { name: 'SHOP', link: '/shop', id: 10, key: 'SHOP' },
     { name: 'NEWS,EVENTS & MEDIA', link: '/media', id: 11, key: 'NEWS' },
     { name: 'ALUMNI', link: '/alumni', id: 12, key: 'ALUMNI' },
-    { name: 'VOLUNTEER', link: '/join-our-team', id: 13, key: 'VOLUNTEER' },
+    { name: 'VOLUNTEER', link: '/volunteer', id: 13, key: 'VOLUNTEER' },
   ]
 
   const subMenu = {
@@ -126,8 +126,8 @@ const MegaMenu = ({ setNav }) => {
       { menu: 'Support Your Alma Mater', link: '/alumni/support' },
     ],
     VOLUNTEER: [
-      { menu: 'Volunteer with us', link: '/join-our-team' },
-      { menu: 'Values', link: '/join-our-team/values' },
+      { menu: 'Volunteer with us', link: '/volunteer' },
+      { menu: 'Values', link: '/volunteer/values' },
     ],
   }
   return (

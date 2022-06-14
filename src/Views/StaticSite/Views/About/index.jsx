@@ -3,11 +3,34 @@ import CommonBannerAboutUs from '../../Components/CommonBannerAboutUs'
 import benefits from '../../assets/images/benifits.png'
 import baseDomain, { aboutAssets } from '../../assets/images/imageAsset'
 import './styles.scss'
+import InnerNavComponent from '../../Components/InnerNavComponent'
 
 const AboutUs = () => {
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
+  const AboutOverview = {
+    title: 'overview',
+    color: 'white',
+    menuColor: 'white',
+    menuItems: [
+      {
+        innerTitle: 'overview',
+        url: '/about',
+        name: 'Overview',
+      },
+      {
+        innerTitle: 'our-legacy',
+        url: '/about/our-legacy',
+        name: 'Our Legacy',
+      },
+      {
+        innerTitle: 'blessings',
+        url: '/about/blessings',
+        name: 'Pujya Maa Dr Hansaji’s blessings',
+      },
+    ],
+  }
   return (
     <>
       <div className="Overview-container">
@@ -19,13 +42,15 @@ const AboutUs = () => {
           BgImage={benefits}
           Heading="Overview"
           isOnlyBanner={false}
-          innerNav={true}
+          innerNav={false}
           description="We are the oldest organized Yoga center in the world. Our legacy of over 100 years, which was started by Shri Yogendra Ji in 1918, is carried forward to this day. The Yoga Institute has incorporated the essence of all classical and traditional systems like Karma Yoga, Bhakti Yoga, Hatha Yoga, Mantra Yoga, Laya Yoga etc., so that people get the benefits of all of these rather than just one. Our beloved and esteemed Director, Dr. Hansaji Yogendra, spearheads the efforts of the Institute in her unique and powerful way. Hansama has touched the lives of millions through her graceful and simplistic teachings."
-        />
+        >
+          <InnerNavComponent abc={AboutOverview}/>
+        </CommonBannerAboutUs>
       </div>
       <div className="content-container pd-career">
         <div className="image-content">
-          <img src={baseDomain + aboutAssets.aboutAsset1} />
+          <img src={`${baseDomain}${aboutAssets.aboutAsset1}`} />
         </div>
         <div className="text-content-right tyi-text-container">
           <div className="banner-heading">
