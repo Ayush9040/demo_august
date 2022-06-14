@@ -1,7 +1,6 @@
 import React,{ useState,useEffect } from 'react'
 import Donation from '../../Components/Donation'
 import SectionComponent from '../../Components/SectionComponent'
-//import baseDomain,{ donationAssets } from '../../assets/images/imageAsset'
 import './style.scss'
 import { data } from '../../Views/Donation/data'
 import InnerNavComponent from '../InnerNavComponent'
