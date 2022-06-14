@@ -3,7 +3,7 @@ import Donation from '../../Components/Donation'
 import SectionComponent from '../../Components/SectionComponent'
 //import baseDomain,{ donationAssets } from '../../assets/images/imageAsset'
 import './style.scss'
-import { data } from '/home/nex-g/Desktop/tyi-user-webapp/src/Views/StaticSite/Views/Donation/data.js'
+import { data } from '../../Views/Donation/data'
 import InnerNavComponent from '../InnerNavComponent'
 import { useParams } from 'react-router-dom'
 const SingleDonation = () => {
