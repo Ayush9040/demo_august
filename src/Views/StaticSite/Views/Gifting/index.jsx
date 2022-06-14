@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import CommonBanner from '../../Components/Common-banner'
 import './style.scss'
 import SectionComponent from '../../Components/SectionComponent/index'
@@ -13,7 +13,6 @@ import GiftingData from './data'
 import InnerNavComponent from '../../Components/InnerNavComponent'
 
 const Gifting = () => {
-  const [gifting, setGifitng] = useState(GiftingData)
   const route = useLocation()
   console.log(route)
   useEffect(() => {
@@ -59,10 +58,11 @@ const Gifting = () => {
         >
           <InnerNavComponent abc={GiftingBan}/>
         </CommonBanner>
-                {gifting.map((item) => {
+        {GiftingData.map((item) => {
           return (
             <>
               <SectionComponent
+                page='Gifting'
                 image={item.image}
                 title={item.title}
                 description={item.description}
