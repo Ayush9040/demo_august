@@ -50,6 +50,10 @@
   .career-navigation-sm {
       display: none;
   }
+  .user-container{
+      display: flex;
+      gap:10px;
+  }
   #toggles{
     position: relative;
     a{

@@ -1,16 +1,18 @@
 import React, { useEffect } from 'react'
 import CommonBanner from '../../Components/Common-banner'
 import './style.scss'
-import './style.scss'
+// import './style.scss'
 import SectionComponent from '../../Components/SectionComponent'
 import { useLocation } from 'react-router-dom'
 import baseDomain, {
-  donationAssets,
+  // donationAssets,
   background,
 } from '../../assets/images/imageAsset'
+import InnerNavComponent from '../../Components/InnerNavComponent'
+import { data } from './data'
 //import DonationImg from '../../assets/images/dontion_bg.jpg'
 //import b{ background } from '../../assets/images/imageAsset'
-const AnnamBramha = () => {
+const DonationPage = () => {
   const route = useLocation()
   console.log(route)
   useEffect(() => {
@@ -59,7 +61,12 @@ const AnnamBramha = () => {
   //       'The Mumbai Police Force is on its toes 24X7, 365 days a year protecting us all and serving the city selflessly. The high stress levels of their jobs expose them to various severe health concerns such as cardiac and coronary diseases, stress induced obesity, diabetes, blood-pressure etc.  The Yoga Institute has teamed up with Mumbai Police to train more than 13,000 men and women of the force in yoga techniques. This has helped them fight their daily stress-induced challenges, improve their overall physical health and become more focused and mindful.',
   //   },
   // ]
-
+  const DonationBan = {
+    title: 'Career',
+    color: 'white',
+    menuColor: 'white',
+    menuItems: [],
+  }
   return (
     <>
       <div className="brahma-container">
@@ -76,8 +83,19 @@ const AnnamBramha = () => {
           }
           bannerImg={`${baseDomain}${background.donation}`}
           overlay="#CE7780D4"
+        >
+          <InnerNavComponent abc={DonationBan} />
+        </CommonBanner>
+        {data.map((point, i) => <SectionComponent
+          key={i}
+          url={`/donation/${point.key}`}
+          image={point.image}
+          title={point.title}
+          description={point.description}
+          sectionId={point.key}
         />
-        <SectionComponent
+        )}
+        {/* <SectionComponent
           url="/donation/annam-brahma"
           image={`${baseDomain}${donationAssets.annamAssets}`}
           title="Annam Brahma"
@@ -133,10 +151,10 @@ const AnnamBramha = () => {
           title="Police"
           description="The Mumbai Police Force is on its toes 24X7, 365 days a year protecting us all and serving the city selflessly. The high stress levels of their jobs expose them to various severe health concerns such as cardiac and coronary diseases, stress induced obesity, diabetes, blood-pressure etc.  The Yoga Institute has teamed up with Mumbai Police to train more than 13,000 men and women of the force in yoga techniques. This has helped them fight their daily stress-induced challenges, improve their overall physical health and become more focused and mindful. "
           sectionId="police"
-        />
+        /> */}
       </div>
     </>
   )
 }
 
-export default AnnamBramha
+export default DonationPage
