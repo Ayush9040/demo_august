@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import React from 'react'
 import { star } from '../../assets/icons/icon'
 import CommonBtn from '../commonbtn'
-import SelectDropDown from '../Select Dropdown'
+//import SelectDropDown from '../Select Dropdown'
 import './style.scss'
 
 
@@ -15,19 +15,19 @@ const CourseCard = ({
 }) => {
   console.log(color, 'clr')
   
-  const selectStyles = {
-    width : 'max-content',
-    background : 'rgb(227, 143, 115)',
-    border : '3px solid white',
-    color: '#fff',
-    padding: '1rem 2rem',
-    borderRadius: '5rem',
-    fontSize: '1.5rem',
-    fontWeight: 'bold',
-    marginTop: '1rem',
-    outline: 'none',
-    cursor: 'pointer'
-  }
+  // const selectStyles = {
+  //   width : 'max-content',
+  //   background : 'rgb(227, 143, 115)',
+  //   border : '3px solid white',
+  //   color: '#fff',
+  //   padding: '1rem 2rem',
+  //   borderRadius: '5rem',
+  //   fontSize: '1.5rem',
+  //   fontWeight: 'bold',
+  //   marginTop: '1rem',
+  //   outline: 'none',
+  //   cursor: 'pointer'
+  // }
   return (
     <div className="course-card">
       <div className="course-card-image">
@@ -52,12 +52,12 @@ const CourseCard = ({
             ? description?.substring(0, 40)+'...'
             : description}
         </h3>
-        <SelectDropDown text = {'Select Dates'} isStyles = {selectStyles} />
+        {/* <SelectDropDown text = {'Select Dates'} isStyles = {selectStyles} /> */}
         <div className='Button-class'>
           <Link to={`/courses/${path}/`}>
             <CommonBtn text={'View Details'} />
           </Link>
-          <CommonBtn text={'Enroll Now'} />
+          {/* <CommonBtn text={'Enroll Now'} /> */}
         </div> 
       </div>
     </div>

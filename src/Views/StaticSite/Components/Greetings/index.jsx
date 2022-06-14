@@ -5,9 +5,9 @@ import { legacy1 } from '../../assets/icons/icon'
 const Greeting = () => {
   const [greetModal, setGreetModal] = useState(true)
 
-    setTimeout(() => {
-      setGreetModal(false)
-    }, 5000)
+  setTimeout(() => {
+    setGreetModal(false)
+  }, 5000)
 
   return (
     <div className='greeting'>
