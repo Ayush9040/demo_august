@@ -1,23 +1,33 @@
 .csr-main-div {
   .csr-main-section {
-    margin: 0 20rem;
+    margin: 0 15rem;
     .main-top-section {
       margin: 0 auto;
       font-size: 2.75rem;
       font-weight: bolder;
-      margin-bottom: 0.5rem;
+      margin-bottom: 80px;
+      margin-top: 100px;
       width: max-content;
     }
     .csr-svg-section {
       display: flex;
       justify-content: space-evenly;
       text-align: center;
+      .svg-one {
+        margin: 0 auto;
+        width: 320px;
+      }
+      img {
+        height: 145px;
+        margin-bottom: 40px;
+      }
       & > div {
         width: 100%;
       }
     }
     .csr-mid-last {
-      padding: 5rem 10rem;
+      padding: 5rem 15rem;
+      text-align: center;
       p {
         padding: 2rem 0rem;
       }
@@ -62,9 +72,12 @@
         .last-btn {
           padding-top: 3rem;
           .btn-div {
-            border: 5px solid black;
+            border: 3px solid black;
             padding: 15px;
             border-radius: 30px;
+            .view_btn {
+              background: transparent;
+            }
             button {
               font-size: 2rem;
               border: none;
@@ -77,39 +90,35 @@
   }
 }
 
-
-
 @media only screen and (max-width: 1200px) {
   .csr-main-div {
     .csr-main-section {
       margin: 0 2rem;
 
-
-      .csr-mid-last{
+      .csr-mid-last {
         padding: 2rem 5rem;
       }
-
     }
-    .last-container{
-      .content-container-section{
+    .last-container {
+      .content-container-section {
         margin: 0;
         // flex-direction: column;
 
-        .image-container{
+        .image-container {
           width: 100%;
         }
-        .description-content{
+        .description-content {
           width: 100%;
           padding: 1rem 2rem;
           text-align: center;
 
-          .header{
-            .header-title{
-              h1{
+          .header {
+            .header-title {
+              h1 {
                 font-size: 2.5rem;
               }
             }
-            .header-btn{
+            .header-btn {
               min-width: fit-content;
             }
           }
@@ -127,32 +136,30 @@
     .csr-main-section {
       margin: 0 2rem;
 
-
-      .csr-mid-last{
+      .csr-mid-last {
         padding: 2rem 5rem;
       }
-
     }
-    .last-container{
-      .content-container-section{
+    .last-container {
+      .content-container-section {
         margin: 0;
         // flex-direction: column;
 
-        .image-container{
+        .image-container {
           width: 100%;
         }
-        .description-content{
+        .description-content {
           width: 100%;
           padding: 1rem 2rem;
           text-align: center;
 
-          .header{
-            .header-title{
-              h1{
+          .header {
+            .header-title {
+              h1 {
                 font-size: 2.5rem;
               }
             }
-            .header-btn{
+            .header-btn {
               min-width: fit-content;
             }
           }
@@ -170,32 +177,30 @@
     .csr-main-section {
       margin: 0 2rem;
 
-
-      .csr-mid-last{
+      .csr-mid-last {
         padding: 2rem 5rem;
       }
-
     }
-    .last-container{
-      .content-container-section{
+    .last-container {
+      .content-container-section {
         margin: 0;
         flex-direction: column;
 
-        .image-container{
+        .image-container {
           width: 100%;
         }
-        .description-content{
+        .description-content {
           width: 100%;
           padding: 1rem 2rem;
           text-align: center;
 
-          .header{
-            .header-title{
-              h1{
+          .header {
+            .header-title {
+              h1 {
                 font-size: 2.5rem;
               }
             }
-            .header-btn{
+            .header-btn {
               min-width: fit-content;
             }
           }

@@ -44,7 +44,8 @@ import PrivacyPolicy from '../Components/PrivacyPolicy/index.jsx'
 import Affiliations from '../Components/Affiliations/index.jsx'
 import Enrollment from '../Components/EnrollmentForm/index.jsx'
 import wellness from '../Components/Wellness/index.jsx'
-import CorporateSocialResponsibilty from '../Components/CorporateSocialResponsibility/index.js'
+import CorporateSocialResponsibilty from '../Components/CorporateSocialResponsibility/index.jsx'
+import SingleCsr from '../Components/CorporateSocialResponsibility/SingleCsr/index.jsx'
 import SignUp from '../Views/Signup'
 import MediaVideo from '../Components/MediaVideo/index.jsx'
 import SingleDonation from '../Components/SingleDonation/index.jsx'
@@ -469,6 +470,14 @@ const staticSiteRoutes = [
     id: 'statisSiteUnderSingleDonation',
     routePath: '/donation/:donationId',
     name: 'SingleDonation',
+  },
+  {
+    Component: SingleCsr,
+    path: '/csr/:csrId',
+    exact: true,
+    id: 'statisSiteUnderSingleCsr',
+    routePath: '/csr/:csrId',
+    name: 'SingleCsr',
   },
 ]
 

@@ -45,7 +45,7 @@
     .uploads {
       display: flex;
       justify-content: center;
-      gap: 100px;
+      gap: 50px;
       padding-left: 0;
       & > fieldset {
         margin-top: 17px;
@@ -54,7 +54,7 @@
       }
       label {
         width: 100%;
-        min-width: 270px;
+        min-width: 320px;
         display: block;
         box-sizing: border-box;
         padding: 1rem 2rem;
@@ -166,6 +166,9 @@
         text-align: left;
       }
     }
+  }
+  .career-history{
+    width: 100%;
   }
 
   .experienced-lists {
@@ -435,7 +438,7 @@
     .left_flex_contanier {
       .uploads {
         label {
-          min-width: 200px;
+          min-width: 250px;
         }
       }
     }
@@ -455,7 +458,7 @@
       .uploads {
         gap: 25px;
         label {
-          min-width: 170px;
+          min-width: 220px;
           font-size: 1.6rem;
         }
       }
@@ -516,17 +519,7 @@
     }
   }
 }
-@media (max-width: '890px') {
-  .enrollment_container {
-    .details {
-      .right {
-        .date_div {
-          margin-right: 35px;
-        }
-      }
-    }
-  }
-}
+
 @media (max-width: '900px') {
   .enrollment_container {
     .left {
@@ -576,7 +569,7 @@
       .uploads {
         gap: 18px;
         label {
-          min-width: 130px;
+          min-width: 170px;
           font-size: 1.3rem;
         }
       }
@@ -689,7 +682,17 @@
     }
   }
 }
-
+@media (max-width: '890px') {
+  .enrollment_container {
+    .details {
+      .right {
+        .date_div {
+          margin-right: 35px;
+        }
+      }
+    }
+  }
+}
 @media (max-width: '786px') {
   .enrollment_container {
     .left {
@@ -727,7 +730,7 @@
       .uploads {
         gap: 37px;
         label {
-          min-width: 105px;
+          //min-width: 105px;
           font-size: 1rem;
         }
       }
