@@ -1,12 +1,20 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import CommonBannerNavPrimary from '../CommonBannerNavPrimary'
 import GridComponent from '../GridComponent'
+import { useParams } from 'react-router-dom'
+import { data } from '../../Views/About/our-legacy/data'
 import './style.scss'
 
-const OurLegacyModal = ({ data }) => {
+const OurLegacyModal = (  ) => {
+
+  const { name } = useParams()
+
+  const [ pageData,setPageData] = useState({})
 
 
-  
+  useEffect(()=>{
+    setPageData(data.find(point=>(name === point.key)))
+  },[])
 
   return (
     <>
@@ -14,23 +22,23 @@ const OurLegacyModal = ({ data }) => {
       <div className="our-legacy-modal">
         <div className="about-details-container">
           <div className="detail-main-image">
-            <img src={data.leftImg} alt="" />
+            <img src={pageData.leftImg} alt="" />
           </div>
           <div className="detail-text">
             <div className="detail-top-text">
               <div className="detail-container-top">
                 <div className="name-left">
-                  {data.name}
+                  {pageData.name}
                   <div className="bottom-line"></div>
                 </div>
                 <div className="position-right">
-                  <p>{data.founder}</p>
-                  <span className="position-year">{data.year}</span>
+                  <p>{pageData.founder}</p>
+                  <span className="position-year">{pageData.year}</span>
                   
                 </div>
               </div>
-              <p>{data.desc[0]}</p>
-              <p>{data.desc[1]}</p>
+              <p>{pageData.desc[0]}</p>
+              <p>{pageData.desc[1]}</p>
             </div>
           </div>
         </div>
@@ -38,15 +46,15 @@ const OurLegacyModal = ({ data }) => {
         <div className="about-details-container2">
           <div className="detail-text">
             <div className="detail-top-text">
-              <p>{data.desc[2]}</p>
-              <p>{data.desc[3]}</p>
+              <p>{pageData.desc[2]}</p>
+              <p>{pageData.desc[3]}</p>
             </div>
           </div>
           <div className="detail-main-image">
-            <img src={data.rightImg} alt="" />
+            <img src={pageData.rightImg} alt="" />
           </div>
         </div>
-        <GridComponent imgs={data.gallery} />
+        <GridComponent imgs={pageData.gallery} />
       </div>
     </>
   )

@@ -6,7 +6,7 @@ const CoursePara = ({ content }) => {
     <div className="CoursePara">
       <h2>
         <u>
-        <b>{content.title}</b>
+          <b>{content.title}</b>
         </u>
       </h2>
       {content.text.map((point, i) => {
