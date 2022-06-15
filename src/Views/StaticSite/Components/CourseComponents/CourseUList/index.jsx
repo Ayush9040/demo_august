@@ -1,6 +1,6 @@
 import React from 'react'
 
-const CourseULIst = ({content}) => {
+const CourseULIst = ({ content }) => {
 
 
   return (
