@@ -37,7 +37,7 @@ const VolunteerJob = () => {
         </div>
         <div className="job-application">
           <div className="job-requirements">
-            <ul>
+            {/* <ul>
               {program?.reqirements?.map((item, i) => {
                 return (
                   <li key={i}>
@@ -46,7 +46,7 @@ const VolunteerJob = () => {
                   </li>
                 )
               })}
-            </ul>
+            </ul> */}
           </div>
           <div className="job-form">
             <form>

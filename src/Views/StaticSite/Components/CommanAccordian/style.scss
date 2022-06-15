@@ -1,0 +1,30 @@
+.accordian_contanier{
+  padding: 1.5rem;
+  .accordian_div {
+    width: 60%;
+    margin: 0 auto;
+    .accordian_ques {
+      padding: 1rem;
+      font-weight: bold;
+      font-size: 2.25rem;
+      cursor: pointer;
+    }
+    .open {
+      transition: 0.2s ease;
+      transform: rotate(90deg);
+   
+    }
+    .acc_arrow {
+      color: var(--brick-red);
+      float: right;
+    }
+    .accordian_ans {
+      height: 0;
+      overflow: hidden;
+      padding-left: 1rem;  
+      margin-bottom: 1.3rem;
+      
+    }
+  }
+  
+}
