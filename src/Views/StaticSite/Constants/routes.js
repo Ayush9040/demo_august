@@ -1,10 +1,3 @@
-// import OurLegacyModal from '../Components/OurLegacyModal'
-import MadhavJi from '../Views/About/our-legacy/paramhamsa-madhavadas-ji.jsx'
-import Yogendra from '../Views/About/our-legacy/shree-yogendra-ji'
-import Jayadev from '../Views/About/our-legacy/dr-jayadeva-yogendra.jsx'
-import Sitadevi from '../Views/About/our-legacy/smt-sitadevi-ji.jsx'
-import Hansaji from '../Views/About/our-legacy/dr-hansaji-yogendra'
-import Hirish from '../Views/About/our-legacy/harish-ji'
 import Blessings from '../Views/About/blessings'
 import AboutUs from '../Views/About/index'
 import OurLegacy from '../Views/About/our-legacy'
@@ -50,6 +43,7 @@ import SignUp from '../Views/Signup'
 import MediaVideo from '../Components/MediaVideo/index.jsx'
 import SingleDonation from '../Components/SingleDonation/index.jsx'
 import DonationPage from '../Views/Donation'
+import OurLegacyModal from '../Components/OurLegacyModal/index.jsx'
 
 const staticSiteRoutes = [
   {
@@ -115,62 +109,13 @@ const staticSiteRoutes = [
     id: 'statisSiteBlessings',
     routePath: '/about/blessings',
     name: 'Blessings',
-  },
-  {
-    Component: Sitadevi,
-    path: '/about/our-legacy/smt-sitadevi-ji',
+  },{
+    Component: OurLegacyModal,
+    path: '/about/our-legacy/:name',
     exact: true,
-    id: 'statisSiteSitadeviJi',
-    routePath: '/about/our-legacy/smt-sitadevi-ji',
-    name: 'SitadeviJi',
-  },
-  {
-    Component: Jayadev,
-    path: '/about/our-legacy/dr-jayadeva-yogendra',
-    exact: true,
-    id: 'statisSiteDrJayadeva',
-    routePath: '/about/our-legacy/dr-jayadeva-yogendra',
-    name: 'DrJayadeva',
-  },
-  {
-    Component: Hansaji,
-    path: '/about/our-legacy/dr-hansaji-yogendra',
-    exact: true,
-    id: 'statisSiteDrHansaji',
-    routePath: '/about/our-legacy/dr-hansaji-yogendra',
-    name: 'DrHansaji',
-  },
-  {
-    Component: Hirish,
-    path: '/about/our-legacy/harish-ji',
-    exact: true,
-    id: 'statisSiteHarishJi',
-    routePath: '/about/our-legacy/harish-ji',
-    name: 'HarishJi',
-  },
-  {
-    Component: MadhavJi,
-    path: '/about/our-legacy/paramhamsa-madhavadas-ji',
-    exact: true,
-    id: 'statisSiteMadhavdasJi',
-    routePath: '/about/our-legacy/paramhamsa-madhavadas-ji',
-    name: 'MadhavdasJi',
-  },
-  {
-    Component: Yogendra,
-    path: '/about/our-legacy/shree-yogendra-ji',
-    exact: true,
-    id: 'statisSiteYagendraJi',
-    routePath: '/about/our-legacy/shree-yogendra-ji',
-    name: 'YagendraJi',
-  },
-  {
-    Component: Yogendra,
-    path: '/about/our-legacy/shree-yagendra-ji',
-    exact: true,
-    id: 'statisSiteYagendraJi',
-    routePath: '/about/our-legacy/shree-yagendra-ji',
-    name: 'YagendraJi',
+    id: 'statisSiteOurLegacyModal',
+    routePath: '/about/our-legacy/:name',
+    name: 'OurLegacyModal',
   },
   {
     Component: YogaTotalHealth,
