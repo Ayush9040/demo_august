@@ -7,11 +7,6 @@ import Home from '../Views/Home'
 import Volunteer from '../Views/Volunteer'
 import Values from '../Views/Volunteer/values'
 import MuseumPage from '../Views/Museum/index.jsx'
-import YogaTotalHealth from '../Views/Publication'
-import Books from '../Views/Publication/books'
-import EBooks from '../Views/Publication/e-books'
-import library from '../Views/Publication/library'
-import Yogasattva from '../Views/Publication/yogasattva'
 import Shop from '../Views/Shop'
 import SocialResponsibility from '../Views/SocialPage/index.jsx'
 import BlogPage from '../Views/BlogPage/index.jsx'
@@ -37,6 +32,7 @@ import OurLegacyModal from '../Components/OurLegacyModal/index.jsx'
 import About from '../Views/About'
 import Alumni from '../Views/Alumni'
 import Media from '../Views/Media'
+import Publication from '../Views/Publication'
 
 const staticSiteRoutes = [
   {
@@ -96,44 +92,12 @@ const staticSiteRoutes = [
     name: 'OurLegacyModal',
   },
   {
-    Component: YogaTotalHealth,
-    path: '/publication',
+    Component: Publication,
+    path: '/publication/*',
     exact: true,
     id: 'statisSitePublication',
-    routePath: '/publication',
+    routePath: '/publication/*',
     name: 'Publication',
-  },
-  {
-    Component: Yogasattva,
-    path: '/publication/yogasattva',
-    exact: true,
-    id: 'statisSiteYogasattva',
-    routePath: '/publication/yogasattva',
-    name: 'Yogasattva',
-  },
-  {
-    Component: Books,
-    path: '/publication/books',
-    exact: true,
-    id: 'statisSiteBooks',
-    routePath: '/publication/books',
-    name: 'Books',
-  },
-  {
-    Component: EBooks,
-    path: '/publication/e-books',
-    exact: true,
-    id: 'statisSiteEBooks',
-    routePath: '/publication/e-books',
-    name: 'EBooks',
-  },
-  {
-    Component: library,
-    path: '/publication/library',
-    exact: true,
-    id: 'statisSiteLibrary',
-    routePath: '/publication/library',
-    name: 'Library',
   },
   {
     Component: Media,

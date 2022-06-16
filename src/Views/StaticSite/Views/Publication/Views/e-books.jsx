@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react'
-import PublicationCard from '../../Components/PublicationCard'
+import PublicationCard from '../../../Components/PublicationCard'
 // import PublicationNav from '../../Components/PublicationNav'
 import axios from 'axios'
 import './style.scss'
-import InnerNavComponent from '../../Components/InnerNavComponent'
+import InnerNavComponent from '../../../Components/InnerNavComponent'
 
 const EBooks = () => {
   const [product, setProduct] = useState([])
@@ -34,7 +34,7 @@ const EBooks = () => {
     menuItems:[
       {
         innerTitle:'yoga-health',
-        url:'/publication',
+        url:'/publication/yoga-health',
         name:'Yoga and Total Health'
       },
       {

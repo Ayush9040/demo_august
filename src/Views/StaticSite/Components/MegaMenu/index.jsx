@@ -22,7 +22,7 @@ const MegaMenu = ({ setNav }) => {
     { name: 'TYI ONLINE', link: '', id: 8, key: 'ONLINE' },
     {
       name: 'PUBLICATIONS',
-      link: '/publication',
+      link: '/publication/yoga-health',
       id: 9,
       key: 'PUBLICATIONS',
     },
@@ -48,7 +48,7 @@ const MegaMenu = ({ setNav }) => {
       },
     ],
     PUBLICATIONS: [
-      { menu: 'Yoga & Total Heath', link: '/publication' },
+      { menu: 'Yoga & Total Heath', link: '/publication/yoga-health' },
       { menu: 'Yogsattva', link: '/publication/yogasattva' },
       { menu: 'Books', link: '/publication/books' },
       { menu: 'Free E-Books', link: '/publication/e-books' },

@@ -1,7 +1,7 @@
 import React from 'react'
 // import PublicationNav from '../../Components/PublicationNav'
-import baseDomain, { publicationAssests } from '../../assets/images/imageAsset'
-import InnerNavComponent from '../../Components/InnerNavComponent'
+import baseDomain, { publicationAssests } from '../../../assets/images/imageAsset'
+import InnerNavComponent from '../../../Components/InnerNavComponent'
 
 const library = () => {
   const yogaLibrary = {
@@ -11,7 +11,7 @@ const library = () => {
     menuItems:[
       {
         innerTitle:'yoga-health',
-        url:'/publication',
+        url:'/publication/yoga-health',
         name:'Yoga and Total Health'
       },
       {

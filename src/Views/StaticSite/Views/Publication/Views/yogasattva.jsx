@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
 import './style.scss'
-import baseDomain, { publicationAssests } from '../../assets/images/imageAsset'
+import baseDomain, { publicationAssests } from '../../../assets/images/imageAsset'
 import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
-import PublicationDateNav from '../../Components/PublicationDateNav'
+import PublicationDateNav from '../../../Components/PublicationDateNav'
 // import PublicationNav from '../../Components/PublicationNav'
-import InnerNavComponent from '../../Components/InnerNavComponent'
+import InnerNavComponent from '../../../Components/InnerNavComponent'
 
 const Yogasattva = () => {
   let setting2 = {
@@ -17,13 +17,13 @@ const Yogasattva = () => {
     arrows: false,
   }
   const publicationSattva = {
-    title:'library',
+    title:'yogasttav',
     color:'white',
     menuColor:'white',
     menuItems:[
       {
         innerTitle:'yoga-health',
-        url:'/publication',
+        url:'/publication/yoga-health',
         name:'Yoga and Total Health'
       },
       {
