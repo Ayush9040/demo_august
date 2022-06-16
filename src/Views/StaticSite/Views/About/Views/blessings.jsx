@@ -1,8 +1,8 @@
 import React from 'react'
-import CommonBannerAboutUs from '../../Components/CommonBannerAboutUs'
-import Tyi from '../../assets/images/why_tyi.png'
-import baseDomain, { aboutAssets } from '../../assets/images/imageAsset'
-import InnerNavComponent from '../../Components/InnerNavComponent'
+import CommonBannerAboutUs from '../../../Components/CommonBannerAboutUs'
+import Tyi from '../../../assets/images/why_tyi.png'
+import baseDomain, { aboutAssets } from '../../../assets/images/imageAsset'
+import InnerNavComponent from '../../../Components/InnerNavComponent'
 
 
 

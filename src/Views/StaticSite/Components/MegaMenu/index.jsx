@@ -9,7 +9,7 @@ const MegaMenu = ({ setNav }) => {
   const navItems = [
     {
       name: 'ABOUT',
-      link: '/about',
+      link: '/about/overview',
       id: 1,
       key: 'ABOUT',
     },
@@ -36,7 +36,7 @@ const MegaMenu = ({ setNav }) => {
     ABOUT: [
       {
         menu: 'Overview',
-        link: '/about',
+        link: '/about/overview',
       },
       {
         menu: 'Our Legacy',
@@ -181,6 +181,7 @@ const MegaMenu = ({ setNav }) => {
                     onMouseOver={() => {
                       setMenuItem(item.key)
                     }}
+                    key={i}
                   >
                     <li>
                       {item.name}

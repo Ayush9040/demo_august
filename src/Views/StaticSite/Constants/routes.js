@@ -1,6 +1,3 @@
-import Blessings from '../Views/About/blessings'
-import AboutUs from '../Views/About/index'
-import OurLegacy from '../Views/About/our-legacy'
 import Seminar from '../Views/Alumni'
 import AlumniGallery from '../Views/Alumni/alumni-gallery'
 import Support from '../Views/Alumni/support'
@@ -44,6 +41,7 @@ import MediaVideo from '../Components/MediaVideo/index.jsx'
 import SingleDonation from '../Components/SingleDonation/index.jsx'
 import DonationPage from '../Views/Donation'
 import OurLegacyModal from '../Components/OurLegacyModal/index.jsx'
+import About from '../Views/About'
 
 const staticSiteRoutes = [
   {
@@ -87,29 +85,14 @@ const staticSiteRoutes = [
     name: 'Course',
   },
   {
-    Component: AboutUs,
-    path: '/about',
+    Component:About,
+    path: '/about/*',
     exact: true,
     id: 'statisSiteAbout',
-    routePath: '/about',
-    name: 'About',
+    routePath: '/about/*',
+    name: 'About'
   },
   {
-    Component: OurLegacy,
-    path: '/about/our-legacy',
-    exact: true,
-    id: 'statisSiteOurLegacy',
-    routePath: '/about/our-legacy',
-    name: 'OurLegacy',
-  },
-  {
-    Component: Blessings,
-    path: '/about/blessings',
-    exact: true,
-    id: 'statisSiteBlessings',
-    routePath: '/about/blessings',
-    name: 'Blessings',
-  },{
     Component: OurLegacyModal,
     path: '/about/our-legacy/:name',
     exact: true,

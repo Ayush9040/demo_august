@@ -1,7 +1,7 @@
 import React from 'react'
 import CommonBannerLegacy from '../../../Components/AboutUsLegacy'
-import benefits from '../../../assets/images/benifits.png'
 import InnerNavComponent from '../../../Components/InnerNavComponent'
+import baseDomain,{ background } from '../../../assets/images/imageAsset'
 
 const OurLegacy = () => {
   const AboutOurLegacy = {
@@ -33,7 +33,7 @@ const OurLegacy = () => {
         Logo={false}
         Navigation={true}
         PageType="about-legacy"
-        BgImage={benefits}
+        BgImage={`${baseDomain}${background.benefits}`}
         Heading="Overview"
         isOnlyBanner={false}
         innerNav={false}

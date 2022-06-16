@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import CommonBannerNavPrimary from '../CommonBannerNavPrimary'
 import GridComponent from '../GridComponent'
 import { useParams } from 'react-router-dom'
-import { data } from '../../Views/About/our-legacy/data'
+import { data } from '../../Views/About/Constants/data'
 import './style.scss'
 
 const OurLegacyModal = (  ) => {
