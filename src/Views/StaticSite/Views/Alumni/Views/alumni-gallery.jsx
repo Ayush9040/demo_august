@@ -1,8 +1,7 @@
 import React, { useState } from 'react'
-import AlumniGrid from '../../Components/AlumniGrid'
-// import CommonBannerNav1 from '../../Components/AlumniNav'
-import baseDomain, { alumniAssets } from '../../assets/images/imageAsset'
-import InnerNavComponent from '../../Components/InnerNavComponent'
+import AlumniGrid from '../../../Components/AlumniGrid'
+import baseDomain, { alumniAssets } from '../../../assets/images/imageAsset'
+import InnerNavComponent from '../../../Components/InnerNavComponent'
 
 const AlumniGallery = () => {
   const galleryImages = {

@@ -1,6 +1,3 @@
-import Seminar from '../Views/Alumni'
-import AlumniGallery from '../Views/Alumni/alumni-gallery'
-import Support from '../Views/Alumni/support'
 import Courses from '../Views/Courses'
 import SingleCourse from '../Views/Courses/course-name'
 import Facilities from '../Views/Facilities'
@@ -42,6 +39,7 @@ import SingleDonation from '../Components/SingleDonation/index.jsx'
 import DonationPage from '../Views/Donation'
 import OurLegacyModal from '../Components/OurLegacyModal/index.jsx'
 import About from '../Views/About'
+import Alumni from '../Views/Alumni'
 
 const staticSiteRoutes = [
   {
@@ -205,28 +203,12 @@ const staticSiteRoutes = [
     name: 'Donation',
   },
   {
-    Component: Seminar,
-    path: '/alumni',
+    Component: Alumni,
+    path: '/alumni/*',
     exact: true,
     id: 'statisSiteUnderAlumni',
-    routePath: '/alumni',
+    routePath: '/alumni/*',
     name: 'Alumni',
-  },
-  {
-    Component: AlumniGallery,
-    path: '/alumni/alumni-gallery',
-    exact: true,
-    id: 'statisSiteUnderAlumniGallery',
-    routePath: '/alumni/alumni-gallery',
-    name: 'AlumniGallery',
-  },
-  {
-    Component: Support,
-    path: '/alumni/support',
-    exact: true,
-    id: 'statisSiteUnderSupport',
-    routePath: '/alumni/support',
-    name: 'Support',
   },
   {
     Component: FAQ,
