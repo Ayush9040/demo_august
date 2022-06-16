@@ -25,7 +25,7 @@ const InnerNavComponent = ({ abc }) => {
   const location = useLocation()
 
   useEffect(() => {
-    if (location.pathname === '/media/video') {
+    if (location.pathname === '/media/video-gallery') {
       setBold(1)
     } else {
       setBold(0)
@@ -95,10 +95,10 @@ const InnerNavComponent = ({ abc }) => {
         >
           {abc.title === 'gallery' && (
             <ul id="gallery-toggle">
-              <Link to="/media">
+              <Link to="/media/media-gallery">
                 <li style={bold === 0 ? { fontWeight: 'bold' } : {}}>Images</li>
               </Link>
-              <Link to="/media/video">
+              <Link to="/media/video-gallery">
                 <li
                   style={
                     bold === 1

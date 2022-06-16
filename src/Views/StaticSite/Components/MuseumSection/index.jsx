@@ -18,7 +18,7 @@ import InnerNavComponent from '../InnerNavComponent'
 //import museumBanner from '../../assets/images/museum-1.png'
 const Museum = () => {
   const route = useLocation()
-  console.log(route.hash.substring(1, route.hash.length))
+
   useEffect(() => {
     if (route.hash) {
       document

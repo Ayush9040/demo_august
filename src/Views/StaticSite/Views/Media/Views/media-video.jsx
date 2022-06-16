@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
-import { data } from './data'
+import { data } from '../Constants/data'
 import './style.scss'
 // import MediaNav from '../MediaNav'
-import InnerNavComponent from '../InnerNavComponent'
+import InnerNavComponent from '../../../Components/InnerNavComponent'
 
 const MediaVideo = () => {
   const [videoURL, setvideoURL] = useState(
@@ -16,7 +16,7 @@ const MediaVideo = () => {
     menuItems: [
       {
         innerTitle: 'gallery',
-        url: '/media',
+        url: '/media/media-gallery',
         name: 'Gallery',
       },
       {

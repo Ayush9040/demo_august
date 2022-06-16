@@ -6,9 +6,6 @@ import Gifting from '../Views/Gifting'
 import Home from '../Views/Home'
 import Volunteer from '../Views/Volunteer'
 import Values from '../Views/Volunteer/values'
-import MediaGallery from '../Views/Media'
-import MediaEvents from '../Views/Media/events'
-import News from '../Views/Media/news'
 import MuseumPage from '../Views/Museum/index.jsx'
 import YogaTotalHealth from '../Views/Publication'
 import Books from '../Views/Publication/books'
@@ -34,12 +31,12 @@ import wellness from '../Components/Wellness/index.jsx'
 import CorporateSocialResponsibilty from '../Components/CorporateSocialResponsibility/index.jsx'
 import SingleCsr from '../Components/CorporateSocialResponsibility/SingleCsr/index.jsx'
 import SignUp from '../Views/Signup'
-import MediaVideo from '../Components/MediaVideo/index.jsx'
 import SingleDonation from '../Components/SingleDonation/index.jsx'
 import DonationPage from '../Views/Donation'
 import OurLegacyModal from '../Components/OurLegacyModal/index.jsx'
 import About from '../Views/About'
 import Alumni from '../Views/Alumni'
+import Media from '../Views/Media'
 
 const staticSiteRoutes = [
   {
@@ -139,28 +136,12 @@ const staticSiteRoutes = [
     name: 'Library',
   },
   {
-    Component: MediaGallery,
-    path: '/media',
+    Component: Media,
+    path: '/media/*',
     exact: true,
     id: 'statisSiteMedia',
-    routePath: '/media',
+    routePath: '/media/*',
     name: 'Media',
-  },
-  {
-    Component: News,
-    path: '/media/news',
-    exact: true,
-    id: 'statisSiteNews',
-    routePath: '/media/news',
-    name: 'News',
-  },
-  {
-    Component: MediaEvents,
-    path: '/media/events',
-    exact: true,
-    id: 'statisSiteEvent',
-    routePath: '/media/events',
-    name: 'Event',
   },
   {
     Component: MuseumPage,
@@ -364,14 +345,6 @@ const staticSiteRoutes = [
     id: 'statisSiteUnderSignUp',
     routePath: '/sign-up',
     name: 'SignUp',
-  },
-  {
-    Component: MediaVideo,
-    path: '/media/video',
-    exact: true,
-    id: 'statisSiteUnderMediaVideo',
-    routePath: '/media/video',
-    name: 'MediaVideo',
   },
   {
     Component: SingleDonation,

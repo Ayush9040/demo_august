@@ -1,7 +1,7 @@
 import React from 'react'
-import InnerNavComponent from '../../Components/InnerNavComponent'
+import InnerNavComponent from '../../../Components/InnerNavComponent'
 // import MediaNav from '../../Components/MediaNav'
-import MediaSection from '../../Components/MediaSection'
+import MediaSection from '../../../Components/MediaSection'
 
 const MediaEvents = () => {
   let description = `Take a look at The Yoga Institute's worldwide and national holistic wellness events. Each event is well thought out, uniquely planned, and conducted to provide each participant with an opportunity to experience well-being while also learning about the various and interesting aspects of yoga. On a global scale, these events serve as a means of contributing to the betterment of society and spreading peace and prosperity.
@@ -13,7 +13,7 @@ const MediaEvents = () => {
     menuItems: [
       {
         innerTitle: 'gallery',
-        url: '/media',
+        url: '/media/media-gallery',
         name: 'Gallery',
       },
       {

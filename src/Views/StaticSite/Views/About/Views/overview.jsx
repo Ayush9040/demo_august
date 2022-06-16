@@ -16,7 +16,7 @@ const AboutUs = () => {
     menuItems: [
       {
         innerTitle: 'overview',
-        url: '/about',
+        url: '/about/overview',
         name: 'Overview',
       },
       {

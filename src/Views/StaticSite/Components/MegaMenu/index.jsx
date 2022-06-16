@@ -27,7 +27,7 @@ const MegaMenu = ({ setNav }) => {
       key: 'PUBLICATIONS',
     },
     { name: 'SHOP', link: '/shop', id: 10, key: 'SHOP' },
-    { name: 'NEWS,EVENTS & MEDIA', link: '/media', id: 11, key: 'NEWS' },
+    { name: 'NEWS,EVENTS & MEDIA', link: '/media/media-gallery', id: 11, key: 'NEWS' },
     { name: 'ALUMNI', link: '/alumni/upcoming-events', id: 12, key: 'ALUMNI' },
     { name: 'VOLUNTEER', link: '/volunteer', id: 13, key: 'VOLUNTEER' },
   ]
@@ -116,7 +116,7 @@ const MegaMenu = ({ setNav }) => {
       { menu: 'Police', link: '/donation/#police' },
     ],
     NEWS: [
-      { menu: 'Gallery', link: '/media' },
+      { menu: 'Gallery', link: '/media/media-gallery' },
       { menu: 'News', link: '/media/news' },
       { menu: 'Events', link: '/media/events' },
     ],

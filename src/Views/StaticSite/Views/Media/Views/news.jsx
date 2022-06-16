@@ -1,7 +1,6 @@
 import React from 'react'
-import InnerNavComponent from '../../Components/InnerNavComponent'
-// import MediaNav from '../../Components/MediaNav'
-import MediaSection from '../../Components/MediaSection'
+import InnerNavComponent from '../../../Components/InnerNavComponent'
+import MediaSection from '../../../Components/MediaSection'
 
 const News = () => {
   const MediaNews = {
@@ -11,7 +10,7 @@ const News = () => {
     menuItems: [
       {
         innerTitle: 'gallery',
-        url: '/media',
+        url: '/media/media-gallery',
         name: 'Gallery',
       },
       {

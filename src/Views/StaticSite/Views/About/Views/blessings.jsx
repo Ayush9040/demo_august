@@ -15,7 +15,7 @@ const Blessings = ({ location }) => {
     menuItems: [
       {
         innerTitle: 'overview',
-        url: '/about',
+        url: '/about/overview',
         name: 'Overview',
       },
       {
