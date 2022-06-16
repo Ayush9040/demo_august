@@ -1,5 +1,10 @@
 .Dates-dropdown{
   border: none;
+  .Select-dropdown{
+    &:focus-visible{
+      outline: white;
+    }
+  }
 }
 
 @media(max-width:620px){
@@ -12,6 +17,6 @@
       margin-top: 2rem;
       position: relative;
       display: flex;
-      left: 20rem;
+      // left: rem;
   }
 }
