@@ -1,4 +1,4 @@
-import AboutUs from '../Views'
+import AboutUs from '../Views/overview'
 import Blessings from '../Views/blessings'
 import OurLegacy from '../Views/our-legacy'
 
