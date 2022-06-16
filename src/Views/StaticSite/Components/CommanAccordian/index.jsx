@@ -1,4 +1,7 @@
 import React, { Fragment, useState } from 'react'
+import { Link } from 'react-router-dom'
+// import CourseSection from '../CourseSections'
+// import FAQ from '../Faq'
 import './style.scss'
 
 const Accordian = ({ data }) => {
@@ -6,12 +9,13 @@ const Accordian = ({ data }) => {
 
   return (
     <div className="accordian_contanier">
-      {' '}
-      {data.map((item,i) => {
+      
+      {data.map((item, i) => {
         return (
-          <Fragment key={i} >
-            <div className="accordian_div">
-              <p className='accordian_ques'
+          <Fragment key={i}>
+            <div style={typeof (item.ans) === 'object' ? { width:'100%' }:{}} className="accordian_div">
+              <p
+                className="accordian_ques"
                 onClick={() => {
                   setHidden(item.id)
                 }}
@@ -25,12 +29,28 @@ const Accordian = ({ data }) => {
                   &#9654;
                 </span>
               </p>
-              <p className='accordian_ans' style={hidden === item.id ? { height: 'auto' } : {}}>
-                {' '}
-                {item.ans}
-              </p>
+              {typeof (item.ans) !== 'object' ? (
+                <p
+                  className="accordian_ans"
+                  style={hidden === item.id ? { height: 'auto' } : {}}
+                >
+                  {' '}
+                  {item.ans}
+                </p>
+              ) : (
+                <ul 
+                  className="accordian_ans"
+                  style={hidden === item.id ? { height: 'auto' } : {}}
+                >
+                  {item.ans.map((points, i) => (
+                    <div className='accordian_ul' key={i}> 
+                      <Link to={points.url} >{points.text}</Link>
+                    </div>
+                  ))}
+                </ul>
+              )}
             </div>
-            <hr />
+            { typeof (item.ans) !== 'object' && <hr />}
           </Fragment>
         )
       })}
