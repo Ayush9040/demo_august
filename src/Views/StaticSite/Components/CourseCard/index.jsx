@@ -1,10 +1,10 @@
 import { Link } from 'react-router-dom'
 import React from 'react'
-import { star } from '../../assets/icons/icon'
+// import { star } from '../../assets/icons/icon'
 import CommonBtn from '../commonbtn'
 //import SelectDropDown from '../Select Dropdown'
 import './style.scss'
-
+import SelectDropDown from '../Select Dropdown'
 
 const CourseCard = ({
   color,
@@ -14,31 +14,29 @@ const CourseCard = ({
   img = 'http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Courses/course%20%281%29.png',
 }) => {
   console.log(color, 'clr')
-  
-  // const selectStyles = {
-  //   width : 'max-content',
-  //   background : 'rgb(227, 143, 115)',
-  //   border : '3px solid white',
-  //   color: '#fff',
-  //   padding: '1rem 2rem',
-  //   borderRadius: '5rem',
-  //   fontSize: '1.5rem',
-  //   fontWeight: 'bold',
-  //   marginTop: '1rem',
-  //   outline: 'none',
-  //   cursor: 'pointer'
-  // }
+
+  const selectStyles = {
+    cursor: 'pointer',
+    background: color,
+    borderColor: 'white',
+    color: 'white',
+    fontSize: '1.5rem',
+    fontWeight: '900',
+    padding: '0.8rem 0.8rem',
+    borderWidth: '0.1rem',
+    borderRadius: '15%/50%',
+  }
   return (
     <div className="course-card">
       <div className="course-card-image">
         <img src={img} />
-        <div className="stars">
+        {/* <div className="stars">
           {star}
           {star}
           {star}
           {star}
           {star}
-        </div>
+        </div> */}
       </div>
       <div
         className="course-card-content"
@@ -49,16 +47,21 @@ const CourseCard = ({
         <h4>{courseTitle}</h4>
         <h3>
           {description?.length > 40
-            ? description?.substring(0, 40)+'...'
+            ? description?.substring(0, 40) + '...'
             : description}
         </h3>
         {/* <SelectDropDown text = {'Select Dates'} isStyles = {selectStyles} /> */}
-        <div className='Button-class'>
+        <div className="course-card-dropdown">
+          <SelectDropDown text={'Select Dates'} isStyles={ selectStyles } />
+        </div>
+        <div className="Button-class">
           <Link to={`/courses/${path}/`}>
-            <CommonBtn text={'View Details'} />
+            <CommonBtn text={'View Details'}/>
           </Link>
-          {/* <CommonBtn text={'Enroll Now'} /> */}
-        </div> 
+          <Link to={`/enrollment/${path}/`}>
+            <CommonBtn text={'Enrol Now'} />
+          </Link>
+        </div>
       </div>
     </div>
   )

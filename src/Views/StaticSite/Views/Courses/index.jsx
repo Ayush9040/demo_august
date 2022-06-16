@@ -105,6 +105,15 @@ const Courses = () => {
             <div className="certificate-logo">
               <img src="http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Courses/Certificate/Yoga%20Certification%20Board.png" />
             </div>
+            <div className='certificate-text'>
+              <p> Lorem Ipsum is simply dummy text of the printing and typesetting
+                ndustry.</p>
+            </div>
+          </div>
+          <div className="certificate">
+            <div className="certificate-logo">
+              <img src="http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Courses/Certificate/Yoga%20Certification%20Board.png" />
+            </div>
             <div className="certificate-text">
               <p>
                 Lorem Ipsum is simply dummy text of the printing and typesetting

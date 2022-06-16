@@ -54,13 +54,22 @@ const CourseSection = ({ title, showRangeSlider, color, data, pathParam }) => {
     case 'Regular Classes':
       return (
         <div className="course-list-content">
-          <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              ndustry.
-          </p>
-          <Link to="/courses/browse/classes">
+          <div>
+            <h4>
+              <ul>
+                <li>Asana Regular Classes for Men On Campus</li>
+                <li>Asana Regular Classes for Women On Campus</li>
+                <li>Weekend Asana Classes - (Men & Women) On Campus</li>
+                <li>Weekend Asana Classes - (Men & Women) Online</li>
+                <li>Children&apos;s Regular Class - On Campus</li>
+                <li>Children&apos;s Weekend Class - On Campus </li>
+                <li>Advance Asana Regular Class - Online (Only for TYI Teachers)</li>
+              </ul>
+            </h4>
+          </div>
+          {/* <Link to="/courses/browse/classes">
             <CommonBtn text={'Explore all'} />
-          </Link>
+          </Link> */}
         </div>
       )
     case 'Camps & Workshops':
@@ -97,13 +106,20 @@ const CourseSection = ({ title, showRangeSlider, color, data, pathParam }) => {
     case 'Most Popular':
       return (
         <div className="course-list-content">
-          <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              ndustry.
-          </p>
-          <Link to="/courses/browse/most-popular">
+          <div>
+            <h4>
+              <ul>
+                <li>7 Days Health Camp</li>
+                <li>21 Days Better Living Course</li>
+                <li>200 Hour 1 Month BTTC Course</li>
+                <li>900 Hour 3 Month ATTC Course</li>
+                <li> Pregnancy Camp</li>
+              </ul>
+            </h4>
+          </div>
+          {/* <Link to="/courses/browse/most-popular">
             <CommonBtn text={'Explore all'} />
-          </Link>
+          </Link> */}
         </div>
       )
     }

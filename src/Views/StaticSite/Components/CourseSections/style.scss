@@ -132,6 +132,9 @@
         display: flex;
         justify-content: flex-end;
         gap: 2rem;
+        .course-card{
+            width: 100%;
+        }
     }
 }
 
@@ -140,6 +143,11 @@
         .course-list{
             min-width: 350px;
         }
+    }
+}
+@media(max-width:1280px){
+    .course-section{
+      flex-wrap: wrap;
     }
 }
 @media(max-width:1000px){
