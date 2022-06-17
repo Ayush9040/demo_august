@@ -6,7 +6,6 @@ import Values from '../Views/Volunteer/values'
 import MuseumPage from '../Views/Museum/index.jsx'
 import Shop from '../Views/Shop'
 import SocialResponsibility from '../Views/SocialPage/index.jsx'
-import OurFacts from '../Views/Facts/index'
 import SignIn from '../Views/SignIn/index.jsx'
 import SingleJob from '../Views/Careers/Views/single-job.jsx'
 import VolunteerJob from '../Views/Volunteer/volunteerJob.jsx'
@@ -29,6 +28,7 @@ import Career from '../Views/Careers'
 import Donations from '../Views/Donation'
 import Experiences from '../Views/Experience'
 import Facility from '../Views/Facilities'
+import Facts from '../Views/Facts'
 
 const staticSiteRoutes = [
   {
@@ -176,11 +176,11 @@ const staticSiteRoutes = [
     name: 'Blogs',
   },
   {
-    Component: OurFacts,
-    path: '/our-facts',
+    Component: Facts,
+    path: '/our-facts/*',
     exact: true,
     id: 'statisSiteUnderFacts',
-    routePath: '/our-facts',
+    routePath: '/our-facts/*',
     name: 'Facts',
   },
   {

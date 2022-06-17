@@ -1,72 +1,18 @@
-import React, { useEffect } from 'react'
-import Heading from '../../Components/Heading'
-import TimePeriodSelector from '../../Components/TimePeriodSelector'
-import { divider } from '../../assets/icons/icon'
-import './style.scss'
-import CommonBannerNavPrimary from '../../Components/CommonBannerNavPrimary'
-import useFacts from '../../utils/hooks/useFacts'
+import React from 'react'
+import {
+  Routes,
+  Route,
+} from 'react-router-dom'
+import factsRoutes from './Constants/routes'
 
-const OurFacts = () => {
-  useEffect(() => {
-    window.scrollTo(0, 0)
-  }, [])
-  const { selectedRange } = useFacts()
-
+const Facts = () => {
   return (
-    <>
-      <CommonBannerNavPrimary />
-      <div className="ourfacts-container flex">
-        <div className="ourfacts-header">
-          <div className="ourfacts-header-text">
-            <Heading smallText={'The Yoga Institute Facts'} />
-            <TimePeriodSelector />
-            <div className="our-facts-text ">
-              <div className="decade-year">
-                <span>
-                  <div>
-                    {selectedRange.start}
-                  </div>
-                  <div>-</div>
-                  <div>
-                    {selectedRange.end}
-                  </div>
-                </span>
-              </div>
-              <p className="decade-para">
-                {selectedRange.description.map((desc) => {
-                  // console.log(description, 'sahil')
-                  return (
-                    <>
-                      <h3>{desc?.date}</h3>
-                      <p>{desc?.data}</p>
-                    </>
-                  )
-                })}
-              </p>
-            </div>
-          </div>
-        </div>
-        <div className="ourfacts-gallery global-padding flex">
-          <div className="ourfacts-gallery-grid">
-            {selectedRange.images.map((img, idx) => (
-              <>
-                {idx <= 5 ? (
-                  <img
-                    key={idx}
-                    src={img}
-                    className={'grid-img-' + (idx + 1)}
-                  />
-                ) : (
-                  ''
-                )}
-              </>
-            ))}
-          </div>
-        </div>
-        <div className="divider">{divider}</div>
-      </div>
-    </>
+    <Routes>
+      {factsRoutes.map(({ Component, path }) => (
+        <Route element={<Component />} path={path} key={path} />
+      ))}
+    </Routes>
   )
 }
 
-export default OurFacts
+export default Facts
