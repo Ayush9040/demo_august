@@ -1,4 +1,3 @@
-import Facilities from '../Views/Facilities'
 import FAQ from '../Components/Faq'
 import Gifting from '../Views/Gifting'
 import Home from '../Views/Home'
@@ -29,6 +28,7 @@ import Blogs from '../Views/Blogs/index.jsx'
 import Career from '../Views/Careers'
 import Donations from '../Views/Donation'
 import Experiences from '../Views/Experience'
+import Facility from '../Views/Facilities'
 
 const staticSiteRoutes = [
   {
@@ -96,12 +96,12 @@ const staticSiteRoutes = [
     name: 'Museum',
   },
   {
-    Component: Facilities,
-    path: '/facilities',
+    Component: Facility,
+    path: '/facilities/*',
     exact: true,
-    id: 'statisSiteFacilities',
-    routePath: '/facilities',
-    name: 'Facilities',
+    id: 'statisSiteFacily',
+    routePath: '/facilities/*',
+    name: 'Facility',
   },
   {
     Component: Shop,
