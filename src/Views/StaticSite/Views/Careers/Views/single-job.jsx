@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react'
-import CommonBannerNavPrimary from '../CommonBannerNavPrimary'
+import CommonBannerNavPrimary from '../../../Components/CommonBannerNavPrimary'
 import './style.scss'
 import { useParams } from 'react-router-dom'
-import { Job } from '../../utils/JobDetails'
-import { upload } from '../../assets/icons/icon'
+import { Job } from '../../../utils/JobDetails'
+import { upload } from '../../../assets/icons/icon'
 
 const SingleJob = () => {
   const { jobid } = useParams()

@@ -1,5 +1,5 @@
-import Courses from '../Views/Courses'
-import SingleCourse from '../Views/Courses/course-name'
+// import Courses from '../Views/Courses/Views/course-page'
+// import SingleCourse from '../Views/Courses/course-name'
 import Facilities from '../Views/Facilities'
 import FAQ from '../Components/Faq'
 import Gifting from '../Views/Gifting'
@@ -9,15 +9,11 @@ import Values from '../Views/Volunteer/values'
 import MuseumPage from '../Views/Museum/index.jsx'
 import Shop from '../Views/Shop'
 import SocialResponsibility from '../Views/SocialPage/index.jsx'
-import BlogPage from '../Views/BlogPage/index.jsx'
-import BlogAnother from '../Views/BlogPage/Blog.jsx'
 import OurFacts from '../Views/Facts/index'
 import AllExperience from '../Views/Experience/index.js'
 import SignIn from '../Views/SignIn/index.jsx'
-import Careers from '../Views/Careers/index.jsx'
-import SingleJob from '../Components/SingleJobPage/index.jsx'
+import SingleJob from '../Views/Careers/Views/single-job.jsx'
 import VolunteerJob from '../Views/Volunteer/volunteerJob.jsx'
-import BrowseCourses from '../Components/BrowseCourses/index.jsx'
 import TermsCondition from '../Components/TermsandCondition/index.jsx'
 import PrivacyPolicy from '../Components/PrivacyPolicy/index.jsx'
 import Affiliations from '../Components/Affiliations/index.jsx'
@@ -33,6 +29,9 @@ import About from '../Views/About'
 import Alumni from '../Views/Alumni'
 import Media from '../Views/Media'
 import Publication from '../Views/Publication'
+import Course from '../Views/Courses'
+import Blogs from '../Views/BlogPage/index.jsx'
+import Career from '../Views/Careers'
 
 const staticSiteRoutes = [
   {
@@ -52,28 +51,12 @@ const staticSiteRoutes = [
     name: 'Social',
   },
   {
-    Component: Courses,
-    path: '/courses',
+    Component: Course,
+    path: '/courses/*',
     exact: true,
     id: 'statisSiteCourses',
-    routePath: '/courses',
+    routePath: '/courses/*',
     name: 'Courses',
-  },
-  {
-    Component: BrowseCourses,
-    path: '/courses/browse/:type',
-    exact: true,
-    id: 'statisSiteCourses',
-    routePath: '/courses/browse/:type',
-    name: 'Courses',
-  },
-  {
-    Component: SingleCourse,
-    path: '/courses/:courseId',
-    exact: true,
-    id: 'statisSiteCourse',
-    routePath: '/courses/:courseId',
-    name: 'Course',
   },
   {
     Component:About,
@@ -188,20 +171,12 @@ const staticSiteRoutes = [
   //   name: 'FAQ',
   // },
   {
-    Component: BlogPage,
-    path: '/blogs',
+    Component: Blogs,
+    path: '/blogs/*',
     exact: true,
     id: 'statisSiteUnderBlogs',
-    routePath: '/blogs',
+    routePath: '/blogs/*',
     name: 'Blogs',
-  },
-  {
-    Component: BlogAnother,
-    path: '/blogs/:blogId',
-    exact: true,
-    id: 'statisSiteUnderBlog',
-    routePath: '/blogs/:blogId',
-    name: 'Blog',
   },
   {
     Component: OurFacts,
@@ -228,11 +203,11 @@ const staticSiteRoutes = [
     name: 'SignIn',
   },
   {
-    Component: Careers,
-    path: '/careers',
+    Component: Career,
+    path: '/careers/*',
     exact: true,
     id: 'statisSiteUnderCareers',
-    routePath: '/careers',
+    routePath: '/careers/*',
     name: 'Careers',
   },
   {

@@ -7,10 +7,10 @@ import {
   AccordionItemButton,
   AccordionItemPanel,
 } from 'react-accessible-accordion'
-import CommonBannerNavPrimary from '../CommonBannerNavPrimary'
+import CommonBannerNavPrimary from '../../../Components/CommonBannerNavPrimary'
 import { useParams } from 'react-router-dom'
-import { courseArray } from '../../Constants/courses/c200hr'
-import CourseCard from '../CourseCard'
+import { courseArray } from '../../../Constants/courses/c200hr'
+import CourseCard from '../../../Components/CourseCard'
 import './style.scss'
 
 const BrowseCourses = () => {

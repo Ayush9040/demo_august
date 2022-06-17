@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom' 
-//import CommonBannerNavPrimary from '../../Components/CommonBannerNavPrimary'
-import CourseDetails from '../../Components/CourseDetails'
-import InnerNavComponent from '../../Components/InnerNavComponent'
-import { c200h } from '../../Constants/courses/c200hr'
+import CourseDetails from '../../../Components/CourseDetails'
+import InnerNavComponent from '../../../Components/InnerNavComponent'
+import { c200h } from '../../../Constants/courses/c200hr'
 
 const SingleCourse = () => {
   const { courseId } = useParams()
@@ -24,7 +23,6 @@ const SingleCourse = () => {
   }
   return (
     <div className='single-course'>
-      {/* <CommonBannerNavPrimary innerNav={false} /> */}
       <InnerNavComponent abc={CareerNameBan}/>
       {!isLoading && <CourseDetails pageDate={pageDate} />}
     </div>

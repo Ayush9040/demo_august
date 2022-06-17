@@ -1,18 +1,17 @@
 import React, { useEffect, useState } from 'react'
 
 import { useParams } from 'react-router-dom'
-import CommonBannerNav from '../../Components/CommonBannerNav'
-// import baseDomain, { alumniAssets } from '../../assets/images/imageAsset'
+import CommonBannerNav from '../../../Components/CommonBannerNav'
 import './style.scss'
-import Heading from '../../Components/Heading'
-import BlogGallery from '../../Components/BlogComponents/BlogGallery'
-import { allBlogData } from '../../utils/blogData'
-import BlogParagraph from '../../Components/BlogComponents/BlogParagraph'
-import BlogPoints from '../../Components/BlogComponents/BlogPoints'
-import BlogBullets from '../../Components/BlogComponents/BlogBullets'
-import BlogSubHeaing from '../../Components/BlogComponents/BlogSubHeading'
-import BlogVideo from '../../Components/BlogComponents/BlogVideo'
-import BlogLink from '../../Components/BlogComponents/BlogLink'
+import Heading from '../../../Components/Heading'
+import BlogGallery from '../../../Components/BlogComponents/BlogGallery'
+import { allBlogData } from '../../../utils/blogData'
+import BlogParagraph from '../../../Components/BlogComponents/BlogParagraph'
+import BlogPoints from '../../../Components/BlogComponents/BlogPoints'
+import BlogBullets from '../../../Components/BlogComponents/BlogBullets'
+import BlogSubHeaing from '../../../Components/BlogComponents/BlogSubHeading'
+import BlogVideo from '../../../Components/BlogComponents/BlogVideo'
+import BlogLink from '../../../Components/BlogComponents/BlogLink'
 
 const BlogAnother = () => {
   const { blogId } = useParams()

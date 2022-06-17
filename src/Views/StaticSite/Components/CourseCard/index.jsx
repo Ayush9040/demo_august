@@ -54,7 +54,7 @@ const CourseCard = ({
         </h3>
         {/* <SelectDropDown text = {'Select Dates'} isStyles = {selectStyles} /> */}
         <div className='Button-class'>
-          <Link to={`/courses/${path}/`}>
+          <Link to={`/courses/course/${path}/`}>
             <CommonBtn text={'View Details'} />
           </Link>
           {/* <CommonBtn text={'Enroll Now'} /> */}
