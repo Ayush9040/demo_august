@@ -84,15 +84,15 @@
         }
         .certificates{
             display: flex;
-            justify-content: space-between;
-            width: 90%;
+            justify-content: center;
+            width: 100%;
             margin: 0 auto;
             align-items: center;
             flex-wrap: wrap;
             margin-top: 10rem;
             .certificate{
                 text-align: center;
-                width: 30%;
+                width: 25%;
                 min-width: 250px;
                 .certificate-logo{
                     width: 40%;

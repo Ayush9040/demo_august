@@ -1,3 +1,4 @@
+
 .course-section {
     display: flex;
     padding: 10rem 5rem;
@@ -37,7 +38,7 @@
  
         p{
             max-width: 505px;
-            margin: 3rem 0;
+            // margin: 3rem 0;
         }
         ul{
             list-style: none;
@@ -53,6 +54,7 @@
             }
         }
         .course-list-content{
+            display: flex;
             .global-common-btn{
                 margin-top: 5rem;
             }
@@ -106,8 +108,9 @@
     }
     .rangeslider-vertical{
         margin-top: 3rem;
-        height: 400px;
+        height: 300px;
         max-width: 2px;
+        
     }
     .rangeslider-vertical .rangeslider__fill {
         transform: rotate(180deg);
@@ -129,6 +132,9 @@
         display: flex;
         justify-content: flex-end;
         gap: 2rem;
+        .course-card{
+            width: 100%;
+        }
     }
 }
 
@@ -137,6 +143,11 @@
         .course-list{
             min-width: 350px;
         }
+    }
+}
+@media(max-width:1280px){
+    .course-section{
+      flex-wrap: wrap;
     }
 }
 @media(max-width:1000px){
