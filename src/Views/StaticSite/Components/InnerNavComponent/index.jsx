@@ -79,7 +79,7 @@ const InnerNavComponent = ({ abc }) => {
             }
            
 
-            <Link to="/sign-in">
+            <Link to="/user/sign-in">
               {abc.color === 'orange'
                 ? User
                 : abc.color === 'white'

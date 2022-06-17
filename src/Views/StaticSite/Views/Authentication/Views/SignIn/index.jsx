@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from 'react'
-import CommonBannerNav2 from '../../Components/EcomNav'
-import { mail, lock } from '../../assets/icons/icon'
+import CommonBannerNav2 from '../../../../Components/EcomNav'
+import { mail, lock } from '../../../../assets/icons/icon'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGoogle, faFacebook } from '@fortawesome/free-brands-svg-icons'
 import './style.scss'
-import CommonBtn from '../../Components/commonbtn'
+import CommonBtn from '../../../../Components/commonbtn'
 import { Link } from 'react-router-dom'
-import InputComponent from '../../Components/InputComponent'
-
+import InputComponent from '../../../../Components/InputComponent'
 const SignIn = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -52,7 +51,7 @@ const SignIn = () => {
           </label>
         </form>
         <div className="social-logins guest">
-          <Link to="/sign-up">
+          <Link to="/user/sign-up">
             <h3>Sign Up</h3>
           </Link>
         </div>

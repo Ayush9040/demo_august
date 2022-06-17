@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from 'react'
-import CommonBannerNav2 from '../../Components/EcomNav'
-//import { mail, lock } from '../../assets/icons/icon'
+import CommonBannerNav2 from '../../../../Components/EcomNav'
 import { Link } from 'react-router-dom'
 import './style.scss'
-import CommonBtn from '../../Components/commonbtn'
-import InputComponent from '../../Components/InputComponent'
-import { validateEmail, validatePassword } from '../../../../helpers'
+import CommonBtn from '../../../../Components/commonbtn'
+import InputComponent from '../../../../Components/InputComponent'
+import { validateEmail,validatePassword } from '../../../../../../helpers'
 
 const SignUp = () => {
   const [formData, setFormData] = useState({
@@ -106,7 +105,7 @@ const SignUp = () => {
           </label>
         </form>
       </div>
-      <p style={{ textAlign:'center' }} >Already a user ? <Link to='/sign-in' ><span style={{ color:'#CC4625' }} >Sign-In</span></Link></p>
+      <p style={{ textAlign:'center' }} >Already a user ? <Link to='/user/sign-in' ><span style={{ color:'#CC4625' }} >Sign-In</span></Link></p>
     </div>
   )
 }

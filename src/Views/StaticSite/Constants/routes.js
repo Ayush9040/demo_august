@@ -4,7 +4,6 @@ import Volunteer from '../Views/Volunteer'
 import Values from '../Views/Volunteer/values'
 import Shop from '../Views/Shop'
 import SocialResponsibility from '../Views/SocialPage/index.jsx'
-import SignIn from '../Views/SignIn/index.jsx'
 import SingleJob from '../Views/Careers/Views/single-job.jsx'
 import VolunteerJob from '../Views/Volunteer/volunteerJob.jsx'
 import TermsCondition from '../Components/TermsandCondition/index.jsx'
@@ -14,7 +13,6 @@ import Enrollment from '../Components/EnrollmentForm/index.jsx'
 import wellness from '../Components/Wellness/index.jsx'
 import CorporateSocialResponsibilty from '../Components/CorporateSocialResponsibility/index.jsx'
 import SingleCsr from '../Components/CorporateSocialResponsibility/SingleCsr/index.jsx'
-import SignUp from '../Views/Signup'
 import OurLegacyModal from '../Components/OurLegacyModal/index.jsx'
 import About from '../Views/About'
 import Alumni from '../Views/Alumni'
@@ -29,6 +27,7 @@ import Facility from '../Views/Facilities'
 import Facts from '../Views/Facts'
 import Gift from '../Views/Gifting'
 import Museum from '../Views/Museum'
+import Authentication from '../Views/Authentication'
 
 const staticSiteRoutes = [
   {
@@ -192,12 +191,12 @@ const staticSiteRoutes = [
     name: 'Experience',
   },
   {
-    Component: SignIn,
-    path: '/sign-in',
-    exact: true,
-    id: 'statisSiteUnderSignIn',
-    routePath: '/sign-in',
-    name: 'SignIn',
+    Component:Authentication,
+    path:'/user/*',
+    exact:true,
+    id:'statisSiteUnderAuth',
+    routePath:'/user/*',
+    name:'Auth'
   },
   {
     Component: Career,
@@ -273,14 +272,6 @@ const staticSiteRoutes = [
     id: 'statisSiteUnderCsr',
     routePath: '/csr',
     name: 'csr',
-  },
-  {
-    Component: SignUp,
-    path: '/sign-up',
-    exact: true,
-    id: 'statisSiteUnderSignUp',
-    routePath: '/sign-up',
-    name: 'SignUp',
   },
   {
     Component: SingleCsr,
