@@ -3,7 +3,6 @@ import Home from '../Views/Home'
 import Volunteer from '../Views/Volunteer'
 import Values from '../Views/Volunteer/values'
 import Shop from '../Views/Shop'
-import SocialResponsibility from '../Views/SocialPage/index.jsx'
 import SingleJob from '../Views/Careers/Views/single-job.jsx'
 import VolunteerJob from '../Views/Volunteer/volunteerJob.jsx'
 import TermsCondition from '../Components/TermsandCondition/index.jsx'
@@ -28,6 +27,7 @@ import Facts from '../Views/Facts'
 import Gift from '../Views/Gifting'
 import Museum from '../Views/Museum'
 import Authentication from '../Views/Authentication'
+import SoicalPage from '../Views/SocialPage'
 
 const staticSiteRoutes = [
   {
@@ -39,11 +39,11 @@ const staticSiteRoutes = [
     name: 'Home',
   },
   {
-    Component: SocialResponsibility,
-    path: '/social-responsibility',
+    Component: SoicalPage,
+    path: '/social-responsibility/*',
     exact: true,
     id: 'statisSiteSocial',
-    routePath: '/social-responsibility',
+    routePath: '/social-responsibility/*',
     name: 'Social',
   },
   {
