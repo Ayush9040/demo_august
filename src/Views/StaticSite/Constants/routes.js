@@ -1,10 +1,6 @@
 import FAQ from '../Components/Faq'
 import Home from '../Views/Home'
-import Volunteer from '../Views/Volunteer'
-import Values from '../Views/Volunteer/values'
 import Shop from '../Views/Shop'
-import SingleJob from '../Views/Careers/Views/single-job.jsx'
-import VolunteerJob from '../Views/Volunteer/volunteerJob.jsx'
 import TermsCondition from '../Components/TermsandCondition/index.jsx'
 import PrivacyPolicy from '../Components/PrivacyPolicy/index.jsx'
 import Affiliations from '../Components/Affiliations/index.jsx'
@@ -28,6 +24,7 @@ import Gift from '../Views/Gifting'
 import Museum from '../Views/Museum'
 import Authentication from '../Views/Authentication'
 import SoicalPage from '../Views/SocialPage'
+import VolunteerPage from '../Views/Volunteer'
 
 const staticSiteRoutes = [
   {
@@ -143,29 +140,13 @@ const staticSiteRoutes = [
     name: 'FAQ',
   },
   {
-    Component: Volunteer,
-    path: '/volunteer',
+    Component: VolunteerPage,
+    path: '/volunteer/*',
     exact: true,
     id: 'statisSiteUnderJoin',
-    routePath: '/volunteer',
+    routePath: '/volunteer/*',
     name: 'Join',
   },
-  {
-    Component: Values,
-    path: '/volunteer/values',
-    exact: true,
-    id: 'statisSiteUnderValues',
-    routePath: '/volunteer/values',
-    name: 'Values',
-  },
-  // {
-  //   Component: FAQ,
-  //   path: '/faq',
-  //   exact: true,
-  //   id: 'statisSiteUnderFAQ',
-  //   routePath: '/faq',
-  //   name: 'FAQ',
-  // },
   {
     Component: Blogs,
     path: '/blogs/*',
@@ -206,25 +187,7 @@ const staticSiteRoutes = [
     routePath: '/careers/*',
     name: 'Careers',
   },
-  {
-    Component: SingleJob,
-    path: '/careers/:jobid',
-    exact: true,
-    id: 'statisSiteUnderSingleJob',
-    routePath: '/careers/:jobid',
-    name: 'SingleJob',
-  },
-  {
-    Component: VolunteerJob,
-    path: '/volunteer/:id',
-    exact: true,
-    id: 'statisSiteUnderVolunteerJob',
-    routePath: '/volunteer/:id',
-    name: 'VolunteerJob',
-  },
-  {
-    path: '/courses/:type',
-  },
+
   {
     Component: TermsCondition,
     path: '/terms&condition',

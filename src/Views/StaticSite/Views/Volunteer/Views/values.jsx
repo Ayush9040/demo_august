@@ -1,8 +1,8 @@
 import React from 'react'
-import CommonBanner from '../../Components/Common-banner'
-import './styles.scss'
-import baseDomain, { volunteerAssets, background } from '../../assets/images/imageAsset'
-import InnerNavComponent from '../../Components/InnerNavComponent'
+import CommonBanner from '../../../Components/Common-banner'
+import './style.scss'
+import baseDomain, { volunteerAssets, background } from '../../../assets/images/imageAsset'
+import InnerNavComponent from '../../../Components/InnerNavComponent'
 //import ValuesImg from '../../assets/images/values.png'
 const Values = () => {
   const ValuesBar = {
