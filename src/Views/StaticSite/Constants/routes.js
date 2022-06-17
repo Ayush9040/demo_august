@@ -1,5 +1,4 @@
 import FAQ from '../Components/Faq'
-import Gifting from '../Views/Gifting'
 import Home from '../Views/Home'
 import Volunteer from '../Views/Volunteer'
 import Values from '../Views/Volunteer/values'
@@ -29,6 +28,7 @@ import Donations from '../Views/Donation'
 import Experiences from '../Views/Experience'
 import Facility from '../Views/Facilities'
 import Facts from '../Views/Facts'
+import Gift from '../Views/Gifting'
 
 const staticSiteRoutes = [
   {
@@ -112,12 +112,12 @@ const staticSiteRoutes = [
     name: 'Shop',
   },
   {
-    Component: Gifting,
-    path: '/gifting',
+    Component: Gift,
+    path: '/gifting/*',
     exact: true,
-    id: 'statisSiteGifting',
-    routePath: '/gifting',
-    name: 'Gifting',
+    id: 'statisSiteGift',
+    routePath: '/gifting/*',
+    name: 'Gift',
   },
   {
     Component: Donations,

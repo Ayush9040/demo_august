@@ -1,4 +1,4 @@
-import baseDomain, { giftingAssets } from '../../assets/images/imageAsset'
+import baseDomain, { giftingAssets } from '../../../assets/images/imageAsset'
 
 const GiftingData = [
   {
