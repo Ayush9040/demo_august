@@ -1,22 +1,21 @@
 import React, { useEffect } from 'react'
-import CommonBanner from '../Common-banner'
-import Virtual from '../../assets/images/museum-1.png'
-import Heading from '../Heading'
+import CommonBanner from '../../../Components/Common-banner'
+import Virtual from '../../../assets/images/museum-1.png'
+import Heading from '../../../Components/Heading'
 import './style.scss'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
-import CommonGrid from '../GalleryGrid'
+import CommonGrid from '../../../Components/GalleryGrid'
 import Location from './Location'
 // import { Link } from 'react-router-dom'
 import { useLocation } from 'react-router-dom'
-import CommonBtn from '../commonbtn'
+import CommonBtn from '../../../Components/commonbtn'
 import baseDomain, {
   museumAssets,
   background,
-} from '../../assets/images/imageAsset'
-import InnerNavComponent from '../InnerNavComponent'
-//import museumBanner from '../../assets/images/museum-1.png'
-const MuseumMain = () => {
+} from '../../../assets/images/imageAsset'
+import InnerNavComponent from '../../../Components/InnerNavComponent'
+const MuseumPage = () => {
   const route = useLocation()
 
   useEffect(() => {
@@ -85,4 +84,4 @@ const MuseumMain = () => {
   )
 }
 
-export default MuseumMain
+export default MuseumPage

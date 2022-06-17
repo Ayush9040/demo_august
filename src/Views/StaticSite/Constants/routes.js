@@ -2,7 +2,6 @@ import FAQ from '../Components/Faq'
 import Home from '../Views/Home'
 import Volunteer from '../Views/Volunteer'
 import Values from '../Views/Volunteer/values'
-import MuseumPage from '../Views/Museum/index.jsx'
 import Shop from '../Views/Shop'
 import SocialResponsibility from '../Views/SocialPage/index.jsx'
 import SignIn from '../Views/SignIn/index.jsx'
@@ -29,6 +28,7 @@ import Experiences from '../Views/Experience'
 import Facility from '../Views/Facilities'
 import Facts from '../Views/Facts'
 import Gift from '../Views/Gifting'
+import Museum from '../Views/Museum'
 
 const staticSiteRoutes = [
   {
@@ -88,11 +88,11 @@ const staticSiteRoutes = [
     name: 'Media',
   },
   {
-    Component: MuseumPage,
-    path: '/museum',
+    Component: Museum,
+    path: '/museum/*',
     exact: true,
     id: 'statisSiteMuseum',
-    routePath: '/museum',
+    routePath: '/museum/*',
     name: 'Museum',
   },
   {

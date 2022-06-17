@@ -1,15 +1,18 @@
-//import React, { useEffect } from 'react'
-import Museum from '../../Components/MuseumSection/index'
+import React from 'react'
+import {
+  Routes,
+  Route,
+} from 'react-router-dom'
+import museumRoutes from './Constants/routes'
 
-const MuseumPage = () => {
-  // useEffect(() => {
-  //   window.scrollTo(0, 0)
-  // }, [])
+const Museum = () => {
   return (
-    <div>
-      <Museum />
-    </div>
+    <Routes>
+      {museumRoutes.map(({ Component, path }) => (
+        <Route element={<Component />} path={path} key={path} />
+      ))}
+    </Routes>
   )
 }
 
-export default MuseumPage
+export default Museum
