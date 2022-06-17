@@ -46,9 +46,7 @@ const CourseCard = ({
       >
         <h4>{courseTitle}</h4>
         <h3>
-          {description?.length > 40
-            ? description?.substring(0, 40) + '...'
-            : description}
+          {description}
         </h3>
         {/* <SelectDropDown text = {'Select Dates'} isStyles = {selectStyles} /> */}
         <div className="course-card-dropdown">

@@ -4,7 +4,6 @@ import './style.scss'
 import Slider from 'react-rangeslider'
 import 'react-rangeslider/lib/index.css'
 import Accordian from '../CommanAccordian'
-import CommonBtn from '../commonbtn'
 import { Link } from 'react-router-dom'
 
 const CourseSection = ({ title, showRangeSlider, color, data, pathParam }) => {
