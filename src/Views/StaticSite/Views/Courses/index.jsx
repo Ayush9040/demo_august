@@ -29,7 +29,7 @@ const Courses = () => {
   }
   //let hourCourse = [...course200H,...course900H]
 
-  let data = [course200H, camps, courseArray, classes]
+  let data = [course200H, camps, classes,courseArray]
 
   const setPathParam = (title) => {
     if (title === 'Teacher Training Courses') {
@@ -86,7 +86,9 @@ const Courses = () => {
               color={item.color}
               data={data[i]}
               showRangeSlider={
-                item.title === 'Teacher Training Courses' ? true : false
+                
+                (item.title !== 'Most Popular' && item.title!=='Camps & Workshops') ? true : false
+                
               }
               pathParam={setPathParam(item.title)}
               cardData={item.cardData}
@@ -99,6 +101,15 @@ const Courses = () => {
           Yoga Alliance, USA.
         </h2>
         <div className="certificates">
+          <div className="certificate">
+            <div className="certificate-logo">
+              <img src="http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Courses/Certificate/Yoga%20Certification%20Board.png" />
+            </div>
+            <div className='certificate-text'>
+              <p> Lorem Ipsum is simply dummy text of the printing and typesetting
+                ndustry.</p>
+            </div>
+          </div>
           <div className="certificate">
             <div className="certificate-logo">
               <img src="http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Courses/Certificate/Yoga%20Certification%20Board.png" />

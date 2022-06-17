@@ -15,19 +15,20 @@ export const courseCardData = [
       { title: 'Diabetes Camp' }]
   },
   {
+    title: 'Regular Classes',
+    color: '#B77E7E',
+    cardData: [{ title: 'Asana Regular Classess for Men' },
+      { title: 'Asana Regular Classess for Women' },
+      { title:'Weekend Yoga Regular Clases' }]
+  },
+  {
     title: 'Most Popular',
     color: '#6E9596',
     cardData: [{ title: 'Weight Management Workshop' },
       { title: 'Cardiac Hypertension Health Workshop' },
       { title: 'Food and Nutrition Workshop' }]
   },
-  {
-    title: 'Classes',
-    color: '#B77E7E',
-    cardData: [{ title: 'Asana Regular Classess for Men' },
-      { title: 'Asana Regular Classess for Women' },
-      { title:'Weekend Yoga Regular Clases' }]
-  },
+  
 
 
 
