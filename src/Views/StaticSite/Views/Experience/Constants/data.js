@@ -1,4 +1,4 @@
-import baseDomain, { experienceAssets } from '../../assets/images/imageAsset'
+import baseDomain, { experienceAssets } from '../../../assets/images/imageAsset'
 
 export const listData=[
   {

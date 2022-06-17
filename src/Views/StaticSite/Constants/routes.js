@@ -1,5 +1,3 @@
-// import Courses from '../Views/Courses/Views/course-page'
-// import SingleCourse from '../Views/Courses/course-name'
 import Facilities from '../Views/Facilities'
 import FAQ from '../Components/Faq'
 import Gifting from '../Views/Gifting'
@@ -10,7 +8,6 @@ import MuseumPage from '../Views/Museum/index.jsx'
 import Shop from '../Views/Shop'
 import SocialResponsibility from '../Views/SocialPage/index.jsx'
 import OurFacts from '../Views/Facts/index'
-import AllExperience from '../Views/Experience/index.js'
 import SignIn from '../Views/SignIn/index.jsx'
 import SingleJob from '../Views/Careers/Views/single-job.jsx'
 import VolunteerJob from '../Views/Volunteer/volunteerJob.jsx'
@@ -31,6 +28,7 @@ import Course from '../Views/Courses'
 import Blogs from '../Views/Blogs/index.jsx'
 import Career from '../Views/Careers'
 import Donations from '../Views/Donation'
+import Experiences from '../Views/Experience'
 
 const staticSiteRoutes = [
   {
@@ -186,11 +184,11 @@ const staticSiteRoutes = [
     name: 'Facts',
   },
   {
-    Component: AllExperience,
-    path: '/experience',
+    Component:Experiences,
+    path: '/experience/*',
     exact: true,
     id: 'statisSiteUnderExperience',
-    routePath: '/experience',
+    routePath: '/experience/*',
     name: 'Experience',
   },
   {

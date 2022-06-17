@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
-import CommonBannerNavPrimary from '../../Components/CommonBannerNavPrimary'
-import { listData } from './data'
+import CommonBannerNavPrimary from '../../../Components/CommonBannerNavPrimary'
+import { listData } from '../Constants/data'
 import './style.scss'
 
 const AllExperience = () => {
