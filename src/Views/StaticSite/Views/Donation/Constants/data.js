@@ -1,4 +1,4 @@
-import baseDomain,{ donationAssets } from '../../assets/images/imageAsset'
+import baseDomain,{ donationAssets } from '../../../assets/images/imageAsset'
 export const data=[
   {
     id:'donation_1',

@@ -22,16 +22,15 @@ import wellness from '../Components/Wellness/index.jsx'
 import CorporateSocialResponsibilty from '../Components/CorporateSocialResponsibility/index.jsx'
 import SingleCsr from '../Components/CorporateSocialResponsibility/SingleCsr/index.jsx'
 import SignUp from '../Views/Signup'
-import SingleDonation from '../Components/SingleDonation/index.jsx'
-import DonationPage from '../Views/Donation'
 import OurLegacyModal from '../Components/OurLegacyModal/index.jsx'
 import About from '../Views/About'
 import Alumni from '../Views/Alumni'
 import Media from '../Views/Media'
 import Publication from '../Views/Publication'
 import Course from '../Views/Courses'
-import Blogs from '../Views/BlogPage/index.jsx'
+import Blogs from '../Views/Blogs/index.jsx'
 import Career from '../Views/Careers'
+import Donations from '../Views/Donation'
 
 const staticSiteRoutes = [
   {
@@ -123,12 +122,12 @@ const staticSiteRoutes = [
     name: 'Gifting',
   },
   {
-    Component: DonationPage,
-    path: '/donation',
+    Component: Donations,
+    path: '/donation/*',
     exact: true,
-    id: 'statisSiteDonation',
-    routePath: '/donation',
-    name: 'Donation',
+    id: 'statisSiteDonations',
+    routePath: '/donation/*',
+    name: 'Donations',
   },
   {
     Component: Alumni,
@@ -284,14 +283,6 @@ const staticSiteRoutes = [
     id: 'statisSiteUnderSignUp',
     routePath: '/sign-up',
     name: 'SignUp',
-  },
-  {
-    Component: SingleDonation,
-    path: '/donation/:donationId',
-    exact: true,
-    id: 'statisSiteUnderSingleDonation',
-    routePath: '/donation/:donationId',
-    name: 'SingleDonation',
   },
   {
     Component: SingleCsr,

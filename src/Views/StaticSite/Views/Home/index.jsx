@@ -10,7 +10,7 @@ import Experience from '../../Components/Experience'
 import VideosSection from '../../Components/Videos'
 import NewsLetter from '../../Components/NewsLetter'
 import Footer from '../../Components/Footer'
-import Blog from '../../Components/Blogs'
+import Blog from '../../Components/BlogSection'
 import { useLocation } from 'react-router-dom'
 
 

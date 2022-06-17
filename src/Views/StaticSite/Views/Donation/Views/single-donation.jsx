@@ -1,9 +1,9 @@
 import React,{ useState,useEffect } from 'react'
-import Donation from '../../Components/Donation'
-import SectionComponent from '../../Components/SectionComponent'
+import Donation from '../../../Components/Donation'
+import SectionComponent from '../../../Components/SectionComponent'
 import './style.scss'
-import { data } from '../../Views/Donation/data'
-import InnerNavComponent from '../InnerNavComponent'
+import { data } from '../Constants/data'
+import InnerNavComponent from '../../../Components/InnerNavComponent'
 import { useParams } from 'react-router-dom'
 const SingleDonation = () => {
   const [page,setPage]=useState({})

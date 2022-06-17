@@ -103,6 +103,12 @@
     margin-top: 100px;
   }
 }
+.singleDonation-page {
+
+  .donate-button-new {
+    display: none;
+  }
+}
 @media (max-width: 1500px) {
   .annam-page {
     .text-part {
