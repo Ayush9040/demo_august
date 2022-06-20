@@ -9,7 +9,7 @@ const MegaMenu = ({ setNav }) => {
   const navItems = [
     {
       name: 'ABOUT',
-      link: '/about',
+      link: '/about/overview',
       id: 1,
       key: 'ABOUT',
     },
@@ -22,13 +22,13 @@ const MegaMenu = ({ setNav }) => {
     { name: 'TYI ONLINE', link: '', id: 8, key: 'ONLINE' },
     {
       name: 'PUBLICATIONS',
-      link: '/publication',
+      link: '/publication/yoga-health',
       id: 9,
       key: 'PUBLICATIONS',
     },
     { name: 'SHOP', link: '/shop', id: 10, key: 'SHOP' },
-    { name: 'NEWS,EVENTS & MEDIA', link: '/media', id: 11, key: 'NEWS' },
-    { name: 'ALUMNI', link: '/alumni', id: 12, key: 'ALUMNI' },
+    { name: 'NEWS,EVENTS & MEDIA', link: '/media/media-gallery', id: 11, key: 'NEWS' },
+    { name: 'ALUMNI', link: '/alumni/upcoming-events', id: 12, key: 'ALUMNI' },
     { name: 'VOLUNTEER', link: '/volunteer', id: 13, key: 'VOLUNTEER' },
   ]
 
@@ -36,7 +36,7 @@ const MegaMenu = ({ setNav }) => {
     ABOUT: [
       {
         menu: 'Overview',
-        link: '/about',
+        link: '/about/overview',
       },
       {
         menu: 'Our Legacy',
@@ -48,7 +48,7 @@ const MegaMenu = ({ setNav }) => {
       },
     ],
     PUBLICATIONS: [
-      { menu: 'Yoga & Total Heath', link: '/publication' },
+      { menu: 'Yoga & Total Heath', link: '/publication/yoga-health' },
       { menu: 'Yogsattva', link: '/publication/yogasattva' },
       { menu: 'Books', link: '/publication/books' },
       { menu: 'Free E-Books', link: '/publication/e-books' },
@@ -116,12 +116,12 @@ const MegaMenu = ({ setNav }) => {
       { menu: 'Police', link: '/donation/#police' },
     ],
     NEWS: [
-      { menu: 'Gallery', link: '/media' },
+      { menu: 'Gallery', link: '/media/media-gallery' },
       { menu: 'News', link: '/media/news' },
       { menu: 'Events', link: '/media/events' },
     ],
     ALUMNI: [
-      { menu: 'Upcomin Events', link: '/alumni' },
+      { menu: 'Upcomin Events', link: '/alumni/upcoming-events' },
       { menu: 'Alumni Gallery', link: '/alumni/gallery' },
       { menu: 'Support Your Alma Mater', link: '/alumni/support' },
     ],
@@ -181,6 +181,7 @@ const MegaMenu = ({ setNav }) => {
                     onMouseOver={() => {
                       setMenuItem(item.key)
                     }}
+                    key={i}
                   >
                     <li>
                       {item.name}

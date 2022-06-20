@@ -36,7 +36,7 @@ const Navbar = () => {
           <Link to="/gifting">
             <li>{Gift}</li>
           </Link>
-          <Link to="/sign-in">
+          <Link to="/user/sign-in">
             <li>{User}</li>
           </Link>
         </ul>

@@ -16,9 +16,9 @@ import baseDomain, {
 } from '../../assets/images/imageAsset'
 import InnerNavComponent from '../InnerNavComponent'
 //import museumBanner from '../../assets/images/museum-1.png'
-const Museum = () => {
+const MuseumMain = () => {
   const route = useLocation()
-  console.log(route.hash.substring(1, route.hash.length))
+
   useEffect(() => {
     if (route.hash) {
       document
@@ -85,4 +85,4 @@ const Museum = () => {
   )
 }
 
-export default Museum
+export default MuseumMain

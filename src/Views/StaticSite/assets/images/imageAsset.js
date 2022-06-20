@@ -7,7 +7,8 @@ export const background = {
   museum : '/backgrounds/museum_bg.jpg',
   volunteer : '/backgrounds/volunteer_bg.jpg',
   faqs:'/backgrounds/faqs.jpg',
-  alma:'/backgrounds/support-alma-mater.jpg'
+  alma:'/backgrounds/support-alma-mater.jpg',
+  benefits:'/backgrounds/benifits.png'
   
 }
 

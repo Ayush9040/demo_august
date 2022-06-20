@@ -1,37 +1,6 @@
-import Blessings from '../Views/About/blessings'
-import AboutUs from '../Views/About/index'
-import OurLegacy from '../Views/About/our-legacy'
-import Seminar from '../Views/Alumni'
-import AlumniGallery from '../Views/Alumni/alumni-gallery'
-import Support from '../Views/Alumni/support'
-import Courses from '../Views/Courses'
-import SingleCourse from '../Views/Courses/course-name'
-import Facilities from '../Views/Facilities'
 import FAQ from '../Components/Faq'
-import Gifting from '../Views/Gifting'
 import Home from '../Views/Home'
-import Volunteer from '../Views/Volunteer'
-import Values from '../Views/Volunteer/values'
-import MediaGallery from '../Views/Media'
-import MediaEvents from '../Views/Media/events'
-import News from '../Views/Media/news'
-import MuseumPage from '../Views/Museum/index.jsx'
-import YogaTotalHealth from '../Views/Publication'
-import Books from '../Views/Publication/books'
-import EBooks from '../Views/Publication/e-books'
-import library from '../Views/Publication/library'
-import Yogasattva from '../Views/Publication/yogasattva'
 import Shop from '../Views/Shop'
-import SocialResponsibility from '../Views/SocialPage/index.jsx'
-import BlogPage from '../Views/BlogPage/index.jsx'
-import BlogAnother from '../Views/BlogPage/Blog.jsx'
-import OurFacts from '../Views/Facts/index'
-import AllExperience from '../Views/Experience/index.js'
-import SignIn from '../Views/SignIn/index.jsx'
-import Careers from '../Views/Careers/index.jsx'
-import SingleJob from '../Components/SingleJobPage/index.jsx'
-import VolunteerJob from '../Views/Volunteer/volunteerJob.jsx'
-import BrowseCourses from '../Components/BrowseCourses/index.jsx'
 import TermsCondition from '../Components/TermsandCondition/index.jsx'
 import PrivacyPolicy from '../Components/PrivacyPolicy/index.jsx'
 import Affiliations from '../Components/Affiliations/index.jsx'
@@ -39,11 +8,23 @@ import Enrollment from '../Components/EnrollmentForm/index.jsx'
 import wellness from '../Components/Wellness/index.jsx'
 import CorporateSocialResponsibilty from '../Components/CorporateSocialResponsibility/index.jsx'
 import SingleCsr from '../Components/CorporateSocialResponsibility/SingleCsr/index.jsx'
-import SignUp from '../Views/Signup'
-import MediaVideo from '../Components/MediaVideo/index.jsx'
-import SingleDonation from '../Components/SingleDonation/index.jsx'
-import DonationPage from '../Views/Donation'
 import OurLegacyModal from '../Components/OurLegacyModal/index.jsx'
+import About from '../Views/About'
+import Alumni from '../Views/Alumni'
+import Media from '../Views/Media'
+import Publication from '../Views/Publication'
+import Course from '../Views/Courses'
+import Blogs from '../Views/Blogs/index.jsx'
+import Career from '../Views/Careers'
+import Donations from '../Views/Donation'
+import Experiences from '../Views/Experience'
+import Facility from '../Views/Facilities'
+import Facts from '../Views/Facts'
+import Gift from '../Views/Gifting'
+import Museum from '../Views/Museum'
+import Authentication from '../Views/Authentication'
+import SoicalPage from '../Views/SocialPage'
+import VolunteerPage from '../Views/Volunteer'
 
 const staticSiteRoutes = [
   {
@@ -55,61 +36,30 @@ const staticSiteRoutes = [
     name: 'Home',
   },
   {
-    Component: SocialResponsibility,
-    path: '/social-responsibility',
+    Component: SoicalPage,
+    path: '/social-responsibility/*',
     exact: true,
     id: 'statisSiteSocial',
-    routePath: '/social-responsibility',
+    routePath: '/social-responsibility/*',
     name: 'Social',
   },
   {
-    Component: Courses,
-    path: '/courses',
+    Component: Course,
+    path: '/courses/*',
     exact: true,
     id: 'statisSiteCourses',
-    routePath: '/courses',
+    routePath: '/courses/*',
     name: 'Courses',
   },
   {
-    Component: BrowseCourses,
-    path: '/courses/browse/:type',
-    exact: true,
-    id: 'statisSiteCourses',
-    routePath: '/courses/browse/:type',
-    name: 'Courses',
-  },
-  {
-    Component: SingleCourse,
-    path: '/courses/:courseId',
-    exact: true,
-    id: 'statisSiteCourse',
-    routePath: '/courses/:courseId',
-    name: 'Course',
-  },
-  {
-    Component: AboutUs,
-    path: '/about',
+    Component:About,
+    path: '/about/*',
     exact: true,
     id: 'statisSiteAbout',
-    routePath: '/about',
-    name: 'About',
+    routePath: '/about/*',
+    name: 'About'
   },
   {
-    Component: OurLegacy,
-    path: '/about/our-legacy',
-    exact: true,
-    id: 'statisSiteOurLegacy',
-    routePath: '/about/our-legacy',
-    name: 'OurLegacy',
-  },
-  {
-    Component: Blessings,
-    path: '/about/blessings',
-    exact: true,
-    id: 'statisSiteBlessings',
-    routePath: '/about/blessings',
-    name: 'Blessings',
-  },{
     Component: OurLegacyModal,
     path: '/about/our-legacy/:name',
     exact: true,
@@ -118,84 +68,36 @@ const staticSiteRoutes = [
     name: 'OurLegacyModal',
   },
   {
-    Component: YogaTotalHealth,
-    path: '/publication',
+    Component: Publication,
+    path: '/publication/*',
     exact: true,
     id: 'statisSitePublication',
-    routePath: '/publication',
+    routePath: '/publication/*',
     name: 'Publication',
   },
   {
-    Component: Yogasattva,
-    path: '/publication/yogasattva',
-    exact: true,
-    id: 'statisSiteYogasattva',
-    routePath: '/publication/yogasattva',
-    name: 'Yogasattva',
-  },
-  {
-    Component: Books,
-    path: '/publication/books',
-    exact: true,
-    id: 'statisSiteBooks',
-    routePath: '/publication/books',
-    name: 'Books',
-  },
-  {
-    Component: EBooks,
-    path: '/publication/e-books',
-    exact: true,
-    id: 'statisSiteEBooks',
-    routePath: '/publication/e-books',
-    name: 'EBooks',
-  },
-  {
-    Component: library,
-    path: '/publication/library',
-    exact: true,
-    id: 'statisSiteLibrary',
-    routePath: '/publication/library',
-    name: 'Library',
-  },
-  {
-    Component: MediaGallery,
-    path: '/media',
+    Component: Media,
+    path: '/media/*',
     exact: true,
     id: 'statisSiteMedia',
-    routePath: '/media',
+    routePath: '/media/*',
     name: 'Media',
   },
   {
-    Component: News,
-    path: '/media/news',
-    exact: true,
-    id: 'statisSiteNews',
-    routePath: '/media/news',
-    name: 'News',
-  },
-  {
-    Component: MediaEvents,
-    path: '/media/events',
-    exact: true,
-    id: 'statisSiteEvent',
-    routePath: '/media/events',
-    name: 'Event',
-  },
-  {
-    Component: MuseumPage,
-    path: '/museum',
+    Component: Museum,
+    path: '/museum/*',
     exact: true,
     id: 'statisSiteMuseum',
-    routePath: '/museum',
+    routePath: '/museum/*',
     name: 'Museum',
   },
   {
-    Component: Facilities,
-    path: '/facilities',
+    Component: Facility,
+    path: '/facilities/*',
     exact: true,
-    id: 'statisSiteFacilities',
-    routePath: '/facilities',
-    name: 'Facilities',
+    id: 'statisSiteFacily',
+    routePath: '/facilities/*',
+    name: 'Facility',
   },
   {
     Component: Shop,
@@ -206,44 +108,28 @@ const staticSiteRoutes = [
     name: 'Shop',
   },
   {
-    Component: Gifting,
-    path: '/gifting',
+    Component: Gift,
+    path: '/gifting/*',
     exact: true,
-    id: 'statisSiteGifting',
-    routePath: '/gifting',
-    name: 'Gifting',
+    id: 'statisSiteGift',
+    routePath: '/gifting/*',
+    name: 'Gift',
   },
   {
-    Component: DonationPage,
-    path: '/donation',
+    Component: Donations,
+    path: '/donation/*',
     exact: true,
-    id: 'statisSiteDonation',
-    routePath: '/donation',
-    name: 'Donation',
+    id: 'statisSiteDonations',
+    routePath: '/donation/*',
+    name: 'Donations',
   },
   {
-    Component: Seminar,
-    path: '/alumni',
+    Component: Alumni,
+    path: '/alumni/*',
     exact: true,
     id: 'statisSiteUnderAlumni',
-    routePath: '/alumni',
+    routePath: '/alumni/*',
     name: 'Alumni',
-  },
-  {
-    Component: AlumniGallery,
-    path: '/alumni/alumni-gallery',
-    exact: true,
-    id: 'statisSiteUnderAlumniGallery',
-    routePath: '/alumni/alumni-gallery',
-    name: 'AlumniGallery',
-  },
-  {
-    Component: Support,
-    path: '/alumni/support',
-    exact: true,
-    id: 'statisSiteUnderSupport',
-    routePath: '/alumni/support',
-    name: 'Support',
   },
   {
     Component: FAQ,
@@ -254,96 +140,54 @@ const staticSiteRoutes = [
     name: 'FAQ',
   },
   {
-    Component: Volunteer,
-    path: '/volunteer',
+    Component: VolunteerPage,
+    path: '/volunteer/*',
     exact: true,
     id: 'statisSiteUnderJoin',
-    routePath: '/volunteer',
+    routePath: '/volunteer/*',
     name: 'Join',
   },
   {
-    Component: Values,
-    path: '/volunteer/values',
-    exact: true,
-    id: 'statisSiteUnderValues',
-    routePath: '/volunteer/values',
-    name: 'Values',
-  },
-  // {
-  //   Component: FAQ,
-  //   path: '/faq',
-  //   exact: true,
-  //   id: 'statisSiteUnderFAQ',
-  //   routePath: '/faq',
-  //   name: 'FAQ',
-  // },
-  {
-    Component: BlogPage,
-    path: '/blogs',
+    Component: Blogs,
+    path: '/blogs/*',
     exact: true,
     id: 'statisSiteUnderBlogs',
-    routePath: '/blogs',
+    routePath: '/blogs/*',
     name: 'Blogs',
   },
   {
-    Component: BlogAnother,
-    path: '/blogs/:blogId',
-    exact: true,
-    id: 'statisSiteUnderBlog',
-    routePath: '/blogs/:blogId',
-    name: 'Blog',
-  },
-  {
-    Component: OurFacts,
-    path: '/our-facts',
+    Component: Facts,
+    path: '/our-facts/*',
     exact: true,
     id: 'statisSiteUnderFacts',
-    routePath: '/our-facts',
+    routePath: '/our-facts/*',
     name: 'Facts',
   },
   {
-    Component: AllExperience,
-    path: '/experience',
+    Component:Experiences,
+    path: '/experience/*',
     exact: true,
     id: 'statisSiteUnderExperience',
-    routePath: '/experience',
+    routePath: '/experience/*',
     name: 'Experience',
   },
   {
-    Component: SignIn,
-    path: '/sign-in',
-    exact: true,
-    id: 'statisSiteUnderSignIn',
-    routePath: '/sign-in',
-    name: 'SignIn',
+    Component:Authentication,
+    path:'/user/*',
+    exact:true,
+    id:'statisSiteUnderAuth',
+    routePath:'/user/*',
+    name:'Auth'
   },
   {
-    Component: Careers,
-    path: '/careers',
+    Component: Career,
+    path: '/careers/*',
     exact: true,
     id: 'statisSiteUnderCareers',
-    routePath: '/careers',
+    routePath: '/careers/*',
     name: 'Careers',
   },
-  {
-    Component: SingleJob,
-    path: '/careers/:jobid',
-    exact: true,
-    id: 'statisSiteUnderSingleJob',
-    routePath: '/careers/:jobid',
-    name: 'SingleJob',
-  },
-  {
-    Component: VolunteerJob,
-    path: '/volunteer/:id',
-    exact: true,
-    id: 'statisSiteUnderVolunteerJob',
-    routePath: '/volunteer/:id',
-    name: 'VolunteerJob',
-  },
-  {
-    path: '/courses/:type',
-  },
+
   {
     Component: TermsCondition,
     path: '/terms&condition',
@@ -391,30 +235,6 @@ const staticSiteRoutes = [
     id: 'statisSiteUnderCsr',
     routePath: '/csr',
     name: 'csr',
-  },
-  {
-    Component: SignUp,
-    path: '/sign-up',
-    exact: true,
-    id: 'statisSiteUnderSignUp',
-    routePath: '/sign-up',
-    name: 'SignUp',
-  },
-  {
-    Component: MediaVideo,
-    path: '/media/video',
-    exact: true,
-    id: 'statisSiteUnderMediaVideo',
-    routePath: '/media/video',
-    name: 'MediaVideo',
-  },
-  {
-    Component: SingleDonation,
-    path: '/donation/:donationId',
-    exact: true,
-    id: 'statisSiteUnderSingleDonation',
-    routePath: '/donation/:donationId',
-    name: 'SingleDonation',
   },
   {
     Component: SingleCsr,
