@@ -1,6 +1,7 @@
 import AboutUs from '../Views/overview'
 import Blessings from '../Views/blessings'
 import OurLegacy from '../Views/our-legacy'
+import OurLegacyModal from '../../../Components/OurLegacyModal'
 
 
 
@@ -34,6 +35,14 @@ const aboutRoutes = [  {
   id: 'statisSiteBlessings',
   routePath: '/blessings',
   name: 'Blessings'
+},
+{
+  Component: OurLegacyModal,
+  path: '/our-legacy/:name',
+  exact: true,
+  id: 'statisSiteOurLegacyModal',
+  routePath: '/our-legacy/:name',
+  name: 'OurLegacyModal',
 },
 ]
 
