@@ -1,0 +1,82 @@
+.course_table {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  u{
+    font-size: 2rem;
+  }
+  table {
+    width: 60%;
+    border-collapse: collapse;
+    tr {
+      font-size: 1.5rem;
+      th,
+      td {
+        padding: 1rem;
+        border: 1px solid black;
+      }
+    }
+  }
+}
+
+.course_para {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  h2 {
+    font-size: 2rem;
+  }
+  p {
+    font-size: 1.75rem;
+  }
+}
+
+.course_quote {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  u {
+    font-size: 2rem;
+  }
+  q {
+    font-style: italic;
+    font-size: 1.75rem;
+  }
+}
+
+.course_url {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  p {
+    font-size: 2rem;
+  }
+  a {
+    font-size: 1.75rem;
+    color: #0000ff;
+    &:hover {
+      color: #800080;
+    }
+    &:active {
+      color: #ff0000;
+    }
+    &:visited {
+      color: #800080;
+    }
+  }
+}
+
+.course_list {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  u {
+    font-size: 2rem;
+  }
+  ul{
+    padding-left: 20px;
+  }
+
+  li {
+    font-size: 1.75rem;
+    margin: 1rem 0rem;
+    ul{
+      padding-left: 50px;
+    }
+  }
+}

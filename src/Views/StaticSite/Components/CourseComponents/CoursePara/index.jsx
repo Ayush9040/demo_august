@@ -1,9 +1,11 @@
 import React from 'react'
+import '../../../Components/CourseComponents/style.scss'
 
 const CoursePara = ({ content }) => {
 
+
   return (
-    <div className="CoursePara">
+    <div className="course_para">
       <h2>
         <u>
           <b>{content.title}</b>

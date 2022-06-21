@@ -52,7 +52,7 @@ const Careers = () => {
           })} */}
 
           {Job.map((job, i) => {
-            console.log(job,'hello')
+
             return (
               <CareerCard
                 link={`/careers/job/${job.jobId}`}

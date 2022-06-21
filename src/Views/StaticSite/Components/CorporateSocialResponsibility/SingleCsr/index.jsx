@@ -15,7 +15,7 @@ const SingleCsr = () => {
     setPageData(CsrBlock.find((item) => item.id === csrId))
   }, [])
 
-  console.log(pageData)
+
 
   const [showModal, setShowModal] = useState(false)
   return (

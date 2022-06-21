@@ -22,7 +22,7 @@ const EditAccount = () => {
 
   const [empty, setEmpty] = useState(0)
 
-  console.log(formData)
+
 
   const submitForm = () => {
     if (formData.firstName === '') {
@@ -30,7 +30,6 @@ const EditAccount = () => {
     } else if (formData.lastName === '') {
       return setEmpty(2)
     } else if (!validateEmail(formData.email)) {
-      console.log('invalid email')
       return setEmpty(3)
     } else if (formData.gender === '') {
       return setEmpty(4)

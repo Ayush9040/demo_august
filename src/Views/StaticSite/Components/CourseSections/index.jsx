@@ -10,7 +10,7 @@ const CourseSection = ({ title, showRangeSlider, color, data, pathParam }) => {
   const [customVal, setCustomVal] = useState(0)
 
   console.log(data, 'course-data')
-  console.log(color,'ccc')
+
 
   const content = () => {
     const coursesList = [
@@ -159,7 +159,7 @@ const CourseSection = ({ title, showRangeSlider, color, data, pathParam }) => {
                     index={i}
                     courseTitle={item.name}
                     description={item.metaDescription}
-                    path={item.id}
+                    path={item.key}
                     img={item.image}
                   />
                 )

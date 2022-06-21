@@ -20,7 +20,6 @@ const AlumniCarousel = () => {
     slidesToScroll: 1,
     centerPadding: '70px',
     beforeChange:(oldIndex,index)=>{
-      console.log(data.find(item=>item.id===index).img)
       setAlumImgs(data.find(item=>item.id===index).img)
     }
   }

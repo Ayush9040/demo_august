@@ -7,6 +7,11 @@ const ttc200hr = {
     metaDescription: '',
     image: `${baseDomain}${courseAssets.courseAsset38}`,
     mostPopular: true,
+    rating:5,
+    colorCode:'#E38F73',
+    timing:'Monday to Saturday: 10:00 am - 6:00 pm (IST)',
+    fees:'Rs. 22000/-',
+    category:'ttc',
     title: '200 hrs TTC - Batch 1 - 1 Month TTC - Online & On Campus - English',
     dates: [''],
     details: [
@@ -299,7 +304,12 @@ const ttc200hr = {
     key: 'batch-2-200hr',
     metaDescription: '',
     image: `${baseDomain}${courseAssets.courseAsset38}`,
-    mostPopular: true,
+    mostPopular: false,
+    rating:5,
+    colorCode:'#E38F73',
+    timing:'Monday to Friday : 12:00 noon - 4:00 pm (IST)',
+    fees:'Rs. 22000/-',
+    category:'ttc',
     title: '200 hrs TTC - Batch 2 - 2 Months TTC - On Campus - English',
     dates: [''],
     details: [
@@ -588,8 +598,13 @@ const ttc200hr = {
     key: 'batch-3-200hr',
     metaDescription: '',
     image: `${baseDomain}${courseAssets.courseAsset38}`,
-    mostPopular: true,
-    title: '2200 hrs TTC - Batch 3 - 2 Months TTC - Online  - English',
+    mostPopular: false,
+    rating:5,
+    colorCode:'#E38F73',
+    timing:'Monday to Saturday: Morning: 7:00 am - 8:30 am (IST) and                                Evening : 6:30 pm - 8:30 pm (IST) (Both the time slots are mandatory)',
+    fees:'Rs. 22000/-',
+    category:'ttc',
+    title: '200 hrs TTC - Batch 3 - 2 Months TTC - Online  - English',
     dates: [''],
     details: [
       {
@@ -880,6 +895,11 @@ const ttc200hr = {
     metaDescription: '',
     image: `${baseDomain}${courseAssets.courseAsset38}`,
     mostPopular: true,
+    rating:5,
+    colorCode:'#E38F73',
+    timing:'Monday to Saturday: 1:00 pm - 4:30 pm (IST)',
+    fees:'Rs. 22000/-',
+    category:'ttc',
     title: '200 hrs TTC - Batch 4 - 2 Months TTC - Online  - Hindi',
     dates: [''],
     details: [
@@ -1168,7 +1188,12 @@ const ttc200hr = {
     key: 'batch-5-200hr',
     metaDescription: '',
     image: `${baseDomain}${courseAssets.courseAsset38}`,
-    mostPopular: true,
+    mostPopular: false,
+    rating:5,
+    colorCode:'#E38F73',
+    timing:'Monday to Saturday: 4:30 pm – 8:00 pm (IST)',
+    fees:'Rs. 22000/-',
+    category:'ttc',
     title: '200 hrs TTC - Batch 5 - 2 Months TTC - Online  - English',
     dates: [''],
     details: [
@@ -1457,7 +1482,12 @@ const ttc200hr = {
     key: 'batch-6-200hr',
     metaDescription: '',
     image: `${baseDomain}${courseAssets.courseAsset38}`,
-    mostPopular: true,
+    mostPopular: false,
+    rating:5,
+    colorCode:'#E38F73',
+    timing:'Saturday & Sunday: Saturday Sessions: 10:00 am – 8:30 pm (IST) and Sunday Sessions 10:00 am – 1:30 pm (IST)',
+    fees:'Rs. 22000/-',
+    category:'ttc',
     title: '200 hrs TTC - Batch 6 - 3 Months Weekend TTC - Online - English',
     dates: [''],
     details: [
@@ -1750,6 +1780,12 @@ const ttc500hr = {
     id: '',
     key: '3-months-500hr',
     metaDescription: '',
+    mostPopular:false,
+    rating:5,
+    colorCode:'#D88068',
+    timing:'Monday to Saturday: Morning: 7:00 am - 8:30 am (IST) and  Evening: 4:30 pm - 8:30 pm (IST) (Both the time slots are mandatory)',
+    fees:'Rs. 35,000/-',
+    category:'ttc',
     title: '3 Months TTC - Online - English',
     image: `${baseDomain}${courseAssets.courseAsset39}`,
     dates: [''],
@@ -1771,12 +1807,12 @@ const ttc500hr = {
             {
               listItem:
                 'You will learn the tools to master your physical, mental and spiritual well-being. You will see a marked improvement in your life, relationships and work.',
-              subItem: [],
+              subItems: [],
             },
             {
               listItem:
                 'A new career avenue opens up for you where you can pass on the knowledge to others and facilitate their wellness journeys. The art of Yoga is something you can teach anywhere, no matter where you are. ',
-              subItem: [],
+              subItems: [],
             },
           ],
         },
@@ -1888,7 +1924,7 @@ const ttc500hr = {
           title: 'Course Attendance Criteria ',
           point: {
             listItem: 'A student is required to have a minimum 80% attendance',
-            subItem: [],
+            subItems: [],
           },
         },
       },
@@ -1929,16 +1965,16 @@ const ttc500hr = {
           point: [
             {
               listItem: 'School children',
-              subItem: [],
+              subItems: [],
             },
             {
               listItem:
                 'Healthy adults incorporate (individual and groups) institutions and social groups',
-              subItem: [],
+              subItems: [],
             },
             {
               listItem: 'People with minor ailments and disorders.',
-              subItem: [],
+              subItems: [],
             },
           ],
         },
@@ -1953,22 +1989,22 @@ const ttc500hr = {
             {
               listItem:
                 'You will have an opportunity to directly interact with spiritual Guru Dr. Hansaji Yogendra. She is available to attend to your queries and give counsel. ',
-              subItem: [],
+              subItems: [],
             },
             {
               listItem:
                 'You Our expert trainers for the course, over 40 in number, have mastered the yogic way of life and are proficient in passing on their learnings in a simple and practical way. Armed with decades of experience, they offer tremendous value and insight to new learners. have an opportunity to directly interact with our Guru Dr. Hansaji Yogendra. She is always available to attend to your queries and give counsel.',
-              subItem: [],
+              subItems: [],
             },
             {
               listItem:
                 'You will have Apart from the main yoga curriculum, you will learn immensely from the class experience itself. You will meet people with diverse backgrounds and experiences that you can gain insights from. There will be sadhakas of all age groups – right from teenagers to senior citizens. Every person has had a unique experience in life and it will be enriching to know all these stories. opportunity to directly interact with our Guru Dr. Hansaji Yogendra. She is always available to attend to your queries and give counsel.',
-              subItem: [],
+              subItems: [],
             },
             {
               listItem:
                 'You will have This one-of-a-kind experience will groom you to calmly and mindfully handle people and situations  opportunity to directly interact with our Guru Dr. Hansaji Yogendra. She is always available to attend to your queries and give counsel.',
-              subItem: [],
+              subItems: [],
             },
           ],
         },
@@ -1998,7 +2034,13 @@ const ttc900hr = {
 
     image: `${baseDomain}${courseAssets.courseAsset40}`,
 
-    mostPopular: true,
+    
+    mostPopular:false,
+    rating:5,
+    colorCode:'#C9705F',
+    timing:'900 hrs TTC - 1 Year TTC - Online & On Campus - Hindi',
+    fees:'INR. 50,000/- (Inclusive of course fee and study material)',
+    category:'ttc',
 
     dates: [''],
 
@@ -2028,14 +2070,14 @@ const ttc900hr = {
               listItem:
                 'You will learn the tools to master your physical, mental and spiritual well-being. You will see a marked improvement in your work, your relationships and life.',
 
-              subItem: [],
+              subItems: [],
             },
 
             {
               listItem:
                 'A new career avenue opens up for you where you can pass on the knowledge to others and facilitate their wellness journeys. The art of Yoga is something you can teach anywhere, no matter where you are. ',
 
-              subItem: [],
+              subItems: [],
             },
           ],
         },
@@ -2238,21 +2280,21 @@ const ttc900hr = {
           points: [
             {
               listItem: 'Attending a minimum 210 days of classes',
-              subItem: [],
+              subItems: [],
             },
 
             {
               listItem:
                 'Volunteering at Camps, Workshops, Satsangs, Reach-Out Initiatives',
 
-              subItem: [],
+              subItems: [],
             },
 
             {
               listItem:
                 'Completing assignments as given (submissions & presentations)',
 
-              subItem: [],
+              subItems: [],
             },
           ],
         },
@@ -2365,19 +2407,19 @@ const ttc900hr = {
               listItem:
                 'Awarded a certificate – Advanced Teacher Training Certificate (900 hours) by The Yoga Institute',
 
-              subItem: [],
+              subItems: [],
             },
 
             {
               listItem: 'Qualified by Yoga Certification Board (AYUSH Level-3)',
 
-              subItem: [],
+              subItems: [],
             },
 
             {
               listItem: 'Eligible to apply with Yoga Alliance USA (RYT 500)',
 
-              subItem: [],
+              subItems: [],
             },
           ],
         },
@@ -2405,25 +2447,25 @@ const ttc900hr = {
             {
               listItem: 'Opening your own yoga training center ',
 
-              subItem: [],
+              subItems: [],
             },
 
             {
               listItem: 'Working with corporates for their wellness programs',
 
-              subItem: [],
+              subItems: [],
             },
 
             {
               listItem: 'Working with schools and teaching children',
 
-              subItem: [],
+              subItems: [],
             },
 
             {
               listItem: 'Personal yoga coaching',
 
-              subItem: [],
+              subItems: [],
             },
           ],
         },
@@ -2449,20 +2491,20 @@ const ttc900hr = {
             {
               listItem: 'Normal healthy individuals and groups,',
 
-              subItem: [],
+              subItems: [],
             },
 
             {
               listItem: 'For people with minor ailments or disorders and',
 
-              subItem: [],
+              subItems: [],
             },
 
             {
               listItem:
                 'For people, under the guidance of qualified medical practitioners, undergoing treatment for any physiological, psychological and psychosomatic diseases/conditions.',
 
-              subItem: [],
+              subItems: [],
             },
           ],
         },
@@ -2481,28 +2523,28 @@ const ttc900hr = {
               listItem:
                 'You will have an opportunity to directly interact with our Guru Dr. Hansaji Yogendra. She is always available to attend to your queries and give counsel.',
 
-              subItem: [],
+              subItems: [],
             },
 
             {
               listItem:
                 'Our expert trainers, over 40 in number, have mastered the yogic way of life and are proficient is passing on their learnings in a simple and practical way. Armed with decades of experience, they offer tremendous value and insight to new learners.',
 
-              subItem: [],
+              subItems: [],
             },
 
             {
               listItem:
                 'Apart from the main yoga curriculum, you will learn immensely from the class experience itself. You will meet people with diverse backgrounds and experiences that you can gain insights from. There will be sadhakas of all age groups – right from teenagers to senior citizens. Every person has had a unique experience in life and it will be enriching to know all these stories.',
 
-              subItem: [],
+              subItems: [],
             },
 
             {
               listItem:
                 'This one-of-a-kind experience will groom you to calmly and mindfully handle people and situations',
 
-              subItem: [],
+              subItems: [],
             },
           ],
         },
@@ -2531,49 +2573,49 @@ const ttc900hr = {
               listItem:
                 'Library: Explore one of largest collections of spiritual and philosophical books to expand your knowledge',
 
-              subItem: [],
+              subItems: [],
             },
 
             {
               listItem:
                 'Internet Room: Access the internet in a comfortable setting when you need',
 
-              subItem: [],
+              subItems: [],
             },
 
             {
               listItem:
                 'Meditation Pods: Meditate on the five fundamental natural elements, the Panchamahabhutas,',
 
-              subItem: [],
+              subItems: [],
             },
 
             {
               listItem:
                 'Acupressure Path: Give your feet a natural massage and activate your vital energies',
 
-              subItem: [],
+              subItems: [],
             },
 
             {
               listItem:
                 'Gazebo: Enjoy the soothing sounds of flowing water and take in the peace and at this relaxation area',
 
-              subItem: [],
+              subItems: [],
             },
 
             {
               listItem:
                 'Dining Area: Enjoy wholesome Sattvik meals, specially prepared for your nourishment',
 
-              subItem: [],
+              subItems: [],
             },
 
             {
               listItem:
                 'Book Store: Shop in a wide selection of TYI publications. Find yourself the best yogic attire and mats.',
 
-              subItem: [],
+              subItems: [],
             },
           ],
         },
@@ -2592,7 +2634,13 @@ const ttc900hr = {
 
     image: `${baseDomain}${courseAssets.courseAsset40}`,
 
-    mostPopular: true,
+   
+    mostPopular:false,
+    rating:5,
+    colorCode:'#C9705F',
+    timing:'900 hrs TTC - 1 Year TTC - Online & On Campus - Saturday & Sunday: Saturday: 4:30 pm – 7.30 pm (IST) and Sunday: 9:30 am – 1:30 pm (IST) (Both the time slots are mandatory)',
+    fees:'INR. 50,000/- (Inclusive of course fee and study material)',
+    category:'ttc',
 
     dates: [''],
 
@@ -2622,14 +2670,14 @@ const ttc900hr = {
               listItem:
                 'You will learn the tools to master your physical, mental and spiritual well-being. You will see a marked improvement in your work, your relationships and life.',
 
-              subItem: [],
+              subItems: [],
             },
 
             {
               listItem:
                 'A new career avenue opens up for you where you can pass on the knowledge to others and facilitate their wellness journeys. The art of Yoga is something you can teach anywhere, no matter where you are. ',
 
-              subItem: [],
+              subItems: [],
             },
           ],
         },
@@ -2836,21 +2884,21 @@ const ttc900hr = {
           points: [
             {
               listItem: 'Attending a minimum 210 days of classes',
-              subItem: [],
+              subItems: [],
             },
 
             {
               listItem:
                 'Volunteering at Camps, Workshops, Satsangs, Reach-Out Initiatives',
 
-              subItem: [],
+              subItems: [],
             },
 
             {
               listItem:
                 'Completing assignments as given (submissions & presentations)',
 
-              subItem: [],
+              subItems: [],
             },
           ],
         },
@@ -2963,19 +3011,19 @@ const ttc900hr = {
               listItem:
                 'Awarded a certificate – Advanced Teacher Training Certificate (900 hours) by The Yoga Institute',
 
-              subItem: [],
+              subItems: [],
             },
 
             {
               listItem: 'Qualified by Yoga Certification Board (AYUSH Level-3)',
 
-              subItem: [],
+              subItems: [],
             },
 
             {
               listItem: 'Eligible to apply with Yoga Alliance USA (RYT 500)',
 
-              subItem: [],
+              subItems: [],
             },
           ],
         },
@@ -3003,25 +3051,25 @@ const ttc900hr = {
             {
               listItem: 'Opening your own yoga training center ',
 
-              subItem: [],
+              subItems: [],
             },
 
             {
               listItem: 'Working with corporates for their wellness programs',
 
-              subItem: [],
+              subItems: [],
             },
 
             {
               listItem: 'Working with schools and teaching children',
 
-              subItem: [],
+              subItems: [],
             },
 
             {
               listItem: 'Personal yoga coaching',
 
-              subItem: [],
+              subItems: [],
             },
           ],
         },
@@ -3047,20 +3095,20 @@ const ttc900hr = {
             {
               listItem: 'Normal healthy individuals and groups,',
 
-              subItem: [],
+              subItems: [],
             },
 
             {
               listItem: 'For people with minor ailments or disorders and',
 
-              subItem: [],
+              subItems: [],
             },
 
             {
               listItem:
                 'For people, under the guidance of qualified medical practitioners, undergoing treatment for any physiological, psychological and psychosomatic diseases/conditions.',
 
-              subItem: [],
+              subItems: [],
             },
           ],
         },
@@ -3079,28 +3127,28 @@ const ttc900hr = {
               listItem:
                 'You will have an opportunity to directly interact with our Guru Dr. Hansaji Yogendra. She is always available to attend to your queries and give counsel.',
 
-              subItem: [],
+              subItems: [],
             },
 
             {
               listItem:
                 'Our expert trainers, over 40 in number, have mastered the yogic way of life and are proficient is passing on their learnings in a simple and practical way. Armed with decades of experience, they offer tremendous value and insight to new learners.',
 
-              subItem: [],
+              subItems: [],
             },
 
             {
               listItem:
                 'Apart from the main yoga curriculum, you will learn immensely from the class experience itself. You will meet people with diverse backgrounds and experiences that you can gain insights from. There will be sadhakas of all age groups – right from teenagers to senior citizens. Every person has had a unique experience in life and it will be enriching to know all these stories.',
 
-              subItem: [],
+              subItems: [],
             },
 
             {
               listItem:
                 'This one-of-a-kind experience will groom you to calmly and mindfully handle people and situations',
 
-              subItem: [],
+              subItems: [],
             },
           ],
         },
@@ -3129,49 +3177,49 @@ const ttc900hr = {
               listItem:
                 'Library: Explore one of largest collections of spiritual and philosophical books to expand your knowledge',
 
-              subItem: [],
+              subItems: [],
             },
 
             {
               listItem:
                 'Internet Room: Access the internet in a comfortable setting when you need',
 
-              subItem: [],
+              subItems: [],
             },
 
             {
               listItem:
                 'Meditation Pods: Meditate on the five fundamental natural elements, the Panchamahabhutas,',
 
-              subItem: [],
+              subItems: [],
             },
 
             {
               listItem:
                 'Acupressure Path: Give your feet a natural massage and activate your vital energies',
 
-              subItem: [],
+              subItems: [],
             },
 
             {
               listItem:
                 'Gazebo: Enjoy the soothing sounds of flowing water and take in the peace and at this relaxation area',
 
-              subItem: [],
+              subItems: [],
             },
 
             {
               listItem:
                 'Dining Area: Enjoy wholesome Sattvik meals, specially prepared for your nourishment',
 
-              subItem: [],
+              subItems: [],
             },
 
             {
               listItem:
                 'Book Store: Shop in a wide selection of TYI publications. Find yourself the best yogic attire and mats.',
 
-              subItem: [],
+              subItems: [],
             },
           ],
         },
@@ -3190,7 +3238,13 @@ const ttc900hr = {
 
     image: `${baseDomain}${courseAssets.courseAsset40}`,
 
-    mostPopular: true,
+    mostPopular: false,
+    rating:5,
+    colorCode:'#C9705F',
+    timing:'Monday to Saturday:6:30 am to 8:00 pm Holiday on all Sundays',
+    fees:'INR. 50,000/- (Inclusive of course fee and study material)',
+    category:'ttc',
+
 
     dates: [''],
 
@@ -3218,14 +3272,14 @@ const ttc900hr = {
               listItem:
                 'You will learn the tools to master your physical, mental and spiritual well-being. You will see a marked improvement in your work, your relationships and life.',
 
-              subItem: [],
+              subItems: [],
             },
 
             {
               listItem:
                 'A new career avenue opens up for you where you can pass on the knowledge to others and facilitate their wellness journeys. The art of Yoga is something you can teach anywhere, no matter where you are. ',
 
-              subItem: [],
+              subItems: [],
             },
           ],
         },
@@ -3457,19 +3511,19 @@ const ttc900hr = {
               listItem:
                 'Awarded a certificate – Advanced Teacher Training Certificate (900 hours) by The Yoga Institute',
 
-              subItem: [],
+              subItems: [],
             },
 
             {
               listItem: 'Qualified by Yoga Certification Board (AYUSH Level-3)',
 
-              subItem: [],
+              subItems: [],
             },
 
             {
               listItem: 'Eligible to apply with Yoga Alliance USA (RYT 500)',
 
-              subItem: [],
+              subItems: [],
             },
           ],
         },
@@ -3497,25 +3551,25 @@ const ttc900hr = {
             {
               listItem: 'Opening your own yoga training center ',
 
-              subItem: [],
+              subItems: [],
             },
 
             {
               listItem: 'Working with corporates for their wellness programs',
 
-              subItem: [],
+              subItems: [],
             },
 
             {
               listItem: 'Working with schools and teaching children',
 
-              subItem: [],
+              subItems: [],
             },
 
             {
               listItem: 'Personal yoga coaching',
 
-              subItem: [],
+              subItems: [],
             },
           ],
         },
@@ -3541,20 +3595,20 @@ const ttc900hr = {
             {
               listItem: 'Normal healthy individuals and groups,',
 
-              subItem: [],
+              subItems: [],
             },
 
             {
               listItem: 'For people with minor ailments or disorders and',
 
-              subItem: [],
+              subItems: [],
             },
 
             {
               listItem:
                 'For people, under the guidance of qualified medical practitioners, undergoing treatment for any physiological, psychological and psychosomatic diseases/conditions.',
 
-              subItem: [],
+              subItems: [],
             },
           ],
         },
@@ -3573,28 +3627,28 @@ const ttc900hr = {
               listItem:
                 'You will have an opportunity to directly interact with our Guru Dr. Hansaji Yogendra. She is always available to attend to your queries and give counsel.',
 
-              subItem: [],
+              subItems: [],
             },
 
             {
               listItem:
                 'Our expert trainers, over 40 in number, have mastered the yogic way of life and are proficient is passing on their learnings in a simple and practical way. Armed with decades of experience, they offer tremendous value and insight to new learners.',
 
-              subItem: [],
+              subItems: [],
             },
 
             {
               listItem:
                 'Apart from the main yoga curriculum, you will learn immensely from the class experience itself. You will meet people with diverse backgrounds and experiences that you can gain insights from. There will be sadhakas of all age groups – right from teenagers to senior citizens. Every person has had a unique experience in life and it will be enriching to know all these stories.',
 
-              subItem: [],
+              subItems: [],
             },
 
             {
               listItem:
                 'This one-of-a-kind experience will groom you to calmly and mindfully handle people and situations',
 
-              subItem: [],
+              subItems: [],
             },
           ],
         },
@@ -3623,49 +3677,49 @@ const ttc900hr = {
               listItem:
                 'Library: Explore one of largest collections of spiritual and philosophical books to expand your knowledge',
 
-              subItem: [],
+              subItems: [],
             },
 
             {
               listItem:
                 'Internet Room: Access the internet in a comfortable setting when you need',
 
-              subItem: [],
+              subItems: [],
             },
 
             {
               listItem:
                 'Meditation Pods: Meditate on the five fundamental natural elements, the Panchamahabhutas,',
 
-              subItem: [],
+              subItems: [],
             },
 
             {
               listItem:
                 'Acupressure Path: Give your feet a natural massage and activate your vital energies',
 
-              subItem: [],
+              subItems: [],
             },
 
             {
               listItem:
                 'Gazebo: Enjoy the soothing sounds of flowing water and take in the peace and at this relaxation area',
 
-              subItem: [],
+              subItems: [],
             },
 
             {
               listItem:
                 'Dining Area: Enjoy wholesome Sattvik meals, specially prepared for your nourishment',
 
-              subItem: [],
+              subItems: [],
             },
 
             {
               listItem:
                 'Book Store: Shop in a wide selection of TYI publications. Find yourself the best yogic attire and mats.',
 
-              subItem: [],
+              subItems: [],
             },
           ],
         },
@@ -3684,7 +3738,13 @@ const ttc900hr = {
 
     image: `${baseDomain}${courseAssets.courseAsset40}`,
 
-    mostPopular: true,
+   
+    mostPopular: false,
+    rating:5,
+    colorCode:'#C9705F',
+    timing:'Monday to Saturday:  Morning: 7:00 am to 9:00 am (IST) and Evening:  4:30 pm to 8:00 pm (IST) (Both the time slots are mandatory) ',
+    fees:'INR. 50,000/- (Inclusive of course fee and study material)',
+    category:'ttc',
 
     dates: [''],
 
@@ -3716,14 +3776,14 @@ const ttc900hr = {
               listItem:
                 'You will learn the tools to master your physical, mental and spiritual well-being. You will see a marked improvement in your work, your relationships and life.',
 
-              subItem: [],
+              subItems: [],
             },
 
             {
               listItem:
                 'A new career avenue opens up for you where you can pass on the knowledge to others and facilitate their wellness journeys. The art of Yoga is something you can teach anywhere, no matter where you are. ',
 
-              subItem: [],
+              subItems: [],
             },
           ],
         },
@@ -3930,7 +3990,7 @@ const ttc900hr = {
               listItem:
                 'Completing assignments as given (submissions & presentations)',
 
-              subItem: [],
+              subItems: [],
             },
           ],
         },
@@ -4043,19 +4103,19 @@ const ttc900hr = {
               listItem:
                 'Awarded a certificate – Advanced Teacher Training Certificate (900 hours) by The Yoga Institute',
 
-              subItem: [],
+              subItems: [],
             },
 
             {
               listItem: 'Qualified by Yoga Certification Board (AYUSH Level-3)',
 
-              subItem: [],
+              subItems: [],
             },
 
             {
               listItem: 'Eligible to apply with Yoga Alliance USA (RYT 500)',
 
-              subItem: [],
+              subItems: [],
             },
           ],
         },
@@ -4083,25 +4143,25 @@ const ttc900hr = {
             {
               listItem: 'Opening your own yoga training center ',
 
-              subItem: [],
+              subItems: [],
             },
 
             {
               listItem: 'Working with corporates for their wellness programs',
 
-              subItem: [],
+              subItems: [],
             },
 
             {
               listItem: 'Working with schools and teaching children',
 
-              subItem: [],
+              subItems: [],
             },
 
             {
               listItem: 'Personal yoga coaching',
 
-              subItem: [],
+              subItems: [],
             },
           ],
         },
@@ -4127,20 +4187,20 @@ const ttc900hr = {
             {
               listItem: 'Normal healthy individuals and groups,',
 
-              subItem: [],
+              subItems: [],
             },
 
             {
               listItem: 'For people with minor ailments or disorders and',
 
-              subItem: [],
+              subItems: [],
             },
 
             {
               listItem:
                 'For people, under the guidance of qualified medical practitioners, undergoing treatment for any physiological, psychological and psychosomatic diseases/conditions.',
 
-              subItem: [],
+              subItems: [],
             },
           ],
         },
@@ -4159,28 +4219,28 @@ const ttc900hr = {
               listItem:
                 'You will have an opportunity to directly interact with our Guru Dr. Hansaji Yogendra. She is always available to attend to your queries and give counsel.',
 
-              subItem: [],
+              subItems: [],
             },
 
             {
               listItem:
                 'Our expert trainers, over 40 in number, have mastered the yogic way of life and are proficient is passing on their learnings in a simple and practical way. Armed with decades of experience, they offer tremendous value and insight to new learners.',
 
-              subItem: [],
+              subItems: [],
             },
 
             {
               listItem:
                 'Apart from the main yoga curriculum, you will learn immensely from the class experience itself. You will meet people with diverse backgrounds and experiences that you can gain insights from. There will be sadhakas of all age groups – right from teenagers to senior citizens. Every person has had a unique experience in life and it will be enriching to know all these stories.',
 
-              subItem: [],
+              subItems: [],
             },
 
             {
               listItem:
                 'This one-of-a-kind experience will groom you to calmly and mindfully handle people and situations',
 
-              subItem: [],
+              subItems: [],
             },
           ],
         },
@@ -4209,49 +4269,49 @@ const ttc900hr = {
               listItem:
                 'Library: Explore one of largest collections of spiritual and philosophical books to expand your knowledge',
 
-              subItem: [],
+              subItems: [],
             },
 
             {
               listItem:
                 'Internet Room: Access the internet in a comfortable setting when you need',
 
-              subItem: [],
+              subItems: [],
             },
 
             {
               listItem:
                 'Meditation Pods: Meditate on the five fundamental natural elements, the Panchamahabhutas,',
 
-              subItem: [],
+              subItems: [],
             },
 
             {
               listItem:
                 'Acupressure Path: Give your feet a natural massage and activate your vital energies',
 
-              subItem: [],
+              subItems: [],
             },
 
             {
               listItem:
                 'Gazebo: Enjoy the soothing sounds of flowing water and take in the peace and at this relaxation area',
 
-              subItem: [],
+              subItems: [],
             },
 
             {
               listItem:
                 'Dining Area: Enjoy wholesome Sattvik meals, specially prepared for your nourishment',
 
-              subItem: [],
+              subItems: [],
             },
 
             {
               listItem:
                 'Book Store: Shop in a wide selection of TYI publications. Find yourself the best yogic attire and mats.',
 
-              subItem: [],
+              subItems: [],
             },
           ],
         },
@@ -4271,7 +4331,11 @@ const ttc900hr = {
     image: `${baseDomain}${courseAssets.courseAsset40}`,
 
     mostPopular: true,
-
+    rating:5,
+    colorCode:'#C9705F',
+    timing:'Monday to Saturday: 5:00 p.m. - 8:00 p.m. (IST)',
+    fees:'INR. 50,000/- (Inclusive of course fee and study material)',
+    category:'ttc',
     dates: [''],
 
     details: [
@@ -4298,14 +4362,14 @@ const ttc900hr = {
               listItem:
                 'You will learn the tools to master your physical, mental and spiritual well-being. You will see a marked improvement in your work, your relationships and life.',
 
-              subItem: [],
+              subItems: [],
             },
 
             {
               listItem:
                 'A new career avenue opens up for you where you can pass on the knowledge to others and facilitate their wellness journeys. The art of Yoga is something you can teach anywhere, no matter where you are. ',
 
-              subItem: [],
+              subItems: [],
             },
           ],
         },
@@ -4510,21 +4574,21 @@ const ttc900hr = {
           points: [
             {
               listItem: 'Attending a minimum 210 days of classes',
-              subItem: [],
+              subItems: [],
             },
 
             {
               listItem:
                 'Volunteering at Camps, Workshops, Satsangs, Reach-Out Initiatives',
 
-              subItem: [],
+              subItems: [],
             },
 
             {
               listItem:
                 'Completing assignments as given (submissions & presentations)',
 
-              subItem: [],
+              subItems: [],
             },
           ],
         },
@@ -4637,19 +4701,19 @@ const ttc900hr = {
               listItem:
                 'Awarded a certificate – Advanced Teacher Training Certificate (900 hours) by The Yoga Institute',
 
-              subItem: [],
+              subItems: [],
             },
 
             {
               listItem: 'Qualified by Yoga Certification Board (AYUSH Level-3)',
 
-              subItem: [],
+              subItems: [],
             },
 
             {
               listItem: 'Eligible to apply with Yoga Alliance USA (RYT 500)',
 
-              subItem: [],
+              subItems: [],
             },
           ],
         },
@@ -4677,25 +4741,25 @@ const ttc900hr = {
             {
               listItem: 'Opening your own yoga training center ',
 
-              subItem: [],
+              subItems: [],
             },
 
             {
               listItem: 'Working with corporates for their wellness programs',
 
-              subItem: [],
+              subItems: [],
             },
 
             {
               listItem: 'Working with schools and teaching children',
 
-              subItem: [],
+              subItems: [],
             },
 
             {
               listItem: 'Personal yoga coaching',
 
-              subItem: [],
+              subItems: [],
             },
           ],
         },
@@ -4721,20 +4785,20 @@ const ttc900hr = {
             {
               listItem: 'Normal healthy individuals and groups,',
 
-              subItem: [],
+              subItems: [],
             },
 
             {
               listItem: 'For people with minor ailments or disorders and',
 
-              subItem: [],
+              subItems: [],
             },
 
             {
               listItem:
                 'For people, under the guidance of qualified medical practitioners, undergoing treatment for any physiological, psychological and psychosomatic diseases/conditions.',
 
-              subItem: [],
+              subItems: [],
             },
           ],
         },
@@ -4753,28 +4817,28 @@ const ttc900hr = {
               listItem:
                 'You will have an opportunity to directly interact with our Guru Dr. Hansaji Yogendra. She is always available to attend to your queries and give counsel.',
 
-              subItem: [],
+              subItems: [],
             },
 
             {
               listItem:
                 'Our expert trainers, over 40 in number, have mastered the yogic way of life and are proficient is passing on their learnings in a simple and practical way. Armed with decades of experience, they offer tremendous value and insight to new learners.',
 
-              subItem: [],
+              subItems: [],
             },
 
             {
               listItem:
                 'Apart from the main yoga curriculum, you will learn immensely from the class experience itself. You will meet people with diverse backgrounds and experiences that you can gain insights from. There will be sadhakas of all age groups – right from teenagers to senior citizens. Every person has had a unique experience in life and it will be enriching to know all these stories.',
 
-              subItem: [],
+              subItems: [],
             },
 
             {
               listItem:
                 'This one-of-a-kind experience will groom you to calmly and mindfully handle people and situations',
 
-              subItem: [],
+              subItems: [],
             },
           ],
         },
@@ -4803,49 +4867,49 @@ const ttc900hr = {
               listItem:
                 'Library: Explore one of largest collections of spiritual and philosophical books to expand your knowledge',
 
-              subItem: [],
+              subItems: [],
             },
 
             {
               listItem:
                 'Internet Room: Access the internet in a comfortable setting when you need',
 
-              subItem: [],
+              subItems: [],
             },
 
             {
               listItem:
                 'Meditation Pods: Meditate on the five fundamental natural elements, the Panchamahabhutas,',
 
-              subItem: [],
+              subItems: [],
             },
 
             {
               listItem:
                 'Acupressure Path: Give your feet a natural massage and activate your vital energies',
 
-              subItem: [],
+              subItems: [],
             },
 
             {
               listItem:
                 'Gazebo: Enjoy the soothing sounds of flowing water and take in the peace and at this relaxation area',
 
-              subItem: [],
+              subItems: [],
             },
 
             {
               listItem:
                 'Dining Area: Enjoy wholesome Sattvik meals, specially prepared for your nourishment',
 
-              subItem: [],
+              subItems: [],
             },
 
             {
               listItem:
                 'Book Store: Shop in a wide selection of TYI publications. Find yourself the best yogic attire and mats.',
 
-              subItem: [],
+              subItems: [],
             },
           ],
         },
@@ -4860,7 +4924,12 @@ const camps = {
     title: 'Bhava Workshop',
     key: 'bhava-workshop',
     dates: [''],
-    mostPopular: true,
+    mostPopular: false,
+    rating:5,
+    colorCode:'#EDBE66',
+    timing:'9.30 AM to 5.30 PM',
+    fees:'INR 1,000',
+    category:'camps',
     metaDescription:'',
     image: `${baseDomain}${courseAssets.courseAsset8}`,
     details: [
@@ -4973,7 +5042,12 @@ const camps = {
     title: 'Cardiac & Hypertension Workshop',
     key: 'cardiac-hypertension-workshop',
     dates: [''],
-    mostPopular: true,
+    mostPopular: false,
+    rating:5,
+    colorCode:'#DDAB58',
+    timing:'5:00 pm – 8:00 pm (IST)',
+    fees:'INR 1,000',
+    category:'camps',
     metaDescription:'',
     image: `${baseDomain}${courseAssets.courseAsset6}`,
     details: [
@@ -5081,7 +5155,12 @@ const camps = {
     title: 'Diabetes Camp ',
     key: 'diabetes-camp',
     dates: [''],
-    mostPopular: true,
+    mostPopular: false,
+    rating:5,
+    colorCode:'#CE9B51',
+    timing:'5:00 pm – 8:00 pm (IST)',
+    fees:'INR 1,000',
+    category:'camps',
     metaDescription:'',
     image: `${baseDomain}${courseAssets.courseAsset7}`,
     details: [
@@ -5198,7 +5277,12 @@ const camps = {
     title: 'Diet Workshop',
     key: 'diet-workshop',
     dates: [''],
-    mostPopular: true,
+    mostPopular: false,
+    rating:5,
+    colorCode:'#EDBE66',
+    timing:'5:00 pm – 8:00 pm (IST)',
+    fees:'INR 1,000',
+    category:'camps',
     metaDescription:'',
     image: `${baseDomain}${courseAssets.courseAsset13}`,
     details: [
@@ -5315,7 +5399,12 @@ const camps = {
     title: 'Digestion Camp',
     key: 'digestion-camp',
     dates: [''],
-    mostPopular: true,
+    mostPopular: false,
+    rating:5,
+    colorCode:'#DDAB58',
+    timing:'9.30 AM to 5.30 PM',
+    fees:'INR 1,000',
+    category:'camps',
     metaDescription:'',
     image: `${baseDomain}${courseAssets.courseAsset13}`,
     details: [
@@ -5427,7 +5516,12 @@ const camps = {
     title: 'Karma Yoga',
     key: 'karma-yoga',
     dates: [''],
-    mostPopular: true,
+    mostPopular: false,
+    rating:5,
+    colorCode:'#CE9B51',
+    timing:'9.30 AM to 5.30 PM',
+    fees:'INR 1,000',
+    category:'camps',
     metaDescription:'',
     image: `${baseDomain}${courseAssets.courseAsset10}`,
     details: [
@@ -5544,7 +5638,12 @@ const camps = {
     title: 'Life Management Camp',
     key: 'life-management-camp',
     dates: [''],
-    mostPopular: true,
+    mostPopular: false,
+    rating:5,
+    colorCode:'#EDBE66',
+    timing:'5:00 pm – 8:00 pm (IST)',
+    fees:'INR 1,000',
+    category:'camps',
     metaDescription:'',
     image: `${baseDomain}${courseAssets.courseAsset8}`,
     details: [
@@ -5657,7 +5756,12 @@ const camps = {
     title: 'Meditation Camp',
     key: 'meditation-camp',
     dates: [''],
-    mostPopular: true,
+    mostPopular: false,
+    rating:5,
+    colorCode:'#DDAB58',
+    timing:'9.30 AM to 5.30 PM',
+    fees:'INR 1,000',
+    category:'camps',
     metaDescription:'',
     image: `${baseDomain}${courseAssets.courseAsset8}`,
     details: [
@@ -5771,6 +5875,11 @@ const camps = {
     key: 'pranayama-workshop',
     dates: [''],
     mostPopular: true,
+    rating:5,
+    colorCode:'#CE9B51',
+    timing:'8:00 am – 11:00 am (IST)',
+    fees:'INR 1,000',
+    category:'camps',
     metaDescription:'',
     image: `${baseDomain}${courseAssets.courseAsset9}`,
     details: [
@@ -5883,7 +5992,12 @@ const camps = {
     title: 'Pregnancy Camp For Ante & Post Natal',
     key: 'pregnancy-camp-for-ante-post-natal',
     dates: [''],
-    mostPopular: true,
+    mostPopular: false,
+    rating:5,
+    colorCode:'#EDBE66',
+    timing:'5:00 pm – 8:00 pm (IST)',
+    fees:'INR 1,000',
+    category:'camps',
     metaDescription:'',
     image: `${baseDomain}${courseAssets.courseAsset13}`,
     details: [
@@ -5995,7 +6109,12 @@ const camps = {
     title: 'Respiratory Workshop',
     key: 'respiratory-workshop',
     dates: [''],
-    mostPopular: true,
+    mostPopular: false,
+    rating:5,
+    colorCode:'#DDAB58',
+    timing:'5:00 pm – 8:00 pm (IST)',
+    fees:'INR 1,000',
+    category:'camps',
     metaDescription:'',
     image: `${baseDomain}${courseAssets.courseAsset11}`,
     details: [
@@ -6107,7 +6226,12 @@ const camps = {
     title: 'Senior Citizen Workshop',
     key: 'senior-citizen-workshop',
     dates: [''],
-    mostPopular: true,
+    mostPopular: false,
+    rating:5,
+    colorCode:'#CE9B51',
+    timing:'5:00 pm – 8:00 pm (IST)',
+    fees:'INR 1,000',
+    category:'camps',
     metaDescription:'',
     image: `${baseDomain}${courseAssets.courseAsset6}`,
     details: [
@@ -6220,7 +6344,12 @@ const camps = {
     title: 'Stress Management Camp',
     key: 'stress-management-camp',
     dates: [''],
-    mostPopular: true,
+    mostPopular: false,
+    rating:5,
+    colorCode:'#EDBE66',
+    timing:'5:00 pm – 8:00 pm (IST)',
+    fees:'INR 1,000',
+    category:'camps',
     metaDescription:'',
     image: `${baseDomain}${courseAssets.courseAsset12}`,
     details: [
@@ -6332,7 +6461,12 @@ const camps = {
     title: 'Weight Management Workshop',
     key: 'weight-management-workshop',
     dates: [''],
-    mostPopular: true,
+    mostPopular: false,
+    rating:5,
+    colorCode:'#DDAB58',
+    timing:'5:00 pm – 8:00 pm (IST)',
+    fees:'INR 1,000',
+    category:'camps',
     metaDescription:'',
     image: `${baseDomain}${courseAssets.courseAsset15}`,
     details: [
@@ -6444,7 +6578,12 @@ const camps = {
     title: 'Women’s Camp',
     key: 'women’s-camp',
     dates: [''],
-    mostPopular: true,
+    mostPopular: false,
+    rating:5,
+    colorCode:'#CE9B51',
+    timing:'5:00 pm – 8:00 pm (IST)',
+    fees:'INR 1,000',
+    category:'camps',
     metaDescription:'',
     image: `${baseDomain}${courseAssets.courseAsset14}`,
     details: [
@@ -6561,7 +6700,12 @@ const camps = {
     title: 'Back & Joint Disorder Workshop',
     key: 'back-joint-disorder-workshop',
     dates: [''],
-    mostPopular: true,
+    mostPopular: false,
+    rating:5,
+    colorCode:'#EDBE66',
+    timing:'5:00 pm – 8:00 pm (IST)',
+    fees:'INR 1,000',
+    category:'camps',
     metaDescription:'',
     image: `${baseDomain}${courseAssets.courseAsset6}`,
     details: [

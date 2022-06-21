@@ -1,33 +1,23 @@
 import React from 'react'
-import './style.scss'
+import '../../../Components/CourseComponents/style.scss'
 
-const CourseTable = () => {
-  const table = {
-    title: '',
-    tableHeading: ['Mode of Learning', 'Online', 'On Campus'],
-    tableData: [
-      [
-        'Details',
-        'All classes will be online except the last 15 days which are to be done mandatorily on-campus at the end of the course',
-        'All classes to be attended on campus',
-      ],
-    ],
-  }
+const CourseTable = ({ content }) => {
+
   return (
     <div className='course_table' >
-      <h1>
-        <b>{table.title}</b>
-      </h1>
+      <h2>
+        <b><u>{content.title}</u></b>
+      </h2>
       <table  >
         <thead >
           <tr  >
-            {table.tableHeading.map((item, i) => {
+            {content.tableHeading.map((item, i) => {
               return <th key={i}>{item}</th>
             })}
           </tr>
         </thead>
         <tbody>
-          {table.tableData.map((item, i) => {
+          {content.tableData.map((item, i) => {
             return (
               <tr  key={i}>
                 {item.map((point, idx) => {

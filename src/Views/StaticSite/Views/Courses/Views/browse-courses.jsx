@@ -16,7 +16,6 @@ import './style.scss'
 
 const BrowseCourses = () => {
   const { type } = useParams()
-  console.log(type, 'type')
   const [category, setCategory] = useState()
   const [breadcrumbs, setBreadcrumbs] = useState()
   const ChangeContent = () => {
@@ -134,11 +133,11 @@ const BrowseCourses = () => {
           {category?.map((item, i) => (
             <CourseCard
               key={i}
-              color={item.colorCode}
+              color={'#aaa'}
               index={i}
-              courseTitle={item.name}
-              description={item.details}
-              path={item.id}
+              courseTitle={item.title}
+              description={item.metaDescription}
+              path={item.key}
               img={item.image}
             />
           ))}

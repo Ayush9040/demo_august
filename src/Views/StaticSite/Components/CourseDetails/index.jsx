@@ -18,24 +18,24 @@ const CourseDetails = ({ pageDate }) => {
     window.scrollTo(0, 0)
   }, [])
 
-  const {
-    id,
-    key,
-    image,
-    name,
-    details,
-    benefits,
-    duration,
-    date,
-    timings,
-    fees,
-    prerequisites,
-    curriculum,
-    unique,
-    TeachingAndCertification,
-    queDetails,
-    Guidelines,
-  } = pageDate
+  // const {
+  //   id,
+  //   key,
+  //   image,
+  //   name,
+  //   details,
+  //   benefits,
+  //   duration,
+  //   date,
+  //   timings,
+  //   fees,
+  //   prerequisites,
+  //   curriculum,
+  //   unique,
+  //   TeachingAndCertification,
+  //   queDetails,
+  //   Guidelines,
+  // } = pageDate
 
   console.log(pageDate,'pageData')
 
@@ -71,10 +71,7 @@ const CourseDetails = ({ pageDate }) => {
       key: 6,
     },
   ]
-  console.log(benefits)
-  console.log(fees)
-  console.log(prerequisites)
-  console.log(unique)
+
   const selectMenu = (name) => {
     switch (name) {
     case 'Program Details':
@@ -109,7 +106,7 @@ const CourseDetails = ({ pageDate }) => {
     case 'url': return <CourseURL content={content}/>
     }
   }
-  let timing = pageDate?.details?.find(item=>item.content.title==='Date')?.content?.text[0]
+ 
 
   return (
     <div className="course-detail-page">
@@ -131,7 +128,7 @@ const CourseDetails = ({ pageDate }) => {
             )}
           </h1>
           <p>
-            {timing}
+            {pageDate?.timing}
           </p>
           <p style={{ marginTop:'20px' }} >
             {pageDate.metaDescription || 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. '}
@@ -142,20 +139,30 @@ const CourseDetails = ({ pageDate }) => {
           </div>
         </div>
         <div className="course-cover">
-          {image ? (
-            <img src={image} />
+          {pageDate?.image ? (
+            <img src={pageDate?.image} />
           ) : (
             <img src={`${baseDomain}${courseAssets.courseAsset2}`} />
           )}
         </div>
       </div>
       <div className='details-section' >
-        <h1>Program Details</h1>
+        <h1>Program Details<div className='bottom-line' ></div></h1>
         {pageDate?.details?.map(({ type,content })=>{return selectComponent(type,content)})}
       </div>
       <div className='details-section' >
-        <h1>Curriculam</h1>
+        <h1>Curriculam
+          <div className='bottom-line' ></div>
+        </h1>
         {pageDate?.curriculam?.map(({ type,content })=>{return selectComponent(type,content)})}
+      </div>
+      <div className='details-section' >
+        <h1>Teaching<div className='bottom-line' ></div></h1>
+        {pageDate?.teaching?.map(({ type,content })=>{return selectComponent(type,content)})}
+      </div>
+      <div className='details-section' >
+        <h1>Our Offerings<div className='bottom-line' ></div></h1>
+        {pageDate?.offerings?.map(({ type,content })=>{return selectComponent(type,content)})}
       </div>
     </div>
   )

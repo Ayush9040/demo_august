@@ -8,7 +8,7 @@ import InnerNavComponent from '../../../Components/InnerNavComponent'
 const EBooks = () => {
   const [product, setProduct] = useState([])
   const [categories, setCategories] = useState([])
-  console.log(categories)
+
 
   useEffect(() => {
     axios

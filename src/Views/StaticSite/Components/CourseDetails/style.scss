@@ -3,6 +3,7 @@
     display: flex;
     padding: 3rem 5rem;
     gap: 5rem;
+    background: transparent linear-gradient(90deg, #E38F73 0%, #C9705F 100%) 0% 0% no-repeat padding-box;
     & > div {
       width: 50%;
       box-sizing: border-box;
@@ -77,44 +78,15 @@
     }
   }
   .details-section {
-    padding: 10rem;
+    padding: 2rem 10rem;
     width: 85%;
     margin: 0 auto;
     scroll-behavior: smooth;
-    .mob-view {
-      display: none;
-    }
-    ul {
-      display: block;
-      padding-top: 0;
-      list-style: none;
-      padding: 0;
-      li {
-        display: flex;
-        align-items: center;
-        border: none;
-        padding: 0;
-        font-size: 1.5rem;
-        margin: 2rem 0;
-        span {
-          padding: 0.5rem;
-          border: 3px solid var(--brick-red);
-          border-radius: 50%;
-          margin-right: 2rem;
-          width: 32px;
-          height: 32px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          svg {
-            width: 30px !important;
-            height: 30px !important;
-            vertical-align: middle;
-          }
-        }
-      }
-    }
     font-size: 1.5rem;
+    h1{
+      font-size: 2.75rem;
+      display: inline-block;
+    }
   }
   .course-about {
     // display: grid;

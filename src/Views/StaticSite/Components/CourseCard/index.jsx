@@ -13,7 +13,7 @@ const CourseCard = ({
   path,
   img = 'http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Courses/course%20%281%29.png',
 }) => {
-  console.log(description, 'clr')
+
 
   const selectStyles = {
     cursor: 'pointer',
@@ -22,12 +22,13 @@ const CourseCard = ({
     color: 'white',
     fontSize: '1.5rem',
     fontWeight: '900',
-    padding: '0.8rem 0.8rem',
     borderWidth: '0.1rem',
     borderRadius: '15%/50%',
+    borderStyle: 'solid',
+    maxWidth: '130px',
   }
 
-  console.log(color,'Color')
+
 
   return (
     <div className="course-card">

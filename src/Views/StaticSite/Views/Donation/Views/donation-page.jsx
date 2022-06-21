@@ -11,7 +11,6 @@ import { data } from '../Constants/data'
 
 const DonationPage = () => {
   const route = useLocation()
-  console.log(route)
   useEffect(() => {
     if (route.hash) {
       document

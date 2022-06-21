@@ -1,20 +1,23 @@
 import React from 'react'
+import '../../../Components/CourseComponents/style.scss'
 
-const CourseULIst = ({ content }) => {
+const CourseUList = ({ content }) => {
 
+  console.log(content,'content')
 
   return (
-    <div className="CourseUList">
+    <div className="course_list">
       <h2>
         <b>
-          <u>{content.title}</u></b>
+          <u>{content.title}</u>
+        </b>
       </h2>
-      <ul style={{ paddingLeft: '50px' }} type="disc">
-        {content.points.map((item, i) => {
+      <ul type="disc">
+        {content?.points?.map((item, i) => {
           return (
             <li key={i}>
               {item.listItem}
-              <ul style={{ paddingLeft: '80px' }} type="circle">
+              <ul type="circle">
                 {item.subItems.map((item, i) => {
                   return <li key={i}>{item}</li>
                 })}
@@ -27,4 +30,4 @@ const CourseULIst = ({ content }) => {
   )
 }
 
-export default CourseULIst
+export default CourseUList
