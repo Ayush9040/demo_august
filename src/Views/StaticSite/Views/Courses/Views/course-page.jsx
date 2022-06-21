@@ -6,7 +6,6 @@ import './style.scss'
 import CourseSection from '../../../Components/CourseSections'
 import { courseCardData } from '../../../utils/courseCardData'
 
-
 import {
   courseArray,
   course200H,
@@ -32,20 +31,23 @@ const Courses = () => {
 
   const setPathParam = (title) => {
     if (title === 'Teacher Training Courses') {
-      return 'ttc'
+
+      return { path:'ttc',sliderVal:3 }
     } else if (title === 'Camps & Workshops') {
-      return 'camps-workshops'
+      return { path:'camps-workshops',sliderVal:9 }
     } else if (title === 'Most Popular') {
-      return 'most-popular'
+      return { path:'most-popular',sliderVal:3 }
     } else {
-      return 'classes'
+      return { path:'classes',sliderVal:3 }
     }
   }
+
+  setPathParam()
 
   return (
     <div className="courses-container">
       {/* <CommonBannerNavPrimary innerNav={false} /> */}
-      <InnerNavComponent abc={CoursesBan}/>
+      <InnerNavComponent abc={CoursesBan} />
       <div className="search">
         <h1>Courses</h1>
         <div className="search-bar">
@@ -58,7 +60,7 @@ const Courses = () => {
       <div className="courses-introduction">
         <div className="intro-text">
           <h1>More than just learning</h1>
-          <p className='intro-p'>
+          <p className="intro-p">
             Whether you want to revitalize your mind and body or take a break
             from your hectic lifestyle, we have you covered. To bring in a new
             you or begin a new career path, explore our countless life-changing
@@ -78,6 +80,7 @@ const Courses = () => {
       </div>
       {courseCardData &&
         courseCardData.map((item, i) => {
+          setPathParam(item.title)
           return (
             <CourseSection
               key={i}
@@ -85,10 +88,12 @@ const Courses = () => {
               color={item.color}
               data={data[i]}
               showRangeSlider={
-                item.title === 'Teacher Training Courses' ? true : false
+                (item.title === 'Teacher Training Courses' || item.title === 'Regular Classes') ? true : false
+               
               }
-              pathParam={setPathParam(item.title)}
+              pathParam={setPathParam(item.title).path}
               cardData={item.cardData}
+              sliderRange={setPathParam(item.title).sliderVal}
             />
           )
         })}
@@ -195,7 +200,7 @@ const Courses = () => {
           <CommonBtn text={'Explore all'} />
         </Link>
       </div> */}
-      <AlumniCarousel/>
+      <AlumniCarousel />
     </div>
   )
 }
