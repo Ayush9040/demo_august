@@ -12,6 +12,11 @@ import NewsLetter from '../../Components/NewsLetter'
 import Footer from '../../Components/Footer'
 import Blog from '../../Components/BlogSection'
 import { useLocation } from 'react-router-dom'
+import CourseTable from '../../Components/CourseComponents/CourseTable'
+import CoursePara from '../../Components/CourseComponents/CoursePara'
+import CourseQuote from '../../Components/CourseComponents/CourseQuote'
+import CourseURL from '../../Components/CourseComponents/CourseURL'
+import CourseUList from '../../Components/CourseComponents/CourseUList'
 
 
 const Home = () => {
@@ -26,6 +31,11 @@ const Home = () => {
   })
   return (
     <>
+      <CourseTable />
+      <CoursePara/>
+      <CourseQuote/>
+      <CourseURL/>
+      <CourseUList/>
       <HeroSection />
       <Legacy />
       <OurOfferings />

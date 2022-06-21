@@ -1,5 +1,5 @@
 import React from 'react'
-import './style.scss'
+import '../../../Components/CourseComponents/style.scss'
 
 const CourseTable = () => {
   const table = {

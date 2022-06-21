@@ -1,22 +1,48 @@
-.Dates-dropdown{
-  border: none;
-  .Select-dropdown{
-    &:focus-visible{
+.Dates-dropdown {
+  position: relative;
+  &::after {
+    content: '\25B6';
+    color: white;
+    padding-left: 15px;
+    display: inline-block;
+    font-size: 1.25rem;
+    vertical-align: top;
+    margin-top: 3px;
+    position: absolute;
+    left: 90px;
+  }
+  .Select-dropdown {
+    padding: 0.8rem 0.8rem;
+    appearance: none;
+    font-size: 1.5rem;
+    font-weight: 900;
+    border: none;
+    color: white;
+    border-radius: 15%/50%;
+    background: transparent;
+    &:focus-visible {
       outline: white;
     }
   }
-}
 
-@media(max-width:620px){
-  .course-card{
-      width: 100%;
+}
+.open {
+  &::after{
+    transition: 0.2s ease;
+    transform: rotate(90deg);
   }
-  .Select-dropdown{
-      border-color: white;
-      cursor: pointer;
-      margin-top: 2rem;
-      position: relative;
-      display: flex;
-      // left: rem;
+    }
+
+@media (max-width: 620px) {
+  .course-card {
+    width: 100%;
+  }
+  .Select-dropdown {
+    border-color: white;
+    cursor: pointer;
+    margin-top: 2rem;
+    position: relative;
+    display: flex;
+    // left: rem;
   }
 }

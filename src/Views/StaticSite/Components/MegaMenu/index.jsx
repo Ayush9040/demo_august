@@ -326,11 +326,12 @@ const MegaMenu = ({ setNav }) => {
                 )
               })}
             </ul>
-            <div className='menu-filler-icon' style={{ position: 'fixed', bottom: '80px', width: '200px' }}>
-              {filler1}
-            </div>
+
           </div>
         )}
+        <div className='menu-filler-icon' >
+          {filler1}
+        </div>
       </div>
     </div>
   )

@@ -22,9 +22,10 @@ const CourseCard = ({
     color: 'white',
     fontSize: '1.5rem',
     fontWeight: '900',
-    padding: '0.8rem 0.8rem',
     borderWidth: '0.1rem',
     borderRadius: '15%/50%',
+    borderStyle: 'solid',
+    maxWidth: '130px',
   }
   return (
     <div className="course-card">
