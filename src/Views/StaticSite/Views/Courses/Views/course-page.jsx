@@ -27,7 +27,7 @@ const Courses = () => {
   }
   //let hourCourse = [...course200H,...course900H]
 
-  let data = [course200H, camps, courseArray, classes]
+  let data = [course200H, camps, classes,courseArray]
 
   const setPathParam = (title) => {
     if (title === 'Teacher Training Courses') {
