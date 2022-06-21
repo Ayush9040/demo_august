@@ -3,7 +3,8 @@
     display: flex;
     padding: 3rem 5rem;
     gap: 5rem;
-    background: transparent linear-gradient(90deg, #E38F73 0%, #C9705F 100%) 0% 0% no-repeat padding-box;
+    background: transparent linear-gradient(90deg, #e38f73 0%, #c9705f 100%) 0%
+      0% no-repeat padding-box;
     & > div {
       width: 50%;
       box-sizing: border-box;
@@ -21,7 +22,6 @@
           p {
             font-size: 4rem;
             font-weight: 700;
-           
           }
         }
       }
@@ -53,6 +53,9 @@
       }
     }
   }
+  .career-navigation-lg-div {
+    padding: 2rem 10rem;
+  }
   .career-navigation-lg {
     ul.innerNav {
       display: flex;
@@ -83,7 +86,7 @@
     margin: 0 auto;
     scroll-behavior: smooth;
     font-size: 1.5rem;
-    h1{
+    h1 {
       font-size: 2.75rem;
       display: inline-block;
     }

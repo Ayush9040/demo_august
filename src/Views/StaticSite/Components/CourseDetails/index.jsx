@@ -37,7 +37,7 @@ const CourseDetails = ({ pageDate }) => {
   //   Guidelines,
   // } = pageDate
 
-  console.log(pageDate,'pageData')
+  console.log(pageDate, 'pageData')
 
   let options = [
     {
@@ -97,16 +97,20 @@ const CourseDetails = ({ pageDate }) => {
     }
   }
 
-  const selectComponent = (type,content)=>{
-    switch(type){
-    case 'paragraph': return <CoursePara content={content} />
-    case 'u-list': return <CourseULIst content={content}/>
-    case 'table': return <CourseTable content={content}/>
-    case 'quote': return <CourseQuote content={content}/>
-    case 'url': return <CourseURL content={content}/>
+  const selectComponent = (type, content) => {
+    switch (type) {
+    case 'paragraph':
+      return <CoursePara content={content} />
+    case 'u-list':
+      return <CourseULIst content={content} />
+    case 'table':
+      return <CourseTable content={content} />
+    case 'quote':
+      return <CourseQuote content={content} />
+    case 'url':
+      return <CourseURL content={content} />
     }
   }
- 
 
   return (
     <div className="course-detail-page">
@@ -114,9 +118,7 @@ const CourseDetails = ({ pageDate }) => {
         <div className="course-info">
           <h1>
             {pageDate?.title ? (
-              <span>
-                {pageDate?.title}
-              </span>
+              <span>{pageDate?.title}</span>
             ) : (
               <span>
                 <p>500 Hour</p>
@@ -127,14 +129,15 @@ const CourseDetails = ({ pageDate }) => {
               </span>
             )}
           </h1>
-          <p>
-            {pageDate?.timing}
-          </p>
-          <p style={{ marginTop:'20px' }} >
-            {pageDate.metaDescription || 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. '}
+          <p>{pageDate?.timing}</p>
+          <p style={{ marginTop: '20px' }}>
+            {pageDate.metaDescription ||
+              'Lorem Ipsum is simply dummy text of the printing and typesetting industry. '}
           </p>
           <div className="course-options">
-            <Link to={`/enrollment/${pageDate.key}`}><CommonBtn text={'Enroll Now'} /></Link>
+            <Link to={`/enrollment/${pageDate.key}`}>
+              <CommonBtn text={'Enroll Now'} />
+            </Link>
             <CommonBtn text={'Gift Course'} />
           </div>
         </div>
@@ -146,23 +149,72 @@ const CourseDetails = ({ pageDate }) => {
           )}
         </div>
       </div>
-      <div className='details-section' >
-        <h1>Program Details<div className='bottom-line' ></div></h1>
-        {pageDate?.details?.map(({ type,content })=>{return selectComponent(type,content)})}
+      {pageDate.category === 'ttc' && (
+        <div className="career-navigation-lg-div">
+          <div className="career-navigation-lg">
+            <ul className="innerNav">
+              {options.map((item, idx) => (
+                <a key={item.id} href={`#${item.id}`}>
+                  <li
+                    onClick={() => {
+                      selectMenu(item.title)
+                    }}
+                    key={idx}
+                  >
+                    <em className={idx + 1 === detail && 'active'}>
+                      {item.title}
+                    </em>
+                    &nbsp;
+                  </li>
+                </a>
+              ))}
+            </ul>
+          </div>
+        </div>
+      )}
+
+      <div className="details-section">
+        {pageDate.details === 'ttc' && (
+          <h1>
+            Program Details<div className="bottom-line"></div>
+          </h1>
+        )}
+
+        {pageDate?.details?.map(({ type, content }) => {
+          return selectComponent(type, content)
+        })}
       </div>
-      <div className='details-section' >
-        <h1>Curriculam
-          <div className='bottom-line' ></div>
-        </h1>
-        {pageDate?.curriculam?.map(({ type,content })=>{return selectComponent(type,content)})}
+      <div className="details-section">
+        {(pageDate.curriculam === 'ttc' && pageDate.curriculam.length !== 0) && (
+          <h1>
+            Curriculam
+            <div className="bottom-line"></div>
+          </h1>
+        )}
+
+        {pageDate?.curriculam?.map(({ type, content }) => {
+          return selectComponent(type, content)
+        })}
       </div>
-      <div className='details-section' >
-        <h1>Teaching<div className='bottom-line' ></div></h1>
-        {pageDate?.teaching?.map(({ type,content })=>{return selectComponent(type,content)})}
+      <div className="details-section">
+        {(pageDate.teaching === 'ttc' && pageDate.teaching.length !== 0) && (
+          <h1>
+            Teaching<div className="bottom-line"></div>
+          </h1>
+        )}
+
+        {pageDate?.teaching?.map(({ type, content }) => {
+          return selectComponent(type, content)
+        })}
       </div>
-      <div className='details-section' >
-        <h1>Our Offerings<div className='bottom-line' ></div></h1>
-        {pageDate?.offerings?.map(({ type,content })=>{return selectComponent(type,content)})}
+      <div className="details-section">
+        {(pageDate.offerings ==='ttc' && pageDate.offerings.length !==0) &&  <h1>
+          Our Offerings<div className="bottom-line"></div>
+        </h1>}
+       
+        {pageDate?.offerings?.map(({ type, content }) => {
+          return selectComponent(type, content)
+        })}
       </div>
     </div>
   )

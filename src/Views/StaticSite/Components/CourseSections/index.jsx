@@ -155,9 +155,9 @@ const CourseSection = ({ title, showRangeSlider, color, data, pathParam }) => {
                 return (
                   <CourseCard
                     key={i}
-                    color={'#aaa'}
+                    color={item.colorCode}
                     index={i}
-                    courseTitle={item.name}
+                    courseTitle={item.title}
                     description={item.metaDescription}
                     path={item.key}
                     img={item.image}
@@ -171,9 +171,9 @@ const CourseSection = ({ title, showRangeSlider, color, data, pathParam }) => {
               return (
                 <CourseCard
                   key={i}
-                  color={'#aaa'}
+                  color={item.colorCode}
                   index={i}
-                  courseTitle={item.name}
+                  courseTitle={item.title}
                   description={item.details}
                   path={item.key}
                   img={item.image}
