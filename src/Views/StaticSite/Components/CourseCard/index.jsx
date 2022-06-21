@@ -13,7 +13,7 @@ const CourseCard = ({
   path,
   img = 'http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Courses/course%20%281%29.png',
 }) => {
-  console.log(color, 'clr')
+  console.log(description, 'clr')
 
   const selectStyles = {
     cursor: 'pointer',
@@ -26,6 +26,9 @@ const CourseCard = ({
     borderWidth: '0.1rem',
     borderRadius: '15%/50%',
   }
+
+  console.log(color,'Color')
+
   return (
     <div className="course-card">
       <div className="course-card-image">
@@ -41,19 +44,19 @@ const CourseCard = ({
       <div
         className="course-card-content"
         style={{
-          background: color,
+          background: `${color}`,
         }}
       >
         <h4>{courseTitle}</h4>
-        <h3>
+        {/* <h3>
           {description}
-        </h3>
+        </h3> */}
         {/* <SelectDropDown text = {'Select Dates'} isStyles = {selectStyles} /> */}
         <div className="course-card-dropdown">
           <SelectDropDown text={'Select Dates'} isStyles={ selectStyles } />
         </div>
         <div className="Button-class">
-          <Link to={`/courses/${path}/`}>
+          <Link to={`/courses/course/${path}/`}>
             <CommonBtn text={'View Details'}/>
           </Link>
           <Link to={`/enrollment/${path}/`}>

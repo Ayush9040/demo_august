@@ -4,6 +4,11 @@ import { star, global, network, chat } from '../../assets/icons/icon'
 import CommonBtn from '../commonbtn'
 import baseDomain, { courseAssets } from '../../assets/images/imageAsset'
 import { Link } from 'react-router-dom'
+import CoursePara from '../CourseComponents/CoursePara'
+import CourseULIst from '../CourseComponents/CourseUList'
+import CourseTable from '../CourseComponents/CourseTable'
+import CourseQuote from '../CourseComponents/CourseQuote'
+import CourseURL from '../CourseComponents/CourseURL'
 //import { useParams } from 'react-router-dom'
 
 const CourseDetails = ({ pageDate }) => {
@@ -31,6 +36,8 @@ const CourseDetails = ({ pageDate }) => {
     queDetails,
     Guidelines,
   } = pageDate
+
+  console.log(pageDate,'pageData')
 
   let options = [
     {
@@ -93,19 +100,25 @@ const CourseDetails = ({ pageDate }) => {
     }
   }
 
+  const selectComponent = (type,content)=>{
+    switch(type){
+    case 'paragraph': return <CoursePara content={content} />
+    case 'u-list': return <CourseULIst content={content}/>
+    case 'table': return <CourseTable content={content}/>
+    case 'quote': return <CourseQuote content={content}/>
+    case 'url': return <CourseURL content={content}/>
+    }
+  }
+  let timing = pageDate?.details?.find(item=>item.content.title==='Date')?.content?.text[0]
+
   return (
     <div className="course-detail-page">
       <div className="main-section" style={{ background: '#C9705F' }}>
         <div className="course-info">
-          {/* <p>Browse &gt; Teacher Training Courses</p> */}
           <h1>
-            {name ? (
+            {pageDate?.title ? (
               <span>
-                <p>{name}</p>
-
-                <p>{duration}</p>
-
-                <p>{date}</p>
+                {pageDate?.title}
               </span>
             ) : (
               <span>
@@ -118,17 +131,11 @@ const CourseDetails = ({ pageDate }) => {
             )}
           </h1>
           <p>
-            {timings
-              ? timings
-              : 'Lorem Ipsum is simply dummy text of the printing and typesetting Industry.'}
+            {timing}
           </p>
-          <div className="ratings">
-            {star}
-            {star}
-            {star}
-            {star}
-            {star}
-          </div>
+          <p style={{ marginTop:'20px' }} >
+            {pageDate.metaDescription || 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. '}
+          </p>
           <div className="course-options">
             <Link to={`/enrollment/${id}`}><CommonBtn text={'Enroll Now'} /></Link>
             <CommonBtn text={'Gift Course'} />
@@ -142,191 +149,9 @@ const CourseDetails = ({ pageDate }) => {
           )}
         </div>
       </div>
-      {key !== 'CAMPS' && (
-        <div className="details-section">
-          <div className="nav-options">
-            <div className="career-navigation-lg">
-              <ul className="innerNav">
-                {options.map((item, idx) => (
-                  <a key={item.id} href={`#${item.id}`}>
-                    <li
-                      onClick={() => {
-                        selectMenu(item.title)
-                      }}
-                      key={idx}
-                    >
-                      <em className={idx + 1 === detail && 'active'}>
-                        {item.title}
-                      </em>
-                      &nbsp;
-                    </li>
-                  </a>
-                ))}
-              </ul>
-            </div>
-
-            <div className="course-about" id="ProgramID">
-              <h3>
-                <u>
-                  <b>Program Details</b>
-                </u>
-              </h3>
-              <div>{details}</div>
-              <div>
-                <ul>
-                  <li>
-                    <span className="bullet">{global}</span>Online Course
-                  </li>
-                  <li>
-                    <span className="bullet">{network}</span>Beginner Level
-                  </li>
-                  <li>
-                    <span className="bullet">{chat}</span>English
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <div className="course-benefits" id="CurriculamID">
-              <div>
-                <h3 style={{ textAlign: 'left' }}>
-                  <u>{<b>Curriculam</b>}</u>
-                </h3>
-                <p style={{ textAlign: 'left' }}>{curriculum?.description}</p>
-                {curriculum?.points?.map(({ title, points }) => {
-                  console.log(points, 'p')
-                  console.log(title, 'title')
-                  return (
-                    <div key={title}>
-                      <h4>{title}</h4>
-                      <ul>
-                        {points?.map((itm) => {
-                          if (typeof itm !== 'object')
-                            return <li key={itm}>{itm}</li>
-                        })}
-                      </ul>
-                    </div>
-                  )
-                })}
-              </div>
-            </div>
-            <div className="course-curriculam" id="TeachingID">
-              <h3>
-                <u>
-                  <b>Teaching & Certification</b>
-                </u>
-              </h3>
-              <p>{TeachingAndCertification?.description}</p>
-
-              <ul>
-                {TeachingAndCertification?.points?.map(
-                  ({ title, points, description }) => {
-                    console.log(points, 'tcpoints')
-                    return (
-                      <li key={title}>
-                        <span>{title || description}</span>
-                        <dl>
-                          {points?.map((itm) => {
-                            if (typeof itm !== 'object') {
-                              return <dt key={itm}>{itm}</dt>
-                            }
-                            return
-                          })}
-                        </dl>
-                      </li>
-                    )
-                  }
-                )}
-              </ul>
-            </div>
-            <div className="our-offerings" id="UniqueID">
-              <h3>
-                <u>
-                  <b>Our Unique Offerings</b>
-                </u>
-              </h3>
-              <ul>
-                <li>
-                  You will have an opportunity to directly interact with
-                  spiritual Guru Dr. Hansaji Yogendra. She is available to
-                  attend to your queries and give counsel.
-                </li>
-                <li>
-                  Our expert trainers for the course, over 40 in number, have
-                  mastered the yogic way of life and are proficient in passing
-                  on their learnings in a simple and practical way. Armed with
-                  decades of experience, they offer tremendous value and insight
-                  to new learners.
-                </li>
-                <li>
-                  Apart from the main yoga curriculum, you will learn immensely
-                  from the class experience itself. You will meet people with
-                  diverse backgrounds and experiences that you can gain insights
-                  from. There will be sadhakas of all age groups – right from
-                  teenagers to senior citizens. Every person has had a unique
-                  experience in life and it will be enriching to know all these
-                  stories.
-                </li>
-                <li>
-                  This one-of-a-kind experience will groom you to calmly and
-                  mindfully handle people and situations
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      )}
-      {key === 'CAMPS' && (
-        <div className="details-section">
-          {queDetails?.map((item) => (
-            <div className="course-about" key={item.id} id="ProgramID">
-              <h3>
-                <u>
-                  <b>{item[0]}</b>
-                </u>
-              </h3>
-              <div>{item[1]}</div>
-            </div>
-          ))}
-          <div className="course-benefits" id="CurriculamID">
-            {curriculum?.points?.map(({ title, points }) => {
-              return (
-                <div key={title}>
-                  <h3>
-                    <u>{title}</u>
-                  </h3>
-                  <ul>
-                    {points?.map((itm) => {
-                      if (typeof itm !== 'object')
-                        return <li key={itm}>{itm}</li>
-                    })}
-                  </ul>
-                </div>
-              )
-            })}
-          </div>
-          <h3>
-            <u>Time</u>
-          </h3>
-          <div>{duration}</div>
-         
-          <h3>
-            <u>Fees</u>
-          </h3>
-          <div>{fees}</div>
-          <div className="course-benefits" id="CurriculamID">
-            <h3>
-              <u>Guidelines</u>
-            </h3>
-            <ul>
-              {Guidelines.points.map((itm) => {
-                console.log(itm, 'abcdef')
-                if (typeof itm !== 'object') return <li key={itm}>{itm}</li>
-              })}
-            </ul>
-          </div>
-        </div>
-      )}
+      <div className='details-section' >
+        {pageDate?.details?.map(({ type,content })=>{return selectComponent(type,content)})}
+      </div>
     </div>
   )
 }

@@ -9,7 +9,7 @@ const CourseULIst = ({ content }) => {
         <b>
           <u>{content.title}</u></b>
       </h2>
-      <ul style={{ paddingLeft: '50px' }} type="ring">
+      <ul style={{ paddingLeft: '50px' }} type="disc">
         {content.points.map((item, i) => {
           return (
             <li key={i}>

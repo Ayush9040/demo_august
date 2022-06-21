@@ -10,6 +10,7 @@ const CourseSection = ({ title, showRangeSlider, color, data, pathParam }) => {
   const [customVal, setCustomVal] = useState(0)
 
   console.log(data, 'course-data')
+  console.log(color,'ccc')
 
   const content = () => {
     const coursesList = [
@@ -130,9 +131,6 @@ const CourseSection = ({ title, showRangeSlider, color, data, pathParam }) => {
           <Link to={`/courses/browse/${pathParam}`}>
             <h1>{title}</h1>
           </Link>
-          {/* {(title === 'Most Popular' || title === 'Classes') && (
-            <div className="concave-border"></div>
-          )} */}
         </div>
         {content()}
       </div>
@@ -157,10 +155,10 @@ const CourseSection = ({ title, showRangeSlider, color, data, pathParam }) => {
                 return (
                   <CourseCard
                     key={i}
-                    color={color}
+                    color={'#aaa'}
                     index={i}
                     courseTitle={item.name}
-                    description={item.details}
+                    description={item.metaDescription}
                     path={item.id}
                     img={item.image}
                   />
@@ -173,11 +171,11 @@ const CourseSection = ({ title, showRangeSlider, color, data, pathParam }) => {
               return (
                 <CourseCard
                   key={i}
-                  color={item.colorCode}
+                  color={'#aaa'}
                   index={i}
                   courseTitle={item.name}
                   description={item.details}
-                  path={item.id}
+                  path={item.key}
                   img={item.image}
                 />
               )
