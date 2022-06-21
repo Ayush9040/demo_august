@@ -131,7 +131,7 @@ export const courseAssets = {
   courseAsset21: '/Courses/Class/Samattvam.jpg',
   courseAsset22: '/Courses/Class/Weekend_regular_class.jpg',
   courseAsset23: '/Courses/Class/Yog prayas(1).jpg',
-  courseAsset24: '/Courses/Class/certificate course_on_advance_pranayama_techniques.jpg',
+  courseAsset24: '/Courses/Class/certificate%20course_on_advance_pranayama_techniques.jpg',
   courseAsset25: '/Courses/Class/couples_class.jpg',
   courseAsset26: '/Courses/Class/couples_class.jpg',
   courseAsset27: '/Courses/Class/mens_class.jpg',

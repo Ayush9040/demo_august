@@ -8,7 +8,6 @@ import Enrollment from '../Components/EnrollmentForm/index.jsx'
 import wellness from '../Components/Wellness/index.jsx'
 import CorporateSocialResponsibilty from '../Components/CorporateSocialResponsibility/index.jsx'
 import SingleCsr from '../Components/CorporateSocialResponsibility/SingleCsr/index.jsx'
-import OurLegacyModal from '../Components/OurLegacyModal/index.jsx'
 import About from '../Views/About'
 import Alumni from '../Views/Alumni'
 import Media from '../Views/Media'
@@ -58,14 +57,6 @@ const staticSiteRoutes = [
     id: 'statisSiteAbout',
     routePath: '/about/*',
     name: 'About'
-  },
-  {
-    Component: OurLegacyModal,
-    path: '/about/our-legacy/:name',
-    exact: true,
-    id: 'statisSiteOurLegacyModal',
-    routePath: '/about/our-legacy/:name',
-    name: 'OurLegacyModal',
   },
   {
     Component: Publication,

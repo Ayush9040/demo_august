@@ -7,11 +7,11 @@ const ttc200hr = {
     metaDescription: '',
     image: `${baseDomain}${courseAssets.courseAsset38}`,
     mostPopular: true,
-    rating:5,
-    colorCode:'#E38F73',
-    timing:'Monday to Saturday: 10:00 am - 6:00 pm (IST)',
-    fees:'Rs. 22000/-',
-    category:'ttc',
+    rating: 5,
+    colorCode: '#E38F73',
+    timing: 'Monday to Saturday: 10:00 am - 6:00 pm (IST)',
+    fees: 'Rs. 22000/-',
+    category: 'ttc',
     title: '200 hrs TTC - Batch 1 - 1 Month TTC - Online & On Campus - English',
     dates: [''],
     details: [
@@ -257,6 +257,7 @@ const ttc200hr = {
         },
       },
     ],
+    teaching: [],
     offerings: [
       {
         type: 'u-list',
@@ -305,11 +306,11 @@ const ttc200hr = {
     metaDescription: '',
     image: `${baseDomain}${courseAssets.courseAsset38}`,
     mostPopular: false,
-    rating:5,
-    colorCode:'#E38F73',
-    timing:'Monday to Friday : 12:00 noon - 4:00 pm (IST)',
-    fees:'Rs. 22000/-',
-    category:'ttc',
+    rating: 5,
+    colorCode: '#E38F73',
+    timing: 'Monday to Friday : 12:00 noon - 4:00 pm (IST)',
+    fees: 'Rs. 22000/-',
+    category: 'ttc',
     title: '200 hrs TTC - Batch 2 - 2 Months TTC - On Campus - English',
     dates: [''],
     details: [
@@ -551,6 +552,7 @@ const ttc200hr = {
         },
       },
     ],
+    teaching: [],
     offerings: [
       {
         type: 'u-list',
@@ -599,11 +601,12 @@ const ttc200hr = {
     metaDescription: '',
     image: `${baseDomain}${courseAssets.courseAsset38}`,
     mostPopular: false,
-    rating:5,
-    colorCode:'#E38F73',
-    timing:'Monday to Saturday: Morning: 7:00 am - 8:30 am (IST) and                                Evening : 6:30 pm - 8:30 pm (IST) (Both the time slots are mandatory)',
-    fees:'Rs. 22000/-',
-    category:'ttc',
+    rating: 5,
+    colorCode: '#E38F73',
+    timing:
+      'Monday to Saturday: Morning: 7:00 am - 8:30 am (IST) and                                Evening : 6:30 pm - 8:30 pm (IST) (Both the time slots are mandatory)',
+    fees: 'Rs. 22000/-',
+    category: 'ttc',
     title: '200 hrs TTC - Batch 3 - 2 Months TTC - Online  - English',
     dates: [''],
     details: [
@@ -847,6 +850,7 @@ const ttc200hr = {
         },
       },
     ],
+    teaching: [],
     offerings: [
       {
         type: 'u-list',
@@ -895,11 +899,11 @@ const ttc200hr = {
     metaDescription: '',
     image: `${baseDomain}${courseAssets.courseAsset38}`,
     mostPopular: true,
-    rating:5,
-    colorCode:'#E38F73',
-    timing:'Monday to Saturday: 1:00 pm - 4:30 pm (IST)',
-    fees:'Rs. 22000/-',
-    category:'ttc',
+    rating: 5,
+    colorCode: '#E38F73',
+    timing: 'Monday to Saturday: 1:00 pm - 4:30 pm (IST)',
+    fees: 'Rs. 22000/-',
+    category: 'ttc',
     title: '200 hrs TTC - Batch 4 - 2 Months TTC - Online  - Hindi',
     dates: [''],
     details: [
@@ -1141,6 +1145,7 @@ const ttc200hr = {
         },
       },
     ],
+    teaching: [],
     offerings: [
       {
         type: 'u-list',
@@ -1189,11 +1194,11 @@ const ttc200hr = {
     metaDescription: '',
     image: `${baseDomain}${courseAssets.courseAsset38}`,
     mostPopular: false,
-    rating:5,
-    colorCode:'#E38F73',
-    timing:'Monday to Saturday: 4:30 pm – 8:00 pm (IST)',
-    fees:'Rs. 22000/-',
-    category:'ttc',
+    rating: 5,
+    colorCode: '#E38F73',
+    timing: 'Monday to Saturday: 4:30 pm – 8:00 pm (IST)',
+    fees: 'Rs. 22000/-',
+    category: 'ttc',
     title: '200 hrs TTC - Batch 5 - 2 Months TTC - Online  - English',
     dates: [''],
     details: [
@@ -1435,6 +1440,7 @@ const ttc200hr = {
         },
       },
     ],
+    teaching: [],
     offerings: [
       {
         type: 'u-list',
@@ -1483,11 +1489,12 @@ const ttc200hr = {
     metaDescription: '',
     image: `${baseDomain}${courseAssets.courseAsset38}`,
     mostPopular: false,
-    rating:5,
-    colorCode:'#E38F73',
-    timing:'Saturday & Sunday: Saturday Sessions: 10:00 am – 8:30 pm (IST) and Sunday Sessions 10:00 am – 1:30 pm (IST)',
-    fees:'Rs. 22000/-',
-    category:'ttc',
+    rating: 5,
+    colorCode: '#E38F73',
+    timing:
+      'Saturday & Sunday: Saturday Sessions: 10:00 am – 8:30 pm (IST) and Sunday Sessions 10:00 am – 1:30 pm (IST)',
+    fees: 'Rs. 22000/-',
+    category: 'ttc',
     title: '200 hrs TTC - Batch 6 - 3 Months Weekend TTC - Online - English',
     dates: [''],
     details: [
@@ -1731,6 +1738,7 @@ const ttc200hr = {
         },
       },
     ],
+    teaching: [],
     offerings: [
       {
         type: 'u-list',
@@ -1780,13 +1788,14 @@ const ttc500hr = {
     id: '',
     key: '3-months-500hr',
     metaDescription: '',
-    mostPopular:false,
-    rating:5,
-    colorCode:'#D88068',
-    timing:'Monday to Saturday: Morning: 7:00 am - 8:30 am (IST) and  Evening: 4:30 pm - 8:30 pm (IST) (Both the time slots are mandatory)',
-    fees:'Rs. 35,000/-',
-    category:'ttc',
-    title: '3 Months TTC - Online - English',
+    mostPopular: false,
+    rating: 5,
+    colorCode: '#D88068',
+    timing:
+      'Monday to Saturday: Morning: 7:00 am - 8:30 am (IST) and  Evening: 4:30 pm - 8:30 pm (IST) (Both the time slots are mandatory)',
+    fees: 'Rs. 35,000/-',
+    category: 'ttc',
+    title: '500 hrs TTC -3 Months TTC - Online - English',
     image: `${baseDomain}${courseAssets.courseAsset39}`,
     dates: [''],
     details: [
@@ -1896,7 +1905,7 @@ const ttc500hr = {
             ],
             [
               'Yogic Diet',
-              'Knowledge about different types of foods and their effects on health',
+              'Knowledge about different type of foods and their effects on health',
             ],
             [
               'Yoga Techniques ',
@@ -2034,13 +2043,12 @@ const ttc900hr = {
 
     image: `${baseDomain}${courseAssets.courseAsset40}`,
 
-    
-    mostPopular:false,
-    rating:5,
-    colorCode:'#C9705F',
-    timing:'900 hrs TTC - 1 Year TTC - Online & On Campus - Hindi',
-    fees:'INR. 50,000/- (Inclusive of course fee and study material)',
-    category:'ttc',
+    mostPopular: false,
+    rating: 5,
+    colorCode: '#C9705F',
+    timing: '900 hrs TTC - 1 Year TTC - Online & On Campus - Hindi',
+    fees: 'INR. 50,000/- (Inclusive of course fee and study material)',
+    category: 'ttc',
 
     dates: [''],
 
@@ -2634,13 +2642,13 @@ const ttc900hr = {
 
     image: `${baseDomain}${courseAssets.courseAsset40}`,
 
-   
-    mostPopular:false,
-    rating:5,
-    colorCode:'#C9705F',
-    timing:'900 hrs TTC - 1 Year TTC - Online & On Campus - Saturday & Sunday: Saturday: 4:30 pm – 7.30 pm (IST) and Sunday: 9:30 am – 1:30 pm (IST) (Both the time slots are mandatory)',
-    fees:'INR. 50,000/- (Inclusive of course fee and study material)',
-    category:'ttc',
+    mostPopular: false,
+    rating: 5,
+    colorCode: '#C9705F',
+    timing:
+      '900 hrs TTC - 1 Year TTC - Online & On Campus - Saturday & Sunday: Saturday: 4:30 pm – 7.30 pm (IST) and Sunday: 9:30 am – 1:30 pm (IST) (Both the time slots are mandatory)',
+    fees: 'INR. 50,000/- (Inclusive of course fee and study material)',
+    category: 'ttc',
 
     dates: [''],
 
@@ -3239,12 +3247,11 @@ const ttc900hr = {
     image: `${baseDomain}${courseAssets.courseAsset40}`,
 
     mostPopular: false,
-    rating:5,
-    colorCode:'#C9705F',
-    timing:'Monday to Saturday:6:30 am to 8:00 pm Holiday on all Sundays',
-    fees:'INR. 50,000/- (Inclusive of course fee and study material)',
-    category:'ttc',
-
+    rating: 5,
+    colorCode: '#C9705F',
+    timing: 'Monday to Saturday:6:30 am to 8:00 pm Holiday on all Sundays',
+    fees: 'INR. 50,000/- (Inclusive of course fee and study material)',
+    category: 'ttc',
 
     dates: [''],
 
@@ -3738,13 +3745,13 @@ const ttc900hr = {
 
     image: `${baseDomain}${courseAssets.courseAsset40}`,
 
-   
     mostPopular: false,
-    rating:5,
-    colorCode:'#C9705F',
-    timing:'Monday to Saturday:  Morning: 7:00 am to 9:00 am (IST) and Evening:  4:30 pm to 8:00 pm (IST) (Both the time slots are mandatory) ',
-    fees:'INR. 50,000/- (Inclusive of course fee and study material)',
-    category:'ttc',
+    rating: 5,
+    colorCode: '#C9705F',
+    timing:
+      'Monday to Saturday:  Morning: 7:00 am to 9:00 am (IST) and Evening:  4:30 pm to 8:00 pm (IST) (Both the time slots are mandatory) ',
+    fees: 'INR. 50,000/- (Inclusive of course fee and study material)',
+    category: 'ttc',
 
     dates: [''],
 
@@ -4331,11 +4338,11 @@ const ttc900hr = {
     image: `${baseDomain}${courseAssets.courseAsset40}`,
 
     mostPopular: true,
-    rating:5,
-    colorCode:'#C9705F',
-    timing:'Monday to Saturday: 5:00 p.m. - 8:00 p.m. (IST)',
-    fees:'INR. 50,000/- (Inclusive of course fee and study material)',
-    category:'ttc',
+    rating: 5,
+    colorCode: '#C9705F',
+    timing: 'Monday to Saturday: 5:00 p.m. - 8:00 p.m. (IST)',
+    fees: 'INR. 50,000/- (Inclusive of course fee and study material)',
+    category: 'ttc',
     dates: [''],
 
     details: [
@@ -4925,12 +4932,12 @@ const camps = {
     key: 'bhava-workshop',
     dates: [''],
     mostPopular: false,
-    rating:5,
-    colorCode:'#EDBE66',
-    timing:'9.30 AM to 5.30 PM',
-    fees:'INR 1,000',
-    category:'camps',
-    metaDescription:'',
+    rating: 5,
+    colorCode: '#EDBE66',
+    timing: '9.30 AM to 5.30 PM',
+    fees: 'INR 1,000',
+    category: 'camps',
+    metaDescription: '',
     image: `${baseDomain}${courseAssets.courseAsset8}`,
     details: [
       {
@@ -5043,12 +5050,12 @@ const camps = {
     key: 'cardiac-hypertension-workshop',
     dates: [''],
     mostPopular: false,
-    rating:5,
-    colorCode:'#DDAB58',
-    timing:'5:00 pm – 8:00 pm (IST)',
-    fees:'INR 1,000',
-    category:'camps',
-    metaDescription:'',
+    rating: 5,
+    colorCode: '#DDAB58',
+    timing: '5:00 pm – 8:00 pm (IST)',
+    fees: 'INR 1,000',
+    category: 'camps',
+    metaDescription: '',
     image: `${baseDomain}${courseAssets.courseAsset6}`,
     details: [
       {
@@ -5156,12 +5163,12 @@ const camps = {
     key: 'diabetes-camp',
     dates: [''],
     mostPopular: false,
-    rating:5,
-    colorCode:'#CE9B51',
-    timing:'5:00 pm – 8:00 pm (IST)',
-    fees:'INR 1,000',
-    category:'camps',
-    metaDescription:'',
+    rating: 5,
+    colorCode: '#CE9B51',
+    timing: '5:00 pm – 8:00 pm (IST)',
+    fees: 'INR 1,000',
+    category: 'camps',
+    metaDescription: '',
     image: `${baseDomain}${courseAssets.courseAsset7}`,
     details: [
       {
@@ -5278,12 +5285,12 @@ const camps = {
     key: 'diet-workshop',
     dates: [''],
     mostPopular: false,
-    rating:5,
-    colorCode:'#EDBE66',
-    timing:'5:00 pm – 8:00 pm (IST)',
-    fees:'INR 1,000',
-    category:'camps',
-    metaDescription:'',
+    rating: 5,
+    colorCode: '#EDBE66',
+    timing: '5:00 pm – 8:00 pm (IST)',
+    fees: 'INR 1,000',
+    category: 'camps',
+    metaDescription: '',
     image: `${baseDomain}${courseAssets.courseAsset13}`,
     details: [
       {
@@ -5400,12 +5407,12 @@ const camps = {
     key: 'digestion-camp',
     dates: [''],
     mostPopular: false,
-    rating:5,
-    colorCode:'#DDAB58',
-    timing:'9.30 AM to 5.30 PM',
-    fees:'INR 1,000',
-    category:'camps',
-    metaDescription:'',
+    rating: 5,
+    colorCode: '#DDAB58',
+    timing: '9.30 AM to 5.30 PM',
+    fees: 'INR 1,000',
+    category: 'camps',
+    metaDescription: '',
     image: `${baseDomain}${courseAssets.courseAsset13}`,
     details: [
       {
@@ -5517,12 +5524,12 @@ const camps = {
     key: 'karma-yoga',
     dates: [''],
     mostPopular: false,
-    rating:5,
-    colorCode:'#CE9B51',
-    timing:'9.30 AM to 5.30 PM',
-    fees:'INR 1,000',
-    category:'camps',
-    metaDescription:'',
+    rating: 5,
+    colorCode: '#CE9B51',
+    timing: '9.30 AM to 5.30 PM',
+    fees: 'INR 1,000',
+    category: 'camps',
+    metaDescription: '',
     image: `${baseDomain}${courseAssets.courseAsset10}`,
     details: [
       {
@@ -5639,12 +5646,12 @@ const camps = {
     key: 'life-management-camp',
     dates: [''],
     mostPopular: false,
-    rating:5,
-    colorCode:'#EDBE66',
-    timing:'5:00 pm – 8:00 pm (IST)',
-    fees:'INR 1,000',
-    category:'camps',
-    metaDescription:'',
+    rating: 5,
+    colorCode: '#EDBE66',
+    timing: '5:00 pm – 8:00 pm (IST)',
+    fees: 'INR 1,000',
+    category: 'camps',
+    metaDescription: '',
     image: `${baseDomain}${courseAssets.courseAsset8}`,
     details: [
       {
@@ -5757,12 +5764,12 @@ const camps = {
     key: 'meditation-camp',
     dates: [''],
     mostPopular: false,
-    rating:5,
-    colorCode:'#DDAB58',
-    timing:'9.30 AM to 5.30 PM',
-    fees:'INR 1,000',
-    category:'camps',
-    metaDescription:'',
+    rating: 5,
+    colorCode: '#DDAB58',
+    timing: '9.30 AM to 5.30 PM',
+    fees: 'INR 1,000',
+    category: 'camps',
+    metaDescription: '',
     image: `${baseDomain}${courseAssets.courseAsset8}`,
     details: [
       {
@@ -5875,12 +5882,12 @@ const camps = {
     key: 'pranayama-workshop',
     dates: [''],
     mostPopular: true,
-    rating:5,
-    colorCode:'#CE9B51',
-    timing:'8:00 am – 11:00 am (IST)',
-    fees:'INR 1,000',
-    category:'camps',
-    metaDescription:'',
+    rating: 5,
+    colorCode: '#CE9B51',
+    timing: '8:00 am – 11:00 am (IST)',
+    fees: 'INR 1,000',
+    category: 'camps',
+    metaDescription: '',
     image: `${baseDomain}${courseAssets.courseAsset9}`,
     details: [
       {
@@ -5993,12 +6000,12 @@ const camps = {
     key: 'pregnancy-camp-for-ante-post-natal',
     dates: [''],
     mostPopular: false,
-    rating:5,
-    colorCode:'#EDBE66',
-    timing:'5:00 pm – 8:00 pm (IST)',
-    fees:'INR 1,000',
-    category:'camps',
-    metaDescription:'',
+    rating: 5,
+    colorCode: '#EDBE66',
+    timing: '5:00 pm – 8:00 pm (IST)',
+    fees: 'INR 1,000',
+    category: 'camps',
+    metaDescription: '',
     image: `${baseDomain}${courseAssets.courseAsset13}`,
     details: [
       {
@@ -6110,12 +6117,12 @@ const camps = {
     key: 'respiratory-workshop',
     dates: [''],
     mostPopular: false,
-    rating:5,
-    colorCode:'#DDAB58',
-    timing:'5:00 pm – 8:00 pm (IST)',
-    fees:'INR 1,000',
-    category:'camps',
-    metaDescription:'',
+    rating: 5,
+    colorCode: '#DDAB58',
+    timing: '5:00 pm – 8:00 pm (IST)',
+    fees: 'INR 1,000',
+    category: 'camps',
+    metaDescription: '',
     image: `${baseDomain}${courseAssets.courseAsset11}`,
     details: [
       {
@@ -6227,12 +6234,12 @@ const camps = {
     key: 'senior-citizen-workshop',
     dates: [''],
     mostPopular: false,
-    rating:5,
-    colorCode:'#CE9B51',
-    timing:'5:00 pm – 8:00 pm (IST)',
-    fees:'INR 1,000',
-    category:'camps',
-    metaDescription:'',
+    rating: 5,
+    colorCode: '#CE9B51',
+    timing: '5:00 pm – 8:00 pm (IST)',
+    fees: 'INR 1,000',
+    category: 'camps',
+    metaDescription: '',
     image: `${baseDomain}${courseAssets.courseAsset6}`,
     details: [
       {
@@ -6345,12 +6352,12 @@ const camps = {
     key: 'stress-management-camp',
     dates: [''],
     mostPopular: false,
-    rating:5,
-    colorCode:'#EDBE66',
-    timing:'5:00 pm – 8:00 pm (IST)',
-    fees:'INR 1,000',
-    category:'camps',
-    metaDescription:'',
+    rating: 5,
+    colorCode: '#EDBE66',
+    timing: '5:00 pm – 8:00 pm (IST)',
+    fees: 'INR 1,000',
+    category: 'camps',
+    metaDescription: '',
     image: `${baseDomain}${courseAssets.courseAsset12}`,
     details: [
       {
@@ -6462,12 +6469,12 @@ const camps = {
     key: 'weight-management-workshop',
     dates: [''],
     mostPopular: false,
-    rating:5,
-    colorCode:'#DDAB58',
-    timing:'5:00 pm – 8:00 pm (IST)',
-    fees:'INR 1,000',
-    category:'camps',
-    metaDescription:'',
+    rating: 5,
+    colorCode: '#DDAB58',
+    timing: '5:00 pm – 8:00 pm (IST)',
+    fees: 'INR 1,000',
+    category: 'camps',
+    metaDescription: '',
     image: `${baseDomain}${courseAssets.courseAsset15}`,
     details: [
       {
@@ -6475,7 +6482,7 @@ const camps = {
         content: {
           title: 'Who is this workshop for?',
           text: [
-            'Obesity is increasing at an alarming rate all over the world and particularly in India. There are several contributing factors towards this problem. Despite following different types of diet and weight loss programs, the results are often not satisfactory. The basic reason for this ‘yoyo effect’ is that obesity is not the cause of the problem. It’s only the effect of some deep-rooted problem within one’s total personality complex. Yoga deals with obesity at all levels- physical, mental, spiritual along with diet. Keeping all these in mind, The Yoga Institute has designed a special 1-day camp on Weight Management.    ',
+            'Obesity is increasing at an alarming rate all over the world and particularly in India. There are several contributing factors towards this problem. Despite following different type of diet and weight loss programs, the results are often not satisfactory. The basic reason for this ‘yoyo effect’ is that obesity is not the cause of the problem. It’s only the effect of some deep-rooted problem within one’s total personality complex. Yoga deals with obesity at all levels- physical, mental, spiritual along with diet. Keeping all these in mind, The Yoga Institute has designed a special 1-day camp on Weight Management.    ',
           ],
         },
       },
@@ -6579,12 +6586,12 @@ const camps = {
     key: 'women’s-camp',
     dates: [''],
     mostPopular: false,
-    rating:5,
-    colorCode:'#CE9B51',
-    timing:'5:00 pm – 8:00 pm (IST)',
-    fees:'INR 1,000',
-    category:'camps',
-    metaDescription:'',
+    rating: 5,
+    colorCode: '#CE9B51',
+    timing: '5:00 pm – 8:00 pm (IST)',
+    fees: 'INR 1,000',
+    category: 'camps',
+    metaDescription: '',
     image: `${baseDomain}${courseAssets.courseAsset14}`,
     details: [
       {
@@ -6701,12 +6708,12 @@ const camps = {
     key: 'back-joint-disorder-workshop',
     dates: [''],
     mostPopular: false,
-    rating:5,
-    colorCode:'#EDBE66',
-    timing:'5:00 pm – 8:00 pm (IST)',
-    fees:'INR 1,000',
-    category:'camps',
-    metaDescription:'',
+    rating: 5,
+    colorCode: '#EDBE66',
+    timing: '5:00 pm – 8:00 pm (IST)',
+    fees: 'INR 1,000',
+    category: 'camps',
+    metaDescription: '',
     image: `${baseDomain}${courseAssets.courseAsset6}`,
     details: [
       {
@@ -6813,8 +6820,1616 @@ const camps = {
   },
 }
 
+const classes = {
+  1: {
+    id: '',
+    title: 'Advance Asana Regular Class - Online (Only for TYI Teachers) ',
+    key: 'advance-asana-regular-class',
+    mostPopular: false,
+    rating: 5,
+    colorCode: '#D3A29D',
+    timing: '6:30 am - 8:00 am (IST) & 5:30 pm - 7:00 pm  (IST)',
+    fees: 'Rs 1500/month',
+    category: 'classes',
+    image: '',
+    dates: [''],
+    details: [
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: [
+            'So, you have finished with your basic or advanced yoga teacher training course! Good job! Now you wish to continue your association with The Yoga Institute and we have just the right offering for you. Here is an opportunity to stay updated and connected with the gurus, expert teachers, and advanced asana practices of The Yoga Institute.',
+            'This course shall help you to maintain the continuity with our TTC practices and techniques. Join us to stay with our Gurus and expert teachers forever.        ',
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Course content',
+          text: [
+            'Each session will be 1.5 hrs. ',
+            'First 1 hour 15 minutes will include the following practice',
+            'Advanced Yoga asana and stretches',
+            'Pranayam and kriyas',
+            'Meditation and relaxation',
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Course Timings and fees:',
+          text: [
+            'Monday, Wednesday & Friday: Morning: 6:30 am - 8:00 am (IST)',
+            'Fees: Rs 1500/month',
+            'Tuesday, Thursday & Saturday: Evening: 5:30 pm - 7:00 pm  (IST) (Join on any date)',
+            ' Fees: Rs 1500/ (Per month)',
+          ],
+        },
+      },
+    ],
+  },
+  2: {
+    id: '',
+    title: 'Anand Sadhna - Online & On Campus ',
+    key: 'anand-sadhna',
+    image: '',
+    mostPopular: false,
+    rating: 5,
+    colorCode: '#C48E8C',
+    timing:
+      'Monday & Wednesday - 7:30 am - 8:30 am  (IST) (Online) Tuesday & Thursday - 6:30 pm - 7.30 pm  (IST) (On campus)(Join on any date)',
+    fees: '1400',
+    category: 'classes',
+    dates: [''],
+    details: [
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: [
+            'Harness the power of movement to unleash the power of positivity and joy in your life. Anand Sadhana is The Yoga Institute’s movement based therapy programme for stress management, emotional well-being and trauma healing.',
+            ' Join now if you’re looking for an immunity and vitality boost, emotional release, anxiety and anger management, glowing skin, inner radiance and enhanced creativity.',
+            '#hackyourhappyhormones',
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Duration',
+          text: ['60 Minutes'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Fees',
+          text: ['1400'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Classes',
+          text: [
+            ' Monday & Wednesday - 7:30 am - 8:30 am  (IST) (Online)',
+            'Tuesday & Thursday - 6:30 pm - 7.30 pm  (IST) (On campus)',
+            '(Join on any date)',
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Mode',
+          text: ['Offline & Online'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: ['To Register write to us at info@theyogainstitute.org or call us at +91-22-26110506 or at +91-22-26203568 '],
+        },
+      },
+    ],
+  },
+  3: {
+    id: '',
+    title: 'Asana Regular Classes - (Men & Women) - Online  ',
+    key: 'asana-regular-classes-men-women',
+    image: '',
+    mostPopular: false,
+    rating: 5,
+    colorCode: '#B77E7E',
+    timing:
+      'Morning Batch:6:30 am to 7:30 am, 7:30 am to 8:30 am, 8:30 am to 9:30 am   Evening Batch:4pm to 5pm, 5pm to 6pm,  6pm to 7pm, 7pm to 8pm  Weekend Schedule: 7:30 am to 9 am',
+    fees: '1000 INR ',
+    category: 'classes',
+    dates: [''],
+    details: [
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: [
+            'Explore the world of Yoga asanas from the comfort of right where you are with our online asana classes. Whether you want to perfect your headstand or work on your splits or if you are looking for a place to begin, we have you covered. If you are goal-oriented and are looking to lose the few extra kilos or get your emotions under control or become more flexible; we can get you there as well. Join now for an exciting journey in asanas, pranayamas, yogic-lifestyle techniques and mindful living.           ',
+          ],
+        },
+      },
+      {
+        type: 'u-list',
+        content: {
+          title: ' Program Details',
+          points: [
+            {
+              listItem: 'Join on any date.',
+              subItems: [],
+            },
+            {
+              listItem:
+                'Payments are valid for a month from the date of payment.',
+              subItems: [],
+            },
+            {
+              listItem: 'Classes are conducted via live Zoom sessions.',
+              subItems: [],
+            },
+            {
+              listItem: 'Class links will be sent via email and WhatsApp',
+              subItems: [],
+            },
+          ],
+        },
+      },
+      {
+        type: 'u-list',
+        content: {
+          title: 'Rules and Regulations',
+          points: [
+            {
+              listItem:
+                'Missed classes cannot be compensated in other classes. ',
+              subItems: [],
+            },
+            {
+              listItem: 'Batch changes are not permitted.',
+              subItems: [],
+            },
+            {
+              listItem:
+                'Any form of recording of these sessions is prohibited.',
+              subItems: [],
+            },
+            {
+              listItem: 'Fees once paid will be non-refundable.',
+              subItems: [],
+            },
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Weekday Schedule',
+          text: ['Mon-Tues-Thur-Fri'],
+        },
+      },
+      {
+        type: 'u-list',
+        content: {
+          title: ' Morning Batch',
+          points: [
+            {
+              listItem: '6:30 am to 7:30 am ',
+              subItems: [],
+            },
+            {
+              listItem: '7:30 am to 8:30 am ',
+              subItems: [],
+            },
+            {
+              listItem: '8:30 am to 9:30 am ',
+              subItems: [],
+            },
+          ],
+        },
+      },
+      {
+        type: 'u-list',
+        content: {
+          title: 'Evening Batch',
+          points: [
+            {
+              listItem: '4pm to 5pm',
+              subItems: [],
+            },
+            {
+              listItem: '5pm to 6pm',
+              subItems: [],
+            },
+            {
+              listItem: '6pm to 7pm ',
+              subItems: [],
+            },
+            {
+              listItem: '7pm to 8pm',
+              subItems: [],
+            },
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Weekend Schedule',
+          text: ['Sat & Sun', '7:30 am to 9 am'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Fees ',
+          text: ['1000 INR'],
+        },
+      },
+
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Monthly',
+          text: ['Rs.1000 '],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Half yearly',
+          text: ['Rs. 6000'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Annual ',
+          text: ['Rs. 10,000'],
+        },
+      },
+
+    ],
+  },
+  4: {
+    id: '',
+    title: 'Asana Regular Classes for Men - On Campus  ',
+    key: 'asana-regular-classes-men-on-campus',
+    image: '',
+    mostPopular: false,
+    rating: 5,
+    colorCode: '#D3A29D',
+    timing:
+      '6:30 am to 7:30 am 7:30 am to 8:30 am 1:00 pm to 2:00 pm 6:00 pm to 7:00 pm  7:00 pm to 8:00 pm',
+    fees: 'Rs 1000/month',
+    category: 'classes',
+    dates: [''],
+    details: [
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: ['This is a special men-only regular asana class conducted by The Yoga Institute. The classes cover Asanas, Pranayamas, Kriyas, diet and Yogic lifestyle recommendations, personal attention on health and counselling on other aspects of life.'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Duration',
+          text: [
+            'Classes are of 1-hour duration held every Monday, Tuesday, Thursday, Friday',
+            'A minimum attendance of 3 months is recommended, to experience the difference in your life. Can join on any day of the month.          ',
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Timing options ',
+          text: [
+            '6:30 am to 7:30 am',
+            '7:30 am to 8:30 am',
+            '1:00 pm to 2:00 pm',
+            '6:00 pm to 7:00 pm',
+            '7:00 pm to 8:00 pm',
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: ['Fees'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Monthly Fees',
+          text: ['Rs. 1000/-'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Six Months Fees',
+          text: ['Rs. 6000/-'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Annual Fees',
+          text: ['Rs. 10000/-'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Note',
+          text: ['Kindly note the fees once paid will not be refundable.'],
+        },
+      },
+    ],
+  },
+  5: {
+    id: '',
+    title: 'Asana Regular Classes for Women - On Campus  ',
+    key: 'asana-regular-classes-for-women',
+    image: '',
+    mostPopular: false,
+    rating: 5,
+    colorCode: '#C48E8C',
+    timing:
+      'Monday, Tuesday, Thursday & Friday 6:30 am to 7:30 am 7:30 am to 8:30 am 8:30 am to 9:30 am 9:30 am to 10:30 am 10:30 am to 11:30 am 11:30 am to 12:30 pm 1:00 pm to 2:00 pm 2:00 pm to 3:00 pm 3:00 pm to 4:00 pm 4:00 pm to 5:00 pm 5:00 pm to 6:00 pm 6:00 pm to 7:00 pm 7:00 pm to 8:00 pm',
+    fees: 'Rs 1000/month',
+    category: 'classes',
+    dates: [''],
+    details: [
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: ['This is a special women-only regular asana class conducted by The Yoga Institute. The classes cover Asanas, Pranayamas, Kriyas, diet and Yogic lifestyle recommendations, personal attention on health and counselling on other aspects of life.'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Duration',
+          text: [
+            'Classes are of 1-hour duration held every Monday, Tuesday, Thursday, Friday.',
+            'A minimum attendance of 3 months is recommended, to experience the difference in your life. Can join on any day of the month. ',
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Timing options ',
+          text: [
+            'Monday, Tuesday, Thursday & Friday',
+            '6:30 am to 7:30 am',
+            '7:30 am to 8:30 am',
+            '8:30 am to 9:30 am',
+            '9:30 am to 10:30 am',
+            ' 10:30 am to 11:30 am',
+            '11:30 am to 12:30 pm',
+            '1:00 pm to 2:00 pm',
+            '2:00 pm to 3:00 pm',
+            '3:00 pm to 4:00 pm',
+            '4:00 pm to 5:00 pm',
+            '5:00 pm to 6:00 pm',
+            '6:00 pm to 7:00 pm',
+            '7:00 pm to 8:00 pm',
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: 'Fees',
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Monthly Fees',
+          text: ['Rs. 1000/-'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Six Months Fees',
+          text: ['Rs. 6000/-'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Annual Fees',
+          text: ['Rs. 10000/-'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Note',
+          text: ['Kindly note the fees once paid will not be refundable.'],
+        },
+      },
+    ],
+  },
+  6: {
+    id: '',
+    title: 'Certificate Course on Advanced Pranayama Techniques - Online',
+    key: 'certification-course-on-advanced-pranayam',
+    image: '',
+    mostPopular: false,
+    rating: 5,
+    colorCode: '#B77E7E',
+    timing: 'Mondays, Tuesdays & Thursdays: 11:30 am - 12:30 pm (IST)',
+    fees: 'Rs. 20000/-',
+    category: 'classes',
+    dates: [''],
+    details: [
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: [
+            'Now that you have mastered the basics of pranayama practices, it is time to go one step ahead! The certificate course on advanced pranayama techniques by The Yoga Institute will help you get the hang of various advanced pranayama techniques along with the right teaching methodology to teach these techniques efficiently.',
+            'Pranayamas are powerful yogic breathing techniques that boost your body’s bioenergy as well as strengthen both body and mind. Maharishi Patanjali mentions in his text “Yoga Darshanam” which was written around 2500 years ago that pranayamas are powerful techniques to achieve the highest degree of awareness and profound meditative state. It prepares you for deep meditation. ',
+          ],
+        },
+      },
+      {
+        type: 'u-list',
+        content: {
+          title: 'Course content',
+          points: [
+            {
+              listItem:
+                'Knowledge of nadi system and energy channels              ',
+              subItems: [],
+            },
+            {
+              listItem:
+                'Bandhas, mudras and mantras in pranayama practice                ',
+              subItems: [],
+            },
+            {
+              listItem:
+                'Teaching techniques to become a capable teacher              ',
+              subItems: [],
+            },
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: [
+            'You will receive a printed manual with a detailed list of subjects.',
+            'access the detailed syllabus here',
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: ['Course Timings and fees:'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Online Sessions',
+          text: [
+            '4th July 2022 to 25th August 2022',
+            'Mondays, Tuesdays & Thursdays: 11:30 am - 12:30 pm (IST)',
+            '24 sessions of one hour each',
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Fees',
+          text: ['Rs. 20000/-'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'NOTE',
+          text: ['THE PRINTED MANUAL IS COMPULSORY FOR ALL ASPIRING STUDENTS; HOWEVER, THE KIT IS MANDATORY BUT NOT NECESSARY TO BE BOUGHT FROM THE INSTITUTE. (THE COURIER CHARGES SHALL BE INCURRED BY THE STUDENTS.)'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'NOTE',
+          text: ['All study material available for the students for any course in physical (hard copy) only. The same can be collected by the student directly from the Institute or can be delivered to them by courier, charges of which will have to be borne by the student.'],
+        },
+      },
+    ],
+  },
+  7: {
+    id: '',
+    title: 'Certificate Course on Yoga Sutra - Online',
+    key: 'certification-course-on-yoga-sutra-online',
+    image: '1',
+    mostPopular: false,
+    rating: 5,
+    colorCode: '#D3A29D',
+    timing: '1st Sunday of every month: 10:00 am - 12:30 pm (IST)',
+    fees: '',
+    category: 'classes',
+    dates: [''],
+    details: [
+      {
+        type: 'paragraph',
+        content: {
+          title: 'What is the course about?',
+          text: [
+            'Patanjali’s Yoga Sutras say that by learning to develop a certain introspective awareness, with a commitment to making objective observations of oneself, we can begin a journey away from the pressures and pains of daily life. We become able to see things as they are, with a greater sense of perspective. It is not escapism, but instead a kind of ‘waking up’.',
+            'Think of everything that you have always wanted to do. And think of what comes in the way of that. Even if it is hard to admit, the answer is – yourself. With this dynamic and powerful course on the Yoga Sutra of Patanjali, you will unlock the key to all that you want from yourself, and your life.',
+            'The Yoga Sutras help you unravel the mystical, the seemingly miraculous possibilities and powers that lie dormant within you. Come, experience the power that is waiting within you!',
+            'access the detailed syllabus here',
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Details (in tabular form)',
+          text: [''],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Schedule',
+          text: [''],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Fees',
+          text: [''],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Timings',
+          text: ['1st Sunday of every month: 10:00 am - 12:30 pm (IST)'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Prerequisites',
+          text: [''],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Guidelines',
+          text: [''],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Contact Details',
+          text: [''],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Registration',
+          text: [''],
+        },
+      },
+    ],
+  },
+  8: {
+    id: '',
+    title: 'Certificate Program on Yoga for Cancer - Online    ',
+    key: 'certification-program-on-yoga-cancer-online',
+    image: '1',
+    mostPopular: false,
+    rating: 5,
+    colorCode: '#C48E8C',
+    timing: 'Fridays & Saturdays: 3:00 pm - 5:00 pm (IST)',
+    fees: 'Rs. 20,000 ',
+    category: 'classes',
+    dates: [''],
+    details: [
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Contact Details',
+          text: [
+            'Yoga offers a safe, effective and low cost modality that can add considerable value to any Cancer care continuum. This program is designed to create a cadre of Yoga Professionals who are well-trained in Cancer care that is accessible and effective. The Certificate Program is a specialized Yoga module for the special needs of Cancer patients. This oncology based program trains Yoga teachers to safely and effectively work with Cancer survivors. Learn practices and techniques to address Cancer specific issues such as scar tissue, bone loss, lymphedema, weight gain, fatigue, sleeplessness and stress.',
+            'We offer a supportive and compassionate support group to understand and discuss Cancer confidently and intelligently.',
+            'access the detailed syllabus here',
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'From',
+          text: ['__________ to __________'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Days',
+          text: ['Fridays & Saturdays: 3:00 pm - 5:00 pm (IST)'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Fees',
+          text: ['Rs. 20,000'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Eligibility',
+          text: ['Completion of 500 hrs or 900 hrs TTC programme is mandatory.'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: ['Write to us at info@theyogainstitute.org or call us at +91-22-26122185 or +91-22-26110506'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Rules',
+          text: ['Recordings are strictly prohibited.'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Note',
+          text: [
+            ' All study materials are available in physical form only.',
+            'Physical copies maybe collected from the Institute.',
+            'For delivery, the courier charges will have to be borne by the participant.',
+          ],
+        },
+      },
+    ],
+  },
+  9: {
+    id: '',
+    title: 'Certificate Program on Yoga for Cancer - Online    ',
+    key: 'certification-program-on-yoga-cancer-online',
+    image: '',
+    mostPopular: false,
+    rating: 5,
+    colorCode: '#B77E7E',
+    timing: 'Tuesdays to Friday: 5:00 p.m. - 7:00 p.m. (IST',
+    fees: '8000',
+    category: 'classes',
+    dates: [''],
+    details: [
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: [
+            'Help boost your body’s efforts in its fight against Lung Cancer with the Yoga for Lung Cancer Programme. The programme includes specific asanas, pranayamas, mudras, meditation and dietary practices that will aid you in your cancer care and management. The theory part of the course will help you understand the anatomy and physiology of the lungs, causes of lung cancer, its symptoms and type, stages of lung cancer, treatments and side effects of treatments. The Yoga based practical part of the programme will be a holistic approach to Cancer management and care using asanas, pranayamas and dietary modifications.',
+            'access the detailed syllabus here',
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Duration',
+          text: ['14th June to 18th June'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Time',
+          text: ['Tuesdays to Friday: 5:00 p.m. - 7:00 p.m. (IST)'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Fees',
+          text: ['8000/-'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Eligibility:',
+          text: ['Completion of the Basic Programme on Yoga for Cancer Rehabilitation and Recovery.'],
+        },
+      },
+    ],
+  },
+  10: {
+    id: '',
+    title: 'Certificate Yoga Therapy Course - Online  ',
+    key: 'certificate-yoga-therapy-course-online',
+    image: '',
+    mostPopular: false,
+    rating: 5,
+    colorCode: '#D3A29D',
+    timing: 'Monday, Wednesday & Friday: 5:30 pm - 7:30 pm (IST)',
+    fees: 'Rs 35,000/-',
+    category: 'classes',
+    dates: [''],
+    details: [
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Certificate Yoga Therapy Course - Online',
+          text: [
+            'Become a certified Yoga therapist through The Yoga Institute.',
+
+            'Complete one-stop destination to enhance your skills in Yogic Management of diseases through our YOGA THERAPY COURSE.',
+
+            'This is a detailed and comprehensive100 hours Yoga Therapy course wherein the lifestyle and yogic management of diseases is taught in a practical and simple manner for easy understanding and teaching. This course will qualify you to become an extremely capable and confident Yoga Therapist to handle any case.',
+          ],
+        },
+      },
+      {
+        type: 'u-list',
+        content: {
+          title: 'What the course entails?',
+          points: [
+            {
+              listItem: 'Understanding of 80+ diseases              ',
+              subItems: [],
+            },
+            {
+              listItem:
+                'Practical application through Yogic management of each disease on the basis of               ',
+              subItems: [
+                'Diet,',
+                '  Specific day to day care in that condition',
+                'Relevant Asanas, Pranayamas and Kriyas',
+                'Modification and demonstration of Techniques as per the Age and Body limitations in regards specific disease.',
+                'Developing proper mental attitude to tackle the health conditions',
+                'Lectures by Expert Guest Speakers from the field of Ayurveda and Specialist Doctors from various fields- for better understanding of the disease to help you design a Yoga Program for your clients.',
+              ],
+            },
+            {
+              type: 'paragraph',
+              content: {
+                title: 'Note',
+                text: [' This will assist students to understand the client’s Physical and Mental state in order to create a disease specific Professional Yogic Management Program.'],
+              },
+            },
+            {
+              listItem:
+                ' Lectures on Anatomy/ Physiology and Pathology of each health condition along with causes and symptoms will be given by Dr Taruna Kardak and other visiting Medical Practitioners specialising in their particular fields.',
+              subItems: [],
+            },
+            {
+              listItem:
+                'Lecture on basic Ayurveda to understand the body and the role of doshas in specific health conditions.              ',
+              subItems: [],
+            },
+            {
+              listItem:
+                ' Students will be encouraged to apply the therapy learnt on their family and friends and prepare Case Studies of Combination Diseases to learn the practical application of the same while going through the course.',
+              subItems: [],
+            },
+            {
+              listItem:
+                ' General & specialized topics covered in detail              ',
+              subItems: [],
+            },
+            {
+              listItem: 'Course material will be provided              ',
+              subItems: [],
+            },
+            {
+              listItem:
+                'Special topics covered: Male/Female infertility, Couples counselling, Cancer, Substance abuse              ',
+              subItems: [],
+            },
+            {
+              listItem:
+                ' Exam will be conducted at the conclusion of the Yoga Therapy Course.              ',
+              subItems: [],
+            },
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Recording Policy of TYI          ',
+          text: ['The Institute retains all rights to record the live interactive sessions for their internal usage & quality purposes. These recordings are strictly for the institute and the data is stored securely in a manner that reasonably protects it from misuse and loss and from unauthorized access, modification or disclosure. Students are prohibited from recording these live sessions. We will not share any recordings with the students.'],
+        },
+      },
+      {
+        type: 'u-list',
+        content: {
+          title: 'SYSTEMS COVERED',
+          points: [
+            {
+              listItem: ' General disorders',
+              subItems: ['Anaemia', ' Insomnia', ' Vertigo'],
+            },
+            {
+              listItem:
+                ' Gastro intestinal (GI) tract problems                ',
+              subItems: [
+                'Constipation',
+                ' Irritable bowel syndrome (IBS)',
+                'Flatulence and bloating',
+                '  Haemorrhoids (piles) and anal fissures',
+                'Acidity and GERD',
+                'Migraine',
+              ],
+            },
+            {
+              listItem: 'Respiratory problems              ',
+              subItems: [
+                'Common cold',
+                'Respiratory allergies',
+                'Tonsillitis',
+                'Laryngitis',
+                'Sinusitis',
+                'Sleep apnoea',
+                ' Bronchitis',
+                'Emphysema',
+                ' Chronic obstructive pulmonary disease (COPD)',
+                ' Asthma',
+                'Tuberculosis (TB)',
+              ],
+            },
+            {
+              listItem: 'Circulatory system disorders              ',
+              subItems: [
+                'Low blood pressure',
+                'High blood pressure',
+                'Ischemic heart disease',
+                'Varicose veins',
+                'Stroke',
+                'Facial paralysis',
+              ],
+            },
+            {
+              listItem: 'Orthopaedic problems              ',
+              subItems: [
+                'General management',
+                'Sprain/Strain',
+                'Fibromyalgia',
+                'Hernia',
+                'Cervical spondylitis',
+                'Low back pain',
+                ' Lumbar disc prolapse (slipped disc)',
+                ' Lumbar canal stenosis',
+                'Lumbar spondylosis (osteoarthritis of spine)',
+                ' Sciatica',
+                'Osteoporosis',
+                'Osteoarthritis',
+                ' Gout',
+                ' Tennis elbow/ lateral epicondylitis',
+                ' Frozen shoulder',
+              ],
+            },
+            {
+              listItem: 'Autoimmune disorder affecting the joints:',
+              subItems: ['Rheumatoid arthritis', 'Ankylosing spondylitis'],
+            },
+            {
+              listItem: 'Diabetes              ',
+              subItems: [],
+            },
+            {
+              listItem: 'Thyroid',
+              subItems: ['Hypothyroidism', 'Hyperthyroidism'],
+            },
+            {
+              listItem: 'Weight Management              ',
+              subItems: ['Obesity              '],
+            },
+            {
+              listItem: 'Eating disorders              ',
+              subItems: ['Anorexia nervosa', 'Binge eating', 'Bulimia nervosa'],
+            },
+            {
+              listItem: 'Urinary tract infection              ',
+              subItems: [],
+            },
+            {
+              listItem: 'Female reproductive system              ',
+              subItems: [
+                'Dysmenorrhea',
+                'PMT (premenstrual tension)or PMS (premenstrual syndrome )',
+                'PCOS',
+                'Fibroids',
+                'Menopause',
+                ' Pregnancy',
+              ],
+            },
+            {
+              listItem: 'Infertility              ',
+              subItems: [
+                'Male infertility',
+                'Female infertility',
+                'Counselling for couples',
+              ],
+            },
+            {
+              listItem: 'Skin disorders  ',
+              subItems: [
+                'Acne',
+                ' Lichen planus',
+                'Eczema',
+                'Psoriasis',
+                ' Peeling skin syndrome',
+              ],
+            },
+            {
+              listItem: 'Psychological and psychiatric disorders              ',
+              subItems: [
+                'Stress management',
+                ' Depression',
+                'Anxiety disorders',
+                'Phobias and panic disorders',
+                'Post-traumatic stress disorder',
+                'Substance abuse / addiction',
+              ],
+            },
+            {
+              listItem: 'Nervous system disorders              ',
+              subItems: [
+                'Bipolar disorder',
+                'Obsessive compulsive disorder',
+                'Schizophrenia',
+                'Dementia',
+                ' Alzheimer’s disease',
+                'Epilepsy',
+                'Parkinson’s disease',
+              ],
+            },
+            {
+              listItem: 'Cancer              ',
+              subItems: ['Oral cancer', 'Cervical cancer', 'Breast cancer'],
+            },
+            {
+              listItem: 'Prostate enlargement              ',
+              subItems: [],
+            },
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: [' access the detailed syllabus here:'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Conducted by',
+          text: [' Dr Taruna Kardak, Homoeopath and Senior Yoga Teacher '],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Eligibility',
+          text: ['ITTC (500 Hours Intermediate Level) or ATTC both from The Yoga Institute.'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Duration',
+          text: ' 4 months          ',
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Date',
+          text: [' 24th August - 16th December 2022 '],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Timings',
+          text: [' Monday, Wednesday & Friday: 5:30 pm - 7:30 pm (IST)'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Fees',
+          text: [' Rs. 35,000/-'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Note:',
+          text: ['Kindly note the fees once paid will not be refundable'],
+        },
+      },
+    ],
+  },
+  11: {
+    id: '',
+    title: 'Children\'s Regular Class - On Campus',
+    key: 'children\'s-regular-class-oncampus',
+    image: '',
+    mostPopular: false,
+    rating: 5,
+    colorCode: '#C48E8C',
+    timing: '4:00 pm -5:00 pm (Mon, Tues, Thurs, Fri)',
+    fees: 'Rs 1000/month',
+    category: 'classes',
+    dates: [''],
+    details: [
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: ['Introduce your child to mindfulness with our special program for children. Use the power of Yoga to improve your child’s focus, memory, discipline, determiantion and value system. The course covers simple asanas and a simple introduction to yogic philosophy through games, arts and other child-friendly activities. Ideal for children between the ages of 5-13 years and will not place any extra academic burden on the child.  Classes are conducted in Hindi and English. Parents are encouraged to be actively involved in these classes. '],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Evening Batch Time',
+          text: ['4:00 pm -5:00 pm (Mon, Tues, Thurs, Fri) '],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Fees',
+          text: [' Rs 1000 per month'],
+        },
+      },
+
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Rules',
+          text: ['Fees once paid is non-refundable.'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: ['Please take a screen shot of your order receipt and share it with us at info@theyogainstitute.org'],
+        },
+      },
+    ],
+  },
+  12: {
+    id: '',
+    title: 'Children\'s Weekend Class - On Campus',
+    key: 'children\'s-weeken-class-oncampus',
+    image: '',
+    mostPopular: false,
+    rating: 5,
+    colorCode: '#B77E7E',
+    timing: 'Saturday & Sunday: 8:00 am - 9:30 am (IST) (Join on any date)',
+    fees: 'Rs 1000/month',
+    category: 'classes',
+    dates: [''],
+    details: [
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: [
+            ' Don’t let your child waste the weekend. Make the end of the week super-fun and super-special with our Weekend Yoga Class for children. Let your child explore the world of Yoga to become more grounded, friendly, less bored and more happy. The course covers simple asanas, games, arts and other child-friendly activities that introduce your child to profound Yogic ideas and a yogic lifestyle. Ideal for children between the ages of 5-13 years.',
+            'Classes are conducted in Hindi and English. ',
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: ' Batch Time',
+          text: [' Saturday & Sunday: 8:00 am - 9:30 am (IST) (Join on any date)'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Fees',
+          text: [' Rs 1000 per month'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Rules',
+          text: ['  Fees once paid is non-refundable'],
+        },
+      },
+    ],
+  },
+  13: {
+    id: '',
+    title: 'Meditation Foundation Course - Online ',
+    key: 'meditation-foundation-course-online',
+    image: '',
+    mostPopular: false,
+    rating: 5,
+    colorCode: '#D3A29D',
+    timing: '7:00 am - 8:00 am  (IST)',
+    fees: 'INR 1000',
+    category: 'classes',
+    dates: [''],
+    details: [
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: [
+            ' Simple recommendations are provided in these meditation workshops to demonstrate how meditation can lead to a meditative state throughout the day, assisting in job and life efficiency. Recent research has demonstrated that frequent meditation improves brain waves.          ',
+            'This is a 12-session meditation course starting on the 1st of every month           ',
+          ],
+        },
+      },
+      {
+        type: 'u-list',
+        content: {
+          title: 'Course content',
+          points: [
+            {
+              listItem: 'The science behind meditation              ',
+              subItems: [],
+            },
+            {
+              listItem: 'Intense guided meditation practices                ',
+              subItems: [],
+            },
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: [' Course Timings and fees'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Monday, Wednesday & Friday',
+          text: [' 7:00 am - 8:00 am  (IST) '],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Fees',
+          text: [' INR 1000'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: [' Kindly make the payments at least one day prior to the camp.'],
+        },
+      },
+    ],
+  },
+  14: {
+    id: '',
+    title: 'Regular Meditation Classes - Online ',
+    key: 'regular-meditation-classes-online',
+    image: '',
+    mostPopular: false,
+    rating: 5,
+    colorCode: '#C48E8C',
+    timing: '7:00 am - 7:45 am  (IST) (Join on any date)',
+    fees: 'Rs 1000',
+    category: 'classes',
+    dates: [''],
+    details: [
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: [
+            'Developing your meditation practice is easier than ever before with our regular meditation practice classes. Connect with our renowned community of meditators and gurus and explore your meditation journey. You can join the Regular Meditation Practice as a beginner or as an experienced meditator. The programme helps you develop a daily habit of meditation and mindfulness. If you just can’t keep up with your meditation goals, we’ll make sure you never miss them again. You can join us any day of the week! ',
+            'Click now to meditate daily! ',
+            ' Click now if you want to make bliss and calm a part of your life daily.',
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Course Begins',
+          text: ['Join on any date. Payments stay valid for a month from the date of joining.'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Sessions conducted',
+          text: [' Tuesday, Thursday and Saturday '],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Time',
+          text: [' 7:00 am - 7:45 am  (IST) (Join on any date) ',]
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Fees',
+          text:[ ' Rs 1000/- '],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: [' Please make your payments one day before the date you wish to start the class.'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: ['Please share a screenshot of your order receipt with us at info@theyogainstitute.org'],
+        },
+      },
+      {
+        type: 'u-list',
+        content: {
+          title: 'Rules and Regulations',
+          points: [
+            {
+              listItem:
+                ' Missed classes cannot be covered in other sessions.              ',
+              subItems: [],
+            },
+            {
+              listItem:
+                ' Any form of recording of classes is strictly prohibited.                ',
+              subItems: [],
+            },
+            {
+              listItem: 'Change of batches is not permitted.              ',
+              subItems: [],
+            },
+            {
+              listItem: 'Fees once paid are non-refundable.',
+              subItems: [],
+            },
+          ],
+        },
+      },
+    ],
+  },
+  15: {
+    id: '',
+    title: ' Satsang ',
+    key: 'satsang',
+    image: '',
+    mostPopular: false,
+    rating: 5,
+    colorCode: '#B77E7E',
+    timing: 'Every Sunday between 9.30 am and 10.30am',
+    fees: '',
+    category: 'classes',
+    dates: [''],
+    details: [
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: [' Satsang is the word derived from Sanskrit language where ‘Sat’ means “the ideal; pure and true essence” and ‘Sang’ meaning “association”.'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: [' Satsang is the oldest activity of the institute and it was initiated by Shri Yogendra Ji himself. Till date millions of people have benefitted from this offering of the Institute.'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: ['At the Yoga institute we live up to the true essence of Satsang in the presence of Dr Hansaji Yogendra. Hansaji’s profound discourses enhances and enriches the lives of all who attend it and it provides an opportunity to stay connected with wisdom.'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: ['  Her Satsang helps bring positivity and awareness into our lives. She shares profound wisdom of the ancient scriptures and a yogic way of living which enhances the lives of all the satsangis and is relevant in the present time and age.'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: ['Towards the end, there is an enlightening question and answer session. '],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'About the programme',
+          text: [' Every Sunday between 9.30 am and 10.30am'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Prerequisites',
+          text: ['The programme is open to all. No age bar.'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Registration',
+          text: [' free entry - on the spot registration.'],
+        },
+      },
+    ],
+  },
+  16: {
+    id: '',
+    title: 'Weekend Asana Classes - (Men & Women) - On Campus   ',
+    key: 'weekend-asana-classes-men-women-oncampus',
+    image: '',
+    mostPopular: false,
+    rating: 5,
+    colorCode: '#D3A29D',
+    timing:
+      '8:00 am - 9:30 am  (IST) and 8:00 am - 9:30 am  (IST) or 10:30 am - 12:00 pm (IST) ',
+    fees: 'Rs 1000',
+    category: 'classes',
+    dates: [''],
+    details: [
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: [' Struggling to meet your yoga goals during the week? No worries, we got you! You have the option to register for regular weekend yoga class with The Yoga Institute. These are regular classes for those who are unable to attend on weekdays owing to other obligations. Weekend Yoga Regular Class is an excellent course for daily yoga practise. Asanas, Pranayamas, Kriyas, and food and Yogic lifestyle suggestions are all covered in these classes. Participants are divided into groups based on their health status, and each group receives distinct training. In addition, as needed, all students receive individual attention. '],
+        },
+      },
+      {
+        type: 'u-list',
+        content: {
+          title: 'Duration          ',
+          points: [
+            {
+              listItem:
+                ' Classes are of 1 and half hour duration held every Saturday and sunday',
+              subItems: [],
+            },
+            {
+              listItem:
+                '  A minimum attendance of 3 months is recommended, to experience the difference in your life. Can join on any day of the month.                ',
+              subItems: [],
+            },
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Timing ',
+          text: [''],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Saturday & Sunday:Saturday',
+          text: [' 8:00 am - 9:30 am  (IST) and '],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Sunday',
+          text: [' 8:00 am - 9:30 am  (IST) or 10:30 am - 12:00 pm (IST)'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Fees ',
+          text: ['INR 1000'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Note',
+          text: [' Kindly note the fees once paid will not be refundable. '],
+        },
+      },
+    ],
+  },
+  17: {
+    id: '',
+    title: 'Yog Prayas - Online    ',
+    key: 'yog-prayas-online',
+    image: '',
+    mostPopular: false,
+    rating: 5,
+    colorCode: '#C48E8C',
+    timing:
+      'Monday, Wednesday & Friday : Morning: 5:30 am - 6:30 am  (IST) or Evening: 6:00 pm - 7:00 pm  (IST) (Join on any date)',
+    fees: '',
+    category: 'classes',
+    dates: [''],
+    details: [
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: [' This is for people who are looking forward to yogic progress after being familiar with basic Yogasanas. The focused Sadhaka’s, who just doesn’t want to become Yoga Professional, but aims for an even bigger goal, SELF DEVELOPMENT.'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title:
+            'Few of the basic qualities we look forward to in a Sadhaka for this program are',
+          text: [
+            'Focus for practice',
+            'Curiosity for yogic knowledge',
+            'Application of Yogic Principals in Practical life',
+          ],
+        },
+      },
+      {
+        type: 'u-list',
+        content: {
+          title: 'PROGRAMME DETAILS',
+          points: [
+            {
+              listItem:
+                ' The program offers the best time for YOGASANA PRACTICE (early morning) in relation to Sattvik energy of the rising sun.',
+              subItems: [],
+            },
+            {
+              listItem:
+                ' Every day consultation time for 15 mins prior and 15 mins after the 1-hours YOG ABHYAS (Yogasana, Pranayama and basic Meditation) ',
+              subItems: [],
+            },
+            {
+              listItem:
+                'Personal attention- as seats are limited – 30 seats only each batch              ',
+              subItems: [],
+            },
+            {
+              listItem:
+                'A balance of Asanas, Pranayamas, relaxation techniques and much more.              ',
+              subItems: [],
+            },
+            {
+              listItem:
+                'The class shall be a live session via the Zoom App.              ',
+              subItems: [],
+            },
+            {
+              listItem:
+                'Once registered and payment is made, we shall be sending you links on your email id or WhatsApp.',
+              subItems: [],
+            },
+            {
+              listItem:
+                'This programme is open to both males and females.              ',
+              subItems: [],
+            },
+          ],
+        },
+      },
+      {
+        type: 'u-list',
+        content: {
+          title: 'RULES AND REGULATIONS',
+          points: [
+            {
+              listItem:
+                'Carry forwarding of missed sessions, recording of the session, and shifting of the batch is not permitted.              ',
+              subItems: [],
+            },
+            {
+              listItem:
+                ' Please note fees once paid will be non-refundable.                ',
+              subItems: [],
+            },
+            {
+              listItem:
+                'Join on any date. Your payment is valid for one month from the date of joining.              ',
+              subItems: [],
+            },
+            {
+              listItem:
+                ' 3 Days a week – Morning Batch – Monday, Wednesday, Friday. – 1 Hour sessions will continue as it is.                ',
+              subItems: [],
+            },
+            {
+              listItem:
+                ' 3 Days a week – Evening Batch – Monday, Wednesday, Friday. – 1 Hour sessions – this is what we are looking forward to starting from 1st April 2021, as some people find it difficult to join morning batch (timings can be 6:00 pm – 7:00 pm)                ',
+              subItems: [],
+            },
+            {
+              listItem:
+                ' Rest is the same as the morning batch, a mix of philosophy and regular online asanas session.                ',
+              subItems: [],
+            },
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'WEEKDAYS SCHEDULE',
+          text: ['Monday, Wednesday & Friday : Morning: 5:30 am - 6:30 am  (IST) or Evening: 6:00 pm - 7:00 pm  (IST) (Join on any date)          '],
+        },
+      },
+    ],
+  },
+}
+
 export const c200hr = Object.values(ttc200hr)
 export const c500hr = Object.values(ttc500hr)
 export const c900hr = Object.values(ttc900hr)
 export const campsArr = Object.values(camps)
-export const AllCourses = [...c200hr, ...c500hr, ...c900hr, ...campsArr]
+export const classesArr = Object.values(classes)
+export const AllCourses = [...c200hr, ...c500hr, ...c900hr, ...campsArr,...classesArr]

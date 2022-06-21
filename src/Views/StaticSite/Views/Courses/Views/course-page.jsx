@@ -5,7 +5,7 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons'
 import './style.scss'
 import CourseSection from '../../../Components/CourseSections'
 import { courseCardData } from '../../../utils/courseCardData'
-import { c200hr,c500hr,c900hr,campsArr,AllCourses } from '../Constants/courses'
+import { c200hr,c500hr,c900hr,campsArr,AllCourses, classesArr } from '../Constants/courses'
 
 // import {
 //   courseArray,
@@ -32,9 +32,10 @@ const Courses = () => {
   console.log(c500hr,'500')
   console.log(c900hr,'900')
   console.log(campsArr,'camps')
+  console.log(classesArr,'classes')
   console.log(AllCourses,'all')
 
-  let data = [c200hr, campsArr, AllCourses, c900hr]
+  let data = [[c200hr[0],c500hr[0],c900hr[0]], campsArr,classesArr, AllCourses]
 
   const setPathParam = (title) => {
     if (title === 'Teacher Training Courses') {

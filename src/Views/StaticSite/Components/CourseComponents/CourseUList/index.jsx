@@ -7,11 +7,9 @@ const CourseUList = ({ content }) => {
 
   return (
     <div className="course_list">
-      <h2>
-        <b>
-          <u>{content.title}</u>
-        </b>
-      </h2>
+      {content.title && <h2 className='sub_heading' >
+        {content.title}
+      </h2>}
       <ul type="disc">
         {content?.points?.map((item, i) => {
           return (

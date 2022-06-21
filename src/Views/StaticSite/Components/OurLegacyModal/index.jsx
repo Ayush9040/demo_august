@@ -9,12 +9,16 @@ const OurLegacyModal = (  ) => {
 
   const { name } = useParams()
 
+
+
   const [ pageData,setPageData] = useState({})
 
 
   useEffect(()=>{
-    setPageData(data.find(point=>(name === point.key)))
+    setPageData(data.find(point=>(name === point.route)))
+    console.log(data.find(point=>(name === point.route)),'member')
   },[])
+
 
   return (
     <>
@@ -37,8 +41,8 @@ const OurLegacyModal = (  ) => {
                   
                 </div>
               </div>
-              <p>{pageData.desc[0]}</p>
-              <p>{pageData.desc[1]}</p>
+              <p>{pageData?.desc && pageData?.desc[0]}</p>
+              <p>{pageData?.desc && pageData?.desc[1]}</p>
             </div>
           </div>
         </div>
@@ -46,8 +50,8 @@ const OurLegacyModal = (  ) => {
         <div className="about-details-container2">
           <div className="detail-text">
             <div className="detail-top-text">
-              <p>{pageData.desc[2]}</p>
-              <p>{pageData.desc[3]}</p>
+              <p>{pageData?.desc && pageData?.desc[2]}</p>
+              <p>{pageData?.desc && pageData?.desc[3]}</p>
             </div>
           </div>
           <div className="detail-main-image">

@@ -174,9 +174,9 @@ const CourseDetails = ({ pageDate }) => {
       )}
 
       <div className="details-section">
-        {pageDate.details === 'ttc' && (
+        {pageDate?.category === 'ttc' && (
           <h1>
-            Program Details<div className="bottom-line"></div>
+            Program Details
           </h1>
         )}
 
@@ -185,10 +185,10 @@ const CourseDetails = ({ pageDate }) => {
         })}
       </div>
       <div className="details-section">
-        {(pageDate.curriculam === 'ttc' && pageDate.curriculam.length !== 0) && (
+        {(pageDate?.category === 'ttc' && pageDate?.curriculam?.length !== 0) && (
           <h1>
             Curriculam
-            <div className="bottom-line"></div>
+            
           </h1>
         )}
 
@@ -197,9 +197,9 @@ const CourseDetails = ({ pageDate }) => {
         })}
       </div>
       <div className="details-section">
-        {(pageDate.teaching === 'ttc' && pageDate.teaching.length !== 0) && (
+        {(pageDate?.category === 'ttc' && pageDate?.teaching?.length !== 0) && (
           <h1>
-            Teaching<div className="bottom-line"></div>
+            Teaching
           </h1>
         )}
 
@@ -208,8 +208,8 @@ const CourseDetails = ({ pageDate }) => {
         })}
       </div>
       <div className="details-section">
-        {(pageDate.offerings ==='ttc' && pageDate.offerings.length !==0) &&  <h1>
-          Our Offerings<div className="bottom-line"></div>
+        {(pageDate?.category ==='ttc' && pageDate?.offerings?.length !==0) &&  <h1>
+          Our Offerings
         </h1>}
        
         {pageDate?.offerings?.map(({ type, content }) => {

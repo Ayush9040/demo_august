@@ -10,7 +10,7 @@ import {
 import CommonBannerNavPrimary from '../../../Components/CommonBannerNavPrimary'
 import { useParams } from 'react-router-dom'
 // import { courseArray } from '../../../Constants/courses/c200hr'
-import { AllCourses, c200hr,c500hr,c900hr,campsArr } from '../Constants/courses'
+import { AllCourses, c200hr,c500hr,c900hr,campsArr,classesArr } from '../Constants/courses'
 import CourseCard from '../../../Components/CourseCard'
 import './style.scss'
 
@@ -41,7 +41,7 @@ const BrowseCourses = () => {
     } else if (type === 'camps-workshops') {
       setCategory([...campsArr])
     } else {
-      setCategory([...AllCourses])
+      setCategory([...classesArr])
     }
     ChangeContent()
   }, [type])
@@ -133,7 +133,7 @@ const BrowseCourses = () => {
           {category?.map((item, i) => (
             <CourseCard
               key={i}
-              color={'#aaa'}
+              color={item.colorCode}
               index={i}
               courseTitle={item.title}
               description={item.metaDescription}

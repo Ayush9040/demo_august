@@ -21,20 +21,15 @@
 .course_para {
   margin-top: 2rem;
   margin-bottom: 2rem;
-  h2 {
-    font-size: 2rem;
-  }
   p {
-    font-size: 1.75rem;
+    font-size: 1.7rem;
   }
 }
 
 .course_quote {
   margin-top: 2rem;
   margin-bottom: 2rem;
-  u {
-    font-size: 2rem;
-  }
+
   q {
     font-style: italic;
     font-size: 1.75rem;
@@ -65,9 +60,8 @@
 .course_list {
   margin-top: 2rem;
   margin-bottom: 2rem;
-  u {
-    font-size: 2rem;
-  }
+
+
   ul{
     padding-left: 20px;
   }
@@ -80,3 +74,19 @@
     }
   }
 }
+
+.sub_heading
+  {
+    font-size: 1.8rem;
+    font-weight: 700;
+    display: inline-block;
+    margin-right: 0.5rem;
+    &::after{
+      content: ':';
+    }
+    // &~p{
+    //   display: inline-block;
+    // }
+  }
+
+

@@ -6,11 +6,9 @@ const CoursePara = ({ content }) => {
 
   return (
     <div className="course_para">
-      <h2>
-        <u>
-          <b>{content.title}</b>
-        </u>
-      </h2>
+      {content.title && <h2 className='sub_heading' >
+        {content.title}
+      </h2>}
       {content.text.map((point, i) => {
         return <p key={i} >{point}</p>
       })}
