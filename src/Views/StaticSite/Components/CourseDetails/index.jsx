@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import './style.scss'
-import { star, global, network, chat } from '../../assets/icons/icon'
+//import { star, global, network, chat } from '../../assets/icons/icon'
 import CommonBtn from '../commonbtn'
 import baseDomain, { courseAssets } from '../../assets/images/imageAsset'
 import { Link } from 'react-router-dom'
@@ -137,7 +137,7 @@ const CourseDetails = ({ pageDate }) => {
             {pageDate.metaDescription || 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. '}
           </p>
           <div className="course-options">
-            <Link to={`/enrollment/${id}`}><CommonBtn text={'Enroll Now'} /></Link>
+            <Link to={`/enrollment/${pageDate.key}`}><CommonBtn text={'Enroll Now'} /></Link>
             <CommonBtn text={'Gift Course'} />
           </div>
         </div>
@@ -150,7 +150,12 @@ const CourseDetails = ({ pageDate }) => {
         </div>
       </div>
       <div className='details-section' >
+        <h1>Program Details</h1>
         {pageDate?.details?.map(({ type,content })=>{return selectComponent(type,content)})}
+      </div>
+      <div className='details-section' >
+        <h1>Curriculam</h1>
+        {pageDate?.curriculam?.map(({ type,content })=>{return selectComponent(type,content)})}
       </div>
     </div>
   )

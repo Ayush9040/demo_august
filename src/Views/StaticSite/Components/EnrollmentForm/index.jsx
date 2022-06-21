@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import { filler1, upload } from '../../assets/icons/icon'
 import './styles.scss'
-import { courseArray } from '../../Constants/courses/c200hr'
+// import { courseArray } from '../../Constants/courses/c200hr'
+import { AllCourses } from '../../Views/Courses/Constants/courses'
 import { useParams } from 'react-router-dom'
 import InputComponent from '../InputComponent'
 import { validateEmail } from '../../../../helpers'
@@ -12,7 +13,7 @@ const Enrollment = () => {
   const [currentCourse, setCurrentCourse] = useState({})
 
   useEffect(() => {
-    setCurrentCourse(courseArray.find((item) => item.id === courseId))
+    setCurrentCourse(AllCourses.find((item) => item.key === courseId))
   }, [])
 
   console.log(currentCourse, 'ccc')
@@ -966,9 +967,9 @@ const Enrollment = () => {
                       <img src={currentCourse?.image} alt="" />
                     </div>
                     <div className="current_duration">
-                      {currentCourse?.duration}
-                      {currentCourse?.date}
-                      <div className="current_fees">{currentCourse?.fees}</div>
+                      {currentCourse?.title}
+                      {currentCourse?.details?.find(item=>item.content.title==='Date')?.content?.text[0]}
+                      <div className="current_fees">{currentCourse?.details?.find(item=>item.content.title==='Fees')?.content?.text[0]}</div>
                     </div>
                   </div>
                 </div>
