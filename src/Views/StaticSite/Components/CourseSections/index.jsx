@@ -6,11 +6,10 @@ import 'react-rangeslider/lib/index.css'
 import Accordian from '../CommanAccordian'
 import { Link } from 'react-router-dom'
 
-const CourseSection = ({ title, showRangeSlider, color, data, pathParam }) => {
-  const [customVal, setCustomVal] = useState(0)
+const CourseSection = ({ title, showRangeSlider, color, data, pathParam, sliderRange }) => {
+  const [customVal, setCustomVal] = useState(1)
 
-  console.log(data, 'course-data')
-
+  console.log(sliderRange,'slider')
   const content = () => {
     const coursesList = [
       {
@@ -48,7 +47,7 @@ const CourseSection = ({ title, showRangeSlider, color, data, pathParam }) => {
     switch (title) {
     case 'Teacher Training Courses':
       return (
-        <Accordian data={coursesList} />
+        <Accordian sliderVal={customVal} data={coursesList} />
       )
     case 'Regular Classes':
       return (
@@ -91,8 +90,8 @@ const CourseSection = ({ title, showRangeSlider, color, data, pathParam }) => {
           </div>
           <div className="vertical-scrollbar" style={{ paddingLeft:'5rem' }}>
             <Slider
-              min={0}
-              max={3}
+              min={1}
+              max={sliderRange}
               orientation="vertical"
               value={customVal}
               onChange={(value) => setCustomVal(value)}
@@ -139,8 +138,8 @@ const CourseSection = ({ title, showRangeSlider, color, data, pathParam }) => {
       {showRangeSlider === true && (
         <div className="vertical-scrollbar">
           <Slider
-            min={0}
-            max={3}
+            min={1}
+            max={sliderRange}
             orientation="vertical"
             value={customVal}
             onChange={(value) => setCustomVal(value)}
