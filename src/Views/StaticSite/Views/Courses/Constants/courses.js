@@ -4,7 +4,7 @@ const ttc200hr = {
   1: {
     id: '',
     key: 'batch-1-200hr',
-    metaDescription: '',
+    metaDescription: 'You will learn the tools to master your physical, mental and spiritual well-being. You will see a marked improvement in your life, relationships and work.',            
     image: `${baseDomain}${courseAssets.courseAsset38}`,
     mostPopular: true,
     rating: 5,
@@ -303,7 +303,7 @@ const ttc200hr = {
   2: {
     id: '',
     key: 'batch-2-200hr',
-    metaDescription: '',
+    metaDescription: 'You will learn the tools to master your physical, mental and spiritual well-being. You will see a marked improvement in your life, relationships and work.',            
     image: `${baseDomain}${courseAssets.courseAsset38}`,
     mostPopular: false,
     rating: 5,
@@ -598,7 +598,7 @@ const ttc200hr = {
   3: {
     id: '',
     key: 'batch-3-200hr',
-    metaDescription: '',
+    metaDescription: 'You will learn the tools to master your physical, mental and spiritual well-being. You will see a marked improvement in your life, relationships and work.',            
     image: `${baseDomain}${courseAssets.courseAsset38}`,
     mostPopular: false,
     rating: 5,
@@ -896,7 +896,7 @@ const ttc200hr = {
   4: {
     id: '',
     key: 'batch-4-200hr',
-    metaDescription: '',
+    metaDescription: 'You will learn the tools to master your physical, mental and spiritual well-being. You will see a marked improvement in your life, relationships and work.', 
     image: `${baseDomain}${courseAssets.courseAsset38}`,
     mostPopular: true,
     rating: 5,
@@ -1191,7 +1191,7 @@ const ttc200hr = {
   5: {
     id: '',
     key: 'batch-5-200hr',
-    metaDescription: '',
+    metaDescription: 'You will learn the tools to master your physical, mental and spiritual well-being. You will see a marked improvement in your life, relationships and work.', 
     image: `${baseDomain}${courseAssets.courseAsset38}`,
     mostPopular: false,
     rating: 5,
@@ -1486,7 +1486,7 @@ const ttc200hr = {
   6: {
     id: '',
     key: 'batch-6-200hr',
-    metaDescription: '',
+    metaDescription: 'You will learn the tools to master your physical, mental and spiritual well-being. You will see a marked improvement in your life, relationships and work.', 
     image: `${baseDomain}${courseAssets.courseAsset38}`,
     mostPopular: false,
     rating: 5,
@@ -1787,7 +1787,7 @@ const ttc500hr = {
   1: {
     id: '',
     key: '3-months-500hr',
-    metaDescription: '',
+    metaDescription: 'You will learn the tools to master your physical, mental and spiritual well-being. You will see a marked improvement in your life, relationships and work.', 
     mostPopular: false,
     rating: 5,
     colorCode: '#D88068',
@@ -2037,7 +2037,7 @@ const ttc900hr = {
 
     key: '1-year-900hr',
 
-    metaDescription: '',
+    metaDescription: 'You will learn the tools to master your physical, mental and spiritual well-being. You will see a marked improvement in your life, relationships and work.',
 
     title: '900 hrs TTC - 1 Year TTC - Online & On Campus - Hindi',
 
@@ -2636,8 +2636,7 @@ const ttc900hr = {
 
     key: '2-year-900hr',
 
-    metaDescription: '',
-
+    metaDescription: 'You will learn the tools to master your physical, mental and spiritual well-being. You will see a marked improvement in your life, relationships and work.',            
     title: '900 hrs TTC - 2 Years TTC - Online & On Campus - English',
 
     image: `${baseDomain}${courseAssets.courseAsset40}`,
@@ -3240,8 +3239,7 @@ const ttc900hr = {
 
     key: '3 Months TTC',
 
-    metaDescription: '',
-
+    metaDescription: 'You will learn the tools to master your physical, mental and spiritual well-being. You will see a marked improvement in your life, relationships and work.',            
     title: '900 hrs TTC - 3 Months TTC - On Campus - English',
 
     image: `${baseDomain}${courseAssets.courseAsset40}`,
@@ -3739,8 +3737,7 @@ const ttc900hr = {
 
     key: '4-Months-900hr',
 
-    metaDescription: '',
-
+    metaDescription: 'You will learn the tools to master your physical, mental and spiritual well-being. You will see a marked improvement in your life, relationships and work.',            
     title: '900 hrs TTC - 4 Months TTC - On Campus - English',
 
     image: `${baseDomain}${courseAssets.courseAsset40}`,
@@ -4331,8 +4328,7 @@ const ttc900hr = {
 
     key: '7-Months-900hr',
 
-    metaDescription: '',
-
+    metaDescription: 'You will learn the tools to master your physical, mental and spiritual well-being. You will see a marked improvement in your life, relationships and work.',            
     title: '900 hrs TTC - 7 Months TTC - Online & On Campus - English',
 
     image: `${baseDomain}${courseAssets.courseAsset40}`,
@@ -4937,7 +4933,7 @@ const camps = {
     timing: '9.30 AM to 5.30 PM',
     fees: 'INR 1,000',
     category: 'camps',
-    metaDescription: '',
+    metaDescription: 'Specific pranayama, asana and relaxation techniques to enhance your state of mind',
     image: `${baseDomain}${courseAssets.courseAsset8}`,
     details: [
       {
@@ -5055,7 +5051,7 @@ const camps = {
     timing: '5:00 pm – 8:00 pm (IST)',
     fees: 'INR 1,000',
     category: 'camps',
-    metaDescription: '',
+    metaDescription: 'Powerful and effective asana, pranayama, and relaxation techniques to alleviate heart ailments',
     image: `${baseDomain}${courseAssets.courseAsset6}`,
     details: [
       {
@@ -5168,7 +5164,7 @@ const camps = {
     timing: '5:00 pm – 8:00 pm (IST)',
     fees: 'INR 1,000',
     category: 'camps',
-    metaDescription: '',
+    metaDescription: 'Wholesome tools and techniques to help you manage your condition completely',
     image: `${baseDomain}${courseAssets.courseAsset7}`,
     details: [
       {
@@ -5290,7 +5286,7 @@ const camps = {
     timing: '5:00 pm – 8:00 pm (IST)',
     fees: 'INR 1,000',
     category: 'camps',
-    metaDescription: '',
+    metaDescription: 'Wholesome tools and techniques to help you manage your condition completely',
     image: `${baseDomain}${courseAssets.courseAsset13}`,
     details: [
       {
@@ -5412,7 +5408,7 @@ const camps = {
     timing: '9.30 AM to 5.30 PM',
     fees: 'INR 1,000',
     category: 'camps',
-    metaDescription: '',
+    metaDescription: 'Specific pranayama, and relaxation techniques to enhance your wellbeing',
     image: `${baseDomain}${courseAssets.courseAsset13}`,
     details: [
       {
@@ -5529,7 +5525,7 @@ const camps = {
     timing: '9.30 AM to 5.30 PM',
     fees: 'INR 1,000',
     category: 'camps',
-    metaDescription: '',
+    metaDescription: 'Diet guidelines to manage your health',
     image: `${baseDomain}${courseAssets.courseAsset10}`,
     details: [
       {
@@ -5651,7 +5647,7 @@ const camps = {
     timing: '5:00 pm – 8:00 pm (IST)',
     fees: 'INR 1,000',
     category: 'camps',
-    metaDescription: '',
+    metaDescription: 'Specific pranayama, asana and relaxation techniques to enhance your state of mind',
     image: `${baseDomain}${courseAssets.courseAsset8}`,
     details: [
       {
@@ -5769,8 +5765,8 @@ const camps = {
     timing: '9.30 AM to 5.30 PM',
     fees: 'INR 1,000',
     category: 'camps',
-    metaDescription: '',
-    image: `${baseDomain}${courseAssets.courseAsset8}`,
+    metaDescription: 'Specific pranayama, asana and relaxation techniques to enhance your state of mind',
+    image: `${baseDomain}${courseAssets.courseAsset9}`,
     details: [
       {
         type: 'paragraph',
@@ -5887,7 +5883,7 @@ const camps = {
     timing: '8:00 am – 11:00 am (IST)',
     fees: 'INR 1,000',
     category: 'camps',
-    metaDescription: '',
+    metaDescription: 'Specific pranayama, asana and relaxation techniques to enhance your state of mind',
     image: `${baseDomain}${courseAssets.courseAsset9}`,
     details: [
       {
@@ -6005,8 +6001,8 @@ const camps = {
     timing: '5:00 pm – 8:00 pm (IST)',
     fees: 'INR 1,000',
     category: 'camps',
-    metaDescription: '',
-    image: `${baseDomain}${courseAssets.courseAsset13}`,
+    metaDescription: 'Insightful session with a medical specialists.',
+    image: `${baseDomain}${courseAssets.courseAsset11}`,
     details: [
       {
         type: 'paragraph',
@@ -6122,8 +6118,8 @@ const camps = {
     timing: '5:00 pm – 8:00 pm (IST)',
     fees: 'INR 1,000',
     category: 'camps',
-    metaDescription: '',
-    image: `${baseDomain}${courseAssets.courseAsset11}`,
+    metaDescription: 'Insightful session with a specialist',
+    image: `${baseDomain}${courseAssets.courseAsset83}`,
     details: [
       {
         type: 'paragraph',
@@ -6239,8 +6235,8 @@ const camps = {
     timing: '5:00 pm – 8:00 pm (IST)',
     fees: 'INR 1,000',
     category: 'camps',
-    metaDescription: '',
-    image: `${baseDomain}${courseAssets.courseAsset6}`,
+    metaDescription: 'Specific pranayama, asana and relaxation techniques to enhance your state of mind',
+    image: `${baseDomain}${courseAssets.courseAsset12}`,
     details: [
       {
         type: 'paragraph',
@@ -6357,8 +6353,8 @@ const camps = {
     timing: '5:00 pm – 8:00 pm (IST)',
     fees: 'INR 1,000',
     category: 'camps',
-    metaDescription: '',
-    image: `${baseDomain}${courseAssets.courseAsset12}`,
+    metaDescription: 'Specific pranayama, asana and relaxation techniques to enhance your state of mind',
+    image: `${baseDomain}${courseAssets.courseAsset13}`,
     details: [
       {
         type: 'paragraph',
@@ -6474,7 +6470,7 @@ const camps = {
     timing: '5:00 pm – 8:00 pm (IST)',
     fees: 'INR 1,000',
     category: 'camps',
-    metaDescription: '',
+    metaDescription: 'Low-calorie diet recipe',
     image: `${baseDomain}${courseAssets.courseAsset15}`,
     details: [
       {
@@ -6591,8 +6587,8 @@ const camps = {
     timing: '5:00 pm – 8:00 pm (IST)',
     fees: 'INR 1,000',
     category: 'camps',
-    metaDescription: '',
-    image: `${baseDomain}${courseAssets.courseAsset14}`,
+    metaDescription: 'Specific asana, pranayama, and relaxation techniques to enhance your health',
+    image: `${baseDomain}${courseAssets.courseAsset84}`,
     details: [
       {
         type: 'paragraph',
@@ -6713,8 +6709,8 @@ const camps = {
     timing: '5:00 pm – 8:00 pm (IST)',
     fees: 'INR 1,000',
     category: 'camps',
-    metaDescription: '',
-    image: `${baseDomain}${courseAssets.courseAsset6}`,
+    metaDescription: 'Insightful session with an ortho-specialist',
+    image: `${baseDomain}${courseAssets.courseAsset10}`,
     details: [
       {
         type: 'paragraph',
@@ -6831,7 +6827,8 @@ const classes = {
     timing: '6:30 am - 8:00 am (IST) & 5:30 pm - 7:00 pm  (IST)',
     fees: 'Rs 1500/month',
     category: 'classes',
-    image: '',
+    metaDescription:'Meditation and relaxation',
+    image: `${baseDomain}${courseAssets.courseAsset67}`,
     dates: [''],
     details: [
       {
@@ -6875,10 +6872,11 @@ const classes = {
     id: '',
     title: 'Anand Sadhna - Online & On Campus ',
     key: 'anand-sadhna',
-    image: '',
+    image: `${baseDomain}${courseAssets.courseAsset68}`,
     mostPopular: false,
     rating: 5,
     colorCode: '#C48E8C',
+    metaDescription:'Join now if you’re looking for an immunity and vitality boost, emotional release, anxiety and anger management, glowing skin, inner radiance and enhanced creativity.',
     timing:
       'Monday & Wednesday - 7:30 am - 8:30 am  (IST) (Online) Tuesday & Thursday - 6:30 pm - 7.30 pm  (IST) (On campus)(Join on any date)',
     fees: '1400',
@@ -6941,8 +6939,9 @@ const classes = {
     id: '',
     title: 'Asana Regular Classes - (Men & Women) - Online  ',
     key: 'asana-regular-classes-men-women',
-    image: '',
+    image: `${baseDomain}${courseAssets.courseAsset81}`,
     mostPopular: false,
+    metaDescription:'Explore the world of Yoga asanas from the comfort of right where you are with our online asana classes',
     rating: 5,
     colorCode: '#B77E7E',
     timing:
@@ -7105,8 +7104,9 @@ const classes = {
     id: '',
     title: 'Asana Regular Classes for Men - On Campus  ',
     key: 'asana-regular-classes-men-on-campus',
-    image: '',
+    image: `${baseDomain}${courseAssets.courseAsset70}`,
     mostPopular: false,
+    metaDescription:'This is a special men-only regular asana class conducted by The Yoga Institute',
     rating: 5,
     colorCode: '#D3A29D',
     timing:
@@ -7186,8 +7186,9 @@ const classes = {
     id: '',
     title: 'Asana Regular Classes for Women - On Campus  ',
     key: 'asana-regular-classes-for-women',
-    image: '',
+    image: `${baseDomain}${courseAssets.courseAsset71}`,
     mostPopular: false,
+    metaDescription:'This is a special women-only regular asana class conducted by The Yoga Institute',
     rating: 5,
     colorCode: '#C48E8C',
     timing:
@@ -7276,7 +7277,8 @@ const classes = {
     id: '',
     title: 'Certificate Course on Advanced Pranayama Techniques - Online',
     key: 'certification-course-on-advanced-pranayam',
-    image: '',
+    image: `${baseDomain}${courseAssets.courseAsset72}`,
+    metaDescription:'Knowledge of nadi system and energy channels',
     mostPopular: false,
     rating: 5,
     colorCode: '#B77E7E',
@@ -7302,17 +7304,17 @@ const classes = {
           points: [
             {
               listItem:
-                'Knowledge of nadi system and energy channels              ',
+                'Knowledge of nadi system and energy channels',
               subItems: [],
             },
             {
               listItem:
-                'Bandhas, mudras and mantras in pranayama practice                ',
+                'Bandhas, mudras and mantras in pranayama practice ',
               subItems: [],
             },
             {
               listItem:
-                'Teaching techniques to become a capable teacher              ',
+                'Teaching techniques to become a capable teacher ',
               subItems: [],
             },
           ],
@@ -7373,7 +7375,8 @@ const classes = {
     id: '',
     title: 'Certificate Course on Yoga Sutra - Online',
     key: 'certification-course-on-yoga-sutra-online',
-    image: '1',
+    image: `${baseDomain}${courseAssets.courseAsset73}`,
+    metaDescription:'The Yoga Sutras help you unravel the mystical, the seemingly miraculous possibilities and powers that lie dormant within you',
     mostPopular: false,
     rating: 5,
     colorCode: '#D3A29D',
@@ -7456,7 +7459,8 @@ const classes = {
     id: '',
     title: 'Certificate Program on Yoga for Cancer - Online    ',
     key: 'certification-program-on-yoga-cancer-online',
-    image: '1',
+    image: `${baseDomain}${courseAssets.courseAsset74}`,
+    metaDescription:'We offer a supportive and compassionate support group to understand and discuss Cancer confidently and intelligently.',
     mostPopular: false,
     rating: 5,
     colorCode: '#C48E8C',
@@ -7472,7 +7476,7 @@ const classes = {
           text: [
             'Yoga offers a safe, effective and low cost modality that can add considerable value to any Cancer care continuum. This program is designed to create a cadre of Yoga Professionals who are well-trained in Cancer care that is accessible and effective. The Certificate Program is a specialized Yoga module for the special needs of Cancer patients. This oncology based program trains Yoga teachers to safely and effectively work with Cancer survivors. Learn practices and techniques to address Cancer specific issues such as scar tissue, bone loss, lymphedema, weight gain, fatigue, sleeplessness and stress.',
             'We offer a supportive and compassionate support group to understand and discuss Cancer confidently and intelligently.',
-            'access the detailed syllabus here',
+            'Access the detailed syllabus here',
           ],
         },
       },
@@ -7533,10 +7537,11 @@ const classes = {
   },
   9: {
     id: '',
-    title: 'Certificate Program on Yoga for Cancer - Online    ',
-    key: 'certification-program-on-yoga-cancer-online',
-    image: '',
+    title: 'Certificate Program on Yoga for Lung Cancer - Online',
+    key: 'certification-program-on-yoga-for-lung-cancer-online',
+    image: `${baseDomain}${courseAssets.courseAsset74}`,
     mostPopular: false,
+    metaDescription:'The programme includes specific asanas, pranayamas, mudras, meditation and dietary practices that will aid you in your cancer care and management',
     rating: 5,
     colorCode: '#B77E7E',
     timing: 'Tuesdays to Friday: 5:00 p.m. - 7:00 p.m. (IST',
@@ -7588,8 +7593,9 @@ const classes = {
     id: '',
     title: 'Certificate Yoga Therapy Course - Online  ',
     key: 'certificate-yoga-therapy-course-online',
-    image: '',
+    image:`${baseDomain}${courseAssets.courseAsset75}`,
     mostPopular: false,
+    metaDescription:'Become a certified Yoga therapist through The Yoga Institute.',
     rating: 5,
     colorCode: '#D3A29D',
     timing: 'Monday, Wednesday & Friday: 5:30 pm - 7:30 pm (IST)',
@@ -7899,8 +7905,9 @@ const classes = {
     id: '',
     title: 'Children\'s Regular Class - On Campus',
     key: 'children\'s-regular-class-oncampus',
-    image: '',
+    image: `${baseDomain}${courseAssets.courseAsset76}`,
     mostPopular: false,
+    metaDescription:'Use the power of Yoga to improve your child’s focus, memory, discipline, determiantion and value system.',
     rating: 5,
     colorCode: '#C48E8C',
     timing: '4:00 pm -5:00 pm (Mon, Tues, Thurs, Fri)',
@@ -7949,9 +7956,10 @@ const classes = {
   12: {
     id: '',
     title: 'Children\'s Weekend Class - On Campus',
-    key: 'children\'s-weeken-class-oncampus',
-    image: '',
+    key: 'children\'s-weekend-class-oncampus',
+    image: `${baseDomain}${courseAssets.courseAsset76}`,
     mostPopular: false,
+    metaDescription:'The course covers simple asanas, games, arts and other child-friendly activities that introduce your child to profound Yogic ideas and a yogic lifestyle',
     rating: 5,
     colorCode: '#B77E7E',
     timing: 'Saturday & Sunday: 8:00 am - 9:30 am (IST) (Join on any date)',
@@ -7996,8 +8004,9 @@ const classes = {
     id: '',
     title: 'Meditation Foundation Course - Online ',
     key: 'meditation-foundation-course-online',
-    image: '',
+    image: `${baseDomain}${courseAssets.courseAsset28}`,
     mostPopular: false,
+    metaDescription:'The science behind meditation',
     rating: 5,
     colorCode: '#D3A29D',
     timing: '7:00 am - 8:00 am  (IST)',
@@ -8010,7 +8019,7 @@ const classes = {
         content: {
           title: '',
           text: [
-            ' Simple recommendations are provided in these meditation workshops to demonstrate how meditation can lead to a meditative state throughout the day, assisting in job and life efficiency. Recent research has demonstrated that frequent meditation improves brain waves.          ',
+            ' Simple recommendations are provided in these meditation workshops to demonstrate how meditation can lead to a meditative state throughout the day, assisting in job and life efficiency. Recent research has demonstrated that frequent meditation improves brain waves. ',
             'This is a 12-session meditation course starting on the 1st of every month           ',
           ],
         },
@@ -8021,11 +8030,11 @@ const classes = {
           title: 'Course content',
           points: [
             {
-              listItem: 'The science behind meditation              ',
+              listItem: 'The science behind meditation',
               subItems: [],
             },
             {
-              listItem: 'Intense guided meditation practices                ',
+              listItem: 'Intense guided meditation practices',
               subItems: [],
             },
           ],
@@ -8065,8 +8074,9 @@ const classes = {
     id: '',
     title: 'Regular Meditation Classes - Online ',
     key: 'regular-meditation-classes-online',
-    image: '',
+    image: `${baseDomain}${courseAssets.courseAsset28}`,
     mostPopular: false,
+    metaDescription:'Click now if you want to make bliss and calm a part of your life daily.',
     rating: 5,
     colorCode: '#C48E8C',
     timing: '7:00 am - 7:45 am  (IST) (Join on any date)',
@@ -8159,8 +8169,9 @@ const classes = {
     id: '',
     title: ' Satsang ',
     key: 'satsang',
-    image: '',
+    image: `${baseDomain}${courseAssets.courseAsset80}`,
     mostPopular: false,
+    metaDescription:'Towards the end, there is an enlightening question and answer session. ',
     rating: 5,
     colorCode: '#B77E7E',
     timing: 'Every Sunday between 9.30 am and 10.30am',
@@ -8230,8 +8241,9 @@ const classes = {
     id: '',
     title: 'Weekend Asana Classes - (Men & Women) - On Campus   ',
     key: 'weekend-asana-classes-men-women-oncampus',
-    image: '',
+    image: `${baseDomain}${courseAssets.courseAsset77}`,
     mostPopular: false,
+    metaDescription:'Towards the end, there is an enlightening question and answer session. ',
     rating: 5,
     colorCode: '#D3A29D',
     timing:
@@ -8306,8 +8318,9 @@ const classes = {
     id: '',
     title: 'Yog Prayas - Online    ',
     key: 'yog-prayas-online',
-    image: '',
+    image: `${baseDomain}${courseAssets.courseAsset82}`,
     mostPopular: false,
+    metaDescription:'This is for people who are looking forward to yogic progress after being familiar with basic Yogasanas.',
     rating: 5,
     colorCode: '#C48E8C',
     timing:
