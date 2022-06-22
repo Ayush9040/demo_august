@@ -70,7 +70,7 @@ const CourseCard = ({
             <CommonBtn text={'View Details'}/>
           </Link>
           <Link to={`/enrollment/${path}/`}>
-            <CommonBtn text={'Enrol Now'} />
+            <CommonBtn text={'Enroll Now'} />
           </Link>
         </div>
       </div>
