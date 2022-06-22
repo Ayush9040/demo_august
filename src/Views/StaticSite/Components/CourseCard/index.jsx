@@ -15,7 +15,8 @@ const CourseCard = ({
   description,
   path,
   img = 'http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Courses/course%20%281%29.png',
-  rating=5
+  rating=5,
+  dates=[]
 }) => {
 
 
@@ -27,9 +28,9 @@ const CourseCard = ({
     fontSize: '1.5rem',
     fontWeight: '900',
     borderWidth: '0.1rem',
-    borderRadius: '15%/50%',
+    borderRadius: '20px',
     borderStyle: 'solid',
-    maxWidth: '130px',
+    maxWidth: 'fit-content',
   }
   const [ratingArr,setRatingArr] = useState([])
 
@@ -63,7 +64,7 @@ const CourseCard = ({
         </h3>
         {/* <SelectDropDown text = {'Select Dates'} isStyles = {selectStyles} /> */}
         <div className="course-card-dropdown">
-          <SelectDropDown text={'Select Dates'} isStyles={ selectStyles } />
+          <SelectDropDown dates={dates} text={'Select Dates'} isStyles={ selectStyles } />
         </div>
         <div className="Button-class">
           <Link to={`/courses/course/${path}/`}>

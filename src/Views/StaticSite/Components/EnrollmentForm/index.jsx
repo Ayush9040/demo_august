@@ -76,7 +76,7 @@ const Enrollment = () => {
     completion: '',
     company: '',
     leavejob: '',
-    resignition: '',
+    resignation: '',
     medicalstatus: '',
     sourceinfo: '',
     source: '',
@@ -91,7 +91,7 @@ const Enrollment = () => {
  
 
   const listDetailHandler = () => {
-    if (formData.resignition.length !== 4) {
+    if (formData.resignation.length !== 4) {
       return setResgin(1)
     } else
       setListData([
@@ -99,7 +99,7 @@ const Enrollment = () => {
         {
           companyName: formData.company,
           roleWhenLeaving: formData.leavejob,
-          yearOfresignation: formData.resignition,
+          yearOfresignation: formData.resignation,
           workExImgAsset: experienceAsset1,
           workExPdfAsset: experienceAsset2,
           listedWorkExperience: formData.leavejob
@@ -216,9 +216,7 @@ const Enrollment = () => {
 
     const jsonBody = JSON.stringify(body)
     console.log(jsonBody,'json-body')
-    await axios.post('https://cms-dev-be.theyogainstituteonline.org/v1/form',jsonBody).then(res=>{console.log(res)})
-    
-    
+    await axios.post('http://localhost:4040/v1/form',jsonBody).then(res=>{console.log(res)})
   }
 
   return (
@@ -236,34 +234,34 @@ const Enrollment = () => {
               onClick={() => setBold(0)}
             >
               {' '}
-              Personal Details |{' '}
+              Personal Details{' '}
               {bold === 0 && <div className="bottom-line"></div>}
             </li>
             <li
               style={bold === 1 ? { fontWeight: '600' } : {}}
               onClick={() => setBold(1)}
             >
-              Academic Qualifications |{' '}
+              Academic Qualifications{' '}
               {bold === 1 && <div className="bottom-line"></div>}
             </li>
             <li
               style={bold === 2 ? { fontWeight: '600' } : {}}
               onClick={() => setBold(2)}
             >
-              Work Experience |{' '}
+              Work Experience{' '}
               {bold === 2 && <div className="bottom-line"></div>}
             </li>
             <li
               style={bold === 3 ? { fontWeight: '600' } : {}}
               onClick={() => setBold(3)}
             >
-              Other |{bold === 3 && <div className="bottom-line"></div>}
+              Other{bold === 3 && <div className="bottom-line"></div>}
             </li>
             <li
               style={bold === 4 ? { fontWeight: 600 } : {}}
               onClick={() => setBold(4)}
             >
-              Cousre Details
+              Course Details
               {bold === 4 && <div className="bottom-line"></div>}
             </li>
           </ul>
@@ -441,7 +439,7 @@ const Enrollment = () => {
                   <div>
                     <InputComponent
                       type="date"
-                      placeholder="DD / MM / YYYY"
+                      placeholder="DOB"
                       form={formData}
                       setField={setFormData}
                       keyName="DOB"
@@ -702,14 +700,14 @@ const Enrollment = () => {
                 <div className="left_flex_contanier">
                   <div className="flex_box">
                     <div className="year-of-comp label">
-                      Year of Resginition
+                      Year of Resignation
                     </div>
                     <InputComponent
                       type="number"
                       placeholder="Year"
                       form={formData}
                       setField={setFormData}
-                      keyName="resignition"
+                      keyName="resignation"
                       value={formData.resignition}
                     />
                   </div>
@@ -796,6 +794,7 @@ const Enrollment = () => {
                         type="text"
                         rows="5"
                         cols="40"
+                        onChange={(e)=>{setFormData({ ...formData,medicalstatus:e.target.value })}}
                       />
                     </label>
                   </div>
@@ -1105,7 +1104,7 @@ const Enrollment = () => {
                 </form>
                 {/* <div className='upload_box'> */}
                 <div className="label">
-                  Please upload the relevent TYI certificate pre requisite
+                  Please upload the relevant TYI certificate pre requisite
                   <div className="uploads">
                     <fieldset>
                       <label htmlFor="image">

@@ -16,7 +16,6 @@ const OurLegacyModal = (  ) => {
 
   useEffect(()=>{
     setPageData(data.find(point=>(name === point.route)))
-    console.log(data.find(point=>(name === point.route)),'member')
   },[])
 
 

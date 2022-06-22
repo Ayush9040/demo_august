@@ -39,15 +39,18 @@ const Courses = () => {
 
   const setPathParam = (title) => {
     if (title === 'Teacher Training Courses') {
-      return 'ttc'
+
+      return { path:'ttc',sliderVal:3 }
     } else if (title === 'Camps & Workshops') {
-      return 'camps-workshops'
+      return { path:'camps-workshops',sliderVal:9 }
     } else if (title === 'Most Popular') {
-      return 'most-popular'
+      return { path:'most-popular',sliderVal:3 }
     } else {
-      return 'classes'
+      return { path:'classes',sliderVal:3 }
     }
   }
+
+  setPathParam()
 
   return (
     <div className="courses-container">
@@ -85,6 +88,7 @@ const Courses = () => {
       </div>
       {courseCardData &&
         courseCardData.map((item, i) => {
+          setPathParam(item.title)
           return (
             <CourseSection
               key={i}
@@ -92,10 +96,12 @@ const Courses = () => {
               // color={item.color}
               data={data[i]}
               showRangeSlider={
-                item.title === 'Teacher Training Courses' ? true : false
+                (item.title === 'Teacher Training Courses' || item.title === 'Regular Classes') ? true : false
+               
               }
-              pathParam={setPathParam(item.title)}
+              pathParam={setPathParam(item.title).path}
               cardData={item.cardData}
+              sliderRange={setPathParam(item.title).sliderVal}
             />
           )
         })}
