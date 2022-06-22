@@ -27,7 +27,12 @@ const MegaMenu = ({ setNav }) => {
       key: 'PUBLICATIONS',
     },
     { name: 'SHOP', link: '/shop', id: 10, key: 'SHOP' },
-    { name: 'NEWS,EVENTS & MEDIA', link: '/media/media-gallery', id: 11, key: 'NEWS' },
+    {
+      name: 'NEWS,EVENTS & MEDIA',
+      link: '/media/media-gallery',
+      id: 11,
+      key: 'NEWS',
+    },
     { name: 'ALUMNI', link: '/alumni/upcoming-events', id: 12, key: 'ALUMNI' },
     { name: 'VOLUNTEER', link: '/volunteer', id: 13, key: 'VOLUNTEER' },
   ]
@@ -211,91 +216,176 @@ const MegaMenu = ({ setNav }) => {
               <h3>TEACHERS TRAINING</h3>
               <ul>
                 <li className="text-bold">200 Hour TTC (Basic)</li>
-                <li>Batch 1 - 1 Month TTC-Online & on Campus-English</li>
-                <li>Batch 2 - 2 Months TTC-On Campus-English</li>
-                <li>Batch 3 - 2 Months TTC-Online-English</li>
-                <li>Batch 4 - 2 Months TTC-Online-Hindi</li>
-                <li>Batch 5 - 2 Months TTC-Online-English</li>
-                <li>Batch 6 - 3 Months Weekend TTC-Online-English</li>
+                <Link to="/courses/course/batch-1-200hr/">
+                  <li>Batch 1 - 1 Month TTC-Online & on Campus-English</li>
+                </Link>
+                <Link to="/courses/course/batch-2-200hr/">
+                  <li>Batch 2 - 2 Months TTC-On Campus-English</li>
+                </Link>
+                <Link to="/courses/course/batch-3-200hr/">
+                  <li>Batch 3 - 2 Months TTC-Online-English</li>
+                </Link>
+                <Link to="/courses/course/batch-4-200hr/">
+                  <li>Batch 4 - 2 Months TTC-Online-Hindi</li>
+                </Link>
+                <Link to="/courses/course/batch-5-200hr/">
+                  <li>Batch 5 - 2 Months TTC-Online-English</li>
+                </Link>
+                <Link to="/courses/course/batch-6-200hr/">
+                  <li>Batch 6 - 3 Months Weekend TTC-Online-English</li>
+                </Link>
 
-                <li className="text-bold">500 Hour Courses TTC (intermediate)</li>
-                <li style={{ marginBottom: '2rem' }}>
-                  3 Months TTC-Online-English
+                <li className="text-bold">
+                  500 Hour Courses TTC (intermediate)
                 </li>
+                <Link to="/courses/course/3-months-500hr/">
+                  <li style={{ marginBottom: '2rem' }}>
+                    3 Months TTC-Online-English
+                  </li>
+                </Link>
                 <li className="text-bold">900 Hour Courses</li>
-                <li>3 Months TTC-On Campus-English</li>
-                <li>4 Months TTC-On Campus-English</li>
-                <li>7 Months TTC-Online & On Campus-English</li>
-                <li>1 Year TTC-Online & On Campus-Hindi</li>
-                <li>2 Years TTC-Online & On Campus-English</li>
-                <li className="text-bold" style={{ marginBottom: '2rem' }}>
-                  Certificate Yoga Therapy Course
-                </li>
-                <li className="text-bold" style={{ marginBottom: '2rem' }}>
-                  Certificate Program on Yoga for Cancer
-                </li>
-                <li className="text-bold" style={{ marginBottom: '2rem' }}>
-                  Certificate Program for Yoga for Lung Cancer - Online
-                </li>
-                <li className="text-bold" style={{ marginBottom: '2rem' }}>
-                  Certificate Course on Advanced Pranayama Techniques
-                </li>
-                <li className="text-bold" style={{ marginBottom: '2rem' }}>
-                  Certificate Course on Yoga Sutra-Online
-                </li>
+                <Link to="/courses/course/3%20Months%20TTC/">
+                  <li>3 Months TTC-On Campus-English</li>
+                </Link>
+                <Link to="/courses/course/4-Months-900hr/">
+                  <li>4 Months TTC-On Campus-English</li>
+                </Link>
+                <Link to="/courses/course/7-Months-900hr/">
+                  <li>7 Months TTC-Online & On Campus-English</li>
+                </Link>
+                <Link to="/courses/course/1-year-900hr/">
+                  <li>1 Year TTC-Online & On Campus-Hindi</li>
+                </Link>
+                <Link to="/courses/course/2-year-900hr/">
+                  <li>2 Years TTC-Online & On Campus-English</li>
+                </Link>
+                <Link to="/courses/course/certificate-yoga-therapy-course-online/">
+                  <li className="text-bold" style={{ marginBottom: '2rem' }}>
+                    Certificate Yoga Therapy Course
+                  </li>
+                </Link>
+                <Link to="/courses/course/certification-program-on-yoga-cancer-online/">
+                  <li className="text-bold" style={{ marginBottom: '2rem' }}>
+                    Certificate Program on Yoga for Cancer
+                  </li>
+                </Link>
+                <Link to="/courses/course/certification-program-on-yoga-for-lung-cancer-online/">
+                  <li className="text-bold" style={{ marginBottom: '2rem' }}>
+                    Certificate Program for Yoga for Lung Cancer - Online
+                  </li>
+                </Link>
+                <Link to="/courses/course/certification-course-on-advanced-pranayam/">
+                  <li className="text-bold" style={{ marginBottom: '2rem' }}>
+                    Certificate Course on Advanced Pranayama Techniques
+                  </li>
+                </Link>
+                <Link to="/courses/course/certification-course-on-yoga-sutra-online/">
+                  <li className="text-bold" style={{ marginBottom: '2rem' }}>
+                    Certificate Course on Yoga Sutra-Online
+                  </li>
+                </Link>
               </ul>
             </div>
             <div className="single-menu">
               <h3>21 DAYS BETTER LIVING COURSE</h3>
               <ul>
-                <li>Batch 1 - 21-Days BLC - Morning  On Campus-English</li>
-                <li>Batch 2 - 21-Days BLC - Evening  Online & On Campus-English</li>
-                <li>Batch 3 - 21-Days BLC - Evening  Online & On Campus-Hindi</li>
-                <li>Batch 4 - 21-Days BLC-Morning-Online English</li>
-
-                <h3 style={{ marginBottom: '2rem' }}>Samattvam (Health Checkup)</h3>
-                <h3 style={{ marginBottom: '2rem' }}>Satsang</h3>
+                <Link to="">
+                  <li>Batch 1 - 21-Days BLC - Morning On Campus-English</li>
+                </Link>
+                <Link to="">
+                  <li>
+                    Batch 2 - 21-Days BLC - Evening Online & On Campus-English
+                  </li>
+                </Link>
+                <Link to="">
+                  <li>
+                    Batch 3 - 21-Days BLC - Evening Online & On Campus-Hindi
+                  </li>
+                </Link>
+                <Link to="">
+                  <li>Batch 4 - 21-Days BLC-Morning-Online English</li>
+                </Link>
+                <Link to=''>
+                  <h3 style={{ marginBottom: '2rem' }}>
+                  Samattvam (Health Checkup)
+                  </h3>
+                </Link>
+                <Link to='/courses/course/satsang/'>
+                  <h3 style={{ marginBottom: '2rem' }}>Satsang</h3></Link>
                 <h3 style={{ marginBottom: '2rem' }}>REGULAR CLASSES</h3>
                 <ul>
-                  <li>Asana Regular Classes for Men - On Campus</li>
-                  <li>Asana Regular Classes for Women - On Campus</li>
-                  <li>Weekend Asana Classes (Men & Women) - On Campus</li>
-                  <li>Weekend Asana Classes (Men & Women) - Online</li>
-                  <li>Children&apos;s Regular Clasees - On Campus</li>
-                  <li>Children&apos;s Weekend Clasees - On Campus</li>
-                  <li>Advanced Asana Regular Class - Online
-                    (Only for TYI Teachers)</li>
-                  <li>Yog-Prayas-Online</li>
-                  <li>Meditation Foundation Course-Online</li>
-                  <li>Regular Foundation Course-Online</li>
-                  <li>Anand Sadhna Online & OnCampus</li>
-                  <li>Couple&apos;s Classes-Online</li>
+                  <Link to="/courses/course/asana-regular-classes-men-on-campus/">
+                    <li>Asana Regular Classes for Men - On Campus</li>
+                  </Link>
+                  <Link to="/courses/course/asana-regular-classes-for-women/">
+                    <li>Asana Regular Classes for Women - On Campus</li>
+                  </Link>
+                  <Link to="/courses/course/asana-regular-classes-men-women/">
+                    <li>Weekend Asana Classes (Men & Women) - On Campus</li>
+                  </Link>
+                  <Link to="/courses/course/asana-regular-classes-men-women/">
+                    <li>Weekend Asana Classes (Men & Women) - Online</li>
+                  </Link>
+                  <Link to="/courses/course/children's-regular-class-oncampus/">
+                    <li>Children&apos;s Regular Clasees - On Campus</li>
+                  </Link>
+                  <Link to="/courses/course/children's-weekend-class-oncampus/">
+                    <li>Children&apos;s Weekend Clasees - On Campus</li>
+                  </Link>
+                  <Link to="/courses/course/advance-asana-regular-class/">
+                    <li>
+                      Advanced Asana Regular Class - Online (Only for TYI
+                      Teachers)
+                    </li>
+                  </Link>
+                  <Link to="/courses/course/yog-prayas-online/">
+                    <li>Yog-Prayas-Online</li>
+                  </Link>
+                  <Link to="/courses/course/meditation-foundation-course-online/">
+                    <li>Meditation Foundation Course-Online</li>
+                  </Link>
+                  <Link to="/courses/course/regular-meditation-classes-online/">
+                    <li>Regular Foundation Course-Online</li>
+                  </Link>
+                  <Link to="/courses/course/anand-sadhna/">
+                    <li>Anand Sadhna Online & OnCampus</li>
+                  </Link>
+                  <Link to="">
+                    <li>Couple&apos;s Classes-Online</li>
+                  </Link>
                 </ul>
               </ul>
             </div>
             <div className="single-menu">
               <h3>7 DAYS HEALTH CAMP</h3>
               <ul>
-                <li>7 Days Health Camp - On Campus - English</li>
-                <li>7 Days Health Camp - On Campus - Hindi</li>
+                <Link to=''><li>7 Days Health Camp - On Campus - English</li></Link>
+                <Link to=''><li>7 Days Health Camp - On Campus - Hindi</li></Link>
               </ul>
               <h3>CAMPS & WORKSHOPS</h3>
               <ul>
-                <li>Stress Management Camp</li>
-                <li>Weight Management Workshop</li>
-                <li>Pregnancy Camp For Ante & Post Natal</li>
-                <li>Cardiac & Hypertension Workshop</li>
-                <li>Back & Joint Disorder Workshop</li>
-                <li>Prayanama Workshop</li>
-                <li>Women&apos;s Camp</li>
-                <li>Respiratory Workshop</li>
-                <li>Life Management Camp</li>
-                <li>Senior citizen Workshop</li>
-                <li>Diet Workshop</li>
+                <Link to='/courses/course/stress-management-camp/'><li>Stress Management Camp</li></Link>
+                <Link to='/courses/course/weight-management-workshop/'><li>Weight Management Workshop</li></Link>
+                <Link to='/courses/course/pregnancy-camp-for-ante-post-natal/'><li>Pregnancy Camp For Ante & Post Natal</li></Link>
+                <Link to='/courses/course/cardiac-hypertension-workshop/'><li>Cardiac & Hypertension Workshop</li></Link>
+                <Link to='/courses/course/back-joint-disorder-workshop/'><li>Back & Joint Disorder Workshop</li></Link>
+                <Link to='/courses/course/pranayama-workshop/'><li>Prayanama Workshop</li></Link>
+                <Link to='/courses/course/women’s-camp/'><li>Women&apos;s Camp</li></Link>
+                <Link to='/courses/course/respiratory-workshop/'><li>Respiratory Workshop</li></Link>
+                <Link to='/courses/course/life-management-camp/'><li>Life Management Camp</li></Link>
+                <Link to='/courses/course/senior-citizen-workshop/'><li>Senior citizen Workshop</li></Link>
+                <Link to='/courses/course/diet-workshop/'><li>Diet Workshop</li></Link>
               </ul>
-              <h3 style={{ marginBottom: '2rem' }}>Corporate Workshop</h3>
-              <h3 style={{ marginBottom: '2rem' }}>Home Tutions</h3>
-              <div className="filler" style={{ position: 'relative', marginTop: '3rem' }}>{filler}</div>
+              <Link to=''>
+                <h3 style={{ marginBottom: '2rem' }}>Corporate Workshop</h3></Link>
+              <Link to=''>
+                <h3 style={{ marginBottom: '2rem' }}>Home Tutions</h3></Link>
+              <div
+                className="filler"
+                style={{ position: 'relative', marginTop: '3rem' }}
+              >
+                {filler}
+              </div>
             </div>
           </>
         )}
@@ -326,12 +416,9 @@ const MegaMenu = ({ setNav }) => {
                 )
               })}
             </ul>
-
           </div>
         )}
-        <div className='menu-filler-icon' >
-          {filler1}
-        </div>
+        <div className="menu-filler-icon">{filler1}</div>
       </div>
     </div>
   )
