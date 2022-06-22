@@ -49,9 +49,9 @@ const CourseCard = ({
         }}
       >
         <h4>{courseTitle}</h4>
-        {/* <h3>
+        <h3>
           {description}
-        </h3> */}
+        </h3>
         {/* <SelectDropDown text = {'Select Dates'} isStyles = {selectStyles} /> */}
         <div className="course-card-dropdown">
           <SelectDropDown text={'Select Dates'} isStyles={ selectStyles } />
