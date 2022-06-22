@@ -13,7 +13,11 @@ const ttc200hr = {
     fees: 'Rs. 22000/-',
     category: 'ttc',
     title: '200 hrs TTC - Batch 1 - 1 Month TTC - Online & On Campus - English',
-    dates: [''],
+    dates: ['1st June 2022 ','1st July 2022','1st August 2022 ','1st September 2022 ','1st October 2022','1st November 2022','1st December 2022 '],
+    online:true,
+    on_campus:true,
+    non_residential:true,
+    residential:true,
     details: [
       {
         type: 'paragraph',
@@ -312,7 +316,11 @@ const ttc200hr = {
     fees: 'Rs. 22000/-',
     category: 'ttc',
     title: '200 hrs TTC - Batch 2 - 2 Months TTC - On Campus - English',
-    dates: [''],
+    dates: ['11th July 2022','5th September 2022','31st October 2022','26th December 2022'],
+    online:false,
+    on_campus:true,
+    non_residential:true,
+    residential:true,
     details: [
       {
         type: 'paragraph',
@@ -608,7 +616,11 @@ const ttc200hr = {
     fees: 'Rs. 22000/-',
     category: 'ttc',
     title: '200 hrs TTC - Batch 3 - 2 Months TTC - Online  - English',
-    dates: [''],
+    dates: ['8th August 2022','10th October 2022 ','12th December 2022 '],
+    online:true,
+    on_campus:false,
+    non_residential:false,
+    residential:false,
     details: [
       {
         type: 'paragraph',
@@ -905,7 +917,11 @@ const ttc200hr = {
     fees: 'Rs. 22000/-',
     category: 'ttc',
     title: '200 hrs TTC - Batch 4 - 2 Months TTC - Online  - Hindi',
-    dates: [''],
+    dates: ['13th June 2022 ','15th August 2022','17th October 2022','19th December 2022 '],
+    online:true,
+    on_campus:false,
+    non_residential:false,
+    residential:false,
     details: [
       {
         type: 'paragraph',
@@ -1200,7 +1216,11 @@ const ttc200hr = {
     fees: 'Rs. 22000/-',
     category: 'ttc',
     title: '200 hrs TTC - Batch 5 - 2 Months TTC - Online  - English',
-    dates: [''],
+    dates: ['27th June 2022 ','29th August 2022','31st October 2022 '],
+    online:true,
+    on_campus:false,
+    non_residential:false,
+    residential:false,
     details: [
       {
         type: 'paragraph',
@@ -1496,7 +1516,11 @@ const ttc200hr = {
     fees: 'Rs. 22000/-',
     category: 'ttc',
     title: '200 hrs TTC - Batch 6 - 3 Months Weekend TTC - Online - English',
-    dates: [''],
+    dates: ['4th June 2022 ','27th August 2022','19th November 2022'],
+    online:true,
+    on_campus:false,
+    non_residential:false,
+    residential:false,
     details: [
       {
         type: 'paragraph',
@@ -1797,7 +1821,11 @@ const ttc500hr = {
     category: 'ttc',
     title: '500 hrs TTC -3 Months TTC - Online - English',
     image: `${baseDomain}${courseAssets.courseAsset39}`,
-    dates: [''],
+    dates: ['15th August 2022','14th November 2022'],
+    online:true,
+    on_campus:false,
+    non_residential:false,
+    residential:false,
     details: [
       {
         type: 'paragraph',
@@ -2051,6 +2079,10 @@ const ttc900hr = {
     category: 'ttc',
 
     dates: [''],
+    online:true,
+    on_campus:true,
+    non_residential:true,
+    residential:true,
 
     details: [
       {
@@ -2650,7 +2682,10 @@ const ttc900hr = {
     category: 'ttc',
 
     dates: [''],
-
+    online:true,
+    on_campus:true,
+    non_residential:true,
+    residential:true,
     details: [
       {
         type: 'paragraph',
@@ -3251,7 +3286,11 @@ const ttc900hr = {
     fees: 'INR. 50,000/- (Inclusive of course fee and study material)',
     category: 'ttc',
 
-    dates: [''],
+    dates: ['23rd July 2022','22nd October'],
+    online:false,
+    on_campus:true,
+    non_residential:true,
+    residential:true,
 
     details: [
       {
@@ -3750,7 +3789,11 @@ const ttc900hr = {
     fees: 'INR. 50,000/- (Inclusive of course fee and study material)',
     category: 'ttc',
 
-    dates: [''],
+    dates: ['20th June 2022 ','17th October 2022'],
+    online:true,
+    on_campus:false,
+    non_residential:false,
+    residential:false,
 
     details: [
       {
@@ -4340,6 +4383,10 @@ const ttc900hr = {
     fees: 'INR. 50,000/- (Inclusive of course fee and study material)',
     category: 'ttc',
     dates: [''],
+    online:true,
+    on_campus:true,
+    non_residential:true,
+    residential:true,
 
     details: [
       {
@@ -4926,7 +4973,6 @@ const camps = {
     id: '',
     title: 'Bhava Workshop',
     key: 'bhava-workshop',
-    dates: [''],
     mostPopular: false,
     rating: 5,
     colorCode: '#EDBE66',
@@ -4935,6 +4981,11 @@ const camps = {
     category: 'camps',
     metaDescription: 'Specific pranayama, asana and relaxation techniques to enhance your state of mind',
     image: `${baseDomain}${courseAssets.courseAsset8}`,
+    dates: ['27th August 2022','22nd October 2022','26th December 2022'],
+    online:true,
+    on_campus:true,
+    non_residential:false,
+    residential:false,
     details: [
       {
         type: 'paragraph',
@@ -5053,6 +5104,11 @@ const camps = {
     category: 'camps',
     metaDescription: 'Powerful and effective asana, pranayama, and relaxation techniques to alleviate heart ailments',
     image: `${baseDomain}${courseAssets.courseAsset6}`,
+    dates: ['27th August 2022','22nd October 2022','26th December 2022'],
+    online:true,
+    on_campus:true,
+    non_residential:false,
+    residential:false,
     details: [
       {
         type: 'paragraph',
@@ -5157,7 +5213,7 @@ const camps = {
     id: '',
     title: 'Diabetes Camp ',
     key: 'diabetes-camp',
-    dates: [''],
+    dates: ['5th June 2022','7th August 2022','2nd October 2022','4th December 2022'],
     mostPopular: false,
     rating: 5,
     colorCode: '#CE9B51',
@@ -5166,6 +5222,10 @@ const camps = {
     category: 'camps',
     metaDescription: 'Wholesome tools and techniques to help you manage your condition completely',
     image: `${baseDomain}${courseAssets.courseAsset7}`,
+    online:true,
+    on_campus:true,
+    non_residential:false,
+    residential:false,
     details: [
       {
         type: 'paragraph',
@@ -5401,7 +5461,6 @@ const camps = {
     id: '',
     title: 'Digestion Camp',
     key: 'digestion-camp',
-    dates: [''],
     mostPopular: false,
     rating: 5,
     colorCode: '#DDAB58',
@@ -5410,6 +5469,11 @@ const camps = {
     category: 'camps',
     metaDescription: 'Specific pranayama, and relaxation techniques to enhance your wellbeing',
     image: `${baseDomain}${courseAssets.courseAsset13}`,
+    dates: ['5th June 2022','7th August 2022','2nd October 2022','4th December 2022'],
+    online:true,
+    on_campus:true,
+    non_residential:false,
+    residential:false,
     details: [
       {
         type: 'paragraph',
@@ -5518,7 +5582,6 @@ const camps = {
     id: '',
     title: 'Karma Yoga',
     key: 'karma-yoga',
-    dates: [''],
     mostPopular: false,
     rating: 5,
     colorCode: '#CE9B51',
@@ -5527,6 +5590,11 @@ const camps = {
     category: 'camps',
     metaDescription: 'Diet guidelines to manage your health',
     image: `${baseDomain}${courseAssets.courseAsset10}`,
+    dates: ['5th June 2022','7th August 2022','2nd October 2022','4th December 2022'],
+    online:true,
+    on_campus:true,
+    non_residential:false,
+    residential:false,
     details: [
       {
         type: 'paragraph',
@@ -5640,7 +5708,6 @@ const camps = {
     id: '',
     title: 'Life Management Camp',
     key: 'life-management-camp',
-    dates: [''],
     mostPopular: false,
     rating: 5,
     colorCode: '#EDBE66',
@@ -5649,6 +5716,11 @@ const camps = {
     category: 'camps',
     metaDescription: 'Specific pranayama, asana and relaxation techniques to enhance your state of mind',
     image: `${baseDomain}${courseAssets.courseAsset8}`,
+    dates: [''],
+    online:true,
+    on_campus:true,
+    non_residential:false,
+    residential:false,
     details: [
       {
         type: 'paragraph',
@@ -5758,7 +5830,6 @@ const camps = {
     id: '',
     title: 'Meditation Camp',
     key: 'meditation-camp',
-    dates: [''],
     mostPopular: false,
     rating: 5,
     colorCode: '#DDAB58',
@@ -5767,6 +5838,11 @@ const camps = {
     category: 'camps',
     metaDescription: 'Specific pranayama, asana and relaxation techniques to enhance your state of mind',
     image: `${baseDomain}${courseAssets.courseAsset9}`,
+    dates: [''],
+    online:true,
+    on_campus:true,
+    non_residential:false,
+    residential:false,
     details: [
       {
         type: 'paragraph',
@@ -5876,7 +5952,7 @@ const camps = {
     id: '',
     title: 'Pranayama Workshop',
     key: 'pranayama-workshop',
-    dates: [''],
+    dates: ['18th June 2022',' 21st August 2022',' 16th October 2022','18th December 2022'],
     mostPopular: true,
     rating: 5,
     colorCode: '#CE9B51',
@@ -5885,6 +5961,10 @@ const camps = {
     category: 'camps',
     metaDescription: 'Specific pranayama, asana and relaxation techniques to enhance your state of mind',
     image: `${baseDomain}${courseAssets.courseAsset9}`,
+    online:true,
+    on_campus:true,
+    non_residential:false,
+    residential:false,
     details: [
       {
         type: 'paragraph',
@@ -5994,7 +6074,7 @@ const camps = {
     id: '',
     title: 'Pregnancy Camp For Ante & Post Natal',
     key: 'pregnancy-camp-for-ante-post-natal',
-    dates: [''],
+    dates: ['18th June 2022','19th June 2022','20th August 2022','21st August 2022','15th October 2022','16th October 2022','17th December 2022','18th December 2022'],
     mostPopular: false,
     rating: 5,
     colorCode: '#EDBE66',
@@ -6003,6 +6083,10 @@ const camps = {
     category: 'camps',
     metaDescription: 'Insightful session with a medical specialists.',
     image: `${baseDomain}${courseAssets.courseAsset11}`,
+    online:true,
+    on_campus:true,
+    non_residential:false,
+    residential:false,
     details: [
       {
         type: 'paragraph',
@@ -6120,6 +6204,10 @@ const camps = {
     category: 'camps',
     metaDescription: 'Insightful session with a specialist',
     image: `${baseDomain}${courseAssets.courseAsset83}`,
+    online:true,
+    on_campus:true,
+    non_residential:false,
+    residential:false,
     details: [
       {
         type: 'paragraph',
@@ -6237,6 +6325,10 @@ const camps = {
     category: 'camps',
     metaDescription: 'Specific pranayama, asana and relaxation techniques to enhance your state of mind',
     image: `${baseDomain}${courseAssets.courseAsset12}`,
+    online:true,
+    on_campus:true,
+    non_residential:false,
+    residential:false,
     details: [
       {
         type: 'paragraph',
@@ -6346,7 +6438,7 @@ const camps = {
     id: '',
     title: 'Stress Management Camp',
     key: 'stress-management-camp',
-    dates: [''],
+    dates: ['4th June 2022','6th August 2022','1st October 2022','3rd December 2022'],
     mostPopular: false,
     rating: 5,
     colorCode: '#EDBE66',
@@ -6355,6 +6447,10 @@ const camps = {
     category: 'camps',
     metaDescription: 'Specific pranayama, asana and relaxation techniques to enhance your state of mind',
     image: `${baseDomain}${courseAssets.courseAsset13}`,
+    online:true,
+    on_campus:true,
+    non_residential:false,
+    residential:false,
     details: [
       {
         type: 'paragraph',
@@ -6463,7 +6559,7 @@ const camps = {
     id: '',
     title: 'Weight Management Workshop',
     key: 'weight-management-workshop',
-    dates: [''],
+    dates: ['4th June 2022','6th August 2022','1st October 2022','3rd December 2022'],
     mostPopular: false,
     rating: 5,
     colorCode: '#DDAB58',
@@ -6472,6 +6568,10 @@ const camps = {
     category: 'camps',
     metaDescription: 'Low-calorie diet recipe',
     image: `${baseDomain}${courseAssets.courseAsset15}`,
+    online:true,
+    on_campus:true,
+    non_residential:false,
+    residential:false,
     details: [
       {
         type: 'paragraph',
@@ -6580,7 +6680,7 @@ const camps = {
     id: '',
     title: 'Women’s Camp',
     key: 'women’s-camp',
-    dates: [''],
+    dates: ['11th June 2022','13th August 2022','8th October 2022','10th December 2022'],
     mostPopular: false,
     rating: 5,
     colorCode: '#CE9B51',
@@ -6589,6 +6689,10 @@ const camps = {
     category: 'camps',
     metaDescription: 'Specific asana, pranayama, and relaxation techniques to enhance your health',
     image: `${baseDomain}${courseAssets.courseAsset84}`,
+    online:true,
+    on_campus:true,
+    non_residential:false,
+    residential:false,
     details: [
       {
         type: 'paragraph',
@@ -6702,7 +6806,7 @@ const camps = {
     id: '',
     title: 'Back & Joint Disorder Workshop',
     key: 'back-joint-disorder-workshop',
-    dates: [''],
+    dates: ['26th June 2022','28th August 2022','23rd October 2022','25th December 2022'],
     mostPopular: false,
     rating: 5,
     colorCode: '#EDBE66',
@@ -6711,6 +6815,10 @@ const camps = {
     category: 'camps',
     metaDescription: 'Insightful session with an ortho-specialist',
     image: `${baseDomain}${courseAssets.courseAsset10}`,
+    online:true,
+    on_campus:true,
+    non_residential:false,
+    residential:false,
     details: [
       {
         type: 'paragraph',
@@ -6830,6 +6938,10 @@ const classes = {
     metaDescription:'Meditation and relaxation',
     image: `${baseDomain}${courseAssets.courseAsset67}`,
     dates: [''],
+    online:true,
+    on_campus:false,
+    non_residential:false,
+    residential:false,
     details: [
       {
         type: 'paragraph',
@@ -6882,6 +6994,10 @@ const classes = {
     fees: '1400',
     category: 'classes',
     dates: [''],
+    online:true,
+    on_campus:true,
+    non_residential:false,
+    residential:false,
     details: [
       {
         type: 'paragraph',
@@ -6949,6 +7065,10 @@ const classes = {
     fees: '1000 INR ',
     category: 'classes',
     dates: [''],
+    online:true,
+    on_campus:false,
+    non_residential:false,
+    residential:false,
     details: [
       {
         type: 'paragraph',
@@ -7114,6 +7234,10 @@ const classes = {
     fees: 'Rs 1000/month',
     category: 'classes',
     dates: [''],
+    online:false,
+    on_campus:true,
+    non_residential:false,
+    residential:false,
     details: [
       {
         type: 'paragraph',
@@ -7196,6 +7320,10 @@ const classes = {
     fees: 'Rs 1000/month',
     category: 'classes',
     dates: [''],
+    online:false,
+    on_campus:true,
+    non_residential:false,
+    residential:false,
     details: [
       {
         type: 'paragraph',
@@ -7240,7 +7368,7 @@ const classes = {
         type: 'paragraph',
         content: {
           title: '',
-          text: 'Fees',
+          text: ['Fees'],
         },
       },
       {
@@ -7285,7 +7413,11 @@ const classes = {
     timing: 'Mondays, Tuesdays & Thursdays: 11:30 am - 12:30 pm (IST)',
     fees: 'Rs. 20000/-',
     category: 'classes',
-    dates: [''],
+    dates: ['4th July 2022'],
+    online:true,
+    on_campus:false,
+    non_residential:false,
+    residential:false,
     details: [
       {
         type: 'paragraph',
@@ -7384,6 +7516,10 @@ const classes = {
     fees: '',
     category: 'classes',
     dates: [''],
+    online:true,
+    on_campus:true,
+    non_residential:false,
+    residential:false,
     details: [
       {
         type: 'paragraph',
@@ -7467,7 +7603,11 @@ const classes = {
     timing: 'Fridays & Saturdays: 3:00 pm - 5:00 pm (IST)',
     fees: 'Rs. 20,000 ',
     category: 'classes',
-    dates: [''],
+    dates: ['8th July 2022 '],
+    online:true,
+    on_campus:false,
+    non_residential:false,
+    residential:false,
     details: [
       {
         type: 'paragraph',
@@ -7547,7 +7687,11 @@ const classes = {
     timing: 'Tuesdays to Friday: 5:00 p.m. - 7:00 p.m. (IST',
     fees: '8000',
     category: 'classes',
-    dates: [''],
+    dates: ['14th June 2022 '],
+    online:false,
+    on_campus:false,
+    non_residential:false,
+    residential:false,
     details: [
       {
         type: 'paragraph',
@@ -7601,7 +7745,11 @@ const classes = {
     timing: 'Monday, Wednesday & Friday: 5:30 pm - 7:30 pm (IST)',
     fees: 'Rs 35,000/-',
     category: 'classes',
-    dates: [''],
+    dates: ['24th August 2022'],
+    online:true,
+    on_campus:false,
+    non_residential:false,
+    residential:false,
     details: [
       {
         type: 'paragraph',
@@ -7914,6 +8062,10 @@ const classes = {
     fees: 'Rs 1000/month',
     category: 'classes',
     dates: [''],
+    online:false,
+    on_campus:true,
+    non_residential:false,
+    residential:false,
     details: [
       {
         type: 'paragraph',
@@ -7966,6 +8118,10 @@ const classes = {
     fees: 'Rs 1000/month',
     category: 'classes',
     dates: [''],
+    online:false,
+    on_campus:true,
+    non_residential:false,
+    residential:false,
     details: [
       {
         type: 'paragraph',
@@ -8012,7 +8168,11 @@ const classes = {
     timing: '7:00 am - 8:00 am  (IST)',
     fees: 'INR 1000',
     category: 'classes',
-    dates: [''],
+    dates: ['6th June 2022 ','4th July 2022','1st August 2022','5th September 2022','3rd October 2022','7th November 2022','5th December 2022'],
+    online:true,
+    on_campus:false,
+    non_residential:false,
+    residential:false,
     details: [
       {
         type: 'paragraph',
@@ -8083,6 +8243,10 @@ const classes = {
     fees: 'Rs 1000',
     category: 'classes',
     dates: [''],
+    online:true,
+    on_campus:false,
+    non_residential:false,
+    residential:false,
     details: [
       {
         type: 'paragraph',
@@ -8178,6 +8342,10 @@ const classes = {
     fees: '',
     category: 'classes',
     dates: [''],
+    online:true,
+    on_campus:false,
+    non_residential:false,
+    residential:false,
     details: [
       {
         type: 'paragraph',
@@ -8251,6 +8419,10 @@ const classes = {
     fees: 'Rs 1000',
     category: 'classes',
     dates: [''],
+    online:false,
+    on_campus:true,
+    non_residential:false,
+    residential:false,
     details: [
       {
         type: 'paragraph',
@@ -8328,6 +8500,10 @@ const classes = {
     fees: '',
     category: 'classes',
     dates: [''],
+    online:true,
+    on_campus:false,
+    non_residential:false,
+    residential:false,
     details: [
       {
         type: 'paragraph',
