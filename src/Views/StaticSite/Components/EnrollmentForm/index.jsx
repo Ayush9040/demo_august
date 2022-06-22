@@ -179,7 +179,7 @@ const Enrollment = () => {
     } else setBold(4)
   }
 
-  const handleSubmit = async()=>{
+  const handleSubmit = async(data)=>{
     let body = {
       personalDetails: {
         name: formData.name,
@@ -216,7 +216,7 @@ const Enrollment = () => {
 
     const jsonBody = JSON.stringify(body)
     console.log(jsonBody,'json-body')
-    await axios.post('http://localhost:4040/v1/form',jsonBody).then(res=>{console.log(res)})
+    await axios.post('https://cms-dev-be.theyogainstituteonline.org/v1/form',body)
   }
 
   return (
