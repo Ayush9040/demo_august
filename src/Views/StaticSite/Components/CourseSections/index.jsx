@@ -142,6 +142,16 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam }) => {
       )
     }
   }
+
+  const selectColor = (i)=>{
+    if(i===0){
+      return '#94B1B2'
+    }else if(i===1){
+      return '#7C999B'
+    }else{
+      return '#6E9596'
+    }
+  }
   return (
     <div className="course-section">
       <div className="course-list">
@@ -173,12 +183,13 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam }) => {
                 return (
                   <CourseCard
                     key={i}
-                    color={item.colorCode}
+                    color={selectColor(i)}
                     index={i}
                     courseTitle={item.title}
                     description={item.metaDescription}
                     path={item.key}
                     img={item.image}
+                    rating={item.rating}
                   />
                 )
               }
@@ -195,6 +206,7 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam }) => {
                   description={item.metaDescription}
                   path={item.key}
                   img={item.image}
+                  rating={item.rating}
                 />
               )
             }

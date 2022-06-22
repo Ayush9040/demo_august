@@ -16,7 +16,6 @@ const Enrollment = () => {
     setCurrentCourse(AllCourses.find((item) => item.key === courseId))
   }, [])
 
-  console.log(currentCourse, 'ccc')
 
   const [empty, setEmpty] = useState(0)
 
@@ -97,7 +96,7 @@ const Enrollment = () => {
       ])
     setFormData({ ...formData, resignition: '', company: '', leavejob: '' })
   }
-  console.log(resgin)
+
 
   const QualificationDetailHandler = () => {
     if (formData.completion.length !== 4) {
@@ -118,7 +117,7 @@ const Enrollment = () => {
   const handleEmpty1 = () => {
     if (formData.name === '') {
       return setEmpty(1)
-    } else if (formData.phone === '') {
+    } else if (formData.phone === '' || formData.phone.length<10 || formData.phone.length>10) {
       return setEmpty(2)
     } else if (!validateEmail(formData.email)) {
       return setEmpty(3)
@@ -410,7 +409,7 @@ const Enrollment = () => {
                     />
                     {empty === 11 && (
                       <small style={{ color: 'red', marginLeft: '0' }}>
-                        *Please Enter Your DOB
+                        *Please Enter Your Nationality
                       </small>
                     )}
                   </div>
@@ -427,11 +426,11 @@ const Enrollment = () => {
                         setField={setFormData}
                         keyName="children"
                       />{' '}
-                      {empty === 12 && (
+                      {/* {empty === 12 && (
                         <small style={{ color: 'red', marginLeft: '0' }}>
                           *Please Enter !
                         </small>
-                      )}
+                      )} */}
                     </div>
                     <div>
                       <div className="age_ofChild">
@@ -446,11 +445,11 @@ const Enrollment = () => {
                             setField={setFormData}
                             keyName="age1"
                           />{' '}
-                          {empty === 13 && (
+                          {/* {empty === 13 && (
                             <small style={{ color: 'red', marginLeft: '0' }}>
                               *Please Enter!
                             </small>
-                          )}
+                          )} */}
                         </div>
 
                         {newField.map((i, idx) => {

@@ -139,6 +139,7 @@ const BrowseCourses = () => {
               description={item.metaDescription}
               path={item.key}
               img={item.image}
+              rating={item.rating}
             />
           ))}
         </div>
