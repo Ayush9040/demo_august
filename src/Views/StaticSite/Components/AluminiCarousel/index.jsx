@@ -23,7 +23,7 @@ const AlumniCarousel = () => {
       setAlumImgs(data.find(item=>item.id===index).img)
     }
   }
-
+  console.log(alumImgs)
   return (
     <div className="alumni-main-div">
       <div className="alumini-carousel-heading">Alumini</div>

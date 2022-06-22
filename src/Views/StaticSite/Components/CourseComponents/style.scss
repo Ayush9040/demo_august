@@ -81,9 +81,9 @@
     font-weight: 700;
     display: inline-block;
     margin-right: 0.5rem;
-    &::after{
-      content: ':';
-    }
+    // &::after{
+    //   content: ':';
+    // }
     // &~p{
     //   display: inline-block;
     // }

@@ -24,7 +24,7 @@ const InputComponent = ({
             name={keyName}
             max={maxnum}
             min={minnum}
-            onChange={(e) => setField({ ...form, [keyName]: e.target.value })}
+            onChange={(e) =>{e.preventDefault();setField({ ...form, [keyName]: e.target.value })}}
           />
         </label>
       </form>
