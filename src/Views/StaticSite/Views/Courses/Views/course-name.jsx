@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom' 
 import CourseDetails from '../../../Components/CourseDetails'
 import InnerNavComponent from '../../../Components/InnerNavComponent'
-import { c200h } from '../../../Constants/courses/c200hr'
+//import { c200h } from '../../../Constants/courses/c200hr'
+import { AllCourses } from '../Constants/courses'
 
 const SingleCourse = () => {
   const { courseId } = useParams()
@@ -12,7 +13,7 @@ const SingleCourse = () => {
   
   useEffect(() =>{
     setIsLoadding(true)
-    setPageData(c200h[courseId])
+    setPageData(AllCourses.find(item=>item.key===courseId))
     setIsLoadding(false)
   }, [])
   const CareerNameBan = {

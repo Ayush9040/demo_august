@@ -1,21 +1,22 @@
 import React, { useState, useEffect } from 'react'
 import { filler1, upload } from '../../assets/icons/icon'
 import './styles.scss'
-import { courseArray } from '../../Constants/courses/c200hr'
+// import { courseArray } from '../../Constants/courses/c200hr'
+import { AllCourses } from '../../Views/Courses/Constants/courses'
 import { useParams } from 'react-router-dom'
 import InputComponent from '../InputComponent'
 import { validateEmail } from '../../../../helpers'
 import { Link } from 'react-router-dom'
+import axios from 'axios'
 
 const Enrollment = () => {
   const { courseId } = useParams()
   const [currentCourse, setCurrentCourse] = useState({})
 
   useEffect(() => {
-    setCurrentCourse(courseArray.find((item) => item.id === courseId))
+    setCurrentCourse(AllCourses.find((item) => item.key === courseId))
   }, [])
 
-  console.log(currentCourse, 'ccc')
 
   const [empty, setEmpty] = useState(0)
 
@@ -52,6 +53,8 @@ const Enrollment = () => {
   const [resgin, setResgin] = useState(0)
   const [listData, setListData] = useState([])
   const [qualificationData, setQualificationData] = useState([])
+  const [courseAsset1,setCourseAsset1]=useState(null)
+  const [courseAsset2,setCourseAsset2]=useState(null)
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
@@ -73,7 +76,7 @@ const Enrollment = () => {
     completion: '',
     company: '',
     leavejob: '',
-    resignition: '',
+    resignation: '',
     medicalstatus: '',
     sourceinfo: '',
     source: '',
@@ -81,43 +84,55 @@ const Enrollment = () => {
     info: '',
     residental: '',
   })
+  const [ qualificationAsset1,setQualificationAsset1]=useState('')
+  const [ qualificationAsset2,setQualificationAsset2]=useState('')
+  const [ experienceAsset1,setExperienceAsset1]=useState('')
+  const [ experienceAsset2,setExperienceAsset2]=useState('')
+ 
 
   const listDetailHandler = () => {
-    if (formData.resignition.length !== 4) {
+    if (formData.resignation.length !== 4) {
       return setResgin(1)
     } else
-      setListData((oldData) => [
-        ...oldData,
+      setListData([
+        ...listData,
         {
           companyName: formData.company,
-          leavejob: formData.leavejob,
-          resignition: formData.resignition,
+          roleWhenLeaving: formData.leavejob,
+          yearOfresignation: formData.resignation,
+          workExImgAsset: experienceAsset1,
+          workExPdfAsset: experienceAsset2,
+          listedWorkExperience: formData.leavejob
         },
       ])
     setFormData({ ...formData, resignition: '', company: '', leavejob: '' })
   }
-  console.log(resgin)
+
 
   const QualificationDetailHandler = () => {
     if (formData.completion.length !== 4) {
       return setYearEmpty(1)
     } else
-      setQualificationData((oldData) => [
-        ...oldData,
+      setQualificationData([
+        ...qualificationData,
         {
-          schoolName: formData.school,
-          courseName: formData.course,
-          completionYear: formData.completion,
+          schoolOrCollege: formData.school,
+          course: formData.course,
+          yearOfCompletion: formData.completion,
+          academicImgAsset:qualificationAsset1,
+          academicPdfAsset:qualificationAsset2,
+          listedQualification:formData.course
+
         },
       ])
     setFormData({ ...formData, school: '', course: '', completion: '' })
   }
-  console.log(yearEmpty)
+  console.log(formData.residental)
 
   const handleEmpty1 = () => {
     if (formData.name === '') {
       return setEmpty(1)
-    } else if (formData.phone === '') {
+    } else if (formData.phone === '' || formData.phone.length<10 || formData.phone.length>10) {
       return setEmpty(2)
     } else if (!validateEmail(formData.email)) {
       return setEmpty(3)
@@ -137,10 +152,6 @@ const Enrollment = () => {
       return setEmpty(10)
     } else if (formData.nationality === '') {
       return setEmpty(11)
-    } else if (formData.children === '') {
-      return setEmpty(12)
-    } else if (formData.age1 === '') {
-      return setEmpty(13)
     } else if (formData.gender === '') {
       return setEmpty(15)
     } else {
@@ -162,10 +173,50 @@ const Enrollment = () => {
 
   const handleEmpty4 = () => {
     if (formData.source === '') {
-      return setEmpty(1)
-    } else if (formData.sourceinfo === '') {
-      return setEmpty(2)
+      if (formData.sourceinfo === '') {
+        return setEmpty(2)
+      } 
     } else setBold(4)
+  }
+
+  const handleSubmit = async()=>{
+    let body = {
+      personalDetails: {
+        name: formData.name,
+        emailId: formData.email,
+        phone: formData.phone,
+        addressLane1: formData.address1,
+        addressLane2: formData.address2,
+        country: formData.country,
+        state: formData.state,
+        city: formData.city,
+        pincode : formData.pincode,
+        gender: formData.gender,
+        dob: formData.DOB,
+        nationality: formData.nationality,
+        numberOfChildren: formData.numberOfChildren,
+        ageOfChild1: formData.age1,
+        ageOfChild2: formData.age2
+      },
+      academicQualification: qualificationData,
+      workExperience: listData,
+      others: {
+        medicalHistory: formData.medicalstatus,
+        howDoYouHearAboutUs: formData.source || formData.sourceinfo,
+      },
+      courseDetails: {
+        courseId: currentCourse.key,
+        mode:formData.residental,
+        certificateImgAsset: courseAsset1,
+        certificatePdfAsset: courseAsset2,
+        startDate: '10000',
+        endDate: '10000'
+      }
+    }
+
+    const jsonBody = JSON.stringify(body)
+    console.log(jsonBody,'json-body')
+    await axios.post('http://localhost:4040/v1/form',jsonBody).then(res=>{console.log(res)})
   }
 
   return (
@@ -183,34 +234,34 @@ const Enrollment = () => {
               onClick={() => setBold(0)}
             >
               {' '}
-              Personal Details |{' '}
+              Personal Details{' '}
               {bold === 0 && <div className="bottom-line"></div>}
             </li>
             <li
               style={bold === 1 ? { fontWeight: '600' } : {}}
               onClick={() => setBold(1)}
             >
-              Academic Qualifications |{' '}
+              Academic Qualifications{' '}
               {bold === 1 && <div className="bottom-line"></div>}
             </li>
             <li
               style={bold === 2 ? { fontWeight: '600' } : {}}
               onClick={() => setBold(2)}
             >
-              Work Experience |{' '}
+              Work Experience{' '}
               {bold === 2 && <div className="bottom-line"></div>}
             </li>
             <li
               style={bold === 3 ? { fontWeight: '600' } : {}}
               onClick={() => setBold(3)}
             >
-              Other |{bold === 3 && <div className="bottom-line"></div>}
+              Other{bold === 3 && <div className="bottom-line"></div>}
             </li>
             <li
               style={bold === 4 ? { fontWeight: 600 } : {}}
               onClick={() => setBold(4)}
             >
-              Cousre Details
+              Course Details
               {bold === 4 && <div className="bottom-line"></div>}
             </li>
           </ul>
@@ -355,7 +406,7 @@ const Enrollment = () => {
                     Male&nbsp;
                     <input
                       type="radio"
-                      value="male"
+                      value="MALE"
                       name="gender"
                       onChange={(e) => {
                         if (e.target.checked) {
@@ -369,7 +420,7 @@ const Enrollment = () => {
                     <input
                       className="radio"
                       type="radio"
-                      value="female"
+                      value="FEMALE"
                       name="gender"
                       onChange={(e) => {
                         if (e.target.checked) {
@@ -388,7 +439,7 @@ const Enrollment = () => {
                   <div>
                     <InputComponent
                       type="date"
-                      placeholder="DD / MM / YYYY"
+                      placeholder="DOB"
                       form={formData}
                       setField={setFormData}
                       keyName="DOB"
@@ -409,7 +460,7 @@ const Enrollment = () => {
                     />
                     {empty === 11 && (
                       <small style={{ color: 'red', marginLeft: '0' }}>
-                        *Please Enter Your DOB
+                        *Please Enter Your Nationality
                       </small>
                     )}
                   </div>
@@ -426,11 +477,11 @@ const Enrollment = () => {
                         setField={setFormData}
                         keyName="children"
                       />{' '}
-                      {empty === 12 && (
+                      {/* {empty === 12 && (
                         <small style={{ color: 'red', marginLeft: '0' }}>
                           *Please Enter !
                         </small>
-                      )}
+                      )} */}
                     </div>
                     <div>
                       <div className="age_ofChild">
@@ -445,11 +496,11 @@ const Enrollment = () => {
                             setField={setFormData}
                             keyName="age1"
                           />{' '}
-                          {empty === 13 && (
+                          {/* {empty === 13 && (
                             <small style={{ color: 'red', marginLeft: '0' }}>
                               *Please Enter!
                             </small>
-                          )}
+                          )} */}
                         </div>
 
                         {newField.map((i, idx) => {
@@ -549,6 +600,8 @@ const Enrollment = () => {
                         <input
                           type={'file'}
                           id="image"
+                          value={qualificationAsset1}
+                          onChange={(e)=>{setQualificationAsset1(e.target.value)}}
                           placeholder="Upload Image"
                           accept="image/*"
                         />
@@ -561,6 +614,8 @@ const Enrollment = () => {
                         Upload Resume
                         <input
                           type={'file'}
+                          value={qualificationAsset2}
+                          onChange={(e)=>{setQualificationAsset2(e.target.value)}}
                           id="resume"
                           placeholder="Upload Resume"
                         />
@@ -576,12 +631,12 @@ const Enrollment = () => {
               <div className="right">
                 <div className="label">
                   Listed Qualifications :
-                  {qualificationData.map((items, key) => {
+                  {qualificationData?.map((items, key) => {
                     return (
                       <div className="qualification-lists" key={key}>
-                        <p>{items.schoolName}</p>
-                        <p>{items.courseName}</p>
-                        <p>{items.completionYear}</p>
+                        <p>{items.schoolOrCollege}</p>
+                        <p>{items.course}</p>
+                        <p>{items.yearOfCompletion}</p>
                       </div>
                     )
                   })}
@@ -645,14 +700,14 @@ const Enrollment = () => {
                 <div className="left_flex_contanier">
                   <div className="flex_box">
                     <div className="year-of-comp label">
-                      Year of Resginition
+                      Year of Resignation
                     </div>
                     <InputComponent
                       type="number"
                       placeholder="Year"
                       form={formData}
                       setField={setFormData}
-                      keyName="resignition"
+                      keyName="resignation"
                       value={formData.resignition}
                     />
                   </div>
@@ -663,6 +718,8 @@ const Enrollment = () => {
                         <input
                           type={'file'}
                           id="image"
+                          value={experienceAsset1}
+                          onChange={(e)=>{setExperienceAsset1(e.target.value)}}
                           placeholder="Upload Image"
                           accept="image/*"
                         />
@@ -675,6 +732,8 @@ const Enrollment = () => {
                         Upload Resume
                         <input
                           type={'file'}
+                          value={experienceAsset2}
+                          onChange={(e)=>{setExperienceAsset2(e.target.value)}}
                           id="resume"
                           placeholder="Upload Resume"
                         />
@@ -694,8 +753,8 @@ const Enrollment = () => {
                     return (
                       <div className="experienced-lists" key={key}>
                         <p>{item.companyName}</p>
-                        <p>{item.leavejob}</p>
-                        <p>{item.resignition}</p>
+                        <p>{item.roleWhenLeaving}</p>
+                        <p>{item.yearOfresignation}</p>
                       </div>
                     )
                   })}
@@ -735,6 +794,7 @@ const Enrollment = () => {
                         type="text"
                         rows="5"
                         cols="40"
+                        onChange={(e)=>{setFormData({ ...formData,medicalstatus:e.target.value })}}
                       />
                     </label>
                   </div>
@@ -837,7 +897,7 @@ const Enrollment = () => {
                     type="text"
                     placeholder="Any other source please specify"
                     onChange={(e) => {
-                      setFormData({ ...formData, sourceinfo: e.target.value })
+                      setFormData({ ...formData, sourceinfo: e.target.value||'none' })
                     }}
                   />
                   {empty === 2 && (
@@ -966,9 +1026,9 @@ const Enrollment = () => {
                       <img src={currentCourse?.image} alt="" />
                     </div>
                     <div className="current_duration">
-                      {currentCourse?.duration}
-                      {currentCourse?.date}
-                      <div className="current_fees">{currentCourse?.fees}</div>
+                      {currentCourse?.title}
+                      {currentCourse?.details?.find(item=>item.content.title==='Date')?.content?.text[0]}
+                      <div className="current_fees">{currentCourse?.details?.find(item=>item.content.title==='Fees')?.content?.text[0]}</div>
                     </div>
                   </div>
                 </div>
@@ -979,7 +1039,7 @@ const Enrollment = () => {
                       <input
                         type="radio"
                         name="resident"
-                        value="residental"
+                        value="RESIDENTIAL"
                         onChange={(e) => {
                           if (e.target.checked) {
                             setFormData({
@@ -995,7 +1055,7 @@ const Enrollment = () => {
                       <input
                         type="radio"
                         name="resident"
-                        value="residental"
+                        value="ONLINE"
                         onChange={(e) => {
                           if (e.target.checked) {
                             setFormData({
@@ -1012,8 +1072,7 @@ const Enrollment = () => {
                     <label htmlFor="" className="label_1">
                       <input
                         type="radio"
-                        name="resident"
-                        value="residental"
+                        value="NONRESIDENTIAL"
                         onChange={(e) => {
                           if (e.target.checked) {
                             setFormData({
@@ -1029,7 +1088,7 @@ const Enrollment = () => {
                       <input
                         type="radio"
                         name="resident"
-                        value="residental"
+                        value="OFFLINE"
                         onChange={(e) => {
                           if (e.target.checked) {
                             setFormData({
@@ -1045,7 +1104,7 @@ const Enrollment = () => {
                 </form>
                 {/* <div className='upload_box'> */}
                 <div className="label">
-                  Please upload the relevent TYI certificate pre requisite
+                  Please upload the relevant TYI certificate pre requisite
                   <div className="uploads">
                     <fieldset>
                       <label htmlFor="image">
@@ -1053,6 +1112,8 @@ const Enrollment = () => {
                         <input
                           type={'file'}
                           id="image"
+                          value={ courseAsset1 }
+                          onChange={e=>setCourseAsset1(e.target.value)}
                           placeholder="Upload Image"
                           accept="image/*"
                         />
@@ -1063,6 +1124,8 @@ const Enrollment = () => {
                         Upload Resume
                         <input
                           type={'file'}
+                          value={ courseAsset2 }
+                          onChange={e=>setCourseAsset2(e.target.value)}
                           id="resume"
                           placeholder="Upload Resume"
                         />
@@ -1086,7 +1149,7 @@ const Enrollment = () => {
                 Back
               </button>
               <div className="enrollment_logo">{filler1}</div>
-              <button className="next_1">Sumbit</button>
+              <button className="next_1" onClick={ handleSubmit } >Sumbit</button>
             </div>
           </div>
         ) : (

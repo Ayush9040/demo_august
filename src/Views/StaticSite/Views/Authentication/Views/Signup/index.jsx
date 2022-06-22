@@ -26,13 +26,11 @@ const SignUp = () => {
     if (formData.name === '') {
       return setEmpty(1)
     } else if (!validateEmail(formData.email)) {
-      console.log('email error')
       return setEmpty(2)
     } else if (!validatePassword(formData.password)) {
       return setEmpty(3)
     } else if (formData.confirmPassword !== formData.password)
       return setEmpty(4)
-    console.log('calling api')
     setEmpty(0)
   }
 

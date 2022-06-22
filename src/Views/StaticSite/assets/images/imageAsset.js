@@ -119,6 +119,9 @@ export const courseAssets = {
   courseAsset14: '/Courses/Camps/Weight_management.jpg',
   courseAsset15: '/Courses/Camps/Weight_management.jpg',
   courseAsset16: '/Courses/Camps/Weight_management.jpg',
+  courseAsset83: '/Courses/Camps/Respiratory_Workshop.jpeg',
+  courseAsset84: '/Courses/Camps/Women%E2%80%99s_Camp.jpg',
+  
 
   // certificate
 
@@ -131,7 +134,7 @@ export const courseAssets = {
   courseAsset21: '/Courses/Class/Samattvam.jpg',
   courseAsset22: '/Courses/Class/Weekend_regular_class.jpg',
   courseAsset23: '/Courses/Class/Yog prayas(1).jpg',
-  courseAsset24: '/Courses/Class/certificate course_on_advance_pranayama_techniques.jpg',
+  courseAsset24: '/Courses/Class/certificate%20course_on_advance_pranayama_techniques.jpg',
   courseAsset25: '/Courses/Class/couples_class.jpg',
   courseAsset26: '/Courses/Class/couples_class.jpg',
   courseAsset27: '/Courses/Class/mens_class.jpg',
@@ -140,6 +143,23 @@ export const courseAssets = {
   courseAsset30: '/Courses/Class/yog_prayas.jpg',
   courseAsset31: '/Courses/Class/yoga_therapy.jpg',
   courseAsset32: '/Courses/Class/yogasutra_class.jpg',
+  courseAsset67: '/Courses/Class/Advance_Asana_Regula_Class_Online_%28Only%20_for_TYI_Teachers%29%20.jpeg',
+  courseAsset68: '/Courses/Class/Anand_Sadhna_online%20_%20On_Campus.jpeg',
+  //courseAsset69: '/Courses/Class/Anand_Sadhna_online%20_%20On_Campus.jpeg',
+  courseAsset70: '/Courses/Class/Asana%20_Regular_Classes_for_Men_common.jpeg',
+  courseAsset71: '/Courses/Class/Asana_Regular_Classes_for_Women_common.jpeg',
+  courseAsset72: '/Courses/Class/Certificate%20CourseAdvanced_Pranayama_Techniques_Online.jpeg',
+  courseAsset73: '/Courses/Class/Certificate_Course_on_Yoga_Sutra%2BOnline.jpeg',
+  courseAsset74: '/Courses/Class/Certificate_Program_on_Yoga_for_Cancer_Online.jpeg',
+  courseAsset75: '/Courses/Class/Certificate_Yoga_Therapy_Course_Online.jpeg',
+  courseAsset76: '/Courses/Class/Children_s_Regular_%20weekend_Class_common%20.jpeg',
+  courseAsset77: '/Courses/Class/Couples_Classes_Online.jpeg',
+  courseAsset78: '/Courses/Class/Regular_Meditation_Classes_Online.jpeg',
+  courseAsset79: '/Courses/Class/Samattvam_%28Health_Checkup%29.jpeg',
+  courseAsset80: '/Courses/Class/Satsang.jpeg',
+  courseAsset81: '/Courses/Class/WeekeAsana_Classes_%28Men%20_%20Women%29_common.jpeg',
+  courseAsset82: '/Courses/Class/Yog_Prayas_Online.jpeg',
+  
 
   // most popular
 

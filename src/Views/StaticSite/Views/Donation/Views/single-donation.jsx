@@ -12,7 +12,7 @@ const SingleDonation = () => {
     scrollTo(0, 0)
     setPage(data.find(point=>(donationId===point.key)))
   }, [])
-  console.log(page,'xyz')
+
 
   const SingleDonationBar = {
     title: 'Single Donation',

@@ -1,14 +1,14 @@
 import React from 'react'
+import '../../../Components/CourseComponents/style.scss'
 
 const CoursePara = ({ content }) => {
 
+
   return (
-    <div className="CoursePara">
-      <h2>
-        <u>
-          <b>{content.title}</b>
-        </u>
-      </h2>
+    <div className="course_para">
+      {content.title && <h2 className='sub_heading' >
+        {content.title}
+      </h2>}
       {content.text.map((point, i) => {
         return <p key={i} >{point}</p>
       })}

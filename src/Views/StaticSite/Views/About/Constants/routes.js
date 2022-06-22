@@ -28,7 +28,7 @@ const aboutRoutes = [  {
   routePath: '/our-legacy',
   name: 'OurLegacy',
 },
-{
+{ 
   Component: Blessings,
   path: '/blessings',
   exact: true,

@@ -12,7 +12,7 @@ const CommonBannerAboutUs = ({
   isBlessing,
   children
 }) => {
-  console.log(PageType)
+
 
   const pageData = {
     blessings: `

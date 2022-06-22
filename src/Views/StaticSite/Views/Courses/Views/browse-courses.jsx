@@ -9,13 +9,13 @@ import {
 } from 'react-accessible-accordion'
 import CommonBannerNavPrimary from '../../../Components/CommonBannerNavPrimary'
 import { useParams } from 'react-router-dom'
-import { courseArray } from '../../../Constants/courses/c200hr'
+// import { courseArray } from '../../../Constants/courses/c200hr'
+import { AllCourses, c200hr,c500hr,c900hr,campsArr,classesArr } from '../Constants/courses'
 import CourseCard from '../../../Components/CourseCard'
 import './style.scss'
 
 const BrowseCourses = () => {
   const { type } = useParams()
-  console.log(type, 'type')
   const [category, setCategory] = useState()
   const [breadcrumbs, setBreadcrumbs] = useState()
   const ChangeContent = () => {
@@ -34,16 +34,14 @@ const BrowseCourses = () => {
   useEffect(() => {
     if (type === 'ttc') {
       setCategory(
-        courseArray.filter(
-          (item) => item.key === 'c200Hr' || item.key === 'c900Hr'
-        )
+        [...c200hr,...c500hr,...c900hr]
       )
     } else if (type === 'most-popular') {
-      setCategory(courseArray.filter((item) => item.mostPopular === true))
+      setCategory(AllCourses.filter((item) => item.mostPopular === true))
     } else if (type === 'camps-workshops') {
-      setCategory(courseArray.filter((item) => item.key === 'CAMPS'))
+      setCategory([...campsArr])
     } else {
-      setCategory(courseArray.filter((item) => item.key === type))
+      setCategory([...classesArr])
     }
     ChangeContent()
   }, [type])
@@ -82,7 +80,7 @@ const BrowseCourses = () => {
                     style={{ cursor: 'pointer' }}
                     onClick={() => {
                       setCategory(
-                        courseArray.filter((item) => item.key === 'c200Hr')
+                        [...c200hr]
                       )
                     }}
                   >
@@ -92,7 +90,7 @@ const BrowseCourses = () => {
                     style={{ cursor: 'pointer' }}
                     onClick={() => {
                       setCategory(
-                        courseArray.filter((item) => item.key === 'c500Hr')
+                        [...c500hr]
                       )
                     }}
                   >
@@ -102,7 +100,7 @@ const BrowseCourses = () => {
                     style={{ cursor: 'pointer' }}
                     onClick={() => {
                       setCategory(
-                        courseArray.filter((item) => item.key === 'c900Hr')
+                        [...c900hr]
                       )
                     }}
                   >
@@ -137,10 +135,11 @@ const BrowseCourses = () => {
               key={i}
               color={item.colorCode}
               index={i}
-              courseTitle={item.name}
-              description={item.details}
-              path={item.id}
+              courseTitle={item.title}
+              description={item.metaDescription}
+              path={item.key}
               img={item.image}
+              rating={item.rating}
             />
           ))}
         </div>

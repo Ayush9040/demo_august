@@ -15,10 +15,7 @@ const VolunteerJob = () => {
     setProgram(volunteerData.find((item) => id === item.id))
   }, [])
 
-  console.log(
-    'data',
-    volunteerData.find((item) => id === item.id)
-  )
+
 
   return (
     <div className="single-job">

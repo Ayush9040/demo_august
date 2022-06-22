@@ -20,11 +20,10 @@ const AlumniCarousel = () => {
     slidesToScroll: 1,
     centerPadding: '70px',
     beforeChange:(oldIndex,index)=>{
-      console.log(data.find(item=>item.id===index).img)
       setAlumImgs(data.find(item=>item.id===index).img)
     }
   }
-
+  console.log(alumImgs)
   return (
     <div className="alumni-main-div">
       <div className="alumini-carousel-heading">Alumini</div>
@@ -42,37 +41,12 @@ const AlumniCarousel = () => {
                     <p>{item.info}</p>
                   </div>
                 </div>
-                {/* <div className="alumini-carousel-grid">
-                  <div className="alumni-carousel-event-grid">
-                    <div className="grid-element-1">
-                      <div className="event-1">
-                        <img src={item.alluminiImg} />
-                      </div>
-                      <div className="event-2">
-                        <img src={item.alluminiImg} />
-                      </div>
-                    </div>
-                    <div className="grid-element-2">
-                      <div className="event-3">
-                        <img src={item.alluminiImg} />
-                      </div>
-                    </div>
-                    <div className="grid-element-3">
-                      <div className="event-4">
-                        <img src={item.alluminiImg} />
-                      </div>
-                      <div className="event-5">
-                        <img src={item.alluminiImg} />
-                      </div>
-                    </div>
-                  </div>
-                </div> */}
               </div>
             )
           }
         })}
       </Slider>
-      <AlumniGrid images={alumImgs} notEvent={true} />
+      <AlumniGrid images={[]} notEvent={true} />
       <CommonBtn text={'Explore All'} />
     </div>
   )
