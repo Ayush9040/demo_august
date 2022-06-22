@@ -1,10 +1,13 @@
 import { Link } from 'react-router-dom'
 import React from 'react'
-// import { star } from '../../assets/icons/icon'
+
 import CommonBtn from '../commonbtn'
 //import SelectDropDown from '../Select Dropdown'
 import './style.scss'
 import SelectDropDown from '../Select Dropdown'
+import { useEffect } from 'react'
+import StarIcon from './star-icon'
+import { useState } from 'react'
 
 const CourseCard = ({
   color,
@@ -12,6 +15,7 @@ const CourseCard = ({
   description,
   path,
   img = 'http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Courses/course%20%281%29.png',
+  rating=5
 }) => {
 
 
@@ -27,20 +31,25 @@ const CourseCard = ({
     borderStyle: 'solid',
     maxWidth: '130px',
   }
+  const [ratingArr,setRatingArr] = useState([])
 
+  useEffect(()=>{
+    let arr =[]
+    for (let i = 0; i < rating; i++) {
+      arr[i]=i
+      setRatingArr(arr)
+    }
+  },[])
 
+  
 
   return (
     <div className="course-card">
       <div className="course-card-image">
         <img src={img} />
-        {/* <div className="stars">
-          {star}
-          {star}
-          {star}
-          {star}
-          {star}
-        </div> */}
+        <div className="stars">
+          {ratingArr.length!==0 && ratingArr.map((item,id)=><StarIcon key={id} />)}
+        </div>
       </div>
       <div
         className="course-card-content"

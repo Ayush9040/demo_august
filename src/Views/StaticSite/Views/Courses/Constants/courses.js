@@ -303,7 +303,7 @@ const ttc200hr = {
   2: {
     id: '',
     key: 'batch-2-200hr',
-    metaDescription: '',
+    metaDescription: 'You will learn the tools to master your physical, mental and spiritual well-being. You will see a marked improvement in your life, relationships and work.',
     image: `${baseDomain}${courseAssets.courseAsset38}`,
     mostPopular: false,
     rating: 5,
@@ -1915,14 +1915,14 @@ const ttc500hr = {
               'Meditation Techniques ITTC',
               'Intermediary Level meditation practices',
             ],
-            {
-              type: 'url',
-              content: {
-                text: 'Access the detailed syllabus here:',
-                url: 'https://theyogainstitute.org/wp-content/uploads/2020/08/SYLLABUS-500-hrs.pdf',
-              },
-            },
           ],
+        },
+      },
+      {
+        type: 'url',
+        content: {
+          text: 'Access the detailed syllabus here:',
+          url: 'https://theyogainstitute.org/wp-content/uploads/2020/08/SYLLABUS-500-hrs.pdf',
         },
       },
     ],

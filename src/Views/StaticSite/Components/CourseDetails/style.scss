@@ -91,6 +91,9 @@
       display: inline-block;
       text-decoration: underline;
     }
+  &>div{
+    margin-left: 20px;
+  }
   }
   .course-about {
     // display: grid;

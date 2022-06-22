@@ -41,32 +41,32 @@ const CourseDetails = ({ pageDate }) => {
 
   let options = [
     {
-      id: 'ProgramID',
+      id: 'program-details',
       title: 'Program Details',
       key: 1,
     },
     {
-      id: 'CurriculamID',
+      id: 'curriculam',
       title: 'Curriculam',
       key: 2,
     },
     {
-      id: 'TeachingID',
+      id: 'teaching',
       title: 'Teaching & Certification',
       key: 3,
     },
     {
-      id: 'UniqueID',
+      id: 'offering',
       title: 'Our Unique Offerings',
       key: 4,
     },
     {
-      id: 'RegistrationID',
+      id: 'registration',
       title: 'Registration',
       key: 5,
     },
     {
-      id: 'FaqID',
+      id: 'faq-section',
       title: 'FAQ',
       key: 6,
     },
@@ -138,7 +138,7 @@ const CourseDetails = ({ pageDate }) => {
             <Link to={`/enrollment/${pageDate.key}`}>
               <CommonBtn text={'Enroll Now'} />
             </Link>
-            <CommonBtn text={'Gift Course'} />
+            {/* <CommonBtn text={'Gift Course'} /> */}
           </div>
         </div>
         <div className="course-cover">
@@ -172,50 +172,42 @@ const CourseDetails = ({ pageDate }) => {
           </div>
         </div>
       )}
+ 
 
-      <div className="details-section">
-        {pageDate?.category === 'ttc' && (
-          <h1>
+
+      {<div className="details-section" id='program-details' >
+        <h1>
             Program Details
-          </h1>
-        )}
-
+        </h1>
         {pageDate?.details?.map(({ type, content }) => {
           return selectComponent(type, content)
         })}
-      </div>
-      <div className="details-section">
-        {(pageDate?.category === 'ttc' && pageDate?.curriculam?.length !== 0) && (
-          <h1>
+      </div>}
+      {(pageDate?.category === 'ttc' && pageDate?.curriculam?.length !== 0) && <div className="details-section" id='curriculam' >
+        <h1>
             Curriculam
             
-          </h1>
-        )}
-
+        </h1>
         {pageDate?.curriculam?.map(({ type, content }) => {
           return selectComponent(type, content)
         })}
-      </div>
-      <div className="details-section">
-        {(pageDate?.category === 'ttc' && pageDate?.teaching?.length !== 0) && (
-          <h1>
+      </div>}
+      {(pageDate?.category === 'ttc' && pageDate?.teaching?.length !== 0) && <div className="details-section" id='teaching' >
+        <h1>
             Teaching
-          </h1>
-        )}
-
+        </h1>
         {pageDate?.teaching?.map(({ type, content }) => {
           return selectComponent(type, content)
         })}
-      </div>
-      <div className="details-section">
-        {(pageDate?.category ==='ttc' && pageDate?.offerings?.length !==0) &&  <h1>
+      </div>}
+      {(pageDate?.category ==='ttc' && pageDate?.offerings?.length !==0) && <div className="details-section" id='offering' >
+        <h1>
           Our Offerings
-        </h1>}
-       
+        </h1>
         {pageDate?.offerings?.map(({ type, content }) => {
           return selectComponent(type, content)
         })}
-      </div>
+      </div>}
     </div>
   )
 }
