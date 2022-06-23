@@ -6,7 +6,7 @@ import 'react-rangeslider/lib/index.css'
 import Accordian from '../CommanAccordian'
 import { Link } from 'react-router-dom'
 
-const CourseSection = ({ title, showRangeSlider, color, data, pathParam, sliderRange }) => {
+const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange }) => {
   const [customVal, setCustomVal] = useState(1)
 
   console.log(sliderRange,'slider')

@@ -15,7 +15,7 @@ const SingleCourse = () => {
     setIsLoadding(true)
     setPageData(AllCourses.find(item=>item.key===courseId))
     setIsLoadding(false)
-  }, [])
+  }, [courseId])
   const CareerNameBan = {
     title: 'Career',
     color: 'orange',
