@@ -2,7 +2,7 @@
   height: 95%;
   width: 95%;
   border: 1px solid black;
-  border-radius: 20px;
+  border-radius: 94px;
   margin: 2%;
   justify-content: center;
   input::-webkit-outer-spin-button,
@@ -28,19 +28,22 @@
       list-style: none;
       flex-wrap: wrap;
       justify-content: flex-start;
-      li{
+      li {
         position: relative;
         font-size: 2rem;
         padding: 0 18px;
         border-right: 2.5px solid black;
-        .bottom-line{
-          display: none;
+        .bottom-line {
+    
           margin: 0;
           position: absolute;
           left: 0;
         }
-        &:last-child{
+        &:last-child {
           border: none;
+        }
+        &:first-child{
+          padding-left: 0;
         }
       }
     }
@@ -52,15 +55,22 @@
   .left_flex_contanier {
     .flex_box {
       padding-right: 65px;
+      & > div {
+        input::placeholder {
+          color: #60606080;
+        }
+      }
       .year-of-comp {
         display: flex;
         align-items: center;
+        padding-left: 40px;
+        
       }
     }
     .uploads {
       display: flex;
       justify-content: center;
-      gap: 50px;
+      gap: 43px;
       padding-left: 0;
       & > fieldset {
         margin-top: 17px;
@@ -69,11 +79,11 @@
       }
       label {
         width: 100%;
-        min-width: 320px;
+        min-width: 300px;
         display: block;
         box-sizing: border-box;
         padding: 1rem 2rem;
-        font-size: 2rem;
+        font-size: 1.5rem;
         border: 2px solid #60606080;
         color: #60606080;
         border-radius: 50px;
@@ -84,7 +94,7 @@
         }
       }
       small {
-        color: #121111;
+        color: #60606080;
         float: right;
         padding-right: 2rem;
         font-size: 1.3rem;
@@ -96,18 +106,19 @@
     justify-content: space-between;
     grid-column: 1 / 7;
     margin-bottom: 10px;
+    padding: 0 65px;
     .next_1 {
       border: 1px solid #60606080;
-      height: 37px;
-      width: 80px;
+      height: 50px;
+      width: 120px;
       color: black;
       border-radius: 30px;
-      font-size: 15px;
-      font-weight: 500;
-      padding: 0;
+      font-size: 16px;
+      font-weight: 900;
+      //padding: 0 18px;
       float: right;
       margin-top: 2%;
-      margin-right: 30px;
+      //margin-right: 30px;
       background-color: white;
     }
     .enrollment_logo {
@@ -118,15 +129,15 @@
     }
     .back {
       border: 1px solid #60606080;
-      height: 37px;
-      width: 80px;
+      height: 50px;
+      width: 120px;
       color: black;
       border-radius: 30px;
-      font-size: 15px;
-      font-weight: 500;
-      padding: 0;
+      font-size: 16px;
+      font-weight: 900;
+      //padding: 0 18px;
       float: left;
-      margin-left: 30px;
+     // margin-left: 30px;
       margin-top: 2%;
       background-color: white;
     }
@@ -151,7 +162,7 @@
         input[type='date'].date-input--has-value::-webkit-datetime-edit-month-field,
         input[type='date'].date-input--has-value::-webkit-datetime-edit-day-field,
         input[type='date'].date-input--has-value::-webkit-datetime-edit-year-field {
-          color: #000!important;
+          color: #000 !important;
         }
       }
       .button_div {
@@ -170,7 +181,7 @@
         }
       }
       .num_of_child {
-        padding-left: 70px;
+        padding-left: 30px;
         // .flex_box{
 
         // }
@@ -185,7 +196,7 @@
       }
     }
   }
-  .career-history{
+  .career-history {
     width: 100%;
   }
 
@@ -205,22 +216,37 @@
   }
 
   .qualification-lists p {
-    font-size: 1.5rem;
+    font-size: 20px;
   }
   .radio_text {
     display: flex;
-    justify-content: space-between;
+    gap: 2.5rem;
+    //justify-content: space-between;
     margin-bottom: 10px;
 
     .label_1 {
-      font-size: 25px;
+      font-size: 20px;
       color: #60606080;
     }
   }
 
   .left {
+    form {
+      & > div {
+        input::placeholder {
+          color: #60606080;
+        }
+      }
+    }
     margin: 50px 90px 30px 90px;
     .flex-container {
+      .career-history {
+        & > div {
+          input::placeholder {
+            color: #60606080;
+          }
+        }
+      }
       display: flex;
       align-items: center;
       .button {
@@ -242,20 +268,28 @@
 
   .right {
     margin: 50px 90px 30px 90px;
+    .date_div {
+      & > div {
+        input::placeholder {
+          color: #60606080;
+        }
+      }
+    }
   }
 
   .label {
     font-size: 20px;
     color: #60606080;
-    margin: 17px 17px 17px 17px;
+   // margin: 17px 17px 17px 17px;
     width: 50%;
+    min-width: fit-content;
   }
 
   .label_1 {
     font-size: 20px;
     color: #60606080;
     margin: 17px 17px 17px 17px;
-    width: 50%;
+    //width: 50%;
     align-items: center;
     display: flex;
   }
@@ -266,24 +300,54 @@
     margin: 17px;
   }
 
+  .label_any {
+    font-size: 17px;
+  }
   .other {
     height: 95%;
     width: 95%;
     margin: 2%;
+    .other_1 {
+      margin: 50px 45px 30px 15px;
+
+      & > div {
+        input::placeholder {
+          color: #60606080;
+        }
+      }
+      .other_div{
+        padding: 0 18px;
+      }
+      .underline {
+        border: 0;
+        border-bottom: 1px solid #60606080;
+        width: 97%;
+        //margin: 10px;
+        margin-top: 40px;
+        margin-bottom: 220px;
+      }
+    }
     .last_div {
       display: flex;
-      justify-content: center;
-      align-items: center;
+      height: 50%;
+      width: 50%;
+      margin: 0 auto;
+      .course_details_text {
+        font-size: 20px;
+        color: #60606080;
+        margin: 17px 17px 17px 17px;
+        text-align: left;
+        min-width: 230px;
+      }
+      
       flex-direction: column;
       text-align: center;
       .uploads {
         display: flex;
-        justify-content: center;
-
         gap: 40px;
         & > fieldset {
           margin-top: 17px;
-          width: 22%;
+          width: 27%;
           border: none;
         }
         label {
@@ -301,7 +365,7 @@
           }
         }
         small {
-          color: #121111;
+          color: #60606080;
           float: right;
           padding-right: 2rem;
           font-size: 0.9rem;
@@ -309,14 +373,16 @@
       }
       .last_radio_button {
         display: flex;
-        justify-content: center;
         gap: 17px;
+        .radio_button{
+          display: flex;
+        }
         .label_1 {
           font-size: 17px;
           color: #60606080;
           margin: 0px;
           width: 100%;
-          min-width: 150px;
+         // min-width: 150px;
           align-items: center;
           display: flex;
           margin-top: 17px;
@@ -335,10 +401,10 @@
         display: flex;
         position: relative;
         .current_duration {
-          margin-top: 70px;
+          margin-top: 50px;
           font-weight: bold;
           font-size: 1.5rem;
-          text-align: right;
+          text-align: left;
         }
         .current_fees {
           position: absolute;
@@ -350,6 +416,7 @@
         .detail_image_box {
           width: 250px;
           height: 195px;
+          min-width: 250px;
           img {
             width: 100%;
             height: 100%;
@@ -359,10 +426,6 @@
         }
       }
     }
-  }
-
-  .other_1 {
-    margin: 50px 45px 30px 15px;
   }
 
   .text {
@@ -379,14 +442,6 @@
     margin-bottom: 10px;
     border: 1px solid #60606080;
     padding: 30px;
-  }
-
-  .underline {
-    border: 0;
-    border-bottom: 1px solid #60606080;
-    width: 97%;
-    margin: 10px;
-    margin-bottom: 50px;
   }
 
   input[type='radio'] {
@@ -428,8 +483,9 @@
 
   .student {
     font-weight: 600;
-    font-size: 20px;
+    font-size: 25px;
     margin-bottom: 15px;
+    //padding: 0 18px;
   }
 
   .x {
@@ -437,22 +493,39 @@
     font-size: 20px;
     font-weight: 900;
     display: flex;
-    padding-right: 40px;
+    margin-right: 50px;
+    //padding-right: 40px;
     border: none;
     background-color: white;
     cursor: pointer;
   }
 }
-@media (max-width: '1850px') {
+@media (max-width: '1855px') {
   .enrollment_container {
     .left_flex_contanier {
       .uploads {
-        gap: 50px;
+        gap: 40px;
+        label {
+          min-width: 280px;
+        }
       }
     }
   }
 }
-@media (max-width: '1700px') {
+
+@media (max-width: '1800px') {
+  .enrollment_container {
+    .left_flex_contanier {
+      .uploads {
+        gap: 35px;
+        label {
+          min-width: 280px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: '1720px') {
   .enrollment_container {
     .left_flex_contanier {
       .uploads {
@@ -463,13 +536,41 @@
     }
   }
 }
-@media (max-width: '1500px') {
+
+@media (max-width: '1655px') {
   .enrollment_container {
-    .label {
-      font-size: 18px;
+    .left_flex_contanier {
+      .uploads {
+        label {
+          min-width: 240px;
+        }
+      }
     }
   }
 }
+
+@media (max-width: '1610px') {
+  .enrollment_container {
+    .left_flex_contanier {
+      .uploads {
+        label {
+          min-width: 210px;
+        }
+      }
+    }
+  }
+}
+// @media (max-width: '1500px') {
+//   .enrollment_container {
+//     .left_flex_contanier {
+//       .uploads {
+//         label {
+//           min-width: 230px;
+//         }
+//       }
+//     }
+//   }
+// }
 
 @media (max-width: '1400px') {
   .enrollment_container {
@@ -597,8 +698,10 @@
       font-size: 16px;
       .header_ul {
         justify-content: center;
-        li{padding: 0 20px;
-        border-right: 1px solid black;}
+        li {
+          padding: 0 20px;
+          border-right: 1px solid black;
+        }
       }
       .student {
         font-size: 18px;
@@ -640,9 +743,10 @@
         margin-top: 3%;
       }
     }
-    ::placeholder {
-      font-size: 15px;
-    }
+    // &::placeholder {
+    //   font-size: 15px;
+    //   color: #60606080;
+    // }
 
     .left_flex_contanier {
       .flex_box {
