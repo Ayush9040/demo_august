@@ -88,7 +88,8 @@ const Enrollment = () => {
   const [ qualificationAsset2,setQualificationAsset2]=useState('')
   const [ experienceAsset1,setExperienceAsset1]=useState('')
   const [ experienceAsset2,setExperienceAsset2]=useState('')
- 
+  console.log(yearEmpty)
+  console.log(resgin)
 
   const listDetailHandler = () => {
     if (formData.resignation.length !== 4) {
@@ -179,7 +180,7 @@ const Enrollment = () => {
     } else setBold(4)
   }
 
-  const handleSubmit = async(data)=>{
+  const handleSubmit = async()=>{
     let body = {
       personalDetails: {
         name: formData.name,
