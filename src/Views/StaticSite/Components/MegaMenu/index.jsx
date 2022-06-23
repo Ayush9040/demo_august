@@ -289,20 +289,20 @@ const MegaMenu = ({ setNav }) => {
             <div className="single-menu">
               <h3>21 DAYS BETTER LIVING COURSE</h3>
               <ul>
-                <Link onClick={() => {setNav(false)}}  to="">
+                <Link onClick={() => {setNav(false)}}  to="/courses/course/batch1-21days-morning-oncampus/">
                   <li>Batch 1 - 21-Days BLC - Morning On Campus-English</li>
                 </Link>
-                <Link onClick={() => {setNav(false)}}  to="">
+                <Link onClick={() => {setNav(false)}}  to="/courses/course/21-days-blc-batch2/">
                   <li>
                     Batch 2 - 21-Days BLC - Evening Online & On Campus-English
                   </li>
                 </Link>
-                <Link onClick={() => {setNav(false)}}  to="">
+                <Link onClick={() => {setNav(false)}}  to="/courses/course/21-days-blc-batch3/">
                   <li>
                     Batch 3 - 21-Days BLC - Evening Online & On Campus-Hindi
                   </li>
                 </Link>
-                <Link onClick={() => {setNav(false)}}  to="">
+                <Link onClick={() => {setNav(false)}}  to="/courses/course/21-days-blc-batch4/">
                   <li>Batch 4 - 21-Days BLC-Morning-Online English</li>
                 </Link>
                 <Link onClick={() => {setNav(false)}}  to=''>
@@ -359,8 +359,8 @@ const MegaMenu = ({ setNav }) => {
             <div className="single-menu">
               <h3>7 DAYS HEALTH CAMP</h3>
               <ul>
-                <Link onClick={() => {setNav(false)}}  to=''><li>7 Days Health Camp - On Campus - English</li></Link>
-                <Link onClick={() => {setNav(false)}}  to=''><li>7 Days Health Camp - On Campus - Hindi</li></Link>
+                <Link onClick={() => {setNav(false)}}  to='/courses/course/7-days-heath-camp-on-campus-english/'><li>7 Days Health Camp - On Campus - English</li></Link>
+                <Link onClick={() => {setNav(false)}}  to='/courses/course/7-days-heath-camp-on-campus/'><li>7 Days Health Camp - On Campus - Hindi</li></Link>
               </ul>
               <h3>CAMPS & WORKSHOPS</h3>
               <ul>
