@@ -108,6 +108,7 @@
     margin-bottom: 10px;
     padding: 0 65px;
     .next_1 {
+      cursor: pointer;
       border: 1px solid #60606080;
       height: 50px;
       width: 120px;
@@ -140,7 +141,9 @@
      // margin-left: 30px;
       margin-top: 2%;
       background-color: white;
+      cursor: pointer;
     }
+    
   }
   .details {
     display: grid;
@@ -727,6 +730,7 @@
     .footer {
       margin-bottom: 0;
       .next_1 {
+        cursor: pointer;
         height: 30px;
         width: 65px;
         margin-top: 3%;
@@ -741,6 +745,7 @@
         height: 30px;
         width: 65px;
         margin-top: 3%;
+        cursor: pointer;
       }
     }
     // &::placeholder {
@@ -833,6 +838,7 @@
     .footer {
       margin-bottom: 0;
       .next_1 {
+        cursor: pointer;
         height: 30px;
         width: 65px;
         margin-top: 4%;
@@ -849,6 +855,7 @@
         width: 65px;
         margin-top: 4%;
         font-size: 13px;
+        cursor: pointer;
       }
     }
     .left_flex_contanier {
