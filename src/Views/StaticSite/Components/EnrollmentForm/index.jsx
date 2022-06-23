@@ -7,15 +7,16 @@ import { useParams } from 'react-router-dom'
 import InputComponent from '../InputComponent'
 import { validateEmail } from '../../../../helpers'
 import { Link } from 'react-router-dom'
-import axios from 'axios'
 import DisclaimerPolicy from '../DisclaimerPolicy'
 
 const Enrollment = () => {
   const { courseId } = useParams()
   const [currentCourse, setCurrentCourse] = useState({})
+  const [courseDate,setCourseDate]=useState('')
 
   useEffect(() => {
     setCurrentCourse(AllCourses.find((item) => item.key === courseId))
+    setCourseDate(localStorage.getItem('selectedDate'))
   }, [])
 
 
@@ -181,7 +182,7 @@ const Enrollment = () => {
     } else setBold(4)
   }
 
-  const handleSubmit = async(data)=>{
+  const handleSubmit = async()=>{
     setBold(5)
   }
 
@@ -992,9 +993,9 @@ const Enrollment = () => {
                       <img src={currentCourse?.image} alt="" />
                     </div>
                     <div className="current_duration">
-                      {currentCourse?.title}
-                      {currentCourse?.details?.find(item=>item.content.title==='Date')?.content?.text[0]}
-                      <div className="current_fees">{currentCourse?.details?.find(item=>item.content.title==='Fees')?.content?.text[0]}</div>
+                      {currentCourse?.title}&nbsp;
+                      {courseDate ? courseDate:''}
+                      <div className="current_fees">{currentCourse?.fees}</div>
                     </div>
                   </div>
                 </div>

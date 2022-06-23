@@ -15,11 +15,9 @@ const CourseCard = ({
   description,
   path,
   img = 'http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Courses/course%20%281%29.png',
-  rating=5,
-  dates=[]
+  rating = 5,
+  dates = [],
 }) => {
-
-
   const selectStyles = {
     cursor: 'pointer',
     background: color,
@@ -32,24 +30,26 @@ const CourseCard = ({
     borderStyle: 'solid',
     maxWidth: 'fit-content',
   }
-  const [ratingArr,setRatingArr] = useState([])
+  const [ratingArr, setRatingArr] = useState([])
 
-  useEffect(()=>{
-    let arr =[]
+  useEffect(() => {
+    let arr = []
     for (let i = 0; i < rating; i++) {
-      arr[i]=i
+      arr[i] = i
       setRatingArr(arr)
     }
-  },[])
+  }, [])
 
-  
+  const [selectDate, setSetselectDate] = useState()
+  localStorage.setItem('selectedDate',selectDate)
 
   return (
     <div className="course-card">
       <div className="course-card-image">
         <img src={img} />
         <div className="stars">
-          {ratingArr.length!==0 && ratingArr.map((item,id)=><StarIcon key={id} />)}
+          {ratingArr.length !== 0 &&
+            ratingArr.map((item, id) => <StarIcon key={id} />)}
         </div>
       </div>
       <div
@@ -59,18 +59,21 @@ const CourseCard = ({
         }}
       >
         <h4>{courseTitle}</h4>
-        <h3>
-          {description}
-        </h3>
-        {/* <SelectDropDown text = {'Select Dates'} isStyles = {selectStyles} /> */}
+        <h3>{description}</h3>
+        {/* <SelectDropDown currentValue={selectDate} changeCurrentValue={setSetselectDate} text={'Select Dates'} isStyles={selectStyles} /> */}
         <div className="course-card-dropdown">
-          <SelectDropDown dates={dates} text={'Select Dates'} isStyles={ selectStyles } />
+          <SelectDropDown currentValue={selectDate} changeCurrentValue={setSetselectDate} text={'Select Dates'} isStyles={selectStyles} dates={dates} />
+          {/* <SelectDropDown
+            dates={dates}
+            text={'Select Dates'}
+            isStyles={selectStyles}
+          /> */}
         </div>
         <div className="Button-class">
           <Link to={`/courses/course/${path}/`}>
-            <CommonBtn text={'View Details'}/>
+            <CommonBtn text={'View Details'} />
           </Link>
-          <Link to={`/enrollment/${path}/`}>
+          <Link to={`/user/sign-in/${path}/`}>
             <CommonBtn text={'Enroll Now'} />
           </Link>
         </div>
