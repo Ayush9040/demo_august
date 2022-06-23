@@ -4,10 +4,10 @@ import SignUp from '../Views/Signup'
 const authRoutes = [
   {
     Component: SignIn,
-    path: '/sign-in/:courseId',
+    path: '/sign-in/*',
     exact: true,
     id: 'statisSiteUnderSignIn',
-    routePath: '/sign-in/:courseId',
+    routePath: '/sign-in/*',
     name: 'SignIn',
   },
   {
