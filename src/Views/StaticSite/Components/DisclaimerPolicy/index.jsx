@@ -1,8 +1,87 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './style.scss'
 import baseDomain, { homeAssets } from '../../assets/images/imageAsset'
+import axios from 'axios'
+import { useNavigate } from 'react-router-dom'
 
-const DisclaimerPolicy = () => {
+const DisclaimerPolicy = ({
+  formData,
+  qualificationData,
+  listData,
+  currentCourse,
+  courseAsset1,
+  courseAsset2,
+}) => {
+  const [disData, setDisData] = useState({
+    terms: 'no',
+    signature: null,
+    fullName: '',
+  })
+
+  const navigate = useNavigate()
+
+  const [empty, setEmpty] = useState(0)
+
+  const handleSubmit1 = async() => {
+    if (disData.terms === 'no') {
+      return setEmpty(1)
+    } else if (disData.signature === null) {
+      return setEmpty(3)
+    } else if (disData.name === '') {
+      return setEmpty(2)
+    } else {
+      setEmpty(0)
+      let body = {
+        personalDetails: {
+          name: formData.name,
+          emailId: formData.email,
+          phone: formData.phone,
+          addressLane1: formData.address1,
+          addressLane2: formData.address2,
+          country: formData.country,
+          state: formData.state,
+          city: formData.city,
+          pincode: formData.pincode,
+          gender: formData.gender,
+          dob: formData.DOB,
+          nationality: formData.nationality,
+          numberOfChildren: formData.numberOfChildren,
+          ageOfChild1: formData.age1,
+          ageOfChild2: formData.age2,
+        },
+        academicQualification: qualificationData,
+        workExperience: listData,
+        others: {
+          medicalHistory: formData.medicalstatus,
+          howDoYouHearAboutUs: formData.source || formData.sourceinfo,
+        },
+        courseDetails: {
+          courseId: currentCourse.key,
+          mode: formData.residental,
+          certificateImgAsset: courseAsset1,
+          certificatePdfAsset: courseAsset2,
+          startDate: '10000',
+          endDate: '10000',
+        },
+        signature: disData.signature,
+      }
+
+      const jsonBody = JSON.stringify(body)
+      console.log(jsonBody, 'json-body')
+      axios.post(
+        'https://cms-dev-be.theyogainstituteonline.org/v1/form',
+        body
+      ).then((response)=>{
+        console.log(response)
+        if (response.data.success===true) {
+          console.log('abc')
+          navigate('/enrollment_thankyou')
+        }
+      })
+   
+    }
+  }
+
   return (
     <div className="main-container">
       <div className="heading-content">
@@ -80,8 +159,17 @@ const DisclaimerPolicy = () => {
           INSTITUTE.
         </p>
         <div className="terms-conditions">
-          <input type="checkbox" />
+          <input
+            type="checkbox"
+            onChange={() => setDisData({ ...disData, terms: 'yes' })}
+          />
+
           <p>I have read and agree to the above terms and conditions.</p>
+          {empty === 1 && (
+            <small style={{ color: 'red', marginLeft: '0' }}>
+              *Please agree to the condition!
+            </small>
+          )}
         </div>
       </div>
       <div className="bottom-content">
@@ -109,18 +197,42 @@ const DisclaimerPolicy = () => {
       </div>
       <div className="last-section">
         <div className="last">
-          <input type="text" placeholder="Full Name" />
+          <input
+            type="text"
+            placeholder="Full Name"
+            onChange={(e) =>
+              setDisData({ ...disData, fullName: e.target.value })
+            }
+          />
+          {empty === 2 && (
+            <small style={{ color: 'red', marginLeft: '0' }}>
+              *Please Enter your full name!
+            </small>
+          )}
           <hr />
         </div>
         <div className="signature-section">
           <p>Upload Digital Signature (jpeg or png. Under 1MB)</p>
 
           <label htmlFor="signature" className="signature">
-            <input name="signature" id="signature" type="file" />
+            <input
+              name="signature"
+              id="signature"
+              type="file"
+              accept="image/png, image/jpeg"
+              onChange={(e) =>
+                setDisData({ ...disData, signature: e.target.value })
+              }
+            />
           </label>
+          {empty === 3 && (
+            <small style={{ color: 'red', marginLeft: '0' }}>
+              *Please Enter email signature!
+            </small>
+          )}
         </div>
         <div className="privacy-button">
-          <button>Submit</button>
+          <button onClick={handleSubmit1}>Submit</button>
         </div>
       </div>
     </div>

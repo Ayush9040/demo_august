@@ -24,6 +24,8 @@ import Museum from '../Views/Museum'
 import Authentication from '../Views/Authentication'
 import SoicalPage from '../Views/SocialPage'
 import VolunteerPage from '../Views/Volunteer'
+import Greeting from '../Components/Greetings'
+import EnrollmentThankyou from '../Components/EnrollmentThankyou'
 
 const staticSiteRoutes = [
   {
@@ -227,13 +229,14 @@ const staticSiteRoutes = [
     routePath: '/csr',
     name: 'csr',
   },
+  
   {
-    Component: SingleCsr,
-    path: '/csr/:csrId',
+    Component: EnrollmentThankyou,
+    path: '/enrollment_thankyou',
     exact: true,
-    id: 'statisSiteUnderSingleCsr',
-    routePath: '/csr/:csrId',
-    name: 'SingleCsr',
+    id: 'statisSiteUnderEnrollmentThankyou',
+    routePath: '/enrollment_thankyou',
+    name: 'EnrollmentThankyou',
   },
 ]
 

@@ -8,6 +8,7 @@ import InputComponent from '../InputComponent'
 import { validateEmail } from '../../../../helpers'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
+import DisclaimerPolicy from '../DisclaimerPolicy'
 
 const Enrollment = () => {
   const { courseId } = useParams()
@@ -180,43 +181,7 @@ const Enrollment = () => {
   }
 
   const handleSubmit = async(data)=>{
-    let body = {
-      personalDetails: {
-        name: formData.name,
-        emailId: formData.email,
-        phone: formData.phone,
-        addressLane1: formData.address1,
-        addressLane2: formData.address2,
-        country: formData.country,
-        state: formData.state,
-        city: formData.city,
-        pincode : formData.pincode,
-        gender: formData.gender,
-        dob: formData.DOB,
-        nationality: formData.nationality,
-        numberOfChildren: formData.numberOfChildren,
-        ageOfChild1: formData.age1,
-        ageOfChild2: formData.age2
-      },
-      academicQualification: qualificationData,
-      workExperience: listData,
-      others: {
-        medicalHistory: formData.medicalstatus,
-        howDoYouHearAboutUs: formData.source || formData.sourceinfo,
-      },
-      courseDetails: {
-        courseId: currentCourse.key,
-        mode:formData.residental,
-        certificateImgAsset: courseAsset1,
-        certificatePdfAsset: courseAsset2,
-        startDate: '10000',
-        endDate: '10000'
-      }
-    }
-
-    const jsonBody = JSON.stringify(body)
-    console.log(jsonBody,'json-body')
-    await axios.post('https://cms-dev-be.theyogainstituteonline.org/v1/form',body)
+    setBold(5)
   }
 
   return (
@@ -1153,7 +1118,7 @@ const Enrollment = () => {
             </div>
           </div>
         ) : (
-          ''
+          <DisclaimerPolicy formData={formData} qualificationData={qualificationData} listData={listData} currentCourse={currentCourse} courseAsset1={courseAsset1} courseAsset2={courseAsset2}/>
         )}
       </div>
     </>
