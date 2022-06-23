@@ -563,7 +563,7 @@ const Enrollment = () => {
                   <div className="uploads">
                     <fieldset>
                       <label htmlFor="image">
-                        Upload Image
+                        { qualificationAsset1 ? qualificationAsset1.substring(0,15) : 'Upload Image'}
                         <input
                           type={'file'}
                           id="image"
@@ -578,12 +578,13 @@ const Enrollment = () => {
                     </fieldset>
                     <fieldset>
                       <label htmlFor="resume">
-                        Upload Resume
+                        { qualificationAsset2 ? qualificationAsset2.substring(0,15) : 'Upload PDF'}
                         <input
                           type={'file'}
                           value={qualificationAsset2}
                           onChange={(e)=>{setQualificationAsset2(e.target.value)}}
                           id="resume"
+                          accept='.pdf'
                           placeholder="Upload Resume"
                         />
                         &ensp;
@@ -681,7 +682,7 @@ const Enrollment = () => {
                   <div className="uploads">
                     <fieldset>
                       <label htmlFor="image">
-                        Upload Image
+                        { experienceAsset1 ? experienceAsset1.substring(0,15) : 'Upload Image'}
                         <input
                           type={'file'}
                           id="image"
@@ -696,12 +697,13 @@ const Enrollment = () => {
                     </fieldset>
                     <fieldset>
                       <label htmlFor="resume">
-                        Upload Resume
+                        { experienceAsset2 ? experienceAsset2.substring(0,15) : 'Upload PDF'}
                         <input
                           type={'file'}
                           value={experienceAsset2}
                           onChange={(e)=>{setExperienceAsset2(e.target.value)}}
                           id="resume"
+                          accept='.pdf'
                           placeholder="Upload Resume"
                         />
                         &ensp;
@@ -1084,7 +1086,7 @@ const Enrollment = () => {
                   <div className="uploads">
                     <fieldset>
                       <label htmlFor="image">
-                        Upload Image
+                        { courseAsset1 ? courseAsset1.substring(0,15) : 'Upload Image'}
                         <input
                           type={'file'}
                           id="image"
@@ -1099,12 +1101,13 @@ const Enrollment = () => {
                     </fieldset>
                     <fieldset>
                       <label htmlFor="resume">
-                        Upload Resume
+                        { courseAsset2 ? courseAsset2.substring(0,15) : 'Upload PDF'}
                         <input
                           type={'file'}
                           value={ courseAsset2 }
                           onChange={e=>setCourseAsset2(e.target.value)}
                           id="resume"
+                          accept='.pdf'
                           placeholder="Upload Resume"
                         />
                         &ensp;
