@@ -1,10 +1,10 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { legacy1 } from '../../assets/icons/icon'
 import './style.scss'
 import { useNavigate } from 'react-router-dom'
 
 const EnrollmentThankyou = () => {
-  const [greetModal, setGreetModal] = useState(true)
+  const greetModal= true
 
   const navigate = useNavigate()
 

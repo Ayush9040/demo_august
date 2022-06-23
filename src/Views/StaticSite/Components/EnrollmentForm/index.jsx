@@ -206,27 +206,27 @@ const Enrollment = () => {
             </li>
             <li
               style={bold === 1 ? { fontWeight: '600' } : {}}
-              onClick={() => setBold(1)}
+              onClick={handleEmpty1}
             >
               Academic Qualifications{' '}
               {bold === 1 && <div className="bottom-line"></div>}
             </li>
             <li
               style={bold === 2 ? { fontWeight: '600' } : {}}
-              onClick={() => setBold(2)}
+              onClick={handleEmpty2}
             >
               Work Experience{' '}
               {bold === 2 && <div className="bottom-line"></div>}
             </li>
             <li
               style={bold === 3 ? { fontWeight: '600' } : {}}
-              onClick={() => setBold(3)}
+              onClick={handleEmpty3}
             >
               Other{bold === 3 && <div className="bottom-line"></div>}
             </li>
             <li
               style={bold === 4 ? { fontWeight: 600 } : {}}
-              onClick={() => setBold(4)}
+              onClick={handleEmpty4}
             >
               Course Details
               {bold === 4 && <div className="bottom-line"></div>}
