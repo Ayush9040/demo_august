@@ -3272,7 +3272,7 @@ const ttc900hr = {
   3: {
     id: '',
 
-    key: '3 Months TTC',
+    key: '3-months-ttc',
 
     metaDescription: 'You will learn the tools to master your physical, mental and spiritual well-being. You will see a marked improvement in your life, relationships and work.',            
     title: '900 hrs TTC - 3 Months TTC - On Campus - English',
@@ -3775,7 +3775,7 @@ const ttc900hr = {
   4: {
     id: '',
 
-    key: '4-Months-900hr',
+    key: '4-months-900hr',
 
     metaDescription: 'You will learn the tools to master your physical, mental and spiritual well-being. You will see a marked improvement in your life, relationships and work.',            
     title: '900 hrs TTC - 4 Months TTC - On Campus - English',
@@ -4370,7 +4370,7 @@ const ttc900hr = {
   5: {
     id: '',
 
-    key: '7-Months-900hr',
+    key: '7-months-900hr',
 
     metaDescription: 'You will learn the tools to master your physical, mental and spiritual well-being. You will see a marked improvement in your life, relationships and work.',            
     title: '900 hrs TTC - 7 Months TTC - Online & On Campus - English',
@@ -6679,7 +6679,7 @@ const camps = {
   15: {
     id: '',
     title: 'Women’s Camp',
-    key: 'women’s-camp',
+    key: 'womens-camp',
     dates: ['11th June 2022','13th August 2022','8th October 2022','10th December 2022'],
     mostPopular: false,
     rating: 5,
