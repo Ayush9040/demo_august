@@ -17,7 +17,7 @@ const SelectDropDown = ({ text, dates = [1, 2, 3, 4, 5], isStyles, currentValue 
         <select
           className="Select-dropdown"
           value={ currentValue }
-          style={{ background: isStyles.background }}
+          style={{ background: isStyles.background,color:isStyles.color }}
           onChange={(e)=>{ changeCurrentValue(e.target.value) }}
         >
           <option>{text}</option>

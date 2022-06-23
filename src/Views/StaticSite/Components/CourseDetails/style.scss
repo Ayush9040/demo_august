@@ -55,31 +55,33 @@
   }
   .career-navigation-lg-div {
     padding: 2rem 10rem;
-  }
-  .career-navigation-lg {
-    ul.innerNav {
-      display: flex;
-      align-items: center;
-      justify-content: left;
-      list-style: none;
-      margin: 0rem auto;
-      padding: 0;
-      li {
-        font-size: 1.8rem;
-        // margin: 0 0.5rem;
-        border-right: 1px solid #000;
-        padding: 0 1rem;
-        cursor: pointer;
-        em {
-          font-style: normal;
-          &.active {
-            font-weight: 700;
-            border-bottom: 3px solid var(--brick-red);
+    .career-navigation-lg {
+      margin-top: 2rem;
+      ul.innerNav {
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        list-style: none;
+        margin: 0rem auto;
+        padding: 0;
+        li {
+          font-size: 1.8rem;
+          // margin: 0 0.5rem;
+          border-right: 1px solid #000;
+          padding: 0 1rem;
+          cursor: pointer;
+          em {
+            font-style: normal;
+            &.active {
+              font-weight: 700;
+              border-bottom: 3px solid var(--brick-red);
+            }
           }
         }
       }
     }
   }
+
   .details-section {
     padding: 2rem 10rem;
     width: 85%;
