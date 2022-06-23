@@ -7,11 +7,20 @@ import './style.scss'
 import CommonBtn from '../../../../Components/commonbtn'
 import { Link } from 'react-router-dom'
 import InputComponent from '../../../../Components/InputComponent'
+import { useLocation } from 'react-router-dom'
 const SignIn = () => {
+  const[course, setCourse] = useState()
   const [formData, setFormData] = useState({
     name: '',
     password: '',
   })
+  const location = useLocation()
+  console.log(location.pathname.split('/'))
+
+  
+  useEffect(() => {
+    setCourse(location?.pathname?.split('/')?.[3])
+  }, [location])
 
   useEffect(() => {
     window.scrollTo(0, 0)
@@ -47,7 +56,9 @@ const SignIn = () => {
           </label>
           <label className="signin-btn">
             <CommonBtn text={'Sign In'} />
-            <CommonBtn text={'Continue as a guest'} isColor={'#EA4335'} />
+            <Link to={`/enrollment/${course}`}>
+              <CommonBtn text={'Continue as a guest'} isColor={'#EA4335'} />
+            </Link>
           </label>
         </form>
         <div className="social-logins guest">
