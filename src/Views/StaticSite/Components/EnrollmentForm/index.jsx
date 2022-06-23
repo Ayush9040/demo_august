@@ -1040,6 +1040,8 @@ const Enrollment = () => {
                         type="radio"
                         name="resident"
                         value="RESIDENTIAL"
+                        disabled={currentCourse.residential===false  ? true:false}
+                        style={currentCourse.residential===false  ? { background:'grey' }:{}}
                         onChange={(e) => {
                           if (e.target.checked) {
                             setFormData({
@@ -1056,6 +1058,8 @@ const Enrollment = () => {
                         type="radio"
                         name="resident"
                         value="ONLINE"
+                        disabled={currentCourse.online===false  ? true:false}
+                        style={currentCourse.online===false  ? { background:'grey' }:{}}
                         onChange={(e) => {
                           if (e.target.checked) {
                             setFormData({
@@ -1072,7 +1076,10 @@ const Enrollment = () => {
                     <label htmlFor="" className="label_1">
                       <input
                         type="radio"
+                        name='resident'
                         value="NONRESIDENTIAL"
+                        disabled={currentCourse.nonResidential===false  ? true:false}
+                        style={currentCourse.nonResidential===false  ? { background:'grey' }:{}}
                         onChange={(e) => {
                           if (e.target.checked) {
                             setFormData({
@@ -1089,6 +1096,8 @@ const Enrollment = () => {
                         type="radio"
                         name="resident"
                         value="OFFLINE"
+                        disabled={currentCourse.onCampus===false  ? true:false}
+                        style={currentCourse.onCampus===false  ? { background:'grey' }:{}}
                         onChange={(e) => {
                           if (e.target.checked) {
                             setFormData({
