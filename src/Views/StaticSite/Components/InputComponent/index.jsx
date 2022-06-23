@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './style.scss'
 
 const InputComponent = ({
@@ -12,18 +12,22 @@ const InputComponent = ({
   minnum,
   maxnum,
 }) => {
+
+  const [changeType,setChangeType]=useState(type)
   return (
     <div className="form-content">
       <form>
         <label style={css}>
           {icon}
           <input
-            type={type}
+            type={changeType}
             placeholder={placeholder}
             value={form[keyName]}
             name={keyName}
             max={maxnum}
             min={minnum}
+            onFocus={keyName==='DOB' ?()=>{setChangeType('date')}:()=>{setChangeType(type)}}
+            onBlur={()=>{setChangeType(type)}}
             onChange={(e) =>{e.preventDefault();setField({ ...form, [keyName]: e.target.value })}}
           />
         </label>

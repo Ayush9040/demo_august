@@ -268,7 +268,7 @@ const Enrollment = () => {
         </div>
 
         {bold === 0 ? (
-          <div>
+          <div> 
             <div className="details">
               <div className="left">
                 <form>
@@ -438,7 +438,7 @@ const Enrollment = () => {
                 <div className="date_div">
                   <div>
                     <InputComponent
-                      type="date"
+                      type="text"
                       placeholder="DOB"
                       form={formData}
                       setField={setFormData}
@@ -708,7 +708,7 @@ const Enrollment = () => {
                       form={formData}
                       setField={setFormData}
                       keyName="resignation"
-                      value={formData.resignition}
+                      value={formData.resignation}
                     />
                   </div>
                   <div className="uploads">
@@ -785,7 +785,7 @@ const Enrollment = () => {
           <div>
             <div className="other">
               <div className="other_1">
-                <div>
+                <div className='other_div' >
                   <div>
                     <label className="label">
                       Medical History & Current Health Issues :
@@ -891,9 +891,9 @@ const Enrollment = () => {
                     </div>
                   </div>
                 </div>
-                <div>
+                <div className='other_div'>
                   <input
-                    className="underline label"
+                    className="underline label_any"
                     type="text"
                     placeholder="Any other source please specify"
                     onChange={(e) => {
@@ -1032,10 +1032,10 @@ const Enrollment = () => {
                     </div>
                   </div>
                 </div>
-                <div className="label">Please select one of these options</div>
+                <div className="course_details_text">Please select one of these options</div>
                 <form>
                   <div className="last_radio_button">
-                    <label htmlFor="" className="label_1">
+                    <label htmlFor="" className="course_details_text radio_button" >
                       <input
                         type="radio"
                         name="resident"
@@ -1051,7 +1051,7 @@ const Enrollment = () => {
                       />{' '}
                       &nbsp; Resident
                     </label>
-                    <label htmlFor="" className="label_1">
+                    <label htmlFor="" className="course_details_text radio_button" >
                       <input
                         type="radio"
                         name="resident"
@@ -1069,7 +1069,7 @@ const Enrollment = () => {
                     </label>
                   </div>
                   <div className="last_radio_button">
-                    <label htmlFor="" className="label_1">
+                    <label htmlFor="" className="course_details_text radio_button">
                       <input
                         type="radio"
                         value="NONRESIDENTIAL"
@@ -1084,7 +1084,7 @@ const Enrollment = () => {
                       />{' '}
                       &nbsp; Non-Resident
                     </label>
-                    <label htmlFor="" className="label_1">
+                    <label htmlFor="" className="course_details_text radio_button">
                       <input
                         type="radio"
                         name="resident"
@@ -1103,7 +1103,7 @@ const Enrollment = () => {
                   </div>
                 </form>
                 {/* <div className='upload_box'> */}
-                <div className="label">
+                <div className="course_details_text">
                   Please upload the relevant TYI certificate pre requisite
                   <div className="uploads">
                     <fieldset>
@@ -1117,6 +1117,8 @@ const Enrollment = () => {
                           placeholder="Upload Image"
                           accept="image/*"
                         />
+                        &ensp;
+                        {upload}
                       </label>
                     </fieldset>
                     <fieldset>
@@ -1129,6 +1131,8 @@ const Enrollment = () => {
                           id="resume"
                           placeholder="Upload Resume"
                         />
+                        &ensp;
+                        {upload}
                       </label>
                       <br />
                       <small>Please ensure the file is under 2 MB</small>
