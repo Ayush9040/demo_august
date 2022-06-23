@@ -24,7 +24,6 @@ import Museum from '../Views/Museum'
 import Authentication from '../Views/Authentication'
 import SoicalPage from '../Views/SocialPage'
 import VolunteerPage from '../Views/Volunteer'
-//import Greeting from '../Components/Greetings'
 import EnrollmentThankyou from '../Components/EnrollmentThankyou'
 
 const staticSiteRoutes = [
