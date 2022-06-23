@@ -2,10 +2,10 @@ import React from 'react'
 import './style.scss'
 import Navbar from '../Navbar'
 
-const HeroSection = () => {
+const HeroSection = ({ isUserLoggedIn }) => {
   return (
     <div className="landing-page-container">
-      <Navbar />
+      <Navbar isUserLoggedIn={isUserLoggedIn} />
     </div>
   )
 }

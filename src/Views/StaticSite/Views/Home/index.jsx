@@ -1,4 +1,7 @@
 import React, { useEffect } from 'react'
+import { useLocation } from 'react-router-dom'
+import { useSelector } from 'react-redux'
+
 import HeroSection from '../../Components/HeroSection'
 import Legacy from '../../Components/Legacy'
 import Activity from '../../Components/Activity'
@@ -11,11 +14,10 @@ import VideosSection from '../../Components/Videos'
 import NewsLetter from '../../Components/NewsLetter'
 import Footer from '../../Components/Footer'
 import Blog from '../../Components/BlogSection'
-import { useLocation } from 'react-router-dom'
-
 
 const Home = () => {
   const route = useLocation()
+  const { isLoggedIn } = useSelector((state) => state.auth)
   console.log(route.hash.substring(1, route.hash.length))
   useEffect(() => {
     if (route.hash) {
@@ -26,7 +28,7 @@ const Home = () => {
   })
   return (
     <>
-      <HeroSection />
+      <HeroSection isUserLoggedIn={isLoggedIn} />
       <Legacy />
       <OurOfferings />
       <Activity />
