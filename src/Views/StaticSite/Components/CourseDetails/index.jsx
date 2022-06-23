@@ -135,7 +135,7 @@ const CourseDetails = ({ pageDate }) => {
               'Lorem Ipsum is simply dummy text of the printing and typesetting industry. '}
           </p>
           <div className="course-options">
-            <Link to={`/enrollment/${pageDate.key}`}>
+            <Link to={`/user/sign-in/${pageDate.key}/`}>
               <CommonBtn text={'Enroll Now'} />
             </Link>
             {/* <CommonBtn text={'Gift Course'} /> */}
