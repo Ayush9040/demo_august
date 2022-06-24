@@ -304,6 +304,7 @@ const Enrollment = () => {
                   <div>
                     <InputComponent
                       type="text"
+                      id='text'
                       placeholder="Email"
                       form={formData}
                       setField={setFormData}
@@ -538,7 +539,7 @@ const Enrollment = () => {
             </div>
             <div className="footer">
               <button className="back" style={{ visibility: 'hidden' }}>
-                Back
+              Back
               </button>
               <div className="enrollment_logo">{filler1}</div>
               <button className="next_1" onClick={handleEmpty1}>
@@ -612,13 +613,13 @@ const Enrollment = () => {
                     </fieldset>
                     <fieldset>
                       <label htmlFor="resume">
-                        Upload Resume
+                        Upload PDF
                         <input
                           type={'file'}
                           value={qualificationAsset2}
                           onChange={(e)=>{setQualificationAsset2(e.target.value)}}
                           id="resume"
-                          placeholder="Upload Resume"
+                          placeholder="Upload PDF"
                         />
                         &ensp;
                         {upload}
@@ -730,13 +731,13 @@ const Enrollment = () => {
                     </fieldset>
                     <fieldset>
                       <label htmlFor="resume">
-                        Upload Resume
+                        Upload PDF
                         <input
                           type={'file'}
                           value={experienceAsset2}
                           onChange={(e)=>{setExperienceAsset2(e.target.value)}}
                           id="resume"
-                          placeholder="Upload Resume"
+                          placeholder="Upload PDF"
                         />
                         &ensp;
                         {upload}
@@ -1133,13 +1134,13 @@ const Enrollment = () => {
                     </fieldset>
                     <fieldset>
                       <label htmlFor="resume">
-                        Upload Resume
+                        Upload PDF
                         <input
                           type={'file'}
                           value={ courseAsset2 }
                           onChange={e=>setCourseAsset2(e.target.value)}
                           id="resume"
-                          placeholder="Upload Resume"
+                          placeholder="Upload PDF"
                         />
                         &ensp;
                         {upload}
@@ -1154,16 +1155,16 @@ const Enrollment = () => {
             </div>
 
             <div className="footer">
-              <button
+              {/* <button
                 className="back"
                 onClick={() => {
                   setBold(3)
                 }}
               >
                 Back
-              </button>
+              </button> */}
               <div className="enrollment_logo">{filler1}</div>
-              <button className="next_1" onClick={ handleSubmit } >Sumbit</button>
+              <button className="next_1" onClick={ handleSubmit } >Submit</button>
             </div>
           </div>
         ) : (

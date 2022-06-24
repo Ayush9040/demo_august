@@ -34,7 +34,6 @@
         padding: 0 18px;
         border-right: 2.5px solid black;
         .bottom-line {
-    
           margin: 0;
           position: absolute;
           left: 0;
@@ -42,7 +41,7 @@
         &:last-child {
           border: none;
         }
-        &:first-child{
+        &:first-child {
           padding-left: 0;
         }
       }
@@ -64,7 +63,6 @@
         display: flex;
         align-items: center;
         padding-left: 40px;
-        
       }
     }
     .uploads {
@@ -114,7 +112,7 @@
       color: black;
       border-radius: 30px;
       font-size: 16px;
-      font-weight: 900;
+      font-weight: 500;
       //padding: 0 18px;
       float: right;
       margin-top: 2%;
@@ -134,10 +132,10 @@
       color: black;
       border-radius: 30px;
       font-size: 16px;
-      font-weight: 900;
+      font-weight: 500;
       //padding: 0 18px;
       float: left;
-     // margin-left: 30px;
+      // margin-left: 30px;
       margin-top: 2%;
       background-color: white;
     }
@@ -173,9 +171,10 @@
         .button_2 {
           height: 30px;
           width: 30px;
+          text-align: center;
           border: 1px solid #60606080;
           background-color: white;
-          font-size: 20px;
+          font-size: 25px;
           color: #60606080;
           cursor: pointer;
         }
@@ -225,7 +224,7 @@
     margin-bottom: 10px;
 
     .label_1 {
-      font-size: 20px;
+      font-size: 25px;
       color: #60606080;
     }
   }
@@ -257,7 +256,8 @@
           width: 30px;
           border: 1px solid #60606080;
           background-color: white;
-          font-size: 20px;
+          text-align: center;
+          font-size: 25px;
           color: #60606080;
           cursor: pointer;
           padding: 0;
@@ -279,14 +279,15 @@
 
   .label {
     font-size: 20px;
-    color: #60606080;
-   // margin: 17px 17px 17px 17px;
+    color: rgba(96, 96, 96, 0.5019607843);
+    // margin: 17px 17px 17px 17px;
     width: 50%;
     min-width: fit-content;
+    margin-top: -0.5rem;
   }
 
   .label_1 {
-    font-size: 20px;
+    font-size: 25px;
     color: #60606080;
     margin: 17px 17px 17px 17px;
     //width: 50%;
@@ -301,7 +302,7 @@
   }
 
   .label_any {
-    font-size: 17px;
+    font-size: 20px;
   }
   .other {
     height: 95%;
@@ -315,7 +316,7 @@
           color: #60606080;
         }
       }
-      .other_div{
+      .other_div {
         padding: 0 18px;
       }
       .underline {
@@ -339,7 +340,7 @@
         text-align: left;
         min-width: 230px;
       }
-      
+
       flex-direction: column;
       text-align: center;
       .uploads {
@@ -354,7 +355,7 @@
           width: 100%;
           display: block;
           box-sizing: border-box;
-          padding: 1rem 2rem;
+          padding: 1rem 3rem;
           font-size: 1.25rem;
           border: 2px solid #60606080;
           color: #60606080;
@@ -374,7 +375,7 @@
       .last_radio_button {
         display: flex;
         gap: 17px;
-        .radio_button{
+        .radio_button {
           display: flex;
         }
         .label_1 {
@@ -382,7 +383,7 @@
           color: #60606080;
           margin: 0px;
           width: 100%;
-         // min-width: 150px;
+          // min-width: 150px;
           align-items: center;
           display: flex;
           margin-top: 17px;
@@ -462,7 +463,7 @@
   }
   input[type='radio']:checked::before {
     position: absolute;
-    color:#60606080 !important;
+    color: #60606080 !important;
     content: '\00A0\2713\00A0' !important;
     border: 1px solid #d3d3d3;
     font-weight: bolder;
@@ -579,7 +580,7 @@
         gap: 25px;
         label {
           min-width: 220px;
-          font-size: 1.6rem;
+          font-size: 1.3rem;
         }
       }
     }
