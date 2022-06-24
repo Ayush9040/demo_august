@@ -12,7 +12,7 @@ import DisclaimerPolicy from '../DisclaimerPolicy'
 const Enrollment = () => {
   const { courseId } = useParams()
   const [currentCourse, setCurrentCourse] = useState({})
-  const [courseDate, setCourseDate] = useState('')
+  const [courseDate, setCourseDate] = useState(null)
 
   useEffect(() => {
     setCurrentCourse(AllCourses.find((item) => item.key === courseId))

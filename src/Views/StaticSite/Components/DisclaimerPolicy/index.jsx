@@ -228,7 +228,7 @@ const DisclaimerPolicy = ({
         <div className="signature-section">
           <p>Upload Digital Signature (jpeg or png. Under 1MB)</p>
 
-          <label htmlFor="signature" className="signature">
+          <label htmlFor="signature" className="signature" id='sign'>
             {disData.signature ? disData.signature.substring(0,15): 'Upload Signature'}
            
             <input
