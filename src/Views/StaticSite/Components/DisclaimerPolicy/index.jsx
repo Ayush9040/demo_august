@@ -24,7 +24,10 @@ const DisclaimerPolicy = ({
 
   const [empty, setEmpty] = useState(0)
 
+
+
   const handleSubmit1 = async() => {
+
     if (disData.terms === 'no') {
       return setEmpty(1)
     } else if (disData.signature === null) {
@@ -67,62 +70,68 @@ const DisclaimerPolicy = ({
         },
         signature: disData.signature,
       }
-
-      const paymentOrderResponse = await axios.post('https://cms-dev-be.theyogainstituteonline.org/v1/payment/order', {
-        amount: 50,
-        notes: {
-          courseId: '',
-        }
-      })
-
-      const options = {
-        key: 'rzp_test_udmmUPuH3rTJe8', // Enter the Key ID generated from the Dashboard
-        amount: paymentOrderResponse.data.amount, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
-        currency: 'INR',
-        name: 'The Yoga Institute',
-        description: 'Test Transaction',
-        // image: 'https://example.com/your_logo', // un comment and add TYI logo
-        order_id: paymentOrderResponse.data.id, //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
-        handler: async(res) => {
-          // Navigare to Success if razorpay_payment_id, razorpay_order_id, razorpay_signature is there
-          console.log(res.razorpay_payment_id)
-          console.log(res.razorpay_order_id)
-          console.log(res.razorpay_signature)
-          const jsonBody = JSON.stringify(body)
-          console.log(jsonBody, 'json-body')
-          const response = await axios.post(
-            'https://cms-dev-be.theyogainstituteonline.org/v1/form',
-            body
-          )
-          console.log(response)
-          if (response.data.success) {
-            let mailTemplate = {
-              type: null,
-              HTMLTemplate: templateKey || 'COURSE200_2M_TTC2',
-              subject: 'Enrollment Confirmation',
-              data:{
-                user: formData.name
-              },
-              receivers: [formData.email,'shrey@nexgsolution.com']
-            }
-            //let templateJson = JSON.stringify(mailTemplate)
-            await axios.post('https://www.authserver-staging-be.theyogainstituteonline.org/v1/ali/mail', mailTemplate)
-            navigate('/enrollment_thankyou')
-          }
+      let mailTemplate = {
+        type: null,
+        HTMLTemplate: templateKey || 'COURSE200_2M_TTC2',
+        subject: 'Enrollment Confirmation',
+        data:{
+          user: formData.name
         },
-        // prefill: {
-        //   name: 'Gaurav Kumar',
-        //   email: 'gaurav.kumar@example.com',
-        //   contact: '9999999999'
-        // },
-        notes: paymentOrderResponse.data.notes,
-        theme: {
-          color: '#3399cc' // enter theme color for our website
-        }
+        receivers: [formData.email,'shrey@nexgsolution.com']
       }
-
-      const rzp = new window.Razorpay(options)
-      rzp.open()   
+      try{
+        const res = await axios.post(
+          'https://cms-dev-be.theyogainstituteonline.org/v1/form',
+          body
+        )
+        if(res?.data?.success){
+          if(formData.residental==='ONLINE'||formData.residental==='NONRESIDENTAIL'){
+            const paymentOrderResponse =  await axios.post('https://cms-dev-be.theyogainstituteonline.org/v1/payment/order', {
+              amount: currentCourse.fees,
+              notes: {
+                courseId: '',
+              }
+            })
+            if(!paymentOrderResponse?.data?.amount && !paymentOrderResponse?.data?.id) return 0
+            
+            const options = {
+              key: 'rzp_test_udmmUPuH3rTJe8', // Enter the Key ID generated from the Dashboard
+              amount: paymentOrderResponse.data.amount, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+              currency: 'INR',
+              name: 'The Yoga Institute',
+              description: 'Test Transaction',
+              // image: 'https://example.com/your_logo', // un comment and add TYI logo
+              order_id: paymentOrderResponse.data.id, // eslint-disable-line
+              handler: async(res) => {
+                // Navigare to Success if razorpay_payment_id, razorpay_order_id, razorpay_signature is there
+                console.log(res.razorpay_payment_id)
+                console.log(res.razorpay_order_id)
+                console.log(res.razorpay_signature)
+                if(res.razorpay_payment_id && res.razorpay_order_id && res.razorpay_signature) {
+                  await axios.post('https://www.authserver-staging-be.theyogainstituteonline.org/v1/ali/mail', mailTemplate)
+                  navigate('/enrollment_thankyou')
+                }
+              },
+              prefill: {
+                name: formData.name,
+                email: formData.email,
+                contact: formData.phone
+              },
+              notes: paymentOrderResponse.data.notes,
+              theme: {
+                color: '#3399cc' // enter theme color for our website
+              }
+            }
+            const rzp = new window.Razorpay(options)
+            rzp.open()   
+          }else{
+            await axios.post('https://www.authserver-staging-be.theyogainstituteonline.org/v1/ali/mail', mailTemplate)
+            navigate('/enrollment_thankyou')}
+        }
+      } 
+      catch(err){
+        console.log(err)
+      } 
     }
   }
 
