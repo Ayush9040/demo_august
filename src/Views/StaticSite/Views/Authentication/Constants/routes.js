@@ -1,3 +1,4 @@
+import UserProfile from '../../../Components/UserProfile'
 import SignIn from '../Views/SignIn'
 import SignUp from '../Views/Signup'
 
@@ -16,6 +17,14 @@ const authRoutes = [
     exact: true,
     id: 'statisSiteUnderSignUp',
     routePath: '/sign-up',
+    name: 'SignUp',
+  },
+  {
+    Component: UserProfile,
+    path: '/profile',
+    exact: true,
+    id: 'statisSiteUnderSignUp',
+    routePath: '/profile',
     name: 'SignUp',
   },
 ]
