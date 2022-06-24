@@ -8,8 +8,10 @@ import InputComponent from '../InputComponent'
 import { validateEmail } from '../../../../helpers'
 import { Link } from 'react-router-dom'
 import DisclaimerPolicy from '../DisclaimerPolicy'
+import { useSelector } from 'react-redux'
 
 const Enrollment = () => {
+  const { user } = useSelector((state) => state.auth)
   const { courseId } = useParams()
   const [currentCourse, setCurrentCourse] = useState({})
   const [courseDate,setCourseDate]=useState('')
@@ -58,9 +60,9 @@ const Enrollment = () => {
   const [courseAsset1,setCourseAsset1]=useState(null)
   const [courseAsset2,setCourseAsset2]=useState(null)
   const [formData, setFormData] = useState({
-    name: '',
+    name: user.firstName || '',
     phone: '',
-    email: '',
+    email: user.email||'',
     address1: '',
     address2: '',
     country: '',

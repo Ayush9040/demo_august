@@ -8,6 +8,7 @@ import SelectDropDown from '../Select Dropdown'
 import { useEffect } from 'react'
 import StarIcon from './star-icon'
 import { useState } from 'react'
+import { useSelector } from 'react-redux'
 
 const CourseCard = ({
   color,
@@ -31,6 +32,7 @@ const CourseCard = ({
     maxWidth: 'fit-content',
   }
   const [ratingArr, setRatingArr] = useState([])
+  const { isLoggedIn } = useSelector((state) => state.auth)
 
   useEffect(() => {
     let arr = []
@@ -73,7 +75,7 @@ const CourseCard = ({
           <Link to={`/courses/course/${path}/`}>
             <CommonBtn text={'View Details'} />
           </Link>
-          <Link to={`/user/sign-in/${path}/`}>
+          <Link to={isLoggedIn ? `/enrollment/${path}`:`/user/sign-in/${path}/`}>
             <CommonBtn text={'Enroll Now'} />
           </Link>
         </div>

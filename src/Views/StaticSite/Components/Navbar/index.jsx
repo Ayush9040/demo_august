@@ -36,7 +36,7 @@ const Navbar = ({ isUserLoggedIn }) => {
           <Link to="/gifting">
             <li>{Gift}</li>
           </Link>
-          <Link to={isUserLoggedIn ? '/courses' : '/user/sign-in'}>
+          <Link to={isUserLoggedIn ? '/user/profile' : '/user/sign-in'}>
             <li>{User}</li>
           </Link>
         </ul>

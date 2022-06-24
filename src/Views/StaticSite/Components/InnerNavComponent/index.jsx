@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
 import './style.scss'
+import { useSelector } from 'react-redux'
 // import axios from 'axios'
 import {
   Hamburger,
@@ -19,6 +20,7 @@ import { Link } from 'react-router-dom'
 import MegaMenu from '../MegaMenu'
 
 const InnerNavComponent = ({ abc }) => {
+  const { isLoggedIn } = useSelector((state) => state.auth)
   const [nav, setNav] = useState(false)
 
   const [bold, setBold] = useState(0)
@@ -79,7 +81,7 @@ const InnerNavComponent = ({ abc }) => {
             }
            
 
-            <Link to="/user/sign-in">
+            <Link to={isLoggedIn ? '/user/profile':'/user/sign-in'}>
               {abc.color === 'orange'
                 ? User
                 : abc.color === 'white'
