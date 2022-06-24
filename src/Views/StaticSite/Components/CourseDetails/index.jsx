@@ -9,6 +9,7 @@ import CourseULIst from '../CourseComponents/CourseUList'
 import CourseTable from '../CourseComponents/CourseTable'
 import CourseQuote from '../CourseComponents/CourseQuote'
 import CourseURL from '../CourseComponents/CourseURL'
+import SelectDropDown from '../Select Dropdown'
 //import { useParams } from 'react-router-dom'
 
 const CourseDetails = ({ pageDate }) => {
@@ -38,6 +39,8 @@ const CourseDetails = ({ pageDate }) => {
   // } = pageDate
 
   console.log(pageDate, 'pageData')
+  const [selectDate, setSetselectDate] = useState()
+  localStorage.setItem('selectedDate',selectDate)
 
   let options = [
     {
@@ -71,6 +74,21 @@ const CourseDetails = ({ pageDate }) => {
       key: 6,
     },
   ]
+
+  const selectStyles = {
+    cursor: 'pointer',
+    background: 'white',
+    borderColor: 'black',
+    color: 'black',
+    fontSize: '1.5rem',
+    fontWeight: '900',
+    borderWidth: '0.1rem',
+    borderRadius: '20px',
+    borderStyle: 'solid',
+    maxWidth: 'fit-content',
+    marginTop:'2rem',
+    marginLeft:'10rem'
+  }
 
   const selectMenu = (name) => {
     switch (name) {
@@ -135,7 +153,7 @@ const CourseDetails = ({ pageDate }) => {
               'Lorem Ipsum is simply dummy text of the printing and typesetting industry. '}
           </p>
           <div className="course-options">
-            <Link to={`/enrollment/${pageDate.key}`}>
+            <Link to={`/user/sign-in/${pageDate.key}/`}>
               <CommonBtn text={'Enroll Now'} />
             </Link>
             {/* <CommonBtn text={'Gift Course'} /> */}
@@ -149,6 +167,7 @@ const CourseDetails = ({ pageDate }) => {
           )}
         </div>
       </div>
+      <SelectDropDown  currentValue={selectDate} changeCurrentValue={setSetselectDate} text={'Select Dates'} isStyles={selectStyles} dates={pageDate.dates}/>
       {pageDate.category === 'ttc' && (
         <div className="career-navigation-lg-div">
           <div className="career-navigation-lg">
@@ -172,7 +191,7 @@ const CourseDetails = ({ pageDate }) => {
           </div>
         </div>
       )}
- 
+    
 
 
       {<div className="details-section" id='program-details' >
