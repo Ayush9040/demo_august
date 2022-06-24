@@ -14,13 +14,12 @@ const Enrollment = () => {
   const { user } = useSelector((state) => state.auth)
   const { courseId } = useParams()
   const [currentCourse, setCurrentCourse] = useState({})
-  const [courseDate,setCourseDate]=useState('')
+  const [courseDate, setCourseDate] = useState(null)
 
   useEffect(() => {
     setCurrentCourse(AllCourses.find((item) => item.key === courseId))
     setCourseDate(localStorage.getItem('selectedDate'))
   }, [])
-
 
   const [empty, setEmpty] = useState(0)
 
@@ -57,8 +56,8 @@ const Enrollment = () => {
   const [resgin, setResgin] = useState(0)
   const [listData, setListData] = useState([])
   const [qualificationData, setQualificationData] = useState([])
-  const [courseAsset1,setCourseAsset1]=useState(null)
-  const [courseAsset2,setCourseAsset2]=useState(null)
+  const [courseAsset1, setCourseAsset1] = useState(null)
+  const [courseAsset2, setCourseAsset2] = useState(null)
   const [formData, setFormData] = useState({
     name: user.firstName || '',
     phone: '',
@@ -88,10 +87,10 @@ const Enrollment = () => {
     info: '',
     residental: '',
   })
-  const [ qualificationAsset1,setQualificationAsset1]=useState('')
-  const [ qualificationAsset2,setQualificationAsset2]=useState('')
-  const [ experienceAsset1,setExperienceAsset1]=useState('')
-  const [ experienceAsset2,setExperienceAsset2]=useState('')
+  const [qualificationAsset1, setQualificationAsset1] = useState('')
+  const [qualificationAsset2, setQualificationAsset2] = useState('')
+  const [experienceAsset1, setExperienceAsset1] = useState('')
+  const [experienceAsset2, setExperienceAsset2] = useState('')
   console.log(yearEmpty)
   console.log(resgin)
 
@@ -107,12 +106,11 @@ const Enrollment = () => {
           yearOfresignation: formData.resignation,
           workExImgAsset: experienceAsset1,
           workExPdfAsset: experienceAsset2,
-          listedWorkExperience: formData.leavejob
+          listedWorkExperience: formData.leavejob,
         },
       ])
-    setFormData({ ...formData, resignition: '', company: '', leavejob: '' })
+    setFormData({ ...formData, resignation: '', company: '', leavejob: '' })
   }
-
 
   const QualificationDetailHandler = () => {
     if (formData.completion.length !== 4) {
@@ -124,10 +122,9 @@ const Enrollment = () => {
           schoolOrCollege: formData.school,
           course: formData.course,
           yearOfCompletion: formData.completion,
-          academicImgAsset:qualificationAsset1,
-          academicPdfAsset:qualificationAsset2,
-          listedQualification:formData.course
-
+          academicImgAsset: qualificationAsset1,
+          academicPdfAsset: qualificationAsset2,
+          listedQualification: formData.course,
         },
       ])
     setFormData({ ...formData, school: '', course: '', completion: '' })
@@ -137,7 +134,11 @@ const Enrollment = () => {
   const handleEmpty1 = () => {
     if (formData.name === '') {
       return setEmpty(1)
-    } else if (formData.phone === '' || formData.phone.length<10 || formData.phone.length>10) {
+    } else if (
+      formData.phone === '' ||
+      formData.phone.length < 10 ||
+      formData.phone.length > 10
+    ) {
       return setEmpty(2)
     } else if (!validateEmail(formData.email)) {
       return setEmpty(3)
@@ -178,11 +179,11 @@ const Enrollment = () => {
     if (formData.source === '') {
       if (formData.sourceinfo === '') {
         return setEmpty(2)
-      } 
+      }
     } else setBold(4)
   }
 
-  const handleSubmit = async()=>{
+  const handleSubmit = async() => {
     setBold(5)
   }
 
@@ -235,7 +236,7 @@ const Enrollment = () => {
         </div>
 
         {bold === 0 ? (
-          <div> 
+          <div>
             <div className="details">
               <div className="left">
                 <form>
@@ -517,7 +518,7 @@ const Enrollment = () => {
             <div className="details">
               <div className="left">
                 <div className="flex-container">
-                  <div className='career-history' >
+                  <div className="career-history">
                     <InputComponent
                       type="text"
                       placeholder="School/College"
@@ -563,11 +564,15 @@ const Enrollment = () => {
                   <div className="uploads">
                     <fieldset>
                       <label htmlFor="image">
-                        { qualificationAsset1 ? qualificationAsset1.substring(0,15) : 'Upload Image'}
+                        {qualificationAsset1
+                          ? qualificationAsset1.substring(0, 15)
+                          : 'Upload Image'}
                         <input
                           type={'file'}
                           id="image"
-                          onChange={(e)=>{setQualificationAsset1(e.target.files[0].name)}}
+                          onChange={(e) => {
+                            setQualificationAsset1(e.target.files[0].name)
+                          }}
                           placeholder="Upload Image"
                           accept="image/*"
                         />
@@ -577,12 +582,16 @@ const Enrollment = () => {
                     </fieldset>
                     <fieldset>
                       <label htmlFor="resume">
-                        { qualificationAsset2 ? qualificationAsset2.substring(0,15) : 'Upload PDF'}
+                        {qualificationAsset2
+                          ? qualificationAsset2.substring(0, 15)
+                          : 'Upload PDF'}
                         <input
                           type={'file'}
-                          onChange={(e)=>{setQualificationAsset2(e.target.files[0].name)}}
+                          onChange={(e) => {
+                            setQualificationAsset2(e.target.files[0].name)
+                          }}
                           id="resume"
-                          accept='.pdf'
+                          accept=".pdf"
                           placeholder="Upload Resume"
                         />
                         &ensp;
@@ -594,7 +603,7 @@ const Enrollment = () => {
                   </div>
                 </div>
               </div>
-              <div className="right">
+              <div className="right1">
                 <div className="label">
                   Listed Qualifications :
                   {qualificationData?.map((items, key) => {
@@ -634,7 +643,7 @@ const Enrollment = () => {
             <div className="details">
               <div className="left">
                 <div className="flex-container">
-                  <div className='career-history' >
+                  <div className="career-history">
                     <InputComponent
                       type="text"
                       placeholder="Company Name"
@@ -680,12 +689,15 @@ const Enrollment = () => {
                   <div className="uploads">
                     <fieldset>
                       <label htmlFor="image">
-                        { experienceAsset1 ? experienceAsset1.substring(0,15) : 'Upload Image'}
+                        {experienceAsset1
+                          ? experienceAsset1.substring(0, 15)
+                          : 'Upload Image'}
                         <input
                           type={'file'}
                           id="image"
-                        
-                          onChange={(e)=>{setExperienceAsset1(e.target.files[0].name)}}
+                          onChange={(e) => {
+                            setExperienceAsset1(e.target.files[0].name)
+                          }}
                           placeholder="Upload Image"
                           accept="image/*"
                         />
@@ -695,13 +707,16 @@ const Enrollment = () => {
                     </fieldset>
                     <fieldset>
                       <label htmlFor="resume">
-                        { experienceAsset2 ? experienceAsset2.substring(0,15) : 'Upload PDF'}
+                        {experienceAsset2
+                          ? experienceAsset2.substring(0, 15)
+                          : 'Upload PDF'}
                         <input
                           type={'file'}
-                       
-                          onChange={(e)=>{setExperienceAsset2(e.target.files[0].name)}}
+                          onChange={(e) => {
+                            setExperienceAsset2(e.target.files[0].name)
+                          }}
                           id="resume"
-                          accept='.pdf'
+                          accept=".pdf"
                           placeholder="Upload Resume"
                         />
                         &ensp;
@@ -713,7 +728,7 @@ const Enrollment = () => {
                   </div>
                 </div>
               </div>
-              <div className="right">
+              <div className="right1">
                 <div className="label">
                   Listed Work Experience :
                   {listData.map((item, key) => {
@@ -752,7 +767,7 @@ const Enrollment = () => {
           <div>
             <div className="other">
               <div className="other_1">
-                <div className='other_div' >
+                <div className="other_div">
                   <div>
                     <label className="label">
                       Medical History & Current Health Issues :
@@ -761,7 +776,12 @@ const Enrollment = () => {
                         type="text"
                         rows="5"
                         cols="40"
-                        onChange={(e)=>{setFormData({ ...formData,medicalstatus:e.target.value })}}
+                        onChange={(e) => {
+                          setFormData({
+                            ...formData,
+                            medicalstatus: e.target.value,
+                          })
+                        }}
                       />
                     </label>
                   </div>
@@ -858,13 +878,16 @@ const Enrollment = () => {
                     </div>
                   </div>
                 </div>
-                <div className='other_div'>
+                <div className="other_div">
                   <input
                     className="underline label_any"
                     type="text"
                     placeholder="Any other source please specify"
                     onChange={(e) => {
-                      setFormData({ ...formData, sourceinfo: e.target.value||'none' })
+                      setFormData({
+                        ...formData,
+                        sourceinfo: e.target.value || 'none',
+                      })
                     }}
                   />
                   {empty === 2 && (
@@ -994,21 +1017,32 @@ const Enrollment = () => {
                     </div>
                     <div className="current_duration">
                       {currentCourse?.title}&nbsp;
-                      {courseDate ? courseDate:''}
+                      {courseDate ? courseDate : ''}
                       <div className="current_fees">{currentCourse?.fees}</div>
                     </div>
                   </div>
                 </div>
-                <div className="course_details_text">Please select one of these options</div>
+                <div className="course_details_text">
+                  Please select one of these options
+                </div>
                 <form>
                   <div className="last_radio_button">
-                    <label htmlFor="" className="course_details_text radio_button" >
+                    <label
+                      htmlFor=""
+                      className="course_details_text radio_button"
+                    >
                       <input
                         type="radio"
                         name="resident"
                         value="RESIDENTIAL"
-                        disabled={currentCourse.residential===false  ? true:false}
-                        style={currentCourse.residential===false  ? { background:'grey' }:{}}
+                        disabled={
+                          currentCourse.residential === false ? true : false
+                        }
+                        style={
+                          currentCourse.residential === false
+                            ? { background: 'grey' }
+                            : {}
+                        }
                         onChange={(e) => {
                           if (e.target.checked) {
                             setFormData({
@@ -1018,15 +1052,22 @@ const Enrollment = () => {
                           }
                         }}
                       />{' '}
-                      &nbsp; Resident
+                      &nbsp; Residential
                     </label>
-                    <label htmlFor="" className="course_details_text radio_button" >
+                    <label
+                      htmlFor=""
+                      className="course_details_text radio_button"
+                    >
                       <input
                         type="radio"
                         name="resident"
                         value="ONLINE"
-                        disabled={currentCourse.online===false  ? true:false}
-                        style={currentCourse.online===false  ? { background:'grey' }:{}}
+                        disabled={currentCourse.online === false ? true : false}
+                        style={
+                          currentCourse.online === false
+                            ? { background: 'grey' }
+                            : {}
+                        }
                         onChange={(e) => {
                           if (e.target.checked) {
                             setFormData({
@@ -1040,13 +1081,22 @@ const Enrollment = () => {
                     </label>
                   </div>
                   <div className="last_radio_button">
-                    <label htmlFor="" className="course_details_text radio_button">
+                    <label
+                      htmlFor=""
+                      className="course_details_text radio_button"
+                    >
                       <input
                         type="radio"
-                        name='resident'
+                        name="resident"
                         value="NONRESIDENTIAL"
-                        disabled={currentCourse.nonResidential===false  ? true:false}
-                        style={currentCourse.nonResidential===false  ? { background:'grey' }:{}}
+                        disabled={
+                          currentCourse.nonResidential === false ? true : false
+                        }
+                        style={
+                          currentCourse.nonResidential === false
+                            ? { background: 'grey' }
+                            : {}
+                        }
                         onChange={(e) => {
                           if (e.target.checked) {
                             setFormData({
@@ -1056,15 +1106,24 @@ const Enrollment = () => {
                           }
                         }}
                       />{' '}
-                      &nbsp; Non-Resident
+                      &nbsp; Non-Residential
                     </label>
-                    <label htmlFor="" className="course_details_text radio_button">
+                    <label
+                      htmlFor=""
+                      className="course_details_text radio_button"
+                    >
                       <input
                         type="radio"
                         name="resident"
                         value="OFFLINE"
-                        disabled={currentCourse.onCampus===false  ? true:false}
-                        style={currentCourse.onCampus===false  ? { background:'grey' }:{}}
+                        disabled={
+                          currentCourse.onCampus === false ? true : false
+                        }
+                        style={
+                          currentCourse.onCampus === false
+                            ? { background: 'grey' }
+                            : {}
+                        }
                         onChange={(e) => {
                           if (e.target.checked) {
                             setFormData({
@@ -1074,7 +1133,7 @@ const Enrollment = () => {
                           }
                         }}
                       />{' '}
-                      &nbsp; On Campus
+                      &nbsp; On campus
                     </label>
                   </div>
                 </form>
@@ -1084,12 +1143,15 @@ const Enrollment = () => {
                   <div className="uploads">
                     <fieldset>
                       <label htmlFor="image">
-                        { courseAsset1 ? courseAsset1.substring(0,15) : 'Upload Image'}
+                        {courseAsset1
+                          ? courseAsset1.substring(0, 15)
+                          : 'Upload Image'}
                         <input
                           type={'file'}
                           id="image"
-                      
-                          onChange={e=>setCourseAsset1(e.target.files[0].name)}
+                          onChange={(e) =>
+                            setCourseAsset1(e.target.files[0].name)
+                          }
                           placeholder="Upload Image"
                           accept="image/*"
                         />
@@ -1099,12 +1161,16 @@ const Enrollment = () => {
                     </fieldset>
                     <fieldset>
                       <label htmlFor="resume">
-                        { courseAsset2 ? courseAsset2.substring(0,15) : 'Upload PDF'}
+                        {courseAsset2
+                          ? courseAsset2.substring(0, 15)
+                          : 'Upload PDF'}
                         <input
                           type={'file'}
-                          onChange={e=>setCourseAsset2(e.target.files[0].name)}
+                          onChange={(e) =>
+                            setCourseAsset2(e.target.files[0].name)
+                          }
                           id="resume"
-                          accept='.pdf'
+                          accept=".pdf"
                           placeholder="Upload Resume"
                         />
                         &ensp;
@@ -1121,6 +1187,7 @@ const Enrollment = () => {
 
             <div className="footer">
               <button
+                style={{ visibility: 'hidden' }}
                 className="back"
                 onClick={() => {
                   setBold(3)
@@ -1129,11 +1196,21 @@ const Enrollment = () => {
                 Back
               </button>
               <div className="enrollment_logo">{filler1}</div>
-              <button className="next_1" onClick={ handleSubmit } >Sumbit</button>
+              <button className="next_1" onClick={handleSubmit}>
+                Submit
+              </button>
             </div>
           </div>
         ) : (
-          <DisclaimerPolicy templateKey={currentCourse?.templateId} formData={formData} qualificationData={qualificationData} listData={listData} currentCourse={currentCourse} courseAsset1={courseAsset1} courseAsset2={courseAsset2}/>
+          <DisclaimerPolicy
+            templateKey={currentCourse?.templateId}
+            formData={formData}
+            qualificationData={qualificationData}
+            listData={listData}
+            currentCourse={currentCourse}
+            courseAsset1={courseAsset1}
+            courseAsset2={courseAsset2}
+          />
         )}
       </div>
     </>

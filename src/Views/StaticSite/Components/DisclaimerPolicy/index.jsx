@@ -20,6 +20,8 @@ const DisclaimerPolicy = ({
     fullName: '',
   })
 
+  
+
   const navigate = useNavigate()
 
   const [empty, setEmpty] = useState(0)
@@ -267,14 +269,17 @@ const DisclaimerPolicy = ({
         <div className="signature-section">
           <p>Upload Digital Signature (jpeg or png. Under 1MB)</p>
 
-          <label htmlFor="signature" className="signature">
+          <label htmlFor="signature" className="signature" id='sign'>
+            {disData.signature ? disData.signature.substring(0,15): 'Upload Signature'}
+           
             <input
+            
               name="signature"
               id="signature"
-              type="file"
+              type={'file'}
               accept="image/png, image/jpeg"
               onChange={(e) =>
-                setDisData({ ...disData, signature: e.target.value })
+                setDisData({ ...disData, signature: e.target.files[0].name })
               }
             />
           </label>
