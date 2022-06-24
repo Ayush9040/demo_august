@@ -9,7 +9,7 @@ const UserProfile = () => {
   const [module, setModule] = useState(0)
   const { user } = useSelector((state) => state.auth)
   const navItems = [
-    { option: user.firstName||'firstName', key: 0 },
+    { option: user.data.firstName||'firstName', key: 0 },
     { option: 'Courses', key: 1 },
     { option: 'Orders', key: 2 },
     { option: 'Alumni', key: 3 },
