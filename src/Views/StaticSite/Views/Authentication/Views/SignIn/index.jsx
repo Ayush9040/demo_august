@@ -56,7 +56,7 @@ const SignIn = () => {
           />
           <InputComponent
             icon={lock}
-            type="text"
+            type="password"
             placeholder="Password"
             form={formData}
             setField={setFormData}

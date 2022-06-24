@@ -1,18 +1,23 @@
 import React, { useEffect, useState } from 'react'
 import CommonBannerNav2 from '../../../../Components/EcomNav'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import './style.scss'
 import CommonBtn from '../../../../Components/commonbtn'
 import InputComponent from '../../../../Components/InputComponent'
-import { validateEmail,validatePassword } from '../../../../../../helpers'
+import { validateEmail } from '../../../../../../helpers'
+import axios from 'axios'
 
 const SignUp = () => {
+
+  const navigate = useNavigate()
   const [formData, setFormData] = useState({
-    name: '',
+    firstName: '',
     email: '',
     password: '',
     confirmPassword: '',
   })
+
+  const { firstName, email, password, confirmPassword } = formData
 
   const [empty, setEmpty] = useState(0)
 
@@ -20,25 +25,40 @@ const SignUp = () => {
     window.scrollTo(0, 0)
   }, [])
 
+  const createUserSignIn = async(data) => {
+    const authServerClientId = 'dev-tyi-lms-ecom'
+    const res = await axios.post(`https://www.authserver-staging-be.theyogainstituteonline.org/v1/user/register?clientId=${authServerClientId}`, data)
+    console.log(res.data)
+  }
 
+  console.log(formData)
 
-  const handleSubmit = () => {
+  const handleSubmit = async(e) => {
     if (formData.name === '') {
       return setEmpty(1)
     } else if (!validateEmail(formData.email)) {
       return setEmpty(2)
-    } else if (!validatePassword(formData.password)) {
-      return setEmpty(3)
-    } else if (formData.confirmPassword !== formData.password)
-      return setEmpty(4)
-    setEmpty(0)
+    } 
+    //else if (!validatePassword(formData.password)) {
+    //   return setEmpty(3)
+    // } else if (formData.confirmPassword !== formData.password)
+    //   return setEmpty(4)
+    // setEmpty(0)
+    e.preventDefault()
+    await createUserSignIn({
+      firstName,
+      email,
+      password, 
+      confirmPassword
+    })
+    navigate('/user/sign-in')
   }
 
   return (
     <div className="signin-container">
       <CommonBannerNav2 />
       <div className="signin-form">
-        <form>
+        <form onSubmit={handleSubmit}>
           <h1>Sign Up</h1>
 
           <div className="form-field">
@@ -47,7 +67,7 @@ const SignUp = () => {
               placeholder="Name"
               form={formData}
               setField={setFormData}
-              keyName="name"
+              keyName="firstName"
             />
             {empty === 1 && (
               <small style={{ color: 'red', marginLeft: '0' }}>
