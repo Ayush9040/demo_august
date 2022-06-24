@@ -3,6 +3,7 @@ import './style.scss'
 import baseDomain, { homeAssets } from '../../assets/images/imageAsset'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
+//import { mail } from '../../assets/icons/icon'
 
 const DisclaimerPolicy = ({
   formData,
@@ -11,6 +12,7 @@ const DisclaimerPolicy = ({
   currentCourse,
   courseAsset1,
   courseAsset2,
+  templateKey
 }) => {
   const [disData, setDisData] = useState({
     terms: 'no',
@@ -73,9 +75,19 @@ const DisclaimerPolicy = ({
         body
       ).then((response)=>{
         console.log(response)
-        if (response.data.success===true) {
-          console.log('abc')
-          navigate('/enrollment_thankyou')
+        if (response.data.success) {
+          let mailTemplate = {
+            type: null,
+            HTMLTemplate: templateKey || 'COURSE200_2M_TTC2',
+            subject: 'Enrollment Confirmation',
+            data:{
+              user: formData.name
+            },
+            receivers: [formData.email,'shrey@nexgsolution.com']
+          }
+          //let templateJson = JSON.stringify(mailTemplate)
+          axios.post(
+            'https://www.authserver-staging-be.theyogainstituteonline.org/v1/ali/mail',mailTemplate).then(()=>{navigate('/enrollment_thankyou')})
         }
       })
    

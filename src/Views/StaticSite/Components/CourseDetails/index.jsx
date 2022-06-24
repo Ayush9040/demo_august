@@ -49,8 +49,8 @@ const CourseDetails = ({ pageDate }) => {
       key: 1,
     },
     {
-      id: 'curriculam',
-      title: 'Curriculam',
+      id: 'curriculum',
+      title: 'Curriculum',
       key: 2,
     },
     {
@@ -95,7 +95,7 @@ const CourseDetails = ({ pageDate }) => {
     case 'Program Details':
       setDetail(1)
       break
-    case 'Curriculam':
+    case 'curriculum':
       setDetail(2)
       break
     case 'Teaching & Certification':
@@ -202,12 +202,12 @@ const CourseDetails = ({ pageDate }) => {
           return selectComponent(type, content)
         })}
       </div>}
-      {(pageDate?.category === 'ttc' && pageDate?.curriculam?.length !== 0) && <div className="details-section" id='curriculam' >
+      {(pageDate?.category === 'ttc' && pageDate?.curriculum?.length !== 0) && <div className="details-section" id='curriculum' >
         <h1>
-            Curriculam
+            Curriculum
             
         </h1>
-        {pageDate?.curriculam?.map(({ type, content }) => {
+        {pageDate?.curriculum?.map(({ type, content }) => {
           return selectComponent(type, content)
         })}
       </div>}

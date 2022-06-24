@@ -94,7 +94,7 @@ const ttc200hr = {
         },
       },
     ],
-    curriculam: [
+    curriculum: [
       {
         type: 'u-list',
         content: {
@@ -394,7 +394,7 @@ const ttc200hr = {
         },
       },
     ],
-    curriculam: [
+    curriculum: [
       {
         type: 'u-list',
         content: {
@@ -697,7 +697,7 @@ const ttc200hr = {
         },
       },
     ],
-    curriculam: [
+    curriculum: [
       {
         type: 'u-list',
         content: {
@@ -997,7 +997,7 @@ const ttc200hr = {
         },
       },
     ],
-    curriculam: [
+    curriculum: [
       {
         type: 'u-list',
         content: {
@@ -1297,7 +1297,7 @@ const ttc200hr = {
         },
       },
     ],
-    curriculam: [
+    curriculum: [
       {
         type: 'u-list',
         content: {
@@ -1600,7 +1600,7 @@ const ttc200hr = {
         },
       },
     ],
-    curriculam: [
+    curriculum: [
       {
         type: 'u-list',
         content: {
@@ -1899,7 +1899,7 @@ const ttc500hr = {
         },
       },
     ],
-    curriculam: [
+    curriculum: [
       {
         type: 'table',
         content: {
@@ -2227,7 +2227,7 @@ const ttc900hr = {
       },
     ],
 
-    curriculam: [
+    curriculum: [
       {
         type: 'table',
 
@@ -2833,7 +2833,7 @@ const ttc900hr = {
       },
     ],
 
-    curriculam: [
+    curriculum: [
       {
         type: 'table',
 
@@ -3395,7 +3395,7 @@ const ttc900hr = {
       },
     ],
 
-    curriculam: [
+    curriculum: [
       {
         type: 'table',
 
@@ -3943,7 +3943,7 @@ const ttc900hr = {
       },
     ],
 
-    curriculam: [
+    curriculum: [
       {
         type: 'table',
 
@@ -4532,7 +4532,7 @@ const ttc900hr = {
       },
     ],
 
-    curriculam: [
+    curriculum: [
       {
         type: 'table',
 
