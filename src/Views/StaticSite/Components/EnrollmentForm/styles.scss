@@ -108,7 +108,7 @@
     padding: 0 65px;
     .next_1 {
       cursor: pointer;
-      border: 1px solid #60606080;
+      border: 1px solid black;
       height: 50px;
       width: 120px;
       color: black;
@@ -128,7 +128,7 @@
       }
     }
     .back {
-      border: 1px solid #60606080;
+      border: 1px solid black;
       height: 50px;
       width: 120px;
       color: black;
@@ -170,7 +170,7 @@
       .button_div {
         display: inline-block;
         position: absolute;
-        top: 45%;
+        top: 35%;
         right: -60px;
         .button_2 {
           height: 30px;
@@ -295,7 +295,7 @@
   }
 
   .label_1 {
-    font-size: 20px;
+    font-size: 1.8rem;
     color: #60606080;
     margin: 17px 17px 17px 17px;
     //width: 50%;
@@ -614,6 +614,15 @@
         .uploads {
           & > fieldset {
             width: 30%;
+          }
+        }
+      }
+    }
+    .details{
+      .right{
+        .num_of_child{
+          .child{
+            font-size: 18px;
           }
         }
       }

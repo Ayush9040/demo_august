@@ -261,14 +261,14 @@ const Enrollment = () => {
                     />
                     {empty === 2 && (
                       <small style={{ color: 'red', marginLeft: '0' }}>
-                        *Please Enter Phone Number!
+                        *Please Enter Your 10 Digit Phone Number!
                       </small>
                     )}
                   </div>
                   <div>
                     <InputComponent
                       type="text"
-                      placeholder="Email"
+                      placeholder="Email ID"
                       form={formData}
                       setField={setFormData}
                       keyName="email"
