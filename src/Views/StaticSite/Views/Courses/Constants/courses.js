@@ -3,6 +3,7 @@ import baseDomain, { courseAssets } from '../../../assets/images/imageAsset'
 const ttc200hr = {
   1: {
     id: '',
+    templateId:'COURSE200_1M_TTC',
     key: 'batch-1-200hr',
     metaDescription: 'You will learn the tools to master your physical, mental and spiritual well-being. You will see a marked improvement in your life, relationships and work.',            
     image: `${baseDomain}${courseAssets.courseAsset38}`,
@@ -306,6 +307,7 @@ const ttc200hr = {
   },
   2: {
     id: '',
+    templateId:'COURSE200_1M_TTC2',
     key: 'batch-2-200hr',
     metaDescription: 'You will learn the tools to master your physical, mental and spiritual well-being. You will see a marked improvement in your life, relationships and work.',            
     image: `${baseDomain}${courseAssets.courseAsset38}`,
@@ -605,6 +607,7 @@ const ttc200hr = {
   },
   3: {
     id: '',
+    templateId:'COURSE200_2M_TTC2',
     key: 'batch-3-200hr',
     metaDescription: 'You will learn the tools to master your physical, mental and spiritual well-being. You will see a marked improvement in your life, relationships and work.',            
     image: `${baseDomain}${courseAssets.courseAsset38}`,
@@ -907,6 +910,7 @@ const ttc200hr = {
   },
   4: {
     id: '',
+    templateId:'COURSE200_2M_TTC_HINDI',
     key: 'batch-4-200hr',
     metaDescription: 'You will learn the tools to master your physical, mental and spiritual well-being. You will see a marked improvement in your life, relationships and work.', 
     image: `${baseDomain}${courseAssets.courseAsset38}`,
@@ -1206,6 +1210,7 @@ const ttc200hr = {
   },
   5: {
     id: '',
+    templateId:'COURSE200_2M_TTC',
     key: 'batch-5-200hr',
     metaDescription: 'You will learn the tools to master your physical, mental and spiritual well-being. You will see a marked improvement in your life, relationships and work.', 
     image: `${baseDomain}${courseAssets.courseAsset38}`,
@@ -1505,6 +1510,7 @@ const ttc200hr = {
   },
   6: {
     id: '',
+    templateId:'COURSE200_3M_TTC',
     key: 'batch-6-200hr',
     metaDescription: 'You will learn the tools to master your physical, mental and spiritual well-being. You will see a marked improvement in your life, relationships and work.', 
     image: `${baseDomain}${courseAssets.courseAsset38}`,
@@ -1810,6 +1816,7 @@ const ttc200hr = {
 const ttc500hr = {
   1: {
     id: '',
+    templateId:'COURSE500_3M_TTC',
     key: '3-months-500hr',
     metaDescription: 'You will learn the tools to master your physical, mental and spiritual well-being. You will see a marked improvement in your life, relationships and work.', 
     mostPopular: false,
@@ -2062,7 +2069,7 @@ const ttc500hr = {
 const ttc900hr = {
   1: {
     id: '',
-
+    templateId:'COURSE900_1Y_TTC',
     key: '1-year-900hr',
 
     metaDescription: 'You will learn the tools to master your physical, mental and spiritual well-being. You will see a marked improvement in your life, relationships and work.',
@@ -2665,7 +2672,7 @@ const ttc900hr = {
 
   2: {
     id: '',
-
+    templateId:'COURSE900_2Y_TTC',
     key: '2-year-900hr',
 
     metaDescription: 'You will learn the tools to master your physical, mental and spiritual well-being. You will see a marked improvement in your life, relationships and work.',            
@@ -3271,7 +3278,7 @@ const ttc900hr = {
 
   3: {
     id: '',
-
+    templateId:'',
     key: '3-months-ttc',
 
     metaDescription: 'You will learn the tools to master your physical, mental and spiritual well-being. You will see a marked improvement in your life, relationships and work.',            
@@ -3774,7 +3781,7 @@ const ttc900hr = {
 
   4: {
     id: '',
-
+    templateId:'COURSE900_4M_TTC',
     key: '4-months-900hr',
 
     metaDescription: 'You will learn the tools to master your physical, mental and spiritual well-being. You will see a marked improvement in your life, relationships and work.',            
@@ -4369,7 +4376,7 @@ const ttc900hr = {
 
   5: {
     id: '',
-
+    templateId:'COURSE900_7M_TTC',
     key: '7-months-900hr',
 
     metaDescription: 'You will learn the tools to master your physical, mental and spiritual well-being. You will see a marked improvement in your life, relationships and work.',            
