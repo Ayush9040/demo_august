@@ -434,7 +434,7 @@ const Enrollment = () => {
 
                   <div className="num_of_child">
                     <div className="flex_box">
-                      <div className="year-of-comp label">
+                      <div className="year-of-comp child">
                         Number of Children
                       </div>
                       <InputComponent
@@ -453,7 +453,7 @@ const Enrollment = () => {
                     <div>
                       <div className="age_ofChild">
                         <div className="flex_box">
-                          <div className="year-of-comp label">
+                          <div className="year-of-comp child">
                             Age of child 1
                           </div>
                           <InputComponent
@@ -474,7 +474,7 @@ const Enrollment = () => {
                           return (
                             <>
                               <div className="flex_box">
-                                <div className="year-of-comp label">
+                                <div className="year-of-comp child">
                                   Age of child {idx + 2}
                                 </div>
                                 <div key={i} />
