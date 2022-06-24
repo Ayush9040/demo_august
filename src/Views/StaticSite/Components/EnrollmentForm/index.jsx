@@ -246,7 +246,7 @@ const Enrollment = () => {
                       keyName="name"
                     />
                     {empty === 1 && (
-                      <small style={{ color: 'red', marginLeft: '0' }}>
+                      <small style={{ color: 'red', marginLeft: '45px', fontSize: '15px' }}>
                         *Please Enter Name!
                       </small>
                     )}
@@ -260,7 +260,7 @@ const Enrollment = () => {
                       keyName="phone"
                     />
                     {empty === 2 && (
-                      <small style={{ color: 'red', marginLeft: '0' }}>
+                      <small style={{ color: 'red', marginLeft: '45px', fontSize: '15px' }}>
                         *Please Enter Phone Number!
                       </small>
                     )}
@@ -274,7 +274,7 @@ const Enrollment = () => {
                       keyName="email"
                     />
                     {empty === 3 && (
-                      <small style={{ color: 'red', marginLeft: '0' }}>
+                      <small style={{ color: 'red', marginLeft: '45px', fontSize: '15px' }}>
                         *Please Enter Email!
                       </small>
                     )}
@@ -288,7 +288,7 @@ const Enrollment = () => {
                       keyName="address1"
                     />
                     {empty === 4 && (
-                      <small style={{ color: 'red', marginLeft: '0' }}>
+                      <small style={{ color: 'red',marginLeft: '45px', fontSize: '15px' }}>
                         *Please Enter Address!
                       </small>
                     )}
@@ -302,7 +302,7 @@ const Enrollment = () => {
                       keyName="address2"
                     />{' '}
                     {empty === 5 && (
-                      <small style={{ color: 'red', marginLeft: '0' }}>
+                      <small style={{ color: 'red', marginLeft: '45px', fontSize: '15px' }}>
                         *Please Enter Address!
                       </small>
                     )}
@@ -316,7 +316,7 @@ const Enrollment = () => {
                       keyName="country"
                     />{' '}
                     {empty === 6 && (
-                      <small style={{ color: 'red', marginLeft: '0' }}>
+                      <small style={{ color: 'red', marginLeft: '45px', fontSize: '15px' }}>
                         *Please Enter Your Country!
                       </small>
                     )}
@@ -330,7 +330,7 @@ const Enrollment = () => {
                       keyName="state"
                     />{' '}
                     {empty === 7 && (
-                      <small style={{ color: 'red', marginLeft: '0' }}>
+                      <small style={{ color: 'red', marginLeft: '45px', fontSize: '15px' }}>
                         *Please Enter Your State!
                       </small>
                     )}
@@ -344,7 +344,7 @@ const Enrollment = () => {
                       keyName="city"
                     />{' '}
                     {empty === 8 && (
-                      <small style={{ color: 'red', marginLeft: '0' }}>
+                      <small style={{ color: 'red', marginLeft: '45px', fontSize: '15px' }}>
                         *Please Enter Your City!
                       </small>
                     )}
@@ -358,7 +358,7 @@ const Enrollment = () => {
                       keyName="pincode"
                     />
                     {empty === 9 && (
-                      <small style={{ color: 'red', marginLeft: '0' }}>
+                      <small style={{ color: 'red', marginLeft: '45px', fontSize: '15px' }}>
                         *Please Enter Pincode!
                       </small>
                     )}
@@ -395,7 +395,7 @@ const Enrollment = () => {
                     />
                   </label>
                   {empty === 15 && (
-                    <small style={{ color: 'red', marginLeft: '0' }}>
+                    <small style={{ color: 'red', marginLeft: '45px', fontSize: '15px' }}>
                       *Please Select One Otpion!
                     </small>
                   )}
@@ -410,7 +410,7 @@ const Enrollment = () => {
                       keyName="DOB"
                     />{' '}
                     {empty === 10 && (
-                      <small style={{ color: 'red', marginLeft: '0' }}>
+                      <small style={{ color: 'red', marginLeft: '45px', fontSize: '15px' }}>
                         *Please Enter Your DOB
                       </small>
                     )}
@@ -424,7 +424,7 @@ const Enrollment = () => {
                       keyName="nationality"
                     />
                     {empty === 11 && (
-                      <small style={{ color: 'red', marginLeft: '0' }}>
+                      <small style={{ color: 'red', marginLeft: '45px', fontSize: '15px' }}>
                         *Please Enter Your Nationality
                       </small>
                     )}
@@ -606,7 +606,7 @@ const Enrollment = () => {
                   })}
                 </div>
                 {empty === 1 && (
-                  <small style={{ color: 'red', marginLeft: '0' }}>
+                  <small style={{ color: 'red', marginLeft: '45px', fontSize: '15px' }}>
                     *Please Enter Your Deatils!
                   </small>
                 )}
@@ -725,7 +725,7 @@ const Enrollment = () => {
                   })}
                 </div>
                 {empty === 1 && (
-                  <small style={{ color: 'red', marginLeft: '0' }}>
+                  <small style={{ color: 'red', marginLeft: '45px', fontSize: '15px' }}>
                     *Please Enter Your Deatils!
                   </small>
                 )}
@@ -848,7 +848,7 @@ const Enrollment = () => {
                           />
                         </label>
                         {empty === 1 && (
-                          <small style={{ color: 'red', marginLeft: '0' }}>
+                          <small style={{ color: 'red', marginLeft: '45px', fontSize: '15px' }}>
                             *Please select one!
                           </small>
                         )}
@@ -866,7 +866,7 @@ const Enrollment = () => {
                     }}
                   />
                   {empty === 2 && (
-                    <small style={{ color: 'red', marginLeft: '0' }}>
+                    <small style={{ color: 'red', marginLeft: '45px', fontSize: '15px' }}>
                       *Please Specify!
                     </small>
                   )}
