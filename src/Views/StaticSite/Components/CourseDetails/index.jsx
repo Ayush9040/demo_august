@@ -221,7 +221,7 @@ const CourseDetails = ({ pageDate }) => {
       </div>}
       {(pageDate?.category ==='ttc' && pageDate?.offerings?.length !==0) && <div className="details-section" id='offering' >
         <h1>
-          Our Offerings
+          Our Unique Offerings
         </h1>
         {pageDate?.offerings?.map(({ type, content }) => {
           return selectComponent(type, content)

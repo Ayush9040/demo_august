@@ -96,7 +96,7 @@
         color: #60606080;
         float: right;
         padding-right: 2rem;
-        font-size: 1.3rem;
+        font-size: 1.15rem;
       }
     }
   }
@@ -147,6 +147,7 @@
   .details {
     display: grid;
     grid-template-columns: 50% 50%;
+    margin-top: 20px;
 
     .right {
       .date_div {
@@ -275,6 +276,16 @@
     }
   }
 
+  .right1 {
+    margin: 20px 90px 30px 90px;
+    .date_div {
+      & > div {
+        input::placeholder {
+          color: #60606080;
+        }
+      }
+    }
+  }
   .right {
     margin: 50px 90px 30px 90px;
     .date_div {
@@ -381,7 +392,7 @@
           color: #60606080;
           float: right;
           padding-right: 2rem;
-          font-size: 0.9rem;
+          font-size: 1.15rem;
         }
       }
       .last_radio_button {
