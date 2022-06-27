@@ -13,7 +13,7 @@ const ttc200hr = {
     timing: 'Monday to Saturday: 10:00 am - 6:00 pm (IST)',
     fees: 22000,
     category: 'ttc',
-    title: '200 hrs TTC - Batch 1 - 1 Month TTC - Online & On Campus - English',
+    title: '200 hrs TTC  Batch 1 - 1 Month TTC Online & On Campus - English',
     dates: ['1st June 2022 ','1st July 2022','1st August 2022 ','1st September 2022 ','1st October 2022','1st November 2022','1st December 2022 '],
     online:true,
     onCampus:true,
@@ -52,7 +52,7 @@ const ttc200hr = {
         content: {
           title: 'Course',
           text: [
-            '200 hrs TTC - Batch 1 - 1 Month TTC - Online & On Campus - English',
+            '200 hrs TTC  Batch 1 - 1 Month TTC Online & On Campus - English',
           ],
         },
       },
@@ -317,7 +317,7 @@ const ttc200hr = {
     timing: 'Monday to Friday : 12:00 noon - 4:00 pm (IST)',
     fees: 22000,
     category: 'ttc',
-    title: '200 hrs TTC - Batch 2 - 2 Months TTC - On Campus - English',
+    title: '200 hrs TTC  Batch 2 - 2 Months TTC On Campus - English',
     dates: ['11th July 2022','5th September 2022','31st October 2022','26th December 2022'],
     online:false,
     onCampus:true,
@@ -355,7 +355,7 @@ const ttc200hr = {
         type: 'paragraph',
         content: {
           title: 'Course',
-          text: ['200 hrs TTC - Batch 2 - 2 Months TTC - On Campus - English'],
+          text: ['200 hrs TTC Batch 2 - 2 Months TTC On Campus - English'],
         },
       },
       {
@@ -618,7 +618,7 @@ const ttc200hr = {
       'Monday to Saturday: Morning: 7:00 am - 8:30 am (IST) and                                Evening : 6:30 pm - 8:30 pm (IST) (Both the time slots are mandatory)',
     fees: 22000,
     category: 'ttc',
-    title: '200 hrs TTC - Batch 3 - 2 Months TTC - Online  - English',
+    title: '200 hrs TTC  Batch 3 - 2 Months TTC Online  - English',
     dates: ['8th August 2022','10th October 2022 ','12th December 2022 '],
     online:true,
     onCampus:false,
@@ -656,7 +656,7 @@ const ttc200hr = {
         type: 'paragraph',
         content: {
           title: 'Course',
-          text: ['200 hrs TTC - Batch 3 - 2 Months TTC - Online  - English'],
+          text: ['200 hrs TTC Batch 3 - 2 Months TTC Online  - English'],
         },
       },
       {
@@ -920,7 +920,7 @@ const ttc200hr = {
     timing: 'Monday to Saturday: 1:00 pm - 4:30 pm (IST)',
     fees: 22000,
     category: 'ttc',
-    title: '200 hrs TTC - Batch 4 - 2 Months TTC - Online  - Hindi',
+    title: '200 hrs TTC  Batch 4 - 2 Months TTC Online  - Hindi',
     dates: ['13th June 2022 ','15th August 2022','17th October 2022','19th December 2022 '],
     online:true,
     onCampus:false,
@@ -958,7 +958,7 @@ const ttc200hr = {
         type: 'paragraph',
         content: {
           title: 'Course',
-          text: ['200 hrs TTC - Batch 4 - 2 Months TTC - Online  - Hindi'],
+          text: ['200 hrs TTC Batch 4 - 2 Months TTC Online  - Hindi'],
         },
       },
       {
@@ -1220,7 +1220,7 @@ const ttc200hr = {
     timing: 'Monday to Saturday: 4:30 pm – 8:00 pm (IST)',
     fees: 22000,
     category: 'ttc',
-    title: '200 hrs TTC - Batch 5 - 2 Months TTC - Online  - English',
+    title: '200 hrs TTC Batch 5 - 2 Months TTC Online  - English',
     dates: ['27th June 2022 ','29th August 2022','31st October 2022 '],
     online:true,
     onCampus:false,
@@ -1258,7 +1258,7 @@ const ttc200hr = {
         type: 'paragraph',
         content: {
           title: 'Course',
-          text: ['200 hrs TTC - Batch 5 - 2 Months TTC - Online  - English'],
+          text: ['200 hrs TTC Batch 5 - 2 Months TTC Online  - English'],
         },
       },
       {
@@ -1521,7 +1521,7 @@ const ttc200hr = {
       'Saturday & Sunday: Saturday Sessions: 10:00 am – 8:30 pm (IST) and Sunday Sessions 10:00 am – 1:30 pm (IST)',
     fees: 22000,
     category: 'ttc',
-    title: '200 hrs TTC - Batch 6 - 3 Months Weekend TTC - Online - English',
+    title: '200 hrs TTC  Batch 6 - 3 Months Weekend TTC Online - English',
     dates: ['4th June 2022 ','27th August 2022','19th November 2022'],
     online:true,
     onCampus:false,
@@ -1559,7 +1559,7 @@ const ttc200hr = {
         type: 'paragraph',
         content: {
           title: 'Course',
-          text: ['Batch 6 - 3 Months Weekend TTC - Online - English'],
+          text: ['Batch 6 - 3 Months Weekend TTC Online - English'],
         },
       },
       {
@@ -1826,7 +1826,7 @@ const ttc500hr = {
       'Monday to Saturday: Morning: 7:00 am - 8:30 am (IST) and  Evening: 4:30 pm - 8:30 pm (IST) (Both the time slots are mandatory)',
     fees: 35000,
     category: 'ttc',
-    title: '500 hrs TTC -3 Months TTC - Online - English',
+    title: '500 hrs TTC 3 Months TTC Online - English',
     image: `${baseDomain}${courseAssets.courseAsset39}`,
     dates: ['15th August 2022','14th November 2022'],
     online:true,
@@ -1865,7 +1865,7 @@ const ttc500hr = {
         type: 'paragraph',
         content: {
           title: 'Course',
-          text: ['3 Months TTC - Online - English'],
+          text: ['3 Months TTC Online - English'],
         },
       },
       {
@@ -2074,14 +2074,14 @@ const ttc900hr = {
 
     metaDescription: 'You will learn the tools to master your physical, mental and spiritual well-being. You will see a marked improvement in your life, relationships and work.',
 
-    title: '900 hrs TTC - 1 Year TTC - Online & On Campus - Hindi',
+    title: '900 hrs TTC  1 Year TTC Online & On Campus - Hindi',
 
     image: `${baseDomain}${courseAssets.courseAsset40}`,
 
     mostPopular: false,
     rating: 5,
     colorCode: '#C9705F',
-    timing: '900 hrs TTC - 1 Year TTC - Online & On Campus - Hindi',
+    timing: '900 hrs TTC 1 Year TTC Online & On Campus - Hindi',
     fees: 50000,
     category: 'ttc',
 
@@ -2136,7 +2136,7 @@ const ttc900hr = {
         content: {
           title: 'Course:',
 
-          text: ['900 hrs TTC - 1 Year TTC - Online & On Campus - Hindi'],
+          text: ['900 hrs TTC 1 Year TTC Online & On Campus - Hindi'],
         },
       },
 
@@ -2156,7 +2156,7 @@ const ttc900hr = {
         content: {
           title: 'Timings',
 
-          text: ['900 hrs TTC - 1 Year TTC - Online & On Campus - Hindi'],
+          text: ['900 hrs TTC 1 Year TTC Online & On Campus - Hindi'],
         },
       },
 
@@ -2676,7 +2676,7 @@ const ttc900hr = {
     key: '2-year-900hr',
 
     metaDescription: 'You will learn the tools to master your physical, mental and spiritual well-being. You will see a marked improvement in your life, relationships and work.',            
-    title: '900 hrs TTC - 2 Years TTC - Online & On Campus - English',
+    title: '900 hrs TTC  2 Years TTC Online & On Campus - English',
 
     image: `${baseDomain}${courseAssets.courseAsset40}`,
 
@@ -2684,7 +2684,7 @@ const ttc900hr = {
     rating: 5,
     colorCode: '#C9705F',
     timing:
-      '900 hrs TTC - 1 Year TTC - Online & On Campus - Saturday & Sunday: Saturday: 4:30 pm – 7.30 pm (IST) and Sunday: 9:30 am – 1:30 pm (IST) (Both the time slots are mandatory)',
+      '900 hrs TTC 1 Year TTC Online & On Campus - Saturday & Sunday: Saturday: 4:30 pm – 7.30 pm (IST) and Sunday: 9:30 am – 1:30 pm (IST) (Both the time slots are mandatory)',
     fees: 50000,
     category: 'ttc',
 
@@ -2738,7 +2738,7 @@ const ttc900hr = {
         content: {
           title: 'Course:',
 
-          text: ['900 hrs TTC - 2 Years TTC - Online & On Campus - English'],
+          text: ['900 hrs TTC 2 Years TTC Online & On Campus - English'],
         },
       },
 
@@ -3282,7 +3282,7 @@ const ttc900hr = {
     key: '3-months-ttc',
 
     metaDescription: 'You will learn the tools to master your physical, mental and spiritual well-being. You will see a marked improvement in your life, relationships and work.',            
-    title: '900 hrs TTC - 3 Months TTC - On Campus - English',
+    title: '900 hrs TTC  3 Months TTC On Campus - English',
 
     image: `${baseDomain}${courseAssets.courseAsset40}`,
 
@@ -3343,7 +3343,7 @@ const ttc900hr = {
         content: {
           title: 'Course:',
 
-          text: ['900 hrs TTC - 3 Months TTC - On Campus - English'],
+          text: ['900 hrs TTC 3 Months TTC On Campus - English'],
         },
       },
 
@@ -3785,7 +3785,7 @@ const ttc900hr = {
     key: '4-months-900hr',
 
     metaDescription: 'You will learn the tools to master your physical, mental and spiritual well-being. You will see a marked improvement in your life, relationships and work.',            
-    title: '900 hrs TTC - 4 Months TTC - On Campus - English',
+    title: '900 hrs TTC  4 Months TTC On Campus - English',
 
     image: `${baseDomain}${courseAssets.courseAsset40}`,
 
@@ -3850,7 +3850,7 @@ const ttc900hr = {
         content: {
           title: 'Course:',
 
-          text: ['900 hrs TTC - 4 Months TTC - On Campus - English'],
+          text: ['900 hrs TTC 4 Months TTC On Campus - English'],
         },
       },
 
@@ -4380,7 +4380,7 @@ const ttc900hr = {
     key: '7-months-900hr',
 
     metaDescription: 'You will learn the tools to master your physical, mental and spiritual well-being. You will see a marked improvement in your life, relationships and work.',            
-    title: '900 hrs TTC - 7 Months TTC - Online & On Campus - English',
+    title: '900 hrs TTC  7 Months TTC Online & On Campus - English',
 
     image: `${baseDomain}${courseAssets.courseAsset40}`,
 
@@ -4439,7 +4439,7 @@ const ttc900hr = {
         content: {
           title: 'Course:',
 
-          text: ['900 hrs TTC - 7 Months TTC - Online & On Campus - English '],
+          text: ['900 hrs TTC 7 Months TTC Online & On Campus - English '],
         },
       },
 
