@@ -10,3 +10,5 @@ export const initialState = {
   user: {},
   isLoggedIn: isAuthorized(),
 }
+
+
