@@ -567,7 +567,7 @@ const Enrollment = () => {
                     <fieldset>
                       <label htmlFor="image">
                         {qualificationAsset1
-                          ? qualificationAsset1.substring(0, 15)
+                          ? qualificationAsset1.substring(0, 10)
                           : 'Upload Image'}
                         <input
                           type={'file'}
@@ -585,7 +585,7 @@ const Enrollment = () => {
                     <fieldset>
                       <label htmlFor="resume">
                         {qualificationAsset2
-                          ? qualificationAsset2.substring(0, 15)
+                          ? qualificationAsset2.substring(0, 10)
                           : 'Upload PDF'}
                         <input
                           type={'file'}
@@ -599,7 +599,7 @@ const Enrollment = () => {
                         &ensp;
                         {upload}
                       </label>
-                      <br />
+                      
                       <small>Please ensure the file is under 2 MB</small>
                     </fieldset>
                   </div>
@@ -692,7 +692,7 @@ const Enrollment = () => {
                     <fieldset>
                       <label htmlFor="image">
                         {experienceAsset1
-                          ? experienceAsset1.substring(0, 15)
+                          ? experienceAsset1.substring(0, 10)
                           : 'Upload Image'}
                         <input
                           type={'file'}
@@ -710,7 +710,7 @@ const Enrollment = () => {
                     <fieldset>
                       <label htmlFor="resume">
                         {experienceAsset2
-                          ? experienceAsset2.substring(0, 15)
+                          ? experienceAsset2.substring(0, 10)
                           : 'Upload PDF'}
                         <input
                           type={'file'}
@@ -724,7 +724,7 @@ const Enrollment = () => {
                         &ensp;
                         {upload}
                       </label>
-                      <br />
+                    
                       <small>Please ensure the file is under 2 MB</small>
                     </fieldset>
                   </div>
@@ -1146,7 +1146,7 @@ const Enrollment = () => {
                     <fieldset>
                       <label htmlFor="image">
                         {courseAsset1
-                          ? courseAsset1.substring(0, 15)
+                          ? courseAsset1.substring(0, 10)
                           : 'Upload Image'}
                         <input
                           type={'file'}
@@ -1164,7 +1164,7 @@ const Enrollment = () => {
                     <fieldset>
                       <label htmlFor="resume">
                         {courseAsset2
-                          ? courseAsset2.substring(0, 15)
+                          ? courseAsset2.substring(0, 10)
                           : 'Upload PDF'}
                         <input
                           type={'file'}
@@ -1178,7 +1178,7 @@ const Enrollment = () => {
                         &ensp;
                         {upload}
                       </label>
-                      <br />
+                      
                       <small>Please ensure the file is under 2 MB</small>
                     </fieldset>
                   </div>
