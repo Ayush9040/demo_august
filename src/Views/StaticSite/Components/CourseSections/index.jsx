@@ -75,10 +75,10 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange })
               <ul>
                 <Link to='/courses/course/asana-regular-classes-men-on-campus/'><li>Asana Regular Classes for Men On Campus</li></Link>
                 <Link to='/courses/course/asana-regular-classes-for-women/'><li>Asana Regular Classes for Women On Campus</li></Link>
-                <Link to='/courses/course/asana-regular-classes-men-on-campus/'><li>Weekend Asana Classes - (Men & Women) On Campus</li></Link>
+                <Link to='/courses/course/weekend-asana-classes-men-women-oncampus/'><li>Weekend Asana Classes - (Men & Women) On Campus</li></Link>
                 <Link to='/courses/course/asana-regular-classes-men-women/'><li>Weekend Asana Classes - (Men & Women) Online</li></Link>
                 <Link to='/courses/course/children&apos;s-regular-class-oncampus/'><li>Children&apos;s Regular Class - On Campus</li></Link>
-                <Link to='/courses/course/children&apos;s-weeken-class-oncampus/'><li>Children&apos;s Weekend Class - On Campus </li></Link>
+                <Link to='/courses/course/children&apos;s-weekend-class-oncampus/'><li>Children&apos;s Weekend Class - On Campus </li></Link>
                 <Link to='/courses/course/advance-asana-regular-class/'><li>
                     Advance Asana Regular Class - Online (Only for TYI Teachers)
                 </li>
@@ -132,7 +132,7 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange })
                 <Link to=''><li>21 Days Better Living Course</li></Link>
                 <Link to='/courses/course/batch-1-200hr/'><li>200 Hour 1 Month BTTC Course</li></Link>
                 <Link to='/courses/course/7-Months-900hr/'><li>900 Hour 3 Month ATTC Course</li></Link>
-                <Link to='/courses/course/pranayama-workshop/'><li> Pregnancy Camp</li></Link>
+                <Link to=''><li> Pregnancy Camp</li></Link>
               </ul>
             </h4>
           </div>
