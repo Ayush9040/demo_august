@@ -1,8 +1,8 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './style.scss'
 
 const MainVideo = () => {
-  const  [initialVideo,setInitialVideo]=useState['']
+ 
   return (
     <>
       {/* <iframe
@@ -10,7 +10,7 @@ const MainVideo = () => {
           objectFit: 'cover',
           width: '100vw',
           height: '100vh',
-          position: 'fixed',
+          position: 'absolute',
           top: '0',
           left: '0',
         }}
@@ -19,24 +19,26 @@ const MainVideo = () => {
         marginHeight="0"
         marginWidth="0"
         scrolling="0"
-        controls=''
+        controls={false}
         allowFullScreen
         
-      ></iframe>
+      ></iframe> */}
 
-      <div ><button className='video-button'>Skip</button></div> */}
-      <div className="starting-video">
-        <video
-          src=" https://ecom-static-site.oss-ap-south-1.aliyuncs.com/Home/PlayVideo/TYI%20One%20Minute%20Ad%20Video.mp4"
-          control="false"
-          autoPlay
-          style={{ height: '100vh', width: '100%' }}
-          className='popup-video'
-        >
+      {/* <div ><button className='video-button'>Skip</button></div> */}
+
+      <video
+        src=" https://ecom-static-site.oss-ap-south-1.aliyuncs.com/Home/PlayVideo/TYI%20One%20Minute%20Ad%20Video.mp4"
+        controls={false}
+        loop
+        autoPlay={true}
+        muted={true}
+        className='pop-video'
+        fullscreen
+      >
           Your browser does not support the video tag.
-        </video>
-        <button onClick={()=>{setInitialVideo('')}}className="video-skip-button">Skip</button>
-      </div>
+      </video>
+       
+  
     </>
   )
 }
