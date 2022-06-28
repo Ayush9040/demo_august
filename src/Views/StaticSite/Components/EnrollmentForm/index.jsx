@@ -53,7 +53,7 @@ const Enrollment = () => {
     })
   }
 
-  const [bold, setBold] = useState(5)
+  const [bold, setBold] = useState(0)
   const [yearEmpty, setYearEmpty] = useState(0)
   const [resgin, setResgin] = useState(0)
   const [listData, setListData] = useState([])
