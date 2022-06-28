@@ -12,6 +12,7 @@ import NewsLetter from '../../Components/NewsLetter'
 import Footer from '../../Components/Footer'
 import Blog from '../../Components/BlogSection'
 import { useLocation } from 'react-router-dom'
+import DisclaimerPolicy from '../../Components/DisclaimerPolicy'
 
 
 const Home = () => {
@@ -38,6 +39,7 @@ const Home = () => {
       <VideosSection />
       <NewsLetter />
       <Footer />
+      <DisclaimerPolicy />
     </>
   )
 }

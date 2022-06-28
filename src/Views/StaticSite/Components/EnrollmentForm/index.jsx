@@ -289,13 +289,13 @@ const Enrollment = () => {
                   </div>
                   <div>
                     <InputComponent
-                      type="number"
+                      type="text"
                       placeholder="Phone Number"
                       form={formData}
                       setField={setFormData}
                       keyName="phone"
                     />
-                    {empty === 2 && (
+                    {empty === 1 && (
                       <small style={{ color: 'red', marginLeft: '0' }}>
                         *Please Enter Phone Number!
                       </small>
