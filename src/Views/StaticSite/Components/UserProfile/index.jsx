@@ -1,21 +1,33 @@
 import React, { useState } from 'react'
-import CommonBannerNavPrimary from '../CommonBannerNavPrimary'
+import { useSelector } from 'react-redux'
 import HistoryList from '../HistoryList'
+import InnerNavComponent from '../InnerNavComponent'
 import './style.scss'
+
 
 const UserProfile = () => {
   const [module, setModule] = useState(0)
-
+  const { user } = useSelector((state) => state.auth)
   const navItems = [
-    { option: 'Full Name', key: 0 },
+    { option: user.data.firstName||'firstName', key: 0 },
     { option: 'Courses', key: 1 },
     { option: 'Orders', key: 2 },
     { option: 'Alumni', key: 3 },
   ]
 
+  const UserNav = {
+    title: 'alumni-events',
+    color: 'orange',
+    menuColor: 'black',
+    menuItems: [
+    ],
+  }
+
+  
+
   return (
     <div className='user-profile'>
-      <CommonBannerNavPrimary />
+      <InnerNavComponent abc={UserNav} />
       <div className='profile-grid'>
         <div className='profile-nav'>
           <div className='profile-nav-container'>
@@ -48,11 +60,11 @@ const UserProfile = () => {
                   data={[]}
                   options={['All', 'Completed', 'On-going']}
                 />
-                <HistoryList
+                {/* <HistoryList
                   title='Orders'
                   data={[]}
                   options={['All', 'Delivered', 'On-going']}
-                />
+                /> */}
               </div>
             </div>
           )}
@@ -67,11 +79,11 @@ const UserProfile = () => {
           )}
           {module === 2 && (
             <div className='user-orders profile-overview'>
-              <HistoryList
+              {/* <HistoryList
                 title='Orders'
                 data={[]}
                 options={['All', 'Delivered', 'On-going']}
-              />
+              /> */}
             </div>
           )}
           {module === 3 && (

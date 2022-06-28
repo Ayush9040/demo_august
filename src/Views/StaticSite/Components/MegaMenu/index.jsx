@@ -236,7 +236,7 @@ const MegaMenu = ({ setNav }) => {
                 </Link>
 
                 <li className="text-bold">
-                  500 Hour Courses TTC (intermediate)
+                  500 Hour Courses TTC (Intermediate)
                 </li>
                 <Link onClick={() => {setNav(false)}}  to="/courses/course/3-months-500hr/">
                   <li style={{ marginBottom: '2rem' }}>
@@ -248,7 +248,7 @@ const MegaMenu = ({ setNav }) => {
                   <li>3 Months TTC-On Campus-English</li>
                 </Link>
                 <Link onClick={() => {setNav(false)}}  to="/courses/course/4-months-900hr/">
-                  <li>4 Months TTC-On Campus-English</li>
+                  <li>4 Months TTC-Online-English</li>
                 </Link>
                 <Link onClick={() => {setNav(false)}}  to="/courses/course/7-months-900hr/">
                   <li>7 Months TTC-Online & On Campus-English</li>
@@ -271,7 +271,7 @@ const MegaMenu = ({ setNav }) => {
                 </Link>
                 <Link onClick={() => {setNav(false)}}  to="/courses/course/certification-program-on-yoga-for-lung-cancer-online/">
                   <li className="text-bold" style={{ marginBottom: '2rem' }}>
-                    Certificate Program for Yoga for Lung Cancer - Online
+                    Certificate Program on Yoga for Lung Cancer - Online
                   </li>
                 </Link>
                 <Link onClick={() => {setNav(false)}}  to="/courses/course/certification-course-on-advanced-pranayam/">
@@ -289,23 +289,23 @@ const MegaMenu = ({ setNav }) => {
             <div className="single-menu">
               <h3>21 DAYS BETTER LIVING COURSE</h3>
               <ul>
-                <Link onClick={() => {setNav(false)}}  to="">
+                <Link onClick={() => {setNav(false)}}  to="/courses/course/batch1-21days-morning-oncampus/">
                   <li>Batch 1 - 21-Days BLC - Morning On Campus-English</li>
                 </Link>
-                <Link onClick={() => {setNav(false)}}  to="">
+                <Link onClick={() => {setNav(false)}}  to="/courses/course/21-days-blc-batch2/">
                   <li>
                     Batch 2 - 21-Days BLC - Evening Online & On Campus-English
                   </li>
                 </Link>
-                <Link onClick={() => {setNav(false)}}  to="">
+                <Link onClick={() => {setNav(false)}}  to="/courses/course/21-days-blc-batch3/">
                   <li>
                     Batch 3 - 21-Days BLC - Evening Online & On Campus-Hindi
                   </li>
                 </Link>
-                <Link onClick={() => {setNav(false)}}  to="">
+                <Link onClick={() => {setNav(false)}}  to="/courses/course/21-days-blc-batch4/">
                   <li>Batch 4 - 21-Days BLC-Morning-Online English</li>
                 </Link>
-                <Link onClick={() => {setNav(false)}}  to=''>
+                <Link onClick={() => {setNav(false)}}  to='/courses'>
                   <h3 style={{ marginBottom: '2rem' }}>
                   Samattvam (Health Checkup)
                   </h3>
@@ -339,16 +339,16 @@ const MegaMenu = ({ setNav }) => {
                     </li>
                   </Link>
                   <Link onClick={() => {setNav(false)}}  to="/courses/course/yog-prayas-online/">
-                    <li>Yog-Prayas-Online</li>
+                    <li>Yog Prayas-Online</li>
                   </Link>
                   <Link onClick={() => {setNav(false)}}  to="/courses/course/meditation-foundation-course-online/">
                     <li>Meditation Foundation Course-Online</li>
                   </Link>
                   <Link onClick={() => {setNav(false)}}  to="/courses/course/regular-meditation-classes-online/">
-                    <li>Regular Foundation Course-Online</li>
+                    <li>Regular Meditation Classes-Online</li>
                   </Link>
                   <Link onClick={() => {setNav(false)}}  to="/courses/course/anand-sadhna/">
-                    <li>Anand Sadhna Online & OnCampus</li>
+                    <li>Anand Sadhna-Online & On Campus</li>
                   </Link>
                   <Link onClick={() => {setNav(false)}}  to="">
                     <li>Couple&apos;s Classes-Online</li>
@@ -359,8 +359,8 @@ const MegaMenu = ({ setNav }) => {
             <div className="single-menu">
               <h3>7 DAYS HEALTH CAMP</h3>
               <ul>
-                <Link onClick={() => {setNav(false)}}  to=''><li>7 Days Health Camp - On Campus - English</li></Link>
-                <Link onClick={() => {setNav(false)}}  to=''><li>7 Days Health Camp - On Campus - Hindi</li></Link>
+                <Link onClick={() => {setNav(false)}}  to='/courses/course/7-days-heath-camp-on-campus-english/'><li>7 Days Health Camp - On Campus - English</li></Link>
+                <Link onClick={() => {setNav(false)}}  to='/courses/course/7-days-heath-camp-on-campus/'><li>7 Days Health Camp - On Campus - Hindi</li></Link>
               </ul>
               <h3>CAMPS & WORKSHOPS</h3>
               <ul>

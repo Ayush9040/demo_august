@@ -52,8 +52,12 @@
         text-align: center;
         &>div{
             width: 250px;
-            margin: 0;   
+            margin: 0;  
         }
+        a>div{
+            width: 250px;
+            margin: 0;
+        } 
         .global-common-btn{
             &:last-child{
                 border: 3px solid #EA4335;

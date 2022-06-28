@@ -3,6 +3,7 @@ import baseDomain, { courseAssets } from '../../../assets/images/imageAsset'
 const ttc200hr = {
   1: {
     id: '',
+    templateId:'COURSE200_1M_TTC',
     key: 'batch-1-200hr',
     metaDescription: 'You will learn the tools to master your physical, mental and spiritual well-being. You will see a marked improvement in your life, relationships and work.',            
     image: `${baseDomain}${courseAssets.courseAsset38}`,
@@ -12,7 +13,7 @@ const ttc200hr = {
     timing: 'Monday to Saturday: 10:00 am - 6:00 pm (IST)',
     fees: 22000,
     category: 'ttc',
-    title: '200 hrs TTC - Batch 1 - 1 Month TTC - Online & On Campus - English',
+    title: '200 hrs TTC  Batch 1 - 1 Month TTC Online & On Campus - English',
     dates: ['1st June 2022 ','1st July 2022','1st August 2022 ','1st September 2022 ','1st October 2022','1st November 2022','1st December 2022 '],
     online:true,
     onCampus:true,
@@ -51,7 +52,7 @@ const ttc200hr = {
         content: {
           title: 'Course',
           text: [
-            '200 hrs TTC - Batch 1 - 1 Month TTC - Online & On Campus - English',
+            '200 hrs TTC  Batch 1 - 1 Month TTC Online & On Campus - English',
           ],
         },
       },
@@ -93,7 +94,7 @@ const ttc200hr = {
         },
       },
     ],
-    curriculam: [
+    curriculum: [
       {
         type: 'u-list',
         content: {
@@ -306,6 +307,7 @@ const ttc200hr = {
   },
   2: {
     id: '',
+    templateId:'COURSE200_1M_TTC2',
     key: 'batch-2-200hr',
     metaDescription: 'You will learn the tools to master your physical, mental and spiritual well-being. You will see a marked improvement in your life, relationships and work.',            
     image: `${baseDomain}${courseAssets.courseAsset38}`,
@@ -315,7 +317,7 @@ const ttc200hr = {
     timing: 'Monday to Friday : 12:00 noon - 4:00 pm (IST)',
     fees: 22000,
     category: 'ttc',
-    title: '200 hrs TTC - Batch 2 - 2 Months TTC - On Campus - English',
+    title: '200 hrs TTC  Batch 2 - 2 Months TTC On Campus - English',
     dates: ['11th July 2022','5th September 2022','31st October 2022','26th December 2022'],
     online:false,
     onCampus:true,
@@ -353,7 +355,7 @@ const ttc200hr = {
         type: 'paragraph',
         content: {
           title: 'Course',
-          text: ['200 hrs TTC - Batch 2 - 2 Months TTC - On Campus - English'],
+          text: ['200 hrs TTC Batch 2 - 2 Months TTC On Campus - English'],
         },
       },
       {
@@ -392,7 +394,7 @@ const ttc200hr = {
         },
       },
     ],
-    curriculam: [
+    curriculum: [
       {
         type: 'u-list',
         content: {
@@ -605,6 +607,7 @@ const ttc200hr = {
   },
   3: {
     id: '',
+    templateId:'COURSE200_2M_TTC2',
     key: 'batch-3-200hr',
     metaDescription: 'You will learn the tools to master your physical, mental and spiritual well-being. You will see a marked improvement in your life, relationships and work.',            
     image: `${baseDomain}${courseAssets.courseAsset38}`,
@@ -615,7 +618,7 @@ const ttc200hr = {
       'Monday to Saturday: Morning: 7:00 am - 8:30 am (IST) and                                Evening : 6:30 pm - 8:30 pm (IST) (Both the time slots are mandatory)',
     fees: 22000,
     category: 'ttc',
-    title: '200 hrs TTC - Batch 3 - 2 Months TTC - Online  - English',
+    title: '200 hrs TTC  Batch 3 - 2 Months TTC Online  - English',
     dates: ['8th August 2022','10th October 2022 ','12th December 2022 '],
     online:true,
     onCampus:false,
@@ -653,7 +656,7 @@ const ttc200hr = {
         type: 'paragraph',
         content: {
           title: 'Course',
-          text: ['200 hrs TTC - Batch 3 - 2 Months TTC - Online  - English'],
+          text: ['200 hrs TTC Batch 3 - 2 Months TTC Online  - English'],
         },
       },
       {
@@ -694,7 +697,7 @@ const ttc200hr = {
         },
       },
     ],
-    curriculam: [
+    curriculum: [
       {
         type: 'u-list',
         content: {
@@ -907,6 +910,7 @@ const ttc200hr = {
   },
   4: {
     id: '',
+    templateId:'COURSE200_2M_TTC_HINDI',
     key: 'batch-4-200hr',
     metaDescription: 'You will learn the tools to master your physical, mental and spiritual well-being. You will see a marked improvement in your life, relationships and work.', 
     image: `${baseDomain}${courseAssets.courseAsset38}`,
@@ -916,7 +920,7 @@ const ttc200hr = {
     timing: 'Monday to Saturday: 1:00 pm - 4:30 pm (IST)',
     fees: 22000,
     category: 'ttc',
-    title: '200 hrs TTC - Batch 4 - 2 Months TTC - Online  - Hindi',
+    title: '200 hrs TTC  Batch 4 - 2 Months TTC Online  - Hindi',
     dates: ['13th June 2022 ','15th August 2022','17th October 2022','19th December 2022 '],
     online:true,
     onCampus:false,
@@ -954,7 +958,7 @@ const ttc200hr = {
         type: 'paragraph',
         content: {
           title: 'Course',
-          text: ['200 hrs TTC - Batch 4 - 2 Months TTC - Online  - Hindi'],
+          text: ['200 hrs TTC Batch 4 - 2 Months TTC Online  - Hindi'],
         },
       },
       {
@@ -993,7 +997,7 @@ const ttc200hr = {
         },
       },
     ],
-    curriculam: [
+    curriculum: [
       {
         type: 'u-list',
         content: {
@@ -1206,6 +1210,7 @@ const ttc200hr = {
   },
   5: {
     id: '',
+    templateId:'COURSE200_2M_TTC',
     key: 'batch-5-200hr',
     metaDescription: 'You will learn the tools to master your physical, mental and spiritual well-being. You will see a marked improvement in your life, relationships and work.', 
     image: `${baseDomain}${courseAssets.courseAsset38}`,
@@ -1215,7 +1220,7 @@ const ttc200hr = {
     timing: 'Monday to Saturday: 4:30 pm – 8:00 pm (IST)',
     fees: 22000,
     category: 'ttc',
-    title: '200 hrs TTC - Batch 5 - 2 Months TTC - Online  - English',
+    title: '200 hrs TTC Batch 5 - 2 Months TTC Online  - English',
     dates: ['27th June 2022 ','29th August 2022','31st October 2022 '],
     online:true,
     onCampus:false,
@@ -1253,7 +1258,7 @@ const ttc200hr = {
         type: 'paragraph',
         content: {
           title: 'Course',
-          text: ['200 hrs TTC - Batch 5 - 2 Months TTC - Online  - English'],
+          text: ['200 hrs TTC Batch 5 - 2 Months TTC Online  - English'],
         },
       },
       {
@@ -1292,7 +1297,7 @@ const ttc200hr = {
         },
       },
     ],
-    curriculam: [
+    curriculum: [
       {
         type: 'u-list',
         content: {
@@ -1505,6 +1510,7 @@ const ttc200hr = {
   },
   6: {
     id: '',
+    templateId:'COURSE200_3M_TTC',
     key: 'batch-6-200hr',
     metaDescription: 'You will learn the tools to master your physical, mental and spiritual well-being. You will see a marked improvement in your life, relationships and work.', 
     image: `${baseDomain}${courseAssets.courseAsset38}`,
@@ -1515,7 +1521,7 @@ const ttc200hr = {
       'Saturday & Sunday: Saturday Sessions: 10:00 am – 8:30 pm (IST) and Sunday Sessions 10:00 am – 1:30 pm (IST)',
     fees: 22000,
     category: 'ttc',
-    title: '200 hrs TTC - Batch 6 - 3 Months Weekend TTC - Online - English',
+    title: '200 hrs TTC  Batch 6 - 3 Months Weekend TTC Online - English',
     dates: ['4th June 2022 ','27th August 2022','19th November 2022'],
     online:true,
     onCampus:false,
@@ -1553,7 +1559,7 @@ const ttc200hr = {
         type: 'paragraph',
         content: {
           title: 'Course',
-          text: ['Batch 6 - 3 Months Weekend TTC - Online - English'],
+          text: ['Batch 6 - 3 Months Weekend TTC Online - English'],
         },
       },
       {
@@ -1594,7 +1600,7 @@ const ttc200hr = {
         },
       },
     ],
-    curriculam: [
+    curriculum: [
       {
         type: 'u-list',
         content: {
@@ -1810,6 +1816,7 @@ const ttc200hr = {
 const ttc500hr = {
   1: {
     id: '',
+    templateId:'COURSE500_3M_TTC',
     key: '3-months-500hr',
     metaDescription: 'You will learn the tools to master your physical, mental and spiritual well-being. You will see a marked improvement in your life, relationships and work.', 
     mostPopular: false,
@@ -1819,7 +1826,7 @@ const ttc500hr = {
       'Monday to Saturday: Morning: 7:00 am - 8:30 am (IST) and  Evening: 4:30 pm - 8:30 pm (IST) (Both the time slots are mandatory)',
     fees: 35000,
     category: 'ttc',
-    title: '500 hrs TTC -3 Months TTC - Online - English',
+    title: '500 hrs TTC 3 Months TTC Online - English',
     image: `${baseDomain}${courseAssets.courseAsset39}`,
     dates: ['15th August 2022','14th November 2022'],
     online:true,
@@ -1858,7 +1865,7 @@ const ttc500hr = {
         type: 'paragraph',
         content: {
           title: 'Course',
-          text: ['3 Months TTC - Online - English'],
+          text: ['3 Months TTC Online - English'],
         },
       },
       {
@@ -1892,7 +1899,7 @@ const ttc500hr = {
         },
       },
     ],
-    curriculam: [
+    curriculum: [
       {
         type: 'table',
         content: {
@@ -2062,19 +2069,19 @@ const ttc500hr = {
 const ttc900hr = {
   1: {
     id: '',
-
+    templateId:'COURSE900_1Y_TTC',
     key: '1-year-900hr',
 
     metaDescription: 'You will learn the tools to master your physical, mental and spiritual well-being. You will see a marked improvement in your life, relationships and work.',
 
-    title: '900 hrs TTC - 1 Year TTC - Online & On Campus - Hindi',
+    title: '900 hrs TTC  1 Year TTC Online & On Campus - Hindi',
 
     image: `${baseDomain}${courseAssets.courseAsset40}`,
 
     mostPopular: false,
     rating: 5,
     colorCode: '#C9705F',
-    timing: '900 hrs TTC - 1 Year TTC - Online & On Campus - Hindi',
+    timing: '900 hrs TTC 1 Year TTC Online & On Campus - Hindi',
     fees: 50000,
     category: 'ttc',
 
@@ -2129,7 +2136,7 @@ const ttc900hr = {
         content: {
           title: 'Course:',
 
-          text: ['900 hrs TTC - 1 Year TTC - Online & On Campus - Hindi'],
+          text: ['900 hrs TTC 1 Year TTC Online & On Campus - Hindi'],
         },
       },
 
@@ -2149,7 +2156,7 @@ const ttc900hr = {
         content: {
           title: 'Timings',
 
-          text: ['900 hrs TTC - 1 Year TTC - Online & On Campus - Hindi'],
+          text: ['900 hrs TTC 1 Year TTC Online & On Campus - Hindi'],
         },
       },
 
@@ -2220,7 +2227,7 @@ const ttc900hr = {
       },
     ],
 
-    curriculam: [
+    curriculum: [
       {
         type: 'table',
 
@@ -2665,11 +2672,11 @@ const ttc900hr = {
 
   2: {
     id: '',
-
+    templateId:'COURSE900_2Y_TTC',
     key: '2-year-900hr',
 
     metaDescription: 'You will learn the tools to master your physical, mental and spiritual well-being. You will see a marked improvement in your life, relationships and work.',            
-    title: '900 hrs TTC - 2 Years TTC - Online & On Campus - English',
+    title: '900 hrs TTC  2 Years TTC Online & On Campus - English',
 
     image: `${baseDomain}${courseAssets.courseAsset40}`,
 
@@ -2677,7 +2684,7 @@ const ttc900hr = {
     rating: 5,
     colorCode: '#C9705F',
     timing:
-      '900 hrs TTC - 1 Year TTC - Online & On Campus - Saturday & Sunday: Saturday: 4:30 pm – 7.30 pm (IST) and Sunday: 9:30 am – 1:30 pm (IST) (Both the time slots are mandatory)',
+      '900 hrs TTC 1 Year TTC Online & On Campus - Saturday & Sunday: Saturday: 4:30 pm – 7.30 pm (IST) and Sunday: 9:30 am – 1:30 pm (IST) (Both the time slots are mandatory)',
     fees: 50000,
     category: 'ttc',
 
@@ -2731,7 +2738,7 @@ const ttc900hr = {
         content: {
           title: 'Course:',
 
-          text: ['900 hrs TTC - 2 Years TTC - Online & On Campus - English'],
+          text: ['900 hrs TTC 2 Years TTC Online & On Campus - English'],
         },
       },
 
@@ -2826,7 +2833,7 @@ const ttc900hr = {
       },
     ],
 
-    curriculam: [
+    curriculum: [
       {
         type: 'table',
 
@@ -3271,11 +3278,11 @@ const ttc900hr = {
 
   3: {
     id: '',
-
+    templateId:'',
     key: '3-months-ttc',
 
     metaDescription: 'You will learn the tools to master your physical, mental and spiritual well-being. You will see a marked improvement in your life, relationships and work.',            
-    title: '900 hrs TTC - 3 Months TTC - On Campus - English',
+    title: '900 hrs TTC  3 Months TTC On Campus - English',
 
     image: `${baseDomain}${courseAssets.courseAsset40}`,
 
@@ -3336,7 +3343,7 @@ const ttc900hr = {
         content: {
           title: 'Course:',
 
-          text: ['900 hrs TTC - 3 Months TTC - On Campus - English'],
+          text: ['900 hrs TTC 3 Months TTC On Campus - English'],
         },
       },
 
@@ -3388,7 +3395,7 @@ const ttc900hr = {
       },
     ],
 
-    curriculam: [
+    curriculum: [
       {
         type: 'table',
 
@@ -3774,11 +3781,11 @@ const ttc900hr = {
 
   4: {
     id: '',
-
+    templateId:'COURSE900_4M_TTC',
     key: '4-months-900hr',
 
     metaDescription: 'You will learn the tools to master your physical, mental and spiritual well-being. You will see a marked improvement in your life, relationships and work.',            
-    title: '900 hrs TTC - 4 Months TTC - On Campus - English',
+    title: '900 hrs TTC  4 Months TTC On Campus - English',
 
     image: `${baseDomain}${courseAssets.courseAsset40}`,
 
@@ -3843,7 +3850,7 @@ const ttc900hr = {
         content: {
           title: 'Course:',
 
-          text: ['900 hrs TTC - 4 Months TTC - On Campus - English'],
+          text: ['900 hrs TTC 4 Months TTC On Campus - English'],
         },
       },
 
@@ -3936,7 +3943,7 @@ const ttc900hr = {
       },
     ],
 
-    curriculam: [
+    curriculum: [
       {
         type: 'table',
 
@@ -4369,11 +4376,11 @@ const ttc900hr = {
 
   5: {
     id: '',
-
+    templateId:'COURSE900_7M_TTC',
     key: '7-months-900hr',
 
     metaDescription: 'You will learn the tools to master your physical, mental and spiritual well-being. You will see a marked improvement in your life, relationships and work.',            
-    title: '900 hrs TTC - 7 Months TTC - Online & On Campus - English',
+    title: '900 hrs TTC  7 Months TTC Online & On Campus - English',
 
     image: `${baseDomain}${courseAssets.courseAsset40}`,
 
@@ -4432,7 +4439,7 @@ const ttc900hr = {
         content: {
           title: 'Course:',
 
-          text: ['900 hrs TTC - 7 Months TTC - Online & On Campus - English '],
+          text: ['900 hrs TTC 7 Months TTC Online & On Campus - English '],
         },
       },
 
@@ -4525,7 +4532,7 @@ const ttc900hr = {
       },
     ],
 
-    curriculam: [
+    curriculum: [
       {
         type: 'table',
 
@@ -6926,7 +6933,11 @@ const camps = {
     id: '',
     title: '7 Days Health Camp - On Campus - Hindi ',
     key: '7-days-heath-camp-on-campus',
-    dates: [''],
+    dates: ['13th August 2022','12th November 2022'],
+    online:true,
+    onCampus:false,
+    nonResidential:false,
+    residential:false,
     mostPopular: false,
     rating: 5,
     colorCode: '#EDBE66',
@@ -7250,7 +7261,11 @@ const camps = {
     id: '',
     title: '21 Days BLC - Batch 2 - 21 Days BLC - Evening - Online & On Campus - English   ',
     key: '21-days-blc-batch2',
-    dates: [''],
+    dates: ['19th June 2022','10th July 2022','21st August 2022','11th September 2022','2nd October 2022 ','23rd October 2022 ','13th November 2022','4th December 2022','25th December 2022'],
+    online:true,
+    onCampus:true,
+    nonResidential:false,
+    residential:false,
     mostPopular: false,
     rating: 5,
     colorCode: '#EDBE66',
@@ -7534,9 +7549,13 @@ const camps = {
   },
   19: {
     id: '',
-    title: '21 Days BLC - Batch 3 - j21 Days BLC - Evening - Online & On Campus - Hindi ',
+    title: '21 Days BLC - Batch 3 - 21 Days BLC - Evening - Online & On Campus - Hindi ',
     key: '21-days-blc-batch3',
-    dates: [''],
+    dates: ['5th June 2022 ','7th August 2022','2nd October 2022 ','4th December 2022'],
+    online:true,
+    onCampus:true,
+    nonResidential:false,
+    residential:false,
     mostPopular: false,
     rating: 5,
     colorCode: '#EDBE66',
@@ -7828,7 +7847,635 @@ const camps = {
     id: '',
     title: '21 Days BLC - Batch 4 - 21 Days BLC - Morning - Online - English',
     key: '21-days-blc-batch4',
-    dates: [''],
+    dates: ['12th June 2022 ','3rd July 2022',' 24th July 2022','14th August 2022','4th September 2022','25th September 2022','16th October 2022','6th November 2022','27th November 2022','18th December 2022 '],
+    online:true,
+    onCampus:false,
+    nonResidential:false,
+    residential:false,
+    mostPopular: false,
+    rating: 5,
+    colorCode: '#EDBE66',
+    timing: '5:00 pm – 8:00 pm (IST)',
+    fees: 1000,
+    category: 'camps',
+    metaDescription: '',
+    image: `${baseDomain}${courseAssets.courseAsset10}`,
+    details: [
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Overview',
+          text: [
+            'Become successful, healthy, stress-free, and more mindful in your relationships by learning the yogic way of living. Join The Yoga Institute’s 21-Days Better Living Course. ',
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: [
+            'It takes 21 days to build a habit into your daily routine. The Yoga Institute’s 21 Days Better Living Course is a course specifically designed to introduce you to the yogic way of living. begin your journey into the discovery of Yoga. Working professionals and house makers can take just one hour from their day to practice and learn yoga and begin their transformational journey. '
+            ,'This is a certificate course and has been successfully conducted for 50 years by the Institute. The program trains you holistically and enables you to achieve equilibrium between your mind and body and thus achieve a state of peace and happiness in life. The course is conducted by trained teachers at the Institute.',
+          ],
+        },
+      },
+      {
+        type: 'u-list',
+        content: {
+          title: ' TThe programme covers an introduction to: ',
+          points: [
+            {
+              listItem: 'Astanga Yoga',
+              subItems: [],
+            },
+            {
+              listItem: 'Asanas',
+              subItems: [],
+            },
+            {
+              listItem: 'Pranayama',
+              subItems: [],
+            },
+            {
+              listItem: 'Kriyas',
+              subItems: [],
+            },
+            {
+              listItem: 'Attitude training  ',
+              subItems: [],
+            },
+            {
+              listItem: 'Parisamvad (sessions with Dr. Hansaji)',
+              subItems: [],
+            },
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: [
+            'It is ideal for anyone who wants to live a yoga way of life and experience peace within. It helps you to incorporate Yogic ideals in every field of your daily life. ',
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: ['Benefits of this camp:'],
+        },
+      },
+      {
+        type: 'u-list',
+        content: {
+          title: ' Benefits of this camp: ',
+          points: [
+            {
+              listItem:
+                'Helps you in developing and maintaining the right routine for your overall health ',
+              subItems: [],
+            },
+
+            {
+              listItem: 'Helps you reduce stress and anxiety',
+              subItems: [],
+            },
+            {
+              listItem: 'Helps you feel energetic throughout the day',
+              subItems: [],
+            },
+            {
+              listItem:
+                'Helps you become mindful in your relationships',
+              subItems: [],
+            },
+            {
+              listItem:
+                ' Helps you get more in control of your feelings',
+              subItems: [],
+            },
+          ],
+        },
+      },
+      
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: [
+            'Come and experience, amidst nature and beauty, our enriching 21 Days Better Living Course.',
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'PROGRAM DETAILS',
+          text: ['The course is held once a month, starting on the first Sunday (7:00 a.m.) of every month. The classes are of 1 hr. 30 mins each day for 21 consecutive days. Participants can opt for the morning or evening batches.'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'UPCOMING DATES FOR 2022',
+          text: ['3rd July to 23rd July 2022 / 24th July to 13th August 2022'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Timings',
+          text: ['Morning 7:00 am – 8:30 am (IST)'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'REGISTRATION',
+          text: [],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: [
+            'For registration in the 21 Days Better Living Course, please click on the link below and fill in all the details. Within 24 hours after registering, you will receive an email containing the link to the payment portal. You can use the link to make the payment.',
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'FEES',
+          text: [],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Rs. 1600/-',
+          text: [
+            '*Please note fees once paid will be non-refundable.',
+            ' We support all credit cards. For making payments using MasterCard. Alternatively, you can also make payments using net banking or opt for wire transfer by writing to us.'
+          ],
+        },
+      },
+     
+      {
+        type: 'paragraph',
+        content: {
+          title: 'PRE-REQUISITES',
+          text: [
+            
+          ],
+        },
+      },
+      {
+        type: 'u-list',
+        content: {
+          title: ' A MANDATORY PREREQUISITE FOR THIS COURSE IS:',
+          points: [
+            {
+              listItem: 'Covid test RT-PCR results dated 20th January 2022 to 28th January 2022 and later for entry into the premises post prior registration. ',
+              subItems: [],
+            },
+            {
+              listItem: 'Students must use personal vehicles for commuting, throughout the course duration. We would discourage the use of public transport. (For non-residential students)',
+              subItems: [],
+            },
+            {
+              listItem: 'This course is for healthy individuals. Kindly note if you suffer from any health issues like diabetes, hypertension, or orthopaedic problems, kindly take prior approval.',
+              subItems: [],
+            },
+            {
+              listItem: 'For international Students, it is mandatory to do 14 Day Quarantine as per the laws of Government of India along with RT-PCR test reports. ',
+              subItems: [],
+            },
+            {
+              listItem: 'Last but not the least, do not forget your masks and Yoga Mats',
+              subItems: [],
+            },
+            
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'FAQs  ',
+          text: [
+            
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: '  1. What is the time to reach the Institute during the course duration?  ',
+          text: ['For residential campers, students should arrive at The Yoga Institute between 7.00 a.m. to 7.00 p.m. IST (Indian Standard Time). Please read on Hostel Facility for more details. '
+            
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: ' 2. Can a person who has problem with sitting on the floor for a long time enroll for the course?',
+          text: ['Backrest and chairs are available on request in special and exceptional cases. – Rest and recreation are also a part of the course.' 
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: '3. How many seats are available in one course?',
+          text: ['Only 35 seats are available. Registrations on a first come, first-serve basis only.' 
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'UNIQUE OFFERINGS ',
+          text: ['' ],
+        },
+      },
+      {
+        type: 'u-list',
+        content: {
+          title: 'Our Amenities / Our Facilities',
+          points: [
+            {
+              listItem: 'Library: Explore one of largest collections of spiritual and philosophical books to expand your knowledge ',
+              subItems: [],
+            },
+            {
+              listItem: 'Internet Room: Access the internet in a comfortable setting when you need Meditation Pods: Meditate on the five fundamental natural elements, the Panchamahabhutas,',
+              subItems: [],
+            },
+            {
+              listItem: 'Acupressure Path: Give your feet a natural massage and activate your vital energies',
+              subItems: [],
+            },
+            {
+              listItem: 'Yogic Gazebo: Enjoy the soothing sounds of flowing water and take in the peace and at this relaxation area',
+              subItems: [],
+            },
+            {
+              listItem: 'Dining Area: Enjoy wholesome Sattvik meals, specially prepared for your nourishment',
+              subItems: [],
+            },
+            {
+              listItem: 'Book Store: Shop in a wide selection of TYI publications. Find yourself the best yogic attire and mats.',
+              subItems: [],
+            },
+          ],
+        },
+      },
+
+    ],
+  },
+  21: {
+    id: '',
+    title: '7 Days Health Camp - On Campus - English ',
+    key: '7-days-heath-camp-on-campus-english',
+    dates: ['25th June 2022 ','23rd July 2022','27th August 2022','24th September 2022','22nd October 2022','26th November 2022','24th December 2022 '],
+    online:false,
+    onCampus:true,
+    nonResidential:false,
+    residential:false,
+    mostPopular: false,
+    rating: 5,
+    colorCode: '#EDBE66',
+    timing: '5:00 pm – 8:00 pm (IST)',
+    fees: 1000,
+    category: 'camps',
+    metaDescription: '',
+    image: `${baseDomain}${courseAssets.courseAsset10}`,
+    details: [
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Overview',
+          text: [
+            'Are you feeling burned out and looking for ways to develop mental strength, improve focus & emotional quotient and reduce stress? Join our 7-Days Health Camp reshape your life and health.',
+            'The 7 Days Health Camp is an experiential, introductory course to Yoga theory and practice where one can get a glimpse of a yogic lifestyle within the premises of The Yoga Institute. In this program you will learn how to achieve a balance between your mind, body, and soul. Through its powerful processes, this program presents to you the possibility to access and re-configure your life and health in a way that improves productivity and imparts better control on your emotions. In this fast-paced and unwavering world, this 7 Days’ Health Camp offers you the much-needed respite to connect with yourself and experience the abundant joy and beauty in life. ',
+          ],
+        },
+      },
+      {
+        type: 'u-list',
+        content: {
+          title: ' The programme covers',
+          points: [
+            {
+              listItem: 'Asanas',
+              subItems: [],
+            },
+            {
+              listItem: 'Pranayama',
+              subItems: [],
+            },
+            {
+              listItem: 'Kriyas',
+              subItems: [],
+            },
+            {
+              listItem: 'Yogic concepts',
+              subItems: [],
+            },
+            {
+              listItem: 'Diet',
+              subItems: [],
+            },
+            {
+              listItem: 'Games and recreation,',
+              subItems: [],
+            },
+            {
+              listItem: 'Attitude training',
+              subItems: [],
+            },
+            {
+              listItem: 'Relaxation and meditation.',
+              subItems: [],
+            },
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: [
+            'It is ideal for anyone who wants to live a yoga way of life and experience peace within. It helps you to incorporate Yogic ideals in every field of your daily life. ',
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: ['Benefits of this camp'],
+        },
+      },
+      {
+        type: 'u-list',
+        content: {
+          title: ' Mind & Soul',
+          points: [
+            {
+              listItem:
+                'Helps build upon mental strength to improve focus, clarity, and emotional quotient',
+              subItems: [],
+            },
+            {
+              listItem: 'Helps build better mind-body connection',
+              subItems: [],
+            },
+            {
+              listItem: 'Helps you reduce stress and anxiety',
+              subItems: [],
+            },
+            {
+              listItem: 'Helps you get more in control of your feelings',
+              subItems: [],
+            },
+            {
+              listItem:
+                'Helps you in developing and maintaining the right routine for your overall health',
+              subItems: [],
+            },
+          ],
+        },
+      },
+      {
+        type: 'u-list',
+        content: {
+          title: ' Physical',
+          points: [
+            {
+              listItem:
+                'Helps you in detoxifying your body of the accumulated toxins',
+              subItems: [],
+            },
+            {
+              listItem:
+                'Helps you in strengthening immunity and digestive system',
+              subItems: [],
+            },
+            {
+              listItem: 'Helps in overall development of your personality',
+              subItems: [],
+            },
+            {
+              listItem:
+                'Helps you become self-reliant in maintaining to your physical health',
+              subItems: [],
+            },
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: [
+            'Trained teachers at The Yoga Institute will be conducting this course.Come and experience, amidst nature and beauty, our rejuvenating 7 Days Health Camp, which has transformed millions of people.',
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'PROGRAM DETAILS',
+          text: [],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'UPCOMING DATES FOR 2022',
+          text: ['13th August 2022 to 19th August 2022'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Timings',
+          text: ['Saturday to Friday : 7:00 am - 7:00 pm (IST)'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'REGISTRATION',
+          text: [],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: [
+            'For registration in the 7-Days Health Camp, please click on the link below and fill in all the details. Within 24 hours after registering, you will receive an email containing the link to the payment portal. You can use the link to make the payment.',
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'FEES',
+          text: ['Non-Residential: 8,000/- (inclusive of course fees and 4 Meals)'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Residential',
+          text: [
+            'Rs. 12,000/- Triple Sharing (Inclusive of course fee and 4 meals a day)',
+            'Rs. 18,000/- Dual Sharing (Inclusive of course fee and 4 meals a day)',
+            'Rs. 30,000/- Single Occupancy (Inclusive of course fee and 4 meals a day)',
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: [
+            '*Please note fees once paid will be non-refundable. We support all credit cards. For making payments using MasterCard. Alternatively, you can also make payments using net banking or opt for wire transfer by writing to us.',
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'PRE-REQUISITES',
+          text: [
+            
+          ],
+        },
+      },
+      {
+        type: 'u-list',
+        content: {
+          title: ' A MANDATORY PREREQUISITE FOR THIS COURSE IS',
+          points: [
+            {
+              listItem: 'Covid test RT-PCR results dated 20th January 2022 to 28th January 2022 and later for entry into the premises post prior registration. ',
+              subItems: [],
+            },
+            {
+              listItem: 'Students must use personal vehicles for commuting, throughout the course duration. We would discourage the use of public transport. (For non-residential students)',
+              subItems: [],
+            },
+            {
+              listItem: 'This course is for healthy individuals. Kindly note if you suffer from any health issues like diabetes, hypertension, or orthopaedic problems, kindly take prior approval.',
+              subItems: [],
+            },
+            {
+              listItem: 'For international Students, it is mandatory to do 14 Day Quarantine as per the laws of Government of India along with RT-PCR test reports. ',
+              subItems: [],
+            },
+            {
+              listItem: 'Last but not the least, do not forget your masks and Yoga Mats',
+              subItems: [],
+            },
+            
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'FAQs  ',
+          text: [
+            
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: '  1. What is the time to reach the Institute during the course duration?  ',
+          text: ['For residential campers, students should arrive at The Yoga Institute between 7.00 a.m. to 7.00 p.m. IST (Indian Standard Time). Please read on Hostel Facility for more details. '
+            
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: ' 2. Can a person who has problem with sitting on the floor for a long time enroll for the course?',
+          text: ['Backrest and chairs are available on request in special and exceptional cases. – Rest and recreation are also a part of the course.' 
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: '3. How many seats are available in one course?',
+          text: ['Only 35 seats are available. Registrations on a first come, first-serve basis only.' 
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'UNIQUE OFFERINGS ',
+          text: ['' ],
+        },
+      },
+      {
+        type: 'u-list',
+        content: {
+          title: 'Our Amenities / Our Facilities',
+          points: [
+            {
+              listItem: 'Library: Explore one of largest collections of spiritual and philosophical books to expand your knowledge ',
+              subItems: [],
+            },
+            {
+              listItem: 'Internet Room: Access the internet in a comfortable setting when you need Meditation Pods: Meditate on the five fundamental natural elements, the Panchamahabhutas,',
+              subItems: [],
+            },
+            {
+              listItem: 'Acupressure Path: Give your feet a natural massage and activate your vital energies',
+              subItems: [],
+            },
+            {
+              listItem: 'Yogic Gazebo: Enjoy the soothing sounds of flowing water and take in the peace and at this relaxation area',
+              subItems: [],
+            },
+            {
+              listItem: 'Dining Area: Enjoy wholesome Sattvik meals, specially prepared for your nourishment',
+              subItems: [],
+            },
+            {
+              listItem: 'Book Store: Shop in a wide selection of TYI publications. Find yourself the best yogic attire and mats.',
+              subItems: [],
+            },
+          ],
+        },
+      },
+
+    ],
+  },
+  22:{
+    id: '',
+    title: 'Batch 1 - 21-Days BLC - Morning On Campus-English',
+    key: 'batch1-21days-morning-oncampus',
+    dates: ['5th June 2022','3rd July 2022 ','7th August 2022','4th September 2022','2nd October 2022','6th November 2022 ','4th December 2022'],
+    online:false,
+    onCampus:true,
+    nonResidential:false,
+    residential:false,
     mostPopular: false,
     rating: 5,
     colorCode: '#EDBE66',

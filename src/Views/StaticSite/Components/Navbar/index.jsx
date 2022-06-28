@@ -4,7 +4,7 @@ import { Hamburger, Search, Cart, Gift, User } from '../../assets/icons/icon'
 import MegaMenu from '../MegaMenu'
 import { Link } from 'react-router-dom'
 
-const Navbar = () => {
+const Navbar = ({ isUserLoggedIn }) => {
   const [nav, setNav] = useState(false)
 
   return (
@@ -36,7 +36,7 @@ const Navbar = () => {
           <Link to="/gifting">
             <li>{Gift}</li>
           </Link>
-          <Link to="/user/sign-in">
+          <Link to={isUserLoggedIn ? '/user/profile' : '/user/sign-in'}>
             <li>{User}</li>
           </Link>
         </ul>

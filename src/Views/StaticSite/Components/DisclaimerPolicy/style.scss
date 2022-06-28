@@ -1,12 +1,12 @@
-.main-container {
-  border: 2px solid black;
+.main-container { 
   margin: 2rem;
   border-radius: 20px;
   position: relative;
+  width: 100%;
+  height: 100%;
 }
 
 .legacy1{
-  // width: 100px;
   font-size: 28px;
 }
 
@@ -15,18 +15,38 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 10rem 0 2rem 0;
+    padding: 2rem 0 2rem 0;
     bottom: 2rem;
+    .close {
+      position: relative;
+      // top: 30px;
+      bottom: 2rem;
+      float: right;
+      font-size: 24px;
+      font-weight: 900;
+      display: flex;
+      margin-right: 80px;
+      border: none;
+      background-color: white;
+      cursor: pointer;
+    }
+  
   }
 
+  .disclaimer-policy{
+    position: relative;
+    bottom: 3rem;
+    font-size: 2.5rem;
+
+  }
   .heading-content p{
     font-weight: bold;
   }
   .mid-content {
     padding: 0 30rem;
-    height: 400px;
+    height: 450px;
     overflow-y: scroll;
-    margin-top: 2rem;
+    margin-top: -3rem;
     font-weight: 600;
   }
 
@@ -77,7 +97,7 @@
     .terms-conditions {
       display: flex;
       align-items: center;
-      padding: 2rem 40rem;
+      padding: 2rem 39rem;
       input {
         height: 40px;
         width: 30px;
@@ -94,6 +114,7 @@
     p {
         font-size: 1.8rem;
         font-weight: 700;
+        margin-top: 1rem;
     }
     ol {
       font-size: 1.5rem;
@@ -138,6 +159,12 @@
         input {
           display: none;
         }
+      }
+      #sign{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.5rem;
       }
     }
   }

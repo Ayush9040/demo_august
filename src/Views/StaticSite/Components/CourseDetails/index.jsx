@@ -9,6 +9,7 @@ import CourseULIst from '../CourseComponents/CourseUList'
 import CourseTable from '../CourseComponents/CourseTable'
 import CourseQuote from '../CourseComponents/CourseQuote'
 import CourseURL from '../CourseComponents/CourseURL'
+import SelectDropDown from '../Select Dropdown'
 //import { useParams } from 'react-router-dom'
 
 const CourseDetails = ({ pageDate }) => {
@@ -38,6 +39,8 @@ const CourseDetails = ({ pageDate }) => {
   // } = pageDate
 
   console.log(pageDate, 'pageData')
+  const [selectDate, setSetselectDate] = useState()
+  localStorage.setItem('selectedDate',selectDate)
 
   let options = [
     {
@@ -46,8 +49,8 @@ const CourseDetails = ({ pageDate }) => {
       key: 1,
     },
     {
-      id: 'curriculam',
-      title: 'Curriculam',
+      id: 'curriculum',
+      title: 'Curriculum',
       key: 2,
     },
     {
@@ -72,12 +75,27 @@ const CourseDetails = ({ pageDate }) => {
     },
   ]
 
+  const selectStyles = {
+    cursor: 'pointer',
+    background: 'white',
+    borderColor: 'black',
+    color: 'black',
+    fontSize: '1.5rem',
+    fontWeight: '900',
+    borderWidth: '0.1rem',
+    borderRadius: '20px',
+    borderStyle: 'solid',
+    maxWidth: 'fit-content',
+    marginTop:'2rem',
+    marginLeft:'10rem'
+  }
+
   const selectMenu = (name) => {
     switch (name) {
     case 'Program Details':
       setDetail(1)
       break
-    case 'Curriculam':
+    case 'curriculum':
       setDetail(2)
       break
     case 'Teaching & Certification':
@@ -135,7 +153,7 @@ const CourseDetails = ({ pageDate }) => {
               'Lorem Ipsum is simply dummy text of the printing and typesetting industry. '}
           </p>
           <div className="course-options">
-            <Link to={`/enrollment/${pageDate.key}`}>
+            <Link to={`/user/sign-in/${pageDate.key}/`}>
               <CommonBtn text={'Enroll Now'} />
             </Link>
             {/* <CommonBtn text={'Gift Course'} /> */}
@@ -149,6 +167,7 @@ const CourseDetails = ({ pageDate }) => {
           )}
         </div>
       </div>
+      <SelectDropDown  currentValue={selectDate} changeCurrentValue={setSetselectDate} text={'Select Dates'} isStyles={selectStyles} dates={pageDate.dates}/>
       {pageDate.category === 'ttc' && (
         <div className="career-navigation-lg-div">
           <div className="career-navigation-lg">
@@ -172,7 +191,7 @@ const CourseDetails = ({ pageDate }) => {
           </div>
         </div>
       )}
- 
+    
 
 
       {<div className="details-section" id='program-details' >
@@ -183,12 +202,12 @@ const CourseDetails = ({ pageDate }) => {
           return selectComponent(type, content)
         })}
       </div>}
-      {(pageDate?.category === 'ttc' && pageDate?.curriculam?.length !== 0) && <div className="details-section" id='curriculam' >
+      {(pageDate?.category === 'ttc' && pageDate?.curriculum?.length !== 0) && <div className="details-section" id='curriculum' >
         <h1>
-            Curriculam
+            Curriculum
             
         </h1>
-        {pageDate?.curriculam?.map(({ type, content }) => {
+        {pageDate?.curriculum?.map(({ type, content }) => {
           return selectComponent(type, content)
         })}
       </div>}
@@ -202,7 +221,7 @@ const CourseDetails = ({ pageDate }) => {
       </div>}
       {(pageDate?.category ==='ttc' && pageDate?.offerings?.length !==0) && <div className="details-section" id='offering' >
         <h1>
-          Our Offerings
+          Our Unique Offerings
         </h1>
         {pageDate?.offerings?.map(({ type, content }) => {
           return selectComponent(type, content)

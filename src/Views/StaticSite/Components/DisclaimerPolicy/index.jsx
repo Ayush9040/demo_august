@@ -13,7 +13,8 @@ const DisclaimerPolicy = ({
   currentCourse,
   courseAsset1,
   courseAsset2,
-  templateKey
+  templateKey,
+  setBold
 }) => {
   const [disData, setDisData] = useState({
     terms: 'no',
@@ -140,12 +141,12 @@ const DisclaimerPolicy = ({
 
   return (
     <div className="main-container">
+      <button className="close" onClick={()=>setBold(4)} >x</button>
       <div className="heading-content">
-        {/* <img src={`${baseDomain}${homeAssets.homeAsset70}`} /> */}
         <div className='legacy1'>
           {legacydisclaimer}
         </div>
-        <p>Disclaimer Policy</p>
+        <p className='disclaimer-policy'>Disclaimer Policy</p>
       </div>
       <div className="mid-content">
         <div className="mid-1">
@@ -187,7 +188,7 @@ const DisclaimerPolicy = ({
               Any health related advice and suggestions should not be used for
               diagnosing purposes or be substituted for medical advice.
               Students/participants must always consult their own doctor or
-              qualified health profes- sional on any matters regarding their
+              qualified health professional on any matters regarding their
               health.
             </li>
             <li>
@@ -242,7 +243,7 @@ const DisclaimerPolicy = ({
           </li>
           <li>
             If I am pregnant, I understand that I participate fully at my own
-            risk and that of my unborn child/chil- <span style={{ display: 'block' }}>dren.</span>
+            risk and that of my unborn child/children.
           </li>
           <li>
             In submitting the registration form I have read the above release
@@ -270,11 +271,11 @@ const DisclaimerPolicy = ({
           )}
           <hr />
         </div>
-        <div className="signature-section">
+        {/* <div className="signature-section">
           <p>Upload Digital Signature (jpeg or png. Under 1MB)</p>
 
           <label htmlFor="signature" className="signature" id='sign'>
-            {disData.signature ? disData.signature.substring(0,15): ''}
+            {disData.signature ? disData.signature.substring(0,15): 'Upload Signature'}
            
             <input
             
@@ -292,7 +293,7 @@ const DisclaimerPolicy = ({
               *Please Enter email signature!
             </small>
           )}
-        </div>
+        </div> */}
         <div className="privacy-button">
           <button onClick={handleSubmit1}>Submit</button>
         </div>

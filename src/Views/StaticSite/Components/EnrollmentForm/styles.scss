@@ -50,6 +50,7 @@
   .flex_box {
     display: flex;
     align-items: center;
+    height: 75px;
   }
   .left_flex_contanier {
     .flex_box {
@@ -80,7 +81,7 @@
         min-width: 300px;
         display: block;
         box-sizing: border-box;
-        padding: 1rem 2rem;
+        padding: 0.75rem 2rem;
         font-size: 1.5rem;
         border: 2px solid #60606080;
         color: #60606080;
@@ -95,8 +96,7 @@
         color: #60606080;
         float: right;
         padding-right: 2rem;
-        font-size: 1.3rem;
-        margin-left: 2rem;
+        font-size: 1.15rem;
       }
     }
   }
@@ -107,7 +107,8 @@
     margin-bottom: 10px;
     padding: 0 65px;
     .next_1 {
-      border: 1px solid #60606080;
+      cursor: pointer;
+      border: 1px solid black;
       height: 50px;
       width: 120px;
       color: black;
@@ -127,7 +128,7 @@
       }
     }
     .back {
-      border: 1px solid #60606080;
+      border: 1px solid black;
       height: 50px;
       width: 120px;
       color: black;
@@ -139,11 +140,14 @@
       // margin-left: 30px;
       margin-top: 2%;
       background-color: white;
+      cursor: pointer;
     }
+    
   }
   .details {
     display: grid;
     grid-template-columns: 50% 50%;
+    margin-top: 20px;
 
     .right {
       .date_div {
@@ -167,7 +171,7 @@
       .button_div {
         display: inline-block;
         position: absolute;
-        top: 45%;
+        top: 35%;
         right: -60px;
         .button_2 {
           height: 30px;
@@ -182,6 +186,13 @@
       }
       .num_of_child {
         padding-left: 30px;
+        .child {
+          width: 100%;
+          max-width: 100%;
+          margin: 20px;
+          font-size:20px;
+          color: #60606080;
+        }
         // .flex_box{
 
         // }
@@ -206,7 +217,7 @@
     flex-direction: column;
   }
   .experienced-lists p {
-    font-size: 1.5rem;
+    font-size: 20px;
   }
 
   .qualification-lists {
@@ -224,10 +235,10 @@
     //justify-content: space-between;
     margin-bottom: 10px;
 
-    .label_1 {
-      font-size: 25px;
-      color: #60606080;
-    }
+    // .label_1 {
+    //   font-size: 20px;
+    //   color: #60606080;
+    // }
   }
 
   .left {
@@ -267,6 +278,16 @@
     }
   }
 
+  .right1 {
+    margin: 20px 90px 30px 90px;
+    .date_div {
+      & > div {
+        input::placeholder {
+          color: #60606080;
+        }
+      }
+    }
+  }
   .right {
     margin: 50px 90px 30px 90px;
     .date_div {
@@ -280,7 +301,7 @@
 
   .label {
     font-size: 20px;
-    color: rgba(96, 96, 96, 0.5019607843);
+    color: #60606080;
     // margin: 17px 17px 17px 17px;
     width: 50%;
     min-width: fit-content;
@@ -288,7 +309,7 @@
   }
 
   .label_1 {
-    font-size: 25px;
+    font-size: 1.8rem;
     color: #60606080;
     margin: 17px 17px 17px 17px;
     //width: 50%;
@@ -327,7 +348,11 @@
         //margin: 10px;
         margin-top: 40px;
         margin-bottom: 220px;
+        &:focus-visible{
+           outline: none;
+        }
       }
+  
     }
     .last_div {
       display: flex;
@@ -370,7 +395,7 @@
           color: #60606080;
           float: right;
           padding-right: 2rem;
-          font-size: 0.9rem;
+          font-size: 1.15rem;
         }
       }
       .last_radio_button {
@@ -490,12 +515,14 @@
     //padding: 0 18px;
   }
 
-  .x {
+  .close {
+    position: relative;
+    top: 20px;
     float: right;
-    font-size: 20px;
+    font-size: 24px;
     font-weight: 900;
     display: flex;
-    margin-right: 50px;
+    margin-right: 80px;
     //padding-right: 40px;
     border: none;
     background-color: white;
@@ -504,6 +531,9 @@
 }
 @media (max-width: '1855px') {
   .enrollment_container {
+    .flex_box{
+      height: 70px;
+    }
     .left_flex_contanier {
       .uploads {
         gap: 40px;
@@ -541,6 +571,7 @@
 
 @media (max-width: '1655px') {
   .enrollment_container {
+    
     .left_flex_contanier {
       .uploads {
         label {
@@ -562,17 +593,21 @@
     }
   }
 }
-// @media (max-width: '1500px') {
-//   .enrollment_container {
-//     .left_flex_contanier {
-//       .uploads {
-//         label {
-//           min-width: 230px;
-//         }
-//       }
-//     }
-//   }
-// }
+@media (max-width: '1536px') {
+  .enrollment_container {
+    .flex_box {
+      
+      height: 60px;
+    }
+    .left_flex_contanier {
+      .uploads {
+        label {
+          min-width: 230px;
+        }
+      }
+    }
+  }
+}
 
 @media (max-width: '1400px') {
   .enrollment_container {
@@ -595,6 +630,15 @@
         .uploads {
           & > fieldset {
             width: 30%;
+          }
+        }
+      }
+    }
+    .details{
+      .right{
+        .num_of_child{
+          .child{
+            font-size: 18px;
           }
         }
       }
@@ -729,6 +773,7 @@
     .footer {
       margin-bottom: 0;
       .next_1 {
+        cursor: pointer;
         height: 30px;
         width: 65px;
         margin-top: 3%;
@@ -743,6 +788,7 @@
         height: 30px;
         width: 65px;
         margin-top: 3%;
+        cursor: pointer;
       }
     }
     // &::placeholder {
@@ -835,6 +881,7 @@
     .footer {
       margin-bottom: 0;
       .next_1 {
+        cursor: pointer;
         height: 30px;
         width: 65px;
         margin-top: 4%;
@@ -851,6 +898,7 @@
         width: 65px;
         margin-top: 4%;
         font-size: 13px;
+        cursor: pointer;
       }
     }
     .left_flex_contanier {

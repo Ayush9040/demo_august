@@ -1,7 +1,7 @@
 import React from 'react'
 import './style.scss'
 
-const SelectDropDown = ({ text, dates = [1, 2, 3, 4, 5], isStyles }) => {
+const SelectDropDown = ({ text, dates = [1, 2, 3, 4, 5], isStyles, currentValue ,changeCurrentValue }) => {
   // const [select, setSelect] = useState(0)
   //  console.log(select, 'fuck')
   return (
@@ -16,11 +16,14 @@ const SelectDropDown = ({ text, dates = [1, 2, 3, 4, 5], isStyles }) => {
       >
         <select
           className="Select-dropdown"
-          style={{ background: isStyles.background }}
+          value={ currentValue }
+          style={{ background: isStyles.background,color:isStyles.color }}
+          onChange={(e)=>{ changeCurrentValue(e.target.value) }}
         >
           <option>{text}</option>
           {dates.map((item) => (
             <option
+              value={item}
               //  onClick={()=>{
               //   setSelect(select+1)
               // }}

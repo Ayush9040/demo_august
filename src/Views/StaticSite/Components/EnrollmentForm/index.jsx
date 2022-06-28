@@ -7,16 +7,21 @@ import { useParams } from 'react-router-dom'
 import InputComponent from '../InputComponent'
 import { validateEmail } from '../../../../helpers'
 import { Link } from 'react-router-dom'
-import axios from 'axios'
+import DisclaimerPolicy from '../DisclaimerPolicy'
+import { useSelector } from 'react-redux'
 
 const Enrollment = () => {
+  const { user } = useSelector((state) => state.auth)
   const { courseId } = useParams()
   const [currentCourse, setCurrentCourse] = useState({})
+  const [courseDate, setCourseDate] = useState(null)
 
   useEffect(() => {
     setCurrentCourse(AllCourses.find((item) => item.key === courseId))
+    setCourseDate(localStorage.getItem('selectedDate'))
   }, [])
 
+ 
 
   const [empty, setEmpty] = useState(0)
 
@@ -48,17 +53,17 @@ const Enrollment = () => {
     })
   }
 
-  const [bold, setBold] = useState(0)
+  const [bold, setBold] = useState(5)
   const [yearEmpty, setYearEmpty] = useState(0)
   const [resgin, setResgin] = useState(0)
   const [listData, setListData] = useState([])
   const [qualificationData, setQualificationData] = useState([])
-  const [courseAsset1,setCourseAsset1]=useState(null)
-  const [courseAsset2,setCourseAsset2]=useState(null)
+  const [courseAsset1, setCourseAsset1] = useState(null)
+  const [courseAsset2, setCourseAsset2] = useState(null)
   const [formData, setFormData] = useState({
-    name: '',
+    name: user.firstName ? user.firstName :  '',
     phone: '',
-    email: '',
+    email: user.email ? user.email : '',
     address1: '',
     address2: '',
     country: '',
@@ -84,10 +89,10 @@ const Enrollment = () => {
     info: '',
     residental: '',
   })
-  const [ qualificationAsset1,setQualificationAsset1]=useState('')
-  const [ qualificationAsset2,setQualificationAsset2]=useState('')
-  const [ experienceAsset1,setExperienceAsset1]=useState('')
-  const [ experienceAsset2,setExperienceAsset2]=useState('')
+  const [qualificationAsset1, setQualificationAsset1] = useState('')
+  const [qualificationAsset2, setQualificationAsset2] = useState('')
+  const [experienceAsset1, setExperienceAsset1] = useState('')
+  const [experienceAsset2, setExperienceAsset2] = useState('')
   console.log(yearEmpty)
   console.log(resgin)
 
@@ -103,12 +108,11 @@ const Enrollment = () => {
           yearOfresignation: formData.resignation,
           workExImgAsset: experienceAsset1,
           workExPdfAsset: experienceAsset2,
-          listedWorkExperience: formData.leavejob
+          listedWorkExperience: formData.leavejob,
         },
       ])
-    setFormData({ ...formData, resignition: '', company: '', leavejob: '' })
+    setFormData({ ...formData, resignation: '', company: '', leavejob: '' })
   }
-
 
   const QualificationDetailHandler = () => {
     if (formData.completion.length !== 4) {
@@ -120,10 +124,9 @@ const Enrollment = () => {
           schoolOrCollege: formData.school,
           course: formData.course,
           yearOfCompletion: formData.completion,
-          academicImgAsset:qualificationAsset1,
-          academicPdfAsset:qualificationAsset2,
-          listedQualification:formData.course
-
+          academicImgAsset: qualificationAsset1,
+          academicPdfAsset: qualificationAsset2,
+          listedQualification: formData.course,
         },
       ])
     setFormData({ ...formData, school: '', course: '', completion: '' })
@@ -133,14 +136,16 @@ const Enrollment = () => {
   const handleEmpty1 = () => {
     if (formData.name === '') {
       return setEmpty(1)
-    } else if (formData.phone === '' || formData.phone.length<10 || formData.phone.length>10) {
+    } else if (
+      formData.phone === '' ||
+      formData.phone.length < 10 ||
+      formData.phone.length > 10
+    ) {
       return setEmpty(2)
     } else if (!validateEmail(formData.email)) {
       return setEmpty(3)
     } else if (formData.address1 === '') {
       return setEmpty(4)
-    } else if (formData.address2 === '') {
-      return setEmpty(5)
     } else if (formData.country === '') {
       return setEmpty(6)
     } else if (formData.state === '') {
@@ -176,54 +181,18 @@ const Enrollment = () => {
     if (formData.source === '') {
       if (formData.sourceinfo === '') {
         return setEmpty(2)
-      } 
+      }
     } else setBold(4)
   }
 
-  const handleSubmit = async()=>{
-    let body = {
-      personalDetails: {
-        name: formData.name,
-        emailId: formData.email,
-        phone: formData.phone,
-        addressLane1: formData.address1,
-        addressLane2: formData.address2,
-        country: formData.country,
-        state: formData.state,
-        city: formData.city,
-        pincode : formData.pincode,
-        gender: formData.gender,
-        dob: formData.DOB,
-        nationality: formData.nationality,
-        numberOfChildren: formData.numberOfChildren,
-        ageOfChild1: formData.age1,
-        ageOfChild2: formData.age2
-      },
-      academicQualification: qualificationData,
-      workExperience: listData,
-      others: {
-        medicalHistory: formData.medicalstatus,
-        howDoYouHearAboutUs: formData.source || formData.sourceinfo,
-      },
-      courseDetails: {
-        courseId: currentCourse.key,
-        mode:formData.residental,
-        certificateImgAsset: courseAsset1,
-        certificatePdfAsset: courseAsset2,
-        startDate: '10000',
-        endDate: '10000'
-      }
-    }
-
-    const jsonBody = JSON.stringify(body)
-    console.log(jsonBody,'json-body')
-    await axios.post('https://cms-dev-be.theyogainstituteonline.org/v1/form',body)
+  const handleSubmit = async() => {
+    setBold(5)
   }
 
   return (
     <>
       <div className="enrollment_container ">
-        <div className="header">
+        {bold!==5 &&   <div className="header">
           <Link to="/courses">
             <button className="x">x</button>
           </Link>
@@ -240,36 +209,36 @@ const Enrollment = () => {
             </li>
             <li
               style={bold === 1 ? { fontWeight: '600' } : {}}
-              onClick={() => setBold(1)}
+              onClick={handleEmpty1}
             >
               Academic Qualifications{' '}
               {bold === 1 && <div className="bottom-line"></div>}
             </li>
             <li
               style={bold === 2 ? { fontWeight: '600' } : {}}
-              onClick={() => setBold(2)}
+              onClick={handleEmpty2}
             >
               Work Experience{' '}
               {bold === 2 && <div className="bottom-line"></div>}
             </li>
             <li
               style={bold === 3 ? { fontWeight: '600' } : {}}
-              onClick={() => setBold(3)}
+              onClick={handleEmpty3}
             >
               Other{bold === 3 && <div className="bottom-line"></div>}
             </li>
             <li
               style={bold === 4 ? { fontWeight: 600 } : {}}
-              onClick={() => setBold(4)}
+              onClick={handleEmpty4}
             >
               Course Details
               {bold === 4 && <div className="bottom-line"></div>}
             </li>
           </ul>
-        </div>
+        </div>}
 
         {bold === 0 ? (
-          <div> 
+          <div>
             <div className="details">
               <div className="left">
                 <form>
@@ -282,7 +251,7 @@ const Enrollment = () => {
                       keyName="name"
                     />
                     {empty === 1 && (
-                      <small style={{ color: 'red', marginLeft: '0' }}>
+                      <small style={{ color: 'red', marginLeft: '45px', fontSize: '15px' }}>
                         *Please Enter Name!
                       </small>
                     )}
@@ -297,13 +266,13 @@ const Enrollment = () => {
                     />
                     {empty === 1 && (
                       <small style={{ color: 'red', marginLeft: '0' }}>
-                        *Please Enter Phone Number!
+                        *Please Enter Your 10 Digit Phone Number!
                       </small>
                     )}
                   </div>
                   <div>
                     <InputComponent
-                      type="text"
+                      type="email"
                       id='text'
                       placeholder="Email"
                       form={formData}
@@ -311,7 +280,7 @@ const Enrollment = () => {
                       keyName="email"
                     />
                     {empty === 3 && (
-                      <small style={{ color: 'red', marginLeft: '0' }}>
+                      <small style={{ color: 'red', marginLeft: '45px', fontSize: '15px' }}>
                         *Please Enter Email!
                       </small>
                     )}
@@ -325,7 +294,7 @@ const Enrollment = () => {
                       keyName="address1"
                     />
                     {empty === 4 && (
-                      <small style={{ color: 'red', marginLeft: '0' }}>
+                      <small style={{ color: 'red',marginLeft: '45px', fontSize: '15px' }}>
                         *Please Enter Address!
                       </small>
                     )}
@@ -339,7 +308,7 @@ const Enrollment = () => {
                       keyName="address2"
                     />{' '}
                     {empty === 5 && (
-                      <small style={{ color: 'red', marginLeft: '0' }}>
+                      <small style={{ color: 'red', marginLeft: '45px', fontSize: '15px' }}>
                         *Please Enter Address!
                       </small>
                     )}
@@ -353,7 +322,7 @@ const Enrollment = () => {
                       keyName="country"
                     />{' '}
                     {empty === 6 && (
-                      <small style={{ color: 'red', marginLeft: '0' }}>
+                      <small style={{ color: 'red', marginLeft: '45px', fontSize: '15px' }}>
                         *Please Enter Your Country!
                       </small>
                     )}
@@ -367,7 +336,7 @@ const Enrollment = () => {
                       keyName="state"
                     />{' '}
                     {empty === 7 && (
-                      <small style={{ color: 'red', marginLeft: '0' }}>
+                      <small style={{ color: 'red', marginLeft: '45px', fontSize: '15px' }}>
                         *Please Enter Your State!
                       </small>
                     )}
@@ -381,7 +350,7 @@ const Enrollment = () => {
                       keyName="city"
                     />{' '}
                     {empty === 8 && (
-                      <small style={{ color: 'red', marginLeft: '0' }}>
+                      <small style={{ color: 'red', marginLeft: '45px', fontSize: '15px' }}>
                         *Please Enter Your City!
                       </small>
                     )}
@@ -395,7 +364,7 @@ const Enrollment = () => {
                       keyName="pincode"
                     />
                     {empty === 9 && (
-                      <small style={{ color: 'red', marginLeft: '0' }}>
+                      <small style={{ color: 'red', marginLeft: '45px', fontSize: '15px' }}>
                         *Please Enter Pincode!
                       </small>
                     )}
@@ -432,7 +401,7 @@ const Enrollment = () => {
                     />
                   </label>
                   {empty === 15 && (
-                    <small style={{ color: 'red', marginLeft: '0' }}>
+                    <small style={{ color: 'red', marginLeft: '45px', fontSize: '15px' }}>
                       *Please Select One Otpion!
                     </small>
                   )}
@@ -447,7 +416,7 @@ const Enrollment = () => {
                       keyName="DOB"
                     />{' '}
                     {empty === 10 && (
-                      <small style={{ color: 'red', marginLeft: '0' }}>
+                      <small style={{ color: 'red', marginLeft: '45px', fontSize: '15px' }}>
                         *Please Enter Your DOB
                       </small>
                     )}
@@ -461,7 +430,7 @@ const Enrollment = () => {
                       keyName="nationality"
                     />
                     {empty === 11 && (
-                      <small style={{ color: 'red', marginLeft: '0' }}>
+                      <small style={{ color: 'red', marginLeft: '45px', fontSize: '15px' }}>
                         *Please Enter Your Nationality
                       </small>
                     )}
@@ -469,7 +438,7 @@ const Enrollment = () => {
 
                   <div className="num_of_child">
                     <div className="flex_box">
-                      <div className="year-of-comp label">
+                      <div className="year-of-comp child">
                         Number of Children
                       </div>
                       <InputComponent
@@ -488,7 +457,7 @@ const Enrollment = () => {
                     <div>
                       <div className="age_ofChild">
                         <div className="flex_box">
-                          <div className="year-of-comp label">
+                          <div className="year-of-comp child">
                             Age of child 1
                           </div>
                           <InputComponent
@@ -509,7 +478,7 @@ const Enrollment = () => {
                           return (
                             <>
                               <div className="flex_box">
-                                <div className="year-of-comp label">
+                                <div className="year-of-comp child">
                                   Age of child {idx + 2}
                                 </div>
                                 <div key={i} />
@@ -552,7 +521,7 @@ const Enrollment = () => {
             <div className="details">
               <div className="left">
                 <div className="flex-container">
-                  <div className='career-history' >
+                  <div className="career-history">
                     <InputComponent
                       type="text"
                       placeholder="School/College"
@@ -598,12 +567,15 @@ const Enrollment = () => {
                   <div className="uploads">
                     <fieldset>
                       <label htmlFor="image">
-                        Upload Image
+                        {qualificationAsset1
+                          ? qualificationAsset1.substring(0, 10)
+                          : 'Upload Image'}
                         <input
                           type={'file'}
                           id="image"
-                          value={qualificationAsset1}
-                          onChange={(e)=>{setQualificationAsset1(e.target.value)}}
+                          onChange={(e) => {
+                            setQualificationAsset1(e.target.files[0].name)
+                          }}
                           placeholder="Upload Image"
                           accept="image/*"
                         />
@@ -613,24 +585,28 @@ const Enrollment = () => {
                     </fieldset>
                     <fieldset>
                       <label htmlFor="resume">
-                        Upload PDF
+                        {qualificationAsset2
+                          ? qualificationAsset2.substring(0, 10)
+                          : 'Upload PDF'}
                         <input
                           type={'file'}
-                          value={qualificationAsset2}
-                          onChange={(e)=>{setQualificationAsset2(e.target.value)}}
+                          onChange={(e) => {
+                            setQualificationAsset2(e.target.files[0].name)
+                          }}
                           id="resume"
-                          placeholder="Upload PDF"
+                          accept=".pdf"
+                          placeholder="Upload Resume"
                         />
                         &ensp;
                         {upload}
                       </label>
-                      <br />
+                      
                       <small>Please ensure the file is under 2 MB</small>
                     </fieldset>
                   </div>
                 </div>
               </div>
-              <div className="right">
+              <div className="right1">
                 <div className="label">
                   Listed Qualifications :
                   {qualificationData?.map((items, key) => {
@@ -644,7 +620,7 @@ const Enrollment = () => {
                   })}
                 </div>
                 {empty === 1 && (
-                  <small style={{ color: 'red', marginLeft: '0' }}>
+                  <small style={{ color: 'red', marginLeft: '45px', fontSize: '15px' }}>
                     *Please Enter Your Deatils!
                   </small>
                 )}
@@ -670,7 +646,7 @@ const Enrollment = () => {
             <div className="details">
               <div className="left">
                 <div className="flex-container">
-                  <div className='career-history' >
+                  <div className="career-history">
                     <InputComponent
                       type="text"
                       placeholder="Company Name"
@@ -716,12 +692,15 @@ const Enrollment = () => {
                   <div className="uploads">
                     <fieldset>
                       <label htmlFor="image">
-                        Upload Image
+                        {experienceAsset1
+                          ? experienceAsset1.substring(0, 10)
+                          : 'Upload Image'}
                         <input
                           type={'file'}
                           id="image"
-                          value={experienceAsset1}
-                          onChange={(e)=>{setExperienceAsset1(e.target.value)}}
+                          onChange={(e) => {
+                            setExperienceAsset1(e.target.files[0].name)
+                          }}
                           placeholder="Upload Image"
                           accept="image/*"
                         />
@@ -731,24 +710,28 @@ const Enrollment = () => {
                     </fieldset>
                     <fieldset>
                       <label htmlFor="resume">
-                        Upload PDF
+                        {experienceAsset2
+                          ? experienceAsset2.substring(0, 10)
+                          : 'Upload PDF'}
                         <input
                           type={'file'}
-                          value={experienceAsset2}
-                          onChange={(e)=>{setExperienceAsset2(e.target.value)}}
+                          onChange={(e) => {
+                            setExperienceAsset2(e.target.files[0].name)
+                          }}
                           id="resume"
-                          placeholder="Upload PDF"
+                          accept=".pdf"
+                          placeholder="Upload Resume"
                         />
                         &ensp;
                         {upload}
                       </label>
-                      <br />
+                    
                       <small>Please ensure the file is under 2 MB</small>
                     </fieldset>
                   </div>
                 </div>
               </div>
-              <div className="right">
+              <div className="right1">
                 <div className="label">
                   Listed Work Experience :
                   {listData.map((item, key) => {
@@ -762,7 +745,7 @@ const Enrollment = () => {
                   })}
                 </div>
                 {empty === 1 && (
-                  <small style={{ color: 'red', marginLeft: '0' }}>
+                  <small style={{ color: 'red', marginLeft: '45px', fontSize: '15px' }}>
                     *Please Enter Your Deatils!
                   </small>
                 )}
@@ -787,7 +770,7 @@ const Enrollment = () => {
           <div>
             <div className="other">
               <div className="other_1">
-                <div className='other_div' >
+                <div className="other_div">
                   <div>
                     <label className="label">
                       Medical History & Current Health Issues :
@@ -796,7 +779,12 @@ const Enrollment = () => {
                         type="text"
                         rows="5"
                         cols="40"
-                        onChange={(e)=>{setFormData({ ...formData,medicalstatus:e.target.value })}}
+                        onChange={(e) => {
+                          setFormData({
+                            ...formData,
+                            medicalstatus: e.target.value,
+                          })
+                        }}
                       />
                     </label>
                   </div>
@@ -885,7 +873,7 @@ const Enrollment = () => {
                           />
                         </label>
                         {empty === 1 && (
-                          <small style={{ color: 'red', marginLeft: '0' }}>
+                          <small style={{ color: 'red', marginLeft: '45px', fontSize: '15px' }}>
                             *Please select one!
                           </small>
                         )}
@@ -893,17 +881,20 @@ const Enrollment = () => {
                     </div>
                   </div>
                 </div>
-                <div className='other_div'>
+                <div className="other_div">
                   <input
                     className="underline label_any"
                     type="text"
                     placeholder="Any other source please specify"
                     onChange={(e) => {
-                      setFormData({ ...formData, sourceinfo: e.target.value||'none' })
+                      setFormData({
+                        ...formData,
+                        sourceinfo: e.target.value || 'none',
+                      })
                     }}
                   />
                   {empty === 2 && (
-                    <small style={{ color: 'red', marginLeft: '0' }}>
+                    <small style={{ color: 'red', marginLeft: '45px', fontSize: '15px' }}>
                       *Please Specify!
                     </small>
                   )}
@@ -1028,22 +1019,33 @@ const Enrollment = () => {
                       <img src={currentCourse?.image} alt="" />
                     </div>
                     <div className="current_duration">
-                      {currentCourse?.title}
-                      {currentCourse?.details?.find(item=>item.content.title==='Date')?.content?.text[0]}
-                      <div className="current_fees">{currentCourse?.details?.find(item=>item.content.title==='Fees')?.content?.text[0]}</div>
+                      {currentCourse?.title}&nbsp;
+                      {courseDate ? courseDate : ''}
+                      <div className="current_fees">{currentCourse?.fees}</div>
                     </div>
                   </div>
                 </div>
-                <div className="course_details_text">Please select one of these options</div>
+                <div className="course_details_text">
+                  Please select one of these options
+                </div>
                 <form>
                   <div className="last_radio_button">
-                    <label htmlFor="" className="course_details_text radio_button" >
+                    <label
+                      htmlFor=""
+                      className="course_details_text radio_button"
+                    >
                       <input
                         type="radio"
                         name="resident"
                         value="RESIDENTIAL"
-                        disabled={currentCourse.residential===false  ? true:false}
-                        style={currentCourse.residential===false  ? { background:'grey' }:{}}
+                        disabled={
+                          currentCourse.residential === false ? true : false
+                        }
+                        style={
+                          currentCourse.residential === false
+                            ? { background: 'grey' }
+                            : {}
+                        }
                         onChange={(e) => {
                           if (e.target.checked) {
                             setFormData({
@@ -1053,15 +1055,22 @@ const Enrollment = () => {
                           }
                         }}
                       />{' '}
-                      &nbsp; Resident
+                      &nbsp; Residential
                     </label>
-                    <label htmlFor="" className="course_details_text radio_button" >
+                    <label
+                      htmlFor=""
+                      className="course_details_text radio_button"
+                    >
                       <input
                         type="radio"
                         name="resident"
                         value="ONLINE"
-                        disabled={currentCourse.online===false  ? true:false}
-                        style={currentCourse.online===false  ? { background:'grey' }:{}}
+                        disabled={currentCourse.online === false ? true : false}
+                        style={
+                          currentCourse.online === false
+                            ? { background: 'grey' }
+                            : {}
+                        }
                         onChange={(e) => {
                           if (e.target.checked) {
                             setFormData({
@@ -1075,13 +1084,22 @@ const Enrollment = () => {
                     </label>
                   </div>
                   <div className="last_radio_button">
-                    <label htmlFor="" className="course_details_text radio_button">
+                    <label
+                      htmlFor=""
+                      className="course_details_text radio_button"
+                    >
                       <input
                         type="radio"
-                        name='resident'
+                        name="resident"
                         value="NONRESIDENTIAL"
-                        disabled={currentCourse.nonResidential===false  ? true:false}
-                        style={currentCourse.nonResidential===false  ? { background:'grey' }:{}}
+                        disabled={
+                          currentCourse.nonResidential === false ? true : false
+                        }
+                        style={
+                          currentCourse.nonResidential === false
+                            ? { background: 'grey' }
+                            : {}
+                        }
                         onChange={(e) => {
                           if (e.target.checked) {
                             setFormData({
@@ -1091,15 +1109,24 @@ const Enrollment = () => {
                           }
                         }}
                       />{' '}
-                      &nbsp; Non-Resident
+                      &nbsp; Non-Residential
                     </label>
-                    <label htmlFor="" className="course_details_text radio_button">
+                    <label
+                      htmlFor=""
+                      className="course_details_text radio_button"
+                    >
                       <input
                         type="radio"
                         name="resident"
                         value="OFFLINE"
-                        disabled={currentCourse.onCampus===false  ? true:false}
-                        style={currentCourse.onCampus===false  ? { background:'grey' }:{}}
+                        disabled={
+                          currentCourse.onCampus === false ? true : false
+                        }
+                        style={
+                          currentCourse.onCampus === false
+                            ? { background: 'grey' }
+                            : {}
+                        }
                         onChange={(e) => {
                           if (e.target.checked) {
                             setFormData({
@@ -1109,7 +1136,7 @@ const Enrollment = () => {
                           }
                         }}
                       />{' '}
-                      &nbsp; On Campus
+                      &nbsp; On campus
                     </label>
                   </div>
                 </form>
@@ -1119,12 +1146,15 @@ const Enrollment = () => {
                   <div className="uploads">
                     <fieldset>
                       <label htmlFor="image">
-                        Upload Image
+                        {courseAsset1
+                          ? courseAsset1.substring(0, 10)
+                          : 'Upload Image'}
                         <input
                           type={'file'}
                           id="image"
-                          value={ courseAsset1 }
-                          onChange={e=>setCourseAsset1(e.target.value)}
+                          onChange={(e) =>
+                            setCourseAsset1(e.target.files[0].name)
+                          }
                           placeholder="Upload Image"
                           accept="image/*"
                         />
@@ -1134,18 +1164,22 @@ const Enrollment = () => {
                     </fieldset>
                     <fieldset>
                       <label htmlFor="resume">
-                        Upload PDF
+                        {courseAsset2
+                          ? courseAsset2.substring(0, 10)
+                          : 'Upload PDF'}
                         <input
                           type={'file'}
-                          value={ courseAsset2 }
-                          onChange={e=>setCourseAsset2(e.target.value)}
+                          onChange={(e) =>
+                            setCourseAsset2(e.target.files[0].name)
+                          }
                           id="resume"
-                          placeholder="Upload PDF"
+                          accept=".pdf"
+                          placeholder="Upload Resume"
                         />
                         &ensp;
                         {upload}
                       </label>
-                      <br />
+                      
                       <small>Please ensure the file is under 2 MB</small>
                     </fieldset>
                   </div>
@@ -1168,7 +1202,16 @@ const Enrollment = () => {
             </div>
           </div>
         ) : (
-          ''
+          <DisclaimerPolicy
+            setBold={setBold}
+            templateKey={currentCourse?.templateId}
+            formData={formData}
+            qualificationData={qualificationData}
+            listData={listData}
+            currentCourse={currentCourse}
+            courseAsset1={courseAsset1}
+            courseAsset2={courseAsset2}
+          />
         )}
       </div>
     </>

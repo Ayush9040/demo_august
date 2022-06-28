@@ -1,21 +1,45 @@
 import React, { useEffect, useState } from 'react'
-import CommonBannerNav2 from '../../../../Components/EcomNav'
-import { mail, lock } from '../../../../assets/icons/icon'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
+import { useDispatch } from 'react-redux'
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGoogle, faFacebook } from '@fortawesome/free-brands-svg-icons'
-import './style.scss'
+import { loginUserAction } from '../../Auth.actions'
+
 import CommonBtn from '../../../../Components/commonbtn'
-import { Link } from 'react-router-dom'
 import InputComponent from '../../../../Components/InputComponent'
+import CommonBannerNav2 from '../../../../Components/EcomNav'
+
+import { mail, lock } from '../../../../assets/icons/icon'
+
+import './style.scss'
+
 const SignIn = () => {
+  const dispatch = useDispatch()
+  const navigate = useNavigate()
+  const [course, setCourse] = useState()
   const [formData, setFormData] = useState({
     name: '',
     password: '',
   })
+  const location = useLocation()
+  console.log(location.pathname.split('/'))
+
+  useEffect(() => {
+    setCourse(location?.pathname?.split('/')?.[3])
+  }, [location])
 
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
+
+  const handleSignIn = () =>{
+    dispatch(loginUserAction({
+      email: formData.name,
+      password: formData.password
+    }, navigate))
+  }
+
   return (
     <div className="signin-container">
       <CommonBannerNav2 />
@@ -25,14 +49,14 @@ const SignIn = () => {
           <InputComponent
             icon={mail}
             type="text"
-            placeholder="Name"
+            placeholder="Email"
             form={formData}
             setField={setFormData}
-            keyName="name"
+            keyName="email"
           />
           <InputComponent
             icon={lock}
-            type="text"
+            type="password"
             placeholder="Password"
             form={formData}
             setField={setFormData}
@@ -46,8 +70,13 @@ const SignIn = () => {
             <div className="forgot-password">Forgot Password ?</div>
           </label>
           <label className="signin-btn">
-            <CommonBtn text={'Sign In'} />
-            <CommonBtn text={'Continue as a guest'} isColor={'#EA4335'} />
+            <CommonBtn
+              text="Sign In"
+              buttonAction={handleSignIn}
+            />
+            <Link to={`/enrollment/${course}`}>
+              <CommonBtn text={'Continue as a guest'} isColor={'#EA4335'} />
+            </Link>
           </label>
         </form>
         <div className="social-logins guest">

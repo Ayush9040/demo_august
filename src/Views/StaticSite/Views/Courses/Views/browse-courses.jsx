@@ -61,7 +61,7 @@ const BrowseCourses = () => {
               <AccordionItemHeading>
                 <AccordionItemButton>
                   <Link to="/courses/browse/most-popular">
-                    <p> Most Popular Course </p>
+                    <p> Most Popular</p>
                   </Link>
                 </AccordionItemButton>
               </AccordionItemHeading>
@@ -70,7 +70,7 @@ const BrowseCourses = () => {
               <AccordionItemHeading>
                 <AccordionItemButton>
                   <Link to="/courses/browse/ttc">
-                    <p>Teachers Training Course</p>
+                    <p>Teachers Training</p>
                   </Link>
                 </AccordionItemButton>
               </AccordionItemHeading>
@@ -113,7 +113,7 @@ const BrowseCourses = () => {
               <AccordionItemHeading>
                 <AccordionItemButton>
                   <Link to="/courses/browse/camps-workshops">
-                    <p>Camps & Workshops</p>
+                    <p>Camps & Workshop</p>
                   </Link>
                 </AccordionItemButton>
               </AccordionItemHeading>
@@ -122,7 +122,7 @@ const BrowseCourses = () => {
               <AccordionItemHeading>
                 <AccordionItemButton>
                   <Link to="/courses/browse/classes">
-                    <p>Classes</p>
+                    <p>Regular Classes</p>
                   </Link>
                 </AccordionItemButton>
               </AccordionItemHeading>
