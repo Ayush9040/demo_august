@@ -192,7 +192,7 @@ const Enrollment = () => {
   return (
     <>
       <div className="enrollment_container ">
-        <div className="header">
+        {bold!==5 &&   <div className="header">
           <Link to="/courses">
             <button className="x">x</button>
           </Link>
@@ -235,7 +235,7 @@ const Enrollment = () => {
               {bold === 4 && <div className="bottom-line"></div>}
             </li>
           </ul>
-        </div>
+        </div>}
 
         {bold === 0 ? (
           <div>
@@ -258,13 +258,13 @@ const Enrollment = () => {
                   </div>
                   <div>
                     <InputComponent
-                      type="number"
+                      type="text"
                       placeholder="Phone Number"
                       form={formData}
                       setField={setFormData}
                       keyName="phone"
                     />
-                    {empty === 2 && (
+                    {empty === 1 && (
                       <small style={{ color: 'red', marginLeft: '0' }}>
                         *Please Enter Your 10 Digit Phone Number!
                       </small>
@@ -272,8 +272,9 @@ const Enrollment = () => {
                   </div>
                   <div>
                     <InputComponent
-                      type="text"
-                      placeholder="Email ID"
+                      type="email"
+                      id='text'
+                      placeholder="Email"
                       form={formData}
                       setField={setFormData}
                       keyName="email"
@@ -507,7 +508,7 @@ const Enrollment = () => {
             </div>
             <div className="footer">
               <button className="back" style={{ visibility: 'hidden' }}>
-                Back
+              Back
               </button>
               <div className="enrollment_logo">{filler1}</div>
               <button className="next_1" onClick={handleEmpty1}>
@@ -1188,23 +1189,21 @@ const Enrollment = () => {
             </div>
 
             <div className="footer">
-              <button
-                style={{ visibility: 'hidden' }}
+              {/* <button
                 className="back"
                 onClick={() => {
                   setBold(3)
                 }}
               >
                 Back
-              </button>
+              </button> */}
               <div className="enrollment_logo">{filler1}</div>
-              <button className="next_1" onClick={handleSubmit}>
-                Submit
-              </button>
+              <button className="next_1" onClick={ handleSubmit } >Submit</button>
             </div>
           </div>
         ) : (
           <DisclaimerPolicy
+            setBold={setBold}
             templateKey={currentCourse?.templateId}
             formData={formData}
             qualificationData={qualificationData}

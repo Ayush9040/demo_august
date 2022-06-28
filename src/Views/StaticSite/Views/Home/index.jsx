@@ -15,7 +15,6 @@ import NewsLetter from '../../Components/NewsLetter'
 import Footer from '../../Components/Footer'
 import Blog from '../../Components/BlogSection'
 
-
 const Home = () => {
   const route = useLocation()
   const { isLoggedIn } = useSelector((state) => state.auth)

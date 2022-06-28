@@ -49,10 +49,10 @@ const SignIn = () => {
           <InputComponent
             icon={mail}
             type="text"
-            placeholder="Name"
+            placeholder="Email"
             form={formData}
             setField={setFormData}
-            keyName="name"
+            keyName="email"
           />
           <InputComponent
             icon={lock}
