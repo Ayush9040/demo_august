@@ -14,6 +14,8 @@ import VideosSection from '../../Components/Videos'
 import NewsLetter from '../../Components/NewsLetter'
 import Footer from '../../Components/Footer'
 import Blog from '../../Components/BlogSection'
+import MainVideo from '../../Components/MainVideo'
+
 
 
 const Home = () => {
