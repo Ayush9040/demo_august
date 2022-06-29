@@ -39,7 +39,7 @@ const CourseDetails = ({ pageDate }) => {
   // } = pageDate
 
   console.log(pageDate, 'pageData')
-  const [selectDate, setSetselectDate] = useState()
+  const [selectDate, setSetselectDate] = useState(localStorage.getItem('selectedDate'))
   localStorage.setItem('selectedDate',selectDate)
 
   let options = [

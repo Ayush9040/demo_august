@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import './style.scss'
-import baseDomain, { homeAssets } from '../../assets/images/imageAsset'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 import { legacydisclaimer } from '../../assets/icons/icon'
@@ -140,9 +139,9 @@ const DisclaimerPolicy = ({
   }
 
   return (
-    <div className="main-container">
+    <div className="disclaimer-container">
       <button className="close" onClick={()=>setBold(4)} >x</button>
-      <div className="heading-content">
+      <div className="disclaimer-heading">
         <div className='legacy1'>
           {legacydisclaimer}
         </div>

@@ -35,7 +35,7 @@ const SignIn = () => {
 
   const handleSignIn = () =>{
     dispatch(loginUserAction({
-      email: formData.name,
+      email: formData.email,
       password: formData.password
     }, navigate))
   }
