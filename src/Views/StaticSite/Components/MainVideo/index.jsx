@@ -27,7 +27,7 @@ const MainVideo = () => {
       {/* <div ><button className='video-button'>Skip</button></div> */}
 
       <video
-        src=" https://ecom-static-site.oss-ap-south-1.aliyuncs.com/Home/PlayVideo/TYI%20One%20Minute%20Ad%20Video.mp4"
+        src="https://ecom-static-site.oss-ap-south-1.aliyuncs.com/Home/PlayVideo/tyi-home-bs.mp4"
         controls={false}
         loop
         autoPlay={true}
