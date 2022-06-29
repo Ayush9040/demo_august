@@ -1,0 +1,147 @@
+import React from 'react'
+import './formstyles.scss'
+import InputComponent from '../InputComponent'
+
+const Work = ({
+  handleEmpty3,
+  setBold,
+  listData,
+  listDetailHandler,
+  setFormData,
+  formData,
+  empty,
+  resgin,
+  
+}) => {
+  return (
+    <div className="main_div">
+      <div className="grid_box">
+        <div className="left_grid">
+          <form>
+            <div>
+              <InputComponent
+                type="text"
+                placeholder="Company Name"
+                form={formData}
+                setField={setFormData}
+                keyName="company"
+                value={formData.company}
+              />
+            </div>
+            <div>
+              <InputComponent
+                type="text"
+                placeholder="Role when leaving the company"
+                form={formData}
+                setField={setFormData}
+                keyName="leavejob"
+                value={formData.leavejob}
+              />
+            </div>
+            <div className="work_flex_box">
+              <div>
+                <div className="worked">Worked from</div>
+                <InputComponent
+                  type="number"
+                  placeholder="Year"
+                  form={formData}
+                  setField={setFormData}
+                  kayName="workfrom"
+                  value={formData.workfrom}
+                />
+                {resgin === 1 && (
+                  <style
+                    style={{
+                      color: 'red',
+                      fontSize: '1.25rem',
+                      display: 'block',
+                      float: 'right',
+                    }}
+                  >
+                    Please enter a valid year
+                  </style>
+                )}
+              </div>
+              <div>
+                <div className="worked">Worked till</div>
+                <InputComponent
+                  type="number"
+                  placeholder="Year"
+                  form={formData}
+                  setField={setFormData}
+                  kayName="worktill"
+                  value={formData.worktill}
+                />
+                {resgin === 2 && (
+                  <style
+                    style={{
+                      color: 'red',
+                      fontSize: '1.25rem',
+                      display: 'block',
+                      float: 'right',
+                    }}
+                  >
+                    Please enter a valid year
+                  </style>
+                )}
+              </div>
+            </div>
+            <div className="add_button_div">
+              Add More
+              <button
+                className="add_button"
+                onClick={() => {
+                  listDetailHandler()
+                }}
+              >
+                +
+              </button>
+            </div>
+          </form>
+        </div>
+        <div className="right_grid">
+          <div className="listed_quality">
+            Listed Work Experience :{' '}
+            {listData.map((item, key) => {
+              return (
+                <div className="experienced-lists" key={key}>
+                  <p>{item.companyName}</p>
+                  <p>{item.roleWhenLeaving}</p>
+                  {/* <p>{item.yearOfresignation}</p> */}
+                  <p>{item.workFrom}</p>
+                  <p>{item.workTill}</p>
+                </div>
+              )
+            })}
+          </div>
+          {empty === 1 && (
+            <small
+              style={{
+                color: 'red',
+                marginLeft: '45px',
+                fontSize: '15px',
+              }}
+            >
+              *Please Enter Your Deatils!
+            </small>
+          )}
+        </div>
+      </div>
+      <div className="button_box">
+        <button
+          className="back_button"
+          onClick={() => {
+            setBold(1)
+          }}
+        >
+          Back
+        </button>
+        <button className="next_button" onClick={handleEmpty3}>
+          Next
+        </button>
+      </div>
+    </div>
+  )
+}
+
+export default Work

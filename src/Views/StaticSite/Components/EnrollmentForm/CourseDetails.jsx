@@ -1,5 +1,5 @@
-import { upload } from '@testing-library/user-event/dist/upload'
 import React from 'react'
+import { upload } from '../../assets/icons/icon'
 
 const CourseDetails = ({
   currentCourse,
@@ -10,8 +10,7 @@ const CourseDetails = ({
   setCourseAsset1,
   courseAsset2,
   setCourseAsset2,
-  setBold,
-  handleSubmit
+  handleSubmit,
 }) => {
   return (
     <div className="main-container">
@@ -23,9 +22,11 @@ const CourseDetails = ({
                 <img src={currentCourse?.image} alt="" />
               </div>
               <div className="current_duration">
-                {currentCourse?.title}&nbsp;
-                {courseDate ? courseDate : ''}
-                <div className="current_fees">{currentCourse?.fees}</div>
+                <div>
+                  {currentCourse?.title}&nbsp;
+                  {courseDate ? courseDate : ''}
+                </div>
+                <p className="current_fees"> ₹ {currentCourse?.fees}</p>
               </div>
             </div>
           </div>
@@ -127,7 +128,7 @@ const CourseDetails = ({
             </div>
           </form>
           <div className="upload-section">
-            <div className="course-details-text">
+            <p className="course-details-text">
               Please upload the relevant TYI certificate pre requisite
               <div className="uploads">
                 <fieldset>
@@ -163,12 +164,12 @@ const CourseDetails = ({
                   </label>
                 </fieldset>
               </div>
-            </div>
+            </p>
           </div>
         </div>
         <div className="footer-submit">
           <button className="submit" onClick={handleSubmit}>
-          Submit
+            Submit
           </button>
         </div>
       </div>
