@@ -9,19 +9,26 @@ import { validateEmail } from '../../../../helpers'
 import { Link } from 'react-router-dom'
 import DisclaimerPolicy from '../DisclaimerPolicy'
 import { useSelector } from 'react-redux'
+import Other from './Other'
+import CourseDetails from './CourseDetails'
 
 const Enrollment = () => {
   const { user } = useSelector((state) => state.auth)
   const { courseId } = useParams()
   const [currentCourse, setCurrentCourse] = useState({})
   const [courseDate, setCourseDate] = useState(null)
+  const [date, setDate] = useState('')
 
   useEffect(() => {
     setCurrentCourse(AllCourses.find((item) => item.key === courseId))
     setCourseDate(localStorage.getItem('selectedDate'))
+
+    setDate(
+      today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate()
+    )
   }, [])
 
- 
+  var today = new Date()
 
   const [empty, setEmpty] = useState(0)
 
@@ -61,7 +68,7 @@ const Enrollment = () => {
   const [courseAsset1, setCourseAsset1] = useState(null)
   const [courseAsset2, setCourseAsset2] = useState(null)
   const [formData, setFormData] = useState({
-    name: user.firstName ? user.firstName :  '',
+    name: user.firstName ? user.firstName : '',
     phone: '',
     email: user.email ? user.email : '',
     address1: '',
@@ -192,7 +199,7 @@ const Enrollment = () => {
   return (
     <>
       <div className="enrollment_container ">
-        {bold!==5 &&   <div className="header">
+        <div className="header">
           <Link to="/courses">
             <button className="x">x</button>
           </Link>
@@ -235,7 +242,7 @@ const Enrollment = () => {
               {bold === 4 && <div className="bottom-line"></div>}
             </li>
           </ul>
-        </div>}
+        </div>
 
         {bold === 0 ? (
           <div>
@@ -251,20 +258,26 @@ const Enrollment = () => {
                       keyName="name"
                     />
                     {empty === 1 && (
-                      <small style={{ color: 'red', marginLeft: '45px', fontSize: '15px' }}>
+                      <small
+                        style={{
+                          color: 'red',
+                          marginLeft: '45px',
+                          fontSize: '15px',
+                        }}
+                      >
                         *Please Enter Name!
                       </small>
                     )}
                   </div>
                   <div>
                     <InputComponent
-                      type="text"
+                      type="number"
                       placeholder="Phone Number"
                       form={formData}
                       setField={setFormData}
                       keyName="phone"
                     />
-                    {empty === 1 && (
+                    {empty === 2 && (
                       <small style={{ color: 'red', marginLeft: '0' }}>
                         *Please Enter Your 10 Digit Phone Number!
                       </small>
@@ -272,15 +285,20 @@ const Enrollment = () => {
                   </div>
                   <div>
                     <InputComponent
-                      type="email"
-                      id='text'
-                      placeholder="Email"
+                      type="text"
+                      placeholder="Email ID"
                       form={formData}
                       setField={setFormData}
                       keyName="email"
                     />
                     {empty === 3 && (
-                      <small style={{ color: 'red', marginLeft: '45px', fontSize: '15px' }}>
+                      <small
+                        style={{
+                          color: 'red',
+                          marginLeft: '45px',
+                          fontSize: '15px',
+                        }}
+                      >
                         *Please Enter Email!
                       </small>
                     )}
@@ -294,7 +312,13 @@ const Enrollment = () => {
                       keyName="address1"
                     />
                     {empty === 4 && (
-                      <small style={{ color: 'red',marginLeft: '45px', fontSize: '15px' }}>
+                      <small
+                        style={{
+                          color: 'red',
+                          marginLeft: '45px',
+                          fontSize: '15px',
+                        }}
+                      >
                         *Please Enter Address!
                       </small>
                     )}
@@ -308,7 +332,13 @@ const Enrollment = () => {
                       keyName="address2"
                     />{' '}
                     {empty === 5 && (
-                      <small style={{ color: 'red', marginLeft: '45px', fontSize: '15px' }}>
+                      <small
+                        style={{
+                          color: 'red',
+                          marginLeft: '45px',
+                          fontSize: '15px',
+                        }}
+                      >
                         *Please Enter Address!
                       </small>
                     )}
@@ -322,7 +352,13 @@ const Enrollment = () => {
                       keyName="country"
                     />{' '}
                     {empty === 6 && (
-                      <small style={{ color: 'red', marginLeft: '45px', fontSize: '15px' }}>
+                      <small
+                        style={{
+                          color: 'red',
+                          marginLeft: '45px',
+                          fontSize: '15px',
+                        }}
+                      >
                         *Please Enter Your Country!
                       </small>
                     )}
@@ -336,7 +372,13 @@ const Enrollment = () => {
                       keyName="state"
                     />{' '}
                     {empty === 7 && (
-                      <small style={{ color: 'red', marginLeft: '45px', fontSize: '15px' }}>
+                      <small
+                        style={{
+                          color: 'red',
+                          marginLeft: '45px',
+                          fontSize: '15px',
+                        }}
+                      >
                         *Please Enter Your State!
                       </small>
                     )}
@@ -350,7 +392,13 @@ const Enrollment = () => {
                       keyName="city"
                     />{' '}
                     {empty === 8 && (
-                      <small style={{ color: 'red', marginLeft: '45px', fontSize: '15px' }}>
+                      <small
+                        style={{
+                          color: 'red',
+                          marginLeft: '45px',
+                          fontSize: '15px',
+                        }}
+                      >
                         *Please Enter Your City!
                       </small>
                     )}
@@ -364,7 +412,13 @@ const Enrollment = () => {
                       keyName="pincode"
                     />
                     {empty === 9 && (
-                      <small style={{ color: 'red', marginLeft: '45px', fontSize: '15px' }}>
+                      <small
+                        style={{
+                          color: 'red',
+                          marginLeft: '45px',
+                          fontSize: '15px',
+                        }}
+                      >
                         *Please Enter Pincode!
                       </small>
                     )}
@@ -401,8 +455,14 @@ const Enrollment = () => {
                     />
                   </label>
                   {empty === 15 && (
-                    <small style={{ color: 'red', marginLeft: '45px', fontSize: '15px' }}>
-                      *Please Select One Otpion!
+                    <small
+                      style={{
+                        color: 'red',
+                        marginLeft: '45px',
+                        fontSize: '15px',
+                      }}
+                    >
+                      *Please Select One Option!
                     </small>
                   )}
                 </div>
@@ -414,9 +474,17 @@ const Enrollment = () => {
                       form={formData}
                       setField={setFormData}
                       keyName="DOB"
-                    />{' '}
+                      minnum="1921-01-01"
+                      maxnum={date}
+                    />
                     {empty === 10 && (
-                      <small style={{ color: 'red', marginLeft: '45px', fontSize: '15px' }}>
+                      <small
+                        style={{
+                          color: 'red',
+                          marginLeft: '45px',
+                          fontSize: '15px',
+                        }}
+                      >
                         *Please Enter Your DOB
                       </small>
                     )}
@@ -430,7 +498,13 @@ const Enrollment = () => {
                       keyName="nationality"
                     />
                     {empty === 11 && (
-                      <small style={{ color: 'red', marginLeft: '45px', fontSize: '15px' }}>
+                      <small
+                        style={{
+                          color: 'red',
+                          marginLeft: '45px',
+                          fontSize: '15px',
+                        }}
+                      >
                         *Please Enter Your Nationality
                       </small>
                     )}
@@ -508,7 +582,7 @@ const Enrollment = () => {
             </div>
             <div className="footer">
               <button className="back" style={{ visibility: 'hidden' }}>
-              Back
+                Back
               </button>
               <div className="enrollment_logo">{filler1}</div>
               <button className="next_1" onClick={handleEmpty1}>
@@ -568,7 +642,7 @@ const Enrollment = () => {
                     <fieldset>
                       <label htmlFor="image">
                         {qualificationAsset1
-                          ? qualificationAsset1.substring(0, 10)
+                          ? qualificationAsset1.substring(0, 15)
                           : 'Upload Image'}
                         <input
                           type={'file'}
@@ -586,7 +660,7 @@ const Enrollment = () => {
                     <fieldset>
                       <label htmlFor="resume">
                         {qualificationAsset2
-                          ? qualificationAsset2.substring(0, 10)
+                          ? qualificationAsset2.substring(0, 15)
                           : 'Upload PDF'}
                         <input
                           type={'file'}
@@ -600,7 +674,7 @@ const Enrollment = () => {
                         &ensp;
                         {upload}
                       </label>
-                      
+                      <br />
                       <small>Please ensure the file is under 2 MB</small>
                     </fieldset>
                   </div>
@@ -620,7 +694,13 @@ const Enrollment = () => {
                   })}
                 </div>
                 {empty === 1 && (
-                  <small style={{ color: 'red', marginLeft: '45px', fontSize: '15px' }}>
+                  <small
+                    style={{
+                      color: 'red',
+                      marginLeft: '45px',
+                      fontSize: '15px',
+                    }}
+                  >
                     *Please Enter Your Deatils!
                   </small>
                 )}
@@ -693,7 +773,7 @@ const Enrollment = () => {
                     <fieldset>
                       <label htmlFor="image">
                         {experienceAsset1
-                          ? experienceAsset1.substring(0, 10)
+                          ? experienceAsset1.substring(0, 15)
                           : 'Upload Image'}
                         <input
                           type={'file'}
@@ -711,7 +791,7 @@ const Enrollment = () => {
                     <fieldset>
                       <label htmlFor="resume">
                         {experienceAsset2
-                          ? experienceAsset2.substring(0, 10)
+                          ? experienceAsset2.substring(0, 15)
                           : 'Upload PDF'}
                         <input
                           type={'file'}
@@ -725,7 +805,7 @@ const Enrollment = () => {
                         &ensp;
                         {upload}
                       </label>
-                    
+                      <br />
                       <small>Please ensure the file is under 2 MB</small>
                     </fieldset>
                   </div>
@@ -745,7 +825,13 @@ const Enrollment = () => {
                   })}
                 </div>
                 {empty === 1 && (
-                  <small style={{ color: 'red', marginLeft: '45px', fontSize: '15px' }}>
+                  <small
+                    style={{
+                      color: 'red',
+                      marginLeft: '45px',
+                      fontSize: '15px',
+                    }}
+                  >
                     *Please Enter Your Deatils!
                   </small>
                 )}
@@ -767,443 +853,214 @@ const Enrollment = () => {
             </div>
           </div>
         ) : bold === 3 ? (
-          <div>
-            <div className="other">
-              <div className="other_1">
-                <div className="other_div">
-                  <div>
-                    <label className="label">
-                      Medical History & Current Health Issues :
-                      <textarea
-                        className="text_box"
-                        type="text"
-                        rows="5"
-                        cols="40"
-                        onChange={(e) => {
-                          setFormData({
-                            ...formData,
-                            medicalstatus: e.target.value,
-                          })
-                        }}
-                      />
-                    </label>
-                  </div>
-                  <div>
-                    <div className="label">How do you hear about us?</div>
-                    <div>
-                      <form className="radio_text">
-                        <label className="label_1">
-                          Internet&nbsp;
-                          <input
-                            type="radio"
-                            value="internet"
-                            name="source"
-                            onChange={(e) => {
-                              if (e.target.checked) {
-                                setFormData({
-                                  ...formData,
-                                  source: e.target.value,
-                                })
-                              }
-                            }}
-                          />
-                        </label>
-                        <label className="label_1">
-                          Print Media&nbsp;
-                          <input
-                            type="radio"
-                            value="media"
-                            name="source"
-                            onChange={(e) => {
-                              if (e.target.checked) {
-                                setFormData({
-                                  ...formData,
-                                  source: e.target.value,
-                                })
-                              }
-                            }}
-                          />
-                        </label>
-                        <label className="label_1">
-                          Friends/Relatives&nbsp;
-                          <input
-                            type="radio"
-                            value="friends"
-                            name="source"
-                            onChange={(e) => {
-                              if (e.target.checked) {
-                                setFormData({
-                                  ...formData,
-                                  source: e.target.value,
-                                })
-                              }
-                            }}
-                          />
-                        </label>
-                        <label className="label_1">
-                          Events&nbsp;
-                          <input
-                            type="radio"
-                            value="events"
-                            name="source"
-                            onChange={(e) => {
-                              if (e.target.checked) {
-                                setFormData({
-                                  ...formData,
-                                  source: e.target.value,
-                                })
-                              }
-                            }}
-                          />
-                        </label>
-                        <label className="label_1">
-                          Others&nbsp;
-                          <input
-                            type="radio"
-                            value="others"
-                            name="source"
-                            onChange={(e) => {
-                              if (e.target.checked) {
-                                setFormData({
-                                  ...formData,
-                                  source: e.target.value,
-                                })
-                              }
-                            }}
-                          />
-                        </label>
-                        {empty === 1 && (
-                          <small style={{ color: 'red', marginLeft: '45px', fontSize: '15px' }}>
-                            *Please select one!
-                          </small>
-                        )}
-                      </form>
-                    </div>
-                  </div>
-                </div>
-                <div className="other_div">
-                  <input
-                    className="underline label_any"
-                    type="text"
-                    placeholder="Any other source please specify"
-                    onChange={(e) => {
-                      setFormData({
-                        ...formData,
-                        sourceinfo: e.target.value || 'none',
-                      })
-                    }}
-                  />
-                  {empty === 2 && (
-                    <small style={{ color: 'red', marginLeft: '45px', fontSize: '15px' }}>
-                      *Please Specify!
-                    </small>
-                  )}
-                </div>
-                {/* <div className="radio_heading">
-                  <div className="label">Purpose of joining this program</div>
-
-                  <div className="radio_text">
-                    <label className="label_1">
-                      Self-Development&nbsp;
-                      <input
-                        type="radio"
-                        name="purpose"
-                        onChange={(e) => {
-                          if (e.target.checked) {
-                            setFormData({
-                              ...formData,
-                              purpose: e.target.value,
-                            })
-                          }
-                        }}
-                      />
-                    </label>
-                    <label className="label_1">
-                      Fitness&nbsp;
-                      <input
-                        type="radio"
-                        name="purpose"
-                        onChange={(e) => {
-                          if (e.target.checked) {
-                            setFormData({
-                              ...formData,
-                              purpose: e.target.value,
-                            })
-                          }
-                        }}
-                      />
-                    </label>
-                    <label className="label_1">
-                      Career&nbsp;
-                      <input
-                        type="radio"
-                        name="purpose"
-                        onChange={(e) => {
-                          if (e.target.checked) {
-                            setFormData({
-                              ...formData,
-                              purpose: e.target.value,
-                            })
-                          }
-                        }}
-                      />
-                    </label>
-                    <label className="label_1">
-                      Health&nbsp;
-                      <input
-                        type="radio"
-                        name="purpose"
-                        onChange={(e) => {
-                          if (e.target.checked) {
-                            setFormData({
-                              ...formData,
-                              purpose: e.target.value,
-                            })
-                          }
-                        }}
-                      />
-                    </label>
-                    <label className="label_1">
-                      Others&nbsp;
-                      <input
-                        type="radio"
-                        name="purpose"
-                        onChange={(e) => {
-                          if (e.target.checked) {
-                            setFormData({
-                              ...formData,
-                              purpose: e.target.value,
-                            })
-                          }
-                        }}
-                      />
-                    </label>
-                  </div>
-                </div>
-
-                <div>
-                  <input
-                    className="underline"
-                    type="text"
-                    placeholder="Any other source please specify"
-                    onChange={(e) => {
-                      setFormData({ ...formData, info: e.target.value })
-                    }}
-                  />
-                </div> */}
-              </div>
-            </div>
-            <div className="footer">
-              <button
-                className="back"
-                onClick={() => {
-                  setBold(2)
-                }}
-              >
-                Back
-              </button>
-              <div className="enrollment_logo">{filler1}</div>
-              <button className="next_1" onClick={handleEmpty4}>
-                Next
-              </button>
-            </div>
-          </div>
+          <Other
+            setBold={setBold}
+            empty={empty}
+            formData={formData}
+            setFormData={setFormData}
+          />
         ) : bold === 4 ? (
-          <div>
-            <div className="other">
-              <div className="last_div">
-                <div className="details_box">
-                  {' '}
-                  <div className="details_course_box">
-                    <div className="detail_image_box">
-                      <img src={currentCourse?.image} alt="" />
-                    </div>
-                    <div className="current_duration">
-                      {currentCourse?.title}&nbsp;
-                      {courseDate ? courseDate : ''}
-                      <div className="current_fees">{currentCourse?.fees}</div>
-                    </div>
-                  </div>
-                </div>
-                <div className="course_details_text">
-                  Please select one of these options
-                </div>
-                <form>
-                  <div className="last_radio_button">
-                    <label
-                      htmlFor=""
-                      className="course_details_text radio_button"
-                    >
-                      <input
-                        type="radio"
-                        name="resident"
-                        value="RESIDENTIAL"
-                        disabled={
-                          currentCourse.residential === false ? true : false
-                        }
-                        style={
-                          currentCourse.residential === false
-                            ? { background: 'grey' }
-                            : {}
-                        }
-                        onChange={(e) => {
-                          if (e.target.checked) {
-                            setFormData({
-                              ...formData,
-                              residental: e.target.value,
-                            })
-                          }
-                        }}
-                      />{' '}
-                      &nbsp; Residential
-                    </label>
-                    <label
-                      htmlFor=""
-                      className="course_details_text radio_button"
-                    >
-                      <input
-                        type="radio"
-                        name="resident"
-                        value="ONLINE"
-                        disabled={currentCourse.online === false ? true : false}
-                        style={
-                          currentCourse.online === false
-                            ? { background: 'grey' }
-                            : {}
-                        }
-                        onChange={(e) => {
-                          if (e.target.checked) {
-                            setFormData({
-                              ...formData,
-                              residental: e.target.value,
-                            })
-                          }
-                        }}
-                      />{' '}
-                      &nbsp; Online
-                    </label>
-                  </div>
-                  <div className="last_radio_button">
-                    <label
-                      htmlFor=""
-                      className="course_details_text radio_button"
-                    >
-                      <input
-                        type="radio"
-                        name="resident"
-                        value="NONRESIDENTIAL"
-                        disabled={
-                          currentCourse.nonResidential === false ? true : false
-                        }
-                        style={
-                          currentCourse.nonResidential === false
-                            ? { background: 'grey' }
-                            : {}
-                        }
-                        onChange={(e) => {
-                          if (e.target.checked) {
-                            setFormData({
-                              ...formData,
-                              residental: e.target.value,
-                            })
-                          }
-                        }}
-                      />{' '}
-                      &nbsp; Non-Residential
-                    </label>
-                    <label
-                      htmlFor=""
-                      className="course_details_text radio_button"
-                    >
-                      <input
-                        type="radio"
-                        name="resident"
-                        value="OFFLINE"
-                        disabled={
-                          currentCourse.onCampus === false ? true : false
-                        }
-                        style={
-                          currentCourse.onCampus === false
-                            ? { background: 'grey' }
-                            : {}
-                        }
-                        onChange={(e) => {
-                          if (e.target.checked) {
-                            setFormData({
-                              ...formData,
-                              residental: e.target.value,
-                            })
-                          }
-                        }}
-                      />{' '}
-                      &nbsp; On campus
-                    </label>
-                  </div>
-                </form>
-                {/* <div className='upload_box'> */}
-                <div className="course_details_text">
-                  Please upload the relevant TYI certificate pre requisite
-                  <div className="uploads">
-                    <fieldset>
-                      <label htmlFor="image">
-                        {courseAsset1
-                          ? courseAsset1.substring(0, 10)
-                          : 'Upload Image'}
-                        <input
-                          type={'file'}
-                          id="image"
-                          onChange={(e) =>
-                            setCourseAsset1(e.target.files[0].name)
-                          }
-                          placeholder="Upload Image"
-                          accept="image/*"
-                        />
-                        &ensp;
-                        {upload}
-                      </label>
-                    </fieldset>
-                    <fieldset>
-                      <label htmlFor="resume">
-                        {courseAsset2
-                          ? courseAsset2.substring(0, 10)
-                          : 'Upload PDF'}
-                        <input
-                          type={'file'}
-                          onChange={(e) =>
-                            setCourseAsset2(e.target.files[0].name)
-                          }
-                          id="resume"
-                          accept=".pdf"
-                          placeholder="Upload Resume"
-                        />
-                        &ensp;
-                        {upload}
-                      </label>
-                      
-                      <small>Please ensure the file is under 2 MB</small>
-                    </fieldset>
-                  </div>
-                  {/* </div> */}
-                </div>
-              </div>
-            </div>
+        // <div>
+        //   <div className="other">
+        //     <div className="last_div">
+        //       <div className="details_box">
+        //         {' '}
+        //         <div className="details_course_box">
+        //           <div className="detail_image_box">
+        //             <img src={currentCourse?.image} alt="" />
+        //           </div>
+        //           <div className="current_duration">
+        //             {currentCourse?.title}&nbsp;
+        //             {courseDate ? courseDate : ''}
+        //             <div className="current_fees">{currentCourse?.fees}</div>
+        //           </div>
+        //         </div>
+        //       </div>
+        //       <div className="course_details_text">
+        //         Please select one of these options
+        //       </div>
+        //       <form>
+        //         <div className="last_radio_button">
+        //           <label
+        //             htmlFor=""
+        //             className="course_details_text radio_button"
+        //           >
+        //             <input
+        //               type="radio"
+        //               name="resident"
+        //               value="RESIDENTIAL"
+        //               disabled={
+        //                 currentCourse.residential === false ? true : false
+        //               }
+        //               style={
+        //                 currentCourse.residential === false
+        //                   ? { background: 'grey' }
+        //                   : {}
+        //               }
+        //               onChange={(e) => {
+        //                 if (e.target.checked) {
+        //                   setFormData({
+        //                     ...formData,
+        //                     residental: e.target.value,
+        //                   })
+        //                 }
+        //               }}
+        //             />{' '}
+        //             &nbsp; Residential
+        //           </label>
+        //           <label
+        //             htmlFor=""
+        //             className="course_details_text radio_button"
+        //           >
+        //             <input
+        //               type="radio"
+        //               name="resident"
+        //               value="ONLINE"
+        //               disabled={currentCourse.online === false ? true : false}
+        //               style={
+        //                 currentCourse.online === false
+        //                   ? { background: 'grey' }
+        //                   : {}
+        //               }
+        //               onChange={(e) => {
+        //                 if (e.target.checked) {
+        //                   setFormData({
+        //                     ...formData,
+        //                     residental: e.target.value,
+        //                   })
+        //                 }
+        //               }}
+        //             />{' '}
+        //             &nbsp; Online
+        //           </label>
+        //         </div>
+        //         <div className="last_radio_button">
+        //           <label
+        //             htmlFor=""
+        //             className="course_details_text radio_button"
+        //           >
+        //             <input
+        //               type="radio"
+        //               name="resident"
+        //               value="NONRESIDENTIAL"
+        //               disabled={
+        //                 currentCourse.nonResidential === false ? true : false
+        //               }
+        //               style={
+        //                 currentCourse.nonResidential === false
+        //                   ? { background: 'grey' }
+        //                   : {}
+        //               }
+        //               onChange={(e) => {
+        //                 if (e.target.checked) {
+        //                   setFormData({
+        //                     ...formData,
+        //                     residental: e.target.value,
+        //                   })
+        //                 }
+        //               }}
+        //             />{' '}
+        //             &nbsp; Non-Residential
+        //           </label>
+        //           <label
+        //             htmlFor=""
+        //             className="course_details_text radio_button"
+        //           >
+        //             <input
+        //               type="radio"
+        //               name="resident"
+        //               value="OFFLINE"
+        //               disabled={
+        //                 currentCourse.onCampus === false ? true : false
+        //               }
+        //               style={
+        //                 currentCourse.onCampus === false
+        //                   ? { background: 'grey' }
+        //                   : {}
+        //               }
+        //               onChange={(e) => {
+        //                 if (e.target.checked) {
+        //                   setFormData({
+        //                     ...formData,
+        //                     residental: e.target.value,
+        //                   })
+        //                 }
+        //               }}
+        //             />{' '}
+        //             &nbsp; On campus
+        //           </label>
+        //         </div>
+        //       </form>
+        //       {/* <div className='upload_box'> */}
+        //       <div className="course_details_text">
+        //         Please upload the relevant TYI certificate pre requisite
+        //         <div className="uploads">
+        //           <fieldset>
+        //             <label htmlFor="image">
+        //               {courseAsset1
+        //                 ? courseAsset1.substring(0, 15)
+        //                 : 'Upload Image'}
+        //               <input
+        //                 type={'file'}
+        //                 id="image"
+        //                 onChange={(e) =>
+        //                   setCourseAsset1(e.target.files[0].name)
+        //                 }
+        //                 placeholder="Upload Image"
+        //                 accept="image/*"
+        //               />
+        //               &ensp;
+        //               {upload}
+        //             </label>
+        //           </fieldset>
+        //           <fieldset>
+        //             <label htmlFor="resume">
+        //               {courseAsset2
+        //                 ? courseAsset2.substring(0, 15)
+        //                 : 'Upload PDF'}
+        //               <input
+        //                 type={'file'}
+        //                 onChange={(e) =>
+        //                   setCourseAsset2(e.target.files[0].name)
+        //                 }
+        //                 id="resume"
+        //                 accept=".pdf"
+        //                 placeholder="Upload Resume"
+        //               />
+        //               &ensp;
+        //               {upload}
+        //             </label>
+        //             <br />
+        //             <small>Please ensure the file is under 2 MB</small>
+        //           </fieldset>
+        //         </div>
+        //         {/* </div> */}
+        //       </div>
+        //     </div>
+        //   </div>
 
-            <div className="footer">
-              {/* <button
-                className="back"
-                onClick={() => {
-                  setBold(3)
-                }}
-              >
-                Back
-              </button> */}
-              <div className="enrollment_logo">{filler1}</div>
-              <button className="next_1" onClick={ handleSubmit } >Submit</button>
-            </div>
-          </div>
+          //   <div className="footer">
+          //     <button
+          //       style={{ visibility: 'hidden' }}
+          //       className="back"
+          //       onClick={() => {
+          //         setBold(3)
+          //       }}
+          //     >
+          //       Back
+          //     </button>
+          //     <div className="enrollment_logo">{filler1}</div>
+          //     <button className="next_1" onClick={handleSubmit}>
+          //       Submit
+          //     </button>
+          //   </div>
+          // </div>
+          <CourseDetails courseDate={courseDate} currentCourse={currentCourse} formData={formData} setFormData={setFormData}
+            courseAsset1={courseAsset1} setCourseAsset1={setCourseAsset1} courseAsset2={courseAsset2} setCourseAsset2={setCourseAsset2}
+            setBold={setBold} handleSubmit={handleSubmit}
+          />
         ) : (
           <DisclaimerPolicy
-            setBold={setBold}
             templateKey={currentCourse?.templateId}
             formData={formData}
             qualificationData={qualificationData}

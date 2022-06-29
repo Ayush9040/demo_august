@@ -1,0 +1,309 @@
+// others start
+
+.enrollment-container {
+  height: 100vh;
+  width: 95%;
+  border: 1px solid black;
+  border-radius: 94px;
+  margin: 2%;
+  justify-content: center;
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  .other-container {
+    margin-top: 2rem;
+    margin-left: 4rem;
+    .other-section-half {
+      .medical-section {
+        .medical-label {
+          font-size: 1.5rem;
+          color: rgba(96, 96, 96, 0.5019607843);
+          width: 50%;
+          min-width: -moz-fit-content;
+          min-width: fit-content;
+          margin-top: -0.5rem;
+        }
+        textarea {
+          display: inline-block;
+          width: 97%;
+          height: 370px;
+          margin-top: 7px;
+          margin-bottom: 10px;
+          border: 1px solid rgba(96, 96, 96, 0.5019607843);
+          padding: 30px;
+        }
+      }
+      .about-us {
+        .about-label {
+          font-size: 1.5rem;
+          color: rgba(96, 96, 96, 0.5019607843);
+          width: 50%;
+          min-width: -moz-fit-content;
+          min-width: fit-content;
+          margin-top: -0.5rem;
+        }
+        .radio-section {
+          .radio-text {
+            display: flex;
+            gap: 2.5rem;
+            flex-wrap: wrap;
+            margin-bottom: 10px;
+            .label-1 {
+              align-items: center;
+              color: rgba(96, 96, 96, 0.502);
+              display: flex;
+              font-size: 1.5rem;
+              margin: 17px;
+            }
+          }
+        }
+      }
+    }
+    .other-last {
+      .reason-input {
+        font-size: 1.5rem;
+        border: none;
+        border-bottom: 1px solid rgba(96, 96, 96, 0.502);
+        margin-bottom: 220px;
+        margin-top: 40px;
+        width: 97%;
+      }
+    }
+  }
+  .footer {
+    display: flex;
+    // justify-content: space-between;
+    text-align: center;
+    justify-content: center;
+    gap: 20rem;
+    grid-column: 1 / 7;
+    margin-bottom: 10px;
+    padding: 0 25rem;
+    .next_1 {
+      cursor: pointer;
+      border: 1px solid black;
+      height: 50px;
+      width: 120px;
+      color: black;
+      border-radius: 30px;
+      font-size: 1.5rem;
+      font-weight: 500;
+      //padding: 0 18px;
+      float: right;
+      margin-top: 2%;
+      //margin-right: 30px;
+      background-color: white;
+    }
+    .enrollment_logo {
+      svg {
+        height: 80px;
+        width: 125px;
+      }
+    }
+    .back {
+      border: 1px solid black;
+      height: 50px;
+      width: 120px;
+      color: black;
+      border-radius: 30px;
+      font-size: 16px;
+      font-weight: 500;
+      //padding: 0 18px;
+      float: left;
+      // margin-left: 30px;
+      margin-top: 2%;
+      background-color: white;
+      cursor: pointer;
+    }
+  }
+}
+
+// check box styles
+
+input[type='radio'] {
+  appearance: none;
+  border: 1px solid #d3d3d3;
+  width: 30px;
+  height: 30px;
+  content: none;
+  outline: none;
+  margin: 0;
+}
+input[type='radio']:checked {
+  appearance: none;
+  outline: none;
+  padding: 0;
+  content: none;
+  border: none;
+}
+input[type='radio']:checked::before {
+  position: absolute;
+  color: #60606080 !important;
+  content: '\00A0\2713\00A0' !important;
+  border: 1px solid #d3d3d3;
+  font-weight: bolder;
+  font-size: 24px;
+}
+
+// checkbox ends
+
+// others end
+
+// course Details starts
+
+.course-main-container {
+  height: 95%;
+  margin: 2%;
+  width: 95%;
+  .course-secondary-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 50%;
+    margin: 0 auto;
+    text-align: center;
+    width: 50%;
+    .details_box {
+      border: 1px solid #60606080;
+      border-radius: 10px;
+      width: 600px;
+      height: 200px;
+      background-color: #edeef0;
+      border: none;
+      .details_course_box {
+        display: flex;
+        position: relative;
+        .current_duration {
+          margin-top: 50px;
+          font-weight: bold;
+          font-size: 1.5rem;
+          text-align: left;
+        }
+        .current_fees {
+          position: absolute;
+          top: 80%;
+          right: 5%;
+          font-weight: bold;
+          font-size: 1.5rem;
+        }
+        .detail_image_box {
+          width: 250px;
+          height: 195px;
+          min-width: 250px;
+          img {
+            width: 100%;
+            height: 100%;
+            padding: 17px;
+            border-radius: 30px;
+          }
+        }
+      }
+    }
+    .course-details-text {
+      color: rgba(96, 96, 96, 0.502);
+      font-size: 20px;
+      margin: 17px;
+      min-width: 230px;
+      text-align: left;
+    }
+    .residential-form {
+      .last_radio_button {
+        display: flex;
+        gap: 17px;
+          .course_details_text {
+          color: rgba(96, 96, 96, 0.502);
+          font-size: 20px;
+          margin:  0 17px;
+          min-width: 230px;
+          text-align: left;
+        }
+        
+        }
+        .last_radio_button-cols{
+          display: flex;
+          flex-direction: column;
+          
+          .course_details_text {
+          color: rgba(96, 96, 96, 0.502);
+          font-size: 20px;
+          margin-left: 17px;
+          // margin: 17px;
+          min-width: 230px;
+          text-align: left;
+        } 
+      }
+      
+    }
+    .upload-section{
+      text-align: center;
+      .course-details-text{
+        color: rgba(96,96,96,.502);
+      font-size: 20px;
+      margin: 17px;
+      min-width: 230px;
+      text-align: left;
+      }
+      .uploads {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+       
+        & > fieldset {
+          margin-top: 17px;
+          
+          border: none;
+        }
+        label {
+          width: 100%;
+          display: block;
+          box-sizing: border-box;
+          padding: 1rem 3rem;
+          font-size: 1.25rem;
+          border: 2px solid #60606080;
+          color: #60606080;
+          border-radius: 50px;
+          text-align: center;
+          input {
+            display: none;
+          }
+        }
+        small {
+          color: #60606080;
+          float: right;
+          padding-right: 2rem;
+          font-size: 1.15rem;
+        }
+      }
+    }
+  }
+  .footer-submit {
+    display: flex;
+    // justify-content: space-between;
+    text-align: center;
+    justify-content: center;
+    gap: 20rem;
+    grid-column: 1 / 7;
+    margin-bottom: 10px;
+    padding: 0 25rem;
+    .submit{
+      cursor: pointer;
+      border: 1px solid black;
+      height: 50px;
+      width: 120px;
+      color: black;
+      border-radius: 30px;
+      font-size: 1.5rem;
+      font-weight: 500;
+      //padding: 0 18px;
+      float: right;
+      margin-top: 2%;
+      //margin-right: 30px;
+      background-color: white;
+    }
+    
+  }
+}
+// Course Details ends
