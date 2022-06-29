@@ -8,7 +8,30 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 10rem 0 2rem 0;
+    padding: 2rem 0 2rem 0;
+    bottom: 2rem;
+    .close {
+      position: relative;
+      bottom: 2rem;
+      float: right;
+      font-size: 24px;
+      font-weight: 900;
+      display: flex;
+      margin-right: 80px;
+      border: none;
+      background-color: white;
+      cursor: pointer;
+    } 
+  }
+
+  .disclaimer-policy{
+    position: relative;
+    bottom: 3rem;
+    font-size: 2.5rem;
+
+  }
+  .heading-content p{
+    font-weight: bold;
   }
   .mid-content {
     padding: 0 30rem;

@@ -88,6 +88,13 @@ const InnerNavComponent = ({ abc }) => {
                   ? CommonUser
                   : CommonUser1}
             </Link>
+
+            <div className='user-dropdown'>
+              <ul>
+                <li>User Profile</li>
+                <li>Logout</li>
+              </ul>
+            </div>
           </div>
         </div>
 

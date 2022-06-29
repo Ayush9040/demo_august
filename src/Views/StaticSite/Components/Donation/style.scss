@@ -129,15 +129,18 @@
       position: relative;
       bottom: 1px;
       height: 25px;
-      width: 50px;
+      width: 25px;
     }
 
     .checkboxes label {
       display: block;
-      font-size: 2rem;
+      font-size: 20px;
       // margin-left: 10%;
       span {
         margin-left: 20px;
+        position: relative;
+        bottom: 10px;
+        left: 10px;
         
       }
     }
