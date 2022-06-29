@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { useSelector } from 'react-redux'
+import { Link } from 'react-router-dom'
 import HistoryList from '../HistoryList'
 import InnerNavComponent from '../InnerNavComponent'
 import './style.scss'
@@ -46,7 +47,7 @@ const UserProfile = () => {
               ))}
             </ul>
             <div id='edit-account'>
-              <span>Edit Account|FAQs</span>{' '}
+              <Link to={'/user/edit-account'} >Edit Account</Link>|<Link to={'/faqs'} >FAQs</Link>
             </div>
           </div>
         </div>
