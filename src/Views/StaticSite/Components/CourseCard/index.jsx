@@ -9,6 +9,15 @@ import { useEffect } from 'react'
 import StarIcon from './star-icon'
 import { useState } from 'react'
 import { useSelector } from 'react-redux'
+// import { faHelicopterSymbol } from '@fortawesome/free-solid-svg-icons'
+
+// const Error = () => {
+//   <small style={{ color: 'red', marginLeft: '0' }}>
+//     *Please Enter Your 10 Digit Phone Number!
+//   </small>
+// }
+
+
 
 const CourseCard = ({
   color,
@@ -33,6 +42,9 @@ const CourseCard = ({
   }
   const [ratingArr, setRatingArr] = useState([])
   const { isLoggedIn } = useSelector((state) => state.auth)
+  const [error,setError]=useState(0)
+
+ 
 
   useEffect(() => {
     let arr = []
@@ -44,6 +56,16 @@ const CourseCard = ({
 
   const [selectDate, setSetselectDate] = useState(null)
   // localStorage.setItem('selectedDate', selectDate)
+
+  const checkEmpty =()=>{
+    if(selectDate===null)
+    {
+      setError(1)
+    }
+    else{
+      setError(0)
+    }
+  }
 
   return (
     <div className="course-card">
@@ -87,31 +109,26 @@ const CourseCard = ({
           >
             <CommonBtn text={'View Details'} />
           </Link>
-          {selectDate ? (
-            <Link
-              to={
-                isLoggedIn
-                  ? `/enrollment/${path}/date${selectDate}`
-                  : `/user/sign-in/${path}/`
-              }
-            >
-              <CommonBtn
-                text={'Enroll Now'}
-                
-              />
-            </Link>
-          ) : (
-            <CommonBtn text={'Enroll Now'}/>
-          )}
-          
+          <div onClick={checkEmpty}>
+            {selectDate ? (
+              <Link
+                to={
+                  isLoggedIn
+                    ? `/enrollment/${path}/date${selectDate}`
+                    : `/user/sign-in/${path}/`
+                }
+              >
+                <CommonBtn text={'Enroll Now'} />
+              </Link>
+            ) : (
+              <CommonBtn text={'Enroll Now'} />
+            )}
+          </div>
         </div>
-        
       </div>
-      {/* {
-        selectDate===null&&<small style={{ color: 'red', marginLeft: '0' }}>
-          *Please Enter Your 10 Digit Phone Number!
-        </small>
-      } */}
+      {error===1 && <small style={{ color: 'red', marginLeft: '0' }}>
+                        *Please Select Date!
+      </small>}
     </div>
   )
 }
