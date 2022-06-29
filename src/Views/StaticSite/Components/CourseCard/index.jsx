@@ -42,8 +42,8 @@ const CourseCard = ({
     }
   }, [])
 
-  const [selectDate, setSetselectDate] = useState()
-  localStorage.setItem('selectedDate',selectDate)
+  const [selectDate, setSetselectDate] = useState(null)
+  // localStorage.setItem('selectedDate', selectDate)
 
   return (
     <div className="course-card">
@@ -64,7 +64,13 @@ const CourseCard = ({
         <h3>{description}</h3>
         {/* <SelectDropDown currentValue={selectDate} changeCurrentValue={setSetselectDate} text={'Select Dates'} isStyles={selectStyles} /> */}
         <div className="course-card-dropdown">
-          <SelectDropDown currentValue={selectDate} changeCurrentValue={setSetselectDate} text={'Select Dates'} isStyles={selectStyles} dates={dates} />
+          <SelectDropDown
+            currentValue={selectDate}
+            changeCurrentValue={setSetselectDate}
+            text={'Select Dates'}
+            isStyles={selectStyles}
+            dates={dates}
+          />
           {/* <SelectDropDown
             dates={dates}
             text={'Select Dates'}
@@ -72,14 +78,40 @@ const CourseCard = ({
           /> */}
         </div>
         <div className="Button-class">
-          <Link to={`/courses/course/${path}/`}>
+          <Link
+            to={
+              selectDate === null
+                ? `/courses/course/${path}/`
+                : `/courses/course/${path}/?date=${selectDate}`
+            }
+          >
             <CommonBtn text={'View Details'} />
           </Link>
-          <Link to={isLoggedIn ? `/enrollment/${path}`:`/user/sign-in/${path}/`}>
-            <CommonBtn text={'Enroll Now'} />
-          </Link>
+          {selectDate ? (
+            <Link
+              to={
+                isLoggedIn
+                  ? `/enrollment/${path}/date${selectDate}`
+                  : `/user/sign-in/${path}/`
+              }
+            >
+              <CommonBtn
+                text={'Enroll Now'}
+                
+              />
+            </Link>
+          ) : (
+            <CommonBtn text={'Enroll Now'}/>
+          )}
+          
         </div>
+        
       </div>
+      {/* {
+        selectDate===null&&<small style={{ color: 'red', marginLeft: '0' }}>
+          *Please Enter Your 10 Digit Phone Number!
+        </small>
+      } */}
     </div>
   )
 }
