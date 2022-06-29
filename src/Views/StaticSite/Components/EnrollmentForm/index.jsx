@@ -853,12 +853,257 @@ const Enrollment = () => {
             </div>
           </div>
         ) : bold === 3 ? (
-          <Other
-            setBold={setBold}
-            empty={empty}
-            formData={formData}
-            setFormData={setFormData}
-          />
+        // //            <div>
+        //             <div className="other">
+        //             <div className="other_1">
+        //               <div className="other_div">
+        //                 <div>
+        //                   <label className="label">
+        //                     Medical History & Current Health Issues :
+        //                     <textarea
+        //                       className="text_box"
+        //                       type="text"
+        //                       rows="5"
+        //                       cols="40"
+        //                       onChange={(e) => {
+        //                         setFormData({
+        //                           ...formData,
+        //                           medicalstatus: e.target.value,
+        //                         })
+        //                       }}
+        //                     />
+        //                   </label>
+        //                 </div>
+        //                 <div>
+        //                   <div className="label">How do you hear about us?</div>
+        //                   <div>
+        //                     <form className="radio_text">
+        //                       <label className="label_1">
+        //                         Internet&nbsp;
+        //                         <input
+        //                           type="radio"
+        //                           value="internet"
+        //                           name="source"
+        //                           onChange={(e) => {
+        //                             if (e.target.checked) {
+        //                               setFormData({
+        //                                 ...formData,
+        //                                 source: e.target.value,
+        //                               })
+        //                             }
+        //                           }}
+        //                         />
+        //                       </label>
+        //                       <label className="label_1">
+        //                         Print Media&nbsp;
+        //                         <input
+        //                           type="radio"
+        //                           value="media"
+        //                           name="source"
+        //                           onChange={(e) => {
+        //                             if (e.target.checked) {
+        //                               setFormData({
+        //                                 ...formData,
+        //                                 source: e.target.value,
+        //                               })
+        //                             }
+        //                           }}
+        //                         />
+        //                       </label>
+        //                       <label className="label_1">
+        //                         Friends/Relatives&nbsp;
+        //                         <input
+        //                           type="radio"
+        //                           value="friends"
+        //                           name="source"
+        //                           onChange={(e) => {
+        //                             if (e.target.checked) {
+        //                               setFormData({
+        //                                 ...formData,
+        //                                 source: e.target.value,
+        //                               })
+        //                             }
+        //                           }}
+        //                         />
+        //                       </label>
+        //                       <label className="label_1">
+        //                         Events&nbsp;
+        //                         <input
+        //                           type="radio"
+        //                           value="events"
+        //                           name="source"
+        //                           onChange={(e) => {
+        //                             if (e.target.checked) {
+        //                               setFormData({
+        //                                 ...formData,
+        //                                 source: e.target.value,
+        //                               })
+        //                             }
+        //                           }}
+        //                         />
+        //                       </label>
+        //                       <label className="label_1">
+        //                         Others&nbsp;
+        //                         <input
+        //                           type="radio"
+        //                           value="others"
+        //                           name="source"
+        //                           onChange={(e) => {
+        //                             if (e.target.checked) {
+        //                               setFormData({
+        //                                 ...formData,
+        //                                 source: e.target.value,
+        //                               })
+        //                             }
+        //                           }}
+        //                         />
+        //                       </label>
+        //                       {empty === 1 && (
+        //                         <small style={{ color: 'red', marginLeft: '45px', fontSize: '15px' }}>
+        //                           *Please select one!
+        //                         </small>
+        //                       )}
+        //                     </form>
+        //                   </div>
+        //                 </div>
+        //               </div>
+        //               <div className="other_div">
+        //                 <input
+        //                   className="underline label_any"
+        //                   type="text"
+        //                   placeholder="Any other source please specify"
+        //                   onChange={(e) => {
+        //                     setFormData({
+        //                       ...formData,
+        //                       sourceinfo: e.target.value || 'none',
+        //                     })
+        //                   }}
+        //                 />
+        //                 {empty === 2 && (
+        //                   <small style={{ color: 'red', marginLeft: '45px', fontSize: '15px' }}>
+        //                     *Please Specify!
+        //                   </small>
+        //                 )}
+        //               </div>
+        //               {/* <div className="radio_heading">
+        //                 <div className="label">Purpose of joining this program</div>
+
+        //                 <div className="radio_text">
+        //                   <label className="label_1">
+        //                     Self-Development&nbsp;
+        //                     <input
+        //                       type="radio"
+        //                       name="purpose"
+        //                       onChange={(e) => {
+        //                         if (e.target.checked) {
+        //                           setFormData({
+        //                             ...formData,
+        //                             purpose: e.target.value,
+        //                           })
+        //                         }
+        //                       }}
+        //                     />
+        //                   </label>
+        //                   <label className="label_1">
+        //                     Fitness&nbsp;
+        //                     <input
+        //                       type="radio"
+        //                       name="purpose"
+        //                       onChange={(e) => {
+        //                         if (e.target.checked) {
+        //                           setFormData({
+        //                             ...formData,
+        //                             purpose: e.target.value,
+        //                           })
+        //                         }
+        //                       }}
+        //                     />
+        //                   </label>
+        //                   <label className="label_1">
+        //                     Career&nbsp;
+        //                     <input
+        //                       type="radio"
+        //                       name="purpose"
+        //                       onChange={(e) => {
+        //                         if (e.target.checked) {
+        //                           setFormData({
+        //                             ...formData,
+        //                             purpose: e.target.value,
+        //                           })
+        //                         }
+        //                       }}
+        //                     />
+        //                   </label>
+        //                   <label className="label_1">
+        //                     Health&nbsp;
+        //                     <input
+        //                       type="radio"
+        //                       name="purpose"
+        //                       onChange={(e) => {
+        //                         if (e.target.checked) {
+        //                           setFormData({
+        //                             ...formData,
+        //                             purpose: e.target.value,
+        //                           })
+        //                         }
+        //                       }}
+        //                     />
+        //                   </label>
+        //                   <label className="label_1">
+        //                     Others&nbsp;
+        //                     <input
+        //                       type="radio"
+        //                       name="purpose"
+        //                       onChange={(e) => {
+        //                         if (e.target.checked) {
+        //                           setFormData({
+        //                             ...formData,
+        //                             purpose: e.target.value,
+        //                           })
+        //                         }
+        //                       }}
+        //                     />
+        //                   </label>
+        //                 </div>
+        //               </div>
+
+        //               <div>
+        //                 <input
+        //                   className="underline"
+        //                   type="text"
+        //                   placeholder="Any other source please specify"
+        //                   onChange={(e) => {
+        //                     setFormData({ ...formData, info: e.target.value })
+        //                   }}
+        //                 />
+        //               </div> */}
+        //             </div>
+        //           </div>
+        //           <div className="footer">
+        //             <button
+        //               className="back"
+        //               onClick={() => {
+        //                 setBold(2)
+        //               }}
+        //             >
+        //               Back
+        //             </button>
+        //             <div className="enrollment_logo">{filler1}</div>
+        //             <button className="next_1" onClick={handleEmpty4}>
+        //               Next
+        //             </button>
+        //           </div>
+        //         </div>
+          <>
+          
+            <Other
+              setBold={setBold}
+              empty={empty}
+              formData={formData}
+              setFormData={setFormData}
+              handleEmpty4={handleEmpty4}
+            />
+          </>
         ) : bold === 4 ? (
         // <div>
         //   <div className="other">
@@ -1055,9 +1300,17 @@ const Enrollment = () => {
           //     </button>
           //   </div>
           // </div>
-          <CourseDetails courseDate={courseDate} currentCourse={currentCourse} formData={formData} setFormData={setFormData}
-            courseAsset1={courseAsset1} setCourseAsset1={setCourseAsset1} courseAsset2={courseAsset2} setCourseAsset2={setCourseAsset2}
-            setBold={setBold} handleSubmit={handleSubmit}
+          <CourseDetails
+            courseDate={courseDate}
+            currentCourse={currentCourse}
+            formData={formData}
+            setFormData={setFormData}
+            courseAsset1={courseAsset1}
+            setCourseAsset1={setCourseAsset1}
+            courseAsset2={courseAsset2}
+            setCourseAsset2={setCourseAsset2}
+            setBold={setBold}
+            handleSubmit={handleSubmit}
           />
         ) : (
           <DisclaimerPolicy
