@@ -69,7 +69,6 @@ const EditAccount = () => {
 
   return (
     <>
-      {empty && <div>ERR</div>}
       <InnerNavComponent abc={UserNav} />
       <div className="edit-main">
         <h2 className="account-header">Edit Account</h2>
@@ -127,7 +126,7 @@ const EditAccount = () => {
                 setFormData({ ...formData, gender: e.target.value })
               }
             >
-              <option value="none" selected>
+              <option value="none" selected className='edit-account-gender'>
                 Gender
               </option>
               <option value="male">Male</option>
@@ -219,7 +218,7 @@ const EditAccount = () => {
         <hr />
         <div className="former-input">
           <div className="former-l1">
-            <div className="former-p">Are you a former alumini?</div>
+            <div className="former-p">Are you an alumini?</div>
             <div className="former-radio">
               <p>Yes</p>
               {/* <nbsp /> */}
@@ -262,7 +261,7 @@ const EditAccount = () => {
                 />
                 {empty === 10 && (
                   <small style={{ color: 'red', marginLeft: '0' }}>
-                    *Please Enter The Student ID!
+                    *Please Enter The StudentID!
                   </small>
                 )}
               </>
