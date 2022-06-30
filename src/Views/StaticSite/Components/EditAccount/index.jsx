@@ -1,14 +1,17 @@
 import React, { useState } from 'react'
+import { useSelector } from 'react-redux'
 import { validateEmail } from '../../../../helpers'
-import CommonBannerNavPrimary from '../CommonBannerNavPrimary'
-
+import InnerNavComponent from '../InnerNavComponent'
 import InputComponent from '../InputComponent'
 import './style.scss'
 const EditAccount = () => {
+
+  const { user } = useSelector(state=>state.auth)
+
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
-    email: '',
+    email: user.data.email,
     gender: '',
     phoneNum: '',
     country: '',
@@ -21,6 +24,14 @@ const EditAccount = () => {
   })
 
   const [empty, setEmpty] = useState(0)
+
+  const UserNav = {
+    title: 'alumni-events',
+    color: 'orange',
+    menuColor: 'black',
+    menuItems: [
+    ],
+  }
 
 
 
@@ -59,7 +70,7 @@ const EditAccount = () => {
   return (
     <>
       {empty && <div>ERR</div>}
-      <CommonBannerNavPrimary />
+      <InnerNavComponent abc={UserNav} />
       <div className="edit-main">
         <h2 className="account-header">Edit Account</h2>
         <div className="personal-info">Personal Info</div>
@@ -100,6 +111,7 @@ const EditAccount = () => {
               form={formData}
               setField={setFormData}
               keyName="email"
+              blocked={true}
             />
             {empty === 3 && (
               <small style={{ color: 'red', marginLeft: '0' }}>

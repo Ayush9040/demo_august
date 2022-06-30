@@ -40,6 +40,7 @@ const UserProfile = () => {
                     setModule(item.key)
                   }}
                   key={item.key}
+                  style={module===item.key||item.key===0 ? { fontWeight:'700' }:{}}
                 >
                   {item.option}
                   <div style={module===item.key ? { visibility:'visible' }:{}} className='bottom-line'></div>
