@@ -11,7 +11,10 @@ const Academic = ({
   yearEmpty,
   formData,
   setFormData,
+  setYearEmpty
 }) => {
+  console.log(yearEmpty,'yr')
+
   return (
     <div className="main_div">
       <div className="grid_box">
@@ -25,8 +28,9 @@ const Academic = ({
                 setField={setFormData}
                 keyName="school"
                 value={formData.school}
+                errorCheck={setYearEmpty}
               />
-              {yearEmpty === 2 && (
+              {yearEmpty === 1 && (
                 <small
                   style={{
                     color: 'red',
@@ -48,8 +52,10 @@ const Academic = ({
                 setField={setFormData}
                 keyName="course"
                 value={formData.course}
+                errorCheck={setYearEmpty}
+
               />
-              {yearEmpty === 1 && (
+              {yearEmpty === 2 && (
                 <small
                   style={{
                     color: 'red',
@@ -73,6 +79,7 @@ const Academic = ({
               setField={setFormData}
               keyName="completion"
               value={formData.completion}
+              errorCheck={setYearEmpty}
             />
           </div>
           {yearEmpty === 3 && (

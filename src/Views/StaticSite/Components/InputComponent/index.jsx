@@ -11,6 +11,7 @@ const InputComponent = ({
   css,
   minnum,
   maxnum,
+  errorCheck
 }) => {
 
   const [changeType,setChangeType]=useState(type)
@@ -29,7 +30,8 @@ const InputComponent = ({
             min={minnum}
             onFocus={keyName==='DOB' ?()=>{setChangeType('date')}:()=>{setChangeType(type)}}
             onBlur={()=>{setChangeType(type)}}
-            onChange={(e) =>{e.preventDefault();setField({ ...form, [keyName]: e.target.value })}}
+            onChange={(e) =>{e.preventDefault();setField({ ...form, [keyName]: e.target.value });if(errorCheck){errorCheck(0)}}}
+
           />
         </label>
       </form>

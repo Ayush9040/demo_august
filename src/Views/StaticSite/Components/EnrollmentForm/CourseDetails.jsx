@@ -1,6 +1,5 @@
-import React from 'react'
+import React,{ useEffect } from 'react'
 import { upload } from '../../assets/icons/icon'
-
 const CourseDetails = ({
   currentCourse,
   courseDate,
@@ -12,6 +11,13 @@ const CourseDetails = ({
   setCourseAsset2,
   handleSubmit,
 }) => {
+  useEffect(() => {
+    if(formData.mode === 'ONLINE'){
+      setFormData({ ...formData,residental:'' })
+    }
+  }, [formData.mode])
+  console.log(formData.mode,'mode check')
+  console.log(formData.residental,'residantal check')
   return (
     <div className="main-container">
       <div className="course-main-container">
@@ -38,7 +44,7 @@ const CourseDetails = ({
               <label htmlFor="" className="course_details_text">
                 <input
                   type="radio"
-                  name="resident"
+                  name="mode"
                   value="OFFLINE"
                   disabled={currentCourse.onCampus === false ? true : false}
                   style={
@@ -50,7 +56,7 @@ const CourseDetails = ({
                     if (e.target.checked) {
                       setFormData({
                         ...formData,
-                        residental: e.target.value,
+                        mode: e.target.value,
                       })
                     }
                   }}
@@ -60,7 +66,7 @@ const CourseDetails = ({
               <label htmlFor="" className="course_details_text">
                 <input
                   type="radio"
-                  name="resident"
+                  name="mode"
                   value="ONLINE"
                   disabled={currentCourse.online === false ? true : false}
                   style={
@@ -70,7 +76,7 @@ const CourseDetails = ({
                     if (e.target.checked) {
                       setFormData({
                         ...formData,
-                        residental: e.target.value,
+                        mode: e.target.value,
                       })
                     }
                   }}
@@ -84,12 +90,9 @@ const CourseDetails = ({
                   type="radio"
                   name="resident"
                   value="RESIDENTIAL"
-                  disabled={currentCourse.residential === false ? true : false}
-                  style={
-                    currentCourse.residential === false
-                      ? { background: 'grey' }
-                      : {}
-                  }
+                  checked={formData.mode === 'OFFLINE' && formData.residental ==='RESIDENTIAL'}
+                  disabled={formData.mode === 'OFFLINE' ? false : true}
+                  style={formData.mode === 'OFFLINE' ? { color: 'grey' } : {}}
                   onChange={(e) => {
                     if (e.target.checked) {
                       setFormData({
@@ -106,9 +109,8 @@ const CourseDetails = ({
                   type="radio"
                   name="resident"
                   value="NONRESIDENTIAL"
-                  disabled={
-                    currentCourse.nonResidential === false ? true : false
-                  }
+                  checked={formData.mode === 'OFFLINE' && formData.residental ==='NONRESIDENTIAL'}
+                  disabled={formData.mode === 'OFFLINE' ? false : true}
                   style={
                     currentCourse.nonResidential === false
                       ? { background: 'grey' }
@@ -176,5 +178,4 @@ const CourseDetails = ({
     </div>
   )
 }
-
 export default CourseDetails

@@ -1,5 +1,5 @@
 import React from 'react'
-import './formstyle.scss'
+import './formstyles.scss'
 import { useNavigate } from 'react-router-dom'
 
 const Thankyou = () => {

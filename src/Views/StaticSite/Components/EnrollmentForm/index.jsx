@@ -67,6 +67,7 @@ const Enrollment = () => {
     source: '',
     purpose: '',
     info: '',
+    mode:'',
     residental: '',
   })
   console.log(yearEmpty)
@@ -86,7 +87,6 @@ const Enrollment = () => {
           roleWhenLeaving: formData.leavejob,
           workFrom: formData.workfrom,
           workTill: formData.worktill,
-          // yearOfresignation: formData.resignation,
           listedWorkExperience: formData.leavejob,
         },
       ])
@@ -102,11 +102,11 @@ const Enrollment = () => {
 
   const QualificationDetailHandler = () => {
     if (formData.school === '') {
-      setYearEmpty(2)
+      setYearEmpty(1)
     } else if (formData.course === '') {
-      setYearEmpty(3)
+      setYearEmpty(2)
     } else if (formData.completion.length !== 4) {
-      return setYearEmpty(1)
+      return setYearEmpty(3)
     } else
       setQualificationData([
         ...qualificationData,
@@ -117,6 +117,7 @@ const Enrollment = () => {
           listedQualification: formData.course,
         },
       ])
+    setEmpty(0)
     setFormData({ ...formData, school: '', course: '', completion: '' })
   }
   console.log(formData.residental)
@@ -150,6 +151,7 @@ const Enrollment = () => {
     } else if (formData.gender === '') {
       return setEmpty(15)
     } else {
+      setEmpty(0)
       setBold(1)
     }
   }
@@ -157,14 +159,14 @@ const Enrollment = () => {
   const handleEmpty2 = () => {
     if (qualificationData.length === 0) {
       return setEmpty(1)
-    } else setBold(2)
+    } else {setBold(2);setEmpty(0)}
   }
 
-  const handleEmpty3 = () => {
-    if (listData.length === 0) {
-      return setEmpty(1)
-    } else setBold(3)
-  }
+  // const handleEmpty3 = () => {
+  //   if (listData.length === 0) {
+  //     return setEmpty(1)
+  //   } else {setBold(3); setResgin(0)}
+  // }
 
   const handleEmpty4 = () => {
     if (formData.source === '') {
@@ -204,7 +206,7 @@ const Enrollment = () => {
               style={
                 bold === 1 ? { fontWeight: '600', fontSize: '2.5rem' } : {}
               }
-              onClick={() => setBold(1)}
+              onClick={handleEmpty1}
             >
               Academic Qualifications{' '}
               {bold === 1 && <div className="bottom-line"></div>}
@@ -213,7 +215,7 @@ const Enrollment = () => {
               style={
                 bold === 2 ? { fontWeight: '600', fontSize: '2.5rem' } : {}
               }
-              onClick={() => setBold(2)}
+              onClick={handleEmpty2}
             >
               Work Experience{' '}
               {bold === 2 && <div className="bottom-line"></div>}
@@ -228,7 +230,7 @@ const Enrollment = () => {
             </li>
             <li
               style={bold === 4 ? { fontWeight: 600, fontSize: '2.5rem' } : {}}
-              onClick={() => setBold(4)}
+              onClick={handleEmpty4}
             >
               Course Details
               {bold === 4 && <div className="bottom-line"></div>}
@@ -244,6 +246,7 @@ const Enrollment = () => {
               formData={formData}
               setFormData={setFormData}
               handleEmpty1={handleEmpty1}
+              setEmpty={setEmpty}
             />
           </>
         ) : bold === 1 ? (
@@ -268,7 +271,7 @@ const Enrollment = () => {
                 formData={formData}
                 resgin={resgin}
                 setFormData={setFormData}
-                handleEmpty3={handleEmpty3}
+                // handleEmpty3={handleEmpty3}
                 yearEmpty={yearEmpty}
                 listDetailHandler={listDetailHandler}
                 listData={listData}

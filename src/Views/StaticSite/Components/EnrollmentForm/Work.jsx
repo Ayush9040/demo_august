@@ -3,14 +3,13 @@ import './formstyles.scss'
 import InputComponent from '../InputComponent'
 
 const Work = ({
-  handleEmpty3,
   setBold,
   listData,
   listDetailHandler,
   setFormData,
   formData,
-  empty,
   resgin,
+  setResgin
   
 }) => {
   return (
@@ -26,6 +25,7 @@ const Work = ({
                 setField={setFormData}
                 keyName="company"
                 value={formData.company}
+                errorCheck={setResgin}
               />
             </div>
             <div>
@@ -36,6 +36,7 @@ const Work = ({
                 setField={setFormData}
                 keyName="leavejob"
                 value={formData.leavejob}
+                errorCheck={setResgin}
               />
             </div>
             <div className="work_flex_box">
@@ -48,6 +49,7 @@ const Work = ({
                   setField={setFormData}
                   keyName="workfrom"
                   value={formData.workfrom}
+                  errorCheck={setResgin}
                 />
                 {resgin === 1 && (
                   <style
@@ -71,6 +73,7 @@ const Work = ({
                   setField={setFormData}
                   keyName="worktill"
                   value={formData.worktill}
+                  errorCheck={setResgin}
                 />
                 {resgin === 2 && (
                   <style
@@ -114,7 +117,7 @@ const Work = ({
               )
             })}
           </div>
-          {resgin === 1 && (
+          {/* {resgin === 1 && (
             <small
               style={{
                 color: 'red',
@@ -124,7 +127,7 @@ const Work = ({
             >
               *Please Enter Your Deatils!
             </small>
-          )}
+          )} */}
         </div>
       </div>
       <div className="button_box">
@@ -136,7 +139,7 @@ const Work = ({
         >
           Back
         </button>
-        <button className="next_button" onClick={handleEmpty3}>
+        <button className="next_button" onClick={()=>{setBold(3)}}>
           Next
         </button>
       </div>

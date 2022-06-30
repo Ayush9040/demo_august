@@ -6,8 +6,12 @@ const Personal = ({
   handleEmpty1,
   empty,
   setFormData,
-  formData
+  formData,
+  setEmpty
 }) => {
+
+  const today = new Date().toISOString().split('T')[0]
+
   
   return (
     <div className="main_div">
@@ -21,6 +25,7 @@ const Personal = ({
                 form={formData}
                 setField={setFormData}
                 keyName="name"
+                errorCheck={setEmpty}
               />
               {empty === 1 && (
                 <small
@@ -44,6 +49,7 @@ const Personal = ({
                 form={formData}
                 setField={setFormData}
                 keyName="email"
+                errorCheck={setEmpty}
               />
               {empty === 2 && (
                 <small
@@ -66,6 +72,7 @@ const Personal = ({
                 form={formData}
                 setField={setFormData}
                 keyName="phone"
+                errorCheck={setEmpty}
               />
               {empty === 3 && (
                 <small
@@ -88,6 +95,7 @@ const Personal = ({
                 form={formData}
                 setField={setFormData}
                 keyName="address1"
+                errorCheck={setEmpty}
               />
               {empty === 4 && (
                 <small
@@ -110,6 +118,7 @@ const Personal = ({
                 form={formData}
                 setField={setFormData}
                 keyName="address2"
+                errorCheck={setEmpty}
               />
             </div>
             <div>
@@ -119,6 +128,7 @@ const Personal = ({
                 form={formData}
                 setField={setFormData}
                 keyName="country"
+                errorCheck={setEmpty}
               />
               {empty === 6 && (
                 <small
@@ -142,6 +152,7 @@ const Personal = ({
                 form={formData}
                 setField={setFormData}
                 keyName="state"
+                errorCheck={setEmpty}
               />
               {empty === 7 && (
                 <small
@@ -164,6 +175,7 @@ const Personal = ({
                 form={formData}
                 setField={setFormData}
                 keyName="city"
+                errorCheck={setEmpty}
               />
               {empty === 8 && (
                 <small
@@ -190,6 +202,7 @@ const Personal = ({
                 form={formData}
                 setField={setFormData}
                 keyName="pincode"
+                errorCheck={setEmpty}
               />
               {empty === 9 && (
                 <small
@@ -230,7 +243,7 @@ const Personal = ({
                   name="gender"
                   onChange={(e) => {
                     if (e.target.checked) {
-                      setFormData({ ...formData, gender: e.target.value })
+                      setFormData({ ...formData, gender: e.target.value }, setEmpty(0))
                     }
                   }}
                 />
@@ -253,9 +266,13 @@ const Personal = ({
               <InputComponent
                 type="text"
                 placeholder="DOB*"
+                minnum="2019-12-25"
+                maxnum={today}
                 form={formData}
                 setField={setFormData}
                 keyName="DOB"
+                errorCheck={setEmpty}
+                
               />
               {empty === 10 && (
                 <small
@@ -278,6 +295,7 @@ const Personal = ({
                 form={formData}
                 setField={setFormData}
                 keyName="nationality"
+                errorCheck={setEmpty}
               />
               {empty === 11 && (
                 <small
