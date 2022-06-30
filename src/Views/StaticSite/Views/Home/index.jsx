@@ -14,7 +14,6 @@ import VideosSection from '../../Components/Videos'
 import NewsLetter from '../../Components/NewsLetter'
 import Footer from '../../Components/Footer'
 import Blog from '../../Components/BlogSection'
-import Thankyou from '../../Components/EnrollmentForm/Thankyou'
 
 const Home = () => {
   const route = useLocation()
@@ -29,7 +28,6 @@ const Home = () => {
   })
   return (
     <>
-      <Thankyou/>
       <HeroSection isUserLoggedIn={isLoggedIn} />
       <Legacy />
       <OurOfferings />
@@ -42,7 +40,6 @@ const Home = () => {
       <VideosSection />
       <NewsLetter />
       <Footer />
-      
     </>
   )
 }

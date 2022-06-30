@@ -1,23 +1,25 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+
 import './Thankyou.scss'
+import { useNavigate } from 'react-router-dom'
 
 const Thankyou = () => {
+
+  const navigate=useNavigate()
+
   return (
     <>
-      <div className="background-img">
-        <div className="cross">
-          <Link to="/courses">
-            <span>X</span>
-          </Link>
+      <div id="overlay">
+        <button onClick={()=>navigate('/courses')}>X</button>
+        <div id="text">
+          <p className="thankyou">Thank you</p>
+          <p className="message">
+            Wishing you a successful yogic journey onwards
+          </p>
         </div>
-        <div className="thank-you">
-          <h2>Thank You</h2>
-
-          <p>Wishing you a successful yogic journey onwards</p>
-        </div>
-        
       </div>
+
+      <div className="main-div"></div>
     </>
   )
 }

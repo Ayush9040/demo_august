@@ -1,35 +1,82 @@
+#overlay {
+  position: absolute;
+  display: block;
+  height: 80vh;
+  margin: 7rem 10rem;
+  border-radius: 30px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(160, 98, 116, 0.8);
+  z-index: 2;
 
+  button {
+    float: right;
+    margin-top: 5rem;
+    margin-right: 5rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 3rem;
+    font-weight: 600;
+  }
 
-.background-img
-{
-  background-image: url('http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Home/Offerings/7dayscamp.jpg');
- width: 95%;
- height: 100vh;
- position: relative;
- background-repeat:no-repeat;
- margin: 80px;
- background-size:cover;
- border-radius: 20px;
-
- .cross
- {
-  position:absolute;
-  top:50px;
-  right:50px;
   cursor: pointer;
-  border: none;
-  font-size: 2rem;
-  color: aliceblue;
-  font-weight: bold;
+  #text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    opacity: 1;
+    font-size: 50px;
+    text-align: center;
+    color: white;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    .thankyou {
+      font-size: 5rem;
+      font-weight: 400;
+    }
+    .message {
+      font-size: 2.8rem;
+    }
+  }
 }
-.thank-you
-{
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  align-items: center;
-  justify-content: center;
-  color: white;
+
+.main-div {
+  position: relative;
+  background-image: url('http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Home/Offerings/7dayscamp.jpg');
+  height: 80vh;
+  margin: 7rem 10rem;
+  border-radius: 30px;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
- 
+
+@media (max-width: 600px) {
+  #overlay {
+    margin: 2rem 4rem;
+    height: 70vh;
+
+    button {
+      font-size: 2rem;
+    }
+
+    #text {
+      .thankyou {
+        font-size: 2rem;
+        font-weight: 400;
+      }
+      .message {
+        font-size: 1.5rem;
+      }
+    }
+  }
+  .main-div {
+    margin: 2rem 4rem;
+    background-size: cover;
+    height: 70vh;
+  }
 }
