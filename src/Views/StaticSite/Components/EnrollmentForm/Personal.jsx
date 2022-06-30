@@ -266,7 +266,7 @@ const Personal = ({
               <InputComponent
                 type="text"
                 placeholder="DOB*"
-                minnum="2019-12-25"
+                minnum="1950-01-01"
                 maxnum={today}
                 form={formData}
                 setField={setFormData}
