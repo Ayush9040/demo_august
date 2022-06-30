@@ -1,107 +1,113 @@
-.gifting-main-container{
-    padding-bottom: 5rem;
-            &>div:nth-child(even) .content-container{
-            flex-direction: row-reverse;
+.gifting-main-container {
+  padding-bottom: 5rem;
+  & > div:nth-child(even) .content-container {
+    flex-direction: row-reverse;
+  }
+  .content-container {
+    display: flex;
+    & > div {
+      flex: 1;
+      .donate-button-new {
+        border: 3px solid black;
+        color: #000;
+        background: transparent;
+        font-weight: 700;
+      }
     }
-    .content-container{
-        display: flex;
-        &>div{
-            flex: 1;
-            .donate-button-new{
-                border: 3px solid black;
-                color: #000;
-                background: transparent;
-                font-weight: 700;
-            }
-        }
-        align-items: center;
-        .image-content{
-            width: 50%;
-            margin: 0 auto;
-        }
-        .banner-heading{
-            width: 100%;
-            font-size: 3.5rem;
-        }
+    align-items: center;
+    .image-content {
+      width: 50%;
+      margin: 0 auto;
     }
-    .membership{
-        width: 60%;
-        margin: 0 auto;
-        text-align: center;
-        &>div{
-            font-size: 2.5rem;
-            font-weight: 700;
-        }
+    .banner-heading {
+      width: 100%;
+      font-size: 3.5rem;
     }
-    .membership-options{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
-    }
-    .donations{
-        margin-top: 15rem;
-    }
-    input[type=number]::-webkit-inner-spin-button, 
-    input[type=number]::-webkit-outer-spin-button { 
-  -webkit-appearance: none; 
-  margin: 0; 
-}
-}
-
-
-.gifting-btn{
-    display: block;
-    width: 20%;
-    background: none;
-    border: 3px solid #bbb;
-    color: #aaa;
-    padding: 2rem 2.5rem;
-    border-radius: 5rem;
-    font-size: 2rem;
-    font-weight: bold;
-    // margin-top: 2rem;
-    margin: 2rem auto 0;
-    cursor: pointer;
-    min-width: 250px;
-}
-
-#gifting-amt{
+  }
+  .membership {
+    width: 60%;
     margin: 0 auto;
     text-align: center;
-    color: #111;
-    cursor: auto;
+    & > div {
+      font-size: 2.5rem;
+      font-weight: 700;
+    }
+  }
+  .membership-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .donations {
+    margin-top: 15rem;
+  }
+  input[type='number']::-webkit-inner-spin-button,
+  input[type='number']::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
 }
 
-#donation-cnfm{
-    width: 10%;
-    border: 3px solid #111;
-    color: #111;
-    margin: 0 auto;
-}
- 
-@media(max-width:1200px){
-    .gifting-main-container{
-        .content-container{
-            .image-content{
-                width: 80%;
-            }
-        }
-    }
+.gifting-btn {
+  display: block;
+  width: 20%;
+  background: none;
+  border: 3px solid #bbb;
+  color: #aaa;
+  padding: 2rem 2.5rem;
+  border-radius: 5rem;
+  font-size: 2rem;
+  font-weight: bold;
+  // margin-top: 2rem;
+  margin: 2rem auto 0;
+  cursor: pointer;
+  min-width: 250px;
 }
 
-@media(max-width:500px){
-    .gifting-main-container{
-        .membership{
-            width: 80%;
-        }
+#gifting-amt {
+  margin: 0 auto;
+  text-align: center;
+  color: #111;
+  cursor: auto;
+}
+
+#donation-cnfm {
+  width: 10%;
+  border: 3px solid #111;
+  color: #111;
+  margin: 0 auto;
+}
+
+@media (max-width: 1200px) {
+  .gifting-main-container {
+    .content-container {
+      .image-content {
+        width: 80%;
+      }
     }
- .gifting-btn{
-     width: -webkit-autofill;
- }
- #gifting-amt{
-    width: -webkit-autofill!important;
+  }
+}
+
+@media (max-width: 500px) {
+  .gifting-main-container {
+    .membership {
+      width: 80%;
+    }
+  }
+  .gifting-btn {
+    width: -webkit-autofill;
+  }
+  #gifting-amt {
+    width: -webkit-autofill !important;
     width: --webkit-fill-available;
-    width: autofill!important;
- }
+    width: autofill !important;
+  }
+}
+@media (max-width: 768px) {
+    .gifting-main-container{
+  .content-container {
+    display: grid;
+  }
+}
 }

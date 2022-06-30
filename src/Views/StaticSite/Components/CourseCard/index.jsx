@@ -9,6 +9,15 @@ import { useEffect } from 'react'
 import StarIcon from './star-icon'
 import { useState } from 'react'
 import { useSelector } from 'react-redux'
+// import { faHelicopterSymbol } from '@fortawesome/free-solid-svg-icons'
+
+// const Error = () => {
+//   <small style={{ color: 'red', marginLeft: '0' }}>
+//     *Please Enter Your 10 Digit Phone Number!
+//   </small>
+// }
+
+
 
 const CourseCard = ({
   color,
@@ -33,6 +42,9 @@ const CourseCard = ({
   }
   const [ratingArr, setRatingArr] = useState([])
   const { isLoggedIn } = useSelector((state) => state.auth)
+  const [error,setError]=useState(0)
+
+ 
 
   useEffect(() => {
     let arr = []
@@ -42,8 +54,18 @@ const CourseCard = ({
     }
   }, [])
 
-  const [selectDate, setSetselectDate] = useState()
-  localStorage.setItem('selectedDate',selectDate)
+  const [selectDate, setSetselectDate] = useState(null)
+  // localStorage.setItem('selectedDate', selectDate)
+
+  const checkEmpty =()=>{
+    if(selectDate===null)
+    {
+      setError(1)
+    }
+    else{
+      setError(0)
+    }
+  }
 
   return (
     <div className="course-card">
@@ -64,7 +86,13 @@ const CourseCard = ({
         <h3>{description}</h3>
         {/* <SelectDropDown currentValue={selectDate} changeCurrentValue={setSetselectDate} text={'Select Dates'} isStyles={selectStyles} /> */}
         <div className="course-card-dropdown">
-          <SelectDropDown currentValue={selectDate} changeCurrentValue={setSetselectDate} text={'Select Dates'} isStyles={selectStyles} dates={dates} />
+          <SelectDropDown
+            currentValue={selectDate}
+            changeCurrentValue={setSetselectDate}
+            text={'Select Dates'}
+            isStyles={selectStyles}
+            dates={dates}
+          />
           {/* <SelectDropDown
             dates={dates}
             text={'Select Dates'}
@@ -72,14 +100,35 @@ const CourseCard = ({
           /> */}
         </div>
         <div className="Button-class">
-          <Link to={`/courses/course/${path}/`}>
+          <Link
+            to={
+              selectDate === null
+                ? `/courses/course/${path}/`
+                : `/courses/course/${path}/?date=${selectDate}`
+            }
+          >
             <CommonBtn text={'View Details'} />
           </Link>
-          <Link to={isLoggedIn ? `/enrollment/${path}`:`/user/sign-in/${path}/`}>
-            <CommonBtn text={'Enroll Now'} />
-          </Link>
+          <div onClick={checkEmpty}>
+            {selectDate ? (
+              <Link
+                to={
+                  isLoggedIn
+                    ? `/enrollment/${path}/?date=${selectDate}`
+                    : `/user/sign-in/${path}/?date=${selectDate}`
+                }
+              >
+                <CommonBtn text={'Enroll Now'} />
+              </Link>
+            ) : (
+              <CommonBtn text={'Enroll Now'} />
+            )}
+          </div>
         </div>
       </div>
+      {error===1 && <small style={{ color: 'red', marginLeft: '0' }}>
+                        *Please Select Date!
+      </small>}
     </div>
   )
 }

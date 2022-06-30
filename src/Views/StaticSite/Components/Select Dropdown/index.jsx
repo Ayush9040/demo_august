@@ -27,6 +27,7 @@ const SelectDropDown = ({ text, dates = [1, 2, 3, 4, 5], isStyles, currentValue 
               //  onClick={()=>{
               //   setSelect(select+1)
               // }}
+              selected={currentValue===item}
               key={item}
             >
               {item}

@@ -719,8 +719,8 @@ export const lock = (
   <svg
     style={{ verticalAlign: 'middle' }}
     xmlns="http://www.w3.org/2000/svg"
-    width="14"
-    height="16"
+    width="10"
+    height="12"
     viewBox="0 0 14 16"
     fill="none"
   >

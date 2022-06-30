@@ -118,7 +118,10 @@ const DisclaimerPolicy = ({
                 email: formData.email,
                 contact: formData.phone
               },
-              notes: paymentOrderResponse.data.notes,
+              notes:{
+                description:currentCourse?.metaDescription,
+                formData:response['_id']
+              },
               theme: {
                 color: '#3399cc' // enter theme color for our website
               }
@@ -137,9 +140,9 @@ const DisclaimerPolicy = ({
   }
 
   return (
-    <div className="main-container">
+    <div className="disclaimer-container">
       <button className="close" onClick={()=>setBold(4)} >x</button>
-      <div className="heading-content">
+      <div className="disclaimer-heading">
         <div className='legacy1'>
           {legacydisclaimer}
         </div>
