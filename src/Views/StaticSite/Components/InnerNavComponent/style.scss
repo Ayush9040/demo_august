@@ -80,10 +80,34 @@
       position: relative;
       display: flex;
       gap:10px;
+      .user-dropdown {
+        //position: absolute;
+        display: none;
+        flex-direction: column;
+        margin: 2.5rem 0;
+        width: 180px;
+        //right: -80px;
+        align-items: center;
+        ul {
+            display: flex;
+            flex-direction: column;
+            color: #fff;
+            background-color: rgb(202, 70, 37);
+            margin-top: 10px;
+            li {
+                width: 100%;
+                padding: 0.5rem;
+                transition: 0.3s;
+                text-align: center;
+            }
+        }
+      }
+    //   &:hover{
+    //     .user-dropdown{
+    //         display: block;
+    //     }
+    //   }
   }
-  .user-container:hover .user-dropdown {
-    display: flex;
-    }
   #toggles{
     position: relative;
     a{

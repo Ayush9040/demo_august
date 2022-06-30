@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
 import './style.scss'
+import { useNavigate } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 // import axios from 'axios'
 import {
@@ -18,10 +19,13 @@ import {
 } from '../../assets/icons/icon'
 import { Link } from 'react-router-dom'
 import MegaMenu from '../MegaMenu'
+import { clearLocal } from '../../../../Utils/localStorage'
 
 const InnerNavComponent = ({ abc }) => {
+  const navigate = useNavigate()
   const { isLoggedIn } = useSelector((state) => state.auth)
   const [nav, setNav] = useState(false)
+  const [dropdown,setDropdown]=useState(false)
 
   const [bold, setBold] = useState(0)
   const location = useLocation()
@@ -72,7 +76,7 @@ const InnerNavComponent = ({ abc }) => {
               })}
             </ul>
           </div>
-          <div className="user-container">
+          <div className="user-container" onMouseOver={()=>{setDropdown(true)}} onMouseOut={()=>{setDropdown(false)}} >
             
             {abc.title==='Shop'
               ?    <Link to='/shop'>        
@@ -89,10 +93,10 @@ const InnerNavComponent = ({ abc }) => {
                   : CommonUser1}
             </Link>
 
-            <div className='user-dropdown'>
+            <div style={dropdown===true && isLoggedIn ?{ display:'block' }:{}} className='user-dropdown'>
               <ul>
-                <li>User Profile</li>
-                <li>Logout</li>
+                <li onClick={()=>navigate('/user/profile')} >User Profile</li>
+                <li onClick={()=>{clearLocal.then(()=>{navigate('/')})}} >Logout</li>
               </ul>
             </div>
           </div>
