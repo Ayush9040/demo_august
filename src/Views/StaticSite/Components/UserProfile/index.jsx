@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { useSelector } from 'react-redux'
+import { Link } from 'react-router-dom'
 import HistoryList from '../HistoryList'
 import InnerNavComponent from '../InnerNavComponent'
 import './style.scss'
@@ -39,6 +40,7 @@ const UserProfile = () => {
                     setModule(item.key)
                   }}
                   key={item.key}
+                  style={module===item.key||item.key===0 ? { fontWeight:'700' }:{}}
                 >
                   {item.option}
                   <div style={module===item.key ? { visibility:'visible' }:{}} className='bottom-line'></div>
@@ -46,7 +48,7 @@ const UserProfile = () => {
               ))}
             </ul>
             <div id='edit-account'>
-              <span>Edit Account|FAQs</span>{' '}
+              <Link to={'/user/edit-account'} >Edit Account</Link>|<Link to={'/faqs'} >FAQs</Link>
             </div>
           </div>
         </div>

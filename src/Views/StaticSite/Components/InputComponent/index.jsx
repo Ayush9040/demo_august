@@ -11,6 +11,7 @@ const InputComponent = ({
   css,
   minnum,
   maxnum,
+  blocked=false
 }) => {
 
   const [changeType,setChangeType]=useState(type)
@@ -29,6 +30,7 @@ const InputComponent = ({
             onFocus={keyName==='DOB' ?()=>{setChangeType('date')}:()=>{setChangeType(type)}}
             onBlur={()=>{setChangeType(type)}}
             onChange={(e) =>{e.preventDefault();setField({ ...form, [keyName]: e.target.value })}}
+            disabled={blocked}
           />
         </label>
       </form>
