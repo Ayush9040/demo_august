@@ -1,6 +1,65 @@
 // enrolment form satrt
 
+.enrollment_container {
+  height: 95%;
+  width: 95%;
+  border: 1px solid black;
+  border-radius: 94px;
+  margin: 2%;
+  justify-content: center;
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
 
+  .header {
+    grid-column: 1/7;
+    margin-left: 60px;
+    margin-top: 40px;
+    font-size: 25px;
+    cursor: pointer;
+    .x {
+      float: right;
+      height: 2.5rem;
+      width: 2.5rem;
+      color: black;
+      background: transparent;
+      font-weight: 900;
+      font-size: 2rem;
+      margin-right: 3rem;
+      border: none;
+    }
+    .student {
+      font-weight: 600;
+      font-size: 25px;
+      margin-bottom: 15px;
+    }
+    .header_ul {
+      display: flex;
+      list-style: none;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      li {
+        position: relative;
+        font-size: 2rem;
+        padding: 0 18px;
+        border-right: 2.5px solid black;
+        .bottom-line {
+          margin: 0;
+          position: absolute;
+          left: 0;
+        }
+        &:last-child {
+          border: none;
+        }
+        &:first-child {
+          padding-left: 0;
+        }
+      }
+    }
+  }
+}
 
 .main_div {
   color: #60606080;
@@ -168,12 +227,11 @@
         }
       }
       .left_grid {
-        .work_flex_box{
-          .worked{
+        .work_flex_box {
+          .worked {
             margin-left: 2.75rem;
           }
         }
-
       }
       .right_grid {
         .listed_quality {
@@ -184,38 +242,35 @@
   }
 }
 
-@media (max-width:'600px') {
-  .main_div{
-    .button_box{
+@media (max-width: '600px') {
+  .main_div {
+    .button_box {
       gap: 10rem;
     }
   }
 }
-@media (max-width:'460px') {
-  .main_div{
-    .button_box{
+@media (max-width: '460px') {
+  .main_div {
+    .button_box {
       gap: 2rem;
     }
-    .grid_box{
-      .left_grid{
-        .year_flex_box{
+    .grid_box {
+      .left_grid {
+        .year_flex_box {
           display: block;
         }
       }
-      .right_grid{
-        .gender{
+      .right_grid {
+        .gender {
           padding-left: 2rem;
         }
-        .personal_gender{
+        .personal_gender {
           padding-left: 4rem;
         }
       }
     }
   }
 }
-
-
-
 
 // enrollment ends
 // others start
@@ -336,7 +391,8 @@ input[type='radio'] {
   height: 30px;
   content: none;
   outline: none;
-  margin: 0; background: #fff;
+  margin: 0;
+  background: #fff;
 }
 input[type='radio']:checked {
   appearance: none;
@@ -372,11 +428,8 @@ input[type='radio']:checked::before {
   .other-container {
     // text-align: center;
     margin: 1rem 0 1rem 4rem;
-
-    
   }
 }
-
 
 @media (max-width: '600px') {
   .other-container {
@@ -402,7 +455,7 @@ input[type='radio']:checked::before {
             justify-content: space-around;
             gap: 0;
             margin-bottom: 1rem;
-            .label-1{
+            .label-1 {
               margin: 17px 10px;
             }
           }
@@ -467,9 +520,8 @@ input[type='radio']:checked::before {
   .other-container {
     // text-align: center;
     margin: 1rem 2rem;
-    
+
     .other-section-half {
-      
       .medical-section {
         textarea {
           display: inline-block;
@@ -490,7 +542,7 @@ input[type='radio']:checked::before {
             align-items: center;
             gap: 0;
             margin-bottom: 1rem;
-            .label{
+            .label {
               margin: 17px 10px;
             }
           }
@@ -805,7 +857,7 @@ input[type='radio']:checked::before {
         }
       }
     }
-    .footer-submit{
+    .footer-submit {
       padding: 0;
     }
   }
@@ -835,7 +887,7 @@ input[type='radio']:checked::before {
               position: static;
               text-align: center;
               top: none;
-              right:none;
+              right: none;
               font-weight: bold;
               font-size: 1.5rem;
             }
@@ -860,7 +912,7 @@ input[type='radio']:checked::before {
           }
         }
       }
-      .footer-submit{
+      .footer-submit {
         padding: 0;
       }
     }

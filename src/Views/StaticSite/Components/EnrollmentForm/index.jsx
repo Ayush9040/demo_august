@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from 'react'
-import { filler1, upload } from '../../assets/icons/icon'
-import './styles.scss'
+import './formstyles.scss'
 // import { courseArray } from '../../Constants/courses/c200hr'
 import { AllCourses } from '../../Views/Courses/Constants/courses'
 import { useParams } from 'react-router-dom'
-import InputComponent from '../InputComponent'
 import { validateEmail } from '../../../../helpers'
 import { Link } from 'react-router-dom'
 import DisclaimerPolicy from '../DisclaimerPolicy'
@@ -20,48 +18,33 @@ const Enrollment = () => {
   const { courseId } = useParams()
   const [currentCourse, setCurrentCourse] = useState({})
   const [courseDate, setCourseDate] = useState(null)
-  const [date, setDate] = useState('')
+  //const [date, setDate] = useState('')
 
   useEffect(() => {
     setCurrentCourse(AllCourses.find((item) => item.key === courseId))
     setCourseDate(localStorage.getItem('selectedDate'))
 
-    setDate(
-      today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate()
-    )
+    // setDate(
+    //   today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate()
+    // )
   }, [])
 
-  var today = new Date()
+  // var today = new Date()
 
   const [empty, setEmpty] = useState(0)
 
-  const newChild = [
-    {
-      placeholder: '',
-      setField: '',
-      keyName: '',
-      type: 'text',
-      value: '',
-      id: 1,
-    },
-  ]
+  // const newChild = [
+  //   {
+  //     placeholder: '',
+  //     setField: '',
+  //     keyName: '',
+  //     type: 'text',
+  //     value: '',
+  //     id: 1,
+  //   },
+  // ]
 
-  const [newField, setNewField] = useState(newChild)
-
-  const AddNewChild = () => {
-    setNewField((s) => {
-      return [
-        ...s,
-        {
-          placeholder: '',
-          setField: '',
-          keyName: '',
-          type: 'text',
-          value: '',
-        },
-      ]
-    })
-  }
+  // const [newField, setNewField] = useState(newChild)
 
   const [bold, setBold] = useState(0)
   const [yearEmpty, setYearEmpty] = useState(0)
@@ -99,10 +82,10 @@ const Enrollment = () => {
     info: '',
     residental: '',
   })
-  const [qualificationAsset1, setQualificationAsset1] = useState('')
-  const [qualificationAsset2, setQualificationAsset2] = useState('')
-  const [experienceAsset1, setExperienceAsset1] = useState('')
-  const [experienceAsset2, setExperienceAsset2] = useState('')
+  // const [qualificationAsset1, setQualificationAsset1] = useState('')
+  // const [qualificationAsset2, setQualificationAsset2] = useState('')
+  // const [experienceAsset1, setExperienceAsset1] = useState('')
+  // const [experienceAsset2, setExperienceAsset2] = useState('')
   console.log(yearEmpty)
   console.log(resgin)
 
@@ -116,8 +99,8 @@ const Enrollment = () => {
           companyName: formData.company,
           roleWhenLeaving: formData.leavejob,
           yearOfresignation: formData.resignation,
-          workExImgAsset: experienceAsset1,
-          workExPdfAsset: experienceAsset2,
+          // workExImgAsset: experienceAsset1,
+          // workExPdfAsset: experienceAsset2,
           listedWorkExperience: formData.leavejob,
         },
       ])
@@ -134,8 +117,8 @@ const Enrollment = () => {
           schoolOrCollege: formData.school,
           course: formData.course,
           yearOfCompletion: formData.completion,
-          academicImgAsset: qualificationAsset1,
-          academicPdfAsset: qualificationAsset2,
+          // academicImgAsset: qualificationAsset1,
+          // academicPdfAsset: qualificationAsset2,
           listedQualification: formData.course,
         },
       ])
@@ -219,27 +202,27 @@ const Enrollment = () => {
             </li>
             <li
               style={bold === 1 ? { fontWeight: '600' } : {}}
-              onClick={() => setBold(1)}
+              onClick={handleEmpty1}
             >
               Academic Qualifications{' '}
               {bold === 1 && <div className="bottom-line"></div>}
             </li>
             <li
               style={bold === 2 ? { fontWeight: '600' } : {}}
-              onClick={() => setBold(2)}
+              onClick={handleEmpty2}
             >
               Work Experience{' '}
               {bold === 2 && <div className="bottom-line"></div>}
             </li>
             <li
               style={bold === 3 ? { fontWeight: '600' } : {}}
-              onClick={() => setBold(3)}
+              onClick={handleEmpty3}
             >
               Other{bold === 3 && <div className="bottom-line"></div>}
             </li>
             <li
               style={bold === 4 ? { fontWeight: 600 } : {}}
-              onClick={() => setBold(4)}
+              onClick={handleEmpty4}
             >
               Course Details
               {bold === 4 && <div className="bottom-line"></div>}
