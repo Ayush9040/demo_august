@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGoogle, faFacebook } from '@fortawesome/free-brands-svg-icons'
@@ -12,11 +12,13 @@ import CommonBannerNav2 from '../../../../Components/EcomNav'
 
 import { mail, lock } from '../../../../assets/icons/icon'
 
+
 import './style.scss'
 
 const SignIn = () => {
   const dispatch = useDispatch()
   const navigate = useNavigate()
+  const { isLoggedIn } = useSelector(state=>state.auth)
   const [course, setCourse] = useState()
   const [formData, setFormData] = useState({
     name: '',
@@ -31,7 +33,7 @@ const SignIn = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0)
-  }, [])
+  }, [isLoggedIn])
 
   const handleSignIn = () =>{
     dispatch(loginUserAction({

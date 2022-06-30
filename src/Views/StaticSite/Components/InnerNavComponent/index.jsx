@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
 import './style.scss'
 import { useNavigate } from 'react-router-dom'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 // import axios from 'axios'
 import {
   Hamburger,
@@ -19,7 +19,7 @@ import {
 } from '../../assets/icons/icon'
 import { Link } from 'react-router-dom'
 import MegaMenu from '../MegaMenu'
-import { clearLocal } from '../../../../Utils/localStorage'
+import { logoutUserAction } from '../../Views/Authentication/Auth.actions'
 
 const InnerNavComponent = ({ abc }) => {
   const navigate = useNavigate()
@@ -29,6 +29,7 @@ const InnerNavComponent = ({ abc }) => {
 
   const [bold, setBold] = useState(0)
   const location = useLocation()
+  const dispatch = useDispatch()
 
   useEffect(() => {
     if (location.pathname === '/media/video-gallery') {
@@ -96,7 +97,7 @@ const InnerNavComponent = ({ abc }) => {
             <div style={dropdown===true && isLoggedIn ?{ display:'block' }:{}} className='user-dropdown'>
               <ul>
                 <li onClick={()=>navigate('/user/profile')} >User Profile</li>
-                <li onClick={()=>{clearLocal.then(()=>{navigate('/')})}} >Logout</li>
+                <li onClick={async()=>{await dispatch(logoutUserAction());navigate('/user/sign-in')}} >Logout</li>
               </ul>
             </div>
           </div>
