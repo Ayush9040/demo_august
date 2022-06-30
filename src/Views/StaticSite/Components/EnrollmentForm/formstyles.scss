@@ -17,8 +17,18 @@
     grid-column: 1/7;
     margin-left: 60px;
     margin-top: 40px;
-    font-size: 25px;
+    font-size: 2.6rem;
     cursor: pointer;
+
+    
+    .flower {
+      display: flex;
+      justify-content: center;
+      svg {
+        height: 6rem;
+        width: 6rem;
+      }
+    }
     .x {
       float: right;
       height: 2.5rem;
@@ -30,32 +40,33 @@
       margin-right: 3rem;
       border: none;
     }
-    .student {
-      font-weight: 600;
-      font-size: 25px;
-      margin-bottom: 15px;
-    }
-    .header_ul {
-      display: flex;
-      list-style: none;
-      flex-wrap: wrap;
-      justify-content: flex-start;
-      li {
-        position: relative;
-        font-size: 2rem;
-        padding: 0 18px;
-        border-right: 2.5px solid black;
-        .bottom-line {
-          margin: 0;
-          position: absolute;
-          left: 0;
-        }
-        &:last-child {
-          border: none;
-        }
-        &:first-child {
-          padding-left: 0;
-        }
+  }
+
+  .student {
+    font-weight: 600;
+    font-size: 25px;
+    margin-bottom: 15px;
+  }
+  .header_ul {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    li {
+      position: relative;
+      font-size: 2rem;
+      padding: 0 18px;
+      border-right: 2.5px solid black;
+      .bottom-line {
+        margin: 0;
+        position: absolute;
+        left: 0;
+      }
+      &:last-child {
+        border: none;
+      }
+      &:first-child {
+        padding-left: 0;
       }
     }
   }
@@ -325,13 +336,17 @@
     }
   }
   .other-last {
+    
     .reason-input {
-      font-size: 2rem;
+      font-size: 1.5rem;
       border: none;
       border-bottom: 1px solid rgba(96, 96, 96, 0.502);
       margin-bottom: 220px;
-      color: #c0c0c0;
+      //color: #60606080;
       width: 97%;
+      &::placeholder {
+        color: #60606080;
+      }
     }
   }
   .footer {
@@ -920,3 +935,89 @@ input[type='radio']:checked::before {
 }
 
 // Course Details ends
+
+
+//thank you page start
+
+#overlay {
+  position: absolute;
+  display: block;
+  height: 80vh;
+  margin: 7rem 10rem;
+  border-radius: 30px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(160, 98, 116, 0.8);
+  z-index: 2;
+
+  button {
+    float: right;
+    margin-top: 5rem;
+    margin-right: 5rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 3rem;
+    font-weight: 600;
+  }
+
+  cursor: pointer;
+  #text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    opacity: 1;
+    font-size: 50px;
+    text-align: center;
+    color: white;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    .thankyou {
+      font-size: 5rem;
+      font-weight: 400;
+    }
+    .message {
+      font-size: 2.8rem;
+    }
+  }
+}
+
+.main-div {
+  position: relative;
+  background-image: url('http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Home/Offerings/7dayscamp.jpg');
+  height: 80vh;
+  margin: 7rem 10rem;
+  border-radius: 30px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 600px) {
+  #overlay {
+    margin: 2rem 4rem;
+    height: 70vh;
+
+    button {
+      font-size: 2rem;
+    }
+
+    #text {
+      .thankyou {
+        font-size: 2rem;
+        font-weight: 400;
+      }
+      .message {
+        font-size: 1.5rem;
+      }
+    }
+  }
+  .main-div {
+    margin: 2rem 4rem;
+    background-size: cover;
+    height: 70vh;
+  }
+}

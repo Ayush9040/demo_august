@@ -46,7 +46,7 @@ const Work = ({
                   placeholder="Year"
                   form={formData}
                   setField={setFormData}
-                  kayName="workfrom"
+                  keyName="workfrom"
                   value={formData.workfrom}
                 />
                 {resgin === 1 && (
@@ -69,7 +69,7 @@ const Work = ({
                   placeholder="Year"
                   form={formData}
                   setField={setFormData}
-                  kayName="worktill"
+                  keyName="worktill"
                   value={formData.worktill}
                 />
                 {resgin === 2 && (
@@ -90,8 +90,8 @@ const Work = ({
               Add More
               <button
                 className="add_button"
-                onClick={() => {
-                  listDetailHandler()
+                onClick={(e) => {
+                  listDetailHandler(e)
                 }}
               >
                 +
@@ -108,13 +108,13 @@ const Work = ({
                   <p>{item.companyName}</p>
                   <p>{item.roleWhenLeaving}</p>
                   {/* <p>{item.yearOfresignation}</p> */}
-                  <p>{item.workFrom}</p>
-                  <p>{item.workTill}</p>
+                  <p>{item.workFrom} to {item.workTill}</p>
+                  
                 </div>
               )
             })}
           </div>
-          {empty === 1 && (
+          {resgin === 1 && (
             <small
               style={{
                 color: 'red',

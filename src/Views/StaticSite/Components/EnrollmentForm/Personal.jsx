@@ -28,7 +28,7 @@ const Personal = ({
                     color: 'red',
                     fontSize: '1.25rem',
                     float: 'right',
-                    margin: '-1.75rem -7rem 2rem 0'
+                    margin: '-1.75rem 0 2rem 0'
                   }}
                 >
                   {' '}
@@ -45,13 +45,13 @@ const Personal = ({
                 setField={setFormData}
                 keyName="email"
               />
-              {empty === 3 && (
+              {empty === 2 && (
                 <small
                   style={{
                     color: 'red',
                     fontSize: '1.25rem',
                     float: 'right',
-                    margin: '-1.75rem -7rem 2rem 0'
+                    margin: '-1.75rem 0 2rem 0'
                   }}
                 >
                   {' '}
@@ -67,13 +67,13 @@ const Personal = ({
                 setField={setFormData}
                 keyName="phone"
               />
-              {empty === 2 && (
+              {empty === 3 && (
                 <small
                   style={{
                     color: 'red',
                     fontSize: '1.25rem',
                     float: 'right',
-                    margin: '-1.75rem -7rem 2rem 0'
+                    margin: '-1.75rem 0 2rem 0'
                   }}
                 >
                   {' '}
@@ -95,7 +95,7 @@ const Personal = ({
                     color: 'red',
                     fontSize: '1.25rem',
                     float: 'right',
-                    margin: '-1.75rem -7rem 2rem 0'
+                    margin: '-1.75rem 0 2rem 0'
                   }}
                 >
                   {' '}
@@ -126,7 +126,7 @@ const Personal = ({
                     color: 'red',
                     fontSize: '1.25rem',
                     float: 'right',
-                    margin: '-1.75rem -7rem 2rem 0'
+                    margin: '-1.75rem 0 2rem 0'
                   }}
                 >
                   {' '}
@@ -149,7 +149,7 @@ const Personal = ({
                     color: 'red',
                     fontSize: '1.25rem',
                     float: 'right',
-                    margin: '-1.75rem -7rem 2rem 0'
+                    margin: '-1.75rem 0 2rem 0'
                   }}
                 >
                   {' '}
@@ -171,7 +171,7 @@ const Personal = ({
                     color: 'red',
                     fontSize: '1.25rem',
                     float: 'right',
-                    margin: '-1.75rem -7rem 2rem 0'
+                    margin: '-1.75rem 0 2rem 0'
                   }}
                 >
                   {' '}
@@ -197,7 +197,7 @@ const Personal = ({
                     color: 'red',
                     fontSize: '1.25rem',
                     float: 'right',
-                    margin: '-1.75rem -7rem 2rem 0'
+                    margin: '-1.75rem 0 2rem 0'
                   }}
                 >
                   {' '}
@@ -241,7 +241,7 @@ const Personal = ({
                     color: 'red',
                     fontSize: '1.25rem',
                     float: 'right',
-                    margin: '-1.75rem -7rem 2rem 0'
+                    margin: '-1.75rem 0 2rem 0'
                   }}
                 >
                   {' '}
@@ -263,7 +263,7 @@ const Personal = ({
                     color: 'red',
                     fontSize: '1.25rem',
                     float: 'right',
-                    margin: '-1.75rem -7rem 2rem 0'
+                    margin: '-1.75rem 0 2rem 0'
                   }}
                 >
                   {' '}
@@ -285,7 +285,7 @@ const Personal = ({
                     color: 'red',
                     fontSize: '1.25rem',
                     float: 'right',
-                    margin: '-1.75rem - 7rem 2rem 0'
+                    margin: '-1.75rem 0 2rem 0'
                   }}
                 >
                   {' '}

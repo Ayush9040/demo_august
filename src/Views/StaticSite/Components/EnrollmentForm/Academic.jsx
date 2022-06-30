@@ -26,6 +26,19 @@ const Academic = ({
                 keyName="school"
                 value={formData.school}
               />
+              {yearEmpty === 2 && (
+                <small
+                  style={{
+                    color: 'red',
+                    fontSize: '1.25rem',
+                    float: 'right',
+                    margin: '-1.75rem 0 2rem 0',
+                  }}
+                >
+                  {' '}
+                  Please enter your school/college name
+                </small>
+              )}
             </div>
             <div>
               <InputComponent
@@ -36,6 +49,19 @@ const Academic = ({
                 keyName="course"
                 value={formData.course}
               />
+              {yearEmpty === 1 && (
+                <small
+                  style={{
+                    color: 'red',
+                    fontSize: '1.25rem',
+                    float: 'right',
+                    margin: '-1.75rem 0 0 0',
+                  }}
+                >
+                  {' '}
+                  Please enter your course
+                </small>
+              )}
             </div>
           </form>
           <div className="year_flex_box">
@@ -48,19 +74,20 @@ const Academic = ({
               keyName="completion"
               value={formData.completion}
             />
-            {yearEmpty === 1 && (
-              <small
-                style={{
-                  color: 'red',
-                  fontSize: '1.25rem',
-                  display: 'block',
-                  float: 'right',
-                }}
-              >
-                *Please Enter a valid year
-              </small>
-            )}
           </div>
+          {yearEmpty === 3 && (
+            <small
+              style={{
+                color: 'red',
+                fontSize: '1.25rem',
+                display: 'block',
+                float: 'right',
+                marginTop: '-1.75rem',
+              }}
+            >
+              *Please Enter a valid year
+            </small>
+          )}
           <div className="add_button_div">
             Add More
             <button
