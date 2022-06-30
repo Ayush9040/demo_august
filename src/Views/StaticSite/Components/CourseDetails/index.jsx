@@ -3,7 +3,7 @@ import './style.scss'
 //import { star, global, network, chat } from '../../assets/icons/icon'
 import CommonBtn from '../commonbtn'
 import baseDomain, { courseAssets } from '../../assets/images/imageAsset'
-import { Link } from 'react-router-dom'
+import { Link, useSearchParams } from 'react-router-dom'
 import CoursePara from '../CourseComponents/CoursePara'
 import CourseULIst from '../CourseComponents/CourseUList'
 import CourseTable from '../CourseComponents/CourseTable'
@@ -15,32 +15,32 @@ import SelectDropDown from '../Select Dropdown'
 const CourseDetails = ({ pageDate }) => {
   const [detail, setDetail] = useState(1)
 
-  useEffect(() => {
-    window.scrollTo(0, 0)
-  }, [])
+  const[Params]= useSearchParams()
 
-  // const {
-  //   id,
-  //   key,
-  //   image,
-  //   name,
-  //   details,
-  //   benefits,
-  //   duration,
-  //   date,
-  //   timings,
-  //   fees,
-  //   prerequisites,
-  //   curriculum,
-  //   unique,
-  //   TeachingAndCertification,
-  //   queDetails,
-  //   Guidelines,
-  // } = pageDate
+  // const [courseDate, setCourseDate] = useState()
+
+  // useEffect(() => {
+  //   setCourseDate(localStorage.getItem('selectedDate'))
+  // }, [])
+
+  
 
   console.log(pageDate, 'pageData')
-  const [selectDate, setSetselectDate] = useState(localStorage.getItem('selectedDate'))
-  localStorage.setItem('selectedDate',selectDate)
+  const [selectDate, setSetselectDate] = useState()
+  // localStorage.setItem('selectedDate',selectDate)
+  useEffect(() => {
+    setSetselectDate(Params.get('date'))
+    
+    window.scrollTo(0, 0)
+    
+    // {Params.get('date')===null? window.scrollTo(0, 0): document.getElementById('date-select').scrollIntoView()}
+    
+  }, [])
+
+  const scroll = ()=>{
+    // document.getElementById('date-select').scrollIntoView()
+    return <CommonBtn text={'Enroll Now'} />
+  }
 
   let options = [
     {
@@ -153,9 +153,10 @@ const CourseDetails = ({ pageDate }) => {
               'Lorem Ipsum is simply dummy text of the printing and typesetting industry. '}
           </p>
           <div className="course-options">
-            <Link to={`/user/sign-in/${pageDate.key}/`}>
+            {selectDate ? <Link to={`/user/sign-in/${pageDate.key}/?date=${selectDate}`}>
               <CommonBtn text={'Enroll Now'} />
-            </Link>
+            </Link> :  scroll() }
+            
             {/* <CommonBtn text={'Gift Course'} /> */}
           </div>
         </div>
@@ -167,9 +168,11 @@ const CourseDetails = ({ pageDate }) => {
           )}
         </div>
       </div>
-      <SelectDropDown  currentValue={selectDate} changeCurrentValue={setSetselectDate} text={'Select Dates'} isStyles={selectStyles} dates={pageDate.dates}/>
+
+      <div id='date-select'><SelectDropDown  currentValue={selectDate} changeCurrentValue={setSetselectDate} text={'Select Dates'} isStyles={selectStyles} dates={pageDate.dates}/> </div>
+      
       {pageDate.category === 'ttc' && (
-        <div className="career-navigation-lg-div">
+        <div className="career-navigation-lg-div" >
           <div className="career-navigation-lg">
             <ul className="innerNav">
               {options.map((item, idx) => (

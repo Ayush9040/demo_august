@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import './style.scss'
+// import baseDomain, { homeAssets } from '../../assets/images/imageAsset'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 import { legacydisclaimer } from '../../assets/icons/icon'

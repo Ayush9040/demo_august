@@ -14,7 +14,7 @@ const ttc200hr = {
     fees: 22000,
     category: 'ttc',
     title: '200 hrs TTC  Batch 1 - 1 Month TTC Online & On Campus - English',
-    dates: ['1st June 2022 ','1st July 2022','1st August 2022 ','1st September 2022 ','1st October 2022','1st November 2022','1st December 2022 '],
+    dates: ['1st June 2022','1st July 2022','1st August 2022','1st September 2022','1st October 2022','1st November 2022','1st December 2022'],
     online:true,
     onCampus:true,
     nonResidential:true,
@@ -69,7 +69,7 @@ const ttc200hr = {
         type: 'paragraph',
         content: {
           title: 'Date',
-          text: ['1st July 2022 to 31st July 2022'],
+          text: ['1st July 2022to 31st July 2022'],
         },
       },
       {
@@ -362,7 +362,7 @@ const ttc200hr = {
         type: 'paragraph',
         content: {
           title: 'Duration',
-          text: ['11th July 2022 to 2nd September 2022'],
+          text: ['11th July 2022to 2nd September 2022'],
         },
       },
       {
@@ -619,7 +619,7 @@ const ttc200hr = {
     fees: 22000,
     category: 'ttc',
     title: '200 hrs TTC  Batch 3 - 2 Months TTC Online  - English',
-    dates: ['8th August 2022','10th October 2022 ','12th December 2022 '],
+    dates: ['8th August 2022','10th October 2022','12th December 2022'],
     online:true,
     onCampus:false,
     nonResidential:false,
@@ -663,7 +663,7 @@ const ttc200hr = {
         type: 'paragraph',
         content: {
           title: 'Duration',
-          text: ['8th August 2022 to 1st October 2022'],
+          text: ['8th August 2022to 1st October 2022'],
         },
       },
       {
@@ -921,7 +921,7 @@ const ttc200hr = {
     fees: 22000,
     category: 'ttc',
     title: '200 hrs TTC  Batch 4 - 2 Months TTC Online  - Hindi',
-    dates: ['13th June 2022 ','15th August 2022','17th October 2022','19th December 2022 '],
+    dates: ['13th June 2022','15th August 2022','17th October 2022','19th December 2022'],
     online:true,
     onCampus:false,
     nonResidential:false,
@@ -972,7 +972,7 @@ const ttc200hr = {
         type: 'paragraph',
         content: {
           title: 'Date',
-          text: ['13th June 2022 to 6th August 2022'],
+          text: ['13th June 2022to 6th August 2022'],
         },
       },
       {
@@ -1221,7 +1221,7 @@ const ttc200hr = {
     fees: 22000,
     category: 'ttc',
     title: '200 hrs TTC Batch 5 - 2 Months TTC Online  - English',
-    dates: ['27th June 2022 ','29th August 2022','31st October 2022 '],
+    dates: ['27th June 2022','29th August 2022','31st October 2022'],
     online:true,
     onCampus:false,
     nonResidential:false,
@@ -1265,7 +1265,7 @@ const ttc200hr = {
         type: 'paragraph',
         content: {
           title: 'Duration',
-          text: ['27th June 2022 to 20th August 2022'],
+          text: ['27th June 2022to 20th August 2022'],
         },
       },
       {
@@ -1522,7 +1522,7 @@ const ttc200hr = {
     fees: 22000,
     category: 'ttc',
     title: '200 hrs TTC  Batch 6 - 3 Months Weekend TTC Online - English',
-    dates: ['4th June 2022 ','27th August 2022','19th November 2022'],
+    dates: ['4th June 2022','27th August 2022','19th November 2022'],
     online:true,
     onCampus:false,
     nonResidential:false,
@@ -1566,7 +1566,7 @@ const ttc200hr = {
         type: 'paragraph',
         content: {
           title: 'Duration',
-          text: ['27th August 2022 to 13th November 2022'],
+          text: ['27th August 2022to 13th November 2022'],
         },
       },
       {
@@ -1872,7 +1872,7 @@ const ttc500hr = {
         type: 'paragraph',
         content: {
           title: 'Duration',
-          text: ['15th August 2022 to 5th November 2022'],
+          text: ['15th August 2022to 5th November 2022'],
         },
       },
       {
@@ -3797,7 +3797,7 @@ const ttc900hr = {
     fees: 50000,
     category: 'ttc',
 
-    dates: ['20th June 2022 ','17th October 2022'],
+    dates: ['20th June 2022','17th October 2022'],
     online:true,
     onCampus:false,
     nonResidential:false,
@@ -3860,7 +3860,7 @@ const ttc900hr = {
         content: {
           title: 'Duration',
 
-          text: ['20th June 2022 to 8th October 2022'],
+          text: ['20th June 2022to 8th October 2022'],
         },
       },
 
@@ -7090,7 +7090,7 @@ const camps = {
         type: 'paragraph',
         content: {
           title: 'UPCOMING DATES FOR 2022',
-          text: ['13th August 2022 to 19th August 2022'],
+          text: ['13th August 2022to 19th August 2022'],
         },
       },
       {
@@ -7158,7 +7158,7 @@ const camps = {
           title: ' A MANDATORY PREREQUISITE FOR THIS COURSE IS',
           points: [
             {
-              listItem: 'Covid test RT-PCR results dated 20th January 2022 to 28th January 2022 and later for entry into the premises post prior registration. ',
+              listItem: 'Covid test RT-PCR results dated 20th January 2022to 28th January 2022and later for entry into the premises post prior registration. ',
               subItems: [],
             },
             {
@@ -7261,7 +7261,7 @@ const camps = {
     id: '',
     title: '21 Days BLC - Batch 2 - 21 Days BLC - Evening - Online & On Campus - English   ',
     key: '21-days-blc-batch2',
-    dates: ['19th June 2022','10th July 2022','21st August 2022','11th September 2022','2nd October 2022 ','23rd October 2022 ','13th November 2022','4th December 2022','25th December 2022'],
+    dates: ['19th June 2022','10th July 2022','21st August 2022','11th September 2022','2nd October 2022','23rd October 2022','13th November 2022','4th December 2022','25th December 2022'],
     online:true,
     onCampus:true,
     nonResidential:false,
@@ -7389,7 +7389,7 @@ const camps = {
         type: 'paragraph',
         content: {
           title: 'UPCOMING DATES FOR 2022',
-          text: ['19th June 2022 to 9th July 2022 '],
+          text: ['19th June 2022to 9th July 2022'],
         },
       },
       {
@@ -7448,7 +7448,7 @@ const camps = {
           title: ' A MANDATORY PREREQUISITE FOR THIS COURSE IS:',
           points: [
             {
-              listItem: 'Covid test RT-PCR results dated 20th January 2022 to 28th January 2022 and later for entry into the premises post prior registration. ',
+              listItem: 'Covid test RT-PCR results dated 20th January 2022to 28th January 2022and later for entry into the premises post prior registration. ',
               subItems: [],
             },
             {
@@ -7551,7 +7551,7 @@ const camps = {
     id: '',
     title: '21 Days BLC - Batch 3 - 21 Days BLC - Evening - Online & On Campus - Hindi ',
     key: '21-days-blc-batch3',
-    dates: ['5th June 2022 ','7th August 2022','2nd October 2022 ','4th December 2022'],
+    dates: ['5th June 2022','7th August 2022','2nd October 2022','4th December 2022'],
     online:true,
     onCampus:true,
     nonResidential:false,
@@ -7685,7 +7685,7 @@ const camps = {
         type: 'paragraph',
         content: {
           title: 'UPCOMING DATES FOR 2022',
-          text: ['7th August 2022 to 27th August 2022'],
+          text: ['7th August 2022to 27th August 2022'],
         },
       },
       {
@@ -7744,7 +7744,7 @@ const camps = {
           title: ' A MANDATORY PREREQUISITE FOR THIS COURSE IS:',
           points: [
             {
-              listItem: 'Covid test RT-PCR results dated 20th January 2022 to 28th January 2022 and later for entry into the premises post prior registration. ',
+              listItem: 'Covid test RT-PCR results dated 20th January 2022to 28th January 2022and later for entry into the premises post prior registration. ',
               subItems: [],
             },
             {
@@ -7847,7 +7847,7 @@ const camps = {
     id: '',
     title: '21 Days BLC - Batch 4 - 21 Days BLC - Morning - Online - English',
     key: '21-days-blc-batch4',
-    dates: ['12th June 2022 ','3rd July 2022',' 24th July 2022','14th August 2022','4th September 2022','25th September 2022','16th October 2022','6th November 2022','27th November 2022','18th December 2022 '],
+    dates: ['12th June 2022','3rd July 2022',' 24th July 2022','14th August 2022','4th September 2022','25th September 2022','16th October 2022','6th November 2022','27th November 2022','18th December 2022'],
     online:true,
     onCampus:false,
     nonResidential:false,
@@ -7981,7 +7981,7 @@ const camps = {
         type: 'paragraph',
         content: {
           title: 'UPCOMING DATES FOR 2022',
-          text: ['3rd July to 23rd July 2022 / 24th July to 13th August 2022'],
+          text: ['3rd July to 23rd July 2022/ 24th July to 13th August 2022'],
         },
       },
       {
@@ -8040,7 +8040,7 @@ const camps = {
           title: ' A MANDATORY PREREQUISITE FOR THIS COURSE IS:',
           points: [
             {
-              listItem: 'Covid test RT-PCR results dated 20th January 2022 to 28th January 2022 and later for entry into the premises post prior registration. ',
+              listItem: 'Covid test RT-PCR results dated 20th January 2022to 28th January 2022and later for entry into the premises post prior registration. ',
               subItems: [],
             },
             {
@@ -8143,7 +8143,7 @@ const camps = {
     id: '',
     title: '7 Days Health Camp - On Campus - English ',
     key: '7-days-heath-camp-on-campus-english',
-    dates: ['25th June 2022 ','23rd July 2022','27th August 2022','24th September 2022','22nd October 2022','26th November 2022','24th December 2022 '],
+    dates: ['25th June 2022','23rd July 2022','27th August 2022','24th September 2022','22nd October 2022','26th November 2022','24th December 2022'],
     online:false,
     onCampus:true,
     nonResidential:false,
@@ -8300,7 +8300,7 @@ const camps = {
         type: 'paragraph',
         content: {
           title: 'UPCOMING DATES FOR 2022',
-          text: ['13th August 2022 to 19th August 2022'],
+          text: ['13th August 2022to 19th August 2022'],
         },
       },
       {
@@ -8368,7 +8368,7 @@ const camps = {
           title: ' A MANDATORY PREREQUISITE FOR THIS COURSE IS',
           points: [
             {
-              listItem: 'Covid test RT-PCR results dated 20th January 2022 to 28th January 2022 and later for entry into the premises post prior registration. ',
+              listItem: 'Covid test RT-PCR results dated 20th January 2022to 28th January 2022and later for entry into the premises post prior registration. ',
               subItems: [],
             },
             {
@@ -8471,7 +8471,7 @@ const camps = {
     id: '',
     title: 'Batch 1 - 21-Days BLC - Morning On Campus-English',
     key: 'batch1-21days-morning-oncampus',
-    dates: ['5th June 2022','3rd July 2022 ','7th August 2022','4th September 2022','2nd October 2022','6th November 2022 ','4th December 2022'],
+    dates: ['5th June 2022','3rd July 2022','7th August 2022','4th September 2022','2nd October 2022','6th November 2022','4th December 2022'],
     online:false,
     onCampus:true,
     nonResidential:false,
@@ -8605,7 +8605,7 @@ const camps = {
         type: 'paragraph',
         content: {
           title: 'UPCOMING DATES FOR 2022',
-          text: ['3rd July to 23rd July 2022 / 24th July to 13th August 2022'],
+          text: ['3rd July to 23rd July 2022/ 24th July to 13th August 2022'],
         },
       },
       {
@@ -8664,7 +8664,7 @@ const camps = {
           title: ' A MANDATORY PREREQUISITE FOR THIS COURSE IS:',
           points: [
             {
-              listItem: 'Covid test RT-PCR results dated 20th January 2022 to 28th January 2022 and later for entry into the premises post prior registration. ',
+              listItem: 'Covid test RT-PCR results dated 20th January 2022to 28th January 2022and later for entry into the premises post prior registration. ',
               subItems: [],
             },
             {
@@ -9320,7 +9320,7 @@ const classes = {
         content: {
           title: 'Online Sessions',
           text: [
-            '4th July 2022 to 25th August 2022',
+            '4th July 2022to 25th August 2022',
             'Mondays, Tuesdays & Thursdays: 11:30 am - 12:30 pm (IST)',
             '24 sessions of one hour each',
           ],
@@ -9453,7 +9453,7 @@ const classes = {
     timing: 'Fridays & Saturdays: 3:00 pm - 5:00 pm (IST)',
     fees: 20000,
     category: 'classes',
-    dates: ['8th July 2022 '],
+    dates: ['8th July 2022'],
     online:true,
     onCampus:false,
     nonResidential:false,
@@ -9541,7 +9541,7 @@ const classes = {
     timing: 'Tuesdays to Friday: 5:00 p.m. - 7:00 p.m. (IST',
     fees: 8000,
     category: 'classes',
-    dates: ['14th June 2022 '],
+    dates: ['14th June 2022'],
     online:false,
     onCampus:false,
     nonResidential:false,
@@ -9885,7 +9885,7 @@ const classes = {
         type: 'paragraph',
         content: {
           title: 'Date',
-          text: [' 24th August - 16th December 2022 '],
+          text: [' 24th August - 16th December 2022'],
         },
       },
       {
@@ -10036,7 +10036,7 @@ const classes = {
     timing: '7:00 am - 8:00 am  (IST)',
     fees: 1000,
     category: 'classes',
-    dates: ['6th June 2022 ','4th July 2022','1st August 2022','5th September 2022','3rd October 2022','7th November 2022','5th December 2022'],
+    dates: ['6th June 2022','4th July 2022','1st August 2022','5th September 2022','3rd October 2022','7th November 2022','5th December 2022'],
     online:true,
     onCampus:false,
     nonResidential:false,

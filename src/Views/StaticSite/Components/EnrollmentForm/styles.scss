@@ -142,7 +142,6 @@
       background-color: white;
       cursor: pointer;
     }
-    
   }
   .details {
     display: grid;
@@ -190,7 +189,7 @@
           width: 100%;
           max-width: 100%;
           margin: 20px;
-          font-size:20px;
+          font-size: 20px;
           color: #60606080;
         }
         // .flex_box{
@@ -348,11 +347,10 @@
         //margin: 10px;
         margin-top: 40px;
         margin-bottom: 220px;
-        &:focus-visible{
-           outline: none;
+        &:focus-visible {
+          outline: none;
         }
       }
-  
     }
     .last_div {
       display: flex;
@@ -531,7 +529,7 @@
 }
 @media (max-width: '1855px') {
   .enrollment_container {
-    .flex_box{
+    .flex_box {
       height: 70px;
     }
     .left_flex_contanier {
@@ -571,7 +569,6 @@
 
 @media (max-width: '1655px') {
   .enrollment_container {
-    
     .left_flex_contanier {
       .uploads {
         label {
@@ -596,7 +593,6 @@
 @media (max-width: '1536px') {
   .enrollment_container {
     .flex_box {
-      
       height: 60px;
     }
     .left_flex_contanier {
@@ -634,10 +630,10 @@
         }
       }
     }
-    .details{
-      .right{
-        .num_of_child{
-          .child{
+    .details {
+      .right {
+        .num_of_child {
+          .child {
             font-size: 18px;
           }
         }

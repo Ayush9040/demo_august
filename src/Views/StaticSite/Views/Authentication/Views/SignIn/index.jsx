@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import { Link, useLocation, useNavigate } from 'react-router-dom'
-import { useDispatch, useSelector } from 'react-redux'
+import { Link, useLocation, useNavigate, useSearchParams } from 'react-router-dom'
+import { useDispatch,useSelector } from 'react-redux'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGoogle, faFacebook } from '@fortawesome/free-brands-svg-icons'
@@ -30,6 +30,15 @@ const SignIn = () => {
   useEffect(() => {
     setCourse(location?.pathname?.split('/')?.[3])
   }, [location])
+
+  const[Params]= useSearchParams()
+
+  const [selectDate, setSetselectDate] = useState()
+
+  useEffect(() => {
+    setSetselectDate(Params.get('date'))
+    
+  }, [])
 
   useEffect(() => {
     window.scrollTo(0, 0)
@@ -76,7 +85,7 @@ const SignIn = () => {
               text="Sign In"
               buttonAction={handleSignIn}
             />
-            <Link to={`/enrollment/${course}`}>
+            <Link to={`/enrollment/${course}/?date=${selectDate}`}>
               <CommonBtn text={'Continue as a guest'} isColor={'#EA4335'} />
             </Link>
           </label>
