@@ -83,11 +83,11 @@ const DisclaimerPolicy = ({
         receivers: [formData.email,'shrey@nexgsolution.com']
       }
       try{
-        const res = await axios.post(
+        const response = await axios.post(
           'https://cms-dev-be.theyogainstituteonline.org/v1/form',
           body
         )
-        if(res?.data?.success){
+        if(response?.data?.success){
           if(formData.residental==='ONLINE'||formData.residental==='NONRESIDENTAIL'){
             const paymentOrderResponse =  await axios.post('https://cms-dev-be.theyogainstituteonline.org/v1/payment/order', {
               amount: currentCourse.fees,
@@ -120,7 +120,10 @@ const DisclaimerPolicy = ({
                 email: formData.email,
                 contact: formData.phone
               },
-              notes: paymentOrderResponse.data.notes,
+              notes:{
+                description:currentCourse?.metaDescription,
+                formData:response['_id']
+              },
               theme: {
                 color: '#3399cc' // enter theme color for our website
               }
