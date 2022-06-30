@@ -1,11 +1,69 @@
 .disclaimer-container { 
   margin: 2rem;
   border-radius: 20px;
-  position: relative;
-  width: 100%;
-  height: 100%;
-  .legacy1{
-    font-size: 28px;
+
+  .heading-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2rem 0 2rem 0;
+    bottom: 2rem;
+    .close {
+      position: relative;
+      bottom: 2rem;
+      float: right;
+      font-size: 24px;
+      font-weight: 900;
+      display: flex;
+      margin-right: 80px;
+      border: none;
+      background-color: white;
+      cursor: pointer;
+    } 
+  }
+
+  .disclaimer-policy{
+    position: relative;
+    bottom: 3rem;
+    font-size: 2.5rem;
+
+  }
+  .heading-content p{
+    font-weight: bold;
+  }
+  .mid-content {
+    padding: 0 30rem;
+    height: 400px;
+    overflow-y: scroll;
+    
+
+
+    p {
+      font-size: 2rem;
+    }
+    ol {
+      font-size: 1.5rem;
+      padding-left: 1.5rem;
+    }
+  }
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px black; 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: transparent; 
+    border-radius: 10px;
+    width: 10px;
+    min-height: 10px;
+    border: 1px solid gray;
   }
   
     .disclaimer-heading {

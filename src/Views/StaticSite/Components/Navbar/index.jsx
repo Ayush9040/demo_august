@@ -3,9 +3,13 @@ import './styles.scss'
 import { Hamburger, Search, Cart, Gift, User } from '../../assets/icons/icon'
 import MegaMenu from '../MegaMenu'
 import { Link } from 'react-router-dom'
+import { clearLocal } from '../../../../Utils/localStorage'
+import { useNavigate } from 'react-router-dom'
 
 const Navbar = ({ isUserLoggedIn }) => {
+  const navigate = useNavigate()
   const [nav, setNav] = useState(false)
+  const [dropdown,setDropdown]=useState(false)
 
   return (
     <div className="navbar-container">
@@ -36,8 +40,15 @@ const Navbar = ({ isUserLoggedIn }) => {
           <Link to="/gifting">
             <li>{Gift}</li>
           </Link>
-          <Link to={isUserLoggedIn ? '/user/profile' : '/user/sign-in'}>
-            <li>{User}</li>
+          <Link onMouseOver={()=>{setDropdown(true)}} onMouseOut={()=>{setDropdown(false)}} to={isUserLoggedIn ? '/user/profile' : '/user/sign-in'}>
+            <li>{User}
+              <div style={dropdown===true && isUserLoggedIn ?{ display:'block' }:{}} className='user-dropdown'>
+                <ul>
+                  <li onClick={()=>navigate('/user/profile')} >User Profile</li>
+                  <li onClick={()=>{clearLocal.then(()=>{navigate('/')})}} >Logout</li>
+                </ul>
+              </div>
+            </li>
           </Link>
         </ul>
       </div>
