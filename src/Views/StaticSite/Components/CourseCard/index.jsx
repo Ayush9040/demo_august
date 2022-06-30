@@ -114,8 +114,8 @@ const CourseCard = ({
               <Link
                 to={
                   isLoggedIn
-                    ? `/enrollment/${path}/date${selectDate}`
-                    : `/user/sign-in/${path}/`
+                    ? `/enrollment/${path}/?date=${selectDate}`
+                    : `/user/sign-in/${path}/?date=${selectDate}`
                 }
               >
                 <CommonBtn text={'Enroll Now'} />
