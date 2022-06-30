@@ -1,3 +1,4 @@
+import EditAccount from '../../../Components/EditAccount'
 import UserProfile from '../../../Components/UserProfile'
 import SignIn from '../Views/SignIn'
 import SignUp from '../Views/Signup'
@@ -23,9 +24,17 @@ const authRoutes = [
     Component: UserProfile,
     path: '/profile',
     exact: true,
-    id: 'statisSiteUnderSignUp',
+    id: 'statisSiteUnderProfile',
     routePath: '/profile',
-    name: 'SignUp',
+    name: 'Profile',
+  },
+  {
+    Component: EditAccount,
+    path: '/edit-account',
+    exact: true,
+    id: 'statisSiteUnderEditAccount',
+    routePath: '/edit-account',
+    name: 'EditAccount',
   },
 ]
 

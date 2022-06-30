@@ -108,16 +108,16 @@ const Donation = ({ supportText, page }) => {
 
             <div className='checkboxes'>
               <label>
-                <input type='checkbox' />
+                <input type='radio' value="One" name="gender"/>
                 <span>One time</span>
               </label>
 
               <label>
-                <input type='checkbox' />
+                <input type='radio' value="Monthly" name="gender" />
                 <span>Monthly</span>
               </label>
               <label>
-                <input type='checkbox' />
+                <input type='radio' value="Annually" name="gender" />
                 <span>Annually</span>
               </label>
             </div>

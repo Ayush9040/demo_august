@@ -18,7 +18,7 @@
         font-size: 1.8rem;
         width: 60%;
         text-align: center;
-        margin: 0 auto;
+        margin: 0 auto; 
         // .global-common-btn-content {
 
         //   margin-top: 10px;
@@ -89,6 +89,31 @@
       column-gap: 1px;
       width: 50%;
       margin: 5rem auto;
+    
+    }
+    input[type='radio'] {
+      appearance: none;
+      border: 1px solid #d3d3d3;
+      width: 30px;
+      height: 30px;
+      content: none;
+      outline: none;
+      margin: 0;
+    }
+    input[type='radio']:checked {
+      appearance: none;
+      outline: none;
+      padding: 0;
+      content: none;
+      border: none;
+    }
+    input[type='radio']:checked::before {
+      position: absolute;
+      color: #60606080 !important;
+      content: '\00A0\2713\00A0' !important;
+      border: 1px solid #d3d3d3;
+      font-weight: bolder;
+      font-size: 24px;
     }
 
     .citizen {
@@ -104,15 +129,19 @@
       position: relative;
       bottom: 1px;
       height: 25px;
-      width: 50px;
+      width: 25px;
     }
 
     .checkboxes label {
       display: block;
-      font-size: 1.5rem;
+      font-size: 20px;
       // margin-left: 10%;
       span {
         margin-left: 20px;
+        position: relative;
+        bottom: 10px;
+        left: 10px;
+        
       }
     }
   }
@@ -281,6 +310,18 @@
       }
       p {
         font-size: 1.5rem !important;
+      }
+    }
+  }
+}
+@media (max-width:1200px)
+{
+  .donation-container-1{
+    .donation-buttons{
+      .donate-button{
+        .global-common-btn{
+          padding-right: 9rem;
+        }
       }
     }
   }

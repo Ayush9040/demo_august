@@ -12,11 +12,13 @@ import CommonBannerNav2 from '../../../../Components/EcomNav'
 
 import { mail, lock } from '../../../../assets/icons/icon'
 
+
 import './style.scss'
 
 const SignIn = () => {
   const dispatch = useDispatch()
   const navigate = useNavigate()
+  const { isLoggedIn } = useSelector(state=>state.auth)
   const [course, setCourse] = useState()
   const [formData, setFormData] = useState({
     name: '',
@@ -40,11 +42,11 @@ const SignIn = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0)
-  }, [])
+  }, [isLoggedIn])
 
   const handleSignIn = () =>{
     dispatch(loginUserAction({
-      email: formData.name,
+      email: formData.email,
       password: formData.password
     }, navigate))
   }

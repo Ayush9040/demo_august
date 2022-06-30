@@ -138,6 +138,13 @@
     margin: 0 auto;
   }
 }
+@media(max-width:420px){
+  .brahma-container{
+    .banner-heading{
+      width: fit-content;
+    }
+  }
+}
 
 //   .content-container :nth-child(even){
 //       flex-direction: row-reverse;

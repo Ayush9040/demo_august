@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
 import './style.scss'
-import { useSelector } from 'react-redux'
+import { useNavigate } from 'react-router-dom'
+import { useDispatch, useSelector } from 'react-redux'
 // import axios from 'axios'
 import {
   Hamburger,
@@ -18,13 +19,17 @@ import {
 } from '../../assets/icons/icon'
 import { Link } from 'react-router-dom'
 import MegaMenu from '../MegaMenu'
+import { logoutUserAction } from '../../Views/Authentication/Auth.actions'
 
 const InnerNavComponent = ({ abc }) => {
+  const navigate = useNavigate()
   const { isLoggedIn } = useSelector((state) => state.auth)
   const [nav, setNav] = useState(false)
+  const [dropdown,setDropdown]=useState(false)
 
   const [bold, setBold] = useState(0)
   const location = useLocation()
+  const dispatch = useDispatch()
 
   useEffect(() => {
     if (location.pathname === '/media/video-gallery') {
@@ -72,7 +77,7 @@ const InnerNavComponent = ({ abc }) => {
               })}
             </ul>
           </div>
-          <div className="user-container">
+          <div className="user-container" onMouseOver={()=>{setDropdown(true)}} onMouseOut={()=>{setDropdown(false)}} >
             
             {abc.title==='Shop'
               ?    <Link to='/shop'>        
@@ -88,6 +93,13 @@ const InnerNavComponent = ({ abc }) => {
                   ? CommonUser
                   : CommonUser1}
             </Link>
+
+            <div style={dropdown===true && isLoggedIn ?{ display:'block' }:{}} className='user-dropdown'>
+              <ul>
+                <li onClick={()=>navigate('/user/profile')} >User Profile</li>
+                <li onClick={async()=>{await dispatch(logoutUserAction());navigate('/user/sign-in')}} >Logout</li>
+              </ul>
+            </div>
           </div>
         </div>
 
