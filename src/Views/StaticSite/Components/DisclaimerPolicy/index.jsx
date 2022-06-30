@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import './style.scss'
-// import baseDomain, { homeAssets } from '../../assets/images/imageAsset'
+//import baseDomain, { homeAssets } from '../../assets/images/imageAsset'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 import { legacydisclaimer } from '../../assets/icons/icon'
@@ -31,12 +31,10 @@ const DisclaimerPolicy = ({
 
 
   const handleSubmit1 = async() => {
-
+    console.log('fuckkk')
     if (disData.terms === 'no') {
       return setEmpty(1)
-    } else if (disData.signature === null) {
-      return setEmpty(3)
-    } else if (disData.name === '') {
+    }else if (disData.name === '') {
       return setEmpty(2)
     } else {
       setEmpty(0)
@@ -54,9 +52,6 @@ const DisclaimerPolicy = ({
           gender: formData.gender,
           dob: formData.DOB,
           nationality: formData.nationality,
-          numberOfChildren: formData.numberOfChildren,
-          ageOfChild1: formData.age1,
-          ageOfChild2: formData.age2,
         },
         academicQualification: qualificationData,
         workExperience: listData,
@@ -66,7 +61,8 @@ const DisclaimerPolicy = ({
         },
         courseDetails: {
           courseId: currentCourse.key,
-          mode: formData.residental,
+          mode: formData.mode,
+          subMode:formData.residential,
           certificateImgAsset: courseAsset1,
           certificatePdfAsset: courseAsset2,
           startDate: '10000',
@@ -89,11 +85,12 @@ const DisclaimerPolicy = ({
           body
         )
         if(response?.data?.success){
-          if(formData.residental==='ONLINE'||formData.residental==='NONRESIDENTAIL'){
-            const paymentOrderResponse =  await axios.post('https://cms-dev-be.theyogainstituteonline.org/v1/payment/order', {
+          if(formData.mode ==='ONLINE'||formData.residental==='NONRESIDENTAIL'){
+            console.log(response.data.data['_id'])
+            const paymentOrderResponse =  await axios.post(`https://cms-dev-be.theyogainstituteonline.org/v1/payment/order?enrollmentFormId=${response.data.data['_id']}`, {
               amount: currentCourse.fees,
               notes: {
-                courseId: '',
+                description:currentCourse.metaDescription,
               }
             })
             if(!paymentOrderResponse?.data?.amount && !paymentOrderResponse?.data?.id) return 0

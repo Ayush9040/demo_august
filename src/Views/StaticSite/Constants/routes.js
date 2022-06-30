@@ -24,7 +24,7 @@ import Museum from '../Views/Museum'
 import Authentication from '../Views/Authentication'
 import SoicalPage from '../Views/SocialPage'
 import VolunteerPage from '../Views/Volunteer'
-import EnrollmentThankyou from '../Components/EnrollmentThankyou'
+import Thankyou from '../Components/EnrollmentForm/ThankYou'
 
 const staticSiteRoutes = [
   {
@@ -230,7 +230,7 @@ const staticSiteRoutes = [
   },
   
   {
-    Component: EnrollmentThankyou,
+    Component: Thankyou,
     path: '/enrollment_thankyou',
     exact: true,
     id: 'statisSiteUnderEnrollmentThankyou',
