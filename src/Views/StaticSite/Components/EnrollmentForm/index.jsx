@@ -183,7 +183,7 @@ const Enrollment = () => {
   return (
     <>
       <div className="enrollment_container ">
-        <div className="header">
+        {bold<5 && <div className="header">
           <Link to="/courses">
             <button className="x">x</button>
           </Link>
@@ -236,7 +236,7 @@ const Enrollment = () => {
               {bold === 4 && <div className="bottom-line"></div>}
             </li>
           </ul>
-        </div>
+        </div>}
 
         {bold === 0 ? (
           <>
