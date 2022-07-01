@@ -9751,7 +9751,7 @@ const classes = {
             },
             {
               listItem:
-                ' Gastro intestinal (GI) tract problems                ',
+                ' Gastro intestinal (GI) tract problems',
               subItems: [
                 'Constipation',
                 ' Irritable bowel syndrome (IBS)',
@@ -9813,7 +9813,7 @@ const classes = {
               subItems: ['Rheumatoid arthritis', 'Ankylosing spondylitis'],
             },
             {
-              listItem: 'Diabetes              ',
+              listItem: 'Diabetes',
               subItems: [],
             },
             {
@@ -9922,7 +9922,7 @@ const classes = {
         type: 'paragraph',
         content: {
           title: 'Duration',
-          text: ' 4 months          ',
+          text: [' 4 months '],
         },
       },
       {

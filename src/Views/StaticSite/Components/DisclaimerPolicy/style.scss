@@ -1,7 +1,18 @@
 .disclaimer-container { 
   margin: 2rem;
   border-radius: 20px;
-
+  .close {
+    position: relative;
+    //bottom: 2rem;
+    float: right;
+    font-size: 24px;
+    font-weight: 900;
+    display: flex;
+    margin-right: 80px;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+  } 
   .heading-content {
     display: flex;
     align-items: center;
@@ -9,18 +20,23 @@
     flex-direction: column;
     padding: 2rem 0 2rem 0;
     bottom: 2rem;
-    .close {
-      position: relative;
-      bottom: 2rem;
-      float: right;
-      font-size: 24px;
-      font-weight: 900;
-      display: flex;
-      margin-right: 80px;
-      border: none;
-      background-color: white;
-      cursor: pointer;
-    } 
+
+  }
+  .mid-content {
+    padding: 0 5rem;
+    height: 400px;
+    overflow-y: scroll;
+    width: 80%;
+    margin: 0 auto;
+
+
+    p {
+      font-size: 2rem;
+    }
+    ol {
+      font-size: 1.5rem;
+      padding-left: 1.5rem;
+    }
   }
 
   .disclaimer-policy{
@@ -31,21 +47,6 @@
   }
   .heading-content p{
     font-weight: bold;
-  }
-  .mid-content {
-    padding: 0 30rem;
-    height: 400px;
-    overflow-y: scroll;
-    
-
-
-    p {
-      font-size: 2rem;
-    }
-    ol {
-      font-size: 1.5rem;
-      padding-left: 1.5rem;
-    }
   }
   ::-webkit-scrollbar {
     width: 10px;

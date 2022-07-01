@@ -3,7 +3,6 @@ import './style.scss'
 
 const SelectDropDown = ({ text, dates = [1, 2, 3, 4, 5], isStyles, currentValue ,changeCurrentValue }) => {
   // const [select, setSelect] = useState(0)
-  //  console.log(select, 'fuck')
   return (
     <>
       <div

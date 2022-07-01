@@ -20,7 +20,6 @@
     font-size: 2.6rem;
     cursor: pointer;
 
-    
     .flower {
       display: flex;
       justify-content: center;
@@ -80,6 +79,23 @@
       color: #60606080;
     }
   }
+
+  small {
+    color: red;
+    font-size: 1.25rem;
+    float: right;
+    margin: -1.75rem 0 2rem 0;
+  }
+
+  .form_error {
+    small {
+      color: red;
+      font-size: 1.25rem;
+      float: right;
+      margin: -1.75rem 0 2rem 0;
+    }
+  }
+
   .grid_box {
     display: grid;
     grid-template-columns: 50% 50%;
@@ -192,7 +208,7 @@
           position: relative;
 }
         }
-        .experienced-lists p{
+        .experienced-lists p {
           font-size: 1.8rem;
           top: 1rem;
           position: relative;
@@ -233,8 +249,16 @@
     }
   }
 
+
+
 @media (max-width: '820px') {
   .main_div {
+    .form_error {
+      margin-bottom: 30px;
+      small {
+        margin: -1.75rem 3rem 1rem 0;
+      }
+    }
     .grid_box {
       display: flex;
       flex-direction: column;
@@ -248,6 +272,13 @@
         .work_flex_box {
           .worked {
             margin-left: 2.75rem;
+            small{
+              color: red;
+              font-size: 1.25rem;
+              display: block;
+              float: right;
+              margin-right: 3rem;
+            }
           }
         }
       }
@@ -343,7 +374,6 @@
     }
   }
   .other-last {
-    
     .reason-input {
       font-size: 1.5rem;
       border: none;
@@ -942,7 +972,6 @@ input[type='radio']:checked::before {
 }
 
 // Course Details ends
-
 
 //thank you page start
 

@@ -20,7 +20,7 @@ const Academic = ({
       <div className="grid_box">
         <div className="left_grid">
           <form>
-            <div>
+            <div className='form_error'>
               <InputComponent
                 type="text"
                 placeholder="School/College*"
@@ -31,20 +31,13 @@ const Academic = ({
                 errorCheck={setYearEmpty}
               />
               {yearEmpty === 1 && (
-                <small
-                  style={{
-                    color: 'red',
-                    fontSize: '1.25rem',
-                    float: 'right',
-                    margin: '-1.75rem 0 2rem 0',
-                  }}
-                >
+                <small>
                   {' '}
                   Please enter your school/college name
                 </small>
               )}
             </div>
-            <div>
+            <div className='form_error'>
               <InputComponent
                 type="text"
                 placeholder="Course*"
@@ -54,15 +47,9 @@ const Academic = ({
                 value={formData.course}
                 errorCheck={setYearEmpty}
               />
-              {!yearEmpty === 2 && (
-                <small
-                  style={{
-                    color: 'red',
-                    fontSize: '1.25rem',
-                    float: 'right',
-                    margin: '-1.75rem 0 0 0',
-                  }}
-                >
+              {yearEmpty === 2 && (
+                <small>
+
                   {' '}
                   Please enter your course
                 </small>
@@ -82,15 +69,7 @@ const Academic = ({
             />
           </div>
           {yearEmpty === 3 && (
-            <small
-              style={{
-                color: 'red',
-                fontSize: '1.25rem',
-                display: 'block',
-                float: 'right',
-                marginTop: '-1.75rem',
-              }}
-            >
+            <small>
               *Please Enter a valid year
             </small>
           )}
@@ -106,7 +85,7 @@ const Academic = ({
             </button>
           </div>
         </div>
-        <div className="right_grid">
+        <div className="right_grid form_error">
           <div className="listed_quality">
             Listed Qualifications :
             {qualificationData?.map((items, key) => {
@@ -120,14 +99,7 @@ const Academic = ({
             })}
           </div>
           {empty === 1 && (
-            <small
-              style={{
-                color: 'red',
-                fontSize: '1.25rem',
-                float: 'right',
-                margin: '-1.75rem 7rem 2rem 0',
-              }}
-            >
+            <small>
               *Please Enter Your Deatils!
             </small>
           )}

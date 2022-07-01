@@ -42,9 +42,9 @@ const Enrollment = () => {
   const [courseAsset1, setCourseAsset1] = useState(null)
   const [courseAsset2, setCourseAsset2] = useState(null)
   const [formData, setFormData] = useState({
-    name: user.firstName ? user.firstName : '',
+    name: user?.data?.firstName,
     phone: '',
-    email: user.email ? user.email : '',
+    email:  user?.data?.email,
     address1: '',
     address2: '',
     country: '',
@@ -137,19 +137,19 @@ const Enrollment = () => {
     } else if (formData.address1 === '') {
       return setEmpty(4)
     } else if (formData.country === '') {
-      return setEmpty(6)
+      return setEmpty(5)
     } else if (formData.state === '') {
-      return setEmpty(7)
+      return setEmpty(6)
     } else if (formData.city === '') {
-      return setEmpty(8)
+      return setEmpty(7)
     } else if (formData.pincode === '') {
-      return setEmpty(9)
+      return setEmpty(8)
     } else if (formData.DOB === '') {
-      return setEmpty(10)
+      return setEmpty(9)
     } else if (formData.nationality === '') {
-      return setEmpty(11)
+      return setEmpty(10)
     } else if (formData.gender === '') {
-      return setEmpty(15)
+      return setEmpty(11)
     } else {
       setEmpty(0)
       setBold(1)
