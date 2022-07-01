@@ -1,4 +1,5 @@
 import React,{ useEffect } from 'react'
+import { useState } from 'react'
 import { upload } from '../../assets/icons/icon'
 const CourseDetails = ({
   currentCourse,
@@ -16,6 +17,22 @@ const CourseDetails = ({
       setFormData({ ...formData,residental:'' })
     }
   }, [formData.mode])
+
+  const [pictureName,setPictureName]=useState('')
+  const [certificateName,setcertificateName]=useState('')
+  
+
+  // const getBase64 = (file, cb)=>{
+  //   let reader = new FileReader()
+  //   reader.readAsDataURL(file)
+  //   reader.onload = function() {
+  //     cb(reader.result)
+  //   }
+  //   reader.onerror = function(error) {
+  //     console.log('Error: ', error)
+  //   }
+  // }
+
   console.log(formData.mode,'mode check')
   console.log(formData.residental,'residantal check')
   return (
@@ -136,11 +153,11 @@ const CourseDetails = ({
                 <fieldset>
                   <label htmlFor="resume">
                     {courseAsset2
-                      ? courseAsset2.substring(0, 15)
+                      ? certificateName.substring(0, 15)
                       : 'Upload Certificate '}
                     <input
                       type={'file'}
-                      onChange={(e) => setCourseAsset2(e.target.files[0].name)}
+                      onChange={(e) => {setCourseAsset2(e.target.files[0].name);setcertificateName(e.target.files[0].name)}}
                       id="resume"
                       accept=".pdf"
                       placeholder="Upload Certificate"
@@ -152,12 +169,12 @@ const CourseDetails = ({
                 <fieldset>
                   <label htmlFor="image">
                     {courseAsset1
-                      ? courseAsset1.substring(0, 15)
+                      ? pictureName.substring(0, 15)
                       : 'Upload Passport size photo'}
                     <input
                       type={'file'}
                       id="image"
-                      onChange={(e) => setCourseAsset1(e.target.files[0].name)}
+                      onChange={(e) => {setCourseAsset1(e.target.files[0].name);setPictureName(e.target.files[0].name)}}
                       placeholder="Upload Passport size photo"
                       accept="image/*"
                     />

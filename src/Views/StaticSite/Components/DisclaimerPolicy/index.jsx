@@ -31,7 +31,6 @@ const DisclaimerPolicy = ({
 
 
   const handleSubmit1 = async() => {
-    console.log('fuckkk')
     if (disData.terms === 'no') {
       return setEmpty(1)
     }else if (disData.name === '') {
@@ -61,14 +60,13 @@ const DisclaimerPolicy = ({
         },
         courseDetails: {
           courseId: currentCourse.key,
+          courseName:currentCourse.title,
           mode: formData.mode,
           subMode:formData.residential,
-          certificateImgAsset: courseAsset1,
-          certificatePdfAsset: courseAsset2,
-          startDate: '10000',
-          endDate: '10000',
+          batch:currentCourse.batch,
+          imageAsset: courseAsset1,
+          certificateImgAsset: courseAsset2,
         },
-        signature: disData.signature,
       }
       let mailTemplate = {
         type: null,

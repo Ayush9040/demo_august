@@ -42,9 +42,9 @@ const Enrollment = () => {
   const [courseAsset1, setCourseAsset1] = useState(null)
   const [courseAsset2, setCourseAsset2] = useState(null)
   const [formData, setFormData] = useState({
-    name: user.firstName ? user.firstName : '',
+    name: user?.data?.firstName,
     phone: '',
-    email: user.email ? user.email : '',
+    email:  user?.data?.email,
     address1: '',
     address2: '',
     country: '',

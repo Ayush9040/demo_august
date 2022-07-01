@@ -10,6 +10,7 @@ import CourseTable from '../CourseComponents/CourseTable'
 import CourseQuote from '../CourseComponents/CourseQuote'
 import CourseURL from '../CourseComponents/CourseURL'
 import SelectDropDown from '../Select Dropdown'
+import { useSelector } from 'react-redux'
 //import { useParams } from 'react-router-dom'
 
 const CourseDetails = ({ pageDate }) => {
@@ -22,7 +23,7 @@ const CourseDetails = ({ pageDate }) => {
   // useEffect(() => {
   //   setCourseDate(localStorage.getItem('selectedDate'))
   // }, [])
-
+  const { isLoggedIn } = useSelector(state=>state.auth)
   
 
   console.log(pageDate, 'pageData')
@@ -153,7 +154,7 @@ const CourseDetails = ({ pageDate }) => {
               'Lorem Ipsum is simply dummy text of the printing and typesetting industry. '}
           </p>
           <div className="course-options">
-            {selectDate ? <Link to={`/user/sign-in/${pageDate.key}/?date=${selectDate}`}>
+            {selectDate ? <Link to={ isLoggedIn ? `/enrollment/${pageDate.key}/?date=${selectDate}`:`/user/sign-in/${pageDate.key}/?date=${selectDate}`}>
               <CommonBtn text={'Enroll Now'} />
             </Link> :  scroll() }
             
