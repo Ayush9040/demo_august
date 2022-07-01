@@ -116,6 +116,24 @@
     }
   }
 }
+
+@media(max-width:1200px)
+{
+  .brahma-container 
+  {.content-container {
+    // display: grid;
+    display: block;  
+  // flex-wrap: wrap;
+     .image-content
+     {
+       width:80%;
+      // padding-left: ;
+      margin-left: 10%;
+     }
+}
+}
+}
+
 @media (max-width: 900px) {
   .brahma-container {
     & :nth-child(even) {
@@ -124,8 +142,8 @@
       }
     }
     .content-container {
-      display: flex;
-      flex-direction: column;
+      // display: flex;
+      // flex-direction: column;
       & > div {
         flex: 1;
       }
@@ -144,8 +162,30 @@
       width: fit-content;
     }
   }
+  .donation-container-1 {.donation-buttons 
+  {
+    .input-box{
+      .button-flex
+      {
+        button{
+          height: 50px;
+          width: 120px;
+          margin-left: 5px;
+        }
+      }
+      .enter-button > input{
+        height: 50px;
+        width: 150px;
+      }
+    }
+  .donate-button 
+  {
+    width: 100%;
+    .global-common-btn
+  {
+   padding: 1rem 9rem;
+   width:90%
+  
+}}
 }
-
-//   .content-container :nth-child(even){
-//       flex-direction: row-reverse;
-//   }
+}}
