@@ -64,6 +64,7 @@ const CourseDetails = ({
                   name="mode"
                   value="OFFLINE"
                   disabled={currentCourse.onCampus === false ? true : false}
+                  checked={formData.mode==='OFFLINE'}
                   style={
                     currentCourse.onCampus === false
                       ? { background: 'grey' }
@@ -86,6 +87,7 @@ const CourseDetails = ({
                   name="mode"
                   value="ONLINE"
                   disabled={currentCourse.online === false ? true : false}
+                  checked={formData.mode==='ONLINE'}
                   style={
                     currentCourse.online === false ? { background: 'grey' } : {}
                   }

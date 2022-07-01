@@ -24,7 +24,7 @@ const Other = ({ empty, formData, setBold, setFormData,handleEmpty4 }) => {
         </div>
 
         <div className="about-us">
-          <p className="about-label">How do you hear about us?</p>
+          <p className="about-label">How do you hear about us?*</p>
           <div className="radio-section">
             <form className="radio-text">
               <label className="label-1">
@@ -33,6 +33,7 @@ const Other = ({ empty, formData, setBold, setFormData,handleEmpty4 }) => {
                   type="radio"
                   value="internet"
                   name="source"
+                  checked={formData.source==='internet'}
                   onChange={(e) => {
                     if (e.target.checked) {
                       setFormData({
@@ -49,6 +50,7 @@ const Other = ({ empty, formData, setBold, setFormData,handleEmpty4 }) => {
                   type="radio"
                   value="media"
                   name="source"
+                  checked={formData.source==='media'}
                   onChange={(e) => {
                     if (e.target.checked) {
                       setFormData({
@@ -65,6 +67,7 @@ const Other = ({ empty, formData, setBold, setFormData,handleEmpty4 }) => {
                   type="radio"
                   value="friends"
                   name="source"
+                  checked={formData.source==='friends'}
                   onChange={(e) => {
                     if (e.target.checked) {
                       setFormData({
@@ -81,6 +84,7 @@ const Other = ({ empty, formData, setBold, setFormData,handleEmpty4 }) => {
                   type="radio"
                   value="events"
                   name="source"
+                  checked={formData.source==='events'}
                   onChange={(e) => {
                     if (e.target.checked) {
                       setFormData({
@@ -97,6 +101,7 @@ const Other = ({ empty, formData, setBold, setFormData,handleEmpty4 }) => {
                   type="radio"
                   value="others"
                   name="source"
+                  checked={formData.source==='others'}
                   onChange={(e) => {
                     if (e.target.checked) {
                       setFormData({

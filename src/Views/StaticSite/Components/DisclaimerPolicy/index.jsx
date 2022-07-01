@@ -31,6 +31,7 @@ const DisclaimerPolicy = ({
 
 
   const handleSubmit1 = async() => {
+    console.log(formData.residental)
     if (disData.terms === 'no') {
       return setEmpty(1)
     }else if (disData.name === '') {
@@ -62,7 +63,7 @@ const DisclaimerPolicy = ({
           courseId: currentCourse.key,
           courseName:currentCourse.title,
           mode: formData.mode,
-          subMode:formData.residential,
+          subMode:formData.residental,
           batch:currentCourse.batch,
           imageAsset: courseAsset1,
           certificateImgAsset: courseAsset2,

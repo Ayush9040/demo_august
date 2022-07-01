@@ -227,7 +227,7 @@ const Personal = ({
                   type="radio"
                   value="MALE"
                   name="gender"
-                  selected={formData.gender==='MALE'}
+                  checked={formData.gender==='MALE'}
                   onChange={(e) => {
                     if (e.target.checked) {
                       setFormData({ ...formData, gender: e.target.value })
@@ -242,7 +242,7 @@ const Personal = ({
                   type="radio"
                   value="FEMALE"
                   name="gender"
-                  selected={formData.gender==='FEMALE'}
+                  checked={formData.gender==='FEMALE'}
                   onChange={(e) => {
                     if (e.target.checked) {
                       setFormData({ ...formData, gender: e.target.value }, setEmpty(0))
