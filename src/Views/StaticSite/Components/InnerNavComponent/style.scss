@@ -65,14 +65,15 @@
             padding: 0.5rem;
             transition: 0.3s;
             text-align: center;
+            &:hover {
+                background-color: #fff;
+                color: rgb(202, 70, 37);;
+              }
         }
     }
   }
   }
-  .inner-nav-container ul li:hover {
-    background-color: #fff;
-    color: rgb(202, 70, 37);;
-  }
+
   .career-navigation-sm {
       display: none;
   }
