@@ -136,7 +136,7 @@
         margin: 0 auto;
         width: 80%;
         text-align: center;
-        font-size: 1rem;
+        font-size: 2.25rem;
         padding-top: 0;
     }
     .common-container .banner-container .banner-heading {
@@ -153,6 +153,9 @@
 @media (max-width: "420px") {
     .common-container .banner-container .banner-heading {
         font-size: 1.2rem !important;
+    }
+    .common-container .banner-container .banner-text{
+        font-size: 2rem;
     }
     // .common-container .banner-container {
     //     padding-top: 13%;
