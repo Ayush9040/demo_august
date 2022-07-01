@@ -46,10 +46,10 @@ const Academic = ({
                 keyName="course"
                 value={formData.course}
                 errorCheck={setYearEmpty}
-
               />
               {yearEmpty === 2 && (
                 <small>
+
                   {' '}
                   Please enter your course
                 </small>
@@ -74,7 +74,7 @@ const Academic = ({
             </small>
           )}
           <div className="add_button_div">
-            Add More
+            Add more
             <button
               className="add_button"
               onClick={() => {

@@ -204,9 +204,14 @@
         margin-top: 2rem;
         .qualification_lists p {
           font-size: 1.8rem;
+          top: 1rem;
+          position: relative;
+}
         }
         .experienced-lists p {
           font-size: 1.8rem;
+          top: 1rem;
+          position: relative;
         }
       }
     }
@@ -243,7 +248,6 @@
       background-color: white;
     }
   }
-}
 
 
 
