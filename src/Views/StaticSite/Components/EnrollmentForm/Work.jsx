@@ -17,7 +17,7 @@ const Work = ({
       <div className="grid_box">
         <div className="left_grid">
           <form>
-            <div>
+            <div >
               <InputComponent
                 type="text"
                 placeholder="Company Name"
@@ -52,16 +52,9 @@ const Work = ({
                   errorCheck={setResgin}
                 />
                 {resgin === 1 && (
-                  <style
-                    style={{
-                      color: 'red',
-                      fontSize: '1.25rem',
-                      display: 'block',
-                      float: 'right',
-                    }}
-                  >
+                  <small>
                     Please enter a valid year
-                  </style>
+                  </small>
                 )}
               </div>
               <div>
@@ -76,16 +69,9 @@ const Work = ({
                   errorCheck={setResgin}
                 />
                 {resgin === 2 && (
-                  <style
-                    style={{
-                      color: 'red',
-                      fontSize: '1.25rem',
-                      display: 'block',
-                      float: 'right',
-                    }}
-                  >
+                  <small>
                     Please enter a valid year
-                  </style>
+                  </small>
                 )}
               </div>
             </div>
@@ -117,17 +103,6 @@ const Work = ({
               )
             })}
           </div>
-          {/* {resgin === 1 && (
-            <small
-              style={{
-                color: 'red',
-                marginLeft: '45px',
-                fontSize: '15px',
-              }}
-            >
-              *Please Enter Your Deatils!
-            </small>
-          )} */}
         </div>
       </div>
       <div className="button_box">

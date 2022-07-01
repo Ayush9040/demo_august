@@ -2,23 +2,15 @@ import React from 'react'
 import './formstyles.scss'
 import InputComponent from '../InputComponent'
 
-const Personal = ({
-  handleEmpty1,
-  empty,
-  setFormData,
-  formData,
-  setEmpty
-}) => {
-
+const Personal = ({ handleEmpty1, empty, setFormData, formData, setEmpty }) => {
   const today = new Date().toISOString().split('T')[0]
 
-  
   return (
     <div className="main_div">
       <div className="grid_box">
         <div className="left_grid">
           <form>
-            <div>
+            <div className='form_error'>
               <InputComponent
                 type="text"
                 placeholder="Name*"
@@ -27,21 +19,10 @@ const Personal = ({
                 keyName="name"
                 errorCheck={setEmpty}
               />
-              {empty === 1 && (
-                <small
-                  style={{
-                    color: 'red',
-                    fontSize: '1.25rem',
-                    float: 'right',
-                    margin: '-1.75rem 0 2rem 0'
-                  }}
-                >
-                  {' '}
-                  Please enter your name
-                </small>
-              )}
+              {empty === 1 && <small> Please enter your name</small>}
             </div>
-            <div>
+            
+            <div className='form_error'>
               <InputComponent
                 type="email"
                 id="text"
@@ -52,20 +33,13 @@ const Personal = ({
                 errorCheck={setEmpty}
               />
               {empty === 2 && (
-                <small
-                  style={{
-                    color: 'red',
-                    fontSize: '1.25rem',
-                    float: 'right',
-                    margin: '-1.75rem 0 2rem 0'
-                  }}
-                >
+                <small>
                   {' '}
                   Please enter an valid email
                 </small>
               )}
             </div>
-            <div>
+            <div className='form_error'>
               <InputComponent
                 type="text"
                 placeholder="Phone Number*"
@@ -75,20 +49,13 @@ const Personal = ({
                 errorCheck={setEmpty}
               />
               {empty === 3 && (
-                <small
-                  style={{
-                    color: 'red',
-                    fontSize: '1.25rem',
-                    float: 'right',
-                    margin: '-1.75rem 0 2rem 0'
-                  }}
-                >
+                <small>
                   {' '}
                   Please enter a valid phone nuber
                 </small>
               )}
             </div>
-            <div>
+            <div className='form_error'>
               <InputComponent
                 type="text"
                 placeholder="Address Line 1*"
@@ -98,20 +65,13 @@ const Personal = ({
                 errorCheck={setEmpty}
               />
               {empty === 4 && (
-                <small
-                  style={{
-                    color: 'red',
-                    fontSize: '1.25rem',
-                    float: 'right',
-                    margin: '-1.75rem 0 2rem 0'
-                  }}
-                >
+                <small>
                   {' '}
                   Please enter your address
                 </small>
               )}
             </div>
-            <div>
+            <div className='form_error'>
               <InputComponent
                 type="text"
                 placeholder="Address Line 2"
@@ -121,7 +81,7 @@ const Personal = ({
                 errorCheck={setEmpty}
               />
             </div>
-            <div>
+            <div className='form_error'>
               <InputComponent
                 type="text"
                 placeholder="Country*"
@@ -130,21 +90,14 @@ const Personal = ({
                 keyName="country"
                 errorCheck={setEmpty}
               />
-              {empty === 6 && (
-                <small
-                  style={{
-                    color: 'red',
-                    fontSize: '1.25rem',
-                    float: 'right',
-                    margin: '-1.75rem 0 2rem 0'
-                  }}
-                >
+              {empty === 5 && (
+                <small>
                   {' '}
                   Please enter your country
                 </small>
               )}
             </div>
-            <div>
+            <div className='form_error'>
               {' '}
               <InputComponent
                 type="text"
@@ -154,21 +107,14 @@ const Personal = ({
                 keyName="state"
                 errorCheck={setEmpty}
               />
-              {empty === 7 && (
-                <small
-                  style={{
-                    color: 'red',
-                    fontSize: '1.25rem',
-                    float: 'right',
-                    margin: '-1.75rem 0 2rem 0'
-                  }}
-                >
+              {empty === 6 && (
+                <small>
                   {' '}
                   Please enter your state
                 </small>
               )}
             </div>
-            <div>
+            <div className='form_error'>
               <InputComponent
                 type="text"
                 placeholder="City*"
@@ -177,15 +123,8 @@ const Personal = ({
                 keyName="city"
                 errorCheck={setEmpty}
               />
-              {empty === 8 && (
-                <small
-                  style={{
-                    color: 'red',
-                    fontSize: '1.25rem',
-                    float: 'right',
-                    margin: '-1.75rem 0 2rem 0'
-                  }}
-                >
+              {empty === 7 && (
+                <small >
                   {' '}
                   Please enter your city
                 </small>
@@ -195,7 +134,7 @@ const Personal = ({
         </div>
         <div className="right_grid">
           <form>
-            <div>
+            <div className='form_error'>
               <InputComponent
                 type="number"
                 placeholder="Pincode*"
@@ -204,15 +143,8 @@ const Personal = ({
                 keyName="pincode"
                 errorCheck={setEmpty}
               />
-              {empty === 9 && (
-                <small
-                  style={{
-                    color: 'red',
-                    fontSize: '1.25rem',
-                    float: 'right',
-                    margin: '-1.75rem 0 2rem 0'
-                  }}
-                >
+              {empty === 8 && (
+                <small >
                   {' '}
                   Please enter your pincode
                 </small>
@@ -220,7 +152,7 @@ const Personal = ({
             </div>
 
             <div className="personal_gender">Gender*</div>
-            <div className="gender">
+            <div className="gender form_error">
               <label className="gender_radio">
                 Male&nbsp;
                 <input
@@ -245,26 +177,22 @@ const Personal = ({
                   checked={formData.gender==='FEMALE'}
                   onChange={(e) => {
                     if (e.target.checked) {
-                      setFormData({ ...formData, gender: e.target.value }, setEmpty(0))
+                      setFormData(
+                        { ...formData, gender: e.target.value },
+                        setEmpty(0)
+                      )
                     }
                   }}
                 />
               </label>
-              {empty === 15 && (
-                <small
-                  style={{
-                    color: 'red',
-                    fontSize: '1.25rem',
-                    float: 'right',
-                    margin: '-1.75rem 0 2rem 0'
-                  }}
-                >
+              {empty === 9 && (
+                <small>
                   {' '}
                   Please select one option
                 </small>
               )}
             </div>
-            <div className="DOB_box">
+            <div className="DOB_box form_error">
               <InputComponent
                 type="text"
                 placeholder="DOB*"
@@ -274,23 +202,15 @@ const Personal = ({
                 setField={setFormData}
                 keyName="DOB"
                 errorCheck={setEmpty}
-                
               />
               {empty === 10 && (
-                <small
-                  style={{
-                    color: 'red',
-                    fontSize: '1.25rem',
-                    float: 'right',
-                    margin: '-1.75rem 0 2rem 0'
-                  }}
-                >
+                <small>
                   {' '}
                   Please enter your DOB
                 </small>
               )}
             </div>
-            <div>
+            <div className='form_error'>
               <InputComponent
                 type="text"
                 placeholder="Nationality*"
@@ -300,14 +220,7 @@ const Personal = ({
                 errorCheck={setEmpty}
               />
               {empty === 11 && (
-                <small
-                  style={{
-                    color: 'red',
-                    fontSize: '1.25rem',
-                    float: 'right',
-                    margin: '-1.75rem 0 2rem 0'
-                  }}
-                >
+                <small>
                   {' '}
                   Please enter your nationality
                 </small>

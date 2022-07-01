@@ -16,7 +16,7 @@ const CourseUList = ({ content }) => {
             <li key={i}>
               {item.listItem}
               <ul type="circle">
-                {item.subItems.map((item, i) => {
+                {item?.subItems?.map((item, i) => {
                   return <li key={i}>{item}</li>
                 })}
               </ul>

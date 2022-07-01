@@ -55,9 +55,9 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange })
       {
         id: 3,
         ques: '900 Hour Courses',
-        ans: [{ url: '/courses/course/3%20Months%20TTC/', text: '3 Months TTC-On Campus-English' },
-          { url: '/courses/course/4-Months-900hr/', text: '4 Months TTC-On Campus-English' },
-          { url: '/courses/course/7-Months-900hr/', text: '7 Months TTC-Online & On Campus-English' },
+        ans: [{ url: '/courses/course/3-months-ttc/', text: '3 Months TTC-On Campus-English' },
+          { url: '/courses/course/4-months-900hr/', text: '4 Months TTC-On Campus-English' },
+          { url: '/courses/course/7-months-900hr/', text: '7 Months TTC-Online & On Campus-English' },
           { url: '/courses/course/1-year-900hr/', text: '1 Year TTC-Online & On Campus-Hindi' },
           { url: '/courses/course/2-year-900hr/', text: '2 Years TTC-Online & On Campus-English' },],
       },
@@ -128,8 +128,8 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange })
           <div>
             <h4>
               <ul>
-                <Link to=''><li>7 Days Health Camp</li></Link>
-                <Link to=''><li>21 Days Better Living Course</li></Link>
+                <Link to='/courses/course/7-days-heath-camp-on-campus/'><li>7 Days Health Camp</li></Link>
+                <Link to='/courses/course/batch1-21days-morning-oncampus/'><li>21 Days Better Living Course</li></Link>
                 <Link to='/courses/course/batch-1-200hr/'><li>200 Hour 1 Month BTTC Course</li></Link>
                 <Link to='/courses/course/7-Months-900hr/'><li>900 Hour 3 Month ATTC Course</li></Link>
                 <Link to=''><li> Pregnancy Camp</li></Link>
