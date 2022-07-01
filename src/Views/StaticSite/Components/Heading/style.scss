@@ -50,6 +50,12 @@
     }
 }
 
+@media (max-width: 900px) {
+    .heading-text h1{
+        font-size: 2.25rem;
+    }
+}
+
 @media (max-width:420px) {
     .heading-content{
         gap: 10px;

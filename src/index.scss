@@ -156,6 +156,9 @@ a {
   .slick-dots li {
     margin: 0 1rem !important;
   }
+  .global-padding{
+    padding: 1.5rem;
+  }
 }
 
 @media (max-width: 420px) {
@@ -169,6 +172,6 @@ a {
     font-size: 1.5rem;
   }
   .global-padding {
-    padding: 5rem 1.5rem;
+    padding: 1.5rem;
   }
 }
