@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react'
-import CommonBannerNav2 from '../../../../Components/EcomNav'
 import { Link, useNavigate } from 'react-router-dom'
 import './style.scss'
 import CommonBtn from '../../../../Components/commonbtn'
 import InputComponent from '../../../../Components/InputComponent'
 import { validateEmail } from '../../../../../../helpers'
 import axios from 'axios'
+import InnerNavComponent from '../../../../Components/InnerNavComponent'
 
 const SignUp = () => {
 
@@ -54,9 +54,17 @@ const SignUp = () => {
     navigate('/user/sign-in')
   }
 
+  const UserNav = {
+    title: 'alumni-events',
+    color: 'orange',
+    menuColor: 'black',
+    menuItems: [
+    ],
+  }
+
   return (
     <div className="signin-container">
-      <CommonBannerNav2 />
+      <InnerNavComponent abc={UserNav} />
       <div className="signin-form">
         <form onSubmit={handleSubmit}>
           <h1>Sign Up</h1>

@@ -8,12 +8,12 @@ import { loginUserAction } from '../../Auth.actions'
 
 import CommonBtn from '../../../../Components/commonbtn'
 import InputComponent from '../../../../Components/InputComponent'
-import CommonBannerNav2 from '../../../../Components/EcomNav'
 
 import { mail, lock } from '../../../../assets/icons/icon'
 
 
 import './style.scss'
+import InnerNavComponent from '../../../../Components/InnerNavComponent'
 
 const SignIn = () => {
   const dispatch = useDispatch()
@@ -51,9 +51,17 @@ const SignIn = () => {
     }, navigate))
   }
 
+  const UserNav = {
+    title: 'alumni-events',
+    color: 'orange',
+    menuColor: 'black',
+    menuItems: [
+    ],
+  }
+
   return (
     <div className="signin-container">
-      <CommonBannerNav2 />
+      <InnerNavComponent abc={UserNav} />
       <div className="signin-form">
         <form>
           <h1>Sign In</h1>
