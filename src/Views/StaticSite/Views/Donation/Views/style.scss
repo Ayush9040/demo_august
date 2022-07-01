@@ -116,6 +116,24 @@
     }
   }
 }
+
+@media(max-width:1200px)
+{
+  .brahma-container 
+  {.content-container {
+    // display: grid;
+    display: block;  
+  // flex-wrap: wrap;
+     .image-content
+     {
+       width:80%;
+      // padding-left: ;
+      margin-left: 10%;
+     }
+}
+}
+}
+
 @media (max-width: 900px) {
   .brahma-container {
     & :nth-child(even) {
@@ -124,8 +142,8 @@
       }
     }
     .content-container {
-      display: flex;
-      flex-direction: column;
+      // display: flex;
+      // flex-direction: column;
       & > div {
         flex: 1;
       }
@@ -146,6 +164,3 @@
   }
 }
 
-//   .content-container :nth-child(even){
-//       flex-direction: row-reverse;
-//   }
