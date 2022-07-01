@@ -162,5 +162,30 @@
       width: fit-content;
     }
   }
+  .donation-container-1 {.donation-buttons 
+  {
+    .input-box{
+      .button-flex
+      {
+        button{
+          height: 50px;
+          width: 120px;
+          margin-left: 5px;
+        }
+      }
+      .enter-button > input{
+        height: 50px;
+        width: 150px;
+      }
+    }
+  .donate-button 
+  {
+    width: 100%;
+    .global-common-btn
+  {
+   padding: 1rem 9rem;
+   width:90%
+  
+}}
 }
-
+}}
