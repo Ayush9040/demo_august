@@ -15,31 +15,31 @@ const OurOfferings = () => {
       name: '7-day Yoga Health Camp',
       description:
         'A powerful and life-changing experience, this is an introductory course to yoga theory and practice, within the premises of The Yoga Institute.',
-      redirect:'',
+      redirect:'/courses/course/7-days-heath-camp-on-campus/',
       timeline:'7 days',
-      price:'8000'
+      price:'8000' 
     },
     {
       name: '21-Day Better Living Course',
       description:
         'This popular course aims to integrate yoga philosophy and healthy routines in everyday life. We give you tools and techniques to help you manage your studies, home life, work life and other activities.',
-      redirect:'',
+      redirect:'/courses/course/batch1-21days-morning-oncampus/',
       timeline:'21 days',
-      price:'1600'
+      price:'1600'  
     },
     {
       name: 'Regular Asana Classes',
       description:
         'Daily one hour asana classes for people of all age groups to help them bring balance and serenity into their lives.',
-      redirect:'',
+      redirect:'/courses/course/asana-regular-classes-men-women/',
       timeline:'Any Day',
-      price:'1000'
+      price:'1000' 
     },
     {
       name: 'Children’s Regular Classes',
       description:
         'specially designed for children, the asana class helps them balance their academics along with their physical and mental health.',
-      redirect:'',
+      redirect:'/courses/course/childrens-regular-class-oncampus/',
       timeline:'Any Day',
       price:'1000'
     },
@@ -47,7 +47,7 @@ const OurOfferings = () => {
       name: '7-month TTC',
       description:
         'This course provides an in-depth study of classical ashtanga yoga which teaches core yoga philosophy and technology. Participants can become internationally certified yoga trainers on completing the course.',
-      redirect:'/courses/ttc-courses',
+      redirect:'/courses/course/7-months-900hr/',
       timeline:'7-month',
       price:'50,000'
     },

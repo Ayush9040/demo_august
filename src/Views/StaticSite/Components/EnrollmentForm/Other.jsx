@@ -24,7 +24,7 @@ const Other = ({ empty, formData, setBold, setFormData,handleEmpty4 }) => {
         </div>
 
         <div className="about-us">
-          <p className="about-label">How do you hear about us?</p>
+          <p className="about-label">How do you hear about us?*</p>
           <div className="radio-section">
             <form className="radio-text">
               <label className="label-1">
