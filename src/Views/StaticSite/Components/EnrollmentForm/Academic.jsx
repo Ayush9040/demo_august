@@ -53,9 +53,8 @@ const Academic = ({
                 keyName="course"
                 value={formData.course}
                 errorCheck={setYearEmpty}
-
               />
-              {yearEmpty === 2 && (
+              {!yearEmpty === 2 && (
                 <small
                   style={{
                     color: 'red',
@@ -96,7 +95,7 @@ const Academic = ({
             </small>
           )}
           <div className="add_button_div">
-            Add More
+            Add more
             <button
               className="add_button"
               onClick={() => {

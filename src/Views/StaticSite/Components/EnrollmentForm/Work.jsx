@@ -31,7 +31,7 @@ const Work = ({
             <div>
               <InputComponent
                 type="text"
-                placeholder="Role when leaving the company"
+                placeholder="Role when leaving the job"
                 form={formData}
                 setField={setFormData}
                 keyName="leavejob"
@@ -90,7 +90,7 @@ const Work = ({
               </div>
             </div>
             <div className="add_button_div">
-              Add More
+              Add more
               <button
                 className="add_button"
                 onClick={(e) => {
