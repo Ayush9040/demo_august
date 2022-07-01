@@ -35,12 +35,23 @@ const Facts = () => {
           </div>
         </div>
       </div>
+      <div className='slider slider-m'>
+        <input
+          type={'range'}
+          min={0}
+          max={dateRange.length - 1}
+          value={rangeIndex}
+          onChange={(e) => handleNavigate(e.target.value)}
+        />
+      </div>
       <div className='facts-gallery'>
         <div className='facts-gallery-grid'>
           {selectedRange?.images.map((img, idx) => {
             if (idx < 6) {
               return (
-                <img key={idx} src={img} className={'grid-img-' + (idx + 1)} />
+                <div className={'grid-img-' + (idx + 1)} >
+                  <img key={idx} src={img}  />
+                </div>
               )
             }
             return

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import AlumniGrid from '../AlumniGrid'
+//import AlumniGrid from '../AlumniGrid'
 import { data } from './data'
 import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
@@ -46,7 +46,7 @@ const AlumniCarousel = () => {
           }
         })}
       </Slider>
-      <AlumniGrid images={[]} notEvent={true} />
+      {/* <AlumniGrid images={[]} notEvent={true} /> */}
       <Link to="/experience">
         {' '}
         <CommonBtn text={'Explore All'} />

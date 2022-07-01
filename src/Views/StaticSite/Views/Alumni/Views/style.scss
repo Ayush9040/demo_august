@@ -252,11 +252,15 @@ margin-top: 20rem;
     .seminar-series {
         .alumni-content{
             margin: 10rem 0;
+            .newsletter-content{
+                padding-left: 0;
+            }
         }
         .newsletter-content {
             top: auto;
             left: auto;
             width: 100%;
+            padding-left: 0;
             h2 {
                 color: #fff;
                 .newsletter-date {

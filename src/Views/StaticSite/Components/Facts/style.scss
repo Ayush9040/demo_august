@@ -1,6 +1,9 @@
 .facts-container{
   padding-bottom: 3rem;
   padding-top: 5rem;
+  .slider-m{
+    display: none;
+  }
   .divider{
     margin-top: 3rem;
     width: 100%;
@@ -48,28 +51,56 @@
     .grid-img-1 {
       grid-area: img1;
       height: 200px;
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: fill;
+      }
     }
     .grid-img-2 {
       grid-area: img2;
       height: 200px;
-
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: fill;
+      }
     }
     .grid-img-3 {
       grid-area: img3;
       height: calc(400px - 0px);
-
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: fill;
+      }
     }
     .grid-img-4 {
       grid-area: img4;
       height: 200px;
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: fill;
+      }
     }
     .grid-img-5 {
       grid-area: img5;
       height: 200px;
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: fill;
+      }
     }
     .grid-img-6 {
       grid-area: img6;
       height: calc(400px - 0px);
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: fill;
+      }
     }
     .slider{
         padding: 3rem 0 0;
@@ -208,5 +239,322 @@
 
     }
     
+}
+}
+
+@media(max-width:768px){
+  .facts-container{
+    .slider-m{
+      display: block;
+    }
+    .slider{
+      padding: 3rem 0 0;
+      margin-top: 3rem;
+      input[type=range] {
+          -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+          width: 90%; /* Specific width is required for Firefox. */
+          background: transparent; /* Otherwise white in Chrome */
+          display: block;
+          margin: 0 auto;
+        }
+        
+        input[type=range]::-webkit-slider-thumb {
+          -webkit-appearance: none;
+        }
+        
+        input[type=range]:focus {
+          outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+        }
+        
+        input[type=range]::-ms-track {
+          width: 100%;
+          cursor: pointer;
+        
+          /* Hides the slider so custom styles can be added */
+          background: transparent; 
+          border-color: transparent;
+          color: transparent;
+        }
+      
+        input[type=range]::-webkit-slider-runnable-track {
+          width: 100%;
+          height: 1px;
+          cursor: pointer;
+          box-shadow: 1px 1px 1px #aaa, 0px 0px 1px #aaa;
+          background: #aaa;
+          border-radius: 1.3px;
+          border: 0.2px solid #aaa;
+        }
+        
+        input[type=range]:focus::-webkit-slider-runnable-track {
+          background: #aaa;
+        }
+        
+        input[type=range]::-moz-range-track {
+          width: 100%;
+          height: 1px;
+          cursor: pointer;
+          background: #aaa;
+          border-radius: 1.3px;
+          border: 0.2px solid #aaa;
+        }
+        
+        input[type=range]::-ms-track {
+          width: 100%;
+          height: 1px;
+          cursor: pointer;
+          background: transparent;
+          border-color: transparent;
+          border-width: 16px 0;
+          color: transparent;
+        }
+        input[type=range]::-ms-fill-lower {
+          background: #aaa;
+          border: 0.2px solid #aaa;
+          border-radius: 2.6px;
+        }
+        input[type=range]:focus::-ms-fill-lower {
+          background: #aaa;
+        }
+        input[type=range]::-ms-fill-upper {
+          background: #aaa;
+          border: 0.2px solid #aaa;
+          border-radius: 2.6px;
+      }
+      
+        input[type=range]:focus::-ms-fill-upper {
+          background: #aaa;
+        }
+      
+        /* Special styling for WebKit/Blink */
+      input[type=range]::-webkit-slider-thumb {
+          -webkit-appearance: none;
+          border: 2px solid var(--brick-red);
+          height: 20px;
+          width: 20px;
+          border-radius: 100px;
+          background: #fff;
+          cursor: pointer;
+          margin-top: -10px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+         
+        }
+        
+        /* All the same stuff for Firefox */
+        input[type=range]::-moz-range-thumb {
+         
+          border: 2px solid var(--brick-red);
+          height: 20px;
+          width: 20px;
+          border-radius: 100px;
+          background: #fff;
+          cursor: pointer;
+        }
+        
+        /* All the same stuff for IE */
+        input[type=range]::-ms-thumb {
+          border: 2px solid var(--brick-red);
+          height: 20px;
+          width: 20px;
+          border-radius: 100px;
+          background: #fff;
+          cursor: pointer;
+        }
+  }
+  .divider{
+    margin-top: 6rem;
+  }
+  }
+  .facts-gallery{
+    margin-top: 3rem;
+  margin-bottom: 3rem;
+    .facts-gallery-grid{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        gap: 0.5%;
+        grid-template-areas: 
+        "img1"
+        "img2"
+        "img3"
+        "img4"
+        "img5"
+        "img6";
+        // img{
+        //   width: 100%;
+        //   // height: 100%;
+        //   object-fit: cover;
+        // }
+    }
+    // .grid-img-3{
+    //   grid-column: span 2;
+    //   grid-row: span 2;
+    // }
+    .grid-img-1 {
+      grid-area: img1;
+      height: 200px;
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: fill;
+      }
+    }
+    .grid-img-2 {
+      grid-area: img2;
+      height: 200px;
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: fill;
+      }
+    }
+    .grid-img-3 {
+      grid-area: img3;
+      height: calc(400px - 0px);
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: fill;
+      }
+    }
+    .grid-img-4 {
+      grid-area: img4;
+      height: 200px;
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: fill;
+      }
+    }
+    .grid-img-5 {
+      grid-area: img5;
+      height: 200px;
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: fill;
+      }
+    }
+    .grid-img-6 {
+      grid-area: img6;
+      height: calc(400px - 0px);
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: fill;
+      }
+    }
+    .slider{
+      display: none;
+        padding: 3rem 0 0;
+        margin-top: 3rem;
+        input[type=range] {
+            -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+            width: 90%; /* Specific width is required for Firefox. */
+            background: transparent; /* Otherwise white in Chrome */
+            display: block;
+            margin: 0 auto;
+          }
+          
+          input[type=range]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+          }
+          
+          input[type=range]:focus {
+            outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+          }
+          
+          input[type=range]::-ms-track {
+            width: 100%;
+            cursor: pointer;
+          
+            /* Hides the slider so custom styles can be added */
+            background: transparent; 
+            border-color: transparent;
+            color: transparent;
+          }
+        
+          input[type=range]::-webkit-slider-runnable-track {
+            width: 100%;
+            height: 1px;
+            cursor: pointer;
+            box-shadow: 1px 1px 1px #aaa, 0px 0px 1px #aaa;
+            background: #aaa;
+            border-radius: 1.3px;
+            border: 0.2px solid #aaa;
+          }
+          
+          input[type=range]:focus::-webkit-slider-runnable-track {
+            background: #aaa;
+          }
+          
+          input[type=range]::-moz-range-track {
+            width: 100%;
+            height: 1px;
+            cursor: pointer;
+            background: #aaa;
+            border-radius: 1.3px;
+            border: 0.2px solid #aaa;
+          }
+          
+          input[type=range]::-ms-track {
+            width: 100%;
+            height: 1px;
+            cursor: pointer;
+            background: transparent;
+            border-color: transparent;
+            border-width: 16px 0;
+            color: transparent;
+          }
+          input[type=range]::-ms-fill-lower {
+            background: #aaa;
+            border: 0.2px solid #aaa;
+            border-radius: 2.6px;
+          }
+          input[type=range]:focus::-ms-fill-lower {
+            background: #aaa;
+          }
+          input[type=range]::-ms-fill-upper {
+            background: #aaa;
+            border: 0.2px solid #aaa;
+            border-radius: 2.6px;
+        }
+        
+          input[type=range]:focus::-ms-fill-upper {
+            background: #aaa;
+          }
+        
+          /* Special styling for WebKit/Blink */
+        input[type=range]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            border: 2px solid var(--brick-red);
+            height: 20px;
+            width: 20px;
+            border-radius: 100px;
+            background: #fff;
+            cursor: pointer;
+            margin-top: -10px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+           
+          }
+          
+          /* All the same stuff for Firefox */
+          input[type=range]::-moz-range-thumb {
+           
+            border: 2px solid var(--brick-red);
+            height: 20px;
+            width: 20px;
+            border-radius: 100px;
+            background: #fff;
+            cursor: pointer;
+          }
+          
+          /* All the same stuff for IE */
+          input[type=range]::-ms-thumb {
+            border: 2px solid var(--brick-red);
+            height: 20px;
+            width: 20px;
+            border-radius: 100px;
+            background: #fff;
+            cursor: pointer;
+          }
+    }
 }
 }

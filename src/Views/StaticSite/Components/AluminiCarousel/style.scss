@@ -61,14 +61,17 @@
 }
 @media (max-width: 900px) {
   .alumni-main-div {
+    padding: 2rem;
     .alumini-carousel-info {
-      flex-wrap: wrap;
+      width: 100%;
+      display: block;
       padding-right: 0;
       .alluminiImg {
         margin: 0 auto;
       }
-      .alumini-carousel-details {
+      .alumini-carousel-details {padding-left: 0px;
         .alumini-carousel-title {
+          width: 100%;
           margin-top: 2rem;
         }
       }
