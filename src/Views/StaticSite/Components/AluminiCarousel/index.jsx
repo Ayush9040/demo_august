@@ -6,10 +6,10 @@ import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import './style.scss'
 import CommonBtn from '../commonbtn'
+import { Link } from 'react-router-dom'
 
 const AlumniCarousel = () => {
-
-  const [alumImgs,setAlumImgs]=useState(data[0].img)
+  const [alumImgs, setAlumImgs] = useState(data[0].img)
 
   let settings = {
     dots: true,
@@ -19,14 +19,14 @@ const AlumniCarousel = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     centerPadding: '70px',
-    beforeChange:(oldIndex,index)=>{
-      setAlumImgs(data.find(item=>item.id===index).img)
-    }
+    beforeChange: (oldIndex, index) => {
+      setAlumImgs(data.find((item) => item.id === index).img)
+    },
   }
   console.log(alumImgs)
   return (
     <div className="alumni-main-div">
-      <div className="alumini-carousel-heading">Alumini</div>
+      <div className="alumini-carousel-heading">Alumni</div>
       <Slider {...settings}>
         {data.map((item, idx) => {
           if (idx < 5) {
@@ -47,7 +47,10 @@ const AlumniCarousel = () => {
         })}
       </Slider>
       <AlumniGrid images={[]} notEvent={true} />
-      <CommonBtn text={'Explore All'} />
+      <Link to="/experience">
+        {' '}
+        <CommonBtn text={'Explore All'} />
+      </Link>
     </div>
   )
 }
