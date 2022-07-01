@@ -220,7 +220,11 @@
      padding: 20rem;
      padding-top: 10rem;
      h3{
-         font-size: 22px;
+         font-size: 2rem;
+         display: inline-block;
+     }
+     .publication-nav-dates{
+     float: right;
      }
      .previous-container{
              display: grid;
@@ -228,6 +232,7 @@
              grid-template-columns: repeat(6,1fr);
              // width: 80%;
              margin: 0 auto;
+             margin-top: 2rem!important;
              .preivous-box{
                  background-color: white;
                  //height: 300px;
@@ -271,12 +276,13 @@
      background-color: bisque;
      padding: 10rem !important;
      h3{
-         font-size: 15px;
+         font-size: 2rem;
      }
  .previous-container{
      display: grid;
      gap: 20px;
      grid-template-columns: repeat(6 ,1fr);
+     margin-top: 2rem;
      // width: 80%;
      margin: 0 auto;
      .preivous-box{
@@ -391,6 +397,11 @@
     }
 
     .previous-background{
+        .publication-nav-dates{
+            display: block;
+              float: none;
+              margin: 0 auto;
+                }
         .previous-container{
             grid-template-columns: repeat(3 ,1fr);
             justify-content: center;

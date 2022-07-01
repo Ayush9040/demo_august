@@ -220,11 +220,10 @@ const Yogasattva = () => {
         </p>
       </div>
       <div className="previous-background">
+        <h3>Previous issues :</h3>
         <div className="publication-nav-dates">
           <PublicationDateNav bold={bold} setBold={setBold} />
         </div>
-        <h3>Previous issues :</h3>
-
         <div>
           <div className="previous-container">
             {bold === 1 ? (
