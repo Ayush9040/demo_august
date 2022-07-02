@@ -3,8 +3,8 @@ import React from 'react'
 export const MainLogo = (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="60px"
-    height="60px"
+    width="80px"
+    height="80px"
     fill="#fff"
     id="a"
     viewBox="0 0 50 26.04"
@@ -15,8 +15,8 @@ export const MainLogo = (
 export const MainLogo1 = (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="60px"
-    height="60px"
+    width="80px"
+    height="80px"
     fill="#000"
     id="a"
     viewBox="0 0 50 26.04"
@@ -40,8 +40,8 @@ export const legacy1 = (
   <svg
     fill="#CA4625"
     xmlns="http://www.w3.org/2000/svg"
-    width="60px"
-    height="60px"
+    width="80px"
+    height="80px"
     id="Layer_1"
     data-name="Layer 1"
     viewBox="0 0 50 50"

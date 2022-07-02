@@ -4,7 +4,7 @@ import './style.scss'
 import { Link } from 'react-router-dom'
 
 const MegaMenu = ({ setNav }) => {
-  const [menuItem, setMenuItem] = useState('COURSES')
+  const [menuItem, setMenuItem] = useState()
 
   const navItems = [
     {

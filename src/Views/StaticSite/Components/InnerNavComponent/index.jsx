@@ -103,7 +103,7 @@ const InnerNavComponent = ({ abc }) => {
           </div>
         </div>
 
-        <div
+        {abc.menuItems.length!==0 && <div
           className={'career-navigation-lg'}
           id={abc.title === 'gallery' ? 'toggles' : ''}
         >
@@ -145,7 +145,7 @@ const InnerNavComponent = ({ abc }) => {
               )
             })}
           </ul>
-        </div>
+        </div>}
       </div>
       {nav && (
         <div

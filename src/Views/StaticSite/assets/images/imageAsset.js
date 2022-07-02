@@ -3,7 +3,7 @@ const baseDomain = 'http://ecom-static-site.oss-ap-south-1.aliyuncs.com'
 export const background = {
   donation:'/backgrounds/donation_bg.jpg',
   facilities : '/backgrounds/facilities_bg.jpg',
-  gifting: '/backgrounds/gifting_bg.jpg',
+  gifting: '/backgrounds/gifting_bg_1.jpg',
   museum : '/backgrounds/museum_bg.jpg',
   volunteer : '/backgrounds/volunteer_bg.jpg',
   faqs:'/backgrounds/faqs.jpg',
