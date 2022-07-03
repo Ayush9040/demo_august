@@ -12,7 +12,7 @@ const PublicationDateNav = ({ bold, setBold }) => {
             }
             onClick={() => setBold(1)}
           >
-            2017......
+            2022|
           </li>
           <li
             style={
@@ -20,7 +20,7 @@ const PublicationDateNav = ({ bold, setBold }) => {
             }
             onClick={() => setBold(2)}
           >
-            2018|
+            2021|
           </li>
           <li
             style={
@@ -28,7 +28,7 @@ const PublicationDateNav = ({ bold, setBold }) => {
             }
             onClick={() => setBold(3)}
           >
-            2019|
+            2020|
           </li>
           <li
             style={
@@ -36,7 +36,7 @@ const PublicationDateNav = ({ bold, setBold }) => {
             }
             onClick={() => setBold(4)}
           >
-            2020|
+            2019|
           </li>
           <li
             style={
@@ -44,7 +44,7 @@ const PublicationDateNav = ({ bold, setBold }) => {
             }
             onClick={() => setBold(5)}
           >
-            2021|
+            2018......
           </li>
         </ul>
       </div>
