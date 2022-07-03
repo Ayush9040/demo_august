@@ -1,4 +1,6 @@
 .donation-container-1 {
+  width: 85%;
+  margin: 0 auto;
   .donation-buttons {
     display: block;
     box-sizing: border-box;
@@ -8,7 +10,7 @@
     text-align: center;
     .donate-button {
       margin: 10rem auto;
-      width: 15%;
+      width: 20%;
       justify-content: center;
       .global-common-btn {
         border-style: none;
@@ -27,7 +29,7 @@
       }
     }
     .input-box {
-      // width: 70%;
+      width: 85%;
       margin: 0 auto;
       h1 {
         font-size: 2rem;
@@ -36,7 +38,7 @@
       .button-flex {
         border: 1px;
         // margin-left: 11%;
-        margin-top: 3rem;
+        margin: 3rem;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         justify-content: center;
@@ -88,7 +90,8 @@
       grid-template-columns: repeat(3, 1fr);
       column-gap: 1px;
       // width: 50%;
-      margin: 5rem auto;
+      // margin: 5rem auto;
+    margin: 5rem 3rem;
     
     }
     input[type='radio'] {
