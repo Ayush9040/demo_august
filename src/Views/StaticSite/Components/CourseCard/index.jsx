@@ -5,8 +5,8 @@ import CommonBtn from '../commonbtn'
 //import SelectDropDown from '../Select Dropdown'
 import './style.scss'
 import SelectDropDown from '../Select Dropdown'
-import { useEffect } from 'react'
-import StarIcon from './star-icon'
+//import { useEffect } from 'react'
+//import StarIcon from './star-icon'
 import { useState } from 'react'
 import { useSelector } from 'react-redux'
 // import { faHelicopterSymbol } from '@fortawesome/free-solid-svg-icons'
@@ -25,7 +25,7 @@ const CourseCard = ({
   description,
   path,
   img = 'http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Courses/course%20%281%29.png',
-  rating = 5,
+  //rating = 5,
   dates = [],
 }) => {
   const selectStyles = {
@@ -40,41 +40,42 @@ const CourseCard = ({
     borderStyle: 'solid',
     maxWidth: 'fit-content',
   }
-  const [ratingArr, setRatingArr] = useState([])
+  // const [ratingArr, setRatingArr] = useState([])
   const { isLoggedIn } = useSelector((state) => state.auth)
   const [error,setError]=useState(0)
 
  
 
-  useEffect(() => {
-    let arr = []
-    for (let i = 0; i < rating; i++) {
-      arr[i] = i
-      setRatingArr(arr)
-    }
-  }, [])
+  // useEffect(() => {
+  //   let arr = []
+  //   for (let i = 0; i < rating; i++) {
+  //     arr[i] = i
+  //     setRatingArr(arr)
+  //   }
+  // }, [])
 
   const [selectDate, setSetselectDate] = useState(null)
   // localStorage.setItem('selectedDate', selectDate)
 
   const checkEmpty =()=>{
-    if(selectDate===null)
-    {
-      setError(1)
-    }
-    else{
-      setError(0)
-    }
+    if(dates.length!==0){
+      if(selectDate===null)
+      {
+        setError(1)
+      }
+      else{
+        setError(0)
+      }}
   }
 
   return (
     <div className="course-card">
       <div className="course-card-image">
         <img src={img} />
-        <div className="stars">
+        {/* <div className="stars">
           {ratingArr.length !== 0 &&
             ratingArr.map((item, id) => <StarIcon key={id} />)}
-        </div>
+        </div> */}
       </div>
       <div
         className="course-card-content"
@@ -86,13 +87,13 @@ const CourseCard = ({
         <h3>{description}</h3>
         {/* <SelectDropDown currentValue={selectDate} changeCurrentValue={setSetselectDate} text={'Select Dates'} isStyles={selectStyles} /> */}
         <div className="course-card-dropdown">
-          <SelectDropDown
+          <div style={dates.length!==0 ? { visibility:'visible' }:{ visibility:'hidden' }} ><SelectDropDown
             currentValue={selectDate}
             changeCurrentValue={setSetselectDate}
             text={'Select Dates'}
             isStyles={selectStyles}
             dates={dates}
-          />
+          /></div>
           {/* <SelectDropDown
             dates={dates}
             text={'Select Dates'}
@@ -110,8 +111,20 @@ const CourseCard = ({
             <CommonBtn text={'View Details'} />
           </Link>
           <div onClick={checkEmpty}>
-            {selectDate ? (
-              <Link
+            {dates.length!==0 ? 
+              (selectDate ? (
+                <Link
+                  to={
+                    isLoggedIn
+                      ? `/enrollment/${path}/?date=${selectDate}`
+                      : `/user/sign-in/${path}/?date=${selectDate}`
+                  }
+                >
+                  <CommonBtn text={'Enroll Now'} />
+                </Link>
+              ) : (
+                <CommonBtn text={'Enroll Now'} />
+              )):( <Link
                 to={
                   isLoggedIn
                     ? `/enrollment/${path}/?date=${selectDate}`
@@ -119,10 +132,7 @@ const CourseCard = ({
                 }
               >
                 <CommonBtn text={'Enroll Now'} />
-              </Link>
-            ) : (
-              <CommonBtn text={'Enroll Now'} />
-            )}
+              </Link>)}
           </div>
         </div>
       </div>

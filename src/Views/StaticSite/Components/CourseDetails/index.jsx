@@ -154,9 +154,32 @@ const CourseDetails = ({ pageDate }) => {
               'Lorem Ipsum is simply dummy text of the printing and typesetting industry. '}
           </p>
           <div className="course-options">
-            {selectDate ? <Link to={ isLoggedIn ? `/enrollment/${pageDate.key}/?date=${selectDate}`:`/user/sign-in/${pageDate.key}/?date=${selectDate}`}>
+            {/* {selectDate ? <Link to={ isLoggedIn ? `/enrollment/${pageDate.key}/?date=${selectDate}`:`/user/sign-in/${pageDate.key}/?date=${selectDate}`}>
               <CommonBtn text={'Enroll Now'} />
-            </Link> :  scroll() }
+            </Link> :  scroll() } */}
+
+            <div>
+              {pageDate?.dates?.length!==0 ? 
+                (selectDate ? (
+                  <Link
+                    to={
+                      isLoggedIn
+                        ? `/enrollment/${pageDate.key}/?date=${selectDate}`
+                        : `/user/sign-in/${pageDate.key}/?date=${selectDate}`
+                    }
+                  >
+                    <CommonBtn text={'Enroll Now'} />
+                  </Link>
+                ) : scroll()):( <Link
+                  to={
+                    isLoggedIn
+                      ? `/enrollment/${pageDate.key}/?date=${selectDate}`
+                      : `/user/sign-in/${pageDate.key}/?date=${selectDate}`
+                  }
+                >
+                  <CommonBtn text={'Enroll Now'} />
+                </Link>)}
+            </div>
             
             {/* <CommonBtn text={'Gift Course'} /> */}
           </div>
@@ -170,7 +193,7 @@ const CourseDetails = ({ pageDate }) => {
         </div>
       </div>
 
-      <div id='date-select'><SelectDropDown  currentValue={selectDate} changeCurrentValue={setSetselectDate} text={'Select Dates'} isStyles={selectStyles} dates={pageDate.dates}/> </div>
+      <div id='date-select' style={pageDate?.dates?.length!==0 ? { visibility:'visible' }:{ visibility:'hidden' }} ><SelectDropDown  currentValue={selectDate} changeCurrentValue={setSetselectDate} text={'Select Dates'} isStyles={selectStyles} dates={pageDate.dates}/> </div>
       
       {pageDate.category === 'ttc' && (
         <div className="career-navigation-lg-div" >
