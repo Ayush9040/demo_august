@@ -16,7 +16,7 @@ const Seminar = () => {
     menuItems: [
       {
         innerTitle: 'alumni-events',
-        url: '/alumni',
+        url: '/alumni/upcoming-events',
         name: 'Upcoming Events',
       },
       {
@@ -25,9 +25,9 @@ const Seminar = () => {
         name: 'Alumni Gallery',
       },
       {
-        innerTitle: 'alma-master',
+        innerTitle: 'alma-mater',
         url: '/alumni/support',
-        name: 'Support Your Alma Master',
+        name: 'Support Your Alma Mater',
       },
       {
         innerTitle:'alumni-contact',
@@ -43,16 +43,11 @@ const Seminar = () => {
       <div className="alumni-content" id="seminar">
         <div className="newsletter-content">
           <h2>
-            <span className="newsletter-title">Title</span>
-            <span className="newsletter-date">00/00/00</span>
+            <span className="newsletter-title">Know our Family / Our Alumni</span>
+            <span className="newsletter-date">02/07/22</span>
           </h2>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec
-            ante id nunc vehicula pharetra nec vitae est. Sed diam dui, luctus
-            sed velit quis, placerat consequat felis. Vivamus cursus in mauris
-            at dignissim. Etiam venenatis semper pharetra. Duis ut diam eros. In
-            hac habitasse platea dictumst. Nam tincidunt nisi metus, et
-            dignissim ligula cursus ut.
+          The Yoga Institute has been at the forefront of spreading Yoga around the world. Our mission has connected us to more than 1 lakh+ students who are now part of the family at the Yoga Institute. Our students come from all walks of life and most often continue to share the essence of our teachings in Yoga and the Yogic way of life long after the official completion of their courses. We are proud to say that many of our alumni find a sense of belonging and an immovable belief in our work that compels them to actively collaborate with us in all our endeavours.
           </p>
           <div className="options">
             <button>View Story</button>

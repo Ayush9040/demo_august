@@ -7,7 +7,7 @@ import Affiliations from '../Components/Affiliations/index.jsx'
 import Enrollment from '../Components/EnrollmentForm/index.jsx'
 import wellness from '../Components/Wellness/index.jsx'
 import CorporateSocialResponsibilty from '../Components/CorporateSocialResponsibility/index.jsx'
-//import SingleCsr from '../Components/CorporateSocialResponsibility/SingleCsr/index.jsx'
+import SingleCsr from '../Components/CorporateSocialResponsibility/SingleCsr/index.jsx'
 import About from '../Views/About'
 import Alumni from '../Views/Alumni'
 import Media from '../Views/Media'
@@ -227,8 +227,14 @@ const staticSiteRoutes = [
     id: 'statisSiteUnderCsr',
     routePath: '/csr',
     name: 'csr',
+  },{
+    Component: SingleCsr,
+    path: '/csr/:csrId',
+    exact: true,
+    id: 'statisSiteUnderSingleCsr',
+    routePath: '/csr/:csrId',
+    name: 'SingleCsr',
   },
-  
   {
     Component: Thankyou,
     path: '/enrollment_thankyou',

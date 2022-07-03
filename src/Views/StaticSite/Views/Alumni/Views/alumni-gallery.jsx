@@ -106,7 +106,7 @@ const AlumniGallery = () => {
     menuItems: [
       {
         innerTitle: 'alumni-events',
-        url: '/alumni',
+        url: '/alumni/upcoming-events',
         name: 'Upcoming Events',
       },
       {
@@ -115,9 +115,9 @@ const AlumniGallery = () => {
         name: 'Alumni Gallery',
       },
       {
-        innerTitle: 'alma-master',
+        innerTitle: 'alma-mater',
         url: '/alumni/support',
-        name: 'Support Your Alma Master',
+        name: 'Support Your Alma Mater',
       },
       {
         innerTitle:'alumni-contact',

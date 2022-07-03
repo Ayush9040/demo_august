@@ -1263,7 +1263,7 @@ export const arrowIcon = (
 )
 
 export const mobile = (
-  <svg xmlns="http://www.w3.org/2000/svg" id="a" viewBox="0 0 50 50">
+  <svg xmlns="http://www.w3.org/2000/svg" id="a" width='18px' height='18px' viewBox="0 0 50 50">
     <path
       fill="#888"
       className="b"

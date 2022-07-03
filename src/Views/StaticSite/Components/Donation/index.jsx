@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import CommonBtn from '../commonbtn'
 import './style.scss'
 import { ACH, cheque, donation } from '../../assets/icons/icon'
+import { Link } from 'react-router-dom'
 const Donation = ({ supportText, page }) => {
   const [amount, setAmount] = useState(0)
 
@@ -185,7 +186,9 @@ const Donation = ({ supportText, page }) => {
             </div>
           </div>
           <div className='enquire-button'>
-            <CommonBtn text={'Enquire now'} />
+            <Link to={'/#footer'} >
+              <CommonBtn text={'Enquire now'} />
+            </Link>
           </div>
         </div>
 

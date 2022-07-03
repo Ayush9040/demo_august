@@ -8,13 +8,13 @@ import InnerNavComponent from '../../../Components/InnerNavComponent'
 const Support = () => {
   const [imageChanger, setImageChanger] = useState(0)
   const AlumniSupportBar = {
-    title: 'alma-master',
+    title: 'alma-mater',
     color: 'white',
     menuColor: 'white',
     menuItems: [
       {
         innerTitle: 'alumni-events',
-        url: '/alumni',
+        url: '/alumni/upcoming-events',
         name: 'Upcoming Events',
       },
       {
@@ -23,9 +23,9 @@ const Support = () => {
         name: 'Alumni Gallery',
       },
       {
-        innerTitle: 'alma-master',
+        innerTitle: 'alma-mater',
         url: '/alumni/support',
-        name: 'Support Your Alma Master',
+        name: 'Support Your Alma Mater',
       },
       {
         innerTitle:'alumni-contact',

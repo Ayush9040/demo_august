@@ -1,12 +1,11 @@
-
 //yoga and health
-.yoga-total-health{
-    .background{
+.yoga-total-health {
+    .background {
         height: 550px;
         background-color: #389992;
     }
 }
-.publication-intro{
+.publication-intro {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,119 +13,119 @@
     position: relative;
     top: -22rem;
     padding: 0 10rem;
-    &>div{
+    & > div {
         width: 100%;
-        img{
+        img {
             width: 70%;
             margin-right: 0;
         }
     }
 
-    .mag-preview{
+    .mag-preview {
         text-align: right;
-
     }
 }
-.journal{
+.journal {
     color: #fff;
 }
-.jouranl-title{
+.jouranl-title {
     display: inline-block;
-    .bottom-line{
+    .bottom-line {
         height: 3px;
         border-radius: 50%;
         margin-top: 1rem;
-            background: #fff;
+        background: #fff;
     }
 }
-.month-year{
+.month-year {
     margin-top: 10rem;
-    .jouranl-title{
-        .bottom-line{
+    .jouranl-title {
+        .bottom-line {
             background-color: var(--brick-red);
         }
     }
 }
-.publication-sub{
-    margin-top: -10rem;
+.publication-sub {
+    margin-top: -15rem;
     text-align: center;
     margin-bottom: 10rem;
-    p{
+    p {
         margin-bottom: 2rem;
     }
-    .global-common-btn{
+    .global-common-btn {
         margin: 3rem auto;
     }
 }
-.break-icon{
-    svg{
-        width: 100px;
+.break-icon {
+    svg {
+        width: 140px;
     }
+    margin-bottom: 20px;
 }
 
 //books
-.books-container{
-  .background{
-      height: 500px;
-    background-color: #61829D;
-    p{
-        text-align: center;
-        width: 60%;
-        color: #fff;
-        margin: 3rem auto;
+.books-container {
+    .background {
+        height: 500px;
+        background-color: #61829d;
+        p {
+            text-align: center;
+            width: 60%;
+            color: #fff;
+            margin: 3rem auto;
+        }
     }
-  }
 }
 
 //e-books{
-    .e-books-container{
-        .background{
-            background-color: #82729D;
-            height: 500px;
-            p{
-                text-align: center;
-                width: 60%;
-                color: #fff;
-                margin: 3rem auto;
-            }
+.e-books-container {
+    .background {
+        background-color: #82729d;
+        height: 500px;
+        p {
+            text-align: center;
+            width: 60%;
+            color: #fff;
+            margin: 3rem auto;
         }
     }
+}
 
 //common grid
-    .books-grid{
-        width: 80%;
-        margin: 0 auto;
-        // display: grid;
-        // grid-template-columns: repeat(3,1fr);
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 3rem;
-        padding: 5rem;
-        background-color: #EDEEF0;
-        border-radius: 40px;
-        position: relative;
-        top: -12rem;
-    }
+.books-grid {
+    width: 80%;
+    margin: 0 auto;
+    // display: grid;
+    // grid-template-columns: repeat(3,1fr);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3rem;
+    padding: 5rem;
+    background-color: #edeef0;
+    border-radius: 40px;
+    position: relative;
+    top: -12rem;
+}
 
 //library
-.library-container{
-    .background{
-        background-color: #E38F73;
+.library-container {
+    .background {
+        background-color: #e38f73;
         height: 500px;
     }
 }
-.library-grid{
+.library-grid {
     width: 80%;
     margin: 0 auto;
-    background-color: #EDEEF0;
+    background-color: #edeef0;
     padding: 3rem;
-    border-radius: 50px;
+    border-radius: 50px 50px 0px 0px;
     position: relative;
     top: -10rem;
 }
 
-.cardDesc{
+.cardDesc {
     background-color: #fff;
     padding: 3rem;
     border-radius: 40px;
@@ -135,34 +134,37 @@
     position: relative;
     top: -15rem;
 }
-.cardImg{
-&>div{
-    width: 100%;
-    height: 500px;
-    background-color: #EDEEF0;
-    box-sizing: border-box;
-    border-radius: 40px;
+.cardImg {
+    & > div {
+        width: 100%;
+        height: 500px;
+        background-color: #edeef0;
+        box-sizing: border-box;
+        border-radius: 40px;
+        img {
+            object-fit: cover;
+        }
+    }
 }
-}
-.cardTxt{
-    p{
+.cardTxt {
+    p {
         text-align: center;
         width: 80%;
         margin: 2rem auto;
     }
 }
-.more-cards{
+.more-cards {
     display: grid;
-    grid-template-columns: repeat(6,1fr);
+    grid-template-columns: repeat(6, 1fr);
     gap: 10px;
     justify-content: center;
     margin-top: -10rem;
 }
-.card-1{
+.card-1 {
     width: 100%;
     height: 350px;
     background-color: #fff;
-    img{
+    img {
         height: 100%;
         width: 100%;
         object-fit: cover;
@@ -171,199 +173,228 @@
 }
 
 //yogsattva
-.yogasattva-container{
-    .background{
-     background-color: rgb(168, 106, 106);
-     height: 500px;
+.yogasattva-container {
+    .background {
+        background-color: #E6BF98;
+        height: 500px;
     }
-     .banner-container {
-             .banner-text {
-                 display: none;
-         }
-     }
- 
- }
- .yogasattva-text{
- width: 60%;
- margin: 5rem auto;
- text-align: center;
- p{
-    font-size: 1.5rem; 
-    margin:15px auto
- }
- }
- .yogasattva-content{
-     margin-top: -15%;
-     p{
-         width: 70%;
-         margin: 0 auto;
-         font-size: 1.7rem;
-         text-align: center;
-         color: white;
-         margin-bottom: 3rem ;
-     }
-      
-     .yogasattva-image{
-         display: grid!important;
-         grid-template-columns: repeat(4,1fr);
-         gap: 1rem;
-         width: 40%!important;
-         margin: 0 auto;
-         justify-content: center;
-         img{
-             height: 300px;
-         }
-     }
- }
- .previous-background{
-     background-color: rgb(252, 212, 212);
-     padding: 20rem;
-     padding-top: 10rem;
-     h3{
-         font-size: 2rem;
-         display: inline-block;
-     }
-     .publication-nav-dates{
-     float: right;
-     }
-     .previous-container{
-             display: grid;
-             gap: 20px;
-             grid-template-columns: repeat(6,1fr);
-             // width: 80%;
-             margin: 0 auto;
-             margin-top: 2rem!important;
-             .preivous-box{
-                 background-color: white;
-                 //height: 300px;
-                 img{
-                    width: 100% ;
-                    height:100%
-                }   
-         }
-         
-     }
- }
- @media (max-width:1800px)
- {
-     .yogasattva-container{
-     background-color: rgb(168, 106, 106);
-     height: 400px;
-    }
-     .yogasattva-content{
-         margin-top: -14%;
-         p{
-            width: 45% ;
-             margin: 0 auto;
-             font-size: 1.3rem;
-             text-align: center;
-             color: white;
-             margin-bottom: 3rem ;
-         } 
-         .yogasattva-image{
-             display: grid;
-             grid-template-columns: repeat(4,1fr);
-             gap: 1rem;
-             width: 40%;
-             margin: 0 auto;
-             justify-content: center;
-             img{
-                 height: 200px;
-             }
-         }
-     }
- .previous-background{
-     background-color: bisque;
-     padding: 10rem !important;
-     h3{
-         font-size: 2rem;
-     }
- .previous-container{
-     display: grid;
-     gap: 20px;
-     grid-template-columns: repeat(6 ,1fr);
-     margin-top: 2rem;
-     // width: 80%;
-     margin: 0 auto;
-     .preivous-box{
-         background-color: white;
-         //height: 250px;
-         img{
-            width: 100%;
-            height:100%
+    .banner-container {
+        .banner-text {
+            display: none;
         }
-     }
- }
- }
- }
-@media(max-width:1720px){
-    .yoga-total-health{
-        .background{
+    }
+}
+.yogasattva-text {
+    width: 60%;
+    margin: 5rem auto;
+    text-align: center;
+    p {
+        font-size: 1.5rem;
+        margin: 15px auto;
+    }
+}
+.yogasattva-content {
+    margin-top: -15%;
+    p {
+        width: 70%;
+        margin: 0 auto;
+        font-size: 1.7rem;
+        text-align: center;
+        color: white;
+        margin-bottom: 3rem;
+    }
+
+    .yogasattva-image {
+        display: grid !important;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+        width: 40% !important;
+        margin: 0 auto;
+        justify-content: center;
+        img {
+            height: 300px;
+        }
+    }
+}
+.previous-background {
+    background-color: #E6BF98;
+    padding: 20rem;
+    padding-top: 10rem;
+    h3 {
+        font-size: 2rem;
+        display: inline-block;
+    }
+    .publication-nav-dates {
+        float: right;
+    }
+    .previous-container {
+        display: block;
+        gap: 20px;
+        width: 100%;
+        grid-template-columns: repeat(6, 1fr);
+        // width: 80%;
+        margin: 0 auto;
+        margin-top: 2rem !important;
+        overflow: auto;
+        &::-webkit-scrollbar {
+            height: 8px;
+        }
+
+        /* Track */
+        &::-webkit-scrollbar-track {
+            //box-shadow: inset 0 0 5px grey;
+            background-color: #fff;
+            border-radius: 10px;
+        }
+
+        /* Handle */
+        &::-webkit-scrollbar-thumb {
+            background: #aaa;
+            border-radius: 10px;
+        }
+
+        /* Handle on hover */
+        &::-webkit-scrollbar-thumb:hover {
+            background: #aaa;
+        }
+        #previous-issue-scroll {
+            width: max-content;
+            overflow-x: scroll;
+            &::-webkit-scrollbar {
+                height: 10px;
+            }
+        }
+        .preivous-box {
+            background-color: white;
+            //height: 300px;
+            width: 200px;
+            display: inline-block;
+            margin: 1rem;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}
+@media (max-width: 1800px) {
+    .yogasattva-container {
+        background-color: rgb(168, 106, 106);
+        height: 400px;
+    }
+    .yogasattva-content {
+        margin-top: -14%;
+        p {
+            width: 45%;
+            margin: 0 auto;
+            font-size: 1.3rem;
+            text-align: center;
+            color: white;
+            margin-bottom: 3rem;
+        }
+        .yogasattva-image {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+            width: 40%;
+            margin: 0 auto;
+            justify-content: center;
+            img {
+                height: 200px;
+            }
+        }
+    }
+    .previous-background {
+        background-color: bisque;
+        padding: 10rem !important;
+        h3 {
+            font-size: 2rem;
+        }
+        .previous-container {
+            //display: grid;
+            gap: 20px;
+            grid-template-columns: repeat(6, 1fr);
+            margin-top: 2rem;
+            // width: 80%;
+            margin: 0 auto;
+            .preivous-box {
+                background-color: white;
+                //height: 250px;
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 1720px) {
+    .yoga-total-health {
+        .background {
             height: 500px;
         }
     }
-    .card-1{
+    .card-1 {
         height: 300px;
     }
-    .yogasattva-container{
-        .background{
+    .yogasattva-container {
+        .background {
             height: 350px;
         }
     }
 }
 
-@media(max-width:1600px){
-    .publication-intro{
+@media (max-width: 1600px) {
+    .publication-intro {
         top: -25rem;
     }
 }
 
-@media(max-width:1370px){
-    .publication-intro{
+@media (max-width: 1370px) {
+    .publication-intro {
         top: -28rem;
     }
 }
 
-@media(max-width:1240px){
-    .previous-background{
-        .previous-container{
-            grid-template-columns: repeat(4 ,1fr);
+@media (max-width: 1240px) {
+    .previous-background {
+        .previous-container {
+            grid-template-columns: repeat(4, 1fr);
             justify-content: center;
             // width: 80%;
             margin: 0 auto;
-            .preivous-box{
+            .preivous-box {
                 background-color: white;
                 //height: 250px;
-                img{
-                   width: 100%;
-                   height:100%
-               }
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
             }
         }
-        }
+    }
 }
 
-
-@media(max-width:900px){
-    .publication-intro{
+@media (max-width: 900px) {
+    .publication-intro {
         flex-direction: column;
         padding: 0 5rem;
-        .mag-preview{
+        .mag-preview {
             width: 80%;
             margin: 0 auto;
-            img{
+            img {
                 width: 100%;
             }
         }
     }
-    .previous-background{
-        padding: 4rem!important;
+    .previous-background {
+        padding: 4rem !important;
     }
-    .journal{
+    .journal {
         color: #000;
     }
-    .jouranl-title{
-        .bottom-line{
+    .jouranl-title {
+        .bottom-line {
             background: var(--brick-red);
         }
     }
@@ -371,111 +402,119 @@
     //     grid-template-columns: repeat(2,1fr);
     //     top: -25rem;
     // }
-    .library-grid{
+    .library-grid {
         top: -25rem;
     }
-    .cardDesc{
+    .cardDesc {
         width: 100%;
         box-sizing: border-box;
     }
-    .cardImg{
-        &>div{
+    .cardImg {
+        & > div {
             height: 400px;
         }
     }
-    .more-cards{
-        grid-template-columns: repeat(3,1fr);
+    .more-cards {
+        grid-template-columns: repeat(3, 1fr);
     }
-    .yogasattva-content{
+    .yogasattva-content {
         margin-top: -25% !important;
-        p{
-            width: 90%!important;
+        p {
+            width: 90% !important;
         }
-        .yogasattva-image{
-            grid-template-columns: repeat(2,1fr) !important;
+        .yogasattva-image {
+            grid-template-columns: repeat(2, 1fr) !important;
         }
     }
 
-    .previous-background{
-        .publication-nav-dates{
+    .previous-background {
+        .publication-nav-dates {
             display: block;
-              float: none;
-              margin: 0 auto;
-                }
-        .previous-container{
-            grid-template-columns: repeat(3 ,1fr);
+            float: none;
+            margin: 0 auto;
+        }
+        .previous-container {
+            grid-template-columns: repeat(3, 1fr);
             justify-content: center;
             // width: 80%;
             margin: 0 auto;
-            .preivous-box{
+            .preivous-box {
                 background-color: white;
                 //height: 250px;
-                img{
+                img {
                     width: 100%;
-                    height:100%
+                    height: 100%;
                 }
             }
         }
-        }
-}
-@media(max-width:768px){
-    .more-cards{
-        grid-template-columns: repeat(2,1fr);
     }
-    .cardTxt{
-        p{
+}
+@media (max-width: 768px) {
+    .more-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .cardTxt {
+        p {
             text-align: center;
             width: 90%;
             margin: 2rem auto;
         }
     }
-    .yogasattva-content{
-        margin-top: -30%!important;
+    .yogasattva-content {
+        margin-top: -30% !important;
+    }
+    .publication-sub {
+        margin-top: -20rem;
+        text-align: center;
+        margin-bottom: 10rem;
+        p {
+            margin-bottom: 2rem;
+        }
+        .global-common-btn {
+            margin: 3rem auto;
+        }
     }
 }
-@media(max-width:420px){
-    .publication-intro{
+@media (max-width: 420px) {
+    .publication-intro {
         padding: 0 2rem;
-        .mag-preview{
+        .mag-preview {
             width: 100%;
             margin: 0 auto;
         }
-    } 
+    }
     // .books-grid{
     //     grid-template-columns: repeat(1,1fr);
     //     padding: 2rem;
     // }
-    .cardImg{
-        &>div{
+    .cardImg {
+        & > div {
             height: 300px;
         }
     }
-    .more-cards{
-        grid-template-columns: repeat(1,1fr);
+    .more-cards {
+        grid-template-columns: repeat(1, 1fr);
     }
-    .card-1{
+    .card-1 {
         height: 500px;
     }
-    .yogasattva-content{
-        margin-top: -70%!important;
+    .yogasattva-content {
+        margin-top: -70% !important;
     }
-    .previous-background{
-        .previous-container{
-            grid-template-columns: repeat(1 ,1fr);
+    .previous-background {
+        .previous-container {
+            grid-template-columns: repeat(1, 1fr);
             justify-content: center;
             // width: 80%;
             margin: 0 auto;
-            .preivous-box{
+            .preivous-box {
                 background-color: white;
                 //height: 250px;
             }
-            img{
+            img {
                 width: 100%;
-                height:100%;
+                height: 100%;
             }
         }
-        }
+    }
 }
-
- 
- 

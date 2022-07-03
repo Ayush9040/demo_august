@@ -226,47 +226,49 @@ const Yogasattva = () => {
         </div>
         <div>
           <div className="previous-container">
-            {bold === 1 ? (
-              <>
-                {images[2017].map((image, i) => (
-                  <div key={i} className="preivous-box">
-                    <img src={image} alt="root-image" />
-                  </div>
-                ))}
-              </>
-            ) : bold === 2 ? (
-              <>
-                {images[2018].map((image, i) => (
-                  <div key={i} className="preivous-box">
-                    <img src={image} alt="root-image" />
-                  </div>
-                ))}
-              </>
-            ) : bold === 3 ? (
-              <>
-                {images[2019].map((image, i) => (
-                  <div key={i} className="preivous-box">
-                    <img src={image} alt="root-image" />
-                  </div>
-                ))}
-              </>
-            ) : bold === 4 ? (
-              <>
-                {images[2020].map((image, i) => (
-                  <div key={i} className="preivous-box">
-                    <img src={image} alt="root-image" />
-                  </div>
-                ))}
-              </>
-            ) : (
-              <>
-                {images[2021].map((image, i) => (
-                  <div key={i} className="preivous-box">
-                    <img src={image} alt="root-image" />
-                  </div>
-                ))}
-              </>
-            )}
+            <div id='previous-issue-scroll'>
+              {bold === 1 ? (
+                <>
+                  {images[2017].map((image, i) => (
+                    <div key={i} className="preivous-box">
+                      <img src={image} alt="root-image" />
+                    </div>
+                  ))}
+                </>
+              ) : bold === 2 ? (
+                <>
+                  {images[2018].map((image, i) => (
+                    <div key={i} className="preivous-box">
+                      <img src={image} alt="root-image" />
+                    </div>
+                  ))}
+                </>
+              ) : bold === 3 ? (
+                <>
+                  {images[2019].map((image, i) => (
+                    <div key={i} className="preivous-box">
+                      <img src={image} alt="root-image" />
+                    </div>
+                  ))}
+                </>
+              ) : bold === 4 ? (
+                <>
+                  {images[2020].map((image, i) => (
+                    <div key={i} className="preivous-box">
+                      <img src={image} alt="root-image" />
+                    </div>
+                  ))}
+                </>
+              ) : (
+                <>
+                  {images[2021].map((image, i) => (
+                    <div key={i} className="preivous-box">
+                      <img src={image} alt="root-image" />
+                    </div>
+                  ))}
+                </>
+              )}
+            </div>
           </div>
 
           {/* <div className="previous-container">

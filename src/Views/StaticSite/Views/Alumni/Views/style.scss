@@ -23,12 +23,13 @@
 
 .newsletter-content {
     position: relative;
-    top: -15rem;
+    top: -18rem;
     width: 90%;
     h2 {
         display: flex;
         justify-content: space-between;
         align-items: baseline;
+        font-size: 2.5rem;
         .newsletter-title {
             font-weight: bolder;
         }

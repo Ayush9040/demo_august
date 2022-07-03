@@ -11,6 +11,7 @@
 .media-content {
     background: #389992;
     .newsletter-content {
+        margin-left: 5rem;
         .options {
             display: flex;
             justify-content: space-between;
@@ -36,10 +37,16 @@
 .media-content.inverted{
     .newsletter-content{
         order: 1;
+        margin-right: 5rem;
     }
     .newsletter-image{
+        
         h3{
             text-align: left;
+            margin-left: 25%;
+        }
+        img{
+            margin-left: auto;
         }
     }
 }

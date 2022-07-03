@@ -388,9 +388,9 @@ export const mediaAssets={
   //gff-2018
   mediaAsset25:'/Media/gallery/gff-2018/gff_1.jpeg',
   mediaAsset26:'/Media/gallery/gff-2018/gff_2.jpeg',
-  mediaAsset27:'/Media/gallery/gff-2018/gff_3.jpeg',
+  mediaAsset27:'/Media/gallery/gff-2018/gff_3.JPG',
   mediaAsset28:'/Media/gallery/gff-2018/gff_4.jpeg',
-  mediaAsset29:'/Media/gallery/gff-2018/gff_5.jpeg',
+  mediaAsset29:'/Media/gallery/gff-2018/gff_5.jpg',
 
   //98th foundation day
   mediaAsset30:'/Media/gallery/foundation-98/f98_1.jpg',

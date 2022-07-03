@@ -20,6 +20,8 @@ import {
 import { Link } from 'react-router-dom'
 import baseDomain, { homeAssets } from '../../assets/images/imageAsset'
 const Footer = () => {
+
+  
   return (
     <div className='footer-container global-padding'>
       <div className='logo-description'>
@@ -93,7 +95,7 @@ const Footer = () => {
         <div className='footer-content'>
           <div className='footer-logo'>{years}</div>
           <div className='footer-text'>
-            <p>102+</p>
+            <p>108+</p>
             <span>Number of Years</span>
           </div>
         </div>
@@ -156,7 +158,7 @@ const Footer = () => {
         </div>
         
 
-        <div className='logo-content'>
+        <div className='logo-content' id='footer' >
           {location1}
           <p>
             Shri Yogendra Marg, Prabhat Colony, Santacruz East, Mumbai - 400055
@@ -167,7 +169,7 @@ const Footer = () => {
           {email2}
           <p>info@the yogainstitute.org</p>
           {copyright}
-          <p id='footer' >
+          <p >
             2022 <span>The Yoga Institute.</span> All rights reserved.
           </p>
         </div>
