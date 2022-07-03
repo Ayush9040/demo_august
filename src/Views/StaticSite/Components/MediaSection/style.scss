@@ -8,6 +8,16 @@
     box-sizing: border-box;
     padding-bottom: 0;
 }
+.media-content-events {
+    grid-template-columns: 45% 45%;
+    padding: 10rem 0 10rem 10%;
+}
+.event-img {
+    margin: 0 auto;
+}
+.event-h3 {
+    margin: 0 8rem 1rem;
+}
 .media-content {
     background: #389992;
     .newsletter-content {

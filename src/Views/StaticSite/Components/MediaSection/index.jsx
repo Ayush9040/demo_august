@@ -25,7 +25,7 @@ const MediaSection = ({
   return (
     <div className="common-media-section">
       <div
-        className={!invert ? 'media-content' : 'media-content inverted'}
+        className={`${!invert ? 'media-content' : 'media-content inverted'} ${title == 'Events' && 'media-content-events'}`}
         style={{ background: `${sectionColor}` }}
         id="seminar"
       >
@@ -48,9 +48,9 @@ const MediaSection = ({
           </div>
         </div>
         <div className="newsletter-image">
-          <h3>{subHeading}</h3>
+          <h3 className={`${title == 'Events' && 'event-h3'}`}>{subHeading}</h3>
           <img
-            className="seminar-iamge"
+            className={`${title == 'Events' && 'event-img'} 'seminar-iamge'`}
             src={`${baseDomain}${mediaAssets.igCeremony}`}
           />
         </div>
