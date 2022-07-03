@@ -6973,7 +6973,7 @@ const camps = {
     timing: '5:00 pm – 8:00 pm (IST)',
     fees: 1000,
     category: 'camps',
-    metaDescription: '',
+    metaDescription: 'The 7 Days Health Camp is an experiential, introductory course to Yoga theory and practice where one can get a glimpse of a yogic lifestyle within the premises of The Yoga Institute. In this program you will learn how to achieve a balance between your mind, body, and soul. Through its powerful processes, this program presents to you the possibility to access and re-configure your life and health in a way that improves productivity and imparts better control on your emotions. In this fast-paced and unwavering world, this 7 Days’ Health Camp offers you the much-needed respite to connect with yourself and experience the abundant joy and beauty in life. ',
     image: `${baseDomain}${courseAssets.courseAsset10}`,
     details: [
       {
@@ -7302,7 +7302,7 @@ const camps = {
     timing: '5:00 pm – 8:00 pm (IST)',
     fees: 1000,
     category: 'camps',
-    metaDescription: '',
+    metaDescription: 'Become successful, healthy, stress-free, and more mindful in your relationships by learning the yogic way of living. Join The Yoga Institute’s 21-Days Better Living Course. ',
     image: `${baseDomain}${courseAssets.courseAsset10}`,
     details: [
       {
@@ -7593,7 +7593,7 @@ const camps = {
     timing: '5:00 pm – 8:00 pm (IST)',
     fees: 1000,
     category: 'camps',
-    metaDescription: '',
+    metaDescription: 'Become successful, healthy, stress-free, and more mindful in your relationships by learning the yogic way of living. Join The Yoga Institute’s 21-Days Better Living Course. ',
     image: `${baseDomain}${courseAssets.courseAsset10}`,
     details: [
       {
@@ -7890,7 +7890,7 @@ const camps = {
     timing: '5:00 pm – 8:00 pm (IST)',
     fees: 1000,
     category: 'camps',
-    metaDescription: '',
+    metaDescription: 'Become successful, healthy, stress-free, and more mindful in your relationships by learning the yogic way of living. Join The Yoga Institute’s 21-Days Better Living Course.',
     image: `${baseDomain}${courseAssets.courseAsset10}`,
     details: [
       {
@@ -8187,7 +8187,7 @@ const camps = {
     timing: '5:00 pm – 8:00 pm (IST)',
     fees: 1000,
     category: 'camps',
-    metaDescription: '',
+    metaDescription: 'The 7 Days Health Camp is an experiential, introductory course to Yoga theory and practice where one can get a glimpse of a yogic lifestyle within the premises of The Yoga Institute. In this program you will learn how to achieve a balance between your mind, body, and soul. Through its powerful processes, this program presents to you the possibility to access and re-configure your life and health in a way that improves productivity and imparts better control on your emotions. In this fast-paced and unwavering world, this 7 Days’ Health Camp offers you the much-needed respite to connect with yourself and experience the abundant joy and beauty in life. ',
     image: `${baseDomain}${courseAssets.courseAsset10}`,
     details: [
       {
@@ -8516,7 +8516,7 @@ const camps = {
     timing: '5:00 pm – 8:00 pm (IST)',
     fees: 1000,
     category: 'camps',
-    metaDescription: '',
+    metaDescription: 'Become successful, healthy, stress-free, and more mindful in your relationships by learning the yogic way of living. Join The Yoga Institute’s 21-Days Better Living Course. ',
     image: `${baseDomain}${courseAssets.courseAsset10}`,
     details: [
       {

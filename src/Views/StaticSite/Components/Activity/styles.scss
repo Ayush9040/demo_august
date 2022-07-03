@@ -33,10 +33,19 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    .with-hover{
+        display: none;
+    }
 }
 
 .card-container:hover{ 
     .card-content-activity {
+        .without-hover{
+            display:none;
+        }
+        .with-hover{
+            display: block;
+        }
     box-sizing: border-box;
     height: 97%;
     // top: auto;

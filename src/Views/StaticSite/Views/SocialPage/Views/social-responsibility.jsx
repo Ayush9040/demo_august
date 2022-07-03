@@ -3,7 +3,9 @@ import CommonBanner from '../../../Components/Common-banner'
 import SectionComponent from '../../../Components/SectionComponent'
 import { socialPageData } from '../../../utils/socialPageData'
 import './style.scss'
-import GiftingImg from '../../../assets/images/gifting2a-02.png'
+// import GiftingImg from '../../../assets/images/gifting2a-02.png'
+import baseDomain,{ socialResponsibilityAssets } from '../../../assets/images/imageAsset'
+// import { homeAssets } from '../../../assets/images/imageAsset'
 
 const SocialResponsibility = () => {
   useEffect(() => {
@@ -22,7 +24,10 @@ const SocialResponsibility = () => {
         description={
           'From the very beginning, it has been very important for TYI to balance the potential of sharing the awareness of yoga with social responsibility, as well as find and encourage a way to give back to the community. '
         }
-        bannerImg={GiftingImg}
+        // bannerImg={`${baseDomain}${homeAssets.homeAsset21}`}
+        // overlay="#61829DD0"
+        bannerImg={`${baseDomain}${socialResponsibilityAssets.schoolChildren}`}
+        overlay="#61829DD4"
       />
       <div className="social-res-sections">
         {socialPageData.map((item, i) => (

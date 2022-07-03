@@ -16,6 +16,35 @@
   .heading-container{
     margin-bottom: 30px;
   }
+  .decades-option{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 150px;
+    height: 150px;
+    cursor: pointer;
+    margin: 0 auto;
+
+    &.selected {
+        border-radius: 100px;
+        border: 5px solid transparent;
+        opacity: 1;
+    }
+    &.other-0 {
+        opacity: 0.75!important;
+    }
+    &.other-1 {
+        opacity: 0.75!important;
+    }
+    &.other-2 {
+        opacity: 0.50!important;
+    }
+    &.other-3 {
+        opacity: 0.25!important;
+    }
+}
+
 }
 .ourfacts-header {
 
