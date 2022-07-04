@@ -213,10 +213,24 @@ export const courseAssets = {
   courseAsset66: '/Courses/tyi_activities/womens_camp.jpg',
   
 
-  // 
+  //ttc-card images
 
+  courseAsset101:'/Courses/TTC/new11/200_hrs_TTC.jpg',
+  courseAsset102:'/Courses/TTC/new11/500_hrs_TTC.jpg',
+  courseAsset103:'/Courses/TTC/new11/900_hrs_TTC.jpg',
 
+  //camps&worshop-card images
 
+  courseAsset104:'/Courses/Camps/new11/cardiac-hypertension-workshop.jpg',
+  courseAsset105:'/Courses/Camps/new11/diabetes-camp.jpg',
+  courseAsset106:'/Courses/Camps/new11/digestion-camp.jpg',
+  courseAsset107:'/Courses/Camps/new11/life-management-camp.jpg',
+
+  //class-card images
+
+  courseAsset108:'/Courses/Class/new11/advance-asana-regular-class-online%28only-for-tyi-teachers%29%20.jpg',
+  courseAsset109:'/Courses/Class/new11/anand-sadhna-online-on-campus.JPG',
+  courseAsset110:'/Courses/Class/new11/weekend-asana-classes-%28men-women%29%20-%20common.jpg',
 }
 
 export const facilitiyAssets = {
