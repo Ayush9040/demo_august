@@ -16,6 +16,7 @@
       cursor: pointer;
     }
     .menu-logo {
+      z-index: 0;
       svg {
         width: 20%;
       }
@@ -53,6 +54,7 @@
     column-gap: 5rem;
     min-height: 100vh;
     overflow-y: scroll;
+    z-index: 1;
     //    max-width:fit-content;
     .menu-filler-icon {
 display: none;
