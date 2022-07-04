@@ -4,7 +4,7 @@ import './style.scss'
 
 const BlogCard = ({ blogs }) => {
   return (
-    <Link to={`/blogs/${blogs?.id}`}>
+    <Link to={`/blogs/blog/${blogs?.id}`}>
       <div className='blog-card'>
         <div className='blog-card-image'>
           <img src={blogs?.image} />

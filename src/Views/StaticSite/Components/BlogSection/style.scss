@@ -12,6 +12,11 @@
             p{
                 margin-top: 2rem;
                 width: 150%;
+                //font-size: 1.5rem;
+            }
+            .blog_view_button{
+                margin-left: 10rem;
+                margin-top: -3rem;
             }
         }
         .blog-carousel{
@@ -62,6 +67,18 @@
         height: 50px;
     }
 }
+
+// @media (max-width: 1520px) {
+//     .blog-container{
+//         .blog-content{
+//             .blog-header{
+//                 .blog_view_button{
+//                     margin-left: 10rem;
+//                 }
+//             }
+//         }
+//     }
+// }
 
 @media(max-width:1200px){
     .blog-container{

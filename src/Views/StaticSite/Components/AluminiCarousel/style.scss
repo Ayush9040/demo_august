@@ -1,9 +1,17 @@
 .alumni-main-div {
   background-color: #edb58c;
-  padding: 10rem;
+  padding: 10rem ;
   //padding-right: 5rem;
   .alumni-grid {
     width: 100%;
+    .slick-slider{
+      .slick-arrow{
+        
+       &.slick-prev{
+          margin-top: -7rem !important;
+        }
+      }
+    }
   }
   .global-common-btn {
     margin: 0 auto;
@@ -12,11 +20,14 @@
     font-size: 3rem;
     font-weight: bold;
     padding-bottom: 3rem;
+    padding-left: 20rem;
+    
   }
   .alumini-carousel-info {
     display: flex;
     // padding-left: 10rem;
-    padding-right: 10rem;
+    //padding-right: 10rem;
+    padding: 2rem 20rem;
     .alluminiImg {
       width: 300px;
       height: 280px;
@@ -41,7 +52,7 @@
     }
   }
   .slick-dots {
-    bottom: 0px !important;
+    //bottom: 0px !important;
     li {
       button {
         &::before {
@@ -56,6 +67,14 @@
           color: var(--brick-red-1) !important;
         }
       }
+    }
+  }
+}
+
+@media (max-width: 1300px) {
+  .alumni-main-div{
+    .alumini-carousel-info{
+      padding: 2rem 10rem;
     }
   }
 }
