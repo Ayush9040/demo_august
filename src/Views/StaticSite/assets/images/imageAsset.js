@@ -84,6 +84,21 @@ export const homeAssets = {
   homeAsset61: '/Home/Blogs/Blog3.jpg',
   homeAsset62: '/Home/Blogs/Blog4.jpg',
   homeAsset63: '/Home/Blogs/Blog5.jpg',
+  homeAsset71: '/Home/Blogs/new11/best-healty-fat-food.jpg',
+  homeAsset72: '/Home/Blogs/new11/best-natural-anti-aging-techniques.jpg',
+  homeAsset73: '/Home/Blogs/new11/best-yoga-mudras-to-get-rid-of-pimples-naturally-at-home.jpeg',
+  homeAsset74: '/Home/Blogs/new11/blog-images-anaemia02.jpg',
+  homeAsset75: '/Home/Blogs/new11/blog-images-backpain05.jpg',
+  homeAsset76: '/Home/Blogs/new11/blog-images-immunity03.jpg',
+  homeAsset77: '/Home/Blogs/new11/blog-images-liver01.jpg',
+  homeAsset78: '/Home/Blogs/new11/blog-images-lung04.jpg',
+  homeAsset79: '/Home/Blogs/new11/how-much-distance-we-should-walk-daily.jpeg',
+  homeAsset81: '/Home/Blogs/new11/how-to-reduce-back-fat-naturally-by-yoga-home-remedies.jpeg',
+  homeAsset82: '/Home/Blogs/new11/top-5-non-dairy-calcium-rich-foods.jpeg',
+  homeAsset83: '/Home/Blogs/new11/womens-days.jpg',
+  homeAsset84: '/Home/Blogs/new11/world-health-day.jpg',
+  homeAsset85: '/Home/Blogs/new11/yoga-for-ear-balance-disorder-1-1.jpg',
+  homeAsset86: '/Home/Blogs/new11/yoga-poses-to-do-befor-you-go-to-sleep.jpg',
 
   // videos
 
@@ -254,6 +269,8 @@ export const aboutAssets={
   aboutAsset7:'/About/Our%20Legacy/Shree%20Yogendra%20ji/4.jpg',
   aboutAsset8:'/About/Our%20Legacy/Shree%20Yogendra%20ji/5.jpg',
   aboutAsset9:'/About/Our%20Legacy/Shree%20Yogendra%20ji/6.jpg',
+  aboutAsset70: '/About/Our%20Legacy/new11/founder-1.jpg',
+  aboutAsset71: '/About/Our%20Legacy/new11/founder-2.jpg',
 
   // Madhavdas Ji
 
@@ -282,6 +299,8 @@ export const aboutAssets={
   aboutAsset24:'/About/Our%20Legacy/Dr.%20Jayadeva%20Yogendra/4.jpg',
   aboutAsset25:'/About/Our%20Legacy/Dr.%20Jayadeva%20Yogendra/5.jpg',
   aboutAsset26:'/About/Our%20Legacy/Dr.%20Jayadeva%20Yogendra/6.jpg',
+  aboutAsset73 :'/About/Our%20Legacy/new11/doctor-1.jpg',
+  aboutAsset74: '/About/Our%20Legacy/new11/doctor-2.jpg',
   
   // hansaji Yogengra
   
@@ -293,6 +312,8 @@ export const aboutAssets={
   aboutAsset32:'/About/Our%20Legacy/Dr.%20Hansaji%20Yogendra/4.jpg',
   aboutAsset33:'/About/Our%20Legacy/Dr.%20Hansaji%20Yogendra/5.jpg',
   aboutAsset34:'/About/Our%20Legacy/Dr.%20Hansaji%20Yogendra/6.jpg',
+  aboutAsset75 :'/About/Our%20Legacy/new11/hansaji-1.jpg',
+  aboutAsset76: '/About/Our%20Legacy/new11/hansaji-2.jpg',
   
   // harishji
   
@@ -304,6 +325,12 @@ export const aboutAssets={
   aboutAsset40:'/About/Our%20Legacy/Harish%20Ji/4.jpg',
   aboutAsset41:'/About/Our%20Legacy/Harish%20Ji/5.jpg',
   aboutAsset42:'/About/Our%20Legacy/Harish%20Ji/6.jpg',
+  aboutAsset77:'/About/Our%20Legacy/Harish%20Ji/new11/hrishi-1-1-1.JPG',
+  aboutAsset78:'/About/Our%20Legacy/Harish%20Ji/new11/hrishi-16-9.jpg',
+  aboutAsset79:'/About/Our%20Legacy/Harish%20Ji/new11/hrishi-4-1-1-min.JPG',
+  aboutAsset80:'/About/Our%20Legacy/Harish%20Ji/new11/hrishi-4-3-1.jpg',
+  aboutAsset81:'/About/Our%20Legacy/Harish%20Ji/new11/hrishi-4-3-2.jpg',
+
 
   // blessings
   aboutAsset43:'/About/Pujya%20Maa%20Dr%20Hansaji’s%20blessings/why_tyi.png',
@@ -954,6 +981,7 @@ export const factAssets={
   factAsset11:'/Home/Facts/1936-1956/1941.jpg',
   factAsset12:'/Home/Facts/1936-1956/1948.jpg',
   factAsset13:'/Home/Facts/1936-1956/1951.jpg',
+  factAsset98:'/Home/Facts/new11/1941-the-yoga-manual-written-by-shri-yogendra-and-shri-jayadeva-yogendra-translated-in-italian.jpg',
   
   // 1956-76
 
@@ -992,6 +1020,7 @@ export const factAssets={
   factAsset44:'/Home/Facts/1990-2000/24.jpg',
   factAsset45:'/Home/Facts/1990-2000/25.jpg',
   factAsset46:'/Home/Facts/1990-2000/26.jpg',
+  factAsset99:'/Home/Facts/new11/1987-first-volume-of-yoga-cyclopaedia..jpg',
 
   // 2000-2010
 
