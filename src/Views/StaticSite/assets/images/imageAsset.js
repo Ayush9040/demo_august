@@ -1088,9 +1088,29 @@ export const experienceAssets={
   natalia:'/Home/Experience/natalia.JPG',
   kovindji:'/Home/Experience/shriramnathkovid.png',
   veronica:'/Home/Experience/veronica.JPG',
-  premchandgodha:'/Home/Experience/Premchand%20Godha.jpg'
-
-
+  premchandgodha:'/Home/Experience/Premchand%20Godha.jpg',
+  ravishankar:'/Home/Experience/shri-shri-ravi-shankar.jpeg',
+  sadhguru:'/Home/Experience/sadhguru-jaggi-vasudev.jpg',
+  mahadeshwar:'/Home/Experience/shri-c-vidyasagar-rao-governor-of-maharashtra.jpeg',
+  nagendra:'/Home/Experience/padmashri-dr-h-r-nagendra-guruji.jpg',
+  bharatBhushan:'/Home/Experience/swami-bharat-bhushan-ji.jpg',
+  chidanand:'/Home/Experience/chidanand-saraswati.jpg',
+  gopalDas:'/Home/Experience/gaur-gopal-das.jpg',
+  vidyasagar:'/Home/Experience/shri-c-vidyasagar-rao-governor-of-maharashtra.jpeg',
+  isha:'/Home/Experience/isha-koppikar.jpg',
+  yesso:'/Home/Experience/shripad yesso naik.jpg',
+  shankarM:'/Home/Experience/shankar-mahadevan.jpg',
+  nitinG:'/Home/Experience/nitin-gadkari.png',
+  ranvirBrar:'/Home/Experience/chef-ranveer-brar.jpg',
+  kabirB:'/Home/Experience/kabir-bedi.jpg',
+  billBennet:'/Home/Experience/bill-bennett.jpeg',
+  jennifer:'/Home/Experience/jennifer-cluff.jpg',
+  shivaniBajaj:'/Home/Experience/shivani.jpeg',
+  jinal:'/Home/Experience/zinel.jpg',
+  nidhiSharma:'/Home/Experience/nidhi.JPG',
+  mercyD:'/Home/Experience/mercy-min.jpg',
+  nisarg:'/Home/Experience/nisarg.jpg',
+  zinal:'',
 }
 
 
