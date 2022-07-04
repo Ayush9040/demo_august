@@ -29,3 +29,11 @@
     display: none;
   }
 }
+video::-webkit-media-controls-fullscreen-button {
+  display: none;
+}
+audio::-webkit-media-controls-timeline,
+video::-webkit-media-controls-timeline {
+    display: none;
+}
+video::-webkit-media-controls-current-time-display { display: none }

@@ -28,23 +28,28 @@ const MainVideo = () => {
 
       <video
         src="https://ecom-static-site.oss-ap-south-1.aliyuncs.com/Home/PlayVideo/tyi-home-bs.mp4"
-        controls={false}
+        controls={true}
+        disablePictureInPicture
+        controlsList="nodownload noremoteplayback noplaybackrate"
+        nofullscreen 
         loop
         autoPlay={true}
-        muted={true}
+        muted={false}
         className='pop-video'
-        fullscreen
+        // fullscreen
       >
           Your browser does not support the video tag.
       </video>
       <video
         src="http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Home/PlayVideo/tyi-home-bg-mobile.mp4"
-        controls={false}
+        controls={true}
+        disablePictureInPicture
+        controlsList="nodownload noremoteplayback noplaybackrate"
+        nofullscreen 
         loop
         autoPlay={true}
-        muted={true}
+        muted={false}
         className='mobile-pop-video'
-        fullscreen
       >
           Your browser does not support the video tag.
       </video>

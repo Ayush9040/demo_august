@@ -70,7 +70,7 @@ const Activity = () => {
                 them now!
               </p>
             </div>
-            <Link to='/courses'>
+            <Link to='/courses/browse/most-popular'>
               <CommonBtn text={'Explore more'} />
             </Link>
           </div>
