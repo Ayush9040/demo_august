@@ -1,4 +1,6 @@
 .donation-container-1 {
+  width: 85%;
+  margin: 0 auto;
   .donation-buttons {
     display: block;
     box-sizing: border-box;
@@ -8,7 +10,7 @@
     text-align: center;
     .donate-button {
       margin: 10rem auto;
-      width: 15%;
+      width: 20%;
       justify-content: center;
       .global-common-btn {
         border-style: none;
@@ -27,7 +29,7 @@
       }
     }
     .input-box {
-      // width: 70%;
+      width: 85%;
       margin: 0 auto;
       h1 {
         font-size: 2rem;

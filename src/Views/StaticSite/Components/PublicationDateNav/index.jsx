@@ -8,19 +8,19 @@ const PublicationDateNav = ({ bold, setBold }) => {
         <ul>
           <li
             style={
-              bold === 1 ? { fontWeight: 'bold' } : { fontWeight: 'normal' }
+              bold === 5 ? { fontWeight: 'bold' } : { fontWeight: 'normal' }
             }
-            onClick={() => setBold(1)}
+            onClick={() => setBold(5)}
           >
-            2017......
+            2021|
           </li>
           <li
             style={
-              bold === 2 ? { fontWeight: 'bold' } : { fontWeight: 'normal' }
+              bold === 4 ? { fontWeight: 'bold' } : { fontWeight: 'normal' }
             }
-            onClick={() => setBold(2)}
+            onClick={() => setBold(4)}
           >
-            2018|
+            2020|
           </li>
           <li
             style={
@@ -32,19 +32,19 @@ const PublicationDateNav = ({ bold, setBold }) => {
           </li>
           <li
             style={
-              bold == 4 ? { fontWeight: 'bold' } : { fontWeight: 'normal' }
+              bold == 2 ? { fontWeight: 'bold' } : { fontWeight: 'normal' }
             }
-            onClick={() => setBold(4)}
+            onClick={() => setBold(2)}
           >
-            2020|
+            2018|
           </li>
           <li
             style={
-              bold == 5 ? { fontWeight: 'bold' } : { fontWeight: 'normal' }
+              bold == 1 ? { fontWeight: 'bold' } : { fontWeight: 'normal' }
             }
-            onClick={() => setBold(5)}
+            onClick={() => setBold(1)}
           >
-            2021|
+            2017
           </li>
         </ul>
       </div>
