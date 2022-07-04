@@ -27,6 +27,12 @@
     .about-us-legacy-banner-text {
         width: 70%;
         font-size: 1.7rem;
+        .legacy_para{
+            min-height: 400px;
+        }
+        .legacy_read_button{
+            margin-top: -4rem;
+        }
         // padding-bottom: 10rem;
     }
 }
@@ -131,7 +137,7 @@
 }
 .other-members{
     width: 100%;
-    height: 20%;
+   // height: 20%;
     background:  var(--primary-color);
 }
 .m-images{
@@ -178,12 +184,15 @@
         }
         .about-us-legacy-banner-text{
             width: 65%;
+           .legacy_para{
+               min-height: 450px;
+           } 
         }
     }
 }
-    .other-members{
-        height: 20%;
-    }
+    // .other-members{
+    //     height: 20%;
+    // }
 }
 
 @media(max-width:1536px){
@@ -221,9 +230,9 @@
     // .legacy-content{
     //     // height: 85%;
     // }
-    .other-members{
-        height: 15%;
-    }
+//    .other-members {
+//         height: 15%;
+//     }
     .m-image{
         width: 120px;
     }
@@ -255,9 +264,9 @@
         }
     }
 }
-    .other-members{
-        height: 20%;
-    }
+    // .other-members{
+    //     height: 20%;
+    // }
 
 }
 
@@ -292,9 +301,9 @@
         }
     }
 }
-    .other-members{
-        height: 15%;
-    }
+    // .other-members{
+    //     height: 15%;
+    // }
     .m-images{
         display: flex;
         justify-content: center; 
@@ -362,9 +371,9 @@
     .common-container .navigation-container .common-nav-container .mega-nav .hamburger svg {
         width: 20px !important;
     }
-    .other-members{
-        height: 85%;
-    }
+    // .other-members{
+    //     height: 85%;
+    // }
     .m-images{
         display: flex;
         justify-content: center; 

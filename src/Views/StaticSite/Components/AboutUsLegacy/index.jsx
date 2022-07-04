@@ -13,7 +13,7 @@ const CommonBannerLegacy = ({
   Navigation,
   PageType,
   isOnlyBanner,
-  children
+  children,
 }) => {
   const [activeFounder, setActiveFounder] = useState(0)
 
@@ -145,7 +145,17 @@ const CommonBannerLegacy = ({
       img: l5,
     },
   ]
-  
+  const str = founderData[2].desc[1].length
+
+  function truncateString(str, totalTextLength) {
+    return str.length > totalTextLength
+      ? str.slice(0, totalTextLength) + '....'
+      : str
+  }
+
+  console.log(str)
+
+  console.log(founderData[2].desc[1].length, 'abcd')
   return (
     <>
       <div className="about-us-container">
@@ -181,21 +191,29 @@ const CommonBannerLegacy = ({
                   <div className="bottom-line"></div>
                 </div>
                 <div className="pos-date">
-                  {founderData[activeFounder].founder} 
-                  <p style={{ fontSize: '16px',  }}>
+                  {founderData[activeFounder].founder}
+                  <p style={{ fontSize: '16px' }}>
                     {founderData[activeFounder].year}
                   </p>
                 </div>
               </div>
               <p style={{ textAlign: 'left', paddingBottom: '30px' }}>
-                <div id='founder-para1'>{founderData[activeFounder].desc[0]}</div>
+                <div className="legacy_para">
+                  <div id="founder-para1">
+                    {truncateString(founderData[activeFounder].desc[0], 400)}
+                  </div>
 
-                <div id='founder-para2' >{founderData[activeFounder].desc[1]}</div>
-                
+                  <div id="founder-para2">
+                    {truncateString(founderData[activeFounder].desc[1], 480)}
+                  </div>
+                </div>
+
                 <Link
                   to={'/about/our-legacy/' + founderData[activeFounder].route}
                 >
-                  <CommonBtn text={'Read More'} />
+                  <div className="legacy_read_button">
+                    <CommonBtn text={'Read More'} />
+                  </div>
                 </Link>
               </p>
             </div>

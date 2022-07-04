@@ -3,7 +3,13 @@ import { Link } from 'react-router-dom'
 import './style.scss'
 import { share1 } from '../../assets/icons/icon'
 
-const SeminarCard = ({ title, bgImage, desc, url='', btnText='View Story' }) => {
+const SeminarCard = ({
+  title,
+  bgImage,
+  desc,
+  url = '',
+  btnText = 'View Story',
+}) => {
   let description = desc
     ? desc
     : `Lorem ipsum dolor sit amet, consectetur adipiscing
@@ -21,22 +27,40 @@ const SeminarCard = ({ title, bgImage, desc, url='', btnText='View Story' }) => 
       ? setTextTitle(description.substring(0, 80) + '...')
       : setTextTitle(description)
   })
+
+  let heading = title
+    ? title
+    : `Lorem ipsum dolor sit amet, consectetur adipiscing
+    elit. Nullam nec ante id nunc vehicula pharetra nec
+    vitae est. Sed diam dui, luctus sed velit quis,
+    placerat consequat felis. Vivamus cursus in mauris
+    at dignissim. Etiam venenatis semper pharetra.
+    Duis ut diam eros. In hac habitasse platea
+    dictumst. Nam tincidunt nisi metus, et dignissim
+    ligula cursus ut.`
+
+  const [blogHeading, setBlogHeading] = useState(false)
+  useEffect(() => {
+    heading.split('').length > 25
+      ? setBlogHeading(heading.substring(0, 25) + '...')
+      : setBlogHeading(heading)
+  })
   return (
     <div className={'seminar-card'}>
-      <div className='seminar-card-image'>
+      <div className="seminar-card-image">
         <img src={bgImage} />
       </div>
-      <div className='seminar-card-content'>
+      <div className="seminar-card-content">
         <h2>
-          <span className='seminar-title'>{title}</span>
-          <span className='seminar-date'>01/01/2022</span>
+          <span className="seminar-title">{blogHeading}</span>
+          <span className="seminar-date">01/01/2022</span>
         </h2>
         <p>{textTitle}</p>
-        <div className='options'>
+        <div className="options">
           <Link to={url}>
-            <button>{ btnText }</button>
+            <button>{btnText}</button>
           </Link>
-          <div className='share-icon'>{share1}</div>
+          <div className="share-icon">{share1}</div>
         </div>
       </div>
     </div>

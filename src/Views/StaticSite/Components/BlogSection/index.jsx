@@ -52,9 +52,11 @@ const Blog = () => {
               philosophies, and even life choices
             </p>
           </div>
-          <Link to="/blogs">
-            <CommonBtn text={'View All'} />
-          </Link>
+          <div className='blog_view_button'>
+            <Link to="/blogs">
+              <CommonBtn text={'View All'} />
+            </Link>
+          </div>
         </div>
         <div className="blog-carousel">
           <Slider {...settings}>

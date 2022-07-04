@@ -1,5 +1,5 @@
 .main-blog {
-  .blog-heading{
+  .blog-heading {
     margin-top: 20px;
   }
   h1 {
@@ -15,6 +15,10 @@
   .alumni-content {
     background: #96bcee;
     .newsletter-content {
+      h2 {
+        font-size: 2rem;
+      }
+      top: -16.5rem;
       width: 70% !important;
       margin: 0 auto;
       .options {
@@ -55,7 +59,7 @@
   }
 }
 .upcoming-blogs {
-  width: fit-content;
+  width: fit-content; 
   margin: 3rem auto;
   display: flex;
   flex-direction: column;
@@ -64,6 +68,8 @@
     display: inline-block;
     font-size: 2.5rem;
     font-weight: 700;
+    margin-left: 15rem;
+    margin-bottom: 2rem;
   }
 }
 .blog-card-container {
@@ -134,7 +140,6 @@
     }
   }
 }
-
 
 @media (max-width: 900px) {
   .alumni-content {
@@ -241,7 +246,4 @@
       grid-template-columns: 100%;
     }
   }
-  
 }
-
-
