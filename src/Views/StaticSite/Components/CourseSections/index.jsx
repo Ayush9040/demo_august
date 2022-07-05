@@ -189,7 +189,7 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange })
                     courseTitle={item.title}
                     description={item.metaDescription}
                     path={item.key}
-                    img={item.image}
+                    img={item.cardImage}
                     rating={item.rating}
                     dates={item.dates}
                   />
@@ -207,7 +207,7 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange })
                   courseTitle={item.title}
                   description={item.metaDescription}
                   path={item.key}
-                  img={item.image}
+                  img={item.cardImage}
                   rating={item.rating}
                   dates={item.dates}
                 />
