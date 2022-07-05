@@ -245,7 +245,9 @@ export const facilitiyAssets = {
   facilitiyAssets8: '/Facilities/Nature%20Trail/naturetrail_.jpg',
   facilitiyAssets9: '/Facilities/Gazebo/Gazebo_.jpg',
   facilitiyAssets10:'/Facilities/KailashTree/tree.jpg',
-  homeAsset70:'/Home/Footer/tyi.png'
+  homeAsset70:'/Home/Footer/tyi.png',
+  facilitiyAssets11:'/Facilities/new11/kelashpati.JPG',
+  facilitiyAssets12:'/Facilities/new11/dininghall1.jpg',
 
 } 
 
@@ -955,6 +957,11 @@ export const volunteerAssets = {
   volunteerAssets2: '/Volunteer/Bmc-Schools/volunteer-bmc.jpg',
   volunteerAssets3: '/Volunteer/Traffic-police/volunteer-3.jpg',
   volunteerAssets4: '/Volunteer/Trees-plantation/planting-modified.jpg',
+  volunteerAssets5:'/Volunteer/new11/course-coordinator-cover-image.jpg',
+  volunteerAssets6:'/Volunteer/new11/day-to-day-activities.jpg',
+  volunteerAssets7:'/Volunteer/new11/kitchen-help-cover-image.jpg',
+  volunteerAssets8:'/Volunteer/new11/teachers-cover-image.jpg',
+  volunteerAssets9:'/Volunteer/new11/volunteer-programs-expertise-cover-image.jpg',
   //values
   valuesAssets: '/Volunteer/our-values.jpg',
 }

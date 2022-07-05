@@ -83,7 +83,7 @@
     .seminar-card-image{
         box-sizing: border-box;
         width: 28rem;
-        height: 24rem;
+       // height: 24rem;
     }
     
 }
@@ -95,7 +95,7 @@
         .seminar-card-image{
             box-sizing: border-box;
             width: 100%;
-            height: 24rem;
+            //height: 24rem;
         }
         .seminar-card-content{
             span{
@@ -113,12 +113,12 @@
     .seminar-card{
         max-width: 500px;
         width: 50rem;
-        height: 50rem !important;
+      //  height: 50rem !important;
         .seminar-card-image{
             box-sizing: border-box;
             // width: 28rem;
             width: 100%;
-            height: 24rem;
+          //  height: 24rem;
         }
         .seminar-card-content{
             .seminar-title{
