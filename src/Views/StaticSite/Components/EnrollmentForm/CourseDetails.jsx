@@ -12,7 +12,9 @@ const CourseDetails = ({
   setCourseAsset2,
   handleSubmit,
   empty,
-  setEmpty
+  setEmpty,
+  courseFee,
+  setCourseFee
 }) => {
   useEffect(() => {
     if(formData.mode === 'ONLINE'){
@@ -22,6 +24,7 @@ const CourseDetails = ({
 
   const [pictureName,setPictureName]=useState('')
   const [certificateName,setcertificateName]=useState('')
+
   
   console.log(empty)
   // const getBase64 = (file, cb)=>{
@@ -51,7 +54,7 @@ const CourseDetails = ({
                   {currentCourse?.title}&nbsp;
                   {courseDate ? courseDate : ''}
                 </div>
-                <p className="current_fees"> ₹ {currentCourse?.fees}</p>
+                <p className="current_fees"> ₹ {courseFee}</p>
               </div>
             </div>
           </div>
@@ -79,6 +82,7 @@ const CourseDetails = ({
                         mode: e.target.value,
                       })
                       setEmpty(0)
+                      setCourseFee(currentCourse?.fees?.onlineFee)
                     }
                   }}
                 />
@@ -101,6 +105,7 @@ const CourseDetails = ({
                         mode: e.target.value,
                       })
                       setEmpty(0)
+                      setCourseFee(currentCourse?.fees?.onlineFee)
                     }
                   }}
                 />{' '}
@@ -126,6 +131,7 @@ const CourseDetails = ({
                         residental: e.target.value,
                       })
                       setEmpty(0)
+                      setCourseFee(currentCourse?.fees?.offlineFee?.residentialFee)
                     }
                   }}
                 />{' '}
@@ -150,6 +156,7 @@ const CourseDetails = ({
                         residental: e.target.value,
                       })
                       setEmpty(0)
+                      setCourseFee(currentCourse?.fees?.offlineFee?.nonResidentialFee)
                     }
                   }}
                 />{' '}

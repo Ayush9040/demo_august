@@ -5,3 +5,9 @@
   //background: url('http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Home/heroSection.jpg') no-repeat center center / cover;
 
 }
+
+@media(max-width:'786px'){
+  .landing-page-container{
+    height: 80vh;
+  }
+}

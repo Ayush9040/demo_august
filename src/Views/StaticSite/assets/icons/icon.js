@@ -1372,3 +1372,19 @@ export const donation = (
 export const upload =(
   <svg width='30px' height='30px' style={{ verticalAlign:'middle' }} xmlns="http://www.w3.org/2000/svg" id="Layer_1" viewBox="0 0 52 52"><path className="cls-1" fill='#a9a9a9' d="M26,0C11.64,0,0,11.64,0,26s11.64,26,26,26,26-11.64,26-26S40.36,0,26,0Zm0,49.49c-12.95,0-23.49-10.54-23.49-23.49S13.05,2.51,26,2.51s23.49,10.54,23.49,23.49-10.54,23.49-23.49,23.49Z"/><polygon fill='#a9a9a9' className="cls-1" points="36.54 32.25 26.92 32.25 26.92 20.72 30.82 20.72 25.92 15.82 21.02 20.72 24.92 20.72 24.92 32.25 15.3 32.25 15.3 25.11 14.13 25.11 14.13 33.68 37.7 33.68 37.7 25.11 36.54 25.11 36.54 32.25"/></svg>
 )
+
+export const pause = (
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="feather feather-pause"><rect x="6" y="4" width="4" height="16"></rect><rect x="14" y="4" width="4" height="16"></rect></svg>
+)
+
+export const play = (
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="feather feather-play"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+)
+
+export const unmute = (
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="feather feather-volume-2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
+)
+
+export const mute = (
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="feather feather-volume-x"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><line x1="23" y1="9" x2="17" y2="15"></line><line x1="17" y1="9" x2="23" y2="15"></line></svg>
+)

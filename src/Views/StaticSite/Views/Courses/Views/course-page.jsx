@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 //import CommonBannerNavPrimary from '../../Components/CommonBannerNavPrimary'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSearch } from '@fortawesome/free-solid-svg-icons'
+//import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+//import { faSearch } from '@fortawesome/free-solid-svg-icons'
 import './style.scss'
 import CourseSection from '../../../Components/CourseSections'
 import { courseCardData } from '../../../utils/courseCardData'
@@ -58,12 +58,12 @@ const Courses = () => {
       <InnerNavComponent abc={CoursesBan} />
       <div className="search">
         <h1>Courses</h1>
-        <div className="search-bar">
+        {/* <div className="search-bar">
           <label>
             <input type={'text'} placeholder="Search Courses" />
             <FontAwesomeIcon icon={faSearch} />
           </label>
-        </div>
+        </div> */}
       </div>
       <div className="courses-introduction">
         <div className="intro-text">
@@ -117,8 +117,9 @@ const Courses = () => {
             </div>
             <div className="certificate-text">
               <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                ndustry.
+                The Indian Yoga Association is committed to promotion and
+advancement of Yoga and its applications around the world.
+
               </p>
             </div>
           </div>
@@ -128,8 +129,9 @@ const Courses = () => {
             </div>
             <div className="certificate-text">
               <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                ndustry.
+              Yoga Certification Board is the Board which has been set up by
+Government for certification in the field of Yoga.
+
               </p>
             </div>
           </div>
@@ -139,8 +141,9 @@ const Courses = () => {
             </div>
             <div className="certificate-text">
               <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                ndustry.
+              Yoga Alliance is involved with advocating for self-
+regulation in the yoga industry.
+
               </p>
             </div>
           </div>
@@ -150,8 +153,8 @@ const Courses = () => {
             </div>
             <div className="certificate-text">
               <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                ndustry.
+              IAYT supports research and education in yoga and serves as a
+professional organization for yoga teachers and yoga therapists worldwide.
               </p>
             </div>
           </div>

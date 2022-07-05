@@ -140,6 +140,7 @@ const BrowseCourses = () => {
               path={item.key}
               img={item.cardImage}
               rating={item.rating}
+              dates={item.dates}
             />
           ))}
         </div>

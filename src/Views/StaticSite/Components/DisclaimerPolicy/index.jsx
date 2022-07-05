@@ -14,7 +14,8 @@ const DisclaimerPolicy = ({
   courseAsset1,
   courseAsset2,
   templateKey,
-  setBold
+  setBold,
+  courseFee
 }) => {
   const [disData, setDisData] = useState({
     terms: 'no',
@@ -109,7 +110,7 @@ const DisclaimerPolicy = ({
       }
       let mailTemplate = {
         type: null,
-        HTMLTemplate: mail,
+        HTMLTemplate: templateKey,
         subject: 'Enrollment Confirmation',
         data:{
           user: formData.name
@@ -134,7 +135,7 @@ const DisclaimerPolicy = ({
           if(formData?.residental!=='RESIDENTIAL'){
             console.log(response.data.data['_id'])
             const paymentOrderResponse =  await axios.post(`https://cms-dev-be.theyogainstituteonline.org/v1/payment/order?enrollmentFormId=${response.data.data['_id']}`, {
-              amount: currentCourse.fees,
+              amount: courseFee,
               notes: {
                 description:currentCourse.metaDescription,
               }

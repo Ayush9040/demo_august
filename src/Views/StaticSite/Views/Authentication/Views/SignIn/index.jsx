@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react'
 import { Link, useLocation, useNavigate, useSearchParams } from 'react-router-dom'
 import { useDispatch,useSelector } from 'react-redux'
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGoogle, faFacebook } from '@fortawesome/free-brands-svg-icons'
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import { faGoogle, faFacebook } from '@fortawesome/free-brands-svg-icons'
 import { loginUserAction } from '../../Auth.actions'
 
 import CommonBtn from '../../../../Components/commonbtn'
@@ -103,7 +103,7 @@ const SignIn = () => {
             <h3>Sign Up</h3>
           </Link>
         </div>
-        <div className="social-logins google">
+        {/* <div className="social-logins google">
           <h3>
             <FontAwesomeIcon icon={faGoogle} />
             &ensp;SIGN IN WITH GOOGLE
@@ -114,7 +114,7 @@ const SignIn = () => {
             <FontAwesomeIcon icon={faFacebook} />
             &ensp;SIGN IN WITH FACEBOOK
           </h3>
-        </div>
+        </div> */}
       </div>
     </div>
   )

@@ -154,6 +154,7 @@ flex: 0 0 190px;
 }
 @media (max-width: "768px") {
     .photo-container {
+        display: grid;
        grid-template-columns: repeat(2,1fr);
     }
 }

@@ -33,7 +33,7 @@ const Enrollment = () => {
   // var today = new Date()
 
   const [empty, setEmpty] = useState(0)
-
+  const [ courseFee,setCourseFee ]=useState(1000)
   const [bold, setBold] = useState(0)
   const [yearEmpty, setYearEmpty] = useState(0)
   const [resgin, setResgin] = useState(0)
@@ -338,6 +338,8 @@ const Enrollment = () => {
             handleSubmit={handleSubmit}
             empty={empty}
             setEmpty={setEmpty}
+            courseFee={courseFee}
+            setCourseFee={setCourseFee}
           />
         ) : (
           <DisclaimerPolicy
@@ -349,6 +351,7 @@ const Enrollment = () => {
             courseAsset1={courseAsset1}
             courseAsset2={courseAsset2}
             setBold={setBold}
+            courseFee={courseFee}
           />
         )}
       </div>

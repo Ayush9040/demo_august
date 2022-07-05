@@ -24,7 +24,7 @@ export const activityData = [
     image:`${baseDomain}${homeAssets.homeAsset15}`
   },
   {
-    title:'Samatvam',
+    title:'Samattvam',
     description:'This is a health counseling program with a team of doctors and experts to support and guide you on your health concerns and help you with yogic solutions.',
     image:`${baseDomain}${homeAssets.homeAsset16}`
   },

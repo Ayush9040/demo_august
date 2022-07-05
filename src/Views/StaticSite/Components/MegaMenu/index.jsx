@@ -28,7 +28,7 @@ const MegaMenu = ({ setNav }) => {
     },
     { name: 'SHOP (Coming Soon)', link: '/', id: 10, key: 'SHOP' },
     {
-      name: 'NEWS,EVENTS & MEDIA',
+      name: 'NEWS, EVENTS & MEDIA',
       link: '/media/media-gallery',
       id: 11,
       key: 'NEWS',
