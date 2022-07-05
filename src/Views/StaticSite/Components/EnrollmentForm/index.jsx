@@ -201,6 +201,9 @@ const Enrollment = () => {
     if(formData.mode===''){
       setEmpty('mode')
     }
+    else if(formData.mode==='ONLINE'){
+      setBold(5)
+    }
     else if(formData.mode==='OFFLINE'){
       if(formData.residental===''){
         setEmpty('subMode')

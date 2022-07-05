@@ -162,6 +162,7 @@ display: none;
         position: absolute;
         display: inline-block;
         top: 60%;
+        z-index: -1;
         svg {
           //position: sticky;
           //bottom: 20rem;
