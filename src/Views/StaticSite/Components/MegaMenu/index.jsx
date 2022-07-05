@@ -16,17 +16,17 @@ const MegaMenu = ({ setNav }) => {
     { name: 'COURSES', link: '/courses', id: 2, key: 'COURSES' },
     { name: 'FACILITIES', link: '/facilities', id: 3, key: 'FACILITIES' },
     { name: 'MUSEUM', link: '/museum', id: 4, key: 'MUSEUM' },
-    { name: 'DONATE', link: '', id: 5, key: 'DONATION' },
-    { name: 'GIFTING', link: '', id: 6, key: 'GIFTING' },
+    { name: 'DONATE (Coming Soon)', link: '', id: 5, key: 'DONATION' },
+    { name: 'GIFTING (Coming Soon)', link: '', id: 6, key: 'GIFTING' },
     { name: 'NISPAND', link: 'https://nispand.com/', id: 7, key: 'NISPAND' },
-    { name: 'TYI ONLINE', link: '', id: 8, key: 'ONLINE' },
+    { name: 'TYI ONLINE (Coming Soon)', link: '', id: 8, key: 'ONLINE' },
     {
       name: 'PUBLICATIONS',
       link: '/publication/yoga-health',
       id: 9,
       key: 'PUBLICATIONS',
     },
-    { name: 'SHOP', link: '/shop', id: 10, key: 'SHOP' },
+    { name: 'SHOP (Coming Soon)', link: '/', id: 10, key: 'SHOP' },
     {
       name: 'NEWS,EVENTS & MEDIA',
       link: '/media/media-gallery',
@@ -81,44 +81,44 @@ const MegaMenu = ({ setNav }) => {
       { menu: 'Rules and Regulations', link: '/facilities/#information' },
     ],
     SHOP: [
-      { menu: 'All Categories', link: '/shop' },
-      { menu: 'Books', link: '/shop' },
-      { menu: 'T-shirts', link: '/shop' },
-      { menu: 'Mats', link: '/shop' },
-      { menu: 'Bags', link: '/shop' },
-      { menu: 'Snacks', link: '/shop' },
+      // { menu: 'All Categories', link: '/shop' },
+      // { menu: 'Books', link: '/shop' },
+      // { menu: 'T-shirts', link: '/shop' },
+      // { menu: 'Mats', link: '/shop' },
+      // { menu: 'Bags', link: '/shop' },
+      // { menu: 'Snacks', link: '/shop' },
     ],
     GIFTING: [
-      { menu: 'Overview', link: '/Gifting' },
-      { menu: 'Gift Career', link: '/Gifting/#gift-career' },
-      {
-        menu: 'Gift Health and Wellness',
-        link: '/Gifting/#Gift-health&wellness',
-      },
-      { menu: 'Gift wisdom', link: '/Gifting/#gift-wisdom' },
-      { menu: 'Gift Nispand', link: '/Gifting/#gift-nispand' },
+      // { menu: 'Overview', link: '/Gifting' },
+      // { menu: 'Gift Career', link: '/Gifting/#gift-career' },
+      // {
+      //   menu: 'Gift Health and Wellness',
+      //   link: '/Gifting/#Gift-health&wellness',
+      // },
+      // { menu: 'Gift wisdom', link: '/Gifting/#gift-wisdom' },
+      // { menu: 'Gift Nispand', link: '/Gifting/#gift-nispand' },
     ],
     DONATION: [
-      { menu: 'Overview', link: '/donation' },
-      { menu: 'Annam brahma', link: '/donation/#annam-brahma' },
-      { menu: 'Truckasana', link: '/donation/#truckasana' },
-      {
-        menu: 'Yoga for the Underprivileged',
-        link: '/donation/#yoga-for-underprivileged',
-      },
-      {
-        menu: 'Yoga for Transgender Community',
-        link: '/donation/#yoga-for-transgender',
-      },
-      {
-        menu: 'Yoga for Children with special needs',
-        link: '/donation/#yoga-for-special-needs',
-      },
-      {
-        menu: 'Underprivileged Children in BMC schools',
-        link: '/donation/#underprivileged-children',
-      },
-      { menu: 'Police', link: '/donation/#police' },
+      // { menu: 'Overview', link: '/donation' },
+      // { menu: 'Annam brahma', link: '/donation/#annam-brahma' },
+      // { menu: 'Truckasana', link: '/donation/#truckasana' },
+      // {
+      //   menu: 'Yoga for the Underprivileged',
+      //   link: '/donation/#yoga-for-underprivileged',
+      // },
+      // {
+      //   menu: 'Yoga for Transgender Community',
+      //   link: '/donation/#yoga-for-transgender',
+      // },
+      // {
+      //   menu: 'Yoga for Children with special needs',
+      //   link: '/donation/#yoga-for-special-needs',
+      // },
+      // {
+      //   menu: 'Underprivileged Children in BMC schools',
+      //   link: '/donation/#underprivileged-children',
+      // },
+      // { menu: 'Police', link: '/donation/#police' },
     ],
     NEWS: [
       { menu: 'Gallery', link: '/media/media-gallery' },
@@ -164,7 +164,7 @@ const MegaMenu = ({ setNav }) => {
                     to={`${item.link}`}
                     key={i}
                   >
-                    <li>
+                    <li >
                       {item.name}
                       <div
                         style={{
@@ -186,7 +186,6 @@ const MegaMenu = ({ setNav }) => {
                     onMouseOver={() => {
                       setMenuItem(item.key)
                     }}
-                    className={(item.name==='DONATION'||item.name==='GIFTING') ? 'coming-soon':''}
                     key={i}
                   >
                     <li>

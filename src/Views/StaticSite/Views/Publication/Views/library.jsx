@@ -19,16 +19,16 @@ const library = () => {
         url:'/publication/yogasattva',
         name:'Yogasattava'
       },
-      {
-        innerTitle:'books',
-        url:'/publication/books',
-        name:'Books'
-      },
-      {
-        innerTitle:'ebooks',
-        url:'/publication/e-books',
-        name:'E-books'
-      },
+      // {
+      //   innerTitle:'books',
+      //   url:'/publication/books',
+      //   name:'Books'
+      // },
+      // {
+      //   innerTitle:'ebooks',
+      //   url:'/publication/e-books',
+      //   name:'E-books'
+      // },
       {
         innerTitle:'library',
         url:'/publication/library',
