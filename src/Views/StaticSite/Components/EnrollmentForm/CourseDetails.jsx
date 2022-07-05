@@ -11,6 +11,8 @@ const CourseDetails = ({
   courseAsset2,
   setCourseAsset2,
   handleSubmit,
+  empty,
+  setEmpty
 }) => {
   useEffect(() => {
     if(formData.mode === 'ONLINE'){
@@ -21,7 +23,7 @@ const CourseDetails = ({
   const [pictureName,setPictureName]=useState('')
   const [certificateName,setcertificateName]=useState('')
   
-
+  console.log(empty)
   // const getBase64 = (file, cb)=>{
   //   let reader = new FileReader()
   //   reader.readAsDataURL(file)
@@ -54,7 +56,7 @@ const CourseDetails = ({
             </div>
           </div>
           <div className="course-details-text">
-            Please select one of these options
+            Please select one of these options*
           </div>
           <form className="residential-form">
             <div className="last_radio_button">
@@ -63,11 +65,11 @@ const CourseDetails = ({
                   type="radio"
                   name="mode"
                   value="OFFLINE"
-                  disabled={currentCourse.onCampus === false ? true : false}
+                  disabled={currentCourse.onCampus===false}
                   checked={formData.mode==='OFFLINE'}
                   style={
                     currentCourse.onCampus === false
-                      ? { background: 'grey' }
+                      ? { background: 'url(https://ecom-static-site.oss-ap-south-1.aliyuncs.com/icons/icons8-multiply-24.png)' }
                       : {}
                   }
                   onChange={(e) => {
@@ -76,6 +78,7 @@ const CourseDetails = ({
                         ...formData,
                         mode: e.target.value,
                       })
+                      setEmpty(0)
                     }
                   }}
                 />
@@ -86,10 +89,10 @@ const CourseDetails = ({
                   type="radio"
                   name="mode"
                   value="ONLINE"
-                  disabled={currentCourse.online === false ? true : false}
+                  disabled={currentCourse.online === false}
                   checked={formData.mode==='ONLINE'}
                   style={
-                    currentCourse.online === false ? { background: 'grey' } : {}
+                    currentCourse.online === false ? { background: 'url(https://ecom-static-site.oss-ap-south-1.aliyuncs.com/icons/icons8-multiply-24.png)' } : {}
                   }
                   onChange={(e) => {
                     if (e.target.checked) {
@@ -97,12 +100,14 @@ const CourseDetails = ({
                         ...formData,
                         mode: e.target.value,
                       })
+                      setEmpty(0)
                     }
                   }}
                 />{' '}
                 &nbsp; Online
               </label>
             </div>
+            { empty==='mode' && <small className='mode-err' >Please select 1 mode</small>}
             <div className="last_radio_button-cols">
               <label htmlFor="" className="course_details_text">
                 <input
@@ -110,14 +115,17 @@ const CourseDetails = ({
                   name="resident"
                   value="RESIDENTIAL"
                   checked={formData.mode === 'OFFLINE' && formData.residental ==='RESIDENTIAL'}
-                  disabled={formData.mode === 'OFFLINE' ? false : true}
-                  style={formData.mode === 'OFFLINE' ? { color: 'grey' } : {}}
+                  disabled={currentCourse.residential === false || formData.mode === 'ONLINE'}
+                  style={
+                    currentCourse.residential === false ? { background: 'url(https://ecom-static-site.oss-ap-south-1.aliyuncs.com/icons/icons8-multiply-24.png)' } : {}
+                  }
                   onChange={(e) => {
                     if (e.target.checked) {
                       setFormData({
                         ...formData,
                         residental: e.target.value,
                       })
+                      setEmpty(0)
                     }
                   }}
                 />{' '}
@@ -129,10 +137,10 @@ const CourseDetails = ({
                   name="resident"
                   value="NONRESIDENTIAL"
                   checked={formData.mode === 'OFFLINE' && formData.residental ==='NONRESIDENTIAL'}
-                  disabled={formData.mode === 'OFFLINE' ? false : true}
+                  disabled={currentCourse.nonResidential === false  || formData.mode === 'ONLINE'}
                   style={
                     currentCourse.nonResidential === false
-                      ? { background: 'grey' }
+                      ? { background: 'url(https://ecom-static-site.oss-ap-south-1.aliyuncs.com/icons/icons8-multiply-24.png)' }
                       : {}
                   }
                   onChange={(e) => {
@@ -141,11 +149,13 @@ const CourseDetails = ({
                         ...formData,
                         residental: e.target.value,
                       })
+                      setEmpty(0)
                     }
                   }}
                 />{' '}
                 &nbsp; Non-Residential
               </label>
+              { empty==='subMode' && <small className='mode-err' >Please select submode</small>}
             </div>
           </form>
           <div className="upload-section">

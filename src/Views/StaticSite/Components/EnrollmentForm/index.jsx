@@ -124,7 +124,7 @@ const Enrollment = () => {
 
   const handleEmpty1 = (e) => {
     e.preventDefault()
-    if (formData.name === '') {
+    if (formData.name === '' || formData.name===undefined || formData.name===null ) {
       return setEmpty(1)
     } else if (
       formData.phone === '' ||
@@ -194,8 +194,23 @@ const Enrollment = () => {
     } else setBold(4)
   }
 
-  const handleSubmit = async() => {
-    setBold(5)
+  const handleSubmit = () => {
+    console.log(formData.mode,'sss')
+    console.log(formData.residental,'sss')
+
+    if(formData.mode===''){
+      setEmpty('mode')
+    }
+    else if(formData.mode==='OFFLINE'){
+      if(formData.residental===''){
+        setEmpty('subMode')
+      }
+      else{
+        console.log('abcd')
+        setBold(5)
+      }
+    }
+    
   }
 
   return (
@@ -318,6 +333,8 @@ const Enrollment = () => {
             setCourseAsset2={setCourseAsset2}
             setBold={setBold}
             handleSubmit={handleSubmit}
+            empty={empty}
+            setEmpty={setEmpty}
           />
         ) : (
           <DisclaimerPolicy
