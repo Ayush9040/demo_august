@@ -217,14 +217,17 @@
     }
 }
 
-@media (max-width:900px){
+@media (max-width:1050px){
     .our-offerings-section{
         padding-bottom: 2rem;
         .filler-logo{
             display: none;
         }
     }
-    
+    .our-offerings-container .our-offerings-carousel .course-offered img {
+        width: 75%;
+        margin: 0 auto;
+    }
     .our-offerings-container{
         grid-template-columns: 100%;
     }
@@ -278,6 +281,7 @@
     }
     .our-offerings-container .our-offerings-carousel .course-offered h4 {
         top: 80%;
+        left:15%;
     }
 }
 

@@ -110,14 +110,14 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange })
             </h4>
           </div>
           <div className="vertical-scrollbar" style={{ paddingLeft: '5rem' }}>
-            <Slider
+            {/* <Slider
               min={1}
               max={sliderRange}
               orientation="vertical"
               value={customVal}
               onChange={(value) => setCustomVal(value)}
               reverse={true}
-            />
+            /> */}
           </div>
         </div>
       )

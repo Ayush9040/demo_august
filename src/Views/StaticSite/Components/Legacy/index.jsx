@@ -86,7 +86,7 @@ const Legacy = () => {
           </div>
         </div>
         <div className="filler-logo">{filler}</div>
-        <div className="global-top-margin">
+        <div className="know-our-legacy-button">
           <Link to="/about/our-legacy">
             <CommonBtn text="Know Our Legacy" />
           </Link>
