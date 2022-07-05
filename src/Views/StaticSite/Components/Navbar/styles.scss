@@ -81,7 +81,11 @@
     .navbar-container{
         padding: 2rem;
         .hamburger{
-            width: auto;
+            .svg{
+                cursor: pointer;
+                width: 30px;
+                height: 30px;
+            }
         }
     }
 }

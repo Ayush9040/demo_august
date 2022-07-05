@@ -41,7 +41,7 @@
     grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
     img {
         width: 200px;
-        height: 200px;
+        //height: 200px;
         border-radius: 20px;
     }
 .legacy-card {
@@ -82,7 +82,7 @@ flex: 0 0 190px;
         width: 100%;
         img{
             width: 280px;
-            height: 280px;
+            // height: 280px;
         }
     }
     .legacy-container{
@@ -123,13 +123,13 @@ flex: 0 0 190px;
 @media (max-width: "1330px") {
     .photo-container img {
         width: 150px;
-        height: 150px;
+        //height: 150px;
     }
 }
 @media (max-width: "1050px") {
     .photo-container img {
         width: 250px;
-        height: 250px;
+        //height: 250px;
     }
     .photo-container {
         grid-template-columns: repeat(3,1fr);
@@ -143,7 +143,7 @@ flex: 0 0 190px;
     }
     .photo-container img {
         width: 150px;
-        height: 150px;
+        //height: 150px;
     }
     .photo-container {
         gap: 2rem;
@@ -166,7 +166,7 @@ flex: 0 0 190px;
 }
     .photo-container img {
        width: 150px;
-       height: 150px;
+       //height: 150px;
     }
     .legacy-text {
         width: auto;
@@ -178,6 +178,6 @@ flex: 0 0 190px;
     }
     .photo-container img {
         width: 200px;
-        height: 200px;
+        //height: 200px;
      }
 }

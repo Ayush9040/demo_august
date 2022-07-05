@@ -371,9 +371,9 @@
     .common-container .navigation-container .common-nav-container .mega-nav .hamburger svg {
         width: 20px !important;
     }
-    // .other-members{
-    //     height: 85%;
-    // }
+    .other-members{
+        height: fit-content;
+    }
     .m-images{
         display: flex;
         justify-content: center; 
