@@ -22,6 +22,7 @@ const DisclaimerPolicy = ({
     fullName: '',
   })
 
+  const [mail,setmail]=useState(templateKey)
   
 
   const navigate = useNavigate()
@@ -99,9 +100,16 @@ const DisclaimerPolicy = ({
           certificateImgAsset: courseAsset2,
         },
       }
+      if(currentCourse.key==='batch-1-200hr'){
+        if(formData?.residental==='RESIDENTIAL'){
+          setmail(templateKey)
+        }else{
+          setmail(templateKey)
+        }
+      }
       let mailTemplate = {
         type: null,
-        HTMLTemplate: templateKey || 'COURSE200_2M_TTC2',
+        HTMLTemplate: mail,
         subject: 'Enrollment Confirmation',
         data:{
           user: formData.name
@@ -110,7 +118,7 @@ const DisclaimerPolicy = ({
       }
       try{
         let response
-        if(formData.mode==='ONLINE'){
+        if(formData.mode==='ONLINE' || currentCourse.category!=='camps' || currentCourse.category!=='classes'){
           response = await axios.post(
             'https://cms-dev-be.theyogainstituteonline.org/v1/form',
             body1

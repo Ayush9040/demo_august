@@ -197,21 +197,21 @@ const Enrollment = () => {
   const handleSubmit = () => {
     console.log(formData.mode,'sss')
     console.log(formData.residental,'sss')
-
     if(formData.mode===''){
       setEmpty('mode')
     }
     else if(formData.mode==='ONLINE'){
       setBold(5)
     }
-    else if(formData.mode==='OFFLINE'){
+    else if(formData.mode==='OFFLINE' && currentCourse.category!=='camps' && currentCourse.category!=='classes'){
       if(formData.residental===''){
         setEmpty('subMode')
       }
       else{
-        console.log('abcd')
         setBold(5)
       }
+    }else{
+      setBold(5)
     }
     
   }
