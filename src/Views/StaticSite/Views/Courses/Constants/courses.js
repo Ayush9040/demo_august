@@ -317,7 +317,7 @@ const ttc200hr = {
     rating: 5,
     colorCode: '#E38F73',
     timing: 'Monday to Friday : 12:00 noon - 4:00 pm (IST)',
-    fees: 22000,
+    fees: 28000,
     category: 'ttc',
     title: '200 hrs TTC  Batch 2 - 2 Months TTC On Campus - English',
     dates: ['11th July 2022','5th September 2022','31st October 2022','26th December 2022'],
@@ -622,7 +622,7 @@ const ttc200hr = {
     fees: 22000,
     category: 'ttc',
     title: '200 hrs TTC  Batch 3 - 2 Months TTC Online  - English',
-    dates: ['8th August 2022','10th October 2022','12th December 2022'],
+    dates: ['6th June 2022','8th August 2022','10th October 2022','12th December 2022'],
     online:true,
     onCampus:false,
     nonResidential:false,
@@ -2089,7 +2089,7 @@ const ttc900hr = {
     mostPopular: false,
     rating: 5,
     colorCode: '#C9705F',
-    timing: '900 hrs TTC 1 Year TTC Online & On Campus - Hindi',
+    timing: 'Monday to Friday : 1:30 pm - 4:00 pm (IST)',
     fees: 50000,
     category: 'ttc',
 
@@ -3301,7 +3301,7 @@ const ttc900hr = {
 
     colorCode: '#C9705F',
     timing: 'Monday to Saturday:6:30 am to 8:00 pm Holiday on all Sundays',
-    fees: 50000,
+    fees: 90000,
     category: 'ttc',
 
     dates: ['23rd July 2022','22nd October'],
@@ -3805,7 +3805,7 @@ const ttc900hr = {
     colorCode: '#C9705F',
     timing:
       'Monday to Saturday:  Morning: 7:00 am to 9:00 am (IST) and Evening:  4:30 pm to 8:00 pm (IST) (Both the time slots are mandatory) ',
-    fees: 50000,
+    fees: 75000,
     category: 'ttc',
 
     dates: ['20th June 2022','17th October 2022'],
