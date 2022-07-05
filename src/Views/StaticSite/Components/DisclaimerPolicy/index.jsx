@@ -50,7 +50,7 @@ const DisclaimerPolicy = ({
           city: formData.city,
           pincode: formData.pincode,
           gender: formData.gender,
-          dob: formData.DOB,
+          age: formData.age,
           nationality: formData.nationality,
         },
         academicQualification: qualificationData,
@@ -69,6 +69,36 @@ const DisclaimerPolicy = ({
           certificateImgAsset: courseAsset2,
         },
       }
+      let body1 = {
+        personalDetails: {
+          name: formData.name,
+          emailId: formData.email,
+          phone: formData.phone,
+          addressLane1: formData.address1,
+          addressLane2: formData.address2,
+          country: formData.country,
+          state: formData.state,
+          city: formData.city,
+          pincode: formData.pincode,
+          gender: formData.gender,
+          age: formData.age,
+          nationality: formData.nationality,
+        },
+        academicQualification: qualificationData,
+        workExperience: listData,
+        others: {
+          medicalHistory: formData.medicalstatus,
+          howDoYouHearAboutUs: formData.source || formData.sourceinfo,
+        },
+        courseDetails: {
+          courseId: currentCourse.key,
+          courseName:currentCourse.title,
+          mode: formData.mode,
+          batch:currentCourse.batch,
+          imageAsset: courseAsset1,
+          certificateImgAsset: courseAsset2,
+        },
+      }
       let mailTemplate = {
         type: null,
         HTMLTemplate: templateKey || 'COURSE200_2M_TTC2',
@@ -79,12 +109,21 @@ const DisclaimerPolicy = ({
         receivers: [formData.email,'shrey@nexgsolution.com']
       }
       try{
-        const response = await axios.post(
-          'https://cms-dev-be.theyogainstituteonline.org/v1/form',
-          body
-        )
+        let response
+        if(formData.mode==='ONLINE'){
+          response = await axios.post(
+            'https://cms-dev-be.theyogainstituteonline.org/v1/form',
+            body1
+          )
+        }else{
+          response = await axios.post(
+            'https://cms-dev-be.theyogainstituteonline.org/v1/form',
+            body
+          )
+        }
+
         if(response?.data?.success){
-          if(formData.mode ==='ONLINE'||formData.residental==='NONRESIDENTAIL'){
+          if(formData?.residental!=='RESIDENTIAL'){
             console.log(response.data.data['_id'])
             const paymentOrderResponse =  await axios.post(`https://cms-dev-be.theyogainstituteonline.org/v1/payment/order?enrollmentFormId=${response.data.data['_id']}`, {
               amount: currentCourse.fees,
@@ -137,7 +176,6 @@ const DisclaimerPolicy = ({
       } 
     }
   }
-
   return (
     <div className="disclaimer-container">
       <button className="close" onClick={()=>setBold(4)} >x</button>
