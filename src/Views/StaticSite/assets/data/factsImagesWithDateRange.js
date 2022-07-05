@@ -160,7 +160,7 @@ const factsImagesWithDateRange = [
     images: [
       baseDomain + factAssets.factAsset20,
       baseDomain + factAssets.factAsset21,
-      baseDomain + factAssets.factAsset22,
+      baseDomain + factAssets.factAsset99,
       baseDomain + factAssets.factAsset23,
       baseDomain + factAssets.factAsset24,
       baseDomain + factAssets.factAsset25,

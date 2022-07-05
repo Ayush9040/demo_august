@@ -63,20 +63,21 @@
   margin: 3rem auto;
   display: flex;
   flex-direction: column;
+  padding: 0rem 10rem;
 
   h3 {
     display: inline-block;
     font-size: 2.5rem;
     font-weight: 700;
-    margin-left: 15rem;
+    //margin-left: 15rem;
     margin-bottom: 2rem;
   }
 }
 .blog-card-container {
   display: flex;
-  justify-content: center;
+  //justify-content: center;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 2rem;
   padding-bottom: 5rem;
   .seminar-card {
     // height: max-content;
@@ -145,7 +146,7 @@
   .alumni-content {
     grid-template-columns: 100%;
     h2 {
-      color: #fff;
+      color: #000;
     }
   }
   .blog-series {
@@ -157,9 +158,8 @@
       left: auto;
       width: 100%;
       h2 {
-        color: #fff;
         .newsletter-date {
-          color: #fff;
+          color: #aaa;
         }
       }
     }
@@ -169,9 +169,10 @@
       left: auto;
       text-align: center;
       margin-bottom: 4rem;
+      margin-top: -7rem;
       h3 {
         margin: 0 auto;
-        color: #fff;
+        //color: #fff;
         margin-bottom: 2rem;
       }
     }
@@ -183,12 +184,24 @@
   }
 }
 
-@media (max-width: 750px) {
-  .upcoming-blogs {
-    h3 {
-      margin-left: 13rem;
+@media (max-width: 835px) {
+  .upcoming-blogs{
+   
+    h3{
+      text-align: center;
+    }
+    .blog-card-container{
+      justify-content: center;
     }
   }
+}
+
+@media (max-width: 750px) {
+  // .upcoming-blogs {
+  //   h3 {
+  //     margin-left: 13rem;
+  //   }
+  // }
   .blog-container {
     .blog-grid {
       grid-template-columns: 100%;
@@ -200,6 +213,9 @@
   .alumni-content {
     padding: 5rem;
   }
+  .upcoming-blogs{
+    padding: 0rem 1rem;
+  }
   .blog-series {
     .alumni-content {
       margin: 8rem 0;
@@ -207,12 +223,17 @@
     .newsletter-image {
       img {
         width: 100%;
+        margin-top: -13rem;
       }
     }
     .newsletter-content {
       h2 {
+        .newsletter-date{
+          color: #fff;
+        }
         .newsletter-title {
-          font-size: 2.5rem;
+          font-size: 2rem;
+          margin-top: 12rem;
         }
       }
     }

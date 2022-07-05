@@ -35,7 +35,7 @@
 .photo-container {
     display: flex;
     gap: 20px;
-    flex-wrap: wrap;
+    //flex-wrap: wrap;
     width: 100%;
     // margin: 0 auto;
     grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));

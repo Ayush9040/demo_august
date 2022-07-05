@@ -148,8 +148,8 @@ const CommonBannerLegacy = ({
   const str = founderData[2].desc[1].length
 
   function truncateString(str, totalTextLength) {
-    return str.length > totalTextLength
-      ? str.slice(0, totalTextLength) + '....'
+    return str?.length > totalTextLength
+      ? str?.slice(0, totalTextLength) + '....'
       : str
   }
 
@@ -200,11 +200,11 @@ const CommonBannerLegacy = ({
               <p style={{ textAlign: 'left', paddingBottom: '30px' }}>
                 <div className="legacy_para">
                   <div id="founder-para1">
-                    {truncateString(founderData[activeFounder].desc[0], 400)}
+                    {founderData[activeFounder]?.desc[0]}
                   </div>
 
                   <div id="founder-para2">
-                    {truncateString(founderData[activeFounder].desc[1], 480)}
+                    {truncateString(founderData[activeFounder]?.desc?.[1], 480)}
                   </div>
                 </div>
 

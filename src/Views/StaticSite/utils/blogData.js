@@ -8,7 +8,7 @@ export const allBlogData = [
     title: '7 Home Remedies for Anaemia | Foods to Eat | Yoga for Anaemia',
     metaDescription:
       'Anemia is a condition in which your body lacks enough healthy red blood cells to function properly. You often feel tired, fatigue, headaches, chest pain, and dizziness. Your hands and feet may become cold. Blood loss, nutritional deficiencies, intestinal disorders, menstruation, pregnancy, and the body inability to produce red blood cells often increases the risk of anemia. A healthy diet and lifestyle can help you avoid or better manage your anemic condition.',
-    image: `${baseDomain}${homeAssets.homeAsset60}`,
+    image: `${baseDomain}${homeAssets.homeAsset74}`,
     body: [
       {
         component: 'blogParagraph',
@@ -81,7 +81,7 @@ export const allBlogData = [
     title: 'How to increase lung capacity',
     metaDescription:
       'Our lungs can hold about 6 liters of air which is known as our total lung capacity. Total lung capacity is the volume of air in the lungs upon the maximum effort of inspiration. Normally, the average adult takes 12 to 15 breaths per minute. A breath is one complete respiratory cycle that includes one inhalation and one exhalation.Our lungs develop by the time we are 20-25 years old. It is natural for our lung function to gradually weaken after the age of 35.  Also, factors such as age, gender, physical health, and overall condition have an impact on lung volumes and capacities.',
-    image: `${baseDomain}${homeAssets.homeAsset62}`,
+    image: `${baseDomain}${homeAssets.homeAsset78}`,
     body: [
       {
         component: 'blogParagraph',
@@ -146,7 +146,7 @@ export const allBlogData = [
     title: 'Yoga for back pain',
     metaDescription:
       'Back stiffness affects practically everyone these days, both the elderly and the young. People spend the majority of their time working on computers or laptops, sitting with their necks bent for extended periods of time or back arched, and so on. They slouch on the sofa or chair at home while watching TV or studying. Poor postural habits are a major cause of stiff back. A stiff back can impact your day-to-day activities. Yoga asanas are effective techniques for improving flexibility and strengthening back muscles.',
-    image: `${baseDomain}${homeAssets.homeAsset63}`,
+    image: `${baseDomain}${homeAssets.homeAsset75}`,
     body: [
       {
         component: 'blogParagraph',
@@ -252,7 +252,7 @@ export const allBlogData = [
     title: '5 Liver Harming Foods | Foods to Avoid | Liver Health',
     metaDescription:
       'The liver is one of the most important organs of the body. It\'s located in the right upper abdomen, under the rib cage. Our liver keeps us healthy by performing several essential functions.',
-    image: `${baseDomain}${homeAssets.homeAsset59}`,
+    image: `${baseDomain}${homeAssets.homeAsset77}`,
     body: [
       {
         component: 'bullets',
@@ -312,7 +312,7 @@ export const allBlogData = [
       'Drinks to Boost Immune System to fight from Virus | Healthy Drinks | Covid 19 | Omicron',
     metaDescription:
       'We live in times where we have to survive the frequent waves of COVID19 infection. In recent times it has resurfaced. Survival is possible when our immune system is as strong as a mountain. When the immune system gets compromised, we suffer from cold, cough, sore throat, fever, headache, and whatnot. ',
-    image: `${baseDomain}${homeAssets.homeAsset61}`,
+    image: `${baseDomain}${homeAssets.homeAsset76}`,
     body: [
       {
         component: 'blogParagraph',
@@ -379,7 +379,7 @@ export const allBlogData = [
     title: ' International Women\'s Day 2022 | All about Women\'s Day',
     metaDescription:
       'We all know that achievements of women are celebrated across the world on 8th march known International Women’s Day. But very few know the history behind the celebrating women’s day.',
-    image: `${baseDomain}${homeAssets.homeAsset61}`,
+    image: `${baseDomain}${homeAssets.homeAsset83}`,
     body: [
       {
         component: 'subHeading',
@@ -433,7 +433,7 @@ export const allBlogData = [
     title: '  Yoga for Ear Balance Disorder and Problems',
     metaDescription:
       'Balance disorder is the problem in which people constantly feel dizzy and unsteady. There is a fear of falling down and tripping while one is standing, sitting or even sleeping. About 20% of Indians aged 65 years and above face the issue of Ear balance. As the age progresses the number increases to 25%. Ear balance is not just limited to dizziness, it also causes unavoidable injuries which in turn disturbs the overall health of an individual.',
-    image: `${baseDomain}${homeAssets.homeAsset61}`,
+    image: `${baseDomain}${homeAssets.homeAsset85}`,
     body: [
       {
         component: 'blogParagraph',
@@ -514,7 +514,7 @@ export const allBlogData = [
     title: 'World Health Day',
     metaDescription:
       'What does a being healthy mean? Being healthy mean a person who is physically, mentally and socially fit. It is fundamental right of a person to stay healthy in all the three areas. And it is everyone’s right to know how to stay healthy and get proper help from the dedicated source.',
-    image: `${baseDomain}${homeAssets.homeAsset61}`,
+    image: `${baseDomain}${homeAssets.homeAsset84}`,
     body: [
       {
         component: 'blogParagraph',
@@ -745,7 +745,7 @@ export const allBlogData = [
     title: '5 Best Healthy Fats Food',
     metaDescription:
       'The word “fat” rings the bell of having a negative effect on the body. Specifically related to rise in cholesterol levels, obesity and risk of heart diseases.',
-    image: `${baseDomain}${homeAssets.homeAsset61}`,
+    image: `${baseDomain}${homeAssets.homeAsset71}`,
     body: [
       {
         component: 'blogParagraph',
@@ -805,7 +805,7 @@ export const allBlogData = [
     title: '5 Best Natural Anti-Ageing Techniques',
     metaDescription:
       'Ageing is a natural process that cannot be avoided. Hectic lifestyles, unhealthy eating habits, and irregular sleeping patterns, however, have escalated the aging process. People in their early twenties show signs of Ageing such as wrinkles, grey hair, and body weakness and aches, even if they don not have any medical condition',
-    image: `${baseDomain}${homeAssets.homeAsset61}`,
+    image: `${baseDomain}${homeAssets.homeAsset72}`,
     body: [
       {
         component: 'blogVideo',
@@ -866,7 +866,7 @@ export const allBlogData = [
     title: '5 Yoga Poses to do Before You Go To Sleep',
     metaDescription:
       'People these days complain a lot about not getting enough sleep or unable to fall asleep even after physical exhaustion. Either there is discomfort while lying down or mind is wandering. Yoga techniques help to relieve this discomfort and induce calmness, ensuring good night’s sleep.',
-    image: `${baseDomain}${homeAssets.homeAsset61}`,
+    image: `${baseDomain}${homeAssets.homeAsset86}`,
     body: [
       {
         component: 'blogVideo',
@@ -962,7 +962,7 @@ export const allBlogData = [
     title: 'Best Yoga Mudras to get Rid of Pimples Naturally at Home',
     metaDescription:
       'We all should be extremely careful about our health and hygiene. But unfortunately, the most ignored organ is the skin organ, especially the face. We tend to ignore it by not taking proper care of it. Because of this, a disease like acne comes up and one of its painful symptoms is pimples. ',
-    image: `${baseDomain}${homeAssets.homeAsset61}`,
+    image: `${baseDomain}${homeAssets.homeAsset73}`,
     body: [
       {
         component: 'blogParagraph',
@@ -1216,7 +1216,7 @@ export const allBlogData = [
     title: 'How Much Distance we should walk daily',
     metaDescription:
       'Walking will take you to good health one step at a time. A daily morning or evening walk might be quite beneficial to your overall health. Walking not only helps you reduce weight, but also reap many more scientifically-proven benefits.',
-    image: `${baseDomain}${homeAssets.homeAsset60}`,
+    image: `${baseDomain}${homeAssets.homeAsset79}`,
     body: [
       {
         component: 'blogParagaph',
@@ -1278,7 +1278,7 @@ export const allBlogData = [
     title: 'How to Reduce Back Fat Naturally by Yoga - Home Remedies',
     metaDescription:
       ' Each one of us wishes for a body which can help us look better and enhance our personality. There are different sites where the fat deposition can be tricky and one may not understand how to get rid of it. One of them is the fat on the back. The areas where majority of the fat deposits are around the shoulder blades and on the waist (these are popularly known as love handles)',
-    image: `${baseDomain}${homeAssets.homeAsset60}`,
+    image: `${baseDomain}${homeAssets.homeAsset81}`,
     body: [
       {
         component: 'blogVideo',
@@ -1471,7 +1471,7 @@ export const allBlogData = [
     title: 'Top 5 Non-Dairy Calcium-Rich Foods',
     metaDescription:
       'It is believed that milk is the best source of calcium. However, many people cannot consume milk or milk products. Dairy products can cause acidity or bloating problems in many. Vegans also avoid having any animal products including dairy products, honey, and so on. ',
-    image: `${baseDomain}${homeAssets.homeAsset60}`,
+    image: `${baseDomain}${homeAssets.homeAsset82}`,
     body: [
       {
         component: 'blogParagraph',

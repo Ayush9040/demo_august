@@ -36,12 +36,12 @@ const CommonGrid = () => {
           <div className="common-gallery">
             <div className="common-gallery-grid">
               <div className="common-grid-1">
-                <img src={`${baseDomain}${museumAssets.meseumAssets1}`} alt="" className="img-main" />
+                <img src={`${baseDomain}${museumAssets.meseumAssets5}`} alt="" className="img-main" />
               </div>
               <div className="common-grid-2">
                 <div className="sub-grid-1">
                   {' '}
-                  <img src={`${baseDomain}${museumAssets.meseumAssets2}`} />
+                  <img src={`${baseDomain}${museumAssets.meseumAssets1}`} />
                 </div>
                 <div className="sub-grid-2">
                   {' '}
@@ -53,7 +53,7 @@ const CommonGrid = () => {
               </div>
               <div className="common-grid-2">
                 <div className="sub-grid-1">
-                  <img src={`${baseDomain}${museumAssets.meseumAssets5}`} />
+                  <img src={`${baseDomain}${museumAssets.meseumAssets2}`} />
                 </div>
                 <div className="sub-grid-2">
                   <img src={`${baseDomain}${museumAssets.meseumAssets6}`} />

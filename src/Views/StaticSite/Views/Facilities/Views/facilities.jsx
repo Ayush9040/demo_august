@@ -317,7 +317,7 @@ const Facilities = () => {
           </div>
           <div id="dining-hall" className="facilities-slide">
             <div className="facility-image">
-              <img src={`${baseDomain}${facilitiyAssets.facilitiyAssets7}`} />
+              <img src={`${baseDomain}${facilitiyAssets.facilitiyAssets12}`} />
             </div>
             <div className="facility-description">
               <h2>Dining Hall – Naivedyam</h2>
@@ -362,7 +362,7 @@ const Facilities = () => {
           </div>
           <div id="kailaspati-tree" className="facilities-slide">
             <div className="facility-image">
-              <img src={`${baseDomain}${facilitiyAssets.facilitiyAssets10}`} />
+              <img src={`${baseDomain}${facilitiyAssets.facilitiyAssets11}`} />
             </div>
             <div className="facility-description">
               <h2>Kailashpati Tree</h2>
