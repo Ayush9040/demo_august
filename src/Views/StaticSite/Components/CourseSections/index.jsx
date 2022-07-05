@@ -65,7 +65,7 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange })
     switch (title) {
     case 'Teacher Training Courses':
       return (
-        <Accordian sliderVal={customVal} data={coursesList} />
+        <Accordian sliderVal={customVal} setSliderVal={setCustomVal} data={coursesList} />
       )
     case 'Regular Classes':
       return (

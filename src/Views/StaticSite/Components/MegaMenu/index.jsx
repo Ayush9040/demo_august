@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { legacy2, cross, filler, filler1 } from '../../assets/icons/icon'
+import { legacy2, cross, filler } from '../../assets/icons/icon'
 import './style.scss'
 import { Link } from 'react-router-dom'
 
@@ -16,8 +16,8 @@ const MegaMenu = ({ setNav }) => {
     { name: 'COURSES', link: '/courses', id: 2, key: 'COURSES' },
     { name: 'FACILITIES', link: '/facilities', id: 3, key: 'FACILITIES' },
     { name: 'MUSEUM', link: '/museum', id: 4, key: 'MUSEUM' },
-    { name: 'DONATE', link: '/donation', id: 5, key: 'DONATION' },
-    { name: 'GIFTING', link: '/gifting', id: 6, key: 'GIFTING' },
+    { name: 'DONATE', link: '', id: 5, key: 'DONATION' },
+    { name: 'GIFTING', link: '', id: 6, key: 'GIFTING' },
     { name: 'NISPAND', link: 'https://nispand.com/', id: 7, key: 'NISPAND' },
     { name: 'TYI ONLINE', link: '', id: 8, key: 'ONLINE' },
     {
@@ -186,6 +186,7 @@ const MegaMenu = ({ setNav }) => {
                     onMouseOver={() => {
                       setMenuItem(item.key)
                     }}
+                    className={(item.name==='DONATION'||item.name==='GIFTING') ? 'coming-soon':''}
                     key={i}
                   >
                     <li>
@@ -418,7 +419,7 @@ const MegaMenu = ({ setNav }) => {
             </ul>
           </div>
         )}
-        <div className="menu-filler-icon">{filler1}</div>
+        <div className="menu-filler-icon">{filler}</div>
       </div>
     </div>
   )

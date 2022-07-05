@@ -33,7 +33,7 @@ const MainVideo = () => {
         controlsList="nodownload noremoteplayback noplaybackrate"
         nofullscreen 
         loop
-        autoPlay={true}
+        autoPlay={false}
         muted={false}
         className='pop-video'
         // fullscreen
@@ -47,7 +47,7 @@ const MainVideo = () => {
         controlsList="nodownload noremoteplayback noplaybackrate"
         nofullscreen 
         loop
-        autoPlay={true}
+        autoPlay={false}
         muted={false}
         className='mobile-pop-video'
       >

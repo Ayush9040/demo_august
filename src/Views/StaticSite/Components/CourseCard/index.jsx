@@ -84,7 +84,7 @@ const CourseCard = ({
         }}
       >
         <h4>{courseTitle}</h4>
-        <h3>{description}</h3>
+        <h3>{ description.slice(0,90) }...</h3>
         {/* <SelectDropDown currentValue={selectDate} changeCurrentValue={setSetselectDate} text={'Select Dates'} isStyles={selectStyles} /> */}
         <div className="course-card-dropdown">
           <div style={dates.length!==0 ? { visibility:'visible' }:{ visibility:'hidden' }} ><SelectDropDown

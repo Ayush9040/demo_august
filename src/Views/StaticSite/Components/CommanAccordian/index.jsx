@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom'
 // import FAQ from '../Faq'
 import './style.scss'
 
-const Accordian = ({ data, sliderVal }) => {
-  const [hidden, setHidden] = useState(sliderVal)
+const Accordian = ({ data, sliderVal,setSliderVal }) => {
+  const [hidden, setHidden] = useState()
   useEffect(()=>{
     setHidden(sliderVal)
   },[sliderVal])
@@ -20,6 +20,7 @@ const Accordian = ({ data, sliderVal }) => {
               <p
                 className="accordian_ques"
                 onClick={() => {
+                  setSliderVal(item.id)
                   setHidden(item.id)
                 }}
               >

@@ -51,7 +51,7 @@ const Enrollment = () => {
     state: '',
     city: '',
     pincode: '',
-    DOB: '',
+    AGE: '',
     nationality: '',
     gender: '',
     school: '',
@@ -124,7 +124,7 @@ const Enrollment = () => {
 
   const handleEmpty1 = (e) => {
     e.preventDefault()
-    if (formData.name === '') {
+    if (formData.name === '' || formData.name===undefined || formData.name===null ) {
       return setEmpty(1)
     } else if (
       formData.phone === '' ||
@@ -144,7 +144,7 @@ const Enrollment = () => {
       return setEmpty(7)
     } else if (formData.pincode === '') {
       return setEmpty(8)
-    } else if (formData.DOB === '') {
+    } else if (formData.AGE === null||formData.AGE<4 || formData.AGE>99) {
       return setEmpty(9)
     } else if (formData.nationality === '') {
       return setEmpty(10)
@@ -157,6 +157,25 @@ const Enrollment = () => {
   }
 
   const handleEmpty2 = () => {
+    if (formData.school === '') {
+      setYearEmpty(1)
+    } else if (formData.course === '') {
+      setYearEmpty(2)
+    } else if (formData.completion.length !== 4) {
+      return setYearEmpty(3)
+    } else
+      setQualificationData([
+        ...qualificationData,
+        {
+          schoolOrCollege: formData.school,
+          course: formData.course,
+          yearOfCompletion: formData.completion,
+          listedQualification: formData.course,
+        },
+      ])
+    setEmpty(0)
+    setFormData({ ...formData, school: '', course: '', completion: '' })
+    setBold(2)
     if (qualificationData.length === 0) {
       return setEmpty(1)
     } else {setBold(2);setEmpty(0)}
@@ -167,7 +186,6 @@ const Enrollment = () => {
   //     return setEmpty(1)
   //   } else {setBold(3); setResgin(0)}
   // }
-
   const handleEmpty4 = () => {
     if (formData.source === '') {
       if (formData.sourceinfo === '') {
@@ -176,8 +194,26 @@ const Enrollment = () => {
     } else setBold(4)
   }
 
-  const handleSubmit = async() => {
-    setBold(5)
+  const handleSubmit = () => {
+    console.log(formData.mode,'sss')
+    console.log(formData.residental,'sss')
+
+    if(formData.mode===''){
+      setEmpty('mode')
+    }
+    else if(formData.mode==='ONLINE'){
+      setBold(5)
+    }
+    else if(formData.mode==='OFFLINE'){
+      if(formData.residental===''){
+        setEmpty('subMode')
+      }
+      else{
+        console.log('abcd')
+        setBold(5)
+      }
+    }
+    
   }
 
   return (
@@ -300,6 +336,8 @@ const Enrollment = () => {
             setCourseAsset2={setCourseAsset2}
             setBold={setBold}
             handleSubmit={handleSubmit}
+            empty={empty}
+            setEmpty={setEmpty}
           />
         ) : (
           <DisclaimerPolicy
@@ -310,6 +348,7 @@ const Enrollment = () => {
             currentCourse={currentCourse}
             courseAsset1={courseAsset1}
             courseAsset2={courseAsset2}
+            setBold={setBold}
           />
         )}
       </div>

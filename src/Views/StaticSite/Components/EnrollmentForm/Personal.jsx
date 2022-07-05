@@ -3,7 +3,7 @@ import './formstyles.scss'
 import InputComponent from '../InputComponent'
 
 const Personal = ({ handleEmpty1, empty, setFormData, formData, setEmpty }) => {
-  const today = new Date().toISOString().split('T')[0]
+  //const today = new Date().toISOString().split('T')[0]
 
   return (
     <div className="main_div">
@@ -185,7 +185,7 @@ const Personal = ({ handleEmpty1, empty, setFormData, formData, setEmpty }) => {
                   }}
                 />
               </label>
-              {empty === 9 && (
+              {empty === 11 && (
                 <small>
                   {' '}
                   Please select one option
@@ -194,19 +194,19 @@ const Personal = ({ handleEmpty1, empty, setFormData, formData, setEmpty }) => {
             </div>
             <div className="DOB_box form_error">
               <InputComponent
-                type="text"
-                placeholder="DOB*"
-                minnum="1950-01-01"
-                maxnum={today}
+                type="number"
+                placeholder="AGE*"
+                minnum="4"
+                maxnum='99'
                 form={formData}
                 setField={setFormData}
-                keyName="DOB"
+                keyName="AGE"
                 errorCheck={setEmpty}
               />
-              {empty === 10 && (
+              {empty === 9 && (
                 <small>
                   {' '}
-                  Please enter your DOB
+                  Please enter age between 4 & 100
                 </small>
               )}
             </div>
@@ -219,7 +219,7 @@ const Personal = ({ handleEmpty1, empty, setFormData, formData, setEmpty }) => {
                 keyName="nationality"
                 errorCheck={setEmpty}
               />
-              {empty === 11 && (
+              {empty === 10 && (
                 <small>
                   {' '}
                   Please enter your nationality

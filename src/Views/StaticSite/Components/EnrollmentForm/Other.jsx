@@ -112,7 +112,7 @@ const Other = ({ empty, formData, setBold, setFormData,handleEmpty4 }) => {
                   }}
                 />
               </label>
-              {empty === 1 && (
+              {/* {empty === 1 && (
                 <small
                   style={{
                     color: 'red',
@@ -122,7 +122,7 @@ const Other = ({ empty, formData, setBold, setFormData,handleEmpty4 }) => {
                 >
                 *Please select one!
                 </small>
-              )}
+              )} */}
             </form>
           </div>
         </div>
@@ -139,14 +139,14 @@ const Other = ({ empty, formData, setBold, setFormData,handleEmpty4 }) => {
             })
           }}
         />
-        {empty === 2 && (
-          <small
-            style={{ color: 'red', marginLeft: '45px', fontSize: '15px' }}
-          >
-          *Please Specify!
-          </small>
-        )}
       </div>
+      {empty === 2 && (
+        <small
+          style={{ color: 'red', marginLeft: '45px', fontSize: '15px' }}
+        >
+          *Please Choose a source
+        </small>
+      )}
       {/* <div className="radio_heading">
               <div className="label">Purpose of joining this program</div>
 
