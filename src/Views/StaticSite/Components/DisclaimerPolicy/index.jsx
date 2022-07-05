@@ -30,7 +30,7 @@ const DisclaimerPolicy = ({
 
   const [empty, setEmpty] = useState(0)
 
-
+  console.log(mail)
 
   const handleSubmit1 = async() => {
     console.log(formData.residental)
