@@ -96,7 +96,7 @@ const Courses = () => {
               // color={item.color}
               data={data[i]}
               showRangeSlider={
-                (item.title === 'Teacher Training Courses' || item.title === 'Regular Classes') ? true : false
+                (item.title === 'Teacher Training Courses' ) ? true : false
                
               }
               pathParam={setPathParam(item.title).path}

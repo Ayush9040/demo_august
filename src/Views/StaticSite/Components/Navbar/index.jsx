@@ -22,6 +22,7 @@ const Navbar = ({ isUserLoggedIn }) => {
             setNav(true)
           }}
         >
+          
           {Hamburger}
         </div>
         <div className="title-logo">
