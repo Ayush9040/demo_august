@@ -5081,7 +5081,10 @@ const camps = {
     rating: 5,
     colorCode: '#EDBE66',
     timing: '9.30 AM to 5.30 PM',
-    fees: 500,
+    fees:{
+      onlineFee: 500,
+      offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
+    },
     category: 'camps',
     metaDescription:
       'Specific pranayama, asana and relaxation techniques to enhance your state of mind',
@@ -5597,7 +5600,10 @@ const camps = {
     rating: 5,
     colorCode: '#DDAB58',
     timing: '9.30 AM to 5.30 PM',
-    fees: 500,
+    fees:{
+      onlineFee: 500,
+      offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
+    },
     category: 'camps',
     metaDescription:
       'Specific pranayama, and relaxation techniques to enhance your wellbeing',
@@ -5727,7 +5733,10 @@ const camps = {
     rating: 5,
     colorCode: '#CE9B51',
     timing: '9.30 AM to 5.30 PM',
-    fees: 500,
+    fees:{
+      onlineFee: 500,
+      offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
+    },
     category: 'camps',
     metaDescription: 'Diet guidelines to manage your health',
     image: `${baseDomain}${courseAssets.courseAsset10}`,
@@ -5990,7 +5999,10 @@ const camps = {
     rating: 5,
     colorCode: '#DDAB58',
     timing: '9.30 AM to 5.30 PM',
-    fees: 500,
+    fees:{
+      onlineFee: 500,
+      offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
+    },
     category: 'camps',
     metaDescription:
       'Specific pranayama, asana and relaxation techniques to enhance your state of mind',
