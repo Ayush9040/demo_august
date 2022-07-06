@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import './styles.scss'
-import { Hamburger, Search, Cart, Gift, User } from '../../assets/icons/icon'
+import { Hamburger, Cart, Gift, User } from '../../assets/icons/icon'
 import MegaMenu from '../MegaMenu'
 import { Link } from 'react-router-dom'
 import { logoutUserAction } from '../../Views/Authentication/Auth.actions'
@@ -37,11 +37,11 @@ const Navbar = ({ isUserLoggedIn }) => {
         </div>
         <div className="quick-actions">
           <ul>
-            <li>{Search}</li>
-            <Link to="/shop/checkout">
+            {/* <li>{Search}</li> */}
+            <Link className='comingSoon' to="/">
               <li>{Cart}</li>
             </Link>
-            <Link to="/gifting">
+            <Link className='comingSoon' to="/">
               <li>{Gift}</li>
             </Link>
             <Link onMouseOver={()=>{setDropdown(true)}} onMouseOut={()=>{setDropdown(false)}} to={isUserLoggedIn ? '/user/profile' : '/user/sign-in'}>

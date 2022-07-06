@@ -12,6 +12,19 @@ export const background = {
   
 }
 
+export const certificates = {
+  IAYT:'/cerificates/IAYT-logo.JPG',
+  IYA:'/cerificates/IYA-logo.JPG',
+  YCB:'/cerificates/YCB-logo.PNG',
+  YAL:'/cerificates/Yoga-Alliance-logo.PNG'
+}
+
+export const socialInitiativeNew = {
+  socialNew1:'/Home/Social%20Initiatives/new11/SocialAnnamBhrama.jpg',
+  socialNew2:'/Home/Social%20Initiatives/new11/SocialPolice.jpg',
+  socialNew3:'/Home/Social%20Initiatives/new11/SocialBMCSchools.jpg'
+}
+
 export const homeAssets = {
   homeAsset1: '/Home/Legacy/Madhavdasji.jpg',
   homeAsset2: '/Home/Legacy/ShriYogendraj.jpg',

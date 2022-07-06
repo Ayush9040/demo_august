@@ -8,13 +8,13 @@ import { socialData } from '../../utils/socialData'
 import CommonBtn from '../commonbtn'
 
 import './style.scss'
-import baseDomain, { homeAssets } from '../../assets/images/imageAsset'
+import baseDomain, { socialInitiativeNew } from '../../assets/images/imageAsset'
 import { Link } from 'react-router-dom'
 
 const SocialInitiatives = ({ alumni, setImageChanger }) => {
-  const AnnamBrahma = `${baseDomain}${homeAssets.homeAsset19}`
-  const Police = `${baseDomain}${homeAssets.homeAsset20}`
-  const BMC = `${baseDomain}${homeAssets.homeAsset21}`
+  const AnnamBrahma = `${baseDomain}${socialInitiativeNew.socialNew1}`
+  const Police = `${baseDomain}${socialInitiativeNew.socialNew2}`
+  const BMC = `${baseDomain}${socialInitiativeNew.socialNew3}`
   let images = [AnnamBrahma, Police, BMC]
 
   const [image, setImage] = useState(AnnamBrahma)

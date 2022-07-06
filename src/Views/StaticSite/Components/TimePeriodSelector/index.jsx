@@ -16,10 +16,10 @@ const TimePeriodSelector = () => {
       <button className="back-btn" onClick={handlePrev}></button>
       <div className="decades">
         {
-          currentRanges.map((item, index) => (
+          currentRanges.map((item) => (
             <div
               key={item.range}
-              className={`decades-option ${item.range === selectedRange?.range ? 'selected' : `other-${index}`}`}
+              className={`decades-option ${item.range === selectedRange?.range ? 'selected' : 'other-index'}`}
               onClick={() => handleNavigate(item.key)}
             >
               <h4>

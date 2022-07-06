@@ -63,6 +63,20 @@
         }
     }
 }
+.comingSoon{
+    position: relative;
+  &:hover{
+    &::after{
+        position: absolute;
+        padding: 1rem;
+        width: fit-content;
+        content: 'Coming Soon';
+        background: #00000080;
+        color: #fff;
+    }
+  }
+}
+
 #hero-overlay{
     z-index: 99;
     position: absolute;

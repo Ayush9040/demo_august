@@ -2,11 +2,11 @@ import React from 'react'
 import './style.scss'
 import baseDomain,{ alumniAssets } from '../../assets/images/imageAsset'
 
-const SocialInitiativesGallery = ({ notEvent,imageChanger }) => {
+const SocialInitiativesGallery = ({ notEvent }) => {
 
   return (
     <>
-      {imageChanger===0?<div className='alumni-grid' >
+      {<div className='alumni-grid' >
         {!notEvent && <p>Alumni Day</p>}
         {!notEvent &&<h4>01/01/22</h4>}
         <div className='alumni-event-grid' >
@@ -32,7 +32,7 @@ const SocialInitiativesGallery = ({ notEvent,imageChanger }) => {
             </div>
           </div>
         </div>
-      </div> : (imageChanger===1?<div className='alumni-grid' >
+        {/* </div> : (imageChanger===1?<div className='alumni-grid' >
         {!notEvent && <p>Alumni Day</p>}
         {!notEvent &&<h4>01/01/22</h4>}
         <div className='alumni-event-grid' >
@@ -84,7 +84,8 @@ const SocialInitiativesGallery = ({ notEvent,imageChanger }) => {
             </div>
           </div>
         </div>
-      </div> )}
+      </div> )} */}
+      </div>}
     </>
   )
 }

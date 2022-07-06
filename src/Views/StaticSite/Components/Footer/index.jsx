@@ -34,9 +34,9 @@ const Footer = () => {
 
         <div className='footer-description'>
           <p>
-            The Yoga Institute, Santacruz(East), Mumbai, India was founded in
+            The Yoga Institute, Santacruz (East), Mumbai, India was founded in
             1918 by Shri Yogendraji, and is the oldest centre of yoga in the
-            world
+            world.
           </p>
         </div>
         
@@ -57,7 +57,7 @@ const Footer = () => {
             >
               <li>{youtube}</li>
             </a>
-            <a href='https://www.youtube.com/c/theyogainstituteofficial'>
+            <a href='https://www.youtube.com/channel/UCHTjc5zq3Bl6agGQQf7_Xeg'>
               <li>{youtubehindi}</li>
             </a>
             <a
@@ -82,7 +82,7 @@ const Footer = () => {
               <li>{instagram}</li>
             </a>
             <a
-              href='https://www.instagram.com/theyogainstituteofficial/'
+              href='https://www.instagram.com/hansajiyogendra/'
               target='_blank'
               rel='noreferrer'
             >
@@ -95,7 +95,7 @@ const Footer = () => {
         <div className='footer-content'>
           <div className='footer-logo'>{years}</div>
           <div className='footer-text'>
-            <p>108+</p>
+            <p>103+</p>
             <span>Number of Years</span>
           </div>
         </div>
@@ -130,10 +130,10 @@ const Footer = () => {
             <Link to='/affiliations'>
               <li>Affiliations</li>
             </Link>
-            <Link to='/careers'>
+            <Link className='soon' to='/#footer'>
               <li>Careers</li>
             </Link>
-            <Link to='/csr'>
+            <Link className='soon' to='/#footer'>
               <li>CSR</li>
             </Link>
           </ul>
@@ -165,7 +165,7 @@ const Footer = () => {
             India
           </p>
           {mobile}
-          <p>+91-22-26110506</p>
+          <p>+91-22-26110506, +91-22-26103568</p>
           {email2}
           <p>info@the yogainstitute.org</p>
           {copyright}

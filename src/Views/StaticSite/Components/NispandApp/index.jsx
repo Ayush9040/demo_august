@@ -29,15 +29,17 @@ const Nispand = () => {
             monitor.
           </p>
         </div>
-        <a href='https://nispand.com/'>
+        <a href='https://nispand.com/' rel="noreferrer"  target='_blank' >
           <CommonBtn text={'Explore More'} />
         </a>
         <div className='download-options'>
           <h4>GET IT NOW!</h4>
           <div className='google-app-store'>
-            <div className='google'>
-              <img src={`${baseDomain}${homeAssets.homeAsset22}`} />
-            </div>
+            <a href='https://play.google.com/store/apps/details?id=com.nispand.com' rel="noreferrer"  target='_blank' >
+              <div className='google'>
+                <img src={`${baseDomain}${homeAssets.homeAsset22}`} />
+              </div>
+            </a>
             <div className='apple'>
               <img width={'93%'} src={`${baseDomain}${homeAssets.homeAsset23}`} />
             </div>

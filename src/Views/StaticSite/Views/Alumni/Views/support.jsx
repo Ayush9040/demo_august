@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import CommonBanner from '../../../Components/Common-banner'
-import Donation from '../../../Components/Donation'
+//import Donation from '../../../Components/Donation'
 import SocialInitiatives from '../../../Components/SocialInitiatives'
 import SocialInitiativesGallery from '../../../Components/SocialInitiatives/SocialInitiativesGallery'
 import baseDomain, { background } from '../../../assets/images/imageAsset'
@@ -56,12 +56,12 @@ const Support = () => {
         alumni={true}
       />
       <SocialInitiativesGallery notEvent={true} imageChanger={imageChanger} />
-      <Donation
+      {/* <Donation
         page={'alumni'}
         supportText={
           'I wish to support the responsibilities and the goals of The Yoga Institute:'
         }
-      />
+      /> */}
     </div>
   )
 }

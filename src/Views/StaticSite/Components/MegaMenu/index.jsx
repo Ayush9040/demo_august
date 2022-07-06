@@ -16,17 +16,17 @@ const MegaMenu = ({ setNav }) => {
     { name: 'COURSES', link: '/courses', id: 2, key: 'COURSES' },
     { name: 'FACILITIES', link: '/facilities', id: 3, key: 'FACILITIES' },
     { name: 'MUSEUM', link: '/museum', id: 4, key: 'MUSEUM' },
-    { name: 'DONATE (Coming Soon)', link: '', id: 5, key: 'DONATION' },
-    { name: 'GIFTING (Coming Soon)', link: '', id: 6, key: 'GIFTING' },
+    { name: 'DONATE', link: '', id: 5, key: 'DONATION' },
+    { name: 'GIFTING', link: '', id: 6, key: 'GIFTING' },
     { name: 'NISPAND', link: 'https://nispand.com/', id: 7, key: 'NISPAND' },
-    { name: 'TYI ONLINE (Coming Soon)', link: '', id: 8, key: 'ONLINE' },
+    { name: 'TYI ONLINE', link: '', id: 8, key: 'ONLINE' },
     {
       name: 'PUBLICATIONS',
       link: '/publication/yoga-health',
       id: 9,
       key: 'PUBLICATIONS',
     },
-    { name: 'SHOP (Coming Soon)', link: '/', id: 10, key: 'SHOP' },
+    { name: 'SHOP', link: '/', id: 10, key: 'SHOP' },
     {
       name: 'NEWS, EVENTS & MEDIA',
       link: '/media/media-gallery',
@@ -163,6 +163,7 @@ const MegaMenu = ({ setNav }) => {
                     }}
                     to={`${item.link}`}
                     key={i}
+                    className={ (item.key==='DONATION'||item.key==='GIFTING'||item.key==='ONLINE'||item.key==='SHOP') ? 'coming-soon':'' }
                   >
                     <li >
                       {item.name}

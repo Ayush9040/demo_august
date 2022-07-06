@@ -3,7 +3,7 @@ import CommonBanner from '../Common-banner'
 import Heading from '../Heading'
 import './style.scss'
 import baseDomain, {
-  giftingAssets,
+  certificates,
   background,
 } from '../../assets/images/imageAsset'
 //import AffiliationImg from '../../assets/images/why_tyi.png'
@@ -19,7 +19,7 @@ const Affiliations = () => {
           Navigation={true}
           PageType="affiliation"
           Heading="Affiliations"
-          isOnlyBanner={true}
+          isOnlyBanner={false}
           innerNav={false}
           description={desc}
           bannerImg={`${baseDomain}${background.volunteer}`}
@@ -34,12 +34,12 @@ const Affiliations = () => {
           </p>
         </div>
         <div className="affiliation-logos">
-          <img src={`${baseDomain}${giftingAssets.careerAssets}`} alt="" />
+          <img src={`${baseDomain}${certificates.IYA}`} alt="" />
         </div>
       </div>
       <div className="affiliation-content">
         <div className="affiliation-logos">
-          <img src={`${baseDomain}${giftingAssets.careerAssets}`} alt="" />
+          <img src={`${baseDomain}${certificates.YCB}`} alt="" />
         </div>
         <div className="affiliation-text">
           <Heading largeText={'Yoga Certification Board'} />
@@ -58,12 +58,12 @@ const Affiliations = () => {
           </p>
         </div>
         <div className="affiliation-logos">
-          <img src={`${baseDomain}${giftingAssets.careerAssets}`} alt="" />
+          <img src={`${baseDomain}${certificates.YAL}`} alt="" />
         </div>
       </div>
       <div className="affiliation-content">
         <div className="affiliation-logos">
-          <img src={`${baseDomain}${giftingAssets.careerAssets}`} alt="" />
+          <img src={`${baseDomain}${certificates.IAYT}`} alt="" />
         </div>
         <div className="affiliation-text">
           <Heading

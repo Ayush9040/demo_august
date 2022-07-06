@@ -35,7 +35,7 @@ export const activityData = [
 
   },
   {
-    title:'Sattvik Cooking',
+    title:'Sattvik Cooking Book',
     description:'This book, authored by Dr. Hansaji Yogendra, contains recipes of traditional and contemporary food items, all created with a sattvic and ayurvedic perspective.',
     image:`${baseDomain}${homeAssets.homeAsset18}`
 

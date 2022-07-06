@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import './style.scss'
-import { share1 } from '../../assets/icons/icon'
+//import { share1 } from '../../assets/icons/icon'
 
 const SeminarCard = ({
   title,
@@ -60,7 +60,7 @@ const SeminarCard = ({
           <Link to={url}>
             <button>{btnText}</button>
           </Link>
-          <div className="share-icon">{share1}</div>
+          {/* <div className="share-icon">{share1}</div> */}
         </div>
       </div>
     </div>

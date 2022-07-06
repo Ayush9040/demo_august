@@ -6,6 +6,7 @@ import './style.scss'
 import CourseSection from '../../../Components/CourseSections'
 import { courseCardData } from '../../../utils/courseCardData'
 import { c200hr,c500hr,c900hr,campsArr,AllCourses, classesArr } from '../Constants/courses'
+import baseDomain,{ certificates } from '../../../assets/images/imageAsset'
 
 // import {
 //   courseArray,
@@ -113,7 +114,7 @@ const Courses = () => {
         <div className="certificates">
           <div className="certificate">
             <div className="certificate-logo">
-              <img src="http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Courses/Certificate/Department%20of%20Ayush.png" />
+              <img src={`${baseDomain}${certificates.IYA}`} />
             </div>
             <div className="certificate-text">
               <p>
@@ -125,7 +126,7 @@ advancement of Yoga and its applications around the world.
           </div>
           <div className="certificate">
             <div className="certificate-logo">
-              <img src="http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Courses/Certificate/Yoga%20Certification%20Board.png" />
+              <img src={`${baseDomain}${certificates.YCB}`} />
             </div>
             <div className="certificate-text">
               <p>
@@ -137,7 +138,7 @@ Government for certification in the field of Yoga.
           </div>
           <div className="certificate">
             <div className="certificate-logo">
-              <img src="http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Courses/Certificate/Yoga%20Alliance.png" />
+              <img src={`${baseDomain}${certificates.YAL}`} />
             </div>
             <div className="certificate-text">
               <p>
@@ -149,7 +150,7 @@ regulation in the yoga industry.
           </div>
           <div className="certificate">
             <div className="certificate-logo">
-              <img src="http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Courses/Certificate/Department%20of%20Ayush.png" />
+              <img src={`${baseDomain}${certificates.IAYT}`} />
             </div>
             <div className="certificate-text">
               <p>

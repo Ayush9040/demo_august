@@ -68,7 +68,7 @@ display: none;
       ul {
         li {
           font-size: 1.1rem;
-          margin: 2.5rem 0;
+          margin: 0.75rem 0;
           font-weight: 500;
         }
       }
@@ -169,6 +169,19 @@ display: none;
            width: 100%;
         }
       }
+  }
+  .coming-soon{
+    position: relative;
+    &:hover{
+      &::after{
+        position: absolute;
+        top: 6px;
+        left: 40%;
+        content: 'Coming Soon';
+        color: #000;
+        font-size: 14px;
+      }
+    }
   }
 }
 

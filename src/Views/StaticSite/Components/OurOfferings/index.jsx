@@ -147,7 +147,7 @@ const OurOfferings = () => {
             <div className="course-content-container">
               <p>{smallDescription}</p>
               <div className="actions">
-                <h3>{timeline}|{price}</h3>
+                <h3>{timeline}|₹{price}</h3>
                 <h3><Link to={redirect} >Explore &#62;&#62;</Link></h3>
               </div>
             </div>

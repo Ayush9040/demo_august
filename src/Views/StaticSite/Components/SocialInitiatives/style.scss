@@ -105,24 +105,27 @@ padding-top: 10rem;
 @media (max-width:920px){
     .social-initiative-container{
         grid-template-columns: 100%;
+        gap: 0;
         .social-initiative-image{
             width: 80%;
             margin: 0 auto;
             text-align: center;
         }
         .social-initiative-content{
-            margin-top: 5rem;
+            margin-top: 0rem;
             .heading-container{
                 margin:0 auto;
             }
         }
         .social-initiative-carousel{
             margin: 0 auto;
-            margin-top: 5rem;
+            margin-top: 2rem;
             text-align: center;
             width: 80%;
             .slick-dots{
                 text-align: center;
+                bottom: -35px;
+                padding-bottom: 0!important;
                 li{
                     margin:0 1.5rem!important;
                 }

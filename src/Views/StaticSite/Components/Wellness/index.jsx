@@ -5,6 +5,7 @@ import './data'
 //import SocialInitiatives from '/home/nex-g/Desktop/tyi-user-webapp/src/Views/StaticSite/Components/SocialInitiatives/index.jsx'
 import Programs from './Programs'
 import CommonBtn from '../commonbtn'
+import { Link } from 'react-router-dom'
 
 const wellness = () => {
   return (
@@ -61,7 +62,9 @@ const wellness = () => {
           strike a balance between work and personal life. Yoga is a great way
           to relieve physical strain and emotional stress, making your employees
           happier, healthier, and more productive.
-          <CommonBtn text={'Get in touch'} />
+          <Link  to='/#footer' >
+            <CommonBtn text={'Get in touch'} />
+          </Link>
         </p>
       </div>
     </div>
