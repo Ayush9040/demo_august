@@ -19,7 +19,8 @@ const Blog = () => {
     speed: 500,
     slidesToShow: 2,
     slidesToScroll: 1,
-    autoplay: false,
+    autoplay: true,
+    autoplaySpeed: 1500,
     //centerMode: true,
     centerPadding: '20%',
     responsive: [

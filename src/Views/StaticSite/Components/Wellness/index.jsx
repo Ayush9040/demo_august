@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{ useEffect } from 'react'
 import CommonBanner from '../Common-banner'
 import './style.scss'
 import './data'
@@ -8,6 +8,11 @@ import CommonBtn from '../commonbtn'
 import { Link } from 'react-router-dom'
 
 const wellness = () => {
+
+  useEffect(()=>{
+    scrollTo(0,0)
+  },[])
+
   return (
     <div className=''>
       <CommonBanner

@@ -10,6 +10,8 @@ const Accordian = ({ data, sliderVal=0,setSliderVal }) => {
     setHidden(sliderVal)
   },[sliderVal])
 
+  console.log(hidden,'hidden')
+
   return (
     <div className="accordian_contanier">
       
@@ -20,7 +22,7 @@ const Accordian = ({ data, sliderVal=0,setSliderVal }) => {
               <p
                 className="accordian_ques"
                 onClick={() => {
-                  setSliderVal(item.id)
+                  setSliderVal && setSliderVal(item.id)
                   setHidden(item.id)
                 }}
               >

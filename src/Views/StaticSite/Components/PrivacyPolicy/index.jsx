@@ -1,10 +1,15 @@
-import React from 'react'
+import React,{ useEffect } from 'react'
 import CommonBanner from '../Common-banner'
 import './style.scss'
 import data from './data.js'
 import baseDomain, { background } from '../../assets/images/imageAsset'
 
 const PrivacyPolicy = () => {
+
+  useEffect(()=>{
+    scrollTo(0,0)
+  },[])
+
   let description =
   'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat quisquam maxime id laboriosam cupiditate! Quibusdam quisquam ratione quam repellat perferendis nostrum quod ea veritatis pariatur. Accusamus quae, itaque cumque quis rem qui tempora. Non, repudiandae. Fugiat eum sequi et rationeLorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat quisquam maxime id laboriosam cupiditate! Quibusdam quisquam ratione quam repellat perferendis nostrum quod ea veritatis pariatur. Accusamus quae, itaque cumque quis rem qui tempora. Non, repudiandae. Fugiat eum sequi et ratione.'
   // let Privacy =

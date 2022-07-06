@@ -6,7 +6,9 @@ import MainVideo from '../MainVideo'
 const HeroSection = ({ isUserLoggedIn }) => {
   return (
     <div className="landing-page-container">
-      <Navbar isUserLoggedIn={isUserLoggedIn} />
+      <div id='hero-overlay' >
+        <Navbar isUserLoggedIn={isUserLoggedIn} />
+      </div>
       <MainVideo/>
     </div>
   )

@@ -6,6 +6,13 @@
 
 }
 
+#hero-overlay{
+  z-index: 99;
+  position: fixed;
+  width: 100%;
+  background: linear-gradient(#000000e6 ,#000000d4 ,#00000080,#00000000);
+}
+
 @media(max-width:'786px'){
   .landing-page-container{
     height: 650px;

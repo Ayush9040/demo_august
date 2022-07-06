@@ -18,7 +18,8 @@ const Activity = () => {
     speed: 500,
     slidesToShow: 2,
     slidesToScroll: 2,
-    autoplay: false,
+    autoplay: true,
+    autoplaySpeed: 1500,
     //centerMode: true,
     centerPadding: '20%',
     responsive: [

@@ -15,6 +15,8 @@ const CommonGrid = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     centerPadding: '70px',
+    autoplay: true,
+    autoplaySpeed: 1500,
   }
   return (
     <>

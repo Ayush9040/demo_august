@@ -6,8 +6,14 @@ import baseDomain, {
   certificates,
   background,
 } from '../../assets/images/imageAsset'
+import { useEffect } from 'react'
 //import AffiliationImg from '../../assets/images/why_tyi.png'
 const Affiliations = () => {
+
+  useEffect(()=>{
+    scrollTo(0,0)
+  },[])
+
   let desc =
     'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, seddiam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam,quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.'
   return (

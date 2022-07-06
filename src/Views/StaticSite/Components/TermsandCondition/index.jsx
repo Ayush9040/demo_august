@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{ useEffect } from 'react'
 //import baseDomain, { background } from '../../assets/images/imageAsset'
 import CommonBanner from '../Common-banner'
 import data from './data'
@@ -6,6 +6,11 @@ import './style.scss'
 import baseDomain, { background } from '../../assets/images/imageAsset'
 
 const TermsCondition = () => {
+
+  useEffect(()=>{
+    scrollTo(0,0)
+  },[])
+
   let description =
     'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat quisquam maxime id laboriosam cupiditate! Quibusdam quisquam ratione quam repellat perferendis nostrum quod ea veritatis pariatur. Accusamus quae, itaque cumque quis rem qui tempora. Non, repudiandae. Fugiat eum sequi et rationeLorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat quisquam maxime id laboriosam cupiditate! Quibusdam quisquam ratione quam repellat perferendis nostrum quod ea veritatis pariatur. Accusamus quae, itaque cumque quis rem qui tempora. Non, repudiandae. Fugiat eum sequi et ratione.'
 
