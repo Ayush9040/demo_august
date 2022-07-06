@@ -5081,7 +5081,10 @@ const camps = {
     rating: 5,
     colorCode: '#EDBE66',
     timing: '9.30 AM to 5.30 PM',
-    fees: 1000,
+    fees:{
+      onlineFee: 500,
+      offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
+    },
     category: 'camps',
     metaDescription:
       'Specific pranayama, asana and relaxation techniques to enhance your state of mind',
@@ -5174,7 +5177,7 @@ const camps = {
         type: 'paragraph',
         content: {
           title: 'Fees',
-          text: ['INR 1,000'],
+          text: ['INR 500'],
         },
       },
       {
@@ -5303,7 +5306,7 @@ const camps = {
         type: 'paragraph',
         content: {
           title: 'Fees',
-          text: ['INR 1,000'],
+          text: ['INR 500'],
         },
       },
       {
@@ -5436,7 +5439,7 @@ const camps = {
         type: 'paragraph',
         content: {
           title: 'Fees',
-          text: ['INR 1,000'],
+          text: ['INR 500'],
         },
       },
       {
@@ -5564,7 +5567,7 @@ const camps = {
         type: 'paragraph',
         content: {
           title: 'Fees',
-          text: ['INR 1,000'],
+          text: ['INR 500'],
         },
       },
       {
@@ -5597,7 +5600,10 @@ const camps = {
     rating: 5,
     colorCode: '#DDAB58',
     timing: '9.30 AM to 5.30 PM',
-    fees: 1000,
+    fees:{
+      onlineFee: 500,
+      offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
+    },
     category: 'camps',
     metaDescription:
       'Specific pranayama, and relaxation techniques to enhance your wellbeing',
@@ -5694,7 +5700,7 @@ const camps = {
         type: 'paragraph',
         content: {
           title: 'Fees',
-          text: ['INR 1,000'],
+          text: ['INR 500'],
         },
       },
       {
@@ -5727,7 +5733,10 @@ const camps = {
     rating: 5,
     colorCode: '#CE9B51',
     timing: '9.30 AM to 5.30 PM',
-    fees: 1000,
+    fees:{
+      onlineFee: 500,
+      offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
+    },
     category: 'camps',
     metaDescription: 'Diet guidelines to manage your health',
     image: `${baseDomain}${courseAssets.courseAsset10}`,
@@ -5828,7 +5837,7 @@ const camps = {
         type: 'paragraph',
         content: {
           title: 'Fees',
-          text: ['INR 1,000'],
+          text: ['INR 500'],
         },
       },
       {
@@ -5957,7 +5966,7 @@ const camps = {
         type: 'paragraph',
         content: {
           title: 'Fees',
-          text: ['INR 1,000'],
+          text: ['INR 500'],
         },
       },
       {
@@ -5990,7 +5999,10 @@ const camps = {
     rating: 5,
     colorCode: '#DDAB58',
     timing: '9.30 AM to 5.30 PM',
-    fees: 1000,
+    fees:{
+      onlineFee: 500,
+      offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
+    },
     category: 'camps',
     metaDescription:
       'Specific pranayama, asana and relaxation techniques to enhance your state of mind',
@@ -6083,7 +6095,7 @@ const camps = {
         type: 'paragraph',
         content: {
           title: 'Fees',
-          text: ['INR 1,000'],
+          text: ['INR 500'],
         },
       },
       {
@@ -6217,7 +6229,7 @@ const camps = {
         type: 'paragraph',
         content: {
           title: 'Fees',
-          text: ['INR 1,000'],
+          text: ['INR 500'],
         },
       },
       {
@@ -6353,7 +6365,7 @@ const camps = {
         type: 'paragraph',
         content: {
           title: 'Fees',
-          text: ['INR 2,500'],
+          text: ['INR 1,500'],
         },
       },
       {
@@ -6480,7 +6492,7 @@ const camps = {
         type: 'paragraph',
         content: {
           title: 'Fees',
-          text: ['INR 1,000'],
+          text: ['INR 500'],
         },
       },
       {
@@ -6609,7 +6621,7 @@ const camps = {
         type: 'paragraph',
         content: {
           title: 'Fees',
-          text: ['INR 1,000'],
+          text: ['INR 500'],
         },
       },
       {
@@ -6742,7 +6754,7 @@ const camps = {
         type: 'paragraph',
         content: {
           title: 'Fees',
-          text: ['INR 1,000'],
+          text: ['INR 500'],
         },
       },
       {
@@ -6874,7 +6886,7 @@ const camps = {
         type: 'paragraph',
         content: {
           title: 'Fees',
-          text: ['INR 1,000'],
+          text: ['INR 500'],
         },
       },
       {
@@ -7012,7 +7024,7 @@ const camps = {
         type: 'paragraph',
         content: {
           title: 'Fees',
-          text: ['INR 1,000'],
+          text: ['INR 500'],
         },
       },
       {
@@ -7144,7 +7156,7 @@ const camps = {
         type: 'paragraph',
         content: {
           title: 'Fees',
-          text: ['INR 1,000'],
+          text: ['INR 500'],
         },
       },
       {
@@ -7173,8 +7185,8 @@ const camps = {
     key: '7-days-heath-camp-on-campus',
     batch: 1,
     dates: ['13th August 2022', '12th November 2022'],
-    online: true,
-    onCampus: false,
+    online: false,
+    onCampus: true,
     nonResidential: false,
     residential: false,
     certficate: false,
@@ -7182,7 +7194,10 @@ const camps = {
     rating: 5,
     colorCode: '#EDBE66',
     timing: '5:00 pm – 8:00 pm (IST)',
-    fees: 1000,
+    fees:{
+      onlineFee: 0,
+      offlineFee: { residentialFee: 12000, nonResidentialFee: 8000 },
+    },
     category: 'camps',
     metaDescription:
       'Are you feeling burned out and looking for ways to develop mental strength, improve focus & emotional quotient and reduce stress? Join our 7-Days Health Camp reshape your life and health. ',
@@ -8491,7 +8506,10 @@ const camps = {
     rating: 5,
     colorCode: '#EDBE66',
     timing: 'Saturday to Friday: 7:00 am – 7:00 pm (IST)',
-    fees: 1000,
+    fees:{
+      onlineFee: 0,
+      offlineFee: { residentialFee: 12000, nonResidentialFee: 8000 },
+    },
     category: 'camps',
     metaDescription:
       'Are you feeling burned out and looking for ways to develop mental strength, improve focus & emotional quotient and reduce stress? Join our 7-Days Health Camp reshape your life and health.',
