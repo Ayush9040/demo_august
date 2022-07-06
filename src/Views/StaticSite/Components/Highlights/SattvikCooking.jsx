@@ -14,7 +14,7 @@ const SattvikCooking = () => {
       <InnerNavComponent abc={highlight}/>
       <div className="main-container">
         <div className="highlight-info">
-          <h1>Sattvik Cooking Book</h1>
+          <h1>Sattvik Cooking</h1>
         </div>
         <div className="highlight-cover">
           <img src={`${baseDomain}${homeAssets.homeAsset18}`} alt="" />
