@@ -234,8 +234,9 @@
       flex-direction: column-reverse;
     }
     .facts-header p {
-      width: 80%;
+      
       margin: 2rem auto;
+      text-align: justify;
     }
   }
 }

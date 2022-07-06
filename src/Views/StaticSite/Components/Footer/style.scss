@@ -249,8 +249,11 @@
           gap: 1rem;
         }
       }
-      // .footer-description {
-      // }
+      .footer-description {
+        p{
+          text-align: justify;
+        }
+      }
       padding: 20px;
     }
     .logo-content {
