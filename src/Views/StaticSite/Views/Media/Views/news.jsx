@@ -13,16 +13,16 @@ const News = () => {
         url: '/media/media-gallery',
         name: 'Gallery',
       },
-      {
-        innerTitle: 'news',
-        url: '/media/news',
-        name: 'News',
-      },
-      {
-        innerTitle: 'events',
-        url: '/media/events',
-        name: 'Events',
-      },
+      // {
+      //   innerTitle: 'news',
+      //   url: '/media/news',
+      //   name: 'News',
+      // },
+      // {
+      //   innerTitle: 'events',
+      //   url: '/media/events',
+      //   name: 'Events',
+      // },
     ],
   }
   let description =

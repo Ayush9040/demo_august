@@ -69,7 +69,7 @@ export const data = [
   },
   {
     name: 'Hrishi J Yogendra',
-    route: 'harish-ji',
+    route: 'hrishi-ji',
     founder: ['Director'],
     year: '1988',
 

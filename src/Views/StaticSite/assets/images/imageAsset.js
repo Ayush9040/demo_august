@@ -331,11 +331,11 @@ export const aboutAssets={
   aboutAsset75 :'/About/Our%20Legacy/new11/hansaji-1.jpg',
   aboutAsset76: '/About/Our%20Legacy/new11/hansaji-2.jpg',
   
-  // harishji
+  // hrishiji
   
   aboutAsset35:'/About/Our%20Legacy/Harish%20Ji/l.jpg',
   aboutAsset36:'/About/Our%20Legacy/Harish%20Ji/r.jpg',
-  aboutAsset37:'/About/Our%20Legacy/Harish%20Ji/1.jpg',
+  aboutAsseharisht37:'/About/Our%20Legacy/Harish%20Ji/1.jpg',
   aboutAsset38:'/About/Our%20Legacy/Harish%20Ji/2.jpg',
   aboutAsset39:'/About/Our%20Legacy/Harish%20Ji/3.jpg',
   aboutAsset40:'/About/Our%20Legacy/Harish%20Ji/4.jpg',

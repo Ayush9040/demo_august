@@ -134,7 +134,7 @@ const CommonBannerLegacy = ({
     },
     {
       name: 'Hrishi J Yogendra',
-      route: 'harish-ji',
+      route: 'hrishi-ji',
       founder: ['Director'],
       year: '1988',
       desc: [

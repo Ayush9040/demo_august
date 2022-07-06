@@ -14,11 +14,11 @@ const Seminar = () => {
     color: 'orange',
     menuColor: 'black',
     menuItems: [
-      {
-        innerTitle: 'alumni-events',
-        url: '/alumni/upcoming-events',
-        name: 'Upcoming Events',
-      },
+      // {
+      //   innerTitle: 'alumni-events',
+      //   url: '/alumni/upcoming-events',
+      //   name: 'Upcoming Events',
+      // },
       {
         innerTitle: 'alumni-gallery',
         url: '/alumni/alumni-gallery',

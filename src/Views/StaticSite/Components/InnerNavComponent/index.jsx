@@ -62,12 +62,16 @@ const InnerNavComponent = ({ abc }) => {
           <div className="career-navigation-sm">
             <ul>
               {abc.menuItems.map((items) => {
-                console.log(items.name, 'sahil rana')
                 return (
                   <Link key={items.title} to={items.url}>
                     <li
                       className={
                         abc.title === items.innerTitle ? 'nav-active' : ''
+                      }
+                      style={
+                        abc.menuColor === 'black'
+                          ? { color: 'black', borderRight: '1px solid black' }
+                          : { color: 'white', borderRight: '1px solid white' }
                       }
                     >
                       {items.name}
