@@ -167,9 +167,9 @@ const CourseDetails = ({
           </form>
           <div className="upload-section">
             <p className="course-details-text">
-              Please upload the relevant TYI certificate pre requisite
+              { currentCourse.cetificate===true && 'Please upload the relevant TYI certificate pre requisite' }
               <div className="uploads">
-                <fieldset>
+                { currentCourse.certificate===true && <fieldset>
                   <label htmlFor="resume">
                     {courseAsset2
                       ? certificateName.substring(0, 15)
@@ -184,7 +184,7 @@ const CourseDetails = ({
                     &ensp;
                     {upload}
                   </label>
-                </fieldset>
+                </fieldset>}
                 <fieldset>
                   <label htmlFor="image">
                     {courseAsset1

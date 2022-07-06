@@ -195,7 +195,7 @@ const Personal = ({ handleEmpty1, empty, setFormData, formData, setEmpty }) => {
             <div className="DOB_box form_error">
               <InputComponent
                 type="number"
-                placeholder="AGE*"
+                placeholder="Age*"
                 minnum="4"
                 maxnum='99'
                 form={formData}
