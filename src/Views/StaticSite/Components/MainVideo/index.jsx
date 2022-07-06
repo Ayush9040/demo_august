@@ -76,6 +76,7 @@ const MainVideo = () => {
           disablePictureInPicture
           controlsList="nodownload noremoteplayback noplaybackrate"
           nofullscreen 
+          playsInline
           loop
           autoPlay={true}
           muted={isMute}
@@ -95,6 +96,7 @@ const MainVideo = () => {
           disablePictureInPicture
           controlsList="nodownload noremoteplayback noplaybackrate"
           nofullscreen 
+          playsInline
           loop
           autoPlay={true}
           muted={isMute}
