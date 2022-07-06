@@ -1,0 +1,153 @@
+import React from 'react'
+import './style.scss'
+import { homeAssets } from '../../assets/images/imageAsset'
+import baseDomain from '../../assets/images/imageAsset'
+import InnerNavComponent from '../InnerNavComponent'
+
+const OnlineTution = () => {
+  const highlight = {
+    title: 'Career',
+    color: 'orange',
+    menuColor: 'orange',
+    menuItems: [],
+  }
+  return (
+    <div className="highlight-sections">
+      <InnerNavComponent abc={highlight}/>
+      <div className="main-container">
+        <div className="highlight-info">
+          <h1>Online Home Tuition</h1>
+        </div>
+        <div className="highlight-cover">
+          <img src={`${baseDomain}${homeAssets.homeAsset15}`} />
+        </div>
+      </div>
+      <div className="about-section">
+        <p>
+          Research has shown that doing a 150-minutes of moderate intensity
+          activity every week is required for maintaining optimum health. There
+          is nothing better to fill those minutes with than yoga and meditation.
+          Yoga makes your body more flexible, while boosting your overall
+          immunity. Asanas and breathing techniques help remove accumulated
+          toxins from the body and boost the nervous system.{' '}
+        </p>
+        <p>
+          Practicing meditation can help overcome negative emotions, destress,
+          focus, and will equip you to deal with your day-to-day problems in a
+          much more efficient manner.{' '}
+        </p>
+        <p>
+          The Yoga Institute’s online home tuition is designed to give you all
+          these benefits from the comfort of your home at your convenient time.
+          These classes cover:
+        </p>
+        <div className="online_table">
+          <p>
+            <ul>
+              <li>Asanas</li>
+              <li>Pranayamas</li>
+              <li>Kriyas</li>
+              <li>Diet recommendation</li>
+              <li>Introduction to yogic lifestyle </li>
+            </ul>
+          </p>
+
+          <p>Fees:</p>
+          <p>The fee structure is as follows:</p>
+
+          <table>
+            <thead>
+              <tr>
+                <th>Sr. No.</th>
+                <th>Participants</th>
+                <th>Sessions (3 sessions per week)</th>
+                <th>Fees</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1a</td>
+                <td>1</td>
+                <td>12</td>
+                <td>Rs 6,000</td>
+              </tr>
+              <tr>
+                <td>1b</td>
+                <td>1</td>
+                <td>24</td>
+                <td>Rs. 10,800</td>
+              </tr>
+              <tr>
+                <td>2a</td>
+                <td>2</td>
+                <td>12</td>
+                <td>Rs. 8.400</td>
+              </tr>
+              <tr>
+                <td>2b</td>
+                <td>2</td>
+                <td>24</td>
+                <td>Rs. 15.200</td>
+              </tr>
+              <tr>
+                <td>3a</td>
+                <td>3 or 4</td>
+                <td>12</td>
+                <td>Rs. 10,800</td>
+              </tr>
+              <tr>
+                <td>3b</td>
+                <td>3 or 4</td>
+                <td>24</td>
+                <td>Rs. 19,500</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p>
+          <b>Please note:</b>
+          <span>
+            For a hassle-free admission, kindly specify the following details
+            while making the payment:
+          </span>
+        </p>
+        <p>– Name of the Student (In case a third party transfers the funds)</p>
+        <p>– Bank Transaction UTR number</p>
+        <p>– Name of the Transferee</p>
+        <p>Kindly make the payment to the following Bank Account:</p>
+        <p>Name of Account: International Board of Yoga</p>
+        <p>Name of Bank: Kotak Mahindra Bank</p>
+        <p>IFSC Code: KKBK0000674</p>
+        <p>Account number: 0512124263</p>
+        <div className="online_table">
+          <p>
+            <b>Please note:</b>
+          </p>
+          <ul>
+            <li>
+              Full fees must be paid in advance, at the time of booking. You can
+              make account payee cheque drawn in favour of ‘International Board
+              of Yoga’. Payment by cash will not be accepted.
+            </li>
+            <li>The fees is non-refundable.</li>
+            <li>
+              The fees quoted are for the course duration of 4 weeks (12
+              sessions) or 8 weeks (24 sessions). A maximum extension of 2 weeks
+              can be considered in very special cases.
+            </li>
+          </ul>
+        </div>
+        <p>
+          For enquiries on home tuitions, you may SMS us (or drop a message on
+          WhatsApp) at +91-22-26122185, +91-22-26110506 or email us at
+          info@theyogainstitute.org.
+        </p>
+        <p>
+          Corporate enquiries can be addressed to
+          corporate.training@theyogainstitute.org
+        </p>
+      </div>
+    </div>
+  )
+}
+export default OnlineTution

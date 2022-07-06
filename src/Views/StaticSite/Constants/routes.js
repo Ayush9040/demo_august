@@ -25,6 +25,11 @@ import Authentication from '../Views/Authentication'
 import SoicalPage from '../Views/SocialPage'
 import VolunteerPage from '../Views/Volunteer'
 import Thankyou from '../Components/EnrollmentForm/ThankYou'
+import SattvikCooking from '../Components/Highlights/SattvikCooking'
+import YogaByTheBay from '../Components/Highlights/YogaByTheBay'
+import FullmoonMeditation from '../Components/Highlights/FullmoonMeditation'
+import CorporateWorkshop from '../Components/Highlights/CorporateWorkshop'
+import OnlineTution from '../Components/Highlights/OnlineTution'
 
 const staticSiteRoutes = [
   {
@@ -52,12 +57,12 @@ const staticSiteRoutes = [
     name: 'Courses',
   },
   {
-    Component:About,
+    Component: About,
     path: '/about/*',
     exact: true,
     id: 'statisSiteAbout',
     routePath: '/about/*',
-    name: 'About'
+    name: 'About',
   },
   {
     Component: Publication,
@@ -156,7 +161,7 @@ const staticSiteRoutes = [
     name: 'Facts',
   },
   {
-    Component:Experiences,
+    Component: Experiences,
     path: '/experience/*',
     exact: true,
     id: 'statisSiteUnderExperience',
@@ -164,12 +169,12 @@ const staticSiteRoutes = [
     name: 'Experience',
   },
   {
-    Component:Authentication,
-    path:'/user/*',
-    exact:true,
-    id:'statisSiteUnderAuth',
-    routePath:'/user/*',
-    name:'Auth'
+    Component: Authentication,
+    path: '/user/*',
+    exact: true,
+    id: 'statisSiteUnderAuth',
+    routePath: '/user/*',
+    name: 'Auth',
   },
   {
     Component: Career,
@@ -227,7 +232,8 @@ const staticSiteRoutes = [
     id: 'statisSiteUnderCsr',
     routePath: '/csr',
     name: 'csr',
-  },{
+  },
+  {
     Component: SingleCsr,
     path: '/csr/:csrId',
     exact: true,
@@ -242,6 +248,50 @@ const staticSiteRoutes = [
     id: 'statisSiteUnderEnrollmentThankyou',
     routePath: '/enrollment_thankyou',
     name: 'EnrollmentThankyou',
+  },
+
+  {
+    Component: YogaByTheBay,
+    path: '/highlights/yoga_by_the_bay',
+    exact: true,
+    id: 'statisSiteUnderHighlightsYogaByTheBay',
+    routePath: '/highlights/yoga_by_the_bay',
+    name: 'YogaByTheBay',
+  },
+
+  {
+    Component: SattvikCooking,
+    path: '/highlights/sattvik_cooking',
+    exact: true,
+    id: 'statisSiteUnderHighlightsSattvikCooking',
+    routePath: '/highlights/sattvik_cooking',
+    name: 'SattvikCooking',
+  },
+
+  {
+    Component: CorporateWorkshop,
+    path: '/highlights/corporate_workshop',
+    exact: true,
+    id: 'statisSiteUnderHighlightsCorporateWorkshop',
+    routePath: '/highlights/corporate_workshop',
+    name: 'CorporateWorkshop',
+  },
+
+  {
+    Component: FullmoonMeditation,
+    path: '/highlights/fullmoon_meditation',
+    exact: true,
+    id: 'statisSiteUnderHighlightsFullmoonMeditation',
+    routePath: '/highlights/fullmoon_meditation',
+    name: 'FullmoonMeditation',
+  },
+  {
+    Component: OnlineTution,
+    path: '/highlights/online_tuition',
+    exact: true,
+    id: 'statisSiteUnderHighlightsOnlineTuotion',
+    routePath: '/highlights/online_tuition',
+    name: 'OnlineTuition',
   },
 ]
 
