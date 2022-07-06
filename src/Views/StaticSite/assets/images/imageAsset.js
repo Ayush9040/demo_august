@@ -291,6 +291,12 @@ export const aboutAssets={
   // Madhavdas Ji
 
   aboutAsset10:'/About/Our%20Legacy/Paramhamsa%20Madhavadas%20ji/Madhavdasji.jpg',
+  aboutAsset82:'/About/Our%20Legacy/new11/Madhavdas_ji/Madhavdasji_4_3.jpg',
+  aboutAsset83:'/About/Our%20Legacy/new11/Madhavdas_ji/madhavdasji1_1.jpg',
+  aboutAsset84:'/About/Our%20Legacy/new11/Madhavdas_ji/madhavdasji_16-9.jpg',
+  aboutAsset85:'/About/Our%20Legacy/new11/Madhavdas_ji/madhavdasji_16_9.jpg',
+  aboutAsset86:'/About/Our%20Legacy/new11/Madhavdas_ji/madhavdasji_1_1.jpg',
+  aboutAsset87:'/About/Our%20Legacy/new11/Madhavdas_ji/madhavdasji_3.jpg',
 
 
   // sitaDevi Ji

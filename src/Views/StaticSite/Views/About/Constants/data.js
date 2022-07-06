@@ -1,4 +1,7 @@
-import baseDomain, { aboutAssets,homeAssets } from '../../../assets/images/imageAsset.js'
+import baseDomain, {
+  aboutAssets,
+  homeAssets,
+} from '../../../assets/images/imageAsset.js'
 export const data = [
   {
     name: 'Dr. Hansaji Yogendra',
@@ -103,7 +106,14 @@ export const data = [
     route: 'paramhamsa-madhavadas-ji',
     leftImg: `${baseDomain}${homeAssets.homeAsset1}`,
     rightImg: null,
-    gallery: [],
+    gallery: [
+      `${baseDomain}${aboutAssets.aboutAsset83}`,
+      `${baseDomain}${aboutAssets.aboutAsset84}`,
+      `${baseDomain}${aboutAssets.aboutAsset82}`,
+      `${baseDomain}${aboutAssets.aboutAsset86}`,
+      `${baseDomain}${aboutAssets.aboutAsset85}`,
+      `${baseDomain}${aboutAssets.aboutAsset87}`,
+    ],
   },
   {
     name: 'Shri Yogendra ji',
