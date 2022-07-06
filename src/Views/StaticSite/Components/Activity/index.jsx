@@ -51,6 +51,7 @@ const Activity = () => {
                   title={item.title}
                   images={item.image}
                   description={item.description}
+                  url={item.url}
                 />
               )
             })}
