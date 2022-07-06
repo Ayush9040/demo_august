@@ -136,7 +136,7 @@ export const courseAssets = {
   courseAsset4: '/Courses/detailImg.png',
   courseAsset5: '/Courses/courses_More_than_just_learning.jpg',
   // camps
-  courseAsset6: '/Courses/Camps/Cardiac_&_Hypertension_camp .jpg',
+  courseAsset6: '/Courses/Camps/new43/cardiac-&-hypertension-43.png',
   courseAsset7: '/Courses/Camps/Diabetes_camp.jpg',
   courseAsset8: '/Courses/Camps/Life_Management_Camp.jpg',
   courseAsset9: '/Courses/Camps/Meditation_Camp.jpg',
