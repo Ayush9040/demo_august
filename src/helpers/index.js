@@ -15,4 +15,3 @@ export function validatePassword(password) {
   return false
 }
 
-

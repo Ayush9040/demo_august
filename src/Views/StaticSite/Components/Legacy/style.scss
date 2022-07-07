@@ -180,4 +180,11 @@ flex: 0 0 190px;
         width: 200px;
         //height: 200px;
      }
+
+     .legacy-text{
+        p{
+            text-align: justify;
+            padding: 0 1rem;
+        }
+     }
 }

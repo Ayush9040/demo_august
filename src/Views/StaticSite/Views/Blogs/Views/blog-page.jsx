@@ -1,6 +1,6 @@
 import React from 'react'
 import Heading from '../../../Components/Heading'
-import { share } from '../../../assets/icons/icon'
+//import { share } from '../../../assets/icons/icon'
 import './style.scss'
 import SeminarCard from '../../../Components/SeminarCard'
 import baseDomain, { homeAssets } from '../../../assets/images/imageAsset'
@@ -37,7 +37,7 @@ const BlogPage = () => {
               <Link to={`/blogs/blog/${allBlogData[0].id}`}>
                 <button>Read Story</button>
               </Link>
-              <div className="share-icon">{share}</div>
+              {/* <div className="share-icon">{share}</div> */}
             </div>
           </div>
           <div className="newsletter-image">

@@ -1250,7 +1250,77 @@ export const factAssets={
   factAsset96:'/Home/Facts/2020-onwards/22.jpg',
   factAsset97:'/Home/Facts/2020-onwards/23.jpg',
 
-  
+  //updated facts image
+
+  //1916-1936
+  factAsset100:'/Home/Facts/new/1916-1936/( 3)-1x1.jpg',
+  factAsset101:'/Home/Facts/new/1916-1936/(1 )1918_versova-4x3.jpg',
+  factAsset102:'/Home/Facts/new/1916-1936/(4 )1916_shri-madhavdasji_founder-4x3.jpg',
+  factAsset103:'/Home/Facts/new/1916-1936/1920_harriman-usa-16x9.jpg',
+  factAsset104:'/Home/Facts/new/1916-1936/1924_surendranath-das-gupta-16x9.jpg',
+  factAsset105:'/Home/Facts/new/1916-1936/1928_yoga-hygiene-1x1.jpg',
+
+  //1936-1956
+
+  factAsset106:'/Home/Facts/new/1936-1956/1940_crypt-of-civilization-1X1.jpg',
+  factAsset107:'/Home/Facts/new/1936-1956/1940_crypt-of-civilization-4x3.jpg',
+  factAsset108:'/Home/Facts/new/1936-1956/1941_the-yoga-manual(copy).jpg',
+  factAsset109:'/Home/Facts/new/1936-1956/1941_the-yoga-manual.jpg',
+  factAsset110:'/Home/Facts/new/1936-1956/1948_the-yoga-institute-4X3.jpg',
+  factAsset111:'/Home/Facts/new/1936-1956/1951_unesco-1X1.jpg',
+
+  //1956-1976
+
+  factAsset112:'/Home/Facts/new/1956-1976/1958_the-central-government-16x9.jpg',
+  factAsset113:'/Home/Facts/new/1956-1976/1961_yoga-in-modern-1x1-min.jpg',
+  factAsset114:'/Home/Facts/new/1956-1976/1963_dr- zakir-hussain-16x9.jpg',
+  factAsset115:'/Home/Facts/new/1956-1976/1963_x-ray-research-4x3.jpg',
+  factAsset116:'/Home/Facts/new/1956-1976/1970-medical-research-1x1.jpg',
+  factAsset117:'/Home/Facts/new/1956-1976/1972_the-yoga -institute-organized-4x3.jpg',
+
+  //1976-2000
+
+  factAsset118:'/Home/Facts/new/1976-2000/1986_ research-project-1x1.jpg',
+  factAsset119:'/Home/Facts/new/1976-2000/1986_dr-shankar-dayal-4x3.jpg',
+  factAsset120:'/Home/Facts/new/1976-2000/1987_first-volume-of-yoga-1x1.jpg',
+  factAsset121:'/Home/Facts/new/1976-2000/1987_giani-4x3.jpg',
+  factAsset122:'/Home/Facts/new/1976-2000/1990_unique-experiment-19x6.jpg',
+  factAsset123:'/Home/Facts/new/1976-2000/1997-hansaji-16x9.jpg',
+
+  //2000-2010
+
+  factAsset124:'/Home/Facts/new/2000-2010/2000_woman-of-the-year-1x1.jpg',
+  factAsset125:'/Home/Facts/new/2000-2010/2010_rashtriya-ayurveda-19x9.jpg',
+  factAsset126:'/Home/Facts/new/2000-2010/2010_the-central-council-1x1.jpg',
+  factAsset127:'/Home/Facts/new/2000-2010/dsc_4649-4x3.jpg',
+  factAsset128:'/Home/Facts/new/2000-2010/dsc_4737-16x9.jpg',
+  factAsset129:'/Home/Facts/new/2000-2010/dsc_4740-1x1.jpg',
+
+  //2010-2020
+
+  factAsset130:'/Home/Facts/new/2010-2020/2012_94th-foundation--4x3.jpg',
+  factAsset131:'/Home/Facts/new/2010-2020/cover-image-1x1.jpg',
+  factAsset132:'/Home/Facts/new/2010-2020/dalai-lama-4x.jpg',
+  factAsset133:'/Home/Facts/new/2010-2020/indian-yoga-association-16x9.jpg',
+  factAsset134:'/Home/Facts/new/2010-2020/loksabha-1x1.jpg',
+  factAsset135:'/Home/Facts/new/2010-2020/shri-vishwanath-16x9.jpg',
+
+  //2020 onwards
+
+  factAsset136:'/Home/Facts/new/2020onwards/1x1.jpg',
+  factAsset137:'/Home/Facts/new/2020onwards/dsc-116x9.jpg',
+  factAsset138:'/Home/Facts/new/2020onwards/dsc-16x9.jpg',
+  factAsset139:'/Home/Facts/new/2020onwards/indu-1x1.jpg',
+  factAsset140:'/Home/Facts/new/2020onwards/whatsapp-image-2021-14x3.jpg',
+  factAsset141:'/Home/Facts/new/2020onwards/whatsapp-image2020-4x3.jpg',
+
+  //extra
+
+  factAsset142:'/Home/Facts/new/governor-maharashtra-1986..jpg',
+  factAsset143:'/Home/Facts/new/hansaji-jayadeva.png',
+  factAsset144:'/Home/Facts/new/shankar.jpg',
+  factAsset145:'/Home/Facts/new/vinshnu-anna.jpg',
+
 
 
 }
