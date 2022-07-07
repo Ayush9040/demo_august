@@ -18,7 +18,7 @@ const Experience = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 1500,
+    autoPlaySpeed: 5000,
   }
 
   return (

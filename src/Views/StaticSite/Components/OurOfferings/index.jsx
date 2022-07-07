@@ -68,7 +68,7 @@ const OurOfferings = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 1500,
+    autoPlaySpeed: 5000,
     centerMode: true,
     centerPadding: '70px',
     responsive: [
