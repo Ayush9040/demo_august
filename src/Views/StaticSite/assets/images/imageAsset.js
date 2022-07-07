@@ -149,7 +149,7 @@ export const courseAssets = {
   courseAsset16: '/Courses/Camps/Weight_management.jpg',
   courseAsset83: '/Courses/Camps/Respiratory_Workshop.jpeg',
   courseAsset84: '/Courses/Camps/Women%E2%80%99s_Camp.jpg',
-  
+  courseAsset85:'/Courses/diet_workshp.png',  
 
   // certificate
 
@@ -810,8 +810,81 @@ export const publicationAssests = {
   ythAssets24: '/Publications/Yogsattava/PreviousIssues/2021/yth2021-6.jpg',
 
   //Library
-  libraryAsset:'/Publications/Library/hero.jpg'
+  libraryAsset:'/Publications/Library/hero.jpg',
+
+  //yogasattava
+
+  //2017
+
+  ythAssets32:'/Publications/Yogsattava/PreviousIssues/2017/YogaSattva.jpg',
+  ythAssets33:'/Publications/Yogsattava/PreviousIssues/2017/YogaSattva1.jpg',
+  ythAssets34:'/Publications/Yogsattava/PreviousIssues/2017/YogaSattva2.jpg',
+  ythAssets35:'/Publications/Yogsattava/PreviousIssues/2017/yogasattva3.jpg',
+  ythAssets36:'/Publications/Yogsattava/PreviousIssues/2017/yogasattva4.jpg',
+  ythAssets37:'/Publications/Yogsattava/PreviousIssues/2017/yogasattva5.jpg',
+  ythAssets38:'/Publications/Yogsattava/PreviousIssues/2017/yogasattva6.jpg',
+
+  //2018
+
+  ythAssets39:'/Publications/Yogsattava/PreviousIssues/2018/YogaSattva-April-Cover.jpg',
+  ythAssets40:'/Publications/Yogsattava/PreviousIssues/2018/YogaSattva-Aug-2019-Cover.jpg',
+  ythAssets41:'/Publications/Yogsattava/PreviousIssues/2018/YogaSattva-January2018-PDF-1.jpg',
+  ythAssets42:'/Publications/Yogsattava/PreviousIssues/2018/YogaSattva-July2018-1.jpeg',
+  ythAssets43:'/Publications/Yogsattava/PreviousIssues/2018/YogaSattva-May2018-PDF-1.jpeg',
+  ythAssets44:'/Publications/Yogsattava/PreviousIssues/2018/YogaSattva-October-2018-PDF-1.jpeg',
+  ythAssets45:'/Publications/Yogsattava/PreviousIssues/2018/YogaSattva-TheYogaInstitute-September2018-1.jpeg',
+  ythAssets46:'/Publications/Yogsattava/PreviousIssues/2018/Yogasattva_cover_june_2018.jpg',
+  ythAssets47:'/Publications/Yogsattava/PreviousIssues/2018/yogasattva-march2018-2-1.jpeg',
+  ythAssets48:'/Publications/Yogsattava/PreviousIssues/2018/yogasattva_cover.jpg',
+  ythAssets49:'/Publications/Yogsattava/PreviousIssues/2018/yogasattva_nov_cover.jpg',
+  
+
+  //2019
+
+  ythAssets50:'/Publications/Yogsattava/PreviousIssues/2019/new/YogaSattva-Apr-2019-TheYogaInstitute-1.jpeg',
+  ythAssets51:'/Publications/Yogsattava/PreviousIssues/2019/new/YogaSattva-Aug-2019-Cover.jpg',
+  ythAssets52:'/Publications/Yogsattava/PreviousIssues/2019/new/YogaSattva-Feb-2019-1.jpeg',
+  ythAssets53:'/Publications/Yogsattava/PreviousIssues/2019/new/YogaSattva-January19-1.jpeg',
+  ythAssets54:'/Publications/Yogsattava/PreviousIssues/2019/new/YogaSattva-July-2019-1.jpeg',
+  ythAssets55:'/Publications/Yogsattava/PreviousIssues/2019/new/YogaSattva-June-2019-1.jpeg',
+  ythAssets56:'/Publications/Yogsattava/PreviousIssues/2019/new/YogaSattva-Mar-2019 _cover.png',
+  ythAssets57:'/Publications/Yogsattava/PreviousIssues/2019/new/YogaSattva-May-2019--TheYogaInstitute-1.jpg',
+  ythAssets58:'/Publications/Yogsattava/PreviousIssues/2019/new/Yogasattva-Dec-2019-TheYogaInstitute-1.jpeg',
+  ythAssets59:'/Publications/Yogsattava/PreviousIssues/2019/new/Yogasattva-Nov-2019-TheYogaInstitute-1.jpeg',
+  ythAssets60:'/Publications/Yogsattava/PreviousIssues/2019/new/Yogasattva-Oct-19-Cover.jpeg',
+  ythAssets61:'/Publications/Yogsattava/PreviousIssues/2019/new/Yogasattva-Sept2019-1.jpeg',
+
+  //2021
+
+  ythAssets62:'/Publications/Yogsattava/PreviousIssues/2021/2021/Yoga-Sattva-March-2021-1.jpeg',
+  ythAssets63:'/Publications/Yogsattava/PreviousIssues/2021/2021/Yogasattva-APRIL-2021-TheYogaInstitute-1.jpg',
+  ythAssets64:'/Publications/Yogsattava/PreviousIssues/2021/2021/Yogasattva-August-2021-1-1.jpeg',
+  ythAssets65:'/Publications/Yogsattava/PreviousIssues/2021/2021/Yogasattva-December2021-Final-1.jpeg',
+  ythAssets66:'/Publications/Yogsattava/PreviousIssues/2021/2021/Yogasattva-FEB-2021-1.jpeg',
+  ythAssets67:'/Publications/Yogsattava/PreviousIssues/2021/2021/Yogasattva-JAN-2020.jpeg',
+  ythAssets68:'/Publications/Yogsattava/PreviousIssues/2021/2021/Yogasattva-July-2021-TheYogaInstitute.jpg',
+  ythAssets69:'/Publications/Yogsattava/PreviousIssues/2021/2021/Yogasattva-June-2021-TheYogaInstitute-1.jpeg',
+  ythAssets70:'/Publications/Yogsattava/PreviousIssues/2021/2021/Yogasattva-May-2021-The-Yoga-Institute-1.jpeg',
+  ythAssets71:'/Publications/Yogsattava/PreviousIssues/2021/2021/Yogasattva-November-2021-Final-1.jpeg',
+  ythAssets72:'/Publications/Yogsattava/PreviousIssues/2021/2021/Yogasattva-September-2021-1.jpeg',
+
+  //2020
+
+  ythAssets73:'/Publications/Yogsattava/PreviousIssues/2020/new/YogaSattav-February-2020-1.jpeg',
+  ythAssets74:'/Publications/Yogsattava/PreviousIssues/2020/new/Yogasattva-1st-June-2020-1.jpeg',
+  ythAssets75:'/Publications/Yogsattava/PreviousIssues/2020/new/Yogasattva-APR-2020-1.jpeg',
+  ythAssets76:'/Publications/Yogsattava/PreviousIssues/2020/new/Yogasattva-AUG-2020-1.jpeg',
+  ythAssets77:'/Publications/Yogsattava/PreviousIssues/2020/new/Yogasattva-DEC-2020_F-1.jpeg',
+  ythAssets78:'/Publications/Yogsattava/PreviousIssues/2020/new/Yogasattva-JULY-2020-1.jpeg',
+  ythAssets79:'/Publications/Yogsattava/PreviousIssues/2020/new/Yogasattva-Jan-2020_Final-1.jpeg',
+  ythAssets80:'/Publications/Yogsattava/PreviousIssues/2020/new/Yogasattva-MAY-2020-1.jpeg',
+  ythAssets81:'/Publications/Yogsattava/PreviousIssues/2020/new/Yogasattva-Mar-2020-1.jpeg',
+  ythAssets82:'/Publications/Yogsattava/PreviousIssues/2020/new/Yogasattva-NOV-2020-Cover 1.jpg',
+  ythAssets83:'/Publications/Yogsattava/PreviousIssues/2020/new/Yogasattva-OCT-2020-TheYogaInstitute-1.jpeg',
+  ythAssets84:'/Publications/Yogsattava/PreviousIssues/2020/new/Yogasattva-SEP-2020-1.jpeg',
 }
+
+
 
 export const alumniAssets = {
   // Alumni-Gallery
@@ -997,6 +1070,63 @@ export const volunteerAssets = {
   volunteerAssets9:'/Volunteer/new11/volunteer-programs-expertise-cover-image.jpg',
   //values
   valuesAssets: '/Volunteer/our-values.jpg',
+  
+
+  //anna brahma
+  volunteerAssets10:'/Volunteer/latest/AnnamBramha/1-1.JPG',
+  volunteerAssets11:'/Volunteer/latest/AnnamBramha/1st-image-min.JPG',
+  volunteerAssets12:'/Volunteer/latest/AnnamBramha/3rd-image-4-3.jpg',
+  volunteerAssets13:'/Volunteer/latest/AnnamBramha/cover-image-min.JPG',
+  volunteerAssets14:'/Volunteer/latest/AnnamBramha/img_0464-4x3.jpg',
+  volunteerAssets15:'/Volunteer/latest/AnnamBramha/img_0971-1-1-min.JPG',
+  volunteerAssets16:'/Volunteer/latest/AnnamBramha/img_1006-16-9.JPG',
+  volunteerAssets17:'/Volunteer/latest/AnnamBramha/img_1006-16-9.JPG',
+  //course coordinator
+
+  volunteerAssets18:'/Volunteer/latest/Course-Coordinator/12-16x9.jpg',
+  volunteerAssets19:'/Volunteer/latest/Course-Coordinator/29-16x9.jpg',
+  volunteerAssets20:'/Volunteer/latest/Course-Coordinator/counselling-4x3.jpg',
+  volunteerAssets21:'/Volunteer/latest/Course-Coordinator/dsc_3371-4x3.jpg',
+  volunteerAssets22:'/Volunteer/latest/Course-Coordinator/img_4021-1x1.jpg',
+  volunteerAssets23:'/Volunteer/latest/Course-Coordinator/qa08a2713-1x1.jpg',
+  //day to day avtivities
+
+  volunteerAssets45:'/Volunteer/latest/day-to-day-activities/16x9-01.jpg',
+  volunteerAssets46:'/Volunteer/latest/day-to-day-activities/16x9.jpg',
+  volunteerAssets47:'/Volunteer/latest/day-to-day-activities/1x1-01.jpg',
+  volunteerAssets48:'/Volunteer/latest/day-to-day-activities/1x1.jpg',
+  volunteerAssets49:'/Volunteer/latest/day-to-day-activities/4X3-01.jpg',
+  volunteerAssets50:'/Volunteer/latest/day-to-day-activities/4X3.jpg',
+
+  //expertise
+
+  volunteerAssets24:'/Volunteer/latest/Expertise/16x9-01.jpg',
+  volunteerAssets25:'/Volunteer/latest/Expertise/16x9-min.jpg',
+  volunteerAssets26:'/Volunteer/latest/Expertise/1x1-01.jpg',
+  volunteerAssets28:'/Volunteer/latest/Expertise/1x1.jpg',
+  volunteerAssets29:'/Volunteer/latest/Expertise/4X3-01.jpg',
+  volunteerAssets30:'/Volunteer/latest/Expertise/4X3.jpg',
+
+  //kitchen help
+
+  volunteerAssets31:'/Volunteer/latest/Kitchen-Help/16x9-01.jpg',
+  volunteerAssets32:'/Volunteer/latest/Kitchen-Help/16x9.jpg',
+  volunteerAssets33:'/Volunteer/latest/Kitchen-Help/1x1-01-min.jpg',
+  volunteerAssets34:'/Volunteer/latest/Kitchen-Help/1x1.jpg',
+  volunteerAssets35:'/Volunteer/latest/Kitchen-Help/4X3-01.jpg',
+  volunteerAssets37:'/Volunteer/latest/Kitchen-Help/4X3.jpg',
+
+  //teacher
+
+  volunteerAssets38:'/Volunteer/latest/Teacher/16x9-01.jpg',
+  volunteerAssets39:'/Volunteer/latest/Teacher/16x9.jpg',
+  volunteerAssets40:'/Volunteer/latest/Teacher/1x1-01.jpg',
+  volunteerAssets41:'/Volunteer/latest/Teacher/1x1.jpg',
+  volunteerAssets42:'/Volunteer/latest/Teacher/4X3-01.jpg',
+  volunteerAssets43:'/Volunteer/latest/Teacher/4X3.jpg',
+  volunteerAssets44:'/Volunteer/latest/Teacher/cover-image -min.jpg',
+
+
 }
 
 
@@ -1188,6 +1318,13 @@ export const CSR ={
   hunger:'/CSR/zero-hunger.png',
   responsible:'/CSR/responsible1.png',
   health:'/CSR/good-health.png'
+}
+
+export const wellnessAssets ={
+  wellnessAssets1: '/wellness/corporate_wellness_background%20(1).jpg',
+  wellnessAssets2: '/wellness/our_offerings_left .jpeg',
+  wellnessAssets3 :'/wellness/Our_offerings_right.png',
+  wellnessAssets4:'/wellness/wellness_program_at_work (1).jpg',
 }
 
 

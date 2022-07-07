@@ -14,13 +14,35 @@
 .blog-series {
   .alumni-content {
     background: #96bcee;
+    display: flex;
+    gap: 5rem;
+    padding: 5rem 10rem;
+    margin-top: 18rem;
     .newsletter-content {
-      h2 {
-        font-size: 2rem;
-      }
-      top: -16.5rem;
+      //top: -16.5rem;
       width: 70% !important;
       margin: 0 auto;
+      h2 {
+        display: flex;
+        //flex-wrap: wrap;
+        margin-top: -12rem;
+        .newsletter-title {
+          font-size: 2.25rem;
+          color: #000;
+          font-weight: 600;
+        }
+        .newsletter-date {
+          font-size: 2.5rem;
+          color: #aaa;
+          float: right;
+        }
+      }
+      p {
+        color: #fff;
+        margin: 2rem 0;
+        font-weight: 400;
+      }
+
       .options {
         display: flex;
         justify-content: space-between;
@@ -53,13 +75,15 @@
       font-weight: bold;
     }
     img {
-      width: 80%;
+      width: 100%;
+      display: flex;
       border-radius: 40px;
+      margin-top: -12rem;
     }
   }
 }
 .upcoming-blogs {
-  width: fit-content; 
+  width: fit-content;
   margin: 3rem auto;
   display: flex;
   flex-direction: column;
@@ -105,7 +129,7 @@
       color: white;
     }
     .newsletter-date {
-      color: #fff;
+      color: #aaa;
     }
     .newsletter-content {
       p {
@@ -142,26 +166,60 @@
   }
 }
 
-@media (max-width: 900px) {
-  .alumni-content {
-    grid-template-columns: 100%;
-    h2 {
-      color: #000;
-    }
-  }
+@media (max-width: 1800px) {
   .blog-series {
     .alumni-content {
-      margin: 10rem 0;
+      .newsletter-content {
+        h2 {
+          margin-top: -10rem;
+        }
+        p {
+          color: #fff;
+          margin: 4rem 0;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .blog-series {
+    .alumni-content {
+      margin: 5rem 0;
+      display: block;
+      .newsletter-content {
+        width: 100% !important;
+        h2 {
+          .newsletter-title {
+            margin-top: 7rem;
+            color: #fff;
+            font-size: 2.5rem;
+          }
+          .newsletter-date {
+            margin-top: 7rem;
+            color: #fff;
+          }
+        }
+        p{
+          font-size: 2.25rem;
+        }
+      }
+    }
+    .newsletter-image {
+      img {
+        margin-top: 10rem;
+      }
     }
     .newsletter-content {
       top: auto;
       left: auto;
       width: 100%;
-      h2 {
-        .newsletter-date {
-          color: #aaa;
-        }
-      }
+      // h2 {
+      //   .newsletter-date {
+      //     color: #aaa;
+      //   }
+      // }
     }
     .newsletter-image {
       margin-top: 5rem;
@@ -177,59 +235,60 @@
       }
     }
   }
-  .blog-container {
-    .blog-grid {
-      grid-template-columns: 100%;
-    }
-  }
+  // .blog-container {
+  //   .blog-grid {
+  //     grid-template-columns: 100%;
+  //   }
+  // }
 }
 
 @media (max-width: 835px) {
-  .upcoming-blogs{
-   
-    h3{
+  
+  .upcoming-blogs {
+    h3 {
       text-align: center;
     }
-    .blog-card-container{
+    .blog-card-container {
       justify-content: center;
     }
   }
 }
 
-@media (max-width: 750px) {
-  // .upcoming-blogs {
-  //   h3 {
-  //     margin-left: 13rem;
-  //   }
-  // }
-  .blog-container {
-    .blog-grid {
-      grid-template-columns: 100%;
-    }
-  }
-}
+// @media (max-width: 750px) {
+//   .upcoming-blogs {
+//     h3 {
+//       margin-left: 13rem;
+//     }
+//   }
+//   .blog-container {
+//     .blog-grid {
+//       grid-template-columns: 100%;
+//     }
+//   }
+// }
 
 @media (max-width: 500px) {
-  .alumni-content {
-    padding: 5rem;
-  }
-  .upcoming-blogs{
+  // .alumni-content {
+  //   padding: 5rem ;
+  // }
+  .upcoming-blogs {
     padding: 0rem 1rem;
   }
   .blog-series {
     .alumni-content {
       margin: 8rem 0;
+      padding: 5rem 2rem;
     }
     .newsletter-image {
       img {
         width: 100%;
-        margin-top: -13rem;
+        //margin-top: -13rem;
       }
     }
     .newsletter-content {
       h2 {
-        .newsletter-date{
-          color: #fff;
+        .newsletter-date {
+          color: #aaa;
         }
         .newsletter-title {
           font-size: 2rem;
@@ -239,11 +298,11 @@
     }
   }
 
-  .blog-container {
-    .blog-grid {
-      grid-template-columns: 100%;
-    }
-  }
+  // .blog-container {
+  //   .blog-grid {
+  //     grid-template-columns: 100%;
+  //   }
+  // }
 }
 
 @media (max-width: 420px) {
@@ -255,6 +314,7 @@
   .newsletter-content {
     .newsletter-date {
       font-size: 1.5rem;
+      color: #aaa;
     }
   }
   .upcoming-blogs {
@@ -262,9 +322,9 @@
       margin-left: 5rem !important;
     }
   }
-  .blog-container {
-    .blog-grid {
-      grid-template-columns: 100%;
-    }
-  }
+  // .blog-container {
+  //   .blog-grid {
+  //     grid-template-columns: 100%;
+  //   }
+  // }
 }

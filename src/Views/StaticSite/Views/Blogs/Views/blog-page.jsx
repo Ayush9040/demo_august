@@ -4,14 +4,22 @@ import { share } from '../../../assets/icons/icon'
 import './style.scss'
 import SeminarCard from '../../../Components/SeminarCard'
 import baseDomain, { homeAssets } from '../../../assets/images/imageAsset'
-import CommonBannerNavPrimary from '../../../Components/CommonBannerNavPrimary'
+//import CommonBannerNavPrimary from '../../../Components/CommonBannerNavPrimary'
 import { Link } from 'react-router-dom'
 import { allBlogData } from '../../../utils/blogData'
+import InnerNavComponent from '../../../Components/InnerNavComponent'
 const BlogPage = () => {
+  const viewBlog = {
+    title: 'Blogs',
+    color: 'white',
+    menuColor: 'white',
+    menuItems: [],
+  }
   console.log(allBlogData, '4')
   return (
     <div className="main-blog">
-      <CommonBannerNavPrimary innerNav={false} />
+      {/* <CommonBannerNavPrimary innerNav={false} /> */}
+      <InnerNavComponent abc={viewBlog}/>
       <div className="blog-heading">
         
         <Heading largeText={'Blog'} />

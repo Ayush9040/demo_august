@@ -7,15 +7,12 @@ import { useParams } from 'react-router-dom'
 import FAQ from '../../../Components/Faq'
 import { upload } from '../../../assets/icons/icon'
 
-
 const VolunteerJob = () => {
   const { id } = useParams()
   const [program, setProgram] = useState({})
   useEffect(() => {
     setProgram(volunteerData.find((item) => id === item.id))
   }, [])
-
-
 
   return (
     <div className="single-job">
@@ -64,7 +61,7 @@ const VolunteerJob = () => {
                       placeholder="Upload Image"
                       accept="image/*"
                     />
-                    &ensp; 
+                    &ensp;
                     {upload}
                   </label>
                 </fieldset>
@@ -76,7 +73,7 @@ const VolunteerJob = () => {
                       id="resume"
                       placeholder="Upload Resume"
                     />
-                    &ensp; 
+                    &ensp;
                     {upload}
                   </label>
                   <small>Please ensure the file is under 2 MB</small>
@@ -89,7 +86,7 @@ const VolunteerJob = () => {
           </div>
         </div>
       </div>
-      <VolunteerGrid />
+      <VolunteerGrid gallery={ program?.gallery } />
       <FAQ questions={program?.faq} />
     </div>
   )

@@ -5477,8 +5477,8 @@ const camps = {
     category: 'camps',
     metaDescription:
       'Wholesome tools and techniques to help you manage your condition completely',
-    image: `${baseDomain}${courseAssets.courseAsset13}`,
-    cardImage: `${baseDomain}${courseAssets.courseAsset13}`,
+    image: `${baseDomain}${courseAssets.courseAsset85}`,
+    cardImage: `${baseDomain}${courseAssets.courseAsset85}`,
     details: [
       {
         type: 'paragraph',
