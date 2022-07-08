@@ -30,8 +30,22 @@ import YogaByTheBay from '../Components/Highlights/YogaByTheBay'
 import FullmoonMeditation from '../Components/Highlights/FullmoonMeditation'
 import CorporateWorkshop from '../Components/Highlights/CorporateWorkshop'
 import OnlineTution from '../Components/Highlights/OnlineTution'
+import AboutUs from '../Views/About/Views/overview'
+import OurLegacy from '../Views/About/Views/our-legacy'
+import Blessings from '../Views/About/Views/blessings'
+import Facilities from '../Views/Facilities/Views/facilities'
+import DonationPage from '../Views/Donation/Views/donation-page'
+import MediaGallery from '../Views/Media/Views/media-gallery'
+import GalleryVideo from '../Views/Media/Views/media-video'
+import YogaTotalHealth from '../Views/Publication/Views/yoga-health'
+import Yogasattva from '../Views/Publication/Views/yogasattva'
+import library from '../Views/Publication/Views/library'
+import BlogPage from '../Views/Blogs/Views/blog-page'
+import OurLegacyModal from '../Components/OurLegacyModal'
 
 const staticSiteRoutes = [
+
+  //Home
   {
     Component: Home,
     path: '/',
@@ -40,14 +54,16 @@ const staticSiteRoutes = [
     routePath: '/',
     name: 'Home',
   },
+  //SocialPage
   {
     Component: SoicalPage,
-    path: '/social-responsibility/*',
+    path: '/social-initiatives',
     exact: true,
     id: 'statisSiteSocial',
-    routePath: '/social-responsibility/*',
+    routePath: '/social-initiatives',
     name: 'Social',
   },
+  //Course
   {
     Component: Course,
     path: '/courses/*',
@@ -56,54 +72,208 @@ const staticSiteRoutes = [
     routePath: '/courses/*',
     name: 'Courses',
   },
+  //About
   {
-    Component: About,
-    path: '/about/*',
+    Component: AboutUs,
+    path: '/know-us-better',
     exact: true,
     id: 'statisSiteAbout',
-    routePath: '/about/*',
+    routePath: '/know-us-better',
     name: 'About',
   },
   {
-    Component: Publication,
-    path: '/publication/*',
+    Component: OurLegacy,
+    path: '/our-legacy',
     exact: true,
-    id: 'statisSitePublication',
-    routePath: '/publication/*',
-    name: 'Publication',
+    id: 'statisSiteAbout',
+    routePath: '/our-legacy',
+    name: 'About',
   },
   {
-    Component: Media,
-    path: '/media/*',
+    Component: Blessings,
+    path: '/blessings',
     exact: true,
-    id: 'statisSiteMedia',
-    routePath: '/media/*',
-    name: 'Media',
+    id: 'statisSiteAbout',
+    routePath: '/blessings',
+    name: 'About',
   },
+  {
+    Component: OurLegacyModal,
+    path: '/our-legacy/:name',
+    exact: true,
+    id: 'statisSiteOurLegacyModal',
+    routePath: '/our-legacy/:name',
+    name: 'OurLegacyModal',
+  },
+  //facilities
+  {
+    Component: Facilities,
+    path: '/facilities',
+    exact: true,
+    id: 'statisSiteFacilites',
+    routePath: '/facilities',
+    name: 'Facilites',
+  },
+  {
+    Component: Facilities,
+    path: '/hostels',
+    exact: true,
+    id: 'statisSiteHostel',
+    routePath: '/hostels',
+    name: 'Hostel',
+  },
+  {
+    Component: Facilities,
+    path: '/conference-room',
+    exact: true,
+    id: 'statisSiteConferenceRoom',
+    routePath: '/conference-room',
+    name: 'ConferenceRoom',
+  },
+  {
+    Component: Facilities,
+    path: '/yoga-library',
+    exact: true,
+    id: 'statisSiteYogaLibrary',
+    routePath: '/yoga-library',
+    name: 'YogaLibrary',
+  },
+  {
+    Component: Facilities,
+    path: '/book-store',
+    exact: true,
+    id: 'statisSiteBookStore',
+    routePath: '/book-store',
+    name: 'BookStore',
+  },
+  {
+    Component: Facilities,
+    path: '/yoga-halls-rooftop-space',
+    exact: true,
+    id: 'statisSiteYogaHallRooftopSpace',
+    routePath: '/yoga-halls-rooftop-space',
+    name: 'YogaHallRooftopSpace',
+  },
+  {
+    Component: Facilities,
+    path: '/dining-hall',
+    exact: true,
+    id: 'statisSiteDiningHall',
+    routePath: '/dining-hall',
+    name: 'DiningHall',
+  },
+  {
+    Component: Facilities,
+    path: '/nature-trail',
+    exact: true,
+    id: 'statisSiteNatureTrail',
+    routePath: '/nature-trail',
+    name: 'NatureTrail',
+  },
+  {
+    Component: Facilities,
+    path: '/gazebo',
+    exact: true,
+    id: 'statisSiteGazebo',
+    routePath: '/gazebo',
+    name: 'Gazebo',
+  },
+  {
+    Component: Facilities,
+    path: '/kailaspati-tree',
+    exact: true,
+    id: 'statisSiteKailaspatiTree',
+    routePath: '/kailaspati-tree',
+    name: 'KailaspatiTree',
+  },
+  {
+    Component: Facilities,
+    path: '/Rules-and-Regulations',
+    exact: true,
+    id: 'statisSiteRulesAndRegulations',
+    routePath: '/Rules-and-Regulations',
+    name: 'Rules and Regulations',
+  },
+  //Museum
   {
     Component: Museum,
-    path: '/museum/*',
+    path: '/museum-of-classical-yoga',
     exact: true,
     id: 'statisSiteMuseum',
-    routePath: '/museum/*',
+    routePath: '/museum-of-classical-yoga',
     name: 'Museum',
   },
+  //Donate
   {
-    Component: Facility,
-    path: '/facilities/*',
+    Component: DonationPage,
+    path: '/donate',
     exact: true,
-    id: 'statisSiteFacily',
-    routePath: '/facilities/*',
-    name: 'Facility',
+    id: 'statisSiteDonate',
+    routePath: '/donate',
+    name: 'Donate',
+  },
+  //Gifting
+  //Media
+  {
+    Component: MediaGallery,
+    path: '/image-gallery',
+    exact: true,
+    id: 'statisSiteImageGallery',
+    routePath: '/image-gallery',
+    name: 'ImageGallery',
   },
   {
-    Component: Shop,
-    path: '/shop',
+    Component: GalleryVideo,
+    path: '/video-gallery',
     exact: true,
-    id: 'statisSiteShop',
-    routePath: '/shop',
-    name: 'Shop',
+    id: 'statisSiteImageVideoGallery',
+    routePath: '/video-gallery',
+    name: 'VideoGallery',
   },
+  //Publications
+  {
+    Component: YogaTotalHealth,
+    path: '/yoga-and-total-health/',
+    exact: true,
+    id: 'statisSiteYogaAndHealth',
+    routePath: '/yoga-and-total-health/',
+    name: 'YogaAndHealth',
+  },
+  {
+    Component: Yogasattva,
+    path: '/yogasattva',
+    exact: true,
+    id: 'statisSiteYogsattva',
+    routePath: '/yogasattva',
+    name: 'Yogasattva',
+  },
+  {
+    Component: library,
+    path: '/library',
+    exact: true,
+    id: 'statisSiteYogsattva',
+    routePath: '/library',
+    name: 'Yogasattva',
+  },
+  //Blogs
+  {
+    Component: BlogPage,
+    path: '/blog',
+    exact: true,
+    id: 'statisSiteBlog',
+    routePath: '/blog',
+    name: 'Blog',
+  },
+  //Experiences/Testimonials
+  {
+    Component: Experiences,
+    path: '/testimonials',
+    exact: true,
+    id: 'statisSiteTestimonials',
+    routePath: '/testimonials',
+    name: 'Testimonials',
+  },
+  //Soci
   {
     Component: Gift,
     path: '/gifting/*',
