@@ -77,7 +77,7 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange })
                 <Link to='/courses/course/asana-regular-classes-for-women/'><li>Asana Regular Classes for Women On Campus</li></Link>
                 <Link to='/courses/course/weekend-asana-classes-men-women-oncampus/'><li>Weekend Asana Classes - (Men & Women) On Campus</li></Link>
                 <Link to='/courses/course/asana-regular-classes-men-women/'><li>Weekend Asana Classes - (Men & Women) Online</li></Link>
-                <Link to='/courses/course/children&apos;s-regular-class-oncampus/'><li>Children&apos;s Regular Class - On Campus</li></Link>
+                <Link to='/courses/course/childrens-regular-class-oncampus/'><li>Children&apos;s Regular Class - On Campus</li></Link>
                 <Link to='/courses/course/children&apos;s-weekend-class-oncampus/'><li>Children&apos;s Weekend Class - On Campus </li></Link>
                 <Link to='/courses/course/advance-asana-regular-class/'><li>
                     Advance Asana Regular Class - Online (Only for TYI Teachers)
@@ -97,7 +97,7 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange })
           <div>
             <h4>
               <ul>
-                <Link to='/courses/course/bhava-workshop/'><li>Corporate Workshop</li></Link>
+                <Link to='/highlights/corporate_workshop'><li>Corporate Workshop</li></Link>
                 <Link to="/courses/course/stress-management-camp/">
                   <li>Stress Management Camp</li>
                 </Link>
@@ -131,8 +131,8 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange })
                 <Link to='/courses/course/7-days-heath-camp-on-campus/'><li>7 Days Health Camp</li></Link>
                 <Link to='/courses/course/batch1-21days-morning-oncampus/'><li>21 Days Better Living Course</li></Link>
                 <Link to='/courses/course/batch-1-200hr/'><li>200 Hour 1 Month BTTC Course</li></Link>
-                <Link to='/courses/course/7-Months-900hr/'><li>900 Hour 3 Month ATTC Course</li></Link>
-                <Link to=''><li> Pregnancy Camp</li></Link>
+                <Link to='/courses/course/7-months-900hr/'><li>900 Hour 3 Month ATTC Course</li></Link>
+                <Link to='/courses/course/pregnancy-camp-for-ante-post-natal/'><li> Pregnancy Camp</li></Link>
               </ul>
             </h4>
           </div>

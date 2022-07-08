@@ -306,7 +306,7 @@ const MegaMenu = ({ setNav }) => {
                 <Link onClick={() => {setNav(false)}}  to="/courses/course/21-days-blc-batch4/">
                   <li>Batch 4 - 21-Days BLC-Morning-Online English</li>
                 </Link>
-                <Link onClick={() => {setNav(false)}}  to='/courses'>
+                <Link onClick={() => {setNav(false)}}  to='/courses/course/samattvam-health-checkup/'>
                   <h3 style={{ marginBottom: '2rem' }}>
                   Samattvam (Health Checkup)
                   </h3>
@@ -321,13 +321,13 @@ const MegaMenu = ({ setNav }) => {
                   <Link onClick={() => {setNav(false)}}  to="/courses/course/asana-regular-classes-for-women/">
                     <li>Asana Regular Classes for Women - On Campus</li>
                   </Link>
-                  <Link onClick={() => {setNav(false)}}  to="/courses/course/asana-regular-classes-men-women/">
+                  <Link onClick={() => {setNav(false)}}  to="/courses/course/weekend-asana-classes-men-women-oncampus/">
                     <li>Weekend Asana Classes (Men & Women) - On Campus</li>
                   </Link>
                   <Link onClick={() => {setNav(false)}}  to="/courses/course/asana-regular-classes-men-women/">
                     <li>Weekend Asana Classes (Men & Women) - Online</li>
                   </Link>
-                  <Link onClick={() => {setNav(false)}}  to="/courses/course/children's-regular-class-oncampus/">
+                  <Link onClick={() => {setNav(false)}}  to="/courses/course/childrens-regular-class-oncampus/">
                     <li>Children&apos;s Regular Clasees - On Campus</li>
                   </Link>
                   <Link onClick={() => {setNav(false)}}  to="/courses/course/children's-weekend-class-oncampus/">
@@ -351,7 +351,7 @@ const MegaMenu = ({ setNav }) => {
                   <Link onClick={() => {setNav(false)}}  to="/courses/course/anand-sadhna/">
                     <li>Anand Sadhna-Online & On Campus</li>
                   </Link>
-                  <Link onClick={() => {setNav(false)}}  to="">
+                  <Link onClick={() => {setNav(false)}}  to="/courses/course/couples-classes-online/">
                     <li>Couple&apos;s Classes-Online</li>
                   </Link>
                 </ul>
@@ -377,9 +377,9 @@ const MegaMenu = ({ setNav }) => {
                 <Link onClick={() => {setNav(false)}}  to='/courses/course/senior-citizen-workshop/'><li>Senior citizen Workshop</li></Link>
                 <Link onClick={() => {setNav(false)}}  to='/courses/course/diet-workshop/'><li>Diet Workshop</li></Link>
               </ul>
-              <Link onClick={() => {setNav(false)}}  to=''>
+              <Link onClick={() => {setNav(false)}}  to='/highlights/corporate_workshop'>
                 <h3 style={{ marginBottom: '2rem' }}>Corporate Workshop</h3></Link>
-              <Link onClick={() => {setNav(false)}}  to=''>
+              <Link onClick={() => {setNav(false)}}  to='/highlights/online_tuition'>
                 <h3 style={{ marginBottom: '2rem' }}>Home Tutions</h3></Link>
               <div
                 className="filler"
