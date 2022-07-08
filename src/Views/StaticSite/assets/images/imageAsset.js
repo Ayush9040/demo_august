@@ -1080,7 +1080,7 @@ export const volunteerAssets = {
   volunteerAssets14:'/Volunteer/latest/AnnamBramha/img_0464-4x3.jpg',
   volunteerAssets15:'/Volunteer/latest/AnnamBramha/img_0971-1-1-min.JPG',
   volunteerAssets16:'/Volunteer/latest/AnnamBramha/img_1006-16-9.JPG',
-  volunteerAssets17:'/Volunteer/latest/AnnamBramha/img_1006-16-9.JPG',
+  volunteerAssets17:'/Volunteer/latest/AnnamBramha/img_3129-16-9-min.JPG',
   //course coordinator
 
   volunteerAssets18:'/Volunteer/latest/Course-Coordinator/12-16x9.jpg',
@@ -1115,6 +1115,7 @@ export const volunteerAssets = {
   volunteerAssets34:'/Volunteer/latest/Kitchen-Help/1x1.jpg',
   volunteerAssets35:'/Volunteer/latest/Kitchen-Help/4X3-01.jpg',
   volunteerAssets37:'/Volunteer/latest/Kitchen-Help/4X3.jpg',
+  volunteerAssets51:'/',
 
   //teacher
 

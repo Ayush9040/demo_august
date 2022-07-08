@@ -224,8 +224,8 @@ export const volunteerData = [
       'Share your skills with the world. If you have the expertise in content writing, graphic designing, document management, computer repairs, information technology, or any other area, you can volunteer to assist the Institute in running efficiently and giving selfless service to all without interruption. Explore and be a part of the Institute’s expertise-based volunteer program; you will not only contribute to helping others but work on refining your skills. ',
     // reqirements: ['req1', 'req2', 'req3', 'req4'],
     gallery: [
-      `${baseDomain}${volunteerAssets.volunteerAssets27}`,
-      `${baseDomain}${volunteerAssets.volunteerAssets31}`,
+      `${baseDomain}${volunteerAssets.volunteerAssets28}`,
+      `${baseDomain}${volunteerAssets.volunteerAssets25}`,
       `${baseDomain}${volunteerAssets.volunteerAssets35}`,
       `${baseDomain}${volunteerAssets.volunteerAssets26}`,
       `${baseDomain}${volunteerAssets.volunteerAssets32}`,
