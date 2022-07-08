@@ -97,7 +97,7 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange })
           <div>
             <h4>
               <ul>
-                <Link to='/courses/course/bhava-workshop/'><li>Corporate Workshop</li></Link>
+                <Link to='/highlights/corporate_workshop'><li>Corporate Workshop</li></Link>
                 <Link to="/courses/course/stress-management-camp/">
                   <li>Stress Management Camp</li>
                 </Link>
