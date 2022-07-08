@@ -37,8 +37,10 @@
   }
 
   .description {
+    margin-left: 0;
     p {
       margin-bottom: 2rem;
+      padding-left: 2rem;
     }
     width: 80%;
     margin: 5rem 0;
@@ -50,6 +52,7 @@
     .global-common-btn {
       min-width: fit-content;
       margin-top: 0;
+      margin-left: 2rem;
     }
   }
 }
@@ -132,6 +135,7 @@
     }
     .description {
       margin: 5rem auto;
+      margin-left: 0;
     }
   }
 }
