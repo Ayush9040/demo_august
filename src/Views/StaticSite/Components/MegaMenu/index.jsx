@@ -152,7 +152,37 @@ const MegaMenu = ({ setNav }) => {
         <ul className="navigation-ul">
           {navItems &&
             navItems.map((item, i) => {
-              if (item.name !== 'NISPAND') {
+           
+              if((item.key==='DONATION'||item.key==='GIFTING'||item.key==='ONLINE'||item.key==='SHOP')){
+                return(
+                 
+                  <div
+                    // style={{
+                    //   marginTop: '0',
+                    //   background:
+                    //         'linear-gradient(90deg,#fff,#BC4F31,#BC4F31,#fff)',
+
+                    // }}
+                    //className="bottom-line"
+                    onMouseOver={() => {
+                      setMenuItem(item.key)
+                    }}
+                    // onClick={() => {
+                    //   setNav(false)
+                    // }}
+                    // to={`${item.link}`}
+                    key={i}
+                    className='coming-soon'
+                  >
+                    <li  >
+                      {item.name}
+                      <div className='bottom-line' ></div>
+                    </li>
+                  </div>
+                  
+                )
+              }
+              else if (item.key !== 'NISPAND') {
                 return (
                   <Link
                     onMouseOver={() => {
@@ -163,22 +193,24 @@ const MegaMenu = ({ setNav }) => {
                     }}
                     to={`${item.link}`}
                     key={i}
-                    className={ (item.key==='DONATION'||item.key==='GIFTING'||item.key==='ONLINE'||item.key==='SHOP') ? 'coming-soon':'' }
+                    // className={ (item.key==='DONATION'||item.key==='GIFTING'||item.key==='ONLINE'||item.key==='SHOP') ? 'coming-soon':'' }
+
                   >
                     <li >
                       {item.name}
                       <div
-                        style={{
-                          marginTop: '0',
-                          background:
-                            'linear-gradient(90deg,#fff,#BC4F31,#BC4F31,#fff)',
-                        }}
+                        // style={{
+                        //   marginTop: '0',
+                        //   background:
+                        //     'linear-gradient(90deg,#fff,#BC4F31,#BC4F31,#fff)',
+                        // }}
                         className="bottom-line"
                       ></div>
                     </li>
                   </Link>
                 )
-              } else {
+              } 
+              else  {
                 return (
                   <a
                     href={item.link}
@@ -203,6 +235,7 @@ const MegaMenu = ({ setNav }) => {
                   </a>
                 )
               }
+              
             })}
         </ul>
       </div>

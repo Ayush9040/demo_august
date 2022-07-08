@@ -72,7 +72,7 @@ const SignUp = () => {
           <div className="form-field">
             <InputComponent
               type="text"
-              placeholder="Name"
+              placeholder="Enter Name"
               form={formData}
               setField={setFormData}
               keyName="firstName"
@@ -86,7 +86,7 @@ const SignUp = () => {
           <div className="form-field">
             <InputComponent
               type="email"
-              placeholder="Email Address"
+              placeholder="Enter Email Address"
               form={formData}
               setField={setFormData}
               keyName="email"
@@ -100,7 +100,7 @@ const SignUp = () => {
           <div className="form-field">
             <InputComponent
               type="password"
-              placeholder="Password"
+              placeholder="Enter Password"
               form={formData}
               setField={setFormData}
               keyName="password"
@@ -115,7 +115,7 @@ const SignUp = () => {
           <div className="form-field">
             <InputComponent
               type="password"
-              placeholder=" Confirm Password"
+              placeholder="Enter Confirm Password"
               form={formData}
               setField={setFormData}
               keyName="confirmPassword"
