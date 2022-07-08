@@ -121,7 +121,7 @@ const MegaMenu = ({ setNav }) => {
       // { menu: 'Police', link: '/donation/#police' },
     ],
     NEWS: [
-      { menu: 'Gallery', link: '/media/media-gallery' },
+      { menu: 'Gallery', link: '/image-gallery' },
       // { menu: 'News', link: '/media/news' },
       // { menu: 'Events', link: '/media/events' },
     ],
