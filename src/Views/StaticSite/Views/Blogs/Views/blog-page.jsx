@@ -8,11 +8,15 @@ import baseDomain, { homeAssets } from '../../../assets/images/imageAsset'
 import { Link } from 'react-router-dom'
 import { allBlogData } from '../../../utils/blogData'
 import InnerNavComponent from '../../../Components/InnerNavComponent'
+import { useEffect } from 'react'
 const BlogPage = () => {
+  useEffect(() => {
+    scrollTo(0, 0)
+  }, [])
   const viewBlog = {
     title: 'Blogs',
-    color: 'white',
-    menuColor: 'white',
+    color: 'orange',
+    menuColor: 'orange',
     menuItems: [],
   }
   console.log(allBlogData, '4')
