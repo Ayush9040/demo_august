@@ -221,7 +221,7 @@ export const mediaData = [
       `${baseDomain}${mediaAssets.mediaAssets92}`,
       `${baseDomain}${mediaAssets.mediaAssets93}`,
       `${baseDomain}${mediaAssets.mediaAssets94}`,
-      `${baseDomain}${mediaAssets.mediaAssets85}`,
+      `${baseDomain}${mediaAssets.mediaAssets95}`,
       `${baseDomain}${mediaAssets.mediaAssets96}`,
       `${baseDomain}${mediaAssets.mediaAssets97}`,
       `${baseDomain}${mediaAssets.mediaAssets98}`,

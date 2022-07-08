@@ -6,6 +6,8 @@ import './data'
 import Programs from './Programs'
 import CommonBtn from '../commonbtn'
 import { Link } from 'react-router-dom'
+import baseDomain from '../../assets/images/imageAsset'
+import { wellnessAssets } from '../../assets/images/imageAsset'
 
 const wellness = () => {
 
@@ -19,10 +21,12 @@ const wellness = () => {
         isLeftContent={false}
         Logo={false}
         Navigation={true}
-        PageType='gifting'
+        PageType='wellness'
         Heading='Yoga for corporate wellness'
         isOnlyBanner={false}
         innerNav={false}
+        bannerImg={`${baseDomain}${wellnessAssets.wellnessAssets1}`}
+        overlay='linear-gradient(90deg,#59758fd4,#495b8dd4)'
         description='Employees are the foundation of any business and the driving force behind its success.The Yoga Institute Corporate Wellness Programs are aimed to enhance and encourage a compre-
         hensive approach to employee well-being by fostering a healthy and happy workplace culture. We provide wellness solutions that go beyond traditional wellness programs to improve physical,
         mental, and emotional health, work/life balance, the ability to handle stress and challenges, team cooperation, focus, and productivity, and optimize human resource investments while boosting employee morale and engagement.Yoga practices, which include routine and discipline, help you to cultivate a conscious relationship
@@ -51,17 +55,17 @@ const wellness = () => {
         </p>
         <img
           className='para1-img'
-          src='https://img4.nbstatic.in/tr:w-500/6049a3ce79600c000c8c19f1.jpg'
+          src={`${baseDomain}${wellnessAssets.wellnessAssets3}`}
           alt=''
         />
       </div>
-      <div className='offering-para2'>
+      <div className='offering-para1'>
         <img
-          className='para2-img'
-          src='https://www.betterup.com/hs-fs/hubfs/Imported_Blog_Media/employee%20wellness%20-%20wheel%20showing%20the%20components%20of%20wellness-1.png?width=1999&height=1143&name=employee%20wellness%20-%20wheel%20showing%20the%20components%20of%20wellness-1.png'
+          className='para1-img'
+          src={`${baseDomain}${wellnessAssets.wellnessAssets2}`}
           alt=''
         />
-        <p className='para2'>
+        <p className='para1'>
           Encourage your staff to keep healthy and productive even if they work
           from home. When working remotely, many people find it difficult to
           strike a balance between work and personal life. Yoga is a great way

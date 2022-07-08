@@ -2,8 +2,12 @@ import React from 'react'
 import baseDomain, { homeAssets } from '../../assets/images/imageAsset'
 import InnerNavComponent from '../InnerNavComponent'
 import './style.scss'
+import { useEffect } from 'react'
 
 const CorporateWorkshop = () => {
+  useEffect (()=>{
+    scrollTo(0,0)
+  },[])
 
   const highlight = {
     title: 'Career',
