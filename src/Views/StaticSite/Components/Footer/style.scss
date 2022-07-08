@@ -258,9 +258,17 @@
     }
     .logo-content {
       grid-template-columns: 0px 200px !important;
+      p{
+        width: 100%;
+        margin-left: 3rem;
+      }
     }
     .contact {
       .menu {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        margin-left: 45px;
+    
         .carrier-list {
           margin: 0;
         }
@@ -269,6 +277,7 @@
     .heading-footer-container {
       display: grid;
       grid-template-columns: 50% 50%;
+      margin: auto;
       .footer-content {
         .footer-logo {
           svg {
