@@ -273,7 +273,7 @@ const MegaMenu = ({ setNav }) => {
                   500 Hour Courses TTC (Intermediate)
                 </li>
                 <Link onClick={() => {setNav(false)}}  to="/courses/course/3-months-500hr/">
-                  <li style={{ marginBottom: '2rem' }}>
+                  <li >
                     3 Months TTC-Online-English
                   </li>
                 </Link>
@@ -294,27 +294,27 @@ const MegaMenu = ({ setNav }) => {
                   <li>2 Years TTC-Online & On Campus-English</li>
                 </Link>
                 <Link onClick={() => {setNav(false)}}  to="/courses/course/certificate-yoga-therapy-course-online/">
-                  <li className="text-bold" style={{ marginBottom: '2rem' }}>
+                  <li className="text-bold" >
                     Certificate Yoga Therapy Course
                   </li>
                 </Link>
                 <Link onClick={() => {setNav(false)}}  to="/courses/course/certification-program-on-yoga-cancer-online/">
-                  <li className="text-bold" style={{ marginBottom: '2rem' }}>
+                  <li className="text-bold" >
                     Certificate Program on Yoga for Cancer
                   </li>
                 </Link>
                 <Link onClick={() => {setNav(false)}}  to="/courses/course/certification-program-on-yoga-for-lung-cancer-online/">
-                  <li className="text-bold" style={{ marginBottom: '2rem' }}>
+                  <li className="text-bold" >
                     Certificate Program on Yoga for Lung Cancer - Online
                   </li>
                 </Link>
                 <Link onClick={() => {setNav(false)}}  to="/courses/course/certification-course-on-advanced-pranayam/">
-                  <li className="text-bold" style={{ marginBottom: '2rem' }}>
+                  <li className="text-bold" >
                     Certificate Course on Advanced Pranayama Techniques
                   </li>
                 </Link>
                 <Link onClick={() => {setNav(false)}}  to="/courses/course/certification-course-on-yoga-sutra-online/">
-                  <li className="text-bold" style={{ marginBottom: '2rem' }}>
+                  <li className="text-bold" >
                     Certificate Course on Yoga Sutra-Online
                   </li>
                 </Link>
@@ -340,13 +340,13 @@ const MegaMenu = ({ setNav }) => {
                   <li>Batch 4 - 21-Days BLC-Morning-Online English</li>
                 </Link>
                 <Link onClick={() => {setNav(false)}}  to='/courses'>
-                  <h3 style={{ marginBottom: '2rem' }}>
+                  <h3 >
                   Samattvam (Health Checkup)
                   </h3>
                 </Link>
                 <Link onClick={() => {setNav(false)}}  to='/courses/course/satsang/'>
-                  <h3 style={{ marginBottom: '2rem' }}>Satsang</h3></Link>
-                <h3 style={{ marginBottom: '2rem' }}>REGULAR CLASSES</h3>
+                  <h3>Satsang</h3></Link>
+                <h3>REGULAR CLASSES</h3>
                 <ul>
                   <Link onClick={() => {setNav(false)}}  to="/courses/course/asana-regular-classes-men-on-campus/">
                     <li>Asana Regular Classes for Men - On Campus</li>
@@ -411,9 +411,9 @@ const MegaMenu = ({ setNav }) => {
                 <Link onClick={() => {setNav(false)}}  to='/courses/course/diet-workshop/'><li>Diet Workshop</li></Link>
               </ul>
               <Link onClick={() => {setNav(false)}}  to=''>
-                <h3 style={{ marginBottom: '2rem' }}>Corporate Workshop</h3></Link>
+                <h3 >Corporate Workshop</h3></Link>
               <Link onClick={() => {setNav(false)}}  to=''>
-                <h3 style={{ marginBottom: '2rem' }}>Home Tutions</h3></Link>
+                <h3>Home Tutions</h3></Link>
               <div
                 className="filler"
                 style={{ position: 'relative', marginTop: '3rem' }}
