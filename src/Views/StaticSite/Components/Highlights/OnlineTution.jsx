@@ -2,9 +2,13 @@ import React from 'react'
 import './style.scss'
 import { homeAssets } from '../../assets/images/imageAsset'
 import baseDomain from '../../assets/images/imageAsset'
+import { useEffect } from 'react'
 import InnerNavComponent from '../InnerNavComponent'
 
 const OnlineTution = () => {
+  useEffect(() => {
+    scrollTo(0, 0)
+  }, [])
   const highlight = {
     title: 'Career',
     color: 'orange',
@@ -13,7 +17,7 @@ const OnlineTution = () => {
   }
   return (
     <div className="highlight-sections">
-      <InnerNavComponent abc={highlight}/>
+      <InnerNavComponent abc={highlight} />
       <div className="main-container">
         <div className="highlight-info">
           <h1>Online Home Tuition</h1>

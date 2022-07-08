@@ -1,8 +1,12 @@
 import React from 'react'
 import baseDomain, { homeAssets } from '../../assets/images/imageAsset'
 import InnerNavComponent from '../InnerNavComponent'
+import { useEffect } from 'react'
 
 const SattvikCooking = () => {
+  useEffect(() => {
+    scrollTo(0, 0)
+  }, [])
   const highlight = {
     title: 'Career',
     color: 'orange',
@@ -11,7 +15,7 @@ const SattvikCooking = () => {
   }
   return (
     <div className="highlight-sections">
-      <InnerNavComponent abc={highlight}/>
+      <InnerNavComponent abc={highlight} />
       <div className="main-container">
         <div className="highlight-info">
           <h1>Sattvik Cooking</h1>
