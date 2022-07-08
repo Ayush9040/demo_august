@@ -9818,7 +9818,7 @@ const classes = {
     colorCode: '#D3A29D',
     timing: '1st Sunday of every month: 10:00 am - 12:30 pm (IST)',
     fees: {
-      onlineFee: 0,
+      onlineFee: 8000,
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'classes',
