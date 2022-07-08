@@ -10,15 +10,15 @@
     }
     .hamburger svg{
         cursor: pointer;
-        width: 40px;
-        height: 40px;
+        width: 35px;
+        height: 35px;
     }
     .title-logo{
         .header-logo{
             text-align: center;
         }
         img{
-            width: 60%;
+            width: 50%;
             margin: 0 auto;
             object-fit: contain!important;
         }
@@ -71,7 +71,7 @@
         padding: 1rem;
         width: fit-content;
         content: 'Coming Soon';
-        background: #00000080;
+        // background: #00000080;
         color: #fff;
     }
   }
@@ -95,5 +95,13 @@
                 height: 30px;
             }
         }
+        .title-logo{
+            .header-logo{
+                img{
+                    width: 80%;
+                }
+            }
+            }
+           
     }
 }

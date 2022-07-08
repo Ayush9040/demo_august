@@ -68,7 +68,7 @@ const SignIn = () => {
           <InputComponent
             icon={mail}
             type="text"
-            placeholder="Email"
+            placeholder="Enter Email"
             form={formData}
             setField={setFormData}
             keyName="email"
@@ -76,7 +76,7 @@ const SignIn = () => {
           <InputComponent
             icon={lock}
             type="password"
-            placeholder="Password"
+            placeholder="Enter Password"
             form={formData}
             setField={setFormData}
             keyName="password"

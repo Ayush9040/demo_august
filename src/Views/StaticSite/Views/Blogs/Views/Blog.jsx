@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 
 import { useParams } from 'react-router-dom'
-import CommonBannerNav from '../../../Components/CommonBannerNav'
+//import CommonBannerNav from '../../../Components/CommonBannerNav'
 import './style.scss'
 import Heading from '../../../Components/Heading'
 import BlogGallery from '../../../Components/BlogComponents/BlogGallery'
@@ -12,6 +12,7 @@ import BlogBullets from '../../../Components/BlogComponents/BlogBullets'
 import BlogSubHeaing from '../../../Components/BlogComponents/BlogSubHeading'
 import BlogVideo from '../../../Components/BlogComponents/BlogVideo'
 import BlogLink from '../../../Components/BlogComponents/BlogLink'
+import InnerNavComponent from '../../../Components/InnerNavComponent'
 
 const BlogAnother = () => {
   const { blogId } = useParams()
@@ -50,12 +51,18 @@ const BlogAnother = () => {
       return null
     }
   }
+  const viewBlog = {
+    title: 'Blogs',
+    color: 'white',
+    menuColor: 'white',
+    menuItems: [],
+  }
 
   return (
     <>
       <div className='blog-page-container'>
         
-        <CommonBannerNav />
+        <InnerNavComponent abc={viewBlog}/>
         <Heading largeText={'Blog'} />
         <div className='blog-series'>
           <div className='alumni-content' id='seminar'>

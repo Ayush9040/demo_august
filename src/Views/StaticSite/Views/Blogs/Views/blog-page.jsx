@@ -1,17 +1,29 @@
 import React from 'react'
 import Heading from '../../../Components/Heading'
-import { share } from '../../../assets/icons/icon'
+//import { share } from '../../../assets/icons/icon'
 import './style.scss'
 import SeminarCard from '../../../Components/SeminarCard'
 import baseDomain, { homeAssets } from '../../../assets/images/imageAsset'
-import CommonBannerNavPrimary from '../../../Components/CommonBannerNavPrimary'
+//import CommonBannerNavPrimary from '../../../Components/CommonBannerNavPrimary'
 import { Link } from 'react-router-dom'
 import { allBlogData } from '../../../utils/blogData'
+import InnerNavComponent from '../../../Components/InnerNavComponent'
+import { useEffect } from 'react'
 const BlogPage = () => {
+  useEffect(() => {
+    scrollTo(0, 0)
+  }, [])
+  const viewBlog = {
+    title: 'Blogs',
+    color: 'orange',
+    menuColor: 'orange',
+    menuItems: [],
+  }
   console.log(allBlogData, '4')
   return (
     <div className="main-blog">
-      <CommonBannerNavPrimary innerNav={false} />
+      {/* <CommonBannerNavPrimary innerNav={false} /> */}
+      <InnerNavComponent abc={viewBlog}/>
       <div className="blog-heading">
         
         <Heading largeText={'Blog'} />
@@ -29,7 +41,7 @@ const BlogPage = () => {
               <Link to={`/blogs/blog/${allBlogData[0].id}`}>
                 <button>Read Story</button>
               </Link>
-              <div className="share-icon">{share}</div>
+              {/* <div className="share-icon">{share}</div> */}
             </div>
           </div>
           <div className="newsletter-image">

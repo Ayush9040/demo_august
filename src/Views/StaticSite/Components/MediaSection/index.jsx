@@ -1,7 +1,7 @@
 import React from 'react'
 import SeminarCard from '../SeminarCard'
 import './style.scss'
-import { share } from '../../assets/icons/icon'
+//import { share } from '../../assets/icons/icon'
 import baseDomain, {
   mediaAssets,
   alumniAssets,
@@ -31,8 +31,8 @@ const MediaSection = ({
       >
         <div className="newsletter-content">
           <h2>
-            <span className="newsletter-title">{title ? title : 'Title'}</span>
-            <span className="newsletter-date">01/01/2022</span>
+            <div className="newsletter-title">{title ? title : 'Title'}</div>
+            <div className="newsletter-date">01/01/2022</div>
           </h2>
           <p>
             {description
@@ -44,7 +44,7 @@ const MediaSection = ({
               setViewCarousel && setViewCarousel(itemId)
               setModalData && setModalData(itemImages?.map(number=>({ src:number })))
             }} >View Album</button>
-            <div className="share-icon">{share}</div>
+            {/* <div className="share-icon">{share}</div> */}
           </div>
         </div>
         <div className="newsletter-image">

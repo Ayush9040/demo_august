@@ -33,7 +33,7 @@ const Enrollment = () => {
   // var today = new Date()
 
   const [empty, setEmpty] = useState(0)
-  const [ courseFee,setCourseFee ]=useState(1000)
+  const [ courseFee,setCourseFee ]=useState(null)
   const [bold, setBold] = useState(0)
   const [yearEmpty, setYearEmpty] = useState(0)
   const [resgin, setResgin] = useState(0)

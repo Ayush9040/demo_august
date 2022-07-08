@@ -62,7 +62,7 @@ const CourseDetails = ({
                   {currentCourse?.title}&nbsp;
                   {courseDate ? courseDate : ''}
                 </div>
-                <p className="current_fees"> ₹ {courseFee}</p>
+                { courseFee &&  <p className="current_fees"> ₹ {courseFee}</p>}
               </div>
             </div>
           </div>
