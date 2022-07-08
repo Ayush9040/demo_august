@@ -115,7 +115,7 @@ const DisclaimerPolicy = ({
         data:{
           user: formData.name
         },
-        receivers: [formData.email,'shrey@nexgsolution.com']
+        receivers: [formData.email,'shrey@nexgsolution.com','info@theyogainstitute.org']
       }
       try{
         let response
