@@ -28,7 +28,7 @@ const NewsLetter = () => {
   }
 
   return (
-    <div className="newsletter-container global-padding">
+    <div className="newsletter-container global-padding" id='Newsletter'>
       <div className="magezines">
         <div className="images">
           <div className="image">
