@@ -31,7 +31,8 @@ app.get('*', (req, res) => {
   const $ = cheerio.load(indexHtml)
   if (reqPath.endsWith('/') && !(reqPath.length === 1 && reqPath === '/')) correctPath = reqPath.slice(0, -1)
   const metaData = metaDataObj[correctPath] || []
-  $('head').append(metaData)
+  const metaArray = metaData.map((meta) => `<meta property="${meta.property || ''}" content="${String(meta.content) || ''}" data-react-helmet="true" />`)
+  $('head').append(metaArray)
   res.status(200).send($.html())
 })
 

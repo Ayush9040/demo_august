@@ -1,5 +1,10 @@
 {
-  "/": [
-    "<meta property=\"description\" content=\"Yoga and Total Health is a monthly journal on Yoga way of life and containing news, sattvic recipes and other interesting articles by sadhakas etc.\" />"
-  ]
+  "/": [{
+    "property": "description",
+    "content": "Yoga and Total Health is a monthly journal on Yoga way of life and containing news, sattvic recipes and other interesting articles by sadhakas etc."
+  }],
+  "/courses": [{
+    "property": "description",
+    "content": "courses Desc here"
+  }]
 }
