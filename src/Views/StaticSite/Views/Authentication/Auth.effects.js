@@ -10,7 +10,6 @@ export function* handleLoginUserEffect({ payload, navigator }) {
   try {
     const { data } = yield call(loginUserAPI, payload)
     if(!data.accessToken || !data.refreshToken) {
-      console.log('Dispatch Error')
       return 
     }
     setLocal('authToken', data.accessToken)

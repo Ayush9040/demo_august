@@ -18,8 +18,6 @@ const MediaGallery = () => {
   const disableCarousel = () => {
     setViewCarousel(false)
   }
-  console.log(viewCarousel,'abc')
-  console.log(modalData,'xyz')
   // const images = harmonyImagesData.map((number) => ({
   //   src: number,
   // }))
@@ -30,7 +28,7 @@ const MediaGallery = () => {
     menuItems: [
       {
         innerTitle: 'gallery',
-        url: '/media/media-gallery',
+        url: '/image-gallery',
         name: 'Gallery',
       },
       // {

@@ -61,11 +61,8 @@ const EditAccount = () => {
     } else if (formData.alumni === '') {
       return setEmpty(12)
     }
-    console.log('form submitted ')
     setEmpty(0)
   }
-
-  console.log(formData.gender)
 
   return (
     <>

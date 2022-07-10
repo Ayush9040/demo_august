@@ -10,7 +10,7 @@ const News = () => {
     menuItems: [
       {
         innerTitle: 'gallery',
-        url: '/media/media-gallery',
+        url: '/image-gallery',
         name: 'Gallery',
       },
       // {

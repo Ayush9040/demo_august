@@ -11,7 +11,7 @@ const library = () => {
     menuItems:[
       {
         innerTitle:'yoga-health',
-        url:'/publication/yoga-health',
+        url:'/yoga-and-total-health',
         name:'Yoga and Total Health'
       },
       {

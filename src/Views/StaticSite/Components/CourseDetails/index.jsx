@@ -26,7 +26,6 @@ const CourseDetails = ({ pageDate }) => {
   const { isLoggedIn } = useSelector(state=>state.auth)
   
 
-  console.log(pageDate, 'pageData')
   const [selectDate, setSetselectDate] = useState()
   // localStorage.setItem('selectedDate',selectDate)
   useEffect(() => {

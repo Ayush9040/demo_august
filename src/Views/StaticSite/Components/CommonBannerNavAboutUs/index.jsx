@@ -31,19 +31,19 @@ const CommonBannerNavAboutUs = ({ innerNav }) => {
                     Overview
                   </li>
                 </Link>
-                <Link to="/about/our-legacy">
+                <Link to="/our-legacy">
                   <li
                     className={`${
-                      currentPathname === '/about/our-legacy' && 'nav-active'
+                      currentPathname === '/our-legacy' && 'nav-active'
                     }`}
                   >
                     Our Legacy
                   </li>
                 </Link>
-                <Link to="/about/blessings">
+                <Link to="/blessings">
                   <li
                     className={`${
-                      currentPathname === '/about/blessings' && 'nav-active'
+                      currentPathname === '/blessings' && 'nav-active'
                     }`}
                   >
                     {' '}
@@ -67,19 +67,19 @@ const CommonBannerNavAboutUs = ({ innerNav }) => {
                   Overview
                 </li>
               </Link>
-              <Link to="/about/our-legacy">
+              <Link to="/our-legacy">
                 <li
                   className={`${
-                    currentPathname === '/about/our-legacy' && 'nav-active'
+                    currentPathname === '/our-legacy' && 'nav-active'
                   }`}
                 >
                   Our Legacy
                 </li>
               </Link>
-              <Link to="/about/blessings">
+              <Link to="/blessings">
                 <li
                   className={`${
-                    currentPathname === '/about/blessings' && 'nav-active'
+                    currentPathname === '/blessings' && 'nav-active'
                   }`}
                   style={{ border: 'none' }}
                 >

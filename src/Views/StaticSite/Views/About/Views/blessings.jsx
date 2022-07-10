@@ -1,13 +1,11 @@
 import React from 'react'
 import CommonBannerAboutUs from '../../../Components/CommonBannerAboutUs'
-import Tyi from '../../../assets/images/why_tyi.png'
 import baseDomain, { aboutAssets } from '../../../assets/images/imageAsset'
 import InnerNavComponent from '../../../Components/InnerNavComponent'
 
 
 
 const Blessings = ({ location }) => {
-  console.log('tyi', Tyi)
   const AboutBlessings = {
     title: 'blessings',
     color: 'white',
@@ -20,12 +18,12 @@ const Blessings = ({ location }) => {
       },
       {
         innerTitle: 'our-legacy',
-        url: '/about/our-legacy',
+        url: '/our-legacy',
         name: 'Our Legacy',
       },
       {
         innerTitle: 'blessings',
-        url: '/about/blessings',
+        url: '/blessings',
         name: 'Pujya Maa Dr Hansaji’s blessings',
       },
     ],

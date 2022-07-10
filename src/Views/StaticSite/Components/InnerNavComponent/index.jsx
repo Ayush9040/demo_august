@@ -113,7 +113,7 @@ const InnerNavComponent = ({ abc }) => {
         >
           {abc.title === 'gallery' && (
             <ul id="gallery-toggle">
-              <Link to="/media/media-gallery">
+              <Link to="/image-gallery">
                 <li style={bold === 0 ? { fontWeight: 'bold' } : {}}>Images</li>
               </Link>
               <Link to="/media/video-gallery">

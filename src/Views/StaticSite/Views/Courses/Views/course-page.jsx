@@ -28,13 +28,6 @@ const Courses = () => {
     menuColor: 'orange',
     menuItems: [],
   }
-  //let hourCourse = [...course200H,...course900H]
-  console.log(c200hr,'200')
-  console.log(c500hr,'500')
-  console.log(c900hr,'900')
-  console.log(campsArr,'camps')
-  console.log(classesArr,'classes')
-  console.log(AllCourses,'all')
 
   let data = [[c200hr[0],c500hr[0],c900hr[0]], campsArr,classesArr, AllCourses]
 

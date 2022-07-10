@@ -1,3 +1,4 @@
+import { Suspense } from 'react'
 import {
   Routes,
   Route,
@@ -7,11 +8,13 @@ import { MainRoutes } from './Constants/routes'
 
 const App = () => {
   return (
-    <Routes>
-      {MainRoutes.map(({ Component, path }) => {
-        return <Route element={<Component />} path={path} key={path} />
-      })}
-    </Routes>
+    <Suspense fallback={<div>Loading...</div>}>
+      <Routes>
+        {MainRoutes.map(({ Component, path }) => {
+          return <Route element={<Component />} path={path} key={path} />
+        })}
+      </Routes>
+    </Suspense>
   )
 }
 

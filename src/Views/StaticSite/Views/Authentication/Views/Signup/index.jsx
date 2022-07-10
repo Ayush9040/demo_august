@@ -27,11 +27,8 @@ const SignUp = () => {
 
   const createUserSignIn = async(data) => {
     const authServerClientId = 'dev-tyi-lms-ecom'
-    const res = await axios.post(`https://www.authserver-staging-be.theyogainstituteonline.org/v1/user/register?clientId=${authServerClientId}`, data)
-    console.log(res.data)
+    await axios.post(`https://www.authserver-staging-be.theyogainstituteonline.org/v1/user/register?clientId=${authServerClientId}`, data)
   }
-
-  console.log(formData)
 
   const handleSubmit = async(e) => {
     if (formData.name === '') {

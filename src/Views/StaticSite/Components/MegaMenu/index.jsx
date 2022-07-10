@@ -15,21 +15,21 @@ const MegaMenu = ({ setNav }) => {
     },
     { name: 'COURSES', link: '/courses', id: 2, key: 'COURSES' },
     { name: 'FACILITIES', link: '/facilities', id: 3, key: 'FACILITIES' },
-    { name: 'MUSEUM', link: '/museum', id: 4, key: 'MUSEUM' },
+    { name: 'MUSEUM', link: '/museum-of-classical-yoga', id: 4, key: 'MUSEUM' },
     { name: 'DONATE', link: '', id: 5, key: 'DONATION' },
     { name: 'GIFTING', link: '', id: 6, key: 'GIFTING' },
     { name: 'NISPAND', link: 'https://nispand.com/', id: 7, key: 'NISPAND' },
     { name: 'TYI ONLINE', link: '', id: 8, key: 'ONLINE' },
     {
       name: 'PUBLICATIONS',
-      link: '/publication/yoga-health',
+      link: '/yoga-and-total-health',
       id: 9,
       key: 'PUBLICATIONS',
     },
     { name: 'SHOP', link: '/', id: 10, key: 'SHOP' },
     {
       name: 'NEWS, EVENTS & MEDIA',
-      link: '/media/media-gallery',
+      link: '/image-gallery',
       id: 11,
       key: 'NEWS',
     },
@@ -250,70 +250,70 @@ const MegaMenu = ({ setNav }) => {
               <h3>TEACHERS TRAINING</h3>
               <ul>
                 <li className="text-bold">200 Hour TTC (Basic)</li>
-                <Link onClick={() => {setNav(false)}} to="/courses/course/batch-1-200hr/">
+                <Link onClick={() => {setNav(false)}} to="/batch-1-200hr/">
                   <li>Batch 1 - 1 Month TTC-Online & on Campus-English</li>
                 </Link>
-                <Link onClick={() => {setNav(false)}} to="/courses/course/batch-2-200hr/">
+                <Link onClick={() => {setNav(false)}} to="/batch-2-200hr/">
                   <li>Batch 2 - 2 Months TTC-On Campus-English</li>
                 </Link>
-                <Link  onClick={() => {setNav(false)}} to="/courses/course/batch-3-200hr/">
+                <Link  onClick={() => {setNav(false)}} to="/batch-3-200hr/">
                   <li>Batch 3 - 2 Months TTC-Online-English</li>
                 </Link>
-                <Link  onClick={() => {setNav(false)}} to="/courses/course/batch-4-200hr/">
+                <Link  onClick={() => {setNav(false)}} to="/batch-4-200hr/">
                   <li>Batch 4 - 2 Months TTC-Online-Hindi</li>
                 </Link>
-                <Link  onClick={() => {setNav(false)}} to="/courses/course/batch-5-200hr/">
+                <Link  onClick={() => {setNav(false)}} to="/batch-5-200hr/">
                   <li>Batch 5 - 2 Months TTC-Online-English</li>
                 </Link>
-                <Link  onClick={() => {setNav(false)}} to="/courses/course/batch-6-200hr/">
+                <Link  onClick={() => {setNav(false)}} to="/batch-6-200hr/">
                   <li>Batch 6 - 3 Months Weekend TTC-Online-English</li>
                 </Link>
 
                 <li className="text-bold">
                   500 Hour Courses TTC (Intermediate)
                 </li>
-                <Link onClick={() => {setNav(false)}}  to="/courses/course/3-months-500hr/">
+                <Link onClick={() => {setNav(false)}}  to="/3-months-500hr/">
                   <li >
                     3 Months TTC-Online-English
                   </li>
                 </Link>
                 <li className="text-bold">900 Hour Courses</li>
-                <Link onClick={() => {setNav(false)}}  to="/courses/course/3-months-ttc/">
+                <Link onClick={() => {setNav(false)}}  to="/3-months-ttc/">
                   <li>3 Months TTC-On Campus-English</li>
                 </Link>
-                <Link onClick={() => {setNav(false)}}  to="/courses/course/4-months-900hr/">
+                <Link onClick={() => {setNav(false)}}  to="/4-months-900hr/">
                   <li>4 Months TTC-Online-English</li>
                 </Link>
-                <Link onClick={() => {setNav(false)}}  to="/courses/course/7-months-900hr/">
+                <Link onClick={() => {setNav(false)}}  to="/7-months-900hr/">
                   <li>7 Months TTC-Online & On Campus-English</li>
                 </Link>
-                <Link onClick={() => {setNav(false)}}  to="/courses/course/1-year-900hr/">
+                <Link onClick={() => {setNav(false)}}  to="/1-year-900hr/">
                   <li>1 Year TTC-Online & On Campus-Hindi</li>
                 </Link>
-                <Link onClick={() => {setNav(false)}}  to="/courses/course/2-year-900hr/">
+                <Link onClick={() => {setNav(false)}}  to="/2-year-900hr/">
                   <li>2 Years TTC-Online & On Campus-English</li>
                 </Link>
-                <Link onClick={() => {setNav(false)}}  to="/courses/course/certificate-yoga-therapy-course-online/">
+                <Link onClick={() => {setNav(false)}}  to="/certificate-yoga-therapy-course-online/">
                   <li className="text-bold" >
                     Certificate Yoga Therapy Course
                   </li>
                 </Link>
-                <Link onClick={() => {setNav(false)}}  to="/courses/course/certification-program-on-yoga-cancer-online/">
+                <Link onClick={() => {setNav(false)}}  to="/certification-program-on-yoga-cancer-online/">
                   <li className="text-bold" >
                     Certificate Program on Yoga for Cancer
                   </li>
                 </Link>
-                <Link onClick={() => {setNav(false)}}  to="/courses/course/certification-program-on-yoga-for-lung-cancer-online/">
+                <Link onClick={() => {setNav(false)}}  to="/certification-program-on-yoga-for-lung-cancer-online/">
                   <li className="text-bold" >
                     Certificate Program on Yoga for Lung Cancer - Online
                   </li>
                 </Link>
-                <Link onClick={() => {setNav(false)}}  to="/courses/course/certification-course-on-advanced-pranayam/">
+                <Link onClick={() => {setNav(false)}}  to="/certification-course-on-advanced-pranayam/">
                   <li className="text-bold" >
                     Certificate Course on Advanced Pranayama Techniques
                   </li>
                 </Link>
-                <Link onClick={() => {setNav(false)}}  to="/courses/course/certification-course-on-yoga-sutra-online/">
+                <Link onClick={() => {setNav(false)}}  to="/certification-course-on-yoga-sutra-online/">
                   <li className="text-bold" >
                     Certificate Course on Yoga Sutra-Online
                   </li>
@@ -323,20 +323,20 @@ const MegaMenu = ({ setNav }) => {
             <div className="single-menu">
               <h3>21 DAYS BETTER LIVING COURSE</h3>
               <ul>
-                <Link onClick={() => {setNav(false)}}  to="/courses/course/batch1-21days-morning-oncampus/">
+                <Link onClick={() => {setNav(false)}}  to="/batch1-21days-morning-oncampus/">
                   <li>Batch 1 - 21-Days BLC - Morning On Campus-English</li>
                 </Link>
-                <Link onClick={() => {setNav(false)}}  to="/courses/course/21-days-blc-batch2/">
+                <Link onClick={() => {setNav(false)}}  to="/21-days-blc-batch2/">
                   <li>
                     Batch 2 - 21-Days BLC - Evening Online & On Campus-English
                   </li>
                 </Link>
-                <Link onClick={() => {setNav(false)}}  to="/courses/course/21-days-blc-batch3/">
+                <Link onClick={() => {setNav(false)}}  to="/21-days-blc-batch3/">
                   <li>
                     Batch 3 - 21-Days BLC - Evening Online & On Campus-Hindi
                   </li>
                 </Link>
-                <Link onClick={() => {setNav(false)}}  to="/courses/course/21-days-blc-batch4/">
+                <Link onClick={() => {setNav(false)}}  to="/21-days-blc-batch4/">
                   <li>Batch 4 - 21-Days BLC-Morning-Online English</li>
                 </Link>
                 <Link onClick={() => {setNav(false)}}  to='/courses'>
@@ -344,44 +344,44 @@ const MegaMenu = ({ setNav }) => {
                   Samattvam (Health Checkup)
                   </h3>
                 </Link>
-                <Link onClick={() => {setNav(false)}}  to='/courses/course/satsang/'>
+                <Link onClick={() => {setNav(false)}}  to='/satsang/'>
                   <h3>Satsang</h3></Link>
                 <h3>REGULAR CLASSES</h3>
                 <ul>
-                  <Link onClick={() => {setNav(false)}}  to="/courses/course/asana-regular-classes-men-on-campus/">
+                  <Link onClick={() => {setNav(false)}}  to="/asana-regular-classes-men-on-campus/">
                     <li>Asana Regular Classes for Men - On Campus</li>
                   </Link>
-                  <Link onClick={() => {setNav(false)}}  to="/courses/course/asana-regular-classes-for-women/">
+                  <Link onClick={() => {setNav(false)}}  to="/asana-regular-classes-for-women/">
                     <li>Asana Regular Classes for Women - On Campus</li>
                   </Link>
-                  <Link onClick={() => {setNav(false)}}  to="/courses/course/asana-regular-classes-men-women/">
+                  <Link onClick={() => {setNav(false)}}  to="/asana-regular-classes-men-women/">
                     <li>Weekend Asana Classes (Men & Women) - On Campus</li>
                   </Link>
-                  <Link onClick={() => {setNav(false)}}  to="/courses/course/asana-regular-classes-men-women/">
+                  <Link onClick={() => {setNav(false)}}  to="/asana-regular-classes-men-women/">
                     <li>Weekend Asana Classes (Men & Women) - Online</li>
                   </Link>
-                  <Link onClick={() => {setNav(false)}}  to="/courses/course/children's-regular-class-oncampus/">
+                  <Link onClick={() => {setNav(false)}}  to="/children's-regular-class-oncampus/">
                     <li>Children&apos;s Regular Clasees - On Campus</li>
                   </Link>
-                  <Link onClick={() => {setNav(false)}}  to="/courses/course/children's-weekend-class-oncampus/">
+                  <Link onClick={() => {setNav(false)}}  to="/children's-weekend-class-oncampus/">
                     <li>Children&apos;s Weekend Clasees - On Campus</li>
                   </Link>
-                  <Link onClick={() => {setNav(false)}}  to="/courses/course/advance-asana-regular-class/">
+                  <Link onClick={() => {setNav(false)}}  to="/advance-asana-regular-class/">
                     <li>
                       Advanced Asana Regular Class - Online (Only for TYI
                       Teachers)
                     </li>
                   </Link>
-                  <Link onClick={() => {setNav(false)}}  to="/courses/course/yog-prayas-online/">
+                  <Link onClick={() => {setNav(false)}}  to="/yog-prayas-online/">
                     <li>Yog Prayas-Online</li>
                   </Link>
-                  <Link onClick={() => {setNav(false)}}  to="/courses/course/meditation-foundation-course-online/">
+                  <Link onClick={() => {setNav(false)}}  to="/meditation-foundation-course-online/">
                     <li>Meditation Foundation Course-Online</li>
                   </Link>
-                  <Link onClick={() => {setNav(false)}}  to="/courses/course/regular-meditation-classes-online/">
+                  <Link onClick={() => {setNav(false)}}  to="/regular-meditation-classes-online/">
                     <li>Regular Meditation Classes-Online</li>
                   </Link>
-                  <Link onClick={() => {setNav(false)}}  to="/courses/course/anand-sadhna/">
+                  <Link onClick={() => {setNav(false)}}  to="/anand-sadhna/">
                     <li>Anand Sadhna-Online & On Campus</li>
                   </Link>
                   <Link onClick={() => {setNav(false)}}  to="">
@@ -393,22 +393,22 @@ const MegaMenu = ({ setNav }) => {
             <div className="single-menu">
               <h3>7 DAYS HEALTH CAMP</h3>
               <ul>
-                <Link onClick={() => {setNav(false)}}  to='/courses/course/7-days-heath-camp-on-campus-english/'><li>7 Days Health Camp - On Campus - English</li></Link>
-                <Link onClick={() => {setNav(false)}}  to='/courses/course/7-days-heath-camp-on-campus/'><li>7 Days Health Camp - On Campus - Hindi</li></Link>
+                <Link onClick={() => {setNav(false)}}  to='/7-days-heath-camp-on-campus-english/'><li>7 Days Health Camp - On Campus - English</li></Link>
+                <Link onClick={() => {setNav(false)}}  to='/7-days-heath-camp-on-campus/'><li>7 Days Health Camp - On Campus - Hindi</li></Link>
               </ul>
               <h3>CAMPS & WORKSHOPS</h3>
               <ul>
-                <Link onClick={() => {setNav(false)}}  to='/courses/course/stress-management-camp/'><li>Stress Management Camp</li></Link>
-                <Link onClick={() => {setNav(false)}}  to='/courses/course/weight-management-workshop/'><li>Weight Management Workshop</li></Link>
-                <Link onClick={() => {setNav(false)}}  to='/courses/course/pregnancy-camp-for-ante-post-natal/'><li>Pregnancy Camp For Ante & Post Natal</li></Link>
-                <Link onClick={() => {setNav(false)}}  to='/courses/course/cardiac-hypertension-workshop/'><li>Cardiac & Hypertension Workshop</li></Link>
-                <Link onClick={() => {setNav(false)}}  to='/courses/course/back-joint-disorder-workshop/'><li>Back & Joint Disorder Workshop</li></Link>
-                <Link onClick={() => {setNav(false)}}  to='/courses/course/pranayama-workshop/'><li>Prayanama Workshop</li></Link>
-                <Link onClick={() => {setNav(false)}}  to='/courses/course/womens-camp/'><li>Women&apos;s Camp</li></Link>
-                <Link onClick={() => {setNav(false)}}  to='/courses/course/respiratory-workshop/'><li>Respiratory Workshop</li></Link>
-                <Link onClick={() => {setNav(false)}}  to='/courses/course/life-management-camp/'><li>Life Management Camp</li></Link>
-                <Link onClick={() => {setNav(false)}}  to='/courses/course/senior-citizen-workshop/'><li>Senior citizen Workshop</li></Link>
-                <Link onClick={() => {setNav(false)}}  to='/courses/course/diet-workshop/'><li>Diet Workshop</li></Link>
+                <Link onClick={() => {setNav(false)}}  to='/stress-management-camp/'><li>Stress Management Camp</li></Link>
+                <Link onClick={() => {setNav(false)}}  to='/weight-management-workshop/'><li>Weight Management Workshop</li></Link>
+                <Link onClick={() => {setNav(false)}}  to='/pregnancy-camp-for-ante-post-natal/'><li>Pregnancy Camp For Ante & Post Natal</li></Link>
+                <Link onClick={() => {setNav(false)}}  to='/cardiac-hypertension-workshop/'><li>Cardiac & Hypertension Workshop</li></Link>
+                <Link onClick={() => {setNav(false)}}  to='/back-joint-disorder-workshop/'><li>Back & Joint Disorder Workshop</li></Link>
+                <Link onClick={() => {setNav(false)}}  to='/pranayama-workshop/'><li>Prayanama Workshop</li></Link>
+                <Link onClick={() => {setNav(false)}}  to='/womens-camp/'><li>Women&apos;s Camp</li></Link>
+                <Link onClick={() => {setNav(false)}}  to='/respiratory-workshop/'><li>Respiratory Workshop</li></Link>
+                <Link onClick={() => {setNav(false)}}  to='/life-management-camp/'><li>Life Management Camp</li></Link>
+                <Link onClick={() => {setNav(false)}}  to='/senior-citizen-workshop/'><li>Senior citizen Workshop</li></Link>
+                <Link onClick={() => {setNav(false)}}  to='/diet-workshop/'><li>Diet Workshop</li></Link>
               </ul>
               <Link onClick={() => {setNav(false)}}  to=''>
                 <h3 >Corporate Workshop</h3></Link>

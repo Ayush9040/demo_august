@@ -145,7 +145,7 @@ const CommonBannerLegacy = ({
       img: l5,
     },
   ]
-  const str = founderData[2].desc[1].length
+  // const str = founderData[2].desc[1].length
 
   function truncateString(str, totalTextLength) {
     return str?.length > totalTextLength
@@ -153,9 +153,6 @@ const CommonBannerLegacy = ({
       : str
   }
 
-  console.log(str)
-
-  console.log(founderData[2].desc[1].length, 'abcd')
   return (
     <>
       <div className="about-us-container">
@@ -209,7 +206,7 @@ const CommonBannerLegacy = ({
                 </div>
 
                 <Link
-                  to={'/about/our-legacy/' + founderData[activeFounder].route}
+                  to={'/our-legacy/' + founderData[activeFounder].route}
                 >
                   <div className="legacy_read_button">
                     <CommonBtn text={'Read More'} />

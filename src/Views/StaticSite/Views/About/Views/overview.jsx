@@ -21,12 +21,12 @@ const AboutUs = () => {
       },
       {
         innerTitle: 'our-legacy',
-        url: '/about/our-legacy',
+        url: '/our-legacy',
         name: 'Our Legacy',
       },
       {
         innerTitle: 'blessings',
-        url: '/about/blessings',
+        url: '/blessings',
         name: 'Pujya Maa Dr Hansaji’s blessings',
       },
     ],

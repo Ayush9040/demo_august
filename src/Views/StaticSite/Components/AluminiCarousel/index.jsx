@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 //import AlumniGrid from '../AlumniGrid'
 import { data } from './data'
 import Slider from 'react-slick'
@@ -9,7 +9,7 @@ import CommonBtn from '../commonbtn'
 import { Link } from 'react-router-dom'
 
 const AlumniCarousel = () => {
-  const [alumImgs, setAlumImgs] = useState(data[0].img)
+  // const [alumImgs, setAlumImgs] = useState(data[0].img)
 
   let settings = {
     dots: true,
@@ -21,11 +21,10 @@ const AlumniCarousel = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     centerPadding: '70px',
-    beforeChange: (oldIndex, index) => {
-      setAlumImgs(data.find((item) => item.id === index).img)
-    },
+    // beforeChange: (oldIndex, index) => {
+    //   setAlumImgs(data.find((item) => item.id === index).img)
+    // },
   }
-  console.log(alumImgs)
   return (
     <div className="alumni-main-div">
       <div className="alumini-carousel-heading">Alumni</div>

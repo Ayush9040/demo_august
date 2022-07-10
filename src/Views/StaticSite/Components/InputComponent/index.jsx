@@ -14,9 +14,6 @@ const InputComponent = ({
   errorCheck,
   blocked=false
 }) => {
-
-  //const [changeType,setChangeType]=useState(type)
-  console.log(keyName,'keyname')
   return (
     <div className="form-content">
       <form>

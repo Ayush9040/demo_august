@@ -104,8 +104,8 @@ const CourseCard = ({
           <Link
             to={
               selectDate === null
-                ? `/courses/course/${path}/`
-                : `/courses/course/${path}/?date=${selectDate}`
+                ? `/${path}/`
+                : `/${path}/?date=${selectDate}`
             }
           >
             <CommonBtn text={'View Details'} />

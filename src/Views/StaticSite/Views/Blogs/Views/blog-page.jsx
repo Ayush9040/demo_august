@@ -19,7 +19,6 @@ const BlogPage = () => {
     menuColor: 'orange',
     menuItems: [],
   }
-  console.log(allBlogData, '4')
   return (
     <div className="main-blog">
       {/* <CommonBannerNavPrimary innerNav={false} /> */}

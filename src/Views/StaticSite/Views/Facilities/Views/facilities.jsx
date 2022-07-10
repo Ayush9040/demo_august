@@ -44,8 +44,6 @@ const Facilities = () => {
 
   const slider = useRef(null)
   const route = useLocation()
-  console.log(route)
-  console.log(slider.current, 'current')
   useEffect(() => {
     if (route.hash === '#information') {
       document

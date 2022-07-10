@@ -13,7 +13,7 @@ export const activityData = [
     description:
       'Special year-long classes for couples to help them understand each other, how to live as a team, and support each other better.',
     image: `${baseDomain}${homeAssets.homeAsset13}`,
-    url: '/courses/course/couples-classes-online/',
+    url: '/couples-classes-online/',
   },
   {
     title: 'Full Moon Meditation',
@@ -34,7 +34,7 @@ export const activityData = [
     description:
       'This is a health counseling program with a team of doctors and experts to support and guide you on your health concerns and help you with yogic solutions.',
     image: `${baseDomain}${homeAssets.homeAsset16}`,
-    url: '/courses/course/samattvam-health-checkup/',
+    url: '/samattvam-health-checkup/',
   },
   {
     title: 'Corporate workshops',

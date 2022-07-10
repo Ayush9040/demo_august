@@ -14,7 +14,6 @@ import InnerNavComponent from '../../../Components/InnerNavComponent'
 
 const Gifting = () => {
   const route = useLocation()
-  console.log(route)
   useEffect(() => {
     if (route.hash) {
       document

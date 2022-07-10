@@ -70,8 +70,6 @@ const Enrollment = () => {
     mode:'',
     residental: '',
   })
-  console.log(yearEmpty)
-  console.log(resgin)
 
   const listDetailHandler = (e) => {
     e.preventDefault()
@@ -120,7 +118,6 @@ const Enrollment = () => {
     setEmpty(0)
     setFormData({ ...formData, school: '', course: '', completion: '' })
   }
-  console.log(formData.residental)
 
   const handleEmpty1 = (e) => {
     e.preventDefault()
@@ -195,8 +192,6 @@ const Enrollment = () => {
   }
 
   const handleSubmit = () => {
-    console.log(formData.mode,'sss')
-    console.log(formData.residental,'sss')
     if(formData.mode===''){
       setEmpty('mode')
     }
