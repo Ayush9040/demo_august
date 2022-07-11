@@ -1,0 +1,17 @@
+export const volunteerActions = {
+  FETCH_PROGRAMS_DATA:'FETCH_PROGRAMS_DATA',
+  FETCH_PROGRAMS_DATA_SUCCESS:'FETCH_PROGRAMS_DATA_SUCCESS',
+  FETCH_PROGRAMS_DATA_ERROR:'FETCH_PROGRAMS_DATA_ERROR'
+}
+
+export const fetchProgramsData = ()=>{
+  return { type: volunteerActions.FETCH_PROGRAMS_DATA }
+}
+
+export const fetchProgramsDataSuccess = (payload)=>{
+  return { type:volunteerActions.FETCH_PROGRAMS_DATA_SUCCESS, payload  }
+}
+
+export const fetchProgramsDataError = ()=>{
+  return { type:volunteerActions.FETCH_PROGRAMS_DATA_ERROR }
+}
