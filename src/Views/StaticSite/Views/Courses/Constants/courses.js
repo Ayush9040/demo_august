@@ -11289,7 +11289,7 @@ const classes = {
     nonResidential: false,
     residential: false,
     certficate: false,
-    default: [
+    details: [
       {
         type: 'paragraph',
         content: {
