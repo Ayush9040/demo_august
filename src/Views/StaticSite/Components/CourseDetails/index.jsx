@@ -15,7 +15,7 @@ import { useSelector } from 'react-redux'
 
 const CourseDetails = ({ pageDate }) => {
   const [detail, setDetail] = useState(1)
-
+  const [error,setError]= useState()
   const[Params]= useSearchParams()
 
   // const [courseDate, setCourseDate] = useState()
@@ -25,9 +25,18 @@ const CourseDetails = ({ pageDate }) => {
   // }, [])
   const { isLoggedIn } = useSelector(state=>state.auth)
   
+  const checkHandler = () => {
+    if(pageDate.dates.length!==0){
+      if(selectDate === null){
+        setError(1)
+      }else{
+        setError(0)
+      }
+    }
+  }
 
   console.log(pageDate, 'pageData')
-  const [selectDate, setSetselectDate] = useState()
+  const [selectDate, setSetselectDate] = useState(null)
   // localStorage.setItem('selectedDate',selectDate)
   useEffect(() => {
     setSetselectDate(Params.get('date'))
@@ -158,7 +167,7 @@ const CourseDetails = ({ pageDate }) => {
               <CommonBtn text={'Enroll Now'} />
             </Link> :  scroll() } */}
 
-            <div>
+            <div onClick={checkHandler}>
               {pageDate?.dates?.length!==0 ? 
                 (selectDate ? (
                   <Link
@@ -179,6 +188,10 @@ const CourseDetails = ({ pageDate }) => {
                 >
                   <CommonBtn text={'Enroll Now'} />
                 </Link>)}
+              {error===1 && <small style={
+                { color: 'white', marginLeft: '0', position:'relative', top: '1rem', left: '2rem', fontSize: '1.2rem' }}>
+                        *Please Select Date!
+              </small>}
             </div>
             
             {/* <CommonBtn text={'Gift Course'} /> */}
