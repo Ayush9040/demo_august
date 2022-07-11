@@ -1,4 +1,4 @@
-const baseDomain = 'http://ecom-static-site.oss-ap-south-1.aliyuncs.com'
+const baseDomain = 'https://ecom-static-site.oss-ap-south-1.aliyuncs.com'
 
 export const background = {
   donation:'/backgrounds/donation_bg.jpg',
