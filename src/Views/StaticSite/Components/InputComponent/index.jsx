@@ -32,6 +32,10 @@ const InputComponent = ({
             // onFocus={keyName==='DOB' ?()=>{setChangeType('date')}:()=>{setChangeType(type)}}
             // onBlur={()=>{setChangeType(type)}}
             onChange={(e) =>{e.preventDefault();setField({ ...form, [keyName]: e.target.value });if(errorCheck){errorCheck(0)}}}
+            onKeyDown={e=>{ console.log(e); if(e.keyCode == 13) {
+              e.preventDefault()
+              return false
+            }}}
             disabled={blocked}
           />
         </label>

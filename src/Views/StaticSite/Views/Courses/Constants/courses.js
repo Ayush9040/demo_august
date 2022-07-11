@@ -1,4 +1,7 @@
-import baseDomain, { courseAssets, homeAssets } from '../../../assets/images/imageAsset'
+import baseDomain, {
+  courseAssets,
+  homeAssets,
+} from '../../../assets/images/imageAsset'
 
 const ttc200hr = {
   1: {
@@ -5079,10 +5082,10 @@ const camps = {
     batch: 1,
     mostPopular: false,
     rating: 5,
-    templateId:'GENERAL_AUTO_EMAIL',
+    templateId: 'GENERAL_AUTO_EMAIL',
     colorCode: '#EDBE66',
     timing: '9.30 AM to 5.30 PM',
-    fees:{
+    fees: {
       onlineFee: 500,
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
@@ -5207,7 +5210,7 @@ const camps = {
     title: 'Cardiac & Hypertension Workshop',
     key: 'cardiac-hypertension-workshop',
     batch: 1,
-    templateId:'GENERAL_AUTO_EMAIL',
+    templateId: 'GENERAL_AUTO_EMAIL',
     mostPopular: false,
     rating: 5,
     colorCode: '#DDAB58',
@@ -5332,7 +5335,7 @@ const camps = {
     title: 'Diabetes Camp ',
     key: 'diabetes-camp',
     batch: 1,
-    templateId:'GENERAL_AUTO_EMAIL',
+    templateId: 'GENERAL_AUTO_EMAIL',
     dates: [
       '5th June 2022',
       '7th August 2022',
@@ -5471,7 +5474,7 @@ const camps = {
     title: 'Diet Workshop',
     key: 'diet-workshop',
     batch: 1,
-    templateId:'GENERAL_AUTO_EMAIL',
+    templateId: 'GENERAL_AUTO_EMAIL',
     dates: [],
     mostPopular: false,
     rating: 5,
@@ -5600,12 +5603,12 @@ const camps = {
     title: 'Digestion Camp',
     key: 'digestion-camp',
     batch: 1,
-    templateId:'GENERAL_AUTO_EMAIL',
+    templateId: 'GENERAL_AUTO_EMAIL',
     mostPopular: false,
     rating: 5,
     colorCode: '#DDAB58',
     timing: '9.30 AM to 5.30 PM',
-    fees:{
+    fees: {
       onlineFee: 500,
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
@@ -5734,12 +5737,12 @@ const camps = {
     title: 'Karma Yoga',
     key: 'karma-yoga',
     batch: 1,
-    templateId:'GENERAL_AUTO_EMAIL',
+    templateId: 'GENERAL_AUTO_EMAIL',
     mostPopular: false,
     rating: 5,
     colorCode: '#CE9B51',
     timing: '9.30 AM to 5.30 PM',
-    fees:{
+    fees: {
       onlineFee: 500,
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
@@ -5872,7 +5875,7 @@ const camps = {
     title: 'Life Management Camp',
     key: 'life-management-camp',
     batch: 1,
-    templateId:'GENERAL_AUTO_EMAIL',
+    templateId: 'GENERAL_AUTO_EMAIL',
     mostPopular: false,
     rating: 5,
     colorCode: '#EDBE66',
@@ -6002,12 +6005,12 @@ const camps = {
     title: 'Meditation Camp',
     key: 'meditation-camp',
     batch: 1,
-    templateId:'GENERAL_AUTO_EMAIL',
+    templateId: 'GENERAL_AUTO_EMAIL',
     mostPopular: false,
     rating: 5,
     colorCode: '#DDAB58',
     timing: '9.30 AM to 5.30 PM',
-    fees:{
+    fees: {
       onlineFee: 500,
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
@@ -6132,7 +6135,7 @@ const camps = {
     title: 'Pranayama Workshop',
     key: 'pranayama-workshop',
     batch: 1,
-    templateId:'GENERAL_AUTO_EMAIL',
+    templateId: 'GENERAL_AUTO_EMAIL',
     dates: [
       '18th June 2022',
       '21st August 2022',
@@ -6267,7 +6270,7 @@ const camps = {
     title: 'Pregnancy Camp For Ante & Post Natal',
     key: 'pregnancy-camp-for-ante-post-natal',
     batch: 1,
-    templateId:'GENERAL_AUTO_EMAIL',
+    templateId: 'GENERAL_AUTO_EMAIL',
     dates: [
       '18th Jun to 19th Jun 2022',
       '20th Aug to 21st Aug 2022',
@@ -6400,7 +6403,7 @@ const camps = {
     title: 'Respiratory Workshop',
     key: 'respiratory-workshop',
     batch: 1,
-    templateId:'GENERAL_AUTO_EMAIL',
+    templateId: 'GENERAL_AUTO_EMAIL',
     dates: [],
     mostPopular: false,
     rating: 5,
@@ -6528,7 +6531,7 @@ const camps = {
     title: 'Senior Citizen Workshop',
     key: 'senior-citizen-workshop',
     batch: 1,
-    templateId:'GENERAL_AUTO_EMAIL',
+    templateId: 'GENERAL_AUTO_EMAIL',
     dates: [],
     mostPopular: false,
     rating: 5,
@@ -6658,7 +6661,7 @@ const camps = {
     title: 'Stress Management Camp',
     key: 'stress-management-camp',
     batch: 1,
-    templateId:'GENERAL_AUTO_EMAIL',
+    templateId: 'GENERAL_AUTO_EMAIL',
     dates: [
       '12th June 2022',
       '14th August 2022',
@@ -6792,7 +6795,7 @@ const camps = {
     title: 'Weight Management Workshop',
     key: 'weight-management-workshop',
     batch: 1,
-    templateId:'GENERAL_AUTO_EMAIL',
+    templateId: 'GENERAL_AUTO_EMAIL',
     dates: [
       '4th June 2022',
       '6th August 2022',
@@ -6925,7 +6928,7 @@ const camps = {
     title: 'Women’s Camp',
     key: 'womens-camp',
     batch: 1,
-    templateId:'GENERAL_AUTO_EMAIL',
+    templateId: 'GENERAL_AUTO_EMAIL',
     dates: [
       '11th June 2022',
       '13th August 2022',
@@ -7064,7 +7067,7 @@ const camps = {
     title: 'Back & Joint Disorder Workshop',
     key: 'back-joint-disorder-workshop',
     batch: 1,
-    templateId:'GENERAL_AUTO_EMAIL',
+    templateId: 'GENERAL_AUTO_EMAIL',
     dates: [
       '26th June 2022',
       '28th August 2022',
@@ -7207,7 +7210,7 @@ const camps = {
     rating: 5,
     colorCode: '#EDBE66',
     timing: '5:00 pm – 8:00 pm (IST)',
-    fees:{
+    fees: {
       onlineFee: 8,
       offlineFee: { residentialFee: 12000, nonResidentialFee: 8000 },
     },
@@ -7544,7 +7547,7 @@ const camps = {
       '21 Days BLC - Batch 2 - 21 Days BLC - Evening - Online & On Campus - English',
     key: '21-days-blc-batch2',
     batch: 2,
-    templateId:'GENERAL_AUTO_EMAIL',
+    templateId: 'GENERAL_AUTO_EMAIL',
     dates: [
       '7th Aug to 27th Aug 2022',
       '4th Sept to 24th Sept 2022',
@@ -7561,7 +7564,7 @@ const camps = {
     rating: 5,
     colorCode: '#EDBE66',
     timing: 'Evening: 6:30 pm – 8:00 pm (IST)',
-    fees:{
+    fees: {
       onlineFee: 1600,
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
@@ -7858,7 +7861,7 @@ const camps = {
       '21 Days BLC - Batch 3 - 21 Days BLC - Evening - Online & On Campus - Hindi ',
     key: '21-days-blc-batch3',
     batch: 3,
-    templateId:'GENERAL_AUTO_EMAIL',
+    templateId: 'GENERAL_AUTO_EMAIL',
     dates: [
       '5th June to 25th June 2022',
       '7th Aug to 27th Aug 2022',
@@ -7874,7 +7877,7 @@ const camps = {
     rating: 5,
     colorCode: '#EDBE66',
     timing: 'Evening: 6:30 pm – 8:00 pm (IST)',
-    fees:{
+    fees: {
       onlineFee: 1600,
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
@@ -8176,7 +8179,7 @@ const camps = {
     title: '21 Days BLC - Batch 4 - 21 Days BLC - Morning - Online - English',
     key: '21-days-blc-batch4',
     batch: 4,
-    templateId:'GENERAL_AUTO_EMAIL',
+    templateId: 'GENERAL_AUTO_EMAIL',
     dates: [
       '12th June to 2nd July 2022',
       '3rd July to 23rd July 2022',
@@ -8198,7 +8201,7 @@ const camps = {
     rating: 5,
     colorCode: '#EDBE66',
     timing: 'Morning: 7:00 am – 8:30 am (IST)',
-    fees:{
+    fees: {
       onlineFee: 1600,
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
@@ -8519,7 +8522,7 @@ const camps = {
     rating: 5,
     colorCode: '#EDBE66',
     timing: 'Saturday to Friday: 7:00 am – 7:00 pm (IST)',
-    fees:{
+    fees: {
       onlineFee: 0,
       offlineFee: { residentialFee: 12000, nonResidentialFee: 8000 },
     },
@@ -8854,7 +8857,7 @@ const camps = {
     id: '',
     title: '21-Days BLC - Batch 1 - 21 Days BLC - Morning On Campus - English',
     key: 'batch1-21days-morning-oncampus',
-    templateId:'GENERAL_AUTO_EMAIL',
+    templateId: 'GENERAL_AUTO_EMAIL',
     batch: 1,
     dates: [
       '5th June to 25th June 2022',
@@ -8874,7 +8877,7 @@ const camps = {
     rating: 5,
     colorCode: '#EDBE66',
     timing: 'Morning:7:00 am – 8:30 am (IST)',
-    fees:{
+    fees: {
       onlineFee: 1600,
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
@@ -9179,11 +9182,12 @@ const classes = {
     title: 'Advance Asana Regular Class - Online (Only for TYI Teachers) ',
     key: 'advance-asana-regular-class',
     batch: 1,
-    templateId:'GENERAL_AUTO_EMAIL',
+    templateId: 'GENERAL_AUTO_EMAIL',
     mostPopular: false,
     rating: 5,
     colorCode: '#D3A29D',
-    timing: 'Monday, Wednesday, Friday: Monday, Wednesday & Friday : Morning: 6:30 am - 8:00 am (IST) Tuesday, Thursday & Saturday:Evening: 5:30 pm - 7:00 pm  (IST) (Join on any date)',
+    timing:
+      'Monday, Wednesday, Friday: Monday, Wednesday & Friday : Morning: 6:30 am - 8:00 am (IST) Tuesday, Thursday & Saturday:Evening: 5:30 pm - 7:00 pm  (IST) (Join on any date)',
     fees: {
       onlineFee: 1500,
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
@@ -9241,7 +9245,7 @@ const classes = {
     title: 'Anand Sadhna - Online & On Campus ',
     key: 'anand-sadhna',
     batch: 1,
-    templateId:'GENERAL_AUTO_EMAIL',
+    templateId: 'GENERAL_AUTO_EMAIL',
     image: `${baseDomain}${courseAssets.courseAsset68}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset109}`,
     mostPopular: false,
@@ -9322,7 +9326,7 @@ const classes = {
     title: 'Asana Regular Classes - (Men & Women) - Online',
     key: 'asana-regular-classes-men-women',
     batch: 1,
-    templateId:'GENERAL_AUTO_EMAIL',
+    templateId: 'GENERAL_AUTO_EMAIL',
     image: `${baseDomain}${courseAssets.courseAsset81}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset81}`,
     mostPopular: false,
@@ -9498,7 +9502,7 @@ const classes = {
     title: 'Asana Regular Classes for Men - On Campus  ',
     key: 'asana-regular-classes-men-on-campus',
     batch: 1,
-    templateId:'GENERAL_AUTO_EMAIL',
+    templateId: 'GENERAL_AUTO_EMAIL',
     image: `${baseDomain}${courseAssets.courseAsset70}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset70}`,
     mostPopular: false,
@@ -9594,7 +9598,7 @@ const classes = {
     title: 'Asana Regular Classes for Women - On Campus',
     key: 'asana-regular-classes-for-women',
     batch: 1,
-    templateId:'GENERAL_AUTO_EMAIL',
+    templateId: 'GENERAL_AUTO_EMAIL',
     image: `${baseDomain}${courseAssets.courseAsset71}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset71}`,
     mostPopular: false,
@@ -9602,7 +9606,8 @@ const classes = {
       'This is a special women-only regular asana class conducted by The Yoga Institute',
     rating: 5,
     colorCode: '#C48E8C',
-    timing:'Monday,Tuesday,Thursday,Friday(Join On Any Date):6:30 am to 7:30 am, 7:30 am to 8:30 am,8:30 am to 9:30 am, 9:30 am to 10:30 am, 10:30 am to 11:30 am, 11:30 am to 12:30 pm, 1:00 pm to 2:00 pm, 2:00 pm to 3:00 pm, 3:00 pm to 4:00 pm, 4:00 pm to 5:00 pm, 5:00 pm to 6:00 pm, 6:00 pm to 7:00 pm, 7:00 pm to 8:00 pm',
+    timing:
+      'Monday,Tuesday,Thursday,Friday(Join On Any Date):6:30 am to 7:30 am, 7:30 am to 8:30 am,8:30 am to 9:30 am, 9:30 am to 10:30 am, 10:30 am to 11:30 am, 11:30 am to 12:30 pm, 1:00 pm to 2:00 pm, 2:00 pm to 3:00 pm, 3:00 pm to 4:00 pm, 4:00 pm to 5:00 pm, 5:00 pm to 6:00 pm, 6:00 pm to 7:00 pm, 7:00 pm to 8:00 pm',
     fees: {
       onlineFee: 1000,
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
@@ -9698,7 +9703,7 @@ const classes = {
     title: 'Certificate Course on Advanced Pranayama Techniques - Online',
     key: 'certification-course-on-advanced-pranayam',
     batch: 1,
-    templateId:'GENERAL_AUTO_EMAIL',
+    templateId: 'GENERAL_AUTO_EMAIL',
     image: `${baseDomain}${courseAssets.courseAsset72}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset72}`,
     metaDescription: 'Knowledge of nadi system and energy channels',
@@ -9808,7 +9813,7 @@ const classes = {
     title: 'Certificate Course on Yoga Sutra - Online',
     key: 'certification-course-on-yoga-sutra-online',
     batch: 1,
-    templateId:'GENERAL_AUTO_EMAIL',
+    templateId: 'GENERAL_AUTO_EMAIL',
     image: `${baseDomain}${courseAssets.courseAsset73}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset73}`,
     metaDescription:
@@ -9904,7 +9909,7 @@ const classes = {
     title: 'Certificate Program on Yoga for Cancer - Online    ',
     key: 'certification-program-on-yoga-cancer-online',
     batch: 1,
-    templateId:'GENERAL_AUTO_EMAIL',
+    templateId: 'GENERAL_AUTO_EMAIL',
     image: `${baseDomain}${courseAssets.courseAsset74}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset74}`,
     metaDescription:
@@ -10000,7 +10005,7 @@ const classes = {
     title: 'Certificate Program on Yoga for Lung Cancer - Online',
     key: 'certification-program-on-yoga-for-lung-cancer-online',
     batch: 1,
-    templateId:'GENERAL_AUTO_EMAIL',
+    templateId: 'GENERAL_AUTO_EMAIL',
     image: `${baseDomain}${courseAssets.courseAsset74}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset74}`,
     mostPopular: false,
@@ -10068,7 +10073,7 @@ const classes = {
     title: 'Certificate Yoga Therapy Course - Online',
     key: 'certificate-yoga-therapy-course-online',
     batch: 1,
-    templateId:'GENERAL_AUTO_EMAIL',
+    templateId: 'GENERAL_AUTO_EMAIL',
     image: `${baseDomain}${courseAssets.courseAsset75}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset75}`,
     mostPopular: false,
@@ -10087,7 +10092,7 @@ const classes = {
     onCampus: true,
     nonResidential: false,
     residential: false,
-    certficate:true,
+    certficate: true,
     details: [
       {
         type: 'paragraph',
@@ -10397,7 +10402,7 @@ const classes = {
     title: 'Children\'s Regular Class - On Campus',
     key: 'childrens-regular-class-oncampus',
     batch: 1,
-    templateId:'GENERAL_AUTO_EMAIL',
+    templateId: 'GENERAL_AUTO_EMAIL',
     image: `${baseDomain}${courseAssets.courseAsset76}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset76}`,
     mostPopular: false,
@@ -10465,7 +10470,7 @@ const classes = {
     title: 'Children\'s Weekend Class - On Campus',
     key: 'children\'s-weekend-class-oncampus',
     batch: 1,
-    templateId:'GENERAL_AUTO_EMAIL',
+    templateId: 'GENERAL_AUTO_EMAIL',
     image: `${baseDomain}${courseAssets.courseAsset76}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset76}`,
     mostPopular: false,
@@ -10526,14 +10531,14 @@ const classes = {
     title: 'Meditation Foundation Course - Online ',
     key: 'meditation-foundation-course-online',
     batch: 1,
-    templateId:'GENERAL_AUTO_EMAIL',
+    templateId: 'GENERAL_AUTO_EMAIL',
     image: `${baseDomain}${courseAssets.courseAsset28}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset28}`,
     mostPopular: false,
     metaDescription: 'The science behind meditation',
     rating: 5,
     colorCode: '#D3A29D',
-    timing: 'Monday, Wednesday & Friday: 7:00 am - 8:00 am  (IST)',   
+    timing: 'Monday, Wednesday & Friday: 7:00 am - 8:00 am  (IST)',
     fees: {
       onlineFee: 1000,
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
@@ -10617,7 +10622,7 @@ const classes = {
     title: 'Regular Meditation Classes - Online ',
     key: 'regular-meditation-classes-online',
     batch: 1,
-    templateId:'GENERAL_AUTO_EMAIL',
+    templateId: 'GENERAL_AUTO_EMAIL',
     image: `${baseDomain}${courseAssets.courseAsset28}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset28}`,
     mostPopular: false,
@@ -10625,7 +10630,8 @@ const classes = {
       'Click now if you want to make bliss and calm a part of your life daily.',
     rating: 5,
     colorCode: '#C48E8C',
-    timing: 'Tuesday, Thursday & Saturday: 7:00 am - 7:45 am  (IST) (Join on any date)',
+    timing:
+      'Tuesday, Thursday & Saturday: 7:00 am - 7:45 am  (IST) (Join on any date)',
     fees: {
       onlineFee: 1000,
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
@@ -10730,7 +10736,7 @@ const classes = {
     title: ' Satsang ',
     key: 'satsang',
     batch: 1,
-    templateId:'GENERAL_AUTO_EMAIL',
+    templateId: 'GENERAL_AUTO_EMAIL',
     image: `${baseDomain}${courseAssets.courseAsset80}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset80}`,
     mostPopular: false,
@@ -10824,7 +10830,7 @@ const classes = {
     title: 'Weekend Asana Classes - (Men & Women) - On Campus',
     key: 'weekend-asana-classes-men-women-oncampus',
     batch: 1,
-    templateId:'GENERAL_AUTO_EMAIL',
+    templateId: 'GENERAL_AUTO_EMAIL',
     image: `${baseDomain}${courseAssets.courseAsset77}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset110}`,
     mostPopular: false,
@@ -10915,7 +10921,7 @@ const classes = {
     title: 'Yog Prayas - Online',
     key: 'yog-prayas-online',
     batch: 1,
-    templateId:'GENERAL_AUTO_EMAIL',
+    templateId: 'GENERAL_AUTO_EMAIL',
     image: `${baseDomain}${courseAssets.courseAsset82}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset82}`,
     mostPopular: false,
@@ -11055,7 +11061,7 @@ const classes = {
     title: 'Samattvam (Health Checkup) - On Campus',
     key: 'samattvam-health-checkup',
     batch: 1,
-    templateId:'GENERAL_AUTO_EMAIL',
+    templateId: 'GENERAL_AUTO_EMAIL',
     image: `${baseDomain}${homeAssets.homeAsset16}`,
     cardImage: `${baseDomain}${homeAssets.homeAsset16}`,
     mostPopular: false,
@@ -11063,10 +11069,9 @@ const classes = {
       'Samatvam is one-of-a-kind personalised wellbeing program launched by The Yoga Institute under the guidance of Dr. Hansaji Yogendra. The program focuses on providing individual guidance for life management.',
     rating: 5,
     colorCode: '#C48E8C',
-    timing:
-      'Every Saturday: 2.00 p.m. - 5.30 p.m. (IST)',
+    timing: 'Every Saturday: 2.00 p.m. - 5.30 p.m. (IST)',
     fees: {
-      onlineFee: 22000,
+      onlineFee: 200,
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'classes',
@@ -11089,8 +11094,7 @@ const classes = {
       {
         type: 'paragraph',
         content: {
-          title:
-            '',
+          title: '',
           text: [
             'Samatvam is one-of-a-kind personalised wellbeing program launched by The Yoga Institute under the guidance of Dr. Hansaji Yogendra. The program focuses on providing individual guidance for life management.',
           ],
@@ -11099,8 +11103,7 @@ const classes = {
       {
         type: 'paragraph',
         content: {
-          title:
-            '',
+          title: '',
           text: [
             'The program consists of a session conducted by Dr. Hansaji on the importance of implementing yoga in daily life. Individuals can also interact with medical experts from various fields and yoga counsellors to get the right guidance for their requirements. Every case is examined on its merit and recommendations are given accordingly. People who could benefit just by following simple yogic techniques are suggested to join specific classes or camps. Others who require medical intervention are instructed accordingly.',
           ],
@@ -11109,8 +11112,7 @@ const classes = {
       {
         type: 'paragraph',
         content: {
-          title:
-            '',
+          title: '',
           text: [
             'Samatvam is an essential pre-requisite for special classes and regular weekend classes conducted at the Institute.',
           ],
@@ -11119,18 +11121,14 @@ const classes = {
       {
         type: 'paragraph',
         content: {
-          title:
-            'Duration',
-          text: [
-            'Every Saturday: 2.00 p.m. - 5.30 p.m. (IST)',
-          ],
+          title: 'Duration',
+          text: ['Every Saturday: 2.00 p.m. - 5.30 p.m. (IST)'],
         },
       },
       {
         type: 'paragraph',
         content: {
-          title:
-            'Prerequisites',
+          title: 'Prerequisites',
           text: [
             'Please bring along all your health reports (medical papers), a pen and pad.',
           ],
@@ -11139,21 +11137,15 @@ const classes = {
       {
         type: 'paragraph',
         content: {
-          title:
-            'Registration',
-          text: [
-            'On Saturday only between 1.30 p.m. and 2.00 p.m.',
-          ],
+          title: 'Registration',
+          text: ['On Saturday only between 1.30 p.m. and 2.00 p.m.'],
         },
       },
       {
         type: 'paragraph',
         content: {
-          title:
-            'Fees',
-          text: [
-            'Rs. 200/- per person (inclusive of snacks).',
-          ],
+          title: 'Fees',
+          text: ['Rs. 200/- per person (inclusive of snacks).'],
         },
       },
     ],
@@ -11163,7 +11155,7 @@ const classes = {
     title: 'Couples’ Classes  - Online',
     key: 'couples-classes-online',
     batch: 1,
-    templateId:'GENERAL_AUTO_EMAIL',
+    templateId: 'GENERAL_AUTO_EMAIL',
     image: `${baseDomain}${homeAssets.homeAsset13}`,
     cardImage: `${baseDomain}${homeAssets.homeAsset13}`,
     mostPopular: false,
@@ -11171,8 +11163,7 @@ const classes = {
       'The Yoga Institute’s Couple Class is an absolute must for anyone who is in a relationship.',
     rating: 5,
     colorCode: '#C48E8C',
-    timing:
-      'Last Sunday of every month from 5.00 p.m. to 7.00 p.m.',
+    timing: 'Last Sunday of every month from 5.00 p.m. to 7.00 p.m.',
     fees: {
       onlineFee: 3500,
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
@@ -11190,40 +11181,38 @@ const classes = {
         content: {
           title: '',
           text: [
-            'The Yoga Institute\’s Couple Class is an absolute must for anyone who is in a relationship. Being conducted since the last 50 years, the class provides value in several different ways: improved understanding between two people, reduces conflict, increased maturity levels. You will learn to grow together, find common ground, explore new things together and enhance the strength of your relationship.',
+            'The Yoga Institute’s Couple Class is an absolute must for anyone who is in a relationship. Being conducted since the last 50 years, the class provides value in several different ways: improved understanding between two people, reduces conflict, increased maturity levels. You will learn to grow together, find common ground, explore new things together and enhance the strength of your relationship.',
           ],
         },
       },
       {
         type: 'u-list',
         content: {
-          title:
-            'What you stand to gain:',
+          title: 'What you stand to gain:',
           points: [
             {
-              listItem:'Better conflict resolution and reduced stress levels ', 
-              subItems:[]
+              listItem: 'Better conflict resolution and reduced stress levels ',
+              subItems: [],
             },
             {
-              listItem:'Improved coordination as a team', 
-              subItems:[]
+              listItem: 'Improved coordination as a team',
+              subItems: [],
             },
             {
-              listItem:'Strengthen bond with yogic way of living', 
-              subItems:[]
+              listItem: 'Strengthen bond with yogic way of living',
+              subItems: [],
             },
             {
-              listItem:'Develop accountability', 
-              subItems:[]
-            }
+              listItem: 'Develop accountability',
+              subItems: [],
+            },
           ],
         },
       },
       {
         type: 'paragraph',
         content: {
-          title:
-            '',
+          title: '',
           text: [
             'Smt. Hansaji address the group once a month on various topics relevant to householders. Lectures by eminent personalities are also organised periodically. Further, group discussions and personal sharing on specific topics are regular features, which have been well appreciated by members.',
           ],
@@ -11232,8 +11221,7 @@ const classes = {
       {
         type: 'paragraph',
         content: {
-          title:
-            'Duration',
+          title: 'Duration',
           text: [
             'Enrolment is for a calendar year. Meetings are held on the last Sunday of every month from 5.00 p.m. to 7.00 p.m.in the Institute. Additionally, co-ordinated couples meet once during the same month in their respective groups.',
           ],
@@ -11242,8 +11230,7 @@ const classes = {
       {
         type: 'paragraph',
         content: {
-          title:
-            'Prerequisites',
+          title: 'Prerequisites',
           text: [
             'Couples should be connected with some activity with The Yoga Institute.',
           ],
@@ -11252,18 +11239,14 @@ const classes = {
       {
         type: 'paragraph',
         content: {
-          title:
-            'Registration & Fees',
-          text: [
-            'Starts 30th January 2022',
-          ],
+          title: 'Registration & Fees',
+          text: ['Starts 30th January 2022'],
         },
       },
       {
         type: 'paragraph',
         content: {
-          title:
-            'Fees',
+          title: 'Fees',
           text: [
             'Annual fees are Rs. 3500/- (per year for a couple)',
             '*Please note fees once paid will be non-refundable.',
@@ -11273,10 +11256,94 @@ const classes = {
       {
         type: 'paragraph',
         content: {
-          title:
-            'Note:',
+          title: 'Note:',
           text: [
-            'Please take the screenshot of your order receipt immediately after the payment is made to info@theyogainstitute.org'
+            'Please take the screenshot of your order receipt immediately after the payment is made to info@theyogainstitute.org',
+          ],
+        },
+      },
+    ],
+  },
+  20: {
+    id: '',
+    title: 'Weekend Asana Classes - (Men & Women) - Online',
+    key: 'weekend-asana-classes-online',
+    batch: 1,
+    templateId: 'GENERAL_AUTO_EMAIL',
+    image: `${baseDomain}${homeAssets.homeAsset13}`,
+    cardImage: `${baseDomain}${homeAssets.homeAsset13}`,
+    mostPopular: false,
+    metaDescription:
+      'Weekend Yoga Regular Class is an excellent course for daily yoga practice.',
+    rating: 5,
+    colorCode: '#C48E8C',
+    timing: 'Saturday & Sunday: 7:30 am - 9:00 am  (IST)',
+    fees: {
+      onlineFee: 1000,
+      offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
+    },
+    category: 'classes',
+    dates: [],
+    online: true,
+    onCampus: false,
+    nonResidential: false,
+    residential: false,
+    certficate: false,
+    default: [
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: [
+            'Struggling to meet your yoga goals during the week? No worries, we got you! You have the option to register for regular weekend yoga class with The Yoga Institute. These are regular classes for those who are unable to attend on weekdays owing to other obligations. Weekend Yoga Regular Class is an excellent course for daily yoga practice. Asanas, Pranayamas, Kriyas, and food and Yogic lifestyle suggestions are all covered in these classes. Participants are divided into groups based on their health status, and each group receives distinct training. In addition, as needed, all students receive individual attention.',
+          ],
+        },
+      },
+      {
+        type: 'u-list',
+        content: {
+          title: 'Duration',
+          points: [
+            {
+              listItem:
+                'Classes are of 1 and half hour duration held every Saturday and sunday',
+              subItems: [],
+            },
+            {
+              listItem:
+                'A minimum attendance of 3 months is recommended, to experience the difference in your life. Can join on any day of the month.',
+              subItems: [],
+            },
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Timing',
+          text: ['Saturday & Sunday: 7:30 am - 9:00 am  (IST)'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Fees',
+          text: ['INR 1000'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: ['Please note : Classes will be conducted on Zoom'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: [
+            '*Note: Kindly note the fees once paid will not be refundable',
           ],
         },
       },
