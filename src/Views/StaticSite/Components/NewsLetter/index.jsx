@@ -32,21 +32,21 @@ const NewsLetter = () => {
       <div className="magezines">
         <div className="images">
           <div className="image">
-            <Link to="/publication/yogasattva">
+            <Link to="/yogasattva">
               <img src={`${baseDomain}${homeAssets.homeAsset67}`} alt='Yogasattva-jan' />
             </Link>
 
             <p>January 2022</p>
           </div>
           <div className="image">
-            <Link to="/publication/yogasattva">
+            <Link to="/yogasattva">
               <img src={`${baseDomain}${homeAssets.homeAsset68}`} alt='Yogasattva-feb'/>
             </Link>
 
             <p>Feburary 2022</p>
           </div>
           <div className="image">
-            <Link to="/publication/yogasattva">
+            <Link to="/yogasattva">
               <img src={`${baseDomain}${homeAssets.homeAsset69}`} alt='Yogasattva-march'/>
             </Link>
 
@@ -59,7 +59,7 @@ const NewsLetter = () => {
             at spreading yoga philosophy to mankind. It has scholarly articles
             by Dr Jayadeva and Smt. Hansaji.
           </p>
-          <Link to="/publication/yogasattva">
+          <Link to="/yogasattva">
             <CommonBtn text={'Explore More'} />
           </Link>
         </div>

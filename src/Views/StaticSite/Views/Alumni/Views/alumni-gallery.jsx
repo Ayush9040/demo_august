@@ -113,12 +113,12 @@ const AlumniGallery = () => {
       // },
       {
         innerTitle: 'alumni-gallery',
-        url: '/alumni/alumni-gallery',
+        url: '/alumni-gallery',
         name: 'Alumni Gallery',
       },
       {
         innerTitle: 'alma-mater',
-        url: '/alumni/support',
+        url: '/support-your-alma-mater',
         name: 'Support Your Alma Mater',
       },
       {

@@ -17,7 +17,7 @@ const Values = () => {
       },
       {
         innerTitle: 'volunteer-values',
-        url: '/volunteer/values',
+        url: '/values',
         name: 'Values',
       },
     ],
@@ -39,7 +39,7 @@ const Values = () => {
           <InnerNavComponent abc={ValuesBar}/>
         </CommonBanner>
       </div>
-      <div className='content-container pd-career'>
+      <div className='content-container pd-values'>
         <div className='text-content'>
           <p>
           Life is not measured by how much you have attained for yourself; but rather by how much you have given to others. - Dr. Hansaji.J.Yogendra

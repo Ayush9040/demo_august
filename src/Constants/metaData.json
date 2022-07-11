@@ -1055,7 +1055,7 @@
       }
     ]
   },
-  "/facts": {
+  "/our-facts": {
     "title": "The Yoga Institute Facts - Shri Yogendraji ",
     "h1Tag": "The Yoga Institute Facts",
     "h2Tags": [],
@@ -1094,7 +1094,7 @@
       }
     ]
   },
-  "/alumni": {
+  "/alumni-gallery": {
     "title": "Alumni - The Yoga Institute",
     "h1Tag": "Alumni",
     "h2Tags": [],
@@ -1157,6 +1157,45 @@
       {
         "property": "og:url",
         "content": "https://www.staging.theyogainstituteonline.org/volunteer"
+      },
+      {
+        "property": "og:sitename",
+        "content": "The Yoga Institue"
+      },
+      {
+        "property": "og:image",
+        "content": ""
+      },
+      {
+        "property": "og:type",
+        "content": "Website"
+      }
+    ]
+  },
+  "/values": {
+    "title": "Values - The Yoga Institute ",
+    "h1Tag": "Values",
+    "h2Tags": [],
+    "metaData": [
+      {
+        "name": "keywords",
+        "content": "Volunteer, Volunteering, volunteering india, volunteering in mumbai, free volunteering "
+      },
+      {
+        "name": "description",
+        "content": "Our volunteer helps others to build meaningful connection and do a good thing for society."
+      },
+      {
+        "property": "og:description",
+        "content": "Our volunteer helps others to build meaningful connection and do a good thing for society."
+      },
+      {
+        "property": "og:title",
+        "content": "Values - The Yoga Institute "
+      },
+      {
+        "property": "og:url",
+        "content": "https://www.staging.theyogainstituteonline.org/values"
       },
       {
         "property": "og:sitename",

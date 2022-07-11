@@ -92,16 +92,16 @@ const SignIn = () => {
               text="Sign In"
               buttonAction={handleSignIn}
             />
-            <Link to={`/enrollment/${course}/?date=${selectDate}`}>
+            <Link to={course ? `/enrollment/${course}/?date=${selectDate}`:'/'}>
               <CommonBtn text={'Continue as a guest'} isColor={'#EA4335'} />
             </Link>
           </label>
         </form>
-        <div className="social-logins guest">
-          <Link to="/user/sign-up">
+        <Link to="/user/sign-up">
+          <div className="social-logins guest">
             <h3>Sign Up</h3>
-          </Link>
-        </div>
+          </div>
+        </Link>
         {/* <div className="social-logins google">
           <h3>
             <FontAwesomeIcon icon={faGoogle} />

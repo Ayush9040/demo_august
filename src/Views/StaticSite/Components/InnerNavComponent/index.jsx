@@ -116,7 +116,7 @@ const InnerNavComponent = ({ abc }) => {
               <Link to="/image-gallery">
                 <li style={bold === 0 ? { fontWeight: 'bold' } : {}}>Images</li>
               </Link>
-              <Link to="/media/video-gallery">
+              <Link to="/video-gallery">
                 <li
                   style={
                     bold === 1

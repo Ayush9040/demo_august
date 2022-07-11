@@ -28,7 +28,7 @@ const Yogasattva = () => {
       },
       {
         innerTitle:'yogasttav',
-        url:'/publication/yogasattva',
+        url:'/yogasattva',
         name:'Yogasattava'
       },
       // {
@@ -43,7 +43,7 @@ const Yogasattva = () => {
       // },
       {
         innerTitle:'library',
-        url:'/publication/library',
+        url:'/library',
         name:'Library'
       }
     ]

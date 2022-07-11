@@ -22,7 +22,7 @@ const YogaTotalHealth = () => {
       },
       {
         innerTitle:'yogasttav',
-        url:'/publication/yogasattva',
+        url:'/yogasattva',
         name:'Yogasattava'
       },
       // {
@@ -37,7 +37,7 @@ const YogaTotalHealth = () => {
       // },
       {
         innerTitle:'library',
-        url:'/publication/library',
+        url:'/library',
         name:'Library'
       }
     ]

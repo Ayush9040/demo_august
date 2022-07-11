@@ -42,7 +42,7 @@ const Experience = () => {
                 </q>
               </p>
             </div>
-            <Link to="/experience" >
+            <Link to="/testimonials" >
               <CommonBtn text={'View All'} />
             </Link>
           </div>
@@ -71,7 +71,7 @@ const Experience = () => {
                 </q>
               </p>
             </div>
-            <Link to="/experience" >
+            <Link to="/testimonials" >
               <CommonBtn text={'View All'} />
             </Link>
           </div>
@@ -99,7 +99,7 @@ const Experience = () => {
                 </q>
               </p>
             </div>
-            <Link to="/experience" >
+            <Link to="/testimonials" >
               <CommonBtn text={'View All'} />
             </Link>
           </div>
@@ -127,7 +127,7 @@ const Experience = () => {
                 </q>
               </p>
             </div>
-            <Link to="/experience" >
+            <Link to="/testimonials" >
               <CommonBtn text={'View All'} />
             </Link>
           </div>

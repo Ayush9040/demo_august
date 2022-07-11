@@ -33,7 +33,7 @@ const MegaMenu = ({ setNav }) => {
       id: 11,
       key: 'NEWS',
     },
-    { name: 'ALUMNI', link: '/alumni/alumni-gallery', id: 12, key: 'ALUMNI' },
+    { name: 'ALUMNI', link: '/alumni-gallery', id: 12, key: 'ALUMNI' },
     { name: 'VOLUNTEER', link: '/volunteer', id: 13, key: 'VOLUNTEER' },
   ]
 
@@ -127,8 +127,8 @@ const MegaMenu = ({ setNav }) => {
     ],
     ALUMNI: [
       // { menu: 'Upcomin Events', link: '/alumni/upcoming-events' },
-      { menu: 'Alumni Gallery', link: '/alumni/gallery' },
-      { menu: 'Support Your Alma Mater', link: '/alumni/support' },
+      { menu: 'Alumni Gallery', link: '/alumni-gallery' },
+      { menu: 'Support Your Alma Mater', link: '/support-your-alma-mater' },
     ],
     VOLUNTEER: [
       { menu: 'Volunteer with us', link: '/volunteer' },

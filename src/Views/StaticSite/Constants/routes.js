@@ -1,5 +1,7 @@
 import { lazy } from 'react'
-import SocialResponsibility from '../Views/SocialPage/Views/social-responsibility'
+
+
+
 
 const Home = lazy(() => import('../Views/Home'))
 const TermsCondition = lazy(() => import('../Components/TermsandCondition'))
@@ -14,7 +16,6 @@ const BrowseCourses = lazy(() => import('../Views/Courses/Views/browse-courses')
 const SingleCourse = lazy(() => import('../Views/Courses/Views/course-name'))
 const Experiences = lazy(() => import('../Views/Experience'))
 const Museum = lazy(() => import('../Views/Museum'))
-const SoicalPage = lazy(() => import('../Views/SocialPage'))
 const Thankyou = lazy(() => import('../Components/EnrollmentForm/ThankYou'))
 const SattvikCooking = lazy(() => import('../Components/Highlights/SattvikCooking'))
 const YogaByTheBay = lazy(() => import('../Components/Highlights/YogaByTheBay'))
@@ -33,6 +34,12 @@ const Yogasattva = lazy(() => import('../Views/Publication/Views/yogasattva'))
 const library = lazy(() => import('../Views/Publication/Views/library'))
 const BlogPage = lazy(() => import('../Views/Blogs/Views/blog-page'))
 const OurLegacyModal = lazy(() => import('../Components/OurLegacyModal'))
+const SocialResponsibility =lazy(()=>import('../Views/SocialPage/Views/social-responsibility'))
+const VolunteerPage = lazy(()=>import('../Views/Volunteer/Views/volunteer'))
+const Values = lazy(()=>import('../Views/Volunteer/Views/values'))
+const AlumniGallery = lazy(()=>import('../Views/Alumni/Views/alumni-gallery'))
+const Support = lazy(()=>import('../Views/Alumni/Views/support'))
+const Facts = lazy(()=>import('../Views/Facts/Views/our-facts'))
 
 // import FAQ from '../Components/Faq'
 // import Shop from '../Views/Shop'
@@ -47,7 +54,7 @@ const OurLegacyModal = lazy(() => import('../Components/OurLegacyModal'))
 // import Facility from '../Views/Facilities'
 // import Facts from '../Views/Facts'
 // import Gift from '../Views/Gifting'
-// import Authentication from '../Views/Authentication'
+import Authentication from '../Views/Authentication'
 // import VolunteerPage from '../Views/Volunteer'
 
 const staticSiteRoutes = [
@@ -437,14 +444,39 @@ const staticSiteRoutes = [
   //   routePath: '/faqs',
   //   name: 'FAQ',
   // },
-  // {
-  //   Component: VolunteerPage,
-  //   path: '/volunteer/*',
-  //   exact: true,
-  //   id: 'statisSiteUnderJoin',
-  //   routePath: '/volunteer/*',
-  //   name: 'Join',
-  // },
+  {
+    Component: VolunteerPage,
+    path: '/volunteer',
+    exact: true,
+    id: 'statisSiteUnderJoin',
+    routePath: '/volunteer',
+    name: 'Join',
+  },
+  {
+    Component: Values,
+    path: '/values',
+    exact: true,
+    id: 'statisSiteUnderValues',
+    routePath: '/values',
+    name: 'Values',
+  },
+  {
+    Component:AlumniGallery,
+    path:'/alumni-gallery',
+    exact: true,
+    id:'staticSiteUnderAlumni',
+    routePath:'/alumni-gallery',
+    name:'Alumni'
+  },
+  {
+    Component:Support,
+    path:'/support-your-alma-mater',
+    exact: true,
+    id:'staticSiteUnderAlmaMater',
+    routePath:'/support-your-alma-mater',
+    name:'AlmaMater'
+  },
+ 
   // {
   //   Component: Blogs,
   //   path: '/blogs/*',
@@ -453,14 +485,14 @@ const staticSiteRoutes = [
   //   routePath: '/blogs/*',
   //   name: 'Blogs',
   // },
-  // {
-  //   Component: Facts,
-  //   path: '/our-facts/*',
-  //   exact: true,
-  //   id: 'statisSiteUnderFacts',
-  //   routePath: '/our-facts/*',
-  //   name: 'Facts',
-  // },
+  {
+    Component: Facts,
+    path: '/our-facts/*',
+    exact: true,
+    id: 'statisSiteUnderFacts',
+    routePath: '/our-facts/*',
+    name: 'Facts',
+  },
   // {
   //   Component: Experiences,
   //   path: '/experience/*',
@@ -469,14 +501,14 @@ const staticSiteRoutes = [
   //   routePath: '/experience/*',
   //   name: 'Experience',
   // },
-  // {
-  //   Component: Authentication,
-  //   path: '/user/*',
-  //   exact: true,
-  //   id: 'statisSiteUnderAuth',
-  //   routePath: '/user/*',
-  //   name: 'Auth',
-  // },
+  {
+    Component: Authentication,
+    path: '/user/*',
+    exact: true,
+    id: 'statisSiteUnderAuth',
+    routePath: '/user/*',
+    name: 'Auth',
+  },
   // {
   //   Component: Career,
   //   path: '/careers/*',
