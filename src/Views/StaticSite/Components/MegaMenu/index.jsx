@@ -55,8 +55,8 @@ const MegaMenu = ({ setNav }) => {
     PUBLICATIONS: [
       { menu: 'Yoga & Total Heath', link: '/publication/yoga-health' },
       { menu: 'Yogsattva', link: '/publication/yogasattva' },
-      { menu: 'Books', link: '/publication/books' },
-      { menu: 'Free E-Books', link: '/publication/e-books' },
+      // { menu: 'Books', link: '/publication/books' },
+      // { menu: 'Free E-Books', link: '/publication/e-books' },
       { menu: 'Library', link: '/publication/library' },
     ],
     MUSEUM: [

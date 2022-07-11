@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import AlumniGrid from '../../../Components/AlumniGrid'
 import baseDomain, { alumniAssets } from '../../../assets/images/imageAsset'
 import InnerNavComponent from '../../../Components/InnerNavComponent'
-
+import './style.scss'
 const AlumniGallery = () => {
   const galleryImages = {
     2017: [
