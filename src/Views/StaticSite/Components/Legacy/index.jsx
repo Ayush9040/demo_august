@@ -29,59 +29,53 @@ const Legacy = () => {
             the science of yoga.`}
           </p>
         </div>
-        <div className="photo-container-wrapper">
-          <div className="photo-container global-top-margin">
-            
-            <div className="legacy-card">
-              <img src={`${baseDomain}${homeAssets.homeAsset1}`}/>
-              <div className="legacy-card-content">
-                <h4>Paramhamsa Madhavdasji</h4>
-                <h5>Founder&apos;s Guru</h5>
-                <h6>1798-1921</h6>
-              </div>
-            </div>
-            <div className="legacy-card">
-              <img src={`${baseDomain}${homeAssets.homeAsset2}`} />
-              <div className="legacy-card-content">
-                <h4>Shri Yogendra ji</h4>
-                <h5>Founder</h5>
-                <h6>1897 - 1989</h6>
-              </div>
-            </div>
-            <div className="legacy-card">
-              <img src={`${baseDomain}${homeAssets.homeAsset3}`} />
-              <div className="legacy-card-content">
-                <h4>Smt. Sitadevi Yogendra</h4>
-                <h5>Mother</h5>
-                <h6>1912 - 2008</h6>
-              </div>
+        <div className="photo-container global-top-margin">
+          <div className="legacy-card">
+            <img src={`${baseDomain}${homeAssets.homeAsset1}`}/>
+            <div className="legacy-card-content">
+              <h4>Paramhamsa Madhavdasji</h4>
+              <h5>Founder&apos;s Guru</h5>
+              <h6>1798-1921</h6>
             </div>
           </div>
-
-          <div className="photo-container global-top-margin">
-            <div className="legacy-card">
-              <img src={`${baseDomain}${homeAssets.homeAsset4}`} />
-              <div className="legacy-card-content">
-                <h4>Dr. Jayadeva Yogendra</h4>
-                <h5>President</h5>
-                <h6>1929 - 2018</h6>
-              </div>
+          <div className="legacy-card">
+            <img src={`${baseDomain}${homeAssets.homeAsset2}`} />
+            <div className="legacy-card-content">
+              <h4>Shri Yogendra ji</h4>
+              <h5>Founder</h5>
+              <h6>1897 - 1989</h6>
             </div>
-            <div className="legacy-card">
-              <img src={`${baseDomain}${homeAssets.homeAsset5}`} />
-              <div className="legacy-card-content">
-                <h4>Smt. Hansaji J Yogendra</h4>
-                <h5>Director</h5>
-                <h6>1947</h6>
-              </div>
+          </div>
+          <div className="legacy-card">
+            <img src={`${baseDomain}${homeAssets.homeAsset3}`} />
+            <div className="legacy-card-content">
+              <h4>Smt. Sitadevi Yogendra</h4>
+              <h5>Mother</h5>
+              <h6>1912 - 2008</h6>
             </div>
-            <div className="legacy-card">
-              <img src={`${baseDomain}${homeAssets.homeAsset6}`} />
-              <div className="legacy-card-content">
-                <h4>Shri Hrishi J Yogendra</h4>
-                <h5>Director</h5>
-                <h6>1988</h6>
-              </div>
+          </div>
+          <div className="legacy-card">
+            <img src={`${baseDomain}${homeAssets.homeAsset4}`} />
+            <div className="legacy-card-content">
+              <h4>Dr. Jayadeva Yogendra</h4>
+              <h5>President</h5>
+              <h6>1929 - 2018</h6>
+            </div>
+          </div>
+          <div className="legacy-card">
+            <img src={`${baseDomain}${homeAssets.homeAsset5}`} />
+            <div className="legacy-card-content">
+              <h4>Smt. Hansaji J Yogendra</h4>
+              <h5>Director</h5>
+              <h6>1947</h6>
+            </div>
+          </div>
+          <div className="legacy-card">
+            <img src={`${baseDomain}${homeAssets.homeAsset6}`} />
+            <div className="legacy-card-content">
+              <h4>Shri Hrishi J Yogendra</h4>
+              <h5>Director</h5>
+              <h6>1988</h6>
             </div>
           </div>
         </div>
