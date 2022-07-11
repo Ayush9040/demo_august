@@ -1,10 +1,47 @@
 {
-  "/": [{
-    "property": "description",
-    "content": "Yoga and Total Health is a monthly journal on Yoga way of life and containing news, sattvic recipes and other interesting articles by sadhakas etc."
-  }],
-  "/courses": [{
-    "property": "description",
-    "content": "courses Desc here"
-  }]
+  "/": {
+    "title": "World’s Oldest Yoga Institute - The Yoga Institute",
+    "h1Tag": "Our Approach",
+    "h2Tags": [
+      "Featured Section",
+      "Subscribe to Our Monthly Newsletter"
+    ],
+    "metaData": [
+      {
+        "name": "keywords",
+        "content": "Yoga Teachers Training Certification, yoga classes, yoga classes near me, yoga training, best yoga center in India, TTC, Yoga Courses, Yoga Certifications"
+      },
+      {
+        "name": "description",
+        "content": "Yoga and Total Health is a monthly journal on Yoga way of life and containing news, sattvic recipes and other interesting articles by sadhakas etc."
+      },
+      {
+        "property": "og:description",
+        "content": "Yoga and Total Health is a monthly journal on Yoga way of life and containing news, sattvic recipes and other interesting articles by sadhakas etc."
+      }
+    ]
+  },
+  "/courses": {
+    "title": "Course Title",
+    "h1Tag": "h1 Tag",
+    "h2Tags": [
+      "h2 Tag 1",
+      "h2 Tag 2"
+    ],
+    "metaData": [
+      {
+        "name": "keywords",
+        "content": "Keywords here courses"
+      },
+      {
+        "name": "description",
+        "content": "Yoga Desc Here"
+      },
+      {
+        "property": "og:description",
+        "content": "Yoga Desc Here"
+      }
+    ]
+
+  }
 }

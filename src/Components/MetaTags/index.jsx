@@ -7,8 +7,9 @@ import metaDataObj from '../../Constants/metaData.json'
 const MetaTags = () => {
   const location = useLocation()
   return (
-    <Helmet 
-      meta={metaDataObj[location.pathname || ''] || []}
+    <Helmet
+      title={metaDataObj[location.pathname || '']?.title || ''}
+      meta={metaDataObj[location.pathname || '']?.metaData || []}
     />
   )
 }
