@@ -20,7 +20,7 @@ const VolunteerJob = () => {
       <div className="job-details">
         <div className="job-description">
           <div className="job-img">
-            <img src={program?.image} alt={'title'} />
+            <img src={program?.image} alt={program.name} />
           </div>
           <div className="job-info">
             <h1>
@@ -86,7 +86,7 @@ const VolunteerJob = () => {
           </div>
         </div>
       </div>
-      <VolunteerGrid gallery={ program?.gallery } />
+      <VolunteerGrid altName={program?.name} gallery={ program?.gallery } />
       <FAQ questions={program?.faq} />
     </div>
   )

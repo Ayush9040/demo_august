@@ -185,9 +185,9 @@ const CourseDetails = ({ pageDate }) => {
         </div>
         <div className="course-cover">
           {pageDate?.image ? (
-            <img src={pageDate?.image} />
+            <img src={pageDate?.image} alt={pageDate.title} />
           ) : (
-            <img src={`${baseDomain}${courseAssets.courseAsset2}`} />
+            <img src={`${baseDomain}${courseAssets.courseAsset2}`} alt='course-image' />
           )}
         </div>
       </div>

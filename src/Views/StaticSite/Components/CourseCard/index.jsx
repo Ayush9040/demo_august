@@ -71,7 +71,7 @@ const CourseCard = ({
   return (
     <div className="course-card">
       <div className="course-card-image">
-        <img src={img} />
+        <img src={img} alt={courseTitle} />
         {/* <div className="stars">
           {ratingArr.length !== 0 &&
             ratingArr.map((item, id) => <StarIcon key={id} />)}

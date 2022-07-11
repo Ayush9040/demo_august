@@ -23,7 +23,7 @@ const OnlineTution = () => {
           <h1>Online Home Tuition</h1>
         </div>
         <div className="highlight-cover">
-          <img src={`${baseDomain}${homeAssets.homeAsset15}`} />
+          <img src={`${baseDomain}${homeAssets.homeAsset15}`} alt='online-tution' />
         </div>
       </div>
       <div className="about-section">

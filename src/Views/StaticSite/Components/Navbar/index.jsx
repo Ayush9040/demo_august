@@ -30,6 +30,7 @@ const Navbar = ({ isUserLoggedIn }) => {
             <img
               style={{ transition: 'none !important' }}
               placeholder="none"
+              alt='The Yoga Institute'
               src="http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Home/tyi.png"
             />
           </div>

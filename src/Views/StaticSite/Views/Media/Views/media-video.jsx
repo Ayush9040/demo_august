@@ -54,7 +54,7 @@ const MediaVideo = () => {
                   key={point.id}
                 >
                   <div className="right_side_video">
-                    <img  src={point.thumbnail} />
+                    <img  src={point.thumbnail}  alt='yoga youtube'/>
                   </div>
                   <div style={{ width:'100%' }} >
                     <h4>{point.title}</h4>

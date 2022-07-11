@@ -27,7 +27,7 @@ const Footer = () => {
       <div className='logo-description'>
         <div className='logo'>
           <a href='https://theyogainstitute.org/'>
-            <img src={`${baseDomain}${homeAssets.homeAsset70}`} />
+            <img src={`${baseDomain}${homeAssets.homeAsset70}`} alt='footer logo'/>
           </a>
         </div>
        

@@ -4,7 +4,12 @@
     "h1Tag": "Our Approach",
     "h2Tags": [
       "Featured Section",
-      "Subscribe to Our Monthly Newsletter"
+      "Subscribe to Our Monthly Newsletter",
+      "Upcoming Events",
+      "Yoga Blog",
+      "Experiences with The Yoga Institute",
+      "Our Gallery",
+      "Teacher Training Course"
     ],
     "metaData": [
       {
@@ -18,30 +23,1195 @@
       {
         "property": "og:description",
         "content": "Yoga and Total Health is a monthly journal on Yoga way of life and containing news, sattvic recipes and other interesting articles by sadhakas etc."
+      },
+      {
+        "property": "og:title",
+        "content": "World’s Oldest Yoga Institute - The Yoga Institute"
+      },
+      {
+        "property": "og:url",
+        "content": "https://www.staging.theyogainstituteonline.org/"
+      },
+      {
+        "property": "og:sitename",
+        "content": "The Yoga Institue"
+      },
+      {
+        "property": "og:image",
+        "content": "https://ecom-static-site.oss-ap-south-1.aliyuncs.com/metaImages/tyi-featured-section-2.jpg"
+      },
+      {
+        "property": "og:type",
+        "content": "Website"
       }
     ]
   },
-  "/courses": {
-    "title": "Course Title",
-    "h1Tag": "h1 Tag",
+  "/social-initiatives": {
+    "title": "Social Responsibilities- The Yoga Institute",
+    "h1Tag": "SOCIAL RESPONSIBILITIES",
+    "h2Tags": [],
+    "metaData": [
+      {
+        "name": "keywords",
+        "content": "wellness initiatives, Annam Brahma, Truckasana, scholarship programs, HARMONY FEST, YOGA FOR SPECIAL CHILDREN, TREES PLANTATION, YOGA AWARENESS"
+      },
+      {
+        "name": "description",
+        "content": "The International Board of Yoga serves as our charitable branch under which our social welfare initiatives are conducted."
+      },
+      {
+        "property": "og:description",
+        "content": "The International Board of Yoga serves as our charitable branch under which our social welfare initiatives are conducted."
+      },
+      {
+        "property": "og:title",
+        "content": "Social Responsibilities- The Yoga Institute"
+      },
+      {
+        "property": "og:url",
+        "content": "https://www.staging.theyogainstituteonline.org/social-initiatives"
+      },
+      {
+        "property": "og:sitename",
+        "content": "The Yoga Institue"
+      },
+      {
+        "property": "og:image",
+        "content": "https://ecom-static-site.oss-ap-south-1.aliyuncs.com/metaImages/Anna-bramha.jpg"
+      },
+      {
+        "property": "og:type",
+        "content": "Website"
+      }
+    ]
+  },
+  "/know-us-better": {
+    "title": "Know us Better - The Yoga Institute Santacruz East Mumbai",
+    "h1Tag": "KNOW US BETTER ",
     "h2Tags": [
-      "h2 Tag 1",
-      "h2 Tag 2"
+      "ABOUT US",
+      "LIFE-SCHOOL"
     ],
     "metaData": [
       {
         "name": "keywords",
-        "content": "Keywords here courses"
+        "content": "about yoga institute, about us, about"
       },
       {
         "name": "description",
-        "content": "Yoga Desc Here"
+        "content": "Contribution to humanity by the Yogendra Family remains unmatched. The milestones showcased in the timeline are their pioneering works."
       },
       {
         "property": "og:description",
-        "content": "Yoga Desc Here"
+        "content": "Contribution to humanity by the Yogendra Family remains unmatched. The milestones showcased in the timeline are their pioneering works."
+      },
+      {
+        "property": "og:title",
+        "content": "Know us Better - The Yoga Institute Santacruz East Mumbai"
+      },
+      {
+        "property": "og:url",
+        "content": "https://www.staging.theyogainstituteonline.org/know-us-better"
+      },
+      {
+        "property": "og:sitename",
+        "content": "The Yoga Institue"
+      },
+      {
+        "property": "og:image",
+        "content": "https://ecom-static-site.oss-ap-south-1.aliyuncs.com/metaImages/the-yoga-institute-timelines.jpg"
+      },
+      {
+        "property": "og:type",
+        "content": "Website"
       }
     ]
-
+  },
+  "/our-legacy": {
+    "title": "Our Legacy - The Yoga Institute Santacruz East Mumbai",
+    "h1Tag": "Our Legacy",
+    "h2Tags": [
+      "PARAMHAMSA MADHAVADASJI (FOUNDER’S GURU) ",
+      "FOUNDER SHRI YOGENDRAJI",
+      "SMT. SITADEVI YOGENDRA (FOUNDER’S WIFE)",
+      "DR. JAYADEVA YOGENDRA (PRESIDENT OF THE YOGA INSTITUTE)",
+      "SMT. HANSAJI JAYADEVA YOGENDRA (DIRECTOR OF THE YOGA INSTITUTE)"
+    ],
+    "metaData": [
+      {
+        "name": "keywords",
+        "content": "yoga institute founders, founder of the yoga institute, who founded the yoga institute, Legacy"
+      },
+      {
+        "name": "description",
+        "content": "The Yoga Institute was founded on 25th December, 1918 by the Founder Shri Yogendraji. It found a permanent base in Santacruz, Mumbai, in 1948."
+      },
+      {
+        "property": "og:description",
+        "content": "The Yoga Institute was founded on 25th December, 1918 by the Founder Shri Yogendraji. It found a permanent base in Santacruz, Mumbai, in 1948."
+      },
+      {
+        "property": "og:title",
+        "content": "Our Legacy - The Yoga Institute Santacruz East Mumbai"
+      },
+      {
+        "property": "og:url",
+        "content": "https://www.staging.theyogainstituteonline.org/our-legacy"
+      },
+      {
+        "property": "og:sitename",
+        "content": "The Yoga Institue"
+      },
+      {
+        "property": "og:image",
+        "content": "https://ecom-static-site.oss-ap-south-1.aliyuncs.com/metaImages/paramhamsa-madhavadasji.jpg"
+      },
+      {
+        "property": "og:type",
+        "content": "Website"
+      }
+    ]
+  },
+  "/hostel": {
+    "title": "Hostels - The Yoga Institute Santacruz East Mumbai",
+    "h1Tag": "Hostels",
+    "h2Tags": [
+    "Hostel",
+    "Facilities"
+  ],
+    "metaData": [
+      {
+        "name": "keywords",
+        "content": "yoga institute facilities, Student Accommodation"
+      },
+      {
+        "name": "description",
+        "content": "The Yoga Institute, one of the oldest yoga schools in the world, provides hostel accommodation that can be best described as a home away from home."
+      },
+      {
+        "property": "og:description",
+        "content": "The Yoga Institute, one of the oldest yoga schools in the world, provides hostel accommodation that can be best described as a home away from home."
+      },
+      {
+        "property": "og:title",
+        "content": "Hostels - The Yoga Institute Santacruz East Mumbai"
+      },
+      {
+        "property": "og:url",
+        "content": "https://www.staging.theyogainstituteonline.org/hostel"
+      },
+      {
+        "property": "og:sitename",
+        "content": "The Yoga Institue"
+      },
+      {
+        "property": "og:image",
+        "content": "https://ecom-static-site.oss-ap-south-1.aliyuncs.com/metaImages/HOSTELS.jpg"
+      },
+      {
+        "property": "og:type",
+        "content": "Website"
+      }
+    ]
+  },
+  "/facilities": {
+    "title": "Hostels - The Yoga Institute Santacruz East Mumbai",
+    "h1Tag": "Hostels",
+    "h2Tags": [
+    "Hostel",
+    "Facilities"
+  ],
+    "metaData": [
+      {
+        "name": "keywords",
+        "content": "yoga institute facilities, Student Accommodation"
+      },
+      {
+        "name": "description",
+        "content": "The Yoga Institute, one of the oldest yoga schools in the world, provides hostel accommodation that can be best described as a home away from home."
+      },
+      {
+        "property": "og:description",
+        "content": "The Yoga Institute, one of the oldest yoga schools in the world, provides hostel accommodation that can be best described as a home away from home."
+      },
+      {
+        "property": "og:title",
+        "content": "Hostels - The Yoga Institute Santacruz East Mumbai"
+      },
+      {
+        "property": "og:url",
+        "content": "https://www.staging.theyogainstituteonline.org/facilities"
+      },
+      {
+        "property": "og:sitename",
+        "content": "The Yoga Institue"
+      },
+      {
+        "property": "og:image",
+        "content": "https://ecom-static-site.oss-ap-south-1.aliyuncs.com/metaImages/HOSTELS.jpg"
+      },
+      {
+        "property": "og:type",
+        "content": "Website"
+      }
+    ]
+  },
+  "/conference-room": {
+    "title": "Conference Room - The Yoga Institute Santacruz East Mumbai",
+    "h1Tag": "CONFERENCE ROOM",
+    "h2Tags": [],
+    "metaData": [
+      {
+        "name": "keywords",
+        "content": "conference room"
+      },
+      {
+        "name": "description",
+        "content": "The Yoga Institute can be availed spacious and well-equipped conference room for conducting conference meetings and discussions."
+      },
+      {
+        "property": "og:description",
+        "content": "The Yoga Institute can be availed spacious and well-equipped conference room for conducting conference meetings and discussions."
+      },
+      {
+        "property": "og:title",
+        "content": "Conference Room - The Yoga Institute Santacruz East Mumbai"
+      },
+      {
+        "property": "og:url",
+        "content": "https://www.staging.theyogainstituteonline.org/conference-room"
+      },
+      {
+        "property": "og:sitename",
+        "content": "The Yoga Institue"
+      },
+      {
+        "property": "og:image",
+        "content": "https://ecom-static-site.oss-ap-south-1.aliyuncs.com/metaImages/tyi-conference-room.jpg"
+      },
+      {
+        "property": "og:type",
+        "content": "Website"
+      }
+    ]
+  },
+  "/yoga-library": {
+    "title": "Yoga Library - The Yoga Institute Santacruz East Mumbai",
+    "h1Tag": "Yoga Library",
+    "h2Tags": [],
+    "metaData": [
+      {
+        "name": "keywords",
+        "content": "Yoga Library, Library, Books Library, Yoga Library in Mumbai, granth, GranthAlaya"
+      },
+      {
+        "name": "description",
+        "content": "Our Yoga Library contains more than 6,000 books in various languages and on various subjects related to the study of yoga and spirituality."
+      },
+      {
+        "property": "og:description",
+        "content": "Our Yoga Library contains more than 6,000 books in various languages and on various subjects related to the study of yoga and spirituality."
+      },
+      {
+        "property": "og:title",
+        "content": "Yoga Library - The Yoga Institute Santacruz East Mumbai"
+      },
+      {
+        "property": "og:url",
+        "content": "https://www.staging.theyogainstituteonline.org/yoga-library"
+      },
+      {
+        "property": "og:sitename",
+        "content": "The Yoga Institue"
+      },
+      {
+        "property": "og:image",
+        "content": ""
+      },
+      {
+        "property": "og:type",
+        "content": "Website"
+      }
+    ]
+  },
+  "/book-store": {
+    "title": "Book Store - The Yoga Institute Santacruz East Mumbai",
+    "h1Tag": "Book Store",
+    "h2Tags": [],
+    "metaData": [
+      {
+        "name": "keywords",
+        "content": "book store, book store in mumbai, yoga books, yoga book library, पुस्तक भण्डार"
+      },
+      {
+        "name": "description",
+        "content": "Sporting a fresh layout, the new walk-in yoga institute book store welcomes people to browse through a wide variety of books and other merchandise."
+      },
+      {
+        "property": "og:description",
+        "content": "Sporting a fresh layout, the new walk-in yoga institute book store welcomes people to browse through a wide variety of books and other merchandise."
+      },
+      {
+        "property": "og:title",
+        "content": "Book Store - The Yoga Institute Santacruz East Mumbai"
+      },
+      {
+        "property": "og:url",
+        "content": "https://www.staging.theyogainstituteonline.org/book-store"
+      },
+      {
+        "property": "og:sitename",
+        "content": "The Yoga Institue"
+      },
+      {
+        "property": "og:image",
+        "content": "https://ecom-static-site.oss-ap-south-1.aliyuncs.com/metaImages/book-club-tyi.jpg"
+      },
+      {
+        "property": "og:type",
+        "content": "Website"
+      }
+    ]
+  },
+  "/yoga-halls": {
+    "title": "Yogic Hall - The Yoga Institute ",
+    "h1Tag": "YOGA HALLS ",
+    "h2Tags": [],
+    "metaData": [
+      {
+        "name": "keywords",
+        "content": "yoga halls, Yoga Space"
+      },
+      {
+        "name": "description",
+        "content": "Our vast yoga hall for yogic practice reverberate with powerful spiritual energy of more than 100 years. Come experience this energy and see the change..."
+      },
+      {
+        "property": "og:description",
+        "content": "Our vast yoga hall for yogic practice reverberate with powerful spiritual energy of more than 100 years. Come experience this energy and see the change..."
+      },
+      {
+        "property": "og:title",
+        "content": "Yogic Hall - The Yoga Institute "
+      },
+      {
+        "property": "og:url",
+        "content": "https://www.staging.theyogainstituteonline.org/yoga-halls"
+      },
+      {
+        "property": "og:sitename",
+        "content": "The Yoga Institue"
+      },
+      {
+        "property": "og:image",
+        "content": ""
+      },
+      {
+        "property": "og:type",
+        "content": "Website"
+      }
+    ]
+  },
+  "/rooftop-space": {
+    "title": "Rooftop space - The Yoga Institute ",
+    "h1Tag": "ROOFTOP SPACE",
+    "h2Tags": [],
+    "metaData": [
+      {
+        "name": "keywords",
+        "content": "yoga rooftop space, yoga space,  yoga studio"
+      },
+      {
+        "name": "description",
+        "content": "The rooftop space is an open calm space surrounded by beautiful flowers that will create a perfect atmosphere to meditate. It is a place to breathe fully and.."
+      },
+      {
+        "property": "og:description",
+        "content": "The rooftop space is an open calm space surrounded by beautiful flowers that will create a perfect atmosphere to meditate. It is a place to breathe fully and.."
+      },
+      {
+        "property": "og:title",
+        "content": "Rooftop space - The Yoga Institute "
+      },
+      {
+        "property": "og:url",
+        "content": "https://www.staging.theyogainstituteonline.org/rooftop-space"
+      },
+      {
+    
+        "property": "og:sitename",
+        "content": "The Yoga Institue"
+      },
+      {
+        "property": "og:image",
+        "content": "https://ecom-static-site.oss-ap-south-1.aliyuncs.com/metaImages/terrace-tyi.jpg"
+      },
+      {
+        "property": "og:type",
+        "content": "Website"
+      }
+    ]
+  },
+  "/dining-hall": {
+    "title": "Dining hall - The Yoga Institute Santacruz East Mumbai",
+    "h1Tag": "Dining Hall",
+    "h2Tags": [],
+    "metaData": [
+      {
+        "name": "keywords",
+        "content": "dining hall, Bhojanshala, Bhojanagriham"
+      },
+      {
+        "name": "description",
+        "content": "The Yoga Institute is home to a well-planned kitchen, where the students and campers are assured of freshly cooked, wholesome food."
+      },
+      {
+        "property": "og:description",
+        "content": "The Yoga Institute is home to a well-planned kitchen, where the students and campers are assured of freshly cooked, wholesome food."
+      },
+      {
+        "property": "og:title",
+        "content": "Dining hall - The Yoga Institute Santacruz East Mumbai"
+      },
+      {
+        "property": "og:url",
+        "content": "https://www.staging.theyogainstituteonline.org/dining-hall"
+      },
+      {
+        "property": "og:sitename",
+        "content": "The Yoga Institue"
+      },
+      {
+        "property": "og:image",
+        "content": "https://ecom-static-site.oss-ap-south-1.aliyuncs.com/metaImages/oga-institute-dining-hall.jpg"
+      },
+      {
+        "property": "og:type",
+        "content": "Website"
+      }
+    ]
+  },
+  "/nature-trail": {
+    "title": "Nature Trail - The Yoga Institute Santacruz East Mumbai",
+    "h1Tag": "Nature Trail",
+    "h2Tags": [],
+    "metaData": [
+      {
+        "name": "keywords",
+        "content": "nature trail, Kailashpati Tree, Hibiscus, Walking Track, Peace Meditaion Space, Squirrel"
+      },
+      {
+        "name": "description",
+        "content": "The premises of the Yoga Institute is the perfect place to escape from the city without ever leaving the town!"
+      },
+      {
+        "property": "og:description",
+        "content": "The premises of the Yoga Institute is the perfect place to escape from the city without ever leaving the town!"
+      },
+      {
+        "property": "og:title",
+        "content": "Nature Trail - The Yoga Institute Santacruz East Mumbai"
+      },
+      {
+        "property": "og:url",
+        "content": "https://www.staging.theyogainstituteonline.org/nature-trail"
+      },
+      {
+        "property": "og:sitename",
+        "content": "The Yoga Institue"
+      },
+      {
+        "property": "og:image",
+        "content": "https://ecom-static-site.oss-ap-south-1.aliyuncs.com/metaImages/Nature.jpg"
+      },
+      {
+        "property": "og:type",
+        "content": "Website"
+      }
+    ]
+  },
+  "/gazebo": {
+    "title": "Gazebo - The Yoga Institute Santacruz East Mumbai",
+    "h1Tag": "Gazebo",
+    "h2Tags": [],
+    "metaData": [
+      {
+        "name": "keywords",
+        "content": "gazebo, shed, pavilion"
+      },
+      {
+        "name": "description",
+        "content": "Nestled in one corner of The Yoga Institute premises is a round gazebo. The gazebo is a great place to spend time even on hot summer days."
+      },
+      {
+        "property": "og:description",
+        "content": "Nestled in one corner of The Yoga Institute premises is a round gazebo. The gazebo is a great place to spend time even on hot summer days."
+      },
+      {
+        "property": "og:title",
+        "content": "Gazebo - The Yoga Institute Santacruz East Mumbai"
+      },
+      {
+        "property": "og:url",
+        "content": "https://www.staging.theyogainstituteonline.org/gazebo"
+      },
+      {
+        "property": "og:sitename",
+        "content": "The Yoga Institue"
+      },
+      {
+        "property": "og:image",
+        "content": "https://ecom-static-site.oss-ap-south-1.aliyuncs.com/metaImages/the-yoga-institute-gazebo.jpg"
+      },
+      {
+        "property": "og:type",
+        "content": "Website"
+      }
+    ]
+  },
+  "/museum-of-classical-yoga": {
+    "title": "Museum of Classical Yoga - The Yoga Institute Santacruz East Mumbai",
+    "h1Tag": "Museum of Classical Yoga",
+    "h2Tags": [],
+    "metaData": [
+      {
+        "name": "keywords",
+        "content": "museum of classical yoga, yoga museum, museum of yoga, museum in mumbai"
+      },
+      {
+        "name": "description",
+        "content": "The Shri Yogendra Museum of Classical Yoga was inaugurated in 1987 at The Yoga Institute. The Yoga Museum aims to show Yoga as a way of life."
+      },
+      {
+        "property": "og:description",
+        "content": "The Shri Yogendra Museum of Classical Yoga was inaugurated in 1987 at The Yoga Institute. The Yoga Museum aims to show Yoga as a way of life."
+      },
+      {
+        "property": "og:title",
+        "content": "Museum of Classical Yoga - The Yoga Institute Santacruz East Mumbai"
+      },
+      {
+        "property": "og:url",
+        "content": "https://www.staging.theyogainstituteonline.org/museum-of-classical-yoga"
+      },
+      {
+        "property": "og:sitename",
+        "content": "The Yoga Institue"
+      },
+      {
+        "property": "og:image",
+        "content": "https://ecom-static-site.oss-ap-south-1.aliyuncs.com/metaImages/the-yoga-museum-the-yoga-institute.jpg"
+      },
+      {
+        "property": "og:type",
+        "content": "Website"
+      }
+    ]
+  },
+  "/image-gallery": {
+    "title": "Image Gallery - The Yoga Institute",
+    "h1Tag": "Image Gallery",
+    "h2Tags": [],
+    "metaData": [
+      {
+        "name": "keywords",
+        "content": "Image"
+      },
+      {
+        "name": "description",
+        "content": "Experience yoga through our growing collection of photography. From events to yoga poses our image gallery will give you a glimpse of an ideal yogic life."
+      },
+      {
+        "property": "og:description",
+        "content": "Experience yoga through our growing collection of photography. From events to yoga poses our image gallery will give you a glimpse of an ideal yogic life."
+      },
+      {
+        "property": "og:title",
+        "content": "Image Gallery - The Yoga Institute"
+      },
+      {
+        "property": "og:url",
+        "content": "https://www.staging.theyogainstituteonline.org/image-gallery"
+      },
+      {
+        "property": "og:sitename",
+        "content": "The Yoga Institue"
+      },
+      {
+        "property": "og:image",
+        "content": ""
+      },
+      {
+        "property": "og:type",
+        "content": "Website"
+      }
+    ]
+  },
+  "/video-gallery": {
+    "title": "Video Gallery - The Yoga Institute",
+    "h1Tag": "Video Gallery",
+    "h2Tags": [],
+    "metaData": [
+      {
+        "name": "keywords",
+        "content": "Video"
+      },
+      {
+        "name": "description",
+        "content": "Various videos of asanas performed at the Yoga Institute."
+      },
+      {
+        "property": "og:description",
+        "content": "Various videos of asanas performed at the Yoga Institute."
+      },
+      {
+        "property": "og:title",
+        "content": "Video Gallery - The Yoga Institute"
+      },
+      {
+        "property": "og:url",
+        "content": "https://www.staging.theyogainstituteonline.org/video-gallery"
+      },
+      {
+        "property": "og:sitename",
+        "content": "The Yoga Institue"
+      },
+      {
+        "property": "og:image",
+        "content": ""
+      },
+      {
+        "property": "og:type",
+        "content": "Website"
+      }
+    ]
+  },
+  "/yoga-and-total-health": {
+    "title": "Yoga and Total Health - The Yoga Institute Santacruz East Mumbai",
+    "h1Tag": "Yoga and Total Health",
+    "h2Tags": [
+    "MAGAZINE (YOGA JOURNAL)",
+    "JUNE 2022 ISSUE"
+    ],
+    "metaData": [
+      {
+        "name": "keywords",
+        "content": "yoga and total health, yoga journal, Monthly Magazine, yoga magazine india, best yoga magazine, yoga magazine subscription"
+      },
+      {
+        "name": "description",
+        "content": "Yoga and Total Health is a monthly journal on Yoga way of life and containing news, sattvic recipes and other interesting articles by sadhakas etc."
+      },
+      {
+        "property": "og:description",
+        "content": "Yoga and Total Health is a monthly journal on Yoga way of life and containing news, sattvic recipes and other interesting articles by sadhakas etc."
+      },
+      {
+        "property": "og:title",
+        "content": "Yoga and Total Health - The Yoga Institute Santacruz East Mumbai"
+      },
+      {
+        "property": "og:url",
+        "content": "https://www.staging.theyogainstituteonline.org/yoga-and-total-health"
+      },
+      {
+        "property": "og:sitename",
+        "content": "The Yoga Institue"
+      },
+      {
+        "property": "og:image",
+        "content": "https://ecom-static-site.oss-ap-south-1.aliyuncs.com/metaImages/June-2022.jpg"
+      },
+      {
+        "property": "og:type",
+        "content": "Website"
+      }
+    ]
+  },
+  "/yogasattva": {
+    "title": "To cater to the digital era, The Yoga Institute now brings out YogaSattva, its monthly e-newsletter.",
+    "h1Tag": "YogaSattva",
+    "h2Tags": [],
+    "metaData": [
+      {
+        "name": "keywords",
+        "content": "yoga institute newsletters, newsletter, YogaSattva, monthly e-newsletter, e-newsletter, yoga wisdom, world of Yoga"
+      },
+      {
+        "name": "description",
+        "content": "To cater to the digital era, The Yoga Institute now brings out YogaSattva, its monthly e-newsletter."
+      },
+      {
+        "property": "og:description",
+        "content": "To cater to the digital era, The Yoga Institute now brings out YogaSattva, its monthly e-newsletter."
+      },
+      {
+        "property": "og:title",
+        "content": "To cater to the digital era, The Yoga Institute now brings out YogaSattva, its monthly e-newsletter."
+      },
+      {
+        "property": "og:url",
+        "content": "https://www.staging.theyogainstituteonline.org/yogasattva"
+      },
+      {
+        "property": "og:sitename",
+        "content": "The Yoga Institue"
+      },
+      {
+        "property": "og:image",
+        "content": ""
+      },
+      {
+        "property": "og:type",
+        "content": "Website"
+      }
+    ]
+  },
+  "/blog": {
+    "title": "Blog - The Yoga Institute",
+    "h1Tag": "Blog",
+    "h2Tags": [
+    "7 Home Remedies for Anaemia | Foods to Eat | Yoga for Anaemia",
+    "How to increase lung capacity",
+    "Yoga for back pain",
+    "5 Liver Harming Foods | Foods to Avoid | Liver Health",
+    "International Women's Day 2022 | All about Women's Day",
+    "Yoga for Ear Balance Disorder and Problems",
+    "World Health Day",
+    "5 Best Healthy Fats Food",
+    "5 Best Natural Anti-Ageing Techniques",
+    "5 Yoga Poses to do Before You Go To Sleep",
+    "Best Yoga Mudras to get Rid of Pimples Naturally at Home",
+    "How Much Distance we should walk daily",
+    "How to Reduce Back Fat Naturally by Yoga - Home Remedies",
+    "Top 5 Non-Dairy Calcium-Rich Foods"
+  ],
+    "metaData": [
+      {
+        "name": "keywords",
+        "content": "yoga institute blog, Blog, yoga blog, yoga knowledge, all about yoga"
+      },
+      {
+        "name": "description",
+        "content": "The Yoga Institute blog includes articles covering daily talks, events, and many more topics. It also provides a platform for the visitors for discussions."
+      },
+      {
+        "property": "og:description",
+        "content": "The Yoga Institute blog includes articles covering daily talks, events, and many more topics. It also provides a platform for the visitors for discussions."
+      },
+      {
+        "property": "og:title",
+        "content": "Blog - The Yoga Institute"
+      },
+      {
+        "property": "og:url",
+        "content": "https://www.staging.theyogainstituteonline.org/blog"
+      },
+      {
+        "property": "og:sitename",
+        "content": "The Yoga Institue"
+      },
+      {
+        "property": "og:image",
+        "content": ""
+      },
+      {
+        "property": "og:type",
+        "content": "Website"
+      }
+    ]
+  },
+  "/terms-and-condition": {
+    "title": "Terms & Conditions - The Yoga Institute",
+    "h1Tag": "Terms & Conditions",
+    "h2Tags": [],
+    "metaData": [
+      {
+        "name": "keywords",
+        "content": "Terms & Conditions"
+      },
+      {
+        "name": "description",
+        "content": "Any product, process or technology published on the Site may be the subject of Intellectual Property rights reserved by The Yoga Institute."
+      },
+      {
+        "property": "og:description",
+        "content": "Any product, process or technology published on the Site may be the subject of Intellectual Property rights reserved by The Yoga Institute."
+      },
+      {
+        "property": "og:title",
+        "content": "Terms & Conditions - The Yoga Institute"
+      },
+      {
+        "property": "og:url",
+        "content": "https://www.staging.theyogainstituteonline.org/terms-and-condition"
+      },
+      {
+        "property": "og:sitename",
+        "content": "The Yoga Institue"
+      },
+      {
+        "property": "og:image",
+        "content": ""
+      },
+      {
+        "property": "og:type",
+        "content": "Website"
+      }
+    ]
+  },
+  "/privacy-policy": {
+    "title": "Privacy Policy - The Yoga Institute",
+    "h1Tag": "Privacy Policy",
+    "h2Tags": [],
+    "metaData": [
+      {
+        "name": "keywords",
+        "content": "Privacy Policy"
+      },
+      {
+        "name": "description",
+        "content": "The Yoga Institute has created this Privacy Statement to demonstrate its commitment to upholding the privacy of visitors to its Web site."
+      },
+      {
+        "property": "og:description",
+        "content": "The Yoga Institute has created this Privacy Statement to demonstrate its commitment to upholding the privacy of visitors to its Web site."
+      },
+      {
+        "property": "og:title",
+        "content": "Privacy Policy - The Yoga Institute"
+      },
+      {
+        "property": "og:url",
+        "content": "https://www.staging.theyogainstituteonline.org/privacy-policy"
+      },
+      {
+        "property": "og:sitename",
+        "content": "The Yoga Institue"
+      },
+      {
+        "property": "og:image",
+        "content": ""
+      },
+      {
+        "property": "og:type",
+        "content": "Website"
+      }
+    ]
+  },
+  "/affiliations": {
+    "title": "Affiliations - The Yoga Institute",
+    "h1Tag": "Affiliations",
+    "h2Tags": [],
+    "metaData": [
+      {
+        "name": "keywords",
+        "content": "Affiliations, Connections, Tie-ups, associating, incorporating, coalition"
+      },
+      {
+        "name": "description",
+        "content": "Affiliations - The Yoga Institute"
+      },
+      {
+        "property": "og:description",
+        "content": "Affiliations - The Yoga Institute"
+      },
+      {
+        "property": "og:title",
+        "content": "Affiliations - The Yoga Institute"
+      },
+      {
+        "property": "og:url",
+        "content": "https://www.staging.theyogainstituteonline.org/affiliations"
+      },
+      {
+        "property": "og:sitename",
+        "content": "The Yoga Institue"
+      },
+      {
+        "property": "og:image",
+        "content": ""
+      },
+      {
+        "property": "og:type",
+        "content": "Website"
+      }
+    ]
+  },
+  "/wellness": {
+    "title": "Corporate Wellness -The Yoga Institute ",
+    "h1Tag": "Corporate Wellness",
+    "h2Tags": [],
+    "metaData": [
+      {
+        "name": "keywords",
+        "content": "Corporate Wellness, Corporate Yoga, corporate wellness programs, corporate wellness consultant, corporate wellness programs in india"
+      },
+      {
+        "name": "description",
+        "content": "The Yoga Institute conducts Corporate Wellness camps specifically designed to improve corporate lives through the yogic way of life."
+      },
+      {
+        "property": "og:description",
+        "content": "The Yoga Institute conducts Corporate Wellness camps specifically designed to improve corporate lives through the yogic way of life."
+      },
+      {
+        "property": "og:title",
+        "content": "Corporate Wellness -The Yoga Institute "
+      },
+      {
+        "property": "og:url",
+        "content": "https://www.staging.theyogainstituteonline.org/wellness"
+      },
+      {
+        "property": "og:sitename",
+        "content": "The Yoga Institue"
+      },
+      {
+        "property": "og:image",
+        "content": ""
+      },
+      {
+        "property": "og:type",
+        "content": "Website"
+      }
+    ]
+  },
+  "/testimonials": {
+    "title": "The Yoga Institute Experience",
+    "h1Tag": "The Yoga Institute Experience",
+    "h2Tags": [],
+    "metaData": [
+      {
+        "name": "keywords",
+        "content": "testimonials, endorsement, recommendation, memento"
+      },
+      {
+        "name": "description",
+        "content": "It's been a great experience & now Yoga has become an essential part of my life. Sukhwinder Singh - Playback Singer. I am in awe of this place and its teachings .."
+      },
+      {
+        "property": "og:description",
+        "content": "It's been a great experience & now Yoga has become an essential part of my life. Sukhwinder Singh - Playback Singer. I am in awe of this place and its teachings .."
+      },
+      {
+        "property": "og:title",
+        "content": "The Yoga Institute Experience"
+      },
+      {
+        "property": "og:url",
+        "content": "https://www.staging.theyogainstituteonline.org/testimonials"
+      },
+      {
+        "property": "og:sitename",
+        "content": "The Yoga Institue"
+      },
+      {
+        "property": "og:image",
+        "content": ""
+      },
+      {
+        "property": "og:type",
+        "content": "Website"
+      }
+    ]
+  },
+  "/Rules-and-Regulations": {
+    "title": "Hostels - The Yoga Institute Santacruz East Mumbai",
+    "h1Tag": "Hostels",
+    "h2Tags": [],
+    "metaData": [
+      {
+        "name": "keywords",
+        "content": "yoga institute facilities, Student Accommodation"
+      },
+      {
+        "name": "description",
+        "content": "The Yoga Institute, one of the oldest yoga schools in the world, provides hostel accommodation that can be best described as a home away from home."
+      },
+      {
+        "property": "og:description",
+        "content": "The Yoga Institute, one of the oldest yoga schools in the world, provides hostel accommodation that can be best described as a home away from home."
+      },
+      {
+        "property": "og:title",
+        "content": "Hostels - The Yoga Institute Santacruz East Mumbai"
+      },
+      {
+        "property": "og:url",
+        "content": "https://www.staging.theyogainstituteonline.org/Rules-and-Regulations"
+      },
+      {
+        "property": "og:sitename",
+        "content": "The Yoga Institue"
+      },
+      {
+        "property": "og:image",
+        "content": "https://ecom-static-site.oss-ap-south-1.aliyuncs.com/metaImages/HOSTELS.jpg"
+      },
+      {
+        "property": "og:type",
+        "content": "Website"
+      }
+    ]
+  },
+  "/facts": {
+    "title": "The Yoga Institute Facts - Shri Yogendraji ",
+    "h1Tag": "The Yoga Institute Facts",
+    "h2Tags": [],
+    "metaData": [
+      {
+        "name": "keywords",
+        "content": "Facts, The Yoga Institute Facts, facts about yoga institute, Know More"
+      },
+      {
+        "name": "description",
+        "content": "Facts about yoga have been simplified and then presented, so that the common man can understand the true significance of yoga."
+      },
+      {
+        "property": "og:description",
+        "content": "Facts about yoga have been simplified and then presented, so that the common man can understand the true significance of yoga."
+      },
+      {
+        "property": "og:title",
+        "content": "The Yoga Institute Facts - Shri Yogendraji "
+      },
+      {
+        "property": "og:url",
+        "content": "https://www.staging.theyogainstituteonline.org/facts"
+      },
+      {
+        "property": "og:sitename",
+        "content": "The Yoga Institue"
+      },
+      {
+        "property": "og:image",
+        "content": ""
+      },
+      {
+        "property": "og:type",
+        "content": "Website"
+      }
+    ]
+  },
+  "/alumni": {
+    "title": "Alumni - The Yoga Institute",
+    "h1Tag": "Alumni",
+    "h2Tags": [],
+    "metaData": [
+      {
+        "name": "keywords",
+        "content": "alumni association, yoga students, ttc students, students, yoga teachers"
+      },
+      {
+        "name": "description",
+        "content": "The Yoga Institute Alumni Association aims at maintaining and enhancing fellowship amongst the qualified teachers and renewing their bond with the Institute."
+      },
+      {
+        "property": "og:description",
+        "content": "The Yoga Institute Alumni Association aims at maintaining and enhancing fellowship amongst the qualified teachers and renewing their bond with the Institute."
+      },
+      {
+        "property": "og:title",
+        "content": "Alumni - The Yoga Institute"
+      },
+      {
+        "property": "og:url",
+        "content": "https://www.staging.theyogainstituteonline.org/alumni"
+      },
+      {
+        "property": "og:sitename",
+        "content": "The Yoga Institue"
+      },
+      {
+        "property": "og:image",
+        "content": ""
+      },
+      {
+        "property": "og:type",
+        "content": "Website"
+      }
+    ]
+  },
+  "/volunteer": {
+    "title": "Volunteer with us - The Yoga Institute ",
+    "h1Tag": "Volunteer with us",
+    "h2Tags": [],
+    "metaData": [
+      {
+        "name": "keywords",
+        "content": "Volunteer, Volunteering, volunteering india, volunteering in mumbai, free volunteering "
+      },
+      {
+        "name": "description",
+        "content": "Our volunteer helps others to build meaningful connection and do a good thing for society."
+      },
+      {
+        "property": "og:description",
+        "content": "Our volunteer helps others to build meaningful connection and do a good thing for society."
+      },
+      {
+        "property": "og:title",
+        "content": "Volunteer with us - The Yoga Institute "
+      },
+      {
+        "property": "og:url",
+        "content": "https://www.staging.theyogainstituteonline.org/volunteer"
+      },
+      {
+        "property": "og:sitename",
+        "content": "The Yoga Institue"
+      },
+      {
+        "property": "og:image",
+        "content": ""
+      },
+      {
+        "property": "og:type",
+        "content": "Website"
+      }
+    ]
+  },
+  "/kailaspati-tree": {
+    "title": "Kailaspati Tree - The Yoga Institute",
+    "h1Tag": "Kailaspati Tree",
+    "h2Tags": [],
+    "metaData": [
+      {
+        "name": "keywords",
+        "content": "Kailaspati Tree, tree, Meditation, lovely fragrance, spiritual vibrations"
+      },
+      {
+        "name": "description",
+        "content": "The favourite spot of most sadhakas on campus, the Kailashpati tree has graced us with its presence for many years. It is the best spot to meditate at, to soak in its spiritual vibrations. The lovely fragrance of its flowers is the perfect accompaniment to whatever activity you are pursuing under the tree. Come, take the divine blessings from the tree!"
+      },
+      {
+        "property": "og:description",
+        "content": "The favourite spot of most sadhakas on campus, the Kailashpati tree has graced us with its presence for many years. It is the best spot to meditate at, to soak in its spiritual vibrations. The lovely fragrance of its flowers is the perfect accompaniment to whatever activity you are pursuing under the tree. Come, take the divine blessings from the tree!"
+      },
+      {
+        "property": "og:title",
+        "content": "Kailaspati Tree - The Yoga Institute"
+      },
+      {
+        "property": "og:url",
+        "content": "https://www.staging.theyogainstituteonline.org/kailaspati-tree"
+      },
+      {
+        "property": "og:sitename",
+        "content": "The Yoga Institue"
+      },
+      {
+        "property": "og:image",
+        "content": "http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Facilities/new11/kelashpati.JPG"
+      },
+      {
+        "property": "og:type",
+        "content": "Website"
+      }
+    ]
   }
+
+
+  
 }

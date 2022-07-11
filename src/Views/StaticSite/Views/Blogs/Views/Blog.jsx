@@ -76,7 +76,7 @@ const BlogAnother = () => {
             <div className='newsletter-image'>
               <img
                 className='blog-iamge'
-                alt='Upcoming Seminar'
+                alt={pageData.title}
                 src={pageData?.image}
               />
             </div>

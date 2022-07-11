@@ -91,6 +91,8 @@ const AlumniGallery = () => {
     ],
   }
 
+
+
   const [bold, setBold] = useState(1)
   const alumgalleryImgs = [
     `${baseDomain}${alumniAssets.alumniDayAssets1}`,
@@ -130,7 +132,7 @@ const AlumniGallery = () => {
     <div className="contact-container">
       {/* <CommonBannerNav1 title={'AlumniGallery'} /> */}
       <InnerNavComponent abc={AlumniGalleryBar}/>
-      <AlumniGrid images={alumgalleryImgs} notEvent={false} />
+      <AlumniGrid altName={'alumni-day'} images={alumgalleryImgs} notEvent={false} />
       <div className="contact-tiles">
         <div className="tiles-container">
           <div
@@ -199,7 +201,7 @@ const AlumniGallery = () => {
               <>
                 {galleryImages[2022].map((image,idx) => (
                   <div className="tile" key={idx}>
-                    <img src={image} alt="root-image" />
+                    <img src={image} alt='Alumni event' />
                   </div>
                 ))}
               </>
@@ -207,7 +209,7 @@ const AlumniGallery = () => {
               <>
                 {galleryImages[2021].map((image, idx) => (
                   <div className="tile" key={idx}>
-                    <img src={image} alt="root-image" />
+                    <img src={image} alt="Alumni event" />
                   </div>
                 ))}
               </>
@@ -215,7 +217,7 @@ const AlumniGallery = () => {
               <>
                 {galleryImages[2020].map((image, idx) => (
                   <div className="tile" key={idx}>
-                    <img src={image} alt="root-image" />
+                    <img src={image} alt="Alumni event" />
                   </div>
                 ))}
               </>
@@ -223,7 +225,7 @@ const AlumniGallery = () => {
               <>
                 {galleryImages[2019].map((image, idx) => (
                   <div className="tile" key={idx}>
-                    <img src={image} alt="root-image" />
+                    <img src={image} alt="Alumni event" />
                   </div>
                 ))}
               </>
@@ -231,7 +233,7 @@ const AlumniGallery = () => {
               <>
                 {galleryImages[2018].map((image, idx) => (
                   <div className="tile" key={idx}>
-                    <img src={image} alt="root-image" />
+                    <img src={image} alt="Alumni event" />
                   </div>
                 ))}
               </>
@@ -239,7 +241,7 @@ const AlumniGallery = () => {
               <>
                 {galleryImages[2017].map((image, idx) => (
                   <div className="tile" key={idx}>
-                    <img src={image} alt="root-image" />
+                    <img src={image} alt="Alumni event" />
                   </div>
                 ))}
               </>

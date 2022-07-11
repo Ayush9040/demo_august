@@ -50,7 +50,7 @@ const Facts = () => {
             if (idx < 6) {
               return (
                 <div className={'grid-img-' + (idx + 1)} >
-                  <img key={idx} src={img}  />
+                  <img key={idx} src={img} alt={selectedRange.range}  />
                 </div>
               )
             }

@@ -86,7 +86,7 @@ const MediaGallery = () => {
                   <CommonBtn text={'View Album'} />
                 </div>
               </div>
-              <GridComponent imgs={item.images} />
+              <GridComponent altName={item.title} imgs={item.images} />
 
               {(viewCarousel === item.id)  && (
                 <>

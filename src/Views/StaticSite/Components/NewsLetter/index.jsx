@@ -33,21 +33,21 @@ const NewsLetter = () => {
         <div className="images">
           <div className="image">
             <Link to="/publication/yogasattva">
-              <img src={`${baseDomain}${homeAssets.homeAsset67}`} />
+              <img src={`${baseDomain}${homeAssets.homeAsset67}`} alt='Yogasattva-jan' />
             </Link>
 
             <p>January 2022</p>
           </div>
           <div className="image">
             <Link to="/publication/yogasattva">
-              <img src={`${baseDomain}${homeAssets.homeAsset68}`} />
+              <img src={`${baseDomain}${homeAssets.homeAsset68}`} alt='Yogasattva-feb'/>
             </Link>
 
             <p>Feburary 2022</p>
           </div>
           <div className="image">
             <Link to="/publication/yogasattva">
-              <img src={`${baseDomain}${homeAssets.homeAsset69}`} />
+              <img src={`${baseDomain}${homeAssets.homeAsset69}`} alt='Yogasattva-march'/>
             </Link>
 
             <p>March 2022</p>

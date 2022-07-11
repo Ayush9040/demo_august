@@ -1,4 +1,5 @@
 import React from 'react'
+//import './styles.scss'
 // import PublicationNav from '../../Components/PublicationNav'
 import baseDomain, { publicationAssests } from '../../../assets/images/imageAsset'
 import InnerNavComponent from '../../../Components/InnerNavComponent'
@@ -49,7 +50,7 @@ const library = () => {
               <div>
                 <img
                   src={`${baseDomain}${publicationAssests.libraryAsset}`}
-                  alt=""
+                  alt="library"
                   style={{
                     width: '100%',
                     height: '100%',
@@ -74,37 +75,37 @@ const library = () => {
             <div className="card-1">
               <img
                 src={`${baseDomain}${publicationAssests.publicationAssests1}`}
-                alt=""
+                alt="library"
               />
             </div>
             <div className="card-1">
               <img
                 src={`${baseDomain}${publicationAssests.publicationAssests2}`}
-                alt=""
+                alt="library"
               />
             </div>
             <div className="card-1">
               <img
                 src={`${baseDomain}${publicationAssests.publicationAssests3}`}
-                alt=""
+                alt="library"
               />
             </div>
             <div className="card-1">
               <img
                 src={`${baseDomain}${publicationAssests.publicationAssests4}`}
-                alt=""
+                alt="library"
               />
             </div>
             <div className="card-1">
               <img
                 src={`${baseDomain}${publicationAssests.publicationAssests5}`}
-                alt=""
+                alt="library"
               />
             </div>
             <div className="card-1">
               <img
                 src={`${baseDomain}${publicationAssests.publicationAssests6}`}
-                alt=""
+                alt="library"
               />
             </div>
           </div>

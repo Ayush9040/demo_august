@@ -19,7 +19,7 @@ const SingleJob = () => {
       <div className="job-details">
         <div className="job-description">
           <div className="job-img">
-            <img src={job.jobThumbnail} alt={'title'} />
+            <img src={job.jobThumbnail} alt={job.jobTitle} />
           </div>
           <div className="job-info">
             <h1>

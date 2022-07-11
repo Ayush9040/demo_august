@@ -28,19 +28,19 @@ const CorporateSocialResponsibilty = () => {
         </div>
         <div className="csr-svg-section">
           <div className="svg-one">
-            <img src={`${baseDomain}${CSR.hunger}`} />
+            <img src={`${baseDomain}${CSR.hunger}`} alt='hunger'/>
             <p>Zero Hunger</p>
           </div>
           <div className="svg-one">
-            <img src={`${baseDomain}${CSR.health}`}/>
+            <img src={`${baseDomain}${CSR.health}`} alt='health'/>
             <p>Good health and well-being</p>
           </div>
           <div className="svg-one">
-            <img src={`${baseDomain}${CSR.responsible}`} />
+            <img src={`${baseDomain}${CSR.responsible}` } alt='reponsible'/>
             <p>Responsible consumption and production</p>
           </div>
           <div className="svg-one">
-            <img src={`${baseDomain}${CSR.peace}`} />
+            <img src={`${baseDomain}${CSR.peace}`} alt='peace'/>
             <p>Peace, justice and strong institutions</p>
           </div>
         </div>
@@ -62,7 +62,7 @@ const CorporateSocialResponsibilty = () => {
             <>
               <div className="content-container-section">
                 <div className="image-container">
-                  <img src={support.image} />
+                  <img src={support.image} alt={support.title}/>
                 </div>
                 <div className="description-content">
                   <div className="header">

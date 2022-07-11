@@ -16,8 +16,10 @@ const SocialInitiatives = ({ alumni, setImageChanger }) => {
   const Police = `${baseDomain}${socialInitiativeNew.socialNew2}`
   const BMC = `${baseDomain}${socialInitiativeNew.socialNew3}`
   let images = [AnnamBrahma, Police, BMC]
+  let ALT = ['Annam Brahma','Police','BMC']
 
   const [image, setImage] = useState(AnnamBrahma)
+  const [alt, setAlt] = useState()
 
   let settings = {
     dots: true,
@@ -31,6 +33,7 @@ const SocialInitiatives = ({ alumni, setImageChanger }) => {
     beforeChange: (oldIndex, index) => {
       setImage(images[index])
       setImageChanger && setImageChanger(index)
+      setAlt(ALT[index])
     },
   }
 
@@ -38,7 +41,7 @@ const SocialInitiatives = ({ alumni, setImageChanger }) => {
   return (
     <div className='social-initiative-container global-padding'>
       <div className='social-initiative-image' id={ alumni ? 'support-page' :''} >
-        <img src={image} />
+        <img src={image} alt={alt} />
       </div>
       <div className='social-initiative-content'>
         <Heading

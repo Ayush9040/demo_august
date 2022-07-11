@@ -62,7 +62,7 @@ const ProductDetail = () => {
               </div>
             </div>
             <div className="big-image-container">
-              <img src={productData.img} alt="Avatar" className="big-image" />
+              <img src={productData.img} alt={productData.name} className="big-image" />
             </div>
           </div>
           <div className="details-card-last-section">
@@ -72,9 +72,9 @@ const ProductDetail = () => {
               </Link>
             </div>
             <div className="details-card-image-container">
-              <img src={productData.img} alt="Avatar" className="small-image" />
-              <img src={productData.img} alt="Avatar" className="small-image" />
-              <img src={productData.img} alt="Avatar" className="small-image" />
+              <img src={productData.img} alt={productData.name} className="small-image" />
+              <img src={productData.img} alt={productData.name} className="small-image" />
+              <img src={productData.img} alt={productData.name} className="small-image" />
             </div>
           </div>
         </div>
@@ -107,9 +107,9 @@ const ProductDetail = () => {
             </div>
           </div>
           <div className="mobile-last-section">
-            <img src={productData.img} alt="Avatar" className="small-image" />
-            <img src={productData.img} alt="Avatar" className="small-image" />
-            <img src={productData.img} alt="Avatar" className="small-image" />
+            <img src={productData.img} alt={productData.name} className="small-image" />
+            <img src={productData.img} alt={productData.name} className="small-image" />
+            <img src={productData.img} alt={productData.name} className="small-image" />
           </div>
           <div className="mobile-button-section">
             <Link to="/shop/checkout">

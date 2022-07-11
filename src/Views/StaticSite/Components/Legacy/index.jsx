@@ -33,7 +33,7 @@ const Legacy = () => {
           <div className="photo-container global-top-margin">
             
             <div className="legacy-card">
-              <img src={`${baseDomain}${homeAssets.homeAsset1}`}/>
+              <img src={`${baseDomain}${homeAssets.homeAsset1}`} alt='Madhavdasji'/>
               <div className="legacy-card-content">
                 <h4>Paramhamsa Madhavdasji</h4>
                 <h5>Founder&apos;s Guru</h5>
@@ -41,7 +41,7 @@ const Legacy = () => {
               </div>
             </div>
             <div className="legacy-card">
-              <img src={`${baseDomain}${homeAssets.homeAsset2}`} />
+              <img src={`${baseDomain}${homeAssets.homeAsset2}`} alt='Shri-Yogendra-ji'/>
               <div className="legacy-card-content">
                 <h4>Shri Yogendra ji</h4>
                 <h5>Founder</h5>
@@ -49,7 +49,7 @@ const Legacy = () => {
               </div>
             </div>
             <div className="legacy-card">
-              <img src={`${baseDomain}${homeAssets.homeAsset3}`} />
+              <img src={`${baseDomain}${homeAssets.homeAsset3}`} alt='Sitadevi-ji'/>
               <div className="legacy-card-content">
                 <h4>Smt. Sitadevi Yogendra</h4>
                 <h5>Mother</h5>
@@ -60,7 +60,7 @@ const Legacy = () => {
 
           <div className="photo-container global-top-margin">
             <div className="legacy-card">
-              <img src={`${baseDomain}${homeAssets.homeAsset4}`} />
+              <img src={`${baseDomain}${homeAssets.homeAsset4}`} alt='Jayadeva-ji' />
               <div className="legacy-card-content">
                 <h4>Dr. Jayadeva Yogendra</h4>
                 <h5>President</h5>
@@ -68,7 +68,7 @@ const Legacy = () => {
               </div>
             </div>
             <div className="legacy-card">
-              <img src={`${baseDomain}${homeAssets.homeAsset5}`} />
+              <img src={`${baseDomain}${homeAssets.homeAsset5}`} alt='Hansa-ji' />
               <div className="legacy-card-content">
                 <h4>Smt. Hansaji J Yogendra</h4>
                 <h5>Director</h5>
@@ -76,7 +76,7 @@ const Legacy = () => {
               </div>
             </div>
             <div className="legacy-card">
-              <img src={`${baseDomain}${homeAssets.homeAsset6}`} />
+              <img src={`${baseDomain}${homeAssets.homeAsset6}`} alt='Hrishi-ji' />
               <div className="legacy-card-content">
                 <h4>Shri Hrishi J Yogendra</h4>
                 <h5>Director</h5>

@@ -1,4 +1,5 @@
 import { lazy } from 'react'
+import SocialResponsibility from '../Views/SocialPage/Views/social-responsibility'
 
 const Home = lazy(() => import('../Views/Home'))
 const TermsCondition = lazy(() => import('../Components/TermsandCondition'))
@@ -62,7 +63,7 @@ const staticSiteRoutes = [
   },
   //SocialPage
   {
-    Component: SoicalPage,
+    Component: SocialResponsibility,
     path: '/social-initiatives',
     exact: true,
     id: 'statisSiteSocial',
@@ -162,11 +163,19 @@ const staticSiteRoutes = [
   },
   {
     Component: Facilities,
-    path: '/yoga-halls-rooftop-space',
+    path: '/yoga-halls',
     exact: true,
-    id: 'statisSiteYogaHallRooftopSpace',
-    routePath: '/yoga-halls-rooftop-space',
-    name: 'YogaHallRooftopSpace',
+    id: 'statisSiteYogaHall',
+    routePath: '/yoga-halls',
+    name: 'YogaHall',
+  },
+  {
+    Component: Facilities,
+    path: '/rooftop-space',
+    exact: true,
+    id: 'statisSiteRooftopSpace',
+    routePath: '/rooftop-space',
+    name: 'RooftopSpace',
   },
   {
     Component: Facilities,
@@ -385,7 +394,7 @@ const staticSiteRoutes = [
     exact: true,
     id: 'statisSiteUnderHighlightsFullmoonMeditation',
     routePath: '/highlights/fullmoon_meditation',
-    name: 'FullmoonMeditation',
+    name: 'FullmoonMedit3000ation',
   },
   {
     Component: OnlineTution,

@@ -21,7 +21,7 @@ const SattvikCooking = () => {
           <h1>Sattvik Cooking</h1>
         </div>
         <div className="highlight-cover">
-          <img src={`${baseDomain}${homeAssets.homeAsset18}`} alt="" />
+          <img src={`${baseDomain}${homeAssets.homeAsset18}`} alt="sattvik-cooking" />
         </div>
       </div>
       <div className="about-section">

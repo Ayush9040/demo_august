@@ -22,7 +22,7 @@ const AllExperience = () => {
             <div className="carding" key={data.name}>
               <div className="left">
                 {' '}
-                <img src={data.image} alt="img " />
+                <img src={data.image} alt={data.name}/>
               </div>
               <div className="right">
                 <p className="heading">{data.name}</p>
@@ -37,7 +37,7 @@ const AllExperience = () => {
             <div className="carding" key={data.name}>
               <div className="left">
                 {' '}
-                <img src={data.image} alt="img " />
+                <img src={data.image} alt={data.name} />
               </div>
               <div className="right">
                 <p className="heading">{data.name}</p>

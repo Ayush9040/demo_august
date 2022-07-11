@@ -77,7 +77,8 @@ const Courses = () => {
           </p>
         </div>
         <div className="intro-image">
-          <img src="http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Courses/courses-hero%20%281%29.jpg" />
+        
+          <img src="http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Courses/courses-hero%20%281%29.jpg" alt='more than just reading'/>
         </div>
       </div>
       {courseCardData &&
@@ -107,7 +108,7 @@ const Courses = () => {
         <div className="certificates">
           <div className="certificate">
             <div className="certificate-logo">
-              <img src={`${baseDomain}${certificates.IYA}`} />
+              <img src={`${baseDomain}${certificates.IYA}`} alt='The Indian Yoga Association'/>
             </div>
             <div className="certificate-text">
               <p>
@@ -119,7 +120,7 @@ advancement of Yoga and its applications around the world.
           </div>
           <div className="certificate">
             <div className="certificate-logo">
-              <img src={`${baseDomain}${certificates.YCB}`} />
+              <img src={`${baseDomain}${certificates.YCB}`} alt='Yoga Certification Board' />
             </div>
             <div className="certificate-text">
               <p>
@@ -131,7 +132,7 @@ Government for certification in the field of Yoga.
           </div>
           <div className="certificate">
             <div className="certificate-logo">
-              <img src={`${baseDomain}${certificates.YAL}`} />
+              <img src={`${baseDomain}${certificates.YAL}`} alt='Yoga Alliance' />
             </div>
             <div className="certificate-text">
               <p>
@@ -143,7 +144,7 @@ regulation in the yoga industry.
           </div>
           <div className="certificate">
             <div className="certificate-logo">
-              <img src={`${baseDomain}${certificates.IAYT}`} />
+              <img src={`${baseDomain}${certificates.IAYT}`} alt='International association of yoga therapists' />
             </div>
             <div className="certificate-text">
               <p>

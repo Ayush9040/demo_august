@@ -34,7 +34,7 @@ const AlumniCarousel = () => {
             return (
               <div key={item.id}>
                 <div className="alumini-carousel-info">
-                  <img src={item.alluminiImg} className="alluminiImg" />
+                  <img src={item.alluminiImg} className="alluminiImg" alt={item.alt}/>
                   <div className="alumini-carousel-details">
                     <div className="alumini-carousel-title">
                       {item.name},{item.post}

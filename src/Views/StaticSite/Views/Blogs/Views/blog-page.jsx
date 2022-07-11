@@ -46,7 +46,7 @@ const BlogPage = () => {
           <div className="newsletter-image">
             <img
               className="blog-image"
-              alt="Upcoming Seminar"
+              alt="anaemia"
               src={`${baseDomain}${homeAssets.homeAsset60}`}
             />
           </div>

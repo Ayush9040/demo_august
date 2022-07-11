@@ -21,7 +21,7 @@ const FullmoonMeditation = () => {
           <h1>Full moon meditation</h1>
         </div>
         <div className="highlight-cover">
-          <img src={`${baseDomain}${homeAssets.homeAsset14}`} alt="" />
+          <img src={`${baseDomain}${homeAssets.homeAsset14}`} alt="fullmoon" />
         </div>
       </div>
       <div className="about-section">

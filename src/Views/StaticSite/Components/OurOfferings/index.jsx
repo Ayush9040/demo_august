@@ -112,6 +112,7 @@ const OurOfferings = () => {
               <img
                 src={`${baseDomain}${homeAssets.homeAsset7}`}
                 placeholder="none"
+                alt='7days-camp'
               />
               <h4>7-day Yoga Health Camp</h4>
             </div>
@@ -119,6 +120,7 @@ const OurOfferings = () => {
               <img
                 src={`${baseDomain}${homeAssets.homeAsset8}`}
                 placeholder="none"
+                alt='21days'
               />
               <h4>21-Day Better Living Course</h4>
             </div>
@@ -126,6 +128,7 @@ const OurOfferings = () => {
               <img
                 src={`${baseDomain}${homeAssets.homeAsset9}`}
                 placeholder="none"
+                alt='200hrsTTC'
               />
               <h4>Regular Asana Classes</h4>
             </div>
@@ -133,6 +136,7 @@ const OurOfferings = () => {
               <img
                 src={`${baseDomain}${homeAssets.homeAsset10}`}
                 placeholder="none"
+                alt='Children-camp'
               />
               <h4>Children’s Regular Classes</h4>
             </div>
@@ -140,6 +144,7 @@ const OurOfferings = () => {
               <img
                 src={`${baseDomain}${homeAssets.homeAsset11}`}
                 placeholder="none"
+                alt='900hrs'
               />
               <h4>7-month TTC</h4>
             </div>

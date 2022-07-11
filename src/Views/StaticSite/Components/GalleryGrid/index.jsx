@@ -38,27 +38,27 @@ const CommonGrid = () => {
           <div className="common-gallery">
             <div className="common-gallery-grid">
               <div className="common-grid-1">
-                <img src={`${baseDomain}${museumAssets.meseumAssets5}`} alt="" className="img-main" />
+                <img src={`${baseDomain}${museumAssets.meseumAssets5}`} alt="yagna" className="img-main" />
               </div>
               <div className="common-grid-2">
                 <div className="sub-grid-1">
                   {' '}
-                  <img src={`${baseDomain}${museumAssets.meseumAssets1}`} />
+                  <img src={`${baseDomain}${museumAssets.meseumAssets1}`} alt='russian-scientist'/>
                 </div>
                 <div className="sub-grid-2">
                   {' '}
-                  <img src={`${baseDomain}${museumAssets.meseumAssets3}`} />
+                  <img src={`${baseDomain}${museumAssets.meseumAssets3}`} alt='chappa' />
                 </div>
               </div>
               <div className="common-grid-1">
-                <img src={`${baseDomain}${museumAssets.meseumAssets4}`} className="img-main" />
+                <img src={`${baseDomain}${museumAssets.meseumAssets4}`} alt='pooja-plate' className="img-main" />
               </div>
               <div className="common-grid-2">
                 <div className="sub-grid-1">
-                  <img src={`${baseDomain}${museumAssets.meseumAssets2}`} />
+                  <img src={`${baseDomain}${museumAssets.meseumAssets2}`} alt='granth' />
                 </div>
                 <div className="sub-grid-2">
-                  <img src={`${baseDomain}${museumAssets.meseumAssets6}`} />
+                  <img src={`${baseDomain}${museumAssets.meseumAssets6}`} alt='tree-bark'/>
                 </div>
               </div>
             </div>
@@ -67,25 +67,25 @@ const CommonGrid = () => {
           <div className="common-gallery">
             <div className="common-gallery-grid">
               <div className="common-grid-1">
-                <img src={`${baseDomain}${museumAssets.meseumAssets7}`} className="img-main" />
+                <img src={`${baseDomain}${museumAssets.meseumAssets7}`} className="img-main" alt='shaleegrama' />
               </div>
               <div className="common-grid-2">
                 <div className="sub-grid-1">
-                  <img src={`${baseDomain}${museumAssets.meseumAssets8}`} />
+                  <img src={`${baseDomain}${museumAssets.meseumAssets8}`} alt='kartal' />
                 </div>
                 <div className="sub-grid-2">
-                  <img src={`${baseDomain}${museumAssets.meseumAssets9}`} />
+                  <img src={`${baseDomain}${museumAssets.meseumAssets9}`}alt='khanjani' />
                 </div>
               </div>
               <div className="common-grid-1">
-                <img src={`${baseDomain}${museumAssets.meseumAssets10}`} className="img-main" />
+                <img src={`${baseDomain}${museumAssets.meseumAssets10}`} alt='sankha' className="img-main" />
               </div>
               <div className="common-grid-2">
                 <div className="sub-grid-1">
-                  <img src={`${baseDomain}${museumAssets.meseumAssets11}`} />
+                  <img src={`${baseDomain}${museumAssets.meseumAssets11}`} alt='havan-kund'/>
                 </div>
                 <div className="sub-grid-2">
-                  <img src={`${baseDomain}${museumAssets.meseumAssets12}`} />
+                  <img src={`${baseDomain}${museumAssets.meseumAssets12}`}  alt='shiva-linga'/>
                 </div>
               </div>
             </div>
@@ -94,25 +94,25 @@ const CommonGrid = () => {
           <div className="common-gallery">
             <div className="common-gallery-grid">
               <div className="common-grid-1">
-                <img src={`${baseDomain}${museumAssets.meseumAssets13}`} className="img-main" />
+                <img src={`${baseDomain}${museumAssets.meseumAssets13}`} className="img-main" alt='rudraksha' />
               </div>
               <div className="common-grid-2">
                 <div className="sub-grid-1">
-                  <img src={`${baseDomain}${museumAssets.meseumAssets14}`} />
+                  <img src={`${baseDomain}${museumAssets.meseumAssets14}`}  alt='karnal-mala'/>
                 </div>
                 <div className="sub-grid-2">
-                  <img src={`${baseDomain}${museumAssets.meseumAssets15}`} />
+                  <img src={`${baseDomain}${museumAssets.meseumAssets15}`} alt='karnal-mala2' />
                 </div>
               </div>
               <div className="common-grid-1">
-                <img src={`${baseDomain}${museumAssets.meseumAssets16}`} className="img-main" />
+                <img src={`${baseDomain}${museumAssets.meseumAssets16}`} alt='namavali-jholi' className="img-main" />
               </div>
               <div className="common-grid-2">
                 <div className="sub-grid-1">
-                  <img src={`${baseDomain}${museumAssets.meseumAssets17}`} />
+                  <img src={`${baseDomain}${museumAssets.meseumAssets17}`} alt='rudraksha-mala'/>
                 </div>
                 <div className="sub-grid-2">
-                  <img src={`${baseDomain}${museumAssets.meseumAssets18}`} />
+                  <img src={`${baseDomain}${museumAssets.meseumAssets18}`} alt='yantras' />
                 </div>
               </div>
             </div>

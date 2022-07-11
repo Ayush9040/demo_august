@@ -14,8 +14,10 @@ const Programs = ({ setImageChanger }) => {
   const Police = `${baseDomain}${homeAssets.homeAsset20}`
   const BMC = `${baseDomain}${homeAssets.homeAsset21}`
   let images = [AnnamBrahma, Police, BMC]
+  let ALT = ['Annam Brahma','Police','BMC']
 
   const [image, setImage] = useState(AnnamBrahma)
+  const [alt, setAlt] = useState()
 
   let settings = {
     dots: true,
@@ -29,13 +31,14 @@ const Programs = ({ setImageChanger }) => {
     beforeChange: (oldIndex, index) => {
       setImage(images[index])
       setImageChanger && setImageChanger(index)
+      setAlt(ALT[index])
     },
   }
 
   return (
     <div className="wellness-initiative-container global-padding">
       <div className="wellness-initiative-image">
-        <img src={image} />
+        <img src={image} alt={alt} />
       </div>
       <div className="wellness-initiative-content">
         <Heading
