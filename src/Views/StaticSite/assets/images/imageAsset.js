@@ -8,7 +8,8 @@ export const background = {
   volunteer : '/backgrounds/volunteer_bg.jpg',
   faqs:'/backgrounds/faqs.jpg',
   alma:'/backgrounds/support-alma-mater.jpg',
-  benefits:'/backgrounds/benifits.png'
+  benefits:'/backgrounds/benifits.png',
+  wellness:'/wellness/wellness.jpg'
   
 }
 

@@ -7,7 +7,7 @@ import Programs from './Programs'
 import CommonBtn from '../commonbtn'
 import { Link } from 'react-router-dom'
 import baseDomain from '../../assets/images/imageAsset'
-import { wellnessAssets } from '../../assets/images/imageAsset'
+import { background,wellnessAssets } from '../../assets/images/imageAsset'
 
 const wellness = () => {
 
@@ -25,7 +25,7 @@ const wellness = () => {
         Heading='Yoga for corporate wellness'
         isOnlyBanner={false}
         innerNav={false}
-        bannerImg={`${baseDomain}${wellnessAssets.wellnessAssets1}`}
+        bannerImg={`${baseDomain}${background.wellness}`}
         overlay='linear-gradient(90deg,#59758fd4,#495b8dd4)'
         description='Employees are the foundation of any business and the driving force behind its success.The Yoga Institute Corporate Wellness Programs are aimed to enhance and encourage a compre-
         hensive approach to employee well-being by fostering a healthy and happy workplace culture. We provide wellness solutions that go beyond traditional wellness programs to improve physical,
