@@ -19,7 +19,7 @@ padding-top: 10rem;
 }
 #support-page{
     img{
-        border-radius: 0px 300px 0px 300px;
+        border-radius: 0px 200px 0px 200px;
         object-fit: cover;
     }
 }
@@ -142,4 +142,15 @@ padding-top: 10rem;
             }
 
     }
+}
+
+@media (max-width:768px){
+.social-initiative-container{
+    #support-page{
+        img{
+            border-radius: 0px 100px 0px 100px;
+            object-fit: cover;
+        }
+    }
+}
 }
