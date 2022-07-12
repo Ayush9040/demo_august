@@ -1250,7 +1250,7 @@
       }
     ]
   },
-  "/batch-1-200hr": {
+  "/one-month-ttc": {
     "title": "One Month Yoga Teacher Training Course In Mumbai, India",
     "h1Tag": "",
     "h2Tags": [
@@ -1280,7 +1280,7 @@
       },
       {
         "property": "og:url",
-        "content": "https://www.staging.theyogainstituteonline.org/batch-1-200hr"
+        "content": "https://www.staging.theyogainstituteonline.org/one-month-ttc"
       },
       {
         "property": "og:sitename",
@@ -1296,7 +1296,7 @@
       }
     ]
   },
-  "/batch-2-200hr": {
+  "/200-hrs-part-time-ttc-on-campus-english": {
     "title": "200 Hrs Part Time TTC (On Campus-English | May) - The Yoga Institute",
     "h1Tag": "200 Hrs Part Time TTC (English On Campus)",
     "h2Tags": [
@@ -1325,7 +1325,7 @@
       },
       {
         "property": "og:url",
-        "content": "https://www.staging.theyogainstituteonline.org/batch-2-200hr"
+        "content": "https://www.staging.theyogainstituteonline.org/200-hrs-part-time-ttc-on-campus-english"
       },
       {
         "property": "og:sitename",
@@ -1341,7 +1341,7 @@
       }
     ]
   },
-  "/batch-3-200hr": {
+  "/200-hrs-parttime-ttc-online-english": {
     "title": "Part Time TTC 200 Hrs (Online-English | Aug-Oct) - The Yoga Institute",
     "h1Tag": "200 Hrs Part Time TTC (Online-English | Aug-Oct)",
     "h2Tags": [
@@ -1370,7 +1370,7 @@
       },
       {
         "property": "og:url",
-        "content": "https://www.staging.theyogainstituteonline.org/batch-3-200hr"
+        "content": "https://www.staging.theyogainstituteonline.org/200-hrs-parttime-ttc-online-english"
       },
       {
         "property": "og:sitename",
@@ -1386,7 +1386,7 @@
       }
     ]
   },
-  "/batch-4-200hr": {
+  "/200-hrs-part-time-ttc-online": {
     "title": "200 Hrs Part Time TTC (Online Hindi) - The Yoga Institute",
     "h1Tag": "200 Hrs Part Time TTC (Hindi Online)",
     "h2Tags": [
@@ -1415,7 +1415,7 @@
       },
       {
         "property": "og:url",
-        "content": "https://www.staging.theyogainstituteonline.org/batch-4-200hr"
+        "content": "https://www.staging.theyogainstituteonline.org/200-hrs-part-time-ttc-online"
       },
       {
         "property": "og:sitename",
@@ -1431,52 +1431,7 @@
       }
     ]
   },
-  "/batch-5-200hr": {
-    "title": "200 Hrs Part Time TTC (English | Aug-Oct) - The Yoga Institute",
-    "h1Tag": "200 Hrs Part Time TTC (Online-English)",
-    "h2Tags": [
-      "A – KNOWLEDGE",
-      "B – SKILL",
-      "ONLINE",
-      "EXAM SCHEDULE",
-      "REGISTRATION GUIDELINES FOR STUDENTS/PARTICIPANTS"
-    ],
-    "metaData": [
-      {
-        "name": "keywords",
-        "content": " 200 hour yoga teacher training, Teacher Training, Yoga Teacher Training , teacher training course"
-      },
-      {
-        "name": "description",
-        "content": "This is RYT 200 hrs part-time basic TTC, fully accredited with the Yoga Alliance USA and the participant is eligible to apply on Yoga Alliance site."
-      },
-      {
-        "property": "og:description",
-        "content": "This is RYT 200 hrs part-time basic TTC, fully accredited with the Yoga Alliance USA and the participant is eligible to apply on Yoga Alliance site."
-      },
-      {
-        "property": "og:title",
-        "content": "200 Hrs Part Time TTC (English | Aug-Oct) - The Yoga Institute"
-      },
-      {
-        "property": "og:url",
-        "content": "https://www.staging.theyogainstituteonline.org/batch-5-200hr"
-      },
-      {
-        "property": "og:sitename",
-        "content": "The Yoga Institue"
-      },
-      {
-        "property": "og:image",
-        "content": "http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Courses/TTC/200_hrs_TTC.jpg"
-      },
-      {
-        "property": "og:type",
-        "content": "Website"
-      }
-    ]
-  },
-  "/batch-6-200hr": {
+  "/weekend-teacher-training-course": {
     "title": "Weekend Teacher Training Course (Aug-Nov) - The Yoga Institute",
     "h1Tag": "Weekend Teacher Training Course (Aug to Nov)",
     "h2Tags": [
@@ -1505,7 +1460,7 @@
       },
       {
         "property": "og:url",
-        "content": "https://www.staging.theyogainstituteonline.org/batch-6-200hr"
+        "content": "https://www.staging.theyogainstituteonline.org/weekend-teacher-training-course"
       },
       {
         "property": "og:sitename",
@@ -1521,7 +1476,7 @@
       }
     ]
   },
-  "/3-months-500hr": {
+  "/500-hrs-online-yoga-teacher-training-course-intermediate-level": {
     "title": "500 Hrs Online Yoga TTC Intermediate Level (May-Aug) - The Yoga Institute",
     "h1Tag": "500 Hrs Online Yoga TTC Intermediate Level",
     "h2Tags": [],
@@ -1544,7 +1499,7 @@
       },
       {
         "property": "og:url",
-        "content": "https://www.staging.theyogainstituteonline.org/3-months-500hr"
+        "content": "https://www.staging.theyogainstituteonline.org/500-hrs-online-yoga-teacher-training-course-intermediate-level"
       },
       {
         "property": "og:sitename",
@@ -1560,7 +1515,7 @@
       }
     ]
   },
-  "/3-months-ttc": {
+  "/3-months-advanced-teacher-training-course": {
     "title": "3 Months Advanced Teacher Training Course - The Yoga Institute",
     "h1Tag": "3 Months Advanced Teacher Training Course (On-Campus)",
     "h2Tags": [
@@ -1585,7 +1540,7 @@
       },
       {
         "property": "og:url",
-        "content": "https://www.staging.theyogainstituteonline.org/3-months-ttc"
+        "content": "https://www.staging.theyogainstituteonline.org/3-months-advanced-teacher-training-course"
       },
       {
         "property": "og:sitename",
@@ -1601,7 +1556,7 @@
       }
     ]
   },
-  "/4-months-900hr": {
+  "/900-hours-advanced-teacher-training-course": {
     "title": "900 Hours Advanced Teacher Training Course In Mumbai - The Yoga Institute",
     "h1Tag": "900 Hours Advanced Teacher Training Course",
     "h2Tags": [
@@ -1626,7 +1581,7 @@
       },
       {
         "property": "og:url",
-        "content": "https://www.staging.theyogainstituteonline.org/4-months-900hr"
+        "content": "https://www.staging.theyogainstituteonline.org/900-hours-advanced-teacher-training-course"
       },
       {
         "property": "og:sitename",
@@ -1642,7 +1597,7 @@
       }
     ]
   },
-  "/7-months-900hr": {
+  "/seven-month-ttc": {
     "title": "Seven Month Yoga Teacher Training Course - The Yoga Institute",
     "h1Tag": "Yoga Teachers Training Course (Seven Months TTC)",
     "h2Tags": [
@@ -1667,7 +1622,7 @@
       },
       {
         "property": "og:url",
-        "content": "https://www.staging.theyogainstituteonline.org/7-months-900hr"
+        "content": "https://www.staging.theyogainstituteonline.org/seven-month-ttc"
       },
       {
         "property": "og:sitename",
@@ -1683,7 +1638,7 @@
       }
     ]
   },
-  "/1-year-900hr": {
+  "/one-year-900hr": {
     "title": "One year Yoga Teacher Training India | One Year Course | Yoga instructor",
     "h1Tag": "Yoga Teachers Training Course (One Year TTC) (Hindi)",
     "h2Tags": [
@@ -1708,7 +1663,7 @@
       },
       {
         "property": "og:url",
-        "content": "https://www.staging.theyogainstituteonline.org/1-year-900hr"
+        "content": "https://www.staging.theyogainstituteonline.org/one-year-900hr"
       },
       {
         "property": "og:sitename",
@@ -1724,7 +1679,7 @@
       }
     ]
   },
-  "/2-year-900hr": {
+  "/two-year-ttc": {
     "title": "Two Year Yoga Teacher Training Course - The Yoga Institute",
     "h1Tag": "Yoga Teachers Training Course (Two Years TTC) (English)",
     "h2Tags": [
@@ -1749,7 +1704,7 @@
       },
       {
         "property": "og:url",
-        "content": "https://www.staging.theyogainstituteonline.org/2-year-900hr"
+        "content": "https://www.staging.theyogainstituteonline.org/two-year-ttc"
       },
       {
         "property": "og:sitename",
@@ -1765,7 +1720,46 @@
       }
     ]
   },
-  "/asana-regular-classes-men-on-campus": {
+  "/asana-regular-classes-online": {
+    "title": "Yoga Asanas Regular Classes (Online)",
+    "h1Tag": "Asana Regular Classes (Online) ",
+    "h2Tags": [],
+    "metaData": [
+      {
+        "name": "keywords",
+        "content": "asana regular classes on campus, yoga asana classes, yoga regular classes, Yoga asanas"
+      },
+      {
+        "name": "description",
+        "content": "The Yoga Institute designed Yoga asanas Regular Classes for men through Online and On-Campus mode.  This classes covers Sukhasana, Yog Mudra,  Vakrasana,.."
+      },
+      {
+        "property": "og:description",
+        "content": "The Yoga Institute designed Yoga asanas Regular Classes for men through Online and On-Campus mode.  This classes covers Sukhasana, Yog Mudra,  Vakrasana,.."
+      },
+      {
+        "property": "og:title",
+        "content": "Yoga Asanas Regular Classes for Men (Online | On Campus)"
+      },
+      {
+        "property": "og:url",
+        "content": "https://www.staging.theyogainstituteonline.org/asana-regular-classes-online"
+      },
+      {
+        "property": "og:sitename",
+        "content": "The Yoga Institue"
+      },
+      {
+        "property": "og:image",
+        "content": "http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Courses/Class/Asana%20_Regular_Classes_for_Men_common.jpeg"
+      },
+      {
+        "property": "og:type",
+        "content": "Website"
+      }
+    ]
+  },
+  "/asana-regular-classes-on-campus": {
     "title": "Yoga Asanas Regular Classes for Men (Online | On Campus)",
     "h1Tag": "Asana Regular Classes for Men ( On Campus) ",
     "h2Tags": [],
@@ -1788,7 +1782,7 @@
       },
       {
         "property": "og:url",
-        "content": "https://www.staging.theyogainstituteonline.org/asana-regular-classes-men-on-campus"
+        "content": "https://www.staging.theyogainstituteonline.org/asana-regular-classes-on-campus"
       },
       {
         "property": "og:sitename",
@@ -1804,7 +1798,7 @@
       }
     ]
   },
-  "/asana-regular-classes-for-women": {
+  "/asana-regular-classes-on-campus-women": {
     "title": "Yoga Asanas Regular Classes for Women (Online | On Campus)",
     "h1Tag": "Asana Regular Classes for Women (On Campus)",
     "h2Tags": [],
@@ -1827,7 +1821,7 @@
       },
       {
         "property": "og:url",
-        "content": "https://www.staging.theyogainstituteonline.org/asana-regular-classes-for-women"
+        "content": "https://www.staging.theyogainstituteonline.org/asana-regular-classes-on-campus-women"
       },
       {
         "property": "og:sitename",
@@ -1843,7 +1837,7 @@
       }
     ]
   },
-  "/advance-asana-regular-class": {
+  "/advanced-regular-yoga-classes": {
     "title": "Advance Regular Yoga Classes - The Yoga Institute",
     "h1Tag": "Advance Regular Yoga Classes – TYI Teachers",
     "h2Tags": [],
@@ -1866,7 +1860,7 @@
       },
       {
         "property": "og:url",
-        "content": "https://www.staging.theyogainstituteonline.org/advance-asana-regular-class/"
+        "content": "https://www.staging.theyogainstituteonline.org/advanced-regular-yoga-classes"
       },
       {
         "property": "og:sitename",
@@ -1882,7 +1876,7 @@
       }
     ]
   },
-  "/weekend-asana-classes-men-women-oncampus": {
+  "/weekend-classes": {
     "title": "Weekend Yoga Regular Classes - The Yoga Institute",
     "h1Tag": "Weekend Asana Classes - (Men & Women) On Campus",
     "h2Tags": [],
@@ -1905,7 +1899,7 @@
       },
       {
         "property": "og:url",
-        "content": "https://www.staging.theyogainstituteonline.org/weekend-asana-classes-men-women-oncampus"
+        "content": "https://www.staging.theyogainstituteonline.org/weekend-classes"
       },
       {
         "property": "og:sitename",
@@ -1921,7 +1915,7 @@
       }
     ]
   },
-  "/weekend-asana-classes-online": {
+  "/weekend-classes-online": {
     "title": "Weekend Yoga Regular Classes - Online",
     "h1Tag": "Weekend Asana Classes - (Men & Women) Online",
     "h2Tags": [],
@@ -1944,7 +1938,7 @@
       },
       {
         "property": "og:url",
-        "content": "https://www.staging.theyogainstituteonline.org/weekend-asana-classes-online"
+        "content": "https://www.staging.theyogainstituteonline.org/weekend-classes-online"
       },
       {
         "property": "og:sitename",
@@ -1960,7 +1954,7 @@
       }
     ]
   },
-  "/childrens-regular-class-oncampus": {
+  "/childrens-regular-classes": {
     "title": "Childrens Regular Classes - The Yoga Institute Santacruz East Mumbai",
     "h1Tag": "Children’s Regular Classes (On Campus)",
     "h2Tags": [],
@@ -1983,7 +1977,7 @@
       },
       {
         "property": "og:url",
-        "content": "https://www.staging.theyogainstituteonline.org/childrens-regular-class-oncampus"
+        "content": "https://www.staging.theyogainstituteonline.org/childrens-regular-classes"
       },
       {
         "property": "og:sitename",
@@ -1999,7 +1993,7 @@
       }
     ]
   },
-  "/children's-weekend-class-oncampus": {
+  "/childrens-regular-classes-on-campus": {
     "title": "Children's Weekend Yoga Classes in Mumbai (On Campus)",
     "h1Tag": "Children's Weekend Class  (On Campus)",
     "h2Tags": [],
@@ -2022,7 +2016,7 @@
       },
       {
         "property": "og:url",
-        "content": "https://www.staging.theyogainstituteonline.org/children's-weekend-class-oncampus"
+        "content": "https://www.staging.theyogainstituteonline.org/childrens-regular-classes-on-campus"
       },
       {
         "property": "og:sitename",
@@ -2038,7 +2032,7 @@
       }
     ]
   },
-  "/yoga_by_the_bay": {
+  "/yoga-by-the-bay": {
     "title": "Yoga by the Bay - The Yoga Institute",
     "h1Tag": "YOGA BY THE BAY",
     "h2Tags": [],
@@ -2077,7 +2071,7 @@
       }
     ]
   },
-  "/fullmoon_meditation": {
+  "/full-moon-meditation": {
     "title": "Full Moon Meditation - The Yoga Institute",
     "h1Tag": "FULL MOON MEDITATION",
     "h2Tags": [],

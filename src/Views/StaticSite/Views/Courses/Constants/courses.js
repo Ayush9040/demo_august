@@ -4,7 +4,7 @@ const ttc200hr = {
   1: {
     id: '',
     templateId: 'COURSE200_1M_TTC',
-    key: 'batch-1-200hr',
+    key: 'one-month-ttc',
     batch: 1,
     metaDescription:
       'You will learn the tools to master your physical, mental and spiritual well-being. You will see a marked improvement in your life, relationships and work.',
@@ -323,7 +323,7 @@ const ttc200hr = {
   2: {
     id: '',
     templateId: 'COURSE200_1M_TTC2',
-    key: 'batch-2-200hr',
+    key: '200-hrs-part-time-ttc-on-campus-english',
     batch: 2,
     metaDescription:
       'You will learn the tools to master your physical, mental and spiritual well-being. You will see a marked improvement in your life, relationships and work.',
@@ -635,7 +635,7 @@ const ttc200hr = {
   3: {
     id: '',
     templateId: 'COURSE200_2M_TTC2',
-    key: 'batch-3-200hr',
+    key: '200-hrs-parttime-ttc-online-english',
     batch: 3,
     metaDescription:
       'You will learn the tools to master your physical, mental and spiritual well-being. You will see a marked improvement in your life, relationships and work.',
@@ -950,7 +950,7 @@ const ttc200hr = {
   4: {
     id: '',
     templateId: 'COURSE200_2M_TTC_HINDI',
-    key: 'batch-4-200hr',
+    key: '200-hrs-part-time-ttc-online',
     batch: 4,
     metaDescription:
       'You will learn the tools to master your physical, mental and spiritual well-being. You will see a marked improvement in your life, relationships and work.',
@@ -1262,7 +1262,7 @@ const ttc200hr = {
   5: {
     id: '',
     templateId: 'COURSE200_2M_TTC',
-    key: 'batch-5-200hr',
+    key: '200-hrs-parttime-ttc-online-english',
     batch: 5,
     metaDescription:
       'You will learn the tools to master your physical, mental and spiritual well-being. You will see a marked improvement in your life, relationships and work.',
@@ -1573,7 +1573,7 @@ const ttc200hr = {
   6: {
     id: '',
     templateId: 'COURSE200_3M_TTC',
-    key: 'batch-6-200hr',
+    key: 'weekend-teacher-training-course',
     batch: 6,
     metaDescription:
       'You will learn the tools to master your physical, mental and spiritual well-being. You will see a marked improvement in your life, relationships and work.',
@@ -1890,7 +1890,7 @@ const ttc500hr = {
   1: {
     id: '',
     templateId: 'COURSE500_3M_TTC',
-    key: '3-months-500hr',
+    key: '500-hrs-online-yoga-teacher-training-course-intermediate-level',
     batch: 1,
     metaDescription:
       'You will learn the tools to master your physical, mental and spiritual well-being. You will see a marked improvement in your life, relationships and work.',
@@ -2149,8 +2149,8 @@ const ttc500hr = {
 const ttc900hr = {
   1: {
     id: '',
-    templateId: '',
-    key: '3-months-ttc',
+    templateId: 'GENERAL_AUTO_EMAIL',
+    key: '3-months-advanced-teacher-training-course',
     batch: 1,
 
     metaDescription:
@@ -2657,7 +2657,7 @@ const ttc900hr = {
   2: {
     id: '',
     templateId: 'COURSE900_1Y_TTC',
-    key: '1-year-900hr',
+    key: 'one-year-ttc',
     batch: 1,
     metaDescription:
       'You will learn the tools to master your physical, mental and spiritual well-being. You will see a marked improvement in your life, relationships and work.',
@@ -3257,7 +3257,7 @@ const ttc900hr = {
   3: {
     id: '',
     templateId: 'COURSE900_2Y_TTC',
-    key: '2-year-900hr',
+    key: 'two-year-ttc',
     batch: 1,
 
     metaDescription:
@@ -3868,7 +3868,7 @@ const ttc900hr = {
   4: {
     id: '',
     templateId: 'COURSE900_4M_TTC',
-    key: '4-months-900hr',
+    key: '900-hours-advanced-teacher-training-course',
     batch: 1,
 
     metaDescription:
@@ -4466,7 +4466,7 @@ const ttc900hr = {
   5: {
     id: '',
     templateId: 'COURSE900_7M_TTC',
-    key: '7-months-900hr',
+    key: 'seven-month-ttc',
     batch: 1,
 
     metaDescription:
@@ -9185,7 +9185,7 @@ const classes = {
   1: {
     id: '',
     title: 'Advance Asana Regular Class - Online (Only for TYI Teachers) ',
-    key: 'advance-asana-regular-class',
+    key: 'advanced-regular-yoga-classes',
     batch: 1,
     templateId:'GENERAL_AUTO_EMAIL',
     mostPopular: false,
@@ -9328,7 +9328,7 @@ const classes = {
   3: {
     id: '',
     title: 'Asana Regular Classes - (Men & Women) - Online',
-    key: 'asana-regular-classes-men-women',
+    key: 'asana-regular-classes-online',
     batch: 1,
     templateId:'GENERAL_AUTO_EMAIL',
     image: `${baseDomain}${courseAssets.courseAsset81}`,
@@ -9504,7 +9504,7 @@ const classes = {
   4: {
     id: '',
     title: 'Asana Regular Classes for Men - On Campus  ',
-    key: 'asana-regular-classes-men-on-campus',
+    key: 'asana-regular-classes-on-campus',
     batch: 1,
     templateId:'GENERAL_AUTO_EMAIL',
     image: `${baseDomain}${courseAssets.courseAsset70}`,
@@ -9600,7 +9600,7 @@ const classes = {
   5: {
     id: '',
     title: 'Asana Regular Classes for Women - On Campus',
-    key: 'asana-regular-classes-for-women',
+    key: 'asana-regular-classes-on-campus-women',
     batch: 1,
     templateId:'GENERAL_AUTO_EMAIL',
     image: `${baseDomain}${courseAssets.courseAsset71}`,
@@ -10403,7 +10403,7 @@ const classes = {
   11: {
     id: '',
     title: 'Children\'s Regular Class - On Campus',
-    key: 'childrens-regular-class-oncampus',
+    key: 'childrens-regular-classes',
     batch: 1,
     templateId:'GENERAL_AUTO_EMAIL',
     image: `${baseDomain}${courseAssets.courseAsset76}`,
@@ -10471,7 +10471,7 @@ const classes = {
   12: {
     id: '',
     title: 'Children\'s Weekend Class - On Campus',
-    key: 'children\'s-weekend-class-oncampus',
+    key: 'childrens-regular-classes-on-campus',
     batch: 1,
     templateId:'GENERAL_AUTO_EMAIL',
     image: `${baseDomain}${courseAssets.courseAsset76}`,
@@ -10830,7 +10830,7 @@ const classes = {
   16: {
     id: '',
     title: 'Weekend Asana Classes - (Men & Women) - On Campus',
-    key: 'weekend-asana-classes-men-women-oncampus',
+    key: 'weekend-classes',
     batch: 1,
     templateId:'GENERAL_AUTO_EMAIL',
     image: `${baseDomain}${courseAssets.courseAsset77}`,
@@ -11285,6 +11285,91 @@ const classes = {
             'Note:',
           text: [
             'Please take the screenshot of your order receipt immediately after the payment is made to info@theyogainstitute.org'
+          ],
+        },
+      },
+    ],
+  },
+  20: {
+    id: '',
+    title: 'Weekend Asana Classes - (Men & Women) - Online',
+    key: 'weekend-classes-online',
+    batch: 1,
+    templateId: 'GENERAL_AUTO_EMAIL',
+    image: `${baseDomain}${homeAssets.homeAsset13}`,
+    cardImage: `${baseDomain}${homeAssets.homeAsset13}`,
+    mostPopular: false,
+    metaDescription:
+      'Weekend Yoga Regular Class is an excellent course for daily yoga practice.',
+    rating: 5,
+    colorCode: '#C48E8C',
+    timing: 'Saturday & Sunday: 7:30 am - 9:00 am  (IST)',
+    fees: {
+      onlineFee: 1000,
+      offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
+    },
+    category: 'classes',
+    dates: [],
+    online: true,
+    onCampus: false,
+    nonResidential: false,
+    residential: false,
+    certficate: false,
+    details: [
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: [
+            'Struggling to meet your yoga goals during the week? No worries, we got you! You have the option to register for regular weekend yoga class with The Yoga Institute. These are regular classes for those who are unable to attend on weekdays owing to other obligations. Weekend Yoga Regular Class is an excellent course for daily yoga practice. Asanas, Pranayamas, Kriyas, and food and Yogic lifestyle suggestions are all covered in these classes. Participants are divided into groups based on their health status, and each group receives distinct training. In addition, as needed, all students receive individual attention.',
+          ],
+        },
+      },
+      {
+        type: 'u-list',
+        content: {
+          title: 'Duration',
+          points: [
+            {
+              listItem:
+                'Classes are of 1 and half hour duration held every Saturday and sunday',
+              subItems: [],
+            },
+            {
+              listItem:
+                'A minimum attendance of 3 months is recommended, to experience the difference in your life. Can join on any day of the month.',
+              subItems: [],
+            },
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Timing',
+          text: ['Saturday & Sunday: 7:30 am - 9:00 am  (IST)'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Fees',
+          text: ['INR 1000'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: ['Please note : Classes will be conducted on Zoom'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: [
+            '*Note: Kindly note the fees once paid will not be refundable',
           ],
         },
       },

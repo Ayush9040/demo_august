@@ -370,25 +370,25 @@ const staticSiteRoutes = [
 
   {
     Component: YogaByTheBay,
-    path: '/highlights/yoga_by_the_bay',
+    path: '/yoga-by-the-bay',
     exact: true,
     id: 'statisSiteUnderHighlightsYogaByTheBay',
-    routePath: '/highlights/yoga_by_the_bay',
+    routePath: '/yoga-by-the-bay',
     name: 'YogaByTheBay',
   },
 
   {
     Component: SattvikCooking,
-    path: '/highlights/sattvik_cooking',
+    path: '/sattvik_cooking',
     exact: true,
     id: 'statisSiteUnderHighlightsSattvikCooking',
-    routePath: '/highlights/sattvik_cooking',
+    routePath: '/sattvik_cooking',
     name: 'SattvikCooking',
   },
 
   {
     Component: CorporateWorkshop,
-    path: '/highlights/corporate_workshop',
+    path: '/corporate_workshop',
     exact: true,
     id: 'statisSiteUnderHighlightsCorporateWorkshop',
     routePath: '/highlights/corporate_workshop',
@@ -397,18 +397,18 @@ const staticSiteRoutes = [
 
   {
     Component: FullmoonMeditation,
-    path: '/highlights/fullmoon_meditation',
+    path: '/fullmoon_meditation',
     exact: true,
     id: 'statisSiteUnderHighlightsFullmoonMeditation',
-    routePath: '/highlights/fullmoon_meditation',
+    routePath: '/fullmoon_meditation',
     name: 'FullmoonMedit3000ation',
   },
   {
     Component: OnlineTution,
-    path: '/highlights/online_tuition',
+    path: '/online_tuition',
     exact: true,
     id: 'statisSiteUnderHighlightsOnlineTuotion',
-    routePath: '/highlights/online_tuition',
+    routePath: '/online_tuition',
     name: 'OnlineTuition',
   },
   //Soci
