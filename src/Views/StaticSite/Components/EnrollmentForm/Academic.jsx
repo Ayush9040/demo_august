@@ -100,7 +100,7 @@ const Academic = ({
           </div>
           {empty === 1 && (
             <small>
-              *Please Enter Your Deatils!
+              *Please Enter Your Details!
             </small>
           )}
         </div>
