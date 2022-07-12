@@ -277,7 +277,7 @@ const MegaMenu = ({ setNav }) => {
                     3 Months TTC-Online-English
                   </li>
                 </Link>
-                <li className="text-bold">900 Hour Courses</li>
+                <li className="text-bold">900 Hour Courses (Advance)</li>
                 <Link onClick={() => {setNav(false)}}  to="/courses/course/3-months-ttc/">
                   <li>3 Months TTC-On Campus-English</li>
                 </Link>
@@ -412,6 +412,7 @@ const MegaMenu = ({ setNav }) => {
                 <Link onClick={() => {setNav(false)}}  to='/courses/course/life-management-camp/'><li>Life Management Camp</li></Link>
                 <Link onClick={() => {setNav(false)}}  to='/courses/course/senior-citizen-workshop/'><li>Senior citizen Workshop</li></Link>
                 <Link onClick={() => {setNav(false)}}  to='/courses/course/diet-workshop/'><li>Diet Workshop</li></Link>
+                <Link onClick={() => {setNav(false)}}  to='/courses/course/diabetes-camp/'><li>Diabetes Workshop</li></Link>
               </ul>
               <Link onClick={() => {setNav(false)}}  to='/highlights/corporate_workshop'>
                 <h3>Corporate Workshop</h3></Link>

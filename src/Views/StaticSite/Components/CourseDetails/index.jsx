@@ -141,7 +141,7 @@ const CourseDetails = ({ pageDate }) => {
   }
 
   return (
-    <div className="course-detail-page">
+    <div className="course-detail-page" id='registration'   >
       <div className="main-section" style={{ background: '#C9705F' }}>
         <div className="course-info">
           <h1>
@@ -162,7 +162,7 @@ const CourseDetails = ({ pageDate }) => {
             {pageDate.metaDescription ||
               'Lorem Ipsum is simply dummy text of the printing and typesetting industry. '}
           </p>
-          <div className="course-options">
+          <div className="course-options"  >
             {/* {selectDate ? <Link to={ isLoggedIn ? `/enrollment/${pageDate.key}/?date=${selectDate}`:`/user/sign-in/${pageDate.key}/?date=${selectDate}`}>
               <CommonBtn text={'Enroll Now'} />
             </Link> :  scroll() } */}

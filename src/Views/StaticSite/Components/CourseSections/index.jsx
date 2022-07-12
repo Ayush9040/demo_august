@@ -54,7 +54,7 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange })
       },
       {
         id: 3,
-        ques: '900 Hour Courses',
+        ques: '900 Hour Courses(Advance)',
         ans: [{ url: '/courses/course/3-months-ttc/', text: '3 Months TTC-On Campus-English' },
           { url: '/courses/course/4-months-900hr/', text: '4 Months TTC-On Campus-English' },
           { url: '/courses/course/7-months-900hr/', text: '7 Months TTC-Online & On Campus-English' },
