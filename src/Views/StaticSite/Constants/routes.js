@@ -379,19 +379,19 @@ const staticSiteRoutes = [
 
   {
     Component: SattvikCooking,
-    path: '/sattvik_cooking',
+    path: '/sattvik-cooking',
     exact: true,
     id: 'statisSiteUnderHighlightsSattvikCooking',
-    routePath: '/sattvik_cooking',
+    routePath: '/sattvik-cooking',
     name: 'SattvikCooking',
   },
 
   {
     Component: CorporateWorkshop,
-    path: '/corporate_workshop',
+    path: '/corporate-workshops',
     exact: true,
     id: 'statisSiteUnderHighlightsCorporateWorkshop',
-    routePath: '/highlights/corporate_workshop',
+    routePath: '/corporate-workshops',
     name: 'CorporateWorkshop',
   },
 
@@ -405,10 +405,10 @@ const staticSiteRoutes = [
   },
   {
     Component: OnlineTution,
-    path: '/online_tuition',
+    path: '/home-tuitions',
     exact: true,
     id: 'statisSiteUnderHighlightsOnlineTuotion',
-    routePath: '/online_tuition',
+    routePath: '/home-tuitions',
     name: 'OnlineTuition',
   },
   //Soci

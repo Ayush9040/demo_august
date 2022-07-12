@@ -2036,7 +2036,7 @@
       },
       {
         "property": "og:url",
-        "content": "https://www.staging.theyogainstituteonline.org/yoga_by_the_bay"
+        "content": "https://www.staging.theyogainstituteonline.org/yoga-by-the-bay"
       },
       {
         "property": "og:sitename",
@@ -2075,7 +2075,7 @@
       },
       {
         "property": "og:url",
-        "content": "https://www.staging.theyogainstituteonline.org/fullmoon_meditation"
+        "content": "https://www.staging.theyogainstituteonline.org/fullmoon-meditation"
       },
       {
         "property": "og:sitename",
@@ -2364,7 +2364,7 @@
       }
     ]
   },
-  "/samattvam-health-checkup": {
+  "/samattvam": {
     "title": "Samattvam - The Yoga Institute",
     "h1Tag": "Samattvam",
     "h2Tags": [],
@@ -2387,7 +2387,7 @@
       },
       {
         "property": "og:url",
-        "content": "https://www.staging.theyogainstituteonline.org/samattvam-health-checkup"
+        "content": "https://www.staging.theyogainstituteonline.org/samattvam"
       },
       {
         "property": "og:sitename",
@@ -2481,7 +2481,7 @@
       }
     ]
   },
-  "/7-days-heath-camp-on-campus-english": {
+  "/7-days-camp-english": {
     "title": "7 Days Health Camp – “Insight into Yoga” (English)",
     "h1Tag": "7 Days Health Camp – “Insight into Yoga” (English)",
     "h2Tags": [],
@@ -2504,7 +2504,7 @@
       },
       {
         "property": "og:url",
-        "content": "https://www.staging.theyogainstituteonline.org/7-days-heath-camp-on-campus-english"
+        "content": "https://www.staging.theyogainstituteonline.org/7-days-camp-english"
       },
       {
         "property": "og:sitename",
@@ -2559,7 +2559,7 @@
       }
     ]
   },
-  "/batch1-21days-morning-oncampus": {
+  "/21-days-better-living-course": {
     "title": "21 Days Better Living Course (On Campus) - The Yoga Institute",
     "h1Tag": "21 Days Better Living Course (On Campus)",
     "h2Tags": [],
@@ -2582,7 +2582,7 @@
       },
       {
         "property": "og:url",
-        "content": "https://www.staging.theyogainstituteonline.org/batch1-21days-morning-oncampus"
+        "content": "https://www.staging.theyogainstituteonline.org/21-days-better-living-course"
       },
       {
         "property": "og:sitename",
@@ -2598,7 +2598,7 @@
       }
     ]
   },
-  "/21-days-blc-batch4": {
+  "/21-days-better-living-course-batch-4": {
     "title": "21 Days Better Living Course (Online) - The Yoga Institute",
     "h1Tag": "21 Days Better Living Course (Online)",
     "h2Tags": [],
@@ -2621,7 +2621,7 @@
       },
       {
         "property": "og:url",
-        "content": "https://www.staging.theyogainstituteonline.org/21-days-blc-batch4"
+        "content": "https://www.staging.theyogainstituteonline.org/21-days-better-living-course-batch-4"
       },
       {
         "property": "og:sitename",
@@ -2637,7 +2637,7 @@
       }
     ]
   },
-  "/corporate_workshop": {
+  "/corporate-workshop": {
     "title": "Corporate Workshops- The Yoga Institute Santacruz East Mumbai",
     "h1Tag": "Corporate Workshops",
     "h2Tags": [],
@@ -2660,7 +2660,7 @@
       },
       {
         "property": "og:url",
-        "content": "https://www.staging.theyogainstituteonline.org/corporate_workshop"
+        "content": "https://www.staging.theyogainstituteonline.org/corporate-workshop"
       },
       {
         "property": "og:sitename",
@@ -2676,7 +2676,7 @@
       }
     ]
   },
-  "/online_tuition": {
+  "/home-tuitions": {
     "title": "Home Tuitions- The Yoga Institute Santacruz East Mumbai",
     "h1Tag": "Home Tuitions",
     "h2Tags": [],
@@ -2699,7 +2699,7 @@
       },
       {
         "property": "og:url",
-        "content": "https://www.staging.theyogainstituteonline.org/online_tuition"
+        "content": "https://www.staging.theyogainstituteonline.org/home-tuitions"
       },
       {
         "property": "og:sitename",
@@ -2715,7 +2715,7 @@
       }
     ]
   },
-  "/couples-classes-online": {
+  "/couples-classes": {
     "title": "Couples Classes- The Yoga Institute Santacruz East Mumbai",
     "h1Tag": "Couples’ Classes",
     "h2Tags": [],
@@ -2738,7 +2738,7 @@
       },
       {
         "property": "og:url",
-        "content": "https://www.staging.theyogainstituteonline.org/couples-classes-online"
+        "content": "https://www.staging.theyogainstituteonline.org/couples-classes"
       },
       {
         "property": "og:sitename",
@@ -2754,7 +2754,7 @@
       }
     ]
   },
-  "/7-days-heath-camp-on-campus": {
+  "/7-days-camp": {
     "title": "7 Days Health Camp – “Insight into Yoga” (Hindi)",
     "h1Tag": "7 Days Health Camp – “Insight into Yoga” (Hindi)",
     "h2Tags": [],
@@ -2777,7 +2777,7 @@
       },
       {
         "property": "og:url",
-        "content": "https://www.staging.theyogainstituteonline.org/7-days-heath-camp-on-campus"
+        "content": "https://www.staging.theyogainstituteonline.org/7-days-camp"
       },
       {
         "property": "og:sitename",
@@ -2793,7 +2793,7 @@
       }
     ]
   },
-  "/21-days-blc-batch2": {
+  "/21-days-better-living-course-batch-2": {
     "title": "21 Days Better Living Course (On Campus) - The Yoga Institute",
     "h1Tag": "21 Days Better Living Course (On Campus)",
     "h2Tags": [],
@@ -2816,7 +2816,7 @@
       },
       {
         "property": "og:url",
-        "content": "https://www.staging.theyogainstituteonline.org/21-days-blc-batch2"
+        "content": "https://www.staging.theyogainstituteonline.org/21-days-better-living-course-batch-2"
       },
       {
         "property": "og:sitename",
@@ -2832,7 +2832,7 @@
       }
     ]
   },
-  "/21-days-blc-batch3": {
+  "/21-days-better-living-course-batch-3": {
     "title": "21 Days Better Living Course (On Campus) - The Yoga Institute",
     "h1Tag": "21 Days Better Living Course (On Campus)",
     "h2Tags": [],
@@ -2855,7 +2855,7 @@
       },
       {
         "property": "og:url",
-        "content": "https://www.staging.theyogainstituteonline.org/21-days-blc-batch3"
+        "content": "https://www.staging.theyogainstituteonline.org/21-days-better-living-course-batch-3"
       },
       {
         "property": "og:sitename",

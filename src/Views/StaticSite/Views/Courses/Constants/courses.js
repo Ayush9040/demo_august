@@ -7198,7 +7198,7 @@ const camps = {
   17: {
     id: '',
     title: '7 Days Health Camp - On Campus - Hindi ',
-    key: '7-days-heath-camp-on-campus',
+    key: '7-days-camp',
     batch: 1,
     templateId: 'CAMP_FOR_7_DAYS_HEALTH',
     dates: ['13th August 2022', '12th November 2022'],
@@ -7546,7 +7546,7 @@ const camps = {
     id: '',
     title:
       '21 Days BLC - Batch 2 - 21 Days BLC - Evening - Online & On Campus - English',
-    key: '21-days-blc-batch2',
+    key: '21-days-better-living-course-batch-2',
     batch: 2,
     templateId:'GENERAL_AUTO_EMAIL',
     dates: [
@@ -7864,7 +7864,7 @@ const camps = {
     id: '',
     title:
       '21 Days BLC - Batch 3 - 21 Days BLC - Evening - Online & On Campus - Hindi ',
-    key: '21-days-blc-batch3',
+    key: '21-days-better-living-course-batch-3',
     batch: 3,
     templateId:'GENERAL_AUTO_EMAIL',
     dates: [
@@ -8182,7 +8182,7 @@ const camps = {
   20: {
     id: '',
     title: '21 Days BLC - Batch 4 - 21 Days BLC - Morning - Online - English',
-    key: '21-days-blc-batch4',
+    key: '21-days-better-living-course-batch-4',
     batch: 4,
     templateId:'GENERAL_AUTO_EMAIL',
     dates: [
@@ -8506,7 +8506,7 @@ const camps = {
   21: {
     id: '',
     title: '7 Days Health Camp - On Campus - English',
-    key: '7-days-heath-camp-on-campus-english',
+    key: '7-days-camp-englis',
     batch: 1,
     templateId: 'CAMP_FOR_7_DAYS_HEALTH',
     dates: [
@@ -8861,7 +8861,7 @@ const camps = {
   22: {
     id: '',
     title: '21-Days BLC - Batch 1 - 21 Days BLC - Morning On Campus - English',
-    key: 'batch1-21days-morning-oncampus',
+    key: '21-days-better-living-course',
     templateId:'GENERAL_AUTO_EMAIL',
     batch: 1,
     dates: [
@@ -9704,7 +9704,7 @@ const classes = {
   6: {
     id: '',
     title: 'Certificate Course on Advanced Pranayama Techniques - Online',
-    key: 'certification-course-on-advanced-pranayam',
+    key: 'certificate-course-on-advanced-pranayama-techniques',
     batch: 1,
     templateId:'GENERAL_AUTO_EMAIL',
     image: `${baseDomain}${courseAssets.courseAsset72}`,
@@ -9910,7 +9910,7 @@ const classes = {
   8: {
     id: '',
     title: 'Certificate Program on Yoga for Cancer - Online    ',
-    key: 'certification-program-on-yoga-cancer-online',
+    key: 'certificate-program-on-yoga-for-cancer',
     batch: 1,
     templateId:'GENERAL_AUTO_EMAIL',
     image: `${baseDomain}${courseAssets.courseAsset74}`,
@@ -11061,7 +11061,7 @@ const classes = {
   18: {
     id: '',
     title: 'Samattvam (Health Checkup) - On Campus',
-    key: 'samattvam-health-checkup',
+    key: 'samattvam',
     batch: 1,
     templateId:'GENERAL_AUTO_EMAIL',
     image: `${baseDomain}${homeAssets.homeAsset16}`,
@@ -11169,7 +11169,7 @@ const classes = {
   19: {
     id: '',
     title: 'Couples’ Classes  - Online',
-    key: 'couples-classes-online',
+    key: 'couples-classes',
     batch: 1,
     templateId:'GENERAL_AUTO_EMAIL',
     image: `${baseDomain}${homeAssets.homeAsset13}`,

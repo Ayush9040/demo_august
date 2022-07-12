@@ -27,27 +27,27 @@ export const activityData = [
     description:
       ' The Institute arranges for experienced teachers to conduct sessions at home, at a mutually convenient time, for individuals or a group.',
     image: `${baseDomain}${homeAssets.homeAsset15}`,
-    url: '/online_tuition',
+    url: '/home-tuitions',
   },
   {
     title: 'Samattvam',
     description:
       'This is a health counseling program with a team of doctors and experts to support and guide you on your health concerns and help you with yogic solutions.',
     image: `${baseDomain}${homeAssets.homeAsset16}`,
-    url: '/samattvam-health-checkup/',
+    url: '/samattvam',
   },
   {
     title: 'Corporate workshops',
     description:
       'Special stress management and wellness programs are conducted for organizations to help employees balance their work stresses, improve productivity, decision and leadership skills and build a positive work environment.',
     image: `${baseDomain}${homeAssets.homeAsset17}`,
-    url: '/corporate_workshop',
+    url: '/corporate-workshops',
   },
   {
     title: 'Sattvik Cooking Book',
     description:
       'This book, authored by Dr. Hansaji Yogendra, contains recipes of traditional and contemporary food items, all created with a sattvic and ayurvedic perspective.',
     image: `${baseDomain}${homeAssets.homeAsset18}`,
-    url: '/sattvik_cooking',
+    url: '/sattvik-cooking',
   },
 ]
