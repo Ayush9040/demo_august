@@ -55,6 +55,7 @@ const Facts = lazy(()=>import('../Views/Facts/Views/our-facts'))
 // import Facts from '../Views/Facts'
 // import Gift from '../Views/Gifting'
 import Authentication from '../Views/Authentication'
+import BlogAnother from '../Views/Blogs/Views/Blog'
 // import VolunteerPage from '../Views/Volunteer'
 
 const staticSiteRoutes = [
@@ -286,6 +287,14 @@ const staticSiteRoutes = [
     name: 'Yogasattva',
   },
   //Blogs
+  {
+    Component: BlogAnother,
+    path: '/blog/:blogId',
+    exact: true,
+    id: 'statisSiteBlog',
+    routePath: '/blog/:blogId',
+    name: 'Blog',
+  },
   {
     Component: BlogPage,
     path: '/blog',

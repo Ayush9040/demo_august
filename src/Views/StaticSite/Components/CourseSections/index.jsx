@@ -32,7 +32,7 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange })
             text: 'Batch 4 - 2 Months TTC - Online - Hindi',
           },
           {
-            url: '/200-hrs-parttime-ttc-online-english/',
+            url: '/200-hrs-parttime-ttc-online-english-batch-5/',
             text: 'Batch 5 - 2 Months TTC - Online - English',
           },
           {

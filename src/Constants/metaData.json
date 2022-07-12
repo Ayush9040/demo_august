@@ -1373,6 +1373,51 @@
       }
     ]
   },
+  "/200-hrs-parttime-ttc-online-english-batch-5": {
+    "title": "Part Time TTC 200 Hrs (Online-English | Aug-Oct) - The Yoga Institute",
+    "h1Tag": "200 Hrs Part Time TTC (Online-English | Aug-Oct)",
+    "h2Tags": [
+      "A – KNOWLEDGE",
+      "B – SKILL",
+      "ONLINE",
+      "EXAM SCHEDULE",
+      "REGISTRATION GUIDELINES FOR STUDENTS/PARTICIPANTS"
+    ],
+    "metaData": [
+      {
+        "name": "keywords",
+        "content": "online teacher training course 200 hours, 200 hours teacher training course, online ttc course, 200 hours part time"
+      },
+      {
+        "name": "description",
+        "content": "Ideal for Yoga novices this course covers an introduction to the study of Patanjali’s Yoga Sutra, Hatha Yoga Pradipika, and Gheranda Samhita."
+      },
+      {
+        "property": "og:description",
+        "content": "Ideal for Yoga novices this course covers an introduction to the study of Patanjali’s Yoga Sutra, Hatha Yoga Pradipika, and Gheranda Samhita."
+      },
+      {
+        "property": "og:title",
+        "content": "Part Time TTC 200 Hrs (Online-English | Aug-Oct) - The Yoga Institute"
+      },
+      {
+        "property": "og:url",
+        "content": "https://www.staging.theyogainstituteonline.org/200-hrs-parttime-ttc-online-english"
+      },
+      {
+        "property": "og:sitename",
+        "content": "The Yoga Institue"
+      },
+      {
+        "property": "og:image",
+        "content": "http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Courses/TTC/200_hrs_TTC.jpg"
+      },
+      {
+        "property": "og:type",
+        "content": "Website"
+      }
+    ]
+  },
   "/200-hrs-part-time-ttc-online": {
     "title": "200 Hrs Part Time TTC (Online Hindi) - The Yoga Institute",
     "h1Tag": "200 Hrs Part Time TTC (Hindi Online)",

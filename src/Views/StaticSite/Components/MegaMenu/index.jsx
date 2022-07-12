@@ -262,7 +262,7 @@ const MegaMenu = ({ setNav }) => {
                 <Link  onClick={() => {setNav(false)}} to="/200-hrs-part-time-ttc-online/">
                   <li>Batch 4 - 2 Months TTC-Online-Hindi</li>
                 </Link>
-                <Link  onClick={() => {setNav(false)}} to="/200-hrs-parttime-ttc-online-english/">
+                <Link  onClick={() => {setNav(false)}} to="/200-hrs-parttime-ttc-online-english-batch-5/">
                   <li>Batch 5 - 2 Months TTC-Online-English</li>
                 </Link>
                 <Link  onClick={() => {setNav(false)}} to="/weekend-teacher-training-course/">

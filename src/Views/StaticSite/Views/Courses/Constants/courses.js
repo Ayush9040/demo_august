@@ -1262,7 +1262,7 @@ const ttc200hr = {
   5: {
     id: '',
     templateId: 'COURSE200_2M_TTC',
-    key: '200-hrs-parttime-ttc-online-english',
+    key: '200-hrs-parttime-ttc-online-english-batch-5',
     batch: 5,
     metaDescription:
       'You will learn the tools to master your physical, mental and spiritual well-being. You will see a marked improvement in your life, relationships and work.',

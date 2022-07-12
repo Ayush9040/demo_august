@@ -37,7 +37,7 @@ const BlogPage = () => {
             </h2>
             <p>{allBlogData[0].metaDescription}</p>
             <div className="options">
-              <Link to={`/blogs/blog/${allBlogData[0].id}`}>
+              <Link to={`/blog/${allBlogData[0].id}`}>
                 <button>Read Story</button>
               </Link>
               {/* <div className="share-icon">{share}</div> */}
@@ -63,7 +63,7 @@ const BlogPage = () => {
                     title={item.title}
                     bgImage={item.image}
                     desc={item.metaDescription}
-                    url={`/blogs/blog/${item.id}`}
+                    url={`/blog/${item.id}`}
                   />
                 )
               }
