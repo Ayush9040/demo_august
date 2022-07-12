@@ -1078,7 +1078,7 @@
       },
       {
         "property": "og:url",
-        "content": "https://www.staging.theyogainstituteonline.org/facts"
+        "content": "https://www.staging.theyogainstituteonline.org/our-facts"
       },
       {
         "property": "og:sitename",
@@ -1117,7 +1117,7 @@
       },
       {
         "property": "og:url",
-        "content": "https://www.staging.theyogainstituteonline.org/alumni"
+        "content": "https://www.staging.theyogainstituteonline.org/alumni-gallery"
       },
       {
         "property": "og:sitename",
@@ -1251,6 +1251,4 @@
     ]
   }
 
-
-  
 }
