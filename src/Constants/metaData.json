@@ -326,7 +326,7 @@
       },
       {
         "property": "og:image",
-        "content": ""
+        "content": "http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Publications/Library/hero.jpg"
       },
       {
         "property": "og:type",
@@ -404,7 +404,7 @@
       },
       {
         "property": "og:image",
-        "content": ""
+        "content": "http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Facilities/Yogic%20Halls/yogahalls.jpg"
       },
       {
         "property": "og:type",
@@ -639,7 +639,7 @@
       },
       {
         "property": "og:image",
-        "content": ""
+        "content": "http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Media/gallery/igceremony.jpg"
       },
       {
         "property": "og:type",
@@ -813,7 +813,7 @@
       },
       {
         "property": "og:image",
-        "content": ""
+        "content": "http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Home/Blogs/Blog2.jpg"
       },
       {
         "property": "og:type",
@@ -930,7 +930,7 @@
       },
       {
         "property": "og:image",
-        "content": ""
+        "content": "http://ecom-static-site.oss-ap-south-1.aliyuncs.com/cerificates/YCB-logo.PNG"
       },
       {
         "property": "og:type",
@@ -969,7 +969,7 @@
       },
       {
         "property": "og:image",
-        "content": ""
+        "content": "http://ecom-static-site.oss-ap-south-1.aliyuncs.com/wellness/Our_offerings_right.png"
       },
       {
         "property": "og:type",
@@ -1008,7 +1008,7 @@
       },
       {
         "property": "og:image",
-        "content": ""
+        "content": "http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Home/Experience/shriramnathkovid.png"
       },
       {
         "property": "og:type",
@@ -1249,8 +1249,1263 @@
         "content": "Website"
       }
     ]
+  },
+  "/batch-1-200hr": {
+    "title": "One Month Yoga Teacher Training Course In Mumbai, India",
+    "h1Tag": "",
+    "h2Tags": [
+      "A – KNOWLEDGE",
+      "B – SKILL",
+      "ONLINE",
+      "EXAM SCHEDULE",
+      "ON-CAMPUS",
+      "REGISTRATION GUIDELINES FOR STUDENTS/PARTICIPANTS"
+    ],
+    "metaData": [
+      {
+        "name": "keywords",
+        "content": "One Month Yoga Teacher Training Course, yoga training course, yoga teacher training, yoga training, short term yoga courses"
+      },
+      {
+        "name": "description",
+        "content": "If you are looking for One Month Yoga Teacher Training Course by TYI. in this program we cover theoretical and practical aspects of Yoga.Our 200 hour yoga teacher training course is eligible to apply on our yoga alliance site and register as a yoga teacher."
+      },
+      {
+        "property": "og:description",
+        "content": "If you are looking for One Month Yoga Teacher Training Course by TYI. in this program we cover theoretical and practical aspects of Yoga.Our 200 hour yoga teacher training course is eligible to apply on our yoga alliance site and register as a yoga teacher."
+      },
+      {
+        "property": "og:title",
+        "content": "One Month Yoga Teacher Training Course In Mumbai, India"
+      },
+      {
+        "property": "og:url",
+        "content": "https://www.staging.theyogainstituteonline.org/batch-1-200hr"
+      },
+      {
+        "property": "og:sitename",
+        "content": "The Yoga Institue"
+      },
+      {
+        "property": "og:image",
+        "content": "http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Courses/TTC/200_hrs_TTC.jpg"
+      },
+      {
+        "property": "og:type",
+        "content": "Website"
+      }
+    ]
+  },
+  "/batch-2-200hr": {
+    "title": "200 Hrs Part Time TTC (On Campus-English | May) - The Yoga Institute",
+    "h1Tag": "200 Hrs Part Time TTC (English On Campus)",
+    "h2Tags": [
+      "A – KNOWLEDGE",
+      "B – SKILL",
+      "EXAM SCHEDULE",
+      "ON-CAMPUS",
+      "REGISTRATION GUIDELINES FOR STUDENTS/PARTICIPANTS"
+    ],
+    "metaData": [
+      {
+        "name": "keywords",
+        "content": "200 Hrs Part Time TTC, on campus yoga ttc, two months part time ttc course, teacher training course"
+      },
+      {
+        "name": "description",
+        "content": "The Yoga Institute pioneered techniques and Bhavas. Detailed anatomy and physiology classes conducted by Yoga experts will cover theory and practice."
+      },
+      {
+        "property": "og:description",
+        "content": "The Yoga Institute pioneered techniques and Bhavas. Detailed anatomy and physiology classes conducted by Yoga experts will cover theory and practice."
+      },
+      {
+        "property": "og:title",
+        "content": "200 Hrs Part Time TTC (On Campus-English | May) - The Yoga Institute"
+      },
+      {
+        "property": "og:url",
+        "content": "https://www.staging.theyogainstituteonline.org/batch-2-200hr"
+      },
+      {
+        "property": "og:sitename",
+        "content": "The Yoga Institue"
+      },
+      {
+        "property": "og:image",
+        "content": "http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Courses/TTC/200_hrs_TTC.jpg"
+      },
+      {
+        "property": "og:type",
+        "content": "Website"
+      }
+    ]
+  },
+  "/batch-3-200hr": {
+    "title": "Part Time TTC 200 Hrs (Online-English | Aug-Oct) - The Yoga Institute",
+    "h1Tag": "200 Hrs Part Time TTC (Online-English | Aug-Oct)",
+    "h2Tags": [
+      "A – KNOWLEDGE",
+      "B – SKILL",
+      "ONLINE",
+      "EXAM SCHEDULE",
+      "REGISTRATION GUIDELINES FOR STUDENTS/PARTICIPANTS"
+    ],
+    "metaData": [
+      {
+        "name": "keywords",
+        "content": "online teacher training course 200 hours, 200 hours teacher training course, online ttc course, 200 hours part time"
+      },
+      {
+        "name": "description",
+        "content": "Ideal for Yoga novices this course covers an introduction to the study of Patanjali’s Yoga Sutra, Hatha Yoga Pradipika, and Gheranda Samhita."
+      },
+      {
+        "property": "og:description",
+        "content": "Ideal for Yoga novices this course covers an introduction to the study of Patanjali’s Yoga Sutra, Hatha Yoga Pradipika, and Gheranda Samhita."
+      },
+      {
+        "property": "og:title",
+        "content": "Part Time TTC 200 Hrs (Online-English | Aug-Oct) - The Yoga Institute"
+      },
+      {
+        "property": "og:url",
+        "content": "https://www.staging.theyogainstituteonline.org/batch-3-200hr"
+      },
+      {
+        "property": "og:sitename",
+        "content": "The Yoga Institue"
+      },
+      {
+        "property": "og:image",
+        "content": "http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Courses/TTC/200_hrs_TTC.jpg"
+      },
+      {
+        "property": "og:type",
+        "content": "Website"
+      }
+    ]
+  },
+  "/batch-4-200hr": {
+    "title": "200 Hrs Part Time TTC (Online Hindi) - The Yoga Institute",
+    "h1Tag": "200 Hrs Part Time TTC (Hindi Online)",
+    "h2Tags": [
+      "A – KNOWLEDGE",
+      "B – SKILL",
+      "ONLINE",
+      "EXAM SCHEDULE",
+      "REGISTRATION GUIDELINES FOR STUDENTS/PARTICIPANTS"
+    ],
+    "metaData": [
+      {
+        "name": "keywords",
+        "content": "200 hrs ttc online, 200 hours teacher training course, online ttc course, Yoga Teacher Training Course"
+      },
+      {
+        "name": "description",
+        "content": "The most popular One Month Teachers training course is now online. This 200 hours teacher training program provides a basic certificate in Yoga."
+      },
+      {
+        "property": "og:description",
+        "content": "The most popular One Month TeachersThe most popular One Month Teachers training course is now online. This 200 hours teacher training program provides a basic certificate in Yoga. training course is now online. This 200 hours teacher training program provides a basic certificate in Yoga."
+      },
+      {
+        "property": "og:title",
+        "content": "200 Hrs Part Time TTC (Online Hindi) - The Yoga Institute"
+      },
+      {
+        "property": "og:url",
+        "content": "https://www.staging.theyogainstituteonline.org/batch-4-200hr"
+      },
+      {
+        "property": "og:sitename",
+        "content": "The Yoga Institue"
+      },
+      {
+        "property": "og:image",
+        "content": "http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Courses/TTC/200_hrs_TTC.jpg"
+      },
+      {
+        "property": "og:type",
+        "content": "Website"
+      }
+    ]
+  },
+  "/batch-5-200hr": {
+    "title": "200 Hrs Part Time TTC (English | Aug-Oct) - The Yoga Institute",
+    "h1Tag": "200 Hrs Part Time TTC (Online-English)",
+    "h2Tags": [
+      "A – KNOWLEDGE",
+      "B – SKILL",
+      "ONLINE",
+      "EXAM SCHEDULE",
+      "REGISTRATION GUIDELINES FOR STUDENTS/PARTICIPANTS"
+    ],
+    "metaData": [
+      {
+        "name": "keywords",
+        "content": " 200 hour yoga teacher training, Teacher Training, Yoga Teacher Training , teacher training course"
+      },
+      {
+        "name": "description",
+        "content": "This is RYT 200 hrs part-time basic TTC, fully accredited with the Yoga Alliance USA and the participant is eligible to apply on Yoga Alliance site."
+      },
+      {
+        "property": "og:description",
+        "content": "This is RYT 200 hrs part-time basic TTC, fully accredited with the Yoga Alliance USA and the participant is eligible to apply on Yoga Alliance site."
+      },
+      {
+        "property": "og:title",
+        "content": "200 Hrs Part Time TTC (English | Aug-Oct) - The Yoga Institute"
+      },
+      {
+        "property": "og:url",
+        "content": "https://www.staging.theyogainstituteonline.org/batch-5-200hr"
+      },
+      {
+        "property": "og:sitename",
+        "content": "The Yoga Institue"
+      },
+      {
+        "property": "og:image",
+        "content": "http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Courses/TTC/200_hrs_TTC.jpg"
+      },
+      {
+        "property": "og:type",
+        "content": "Website"
+      }
+    ]
+  },
+  "/batch-6-200hr": {
+    "title": "Weekend Teacher Training Course (Aug-Nov) - The Yoga Institute",
+    "h1Tag": "Weekend Teacher Training Course (Aug to Nov)",
+    "h2Tags": [
+      "A – KNOWLEDGE",
+      "B – SKILL",
+      "ONLINE",
+      "EXAM SCHEDULE",
+      "REGISTRATION GUIDELINES FOR STUDENTS/PARTICIPANTS"
+    ],
+    "metaData": [
+      {
+        "name": "keywords",
+        "content": "200 hours yoga teacher training online, 200 hrs ttc online english,  weekend teacher, 200 hours teacher training course, online ttc course, 200 hours part time"
+      },
+      {
+        "name": "description",
+        "content": "This is RYT 200 hrs part-time basic TTC, fully accredited with the Yoga Alliance USA and the participant is eligible to apply on Yoga Alliance site."
+      },
+      {
+        "property": "og:description",
+        "content": "This is RYT 200 hrs part-time basic TTC, fully accredited with the Yoga Alliance USA and the participant is eligible to apply on Yoga Alliance site."
+      },
+      {
+        "property": "og:title",
+        "content": "Weekend Teacher Training Course (Aug-Nov) - The Yoga Institute"
+      },
+      {
+        "property": "og:url",
+        "content": "https://www.staging.theyogainstituteonline.org/batch-6-200hr"
+      },
+      {
+        "property": "og:sitename",
+        "content": "The Yoga Institue"
+      },
+      {
+        "property": "og:image",
+        "content": "http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Courses/TTC/200_hrs_TTC.jpg"
+      },
+      {
+        "property": "og:type",
+        "content": "Website"
+      }
+    ]
+  },
+  "/3-months-500hr": {
+    "title": "500 Hrs Online Yoga TTC Intermediate Level (May-Aug) - The Yoga Institute",
+    "h1Tag": "500 Hrs Online Yoga TTC Intermediate Level",
+    "h2Tags": [],
+    "metaData": [
+      {
+        "name": "keywords",
+        "content": "500 hrs ttc intermediate level, 500 hour yoga teacher training, 3 month yoga teacher training"
+      },
+      {
+        "name": "description",
+        "content": "The 500 + hours part-time program is Teachers’ Training certificate course that prepares students for teaching Yoga techniques to normal adults."
+      },
+      {
+        "property": "og:description",
+        "content": "The 500 + hours part-time program is Teachers’ Training certificate course that prepares students for teaching Yoga techniques to normal adults."
+      },
+      {
+        "property": "og:title",
+        "content": "500 Hrs Online Yoga TTC Intermediate Level (May-Aug) - The Yoga Institute"
+      },
+      {
+        "property": "og:url",
+        "content": "https://www.staging.theyogainstituteonline.org/3-months-500hr"
+      },
+      {
+        "property": "og:sitename",
+        "content": "The Yoga Institue"
+      },
+      {
+        "property": "og:image",
+        "content": "http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Courses/TTC/500_hrs_TTC.jpg"
+      },
+      {
+        "property": "og:type",
+        "content": "Website"
+      }
+    ]
+  },
+  "/3-months-ttc": {
+    "title": "3 Months Advanced Teacher Training Course - The Yoga Institute",
+    "h1Tag": "3 Months Advanced Teacher Training Course (On-Campus)",
+    "h2Tags": [
+      "ON-CAMPUS COURSE DETAILS"
+    ],
+    "metaData": [
+      {
+        "name": "keywords",
+        "content": "3 months advanced ttc on campus, 3 month yoga teacher training"
+      },
+      {
+        "name": "description",
+        "content": "The 500 + hours part-time program is Teachers’ Training certificate course that prepares students for teaching Yoga techniques to normal adults."
+      },
+      {
+        "property": "og:description",
+        "content": "The 500 + hours part-time program is Teachers’ Training certificate course that prepares students for teaching Yoga techniques to normal adults."
+      },
+      {
+        "property": "og:title",
+        "content": "3 Months Advanced Teacher Training Course - The Yoga Institute"
+      },
+      {
+        "property": "og:url",
+        "content": "https://www.staging.theyogainstituteonline.org/3-months-ttc"
+      },
+      {
+        "property": "og:sitename",
+        "content": "The Yoga Institue"
+      },
+      {
+        "property": "og:image",
+        "content": "http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Courses/TTC/900_hrs_TTC.jpg"
+      },
+      {
+        "property": "og:type",
+        "content": "Website"
+      }
+    ]
+  },
+  "/4-months-900hr": {
+    "title": "900 Hours Advanced Teacher Training Course In Mumbai - The Yoga Institute",
+    "h1Tag": "900 Hours Advanced Teacher Training Course",
+    "h2Tags": [
+      "ONLINE COURSE DETAILS"
+    ],
+    "metaData": [
+      {
+        "name": "keywords",
+        "content": "Yoga Teacher Training, yoga training, advanced yoga teacher training, yoga training course, Three Month Yoga training course, 500 hour yoga teacher training"
+      },
+      {
+        "name": "description",
+        "content": "The Yoga Institute provides 900 hours advanced Teacher Training course. The course covers in depth study and practice of asanas, pranayamas and kriyas."
+      },
+      {
+        "property": "og:description",
+        "content": "The Yoga Institute provides 900 hours advanced Teacher Training course. The course covers in depth study and practice of asanas, pranayamas and kriyas."
+      },
+      {
+        "property": "og:title",
+        "content": "900 Hours Advanced Teacher Training Course In Mumbai - The Yoga Institute"
+      },
+      {
+        "property": "og:url",
+        "content": "https://www.staging.theyogainstituteonline.org/4-months-900hr"
+      },
+      {
+        "property": "og:sitename",
+        "content": "The Yoga Institue"
+      },
+      {
+        "property": "og:image",
+        "content": "http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Courses/TTC/900_hrs_TTC.jpg"
+      },
+      {
+        "property": "og:type",
+        "content": "Website"
+      }
+    ]
+  },
+  "/7-months-900hr": {
+    "title": "Seven Month Yoga Teacher Training Course - The Yoga Institute",
+    "h1Tag": "Yoga Teachers Training Course (Seven Months TTC)",
+    "h2Tags": [
+      "Seven Months Teachers’ Training Course (Seven Months TTC) (English)"
+    ],
+    "metaData": [
+      {
+        "name": "keywords",
+        "content": "Seven month Teacher Training Course, Seven month yoga classes, Seven month Yoga course,  yoga certification,  yoga instructor training, advanced yoga teacher training,  teacher training course"
+      },
+      {
+        "name": "description",
+        "content": "The Yoga Institute offers Seven Month Yoga Teacher Training course cover of asanas, pranayamas, kriyas, attitude training, public speaking, methodology of teaching."
+      },
+      {
+        "property": "og:description",
+        "content": "The Yoga Institute offers Seven Month Yoga Teacher Training course cover of asanas, pranayamas, kriyas, attitude training, public speaking, methodology of teaching."
+      },
+      {
+        "property": "og:title",
+        "content": "Seven Month Yoga Teacher Training Course - The Yoga Institute"
+      },
+      {
+        "property": "og:url",
+        "content": "https://www.staging.theyogainstituteonline.org/7-months-900hr"
+      },
+      {
+        "property": "og:sitename",
+        "content": "The Yoga Institue"
+      },
+      {
+        "property": "og:image",
+        "content": "http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Courses/TTC/900_hrs_TTC.jpg"
+      },
+      {
+        "property": "og:type",
+        "content": "Website"
+      }
+    ]
+  },
+  "/1-year-900hr": {
+    "title": "One year Yoga Teacher Training India | One Year Course | Yoga instructor",
+    "h1Tag": "Yoga Teachers Training Course (One Year TTC) (Hindi)",
+    "h2Tags": [
+      "One Year Yoga Teachers’ Training Course (One Year TTC) (Hindi)"
+    ],
+    "metaData": [
+      {
+        "name": "keywords",
+        "content": "One year teacher training course, become a yoga instructor, yoga teacher certification, yoga courses, yoga teacher training course, 1 year yoga teacher training course"
+      },
+      {
+        "name": "description",
+        "content": "The Yoga Institute offers One Year Yoga Teacher Training Course conducted in Hindi Language. this one year course covers in depth study of asanas, pranayamas and kriyas."
+      },
+      {
+        "property": "og:description",
+        "content": "The Yoga Institute offers One Year Yoga Teacher Training Course conducted in Hindi Language. this one year course covers in depth study of asanas, pranayamas and kriyas."
+      },
+      {
+        "property": "og:title",
+        "content": "One year Yoga Teacher Training India | One Year Course | Yoga instructor"
+      },
+      {
+        "property": "og:url",
+        "content": "https://www.staging.theyogainstituteonline.org/1-year-900hr"
+      },
+      {
+        "property": "og:sitename",
+        "content": "The Yoga Institue"
+      },
+      {
+        "property": "og:image",
+        "content": "http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Courses/TTC/900_hrs_TTC.jpg"
+      },
+      {
+        "property": "og:type",
+        "content": "Website"
+      }
+    ]
+  },
+  "/2-year-900hr": {
+    "title": "Two Year Yoga Teacher Training Course - The Yoga Institute",
+    "h1Tag": "Yoga Teachers Training Course (Two Years TTC) (English)",
+    "h2Tags": [
+      "2 Years Teachers’ Training Course (Two Years TTC) (English)"
+    ],
+    "metaData": [
+      {
+        "name": "keywords",
+        "content": "Two year teacher training course, yoga teacher training course in Mumbai, yoga teacher training near me, yoga training India, 500 hour yoga teacher training "
+      },
+      {
+        "name": "description",
+        "content": "The yoga institute offers two Year Teacher Training Course, designed with special consideration towards working professionals. Be the certified Yoga trainer."
+      },
+      {
+        "property": "og:description",
+        "content": "The yoga institute offers two Year Teacher Training Course, designed with special consideration towards working professionals. Be the certified Yoga trainer."
+      },
+      {
+        "property": "og:title",
+        "content": "Two Year Yoga Teacher Training Course - The Yoga Institute"
+      },
+      {
+        "property": "og:url",
+        "content": "https://www.staging.theyogainstituteonline.org/2-year-900hr"
+      },
+      {
+        "property": "og:sitename",
+        "content": "The Yoga Institue"
+      },
+      {
+        "property": "og:image",
+        "content": "http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Courses/TTC/900_hrs_TTC.jpg"
+      },
+      {
+        "property": "og:type",
+        "content": "Website"
+      }
+    ]
+  },
+  "/asana-regular-classes-men-on-campus": {
+    "title": "Yoga Asanas Regular Classes for Men (Online | On Campus)",
+    "h1Tag": "Asana Regular Classes for Men ( On Campus) ",
+    "h2Tags": [],
+    "metaData": [
+      {
+        "name": "keywords",
+        "content": "asana regular classes on campus, yoga asana classes, yoga regular classes, Yoga asanas"
+      },
+      {
+        "name": "description",
+        "content": "The Yoga Institute designed Yoga asanas Regular Classes for men through Online and On-Campus mode.  This classes covers Sukhasana, Yog Mudra,  Vakrasana,.."
+      },
+      {
+        "property": "og:description",
+        "content": "The Yoga Institute designed Yoga asanas Regular Classes for men through Online and On-Campus mode.  This classes covers Sukhasana, Yog Mudra,  Vakrasana,.."
+      },
+      {
+        "property": "og:title",
+        "content": "Yoga Asanas Regular Classes for Men (Online | On Campus)"
+      },
+      {
+        "property": "og:url",
+        "content": "https://www.staging.theyogainstituteonline.org/asana-regular-classes-men-on-campus"
+      },
+      {
+        "property": "og:sitename",
+        "content": "The Yoga Institue"
+      },
+      {
+        "property": "og:image",
+        "content": "http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Courses/Class/Asana%20_Regular_Classes_for_Men_common.jpeg"
+      },
+      {
+        "property": "og:type",
+        "content": "Website"
+      }
+    ]
+  },
+  "/asana-regular-classes-for-women": {
+    "title": "Yoga Asanas Regular Classes for Women (Online | On Campus)",
+    "h1Tag": "Asana Regular Classes for Women (On Campus)",
+    "h2Tags": [],
+    "metaData": [
+      {
+        "name": "keywords",
+        "content": "asana regular classes on campus, yoga asana classes, yoga regular classes, Yoga asanas"
+      },
+      {
+        "name": "description",
+        "content": "The Yoga Institute offers Asanas Regular classes for Women to experience good and healty day to day life. This classes conducted via Online and On-camous mode"
+      },
+      {
+        "property": "og:description",
+        "content": "The Yoga Institute offers Asanas Regular classes for Women to experience good and healty day to day life. This classes conducted via Online and On-camous mode"
+      },
+      {
+        "property": "og:title",
+        "content": "Yoga Asanas Regular Classes for Women (Online | On Campus)"
+      },
+      {
+        "property": "og:url",
+        "content": "https://www.staging.theyogainstituteonline.org/asana-regular-classes-for-women"
+      },
+      {
+        "property": "og:sitename",
+        "content": "The Yoga Institue"
+      },
+      {
+        "property": "og:image",
+        "content": "http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Courses/Class/Asana_Regular_Classes_for_Women_common.jpeg"
+      },
+      {
+        "property": "og:type",
+        "content": "Website"
+      }
+    ]
+  },
+  "/advance-asana-regular-class": {
+    "title": "Advance Regular Yoga Classes - The Yoga Institute",
+    "h1Tag": "Advance Regular Yoga Classes – TYI Teachers",
+    "h2Tags": [],
+    "metaData": [
+      {
+        "name": "keywords",
+        "content": "yoga regular classes online, online yoga classes"
+      },
+      {
+        "name": "description",
+        "content": "The Yoga Institute is glad to bring this unique advance yoga regular class to all our Teacher Training Course (TTC) students who have passed out from The Yoga Institute."
+      },
+      {
+        "property": "og:description",
+        "content": "The Yoga Institute is glad to bring this unique advance yoga regular class to all our Teacher Training Course (TTC) students who have passed out from The Yoga Institute."
+      },
+      {
+        "property": "og:title",
+        "content": "Advance Regular Yoga Classes - The Yoga Institute"
+      },
+      {
+        "property": "og:url",
+        "content": "https://www.staging.theyogainstituteonline.org/advance-asana-regular-class/"
+      },
+      {
+        "property": "og:sitename",
+        "content": "The Yoga Institue"
+      },
+      {
+        "property": "og:image",
+        "content": "https://ecom-static-site.oss-ap-south-1.aliyuncs.com/metaImages/advance-regular-yoga-classes-may-2022.jpg"
+      },
+      {
+        "property": "og:type",
+        "content": "Website"
+      }
+    ]
+  },
+  "/weekend-asana-classes-men-women-oncampus": {
+    "title": "Weekend Yoga Regular Classes - The Yoga Institute",
+    "h1Tag": "Weekend Asana Classes - (Men & Women) On Campus",
+    "h2Tags": [],
+    "metaData": [
+      {
+        "name": "keywords",
+        "content": "weekend yoga regular classes, weekend yoga classes, the yoga institute weekend classes"
+      },
+      {
+        "name": "description",
+        "content": "Weekend yoga regular classes involves Yoga education for interested participants who cannot attend on weekdays due to various commitments."
+      },
+      {
+        "property": "og:description",
+        "content": "Weekend yoga regular classes involves Yoga education for interested participants who cannot attend on weekdays due to various commitments."
+      },
+      {
+        "property": "og:title",
+        "content": "Weekend Yoga Regular Classes - The Yoga Institute"
+      },
+      {
+        "property": "og:url",
+        "content": "https://www.staging.theyogainstituteonline.org/weekend-asana-classes-men-women-oncampus"
+      },
+      {
+        "property": "og:sitename",
+        "content": "The Yoga Institue"
+      },
+      {
+        "property": "og:image",
+        "content": "http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Courses/Class/Couples_Classes_Online.jpeg"
+      },
+      {
+        "property": "og:type",
+        "content": "Website"
+      }
+    ]
+  },
+  "/weekend-asana-classes-online": {
+    "title": "Weekend Yoga Regular Classes - Online",
+    "h1Tag": "Weekend Asana Classes - (Men & Women) Online",
+    "h2Tags": [],
+    "metaData": [
+      {
+        "name": "keywords",
+        "content": "weekend yoga regular classes, weekend yoga classes, the yoga institute weekend classes"
+      },
+      {
+        "name": "description",
+        "content": "Our Online Weekend Yoga Regular Class is an ideal course of Yoga education for daily practice.The yoga institute weekend classes cover Asanas, Pranayamas,"
+      },
+      {
+        "property": "og:description",
+        "content": "Our Online Weekend Yoga Regular Class is an ideal course of Yoga education for daily practice.The yoga institute weekend classes cover Asanas, Pranayamas,"
+      },
+      {
+        "property": "og:title",
+        "content": "Weekend Yoga Regular Classes - Online"
+      },
+      {
+        "property": "og:url",
+        "content": "https://www.staging.theyogainstituteonline.org/weekend-asana-classes-online"
+      },
+      {
+        "property": "og:sitename",
+        "content": "The Yoga Institue"
+      },
+      {
+        "property": "og:image",
+        "content": ""
+      },
+      {
+        "property": "og:type",
+        "content": "Website"
+      }
+    ]
+  },
+  "/childrens-regular-class-oncampus": {
+    "title": "Childrens Regular Classes - The Yoga Institute Santacruz East Mumbai",
+    "h1Tag": "Children’s Regular Classes (On Campus)",
+    "h2Tags": [],
+    "metaData": [
+      {
+        "name": "keywords",
+        "content": "childrens regular classes, childrens yoga classes,  "
+      },
+      {
+        "name": "description",
+        "content": "This programme offers a great opportunity for children to learn good qualities and sit in peace without any burden. The course covers simple Yoga Asanas."
+      },
+      {
+        "property": "og:description",
+        "content": "This programme offers a great opportunity for children to learn good qualities and sit in peace without any burden. The course covers simple Yoga Asanas."
+      },
+      {
+        "property": "og:title",
+        "content": "Childrens Regular Classes - The Yoga Institute Santacruz East Mumbai"
+      },
+      {
+        "property": "og:url",
+        "content": "https://www.staging.theyogainstituteonline.org/childrens-regular-class-oncampus"
+      },
+      {
+        "property": "og:sitename",
+        "content": "The Yoga Institue"
+      },
+      {
+        "property": "og:image",
+        "content": "https://ecom-static-site.oss-ap-south-1.aliyuncs.com/metaImages/Regular-Classes-Kids.jpg"
+      },
+      {
+        "property": "og:type",
+        "content": "Website"
+      }
+    ]
+  },
+  "/children's-weekend-class-oncampus": {
+    "title": "Children's Weekend Yoga Classes in Mumbai (On Campus)",
+    "h1Tag": "Children's Weekend Class  (On Campus)",
+    "h2Tags": [],
+    "metaData": [
+      {
+        "name": "keywords",
+        "content": "childrens weekend classes, childrens weekend  yoga classes,  "
+      },
+      {
+        "name": "description",
+        "content": "The Children's Weekend yoga classes are conducted on Saturday and Sunday to enhance good and healthy children's life. The yoga institute weekend classes cover.."
+      },
+      {
+        "property": "og:description",
+        "content": "The Children's Weekend yoga classes are conducted on Saturday and Sunday to enhance good and healthy children's life. The yoga institute weekend classes cover.."
+      },
+      {
+        "property": "og:title",
+        "content": "Children's Weekend Yoga Classes in Mumbai (On Campus)"
+      },
+      {
+        "property": "og:url",
+        "content": "https://www.staging.theyogainstituteonline.org/children's-weekend-class-oncampus"
+      },
+      {
+        "property": "og:sitename",
+        "content": "The Yoga Institue"
+      },
+      {
+        "property": "og:image",
+        "content": "https://ecom-static-site.oss-ap-south-1.aliyuncs.com/metaImages/Regular-Classes-Kids.jpg"
+      },
+      {
+        "property": "og:type",
+        "content": "Website"
+      }
+    ]
+  },
+  "/yoga_by_the_bay": {
+    "title": "Yoga by the Bay - The Yoga Institute",
+    "h1Tag": "YOGA BY THE BAY",
+    "h2Tags": [],
+    "metaData": [
+      {
+        "name": "keywords",
+        "content": "yoga by the bay, yoga by the sea, yoga by the bay mumbai"
+      },
+      {
+        "name": "description",
+        "content": "Yoga by the Bay is a great way to immerse yourself into the deep conscience within by being the vastness of the exterior."
+      },
+      {
+        "property": "og:description",
+        "content": "Yoga by the Bay is a great way to immerse yourself into the deep conscience within by being the vastness of the exterior."
+      },
+      {
+        "property": "og:title",
+        "content": "Yoga by the Bay - The Yoga Institute"
+      },
+      {
+        "property": "og:url",
+        "content": "https://www.staging.theyogainstituteonline.org/yoga_by_the_bay"
+      },
+      {
+        "property": "og:sitename",
+        "content": "The Yoga Institue"
+      },
+      {
+        "property": "og:image",
+        "content": "http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Home/Highlights/marinedrive.jpg"
+      },
+      {
+        "property": "og:type",
+        "content": "Website"
+      }
+    ]
+  },
+  "/fullmoon_meditation": {
+    "title": "Full Moon Meditation - The Yoga Institute",
+    "h1Tag": "FULL MOON MEDITATION",
+    "h2Tags": [],
+    "metaData": [
+      {
+        "name": "keywords",
+        "content": "full moon meditation, full moon yoga meditation, guided meditation"
+      },
+      {
+        "name": "description",
+        "content": "Join us for this truly unique meditation experience and immerse into the beautiful white light of the moon. Let the moon help you to relax and rejuvenate your mind and body."
+      },
+      {
+        "property": "og:description",
+        "content": "Join us for this truly unique meditation experience and immerse into the beautiful white light of the moon. Let the moon help you to relax and rejuvenate your mind and body."
+      },
+      {
+        "property": "og:title",
+        "content": "Full Moon Meditation - The Yoga Institute"
+      },
+      {
+        "property": "og:url",
+        "content": "https://www.staging.theyogainstituteonline.org/fullmoon_meditation"
+      },
+      {
+        "property": "og:sitename",
+        "content": "The Yoga Institue"
+      },
+      {
+        "property": "og:image",
+        "content": "http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Home/Highlights/fullmoon.jpg"
+      },
+      {
+        "property": "og:type",
+        "content": "Website"
+      }
+    ]
+  },
+  "/free-yoga-camps": {
+    "title": "Free Yoga Camps - The Yoga Institute ",
+    "h1Tag": "Free Yoga Camps",
+    "h2Tags": [],
+    "metaData": [
+      {
+        "name": "keywords",
+        "content": "Yoga camp, health camp, Free Yoga Camp, Free Yoga Workshops, Free Workshops, Free Camp"
+      },
+      {
+        "name": "description",
+        "content": "Free Yoga Camps - The Yoga Institute "
+      },
+      {
+        "property": "og:description",
+        "content": "Free Yoga Camps - The Yoga Institute "
+      },
+      {
+        "property": "og:title",
+        "content": "Free Yoga Camps - The Yoga Institute "
+      },
+      {
+        "property": "og:url",
+        "content": "https://www.staging.theyogainstituteonline.org/free-yoga-camps"
+      },
+      {
+        "property": "og:sitename",
+        "content": "The Yoga Institue"
+      },
+      {
+        "property": "og:image",
+        "content": ""
+      },
+      {
+        "property": "og:type",
+        "content": "Website"
+      }
+    ]
+  },
+  "/meditation-camp": {
+    "title": "Meditation Workshop - The Yoga Institute",
+    "h1Tag": "FREE MEDITATION WORKSHOP",
+    "h2Tags": [],
+    "metaData": [
+      {
+        "name": "keywords",
+        "content": "meditation workshop, yoga meditation, meditation training, Free Meditation, Free Meditation Workshop, Free Meditation Camp"
+      },
+      {
+        "name": "description",
+        "content": "Registrations are closed for the moment. Keep a watch for the next batch,  Increase your Happiness Quotient with Meditation to release Stress and Anxiety"
+      },
+      {
+        "property": "og:description",
+        "content": "Registrations are closed for the moment. Keep a watch for the next batch,  Increase your Happiness Quotient with Meditation to release Stress and Anxiety"
+      },
+      {
+        "property": "og:title",
+        "content": "Meditation Workshop - The Yoga Institute"
+      },
+      {
+        "property": "og:url",
+        "content": "https://www.staging.theyogainstituteonline.org/meditation-camp"
+      },
+      {
+        "property": "og:sitename",
+        "content": "The Yoga Institue"
+      },
+      {
+        "property": "og:image",
+        "content": "http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Courses/Camps/Meditation_Camp.jpg"
+      },
+      {
+        "property": "og:type",
+        "content": "Website"
+      }
+    ]
+  },
+  "/counselling-services": {
+    "title": "Counselling Services - The Yoga Institute Santacruz East Mumbai",
+    "h1Tag": "COUNSELLING SERVICES",
+    "h2Tags": [],
+    "metaData": [
+      {
+        "name": "keywords",
+        "content": "Counselling Services, yoga counselling, consultation"
+      },
+      {
+        "name": "description",
+        "content": "COUNSELLING SERVICES - The Yoga Institute"
+      },
+      {
+        "property": "og:description",
+        "content": "COUNSELLING SERVICES - The Yoga Institute"
+      },
+      {
+        "property": "og:title",
+        "content": "Counselling Services - The Yoga Institute Santacruz East Mumbai"
+      },
+      {
+        "property": "og:url",
+        "content": "https://www.staging.theyogainstituteonline.org/counselling-service"
+      },
+      {
+        "property": "og:sitename",
+        "content": "The Yoga Institue"
+      },
+      {
+        "property": "og:image",
+        "content": ""
+      },
+      {
+        "property": "og:type",
+        "content": "Website"
+      }
+    ]
+  },
+  "/parisamvad": {
+    "title": "Parisamvad - The Yoga Institute",
+    "h1Tag": "Parisamvad (English & Hindi)",
+    "h2Tags": [],
+    "metaData": [
+      {
+        "name": "keywords",
+        "content": "parisamvad"
+      },
+      {
+        "name": "description",
+        "content": "Talks given by Dr. Jayadeva Yogendra (President) and Smt. Hansaji Yogendra (Director) on selected topics followed by a question and answer session."
+      },
+      {
+        "property": "og:description",
+        "content": "Talks given by Dr. Jayadeva Yogendra (President) and Smt. Hansaji Yogendra (Director) on selected topics followed by a question and answer session."
+      },
+      {
+        "property": "og:title",
+        "content": "Parisamvad - The Yoga Institute"
+      },
+      {
+        "property": "og:url",
+        "content": "https://www.staging.theyogainstituteonline.org/parisamvad"
+      },
+      {
+        "property": "og:sitename",
+        "content": "The Yoga Institue"
+      },
+      {
+        "property": "og:image",
+        "content": ""
+      },
+      {
+        "property": "og:type",
+        "content": "Website"
+      }
+    ]
+  },
+  "/satsang": {
+    "title": "Satsang - The Yoga Institute Santacruz East Mumbai",
+    "h1Tag": "Satsang",
+    "h2Tags": [],
+    "metaData": [
+      {
+        "name": "keywords",
+        "content": "satsang"
+      },
+      {
+        "name": "description",
+        "content": "Unlike the common understanding of the word, this Satsang is not a religious discourse. It is a public gathering at The Yoga Institute, held every Sunday."
+      },
+      {
+        "property": "og:description",
+        "content": "Unlike the common understanding of the word, this Satsang is not a religious discourse. It is a public gathering at The Yoga Institute, held every Sunday."
+      },
+      {
+        "property": "og:title",
+        "content": "Satsang - The Yoga Institute Santacruz East Mumbai"
+      },
+      {
+        "property": "og:url",
+        "content": "https://www.staging.theyogainstituteonline.org/satsang"
+      },
+      {
+        "property": "og:sitename",
+        "content": "The Yoga Institue"
+      },
+      {
+        "property": "og:image",
+        "content": "http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Courses/Class/Satsang.jpeg"
+      },
+      {
+        "property": "og:type",
+        "content": "Website"
+      }
+    ]
+  },
+  "/book-club": {
+    "title": "Book Club - The Yoga Institute Santacruz East Mumbai",
+    "h1Tag": "Book Club",
+    "h2Tags": [],
+    "metaData": [
+      {
+        "name": "keywords",
+        "content": "book club, yoga book club"
+      },
+      {
+        "name": "description",
+        "content": "The Book Club is a free class conducted every Sunday immediately after the Satsang. Selected works from the publications are reviewed and discussed."
+      },
+      {
+        "property": "og:description",
+        "content": "The Book Club is a free class conducted every Sunday immediately after the Satsang. Selected works from the publications are reviewed and discussed."
+      },
+      {
+        "property": "og:title",
+        "content": "Book Club - The Yoga Institute Santacruz East Mumbai"
+      },
+      {
+        "property": "og:url",
+        "content": "https://www.staging.theyogainstituteonline.org/book-club"
+      },
+      {
+        "property": "og:sitename",
+        "content": "The Yoga Institue"
+      },
+      {
+        "property": "og:image",
+        "content": "https://ecom-static-site.oss-ap-south-1.aliyuncs.com/metaImages/book-club-tyi.jpg"
+      },
+      {
+        "property": "og:type",
+        "content": "Website"
+      }
+    ]
+  },
+  "/good-food-fest": {
+    "title": "GOOD FOOD FESTIVAL - The Yoga Institute",
+    "h1Tag": "GOOD FOOD FESTIVAL",
+    "h2Tags": [],
+    "metaData": [
+      {
+        "name": "keywords",
+        "content": "Good Food Fest, healthy food fest"
+      },
+      {
+        "name": "description",
+        "content": "GOOD FOOD FESTIVAL - The Yoga Institute"
+      },
+      {
+        "property": "og:description",
+        "content": "GOOD FOOD FESTIVAL - The Yoga Institute"
+      },
+      {
+        "property": "og:title",
+        "content": "GOOD FOOD FESTIVAL - The Yoga Institute"
+      },
+      {
+        "property": "og:url",
+        "content": "https://www.staging.theyogainstituteonline.org/good-food-fest"
+      },
+      {
+        "property": "og:sitename",
+        "content": "The Yoga Institue"
+      },
+      {
+        "property": "og:image",
+        "content": ""
+      },
+      {
+        "property": "og:type",
+        "content": "Website"
+      }
+    ]
+  },
+  "/samattvam-health-checkup": {
+    "title": "Samattvam - The Yoga Institute",
+    "h1Tag": "Samattvam",
+    "h2Tags": [],
+    "metaData": [
+      {
+        "name": "keywords",
+        "content": "samattvam, health check up, healthy living"
+      },
+      {
+        "name": "description",
+        "content": "Life Management Counselling with reputed medical professionals and counsellors."
+      },
+      {
+        "property": "og:description",
+        "content": "Life Management Counselling with reputed medical professionals and counsellors."
+      },
+      {
+        "property": "og:title",
+        "content": "Samattvam - The Yoga Institute"
+      },
+      {
+        "property": "og:url",
+        "content": "https://www.staging.theyogainstituteonline.org/samattvam-health-checkup"
+      },
+      {
+        "property": "og:sitename",
+        "content": "The Yoga Institue"
+      },
+      {
+        "property": "og:image",
+        "content": "http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Home/Highlights/satvam.jpg"
+      },
+      {
+        "property": "og:type",
+        "content": "Website"
+      }
+    ]
+  },
+  "/shop": {
+    "title": "Products Archive - The Yoga Institute",
+    "h1Tag": "Shop",
+    "h2Tags": [],
+    "metaData": [
+      {
+        "name": "keywords",
+        "content": "Yoga Shop, Yoga Store, online yoga clothing,  yoga online shop(,  yoga online store"
+      },
+      {
+        "name": "description",
+        "content": "The Yoga Institute conducts courses and camps for all ages. From special courses to specific health camps, enroll now to make a difference in your lives."
+      },
+      {
+        "property": "og:description",
+        "content": "The Yoga Institute conducts courses and camps for all ages. From special courses to specific health camps, enroll now to make a difference in your lives."
+      },
+      {
+        "property": "og:title",
+        "content": "Products Archive - The Yoga Institute"
+      },
+      {
+        "property": "og:url",
+        "content": "https://www.staging.theyogainstituteonline.org/shop"
+      },
+      {
+        "property": "og:sitename",
+        "content": "The Yoga Institue"
+      },
+      {
+        "property": "og:image",
+        "content": ""
+      },
+      {
+        "property": "og:type",
+        "content": "Website"
+      }
+    ]
+  },
+  "/library": {
+    "title": "Yoga Library - The Yoga Institute Santacruz East Mumbai",
+    "h1Tag": "Yoga Library",
+    "h2Tags": [],
+    "metaData": [
+      {
+        "name": "keywords",
+        "content": "Yoga Library, Library, Books Library, Yoga Library in Mumbai, granth, GranthAlaya"
+      },
+      {
+        "name": "description",
+        "content": "Our Yoga Library contains more than 6,000 books in various languages and on various subjects related to the study of yoga and spirituality."
+      },
+      {
+        "property": "og:description",
+        "content": "Our Yoga Library contains more than 6,000 books in various languages and on various subjects related to the study of yoga and spirituality."
+      },
+      {
+        "property": "og:title",
+        "content": "Yoga Library - The Yoga Institute Santacruz East Mumbai"
+      },
+      {
+        "property": "og:url",
+        "content": "https://www.staging.theyogainstituteonline.org/library"
+      },
+      {
+        "property": "og:sitename",
+        "content": "The Yoga Institue"
+      },
+      {
+        "property": "og:image",
+        "content": "http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Publications/Library/hero.jpg"
+      },
+      {
+        "property": "og:type",
+        "content": "Website"
+      }
+    ]
   }
-
 
   
 }
