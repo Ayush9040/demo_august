@@ -11,7 +11,7 @@ const OurLegacy = () => {
     menuItems: [
       {
         innerTitle: 'overview',
-        url: '/about/overview',
+        url: '/know-us-better',
         name: 'Overview',
       },
       {

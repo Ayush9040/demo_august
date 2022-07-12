@@ -13,7 +13,7 @@ const Blessings = ({ location }) => {
     menuItems: [
       {
         innerTitle: 'overview',
-        url: '/about/overview',
+        url: '/know-us-better',
         name: 'Overview',
       },
       {

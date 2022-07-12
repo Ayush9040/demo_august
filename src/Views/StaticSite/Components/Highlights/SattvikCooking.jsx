@@ -2,6 +2,7 @@ import React from 'react'
 import baseDomain, { homeAssets } from '../../assets/images/imageAsset'
 import InnerNavComponent from '../InnerNavComponent'
 import { useEffect } from 'react'
+import './style.scss'
 
 const SattvikCooking = () => {
   useEffect(() => {
