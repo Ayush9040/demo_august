@@ -15,7 +15,7 @@ const OurOfferings = () => {
       name: '7-day Yoga Health Camp',
       description:
         'A powerful and life-changing experience, this is an introductory course to yoga theory and practice, within the premises of The Yoga Institute.',
-      redirect:'/7-days-heath-camp-on-campus/',
+      redirect:'/7-days-camp',
       timeline:'7 days',
       price:'8000' 
     },
@@ -23,7 +23,7 @@ const OurOfferings = () => {
       name: '21-Day Better Living Course',
       description:
         'This popular course aims to integrate yoga philosophy and healthy routines in everyday life. We give you tools and techniques to help you manage your studies, home life, work life and other activities.',
-      redirect:'/batch1-21days-morning-oncampus/',
+      redirect:'/21-days-better-living-course',
       timeline:'21 days',
       price:'1600'  
     },
@@ -31,7 +31,7 @@ const OurOfferings = () => {
       name: 'Regular Asana Classes',
       description:
         'Daily one hour asana classes for people of all age groups to help them bring balance and serenity into their lives.',
-      redirect:'/asana-regular-classes-men-women/',
+      redirect:'/asana-regular-classes-online',
       timeline:'Any Day',
       price:'1000' 
     },
@@ -39,7 +39,7 @@ const OurOfferings = () => {
       name: 'Children’s Regular Classes',
       description:
         'Especially designed for children, the asana class helps them balance their academics along with their physical and mental health.',
-      redirect:'/childrens-regular-class-oncampus/',
+      redirect:'/childrens-regular-classes-on-campus',
       timeline:'Any Day',
       price:'1000'
     },
@@ -47,7 +47,7 @@ const OurOfferings = () => {
       name: '7-month TTC',
       description:
         'This course provides an in-depth study of classical ashtanga yoga which teaches core yoga philosophy and technology. Participants can become internationally certified yoga trainers on completing the course.',
-      redirect:'/7-months-900hr/',
+      redirect:'/seven-month-ttc',
       timeline:'7-month',
       price:'50,000'
     },

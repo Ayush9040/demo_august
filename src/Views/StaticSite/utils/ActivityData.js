@@ -13,7 +13,7 @@ export const activityData = [
     description:
       'Special year-long classes for couples to help them understand each other, how to live as a team, and support each other better.',
     image: `${baseDomain}${homeAssets.homeAsset13}`,
-    url: '/couples-classes-online/',
+    url: '/couples-classes',
   },
   {
     title: 'Full Moon Meditation',
