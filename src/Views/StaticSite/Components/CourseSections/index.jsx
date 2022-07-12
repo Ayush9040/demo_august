@@ -131,7 +131,7 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange })
                 <Link to='/courses/course/7-days-heath-camp-on-campus/'><li>7 Days Health Camp</li></Link>
                 <Link to='/courses/course/batch1-21days-morning-oncampus/'><li>21 Days Better Living Course</li></Link>
                 <Link to='/courses/course/batch-1-200hr/'><li>200 Hour 1 Month BTTC Course</li></Link>
-                <Link to='/courses/course/7-months-900hr/'><li>900 Hour 3 Month ATTC Course</li></Link>
+                <Link to='/courses/course/3-months-ttc/'><li>900 Hour 3 Month ATTC Course</li></Link>
                 <Link to='/courses/course/pregnancy-camp-for-ante-post-natal/'><li> Pregnancy Camp</li></Link>
               </ul>
             </h4>

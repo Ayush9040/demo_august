@@ -9,7 +9,8 @@ export const background = {
   faqs:'/backgrounds/faqs.jpg',
   alma:'/backgrounds/support-alma-mater.jpg',
   benefits:'/backgrounds/benifits.png',
-  wellness:'/wellness/wellness.jpg'
+  wellness:'/wellness/wellness.jpg',
+  affiliations:'/backgrounds/affiliations.jpeg'
   
 }
 
@@ -150,7 +151,9 @@ export const courseAssets = {
   courseAsset16: '/Courses/Camps/Weight_management.jpg',
   courseAsset83: '/Courses/Camps/Respiratory_Workshop.jpeg',
   courseAsset84: '/Courses/Camps/Women%E2%80%99s_Camp.jpg',
-  courseAsset85:'/Courses/diet_workshp.png',  
+  courseAsset85:'/Courses/diet_workshp.jpg',  
+  courseAsset111:'/Courses/Camps/cardiac-&-hypertension-43-1.png',
+  courseAsset112:'/Courses/Camps/LifeMC.jpg',
 
   // certificate
 

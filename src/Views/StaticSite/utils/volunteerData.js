@@ -226,10 +226,10 @@ export const volunteerData = [
     gallery: [
       `${baseDomain}${volunteerAssets.volunteerAssets28}`,
       `${baseDomain}${volunteerAssets.volunteerAssets25}`,
-      `${baseDomain}${volunteerAssets.volunteerAssets35}`,
+      `${baseDomain}${volunteerAssets.volunteerAssets29}`,
       `${baseDomain}${volunteerAssets.volunteerAssets26}`,
-      `${baseDomain}${volunteerAssets.volunteerAssets32}`,
-      `${baseDomain}${volunteerAssets.volunteerAssets37}`,
+      `${baseDomain}${volunteerAssets.volunteerAssets30}`,
+      `${baseDomain}${volunteerAssets.volunteerAssets24}`,
     ],
     faq: [
       {

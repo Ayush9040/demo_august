@@ -5093,7 +5093,7 @@ const camps = {
     metaDescription:
       'Specific pranayama, asana and relaxation techniques to enhance your state of mind',
     image: `${baseDomain}${courseAssets.courseAsset8}`,
-    cardImage: `${baseDomain}${courseAssets.courseAsset8}`,
+    cardImage: `${baseDomain}${courseAssets.courseAsset112}`,
     dates: ['27th August 2022', '22nd October 2022', '26th December 2022'],
     online: true,
     onCampus: true,
@@ -5222,7 +5222,7 @@ const camps = {
     category: 'camps',
     metaDescription:
       'Powerful and effective asana, pranayama, and relaxation techniques to alleviate heart ailments',
-    image: `${baseDomain}${courseAssets.courseAsset6}`,
+    image: `${baseDomain}${courseAssets.courseAsset111}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset6}`,
     dates: ['27th August 2022', '22nd October 2022', '26th December 2022'],
     online: true,
@@ -5888,7 +5888,7 @@ const camps = {
     metaDescription:
       'Specific pranayama, asana and relaxation techniques to enhance your state of mind',
     image: `${baseDomain}${courseAssets.courseAsset8}`,
-    cardImage: `${baseDomain}${courseAssets.courseAsset107}`,
+    cardImage: `${baseDomain}${courseAssets.courseAsset112}`,
     dates: [],
     online: true,
     onCampus: true,
