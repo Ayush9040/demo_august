@@ -24,6 +24,7 @@ const CourseDetails = ({ pageDate }) => {
   //   setCourseDate(localStorage.getItem('selectedDate'))
   // }, [])
   const { isLoggedIn } = useSelector(state=>state.auth)
+  const [selectDate, setSetselectDate] = useState(null)
   
   const checkHandler = () => {
     if(pageDate.dates.length!==0){
@@ -36,7 +37,6 @@ const CourseDetails = ({ pageDate }) => {
   }
 
   console.log(pageDate, 'pageData')
-  const [selectDate, setSetselectDate] = useState(null)
   // localStorage.setItem('selectedDate',selectDate)
   useEffect(() => {
     setSetselectDate(Params.get('date'))
