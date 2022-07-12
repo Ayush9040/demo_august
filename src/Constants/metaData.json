@@ -88,10 +88,7 @@
   "/know-us-better": {
     "title": "Know us Better - The Yoga Institute Santacruz East Mumbai",
     "h1Tag": "KNOW US BETTER ",
-    "h2Tags": [
-      "ABOUT US",
-      "LIFE-SCHOOL"
-    ],
+    "h2Tags": ["ABOUT US", "LIFE-SCHOOL"],
     "metaData": [
       {
         "name": "keywords",
@@ -175,10 +172,7 @@
   "/hostel": {
     "title": "Hostels - The Yoga Institute Santacruz East Mumbai",
     "h1Tag": "Hostels",
-    "h2Tags": [
-    "Hostel",
-    "Facilities"
-  ],
+    "h2Tags": ["Hostel", "Facilities"],
     "metaData": [
       {
         "name": "keywords",
@@ -217,10 +211,7 @@
   "/facilities": {
     "title": "Hostels - The Yoga Institute Santacruz East Mumbai",
     "h1Tag": "Hostels",
-    "h2Tags": [
-    "Hostel",
-    "Facilities"
-  ],
+    "h2Tags": ["Hostel", "Facilities"],
     "metaData": [
       {
         "name": "keywords",
@@ -438,7 +429,6 @@
         "content": "https://www.staging.theyogainstituteonline.org/rooftop-space"
       },
       {
-    
         "property": "og:sitename",
         "content": "The Yoga Institue"
       },
@@ -689,10 +679,7 @@
   "/yoga-and-total-health": {
     "title": "Yoga and Total Health - The Yoga Institute Santacruz East Mumbai",
     "h1Tag": "Yoga and Total Health",
-    "h2Tags": [
-    "MAGAZINE (YOGA JOURNAL)",
-    "JUNE 2022 ISSUE"
-    ],
+    "h2Tags": ["MAGAZINE (YOGA JOURNAL)", "JUNE 2022 ISSUE"],
     "metaData": [
       {
         "name": "keywords",
@@ -771,21 +758,21 @@
     "title": "Blog - The Yoga Institute",
     "h1Tag": "Blog",
     "h2Tags": [
-    "7 Home Remedies for Anaemia | Foods to Eat | Yoga for Anaemia",
-    "How to increase lung capacity",
-    "Yoga for back pain",
-    "5 Liver Harming Foods | Foods to Avoid | Liver Health",
-    "International Women's Day 2022 | All about Women's Day",
-    "Yoga for Ear Balance Disorder and Problems",
-    "World Health Day",
-    "5 Best Healthy Fats Food",
-    "5 Best Natural Anti-Ageing Techniques",
-    "5 Yoga Poses to do Before You Go To Sleep",
-    "Best Yoga Mudras to get Rid of Pimples Naturally at Home",
-    "How Much Distance we should walk daily",
-    "How to Reduce Back Fat Naturally by Yoga - Home Remedies",
-    "Top 5 Non-Dairy Calcium-Rich Foods"
-  ],
+      "7 Home Remedies for Anaemia | Foods to Eat | Yoga for Anaemia",
+      "How to increase lung capacity",
+      "Yoga for back pain",
+      "5 Liver Harming Foods | Foods to Avoid | Liver Health",
+      "International Women's Day 2022 | All about Women's Day",
+      "Yoga for Ear Balance Disorder and Problems",
+      "World Health Day",
+      "5 Best Healthy Fats Food",
+      "5 Best Natural Anti-Ageing Techniques",
+      "5 Yoga Poses to do Before You Go To Sleep",
+      "Best Yoga Mudras to get Rid of Pimples Naturally at Home",
+      "How Much Distance we should walk daily",
+      "How to Reduce Back Fat Naturally by Yoga - Home Remedies",
+      "Top 5 Non-Dairy Calcium-Rich Foods"
+    ],
     "metaData": [
       {
         "name": "keywords",
@@ -1518,9 +1505,7 @@
   "/3-months-advanced-teacher-training-course": {
     "title": "3 Months Advanced Teacher Training Course - The Yoga Institute",
     "h1Tag": "3 Months Advanced Teacher Training Course (On-Campus)",
-    "h2Tags": [
-      "ON-CAMPUS COURSE DETAILS"
-    ],
+    "h2Tags": ["ON-CAMPUS COURSE DETAILS"],
     "metaData": [
       {
         "name": "keywords",
@@ -1559,9 +1544,7 @@
   "/900-hours-advanced-teacher-training-course": {
     "title": "900 Hours Advanced Teacher Training Course In Mumbai - The Yoga Institute",
     "h1Tag": "900 Hours Advanced Teacher Training Course",
-    "h2Tags": [
-      "ONLINE COURSE DETAILS"
-    ],
+    "h2Tags": ["ONLINE COURSE DETAILS"],
     "metaData": [
       {
         "name": "keywords",
@@ -1682,9 +1665,7 @@
   "/two-year-ttc": {
     "title": "Two Year Yoga Teacher Training Course - The Yoga Institute",
     "h1Tag": "Yoga Teachers Training Course (Two Years TTC) (English)",
-    "h2Tags": [
-      "2 Years Teachers’ Training Course (Two Years TTC) (English)"
-    ],
+    "h2Tags": ["2 Years Teachers’ Training Course (Two Years TTC) (English)"],
     "metaData": [
       {
         "name": "keywords",
@@ -2499,7 +2480,395 @@
         "content": "Website"
       }
     ]
+  },
+  "/7-days-heath-camp-on-campus-english": {
+    "title": "7 Days Health Camp – “Insight into Yoga” (English)",
+    "h1Tag": "7 Days Health Camp – “Insight into Yoga” (English)",
+    "h2Tags": [],
+    "metaData": [
+      {
+        "name": "keywords",
+        "content": "7 days camp, health camp , yoga institute camp"
+      },
+      {
+        "name": "description",
+        "content": "The Yoga Institute conducts 7 days health Camp Insights into Yoga which covers all types of workshop with different courses that changes the day to day lifestyle"
+      },
+      {
+        "property": "og:description",
+        "content": "The Yoga Institute conducts 7 days health Camp Insights into Yoga which covers all types of workshop with different courses that changes the day to day lifestyle"
+      },
+      {
+        "property": "og:title",
+        "content": "7 Days Health Camp – “Insight into Yoga” (English)"
+      },
+      {
+        "property": "og:url",
+        "content": "https://www.staging.theyogainstituteonline.org/7-days-heath-camp-on-campus-english"
+      },
+      {
+        "property": "og:sitename",
+        "content": "The Yoga Institue"
+      },
+      {
+        "property": "og:image",
+        "content": "https://ecom-static-site.oss-ap-south-1.aliyuncs.com/metaImages/7-day-health-camp.jpg"
+      },
+      {
+        "property": "og:type",
+        "content": "Website"
+      }
+    ]
+  },
+  "/certification-course-on-yoga-sutra-online": {
+    "title": "Yoga Sutra Certificate Course - The Yoga Institute Santacruz East Mumbai",
+    "h1Tag": "YOGA SUTRA CERTIFICATE COURSE",
+    "h2Tags": [],
+    "metaData": [
+      {
+        "name": "keywords",
+        "content": "Yoga sutra, yoga sutras of patanjali"
+      },
+      {
+        "name": "description",
+        "content": "We conduct certified yoga sutra course which highlights the painful afflictions of the human mind and how to overcome them as householders."
+      },
+      {
+        "property": "og:description",
+        "content": "We conduct certified yoga sutra course which highlights the painful afflictions of the human mind and how to overcome them as householders."
+      },
+      {
+        "property": "og:title",
+        "content": "Yoga Sutra Certificate Course - The Yoga Institute Santacruz East Mumbai"
+      },
+      {
+        "property": "og:url",
+        "content": "https://www.staging.theyogainstituteonline.org/certification-course-on-yoga-sutra-online"
+      },
+      {
+        "property": "og:sitename",
+        "content": "The Yoga Institue"
+      },
+      {
+        "property": "og:image",
+        "content": "http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Courses/Class/Certificate_Course_on_Yoga_Sutra%2BOnline.jpeg"
+      },
+      {
+        "property": "og:type",
+        "content": "Website"
+      }
+    ]
+  },
+  "/batch1-21days-morning-oncampus": {
+    "title": "21 Days Better Living Course (On Campus) - The Yoga Institute",
+    "h1Tag": "21 Days Better Living Course (On Campus)",
+    "h2Tags": [],
+    "metaData": [
+      {
+        "name": "keywords",
+        "content": "21 day better living course on campus, better living course, yoga course"
+      },
+      {
+        "name": "description",
+        "content": "The most awaited and popular course conducted at The Yoga Institute is now back on campus."
+      },
+      {
+        "property": "og:description",
+        "content": "The most awaited and popular course conducted at The Yoga Institute is now back on campus."
+      },
+      {
+        "property": "og:title",
+        "content": "21 Days Better Living Course (On Campus) - The Yoga Institute"
+      },
+      {
+        "property": "og:url",
+        "content": "https://www.staging.theyogainstituteonline.org/batch1-21days-morning-oncampus"
+      },
+      {
+        "property": "og:sitename",
+        "content": "The Yoga Institue"
+      },
+      {
+        "property": "og:image",
+        "content": "https://ecom-static-site.oss-ap-south-1.aliyuncs.com/metaImages/concentrated-woman-meditating-nature.jpg"
+      },
+      {
+        "property": "og:type",
+        "content": "Website"
+      }
+    ]
+  },
+  "/21-days-blc-batch4": {
+    "title": "21 Days Better Living Course (Online) - The Yoga Institute",
+    "h1Tag": "21 Days Better Living Course (Online)",
+    "h2Tags": [],
+    "metaData": [
+      {
+        "name": "keywords",
+        "content": "21 days better living course online, online better living course"
+      },
+      {
+        "name": "description",
+        "content": "The course is held once a month, starting on the first Sunday (9:30 a.m.) of every month. The classes are of 1 hr 30 mins each day for 21 consecutive days."
+      },
+      {
+        "property": "og:description",
+        "content": "The course is held once a month, starting on the first Sunday (9:30 a.m.) of every month. The classes are of 1 hr 30 mins each day for 21 consecutive days."
+      },
+      {
+        "property": "og:title",
+        "content": "21 Days Better Living Course (Online) - The Yoga Institute"
+      },
+      {
+        "property": "og:url",
+        "content": "https://www.staging.theyogainstituteonline.org/21-days-blc-batch4"
+      },
+      {
+        "property": "og:sitename",
+        "content": "The Yoga Institue"
+      },
+      {
+        "property": "og:image",
+        "content": "https://ecom-static-site.oss-ap-south-1.aliyuncs.com/metaImages/concentrated-woman-meditating-nature.jpg"
+      },
+      {
+        "property": "og:type",
+        "content": "Website"
+      }
+    ]
+  },
+  "/corporate_workshop": {
+    "title": "Corporate Workshops- The Yoga Institute Santacruz East Mumbai",
+    "h1Tag": "Corporate Workshops",
+    "h2Tags": [],
+    "metaData": [
+      {
+        "name": "keywords",
+        "content": "corporate workshops, corporate yoga "
+      },
+      {
+        "name": "description",
+        "content": "We provide corporate workshops at our Institute which manages the Stress for Corporate Executives. These workshops are rare, energetic for the participants."
+      },
+      {
+        "property": "og:description",
+        "content": "We provide corporate workshops at our Institute which manages the Stress for Corporate Executives. These workshops are rare, energetic for the participants."
+      },
+      {
+        "property": "og:title",
+        "content": "Corporate Workshops- The Yoga Institute Santacruz East Mumbai"
+      },
+      {
+        "property": "og:url",
+        "content": "https://www.staging.theyogainstituteonline.org/corporate_workshop"
+      },
+      {
+        "property": "og:sitename",
+        "content": "The Yoga Institue"
+      },
+      {
+        "property": "og:image",
+        "content": "https://ecom-static-site.oss-ap-south-1.aliyuncs.com/metaImages/corporate-workshops-tyi.jpg"
+      },
+      {
+        "property": "og:type",
+        "content": "Website"
+      }
+    ]
+  },
+  "/online_tuition": {
+    "title": "Home Tuitions- The Yoga Institute Santacruz East Mumbai",
+    "h1Tag": "Home Tuitions",
+    "h2Tags": [],
+    "metaData": [
+      {
+        "name": "keywords",
+        "content": "home tuitions, yoga home tuitions, yoga tuitions"
+      },
+      {
+        "name": "description",
+        "content": "Often, people are unable to come to The Yoga Institute for reasons such as geographical distance, time constrains, specific health problems, etc."
+      },
+      {
+        "property": "og:description",
+        "content": "Often, people are unable to come to The Yoga Institute for reasons such as geographical distance, time constrains, specific health problems, etc."
+      },
+      {
+        "property": "og:title",
+        "content": "Home Tuitions- The Yoga Institute Santacruz East Mumbai"
+      },
+      {
+        "property": "og:url",
+        "content": "https://www.staging.theyogainstituteonline.org/online_tuition"
+      },
+      {
+        "property": "og:sitename",
+        "content": "The Yoga Institue"
+      },
+      {
+        "property": "og:image",
+        "content": "https://ecom-static-site.oss-ap-south-1.aliyuncs.com/metaImages/online-tuition-tyi-1.jpg"
+      },
+      {
+        "property": "og:type",
+        "content": "Website"
+      }
+    ]
+  },
+  "/couples-classes-online": {
+    "title": "Couples Classes- The Yoga Institute Santacruz East Mumbai",
+    "h1Tag": "Couples’ Classes",
+    "h2Tags": [],
+    "metaData": [
+      {
+        "name": "keywords",
+        "content": "couples classes, couples yoga classes"
+      },
+      {
+        "name": "description",
+        "content": "Yoga sessions to help couples understand each other better and to keep the spark in their marriage (relationship). Enrollment is for a calendar year."
+      },
+      {
+        "property": "og:description",
+        "content": "Yoga sessions to help couples understand each other better and to keep the spark in their marriage (relationship). Enrollment is for a calendar year."
+      },
+      {
+        "property": "og:title",
+        "content": "Couples Classes- The Yoga Institute Santacruz East Mumbai"
+      },
+      {
+        "property": "og:url",
+        "content": "https://www.staging.theyogainstituteonline.org/couples-classes-online"
+      },
+      {
+        "property": "og:sitename",
+        "content": "The Yoga Institue"
+      },
+      {
+        "property": "og:image",
+        "content": "https://ecom-static-site.oss-ap-south-1.aliyuncs.com/metaImages/couple%20classes%202022.jpg"
+      },
+      {
+        "property": "og:type",
+        "content": "Website"
+      }
+    ]
+  },
+  "/7-days-heath-camp-on-campus": {
+    "title": "7 Days Health Camp – “Insight into Yoga” (Hindi)",
+    "h1Tag": "7 Days Health Camp – “Insight into Yoga” (Hindi)",
+    "h2Tags": [],
+    "metaData": [
+      {
+        "name": "keywords",
+        "content": "7 days camp, health camp , yoga institute camp"
+      },
+      {
+        "name": "description",
+        "content": "The Yoga Institute conducts 7 days health Camp Insights into Yoga which covers all types of workshop with different courses that changes the day to day lifestyle"
+      },
+      {
+        "property": "og:description",
+        "content": "The Yoga Institute conducts 7 days health Camp Insights into Yoga which covers all types of workshop with different courses that changes the day to day lifestyle"
+      },
+      {
+        "property": "og:title",
+        "content": "7 Days Health Camp – “Insight into Yoga” (Hindi)"
+      },
+      {
+        "property": "og:url",
+        "content": "https://www.staging.theyogainstituteonline.org/7-days-heath-camp-on-campus"
+      },
+      {
+        "property": "og:sitename",
+        "content": "The Yoga Institue"
+      },
+      {
+        "property": "og:image",
+        "content": "https://ecom-static-site.oss-ap-south-1.aliyuncs.com/metaImages/7-day-health-camp.jpg"
+      },
+      {
+        "property": "og:type",
+        "content": "Website"
+      }
+    ]
+  },
+  "/21-days-blc-batch2": {
+    "title": "21 Days Better Living Course (On Campus) - The Yoga Institute",
+    "h1Tag": "21 Days Better Living Course (On Campus)",
+    "h2Tags": [],
+    "metaData": [
+      {
+        "name": "keywords",
+        "content": "21 day better living course on campus, better living course, yoga course"
+      },
+      {
+        "name": "description",
+        "content": "The most awaited and popular course conducted at The Yoga Institute is now back on campus."
+      },
+      {
+        "property": "og:description",
+        "content": "The most awaited and popular course conducted at The Yoga Institute is now back on campus."
+      },
+      {
+        "property": "og:title",
+        "content": "21 Days Better Living Course (On Campus) - The Yoga Institute"
+      },
+      {
+        "property": "og:url",
+        "content": "https://www.staging.theyogainstituteonline.org/21-days-blc-batch2"
+      },
+      {
+        "property": "og:sitename",
+        "content": "The Yoga Institue"
+      },
+      {
+        "property": "og:image",
+        "content": "https://ecom-static-site.oss-ap-south-1.aliyuncs.com/metaImages/concentrated-woman-meditating-nature.jpg"
+      },
+      {
+        "property": "og:type",
+        "content": "Website"
+      }
+    ]
+  },
+  "/21-days-blc-batch3": {
+    "title": "21 Days Better Living Course (On Campus) - The Yoga Institute",
+    "h1Tag": "21 Days Better Living Course (On Campus)",
+    "h2Tags": [],
+    "metaData": [
+      {
+        "name": "keywords",
+        "content": "21 day better living course on campus, better living course, yoga course"
+      },
+      {
+        "name": "description",
+        "content": "The most awaited and popular course conducted at The Yoga Institute is now back on campus."
+      },
+      {
+        "property": "og:description",
+        "content": "The most awaited and popular course conducted at The Yoga Institute is now back on campus."
+      },
+      {
+        "property": "og:title",
+        "content": "21 Days Better Living Course (On Campus) - The Yoga Institute"
+      },
+      {
+        "property": "og:url",
+        "content": "https://www.staging.theyogainstituteonline.org/21-days-blc-batch3"
+      },
+      {
+        "property": "og:sitename",
+        "content": "The Yoga Institue"
+      },
+      {
+        "property": "og:image",
+        "content": "https://ecom-static-site.oss-ap-south-1.aliyuncs.com/metaImages/concentrated-woman-meditating-nature.jpg"
+      },
+      {
+        "property": "og:type",
+        "content": "Website"
+      }
+    ]
   }
-
-  
 }
