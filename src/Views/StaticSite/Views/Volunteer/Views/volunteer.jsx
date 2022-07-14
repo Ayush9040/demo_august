@@ -89,7 +89,7 @@ const Volunteer = () => {
             return (
               <CareerCard
                 key={i}
-                link={`/volunteer/program/${item._id}`}
+                link={`/volunteer/${item._id}`}
                 cardTitle={item.title}
                 bgImg={item.thumbnail}
               />
