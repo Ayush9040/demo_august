@@ -7,6 +7,7 @@ import { upload } from '../../../assets/icons/icon'
 import { useSelector } from 'react-redux'
 import { useDispatch } from 'react-redux'
 import { fetchJobData } from '../Career.action'
+import { postApplicationData } from '../../Volunteer/Volunteer.action'
 
 const SingleJob = () => {
   const dispatch = useDispatch()
@@ -18,9 +19,18 @@ const SingleJob = () => {
     dispatch(fetchJobData())
   },[])
   useEffect(()=>{
+    console.log(jobPrograms)
     setJob(jobPrograms.find((item) => item['_id'] === jobId))
-  },[])
-  console.log(job,'aa')
+  },[jobPrograms])
+
+
+  const handleSubmit = (e)=>{
+    e.preventDefault()
+    postApplicationData({
+  
+    })
+  }
+ 
   return (
     <div className="single-job">
       <CommonBannerNavPrimary innerNav={false} />
@@ -54,7 +64,7 @@ const SingleJob = () => {
             </ul>
           </div>
           <div className="job-form">
-            <form>
+            <form onSubmit={(e)=>{handleSubmit(e)}} >
               <fieldset>
                 <input type={'text'} placeholder={'Name'} />
               </fieldset>
@@ -91,7 +101,7 @@ const SingleJob = () => {
                 </fieldset>
               </div>
               <fieldset>
-                <input id="apply" type={'submit'} />
+                <input id="apply"  type={'submit'} />
               </fieldset>
             </form>
           </div>

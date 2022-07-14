@@ -8,21 +8,33 @@ import FAQ from '../../../Components/Faq'
 import { upload } from '../../../assets/icons/icon'
 import { useDispatch, useSelector } from 'react-redux'
 import { fetchProgramsData } from '../Volunteer.action'
+import { uploadFile } from '../../../../../helpers/OssHelper'
 
 const VolunteerJob = () => {
   const dispatch = useDispatch()
+  const [imageAssest, setImageAssest] = useState(null)
+  const [certificateAssest, setCertifiacteAssest] = useState(null)
+  const [imageName, setImageName] = useState('')
+  const [certificateName, setCertifiacteName] = useState('')
   const { id } = useParams()
   const [program, setProgram] = useState({})
-  const { volunteerPrograms } = useSelector(state=>state.volunteer)
+  const { volunteerPrograms } = useSelector((state) => state.volunteer)
+  const uploadImage = async(file, type, changeData) => {
+    const url = uploadFile(file, type)
+    if (changeData === 'CERTIFICATE') setCertifiacteAssest(url)
+    else changeData === 'IMAGE'
+    setImageAssest(url)
+  }
+
   useEffect(() => {
     dispatch(fetchProgramsData())
   }, [])
 
-  useEffect(()=>{
+  useEffect(() => {
     setProgram(volunteerPrograms.find((item) => id === item['_id']))
-  },[])
+  }, [volunteerPrograms])
 
-  console.log(program?.faq,'faq')
+  console.log(program?.faq, 'faq')
 
   return (
     <div className="single-job">
@@ -64,10 +76,14 @@ const VolunteerJob = () => {
               <div className="uploads">
                 <fieldset>
                   <label htmlFor="image">
-                    Upload Image
+                    {imageAssest ? imageName.substring(0, 15) : 'Upload Image '}
                     <input
                       type={'file'}
                       id="image"
+                      onChange={(e) => {
+                        uploadImage(e.target.files[0], 'image', 'IMAGE')
+                        setImageName(e.target.files[0].name)
+                      }}
                       placeholder="Upload Image"
                       accept="image/*"
                     />
@@ -77,10 +93,17 @@ const VolunteerJob = () => {
                 </fieldset>
                 <fieldset>
                   <label htmlFor="resume">
+                    {certificateAssest
+                      ? certificateName.substring(0, 15)
+                      : 'Upload Resume'}
                     Upload Resume
                     <input
                       type={'file'}
                       id="resume"
+                      onChange={(e) => {
+                        uploadImage(e.target.files[0], 'resume', 'RESUME')
+                        setCertifiacteName(e.target.files[0].name)
+                      }}
                       placeholder="Upload Resume"
                     />
                     &ensp;
@@ -96,7 +119,7 @@ const VolunteerJob = () => {
           </div>
         </div>
       </div>
-      <VolunteerGrid gallery={ program?.gallery } />
+      <VolunteerGrid gallery={program?.gallery} />
       <FAQ questions={program?.faq} />
     </div>
   )
