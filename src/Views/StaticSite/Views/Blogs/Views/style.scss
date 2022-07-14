@@ -19,7 +19,7 @@
     padding: 5rem 10rem;
     margin-top: 18rem;
     .newsletter-content {
-      //top: -16.5rem;
+      top: 0rem;
       width: 70% !important;
       margin: 0 auto;
       h2 {
@@ -29,7 +29,7 @@
         .newsletter-title {
           font-size: 2.25rem;
           color: #000;
-          font-weight: 600;
+          font-weight: 700;
         }
         .newsletter-date {
           font-size: 2.5rem;
@@ -67,7 +67,7 @@
   .newsletter-image {
     justify-content: center;
     flex-direction: column;
-    top: -18rem;
+    top: 0rem;
     h3 {
       text-align: right;
       margin-right: 25%;

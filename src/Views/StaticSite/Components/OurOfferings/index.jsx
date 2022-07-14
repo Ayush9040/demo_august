@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Heading from '../Heading'
 import './style.scss'
 import { courses, filler } from '../../assets/icons/icon'
-import baseDomain,{ homeAssets } from '../../assets/images/imageAsset'
+import baseDomain,{ courseAssets, homeAssets } from '../../assets/images/imageAsset'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import Slider from 'react-slick'
@@ -124,7 +124,7 @@ const OurOfferings = () => {
             </div>
             <div className="course-offered">
               <img
-                src={`${baseDomain}${homeAssets.homeAsset9}`}
+                src={`${baseDomain}${courseAssets.courseAsset37}`}
                 placeholder="none"
               />
               <h4>Regular Asana Classes</h4>

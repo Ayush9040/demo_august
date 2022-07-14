@@ -15,7 +15,7 @@ import { useSelector } from 'react-redux'
 
 const CourseDetails = ({ pageDate }) => {
   const [detail, setDetail] = useState(1)
-
+  const [error,setError]= useState()
   const[Params]= useSearchParams()
 
   // const [courseDate, setCourseDate] = useState()
@@ -24,10 +24,19 @@ const CourseDetails = ({ pageDate }) => {
   //   setCourseDate(localStorage.getItem('selectedDate'))
   // }, [])
   const { isLoggedIn } = useSelector(state=>state.auth)
+  const [selectDate, setSetselectDate] = useState(null)
   
+  const checkHandler = () => {
+    if(pageDate.dates.length!==0){
+      if(selectDate === null){
+        setError(1)
+      }else{
+        setError(0)
+      }
+    }
+  }
 
   console.log(pageDate, 'pageData')
-  const [selectDate, setSetselectDate] = useState()
   // localStorage.setItem('selectedDate',selectDate)
   useEffect(() => {
     setSetselectDate(Params.get('date'))
@@ -132,7 +141,7 @@ const CourseDetails = ({ pageDate }) => {
   }
 
   return (
-    <div className="course-detail-page">
+    <div className="course-detail-page" id='registration'   >
       <div className="main-section" style={{ background: '#C9705F' }}>
         <div className="course-info">
           <h1>
@@ -153,12 +162,12 @@ const CourseDetails = ({ pageDate }) => {
             {pageDate.metaDescription ||
               'Lorem Ipsum is simply dummy text of the printing and typesetting industry. '}
           </p>
-          <div className="course-options">
+          <div className="course-options"  >
             {/* {selectDate ? <Link to={ isLoggedIn ? `/enrollment/${pageDate.key}/?date=${selectDate}`:`/user/sign-in/${pageDate.key}/?date=${selectDate}`}>
               <CommonBtn text={'Enroll Now'} />
             </Link> :  scroll() } */}
 
-            <div>
+            <div onClick={checkHandler}>
               {pageDate?.dates?.length!==0 ? 
                 (selectDate ? (
                   <Link
@@ -179,6 +188,10 @@ const CourseDetails = ({ pageDate }) => {
                 >
                   <CommonBtn text={'Enroll Now'} />
                 </Link>)}
+              {error===1 && <small style={
+                { color: 'white', marginLeft: '0', position:'relative', top: '1rem', left: '2rem', fontSize: '1.2rem' }}>
+                        *Please Select Date!
+              </small>}
             </div>
             
             {/* <CommonBtn text={'Gift Course'} /> */}

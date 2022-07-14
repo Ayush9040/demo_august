@@ -35,7 +35,7 @@ const Personal = ({ handleEmpty1, empty, setFormData, formData, setEmpty }) => {
               {empty === 2 && (
                 <small>
                   {' '}
-                  Please enter an valid email
+                  Please enter a valid email
                 </small>
               )}
             </div>

@@ -24,8 +24,6 @@ const ttc200hr = {
     category: 'ttc',
     title: '200 hrs TTC  Batch 1 - 1 Month TTC Online & On Campus - English',
     dates: [
-      '1st June to 30th June 2022',
-      '1st July to 31st July 2022',
       '1st Aug to 31st Aug 2022',
       '1st Sept to 30th Sept 2022',
       '1st Oct to 31st Oct 2022',
@@ -87,7 +85,7 @@ const ttc200hr = {
         type: 'paragraph',
         content: {
           title: 'Date',
-          text: ['1st July 2022to 31st July 2022'],
+          text: ['1st Aug 2022 to 31st Aug 2022'],
         },
       },
       {
@@ -656,7 +654,6 @@ const ttc200hr = {
     category: 'ttc',
     title: '200 hrs TTC  Batch 3 - 2 Months TTC Online  - English',
     dates: [
-      '6th June to 30th July 2022',
       '8th Aug to 1st Oct 2022',
       '10th Oct to 3rd Dec 2022',
       '12th Dec to 4th Feb 2023',
@@ -970,7 +967,6 @@ const ttc200hr = {
     category: 'ttc',
     title: '200 hrs TTC  Batch 4 - 2 Months TTC Online  - Hindi',
     dates: [
-      '13th June to 6th Aug 2022',
       '15th Aug to 8th Oct 2022',
       '17th Oct to 10th Dec 2022',
       '19th Dec to 11th Feb 2023',
@@ -1026,7 +1022,7 @@ const ttc200hr = {
         type: 'paragraph',
         content: {
           title: 'Date',
-          text: ['13th June 2022to 6th August 2022'],
+          text: ['15th Aug 2022 to 8th Oct 2022'],
         },
       },
       {
@@ -1282,7 +1278,6 @@ const ttc200hr = {
     category: 'ttc',
     title: '200 hrs TTC Batch 5 - 2 Months TTC Online  - English',
     dates: [
-      '27th June to 20th Aug 2022',
       '29th Aug to 22nd Oct 2022',
       '31st Oct to 24th Dec 2022',
     ],
@@ -1330,7 +1325,7 @@ const ttc200hr = {
         type: 'paragraph',
         content: {
           title: 'Duration',
-          text: ['27th June 2022to 20th August 2022'],
+          text: [],
         },
       },
       {
@@ -2152,7 +2147,7 @@ const ttc500hr = {
 const ttc900hr = {
   1: {
     id: '',
-    templateId: '',
+    templateId: 'GENERAL_AUTO_EMAIL',
     key: '3-months-ttc',
     batch: 1,
 
@@ -5093,7 +5088,7 @@ const camps = {
     metaDescription:
       'Specific pranayama, asana and relaxation techniques to enhance your state of mind',
     image: `${baseDomain}${courseAssets.courseAsset8}`,
-    cardImage: `${baseDomain}${courseAssets.courseAsset8}`,
+    cardImage: `${baseDomain}${courseAssets.courseAsset112}`,
     dates: ['27th August 2022', '22nd October 2022', '26th December 2022'],
     online: true,
     onCampus: true,
@@ -5222,7 +5217,7 @@ const camps = {
     category: 'camps',
     metaDescription:
       'Powerful and effective asana, pranayama, and relaxation techniques to alleviate heart ailments',
-    image: `${baseDomain}${courseAssets.courseAsset6}`,
+    image: `${baseDomain}${courseAssets.courseAsset111}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset6}`,
     dates: ['27th August 2022', '22nd October 2022', '26th December 2022'],
     online: true,
@@ -5888,7 +5883,7 @@ const camps = {
     metaDescription:
       'Specific pranayama, asana and relaxation techniques to enhance your state of mind',
     image: `${baseDomain}${courseAssets.courseAsset8}`,
-    cardImage: `${baseDomain}${courseAssets.courseAsset107}`,
+    cardImage: `${baseDomain}${courseAssets.courseAsset112}`,
     dates: [],
     online: true,
     onCampus: true,
@@ -6142,7 +6137,7 @@ const camps = {
       '16th October 2022',
       '18th December 2022',
     ],
-    mostPopular: true,
+    mostPopular: false,
     rating: 5,
     colorCode: '#CE9B51',
     timing: '8:00 am – 11:00 am (IST)',
@@ -7206,7 +7201,7 @@ const camps = {
     nonResidential: true,
     residential: true,
     certficate: false,
-    mostPopular: false,
+    mostPopular: true,
     rating: 5,
     colorCode: '#EDBE66',
     timing: '5:00 pm – 8:00 pm (IST)',
@@ -7560,7 +7555,7 @@ const camps = {
     nonResidential: false,
     residential: false,
     certficate: false,
-    mostPopular: false,
+    mostPopular: true,
     rating: 5,
     colorCode: '#EDBE66',
     timing: 'Evening: 6:30 pm – 8:00 pm (IST)',
@@ -7873,7 +7868,7 @@ const camps = {
     nonResidential: false,
     residential: false,
     certficate: false,
-    mostPopular: false,
+    mostPopular: true,
     rating: 5,
     colorCode: '#EDBE66',
     timing: 'Evening: 6:30 pm – 8:00 pm (IST)',
@@ -8181,8 +8176,6 @@ const camps = {
     batch: 4,
     templateId: 'GENERAL_AUTO_EMAIL',
     dates: [
-      '12th June to 2nd July 2022',
-      '3rd July to 23rd July 2022',
       '24th July to 13th Aug 2022',
       '14th Aug to 3rd Sept 2022',
       '4th Sept to 24th Sept 2022',
@@ -8197,7 +8190,7 @@ const camps = {
     nonResidential: false,
     residential: false,
     certficate: false,
-    mostPopular: false,
+    mostPopular: true,
     rating: 5,
     colorCode: '#EDBE66',
     timing: 'Morning: 7:00 am – 8:30 am (IST)',
@@ -8331,7 +8324,7 @@ const camps = {
         type: 'paragraph',
         content: {
           title: 'UPCOMING DATES FOR 2022',
-          text: ['3rd July to 23rd July 2022/ 24th July to 13th August 2022'],
+          text: ['24th July to 13th August 2022'],
         },
       },
       {
@@ -8505,7 +8498,6 @@ const camps = {
     batch: 1,
     templateId: 'CAMP_FOR_7_DAYS_HEALTH',
     dates: [
-      '25th June to 1st July 2022',
       '23rd July to 29th July 2022',
       '27th Aug to 2nd Sept 2022',
       '24th Sept to 30th Sept 2022',
@@ -8518,7 +8510,7 @@ const camps = {
     nonResidential: true,
     residential: true,
     certficate: false,
-    mostPopular: false,
+    mostPopular: true,
     rating: 5,
     colorCode: '#EDBE66',
     timing: 'Saturday to Friday: 7:00 am – 7:00 pm (IST)',
@@ -8860,8 +8852,6 @@ const camps = {
     templateId: 'GENERAL_AUTO_EMAIL',
     batch: 1,
     dates: [
-      '5th June to 25th June 2022',
-      '3rd July to 23rd July 2022',
       '7th Aug to 27th Aug 2022',
       '4th Sept to 24th Sept 2022',
       '2nd Oct to 22nd Oct 2022',
@@ -8873,7 +8863,7 @@ const camps = {
     nonResidential: false,
     residential: false,
     certficate: false,
-    mostPopular: false,
+    mostPopular: true,
     rating: 5,
     colorCode: '#EDBE66',
     timing: 'Morning:7:00 am – 8:30 am (IST)',
@@ -9007,7 +8997,7 @@ const camps = {
         type: 'paragraph',
         content: {
           title: 'UPCOMING DATES FOR 2022',
-          text: ['3rd July to 23rd July 2022/ 24th July to 13th August 2022'],
+          text: ['24th July to 13th August 2022'],
         },
       },
       {
@@ -9716,7 +9706,7 @@ const classes = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'classes',
-    dates: ['4th July to 25th Aug 2022'],
+    dates: [],
     online: true,
     onCampus: false,
     nonResidential: false,
@@ -9775,7 +9765,6 @@ const classes = {
         content: {
           title: 'Online Sessions',
           text: [
-            '4th July 2022to 25th August 2022',
             'Mondays, Tuesdays & Thursdays: 11:30 am - 12:30 pm (IST)',
             '24 sessions of one hour each',
           ],
@@ -10019,7 +10008,7 @@ const classes = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'classes',
-    dates: ['14th June to 18 June 2022'],
+    dates: [],
     online: true,
     onCampus: false,
     nonResidential: false,
@@ -10040,7 +10029,7 @@ const classes = {
         type: 'paragraph',
         content: {
           title: 'Duration',
-          text: ['14th June to 18th June'],
+          text: [],
         },
       },
       {
@@ -10545,8 +10534,6 @@ const classes = {
     },
     category: 'classes',
     dates: [
-      '6th June to 1st July 2022',
-      '4th July to 29th July 2022',
       '1st Aug to 26th Aug 2022',
       '5th Sept to 30th Sept 2022',
       '3rd Oct to 28th Oct 2022',
