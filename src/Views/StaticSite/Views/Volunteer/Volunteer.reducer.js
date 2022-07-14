@@ -1,8 +1,8 @@
 import { volunteerActions } from './Volunteer.action'
-import  { volunteerState, noError } from './Volunteer.defaultStates'
+import  { initialState, noError } from './Volunteer.defaultStates'
 
 export const volunteerReducer = (
-  state= volunteerState,
+  state=initialState,
   action
 )=>{
   switch(action.type){
@@ -26,6 +26,8 @@ export const volunteerReducer = (
       isLoading:false,
       volunteerPrograms:[],
       error:true
-    }  
+    }
+  default:
+    return { ...state }    
   }
 }
