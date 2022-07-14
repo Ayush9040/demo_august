@@ -30,6 +30,8 @@ import YogaByTheBay from '../Components/Highlights/YogaByTheBay'
 import FullmoonMeditation from '../Components/Highlights/FullmoonMeditation'
 import CorporateWorkshop from '../Components/Highlights/CorporateWorkshop'
 import OnlineTution from '../Components/Highlights/OnlineTution'
+import SingleJob from '../Views/Careers/Views/single-job'
+import VolunteerJob from '../Views/Volunteer/Views/volunteerJob'
 
 const staticSiteRoutes = [
   {
@@ -138,10 +140,18 @@ const staticSiteRoutes = [
   },
   {
     Component: VolunteerPage,
-    path: '/volunteer/*',
+    path: '/volunteer/',
     exact: true,
     id: 'statisSiteUnderJoin',
-    routePath: '/volunteer/*',
+    routePath: '/volunteer/',
+    name: 'Join',
+  },
+  {
+    Component: VolunteerJob,
+    path: '/volunteer/:id',
+    exact: true,
+    id: 'statisSiteUnderJoin',
+    routePath: '/volunteer/:id',
     name: 'Join',
   },
   {
@@ -178,13 +188,20 @@ const staticSiteRoutes = [
   },
   {
     Component: Career,
-    path: '/careers/*',
+    path: '/careers',
     exact: true,
     id: 'statisSiteUnderCareers',
-    routePath: '/careers/*',
+    routePath: '/careers',
     name: 'Careers',
   },
-
+  {
+    Component: SingleJob,
+    path: '/careers/:jobId',
+    exact: true,
+    id: 'statisSiteUnderCareers',
+    routePath: '/careers/:jobId',
+    name: 'Careers',
+  },
   {
     Component: TermsCondition,
     path: '/terms&condition',

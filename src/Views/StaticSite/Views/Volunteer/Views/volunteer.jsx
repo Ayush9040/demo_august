@@ -4,12 +4,18 @@ import benefits from '../../../assets/images/benifits.png'
 import './style.scss'
 import CareerCard from '../../../Components/CommonCareerCard'
 import baseDomain, { background } from '../../../assets/images/imageAsset'
-import { volunteerData } from '../../../utils/volunteerData'
+//import { volunteerData } from '../../../utils/volunteerData'
 import InnerNavComponent from '../../../Components/InnerNavComponent'
+import { useDispatch, useSelector } from 'react-redux'
+import { fetchProgramsData } from '../Volunteer.action'
 
 
 const Volunteer = () => {
+
+  const dispatch = useDispatch()
+
   useEffect(() => {
+    dispatch(fetchProgramsData())
     window.scrollTo(0, 0)
   }, [])
   const VolunteerBar = {
@@ -29,6 +35,12 @@ const Volunteer = () => {
       },
     ],
   }
+  const { volunteerPrograms } = useSelector(state=>state.volunteer)
+
+  console.log(volunteerPrograms)
+
+
+
   return (
     <>
       <div className="Benefits-container">
@@ -73,13 +85,13 @@ const Volunteer = () => {
             cardTitle='Tree Plantation'
             bgImg={baseDomain + volunteerAssets.volunteerAssets4}
           /> */}
-          {volunteerData.map((item, i) => {
+          {volunteerPrograms.map((item, i) => {
             return (
               <CareerCard
                 key={i}
-                link={`/volunteer/program/${item.id}`}
-                cardTitle={item.name}
-                bgImg={item.image}
+                link={`/volunteer/${item._id}`}
+                cardTitle={item.title}
+                bgImg={item.thumbnail}
               />
             )
           })}

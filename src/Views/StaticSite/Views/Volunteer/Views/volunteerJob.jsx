@@ -2,17 +2,27 @@ import React, { useEffect, useState } from 'react'
 import CommonBannerNavPrimary from '../../../Components/CommonBannerNavPrimary'
 import VolunteerGrid from '../../../Components/VolunteerGrid'
 // import { Volunteer } from '../../utils/JobDetails'
-import { volunteerData } from '../../../utils/volunteerData'
+//import { volunteerData } from '../../../utils/volunteerData'
 import { useParams } from 'react-router-dom'
 import FAQ from '../../../Components/Faq'
 import { upload } from '../../../assets/icons/icon'
+import { useDispatch, useSelector } from 'react-redux'
+import { fetchProgramsData } from '../Volunteer.action'
 
 const VolunteerJob = () => {
+  const dispatch = useDispatch()
   const { id } = useParams()
   const [program, setProgram] = useState({})
+  const { volunteerPrograms } = useSelector(state=>state.volunteer)
   useEffect(() => {
-    setProgram(volunteerData.find((item) => id === item.id))
+    dispatch(fetchProgramsData())
   }, [])
+
+  useEffect(()=>{
+    setProgram(volunteerPrograms.find((item) => id === item['_id']))
+  },[])
+
+  console.log(program?.faq,'faq')
 
   return (
     <div className="single-job">
@@ -20,11 +30,11 @@ const VolunteerJob = () => {
       <div className="job-details">
         <div className="job-description">
           <div className="job-img">
-            <img src={program?.image} alt={'title'} />
+            <img src={program?.thumbnail} alt={'title'} />
           </div>
           <div className="job-info">
             <h1>
-              {program?.name}
+              {program?.title}
               <div className="bottom-line"></div>
             </h1>
             <p>{program?.description}</p>

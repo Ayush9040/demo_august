@@ -22,14 +22,14 @@ const Accordian = ({ data, sliderVal=0,setSliderVal }) => {
               <p
                 className="accordian_ques"
                 onClick={() => {
-                  setSliderVal && setSliderVal(item.id)
-                  setHidden(item.id)
+                  setSliderVal && setSliderVal(item.id || item['_id'])
+                  setHidden(item.id || item['_id'])
                 }}
               >
-                {item.ques}
+                {item.ques || item.questions}
                 <span
                   className={
-                    (hidden === item.id || sliderVal===item.id) ? 'acc_arrow open' : 'acc_arrow'
+                    (hidden === (item.id || item['_id'] ) || sliderVal===(item.id || item['_id'] ) ) ? 'acc_arrow open' : 'acc_arrow'
                   }
                 >
                   &#9654;
@@ -38,10 +38,10 @@ const Accordian = ({ data, sliderVal=0,setSliderVal }) => {
               {typeof (item.ans) !== 'object' ? (
                 <p
                   className="accordian_ans"
-                  style={(hidden === item.id || sliderVal===item.id) ? { height: 'auto' } : {}}
+                  style={(hidden === (item.id || item['_id']) || sliderVal===(item.id || item['_id'] )) ? { height: 'auto' } : {}}
                 >
                   {' '}
-                  {item.ans}
+                  {item.ans || item.answer}
                 </p>
               ) : (
                 <ul 
