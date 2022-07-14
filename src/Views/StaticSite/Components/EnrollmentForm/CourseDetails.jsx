@@ -1,7 +1,7 @@
 import React,{ useEffect } from 'react'
 import { useState } from 'react'
 import { upload } from '../../assets/icons/icon'
-import { uploadFile } from '../../Views/Courses/Helper'
+import { uploadFile } from '../../../../helpers/OssHelper'
 const CourseDetails = ({
   currentCourse,
   courseDate,
