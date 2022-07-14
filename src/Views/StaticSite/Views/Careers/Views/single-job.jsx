@@ -2,36 +2,44 @@ import React, { useState, useEffect } from 'react'
 import CommonBannerNavPrimary from '../../../Components/CommonBannerNavPrimary'
 import './style.scss'
 import { useParams } from 'react-router-dom'
-import { Job } from '../../../utils/JobDetails'
+//import { Job } from '../../../utils/JobDetails'
 import { upload } from '../../../assets/icons/icon'
+import { useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
+import { fetchJobData } from '../Career.action'
 
 const SingleJob = () => {
-  const { jobid } = useParams()
+  const dispatch = useDispatch()
+  const { jobPrograms } = useSelector((state) => state?.career)
+  const { jobId } = useParams()
   const [job, setJob] = useState({})
 
   useEffect(() => {
-    setJob(Job.find((item) => item.jobId === jobid))
-  })
-
+    dispatch(fetchJobData())
+  },[])
+  useEffect(()=>{
+    setJob(jobPrograms.find((item) => item['_id'] === jobId))
+  },[])
+  console.log(job,'aa')
   return (
     <div className="single-job">
       <CommonBannerNavPrimary innerNav={false} />
       <div className="job-details">
         <div className="job-description">
           <div className="job-img">
-            <img src={job.jobThumbnail} alt={'title'} />
+            <img src={job?.thumbnail} alt={'title'} />
           </div>
           <div className="job-info">
             <h1>
-              {job.jobTitle}
+              {job?.title}
               <div className="bottom-line"></div>
             </h1>
             <p>
               <q>
-                <i>{job.jobQuote}</i>
+                <i>{job?.quote}</i>
               </q>
             </p>
-            <p>{job.jobDescription}</p>
+            <p>{job?.description}</p>
           </div>
         </div>
         <div className="job-application">

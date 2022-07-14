@@ -30,6 +30,7 @@ import YogaByTheBay from '../Components/Highlights/YogaByTheBay'
 import FullmoonMeditation from '../Components/Highlights/FullmoonMeditation'
 import CorporateWorkshop from '../Components/Highlights/CorporateWorkshop'
 import OnlineTution from '../Components/Highlights/OnlineTution'
+import SingleJob from '../Views/Careers/Views/single-job'
 
 const staticSiteRoutes = [
   {
@@ -178,13 +179,20 @@ const staticSiteRoutes = [
   },
   {
     Component: Career,
-    path: '/careers/*',
+    path: '/careers',
     exact: true,
     id: 'statisSiteUnderCareers',
-    routePath: '/careers/*',
+    routePath: '/careers',
     name: 'Careers',
   },
-
+  {
+    Component: SingleJob,
+    path: '/careers/:jobId',
+    exact: true,
+    id: 'statisSiteUnderCareers',
+    routePath: '/careers/:jobId',
+    name: 'Careers',
+  },
   {
     Component: TermsCondition,
     path: '/terms&condition',

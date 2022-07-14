@@ -5,12 +5,10 @@ import { fetchProgramDataAPI } from './Volunteer.api'
 
 
 export function* handleFetchProgramDataEffect(){
-  console.log('effect')
   try{
     const { data } = yield call(fetchProgramDataAPI)
     yield put(fetchProgramsDataSuccess(data.data))
-  }catch(err){
-    console.log(err)
+  }catch{
     yield put(fetchProgramsDataError)
   }
 }

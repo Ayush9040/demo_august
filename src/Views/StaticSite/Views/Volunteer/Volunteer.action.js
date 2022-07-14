@@ -5,7 +5,6 @@ export const volunteerActions = {
 }
 
 export const fetchProgramsData = ()=>{
-  console.log('action')
   return { type: volunteerActions.FETCH_PROGRAMS_DATA }
 }
 

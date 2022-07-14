@@ -8,9 +8,16 @@ import baseDomain, { background } from '../../../assets/images/imageAsset'
 
 import { Job } from '../../../utils/JobDetails'
 import InnerNavComponent from '../../../Components/InnerNavComponent'
+import { fetchJobData } from '../Career.action'
+import { useDispatch, useSelector } from 'react-redux'
 
 const Careers = () => {
+
+  const dispatch = useDispatch()
+  const { jobPrograms } = useSelector(state=>state.career)
+
   useEffect(() => {
+    dispatch(fetchJobData())
     window.scrollTo(0, 0)
   }, [])
   const CareerBan = {
@@ -19,6 +26,8 @@ const Careers = () => {
     menuColor: 'white',
     menuItems: [],
   }
+
+  console.log(jobPrograms,'job')
   return (
     <div className="careers-page">
       <CommonBanner
@@ -51,14 +60,14 @@ const Careers = () => {
             )
           })} */}
 
-          {Job.map((job, i) => {
+          {jobPrograms.map((job, i) => {
 
             return (
               <CareerCard
-                link={`/careers/job/${job.jobId}`}
+                link={`/careers/${job['_id']}`}
                 key={i}
-                cardTitle={job.jobTitle}
-                bgImg={job.jobThumbnail}
+                cardTitle={job.title}
+                bgImg={job.thumbnail}
               />
             )
           })}
