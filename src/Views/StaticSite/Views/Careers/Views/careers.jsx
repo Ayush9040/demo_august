@@ -6,7 +6,7 @@ import './style.scss'
 //import CareerImg from '../../assets/images/our_careers.png'
 import baseDomain, { background } from '../../../assets/images/imageAsset'
 
-import { Job } from '../../../utils/JobDetails'
+//import { Job } from '../../../utils/JobDetails'
 import InnerNavComponent from '../../../Components/InnerNavComponent'
 import { fetchJobData } from '../Career.action'
 import { useDispatch, useSelector } from 'react-redux'
