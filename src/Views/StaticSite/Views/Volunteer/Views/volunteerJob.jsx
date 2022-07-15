@@ -8,11 +8,19 @@ import FAQ from '../../../Components/Faq'
 import { upload } from '../../../assets/icons/icon'
 import { useDispatch, useSelector } from 'react-redux'
 import { fetchProgramsData } from '../Volunteer.action'
+import InputComponent from '../../../Components/InputComponent'
 
 const VolunteerJob = () => {
   const dispatch = useDispatch()
   const { id } = useParams()
   const [program, setProgram] = useState({})
+  const [formData, setFormData]= useState({
+    firstName: '',
+    email: ''
+  })
+
+  const [validate, setValidate] = useState(0)
+
   const { volunteerPrograms } = useSelector(state=>state.volunteer)
   useEffect(() => {
     dispatch(fetchProgramsData())
@@ -23,6 +31,15 @@ const VolunteerJob = () => {
   },[])
 
   console.log(program?.faq,'faq')
+
+  const clickHandler = (e) => {
+    e.preventDefault()
+    if(formData.firstName === '') {
+      return setValidate(1)
+    } else if(formData.email === '') {
+      return setValidate(2)
+    }
+  }
 
   return (
     <div className="single-job">
@@ -54,12 +71,38 @@ const VolunteerJob = () => {
             </ul> */}
           </div>
           <div className="job-form">
-            <form>
+            <form onSubmit={(e) => {clickHandler(e)}}>
               <fieldset>
-                <input type={'text'} placeholder={'Name'} />
+                {/* <input type={'text'} placeholder={'Name'} /> */}
+                <InputComponent 
+                  type= 'text'
+                  placeholder= 'Name'
+                  form={formData}
+                  setField= {setFormData}
+                  keyName = 'firstName'
+                  errorCheck={setValidate}
+                />
               </fieldset>
               <fieldset>
-                <input type={'email'} placeholder={'Email'} />
+                {/* <input type={'email'} placeholder={'Email'} /> */}
+                <InputComponent 
+                  type= 'text'
+                  placeholder= 'Email'
+                  form={formData}
+                  setField= {setFormData}
+                  keyName = 'email'
+                  errorCheck={setValidate}
+                />
+                {validate === 1 && (
+                  <small style={{ color: 'red', marginLeft: '0' }}>
+                    Please Enter Name
+                  </small>
+                )}
+                {validate === 2 && (
+                  <small style={{ color: 'red', marginLeft: '0' }}>
+                    Please Enter Email
+                  </small>
+                )}
               </fieldset>
               <div className="uploads">
                 <fieldset>
