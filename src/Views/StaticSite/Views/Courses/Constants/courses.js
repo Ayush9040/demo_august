@@ -1931,7 +1931,7 @@ const ttc500hr = {
     id: '',
     // templateId: 'COURSE500_3M_TTC',
     templateId: {
-      templateOnline: 'COURSE500_3M_TTC',
+      templateOnline: 'COURSE500_3M_ON_TTC',
       templateOffline : {
         templateResidential: '',
         templateNonResidential: ''
@@ -4543,10 +4543,10 @@ const ttc900hr = {
     id: '',
     // templateId: 'COURSE900_7M_TTC',
     templateId: {
-      templateOnline: 'COURSE900_7M_TTC',
+      templateOnline: 'COURSE900_7M_ON_TTC',
       templateOffline: {
-        templateResidential: '',
-        templateNonResidential: ''
+        templateResidential: 'COURSE900_7M_RES_TTC',
+        templateNonResidential: 'COURSE900_7M_NONRES_TTC'
       }
     },
     key: '7-months-900hr',
