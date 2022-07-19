@@ -1400,6 +1400,9 @@ export const wellnessAssets ={
   wellnessAssets2: '/wellness/our_offerings_left .jpeg',
   wellnessAssets3 :'/wellness/Our_offerings_right.png',
   wellnessAssets4:'/wellness/wellness_program_at_work (1).jpg',
+  wellnessAssets5:'/wellness/wellness_programs_at_work1.jpg',
+  wellnessAssets6:'/wellness/wellness_programs_at_work_2.jpg',
+  wellnessAssets7:'/wellness/wellness_programs_at_work_3.jpg',
 }
 
 
