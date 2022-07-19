@@ -148,7 +148,7 @@ export const listData=[
   {
     name:'Jennifer Cluff ',
     image:`${baseDomain}${experienceAssets.jennifer}`,
-    designation:'Bollywood Actor and Producer',
+    designation:'Hollywood Actor and Producer',
     message:'I have learned a lot from The Yoga Institute. It is a beautiful place to be yourself. I thank Smt. Hansaji for all that I’ve learned from her.'
   },
 ]
