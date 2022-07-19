@@ -199,8 +199,7 @@ const Enrollment = () => {
   }
 
   const handleSubmit = () => {
-    console.log(formData.mode,'sss')
-    console.log(formData.residental,'sss')
+
     if(formData.mode===''){
       setEmpty('mode')
     }

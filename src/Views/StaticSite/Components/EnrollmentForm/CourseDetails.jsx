@@ -40,6 +40,7 @@ const CourseDetails = ({
   // }
 
   const uploadDoc = async(file,type, changeValue)=> {
+    
     const url = await uploadFile( file,type )
     if(changeValue==='CERTIFICATE'){
       setCourseAsset2(url)
