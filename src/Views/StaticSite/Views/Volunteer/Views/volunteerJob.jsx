@@ -166,7 +166,7 @@ const VolunteerJob = () => {
                         setCertificateName(e.target.files[0].name)
                       }}
                       placeholder="Upload Resume"
-                      accept='.pdf'
+                      
                     />
                     &ensp;
                     {upload}
