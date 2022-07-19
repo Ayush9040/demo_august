@@ -93,10 +93,9 @@ const VolunteerJob = () => {
                 </fieldset>
                 <fieldset>
                   <label htmlFor="resume">
-                    {certificateAssest
+                    {certificateName
                       ? certificateName.substring(0, 15)
                       : 'Upload Resume'}
-                    Upload Resume
                     <input
                       type={'file'}
                       id="resume"
@@ -105,6 +104,7 @@ const VolunteerJob = () => {
                         setCertifiacteName(e.target.files[0].name)
                       }}
                       placeholder="Upload Resume"
+                      accept='.pdf'
                     />
                     &ensp;
                     {upload}
