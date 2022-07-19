@@ -27,6 +27,10 @@ export const volunteerReducer = (
       volunteerPrograms:[],
       error:true
     }
+  case volunteerActions.POST_APPLICANT_DATA:
+    return {
+      ...state
+    }  
   default:
     return { ...state }    
   }

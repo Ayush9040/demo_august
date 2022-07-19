@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+
 import CommonBannerNavPrimary from '../../../Components/CommonBannerNavPrimary'
 import './style.scss'
 import { useParams } from 'react-router-dom'
@@ -7,20 +8,35 @@ import { upload } from '../../../assets/icons/icon'
 import { useSelector } from 'react-redux'
 import { useDispatch } from 'react-redux'
 import { fetchJobData } from '../Career.action'
+import { postApplicationData } from '../../Volunteer/Volunteer.action'
+import InputComponent from '../../../Components/InputComponent'
 
 const SingleJob = () => {
   const dispatch = useDispatch()
   const { jobPrograms } = useSelector((state) => state?.career)
   const { jobId } = useParams()
   const [job, setJob] = useState({})
-
+  const [formData, setFormData]= useState({
+    name:'',
+    email:'',
+  })
+  const[validate, setValidate]=useState(0)
+  
   useEffect(() => {
     dispatch(fetchJobData())
   },[])
   useEffect(()=>{
+    console.log(jobPrograms)
     setJob(jobPrograms.find((item) => item['_id'] === jobId))
-  },[])
-  console.log(job,'aa')
+  },[jobPrograms])
+
+
+  const handleSubmit = (e)=>{
+    e.preventDefault()
+    postApplicationData({
+    })
+  }
+ 
   return (
     <div className="single-job">
       <CommonBannerNavPrimary innerNav={false} />
@@ -54,12 +70,40 @@ const SingleJob = () => {
             </ul>
           </div>
           <div className="job-form">
-            <form>
+            <form onSubmit={(e)=>{handleSubmit(e)}} className='job_input'>
               <fieldset>
-                <input type={'text'} placeholder={'Name'} />
+                {/* <input type={'text'} placeholder={'Name'} /> */}
+                <InputComponent
+                  type='text'
+                  placeholder='Name'
+                  form={formData}
+
+                  setField={setFormData}
+                  keyName='name'
+                  errorCheck={setValidate}
+                />
               </fieldset>
               <fieldset>
-                <input type={'email'} placeholder={'Email'} />
+                {/* <input type={'email'} placeholder={'Email'} /> */}
+                <InputComponent
+                  type='email'
+                  placeholder='Email'
+                  form={formData}
+                  setField={setFormData}
+                  keyName='email'
+                  errorCheck={setValidate}
+                />
+                {validate === 1 && (
+                  <small style={{ color: 'red', marginLeft: '0' }}>
+                    *Please Enter Name!
+                  </small>
+                )}
+                {validate === 2 && (
+                  <small style={{ color: 'red', marginLeft: '0' }}>
+                    Please Enter Valid Email
+                  </small>
+                )}
+
               </fieldset>
               <div className="uploads">
                 <fieldset>
@@ -91,7 +135,7 @@ const SingleJob = () => {
                 </fieldset>
               </div>
               <fieldset>
-                <input id="apply" type={'submit'} />
+                <input id="apply"  type={'submit'} />
               </fieldset>
             </form>
           </div>

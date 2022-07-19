@@ -7,22 +7,64 @@ import { useParams } from 'react-router-dom'
 import FAQ from '../../../Components/Faq'
 import { upload } from '../../../assets/icons/icon'
 import { useDispatch, useSelector } from 'react-redux'
-import { fetchProgramsData } from '../Volunteer.action'
+import { fetchProgramsData, postApplicationData } from '../Volunteer.action'
+import { uploadFile } from '../../../../../helpers/OssHelper'
+import InputComponent from '../../../Components/InputComponent'
+import { validateEmail } from '../../../../../helpers'
+import './style.scss'
 
 const VolunteerJob = () => {
   const dispatch = useDispatch()
+  const [imageAssest, setImageAssest] = useState(null)
+  const [certificateAssest, setCertificateAssest] = useState(null)
+  const [imageName, setImageName] = useState('')
+  const [certificateName, setCertificateName] = useState('')
   const { id } = useParams()
   const [program, setProgram] = useState({})
-  const { volunteerPrograms } = useSelector(state=>state.volunteer)
+  const uploadImage = async(file, type, changeData) => {
+    const url = await uploadFile(file, type)
+    console.log(url,'url')
+    if (changeData === 'RESUME') setCertificateAssest(url)
+    else changeData === 'IMAGE'
+    setImageAssest(url)
+  }
+
+  const [formData, setFormData] = useState({
+    firstName: '',
+    email: '',
+  })
+
+  const [validate, setValidate] = useState(0)
+
+  const { volunteerPrograms } = useSelector((state) => state.volunteer)
   useEffect(() => {
     dispatch(fetchProgramsData())
   }, [])
 
-  useEffect(()=>{
+  useEffect(() => {
     setProgram(volunteerPrograms.find((item) => id === item['_id']))
-  },[])
+  }, [volunteerPrograms])
 
-  console.log(program?.faq,'faq')
+  //console.log(program?.faq, 'faq')
+  console.log(imageAssest,'imgAsset')
+
+  const clickHandler = (e) => {
+    e.preventDefault()
+    if (formData.firstName === '') {
+      return setValidate(1)
+    } else if (!validateEmail(formData.email)) {
+      return setValidate(2)
+    } else {
+      let volunteerPost={
+        name: formData.firstName,
+        email :  formData.email,
+        image  : imageAssest,
+        pdf : certificateAssest,
+        profileId: program['_id']
+      }
+      dispatch(postApplicationData(volunteerPost))
+    }
+  }
 
   return (
     <div className="single-job">
@@ -54,20 +96,55 @@ const VolunteerJob = () => {
             </ul> */}
           </div>
           <div className="job-form">
-            <form>
-              <fieldset>
-                <input type={'text'} placeholder={'Name'} />
+            <form
+              onSubmit={(e) => {
+                clickHandler(e)
+              }}
+            >
+              <fieldset >
+                {/* <input type={'text'} placeholder={'Name'} /> */}
+                <InputComponent
+                  type="text"
+                  placeholder="Name"
+                  form={formData}
+                  setField={setFormData}
+                  keyName="firstName"
+                  errorCheck={setValidate}
+                />{' '}
+                {validate === 1 && (
+                  <small style={{ color: 'red', marginLeft: '2rem' }}>
+                    Please Enter Name
+                  </small>
+                )}
               </fieldset>
-              <fieldset>
-                <input type={'email'} placeholder={'Email'} />
+              <fieldset >
+                {/* <input type={'email'} placeholder={'Email'} /> */}
+                <InputComponent
+                  type="text"
+                  placeholder="Email"
+                  form={formData}
+                  setField={setFormData}
+                  keyName="email"
+                  errorCheck={setValidate}
+                />
+
+                {validate === 2 && (
+                  <small style={{ color: 'red', marginLeft: '2rem' }}>
+                    Please Enter Email Id
+                  </small>
+                )}
               </fieldset>
-              <div className="uploads">
+              <div className="volunteer_uploads">
                 <fieldset>
                   <label htmlFor="image">
-                    Upload Image
+                    {imageAssest ? imageName.substring(0, 15) : 'Upload Image '}
                     <input
                       type={'file'}
                       id="image"
+                      onChange={(e) => {
+                        uploadImage(e.target.files[0],'image', 'IMAGE')
+                        setImageName(e.target.files[0].name)
+                      }}
                       placeholder="Upload Image"
                       accept="image/*"
                     />
@@ -77,11 +154,19 @@ const VolunteerJob = () => {
                 </fieldset>
                 <fieldset>
                   <label htmlFor="resume">
-                    Upload Resume
+                    {certificateName
+                      ? certificateName.substring(0, 15)
+                      : 'Upload Resume'}
                     <input
                       type={'file'}
                       id="resume"
+                      accept='.pdf'
+                      onChange={(e) => {
+                        uploadImage(e.target.files[0], 'resume', 'RESUME')
+                        setCertificateName(e.target.files[0].name)
+                      }}
                       placeholder="Upload Resume"
+                      accept='.pdf'
                     />
                     &ensp;
                     {upload}
@@ -90,13 +175,13 @@ const VolunteerJob = () => {
                 </fieldset>
               </div>
               <fieldset>
-                <input id="apply" type={'submit'} />
+                <input id="volunteer_apply" type={'submit'} />
               </fieldset>
             </form>
           </div>
         </div>
       </div>
-      <VolunteerGrid gallery={ program?.gallery } />
+      <VolunteerGrid gallery={program?.gallery} />
       <FAQ questions={program?.faq} />
     </div>
   )
