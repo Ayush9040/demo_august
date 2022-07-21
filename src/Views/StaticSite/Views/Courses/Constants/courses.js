@@ -8,10 +8,10 @@ const ttc200hr = {
     id: '',
     // templateId: 'COURSE200_1M_TTC',
     templateId: {
-      templateOffline: 'COURSE200_1M_TTC',
+      templateOffline: 'COURSE200_1M_ONLINE_TTC',
       templateOnline: {
-        templateResidential: '',
-        templateNonResidential: ''
+        templateResidential: 'COURSE200_RES_TTC',
+        templateNonResidential: 'COURSE200_NONRES_TTC'
       }
     },
     key: 'batch-1-200hr',
@@ -332,10 +332,10 @@ const ttc200hr = {
     // id: '',
     // templateId: 'COURSE200_1M_TTC2',
     templateId: {
-      templateOnline: 'COURSE200_1M_TTC2',
+      templateOnline: '',
       templateOffline: {
-        templateResidential: '',
-        templateNonResidential: ''
+        templateResidential: 'COURSE200_2M_RES_TTC',
+        templateNonResidential: 'COURSE200_2M_NONRES_TTC'
       }
     },
     key: 'batch-2-200hr',
@@ -651,7 +651,7 @@ const ttc200hr = {
     id: '',
     // templateId: 'COURSE200_2M_TTC2',
     templateId: {
-      templateOnline: 'COURSE200_2M_TTC2',
+      templateOnline: 'COURSE200_1M_ONLINE_TTC',
       templateOffline: {
         templateResidential: '',
         templateNonResidential: ''
@@ -972,7 +972,7 @@ const ttc200hr = {
     id: '',
     // templateId: 'COURSE200_2M_TTC_HINDI',
     templateId: {
-      templateOnline: 'COURSE200_2M_TTC_HINDI',
+      templateOnline: 'COURSE200_2M_ONLINE_HINDI_TTC',
       templateOffline: {
         templateResidential: '',
         templateNonResidential: ''
@@ -1290,7 +1290,7 @@ const ttc200hr = {
     id: '',
     // templateId: 'COURSE200_2M_TTC',
     templateId: {
-      templateOnline: 'COURSE200_2M_TTC',
+      templateOnline: 'COURSE200_2M_ONLINE_TTC',
       templateOffline: {
         templateResidential: '',
         templateNonResidential: ''
@@ -1607,7 +1607,7 @@ const ttc200hr = {
     id: '',
     // templateId: 'COURSE200_3M_TTC',
     templateId: {
-      templateOnline: 'COURSE200_3M_TTC',
+      templateOnline: 'COURSE200_WEEKEND_TTC',
       templateOffline: {
         templateResidential: '',
         templateNonResidential: ''
@@ -2198,7 +2198,7 @@ const ttc900hr = {
     id: '',
     // templateId: 'GENERAL_AUTO_EMAIL',
     templateId: {
-      templateOnline: 'GENERAL_AUTO_EMAIL',
+      templateOnline: 'COURSE500_3M_ON_TTC',
       templateOffline: {
         templateResidential: '',
         templateNonResidential: ''
@@ -2712,10 +2712,10 @@ const ttc900hr = {
     // id: '',
     // templateId: 'COURSE900_1Y_TTC',
     templateId: {
-      templateOnline: 'COURSE900_1Y_TTC',
+      templateOnline: 'COURSE900_1Y_ON_HINDI_TTC',
       templateOffline: {
-        templateResidential: '',
-        templateNonResidential: ''
+        templateResidential: 'COURSE900_1Y_RES_TTC',
+        templateNonResidential: 'COURSE900_1Y_NONRES_HINDI_TTC'
       }
     },
     key: '1-year-900hr',
@@ -3320,10 +3320,10 @@ const ttc900hr = {
     id: '',
     // templateId: 'COURSE900_2Y_TTC',
     templateId: {
-      templateOnline: 'COURSE900_2Y_TTC',
+      templateOnline: 'COURSE900_2Y_ON_TTC',
       templateOffline: {
-        templateResidential: '',
-        templateNonResidential: ''
+        templateResidential: 'COURSE900_2Y_RES_TTC',
+        templateNonResidential: 'COURSE900_2Y_NONRES_TTC'
       }
     },
     key: '2-year-900hr',
@@ -3938,7 +3938,7 @@ const ttc900hr = {
     // id: '',
     // templateId: 'COURSE900_4M_TTC',
     templateId: {
-      templateOnline: 'COURSE900_4M_TTC',
+      templateOnline: 'COURSE900_4M_ON_TTC',
       templateOffline: {
         templateResidential: '',
         templateNonResidential: ''
