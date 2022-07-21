@@ -311,7 +311,7 @@ const Yogasattva = () => {
             </div>
           </div>
           <button className="yogasattva-btn" onClick={nextHandler}>
-            Next{' '}
+            Next
           </button>
 
           {/* <div className="previous-container">
