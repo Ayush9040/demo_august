@@ -1,6 +1,7 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import InnerNavComponent from '../../../Components/InnerNavComponent'
-import MediaSection from '../../../Components/MediaSection'
+//import MediaSection from '../../../Components/MediaSection'
 
 const News = () => {
   const MediaNews = {
@@ -25,19 +26,26 @@ const News = () => {
       // },
     ],
   }
-  let description =
-    'Get a quick peek at what\'s going on at The Yoga Institute\'s International and National branches. From Hansaji receiving the Prime Minister award by P.M Modi Ji to her being designated as the new President of the Indian Yoga Association. There\'s a lot more significant news in this section!'
+ 
 
   return (
     <div className="news-container">
       {/* <MediaNav title={'News'} /> */}
       <InnerNavComponent abc={MediaNews} />
-      <MediaSection
-        description={description}
-        title={'News'}
-        subHeading={'Highligths'}
-        sectionColor={'#D58173'}
-      />
+      <div className='media-categories' >
+        <Link to='/print-media' >
+          <div className='print-media' >
+            <img src='https://cdn.pixabay.com/photo/2018/08/14/13/23/ocean-3605547__340.jpg' />
+            <p>Print Media</p>
+          </div>
+        </Link>
+        <Link to='/digital-media' >
+          <div className='digital-media' >
+            <img src='https://cdn.pixabay.com/photo/2018/08/14/13/23/ocean-3605547__340.jpg' />
+            <p>Digital Media</p>
+          </div>
+        </Link>
+      </div>
     </div>
   )
 }

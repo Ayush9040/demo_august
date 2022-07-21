@@ -128,6 +128,25 @@
       }
     }
   }
+
+  //media
+  .media-categories{
+    padding: 10rem;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    a{
+      width: 40%;
+      .print-media,.digital-media{
+        img{
+          width: 100%;
+        }
+        p{
+          text-align: center;
+        }
+      }
+    }
+  }
   
   @media (max-width: '1366px') {
     .media-main-div {

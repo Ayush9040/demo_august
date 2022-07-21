@@ -33,6 +33,8 @@ import OnlineTution from '../Components/Highlights/OnlineTution'
 import SingleJob from '../Views/Careers/Views/single-job'
 import VolunteerJob from '../Views/Volunteer/Views/volunteerJob'
 import Values from '../Views/Volunteer/Views/values'
+import PrintMedia from '../Views/Media/Views/Print-Digital/print-media'
+import DigitalMedia from '../Views/Media/Views/Print-Digital/digital-media'
 
 const staticSiteRoutes = [
   {
@@ -82,6 +84,22 @@ const staticSiteRoutes = [
     id: 'statisSiteMedia',
     routePath: '/media/*',
     name: 'Media',
+  },
+  {
+    Component: PrintMedia,
+    path: '/print-media',
+    exact: true,
+    id: 'statisSitePrintMedia',
+    routePath: '/print-media',
+    name: 'PrintMedia',  
+  },
+  {
+    Component: DigitalMedia,
+    path: '/digital-media',
+    exact: true,
+    id: 'statisSiteDigitalMedia',
+    routePath: '/digital-media',
+    name: 'DigitalMedia',  
   },
   {
     Component: Museum,
