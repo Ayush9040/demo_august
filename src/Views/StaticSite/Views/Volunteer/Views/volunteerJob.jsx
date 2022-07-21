@@ -1,32 +1,41 @@
 import React, { useEffect, useState } from 'react'
-import CommonBannerNavPrimary from '../../../Components/CommonBannerNavPrimary'
-import VolunteerGrid from '../../../Components/VolunteerGrid'
+import { useDispatch, useSelector } from 'react-redux'
 // import { Volunteer } from '../../utils/JobDetails'
 //import { volunteerData } from '../../../utils/volunteerData'
 import { useParams } from 'react-router-dom'
-import FAQ from '../../../Components/Faq'
-import { upload } from '../../../assets/icons/icon'
-import { useDispatch, useSelector } from 'react-redux'
-import { fetchProgramsData, postApplicationData } from '../Volunteer.action'
-import { uploadFile } from '../../../../../helpers/OssHelper'
-import InputComponent from '../../../Components/InputComponent'
 import { validateEmail } from '../../../../../helpers'
+import { uploadFile } from '../../../../../helpers/OssHelper'
+import { upload } from '../../../assets/icons/icon'
+import CommonBannerNavPrimary from '../../../Components/CommonBannerNavPrimary'
+import FAQ from '../../../Components/Faq'
+import InputComponent from '../../../Components/InputComponent'
+import VolunteerGrid from '../../../Components/VolunteerGrid'
+import { fetchProgramsData, postApplicationData } from '../Volunteer.action'
 import './style.scss'
 
 const VolunteerJob = () => {
+  
   const dispatch = useDispatch()
   const [imageAssest, setImageAssest] = useState(null)
   const [certificateAssest, setCertificateAssest] = useState(null)
   const [imageName, setImageName] = useState('')
   const [certificateName, setCertificateName] = useState('')
+  const [sizeError, setSizeError] = useState(0)
   const { id } = useParams()
   const [program, setProgram] = useState({})
   const uploadImage = async(file, type, changeData) => {
-    const url = await uploadFile(file, type)
-    console.log(url,'url')
-    if (changeData === 'RESUME') setCertificateAssest(url)
-    else changeData === 'IMAGE'
-    setImageAssest(url)
+    if (file.size / 1024 / 1024 > 2) {
+      if (changeData === 'RESUME') {
+        setSizeError(1)
+      } else if (changeData === 'IMAGE') {
+        setSizeError(2)
+      }
+    } else {
+      const url = await uploadFile(file, type)
+      if (changeData === 'RESUME') setCertificateAssest(url)
+      else changeData === 'IMAGE'
+      setImageAssest(url)
+    }
   }
 
   const [formData, setFormData] = useState({
@@ -46,26 +55,31 @@ const VolunteerJob = () => {
   }, [volunteerPrograms])
 
   //console.log(program?.faq, 'faq')
-  console.log(imageAssest,'imgAsset')
+  console.log(imageAssest, 'imgAsset')
 
   const clickHandler = (e) => {
     e.preventDefault()
+    
     if (formData.firstName === '') {
-      return setValidate(1)
+      setValidate(1)
     } else if (!validateEmail(formData.email)) {
-      return setValidate(2)
+      setValidate(2)
+    } else if (imageAssest === null) {
+      setValidate(3)
+    } else if (certificateAssest === null) {
+      setValidate(4)
     } else {
-      let volunteerPost={
+      let volunteerPost = {
         name: formData.firstName,
-        email :  formData.email,
-        image  : imageAssest,
-        pdf : certificateAssest,
-        profileId: program['_id']
+        email: formData.email,
+        image: imageAssest,
+        pdf: certificateAssest,
+        profileId: program['_id'],
       }
       dispatch(postApplicationData(volunteerPost))
     }
   }
-
+  console.log(validate, 'qwerty')
   return (
     <div className="single-job">
       <CommonBannerNavPrimary innerNav={false} />
@@ -101,7 +115,7 @@ const VolunteerJob = () => {
                 clickHandler(e)
               }}
             >
-              <fieldset >
+              <fieldset>
                 {/* <input type={'text'} placeholder={'Name'} /> */}
                 <InputComponent
                   type="text"
@@ -117,7 +131,7 @@ const VolunteerJob = () => {
                   </small>
                 )}
               </fieldset>
-              <fieldset >
+              <fieldset>
                 {/* <input type={'email'} placeholder={'Email'} /> */}
                 <InputComponent
                   type="text"
@@ -142,7 +156,7 @@ const VolunteerJob = () => {
                       type={'file'}
                       id="image"
                       onChange={(e) => {
-                        uploadImage(e.target.files[0],'image', 'IMAGE')
+                        uploadImage(e.target.files[0], 'image', 'IMAGE')
                         setImageName(e.target.files[0].name)
                       }}
                       placeholder="Upload Image"
@@ -151,6 +165,16 @@ const VolunteerJob = () => {
                     &ensp;
                     {upload}
                   </label>
+                  {sizeError === 2 && (
+                    <small style={{ color: 'red', marginLeft: '2rem' }}>
+                      Please Enter Image Under 2MB
+                    </small>
+                  )}
+                  {validate === 3 && (
+                    <small style={{ color: 'red', marginLeft: '2rem' }}>
+                      Please update image under 2MB
+                    </small>
+                  )}
                 </fieldset>
                 <fieldset>
                   <label htmlFor="resume">
@@ -160,7 +184,7 @@ const VolunteerJob = () => {
                     <input
                       type={'file'}
                       id="resume"
-                      accept='.pdf'
+                      accept=".pdf"
                       onChange={(e) => {
                         uploadImage(e.target.files[0], 'resume', 'RESUME')
                         setCertificateName(e.target.files[0].name)
@@ -170,6 +194,16 @@ const VolunteerJob = () => {
                     &ensp;
                     {upload}
                   </label>
+                  {sizeError === 1 && (
+                    <small style={{ color: 'red', marginLeft: '2rem' }}>
+                      Please Enter Resume under 2MB
+                    </small>
+                  )}
+                  {validate === 4 && (
+                    <small style={{ color: 'red', marginLeft: '2rem' }}>
+                      Please update resume under 2MB
+                    </small>
+                  )}
                   <small>Please ensure the file is under 2 MB</small>
                 </fieldset>
               </div>
