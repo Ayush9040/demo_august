@@ -102,7 +102,7 @@ const OurOfferings = () => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: animateCarousel(),
+    autoplay: ()=>animateCarousel(),
     autoPlaySpeed: 5000,
     centerMode: true,
     centerPadding: '70px',
