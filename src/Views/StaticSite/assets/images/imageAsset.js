@@ -1405,6 +1405,10 @@ export const wellnessAssets ={
   wellnessAssets7:'/wellness/wellness_programs_at_work_3.jpg',
 }
 
+export const newsAssets = {
+  printMedia:'/Media/print-media.jpg',
+  digitalMedia:'/Media/digital-media.jpg'
+}
 
 
 export default baseDomain
