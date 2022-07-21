@@ -32,6 +32,7 @@ import CorporateWorkshop from '../Components/Highlights/CorporateWorkshop'
 import OnlineTution from '../Components/Highlights/OnlineTution'
 import SingleJob from '../Views/Careers/Views/single-job'
 import VolunteerJob from '../Views/Volunteer/Views/volunteerJob'
+import Values from '../Views/Volunteer/Views/values'
 
 const staticSiteRoutes = [
   {
@@ -152,6 +153,14 @@ const staticSiteRoutes = [
     exact: true,
     id: 'statisSiteUnderJoin',
     routePath: '/volunteer/:id',
+    name: 'Join',
+  },
+  {
+    Component: Values,
+    path: '/values/',
+    exact: true,
+    id: 'statisSiteUnderJoin',
+    routePath: '/values/',
     name: 'Join',
   },
   {
