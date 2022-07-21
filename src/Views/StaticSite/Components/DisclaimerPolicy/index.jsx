@@ -40,11 +40,9 @@ const DisclaimerPolicy = ({
       if(formData.mode==='ONLINE'){
         setmail(templateKey?.templateOnline)
       }else if(formData.mode === 'OFFLINE' && formData.residental === ''){
-        console.log('fuckk')
         setmail(templateKey?.templateOnline)
       }else{
-        if(formData.residental === 'RESIDENTIAL'){
-          console.log('residential mail')
+        if(formData.residental === 'RESIDENTIAL'){  
           setmail(templateKey?.templateOffline?.templateResidential)
         }else{
           setmail(templateKey?.templateOffline?.templateNonResidential)
@@ -131,6 +129,7 @@ const DisclaimerPolicy = ({
         },
         receivers: ['shrey@nexgeniots.com']
       }
+      console.log(mail,'mailTemp')
       try{
         let response
         if(formData.mode==='ONLINE' || currentCourse.category!=='camps' || currentCourse.category!=='classes'){

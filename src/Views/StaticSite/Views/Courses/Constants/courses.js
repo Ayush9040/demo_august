@@ -8,8 +8,8 @@ const ttc200hr = {
     id: '',
     // templateId: 'COURSE200_1M_TTC',
     templateId: {
-      templateOffline: 'COURSE200_1M_ONLINE_TTC',
-      templateOnline: {
+      templateOnline: 'COURSE200_1M_ONLINE_TTC',
+      templateOffline: {
         templateResidential: 'COURSE200_RES_TTC',
         templateNonResidential: 'COURSE200_NONRES_TTC'
       }
