@@ -18,7 +18,6 @@ import Blog from '../../Components/BlogSection'
 const Home = () => {
   const route = useLocation()
   const { isLoggedIn } = useSelector((state) => state.auth)
-  console.log(route.hash.substring(1, route.hash.length))
   useEffect(() => {
     if (route.hash) {
       document

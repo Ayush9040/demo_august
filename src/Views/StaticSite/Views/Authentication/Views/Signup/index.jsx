@@ -31,7 +31,7 @@ const SignUp = () => {
     console.log(res.data)
   }
 
-  console.log(formData)
+
 
   const handleSubmit = async(e) => {
     if (formData.name === '') {

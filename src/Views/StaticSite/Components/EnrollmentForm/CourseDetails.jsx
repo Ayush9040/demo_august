@@ -27,7 +27,7 @@ const CourseDetails = ({
   const [certificateName,setcertificateName]=useState('')
 
   
-  console.log(empty)
+ 
   // const getBase64 = (file, cb)=>{
   //   let reader = new FileReader()
   //   reader.readAsDataURL(file)
@@ -46,8 +46,7 @@ const CourseDetails = ({
     }else if(changeValue==='IMAGE')
       setCourseAsset1(url)
   }
-  console.log(formData.mode,'mode check')
-  console.log(formData.residental,'residantal check')
+
   return (
     <div className="main-container">
       <div className="course-main-container">

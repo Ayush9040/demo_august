@@ -13,7 +13,7 @@ const Academic = ({
   setFormData,
   setYearEmpty
 }) => {
-  console.log(yearEmpty,'yr')
+
 
   return (
     <div className="main_div">

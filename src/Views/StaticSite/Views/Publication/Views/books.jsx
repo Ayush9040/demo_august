@@ -5,6 +5,7 @@ import InnerNavComponent from '../../../Components/InnerNavComponent'
 const Books = () => {
   const [product, setProduct] = useState([])
   const [categories, setCategories] = useState([])
+  console.log(categories)
 
   useEffect(() => {
     axios
@@ -71,7 +72,7 @@ const Books = () => {
   //   'Yoga for Youngsters',
   //   'Marriage – a spiritual journey',
   // ]
-  console.log(categories)
+
   const yogaBooks = {
     title: 'books',
     color: 'white',

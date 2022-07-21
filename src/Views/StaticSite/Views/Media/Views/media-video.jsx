@@ -8,7 +8,7 @@ const MediaVideo = () => {
   const [videoURL, setvideoURL] = useState(
     'https://www.youtube.com/embed/jwDhDbeShQw'
   )
-  console.log(videoURL, 'url')
+
   const GalleryVideo = {
     title: 'gallery',
     color: 'white',

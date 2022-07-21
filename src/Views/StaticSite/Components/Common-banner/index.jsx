@@ -14,7 +14,6 @@ const CommonBanner = ({
   overlay = '#000000',
 }) => {
 
-  console.log(bannerImg)
   return (
   
     <>

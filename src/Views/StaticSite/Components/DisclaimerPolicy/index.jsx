@@ -118,7 +118,7 @@ const DisclaimerPolicy = ({
       //   }
       // }
 
-      console.log(mail,'mailtemp')
+
 
       let mailTemplate = {
         type: null,
@@ -129,7 +129,7 @@ const DisclaimerPolicy = ({
         },
         receivers: ['shrey@nexgeniots.com']
       }
-      console.log(mail,'mailTemp')
+ 
       try{
         let response
         if(formData.mode==='ONLINE' || currentCourse.category!=='camps' || currentCourse.category!=='classes'){

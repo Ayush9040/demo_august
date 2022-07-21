@@ -145,7 +145,7 @@ const CommonBannerLegacy = ({
       img: l5,
     },
   ]
-  const str = founderData[2].desc[1].length
+
 
   function truncateString(str, totalTextLength) {
     return str?.length > totalTextLength
@@ -153,9 +153,8 @@ const CommonBannerLegacy = ({
       : str
   }
 
-  console.log(str)
 
-  console.log(founderData[2].desc[1].length, 'abcd')
+
   return (
     <>
       <div className="about-us-container">

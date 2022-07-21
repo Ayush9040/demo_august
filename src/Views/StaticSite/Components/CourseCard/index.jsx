@@ -29,7 +29,7 @@ const CourseCard = ({
   dates = [],
 }) => {
 
-  console.log(img,'card-img')
+
 
   const selectStyles = {
     cursor: 'pointer',

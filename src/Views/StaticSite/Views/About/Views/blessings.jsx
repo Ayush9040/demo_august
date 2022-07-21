@@ -1,13 +1,12 @@
 import React from 'react'
 import CommonBannerAboutUs from '../../../Components/CommonBannerAboutUs'
-import Tyi from '../../../assets/images/why_tyi.png'
 import baseDomain, { aboutAssets } from '../../../assets/images/imageAsset'
 import InnerNavComponent from '../../../Components/InnerNavComponent'
 
 
 
 const Blessings = ({ location }) => {
-  console.log('tyi', Tyi)
+
   const AboutBlessings = {
     title: 'blessings',
     color: 'white',

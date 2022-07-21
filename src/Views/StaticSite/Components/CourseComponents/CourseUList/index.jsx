@@ -3,7 +3,7 @@ import '../../../Components/CourseComponents/style.scss'
 
 const CourseUList = ({ content }) => {
 
-  console.log(content,'content')
+
 
   return (
     <div className="course_list">
