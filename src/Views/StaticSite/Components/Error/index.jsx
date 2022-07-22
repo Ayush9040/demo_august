@@ -1,7 +1,7 @@
 import React from 'react'
 import './style.scss'
 
-const Error = () => {
+const Error = (  ) => {
   // const data={
   //   success:{
 

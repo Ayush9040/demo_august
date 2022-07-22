@@ -127,7 +127,7 @@ const DisclaimerPolicy = ({
         data:{
           user: formData.name
         },
-        receivers: ['shrey@nexgeniots.com']
+        receivers: [formData.email,'info@theyogainstitute.org']
       }
  
       try{
@@ -145,7 +145,7 @@ const DisclaimerPolicy = ({
         }
 
         if(response?.data?.success){
-          if(formData?.residental!=='RESIDENTIAL'){
+          if(currentCourse.key!=='satsang' && formData?.residental!=='RESIDENTIAL'){
             console.log(response.data.data['_id'])
             const paymentOrderResponse =  await axios.post(`https://cms-dev-be.theyogainstituteonline.org/v1/payment/order?enrollmentFormId=${response.data.data['_id']}`, {
               amount: courseFee,
@@ -190,7 +190,12 @@ const DisclaimerPolicy = ({
             rzp.open()   
           }else{
             await axios.post('https://www.authserver-staging-be.theyogainstituteonline.org/v1/ali/mail', mailTemplate)
-            navigate('/enrollment_thankyou')
+
+            if(currentCourse.key==='satsang'){
+              navigate('/satsang_thankyou')
+            }else{
+              navigate('/enrollment_thankyou')
+            }
           }
         }
       } 

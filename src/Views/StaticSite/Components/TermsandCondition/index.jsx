@@ -1,34 +1,37 @@
 import React,{ useEffect } from 'react'
 //import baseDomain, { background } from '../../assets/images/imageAsset'
-import CommonBanner from '../Common-banner'
 import data from './data'
 import './style.scss'
-import baseDomain, { background } from '../../assets/images/imageAsset'
+//import CommonBanner from '../Common-banner'
+//import baseDomain, { background } from '../../assets/images/imageAsset'
+import InnerNavComponent from '../InnerNavComponent'
 
 const TermsCondition = () => {
+
+  let tnc = {
+    title: 'alumni-gallery',
+    color: 'orange',
+    menuColor: 'black',
+    menuItems:[]
+  }
+
 
   useEffect(()=>{
     scrollTo(0,0)
   },[])
 
-  let description =
-    'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat quisquam maxime id laboriosam cupiditate! Quibusdam quisquam ratione quam repellat perferendis nostrum quod ea veritatis pariatur. Accusamus quae, itaque cumque quis rem qui tempora. Non, repudiandae. Fugiat eum sequi et rationeLorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat quisquam maxime id laboriosam cupiditate! Quibusdam quisquam ratione quam repellat perferendis nostrum quod ea veritatis pariatur. Accusamus quae, itaque cumque quis rem qui tempora. Non, repudiandae. Fugiat eum sequi et ratione.'
+
 
   // let termsAndCondition =
   //   'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only ve centuries, but also the leap into elec- tronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.'
   return (
     <>
       <div className='terms-container'>
-        <CommonBanner
-          isLeftContent={false}
-          Logo={false}
-          Navigation={true}
-          PageType='terms'
-          Heading='Terms and conditions'
-          description={description}
-          bannerImg={`${baseDomain}${background.volunteer}`}
-          overlay='#4F65A0'
-        />
+        <InnerNavComponent abc={tnc} />
+        <div className='banner-heading'>
+                Terms & Conditions
+          <div className='bottom-line'></div>
+        </div>
       </div>
       <div className='terms-and-conditions'>
         {data.map((value) => {

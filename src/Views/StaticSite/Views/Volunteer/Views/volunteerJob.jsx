@@ -1,18 +1,96 @@
 import React, { useEffect, useState } from 'react'
-import CommonBannerNavPrimary from '../../../Components/CommonBannerNavPrimary'
-import VolunteerGrid from '../../../Components/VolunteerGrid'
+import { useDispatch, useSelector } from 'react-redux'
 // import { Volunteer } from '../../utils/JobDetails'
-import { volunteerData } from '../../../utils/volunteerData'
+//import { volunteerData } from '../../../utils/volunteerData'
 import { useParams } from 'react-router-dom'
-import FAQ from '../../../Components/Faq'
+import { validateEmail } from '../../../../../helpers'
+import { uploadFile } from '../../../../../helpers/OssHelper'
 import { upload } from '../../../assets/icons/icon'
+import CommonBannerNavPrimary from '../../../Components/CommonBannerNavPrimary'
+import FAQ from '../../../Components/Faq'
+import InputComponent from '../../../Components/InputComponent'
+import MessageModal from '../../../Components/MessageModal'
+import VolunteerGrid from '../../../Components/VolunteerGrid'
+import { fetchProgramsData, postApplicationData } from '../Volunteer.action'
+import './style.scss'
 
 const VolunteerJob = () => {
+  
+  const dispatch = useDispatch()
+  const [imageAssest, setImageAssest] = useState(null)
+  const [certificateAssest, setCertificateAssest] = useState(null)
+  const [imageName, setImageName] = useState('')
+  const [certificateName, setCertificateName] = useState('')
+  const [sizeError, setSizeError] = useState(0)
   const { id } = useParams()
   const [program, setProgram] = useState({})
+  const [modal,setModal]=useState(false)
+  const uploadImage = async(file, type, changeData) => {
+    if (file.size / 1024 / 1024 > 2) {
+      if (changeData === 'RESUME') {
+        setSizeError(1)
+      } else if (changeData === 'IMAGE') {
+        setSizeError(2)
+      }
+    } else {
+      const url = await uploadFile(file, type)
+      if (changeData === 'RESUME') setCertificateAssest(url)
+      else changeData === 'IMAGE'
+      setImageAssest(url)
+    }
+  }
+
+  const [formData, setFormData] = useState({
+    firstName: '',
+    email: '',
+  })
+
+  const [validate, setValidate] = useState(0)
+
+  const { volunteerPrograms } = useSelector((state) => state.volunteer)
   useEffect(() => {
-    setProgram(volunteerData.find((item) => id === item.id))
+    dispatch(fetchProgramsData())
   }, [])
+
+  useEffect(() => {
+    setProgram(volunteerPrograms.find((item) => id === item['_id']))
+  }, [volunteerPrograms])
+
+  //console.log(program?.faq, 'faq')
+  console.log(imageAssest, 'imgAsset')
+
+  const clickHandler = async(e) => {
+    e.preventDefault()
+    if (formData.firstName === '') {
+      setValidate(1)
+    } else if (!validateEmail(formData.email)) {
+      setValidate(2)
+    } else if (imageAssest === null) {
+      setValidate(3)
+    } else if (certificateAssest === null) {
+      setValidate(4)
+    } else {
+      let volunteerPost = {
+        name: formData.firstName,
+        email: formData.email,
+        image: imageAssest,
+        pdf: certificateAssest,
+        profileId: program['_id'],
+      }
+      await dispatch(postApplicationData(volunteerPost))
+
+      // await axios.post('https://www.authserver-staging-be.theyogainstituteonline.org/v1/ali/mail', {
+      //   type: null,
+      //   HTMLTemplate:'JOBVOLUNTEER_APPLICATION',
+      //   subject: 'Application for Volunteer Program',
+      //   data:{
+      //     user: formData.firstName
+      //   },
+      //   receivers: [formData.email,'info@theyogainstitute.org']
+      // })
+      setModal(true)
+    }
+  }
 
   return (
     <div className="single-job">
@@ -20,11 +98,11 @@ const VolunteerJob = () => {
       <div className="job-details">
         <div className="job-description">
           <div className="job-img">
-            <img src={program?.image} alt={'title'} />
+            <img src={program?.thumbnail} alt={'title'} />
           </div>
           <div className="job-info">
             <h1>
-              {program?.name}
+              {program?.title}
               <div className="bottom-line"></div>
             </h1>
             <p>{program?.description}</p>
@@ -32,62 +110,120 @@ const VolunteerJob = () => {
         </div>
         <div className="job-application">
           <div className="job-requirements">
-            {/* <ul>
-              {program?.reqirements?.map((item, i) => {
-                return (
-                  <li key={i}>
-                    <span>Requirement:</span>
-                    {item}
-                  </li>
-                )
-              })}
-            </ul> */}
           </div>
           <div className="job-form">
-            <form>
+            <form
+              onSubmit={(e) => {
+                clickHandler(e)
+              }}
+            >
               <fieldset>
-                <input type={'text'} placeholder={'Name'} />
+                {/* <input type={'text'} placeholder={'Name'} /> */}
+                <InputComponent
+                  type="text"
+                  placeholder="Name"
+                  form={formData}
+                  setField={setFormData}
+                  keyName="firstName"
+                  errorCheck={setValidate}
+                />{' '}
+                {validate === 1 && (
+                  <small style={{ color: 'red', marginLeft: '2rem' }}>
+                    Please Enter Name
+                  </small>
+                )}
               </fieldset>
               <fieldset>
-                <input type={'email'} placeholder={'Email'} />
+                {/* <input type={'email'} placeholder={'Email'} /> */}
+                <InputComponent
+                  type="text"
+                  placeholder="Email"
+                  form={formData}
+                  setField={setFormData}
+                  keyName="email"
+                  errorCheck={setValidate}
+                />
+
+                {validate === 2 && (
+                  <small style={{ color: 'red', marginLeft: '2rem' }}>
+                    Please Enter Email Id
+                  </small>
+                )}
               </fieldset>
-              <div className="uploads">
+              <div className="volunteer_uploads">
                 <fieldset>
                   <label htmlFor="image">
-                    Upload Image
+                    {imageAssest ? imageName.substring(0, 15) : 'Upload Image '}
                     <input
                       type={'file'}
                       id="image"
+                      onChange={(e) => {
+                        uploadImage(e.target.files[0], 'image', 'IMAGE')
+                        setImageName(e.target.files[0].name)
+                      }}
                       placeholder="Upload Image"
                       accept="image/*"
                     />
                     &ensp;
                     {upload}
                   </label>
+                  {sizeError === 2 && (
+                    <small style={{ color: 'red', marginLeft: '2rem' }}>
+                      Please Enter Image Under 2MB
+                    </small>
+                  )}
+                  {validate === 3 && (
+                    <small style={{ color: 'red', marginLeft: '2rem' }}>
+                      Please update image under 2MB
+                    </small>
+                  )}
                 </fieldset>
                 <fieldset>
                   <label htmlFor="resume">
-                    Upload Resume
+                    {certificateName
+                      ? certificateName.substring(0, 15)
+                      : 'Upload Resume'}
                     <input
                       type={'file'}
                       id="resume"
+                      accept=".pdf"
+                      onChange={(e) => {
+                        uploadImage(e.target.files[0], 'resume', 'RESUME')
+                        setCertificateName(e.target.files[0].name)
+                      }}
                       placeholder="Upload Resume"
                     />
                     &ensp;
                     {upload}
                   </label>
+                  {sizeError === 1 && (
+                    <small style={{ color: 'red', marginLeft: '2rem' }}>
+                      Please Enter Resume under 2MB
+                    </small>
+                  )}
+                  {validate === 4 && (
+                    <small style={{ color: 'red', marginLeft: '2rem' }}>
+                      Please update resume under 2MB
+                    </small>
+                  )}
                   <small>Please ensure the file is under 2 MB</small>
                 </fieldset>
               </div>
               <fieldset>
-                <input id="apply" type={'submit'} />
+                <input id="volunteer_apply" type={'submit'} />
               </fieldset>
+              {validate === 5 && (
+                <small style={{ color: 'green', marginLeft: '2rem' }}>
+                      Form submitted succesfully
+                </small>
+              )}
             </form>
           </div>
         </div>
       </div>
-      <VolunteerGrid gallery={ program?.gallery } />
+      <VolunteerGrid gallery={program?.gallery} />
       <FAQ questions={program?.faq} />
+      { modal && <MessageModal type='SUCCESSS' message='Application submitted successfully!' closePopup={ setModal } /> }
     </div>
   )
 }
