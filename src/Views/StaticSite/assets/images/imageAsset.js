@@ -1,30 +1,29 @@
 const baseDomain = 'https://ecom-static-site.oss-ap-south-1.aliyuncs.com'
 
 export const background = {
-  donation:'/backgrounds/donation_bg.jpg',
-  facilities : '/backgrounds/facilities_bg.jpg',
+  donation: '/backgrounds/donation_bg.jpg',
+  facilities: '/backgrounds/facilities_bg.jpg',
   gifting: '/backgrounds/gifting_bg_1.jpg',
-  museum : '/backgrounds/museum_bg.jpg',
-  volunteer : '/backgrounds/volunteer_bg.jpg',
-  faqs:'/backgrounds/faqs.jpg',
-  alma:'/backgrounds/support-alma-mater.jpg',
-  benefits:'/backgrounds/benifits.png',
-  wellness:'/wellness/wellness.jpg',
-  affiliations:'/backgrounds/affiliations.jpeg'
-  
+  museum: '/backgrounds/museum_bg.jpg',
+  volunteer: '/backgrounds/volunteer_bg.jpg',
+  faqs: '/backgrounds/faqs.jpg',
+  alma: '/backgrounds/support-alma-mater.jpg',
+  benefits: '/backgrounds/benifits.png',
+  wellness: '/wellness/wellness.jpg',
+  affiliations: '/backgrounds/affiliations.jpeg',
 }
 
 export const certificates = {
-  IAYT:'/cerificates/IAYT-logo.JPG',
-  IYA:'/cerificates/IYA-logo.JPG',
-  YCB:'/cerificates/YCB-logo.PNG',
-  YAL:'/cerificates/Yoga-Alliance-logo.PNG'
+  IAYT: '/cerificates/IAYT-logo.JPG',
+  IYA: '/cerificates/IYA-logo.JPG',
+  YCB: '/cerificates/YCB-logo.PNG',
+  YAL: '/cerificates/Yoga-Alliance-logo.PNG',
 }
 
 export const socialInitiativeNew = {
-  socialNew1:'/Home/Social%20Initiatives/new11/SocialAnnamBhrama.jpg',
-  socialNew2:'/Home/Social%20Initiatives/new11/SocialPolice.jpg',
-  socialNew3:'/Home/Social%20Initiatives/new11/SocialBMCSchools.jpg'
+  socialNew1: '/Home/Social%20Initiatives/new11/SocialAnnamBhrama.jpg',
+  socialNew2: '/Home/Social%20Initiatives/new11/SocialPolice.jpg',
+  socialNew3: '/Home/Social%20Initiatives/new11/SocialBMCSchools.jpg',
 }
 
 export const homeAssets = {
@@ -101,14 +100,16 @@ export const homeAssets = {
   homeAsset63: '/Home/Blogs/Blog5.jpg',
   homeAsset71: '/Home/Blogs/new11/best-healty-fat-food.jpg',
   homeAsset72: '/Home/Blogs/new11/best-natural-anti-aging-techniques.jpg',
-  homeAsset73: '/Home/Blogs/new11/best-yoga-mudras-to-get-rid-of-pimples-naturally-at-home.jpeg',
+  homeAsset73:
+    '/Home/Blogs/new11/best-yoga-mudras-to-get-rid-of-pimples-naturally-at-home.jpeg',
   homeAsset74: '/Home/Blogs/new11/blog-images-anaemia02.jpg',
   homeAsset75: '/Home/Blogs/new11/blog-images-backpain05.jpg',
   homeAsset76: '/Home/Blogs/new11/blog-images-immunity03.jpg',
   homeAsset77: '/Home/Blogs/new11/blog-images-liver01.jpg',
   homeAsset78: '/Home/Blogs/new11/blog-images-lung04.jpg',
   homeAsset79: '/Home/Blogs/new11/how-much-distance-we-should-walk-daily.jpeg',
-  homeAsset81: '/Home/Blogs/new11/how-to-reduce-back-fat-naturally-by-yoga-home-remedies.jpeg',
+  homeAsset81:
+    '/Home/Blogs/new11/how-to-reduce-back-fat-naturally-by-yoga-home-remedies.jpeg',
   homeAsset82: '/Home/Blogs/new11/top-5-non-dairy-calcium-rich-foods.jpeg',
   homeAsset83: '/Home/Blogs/new11/womens-days.jpg',
   homeAsset84: '/Home/Blogs/new11/world-health-day.jpg',
@@ -142,7 +143,8 @@ export const courseAssets = {
   courseAsset7: '/Courses/Camps/Diabetes_camp.jpg',
   courseAsset8: '/Courses/Camps/Life_Management_Camp.jpg',
   courseAsset9: '/Courses/Camps/Meditation_Camp.jpg',
-  courseAsset10:'/Courses/Camps/Orthopaedic_Camp_for_Back_and_Joint_Disorders.jpg',
+  courseAsset10:
+    '/Courses/Camps/Orthopaedic_Camp_for_Back_and_Joint_Disorders.jpg',
   courseAsset11: '/Courses/Camps/Pregnancy_Camp_for_Ante _&_Post_Natal.jpg',
   courseAsset12: '/Courses/Camps/Senior_Citizens_Camp.jpg',
   courseAsset13: '/Courses/Camps/Stress_management.jpg',
@@ -151,9 +153,9 @@ export const courseAssets = {
   courseAsset16: '/Courses/Camps/Weight_management.jpg',
   courseAsset83: '/Courses/Camps/Respiratory_Workshop.jpeg',
   courseAsset84: '/Courses/Camps/Women%E2%80%99s_Camp.jpg',
-  courseAsset85:'/Courses/diet_workshp.jpg',  
-  courseAsset111:'/Courses/Camps/cardiac-&-hypertension-43-1.png',
-  courseAsset112:'/Courses/Camps/LifeMC.jpg',
+  courseAsset85: '/Courses/diet_workshp.jpg',
+  courseAsset111: '/Courses/Camps/cardiac-&-hypertension-43-1.png',
+  courseAsset112: '/Courses/Camps/LifeMC.jpg',
 
   // certificate
 
@@ -166,7 +168,8 @@ export const courseAssets = {
   courseAsset21: '/Courses/Class/Samattvam.jpg',
   courseAsset22: '/Courses/Class/Weekend_regular_class.jpg',
   courseAsset23: '/Courses/Class/Yog prayas(1).jpg',
-  courseAsset24: '/Courses/Class/certificate%20course_on_advance_pranayama_techniques.jpg',
+  courseAsset24:
+    '/Courses/Class/certificate%20course_on_advance_pranayama_techniques.jpg',
   courseAsset25: '/Courses/Class/couples_class.jpg',
   courseAsset26: '/Courses/Class/couples_class.jpg',
   courseAsset27: '/Courses/Class/mens_class.jpg',
@@ -175,23 +178,28 @@ export const courseAssets = {
   courseAsset30: '/Courses/Class/yog_prayas.jpg',
   courseAsset31: '/Courses/Class/yoga_therapy.jpg',
   courseAsset32: '/Courses/Class/yogasutra_class.jpg',
-  courseAsset67: '/Courses/Class/Advance_Asana_Regula_Class_Online_%28Only%20_for_TYI_Teachers%29%20.jpeg',
+  courseAsset67:
+    '/Courses/Class/Advance_Asana_Regula_Class_Online_%28Only%20_for_TYI_Teachers%29%20.jpeg',
   courseAsset68: '/Courses/Class/Anand_Sadhna_online%20_%20On_Campus.jpeg',
   //courseAsset69: '/Courses/Class/Anand_Sadhna_online%20_%20On_Campus.jpeg',
   courseAsset70: '/Courses/Class/Asana%20_Regular_Classes_for_Men_common.jpeg',
   courseAsset71: '/Courses/Class/Asana_Regular_Classes_for_Women_common.jpeg',
-  courseAsset72: '/Courses/Class/Certificate%20CourseAdvanced_Pranayama_Techniques_Online.jpeg',
-  courseAsset73: '/Courses/Class/Certificate_Course_on_Yoga_Sutra%2BOnline.jpeg',
-  courseAsset74: '/Courses/Class/Certificate_Program_on_Yoga_for_Cancer_Online.jpeg',
+  courseAsset72:
+    '/Courses/Class/Certificate%20CourseAdvanced_Pranayama_Techniques_Online.jpeg',
+  courseAsset73:
+    '/Courses/Class/Certificate_Course_on_Yoga_Sutra%2BOnline.jpeg',
+  courseAsset74:
+    '/Courses/Class/Certificate_Program_on_Yoga_for_Cancer_Online.jpeg',
   courseAsset75: '/Courses/Class/Certificate_Yoga_Therapy_Course_Online.jpeg',
-  courseAsset76: '/Courses/Class/Children_s_Regular_%20weekend_Class_common%20.jpeg',
+  courseAsset76:
+    '/Courses/Class/Children_s_Regular_%20weekend_Class_common%20.jpeg',
   courseAsset77: '/Courses/Class/Couples_Classes_Online.jpeg',
   courseAsset78: '/Courses/Class/Regular_Meditation_Classes_Online.jpeg',
   courseAsset79: '/Courses/Class/Samattvam_%28Health_Checkup%29.jpeg',
   courseAsset80: '/Courses/Class/Satsang.jpeg',
-  courseAsset81: '/Courses/Class/WeekeAsana_Classes_%28Men%20_%20Women%29_common.jpeg',
+  courseAsset81:
+    '/Courses/Class/WeekeAsana_Classes_%28Men%20_%20Women%29_common.jpeg',
   courseAsset82: '/Courses/Class/Yog_Prayas_Online.jpeg',
-  
 
   // most popular
 
@@ -201,30 +209,41 @@ export const courseAssets = {
   courseAsset36: '/Courses/Most_popular/900_hrs_TTC.jpg',
   courseAsset37: '/Courses/Most_popular/Pranayama_workshop.jpg',
 
-  // ttc 
+  // ttc
   courseAsset38: '/Courses/TTC/200_hrs_TTC.jpg',
   courseAsset39: '/Courses/TTC/500_hrs_TTC.jpg',
   courseAsset40: '/Courses/TTC/900_hrs_TTC.jpg',
 
-
   // ttc ->   alumni
-  
 
-  courseAsset41: '/Courses/TTC/Alumni/Almuni_pictures_and_word_file/Ajinkya.jpg',
-  courseAsset42: '/Courses/TTC/Alumni/Almuni_pictures_and_word_file/Disha_Vakhani.jpg',
-  courseAsset43: '/Courses/TTC/Alumni/Almuni_pictures_and_word_file/Disha_Vakhani.jpg',
-  courseAsset44: '/Courses/TTC/Alumni/Almuni_pictures_and_word_file/Nirmal-Gangwal.png',
-  courseAsset45: '/Courses/TTC/Alumni/Almuni_pictures_and_word_file/Premchand_Godha.jpg',
-  courseAsset46: '/Courses/TTC/Alumni/Almuni_pictures_and_word_file/RUJUTA_DIWEKAR.jpg',
-  courseAsset47: '/Courses/TTC/Alumni/Almuni_pictures_and_word_file/Shilpa_Shirodkar.jpg',
-  courseAsset48: '/Courses/TTC/Alumni/Almuni_pictures_and_word_file/Shivkumar_Sharma.jpg',
-  courseAsset49: '/Courses/TTC/Alumni/Almuni_pictures_and_word_file/Shweta_Tiwari.jpg',
-  courseAsset50: '/Courses/TTC/Alumni/Almuni_pictures_and_word_file/Sukhwinder_Singh.jpg',
-  courseAsset51: '/Courses/TTC/Alumni/Almuni_pictures_and_word_file/ankita sood.jpg',
+  courseAsset41:
+    '/Courses/TTC/Alumni/Almuni_pictures_and_word_file/Ajinkya.jpg',
+  courseAsset42:
+    '/Courses/TTC/Alumni/Almuni_pictures_and_word_file/Disha_Vakhani.jpg',
+  courseAsset43:
+    '/Courses/TTC/Alumni/Almuni_pictures_and_word_file/Disha_Vakhani.jpg',
+  courseAsset44:
+    '/Courses/TTC/Alumni/Almuni_pictures_and_word_file/Nirmal-Gangwal.png',
+  courseAsset45:
+    '/Courses/TTC/Alumni/Almuni_pictures_and_word_file/Premchand_Godha.jpg',
+  courseAsset46:
+    '/Courses/TTC/Alumni/Almuni_pictures_and_word_file/RUJUTA_DIWEKAR.jpg',
+  courseAsset47:
+    '/Courses/TTC/Alumni/Almuni_pictures_and_word_file/Shilpa_Shirodkar.jpg',
+  courseAsset48:
+    '/Courses/TTC/Alumni/Almuni_pictures_and_word_file/Shivkumar_Sharma.jpg',
+  courseAsset49:
+    '/Courses/TTC/Alumni/Almuni_pictures_and_word_file/Shweta_Tiwari.jpg',
+  courseAsset50:
+    '/Courses/TTC/Alumni/Almuni_pictures_and_word_file/Sukhwinder_Singh.jpg',
+  courseAsset51:
+    '/Courses/TTC/Alumni/Almuni_pictures_and_word_file/ankita sood.jpg',
   courseAsset52: '/Courses/TTC/Alumni/Almuni_pictures_and_word_file/carlo.jpeg',
   courseAsset53: '/Courses/TTC/Alumni/Almuni_pictures_and_word_file/kavita.jpg',
-  courseAsset54: '/Courses/TTC/Alumni/Almuni_pictures_and_word_file/natalia.JPG',
-  courseAsset55: '/Courses/TTC/Alumni/Almuni_pictures_and_word_file/veronica.jpg',
+  courseAsset54:
+    '/Courses/TTC/Alumni/Almuni_pictures_and_word_file/natalia.JPG',
+  courseAsset55:
+    '/Courses/TTC/Alumni/Almuni_pictures_and_word_file/veronica.jpg',
 
   // workShops
 
@@ -232,8 +251,7 @@ export const courseAssets = {
   courseAsset57: '/Courses/Workshops/digestion_camp.jpg',
   courseAsset58: '/Courses/Workshops/pranayama_workshop.jpg',
 
-
-  // tyi activities 
+  // tyi activities
 
   courseAsset59: '/Courses/tyi_activities/2_year_ttc.jpg',
   courseAsset60: '/Courses/tyi_activities/Copy_of_900_hrs_TTC.jpg',
@@ -243,26 +261,27 @@ export const courseAssets = {
   courseAsset64: '/Courses/tyi_activities/home_tuitions.jpg',
   courseAsset65: '/Courses/tyi_activities/ortho_camp.jpg',
   courseAsset66: '/Courses/tyi_activities/womens_camp.jpg',
-  
 
   //ttc-card images
 
-  courseAsset101:'/Courses/TTC/new11/200_hrs_TTC.jpg',
-  courseAsset102:'/Courses/TTC/new11/500_hrs_TTC.jpg',
-  courseAsset103:'/Courses/TTC/new11/900_hrs_TTC.jpg',
+  courseAsset101: '/Courses/TTC/new11/200_hrs_TTC.jpg',
+  courseAsset102: '/Courses/TTC/new11/500_hrs_TTC.jpg',
+  courseAsset103: '/Courses/TTC/new11/900_hrs_TTC.jpg',
 
   //camps&worshop-card images
 
-  courseAsset104:'/Courses/Camps/new11/cardiac-hypertension-workshop.jpg',
-  courseAsset105:'/Courses/Camps/new11/diabetes-camp.jpg',
-  courseAsset106:'/Courses/Camps/new11/digestion-camp.jpg',
-  courseAsset107:'/Courses/Camps/new11/life-management-camp.jpg',
+  courseAsset104: '/Courses/Camps/new11/cardiac-hypertension-workshop.jpg',
+  courseAsset105: '/Courses/Camps/new11/diabetes-camp.jpg',
+  courseAsset106: '/Courses/Camps/new11/digestion-camp.jpg',
+  courseAsset107: '/Courses/Camps/new11/life-management-camp.jpg',
 
   //class-card images
 
-  courseAsset108:'/Courses/Class/new11/advance-asana-regular-class-online%28only-for-tyi-teachers%29%20.jpg',
-  courseAsset109:'/Courses/Class/new11/anand-sadhna-online-on-campus.JPG',
-  courseAsset110:'/Courses/Class/new11/weekend-asana-classes-%28men-women%29%20-%20common.jpg',
+  courseAsset108:
+    '/Courses/Class/new11/advance-asana-regular-class-online%28only-for-tyi-teachers%29%20.jpg',
+  courseAsset109: '/Courses/Class/new11/anand-sadhna-online-on-campus.JPG',
+  courseAsset110:
+    '/Courses/Class/new11/weekend-asana-classes-%28men-women%29%20-%20common.jpg',
 }
 
 export const facilitiyAssets = {
@@ -275,122 +294,115 @@ export const facilitiyAssets = {
   facilitiyAssets7: '/Facilities/Dining%20Hall%20–%20Naivedyam/dininghall.jpg',
   facilitiyAssets8: '/Facilities/Nature%20Trail/naturetrail_.jpg',
   facilitiyAssets9: '/Facilities/Gazebo/Gazebo_.jpg',
-  facilitiyAssets10:'/Facilities/KailashTree/tree.jpg',
-  homeAsset70:'/Home/Footer/tyi.png',
-  facilitiyAssets11:'/Facilities/new11/kelashpati.JPG',
-  facilitiyAssets12:'/Facilities/new11/dininghall1.jpg',
-
-} 
-
-export const careerAssets={
-  careerAsset1: '/Home/Footer/careers/content%20writer.png',
-  careerAsset2: '/Home/Footer/careers/video%20editor.png'
+  facilitiyAssets10: '/Facilities/KailashTree/tree.jpg',
+  homeAsset70: '/Home/Footer/tyi.png',
+  facilitiyAssets11: '/Facilities/new11/kelashpati.JPG',
+  facilitiyAssets12: '/Facilities/new11/dininghall1.jpg',
 }
 
-export const aboutAssets={
-  aboutAsset1:'/About/Overview/about-overview.jpg',
+export const careerAssets = {
+  careerAsset1: '/Home/Footer/careers/content%20writer.png',
+  careerAsset2: '/Home/Footer/careers/video%20editor.png',
+}
 
-
+export const aboutAssets = {
+  aboutAsset1: '/About/Overview/about-overview.jpg',
 
   // shree Yogendra jI
 
-  aboutAsset2:'/About/Our%20Legacy/Shree%20Yogendra%20ji/r.jpg',
-  aboutAsset3:'/About/Our%20Legacy/Shree%20Yogendra%20ji/l.jpg',
-  aboutAsset4:'/About/Our%20Legacy/Shree%20Yogendra%20ji/1.jpg',
-  aboutAsset5:'/About/Our%20Legacy/Shree%20Yogendra%20ji/2.jpg',
-  aboutAsset6:'/About/Our%20Legacy/Shree%20Yogendra%20ji/3.jpg',
-  aboutAsset7:'/About/Our%20Legacy/Shree%20Yogendra%20ji/4.jpg',
-  aboutAsset8:'/About/Our%20Legacy/Shree%20Yogendra%20ji/5.jpg',
-  aboutAsset9:'/About/Our%20Legacy/Shree%20Yogendra%20ji/6.jpg',
+  aboutAsset2: '/About/Our%20Legacy/Shree%20Yogendra%20ji/r.jpg',
+  aboutAsset3: '/About/Our%20Legacy/Shree%20Yogendra%20ji/l.jpg',
+  aboutAsset4: '/About/Our%20Legacy/Shree%20Yogendra%20ji/1.jpg',
+  aboutAsset5: '/About/Our%20Legacy/Shree%20Yogendra%20ji/2.jpg',
+  aboutAsset6: '/About/Our%20Legacy/Shree%20Yogendra%20ji/3.jpg',
+  aboutAsset7: '/About/Our%20Legacy/Shree%20Yogendra%20ji/4.jpg',
+  aboutAsset8: '/About/Our%20Legacy/Shree%20Yogendra%20ji/5.jpg',
+  aboutAsset9: '/About/Our%20Legacy/Shree%20Yogendra%20ji/6.jpg',
   aboutAsset70: '/About/Our%20Legacy/new11/founder-1.jpg',
   aboutAsset71: '/About/Our%20Legacy/new11/founder-2.jpg',
 
   // Madhavdas Ji
 
-  aboutAsset10:'/About/Our%20Legacy/Paramhamsa%20Madhavadas%20ji/Madhavdasji.jpg',
-  aboutAsset82:'/About/Our%20Legacy/new11/Madhavdas_ji/Madhavdasji_4_3.jpg',
-  aboutAsset83:'/About/Our%20Legacy/new11/Madhavdas_ji/madhavdasji1_1.jpg',
-  aboutAsset84:'/About/Our%20Legacy/new11/Madhavdas_ji/madhavdasji_16-9.jpg',
-  aboutAsset85:'/About/Our%20Legacy/new11/Madhavdas_ji/madhavdasji_16_9.jpg',
-  aboutAsset86:'/About/Our%20Legacy/new11/Madhavdas_ji/madhavdasji_1_1.jpg',
-  aboutAsset87:'/About/Our%20Legacy/new11/Madhavdas_ji/madhavdasji_3.jpg',
-
+  aboutAsset10:
+    '/About/Our%20Legacy/Paramhamsa%20Madhavadas%20ji/Madhavdasji.jpg',
+  aboutAsset82: '/About/Our%20Legacy/new11/Madhavdas_ji/Madhavdasji_4_3.jpg',
+  aboutAsset83: '/About/Our%20Legacy/new11/Madhavdas_ji/madhavdasji1_1.jpg',
+  aboutAsset84: '/About/Our%20Legacy/new11/Madhavdas_ji/madhavdasji_16-9.jpg',
+  aboutAsset85: '/About/Our%20Legacy/new11/Madhavdas_ji/madhavdasji_16_9.jpg',
+  aboutAsset86: '/About/Our%20Legacy/new11/Madhavdas_ji/madhavdasji_1_1.jpg',
+  aboutAsset87: '/About/Our%20Legacy/new11/Madhavdas_ji/madhavdasji_3.jpg',
 
   // sitaDevi Ji
 
-  aboutAsset11:'/About/Our%20Legacy/Smt.%20Sitadevi%20Ji/l.jpg',
-  aboutAsset12:'/About/Our%20Legacy/Smt.%20Sitadevi%20Ji/r.jpg',
-  aboutAsset13:'/About/Our%20Legacy/Smt.%20Sitadevi%20Ji/1.jpg',
-  aboutAsset14:'/About/Our%20Legacy/Smt.%20Sitadevi%20Ji/2.jpg',
-  aboutAsset15:'/About/Our%20Legacy/Smt.%20Sitadevi%20Ji/3.jpg',
-  aboutAsset16:'/About/Our%20Legacy/Smt.%20Sitadevi%20Ji/4.jpg',
-  aboutAsset17:'/About/Our%20Legacy/Smt.%20Sitadevi%20Ji/5.jpg',
-  aboutAsset18:'/About/Our%20Legacy/Smt.%20Sitadevi%20Ji/6.jpg',
-
+  aboutAsset11: '/About/Our%20Legacy/Smt.%20Sitadevi%20Ji/l.jpg',
+  aboutAsset12: '/About/Our%20Legacy/Smt.%20Sitadevi%20Ji/r.jpg',
+  aboutAsset13: '/About/Our%20Legacy/Smt.%20Sitadevi%20Ji/1.jpg',
+  aboutAsset14: '/About/Our%20Legacy/Smt.%20Sitadevi%20Ji/2.jpg',
+  aboutAsset15: '/About/Our%20Legacy/Smt.%20Sitadevi%20Ji/3.jpg',
+  aboutAsset16: '/About/Our%20Legacy/Smt.%20Sitadevi%20Ji/4.jpg',
+  aboutAsset17: '/About/Our%20Legacy/Smt.%20Sitadevi%20Ji/5.jpg',
+  aboutAsset18: '/About/Our%20Legacy/Smt.%20Sitadevi%20Ji/6.jpg',
 
   // jayadeva Yogendra
 
-  aboutAsset19:'/About/Our%20Legacy/Dr.%20Jayadeva%20Yogendra/l.jpg',
-  aboutAsset20:'/About/Our%20Legacy/Dr.%20Jayadeva%20Yogendra/r.jpg',
-  aboutAsset21:'/About/Our%20Legacy/Dr.%20Jayadeva%20Yogendra/1.jpg',
-  aboutAsset22:'/About/Our%20Legacy/Dr.%20Jayadeva%20Yogendra/2.jpg',
-  aboutAsset23:'/About/Our%20Legacy/Dr.%20Jayadeva%20Yogendra/3.jpg',
-  aboutAsset24:'/About/Our%20Legacy/Dr.%20Jayadeva%20Yogendra/4.jpg',
-  aboutAsset25:'/About/Our%20Legacy/Dr.%20Jayadeva%20Yogendra/5.jpg',
-  aboutAsset26:'/About/Our%20Legacy/Dr.%20Jayadeva%20Yogendra/6.jpg',
-  aboutAsset73 :'/About/Our%20Legacy/new11/doctor-1.jpg',
+  aboutAsset19: '/About/Our%20Legacy/Dr.%20Jayadeva%20Yogendra/l.jpg',
+  aboutAsset20: '/About/Our%20Legacy/Dr.%20Jayadeva%20Yogendra/r.jpg',
+  aboutAsset21: '/About/Our%20Legacy/Dr.%20Jayadeva%20Yogendra/1.jpg',
+  aboutAsset22: '/About/Our%20Legacy/Dr.%20Jayadeva%20Yogendra/2.jpg',
+  aboutAsset23: '/About/Our%20Legacy/Dr.%20Jayadeva%20Yogendra/3.jpg',
+  aboutAsset24: '/About/Our%20Legacy/Dr.%20Jayadeva%20Yogendra/4.jpg',
+  aboutAsset25: '/About/Our%20Legacy/Dr.%20Jayadeva%20Yogendra/5.jpg',
+  aboutAsset26: '/About/Our%20Legacy/Dr.%20Jayadeva%20Yogendra/6.jpg',
+  aboutAsset73: '/About/Our%20Legacy/new11/doctor-1.jpg',
   aboutAsset74: '/About/Our%20Legacy/new11/doctor-2.jpg',
-  
-  // hansaji Yogengra
-  
-  aboutAsset27:'/About/Our%20Legacy/Dr.%20Hansaji%20Yogendra/1 left side .jpg',
-  aboutAsset28:'/About/Our%20Legacy/Dr.%20Hansaji%20Yogendra/2nd right side.jpg',
-  aboutAsset29:'/About/Our%20Legacy/Dr.%20Hansaji%20Yogendra/1.jpg',
-  aboutAsset30:'/About/Our%20Legacy/Dr.%20Hansaji%20Yogendra/2.jpg',
-  aboutAsset31:'/About/Our%20Legacy/Dr.%20Hansaji%20Yogendra/3.jpg',
-  aboutAsset32:'/About/Our%20Legacy/Dr.%20Hansaji%20Yogendra/4.jpg',
-  aboutAsset33:'/About/Our%20Legacy/Dr.%20Hansaji%20Yogendra/5.jpg',
-  aboutAsset34:'/About/Our%20Legacy/Dr.%20Hansaji%20Yogendra/6.jpg',
-  aboutAsset75 :'/About/Our%20Legacy/new11/hansaji-1.jpg',
-  aboutAsset76: '/About/Our%20Legacy/new11/hansaji-2.jpg',
-  
-  // hrishiji
-  
-  aboutAsset35:'/About/Our%20Legacy/Harish%20Ji/l.jpg',
-  aboutAsset36:'/About/Our%20Legacy/Harish%20Ji/r.jpg',
-  aboutAsseharisht37:'/About/Our%20Legacy/Harish%20Ji/1.jpg',
-  aboutAsset38:'/About/Our%20Legacy/Harish%20Ji/2.jpg',
-  aboutAsset39:'/About/Our%20Legacy/Harish%20Ji/3.jpg',
-  aboutAsset40:'/About/Our%20Legacy/Harish%20Ji/4.jpg',
-  aboutAsset41:'/About/Our%20Legacy/Harish%20Ji/5.jpg',
-  aboutAsset42:'/About/Our%20Legacy/Harish%20Ji/6.jpg',
-  aboutAsset77:'/About/Our%20Legacy/Harish%20Ji/new11/hrishi-1-1-1.JPG',
-  aboutAsset78:'/About/Our%20Legacy/Harish%20Ji/new11/hrishi-16-9.jpg',
-  aboutAsset79:'/About/Our%20Legacy/Harish%20Ji/new11/hrishi-4-1-1-min.JPG',
-  aboutAsset80:'/About/Our%20Legacy/Harish%20Ji/new11/hrishi-4-3-1.jpg',
-  aboutAsset81:'/About/Our%20Legacy/Harish%20Ji/new11/hrishi-4-3-2.jpg',
 
+  // hansaji Yogengra
+
+  aboutAsset27: '/About/Our%20Legacy/Dr.%20Hansaji%20Yogendra/1 left side .jpg',
+  aboutAsset28:
+    '/About/Our%20Legacy/Dr.%20Hansaji%20Yogendra/2nd right side.jpg',
+  aboutAsset29: '/About/Our%20Legacy/Dr.%20Hansaji%20Yogendra/1.jpg',
+  aboutAsset30: '/About/Our%20Legacy/Dr.%20Hansaji%20Yogendra/2.jpg',
+  aboutAsset31: '/About/Our%20Legacy/Dr.%20Hansaji%20Yogendra/3.jpg',
+  aboutAsset32: '/About/Our%20Legacy/Dr.%20Hansaji%20Yogendra/4.jpg',
+  aboutAsset33: '/About/Our%20Legacy/Dr.%20Hansaji%20Yogendra/5.jpg',
+  aboutAsset34: '/About/Our%20Legacy/Dr.%20Hansaji%20Yogendra/6.jpg',
+  aboutAsset75: '/About/Our%20Legacy/new11/hansaji-1.jpg',
+  aboutAsset76: '/About/Our%20Legacy/new11/hansaji-2.jpg',
+
+  // hrishiji
+
+  aboutAsset35: '/About/Our%20Legacy/Harish%20Ji/l.jpg',
+  aboutAsset36: '/About/Our%20Legacy/Harish%20Ji/r.jpg',
+  aboutAsseharisht37: '/About/Our%20Legacy/Harish%20Ji/1.jpg',
+  aboutAsset38: '/About/Our%20Legacy/Harish%20Ji/2.jpg',
+  aboutAsset39: '/About/Our%20Legacy/Harish%20Ji/3.jpg',
+  aboutAsset40: '/About/Our%20Legacy/Harish%20Ji/4.jpg',
+  aboutAsset41: '/About/Our%20Legacy/Harish%20Ji/5.jpg',
+  aboutAsset42: '/About/Our%20Legacy/Harish%20Ji/6.jpg',
+  aboutAsset77: '/About/Our%20Legacy/Harish%20Ji/new11/hrishi-1-1-1.JPG',
+  aboutAsset78: '/About/Our%20Legacy/Harish%20Ji/new11/hrishi-16-9.jpg',
+  aboutAsset79: '/About/Our%20Legacy/Harish%20Ji/new11/hrishi-4-1-1-min.JPG',
+  aboutAsset80: '/About/Our%20Legacy/Harish%20Ji/new11/hrishi-4-3-1.jpg',
+  aboutAsset81: '/About/Our%20Legacy/Harish%20Ji/new11/hrishi-4-3-2.jpg',
 
   // blessings
-  aboutAsset43:'/About/Pujya%20Maa%20Dr%20Hansaji’s%20blessings/why_tyi.png',
+  aboutAsset43: '/About/Pujya%20Maa%20Dr%20Hansaji’s%20blessings/why_tyi.png',
 
-  // legacy images 
+  // legacy images
 
-  aboutAsset44:'/About/Our%20Legacy/l-0.jpg',
-  aboutAsset45:'/About/Our%20Legacy/l-1.jpg',
-  aboutAsset46:'/About/Our%20Legacy/l-2.jpg',
-  aboutAsset47:'/About/Our%20Legacy/l-3.jpg',
-  aboutAsset48:'/About/Our%20Legacy/l-4.jpg',
-  aboutAsset49:'/About/Our%20Legacy/l-5.jpg',
-  
+  aboutAsset44: '/About/Our%20Legacy/l-0.jpg',
+  aboutAsset45: '/About/Our%20Legacy/l-1.jpg',
+  aboutAsset46: '/About/Our%20Legacy/l-2.jpg',
+  aboutAsset47: '/About/Our%20Legacy/l-3.jpg',
+  aboutAsset48: '/About/Our%20Legacy/l-4.jpg',
+  aboutAsset49: '/About/Our%20Legacy/l-5.jpg',
 }
 
-export const mediaAssets={
-  
-
+export const mediaAssets = {
   // gallery
-  seminarImg:'/Media/gallery/seminar.png',
-  igCeremony:'/Media/gallery/igceremony.jpg',
+  seminarImg: '/Media/gallery/seminar.png',
+  igCeremony: '/Media/gallery/igceremony.jpg',
   mediaAssets198: '/Media/gallery/igceremony.jpg',
   mediaAssets199: '/Media/gallery/media_1.jpg',
   mediaAssets200: '/Media/gallery/media_2.jpg',
@@ -403,93 +415,111 @@ export const mediaAssets={
   mediaAssets207: '/Media/gallery/seminar.png',
 
   // harmony-sec
-  mediaAssetsHero:'Media/gallery/99FoundationDay/Hero image .jpg',
-  mediaAsset1:'/Media/gallery/harmony/har_1.jpg',
-  mediaAsset2:'/Media/gallery/harmony/har_2.jpg',
-  mediaAsset3:'/Media/gallery/harmony/har_3.jpg',
-  mediaAsset4:'/Media/gallery/harmony/har_4.jpg',
-  mediaAsset5:'/Media/gallery/harmony/har_5.jpg',
-  mediaAsset6:'/Media/gallery/harmony/har_6.jpg',
-  mediaAsset7:'/Media/gallery/harmony/har_7.jpg',
-  mediaAsset8:'/Media/gallery/harmony/har_8.jpg',
-  mediaAsset9:'/Media/gallery/harmony/har_9.jpg',
-  mediaAsset208:'/Media/gallery/harmony/har_10.jpg',
-  mediaAsset209:'/Media/gallery/harmony/har_11.jpg',
-  mediaAsset210:'/Media/gallery/harmony/har_12.jpg',
-  mediaAsset211:'/Media/gallery/harmony/har_13.JPG',
-  mediaAsset212:'/Media/gallery/harmony/har_14.JPG',
-  mediaAsset213:'/Media/gallery/harmony/har_15.JPG',
-  mediaAsset214:'/Media/gallery/harmony/har_16.JPG',
-  mediaAsset215:'/Media/gallery/harmony/har_17.JPG',
-  mediaAsset216:'/Media/gallery/harmony/har_18.JPG',
-  mediaAsset217:'/Media/gallery/harmony/har_19.JPG',
-  mediaAsset218:'/Media/gallery/harmony/har_20.jpg',
-  mediaAsset219:'/Media/gallery/harmony/har_21.JPG',
-  mediaAsset220:'/Media/gallery/harmony/har_22.JPG',
-  mediaAsset221:'/Media/gallery/harmony/har_23.JPG',
-  mediaAsset222:'/Media/gallery/harmony/har_24.JPG',
-  mediaAsset223:'/Media/gallery/harmony/har_25.JPG',
- 
-
+  mediaAssetsHero: 'Media/gallery/99FoundationDay/Hero image .jpg',
+  mediaAsset1: '/Media/gallery/harmony/har_1.jpg',
+  mediaAsset2: '/Media/gallery/harmony/har_2.jpg',
+  mediaAsset3: '/Media/gallery/harmony/har_3.jpg',
+  mediaAsset4: '/Media/gallery/harmony/har_4.jpg',
+  mediaAsset5: '/Media/gallery/harmony/har_5.jpg',
+  mediaAsset6: '/Media/gallery/harmony/har_6.jpg',
+  mediaAsset7: '/Media/gallery/harmony/har_7.jpg',
+  mediaAsset8: '/Media/gallery/harmony/har_8.jpg',
+  mediaAsset9: '/Media/gallery/harmony/har_9.jpg',
+  mediaAsset208: '/Media/gallery/harmony/har_10.jpg',
+  mediaAsset209: '/Media/gallery/harmony/har_11.jpg',
+  mediaAsset210: '/Media/gallery/harmony/har_12.jpg',
+  mediaAsset211: '/Media/gallery/harmony/har_13.JPG',
+  mediaAsset212: '/Media/gallery/harmony/har_14.JPG',
+  mediaAsset213: '/Media/gallery/harmony/har_15.JPG',
+  mediaAsset214: '/Media/gallery/harmony/har_16.JPG',
+  mediaAsset215: '/Media/gallery/harmony/har_17.JPG',
+  mediaAsset216: '/Media/gallery/harmony/har_18.JPG',
+  mediaAsset217: '/Media/gallery/harmony/har_19.JPG',
+  mediaAsset218: '/Media/gallery/harmony/har_20.jpg',
+  mediaAsset219: '/Media/gallery/harmony/har_21.JPG',
+  mediaAsset220: '/Media/gallery/harmony/har_22.JPG',
+  mediaAsset221: '/Media/gallery/harmony/har_23.JPG',
+  mediaAsset222: '/Media/gallery/harmony/har_24.JPG',
+  mediaAsset223: '/Media/gallery/harmony/har_25.JPG',
 
   // 99foundation sec
-  mediaAsset10:'/Media/gallery/99FoundationDay/img1.jpg',
-  mediaAsset11:'/Media/gallery/99FoundationDay/img2.jpg',
-  mediaAsset12:'/Media/gallery/99FoundationDay/img3.jpg',
-  mediaAsset13:'/Media/gallery/99FoundationDay/img4.jpg',
-  mediaAsset14:'/Media/gallery/99FoundationDay/img5.jpg',
+  mediaAsset10: '/Media/gallery/99FoundationDay/img1.jpg',
+  mediaAsset11: '/Media/gallery/99FoundationDay/img2.jpg',
+  mediaAsset12: '/Media/gallery/99FoundationDay/img3.jpg',
+  mediaAsset13: '/Media/gallery/99FoundationDay/img4.jpg',
+  mediaAsset14: '/Media/gallery/99FoundationDay/img5.jpg',
 
   //101foundation day
-  mediaAssets15:'/Media/gallery/foundationday-101/f101_1.JPG',
-  mediaAssets16:'/Media/gallery/foundationday-101/f101_2.JPG',
-  mediaAssets17:'/Media/gallery/foundationday-101/f101_3.JPG',
-  mediaAssets18:'/Media/gallery/foundationday-101/f101_4.JPG',
-  mediaAssets19:'/Media/gallery/foundationday-101/f101_5.JPG',
-  mediaAssets20:'/Media/gallery/foundationday-101/f101_6.JPG',
-  mediaAssets21:'/Media/gallery/foundationday-101/f101_7.JPG',
-  mediaAssets22:'/Media/gallery/foundationday-101/f101_8.JPG',
-  mediaAssets23:'/Media/gallery/foundationday-101/f101_9.JPG',
-  mediaAssets24:'/Media/gallery/foundationday-101/f101_10.JPG',
+  mediaAssets15: '/Media/gallery/foundationday-101/f101_1.JPG',
+  mediaAssets16: '/Media/gallery/foundationday-101/f101_2.JPG',
+  mediaAssets17: '/Media/gallery/foundationday-101/f101_3.JPG',
+  mediaAssets18: '/Media/gallery/foundationday-101/f101_4.JPG',
+  mediaAssets19: '/Media/gallery/foundationday-101/f101_5.JPG',
+  mediaAssets20: '/Media/gallery/foundationday-101/f101_6.JPG',
+  mediaAssets21: '/Media/gallery/foundationday-101/f101_7.JPG',
+  mediaAssets22: '/Media/gallery/foundationday-101/f101_8.JPG',
+  mediaAssets23: '/Media/gallery/foundationday-101/f101_9.JPG',
+  mediaAssets24: '/Media/gallery/foundationday-101/f101_10.JPG',
 
   //gff-2018
-  mediaAsset25:'/Media/gallery/gff-2018/gff_1.jpeg',
-  mediaAsset26:'/Media/gallery/gff-2018/gff_2.jpeg',
-  mediaAsset27:'/Media/gallery/gff-2018/gff_3.JPG',
-  mediaAsset28:'/Media/gallery/gff-2018/gff_4.jpeg',
-  mediaAsset29:'/Media/gallery/gff-2018/gff_5.jpg',
+  mediaAsset25: '/Media/gallery/gff-2018/gff_1.jpeg',
+  mediaAsset26: '/Media/gallery/gff-2018/gff_2.jpeg',
+  mediaAsset27: '/Media/gallery/gff-2018/gff_3.JPG',
+  mediaAsset28: '/Media/gallery/gff-2018/gff_4.jpeg',
+  mediaAsset29: '/Media/gallery/gff-2018/gff_5.jpg',
 
   //98th foundation day
-  mediaAsset30:'/Media/gallery/foundation-98/f98_1.jpg',
-  mediaAsset31:'/Media/gallery/foundation-98/f98_2.jpg',
-  mediaAsset32:'/Media/gallery/foundation-98/f98_3.jpg',
-  mediaAsset33:'/Media/gallery/foundation-98/f98_4.jpg',
-  mediaAsset34:'/Media/gallery/foundation-98/f98_5.jpg',
-  mediaAsset35:'/Media/gallery/foundation-98/f98_6.jpg',
-  mediaAsset36:'/Media/gallery/foundation-98/f98_7.jpg',
-  mediaAsset37:'/Media/gallery/foundation-98/f98_8.jpg',
+  mediaAsset30: '/Media/gallery/foundation-98/f98_1.jpg',
+  mediaAsset31: '/Media/gallery/foundation-98/f98_2.jpg',
+  mediaAsset32: '/Media/gallery/foundation-98/f98_3.jpg',
+  mediaAsset33: '/Media/gallery/foundation-98/f98_4.jpg',
+  mediaAsset34: '/Media/gallery/foundation-98/f98_5.jpg',
+  mediaAsset35: '/Media/gallery/foundation-98/f98_6.jpg',
+  mediaAsset36: '/Media/gallery/foundation-98/f98_7.jpg',
+  mediaAsset37: '/Media/gallery/foundation-98/f98_8.jpg',
 
   //120th_birth_Anniversary_of_Shri_Yogendraji_Founder_2017
 
-  mediaAssets38: '/Media/gallery/%20120th_birth_Anniversary_of_Shri_Yogendraji_Founder_2017/Hero%20image.jpeg',
-  mediaAssets39: '/Media/gallery/%20120th_birth_Anniversary_of_Shri_Yogendraji_Founder_2017/IMG_8890.jpeg',
-  mediaAssets41: '/Media/gallery/%20120th_birth_Anniversary_of_Shri_Yogendraji_Founder_2017/IMG_8920.jpeg',
-  mediaAssets42: '/Media/gallery/%20120th_birth_Anniversary_of_Shri_Yogendraji_Founder_2017/IMG_8950.jpeg',
-  mediaAssets40: '/Media/gallery/%20120th_birth_Anniversary_of_Shri_Yogendraji_Founder_2017/IMG_8913.jpeg',
-  mediaAssets43: '/Media/gallery/%20120th_birth_Anniversary_of_Shri_Yogendraji_Founder_2017/IMG_8966.jpeg',
-  mediaAssets44: '/Media/gallery/%20120th_birth_Anniversary_of_Shri_Yogendraji_Founder_2017/IMG_8979.jpeg',
-  mediaAssets45: '/Media/gallery/%20120th_birth_Anniversary_of_Shri_Yogendraji_Founder_2017/IMG_8983.jpeg',
-  mediaAssets46: '/Media/gallery/%20120th_birth_Anniversary_of_Shri_Yogendraji_Founder_2017/IMG_9006.jpeg',
-  mediaAssets47: '/Media/gallery/%20120th_birth_Anniversary_of_Shri_Yogendraji_Founder_2017/IMG_9007.jpeg',
-  mediaAssets48: '/Media/gallery/%20120th_birth_Anniversary_of_Shri_Yogendraji_Founder_2017/IMG_9020.jpeg',
-  mediaAssets49: '/Media/gallery/%20120th_birth_Anniversary_of_Shri_Yogendraji_Founder_2017/IMG_9022.jpeg',
-  mediaAssets50: '/Media/gallery/%20120th_birth_Anniversary_of_Shri_Yogendraji_Founder_2017/IMG_9025.jpeg',
-  mediaAssets51: '/Media/gallery/%20120th_birth_Anniversary_of_Shri_Yogendraji_Founder_2017/IMG_9026.jpeg',
-  mediaAssets52: '/Media/gallery/%20120th_birth_Anniversary_of_Shri_Yogendraji_Founder_2017/IMG_9060.jpeg',
-  mediaAssets53: '/Media/gallery/%20120th_birth_Anniversary_of_Shri_Yogendraji_Founder_2017/IMG_9061.jpeg',
-  mediaAssets54: '/Media/gallery/%20120th_birth_Anniversary_of_Shri_Yogendraji_Founder_2017/IMG_9129.jpeg',
-  mediaAssets55: '/Media/gallery/%20120th_birth_Anniversary_of_Shri_Yogendraji_Founder_2017/IMG_9146.jpeg',
-  mediaAssets56: '/Media/gallery/%20120th_birth_Anniversary_of_Shri_Yogendraji_Founder_2017/IMG_9148.jpeg',
-  mediaAssets57: '/Media/gallery/%20120th_birth_Anniversary_of_Shri_Yogendraji_Founder_2017/IMG_9178.jpeg',
+  mediaAssets38:
+    '/Media/gallery/%20120th_birth_Anniversary_of_Shri_Yogendraji_Founder_2017/Hero%20image.jpeg',
+  mediaAssets39:
+    '/Media/gallery/%20120th_birth_Anniversary_of_Shri_Yogendraji_Founder_2017/IMG_8890.jpeg',
+  mediaAssets41:
+    '/Media/gallery/%20120th_birth_Anniversary_of_Shri_Yogendraji_Founder_2017/IMG_8920.jpeg',
+  mediaAssets42:
+    '/Media/gallery/%20120th_birth_Anniversary_of_Shri_Yogendraji_Founder_2017/IMG_8950.jpeg',
+  mediaAssets40:
+    '/Media/gallery/%20120th_birth_Anniversary_of_Shri_Yogendraji_Founder_2017/IMG_8913.jpeg',
+  mediaAssets43:
+    '/Media/gallery/%20120th_birth_Anniversary_of_Shri_Yogendraji_Founder_2017/IMG_8966.jpeg',
+  mediaAssets44:
+    '/Media/gallery/%20120th_birth_Anniversary_of_Shri_Yogendraji_Founder_2017/IMG_8979.jpeg',
+  mediaAssets45:
+    '/Media/gallery/%20120th_birth_Anniversary_of_Shri_Yogendraji_Founder_2017/IMG_8983.jpeg',
+  mediaAssets46:
+    '/Media/gallery/%20120th_birth_Anniversary_of_Shri_Yogendraji_Founder_2017/IMG_9006.jpeg',
+  mediaAssets47:
+    '/Media/gallery/%20120th_birth_Anniversary_of_Shri_Yogendraji_Founder_2017/IMG_9007.jpeg',
+  mediaAssets48:
+    '/Media/gallery/%20120th_birth_Anniversary_of_Shri_Yogendraji_Founder_2017/IMG_9020.jpeg',
+  mediaAssets49:
+    '/Media/gallery/%20120th_birth_Anniversary_of_Shri_Yogendraji_Founder_2017/IMG_9022.jpeg',
+  mediaAssets50:
+    '/Media/gallery/%20120th_birth_Anniversary_of_Shri_Yogendraji_Founder_2017/IMG_9025.jpeg',
+  mediaAssets51:
+    '/Media/gallery/%20120th_birth_Anniversary_of_Shri_Yogendraji_Founder_2017/IMG_9026.jpeg',
+  mediaAssets52:
+    '/Media/gallery/%20120th_birth_Anniversary_of_Shri_Yogendraji_Founder_2017/IMG_9060.jpeg',
+  mediaAssets53:
+    '/Media/gallery/%20120th_birth_Anniversary_of_Shri_Yogendraji_Founder_2017/IMG_9061.jpeg',
+  mediaAssets54:
+    '/Media/gallery/%20120th_birth_Anniversary_of_Shri_Yogendraji_Founder_2017/IMG_9129.jpeg',
+  mediaAssets55:
+    '/Media/gallery/%20120th_birth_Anniversary_of_Shri_Yogendraji_Founder_2017/IMG_9146.jpeg',
+  mediaAssets56:
+    '/Media/gallery/%20120th_birth_Anniversary_of_Shri_Yogendraji_Founder_2017/IMG_9148.jpeg',
+  mediaAssets57:
+    '/Media/gallery/%20120th_birth_Anniversary_of_Shri_Yogendraji_Founder_2017/IMG_9178.jpeg',
 
   //05052018
 
@@ -502,30 +532,48 @@ export const mediaAssets={
 
   //2009 Mayor_of_mumbai_shraddha_jadhav
 
-  mediaAssets64: '/Media/gallery/2009/Mayor_of_mumbai_shraddha_jadhav/mayor_1.jpeg',
-  mediaAssets65: '/Media/gallery/2009/Mayor_of_mumbai_shraddha_jadhav/mayor_2.jpeg',
-  mediaAssets66: '/Media/gallery/2009/Mayor_of_mumbai_shraddha_jadhav/mayor_3.jpeg',
-  mediaAssets67: '/Media/gallery/2009/Mayor_of_mumbai_shraddha_jadhav/mayor_4.jpeg',
-  mediaAssets68: '/Media/gallery/2009/Mayor_of_mumbai_shraddha_jadhav/mayor_5.jpeg',
-  mediaAssets69: '/Media/gallery/2009/Mayor_of_mumbai_shraddha_jadhav/mayor_6.jpeg',
-  mediaAssets70: '/Media/gallery/2009/Mayor_of_mumbai_shraddha_jadhav/mayor_7.jpeg',
-  mediaAssets71: '/Media/gallery/2009/Mayor_of_mumbai_shraddha_jadhav/mayor_8.jpeg',
+  mediaAssets64:
+    '/Media/gallery/2009/Mayor_of_mumbai_shraddha_jadhav/mayor_1.jpeg',
+  mediaAssets65:
+    '/Media/gallery/2009/Mayor_of_mumbai_shraddha_jadhav/mayor_2.jpeg',
+  mediaAssets66:
+    '/Media/gallery/2009/Mayor_of_mumbai_shraddha_jadhav/mayor_3.jpeg',
+  mediaAssets67:
+    '/Media/gallery/2009/Mayor_of_mumbai_shraddha_jadhav/mayor_4.jpeg',
+  mediaAssets68:
+    '/Media/gallery/2009/Mayor_of_mumbai_shraddha_jadhav/mayor_5.jpeg',
+  mediaAssets69:
+    '/Media/gallery/2009/Mayor_of_mumbai_shraddha_jadhav/mayor_6.jpeg',
+  mediaAssets70:
+    '/Media/gallery/2009/Mayor_of_mumbai_shraddha_jadhav/mayor_7.jpeg',
+  mediaAssets71:
+    '/Media/gallery/2009/Mayor_of_mumbai_shraddha_jadhav/mayor_8.jpeg',
 
   //Mumbai_Police_Commissioner_D_Sivanandan_2009
 
-  mediaAssets72: '/Media/gallery/2009/Mumbai_Police_Commissioner_D_Sivanandan_2009/Com_1.jpeg',
-  mediaAssets73: '/Media/gallery/2009/Mumbai_Police_Commissioner_D_Sivanandan_2009/Com_10.JPG',
-  mediaAssets74: '/Media/gallery/2009/Mumbai_Police_Commissioner_D_Sivanandan_2009/Com_2.JPG',
-  mediaAssets75: '/Media/gallery/2009/Mumbai_Police_Commissioner_D_Sivanandan_2009/Com_3.JPG',
-  mediaAssets76: '/Media/gallery/2009/Mumbai_Police_Commissioner_D_Sivanandan_2009/Com_4.JPG',
-  mediaAssets77: '/Media/gallery/2009/Mumbai_Police_Commissioner_D_Sivanandan_2009/Com_5.JPG',
-  mediaAssets78: '/Media/gallery/2009/Mumbai_Police_Commissioner_D_Sivanandan_2009/Com_6.JPG',
-  mediaAssets79: '/Media/gallery/2009/Mumbai_Police_Commissioner_D_Sivanandan_2009/Com_9.JPG',
-  mediaAssets80: '/Media/gallery/2009/Mumbai_Police_Commissioner_D_Sivanandan_2009/com_11.jpeg',
-  mediaAssets81: '/Media/gallery/2009/Mumbai_Police_Commissioner_D_Sivanandan_2009/com_12.jpeg',
+  mediaAssets72:
+    '/Media/gallery/2009/Mumbai_Police_Commissioner_D_Sivanandan_2009/Com_1.jpeg',
+  mediaAssets73:
+    '/Media/gallery/2009/Mumbai_Police_Commissioner_D_Sivanandan_2009/Com_10.JPG',
+  mediaAssets74:
+    '/Media/gallery/2009/Mumbai_Police_Commissioner_D_Sivanandan_2009/Com_2.JPG',
+  mediaAssets75:
+    '/Media/gallery/2009/Mumbai_Police_Commissioner_D_Sivanandan_2009/Com_3.JPG',
+  mediaAssets76:
+    '/Media/gallery/2009/Mumbai_Police_Commissioner_D_Sivanandan_2009/Com_4.JPG',
+  mediaAssets77:
+    '/Media/gallery/2009/Mumbai_Police_Commissioner_D_Sivanandan_2009/Com_5.JPG',
+  mediaAssets78:
+    '/Media/gallery/2009/Mumbai_Police_Commissioner_D_Sivanandan_2009/Com_6.JPG',
+  mediaAssets79:
+    '/Media/gallery/2009/Mumbai_Police_Commissioner_D_Sivanandan_2009/Com_9.JPG',
+  mediaAssets80:
+    '/Media/gallery/2009/Mumbai_Police_Commissioner_D_Sivanandan_2009/com_11.jpeg',
+  mediaAssets81:
+    '/Media/gallery/2009/Mumbai_Police_Commissioner_D_Sivanandan_2009/com_12.jpeg',
   //mediaAssets81: 'Media/gallery/2009/Mumbai_Police_Commissioner_D_Sivanandan_2009/com_13.jpeg',
 
-  //Annam_brahma_anuradha_ji 
+  //Annam_brahma_anuradha_ji
 
   mediaAssets82: '/Media/gallery/Annam_brahma_anuradha_ji/Hero image.jpeg',
   mediaAssets83: '/Media/gallery/Annam_brahma_anuradha_ji/DSC02916.jpeg',
@@ -558,19 +606,28 @@ export const mediaAssets={
   mediaAssets107: '/Media/gallery/Ayuryog_Expo_7th_&_10th_Nov_2019/11.jpeg',
   mediaAssets108: '/Media/gallery/Ayuryog_Expo_7th_&_10th_Nov_2019/12.jpeg',
   mediaAssets109: '/Media/gallery/Ayuryog_Expo_7th_&_10th_Nov_2019/13.jpeg',
-  mediaAssets110: '/Media/gallery/Ayuryog_Expo_7th_&_10th_Nov_2019/A15I1216.jpg',
-  mediaAssets111: '/Media/gallery/Ayuryog_Expo_7th_&_10th_Nov_2019/A15I1221.jpg',
-  mediaAssets112: '/Media/gallery/Ayuryog_Expo_7th_&_10th_Nov_2019/A15I1265.jpg',
-  mediaAssets113: '/Media/gallery/Ayuryog_Expo_7th_&_10th_Nov_2019/A15I1267.jpg',
-  mediaAssets114: '/Media/gallery/Ayuryog_Expo_7th_&_10th_Nov_2019/A15I1286.jpg',
-  mediaAssets115: '/Media/gallery/Ayuryog_Expo_7th_&_10th_Nov_2019/A15I1380.jpg',
-  mediaAssets116: '/Media/gallery/Ayuryog_Expo_7th_&_10th_Nov_2019/A15I1385.jpg',
-  mediaAssets117: '/Media/gallery/Ayuryog_Expo_7th_&_10th_Nov_2019/A15I1511.jpg',
-  mediaAssets118: '/Media/gallery/Ayuryog_Expo_7th_&_10th_Nov_2019/A15I2074.jpg',
-  mediaAssets119: '/Media/gallery/Ayuryog_Expo_7th_&_10th_Nov_2019/Hero image.jpg',
+  mediaAssets110:
+    '/Media/gallery/Ayuryog_Expo_7th_&_10th_Nov_2019/A15I1216.jpg',
+  mediaAssets111:
+    '/Media/gallery/Ayuryog_Expo_7th_&_10th_Nov_2019/A15I1221.jpg',
+  mediaAssets112:
+    '/Media/gallery/Ayuryog_Expo_7th_&_10th_Nov_2019/A15I1265.jpg',
+  mediaAssets113:
+    '/Media/gallery/Ayuryog_Expo_7th_&_10th_Nov_2019/A15I1267.jpg',
+  mediaAssets114:
+    '/Media/gallery/Ayuryog_Expo_7th_&_10th_Nov_2019/A15I1286.jpg',
+  mediaAssets115:
+    '/Media/gallery/Ayuryog_Expo_7th_&_10th_Nov_2019/A15I1380.jpg',
+  mediaAssets116:
+    '/Media/gallery/Ayuryog_Expo_7th_&_10th_Nov_2019/A15I1385.jpg',
+  mediaAssets117:
+    '/Media/gallery/Ayuryog_Expo_7th_&_10th_Nov_2019/A15I1511.jpg',
+  mediaAssets118:
+    '/Media/gallery/Ayuryog_Expo_7th_&_10th_Nov_2019/A15I2074.jpg',
+  mediaAssets119:
+    '/Media/gallery/Ayuryog_Expo_7th_&_10th_Nov_2019/Hero image.jpg',
 
   //Bharat_Gaurav_Award
-  
 
   mediaAssets120: '/Media/gallery/Bharat_Gaurav_Award_2019/Hero_image.JPG',
   mediaAssets121: '/Media/gallery/Bharat_Gaurav_Award_2019/DSC_6672.JPG',
@@ -596,8 +653,10 @@ export const mediaAssets={
 
   //Golden_Book_of_World_Record_Award Meeting
 
-  mediaAssets135: '/Media/gallery/Golden_Book_of_World_Record_Award%20Meeting_18022016/IMG_0681.jpg',
-  mediaAssets136: '/Media/gallery/Golden_Book_of_World_Record_Award%20Meeting_18022016/IMG_0682.jpg',
+  mediaAssets135:
+    '/Media/gallery/Golden_Book_of_World_Record_Award%20Meeting_18022016/IMG_0681.jpg',
+  mediaAssets136:
+    '/Media/gallery/Golden_Book_of_World_Record_Award%20Meeting_18022016/IMG_0682.jpg',
 
   //Hansaji_birthday_2021
 
@@ -654,54 +713,72 @@ export const mediaAssets={
 
   //Shri_Anupam_Kher_&_Pandit_Shiv_Kumar_Sharma_&_Shri_Sukhwinder_Singh
 
-  mediaAssets172: '/Media/gallery/Shri_Anupam_Kher_&_Pandit_Shiv_Kumar_Sharma_&_Shri_Sukhwinder_Singh_2012/Hero_image.jpeg',
-  mediaAssets173: '/Media/gallery/Shri_Anupam_Kher_&_Pandit_Shiv_Kumar_Sharma_&_Shri_Sukhwinder_Singh_2012/DSCN0212.jpeg',
-  mediaAssets174: '/Media/gallery/Shri_Anupam_Kher_&_Pandit_Shiv_Kumar_Sharma_&_Shri_Sukhwinder_Singh_2012/DSCN0214.jpeg',
-  mediaAssets175: '/Media/gallery/Shri_Anupam_Kher_&_Pandit_Shiv_Kumar_Sharma_&_Shri_Sukhwinder_Singh_2012/DSCN0221.jpeg',
-  mediaAssets176: '/Media/gallery/Shri_Anupam_Kher_&_Pandit_Shiv_Kumar_Sharma_&_Shri_Sukhwinder_Singh_2012/DSCN0412.jpeg',
-  mediaAssets177: '/Media/gallery/Shri_Anupam_Kher_&_Pandit_Shiv_Kumar_Sharma_&_Shri_Sukhwinder_Singh_2012/DSCN0413.jpeg',
-  mediaAssets178: '/Media/gallery/Shri_Anupam_Kher_&_Pandit_Shiv_Kumar_Sharma_&_Shri_Sukhwinder_Singh_2012/DSCN0514.jpeg',
-  mediaAssets179: '/Media/gallery/Shri_Anupam_Kher_&_Pandit_Shiv_Kumar_Sharma_&_Shri_Sukhwinder_Singh_2012/DSCN0663.jpeg',
+  mediaAssets172:
+    '/Media/gallery/Shri_Anupam_Kher_&_Pandit_Shiv_Kumar_Sharma_&_Shri_Sukhwinder_Singh_2012/Hero_image.jpeg',
+  mediaAssets173:
+    '/Media/gallery/Shri_Anupam_Kher_&_Pandit_Shiv_Kumar_Sharma_&_Shri_Sukhwinder_Singh_2012/DSCN0212.jpeg',
+  mediaAssets174:
+    '/Media/gallery/Shri_Anupam_Kher_&_Pandit_Shiv_Kumar_Sharma_&_Shri_Sukhwinder_Singh_2012/DSCN0214.jpeg',
+  mediaAssets175:
+    '/Media/gallery/Shri_Anupam_Kher_&_Pandit_Shiv_Kumar_Sharma_&_Shri_Sukhwinder_Singh_2012/DSCN0221.jpeg',
+  mediaAssets176:
+    '/Media/gallery/Shri_Anupam_Kher_&_Pandit_Shiv_Kumar_Sharma_&_Shri_Sukhwinder_Singh_2012/DSCN0412.jpeg',
+  mediaAssets177:
+    '/Media/gallery/Shri_Anupam_Kher_&_Pandit_Shiv_Kumar_Sharma_&_Shri_Sukhwinder_Singh_2012/DSCN0413.jpeg',
+  mediaAssets178:
+    '/Media/gallery/Shri_Anupam_Kher_&_Pandit_Shiv_Kumar_Sharma_&_Shri_Sukhwinder_Singh_2012/DSCN0514.jpeg',
+  mediaAssets179:
+    '/Media/gallery/Shri_Anupam_Kher_&_Pandit_Shiv_Kumar_Sharma_&_Shri_Sukhwinder_Singh_2012/DSCN0663.jpeg',
 
-  //Shri_Pradeep_Sonawane_&_Shri_Suresh_Bharwani 
+  //Shri_Pradeep_Sonawane_&_Shri_Suresh_Bharwani
 
-  mediaAssets180: '/Media/gallery/Shri_Pradeep_Sonawane_&_Shri_Suresh_Bharwani_2014/IMG_6622.jpeg',
-  mediaAssets181: '/Media/gallery/Shri_Pradeep_Sonawane_&_Shri_Suresh_Bharwani_2014/IMG_6625.jpeg',
-  mediaAssets182: '/Media/gallery/Shri_Pradeep_Sonawane_&_Shri_Suresh_Bharwani_2014/IMG_6626.jpeg',
-  mediaAssets183: '/Media/gallery/Shri_Pradeep_Sonawane_&_Shri_Suresh_Bharwani_2014/IMG_6627.jpeg',
-  mediaAssets184: '/Media/gallery/Shri_Pradeep_Sonawane_&_Shri_Suresh_Bharwani_2014/IMG_6631.jpeg',
+  mediaAssets180:
+    '/Media/gallery/Shri_Pradeep_Sonawane_&_Shri_Suresh_Bharwani_2014/IMG_6622.jpeg',
+  mediaAssets181:
+    '/Media/gallery/Shri_Pradeep_Sonawane_&_Shri_Suresh_Bharwani_2014/IMG_6625.jpeg',
+  mediaAssets182:
+    '/Media/gallery/Shri_Pradeep_Sonawane_&_Shri_Suresh_Bharwani_2014/IMG_6626.jpeg',
+  mediaAssets183:
+    '/Media/gallery/Shri_Pradeep_Sonawane_&_Shri_Suresh_Bharwani_2014/IMG_6627.jpeg',
+  mediaAssets184:
+    '/Media/gallery/Shri_Pradeep_Sonawane_&_Shri_Suresh_Bharwani_2014/IMG_6631.jpeg',
 
   //Shri_Sukhwinder_Singh_&_Shri_Rajan_Saxena
 
-  mediaAssets185: '/Media/gallery/Shri_Sukhwinder_Singh_&_Shri_Rajan_Saxena_2015/Shuk_1.jpeg',
-  mediaAssets186: '/Media/gallery/Shri_Sukhwinder_Singh_&_Shri_Rajan_Saxena_2015/Shuk_2.jpeg',
-  mediaAssets187: '/Media/gallery/Shri_Sukhwinder_Singh_&_Shri_Rajan_Saxena_2015/Shuk_3.jpeg',
-  mediaAssets188: '/Media/gallery/Shri_Sukhwinder_Singh_&_Shri_Rajan_Saxena_2015/Shuk_4.jpeg',
-  mediaAssets189: '/Media/gallery/Shri_Sukhwinder_Singh_&_Shri_Rajan_Saxena_2015/Shuk_5.jpeg',
-  mediaAssets190: '/Media/gallery/Shri_Sukhwinder_Singh_&_Shri_Rajan_Saxena_2015/Shuk_6.jpeg',
-  mediaAssets191: '/Media/gallery/Shri_Sukhwinder_Singh_&_Shri_Rajan_Saxena_2015/Shuk_7.jpeg',
-  mediaAssets192: '/Media/gallery/Shri_Sukhwinder_Singh_&_Shri_Rajan_Saxena_2015/Shuk_8.jpeg',
-  mediaAssets193: '/Media/gallery/Shri_Sukhwinder_Singh_&_Shri_Rajan_Saxena_2015/Shuk_9.jpeg',
-  mediaAssets194: '/Media/gallery/Shri_Sukhwinder_Singh_&_Shri_Rajan_Saxena_2015/Shuk_10.jpeg',
-  mediaAssets195: '/Media/gallery/Shri_Sukhwinder_Singh_&_Shri_Rajan_Saxena_2015/Shuk_11.jpeg',
+  mediaAssets185:
+    '/Media/gallery/Shri_Sukhwinder_Singh_&_Shri_Rajan_Saxena_2015/Shuk_1.jpeg',
+  mediaAssets186:
+    '/Media/gallery/Shri_Sukhwinder_Singh_&_Shri_Rajan_Saxena_2015/Shuk_2.jpeg',
+  mediaAssets187:
+    '/Media/gallery/Shri_Sukhwinder_Singh_&_Shri_Rajan_Saxena_2015/Shuk_3.jpeg',
+  mediaAssets188:
+    '/Media/gallery/Shri_Sukhwinder_Singh_&_Shri_Rajan_Saxena_2015/Shuk_4.jpeg',
+  mediaAssets189:
+    '/Media/gallery/Shri_Sukhwinder_Singh_&_Shri_Rajan_Saxena_2015/Shuk_5.jpeg',
+  mediaAssets190:
+    '/Media/gallery/Shri_Sukhwinder_Singh_&_Shri_Rajan_Saxena_2015/Shuk_6.jpeg',
+  mediaAssets191:
+    '/Media/gallery/Shri_Sukhwinder_Singh_&_Shri_Rajan_Saxena_2015/Shuk_7.jpeg',
+  mediaAssets192:
+    '/Media/gallery/Shri_Sukhwinder_Singh_&_Shri_Rajan_Saxena_2015/Shuk_8.jpeg',
+  mediaAssets193:
+    '/Media/gallery/Shri_Sukhwinder_Singh_&_Shri_Rajan_Saxena_2015/Shuk_9.jpeg',
+  mediaAssets194:
+    '/Media/gallery/Shri_Sukhwinder_Singh_&_Shri_Rajan_Saxena_2015/Shuk_10.jpeg',
+  mediaAssets195:
+    '/Media/gallery/Shri_Sukhwinder_Singh_&_Shri_Rajan_Saxena_2015/Shuk_11.jpeg',
 
   //Suresh_Prabhu-Dr_Saabs_birthday
 
-  mediaAssets196: '/Media/gallery/Suresh_Prabhu-Dr_Saabs_birthday/Hero_image.jpg',
+  mediaAssets196:
+    '/Media/gallery/Suresh_Prabhu-Dr_Saabs_birthday/Hero_image.jpg',
   mediaAssets197: '/Media/gallery/Suresh_Prabhu-Dr_Saabs_birthday/dr_1.jpg',
 
   //
 
- 
-  
-
-
   // news
 
- 
-
   // events
-
 }
 
 // Publication
@@ -779,7 +856,7 @@ export const publicationAssests = {
   ythAssets29: '/Publications/Yogsattava/PreviousIssues/2017/yogasattva4.jpg',
   ythAssets30: '/Publications/Yogsattava/PreviousIssues/2017/yogasattva5.jpg',
   ythAssets31: '/Publications/Yogsattava/PreviousIssues/2017/yogasattva6.jpg',
- 
+
   // 2018
   ythAssets1: '/Publications/Yogsattava/PreviousIssues/2018/yth2018-1.jpg',
   ythAssets2: '/Publications/Yogsattava/PreviousIssues/2018/yth2018-2.jpg',
@@ -814,81 +891,124 @@ export const publicationAssests = {
   ythAssets24: '/Publications/Yogsattava/PreviousIssues/2021/yth2021-6.jpg',
 
   //Library
-  libraryAsset:'/Publications/Library/hero.jpg',
+  libraryAsset: '/Publications/Library/hero.jpg',
 
   //yogasattava
 
   //2017
 
-  ythAssets32:'/Publications/Yogsattava/PreviousIssues/2017/YogaSattva.jpg',
-  ythAssets33:'/Publications/Yogsattava/PreviousIssues/2017/YogaSattva1.jpg',
-  ythAssets34:'/Publications/Yogsattava/PreviousIssues/2017/YogaSattva2.jpg',
-  ythAssets35:'/Publications/Yogsattava/PreviousIssues/2017/yogasattva3.jpg',
-  ythAssets36:'/Publications/Yogsattava/PreviousIssues/2017/yogasattva4.jpg',
-  ythAssets37:'/Publications/Yogsattava/PreviousIssues/2017/yogasattva5.jpg',
-  ythAssets38:'/Publications/Yogsattava/PreviousIssues/2017/yogasattva6.jpg',
+  ythAssets32: '/Publications/Yogsattava/PreviousIssues/2017/YogaSattva.jpg',
+  ythAssets33: '/Publications/Yogsattava/PreviousIssues/2017/YogaSattva1.jpg',
+  ythAssets34: '/Publications/Yogsattava/PreviousIssues/2017/YogaSattva2.jpg',
+  ythAssets35: '/Publications/Yogsattava/PreviousIssues/2017/yogasattva3.jpg',
+  ythAssets36: '/Publications/Yogsattava/PreviousIssues/2017/yogasattva4.jpg',
+  ythAssets37: '/Publications/Yogsattava/PreviousIssues/2017/yogasattva5.jpg',
+  ythAssets38: '/Publications/Yogsattava/PreviousIssues/2017/yogasattva6.jpg',
 
   //2018
 
-  ythAssets39:'/Publications/Yogsattava/PreviousIssues/2018/YogaSattva-April-Cover.jpg',
-  ythAssets40:'/Publications/Yogsattava/PreviousIssues/2018/YogaSattva-Aug-2019-Cover.jpg',
-  ythAssets41:'/Publications/Yogsattava/PreviousIssues/2018/YogaSattva-January2018-PDF-1.jpg',
-  ythAssets42:'/Publications/Yogsattava/PreviousIssues/2018/YogaSattva-July2018-1.jpeg',
-  ythAssets43:'/Publications/Yogsattava/PreviousIssues/2018/YogaSattva-May2018-PDF-1.jpeg',
-  ythAssets44:'/Publications/Yogsattava/PreviousIssues/2018/YogaSattva-October-2018-PDF-1.jpeg',
-  ythAssets45:'/Publications/Yogsattava/PreviousIssues/2018/YogaSattva-TheYogaInstitute-September2018-1.jpeg',
-  ythAssets46:'/Publications/Yogsattava/PreviousIssues/2018/Yogasattva_cover_june_2018.jpg',
-  ythAssets47:'/Publications/Yogsattava/PreviousIssues/2018/yogasattva-march2018-2-1.jpeg',
-  ythAssets48:'/Publications/Yogsattava/PreviousIssues/2018/yogasattva_cover.jpg',
-  ythAssets49:'/Publications/Yogsattava/PreviousIssues/2018/yogasattva_nov_cover.jpg',
-  
+  ythAssets39:
+    '/Publications/Yogsattava/PreviousIssues/2018/YogaSattva-April-Cover.jpg',
+  ythAssets40:
+    '/Publications/Yogsattava/PreviousIssues/2018/YogaSattva-Aug-2019-Cover.jpg',
+  ythAssets41:
+    '/Publications/Yogsattava/PreviousIssues/2018/YogaSattva-January2018-PDF-1.jpg',
+  ythAssets42:
+    '/Publications/Yogsattava/PreviousIssues/2018/YogaSattva-July2018-1.jpeg',
+  ythAssets43:
+    '/Publications/Yogsattava/PreviousIssues/2018/YogaSattva-May2018-PDF-1.jpeg',
+  ythAssets44:
+    '/Publications/Yogsattava/PreviousIssues/2018/YogaSattva-October-2018-PDF-1.jpeg',
+  ythAssets45:
+    '/Publications/Yogsattava/PreviousIssues/2018/YogaSattva-TheYogaInstitute-September2018-1.jpeg',
+  ythAssets46:
+    '/Publications/Yogsattava/PreviousIssues/2018/Yogasattva_cover_june_2018.jpg',
+  ythAssets47:
+    '/Publications/Yogsattava/PreviousIssues/2018/yogasattva-march2018-2-1.jpeg',
+  ythAssets48:
+    '/Publications/Yogsattava/PreviousIssues/2018/yogasattva_cover.jpg',
+  ythAssets49:
+    '/Publications/Yogsattava/PreviousIssues/2018/yogasattva_nov_cover.jpg',
 
   //2019
 
-  ythAssets50:'/Publications/Yogsattava/PreviousIssues/2019/new/YogaSattva-Apr-2019-TheYogaInstitute-1.jpeg',
-  ythAssets51:'/Publications/Yogsattava/PreviousIssues/2019/new/YogaSattva-Aug-2019-Cover.jpg',
-  ythAssets52:'/Publications/Yogsattava/PreviousIssues/2019/new/YogaSattva-Feb-2019-1.jpeg',
-  ythAssets53:'/Publications/Yogsattava/PreviousIssues/2019/new/YogaSattva-January19-1.jpeg',
-  ythAssets54:'/Publications/Yogsattava/PreviousIssues/2019/new/YogaSattva-July-2019-1.jpeg',
-  ythAssets55:'/Publications/Yogsattava/PreviousIssues/2019/new/YogaSattva-June-2019-1.jpeg',
-  ythAssets56:'/Publications/Yogsattava/PreviousIssues/2019/new/YogaSattva-Mar-2019 _cover.png',
-  ythAssets57:'/Publications/Yogsattava/PreviousIssues/2019/new/YogaSattva-May-2019--TheYogaInstitute-1.jpg',
-  ythAssets58:'/Publications/Yogsattava/PreviousIssues/2019/new/Yogasattva-Dec-2019-TheYogaInstitute-1.jpeg',
-  ythAssets59:'/Publications/Yogsattava/PreviousIssues/2019/new/Yogasattva-Nov-2019-TheYogaInstitute-1.jpeg',
-  ythAssets60:'/Publications/Yogsattava/PreviousIssues/2019/new/Yogasattva-Oct-19-Cover.jpeg',
-  ythAssets61:'/Publications/Yogsattava/PreviousIssues/2019/new/Yogasattva-Sept2019-1.jpeg',
+  ythAssets50:
+    '/Publications/Yogsattava/PreviousIssues/2019/new/YogaSattva-Apr-2019-TheYogaInstitute-1.jpeg',
+  ythAssets51:
+    '/Publications/Yogsattava/PreviousIssues/2019/new/YogaSattva-Aug-2019-Cover.jpg',
+  ythAssets52:
+    '/Publications/Yogsattava/PreviousIssues/2019/new/YogaSattva-Feb-2019-1.jpeg',
+  ythAssets53:
+    '/Publications/Yogsattava/PreviousIssues/2019/new/YogaSattva-January19-1.jpeg',
+  ythAssets54:
+    '/Publications/Yogsattava/PreviousIssues/2019/new/YogaSattva-July-2019-1.jpeg',
+  ythAssets55:
+    '/Publications/Yogsattava/PreviousIssues/2019/new/YogaSattva-June-2019-1.jpeg',
+  ythAssets56:
+    '/Publications/Yogsattava/PreviousIssues/2019/new/YogaSattva-Mar-2019 _cover.png',
+  ythAssets57:
+    '/Publications/Yogsattava/PreviousIssues/2019/new/YogaSattva-May-2019--TheYogaInstitute-1.jpg',
+  ythAssets58:
+    '/Publications/Yogsattava/PreviousIssues/2019/new/Yogasattva-Dec-2019-TheYogaInstitute-1.jpeg',
+  ythAssets59:
+    '/Publications/Yogsattava/PreviousIssues/2019/new/Yogasattva-Nov-2019-TheYogaInstitute-1.jpeg',
+  ythAssets60:
+    '/Publications/Yogsattava/PreviousIssues/2019/new/Yogasattva-Oct-19-Cover.jpeg',
+  ythAssets61:
+    '/Publications/Yogsattava/PreviousIssues/2019/new/Yogasattva-Sept2019-1.jpeg',
 
   //2021
 
-  ythAssets62:'/Publications/Yogsattava/PreviousIssues/2021/2021/Yoga-Sattva-March-2021-1.jpeg',
-  ythAssets63:'/Publications/Yogsattava/PreviousIssues/2021/2021/Yogasattva-APRIL-2021-TheYogaInstitute-1.jpg',
-  ythAssets64:'/Publications/Yogsattava/PreviousIssues/2021/2021/Yogasattva-August-2021-1-1.jpeg',
-  ythAssets65:'/Publications/Yogsattava/PreviousIssues/2021/2021/Yogasattva-December2021-Final-1.jpeg',
-  ythAssets66:'/Publications/Yogsattava/PreviousIssues/2021/2021/Yogasattva-FEB-2021-1.jpeg',
-  ythAssets67:'/Publications/Yogsattava/PreviousIssues/2021/2021/Yogasattva-JAN-2020.jpeg',
-  ythAssets68:'/Publications/Yogsattava/PreviousIssues/2021/2021/Yogasattva-July-2021-TheYogaInstitute.jpg',
-  ythAssets69:'/Publications/Yogsattava/PreviousIssues/2021/2021/Yogasattva-June-2021-TheYogaInstitute-1.jpeg',
-  ythAssets70:'/Publications/Yogsattava/PreviousIssues/2021/2021/Yogasattva-May-2021-The-Yoga-Institute-1.jpeg',
-  ythAssets71:'/Publications/Yogsattava/PreviousIssues/2021/2021/Yogasattva-November-2021-Final-1.jpeg',
-  ythAssets72:'/Publications/Yogsattava/PreviousIssues/2021/2021/Yogasattva-September-2021-1.jpeg',
+  ythAssets62:
+    '/Publications/Yogsattava/PreviousIssues/2021/2021/Yoga-Sattva-March-2021-1.jpeg',
+  ythAssets63:
+    '/Publications/Yogsattava/PreviousIssues/2021/2021/Yogasattva-APRIL-2021-TheYogaInstitute-1.jpg',
+  ythAssets64:
+    '/Publications/Yogsattava/PreviousIssues/2021/2021/Yogasattva-August-2021-1-1.jpeg',
+  ythAssets65:
+    '/Publications/Yogsattava/PreviousIssues/2021/2021/Yogasattva-December2021-Final-1.jpeg',
+  ythAssets66:
+    '/Publications/Yogsattava/PreviousIssues/2021/2021/Yogasattva-FEB-2021-1.jpeg',
+  ythAssets67:
+    '/Publications/Yogsattava/PreviousIssues/2021/2021/Yogasattva-JAN-2020.jpeg',
+  ythAssets68:
+    '/Publications/Yogsattava/PreviousIssues/2021/2021/Yogasattva-July-2021-TheYogaInstitute.jpg',
+  ythAssets69:
+    '/Publications/Yogsattava/PreviousIssues/2021/2021/Yogasattva-June-2021-TheYogaInstitute-1.jpeg',
+  ythAssets70:
+    '/Publications/Yogsattava/PreviousIssues/2021/2021/Yogasattva-May-2021-The-Yoga-Institute-1.jpeg',
+  ythAssets71:
+    '/Publications/Yogsattava/PreviousIssues/2021/2021/Yogasattva-November-2021-Final-1.jpeg',
+  ythAssets72:
+    '/Publications/Yogsattava/PreviousIssues/2021/2021/Yogasattva-September-2021-1.jpeg',
 
   //2020
 
-  ythAssets73:'/Publications/Yogsattava/PreviousIssues/2020/new/YogaSattav-February-2020-1.jpeg',
-  ythAssets74:'/Publications/Yogsattava/PreviousIssues/2020/new/Yogasattva-1st-June-2020-1.jpeg',
-  ythAssets75:'/Publications/Yogsattava/PreviousIssues/2020/new/Yogasattva-APR-2020-1.jpeg',
-  ythAssets76:'/Publications/Yogsattava/PreviousIssues/2020/new/Yogasattva-AUG-2020-1.jpeg',
-  ythAssets77:'/Publications/Yogsattava/PreviousIssues/2020/new/Yogasattva-DEC-2020_F-1.jpeg',
-  ythAssets78:'/Publications/Yogsattava/PreviousIssues/2020/new/Yogasattva-JULY-2020-1.jpeg',
-  ythAssets79:'/Publications/Yogsattava/PreviousIssues/2020/new/Yogasattva-Jan-2020_Final-1.jpeg',
-  ythAssets80:'/Publications/Yogsattava/PreviousIssues/2020/new/Yogasattva-MAY-2020-1.jpeg',
-  ythAssets81:'/Publications/Yogsattava/PreviousIssues/2020/new/Yogasattva-Mar-2020-1.jpeg',
-  ythAssets82:'/Publications/Yogsattava/PreviousIssues/2020/new/Yogasattva-NOV-2020-Cover 1.jpg',
-  ythAssets83:'/Publications/Yogsattava/PreviousIssues/2020/new/Yogasattva-OCT-2020-TheYogaInstitute-1.jpeg',
-  ythAssets84:'/Publications/Yogsattava/PreviousIssues/2020/new/Yogasattva-SEP-2020-1.jpeg',
+  ythAssets73:
+    '/Publications/Yogsattava/PreviousIssues/2020/new/YogaSattav-February-2020-1.jpeg',
+  ythAssets74:
+    '/Publications/Yogsattava/PreviousIssues/2020/new/Yogasattva-1st-June-2020-1.jpeg',
+  ythAssets75:
+    '/Publications/Yogsattava/PreviousIssues/2020/new/Yogasattva-APR-2020-1.jpeg',
+  ythAssets76:
+    '/Publications/Yogsattava/PreviousIssues/2020/new/Yogasattva-AUG-2020-1.jpeg',
+  ythAssets77:
+    '/Publications/Yogsattava/PreviousIssues/2020/new/Yogasattva-DEC-2020_F-1.jpeg',
+  ythAssets78:
+    '/Publications/Yogsattava/PreviousIssues/2020/new/Yogasattva-JULY-2020-1.jpeg',
+  ythAssets79:
+    '/Publications/Yogsattava/PreviousIssues/2020/new/Yogasattva-Jan-2020_Final-1.jpeg',
+  ythAssets80:
+    '/Publications/Yogsattava/PreviousIssues/2020/new/Yogasattva-MAY-2020-1.jpeg',
+  ythAssets81:
+    '/Publications/Yogsattava/PreviousIssues/2020/new/Yogasattva-Mar-2020-1.jpeg',
+  ythAssets82:
+    '/Publications/Yogsattava/PreviousIssues/2020/new/Yogasattva-NOV-2020-Cover 1.jpg',
+  ythAssets83:
+    '/Publications/Yogsattava/PreviousIssues/2020/new/Yogasattva-OCT-2020-TheYogaInstitute-1.jpeg',
+  ythAssets84:
+    '/Publications/Yogsattava/PreviousIssues/2020/new/Yogasattva-SEP-2020-1.jpeg',
 }
-
-
 
 export const alumniAssets = {
   // Alumni-Gallery
@@ -1028,7 +1148,7 @@ export const museumAssets = {
 //  Donation
 export const donationAssets = {
   // background
-  donationAsset1:'/Donation/background/background-donation.jpg',
+  donationAsset1: '/Donation/background/background-donation.jpg',
   // annam-brahma
   annamAssets: '/Donation/Annam-brahma/Annam-Brahma-1.jpg',
 
@@ -1067,335 +1187,332 @@ export const volunteerAssets = {
   volunteerAssets2: '/Volunteer/Bmc-Schools/volunteer-bmc.jpg',
   volunteerAssets3: '/Volunteer/Traffic-police/volunteer-3.jpg',
   volunteerAssets4: '/Volunteer/Trees-plantation/planting-modified.jpg',
-  volunteerAssets5:'/Volunteer/new11/course-coordinator-cover-image.jpg',
-  volunteerAssets6:'/Volunteer/new11/day-to-day-activities.jpg',
-  volunteerAssets7:'/Volunteer/new11/kitchen-help-cover-image.jpg',
-  volunteerAssets8:'/Volunteer/new11/teachers-cover-image.jpg',
-  volunteerAssets9:'/Volunteer/new11/volunteer-programs-expertise-cover-image.jpg',
+  volunteerAssets5: '/Volunteer/new11/course-coordinator-cover-image.jpg',
+  volunteerAssets6: '/Volunteer/new11/day-to-day-activities.jpg',
+  volunteerAssets7: '/Volunteer/new11/kitchen-help-cover-image.jpg',
+  volunteerAssets8: '/Volunteer/new11/teachers-cover-image.jpg',
+  volunteerAssets9:
+    '/Volunteer/new11/volunteer-programs-expertise-cover-image.jpg',
   //values
   valuesAssets: '/Volunteer/our-values.jpg',
-  
 
   //anna brahma
-  volunteerAssets10:'/Volunteer/latest/AnnamBramha/1-1.JPG',
-  volunteerAssets11:'/Volunteer/latest/AnnamBramha/1st-image-min.JPG',
-  volunteerAssets12:'/Volunteer/latest/AnnamBramha/3rd-image-4-3.jpg',
-  volunteerAssets13:'/Volunteer/latest/AnnamBramha/cover-image-min.JPG',
-  volunteerAssets14:'/Volunteer/latest/AnnamBramha/img_0464-4x3.jpg',
-  volunteerAssets15:'/Volunteer/latest/AnnamBramha/img_0971-1-1-min.JPG',
-  volunteerAssets16:'/Volunteer/latest/AnnamBramha/img_1006-16-9.JPG',
-  volunteerAssets17:'/Volunteer/latest/AnnamBramha/img_3129-16-9-min.JPG',
+  volunteerAssets10: '/Volunteer/latest/AnnamBramha/1-1.JPG',
+  volunteerAssets11: '/Volunteer/latest/AnnamBramha/1st-image-min.JPG',
+  volunteerAssets12: '/Volunteer/latest/AnnamBramha/3rd-image-4-3.jpg',
+  volunteerAssets13: '/Volunteer/latest/AnnamBramha/cover-image-min.JPG',
+  volunteerAssets14: '/Volunteer/latest/AnnamBramha/img_0464-4x3.jpg',
+  volunteerAssets15: '/Volunteer/latest/AnnamBramha/img_0971-1-1-min.JPG',
+  volunteerAssets16: '/Volunteer/latest/AnnamBramha/img_1006-16-9.JPG',
+  volunteerAssets17: '/Volunteer/latest/AnnamBramha/img_3129-16-9-min.JPG',
   //course coordinator
 
-  volunteerAssets18:'/Volunteer/latest/Course-Coordinator/12-16x9.jpg',
-  volunteerAssets19:'/Volunteer/latest/Course-Coordinator/29-16x9.jpg',
-  volunteerAssets20:'/Volunteer/latest/Course-Coordinator/counselling-4x3.jpg',
-  volunteerAssets21:'/Volunteer/latest/Course-Coordinator/dsc_3371-4x3.jpg',
-  volunteerAssets22:'/Volunteer/latest/Course-Coordinator/img_4021-1x1.jpg',
-  volunteerAssets23:'/Volunteer/latest/Course-Coordinator/qa08a2713-1x1.jpg',
+  volunteerAssets18: '/Volunteer/latest/Course-Coordinator/12-16x9.jpg',
+  volunteerAssets19: '/Volunteer/latest/Course-Coordinator/29-16x9.jpg',
+  volunteerAssets20: '/Volunteer/latest/Course-Coordinator/counselling-4x3.jpg',
+  volunteerAssets21: '/Volunteer/latest/Course-Coordinator/dsc_3371-4x3.jpg',
+  volunteerAssets22: '/Volunteer/latest/Course-Coordinator/img_4021-1x1.jpg',
+  volunteerAssets23: '/Volunteer/latest/Course-Coordinator/qa08a2713-1x1.jpg',
   //day to day avtivities
 
-  volunteerAssets45:'/Volunteer/latest/day-to-day-activities/16x9-01.jpg',
-  volunteerAssets46:'/Volunteer/latest/day-to-day-activities/16x9.jpg',
-  volunteerAssets47:'/Volunteer/latest/day-to-day-activities/1x1-01.jpg',
-  volunteerAssets48:'/Volunteer/latest/day-to-day-activities/1x1.jpg',
-  volunteerAssets49:'/Volunteer/latest/day-to-day-activities/4X3-01.jpg',
-  volunteerAssets50:'/Volunteer/latest/day-to-day-activities/4X3.jpg',
+  volunteerAssets45: '/Volunteer/latest/day-to-day-activities/16x9-01.jpg',
+  volunteerAssets46: '/Volunteer/latest/day-to-day-activities/16x9.jpg',
+  volunteerAssets47: '/Volunteer/latest/day-to-day-activities/1x1-01.jpg',
+  volunteerAssets48: '/Volunteer/latest/day-to-day-activities/1x1.jpg',
+  volunteerAssets49: '/Volunteer/latest/day-to-day-activities/4X3-01.jpg',
+  volunteerAssets50: '/Volunteer/latest/day-to-day-activities/4X3.jpg',
 
   //expertise
 
-  volunteerAssets24:'/Volunteer/latest/Expertise/16x9-01.jpg',
-  volunteerAssets25:'/Volunteer/latest/Expertise/16x9-min.jpg',
-  volunteerAssets26:'/Volunteer/latest/Expertise/1x1-01.jpg',
-  volunteerAssets28:'/Volunteer/latest/Expertise/1x1.jpg',
-  volunteerAssets29:'/Volunteer/latest/Expertise/4X3-01.jpg',
-  volunteerAssets30:'/Volunteer/latest/Expertise/4X3.jpg',
+  volunteerAssets24: '/Volunteer/latest/Expertise/16x9-01.jpg',
+  volunteerAssets25: '/Volunteer/latest/Expertise/16x9-min.jpg',
+  volunteerAssets26: '/Volunteer/latest/Expertise/1x1-01.jpg',
+  volunteerAssets28: '/Volunteer/latest/Expertise/1x1.jpg',
+  volunteerAssets29: '/Volunteer/latest/Expertise/4X3-01.jpg',
+  volunteerAssets30: '/Volunteer/latest/Expertise/4X3.jpg',
 
   //kitchen help
 
-  volunteerAssets31:'/Volunteer/latest/Kitchen-Help/16x9-01.jpg',
-  volunteerAssets32:'/Volunteer/latest/Kitchen-Help/16x9.jpg',
-  volunteerAssets33:'/Volunteer/latest/Kitchen-Help/1x1-01-min.jpg',
-  volunteerAssets34:'/Volunteer/latest/Kitchen-Help/1x1.jpg',
-  volunteerAssets35:'/Volunteer/latest/Kitchen-Help/4X3-01.jpg',
-  volunteerAssets37:'/Volunteer/latest/Kitchen-Help/4X3.jpg',
-  volunteerAssets51:'/',
+  volunteerAssets31: '/Volunteer/latest/Kitchen-Help/16x9-01.jpg',
+  volunteerAssets32: '/Volunteer/latest/Kitchen-Help/16x9.jpg',
+  volunteerAssets33: '/Volunteer/latest/Kitchen-Help/1x1-01-min.jpg',
+  volunteerAssets34: '/Volunteer/latest/Kitchen-Help/1x1.jpg',
+  volunteerAssets35: '/Volunteer/latest/Kitchen-Help/4X3-01.jpg',
+  volunteerAssets37: '/Volunteer/latest/Kitchen-Help/4X3.jpg',
+  volunteerAssets51: '/',
 
   //teacher
 
-  volunteerAssets38:'/Volunteer/latest/Teacher/16x9-01.jpg',
-  volunteerAssets39:'/Volunteer/latest/Teacher/16x9.jpg',
-  volunteerAssets40:'/Volunteer/latest/Teacher/1x1-01.jpg',
-  volunteerAssets41:'/Volunteer/latest/Teacher/1x1.jpg',
-  volunteerAssets42:'/Volunteer/latest/Teacher/4X3-01.jpg',
-  volunteerAssets43:'/Volunteer/latest/Teacher/4X3.jpg',
-  volunteerAssets44:'/Volunteer/latest/Teacher/cover-image -min.jpg',
-
-
+  volunteerAssets38: '/Volunteer/latest/Teacher/16x9-01.jpg',
+  volunteerAssets39: '/Volunteer/latest/Teacher/16x9.jpg',
+  volunteerAssets40: '/Volunteer/latest/Teacher/1x1-01.jpg',
+  volunteerAssets41: '/Volunteer/latest/Teacher/1x1.jpg',
+  volunteerAssets42: '/Volunteer/latest/Teacher/4X3-01.jpg',
+  volunteerAssets43: '/Volunteer/latest/Teacher/4X3.jpg',
+  volunteerAssets44: '/Volunteer/latest/Teacher/cover-image -min.jpg',
 }
-
 
 // home => facts Assets
 
-
-export const factAssets={
-  
+export const factAssets = {
   // 1916-1936
   factAsset1: '/Home/Facts/1916-1936/1916.jpg',
-  factAsset2:'/Home/Facts/1916-1936/1918.jpg',
-  factAsset3:'/Home/Facts/1916-1936/1920.jpg',
-  factAsset4:'/Home/Facts/1916-1936/1921.jpg',
-  factAsset5:'/Home/Facts/1916-1936/1924.jpg',
-  factAsset6:'/Home/Facts/1916-1936/1928.jpg',
-  factAsset7:'/Home/Facts/1916-1936/1933.jpg',
-  factAsset8:'/Home/Facts/1916-1936/1933_1.jpg',
-  factAsset9:'/Home/Facts/1916-1936/1934.jpg',
+  factAsset2: '/Home/Facts/1916-1936/1918.jpg',
+  factAsset3: '/Home/Facts/1916-1936/1920.jpg',
+  factAsset4: '/Home/Facts/1916-1936/1921.jpg',
+  factAsset5: '/Home/Facts/1916-1936/1924.jpg',
+  factAsset6: '/Home/Facts/1916-1936/1928.jpg',
+  factAsset7: '/Home/Facts/1916-1936/1933.jpg',
+  factAsset8: '/Home/Facts/1916-1936/1933_1.jpg',
+  factAsset9: '/Home/Facts/1916-1936/1934.jpg',
 
   // 1936-56
   factAsset10: '/Home/Facts/1936-1956/1940.jpg',
-  factAsset11:'/Home/Facts/1936-1956/1941.jpg',
-  factAsset12:'/Home/Facts/1936-1956/1948.jpg',
-  factAsset13:'/Home/Facts/1936-1956/1951.jpg',
-  factAsset98:'/Home/Facts/new11/1941-the-yoga-manual-written-by-shri-yogendra-and-shri-jayadeva-yogendra-translated-in-italian.jpg',
-  
+  factAsset11: '/Home/Facts/1936-1956/1941.jpg',
+  factAsset12: '/Home/Facts/1936-1956/1948.jpg',
+  factAsset13: '/Home/Facts/1936-1956/1951.jpg',
+  factAsset98:
+    '/Home/Facts/new11/1941-the-yoga-manual-written-by-shri-yogendra-and-shri-jayadeva-yogendra-translated-in-italian.jpg',
+
   // 1956-76
 
-  factAsset14:'/Home/Facts/1956-1976/1958.jpg',
-  factAsset15:'/Home/Facts/1956-1976/1961.jpg',
-  factAsset16:'/Home/Facts/1956-1976/1963.jpg',
-  factAsset17:'/Home/Facts/1956-1976/1963_1.jpg',
-  factAsset18:'/Home/Facts/1956-1976/1970.jpg',
-  factAsset19:'/Home/Facts/1956-1976/1972.jpg',
+  factAsset14: '/Home/Facts/1956-1976/1958.jpg',
+  factAsset15: '/Home/Facts/1956-1976/1961.jpg',
+  factAsset16: '/Home/Facts/1956-1976/1963.jpg',
+  factAsset17: '/Home/Facts/1956-1976/1963_1.jpg',
+  factAsset18: '/Home/Facts/1956-1976/1970.jpg',
+  factAsset19: '/Home/Facts/1956-1976/1972.jpg',
 
   // 1990-2000
 
-  factAsset20:'/Home/Facts/1990-2000/1986.jpg',
-  factAsset21:'/Home/Facts/1990-2000/1986_1.jpg',
-  factAsset22:'/Home/Facts/1990-2000/1987.jpg',
-  factAsset23:'/Home/Facts/1990-2000/1987_1.jpg',
-  factAsset24:'/Home/Facts/1990-2000/1987_2.jpg',
-  factAsset25:'/Home/Facts/1990-2000/1990.jpg',
-  factAsset26:'/Home/Facts/1990-2000/1997.jpg',
-  factAsset27:'/Home/Facts/1990-2000/8.jpg',
-  factAsset28:'/Home/Facts/1990-2000/9.jpg',
-  factAsset29:'/Home/Facts/1990-2000/10.jpg',
-  factAsset30:'/Home/Facts/1990-2000/11.jpg',
-  factAsset31:'/Home/Facts/1990-2000/12.jpg',
-  factAsset32:'/Home/Facts/1990-2000/13.jpg',
-  factAsset33:'/Home/Facts/1990-2000/14.jpg',
-  factAsset34:'/Home/Facts/1990-2000/15.jpg',
-  factAsset35:'/Home/Facts/1990-2000/16.jpg',
-  factAsset36:'/Home/Facts/1990-2000/17.jpg',
-  factAsset38:'/Home/Facts/1990-2000/18.jpg',
-  factAsset39:'/Home/Facts/1990-2000/19.jpg',
-  factAsset40:'/Home/Facts/1990-2000/20.jpg',
-  factAsset41:'/Home/Facts/1990-2000/21.jpg',
-  factAsset42:'/Home/Facts/1990-2000/22.jpg',
-  factAsset43:'/Home/Facts/1990-2000/23.jpg',
-  factAsset44:'/Home/Facts/1990-2000/24.jpg',
-  factAsset45:'/Home/Facts/1990-2000/25.jpg',
-  factAsset46:'/Home/Facts/1990-2000/26.jpg',
-  factAsset99:'/Home/Facts/new11/1987-first-volume-of-yoga-cyclopaedia..jpg',
+  factAsset20: '/Home/Facts/1990-2000/1986.jpg',
+  factAsset21: '/Home/Facts/1990-2000/1986_1.jpg',
+  factAsset22: '/Home/Facts/1990-2000/1987.jpg',
+  factAsset23: '/Home/Facts/1990-2000/1987_1.jpg',
+  factAsset24: '/Home/Facts/1990-2000/1987_2.jpg',
+  factAsset25: '/Home/Facts/1990-2000/1990.jpg',
+  factAsset26: '/Home/Facts/1990-2000/1997.jpg',
+  factAsset27: '/Home/Facts/1990-2000/8.jpg',
+  factAsset28: '/Home/Facts/1990-2000/9.jpg',
+  factAsset29: '/Home/Facts/1990-2000/10.jpg',
+  factAsset30: '/Home/Facts/1990-2000/11.jpg',
+  factAsset31: '/Home/Facts/1990-2000/12.jpg',
+  factAsset32: '/Home/Facts/1990-2000/13.jpg',
+  factAsset33: '/Home/Facts/1990-2000/14.jpg',
+  factAsset34: '/Home/Facts/1990-2000/15.jpg',
+  factAsset35: '/Home/Facts/1990-2000/16.jpg',
+  factAsset36: '/Home/Facts/1990-2000/17.jpg',
+  factAsset38: '/Home/Facts/1990-2000/18.jpg',
+  factAsset39: '/Home/Facts/1990-2000/19.jpg',
+  factAsset40: '/Home/Facts/1990-2000/20.jpg',
+  factAsset41: '/Home/Facts/1990-2000/21.jpg',
+  factAsset42: '/Home/Facts/1990-2000/22.jpg',
+  factAsset43: '/Home/Facts/1990-2000/23.jpg',
+  factAsset44: '/Home/Facts/1990-2000/24.jpg',
+  factAsset45: '/Home/Facts/1990-2000/25.jpg',
+  factAsset46: '/Home/Facts/1990-2000/26.jpg',
+  factAsset99: '/Home/Facts/new11/1987-first-volume-of-yoga-cyclopaedia..jpg',
 
   // 2000-2010
 
-  factAsset47:'/Home/Facts/2000-2010/1.jpg',
-  factAsset48:'/Home/Facts/2000-2010/2.jpg',
-  factAsset49:'/Home/Facts/2000-2010/3.jpg',
-  factAsset50:'/Home/Facts/2000-2010/4.jpg',
-  factAsset51:'/Home/Facts/2000-2010/5.jpg',
-  factAsset52:'/Home/Facts/2000-2010/6.jpg',
-  factAsset53:'/Home/Facts/2000-2010/7.jpg',
-  factAsset54:'/Home/Facts/2000-2010/8.jpg',
+  factAsset47: '/Home/Facts/2000-2010/1.jpg',
+  factAsset48: '/Home/Facts/2000-2010/2.jpg',
+  factAsset49: '/Home/Facts/2000-2010/3.jpg',
+  factAsset50: '/Home/Facts/2000-2010/4.jpg',
+  factAsset51: '/Home/Facts/2000-2010/5.jpg',
+  factAsset52: '/Home/Facts/2000-2010/6.jpg',
+  factAsset53: '/Home/Facts/2000-2010/7.jpg',
+  factAsset54: '/Home/Facts/2000-2010/8.jpg',
 
   // 2010-2020
-  factAsset55:'/Home/Facts/2010-2020/1.jpg',
-  factAsset56:'/Home/Facts/2010-2020/2.jpg',
-  factAsset57:'/Home/Facts/2010-2020/3.jpg',
-  factAsset58:'/Home/Facts/2010-2020/4.jpg',
-  factAsset59:'/Home/Facts/2010-2020/5.jpg',
-  factAsset60:'/Home/Facts/2010-2020/6.jpg',
-  factAsset61:'/Home/Facts/2010-2020/7.jpg',
-  factAsset62:'/Home/Facts/2010-2020/8.jpg',
-  factAsset63:'/Home/Facts/2010-2020/9.jpg',
-  factAsset64:'/Home/Facts/2010-2020/10.jpg',
-  factAsset65:'/Home/Facts/2010-2020/11.jpg',
-  factAsset66:'/Home/Facts/2010-2020/12.jpg',
-  factAsset67:'/Home/Facts/2010-2020/13.jpg',
-  factAsset68:'/Home/Facts/2010-2020/14.jpg',
-  factAsset69:'/Home/Facts/2010-2020/15.jpg',
-  factAsset70:'/Home/Facts/2010-2020/16.jpg',
-  factAsset71:'/Home/Facts/2010-2020/17.jpg',
-  factAsset72:'/Home/Facts/2010-2020/18.jpg',
-  factAsset73:'/Home/Facts/2010-2020/19.jpg',
-  factAsset74:'/Home/Facts/2010-2020/20.jpg',
+  factAsset55: '/Home/Facts/2010-2020/1.jpg',
+  factAsset56: '/Home/Facts/2010-2020/2.jpg',
+  factAsset57: '/Home/Facts/2010-2020/3.jpg',
+  factAsset58: '/Home/Facts/2010-2020/4.jpg',
+  factAsset59: '/Home/Facts/2010-2020/5.jpg',
+  factAsset60: '/Home/Facts/2010-2020/6.jpg',
+  factAsset61: '/Home/Facts/2010-2020/7.jpg',
+  factAsset62: '/Home/Facts/2010-2020/8.jpg',
+  factAsset63: '/Home/Facts/2010-2020/9.jpg',
+  factAsset64: '/Home/Facts/2010-2020/10.jpg',
+  factAsset65: '/Home/Facts/2010-2020/11.jpg',
+  factAsset66: '/Home/Facts/2010-2020/12.jpg',
+  factAsset67: '/Home/Facts/2010-2020/13.jpg',
+  factAsset68: '/Home/Facts/2010-2020/14.jpg',
+  factAsset69: '/Home/Facts/2010-2020/15.jpg',
+  factAsset70: '/Home/Facts/2010-2020/16.jpg',
+  factAsset71: '/Home/Facts/2010-2020/17.jpg',
+  factAsset72: '/Home/Facts/2010-2020/18.jpg',
+  factAsset73: '/Home/Facts/2010-2020/19.jpg',
+  factAsset74: '/Home/Facts/2010-2020/20.jpg',
 
   // 2020-onwards
-  factAsset75:'/Home/Facts/2020-onwards/1.jpg',
-  factAsset76:'/Home/Facts/2020-onwards/2.jpg',
-  factAsset77:'/Home/Facts/2020-onwards/3.jpg',
-  factAsset78:'/Home/Facts/2020-onwards/4.jpg',
-  factAsset79:'/Home/Facts/2020-onwards/5.jpg',
-  factAsset80:'/Home/Facts/2020-onwards/6.jpg',
-  factAsset81:'/Home/Facts/2020-onwards/7.jpg',
-  factAsset82:'/Home/Facts/2020-onwards/8.jpg',
-  factAsset83:'/Home/Facts/2020-onwards/9.jpg',
-  factAsset84:'/Home/Facts/2020-onwards/10.jpg',
-  factAsset85:'/Home/Facts/2020-onwards/11.jpg',
-  factAsset86:'/Home/Facts/2020-onwards/12.jpg',
-  factAsset87:'/Home/Facts/2020-onwards/13.jpg',
-  factAsset88:'/Home/Facts/2020-onwards/14.jpg',
-  factAsset89:'/Home/Facts/2020-onwards/15.jpg',
-  factAsset90:'/Home/Facts/2020-onwards/16.jpg',
-  factAsset91:'/Home/Facts/2020-onwards/17.jpg',
-  factAsset92:'/Home/Facts/2020-onwards/18.jpg',
-  factAsset93:'/Home/Facts/2020-onwards/19.jpg',
-  factAsset94:'/Home/Facts/2020-onwards/20.jpg',
-  factAsset95:'/Home/Facts/2020-onwards/21.jpg',
-  factAsset96:'/Home/Facts/2020-onwards/22.jpg',
-  factAsset97:'/Home/Facts/2020-onwards/23.jpg',
+  factAsset75: '/Home/Facts/2020-onwards/1.jpg',
+  factAsset76: '/Home/Facts/2020-onwards/2.jpg',
+  factAsset77: '/Home/Facts/2020-onwards/3.jpg',
+  factAsset78: '/Home/Facts/2020-onwards/4.jpg',
+  factAsset79: '/Home/Facts/2020-onwards/5.jpg',
+  factAsset80: '/Home/Facts/2020-onwards/6.jpg',
+  factAsset81: '/Home/Facts/2020-onwards/7.jpg',
+  factAsset82: '/Home/Facts/2020-onwards/8.jpg',
+  factAsset83: '/Home/Facts/2020-onwards/9.jpg',
+  factAsset84: '/Home/Facts/2020-onwards/10.jpg',
+  factAsset85: '/Home/Facts/2020-onwards/11.jpg',
+  factAsset86: '/Home/Facts/2020-onwards/12.jpg',
+  factAsset87: '/Home/Facts/2020-onwards/13.jpg',
+  factAsset88: '/Home/Facts/2020-onwards/14.jpg',
+  factAsset89: '/Home/Facts/2020-onwards/15.jpg',
+  factAsset90: '/Home/Facts/2020-onwards/16.jpg',
+  factAsset91: '/Home/Facts/2020-onwards/17.jpg',
+  factAsset92: '/Home/Facts/2020-onwards/18.jpg',
+  factAsset93: '/Home/Facts/2020-onwards/19.jpg',
+  factAsset94: '/Home/Facts/2020-onwards/20.jpg',
+  factAsset95: '/Home/Facts/2020-onwards/21.jpg',
+  factAsset96: '/Home/Facts/2020-onwards/22.jpg',
+  factAsset97: '/Home/Facts/2020-onwards/23.jpg',
 
   //updated facts image
 
   //1916-1936
-  factAsset100:'/Home/Facts/new/1916-1936/( 3)-1x1.jpg',
-  factAsset101:'/Home/Facts/new/1916-1936/(1 )1918_versova-4x3.jpg',
-  factAsset102:'/Home/Facts/new/1916-1936/(4 )1916_shri-madhavdasji_founder-4x3.jpg',
-  factAsset103:'/Home/Facts/new/1916-1936/1920_harriman-usa-16x9.jpg',
-  factAsset104:'/Home/Facts/new/1916-1936/1924_surendranath-das-gupta-16x9.jpg',
-  factAsset105:'/Home/Facts/new/1916-1936/1928_yoga-hygiene-1x1.jpg',
+  factAsset100: '/Home/Facts/new/1916-1936/( 3)-1x1.jpg',
+  factAsset101: '/Home/Facts/new/1916-1936/(1 )1918_versova-4x3.jpg',
+  factAsset102:
+    '/Home/Facts/new/1916-1936/(4 )1916_shri-madhavdasji_founder-4x3.jpg',
+  factAsset103: '/Home/Facts/new/1916-1936/1920_harriman-usa-16x9.jpg',
+  factAsset104:
+    '/Home/Facts/new/1916-1936/1924_surendranath-das-gupta-16x9.jpg',
+  factAsset105: '/Home/Facts/new/1916-1936/1928_yoga-hygiene-1x1.jpg',
 
   //1936-1956
 
-  factAsset106:'/Home/Facts/new/1936-1956/1940_crypt-of-civilization-1X1.jpg',
-  factAsset107:'/Home/Facts/new/1936-1956/1940_crypt-of-civilization-4x3.jpg',
-  factAsset108:'/Home/Facts/new/1936-1956/1941_the-yoga-manual(copy).jpg',
-  factAsset109:'/Home/Facts/new/1936-1956/1941_the-yoga-manual.jpg',
-  factAsset110:'/Home/Facts/new/1936-1956/1948_the-yoga-institute-4X3.jpg',
-  factAsset111:'/Home/Facts/new/1936-1956/1951_unesco-1X1.jpg',
+  factAsset106: '/Home/Facts/new/1936-1956/1940_crypt-of-civilization-1X1.jpg',
+  factAsset107: '/Home/Facts/new/1936-1956/1940_crypt-of-civilization-4x3.jpg',
+  factAsset108: '/Home/Facts/new/1936-1956/1941_the-yoga-manual(copy).jpg',
+  factAsset109: '/Home/Facts/new/1936-1956/1941_the-yoga-manual.jpg',
+  factAsset110: '/Home/Facts/new/1936-1956/1948_the-yoga-institute-4X3.jpg',
+  factAsset111: '/Home/Facts/new/1936-1956/1951_unesco-1X1.jpg',
 
   //1956-1976
 
-  factAsset112:'/Home/Facts/new/1956-1976/1958_the-central-government-16x9.jpg',
-  factAsset113:'/Home/Facts/new/1956-1976/1961_yoga-in-modern-1x1-min.jpg',
-  factAsset114:'/Home/Facts/new/1956-1976/1963_dr- zakir-hussain-16x9.jpg',
-  factAsset115:'/Home/Facts/new/1956-1976/1963_x-ray-research-4x3.jpg',
-  factAsset116:'/Home/Facts/new/1956-1976/1970-medical-research-1x1.jpg',
-  factAsset117:'/Home/Facts/new/1956-1976/1972_the-yoga -institute-organized-4x3.jpg',
+  factAsset112:
+    '/Home/Facts/new/1956-1976/1958_the-central-government-16x9.jpg',
+  factAsset113: '/Home/Facts/new/1956-1976/1961_yoga-in-modern-1x1-min.jpg',
+  factAsset114: '/Home/Facts/new/1956-1976/1963_dr- zakir-hussain-16x9.jpg',
+  factAsset115: '/Home/Facts/new/1956-1976/1963_x-ray-research-4x3.jpg',
+  factAsset116: '/Home/Facts/new/1956-1976/1970-medical-research-1x1.jpg',
+  factAsset117:
+    '/Home/Facts/new/1956-1976/1972_the-yoga -institute-organized-4x3.jpg',
 
   //1976-2000
 
-  factAsset118:'/Home/Facts/new/1976-2000/1986_ research-project-1x1.jpg',
-  factAsset119:'/Home/Facts/new/1976-2000/1986_dr-shankar-dayal-4x3.jpg',
-  factAsset120:'/Home/Facts/new/1976-2000/1987_first-volume-of-yoga-1x1.jpg',
-  factAsset121:'/Home/Facts/new/1976-2000/1987_giani-4x3.jpg',
-  factAsset122:'/Home/Facts/new/1976-2000/1990_unique-experiment-19x6.jpg',
-  factAsset123:'/Home/Facts/new/1976-2000/1997-hansaji-16x9.jpg',
+  factAsset118: '/Home/Facts/new/1976-2000/1986_ research-project-1x1.jpg',
+  factAsset119: '/Home/Facts/new/1976-2000/1986_dr-shankar-dayal-4x3.jpg',
+  factAsset120: '/Home/Facts/new/1976-2000/1987_first-volume-of-yoga-1x1.jpg',
+  factAsset121: '/Home/Facts/new/1976-2000/1987_giani-4x3.jpg',
+  factAsset122: '/Home/Facts/new/1976-2000/1990_unique-experiment-19x6.jpg',
+  factAsset123: '/Home/Facts/new/1976-2000/1997-hansaji-16x9.jpg',
 
   //2000-2010
 
-  factAsset124:'/Home/Facts/new/2000-2010/2000_woman-of-the-year-1x1.jpg',
-  factAsset125:'/Home/Facts/new/2000-2010/2010_rashtriya-ayurveda-19x9.jpg',
-  factAsset126:'/Home/Facts/new/2000-2010/2010_the-central-council-1x1.jpg',
-  factAsset127:'/Home/Facts/new/2000-2010/dsc_4649-4x3.jpg',
-  factAsset128:'/Home/Facts/new/2000-2010/dsc_4737-16x9.jpg',
-  factAsset129:'/Home/Facts/new/2000-2010/dsc_4740-1x1.jpg',
+  factAsset124: '/Home/Facts/new/2000-2010/2000_woman-of-the-year-1x1.jpg',
+  factAsset125: '/Home/Facts/new/2000-2010/2010_rashtriya-ayurveda-19x9.jpg',
+  factAsset126: '/Home/Facts/new/2000-2010/2010_the-central-council-1x1.jpg',
+  factAsset127: '/Home/Facts/new/2000-2010/dsc_4649-4x3.jpg',
+  factAsset128: '/Home/Facts/new/2000-2010/dsc_4737-16x9.jpg',
+  factAsset129: '/Home/Facts/new/2000-2010/dsc_4740-1x1.jpg',
 
   //2010-2020
 
-  factAsset130:'/Home/Facts/new/2010-2020/2012_94th-foundation--4x3.jpg',
-  factAsset131:'/Home/Facts/new/2010-2020/cover-image-1x1.jpg',
-  factAsset132:'/Home/Facts/new/2010-2020/dalai-lama-4x.jpg',
-  factAsset133:'/Home/Facts/new/2010-2020/indian-yoga-association-16x9.jpg',
-  factAsset134:'/Home/Facts/new/2010-2020/loksabha-1x1.jpg',
-  factAsset135:'/Home/Facts/new/2010-2020/shri-vishwanath-16x9.jpg',
+  factAsset130: '/Home/Facts/new/2010-2020/2012_94th-foundation--4x3.jpg',
+  factAsset131: '/Home/Facts/new/2010-2020/cover-image-1x1.jpg',
+  factAsset132: '/Home/Facts/new/2010-2020/dalai-lama-4x.jpg',
+  factAsset133: '/Home/Facts/new/2010-2020/indian-yoga-association-16x9.jpg',
+  factAsset134: '/Home/Facts/new/2010-2020/loksabha-1x1.jpg',
+  factAsset135: '/Home/Facts/new/2010-2020/shri-vishwanath-16x9.jpg',
 
   //2020 onwards
 
-  factAsset136:'/Home/Facts/new/2020onwards/1x1.jpg',
-  factAsset137:'/Home/Facts/new/2020onwards/dsc-116x9.jpg',
-  factAsset138:'/Home/Facts/new/2020onwards/dsc-16x9.jpg',
-  factAsset139:'/Home/Facts/new/2020onwards/indu-1x1.jpg',
-  factAsset140:'/Home/Facts/new/2020onwards/whatsapp-image-2021-14x3.jpg',
-  factAsset141:'/Home/Facts/new/2020onwards/whatsapp-image2020-4x3.jpg',
+  factAsset136: '/Home/Facts/new/2020onwards/1x1.jpg',
+  factAsset137: '/Home/Facts/new/2020onwards/dsc-116x9.jpg',
+  factAsset138: '/Home/Facts/new/2020onwards/dsc-16x9.jpg',
+  factAsset139: '/Home/Facts/new/2020onwards/indu-1x1.jpg',
+  factAsset140: '/Home/Facts/new/2020onwards/whatsapp-image-2021-14x3.jpg',
+  factAsset141: '/Home/Facts/new/2020onwards/whatsapp-image2020-4x3.jpg',
 
   //extra
 
-  factAsset142:'/Home/Facts/new/governor-maharashtra-1986..jpg',
-  factAsset143:'/Home/Facts/new/hansaji-jayadeva.png',
-  factAsset144:'/Home/Facts/new/shankar.jpg',
-  factAsset145:'/Home/Facts/new/vinshnu-anna.jpg',
-
-
-
+  factAsset142: '/Home/Facts/new/governor-maharashtra-1986..jpg',
+  factAsset143: '/Home/Facts/new/hansaji-jayadeva.png',
+  factAsset144: '/Home/Facts/new/shankar.jpg',
+  factAsset145: '/Home/Facts/new/vinshnu-anna.jpg',
 }
-
 
 export const socialResponsibilityAssets = {
-  annamBrahma:'/SocialResponsibility/Annam-brahma-cover.jpg',
-  bmcSchool:'/SocialResponsibility/BMC-school-cover.jpg',
-  police:'/SocialResponsibility/Copy _of_IMG_0166.jpg',
-  schoolChildren:'/SocialResponsibility/School_children_cover.jpg',
-  specialChildren:'/SocialResponsibility/Special_children_cover.jpg',
-  trafficPolice:'/SocialResponsibility/Traffic_police_rename.jpg',
-  truckAsana:'/SocialResponsibility/Truckasana_cover (1).jpg',
-  palnting:'/SocialResponsibility/planting_cover.jpg',
-  transgender:'/SocialResponsibility/transgender_cover.jpg'
+  annamBrahma: '/SocialResponsibility/Annam-brahma-cover.jpg',
+  bmcSchool: '/SocialResponsibility/BMC-school-cover.jpg',
+  police: '/SocialResponsibility/Copy _of_IMG_0166.jpg',
+  schoolChildren: '/SocialResponsibility/School_children_cover.jpg',
+  specialChildren: '/SocialResponsibility/Special_children_cover.jpg',
+  trafficPolice: '/SocialResponsibility/Traffic_police_rename.jpg',
+  truckAsana: '/SocialResponsibility/Truckasana_cover (1).jpg',
+  palnting: '/SocialResponsibility/planting_cover.jpg',
+  transgender: '/SocialResponsibility/transgender_cover.jpg',
 }
 
-export const experienceAssets={
-  ajankiya:'/Home/Experience/Ajinkya.jpg',
-  amitabhBacchan:'/Home/Experience/AmitabhBachchan.jpg',
-  dishaVakhani:'/Home/Experience/Disha%20Vakhani.jpg',
-  madanBahal:'/Home/Experience/Madan Bahal.jpg',
-  modiji:'/Home/Experience/Modiji.jpg',
-  naiduji:'/Home/Experience/Naiduji.jpg',
-  nirmalGangwal:'/Home/Experience/Nirmal-Gangwal.png',
-  rujutaDiwekar:'/Home/Experience/RUJUTA%20DIWEKAR.jpg',
-  shilpaShirodkar:'/Home/Experience/Shilpa%20Shirodkar.jpg',
-  shivKumarSharma:'/Home/Experience/Shivkumar%20Sharma.jpg',
-  shwetaTiwari:'/Home/Experience/Shweta%20Tiwari.jpg',
-  sukhwinderSingh:'/Home/Experience/Sukhwinder%20Singh.jpg',
-  ankitaSood:'/Home/Experience/ankita sood.jpg',
-  carlo:'/Home/Experience/carlo.jpeg',
-  kavita:'/Home/Experience/kavita.jpg',
-  natalia:'/Home/Experience/natalia.JPG',
-  kovindji:'/Home/Experience/shriramnathkovid.png',
-  veronica:'/Home/Experience/veronica.JPG',
-  premchandgodha:'/Home/Experience/Premchand%20Godha.jpg',
-  ravishankar:'/Home/Experience/shri-shri-ravi-shankar.jpeg',
-  sadhguru:'/Home/Experience/sadhguru-jaggi-vasudev.jpg',
-  mahadeshwar:'/Home/Experience/shri-c-vidyasagar-rao-governor-of-maharashtra.jpeg',
-  nagendra:'/Home/Experience/padmashri-dr-h-r-nagendra-guruji.jpg',
-  bharatBhushan:'/Home/Experience/swami-bharat-bhushan-ji.jpg',
-  chidanand:'/Home/Experience/chidanand-saraswati.jpg',
-  gopalDas:'/Home/Experience/gaur-gopal-das.jpg',
-  vidyasagar:'/Home/Experience/shri-c-vidyasagar-rao-governor-of-maharashtra.jpeg',
-  isha:'/Home/Experience/isha-koppikar.jpg',
-  yesso:'/Home/Experience/shripad yesso naik.jpg',
-  shankarM:'/Home/Experience/shankar-mahadevan.jpg',
-  nitinG:'/Home/Experience/nitin-gadkari.png',
-  ranvirBrar:'/Home/Experience/chef-ranveer-brar.jpg',
-  kabirB:'/Home/Experience/kabir-bedi.jpg',
-  billBennet:'/Home/Experience/bill-bennett.jpeg',
-  jennifer:'/Home/Experience/jennifer-cluff.jpg',
-  shivaniBajaj:'/Home/Experience/shivani.jpeg',
-  jinal:'/Home/Experience/zinel.jpg',
-  nidhiSharma:'/Home/Experience/nidhi.JPG',
-  mercyD:'/Home/Experience/mercy-min.jpg',
-  nisarg:'/Home/Experience/nisarg.jpg',
-  zinal:'',
+export const experienceAssets = {
+  ajankiya: '/Home/Experience/Ajinkya.jpg',
+  amitabhBacchan: '/Home/Experience/AmitabhBachchan.jpg',
+  dishaVakhani: '/Home/Experience/Disha%20Vakhani.jpg',
+  madanBahal: '/Home/Experience/Madan Bahal.jpg',
+  modiji: '/Home/Experience/Modiji.jpg',
+  naiduji: '/Home/Experience/Naiduji.jpg',
+  nirmalGangwal: '/Home/Experience/Nirmal-Gangwal.png',
+  rujutaDiwekar: '/Home/Experience/RUJUTA%20DIWEKAR.jpg',
+  shilpaShirodkar: '/Home/Experience/Shilpa%20Shirodkar.jpg',
+  shivKumarSharma: '/Home/Experience/Shivkumar%20Sharma.jpg',
+  shwetaTiwari: '/Home/Experience/Shweta%20Tiwari.jpg',
+  sukhwinderSingh: '/Home/Experience/Sukhwinder%20Singh.jpg',
+  ankitaSood: '/Home/Experience/ankita sood.jpg',
+  carlo: '/Home/Experience/carlo.jpeg',
+  kavita: '/Home/Experience/kavita.jpg',
+  natalia: '/Home/Experience/natalia.JPG',
+  kovindji: '/Home/Experience/shriramnathkovid.png',
+  veronica: '/Home/Experience/veronica.JPG',
+  premchandgodha: '/Home/Experience/Premchand%20Godha.jpg',
+  ravishankar: '/Home/Experience/shri-shri-ravi-shankar.jpeg',
+  sadhguru: '/Home/Experience/sadhguru-jaggi-vasudev.jpg',
+  mahadeshwar:
+    '/Home/Experience/shri-c-vidyasagar-rao-governor-of-maharashtra.jpeg',
+  nagendra: '/Home/Experience/padmashri-dr-h-r-nagendra-guruji.jpg',
+  bharatBhushan: '/Home/Experience/swami-bharat-bhushan-ji.jpg',
+  chidanand: '/Home/Experience/chidanand-saraswati.jpg',
+  gopalDas: '/Home/Experience/gaur-gopal-das.jpg',
+  vidyasagar:
+    '/Home/Experience/shri-c-vidyasagar-rao-governor-of-maharashtra.jpeg',
+  isha: '/Home/Experience/isha-koppikar.jpg',
+  yesso: '/Home/Experience/shripad yesso naik.jpg',
+  shankarM: '/Home/Experience/shankar-mahadevan.jpg',
+  nitinG: '/Home/Experience/nitin-gadkari.png',
+  ranvirBrar: '/Home/Experience/chef-ranveer-brar.jpg',
+  kabirB: '/Home/Experience/kabir-bedi.jpg',
+  billBennet: '/Home/Experience/bill-bennett.jpeg',
+  jennifer: '/Home/Experience/jennifer-cluff.jpg',
+  shivaniBajaj: '/Home/Experience/shivani.jpeg',
+  jinal: '/Home/Experience/zinel.jpg',
+  nidhiSharma: '/Home/Experience/nidhi.JPG',
+  mercyD: '/Home/Experience/mercy-min.jpg',
+  nisarg: '/Home/Experience/nisarg.jpg',
+  zinal: '',
 }
 
-
-export const CSR ={
-  peace:'/CSR/peace-justice.png',
-  hunger:'/CSR/zero-hunger.png',
-  responsible:'/CSR/responsible1.png',
-  health:'/CSR/good-health.png'
+export const CSR = {
+  peace: '/CSR/peace-justice.png',
+  hunger: '/CSR/zero-hunger.png',
+  responsible: '/CSR/responsible1.png',
+  health: '/CSR/good-health.png',
 }
 
-export const wellnessAssets ={
+export const wellnessAssets = {
   wellnessAssets1: '/wellness/corporate_wellness_background%20(1).jpg',
   wellnessAssets2: '/wellness/our_offerings_left .jpeg',
   wellnessAssets3 :'/wellness/Our_offerings_right.png',
@@ -1410,5 +1527,259 @@ export const newsAssets = {
   digitalMedia:'/Media/digital-media.jpg'
 }
 
+
+export const printMediaAssest = {
+  //archives
+
+  printMediaAssest1: '/print_media/newspaper_archives/image789.jpeg',
+  printMediaAssest2: '/print_media/newspaper_archives/image790.jpeg',
+  printMediaAssest3: '/print_media/newspaper_archives/image791.jpeg',
+  printMediaAssest4: '/print_media/newspaper_archives/image792.jpeg',
+  printMediaAssest5: '/print_media/newspaper_archives/image793.jpeg',
+  printMediaAssest6: '/print_media/newspaper_archives/image794.jpeg',
+  printMediaAssest7: '/print_media/newspaper_archives/image795.jpeg',
+  printMediaAssest8: '/print_media/newspaper_archives/image796.jpeg',
+  printMediaAssest9: '/print_media/newspaper_archives/image797.jpeg',
+  printMediaAssest10: '/print_media/newspaper_archives/image798.jpeg',
+  printMediaAssest11: '/print_media/newspaper_archives/image799.jpeg',
+  printMediaAssest12: '/print_media/newspaper_archives/image800.jpeg',
+  printMediaAssest13: '/print_media/newspaper_archives/image801.jpeg',
+  printMediaAssest14: '/print_media/newspaper_archives/image802.jpeg',
+  printMediaAssest15: '/print_media/newspaper_archives/image803.jpeg',
+  printMediaAssest16: '/print_media/newspaper_archives/image804.jpeg',
+  printMediaAssest17: '/print_media/newspaper_archives/image805.jpeg',
+  printMediaAssest18: '/print_media/newspaper_archives/image806.jpeg',
+  printMediaAssest19: '/print_media/newspaper_archives/image807.jpeg',
+  printMediaAssest20: '/print_media/newspaper_archives/image808.jpeg',
+  printMediaAssest21: '/print_media/newspaper_archives/image809.jpeg',
+  printMediaAssest22: '/print_media/newspaper_archives/image810.jpeg',
+  printMediaAssest23: '/print_media/newspaper_archives/image811.jpeg',
+  printMediaAssest24: '/print_media/newspaper_archives/image812.jpeg',
+  printMediaAssest25: '/print_media/newspaper_archives/image813.jpeg',
+  printMediaAssest26: '/print_media/newspaper_archives/image814.jpeg',
+  printMediaAssest27: '/print_media/newspaper_archives/image815.jpeg',
+  printMediaAssest28: '/print_media/newspaper_archives/image816.jpeg',
+  printMediaAssest29: '/print_media/newspaper_archives/image817.jpeg',
+  printMediaAssest30: '/print_media/newspaper_archives/image818.jpeg',
+  printMediaAssest31: '/print_media/newspaper_archives/image819.jpeg',
+  printMediaAssest32: '/print_media/newspaper_archives/image820.jpeg',
+  printMediaAssest33: '/print_media/newspaper_archives/image821.jpeg',
+  printMediaAssest34: '/print_media/newspaper_archives/image822.jpeg',
+  printMediaAssest35: '/print_media/newspaper_archives/image823.jpeg',
+  printMediaAssest36: '/print_media/newspaper_archives/image824.jpeg',
+  printMediaAssest37: '/print_media/newspaper_archives/image825.jpeg',
+  printMediaAssest38: '/print_media/newspaper_archives/image826.jpeg',
+  printMediaAssest39: '/print_media/newspaper_archives/image827.jpeg',
+  printMediaAssest40: '/print_media/newspaper_archives/image828.jpeg',
+  printMediaAssest41: '/print_media/newspaper_archives/image829.jpeg',
+  printMediaAssest42: '/print_media/newspaper_archives/image830.jpeg',
+  printMediaAssest43: '/print_media/newspaper_archives/image831.jpeg',
+  printMediaAssest44: '/print_media/newspaper_archives/image832.jpeg',
+  printMediaAssest45: '/print_media/newspaper_archives/image833.jpeg',
+  printMediaAssest46: '/print_media/newspaper_archives/image834.jpeg',
+  printMediaAssest47: '/print_media/newspaper_archives/image835.jpeg',
+  printMediaAssest48: '/print_media/newspaper_archives/image836.jpeg',
+  printMediaAssest49: '/print_media/newspaper_archives/image837.jpeg',
+  printMediaAssest50: '/print_media/newspaper_archives/image838.jpeg',
+  printMediaAssest51: '/print_media/newspaper_archives/image839.jpeg',
+  printMediaAssest52: '/print_media/newspaper_archives/image840.jpeg',
+  printMediaAssest53: '/print_media/newspaper_archives/image841.jpeg',
+  printMediaAssest54: '/print_media/newspaper_archives/image842.jpeg',
+  printMediaAssest55: '/print_media/newspaper_archives/image843.jpeg',
+  printMediaAssest56: '/print_media/newspaper_archives/image844.jpeg',
+  printMediaAssest57: '/print_media/newspaper_archives/image845.jpeg',
+  printMediaAssest58: '/print_media/newspaper_archives/image846.jpeg',
+  printMediaAssest59: '/print_media/newspaper_archives/image847.jpeg',
+  printMediaAssest60: '/print_media/newspaper_archives/image848.jpeg',
+  printMediaAssest61: '/print_media/newspaper_archives/image849.jpeg',
+  printMediaAssest62: '/print_media/newspaper_archives/image850.jpeg',
+  printMediaAssest63: '/print_media/newspaper_archives/image851.jpeg',
+  printMediaAssest64: '/print_media/newspaper_archives/image852.jpeg',
+  printMediaAssest65: '/print_media/newspaper_archives/image853.jpeg',
+  printMediaAssest66: '/print_media/newspaper_archives/image854.jpeg',
+  printMediaAssest67: '/print_media/newspaper_archives/image855.jpeg',
+  printMediaAssest68: '/print_media/newspaper_archives/image856.jpeg',
+  printMediaAssest69: '/print_media/newspaper_archives/image857.jpeg',
+  printMediaAssest70: '/print_media/newspaper_archives/image858.jpeg',
+  printMediaAssest71: '/print_media/newspaper_archives/image859.jpeg',
+  printMediaAssest72: '/print_media/newspaper_archives/image860.jpeg',
+  printMediaAssest73: '/print_media/newspaper_archives/image861.jpeg',
+  printMediaAssest74: '/print_media/newspaper_archives/image862.jpeg',
+  printMediaAssest75: '/print_media/newspaper_archives/image863.jpeg',
+  printMediaAssest76: '/print_media/newspaper_archives/image864.jpeg',
+  printMediaAssest77: '/print_media/newspaper_archives/image865.jpeg',
+  printMediaAssest78: '/print_media/newspaper_archives/image866.jpeg',
+  printMediaAssest79: '/print_media/newspaper_archives/image867.jpeg',
+  printMediaAssest80: '/print_media/newspaper_archives/image868.jpeg',
+  printMediaAssest81: '/print_media/newspaper_archives/image869.jpeg',
+  printMediaAssest82: '/print_media/newspaper_archives/image870.jpeg',
+  printMediaAssest83: '/print_media/newspaper_archives/image871.jpeg',
+  printMediaAssest84: '/print_media/newspaper_archives/image872.jpeg',
+  printMediaAssest85: '/print_media/newspaper_archives/image873.jpeg',
+  printMediaAssest86: '/print_media/newspaper_archives/image874.jpeg',
+  printMediaAssest87: '/print_media/newspaper_archives/image875.jpeg',
+  printMediaAssest88: '/print_media/newspaper_archives/image876.jpeg',
+  printMediaAssest89: '/print_media/newspaper_archives/image877.jpeg',
+  printMediaAssest90: '/print_media/newspaper_archives/image878.jpeg',
+  printMediaAssest91: '/print_media/newspaper_archives/image879.jpeg',
+  printMediaAssest92: '/print_media/newspaper_archives/image880.jpeg',
+  printMediaAssest93: '/print_media/newspaper_archives/image881.jpeg',
+  printMediaAssest94: '/print_media/newspaper_archives/image882.jpeg',
+  printMediaAssest95: '/print_media/newspaper_archives/image883.jpeg',
+  printMediaAssest96: '/print_media/newspaper_archives/image884.jpeg',
+  printMediaAssest97: '/print_media/newspaper_archives/image885.jpeg',
+  printMediaAssest98: '/print_media/newspaper_archives/image886.jpeg',
+  printMediaAssest99: '/print_media/newspaper_archives/image887.jpeg',
+  printMediaAssest100: '/print_media/newspaper_archives/image888.jpeg',
+  printMediaAssest101: '/print_media/newspaper_archives/image889.jpeg',
+  printMediaAssest102: '/print_media/newspaper_archives/image890.jpeg',
+  printMediaAssest103: '/print_media/newspaper_archives/image891.jpeg',
+  printMediaAssest104: '/print_media/newspaper_archives/image892.jpeg',
+  printMediaAssest105: '/print_media/newspaper_archives/image893.jpeg',
+  printMediaAssest106: '/print_media/newspaper_archives/image894.jpeg',
+  printMediaAssest107: '/print_media/newspaper_archives/image895.jpeg',
+  printMediaAssest108: '/print_media/newspaper_archives/image896.jpeg',
+  printMediaAssest109: '/print_media/newspaper_archives/image897.jpeg',
+  printMediaAssest110: '/print_media/newspaper_archives/image898.jpeg',
+  printMediaAssest111: '/print_media/newspaper_archives/image899.jpeg',
+  printMediaAssest112: '/print_media/newspaper_archives/image900.jpeg',
+  printMediaAssest113: '/print_media/newspaper_archives/image901.jpeg',
+  printMediaAssest114: '/print_media/newspaper_archives/image902.jpeg',
+  printMediaAssest115: '/print_media/newspaper_archives/image903.jpeg',
+  printMediaAssest116: '/print_media/newspaper_archives/image904.jpeg',
+  printMediaAssest117: '/print_media/newspaper_archives/image905.jpeg',
+  printMediaAssest118: '/print_media/newspaper_archives/image906.jpeg',
+  printMediaAssest119: '/print_media/newspaper_archives/image907.jpeg',
+  printMediaAssest120: '/print_media/newspaper_archives/image908.jpeg',
+  printMediaAssest121: '/print_media/newspaper_archives/image909.jpeg',
+  printMediaAssest122: '/print_media/newspaper_archives/image910.jpeg',
+  printMediaAssest123: '/print_media/newspaper_archives/image911.jpeg',
+  printMediaAssest124: '/print_media/newspaper_archives/image912.jpeg',
+  printMediaAssest125: '/print_media/newspaper_archives/image913.jpeg',
+  printMediaAssest126: '/print_media/newspaper_archives/image914.jpeg',
+  printMediaAssest127: '/print_media/newspaper_archives/image915.jpeg',
+  printMediaAssest128: '/print_media/newspaper_archives/image916.jpeg',
+  printMediaAssest129: '/print_media/newspaper_archives/image917.jpeg',
+  printMediaAssest130: '/print_media/newspaper_archives/image918.jpeg',
+  printMediaAssest131: '/print_media/newspaper_archives/image919.jpeg',
+  printMediaAssest132: '/print_media/newspaper_archives/image920.jpeg',
+  printMediaAssest133: '/print_media/newspaper_archives/image921.jpeg',
+  printMediaAssest134: '/print_media/newspaper_archives/image922.jpeg',
+  printMediaAssest135: '/print_media/newspaper_archives/image923.jpeg',
+  printMediaAssest136: '/print_media/newspaper_archives/image924.jpeg',
+  printMediaAssest137: '/print_media/newspaper_archives/image925.jpeg',
+  printMediaAssest138: '/print_media/newspaper_archives/image926.jpeg',
+  printMediaAssest139: '/print_media/newspaper_archives/image927.jpeg',
+  printMediaAssest140: '/print_media/newspaper_archives/image928.jpeg',
+  printMediaAssest141: '/print_media/newspaper_archives/image929.jpeg',
+  printMediaAssest142: '/print_media/newspaper_archives/image930.jpeg',
+
+  //2014
+
+  printMediaAssest143: '/print_media/2014/image760.jpeg',
+  printMediaAssest144: '/print_media/2014/image761.jpeg',
+  printMediaAssest145: '/print_media/2014/image762.jpeg',
+  printMediaAssest146: '/print_media/2014/image763.jpeg',
+  printMediaAssest147: '/print_media/2014/image764.jpeg',
+  printMediaAssest148: '/print_media/2014/image765.jpeg',
+  printMediaAssest149: '/print_media/2014/image766.jpeg',
+  printMediaAssest150: '/print_media/2014/image767.jpeg',
+  printMediaAssest151: '/print_media/2014/image768.jpeg',
+  printMediaAssest152: '/print_media/2014/image769.jpeg',
+  printMediaAssest153: '/print_media/2014/image770.jpeg',
+  printMediaAssest154: '/print_media/2014/image771.jpeg',
+  printMediaAssest155: '/print_media/2014/image772.jpeg',
+  printMediaAssest156: '/print_media/2014/image773.jpeg',
+  printMediaAssest157: '/print_media/2014/image774.jpeg',
+  printMediaAssest158: '/print_media/2014/image775.jpeg',
+  printMediaAssest159: '/print_media/2014/image776.jpeg',
+  printMediaAssest160: '/print_media/2014/image777.jpeg',
+  printMediaAssest161: '/print_media/2014/image778.jpeg',
+  printMediaAssest162: '/print_media/2014/image779.jpeg',
+  printMediaAssest163: '/print_media/2014/image780.jpeg',
+  printMediaAssest164: '/print_media/2014/image781.jpeg',
+  printMediaAssest165: '/print_media/2014/image782.jpeg',
+  printMediaAssest166: '/print_media/2014/image783.jpeg',
+  printMediaAssest167: '/print_media/2014/image784.jpeg',
+  printMediaAssest168: '/print_media/2014/image785.jpeg',
+  printMediaAssest169: '/print_media/2014/image786.jpeg',
+  printMediaAssest170: '/print_media/2014/image787.jpeg',
+  printMediaAssest171: '/print_media/2014/image788.jpeg',
+
+  //2015
+  printMediaAssest172: '/print_media/2015/image743.jpeg',
+  printMediaAssest173: '/print_media/2015/image744.jpeg',
+  printMediaAssest174: '/print_media/2015/image745.jpeg',
+  printMediaAssest175: '/print_media/2015/image746.jpeg',
+  printMediaAssest176: '/print_media/2015/image747.jpeg',
+  printMediaAssest177: '/print_media/2015/image748.jpeg',
+  printMediaAssest178: '/print_media/2015/image749.jpeg',
+  printMediaAssest179: '/print_media/2015/image750.jpeg',
+  printMediaAssest180: '/print_media/2015/image751.jpeg',
+  printMediaAssest181: '/print_media/2015/image752.jpeg',
+  printMediaAssest182: '/print_media/2015/image753.jpeg',
+  printMediaAssest183: '/print_media/2015/image754.jpeg',
+  printMediaAssest184: '/print_media/2015/image755.jpeg',
+  printMediaAssest185: '/print_media/2015/image756.jpeg',
+  printMediaAssest186: '/print_media/2015/image757.jpeg',
+  printMediaAssest187: '/print_media/2015/image758.jpeg',
+  printMediaAssest188: '/print_media/2015/image759.jpeg',
+
+  //2016
+
+  printMediaAssest189: '/print_media/2016/image694.jpeg',
+  printMediaAssest190: '/print_media/2016/image695.jpeg',
+  printMediaAssest191: '/print_media/2016/image696.jpeg',
+  printMediaAssest192: '/print_media/2016/image697.jpeg',
+  printMediaAssest193: '/print_media/2016/image698.jpeg',
+  printMediaAssest194: '/print_media/2016/image699.jpeg',
+  printMediaAssest195: '/print_media/2016/image700.jpeg',
+  printMediaAssest196: '/print_media/2016/image701.jpeg',
+  printMediaAssest197: '/print_media/2016/image702.jpeg',
+  printMediaAssest198: '/print_media/2016/image703.jpeg',
+  printMediaAssest199: '/print_media/2016/image704.jpeg',
+  printMediaAssest200: '/print_media/2016/image705.jpeg',
+  printMediaAssest201: '/print_media/2016/image706.jpeg',
+  printMediaAssest202: '/print_media/2016/image707.jpeg',
+  printMediaAssest203: '/print_media/2016/image708.jpeg',
+  printMediaAssest204: '/print_media/2016/image709.jpeg',
+  printMediaAssest205: '/print_media/2016/image710.jpeg',
+  printMediaAssest206: '/print_media/2016/image711.jpeg',
+  printMediaAssest207: '/print_media/2016/image712.jpeg',
+  printMediaAssest208: '/print_media/2016/image713.jpeg',
+  printMediaAssest209: '/print_media/2016/image714.jpeg',
+  printMediaAssest210: '/print_media/2016/image715.jpeg',
+  printMediaAssest211: '/print_media/2016/image716.jpeg',
+  printMediaAssest212: '/print_media/2016/image717.jpeg',
+  printMediaAssest213: '/print_media/2016/image718.jpeg',
+  printMediaAssest214: '/print_media/2016/image719.jpeg',
+  printMediaAssest215: '/print_media/2016/image720.jpeg',
+  printMediaAssest216: '/print_media/2016/image721.jpeg',
+  printMediaAssest217: '/print_media/2016/image722.jpeg',
+  printMediaAssest218: '/print_media/2016/image723.jpeg',
+  printMediaAssest219: '/print_media/2016/image724.jpeg',
+  printMediaAssest220: '/print_media/2016/image725.jpeg',
+  printMediaAssest221: '/print_media/2016/image726.jpeg',
+  printMediaAssest222: '/print_media/2016/image727.jpeg',
+  printMediaAssest223: '/print_media/2016/image728.jpeg',
+  printMediaAssest224: '/print_media/2016/image729.jpeg',
+  printMediaAssest225: '/print_media/2016/image730.jpeg',
+  printMediaAssest226: '/print_media/2016/image731.jpeg',
+  printMediaAssest227: '/print_media/2016/image732.jpeg',
+  printMediaAssest228: '/print_media/2016/image733.jpeg',
+  printMediaAssest229: '/print_media/2016/image734.jpeg',
+  printMediaAssest230: '/print_media/2016/image735.jpeg',
+  printMediaAssest231: '/print_media/2016/image736.jpeg',
+  printMediaAssest232: '/print_media/2016/image737.jpeg',
+  printMediaAssest233: '/print_media/2016/image738.jpeg',
+  printMediaAssest234: '/print_media/2016/image739.jpeg',
+  printMediaAssest235: '/print_media/2016/image740.jpeg',
+  printMediaAssest236: '/print_media/2016/image741.jpeg',
+  printMediaAssest237: '/print_media/2016/image742.jpeg',
+  printMediaAssest238: '/',
+
+
+  //2017
+}
 
 export default baseDomain
