@@ -10740,8 +10740,8 @@ const classes = {
     dates: [],
     online: false,
     onCampus: true,
-    nonResidential: false,
-    residential: true,
+    nonResidential: true,
+    residential: false,
     certficate: false,
     details: [
       {

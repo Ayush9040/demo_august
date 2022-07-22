@@ -35,6 +35,8 @@ import VolunteerJob from '../Views/Volunteer/Views/volunteerJob'
 import Values from '../Views/Volunteer/Views/values'
 import PrintMedia from '../Views/Media/Views/Print-Digital/print-media'
 import DigitalMedia from '../Views/Media/Views/Print-Digital/digital-media'
+import SatsangThankyou from '../Components/EnrollmentForm/SatsangThankYou'
+
 
 const staticSiteRoutes = [
   {
@@ -293,7 +295,14 @@ const staticSiteRoutes = [
     routePath: '/enrollment_thankyou',
     name: 'EnrollmentThankyou',
   },
-
+  {
+    Component: SatsangThankyou,
+    path: '/satsang_thankyou',
+    exact: true,
+    id: 'statisSiteUnderEnrollmentThankyou',
+    routePath: '/satsang_thankyou',
+    name: 'EnrollmentThankyou',
+  },
   {
     Component: YogaByTheBay,
     path: '/highlights/yoga_by_the_bay',

@@ -9,6 +9,7 @@ import { upload } from '../../../assets/icons/icon'
 import CommonBannerNavPrimary from '../../../Components/CommonBannerNavPrimary'
 import FAQ from '../../../Components/Faq'
 import InputComponent from '../../../Components/InputComponent'
+import MessageModal from '../../../Components/MessageModal'
 import VolunteerGrid from '../../../Components/VolunteerGrid'
 import { fetchProgramsData, postApplicationData } from '../Volunteer.action'
 import './style.scss'
@@ -23,6 +24,7 @@ const VolunteerJob = () => {
   const [sizeError, setSizeError] = useState(0)
   const { id } = useParams()
   const [program, setProgram] = useState({})
+  const [modal,setModal]=useState(false)
   const uploadImage = async(file, type, changeData) => {
     if (file.size / 1024 / 1024 > 2) {
       if (changeData === 'RESUME') {
@@ -57,9 +59,8 @@ const VolunteerJob = () => {
   //console.log(program?.faq, 'faq')
   console.log(imageAssest, 'imgAsset')
 
-  const clickHandler = (e) => {
+  const clickHandler = async(e) => {
     e.preventDefault()
-    
     if (formData.firstName === '') {
       setValidate(1)
     } else if (!validateEmail(formData.email)) {
@@ -76,10 +77,21 @@ const VolunteerJob = () => {
         pdf: certificateAssest,
         profileId: program['_id'],
       }
-      dispatch(postApplicationData(volunteerPost))
+      await dispatch(postApplicationData(volunteerPost))
+
+      // await axios.post('https://www.authserver-staging-be.theyogainstituteonline.org/v1/ali/mail', {
+      //   type: null,
+      //   HTMLTemplate:'JOBVOLUNTEER_APPLICATION',
+      //   subject: 'Application for Volunteer Program',
+      //   data:{
+      //     user: formData.firstName
+      //   },
+      //   receivers: [formData.email,'info@theyogainstitute.org']
+      // })
+      setModal(true)
     }
   }
-  console.log(validate, 'qwerty')
+
   return (
     <div className="single-job">
       <CommonBannerNavPrimary innerNav={false} />
@@ -98,16 +110,6 @@ const VolunteerJob = () => {
         </div>
         <div className="job-application">
           <div className="job-requirements">
-            {/* <ul>
-              {program?.reqirements?.map((item, i) => {
-                return (
-                  <li key={i}>
-                    <span>Requirement:</span>
-                    {item}
-                  </li>
-                )
-              })}
-            </ul> */}
           </div>
           <div className="job-form">
             <form
@@ -210,12 +212,18 @@ const VolunteerJob = () => {
               <fieldset>
                 <input id="volunteer_apply" type={'submit'} />
               </fieldset>
+              {validate === 5 && (
+                <small style={{ color: 'green', marginLeft: '2rem' }}>
+                      Form submitted succesfully
+                </small>
+              )}
             </form>
           </div>
         </div>
       </div>
       <VolunteerGrid gallery={program?.gallery} />
       <FAQ questions={program?.faq} />
+      { modal && <MessageModal type='SUCCESSS' message='Application submitted successfully!' closePopup={ setModal } /> }
     </div>
   )
 }
