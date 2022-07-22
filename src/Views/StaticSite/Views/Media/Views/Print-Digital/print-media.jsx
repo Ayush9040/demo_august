@@ -34,15 +34,12 @@ const PrintMedia = () => {
 
   return (
     <>
-      <div className="news-container">
+      <div className="print-media-container">
         {/* <MediaNav title={'News'} /> */}
         <InnerNavComponent abc={MediaNews} />
-        {/* <MediaSection
-      description={description}
-      title={'News'}
-      subHeading={'Highligths'}
-      sectionColor={'#D58173'}
-    /> */}
+        <h1>Print Media
+          <div className='bottom-line' ></div>
+        </h1>
         <div className='news-card-container' >
           <div className='news-card' onClick={()=>{setOpenModal(true);setImageUrl('https://www.w3schools.com/w3css/img_lights.jpg')}} >
             <img src='https://www.w3schools.com/w3css/img_lights.jpg' />

@@ -1,8 +1,14 @@
+.print-media-container,.digital-media-container{
+  h1{
+    width: fit-content;
+    margin: 2rem auto 3rem;
+  }
+}
 .news-card-container{
   margin-top: 2rem; ;
    display: grid;
-   gap: 2rem;
    grid-template-columns: repeat(auto-fill, minmax(200px,1fr));
+   gap: 0.1rem;
       .news-card{
         position: relative;
         width: 100%;
@@ -29,4 +35,13 @@
           }
         }
         }
+    }
+
+    .digital-media-cards{
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      gap: 100px;
+    }
+    .digital-media-container,.print-media-container{
+      padding: 0rem 10rem;
     }
