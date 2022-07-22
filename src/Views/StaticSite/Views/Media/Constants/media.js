@@ -1405,4 +1405,5 @@ const printMedia = [
   }
 ]
 
+
 export default printMedia
