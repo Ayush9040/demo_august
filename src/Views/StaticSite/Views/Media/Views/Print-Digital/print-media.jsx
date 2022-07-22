@@ -1,13 +1,12 @@
-import React,{ useState } from 'react'
+import React, { useState } from 'react'
 import CommanModal from '../../../../Components/CommanModal'
 import InnerNavComponent from '../../../../Components/InnerNavComponent'
+import printMedia from '../../Constants/media'
 import './style.scss'
 
 const PrintMedia = () => {
-
- 
-  const [ openModal,setOpenModal ]=useState(false)
-  const [imageUrl,setImageUrl]=useState('')
+  const [openModal, setOpenModal] = useState(false)
+  const [imageUrl, setImageUrl] = useState('')
 
   const MediaNews = {
     title: 'news',
@@ -34,46 +33,44 @@ const PrintMedia = () => {
 
   return (
     <>
-      <div className="print-media-container">
+      <div className='print-media-container'>
         {/* <MediaNav title={'News'} /> */}
         <InnerNavComponent abc={MediaNews} />
-        <h1>Print Media
-          <div className='bottom-line' ></div>
+        <h1>
+          Print Media
+          <div className='bottom-line'></div>
         </h1>
-        <div className='news-card-container' >
-          <div className='news-card' onClick={()=>{setOpenModal(true);setImageUrl('https://www.w3schools.com/w3css/img_lights.jpg')}} >
-            <img src='https://www.w3schools.com/w3css/img_lights.jpg' />
-            <div className='news-details' >
-              <p>Title</p>
-              <h3>Date</h3>
+        {printMedia.map((item, idx) => {
+          return (
+            <div key={idx} className='news-card-container'>
+              <h2>{item?.year}</h2>
+              <div className='news-articles' >
+                { item.media.map((item,idx)=>{
+                  if(item.url!==''){
+                    return <div key={idx} className='news-card'>
+                      <img src={ item.img } alt={item.alt} />
+                      <div className='news-details'>
+                        <p>{item.alt}</p>
+                        <h3>{item.alt}</h3>
+                      </div>
+                    </div>
+                  }else{
+                    return <div key={idx} className='news-card'>
+                      <img src={ item.img }                 onClick={() => {
+                        setOpenModal(true)
+                        setImageUrl(item.img)
+                      }} alt={item.alt} />
+                      <div className='news-details'>
+                        <p>{item.alt}</p>
+                        <h3>{item.alt}</h3>
+                      </div>
+                    </div>
+                  }
+                }) }
+              </div>
             </div>
-          </div>
-          <div className='news-card' >
-            <img src='https://www.w3schools.com/w3css/img_lights.jpg' />
-            <div className='news-details' >
-              <p>Title</p>
-              <h3>Date</h3>
-            </div>
-          </div>        <div className='news-card' >
-            <img src='https://www.w3schools.com/w3css/img_lights.jpg' />
-            <div className='news-details' >
-              <p>Title</p>
-              <h3>Date</h3>
-            </div>
-          </div>        <div className='news-card' >
-            <img src='https://www.w3schools.com/w3css/img_lights.jpg' />
-            <div className='news-details' >
-              <p>Title</p>
-              <h3>Date</h3>
-            </div>
-          </div>        <div className='news-card' >
-            <img src='https://www.w3schools.com/w3css/img_lights.jpg' />
-            <div className='news-details' >
-              <p>Title</p>
-              <h3>Date</h3>
-            </div>
-          </div>
-        </div>
+          )
+        })}
       </div>
       {openModal && <CommanModal image={imageUrl} closeModal={setOpenModal} />}
     </>
