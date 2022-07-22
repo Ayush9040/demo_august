@@ -7,13 +7,14 @@ const OneTimePass = () => {
     otp: 0,
   })
   const [otpEmpty, setOtpEmpty] = useState(0)
+  console.log(otpEmpty)
   const handleSubmit = (e) => {
     e.preventDefault()
     if (otp.otp.toString().length !== 6) {
       return setOtpEmpty(1)
     }
   }
-  console.log(otpEmpty)
+
 
   return (
     <>

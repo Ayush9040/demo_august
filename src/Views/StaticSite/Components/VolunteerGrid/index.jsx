@@ -11,7 +11,7 @@ import Heading from '../Heading'
 import './style.scss'
 const VolunteerGrid = ({ gallery }) => {
 
-  console.log(gallery,'gallery')
+
   return (
     <div className="volunteer-contents">
       <Heading smallText={'Gallery'} />

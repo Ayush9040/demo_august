@@ -9,7 +9,6 @@ import { Link } from 'react-router-dom'
 const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange }) => {
   const [customVal, setCustomVal] = useState(1)
 
-  console.log(sliderRange,'slider')
   const content = () => {
     const coursesList = [
       {

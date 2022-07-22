@@ -46,7 +46,7 @@ const BrowseCourses = () => {
     ChangeContent()
   }, [type])
 
-  console.log(category, 'category')
+
 
   return (
     <div className="browse-courses">

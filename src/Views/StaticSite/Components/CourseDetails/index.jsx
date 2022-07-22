@@ -36,7 +36,7 @@ const CourseDetails = ({ pageDate }) => {
     }
   }
 
-  console.log(pageDate, 'pageData')
+  
   // localStorage.setItem('selectedDate',selectDate)
   useEffect(() => {
     setSetselectDate(Params.get('date'))

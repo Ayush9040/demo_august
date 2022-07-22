@@ -6,7 +6,14 @@ import baseDomain, {
 const ttc200hr = {
   1: {
     id: '',
-    templateId: 'COURSE200_1M_TTC',
+    // templateId: 'COURSE200_1M_TTC',
+    templateId: {
+      templateOnline: 'COURSE200_1M_ONLINE_TTC',
+      templateOffline: {
+        templateResidential: 'COURSE200_RES_TTC',
+        templateNonResidential: 'COURSE200_NONRES_TTC'
+      }
+    },
     key: 'batch-1-200hr',
     batch: 1,
     metaDescription:
@@ -322,8 +329,15 @@ const ttc200hr = {
     faq: [],
   },
   2: {
-    id: '',
-    templateId: 'COURSE200_1M_TTC2',
+    // id: '',
+    // templateId: 'COURSE200_1M_TTC2',
+    templateId: {
+      templateOnline: '',
+      templateOffline: {
+        templateResidential: 'COURSE200_2M_RES_TTC',
+        templateNonResidential: 'COURSE200_2M_NONRES_TTC'
+      }
+    },
     key: 'batch-2-200hr',
     batch: 2,
     metaDescription:
@@ -635,7 +649,14 @@ const ttc200hr = {
   },
   3: {
     id: '',
-    templateId: 'COURSE200_2M_TTC2',
+    // templateId: 'COURSE200_2M_TTC2',
+    templateId: {
+      templateOnline: 'COURSE200_1M_ONLINE_TTC',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: ''
+      }
+    },
     key: 'batch-3-200hr',
     batch: 3,
     metaDescription:
@@ -949,7 +970,14 @@ const ttc200hr = {
   },
   4: {
     id: '',
-    templateId: 'COURSE200_2M_TTC_HINDI',
+    // templateId: 'COURSE200_2M_TTC_HINDI',
+    templateId: {
+      templateOnline: 'COURSE200_2M_ONLINE_HINDI_TTC',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: ''
+      }
+    },
     key: 'batch-4-200hr',
     batch: 4,
     metaDescription:
@@ -1260,7 +1288,14 @@ const ttc200hr = {
   },
   5: {
     id: '',
-    templateId: 'COURSE200_2M_TTC',
+    // templateId: 'COURSE200_2M_TTC',
+    templateId: {
+      templateOnline: 'COURSE200_2M_ONLINE_TTC',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: ''
+      }
+    },
     key: 'batch-5-200hr',
     batch: 5,
     metaDescription:
@@ -1570,7 +1605,14 @@ const ttc200hr = {
   },
   6: {
     id: '',
-    templateId: 'COURSE200_3M_TTC',
+    // templateId: 'COURSE200_3M_TTC',
+    templateId: {
+      templateOnline: 'COURSE200_WEEKEND_TTC',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: ''
+      }
+    },
     key: 'batch-6-200hr',
     batch: 6,
     metaDescription:
@@ -1887,7 +1929,14 @@ const ttc200hr = {
 const ttc500hr = {
   1: {
     id: '',
-    templateId: 'COURSE500_3M_TTC',
+    // templateId: 'COURSE500_3M_TTC',
+    templateId: {
+      templateOnline: 'COURSE500_3M_ON_TTC',
+      templateOffline : {
+        templateResidential: '',
+        templateNonResidential: ''
+      }
+    },
     key: '3-months-500hr',
     batch: 1,
     metaDescription:
@@ -2147,7 +2196,14 @@ const ttc500hr = {
 const ttc900hr = {
   1: {
     id: '',
-    templateId: 'GENERAL_AUTO_EMAIL',
+    // templateId: 'GENERAL_AUTO_EMAIL',
+    templateId: {
+      templateOnline: 'COURSE500_3M_ON_TTC',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: ''
+      }
+    },
     key: '3-months-ttc',
     batch: 1,
 
@@ -2653,8 +2709,15 @@ const ttc900hr = {
     ],
   },
   2: {
-    id: '',
-    templateId: 'COURSE900_1Y_TTC',
+    // id: '',
+    // templateId: 'COURSE900_1Y_TTC',
+    templateId: {
+      templateOnline: 'COURSE900_1Y_ON_HINDI_TTC',
+      templateOffline: {
+        templateResidential: 'COURSE900_1Y_RES_TTC',
+        templateNonResidential: 'COURSE900_1Y_NONRES_HINDI_TTC'
+      }
+    },
     key: '1-year-900hr',
     batch: 1,
     metaDescription:
@@ -3253,8 +3316,16 @@ const ttc900hr = {
     ],
   },
   3: {
+    // templateId: 'COURSE900_1Y_TTC',
     id: '',
-    templateId: 'COURSE900_2Y_TTC',
+    // templateId: 'COURSE900_2Y_TTC',
+    templateId: {
+      templateOnline: 'COURSE900_2Y_ON_TTC',
+      templateOffline: {
+        templateResidential: 'COURSE900_2Y_RES_TTC',
+        templateNonResidential: 'COURSE900_2Y_NONRES_TTC'
+      }
+    },
     key: '2-year-900hr',
     batch: 1,
 
@@ -3864,8 +3935,15 @@ const ttc900hr = {
     ],
   },
   4: {
-    id: '',
-    templateId: 'COURSE900_4M_TTC',
+    // id: '',
+    // templateId: 'COURSE900_4M_TTC',
+    templateId: {
+      templateOnline: 'COURSE900_4M_ON_TTC',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: ''
+      }
+    },
     key: '4-months-900hr',
     batch: 1,
 
@@ -4463,7 +4541,14 @@ const ttc900hr = {
   },
   5: {
     id: '',
-    templateId: 'COURSE900_7M_TTC',
+    // templateId: 'COURSE900_7M_TTC',
+    templateId: {
+      templateOnline: 'COURSE900_7M_ON_TTC',
+      templateOffline: {
+        templateResidential: 'COURSE900_7M_RES_TTC',
+        templateNonResidential: 'COURSE900_7M_NONRES_TTC'
+      }
+    },
     key: '7-months-900hr',
     batch: 1,
 
@@ -5077,7 +5162,14 @@ const camps = {
     batch: 1,
     mostPopular: false,
     rating: 5,
-    templateId: 'GENERAL_AUTO_EMAIL',
+    // templateId: 'GENERAL_AUTO_EMAIL',
+    templateId: {
+      templateOnline: 'GENERAL_AUTO_EMAIL',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: ''
+      }
+    },
     colorCode: '#EDBE66',
     timing: '9.30 AM to 5.30 PM',
     fees: {
@@ -5205,7 +5297,14 @@ const camps = {
     title: 'Cardiac & Hypertension Workshop',
     key: 'cardiac-hypertension-workshop',
     batch: 1,
-    templateId: 'GENERAL_AUTO_EMAIL',
+    // templateId: 'GENERAL_AUTO_EMAIL',
+    templateId: {
+      templateOnline: 'GENERAL_AUTO_EMAIL',
+      templateOffline:{
+        templateResidential: '',
+        templateNonResidential: ''
+      }
+    },
     mostPopular: false,
     rating: 5,
     colorCode: '#DDAB58',
@@ -5329,8 +5428,15 @@ const camps = {
     id: '',
     title: 'Diabetes Camp ',
     key: 'diabetes-camp',
-    batch: 1,
-    templateId: 'GENERAL_AUTO_EMAIL',
+    // batch: 1,
+    // templateId: 'GENERAL_AUTO_EMAIL',
+    templateId: {
+      templateOnline: 'GENERAL_AUTO_EMAIL',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: ''
+      }
+    },
     dates: [
       '5th June 2022',
       '7th August 2022',
@@ -5469,7 +5575,14 @@ const camps = {
     title: 'Diet Workshop',
     key: 'diet-workshop',
     batch: 1,
-    templateId: 'GENERAL_AUTO_EMAIL',
+    // templateId: 'GENERAL_AUTO_EMAIL',
+    templateId: {
+      templateOnline: 'GENERAL_AUTO_EMAIL',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: ''
+      }
+    },
     dates: [],
     mostPopular: false,
     rating: 5,
@@ -5598,7 +5711,14 @@ const camps = {
     title: 'Digestion Camp',
     key: 'digestion-camp',
     batch: 1,
-    templateId: 'GENERAL_AUTO_EMAIL',
+    // templateId: 'GENERAL_AUTO_EMAIL',
+    templateId: {
+      templateOnline: 'GENERAL_AUTO_EMAIL',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: ''
+      }
+    },
     mostPopular: false,
     rating: 5,
     colorCode: '#DDAB58',
@@ -5732,7 +5852,14 @@ const camps = {
     title: 'Karma Yoga',
     key: 'karma-yoga',
     batch: 1,
-    templateId: 'GENERAL_AUTO_EMAIL',
+    // templateId: 'GENERAL_AUTO_EMAIL',
+    templateId: {
+      templateOnline: 'GENERAL_AUTO_EMAIL',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: ''
+      }
+    },
     mostPopular: false,
     rating: 5,
     colorCode: '#CE9B51',
@@ -5870,7 +5997,14 @@ const camps = {
     title: 'Life Management Camp',
     key: 'life-management-camp',
     batch: 1,
-    templateId: 'GENERAL_AUTO_EMAIL',
+    // templateId: 'GENERAL_AUTO_EMAIL',
+    templateId: {
+      templateOnline: 'GENERAL_AUTO_EMAIL',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: ''
+      }
+    },
     mostPopular: false,
     rating: 5,
     colorCode: '#EDBE66',
@@ -6000,7 +6134,14 @@ const camps = {
     title: 'Meditation Camp',
     key: 'meditation-camp',
     batch: 1,
-    templateId: 'GENERAL_AUTO_EMAIL',
+    // templateId: 'GENERAL_AUTO_EMAIL',
+    templateId: {
+      templateOnline: 'GENERAL_AUTO_EMAIL',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: ''
+      }
+    },
     mostPopular: false,
     rating: 5,
     colorCode: '#DDAB58',
@@ -6130,7 +6271,14 @@ const camps = {
     title: 'Pranayama Workshop',
     key: 'pranayama-workshop',
     batch: 1,
-    templateId: 'GENERAL_AUTO_EMAIL',
+    // templateId: 'GENERAL_AUTO_EMAIL',
+    templateId: {
+      templateOnline: 'GENERAL_AUTO_EMAIL',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: ''
+      }
+    },
     dates: [
       '18th June 2022',
       '21st August 2022',
@@ -6265,7 +6413,14 @@ const camps = {
     title: 'Pregnancy Camp For Ante & Post Natal',
     key: 'pregnancy-camp-for-ante-post-natal',
     batch: 1,
-    templateId: 'GENERAL_AUTO_EMAIL',
+    // templateId: 'GENERAL_AUTO_EMAIL',
+    templateId: {
+      templateOnline: 'GENERAL_AUTO_EMAIL',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: ''
+      }
+    },
     dates: [
       '18th Jun to 19th Jun 2022',
       '20th Aug to 21st Aug 2022',
@@ -6398,7 +6553,14 @@ const camps = {
     title: 'Respiratory Workshop',
     key: 'respiratory-workshop',
     batch: 1,
-    templateId: 'GENERAL_AUTO_EMAIL',
+    // templateId: 'GENERAL_AUTO_EMAIL',
+    templateId: {
+      templateOnline: 'GENERAL_AUTO_EMAIL',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: ''
+      }
+    },
     dates: [],
     mostPopular: false,
     rating: 5,
@@ -6526,7 +6688,14 @@ const camps = {
     title: 'Senior Citizen Workshop',
     key: 'senior-citizen-workshop',
     batch: 1,
-    templateId: 'GENERAL_AUTO_EMAIL',
+    // templateId: 'GENERAL_AUTO_EMAIL',
+    templateId: {
+      templateOnline: 'GENERAL_AUTO_EMAIL',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: ''
+      }
+    },
     dates: [],
     mostPopular: false,
     rating: 5,
@@ -6656,7 +6825,14 @@ const camps = {
     title: 'Stress Management Camp',
     key: 'stress-management-camp',
     batch: 1,
-    templateId: 'GENERAL_AUTO_EMAIL',
+    // templateId: 'GENERAL_AUTO_EMAIL',
+    templateId: {
+      templateOnline: 'GENERAL_AUTO_EMAIL',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: ''
+      }
+    },
     dates: [
       '12th June 2022',
       '14th August 2022',
@@ -6790,7 +6966,14 @@ const camps = {
     title: 'Weight Management Workshop',
     key: 'weight-management-workshop',
     batch: 1,
-    templateId: 'GENERAL_AUTO_EMAIL',
+    // templateId: 'GENERAL_AUTO_EMAIL',
+    templateId: {
+      templateOnline: 'GENERAL_AUTO_EMAIL',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: ''
+      }
+    },
     dates: [
       '4th June 2022',
       '6th August 2022',
@@ -6923,7 +7106,14 @@ const camps = {
     title: 'Women’s Camp',
     key: 'womens-camp',
     batch: 1,
-    templateId: 'GENERAL_AUTO_EMAIL',
+    // templateId: 'GENERAL_AUTO_EMAIL',
+    templateId: {
+      templateOnline: 'GENERAL_AUTO_EMAIL',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: ''
+      }
+    },
     dates: [
       '11th June 2022',
       '13th August 2022',
@@ -7062,7 +7252,14 @@ const camps = {
     title: 'Back & Joint Disorder Workshop',
     key: 'back-joint-disorder-workshop',
     batch: 1,
-    templateId: 'GENERAL_AUTO_EMAIL',
+    // templateId: 'GENERAL_AUTO_EMAIL',
+    templateId: {
+      templateOnline: 'GENERAL_AUTO_EMAIL',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: ''
+      }
+    },
     dates: [
       '26th June 2022',
       '28th August 2022',
@@ -7194,7 +7391,14 @@ const camps = {
     title: '7 Days Health Camp - On Campus - Hindi ',
     key: '7-days-heath-camp-on-campus',
     batch: 1,
-    templateId: 'CAMP_FOR_7_DAYS_HEALTH',
+    // templateId: 'CAMP_FOR_7_DAYS_HEALTH',
+    templateId: {
+      templateOnline: 'CAMP_FOR_7_DAYS_HEALTH',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: ''
+      }
+    },
     dates: ['13th Aug to 19th Aug 2022', '12th Nov to 18th Nov 2022'],
     online: false,
     onCampus: true,
@@ -7538,10 +7742,18 @@ const camps = {
   },
   18: {
     id: '',
-    title: '7 Days Health Camp - On Campus - English',
-    key: '7-days-heath-camp-on-campus-english',
-    batch: 1,
-    templateId: 'CAMP_FOR_7_DAYS_HEALTH',
+    title:
+      '21 Days BLC - Batch 2 - 21 Days BLC - Evening - Online & On Campus - English',
+    key: '21-days-blc-batch2',
+    batch: 2,
+    // templateId: 'GENERAL_AUTO_EMAIL',
+    templateId: {
+      templateOnline: 'GENERAL_AUTO_EMAIL',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: ''
+      }
+    },
     dates: [
       '23rd July to 29th July 2022',
       '27th Aug to 2nd Sept 2022',
@@ -7892,10 +8104,18 @@ const camps = {
   },
   19: {
     id: '',
-    title: '21-Days BLC - Batch 1 - 21 Days BLC - Morning On Campus - English',
-    key: 'batch1-21days-morning-oncampus',
-    templateId: 'GENERAL_AUTO_EMAIL',
-    batch: 1,
+    title:
+      '21 Days BLC - Batch 3 - 21 Days BLC - Evening - Online & On Campus - Hindi ',
+    key: '21-days-blc-batch3',
+    batch: 3,
+    // templateId: 'GENERAL_AUTO_EMAIL',
+    templateId: {
+      templateOnline: 'GENERAL_AUTO_EMAIL',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: ''
+      }
+    },
     dates: [
       '7th Aug to 27th Aug 2022',
       '4th Sept to 24th Sept 2022',
@@ -8211,11 +8431,17 @@ const camps = {
   },
   20: {
     id: '',
-    title:
-      '21 Days BLC - Batch 2 - 21 Days BLC - Evening - Online & On Campus - English',
-    key: '21-days-blc-batch2',
-    batch: 2,
-    templateId: 'GENERAL_AUTO_EMAIL',
+    title: '21 Days BLC - Batch 4 - 21 Days BLC - Morning - Online - English',
+    key: '21-days-blc-batch4',
+    batch: 4,
+    // templateId: 'GENERAL_AUTO_EMAIL',
+    templateId: {
+      templateOnline: 'GENERAL_AUTO_EMAIL',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: ''
+      }
+    },
     dates: [
       '7th Aug to 27th Aug 2022',
       '4th Sept to 24th Sept 2022',
@@ -8525,11 +8751,17 @@ const camps = {
   },
   21: {
     id: '',
-    title:
-      '21 Days BLC - Batch 3 - 21 Days BLC - Evening - Online & On Campus - Hindi ',
-    key: '21-days-blc-batch3',
-    batch: 3,
-    templateId: 'GENERAL_AUTO_EMAIL',
+    title: '7 Days Health Camp - On Campus - English',
+    key: '7-days-heath-camp-on-campus-english',
+    batch: 1,
+    // templateId: 'CAMP_FOR_7_DAYS_HEALTH',
+    templateId: {
+      templateOnline: 'CAMP_FOR_7_DAYS_HEALTH',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: ''
+      }
+    },
     dates: [
       '5th June to 25th June 2022',
       '7th Aug to 27th Aug 2022',
@@ -8844,10 +9076,17 @@ const camps = {
   },
   22: {
     id: '',
-    title: '21 Days BLC - Batch 4 - 21 Days BLC - Morning - Online - English',
-    key: '21-days-blc-batch4',
-    batch: 4,
-    templateId: 'GENERAL_AUTO_EMAIL',
+    title: '21-Days BLC - Batch 1 - 21 Days BLC - Morning On Campus - English',
+    key: 'batch1-21days-morning-oncampus',
+    // templateId: 'GENERAL_AUTO_EMAIL',
+    templateId: {
+      templateOnline: 'GENERAL_AUTO_EMAIL',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: ''
+      }
+    },
+    batch: 1,
     dates: [
       '24th July to 13th Aug 2022',
       '14th Aug to 3rd Sept 2022',
@@ -9172,7 +9411,14 @@ const classes = {
     title: 'Advance Asana Regular Class - Online (Only for TYI Teachers) ',
     key: 'advance-asana-regular-class',
     batch: 1,
-    templateId: 'GENERAL_AUTO_EMAIL',
+    // templateId: 'GENERAL_AUTO_EMAIL',
+    templateId: {
+      templateOnline: 'GENERAL_AUTO_EMAIL',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: ''
+      }
+    },
     mostPopular: false,
     rating: 5,
     colorCode: '#D3A29D',
@@ -9235,7 +9481,14 @@ const classes = {
     title: 'Anand Sadhna - Online & On Campus ',
     key: 'anand-sadhna',
     batch: 1,
-    templateId: 'GENERAL_AUTO_EMAIL',
+    // templateId: 'GENERAL_AUTO_EMAIL',
+    templateId: {
+      templateOnline: 'GENERAL_AUTO_EMAIL',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: ''
+      }
+    },
     image: `${baseDomain}${courseAssets.courseAsset68}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset109}`,
     mostPopular: false,
@@ -9316,7 +9569,14 @@ const classes = {
     title: 'Asana Regular Classes - (Men & Women) - Online',
     key: 'asana-regular-classes-men-women',
     batch: 1,
-    templateId: 'GENERAL_AUTO_EMAIL',
+    // templateId: 'GENERAL_AUTO_EMAIL',
+    templateId: {
+      templateOnline: 'GENERAL_AUTO_EMAIL',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: ''
+      }
+    },
     image: `${baseDomain}${courseAssets.courseAsset81}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset81}`,
     mostPopular: false,
@@ -9492,7 +9752,14 @@ const classes = {
     title: 'Asana Regular Classes for Men - On Campus  ',
     key: 'asana-regular-classes-men-on-campus',
     batch: 1,
-    templateId: 'GENERAL_AUTO_EMAIL',
+    // templateId: 'GENERAL_AUTO_EMAIL',
+    templateId: {
+      templateOnline: 'GENERAL_AUTO_EMAIL',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: ''
+      }
+    },
     image: `${baseDomain}${courseAssets.courseAsset70}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset70}`,
     mostPopular: false,
@@ -9588,7 +9855,14 @@ const classes = {
     title: 'Asana Regular Classes for Women - On Campus',
     key: 'asana-regular-classes-for-women',
     batch: 1,
-    templateId: 'GENERAL_AUTO_EMAIL',
+    // templateId: 'GENERAL_AUTO_EMAIL',
+    templateId: {
+      templateOnline: 'GENERAL_AUTO_EMAIL',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: ''
+      }
+    },
     image: `${baseDomain}${courseAssets.courseAsset71}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset71}`,
     mostPopular: false,
@@ -9693,7 +9967,14 @@ const classes = {
     title: 'Certificate Course on Advanced Pranayama Techniques - Online',
     key: 'certification-course-on-advanced-pranayam',
     batch: 1,
-    templateId: 'GENERAL_AUTO_EMAIL',
+    // templateId: 'GENERAL_AUTO_EMAIL',
+    templateId: {
+      templateOnline: 'GENERAL_AUTO_EMAIL',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: ''
+      }
+    },
     image: `${baseDomain}${courseAssets.courseAsset72}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset72}`,
     metaDescription: 'Knowledge of nadi system and energy channels',
@@ -9802,7 +10083,14 @@ const classes = {
     title: 'Certificate Course on Yoga Sutra - Online',
     key: 'certification-course-on-yoga-sutra-online',
     batch: 1,
-    templateId: 'GENERAL_AUTO_EMAIL',
+    // templateId: 'GENERAL_AUTO_EMAIL',
+    templateId: {
+      templateOnline: 'GENERAL_AUTO_EMAIL',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: ''
+      }
+    },
     image: `${baseDomain}${courseAssets.courseAsset73}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset73}`,
     metaDescription:
@@ -9898,7 +10186,14 @@ const classes = {
     title: 'Certificate Program on Yoga for Cancer - Online    ',
     key: 'certification-program-on-yoga-cancer-online',
     batch: 1,
-    templateId: 'GENERAL_AUTO_EMAIL',
+    // templateId: 'GENERAL_AUTO_EMAIL',
+    templateId: {
+      templateOnline: 'GENERAL_AUTO_EMAIL',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: ''
+      }
+    },
     image: `${baseDomain}${courseAssets.courseAsset74}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset74}`,
     metaDescription:
@@ -9994,7 +10289,14 @@ const classes = {
     title: 'Certificate Program on Yoga for Lung Cancer - Online',
     key: 'certification-program-on-yoga-for-lung-cancer-online',
     batch: 1,
-    templateId: 'GENERAL_AUTO_EMAIL',
+    // templateId: 'GENERAL_AUTO_EMAIL',
+    templateId: {
+      templateOnline: 'GENERAL_AUTO_EMAIL',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: ''
+      }
+    },
     image: `${baseDomain}${courseAssets.courseAsset74}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset74}`,
     mostPopular: false,
@@ -10062,7 +10364,14 @@ const classes = {
     title: 'Certificate Yoga Therapy Course - Online',
     key: 'certificate-yoga-therapy-course-online',
     batch: 1,
-    templateId: 'GENERAL_AUTO_EMAIL',
+    // templateId: 'GENERAL_AUTO_EMAIL',
+    templateId: {
+      templateOnline: 'GENERAL_AUTO_EMAIL',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: ''
+      }
+    },
     image: `${baseDomain}${courseAssets.courseAsset75}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset75}`,
     mostPopular: false,
@@ -10391,7 +10700,14 @@ const classes = {
     title: 'Children\'s Regular Class - On Campus',
     key: 'childrens-regular-class-oncampus',
     batch: 1,
-    templateId: 'GENERAL_AUTO_EMAIL',
+    // templateId: 'GENERAL_AUTO_EMAIL',
+    templateId: {
+      templateOnline: 'GENERAL_AUTO_EMAIL',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: ''
+      }
+    },
     image: `${baseDomain}${courseAssets.courseAsset76}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset76}`,
     mostPopular: false,
@@ -10459,7 +10775,14 @@ const classes = {
     title: 'Children\'s Weekend Class - On Campus',
     key: 'children\'s-weekend-class-oncampus',
     batch: 1,
-    templateId: 'GENERAL_AUTO_EMAIL',
+    // templateId: 'GENERAL_AUTO_EMAIL',
+    templateId: {
+      templateOnline: 'GENERAL_AUTO_EMAIL',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: ''
+      }
+    },
     image: `${baseDomain}${courseAssets.courseAsset76}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset76}`,
     mostPopular: false,
@@ -10520,7 +10843,14 @@ const classes = {
     title: 'Meditation Foundation Course - Online ',
     key: 'meditation-foundation-course-online',
     batch: 1,
-    templateId: 'GENERAL_AUTO_EMAIL',
+    // templateId: 'GENERAL_AUTO_EMAIL',
+    templateId: {
+      templateOnline: 'GENERAL_AUTO_EMAIL',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: ''
+      }
+    },
     image: `${baseDomain}${courseAssets.courseAsset28}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset28}`,
     mostPopular: false,
@@ -10609,7 +10939,14 @@ const classes = {
     title: 'Regular Meditation Classes - Online ',
     key: 'regular-meditation-classes-online',
     batch: 1,
-    templateId: 'GENERAL_AUTO_EMAIL',
+    // templateId: 'GENERAL_AUTO_EMAIL',
+    templateId: {
+      templateOnline: 'GENERAL_AUTO_EMAIL',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: ''
+      }
+    },
     image: `${baseDomain}${courseAssets.courseAsset28}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset28}`,
     mostPopular: false,
@@ -10723,7 +11060,14 @@ const classes = {
     title: ' Satsang ',
     key: 'satsang',
     batch: 1,
-    templateId: 'GENERAL_AUTO_EMAIL',
+    // templateId: 'GENERAL_AUTO_EMAIL',
+    templateId: {
+      templateOnline: 'GENERAL_AUTO_EMAIL',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: ''
+      }
+    },
     image: `${baseDomain}${courseAssets.courseAsset80}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset80}`,
     mostPopular: false,
@@ -10817,7 +11161,14 @@ const classes = {
     title: 'Weekend Asana Classes - (Men & Women) - On Campus',
     key: 'weekend-asana-classes-men-women-oncampus',
     batch: 1,
-    templateId: 'GENERAL_AUTO_EMAIL',
+    // templateId: 'GENERAL_AUTO_EMAIL',
+    templateId: {
+      templateOnline: 'GENERAL_AUTO_EMAIL',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: ''
+      }
+    },
     image: `${baseDomain}${courseAssets.courseAsset77}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset110}`,
     mostPopular: false,
@@ -10908,7 +11259,14 @@ const classes = {
     title: 'Yog Prayas - Online',
     key: 'yog-prayas-online',
     batch: 1,
-    templateId: 'GENERAL_AUTO_EMAIL',
+    // templateId: 'GENERAL_AUTO_EMAIL',
+    templateId: {
+      templateOnline: 'GENERAL_AUTO_EMAIL',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: ''
+      }
+    },
     image: `${baseDomain}${courseAssets.courseAsset82}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset82}`,
     mostPopular: false,
@@ -11048,7 +11406,14 @@ const classes = {
     title: 'Samattvam (Health Checkup) - On Campus',
     key: 'samattvam-health-checkup',
     batch: 1,
-    templateId: 'GENERAL_AUTO_EMAIL',
+    // templateId: 'GENERAL_AUTO_EMAIL',
+    templateId: {
+      templateOnline: 'GENERAL_AUTO_EMAIL',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: ''
+      }
+    },
     image: `${baseDomain}${homeAssets.homeAsset16}`,
     cardImage: `${baseDomain}${homeAssets.homeAsset16}`,
     mostPopular: false,
@@ -11142,7 +11507,14 @@ const classes = {
     title: 'Couples’ Classes  - Online',
     key: 'couples-classes-online',
     batch: 1,
-    templateId: 'GENERAL_AUTO_EMAIL',
+    // templateId: 'GENERAL_AUTO_EMAIL',
+    templateId: {
+      templateOnline: 'GENERAL_AUTO_EMAIL',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: ''
+      }
+    },
     image: `${baseDomain}${homeAssets.homeAsset13}`,
     cardImage: `${baseDomain}${homeAssets.homeAsset13}`,
     mostPopular: false,
@@ -11256,7 +11628,14 @@ const classes = {
     title: 'Weekend Asana Classes - (Men & Women) - Online',
     key: 'weekend-asana-classes-online',
     batch: 1,
-    templateId: 'GENERAL_AUTO_EMAIL',
+    // templateId: 'GENERAL_AUTO_EMAIL',
+    templateId: {
+      templateOnline: 'GENERAL_AUTO_EMAIL',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: ''
+      }
+    },
     image: `${baseDomain}${homeAssets.homeAsset13}`,
     cardImage: `${baseDomain}${homeAssets.homeAsset13}`,
     mostPopular: false,

@@ -22,8 +22,6 @@ const ForgotPass = () => {
       return setForgotEmpty(2)
     }
     setForgotEmpty(0)
-
-    console.log('hiiii sakshi')
   }
   return (
     <>

@@ -23,22 +23,31 @@ const DisclaimerPolicy = ({
     fullName: '',
   })
 
-  const [mail,setmail]=useState(templateKey)
+  const [mail,setmail]=useState(templateKey?.templateOnline)
   
 
   const navigate = useNavigate()
 
   const [empty, setEmpty] = useState(0)
 
-  console.log(mail)
-
   const handleSubmit1 = async() => {
-    console.log(formData.residental)
+
     if (disData.terms === 'no') {
       return setEmpty(1)
     }else if (disData.name === '') {
       return setEmpty(2)
     } else {
+      if(formData.mode==='ONLINE'){
+        setmail(templateKey?.templateOnline)
+      }else if(formData.mode === 'OFFLINE' && formData.residental === ''){
+        setmail(templateKey?.templateOnline)
+      }else{
+        if(formData.residental === 'RESIDENTIAL'){  
+          setmail(templateKey?.templateOffline?.templateResidential)
+        }else{
+          setmail(templateKey?.templateOffline?.templateNonResidential)
+        }
+      }
       setEmpty(0)
       let body = {
         personalDetails: {
@@ -101,22 +110,26 @@ const DisclaimerPolicy = ({
           certificateImgAsset: courseAsset2,
         },
       }
-      if(currentCourse.key==='batch-1-200hr'){
-        if(formData?.residental==='RESIDENTIAL'){
-          setmail(templateKey)
-        }else{
-          setmail(templateKey)
-        }
-      }
+      // if(currentCourse.key==='batch-1-200hr'){
+      //   if(formData?.residental==='RESIDENTIAL'){
+      //     setmail(templateKey)
+      //   }else{
+      //     setmail(templateKey)
+      //   }
+      // }
+
+
+
       let mailTemplate = {
         type: null,
-        HTMLTemplate: templateKey,
+        HTMLTemplate: mail,
         subject: 'Enrollment Confirmation',
         data:{
           user: formData.name
         },
         receivers: [formData.email,'info@theyogainstitute.org']
       }
+ 
       try{
         let response
         if(formData.mode==='ONLINE' || currentCourse.category!=='camps' || currentCourse.category!=='classes'){
