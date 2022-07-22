@@ -1175,22 +1175,483 @@ const printMedia = [
         img: `${baseDomain}${printMediaAssest.printMediaAssest237}`,
         url:'',
         alt:'The Asian Age (Mumbai Age)_JUNE 2016'
+      }
+      
+    ]
+  },
+  {
+    year:'2017',
+    media:[
+      {
+        img: `${baseDomain}${printMediaAssest.printMediaAssest238}`,
+        url:'',
+        alt:'Mumbai Mirror'
       },
       {
-        img: `${baseDomain}${printMediaAssest.printMediaAssest1}`,
+        img: `${baseDomain}${printMediaAssest.printMediaAssest239}`,
         url:'',
-        alt:''
+        alt:'Mumbai Mirror'
       },
       {
-        img: `${baseDomain}${printMediaAssest.printMediaAssest1}`,
+        img: `${baseDomain}${printMediaAssest.printMediaAssest240}`,
         url:'',
-        alt:''
+        alt:'THE ASIAN AGE'
       },
       {
-        img: `${baseDomain}${printMediaAssest.printMediaAssest1}`,
+        img: `${baseDomain}${printMediaAssest.printMediaAssest241}`,
         url:'',
-        alt:''
+        alt:'DNA'
       },
+      {
+        img: `${baseDomain}${printMediaAssest.printMediaAssest242}`,
+        url:'',
+        alt:'Press information Bureau'
+      },
+      {
+        img: `${baseDomain}${printMediaAssest.printMediaAssest243}`,
+        url:'',
+        alt:'Hindustantimes'
+      },
+      {
+        img: `${baseDomain}${printMediaAssest.printMediaAssest244}`,
+        url:'',
+        alt:'Navshakti'
+      },
+      {
+        img: `${baseDomain}${printMediaAssest.printMediaAssest245}`,
+        url:'',
+        alt:'ABSOLUTE INDIA'
+      },
+      {
+        img: `${baseDomain}${printMediaAssest.printMediaAssest246}`,
+        url:'',
+        alt:'Lokmat'
+      },
+      {
+        img: `${baseDomain}${printMediaAssest.printMediaAssest247}`,
+        url:'',
+        alt:'Press information Bureau'
+      },
+      {
+        img: `${baseDomain}${printMediaAssest.printMediaAssest248}`,
+        url:'',
+        alt:'Asian lite'
+      },
+      {
+        img: `${baseDomain}${printMediaAssest.printMediaAssest249}`,
+        url:'',
+        alt:'Dabang Dunia'
+      },
+      {
+        img: `${baseDomain}${printMediaAssest.printMediaAssest250}`,
+        url:'',
+        alt:'Press information Bureau'
+      },
+      {
+        img: `${baseDomain}${printMediaAssest.printMediaAssest251}`,
+        url:'',
+        alt:'Punyanagari'
+      },
+      {
+        img: `${baseDomain}${printMediaAssest.printMediaAssest252}`,
+        url:'',
+        alt:'Press information Bureau'
+      },
+      {
+        img: `${baseDomain}${printMediaAssest.printMediaAssest253}`,
+        url:'',
+        alt:'Press information Bureau'
+      },
+      {
+        img: `${baseDomain}${printMediaAssest.printMediaAssest254}`,
+        url:'',
+        alt:'DD NEWS'
+      },
+      {
+        img: `${baseDomain}${printMediaAssest.printMediaAssest255}`,
+        url:'',
+        alt:'Current affairs.adda247.com'
+      },
+      {
+        img: `${baseDomain}${printMediaAssest.printMediaAssest256}`,
+        url:'',
+        alt:'The Asian Age'
+      },
+      {
+        img: `${baseDomain}${printMediaAssest.printMediaAssest257}`,
+        url:'',
+        alt:'Lokmat Samachar'
+      },
+      {
+        img: `${baseDomain}${printMediaAssest.printMediaAssest258}`,
+        url:'',
+        alt:'The Asian Age_Hrishiji'
+      },
+      {
+        img: `${baseDomain}${printMediaAssest.printMediaAssest259}`,
+        url:'',
+        alt:'Indiaonline in News'
+      },
+      {
+        img: `${baseDomain}${printMediaAssest.printMediaAssest260}`,
+        url:'',
+        alt:'Skala'
+      },
+      {
+        img: `${baseDomain}${printMediaAssest.printMediaAssest261}`,
+        url:'',
+        alt:'The Hindu'
+      },
+      {
+        img: `${baseDomain}${printMediaAssest.printMediaAssest262}`,
+        url:'',
+        alt:'Hamara Mahanagar'
+      },
+      {
+        img: `${baseDomain}${printMediaAssest.printMediaAssest263}`,
+        url:'',
+        alt:'Gujarat Samachar'
+      },
+      {
+        img: `${baseDomain}${printMediaAssest.printMediaAssest264}`,
+        url:'',
+        alt:'Janshakti'
+      },
+      {
+        img: `${baseDomain}${printMediaAssest.printMediaAssest265}`,
+        url:'',
+        alt:'Mumbai Samachar'
+      },
+      {
+        img: `${baseDomain}${printMediaAssest.printMediaAssest266}`,
+        url:'',
+        alt:'Indian Express'
+      },
+      {
+        img: `${baseDomain}${printMediaAssest.printMediaAssest267}`,
+        url:'',
+        alt:'Press information Bureau'
+      },
+      {
+        img: `${baseDomain}${printMediaAssest.printMediaAssest268}`,
+        url:'',
+        alt:'The Hindu'
+      },
+      {
+        img: `${baseDomain}${printMediaAssest.printMediaAssest269}`,
+        url:'',
+        alt:'NDTV'
+      },
+      {
+        img: `${baseDomain}${printMediaAssest.printMediaAssest270}`,
+        url:'',
+        alt:'Pudhari'
+      },
+      {
+        img: `${baseDomain}${printMediaAssest.printMediaAssest271}`,
+        url:'',
+        alt:'Press information Bureau'
+      },
+      {
+        img: `${baseDomain}${printMediaAssest.printMediaAssest272}`,
+        url:'',
+        alt:'Dainik Bhaskar'
+      },
+      {
+        img: `${baseDomain}${printMediaAssest.printMediaAssest273}`,
+        url:'',
+        alt:'United News of India'
+      },
+      {
+        img: `${baseDomain}${printMediaAssest.printMediaAssest274}`,
+        url:'',
+        alt:'Yashobhumi 20th November 2017'
+      },
+      {
+        img: `${baseDomain}${printMediaAssest.printMediaAssest275}`,
+        url:'',
+        alt:'Loksatta 20th November 2017'
+      },
+      {
+        img: `${baseDomain}${printMediaAssest.printMediaAssest276}`,
+        url:'',
+        alt:'Hamara Mahanagar 20th November 2017'
+      },
+      {
+        img: `${baseDomain}${printMediaAssest.printMediaAssest277}`,
+        url:'',
+        alt:'Mid-day.com 20th November 2017'
+      },
+      {
+        img: `${baseDomain}${printMediaAssest.printMediaAssest278}`,
+        url:'',
+        alt:'Outlook the News scroll 19th November 2017'
+      },
+      {
+        img: `${baseDomain}${printMediaAssest.printMediaAssest279}`,
+        url:'',
+        alt:'The Hindu 20th November 2017'
+      },
+      {
+        img: `${baseDomain}${printMediaAssest.printMediaAssest280}`,
+        url:'',
+        alt:'INDIA TODAY GROUP 19th November 2017'
+      },
+      {
+        img: `${baseDomain}${printMediaAssest.printMediaAssest281}`,
+        url:'',
+        alt:'INDIAN EXPRESS 21st November 2017'
+      },
+      {
+        img: `${baseDomain}${printMediaAssest.printMediaAssest282}`,
+        url:'',
+        alt:'Indiatoday 19th November 2017'
+      },
+      {
+        img: `${baseDomain}${printMediaAssest.printMediaAssest283}`,
+        url:'',
+        alt:'Navbharat Times'
+      },
+      {
+        img: `${baseDomain}${printMediaAssest.printMediaAssest284}`,
+        url:'',
+        alt:'Divya Bhaskar'
+      },
+      {
+        img: `${baseDomain}${printMediaAssest.printMediaAssest285}`,
+        url:'',
+        alt:'Janmabhoomi 21st November 2017'
+      },
+      {
+        img: `${baseDomain}${printMediaAssest.printMediaAssest286}`,
+        url:'',
+        alt:'Dopahar'
+      },
+      {
+        img: `${baseDomain}${printMediaAssest.printMediaAssest287}`,
+        url:'',
+        alt:'Business Standard 19th November 2017'
+      },
+      {
+        img: `${baseDomain}${printMediaAssest.printMediaAssest288}`,
+        url:'',
+        alt:'Janmabhoomi Gujarati'
+      },
+      {
+        img: `${baseDomain}${printMediaAssest.printMediaAssest289}`,
+        url:'',
+        alt:'Maharashtra Times'
+      },
+      {
+        img: `${baseDomain}${printMediaAssest.printMediaAssest290}`,
+        url:'',
+        alt:'The Indian Express'
+      },
+      {
+        img: `${baseDomain}${printMediaAssest.printMediaAssest291}`,
+        url:'',
+        alt:'ET Healthworld 20th November 2017'
+      },
+      {
+        img: `${baseDomain}${printMediaAssest.printMediaAssest292}`,
+        url:'',
+        alt:'Janmabhoomi Gujarati'
+      },
+      {
+        img: `${baseDomain}${printMediaAssest.printMediaAssest293}`,
+        url:'',
+        alt:'Navbharat times 5th December 2017'
+      },
+      {
+        img: `${baseDomain}${printMediaAssest.printMediaAssest294}`,
+        url:'',
+        alt:'Navbharat times 4th December 2017'
+      },
+      {
+        img: `${baseDomain}${printMediaAssest.printMediaAssest295}`,
+        url:'',
+        alt:'Navbharat times 3rd December 2017'
+      },
+      {
+        img: `${baseDomain}${printMediaAssest.printMediaAssest296}`,
+        url:'',
+        alt:'Navbharat times 1st December 2017'
+      },
+      {
+        img: `${baseDomain}${printMediaAssest.printMediaAssest297}`,
+        url:'',
+        alt:'Navbharat times 30th Nov 2017'
+      },
+      {
+        img: `${baseDomain}${printMediaAssest.printMediaAssest298}`,
+        url:'',
+        alt:'Navbharat times 28th Nov 2017'
+      },
+      {
+        img: `${baseDomain}${printMediaAssest.printMediaAssest299}`,
+        url:'',
+        alt:'Navbharat times 28th Nov 2017'
+      },
+      {
+        img: `${baseDomain}${printMediaAssest.printMediaAssest300}`,
+        url:'',
+        alt:'Navbharat times 27th Nov 2017'
+      },
+      {
+        img: `${baseDomain}${printMediaAssest.printMediaAssest301}`,
+        url:'',
+        alt:'Navbharat times 26th Nov 2017'
+      },
+      {
+        img: `${baseDomain}${printMediaAssest.printMediaAssest302}`,
+        url:'',
+        alt:'Navbharat times 24th Nov 2017'
+      },
+      {
+        img: `${baseDomain}${printMediaAssest.printMediaAssest303}`,
+        url:'',
+        alt:'Navbharat times 23rd Nov 2017'
+      },
+      {
+        img: `${baseDomain}${printMediaAssest.printMediaAssest304}`,
+        url:'',
+        alt:'Navbharat times 21th Nov 2017'
+      },
+      {
+        img: `${baseDomain}${printMediaAssest.printMediaAssest305}`,
+        url:'',
+        alt:'Navbharat times 20th Nov 2017'
+      },
+      {
+        img: `${baseDomain}${printMediaAssest.printMediaAssest306}`,
+        url:'',
+        alt:'Navbharat times 18th Nov 2017'
+      },
+      {
+        img: `${baseDomain}${printMediaAssest.printMediaAssest307}`,
+        url:'',
+        alt:'Navbharat times 17th Nov 2017'
+      },
+      {
+        img: `${baseDomain}${printMediaAssest.printMediaAssest308}`,
+        url:'',
+        alt:'Navbharat times 16th Nov 2017'
+      },
+      {
+        img: `${baseDomain}${printMediaAssest.printMediaAssest309}`,
+        url:'',
+        alt:'Navbharat times 14th Nov 2017'
+      },
+      {
+        img: `${baseDomain}${printMediaAssest.printMediaAssest310}`,
+        url:'',
+        alt:'Navbharat times 13th Nov 2017'
+      },
+      {
+        img: `${baseDomain}${printMediaAssest.printMediaAssest311}`,
+        url:'',
+        alt:'Navbharat times 10th Nov 2017'
+      },
+      {
+        img: `${baseDomain}${printMediaAssest.printMediaAssest312}`,
+        url:'',
+        alt:'Navbharat times 9th Nov 2017'
+      },
+      {
+        img: `${baseDomain}${printMediaAssest.printMediaAssest313}`,
+        url:'',
+        alt:'Navbharat times 7th Nov 2017'
+      },
+      {
+        img: `${baseDomain}${printMediaAssest.printMediaAssest314}`,
+        url:'',
+        alt:'Navbharat times 6th Nov 2017'
+      },
+      {
+        img: `${baseDomain}${printMediaAssest.printMediaAssest315}`,
+        url:'',
+        alt:'Navbharat times 5th Nov 2017'
+      },
+      {
+        img: `${baseDomain}${printMediaAssest.printMediaAssest316}`,
+        url:'',
+        alt:'Navbharat Times Mumbai 18th June 2017'
+      },
+      {
+        img: `${baseDomain}${printMediaAssest.printMediaAssest317}`,
+        url:'',
+        alt:'Navbharat Times Mumbai 10th May 2017'
+      },
+      {
+        img: `${baseDomain}${printMediaAssest.printMediaAssest318}`,
+        url:'',
+        alt:'Aaj ki taza khabar 30th April 2017'
+      },
+      {
+        img: `${baseDomain}${printMediaAssest.printMediaAssest319}`,
+        url:'',
+        alt:'Dailyworld 30th April 2017'
+      },
+      {
+        img: `${baseDomain}${printMediaAssest.printMediaAssest320}`,
+        url:'',
+        alt:'Financial Express 30th April 2017'
+      },
+      {
+        img: `${baseDomain}${printMediaAssest.printMediaAssest321}`,
+        url:'',
+        alt:'Indiatoday 30th April 2017'
+      },
+      {
+        img: `${baseDomain}${printMediaAssest.printMediaAssest322}`,
+        url:'',
+        alt:'Inshorts Press Trust of India 30th April 2017'
+      },
+      {
+        img: `${baseDomain}${printMediaAssest.printMediaAssest323}`,
+        url:'',
+        alt:'One News Page 30th April 2017'
+      },
+      {
+        img: `${baseDomain}${printMediaAssest.printMediaAssest324}`,
+        url:'',
+        alt:'Oneindia 30th April 2017'
+      },
+      {
+        img: `${baseDomain}${printMediaAssest.printMediaAssest325}`,
+        url:'',
+        alt:'Outlook The News Scroll 30th April 2017'
+      },
+      {
+        img: `${baseDomain}${printMediaAssest.printMediaAssest326}`,
+        url:'',
+        alt:'People magazines 1st May 2017'
+      },
+      {
+        img: `${baseDomain}${printMediaAssest.printMediaAssest327}`,
+        url:'',
+        alt:'The Indian Express 1 May 2017'
+      },{
+        img: `${baseDomain}${printMediaAssest.printMediaAssest328}`,
+        url:'',
+        alt:'UgoSay 30th April 2017'
+      },
+      {
+        img: `${baseDomain}${printMediaAssest.printMediaAssest329}`,
+        url:'',
+        alt:'UgoSay 30th April 2017'
+      },
+      {
+        img: `${baseDomain}${printMediaAssest.printMediaAssest330}`,
+        url:'',
+        alt:'The Times of India, Mumbai 12th April 2017'
+      }
+      
+    ]
+  },
+  {
+    year:'2018',
+    media:[
       {
         img: `${baseDomain}${printMediaAssest.printMediaAssest1}`,
         url:'',
