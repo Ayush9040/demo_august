@@ -7,11 +7,18 @@ import baseDomain, {
   background,
 } from '../../../assets/images/imageAsset'
 import InnerNavComponent from '../../../Components/InnerNavComponent'
+
 import { data } from '../Constants/data'
+import { fetchDonationsData } from '../Donation.action'
+import { useDispatch, useSelector } from 'react-redux'
 
 const DonationPage = () => {
+
+  const dispatch = useDispatch()
+
   const route = useLocation()
   useEffect(() => {
+    dispatch(fetchDonationsData())
     if (route.hash) {
       document
         .getElementById(`${route.hash.substring(1, route.hash.length)}`)
@@ -19,7 +26,7 @@ const DonationPage = () => {
     } else {
       scrollTo(0, 0)
     }
-  })
+  },[])
 
   const DonationBan = {
     title: 'Career',
@@ -27,6 +34,10 @@ const DonationPage = () => {
     menuColor: 'white',
     menuItems: [],
   }
+
+  const { donationPrograms } = useSelector(state => state.donation)
+  console.log(donationPrograms)
+
   return (
     <>
       <div className="brahma-container">
