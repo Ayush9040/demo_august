@@ -59,7 +59,6 @@ const PrintMedia = () => {
                           <img src={image.img} alt={image.alt} />
                           <div className='news-details'>
                             <p>{image.alt}</p>
-                            <h3>{image.alt}</h3>
                           </div>
                         </div>
                       </a>
@@ -67,20 +66,20 @@ const PrintMedia = () => {
                   } else {
                     return (
                       <>
-                        <div key={idx} className='news-card'>
+                        <div key={idx} className='news-card' 
+                          onClick={() => {
+                            setViewCarousel(idx)
+                            setModalData(
+                              item?.media?.map((number) => ({ src: number.img }))
+                            )
+                          }}
+                        >
                           <img
                             src={image.img}
-                            onClick={() => {
-                              setViewCarousel(idx)
-                              setModalData(
-                                item?.media?.map((number) => ({ src: number.img }))
-                              )
-                            }}
                             alt={image.alt}
                           />
                           <div className='news-details'>
                             <p>{image.alt}</p>
-                            <h3>{image.alt}</h3>
                           </div>
                         </div>
                         {viewCarousel === idx && (
