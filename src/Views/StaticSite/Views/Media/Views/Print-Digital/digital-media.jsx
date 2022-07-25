@@ -1,9 +1,14 @@
 import React from 'react'
 import InnerNavComponent from '../../../../Components/InnerNavComponent'
 import digitalMedia from '../../Constants/digitalMedia'
+import { videos2 } from '../../../../assets/icons/icon'
 import './style.scss'
+import { useState } from 'react'
 
 const DigitalMedia = () => {
+
+  const [ videoPlayerData,setVideoPlayerData ]=useState()
+  
 
   const MediaNews = {
     title: 'news',
@@ -20,8 +25,31 @@ const DigitalMedia = () => {
         <div className='bottom-line' ></div>
       </h1>
       <div className='digital-media-cards' >
-        { digitalMedia.map((item,idx)=><iframe key={idx} width="560" height="315" src={item} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>) }
+        { digitalMedia.map((item,idx)=><div onClick={()=>{ setVideoPlayerData(item.video) }} key={idx} >
+          <div className="svg-container">{videos2}</div>
+          <img src={item.thumbnail} alt='youtube-video' />
+        </div>) }
       </div>
+      {videoPlayerData && (
+        <div className="video-overlay">
+          <div className="video-player-container">
+            <div
+              className="close-btn"
+              role="button"
+              onClick={() => setVideoPlayerData(null)}
+            >
+              close
+            </div>
+            <iframe
+              src={videoPlayerData}
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+          </div>
+        </div>
+      )}
     </div>
   )
 }
