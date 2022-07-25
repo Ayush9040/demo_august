@@ -1,12 +1,11 @@
 import React, { useState } from 'react'
-import CommanModal from '../../../../Components/CommanModal'
 import InnerNavComponent from '../../../../Components/InnerNavComponent'
+import Carousel from 'react-gallery-carousel'
+import 'react-gallery-carousel/dist/index.css'
 import printMedia from '../../Constants/media'
 import './style.scss'
 
 const PrintMedia = () => {
-  const [openModal, setOpenModal] = useState(false)
-  const [imageUrl, setImageUrl] = useState('')
 
   const MediaNews = {
     title: 'news',
@@ -31,7 +30,12 @@ const PrintMedia = () => {
     ],
   }
 
-  
+  const [viewCarousel, setViewCarousel] = useState()
+  const [modalData, setModalData] = useState()
+  const disableCarousel = () => {
+    setViewCarousel(false)
+  }
+
 
   return (
     <>
@@ -42,41 +46,88 @@ const PrintMedia = () => {
           Print Media
           <div className='bottom-line'></div>
         </h1>
-        {[...printMedia].reverse().map((item, idx) => {
+        {[...printMedia].reverse().map((item, id) => {
           return (
-            <div key={idx} className='news-card-container'>
+            <div key={id} className='news-card-container'>
               <h2>{item?.year}</h2>
-              <div className='news-articles' >
-                { item.media.map((item,idx)=>{
-                  if(item.url!==''){
-                    return <a href={`${item.url}`} target='_blank' rel="noreferrer" >
-                      <div key={idx} className='news-card'>
-                        <img src={ item.img } alt={item.alt} />
-                        <div className='news-details'>
-                          <p>{item.alt}</p>
-                          <h3>{item.alt}</h3>
+              <div className='news-articles'>
+                {item.media.map((image, idx) => {
+                  if (image.url !== '') {
+                    return (
+                      <a href={`${image.url}`} target='_blank' rel='noreferrer'>
+                        <div key={idx} className='news-card'>
+                          <img src={image.img} alt={image.alt} />
+                          <div className='news-details'>
+                            <p>{image.alt}</p>
+                            <h3>{image.alt}</h3>
+                          </div>
                         </div>
-                      </div>
-                    </a>
-                  }else{
-                    return <div key={idx} className='news-card'>
-                      <img src={ item.img }                 onClick={() => {
-                        setOpenModal(true)
-                        setImageUrl(item.img)
-                      }} alt={item.alt} />
-                      <div className='news-details'>
-                        <p>{item.alt}</p>
-                        <h3>{item.alt}</h3>
-                      </div>
-                    </div>
+                      </a>
+                    )
+                  } else {
+                    return (
+                      <>
+                        <div key={idx} className='news-card'>
+                          <img
+                            src={image.img}
+                            onClick={() => {
+                              setViewCarousel(idx)
+                              setModalData(
+                                item?.media?.map((number) => ({ src: number.img }))
+                              )
+                            }}
+                            alt={image.alt}
+                          />
+                          <div className='news-details'>
+                            <p>{image.alt}</p>
+                            <h3>{image.alt}</h3>
+                          </div>
+                        </div>
+                        {viewCarousel === idx && (
+                          <>
+                            <div
+                              style={{
+                                position: 'fixed',
+                                top: '0%',
+                                right: '10px',
+                                zIndex: '10000',
+                              }}
+                            >
+                              <p
+                                style={{ cursor: 'pointer', color: 'white' }}
+                                onClick={disableCarousel}
+                              >
+                                Close
+                              </p>
+                            </div>
+                            <div
+                              style={{
+                                height: 800,
+                                width: '100%',
+                                position: 'fixed',
+                                top: '5%',
+                                boxShadow:
+                                  'rgb(0 0 0 / 94%) 248px 161px 327px 383px',
+                                zIndex: '9999',
+                              }}
+                            >
+                              <Carousel
+                                images={modalData}
+                                style={{ height: '100%', width: '100%' }}
+                                index={idx}
+                              />
+                            </div>
+                          </>
+                        )}
+                      </>
+                    )
                   }
-                }) }
+                })}
               </div>
             </div>
           )
         })}
       </div>
-      {openModal && <CommanModal image={imageUrl} closeModal={setOpenModal} />}
     </>
   )
 }
