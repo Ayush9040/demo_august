@@ -140,13 +140,21 @@
 }
 
 .blog-container {
+  font-size: 2rem!important;
+  td{
+    font-size: 2rem!important;
+  }
   .blog-grid {
     // display: grid;
     // grid-template-columns: 50% 50%;
-    width: 90%;
-    margin: 4rem auto;
+    width: 100%;
+    margin: 0rem auto;
     // gap: 3rem;
     justify-content: center;
+    p,td,tr,th,small{
+      margin: 1rem 0;
+    }
+  
     .blog-text {
       p {
         font-size: 1.8rem;

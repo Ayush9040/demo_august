@@ -26,9 +26,11 @@ const BlogAnother = () => {
   useEffect(() => {
     dispatch(fetchBlogsData())
     window.scrollTo(0,0)
-    setPageData(blogs.find((item) => blogId === item.slug))
-  },[])
+  },[ ])
 
+  useEffect(()=>{
+    setPageData(blogs.find((item) => blogId === item.slug))
+  },[blogs])
  
   
 
@@ -96,15 +98,18 @@ const BlogAnother = () => {
           </div>
         </div> */}
       </div>
-
-      <div className='blog-container' id='blog-container' dangerouslySetInnerHTML={{ __html:`${pageData?.content}` }} >
-        {/* <div className='blog-grid'>
-          <div className='blog-text'>
+      
+      
+    
+      <div className='blog-container' id='blog-container' >
+        <h2 dangerouslySetInnerHTML={{ __html:`${pageData?.title}` }} ></h2>
+        <div className='blog-grid' dangerouslySetInnerHTML={{ __html:`${pageData?.content}` }} >
+          {/* <div className='blog-text'>
             {pageData?.body?.map((comp) => {
               return getComponents(comp)
             })}
-          </div>
-        </div> */}
+          </div> */}
+        </div>
       </div>
       <BlogGallery />
     </>
