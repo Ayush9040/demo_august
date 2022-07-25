@@ -57,7 +57,7 @@ const DonationPage = () => {
         >
           <InnerNavComponent abc={DonationBan} />
         </CommonBanner>
-        {data.map((point, i) => <SectionComponent
+        {donationPrograms && donationPrograms.map((point, i) => <SectionComponent
           key={i}
           url={`/donation/donate/${point.key}`}
           image={point.image}
