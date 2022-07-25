@@ -88,7 +88,7 @@ const PrintMedia = () => {
                             <div
                               style={{
                                 position: 'fixed',
-                                top: '0%',
+                                top: '2%',
                                 right: '10px',
                                 zIndex: '10000',
                               }}
@@ -102,10 +102,12 @@ const PrintMedia = () => {
                             </div>
                             <div
                               style={{
-                                height: 800,
+                                height:'100%',
+                                padding:'2rem',
                                 width: '100%',
                                 position: 'fixed',
                                 top: '5%',
+                                background:'#00000080',
                                 boxShadow:
                                   'rgb(0 0 0 / 94%) 248px 161px 327px 383px',
                                 zIndex: '9999',
