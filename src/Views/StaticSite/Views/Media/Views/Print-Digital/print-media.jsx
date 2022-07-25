@@ -31,6 +31,8 @@ const PrintMedia = () => {
     ],
   }
 
+  
+
   return (
     <>
       <div className='print-media-container'>
@@ -40,7 +42,7 @@ const PrintMedia = () => {
           Print Media
           <div className='bottom-line'></div>
         </h1>
-        {printMedia.map((item, idx) => {
+        {[...printMedia].reverse().map((item, idx) => {
           return (
             <div key={idx} className='news-card-container'>
               <h2>{item?.year}</h2>
