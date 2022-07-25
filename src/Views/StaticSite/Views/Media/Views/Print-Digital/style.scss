@@ -7,6 +7,7 @@
 }
 .news-card-container{
   margin-top: 5rem; ;
+  padding: 0rem 10rem;
   h2{
     text-transform: capitalize;
     width: fit-content;
@@ -56,6 +57,7 @@
       display: grid;
       grid-template-columns: repeat(2,1fr);
       gap: 100px;
+      padding: 0rem 10rem;
       &>div{
       position: relative;
       text-align: center;
@@ -91,7 +93,4 @@
             }
         }
     }
-    }
-    .digital-media-container,.print-media-container{
-      padding: 0rem 10rem;
     }
