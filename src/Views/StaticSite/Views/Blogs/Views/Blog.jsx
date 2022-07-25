@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from 'react'
-
 import { useParams } from 'react-router-dom'
 //import CommonBannerNav from '../../../Components/CommonBannerNav'
 import './style.scss'
 import Heading from '../../../Components/Heading'
 import BlogGallery from '../../../Components/BlogComponents/BlogGallery'
-import { allBlogData } from '../../../utils/blogData'
+//import { allBlogData } from '../../../utils/blogData'
 import BlogParagraph from '../../../Components/BlogComponents/BlogParagraph'
 import BlogPoints from '../../../Components/BlogComponents/BlogPoints'
 import BlogBullets from '../../../Components/BlogComponents/BlogBullets'
@@ -13,14 +12,28 @@ import BlogSubHeaing from '../../../Components/BlogComponents/BlogSubHeading'
 import BlogVideo from '../../../Components/BlogComponents/BlogVideo'
 import BlogLink from '../../../Components/BlogComponents/BlogLink'
 import InnerNavComponent from '../../../Components/InnerNavComponent'
+import { useDispatch, useSelector } from 'react-redux'
+import { fetchBlogsData } from '../Blogs.action'
 
 const BlogAnother = () => {
+
+  const dispatch = useDispatch()
+
   const { blogId } = useParams()
   const [pageData, setPageData] = useState({})
+  const { blogs } = useSelector(state=>state.blogs)
+
   useEffect(() => {
+    dispatch(fetchBlogsData())
     window.scrollTo(0,0)
-    setPageData(allBlogData.find((item) => blogId === item.id))
-  }, [])
+    setPageData(blogs.find((item) => blogId === item.slug))
+  },[])
+
+ 
+  
+
+
+  console.log(pageData,'setPageData')
 
   const getComponents = (componentObj) => {
     switch (componentObj.component) {
@@ -64,7 +77,7 @@ const BlogAnother = () => {
         
         <InnerNavComponent abc={viewBlog}/>
         <Heading largeText={'Blog'} />
-        <div className='blog-series'>
+        {/* <div className='blog-series'>
           <div className='alumni-content' id='seminar'>
             <div className='newsletter-content'>
               <h2>
@@ -81,37 +94,17 @@ const BlogAnother = () => {
               />
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
 
-      <div className='blog-container'>
-        <div className='blog-grid'>
-          {/* <div className='blog-image'>
-            <img src={baseDomain + alumniAssets.eventsAssetsTitle} alt='' />
-          </div> */}
+      <div className='blog-container' id='blog-container' dangerouslySetInnerHTML={{ __html:`${pageData?.content}` }} >
+        {/* <div className='blog-grid'>
           <div className='blog-text'>
-            {/* <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-              nec ante id nunc vehicula pharetra nec vitae est. Sed diam dui,
-              luctus sed velit quis, placerat consequat felis. Vivamus cursus in
-              mauris at dignissim. Etiam venenatis semper pharetra. Duis ut diam
-              eros. In hac habitasse platea dictumst. Nam tincidunt nisi metus,
-              et dignissim ligula cursus ut.
-            </p>{' '}
-            
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-              nec ante id nunc vehicula pharetra nec vitae est. Sed diam dui,
-              luctus sed velit quis, placerat consequat felis. Vivamus cursus in
-              mauris at dignissim. Etiam venenatis semper pharetra. Duis ut diam
-              eros. In hac habitasse platea dictumst. Nam tincidunt nisi metus,
-              et dignissim ligula cursus ut.
-            </p> */}
             {pageData?.body?.map((comp) => {
               return getComponents(comp)
             })}
           </div>
-        </div>
+        </div> */}
       </div>
       <BlogGallery />
     </>

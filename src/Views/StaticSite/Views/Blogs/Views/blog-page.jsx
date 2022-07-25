@@ -1,5 +1,6 @@
 import React from 'react'
 import Heading from '../../../Components/Heading'
+import { useSelector,useDispatch } from 'react-redux'
 //import { share } from '../../../assets/icons/icon'
 import './style.scss'
 import SeminarCard from '../../../Components/SeminarCard'
@@ -9,8 +10,13 @@ import { Link } from 'react-router-dom'
 import { allBlogData } from '../../../utils/blogData'
 import InnerNavComponent from '../../../Components/InnerNavComponent'
 import { useEffect } from 'react'
+import { fetchBlogsData } from '../Blogs.action'
 const BlogPage = () => {
+
+  const dispatch = useDispatch()
+
   useEffect(() => {
+    dispatch(fetchBlogsData())
     scrollTo(0, 0)
   }, [])
   const viewBlog = {
@@ -19,7 +25,9 @@ const BlogPage = () => {
     menuColor: 'orange',
     menuItems: [],
   }
-  console.log(allBlogData, '4')
+  const { blogs }=useSelector(state=>state.blogs)
+
+  console.log(blogs,'blogs')
   return (
     <div className="main-blog">
       {/* <CommonBannerNavPrimary innerNav={false} /> */}
@@ -56,7 +64,7 @@ const BlogPage = () => {
         <div className="upcoming-blogs">
           <h3>Other Blogs</h3>
           <div className="blog-card-container">
-            {allBlogData.map((item, i) => {
+            {/* {allBlogData.map((item, i) => {
               if (item.id !== 'blog_1') {
                 return (
                   <SeminarCard
@@ -69,7 +77,13 @@ const BlogPage = () => {
                 )
               }
               return
-            })}
+            })} */}
+
+            {
+              blogs.map((item,idx)=>{
+                return <SeminarCard key={idx} title={item.title} desc={item.title} url={`/blogs/blog/${item.slug}`} />
+              })
+            }
           </div>
         </div>
       </div>

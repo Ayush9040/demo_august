@@ -1,5 +1,6 @@
 import { combineReducers } from 'redux'
 import { authReducer } from '../Views/StaticSite/Views/Authentication/Auth.reducer'
+import { blogsReducer } from '../Views/StaticSite/Views/Blogs/Blogs.reducer'
 import { careerReducer } from '../Views/StaticSite/Views/Careers/Career.reducer'
 import { volunteerReducer } from '../Views/StaticSite/Views/Volunteer/Volunteer.reducer'
 
@@ -7,7 +8,8 @@ import { volunteerReducer } from '../Views/StaticSite/Views/Volunteer/Volunteer.
 const reducers = combineReducers({
   auth: authReducer,
   volunteer:volunteerReducer,
-  career:careerReducer
+  career:careerReducer,
+  blogs:blogsReducer
 })
 
 export default reducers
