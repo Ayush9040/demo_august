@@ -1515,9 +1515,18 @@ export const CSR = {
 export const wellnessAssets = {
   wellnessAssets1: '/wellness/corporate_wellness_background%20(1).jpg',
   wellnessAssets2: '/wellness/our_offerings_left .jpeg',
-  wellnessAssets3: '/wellness/Our_offerings_right.png',
-  wellnessAssets4: '/wellness/wellness_program_at_work (1).jpg',
+  wellnessAssets3 :'/wellness/Our_offerings_right.png',
+  wellnessAssets4:'/wellness/wellness_program_at_work (1).jpg',
+  wellnessAssets5:'/wellness/wellness_programs_at_work1.jpg',
+  wellnessAssets6:'/wellness/wellness_programs_at_work_2.jpg',
+  wellnessAssets7:'/wellness/wellness_programs_at_work_3.jpg',
 }
+
+export const newsAssets = {
+  printMedia:'/Media/print-media.jpg',
+  digitalMedia:'/Media/digital-media.jpg'
+}
+
 
 export const printMediaAssest = {
   //archives

@@ -25,7 +25,6 @@ const SignIn = () => {
     password: '',
   })
   const location = useLocation()
-  console.log(location.pathname.split('/'))
 
   useEffect(() => {
     setCourse(location?.pathname?.split('/')?.[3])

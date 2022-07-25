@@ -18,8 +18,7 @@ const MediaGallery = () => {
   const disableCarousel = () => {
     setViewCarousel(false)
   }
-  console.log(viewCarousel,'abc')
-  console.log(modalData,'xyz')
+
   // const images = harmonyImagesData.map((number) => ({
   //   src: number,
   // }))

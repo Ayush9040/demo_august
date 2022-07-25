@@ -36,7 +36,7 @@ const CourseDetails = ({ pageDate }) => {
     }
   }
 
-  console.log(pageDate, 'pageData')
+  
   // localStorage.setItem('selectedDate',selectDate)
   useEffect(() => {
     setSetselectDate(Params.get('date'))
@@ -213,7 +213,7 @@ const CourseDetails = ({ pageDate }) => {
           <div className="career-navigation-lg">
             <ul className="innerNav">
               {options.map((item, idx) => (
-                <a key={item.id} href={`#${item.id}`}>
+                <a key={item.id} id={item.title === 'FAQ' ? 'comingsoon':''} href={`#${item.id}`}>
                   <li
                     onClick={() => {
                       selectMenu(item.title)

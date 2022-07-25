@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Heading from '../Heading'
 import './style.scss'
 import { courses, filler } from '../../assets/icons/icon'
@@ -10,6 +10,41 @@ import CommonBtn from '../commonbtn'
 import { Link } from 'react-router-dom'
 
 const OurOfferings = () => {
+
+  let vHeight = (window.innerHeight-400 || document.documentElement.clientHeight-400)
+  const animateCarousel = () => {
+    let offeringContainer = document.querySelector('.our-offerings-container')
+    // const rect = offeringContainer.getBoundingClientRect()
+    const { top, bottom } = offeringContainer.getBoundingClientRect()
+
+    return (
+      (top > 0 || bottom > 0) &&
+      top < vHeight
+    )
+    // const vWidth = window.innerWidth || document.documentElement.clientWidth
+    // const vHeight = window.innerHeight || document.documentElement.clientHeight
+    // // Return false if it's not in the viewport
+    // if (rect.right < 0 || rect.bottom < 0
+    //           || rect.left > vWidth || rect.top > vHeight) { return false }
+    // // Return true if any of its four corners are visible
+    // // return (
+    // console.log(document.elementFromPoint(rect.left, rect.top))
+    // console.log(efp(rect.left, rect.top))
+    // console.log(efp(rect.right, rect.top))
+    // console.log(efp(rect.right, rect.bottom))
+    // console.log(efp(rect.left, rect.bottom))
+    // )
+  }
+  useEffect(()=> {
+    let offeringContainer = document.getElementsByClassName('our-offerings-container')
+    if (offeringContainer[0]) {
+      window.addEventListener('scroll',() => {
+        let inViewPort = animateCarousel()
+        console.log('inViewPort',inViewPort)
+      }
+      )}
+    // return () => window.removeEventListener('scroll', animateCarousel)
+  },[])
   const carouselData = [
     {
       name: '7-day Yoga Health Camp',
@@ -67,7 +102,7 @@ const OurOfferings = () => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: true,
+    autoplay: ()=>animateCarousel(),
     autoPlaySpeed: 5000,
     centerMode: true,
     centerPadding: '70px',
@@ -80,12 +115,14 @@ const OurOfferings = () => {
       },
     ],
     afterChange: index => {
+      console.log('AAA')
       setSmallDescription(carouselData[index].description.substring(0, 110) + '...')
       setRedirect(carouselData[index].redirect)
       setTimeline(carouselData[index].timeline)
       setPrice(carouselData[index].price)
     },
   }
+
   return (
     <div className="our-offerings-section">
       <div className="our-offerings-container offering-padding">

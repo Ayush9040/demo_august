@@ -30,7 +30,7 @@ const Volunteer = () => {
       },
       {
         innerTitle: 'volunteer-values',
-        url: '/volunteer/values',
+        url: '/values',
         name: 'Values',
       },
     ],

@@ -1,0 +1,96 @@
+.print-media-container,.digital-media-container{
+  margin-bottom: 5rem;
+  h1{
+    width: fit-content;
+    margin: 2rem auto 3rem;
+  }
+}
+.news-card-container{
+  margin-top: 5rem; ;
+  padding: 0rem 10rem;
+  h2{
+    text-transform: capitalize;
+    width: fit-content;
+    margin: 3rem auto;
+    border-bottom: 2px solid black;
+    font-weight: 700;
+  }
+   .news-articles{
+    // display: grid;
+    // grid-template-columns: repeat(auto-fill, minmax(250px,1fr));
+    // gap: 3rem;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+   }
+      .news-card{
+        position: relative;
+        height: 200px;
+        width: auto;
+        img{
+          width: 100%;
+          height: 100%;
+        }
+        .news-details{
+          display: none;
+          padding: 0.5rem 2rem;
+        }
+        &:hover{
+          .news-details{
+            display: block;
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+            background: #00000020;
+            backdrop-filter: blur(2px);
+            color: #fff;
+            p{
+              font-weight: 700;
+            }
+          }
+        }
+        }
+    }
+
+    .digital-media-cards{
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      gap: 100px;
+      padding: 0rem 10rem;
+      &>div{
+      position: relative;
+      text-align: center;
+      }
+      .video-overlay{
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(0,0,0, 0.9);
+        z-index: 9999;
+        .video-player-container{
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+    
+            iframe{
+                width: 100%;
+                height: 60vw;
+            }
+    
+            .close-btn{
+                font-size: 22px;
+                color: white;
+                align-self: flex-end;
+                margin-right: 10px;
+                padding: 5px 10px; 
+                border-radius: 10px;
+                border: 1px solid gray;
+            }
+        }
+    }
+    }

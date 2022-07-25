@@ -1,4 +1,4 @@
-import { printMediaAssest, baseDomain } from '../../../assets/images/imageAsset'
+import baseDomain,{ printMediaAssest } from '../../../assets/images/imageAsset'
 
 const printMedia = [
   {
@@ -910,7 +910,7 @@ const printMedia = [
         url:'',
         alt:'Mahanagar_June 2015'
       },
-       {
+      {
         img: `${baseDomain}${printMediaAssest.printMediaAssest186}`,
         url:'',
         alt:'Mahanagar_June 2015'
@@ -2072,7 +2072,6 @@ const printMedia = [
         url:'',
         alt:'Navdunia'
       },
-      ,
       {
         img: `${baseDomain}${printMediaAssest.printMediaAssest415}`,
         url:'',
@@ -4551,3 +4550,6 @@ const printMedia = [
     ]
   }
 ]
+
+
+export default printMedia
