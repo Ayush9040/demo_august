@@ -49,13 +49,15 @@ const PrintMedia = () => {
               <div className='news-articles' >
                 { item.media.map((item,idx)=>{
                   if(item.url!==''){
-                    return <div key={idx} className='news-card'>
-                      <img src={ item.img } alt={item.alt} />
-                      <div className='news-details'>
-                        <p>{item.alt}</p>
-                        <h3>{item.alt}</h3>
+                    return <a href={`${item.url}`} target='_blank' rel="noreferrer" >
+                      <div key={idx} className='news-card'>
+                        <img src={ item.img } alt={item.alt} />
+                        <div className='news-details'>
+                          <p>{item.alt}</p>
+                          <h3>{item.alt}</h3>
+                        </div>
                       </div>
-                    </div>
+                    </a>
                   }else{
                     return <div key={idx} className='news-card'>
                       <img src={ item.img }                 onClick={() => {
