@@ -1,71 +1,71 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 //import CommonBannerNav from '../../../Components/CommonBannerNav'
 import './style.scss'
 import Heading from '../../../Components/Heading'
 import BlogGallery from '../../../Components/BlogComponents/BlogGallery'
 //import { allBlogData } from '../../../utils/blogData'
-import BlogParagraph from '../../../Components/BlogComponents/BlogParagraph'
-import BlogPoints from '../../../Components/BlogComponents/BlogPoints'
-import BlogBullets from '../../../Components/BlogComponents/BlogBullets'
-import BlogSubHeaing from '../../../Components/BlogComponents/BlogSubHeading'
-import BlogVideo from '../../../Components/BlogComponents/BlogVideo'
-import BlogLink from '../../../Components/BlogComponents/BlogLink'
+// import BlogParagraph from '../../../Components/BlogComponents/BlogParagraph'
+// import BlogPoints from '../../../Components/BlogComponents/BlogPoints'
+// import BlogBullets from '../../../Components/BlogComponents/BlogBullets'
+// import BlogSubHeaing from '../../../Components/BlogComponents/BlogSubHeading'
+// import BlogVideo from '../../../Components/BlogComponents/BlogVideo'
+// import BlogLink from '../../../Components/BlogComponents/BlogLink'
 import InnerNavComponent from '../../../Components/InnerNavComponent'
 import { useDispatch, useSelector } from 'react-redux'
-import { fetchBlogsData } from '../Blogs.action'
+import { fetchBlogData } from '../Blogs.action'
 
 const BlogAnother = () => {
 
   const dispatch = useDispatch()
 
   const { blogId } = useParams()
-  const [pageData, setPageData] = useState({})
-  const { blogs } = useSelector(state=>state.blogs)
+  //const [pageData, setPageData] = useState({})
+  const { blog } = useSelector(state=>state.blogs)
 
   useEffect(() => {
-    dispatch(fetchBlogsData())
+    dispatch(fetchBlogData(blogId))
     window.scrollTo(0,0)
   },[ ])
 
-  useEffect(()=>{
-    setPageData(blogs.find((item) => blogId === item.slug))
-  },[blogs])
+  // useEffect(()=>{
+  //   setPageData(blogs.find((item) => blogId === item.slug))
+  // },[blogs])
  
   
 
 
-  console.log(pageData,'setPageData')
 
-  const getComponents = (componentObj) => {
-    switch (componentObj.component) {
-    case 'blogParagraph':
-      return <BlogParagraph pText={componentObj.pText} />
-    case 'points':
-      return <BlogPoints points={componentObj.points} />
-    case 'bullets':
-      return (
-        <BlogBullets
-          title={componentObj.listTitle}
-          bullets={componentObj.bulletPoints}
-        />
-      )
-    case 'subHeading':
-      return <BlogSubHeaing boldText={componentObj.boldText} />
-    case 'blogVideo':
-      return (
-        <BlogVideo
-          width={componentObj.width}
-          height={componentObj.height}
-          url={componentObj.url}
-        />
-      )
-    case 'blogLink':
-      return <BlogLink url={componentObj.url} text={componentObj.text} />
-    default:
-      return null
-    }
-  }
+
+  // const getComponents = (componentObj) => {
+  //   switch (componentObj.component) {
+  //   case 'blogParagraph':
+  //     return <BlogParagraph pText={componentObj.pText} />
+  //   case 'points':
+  //     return <BlogPoints points={componentObj.points} />
+  //   case 'bullets':
+  //     return (
+  //       <BlogBullets
+  //         title={componentObj.listTitle}
+  //         bullets={componentObj.bulletPoints}
+  //       />
+  //     )
+  //   case 'subHeading':
+  //     return <BlogSubHeaing boldText={componentObj.boldText} />
+  //   case 'blogVideo':
+  //     return (
+  //       <BlogVideo
+  //         width={componentObj.width}
+  //         height={componentObj.height}
+  //         url={componentObj.url}
+  //       />
+  //     )
+  //   case 'blogLink':
+  //     return <BlogLink url={componentObj.url} text={componentObj.text} />
+  //   default:
+  //     return null
+  //   }
+  // }
   const viewBlog = {
     title: 'Blogs',
     color: 'white',
@@ -102,8 +102,8 @@ const BlogAnother = () => {
       
     
       <div className='blog-container' id='blog-container' >
-        <h2 dangerouslySetInnerHTML={{ __html:`${pageData?.title}` }} ></h2>
-        <div className='blog-grid' dangerouslySetInnerHTML={{ __html:`${pageData?.content}` }} >
+        <h2 dangerouslySetInnerHTML={{ __html:`${blog?.title}` }} ></h2>
+        <div className='blog-grid' dangerouslySetInnerHTML={{ __html:`${blog?.content}` }} >
           {/* <div className='blog-text'>
             {pageData?.body?.map((comp) => {
               return getComponents(comp)

@@ -24,6 +24,27 @@ export const blogsReducer = ( state=initialState,action )=>{
       blogs:[],
       error:noError
     }    
+  case blogActions.FETCH_BLOG_DATA:
+    return{
+      ...state,
+      isLoading:true,
+      blog:{},
+      error:noError
+    }
+  case blogActions.FETCH_BLOG_DATA_SUCCESS:
+    return{
+      ...state,
+      isLoading:false,
+      blog:action.payload,
+      error:noError
+    }
+  case blogActions.FETCH_BLOG_DATA_ERROR:
+    return{
+      ...state,
+      isLoading:false,
+      blog:{},
+      error:noError
+    }  
   default:
     return{
       ...state
