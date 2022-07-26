@@ -2198,7 +2198,7 @@ const ttc900hr = {
     id: '',
     // templateId: 'GENERAL_AUTO_EMAIL',
     templateId: {
-      templateOnline: 'COURSE500_3M_ON_TTC',
+      templateOnline: 'GENERAL_AUTO_EMAIL',
       templateOffline: {
         templateResidential: '',
         templateNonResidential: ''
