@@ -11,13 +11,22 @@ import { allBlogData } from '../../../utils/blogData'
 import InnerNavComponent from '../../../Components/InnerNavComponent'
 import { useEffect } from 'react'
 import { fetchBlogsData } from '../Blogs.action'
+import { useState } from 'react'
 const BlogPage = () => {
+
+  const [ pagination,setPagination ] = useState({ page:1,limit:10 })
+  const [ array,setArray ] = useState([])
+  const { blogs, count }=useSelector(state=>state.blogs)
 
   const dispatch = useDispatch()
 
   useEffect(() => {
-    dispatch(fetchBlogsData())
+    dispatch(fetchBlogsData( pagination ))
     scrollTo(0, 0)
+    for (let index = 0; index < count/10; index++) {
+      console.log(index,'clg')
+      array.push(index)
+    }
   }, [])
   const viewBlog = {
     title: 'Blogs',
@@ -25,9 +34,13 @@ const BlogPage = () => {
     menuColor: 'orange',
     menuItems: [],
   }
-  const { blogs }=useSelector(state=>state.blogs)
+  
+  
 
-  console.log(blogs,'blogs')
+
+
+
+ 
   return (
     <div className="main-blog">
       {/* <CommonBannerNavPrimary innerNav={false} /> */}
@@ -84,6 +97,9 @@ const BlogPage = () => {
                 return <SeminarCard key={idx} title={item.title} desc={item.title} url={`/blogs/blog/${item.slug}`} />
               })
             }
+          </div>
+          <div className='pagination' >
+            <p>{ console.log(array,'aa') }</p>
           </div>
         </div>
       </div>

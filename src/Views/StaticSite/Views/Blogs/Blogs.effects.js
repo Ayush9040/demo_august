@@ -3,10 +3,10 @@ import { fetchBlogsDataError, fetchBlogsDataSuccess, fetchBlogDataSuccess,fetchB
 import { fetchBlogsDataAPI, fetchBlogDataAPI } from './Blogs.api'
 
 
-export function* handleFetchBlogsDataEffect(){
+export function* handleFetchBlogsDataEffect({ payload }){
   try{
-    const { data } = yield call(fetchBlogsDataAPI)
-    yield put (fetchBlogsDataSuccess(data.data))
+    const { data } = yield call(fetchBlogsDataAPI,payload)
+    yield put (fetchBlogsDataSuccess(data.data,data.count))
   }
   catch {
     yield put (fetchBlogsDataError)

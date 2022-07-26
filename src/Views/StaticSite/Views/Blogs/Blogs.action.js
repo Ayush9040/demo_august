@@ -7,12 +7,12 @@ export const blogActions = {
   FETCH_BLOG_DATA_ERROR:'blogs/FETCH_BLOG_DATA_ERROR',
 }
 
-export const fetchBlogsData = ()=>{
-  return { type: blogActions.FETCH_BLOGS_DATA }
+export const fetchBlogsData = ( payload )=>{
+  return { type: blogActions.FETCH_BLOGS_DATA, payload }
 }
 
-export const fetchBlogsDataSuccess = (payload)=>{
-  return { type: blogActions.FETCH_BLOGS_DATA_SUCCESS,payload }
+export const fetchBlogsDataSuccess = (payload,count)=>{
+  return { type: blogActions.FETCH_BLOGS_DATA_SUCCESS,payload,count }
 }
 
 export const fetchBlogsDataError = ()=>{

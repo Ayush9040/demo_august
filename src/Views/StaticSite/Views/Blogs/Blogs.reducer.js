@@ -8,12 +8,14 @@ export const blogsReducer = ( state=initialState,action )=>{
       ...state,
       isLoading:true,
       blogs:[],
+      count:0,
       error:noError
     }
   case blogActions.FETCH_BLOGS_DATA_SUCCESS:
     return{
       ...state,
       isLoading:false,
+      count:action.count,
       blogs:action.payload,
       error:noError
     }
@@ -22,6 +24,7 @@ export const blogsReducer = ( state=initialState,action )=>{
       ...state,
       isLoading:false,
       blogs:[],
+      count:0,
       error:noError
     }    
   case blogActions.FETCH_BLOG_DATA:
