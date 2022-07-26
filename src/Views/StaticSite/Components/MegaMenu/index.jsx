@@ -122,7 +122,7 @@ const MegaMenu = ({ setNav }) => {
     ],
     NEWS: [
       { menu: 'Gallery', link: '/media/media-gallery' },
-      // { menu: 'News', link: '/media/news' },
+      { menu: 'News', link: '/media/news' },
       // { menu: 'Events', link: '/media/events' },
     ],
     ALUMNI: [

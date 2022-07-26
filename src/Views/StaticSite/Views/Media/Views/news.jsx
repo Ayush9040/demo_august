@@ -15,11 +15,11 @@ const News = () => {
         url: '/media/media-gallery',
         name: 'Gallery',
       },
-      // {
-      //   innerTitle: 'news',
-      //   url: '/media/news',
-      //   name: 'News',
-      // },
+      {
+        innerTitle: 'news',
+        url: '/media/news',
+        name: 'News',
+      },
       // {
       //   innerTitle: 'events',
       //   url: '/media/events',
