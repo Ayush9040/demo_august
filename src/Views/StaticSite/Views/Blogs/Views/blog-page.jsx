@@ -12,10 +12,13 @@ import InnerNavComponent from '../../../Components/InnerNavComponent'
 import { useEffect } from 'react'
 import { fetchBlogsData } from '../Blogs.action'
 import { useState } from 'react'
+//import { blog } from '../../../assets/icons/icon'
+import Pagination from 'react-js-pagination'
+
 const BlogPage = () => {
 
   const [ pagination,setPagination ] = useState({ page:1,limit:10 })
-  const [ array,setArray ] = useState([])
+
   const { blogs, count }=useSelector(state=>state.blogs)
 
   const dispatch = useDispatch()
@@ -23,16 +26,20 @@ const BlogPage = () => {
   useEffect(() => {
     dispatch(fetchBlogsData( pagination ))
     scrollTo(0, 0)
-    for (let index = 0; index < count/10; index++) {
-      console.log(index,'clg')
-      array.push(index)
-    }
-  }, [])
+  }, [ pagination ])
+
+  
+
   const viewBlog = {
     title: 'Blogs',
     color: 'orange',
     menuColor: 'orange',
     menuItems: [],
+  }
+
+  const handlePageChange = (pageNumber) => {
+    console.log(pageNumber,'asd')
+    setPagination({ ...pagination,page:pageNumber })
   }
   
   
@@ -94,12 +101,19 @@ const BlogPage = () => {
 
             {
               blogs.map((item,idx)=>{
-                return <SeminarCard key={idx} title={item.title} desc={item.title} url={`/blogs/blog/${item.slug}`} />
+                console.log(item,'cover')
+                return <SeminarCard key={idx} date={item.createdAt} bgImage={item.coverImage} title={item.title} desc={item.excerpt} url={`/blogs/blog/${item.slug}`} />
               })
             }
           </div>
-          <div className='pagination' >
-            <p>{ console.log(array,'aa') }</p>
+          <div className='pagination-container' >
+            <Pagination
+              activePage={pagination.page}
+              itemsCountPerPage={pagination.limit}
+              totalItemsCount={count}
+              pageRangeDisplayed={10}
+              onChange={ (e)=>handlePageChange(e) }
+            />
           </div>
         </div>
       </div>
@@ -109,21 +123,3 @@ const BlogPage = () => {
 
 export default BlogPage
 
-{
-  /* <div>
-      fake api call
-      {call.map((data) => {
-        return(
-          <div key={data.id}> 
-          <table className="table">
-            
-            <tr > 
-              <td className="td">{data.id}</td>
-              <td className="td">{data.title}</td>
-              <td className="td"> {data.description}</td>
-              <td className="td"> {data.category}</td>
-            </tr>
-          </table> 
-          </div>  
-        ) */
-}

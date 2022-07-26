@@ -142,6 +142,9 @@
 
 .blog-container {
   font-size: 2rem!important;
+  h2{
+    font-weight: 700;
+  }
   td{
     font-size: 2rem!important;
   }
@@ -172,6 +175,29 @@
         border-radius: 25px;
       }
     }
+  }
+}
+
+.pagination-container{
+  .pagination{
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      li{
+        font-size: 2rem;
+        padding: 0 1rem;
+        background-color: #eee;
+        margin: 0 2rem;
+        cursor: pointer;
+        &:hover{
+          background: #96bcee80;
+          color: #fff;
+        }
+      }
+      .active{
+        background-color: #96bcee;
+        color: #fff;
+      }
   }
 }
 

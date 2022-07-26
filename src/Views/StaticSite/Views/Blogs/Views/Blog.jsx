@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom'
 //import CommonBannerNav from '../../../Components/CommonBannerNav'
 import './style.scss'
 import Heading from '../../../Components/Heading'
-import BlogGallery from '../../../Components/BlogComponents/BlogGallery'
+//import BlogGallery from '../../../Components/BlogComponents/BlogGallery'
 //import { allBlogData } from '../../../utils/blogData'
 // import BlogParagraph from '../../../Components/BlogComponents/BlogParagraph'
 // import BlogPoints from '../../../Components/BlogComponents/BlogPoints'
@@ -110,8 +110,7 @@ const BlogAnother = () => {
             })}
           </div> */}
         </div>
-      </div>
-      <BlogGallery />
+      </div> 
     </>
   )
 }

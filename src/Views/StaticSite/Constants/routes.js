@@ -311,7 +311,6 @@ const staticSiteRoutes = [
     routePath: '/highlights/yoga_by_the_bay',
     name: 'YogaByTheBay',
   },
-
   {
     Component: SattvikCooking,
     path: '/highlights/sattvik_cooking',
@@ -320,7 +319,6 @@ const staticSiteRoutes = [
     routePath: '/highlights/sattvik_cooking',
     name: 'SattvikCooking',
   },
-
   {
     Component: CorporateWorkshop,
     path: '/highlights/corporate_workshop',
@@ -329,7 +327,6 @@ const staticSiteRoutes = [
     routePath: '/highlights/corporate_workshop',
     name: 'CorporateWorkshop',
   },
-
   {
     Component: FullmoonMeditation,
     path: '/highlights/fullmoon_meditation',
