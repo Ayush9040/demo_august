@@ -4,10 +4,8 @@ import { useSelector,useDispatch } from 'react-redux'
 //import { share } from '../../../assets/icons/icon'
 import './style.scss'
 import SeminarCard from '../../../Components/SeminarCard'
-import baseDomain, { homeAssets } from '../../../assets/images/imageAsset'
 //import CommonBannerNavPrimary from '../../../Components/CommonBannerNavPrimary'
 import { Link } from 'react-router-dom'
-import { allBlogData } from '../../../utils/blogData'
 import InnerNavComponent from '../../../Components/InnerNavComponent'
 import { useEffect } from 'react'
 import { fetchBlogsData } from '../Blogs.action'
@@ -19,7 +17,7 @@ const BlogPage = () => {
 
   const [ pagination,setPagination ] = useState({ page:1,limit:10 })
 
-  const { blogs, count }=useSelector(state=>state.blogs)
+  const { blogs, count, blog }=useSelector(state=>state.blogs)
 
   const dispatch = useDispatch()
 
@@ -42,6 +40,9 @@ const BlogPage = () => {
     setPagination({ ...pagination,page:pageNumber })
   }
   
+  let formatDate = new Date( blog.createdAt )
+
+  let blogDate = formatDate.getDate() + '/'+ formatDate.getMonth()+'/'+formatDate.getFullYear() 
   
 
 
@@ -61,12 +62,12 @@ const BlogPage = () => {
         <div className="alumni-content" id="seminar">
           <div className="newsletter-content">
             <h2>
-              <span className="newsletter-title">{allBlogData[0].title}</span>
-              <span className="newsletter-date">{allBlogData[0].date}</span>
+              <span className="newsletter-title" dangerouslySetInnerHTML={{ __html:`${blog.title}` }} ></span>
+              <span className="newsletter-date">{blogDate}</span>
             </h2>
-            <p>{allBlogData[0].metaDescription}</p>
+            <p dangerouslySetInnerHTML={{ __html:`${blog.excerpt}` }} ></p>
             <div className="options">
-              <Link to={`/blogs/blog/${allBlogData[0].id}`}>
+              <Link to={`/blogs/blog/${blog.slug}`}>
                 <button>Read Story</button>
               </Link>
               {/* <div className="share-icon">{share}</div> */}
@@ -76,7 +77,7 @@ const BlogPage = () => {
             <img
               className="blog-image"
               alt="Upcoming Seminar"
-              src={`${baseDomain}${homeAssets.homeAsset60}`}
+              src={blog.coverImage}
             />
           </div>
         </div>
@@ -101,8 +102,7 @@ const BlogPage = () => {
 
             {
               blogs.map((item,idx)=>{
-                console.log(item,'cover')
-                return <SeminarCard key={idx} date={item.createdAt} bgImage={item.coverImage} title={item.title} desc={item.excerpt} url={`/blogs/blog/${item.slug}`} />
+                if(item.slug!== blog.slug) return <SeminarCard key={idx} date={item.createdAt} bgImage={item.coverImage} title={item.title} desc={item.excerpt} url={`/blogs/blog/${item.slug}`} />
               })
             }
           </div>

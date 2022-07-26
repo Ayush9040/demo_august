@@ -6,7 +6,7 @@ import { fetchBlogsDataAPI, fetchBlogDataAPI } from './Blogs.api'
 export function* handleFetchBlogsDataEffect({ payload }){
   try{
     const { data } = yield call(fetchBlogsDataAPI,payload)
-    yield put (fetchBlogsDataSuccess(data.data,data.count))
+    yield put (fetchBlogsDataSuccess(data.data,data.count,data.latestPost))
   }
   catch {
     yield put (fetchBlogsDataError)

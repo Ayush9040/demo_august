@@ -11,8 +11,8 @@ export const fetchBlogsData = ( payload )=>{
   return { type: blogActions.FETCH_BLOGS_DATA, payload }
 }
 
-export const fetchBlogsDataSuccess = (payload,count)=>{
-  return { type: blogActions.FETCH_BLOGS_DATA_SUCCESS,payload,count }
+export const fetchBlogsDataSuccess = (payload,count,latestBlog)=>{
+  return { type: blogActions.FETCH_BLOGS_DATA_SUCCESS,payload,count,latestBlog }
 }
 
 export const fetchBlogsDataError = ()=>{

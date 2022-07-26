@@ -17,6 +17,7 @@ export const blogsReducer = ( state=initialState,action )=>{
       isLoading:false,
       count:action.count,
       blogs:action.payload,
+      blog:action.latestBlog,
       error:noError
     }
   case blogActions.FETCH_BLOGS_DATA_ERROR:
