@@ -2,15 +2,19 @@ import React,{ useState,useEffect } from 'react'
 import Donation from '../../../Components/Donation'
 import SectionComponent from '../../../Components/SectionComponent'
 import './style.scss'
-import { data } from '../Constants/data'
+// import { data } from '../Constants/data'
+import { useDispatch, useSelector } from 'react-redux'
 import InnerNavComponent from '../../../Components/InnerNavComponent'
 import { useParams } from 'react-router-dom'
+import { fetchDonationsData } from '../Donation.action'
 const SingleDonation = () => {
   const [page,setPage]=useState({})
   const { donationId } = useParams()
+  const dispatch = useDispatch()
   useEffect(() => {
     scrollTo(0, 0)
-    setPage(data.find(point=>(donationId===point.key)))
+    dispatch(fetchDonationsData())
+    setPage(donationPrograms.find(point=>(donationId===point._id)))
   }, [])
 
 
@@ -20,6 +24,8 @@ const SingleDonation = () => {
     menuColor: 'orange',
     menuItems: [],
   }
+
+  const { donationPrograms } = useSelector(state => state.donation)
 
 
 

@@ -8,7 +8,7 @@ import baseDomain, {
 } from '../../../assets/images/imageAsset'
 import InnerNavComponent from '../../../Components/InnerNavComponent'
 
-import { data } from '../Constants/data'
+// import { data } from '../Constants/data'
 import { fetchDonationsData } from '../Donation.action'
 import { useDispatch, useSelector } from 'react-redux'
 
@@ -59,12 +59,12 @@ const DonationPage = () => {
         </CommonBanner>
         {donationPrograms && donationPrograms.map((point, i) => <SectionComponent
           key={i}
-          url={`/donation/donate/${point.key}`}
+          url={`/donation/donate/${point._id}`}
           image={point.image}
           title={point.title}
           page='donation'
           description={point.description}
-          sectionId={point.key}
+          sectionId={point._id}
         />
         )}
       </div>
