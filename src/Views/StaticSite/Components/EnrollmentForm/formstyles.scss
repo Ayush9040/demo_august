@@ -24,8 +24,8 @@
       display: flex;
       justify-content: center;
       svg {
-        height: 6rem;
-        width: 6rem;
+        height: 80px;
+        width: 80px;
       }
     }
     .x {
@@ -51,6 +51,7 @@
     list-style: none;
     flex-wrap: wrap;
     justify-content: flex-start;
+    align-items: baseline;
     li {
       position: relative;
       font-size: 2rem;
