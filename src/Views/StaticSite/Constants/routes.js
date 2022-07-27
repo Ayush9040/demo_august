@@ -605,21 +605,39 @@ const staticSiteRoutes = [
   },
   {
     Component: SingleCourse,
-    path: '/:courseId',
+    path: '/:contentId',
     exact: true,
     id: 'statisSiteCourse',
-    routePath: '/:courseId',
+    routePath: '/:contentId',
     name: 'singleCourse',
+    // 1. desComponent
+    // 2. Switch case
+    // render => loader => API call (Blog or course) => switch *Blog, *Course => loading stop
   },
   {
     Component: BlogAnother,
-    path: '/blogs/:blogId',
+    path: '/:contentId',
     exact: true,
     id: 'statisSiteBlog',
-    routePath: '/blogs/:blogId',
+    routePath: '/:contentId',
     name: 'Blog',
   },
 
 ]
+// const getComponent = () => {
+
+//   switch (contentId) {
+//     case 'BLOG': 
+//     return BlogAnother
+//     case 'Course': 
+//     return SingleCourse
+//   }
+// }
+
+// return (
+//   <>
+//     {isLoading ? <Loader /> : getComponent()}
+//   </>
+// )
 
 export default staticSiteRoutes

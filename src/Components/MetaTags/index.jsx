@@ -5,6 +5,7 @@ import { useLocation } from 'react-router-dom'
 import metaDataObj from '../../Constants/metaData.json'
 
 const MetaTags = () => {
+
   const location = useLocation()
   return (
     <Helmet
