@@ -92,7 +92,7 @@ const SignIn = () => {
               text="Sign In"
               buttonAction={handleSignIn}
             />
-            <Link to={`/enrollment/${course}/?date=${selectDate}`}>
+            <Link to={ course!==undefined ? `/enrollment/${course}/?date=${selectDate}`:'/'}>
               <CommonBtn text={'Continue as a guest'} isColor={'#EA4335'} />
             </Link>
           </label>
