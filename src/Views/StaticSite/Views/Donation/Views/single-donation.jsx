@@ -11,6 +11,7 @@ const SingleDonation = () => {
   const [page,setPage]=useState({})
   const { donationId } = useParams()
   const dispatch = useDispatch()
+  const { donationPrograms } = useSelector(state => state.donation)
   useEffect(() => {
     scrollTo(0, 0)
     dispatch(fetchDonationsData())
@@ -24,8 +25,6 @@ const SingleDonation = () => {
     menuColor: 'orange',
     menuItems: [],
   }
-
-  const { donationPrograms } = useSelector(state => state.donation)
 
 
 
