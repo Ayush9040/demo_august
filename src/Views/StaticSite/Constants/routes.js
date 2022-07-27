@@ -330,14 +330,6 @@ const staticSiteRoutes = [
   },
   //Blogs
   {
-    Component: BlogAnother,
-    path: '/blogs/:blogId',
-    exact: true,
-    id: 'statisSiteBlog',
-    routePath: '/blogs/:blogId',
-    name: 'Blog',
-  },
-  {
     Component: BlogPage,
     path: '/blogs',
     exact: true,
@@ -579,14 +571,6 @@ const staticSiteRoutes = [
   //   routePath: '/careers/*',
   //   name: 'Careers',
   // },
-  {
-    Component: SingleCourse,
-    path: '/:courseId',
-    exact: true,
-    id: 'statisSiteCourse',
-    routePath: '/:courseId',
-    name: 'singleCourse',
-  },
   //donation
   {
     Component:DonationPage,
@@ -619,7 +603,22 @@ const staticSiteRoutes = [
     routePath: '/careers/:jobId',
     name: 'Job',
   },
-
+  {
+    Component: SingleCourse,
+    path: '/:courseId',
+    exact: true,
+    id: 'statisSiteCourse',
+    routePath: '/:courseId',
+    name: 'singleCourse',
+  },
+  {
+    Component: BlogAnother,
+    path: '/blogs/:blogId',
+    exact: true,
+    id: 'statisSiteBlog',
+    routePath: '/blogs/:blogId',
+    name: 'Blog',
+  },
 
 ]
 
