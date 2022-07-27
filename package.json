@@ -19,6 +19,7 @@
     "react-dom": "^18.0.0",
     "react-gallery-carousel": "^0.2.9",
     "react-helmet": "^6.1.0",
+    "react-js-pagination": "^3.0.3",
     "react-rangeslider": "^2.2.0",
     "react-redux": "^8.0.1",
     "react-router-dom": "^6.3.0",

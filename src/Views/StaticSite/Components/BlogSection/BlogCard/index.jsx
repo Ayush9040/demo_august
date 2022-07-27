@@ -4,21 +4,18 @@ import './style.scss'
 
 const BlogCard = ({ blogs }) => {
   return (
-    <Link to={`/blogs/blog/${blogs?.id}`}>
-      <div className='blog-card'>
-        <div className='blog-card-image'>
-          <img src={blogs?.image} alt={blogs.title} />
+    <Link to={`/blogs/blog/${blogs?.slug}`}>
+      <div className="blog-card">
+        <div className="blog-card-image">
+          <img src={blogs?.coverImage} />
         </div>
-        <div className='blog-card-text'>
-          <p className='title'>
-            {blogs?.title?.length > 20
-              ? blogs.title.substring(0, 20) + '...'
-              : blogs.title}
+        <div className="blog-card-text">
+          <p
+            className="title"
+            dangerouslySetInnerHTML={{ __html: `${blogs.title}` }}
+          >
           </p>
-          <p>
-            {blogs.metaDescription.length > 40
-              ? blogs.metaDescription.substring(0, 40) + '...'
-              : blogs.metaDescription}
+          <p className='blogs_meta' dangerouslySetInnerHTML={{ __html: `${blogs.excerpt}` }}>
           </p>
         </div>
       </div>

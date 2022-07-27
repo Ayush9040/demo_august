@@ -1,17 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import { Link, useLocation, useNavigate, useSearchParams } from 'react-router-dom'
 import { useDispatch,useSelector } from 'react-redux'
-
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-// import { faGoogle, faFacebook } from '@fortawesome/free-brands-svg-icons'
 import { loginUserAction } from '../../Auth.actions'
-
 import CommonBtn from '../../../../Components/commonbtn'
 import InputComponent from '../../../../Components/InputComponent'
-
 import { mail, lock } from '../../../../assets/icons/icon'
-
-
 import './style.scss'
 import InnerNavComponent from '../../../../Components/InnerNavComponent'
 
@@ -36,7 +29,6 @@ const SignIn = () => {
 
   useEffect(() => {
     setSetselectDate(Params.get('date'))
-    
   }, [])
 
   useEffect(() => {

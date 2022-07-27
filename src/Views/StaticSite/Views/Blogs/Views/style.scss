@@ -107,13 +107,21 @@
     // height: max-content;
     .seminar-card-image {
       width: fit-content;
-      background-color: darkgray;
+      //background-color: darkgray;
+      //min-height: 200px;
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: fill;
+        border-radius: 20px;
+      }
     }
   }
 }
 //Sub Blog
 .blog-page-container {
   background: #96bcee;
+  padding-bottom: 5rem;
   h1 {
     color: white;
     font-size: 3rem;
@@ -140,13 +148,24 @@
 }
 
 .blog-container {
+  font-size: 2rem!important;
+  h2{
+    font-weight: 700;
+  }
+  td{
+    font-size: 2rem!important;
+  }
   .blog-grid {
     // display: grid;
     // grid-template-columns: 50% 50%;
-    width: 90%;
-    margin: 4rem auto;
+    width: 100%;
+    margin: 0rem auto;
     // gap: 3rem;
     justify-content: center;
+    p,td,tr,th,small{
+      margin: 1rem 0;
+    }
+  
     .blog-text {
       p {
         font-size: 1.8rem;
@@ -163,6 +182,29 @@
         border-radius: 25px;
       }
     }
+  }
+}
+
+.pagination-container{
+  .pagination{
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      li{
+        font-size: 2rem;
+        padding: 0 1rem;
+        background-color: #eee;
+        margin: 0 2rem;
+        cursor: pointer;
+        &:hover{
+          background: #96bcee80;
+          color: #fff;
+        }
+      }
+      .active{
+        background-color: #96bcee;
+        color: #fff;
+      }
   }
 }
 
