@@ -6,16 +6,16 @@ import InnerNavComponent from '../../../Components/InnerNavComponent'
 import { AllCourses } from '../Constants/courses'
 
 const SingleCourse = () => {
-  const { courseId } = useParams()
+  const { contentId } = useParams()
   const [pageDate, setPageData] = useState({})
   const [isLoading, setIsLoadding] = useState(false)
   
   
   useEffect(() =>{
     setIsLoadding(true)
-    setPageData(AllCourses.find(item=>item.key===courseId))
+    setPageData(AllCourses.find(item=>item.key === contentId))
     setIsLoadding(false)
-  }, [courseId])
+  }, [contentId])
   const CareerNameBan = {
     title: 'Career',
     color: 'orange',

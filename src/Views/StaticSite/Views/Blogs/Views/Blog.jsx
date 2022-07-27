@@ -19,12 +19,12 @@ const BlogAnother = () => {
 
   const dispatch = useDispatch()
 
-  const { blogId } = useParams()
+  const { contentId } = useParams()
   //const [pageData, setPageData] = useState({})
   const { blog } = useSelector(state=>state.blogs)
 
   useEffect(() => {
-    dispatch(fetchBlogData(blogId))
+    dispatch(fetchBlogData(contentId))
     window.scrollTo(0,0)
   },[ ])
 

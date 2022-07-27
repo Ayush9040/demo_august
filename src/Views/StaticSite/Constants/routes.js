@@ -13,7 +13,6 @@ const CorporateSocialResponsibilty = lazy(() => import('../Components/CorporateS
 const Course = lazy(() => import('../Views/Courses/Views/course-page'))
 const SingleCsr = lazy(() => import('../Components/CorporateSocialResponsibility/SingleCsr'))
 const BrowseCourses = lazy(() => import('../Views/Courses/Views/browse-courses'))
-const SingleCourse = lazy(() => import('../Views/Courses/Views/course-name'))
 const Experiences = lazy(() => import('../Views/Experience'))
 const Museum = lazy(() => import('../Views/Museum'))
 const Thankyou = lazy(() => import('../Components/EnrollmentForm/ThankYou'))
@@ -55,7 +54,6 @@ const Facts = lazy(()=>import('../Views/Facts/Views/our-facts'))
 // import Facts from '../Views/Facts'
 // import Gift from '../Views/Gifting'
 import Authentication from '../Views/Authentication'
-import BlogAnother from '../Views/Blogs/Views/Blog'
 // import VolunteerPage from '../Views/Volunteer'
 // import VolunteerPage from '../Views/Volunteer'
 // import Thankyou from '../Components/EnrollmentForm/ThankYou'
@@ -74,6 +72,7 @@ import SingleDonation from '../Views/Donation/Views/single-donation'
 import News from '../Views/Media/Views/news'
 import Careers from '../Views/Careers/Views/careers'
 import Gifting from '../Views/Gifting/Views/gifting'
+import DescisionComp from '../Views/DecisionComponent'
 
 
 const staticSiteRoutes = [
@@ -604,7 +603,7 @@ const staticSiteRoutes = [
     name: 'Job',
   },
   {
-    Component: SingleCourse,
+    Component: DescisionComp,
     path: '/:contentId',
     exact: true,
     id: 'statisSiteCourse',
@@ -614,14 +613,14 @@ const staticSiteRoutes = [
     // 2. Switch case
     // render => loader => API call (Blog or course) => switch *Blog, *Course => loading stop
   },
-  {
-    Component: BlogAnother,
-    path: '/:contentId',
-    exact: true,
-    id: 'statisSiteBlog',
-    routePath: '/:contentId',
-    name: 'Blog',
-  },
+  // {
+  //   Component: BlogAnother,
+  //   path: '/:contentId',
+  //   exact: true,
+  //   id: 'statisSiteBlog',
+  //   routePath: '/:contentId',
+  //   name: 'Blog',
+  // },
 
 ]
 // const getComponent = () => {

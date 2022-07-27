@@ -68,7 +68,7 @@ const BlogPage = () => {
             </h2>
             <p dangerouslySetInnerHTML={{ __html:`${blog.excerpt}` }} ></p>
             <div className="options">
-              <Link to={`/blogs/${blog.slug}`}>
+              <Link to={`/${blog.slug}`}>
                 <button>Read Story</button>
               </Link>
               {/* <div className="share-icon">{share}</div> */}
@@ -103,7 +103,7 @@ const BlogPage = () => {
 
             {
               blogs.map((item,idx)=>{
-                if(item.slug!== blog.slug) return <SeminarCard key={idx} date={item.createdAt} bgImage={item.coverImage} title={item.title} desc={item.excerpt} url={`/blogs/${item.slug}`} />
+                if(item.slug!== blog.slug) return <SeminarCard key={idx} date={item.createdAt} bgImage={item.coverImage} title={item.title} desc={item.excerpt} url={`/${item.slug}`} />
               })
             }
           </div>
