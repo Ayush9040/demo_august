@@ -163,6 +163,7 @@ const Personal = ({ handleEmpty1, empty, setFormData, formData, setEmpty }) => {
                   onChange={(e) => {
                     if (e.target.checked) {
                       setFormData({ ...formData, gender: e.target.value })
+                      setEmpty(0)
                     }
                   }}
                 />
