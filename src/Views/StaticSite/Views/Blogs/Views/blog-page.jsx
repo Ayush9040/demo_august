@@ -21,6 +21,7 @@ const BlogPage = () => {
 
   const dispatch = useDispatch()
 
+  
   useEffect(() => {
     dispatch(fetchBlogsData( pagination ))
     scrollTo(0, 0)
