@@ -103,7 +103,7 @@ const BlogPage = () => {
 
             {
               blogs.map((item,idx)=>{
-                if(item.slug!== blog.slug) return <SeminarCard key={idx} date={item.createdAt} bgImage={item.coverImage} title={item.title} desc={item.excerpt} url={`/blogs/blog/${item.slug}`} />
+                if(item.slug!== blog.slug) return <SeminarCard key={idx} date={item.createdAt} bgImage={item.coverImage} title={item.title} desc={item.excerpt} url={`/blogs/${item.slug}`} />
               })
             }
           </div>

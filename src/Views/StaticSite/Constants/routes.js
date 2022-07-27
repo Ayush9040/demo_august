@@ -331,18 +331,18 @@ const staticSiteRoutes = [
   //Blogs
   {
     Component: BlogAnother,
-    path: '/blog/:blogId',
+    path: '/blogs/:blogId',
     exact: true,
     id: 'statisSiteBlog',
-    routePath: '/blog/:blogId',
+    routePath: '/blogs/:blogId',
     name: 'Blog',
   },
   {
     Component: BlogPage,
-    path: '/blog',
+    path: '/blogs',
     exact: true,
     id: 'statisSiteBlog',
-    routePath: '/blog',
+    routePath: '/blogs',
     name: 'Blog',
   },
   //Experiences/Testimonials
@@ -547,14 +547,6 @@ const staticSiteRoutes = [
     routePath: '/gifting',
     name: 'Gifting',
   },
-  // {
-  //   Component: Blogs,
-  //   path: '/blogs/*',
-  //   exact: true,
-  //   id: 'statisSiteUnderBlogs',
-  //   routePath: '/blogs/*',
-  //   name: 'Blogs',
-  // },
   {
     Component: Facts,
     path: '/our-facts/*',
