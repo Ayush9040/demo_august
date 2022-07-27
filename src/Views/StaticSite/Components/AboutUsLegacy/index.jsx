@@ -145,13 +145,14 @@ const CommonBannerLegacy = ({
       img: l5,
     },
   ]
-  // const str = founderData[2].desc[1].length
 
   function truncateString(str, totalTextLength) {
     return str?.length > totalTextLength
       ? str?.slice(0, totalTextLength) + '....'
       : str
   }
+
+
 
   return (
     <>

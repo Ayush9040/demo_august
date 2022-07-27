@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import './style.scss'
-import baseDomain, { publicationAssests } from '../../../assets/images/imageAsset'
+import baseDomain, {
+  publicationAssests,
+} from '../../../assets/images/imageAsset'
 import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
@@ -17,10 +19,10 @@ const Yogasattva = () => {
     arrows: false,
   }
   const publicationSattva = {
-    title:'yogasttav',
-    color:'white',
-    menuColor:'white',
-    menuItems:[
+    title: 'yogasttav',
+    color: 'white',
+    menuColor: 'white',
+    menuItems: [
       {
         innerTitle:'yoga-health',
         url:'/yoga-and-total-health',
@@ -72,7 +74,6 @@ const Yogasattva = () => {
       `${baseDomain}${publicationAssests.ythAssets47}`,
       `${baseDomain}${publicationAssests.ythAssets48}`,
       `${baseDomain}${publicationAssests.ythAssets49}`,
-   
     ],
     2019: [
       `${baseDomain}${publicationAssests.ythAssets50}`,
@@ -86,7 +87,7 @@ const Yogasattva = () => {
       `${baseDomain}${publicationAssests.ythAssets58}`,
       `${baseDomain}${publicationAssests.ythAssets59}`,
       `${baseDomain}${publicationAssests.ythAssets60}`,
-      `${baseDomain}${publicationAssests.ythAssets61}`
+      `${baseDomain}${publicationAssests.ythAssets61}`,
     ],
     2020: [
       `${baseDomain}${publicationAssests.ythAssets73}`,
@@ -100,7 +101,7 @@ const Yogasattva = () => {
       `${baseDomain}${publicationAssests.ythAssets81}`,
       `${baseDomain}${publicationAssests.ythAssets82}`,
       `${baseDomain}${publicationAssests.ythAssets83}`,
-      `${baseDomain}${publicationAssests.ythAssets84}`
+      `${baseDomain}${publicationAssests.ythAssets84}`,
     ],
     2021: [
       `${baseDomain}${publicationAssests.ythAssets62}`,
@@ -113,11 +114,19 @@ const Yogasattva = () => {
       `${baseDomain}${publicationAssests.ythAssets69}`,
       `${baseDomain}${publicationAssests.ythAssets70}`,
       `${baseDomain}${publicationAssests.ythAssets71}`,
-      `${baseDomain}${publicationAssests.ythAssets72}`,      
+      `${baseDomain}${publicationAssests.ythAssets72}`,
     ],
   }
 
-  const [bold, setBold] = useState(1)
+  const [bold, setBold] = useState(5)
+
+  const nextHandler = () => {
+    if(bold===1){
+      setBold(5)
+    }else{
+      setBold(bold-1)
+    }
+  }
 
   return (
     <>
@@ -249,7 +258,7 @@ const Yogasattva = () => {
         </div>
         <div>
           <div className="previous-container">
-            <div id='previous-issue-scroll'>
+            <div id="previous-issue-scroll">
               {bold === 1 ? (
                 <>
                   {images[2017].map((image, i) => (
@@ -282,6 +291,14 @@ const Yogasattva = () => {
                     </div>
                   ))}
                 </>
+              ) : bold === 5 ? (
+                <>
+                  {images[2021].map((image, i) => (
+                    <div key={i} className="preivous-box">
+                      <img src={image} alt="root-image" />
+                    </div>
+                  ))}
+                </>
               ) : (
                 <>
                   {images[2021].map((image, i) => (
@@ -293,6 +310,9 @@ const Yogasattva = () => {
               )}
             </div>
           </div>
+          <button className="yogasattva-btn" onClick={nextHandler}>
+            Next
+          </button>
 
           {/* <div className="previous-container">
             <div className="preivous-box"></div>

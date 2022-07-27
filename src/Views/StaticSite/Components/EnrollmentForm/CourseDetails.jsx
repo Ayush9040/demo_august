@@ -1,7 +1,7 @@
 import React,{ useEffect } from 'react'
 import { useState } from 'react'
 import { upload } from '../../assets/icons/icon'
-import { uploadFile } from '../../Views/Courses/Helper'
+import { uploadFile } from '../../../../helpers/OssHelper'
 const CourseDetails = ({
   currentCourse,
   courseDate,
@@ -37,6 +37,7 @@ const CourseDetails = ({
   // }
 
   const uploadDoc = async(file,type, changeValue)=> {
+    
     const url = await uploadFile( file,type )
     if(changeValue==='CERTIFICATE'){
       setCourseAsset2(url)
@@ -176,13 +177,13 @@ const CourseDetails = ({
                   <label htmlFor="resume">
                     {courseAsset2
                       ? certificateName.substring(0, 15)
-                      : 'Upload Certificate '}
+                      : 'Upload Resmue '}
                     <input
                       type={'file'}
-                      onChange={(e) => {uploadDoc(e.target.files[0],'certificate','CERTFICATE');setcertificateName(e.target.files[0].name)}}
+                      onChange={(e) => {uploadDoc(e.target.files[0],'applicant_certificate','CERTFICATE');setcertificateName(e.target.files[0].name)}}
                       id="resume"
                       accept=".pdf"
-                      placeholder="Upload Certificate"
+                      placeholder="Upload Resume"
                     />
                     &ensp;
                     {upload}
@@ -196,7 +197,7 @@ const CourseDetails = ({
                     <input
                       type={'file'}
                       id="image"
-                      onChange={(e) => {uploadDoc(e.target.files[0],'user_iamge','IMAGE');setPictureName(e.target.files[0].name)}}
+                      onChange={(e) => {uploadDoc(e.target.files[0],'applicant_image','IMAGE');setPictureName(e.target.files[0].name)}}
                       placeholder="Upload Passport size photo"
                       accept="image/*"
                     />

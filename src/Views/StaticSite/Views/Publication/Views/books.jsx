@@ -4,7 +4,8 @@ import axios from 'axios'
 import InnerNavComponent from '../../../Components/InnerNavComponent'
 const Books = () => {
   const [product, setProduct] = useState([])
-  // const [categories, setCategories] = useState([])
+  const [categories, setCategories] = useState([])
+  console.log(categories)
 
   useEffect(() => {
     axios

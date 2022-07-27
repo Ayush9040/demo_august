@@ -128,9 +128,9 @@ const Enrollment = () => {
       formData.phone.length < 10 ||
       formData.phone.length > 10
     ) {
-      return setEmpty(2)
-    } else if (!validateEmail(formData.email)) {
       return setEmpty(3)
+    } else if (!validateEmail(formData.email)) {
+      return setEmpty(2)
     } else if (formData.address1 === '') {
       return setEmpty(4)
     } else if (formData.country === '') {
@@ -154,28 +154,32 @@ const Enrollment = () => {
   }
 
   const handleEmpty2 = () => {
-    if (formData.school === '') {
-      setYearEmpty(1)
-    } else if (formData.course === '') {
-      setYearEmpty(2)
-    } else if (formData.completion.length !== 4) {
-      return setYearEmpty(3)
-    } else
-      setQualificationData([
-        ...qualificationData,
-        {
-          schoolOrCollege: formData.school,
-          course: formData.course,
-          yearOfCompletion: formData.completion,
-          listedQualification: formData.course,
-        },
-      ])
-    setEmpty(0)
-    setFormData({ ...formData, school: '', course: '', completion: '' })
-    setBold(2)
     if (qualificationData.length === 0) {
-      return setEmpty(1)
-    } else {setBold(2);setEmpty(0)}
+      if (formData.school === '') {
+        setYearEmpty(1)
+      } else if (formData.course === '') {
+        setYearEmpty(2)
+      } else if (formData.completion.length !== 4) {
+        return setYearEmpty(3)
+      } else{
+        setQualificationData([
+          ...qualificationData,
+          {
+            schoolOrCollege: formData.school,
+            course: formData.course,
+            yearOfCompletion: formData.completion,
+            listedQualification: formData.course,
+          },
+        ])
+        setEmpty(0)
+        setFormData({ ...formData, school: '', course: '', completion: '' })
+        setBold(2)
+      } 
+    }
+    else{
+      setEmpty(0)
+      setBold(2)
+    }
   }
 
   // const handleEmpty3 = () => {
@@ -287,6 +291,7 @@ const Enrollment = () => {
               empty={empty}
               formData={formData}
               yearEmpty={yearEmpty}
+              setYearEmpty={setYearEmpty}
               setFormData={setFormData}
               handleEmpty2={handleEmpty2}
               qualificationData={qualificationData}
@@ -303,6 +308,7 @@ const Enrollment = () => {
                 resgin={resgin}
                 setFormData={setFormData}
                 // handleEmpty3={handleEmpty3}
+                setYearEmpty={setYearEmpty}
                 yearEmpty={yearEmpty}
                 listDetailHandler={listDetailHandler}
                 listData={listData}

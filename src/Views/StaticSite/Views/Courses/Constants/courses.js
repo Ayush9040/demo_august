@@ -1,10 +1,20 @@
-import baseDomain, { courseAssets, homeAssets } from '../../../assets/images/imageAsset'
+import baseDomain, {
+  courseAssets,
+  homeAssets,
+} from '../../../assets/images/imageAsset'
 
 const ttc200hr = {
   1: {
     id: '',
-    templateId: 'COURSE200_1M_TTC',
     key: 'one-month-ttc',
+    // templateId: 'COURSE200_1M_TTC',
+    templateId: {
+      templateOnline: 'COURSE200_1M_ONLINE_TTC',
+      templateOffline: {
+        templateResidential: 'COURSE200_RES_TTC',
+        templateNonResidential: 'COURSE200_NONRES_TTC'
+      }
+    },
     batch: 1,
     metaDescription:
       'You will learn the tools to master your physical, mental and spiritual well-being. You will see a marked improvement in your life, relationships and work.',
@@ -21,8 +31,6 @@ const ttc200hr = {
     category: 'ttc',
     title: '200 hrs TTC  Batch 1 - 1 Month TTC Online & On Campus - English',
     dates: [
-      '1st June to 30th June 2022',
-      '1st July to 31st July 2022',
       '1st Aug to 31st Aug 2022',
       '1st Sept to 30th Sept 2022',
       '1st Oct to 31st Oct 2022',
@@ -84,7 +92,7 @@ const ttc200hr = {
         type: 'paragraph',
         content: {
           title: 'Date',
-          text: ['1st July 2022to 31st July 2022'],
+          text: ['1st Aug 2022 to 31st Aug 2022'],
         },
       },
       {
@@ -322,8 +330,16 @@ const ttc200hr = {
   },
   2: {
     id: '',
-    templateId: 'COURSE200_1M_TTC2',
     key: '200-hrs-part-time-ttc-on-campus-english',
+    // id: '',
+    // templateId: 'COURSE200_1M_TTC2',
+    templateId: {
+      templateOnline: '',
+      templateOffline: {
+        templateResidential: 'COURSE200_2M_RES_TTC',
+        templateNonResidential: 'COURSE200_2M_NONRES_TTC'
+      }
+    },
     batch: 2,
     metaDescription:
       'You will learn the tools to master your physical, mental and spiritual well-being. You will see a marked improvement in your life, relationships and work.',
@@ -634,8 +650,15 @@ const ttc200hr = {
   },
   3: {
     id: '',
-    templateId: 'COURSE200_2M_TTC2',
     key: '200-hrs-parttime-ttc-online-english',
+    // templateId: 'COURSE200_2M_TTC2',
+    templateId: {
+      templateOnline: 'COURSE200_1M_ONLINE_TTC',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: ''
+      }
+    },
     batch: 3,
     metaDescription:
       'You will learn the tools to master your physical, mental and spiritual well-being. You will see a marked improvement in your life, relationships and work.',
@@ -653,7 +676,6 @@ const ttc200hr = {
     category: 'ttc',
     title: '200 hrs TTC  Batch 3 - 2 Months TTC Online  - English',
     dates: [
-      '6th June to 30th July 2022',
       '8th Aug to 1st Oct 2022',
       '10th Oct to 3rd Dec 2022',
       '12th Dec to 4th Feb 2023',
@@ -949,8 +971,15 @@ const ttc200hr = {
   },
   4: {
     id: '',
-    templateId: 'COURSE200_2M_TTC_HINDI',
     key: '200-hrs-part-time-ttc-online',
+    // templateId: 'COURSE200_2M_TTC_HINDI',
+    templateId: {
+      templateOnline: 'COURSE200_2M_ONLINE_HINDI_TTC',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: ''
+      }
+    },
     batch: 4,
     metaDescription:
       'You will learn the tools to master your physical, mental and spiritual well-being. You will see a marked improvement in your life, relationships and work.',
@@ -967,7 +996,6 @@ const ttc200hr = {
     category: 'ttc',
     title: '200 hrs TTC  Batch 4 - 2 Months TTC Online  - Hindi',
     dates: [
-      '13th June to 6th Aug 2022',
       '15th Aug to 8th Oct 2022',
       '17th Oct to 10th Dec 2022',
       '19th Dec to 11th Feb 2023',
@@ -1023,7 +1051,7 @@ const ttc200hr = {
         type: 'paragraph',
         content: {
           title: 'Date',
-          text: ['13th June 2022to 6th August 2022'],
+          text: ['15th Aug 2022 to 8th Oct 2022'],
         },
       },
       {
@@ -1261,8 +1289,15 @@ const ttc200hr = {
   },
   5: {
     id: '',
-    templateId: 'COURSE200_2M_TTC',
     key: '200-hrs-parttime-ttc-online-english-batch-5',
+    // templateId: 'COURSE200_2M_TTC',
+    templateId: {
+      templateOnline: 'COURSE200_2M_ONLINE_TTC',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: ''
+      }
+    },
     batch: 5,
     metaDescription:
       'You will learn the tools to master your physical, mental and spiritual well-being. You will see a marked improvement in your life, relationships and work.',
@@ -1279,7 +1314,6 @@ const ttc200hr = {
     category: 'ttc',
     title: '200 hrs TTC Batch 5 - 2 Months TTC Online  - English',
     dates: [
-      '27th June to 20th Aug 2022',
       '29th Aug to 22nd Oct 2022',
       '31st Oct to 24th Dec 2022',
     ],
@@ -1327,7 +1361,7 @@ const ttc200hr = {
         type: 'paragraph',
         content: {
           title: 'Duration',
-          text: ['27th June 2022to 20th August 2022'],
+          text: [],
         },
       },
       {
@@ -1572,8 +1606,15 @@ const ttc200hr = {
   },
   6: {
     id: '',
-    templateId: 'COURSE200_3M_TTC',
     key: 'weekend-teacher-training-course',
+    // templateId: 'COURSE200_3M_TTC',
+    templateId: {
+      templateOnline: 'COURSE200_WEEKEND_TTC',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: ''
+      }
+    },
     batch: 6,
     metaDescription:
       'You will learn the tools to master your physical, mental and spiritual well-being. You will see a marked improvement in your life, relationships and work.',
@@ -1593,7 +1634,7 @@ const ttc200hr = {
     dates: [
       '4th June to 21st Aug 2022',
       '27th Aug to 13th Nov 2022',
-      '19th Nov to 5th Feb 2022',
+      '19th Nov to 5th Feb 2023',
     ],
     online: true,
     onCampus: false,
@@ -1889,8 +1930,15 @@ const ttc200hr = {
 const ttc500hr = {
   1: {
     id: '',
-    templateId: 'COURSE500_3M_TTC',
     key: '500-hrs-online-yoga-teacher-training-course-intermediate-level',
+    // templateId: 'COURSE500_3M_TTC',
+    templateId: {
+      templateOnline: 'COURSE500_3M_ON_TTC',
+      templateOffline : {
+        templateResidential: '',
+        templateNonResidential: ''
+      }
+    },
     batch: 1,
     metaDescription:
       'You will learn the tools to master your physical, mental and spiritual well-being. You will see a marked improvement in your life, relationships and work.',
@@ -2149,8 +2197,15 @@ const ttc500hr = {
 const ttc900hr = {
   1: {
     id: '',
-    templateId: 'GENERAL_AUTO_EMAIL',
     key: '3-months-advanced-teacher-training-course',
+    // templateId: 'GENERAL_AUTO_EMAIL',
+    templateId: {
+      templateOnline: 'GENERAL_AUTO_EMAIL',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: ''
+      }
+    },
     batch: 1,
 
     metaDescription:
@@ -2656,8 +2711,16 @@ const ttc900hr = {
   },
   2: {
     id: '',
-    templateId: 'COURSE900_1Y_TTC',
     key: 'one-year-ttc',
+    // id: '',
+    // templateId: 'COURSE900_1Y_TTC',
+    templateId: {
+      templateOnline: 'COURSE900_1Y_ON_HINDI_TTC',
+      templateOffline: {
+        templateResidential: 'COURSE900_1Y_RES_TTC',
+        templateNonResidential: 'COURSE900_1Y_NONRES_HINDI_TTC'
+      }
+    },
     batch: 1,
     metaDescription:
       'You will learn the tools to master your physical, mental and spiritual well-being. You will see a marked improvement in your life, relationships and work.',
@@ -3255,9 +3318,17 @@ const ttc900hr = {
     ],
   },
   3: {
+    // templateId: 'COURSE900_1Y_TTC',
     id: '',
-    templateId: 'COURSE900_2Y_TTC',
     key: 'two-year-ttc',
+    // templateId: 'COURSE900_2Y_TTC',
+    templateId: {
+      templateOnline: 'COURSE900_2Y_ON_TTC',
+      templateOffline: {
+        templateResidential: 'COURSE900_2Y_RES_TTC',
+        templateNonResidential: 'COURSE900_2Y_NONRES_TTC'
+      }
+    },
     batch: 1,
 
     metaDescription:
@@ -3867,8 +3938,16 @@ const ttc900hr = {
   },
   4: {
     id: '',
-    templateId: 'COURSE900_4M_TTC',
     key: '900-hours-advanced-teacher-training-course',
+    // id: '',
+    // templateId: 'COURSE900_4M_TTC',
+    templateId: {
+      templateOnline: 'COURSE900_4M_ON_TTC',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: ''
+      }
+    },
     batch: 1,
 
     metaDescription:
@@ -4465,8 +4544,15 @@ const ttc900hr = {
   },
   5: {
     id: '',
-    templateId: 'COURSE900_7M_TTC',
     key: 'seven-month-ttc',
+    // templateId: 'COURSE900_7M_TTC',
+    templateId: {
+      templateOnline: 'COURSE900_7M_ON_TTC',
+      templateOffline: {
+        templateResidential: 'COURSE900_7M_RES_TTC',
+        templateNonResidential: 'COURSE900_7M_NONRES_TTC'
+      }
+    },
     batch: 1,
 
     metaDescription:
@@ -5079,10 +5165,17 @@ const camps = {
     batch: 1,
     mostPopular: false,
     rating: 5,
-    templateId:'GENERAL_AUTO_EMAIL',
+    // templateId: 'GENERAL_AUTO_EMAIL',
+    templateId: {
+      templateOnline: 'GENERAL_AUTO_EMAIL',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: ''
+      }
+    },
     colorCode: '#EDBE66',
     timing: '9.30 AM to 5.30 PM',
-    fees:{
+    fees: {
       onlineFee: 500,
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
@@ -5090,7 +5183,7 @@ const camps = {
     metaDescription:
       'Specific pranayama, asana and relaxation techniques to enhance your state of mind',
     image: `${baseDomain}${courseAssets.courseAsset8}`,
-    cardImage: `${baseDomain}${courseAssets.courseAsset8}`,
+    cardImage: `${baseDomain}${courseAssets.courseAsset112}`,
     dates: ['27th August 2022', '22nd October 2022', '26th December 2022'],
     online: true,
     onCampus: true,
@@ -5207,7 +5300,14 @@ const camps = {
     title: 'Cardiac & Hypertension Workshop',
     key: 'cardiac-hypertension-workshop',
     batch: 1,
-    templateId:'GENERAL_AUTO_EMAIL',
+    // templateId: 'GENERAL_AUTO_EMAIL',
+    templateId: {
+      templateOnline: 'GENERAL_AUTO_EMAIL',
+      templateOffline:{
+        templateResidential: '',
+        templateNonResidential: ''
+      }
+    },
     mostPopular: false,
     rating: 5,
     colorCode: '#DDAB58',
@@ -5219,7 +5319,7 @@ const camps = {
     category: 'camps',
     metaDescription:
       'Powerful and effective asana, pranayama, and relaxation techniques to alleviate heart ailments',
-    image: `${baseDomain}${courseAssets.courseAsset6}`,
+    image: `${baseDomain}${courseAssets.courseAsset111}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset6}`,
     dates: ['27th August 2022', '22nd October 2022', '26th December 2022'],
     online: true,
@@ -5331,8 +5431,15 @@ const camps = {
     id: '',
     title: 'Diabetes Camp ',
     key: 'diabetes-camp',
-    batch: 1,
-    templateId:'GENERAL_AUTO_EMAIL',
+    // batch: 1,
+    // templateId: 'GENERAL_AUTO_EMAIL',
+    templateId: {
+      templateOnline: 'GENERAL_AUTO_EMAIL',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: ''
+      }
+    },
     dates: [
       '5th June 2022',
       '7th August 2022',
@@ -5471,7 +5578,14 @@ const camps = {
     title: 'Diet Workshop',
     key: 'diet-workshop',
     batch: 1,
-    templateId:'GENERAL_AUTO_EMAIL',
+    // templateId: 'GENERAL_AUTO_EMAIL',
+    templateId: {
+      templateOnline: 'GENERAL_AUTO_EMAIL',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: ''
+      }
+    },
     dates: [],
     mostPopular: false,
     rating: 5,
@@ -5600,12 +5714,19 @@ const camps = {
     title: 'Digestion Camp',
     key: 'digestion-camp',
     batch: 1,
-    templateId:'GENERAL_AUTO_EMAIL',
+    // templateId: 'GENERAL_AUTO_EMAIL',
+    templateId: {
+      templateOnline: 'GENERAL_AUTO_EMAIL',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: ''
+      }
+    },
     mostPopular: false,
     rating: 5,
     colorCode: '#DDAB58',
     timing: '9.30 AM to 5.30 PM',
-    fees:{
+    fees: {
       onlineFee: 500,
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
@@ -5734,12 +5855,19 @@ const camps = {
     title: 'Karma Yoga',
     key: 'karma-yoga',
     batch: 1,
-    templateId:'GENERAL_AUTO_EMAIL',
+    // templateId: 'GENERAL_AUTO_EMAIL',
+    templateId: {
+      templateOnline: 'GENERAL_AUTO_EMAIL',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: ''
+      }
+    },
     mostPopular: false,
     rating: 5,
     colorCode: '#CE9B51',
     timing: '9.30 AM to 5.30 PM',
-    fees:{
+    fees: {
       onlineFee: 500,
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
@@ -5872,7 +6000,14 @@ const camps = {
     title: 'Life Management Camp',
     key: 'life-management-camp',
     batch: 1,
-    templateId:'GENERAL_AUTO_EMAIL',
+    // templateId: 'GENERAL_AUTO_EMAIL',
+    templateId: {
+      templateOnline: 'GENERAL_AUTO_EMAIL',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: ''
+      }
+    },
     mostPopular: false,
     rating: 5,
     colorCode: '#EDBE66',
@@ -5885,7 +6020,7 @@ const camps = {
     metaDescription:
       'Specific pranayama, asana and relaxation techniques to enhance your state of mind',
     image: `${baseDomain}${courseAssets.courseAsset8}`,
-    cardImage: `${baseDomain}${courseAssets.courseAsset107}`,
+    cardImage: `${baseDomain}${courseAssets.courseAsset112}`,
     dates: [],
     online: true,
     onCampus: true,
@@ -6002,12 +6137,19 @@ const camps = {
     title: 'Meditation Camp',
     key: 'meditation-camp',
     batch: 1,
-    templateId:'GENERAL_AUTO_EMAIL',
+    // templateId: 'GENERAL_AUTO_EMAIL',
+    templateId: {
+      templateOnline: 'GENERAL_AUTO_EMAIL',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: ''
+      }
+    },
     mostPopular: false,
     rating: 5,
     colorCode: '#DDAB58',
     timing: '9.30 AM to 5.30 PM',
-    fees:{
+    fees: {
       onlineFee: 500,
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
@@ -6132,14 +6274,21 @@ const camps = {
     title: 'Pranayama Workshop',
     key: 'pranayama-workshop',
     batch: 1,
-    templateId:'GENERAL_AUTO_EMAIL',
+    // templateId: 'GENERAL_AUTO_EMAIL',
+    templateId: {
+      templateOnline: 'GENERAL_AUTO_EMAIL',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: ''
+      }
+    },
     dates: [
       '18th June 2022',
       '21st August 2022',
       '16th October 2022',
       '18th December 2022',
     ],
-    mostPopular: true,
+    mostPopular: false,
     rating: 5,
     colorCode: '#CE9B51',
     timing: '8:00 am – 11:00 am (IST)',
@@ -6267,16 +6416,19 @@ const camps = {
     title: 'Pregnancy Camp For Ante & Post Natal',
     key: 'pregnancy-camp-for-ante-post-natal',
     batch: 1,
-    templateId:'GENERAL_AUTO_EMAIL',
+    // templateId: 'GENERAL_AUTO_EMAIL',
+    templateId: {
+      templateOnline: 'GENERAL_AUTO_EMAIL',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: ''
+      }
+    },
     dates: [
-      '18th June 2022',
-      '19th June 2022',
-      '20th August 2022',
-      '21st August 2022',
-      '15th October 2022',
-      '16th October 2022',
-      '17th December 2022',
-      '18th December 2022',
+      '18th Jun to 19th Jun 2022',
+      '20th Aug to 21st Aug 2022',
+      '15th Oct to 16th Oct 2022',
+      '17th Dec to 18th Dec 2022',
     ],
     mostPopular: false,
     rating: 5,
@@ -6404,7 +6556,14 @@ const camps = {
     title: 'Respiratory Workshop',
     key: 'respiratory-workshop',
     batch: 1,
-    templateId:'GENERAL_AUTO_EMAIL',
+    // templateId: 'GENERAL_AUTO_EMAIL',
+    templateId: {
+      templateOnline: 'GENERAL_AUTO_EMAIL',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: ''
+      }
+    },
     dates: [],
     mostPopular: false,
     rating: 5,
@@ -6532,7 +6691,14 @@ const camps = {
     title: 'Senior Citizen Workshop',
     key: 'senior-citizen-workshop',
     batch: 1,
-    templateId:'GENERAL_AUTO_EMAIL',
+    // templateId: 'GENERAL_AUTO_EMAIL',
+    templateId: {
+      templateOnline: 'GENERAL_AUTO_EMAIL',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: ''
+      }
+    },
     dates: [],
     mostPopular: false,
     rating: 5,
@@ -6662,7 +6828,14 @@ const camps = {
     title: 'Stress Management Camp',
     key: 'stress-management-camp',
     batch: 1,
-    templateId:'GENERAL_AUTO_EMAIL',
+    // templateId: 'GENERAL_AUTO_EMAIL',
+    templateId: {
+      templateOnline: 'GENERAL_AUTO_EMAIL',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: ''
+      }
+    },
     dates: [
       '12th June 2022',
       '14th August 2022',
@@ -6796,7 +6969,14 @@ const camps = {
     title: 'Weight Management Workshop',
     key: 'weight-management-workshop',
     batch: 1,
-    templateId:'GENERAL_AUTO_EMAIL',
+    // templateId: 'GENERAL_AUTO_EMAIL',
+    templateId: {
+      templateOnline: 'GENERAL_AUTO_EMAIL',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: ''
+      }
+    },
     dates: [
       '4th June 2022',
       '6th August 2022',
@@ -6929,7 +7109,14 @@ const camps = {
     title: 'Women’s Camp',
     key: 'womens-camp',
     batch: 1,
-    templateId:'GENERAL_AUTO_EMAIL',
+    // templateId: 'GENERAL_AUTO_EMAIL',
+    templateId: {
+      templateOnline: 'GENERAL_AUTO_EMAIL',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: ''
+      }
+    },
     dates: [
       '11th June 2022',
       '13th August 2022',
@@ -7068,7 +7255,14 @@ const camps = {
     title: 'Back & Joint Disorder Workshop',
     key: 'back-joint-disorder-workshop',
     batch: 1,
-    templateId:'GENERAL_AUTO_EMAIL',
+    // templateId: 'GENERAL_AUTO_EMAIL',
+    templateId: {
+      templateOnline: 'GENERAL_AUTO_EMAIL',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: ''
+      }
+    },
     dates: [
       '26th June 2022',
       '28th August 2022',
@@ -7200,18 +7394,25 @@ const camps = {
     title: '7 Days Health Camp - On Campus - Hindi ',
     key: '7-days-camp',
     batch: 1,
-    templateId: 'CAMP_FOR_7_DAYS_HEALTH',
-    dates: ['13th August 2022', '12th November 2022'],
+    // templateId: 'CAMP_FOR_7_DAYS_HEALTH',
+    templateId: {
+      templateOnline: 'CAMP_FOR_7_DAYS_HEALTH',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: ''
+      }
+    },
+    dates: ['13th Aug to 19th Aug 2022', '12th Nov to 18th Nov 2022'],
     online: false,
     onCampus: true,
     nonResidential: true,
     residential: true,
     certficate: false,
-    mostPopular: false,
+    mostPopular: true,
     rating: 5,
     colorCode: '#EDBE66',
     timing: '5:00 pm – 8:00 pm (IST)',
-    fees:{
+    fees: {
       onlineFee: 8,
       offlineFee: { residentialFee: 12000, nonResidentialFee: 8000 },
     },
@@ -7548,969 +7749,15 @@ const camps = {
       '21 Days BLC - Batch 2 - 21 Days BLC - Evening - Online & On Campus - English',
     key: '21-days-better-living-course-batch-2',
     batch: 2,
-    templateId:'GENERAL_AUTO_EMAIL',
-    dates: [
-      '19th June to 9th July 2022',
-      '10th July to 30th July 2022',
-      '21st Aug to 10th Sept 2022',
-      '11th Sept to 1st Oct 2022',
-      '2nd Oct to 22nd Oct 2022',
-      '23rd Oct to 12th Nov 2022',
-      '13th Nov to 3rd Dec 2022',
-      '4th Dec to 24th Dec 2022',
-      '25th Dec to 14 Jan 2023',
-    ],
-    online: true,
-    onCampus: true,
-    nonResidential: false,
-    residential: false,
-    certficate: false,
-    mostPopular: false,
-    rating: 5,
-    colorCode: '#EDBE66',
-    timing: 'Evening: 6:30 pm – 8:00 pm (IST)',
-    fees:{
-      onlineFee: 1600,
-      offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
+    // templateId: 'GENERAL_AUTO_EMAIL',
+    templateId: {
+      templateOnline: 'GENERAL_AUTO_EMAIL',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: ''
+      }
     },
-    category: 'camps',
-    metaDescription:
-      'Become successful, healthy, stress-free, and more mindful in your relationships by learning the yogic way of living. Join The Yoga Institute’s 21-Days Better Living Course. ',
-    image: `${baseDomain}${courseAssets.courseAsset34}`,
-    cardImage: `${baseDomain}${courseAssets.courseAsset34}`,
-    details: [
-      {
-        type: 'paragraph',
-        content: {
-          title: 'Overview',
-          text: [
-            'Become successful, healthy, stress-free, and more mindful in your relationships by learning the yogic way of living. Join The Yoga Institute’s 21-Days Better Living Course. ',
-          ],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: '',
-          text: [
-            'It takes 21 days to build a habit into your daily routine. The Yoga Institute’s 21 Days Better Living Course is a course specifically designed to introduce you to the yogic way of living. begin your journey into the discovery of Yoga. Working professionals and house makers can take just one hour from their day to practice and learn yoga and begin their transformational journey. ',
-            'This is a certificate course and has been successfully conducted for 50 years by the Institute. The program trains you holistically and enables you to achieve equilibrium between your mind and body and thus achieve a state of peace and happiness in life. The course is conducted by trained teachers at the Institute.',
-          ],
-        },
-      },
-      {
-        type: 'u-list',
-        content: {
-          title: ' TThe programme covers an introduction to: ',
-          points: [
-            {
-              listItem: 'Astanga Yoga',
-              subItems: [],
-            },
-            {
-              listItem: 'Asanas',
-              subItems: [],
-            },
-            {
-              listItem: 'Pranayama',
-              subItems: [],
-            },
-            {
-              listItem: 'Kriyas',
-              subItems: [],
-            },
-            {
-              listItem: 'Attitude training  ',
-              subItems: [],
-            },
-            {
-              listItem: 'Parisamvad (sessions with Dr. Hansaji)',
-              subItems: [],
-            },
-          ],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: '',
-          text: [
-            'It is ideal for anyone who wants to live a yoga way of life and experience peace within. It helps you to incorporate Yogic ideals in every field of your daily life. ',
-          ],
-        },
-      },
-
-      {
-        type: 'u-list',
-        content: {
-          title: ' Benefits of this camp: ',
-          points: [
-            {
-              listItem:
-                'Helps you in developing and maintaining the right routine for your overall health ',
-              subItems: [],
-            },
-
-            {
-              listItem: 'Helps you reduce stress and anxiety',
-              subItems: [],
-            },
-            {
-              listItem: 'Helps you feel energetic throughout the day',
-              subItems: [],
-            },
-            {
-              listItem: 'Helps you become mindful in your relationships',
-              subItems: [],
-            },
-            {
-              listItem: ' Helps you get more in control of your feelings',
-              subItems: [],
-            },
-          ],
-        },
-      },
-
-      {
-        type: 'paragraph',
-        content: {
-          title: '',
-          text: [
-            'Come and experience, amidst nature and beauty, our enriching 21 Days Better Living Course.',
-          ],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'PROGRAM DETAILS',
-          text: [
-            'The course is held once a month, starting on the first Sunday (7:00 a.m.) of every month. The classes are of 1 hr. 30 mins each day for 21 consecutive days. Participants can opt for the morning or evening batches.',
-          ],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'UPCOMING DATES FOR 2022',
-          text: ['19th June 2022to 9th July 2022'],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'Timings',
-          text: ['Evening 6:30 pm – 8:00 pm (IST)'],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'REGISTRATION',
-          text: [],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: '',
-          text: [
-            'For registration in the 21 Days Better Living Course, please click on the link below and fill in all the details. Within 24 hours after registering, you will receive an email containing the link to the payment portal. You can use the link to make the payment.',
-          ],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'FEES',
-          text: [],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'Rs. 1600/-',
-          text: [
-            '*Please note fees once paid will be non-refundable.',
-            ' We support all credit cards. For making payments using MasterCard. Alternatively, you can also make payments using net banking or opt for wire transfer by writing to us.',
-          ],
-        },
-      },
-
-      {
-        type: 'paragraph',
-        content: {
-          title: 'PRE-REQUISITES',
-          text: [],
-        },
-      },
-      {
-        type: 'u-list',
-        content: {
-          title: ' A MANDATORY PREREQUISITE FOR THIS COURSE IS:',
-          points: [
-            {
-              listItem:
-                'Covid test RT-PCR results dated 20th January 2022to 28th January 2022and later for entry into the premises post prior registration. ',
-              subItems: [],
-            },
-            {
-              listItem:
-                'Students must use personal vehicles for commuting, throughout the course duration. We would discourage the use of public transport. (For non-residential students)',
-              subItems: [],
-            },
-            {
-              listItem:
-                'This course is for healthy individuals. Kindly note if you suffer from any health issues like diabetes, hypertension, or orthopaedic problems, kindly take prior approval.',
-              subItems: [],
-            },
-            {
-              listItem:
-                'For international Students, it is mandatory to do 14 Day Quarantine as per the laws of Government of India along with RT-PCR test reports. ',
-              subItems: [],
-            },
-            {
-              listItem:
-                'Last but not the least, do not forget your masks and Yoga Mats',
-              subItems: [],
-            },
-          ],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'FAQs  ',
-          text: [],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title:
-            '  1. What is the time to reach the Institute during the course duration?  ',
-          text: [
-            'For residential campers, students should arrive at The Yoga Institute between 7.00 a.m. to 7.00 p.m. IST (Indian Standard Time). Please read on Hostel Facility for more details. ',
-          ],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title:
-            ' 2. Can a person who has problem with sitting on the floor for a long time enroll for the course?',
-          text: [
-            'Backrest and chairs are available on request in special and exceptional cases. – Rest and recreation are also a part of the course.',
-          ],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: '3. How many seats are available in one course?',
-          text: [
-            'Only 35 seats are available. Registrations on a first come, first-serve basis only.',
-          ],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'UNIQUE OFFERINGS ',
-          text: [''],
-        },
-      },
-      {
-        type: 'u-list',
-        content: {
-          title: 'Our Amenities / Our Facilities',
-          points: [
-            {
-              listItem:
-                'Library: Explore one of largest collections of spiritual and philosophical books to expand your knowledge ',
-              subItems: [],
-            },
-            {
-              listItem:
-                'Internet Room: Access the internet in a comfortable setting when you need Meditation Pods: Meditate on the five fundamental natural elements, the Panchamahabhutas,',
-              subItems: [],
-            },
-            {
-              listItem:
-                'Acupressure Path: Give your feet a natural massage and activate your vital energies',
-              subItems: [],
-            },
-            {
-              listItem:
-                'Yogic Gazebo: Enjoy the soothing sounds of flowing water and take in the peace and at this relaxation area',
-              subItems: [],
-            },
-            {
-              listItem:
-                'Dining Area: Enjoy wholesome Sattvik meals, specially prepared for your nourishment',
-              subItems: [],
-            },
-            {
-              listItem:
-                'Book Store: Shop in a wide selection of TYI publications. Find yourself the best yogic attire and mats.',
-              subItems: [],
-            },
-          ],
-        },
-      },
-    ],
-  },
-  19: {
-    id: '',
-    title:
-      '21 Days BLC - Batch 3 - 21 Days BLC - Evening - Online & On Campus - Hindi ',
-    key: '21-days-better-living-course-batch-3',
-    batch: 3,
-    templateId:'GENERAL_AUTO_EMAIL',
     dates: [
-      '5th June to 25th June 2022',
-      '7th Aug to 27th Aug 2022',
-      '2nd Oct to 22nd Oct 2022',
-      '4th Dec to 24th Dec 2022',
-    ],
-    online: true,
-    onCampus: true,
-    nonResidential: false,
-    residential: false,
-    certficate: false,
-    mostPopular: false,
-    rating: 5,
-    colorCode: '#EDBE66',
-    timing: 'Evening: 6:30 pm – 8:00 pm (IST)',
-    fees:{
-      onlineFee: 1600,
-      offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
-    },
-    category: 'camps',
-    metaDescription:
-      'Become successful, healthy, stress-free, and more mindful in your relationships by learning the yogic way of living. Join The Yoga Institute’s 21-Days Better Living Course. ',
-    image: `${baseDomain}${courseAssets.courseAsset34}`,
-    cardImage: `${baseDomain}${courseAssets.courseAsset34}`,
-    details: [
-      {
-        type: 'paragraph',
-        content: {
-          title: 'Overview',
-          text: [
-            'Become successful, healthy, stress-free, and more mindful in your relationships by learning the yogic way of living. Join The Yoga Institute’s 21-Days Better Living Course. ',
-          ],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: '',
-          text: [
-            'It takes 21 days to build a habit into your daily routine. The Yoga Institute’s 21 Days Better Living Course is a course specifically designed to introduce you to the yogic way of living. begin your journey into the discovery of Yoga. Working professionals and house makers can take just one hour from their day to practice and learn yoga and begin their transformational journey. ',
-            'This is a certificate course and has been successfully conducted for 50 years by the Institute. The program trains you holistically and enables you to achieve equilibrium between your mind and body and thus achieve a state of peace and happiness in life. The course is conducted by trained teachers at the Institute.',
-          ],
-        },
-      },
-      {
-        type: 'u-list',
-        content: {
-          title: ' TThe programme covers an introduction to: ',
-          points: [
-            {
-              listItem: 'Astanga Yoga',
-              subItems: [],
-            },
-            {
-              listItem: 'Asanas',
-              subItems: [],
-            },
-            {
-              listItem: 'Pranayama',
-              subItems: [],
-            },
-            {
-              listItem: 'Kriyas',
-              subItems: [],
-            },
-            {
-              listItem: 'Attitude training  ',
-              subItems: [],
-            },
-            {
-              listItem: 'Parisamvad (sessions with Dr. Hansaji)',
-              subItems: [],
-            },
-          ],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: '',
-          text: [
-            'It is ideal for anyone who wants to live a yoga way of life and experience peace within. It helps you to incorporate Yogic ideals in every field of your daily life. ',
-          ],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: '',
-          text: ['Benefits of this camp:'],
-        },
-      },
-      {
-        type: 'u-list',
-        content: {
-          title: ' Benefits of this camp: ',
-          points: [
-            {
-              listItem:
-                'Helps you in developing and maintaining the right routine for your overall health ',
-              subItems: [],
-            },
-
-            {
-              listItem: 'Helps you reduce stress and anxiety',
-              subItems: [],
-            },
-            {
-              listItem: 'Helps you feel energetic throughout the day',
-              subItems: [],
-            },
-            {
-              listItem: 'Helps you become mindful in your relationships',
-              subItems: [],
-            },
-            {
-              listItem: ' Helps you get more in control of your feelings',
-              subItems: [],
-            },
-          ],
-        },
-      },
-
-      {
-        type: 'paragraph',
-        content: {
-          title: '',
-          text: [
-            'Come and experience, amidst nature and beauty, our enriching 21 Days Better Living Course.',
-          ],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'PROGRAM DETAILS',
-          text: [
-            'The course is held once a month, starting on the first Sunday (7:00 a.m.) of every month. The classes are of 1 hr. 30 mins each day for 21 consecutive days. Participants can opt for the morning or evening batches.',
-          ],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'UPCOMING DATES FOR 2022',
-          text: ['7th August 2022to 27th August 2022'],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'Timings',
-          text: ['Evening 6:30 pm – 8:00 pm (IST)'],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'REGISTRATION',
-          text: [],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: '',
-          text: [
-            'For registration in the 21 Days Better Living Course, please click on the link below and fill in all the details. Within 24 hours after registering, you will receive an email containing the link to the payment portal. You can use the link to make the payment.',
-          ],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'FEES',
-          text: [],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'Rs. 1600/-',
-          text: [
-            '*Please note fees once paid will be non-refundable.',
-            ' We support all credit cards. For making payments using MasterCard. Alternatively, you can also make payments using net banking or opt for wire transfer by writing to us.',
-          ],
-        },
-      },
-
-      {
-        type: 'paragraph',
-        content: {
-          title: 'PRE-REQUISITES',
-          text: [],
-        },
-      },
-      {
-        type: 'u-list',
-        content: {
-          title: ' A MANDATORY PREREQUISITE FOR THIS COURSE IS:',
-          points: [
-            {
-              listItem:
-                'Covid test RT-PCR results dated 20th January 2022to 28th January 2022and later for entry into the premises post prior registration. ',
-              subItems: [],
-            },
-            {
-              listItem:
-                'Students must use personal vehicles for commuting, throughout the course duration. We would discourage the use of public transport. (For non-residential students)',
-              subItems: [],
-            },
-            {
-              listItem:
-                'This course is for healthy individuals. Kindly note if you suffer from any health issues like diabetes, hypertension, or orthopaedic problems, kindly take prior approval.',
-              subItems: [],
-            },
-            {
-              listItem:
-                'For international Students, it is mandatory to do 14 Day Quarantine as per the laws of Government of India along with RT-PCR test reports. ',
-              subItems: [],
-            },
-            {
-              listItem:
-                'Last but not the least, do not forget your masks and Yoga Mats',
-              subItems: [],
-            },
-          ],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'FAQs  ',
-          text: [],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title:
-            '  1. What is the time to reach the Institute during the course duration?  ',
-          text: [
-            'For residential campers, students should arrive at The Yoga Institute between 7.00 a.m. to 7.00 p.m. IST (Indian Standard Time). Please read on Hostel Facility for more details. ',
-          ],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title:
-            ' 2. Can a person who has problem with sitting on the floor for a long time enroll for the course?',
-          text: [
-            'Backrest and chairs are available on request in special and exceptional cases. – Rest and recreation are also a part of the course.',
-          ],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: '3. How many seats are available in one course?',
-          text: [
-            'Only 35 seats are available. Registrations on a first come, first-serve basis only.',
-          ],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'UNIQUE OFFERINGS ',
-          text: [''],
-        },
-      },
-      {
-        type: 'u-list',
-        content: {
-          title: 'Our Amenities / Our Facilities',
-          points: [
-            {
-              listItem:
-                'Library: Explore one of largest collections of spiritual and philosophical books to expand your knowledge ',
-              subItems: [],
-            },
-            {
-              listItem:
-                'Internet Room: Access the internet in a comfortable setting when you need Meditation Pods: Meditate on the five fundamental natural elements, the Panchamahabhutas,',
-              subItems: [],
-            },
-            {
-              listItem:
-                'Acupressure Path: Give your feet a natural massage and activate your vital energies',
-              subItems: [],
-            },
-            {
-              listItem:
-                'Yogic Gazebo: Enjoy the soothing sounds of flowing water and take in the peace and at this relaxation area',
-              subItems: [],
-            },
-            {
-              listItem:
-                'Dining Area: Enjoy wholesome Sattvik meals, specially prepared for your nourishment',
-              subItems: [],
-            },
-            {
-              listItem:
-                'Book Store: Shop in a wide selection of TYI publications. Find yourself the best yogic attire and mats.',
-              subItems: [],
-            },
-          ],
-        },
-      },
-    ],
-  },
-  20: {
-    id: '',
-    title: '21 Days BLC - Batch 4 - 21 Days BLC - Morning - Online - English',
-    key: '21-days-better-living-course-batch-4',
-    batch: 4,
-    templateId:'GENERAL_AUTO_EMAIL',
-    dates: [
-      '12th June to 2nd July 2022',
-      '3rd July to 23rd July 2022',
-      '24th July to 13th Aug 2022',
-      '14th Aug to 3rd Sept 2022',
-      '4th Sept to 24th Sept 2022',
-      '25th Sept to 15th Oct 2022',
-      '16th Oct to 5th Nov 2022',
-      '6th Nov to 26th Nov 2022',
-      '27th Nov to 17th Dec 2022',
-      '18th Dec to 7th Jan 2023',
-    ],
-    online: true,
-    onCampus: false,
-    nonResidential: false,
-    residential: false,
-    certficate: false,
-    mostPopular: false,
-    rating: 5,
-    colorCode: '#EDBE66',
-    timing: 'Morning: 7:00 am – 8:30 am (IST)',
-    fees:{
-      onlineFee: 1600,
-      offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
-    },
-    category: 'camps',
-    metaDescription:
-      'Become successful, healthy, stress-free, and more mindful in your relationships by learning the yogic way of living. Join The Yoga Institute’s 21-Days Better Living Course.',
-    image: `${baseDomain}${courseAssets.courseAsset34}`,
-    cardImage: `${baseDomain}${courseAssets.courseAsset34}`,
-    details: [
-      {
-        type: 'paragraph',
-        content: {
-          title: 'Overview',
-          text: [
-            'Become successful, healthy, stress-free, and more mindful in your relationships by learning the yogic way of living. Join The Yoga Institute’s 21-Days Better Living Course. ',
-          ],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: '',
-          text: [
-            'It takes 21 days to build a habit into your daily routine. The Yoga Institute’s 21 Days Better Living Course is a course specifically designed to introduce you to the yogic way of living. begin your journey into the discovery of Yoga. Working professionals and house makers can take just one hour from their day to practice and learn yoga and begin their transformational journey. ',
-            'This is a certificate course and has been successfully conducted for 50 years by the Institute. The program trains you holistically and enables you to achieve equilibrium between your mind and body and thus achieve a state of peace and happiness in life. The course is conducted by trained teachers at the Institute.',
-          ],
-        },
-      },
-      {
-        type: 'u-list',
-        content: {
-          title: ' TThe programme covers an introduction to: ',
-          points: [
-            {
-              listItem: 'Astanga Yoga',
-              subItems: [],
-            },
-            {
-              listItem: 'Asanas',
-              subItems: [],
-            },
-            {
-              listItem: 'Pranayama',
-              subItems: [],
-            },
-            {
-              listItem: 'Kriyas',
-              subItems: [],
-            },
-            {
-              listItem: 'Attitude training  ',
-              subItems: [],
-            },
-            {
-              listItem: 'Parisamvad (sessions with Dr. Hansaji)',
-              subItems: [],
-            },
-          ],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: '',
-          text: [
-            'It is ideal for anyone who wants to live a yoga way of life and experience peace within. It helps you to incorporate Yogic ideals in every field of your daily life. ',
-          ],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: '',
-          text: ['Benefits of this camp:'],
-        },
-      },
-      {
-        type: 'u-list',
-        content: {
-          title: ' Benefits of this camp: ',
-          points: [
-            {
-              listItem:
-                'Helps you in developing and maintaining the right routine for your overall health ',
-              subItems: [],
-            },
-
-            {
-              listItem: 'Helps you reduce stress and anxiety',
-              subItems: [],
-            },
-            {
-              listItem: 'Helps you feel energetic throughout the day',
-              subItems: [],
-            },
-            {
-              listItem: 'Helps you become mindful in your relationships',
-              subItems: [],
-            },
-            {
-              listItem: ' Helps you get more in control of your feelings',
-              subItems: [],
-            },
-          ],
-        },
-      },
-
-      {
-        type: 'paragraph',
-        content: {
-          title: '',
-          text: [
-            'Come and experience, amidst nature and beauty, our enriching 21 Days Better Living Course.',
-          ],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'PROGRAM DETAILS',
-          text: [
-            'The course is held once a month, starting on the first Sunday (7:00 a.m.) of every month. The classes are of 1 hr. 30 mins each day for 21 consecutive days. Participants can opt for the morning or evening batches.',
-          ],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'UPCOMING DATES FOR 2022',
-          text: ['3rd July to 23rd July 2022/ 24th July to 13th August 2022'],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'Timings',
-          text: ['Morning 7:00 am – 8:30 am (IST)'],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'REGISTRATION',
-          text: [],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: '',
-          text: [
-            'For registration in the 21 Days Better Living Course, please click on the link below and fill in all the details. Within 24 hours after registering, you will receive an email containing the link to the payment portal. You can use the link to make the payment.',
-          ],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'FEES',
-          text: [],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'Rs. 1600/-',
-          text: [
-            '*Please note fees once paid will be non-refundable.',
-            ' We support all credit cards. For making payments using MasterCard. Alternatively, you can also make payments using net banking or opt for wire transfer by writing to us.',
-          ],
-        },
-      },
-
-      {
-        type: 'paragraph',
-        content: {
-          title: 'PRE-REQUISITES',
-          text: [],
-        },
-      },
-      {
-        type: 'u-list',
-        content: {
-          title: ' A MANDATORY PREREQUISITE FOR THIS COURSE IS:',
-          points: [
-            {
-              listItem:
-                'Covid test RT-PCR results dated 20th January 2022to 28th January 2022and later for entry into the premises post prior registration. ',
-              subItems: [],
-            },
-            {
-              listItem:
-                'Students must use personal vehicles for commuting, throughout the course duration. We would discourage the use of public transport. (For non-residential students)',
-              subItems: [],
-            },
-            {
-              listItem:
-                'This course is for healthy individuals. Kindly note if you suffer from any health issues like diabetes, hypertension, or orthopaedic problems, kindly take prior approval.',
-              subItems: [],
-            },
-            {
-              listItem:
-                'For international Students, it is mandatory to do 14 Day Quarantine as per the laws of Government of India along with RT-PCR test reports. ',
-              subItems: [],
-            },
-            {
-              listItem:
-                'Last but not the least, do not forget your masks and Yoga Mats',
-              subItems: [],
-            },
-          ],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'FAQs  ',
-          text: [],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title:
-            '  1. What is the time to reach the Institute during the course duration?  ',
-          text: [
-            'For residential campers, students should arrive at The Yoga Institute between 7.00 a.m. to 7.00 p.m. IST (Indian Standard Time). Please read on Hostel Facility for more details. ',
-          ],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title:
-            ' 2. Can a person who has problem with sitting on the floor for a long time enroll for the course?',
-          text: [
-            'Backrest and chairs are available on request in special and exceptional cases. – Rest and recreation are also a part of the course.',
-          ],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: '3. How many seats are available in one course?',
-          text: [
-            'Only 35 seats are available. Registrations on a first come, first-serve basis only.',
-          ],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'UNIQUE OFFERINGS ',
-          text: [''],
-        },
-      },
-      {
-        type: 'u-list',
-        content: {
-          title: 'Our Amenities / Our Facilities',
-          points: [
-            {
-              listItem:
-                'Library: Explore one of largest collections of spiritual and philosophical books to expand your knowledge ',
-              subItems: [],
-            },
-            {
-              listItem:
-                'Internet Room: Access the internet in a comfortable setting when you need Meditation Pods: Meditate on the five fundamental natural elements, the Panchamahabhutas,',
-              subItems: [],
-            },
-            {
-              listItem:
-                'Acupressure Path: Give your feet a natural massage and activate your vital energies',
-              subItems: [],
-            },
-            {
-              listItem:
-                'Yogic Gazebo: Enjoy the soothing sounds of flowing water and take in the peace and at this relaxation area',
-              subItems: [],
-            },
-            {
-              listItem:
-                'Dining Area: Enjoy wholesome Sattvik meals, specially prepared for your nourishment',
-              subItems: [],
-            },
-            {
-              listItem:
-                'Book Store: Shop in a wide selection of TYI publications. Find yourself the best yogic attire and mats.',
-              subItems: [],
-            },
-          ],
-        },
-      },
-    ],
-  },
-  21: {
-    id: '',
-    title: '7 Days Health Camp - On Campus - English',
-    key: '7-days-camp-englis',
-    batch: 1,
-    templateId: 'CAMP_FOR_7_DAYS_HEALTH',
-    dates: [
-      '25th June to 1st July 2022',
       '23rd July to 29th July 2022',
       '27th Aug to 2nd Sept 2022',
       '24th Sept to 30th Sept 2022',
@@ -8523,11 +7770,11 @@ const camps = {
     nonResidential: true,
     residential: true,
     certficate: false,
-    mostPopular: false,
+    mostPopular: true,
     rating: 5,
     colorCode: '#EDBE66',
     timing: 'Saturday to Friday: 7:00 am – 7:00 pm (IST)',
-    fees:{
+    fees: {
       onlineFee: 0,
       offlineFee: { residentialFee: 12000, nonResidentialFee: 8000 },
     },
@@ -8858,15 +8105,21 @@ const camps = {
       },
     ],
   },
-  22: {
+  19: {
     id: '',
-    title: '21-Days BLC - Batch 1 - 21 Days BLC - Morning On Campus - English',
-    key: '21-days-better-living-course',
-    templateId:'GENERAL_AUTO_EMAIL',
-    batch: 1,
+    title:
+      '21 Days BLC - Batch 3 - 21 Days BLC - Evening - Online & On Campus - Hindi ',
+    key: '21-days-better-living-course-batch-3',
+    batch: 3,
+    // templateId: 'GENERAL_AUTO_EMAIL',
+    templateId: {
+      templateOnline: 'GENERAL_AUTO_EMAIL',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: ''
+      }
+    },
     dates: [
-      '5th June to 25th June 2022',
-      '3rd July to 23rd July 2022',
       '7th Aug to 27th Aug 2022',
       '4th Sept to 24th Sept 2022',
       '2nd Oct to 22nd Oct 2022',
@@ -8878,11 +8131,11 @@ const camps = {
     nonResidential: false,
     residential: false,
     certficate: false,
-    mostPopular: false,
+    mostPopular: true,
     rating: 5,
     colorCode: '#EDBE66',
     timing: 'Morning:7:00 am – 8:30 am (IST)',
-    fees:{
+    fees: {
       onlineFee: 1600,
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
@@ -9012,7 +8265,981 @@ const camps = {
         type: 'paragraph',
         content: {
           title: 'UPCOMING DATES FOR 2022',
-          text: ['3rd July to 23rd July 2022/ 24th July to 13th August 2022'],
+          text: ['24th July to 13th August 2022'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Timings',
+          text: ['Morning 7:00 am – 8:30 am (IST)'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'REGISTRATION',
+          text: [],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: [
+            'For registration in the 21 Days Better Living Course, please click on the link below and fill in all the details. Within 24 hours after registering, you will receive an email containing the link to the payment portal. You can use the link to make the payment.',
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'FEES',
+          text: [],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Rs. 1600/-',
+          text: [
+            '*Please note fees once paid will be non-refundable.',
+            ' We support all credit cards. For making payments using MasterCard. Alternatively, you can also make payments using net banking or opt for wire transfer by writing to us.',
+          ],
+        },
+      },
+
+      {
+        type: 'paragraph',
+        content: {
+          title: 'PRE-REQUISITES',
+          text: [],
+        },
+      },
+      {
+        type: 'u-list',
+        content: {
+          title: ' A MANDATORY PREREQUISITE FOR THIS COURSE IS:',
+          points: [
+            {
+              listItem:
+                'Covid test RT-PCR results dated 20th January 2022to 28th January 2022and later for entry into the premises post prior registration. ',
+              subItems: [],
+            },
+            {
+              listItem:
+                'Students must use personal vehicles for commuting, throughout the course duration. We would discourage the use of public transport. (For non-residential students)',
+              subItems: [],
+            },
+            {
+              listItem:
+                'This course is for healthy individuals. Kindly note if you suffer from any health issues like diabetes, hypertension, or orthopaedic problems, kindly take prior approval.',
+              subItems: [],
+            },
+            {
+              listItem:
+                'For international Students, it is mandatory to do 14 Day Quarantine as per the laws of Government of India along with RT-PCR test reports. ',
+              subItems: [],
+            },
+            {
+              listItem:
+                'Last but not the least, do not forget your masks and Yoga Mats',
+              subItems: [],
+            },
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'FAQs  ',
+          text: [],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title:
+            '  1. What is the time to reach the Institute during the course duration?  ',
+          text: [
+            'For residential campers, students should arrive at The Yoga Institute between 7.00 a.m. to 7.00 p.m. IST (Indian Standard Time). Please read on Hostel Facility for more details. ',
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title:
+            ' 2. Can a person who has problem with sitting on the floor for a long time enroll for the course?',
+          text: [
+            'Backrest and chairs are available on request in special and exceptional cases. – Rest and recreation are also a part of the course.',
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: '3. How many seats are available in one course?',
+          text: [
+            'Only 35 seats are available. Registrations on a first come, first-serve basis only.',
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'UNIQUE OFFERINGS ',
+          text: [''],
+        },
+      },
+      {
+        type: 'u-list',
+        content: {
+          title: 'Our Amenities / Our Facilities',
+          points: [
+            {
+              listItem:
+                'Library: Explore one of largest collections of spiritual and philosophical books to expand your knowledge ',
+              subItems: [],
+            },
+            {
+              listItem:
+                'Internet Room: Access the internet in a comfortable setting when you need Meditation Pods: Meditate on the five fundamental natural elements, the Panchamahabhutas,',
+              subItems: [],
+            },
+            {
+              listItem:
+                'Acupressure Path: Give your feet a natural massage and activate your vital energies',
+              subItems: [],
+            },
+            {
+              listItem:
+                'Yogic Gazebo: Enjoy the soothing sounds of flowing water and take in the peace and at this relaxation area',
+              subItems: [],
+            },
+            {
+              listItem:
+                'Dining Area: Enjoy wholesome Sattvik meals, specially prepared for your nourishment',
+              subItems: [],
+            },
+            {
+              listItem:
+                'Book Store: Shop in a wide selection of TYI publications. Find yourself the best yogic attire and mats.',
+              subItems: [],
+            },
+          ],
+        },
+      },
+    ],
+  },
+  20: {
+    id: '',
+    title: '21 Days BLC - Batch 4 - 21 Days BLC - Morning - Online - English',
+    key: '21-days-better-living-course-batch-4',
+    batch: 4,
+    // templateId: 'GENERAL_AUTO_EMAIL',
+    templateId: {
+      templateOnline: 'GENERAL_AUTO_EMAIL',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: ''
+      }
+    },
+    dates: [
+      '7th Aug to 27th Aug 2022',
+      '4th Sept to 24th Sept 2022',
+      '2nd Oct to 22nd Oct 2022',
+      '6th Nov to 26th Nov 2022',
+      '4th Dec to 24th Dec 2022',
+    ],
+    online: true,
+    onCampus: true,
+    nonResidential: false,
+    residential: false,
+    certficate: false,
+    mostPopular: true,
+    rating: 5,
+    colorCode: '#EDBE66',
+    timing: 'Evening: 6:30 pm – 8:00 pm (IST)',
+    fees: {
+      onlineFee: 1600,
+      offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
+    },
+    category: 'camps',
+    metaDescription:
+      'Become successful, healthy, stress-free, and more mindful in your relationships by learning the yogic way of living. Join The Yoga Institute’s 21-Days Better Living Course. ',
+    image: `${baseDomain}${courseAssets.courseAsset34}`,
+    cardImage: `${baseDomain}${courseAssets.courseAsset34}`,
+    details: [
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Overview',
+          text: [
+            'Become successful, healthy, stress-free, and more mindful in your relationships by learning the yogic way of living. Join The Yoga Institute’s 21-Days Better Living Course. ',
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: [
+            'It takes 21 days to build a habit into your daily routine. The Yoga Institute’s 21 Days Better Living Course is a course specifically designed to introduce you to the yogic way of living. begin your journey into the discovery of Yoga. Working professionals and house makers can take just one hour from their day to practice and learn yoga and begin their transformational journey. ',
+            'This is a certificate course and has been successfully conducted for 50 years by the Institute. The program trains you holistically and enables you to achieve equilibrium between your mind and body and thus achieve a state of peace and happiness in life. The course is conducted by trained teachers at the Institute.',
+          ],
+        },
+      },
+      {
+        type: 'u-list',
+        content: {
+          title: ' TThe programme covers an introduction to: ',
+          points: [
+            {
+              listItem: 'Astanga Yoga',
+              subItems: [],
+            },
+            {
+              listItem: 'Asanas',
+              subItems: [],
+            },
+            {
+              listItem: 'Pranayama',
+              subItems: [],
+            },
+            {
+              listItem: 'Kriyas',
+              subItems: [],
+            },
+            {
+              listItem: 'Attitude training  ',
+              subItems: [],
+            },
+            {
+              listItem: 'Parisamvad (sessions with Dr. Hansaji)',
+              subItems: [],
+            },
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: [
+            'It is ideal for anyone who wants to live a yoga way of life and experience peace within. It helps you to incorporate Yogic ideals in every field of your daily life. ',
+          ],
+        },
+      },
+
+      {
+        type: 'u-list',
+        content: {
+          title: ' Benefits of this camp: ',
+          points: [
+            {
+              listItem:
+                'Helps you in developing and maintaining the right routine for your overall health ',
+              subItems: [],
+            },
+
+            {
+              listItem: 'Helps you reduce stress and anxiety',
+              subItems: [],
+            },
+            {
+              listItem: 'Helps you feel energetic throughout the day',
+              subItems: [],
+            },
+            {
+              listItem: 'Helps you become mindful in your relationships',
+              subItems: [],
+            },
+            {
+              listItem: ' Helps you get more in control of your feelings',
+              subItems: [],
+            },
+          ],
+        },
+      },
+
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: [
+            'Come and experience, amidst nature and beauty, our enriching 21 Days Better Living Course.',
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'PROGRAM DETAILS',
+          text: [
+            'The course is held once a month, starting on the first Sunday (7:00 a.m.) of every month. The classes are of 1 hr. 30 mins each day for 21 consecutive days. Participants can opt for the morning or evening batches.',
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'UPCOMING DATES FOR 2022',
+          text: ['19th June 2022to 9th July 2022'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Timings',
+          text: ['Evening 6:30 pm – 8:00 pm (IST)'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'REGISTRATION',
+          text: [],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: [
+            'For registration in the 21 Days Better Living Course, please click on the link below and fill in all the details. Within 24 hours after registering, you will receive an email containing the link to the payment portal. You can use the link to make the payment.',
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'FEES',
+          text: [],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Rs. 1600/-',
+          text: [
+            '*Please note fees once paid will be non-refundable.',
+            ' We support all credit cards. For making payments using MasterCard. Alternatively, you can also make payments using net banking or opt for wire transfer by writing to us.',
+          ],
+        },
+      },
+
+      {
+        type: 'paragraph',
+        content: {
+          title: 'PRE-REQUISITES',
+          text: [],
+        },
+      },
+      {
+        type: 'u-list',
+        content: {
+          title: ' A MANDATORY PREREQUISITE FOR THIS COURSE IS:',
+          points: [
+            {
+              listItem:
+                'Covid test RT-PCR results dated 20th January 2022to 28th January 2022and later for entry into the premises post prior registration. ',
+              subItems: [],
+            },
+            {
+              listItem:
+                'Students must use personal vehicles for commuting, throughout the course duration. We would discourage the use of public transport. (For non-residential students)',
+              subItems: [],
+            },
+            {
+              listItem:
+                'This course is for healthy individuals. Kindly note if you suffer from any health issues like diabetes, hypertension, or orthopaedic problems, kindly take prior approval.',
+              subItems: [],
+            },
+            {
+              listItem:
+                'For international Students, it is mandatory to do 14 Day Quarantine as per the laws of Government of India along with RT-PCR test reports. ',
+              subItems: [],
+            },
+            {
+              listItem:
+                'Last but not the least, do not forget your masks and Yoga Mats',
+              subItems: [],
+            },
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'FAQs  ',
+          text: [],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title:
+            '  1. What is the time to reach the Institute during the course duration?  ',
+          text: [
+            'For residential campers, students should arrive at The Yoga Institute between 7.00 a.m. to 7.00 p.m. IST (Indian Standard Time). Please read on Hostel Facility for more details. ',
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title:
+            ' 2. Can a person who has problem with sitting on the floor for a long time enroll for the course?',
+          text: [
+            'Backrest and chairs are available on request in special and exceptional cases. – Rest and recreation are also a part of the course.',
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: '3. How many seats are available in one course?',
+          text: [
+            'Only 35 seats are available. Registrations on a first come, first-serve basis only.',
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'UNIQUE OFFERINGS ',
+          text: [''],
+        },
+      },
+      {
+        type: 'u-list',
+        content: {
+          title: 'Our Amenities / Our Facilities',
+          points: [
+            {
+              listItem:
+                'Library: Explore one of largest collections of spiritual and philosophical books to expand your knowledge ',
+              subItems: [],
+            },
+            {
+              listItem:
+                'Internet Room: Access the internet in a comfortable setting when you need Meditation Pods: Meditate on the five fundamental natural elements, the Panchamahabhutas,',
+              subItems: [],
+            },
+            {
+              listItem:
+                'Acupressure Path: Give your feet a natural massage and activate your vital energies',
+              subItems: [],
+            },
+            {
+              listItem:
+                'Yogic Gazebo: Enjoy the soothing sounds of flowing water and take in the peace and at this relaxation area',
+              subItems: [],
+            },
+            {
+              listItem:
+                'Dining Area: Enjoy wholesome Sattvik meals, specially prepared for your nourishment',
+              subItems: [],
+            },
+            {
+              listItem:
+                'Book Store: Shop in a wide selection of TYI publications. Find yourself the best yogic attire and mats.',
+              subItems: [],
+            },
+          ],
+        },
+      },
+    ],
+  },
+  21: {
+    id: '',
+    title: '7 Days Health Camp - On Campus - English',
+    key: '7-days-camp-englis',
+    batch: 1,
+    // templateId: 'CAMP_FOR_7_DAYS_HEALTH',
+    templateId: {
+      templateOnline: 'CAMP_FOR_7_DAYS_HEALTH',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: ''
+      }
+    },
+    dates: [
+      '5th June to 25th June 2022',
+      '7th Aug to 27th Aug 2022',
+      '2nd Oct to 22nd Oct 2022',
+      '4th Dec to 24th Dec 2022',
+    ],
+    online: true,
+    onCampus: true,
+    nonResidential: false,
+    residential: false,
+    certficate: false,
+    mostPopular: true,
+    rating: 5,
+    colorCode: '#EDBE66',
+    timing: 'Evening: 6:30 pm – 8:00 pm (IST)',
+    fees: {
+      onlineFee: 1600,
+      offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
+    },
+    category: 'camps',
+    metaDescription:
+      'Become successful, healthy, stress-free, and more mindful in your relationships by learning the yogic way of living. Join The Yoga Institute’s 21-Days Better Living Course. ',
+    image: `${baseDomain}${courseAssets.courseAsset34}`,
+    cardImage: `${baseDomain}${courseAssets.courseAsset34}`,
+    details: [
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Overview',
+          text: [
+            'Become successful, healthy, stress-free, and more mindful in your relationships by learning the yogic way of living. Join The Yoga Institute’s 21-Days Better Living Course. ',
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: [
+            'It takes 21 days to build a habit into your daily routine. The Yoga Institute’s 21 Days Better Living Course is a course specifically designed to introduce you to the yogic way of living. begin your journey into the discovery of Yoga. Working professionals and house makers can take just one hour from their day to practice and learn yoga and begin their transformational journey. ',
+            'This is a certificate course and has been successfully conducted for 50 years by the Institute. The program trains you holistically and enables you to achieve equilibrium between your mind and body and thus achieve a state of peace and happiness in life. The course is conducted by trained teachers at the Institute.',
+          ],
+        },
+      },
+      {
+        type: 'u-list',
+        content: {
+          title: ' TThe programme covers an introduction to: ',
+          points: [
+            {
+              listItem: 'Astanga Yoga',
+              subItems: [],
+            },
+            {
+              listItem: 'Asanas',
+              subItems: [],
+            },
+            {
+              listItem: 'Pranayama',
+              subItems: [],
+            },
+            {
+              listItem: 'Kriyas',
+              subItems: [],
+            },
+            {
+              listItem: 'Attitude training  ',
+              subItems: [],
+            },
+            {
+              listItem: 'Parisamvad (sessions with Dr. Hansaji)',
+              subItems: [],
+            },
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: [
+            'It is ideal for anyone who wants to live a yoga way of life and experience peace within. It helps you to incorporate Yogic ideals in every field of your daily life. ',
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: ['Benefits of this camp:'],
+        },
+      },
+      {
+        type: 'u-list',
+        content: {
+          title: ' Benefits of this camp: ',
+          points: [
+            {
+              listItem:
+                'Helps you in developing and maintaining the right routine for your overall health ',
+              subItems: [],
+            },
+
+            {
+              listItem: 'Helps you reduce stress and anxiety',
+              subItems: [],
+            },
+            {
+              listItem: 'Helps you feel energetic throughout the day',
+              subItems: [],
+            },
+            {
+              listItem: 'Helps you become mindful in your relationships',
+              subItems: [],
+            },
+            {
+              listItem: ' Helps you get more in control of your feelings',
+              subItems: [],
+            },
+          ],
+        },
+      },
+
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: [
+            'Come and experience, amidst nature and beauty, our enriching 21 Days Better Living Course.',
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'PROGRAM DETAILS',
+          text: [
+            'The course is held once a month, starting on the first Sunday (7:00 a.m.) of every month. The classes are of 1 hr. 30 mins each day for 21 consecutive days. Participants can opt for the morning or evening batches.',
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'UPCOMING DATES FOR 2022',
+          text: ['7th August 2022to 27th August 2022'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Timings',
+          text: ['Evening 6:30 pm – 8:00 pm (IST)'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'REGISTRATION',
+          text: [],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: [
+            'For registration in the 21 Days Better Living Course, please click on the link below and fill in all the details. Within 24 hours after registering, you will receive an email containing the link to the payment portal. You can use the link to make the payment.',
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'FEES',
+          text: [],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Rs. 1600/-',
+          text: [
+            '*Please note fees once paid will be non-refundable.',
+            ' We support all credit cards. For making payments using MasterCard. Alternatively, you can also make payments using net banking or opt for wire transfer by writing to us.',
+          ],
+        },
+      },
+
+      {
+        type: 'paragraph',
+        content: {
+          title: 'PRE-REQUISITES',
+          text: [],
+        },
+      },
+      {
+        type: 'u-list',
+        content: {
+          title: ' A MANDATORY PREREQUISITE FOR THIS COURSE IS:',
+          points: [
+            {
+              listItem:
+                'Covid test RT-PCR results dated 20th January 2022to 28th January 2022and later for entry into the premises post prior registration. ',
+              subItems: [],
+            },
+            {
+              listItem:
+                'Students must use personal vehicles for commuting, throughout the course duration. We would discourage the use of public transport. (For non-residential students)',
+              subItems: [],
+            },
+            {
+              listItem:
+                'This course is for healthy individuals. Kindly note if you suffer from any health issues like diabetes, hypertension, or orthopaedic problems, kindly take prior approval.',
+              subItems: [],
+            },
+            {
+              listItem:
+                'For international Students, it is mandatory to do 14 Day Quarantine as per the laws of Government of India along with RT-PCR test reports. ',
+              subItems: [],
+            },
+            {
+              listItem:
+                'Last but not the least, do not forget your masks and Yoga Mats',
+              subItems: [],
+            },
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'FAQs  ',
+          text: [],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title:
+            '  1. What is the time to reach the Institute during the course duration?  ',
+          text: [
+            'For residential campers, students should arrive at The Yoga Institute between 7.00 a.m. to 7.00 p.m. IST (Indian Standard Time). Please read on Hostel Facility for more details. ',
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title:
+            ' 2. Can a person who has problem with sitting on the floor for a long time enroll for the course?',
+          text: [
+            'Backrest and chairs are available on request in special and exceptional cases. – Rest and recreation are also a part of the course.',
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: '3. How many seats are available in one course?',
+          text: [
+            'Only 35 seats are available. Registrations on a first come, first-serve basis only.',
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'UNIQUE OFFERINGS ',
+          text: [''],
+        },
+      },
+      {
+        type: 'u-list',
+        content: {
+          title: 'Our Amenities / Our Facilities',
+          points: [
+            {
+              listItem:
+                'Library: Explore one of largest collections of spiritual and philosophical books to expand your knowledge ',
+              subItems: [],
+            },
+            {
+              listItem:
+                'Internet Room: Access the internet in a comfortable setting when you need Meditation Pods: Meditate on the five fundamental natural elements, the Panchamahabhutas,',
+              subItems: [],
+            },
+            {
+              listItem:
+                'Acupressure Path: Give your feet a natural massage and activate your vital energies',
+              subItems: [],
+            },
+            {
+              listItem:
+                'Yogic Gazebo: Enjoy the soothing sounds of flowing water and take in the peace and at this relaxation area',
+              subItems: [],
+            },
+            {
+              listItem:
+                'Dining Area: Enjoy wholesome Sattvik meals, specially prepared for your nourishment',
+              subItems: [],
+            },
+            {
+              listItem:
+                'Book Store: Shop in a wide selection of TYI publications. Find yourself the best yogic attire and mats.',
+              subItems: [],
+            },
+          ],
+        },
+      },
+    ],
+  },
+  22: {
+    id: '',
+    title: '21-Days BLC - Batch 1 - 21 Days BLC - Morning On Campus - English',
+    key: '21-days-better-living-course',
+    // templateId: 'GENERAL_AUTO_EMAIL',
+    templateId: {
+      templateOnline: 'GENERAL_AUTO_EMAIL',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: ''
+      }
+    },
+    batch: 1,
+    dates: [
+      '24th July to 13th Aug 2022',
+      '14th Aug to 3rd Sept 2022',
+      '4th Sept to 24th Sept 2022',
+      '25th Sept to 15th Oct 2022',
+      '16th Oct to 5th Nov 2022',
+      '6th Nov to 26th Nov 2022',
+      '27th Nov to 17th Dec 2022',
+      '18th Dec to 7th Jan 2023',
+    ],
+    online: true,
+    onCampus: false,
+    nonResidential: false,
+    residential: false,
+    certficate: false,
+    mostPopular: true,
+    rating: 5,
+    colorCode: '#EDBE66',
+    timing: 'Morning: 7:00 am – 8:30 am (IST)',
+    fees: {
+      onlineFee: 1600,
+      offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
+    },
+    category: 'camps',
+    metaDescription:
+      'Become successful, healthy, stress-free, and more mindful in your relationships by learning the yogic way of living. Join The Yoga Institute’s 21-Days Better Living Course.',
+    image: `${baseDomain}${courseAssets.courseAsset34}`,
+    cardImage: `${baseDomain}${courseAssets.courseAsset34}`,
+    details: [
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Overview',
+          text: [
+            'Become successful, healthy, stress-free, and more mindful in your relationships by learning the yogic way of living. Join The Yoga Institute’s 21-Days Better Living Course. ',
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: [
+            'It takes 21 days to build a habit into your daily routine. The Yoga Institute’s 21 Days Better Living Course is a course specifically designed to introduce you to the yogic way of living. begin your journey into the discovery of Yoga. Working professionals and house makers can take just one hour from their day to practice and learn yoga and begin their transformational journey. ',
+            'This is a certificate course and has been successfully conducted for 50 years by the Institute. The program trains you holistically and enables you to achieve equilibrium between your mind and body and thus achieve a state of peace and happiness in life. The course is conducted by trained teachers at the Institute.',
+          ],
+        },
+      },
+      {
+        type: 'u-list',
+        content: {
+          title: ' TThe programme covers an introduction to: ',
+          points: [
+            {
+              listItem: 'Astanga Yoga',
+              subItems: [],
+            },
+            {
+              listItem: 'Asanas',
+              subItems: [],
+            },
+            {
+              listItem: 'Pranayama',
+              subItems: [],
+            },
+            {
+              listItem: 'Kriyas',
+              subItems: [],
+            },
+            {
+              listItem: 'Attitude training  ',
+              subItems: [],
+            },
+            {
+              listItem: 'Parisamvad (sessions with Dr. Hansaji)',
+              subItems: [],
+            },
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: [
+            'It is ideal for anyone who wants to live a yoga way of life and experience peace within. It helps you to incorporate Yogic ideals in every field of your daily life. ',
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: ['Benefits of this camp:'],
+        },
+      },
+      {
+        type: 'u-list',
+        content: {
+          title: ' Benefits of this camp: ',
+          points: [
+            {
+              listItem:
+                'Helps you in developing and maintaining the right routine for your overall health ',
+              subItems: [],
+            },
+
+            {
+              listItem: 'Helps you reduce stress and anxiety',
+              subItems: [],
+            },
+            {
+              listItem: 'Helps you feel energetic throughout the day',
+              subItems: [],
+            },
+            {
+              listItem: 'Helps you become mindful in your relationships',
+              subItems: [],
+            },
+            {
+              listItem: ' Helps you get more in control of your feelings',
+              subItems: [],
+            },
+          ],
+        },
+      },
+
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: [
+            'Come and experience, amidst nature and beauty, our enriching 21 Days Better Living Course.',
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'PROGRAM DETAILS',
+          text: [
+            'The course is held once a month, starting on the first Sunday (7:00 a.m.) of every month. The classes are of 1 hr. 30 mins each day for 21 consecutive days. Participants can opt for the morning or evening batches.',
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'UPCOMING DATES FOR 2022',
+          text: ['24th July to 13th August 2022'],
         },
       },
       {
@@ -9187,11 +9414,19 @@ const classes = {
     title: 'Advance Asana Regular Class - Online (Only for TYI Teachers) ',
     key: 'advanced-regular-yoga-classes',
     batch: 1,
-    templateId:'GENERAL_AUTO_EMAIL',
+    // templateId: 'GENERAL_AUTO_EMAIL',
+    templateId: {
+      templateOnline: 'GENERAL_AUTO_EMAIL',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: ''
+      }
+    },
     mostPopular: false,
     rating: 5,
     colorCode: '#D3A29D',
-    timing: 'Monday, Wednesday, Friday: Monday, Wednesday & Friday : Morning: 6:30 am - 8:00 am (IST) Tuesday, Thursday & Saturday:Evening: 5:30 pm - 7:00 pm  (IST) (Join on any date)',
+    timing:
+      'Monday, Wednesday, Friday: Monday, Wednesday & Friday : Morning: 6:30 am - 8:00 am (IST) Tuesday, Thursday & Saturday:Evening: 5:30 pm - 7:00 pm  (IST) (Join on any date)',
     fees: {
       onlineFee: 1500,
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
@@ -9249,7 +9484,14 @@ const classes = {
     title: 'Anand Sadhna - Online & On Campus ',
     key: 'anand-sadhna',
     batch: 1,
-    templateId:'GENERAL_AUTO_EMAIL',
+    // templateId: 'GENERAL_AUTO_EMAIL',
+    templateId: {
+      templateOnline: 'GENERAL_AUTO_EMAIL',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: ''
+      }
+    },
     image: `${baseDomain}${courseAssets.courseAsset68}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset109}`,
     mostPopular: false,
@@ -9330,7 +9572,14 @@ const classes = {
     title: 'Asana Regular Classes - (Men & Women) - Online',
     key: 'asana-regular-classes-online',
     batch: 1,
-    templateId:'GENERAL_AUTO_EMAIL',
+    // templateId: 'GENERAL_AUTO_EMAIL',
+    templateId: {
+      templateOnline: 'GENERAL_AUTO_EMAIL',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: ''
+      }
+    },
     image: `${baseDomain}${courseAssets.courseAsset81}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset81}`,
     mostPopular: false,
@@ -9506,7 +9755,14 @@ const classes = {
     title: 'Asana Regular Classes for Men - On Campus  ',
     key: 'asana-regular-classes-on-campus',
     batch: 1,
-    templateId:'GENERAL_AUTO_EMAIL',
+    // templateId: 'GENERAL_AUTO_EMAIL',
+    templateId: {
+      templateOnline: 'GENERAL_AUTO_EMAIL',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: ''
+      }
+    },
     image: `${baseDomain}${courseAssets.courseAsset70}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset70}`,
     mostPopular: false,
@@ -9602,7 +9858,14 @@ const classes = {
     title: 'Asana Regular Classes for Women - On Campus',
     key: 'asana-regular-classes-on-campus-women',
     batch: 1,
-    templateId:'GENERAL_AUTO_EMAIL',
+    // templateId: 'GENERAL_AUTO_EMAIL',
+    templateId: {
+      templateOnline: 'GENERAL_AUTO_EMAIL',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: ''
+      }
+    },
     image: `${baseDomain}${courseAssets.courseAsset71}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset71}`,
     mostPopular: false,
@@ -9610,7 +9873,8 @@ const classes = {
       'This is a special women-only regular asana class conducted by The Yoga Institute',
     rating: 5,
     colorCode: '#C48E8C',
-    timing:'Monday,Tuesday,Thursday,Friday(Join On Any Date):6:30 am to 7:30 am, 7:30 am to 8:30 am,8:30 am to 9:30 am, 9:30 am to 10:30 am, 10:30 am to 11:30 am, 11:30 am to 12:30 pm, 1:00 pm to 2:00 pm, 2:00 pm to 3:00 pm, 3:00 pm to 4:00 pm, 4:00 pm to 5:00 pm, 5:00 pm to 6:00 pm, 6:00 pm to 7:00 pm, 7:00 pm to 8:00 pm',
+    timing:
+      'Monday,Tuesday,Thursday,Friday(Join On Any Date):6:30 am to 7:30 am, 7:30 am to 8:30 am,8:30 am to 9:30 am, 9:30 am to 10:30 am, 10:30 am to 11:30 am, 11:30 am to 12:30 pm, 1:00 pm to 2:00 pm, 2:00 pm to 3:00 pm, 3:00 pm to 4:00 pm, 4:00 pm to 5:00 pm, 5:00 pm to 6:00 pm, 6:00 pm to 7:00 pm, 7:00 pm to 8:00 pm',
     fees: {
       onlineFee: 1000,
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
@@ -9706,7 +9970,14 @@ const classes = {
     title: 'Certificate Course on Advanced Pranayama Techniques - Online',
     key: 'certificate-course-on-advanced-pranayama-techniques',
     batch: 1,
-    templateId:'GENERAL_AUTO_EMAIL',
+    // templateId: 'GENERAL_AUTO_EMAIL',
+    templateId: {
+      templateOnline: 'GENERAL_AUTO_EMAIL',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: ''
+      }
+    },
     image: `${baseDomain}${courseAssets.courseAsset72}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset72}`,
     metaDescription: 'Knowledge of nadi system and energy channels',
@@ -9719,7 +9990,7 @@ const classes = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'classes',
-    dates: ['4th July to 25th Aug 2022'],
+    dates: [],
     online: true,
     onCampus: false,
     nonResidential: false,
@@ -9778,7 +10049,6 @@ const classes = {
         content: {
           title: 'Online Sessions',
           text: [
-            '4th July 2022to 25th August 2022',
             'Mondays, Tuesdays & Thursdays: 11:30 am - 12:30 pm (IST)',
             '24 sessions of one hour each',
           ],
@@ -9816,7 +10086,14 @@ const classes = {
     title: 'Certificate Course on Yoga Sutra - Online',
     key: 'certification-course-on-yoga-sutra-online',
     batch: 1,
-    templateId:'GENERAL_AUTO_EMAIL',
+    // templateId: 'GENERAL_AUTO_EMAIL',
+    templateId: {
+      templateOnline: 'GENERAL_AUTO_EMAIL',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: ''
+      }
+    },
     image: `${baseDomain}${courseAssets.courseAsset73}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset73}`,
     metaDescription:
@@ -9826,7 +10103,7 @@ const classes = {
     colorCode: '#D3A29D',
     timing: '1st Sunday of every month: 10:00 am - 12:30 pm (IST)',
     fees: {
-      onlineFee: 0,
+      onlineFee: 8000,
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'classes',
@@ -9912,7 +10189,14 @@ const classes = {
     title: 'Certificate Program on Yoga for Cancer - Online    ',
     key: 'certificate-program-on-yoga-for-cancer',
     batch: 1,
-    templateId:'GENERAL_AUTO_EMAIL',
+    // templateId: 'GENERAL_AUTO_EMAIL',
+    templateId: {
+      templateOnline: 'GENERAL_AUTO_EMAIL',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: ''
+      }
+    },
     image: `${baseDomain}${courseAssets.courseAsset74}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset74}`,
     metaDescription:
@@ -10008,7 +10292,14 @@ const classes = {
     title: 'Certificate Program on Yoga for Lung Cancer - Online',
     key: 'certification-program-on-yoga-for-lung-cancer-online',
     batch: 1,
-    templateId:'GENERAL_AUTO_EMAIL',
+    // templateId: 'GENERAL_AUTO_EMAIL',
+    templateId: {
+      templateOnline: 'GENERAL_AUTO_EMAIL',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: ''
+      }
+    },
     image: `${baseDomain}${courseAssets.courseAsset74}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset74}`,
     mostPopular: false,
@@ -10022,8 +10313,8 @@ const classes = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'classes',
-    dates: ['14th June to 18 June 2022'],
-    online: false,
+    dates: [],
+    online: true,
     onCampus: false,
     nonResidential: false,
     residential: false,
@@ -10043,7 +10334,7 @@ const classes = {
         type: 'paragraph',
         content: {
           title: 'Duration',
-          text: ['14th June to 18th June'],
+          text: [],
         },
       },
       {
@@ -10076,7 +10367,14 @@ const classes = {
     title: 'Certificate Yoga Therapy Course - Online',
     key: 'certificate-yoga-therapy-course-online',
     batch: 1,
-    templateId:'GENERAL_AUTO_EMAIL',
+    // templateId: 'GENERAL_AUTO_EMAIL',
+    templateId: {
+      templateOnline: 'GENERAL_AUTO_EMAIL',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: ''
+      }
+    },
     image: `${baseDomain}${courseAssets.courseAsset75}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset75}`,
     mostPopular: false,
@@ -10092,10 +10390,10 @@ const classes = {
     category: 'classes',
     dates: ['24th Aug to 16th Dec 2022'],
     online: true,
-    onCampus: false,
+    onCampus: true,
     nonResidential: false,
     residential: false,
-    certficate:true,
+    certficate: true,
     details: [
       {
         type: 'paragraph',
@@ -10405,7 +10703,14 @@ const classes = {
     title: 'Children\'s Regular Class - On Campus',
     key: 'childrens-regular-classes',
     batch: 1,
-    templateId:'GENERAL_AUTO_EMAIL',
+    // templateId: 'GENERAL_AUTO_EMAIL',
+    templateId: {
+      templateOnline: 'GENERAL_AUTO_EMAIL',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: ''
+      }
+    },
     image: `${baseDomain}${courseAssets.courseAsset76}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset76}`,
     mostPopular: false,
@@ -10473,7 +10778,14 @@ const classes = {
     title: 'Children\'s Weekend Class - On Campus',
     key: 'childrens-regular-classes-on-campus',
     batch: 1,
-    templateId:'GENERAL_AUTO_EMAIL',
+    // templateId: 'GENERAL_AUTO_EMAIL',
+    templateId: {
+      templateOnline: 'GENERAL_AUTO_EMAIL',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: ''
+      }
+    },
     image: `${baseDomain}${courseAssets.courseAsset76}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset76}`,
     mostPopular: false,
@@ -10534,22 +10846,27 @@ const classes = {
     title: 'Meditation Foundation Course - Online ',
     key: 'meditation-foundation-course-online',
     batch: 1,
-    templateId:'GENERAL_AUTO_EMAIL',
+    // templateId: 'GENERAL_AUTO_EMAIL',
+    templateId: {
+      templateOnline: 'GENERAL_AUTO_EMAIL',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: ''
+      }
+    },
     image: `${baseDomain}${courseAssets.courseAsset28}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset28}`,
     mostPopular: false,
     metaDescription: 'The science behind meditation',
     rating: 5,
     colorCode: '#D3A29D',
-    timing: 'Monday, Wednesday & Friday: 7:00 am - 8:00 am  (IST)',   
+    timing: 'Monday, Wednesday & Friday: 7:00 am - 8:00 am  (IST)',
     fees: {
       onlineFee: 1000,
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'classes',
     dates: [
-      '6th June to 1st July 2022',
-      '4th July to 29th July 2022',
       '1st Aug to 26th Aug 2022',
       '5th Sept to 30th Sept 2022',
       '3rd Oct to 28th Oct 2022',
@@ -10625,7 +10942,14 @@ const classes = {
     title: 'Regular Meditation Classes - Online ',
     key: 'regular-meditation-classes-online',
     batch: 1,
-    templateId:'GENERAL_AUTO_EMAIL',
+    // templateId: 'GENERAL_AUTO_EMAIL',
+    templateId: {
+      templateOnline: 'GENERAL_AUTO_EMAIL',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: ''
+      }
+    },
     image: `${baseDomain}${courseAssets.courseAsset28}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset28}`,
     mostPopular: false,
@@ -10633,7 +10957,8 @@ const classes = {
       'Click now if you want to make bliss and calm a part of your life daily.',
     rating: 5,
     colorCode: '#C48E8C',
-    timing: 'Tuesday, Thursday & Saturday: 7:00 am - 7:45 am  (IST) (Join on any date)',
+    timing:
+      'Tuesday, Thursday & Saturday: 7:00 am - 7:45 am  (IST) (Join on any date)',
     fees: {
       onlineFee: 1000,
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
@@ -10738,7 +11063,14 @@ const classes = {
     title: ' Satsang ',
     key: 'satsang',
     batch: 1,
-    templateId:'GENERAL_AUTO_EMAIL',
+    // templateId: 'GENERAL_AUTO_EMAIL',
+    templateId: {
+      templateOnline: 'GENERAL_AUTO_EMAIL',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: ''
+      }
+    },
     image: `${baseDomain}${courseAssets.courseAsset80}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset80}`,
     mostPopular: false,
@@ -10755,8 +11087,8 @@ const classes = {
     dates: [],
     online: false,
     onCampus: true,
-    nonResidential: false,
-    residential: true,
+    nonResidential: true,
+    residential: false,
     certficate: false,
     details: [
       {
@@ -10832,7 +11164,14 @@ const classes = {
     title: 'Weekend Asana Classes - (Men & Women) - On Campus',
     key: 'weekend-classes',
     batch: 1,
-    templateId:'GENERAL_AUTO_EMAIL',
+    // templateId: 'GENERAL_AUTO_EMAIL',
+    templateId: {
+      templateOnline: 'GENERAL_AUTO_EMAIL',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: ''
+      }
+    },
     image: `${baseDomain}${courseAssets.courseAsset77}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset110}`,
     mostPopular: false,
@@ -10923,7 +11262,14 @@ const classes = {
     title: 'Yog Prayas - Online',
     key: 'yog-prayas-online',
     batch: 1,
-    templateId:'GENERAL_AUTO_EMAIL',
+    // templateId: 'GENERAL_AUTO_EMAIL',
+    templateId: {
+      templateOnline: 'GENERAL_AUTO_EMAIL',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: ''
+      }
+    },
     image: `${baseDomain}${courseAssets.courseAsset82}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset82}`,
     mostPopular: false,
@@ -11063,7 +11409,14 @@ const classes = {
     title: 'Samattvam (Health Checkup) - On Campus',
     key: 'samattvam',
     batch: 1,
-    templateId:'GENERAL_AUTO_EMAIL',
+    // templateId: 'GENERAL_AUTO_EMAIL',
+    templateId: {
+      templateOnline: 'GENERAL_AUTO_EMAIL',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: ''
+      }
+    },
     image: `${baseDomain}${homeAssets.homeAsset16}`,
     cardImage: `${baseDomain}${homeAssets.homeAsset16}`,
     mostPopular: false,
@@ -11071,10 +11424,9 @@ const classes = {
       'Samatvam is one-of-a-kind personalised wellbeing program launched by The Yoga Institute under the guidance of Dr. Hansaji Yogendra. The program focuses on providing individual guidance for life management.',
     rating: 5,
     colorCode: '#C48E8C',
-    timing:
-      'Every Saturday: 2.00 p.m. - 5.30 p.m. (IST)',
+    timing: 'Every Saturday: 2.00 p.m. - 5.30 p.m. (IST)',
     fees: {
-      onlineFee: 22000,
+      onlineFee: 200,
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'classes',
@@ -11097,8 +11449,7 @@ const classes = {
       {
         type: 'paragraph',
         content: {
-          title:
-            '',
+          title: '',
           text: [
             'Samatvam is one-of-a-kind personalised wellbeing program launched by The Yoga Institute under the guidance of Dr. Hansaji Yogendra. The program focuses on providing individual guidance for life management.',
           ],
@@ -11107,8 +11458,7 @@ const classes = {
       {
         type: 'paragraph',
         content: {
-          title:
-            '',
+          title: '',
           text: [
             'The program consists of a session conducted by Dr. Hansaji on the importance of implementing yoga in daily life. Individuals can also interact with medical experts from various fields and yoga counsellors to get the right guidance for their requirements. Every case is examined on its merit and recommendations are given accordingly. People who could benefit just by following simple yogic techniques are suggested to join specific classes or camps. Others who require medical intervention are instructed accordingly.',
           ],
@@ -11117,8 +11467,7 @@ const classes = {
       {
         type: 'paragraph',
         content: {
-          title:
-            '',
+          title: '',
           text: [
             'Samatvam is an essential pre-requisite for special classes and regular weekend classes conducted at the Institute.',
           ],
@@ -11127,18 +11476,14 @@ const classes = {
       {
         type: 'paragraph',
         content: {
-          title:
-            'Duration',
-          text: [
-            'Every Saturday: 2.00 p.m. - 5.30 p.m. (IST)',
-          ],
+          title: 'Duration',
+          text: ['Every Saturday: 2.00 p.m. - 5.30 p.m. (IST)'],
         },
       },
       {
         type: 'paragraph',
         content: {
-          title:
-            'Prerequisites',
+          title: 'Prerequisites',
           text: [
             'Please bring along all your health reports (medical papers), a pen and pad.',
           ],
@@ -11147,21 +11492,15 @@ const classes = {
       {
         type: 'paragraph',
         content: {
-          title:
-            'Registration',
-          text: [
-            'On Saturday only between 1.30 p.m. and 2.00 p.m.',
-          ],
+          title: 'Registration',
+          text: ['On Saturday only between 1.30 p.m. and 2.00 p.m.'],
         },
       },
       {
         type: 'paragraph',
         content: {
-          title:
-            'Fees',
-          text: [
-            'Rs. 200/- per person (inclusive of snacks).',
-          ],
+          title: 'Fees',
+          text: ['Rs. 200/- per person (inclusive of snacks).'],
         },
       },
     ],
@@ -11171,7 +11510,14 @@ const classes = {
     title: 'Couples’ Classes  - Online',
     key: 'couples-classes',
     batch: 1,
-    templateId:'GENERAL_AUTO_EMAIL',
+    // templateId: 'GENERAL_AUTO_EMAIL',
+    templateId: {
+      templateOnline: 'GENERAL_AUTO_EMAIL',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: ''
+      }
+    },
     image: `${baseDomain}${homeAssets.homeAsset13}`,
     cardImage: `${baseDomain}${homeAssets.homeAsset13}`,
     mostPopular: false,
@@ -11179,8 +11525,7 @@ const classes = {
       'The Yoga Institute’s Couple Class is an absolute must for anyone who is in a relationship.',
     rating: 5,
     colorCode: '#C48E8C',
-    timing:
-      'Last Sunday of every month from 5.00 p.m. to 7.00 p.m.',
+    timing: 'Last Sunday of every month from 5.00 p.m. to 7.00 p.m.',
     fees: {
       onlineFee: 3500,
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
@@ -11198,40 +11543,38 @@ const classes = {
         content: {
           title: '',
           text: [
-            'The Yoga Institute\’s Couple Class is an absolute must for anyone who is in a relationship. Being conducted since the last 50 years, the class provides value in several different ways: improved understanding between two people, reduces conflict, increased maturity levels. You will learn to grow together, find common ground, explore new things together and enhance the strength of your relationship.',
+            'The Yoga Institute’s Couple Class is an absolute must for anyone who is in a relationship. Being conducted since the last 50 years, the class provides value in several different ways: improved understanding between two people, reduces conflict, increased maturity levels. You will learn to grow together, find common ground, explore new things together and enhance the strength of your relationship.',
           ],
         },
       },
       {
         type: 'u-list',
         content: {
-          title:
-            'What you stand to gain:',
+          title: 'What you stand to gain:',
           points: [
             {
-              listItem:'Better conflict resolution and reduced stress levels ', 
-              subItems:[]
+              listItem: 'Better conflict resolution and reduced stress levels ',
+              subItems: [],
             },
             {
-              listItem:'Improved coordination as a team', 
-              subItems:[]
+              listItem: 'Improved coordination as a team',
+              subItems: [],
             },
             {
-              listItem:'Strengthen bond with yogic way of living', 
-              subItems:[]
+              listItem: 'Strengthen bond with yogic way of living',
+              subItems: [],
             },
             {
-              listItem:'Develop accountability', 
-              subItems:[]
-            }
+              listItem: 'Develop accountability',
+              subItems: [],
+            },
           ],
         },
       },
       {
         type: 'paragraph',
         content: {
-          title:
-            '',
+          title: '',
           text: [
             'Smt. Hansaji address the group once a month on various topics relevant to householders. Lectures by eminent personalities are also organised periodically. Further, group discussions and personal sharing on specific topics are regular features, which have been well appreciated by members.',
           ],
@@ -11240,8 +11583,7 @@ const classes = {
       {
         type: 'paragraph',
         content: {
-          title:
-            'Duration',
+          title: 'Duration',
           text: [
             'Enrolment is for a calendar year. Meetings are held on the last Sunday of every month from 5.00 p.m. to 7.00 p.m.in the Institute. Additionally, co-ordinated couples meet once during the same month in their respective groups.',
           ],
@@ -11250,8 +11592,7 @@ const classes = {
       {
         type: 'paragraph',
         content: {
-          title:
-            'Prerequisites',
+          title: 'Prerequisites',
           text: [
             'Couples should be connected with some activity with The Yoga Institute.',
           ],
@@ -11260,18 +11601,14 @@ const classes = {
       {
         type: 'paragraph',
         content: {
-          title:
-            'Registration & Fees',
-          text: [
-            'Starts 30th January 2022',
-          ],
+          title: 'Registration & Fees',
+          text: ['Starts 30th January 2022'],
         },
       },
       {
         type: 'paragraph',
         content: {
-          title:
-            'Fees',
+          title: 'Fees',
           text: [
             'Annual fees are Rs. 3500/- (per year for a couple)',
             '*Please note fees once paid will be non-refundable.',
@@ -11281,10 +11618,9 @@ const classes = {
       {
         type: 'paragraph',
         content: {
-          title:
-            'Note:',
+          title: 'Note:',
           text: [
-            'Please take the screenshot of your order receipt immediately after the payment is made to info@theyogainstitute.org'
+            'Please take the screenshot of your order receipt immediately after the payment is made to info@theyogainstitute.org',
           ],
         },
       },
@@ -11293,9 +11629,16 @@ const classes = {
   20: {
     id: '',
     title: 'Weekend Asana Classes - (Men & Women) - Online',
-    key: 'weekend-classes-online',
+    key: 'weekend-asana-classes-online',
     batch: 1,
-    templateId: 'GENERAL_AUTO_EMAIL',
+    // templateId: 'GENERAL_AUTO_EMAIL',
+    templateId: {
+      templateOnline: 'GENERAL_AUTO_EMAIL',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: ''
+      }
+    },
     image: `${baseDomain}${homeAssets.homeAsset13}`,
     cardImage: `${baseDomain}${homeAssets.homeAsset13}`,
     mostPopular: false,

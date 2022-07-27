@@ -35,7 +35,7 @@ const Nispand = () => {
         <div className='download-options'>
           <h4>GET IT NOW!</h4>
           <div className='google-app-store'>
-            <a href='https://play.google.com/store/apps/details?id=com.nispand.com' rel="noreferrer"  target='_blank' >
+            <a href='https://play.google.com/store/apps/details?id=com.nispand.com'  >
               <div className='google'>
                 <img src={`${baseDomain}${homeAssets.homeAsset22}`} alt='google-play' />
               </div>

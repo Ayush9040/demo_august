@@ -31,11 +31,11 @@ const MediaGallery = () => {
         url: '/image-gallery',
         name: 'Gallery',
       },
-      // {
-      //   innerTitle: 'news',
-      //   url: '/media/news',
-      //   name: 'News',
-      // },
+      {
+        innerTitle: 'news',
+        url: '/news',
+        name: 'News',
+      },
       // {
       //   innerTitle: 'events',
       //   url: '/media/events',

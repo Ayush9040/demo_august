@@ -3,6 +3,8 @@ import '../../../Components/CourseComponents/style.scss'
 
 const CourseUList = ({ content }) => {
 
+
+
   return (
     <div className="course_list">
       {content.title && <h2 className='sub_heading' >

@@ -9,7 +9,7 @@ import CommonBtn from '../commonbtn'
 import { Link } from 'react-router-dom'
 
 const AlumniCarousel = () => {
-  // const [alumImgs, setAlumImgs] = useState(data[0].img)
+  //const [alumImgs, setAlumImgs] = useState(data[0].img)
 
   let settings = {
     dots: true,

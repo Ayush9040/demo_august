@@ -57,7 +57,9 @@ const Footer = () => {
             >
               <li>{youtube}</li>
             </a>
-            <a href='https://www.youtube.com/channel/UCHTjc5zq3Bl6agGQQf7_Xeg'>
+            <a href='https://www.youtube.com/channel/UCHTjc5zq3Bl6agGQQf7_Xeg'    
+              target='_blank'
+              rel='noreferrer' >
               <li>{youtubehindi}</li>
             </a>
             <a

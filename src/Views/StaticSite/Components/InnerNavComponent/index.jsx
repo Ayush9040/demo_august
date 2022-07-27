@@ -30,6 +30,7 @@ const InnerNavComponent = ({ abc }) => {
   const [bold, setBold] = useState(0)
   const location = useLocation()
   const dispatch = useDispatch()
+  console.log(bold,'b')
 
   useEffect(() => {
     if (location.pathname === '/media/video-gallery') {
@@ -111,7 +112,7 @@ const InnerNavComponent = ({ abc }) => {
           className={'career-navigation-lg'}
           id={abc.title === 'gallery' ? 'toggles' : ''}
         >
-          {abc.title === 'gallery' && (
+          {/* {abc.title === 'gallery' && (
             <ul id="gallery-toggle">
               <Link to="/image-gallery">
                 <li style={bold === 0 ? { fontWeight: 'bold' } : {}}>Images</li>
@@ -128,7 +129,7 @@ const InnerNavComponent = ({ abc }) => {
                 </li>
               </Link>
             </ul>
-          )}
+          )} */}
           <ul>
             {abc.menuItems.map((items) => {
               return (

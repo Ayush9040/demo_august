@@ -2,8 +2,11 @@ import React, { useState } from 'react'
 import AlumniGrid from '../../../Components/AlumniGrid'
 import baseDomain, { alumniAssets } from '../../../assets/images/imageAsset'
 import InnerNavComponent from '../../../Components/InnerNavComponent'
-
+import './style.scss'
+import CommanModal from '../../../Components/CommanModal'
 const AlumniGallery = () => {
+  const [openModal, setOpenModal] = useState(false)
+  const [imageUrl, setImageUrl] = useState('')
   const galleryImages = {
     2017: [
       `${baseDomain}${alumniAssets.galleryAssets1}`,
@@ -122,134 +125,191 @@ const AlumniGallery = () => {
         name: 'Support Your Alma Mater',
       },
       {
-        innerTitle:'alumni-contact',
-        url:'/#footer',
-        name:'Contact'
-      }
+        innerTitle: 'alumni-contact',
+        url: '/#footer',
+        name: 'Contact',
+      },
     ],
   }
   return (
-    <div className="contact-container">
-      {/* <CommonBannerNav1 title={'AlumniGallery'} /> */}
-      <InnerNavComponent abc={AlumniGalleryBar}/>
-      <AlumniGrid altName={'alumni-day'} images={alumgalleryImgs} notEvent={false} />
-      <div className="contact-tiles">
-        <div className="tiles-container">
-          <div
-            className="year-nav"
-            style={{ width: '100%', textAlign: 'center', marginBottom: '2rem' }}
-          >
-            <h4>
-              <span style={{ fontWeight: 'bold', border: 'none' }}>
-                Batch Year:
-              </span>
-              &ensp;
-              <span
-                style={
-                  bold === 1 ? { fontWeight: 'bold' } : { fontWeight: 'normal' }
-                }
-                onClick={() => setBold(1)}
-              >
-                2022
-              </span>
-              <span
-                style={
-                  bold === 2 ? { fontWeight: 'bold' } : { fontWeight: 'normal' }
-                }
-                onClick={() => setBold(2)}
-              >
-                2021
-              </span>
-              <span
-                style={
-                  bold === 3 ? { fontWeight: 'bold' } : { fontWeight: 'normal' }
-                }
-                onClick={() => setBold(3)}
-              >
-                2020
-              </span>
-              <span
-                style={
-                  bold === 4 ? { fontWeight: 'bold' } : { fontWeight: 'normal' }
-                }
-                onClick={() => setBold(4)}
-              >
-                2019
-              </span>
-              <span
-                style={
-                  bold === 5 ? { fontWeight: 'bold' } : { fontWeight: 'normal' }
-                }
-                onClick={() => setBold(5)}
-              >
-                2018
-              </span>
-              <span
-                style={
-                  bold === 6
-                    ? { fontWeight: 'bold', border: 'none' }
-                    : { fontWeight: 'normal', border: 'none' }
-                }
-                onClick={() => setBold(6)}
-              >
-                2017...
-              </span>
-            </h4>
-          </div>
-          <div className="tiles-grid">
-            {bold === 1 ? (
-              <>
-                {galleryImages[2022].map((image,idx) => (
-                  <div className="tile" key={idx}>
-                    <img src={image} alt='Alumni event' />
-                  </div>
-                ))}
-              </>
-            ) : bold === 2 ? (
-              <>
-                {galleryImages[2021].map((image, idx) => (
-                  <div className="tile" key={idx}>
-                    <img src={image} alt="Alumni event" />
-                  </div>
-                ))}
-              </>
-            ) : bold === 3 ? (
-              <>
-                {galleryImages[2020].map((image, idx) => (
-                  <div className="tile" key={idx}>
-                    <img src={image} alt="Alumni event" />
-                  </div>
-                ))}
-              </>
-            ) : bold === 4 ? (
-              <>
-                {galleryImages[2019].map((image, idx) => (
-                  <div className="tile" key={idx}>
-                    <img src={image} alt="Alumni event" />
-                  </div>
-                ))}
-              </>
-            ) : bold === 5 ? (
-              <>
-                {galleryImages[2018].map((image, idx) => (
-                  <div className="tile" key={idx}>
-                    <img src={image} alt="Alumni event" />
-                  </div>
-                ))}
-              </>
-            ) : (
-              <>
-                {galleryImages[2017].map((image, idx) => (
-                  <div className="tile" key={idx}>
-                    <img src={image} alt="Alumni event" />
-                  </div>
-                ))}
-              </>
-            )}
+    <>
+      <div className="contact-container">
+        {/* <CommonBannerNav1 title={'AlumniGallery'} /> */}
+        <InnerNavComponent abc={AlumniGalleryBar} />
+        <AlumniGrid images={alumgalleryImgs} notEvent={false} />
+        <div className="contact-tiles">
+          <div className="tiles-container">
+            <div
+              className="year-nav"
+              style={{
+                width: '100%',
+                textAlign: 'center',
+                marginBottom: '2rem',
+              }}
+            >
+              <h4>
+                <span style={{ fontWeight: 'bold', border: 'none' }}>
+                  Batch Year:
+                </span>
+                &ensp;
+                <span
+                  style={
+                    bold === 1
+                      ? { fontWeight: 'bold' }
+                      : { fontWeight: 'normal' }
+                  }
+                  onClick={() => setBold(1)}
+                >
+                  2022
+                </span>
+                <span
+                  style={
+                    bold === 2
+                      ? { fontWeight: 'bold' }
+                      : { fontWeight: 'normal' }
+                  }
+                  onClick={() => setBold(2)}
+                >
+                  2021
+                </span>
+                <span
+                  style={
+                    bold === 3
+                      ? { fontWeight: 'bold' }
+                      : { fontWeight: 'normal' }
+                  }
+                  onClick={() => setBold(3)}
+                >
+                  2020
+                </span>
+                <span
+                  style={
+                    bold === 4
+                      ? { fontWeight: 'bold' }
+                      : { fontWeight: 'normal' }
+                  }
+                  onClick={() => setBold(4)}
+                >
+                  2019
+                </span>
+                <span
+                  style={
+                    bold === 5
+                      ? { fontWeight: 'bold' }
+                      : { fontWeight: 'normal' }
+                  }
+                  onClick={() => setBold(5)}
+                >
+                  2018
+                </span>
+                <span
+                  style={
+                    bold === 6
+                      ? { fontWeight: 'bold', border: 'none' }
+                      : { fontWeight: 'normal', border: 'none' }
+                  }
+                  onClick={() => setBold(6)}
+                >
+                  2017...
+                </span>
+              </h4>
+            </div>
+            <div className="tiles-grid">
+              {bold === 1 ? (
+                <>
+                  {galleryImages[2022].map((image, idx) => (
+                    <div className="tile" key={idx}>
+                      <img
+                        onClick={() => {
+                          setOpenModal(true)
+                          setImageUrl(image)
+                        }}
+                        src={image}
+                        alt="root-image"
+                      />
+                    </div>
+                  ))}
+                </>
+              ) : bold === 2 ? (
+                <>
+                  {galleryImages[2021].map((image, idx) => (
+                    <div className="tile" key={idx}>
+                      <img
+                        onClick={() => {
+                          setOpenModal(true)
+                          setImageUrl(image)
+                        }}
+                        src={image}
+                        alt="root-image"
+                      />
+                    </div>
+                  ))}
+                </>
+              ) : bold === 3 ? (
+                <>
+                  {galleryImages[2020].map((image, idx) => (
+                    <div className="tile" key={idx}>
+                      <img
+                        onClick={() => {
+                          setOpenModal(true)
+                          setImageUrl(image)
+                        }}
+                        src={image}
+                        alt="root-image"
+                      />
+                    </div>
+                  ))}
+                </>
+              ) : bold === 4 ? (
+                <>
+                  {galleryImages[2019].map((image, idx) => (
+                    <div className="tile" key={idx}>
+                      <img
+                        onClick={() => {
+                          setOpenModal(true)
+                          setImageUrl(image)
+                        }}
+                        src={image}
+                        alt="root-image"
+                      />
+                    </div>
+                  ))}
+                </>
+              ) : bold === 5 ? (
+                <>
+                  {galleryImages[2018].map((image, idx) => (
+                    <div className="tile" key={idx}>
+                      <img
+                        onClick={() => {
+                          setOpenModal(true), setImageUrl(image)
+                        }}
+                        src={image}
+                        alt="root-image"
+                      />
+                    </div>
+                  ))}
+                </>
+              ) : (
+                <>
+                  {galleryImages[2017].map((image, idx) => (
+                    <div className="tile" key={idx}>
+                      <img
+                        onClick={() => {
+                          setOpenModal(true), setImageUrl(image)
+                        }}
+                        src={image}
+                        alt="root-image"
+                      />
+                    </div>
+                  ))}
+                </>
+              )}
+            </div>
           </div>
         </div>
       </div>
-    </div>
+      {openModal && <CommanModal image={imageUrl} closeModal={setOpenModal} />}
+    </>
   )
 }
 

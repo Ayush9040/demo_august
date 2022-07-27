@@ -277,6 +277,15 @@
     }
   }
 }
+.yogasattva-btn{
+  float: right;
+  cursor: pointer;
+  padding: 1rem 4rem;
+  font-size: 1.25rem;
+  border-radius: 50px;
+  margin-top: 1rem;
+  border: none;
+}
 @media (max-width: 1800px) {
   .yogasattva-container {
     background-color: rgb(168, 106, 106);

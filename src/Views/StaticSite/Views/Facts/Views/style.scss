@@ -308,6 +308,11 @@
     margin: 2rem auto;
 
   }
+  .facts-gallery{
+    .grid-img-1,.grid-img-2,.grid-img-3,.grid-img-4,.grid-img-5,.grid-img-6{
+          height: auto;
+    }
+  }
 }
 
 .ourfacts-text{

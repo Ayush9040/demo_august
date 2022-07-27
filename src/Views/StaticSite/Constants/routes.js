@@ -57,6 +57,24 @@ const Facts = lazy(()=>import('../Views/Facts/Views/our-facts'))
 import Authentication from '../Views/Authentication'
 import BlogAnother from '../Views/Blogs/Views/Blog'
 // import VolunteerPage from '../Views/Volunteer'
+// import VolunteerPage from '../Views/Volunteer'
+// import Thankyou from '../Components/EnrollmentForm/ThankYou'
+// import SattvikCooking from '../Components/Highlights/SattvikCooking'
+// import YogaByTheBay from '../Components/Highlights/YogaByTheBay'
+// import FullmoonMeditation from '../Components/Highlights/FullmoonMeditation'
+// import CorporateWorkshop from '../Components/Highlights/CorporateWorkshop'
+// import OnlineTution from '../Components/Highlights/OnlineTution'
+import SingleJob from '../Views/Careers/Views/single-job'
+import VolunteerJob from '../Views/Volunteer/Views/volunteerJob'
+// import Values from '../Views/Volunteer/Views/values'
+import PrintMedia from '../Views/Media/Views/Print-Digital/print-media'
+import DigitalMedia from '../Views/Media/Views/Print-Digital/digital-media'
+import SatsangThankyou from '../Components/EnrollmentForm/SatsangThankYou'
+import SingleDonation from '../Views/Donation/Views/single-donation'
+import News from '../Views/Media/Views/news'
+import Careers from '../Views/Careers/Views/careers'
+import Gifting from '../Views/Gifting/Views/gifting'
+
 
 const staticSiteRoutes = [
 
@@ -171,18 +189,18 @@ const staticSiteRoutes = [
   },
   {
     Component: Facilities,
-    path: '/yoga-halls',
+    path: '/yoga-halls-rooftop-space',
     exact: true,
     id: 'statisSiteYogaHall',
-    routePath: '/yoga-halls',
+    routePath: '/yoga-halls-rooftop-space',
     name: 'YogaHall',
   },
   {
     Component: Facilities,
-    path: '/rooftop-space',
+    path: '/yoga-halls-rooftop-space',
     exact: true,
     id: 'statisSiteRooftopSpace',
-    routePath: '/rooftop-space',
+    routePath: '/yoga-halls-rooftop-space',
     name: 'RooftopSpace',
   },
   {
@@ -252,6 +270,30 @@ const staticSiteRoutes = [
     id: 'statisSiteImageGallery',
     routePath: '/image-gallery',
     name: 'ImageGallery',
+  },
+  {
+    Component: News,
+    path: '/news',
+    exact: true,
+    id: 'statisSiteNews',
+    routePath: '/news',
+    name: 'News',
+  },
+  {
+    Component: PrintMedia,
+    path: '/print-media',
+    exact: true,
+    id: 'statisSitePrintMedia',
+    routePath: '/print-media',
+    name: 'PrintMedia',
+  },
+  {
+    Component: DigitalMedia,
+    path: '/digital-media',
+    exact: true,
+    id: 'statisSiteDigitalMedia',
+    routePath: '/digital-media',
+    name: 'DigitalMedia',
   },
   {
     Component: GalleryVideo,
@@ -376,7 +418,14 @@ const staticSiteRoutes = [
     routePath: '/enrollment_thankyou',
     name: 'EnrollmentThankyou',
   },
-
+  {
+    Component: SatsangThankyou,
+    path: '/satsang_thankyou',
+    exact: true,
+    id: 'statisSiteUnderEnrollmentThankyou',
+    routePath: '/satsang_thankyou',
+    name: 'EnrollmentThankyou',
+  },
   {
     Component: YogaByTheBay,
     path: '/yoga-by-the-bay',
@@ -462,6 +511,14 @@ const staticSiteRoutes = [
     name: 'Join',
   },
   {
+    Component: VolunteerJob,
+    path: '/volunteer/:id',
+    exact: true,
+    id: 'statisSiteUnderJoin',
+    routePath: '/volunteer/:id',
+    name: 'Join',
+  },
+  {
     Component: Values,
     path: '/values',
     exact: true,
@@ -485,7 +542,14 @@ const staticSiteRoutes = [
     routePath:'/support-your-alma-mater',
     name:'AlmaMater'
   },
- 
+  {
+    Component: Gifting ,
+    path: '/gifting',
+    exact: true,
+    id: 'statisSiteGifting',
+    routePath: '/gifting',
+    name: 'Gifting',
+  },
   // {
   //   Component: Blogs,
   //   path: '/blogs/*',
@@ -533,7 +597,41 @@ const staticSiteRoutes = [
     id: 'statisSiteCourse',
     routePath: '/:courseId',
     name: 'singleCourse',
-  }
+  },
+  //donation
+  {
+    Component:DonationPage,
+    path: '/donation',
+    exact: true,
+    id: 'statisSiteDonations',
+    routePath: '/donation',
+    name: 'Donations',
+  },  {
+    Component:SingleDonation,
+    path: '/donation/:donationId',
+    exact: true,
+    id: 'statisSiteDonations',
+    routePath: '/donation/:donationId',
+    name: 'Donations',
+  },
+  {
+    Component:Careers,
+    path: '/careers',
+    exact: true,
+    id: 'statisSiteCareers',
+    routePath: '/careers',
+    name: 'Careers',
+  },
+  {
+    Component:SingleJob,
+    path: '/careers/:jobId',
+    exact: true,
+    id: 'statisSiteJob',
+    routePath: '/careers/:jobId',
+    name: 'Job',
+  },
+
+
 ]
 
 export default staticSiteRoutes

@@ -28,6 +28,9 @@ const CourseCard = ({
   //rating = 5,
   dates = [],
 }) => {
+
+
+
   const selectStyles = {
     cursor: 'pointer',
     background: color,

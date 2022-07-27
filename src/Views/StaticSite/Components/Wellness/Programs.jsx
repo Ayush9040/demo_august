@@ -7,12 +7,12 @@ import Slider from 'react-slick'
 import { data } from './data'
 
 import './style.scss'
-import baseDomain, { homeAssets } from '../../assets/images/imageAsset'
+import baseDomain, { wellnessAssets } from '../../assets/images/imageAsset'
 
 const Programs = ({ setImageChanger }) => {
-  const AnnamBrahma = `${baseDomain}${homeAssets.homeAsset19}`
-  const Police = `${baseDomain}${homeAssets.homeAsset20}`
-  const BMC = `${baseDomain}${homeAssets.homeAsset21}`
+  const AnnamBrahma = `${baseDomain}${wellnessAssets.wellnessAssets5}`
+  const Police = `${baseDomain}${wellnessAssets.wellnessAssets6}`
+  const BMC = `${baseDomain}${wellnessAssets.wellnessAssets7}`
   let images = [AnnamBrahma, Police, BMC]
   let ALT = ['Annam Brahma','Police','BMC']
 

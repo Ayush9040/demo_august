@@ -14,7 +14,8 @@ const CommonBanner = ({
   overlay = '#000000',
 }) => {
 
-  return (  
+  return (
+  
     <>
       <div
         className={`common-container ${PageType}-container ${

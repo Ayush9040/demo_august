@@ -7,6 +7,7 @@ import baseDomain, {
   background,
 } from '../../assets/images/imageAsset'
 import { useEffect } from 'react'
+import InnerNavComponent from '../InnerNavComponent'
 //import AffiliationImg from '../../assets/images/why_tyi.png'
 const Affiliations = () => {
 
@@ -14,8 +15,14 @@ const Affiliations = () => {
     scrollTo(0,0)
   },[])
 
-  let desc =
-    'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, seddiam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam,quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.'
+  const Affiliation = {
+    title: 'affiliations',
+    color: 'white',
+    menuColor: 'white',
+    menuItems: [],
+  }
+
+  
   return (
     <>
       <div className="affiliation-container">
@@ -27,9 +34,12 @@ const Affiliations = () => {
           Heading="Affiliations"
           isOnlyBanner={false}
           innerNav={false}
-          description={desc}
-          bannerImg={`${baseDomain}${background.volunteer}`}
-        />
+          description={'The Yoga Institute offers a variety of online as well as offline courses which caters to students all across the Globe. Our curriculum comprises a variety of topics and subjects and practical applications of yogic ideals in daily life  that contributes to better living and a truly transformed you! Our courses are also recognised and affiliated by various Government and International bodies.'}
+          bannerImg={`${baseDomain}${background.affiliations}`}
+          overlay='#44776Ad4'
+        >
+          <InnerNavComponent abc={Affiliation} />
+        </CommonBanner>
       </div>
       <div className="affiliation-content">
         <div className="affiliation-text">

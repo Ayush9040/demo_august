@@ -3,18 +3,21 @@ import React, { useEffect } from 'react'
 import './style.scss'
 import { breakIcon } from '../../../assets/icons/icon'
 import CommonBtn from '../../../Components/commonbtn'
-import baseDomain, { publicationAssests } from '../../../assets/images/imageAsset'
+import baseDomain, {
+  publicationAssests,
+} from '../../../assets/images/imageAsset'
 import InnerNavComponent from '../../../Components/InnerNavComponent'
+import { Link } from 'react-router-dom'
 const YogaTotalHealth = () => {
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
 
   const yogaHealth = {
-    title:'yoga-health',
-    color:'white',
-    menuColor:'white',
-    menuItems:[
+    title: 'yoga-health',
+    color: 'white',
+    menuColor: 'white',
+    menuItems: [
       {
         innerTitle:'yoga-health',
         url:'/yoga-and-total-health',
@@ -43,7 +46,7 @@ const YogaTotalHealth = () => {
     ]
   }
 
-  return(
+  return (
     <div className="yoga-total-health">
       <div className="background">
         {/* <PublicationNav title={'yoga-health'} /> */}
@@ -95,7 +98,9 @@ const YogaTotalHealth = () => {
           {`To subscribe for ‘Yoga & Total Health Monthly Magazine’ click the
           button below.`}
         </p>
-        <CommonBtn text={'Subscribe Now (E-Mag)'} />
+        <Link to="/#Newsletter">
+          <CommonBtn text={'Subscribe Now (E-Mag)'} />
+        </Link>
         <CommonBtn text={'Hard Copy'} />
         <p>
           For complaints or non-receipt of journal, write to –

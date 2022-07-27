@@ -13,6 +13,8 @@ const Academic = ({
   setFormData,
   setYearEmpty
 }) => {
+
+
   return (
     <div className="main_div">
       <div className="grid_box">
@@ -98,7 +100,7 @@ const Academic = ({
           </div>
           {empty === 1 && (
             <small>
-              *Please Enter Your Deatils!
+              *Please Enter Your Details!
             </small>
           )}
         </div>

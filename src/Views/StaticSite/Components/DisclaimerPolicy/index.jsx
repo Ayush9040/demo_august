@@ -23,7 +23,7 @@ const DisclaimerPolicy = ({
     fullName: '',
   })
 
-  // const [mail,setmail]=useState(templateKey)
+  const [mail,setmail]=useState(templateKey?.templateOnline)
   
 
   const navigate = useNavigate()
@@ -36,6 +36,17 @@ const DisclaimerPolicy = ({
     }else if (disData.name === '') {
       return setEmpty(2)
     } else {
+      if(formData.mode==='ONLINE'){
+        setmail(templateKey?.templateOnline)
+      }else if(formData.mode === 'OFFLINE' && formData.residental === ''){
+        setmail(templateKey?.templateOnline)
+      }else{
+        if(formData.residental === 'RESIDENTIAL'){  
+          setmail(templateKey?.templateOffline?.templateResidential)
+        }else{
+          setmail(templateKey?.templateOffline?.templateNonResidential)
+        }
+      }
       setEmpty(0)
       let body = {
         personalDetails: {
@@ -105,15 +116,19 @@ const DisclaimerPolicy = ({
       //     setmail(templateKey)
       //   }
       // }
+
+
+
       let mailTemplate = {
         type: null,
-        HTMLTemplate: templateKey,
+        HTMLTemplate: mail,
         subject: 'Enrollment Confirmation',
         data:{
           user: formData.name
         },
-        receivers: [formData.email,'shrey@nexgsolution.com']
+        receivers: [formData.email,'info@theyogainstitute.org']
       }
+ 
       try{
         let response
         if(formData.mode==='ONLINE' || currentCourse.category!=='camps' || currentCourse.category!=='classes'){
@@ -129,7 +144,8 @@ const DisclaimerPolicy = ({
         }
 
         if(response?.data?.success){
-          if(formData?.residental!=='RESIDENTIAL'){
+          if(currentCourse.key!=='satsang' && formData?.residental!=='RESIDENTIAL'){
+            console.log(response.data.data['_id'])
             const paymentOrderResponse =  await axios.post(`https://cms-dev-be.theyogainstituteonline.org/v1/payment/order?enrollmentFormId=${response.data.data['_id']}`, {
               amount: courseFee,
               notes: {
@@ -170,7 +186,13 @@ const DisclaimerPolicy = ({
             rzp.open()   
           }else{
             await axios.post('https://www.authserver-staging-be.theyogainstituteonline.org/v1/ali/mail', mailTemplate)
-            navigate('/enrollment_thankyou')}
+
+            if(currentCourse.key==='satsang'){
+              navigate('/satsang_thankyou')
+            }else{
+              navigate('/enrollment_thankyou')
+            }
+          }
         }
       } 
       catch(err){

@@ -80,19 +80,19 @@ const SignIn = () => {
             setField={setFormData}
             keyName="password"
           />
-          <label className="other-options">
+          {/* <label className="other-options">
             <div className="remember-me">
               <input type={'checkbox'} />
               &ensp; Remember Me
             </div>
             <div className="forgot-password">Forgot Password ?</div>
-          </label>
+          </label> */}
           <label className="signin-btn">
             <CommonBtn
               text="Sign In"
               buttonAction={handleSignIn}
             />
-            <Link to={course ? `/enrollment/${course}/?date=${selectDate}`:'/'}>
+            <Link to={ course!==undefined ? `/enrollment/${course}/?date=${selectDate}`:'/'}>
               <CommonBtn text={'Continue as a guest'} isColor={'#EA4335'} />
             </Link>
           </label>

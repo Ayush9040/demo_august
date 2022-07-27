@@ -182,7 +182,21 @@
     }
   }
 }
-
+#comingsoon{
+  position: relative;
+  &:hover{
+    &::after{
+      content: 'Coming Soon'; 
+      position: absolute;
+      text-align: center;
+      min-width:70px;
+      color: #fff;
+      background: #00000080;
+      border-radius: 4px;
+      padding: 2px;
+  }
+  }
+}
 @media (max-width: 1600px) {
   .course-detail-page {
     .main-section {
@@ -244,6 +258,9 @@
       flex-direction: column;
       & > div {
         width: 100%;
+      }
+      .course-cover{
+        height: 220px;
       }
       .course-info {
         width: 100%;

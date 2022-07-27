@@ -1,193 +1,241 @@
-.careers-page{
-  .job-title{
+.careers-page {
+  .job-title {
+    color: #fff;
+  }
+  .jobs-container {
+    padding: 5rem;
+    text-align: center;
+    h1 {
+      display: inline-block;
+      margin: 0 auto;
+    }
+    .jobs-card-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      justify-content: center;
+      box-sizing: border-box;
+      width: 70%;
+      margin: 0 auto;
+      margin-top: 3rem;
+    }
+    .our-card-btn {
       color: #fff;
-  }
-  .jobs-container{
-      padding: 5rem;
-      text-align: center;
-      h1{
-          display: inline-block;
-          margin: 0 auto;
-      }
-      .jobs-card-container{
-          display: grid;
-          grid-template-columns: repeat(3,1fr);
-          justify-content: center;
-          box-sizing: border-box;
-          width: 70%;
-          margin: 0 auto;
-          margin-top: 3rem;
-      }
-      .our-card-btn{
-          color: #fff;
-          border-color: #fff;
-      }
+      border-color: #fff;
+    }
   }
 }
-.job-description{
-    display: flex;
-    justify-content: center;
-    gap: 5rem;
-    width: 70%;
-    margin: 0 auto;
-    margin-top: 5rem;
-    &>div{
-        img{
-            width: 360px;
-            height: 330px;
-            margin-top: 20px;
-        }
+.job-description {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 5rem;
+  & > div {
+    img {
+      width: 360px;
+      height: 330px;
+      margin-top: 20px;
     }
+  }
 }
-.job-info h1{
-    display: inline-block;
+.job-info h1 {
+  display: inline-block;
 }
 
-.job-application{
-    display: flex;
-    gap: 5rem;
-    width: 70%;
-    margin: 0 auto;
-    .job-requirements{
-        width: 400px;
-        ul{
-            list-style: none;
-            font-size: 1.25rem;
-            padding-left: 0;
-            li{
-                margin: 0.75rem 0;
+.job-application {
+  display: flex;
+  gap: 5rem;
+  width: 70%;
+  margin: 0 auto;
+  .job-requirements {
+    width: 400px;
+    ul {
+      list-style: none;
+      font-size: 1.25rem;
+      padding-left: 0;
+      li {
+        margin: 0.75rem 0;
 
-                span{
-                    color: red;
-                }
-            }
+        span {
+          color: red;
         }
+      }
     }
-    .job-form{
+  }
+  .job-form {
+    width: 100%;
+    position: relative;
+    // left: 5rem;
+    .job_input {
+      width: 80%;
+      // margin: 1rem 5rem;
+    }
+    fieldset {
+      width: 100%;
+      border: none;
+      margin-bottom: 15px;
+      input {
         width: 100%;
-        form{
-            width: 80%;
-            margin: 1rem 5rem;
-        }
-        fieldset{
-            border: none;
-            margin-bottom: 15px;
-            input{
-                width: 100%;
-                box-sizing: border-box;
-                padding: 1.5rem 2rem;
-                font-size: 1.25rem;
-                border: 2px solid #000;
-                color: #000;
-                border-radius: 50px;
-            }
-            #apply{
-                width: 200px;
-                float: right;
-                background-color: #fff;
-            }
-        }
-        .uploads{
-            display: flex;
-            justify-content: space-between;
-            width: 100%;
-            &>fieldset{
-                width: 49%;
-                small{
-                    margin-top: 10px;
-                    margin-bottom: 20px;
-                }
-            }
-            label{
-                width: 100%;
-                display: block;
-                box-sizing: border-box;
-                padding: 1rem 2rem;
-                font-size: 1.25rem;
-                border: 2px solid #000;
-                color: #000;
-                border-radius: 50px;
-                text-align: center;
-                input{
-                    display: none;
-                }
-            }
-            small{
-                color: #121111;
-                float: right;
-                padding-right: 2rem;
-                font-size: 0.9rem;
-            }
-        }
+        box-sizing: border-box;
+        padding: 0.5rem 2rem;
+        font-size: 1.25rem;
+        // border: 2px solid #000;
+        color: #000;
+        border-radius: 50px;
+      }
+      #apply {
+        width: 40%;
+        float: right;
+        background-color: #fff;
+        font-size: 1.25rem;
+        padding: 1.5rem 2rem;
+        //margin-right: 7rem;
+      }
     }
-    ul{
-        width: 400px;
+    .uploads {
+      display: flex;
+      justify-content: space-between;
+      //gap: 5.5rem;
+      width: 100%;
+      & > fieldset {
+        width: 40%;
+        small {
+          margin-top: 10px;
+          margin-bottom: 20px;
+        }
+      }
+      label {
+        width: 100%;
+        display: block;
+        box-sizing: border-box;
+        padding: 1rem 2rem;
+        font-size: 1.25rem;
+        border: 2px solid #000;
+        color: #000;
+        border-radius: 50px;
+        text-align: center;
+        input {
+          display: none;
+        }
+      }
+      small {
+        color: #121111;
+        float: right;
+        padding-right: 2rem;
+        font-size: 0.9rem;
+      }
     }
-}
-@media(max-width:900px){
-    .job-description{
-        flex-direction: column;
-        &>div{
-            img{
-                width: 70%;
-                height: auto;
-                margin: 0 auto;
-            }
-        }
-        .job-img{
-            text-align: center;
-        }
-    }
-    .job-application{
-        flex-direction: column;
-        ul{
-            width: 100%;
-            box-sizing: border-box;
-            li{
-                box-sizing: border-box;
-            }
-        }
-        .job-requirements{
-            width: 100%;
-        }
-        .job-form{
-            form{
-                width: 100%;
-                margin: 0;
-                fieldset{
-                    input{
-                        padding: 2rem;
-                    }
-                }
-                .uploads{
-                    label{
-                        padding: 2rem;
-                    }
-                }
-            }
-        }
-
-    }
-    .job-application .job-form form {
-        padding: 0px !important;
-    }
+  }
+  ul {
+    width: 400px;
+  }
 }
 
-@media (max-width:500px) {
-    .job-application .job-form form .uploads label {
-        padding: 1rem;
-    }
-
+.form-content form label {
+  display: flex;
+  align-items: center;
+  padding: 1rem 2rem;
+  /* border: 1px solid rgba(96, 96, 96, 0.5019607843); */
+  border-radius: 50px;
+  width: 700px;
+  margin: 0 auto;
+  position: relative;
+  bottom: 1rem;
 }
 
-@media (max-width: 1800px) {
-    .job-application .job-form form {
-        padding: 1rem 2.5rem;
-    }
+@media (max-width: 1550px) {
+  .job-application .job-form form {
+    width: 100%;
+  }
 }
 
-@media (max-width: 1350px) {
-    .job-application .job-form form {
-        padding: 1rem 4.5rem;
+@media (max-width: 1230px) {
+  .single-job {
+    .job-details {
+      .job-application {
+        .job-form {
+          #apply {
+            display: block;
+            float: none;
+            margin: 0 auto;
+          }
+          .uploads {
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            & > fieldset {
+              width: 68%;
+            }
+          }
+        }
+      }
     }
+  }
 }
+
+@media (max-width: 900px) {
+  .job-description {
+    flex-direction: column;
+    & > div {
+      img {
+        width: 70%;
+        height: auto;
+        margin: 0 auto;
+      }
+    }
+    .job-img {
+      text-align: center;
+    }
+  }
+  .job-application {
+    flex-direction: column;
+    ul {
+      width: 100%;
+      box-sizing: border-box;
+      li {
+        box-sizing: border-box;
+      }
+    }
+    .job-requirements {
+      width: 100%;
+    }
+    .job-form {
+      form {
+        width: 100%;
+        margin: 0;
+        fieldset {
+          input {
+            padding: 2rem;
+          }
+        }
+        .uploads {
+          label {
+            padding: 2rem;
+          }
+        }
+      }
+    }
+  }
+  .job-application .job-form form {
+    padding: 0px !important;
+  }
+}
+
+@media (max-width: 500px) {
+  .job-application .job-form form .uploads label {
+    padding: 1rem;
+  }
+}
+
+// @media (max-width: 1800px) {
+//     .job-application .job-form form {
+//         padding: 1rem 0rem;
+//     }
+// }
+
+// @media (max-width: 1350px) {
+//     .job-application .job-form form {
+//         padding: 1rem 0rem;
+//     }
+// }
