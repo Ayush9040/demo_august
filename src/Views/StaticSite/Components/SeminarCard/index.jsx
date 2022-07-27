@@ -51,7 +51,7 @@ const SeminarCard = ({
 
   let formatDate = new Date( date )
 
-  let blogDate = formatDate.getDate() + '/'+ formatDate.getMonth()+'/'+formatDate.getFullYear() 
+  let blogDate = formatDate.getDate() + '/'+ (formatDate.getMonth()+1)+'/'+formatDate.getFullYear() 
 
   return (
     <div className={'seminar-card'}>

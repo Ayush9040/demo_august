@@ -42,7 +42,7 @@ const BlogPage = () => {
   
   let formatDate = new Date( blog.createdAt )
 
-  let blogDate = formatDate.getDate() + '/'+ formatDate.getMonth()+'/'+formatDate.getFullYear() 
+  let blogDate = formatDate.getDate() + '/'+ (formatDate.getMonth()+1)+'/'+formatDate.getFullYear() 
   
 
 
