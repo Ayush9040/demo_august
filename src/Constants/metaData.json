@@ -2915,5 +2915,47 @@
         "content": "Website"
       }
     ]
+  },
+  "/media": {
+    "title": "Digital Media - The Yoga Institute",
+    "h1Tag": "Media",
+    "h2Tags": [
+      "PRINT MEDIA",
+      "Digital Media"
+    ],
+    "metaData": [
+      {
+        "name": "keywords",
+        "content": "yoga institute media, media gallery, gallery, Media coverage"
+      },
+      {
+        "name": "description",
+        "content": "Check out our various videos showcased in the digital media. We have been showcased on various news channels."
+      },
+      {
+        "property": "og:description",
+        "content": "Check out our various videos showcased in the digital media. We have been showcased on various news channels."
+      },
+      {
+        "property": "og:title",
+        "content": "Digital Media - The Yoga Institute"
+      },
+      {
+        "property": "og:url",
+        "content": "https://www.staging.theyogainstituteonline.org/media"
+      },
+      {
+        "property": "og:sitename",
+        "content": "The Yoga Institue"
+      },
+      {
+        "property": "og:image",
+        "content": "https://ecom-static-site.oss-ap-south-1.aliyuncs.com/metaImages/The-Times-of-India.jpg"
+      },
+      {
+        "property": "og:type",
+        "content": "Website"
+      }
+    ]
   }
 }
