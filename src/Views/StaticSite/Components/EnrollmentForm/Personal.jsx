@@ -51,7 +51,7 @@ const Personal = ({ handleEmpty1, empty, setFormData, formData, setEmpty }) => {
               {empty === 3 && (
                 <small>
                   {' '}
-                  Please enter a valid phone nuber
+                  Please enter a valid phone number
                 </small>
               )}
             </div>
@@ -163,6 +163,7 @@ const Personal = ({ handleEmpty1, empty, setFormData, formData, setEmpty }) => {
                   onChange={(e) => {
                     if (e.target.checked) {
                       setFormData({ ...formData, gender: e.target.value })
+                      setEmpty(0)
                     }
                   }}
                 />
