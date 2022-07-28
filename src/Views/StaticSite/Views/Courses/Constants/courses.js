@@ -8136,7 +8136,7 @@ const camps = {
     colorCode: '#EDBE66',
     timing: 'Morning:7:00 am – 8:30 am (IST)',
     fees: {
-      onlineFee: 1600,
+      onlineFee: 2100,
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'camps',
@@ -8301,7 +8301,7 @@ const camps = {
       {
         type: 'paragraph',
         content: {
-          title: 'Rs. 1600/-',
+          title: 'Rs. 2100/-',
           text: [
             '*Please note fees once paid will be non-refundable.',
             ' We support all credit cards. For making payments using MasterCard. Alternatively, you can also make payments using net banking or opt for wire transfer by writing to us.',
@@ -8462,7 +8462,7 @@ const camps = {
     colorCode: '#EDBE66',
     timing: 'Evening: 6:30 pm – 8:00 pm (IST)',
     fees: {
-      onlineFee: 1600,
+      onlineFee: 2100,
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'camps',
@@ -8621,7 +8621,7 @@ const camps = {
       {
         type: 'paragraph',
         content: {
-          title: 'Rs. 1600/-',
+          title: 'Rs. 2100/-',
           text: [
             '*Please note fees once paid will be non-refundable.',
             ' We support all credit cards. For making payments using MasterCard. Alternatively, you can also make payments using net banking or opt for wire transfer by writing to us.',
@@ -9110,7 +9110,7 @@ const camps = {
     colorCode: '#EDBE66',
     timing: 'Morning: 7:00 am – 8:30 am (IST)',
     fees: {
-      onlineFee: 1600,
+      onlineFee: 2100,
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'camps',
@@ -9275,7 +9275,7 @@ const camps = {
       {
         type: 'paragraph',
         content: {
-          title: 'Rs. 1600/-',
+          title: 'Rs. 2100/-',
           text: [
             '*Please note fees once paid will be non-refundable.',
             ' We support all credit cards. For making payments using MasterCard. Alternatively, you can also make payments using net banking or opt for wire transfer by writing to us.',
