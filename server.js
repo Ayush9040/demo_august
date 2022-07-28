@@ -5,7 +5,7 @@ const path = require('path')
 const fs = require('fs')
 const metaDataObj = require('./src/Constants/metaData.json')
 
-const PORT = 8080
+const PORT = 5500
 
 const app = express()
 

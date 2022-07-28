@@ -364,6 +364,45 @@
       }
     ]
   },
+  "/yoga-halls-rooftop-space": {
+    "title": "Yogic Hall - The Yoga Institute ",
+    "h1Tag": "YOGA HALLS ",
+    "h2Tags": [],
+    "metaData": [
+      {
+        "name": "keywords",
+        "content": "yoga halls, Yoga Space"
+      },
+      {
+        "name": "description",
+        "content": "Our vast yoga hall for yogic practice reverberate with powerful spiritual energy of more than 100 years. Come experience this energy and see the change..."
+      },
+      {
+        "property": "og:description",
+        "content": "Our vast yoga hall for yogic practice reverberate with powerful spiritual energy of more than 100 years. Come experience this energy and see the change..."
+      },
+      {
+        "property": "og:title",
+        "content": "Yogic Hall - The Yoga Institute "
+      },
+      {
+        "property": "og:url",
+        "content": "https://www.staging.theyogainstituteonline.org/yoga-halls"
+      },
+      {
+        "property": "og:sitename",
+        "content": "The Yoga Institue"
+      },
+      {
+        "property": "og:image",
+        "content": "http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Facilities/Yogic%20Halls/yogahalls.jpg"
+      },
+      {
+        "property": "og:type",
+        "content": "Website"
+      }
+    ]
+  },
   "/yoga-halls": {
     "title": "Yogic Hall - The Yoga Institute ",
     "h1Tag": "YOGA HALLS ",
