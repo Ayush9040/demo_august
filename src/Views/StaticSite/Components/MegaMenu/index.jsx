@@ -345,8 +345,8 @@ const MegaMenu = ({ setNav }) => {
                   </h3>
                 </Link>
                 <Link onClick={() => {setNav(false)}}  to='/satsang'>
-                  <h3>Satsang</h3></Link>
-                <h3>REGULAR CLASSES</h3>
+                  <h3 style={{ marginTop:'0.75rem' }} >Satsang</h3></Link>
+                <h3 style={{ marginTop:'0.75rem' }} >REGULAR CLASSES</h3>
                 <ul>
                   <Link onClick={() => {setNav(false)}}  to="/asana-regular-classes-on-campus">
                     <li>Asana Regular Classes for Men - On Campus</li>
