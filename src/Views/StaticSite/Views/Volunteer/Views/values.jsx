@@ -39,7 +39,7 @@ const Values = () => {
           <InnerNavComponent abc={ValuesBar}/>
         </CommonBanner>
       </div>
-      <div className='content-container pd-career'>
+      <div className='content-container pd-values'>
         <div className='text-content'>
           <p>
           Life is not measured by how much you have attained for yourself; but rather by how much you have given to others. - Dr. Hansaji.J.Yogendra
@@ -67,7 +67,7 @@ const Values = () => {
           </p>
         </div>
         <div className='image-content'>
-          <img src={`${baseDomain}${volunteerAssets.valuesAssets}`} />
+          <img src={`${baseDomain}${volunteerAssets.valuesAssets}`} alt='our values'/>
         </div>
       </div>
     </>

@@ -6,6 +6,7 @@ import baseDomain, {
 const ttc200hr = {
   1: {
     id: '',
+    key: 'one-month-ttc',
     // templateId: 'COURSE200_1M_TTC',
     templateId: {
       templateOnline: 'COURSE200_1M_ONLINE_TTC',
@@ -14,7 +15,6 @@ const ttc200hr = {
         templateNonResidential: 'COURSE200_NONRES_TTC'
       }
     },
-    key: 'batch-1-200hr',
     batch: 1,
     metaDescription:
       'You will learn the tools to master your physical, mental and spiritual well-being. You will see a marked improvement in your life, relationships and work.',
@@ -329,6 +329,8 @@ const ttc200hr = {
     faq: [],
   },
   2: {
+    id: '',
+    key: '200-hrs-part-time-ttc-on-campus-english',
     // id: '',
     // templateId: 'COURSE200_1M_TTC2',
     templateId: {
@@ -338,7 +340,6 @@ const ttc200hr = {
         templateNonResidential: 'COURSE200_2M_NONRES_TTC'
       }
     },
-    key: 'batch-2-200hr',
     batch: 2,
     metaDescription:
       'You will learn the tools to master your physical, mental and spiritual well-being. You will see a marked improvement in your life, relationships and work.',
@@ -649,6 +650,7 @@ const ttc200hr = {
   },
   3: {
     id: '',
+    key: '200-hrs-parttime-ttc-online-english',
     // templateId: 'COURSE200_2M_TTC2',
     templateId: {
       templateOnline: 'COURSE200_1M_ONLINE_TTC',
@@ -657,7 +659,6 @@ const ttc200hr = {
         templateNonResidential: ''
       }
     },
-    key: 'batch-3-200hr',
     batch: 3,
     metaDescription:
       'You will learn the tools to master your physical, mental and spiritual well-being. You will see a marked improvement in your life, relationships and work.',
@@ -970,6 +971,7 @@ const ttc200hr = {
   },
   4: {
     id: '',
+    key: '200-hrs-part-time-ttc-online',
     // templateId: 'COURSE200_2M_TTC_HINDI',
     templateId: {
       templateOnline: 'COURSE200_2M_ONLINE_HINDI_TTC',
@@ -978,7 +980,6 @@ const ttc200hr = {
         templateNonResidential: ''
       }
     },
-    key: 'batch-4-200hr',
     batch: 4,
     metaDescription:
       'You will learn the tools to master your physical, mental and spiritual well-being. You will see a marked improvement in your life, relationships and work.',
@@ -1288,6 +1289,7 @@ const ttc200hr = {
   },
   5: {
     id: '',
+    key: '200-hrs-parttime-ttc-online-english-batch-5',
     // templateId: 'COURSE200_2M_TTC',
     templateId: {
       templateOnline: 'COURSE200_2M_ONLINE_TTC',
@@ -1296,7 +1298,6 @@ const ttc200hr = {
         templateNonResidential: ''
       }
     },
-    key: 'batch-5-200hr',
     batch: 5,
     metaDescription:
       'You will learn the tools to master your physical, mental and spiritual well-being. You will see a marked improvement in your life, relationships and work.',
@@ -1605,6 +1606,7 @@ const ttc200hr = {
   },
   6: {
     id: '',
+    key: 'weekend-teacher-training-course',
     // templateId: 'COURSE200_3M_TTC',
     templateId: {
       templateOnline: 'COURSE200_WEEKEND_TTC',
@@ -1613,7 +1615,6 @@ const ttc200hr = {
         templateNonResidential: ''
       }
     },
-    key: 'batch-6-200hr',
     batch: 6,
     metaDescription:
       'You will learn the tools to master your physical, mental and spiritual well-being. You will see a marked improvement in your life, relationships and work.',
@@ -1929,6 +1930,7 @@ const ttc200hr = {
 const ttc500hr = {
   1: {
     id: '',
+    key: '500-hrs-online-yoga-teacher-training-course-intermediate-level',
     // templateId: 'COURSE500_3M_TTC',
     templateId: {
       templateOnline: 'COURSE500_3M_ON_TTC',
@@ -1937,7 +1939,6 @@ const ttc500hr = {
         templateNonResidential: ''
       }
     },
-    key: '3-months-500hr',
     batch: 1,
     metaDescription:
       'You will learn the tools to master your physical, mental and spiritual well-being. You will see a marked improvement in your life, relationships and work.',
@@ -2196,6 +2197,7 @@ const ttc500hr = {
 const ttc900hr = {
   1: {
     id: '',
+    key: '3-months-advanced-teacher-training-course',
     // templateId: 'GENERAL_AUTO_EMAIL',
     templateId: {
       templateOnline: 'GENERAL_AUTO_EMAIL',
@@ -2204,7 +2206,6 @@ const ttc900hr = {
         templateNonResidential: ''
       }
     },
-    key: '3-months-ttc',
     batch: 1,
 
     metaDescription:
@@ -2709,6 +2710,8 @@ const ttc900hr = {
     ],
   },
   2: {
+    id: '',
+    key: 'one-year-ttc',
     // id: '',
     // templateId: 'COURSE900_1Y_TTC',
     templateId: {
@@ -2718,7 +2721,6 @@ const ttc900hr = {
         templateNonResidential: 'COURSE900_1Y_NONRES_HINDI_TTC'
       }
     },
-    key: '1-year-900hr',
     batch: 1,
     metaDescription:
       'You will learn the tools to master your physical, mental and spiritual well-being. You will see a marked improvement in your life, relationships and work.',
@@ -3318,6 +3320,7 @@ const ttc900hr = {
   3: {
     // templateId: 'COURSE900_1Y_TTC',
     id: '',
+    key: 'two-year-ttc',
     // templateId: 'COURSE900_2Y_TTC',
     templateId: {
       templateOnline: 'COURSE900_2Y_ON_TTC',
@@ -3326,7 +3329,6 @@ const ttc900hr = {
         templateNonResidential: 'COURSE900_2Y_NONRES_TTC'
       }
     },
-    key: '2-year-900hr',
     batch: 1,
 
     metaDescription:
@@ -3935,6 +3937,8 @@ const ttc900hr = {
     ],
   },
   4: {
+    id: '',
+    key: '900-hours-advanced-teacher-training-course',
     // id: '',
     // templateId: 'COURSE900_4M_TTC',
     templateId: {
@@ -3944,7 +3948,6 @@ const ttc900hr = {
         templateNonResidential: ''
       }
     },
-    key: '4-months-900hr',
     batch: 1,
 
     metaDescription:
@@ -4541,6 +4544,7 @@ const ttc900hr = {
   },
   5: {
     id: '',
+    key: 'seven-month-ttc',
     // templateId: 'COURSE900_7M_TTC',
     templateId: {
       templateOnline: 'COURSE900_7M_ON_TTC',
@@ -4549,7 +4553,6 @@ const ttc900hr = {
         templateNonResidential: 'COURSE900_7M_NONRES_TTC'
       }
     },
-    key: '7-months-900hr',
     batch: 1,
 
     metaDescription:
@@ -7389,7 +7392,7 @@ const camps = {
   17: {
     id: '',
     title: '7 Days Health Camp - On Campus - Hindi ',
-    key: '7-days-heath-camp-on-campus',
+    key: '7-days-camp',
     batch: 1,
     // templateId: 'CAMP_FOR_7_DAYS_HEALTH',
     templateId: {
@@ -7744,7 +7747,7 @@ const camps = {
     id: '',
     title:
       '21 Days BLC - Batch 2 - 21 Days BLC - Evening - Online & On Campus - English',
-    key: '21-days-blc-batch2',
+    key: '21-days-better-living-course-batch-2',
     batch: 2,
     // templateId: 'GENERAL_AUTO_EMAIL',
     templateId: {
@@ -8106,7 +8109,7 @@ const camps = {
     id: '',
     title:
       '21 Days BLC - Batch 3 - 21 Days BLC - Evening - Online & On Campus - Hindi ',
-    key: '21-days-blc-batch3',
+    key: '21-days-better-living-course-batch-3',
     batch: 3,
     // templateId: 'GENERAL_AUTO_EMAIL',
     templateId: {
@@ -8432,7 +8435,7 @@ const camps = {
   20: {
     id: '',
     title: '21 Days BLC - Batch 4 - 21 Days BLC - Morning - Online - English',
-    key: '21-days-blc-batch4',
+    key: '21-days-better-living-course-batch-4',
     batch: 4,
     // templateId: 'GENERAL_AUTO_EMAIL',
     templateId: {
@@ -8752,7 +8755,7 @@ const camps = {
   21: {
     id: '',
     title: '7 Days Health Camp - On Campus - English',
-    key: '7-days-heath-camp-on-campus-english',
+    key: '7-days-camp-englis',
     batch: 1,
     // templateId: 'CAMP_FOR_7_DAYS_HEALTH',
     templateId: {
@@ -9077,7 +9080,7 @@ const camps = {
   22: {
     id: '',
     title: '21-Days BLC - Batch 1 - 21 Days BLC - Morning On Campus - English',
-    key: 'batch1-21days-morning-oncampus',
+    key: '21-days-better-living-course',
     // templateId: 'GENERAL_AUTO_EMAIL',
     templateId: {
       templateOnline: 'GENERAL_AUTO_EMAIL',
@@ -9409,7 +9412,7 @@ const classes = {
   1: {
     id: '',
     title: 'Advance Asana Regular Class - Online (Only for TYI Teachers) ',
-    key: 'advance-asana-regular-class',
+    key: 'advanced-regular-yoga-classes',
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
     templateId: {
@@ -9567,7 +9570,7 @@ const classes = {
   3: {
     id: '',
     title: 'Asana Regular Classes - (Men & Women) - Online',
-    key: 'asana-regular-classes-men-women',
+    key: 'asana-regular-classes-online',
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
     templateId: {
@@ -9750,7 +9753,7 @@ const classes = {
   4: {
     id: '',
     title: 'Asana Regular Classes for Men - On Campus  ',
-    key: 'asana-regular-classes-men-on-campus',
+    key: 'asana-regular-classes-on-campus',
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
     templateId: {
@@ -9853,7 +9856,7 @@ const classes = {
   5: {
     id: '',
     title: 'Asana Regular Classes for Women - On Campus',
-    key: 'asana-regular-classes-for-women',
+    key: 'asana-regular-classes-on-campus-women',
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
     templateId: {
@@ -9965,7 +9968,7 @@ const classes = {
   6: {
     id: '',
     title: 'Certificate Course on Advanced Pranayama Techniques - Online',
-    key: 'certification-course-on-advanced-pranayam',
+    key: 'certificate-course-on-advanced-pranayama-techniques',
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
     templateId: {
@@ -10184,7 +10187,7 @@ const classes = {
   8: {
     id: '',
     title: 'Certificate Program on Yoga for Cancer - Online    ',
-    key: 'certification-program-on-yoga-cancer-online',
+    key: 'certificate-program-on-yoga-for-cancer',
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
     templateId: {
@@ -10698,7 +10701,7 @@ const classes = {
   11: {
     id: '',
     title: 'Children\'s Regular Class - On Campus',
-    key: 'childrens-regular-class-oncampus',
+    key: 'childrens-regular-classes',
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
     templateId: {
@@ -10773,7 +10776,7 @@ const classes = {
   12: {
     id: '',
     title: 'Children\'s Weekend Class - On Campus',
-    key: 'children\'s-weekend-class-oncampus',
+    key: 'childrens-regular-classes-on-campus',
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
     templateId: {
@@ -11159,7 +11162,7 @@ const classes = {
   16: {
     id: '',
     title: 'Weekend Asana Classes - (Men & Women) - On Campus',
-    key: 'weekend-asana-classes-men-women-oncampus',
+    key: 'weekend-classes',
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
     templateId: {
@@ -11404,7 +11407,7 @@ const classes = {
   18: {
     id: '',
     title: 'Samattvam (Health Checkup) - On Campus',
-    key: 'samattvam-health-checkup',
+    key: 'samattvam',
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
     templateId: {
@@ -11505,7 +11508,7 @@ const classes = {
   19: {
     id: '',
     title: 'Couples’ Classes  - Online',
-    key: 'couples-classes-online',
+    key: 'couples-classes',
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
     templateId: {

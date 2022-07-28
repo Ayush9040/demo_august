@@ -56,14 +56,14 @@ const wellness = () => {
         <img
           className='para1-img'
           src={`${baseDomain}${wellnessAssets.wellnessAssets3}`}
-          alt=''
+          alt='Our offerings right'
         />
       </div>
       <div className='offering-para1'>
         <img
           className='para1-img'
           src={`${baseDomain}${wellnessAssets.wellnessAssets2}`}
-          alt=''
+          alt='our offerings left'
         />
         <p className='para1'>
           Encourage your staff to keep healthy and productive even if they work

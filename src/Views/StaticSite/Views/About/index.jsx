@@ -7,7 +7,6 @@ import {
 import aboutRoutes from './Constants/routes'
 
 const About = () => {
-
   return (
     <Routes>
       {aboutRoutes.map(({ Component, path }) => (

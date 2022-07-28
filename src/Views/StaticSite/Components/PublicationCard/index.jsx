@@ -5,7 +5,7 @@ const PublicationCard = ({ color, name= 'Name', price, productImg, currency }) =
   return (
     <div className='publication-card' >
       <div className='book-image' >
-        <img src={productImg} />
+        <img src={productImg} alt={name}/>
         <h4>{currency === 'INR' ? '₹' : '$'}&nbsp;{price}</h4>
       </div>
       <div className='book-details' style={{ backgroundColor:`${color}` }} >

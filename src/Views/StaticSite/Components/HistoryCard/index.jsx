@@ -6,7 +6,7 @@ const HistoryCard = ({ productImg = `${baseDomain}${courseAssets.courseAsset1}`,
   return (
     <div style={status==='On-going' ? { border:'1px solid #BE4F31',background:'#fff' }:{}} className='history-card' >
       <div className='purchase-img' >
-        <img  src={ productImg } />
+        <img  src={ productImg } alt={itemName}/>
       </div>
       <div className='purchase-details' >
         <p>{ itemName }</p>

@@ -12,12 +12,12 @@ const News = () => {
     menuItems: [
       {
         innerTitle: 'gallery',
-        url: '/media/media-gallery',
+        url: '/image-gallery',
         name: 'Gallery',
       },
       {
         innerTitle: 'news',
-        url: '/media/news',
+        url: '/news',
         name: 'News',
       },
       // {

@@ -27,7 +27,7 @@ const SingleCsr = () => {
       </div>
       <div className="sub-div">
         <div className="sub-div-img">
-          <img src={pageData.image} />
+          <img src={pageData.image} alt={pageData.title} />
         </div>
       </div>
       <div className="last-div">

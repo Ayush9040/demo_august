@@ -17,12 +17,12 @@ const Books = () => {
         setProduct(data.data)
         return data.data
       })
-    axios
-      .get('https://ecom-dev-be.theyogainstituteonline.org/v1/category')
-      .then((data) => data.data)
-      .then((data) => {
-        setCategories(data.data)
-      })
+    // axios
+    //   .get('https://ecom-dev-be.theyogainstituteonline.org/v1/category')
+    //   .then((data) => data.data)
+    //   .then((data) => {
+    //     setCategories(data.data)
+    //   })
   }, [])
 
   // let books = [
@@ -72,7 +72,6 @@ const Books = () => {
   //   'Yoga for Youngsters',
   //   'Marriage – a spiritual journey',
   // ]
-
   const yogaBooks = {
     title: 'books',
     color: 'white',
@@ -80,7 +79,7 @@ const Books = () => {
     menuItems: [
       {
         innerTitle: 'yoga-health',
-        url: '/publication/yoga-health',
+        url: '/yoga-and-total-health',
         name: 'Yoga and Total Health',
       },
       {

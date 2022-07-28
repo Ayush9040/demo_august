@@ -130,6 +130,8 @@ export const homeAssets = {
   // footer
 
   homeAsset70: '/Home/Footer/tyi.png',
+
+  
 }
 
 export const courseAssets = {

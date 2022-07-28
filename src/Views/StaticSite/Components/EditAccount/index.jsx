@@ -64,7 +64,6 @@ const EditAccount = () => {
     setEmpty(0)
   }
 
-
   return (
     <>
       <InnerNavComponent abc={UserNav} />

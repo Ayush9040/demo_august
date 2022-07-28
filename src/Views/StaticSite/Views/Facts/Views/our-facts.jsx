@@ -54,6 +54,7 @@ const OurFacts = () => {
                   <img
                     key={idx}
                     src={img}
+                    alt={selectedRange.range}
                     className={'grid-img-' + (idx + 1)}
                   />
                 ) : (

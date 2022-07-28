@@ -1,17 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import { Link, useLocation, useNavigate, useSearchParams } from 'react-router-dom'
 import { useDispatch,useSelector } from 'react-redux'
-
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-// import { faGoogle, faFacebook } from '@fortawesome/free-brands-svg-icons'
 import { loginUserAction } from '../../Auth.actions'
-
 import CommonBtn from '../../../../Components/commonbtn'
 import InputComponent from '../../../../Components/InputComponent'
-
 import { mail, lock } from '../../../../assets/icons/icon'
-
-
 import './style.scss'
 import InnerNavComponent from '../../../../Components/InnerNavComponent'
 
@@ -36,7 +29,6 @@ const SignIn = () => {
 
   useEffect(() => {
     setSetselectDate(Params.get('date'))
-    
   }, [])
 
   useEffect(() => {
@@ -80,13 +72,13 @@ const SignIn = () => {
             setField={setFormData}
             keyName="password"
           />
-          <label className="other-options">
+          {/* <label className="other-options">
             <div className="remember-me">
               <input type={'checkbox'} />
               &ensp; Remember Me
             </div>
             <div className="forgot-password">Forgot Password ?</div>
-          </label>
+          </label> */}
           <label className="signin-btn">
             <CommonBtn
               text="Sign In"
@@ -97,11 +89,11 @@ const SignIn = () => {
             </Link>
           </label>
         </form>
-        <div className="social-logins guest">
-          <Link to="/user/sign-up">
+        <Link to="/user/sign-up">
+          <div className="social-logins guest">
             <h3>Sign Up</h3>
-          </Link>
-        </div>
+          </div>
+        </Link>
         {/* <div className="social-logins google">
           <h3>
             <FontAwesomeIcon icon={faGoogle} />

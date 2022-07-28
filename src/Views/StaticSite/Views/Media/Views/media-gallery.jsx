@@ -18,7 +18,6 @@ const MediaGallery = () => {
   const disableCarousel = () => {
     setViewCarousel(false)
   }
-
   // const images = harmonyImagesData.map((number) => ({
   //   src: number,
   // }))
@@ -29,12 +28,12 @@ const MediaGallery = () => {
     menuItems: [
       {
         innerTitle: 'gallery',
-        url: '/media/media-gallery',
+        url: '/image-gallery',
         name: 'Gallery',
       },
       {
         innerTitle: 'news',
-        url: '/media/news',
+        url: '/news',
         name: 'News',
       },
       // {
@@ -87,7 +86,7 @@ const MediaGallery = () => {
                   <CommonBtn text={'View Album'} />
                 </div>
               </div>
-              <GridComponent imgs={item.images} />
+              <GridComponent altName={item.title} imgs={item.images} />
 
               {(viewCarousel === item.id)  && (
                 <>

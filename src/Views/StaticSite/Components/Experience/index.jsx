@@ -40,12 +40,12 @@ const Experience = () => {
                 
               </p>
             </div>
-            <Link to="/experience" >
+            <Link to="/testimonials" >
               <CommonBtn text={'View All'} />
             </Link>
           </div>
           <div className="carousel-image">
-            <img src={`${baseDomain}${homeAssets.homeAsset55}`}/>
+            <img src={`${baseDomain}${homeAssets.homeAsset55}`} alt='Shri Ramnath Kovid'/>
           </div>
         </div>
         <div className="experience-carousel global-padding">
@@ -69,12 +69,12 @@ const Experience = () => {
                 </q>
               </p>
             </div>
-            <Link to="/experience" >
+            <Link to="/testimonials" >
               <CommonBtn text={'View All'} />
             </Link>
           </div>
           <div className="carousel-image">
-            <img src={`${baseDomain}${homeAssets.homeAsset56}`} />
+            <img src={`${baseDomain}${homeAssets.homeAsset56}`} alt='Modiji' />
           </div>
         </div>
         <div className="experience-carousel global-padding">
@@ -97,12 +97,12 @@ const Experience = () => {
                 </q>
               </p>
             </div>
-            <Link to="/experience" >
+            <Link to="/testimonials" >
               <CommonBtn text={'View All'} />
             </Link>
           </div>
           <div className="carousel-image">
-            <img src={`${baseDomain}${homeAssets.homeAsset57}`} />
+            <img src={`${baseDomain}${homeAssets.homeAsset57}`} alt='Naiduji' />
           </div>
         </div>
         <div className="experience-carousel global-padding">
@@ -125,12 +125,12 @@ const Experience = () => {
                 </q>
               </p>
             </div>
-            <Link to="/experience" >
+            <Link to="/testimonials" >
               <CommonBtn text={'View All'} />
             </Link>
           </div>
           <div className="carousel-image">
-            <img src={`${baseDomain}${homeAssets.homeAsset58}`} />
+            <img src={`${baseDomain}${homeAssets.homeAsset58}`} alt='Amitabh Bachchan'/>
           </div>
         </div>
       </Slider>

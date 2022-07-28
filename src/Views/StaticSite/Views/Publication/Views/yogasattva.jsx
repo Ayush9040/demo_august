@@ -24,14 +24,14 @@ const Yogasattva = () => {
     menuColor: 'white',
     menuItems: [
       {
-        innerTitle: 'yoga-health',
-        url: '/publication/yoga-health',
-        name: 'Yoga and Total Health',
+        innerTitle:'yoga-health',
+        url:'/yoga-and-total-health',
+        name:'Yoga and Total Health'
       },
       {
-        innerTitle: 'yogasttav',
-        url: '/publication/yogasattva',
-        name: 'Yogasattava',
+        innerTitle:'yogasttav',
+        url:'/yogasattva',
+        name:'Yogasattava'
       },
       // {
       //   innerTitle:'books',
@@ -44,12 +44,12 @@ const Yogasattva = () => {
       //   name:'E-books'
       // },
       {
-        innerTitle: 'library',
-        url: '/publication/library',
-        name: 'Library',
-      },
-    ],
-  }
+        innerTitle:'library',
+        url:'/library',
+        name:'Library'
+      }
+    ]
+  } 
 
   // myimages
   const images = {
@@ -145,33 +145,33 @@ const Yogasattva = () => {
           <div className="yogasattva-image">
             <img
               src={`${baseDomain}${publicationAssests.newsletterAssests1}`}
-              alt=""
+              alt="yogasattava-2017"
             />
             <img
               src={`${baseDomain}${publicationAssests.newsletterAssests2}`}
-              alt=""
+              alt="yogasattava-2017"
             />
             <img
               src={`${baseDomain}${publicationAssests.newsletterAssests3}`}
-              alt=""
+              alt="yogasattava-2017"
             />
             <img
               src={`${baseDomain}${publicationAssests.newsletterAssests4}`}
-              alt=""
+              alt="yogasattava-2017"
             />
           </div>
           <div className="yogasattva-image">
             <img
               src={`${baseDomain}${publicationAssests.newsletterAssests5}`}
-              alt=""
+              alt="yogasattava-2018"
             />
             <img
               src={`${baseDomain}${publicationAssests.newsletterAssests6}`}
-              alt=""
+              alt="yogasattava-2018"
             />
             <img
               src={`${baseDomain}${publicationAssests.newsletterAssests7}`}
-              alt=""
+              alt="yogasattava-2018"
             />
             <img
               src={`${baseDomain}${publicationAssests.newsletterAssests8}`}
@@ -181,55 +181,55 @@ const Yogasattva = () => {
           <div className="yogasattva-image">
             <img
               src={`${baseDomain}${publicationAssests.newsletterAssests9}`}
-              alt=""
+              alt="yogasattava-2019"
             />
             <img
               src={`${baseDomain}${publicationAssests.newsletterAssests10}`}
-              alt=""
+              alt="yogasattava-2019"
             />
             <img
               src={`${baseDomain}${publicationAssests.newsletterAssests11}`}
-              alt=""
+              alt="yogasattava-2019"
             />
             <img
               src={`${baseDomain}${publicationAssests.newsletterAssests12}`}
-              alt=""
+              alt="yogasattava-2019"
             />
           </div>
           <div className="yogasattva-image">
             <img
               src={`${baseDomain}${publicationAssests.newsletterAssests13}`}
-              alt=""
+              alt="yogasattava-2020"
             />
             <img
               src={`${baseDomain}${publicationAssests.newsletterAssests14}`}
-              alt=""
+              alt="yogasattava-2020"
             />
             <img
               src={`${baseDomain}${publicationAssests.newsletterAssests15}`}
-              alt=""
+              alt="yogasattava-2020"
             />
             <img
               src={`${baseDomain}${publicationAssests.newsletterAssests16}`}
-              alt=""
+              alt="yogasattava-2020"
             />
           </div>
           <div className="yogasattva-image">
             <img
               src={`${baseDomain}${publicationAssests.newsletterAssests17}`}
-              alt=""
+              alt="yogasattava-2021"
             />
             <img
               src={`${baseDomain}${publicationAssests.newsletterAssests18}`}
-              alt=""
+              alt="yogasattava-2021"
             />
             <img
               src={`${baseDomain}${publicationAssests.newsletterAssests19}`}
-              alt=""
+              alt="yogasattava-2021"
             />
             <img
               src={`${baseDomain}${publicationAssests.newsletterAssests20}`}
-              alt=""
+              alt="yogasattava-2021"
             />
           </div>
         </Slider>
@@ -263,7 +263,7 @@ const Yogasattva = () => {
                 <>
                   {images[2017].map((image, i) => (
                     <div key={i} className="preivous-box">
-                      <img src={image} alt="root-image" />
+                      <img src={image} alt="yogasattava-2017" />
                     </div>
                   ))}
                 </>
@@ -271,7 +271,7 @@ const Yogasattva = () => {
                 <>
                   {images[2018].map((image, i) => (
                     <div key={i} className="preivous-box">
-                      <img src={image} alt="root-image" />
+                      <img src={image} alt="yogasattava-2018" />
                     </div>
                   ))}
                 </>
@@ -279,7 +279,7 @@ const Yogasattva = () => {
                 <>
                   {images[2019].map((image, i) => (
                     <div key={i} className="preivous-box">
-                      <img src={image} alt="root-image" />
+                      <img src={image} alt="yogasattava-2019" />
                     </div>
                   ))}
                 </>
@@ -287,7 +287,7 @@ const Yogasattva = () => {
                 <>
                   {images[2020].map((image, i) => (
                     <div key={i} className="preivous-box">
-                      <img src={image} alt="root-image" />
+                      <img src={image} alt="yogasattava-2020" />
                     </div>
                   ))}
                 </>
@@ -303,7 +303,7 @@ const Yogasattva = () => {
                 <>
                   {images[2021].map((image, i) => (
                     <div key={i} className="preivous-box">
-                      <img src={image} alt="root-image" />
+                      <img src={image} alt="yogasattava-2021" />
                     </div>
                   ))}
                 </>

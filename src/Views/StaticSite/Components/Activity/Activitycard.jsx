@@ -10,7 +10,7 @@ const Activitycard = ({ title, description, images,url }) => {
     <>
       <div className="card-container">
         <div className="card-image">
-          <img src={images} />
+          <img src={images}  />
         </div>
         <div className="card-content-activity">
           <h1>{title}</h1>

@@ -26,8 +26,6 @@ const CourseDetails = ({
   const [pictureName,setPictureName]=useState('')
   const [certificateName,setcertificateName]=useState('')
 
-  
- 
   // const getBase64 = (file, cb)=>{
   //   let reader = new FileReader()
   //   reader.readAsDataURL(file)
@@ -35,7 +33,6 @@ const CourseDetails = ({
   //     cb(reader.result)
   //   }
   //   reader.onerror = function(error) {
-  //     console.log('Error: ', error)
   //   }
   // }
 
@@ -47,7 +44,6 @@ const CourseDetails = ({
     }else if(changeValue==='IMAGE')
       setCourseAsset1(url)
   }
-
   return (
     <div className="main-container">
       <div className="course-main-container">
@@ -55,7 +51,7 @@ const CourseDetails = ({
           <div className="details_box">
             <div className="details_course_box">
               <div className="detail_image_box">
-                <img src={currentCourse?.image} alt="" />
+                <img src={currentCourse?.image} alt={currentCourse.title} />
               </div>
               <div className="current_duration">
                 <div>

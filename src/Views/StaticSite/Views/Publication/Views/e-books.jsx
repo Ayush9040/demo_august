@@ -7,9 +7,8 @@ import InnerNavComponent from '../../../Components/InnerNavComponent'
 
 const EBooks = () => {
   const [product, setProduct] = useState([])
-  const [categories, setCategories] = useState([])
+  // const [categories, setCategories] = useState([])
 
-  console.log(categories)
   useEffect(() => {
     axios
       .get(
@@ -20,12 +19,12 @@ const EBooks = () => {
         setProduct(data.data)
         return data.data
       })
-    axios
-      .get('https://ecom-dev-be.theyogainstituteonline.org/v1/category')
-      .then((data) => data.data)
-      .then((data) => {
-        setCategories(data.data)
-      })
+    // axios
+    //   .get('https://ecom-dev-be.theyogainstituteonline.org/v1/category')
+    //   .then((data) => data.data)
+    //   .then((data) => {
+    //     setCategories(data.data)
+    //   })
   }, [])
   const yogaEbooks = {
     title:'ebooks',
@@ -34,7 +33,7 @@ const EBooks = () => {
     menuItems:[
       {
         innerTitle:'yoga-health',
-        url:'/publication/yoga-health',
+        url:'/yoga-and-total-health',
         name:'Yoga and Total Health'
       },
       {

@@ -71,7 +71,6 @@ const Enrollment = () => {
     residental: '',
   })
 
-
   const listDetailHandler = (e) => {
     e.preventDefault()
     if (formData.workfrom.length !== 4) {
@@ -119,7 +118,6 @@ const Enrollment = () => {
     setEmpty(0)
     setFormData({ ...formData, school: '', course: '', completion: '' })
   }
-
 
   const handleEmpty1 = (e) => {
     e.preventDefault()
@@ -198,7 +196,6 @@ const Enrollment = () => {
   }
 
   const handleSubmit = () => {
-
     if(formData.mode===''){
       setEmpty('mode')
     }

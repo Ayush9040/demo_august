@@ -146,7 +146,6 @@ const CommonBannerLegacy = ({
     },
   ]
 
-
   function truncateString(str, totalTextLength) {
     return str?.length > totalTextLength
       ? str?.slice(0, totalTextLength) + '....'
@@ -208,7 +207,7 @@ const CommonBannerLegacy = ({
                 </div>
 
                 <Link
-                  to={'/about/our-legacy/' + founderData[activeFounder].route}
+                  to={'/our-legacy/' + founderData[activeFounder].route}
                 >
                   <div className="legacy_read_button">
                     <CommonBtn text={'Read More'} />

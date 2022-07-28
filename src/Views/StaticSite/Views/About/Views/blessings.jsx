@@ -6,7 +6,6 @@ import InnerNavComponent from '../../../Components/InnerNavComponent'
 
 
 const Blessings = ({ location }) => {
-
   const AboutBlessings = {
     title: 'blessings',
     color: 'white',
@@ -14,17 +13,17 @@ const Blessings = ({ location }) => {
     menuItems: [
       {
         innerTitle: 'overview',
-        url: '/about/overview',
+        url: '/know-us-better',
         name: 'Overview',
       },
       {
         innerTitle: 'our-legacy',
-        url: '/about/our-legacy',
+        url: '/our-legacy',
         name: 'Our Legacy',
       },
       {
         innerTitle: 'blessings',
-        url: '/about/blessings',
+        url: '/blessings',
         name: 'Pujya Maa Dr Hansaji’s blessings',
       },
     ],

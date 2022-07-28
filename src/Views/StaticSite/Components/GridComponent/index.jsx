@@ -6,31 +6,49 @@ import {
 } from '../../assets/images/media/mediaAsset'
 import 'react-gallery-carousel/dist/index.css'
 
-const GridComponent = ({ imgs = [] }) => {
+const GridComponent = ({ altName, imgs = [] }) => {
   return (
     <div>
       <div className="common-gallery">
         <div className="common-gallery-grid">
           <div className="common-grid-1">
-            <img src={imgs.length !== 0 ? imgs[0] : harmonyImagesData[0]} />
+            <img
+              src={imgs.length !== 0 ? imgs[0] : harmonyImagesData[0]}
+              alt={altName}
+            />
           </div>
           <div className="common-grid-2">
             <div className="sub-grid-1">
-              <img src={imgs.length !== 0 ? imgs[1] : harmonyImagesData[1]} />
+              <img
+                src={imgs.length !== 0 ? imgs[1] : harmonyImagesData[1]}
+                alt={altName}
+              />
             </div>
             <div className="sub-grid-2">
-              <img src={imgs.length !== 0 ? imgs[2] : harmonyImagesData[2]} />
+              <img
+                src={imgs.length !== 0 ? imgs[2] : harmonyImagesData[2]}
+                alt={altName}
+              />
             </div>
           </div>
           <div className="common-grid-1">
-            <img src={imgs.length !== 0 ? imgs[3] : harmonyImagesData[4]} />
+            <img
+              src={imgs.length !== 0 ? imgs[3] : harmonyImagesData[4]}
+              alt={altName}
+            />
           </div>
           <div className="common-grid-2">
             <div className="sub-grid-1">
-              <img src={imgs.length !== 0 ? imgs[4] : harmonyImagesData[3]} />
+              <img
+                src={imgs.length !== 0 ? imgs[4] : harmonyImagesData[3]}
+                alt={altName}
+              />
             </div>
             <div className="sub-grid-2">
-              <img src={imgs.length !== 0 ? imgs[5] : harmonyImagesData[5]} />
+              <img
+                src={imgs.length !== 0 ? imgs[5] : harmonyImagesData[5]}
+                alt={altName}
+              />
             </div>
           </div>
         </div>

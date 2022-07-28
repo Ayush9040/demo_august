@@ -11,7 +11,7 @@ const Nispand = () => {
         <div className='heading-container'>
           <div className='heading-content'>
             <div className='heading-logo'>
-              <img src={`${baseDomain}${homeAssets.homeAsset25}`} />
+              <img src={`${baseDomain}${homeAssets.homeAsset25}`} alt='Nispand' />
             </div>
             <div className='heading-text'>
               <h2>The Yoga Institute</h2>
@@ -37,19 +37,17 @@ const Nispand = () => {
           <div className='google-app-store'>
             <a href='https://play.google.com/store/apps/details?id=com.nispand.com'  >
               <div className='google'>
-                <img src={`${baseDomain}${homeAssets.homeAsset22}`} />
+                <img src={`${baseDomain}${homeAssets.homeAsset22}`} alt='google-play' />
               </div>
             </a>
-            <a href='https://apps.apple.com/in/app/nispand-meditation-and-sleep/id1609608907' rel="noreferrer"  target='_blank' >
-              <div className='apple'>
-                <img width={'93%'} src={`${baseDomain}${homeAssets.homeAsset23}`} />
-              </div>
-            </a>
+            <div className='apple'>
+              <img width={'93%'} src={`${baseDomain}${homeAssets.homeAsset23}`} alt='app-store' />
+            </div>
           </div>
         </div>
       </div>
       <div className='app-preview'>
-        <img src={`${baseDomain}${homeAssets.homeAsset24}`} />
+        <img src={`${baseDomain}${homeAssets.homeAsset24}`} alt='Nispand-app'/>
       </div>
     </div>
   )

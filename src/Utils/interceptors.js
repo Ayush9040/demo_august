@@ -44,6 +44,6 @@ axios.interceptors.response.use(
       errorResponse.result = 'CANCELED'
       errorResponse.isCancel = true
     } 
-    console.log(errorResponse)
+    console.error(errorResponse)
     return Promise.reject(errorResponse)
   })

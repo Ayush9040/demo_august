@@ -50,12 +50,12 @@ const Affiliations = () => {
           </p>
         </div>
         <div className="affiliation-logos">
-          <img src={`${baseDomain}${certificates.IYA}`} alt="" />
+          <img src={`${baseDomain}${certificates.IYA}`} alt='Yoga Association' />
         </div>
       </div>
       <div className="affiliation-content">
         <div className="affiliation-logos">
-          <img src={`${baseDomain}${certificates.YCB}`} alt="" />
+          <img src={`${baseDomain}${certificates.YCB}`} alt='Certification Board' />
         </div>
         <div className="affiliation-text">
           <Heading largeText={'Yoga Certification Board'} />
@@ -74,12 +74,12 @@ const Affiliations = () => {
           </p>
         </div>
         <div className="affiliation-logos">
-          <img src={`${baseDomain}${certificates.YAL}`} alt="" />
+          <img src={`${baseDomain}${certificates.YAL}`} alt='Yoga Alliance' />
         </div>
       </div>
       <div className="affiliation-content">
         <div className="affiliation-logos">
-          <img src={`${baseDomain}${certificates.IAYT}`} alt="" />
+          <img src={`${baseDomain}${certificates.IAYT}`} alt='Yoga Therapists' />
         </div>
         <div className="affiliation-text">
           <Heading

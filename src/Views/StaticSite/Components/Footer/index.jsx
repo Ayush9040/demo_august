@@ -27,7 +27,7 @@ const Footer = () => {
       <div className='logo-description'>
         <div className='logo'>
           <a href='https://theyogainstitute.org/'>
-            <img src={`${baseDomain}${homeAssets.homeAsset70}`} />
+            <img src={`${baseDomain}${homeAssets.homeAsset70}`} alt='footer logo'/>
           </a>
         </div>
        
@@ -141,10 +141,10 @@ const Footer = () => {
           </ul>
           <div className='carrier-list'>
             <ul>
-              <Link to='/terms&condition'>
+              <Link to='/terms-and-condition'>
                 <li>Terms & Conditions</li>
               </Link>
-              <Link to='/privacy&policy'>
+              <Link to='/privacy-policy'>
                 <li>Privacy Policy</li>
               </Link>
 

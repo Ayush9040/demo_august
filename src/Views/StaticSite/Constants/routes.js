@@ -1,44 +1,83 @@
-import FAQ from '../Components/Faq'
-import Home from '../Views/Home'
-import Shop from '../Views/Shop'
-import TermsCondition from '../Components/TermsandCondition/index.jsx'
-import PrivacyPolicy from '../Components/PrivacyPolicy/index.jsx'
-import Affiliations from '../Components/Affiliations/index.jsx'
-import Enrollment from '../Components/EnrollmentForm/index.jsx'
-import wellness from '../Components/Wellness/index.jsx'
-import CorporateSocialResponsibilty from '../Components/CorporateSocialResponsibility/index.jsx'
-import SingleCsr from '../Components/CorporateSocialResponsibility/SingleCsr/index.jsx'
-import About from '../Views/About'
-import Alumni from '../Views/Alumni'
-import Media from '../Views/Media'
-import Publication from '../Views/Publication'
-import Course from '../Views/Courses'
-import Blogs from '../Views/Blogs/index.jsx'
-import Career from '../Views/Careers'
-import Donations from '../Views/Donation'
-import Experiences from '../Views/Experience'
-import Facility from '../Views/Facilities'
-import Facts from '../Views/Facts'
-import Gift from '../Views/Gifting'
-import Museum from '../Views/Museum'
+import { lazy } from 'react'
+
+
+
+
+const Home = lazy(() => import('../Views/Home'))
+const TermsCondition = lazy(() => import('../Components/TermsandCondition'))
+const PrivacyPolicy = lazy(() => import('../Components/PrivacyPolicy'))
+const Affiliations = lazy(() => import('../Components/Affiliations'))
+const Enrollment = lazy(() => import('../Components/EnrollmentForm'))
+const wellness = lazy(() => import('../Components/Wellness'))
+const CorporateSocialResponsibilty = lazy(() => import('../Components/CorporateSocialResponsibility'))
+const Course = lazy(() => import('../Views/Courses/Views/course-page'))
+const SingleCsr = lazy(() => import('../Components/CorporateSocialResponsibility/SingleCsr'))
+const BrowseCourses = lazy(() => import('../Views/Courses/Views/browse-courses'))
+const Experiences = lazy(() => import('../Views/Experience'))
+const Museum = lazy(() => import('../Views/Museum'))
+const Thankyou = lazy(() => import('../Components/EnrollmentForm/ThankYou'))
+const SattvikCooking = lazy(() => import('../Components/Highlights/SattvikCooking'))
+const YogaByTheBay = lazy(() => import('../Components/Highlights/YogaByTheBay'))
+const FullmoonMeditation = lazy(() => import('../Components/Highlights/FullmoonMeditation'))
+const CorporateWorkshop = lazy(() => import('../Components/Highlights/CorporateWorkshop'))
+const OnlineTution = lazy(() => import('../Components/Highlights/OnlineTution'))
+const AboutUs = lazy(() => import('../Views/About/Views/overview'))
+const OurLegacy = lazy(() => import('../Views/About/Views/our-legacy'))
+const Blessings = lazy(() => import('../Views/About/Views/blessings'))
+const Facilities = lazy(() => import('../Views/Facilities/Views/facilities'))
+const DonationPage = lazy(() => import('../Views/Donation/Views/donation-page'))
+const MediaGallery = lazy(() => import('../Views/Media/Views/media-gallery'))
+const GalleryVideo = lazy(() => import('../Views/Media/Views/media-video'))
+const YogaTotalHealth = lazy(() => import('../Views/Publication/Views/yoga-health'))
+const Yogasattva = lazy(() => import('../Views/Publication/Views/yogasattva'))
+const library = lazy(() => import('../Views/Publication/Views/library'))
+const BlogPage = lazy(() => import('../Views/Blogs/Views/blog-page'))
+const OurLegacyModal = lazy(() => import('../Components/OurLegacyModal'))
+const SocialResponsibility =lazy(()=>import('../Views/SocialPage/Views/social-responsibility'))
+const VolunteerPage = lazy(()=>import('../Views/Volunteer/Views/volunteer'))
+const Values = lazy(()=>import('../Views/Volunteer/Views/values'))
+const AlumniGallery = lazy(()=>import('../Views/Alumni/Views/alumni-gallery'))
+const Support = lazy(()=>import('../Views/Alumni/Views/support'))
+const Facts = lazy(()=>import('../Views/Facts/Views/our-facts'))
+
+// import FAQ from '../Components/Faq'
+// import Shop from '../Views/Shop'
+// import About from '../Views/About'
+// import Alumni from '../Views/Alumni'
+// import Media from '../Views/Media'
+// import Publication from '../Views/Publication'
+// import SingleCourse from '../Views/Courses/Views/course-name'
+// import Blogs from '../Views/Blogs/index.jsx'
+// import Career from '../Views/Careers'
+// import Donations from '../Views/Donation'
+// import Facility from '../Views/Facilities'
+// import Facts from '../Views/Facts'
+// import Gift from '../Views/Gifting'
 import Authentication from '../Views/Authentication'
-import SoicalPage from '../Views/SocialPage'
-import VolunteerPage from '../Views/Volunteer'
-import Thankyou from '../Components/EnrollmentForm/ThankYou'
-import SattvikCooking from '../Components/Highlights/SattvikCooking'
-import YogaByTheBay from '../Components/Highlights/YogaByTheBay'
-import FullmoonMeditation from '../Components/Highlights/FullmoonMeditation'
-import CorporateWorkshop from '../Components/Highlights/CorporateWorkshop'
-import OnlineTution from '../Components/Highlights/OnlineTution'
+// import VolunteerPage from '../Views/Volunteer'
+// import VolunteerPage from '../Views/Volunteer'
+// import Thankyou from '../Components/EnrollmentForm/ThankYou'
+// import SattvikCooking from '../Components/Highlights/SattvikCooking'
+// import YogaByTheBay from '../Components/Highlights/YogaByTheBay'
+// import FullmoonMeditation from '../Components/Highlights/FullmoonMeditation'
+// import CorporateWorkshop from '../Components/Highlights/CorporateWorkshop'
+// import OnlineTution from '../Components/Highlights/OnlineTution'
 import SingleJob from '../Views/Careers/Views/single-job'
 import VolunteerJob from '../Views/Volunteer/Views/volunteerJob'
-import Values from '../Views/Volunteer/Views/values'
+// import Values from '../Views/Volunteer/Views/values'
 import PrintMedia from '../Views/Media/Views/Print-Digital/print-media'
 import DigitalMedia from '../Views/Media/Views/Print-Digital/digital-media'
 import SatsangThankyou from '../Components/EnrollmentForm/SatsangThankYou'
+import SingleDonation from '../Views/Donation/Views/single-donation'
+import News from '../Views/Media/Views/news'
+import Careers from '../Views/Careers/Views/careers'
+import Gifting from '../Views/Gifting/Views/gifting'
+import DescisionComp from '../Views/DecisionComponent'
 
 
 const staticSiteRoutes = [
+
+  //Home
   {
     Component: Home,
     path: '/',
@@ -47,45 +86,197 @@ const staticSiteRoutes = [
     routePath: '/',
     name: 'Home',
   },
+  //SocialPage
   {
-    Component: SoicalPage,
-    path: '/social-responsibility/*',
+    Component: SocialResponsibility,
+    path: '/social-initiatives',
     exact: true,
     id: 'statisSiteSocial',
-    routePath: '/social-responsibility/*',
+    routePath: '/social-initiatives',
     name: 'Social',
   },
+  //Course
   {
     Component: Course,
-    path: '/courses/*',
+    path: '/courses',
     exact: true,
     id: 'statisSiteCourses',
-    routePath: '/courses/*',
+    routePath: '/courses',
     name: 'Courses',
   },
   {
-    Component: About,
-    path: '/about/*',
+    Component: BrowseCourses,
+    path: '/courses/browse/:type',
+    exact: true,
+    id: 'statisSiteCoursesBrowse',
+    routePath: '/courses/browse/:type',
+    name: 'Courses',
+  },
+  //About
+  {
+    Component: AboutUs,
+    path: '/know-us-better',
     exact: true,
     id: 'statisSiteAbout',
-    routePath: '/about/*',
+    routePath: '/know-us-better',
     name: 'About',
   },
   {
-    Component: Publication,
-    path: '/publication/*',
+    Component: OurLegacy,
+    path: '/our-legacy',
     exact: true,
-    id: 'statisSitePublication',
-    routePath: '/publication/*',
-    name: 'Publication',
+    id: 'statisSiteAbout',
+    routePath: '/our-legacy',
+    name: 'About',
   },
   {
-    Component: Media,
-    path: '/media/*',
+    Component: Blessings,
+    path: '/blessings',
     exact: true,
-    id: 'statisSiteMedia',
-    routePath: '/media/*',
-    name: 'Media',
+    id: 'statisSiteAbout',
+    routePath: '/blessings',
+    name: 'About',
+  },
+  {
+    Component: OurLegacyModal,
+    path: '/our-legacy/:name',
+    exact: true,
+    id: 'statisSiteOurLegacyModal',
+    routePath: '/our-legacy/:name',
+    name: 'OurLegacyModal',
+  },
+  //facilities
+  {
+    Component: Facilities,
+    path: '/facilities',
+    exact: true,
+    id: 'statisSiteFacilites',
+    routePath: '/facilities',
+    name: 'Facilites',
+  },
+  {
+    Component: Facilities,
+    path: '/hostels',
+    exact: true,
+    id: 'statisSiteHostel',
+    routePath: '/hostels',
+    name: 'Hostel',
+  },
+  {
+    Component: Facilities,
+    path: '/conference-room',
+    exact: true,
+    id: 'statisSiteConferenceRoom',
+    routePath: '/conference-room',
+    name: 'ConferenceRoom',
+  },
+  {
+    Component: Facilities,
+    path: '/yoga-library',
+    exact: true,
+    id: 'statisSiteYogaLibrary',
+    routePath: '/yoga-library',
+    name: 'YogaLibrary',
+  },
+  {
+    Component: Facilities,
+    path: '/book-store',
+    exact: true,
+    id: 'statisSiteBookStore',
+    routePath: '/book-store',
+    name: 'BookStore',
+  },
+  {
+    Component: Facilities,
+    path: '/yoga-halls-rooftop-space',
+    exact: true,
+    id: 'statisSiteYogaHall',
+    routePath: '/yoga-halls-rooftop-space',
+    name: 'YogaHall',
+  },
+  {
+    Component: Facilities,
+    path: '/yoga-halls-rooftop-space',
+    exact: true,
+    id: 'statisSiteRooftopSpace',
+    routePath: '/yoga-halls-rooftop-space',
+    name: 'RooftopSpace',
+  },
+  {
+    Component: Facilities,
+    path: '/dining-hall',
+    exact: true,
+    id: 'statisSiteDiningHall',
+    routePath: '/dining-hall',
+    name: 'DiningHall',
+  },
+  {
+    Component: Facilities,
+    path: '/nature-trail',
+    exact: true,
+    id: 'statisSiteNatureTrail',
+    routePath: '/nature-trail',
+    name: 'NatureTrail',
+  },
+  {
+    Component: Facilities,
+    path: '/gazebo',
+    exact: true,
+    id: 'statisSiteGazebo',
+    routePath: '/gazebo',
+    name: 'Gazebo',
+  },
+  {
+    Component: Facilities,
+    path: '/kailaspati-tree',
+    exact: true,
+    id: 'statisSiteKailaspatiTree',
+    routePath: '/kailaspati-tree',
+    name: 'KailaspatiTree',
+  },
+  {
+    Component: Facilities,
+    path: '/Rules-and-Regulations',
+    exact: true,
+    id: 'statisSiteRulesAndRegulations',
+    routePath: '/Rules-and-Regulations',
+    name: 'Rules and Regulations',
+  },
+  //Museum
+  {
+    Component: Museum,
+    path: '/museum-of-classical-yoga',
+    exact: true,
+    id: 'statisSiteMuseum',
+    routePath: '/museum-of-classical-yoga',
+    name: 'Museum',
+  },
+  //Donate
+  {
+    Component: DonationPage,
+    path: '/donate',
+    exact: true,
+    id: 'statisSiteDonate',
+    routePath: '/donate',
+    name: 'Donate',
+  },
+  //Gifting
+  //Media
+  {
+    Component: MediaGallery,
+    path: '/image-gallery',
+    exact: true,
+    id: 'statisSiteImageGallery',
+    routePath: '/image-gallery',
+    name: 'ImageGallery',
+  },
+  {
+    Component: News,
+    path: '/news',
+    exact: true,
+    id: 'statisSiteNews',
+    routePath: '/news',
+    name: 'News',
   },
   {
     Component: PrintMedia,
@@ -93,7 +284,7 @@ const staticSiteRoutes = [
     exact: true,
     id: 'statisSitePrintMedia',
     routePath: '/print-media',
-    name: 'PrintMedia',  
+    name: 'PrintMedia',
   },
   {
     Component: DigitalMedia,
@@ -101,150 +292,73 @@ const staticSiteRoutes = [
     exact: true,
     id: 'statisSiteDigitalMedia',
     routePath: '/digital-media',
-    name: 'DigitalMedia',  
+    name: 'DigitalMedia',
   },
   {
-    Component: Museum,
-    path: '/museum/*',
+    Component: GalleryVideo,
+    path: '/video-gallery',
     exact: true,
-    id: 'statisSiteMuseum',
-    routePath: '/museum/*',
-    name: 'Museum',
+    id: 'statisSiteImageVideoGallery',
+    routePath: '/video-gallery',
+    name: 'VideoGallery',
+  },
+  //Publications
+  {
+    Component: YogaTotalHealth,
+    path: '/yoga-and-total-health/',
+    exact: true,
+    id: 'statisSiteYogaAndHealth',
+    routePath: '/yoga-and-total-health/',
+    name: 'YogaAndHealth',
   },
   {
-    Component: Facility,
-    path: '/facilities/*',
+    Component: Yogasattva,
+    path: '/yogasattva',
     exact: true,
-    id: 'statisSiteFacily',
-    routePath: '/facilities/*',
-    name: 'Facility',
+    id: 'statisSiteYogsattva',
+    routePath: '/yogasattva',
+    name: 'Yogasattva',
   },
   {
-    Component: Shop,
-    path: '/shop',
+    Component: library,
+    path: '/library',
     exact: true,
-    id: 'statisSiteShop',
-    routePath: '/shop',
-    name: 'Shop',
+    id: 'statisSiteYogsattva',
+    routePath: '/library',
+    name: 'Yogasattva',
   },
+  //Blogs
   {
-    Component: Gift,
-    path: '/gifting/*',
+    Component: BlogPage,
+    path: '/blogs',
     exact: true,
-    id: 'statisSiteGift',
-    routePath: '/gifting/*',
-    name: 'Gift',
+    id: 'statisSiteBlog',
+    routePath: '/blogs',
+    name: 'Blog',
   },
-  {
-    Component: Donations,
-    path: '/donation/*',
-    exact: true,
-    id: 'statisSiteDonations',
-    routePath: '/donation/*',
-    name: 'Donations',
-  },
-  {
-    Component: Alumni,
-    path: '/alumni/*',
-    exact: true,
-    id: 'statisSiteUnderAlumni',
-    routePath: '/alumni/*',
-    name: 'Alumni',
-  },
-  {
-    Component: FAQ,
-    path: '/faqs',
-    exact: true,
-    id: 'statisSiteUnderFAQ',
-    routePath: '/faqs',
-    name: 'FAQ',
-  },
-  {
-    Component: VolunteerPage,
-    path: '/volunteer/',
-    exact: true,
-    id: 'statisSiteUnderJoin',
-    routePath: '/volunteer/',
-    name: 'Join',
-  },
-  {
-    Component: VolunteerJob,
-    path: '/volunteer/:id',
-    exact: true,
-    id: 'statisSiteUnderJoin',
-    routePath: '/volunteer/:id',
-    name: 'Join',
-  },
-  {
-    Component: Values,
-    path: '/values/',
-    exact: true,
-    id: 'statisSiteUnderJoin',
-    routePath: '/values/',
-    name: 'Join',
-  },
-  {
-    Component: Blogs,
-    path: '/blogs/*',
-    exact: true,
-    id: 'statisSiteUnderBlogs',
-    routePath: '/blogs/*',
-    name: 'Blogs',
-  },
-  {
-    Component: Facts,
-    path: '/our-facts/*',
-    exact: true,
-    id: 'statisSiteUnderFacts',
-    routePath: '/our-facts/*',
-    name: 'Facts',
-  },
+  //Experiences/Testimonials
   {
     Component: Experiences,
-    path: '/experience/*',
+    path: '/testimonials',
     exact: true,
-    id: 'statisSiteUnderExperience',
-    routePath: '/experience/*',
-    name: 'Experience',
-  },
-  {
-    Component: Authentication,
-    path: '/user/*',
-    exact: true,
-    id: 'statisSiteUnderAuth',
-    routePath: '/user/*',
-    name: 'Auth',
-  },
-  {
-    Component: Career,
-    path: '/careers',
-    exact: true,
-    id: 'statisSiteUnderCareers',
-    routePath: '/careers',
-    name: 'Careers',
-  },
-  {
-    Component: SingleJob,
-    path: '/careers/:jobId',
-    exact: true,
-    id: 'statisSiteUnderCareers',
-    routePath: '/careers/:jobId',
-    name: 'Careers',
+    id: 'statisSiteTestimonials',
+    routePath: '/testimonials',
+    name: 'Testimonials',
   },
   {
     Component: TermsCondition,
-    path: '/terms&condition',
+    path: '/terms-and-condition',
     exact: true,
     id: 'statisSiteUnderTermsCondition',
-    routePath: '/terms&condition',
+    routePath: '/terms-and-condition',
     name: 'TermsCondition',
   },
   {
     Component: PrivacyPolicy,
-    path: '/privacy&policy',
+    path: '/privacy-policy',
     exact: true,
     id: 'statisSiteUnderPrivacyPolicy',
-    routePath: '/privacy&policy',
+    routePath: '/privacy-policy',
     name: 'PrivacyPolicy',
   },
   {
@@ -305,47 +419,224 @@ const staticSiteRoutes = [
   },
   {
     Component: YogaByTheBay,
-    path: '/highlights/yoga_by_the_bay',
+    path: '/yoga-by-the-bay',
     exact: true,
     id: 'statisSiteUnderHighlightsYogaByTheBay',
-    routePath: '/highlights/yoga_by_the_bay',
+    routePath: '/yoga-by-the-bay',
     name: 'YogaByTheBay',
   },
-
   {
     Component: SattvikCooking,
-    path: '/highlights/sattvik_cooking',
+    path: '/sattvik-cooking',
     exact: true,
     id: 'statisSiteUnderHighlightsSattvikCooking',
-    routePath: '/highlights/sattvik_cooking',
+    routePath: '/sattvik-cooking',
     name: 'SattvikCooking',
   },
-
   {
     Component: CorporateWorkshop,
-    path: '/highlights/corporate_workshop',
+    path: '/corporate-workshops',
     exact: true,
     id: 'statisSiteUnderHighlightsCorporateWorkshop',
-    routePath: '/highlights/corporate_workshop',
+    routePath: '/corporate-workshops',
     name: 'CorporateWorkshop',
   },
-
   {
     Component: FullmoonMeditation,
-    path: '/highlights/fullmoon_meditation',
+    path: '/fullmoon_meditation',
     exact: true,
     id: 'statisSiteUnderHighlightsFullmoonMeditation',
-    routePath: '/highlights/fullmoon_meditation',
-    name: 'FullmoonMeditation',
+    routePath: '/fullmoon_meditation',
+    name: 'FullmoonMedit3000ation',
   },
   {
     Component: OnlineTution,
-    path: '/highlights/online_tuition',
+    path: '/home-tuitions',
     exact: true,
     id: 'statisSiteUnderHighlightsOnlineTuotion',
-    routePath: '/highlights/online_tuition',
+    routePath: '/home-tuitions',
     name: 'OnlineTuition',
   },
+  //Soci
+  // {
+  //   Component: Gift,
+  //   path: '/gifting/*',
+  //   exact: true,
+  //   id: 'statisSiteGift',
+  //   routePath: '/gifting/*',
+  //   name: 'Gift',
+  // },
+  // {
+  //   Component: Donations,
+  //   path: '/donation/*',
+  //   exact: true,
+  //   id: 'statisSiteDonations',
+  //   routePath: '/donation/*',
+  //   name: 'Donations',
+  // },
+  // {
+  //   Component: Alumni,
+  //   path: '/alumni/*',
+  //   exact: true,
+  //   id: 'statisSiteUnderAlumni',
+  //   routePath: '/alumni/*',
+  //   name: 'Alumni',
+  // },
+  // {
+  //   Component: FAQ,
+  //   path: '/faqs',
+  //   exact: true,
+  //   id: 'statisSiteUnderFAQ',
+  //   routePath: '/faqs',
+  //   name: 'FAQ',
+  // },
+  {
+    Component: VolunteerPage,
+    path: '/volunteer',
+    exact: true,
+    id: 'statisSiteUnderJoin',
+    routePath: '/volunteer',
+    name: 'Join',
+  },
+  {
+    Component: VolunteerJob,
+    path: '/volunteer/:id',
+    exact: true,
+    id: 'statisSiteUnderJoin',
+    routePath: '/volunteer/:id',
+    name: 'Join',
+  },
+  {
+    Component: Values,
+    path: '/values',
+    exact: true,
+    id: 'statisSiteUnderValues',
+    routePath: '/values',
+    name: 'Values',
+  },
+  {
+    Component:AlumniGallery,
+    path:'/alumni-gallery',
+    exact: true,
+    id:'staticSiteUnderAlumni',
+    routePath:'/alumni-gallery',
+    name:'Alumni'
+  },
+  {
+    Component:Support,
+    path:'/support-your-alma-mater',
+    exact: true,
+    id:'staticSiteUnderAlmaMater',
+    routePath:'/support-your-alma-mater',
+    name:'AlmaMater'
+  },
+  {
+    Component: Gifting ,
+    path: '/gifting',
+    exact: true,
+    id: 'statisSiteGifting',
+    routePath: '/gifting',
+    name: 'Gifting',
+  },
+  {
+    Component: Facts,
+    path: '/our-facts/*',
+    exact: true,
+    id: 'statisSiteUnderFacts',
+    routePath: '/our-facts/*',
+    name: 'Facts',
+  },
+  // {
+  //   Component: Experiences,
+  //   path: '/experience/*',
+  //   exact: true,
+  //   id: 'statisSiteUnderExperience',
+  //   routePath: '/experience/*',
+  //   name: 'Experience',
+  // },
+  {
+    Component: Authentication,
+    path: '/user/*',
+    exact: true,
+    id: 'statisSiteUnderAuth',
+    routePath: '/user/*',
+    name: 'Auth',
+  },
+  // {
+  //   Component: Career,
+  //   path: '/careers/*',
+  //   exact: true,
+  //   id: 'statisSiteUnderCareers',
+  //   routePath: '/careers/*',
+  //   name: 'Careers',
+  // },
+  //donation
+  {
+    Component:DonationPage,
+    path: '/donation',
+    exact: true,
+    id: 'statisSiteDonations',
+    routePath: '/donation',
+    name: 'Donations',
+  },  {
+    Component:SingleDonation,
+    path: '/donation/:donationId',
+    exact: true,
+    id: 'statisSiteDonations',
+    routePath: '/donation/:donationId',
+    name: 'Donations',
+  },
+  {
+    Component:Careers,
+    path: '/careers',
+    exact: true,
+    id: 'statisSiteCareers',
+    routePath: '/careers',
+    name: 'Careers',
+  },
+  {
+    Component:SingleJob,
+    path: '/careers/:jobId',
+    exact: true,
+    id: 'statisSiteJob',
+    routePath: '/careers/:jobId',
+    name: 'Job',
+  },
+  {
+    Component: DescisionComp,
+    path: '/:contentId',
+    exact: true,
+    id: 'statisSiteCourse',
+    routePath: '/:contentId',
+    name: 'singleCourse',
+    // 1. desComponent
+    // 2. Switch case
+    // render => loader => API call (Blog or course) => switch *Blog, *Course => loading stop
+  },
+  // {
+  //   Component: BlogAnother,
+  //   path: '/:contentId',
+  //   exact: true,
+  //   id: 'statisSiteBlog',
+  //   routePath: '/:contentId',
+  //   name: 'Blog',
+  // },
+
 ]
+// const getComponent = () => {
+
+//   switch (contentId) {
+//     case 'BLOG': 
+//     return BlogAnother
+//     case 'Course': 
+//     return SingleCourse
+//   }
+// }
+
+// return (
+//   <>
+//     {isLoading ? <Loader /> : getComponent()}
+//   </>
+// )
 
 export default staticSiteRoutes

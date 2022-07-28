@@ -44,6 +44,15 @@ body {
   }
 }
 
+.global-loader{
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+}
+
 h1 {
   margin: 0;
   font-size: 4rem;

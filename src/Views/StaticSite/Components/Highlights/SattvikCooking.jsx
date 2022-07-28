@@ -2,6 +2,7 @@ import React from 'react'
 import baseDomain, { homeAssets } from '../../assets/images/imageAsset'
 import InnerNavComponent from '../InnerNavComponent'
 import { useEffect } from 'react'
+import './style.scss'
 
 const SattvikCooking = () => {
   useEffect(() => {
@@ -21,7 +22,7 @@ const SattvikCooking = () => {
           <h1>Sattvik Cooking</h1>
         </div>
         <div className="highlight-cover">
-          <img src={`${baseDomain}${homeAssets.homeAsset18}`} alt="" />
+          <img src={`${baseDomain}${homeAssets.homeAsset18}`} alt="sattvik-cooking" />
         </div>
       </div>
       <div className="about-section">

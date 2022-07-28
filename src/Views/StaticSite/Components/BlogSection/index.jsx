@@ -9,7 +9,10 @@ import BlogCard from './BlogCard'
 import './style.scss'
 import { Link } from 'react-router-dom'
 // import { blogData } from './blogData'
-import { allBlogData } from '../../utils/blogData'
+import { fetchBlogsData } from '../../Views/Blogs/Blogs.action'
+import { useEffect } from 'react'
+import { useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
 
 const Blog = () => {
   let settings = {
@@ -40,6 +43,12 @@ const Blog = () => {
       },
     ],
   }
+  const { blogs } = useSelector((state) => state.blogs)
+  const dispatch = useDispatch()
+  useEffect(() => {
+    dispatch(fetchBlogsData({ page:1,limit:10 }))
+  }, [])
+
   return (
     <div className="blog-container global-padding">
       <div className="blog-content">
@@ -53,7 +62,7 @@ const Blog = () => {
               philosophies, and even life choices
             </p>
           </div>
-          <div className='blog_view_button'>
+          <div className="blog_view_button">
             <Link to="/blogs">
               <CommonBtn text={'View All'} />
             </Link>
@@ -61,11 +70,11 @@ const Blog = () => {
         </div>
         <div className="blog-carousel">
           <Slider {...settings}>
-            {allBlogData.map((blogs, index) => {
+            {blogs.map((item, index) => {
               if (index < 5) {
                 return (
-                  <div key={blogs.title}>
-                    <BlogCard blogs={blogs} />
+                  <div key={item.title}>
+                    <BlogCard blogs={item} />
                   </div>
                 )
               }

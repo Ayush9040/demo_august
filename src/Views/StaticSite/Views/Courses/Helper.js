@@ -136,7 +136,6 @@ export const uploadFile = (file, type) =>
         `https://${bucket}.${data.data.ossBucketRegion}.aliyuncs.com/${name}`
       )
     } catch (error) {
-      console.log(error,'err')
       reject({
         error: true,
         errorMessage: 'Unable to upload data try again later',

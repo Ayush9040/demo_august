@@ -98,7 +98,7 @@ const VolunteerJob = () => {
       <div className="job-details">
         <div className="job-description">
           <div className="job-img">
-            <img src={program?.thumbnail} alt={'title'} />
+            <img src={program?.thumbnail} alt={ program?.name } />
           </div>
           <div className="job-info">
             <h1>
@@ -221,7 +221,7 @@ const VolunteerJob = () => {
           </div>
         </div>
       </div>
-      <VolunteerGrid gallery={program?.gallery} />
+      <VolunteerGrid altName={program?.name} gallery={program?.gallery} />
       <FAQ questions={program?.faq} />
       { modal && <MessageModal type='SUCCESSS' message='Application submitted successfully!' closePopup={ setModal } /> }
     </div>

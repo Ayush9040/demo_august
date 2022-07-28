@@ -59,7 +59,7 @@ const DonationPage = () => {
         </CommonBanner>
         {donationPrograms && donationPrograms.map((point, i) => <SectionComponent
           key={i}
-          url={`/donation/donate/${point._id}`}
+          url={`/donation/${point._id}`}
           image={point.image}
           title={point.title}
           page='donation'

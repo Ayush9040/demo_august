@@ -31,7 +31,6 @@ const DisclaimerPolicy = ({
   const [empty, setEmpty] = useState(0)
 
   const handleSubmit1 = async() => {
-
     if (disData.terms === 'no') {
       return setEmpty(1)
     }else if (disData.name === '') {
@@ -165,9 +164,6 @@ const DisclaimerPolicy = ({
               order_id: paymentOrderResponse.data.id, // eslint-disable-line
               handler: async(res) => {
                 // Navigare to Success if razorpay_payment_id, razorpay_order_id, razorpay_signature is there
-                console.log(res.razorpay_payment_id)
-                console.log(res.razorpay_order_id)
-                console.log(res.razorpay_signature)
                 if(res.razorpay_payment_id && res.razorpay_order_id && res.razorpay_signature) {
                   await axios.post('https://www.authserver-staging-be.theyogainstituteonline.org/v1/ali/mail', mailTemplate)
                   navigate('/enrollment_thankyou')
@@ -200,7 +196,7 @@ const DisclaimerPolicy = ({
         }
       } 
       catch(err){
-        console.log(err)
+        console.error(err)
       } 
     }
   }

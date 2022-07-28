@@ -19,14 +19,14 @@ const YogaTotalHealth = () => {
     menuColor: 'white',
     menuItems: [
       {
-        innerTitle: 'yoga-health',
-        url: '/publication/yoga-health',
-        name: 'Yoga and Total Health',
+        innerTitle:'yoga-health',
+        url:'/yoga-and-total-health',
+        name:'Yoga and Total Health'
       },
       {
-        innerTitle: 'yogasttav',
-        url: '/publication/yogasattva',
-        name: 'Yogasattava',
+        innerTitle:'yogasttav',
+        url:'/yogasattva',
+        name:'Yogasattava'
       },
       // {
       //   innerTitle:'books',
@@ -39,11 +39,11 @@ const YogaTotalHealth = () => {
       //   name:'E-books'
       // },
       {
-        innerTitle: 'library',
-        url: '/publication/library',
-        name: 'Library',
-      },
-    ],
+        innerTitle:'library',
+        url:'/library',
+        name:'Library'
+      }
+    ]
   }
 
   return (
@@ -54,7 +54,7 @@ const YogaTotalHealth = () => {
       </div>
       <div className="publication-intro">
         <div className="mag-preview">
-          <img src={`${baseDomain}${publicationAssests.publicationAssests7}`} />
+          <img src={`${baseDomain}${publicationAssests.publicationAssests7}`}  alt='Yoga and Total Health'/>
         </div>
         <div className="mag-details">
           <div className="journal">

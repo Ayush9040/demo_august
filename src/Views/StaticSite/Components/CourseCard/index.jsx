@@ -74,7 +74,7 @@ const CourseCard = ({
   return (
     <div className="course-card">
       <div className="course-card-image">
-        <img src={img} />
+        <img src={img} alt={courseTitle} />
         {/* <div className="stars">
           {ratingArr.length !== 0 &&
             ratingArr.map((item, id) => <StarIcon key={id} />)}
@@ -107,8 +107,8 @@ const CourseCard = ({
           <Link
             to={
               selectDate === null
-                ? `/courses/course/${path}/`
-                : `/courses/course/${path}/?date=${selectDate}`
+                ? `/${path}/`
+                : `/${path}/?date=${selectDate}`
             }
           >
             <CommonBtn text={'View Details'} />

@@ -6,10 +6,10 @@ import './style.scss'
 
 const Accordian = ({ data, sliderVal=0,setSliderVal }) => {
   const [hidden, setHidden] = useState()
+  
   useEffect(()=>{
     setHidden(sliderVal)
   },[sliderVal])
-
 
 
   return (

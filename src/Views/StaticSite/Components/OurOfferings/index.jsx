@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import Heading from '../Heading'
 import './style.scss'
 import { courses, filler } from '../../assets/icons/icon'
@@ -11,46 +11,46 @@ import { Link } from 'react-router-dom'
 
 const OurOfferings = () => {
 
-  let vHeight = (window.innerHeight-400 || document.documentElement.clientHeight-400)
-  const animateCarousel = () => {
-    let offeringContainer = document.querySelector('.our-offerings-container')
-    // const rect = offeringContainer.getBoundingClientRect()
-    const { top, bottom } = offeringContainer.getBoundingClientRect()
+  // let vHeight = (window.innerHeight-400 || document.documentElement.clientHeight-400)
+  // const animateCarousel = () => {
+  //   let offeringContainer = document.querySelector('.our-offerings-container')
+  //   const rect = offeringContainer.getBoundingClientRect()
+  //   const { top, bottom } = offeringContainer.getBoundingClientRect()
 
-    return (
-      (top > 0 || bottom > 0) &&
-      top < vHeight
-    )
-    // const vWidth = window.innerWidth || document.documentElement.clientWidth
-    // const vHeight = window.innerHeight || document.documentElement.clientHeight
-    // // Return false if it's not in the viewport
-    // if (rect.right < 0 || rect.bottom < 0
-    //           || rect.left > vWidth || rect.top > vHeight) { return false }
-    // // Return true if any of its four corners are visible
-    // // return (
-    // console.log(document.elementFromPoint(rect.left, rect.top))
-    // console.log(efp(rect.left, rect.top))
-    // console.log(efp(rect.right, rect.top))
-    // console.log(efp(rect.right, rect.bottom))
-    // console.log(efp(rect.left, rect.bottom))
-    // )
-  }
-  useEffect(()=> {
-    let offeringContainer = document.getElementsByClassName('our-offerings-container')
-    if (offeringContainer[0]) {
-      window.addEventListener('scroll',() => {
-        let inViewPort = animateCarousel()
-        console.log('inViewPort',inViewPort)
-      }
-      )}
-    // return () => window.removeEventListener('scroll', animateCarousel)
-  },[])
+  //   return (
+  //     (top > 0 || bottom > 0) &&
+  //     top < vHeight
+  //   )
+  // const vWidth = window.innerWidth || document.documentElement.clientWidth
+  // const vHeight = window.innerHeight || document.documentElement.clientHeight
+  // // Return false if it's not in the viewport
+  // if (rect.right < 0 || rect.bottom < 0
+  //           || rect.left > vWidth || rect.top > vHeight) { return false }
+  // // Return true if any of its four corners are visible
+  // // return (
+  // console.log(document.elementFromPoint(rect.left, rect.top))
+  // console.log(efp(rect.left, rect.top))
+  // console.log(efp(rect.right, rect.top))
+  // console.log(efp(rect.right, rect.bottom))
+  // console.log(efp(rect.left, rect.bottom))
+  // )
+  // }
+  // useEffect(()=> {
+  //   let offeringContainer = document.getElementsByClassName('our-offerings-container')
+  //   if (offeringContainer[0]) {
+  //     window.addEventListener('scroll',() => {
+  //       let inViewPort = animateCarousel()
+  //       console.log('inViewPort',inViewPort)
+  //     }
+  //     )}
+  //   // return () => window.removeEventListener('scroll', animateCarousel)
+  // },[])
   const carouselData = [
     {
       name: '7-day Yoga Health Camp',
       description:
         'A powerful and life-changing experience, this is an introductory course to yoga theory and practice, within the premises of The Yoga Institute.',
-      redirect:'/courses/course/7-days-heath-camp-on-campus/',
+      redirect:'/7-days-camp',
       timeline:'7 days',
       price:'8000' 
     },
@@ -58,7 +58,7 @@ const OurOfferings = () => {
       name: '21-Day Better Living Course',
       description:
         'This popular course aims to integrate yoga philosophy and healthy routines in everyday life. We give you tools and techniques to help you manage your studies, home life, work life and other activities.',
-      redirect:'/courses/course/batch1-21days-morning-oncampus/',
+      redirect:'/21-days-better-living-course',
       timeline:'21 days',
       price:'1600'  
     },
@@ -66,7 +66,7 @@ const OurOfferings = () => {
       name: 'Regular Asana Classes',
       description:
         'Daily one hour asana classes for people of all age groups to help them bring balance and serenity into their lives.',
-      redirect:'/courses/course/asana-regular-classes-men-women/',
+      redirect:'/asana-regular-classes-online',
       timeline:'Any Day',
       price:'1000' 
     },
@@ -74,7 +74,7 @@ const OurOfferings = () => {
       name: 'Children’s Regular Classes',
       description:
         'Especially designed for children, the asana class helps them balance their academics along with their physical and mental health.',
-      redirect:'/courses/course/childrens-regular-class-oncampus/',
+      redirect:'/childrens-regular-classes-on-campus',
       timeline:'Any Day',
       price:'1000'
     },
@@ -82,7 +82,7 @@ const OurOfferings = () => {
       name: '7-month TTC',
       description:
         'This course provides an in-depth study of classical ashtanga yoga which teaches core yoga philosophy and technology. Participants can become internationally certified yoga trainers on completing the course.',
-      redirect:'/courses/course/7-months-900hr/',
+      redirect:'/seven-month-ttc',
       timeline:'7-month',
       price:'50,000'
     },
@@ -102,7 +102,7 @@ const OurOfferings = () => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: ()=>animateCarousel(),
+    autoplay: true,
     autoPlaySpeed: 5000,
     centerMode: true,
     centerPadding: '70px',
@@ -149,6 +149,7 @@ const OurOfferings = () => {
               <img
                 src={`${baseDomain}${homeAssets.homeAsset7}`}
                 placeholder="none"
+                alt='7days-camp'
               />
               <h4>7-day Yoga Health Camp</h4>
             </div>
@@ -156,6 +157,7 @@ const OurOfferings = () => {
               <img
                 src={`${baseDomain}${homeAssets.homeAsset8}`}
                 placeholder="none"
+                alt='21days'
               />
               <h4>21-Day Better Living Course</h4>
             </div>
@@ -163,6 +165,7 @@ const OurOfferings = () => {
               <img
                 src={`${baseDomain}${courseAssets.courseAsset37}`}
                 placeholder="none"
+                alt='200hrsTTC'
               />
               <h4>Regular Asana Classes</h4>
             </div>
@@ -170,6 +173,7 @@ const OurOfferings = () => {
               <img
                 src={`${baseDomain}${homeAssets.homeAsset10}`}
                 placeholder="none"
+                alt='Children-camp'
               />
               <h4>Children’s Regular Classes</h4>
             </div>
@@ -177,6 +181,7 @@ const OurOfferings = () => {
               <img
                 src={`${baseDomain}${homeAssets.homeAsset11}`}
                 placeholder="none"
+                alt='900hrs'
               />
               <h4>7-month TTC</h4>
             </div>

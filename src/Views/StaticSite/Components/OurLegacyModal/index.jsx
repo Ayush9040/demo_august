@@ -25,7 +25,7 @@ const OurLegacyModal = (  ) => {
       <div className="our-legacy-modal">
         <div className="about-details-container">
           <div className="detail-main-image">
-            <img src={pageData.leftImg} alt="" />
+            <img src={pageData.leftImg} alt={pageData.name} />
           </div>
           <div className="detail-text">
             <div className="detail-top-text">
@@ -54,10 +54,10 @@ const OurLegacyModal = (  ) => {
             </div>
           </div>
           <div className="detail-main-image">
-            <img src={pageData.rightImg} alt="" />
+            <img src={pageData.rightImg} alt={pageData.name}  />
           </div>
         </div>
-        <GridComponent imgs={pageData.gallery} />
+        <GridComponent altName={pageData?.name} imgs={pageData.gallery} />
       </div>
     </>
   )

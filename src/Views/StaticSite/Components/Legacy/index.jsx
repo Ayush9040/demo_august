@@ -81,7 +81,7 @@ const Legacy = () => {
         </div>
         <div className="filler-logo">{filler}</div>
         <div className="know-our-legacy-button">
-          <Link to="/about/our-legacy">
+          <Link to="/our-legacy">
             <CommonBtn text="Know Our Legacy" />
           </Link>
         </div>

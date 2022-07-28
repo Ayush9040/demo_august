@@ -8,13 +8,13 @@ const SectionComponent = ({
   title,
   description,
   url,
-  sectionId
+  sectionId,
 }) => {
   return (
-    <div id={`${sectionId}`} >
+    <div id={`${sectionId}`}>
       <div className="content-container pd-career">
         <div className="image-content">
-          <img src={image} />
+          <img src={image} alt={title} />
         </div>
         <div className="text-content-right right-container">
           <div className="text-part">
@@ -27,7 +27,7 @@ const SectionComponent = ({
             <p>{description}</p>
           </div>
           {page === 'donation' ? (
-            <Link to={url ? url :''}>
+            <Link to={url ? url : ''}>
               <button className="donate-button-new">Donate</button>
             </Link>
           ) : (

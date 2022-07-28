@@ -24,7 +24,7 @@ const YogaByTheBay = () => {
           <h1>Yoga By The Bay</h1>
         </div>
         <div className="highlight-cover">
-          <img src={`${baseDomain}${homeAssets.homeAsset12}`} alt="" />
+          <img src={`${baseDomain}${homeAssets.homeAsset12}`} alt="yoga-by-bay" />
         </div>
       </div>
       <div className="about-section">

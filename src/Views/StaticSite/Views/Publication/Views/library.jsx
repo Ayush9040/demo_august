@@ -1,4 +1,5 @@
 import React from 'react'
+import './style.scss'
 // import PublicationNav from '../../Components/PublicationNav'
 import baseDomain, { publicationAssests } from '../../../assets/images/imageAsset'
 import InnerNavComponent from '../../../Components/InnerNavComponent'
@@ -11,12 +12,12 @@ const library = () => {
     menuItems:[
       {
         innerTitle:'yoga-health',
-        url:'/publication/yoga-health',
+        url:'/yoga-and-total-health',
         name:'Yoga and Total Health'
       },
       {
         innerTitle:'yogasttav',
-        url:'/publication/yogasattva',
+        url:'/yogasattva',
         name:'Yogasattava'
       },
       // {
@@ -31,7 +32,7 @@ const library = () => {
       // },
       {
         innerTitle:'library',
-        url:'/publication/library',
+        url:'/library',
         name:'Library'
       }
     ]
@@ -49,7 +50,7 @@ const library = () => {
               <div>
                 <img
                   src={`${baseDomain}${publicationAssests.libraryAsset}`}
-                  alt=""
+                  alt="library"
                   style={{
                     width: '100%',
                     height: '100%',
@@ -74,37 +75,37 @@ const library = () => {
             <div className="card-1">
               <img
                 src={`${baseDomain}${publicationAssests.publicationAssests1}`}
-                alt=""
+                alt="library"
               />
             </div>
             <div className="card-1">
               <img
                 src={`${baseDomain}${publicationAssests.publicationAssests2}`}
-                alt=""
+                alt="library"
               />
             </div>
             <div className="card-1">
               <img
                 src={`${baseDomain}${publicationAssests.publicationAssests3}`}
-                alt=""
+                alt="library"
               />
             </div>
             <div className="card-1">
               <img
                 src={`${baseDomain}${publicationAssests.publicationAssests4}`}
-                alt=""
+                alt="library"
               />
             </div>
             <div className="card-1">
               <img
                 src={`${baseDomain}${publicationAssests.publicationAssests5}`}
-                alt=""
+                alt="library"
               />
             </div>
             <div className="card-1">
               <img
                 src={`${baseDomain}${publicationAssests.publicationAssests6}`}
-                alt=""
+                alt="library"
               />
             </div>
           </div>

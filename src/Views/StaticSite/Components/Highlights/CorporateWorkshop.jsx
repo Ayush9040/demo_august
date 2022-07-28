@@ -24,7 +24,7 @@ const CorporateWorkshop = () => {
           <h1>Corporate Workshops</h1>
         </div>
         <div className="highlight-cover">
-          <img src={`${baseDomain}${homeAssets.homeAsset17}`} alt="" />
+          <img src={`${baseDomain}${homeAssets.homeAsset17}`} alt="corporate" />
         </div>
       </div>
       <div className="about-section">

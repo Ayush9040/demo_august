@@ -46,8 +46,6 @@ const BrowseCourses = () => {
     ChangeContent()
   }, [type])
 
-
-
   return (
     <div className="browse-courses">
       <CommonBannerNavPrimary />
