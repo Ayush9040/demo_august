@@ -163,6 +163,12 @@
   td{
     font-size: 2rem!important;
   }
+  .blog_img{
+    width: 100%;
+    img{
+      width: 100%;
+    }
+  }
   .blog-grid {
     // display: grid;
     // grid-template-columns: 50% 50%;
@@ -198,6 +204,7 @@
       list-style: none;
       display: flex;
       justify-content: center;
+      width: 100%;
       li{
         font-size: 2rem;
         padding: 0 1rem;
@@ -296,6 +303,7 @@
 @media (max-width: 835px) {
   
   .upcoming-blogs {
+    width: 100%!important;
     h3 {
       text-align: center;
     }

@@ -16,6 +16,7 @@ import Pagination from 'react-js-pagination'
 const BlogPage = () => {
 
   const [ pagination,setPagination ] = useState({ page:1,limit:10 })
+  //const [ pageRange,setPageRange] = useState(5)
 
   const { blogs, count, blog }=useSelector(state=>state.blogs)
 
@@ -27,7 +28,9 @@ const BlogPage = () => {
     scrollTo(0, 0)
   }, [ pagination ])
 
-  
+  // useEffect(()=>{
+  //   window.innerWidth<900 ? setPageRange(1):setPageRange(5)
+  // },[ window.innerWidth ])
 
   const viewBlog = {
     title: 'Blogs',
@@ -112,7 +115,7 @@ const BlogPage = () => {
               activePage={pagination.page}
               itemsCountPerPage={pagination.limit}
               totalItemsCount={count}
-              pageRangeDisplayed={10}
+              pageRangeDisplayed={ 3 }
               onChange={ (e)=>handlePageChange(e) }
             />
           </div>
