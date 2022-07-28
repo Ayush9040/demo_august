@@ -8755,7 +8755,7 @@ const camps = {
   21: {
     id: '',
     title: '7 Days Health Camp - On Campus - English',
-    key: '7-days-camp-englis',
+    key: '7-days-camp-english',
     batch: 1,
     // templateId: 'CAMP_FOR_7_DAYS_HEALTH',
     templateId: {
