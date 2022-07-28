@@ -103,6 +103,10 @@ const BlogAnother = () => {
     
       <div className='blog-container' id='blog-container' >
         <h2 dangerouslySetInnerHTML={{ __html:`${blog?.title}` }} ></h2>
+        <br/>
+        { blog?.coverImage &&  <div className='blog_img' >
+          <img src={`${blog?.coverImage}`} alt={`${blog?.title}`} />
+        </div> }
         <div className='blog-grid' dangerouslySetInnerHTML={{ __html:`${blog?.content}` }} >
           {/* <div className='blog-text'>
             {pageData?.body?.map((comp) => {
