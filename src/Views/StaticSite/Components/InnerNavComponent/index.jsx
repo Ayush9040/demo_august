@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect,lazy } from 'react'
 import { useLocation } from 'react-router-dom'
 import './style.scss'
 import { useNavigate } from 'react-router-dom'
@@ -18,7 +18,7 @@ import {
   Cart,
 } from '../../assets/icons/icon'
 import { Link } from 'react-router-dom'
-import MegaMenu from '../MegaMenu'
+const MegaMenu = lazy(()=>import('../MegaMenu'))
 import { logoutUserAction } from '../../Views/Authentication/Auth.actions'
 
 const InnerNavComponent = ({ abc }) => {

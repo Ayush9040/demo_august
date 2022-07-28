@@ -1,11 +1,11 @@
-import React, { useState } from 'react'
+import React, { useState,lazy } from 'react'
 import './styles.scss'
 import { Hamburger, Cart, Gift, User } from '../../assets/icons/icon'
-import MegaMenu from '../MegaMenu'
 import { Link } from 'react-router-dom'
 import { logoutUserAction } from '../../Views/Authentication/Auth.actions'
 import { useNavigate } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
+const MegaMenu = lazy(()=>import('../MegaMenu'))
 
 const Navbar = ({ isUserLoggedIn }) => {
   const navigate = useNavigate()
