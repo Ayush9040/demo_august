@@ -2996,5 +2996,12 @@
         "content": "Website"
       }
     ]
+  },
+  "/blogs":{
+    "title":"Blogs",
+    "h1Tag": "Blogs",
+    "h2Tags": [],
+    "metaData": []
   }
+
 }
