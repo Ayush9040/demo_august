@@ -1,25 +1,34 @@
 import { lazy } from 'react'
 
-
-
-
 const Home = lazy(() => import('../Views/Home'))
 const TermsCondition = lazy(() => import('../Components/TermsandCondition'))
 const PrivacyPolicy = lazy(() => import('../Components/PrivacyPolicy'))
 const Affiliations = lazy(() => import('../Components/Affiliations'))
 const Enrollment = lazy(() => import('../Components/EnrollmentForm'))
 const wellness = lazy(() => import('../Components/Wellness'))
-const CorporateSocialResponsibilty = lazy(() => import('../Components/CorporateSocialResponsibility'))
+const CorporateSocialResponsibilty = lazy(() =>
+  import('../Components/CorporateSocialResponsibility')
+)
 const Course = lazy(() => import('../Views/Courses/Views/course-page'))
-const SingleCsr = lazy(() => import('../Components/CorporateSocialResponsibility/SingleCsr'))
-const BrowseCourses = lazy(() => import('../Views/Courses/Views/browse-courses'))
+const SingleCsr = lazy(() =>
+  import('../Components/CorporateSocialResponsibility/SingleCsr')
+)
+const BrowseCourses = lazy(() =>
+  import('../Views/Courses/Views/browse-courses')
+)
 const Experiences = lazy(() => import('../Views/Experience'))
 const Museum = lazy(() => import('../Views/Museum'))
 const Thankyou = lazy(() => import('../Components/EnrollmentForm/ThankYou'))
-const SattvikCooking = lazy(() => import('../Components/Highlights/SattvikCooking'))
+const SattvikCooking = lazy(() =>
+  import('../Components/Highlights/SattvikCooking')
+)
 const YogaByTheBay = lazy(() => import('../Components/Highlights/YogaByTheBay'))
-const FullmoonMeditation = lazy(() => import('../Components/Highlights/FullmoonMeditation'))
-const CorporateWorkshop = lazy(() => import('../Components/Highlights/CorporateWorkshop'))
+const FullmoonMeditation = lazy(() =>
+  import('../Components/Highlights/FullmoonMeditation')
+)
+const CorporateWorkshop = lazy(() =>
+  import('../Components/Highlights/CorporateWorkshop')
+)
 const OnlineTution = lazy(() => import('../Components/Highlights/OnlineTution'))
 const AboutUs = lazy(() => import('../Views/About/Views/overview'))
 const OurLegacy = lazy(() => import('../Views/About/Views/our-legacy'))
@@ -28,17 +37,21 @@ const Facilities = lazy(() => import('../Views/Facilities/Views/facilities'))
 const DonationPage = lazy(() => import('../Views/Donation/Views/donation-page'))
 const MediaGallery = lazy(() => import('../Views/Media/Views/media-gallery'))
 const GalleryVideo = lazy(() => import('../Views/Media/Views/media-video'))
-const YogaTotalHealth = lazy(() => import('../Views/Publication/Views/yoga-health'))
+const YogaTotalHealth = lazy(() =>
+  import('../Views/Publication/Views/yoga-health')
+)
 const Yogasattva = lazy(() => import('../Views/Publication/Views/yogasattva'))
 const library = lazy(() => import('../Views/Publication/Views/library'))
 const BlogPage = lazy(() => import('../Views/Blogs/Views/blog-page'))
 const OurLegacyModal = lazy(() => import('../Components/OurLegacyModal'))
-const SocialResponsibility =lazy(()=>import('../Views/SocialPage/Views/social-responsibility'))
-const VolunteerPage = lazy(()=>import('../Views/Volunteer/Views/volunteer'))
-const Values = lazy(()=>import('../Views/Volunteer/Views/values'))
-const AlumniGallery = lazy(()=>import('../Views/Alumni/Views/alumni-gallery'))
-const Support = lazy(()=>import('../Views/Alumni/Views/support'))
-const Facts = lazy(()=>import('../Views/Facts/Views/our-facts'))
+const SocialResponsibility = lazy(() =>
+  import('../Views/SocialPage/Views/social-responsibility')
+)
+const VolunteerPage = lazy(() => import('../Views/Volunteer/Views/volunteer'))
+const Values = lazy(() => import('../Views/Volunteer/Views/values'))
+const AlumniGallery = lazy(() => import('../Views/Alumni/Views/alumni-gallery'))
+const Support = lazy(() => import('../Views/Alumni/Views/support'))
+const Facts = lazy(() => import('../Views/Facts/Views/our-facts'))
 
 // import FAQ from '../Components/Faq'
 // import Shop from '../Views/Shop'
@@ -62,21 +75,26 @@ import Authentication from '../Views/Authentication'
 // import FullmoonMeditation from '../Components/Highlights/FullmoonMeditation'
 // import CorporateWorkshop from '../Components/Highlights/CorporateWorkshop'
 // import OnlineTution from '../Components/Highlights/OnlineTution'
-import SingleJob from '../Views/Careers/Views/single-job'
-import VolunteerJob from '../Views/Volunteer/Views/volunteerJob'
+const SingleJob = lazy(() => import('../Views/Careers/Views/single-job'))
+const VolunteerJob = lazy(() => import('../Views/Volunteer/Views/volunteerJob'))
 // import Values from '../Views/Volunteer/Views/values'
-import PrintMedia from '../Views/Media/Views/Print-Digital/print-media'
-import DigitalMedia from '../Views/Media/Views/Print-Digital/digital-media'
-import SatsangThankyou from '../Components/EnrollmentForm/SatsangThankYou'
-import SingleDonation from '../Views/Donation/Views/single-donation'
-import News from '../Views/Media/Views/news'
-import Careers from '../Views/Careers/Views/careers'
-import Gifting from '../Views/Gifting/Views/gifting'
-import DescisionComp from '../Views/DecisionComponent'
-
-
+const PrintMedia = lazy(() =>
+  import('../Views/Media/Views/Print-Digital/print-media')
+)
+const DigitalMedia = lazy(() =>
+  import('../Views/Media/Views/Print-Digital/digital-media')
+)
+const SatsangThankyou = lazy(() =>
+  import('../Components/EnrollmentForm/SatsangThankYou')
+)
+const SingleDonation = lazy(() =>
+  import('../Views/Donation/Views/single-donation')
+)
+const News = lazy(() => import('../Views/Media/Views/news'))
+const Careers = lazy(() => import('../Views/Careers/Views/careers'))
+const Gifting = lazy(() => import('../Views/Gifting/Views/gifting'))
+const DescisionComp = lazy(() => import('../Views/DecisionComponent'))
 const staticSiteRoutes = [
-
   //Home
   {
     Component: Home,
@@ -515,23 +533,23 @@ const staticSiteRoutes = [
     name: 'Values',
   },
   {
-    Component:AlumniGallery,
-    path:'/alumni-gallery',
+    Component: AlumniGallery,
+    path: '/alumni-gallery',
     exact: true,
-    id:'staticSiteUnderAlumni',
-    routePath:'/alumni-gallery',
-    name:'Alumni'
+    id: 'staticSiteUnderAlumni',
+    routePath: '/alumni-gallery',
+    name: 'Alumni',
   },
   {
-    Component:Support,
-    path:'/support-your-alma-mater',
+    Component: Support,
+    path: '/support-your-alma-mater',
     exact: true,
-    id:'staticSiteUnderAlmaMater',
-    routePath:'/support-your-alma-mater',
-    name:'AlmaMater'
+    id: 'staticSiteUnderAlmaMater',
+    routePath: '/support-your-alma-mater',
+    name: 'AlmaMater',
   },
   {
-    Component: Gifting ,
+    Component: Gifting,
     path: '/gifting',
     exact: true,
     id: 'statisSiteGifting',
@@ -572,14 +590,15 @@ const staticSiteRoutes = [
   // },
   //donation
   {
-    Component:DonationPage,
+    Component: DonationPage,
     path: '/donation',
     exact: true,
     id: 'statisSiteDonations',
     routePath: '/donation',
     name: 'Donations',
-  },  {
-    Component:SingleDonation,
+  },
+  {
+    Component: SingleDonation,
     path: '/donation/:donationId',
     exact: true,
     id: 'statisSiteDonations',
@@ -587,7 +606,7 @@ const staticSiteRoutes = [
     name: 'Donations',
   },
   {
-    Component:Careers,
+    Component: Careers,
     path: '/careers',
     exact: true,
     id: 'statisSiteCareers',
@@ -595,7 +614,7 @@ const staticSiteRoutes = [
     name: 'Careers',
   },
   {
-    Component:SingleJob,
+    Component: SingleJob,
     path: '/careers/:jobId',
     exact: true,
     id: 'statisSiteJob',
@@ -621,14 +640,13 @@ const staticSiteRoutes = [
   //   routePath: '/:contentId',
   //   name: 'Blog',
   // },
-
 ]
 // const getComponent = () => {
 
 //   switch (contentId) {
-//     case 'BLOG': 
+//     case 'BLOG':
 //     return BlogAnother
-//     case 'Course': 
+//     case 'Course':
 //     return SingleCourse
 //   }
 // }
