@@ -33,7 +33,7 @@ const MediaGallery = () => {
       },
       {
         innerTitle: 'news',
-        url: '/news',
+        url: '/media',
         name: 'News',
       },
       // {

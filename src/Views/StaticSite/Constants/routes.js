@@ -272,10 +272,10 @@ const staticSiteRoutes = [
   },
   {
     Component: News,
-    path: '/news',
+    path: '/media',
     exact: true,
     id: 'statisSiteNews',
-    routePath: '/news',
+    routePath: '/media',
     name: 'News',
   },
   {
