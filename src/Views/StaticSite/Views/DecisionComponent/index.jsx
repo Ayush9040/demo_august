@@ -29,10 +29,9 @@ const DescisionComp = () => {
     }
   }
 
-  console.log(isLoading,'islOad')
   return (
     <>
-      { !isLoading ? getComponent(isLoading) : <div className='global-loader' >Loading...</div> }
+      { isLoading ? getComponent(isLoading) : <div className='global-loader' >Loading...</div> }
     </>
   )
 }
