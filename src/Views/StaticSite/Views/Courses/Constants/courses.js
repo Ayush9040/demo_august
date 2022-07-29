@@ -985,7 +985,7 @@ const ttc200hr = {
       'You will learn the tools to master your physical, mental and spiritual well-being. You will see a marked improvement in your life, relationships and work.',
     image: `${baseDomain}${courseAssets.courseAsset38}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset101}`,
-    mostPopular: true,
+    mostPopular: false,
     rating: 5,
     colorCode: '#E38F73',
     timing: 'Monday to Saturday: 1:00 pm - 4:30 pm (IST)',
@@ -5157,142 +5157,142 @@ const ttc900hr = {
 }
 
 const camps = {
-  1: {
-    id: '',
-    title: 'Bhava Workshop',
-    key: 'bhava-workshop',
-    batch: 1,
-    mostPopular: false,
-    rating: 5,
-    // templateId: 'GENERAL_AUTO_EMAIL',
-    templateId: {
-      templateOnline: 'GENERAL_AUTO_EMAIL',
-      templateOffline: {
-        templateResidential: '',
-        templateNonResidential: ''
-      }
-    },
-    colorCode: '#EDBE66',
-    timing: '9.30 AM to 5.30 PM',
-    fees: {
-      onlineFee: 500,
-      offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
-    },
-    category: 'camps',
-    metaDescription:
-      'Specific pranayama, asana and relaxation techniques to enhance your state of mind',
-    image: `${baseDomain}${courseAssets.courseAsset8}`,
-    cardImage: `${baseDomain}${courseAssets.courseAsset112}`,
-    dates: ['27th August 2022', '22nd October 2022', '26th December 2022'],
-    online: true,
-    onCampus: true,
-    nonResidential: false,
-    residential: false,
-    certficate: false,
-    details: [
-      {
-        type: 'paragraph',
-        content: {
-          title: 'Who is this workshop for?',
-          text: [
-            'All of life comes down to your attitude. Your attitude determines each and every event of your life. So if you can master the right attitude, there is nothing that you will not be able to do. In Yoga, the concept of bhavas has a lot of significance in life. It means an attitude. This workshop by The Yoga Institute is uniquely designed to systematically present to you the fundamental bhavas or attitudes that one should possess to live a life full of clarity, purpose, insight and understanding. This will enhance your relationships, your work, your health, your overall well-being.                   ',
-          ],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'What can you expect?',
-          text: [
-            'The right bhavas augment the subtle and gross energies and help us deal with daily stresses and make the spiritual experience more profound. -Dr. Hansaji Yogendra ',
-          ],
-        },
-      },
-      {
-        type: 'u-list',
-        content: {
-          title: ' Program Offerings',
-          points: [
-            {
-              listItem:
-                'Effective tools and techniques to help you manage your life',
-              subItems: [],
-            },
-            {
-              listItem:
-                'Specific pranayama, asana and relaxation techniques to enhance your state of mind',
-              subItems: [],
-            },
-            {
-              listItem: 'Diet guidelines to manage your health',
-              subItems: [],
-            },
-            {
-              listItem:
-                'Tips to maintain health by our spiritual guru Institute Director, Dr. Hansaji who has decades of experience in the field',
-              subItems: [],
-            },
-            {
-              listItem: 'Fitness tips',
-              subItems: [],
-            },
-          ],
-        },
-      },
-      {
-        type: 'u-list',
-        content: {
-          title: 'Offered with the program',
-          points: [
-            {
-              listItem: 'Booklet with guidelines  ',
-              subItems: [],
-            },
-            {
-              listItem: 'Wholesome Sattvik lunch',
-              subItems: [],
-            },
-            {
-              listItem: 'Healthy snacks  ',
-              subItems: [],
-            },
-          ],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'Time',
-          text: ['9.30 AM to 5.30 PM'],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'Fees',
-          text: ['INR 500'],
-        },
-      },
-      {
-        type: 'u-list',
-        content: {
-          title: ' Guidelines',
-          points: [
-            {
-              listItem:
-                'Campers are requested to come attired to comfortable loose fitting clothes. Shorts, capris, tank tops, low cut shirts, short and sleeveless T-shirts are not permitted as per the Institute dress code.',
-              subItems: [],
-            },
-            {
-              listItem:
-                'Campers are requested to have their breakfast and medication (as prescribed by their doctor). ',
-              subItems: [],
-            },
-          ],
-        },
-      },
-    ],
-  },
+  // 1: {
+  //   id: '',
+  //   title: 'Bhava Workshop',
+  //   key: 'bhava-workshop',
+  //   batch: 1,
+  //   mostPopular: false,
+  //   rating: 5,
+  //   // templateId: 'GENERAL_AUTO_EMAIL',
+  //   templateId: {
+  //     templateOnline: 'GENERAL_AUTO_EMAIL',
+  //     templateOffline: {
+  //       templateResidential: '',
+  //       templateNonResidential: ''
+  //     }
+  //   },
+  //   colorCode: '#EDBE66',
+  //   timing: '9.30 AM to 5.30 PM',
+  //   fees: {
+  //     onlineFee: 500,
+  //     offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
+  //   },
+  //   category: 'camps',
+  //   metaDescription:
+  //     'Specific pranayama, asana and relaxation techniques to enhance your state of mind',
+  //   image: `${baseDomain}${courseAssets.courseAsset8}`,
+  //   cardImage: `${baseDomain}${courseAssets.courseAsset112}`,
+  //   dates: ['27th August 2022', '22nd October 2022', '26th December 2022'],
+  //   online: true,
+  //   onCampus: true,
+  //   nonResidential: false,
+  //   residential: false,
+  //   certficate: false,
+  //   details: [
+  //     {
+  //       type: 'paragraph',
+  //       content: {
+  //         title: 'Who is this workshop for?',
+  //         text: [
+  //           'All of life comes down to your attitude. Your attitude determines each and every event of your life. So if you can master the right attitude, there is nothing that you will not be able to do. In Yoga, the concept of bhavas has a lot of significance in life. It means an attitude. This workshop by The Yoga Institute is uniquely designed to systematically present to you the fundamental bhavas or attitudes that one should possess to live a life full of clarity, purpose, insight and understanding. This will enhance your relationships, your work, your health, your overall well-being.                   ',
+  //         ],
+  //       },
+  //     },
+  //     {
+  //       type: 'paragraph',
+  //       content: {
+  //         title: 'What can you expect?',
+  //         text: [
+  //           'The right bhavas augment the subtle and gross energies and help us deal with daily stresses and make the spiritual experience more profound. -Dr. Hansaji Yogendra ',
+  //         ],
+  //       },
+  //     },
+  //     {
+  //       type: 'u-list',
+  //       content: {
+  //         title: ' Program Offerings',
+  //         points: [
+  //           {
+  //             listItem:
+  //               'Effective tools and techniques to help you manage your life',
+  //             subItems: [],
+  //           },
+  //           {
+  //             listItem:
+  //               'Specific pranayama, asana and relaxation techniques to enhance your state of mind',
+  //             subItems: [],
+  //           },
+  //           {
+  //             listItem: 'Diet guidelines to manage your health',
+  //             subItems: [],
+  //           },
+  //           {
+  //             listItem:
+  //               'Tips to maintain health by our spiritual guru Institute Director, Dr. Hansaji who has decades of experience in the field',
+  //             subItems: [],
+  //           },
+  //           {
+  //             listItem: 'Fitness tips',
+  //             subItems: [],
+  //           },
+  //         ],
+  //       },
+  //     },
+  //     {
+  //       type: 'u-list',
+  //       content: {
+  //         title: 'Offered with the program',
+  //         points: [
+  //           {
+  //             listItem: 'Booklet with guidelines  ',
+  //             subItems: [],
+  //           },
+  //           {
+  //             listItem: 'Wholesome Sattvik lunch',
+  //             subItems: [],
+  //           },
+  //           {
+  //             listItem: 'Healthy snacks  ',
+  //             subItems: [],
+  //           },
+  //         ],
+  //       },
+  //     },
+  //     {
+  //       type: 'paragraph',
+  //       content: {
+  //         title: 'Time',
+  //         text: ['9.30 AM to 5.30 PM'],
+  //       },
+  //     },
+  //     {
+  //       type: 'paragraph',
+  //       content: {
+  //         title: 'Fees',
+  //         text: ['INR 500'],
+  //       },
+  //     },
+  //     {
+  //       type: 'u-list',
+  //       content: {
+  //         title: ' Guidelines',
+  //         points: [
+  //           {
+  //             listItem:
+  //               'Campers are requested to come attired to comfortable loose fitting clothes. Shorts, capris, tank tops, low cut shirts, short and sleeveless T-shirts are not permitted as per the Institute dress code.',
+  //             subItems: [],
+  //           },
+  //           {
+  //             listItem:
+  //               'Campers are requested to have their breakfast and medication (as prescribed by their doctor). ',
+  //             subItems: [],
+  //           },
+  //         ],
+  //       },
+  //     },
+  //   ],
+  // },
 
   2: {
     id: '',

@@ -247,9 +247,9 @@ const MegaMenu = ({ setNav }) => {
         {menuItem === 'COURSES' && (
           <>
             <div className="single-menu">
-              <h3>TEACHERS TRAINING</h3>
+              <h3>TEACHERS TRAINING COURSES</h3>
               <ul>
-                <li className="text-bold">200 Hour TTC (Basic)</li>
+                <li className="text-bold">Basic TTC (200 Hour Courses)</li>
                 <Link onClick={() => {setNav(false)}} to="/one-month-ttc">
                   <li>Batch 1 - 1 Month TTC-Online & on Campus-English</li>
                 </Link>
@@ -270,14 +270,15 @@ const MegaMenu = ({ setNav }) => {
                 </Link>
 
                 <li className="text-bold">
-                  500 Hour Courses TTC (Intermediate)
+                   Intermediate TTC (500 Hour Courses) 
                 </li>
                 <Link onClick={() => {setNav(false)}}  to="/500-hrs-online-yoga-teacher-training-course-intermediate-level">
                   <li >
                     3 Months TTC-Online-English
                   </li>
                 </Link>
-                <li className="text-bold">900 Hour Courses</li>
+                <li className="text-bold">
+                  Advance TTC (900 Hour Courses)</li>
                 <Link onClick={() => {setNav(false)}}  to="/3-months-advanced-teacher-training-course">
                   <li>3 Months TTC-On Campus-English</li>
                 </Link>
