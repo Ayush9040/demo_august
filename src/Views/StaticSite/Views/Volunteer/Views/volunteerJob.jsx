@@ -34,9 +34,10 @@ const VolunteerJob = () => {
       }
     } else {
       const url = await uploadFile(file, type)
-      if (changeData === 'RESUME') setCertificateAssest(url)
-      else changeData === 'IMAGE'
-      setImageAssest(url)
+      if (changeData === 'RESUME'){ setCertificateAssest(url)}
+      else if(changeData === 'IMAGE'){
+        setImageAssest(url)
+      }
     }
   }
 
