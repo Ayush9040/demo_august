@@ -7758,7 +7758,6 @@ const camps = {
       }
     },
     dates: [
-      '5th June to 25th June 2022',
       '7th Aug to 27th Aug 2022',
       '2nd Oct to 22nd Oct 2022',
       '4th Dec to 24th Dec 2022',
@@ -9090,14 +9089,9 @@ const camps = {
     },
     batch: 1,
     dates: [
-      '24th July to 13th Aug 2022',
-      '14th Aug to 3rd Sept 2022',
-      '4th Sept to 24th Sept 2022',
-      '25th Sept to 15th Oct 2022',
-      '16th Oct to 5th Nov 2022',
-      '6th Nov to 26th Nov 2022',
-      '27th Nov to 17th Dec 2022',
-      '18th Dec to 7th Jan 2023',
+      '7th Aug to 27th Aug 2022',
+      '2nd Oct to 22nd Oct 2022',
+      '4th Dec to 24th Dec 2022',
     ],
     online: true,
     onCampus: false,

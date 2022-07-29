@@ -286,7 +286,7 @@ export const courseAssets = {
   courseAsset109: '/Courses/Class/new11/anand-sadhna-online-on-campus.JPG',
   courseAsset110:
     '/Courses/Class/new11/weekend-asana-classes-%28men-women%29%20-%20common.jpg',
-  courseAsset113:'/Home/Offerings/Regular_asana_class.jpg',  
+  courseAsset115:'/Home/Offerings/Regular_asana_class.jpg',  
 }
 
 export const facilitiyAssets = {
