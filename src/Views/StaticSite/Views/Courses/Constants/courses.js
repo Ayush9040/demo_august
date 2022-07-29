@@ -6299,8 +6299,8 @@ const camps = {
     category: 'camps',
     metaDescription:
       'Specific pranayama, asana and relaxation techniques to enhance your state of mind',
-    image: `${baseDomain}${courseAssets.courseAsset9}`,
-    cardImage: `${baseDomain}${courseAssets.courseAsset9}`,
+    image: `${baseDomain}${courseAssets.courseAsset37}`,
+    cardImage: `${baseDomain}${courseAssets.courseAsset37}`,
     online: true,
     onCampus: true,
     nonResidential: false,

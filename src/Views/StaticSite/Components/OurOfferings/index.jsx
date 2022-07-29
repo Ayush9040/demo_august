@@ -163,7 +163,7 @@ const OurOfferings = () => {
             </div>
             <div className="course-offered">
               <img
-                src={`${baseDomain}${courseAssets.courseAsset37}`}
+                src={`${baseDomain}${courseAssets.courseAsset113}`}
                 placeholder="none"
                 alt='200hrsTTC'
               />
