@@ -40,7 +40,7 @@
       .global-common-btn {
         color: #fff;
         border-color: #fff;
-        width: 150px;
+        // width: 150px;
         text-align: center;
       }
     }
@@ -53,8 +53,14 @@
       }
     }
   }
+  #date-select{
+    width: 95%;
+    margin: 0 auto;
+  }
   .career-navigation-lg-div {
     padding: 2rem 10rem;
+    width: 95%;
+    margin: 0 auto;
     .career-navigation-lg {
       margin-top: 2rem;
       ul.innerNav {
