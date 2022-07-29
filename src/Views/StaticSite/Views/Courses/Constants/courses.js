@@ -7758,12 +7758,10 @@ const camps = {
       }
     },
     dates: [
-      '23rd July to 29th July 2022',
-      '27th Aug to 2nd Sept 2022',
-      '24th Sept to 30th Sept 2022',
-      '22nd Oct to 28th Oct 2022',
-      '26th Nov to 2nd Dec 2022',
-      '24th Dec to 30th Dec 2022',
+      '5th June to 25th June 2022',
+      '7th Aug to 27th Aug 2022',
+      '2nd Oct to 22nd Oct 2022',
+      '4th Dec to 24th Dec 2022',
     ],
     online: false,
     onCampus: true,
@@ -7775,12 +7773,12 @@ const camps = {
     colorCode: '#EDBE66',
     timing: 'Saturday to Friday: 7:00 am – 7:00 pm (IST)',
     fees: {
-      onlineFee: 0,
-      offlineFee: { residentialFee: 12000, nonResidentialFee: 8000 },
+      onlineFee: 2100,
+      offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'camps',
     metaDescription:
-      'Are you feeling burned out and looking for ways to develop mental strength, improve focus & emotional quotient and reduce stress? Join our 7-Days Health Camp reshape your life and health.',
+      'Become successful, healthy, stress-free, and more mindful in your relationships by learning the yogic way of living. Join The Yoga Institute’s 21-Days Better Living Course. ',
     image: `${baseDomain}${courseAssets.courseAsset35}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset35}`,
     details: [
@@ -7789,16 +7787,29 @@ const camps = {
         content: {
           title: 'Overview',
           text: [
-            'Are you feeling burned out and looking for ways to develop mental strength, improve focus & emotional quotient and reduce stress? Join our 7-Days Health Camp reshape your life and health.',
-            'The 7 Days Health Camp is an experiential, introductory course to Yoga theory and practice where one can get a glimpse of a yogic lifestyle within the premises of The Yoga Institute. In this program you will learn how to achieve a balance between your mind, body, and soul. Through its powerful processes, this program presents to you the possibility to access and re-configure your life and health in a way that improves productivity and imparts better control on your emotions. In this fast-paced and unwavering world, this 7 Days’ Health Camp offers you the much-needed respite to connect with yourself and experience the abundant joy and beauty in life. ',
+            'Become successful, healthy, stress-free, and more mindful in your relationships by learning the yogic way of living. Join The Yoga Institute’s 21-Days Better Living Course. ',
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: [
+            'It takes 21 days to build a habit into your daily routine. The Yoga Institute’s 21 Days Better Living Course is a course specifically designed to introduce you to the yogic way of living. begin your journey into the discovery of Yoga. Working professionals and house makers can take just one hour from their day to practice and learn yoga and begin their transformational journey. ',
+            'This is a certificate course and has been successfully conducted for 50 years by the Institute. The program trains you holistically and enables you to achieve equilibrium between your mind and body and thus achieve a state of peace and happiness in life. The course is conducted by trained teachers at the Institute.',
           ],
         },
       },
       {
         type: 'u-list',
         content: {
-          title: ' The programme covers',
+          title: ' TThe programme covers an introduction to: ',
           points: [
+            {
+              listItem: 'Astanga Yoga',
+              subItems: [],
+            },
             {
               listItem: 'Asanas',
               subItems: [],
@@ -7812,23 +7823,11 @@ const camps = {
               subItems: [],
             },
             {
-              listItem: 'Yogic concepts',
+              listItem: 'Attitude training  ',
               subItems: [],
             },
             {
-              listItem: 'Diet',
-              subItems: [],
-            },
-            {
-              listItem: 'Games and recreation,',
-              subItems: [],
-            },
-            {
-              listItem: 'Attitude training',
-              subItems: [],
-            },
-            {
-              listItem: 'Relaxation and meditation.',
+              listItem: 'Parisamvad (sessions with Dr. Hansaji)',
               subItems: [],
             },
           ],
@@ -7847,72 +7846,46 @@ const camps = {
         type: 'paragraph',
         content: {
           title: '',
-          text: ['Benefits of this camp'],
+          text: ['Benefits of this camp:'],
         },
       },
       {
         type: 'u-list',
         content: {
-          title: ' Mind & Soul',
+          title: ' Benefits of this camp: ',
           points: [
             {
               listItem:
-                'Helps build upon mental strength to improve focus, clarity, and emotional quotient',
+                'Helps you in developing and maintaining the right routine for your overall health ',
               subItems: [],
             },
-            {
-              listItem: 'Helps build better mind-body connection',
-              subItems: [],
-            },
+
             {
               listItem: 'Helps you reduce stress and anxiety',
               subItems: [],
             },
             {
-              listItem: 'Helps you get more in control of your feelings',
+              listItem: 'Helps you feel energetic throughout the day',
               subItems: [],
             },
             {
-              listItem:
-                'Helps you in developing and maintaining the right routine for your overall health',
+              listItem: 'Helps you become mindful in your relationships',
+              subItems: [],
+            },
+            {
+              listItem: ' Helps you get more in control of your feelings',
               subItems: [],
             },
           ],
         },
       },
-      {
-        type: 'u-list',
-        content: {
-          title: ' Physical',
-          points: [
-            {
-              listItem:
-                'Helps you in detoxifying your body of the accumulated toxins',
-              subItems: [],
-            },
-            {
-              listItem:
-                'Helps you in strengthening immunity and digestive system',
-              subItems: [],
-            },
-            {
-              listItem: 'Helps in overall development of your personality',
-              subItems: [],
-            },
-            {
-              listItem:
-                'Helps you become self-reliant in maintaining to your physical health',
-              subItems: [],
-            },
-          ],
-        },
-      },
+
       {
         type: 'paragraph',
         content: {
           title: '',
           text: [
-            'Trained teachers at The Yoga Institute will be conducting this course.Come and experience, amidst nature and beauty, our rejuvenating 7 Days Health Camp, which has transformed millions of people.',
+            'Come and experience, amidst nature and beauty, our enriching 21 Days Better Living Course.',
           ],
         },
       },
@@ -7920,21 +7893,23 @@ const camps = {
         type: 'paragraph',
         content: {
           title: 'PROGRAM DETAILS',
-          text: [],
+          text: [
+            'The course is held once a month, starting on the first Sunday (7:00 a.m.) of every month. The classes are of 1 hr. 30 mins each day for 21 consecutive days. Participants can opt for the morning or evening batches.',
+          ],
         },
       },
       {
         type: 'paragraph',
         content: {
           title: 'UPCOMING DATES FOR 2022',
-          text: ['13th August 2022to 19th August 2022'],
+          text: ['7th August 2022to 27th August 2022'],
         },
       },
       {
         type: 'paragraph',
         content: {
           title: 'Timings',
-          text: ['Saturday to Friday : 7:00 am - 7:00 pm (IST)'],
+          text: ['Evening 6:30 pm – 8:00 pm (IST)'],
         },
       },
       {
@@ -7949,7 +7924,7 @@ const camps = {
         content: {
           title: '',
           text: [
-            'For registration in the 7-Days Health Camp, please click on the link below and fill in all the details. Within 24 hours after registering, you will receive an email containing the link to the payment portal. You can use the link to make the payment.',
+            'For registration in the 21 Days Better Living Course, please click on the link below and fill in all the details. Within 24 hours after registering, you will receive an email containing the link to the payment portal. You can use the link to make the payment.',
           ],
         },
       },
@@ -7957,31 +7932,20 @@ const camps = {
         type: 'paragraph',
         content: {
           title: 'FEES',
-          text: [
-            'Non-Residential: 8,000/- (inclusive of course fees and 4 Meals)',
-          ],
+          text: [],
         },
       },
       {
         type: 'paragraph',
         content: {
-          title: 'Residential',
+          title: 'Rs. 2100/-',
           text: [
-            'Rs. 12,000/- Triple Sharing (Inclusive of course fee and 4 meals a day)',
-            'Rs. 18,000/- Dual Sharing (Inclusive of course fee and 4 meals a day)',
-            'Rs. 30,000/- Single Occupancy (Inclusive of course fee and 4 meals a day)',
+            '*Please note fees once paid will be non-refundable.',
+            ' We support all credit cards. For making payments using MasterCard. Alternatively, you can also make payments using net banking or opt for wire transfer by writing to us.',
           ],
         },
       },
-      {
-        type: 'paragraph',
-        content: {
-          title: '',
-          text: [
-            '*Please note fees once paid will be non-refundable. We support all credit cards. For making payments using MasterCard. Alternatively, you can also make payments using net banking or opt for wire transfer by writing to us.',
-          ],
-        },
-      },
+
       {
         type: 'paragraph',
         content: {
@@ -7992,7 +7956,7 @@ const camps = {
       {
         type: 'u-list',
         content: {
-          title: ' A MANDATORY PREREQUISITE FOR THIS COURSE IS',
+          title: ' A MANDATORY PREREQUISITE FOR THIS COURSE IS:',
           points: [
             {
               listItem:
@@ -8763,13 +8727,14 @@ const camps = {
       templateOffline: {
         templateResidential: '',
         templateNonResidential: ''
-      }
-    },
+      } },
     dates: [
-      '5th June to 25th June 2022',
-      '7th Aug to 27th Aug 2022',
-      '2nd Oct to 22nd Oct 2022',
-      '4th Dec to 24th Dec 2022',
+      '23rd July to 29th July 2022',
+      '27th Aug to 2nd Sept 2022',
+      '24th Sept to 30th Sept 2022',
+      '22nd Oct to 28th Oct 2022',
+      '26th Nov to 2nd Dec 2022',
+      '24th Dec to 30th Dec 2022',
     ],
     online: true,
     onCampus: true,
@@ -8781,12 +8746,12 @@ const camps = {
     colorCode: '#EDBE66',
     timing: 'Evening: 6:30 pm – 8:00 pm (IST)',
     fees: {
-      onlineFee: 1600,
-      offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
+      onlineFee: 0,
+      offlineFee: { residentialFee: 12000, nonResidentialFee: 8000 },
     },
     category: 'camps',
     metaDescription:
-      'Become successful, healthy, stress-free, and more mindful in your relationships by learning the yogic way of living. Join The Yoga Institute’s 21-Days Better Living Course. ',
+    'Are you feeling burned out and looking for ways to develop mental strength, improve focus & emotional quotient and reduce stress? Join our 7-Days Health Camp reshape your life and health.',
     image: `${baseDomain}${courseAssets.courseAsset34}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset34}`,
     details: [
@@ -8795,29 +8760,16 @@ const camps = {
         content: {
           title: 'Overview',
           text: [
-            'Become successful, healthy, stress-free, and more mindful in your relationships by learning the yogic way of living. Join The Yoga Institute’s 21-Days Better Living Course. ',
-          ],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: '',
-          text: [
-            'It takes 21 days to build a habit into your daily routine. The Yoga Institute’s 21 Days Better Living Course is a course specifically designed to introduce you to the yogic way of living. begin your journey into the discovery of Yoga. Working professionals and house makers can take just one hour from their day to practice and learn yoga and begin their transformational journey. ',
-            'This is a certificate course and has been successfully conducted for 50 years by the Institute. The program trains you holistically and enables you to achieve equilibrium between your mind and body and thus achieve a state of peace and happiness in life. The course is conducted by trained teachers at the Institute.',
+            'Are you feeling burned out and looking for ways to develop mental strength, improve focus & emotional quotient and reduce stress? Join our 7-Days Health Camp reshape your life and health.',
+            'The 7 Days Health Camp is an experiential, introductory course to Yoga theory and practice where one can get a glimpse of a yogic lifestyle within the premises of The Yoga Institute. In this program you will learn how to achieve a balance between your mind, body, and soul. Through its powerful processes, this program presents to you the possibility to access and re-configure your life and health in a way that improves productivity and imparts better control on your emotions. In this fast-paced and unwavering world, this 7 Days’ Health Camp offers you the much-needed respite to connect with yourself and experience the abundant joy and beauty in life. ',
           ],
         },
       },
       {
         type: 'u-list',
         content: {
-          title: ' TThe programme covers an introduction to: ',
+          title: ' The programme covers',
           points: [
-            {
-              listItem: 'Astanga Yoga',
-              subItems: [],
-            },
             {
               listItem: 'Asanas',
               subItems: [],
@@ -8831,11 +8783,23 @@ const camps = {
               subItems: [],
             },
             {
-              listItem: 'Attitude training  ',
+              listItem: 'Yogic concepts',
               subItems: [],
             },
             {
-              listItem: 'Parisamvad (sessions with Dr. Hansaji)',
+              listItem: 'Diet',
+              subItems: [],
+            },
+            {
+              listItem: 'Games and recreation,',
+              subItems: [],
+            },
+            {
+              listItem: 'Attitude training',
+              subItems: [],
+            },
+            {
+              listItem: 'Relaxation and meditation.',
               subItems: [],
             },
           ],
@@ -8854,46 +8818,72 @@ const camps = {
         type: 'paragraph',
         content: {
           title: '',
-          text: ['Benefits of this camp:'],
+          text: ['Benefits of this camp'],
         },
       },
       {
         type: 'u-list',
         content: {
-          title: ' Benefits of this camp: ',
+          title: ' Mind & Soul',
           points: [
             {
               listItem:
-                'Helps you in developing and maintaining the right routine for your overall health ',
+                'Helps build upon mental strength to improve focus, clarity, and emotional quotient',
               subItems: [],
             },
-
+            {
+              listItem: 'Helps build better mind-body connection',
+              subItems: [],
+            },
             {
               listItem: 'Helps you reduce stress and anxiety',
               subItems: [],
             },
             {
-              listItem: 'Helps you feel energetic throughout the day',
+              listItem: 'Helps you get more in control of your feelings',
               subItems: [],
             },
             {
-              listItem: 'Helps you become mindful in your relationships',
-              subItems: [],
-            },
-            {
-              listItem: ' Helps you get more in control of your feelings',
+              listItem:
+                'Helps you in developing and maintaining the right routine for your overall health',
               subItems: [],
             },
           ],
         },
       },
-
+      {
+        type: 'u-list',
+        content: {
+          title: ' Physical',
+          points: [
+            {
+              listItem:
+                'Helps you in detoxifying your body of the accumulated toxins',
+              subItems: [],
+            },
+            {
+              listItem:
+                'Helps you in strengthening immunity and digestive system',
+              subItems: [],
+            },
+            {
+              listItem: 'Helps in overall development of your personality',
+              subItems: [],
+            },
+            {
+              listItem:
+                'Helps you become self-reliant in maintaining to your physical health',
+              subItems: [],
+            },
+          ],
+        },
+      },
       {
         type: 'paragraph',
         content: {
           title: '',
           text: [
-            'Come and experience, amidst nature and beauty, our enriching 21 Days Better Living Course.',
+            'Trained teachers at The Yoga Institute will be conducting this course.Come and experience, amidst nature and beauty, our rejuvenating 7 Days Health Camp, which has transformed millions of people.',
           ],
         },
       },
@@ -8901,23 +8891,21 @@ const camps = {
         type: 'paragraph',
         content: {
           title: 'PROGRAM DETAILS',
-          text: [
-            'The course is held once a month, starting on the first Sunday (7:00 a.m.) of every month. The classes are of 1 hr. 30 mins each day for 21 consecutive days. Participants can opt for the morning or evening batches.',
-          ],
+          text: [],
         },
       },
       {
         type: 'paragraph',
         content: {
           title: 'UPCOMING DATES FOR 2022',
-          text: ['7th August 2022to 27th August 2022'],
+          text: ['13th August 2022to 19th August 2022'],
         },
       },
       {
         type: 'paragraph',
         content: {
           title: 'Timings',
-          text: ['Evening 6:30 pm – 8:00 pm (IST)'],
+          text: ['Saturday to Friday : 7:00 am - 7:00 pm (IST)'],
         },
       },
       {
@@ -8932,7 +8920,7 @@ const camps = {
         content: {
           title: '',
           text: [
-            'For registration in the 21 Days Better Living Course, please click on the link below and fill in all the details. Within 24 hours after registering, you will receive an email containing the link to the payment portal. You can use the link to make the payment.',
+            'For registration in the 7-Days Health Camp, please click on the link below and fill in all the details. Within 24 hours after registering, you will receive an email containing the link to the payment portal. You can use the link to make the payment.',
           ],
         },
       },
@@ -8940,20 +8928,31 @@ const camps = {
         type: 'paragraph',
         content: {
           title: 'FEES',
-          text: [],
+          text: [
+            'Non-Residential: 8,000/- (inclusive of course fees and 4 Meals)',
+          ],
         },
       },
       {
         type: 'paragraph',
         content: {
-          title: 'Rs. 1600/-',
+          title: 'Residential',
           text: [
-            '*Please note fees once paid will be non-refundable.',
-            ' We support all credit cards. For making payments using MasterCard. Alternatively, you can also make payments using net banking or opt for wire transfer by writing to us.',
+            'Rs. 12,000/- Triple Sharing (Inclusive of course fee and 4 meals a day)',
+            'Rs. 18,000/- Dual Sharing (Inclusive of course fee and 4 meals a day)',
+            'Rs. 30,000/- Single Occupancy (Inclusive of course fee and 4 meals a day)',
           ],
         },
       },
-
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: [
+            '*Please note fees once paid will be non-refundable. We support all credit cards. For making payments using MasterCard. Alternatively, you can also make payments using net banking or opt for wire transfer by writing to us.',
+          ],
+        },
+      },
       {
         type: 'paragraph',
         content: {
@@ -8964,7 +8963,7 @@ const camps = {
       {
         type: 'u-list',
         content: {
-          title: ' A MANDATORY PREREQUISITE FOR THIS COURSE IS:',
+          title: ' A MANDATORY PREREQUISITE FOR THIS COURSE IS',
           points: [
             {
               listItem:

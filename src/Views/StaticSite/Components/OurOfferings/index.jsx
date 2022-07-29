@@ -60,7 +60,7 @@ const OurOfferings = () => {
         'This popular course aims to integrate yoga philosophy and healthy routines in everyday life. We give you tools and techniques to help you manage your studies, home life, work life and other activities.',
       redirect:'/21-days-better-living-course',
       timeline:'21 days',
-      price:'1600'  
+      price:'2100'  
     },
     {
       name: 'Regular Asana Classes',
