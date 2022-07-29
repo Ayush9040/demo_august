@@ -44,6 +44,12 @@
         "property": "og:type",
         "content": "Website"
       }
+    ],
+    "links":[
+      {
+        "rel":"canonical",
+        "href":"https://www.staging.theyogainstituteonline.org/"
+      }
     ]
   },
   "/social-initiatives": {
@@ -83,6 +89,12 @@
         "property": "og:type",
         "content": "Website"
       }
+    ],
+    "links":[
+      {
+        "rel":"canonical",
+        "href":"https://www.staging.theyogainstituteonline.org/social-initiatives"
+      }
     ]
   },
   "/know-us-better": {
@@ -121,6 +133,12 @@
       {
         "property": "og:type",
         "content": "Website"
+      }
+    ],
+    "links":[
+      {
+        "rel":"canonical",
+        "href":"https://www.staging.theyogainstituteonline.org/know-us-better"
       }
     ]
   },
@@ -167,6 +185,12 @@
         "property": "og:type",
         "content": "Website"
       }
+    ],
+    "links":[
+      {
+        "rel":"canonical",
+        "href":"https://www.staging.theyogainstituteonline.org/our-legacy"
+      }
     ]
   },
   "/hostel": {
@@ -205,6 +229,12 @@
       {
         "property": "og:type",
         "content": "Website"
+      }
+    ],
+    "links":[
+      {
+        "rel":"canonical",
+        "href":"https://www.staging.theyogainstituteonline.org/hostel"
       }
     ]
   },
@@ -245,6 +275,12 @@
         "property": "og:type",
         "content": "Website"
       }
+    ],
+    "links":[
+      {
+        "rel":"canonical",
+        "href":"https://www.staging.theyogainstituteonline.org/facilities"
+      }
     ]
   },
   "/conference-room": {
@@ -283,6 +319,12 @@
       {
         "property": "og:type",
         "content": "Website"
+      }
+    ],
+    "links":[
+      {
+        "rel":"canonical",
+        "href":"https://www.staging.theyogainstituteonline.org/conference-room"
       }
     ]
   },
@@ -323,6 +365,12 @@
         "property": "og:type",
         "content": "Website"
       }
+    ],
+    "links":[
+      {
+        "rel":"canonical",
+        "href":"https://www.staging.theyogainstituteonline.org/yoga-library"
+      }
     ]
   },
   "/book-store": {
@@ -362,6 +410,12 @@
         "property": "og:type",
         "content": "Website"
       }
+    ],
+    "links":[
+      {
+        "rel":"canonical",
+        "href":"https://www.staging.theyogainstituteonline.org/book-store"
+      }
     ]
   },
   "/yoga-halls-rooftop-space": {
@@ -387,7 +441,7 @@
       },
       {
         "property": "og:url",
-        "content": "https://www.staging.theyogainstituteonline.org/yoga-halls"
+        "content": "https://www.staging.theyogainstituteonline.org/yoga-halls-rooftop-space"
       },
       {
         "property": "og:sitename",
@@ -400,6 +454,12 @@
       {
         "property": "og:type",
         "content": "Website"
+      }
+    ],
+    "links":[
+      {
+        "rel":"canonical",
+        "href":"https://www.staging.theyogainstituteonline.org/yoga-halls-rooftop-space"
       }
     ]
   },
@@ -440,6 +500,12 @@
         "property": "og:type",
         "content": "Website"
       }
+    ],
+    "links":[
+      {
+        "rel":"canonical",
+        "href":"https://www.staging.theyogainstituteonline.org/yoga-halls"
+      }
     ]
   },
   "/rooftop-space": {
@@ -478,6 +544,12 @@
       {
         "property": "og:type",
         "content": "Website"
+      }
+    ],
+    "links":[
+      {
+        "rel":"canonical",
+        "href":"https://www.staging.theyogainstituteonline.org/rooftop-space"
       }
     ]
   },
@@ -518,6 +590,12 @@
         "property": "og:type",
         "content": "Website"
       }
+    ],
+    "links":[
+      {
+        "rel":"canonical",
+        "href":"https://www.staging.theyogainstituteonline.org/dining-hall"
+      }
     ]
   },
   "/nature-trail": {
@@ -556,6 +634,12 @@
       {
         "property": "og:type",
         "content": "Website"
+      }
+    ],
+    "links":[
+      {
+        "rel":"canonical",
+        "href":"https://www.staging.theyogainstituteonline.org/nature-trail"
       }
     ]
   },
@@ -596,6 +680,12 @@
         "property": "og:type",
         "content": "Website"
       }
+    ],
+    "links":[
+      {
+        "rel":"canonical",
+        "href":"https://www.staging.theyogainstituteonline.org/gazebo"
+      }
     ]
   },
   "/museum-of-classical-yoga": {
@@ -634,6 +724,12 @@
       {
         "property": "og:type",
         "content": "Website"
+      }
+    ],
+    "links":[
+      {
+        "rel":"canonical",
+        "href":"https://www.staging.theyogainstituteonline.org/museum-of-classical-yoga"
       }
     ]
   },
@@ -674,6 +770,12 @@
         "property": "og:type",
         "content": "Website"
       }
+    ],
+    "links":[
+      {
+        "rel":"canonical",
+        "href":"https://www.staging.theyogainstituteonline.org/image-gallery"
+      }
     ]
   },
   "/video-gallery": {
@@ -712,6 +814,12 @@
       {
         "property": "og:type",
         "content": "Website"
+      }
+    ],
+    "links":[
+      {
+        "rel":"canonical",
+        "href":"https://www.staging.theyogainstituteonline.org/video-gallery"
       }
     ]
   },
@@ -752,6 +860,12 @@
         "property": "og:type",
         "content": "Website"
       }
+    ],
+    "links":[
+      {
+        "rel":"canonical",
+        "href":"https://www.staging.theyogainstituteonline.org/yoga-and-total-health"
+      }
     ]
   },
   "/yogasattva": {
@@ -790,6 +904,12 @@
       {
         "property": "og:type",
         "content": "Website"
+      }
+    ],
+    "links":[
+      {
+        "rel":"canonical",
+        "href":"https://www.staging.theyogainstituteonline.org/yogasattva"
       }
     ]
   },
@@ -845,6 +965,12 @@
         "property": "og:type",
         "content": "Website"
       }
+    ],
+    "links":[
+      {
+        "rel":"canonical",
+        "href":"https://www.staging.theyogainstituteonline.org/blog"
+      }
     ]
   },
   "/terms-and-condition": {
@@ -883,6 +1009,12 @@
       {
         "property": "og:type",
         "content": "Website"
+      }
+    ],
+    "links":[
+      {
+        "rel":"canonical",
+        "href":"https://www.staging.theyogainstituteonline.org/terms-and-condition"
       }
     ]
   },
@@ -923,6 +1055,12 @@
         "property": "og:type",
         "content": "Website"
       }
+    ],
+    "links":[
+      {
+        "rel":"canonical",
+        "href":"https://www.staging.theyogainstituteonline.org/privacy-policy"
+      }
     ]
   },
   "/affiliations": {
@@ -961,6 +1099,12 @@
       {
         "property": "og:type",
         "content": "Website"
+      }
+    ],
+    "links":[
+      {
+        "rel":"canonical",
+        "href":"https://www.staging.theyogainstituteonline.org/affiliations"
       }
     ]
   },
@@ -1001,6 +1145,12 @@
         "property": "og:type",
         "content": "Website"
       }
+    ],
+    "links":[
+      {
+        "rel":"canonical",
+        "href":"https://www.staging.theyogainstituteonline.org/wellness"
+      }
     ]
   },
   "/testimonials": {
@@ -1039,6 +1189,12 @@
       {
         "property": "og:type",
         "content": "Website"
+      }
+    ],
+    "links":[
+      {
+        "rel":"canonical",
+        "href":"https://www.staging.theyogainstituteonline.org/testimonials"
       }
     ]
   },
@@ -1079,6 +1235,12 @@
         "property": "og:type",
         "content": "Website"
       }
+    ],
+    "links":[
+      {
+        "rel":"canonical",
+        "href":"https://www.staging.theyogainstituteonline.org/Rules-and-Regulations"
+      }
     ]
   },
   "/our-facts": {
@@ -1117,6 +1279,12 @@
       {
         "property": "og:type",
         "content": "Website"
+      }
+    ],
+    "links":[
+      {
+        "rel":"canonical",
+        "href":"https://www.staging.theyogainstituteonline.org/our-facts"
       }
     ]
   },
@@ -1157,6 +1325,12 @@
         "property": "og:type",
         "content": "Website"
       }
+    ],
+    "links":[
+      {
+        "rel":"canonical",
+        "href":"https://www.staging.theyogainstituteonline.org/alumni-gallery"
+      }
     ]
   },
   "/volunteer": {
@@ -1195,6 +1369,12 @@
       {
         "property": "og:type",
         "content": "Website"
+      }
+    ],
+    "links":[
+      {
+        "rel":"canonical",
+        "href":"https://www.staging.theyogainstituteonline.org/volunteer"
       }
     ]
   },
@@ -1235,6 +1415,12 @@
         "property": "og:type",
         "content": "Website"
       }
+    ],
+    "links":[
+      {
+        "rel":"canonical",
+        "href":"https://www.staging.theyogainstituteonline.org/values"
+      }
     ]
   },
   "/kailaspati-tree": {
@@ -1273,6 +1459,12 @@
       {
         "property": "og:type",
         "content": "Website"
+      }
+    ],
+    "links":[
+      {
+        "rel":"canonical",
+        "href":"https://www.staging.theyogainstituteonline.org/kailaspati-tree"
       }
     ]
   },
@@ -1320,6 +1512,12 @@
         "property": "og:type",
         "content": "Website"
       }
+    ],
+    "links":[
+      {
+        "rel":"canonical",
+        "href":"https://www.staging.theyogainstituteonline.org/one-month-ttc"
+      }
     ]
   },
   "/200-hrs-part-time-ttc-on-campus-english": {
@@ -1364,6 +1562,12 @@
       {
         "property": "og:type",
         "content": "Website"
+      }
+    ],
+    "links":[
+      {
+        "rel":"canonical",
+        "href":"https://www.staging.theyogainstituteonline.org/200-hrs-part-time-ttc-on-campus-english"
       }
     ]
   },
@@ -1410,6 +1614,12 @@
         "property": "og:type",
         "content": "Website"
       }
+    ],
+    "links":[
+      {
+        "rel":"canonical",
+        "href":"https://www.staging.theyogainstituteonline.org/200-hrs-parttime-ttc-online-english"
+      }
     ]
   },
   "/200-hrs-parttime-ttc-online-english-batch-5": {
@@ -1454,6 +1664,12 @@
       {
         "property": "og:type",
         "content": "Website"
+      }
+    ],
+    "links":[
+      {
+        "rel":"canonical",
+        "href":"https://www.staging.theyogainstituteonline.org/200-hrs-parttime-ttc-online-english"
       }
     ]
   },
@@ -1500,6 +1716,12 @@
         "property": "og:type",
         "content": "Website"
       }
+    ],
+    "links":[
+      {
+        "rel":"canonical",
+        "href":"https://www.staging.theyogainstituteonline.org/200-hrs-part-time-ttc-online"
+      }
     ]
   },
   "/weekend-teacher-training-course": {
@@ -1545,6 +1767,12 @@
         "property": "og:type",
         "content": "Website"
       }
+    ],
+    "links":[
+      {
+        "rel":"canonical",
+        "href":"https://www.staging.theyogainstituteonline.org/weekend-teacher-training-course"
+      }
     ]
   },
   "/500-hrs-online-yoga-teacher-training-course-intermediate-level": {
@@ -1583,6 +1811,12 @@
       {
         "property": "og:type",
         "content": "Website"
+      }
+    ],
+    "links":[
+      {
+        "rel":"canonical",
+        "href":"https://www.staging.theyogainstituteonline.org/500-hrs-online-yoga-teacher-training-course-intermediate-level"
       }
     ]
   },
@@ -1623,6 +1857,12 @@
         "property": "og:type",
         "content": "Website"
       }
+    ],
+    "links":[
+      {
+        "rel":"canonical",
+        "href":"https://www.staging.theyogainstituteonline.org/3-months-advanced-teacher-training-course"
+      }
     ]
   },
   "/900-hours-advanced-teacher-training-course": {
@@ -1661,6 +1901,12 @@
       {
         "property": "og:type",
         "content": "Website"
+      }
+    ],
+    "links":[
+      {
+        "rel":"canonical",
+        "href":"https://www.staging.theyogainstituteonline.org/900-hours-advanced-teacher-training-course"
       }
     ]
   },
@@ -1703,6 +1949,12 @@
         "property": "og:type",
         "content": "Website"
       }
+    ],
+    "links":[
+      {
+        "rel":"canonical",
+        "href":"https://www.staging.theyogainstituteonline.org/seven-month-ttc"
+      }
     ]
   },
   "/one-year-900hr": {
@@ -1744,6 +1996,12 @@
         "property": "og:type",
         "content": "Website"
       }
+    ],
+    "links":[
+      {
+        "rel":"canonical",
+        "href":"https://www.staging.theyogainstituteonline.org/one-year-900hr"
+      }
     ]
   },
   "/two-year-ttc": {
@@ -1782,6 +2040,12 @@
       {
         "property": "og:type",
         "content": "Website"
+      }
+    ],
+    "links":[
+      {
+        "rel":"canonical",
+        "href":"https://www.staging.theyogainstituteonline.org/two-year-ttc"
       }
     ]
   },
@@ -1822,6 +2086,12 @@
         "property": "og:type",
         "content": "Website"
       }
+    ],
+    "links":[
+      {
+        "rel":"canonical",
+        "href":"https://www.staging.theyogainstituteonline.org/asana-regular-classes-online"
+      }
     ]
   },
   "/asana-regular-classes-on-campus": {
@@ -1860,6 +2130,12 @@
       {
         "property": "og:type",
         "content": "Website"
+      }
+    ],
+    "links":[
+      {
+        "rel":"canonical",
+        "href":"https://www.staging.theyogainstituteonline.org/asana-regular-classes-on-campus"
       }
     ]
   },
@@ -1900,6 +2176,12 @@
         "property": "og:type",
         "content": "Website"
       }
+    ],
+    "links":[
+      {
+        "rel":"canonical",
+        "href":"https://www.staging.theyogainstituteonline.org/asana-regular-classes-on-campus-women"
+      }
     ]
   },
   "/advanced-regular-yoga-classes": {
@@ -1938,6 +2220,12 @@
       {
         "property": "og:type",
         "content": "Website"
+      }
+    ],
+    "links":[
+      {
+        "rel":"canonical",
+        "href":"https://www.staging.theyogainstituteonline.org/advanced-regular-yoga-classes"
       }
     ]
   },
@@ -1978,6 +2266,12 @@
         "property": "og:type",
         "content": "Website"
       }
+    ],
+    "links":[
+      {
+        "rel":"canonical",
+        "href":"https://www.staging.theyogainstituteonline.org/weekend-classes"
+      }
     ]
   },
   "/weekend-classes-online": {
@@ -2016,6 +2310,12 @@
       {
         "property": "og:type",
         "content": "Website"
+      }
+    ],
+    "links":[
+      {
+        "rel":"canonical",
+        "href":"https://www.staging.theyogainstituteonline.org/weekend-classes-online"
       }
     ]
   },
@@ -2056,6 +2356,12 @@
         "property": "og:type",
         "content": "Website"
       }
+    ],
+    "links":[
+      {
+        "rel":"canonical",
+        "href":"https://www.staging.theyogainstituteonline.org/childrens-regular-classes"
+      }
     ]
   },
   "/childrens-regular-classes-on-campus": {
@@ -2094,6 +2400,12 @@
       {
         "property": "og:type",
         "content": "Website"
+      }
+    ],
+    "links":[
+      {
+        "rel":"canonical",
+        "href":"https://www.staging.theyogainstituteonline.org/childrens-regular-classes-on-campus"
       }
     ]
   },
@@ -2134,6 +2446,12 @@
         "property": "og:type",
         "content": "Website"
       }
+    ],
+    "links":[
+      {
+        "rel":"canonical",
+        "href":"https://www.staging.theyogainstituteonline.org/yoga-by-the-bay"
+      }
     ]
   },
   "/full-moon-meditation": {
@@ -2172,6 +2490,12 @@
       {
         "property": "og:type",
         "content": "Website"
+      }
+    ],
+    "links":[
+      {
+        "rel":"canonical",
+        "href":"https://www.staging.theyogainstituteonline.org/fullmoon-meditation"
       }
     ]
   },
@@ -2212,6 +2536,12 @@
         "property": "og:type",
         "content": "Website"
       }
+    ],
+    "links":[
+      {
+        "rel":"canonical",
+        "href":"https://www.staging.theyogainstituteonline.org/free-yoga-camps"
+      }
     ]
   },
   "/meditation-camp": {
@@ -2250,6 +2580,12 @@
       {
         "property": "og:type",
         "content": "Website"
+      }
+    ],
+    "links":[
+      {
+        "rel":"canonical",
+        "href":"https://www.staging.theyogainstituteonline.org/meditation-camp"
       }
     ]
   },
@@ -2290,6 +2626,12 @@
         "property": "og:type",
         "content": "Website"
       }
+    ],
+    "links":[
+      {
+        "rel":"canonical",
+        "href":"https://www.staging.theyogainstituteonline.org/counselling-service"
+      }
     ]
   },
   "/parisamvad": {
@@ -2328,6 +2670,12 @@
       {
         "property": "og:type",
         "content": "Website"
+      }
+    ],
+    "links":[
+      {
+        "rel":"canonical",
+        "href":"https://www.staging.theyogainstituteonline.org/parisamvad"
       }
     ]
   },
@@ -2368,6 +2716,12 @@
         "property": "og:type",
         "content": "Website"
       }
+    ],
+    "links":[
+      {
+        "rel":"canonical",
+        "href":"https://www.staging.theyogainstituteonline.org/satsang"
+      }
     ]
   },
   "/book-club": {
@@ -2406,6 +2760,12 @@
       {
         "property": "og:type",
         "content": "Website"
+      }
+    ],
+    "links":[
+      {
+        "rel":"canonical",
+        "href":"https://www.staging.theyogainstituteonline.org/book-club"
       }
     ]
   },
@@ -2446,6 +2806,12 @@
         "property": "og:type",
         "content": "Website"
       }
+    ],
+    "links":[
+      {
+        "rel":"canonical",
+        "href":"https://www.staging.theyogainstituteonline.org/good-food-fest"
+      }
     ]
   },
   "/samattvam": {
@@ -2484,6 +2850,12 @@
       {
         "property": "og:type",
         "content": "Website"
+      }
+    ],
+    "links":[
+      {
+        "rel":"canonical",
+        "href":"https://www.staging.theyogainstituteonline.org/samattvam"
       }
     ]
   },
@@ -2524,6 +2896,12 @@
         "property": "og:type",
         "content": "Website"
       }
+    ],
+    "links":[
+      {
+        "rel":"canonical",
+        "href":"https://www.staging.theyogainstituteonline.org/shop"
+      }
     ]
   },
   "/library": {
@@ -2562,6 +2940,12 @@
       {
         "property": "og:type",
         "content": "Website"
+      }
+    ],
+    "links":[
+      {
+        "rel":"canonical",
+        "href":"https://www.staging.theyogainstituteonline.org/library"
       }
     ]
   },
@@ -2602,6 +2986,12 @@
         "property": "og:type",
         "content": "Website"
       }
+    ],
+    "links":[
+      {
+        "rel":"canonical",
+        "href":"https://www.staging.theyogainstituteonline.org/7-days-camp-english"
+      }
     ]
   },
   "/certification-course-on-yoga-sutra-online": {
@@ -2640,6 +3030,12 @@
       {
         "property": "og:type",
         "content": "Website"
+      }
+    ],
+    "links":[
+      {
+        "rel":"canonical",
+        "href":"https://www.staging.theyogainstituteonline.org/certification-course-on-yoga-sutra-online"
       }
     ]
   },
@@ -2680,6 +3076,12 @@
         "property": "og:type",
         "content": "Website"
       }
+    ],
+    "links":[
+      {
+        "rel":"canonical",
+        "href":"https://www.staging.theyogainstituteonline.org/21-days-better-living-course"
+      }
     ]
   },
   "/21-days-better-living-course-batch-4": {
@@ -2718,6 +3120,12 @@
       {
         "property": "og:type",
         "content": "Website"
+      }
+    ],
+    "links":[
+      {
+        "rel":"canonical",
+        "href":"https://www.staging.theyogainstituteonline.org/21-days-better-living-course-batch-4"
       }
     ]
   },
@@ -2758,6 +3166,12 @@
         "property": "og:type",
         "content": "Website"
       }
+    ],
+    "links":[
+      {
+        "rel":"canonical",
+        "href":"https://www.staging.theyogainstituteonline.org/corporate-workshop"
+      }
     ]
   },
   "/home-tuitions": {
@@ -2796,6 +3210,12 @@
       {
         "property": "og:type",
         "content": "Website"
+      }
+    ],
+    "links":[
+      {
+        "rel":"canonical",
+        "href":"https://www.staging.theyogainstituteonline.org/home-tuitions"
       }
     ]
   },
@@ -2836,6 +3256,12 @@
         "property": "og:type",
         "content": "Website"
       }
+    ],
+    "links":[
+      {
+        "rel":"canonical",
+        "href":"https://www.staging.theyogainstituteonline.org/couples-classes"
+      }
     ]
   },
   "/7-days-camp": {
@@ -2874,6 +3300,12 @@
       {
         "property": "og:type",
         "content": "Website"
+      }
+    ],
+    "links":[
+      {
+        "rel":"canonical",
+        "href":"https://www.staging.theyogainstituteonline.org/7-days-camp"
       }
     ]
   },
@@ -2914,6 +3346,12 @@
         "property": "og:type",
         "content": "Website"
       }
+    ],
+    "links":[
+      {
+        "rel":"canonical",
+        "href":"https://www.staging.theyogainstituteonline.org/21-days-better-living-course-batch-2"
+      }
     ]
   },
   "/21-days-better-living-course-batch-3": {
@@ -2952,6 +3390,12 @@
       {
         "property": "og:type",
         "content": "Website"
+      }
+    ],
+    "links":[
+      {
+        "rel":"canonical",
+        "href":"https://www.staging.theyogainstituteonline.org/21-days-better-living-course-batch-3"
       }
     ]
   },
@@ -2994,6 +3438,12 @@
       {
         "property": "og:type",
         "content": "Website"
+      }
+    ],
+    "links":[
+      {
+        "rel":"canonical",
+        "href":"https://www.staging.theyogainstituteonline.org/media"
       }
     ]
   },
