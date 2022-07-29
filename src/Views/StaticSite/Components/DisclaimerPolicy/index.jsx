@@ -4,6 +4,7 @@ import './style.scss'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 import { legacydisclaimer } from '../../assets/icons/icon'
+import { cmsBaseDomain } from '../../../../Constants/appSettings'
 //import { mail } from '../../assets/icons/icon'
 
 const DisclaimerPolicy = ({
@@ -133,12 +134,12 @@ const DisclaimerPolicy = ({
         let response
         if(formData.mode==='ONLINE' || currentCourse.category!=='camps' || currentCourse.category!=='classes'){
           response = await axios.post(
-            'https://cms-dev-be.theyogainstituteonline.org/v1/form',
+            `${ cmsBaseDomain }/form`,
             body1
           )
         }else{
           response = await axios.post(
-            'https://cms-dev-be.theyogainstituteonline.org/v1/form',
+            `${ cmsBaseDomain }/form`,
             body
           )
         }
@@ -146,7 +147,7 @@ const DisclaimerPolicy = ({
         if(response?.data?.success){
           if(currentCourse.key!=='satsang' && formData?.residental!=='RESIDENTIAL'){
             console.log(response.data.data['_id'])
-            const paymentOrderResponse =  await axios.post(`https://cms-dev-be.theyogainstituteonline.org/v1/payment/order?enrollmentFormId=${response.data.data['_id']}`, {
+            const paymentOrderResponse =  await axios.post(`${ cmsBaseDomain }/payment/order?enrollmentFormId=${response.data.data['_id']}`, {
               amount: courseFee,
               notes: {
                 description:currentCourse.metaDescription,

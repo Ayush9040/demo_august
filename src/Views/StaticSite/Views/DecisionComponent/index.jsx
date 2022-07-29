@@ -3,6 +3,7 @@ import React,{ lazy } from 'react'
 import { useEffect } from 'react'
 import { useState } from 'react'
 import { useParams } from 'react-router-dom'
+import { cmsBaseDomain } from '../../../../Constants/appSettings'
 const BlogAnother = lazy(()=>import('../../Views/Blogs/Views/Blog'))
 const SingleCourse = lazy(()=>import('../../Views/Courses/Views/course-name'))
 
@@ -13,7 +14,7 @@ const DescisionComp = () => {
 
   useEffect(()=>{
     (async()=>{
-      const { data } = await axios.get(`https://cms-dev-be.theyogainstituteonline.org/v1/misc/slug/${contentId}`)
+      const { data } = await axios.get(`${ cmsBaseDomain }/misc/slug/${contentId}`)
       console.log(data?.type ,'ress')
       setIsLoading(data?.type)
     })()

@@ -1632,7 +1632,6 @@ const ttc200hr = {
     category: 'ttc',
     title: '200 hrs TTC  Batch 6 - 3 Months Weekend TTC Online - English',
     dates: [
-      '4th June to 21st Aug 2022',
       '27th Aug to 13th Nov 2022',
       '19th Nov to 5th Feb 2023',
     ],
@@ -3965,7 +3964,7 @@ const ttc900hr = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'ttc',
-    dates: ['20th June to 8th Oct 2022', '17th Oct to 4th Feb 2023'],
+    dates: ['17th Oct to 4th Feb 2023'],
     online: true,
     onCampus: false,
     nonResidential: false,
@@ -4023,15 +4022,15 @@ const ttc900hr = {
         },
       },
 
-      {
-        type: 'paragraph',
+      // {
+      //   type: 'paragraph',
 
-        content: {
-          title: 'Duration',
+      //   content: {
+      //     title: 'Duration',
 
-          text: ['20th June 2022to 8th October 2022'],
-        },
-      },
+      //     text: ['20th June 2022to 8th October 2022'],
+      //   },
+      // },
 
       {
         type: 'paragraph',
@@ -5441,7 +5440,6 @@ const camps = {
       }
     },
     dates: [
-      '5th June 2022',
       '7th August 2022',
       '2nd October 2022',
       '4th December 2022',
@@ -5736,7 +5734,6 @@ const camps = {
     image: `${baseDomain}${courseAssets.courseAsset13}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset106}`,
     dates: [
-      '5th June 2022',
       '7th August 2022',
       '2nd October 2022',
       '4th December 2022',
@@ -5876,7 +5873,6 @@ const camps = {
     image: `${baseDomain}${courseAssets.courseAsset10}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset10}`,
     dates: [
-      '5th June 2022',
       '7th August 2022',
       '2nd October 2022',
       '4th December 2022',
@@ -6283,7 +6279,6 @@ const camps = {
       }
     },
     dates: [
-      '18th June 2022',
       '21st August 2022',
       '16th October 2022',
       '18th December 2022',
@@ -6837,7 +6832,6 @@ const camps = {
       }
     },
     dates: [
-      '12th June 2022',
       '14th August 2022',
       '9th October 2022',
       '11th December 2022',
@@ -6978,7 +6972,6 @@ const camps = {
       }
     },
     dates: [
-      '4th June 2022',
       '6th August 2022',
       '1st October 2022',
       '3rd December 2022',
@@ -7118,7 +7111,6 @@ const camps = {
       }
     },
     dates: [
-      '11th June 2022',
       '13th August 2022',
       '8th October 2022',
       '10th December 2022',
@@ -7264,7 +7256,6 @@ const camps = {
       }
     },
     dates: [
-      '26th June 2022',
       '28th August 2022',
       '23rd October 2022',
       '25th December 2022',
@@ -8228,7 +8219,7 @@ const camps = {
         type: 'paragraph',
         content: {
           title: 'UPCOMING DATES FOR 2022',
-          text: ['24th July to 13th August 2022'],
+          text: [],
         },
       },
       {
@@ -8548,7 +8539,7 @@ const camps = {
         type: 'paragraph',
         content: {
           title: 'UPCOMING DATES FOR 2022',
-          text: ['19th June 2022to 9th July 2022'],
+          text: [],
         },
       },
       {
@@ -8728,7 +8719,6 @@ const camps = {
         templateNonResidential: ''
       } },
     dates: [
-      '23rd July to 29th July 2022',
       '27th Aug to 2nd Sept 2022',
       '24th Sept to 30th Sept 2022',
       '22nd Oct to 28th Oct 2022',
@@ -9232,7 +9222,7 @@ const camps = {
         type: 'paragraph',
         content: {
           title: 'UPCOMING DATES FOR 2022',
-          text: ['24th July to 13th August 2022'],
+          text: [],
         },
       },
       {
@@ -10203,7 +10193,7 @@ const classes = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'classes',
-    dates: ['8th July to 13th Aug 2022'],
+    dates: [],
     online: true,
     onCampus: false,
     nonResidential: false,
