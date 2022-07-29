@@ -66,6 +66,12 @@
     }
     .camp_course-list-content{
       display: block;
+      &>.accordian_contanier{
+        padding: 0;
+        .accordian_ans .accordian_ul{
+          font-size: 1.75rem!important;
+        }
+      }
       .global-common-btn {
         margin-top: 5rem;
       }
