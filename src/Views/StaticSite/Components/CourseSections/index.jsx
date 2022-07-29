@@ -6,7 +6,13 @@ import 'react-rangeslider/lib/index.css'
 import Accordian from '../CommanAccordian'
 import { Link } from 'react-router-dom'
 
-const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange }) => {
+const CourseSection = ({
+  title,
+  showRangeSlider,
+  data,
+  pathParam,
+  sliderRange,
+}) => {
   const [customVal, setCustomVal] = useState(1)
 
   const content = () => {
@@ -54,17 +60,73 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange })
       {
         id: 3,
         ques: '900 Hour Courses',
-        ans: [{ url: '/3-months-advanced-teacher-training-course', text: '3 Months TTC-On Campus-English' },
-          { url: '/900-hours-advanced-teacher-training-course', text: '4 Months TTC-On Campus-English' },
-          { url: '/seven-month-ttc', text: '7 Months TTC-Online & On Campus-English' },
+        ans: [
+          {
+            url: '/3-months-advanced-teacher-training-course',
+            text: '3 Months TTC-On Campus-English',
+          },
+          {
+            url: '/900-hours-advanced-teacher-training-course',
+            text: '4 Months TTC-On Campus-English',
+          },
+          {
+            url: '/seven-month-ttc',
+            text: '7 Months TTC-Online & On Campus-English',
+          },
           { url: '/one-year-ttc', text: '1 Year TTC-Online & On Campus-Hindi' },
-          { url: '/two-year-ttc', text: '2 Years TTC-Online & On Campus-English' },],
+          {
+            url: '/two-year-ttc',
+            text: '2 Years TTC-Online & On Campus-English',
+          },
+        ],
+      },
+    ]
+    const campsAccordian = [
+      {
+        id: 1,
+        ques: '7 Days',
+        ans: [
+          {
+            url: '/7-days-camp',
+            text: '7 Days Health Camp - On Campus - Hindi',
+          },
+          {
+            url: '/7-days-camp-english',
+            text: '7 Days Health Camp - On Campus - English',
+          },
+        ],
+      },
+      {
+        id: 2,
+        ques: '21 Days',
+        ans: [
+          {
+            url: '/21-days-better-living-course',
+            text: '21-Days BLC - Batch 1 - 21 Days BLC - Morning On Campus - English',
+          },
+          {
+            url: '21-days-better-living-course-batch-2',
+            text: '21 Days BLC - Batch 2 - 21 Days BLC - Evening - Online & On Campus - English',
+          },
+          {
+            url: '/21-days-better-living-course-batch-3',
+            text: '21 Days BLC - Batch 3 - 21 Days BLC - Evening - Online & On Campus - Hindi',
+          },
+          {
+            url: '/21-days-better-living-course-batch-4',
+            text: '21 Days BLC - Batch 4 - 21 Days BLC - Morning - Online - English',
+          },
+        ],
       },
     ]
     switch (title) {
     case 'Teacher Training Courses':
       return (
-        <Accordian sliderVal={customVal} setSliderVal={setCustomVal} data={coursesList} />
+        <Accordian
+          sliderVal={customVal}
+          setSliderVal={setCustomVal}
+          data={coursesList}
+        />
       )
     case 'Regular Classes':
       return (
@@ -72,15 +134,29 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange })
           <div>
             <h4>
               <ul>
-                <Link to='/asana-regular-classes-on-campus'><li>Asana Regular Classes for Men On Campus</li></Link>
-                <Link to='/asana-regular-classes-on-campus-women'><li>Asana Regular Classes for Women On Campus</li></Link>
-                <Link to='/weekend-classes'><li>Weekend Asana Classes - (Men & Women) On Campus</li></Link>
-                <Link to='/weekend-classes-online'><li>Weekend Asana Classes - (Men & Women) Online</li></Link>
-                <Link to='/childrens-regular-classes'><li>Children&apos;s Regular Class - On Campus</li></Link>
-                <Link to='/childrens-regular-classes-on-campus'><li>Children&apos;s Weekend Class - On Campus </li></Link>
-                <Link to='/advanced-regular-yoga-classes'><li>
-                    Advance Asana Regular Class - Online (Only for TYI Teachers)
-                </li>
+                <Link to="/asana-regular-classes-on-campus">
+                  <li>Asana Regular Classes for Men On Campus</li>
+                </Link>
+                <Link to="/asana-regular-classes-on-campus-women">
+                  <li>Asana Regular Classes for Women On Campus</li>
+                </Link>
+                <Link to="/weekend-classes">
+                  <li>Weekend Asana Classes - (Men & Women) On Campus</li>
+                </Link>
+                <Link to="/weekend-classes-online">
+                  <li>Weekend Asana Classes - (Men & Women) Online</li>
+                </Link>
+                <Link to="/childrens-regular-classes">
+                  <li>Children&apos;s Regular Class - On Campus</li>
+                </Link>
+                <Link to="/childrens-regular-classes-on-campus">
+                  <li>Children&apos;s Weekend Class - On Campus </li>
+                </Link>
+                <Link to="/advanced-regular-yoga-classes">
+                  <li>
+                      Advance Asana Regular Class - Online (Only for TYI
+                      Teachers)
+                  </li>
                 </Link>
               </ul>
             </h4>
@@ -92,19 +168,32 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange })
       )
     case 'Camps & Workshops':
       return (
-        <div className="course-list-content">
+        <div className="camp_course-list-content">
+          <Accordian data={campsAccordian} />
           <div>
             <h4>
               <ul>
-                <Link to='/corporate-workshops'><li>Corporate Workshop</li></Link>
+                <Link to="/corporate-workshops">
+                  <li>Corporate Workshop</li>
+                </Link>
                 <Link to="/stress-management-camp">
                   <li>Stress Management Camp</li>
                 </Link>
-                <Link to='/weight-management-workshop'><li>Weight Management Workshop</li></Link>
-                <Link to='/pregnancy-camp-for-ante-post-natal'><li>Pregnancy Camp for Ante & Post Natal</li></Link>
-                <Link to='/cardiac-hypertension-workshop'><li>Cardiac & Hypertension Workshop</li></Link>
-                <Link to='/back-joint-disorder-workshop'><li>Back & Joint Disorder Workshop</li></Link>
-                <Link to='/pranayama-workshop'><li>Pranayama Workshop</li></Link>
+                <Link to="/weight-management-workshop">
+                  <li>Weight Management Workshop</li>
+                </Link>
+                <Link to="/pregnancy-camp-for-ante-post-natal">
+                  <li>Pregnancy Camp for Ante & Post Natal</li>
+                </Link>
+                <Link to="/cardiac-hypertension-workshop">
+                  <li>Cardiac & Hypertension Workshop</li>
+                </Link>
+                <Link to="/back-joint-disorder-workshop">
+                  <li>Back & Joint Disorder Workshop</li>
+                </Link>
+                <Link to="/pranayama-workshop">
+                  <li>Pranayama Workshop</li>
+                </Link>
               </ul>
             </h4>
           </div>
@@ -127,11 +216,21 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange })
           <div>
             <h4>
               <ul>
-                <Link to='/7-days-camp-english'><li>7 Days Health Camp</li></Link>
-                <Link to='/21-days-better-living-course'><li>21 Days Better Living Course</li></Link>
-                <Link to='/one-month-ttc'><li>200 Hour 1 Month BTTC Course</li></Link>
-                <Link to='/seven-month-ttc'><li>900 Hour 3 Month ATTC Course</li></Link>
-                <Link to='/pregnancy-camp-for-ante-post-natal'><li> Pregnancy Camp</li></Link>
+                <Link to="/7-days-camp-english">
+                  <li>7 Days Health Camp</li>
+                </Link>
+                <Link to="/21-days-better-living-course">
+                  <li>21 Days Better Living Course</li>
+                </Link>
+                <Link to="/one-month-ttc">
+                  <li>200 Hour 1 Month BTTC Course</li>
+                </Link>
+                <Link to="/seven-month-ttc">
+                  <li>900 Hour 3 Month ATTC Course</li>
+                </Link>
+                <Link to="/pregnancy-camp-for-ante-post-natal">
+                  <li> Pregnancy Camp</li>
+                </Link>
               </ul>
             </h4>
           </div>
@@ -143,12 +242,12 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange })
     }
   }
 
-  const selectColor = (i)=>{
-    if(i===0){
+  const selectColor = (i) => {
+    if (i === 0) {
       return '#94B1B2'
-    }else if(i===1){
+    } else if (i === 1) {
       return '#7C999B'
-    }else{
+    } else {
       return '#6E9596'
     }
   }
@@ -179,7 +278,12 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange })
           ? data
             .filter((item) => item.mostPopular === true)
             .map((item, i) => {
-              if (i < 3) {
+              if (
+                item.key === 'seven-month-ttc' ||
+                  item.key === 'one-month-ttc' ||
+                  // item.key === '7-days-camp' ||
+                  item.key === '21-days-better-living-course'
+              ) {
                 return (
                   <CourseCard
                     key={i}
