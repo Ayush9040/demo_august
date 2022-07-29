@@ -10299,8 +10299,8 @@ const classes = {
         templateNonResidential: ''
       }
     },
-    image: `${baseDomain}${courseAssets.courseAsset74}`,
-    cardImage: `${baseDomain}${courseAssets.courseAsset74}`,
+    image: `${baseDomain}${courseAssets.courseAsset113}`,
+    cardImage: `${baseDomain}${courseAssets.courseAsset114}`,
     mostPopular: false,
     metaDescription:
       'The programme includes specific asanas, pranayamas, mudras, meditation and dietary practices that will aid you in your cancer care and management',

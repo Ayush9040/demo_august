@@ -202,6 +202,8 @@ export const courseAssets = {
   courseAsset81:
     '/Courses/Class/WeekeAsana_Classes_%28Men%20_%20Women%29_common.jpeg',
   courseAsset82: '/Courses/Class/Yog_Prayas_Online.jpeg',
+  courseAsset113:'/Courses/Camps/new43/Certificate%20Program%20on%20Yoga%20for%20Lung%20Cancer%20-%20Online_4x3.jpg',
+  courseAsset114:'/Courses/Camps/new11/Certificate%20Program%20on%20Yoga%20for%20Lung%20Cancer%20-%20Online_1x1.jpg',
 
   // most popular
 

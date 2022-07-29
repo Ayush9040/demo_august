@@ -26,6 +26,16 @@ const CommonBannerLegacy = ({
 
   const founderData = [
     {
+      name: 'Paramhamsa Madhavadas ji',
+      founder: ['Founders Guru'],
+      year: '1798-1921',
+      desc: [
+        'Born in Bengal in 1798, Paramahamsa Madhavdas Ji was a true Yoga Master hailing from the Mukhopadhyaya family. During his long life of 123 years, he was notably responsible for the revival of yogic practices which had vanished from India at the time. His childhood and upbringing inspired in him a devotional faith towards yoga. He left home at the tender age of 23 to study various Hatha yoga techniques and the health advantages of Yoga practices in order to promote spiritual health and growth of consciousness.',
+      ],
+      route: 'paramhamsa-madhavadas-ji',
+      img: l1,
+    },
+    {
       name: 'Shri Yogendra ji',
       founder: ['Founder'],
       year: '1897 - 1989',
@@ -57,17 +67,6 @@ const CommonBannerLegacy = ({
       ],
       img: l0,
     },
-    {
-      name: 'Paramhamsa Madhavadas ji',
-      founder: ['Founders Guru'],
-      year: '1798-1921',
-      desc: [
-        'Born in Bengal in 1798, Paramahamsa Madhavdas Ji was a true Yoga Master hailing from the Mukhopadhyaya family. During his long life of 123 years, he was notably responsible for the revival of yogic practices which had vanished from India at the time. His childhood and upbringing inspired in him a devotional faith towards yoga. He left home at the tender age of 23 to study various Hatha yoga techniques and the health advantages of Yoga practices in order to promote spiritual health and growth of consciousness.',
-      ],
-      route: 'paramhamsa-madhavadas-ji',
-      img: l1,
-    },
-
     {
       name: 'Smt. Sitadevi Ji',
       route: 'smt-sitadevi-ji',
@@ -135,7 +134,7 @@ const CommonBannerLegacy = ({
     {
       name: 'Hrishi J Yogendra',
       route: 'hrishi-ji',
-      founder: ['Director'],
+      founder: ['Assistant Director'],
       year: '1988',
       desc: [
         'Born on 5th January 1988 to two visionaries, Dr. Jayadeva and Dr. Hansaji Yogendra, Hrishi Jayadeva Hansaji Yogendra is the third generation of Yogendra lineage. As the Assistant Director & Secretory of The Yoga Institute, Hrishi is using his advantage of standing on the shoulders of giants only to further the vision and the spread the teachings of the Gurus at The Yoga Institute.',
