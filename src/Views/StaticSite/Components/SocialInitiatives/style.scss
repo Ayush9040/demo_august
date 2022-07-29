@@ -76,6 +76,24 @@ padding-top: 10rem;
     margin-top: 0;
 }
 }
+.comin-soon{
+    position: relative;
+  &:hover{
+    &::after{
+        top: 2px;
+        left: 27%;
+        position: absolute;
+        padding: 1rem;
+        margin-left: 1rem;
+        font-size: 1.2rem;
+        font-weight: 700;
+        width: fit-content;
+        content: 'Coming Soon';
+        // background: #00000080;
+        color: #000;
+    }
+  }
+}
 @media(max-width:1920px){
 .social-initiative-container{
     .social-initiative-content{

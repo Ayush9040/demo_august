@@ -66,7 +66,7 @@ const SocialInitiatives = ({ alumni, setImageChanger }) => {
           </Slider>
         </div>
         
-        {!alumni && <Link to='/social-initiatives'>
+        {!alumni && <Link className='comin-soon' to=''>
           <CommonBtn text={'Explore More'} />
         </Link>}
       </div>
