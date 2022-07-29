@@ -4,12 +4,13 @@ import { Helmet } from 'react-helmet'
 import { useLocation } from 'react-router-dom'
 
 import metaDataObj from '../../Constants/metaData.json'
+import { cmsBaseDomain } from '../../Constants/appSettings'
 
 const MetaTags = () => {
   const getBlogsMeta = async(slug) => {
     try {
       const res = await axios.get(
-        `https://cms-dev-be.theyogainstituteonline.org/v1/post${slug}`
+        `${ cmsBaseDomain }/post${slug}`
       )
       let data = res.data.data.meta
 

@@ -5,6 +5,7 @@ const path = require('path')
 const fs = require('fs')
 const metaDataObj = require('./src/Constants/metaData.json')
 const axios = require('axios')
+//import { cmsBaseDomain } from './src/Constants/appSettings' 
 
 const PORT = 5500
 

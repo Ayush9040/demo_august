@@ -1,9 +1,10 @@
 import axios from 'axios'
+import { cmsBaseDomain } from '../../../../Constants/appSettings'
 
 export const fetchBlogsDataAPI = ( { page,limit } )=>{
-  return axios.get(`https://cms-dev-be.theyogainstituteonline.org/v1/post?page=${page}&limit=${limit}`)
+  return axios.get(`${ cmsBaseDomain }/post?page=${page}&limit=${limit}`)
 }
 
 export const fetchBlogDataAPI = (payload)=>{
-  return axios.get(`https://cms-dev-be.theyogainstituteonline.org/v1/post/${ payload }`)
+  return axios.get(`${ cmsBaseDomain }/post/${ payload }`)
 }

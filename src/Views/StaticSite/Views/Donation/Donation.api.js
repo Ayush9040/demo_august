@@ -1,5 +1,6 @@
 import axios from 'axios'
+import { cmsBaseDomain } from '../../../../Constants/appSettings'
 
 export const fetchDonationsDataAPI = () => {
-  return axios.get('https://cms-dev-be.theyogainstituteonline.org/v1/donation')
+  return axios.get(`${cmsBaseDomain}/donation`)
 }
