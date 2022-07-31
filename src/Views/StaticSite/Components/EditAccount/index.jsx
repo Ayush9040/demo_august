@@ -3,15 +3,17 @@ import { useSelector } from 'react-redux'
 import { validateEmail } from '../../../../helpers'
 import InnerNavComponent from '../InnerNavComponent'
 import InputComponent from '../InputComponent'
+import axios from 'axios'
 import './style.scss'
+import MessageModal from '../MessageModal'
 const EditAccount = () => {
 
   const { user } = useSelector(state=>state.auth)
 
   const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
-    email: user.data.email,
+    firstName: user.data?.firstName,
+    lastName: user.data?.lastName,
+    email: user.data?.email,
     gender: '',
     phoneNum: '',
     country: '',
@@ -24,7 +26,7 @@ const EditAccount = () => {
   })
 
   const [empty, setEmpty] = useState(0)
-
+  const [ modal,setModal ]=useState(false)
   const UserNav = {
     title: 'alumni-events',
     color: 'orange',
@@ -35,7 +37,7 @@ const EditAccount = () => {
 
 
 
-  const submitForm = () => {
+  const submitForm = async() => {
     if (formData.firstName === '') {
       return setEmpty(1)
     } else if (formData.lastName === '') {
@@ -52,16 +54,25 @@ const EditAccount = () => {
       return setEmpty(7)
     } else if (formData.city === '') {
       return setEmpty(8)
-    } else if (formData.year === '') {
-      return setEmpty(9)
-    } else if (formData.course === '') {
-      return setEmpty(10)
-    } else if (formData.studentId === '') {
-      return setEmpty(11)
-    } else if (formData.alumni === '') {
-      return setEmpty(12)
     }
-    setEmpty(0)
+    // } else if (formData.year === '') {
+    //   return setEmpty(9)
+    // } else if (formData.course === '') {
+    //   return setEmpty(10)
+    // } else if (formData.studentId === '') {
+    //   return setEmpty(11)
+    // } else if (formData.alumni === '') {
+    //   return setEmpty(12)
+    // }
+    else{
+      setEmpty(0)
+      try{
+        await axios.patch(`https://www.authserver-staging-be.theyogainstituteonline.org/v1/user/${ user.data.userId }`,formData)
+        setModal('success')
+      }catch(err){
+        setModal('error')
+      }
+    }
   }
 
   return (
@@ -78,6 +89,7 @@ const EditAccount = () => {
               form={formData}
               setField={setFormData}
               keyName="firstName"
+              errorCheck={setEmpty}
             />
             {empty === 1 && (
               <small style={{ color: 'red', marginLeft: '0' }}>
@@ -92,6 +104,7 @@ const EditAccount = () => {
               form={formData}
               setField={setFormData}
               keyName="lastName"
+              errorCheck={setEmpty}
             />
             {empty === 2 && (
               <small style={{ color: 'red', marginLeft: '0' }}>
@@ -108,6 +121,7 @@ const EditAccount = () => {
               setField={setFormData}
               keyName="email"
               blocked={true}
+              errorCheck={setEmpty}
             />
             {empty === 3 && (
               <small style={{ color: 'red', marginLeft: '0' }}>
@@ -154,19 +168,13 @@ const EditAccount = () => {
           </>
 
           <>
-            <select
-              name="country"
-              onChange={(e) =>
-                setFormData({ ...formData, country: e.target.value })
-              }
-            >
-              <option value="none" selected>
-                Country
-              </option>
-              <option value="india">India</option>
-              <option value="australia">Australia</option>
-              <option value="usa">USA</option>
-            </select>
+            <InputComponent
+              type="text"
+              placeholder="Country"
+              form={formData}
+              setField={setFormData}
+              keyName="country"
+            />
 
             {empty === 6 && (
               <small style={{ color: 'red', marginLeft: '0' }}>
@@ -176,23 +184,17 @@ const EditAccount = () => {
           </>
 
           <>
-            <select
-              name="state"
-              onChange={(e) =>
-                setFormData({ ...formData, state: e.target.value })
-              }
-            >
-              <option value="none" selected>
-                State
-              </option>
-              <option value="delhi">delhi</option>
-              <option value="mumbai">mumbai</option>
-              <option value="kolkata">kolkata</option>
-            </select>
+            <InputComponent
+              type="text"
+              placeholder="state"
+              form={formData}
+              setField={setFormData}
+              keyName="state"
+            />
 
             {empty === 7 && (
               <small style={{ color: 'red', marginLeft: '0' }}>
-                *Please Select the Country!
+                *Please Select the State!
               </small>
             )}
           </>
@@ -283,6 +285,7 @@ const EditAccount = () => {
       <div className="save-button">
         <span onClick={submitForm}>Save</span>
       </div>
+      { modal!==false && (modal === 'success' ? <MessageModal nav='/' type='SUCCESSS' message='Details Updated successfully!' closePopup={ setModal } /> : <MessageModal nav='/#footer' type='ERROR' message='Sorry! Please contact info@theyogaintitute.org' closePopup={ setModal } />) }
     </>
   )
 }

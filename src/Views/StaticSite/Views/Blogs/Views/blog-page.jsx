@@ -40,8 +40,7 @@ const BlogPage = () => {
   }
 
   const handlePageChange = (pageNumber) => {
-    console.log(pageNumber,'asd')
-    setPagination({ ...pagination,page:pageNumber })
+    pageNumber!==1 ? setPagination({ ...pagination,page:pageNumber, limit:9 }):setPagination({ ...pagination,page:pageNumber, limit:10 })
   }
   
   let formatDate = new Date( blog.createdAt )

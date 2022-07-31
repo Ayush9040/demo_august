@@ -40,7 +40,9 @@ const CourseDetails = ({
     
     const url = await uploadFile( file,type )
     if(changeValue==='CERTIFICATE'){
+      console.log('fuck')
       setCourseAsset2(url)
+      setEmpty(0)
     }else if(changeValue==='IMAGE')
       setCourseAsset1(url)
   }
@@ -171,24 +173,26 @@ const CourseDetails = ({
           </form>
           <div className="upload-section">
             <p className="course-details-text">
-              { currentCourse.cetificate===true && 'Please upload the relevant TYI certificate pre requisite' }
+              { currentCourse.certficate===true && 'Please upload the relevant TYI certificate pre requisite*' }
               <div className="uploads">
-                { currentCourse.certificate===true && <fieldset>
+                { currentCourse.certficate===true && <fieldset>
                   <label htmlFor="resume">
                     {courseAsset2
                       ? certificateName.substring(0, 15)
-                      : 'Upload Resmue '}
+                      : 'Upload Certificate '}
                     <input
                       type={'file'}
-                      onChange={(e) => {uploadDoc(e.target.files[0],'applicant_certificate','CERTFICATE');setcertificateName(e.target.files[0].name)}}
+                      onChange={(e) => {uploadDoc(e.target.files[0],'applicant_certificate','CERTIFICATE');setcertificateName(e.target.files[0].name)}}
                       id="resume"
                       accept=".pdf"
-                      placeholder="Upload Resume"
+                      placeholder="Upload Cerificate"
                     />
                     &ensp;
                     {upload}
                   </label>
-                </fieldset>}
+                  { empty==='certificate' && <small style={{ color:'red' }} >Please upload relevant certificate</small>}
+                </fieldset>
+                }
                 <fieldset>
                   <label htmlFor="image">
                     {courseAsset1

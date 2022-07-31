@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
-import HistoryList from '../HistoryList'
+//import HistoryList from '../HistoryList'
 import InnerNavComponent from '../InnerNavComponent'
 import './style.scss'
 
@@ -57,11 +57,11 @@ const UserProfile = () => {
             <div className='profile-overview'>
               <h1 style={{ display: 'inline-block' }}>Overview</h1>
               <div id='order-list'>
-                <HistoryList
+                {/* <HistoryList
                   title='Courses'
                   data={[]}
                   options={['All', 'Completed', 'On-going']}
-                />
+                /> */}
                 {/* <HistoryList
                   title='Orders'
                   data={[]}
@@ -72,11 +72,11 @@ const UserProfile = () => {
           )}
           {module === 1 && (
             <div className='user-courses profile-overview'>
-              <HistoryList
+              {/* <HistoryList
                 title='Courses'
                 data={[]}
                 options={['All', 'Completed', 'On-going']}
-              />
+              /> */}
             </div>
           )}
           {module === 2 && (

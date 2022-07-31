@@ -84,20 +84,6 @@ const CourseSection = ({
     const campsAccordian = [
       {
         id: 1,
-        ques: '7 Days',
-        ans: [
-          {
-            url: '/7-days-camp',
-            text: '7 Days Health Camp - On Campus - Hindi',
-          },
-          {
-            url: '/7-days-camp-english',
-            text: '7 Days Health Camp - On Campus - English',
-          },
-        ],
-      },
-      {
-        id: 2,
         ques: '21 Days',
         ans: [
           {
@@ -105,7 +91,7 @@ const CourseSection = ({
             text: '21-Days BLC - Batch 1 - 21 Days BLC - Morning On Campus - English',
           },
           {
-            url: '21-days-better-living-course-batch-2',
+            url: '/21-days-better-living-course-batch-2',
             text: '21 Days BLC - Batch 2 - 21 Days BLC - Evening - Online & On Campus - English',
           },
           {
@@ -115,6 +101,20 @@ const CourseSection = ({
           {
             url: '/21-days-better-living-course-batch-4',
             text: '21 Days BLC - Batch 4 - 21 Days BLC - Morning - Online - English',
+          },
+        ],
+      },
+      {
+        id: 2,
+        ques: '7 Days',
+        ans: [
+          {
+            url: '/7-days-camp',
+            text: '7 Days Health Camp - On Campus - Hindi',
+          },
+          {
+            url: '/7-days-camp-english',
+            text: '7 Days Health Camp - On Campus - English',
           },
         ],
       },

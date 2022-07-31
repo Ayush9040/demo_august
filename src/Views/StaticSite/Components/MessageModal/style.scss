@@ -18,7 +18,6 @@
     flex-direction: column;
     padding: 5rem;
     position: relative;
-    color: green;
     .close-popup{
       float: right;
       position: absolute;
@@ -27,4 +26,10 @@
       cursor: pointer;
     }
   }
+}
+.SUCCESS{
+  color: green;
+}
+.ERROR{
+  color: red;
 }

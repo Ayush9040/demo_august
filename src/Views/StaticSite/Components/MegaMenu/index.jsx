@@ -16,6 +16,7 @@ const MegaMenu = ({ setNav }) => {
     { name: 'COURSES', link: '/courses', id: 2, key: 'COURSES' },
     { name: 'FACILITIES', link: '/facilities', id: 3, key: 'FACILITIES' },
     { name: 'MUSEUM', link: '/museum-of-classical-yoga', id: 4, key: 'MUSEUM' },
+    { name: 'BLOGS', link:'/blogs',id:'14',key:'BLOGS' },
     { name: 'DONATE', link: '', id: 5, key: 'DONATION' },
     { name: 'GIFTING', link: '', id: 6, key: 'GIFTING' },
     { name: 'NISPAND', link: 'https://nispand.com/', id: 7, key: 'NISPAND' },

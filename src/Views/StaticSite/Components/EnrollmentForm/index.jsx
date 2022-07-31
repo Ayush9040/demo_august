@@ -4,7 +4,7 @@ import './formstyles.scss'
 import { AllCourses } from '../../Views/Courses/Constants/courses'
 import { useParams } from 'react-router-dom'
 import { validateEmail } from '../../../../helpers'
-import { Link } from 'react-router-dom'
+import { Link, useSearchParams } from 'react-router-dom'
 import DisclaimerPolicy from '../DisclaimerPolicy'
 import { useSelector } from 'react-redux'
 import Other from './Other'
@@ -19,12 +19,12 @@ const Enrollment = () => {
   const { courseId } = useParams()
   const [currentCourse, setCurrentCourse] = useState({})
   const [courseDate, setCourseDate] = useState(null)
+  const[Params]= useSearchParams()
   //const [date, setDate] = useState('')
 
   useEffect(() => {
     setCurrentCourse(AllCourses.find((item) => item.key === courseId))
-    setCourseDate(localStorage.getItem('selectedDate'))
-
+    setCourseDate(Params.get('date'))
     // setDate(
     //   today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate()
     // )
@@ -209,7 +209,12 @@ const Enrollment = () => {
       else{
         setBold(5)
       }
-    }else{
+    
+    }
+    else if( currentCourse.certficate === true && (courseAsset2 ==='' || courseAsset2 === null) ){
+      setEmpty('certificate')
+    }    
+    else{
       setBold(5)
     }
     
