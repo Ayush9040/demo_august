@@ -14,15 +14,15 @@ const EditAccount = () => {
     firstName: user.data?.firstName,
     lastName: user.data?.lastName,
     email: user.data?.email,
-    gender: '',
-    phoneNum: '',
-    country: '',
-    state: '',
-    city: '',
-    year: '',
-    course: '',
-    studentId: '',
-    alumni: '',
+    gender: user.data?.gender,
+    phoneNumber: user.data?.phoneNum,
+    country: user.data?.country,
+    state: user.data?.state,
+    city: user.data?.city,
+    year: user.data?.year,
+    course: user.data?.course,
+    studentId: user.data?.studentId,
+    alumni: user.data?.alumni,
   })
 
   const [empty, setEmpty] = useState(0)
@@ -46,7 +46,7 @@ const EditAccount = () => {
       return setEmpty(3)
     } else if (formData.gender === '') {
       return setEmpty(4)
-    } else if (formData.phoneNum === '') {
+    } else if (formData.phoneNumber === '') {
       return setEmpty(5)
     } else if (formData.country === '') {
       return setEmpty(6)
@@ -158,7 +158,7 @@ const EditAccount = () => {
               placeholder="Phone Number"
               form={formData}
               setField={setFormData}
-              keyName="phoneNum"
+              keyName="phoneNumber"
             />
             {empty === 5 && (
               <small style={{ color: 'red', marginLeft: '0' }}>
@@ -282,8 +282,8 @@ const EditAccount = () => {
           </div>
         </div>
       </div>
-      <div className="save-button">
-        <span onClick={submitForm}>Save</span>
+      <div className="save-button" onClick={submitForm} >
+        <span>Save</span>
       </div>
       { modal!==false && (modal === 'success' ? <MessageModal nav='/' type='SUCCESSS' message='Details Updated successfully!' closePopup={ setModal } /> : <MessageModal nav='/#footer' type='ERROR' message='Sorry! Please contact info@theyogaintitute.org' closePopup={ setModal } />) }
     </>

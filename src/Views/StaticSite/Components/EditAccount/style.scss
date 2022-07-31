@@ -3,7 +3,7 @@
     font-weight: 700;
   }
   .personal-info {
-    font-size: 1.8rem;
+    font-size: 2.25rem;
     margin-top: 2rem;
     font-weight: 600;
     color: grey;
@@ -17,14 +17,14 @@
       padding: 1.3rem;
       input {
         text-align: center;
-        font-size: 1.8rem;
+        font-size: 2rem;
         color: grey;
-        font-weight: 600;
+        font-weight: 400;
       }
     }
     select {
       display: block;
-      font-weight: 600;
+      font-weight: 400;
       margin: 0 auto;
       margin-top: 20px;
       padding: 1.3rem;
@@ -127,15 +127,19 @@
 
 .save-button {
   text-align: center;
-  margin-top: 40px;
+  margin: 40px auto;
+  width: 250px;
+  cursor: pointer;
   span {
+    display: block;
     font-size: 1.8rem;
     border-radius: 50px;
-    padding: 21px 95px;
+    padding: 1rem 2rem;
     position: relative;
     top: 1rem;
     background-color: #cc4625;
     color: white;
+    cursor: pointer;
   }
 }
 
