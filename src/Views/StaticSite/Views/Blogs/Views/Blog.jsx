@@ -26,7 +26,7 @@ const BlogAnother = () => {
   useEffect(() => {
     dispatch(fetchBlogData(contentId))
     window.scrollTo(0,0)
-  },[ ])
+  },[ document.title ])
 
   // useEffect(()=>{
   //   setPageData(blogs.find((item) => blogId === item.slug))
