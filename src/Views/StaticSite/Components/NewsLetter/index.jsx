@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom'
 import { validateEmail } from '../../../../helpers'
 import baseDomain, { homeAssets } from '../../assets/images/imageAsset'
 import axios from 'axios'
+import { authBaseDomain } from '../../../../Constants/appSettings'
 
 const NewsLetter = () => {
 
@@ -20,7 +21,7 @@ const NewsLetter = () => {
     if(!validateEmail(mail)){
       setErr(true)
     }else{
-      const response = await axios.post('https://www.authserver-staging-be.theyogainstituteonline.org/v1/ali/newslettermail',{ email:mail })
+      const response = await axios.post(`${ authBaseDomain }/ali/newslettermail`,{ email:mail })
       if(response.data.success===true){
         setSuccess(true)
       }

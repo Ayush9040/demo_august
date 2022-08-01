@@ -1,7 +1,8 @@
 
 import axios from 'axios'
+import { authBaseDomain } from '../Constants/appSettings'
 // import baseDomain from '../../assets/images/imageAsset'
-const authServer = 'https://www.authserver-staging-be.theyogainstituteonline.org/v1/ali/token/'
+const authServer = `${ authBaseDomain }/ali/token/`
 //import { secureStsCredApi,secureStsVerifyApi } from './Course.Routes'
 
 

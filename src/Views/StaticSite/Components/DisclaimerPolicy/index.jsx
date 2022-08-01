@@ -4,7 +4,7 @@ import './style.scss'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 import { legacydisclaimer } from '../../assets/icons/icon'
-import { cmsBaseDomain } from '../../../../Constants/appSettings'
+import { authBaseDomain, cmsBaseDomain } from '../../../../Constants/appSettings'
 //import { mail } from '../../assets/icons/icon'
 
 const DisclaimerPolicy = ({
@@ -166,7 +166,7 @@ const DisclaimerPolicy = ({
               handler: async(res) => {
                 // Navigare to Success if razorpay_payment_id, razorpay_order_id, razorpay_signature is there
                 if(res.razorpay_payment_id && res.razorpay_order_id && res.razorpay_signature) {
-                  await axios.post('https://www.authserver-staging-be.theyogainstituteonline.org/v1/ali/mail', mailTemplate)
+                  await axios.post(`${ authBaseDomain }/ali/mail`, mailTemplate)
                   navigate('/enrollment_thankyou')
                 }
               },
@@ -186,7 +186,7 @@ const DisclaimerPolicy = ({
             const rzp = new window.Razorpay(options)
             rzp.open()   
           }else{
-            await axios.post('https://www.authserver-staging-be.theyogainstituteonline.org/v1/ali/mail', mailTemplate)
+            await axios.post(`${ authBaseDomain }/ali/mail`, mailTemplate)
 
             if(currentCourse.key==='satsang'){
               navigate('/satsang_thankyou')

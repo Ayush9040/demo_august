@@ -6,6 +6,7 @@ import InputComponent from '../../../../Components/InputComponent'
 import { validateEmail } from '../../../../../../helpers'
 import axios from 'axios'
 import InnerNavComponent from '../../../../Components/InnerNavComponent'
+import { authBaseDomain } from '../../../../../../Constants/appSettings'
 
 const SignUp = () => {
 
@@ -27,7 +28,7 @@ const SignUp = () => {
 
   const createUserSignIn = async(data) => {
     const authServerClientId = 'dev-tyi-lms-ecom'
-    await axios.post(`https://www.authserver-staging-be.theyogainstituteonline.org/v1/user/register?clientId=${authServerClientId}`, data)
+    await axios.post(`${ authBaseDomain }/user/register?clientId=${authServerClientId}`, data)
   }
 
   const handleSubmit = async(e) => {

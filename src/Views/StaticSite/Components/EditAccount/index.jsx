@@ -6,6 +6,7 @@ import InputComponent from '../InputComponent'
 import axios from 'axios'
 import './style.scss'
 import MessageModal from '../MessageModal'
+import { authBaseDomain } from '../../../../Constants/appSettings'
 const EditAccount = () => {
 
   const { user } = useSelector(state=>state.auth)
@@ -67,7 +68,7 @@ const EditAccount = () => {
     else{
       setEmpty(0)
       try{
-        await axios.patch(`https://www.authserver-staging-be.theyogainstituteonline.org/v1/user/${ user.data.userId }`,formData)
+        await axios.patch(`${ authBaseDomain }/user/${ user.data.userId }`,formData)
         setModal('success')
       }catch(err){
         setModal('error')

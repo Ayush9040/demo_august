@@ -1,9 +1,10 @@
 import axios from 'axios'
+import { authBaseDomain } from '../../../../Constants/appSettings'
 
 export const loginUserAPI = (data) => {
-  return axios.post('https://www.authserver-staging-be.theyogainstituteonline.org/v1/user/login?clientId=dev-tyi-lms-ecom', data)
+  return axios.post(`${ authBaseDomain }/user/login?clientId=dev-tyi-lms-ecom`, data)
 }
 
 export const fetchUserDataAPI = () => {
-  return axios.get('https://www.authserver-staging-be.theyogainstituteonline.org/v1/user/me')
+  return axios.get(`${ authBaseDomain }/user/me`)
 }

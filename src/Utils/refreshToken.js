@@ -4,6 +4,7 @@ import { store }  from '../index'
 
 import setDefaultHeaders from './setDefaultHeaders'
 import { getLocal, setLocal } from './localStorage'
+import { authBaseDomain } from '../Constants/appSettings'
 
 export const refreshSessionAndGetData = async(errorResponse) => {
   const requestUrl = errorResponse.config.url
@@ -22,7 +23,7 @@ export const refreshSessionAndGetData = async(errorResponse) => {
 
     
     try {
-      const { data } = await axios.get('https://www.authserver-staging-be.theyogainstituteonline.org/v1/user/refresh', {
+      const { data } = await axios.get(`${ authBaseDomain }/user/refresh`, {
         headers: {
           refreshToken: `Bearer ${refreshToken}`
         }
