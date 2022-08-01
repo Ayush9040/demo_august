@@ -4,6 +4,8 @@ import { useEffect } from 'react'
 import { useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { cmsBaseDomain } from '../../../../Constants/appSettings'
+import { AllCourses } from '../Courses/Constants/courses'
+import Home from '../Home'
 const BlogAnother = lazy(()=>import('../../Views/Blogs/Views/Blog'))
 const SingleCourse = lazy(()=>import('../../Views/Courses/Views/course-name'))
 
@@ -21,12 +23,12 @@ const DescisionComp = () => {
   },[])
 
   const getComponent = (_contentId) => {
-    console.log(_contentId,'qwerty')
+
     switch (_contentId) {
     case 'BLOG': 
       return <BlogAnother/>
     case 'COURSE': 
-      return <SingleCourse/>
+      return AllCourses.filter((item)=>item.key===contentId).length!==0 ? <SingleCourse/>: <Home/>
     }
   }
 
