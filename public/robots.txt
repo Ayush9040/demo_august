@@ -3,4 +3,4 @@ Disallow: /user/profile
 User-agent: *
 Allow: /
 
-Sitemap: https://www.theyogainstitute.org/sitemap.xml
+Sitemap: https://www.staging.theyogainstituteonline.org/sitemap.xml
