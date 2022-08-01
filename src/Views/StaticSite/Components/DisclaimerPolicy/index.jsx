@@ -121,7 +121,7 @@ const DisclaimerPolicy = ({
 
 
       let mailTemplate = {
-        type: null,
+        type: 'INFO_TYI',
         HTMLTemplate: mail,
         subject: 'Enrollment Confirmation',
         data:{
