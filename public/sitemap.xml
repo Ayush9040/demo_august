@@ -1,218 +1,488 @@
-
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-<url>
-<loc>https://www.theyogainstitute.org</loc>
-<changefreq>daily</changefreq>
-<priority>1.0</priority>
-</url>
-<url>
-<loc>https://www.theyogainstitute.org/know-us-better</loc>
-<changefreq>daily</changefreq>
-<priority>0.1</priority>
-</url>
-<url>
-<loc>https://www.theyogainstitute.org/our-legacy</loc>
-<changefreq>daily</changefreq>
-<priority>0.1</priority>
-</url>
-<url>
-<loc>https://www.theyogainstitute.org/blessings</loc>
-<changefreq>daily</changefreq>
-<priority>0.1</priority>
-</url>
-<url>
-<loc>https://www.theyogainstitute.org/courses</loc>
-<changefreq>daily</changefreq>
-<priority>0.1</priority>
-</url>
-<url>
-<loc>https://www.theyogainstitute.org/courses/browse</loc>
-<changefreq>daily</changefreq>
-<priority>0.1</priority>
-</url>
-<url>
-<loc>https://www.theyogainstitute.org/facilities</loc>
-<changefreq>daily</changefreq>
-<priority>0.1</priority>
-</url>
-<url>
-<loc>https://www.theyogainstitute.org/hostel</loc>
-<changefreq>daily</changefreq>
-<priority>0.1</priority>
-</url>
-<url>
-<loc>https://www.theyogainstitute.org/conference-room</loc>
-<changefreq>daily</changefreq>
-<priority>0.1</priority>
-</url>
-<url>
-<loc>https://www.theyogainstitute.org/yoga-library</loc>
-<changefreq>daily</changefreq>
-<priority>0.1</priority>
-</url>
-<url>
-<loc>https://www.theyogainstitute.org/book-store</loc>
-<changefreq>daily</changefreq>
-<priority>0.1</priority>
-</url>
-<url>
-<loc>https://www.theyogainstitute.org/yoga-halls</loc>
-<changefreq>daily</changefreq>
-<priority>0.1</priority>
-</url>
-<url>
-<loc>https://www.theyogainstitute.org/rooftop-space</loc>
-<changefreq>daily</changefreq>
-<priority>0.1</priority>
-</url>
-<url>
-<loc>https://www.theyogainstitute.org/dining-hall</loc>
-<changefreq>daily</changefreq>
-<priority>0.1</priority>
-</url>
-<url>
-<loc>https://www.theyogainstitute.org/nature-trail</loc>
-<changefreq>daily</changefreq>
-<priority>0.1</priority>
-</url>
-<url>
-<loc>https://www.theyogainstitute.org/gazebo</loc>
-<changefreq>daily</changefreq>
-<priority>0.1</priority>
-</url>
-<url>
-<loc>https://www.theyogainstitute.org/kailaspati-tree</loc>
-<changefreq>daily</changefreq>
-<priority>0.1</priority>
-</url>
-<url>
-<loc>https://www.theyogainstitute.org/museum-of-classical-yoga</loc>
-<changefreq>daily</changefreq>
-<priority>0.1</priority>
-</url>
-<url>
-<loc>https://www.theyogainstitute.org/social-initiatives</loc>
-<changefreq>daily</changefreq>
-<priority>0.1</priority>
-</url>
-<url>
-<loc>https://www.theyogainstitute.org/gifting</loc>
-<changefreq>daily</changefreq>
-<priority>0.1</priority>
-</url>
-<url>
-<loc>https://www.theyogainstitute.org/yoga-and-total-health</loc>
-<changefreq>daily</changefreq>
-<priority>0.1</priority>
-</url>
-<url>
-<loc>https://www.theyogainstitute.org/yogasattva</loc>
-<changefreq>daily</changefreq>
-<priority>0.1</priority>
-</url>
-<url>
-<loc>https://www.theyogainstitute.org/library</loc>
-<changefreq>daily</changefreq>
-<priority>0.1</priority>
-</url>
-<url>
-<loc>https://www.theyogainstitute.org/image-gallery</loc>
-<changefreq>daily</changefreq>
-<priority>0.1</priority>
-</url>
-<url>
-<loc>https://www.theyogainstitute.org/video-gallery</loc>
-<changefreq>daily</changefreq>
-<priority>0.1</priority>
-</url>
-<url>
-<loc>https://www.theyogainstitute.org/media/news</loc>
-<changefreq>daily</changefreq>
-<priority>0.1</priority>
-</url>
-<url>
-<loc>https://www.theyogainstitute.org/media/events</loc>
-<changefreq>daily</changefreq>
-<priority>0.1</priority>
-</url>
-<url>
-<loc>https://www.theyogainstitute.org/alumni-gallery</loc>
-<changefreq>daily</changefreq>
-<priority>0.1</priority>
-</url>
-<url>
-<loc>https://www.theyogainstitute.org/support-your-alma-mater</loc>
-<changefreq>daily</changefreq>
-<priority>0.1</priority>
-</url>
-<url>
-<loc>https://www.theyogainstitute.org/volunteer</loc>
-<changefreq>daily</changefreq>
-<priority>0.1</priority>
-</url>
-<url>
-<loc>https://www.theyogainstitute.org/values</loc>
-<changefreq>daily</changefreq>
-<priority>0.1</priority>
-</url>
-<url>
-<loc>https://www.theyogainstitute.org/volunteer/program</loc>
-<changefreq>daily</changefreq>
-<priority>0.1</priority>
-</url>
-<url>
-<loc>https://www.theyogainstitute.org/social-initiatives</loc>
-<changefreq>daily</changefreq>
-<priority>0.1</priority>
-</url>
-<url>
-<loc>https://www.theyogainstitute.org/our-facts</loc>
-<changefreq>daily</changefreq>
-<priority>0.1</priority>
-</url>
-<url>
-<loc>https://www.theyogainstitute.org/testimonials</loc>
-<changefreq>daily</changefreq>
-<priority>0.1</priority>
-</url>
-<url>
-<loc>https://www.theyogainstitute.org/blog</loc>
-<changefreq>daily</changefreq>
-<priority>0.1</priority>
-</url>
-<url>
-<loc>https://www.theyogainstitute.org/wellness</loc>
-<changefreq>daily</changefreq>
-<priority>0.1</priority>
-</url>
-<url>
-<loc>https://www.theyogainstitute.org/affiliations</loc>
-<changefreq>daily</changefreq>
-<priority>0.1</priority>
-</url>
-<url>
-<loc>https://www.theyogainstitute.org/careers</loc>
-<changefreq>daily</changefreq>
-<priority>0.1</priority>
-</url>
-<url>
-<loc>https://www.theyogainstitute.org/csr</loc>
-<changefreq>daily</changefreq>
-<priority>0.1</priority>
-</url>
-<url>
-<loc>https://www.theyogainstitute.org/terms-and-condition</loc>
-<changefreq>daily</changefreq>
-<priority>0.1</priority>
-</url>
-<url>
-<loc>https://www.theyogainstitute.org/privacy-policy</loc>
-<changefreq>daily</changefreq>
-<priority>0.1</priority>
-</url>
-<url>
-<loc>https://www.theyogainstitute.org/privacy-policy</loc>
-<changefreq>daily</changefreq>
-<priority>0.1</priority>
-</url>
+  <url>
+    <loc>https://www.theyogainstitute.org/</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.1</priority>
+  </url>
+  <url>
+    <loc>https://www.theyogainstitute.org/social-initiatives</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.1</priority>
+  </url>
+  <url>
+    <loc>https://www.theyogainstitute.org/know-us-better</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.1</priority>
+  </url>
+  <url>
+    <loc>https://www.theyogainstitute.org/our-legacy</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.1</priority>
+  </url>
+  <url>
+    <loc>https://www.theyogainstitute.org/blessings</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.1</priority>
+  </url>
+  <url>
+    <loc>https://www.theyogainstitute.org/hostel</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.1</priority>
+  </url>
+  <url>
+    <loc>https://www.theyogainstitute.org/facilities</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.1</priority>
+  </url>
+  <url>
+    <loc>https://www.theyogainstitute.org/conference-room</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.1</priority>
+  </url>
+  <url>
+    <loc>https://www.theyogainstitute.org/yoga-library</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.1</priority>
+  </url>
+  <url>
+    <loc>https://www.theyogainstitute.org/book-store</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.1</priority>
+  </url>
+  <url>
+    <loc>https://www.theyogainstitute.org/yoga-halls-rooftop-space</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.1</priority>
+  </url>
+  <url>
+    <loc>https://www.theyogainstitute.org/yoga-halls</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.1</priority>
+  </url>
+  <url>
+    <loc>https://www.theyogainstitute.org/rooftop-space</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.1</priority>
+  </url>
+  <url>
+    <loc>https://www.theyogainstitute.org/dining-hall</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.1</priority>
+  </url>
+  <url>
+    <loc>https://www.theyogainstitute.org/nature-trail</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.1</priority>
+  </url>
+  <url>
+    <loc>https://www.theyogainstitute.org/gazebo</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.1</priority>
+  </url>
+  <url>
+    <loc>https://www.theyogainstitute.org/museum-of-classical-yoga</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.1</priority>
+  </url>
+  <url>
+    <loc>https://www.theyogainstitute.org/image-gallery</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.1</priority>
+  </url>
+  <url>
+    <loc>https://www.theyogainstitute.org/video-gallery</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.1</priority>
+  </url>
+  <url>
+    <loc>https://www.theyogainstitute.org/yoga-and-total-health</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.1</priority>
+  </url>
+  <url>
+    <loc>https://www.theyogainstitute.org/yogasattva</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.1</priority>
+  </url>
+  <url>
+    <loc>https://www.theyogainstitute.org/blog</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.1</priority>
+  </url>
+  <url>
+    <loc>https://www.theyogainstitute.org/terms-and-condition</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.1</priority>
+  </url>
+  <url>
+    <loc>https://www.theyogainstitute.org/privacy-policy</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.1</priority>
+  </url>
+  <url>
+    <loc>https://www.theyogainstitute.org/affiliations</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.1</priority>
+  </url>
+  <url>
+    <loc>https://www.theyogainstitute.org/wellness</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.1</priority>
+  </url>
+  <url>
+    <loc>https://www.theyogainstitute.org/testimonials</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.1</priority>
+  </url>
+  <url>
+    <loc>https://www.theyogainstitute.org/Rules-and-Regulations</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.1</priority>
+  </url>
+  <url>
+    <loc>https://www.theyogainstitute.org/our-facts</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.1</priority>
+  </url>
+  <url>
+    <loc>https://www.theyogainstitute.org/alumni-gallery</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.1</priority>
+  </url>
+  <url>
+    <loc>https://www.theyogainstitute.org/volunteer</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.1</priority>
+  </url>
+  <url>
+    <loc>https://www.theyogainstitute.org/values</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.1</priority>
+  </url>
+  <url>
+    <loc>https://www.theyogainstitute.org/kailaspati-tree</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.1</priority>
+  </url>
+  <url>
+    <loc>https://www.theyogainstitute.org/one-month-ttc</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.1</priority>
+  </url>
+  <url>
+    <loc>https://www.theyogainstitute.org/200-hrs-part-time-ttc-on-campus-english</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.1</priority>
+  </url>
+  <url>
+    <loc>https://www.theyogainstitute.org/200-hrs-parttime-ttc-online-english</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.1</priority>
+  </url>
+  <url>
+    <loc>https://www.theyogainstitute.org/200-hrs-parttime-ttc-online-english-batch-5</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.1</priority>
+  </url>
+  <url>
+    <loc>https://www.theyogainstitute.org/200-hrs-part-time-ttc-online</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.1</priority>
+  </url>
+  <url>
+    <loc>https://www.theyogainstitute.org/weekend-teacher-training-course</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.1</priority>
+  </url>
+  <url>
+    <loc>https://www.theyogainstitute.org/500-hrs-online-yoga-teacher-training-course-intermediate-level</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.1</priority>
+  </url>
+  <url>
+    <loc>https://www.theyogainstitute.org/3-months-advanced-teacher-training-course</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.1</priority>
+  </url>
+  <url>
+    <loc>https://www.theyogainstitute.org/900-hours-advanced-teacher-training-course</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.1</priority>
+  </url>
+  <url>
+    <loc>https://www.theyogainstitute.org/seven-month-ttc</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.1</priority>
+  </url>
+  <url>
+    <loc>https://www.theyogainstitute.org/one-year-900hr</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.1</priority>
+  </url>
+  <url>
+    <loc>https://www.theyogainstitute.org/two-year-ttc</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.1</priority>
+  </url>
+  <url>
+    <loc>https://www.theyogainstitute.org/asana-regular-classes-online</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.1</priority>
+  </url>
+  <url>
+    <loc>https://www.theyogainstitute.org/asana-regular-classes-on-campus</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.1</priority>
+  </url>
+  <url>
+    <loc>https://www.theyogainstitute.org/asana-regular-classes-on-campus-women</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.1</priority>
+  </url>
+  <url>
+    <loc>https://www.theyogainstitute.org/advanced-regular-yoga-classes</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.1</priority>
+  </url>
+  <url>
+    <loc>https://www.theyogainstitute.org/weekend-classes</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.1</priority>
+  </url>
+  <url>
+    <loc>https://www.theyogainstitute.org/weekend-classes-online</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.1</priority>
+  </url>
+  <url>
+    <loc>https://www.theyogainstitute.org/childrens-regular-classes</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.1</priority>
+  </url>
+  <url>
+    <loc>https://www.theyogainstitute.org/childrens-regular-classes-on-campus</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.1</priority>
+  </url>
+  <url>
+    <loc>https://www.theyogainstitute.org/yoga-by-the-bay</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.1</priority>
+  </url>
+  <url>
+    <loc>https://www.theyogainstitute.org/full-moon-meditation</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.1</priority>
+  </url>
+  <url>
+    <loc>https://www.theyogainstitute.org/free-yoga-camps</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.1</priority>
+  </url>
+  <url>
+    <loc>https://www.theyogainstitute.org/meditation-camp</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.1</priority>
+  </url>
+  <url>
+    <loc>https://www.theyogainstitute.org/counselling-services</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.1</priority>
+  </url>
+  <url>
+    <loc>https://www.theyogainstitute.org/parisamvad</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.1</priority>
+  </url>
+  <url>
+    <loc>https://www.theyogainstitute.org/satsang</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.1</priority>
+  </url>
+  <url>
+    <loc>https://www.theyogainstitute.org/book-club</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.1</priority>
+  </url>
+  <url>
+    <loc>https://www.theyogainstitute.org/good-food-fest</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.1</priority>
+  </url>
+  <url>
+    <loc>https://www.theyogainstitute.org/samattvam</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.1</priority>
+  </url>
+  <url>
+    <loc>https://www.theyogainstitute.org/shop</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.1</priority>
+  </url>
+  <url>
+    <loc>https://www.theyogainstitute.org/library</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.1</priority>
+  </url>
+  <url>
+    <loc>https://www.theyogainstitute.org/7-days-camp-english</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.1</priority>
+  </url>
+  <url>
+    <loc>https://www.theyogainstitute.org/certification-course-on-yoga-sutra-online</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.1</priority>
+  </url>
+  <url>
+    <loc>https://www.theyogainstitute.org/21-days-better-living-course</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.1</priority>
+  </url>
+  <url>
+    <loc>https://www.theyogainstitute.org/21-days-better-living-course-batch-4</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.1</priority>
+  </url>
+  <url>
+    <loc>https://www.theyogainstitute.org/corporate-workshops</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.1</priority>
+  </url>
+  <url>
+    <loc>https://www.theyogainstitute.org/home-tuitions</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.1</priority>
+  </url>
+  <url>
+    <loc>https://www.theyogainstitute.org/couples-classes</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.1</priority>
+  </url>
+  <url>
+    <loc>https://www.theyogainstitute.org/7-days-camp</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.1</priority>
+  </url>
+  <url>
+    <loc>https://www.theyogainstitute.org/21-days-better-living-course-batch-2</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.1</priority>
+  </url>
+  <url>
+    <loc>https://www.theyogainstitute.org/21-days-better-living-course-batch-3</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.1</priority>
+  </url>
+  <url>
+    <loc>https://www.theyogainstitute.org/certificate-yoga-therapy-course-online</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.1</priority>
+  </url>
+  <url>
+    <loc>https://www.theyogai
+nstitute.org/certificate-program-on-yoga-for-cancer</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.1</priority>
+  </url>
+  <url>
+    <loc>https://www.theyogainstitute.org/certification-program-on-yoga-for-lung-cancer-online</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.1</priority>
+  </url>
+  <url>
+    <loc>https://www.theyogainstitute.org/certificate-course-on-advanced-pranayama-techniques</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.1</priority>
+  </url>
+  <url>
+    <loc>https://www.theyogainstitute.org/stress-management-camp</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.1</priority>
+  </url>
+  <url>
+    <loc>https://www.theyogainstitute.org/weight-management-workshop</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.1</priority>
+  </url>
+  <url>
+    <loc>https://www.theyogainstitute.org/pregnancy-camp-for-ante-post-natal</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.1</priority>
+  </url>
+  <url>
+    <loc>https://www.theyogainstitute.org/cardiac-hypertension-workshop</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.1</priority>
+  </url>
+  <url>
+    <loc>https://www.theyogainstitute.org/back-joint-disorder-workshop</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.1</priority>
+  </url>
+  <url>
+    <loc>https://www.theyogainstitute.org/pranayama-workshop</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.1</priority>
+  </url>
+  <url>
+    <loc>https://www.theyogainstitute.org/womens-camp</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.1</priority>
+  </url>
+  <url>
+    <loc>https://www.theyogainstitute.org/respiratory-workshop</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.1</priority>
+  </url>
+  <url>
+    <loc>https://www.theyogainstitute.org/life-management-camp</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.1</priority>
+  </url>
+  <url>
+    <loc>https://www.theyogainstitute.org/senior-citizen-workshop</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.1</priority>
+  </url>
+  <url>
+    <loc>https://www.theyogainstitute.org/diet-workshop</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.1</priority>
+  </url>
+  <url>
+    <loc>https://www.theyogainstitute.org/meditation-foundation-course-online</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.1</priority>
+  </url>
+  <url>
+    <loc>https://www.theyogainstitute.org/yog-prayas-online</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.1</priority>
+  </url>
+  <url>
+    <loc>https://www.theyogainstitute.org/anand-sadhna</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.1</priority>
+  </url>
+  <url>
+    <loc>https://www.theyogainstitute.org/regular-meditation-classes-online</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.1</priority>
+  </url>
+  <url>
+    <loc>https://www.theyogainstitute.org/media</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.1</priority>
+  </url>
+  <url>
+    <loc>https://www.theyogainstitute.org/blogs</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.1</priority>
+  </url>
+  <url>
+    <loc>https://www.theyogainstitute.org/blog-posts.xml</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.1</priority>
+  </url>
 </urlset>
