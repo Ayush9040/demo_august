@@ -3134,7 +3134,7 @@
       }
     ]
   },
-  "/corporate-workshop": {
+  "/corporate-workshops": {
     "title": "Corporate Workshops- The Yoga Institute Santacruz East Mumbai",
     "h1Tag": "Corporate Workshops",
     "h2Tags": [],
@@ -3157,7 +3157,7 @@
       },
       {
         "property": "og:url",
-        "content": "https://www.staging.theyogainstituteonline.org/corporate-workshop"
+        "content": "https://www.staging.theyogainstituteonline.org/corporate-workshops"
       },
       {
         "property": "og:sitename",
@@ -3175,7 +3175,7 @@
     "links":[
       {
         "rel":"canonical",
-        "href":"https://www.staging.theyogainstituteonline.org/corporate-workshop"
+        "href":"https://www.staging.theyogainstituteonline.org/corporate-workshops"
       }
     ]
   },
@@ -3489,6 +3489,19 @@
     "h1Tag":"Yog Prayas Online",
     "h2Tags":[]
   },
+  "/anand-sadhna":{
+    "title":"Anand Sadhna",
+    "h1Tag":"Anand Sadhna",
+    "h2Tag": []
+  },
+
+  "/regular-meditation-classes-online":{
+    "title":"Regular Meditation Classes Online",
+    "h1Tag":"Regular Meditation Classes Online",
+    "h2Tag": []
+  },
+
+
   "/media": {
     "title": "Digital Media - The Yoga Institute",
     "h1Tag": "Media",
