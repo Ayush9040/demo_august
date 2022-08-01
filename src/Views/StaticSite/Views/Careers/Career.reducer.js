@@ -1,7 +1,6 @@
 import { careerAction } from './Career.action'
 import { noError } from './Career.defaultStates'
 import { initialState } from './Career.defaultStates'
-
 export const careerReducer = (state = initialState, action) => {
   switch (action.type) {
   case careerAction.FETCH_JOB_DATA:
@@ -24,6 +23,10 @@ export const careerReducer = (state = initialState, action) => {
       isLoading: false,
       jobPrograms: [],
       error: noError,
+    }
+  case careerAction.POST_APPLICATION_DATA:
+    return {
+      ...state
     }
   default:
     return { ...state }
