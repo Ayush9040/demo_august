@@ -3090,8 +3090,8 @@
     ]
   },
   "/21-days-better-living-course-batch-4": {
-    "title": "21 Days Better Living Course (Online) - The Yoga Institute",
-    "h1Tag": "21 Days Better Living Course (Online)",
+    "title": "21 Days Better Living Course (Online & OnCampus) - The Yoga Institute",
+    "h1Tag": "21 Days Better Living Course (Online & OnCampus)",
     "h2Tags": [],
     "metaData": [
       {
@@ -3561,6 +3561,11 @@
     "h1Tag": "Courses",
     "h2Tags": [],
     "metaData": []
+  },
+  "/weekend-asana-classes-online":{
+    "title":"Weekend Asana Classes -(Men & Women) - Online",
+    "h1Tag": "Weekend Asana Classes -(Men & Women) - Online",
+    "h2Tags": [],
+    "metaData": []
   }
-
 }
