@@ -6,12 +6,13 @@ import { useParams } from 'react-router-dom'
 import { validateEmail } from '../../../../../helpers'
 import { uploadFile } from '../../../../../helpers/OssHelper'
 import { upload } from '../../../assets/icons/icon'
-import CommonBannerNavPrimary from '../../../Components/CommonBannerNavPrimary'
+//import CommonBannerNavPrimary from '../../../Components/CommonBannerNavPrimary'
 import FAQ from '../../../Components/Faq'
 import InputComponent from '../../../Components/InputComponent'
 import MessageModal from '../../../Components/MessageModal'
 import VolunteerGrid from '../../../Components/VolunteerGrid'
 import { fetchProgramsData, postApplicationData } from '../Volunteer.action'
+import InnerNavComponent from '../../../Components/InnerNavComponent'
 import './style.scss'
 
 const VolunteerJob = () => {
@@ -39,6 +40,13 @@ const VolunteerJob = () => {
         setImageAssest(url)
       }
     }
+  }
+
+  const volJob = {
+    title: 'Volunteer Job',
+    color: 'orange',
+    menuColor: 'orange',
+    menuItems: [],
   }
 
   const [formData, setFormData] = useState({
@@ -95,7 +103,8 @@ const VolunteerJob = () => {
 
   return (
     <div className="single-job">
-      <CommonBannerNavPrimary innerNav={false} />
+      <InnerNavComponent abc={volJob}/>
+      {/* <CommonBannerNavPrimary innerNav={false} /> */}
       <div className="job-details">
         <div className="job-description">
           <div className="job-img">
@@ -224,7 +233,7 @@ const VolunteerJob = () => {
       </div>
       <VolunteerGrid altName={program?.name} gallery={program?.gallery} />
       <FAQ questions={program?.faq} />
-      { modal && <MessageModal type='SUCCESSS' message='Application submitted successfully!' closePopup={ setModal } /> }
+      { modal && <MessageModal type='SUCCESS' message='Application submitted successfully!' closePopup={ setModal } /> }
     </div>
   )
 }

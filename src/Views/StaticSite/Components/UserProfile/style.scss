@@ -19,6 +19,33 @@
     border: 1px solid #606060;
     border-radius: 24px;
     position: relative;
+    .bottom-line {
+      visibility: hidden;
+      margin-bottom: 1rem;
+    }
+    // &:hover {
+    //   border-bottom: 2px solid var(--brick-red);
+    //  font-weight: 700;
+    //   .bottom-line {
+    //     visibility: visible;
+    //   }
+    // }
+    .coming-soon{
+      position: relative;
+      &:hover{
+        &::after{
+          position: absolute;
+          top: 6px;
+          left: 110%;
+          //background: #00000080;
+          content: 'Coming Soon';
+          color: #ca4625;
+          font-size: 12px;
+          font-weight: 500;
+        }
+      }
+  
+    }
     #profile-picture{
       width: 150px;
       height: 150px;

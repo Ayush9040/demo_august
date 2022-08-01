@@ -216,7 +216,7 @@ const ttc200hr = {
         type: 'url',
         content: {
           text: 'Access the detailed curriculum here:',
-          url: 'https://theyogainstitute.org/wp-content/uploads/2018/04/1mttc-1.pdf',
+          url: 'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/courses_pdf/200hr.pdf',
         },
       },
       {
@@ -536,7 +536,7 @@ const ttc200hr = {
         type: 'url',
         content: {
           text: 'Access the detailed curriculum here:',
-          url: 'https://theyogainstitute.org/wp-content/uploads/2018/04/1mttc-1.pdf',
+          url: 'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/courses_pdf/200hr.pdf',
         },
       },
       {
@@ -857,7 +857,7 @@ const ttc200hr = {
         type: 'url',
         content: {
           text: 'Access the detailed curriculum here:',
-          url: 'https://theyogainstitute.org/wp-content/uploads/2018/04/1mttc-1.pdf',
+          url: 'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/courses_pdf/200hr.pdf',
         },
       },
       {
@@ -1175,7 +1175,7 @@ const ttc200hr = {
         type: 'url',
         content: {
           text: 'Access the detailed curriculum here:',
-          url: 'https://theyogainstitute.org/wp-content/uploads/2018/04/1mttc-1.pdf',
+          url: 'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/courses_pdf/200hr.pdf',
         },
       },
       {
@@ -1492,7 +1492,7 @@ const ttc200hr = {
         type: 'url',
         content: {
           text: 'Access the detailed curriculum here:',
-          url: 'https://theyogainstitute.org/wp-content/uploads/2018/04/1mttc-1.pdf',
+          url: 'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/courses_pdf/200hr.pdf',
         },
       },
       {
@@ -1812,7 +1812,7 @@ const ttc200hr = {
         type: 'url',
         content: {
           text: 'Access the detailed curriculum here:',
-          url: 'https://theyogainstitute.org/wp-content/uploads/2018/04/1mttc-1.pdf',
+          url: 'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/courses_pdf/200hr.pdf',
         },
       },
       {
@@ -2084,7 +2084,7 @@ const ttc500hr = {
         type: 'url',
         content: {
           text: 'Access the detailed syllabus here:',
-          url: 'https://theyogainstitute.org/wp-content/uploads/2020/08/SYLLABUS-500-hrs.pdf',
+          url: 'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/courses_pdf/500hr.pdf',
         },
       },
     ],
@@ -2410,7 +2410,7 @@ const ttc900hr = {
         content: {
           text: 'Access the detailed syllabus here:',
 
-          url: 'https://theyogainstitute.org/wp-content/uploads/2020/06/3mttc-Syllabus_June-2020.pdf',
+          url: 'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/courses_pdf/900hr.pdf',
         },
       },
     ],
@@ -2961,7 +2961,7 @@ const ttc900hr = {
         content: {
           text: 'Access the detailed syllabus here:',
 
-          url: 'https://theyogainstitute.org/wp-content/uploads/2020/06/3mttc-Syllabus_June-2020.pdf',
+          url: 'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/courses_pdf/900hr.pdf',
         },
       },
     ],
@@ -3578,7 +3578,7 @@ const ttc900hr = {
         content: {
           text: 'Access the detailed syllabus here:',
 
-          url: 'https://theyogainstitute.org/wp-content/uploads/2020/06/3mttc-Syllabus_June-2020.pdf',
+          url: 'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/courses_pdf/900hr.pdf',
         },
       },
     ],
@@ -4196,7 +4196,7 @@ const ttc900hr = {
         content: {
           text: 'Access the detailed syllabus here:',
 
-          url: 'https://theyogainstitute.org/wp-content/uploads/2020/06/3mttc-Syllabus_June-2020.pdf',
+          url: 'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/courses_pdf/900hr.pdf',
         },
       },
     ],
@@ -4797,7 +4797,7 @@ const ttc900hr = {
         content: {
           text: 'Access the detailed syllabus here:',
 
-          url: 'https://theyogainstitute.org/wp-content/uploads/2020/06/3mttc-Syllabus_June-2020.pdf',
+          url: 'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/courses_pdf/900hr.pdf',
         },
       },
     ],
