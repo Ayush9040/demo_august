@@ -84,7 +84,7 @@ const CourseSection = ({
     const campsAccordian = [
       {
         id: 1,
-        ques: '21 Days',
+        ques: '21 Days Better Living Course',
         ans: [
           {
             url: '/21-days-better-living-course',
@@ -106,7 +106,7 @@ const CourseSection = ({
       },
       {
         id: 2,
-        ques: '7 Days',
+        ques: '7 Days Health Camp',
         ans: [
           {
             url: '/7-days-camp',

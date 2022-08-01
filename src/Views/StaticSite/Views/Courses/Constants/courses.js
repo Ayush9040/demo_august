@@ -8433,13 +8433,11 @@ const camps = {
         templateNonResidential: ''
       }
     },
-    dates: [ '21st Aug to 10th Sept 2022',
-      '11th Sept to 1st Oct 2022',
+    dates: [ '7th Aug to 27th Aug 2022',
+      '4th Sept to 24th Sept 2022',
       '2nd Oct to 22nd Oct 2022',
-      '23rd Oct to 12th Nov 2022',
-      '13th Nov to 3rd Dec 2022',
-      '4th Dec to 24th Dec 2022',
-      '25th Dec to 14th Jan 2023' ],
+      '6th Nov to 26th Nov 2022',
+      '4th Dec to 24th Dec 2022' ],
     online: true,
     onCampus: true,
     nonResidential: true,
@@ -11506,8 +11504,8 @@ const classes = {
         templateNonResidential: ''
       }
     },
-    image: `${baseDomain}${homeAssets.homeAsset13}`,
-    cardImage: `${baseDomain}${homeAssets.homeAsset13}`,
+    image: `${baseDomain}${courseAssets.courseAsset77}`,
+    cardImage: `${baseDomain}${courseAssets.courseAsset116}`,
     mostPopular: false,
     metaDescription:
       'The Yoga Institute’s Couple Class is an absolute must for anyone who is in a relationship.',
