@@ -40,7 +40,6 @@ const CourseDetails = ({
     
     const url = await uploadFile( file,type )
     if(changeValue==='CERTIFICATE'){
-      console.log('fuck')
       setCourseAsset2(url)
       setEmpty(0)
     }else if(changeValue==='IMAGE')
@@ -58,7 +57,7 @@ const CourseDetails = ({
               <div className="current_duration">
                 <div>
                   {currentCourse?.title}&nbsp;
-                  {courseDate ? courseDate : ''}
+                  {courseDate!=='null' ? courseDate : ''}
                 </div>
                 { courseFee &&  <p className="current_fees"> ₹ {courseFee}</p>}
               </div>
