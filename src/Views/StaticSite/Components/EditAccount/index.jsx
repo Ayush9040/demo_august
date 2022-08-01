@@ -1,30 +1,51 @@
 import React, { useState } from 'react'
 import { useSelector } from 'react-redux'
-import { validateEmail } from '../../../../helpers'
+//import { validateEmail } from '../../../../helpers'
 import InnerNavComponent from '../InnerNavComponent'
 import InputComponent from '../InputComponent'
 import axios from 'axios'
 import './style.scss'
 import MessageModal from '../MessageModal'
 import { authBaseDomain } from '../../../../Constants/appSettings'
+import { useEffect } from 'react'
+import { fetchUserData } from '../../Views/Authentication/Auth.actions'
 const EditAccount = () => {
 
   const { user } = useSelector(state=>state.auth)
-
   const [formData, setFormData] = useState({
-    firstName: user.data?.firstName,
-    lastName: user.data?.lastName,
-    email: user.data?.email,
-    gender: user.data?.gender,
-    phoneNumber: user.data?.phoneNum,
-    country: user.data?.country,
-    state: user.data?.state,
-    city: user.data?.city,
-    year: user.data?.year,
-    course: user.data?.course,
-    studentId: user.data?.studentId,
-    alumni: user.data?.alumni,
+    firstName: '',
+    lastName: '',
+    gender: '',
+    phoneNumber: '',
+    country: '',
+    state: '',
+    city: '',
+    year: '',
+    course: '',
+    studentId:'',
+    alumni: '',
   })
+
+  useEffect(()=>{
+    fetchUserData()
+  },[])
+
+  useEffect(()=>{
+    setFormData({
+      ...formData,
+      firstName: user.data?.firstName || '',
+      lastName: user.data?.lastName || '',
+      gender: user.data?.gender || '',
+      phoneNumber: user.data?.phoneNumber || '',
+      country: user.data?.country || '',
+      state: user.data?.state || '',
+      city: user.data?.city || '',
+      year: user.data?.year || '',
+      course: user.data?.course || '',
+      studentId: user.data?.studentId || '',
+      alumni: user.data?.alumni || '',
+    })
+  },[user])
 
   const [empty, setEmpty] = useState(0)
   const [ modal,setModal ]=useState(false)
@@ -38,13 +59,13 @@ const EditAccount = () => {
 
 
 
+
+
   const submitForm = async() => {
     if (formData.firstName === '') {
       return setEmpty(1)
     } else if (formData.lastName === '') {
       return setEmpty(2)
-    } else if (!validateEmail(formData.email)) {
-      return setEmpty(3)
     } else if (formData.gender === '') {
       return setEmpty(4)
     } else if (formData.phoneNumber === '') {
@@ -68,7 +89,7 @@ const EditAccount = () => {
     else{
       setEmpty(0)
       try{
-        await axios.patch(`${ authBaseDomain }/user/${ user.data.userId }`,formData)
+        await axios.patch(`${ authBaseDomain }/user/profile`,formData)
         setModal('success')
       }catch(err){
         setModal('error')
@@ -115,14 +136,11 @@ const EditAccount = () => {
           </>
 
           <>
-            <InputComponent
+            <input
               type="email"
               placeholder="Email"
-              form={formData}
-              setField={setFormData}
-              keyName="email"
-              blocked={true}
-              errorCheck={setEmpty}
+              value={user.data?.email}
+              className='email-field'
             />
             {empty === 3 && (
               <small style={{ color: 'red', marginLeft: '0' }}>
@@ -138,12 +156,12 @@ const EditAccount = () => {
                 setFormData({ ...formData, gender: e.target.value })
               }
             >
-              <option value="none" selected className='edit-account-gender'>
+              <option disabled selected className='edit-account-gender'>
                 Gender
               </option>
-              <option value="male">Male</option>
-              <option value="female">Female</option>
-              <option value="other">other</option>
+              <option selected={ formData.gender==='male' } value="male">Male</option>
+              <option selected={ formData.gender === 'female' } value="female">Female</option>
+              <option selected={ formData.gender === 'other' } value="other">other</option>
             </select>
 
             {empty === 4 && (
@@ -187,7 +205,7 @@ const EditAccount = () => {
           <>
             <InputComponent
               type="text"
-              placeholder="state"
+              placeholder="State"
               form={formData}
               setField={setFormData}
               keyName="state"
