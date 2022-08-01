@@ -5,8 +5,16 @@ import { useLocation } from 'react-router-dom'
 
 import metaDataObj from '../../Constants/metaData.json'
 import { cmsBaseDomain } from '../../Constants/appSettings'
+import { useEffect } from 'react'
 
 const MetaTags = () => {
+
+  const location = useLocation()
+
+  useEffect(()=>{
+    console.log(document.title)
+  },[ location.pathname ])
+
   const getBlogsMeta = async(slug) => {
     try {
       const res = await axios.get(
@@ -51,7 +59,6 @@ const MetaTags = () => {
     }
   }
 
-  const location = useLocation()
   return metaDataObj[location.pathname] ? (
     <Helmet
       title={metaDataObj[location.pathname || '']?.title || ''}

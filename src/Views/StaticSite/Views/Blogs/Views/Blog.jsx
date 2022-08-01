@@ -101,7 +101,7 @@ const BlogAnother = () => {
       
       
     
-      <div className='blog-container' id='blog-container' >
+      { Object.keys(blog).length===0 ? <div className='global-loader' >Loading...</div> : <div className='blog-container' id='blog-container' >
         <h2 dangerouslySetInnerHTML={{ __html:`${blog?.title}` }} ></h2>
         <br/>
         { blog?.coverImage &&  <div className='blog_img' >
@@ -114,7 +114,7 @@ const BlogAnother = () => {
             })}
           </div> */}
         </div>
-      </div> 
+      </div> }
     </>
   )
 }
