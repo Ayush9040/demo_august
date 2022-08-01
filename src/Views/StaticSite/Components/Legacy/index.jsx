@@ -74,7 +74,7 @@ const Legacy = () => {
             <img src={`${baseDomain}${homeAssets.homeAsset6}`} />
             <div className="legacy-card-content">
               <h4>Shri Hrishi J Yogendra</h4>
-              <h5>Director</h5>
+              <h5>Assistant Director</h5>
               <h6>1988</h6>
             </div>
           </div>
