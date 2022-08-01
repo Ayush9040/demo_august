@@ -125,7 +125,7 @@ const DisclaimerPolicy = ({
         HTMLTemplate: mail,
         subject: 'Enrollment Confirmation',
         data:{
-          user: formData.name
+          name: formData.name
         },
         receivers: [formData.email,'info@theyogainstitute.org']
       }
@@ -156,11 +156,11 @@ const DisclaimerPolicy = ({
             if(!paymentOrderResponse?.data?.amount && !paymentOrderResponse?.data?.id) return 0
             
             const options = {
-              key: 'rzp_test_udmmUPuH3rTJe8', // Enter the Key ID generated from the Dashboard
+              key: 'rzp_live_KyhtrIyJ546bd2', // Enter the Key ID generated from the Dashboard
               amount: paymentOrderResponse.data.amount, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
               currency: 'INR',
               name: 'The Yoga Institute',
-              description: 'Test Transaction',
+              description: 'Course Transaction',
               // image: 'https://example.com/your_logo', // un comment and add TYI logo
               order_id: paymentOrderResponse.data.id, // eslint-disable-line
               handler: async(res) => {

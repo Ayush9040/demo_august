@@ -6,7 +6,7 @@ import InputComponent from '../../../../Components/InputComponent'
 import { validateEmail } from '../../../../../../helpers'
 import axios from 'axios'
 import InnerNavComponent from '../../../../Components/InnerNavComponent'
-import { authBaseDomain } from '../../../../../../Constants/appSettings'
+import { authBaseDomain, authServerClientId } from '../../../../../../Constants/appSettings'
 
 const SignUp = () => {
 
@@ -27,7 +27,6 @@ const SignUp = () => {
   }, [])
 
   const createUserSignIn = async(data) => {
-    const authServerClientId = 'dev-tyi-lms-ecom'
     await axios.post(`${ authBaseDomain }/user/register?clientId=${authServerClientId}`, data)
   }
 
