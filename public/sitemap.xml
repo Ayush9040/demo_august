@@ -151,7 +151,6 @@
 <priority>0.1</priority>
 </url>
 <url>
-<url>
 <loc>https://www.theyogainstitute.org/values</loc>
 <changefreq>daily</changefreq>
 <priority>0.1</priority>
@@ -173,11 +172,6 @@
 </url>
 <url>
 <loc>https://www.theyogainstitute.org/testimonials</loc>
-<changefreq>daily</changefreq>
-<priority>0.1</priority>
-</url>
-<url>
-<loc>https://www.theyogainstitute.org/blog</loc>
 <changefreq>daily</changefreq>
 <priority>0.1</priority>
 </url>
