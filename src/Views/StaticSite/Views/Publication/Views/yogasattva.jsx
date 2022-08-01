@@ -181,7 +181,7 @@ const Yogasattva = () => {
     ],
     2020: [
       {
-        pdf: '`${baseDomain}${publicationAssests.ythAssets73}`,',
+        pdf: 'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/books/2020/yogasattava-feb-2020.pdf',
         img: `${baseDomain}${publicationAssests.ythAssets73}`,
       },
       {

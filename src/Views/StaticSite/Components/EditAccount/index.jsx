@@ -285,7 +285,7 @@ const EditAccount = () => {
       <div className="save-button" onClick={submitForm} >
         <span>Save</span>
       </div>
-      { modal!==false && (modal === 'success' ? <MessageModal nav='/' type='SUCCESSS' message='Details Updated successfully!' closePopup={ setModal } /> : <MessageModal nav='/#footer' type='ERROR' message='Sorry! Please contact info@theyogaintitute.org' closePopup={ setModal } />) }
+      { modal!==false && (modal === 'success' ? <MessageModal type='SUCCESSS' message='Details Updated successfully!' closePopup={ setModal } /> : <MessageModal type='ERROR' message='Sorry! Please contact info@theyogaintitute.org' closePopup={ setModal }/>) }
     </>
   )
 }
