@@ -7389,8 +7389,8 @@ const camps = {
     templateId: {
       templateOnline: 'CAMP_FOR_7_DAYS_HEALTH',
       templateOffline: {
-        templateResidential: '',
-        templateNonResidential: ''
+        templateResidential: 'CAMP_FOR_7_DAYS_HEALTH',
+        templateNonResidential: 'CAMP_FOR_7_DAYS_HEALTH'
       }
     },
     dates: ['13th Aug to 19th Aug 2022', '12th Nov to 18th Nov 2022'],
@@ -7404,7 +7404,7 @@ const camps = {
     colorCode: '#EDBE66',
     timing: 'Saturday to Friday : 7:00 am - 7:00 pm (IST)',
     fees: {
-      onlineFee: 8,
+      onlineFee: 0,
       offlineFee: { residentialFee: 12000, nonResidentialFee: 8000 },
     },
     category: 'camps',
@@ -7743,8 +7743,8 @@ const camps = {
     templateId: {
       templateOnline: 'CAMP_FOR_7_DAYS_HEALTH',
       templateOffline: {
-        templateResidential: '',
-        templateNonResidential: ''
+        templateResidential: 'CAMP_FOR_7_DAYS_HEALTH',
+        templateNonResidential: 'CAMP_FOR_7_DAYS_HEALTH'
       } },
     dates: [
       '27th Aug to 2nd Sept 2022',
@@ -7753,10 +7753,10 @@ const camps = {
       '26th Nov to 2nd Dec 2022',
       '24th Dec to 30th Dec 2022',
     ],
-    online: true,
+    online: false,
     onCampus: true,
-    nonResidential: false,
-    residential: false,
+    nonResidential: true,
+    residential: true,
     certficate: false,
     mostPopular: true,
     rating: 5,
