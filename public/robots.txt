@@ -1,1 +1,6 @@
+﻿User-agent: *
+Disallow: /user/profile
 User-agent: *
+Allow: /
+
+Sitemap: https://www.theyogainstitute.org/sitemap.xml
