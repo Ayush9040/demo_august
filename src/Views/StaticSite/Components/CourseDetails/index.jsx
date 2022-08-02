@@ -190,7 +190,7 @@ const CourseDetails = ({ pageDate }) => {
                 </Link>)}
               {error===1 && <small style={
                 { color: 'white', marginLeft: '0', position:'relative', top: '1rem', left: '2rem', fontSize: '1.2rem' }}>
-                        *Please Select Date!
+                        *Please Select Date/Time!
               </small>}
             </div>
             
@@ -206,7 +206,7 @@ const CourseDetails = ({ pageDate }) => {
         </div>
       </div>
 
-      <div id='date-select' style={pageDate?.dates?.length!==0 ? { visibility:'visible' }:{ visibility:'hidden' }} ><SelectDropDown  currentValue={selectDate} changeCurrentValue={setSetselectDate} text={'Select Dates'} isStyles={selectStyles} dates={pageDate.dates}/> </div>
+      <div id='date-select' style={pageDate?.dates?.length!==0 ? { visibility:'visible' }:{ visibility:'hidden' }} ><SelectDropDown  currentValue={selectDate} changeCurrentValue={setSetselectDate} text={'Select Date/Time'} isStyles={selectStyles} dates={pageDate.dates}/> </div>
       
       {pageDate.category === 'ttc' && (
         <div className="career-navigation-lg-div" >
