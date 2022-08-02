@@ -1,5 +1,5 @@
 import { call, put } from 'redux-saga/effects'
-import { loginUserSuccess, logoutUserAction, fetchUserData } from './Auth.actions'
+import { loginUserSuccess,fetchUserData, loginUserError } from './Auth.actions'
 
 import setDefaultHeaders from '../../../../Utils/setDefaultHeaders'
 import { clearLocal, setLocal } from '../../../../Utils/localStorage'
@@ -20,7 +20,8 @@ export function* handleLoginUserEffect({ payload, navigator }) {
     yield put(fetchUserData())
     if (navigator) navigator('/')
   } catch (error) {
-    // yield put(loginUserError(error))
+    console.log(error.data)
+    yield put(loginUserError(error.data.error))
     // yield put(setAlert({ message: error.response.data.message, type: 'ERROR' }))
   }
 }
@@ -35,7 +36,7 @@ export function* handleFetchUserDataEffect() {
     const { data } = yield call(fetchUserDataAPI)
     yield put(loginUserSuccess(data))
   } catch (error) {
-    yield put(logoutUserAction())
+    yield put(loginUserError(error))
     // yield put(setAlert({ message: error.response.data.message, type: 'ERROR' }))
   }
 }

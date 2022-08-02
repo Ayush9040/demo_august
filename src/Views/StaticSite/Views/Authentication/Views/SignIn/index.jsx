@@ -1,17 +1,25 @@
 import React, { useEffect, useState } from 'react'
-import { Link, useLocation, useNavigate, useSearchParams } from 'react-router-dom'
-import { useDispatch,useSelector } from 'react-redux'
+import {
+  Link,
+  useLocation,
+  useNavigate,
+  useSearchParams,
+} from 'react-router-dom'
+import { useDispatch, useSelector } from 'react-redux'
 import { loginUserAction } from '../../Auth.actions'
 import CommonBtn from '../../../../Components/commonbtn'
 import InputComponent from '../../../../Components/InputComponent'
 import { mail, lock } from '../../../../assets/icons/icon'
 import './style.scss'
 import InnerNavComponent from '../../../../Components/InnerNavComponent'
+import MessageModal from '../../../../Components/MessageModal'
+
 
 const SignIn = () => {
+  const [modal, setModal] = useState(false)
   const dispatch = useDispatch()
   const navigate = useNavigate()
-  const { isLoggedIn } = useSelector(state=>state.auth)
+  const { isLoggedIn, error } = useSelector((state) => state.auth)
   const [course, setCourse] = useState()
   const [formData, setFormData] = useState({
     name: '',
@@ -23,7 +31,7 @@ const SignIn = () => {
     setCourse(location?.pathname?.split('/')?.[3])
   }, [location])
 
-  const[Params]= useSearchParams()
+  const [Params] = useSearchParams()
 
   const [selectDate, setSetselectDate] = useState()
 
@@ -35,21 +43,26 @@ const SignIn = () => {
     window.scrollTo(0, 0)
   }, [isLoggedIn])
 
-  const handleSignIn = () =>{
-    dispatch(loginUserAction({
-      email: formData.email,
-      password: formData.password
-    }, navigate))
+  const handleSignIn = async() => {
+    await dispatch(
+      loginUserAction(
+        {
+          email: formData.email,
+          password: formData.password,
+        },
+        navigate
+      )
+    )
+    error.isError !== false ? setModal(true) : setModal(false)
   }
 
   const UserNav = {
     title: 'alumni-events',
     color: 'orange',
     menuColor: 'black',
-    menuItems: [
-    ],
+    menuItems: [],
   }
-
+  console.log(error.isError)
   return (
     <div className="signin-container">
       <InnerNavComponent abc={UserNav} />
@@ -80,11 +93,14 @@ const SignIn = () => {
             <div className="forgot-password">Forgot Password ?</div>
           </label> */}
           <label className="signin-btn">
-            <CommonBtn
-              text="Sign In"
-              buttonAction={handleSignIn}
-            />
-            <Link to={ course!==undefined ? `/enrollment/${course}/?date=${selectDate}`:'/'}>
+            <CommonBtn text="Sign In" buttonAction={handleSignIn} />
+            <Link
+              to={
+                course !== undefined
+                  ? `/enrollment/${course}/?date=${selectDate}`
+                  : '/'
+              }
+            >
               <CommonBtn text={'Continue as a guest'} isColor={'#EA4335'} />
             </Link>
           </label>
@@ -107,6 +123,13 @@ const SignIn = () => {
           </h3>
         </div> */}
       </div>
+      {modal !== false && (
+        <MessageModal
+          type="ERROR"
+          message={error.isError}
+          closePopup={setModal}
+        />
+      )}
     </div>
   )
 }

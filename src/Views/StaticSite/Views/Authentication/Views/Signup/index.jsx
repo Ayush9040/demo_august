@@ -6,10 +6,15 @@ import InputComponent from '../../../../Components/InputComponent'
 import { validateEmail } from '../../../../../../helpers'
 import axios from 'axios'
 import InnerNavComponent from '../../../../Components/InnerNavComponent'
-import { authBaseDomain, authServerClientId } from '../../../../../../Constants/appSettings'
+import {
+  authBaseDomain,
+  authServerClientId,
+} from '../../../../../../Constants/appSettings'
+import MessageModal from '../../../../Components/MessageModal'
 
 const SignUp = () => {
-
+  const [modal, setModal] = useState(false)
+  const [errorMessage, setErrorMessage] = useState()
   const navigate = useNavigate()
   const [formData, setFormData] = useState({
     firstName: '',
@@ -27,7 +32,17 @@ const SignUp = () => {
   }, [])
 
   const createUserSignIn = async(data) => {
-    await axios.post(`${ authBaseDomain }/user/register?clientId=${authServerClientId}`, data)
+    try {
+      await axios.post(
+        `${authBaseDomain}/user/register?clientId=${authServerClientId}`,
+        data
+      )
+      navigate('/user/sign-in')
+    } catch (error) {
+      setErrorMessage(error.data.message)
+      setModal(true)
+    }
+    console.log(errorMessage)
   }
 
   const handleSubmit = async(e) => {
@@ -35,28 +50,26 @@ const SignUp = () => {
       return setEmpty(1)
     } else if (!validateEmail(formData.email)) {
       return setEmpty(2)
-    } 
+    }
     //else if (!validatePassword(formData.password)) {
     //   return setEmpty(3)
     // } else if (formData.confirmPassword !== formData.password)
     //   return setEmpty(4)
     // setEmpty(0)
     e.preventDefault()
-    await createUserSignIn({
+    createUserSignIn({
       firstName,
       email,
-      password, 
-      confirmPassword
+      password,
+      confirmPassword,
     })
-    navigate('/user/sign-in')
   }
 
   const UserNav = {
     title: 'alumni-events',
     color: 'orange',
     menuColor: 'black',
-    menuItems: [
-    ],
+    menuItems: [],
   }
 
   return (
@@ -123,12 +136,24 @@ const SignUp = () => {
               </small>
             )}
           </div>
-          <label className="signin-btn" id='sign-up' onClick={handleSubmit}>
+          <label className="signin-btn" id="sign-up" onClick={handleSubmit}>
             <CommonBtn text={'Submit'} />
           </label>
         </form>
       </div>
-      <p style={{ textAlign:'center' }} >Already a user ? <Link to='/user/sign-in' ><span style={{ color:'#CC4625' }} >Sign-In</span></Link></p>
+      <p style={{ textAlign: 'center' }}>
+        Already a user ?{' '}
+        <Link to="/user/sign-in">
+          <span style={{ color: '#CC4625' }}>Sign-In</span>
+        </Link>
+      </p>
+      {modal !== false && (
+        <MessageModal
+          type="ERROR"
+          message="User already exist"
+          closePopup={setModal}
+        />
+      )}
     </div>
   )
 }
