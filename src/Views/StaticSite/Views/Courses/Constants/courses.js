@@ -9763,7 +9763,7 @@ const classes = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'classes',
-    dates: ['6:30 a.m to 7:30 p.m.','7:30 a.m. to 8:30 a.m.','1:00 p.m to 2:00 p.m.', '6:00 p.m. to 7:00 p.m, 7:00 p.m. to 8:00 p.m.'],
+    dates: ['6:30 a.m to 7:30 p.m.','7:30 a.m. to 8:30 a.m.','1:00 p.m to 2:00 p.m.', '6:00 p.m. to 7:00 p.m', '7:00 p.m. to 8:00 p.m.'],
     online: false,
     onCampus: true,
     nonResidential: false,

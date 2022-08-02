@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import './style.scss'
 import baseDomain, {
   publicationAssests,
+  homeAssets
 } from '../../../assets/images/imageAsset'
 import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
@@ -281,13 +282,39 @@ const Yogasattva = () => {
         img: `${baseDomain}${publicationAssests.ythAssets72}`,
       },
     ],
+    2022:[
+      {
+        img:`${baseDomain}${publicationAssests.ythAssets85}`,
+        pdf:'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/books/newsletter/Yogasattva-August2022.pdf'
+      },
+      {
+        img:`${baseDomain}${publicationAssests.ythAssets86}`,
+        pdf:'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/books/newsletter/Yogasattva-July2022.pdf'
+      },
+      {
+        img:`${baseDomain}${publicationAssests.ythAssets87}`,
+        pdf:'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/books/newsletter/Yogasattva-June2022-%20v3.pdf'
+      },
+      {
+        img:`${baseDomain}${homeAssets.homeAsset69}`,
+        pdf:'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/books/newsletter/Yogasattva-Mar-2022.pdf'
+      },
+      {
+        img:`${baseDomain}${homeAssets.homeAsset68}`,
+        pdf:'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/books/newsletter/Yogasattva-Feb-2022.pdf'
+      },
+      {
+        img:`${baseDomain}${homeAssets.homeAsset67}`,
+        pdf:'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/books/newsletter/Yogasattva-Jan-2022.pdf'
+      },
+    ]
   }
 
-  const [bold, setBold] = useState(5)
+  const [bold, setBold] = useState(6)
 
   const nextHandler = () => {
     if (bold === 1) {
-      setBold(5)
+      setBold(6)
     } else {
       setBold(bold - 1)
     }
@@ -471,6 +498,16 @@ const Yogasattva = () => {
               ) : bold === 5 ? (
                 <>
                   {images[2021].map((image, i) => (
+                    <div key={i} className="preivous-box">
+                      <a href={image.pdf} download>
+                        <img src={image.img} alt="root-image" />
+                      </a>
+                    </div>
+                  ))}
+                </>
+              ) :  bold === 6 ? (
+                <>
+                  {images[2022].map((image, i) => (
                     <div key={i} className="preivous-box">
                       <a href={image.pdf} download>
                         <img src={image.img} alt="root-image" />

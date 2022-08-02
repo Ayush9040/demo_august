@@ -359,7 +359,7 @@ const MegaMenu = ({ setNav }) => {
                   <Link onClick={() => {setNav(false)}}  to="/weekend-classes">
                     <li>Weekend Asana Classes (Men & Women) - On Campus</li>
                   </Link>
-                  <Link onClick={() => {setNav(false)}}  to="/weekend-asana-classes-online">
+                  <Link onClick={() => {setNav(false)}}  to="/weekend-classes-online">
                     <li>Weekend Asana Classes (Men & Women) - Online</li>
                   </Link>
                   <Link onClick={() => {setNav(false)}}  to="/childrens-regular-classes">
