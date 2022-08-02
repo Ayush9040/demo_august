@@ -202,7 +202,7 @@ const Enrollment = () => {
     else if(formData.mode==='ONLINE'){
       setBold(5)
     }
-    else if(formData.mode==='OFFLINE' && currentCourse.category!=='camps' && currentCourse.category!=='classes'){
+    else if(formData.mode==='OFFLINE' && (currentCourse.residential===true || currentCourse.nonResidential===true)){
       if(formData.residental===''){
         setEmpty('subMode')
       }

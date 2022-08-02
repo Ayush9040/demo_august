@@ -132,7 +132,7 @@ const DisclaimerPolicy = ({
  
       try{
         let response
-        if(formData.mode==='ONLINE' || currentCourse.category!=='camps' || currentCourse.category!=='classes'){
+        if(formData.mode==='ONLINE' || (currentCourse.residential===false && currentCourse.nonResidential===false)){
           response = await axios.post(
             `${ cmsBaseDomain }/form`,
             body1
