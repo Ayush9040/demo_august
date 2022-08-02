@@ -2,6 +2,7 @@ import React,{ useState } from 'react'
 import './style.scss'
 import CommonBtn from '../commonbtn'
 import Carousel from 'react-gallery-carousel'
+import 'react-gallery-carousel/dist/index.css'
 
 const AlumniGrid = ({ notEvent, images=[] }) => {
 
