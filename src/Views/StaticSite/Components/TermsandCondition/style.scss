@@ -3,12 +3,12 @@
   margin: 2rem auto 0;
   font-size: 30px;
   font-weight: bold;
-  position: relative;
-  top: 1rem;
-  left: 7.5rem;
+  width: fit-content;
+  // position: relative;
+  // top: 1rem;
+  // left: 7.5rem;
  }
  .bottom-line{
-  width: 15%;
   height: 4px;
   border-radius: 50%;
   background: linear-gradient(90deg, rgba(235, 179, 138, 0.5294117647), rgba(202, 70, 37, 0.9803921569), var(--brick-red), rgba(202, 70, 37, 0.9803921569), rgba(235, 179, 138, 0.5294117647));
