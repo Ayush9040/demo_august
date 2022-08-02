@@ -8,9 +8,14 @@ import baseDomain, { background } from '../../../assets/images/imageAsset'
 import InnerNavComponent from '../../../Components/InnerNavComponent'
 import { useDispatch, useSelector } from 'react-redux'
 import { fetchProgramsData } from '../Volunteer.action'
+import { Helmet } from 'react-helmet'
+import metaDataObj from '../../../../../Constants/metaData.json'
+import { useLocation } from 'react-router-dom'
 
 
 const Volunteer = () => {
+
+  const location = useLocation()
 
   const dispatch = useDispatch()
 
@@ -43,6 +48,10 @@ const Volunteer = () => {
 
   return (
     <>
+      { metaDataObj[location.pathname] && 
+    <Helmet
+      title={metaDataObj[location.pathname || '']?.title || ''}
+    /> }
       <div className="Benefits-container">
         <CommonBanner
           isLeftContent={false}

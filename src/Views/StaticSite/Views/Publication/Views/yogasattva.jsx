@@ -9,8 +9,14 @@ import 'slick-carousel/slick/slick-theme.css'
 import PublicationDateNav from '../../../Components/PublicationDateNav'
 // import PublicationNav from '../../Components/PublicationNav'
 import InnerNavComponent from '../../../Components/InnerNavComponent'
+import { Helmet } from 'react-helmet'
+import metaDataObj from '../../../../../Constants/metaData.json'
+import { useLocation } from 'react-router-dom'
 
 const Yogasattva = () => {
+
+  const location = useLocation()
+
   let setting2 = {
     dots: true,
     speed: 1000,
@@ -289,6 +295,10 @@ const Yogasattva = () => {
 
   return (
     <>
+      { metaDataObj[location.pathname] && 
+    <Helmet
+      title={metaDataObj[location.pathname || '']?.title || ''}
+    /> }
       <div className="yogasattva-container">
         <div className="background">
           {/* <PublicationNav title={'yogasattva'} /> */}

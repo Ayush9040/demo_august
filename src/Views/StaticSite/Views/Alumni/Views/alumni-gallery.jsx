@@ -4,7 +4,13 @@ import baseDomain, { alumniAssets } from '../../../assets/images/imageAsset'
 import InnerNavComponent from '../../../Components/InnerNavComponent'
 import './style.scss'
 import CommanModal from '../../../Components/CommanModal'
+import { Helmet } from 'react-helmet'
+import metaDataObj from '../../../../../Constants/metaData.json'
+import { useLocation } from 'react-router-dom'
 const AlumniGallery = () => {
+
+  const location = useLocation()
+
   const [openModal, setOpenModal] = useState(false)
   const [imageUrl, setImageUrl] = useState('')
   const galleryImages = {
@@ -133,6 +139,10 @@ const AlumniGallery = () => {
   }
   return (
     <>
+      { metaDataObj[location.pathname] && 
+    <Helmet
+      title={metaDataObj[location.pathname || '']?.title || ''}
+    /> }
       <div className="contact-container">
         {/* <CommonBannerNav1 title={'AlumniGallery'} /> */}
         <InnerNavComponent abc={AlumniGalleryBar} />

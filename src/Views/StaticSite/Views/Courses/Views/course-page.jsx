@@ -7,6 +7,8 @@ import CourseSection from '../../../Components/CourseSections'
 import { courseCardData } from '../../../utils/courseCardData'
 import { c200hr,c500hr,c900hr,campsArr,AllCourses, classesArr } from '../Constants/courses'
 import baseDomain,{ certificates } from '../../../assets/images/imageAsset'
+import { Helmet } from 'react-helmet'
+import metaDataObj from '../../../../../Constants/metaData.json'
 
 // import {
 //   courseArray,
@@ -17,8 +19,12 @@ import baseDomain,{ certificates } from '../../../assets/images/imageAsset'
 
 import AlumniCarousel from '../../../Components/AluminiCarousel'
 import InnerNavComponent from '../../../Components/InnerNavComponent'
+import { useLocation } from 'react-router-dom'
 
 const Courses = () => {
+
+  const location = useLocation()
+
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
@@ -47,41 +53,46 @@ const Courses = () => {
   setPathParam()
 
   return (
-    <div className="courses-container">
-      {/* <CommonBannerNavPrimary innerNav={false} /> */}
-      <InnerNavComponent abc={CoursesBan} />
-      <div className="search">
-        <h1>Courses</h1>
-        {/* <div className="search-bar">
+    <>
+      { metaDataObj[location.pathname] && 
+    <Helmet
+      title={metaDataObj[location.pathname || '']?.title || ''}
+    /> }
+      <div className="courses-container">
+        {/* <CommonBannerNavPrimary innerNav={false} /> */}
+        <InnerNavComponent abc={CoursesBan} />
+        <div className="search">
+          <h1>Courses</h1>
+          {/* <div className="search-bar">
           <label>
             <input type={'text'} placeholder="Search Courses" />
             <FontAwesomeIcon icon={faSearch} />
           </label>
         </div> */}
-      </div>
-      <div className="courses-introduction">
-        <div className="intro-text">
-          <h1>More than just learning</h1>
-          <p className="intro-p">
+        </div>
+        <div className="courses-introduction">
+          <div className="intro-text">
+            <h1>More than just learning</h1>
+            <p className="intro-p">
             Whether you want to revitalize your mind and body or take a break
             from your hectic lifestyle, we have you covered. To bring in a new
             you or begin a new career path, explore our countless life-changing
             courses, which have transformed millions of people over the last 10
             decades.
-          </p>
-          <p>
+            </p>
+            <p>
             Every course has been precisely created to provide you with the
             best-desired results by incorporating 103 years of legacy, research,
             and knowledge. Choose now from our innumerable courses to get
             started on your journey of transformation!
-          </p>
-        </div>
-        <div className="intro-image">
+            </p>
+          </div>
+          <div className="intro-image">
         
-          <img src="http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Courses/courses-hero%20%281%29.jpg" alt='more than just reading'/>
+            <img src="http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Courses/courses-hero%20%281%29.jpg" alt='more than just reading'/>
+          </div>
         </div>
-      </div>
-      {courseCardData &&
+        {courseCardData &&
         courseCardData.map((item, i) => {
           setPathParam(item.title)
           return (
@@ -100,63 +111,64 @@ const Courses = () => {
             />
           )
         })}
-      <div className="certifications">
-        <h2>
+        <div className="certifications">
+          <h2>
           Certified by Yoga Certification Board (YCB), Ministry of AYUSH and
           Yoga Alliance, USA.
-        </h2>
-        <div className="certificates">
-          <div className="certificate">
-            <div className="certificate-logo">
-              <img src={`${baseDomain}${certificates.IYA}`} alt='The Indian Yoga Association'/>
-            </div>
-            <div className="certificate-text">
-              <p>
+          </h2>
+          <div className="certificates">
+            <div className="certificate">
+              <div className="certificate-logo">
+                <img src={`${baseDomain}${certificates.IYA}`} alt='The Indian Yoga Association'/>
+              </div>
+              <div className="certificate-text">
+                <p>
                 The Indian Yoga Association is committed to promotion and
 advancement of Yoga and its applications around the world.
 
-              </p>
+                </p>
+              </div>
             </div>
-          </div>
-          <div className="certificate">
-            <div className="certificate-logo">
-              <img src={`${baseDomain}${certificates.YCB}`} alt='Yoga Certification Board' />
-            </div>
-            <div className="certificate-text">
-              <p>
+            <div className="certificate">
+              <div className="certificate-logo">
+                <img src={`${baseDomain}${certificates.YCB}`} alt='Yoga Certification Board' />
+              </div>
+              <div className="certificate-text">
+                <p>
               Yoga Certification Board is the Board which has been set up by
 Government for certification in the field of Yoga.
 
-              </p>
+                </p>
+              </div>
             </div>
-          </div>
-          <div className="certificate">
-            <div className="certificate-logo">
-              <img src={`${baseDomain}${certificates.YAL}`} alt='Yoga Alliance' />
-            </div>
-            <div className="certificate-text">
-              <p>
+            <div className="certificate">
+              <div className="certificate-logo">
+                <img src={`${baseDomain}${certificates.YAL}`} alt='Yoga Alliance' />
+              </div>
+              <div className="certificate-text">
+                <p>
               Yoga Alliance is involved with advocating for self-
 regulation in the yoga industry.
 
-              </p>
+                </p>
+              </div>
             </div>
-          </div>
-          <div className="certificate">
-            <div className="certificate-logo">
-              <img src={`${baseDomain}${certificates.IAYT}`} alt='International association of yoga therapists' />
-            </div>
-            <div className="certificate-text">
-              <p>
+            <div className="certificate">
+              <div className="certificate-logo">
+                <img src={`${baseDomain}${certificates.IAYT}`} alt='International association of yoga therapists' />
+              </div>
+              <div className="certificate-text">
+                <p>
               IAYT supports research and education in yoga and serves as a
 professional organization for yoga teachers and yoga therapists worldwide.
-              </p>
+                </p>
+              </div>
             </div>
           </div>
         </div>
+        <AlumniCarousel/>
       </div>
-      <AlumniCarousel/>
-    </div>
+    </>
   )
 }
 

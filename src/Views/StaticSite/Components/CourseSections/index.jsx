@@ -30,7 +30,7 @@ const CourseSection = ({
             text: ' Batch 2 - 2 Months TTC - On Campus - English',
           },
           {
-            url: '/200-hrs-parttime-ttc-online-english',
+            url: '/200-hrs-part-time-ttc-online-english',
             text: 'Batch 3 - 2 Months TTC - Online - English',
           },
           {

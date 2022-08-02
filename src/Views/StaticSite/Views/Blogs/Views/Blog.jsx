@@ -14,6 +14,7 @@ import Heading from '../../../Components/Heading'
 import InnerNavComponent from '../../../Components/InnerNavComponent'
 import { useDispatch, useSelector } from 'react-redux'
 import { fetchBlogData } from '../Blogs.action'
+import { Helmet } from 'react-helmet'
 
 const BlogAnother = () => {
 
@@ -75,6 +76,7 @@ const BlogAnother = () => {
 
   return (
     <>
+      <Helmet title={`${ blog?.title || '' }`} />
       <div className='blog-page-container'>
         
         <InnerNavComponent abc={viewBlog}/>

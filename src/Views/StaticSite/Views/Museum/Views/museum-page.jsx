@@ -10,6 +10,8 @@ import Location from './Location'
 // import { Link } from 'react-router-dom'
 import { useLocation } from 'react-router-dom'
 import CommonBtn from '../../../Components/commonbtn'
+import { Helmet } from 'react-helmet'
+import metaDataObj from '../../../../../Constants/metaData.json'
 import baseDomain, {
   museumAssets,
   background,
@@ -38,6 +40,10 @@ const MuseumPage = () => {
   }
   return (
     <>
+      { metaDataObj[location.pathname] && 
+    <Helmet
+      title={metaDataObj[location.pathname || '']?.title || ''}
+    /> }
       <div>
         <CommonBanner
           isLeftContent={false}

@@ -244,8 +244,8 @@
     ]
   },
   "/facilities": {
-    "title": "Hostels - The Yoga Institute Santacruz East Mumbai",
-    "h1Tag": "Hostels",
+    "title": "Facilties - The Yoga Institute Santacruz East Mumbai",
+    "h1Tag": "Facilties",
     "h2Tags": ["Hostel", "Facilities"],
     "metaData": [
       {
@@ -3567,5 +3567,25 @@
     "h1Tag": "Weekend Asana Classes -(Men & Women) - Online",
     "h2Tags": [],
     "metaData": []
+  },
+  "/support-your-alma-mater":{
+    "title":"Support Your Alma Mater - The Yoga Institute",
+    "h1Tag":"Support Your Alma Mater",
+    "h2Tags":[]
+  },
+  "/gifting":{
+    "title":"Gifiting - The Yoga Institute",
+    "h1Tag":"Gifiting",
+    "h2Tags":[]
+  },
+  "/print-media":{
+    "title":"Print Media - The Yoga Institute",
+    "h1Tag":"Print Media",
+    "h2Tags":[]
+  },
+  "/digital-media":{
+    "title":"Digital Media - The Yoga Institute",
+    "h1Tag":"Digital Media",
+    "h2Tags":[]
   }
 }

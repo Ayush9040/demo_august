@@ -14,6 +14,8 @@ import VideosSection from '../../Components/Videos'
 import NewsLetter from '../../Components/NewsLetter'
 import Footer from '../../Components/Footer'
 import Blog from '../../Components/BlogSection'
+import { Helmet } from 'react-helmet'
+import metaDataObj from '../../../../Constants/metaData.json'
 
 const Home = () => {
   const route = useLocation()
@@ -27,6 +29,10 @@ const Home = () => {
   })
   return (
     <>
+      { metaDataObj[route.pathname] && 
+    <Helmet
+      title={metaDataObj[route.pathname || '']?.title || ''}
+    /> }
       <HeroSection isUserLoggedIn={isLoggedIn} />
       <Legacy />
       <OurOfferings />

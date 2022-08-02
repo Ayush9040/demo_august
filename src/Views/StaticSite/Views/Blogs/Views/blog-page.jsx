@@ -5,13 +5,15 @@ import { useSelector,useDispatch } from 'react-redux'
 import './style.scss'
 import SeminarCard from '../../../Components/SeminarCard'
 //import CommonBannerNavPrimary from '../../../Components/CommonBannerNavPrimary'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import InnerNavComponent from '../../../Components/InnerNavComponent'
 import { useEffect } from 'react'
 import { fetchBlogsData } from '../Blogs.action'
 import { useState } from 'react'
 //import { blog } from '../../../assets/icons/icon'
 import Pagination from 'react-js-pagination'
+import { Helmet } from 'react-helmet'
+import metaDataObj from '../../../../../Constants/metaData.json'
 
 const BlogPage = () => {
 
@@ -19,6 +21,7 @@ const BlogPage = () => {
   //const [ pageRange,setPageRange] = useState(5)
 
   const { blogs, count, blog }=useSelector(state=>state.blogs)
+  const location = useLocation()
 
   const dispatch = useDispatch()
 
@@ -52,7 +55,11 @@ const BlogPage = () => {
 
 
  
-  return (
+  return (<>
+    { metaDataObj[location.pathname] && 
+    <Helmet
+      title={metaDataObj[location.pathname || '']?.title || ''}
+    /> }
     <div className="main-blog">
       {/* <CommonBannerNavPrimary innerNav={false} /> */}
       <InnerNavComponent abc={viewBlog}/>
@@ -121,6 +128,7 @@ const BlogPage = () => {
         </div>
       </div>
     </div>
+  </>
   )
 }
 

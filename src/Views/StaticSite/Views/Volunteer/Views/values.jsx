@@ -3,8 +3,14 @@ import CommonBanner from '../../../Components/Common-banner'
 import './style.scss'
 import baseDomain, { volunteerAssets, background } from '../../../assets/images/imageAsset'
 import InnerNavComponent from '../../../Components/InnerNavComponent'
+import { Helmet } from 'react-helmet'
+import metaDataObj from '../../../../../Constants/metaData.json'
+import { useLocation } from 'react-router-dom'
 //import ValuesImg from '../../assets/images/values.png'
 const Values = () => {
+
+  const location = useLocation()
+
   const ValuesBar = {
     title: 'volunteer-values',
     color: 'white',
@@ -24,6 +30,10 @@ const Values = () => {
   }
   return (
     <>
+      { metaDataObj[location.pathname] && 
+    <Helmet
+      title={metaDataObj[location.pathname || '']?.title || ''}
+    /> }
       <div className='Benefits-container'>
         <CommonBanner
           isLeftContent={false}

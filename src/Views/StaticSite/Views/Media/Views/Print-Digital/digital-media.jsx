@@ -4,8 +4,13 @@ import digitalMedia from '../../Constants/digitalMedia'
 import { videos2 } from '../../../../assets/icons/icon'
 import './style.scss'
 import { useState } from 'react'
+import { Helmet } from 'react-helmet'
+import metaDataObj from '../../../../../../Constants/metaData.json'
+import { useLocation } from 'react-router-dom'
 
 const DigitalMedia = () => {
+
+  const location = useLocation()
 
   const [ videoPlayerData,setVideoPlayerData ]=useState()
   
@@ -18,7 +23,11 @@ const DigitalMedia = () => {
     ],
   }
 
-  return (
+  return (<>
+    { metaDataObj[location.pathname] && 
+    <Helmet
+      title={metaDataObj[location.pathname || '']?.title || ''}
+    /> }
     <div className='digital-media-container' >
       <InnerNavComponent abc={MediaNews} />
       <h1>Digital Media
@@ -51,6 +60,7 @@ const DigitalMedia = () => {
         </div>
       )}
     </div>
+  </>
   )
 }
 

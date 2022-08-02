@@ -11,6 +11,8 @@ import baseDomain, {
 } from '../../../assets/images/imageAsset'
 import GiftingData from '../Constants/data'
 import InnerNavComponent from '../../../Components/InnerNavComponent'
+import { Helmet } from 'react-helmet'
+import metaDataObj from '../../../../../Constants/metaData.json'
 
 const Gifting = () => {
   const route = useLocation()
@@ -41,6 +43,10 @@ const Gifting = () => {
   }
   return (
     <>
+      { metaDataObj[route.pathname] && 
+    <Helmet
+      title={metaDataObj[route.pathname || '']?.title || ''}
+    /> }
       <div className="gifting-main-container">
         <CommonBanner
           isLeftContent={false}
