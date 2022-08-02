@@ -11615,7 +11615,7 @@ const classes = {
   20: {
     id: '',
     title: 'Weekend Asana Classes - (Men & Women) - Online',
-    key: 'weekend-asana-classes-online',
+    key: 'weekend-classes-online',
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
     templateId: {

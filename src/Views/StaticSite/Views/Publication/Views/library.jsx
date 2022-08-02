@@ -22,9 +22,9 @@ const library = () => {
         name:'Yoga and Total Health'
       },
       {
-        innerTitle:'yogasttav',
+        innerTitle:'yogasattva',
         url:'/yogasattva',
-        name:'Yogasattava'
+        name:'Yogasattva'
       },
       // {
       //   innerTitle:'books',

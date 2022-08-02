@@ -133,7 +133,7 @@ const MegaMenu = ({ setNav }) => {
     ],
     VOLUNTEER: [
       { menu: 'Volunteer with us', link: '/volunteer' },
-      { menu: 'Values', link: '/volunteer/values' },
+      { menu: 'Values', link: '/values' },
     ],
   }
   return (

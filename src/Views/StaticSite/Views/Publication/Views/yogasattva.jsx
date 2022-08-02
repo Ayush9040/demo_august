@@ -25,7 +25,7 @@ const Yogasattva = () => {
     arrows: false,
   }
   const publicationSattva = {
-    title: 'yogasttav',
+    title: 'yogasattva',
     color: 'white',
     menuColor: 'white',
     menuItems: [
@@ -35,9 +35,9 @@ const Yogasattva = () => {
         name: 'Yoga and Total Health',
       },
       {
-        innerTitle: 'yogasttav',
+        innerTitle: 'yogasattva',
         url: '/yogasattva',
-        name: 'Yogasattava',
+        name: 'Yogasattva',
       },
       // {
       //   innerTitle:'books',

@@ -17,6 +17,9 @@
             border-right: 1px solid #000;
             padding: 0rem 0.7rem;
             margin: 0.5rem 0;
+            &:last-child{
+                border: none;
+            }
             cursor: pointer;
            span{
             &.active{
