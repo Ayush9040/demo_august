@@ -16,7 +16,8 @@ const DisclaimerPolicy = ({
   courseAsset2,
   templateKey,
   setBold,
-  courseFee
+  courseFee,
+  courseDate
 }) => {
   const [disData, setDisData] = useState({
     terms: 'no',
@@ -78,6 +79,8 @@ const DisclaimerPolicy = ({
           batch:currentCourse.batch,
           imageAsset: courseAsset1,
           certificateImgAsset: courseAsset2,
+          date:courseDate,
+          timing:currentCourse.timing
         },
       }
       let body1 = {
@@ -108,6 +111,8 @@ const DisclaimerPolicy = ({
           batch:currentCourse.batch,
           imageAsset: courseAsset1,
           certificateImgAsset: courseAsset2,
+          date:courseDate,
+          timing:currentCourse.timing
         },
       }
       // if(currentCourse.key==='batch-1-200hr'){
@@ -156,7 +161,7 @@ const DisclaimerPolicy = ({
             if(!paymentOrderResponse?.data?.amount && !paymentOrderResponse?.data?.id) return 0
             
             const options = {
-              key: 'rzp_live_KyhtrIyJ546bd2', // Enter the Key ID generated from the Dashboard
+              key: 'rzp_test_udmmUPuH3rTJe8', // Enter the Key ID generated from the Dashboard
               amount: paymentOrderResponse.data.amount, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
               currency: 'INR',
               name: 'The Yoga Institute',

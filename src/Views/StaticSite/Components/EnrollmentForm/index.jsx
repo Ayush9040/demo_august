@@ -358,6 +358,7 @@ const Enrollment = () => {
             courseAsset2={courseAsset2}
             setBold={setBold}
             courseFee={courseFee}
+            courseDate={ courseDate }
           />
         )}
       </div>
