@@ -57,6 +57,9 @@
     width: 95%;
     margin: 0 auto;
   }
+  #date-select-mobile{
+    display: none;
+  }
   .career-navigation-lg-div {
     padding: 2rem 10rem;
     width: 95%;
@@ -264,6 +267,9 @@
       flex-direction: column;
       & > div {
         width: 100%;
+      }
+      #date-select-mobile{
+        display: block;
       }
       .course-cover{
         height: 220px;
