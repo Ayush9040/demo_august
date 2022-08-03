@@ -111,7 +111,7 @@ const CourseDetails = ({ pageDate }) => {
     borderStyle: 'solid',
     maxWidth: 'fit-content',
     marginTop:'2rem',
-    marginLeft:'10rem'
+    //marginLeft:'10rem'
   }
 
   const selectMenu = (name) => {

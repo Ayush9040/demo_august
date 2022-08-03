@@ -268,14 +268,22 @@
       & > div {
         width: 100%;
       }
-      #date-select-mobile{
-        display: block;
-      }
       .course-cover{
         height: 220px;
       }
       .course-info {
         width: 100%;
+      }
+    }
+    #date-select{
+      display: none;
+    }
+    #date-select-mobile{
+      display: block;
+    }
+    .career-navigation-lg-div{
+      .career-navigation-lg{
+        display: none;
       }
     }
     .details-section {
