@@ -284,7 +284,7 @@ const Yogasattva = () => {
     ],
     2022:[
       {
-        img:`${baseDomain}${publicationAssests.ythAssets85}`,
+        img:`${baseDomain}${publicationAssests.ythAssets87}`,
         pdf:'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/books/newsletter/Yogasattva-August2022.pdf'
       },
       {
@@ -292,7 +292,7 @@ const Yogasattva = () => {
         pdf:'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/books/newsletter/Yogasattva-July2022.pdf'
       },
       {
-        img:`${baseDomain}${publicationAssests.ythAssets87}`,
+        img:`${baseDomain}${publicationAssests.ythAssets85}`,
         pdf:'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/books/newsletter/Yogasattva-June2022-%20v3.pdf'
       },
       {
