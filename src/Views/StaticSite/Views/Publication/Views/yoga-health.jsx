@@ -7,7 +7,6 @@ import baseDomain, {
   publicationAssests,
 } from '../../../assets/images/imageAsset'
 import InnerNavComponent from '../../../Components/InnerNavComponent'
-import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet'
 import metaDataObj from '../../../../../Constants/metaData.json'
 import { useLocation } from 'react-router-dom'
@@ -110,10 +109,12 @@ const YogaTotalHealth = () => {
             {`To subscribe for ‘Yoga & Total Health Monthly Magazine’ click the
           button below.`}
           </p>
-          <Link to="/#Newsletter">
+          <a href='https://www.magzter.com/IN/The_Yoga_Institute/Yoga_and_Total_Health/Health/' rel='noreferrer' target="_blank" >
             <CommonBtn text={'Subscribe Now (E-Mag)'} />
-          </Link>
-          <CommonBtn text={'Hard Copy'} />
+          </a>
+          <div className='hard-copy' >
+            <CommonBtn text={'Hard Copy'} />
+          </div>
           <p>
           For complaints or non-receipt of journal, write to –
           bookstore@theyogainstitute.org

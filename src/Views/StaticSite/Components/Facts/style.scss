@@ -243,6 +243,7 @@
 
 @media (max-width: 768px) {
   .facts-container {
+    margin-top: 3rem;
     .slider-m {
       display: block;
     }
@@ -413,6 +414,7 @@
       }
     }
     .grid-img-4 {
+      display: none;
       grid-area: img4;
       height: 200px;
       img {
@@ -422,6 +424,7 @@
       }
     }
     .grid-img-5 {
+      display: none;
       grid-area: img5;
       height: 200px;
       img {
@@ -431,6 +434,7 @@
       }
     }
     .grid-img-6 {
+      display: none;
       grid-area: img6;
       height: calc(400px - 0px);
       img {

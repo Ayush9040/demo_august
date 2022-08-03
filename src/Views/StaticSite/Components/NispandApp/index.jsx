@@ -14,8 +14,8 @@ const Nispand = () => {
               <img src={`${baseDomain}${homeAssets.homeAsset25}`} alt='Nispand' />
             </div>
             <div className='heading-text'>
-              <h2>The Yoga Institute</h2>
               <h1>Nispand</h1>
+              <h2>Meditation App</h2>
             </div>
           </div>
           <div className='custom-border global-top-margin'></div>

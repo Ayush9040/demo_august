@@ -88,19 +88,19 @@ const CourseSection = ({
         ans: [
           {
             url: '/21-days-better-living-course',
-            text: '21-Days BLC - Batch 1 - 21 Days BLC - Morning On Campus - English',
+            text: '21-Days BLC - Batch 1 - Morning On Campus - English',
           },
           {
             url: '/21-days-better-living-course-batch-2',
-            text: '21 Days BLC - Batch 2 - 21 Days BLC - Evening - Online & On Campus - English',
+            text: '21 Days BLC - Batch 2 - Evening - Online & On Campus - English',
           },
           {
             url: '/21-days-better-living-course-batch-3',
-            text: '21 Days BLC - Batch 3 - 21 Days BLC - Evening - Online & On Campus - Hindi',
+            text: '21 Days BLC - Batch 3 - Evening - Online & On Campus - Hindi',
           },
           {
             url: '/21-days-better-living-course-batch-4',
-            text: '21 Days BLC - Batch 4 - 21 Days BLC - Morning - Online - English',
+            text: '21 Days BLC - Batch 4 - Morning - Online - English',
           },
         ],
       },
@@ -140,6 +140,9 @@ const CourseSection = ({
                 <Link to="/asana-regular-classes-on-campus-women">
                   <li>Asana Regular Classes for Women On Campus</li>
                 </Link>
+                <Link  to="/asana-regular-classes-online">
+                  <li>Asana Regular Classes (Men & Women) - Online</li>
+                </Link>
                 <Link to="/weekend-classes">
                   <li>Weekend Asana Classes - (Men & Women) On Campus</li>
                 </Link>
@@ -169,6 +172,7 @@ const CourseSection = ({
     case 'Camps & Workshops':
       return (
         <div className="camp_course-list-content">
+          <br/>
           <Accordian data={campsAccordian} />
           <div>
             <h4>
@@ -261,7 +265,7 @@ const CourseSection = ({
         </div>
         {content()}
       </div>
-      {showRangeSlider === true && (
+      {showRangeSlider && showRangeSlider === true && (
         <div className="vertical-scrollbar">
           <Slider
             min={1}

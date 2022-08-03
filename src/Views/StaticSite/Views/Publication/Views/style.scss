@@ -62,6 +62,22 @@
   }
   margin-bottom: 20px;
 }
+.hard-copy{
+  position: relative;
+  width: fit-content;
+  margin: 0 auto;
+ &:hover{
+  &::after{
+    content: 'Coming Soon';
+    position: absolute;
+    color: black;
+    width: 100px;
+    top: 110%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+ }
+}
 
 //books
 .books-container {

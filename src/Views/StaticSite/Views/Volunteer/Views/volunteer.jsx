@@ -61,7 +61,7 @@ const Volunteer = () => {
           BgImage={benefits}
           Heading="Volunteer with us"
           isOnlyBanner={false}
-          innerNav={true}
+          innerNav={false}
           bannerImg={`${baseDomain}${background.volunteer}`}
           overlay="#80729BD4"
         >
