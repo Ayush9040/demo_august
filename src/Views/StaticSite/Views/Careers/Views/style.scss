@@ -222,6 +222,15 @@
   }
 }
 
+
+
+@media (max-width: 768px){
+.jobs-card-container{
+    grid-template-columns: 1fr;
+    gap: 3rem;
+}}
+
+
 @media (max-width: 500px) {
   .job-application .job-form form .uploads label {
     padding: 1rem;
