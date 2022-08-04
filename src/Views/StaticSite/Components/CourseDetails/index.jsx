@@ -99,20 +99,20 @@ const CourseDetails = ({ pageDate }) => {
     marginTop:'2rem',
     marginLeft:'10rem'
   }
-  const selectStyles1 = {
-    cursor: 'pointer',
-    background: '#c9705f',
-    borderColor: 'white',
-    color: 'white',
-    fontSize: '1.5rem',
-    fontWeight: '900',
-    borderWidth: '0.1rem',
-    borderRadius: '20px',
-    borderStyle: 'solid',
-    maxWidth: 'fit-content',
-    marginTop:'2rem',
-    //marginLeft:'10rem'
-  }
+  // const selectStyles1 = {
+  //   cursor: 'pointer',
+  //   background: '#c9705f',
+  //   borderColor: 'white',
+  //   color: 'white',
+  //   fontSize: '1.5rem',
+  //   fontWeight: '900',
+  //   borderWidth: '0.1rem',
+  //   borderRadius: '20px',
+  //   borderStyle: 'solid',
+  //   maxWidth: 'fit-content',
+  //   marginTop:'2rem',
+  //   //marginLeft:'10rem'
+  // }
 
   const selectMenu = (name) => {
     switch (name) {
@@ -176,7 +176,7 @@ const CourseDetails = ({ pageDate }) => {
             {pageDate.metaDescription ||
               'Lorem Ipsum is simply dummy text of the printing and typesetting industry. '}
           </p>
-          <div id='date-select-mobile' style={pageDate?.dates?.length!==0 ? { visibility:'visible' }:{ visibility:'hidden' }} ><SelectDropDown  currentValue={selectDate} changeCurrentValue={setSetselectDate} text={'Select Date/Time'} isStyles={selectStyles1} dates={pageDate.dates}/> </div>
+          {/* <div id='date-select-mobile' style={pageDate?.dates?.length!==0 ? { visibility:'visible' }:{ visibility:'hidden' }} ><SelectDropDown  currentValue={selectDate} changeCurrentValue={setSetselectDate} text={'Select Date/Time'} isStyles={selectStyles1} dates={pageDate.dates}/> </div> */}
           <div className="course-options"  >
             {/* {selectDate ? <Link to={ isLoggedIn ? `/enrollment/${pageDate.key}/?date=${selectDate}`:`/user/sign-in/${pageDate.key}/?date=${selectDate}`}>
               <CommonBtn text={'Enroll Now'} />
