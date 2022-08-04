@@ -57,6 +57,9 @@
     width: 95%;
     margin: 0 auto;
   }
+  #date-select-mobile{
+    display: none;
+  }
   .career-navigation-lg-div {
     padding: 2rem 10rem;
     width: 95%;
@@ -270,6 +273,17 @@
       }
       .course-info {
         width: 100%;
+      }
+    }
+    #date-select{
+      display: none;
+    }
+    #date-select-mobile{
+      display: block;
+    }
+    .career-navigation-lg-div{
+      .career-navigation-lg{
+        display: none;
       }
     }
     .details-section {
