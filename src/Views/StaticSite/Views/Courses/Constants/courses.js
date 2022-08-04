@@ -2311,17 +2311,17 @@ const ttc900hr = {
         },
       },
 
-      {
-        type: 'paragraph',
+      // {
+      //   type: 'paragraph',
 
-        content: {
-          title: 'Prerequisites:',
+      //   content: {
+      //     title: 'Prerequisites:',
 
-          text: [
-            '200 HRS TTC / 7 Day Health Camp / 21 Days Better Living Course',
-          ],
-        },
-      },
+      //     text: [
+      //       '200 HRS TTC / 7 Day Health Camp / 21 Days Better Living Course',
+      //     ],
+      //   },
+      // },
     ],
 
     curriculum: [
@@ -4053,61 +4053,61 @@ const ttc900hr = {
         },
       },
 
-      {
-        type: 'paragraph',
+      // {
+      //   type: 'paragraph',
 
-        content: {
-          title: 'Prerequisites:',
+      //   content: {
+      //     title: 'Prerequisites:',
 
-          text: [
-            ' 200 HRS TTC / 7 Day Health Camp / 21 Days Better Living Course    ',
-          ],
-        },
-      },
+      //     text: [
+      //       ' 200 HRS TTC / 7 Day Health Camp / 21 Days Better Living Course    ',
+      //     ],
+      //   },
+      // },
 
-      {
-        type: 'paragraph',
+      // {
+      //   type: 'paragraph',
 
-        content: {
-          title: '',
+      //   content: {
+      //     title: '',
 
-          text: [
-            'Students have a choice to register for an online or offline (on-campus) course. Admissions are open for both options.',
-          ],
-        },
-      },
+      //     text: [
+      //       'Students have a choice to register for an online or offline (on-campus) course. Admissions are open for both options.',
+      //     ],
+      //   },
+      // },
 
-      {
-        type: 'table',
+      // {
+      //   type: 'table',
 
-        content: {
-          title: '',
+      //   content: {
+      //     title: '',
 
-          tableHeading: ['Mode of Learning', 'Online', 'On Campus'],
+      //     tableHeading: ['Mode of Learning', 'Online', 'On Campus'],
 
-          tableData: [
-            [
-              'Details',
+      //     tableData: [
+      //       [
+      //         'Details',
 
-              'All classes will be online except the last 15 days which are to be done mandatorily on-campus at the end of the course',
+      //         'All classes will be online except the last 15 days which are to be done mandatorily on-campus at the end of the course',
 
-              'All classes to be attended on campus',
-            ],
-          ],
-        },
-      },
+      //         'All classes to be attended on campus',
+      //       ],
+      //     ],
+      //   },
+      // },
 
-      {
-        type: 'paragraph',
+      // {
+      //   type: 'paragraph',
 
-        content: {
-          title: '',
+      //   content: {
+      //     title: '',
 
-          text: [
-            'Note: The course is currently being conducted online ONLY. Once the pandemic restrictions ease, we will open the course for on-campus attendance as well. Students can then choose to either continue their course online OR switch to on-campus mode.',
-          ],
-        },
-      },
+      //     text: [
+      //       'Note: The course is currently being conducted online ONLY. Once the pandemic restrictions ease, we will open the course for on-campus attendance as well. Students can then choose to either continue their course online OR switch to on-campus mode.',
+      //     ],
+      //   },
+      // },
     ],
 
     curriculum: [
@@ -8295,46 +8295,46 @@ const camps = {
         },
       },
 
-      {
-        type: 'paragraph',
-        content: {
-          title: 'PRE-REQUISITES',
-          text: [],
-        },
-      },
-      {
-        type: 'u-list',
-        content: {
-          title: ' A MANDATORY PREREQUISITE FOR THIS COURSE IS:',
-          points: [
-            {
-              listItem:
-                'Covid test RT-PCR results dated 20th January 2022to 28th January 2022and later for entry into the premises post prior registration. ',
-              subItems: [],
-            },
-            {
-              listItem:
-                'Students must use personal vehicles for commuting, throughout the course duration. We would discourage the use of public transport. (For non-residential students)',
-              subItems: [],
-            },
-            {
-              listItem:
-                'This course is for healthy individuals. Kindly note if you suffer from any health issues like diabetes, hypertension, or orthopaedic problems, kindly take prior approval.',
-              subItems: [],
-            },
-            {
-              listItem:
-                'For international Students, it is mandatory to do 14 Day Quarantine as per the laws of Government of India along with RT-PCR test reports. ',
-              subItems: [],
-            },
-            {
-              listItem:
-                'Last but not the least, do not forget your masks and Yoga Mats',
-              subItems: [],
-            },
-          ],
-        },
-      },
+      // {
+      //   type: 'paragraph',
+      //   content: {
+      //     title: 'PRE-REQUISITES',
+      //     text: [],
+      //   },
+      // },
+      // {
+      //   type: 'u-list',
+      //   content: {
+      //     title: ' A MANDATORY PREREQUISITE FOR THIS COURSE IS:',
+      //     points: [
+      //       {
+      //         listItem:
+      //           'Covid test RT-PCR results dated 20th January 2022to 28th January 2022and later for entry into the premises post prior registration. ',
+      //         subItems: [],
+      //       },
+      //       {
+      //         listItem:
+      //           'Students must use personal vehicles for commuting, throughout the course duration. We would discourage the use of public transport. (For non-residential students)',
+      //         subItems: [],
+      //       },
+      //       {
+      //         listItem:
+      //           'This course is for healthy individuals. Kindly note if you suffer from any health issues like diabetes, hypertension, or orthopaedic problems, kindly take prior approval.',
+      //         subItems: [],
+      //       },
+      //       {
+      //         listItem:
+      //           'For international Students, it is mandatory to do 14 Day Quarantine as per the laws of Government of India along with RT-PCR test reports. ',
+      //         subItems: [],
+      //       },
+      //       {
+      //         listItem:
+      //           'Last but not the least, do not forget your masks and Yoga Mats',
+      //         subItems: [],
+      //       },
+      //     ],
+      //   },
+      // },
       {
         type: 'paragraph',
         content: {
@@ -8620,46 +8620,46 @@ const camps = {
         },
       },
 
-      {
-        type: 'paragraph',
-        content: {
-          title: 'PRE-REQUISITES',
-          text: [],
-        },
-      },
-      {
-        type: 'u-list',
-        content: {
-          title: ' A MANDATORY PREREQUISITE FOR THIS COURSE IS:',
-          points: [
-            {
-              listItem:
-                'Covid test RT-PCR results dated 20th January 2022to 28th January 2022and later for entry into the premises post prior registration. ',
-              subItems: [],
-            },
-            {
-              listItem:
-                'Students must use personal vehicles for commuting, throughout the course duration. We would discourage the use of public transport. (For non-residential students)',
-              subItems: [],
-            },
-            {
-              listItem:
-                'This course is for healthy individuals. Kindly note if you suffer from any health issues like diabetes, hypertension, or orthopaedic problems, kindly take prior approval.',
-              subItems: [],
-            },
-            {
-              listItem:
-                'For international Students, it is mandatory to do 14 Day Quarantine as per the laws of Government of India along with RT-PCR test reports. ',
-              subItems: [],
-            },
-            {
-              listItem:
-                'Last but not the least, do not forget your masks and Yoga Mats',
-              subItems: [],
-            },
-          ],
-        },
-      },
+      // {
+      //   type: 'paragraph',
+      //   content: {
+      //     title: 'PRE-REQUISITES',
+      //     text: [],
+      //   },
+      // },
+      // {
+      //   type: 'u-list',
+      //   content: {
+      //     title: ' A MANDATORY PREREQUISITE FOR THIS COURSE IS:',
+      //     points: [
+      //       {
+      //         listItem:
+      //           'Covid test RT-PCR results dated 20th January 2022to 28th January 2022and later for entry into the premises post prior registration. ',
+      //         subItems: [],
+      //       },
+      //       {
+      //         listItem:
+      //           'Students must use personal vehicles for commuting, throughout the course duration. We would discourage the use of public transport. (For non-residential students)',
+      //         subItems: [],
+      //       },
+      //       {
+      //         listItem:
+      //           'This course is for healthy individuals. Kindly note if you suffer from any health issues like diabetes, hypertension, or orthopaedic problems, kindly take prior approval.',
+      //         subItems: [],
+      //       },
+      //       {
+      //         listItem:
+      //           'For international Students, it is mandatory to do 14 Day Quarantine as per the laws of Government of India along with RT-PCR test reports. ',
+      //         subItems: [],
+      //       },
+      //       {
+      //         listItem:
+      //           'Last but not the least, do not forget your masks and Yoga Mats',
+      //         subItems: [],
+      //       },
+      //     ],
+      //   },
+      // },
       {
         type: 'paragraph',
         content: {
@@ -8945,46 +8945,46 @@ const camps = {
         },
       },
 
-      {
-        type: 'paragraph',
-        content: {
-          title: 'PRE-REQUISITES',
-          text: [],
-        },
-      },
-      {
-        type: 'u-list',
-        content: {
-          title: ' A MANDATORY PREREQUISITE FOR THIS COURSE IS:',
-          points: [
-            {
-              listItem:
-                'Covid test RT-PCR results dated 20th January 2022to 28th January 2022and later for entry into the premises post prior registration. ',
-              subItems: [],
-            },
-            {
-              listItem:
-                'Students must use personal vehicles for commuting, throughout the course duration. We would discourage the use of public transport. (For non-residential students)',
-              subItems: [],
-            },
-            {
-              listItem:
-                'This course is for healthy individuals. Kindly note if you suffer from any health issues like diabetes, hypertension, or orthopaedic problems, kindly take prior approval.',
-              subItems: [],
-            },
-            {
-              listItem:
-                'For international Students, it is mandatory to do 14 Day Quarantine as per the laws of Government of India along with RT-PCR test reports. ',
-              subItems: [],
-            },
-            {
-              listItem:
-                'Last but not the least, do not forget your masks and Yoga Mats',
-              subItems: [],
-            },
-          ],
-        },
-      },
+      // {
+      //   type: 'paragraph',
+      //   content: {
+      //     title: 'PRE-REQUISITES',
+      //     text: [],
+      //   },
+      // },
+      // {
+      //   type: 'u-list',
+      //   content: {
+      //     title: ' A MANDATORY PREREQUISITE FOR THIS COURSE IS:',
+      //     points: [
+      //       {
+      //         listItem:
+      //           'Covid test RT-PCR results dated 20th January 2022to 28th January 2022and later for entry into the premises post prior registration. ',
+      //         subItems: [],
+      //       },
+      //       {
+      //         listItem:
+      //           'Students must use personal vehicles for commuting, throughout the course duration. We would discourage the use of public transport. (For non-residential students)',
+      //         subItems: [],
+      //       },
+      //       {
+      //         listItem:
+      //           'This course is for healthy individuals. Kindly note if you suffer from any health issues like diabetes, hypertension, or orthopaedic problems, kindly take prior approval.',
+      //         subItems: [],
+      //       },
+      //       {
+      //         listItem:
+      //           'For international Students, it is mandatory to do 14 Day Quarantine as per the laws of Government of India along with RT-PCR test reports. ',
+      //         subItems: [],
+      //       },
+      //       {
+      //         listItem:
+      //           'Last but not the least, do not forget your masks and Yoga Mats',
+      //         subItems: [],
+      //       },
+      //     ],
+      //   },
+      // },
       {
         type: 'paragraph',
         content: {
@@ -9267,46 +9267,46 @@ const camps = {
         },
       },
 
-      {
-        type: 'paragraph',
-        content: {
-          title: 'PRE-REQUISITES',
-          text: [],
-        },
-      },
-      {
-        type: 'u-list',
-        content: {
-          title: ' A MANDATORY PREREQUISITE FOR THIS COURSE IS:',
-          points: [
-            {
-              listItem:
-                'Covid test RT-PCR results dated 20th January 2022to 28th January 2022and later for entry into the premises post prior registration. ',
-              subItems: [],
-            },
-            {
-              listItem:
-                'Students must use personal vehicles for commuting, throughout the course duration. We would discourage the use of public transport. (For non-residential students)',
-              subItems: [],
-            },
-            {
-              listItem:
-                'This course is for healthy individuals. Kindly note if you suffer from any health issues like diabetes, hypertension, or orthopaedic problems, kindly take prior approval.',
-              subItems: [],
-            },
-            {
-              listItem:
-                'For international Students, it is mandatory to do 14 Day Quarantine as per the laws of Government of India along with RT-PCR test reports. ',
-              subItems: [],
-            },
-            {
-              listItem:
-                'Last but not the least, do not forget your masks and Yoga Mats',
-              subItems: [],
-            },
-          ],
-        },
-      },
+      // {
+      //   type: 'paragraph',
+      //   content: {
+      //     title: 'PRE-REQUISITES',
+      //     text: [],
+      //   },
+      // },
+      // {
+      //   type: 'u-list',
+      //   content: {
+      //     title: ' A MANDATORY PREREQUISITE FOR THIS COURSE IS:',
+      //     points: [
+      //       {
+      //         listItem:
+      //           'Covid test RT-PCR results dated 20th January 2022to 28th January 2022and later for entry into the premises post prior registration. ',
+      //         subItems: [],
+      //       },
+      //       {
+      //         listItem:
+      //           'Students must use personal vehicles for commuting, throughout the course duration. We would discourage the use of public transport. (For non-residential students)',
+      //         subItems: [],
+      //       },
+      //       {
+      //         listItem:
+      //           'This course is for healthy individuals. Kindly note if you suffer from any health issues like diabetes, hypertension, or orthopaedic problems, kindly take prior approval.',
+      //         subItems: [],
+      //       },
+      //       {
+      //         listItem:
+      //           'For international Students, it is mandatory to do 14 Day Quarantine as per the laws of Government of India along with RT-PCR test reports. ',
+      //         subItems: [],
+      //       },
+      //       {
+      //         listItem:
+      //           'Last but not the least, do not forget your masks and Yoga Mats',
+      //         subItems: [],
+      //       },
+      //     ],
+      //   },
+      // },
       {
         type: 'paragraph',
         content: {
@@ -9586,7 +9586,7 @@ const classes = {
       '5:00 p.m. to 6:00 p.m.', 
       '6:00 p.m. to 7:00 p.m.', 
       '7:00 p.m. to 8:00 p.m.',
-      'Sat/Sun:7:30-9:00 a.m'],
+    ],
     online: true,
     onCampus: false,
     nonResidential: false,
@@ -11644,7 +11644,7 @@ const classes = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'classes',
-    dates: ['7:30 am to 9:00 am',''],
+    dates: ['7:30 am to 9:00 am',],
     online: true,
     onCampus: false,
     nonResidential: false,
