@@ -148,13 +148,25 @@
   }
   @media (max-width: "768px") {
           .main-logo {
-              display: none;
+              svg{
+                width: 60px!important;
+                height: 30px!important;
+              }
+          }
+          #orange{
+            svg{
+                transform: scale(2);
+            }
           }
           .career-navigation-lg {
-              display: none;
+            padding-top: 1rem;
+              ul{
+                width: 100%;
+                flex-wrap: wrap;
+              }
           }
           .career-navigation-sm {
-              display: flex;
+              display: none;
               width: 100%;
               ul {
                   width: 100%;

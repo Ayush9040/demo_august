@@ -5,8 +5,14 @@ import { divider } from '../../../assets/icons/icon'
 import './style.scss'
 import CommonBannerNavPrimary from '../../../Components/CommonBannerNavPrimary'
 import useFacts from '../../../utils/hooks/useFacts'
+import { Helmet } from 'react-helmet'
+import metaDataObj from '../../../../../Constants/metaData.json'
+import { useLocation } from 'react-router-dom'
 
 const OurFacts = () => {
+
+  const location = useLocation() 
+
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
@@ -14,6 +20,10 @@ const OurFacts = () => {
 
   return (
     <>
+      { metaDataObj[location.pathname] && 
+    <Helmet
+      title={metaDataObj[location.pathname || '']?.title || ''}
+    /> }
       <CommonBannerNavPrimary />
       <div className="ourfacts-container flex">
         <div className="ourfacts-header">

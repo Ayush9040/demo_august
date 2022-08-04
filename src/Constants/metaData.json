@@ -244,8 +244,8 @@
     ]
   },
   "/facilities": {
-    "title": "Hostels - The Yoga Institute Santacruz East Mumbai",
-    "h1Tag": "Hostels",
+    "title": "Facilties - The Yoga Institute Santacruz East Mumbai",
+    "h1Tag": "Facilties",
     "h2Tags": ["Hostel", "Facilities"],
     "metaData": [
       {
@@ -874,7 +874,7 @@
     ]
   },
   "/yogasattva": {
-    "title": "To cater to the digital era, The Yoga Institute now brings out YogaSattva, its monthly e-newsletter.",
+    "title": "YogaSattva - The Yoga Institute",
     "h1Tag": "YogaSattva",
     "h2Tags": [],
     "metaData": [
@@ -1628,8 +1628,8 @@
     ]
   },
   "/200-hrs-part-time-ttc-online-english-batch-5": {
-    "title": "Part Time TTC 200 Hrs (Online-English | Aug-Oct) - The Yoga Institute",
-    "h1Tag": "200 Hrs Part Time TTC (Online-English | Aug-Oct)",
+    "title": "Part Time TTC 200 Hrs (English | Aug-Oct) - The Yoga Institute",
+    "h1Tag": "200 Hrs Part Time TTC (English | Aug-Oct)",
     "h2Tags": [
       "A – KNOWLEDGE",
       "B – SKILL",
@@ -1962,7 +1962,7 @@
       }
     ]
   },
-  "/one-year-900hr": {
+  "/one-year-ttc": {
     "title": "One year Yoga Teacher Training India | One Year Course | Yoga instructor",
     "h1Tag": "Yoga Teachers Training Course (One Year TTC) (Hindi)",
     "h2Tags": [
@@ -1987,7 +1987,7 @@
       },
       {
         "property": "og:url",
-        "content": "https://theyogainstitute.org/one-year-900hr"
+        "content": "https://theyogainstitute.org/one-year-ttc"
       },
       {
         "property": "og:sitename",
@@ -2005,7 +2005,7 @@
     "links":[
       {
         "rel":"canonical",
-        "href":"https://theyogainstitute.org/one-year-900hr"
+        "href":"https://theyogainstitute.org/one-year-ttc"
       }
     ]
   },
@@ -2100,7 +2100,7 @@
     ]
   },
   "/asana-regular-classes-on-campus": {
-    "title": "Yoga Asanas Regular Classes for Men (Online | On Campus) - The Yoga Institute",
+    "title": "Yoga Asanas Regular Classes for Men (On Campus)",
     "h1Tag": "Asana Regular Classes for Men ( On Campus) ",
     "h2Tags": [],
     "metaData": [
@@ -2145,7 +2145,7 @@
     ]
   },
   "/asana-regular-classes-on-campus-women": {
-    "title": "Yoga Asanas Regular Classes for Women (Online | On Campus) - The Yoga Institute",
+    "title": "Yoga Asanas Regular Classes for Women (On Campus)",
     "h1Tag": "Asana Regular Classes for Women (On Campus)",
     "h2Tags": [],
     "metaData": [
@@ -2280,8 +2280,8 @@
     ]
   },
   "/weekend-classes-online": {
-    "title": "Weekend Yoga Regular Classes - Online - The Yoga Institute",
-    "h1Tag": "Weekend Asana Classes - (Men & Women) Online",
+    "title": "Weekend Yoga Regular Classes - Online",
+    "h1Tag": "Weekend Yoga Regular Classes - Online",
     "h2Tags": [],
     "metaData": [
       {
@@ -3090,8 +3090,8 @@
     ]
   },
   "/21-days-better-living-course-batch-4": {
-    "title": "21 Days Better Living Course (Online & OnCampus) - The Yoga Institute",
-    "h1Tag": "21 Days Better Living Course (Online & OnCampus)",
+    "title": "21 Days Better Living Course (Online) - The Yoga Institute",
+    "h1Tag": "21 Days Better Living Course (Online)",
     "h2Tags": [],
     "metaData": [
       {
@@ -3315,8 +3315,8 @@
     ]
   },
   "/21-days-better-living-course-batch-2": {
-    "title": "21 Days Better Living Course (On Campus) - The Yoga Institute",
-    "h1Tag": "21 Days Better Living Course (On Campus)",
+    "title": "21 Days Better Living Course (Online & OnCampus) - The Yoga Institute",
+    "h1Tag": "21 Days Better Living Course (Online & OnCampus)",
     "h2Tags": [],
     "metaData": [
       {
@@ -3360,8 +3360,8 @@
     ]
   },
   "/21-days-better-living-course-batch-3": {
-    "title": "21 Days Better Living Course (On Campus) - The Yoga Institute",
-    "h1Tag": "21 Days Better Living Course (On Campus)",
+    "title": "21 Days Better Living Course (Online & OnCampus - Hindi) - The Yoga Institute",
+    "h1Tag": "21 Days Better Living Course (Online & OnCampus - Hindi)",
     "h2Tags": [],
     "metaData": [
       {
@@ -3405,53 +3405,53 @@
     ]
   },
   "/certificate-yoga-therapy-course-online":{
-    "title":"Certificate Yoga Therapy Course Online - The Yoga Institute",
+    "title":"Yoga Therapy Course - The Yoga Institute",
     "h1Tag": "Certificate Yoga Therapy Course Online - The Yoga Institute",
     "h2Tags": []
   },
   "/certificate-program-on-yoga-for-cancer":{
-    "title":"Certificate Yoga For Cancer - The Yoga Institute",
+    "title":"Yoga For Cancer - The Yoga Institute",
     "h1Tag": "Certificate Yoga For Cancer",
     "h2Tags": []
   },
   "/certification-program-on-yoga-for-lung-cancer-online":{
-    "title":"Certificate Yoga For Lung Cancer Online - The Yoga Institute",
+    "title":"Yoga For Lung Cancer Online - The Yoga Institute",
     "h1Tag": "Certificate Yoga For Lung Cancer Online",
     "h2Tags": []
   },
   "/certificate-course-on-advanced-pranayama-techniques":{
-    "title":"Certificate Yoga Course For Advance Pranayam - The Yoga Institute",
+    "title":"Advanced Pranayama Techniques -The Yoga Institute",
     "h1Tag": "Certificate Yoga Course For Advance Pranayam",
     "h2Tags": []
   },
   "/stress-management-camp":{
-    "title":"Stress Management Camp - The Yoga Institute",
-    "h1Tag": "Stress Management Camp",
+    "title":"Online Stress Management Camp - The Yoga Institute",
+    "h1Tag": "Online Stress Management Camp",
     "h2Tags": []
   },
   "/weight-management-workshop":{
-    "title":"Weight Management Workshop - The Yoga Institute",
-    "h1Tag": "Weight Management Workshop",
+    "title":"Online Weight Management Workshop - The Yoga Institute",
+    "h1Tag": "Online Weight Management Workshop",
     "h2Tags": []
   },
   "/pregnancy-camp-for-ante-post-natal":{
-    "title":"Pregnancy Camp for Post Natal - The Yoga Institute",
-    "h1Tag": "Pregnancy Camp for Post Natal",
+    "title":"Online Pregnancy Camp For Ante & Post Natal - The Yoga Institute",
+    "h1Tag": "Online Pregnancy Camp For Ante & Post Natal",
     "h2Tags": []
   },
   "/cardiac-hypertension-workshop":{
-    "title":"Cardiac and Hypertension Workshop - The Yoga Institute",
-    "h1Tag": "Cardiac and Hypertension Workshop",
+    "title":"Online Cardiac and Hypertension Health Workshop - The Yoga Institute",
+    "h1Tag": "Online Cardiac and Hypertension Health Workshop",
     "h2Tags": []
   },
   "/back-joint-disorder-workshop":{
-    "title":"Back and Joint Disorder Workshop - The Yoga Institute",
-    "h1Tag": "Back and Joint Disorder Workshop",
+    "title":"Online Back and Joint Disorder Workshop - The Yoga Institute",
+    "h1Tag": "Online Back and Joint Disorder Workshop",
     "h2Tags": []
   },
   "/pranayama-workshop":{
-    "title":"Pranayama Workshop - The Yoga Institute",
-    "h1Tag": "Pranayama Workshop",
+    "title":"Online Pranayama Workshop - The Yoga Institute",
+    "h1Tag": "Online Pranayama Workshop",
     "h2Tags": []
   },
   "/womens-camp":{
@@ -3460,8 +3460,8 @@
     "h2Tags": []
   },
   "/respiratory-workshop":{
-    "title":"Respiratory Workshop - The Yoga Institute",
-    "h1Tag": "Respiratory Workshop",
+    "title":"Online Respiratory Workshop - The Yoga Institute",
+    "h1Tag": "Online Respiratory Workshop",
     "h2Tags": []
   },
   "/life-management-camp":{
@@ -3567,5 +3567,25 @@
     "h1Tag": "Weekend Asana Classes -(Men & Women) - Online",
     "h2Tags": [],
     "metaData": []
+  },
+  "/support-your-alma-mater":{
+    "title":"Support Your Alma Mater - The Yoga Institute",
+    "h1Tag":"Support Your Alma Mater",
+    "h2Tags":[]
+  },
+  "/gifting":{
+    "title":"Gifiting - The Yoga Institute",
+    "h1Tag":"Gifiting",
+    "h2Tags":[]
+  },
+  "/print-media":{
+    "title":"Print Media - The Yoga Institute",
+    "h1Tag":"Print Media",
+    "h2Tags":[]
+  },
+  "/digital-media":{
+    "title":"Digital Media - The Yoga Institute",
+    "h1Tag":"Digital Media",
+    "h2Tags":[]
   }
 }

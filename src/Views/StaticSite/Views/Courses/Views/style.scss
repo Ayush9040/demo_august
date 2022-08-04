@@ -165,6 +165,8 @@
     }
     .popular-courses{
         display: grid;
+        width: 90%;
+        margin: 0 auto;
         grid-template-columns: 25% 70%;
         gap: 3rem;
         margin-top: 10rem;
@@ -179,7 +181,8 @@
         .accordion__item{
             background-color:#EBB38A;
             margin-bottom: 2px;
-            padding-bottom: 0;
+            padding: 0.5rem;
+            //padding-bottom: 0;
             &:nth-child(2){
                 .accordion__button p::after{
                     display: inline-block;

@@ -1,11 +1,16 @@
 import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom' 
+import { useLocation, useParams } from 'react-router-dom' 
 import CourseDetails from '../../../Components/CourseDetails'
 import InnerNavComponent from '../../../Components/InnerNavComponent'
 //import { c200h } from '../../../Constants/courses/c200hr'
 import { AllCourses } from '../Constants/courses'
+import { Helmet } from 'react-helmet'
+import metaDataObj from '../../../../../Constants/metaData.json'
 
 const SingleCourse = () => {
+
+  const location = useLocation()
+
   const { contentId } = useParams()
   const [pageDate, setPageData] = useState({})
   const [isLoading, setIsLoadding] = useState(false)
@@ -23,10 +28,16 @@ const SingleCourse = () => {
     menuItems: [],
   }
   return (
-    <div className='single-course'>
-      <InnerNavComponent abc={CareerNameBan}/>
-      {!isLoading && <CourseDetails pageDate={pageDate} />}
-    </div>
+    <>
+      { metaDataObj[location.pathname] && 
+    <Helmet
+      title={metaDataObj[location.pathname || '']?.title || ''}
+    /> }
+      <div className='single-course'>
+        <InnerNavComponent abc={CareerNameBan}/>
+        {!isLoading && <CourseDetails pageDate={pageDate} />}
+      </div>
+    </>
   )
 }
 

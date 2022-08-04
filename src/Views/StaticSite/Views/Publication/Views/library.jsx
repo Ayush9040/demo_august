@@ -3,8 +3,14 @@ import './style.scss'
 // import PublicationNav from '../../Components/PublicationNav'
 import baseDomain, { publicationAssests } from '../../../assets/images/imageAsset'
 import InnerNavComponent from '../../../Components/InnerNavComponent'
+import { Helmet } from 'react-helmet'
+import metaDataObj from '../../../../../Constants/metaData.json'
+import { useLocation } from 'react-router-dom'
 
 const library = () => {
+
+  const location = useLocation()
+
   const yogaLibrary = {
     title:'library',
     color:'white',
@@ -16,9 +22,9 @@ const library = () => {
         name:'Yoga and Total Health'
       },
       {
-        innerTitle:'yogasttav',
+        innerTitle:'yogasattva',
         url:'/yogasattva',
-        name:'Yogasattava'
+        name:'Yogasattva'
       },
       // {
       //   innerTitle:'books',
@@ -38,6 +44,10 @@ const library = () => {
     ]
   } 
   return (
+    <>      { metaDataObj[location.pathname] && 
+      <Helmet
+        title={metaDataObj[location.pathname || '']?.title || ''}
+      /> }
     <div className="library-container">
       <div className="background">
         {/* <PublicationNav title={'library'} /> */}
@@ -112,6 +122,7 @@ const library = () => {
         </div>
       </div>
     </div>
+    </>
   )
 }
 

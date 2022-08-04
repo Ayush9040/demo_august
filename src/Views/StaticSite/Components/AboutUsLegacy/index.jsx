@@ -172,9 +172,10 @@ const CommonBannerLegacy = ({
               !isOnlyBanner && 'banner-container-responsive'
             }`}
           >
-            <div className="memberImage">
+            <div className="memberImage" >
               <div
                 style={{
+                  // width:'100%',
                   backgroundSize: 'cover',
                   backgroundImage: `url(${founderData[activeFounder].img})`,
                   backgroundPosition: 'center',

@@ -4,8 +4,12 @@ import Carousel from 'react-gallery-carousel'
 import 'react-gallery-carousel/dist/index.css'
 import printMedia from '../../Constants/media'
 import './style.scss'
+import { Helmet } from 'react-helmet'
+import metaDataObj from '../../../../../../Constants/metaData.json'
+import { useLocation } from 'react-router-dom'
 
 const PrintMedia = () => {
+  const location = useLocation()
 
   const MediaNews = {
     title: 'news',
@@ -39,6 +43,10 @@ const PrintMedia = () => {
 
   return (
     <>
+      { metaDataObj[location.pathname] && 
+    <Helmet
+      title={metaDataObj[location.pathname || '']?.title || ''}
+    /> }
       <div className='print-media-container'>
         {/* <MediaNav title={'News'} /> */}
         <InnerNavComponent abc={MediaNews} />

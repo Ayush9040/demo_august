@@ -6,6 +6,8 @@ import Slider from 'react-slick'
 import { useLocation } from 'react-router-dom'
 import './style.scss'
 import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet'
+import metaDataObj from '../../../../../Constants/metaData.json'
 //import FacilitiesImg from '../../assets/images/facilities-02.png'
 import baseDomain, {
   background,
@@ -88,7 +90,11 @@ const Facilities = () => {
     menuColor: 'white',
     menuItems: [],
   }
-  return (
+  return (<>
+    { metaDataObj[location.pathname] && 
+    <Helmet
+      title={metaDataObj[location.pathname || '']?.title || ''}
+    /> }
     <div className="facilities-page-container">
       <CommonBanner
         isLeftContent={false}
@@ -676,6 +682,7 @@ const Facilities = () => {
         )}
       </div>
     </div>
+  </>
   )
 }
 

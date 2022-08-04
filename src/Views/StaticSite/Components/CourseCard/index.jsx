@@ -93,7 +93,7 @@ const CourseCard = ({
           <div style={dates.length!==0 ? { visibility:'visible' }:{ visibility:'hidden' }} ><SelectDropDown
             currentValue={selectDate}
             changeCurrentValue={setSetselectDate}
-            text={'Select Dates'}
+            text={'Select Date/Time'}
             isStyles={selectStyles}
             dates={dates}
           /></div>
@@ -140,7 +140,7 @@ const CourseCard = ({
         </div>
       </div>
       {error===1 && <small style={{ color: 'red', marginLeft: '0' }}>
-                        *Please Select Date!
+                        *Please Select Date/Time!
       </small>}
     </div>
   )

@@ -15,15 +15,18 @@
       h1 {
         display: flex;
         justify-content: space-between;
-        &::after {
-          display: inline-block;
-          content: '\25BC';
-          font-size: 2rem;
-          height: 10px;
-          width: 10px;
-          margin-top: 2rem;
+        // &::after {
+        //   display: inline-block;
+        //   content: '\25BC';
+        //   font-size: 2rem;
+        //   height: 10px;
+        //   width: 10px;
+        //   margin-top: 2rem;
+        //   color: var(--brick-red);
+        //   //transform: rotate(-90deg);
+        // }
+        &:hover{
           color: var(--brick-red);
-          //transform: rotate(-90deg);
         }
       }
     }
@@ -68,8 +71,16 @@
       display: block;
       &>.accordian_contanier{
         padding: 0;
-        .accordian_ans .accordian_ul{
-          font-size: 1.75rem!important;
+        .accordian_div{
+          .accordian_ques{
+            padding-left: 0;
+          }
+          .accordian_ans{ 
+            padding-left: 0;
+            .accordian_ul{
+            font-size: 1.75rem!important;
+          }
+        }
         }
       }
       .global-common-btn {

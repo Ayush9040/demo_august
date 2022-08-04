@@ -4,8 +4,14 @@ import benefits from '../../../assets/images/benifits.png'
 import baseDomain, { aboutAssets } from '../../../assets/images/imageAsset'
 import './styles.scss'
 import InnerNavComponent from '../../../Components/InnerNavComponent'
+import { Helmet } from 'react-helmet'
+import metaDataObj from '../../../../../Constants/metaData.json'
+import { useLocation } from 'react-router-dom'
 
 const AboutUs = () => {
+
+  const location = useLocation()
+
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
@@ -33,6 +39,10 @@ const AboutUs = () => {
   }
   return (
     <>
+      { metaDataObj[location.pathname] && 
+    <Helmet
+      title={metaDataObj[location.pathname || '']?.title || ''}
+    /> }
       <div className="Overview-container">
         <CommonBannerAboutUs
           isLeftContent={false}

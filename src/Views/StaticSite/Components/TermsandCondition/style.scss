@@ -1,7 +1,18 @@
 .terms-container{
  .banner-heading{
   margin: 2rem auto 0;
+  font-size: 30px;
+  font-weight: bold;
+  width: fit-content;
+  // position: relative;
+  // top: 1rem;
+  // left: 7.5rem;
  }
+ .bottom-line{
+  height: 4px;
+  border-radius: 50%;
+  background: linear-gradient(90deg, rgba(235, 179, 138, 0.5294117647), rgba(202, 70, 37, 0.9803921569), var(--brick-red), rgba(202, 70, 37, 0.9803921569), rgba(235, 179, 138, 0.5294117647));
+}
 }
 .terms-and-conditions{
   width: 90%;
@@ -10,12 +21,13 @@
   h2{
     font-size: 22px;
     font-weight: bolder;
-    margin-top: 7rem;
-
+    margin-top: 5rem;
+    margin-bottom: 1rem;
   }
   p{
     font-size: 18px;
     font-weight: 500;
+    margin-bottom: 2rem;
   }
   .t-c-notes{
     margin-top: 5rem;

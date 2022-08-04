@@ -133,7 +133,7 @@ const MegaMenu = ({ setNav }) => {
     ],
     VOLUNTEER: [
       { menu: 'Volunteer with us', link: '/volunteer' },
-      { menu: 'Values', link: '/volunteer/values' },
+      { menu: 'Values', link: '/values' },
     ],
   }
   return (
@@ -257,13 +257,13 @@ const MegaMenu = ({ setNav }) => {
                 <Link onClick={() => {setNav(false)}} to="/200-hrs-part-time-ttc-on-campus-english">
                   <li>Batch 2 - 2 Months TTC-On Campus-English</li>
                 </Link>
-                <Link  onClick={() => {setNav(false)}} to="/200-hrs-parttime-ttc-online-english">
+                <Link  onClick={() => {setNav(false)}} to="/200-hrs-part-time-ttc-online-english">
                   <li>Batch 3 - 2 Months TTC-Online-English</li>
                 </Link>
                 <Link  onClick={() => {setNav(false)}} to="/200-hrs-part-time-ttc-online">
                   <li>Batch 4 - 2 Months TTC-Online-Hindi</li>
                 </Link>
-                <Link  onClick={() => {setNav(false)}} to="/200-hrs-parttime-ttc-online-english-batch-5">
+                <Link  onClick={() => {setNav(false)}} to="/200-hrs-part-time-ttc-online-english-batch-5">
                   <li>Batch 5 - 2 Months TTC-Online-English</li>
                 </Link>
                 <Link  onClick={() => {setNav(false)}} to="/weekend-teacher-training-course">
@@ -356,10 +356,13 @@ const MegaMenu = ({ setNav }) => {
                   <Link onClick={() => {setNav(false)}}  to="/asana-regular-classes-on-campus-women">
                     <li>Asana Regular Classes for Women - On Campus</li>
                   </Link>
+                  <Link onClick={() => {setNav(false)}}  to="/asana-regular-classes-online">
+                    <li>Asana Regular Classes (Men & Women) - Online</li>
+                  </Link>
                   <Link onClick={() => {setNav(false)}}  to="/weekend-classes">
                     <li>Weekend Asana Classes (Men & Women) - On Campus</li>
                   </Link>
-                  <Link onClick={() => {setNav(false)}}  to="/weekend-asana-classes-online">
+                  <Link onClick={() => {setNav(false)}}  to="/weekend-classes-online">
                     <li>Weekend Asana Classes (Men & Women) - Online</li>
                   </Link>
                   <Link onClick={() => {setNav(false)}}  to="/childrens-regular-classes">
@@ -426,35 +429,38 @@ const MegaMenu = ({ setNav }) => {
           </>
         )}
         {menuItem !== 'COURSES' && (
-          <div className="single-menu">
-            <ul className="navigation-ul">
-              {subMenu[menuItem]?.map((item, i) => {
-                return (
-                  <Link  
-                    onClick={() => {
-                      setNav(false)
-                    }}
-                    to={`${item.link}`}
-                    key={i}
-                  >
-                    <li>
-                      {item.menu}
-                      <div
-                        style={{
-                          marginTop: '0',
-                          background:
+          <>
+            <div className="single-menu">
+              <ul className="navigation-ul">
+                {subMenu[menuItem]?.map((item, i) => {
+                  return (
+                    <Link  
+                      onClick={() => {
+                        setNav(false)
+                      }}
+                      to={`${item.link}`}
+                      key={i}
+                    >
+                      <li>
+                        {item.menu}
+                        <div
+                          style={{
+                            marginTop: '0',
+                            background:
                             'linear-gradient(90deg,#fff,#BC4F31,#BC4F31,#fff)',
-                        }}
-                        className="bottom-line"
-                      ></div>
-                    </li>
-                  </Link>
-                )
-              })}
-            </ul>
-          </div>
+                          }}
+                          className="bottom-line"
+                        ></div>
+                      </li>
+                    </Link>
+                  )
+                })}
+              </ul>
+              <div className="menu-filler-icon">{filler}</div>
+            </div>
+            <div className='close-menu-div' onClick={()=>{ setNav(false) }} ></div>
+          </>
         )}
-        <div className="menu-filler-icon">{filler}</div>
       </div>
     </div>
   )

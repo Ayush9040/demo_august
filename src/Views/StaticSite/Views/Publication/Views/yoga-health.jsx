@@ -7,8 +7,14 @@ import baseDomain, {
   publicationAssests,
 } from '../../../assets/images/imageAsset'
 import InnerNavComponent from '../../../Components/InnerNavComponent'
-import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet'
+import metaDataObj from '../../../../../Constants/metaData.json'
+import { useLocation } from 'react-router-dom'
+
 const YogaTotalHealth = () => {
+
+  const location = useLocation()
+
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
@@ -24,9 +30,9 @@ const YogaTotalHealth = () => {
         name:'Yoga and Total Health'
       },
       {
-        innerTitle:'yogasttav',
+        innerTitle:'yogasattva',
         url:'/yogasattva',
-        name:'Yogasattava'
+        name:'Yogasattva'
       },
       // {
       //   innerTitle:'books',
@@ -47,37 +53,42 @@ const YogaTotalHealth = () => {
   }
 
   return (
-    <div className="yoga-total-health">
-      <div className="background">
-        {/* <PublicationNav title={'yoga-health'} /> */}
-        <InnerNavComponent abc={yogaHealth} />
-      </div>
-      <div className="publication-intro">
-        <div className="mag-preview">
-          <img src={`${baseDomain}${publicationAssests.publicationAssests7}`}  alt='Yoga and Total Health'/>
+    <>
+      { metaDataObj[location.pathname] && 
+    <Helmet
+      title={metaDataObj[location.pathname || '']?.title || ''}
+    /> }
+      <div className="yoga-total-health">
+        <div className="background">
+          {/* <PublicationNav title={'yoga-health'} /> */}
+          <InnerNavComponent abc={yogaHealth} />
         </div>
-        <div className="mag-details">
-          <div className="journal">
-            <h2 className="jouranl-title">
+        <div className="publication-intro">
+          <div className="mag-preview">
+            <img src={`${baseDomain}${publicationAssests.publicationAssests7}`}  alt='Yoga and Total Health'/>
+          </div>
+          <div className="mag-details">
+            <div className="journal">
+              <h2 className="jouranl-title">
               Yoga and Total Health
-              <div className="bottom-line"></div>
-            </h2>
-            <p>
-              {`‘Yoga and Total Health’ is a monthly journal on the Yoga way of
+                <div className="bottom-line"></div>
+              </h2>
+              <p>
+                {`‘Yoga and Total Health’ is a monthly journal on the Yoga way of
               life; it was first issued in 1933. Edited and published by Smt
               Hansaji, the magazine includes inspiring write-ups by the late
               Shri Yogendraji, the late Dr. Jayadeva, Smt. Hansaji, news, and
               other interesting articles by sadhakas, sattvic recipes, humour,
               interesting pieces by Sadhakas, and more.`}
-            </p>
-          </div>
+              </p>
+            </div>
 
-          <div className="month-year">
-            <h2 className="jouranl-title">
+            <div className="month-year">
+              <h2 className="jouranl-title">
               October 2021
-              <div className="bottom-line"></div>
-            </h2>
-            <p>
+                <div className="bottom-line"></div>
+              </h2>
+              <p>
               Dive in to learn the wonderful insights through our various
               articles this month – Dr Jayadeva explains the hierarchy of duties
               to help one be mindful of how one invests their time, an utmost
@@ -88,30 +99,33 @@ const YogaTotalHealth = () => {
               Indian mythology and many more... We also celebrate Hansa ji’s
               birthday this month and pray for her good health and peace from
               the safety of our homes.
-            </p>
+              </p>
+            </div>
           </div>
         </div>
-      </div>
-      <div className="publication-sub">
-        <div className="break-icon">{breakIcon}</div>
-        <p>
-          {`To subscribe for ‘Yoga & Total Health Monthly Magazine’ click the
+        <div className="publication-sub">
+          <div className="break-icon">{breakIcon}</div>
+          <p>
+            {`To subscribe for ‘Yoga & Total Health Monthly Magazine’ click the
           button below.`}
-        </p>
-        <Link to="/#Newsletter">
-          <CommonBtn text={'Subscribe Now (E-Mag)'} />
-        </Link>
-        <CommonBtn text={'Hard Copy'} />
-        <p>
+          </p>
+          <a href='https://www.magzter.com/IN/The_Yoga_Institute/Yoga_and_Total_Health/Health/' rel='noreferrer' target="_blank" >
+            <CommonBtn text={'Subscribe Now (E-Mag)'} />
+          </a>
+          <div className='hard-copy' >
+            <CommonBtn text={'Hard Copy'} />
+          </div>
+          <p>
           For complaints or non-receipt of journal, write to –
           bookstore@theyogainstitute.org
-        </p>
-        <p>
+          </p>
+          <p>
           For Letters to the Editor, contributing articles and photographs,
           write to – yogatotalhealth@theyogainstitute.org
-        </p>
+          </p>
+        </div>
       </div>
-    </div>
+    </>
   )
 }
 

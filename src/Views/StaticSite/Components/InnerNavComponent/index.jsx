@@ -51,7 +51,7 @@ const InnerNavComponent = ({ abc }) => {
                 ? CommonHamburger
                 : Hamburger}
           </div>
-          <div className="main-logo">
+          <div className="main-logo" id={`${ abc.color }`} >
             <Link to="/">
               {abc.color === 'orange'
                 ? legacy1
