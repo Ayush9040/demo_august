@@ -55,6 +55,7 @@ const LocateUs = () => {
             >
               India
             </span>
+            {bold === 'India' && <div className="bottom_line2"></div>}
           </li>
           <li>
             <span
