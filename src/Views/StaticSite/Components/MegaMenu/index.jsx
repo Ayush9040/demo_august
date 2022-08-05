@@ -366,10 +366,10 @@ const MegaMenu = ({ setNav }) => {
                     <li>Weekend Asana Classes (Men & Women) - Online</li>
                   </Link>
                   <Link onClick={() => {setNav(false)}}  to="/childrens-regular-classes">
-                    <li>Children&apos;s Regular Clasees - On Campus</li>
+                    <li>Children&apos;s Regular Classes - On Campus</li>
                   </Link>
                   <Link onClick={() => {setNav(false)}}  to="/childrens-regular-classes-on-campus">
-                    <li>Children&apos;s Weekend Clasees - On Campus</li>
+                    <li>Children&apos;s Weekend Classes - On Campus</li>
                   </Link>
                   <Link onClick={() => {setNav(false)}}  to="/advanced-regular-yoga-classes">
                     <li>
@@ -418,7 +418,7 @@ const MegaMenu = ({ setNav }) => {
               <Link onClick={() => {setNav(false)}}  to='/corporate-workshops'>
                 <h3 style={{ marginTop:'0.75rem' }} >CORPORATE WORKSHOP</h3></Link>
               <Link onClick={() => {setNav(false)}}  to='/home-tuitions'>
-                <h3 style={{ marginTop:'0.75rem' }} >HOME TUTIONS</h3></Link>
+                <h3 style={{ marginTop:'0.75rem' }} >HOME TUITIONS</h3></Link>
               <div
                 className="filler"
                 style={{ position: 'relative', marginTop: '3rem' }}
