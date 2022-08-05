@@ -62,6 +62,7 @@ const Volunteer = () => {
           Heading="Volunteer with us"
           isOnlyBanner={false}
           innerNav={false}
+          description={'Volunteering is the ultimate solution if you want to return to society in a meaningful way. Come, be a part of The Yoga Institutes Volunteering Family by engaging yourself in social initiatives or in the Institute\'s activities.'}
           bannerImg={`${baseDomain}${background.volunteer}`}
           overlay="#80729BD4"
         >

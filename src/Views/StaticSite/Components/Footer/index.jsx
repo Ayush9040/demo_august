@@ -148,13 +148,11 @@ const Footer = () => {
                 <li>Privacy Policy</li>
               </Link>
 
-              <a
-                href='https://goo.gl/maps/bxH6SifrXjXAhteV7'
-                target='_blank'
-                rel='noreferrer'
+              <Link
+                to='/our-branches'
               >
                 <li>Locate us</li>
-              </a>
+              </Link>
             </ul>
           </div>
         </div>

@@ -61,6 +61,10 @@
         margin: 0;
         position: absolute;
         left: 0;
+        width: 100%;
+        height: 3px;
+        background: #bc4f31;
+        background: linear-gradient(90deg, #fff, #bc4f31, #bc4f31, #fff);
       }
       &:last-child {
         border: none;
