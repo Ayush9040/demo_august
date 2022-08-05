@@ -5,6 +5,7 @@ const path = require('path')
 const fs = require('fs')
 const metaDataObj = require('./src/Constants/metaData.json')
 const axios = require('axios')
+const { cmsBaseDomain } = require('./src/Constants/appSettings')
 //import { cmsBaseDomain } from './src/Constants/appSettings' 
 
 const PORT = 5500
@@ -25,7 +26,7 @@ const options = {
 
 const getBlogsMeta = async( slug )=>{
   try{
-    const res = await axios.get(`https://cms-dev-be.theyogainstituteonline.org/v1/post/${ slug }`)
+    const res = await axios.get(`${ cmsBaseDomain }/post/${ slug }`)
     let data =  res.data.data.meta
 
     let headers = {
