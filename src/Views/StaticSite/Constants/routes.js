@@ -94,6 +94,7 @@ const News = lazy(() => import('../Views/Media/Views/news'))
 const Careers = lazy(() => import('../Views/Careers/Views/careers'))
 const Gifting = lazy(() => import('../Views/Gifting/Views/gifting'))
 const DescisionComp = lazy(() => import('../Views/DecisionComponent'))
+const LocateUs = lazy(()=> import ('../Components/LocateUs'))
 const staticSiteRoutes = [
   //Home
   {
@@ -631,6 +632,14 @@ const staticSiteRoutes = [
     // 1. desComponent
     // 2. Switch case
     // render => loader => API call (Blog or course) => switch *Blog, *Course => loading stop
+  },
+  {
+    Component: LocateUs,
+    path: '/our-branches',
+    exact: true,
+    id: 'statisLocateUs',
+    routePath: '/our-branches',
+    name: 'LocateUs',
   },
   // {
   //   Component: BlogAnother,

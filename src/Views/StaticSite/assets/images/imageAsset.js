@@ -23,7 +23,7 @@ export const certificates = {
 export const socialInitiativeNew = {
   socialNew1: '/Home/Social%20Initiatives/new11/SocialAnnamBhrama.jpg',
   socialNew2: '/Home/Social%20Initiatives/new11/SocialPolice.jpg',
-  socialNew3: '/Home/Social%20Initiatives/new11/SocialBMCSchools.jpg',
+  socialNew3: '/SocialResponsibility/cover_image.jpg',
 }
 
 export const homeAssets = {
@@ -86,7 +86,7 @@ export const homeAssets = {
 
   // experience
 
-  homeAsset55: '/Home/Experience/shriramnathkovid.png',
+  homeAsset55: '/Home/Experience/shriramnathkovid.jpg',
   homeAsset56: '/Home/Experience/Modiji.jpg',
   homeAsset57: '/Home/Experience/Naiduji.jpg',
   homeAsset58: '/Home/Experience/AmitabhBachchan.jpg',
@@ -2475,5 +2475,17 @@ export const printMediaAssest = {
   printMediaAssest906:'/print_media/2022/Speaking-Tree.jpeg',
   printMediaAssest907:'/print_media/2022/The-Cambay-Post-21st-june-2022.jpeg',
   printMediaAssest908:'/print_media/2022/Twistarticle-20th-june-2022.jpeg'
+}
+
+export const locateAsset ={
+  India:'/Locate_us/Flag-India.jpg',
+  italy:'/Locate_us/italy.jpg',
+  thailand:'/Locate_us/thailand.jpg',
+  costaRica:'/Locate_us/costa_rica.jpg',
+  france:'/Locate_us/france.jpg',
+  urugauy:'/Locate_us/uruguay.png',
+  hongKong:'/Locate_us/hong_kong.jpg',
+  locate:'/Locate_us/locate.jpg'
+
 }
 export default baseDomain
