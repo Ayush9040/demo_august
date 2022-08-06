@@ -5845,7 +5845,7 @@ const camps = {
   6: {
     id: '',
     title: 'Karma Yoga',
-    key: 'karma-yoga',
+    key: 'karma-yoga-course',
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
     templateId: {
