@@ -5375,26 +5375,26 @@ const camps = {
           ],
         },
       },
-      {
-        type: 'u-list',
-        content: {
-          title: 'Offered with the program',
-          points: [
-            {
-              listItem: 'Booklet with guidelines  ',
-              subItems: [],
-            },
-            {
-              listItem: 'Wholesome Sattvik lunch',
-              subItems: [],
-            },
-            {
-              listItem: 'Healthy snacks  ',
-              subItems: [],
-            },
-          ],
-        },
-      },
+      // {
+      //   type: 'u-list',
+      //   content: {
+      //     title: 'Offered with the program',
+      //     points: [
+      //       {
+      //         listItem: 'Booklet with guidelines  ',
+      //         subItems: [],
+      //       },
+      //       {
+      //         listItem: 'Wholesome Sattvik lunch',
+      //         subItems: [],
+      //       },
+      //       {
+      //         listItem: 'Healthy snacks  ',
+      //         subItems: [],
+      //       },
+      //     ],
+      //   },
+      // },
       {
         type: 'paragraph',
         content: {
@@ -5515,26 +5515,26 @@ const camps = {
           ],
         },
       },
-      {
-        type: 'u-list',
-        content: {
-          title: 'Offered with the program',
-          points: [
-            {
-              listItem: 'Booklet with guidelines  ',
-              subItems: [],
-            },
-            {
-              listItem: 'Wholesome Sattvik lunch',
-              subItems: [],
-            },
-            {
-              listItem: 'Healthy snacks  ',
-              subItems: [],
-            },
-          ],
-        },
-      },
+      // {
+      //   type: 'u-list',
+      //   content: {
+      //     title: 'Offered with the program',
+      //     points: [
+      //       {
+      //         listItem: 'Booklet with guidelines  ',
+      //         subItems: [],
+      //       },
+      //       {
+      //         listItem: 'Wholesome Sattvik lunch',
+      //         subItems: [],
+      //       },
+      //       {
+      //         listItem: 'Healthy snacks  ',
+      //         subItems: [],
+      //       },
+      //     ],
+      //   },
+      // },
       {
         type: 'paragraph',
         content: {
@@ -5559,11 +5559,11 @@ const camps = {
                 'Campers are requested to come attired to comfortable loose fitting clothes. Shorts, capris, tank tops, low cut shirts, short and sleeve-less T-shirts are not permitted as per the Institute dress code',
               subItems: [],
             },
-            {
-              listItem:
-                'Campers are requested to have their breakfast and medication (as prescribed by their doctor). ',
-              subItems: [],
-            },
+            // {
+            //   listItem:
+            //     'Campers are requested to have their breakfast and medication (as prescribed by their doctor). ',
+            //   subItems: [],
+            // },
           ],
         },
       },
@@ -5651,26 +5651,26 @@ const camps = {
           ],
         },
       },
-      {
-        type: 'u-list',
-        content: {
-          title: 'Offered with the program',
-          points: [
-            {
-              listItem: 'Booklet with guidelines  ',
-              subItems: [],
-            },
-            {
-              listItem: 'Wholesome Sattvik lunch',
-              subItems: [],
-            },
-            {
-              listItem: 'Healthy snacks  ',
-              subItems: [],
-            },
-          ],
-        },
-      },
+      // {
+      //   type: 'u-list',
+      //   content: {
+      //     title: 'Offered with the program',
+      //     points: [
+      //       {
+      //         listItem: 'Booklet with guidelines  ',
+      //         subItems: [],
+      //       },
+      //       {
+      //         listItem: 'Wholesome Sattvik lunch',
+      //         subItems: [],
+      //       },
+      //       {
+      //         listItem: 'Healthy snacks  ',
+      //         subItems: [],
+      //       },
+      //     ],
+      //   },
+      // },
       {
         type: 'paragraph',
         content: {
@@ -5695,11 +5695,11 @@ const camps = {
                 'Campers are requested to come attired to comfortable loose fitting clothes. Shorts, capris, tank tops, low cut shirts, short and sleeveless T-shirts are not permitted as per the Institute dress code.',
               subItems: [],
             },
-            {
-              listItem:
-                'Campers are requested to have their breakfast and medication (as prescribed by their doctor). ',
-              subItems: [],
-            },
+            // {
+            //   listItem:
+            //     'Campers are requested to have their breakfast and medication (as prescribed by their doctor). ',
+            //   subItems: [],
+            // },
           ],
         },
       },
@@ -5732,11 +5732,7 @@ const camps = {
       'Specific pranayama, and relaxation techniques to enhance your wellbeing',
     image: `${baseDomain}${courseAssets.courseAsset13}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset106}`,
-    dates: [
-      '7th August 2022',
-      '2nd October 2022',
-      '4th December 2022',
-    ],
+    dates: [ ],
     online: true,
     onCampus: true,
     nonResidential: false,
@@ -5791,26 +5787,26 @@ const camps = {
           ],
         },
       },
-      {
-        type: 'u-list',
-        content: {
-          title: 'Offered with the program',
-          points: [
-            {
-              listItem: 'Booklet with guidelines  ',
-              subItems: [],
-            },
-            {
-              listItem: 'Wholesome Sattvik lunch',
-              subItems: [],
-            },
-            {
-              listItem: 'Healthy snacks  ',
-              subItems: [],
-            },
-          ],
-        },
-      },
+      // {
+      //   type: 'u-list',
+      //   content: {
+      //     title: 'Offered with the program',
+      //     points: [
+      //       {
+      //         listItem: 'Booklet with guidelines  ',
+      //         subItems: [],
+      //       },
+      //       {
+      //         listItem: 'Wholesome Sattvik lunch',
+      //         subItems: [],
+      //       },
+      //       {
+      //         listItem: 'Healthy snacks  ',
+      //         subItems: [],
+      //       },
+      //     ],
+      //   },
+      // },
       {
         type: 'paragraph',
         content: {
@@ -5835,11 +5831,11 @@ const camps = {
                 'Campers are requested to come attired to comfortable loose fitting clothes. Shorts, capris, tank tops, low cut shirts, short and sleeveless T-shirts are not permitted as per the Institute dress code.',
               subItems: [],
             },
-            {
-              listItem:
-                'Campers are requested to have their breakfast and medication (as prescribed by their doctor). ',
-              subItems: [],
-            },
+            // {
+            //   listItem:
+            //     'Campers are requested to have their breakfast and medication (as prescribed by their doctor). ',
+            //   subItems: [],
+            // },
           ],
         },
       },
@@ -5871,11 +5867,7 @@ const camps = {
     metaDescription: 'Diet guidelines to manage your health',
     image: `${baseDomain}${courseAssets.courseAsset10}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset10}`,
-    dates: [
-      '7th August 2022',
-      '2nd October 2022',
-      '4th December 2022',
-    ],
+    dates: [],
     online: true,
     onCampus: true,
     nonResidential: false,
@@ -5935,26 +5927,26 @@ const camps = {
           ],
         },
       },
-      {
-        type: 'u-list',
-        content: {
-          title: 'Offered with the program',
-          points: [
-            {
-              listItem: 'Booklet with guidelines  ',
-              subItems: [],
-            },
-            {
-              listItem: 'Wholesome Sattvik lunch',
-              subItems: [],
-            },
-            {
-              listItem: 'Healthy snacks  ',
-              subItems: [],
-            },
-          ],
-        },
-      },
+      // {
+      //   type: 'u-list',
+      //   content: {
+      //     title: 'Offered with the program',
+      //     points: [
+      //       {
+      //         listItem: 'Booklet with guidelines  ',
+      //         subItems: [],
+      //       },
+      //       {
+      //         listItem: 'Wholesome Sattvik lunch',
+      //         subItems: [],
+      //       },
+      //       {
+      //         listItem: 'Healthy snacks  ',
+      //         subItems: [],
+      //       },
+      //     ],
+      //   },
+      // },
       {
         type: 'paragraph',
         content: {
@@ -5979,11 +5971,11 @@ const camps = {
                 'Campers are requested to come attired to comfortable loose fitting clothes. Shorts, capris, tank tops, low cut shirts, short and sleeveless T-shirts are not permitted as per the Institute dress code.',
               subItems: [],
             },
-            {
-              listItem:
-                'Campers are requested to have their breakfast and medication (as prescribed by their doctor). ',
-              subItems: [],
-            },
+            // {
+            //   listItem:
+            //     'Campers are requested to have their breakfast and medication (as prescribed by their doctor). ',
+            //   subItems: [],
+            // },
           ],
         },
       },
@@ -6072,26 +6064,26 @@ const camps = {
           ],
         },
       },
-      {
-        type: 'u-list',
-        content: {
-          title: 'Offered with the program',
-          points: [
-            {
-              listItem: 'Booklet with guidelines  ',
-              subItems: [],
-            },
-            {
-              listItem: 'Wholesome Sattvik lunch',
-              subItems: [],
-            },
-            {
-              listItem: 'Healthy snacks  ',
-              subItems: [],
-            },
-          ],
-        },
-      },
+      // {
+      //   type: 'u-list',
+      //   content: {
+      //     title: 'Offered with the program',
+      //     points: [
+      //       {
+      //         listItem: 'Booklet with guidelines  ',
+      //         subItems: [],
+      //       },
+      //       {
+      //         listItem: 'Wholesome Sattvik lunch',
+      //         subItems: [],
+      //       },
+      //       {
+      //         listItem: 'Healthy snacks  ',
+      //         subItems: [],
+      //       },
+      //     ],
+      //   },
+      // },
       {
         type: 'paragraph',
         content: {
@@ -6116,11 +6108,11 @@ const camps = {
                 'Campers are requested to come attired to comfortable loose fitting clothes. Shorts, capris, tank tops, low cut shirts, short and sleeveless T-shirts are not permitted as per the Institute dress code.',
               subItems: [],
             },
-            {
-              listItem:
-                'Campers are requested to have their breakfast and medication (as prescribed by their doctor). ',
-              subItems: [],
-            },
+            // {
+            //   listItem:
+            //     'Campers are requested to have their breakfast and medication (as prescribed by their doctor). ',
+            //   subItems: [],
+            // },
           ],
         },
       },
@@ -6209,26 +6201,26 @@ const camps = {
           ],
         },
       },
-      {
-        type: 'u-list',
-        content: {
-          title: 'Offered with the program',
-          points: [
-            {
-              listItem: 'Booklet with guidelines  ',
-              subItems: [],
-            },
-            {
-              listItem: 'Wholesome Sattvik lunch',
-              subItems: [],
-            },
-            {
-              listItem: 'Healthy snacks  ',
-              subItems: [],
-            },
-          ],
-        },
-      },
+      // {
+      //   type: 'u-list',
+      //   content: {
+      //     title: 'Offered with the program',
+      //     points: [
+      //       {
+      //         listItem: 'Booklet with guidelines  ',
+      //         subItems: [],
+      //       },
+      //       {
+      //         listItem: 'Wholesome Sattvik lunch',
+      //         subItems: [],
+      //       },
+      //       {
+      //         listItem: 'Healthy snacks  ',
+      //         subItems: [],
+      //       },
+      //     ],
+      //   },
+      // },
       {
         type: 'paragraph',
         content: {
@@ -6253,11 +6245,11 @@ const camps = {
                 'Campers are requested to come attired to comfortable loose fitting clothes. Shorts, capris, tank tops, low cut shirts, short and sleeveless T-shirts are not permitted as per the Institute dress code.',
               subItems: [],
             },
-            {
-              listItem:
-                'Campers are requested to have their breakfast and medication (as prescribed by their doctor). ',
-              subItems: [],
-            },
+            // {
+            //   listItem:
+            //     'Campers are requested to have their breakfast and medication (as prescribed by their doctor). ',
+            //   subItems: [],
+            // },
           ],
         },
       },
@@ -6350,26 +6342,26 @@ const camps = {
           ],
         },
       },
-      {
-        type: 'u-list',
-        content: {
-          title: 'Offered with the program',
-          points: [
-            {
-              listItem: 'Booklet with guidelines  ',
-              subItems: [],
-            },
-            {
-              listItem: 'Wholesome Sattvik lunch',
-              subItems: [],
-            },
-            {
-              listItem: 'Healthy snacks  ',
-              subItems: [],
-            },
-          ],
-        },
-      },
+      // {
+      //   type: 'u-list',
+      //   content: {
+      //     title: 'Offered with the program',
+      //     points: [
+      //       {
+      //         listItem: 'Booklet with guidelines  ',
+      //         subItems: [],
+      //       },
+      //       {
+      //         listItem: 'Wholesome Sattvik lunch',
+      //         subItems: [],
+      //       },
+      //       {
+      //         listItem: 'Healthy snacks  ',
+      //         subItems: [],
+      //       },
+      //     ],
+      //   },
+      // },
       {
         type: 'paragraph',
         content: {
@@ -6394,11 +6386,11 @@ const camps = {
                 'Campers are requested to come attired to comfortable loose fitting clothes. Shorts, capris, tank tops, low cut shirts, short and sleeveless T-shirts are not permitted as per the Institute dress code.',
               subItems: [],
             },
-            {
-              listItem:
-                'Campers are requested to have their breakfast and medication (as prescribed by their doctor). ',
-              subItems: [],
-            },
+            // {
+            //   listItem:
+            //     'Campers are requested to have their breakfast and medication (as prescribed by their doctor). ',
+            //   subItems: [],
+            // },
           ],
         },
       },
@@ -6490,26 +6482,26 @@ const camps = {
           ],
         },
       },
-      {
-        type: 'u-list',
-        content: {
-          title: 'Offered with the program',
-          points: [
-            {
-              listItem: 'Booklet with guidelines  ',
-              subItems: [],
-            },
-            {
-              listItem: 'Wholesome Sattvik lunch',
-              subItems: [],
-            },
-            {
-              listItem: 'Healthy snacks  ',
-              subItems: [],
-            },
-          ],
-        },
-      },
+      // {
+      //   type: 'u-list',
+      //   content: {
+      //     title: 'Offered with the program',
+      //     points: [
+      //       {
+      //         listItem: 'Booklet with guidelines  ',
+      //         subItems: [],
+      //       },
+      //       {
+      //         listItem: 'Wholesome Sattvik lunch',
+      //         subItems: [],
+      //       },
+      //       {
+      //         listItem: 'Healthy snacks  ',
+      //         subItems: [],
+      //       },
+      //     ],
+      //   },
+      // },
       {
         type: 'paragraph',
         content: {
@@ -6534,11 +6526,11 @@ const camps = {
                 'Campers are requested to come attired to comfortable loose fitting clothes. Shorts, capris, tank tops, low cut shirts, short and sleeveless T-shirts are not permitted as per the Institute dress code.',
               subItems: [],
             },
-            {
-              listItem:
-                'Campers are requested to have their breakfast and medication (as prescribed by their doctor). ',
-              subItems: [],
-            },
+            // {
+            //   listItem:
+            //     'Campers are requested to have their breakfast and medication (as prescribed by their doctor). ',
+            //   subItems: [],
+            // },
           ],
         },
       },
@@ -6625,26 +6617,26 @@ const camps = {
           ],
         },
       },
-      {
-        type: 'u-list',
-        content: {
-          title: 'Offered with the program',
-          points: [
-            {
-              listItem: 'Booklet with guidelines  ',
-              subItems: [],
-            },
-            {
-              listItem: 'Wholesome Sattvik lunch',
-              subItems: [],
-            },
-            {
-              listItem: 'Healthy snacks  ',
-              subItems: [],
-            },
-          ],
-        },
-      },
+      // {
+      //   type: 'u-list',
+      //   content: {
+      //     title: 'Offered with the program',
+      //     points: [
+      //       {
+      //         listItem: 'Booklet with guidelines  ',
+      //         subItems: [],
+      //       },
+      //       {
+      //         listItem: 'Wholesome Sattvik lunch',
+      //         subItems: [],
+      //       },
+      //       {
+      //         listItem: 'Healthy snacks  ',
+      //         subItems: [],
+      //       },
+      //     ],
+      //   },
+      // },
       {
         type: 'paragraph',
         content: {
@@ -6669,11 +6661,11 @@ const camps = {
                 'Campers are requested to come attired to comfortable loose fitting clothes. Shorts, capris, tank tops, low cut shirts, short and sleeveless T-shirts are not permitted as per the Institute dress code.',
               subItems: [],
             },
-            {
-              listItem:
-                'Campers are requested to have their breakfast and medication (as prescribed by their doctor). ',
-              subItems: [],
-            },
+            // {
+            //   listItem:
+            //     'Campers are requested to have their breakfast and medication (as prescribed by their doctor). ',
+            //   subItems: [],
+            // },
           ],
         },
       },
@@ -6762,26 +6754,26 @@ const camps = {
           ],
         },
       },
-      {
-        type: 'u-list',
-        content: {
-          title: 'Offered with the program',
-          points: [
-            {
-              listItem: 'Booklet with guidelines  ',
-              subItems: [],
-            },
-            {
-              listItem: 'Wholesome Sattvik lunch',
-              subItems: [],
-            },
-            {
-              listItem: 'Healthy snacks  ',
-              subItems: [],
-            },
-          ],
-        },
-      },
+      // {
+      //   type: 'u-list',
+      //   content: {
+      //     title: 'Offered with the program',
+      //     points: [
+      //       {
+      //         listItem: 'Booklet with guidelines  ',
+      //         subItems: [],
+      //       },
+      //       {
+      //         listItem: 'Wholesome Sattvik lunch',
+      //         subItems: [],
+      //       },
+      //       {
+      //         listItem: 'Healthy snacks  ',
+      //         subItems: [],
+      //       },
+      //     ],
+      //   },
+      // },
       {
         type: 'paragraph',
         content: {
@@ -6806,11 +6798,11 @@ const camps = {
                 'Campers are requested to come attired to comfortable loose fitting clothes. Shorts, capris, tank tops, low cut shirts, short and sleeveless T-shirts are not permitted as per the Institute dress code.',
               subItems: [],
             },
-            {
-              listItem:
-                'Campers are requested to have their breakfast and medication (as prescribed by their doctor). ',
-              subItems: [],
-            },
+            // {
+            //   listItem:
+            //     'Campers are requested to have their breakfast and medication (as prescribed by their doctor). ',
+            //   subItems: [],
+            // },
           ],
         },
       },
@@ -6902,26 +6894,26 @@ const camps = {
           ],
         },
       },
-      {
-        type: 'u-list',
-        content: {
-          title: 'Offered with the program',
-          points: [
-            {
-              listItem: 'Booklet with guidelines  ',
-              subItems: [],
-            },
-            {
-              listItem: 'Wholesome Sattvik lunch',
-              subItems: [],
-            },
-            {
-              listItem: 'Healthy snacks  ',
-              subItems: [],
-            },
-          ],
-        },
-      },
+      // {
+      //   type: 'u-list',
+      //   content: {
+      //     title: 'Offered with the program',
+      //     points: [
+      //       {
+      //         listItem: 'Booklet with guidelines  ',
+      //         subItems: [],
+      //       },
+      //       {
+      //         listItem: 'Wholesome Sattvik lunch',
+      //         subItems: [],
+      //       },
+      //       {
+      //         listItem: 'Healthy snacks  ',
+      //         subItems: [],
+      //       },
+      //     ],
+      //   },
+      // },
       {
         type: 'paragraph',
         content: {
@@ -6946,11 +6938,11 @@ const camps = {
                 'Campers are requested to come attired to comfortable loose fitting clothes. Shorts, capris, tank tops, low cut shirts, short and sleeveless T-shirts are not permitted as per the Institute dress code.',
               subItems: [],
             },
-            {
-              listItem:
-                'Campers are requested to have their breakfast and medication (as prescribed by their doctor). ',
-              subItems: [],
-            },
+            // {
+            //   listItem:
+            //     'Campers are requested to have their breakfast and medication (as prescribed by their doctor). ',
+            //   subItems: [],
+            // },
           ],
         },
       },
@@ -7041,26 +7033,26 @@ const camps = {
           ],
         },
       },
-      {
-        type: 'u-list',
-        content: {
-          title: 'Offered with the program',
-          points: [
-            {
-              listItem: 'Booklet with guidelines  ',
-              subItems: [],
-            },
-            {
-              listItem: 'Wholesome Sattvik lunch',
-              subItems: [],
-            },
-            {
-              listItem: 'Healthy snacks  ',
-              subItems: [],
-            },
-          ],
-        },
-      },
+      // {
+      //   type: 'u-list',
+      //   content: {
+      //     title: 'Offered with the program',
+      //     points: [
+      //       {
+      //         listItem: 'Booklet with guidelines  ',
+      //         subItems: [],
+      //       },
+      //       {
+      //         listItem: 'Wholesome Sattvik lunch',
+      //         subItems: [],
+      //       },
+      //       {
+      //         listItem: 'Healthy snacks  ',
+      //         subItems: [],
+      //       },
+      //     ],
+      //   },
+      // },
       {
         type: 'paragraph',
         content: {
@@ -7085,11 +7077,11 @@ const camps = {
                 'Campers are requested to come attired to comfortable loose fitting clothes. Shorts, capris, tank tops, low cut shirts, short and sleeveless T-shirts are not permitted as per the Institute dress code.',
               subItems: [],
             },
-            {
-              listItem:
-                'Campers are requested to have their breakfast and medication (as prescribed by their doctor). ',
-              subItems: [],
-            },
+            // {
+            //   listItem:
+            //     'Campers are requested to have their breakfast and medication (as prescribed by their doctor). ',
+            //   subItems: [],
+            // },
           ],
         },
       },
@@ -7186,26 +7178,26 @@ const camps = {
           ],
         },
       },
-      {
-        type: 'u-list',
-        content: {
-          title: 'Offered with the program',
-          points: [
-            {
-              listItem: 'Booklet with guidelines  ',
-              subItems: [],
-            },
-            {
-              listItem: 'Wholesome Sattvik lunch',
-              subItems: [],
-            },
-            {
-              listItem: 'Healthy snacks  ',
-              subItems: [],
-            },
-          ],
-        },
-      },
+      // {
+      //   type: 'u-list',
+      //   content: {
+      //     title: 'Offered with the program',
+      //     points: [
+      //       {
+      //         listItem: 'Booklet with guidelines  ',
+      //         subItems: [],
+      //       },
+      //       {
+      //         listItem: 'Wholesome Sattvik lunch',
+      //         subItems: [],
+      //       },
+      //       {
+      //         listItem: 'Healthy snacks  ',
+      //         subItems: [],
+      //       },
+      //     ],
+      //   },
+      // },
       {
         type: 'paragraph',
         content: {
@@ -7230,11 +7222,11 @@ const camps = {
                 'Campers are requested to come attired to comfortable loose fitting clothes. Shorts, capris, tank tops, low cut shirts, short and sleeveless T-shirts are not permitted as per the Institute dress code.',
               subItems: [],
             },
-            {
-              listItem:
-                'Campers are requested to have their breakfast and medication (as prescribed by their doctor). ',
-              subItems: [],
-            },
+            // {
+            //   listItem:
+            //     'Campers are requested to have their breakfast and medication (as prescribed by their doctor). ',
+            //   subItems: [],
+            // },
           ],
         },
       },
@@ -7325,26 +7317,26 @@ const camps = {
           ],
         },
       },
-      {
-        type: 'u-list',
-        content: {
-          title: 'Offered with the program',
-          points: [
-            {
-              listItem: 'Booklet with guidelines  ',
-              subItems: [],
-            },
-            {
-              listItem: 'Wholesome Sattvik lunch',
-              subItems: [],
-            },
-            {
-              listItem: 'Healthy snacks  ',
-              subItems: [],
-            },
-          ],
-        },
-      },
+      // {
+      //   type: 'u-list',
+      //   content: {
+      //     title: 'Offered with the program',
+      //     points: [
+      //       {
+      //         listItem: 'Booklet with guidelines  ',
+      //         subItems: [],
+      //       },
+      //       {
+      //         listItem: 'Wholesome Sattvik lunch',
+      //         subItems: [],
+      //       },
+      //       {
+      //         listItem: 'Healthy snacks  ',
+      //         subItems: [],
+      //       },
+      //     ],
+      //   },
+      // },
       {
         type: 'paragraph',
         content: {
@@ -7369,11 +7361,11 @@ const camps = {
                 'Campers are requested to come attired to comfortable loose fitting clothes. Shorts, capris, tank tops, low cut shirts, short and sleeveless T-shirts are not permitted as per the Institute dress code.',
               subItems: [],
             },
-            {
-              listItem:
-                'Campers are requested to have their breakfast and medication (as prescribed by their doctor). ',
-              subItems: [],
-            },
+            // {
+            //   listItem:
+            //     'Campers are requested to have their breakfast and medication (as prescribed by their doctor). ',
+            //   subItems: [],
+            // },
           ],
         },
       },
