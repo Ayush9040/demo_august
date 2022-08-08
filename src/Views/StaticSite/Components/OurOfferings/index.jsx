@@ -2,7 +2,10 @@ import React, { useState, useRef } from 'react'
 import Heading from '../Heading'
 import './style.scss'
 import { courses, filler } from '../../assets/icons/icon'
-import baseDomain, { courseAssets, homeAssets } from '../../assets/images/imageAsset'
+import baseDomain, {
+  courseAssets,
+  homeAssets,
+} from '../../assets/images/imageAsset'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import Slider from 'react-slick'
@@ -12,21 +15,18 @@ import useOnScreen from '../../../../helpers/InterSection'
 import { useEffect } from 'react'
 
 const OurOfferings = () => {
-
   const offerinRef = useRef(null)
   const sliderRef = useRef(null)
-  const isInteracting = useOnScreen(offerinRef)
-
+  const isInteracting = useOnScreen(offerinRef, { threshold: 0.5 })
 
   useEffect(() => {
-    if(!sliderRef.current) return
-    if (isInteracting)
-      sliderRef.current.slickPlay()
-    else
+    if (!sliderRef.current) return
+    if (isInteracting) sliderRef.current.slickPlay()
+    else {
       sliderRef.current.slickPause()
-
+      sliderRef.current.slickGoTo(0)
+    }
   }, [isInteracting])
-
 
   // let vHeight = (window.innerHeight-400 || document.documentElement.clientHeight-400)
   // const animateCarousel = () => {
@@ -69,7 +69,7 @@ const OurOfferings = () => {
         'A powerful and life-changing experience, this is an introductory course to yoga theory and practice, within the premises of The Yoga Institute.',
       redirect: '/7-days-camp',
       timeline: '7 days',
-      price: '8000'
+      price: '8000',
     },
     {
       name: '21-Day Better Living Course',
@@ -77,7 +77,7 @@ const OurOfferings = () => {
         'This popular course aims to integrate yoga philosophy and healthy routines in everyday life. We give you tools and techniques to help you manage your studies, home life, work life and other activities.',
       redirect: '/21-days-better-living-course',
       timeline: '21 days',
-      price: '2100'
+      price: '2100',
     },
     {
       name: 'Regular Asana Classes',
@@ -85,7 +85,7 @@ const OurOfferings = () => {
         'Daily one hour asana classes for people of all age groups to help them bring balance and serenity into their lives.',
       redirect: '/asana-regular-classes-online',
       timeline: 'Any Day',
-      price: '1000'
+      price: '1000',
     },
     {
       name: 'Children’s Regular Classes',
@@ -93,7 +93,7 @@ const OurOfferings = () => {
         'Especially designed for children, the asana class helps them balance their academics along with their physical and mental health.',
       redirect: '/childrens-regular-classes-on-campus',
       timeline: 'Any Day',
-      price: '1000'
+      price: '1000',
     },
     {
       name: '7-month TTC',
@@ -101,7 +101,7 @@ const OurOfferings = () => {
         'This course provides an in-depth study of classical ashtanga yoga which teaches core yoga philosophy and technology. Participants can become internationally certified yoga trainers on completing the course.',
       redirect: '/seven-month-ttc',
       timeline: '7-month',
-      price: '50,000'
+      price: '50,000',
     },
   ]
   const [smallDescription, setSmallDescription] = useState(
@@ -111,7 +111,6 @@ const OurOfferings = () => {
   const [redirect, setRedirect] = useState(carouselData[0].redirect)
   const [timeline, setTimeline] = useState(carouselData[0].timeline)
   const [price, setPrice] = useState(carouselData[0].price)
-
 
   let settings = {
     dots: true,
@@ -132,17 +131,18 @@ const OurOfferings = () => {
         },
       },
     ],
-    afterChange: index => {
-      setSmallDescription(carouselData[index].description.substring(0, 110) + '...')
+    afterChange: (index) => {
+      setSmallDescription(
+        carouselData[index].description.substring(0, 110) + '...'
+      )
       setRedirect(carouselData[index].redirect)
       setTimeline(carouselData[index].timeline)
       setPrice(carouselData[index].price)
     },
   }
 
-
   return (
-    <div className="our-offerings-section" >
+    <div className="our-offerings-section">
       <div className="our-offerings-container offering-padding">
         <div className="offering-overview">
           <Heading
@@ -150,24 +150,32 @@ const OurOfferings = () => {
             smallText="Our Signature"
             largeText="Offerings"
           />
-          <div className="offering-text" >
+          <div className="offering-text">
             <p>
               The unique offerings of The Yoga Institute have impacted and
               inspired millions of lives across the globe. Scroll through some
               of our signature offerings.
             </p>
           </div>
-          <Link to="/courses" >
+          <Link to="/courses">
             <CommonBtn text={'Explore More'} />
           </Link>
         </div>
-        <div className="our-offerings-carousel" ref={offerinRef} >
-          <Slider {...settings} ref={slider => { sliderRef.current = slider }} >
-            <div className="course-offered" dataSettings={JSON.stringify(settings)}>
+        <div className="our-offerings-carousel" ref={offerinRef}>
+          <Slider
+            {...settings}
+            ref={(slider) => {
+              sliderRef.current = slider
+            }}
+          >
+            <div
+              className="course-offered"
+              dataSettings={JSON.stringify(settings)}
+            >
               <img
                 src={`${baseDomain}${homeAssets.homeAsset7}`}
                 placeholder="none"
-                alt='7days-camp'
+                alt="7days-camp"
               />
               <h4>7-day Yoga Health Camp</h4>
             </div>
@@ -175,7 +183,7 @@ const OurOfferings = () => {
               <img
                 src={`${baseDomain}${homeAssets.homeAsset8}`}
                 placeholder="none"
-                alt='21days'
+                alt="21days"
               />
               <h4>21-Day Better Living Course</h4>
             </div>
@@ -183,7 +191,7 @@ const OurOfferings = () => {
               <img
                 src={`${baseDomain}${courseAssets.courseAsset115}`}
                 placeholder="none"
-                alt='200hrsTTC'
+                alt="200hrsTTC"
               />
               <h4>Regular Asana Classes</h4>
             </div>
@@ -191,7 +199,7 @@ const OurOfferings = () => {
               <img
                 src={`${baseDomain}${homeAssets.homeAsset10}`}
                 placeholder="none"
-                alt='Children-camp'
+                alt="Children-camp"
               />
               <h4>Children’s Regular Classes</h4>
             </div>
@@ -199,7 +207,7 @@ const OurOfferings = () => {
               <img
                 src={`${baseDomain}${homeAssets.homeAsset11}`}
                 placeholder="none"
-                alt='900hrs'
+                alt="900hrs"
               />
               <h4>7-month TTC</h4>
             </div>
@@ -208,8 +216,12 @@ const OurOfferings = () => {
             <div className="course-content-container">
               <p>{smallDescription}</p>
               <div className="actions">
-                <h3>{timeline}|₹{price}</h3>
-                <h3><Link to={redirect} >Explore &#62;&#62;</Link></h3>
+                <h3>
+                  {timeline}|₹{price}
+                </h3>
+                <h3>
+                  <Link to={redirect}>Explore &#62;&#62;</Link>
+                </h3>
               </div>
             </div>
           </div>
