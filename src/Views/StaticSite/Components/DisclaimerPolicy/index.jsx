@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import './style.scss'
 //import baseDomain, { homeAssets } from '../../assets/images/imageAsset'
 import axios from 'axios'
@@ -24,6 +24,13 @@ const DisclaimerPolicy = ({
     signature: null,
     fullName: '',
   })
+
+  useEffect(() => {
+    const script = document.createElement('script')
+    script.src = 'https://checkout.razorpay.com/v1/checkout.js'
+    script.async = true
+    document.body.appendChild(script)
+  }, [])
 
   const [mail,setmail]=useState(templateKey?.templateOnline)
   
