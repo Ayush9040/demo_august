@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import './style.scss'
 import baseDomain, {
   publicationAssests,
-  homeAssets
+  homeAssets,
 } from '../../../assets/images/imageAsset'
 import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
@@ -15,7 +15,6 @@ import metaDataObj from '../../../../../Constants/metaData.json'
 import { useLocation } from 'react-router-dom'
 
 const Yogasattva = () => {
-
   const location = useLocation()
 
   let setting2 = {
@@ -62,252 +61,251 @@ const Yogasattva = () => {
   const images = {
     2017: [
       {
-        pdf: 'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/books/2017/yogasattva-july2017.pdf',
-        img: `${baseDomain}${publicationAssests.ythAssets25}`,
+        pdf: `${baseDomain}/books/2017/yogasattva-dec-2017.pdf`,
+        img: `${baseDomain}${publicationAssests.ythAssets30}`,
       },
       {
-        pdf: 'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/books/2017/yogasattva-sep-2017.pdf',
-        img: `${baseDomain}${publicationAssests.ythAssets26}`,
-      },
-      {
-        pdf: 'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/books/2017/yogasattva-aug%202017.pdf',
-        img: `${baseDomain}${publicationAssests.ythAssets27}`,
-      },
-      {
-        pdf: 'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/books/2017/yogasattva-oct-2017.pdf',
-        img: `${baseDomain}${publicationAssests.ythAssets28}`,
-      },
-      {
-        pdf: 'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/books/2017/yogasattva-nov-2017.pdf',
+        pdf: `${baseDomain}/books/2017/yogasattva-nov-2017.pdf`,
         img: `${baseDomain}${publicationAssests.ythAssets29}`,
       },
       {
-        pdf: 'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/books/2017/yogasattva-dec-2017.pdf',
-        img: `${baseDomain}${publicationAssests.ythAssets30}`,
+        pdf: `${baseDomain}/books/2017/yogasattva-oct-2017.pdf`,
+        img: `${baseDomain}${publicationAssests.ythAssets28}`,
       },
-      // {
-      //   pdf:'',
-      //   img:`${baseDomain}${publicationAssests.ythAssets31}`,
-      // }
+      {
+        pdf: `${baseDomain}/books/2017/yogasattva-sep-2017.pdf`,
+        img: `${baseDomain}${publicationAssests.ythAssets26}`,
+      },
+
+      {
+        pdf: `${baseDomain}/books/2017/yogasattva-aug%202017.pdf`,
+        img: `${baseDomain}${publicationAssests.ythAssets27}`,
+      },
+      {
+        pdf: `${baseDomain}/books/2017/yogasattva-july2017.pdf`,
+        img: `${baseDomain}${publicationAssests.ythAssets25}`,
+      },
     ],
     2018: [
       {
-        pdf: 'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/books/2018/yogasattva-april-2018.pdf',
-        img: `${baseDomain}${publicationAssests.ythAssets39}`,
+        pdf: `${baseDomain}/books/2018/yogasattva-nov-2018.pdf`,
+        img: `${baseDomain}${publicationAssests.ythAssets49}`,
       },
       {
-        pdf: 'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/books/2018/yogasattva-aug-2018.pdf',
-        img: `${baseDomain}${publicationAssests.ythAssets40}`,
-      },
-      {
-        pdf: 'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/books/2018/yogasattva-jan-%202018.pdf',
-        img: `${baseDomain}${publicationAssests.ythAssets41}`,
-      },
-      {
-        pdf: 'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/books/2018/yogasattva-july2018.pdf',
-        img: `${baseDomain}${publicationAssests.ythAssets42}`,
-      },
-      {
-        pdf: 'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/books/2018/yogasattva-may-2018.pdf',
-        img: `${baseDomain}${publicationAssests.ythAssets43}`,
-      },
-      {
-        pdf: 'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/books/2018/yogasattva-oct-2018.pdf',
+        pdf: `${baseDomain}/books/2018/yogasattva-oct-2018.pdf`,
         img: `${baseDomain}${publicationAssests.ythAssets44}`,
       },
       {
-        pdf: 'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/books/2018/yogasattva-oct-2018.pdf',
+        pdf: `${baseDomain}/books/2018/yogasattva-sep-2018.pdf`,
         img: `${baseDomain}${publicationAssests.ythAssets45}`,
       },
       {
-        pdf: 'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/books/2018/yogasattva-june-2018.pdf',
+        pdf: `${baseDomain}/books/2018/yogasattva-aug-2018.pdf`,
+        img: `${baseDomain}${publicationAssests.ythAssets40}`,
+      },
+      {
+        pdf: `${baseDomain}/books/2018/yogasattva-july2018.pdf`,
+        img: `${baseDomain}${publicationAssests.ythAssets42}`,
+      },
+      {
+        pdf: `${baseDomain}/books/2018/yogasattva-june-2018.pdf`,
         img: `${baseDomain}${publicationAssests.ythAssets46}`,
       },
       {
-        pdf: 'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/books/2018/yogasattva-march-2018.pdf',
-        img: `${baseDomain}${publicationAssests.ythAssets47}`,
+        pdf: `${baseDomain}/books/2018/yogasattva-may-2018.pdf`,
+        img: `${baseDomain}${publicationAssests.ythAssets43}`,
       },
       {
-        pdf: 'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/books/2018/yogasattav-feb-%202018.pdf',
+        pdf: `${baseDomain}/books/2018/yogasattva-april-2018.pdf`,
+        img: `${baseDomain}${publicationAssests.ythAssets39}`,
+      },
+      {
+        pdf: `${baseDomain}/books/2018/yogasattva-march-2018.pdf`,
+        img: `${baseDomain}${publicationAssests.ythAssets47}`,
+      },
+
+      {
+        pdf: `${baseDomain}/books/2018/yogasattav-feb-%202018.pdf`,
         img: `${baseDomain}${publicationAssests.ythAssets48}`,
       },
       {
-        pdf: 'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/books/2018/yogasattva-nov-2018.pdf',
-        img: `${baseDomain}${publicationAssests.ythAssets49}`,
+        pdf: `${baseDomain}/books/2018/yogasattva-jan-%202018.pdf`,
+        img: `${baseDomain}${publicationAssests.ythAssets41}`,
       },
     ],
     2019: [
       {
-        pdf: 'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/books/2019/yogasattva-apr-2019.pdf',
-        img: `${baseDomain}${publicationAssests.ythAssets50}`,
-      },
-      {
-        pdf: 'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/books/2019/yogasattva-aug-2019.pdf',
-        img: `${baseDomain}${publicationAssests.ythAssets51}`,
-      },
-      {
-        pdf: 'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/books/2019/yogasattva-feb-2019.pdf',
-        img: `${baseDomain}${publicationAssests.ythAssets52}`,
-      },
-      {
-        pdf: 'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/books/2019/yogasattva-jan%202019.pdf',
-        img: `${baseDomain}${publicationAssests.ythAssets53}`,
-      },
-      {
-        pdf: 'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/books/2019/yogasattva-july-2019.pdf',
-        img: `${baseDomain}${publicationAssests.ythAssets54}`,
-      },
-      {
-        pdf: 'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/books/2019/yogasattva-june-2019.pdf',
-        img: `${baseDomain}${publicationAssests.ythAssets55}`,
-      },
-      {
-        pdf: 'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/books/2019/yogasattva-mar-2019.pdf',
-        img: `${baseDomain}${publicationAssests.ythAssets56}`,
-      },
-      {
-        pdf: 'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/books/2019/yogasattva-may-2019.pdf',
-        img: `${baseDomain}${publicationAssests.ythAssets57}`,
-      },
-      {
-        pdf: 'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/books/2019/yogasattva-dec-2019.pdf',
+        pdf: `${baseDomain}/books/2019/yogasattva-dec-2019.pdf`,
         img: `${baseDomain}${publicationAssests.ythAssets58}`,
       },
       {
-        pdf: 'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/books/2019/yogasattva-nov-2019.pdf',
+        pdf: `${baseDomain}/books/2019/yogasattva-nov-2019.pdf`,
         img: `${baseDomain}${publicationAssests.ythAssets59}`,
       },
       {
-        pdf: 'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/books/2019/yogasattva-oct-2019.pdf',
+        pdf: `${baseDomain}/books/2019/yogasattva-oct-2019.pdf`,
         img: `${baseDomain}${publicationAssests.ythAssets60}`,
       },
       {
-        pdf: 'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/books/2019/yogasattva-sept2019.pdf',
+        pdf: `${baseDomain}/books/2019/yogasattva-sept2019.pdf`,
         img: `${baseDomain}${publicationAssests.ythAssets61}`,
+      },
+      {
+        pdf: `${baseDomain}/books/2019/yogasattva-aug-2019.pdf`,
+        img: `${baseDomain}${publicationAssests.ythAssets51}`,
+      },
+      {
+        pdf: `${baseDomain}/books/2019/yogasattva-july-2019.pdf`,
+        img: `${baseDomain}${publicationAssests.ythAssets54}`,
+      },
+      {
+        pdf: `${baseDomain}/books/2019/yogasattva-june-2019.pdf`,
+        img: `${baseDomain}${publicationAssests.ythAssets55}`,
+      },
+      {
+        pdf: `${baseDomain}/books/2019/yogasattva-may-2019.pdf`,
+        img: `${baseDomain}${publicationAssests.ythAssets57}`,
+      },
+      {
+        pdf: `${baseDomain}/books/2019/yogasattva-apr-2019.pdf`,
+        img: `${baseDomain}${publicationAssests.ythAssets50}`,
+      },
+      {
+        pdf: `${baseDomain}/books/2019/yogasattva-mar-2019.pdf`,
+        img: `${baseDomain}${publicationAssests.ythAssets56}`,
+      },
+
+      {
+        pdf: `${baseDomain}/books/2019/yogasattva-feb-2019.pdf`,
+        img: `${baseDomain}${publicationAssests.ythAssets52}`,
+      },
+      {
+        pdf: `${baseDomain}/books/2019/yogasattva-jan%202019.pdf`,
+        img: `${baseDomain}${publicationAssests.ythAssets53}`,
       },
     ],
     2020: [
       {
-        pdf: 'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/books/2020/yogasattava-feb-2020.pdf',
-        img: `${baseDomain}${publicationAssests.ythAssets73}`,
-      },
-      {
-        pdf: 'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/books/2020/yogasattva-june-2020.pdf',
-        img: `${baseDomain}${publicationAssests.ythAssets74}`,
-      },
-      {
-        pdf: 'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/books/2020/yogasattva-apr-2020.pdf',
-        img: `${baseDomain}${publicationAssests.ythAssets75}`,
-      },
-      {
-        pdf: 'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/books/2020/yogasattva-apr-2020.pdf',
-        img: `${baseDomain}${publicationAssests.ythAssets76}`,
-      },
-      {
-        pdf: 'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/books/2020/yogasattva-dec-2020.pdf',
+        pdf: `${baseDomain}/books/2020/yogasattva-dec-2020.pdf`,
         img: `${baseDomain}${publicationAssests.ythAssets77}`,
       },
       {
-        pdf: 'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/books/2020/yogasattva-july-2020.pdf',
-        img: `${baseDomain}${publicationAssests.ythAssets78}`,
-      },
-      {
-        pdf: 'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/books/2020/yogasattva-jan-2020.pdf',
-        img: `${baseDomain}${publicationAssests.ythAssets79}`,
-      },
-      {
-        pdf: 'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/books/2020/yogasattva-may-2020.pdf',
-        img: `${baseDomain}${publicationAssests.ythAssets80}`,
-      },
-      {
-        pdf: 'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/books/2020/yogasattva-mar-2020.pdf',
-        img: `${baseDomain}${publicationAssests.ythAssets81}`,
-      },
-      {
-        pdf: 'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/books/2020/yogasattva-nov-2020.pdf',
+        pdf: `${baseDomain}/books/2020/yogasattva-nov-2020.pdf`,
         img: `${baseDomain}${publicationAssests.ythAssets82}`,
       },
       {
-        pdf: 'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/books/2020/yogasattva-oct-2020.pdf',
+        pdf: `${baseDomain}/books/2020/yogasattva-oct-2020.pdf`,
         img: `${baseDomain}${publicationAssests.ythAssets83}`,
       },
       {
-        pdf: 'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/books/2020/yogasattva-sep-2020.pdf',
+        pdf: `${baseDomain}/books/2020/yogasattva-sep-2020.pdf`,
         img: `${baseDomain}${publicationAssests.ythAssets84}`,
+      },
+      {
+        pdf: `${baseDomain}/books/2020/yogasattva-aug-2020.pdf`,
+        img: `${baseDomain}${publicationAssests.ythAssets76}`,
+      },
+      {
+        pdf: `${baseDomain}/books/2020/yogasattva-july-2020.pdf`,
+        img: `${baseDomain}${publicationAssests.ythAssets78}`,
+      },
+      {
+        pdf: `${baseDomain}/books/2020/yogasattva-june-2020.pdf`,
+        img: `${baseDomain}${publicationAssests.ythAssets74}`,
+      },
+      {
+        pdf: `${baseDomain}/books/2020/yogasattva-may-2020.pdf`,
+        img: `${baseDomain}${publicationAssests.ythAssets80}`,
+      },
+      {
+        pdf: `${baseDomain}/books/2020/yogasattva-apr-2020.pdf`,
+        img: `${baseDomain}${publicationAssests.ythAssets75}`,
+      },
+      {
+        pdf: `${baseDomain}/books/2020/yogasattva-mar-2020.pdf`,
+        img: `${baseDomain}${publicationAssests.ythAssets81}`,
+      },
+      {
+        pdf: `${baseDomain}/books/2020/yogasattava-feb-2020.pdf`,
+        img: `${baseDomain}${publicationAssests.ythAssets73}`,
+      },
+      {
+        pdf: `${baseDomain}/books/2020/yogasattva-jan-2020.pdf`,
+        img: `${baseDomain}${publicationAssests.ythAssets79}`,
       },
     ],
     2021: [
       {
-        pdf: 'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/books/2021/yogaSattva-mar-2021.pdf',
-        img: `${baseDomain}${publicationAssests.ythAssets62}`,
-      },
-      {
-        pdf: 'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/books/2021/yogasattva-apr-2021.pdf',
-        img: `${baseDomain}${publicationAssests.ythAssets63}`,
-      },
-      {
-        pdf: 'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/books/2021/yogasattva-aug-2021.pdf',
-        img: `${baseDomain}${publicationAssests.ythAssets64}`,
-      },
-      {
-        pdf: 'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/books/2021/yogasattva-dec%202021.pdf',
+        pdf: `${baseDomain}/books/2021/yogasattva-dec%202021.pdf`,
         img: `${baseDomain}${publicationAssests.ythAssets65}`,
       },
       {
-        pdf: 'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/books/2021/yogasattva-feb-2021.pdf',
-        img: `${baseDomain}${publicationAssests.ythAssets66}`,
-      },
-      {
-        pdf: 'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/books/2021/yogasattva-jan-2021.pdf',
-        img: `${baseDomain}${publicationAssests.ythAssets67}`,
-      },
-      {
-        pdf: 'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/books/2021/yogasattva-july-2021.pdf',
-        img: `${baseDomain}${publicationAssests.ythAssets68}`,
-      },
-      {
-        pdf: 'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/books/2021/yogasattva-june-2021.pdf',
-        img: `${baseDomain}${publicationAssests.ythAssets69}`,
-      },
-      {
-        pdf: 'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/books/2021/yogasattva-may-2021.pdf',
-        img: `${baseDomain}${publicationAssests.ythAssets70}`,
-      },
-      {
-        pdf: 'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/books/2021/yogasattva-nov2021.pdf',
+        pdf: `${baseDomain}/books/2021/yogasattva-nov2021.pdf`,
         img: `${baseDomain}${publicationAssests.ythAssets71}`,
       },
       {
-        pdf: 'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/books/2021/yogasattva-sep-2021.pdf',
+        pdf: `${baseDomain}/books/2021/yogasattva-sep-2021.pdf`,
         img: `${baseDomain}${publicationAssests.ythAssets72}`,
       },
+      {
+        pdf: `${baseDomain}/books/2021/yogasattva-aug-2021.pdf`,
+        img: `${baseDomain}${publicationAssests.ythAssets64}`,
+      },
+      {
+        pdf: `${baseDomain}/books/2021/yogasattva-july-2021.pdf`,
+        img: `${baseDomain}${publicationAssests.ythAssets68}`,
+      },
+      {
+        pdf: `${baseDomain}/books/2021/yogasattva-june-2021.pdf`,
+        img: `${baseDomain}${publicationAssests.ythAssets69}`,
+      },
+      {
+        pdf: `${baseDomain}/books/2021/yogasattva-may-2021.pdf`,
+        img: `${baseDomain}${publicationAssests.ythAssets70}`,
+      },
+      {
+        pdf: `${baseDomain}/books/2021/yogasattva-apr-2021.pdf`,
+        img: `${baseDomain}${publicationAssests.ythAssets63}`,
+      },
+      {
+        pdf: `${baseDomain}/books/2021/yogaSattva-mar-2021.pdf`,
+        img: `${baseDomain}${publicationAssests.ythAssets62}`,
+      },
+      {
+        pdf: `${baseDomain}/books/2021/yogasattva-feb-2021.pdf`,
+        img: `${baseDomain}${publicationAssests.ythAssets66}`,
+      },
+      {
+        pdf: `${baseDomain}/books/2021/yogasattva-jan-2021.pdf`,
+        img: `${baseDomain}${publicationAssests.ythAssets67}`,
+      },
     ],
-    2022:[
+    2022: [
       {
-        img:`${baseDomain}${publicationAssests.ythAssets87}`,
-        pdf:'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/books/newsletter/Yogasattva-August2022.pdf'
+        img: `${baseDomain}${publicationAssests.ythAssets87}`,
+        pdf: `${baseDomain}/books/newsletter/Yogasattva-August2022.pdf`,
       },
       {
-        img:`${baseDomain}${publicationAssests.ythAssets86}`,
-        pdf:'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/books/newsletter/Yogasattva-July2022.pdf'
+        img: `${baseDomain}${publicationAssests.ythAssets86}`,
+        pdf: `${baseDomain}/books/newsletter/Yogasattva-July2022.pdf`,
       },
       {
-        img:`${baseDomain}${publicationAssests.ythAssets85}`,
-        pdf:'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/books/newsletter/Yogasattva-June2022-%20v3.pdf'
+        img: `${baseDomain}${publicationAssests.ythAssets85}`,
+        pdf: `${baseDomain}/books/newsletter/Yogasattva-June2022-%20v3.pdf`,
       },
       {
-        img:`${baseDomain}${homeAssets.homeAsset69}`,
-        pdf:'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/books/newsletter/Yogasattva-Mar-2022.pdf'
+        img: `${baseDomain}${homeAssets.homeAsset69}`,
+        pdf: `${baseDomain}/books/newsletter/Yogasattva-Mar-2022.pdf`,
       },
       {
-        img:`${baseDomain}${homeAssets.homeAsset68}`,
-        pdf:'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/books/newsletter/Yogasattva-Feb-2022.pdf'
+        img: `${baseDomain}${homeAssets.homeAsset68}`,
+        pdf: `${baseDomain}/books/newsletter/Yogasattva-Feb-2022.pdf`,
       },
       {
-        img:`${baseDomain}${homeAssets.homeAsset67}`,
-        pdf:'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/books/newsletter/Yogasattva-Jan-2022.pdf'
+        img: `${baseDomain}${homeAssets.homeAsset67}`,
+        pdf: `${baseDomain}/books/newsletter/Yogasattva-Jan-2022.pdf`,
       },
-    ]
+    ],
   }
 
   const [bold, setBold] = useState(6)
@@ -322,13 +320,12 @@ const Yogasattva = () => {
 
   return (
     <>
-      { metaDataObj[location.pathname] && 
-    <Helmet
-      title={metaDataObj[location.pathname || '']?.title || ''}
-    /> }
+      {metaDataObj[location.pathname] && (
+        <Helmet title={metaDataObj[location.pathname || '']?.title || ''} />
+      )}
       <div className="yogasattva-container">
         <div className="background">
-          {/* <PublicationNav title={'yogasattva'} /> */}
+          {/* <PublicationNav title={`yogasattva`} /> */}
           <InnerNavComponent abc={publicationSattva} />
         </div>
       </div>
@@ -505,7 +502,7 @@ const Yogasattva = () => {
                     </div>
                   ))}
                 </>
-              ) :  bold === 6 ? (
+              ) : bold === 6 ? (
                 <>
                   {images[2022].map((image, i) => (
                     <div key={i} className="preivous-box">
