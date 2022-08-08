@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import Heading from '../Heading'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
@@ -10,8 +10,24 @@ import CommonBtn from '../commonbtn'
 import './style.scss'
 import baseDomain, { socialInitiativeNew } from '../../assets/images/imageAsset'
 import { Link } from 'react-router-dom'
+import useOnScreen from '../../../../helpers/InterSection'
 
 const SocialInitiatives = ({ alumni, setImageChanger }) => {
+
+  const socialRef = useRef(null)
+  const sliderRef = useRef(null)
+  const isInteracting = useOnScreen(socialRef)
+
+
+  useEffect(() => {
+    if(!sliderRef.current) return
+    if (isInteracting)
+      sliderRef.current.slickPlay()
+    else
+      sliderRef.current.slickPause()
+
+  }, [isInteracting])
+
   const AnnamBrahma = `${baseDomain}${socialInitiativeNew.socialNew1}`
   const Police = `${baseDomain}${socialInitiativeNew.socialNew2}`
   const BMC = `${baseDomain}${socialInitiativeNew.socialNew3}`
@@ -49,8 +65,8 @@ const SocialInitiatives = ({ alumni, setImageChanger }) => {
           smallText={'Social'}
           largeText={alumni ? 'Responsibility' : 'Initiatives'}
         />
-        <div className='social-initiative-carousel'>
-          <Slider {...settings}>
+        <div className='social-initiative-carousel' ref={ socialRef } >
+          <Slider {...settings} ref={slider => { sliderRef.current = slider }} >
             {socialData.map((item, i) => {
               //  setIndex(i);
 

@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{ useEffect,useRef } from 'react'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import Slider from 'react-slick'
@@ -8,8 +8,24 @@ import './style.scss'
 import CommonBtn from '../commonbtn'
 import baseDomain, { homeAssets } from '../../assets/images/imageAsset'
 import { Link } from 'react-router-dom'
+import useOnScreen from '../../../../helpers/InterSection'
 
 const Experience = () => {
+
+  const expRef = useRef(null)
+  const sliderRef = useRef(null)
+  const isInteracting = useOnScreen(expRef)
+
+
+  useEffect(() => {
+    if(!sliderRef.current) return
+    if (isInteracting)
+      sliderRef.current.slickPlay()
+    else
+      sliderRef.current.slickPause()
+
+  }, [isInteracting])
+
   let settings = {
     dots: true,
     arrows: false,
@@ -22,8 +38,8 @@ const Experience = () => {
   }
 
   return (
-    <div className="experience-container">
-      <Slider {...settings}>
+    <div className="experience-container" ref={ expRef } >
+      <Slider {...settings} ref={slider => { sliderRef.current = slider }} >
         <div className="experience-carousel global-padding">
           <div className="carousel-content">
             <Heading

@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{ useEffect,useRef } from 'react'
 import Heading from '../Heading'
 import { highlights } from '../../assets/icons/icon'
 import Activitycard from './Activitycard'
@@ -9,8 +9,24 @@ import 'slick-carousel/slick/slick-theme.css'
 import Slider from 'react-slick'
 import CommonBtn from '../commonbtn'
 import { Link } from 'react-router-dom'
+import useOnScreen from '../../../../helpers/InterSection'
 
 const Activity = () => {
+
+  const activityRef = useRef(null)
+  const activitySliderRef = useRef(null)
+  const isInteracting = useOnScreen(activityRef)
+
+  useEffect(() => {
+    if(!activitySliderRef.current) return
+    if (isInteracting)
+      activitySliderRef.current.slickPlay()
+    else
+      activitySliderRef.current.slickPause()
+
+  }, [isInteracting])
+
+
   let settings = {
     dots: true,
     arrows: false,
@@ -43,8 +59,8 @@ const Activity = () => {
   return (
     <>
       <div className='activity-container glabal-padding'>
-        <div className='activity-card-container'>
-          <Slider {...settings}>
+        <div className='activity-card-container' ref={activityRef} >
+          <Slider {...settings} ref={slider => { activitySliderRef.current = slider }} >
             {activityData.map((item, i) => {
               return (
                 <Activitycard

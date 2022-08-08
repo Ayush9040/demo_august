@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{ useRef, useEffect } from 'react'
 import Heading from '../Heading'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
@@ -10,11 +10,26 @@ import './style.scss'
 import { Link } from 'react-router-dom'
 // import { blogData } from './blogData'
 import { fetchBlogsData } from '../../Views/Blogs/Blogs.action'
-import { useEffect } from 'react'
 import { useSelector } from 'react-redux'
 import { useDispatch } from 'react-redux'
+import useOnScreen from '../../../../helpers/InterSection'
 
 const Blog = () => {
+
+  const blogRef = useRef(null)
+  const sliderRef = useRef(null)
+  const isInteracting = useOnScreen(blogRef)
+
+
+  useEffect(() => {
+    if(!sliderRef.current) return
+    if (isInteracting)
+      sliderRef.current.slickPlay()
+    else
+      sliderRef.current.slickPause()
+
+  }, [isInteracting])
+
   let settings = {
     dots: true,
     arrows: false,
@@ -68,8 +83,8 @@ const Blog = () => {
             </Link>
           </div>
         </div>
-        <div className="blog-carousel">
-          <Slider {...settings}>
+        <div className="blog-carousel" ref={ blogRef } >
+          <Slider {...settings} ref={slider => { sliderRef.current = slider }} >
             {blogs.map((item, index) => {
               if (index < 5) {
                 return (
