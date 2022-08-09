@@ -800,6 +800,9 @@ export const publicationAssests = {
   publicationAssests6: '/Publications/Library/Library-6.jpg',
   publicationAssests7: '/Publications/Yoga & Total Health/YTH-main.png',
 
+  //emag
+  publicationAssests85:'/Publications/Yoga%20%26%20Total%20Health/YTH-Aug-22-Emag-1.jpg',
+
   // Yogasattva-Newsletter
   // 2017
   newsletterAssests1:
