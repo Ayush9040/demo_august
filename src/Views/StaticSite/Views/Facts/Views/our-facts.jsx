@@ -3,7 +3,7 @@ import Heading from '../../../Components/Heading'
 import TimePeriodSelector from '../../../Components/TimePeriodSelector'
 import { divider } from '../../../assets/icons/icon'
 import './style.scss'
-import CommonBannerNavPrimary from '../../../Components/CommonBannerNavPrimary'
+import InnerNavComponent from '../../../Components/InnerNavComponent'
 import useFacts from '../../../utils/hooks/useFacts'
 import { Helmet } from 'react-helmet'
 import metaDataObj from '../../../../../Constants/metaData.json'
@@ -11,6 +11,13 @@ import { useLocation } from 'react-router-dom'
 
 const OurFacts = () => {
 
+
+  const facts={
+    title:'oue-facts',
+    color:'orange',
+    menuColor:'orange',
+    menuItems:[]
+  }
   const location = useLocation() 
 
   useEffect(() => {
@@ -24,7 +31,7 @@ const OurFacts = () => {
     <Helmet
       title={metaDataObj[location.pathname || '']?.title || ''}
     /> }
-      <CommonBannerNavPrimary />
+      <InnerNavComponent abc={ facts }/>
       <div className="ourfacts-container flex">
         <div className="ourfacts-header">
           <div className="ourfacts-header-text">

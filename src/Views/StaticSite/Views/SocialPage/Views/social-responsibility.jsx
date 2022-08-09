@@ -9,10 +9,18 @@ import baseDomain,{ socialResponsibilityAssets } from '../../../assets/images/im
 import { Helmet } from 'react-helmet'
 import metaDataObj from '../../../../../Constants/metaData.json'
 import { useLocation } from 'react-router-dom'
+import InnerNavComponent from '../../../Components/InnerNavComponent'
 
 const SocialResponsibility = () => {
 
   const location = useLocation()
+
+  const social = { 
+    title:'social-responsibility',
+    color:'white',
+    menuColor:'white',
+    menuItems:[]
+  }
 
   useEffect(() => {
     window.scrollTo(0, 0)
@@ -39,7 +47,9 @@ const SocialResponsibility = () => {
           // overlay="#61829DD0"
           bannerImg={`${baseDomain}${socialResponsibilityAssets.schoolChildren}`}
           overlay="#61829DD4"
-        />
+        >
+          <InnerNavComponent abc={ social } />
+        </CommonBanner>
         <div className="social-res-sections">
           {socialPageData.map((item, i) => (
             <SectionComponent
