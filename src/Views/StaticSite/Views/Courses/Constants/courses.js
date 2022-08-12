@@ -29,7 +29,7 @@ const ttc200hr = {
       offlineFee: { residentialFee: 50000, nonResidentialFee: 28000 },
     },
     category: 'ttc',
-    title: '200 hrs TTC  Batch 1 - 1 Month TTC Online & On Campus - English',
+    title: '200 hrs TTC - 1 Month TTC Online & On Campus - English - Batch 1 ',
     dates: [
       '1st Aug to 31st Aug 2022',
       '1st Sept to 30th Sept 2022',
@@ -354,7 +354,7 @@ const ttc200hr = {
       offlineFee: { residentialFee: 70000, nonResidentialFee: 28000 },
     },
     category: 'ttc',
-    title: '200 hrs TTC  Batch 2 - 2 Months TTC On Campus - English',
+    title: '200 hrs TTC - 2 Months TTC On Campus – English - Batch 2',
     dates: [
       '5th Sept to 28th Oct 2022',
       '31st Oct to 23rd Dec 2022',
@@ -673,7 +673,7 @@ const ttc200hr = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'ttc',
-    title: '200 hrs TTC  Batch 3 - 2 Months TTC Online  - English',
+    title: '200 hrs TTC - 2 Months TTC Online – English - Batch 3 ',
     dates: [
       '8th Aug to 1st Oct 2022',
       '10th Oct to 3rd Dec 2022',
@@ -993,7 +993,7 @@ const ttc200hr = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'ttc',
-    title: '200 hrs TTC  Batch 4 - 2 Months TTC Online  - Hindi',
+    title: '200 hrs TTC - 2 Months TTC Online – Hindi - Batch 4 ',
     dates: [
       '15th Aug to 8th Oct 2022',
       '17th Oct to 10th Dec 2022',
@@ -1311,7 +1311,7 @@ const ttc200hr = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'ttc',
-    title: '200 hrs TTC Batch 5 - 2 Months TTC Online  - English',
+    title: '200 hrs TTC - 2 Months TTC Online – English - Batch 5 ',
     dates: [
       '29th Aug to 22nd Oct 2022',
       '31st Oct to 24th Dec 2022',
@@ -1629,7 +1629,7 @@ const ttc200hr = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'ttc',
-    title: '200 hrs TTC  Batch 6 - 3 Months Weekend TTC Online - English',
+    title: '200 hrs TTC - 3 Months Weekend TTC Online – English - Batch 6',
     dates: [
       '27th Aug to 13th Nov 2022',
       '19th Nov to 5th Feb 2023',
@@ -5570,141 +5570,141 @@ const camps = {
     ],
   },
 
-  4: {
-    id: '',
-    title: 'Diet Workshop',
-    key: 'diet-workshop',
-    batch: 1,
-    // templateId: 'GENERAL_AUTO_EMAIL',
-    templateId: {
-      templateOnline: 'GENERAL_AUTO_EMAIL',
-      templateOffline: {
-        templateResidential: '',
-        templateNonResidential: ''
-      }
-    },
-    dates: [],
-    mostPopular: false,
-    rating: 5,
-    colorCode: '#EDBE66',
-    timing: '5:00 pm – 8:00 pm (IST)',
-    fees: {
-      onlineFee: 500,
-      offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
-    },
-    category: 'camps',
-    metaDescription:
-      'Wholesome tools and techniques to help you manage your condition completely',
-    image: `${baseDomain}${courseAssets.courseAsset85}`,
-    cardImage: `${baseDomain}${courseAssets.courseAsset85}`,
-    details: [
-      {
-        type: 'paragraph',
-        content: {
-          title: 'Who is this workshop for?',
-          text: [
-            'Do you find yourself juggling multiple responsibilities every day? Do you feel you are not able to focus consciously on your meals? You are not alone! A lot of us, with our erratic lifestyles, eat whatever is quick to manage and thus end up really creating imbalances in our bodily energies. At the Yoga Institute’s Diet Workshop, we will give you the wisdom of ancient Sattvik ahar, which is really easy to prepare and which will bring your physical, spiritual and mental energies in balance.                   ',
-          ],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'What can you expect?',
-          text: [
-            'Sattvic means purity, health, harmony and well-being. Sattvik food has the power to safeguard us against many modern-day ailments. - Dr. Hansaji Yogendra ',
-          ],
-        },
-      },
-      {
-        type: 'u-list',
-        content: {
-          title: ' Program Offerings',
-          points: [
-            {
-              listItem:
-                'Effective tools and techniques to help you manage your life',
-              subItems: [],
-            },
-            {
-              listItem:
-                'Specific pranayama, asana and relaxation techniques to enhance your state of mind',
-              subItems: [],
-            },
-            {
-              listItem: 'Easy high-fibre Sattvik recipes',
-              subItems: [],
-            },
-            {
-              listItem: 'Diet guidelines to manage your health',
-              subItems: [],
-            },
-            {
-              listItem:
-                'Tips to maintain health by our spiritual guru Institute Director, Dr. Hansaji who has decades of experience in the field',
-              subItems: [],
-            },
-            {
-              listItem: 'Fitness tips',
-              subItems: [],
-            },
-          ],
-        },
-      },
-      // {
-      //   type: 'u-list',
-      //   content: {
-      //     title: 'Offered with the program',
-      //     points: [
-      //       {
-      //         listItem: 'Booklet with guidelines  ',
-      //         subItems: [],
-      //       },
-      //       {
-      //         listItem: 'Wholesome Sattvik lunch',
-      //         subItems: [],
-      //       },
-      //       {
-      //         listItem: 'Healthy snacks  ',
-      //         subItems: [],
-      //       },
-      //     ],
-      //   },
-      // },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'Time',
-          text: [' 5:00 pm – 8:00 pm (IST)'],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'Fees',
-          text: ['INR 500'],
-        },
-      },
-      {
-        type: 'u-list',
-        content: {
-          title: ' Guidelines',
-          points: [
-            {
-              listItem:
-                'Campers are requested to come attired to comfortable loose fitting clothes. Shorts, capris, tank tops, low cut shirts, short and sleeveless T-shirts are not permitted as per the Institute dress code.',
-              subItems: [],
-            },
-            // {
-            //   listItem:
-            //     'Campers are requested to have their breakfast and medication (as prescribed by their doctor). ',
-            //   subItems: [],
-            // },
-          ],
-        },
-      },
-    ],
-  },
+  // 4: {
+  //   id: '',
+  //   title: 'Diet Workshop',
+  //   key: 'diet-workshop',
+  //   batch: 1,
+  //   // templateId: 'GENERAL_AUTO_EMAIL',
+  //   templateId: {
+  //     templateOnline: 'GENERAL_AUTO_EMAIL',
+  //     templateOffline: {
+  //       templateResidential: '',
+  //       templateNonResidential: ''
+  //     }
+  //   },
+  //   dates: [],
+  //   mostPopular: false,
+  //   rating: 5,
+  //   colorCode: '#EDBE66',
+  //   timing: '5:00 pm – 8:00 pm (IST)',
+  //   fees: {
+  //     onlineFee: 500,
+  //     offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
+  //   },
+  //   category: 'camps',
+  //   metaDescription:
+  //     'Wholesome tools and techniques to help you manage your condition completely',
+  //   image: `${baseDomain}${courseAssets.courseAsset85}`,
+  //   cardImage: `${baseDomain}${courseAssets.courseAsset85}`,
+  //   details: [
+  //     {
+  //       type: 'paragraph',
+  //       content: {
+  //         title: 'Who is this workshop for?',
+  //         text: [
+  //           'Do you find yourself juggling multiple responsibilities every day? Do you feel you are not able to focus consciously on your meals? You are not alone! A lot of us, with our erratic lifestyles, eat whatever is quick to manage and thus end up really creating imbalances in our bodily energies. At the Yoga Institute’s Diet Workshop, we will give you the wisdom of ancient Sattvik ahar, which is really easy to prepare and which will bring your physical, spiritual and mental energies in balance.                   ',
+  //         ],
+  //       },
+  //     },
+  //     {
+  //       type: 'paragraph',
+  //       content: {
+  //         title: 'What can you expect?',
+  //         text: [
+  //           'Sattvic means purity, health, harmony and well-being. Sattvik food has the power to safeguard us against many modern-day ailments. - Dr. Hansaji Yogendra ',
+  //         ],
+  //       },
+  //     },
+  //     {
+  //       type: 'u-list',
+  //       content: {
+  //         title: ' Program Offerings',
+  //         points: [
+  //           {
+  //             listItem:
+  //               'Effective tools and techniques to help you manage your life',
+  //             subItems: [],
+  //           },
+  //           {
+  //             listItem:
+  //               'Specific pranayama, asana and relaxation techniques to enhance your state of mind',
+  //             subItems: [],
+  //           },
+  //           {
+  //             listItem: 'Easy high-fibre Sattvik recipes',
+  //             subItems: [],
+  //           },
+  //           {
+  //             listItem: 'Diet guidelines to manage your health',
+  //             subItems: [],
+  //           },
+  //           {
+  //             listItem:
+  //               'Tips to maintain health by our spiritual guru Institute Director, Dr. Hansaji who has decades of experience in the field',
+  //             subItems: [],
+  //           },
+  //           {
+  //             listItem: 'Fitness tips',
+  //             subItems: [],
+  //           },
+  //         ],
+  //       },
+  //     },
+  //     // {
+  //     //   type: 'u-list',
+  //     //   content: {
+  //     //     title: 'Offered with the program',
+  //     //     points: [
+  //     //       {
+  //     //         listItem: 'Booklet with guidelines  ',
+  //     //         subItems: [],
+  //     //       },
+  //     //       {
+  //     //         listItem: 'Wholesome Sattvik lunch',
+  //     //         subItems: [],
+  //     //       },
+  //     //       {
+  //     //         listItem: 'Healthy snacks  ',
+  //     //         subItems: [],
+  //     //       },
+  //     //     ],
+  //     //   },
+  //     // },
+  //     {
+  //       type: 'paragraph',
+  //       content: {
+  //         title: 'Time',
+  //         text: [' 5:00 pm – 8:00 pm (IST)'],
+  //       },
+  //     },
+  //     {
+  //       type: 'paragraph',
+  //       content: {
+  //         title: 'Fees',
+  //         text: ['INR 500'],
+  //       },
+  //     },
+  //     {
+  //       type: 'u-list',
+  //       content: {
+  //         title: ' Guidelines',
+  //         points: [
+  //           {
+  //             listItem:
+  //               'Campers are requested to come attired to comfortable loose fitting clothes. Shorts, capris, tank tops, low cut shirts, short and sleeveless T-shirts are not permitted as per the Institute dress code.',
+  //             subItems: [],
+  //           },
+  //           // {
+  //           //   listItem:
+  //           //     'Campers are requested to have their breakfast and medication (as prescribed by their doctor). ',
+  //           //   subItems: [],
+  //           // },
+  //         ],
+  //       },
+  //     },
+  //   ],
+  // },
 
   5: {
     id: '',
@@ -6811,7 +6811,7 @@ const camps = {
 
   13: {
     id: '',
-    title: 'Stress Management Camp',
+    title: 'Stress Management Camp - Online and On Campus',
     key: 'stress-management-camp',
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
@@ -8086,7 +8086,7 @@ const camps = {
   },
   19: {
     id: '',
-    title: '21-Days BLC - Batch 1 - 21 Days BLC - Morning On Campus - English',
+    title: '21-Days BLC - Morning On Campus – English - Batch 1',
     key: '21-days-better-living-course',
     // templateId: 'GENERAL_AUTO_EMAIL',
     templateId: {
@@ -8413,7 +8413,7 @@ const camps = {
   20: {
     id: '',
     title:
-      '21 Days BLC - Batch 2 - 21 Days BLC - Evening - Online & On Campus - English',
+      '21 Days BLC - Evening - Online & On Campus – English - Batch 2',
     key: '21-days-better-living-course-batch-2',
     batch: 2,
     // templateId: 'GENERAL_AUTO_EMAIL',
@@ -8738,7 +8738,7 @@ const camps = {
   21: {
     id: '',
     title:
-      '21 Days BLC - Batch 3 - 21 Days BLC - Evening - Online & On Campus - Hindi ',
+      '21 Days BLC - Evening - Online & On Campus – Hindi - Batch 3',
     key: '21-days-better-living-course-batch-3',
     batch: 3,
     // templateId: 'GENERAL_AUTO_EMAIL',
@@ -9062,7 +9062,7 @@ const camps = {
   },
   22: {
     id: '',
-    title: '21 Days BLC - Batch 4 - 21 Days BLC - Morning - Online - English',
+    title: '21 Days BLC - Morning - Online – English - Batch 4',
     key: '21-days-better-living-course-batch-4',
     batch: 4,
     // templateId: 'GENERAL_AUTO_EMAIL',
@@ -9403,7 +9403,7 @@ const classes = {
     rating: 5,
     colorCode: '#D3A29D',
     timing:
-      'Monday, Wednesday, Friday: Monday, Wednesday & Friday : Morning: 6:30 am - 8:00 am (IST) Tuesday, Thursday & Saturday:Evening: 5:30 pm - 7:00 pm  (IST) (Join on any date)',
+      'Monday, Wednesday, Friday: Morning: 6:30 am - 8:00 am (IST) Tuesday, Thursday & Saturday:Evening: 5:30 pm - 7:00 pm  (IST) (Join on any date)',
     fees: {
       onlineFee: 1500,
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
@@ -11268,7 +11268,7 @@ const classes = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'classes',
-    dates: [],
+    dates: ['5:30 am to 6:30 am ', '6:00 pm to 7:00 pm '],
     online: true,
     onCampus: false,
     nonResidential: false,
@@ -11338,6 +11338,20 @@ const classes = {
             },
           ],
         },
+      },
+      {
+        type: 'paragraph',
+        content:{
+          title: 'Fees',
+          text:[]
+        }
+      },
+      {
+        type: 'paragraph',
+        content:{
+          title: '',
+          text:['Rs. 1500/-']
+        }
       },
       {
         type: 'u-list',
