@@ -23,27 +23,27 @@ const CourseSection = ({
         ans: [
           {
             url: '/one-month-ttc',
-            text: ' Batch 1 - 1 Month TTC - Online & On Campus - English',
+            text: ' 1 Month TTC Online & On Campus - English - Batch 1 ',
           },
           {
             url: '/200-hrs-part-time-ttc-on-campus-english',
-            text: ' Batch 2 - 2 Months TTC - On Campus - English',
+            text: '2 Months TTC On Campus – English - Batch 2',
           },
           {
             url: '/200-hrs-part-time-ttc-online-english',
-            text: 'Batch 3 - 2 Months TTC - Online - English',
+            text: '2 Months TTC Online – English - Batch 3 ',
           },
           {
             url: '/200-hrs-part-time-ttc-online',
-            text: 'Batch 4 - 2 Months TTC - Online - Hindi',
+            text: '2 Months TTC Online – Hindi - Batch 4 ',
           },
           {
             url: '/200-hrs-part-time-ttc-online-english-batch-5',
-            text: 'Batch 5 - 2 Months TTC - Online - English',
+            text: '2 Months TTC Online – English - Batch 5',
           },
           {
             url: '/weekend-teacher-training-course',
-            text: 'Batch 6 - 3 Months Weekend TTC - Online - English ',
+            text: '3 Months Weekend TTC Online – English - Batch 6',
           },
         ],
       },
@@ -88,19 +88,19 @@ const CourseSection = ({
         ans: [
           {
             url: '/21-days-better-living-course',
-            text: '21-Days BLC - Batch 1 - Morning On Campus - English',
+            text: 'Morning On Campus – English - Batch 1',
           },
           {
             url: '/21-days-better-living-course-batch-2',
-            text: '21 Days BLC - Batch 2 - Evening - Online & On Campus - English',
+            text: 'Evening - Online & On Campus – English - Batch 2',
           },
           {
             url: '/21-days-better-living-course-batch-3',
-            text: '21 Days BLC - Batch 3 - Evening - Online & On Campus - Hindi',
+            text: 'Evening - Online & On Campus – Hindi - Batch 3',
           },
           {
             url: '/21-days-better-living-course-batch-4',
-            text: '21 Days BLC - Batch 4 - Morning - Online - English',
+            text: 'Morning - Online – English - Batch 4',
           },
         ],
       },
