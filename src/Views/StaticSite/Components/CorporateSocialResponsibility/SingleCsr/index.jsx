@@ -2,12 +2,19 @@ import React, { useState, useEffect } from 'react'
 import './style.scss'
 //import baseDomain, { homeAssets } from '../../../assets/images/imageAsset'
 import CsrModal from '../CsrModal'
-import CommonBannerNavPrimary from '../../CommonBannerNavPrimary'
 import CsrBlock from '../data'
 import { useParams } from 'react-router-dom'
 //import { data } from '../../AluminiCarousel/data'
+import InnerNavComponent from '../../InnerNavComponent'
 
 const SingleCsr = () => {
+
+  const csr={
+    title:'single-csr',
+    color:'orange',
+    menuColor:'orange',
+    menuItems:[]
+  }
   const { csrId } = useParams()
   const [pageData, setPageData] = useState({})
 
@@ -20,7 +27,7 @@ const SingleCsr = () => {
   const [showModal, setShowModal] = useState(false)
   return (
     <div className="csr-main-container">
-      <CommonBannerNavPrimary />
+      <InnerNavComponent abc={csr} />
       <div className="csr-heading">
         <h1>{pageData.title}</h1>
         <div className="csr-bottom-line"></div>

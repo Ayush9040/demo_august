@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import CommonBannerNavPrimary from '../../../Components/CommonBannerNavPrimary'
+import InnerNavComponent from '../../../Components/InnerNavComponent'
 import './style.scss'
 import { useParams } from 'react-router-dom'
 //import { Job } from '../../../utils/JobDetails'
@@ -12,6 +12,14 @@ import { fetchJobData, postApplicantionData } from '../Career.action'
 import InputComponent from '../../../Components/InputComponent'
 import MessageModal from '../../../Components/MessageModal'
 const SingleJob = () => {
+
+  const singleJob = {
+    title:'single-job',
+    color:'orange',
+    menuColor:'orange',
+    menuItems:[]
+  }
+  
   const dispatch = useDispatch()
   const { jobPrograms } = useSelector((state) => state?.career)
   const { jobId } = useParams()
@@ -73,7 +81,7 @@ const SingleJob = () => {
   }
   return (
     <div className="single-job">
-      <CommonBannerNavPrimary innerNav={false} />
+      <InnerNavComponent abc={ singleJob } />
       <div className="job-details">
         <div className="job-description">
           <div className="job-img">

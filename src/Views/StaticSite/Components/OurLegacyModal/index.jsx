@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import CommonBannerNavPrimary from '../CommonBannerNavPrimary'
+import InnerNavComponent from '../InnerNavComponent'
 import GridComponent from '../GridComponent'
 import { useParams } from 'react-router-dom'
 import { data } from '../../Views/About/Constants/data'
@@ -8,6 +8,14 @@ import './style.scss'
 const OurLegacyModal = (  ) => {
 
   const { name } = useParams()
+
+  const ourLegacyModal = {
+    title:'our-legacy-modal',
+    color:'orange',
+    menuColor:'orange',
+    menuItems:[]
+
+  }
 
 
 
@@ -21,7 +29,7 @@ const OurLegacyModal = (  ) => {
 
   return (
     <>
-      <CommonBannerNavPrimary />
+      <InnerNavComponent abc={ ourLegacyModal } />
       <div className="our-legacy-modal">
         <div className="about-details-container">
           <div className="detail-main-image">

@@ -7,7 +7,7 @@ import {
   AccordionItemButton,
   AccordionItemPanel,
 } from 'react-accessible-accordion'
-import CommonBannerNavPrimary from '../../../Components/CommonBannerNavPrimary'
+import InnerNavComponent from '../../../Components/InnerNavComponent'
 import { useParams } from 'react-router-dom'
 // import { courseArray } from '../../../Constants/courses/c200hr'
 import { AllCourses, c200hr,c500hr,c900hr,campsArr,classesArr } from '../Constants/courses'
@@ -15,6 +15,14 @@ import CourseCard from '../../../Components/CourseCard'
 import './style.scss'
 
 const BrowseCourses = () => {
+
+  const browseCourse = {
+    title:'browse-course',
+    color:'orange',
+    menuColor:'orange',
+    menuItems:[]
+  }
+
   const { type } = useParams()
   const [category, setCategory] = useState()
   const [breadcrumbs, setBreadcrumbs] = useState()
@@ -48,7 +56,7 @@ const BrowseCourses = () => {
 
   return (
     <div className="browse-courses">
-      <CommonBannerNavPrimary />
+      <InnerNavComponent abc={ browseCourse } />
       <div className="breadcrumbs">
         <p>Browse &gt; {breadcrumbs}</p>
       </div>

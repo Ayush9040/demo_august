@@ -8,8 +8,16 @@ import CommonBtn from '../commonbtn'
 import { Link } from 'react-router-dom'
 import baseDomain from '../../assets/images/imageAsset'
 import { background,wellnessAssets } from '../../assets/images/imageAsset'
+import InnerNavComponent from '../InnerNavComponent'
 
 const wellness = () => {
+
+  const wellNess = {
+    title:'corporate',
+    color:'white',
+    menuColor:'white',
+    menuItems:[]
+  }
 
   useEffect(()=>{
     scrollTo(0,0)
@@ -33,7 +41,9 @@ const wellness = () => {
 
         with your inner self while also keeping your mind on track. The ability to persevere is what distin-
         guishes successful leaders and managers from the others.'
-      />
+      >
+        <InnerNavComponent abc={ wellNess } />
+      </CommonBanner>
       <Programs />
 
       <p className='offering-heading'>
