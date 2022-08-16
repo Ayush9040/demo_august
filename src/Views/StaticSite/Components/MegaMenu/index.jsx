@@ -64,7 +64,7 @@ const MegaMenu = ({ setNav }) => {
       { menu: 'Overview', link: '/museum-of-classical-yoga' },
       { menu: 'Virtual Tour', link: '/museum-of-classical-yoga/#virtual_tour' },
       { menu: 'Gallery', link: '/museum-of-classical-yoga/#gallery' },
-      { menu: 'location', link: '/museum-of-classical-yoga/#location' },
+      { menu: 'Location', link: '/museum-of-classical-yoga/#location' },
     ],
     FACILITIES: [
       { menu: 'Overview', link: '/facilities' },

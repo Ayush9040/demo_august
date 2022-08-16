@@ -1203,51 +1203,6 @@
       }
     ]
   },
-  "/Rules-and-Regulations": {
-    "title": "Hostels - The Yoga Institute Santacruz East Mumbai",
-    "h1Tag": "Hostels",
-    "h2Tags": [],
-    "metaData": [
-      {
-        "name": "keywords",
-        "content": "yoga institute facilities, Student Accommodation"
-      },
-      {
-        "name": "description",
-        "content": "The Yoga Institute, one of the oldest yoga schools in the world, provides hostel accommodation that can be best described as a home away from home."
-      },
-      {
-        "property": "og:description",
-        "content": "The Yoga Institute, one of the oldest yoga schools in the world, provides hostel accommodation that can be best described as a home away from home."
-      },
-      {
-        "property": "og:title",
-        "content": "Hostels - The Yoga Institute Santacruz East Mumbai"
-      },
-      {
-        "property": "og:url",
-        "content": "https://theyogainstitute.org/Rules-and-Regulations"
-      },
-      {
-        "property": "og:sitename",
-        "content": "The Yoga Institue"
-      },
-      {
-        "property": "og:image",
-        "content": "https://ecom-static-site.oss-ap-south-1.aliyuncs.com/metaImages/HOSTELS.jpg"
-      },
-      {
-        "property": "og:type",
-        "content": "Website"
-      }
-    ],
-    "links":[
-      {
-        "rel":"canonical",
-        "href":"https://theyogainstitute.org/Rules-and-Regulations"
-      }
-    ]
-  },
   "/our-facts": {
     "title": "The Yoga Institute Facts - Shri Yogendraji ",
     "h1Tag": "The Yoga Institute Facts",
@@ -1472,6 +1427,11 @@
         "href":"https://theyogainstitute.org/kailaspati-tree"
       }
     ]
+  },
+  "/Rules-and-Regulations": {
+    "title": "Rules and Regulations - The Yoga Institute",
+    "h1Tag": "Rules and Regulations",
+    "h2Tags": []
   },
   "/one-month-ttc": {
     "title": "One Month Yoga Teacher Training Course In Mumbai, India - The Yoga Institute",
