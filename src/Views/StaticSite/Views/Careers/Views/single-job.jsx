@@ -11,39 +11,41 @@ import { useDispatch } from 'react-redux'
 import { fetchJobData, postApplicantionData } from '../Career.action'
 import InputComponent from '../../../Components/InputComponent'
 import MessageModal from '../../../Components/MessageModal'
+import Loader from '../../../Components/Loader'
 const SingleJob = () => {
-
   const singleJob = {
-    title:'single-job',
-    color:'orange',
-    menuColor:'orange',
-    menuItems:[]
+    title: 'single-job',
+    color: 'orange',
+    menuColor: 'orange',
+    menuItems: [],
   }
-  
+
   const dispatch = useDispatch()
   const { jobPrograms } = useSelector((state) => state?.career)
   const { jobId } = useParams()
   const [job, setJob] = useState({})
-  const [formData, setFormData]= useState({
-    name:'',
-    email:'',
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
   })
-  const[validate, setValidate]=useState(0)
-  const [imageName, setImageName]= useState('')
-  const [sizeError, setSizeError]= useState()
-  const [imageAssest, setImageAssest]= useState(null)
+  const [validate, setValidate] = useState(0)
+  const [imageName, setImageName] = useState('')
+  const [sizeError, setSizeError] = useState()
+  const [imageAssest, setImageAssest] = useState(null)
   const [certificateAssest, setCertificateAssest] = useState(null)
-  const [certificateName, setCertificateName]= useState('')
+  const [certificateName, setCertificateName] = useState('')
+  const [imageLoading, setImageLoading] = useState(false)
+  const [resumeLoading, setResumeLoading] = useState(false)
   const [modal, setModal] = useState()
   useEffect(() => {
     dispatch(fetchJobData())
-  },[])
-  useEffect(()=>{
+  }, [])
+  useEffect(() => {
     console.log(jobPrograms)
     setJob(jobPrograms.find((item) => item['_id'] === jobId))
-  },[jobPrograms])
+  }, [jobPrograms])
   console.log(job)
-  const handleSubmit = async(e)=>{
+  const handleSubmit = async(e) => {
     e.preventDefault()
     if (formData.firstName === '') {
       setValidate(1)
@@ -53,7 +55,7 @@ const SingleJob = () => {
       setValidate(3)
     } else if (certificateAssest === null) {
       setValidate(4)
-    }else {
+    } else {
       let careerPost = {
         name: formData.name,
         email: formData.email,
@@ -75,13 +77,14 @@ const SingleJob = () => {
     } else {
       const url = await uploadFile(file, type)
       if (changeData === 'RESUME') setCertificateAssest(url)
-      else if (changeData === 'IMAGE')
-        setImageAssest(url)
+      else if (changeData === 'IMAGE') setImageAssest(url)
     }
+    setImageLoading(false)
+    setResumeLoading(false)
   }
   return (
     <div className="single-job">
-      <InnerNavComponent abc={ singleJob } />
+      <InnerNavComponent abc={singleJob} />
       <div className="job-details">
         <div className="job-description">
           <div className="job-img">
@@ -112,26 +115,31 @@ const SingleJob = () => {
             </ul>
           </div>
           <div className="job-form">
-            <form onSubmit={(e)=>{handleSubmit(e)}} className='job_input'>
+            <form
+              onSubmit={(e) => {
+                handleSubmit(e)
+              }}
+              className="job_input"
+            >
               <fieldset>
                 {/* <input type={'text'} placeholder={'Name'} /> */}
                 <InputComponent
-                  type='text'
-                  placeholder='Name'
+                  type="text"
+                  placeholder="Name"
                   form={formData}
                   setField={setFormData}
-                  keyName='name'
+                  keyName="name"
                   errorCheck={setValidate}
                 />
               </fieldset>
               <fieldset>
                 {/* <input type={'email'} placeholder={'Email'} /> */}
                 <InputComponent
-                  type='email'
-                  placeholder='Email'
+                  type="email"
+                  placeholder="Email"
                   form={formData}
                   setField={setFormData}
-                  keyName='email'
+                  keyName="email"
                   errorCheck={setValidate}
                 />
                 {validate === 1 && (
@@ -146,35 +154,44 @@ const SingleJob = () => {
                 )}
               </fieldset>
               <div className="uploads">
-                <fieldset>
-                  <label htmlFor="image">
-                    {imageAssest ? imageName.substring (0, 15) : 'upload image'}
-                    <input
-                      type={'file'}
-                      id="image"
-                      placeholder="Upload Image"
-                      onChange={(e)=> {
-                        uploadImage(e.target.files[0], 'image', 'IMAGE')
-                        setImageName(e.target.files[0].name)
-                      }}
-                      accept="image/*"
-                      errorCheck={setValidate}
-                    />
-                    &ensp;
-                    {upload}
-                  </label>
-                  {validate === 1 && (
-                    <small style={{ color: 'red', marginLeft: '2rem' }}>
-                    *Please Enter Name!
-                    </small>
-                  )}
-                  {sizeError === 2 && (
-                    <small style={{ color: 'red', marginLeft: '2rem' }}>Please upload image less than 2 MB </small>
-                  )}
-                </fieldset>
+                {imageLoading ? (
+                  <Loader />
+                ) : (
+                  <fieldset>
+                    <label htmlFor="image">
+                      {imageAssest
+                        ? imageName.substring(0, 15)
+                        : 'upload image'}
+                      <input
+                        type={'file'}
+                        id="image"
+                        placeholder="Upload Image"
+                        onChange={(e) => {
+                          uploadImage(e.target.files[0], 'image', 'IMAGE')
+                          setImageName(e.target.files[0].name)
+                        }}
+                        accept="image/*"
+                        errorCheck={setValidate}
+                      />
+                      &ensp;
+                      {upload}
+                    </label>
+                    {validate === 1 && (
+                      <small style={{ color: 'red', marginLeft: '2rem' }}>
+                        *Please Enter Name!
+                      </small>
+                    )}
+                    {sizeError === 2 && (
+                      <small style={{ color: 'red', marginLeft: '2rem' }}>
+                        Please upload image less than 2 MB{' '}
+                      </small>
+                    )}
+                  </fieldset>
+                )}
+
                 <fieldset>
                   <label htmlFor="resume">
-                    {certificateName
+                    {certificateAssest
                       ? certificateName.substring(0, 15)
                       : 'Upload Resume'}
                     <input
@@ -184,10 +201,10 @@ const SingleJob = () => {
                         uploadImage(e.target.files[0], 'resume', 'RESUME')
                         setCertificateName(e.target.files[0].name)
                       }}
-                      accept='pdf'
+                      accept="pdf"
                       placeholder="Upload Resume"
                       errorCheck={setValidate}
-                      pdf = {certificateAssest}
+                      pdf={certificateAssest}
                     />
                     &ensp;
                     {upload}
@@ -205,10 +222,10 @@ const SingleJob = () => {
                 </fieldset>
               </div>
               <fieldset>
-                <input id="apply"  type={'submit'} />
+                <input id="apply" type={'submit'} />
                 {validate === 5 && (
                   <small style={{ color: 'green', marginLeft: '2rem' }}>
-                      Form submitted succesfully
+                    Form submitted succesfully
                   </small>
                 )}
               </fieldset>
@@ -216,7 +233,13 @@ const SingleJob = () => {
           </div>
         </div>
       </div>
-      { modal && <MessageModal type='SUCCESSS' message='Application submitted successfully!' closePopup={ setModal } /> }
+      {modal && (
+        <MessageModal
+          type="SUCCESSS"
+          message="Application submitted successfully!"
+          closePopup={setModal}
+        />
+      )}
     </div>
   )
 }
