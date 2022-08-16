@@ -23,6 +23,7 @@ const ttc200hr = {
     mostPopular: true,
     rating: 5,
     colorCode: '#E38F73',
+  
     timing: 'Monday to Saturday: 10:00 am - 6:00 pm (IST)',
     fees: {
       onlineFee: 22000,
@@ -9386,8 +9387,9 @@ const classes = {
     mostPopular: false,
     rating: 5,
     colorCode: '#D3A29D',
+    join: true,
     timing:
-      'Monday, Wednesday, Friday: Morning: 6:30 am - 8:00 am (IST) Tuesday, Thursday & Saturday:Evening: 5:30 pm - 7:00 pm  (IST) (Join on any date)',
+      'Monday, Wednesday, Friday: Morning: 6:30 am - 8:00 am (IST) Tuesday, Thursday & Saturday:Evening: 5:30 pm - 7:00 pm  (IST) *',
     fees: {
       onlineFee: 1500,
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
@@ -9460,8 +9462,9 @@ const classes = {
     colorCode: '#C48E8C',
     metaDescription:
       'Join now if you’re looking for an immunity and vitality boost, emotional release, anxiety and anger management, glowing skin, inner radiance and enhanced creativity.',
+    join: true,
     timing:
-      'Monday & Wednesday - 7:30 am - 8:30 am  (IST) (Online) Tuesday & Thursday - 6:30 pm - 7.30 pm  (IST) (On campus)(Join on any date)',
+      'Monday & Wednesday - 7:30 am - 8:30 am  (IST) (Online) Tuesday & Thursday - 6:30 pm - 7.30 pm  (IST) (On campus) *',
     fees: {
       onlineFee: 1400,
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
@@ -9548,8 +9551,9 @@ const classes = {
       'Explore the world of Yoga asanas from the comfort of right where you are with our online asana classes',
     rating: 5,
     colorCode: '#B77E7E',
+    join: true,
     timing:
-      'Monday, Tuesday,Thursday & Friday(Join on any date): Morning Batch:6:30 am to 7:30 am, 7:30 am to 8:30 am, 8:30 am to 9:30 am   Evening Batch:4pm to 5pm, 5pm to 6pm, 6pm to 7pm, 7pm to 8pm  Weekend Schedule(Sat-Sun): 7:30 am to 9 am',
+      'Monday, Tuesday,Thursday & Friday *: Morning Batch:6:30 am to 7:30 am, 7:30 am to 8:30 am, 8:30 am to 9:30 am   Evening Batch:4pm to 5pm, 5pm to 6pm, 6pm to 7pm, 7pm to 8pm  Weekend Schedule(Sat-Sun): 7:30 am to 9 am',
     fees: {
       onlineFee: 1000,
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
@@ -9740,8 +9744,9 @@ const classes = {
       'This is a special men-only regular asana class conducted by The Yoga Institute',
     rating: 5,
     colorCode: '#D3A29D',
+    join: true,
     timing:
-      'Monday,Tuesday,Thursday,Friday(Join On Any Date):6:30 am to 7:30 am, 7:30 am to 8:30 am, 1:00 pm to 2:00 pm, 6:00 pm to 7:00 pm, 7:00 pm to 8:00 pm',
+      'Monday,Tuesday,Thursday,Friday * :6:30 am to 7:30 am, 7:30 am to 8:30 am, 1:00 pm to 2:00 pm, 6:00 pm to 7:00 pm, 7:00 pm to 8:00 pm',
     fees: {
       onlineFee: 1000,
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
@@ -9849,8 +9854,9 @@ const classes = {
       'This is a special women-only regular asana class conducted by The Yoga Institute',
     rating: 5,
     colorCode: '#C48E8C',
+    join: true,
     timing:
-      'Monday,Tuesday,Thursday,Friday(Join On Any Date):6:30 am to 7:30 am, 7:30 am to 8:30 am,8:30 am to 9:30 am, 9:30 am to 10:30 am, 10:30 am to 11:30 am, 11:30 am to 12:30 pm, 1:00 pm to 2:00 pm, 2:00 pm to 3:00 pm, 3:00 pm to 4:00 pm, 4:00 pm to 5:00 pm, 5:00 pm to 6:00 pm, 6:00 pm to 7:00 pm, 7:00 pm to 8:00 pm',
+      'Monday,Tuesday,Thursday,Friday * :6:30 am to 7:30 am, 7:30 am to 8:30 am,8:30 am to 9:30 am, 9:30 am to 10:30 am, 10:30 am to 11:30 am, 11:30 am to 12:30 pm, 1:00 pm to 2:00 pm, 2:00 pm to 3:00 pm, 3:00 pm to 4:00 pm, 4:00 pm to 5:00 pm, 5:00 pm to 6:00 pm, 6:00 pm to 7:00 pm, 7:00 pm to 8:00 pm',
     fees: {
       onlineFee: 1000,
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
@@ -10810,7 +10816,8 @@ const classes = {
       'The course covers simple asanas, games, arts and other child-friendly activities that introduce your child to profound Yogic ideas and a yogic lifestyle',
     rating: 5,
     colorCode: '#B77E7E',
-    timing: 'Saturday & Sunday: 8:00 am - 9:30 am (IST) (Join on any date)',
+    join: true,
+    timing: 'Saturday & Sunday: 8:00 am - 9:30 am (IST) *',
     fees: {
       onlineFee: 1000,
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
@@ -10974,8 +10981,9 @@ const classes = {
       'Click now if you want to make bliss and calm a part of your life daily.',
     rating: 5,
     colorCode: '#C48E8C',
+    join: true,
     timing:
-      'Tuesday, Thursday & Saturday: 7:00 am - 7:45 am  (IST) (Join on any date)',
+      'Tuesday, Thursday & Saturday: 7:00 am - 7:45 am  (IST) *',
     fees: {
       onlineFee: 1000,
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
@@ -11294,8 +11302,9 @@ const classes = {
       'This is for people who are looking forward to yogic progress after being familiar with basic Yogasanas.',
     rating: 5,
     colorCode: '#C48E8C',
+    join: true,
     timing:
-      'Monday, Wednesday & Friday : Morning: 5:30 am - 6:30 am  (IST) or Evening: 6:00 pm - 7:00 pm  (IST) (Join on any date)',
+      'Monday, Wednesday & Friday : Morning: 5:30 am - 6:30 am  (IST) or Evening: 6:00 pm - 7:00 pm  (IST) *',
     fees: {
       onlineFee: 1500,
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },

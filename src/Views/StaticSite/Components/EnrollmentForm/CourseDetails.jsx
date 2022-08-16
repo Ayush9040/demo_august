@@ -254,6 +254,7 @@ const CourseDetails = ({
                         type={'file'}
                         id="image"
                         onChange={(e) => {
+                          setLoading(true)
                           uploadDoc(
                             e.target.files[0],
                             'applicant_image',
