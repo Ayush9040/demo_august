@@ -1,7 +1,8 @@
-import React,{ useEffect } from 'react'
+import React, { useEffect } from 'react'
 import { useState } from 'react'
 import { upload } from '../../assets/icons/icon'
 import { uploadFile } from '../../../../helpers/OssHelper'
+import Loader from '../Loader'
 const CourseDetails = ({
   currentCourse,
   courseDate,
@@ -15,16 +16,17 @@ const CourseDetails = ({
   empty,
   setEmpty,
   courseFee,
-  setCourseFee
+  setCourseFee,
 }) => {
   useEffect(() => {
-    if(formData.mode === 'ONLINE'){
-      setFormData({ ...formData,residental:'' })
+    if (formData.mode === 'ONLINE') {
+      setFormData({ ...formData, residental: '' })
     }
   }, [formData.mode])
 
-  const [pictureName,setPictureName]=useState('')
-  const [certificateName,setcertificateName]=useState('')
+  const [pictureName, setPictureName] = useState('')
+  const [certificateName, setcertificateName] = useState('')
+  const [loading, setLoading] = useState(false)
 
   // const getBase64 = (file, cb)=>{
   //   let reader = new FileReader()
@@ -36,14 +38,13 @@ const CourseDetails = ({
   //   }
   // }
 
-  const uploadDoc = async(file,type, changeValue)=> {
-    
-    const url = await uploadFile( file,type )
-    if(changeValue==='CERTIFICATE'){
+  const uploadDoc = async(file, type, changeValue) => {
+    const url = await uploadFile(file, type)
+    if (changeValue === 'CERTIFICATE') {
       setCourseAsset2(url)
       setEmpty(0)
-    }else if(changeValue==='IMAGE')
-      setCourseAsset1(url)
+    } else if (changeValue === 'IMAGE') setCourseAsset1(url)
+    setLoading(false)
   }
   return (
     <div className="main-container">
@@ -57,9 +58,9 @@ const CourseDetails = ({
               <div className="current_duration">
                 <div>
                   {currentCourse?.title}&nbsp;
-                  {courseDate!=='null' ? courseDate : ''}
+                  {courseDate !== 'null' ? courseDate : ''}
                 </div>
-                { courseFee &&  <p className="current_fees"> ₹ {courseFee}</p>}
+                {courseFee && <p className="current_fees"> ₹ {courseFee}</p>}
               </div>
             </div>
           </div>
@@ -73,11 +74,14 @@ const CourseDetails = ({
                   type="radio"
                   name="mode"
                   value="OFFLINE"
-                  disabled={currentCourse.onCampus===false}
-                  checked={formData.mode==='OFFLINE'}
+                  disabled={currentCourse.onCampus === false}
+                  checked={formData.mode === 'OFFLINE'}
                   style={
                     currentCourse.onCampus === false
-                      ? { background: 'url(https://ecom-static-site.oss-ap-south-1.aliyuncs.com/icons/icons8-multiply-24.png)' }
+                      ? {
+                        background:
+                            'url(https://ecom-static-site.oss-ap-south-1.aliyuncs.com/icons/icons8-multiply-24.png)',
+                      }
                       : {}
                   }
                   onChange={(e) => {
@@ -99,9 +103,14 @@ const CourseDetails = ({
                   name="mode"
                   value="ONLINE"
                   disabled={currentCourse.online === false}
-                  checked={formData.mode==='ONLINE'}
+                  checked={formData.mode === 'ONLINE'}
                   style={
-                    currentCourse.online === false ? { background: 'url(https://ecom-static-site.oss-ap-south-1.aliyuncs.com/icons/icons8-multiply-24.png)' } : {}
+                    currentCourse.online === false
+                      ? {
+                        background:
+                            'url(https://ecom-static-site.oss-ap-south-1.aliyuncs.com/icons/icons8-multiply-24.png)',
+                      }
+                      : {}
                   }
                   onChange={(e) => {
                     if (e.target.checked) {
@@ -117,17 +126,30 @@ const CourseDetails = ({
                 &nbsp; Online
               </label>
             </div>
-            { empty==='mode' && <small className='mode-err' >Please select 1 mode</small>}
+            {empty === 'mode' && (
+              <small className="mode-err">Please select 1 mode</small>
+            )}
             <div className="last_radio_button-cols">
               <label htmlFor="" className="course_details_text">
                 <input
                   type="radio"
                   name="resident"
                   value="RESIDENTIAL"
-                  checked={formData.mode === 'OFFLINE' && formData.residental ==='RESIDENTIAL'}
-                  disabled={currentCourse.residential === false || formData.mode === 'ONLINE'}
+                  checked={
+                    formData.mode === 'OFFLINE' &&
+                    formData.residental === 'RESIDENTIAL'
+                  }
+                  disabled={
+                    currentCourse.residential === false ||
+                    formData.mode === 'ONLINE'
+                  }
                   style={
-                    currentCourse.residential === false ? { background: 'url(https://ecom-static-site.oss-ap-south-1.aliyuncs.com/icons/icons8-multiply-24.png)' } : {}
+                    currentCourse.residential === false
+                      ? {
+                        background:
+                            'url(https://ecom-static-site.oss-ap-south-1.aliyuncs.com/icons/icons8-multiply-24.png)',
+                      }
+                      : {}
                   }
                   onChange={(e) => {
                     if (e.target.checked) {
@@ -136,7 +158,9 @@ const CourseDetails = ({
                         residental: e.target.value,
                       })
                       setEmpty(0)
-                      setCourseFee(currentCourse?.fees?.offlineFee?.residentialFee)
+                      setCourseFee(
+                        currentCourse?.fees?.offlineFee?.residentialFee
+                      )
                     }
                   }}
                 />{' '}
@@ -147,11 +171,20 @@ const CourseDetails = ({
                   type="radio"
                   name="resident"
                   value="NONRESIDENTIAL"
-                  checked={formData.mode === 'OFFLINE' && formData.residental ==='NONRESIDENTIAL'}
-                  disabled={currentCourse.nonResidential === false  || formData.mode === 'ONLINE'}
+                  checked={
+                    formData.mode === 'OFFLINE' &&
+                    formData.residental === 'NONRESIDENTIAL'
+                  }
+                  disabled={
+                    currentCourse.nonResidential === false ||
+                    formData.mode === 'ONLINE'
+                  }
                   style={
                     currentCourse.nonResidential === false
-                      ? { background: 'url(https://ecom-static-site.oss-ap-south-1.aliyuncs.com/icons/icons8-multiply-24.png)' }
+                      ? {
+                        background:
+                            'url(https://ecom-static-site.oss-ap-south-1.aliyuncs.com/icons/icons8-multiply-24.png)',
+                      }
                       : {}
                   }
                   onChange={(e) => {
@@ -161,53 +194,82 @@ const CourseDetails = ({
                         residental: e.target.value,
                       })
                       setEmpty(0)
-                      setCourseFee(currentCourse?.fees?.offlineFee?.nonResidentialFee)
+                      setCourseFee(
+                        currentCourse?.fees?.offlineFee?.nonResidentialFee
+                      )
                     }
                   }}
                 />{' '}
                 &nbsp; Non-Residential
               </label>
-              { empty==='subMode' && <small className='mode-err' >Please select submode</small>}
+              {empty === 'subMode' && (
+                <small className="mode-err">Please select submode</small>
+              )}
             </div>
           </form>
           <div className="upload-section">
             <p className="course-details-text">
-              { currentCourse.certficate===true && 'Please upload the relevant TYI certificate pre requisite*' }
+              {currentCourse.certficate === true &&
+                'Please upload the relevant TYI certificate pre requisite*'}
               <div className="uploads">
-                { currentCourse.certficate===true && <fieldset>
-                  <label htmlFor="resume">
-                    {courseAsset2
-                      ? certificateName.substring(0, 15)
-                      : 'Upload Certificate '}
-                    <input
-                      type={'file'}
-                      onChange={(e) => {uploadDoc(e.target.files[0],'applicant_certificate','CERTIFICATE');setcertificateName(e.target.files[0].name)}}
-                      id="resume"
-                      accept=".pdf"
-                      placeholder="Upload Cerificate"
-                    />
-                    &ensp;
-                    {upload}
-                  </label>
-                  { empty==='certificate' && <small style={{ color:'red' }} >Please upload relevant certificate</small>}
-                </fieldset>
-                }
-                <fieldset>
-                  <label htmlFor="image">
-                    {courseAsset1
-                      ? pictureName.substring(0, 15)
-                      : 'Upload Passport size photo'}
-                    <input
-                      type={'file'}
-                      id="image"
-                      onChange={(e) => {uploadDoc(e.target.files[0],'applicant_image','IMAGE');setPictureName(e.target.files[0].name)}}
-                      placeholder="Upload Passport size photo"
-                      accept="image/*"
-                    />
-                    &ensp;
-                    {upload}
-                  </label>
-                </fieldset>
+                {currentCourse.certficate === true && (
+                  <fieldset>
+                    <label htmlFor="resume">
+                      {courseAsset2
+                        ? certificateName.substring(0, 15)
+                        : 'Upload Certificate '}
+                      <input
+                        type={'file'}
+                        onChange={(e) => {
+                          uploadDoc(
+                            e.target.files[0],
+                            'applicant_certificate',
+                            'CERTIFICATE'
+                          )
+                          setcertificateName(e.target.files[0].name)
+                        }}
+                        id="resume"
+                        accept=".pdf"
+                        placeholder="Upload Cerificate"
+                      />
+                      &ensp;
+                      {upload}
+                    </label>
+                    {empty === 'certificate' && (
+                      <small style={{ color: 'red' }}>
+                        Please upload relevant certificate
+                      </small>
+                    )}
+                  </fieldset>
+                )}
+                {loading ? (
+                  <Loader />
+                ) : (
+                  <fieldset>
+                    <label htmlFor="image">
+                      {courseAsset1
+                        ? pictureName.substring(0, 15)
+                        : 'Upload Passport size photo'}
+                      <input
+                        type={'file'}
+                        id="image"
+                        onChange={(e) => {
+                          setLoading(true)
+                          uploadDoc(
+                            e.target.files[0],
+                            'applicant_image',
+                            'IMAGE'
+                          )
+                          setPictureName(e.target.files[0].name)
+                        }}
+                        placeholder="Upload Passport size photo"
+                        accept="image/*"
+                      />
+                      &ensp;
+                      {upload}
+                    </label>
+                  </fieldset>
+                )}
               </div>
             </p>
           </div>

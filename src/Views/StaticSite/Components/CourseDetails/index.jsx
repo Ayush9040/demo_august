@@ -15,39 +15,37 @@ import { useSelector } from 'react-redux'
 
 const CourseDetails = ({ pageDate }) => {
   const [detail, setDetail] = useState(1)
-  const [error,setError]= useState()
-  const[Params]= useSearchParams()
+  const [error, setError] = useState()
+  const [Params] = useSearchParams()
 
   // const [courseDate, setCourseDate] = useState()
 
   // useEffect(() => {
   //   setCourseDate(localStorage.getItem('selectedDate'))
   // }, [])
-  const { isLoggedIn } = useSelector(state=>state.auth)
+  const { isLoggedIn } = useSelector((state) => state.auth)
   const [selectDate, setSetselectDate] = useState(null)
-  
+
   const checkHandler = () => {
-    if(pageDate.dates.length!==0){
-      if(selectDate === null){
+    if (pageDate.dates.length !== 0) {
+      if (selectDate === null) {
         setError(1)
-      }else{
+      } else {
         setError(0)
       }
     }
   }
 
-
   // localStorage.setItem('selectedDate',selectDate)
   useEffect(() => {
     setSetselectDate(Params.get('date'))
-    
+
     window.scrollTo(0, 0)
-    
+
     // {Params.get('date')===null? window.scrollTo(0, 0): document.getElementById('date-select').scrollIntoView()}
-    
   }, [])
 
-  const scroll = ()=>{
+  const scroll = () => {
     // document.getElementById('date-select').scrollIntoView()
     return <CommonBtn text={'Enroll Now'} />
   }
@@ -96,8 +94,8 @@ const CourseDetails = ({ pageDate }) => {
     borderRadius: '20px',
     borderStyle: 'solid',
     maxWidth: 'fit-content',
-    marginTop:'2rem',
-    marginLeft:'10rem'
+    marginTop: '2rem',
+    marginLeft: '10rem',
   }
   const selectStyles1 = {
     cursor: 'pointer',
@@ -110,7 +108,7 @@ const CourseDetails = ({ pageDate }) => {
     borderRadius: '20px',
     borderStyle: 'solid',
     maxWidth: 'fit-content',
-    marginTop:'2rem',
+    marginTop: '2rem',
     //marginLeft:'10rem'
   }
 
@@ -155,7 +153,7 @@ const CourseDetails = ({ pageDate }) => {
   }
 
   return (
-    <div className="course-detail-page" id='registration'   >
+    <div className="course-detail-page" id="registration">
       <div className="main-section" style={{ background: '#C9705F' }}>
         <div className="course-info">
           <h1>
@@ -172,19 +170,37 @@ const CourseDetails = ({ pageDate }) => {
             )}
           </h1>
           <p>{pageDate?.timing}</p>
+          {pageDate?.join === true && (
+            <p style={{ marginTop: '1.5rem' }}>*Join on any date</p>
+          )}
           <p style={{ marginTop: '20px' }}>
             {pageDate.metaDescription ||
               'Lorem Ipsum is simply dummy text of the printing and typesetting industry. '}
           </p>
-          <div id='date-select-mobile' style={pageDate?.dates?.length!==0 ? { visibility:'visible' }:{ visibility:'hidden' }} ><SelectDropDown  currentValue={selectDate} changeCurrentValue={setSetselectDate} text={'Select Date/Time'} isStyles={selectStyles1} dates={pageDate.dates}/> </div>
-          <div className="course-options"  >
+          <div
+            id="date-select-mobile"
+            style={
+              pageDate?.dates?.length !== 0
+                ? { visibility: 'visible' }
+                : { visibility: 'hidden' }
+            }
+          >
+            <SelectDropDown
+              currentValue={selectDate}
+              changeCurrentValue={setSetselectDate}
+              text={'Select Date/Time'}
+              isStyles={selectStyles1}
+              dates={pageDate.dates}
+            />{' '}
+          </div>
+          <div className="course-options">
             {/* {selectDate ? <Link to={ isLoggedIn ? `/enrollment/${pageDate.key}/?date=${selectDate}`:`/user/sign-in/${pageDate.key}/?date=${selectDate}`}>
               <CommonBtn text={'Enroll Now'} />
             </Link> :  scroll() } */}
 
             <div onClick={checkHandler}>
-              {pageDate?.dates?.length!==0 ? 
-                (selectDate ? (
+              {pageDate?.dates?.length !== 0 ? (
+                selectDate ? (
                   <Link
                     to={
                       isLoggedIn
@@ -194,7 +210,11 @@ const CourseDetails = ({ pageDate }) => {
                   >
                     <CommonBtn text={'Enroll Now'} />
                   </Link>
-                ) : scroll()):( <Link
+                ) : (
+                  scroll()
+                )
+              ) : (
+                <Link
                   to={
                     isLoggedIn
                       ? `/enrollment/${pageDate.key}/?date=${selectDate}`
@@ -202,13 +222,24 @@ const CourseDetails = ({ pageDate }) => {
                   }
                 >
                   <CommonBtn text={'Enroll Now'} />
-                </Link>)}
-              {error===1 && <small style={
-                { color: 'white', marginLeft: '0', position:'relative', top: '1rem', left: '2rem', fontSize: '1.2rem' }}>
-                        *Please Select Date/Time!
-              </small>}
+                </Link>
+              )}
+              {error === 1 && (
+                <small
+                  style={{
+                    color: 'white',
+                    marginLeft: '0',
+                    position: 'relative',
+                    top: '1rem',
+                    left: '2rem',
+                    fontSize: '1.2rem',
+                  }}
+                >
+                  *Please Select Date/Time!
+                </small>
+              )}
             </div>
-            
+
             {/* <CommonBtn text={'Gift Course'} /> */}
           </div>
         </div>
@@ -216,19 +247,41 @@ const CourseDetails = ({ pageDate }) => {
           {pageDate?.image ? (
             <img src={pageDate?.image} alt={pageDate.title} />
           ) : (
-            <img src={`${baseDomain}${courseAssets.courseAsset2}`} alt='course-image' />
+            <img
+              src={`${baseDomain}${courseAssets.courseAsset2}`}
+              alt="course-image"
+            />
           )}
         </div>
       </div>
 
-      <div id='date-select' style={pageDate?.dates?.length!==0 ? { visibility:'visible' }:{ visibility:'hidden' }} ><SelectDropDown  currentValue={selectDate} changeCurrentValue={setSetselectDate} text={'Select Date/Time'} isStyles={selectStyles} dates={pageDate.dates}/> </div>
-      
+      <div
+        id="date-select"
+        style={
+          pageDate?.dates?.length !== 0
+            ? { visibility: 'visible' }
+            : { visibility: 'hidden' }
+        }
+      >
+        <SelectDropDown
+          currentValue={selectDate}
+          changeCurrentValue={setSetselectDate}
+          text={'Select Date/Time'}
+          isStyles={selectStyles}
+          dates={pageDate.dates}
+        />{' '}
+      </div>
+
       {pageDate.category === 'ttc' && (
-        <div className="career-navigation-lg-div" >
+        <div className="career-navigation-lg-div">
           <div className="career-navigation-lg">
             <ul className="innerNav">
               {options.map((item, idx) => (
-                <a key={item.id} id={item.title === 'FAQ' ? 'comingsoon':''} href={`#${item.id}`}>
+                <a
+                  key={item.id}
+                  id={item.title === 'FAQ' ? 'comingsoon' : ''}
+                  href={`#${item.id}`}
+                >
                   <li
                     onClick={() => {
                       selectMenu(item.title)
@@ -246,42 +299,39 @@ const CourseDetails = ({ pageDate }) => {
           </div>
         </div>
       )}
-    
 
-
-      {<div className="details-section" id='program-details' >
-        <h1>
-            Program Details
-        </h1>
-        {pageDate?.details?.map(({ type, content }) => {
-          return selectComponent(type, content)
-        })}
-      </div>}
-      {(pageDate?.category === 'ttc' && pageDate?.curriculum?.length !== 0) && <div className="details-section" id='curriculum' >
-        <h1>
-            Curriculum
-            
-        </h1>
-        {pageDate?.curriculum?.map(({ type, content }) => {
-          return selectComponent(type, content)
-        })}
-      </div>}
-      {(pageDate?.category === 'ttc' && pageDate?.teaching?.length !== 0) && <div className="details-section" id='teaching' >
-        <h1>
-            Teaching
-        </h1>
-        {pageDate?.teaching?.map(({ type, content }) => {
-          return selectComponent(type, content)
-        })}
-      </div>}
-      {(pageDate?.category ==='ttc' && pageDate?.offerings?.length !==0) && <div className="details-section" id='offering' >
-        <h1>
-          Our Unique Offerings
-        </h1>
-        {pageDate?.offerings?.map(({ type, content }) => {
-          return selectComponent(type, content)
-        })}
-      </div>}
+      {
+        <div className="details-section" id="program-details">
+          <h1>Program Details</h1>
+          {pageDate?.details?.map(({ type, content }) => {
+            return selectComponent(type, content)
+          })}
+        </div>
+      }
+      {pageDate?.category === 'ttc' && pageDate?.curriculum?.length !== 0 && (
+        <div className="details-section" id="curriculum">
+          <h1>Curriculum</h1>
+          {pageDate?.curriculum?.map(({ type, content }) => {
+            return selectComponent(type, content)
+          })}
+        </div>
+      )}
+      {pageDate?.category === 'ttc' && pageDate?.teaching?.length !== 0 && (
+        <div className="details-section" id="teaching">
+          <h1>Teaching</h1>
+          {pageDate?.teaching?.map(({ type, content }) => {
+            return selectComponent(type, content)
+          })}
+        </div>
+      )}
+      {pageDate?.category === 'ttc' && pageDate?.offerings?.length !== 0 && (
+        <div className="details-section" id="offering">
+          <h1>Our Unique Offerings</h1>
+          {pageDate?.offerings?.map(({ type, content }) => {
+            return selectComponent(type, content)
+          })}
+        </div>
+      )}
     </div>
   )
 }
