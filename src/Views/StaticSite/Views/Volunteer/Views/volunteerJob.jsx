@@ -13,10 +13,10 @@ import MessageModal from '../../../Components/MessageModal'
 import VolunteerGrid from '../../../Components/VolunteerGrid'
 import { fetchProgramsData, postApplicationData } from '../Volunteer.action'
 import InnerNavComponent from '../../../Components/InnerNavComponent'
+import Loader from '../../../Components/Loader'
 import './style.scss'
 
 const VolunteerJob = () => {
-  
   const dispatch = useDispatch()
   const [imageAssest, setImageAssest] = useState(null)
   const [certificateAssest, setCertificateAssest] = useState(null)
@@ -25,7 +25,9 @@ const VolunteerJob = () => {
   const [sizeError, setSizeError] = useState(0)
   const { id } = useParams()
   const [program, setProgram] = useState({})
-  const [modal,setModal]=useState(false)
+  const [modal, setModal] = useState(false)
+  const [imageLoading, setImageLoading] = useState(false)
+  const [resumeLoading , setResumeLoading] = useState(false)
   const uploadImage = async(file, type, changeData) => {
     if (file.size / 1024 / 1024 > 2) {
       if (changeData === 'RESUME') {
@@ -35,10 +37,13 @@ const VolunteerJob = () => {
       }
     } else {
       const url = await uploadFile(file, type)
-      if (changeData === 'RESUME'){ setCertificateAssest(url)}
-      else if(changeData === 'IMAGE'){
+      if (changeData === 'RESUME') {
+        setCertificateAssest(url)
+      } else if (changeData === 'IMAGE') {
         setImageAssest(url)
       }
+      setImageLoading(false)
+      setResumeLoading(false)
     }
   }
 
@@ -103,12 +108,12 @@ const VolunteerJob = () => {
 
   return (
     <div className="single-job">
-      <InnerNavComponent abc={volJob}/>
+      <InnerNavComponent abc={volJob} />
       {/* <CommonBannerNavPrimary innerNav={false} /> */}
       <div className="job-details">
         <div className="job-description">
           <div className="job-img">
-            <img src={program?.thumbnail} alt={ program?.name } />
+            <img src={program?.thumbnail} alt={program?.name} />
           </div>
           <div className="job-info">
             <h1>
@@ -119,8 +124,7 @@ const VolunteerJob = () => {
           </div>
         </div>
         <div className="job-application">
-          <div className="job-requirements">
-          </div>
+          <div className="job-requirements"></div>
           <div className="job-form">
             <form
               onSubmit={(e) => {
@@ -160,71 +164,84 @@ const VolunteerJob = () => {
                   </small>
                 )}
               </fieldset>
+
               <div className="volunteer_uploads">
-                <fieldset>
-                  <label htmlFor="image">
-                    {imageAssest ? imageName.substring(0, 15) : 'Upload Image '}
-                    <input
-                      type={'file'}
-                      id="image"
-                      onChange={(e) => {
-                        uploadImage(e.target.files[0], 'image', 'IMAGE')
-                        setImageName(e.target.files[0].name)
-                      }}
-                      placeholder="Upload Image"
-                      accept="image/*"
-                    />
-                    &ensp;
-                    {upload}
-                  </label>
-                  {sizeError === 2 && (
-                    <small style={{ color: 'red', marginLeft: '2rem' }}>
-                      Please Enter Image Under 2MB
-                    </small>
-                  )}
-                  {validate === 3 && (
-                    <small style={{ color: 'red', marginLeft: '2rem' }}>
-                      Please update image under 2MB
-                    </small>
-                  )}
-                </fieldset>
-                <fieldset>
-                  <label htmlFor="resume">
-                    {certificateName
-                      ? certificateName.substring(0, 15)
-                      : 'Upload Resume'}
-                    <input
-                      type={'file'}
-                      id="resume"
-                      accept=".pdf"
-                      onChange={(e) => {
-                        uploadImage(e.target.files[0], 'resume', 'RESUME')
-                        setCertificateName(e.target.files[0].name)
-                      }}
-                      placeholder="Upload Resume"
-                    />
-                    &ensp;
-                    {upload}
-                  </label>
-                  {sizeError === 1 && (
-                    <small style={{ color: 'red', marginLeft: '2rem' }}>
-                      Please Enter Resume under 2MB
-                    </small>
-                  )}
-                  {validate === 4 && (
-                    <small style={{ color: 'red', marginLeft: '2rem' }}>
-                      Please update resume under 2MB
-                    </small>
-                  )}
-                  <small>Please ensure the file is under 2 MB</small>
-                </fieldset>
+                {imageLoading ? (
+                  <Loader />
+                ) : (
+                  <fieldset>
+                    <label htmlFor="image">
+                      {imageAssest
+                        ? imageName.substring(0, 15)
+                        : 'Upload Image '}
+                      <input
+                        type={'file'}
+                        id="image"
+                        onChange={(e) => {
+                          setImageLoading(true)
+                          uploadImage(e.target.files[0], 'image', 'IMAGE')
+                          setImageName(e.target.files[0].name)
+                        }}
+                        placeholder="Upload Image"
+                        accept="image/*"
+                      />
+                      &ensp;
+                      {upload}
+                    </label>
+                    {sizeError === 2 && (
+                      <small style={{ color: 'red', marginLeft: '2rem' }}>
+                        Please Enter Image Under 2MB
+                      </small>
+                    )}
+                    {validate === 3 && (
+                      <small style={{ color: 'red', marginLeft: '2rem' }}>
+                        Please update image under 2MB
+                      </small>
+                    )}
+                  </fieldset>
+                )}
+                {resumeLoading ? (
+                  <Loader />
+                ) : (
+                  <fieldset>
+                    <label htmlFor="resume">
+                      {certificateName
+                        ? certificateName.substring(0, 15)
+                        : 'Upload Resume'}
+                      <input
+                        type={'file'}
+                        id="resume"
+                        accept=".pdf"
+                        onChange={(e) => {
+                          setResumeLoading(true)
+                          uploadImage(e.target.files[0], 'resume', 'RESUME')
+                          setCertificateName(e.target.files[0].name)
+                        }}
+                        placeholder="Upload Resume"
+                      />
+                      &ensp;
+                      {upload}
+                    </label>
+                    {sizeError === 1 && (
+                      <small style={{ color: 'red', marginLeft: '2rem' }}>
+                        Please Enter Resume under 2MB
+                      </small>
+                    )}
+                    {validate === 4 && (
+                      <small style={{ color: 'red', marginLeft: '2rem' }}>
+                        Please update resume under 2MB
+                      </small>
+                    )}
+                    <small>Please ensure the file is under 2 MB</small>
+                  </fieldset>
+                )}
               </div>
               <fieldset>
                 <input id="volunteer_apply" type={'submit'} />
               </fieldset>
               {validate === 5 && (
                 <small style={{ color: 'green', marginLeft: '2rem' }}>
-                      Form submitted succesfully
+                  Form submitted succesfully
                 </small>
               )}
             </form>
@@ -233,7 +250,13 @@ const VolunteerJob = () => {
       </div>
       <VolunteerGrid altName={program?.name} gallery={program?.gallery} />
       <FAQ questions={program?.faq} />
-      { modal && <MessageModal type='SUCCESS' message='Application submitted successfully!' closePopup={ setModal } /> }
+      {modal && (
+        <MessageModal
+          type="SUCCESS"
+          message="Application submitted successfully!"
+          closePopup={setModal}
+        />
+      )}
     </div>
   )
 }
