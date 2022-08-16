@@ -12,8 +12,8 @@ const ttc200hr = {
       templateOnline: 'COURSE200_1M_ONLINE_TTC',
       templateOffline: {
         templateResidential: 'COURSE200_RES_TTC',
-        templateNonResidential: 'COURSE200_NONRES_TTC'
-      }
+        templateNonResidential: 'COURSE200_NONRES_TTC',
+      },
     },
     batch: 1,
     metaDescription:
@@ -106,7 +106,10 @@ const ttc200hr = {
         type: 'paragraph',
         content: {
           title: 'Fees',
-          text: ['Rs. 22,000 /- Non-Residential: Rs. 28,000/- (Inclusive of course fee, study material, lunch, and snacks)',' Residential: Rs. 50,000/- (Inclusive of course fee, study material, accommodation on triple occupancy basis and 4 meals a day)'],
+          text: [
+            'Rs. 22,000 /- Non-Residential: Rs. 28,000/- (Inclusive of course fee, study material, lunch, and snacks)',
+            ' Residential: Rs. 50,000/- (Inclusive of course fee, study material, accommodation on triple occupancy basis and 4 meals a day)',
+          ],
         },
       },
       {
@@ -337,8 +340,8 @@ const ttc200hr = {
       templateOnline: '',
       templateOffline: {
         templateResidential: 'COURSE200_2M_RES_TTC',
-        templateNonResidential: 'COURSE200_2M_NONRES_TTC'
-      }
+        templateNonResidential: 'COURSE200_2M_NONRES_TTC',
+      },
     },
     batch: 2,
     metaDescription:
@@ -425,7 +428,10 @@ const ttc200hr = {
         type: 'paragraph',
         content: {
           title: 'Fees',
-          text: ['Non-Residential: Rs. 28,000/- (Inclusive of course fee, study material, and snacks)','Residential: Rs. 70,000/- (Inclusive of course fee, study material, accommodation and meals ) admission link'],
+          text: [
+            'Non-Residential: Rs. 28,000/- (Inclusive of course fee, study material, and snacks)',
+            'Residential: Rs. 70,000/- (Inclusive of course fee, study material, accommodation and meals ) admission link',
+          ],
         },
       },
       {
@@ -655,8 +661,8 @@ const ttc200hr = {
       templateOnline: 'COURSE200_1M_ONLINE_TTC',
       templateOffline: {
         templateResidential: '',
-        templateNonResidential: ''
-      }
+        templateNonResidential: '',
+      },
     },
     batch: 3,
     metaDescription:
@@ -976,8 +982,8 @@ const ttc200hr = {
       templateOnline: 'COURSE200_2M_ONLINE_HINDI_TTC',
       templateOffline: {
         templateResidential: '',
-        templateNonResidential: ''
-      }
+        templateNonResidential: '',
+      },
     },
     batch: 4,
     metaDescription:
@@ -1294,8 +1300,8 @@ const ttc200hr = {
       templateOnline: 'COURSE200_2M_ONLINE_TTC',
       templateOffline: {
         templateResidential: '',
-        templateNonResidential: ''
-      }
+        templateNonResidential: '',
+      },
     },
     batch: 5,
     metaDescription:
@@ -1312,10 +1318,7 @@ const ttc200hr = {
     },
     category: 'ttc',
     title: '200 hrs TTC - 2 Months TTC Online – English - Batch 5 ',
-    dates: [
-      '29th Aug to 22nd Oct 2022',
-      '31st Oct to 24th Dec 2022',
-    ],
+    dates: ['29th Aug to 22nd Oct 2022', '31st Oct to 24th Dec 2022'],
     online: true,
     onCampus: false,
     nonResidential: false,
@@ -1611,8 +1614,8 @@ const ttc200hr = {
       templateOnline: 'COURSE200_WEEKEND_TTC',
       templateOffline: {
         templateResidential: '',
-        templateNonResidential: ''
-      }
+        templateNonResidential: '',
+      },
     },
     batch: 6,
     metaDescription:
@@ -1630,10 +1633,7 @@ const ttc200hr = {
     },
     category: 'ttc',
     title: '200 hrs TTC - 3 Months Weekend TTC Online – English - Batch 6',
-    dates: [
-      '27th Aug to 13th Nov 2022',
-      '19th Nov to 5th Feb 2023',
-    ],
+    dates: ['27th Aug to 13th Nov 2022', '19th Nov to 5th Feb 2023'],
     online: true,
     onCampus: false,
     nonResidential: false,
@@ -1932,10 +1932,10 @@ const ttc500hr = {
     // templateId: 'COURSE500_3M_TTC',
     templateId: {
       templateOnline: 'COURSE500_3M_ON_TTC',
-      templateOffline : {
+      templateOffline: {
         templateResidential: '',
-        templateNonResidential: ''
-      }
+        templateNonResidential: '',
+      },
     },
     batch: 1,
     metaDescription:
@@ -2201,8 +2201,8 @@ const ttc900hr = {
       templateOnline: 'GENERAL_AUTO_EMAIL',
       templateOffline: {
         templateResidential: '',
-        templateNonResidential: ''
-      }
+        templateNonResidential: '',
+      },
     },
     batch: 1,
 
@@ -2716,8 +2716,8 @@ const ttc900hr = {
       templateOnline: 'COURSE900_1Y_ON_HINDI_TTC',
       templateOffline: {
         templateResidential: 'COURSE900_1Y_RES_TTC',
-        templateNonResidential: 'COURSE900_1Y_NONRES_HINDI_TTC'
-      }
+        templateNonResidential: 'COURSE900_1Y_NONRES_HINDI_TTC',
+      },
     },
     batch: 1,
     metaDescription:
@@ -2734,7 +2734,7 @@ const ttc900hr = {
       offlineFee: { residentialFee: 50000, nonResidentialFee: 50000 },
     },
     category: 'ttc',
-    dates: ['1st Sept 2022','1st Oct 2022','1st Nov 2022','1st Dec 2022'],
+    dates: ['1st Sept 2022', '1st Oct 2022', '1st Nov 2022', '1st Dec 2022'],
     online: true,
     onCampus: true,
     nonResidential: true,
@@ -3324,8 +3324,8 @@ const ttc900hr = {
       templateOnline: 'COURSE900_2Y_ON_TTC',
       templateOffline: {
         templateResidential: 'COURSE900_2Y_RES_TTC',
-        templateNonResidential: 'COURSE900_2Y_NONRES_TTC'
-      }
+        templateNonResidential: 'COURSE900_2Y_NONRES_TTC',
+      },
     },
     batch: 1,
 
@@ -3943,8 +3943,8 @@ const ttc900hr = {
       templateOnline: 'COURSE900_4M_ON_TTC',
       templateOffline: {
         templateResidential: '',
-        templateNonResidential: ''
-      }
+        templateNonResidential: '',
+      },
     },
     batch: 1,
 
@@ -4548,8 +4548,8 @@ const ttc900hr = {
       templateOnline: 'COURSE900_7M_ON_TTC',
       templateOffline: {
         templateResidential: 'COURSE900_7M_RES_TTC',
-        templateNonResidential: 'COURSE900_7M_NONRES_TTC'
-      }
+        templateNonResidential: 'COURSE900_7M_NONRES_TTC',
+      },
     },
     batch: 1,
 
@@ -4569,7 +4569,7 @@ const ttc900hr = {
       offlineFee: { residentialFee: 50000, nonResidentialFee: 50000 },
     },
     category: 'ttc',
-    dates: ['1st Sept 2022','1st Oct 2022','1st Nov 2022','1st Dec 2022'],
+    dates: ['1st Sept 2022', '1st Oct 2022', '1st Nov 2022', '1st Dec 2022'],
     online: true,
     onCampus: true,
     nonResidential: true,
@@ -5301,10 +5301,10 @@ const camps = {
     // templateId: 'GENERAL_AUTO_EMAIL',
     templateId: {
       templateOnline: 'GENERAL_AUTO_EMAIL',
-      templateOffline:{
+      templateOffline: {
         templateResidential: '',
-        templateNonResidential: ''
-      }
+        templateNonResidential: '',
+      },
     },
     mostPopular: false,
     rating: 5,
@@ -5435,14 +5435,10 @@ const camps = {
       templateOnline: 'GENERAL_AUTO_EMAIL',
       templateOffline: {
         templateResidential: '',
-        templateNonResidential: ''
-      }
+        templateNonResidential: '',
+      },
     },
-    dates: [
-      '7th August 2022',
-      '2nd October 2022',
-      '4th December 2022',
-    ],
+    dates: ['7th August 2022', '2nd October 2022', '4th December 2022'],
     mostPopular: false,
     rating: 5,
     colorCode: '#CE9B51',
@@ -5716,8 +5712,8 @@ const camps = {
       templateOnline: 'GENERAL_AUTO_EMAIL',
       templateOffline: {
         templateResidential: '',
-        templateNonResidential: ''
-      }
+        templateNonResidential: '',
+      },
     },
     mostPopular: false,
     rating: 5,
@@ -5732,7 +5728,7 @@ const camps = {
       'Specific pranayama, and relaxation techniques to enhance your wellbeing',
     image: `${baseDomain}${courseAssets.courseAsset13}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset106}`,
-    dates: [ ],
+    dates: [],
     online: true,
     onCampus: true,
     nonResidential: false,
@@ -5852,8 +5848,8 @@ const camps = {
       templateOnline: 'GENERAL_AUTO_EMAIL',
       templateOffline: {
         templateResidential: '',
-        templateNonResidential: ''
-      }
+        templateNonResidential: '',
+      },
     },
     mostPopular: false,
     rating: 5,
@@ -5992,8 +5988,8 @@ const camps = {
       templateOnline: 'GENERAL_AUTO_EMAIL',
       templateOffline: {
         templateResidential: '',
-        templateNonResidential: ''
-      }
+        templateNonResidential: '',
+      },
     },
     mostPopular: false,
     rating: 5,
@@ -6129,8 +6125,8 @@ const camps = {
       templateOnline: 'GENERAL_AUTO_EMAIL',
       templateOffline: {
         templateResidential: '',
-        templateNonResidential: ''
-      }
+        templateNonResidential: '',
+      },
     },
     mostPopular: false,
     rating: 5,
@@ -6266,14 +6262,10 @@ const camps = {
       templateOnline: 'GENERAL_AUTO_EMAIL',
       templateOffline: {
         templateResidential: '',
-        templateNonResidential: ''
-      }
+        templateNonResidential: '',
+      },
     },
-    dates: [
-      '21st August 2022',
-      '16th October 2022',
-      '18th December 2022',
-    ],
+    dates: ['21st August 2022', '16th October 2022', '18th December 2022'],
     mostPopular: false,
     rating: 5,
     colorCode: '#CE9B51',
@@ -6407,8 +6399,8 @@ const camps = {
       templateOnline: 'GENERAL_AUTO_EMAIL',
       templateOffline: {
         templateResidential: '',
-        templateNonResidential: ''
-      }
+        templateNonResidential: '',
+      },
     },
     dates: [
       '18th Jun to 19th Jun 2022',
@@ -6547,8 +6539,8 @@ const camps = {
       templateOnline: 'GENERAL_AUTO_EMAIL',
       templateOffline: {
         templateResidential: '',
-        templateNonResidential: ''
-      }
+        templateNonResidential: '',
+      },
     },
     dates: [],
     mostPopular: false,
@@ -6682,8 +6674,8 @@ const camps = {
       templateOnline: 'GENERAL_AUTO_EMAIL',
       templateOffline: {
         templateResidential: '',
-        templateNonResidential: ''
-      }
+        templateNonResidential: '',
+      },
     },
     dates: [],
     mostPopular: false,
@@ -6819,14 +6811,10 @@ const camps = {
       templateOnline: 'GENERAL_AUTO_EMAIL',
       templateOffline: {
         templateResidential: '',
-        templateNonResidential: ''
-      }
+        templateNonResidential: '',
+      },
     },
-    dates: [
-      '14th August 2022',
-      '9th October 2022',
-      '11th December 2022',
-    ],
+    dates: ['14th August 2022', '9th October 2022', '11th December 2022'],
     mostPopular: false,
     rating: 5,
     colorCode: '#EDBE66',
@@ -6959,14 +6947,10 @@ const camps = {
       templateOnline: 'GENERAL_AUTO_EMAIL',
       templateOffline: {
         templateResidential: '',
-        templateNonResidential: ''
-      }
+        templateNonResidential: '',
+      },
     },
-    dates: [
-      '6th August 2022',
-      '1st October 2022',
-      '3rd December 2022',
-    ],
+    dates: ['6th August 2022', '1st October 2022', '3rd December 2022'],
     mostPopular: false,
     rating: 5,
     colorCode: '#DDAB58',
@@ -7098,14 +7082,10 @@ const camps = {
       templateOnline: 'GENERAL_AUTO_EMAIL',
       templateOffline: {
         templateResidential: '',
-        templateNonResidential: ''
-      }
+        templateNonResidential: '',
+      },
     },
-    dates: [
-      '13th August 2022',
-      '8th October 2022',
-      '10th December 2022',
-    ],
+    dates: ['13th August 2022', '8th October 2022', '10th December 2022'],
     mostPopular: false,
     rating: 5,
     colorCode: '#CE9B51',
@@ -7243,14 +7223,10 @@ const camps = {
       templateOnline: 'GENERAL_AUTO_EMAIL',
       templateOffline: {
         templateResidential: '',
-        templateNonResidential: ''
-      }
+        templateNonResidential: '',
+      },
     },
-    dates: [
-      '28th August 2022',
-      '23rd October 2022',
-      '25th December 2022',
-    ],
+    dates: ['28th August 2022', '23rd October 2022', '25th December 2022'],
     mostPopular: false,
     rating: 5,
     colorCode: '#EDBE66',
@@ -7381,8 +7357,8 @@ const camps = {
       templateOnline: 'CAMP_FOR_7_DAYS_HEALTH',
       templateOffline: {
         templateResidential: 'CAMP_FOR_7_DAYS_HEALTH',
-        templateNonResidential: 'CAMP_FOR_7_DAYS_HEALTH'
-      }
+        templateNonResidential: 'CAMP_FOR_7_DAYS_HEALTH',
+      },
     },
     dates: ['13th Aug to 19th Aug 2022', '12th Nov to 18th Nov 2022'],
     online: false,
@@ -7554,7 +7530,11 @@ const camps = {
         type: 'paragraph',
         content: {
           title: 'Timings',
-          text: ['Saturday to Friday : 7:00 am - 7:00 pm (IST)'],
+          text: [
+            'Saturday : 8:30 am – 7:00 pm',
+            'Sunday to Thursday: 7:00 am – 7:00 pm',
+            'Friday: 7:00 am – 1:00 pm',
+          ],
         },
       },
       {
@@ -7735,8 +7715,9 @@ const camps = {
       templateOnline: 'CAMP_FOR_7_DAYS_HEALTH',
       templateOffline: {
         templateResidential: 'CAMP_FOR_7_DAYS_HEALTH',
-        templateNonResidential: 'CAMP_FOR_7_DAYS_HEALTH'
-      } },
+        templateNonResidential: 'CAMP_FOR_7_DAYS_HEALTH',
+      },
+    },
     dates: [
       '27th Aug to 2nd Sept 2022',
       '24th Sept to 30th Sept 2022',
@@ -7759,7 +7740,7 @@ const camps = {
     },
     category: 'camps',
     metaDescription:
-    'Are you feeling burned out and looking for ways to develop mental strength, improve focus & emotional quotient and reduce stress? Join our 7-Days Health Camp reshape your life and health.',
+      'Are you feeling burned out and looking for ways to develop mental strength, improve focus & emotional quotient and reduce stress? Join our 7-Days Health Camp reshape your life and health.',
     image: `${baseDomain}${courseAssets.courseAsset34}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset34}`,
     details: [
@@ -7913,7 +7894,11 @@ const camps = {
         type: 'paragraph',
         content: {
           title: 'Timings',
-          text: ['Saturday to Friday : 7:00 am - 7:00 pm (IST)'],
+          text: [
+            'Saturday : 8:30 am – 7:00 pm',
+            'Sunday to Thursday: 7:00 am – 7:00 pm',
+            'Friday: 7:00 am – 1:00 pm',
+          ],
         },
       },
       {
@@ -8093,8 +8078,8 @@ const camps = {
       templateOnline: 'GENERAL_AUTO_EMAIL',
       templateOffline: {
         templateResidential: '',
-        templateNonResidential: ''
-      }
+        templateNonResidential: '',
+      },
     },
     batch: 1,
     dates: [
@@ -8412,8 +8397,7 @@ const camps = {
   },
   20: {
     id: '',
-    title:
-      '21 Days BLC - Evening - Online & On Campus – English - Batch 2',
+    title: '21 Days BLC - Evening - Online & On Campus – English - Batch 2',
     key: '21-days-better-living-course-batch-2',
     batch: 2,
     // templateId: 'GENERAL_AUTO_EMAIL',
@@ -8421,14 +8405,16 @@ const camps = {
       templateOnline: 'GENERAL_AUTO_EMAIL',
       templateOffline: {
         templateResidential: '',
-        templateNonResidential: ''
-      }
+        templateNonResidential: '',
+      },
     },
-    dates: [ '7th Aug to 27th Aug 2022',
+    dates: [
+      '7th Aug to 27th Aug 2022',
       '4th Sept to 24th Sept 2022',
       '2nd Oct to 22nd Oct 2022',
       '6th Nov to 26th Nov 2022',
-      '4th Dec to 24th Dec 2022' ],
+      '4th Dec to 24th Dec 2022',
+    ],
     online: true,
     onCampus: true,
     nonResidential: true,
@@ -8737,8 +8723,7 @@ const camps = {
   },
   21: {
     id: '',
-    title:
-      '21 Days BLC - Evening - Online & On Campus – Hindi - Batch 3',
+    title: '21 Days BLC - Evening - Online & On Campus – Hindi - Batch 3',
     key: '21-days-better-living-course-batch-3',
     batch: 3,
     // templateId: 'GENERAL_AUTO_EMAIL',
@@ -8746,8 +8731,8 @@ const camps = {
       templateOnline: 'GENERAL_AUTO_EMAIL',
       templateOffline: {
         templateResidential: '',
-        templateNonResidential: ''
-      }
+        templateNonResidential: '',
+      },
     },
     dates: [
       '7th Aug to 27th Aug 2022',
@@ -9070,17 +9055,17 @@ const camps = {
       templateOnline: 'GENERAL_AUTO_EMAIL',
       templateOffline: {
         templateResidential: '',
-        templateNonResidential: ''
-      }
+        templateNonResidential: '',
+      },
     },
     dates: [
       '14th Aug to 3rd Sept 2022',
       '4th Sept to 24th Sept 2022',
       '25th Sept to 15th Oct 2022',
       '16th Oct to 5th Nov 2022',
-      '6th Nov to 26th Nov 2022', 
+      '6th Nov to 26th Nov 2022',
       '27th Nov to 17th Dec 2022',
-      '18th Dec to 7th Jan 2023'
+      '18th Dec to 7th Jan 2023',
     ],
     online: true,
     onCampus: false,
@@ -9382,7 +9367,6 @@ const camps = {
       },
     ],
   },
- 
 }
 
 const classes = {
@@ -9396,8 +9380,8 @@ const classes = {
       templateOnline: 'GENERAL_AUTO_EMAIL',
       templateOffline: {
         templateResidential: '',
-        templateNonResidential: ''
-      }
+        templateNonResidential: '',
+      },
     },
     mostPopular: false,
     rating: 5,
@@ -9412,7 +9396,7 @@ const classes = {
     metaDescription: 'Meditation and relaxation',
     image: `${baseDomain}${courseAssets.courseAsset67}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset108}`,
-    dates: ['5:30 a.m. to 6:30 a.m','6:00 p.m. to 7:00 p.m'],
+    dates: ['5:30 a.m. to 6:30 a.m', '6:00 p.m. to 7:00 p.m'],
     online: true,
     onCampus: false,
     nonResidential: false,
@@ -9466,8 +9450,8 @@ const classes = {
       templateOnline: 'GENERAL_AUTO_EMAIL',
       templateOffline: {
         templateResidential: '',
-        templateNonResidential: ''
-      }
+        templateNonResidential: '',
+      },
     },
     image: `${baseDomain}${courseAssets.courseAsset68}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset109}`,
@@ -9483,7 +9467,7 @@ const classes = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'classes',
-    dates: ['7:30 a.m to 8:30 a.m.','6:30 p.m. to 7:30 p.m.'],
+    dates: ['7:30 a.m to 8:30 a.m.', '6:30 p.m. to 7:30 p.m.'],
     online: true,
     onCampus: true,
     nonResidential: false,
@@ -9554,8 +9538,8 @@ const classes = {
       templateOnline: 'GENERAL_AUTO_EMAIL',
       templateOffline: {
         templateResidential: '',
-        templateNonResidential: ''
-      }
+        templateNonResidential: '',
+      },
     },
     image: `${baseDomain}${courseAssets.courseAsset81}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset81}`,
@@ -9571,14 +9555,16 @@ const classes = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'classes',
-    dates: ['6:30 a.m. to 7:30 a.m.', 
-      '7:30 a.m. to 8:30 a.m.', 
+    dates: [
+      '6:30 a.m. to 7:30 a.m.',
+      '7:30 a.m. to 8:30 a.m.',
       '8:30 a.m. to 9:30 a.m.',
-      '4:00 p.m. to 5:00 p.m.', 
-      '5:00 p.m. to 6:00 p.m.', 
-      '6:00 p.m. to 7:00 p.m.', 
+      '4:00 p.m. to 5:00 p.m.',
+      '5:00 p.m. to 6:00 p.m.',
+      '6:00 p.m. to 7:00 p.m.',
       '7:00 p.m. to 8:00 p.m.',
-      'Sat/Sun:7:30-9:00 a.m'],
+      'Sat/Sun:7:30-9:00 a.m',
+    ],
     online: true,
     onCampus: false,
     nonResidential: false,
@@ -9744,8 +9730,8 @@ const classes = {
       templateOnline: 'GENERAL_AUTO_EMAIL',
       templateOffline: {
         templateResidential: '',
-        templateNonResidential: ''
-      }
+        templateNonResidential: '',
+      },
     },
     image: `${baseDomain}${courseAssets.courseAsset70}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset70}`,
@@ -9761,7 +9747,13 @@ const classes = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'classes',
-    dates: ['6:30 a.m to 7:30 p.m.','7:30 a.m. to 8:30 a.m.','1:00 p.m to 2:00 p.m.', '6:00 p.m. to 7:00 p.m', '7:00 p.m. to 8:00 p.m.'],
+    dates: [
+      '6:30 a.m to 7:30 p.m.',
+      '7:30 a.m. to 8:30 a.m.',
+      '1:00 p.m to 2:00 p.m.',
+      '6:00 p.m. to 7:00 p.m',
+      '7:00 p.m. to 8:00 p.m.',
+    ],
     online: false,
     onCampus: true,
     nonResidential: false,
@@ -9847,8 +9839,8 @@ const classes = {
       templateOnline: 'GENERAL_AUTO_EMAIL',
       templateOffline: {
         templateResidential: '',
-        templateNonResidential: ''
-      }
+        templateNonResidential: '',
+      },
     },
     image: `${baseDomain}${courseAssets.courseAsset71}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset71}`,
@@ -9864,7 +9856,21 @@ const classes = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'classes',
-    dates: ['6:30 a.m to 7:30 a.m.','7:30 a.m. to 8:30 a.m.','8:30 a.m to 9:30 a.m','9:30 a.m. to 10:30 a.m.', '10:30 a.m. to 11:30 a.m','11:30 a.m. to 12:30 p.m','1:00 p.m. to 2:00 p.m.','2:00 p.m to 3:00 p.m','3:00 p.m. to 4:00 p.m.', '4:00 p.m to 5:00 p.m.', '5:00 p.m. to 6:00 p.m','6:00 p.m. to 7:00 p.m.','7:00 p.m to 8:00 p.m'],
+    dates: [
+      '6:30 a.m to 7:30 a.m.',
+      '7:30 a.m. to 8:30 a.m.',
+      '8:30 a.m to 9:30 a.m',
+      '9:30 a.m. to 10:30 a.m.',
+      '10:30 a.m. to 11:30 a.m',
+      '11:30 a.m. to 12:30 p.m',
+      '1:00 p.m. to 2:00 p.m.',
+      '2:00 p.m to 3:00 p.m',
+      '3:00 p.m. to 4:00 p.m.',
+      '4:00 p.m to 5:00 p.m.',
+      '5:00 p.m. to 6:00 p.m',
+      '6:00 p.m. to 7:00 p.m.',
+      '7:00 p.m to 8:00 p.m',
+    ],
     online: false,
     onCampus: true,
     nonResidential: false,
@@ -9959,8 +9965,8 @@ const classes = {
       templateOnline: 'GENERAL_AUTO_EMAIL',
       templateOffline: {
         templateResidential: '',
-        templateNonResidential: ''
-      }
+        templateNonResidential: '',
+      },
     },
     image: `${baseDomain}${courseAssets.courseAsset72}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset72}`,
@@ -10075,8 +10081,8 @@ const classes = {
       templateOnline: 'GENERAL_AUTO_EMAIL',
       templateOffline: {
         templateResidential: '',
-        templateNonResidential: ''
-      }
+        templateNonResidential: '',
+      },
     },
     image: `${baseDomain}${courseAssets.courseAsset73}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset73}`,
@@ -10085,7 +10091,7 @@ const classes = {
     mostPopular: false,
     rating: 5,
     colorCode: '#D3A29D',
-    timing: '1st Sunday of every month: 10:00 am - 12:30 pm (IST)',
+    timing: '1st Sunday of every month: 10:40 am - 12:30 pm (IST)',
     fees: {
       onlineFee: 8000,
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
@@ -10113,57 +10119,84 @@ const classes = {
       {
         type: 'paragraph',
         content: {
-          title: 'Details (in tabular form)',
-          text: [''],
+          title: 'Eligibility',
+          text: ['Open to all.  Prior knowledge of Yoga or the earlier chapters though not a prerequisite, would be helpful.'],
+        },
+      },
+      // {
+      //   type: 'paragraph',
+      //   content: {
+      //     title: 'Details (in tabular form)',
+      //     text: [''],
+      //   },
+      // },
+      // {
+      //   type: 'paragraph',
+      //   content: {
+      //     title: 'Schedule',
+      //     text: [''],
+      //   },
+      // },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Prerequisites',
+          text: [
+            'Open to all. Prior knowledge of yoga not required, though helpful.',
+          ],
         },
       },
       {
         type: 'paragraph',
         content: {
-          title: 'Schedule',
-          text: [''],
+          title: 'Duration',
+          text: ['1 year – 1st & 3rd 2022, Sunday of every month'],
         },
       },
       {
         type: 'paragraph',
         content: {
           title: 'Fees',
-          text: [''],
+          text: [
+            'Rs. 15000/-',
+            'Please note fees once paid will be non-refundable.',
+          ],
         },
       },
       {
         type: 'paragraph',
         content: {
           title: 'Timings',
-          text: ['1st Sunday of every month: 10:00 am - 12:30 pm (IST)'],
+          text: ['1st Sunday of every month: 10:40 am - 12:30 pm (IST)'],
         },
       },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'Prerequisites',
-          text: [''],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'Guidelines',
-          text: [''],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'Contact Details',
-          text: [''],
-        },
-      },
+      
+      // {
+      //   type: 'paragraph',
+      //   content: {
+      //     title: 'Guidelines',
+      //     text: [''],
+      //   },
+      // },
+      // {
+      //   type: 'paragraph',
+      //   content: {
+      //     title: 'Contact Details',
+      //     text: [''],
+      //   },
+      // },
       {
         type: 'paragraph',
         content: {
           title: 'Registration',
-          text: [''],
+          text: ['REGISTRATIONS ARE CLOSED..STAY TUNED FOR OUR NEXT BATCH.'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Conducted By',
+          text: ['Shri Kartik Vyas'],
         },
       },
     ],
@@ -10178,8 +10211,8 @@ const classes = {
       templateOnline: 'GENERAL_AUTO_EMAIL',
       templateOffline: {
         templateResidential: '',
-        templateNonResidential: ''
-      }
+        templateNonResidential: '',
+      },
     },
     image: `${baseDomain}${courseAssets.courseAsset74}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset74}`,
@@ -10281,8 +10314,8 @@ const classes = {
       templateOnline: 'GENERAL_AUTO_EMAIL',
       templateOffline: {
         templateResidential: '',
-        templateNonResidential: ''
-      }
+        templateNonResidential: '',
+      },
     },
     image: `${baseDomain}${courseAssets.courseAsset113}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset114}`,
@@ -10356,8 +10389,8 @@ const classes = {
       templateOnline: 'GENERAL_AUTO_EMAIL',
       templateOffline: {
         templateResidential: '',
-        templateNonResidential: ''
-      }
+        templateNonResidential: '',
+      },
     },
     image: `${baseDomain}${courseAssets.courseAsset75}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset75}`,
@@ -10692,8 +10725,8 @@ const classes = {
       templateOnline: 'GENERAL_AUTO_EMAIL',
       templateOffline: {
         templateResidential: '',
-        templateNonResidential: ''
-      }
+        templateNonResidential: '',
+      },
     },
     image: `${baseDomain}${courseAssets.courseAsset76}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset76}`,
@@ -10767,8 +10800,8 @@ const classes = {
       templateOnline: 'GENERAL_AUTO_EMAIL',
       templateOffline: {
         templateResidential: '',
-        templateNonResidential: ''
-      }
+        templateNonResidential: '',
+      },
     },
     image: `${baseDomain}${courseAssets.courseAsset76}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset76}`,
@@ -10835,8 +10868,8 @@ const classes = {
       templateOnline: 'GENERAL_AUTO_EMAIL',
       templateOffline: {
         templateResidential: '',
-        templateNonResidential: ''
-      }
+        templateNonResidential: '',
+      },
     },
     image: `${baseDomain}${courseAssets.courseAsset28}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset28}`,
@@ -10931,8 +10964,8 @@ const classes = {
       templateOnline: 'GENERAL_AUTO_EMAIL',
       templateOffline: {
         templateResidential: '',
-        templateNonResidential: ''
-      }
+        templateNonResidential: '',
+      },
     },
     image: `${baseDomain}${courseAssets.courseAsset28}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset28}`,
@@ -11052,8 +11085,8 @@ const classes = {
       templateOnline: 'GENERAL_AUTO_EMAIL',
       templateOffline: {
         templateResidential: '',
-        templateNonResidential: ''
-      }
+        templateNonResidential: '',
+      },
     },
     image: `${baseDomain}${courseAssets.courseAsset80}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset80}`,
@@ -11153,8 +11186,8 @@ const classes = {
       templateOnline: 'GENERAL_AUTO_EMAIL',
       templateOffline: {
         templateResidential: '',
-        templateNonResidential: ''
-      }
+        templateNonResidential: '',
+      },
     },
     image: `${baseDomain}${courseAssets.courseAsset77}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset110}`,
@@ -11170,7 +11203,7 @@ const classes = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'classes',
-    dates: ['8:00 a.m. to 9:30 a.m.','10:30 a.m. to 12:00 p.m.'],
+    dates: ['8:00 a.m. to 9:30 a.m.', '10:30 a.m. to 12:00 p.m.'],
     online: false,
     onCampus: true,
     nonResidential: false,
@@ -11251,8 +11284,8 @@ const classes = {
       templateOnline: 'GENERAL_AUTO_EMAIL',
       templateOffline: {
         templateResidential: '',
-        templateNonResidential: ''
-      }
+        templateNonResidential: '',
+      },
     },
     image: `${baseDomain}${courseAssets.courseAsset82}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset82}`,
@@ -11341,17 +11374,17 @@ const classes = {
       },
       {
         type: 'paragraph',
-        content:{
+        content: {
           title: 'Fees',
-          text:[]
-        }
+          text: [],
+        },
       },
       {
         type: 'paragraph',
-        content:{
+        content: {
           title: '',
-          text:['Rs. 1500/-']
-        }
+          text: ['Rs. 1500/-'],
+        },
       },
       {
         type: 'u-list',
@@ -11412,8 +11445,8 @@ const classes = {
       templateOnline: 'GENERAL_AUTO_EMAIL',
       templateOffline: {
         templateResidential: '',
-        templateNonResidential: ''
-      }
+        templateNonResidential: '',
+      },
     },
     image: `${baseDomain}${homeAssets.homeAsset16}`,
     cardImage: `${baseDomain}${homeAssets.homeAsset16}`,
@@ -11513,8 +11546,8 @@ const classes = {
       templateOnline: 'GENERAL_AUTO_EMAIL',
       templateOffline: {
         templateResidential: '',
-        templateNonResidential: ''
-      }
+        templateNonResidential: '',
+      },
     },
     image: `${baseDomain}${courseAssets.courseAsset77}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset116}`,
@@ -11634,8 +11667,8 @@ const classes = {
       templateOnline: 'GENERAL_AUTO_EMAIL',
       templateOffline: {
         templateResidential: '',
-        templateNonResidential: ''
-      }
+        templateNonResidential: '',
+      },
     },
     image: `${baseDomain}${homeAssets.homeAsset13}`,
     cardImage: `${baseDomain}${homeAssets.homeAsset13}`,
@@ -11650,7 +11683,7 @@ const classes = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'classes',
-    dates: ['7:30 am to 9:00 am',''],
+    dates: ['7:30 am to 9:00 am', ''],
     online: true,
     onCampus: false,
     nonResidential: false,
