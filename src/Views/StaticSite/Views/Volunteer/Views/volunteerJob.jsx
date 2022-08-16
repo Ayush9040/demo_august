@@ -46,7 +46,6 @@ const VolunteerJob = () => {
       setResumeLoading(false)
     }
   }
-
   const volJob = {
     title: 'Volunteer Job',
     color: 'orange',
@@ -178,7 +177,7 @@ const VolunteerJob = () => {
                         type={'file'}
                         id="image"
                         onChange={(e) => {
-                          setImageLoading(true)
+                          e.target.files[0].size / 1024 / 1024 > 2 ?'': setImageLoading(true)
                           uploadImage(e.target.files[0], 'image', 'IMAGE')
                           setImageName(e.target.files[0].name)
                         }}
@@ -205,7 +204,7 @@ const VolunteerJob = () => {
                 ) : (
                   <fieldset>
                     <label htmlFor="resume">
-                      {certificateName
+                      {certificateAssest
                         ? certificateName.substring(0, 15)
                         : 'Upload Resume'}
                       <input
@@ -213,7 +212,7 @@ const VolunteerJob = () => {
                         id="resume"
                         accept=".pdf"
                         onChange={(e) => {
-                          setResumeLoading(true)
+                          e.target.files[0].size / 1024 / 1024 > 2 ?'': setResumeLoading(true)
                           uploadImage(e.target.files[0], 'resume', 'RESUME')
                           setCertificateName(e.target.files[0].name)
                         }}
@@ -232,7 +231,7 @@ const VolunteerJob = () => {
                         Please update resume under 2MB
                       </small>
                     )}
-                    <small>Please ensure the file is under 2 MB</small>
+                    { sizeError===0 &&  <small>Please ensure the file is under 2 MB</small>}
                   </fieldset>
                 )}
               </div>
