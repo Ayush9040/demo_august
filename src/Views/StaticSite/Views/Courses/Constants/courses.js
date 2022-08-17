@@ -9395,7 +9395,7 @@ const classes = {
     metaDescription: 'Meditation and relaxation',
     image: `${baseDomain}${courseAssets.courseAsset67}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset108}`,
-    dates: ['5:30 a.m. to 6:30 a.m', '6:00 p.m. to 7:00 p.m'],
+    dates: ['6:30 a.m. to 8:00 a.m', '5:30 p.m. to 7:00 p.m'],
     online: true,
     onCampus: false,
     nonResidential: false,
