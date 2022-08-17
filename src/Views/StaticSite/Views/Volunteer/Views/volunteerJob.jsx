@@ -180,7 +180,7 @@ const VolunteerJob = () => {
                         type={'file'}
                         id="image"
                         onChange={(e) => {
-                          setImageLoading(true)
+                          e.target.files[0].size / 1024 / 1024 > 2 ?'':setImageLoading(true)
                           uploadImage(e.target.files[0], 'image', 'IMAGE')
                           setImageName(e.target.files[0].name)
                         }}
@@ -215,7 +215,7 @@ const VolunteerJob = () => {
                         id="resume"
                         accept=".pdf"
                         onChange={(e) => {
-                          setResumeLoading(true)
+                          e.target.files[0].size / 1024 / 1024 > 2 ?'':setResumeLoading(true)
                           uploadImage(e.target.files[0], 'resume', 'RESUME')
                           setCertificateName(e.target.files[0].name)
                         }}
