@@ -2198,8 +2198,8 @@ const ttc900hr = {
     templateId: {
       templateOnline: 'GENERAL_AUTO_EMAIL',
       templateOffline: {
-        templateResidential: '',
-        templateNonResidential: '',
+        templateResidential: 'COURSE900_3M_ONLINE_RES_TTC',
+        templateNonResidential: 'COURSE900_3M_ONLINE_NONRES_TTC',
       },
     },
     batch: 1,
