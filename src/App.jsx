@@ -14,7 +14,7 @@ import Home from './Views/StaticSite/Views/Home'
 const App = () => {
 
   return (
-    <Suspense >
+    <Suspense  fallback={ <div className='global-loader' >Loading...</div> }  >
       <MetaTags />
       <Routes>
         {MainRoutes.map(({ Component, path }) => {
