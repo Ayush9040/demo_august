@@ -30,7 +30,7 @@ const SingleJob = () => {
   })
   const [validate, setValidate] = useState(0)
   const [imageName, setImageName] = useState('')
-  const [sizeError, setSizeError] = useState()
+  const [sizeError, setSizeError] = useState(0)
   const [imageAssest, setImageAssest] = useState(null)
   const [certificateAssest, setCertificateAssest] = useState(null)
   const [certificateName, setCertificateName] = useState('')
@@ -74,13 +74,17 @@ const SingleJob = () => {
       } else if (changeData === 'IMAGE') {
         setSizeError(2)
       }
+      
     } else {
       const url = await uploadFile(file, type)
-      if (changeData === 'RESUME') setCertificateAssest(url)
-      else if (changeData === 'IMAGE') setImageAssest(url)
+      if (changeData === 'RESUME'){ setCertificateAssest(url) 
+        setSizeError(0)}
+      else if (changeData === 'IMAGE') {setImageAssest(url)
+        setSizeError(0)}
     }
     setImageLoading(false)
     setResumeLoading(false)
+    
   }
   return (
     <div className="single-job">
@@ -167,10 +171,11 @@ const SingleJob = () => {
                         id="image"
                         placeholder="Upload Image"
                         onChange={(e) => {
+                          e.target.files[0].size/ 1024 / 1024 > 2 ? '' : setImageLoading(true)
                           uploadImage(e.target.files[0], 'image', 'IMAGE')
                           setImageName(e.target.files[0].name)
                         }}
-                        accept="image/*"
+                        accept="image/*" 
                         errorCheck={setValidate}
                       />
                       &ensp;
@@ -188,38 +193,43 @@ const SingleJob = () => {
                     )}
                   </fieldset>
                 )}
-
-                <fieldset>
-                  <label htmlFor="resume">
-                    {certificateAssest
-                      ? certificateName.substring(0, 15)
-                      : 'Upload Resume'}
-                    <input
-                      type={'file'}
-                      id="resume"
-                      onChange={(e) => {
-                        uploadImage(e.target.files[0], 'resume', 'RESUME')
-                        setCertificateName(e.target.files[0].name)
-                      }}
-                      accept="pdf"
-                      placeholder="Upload Resume"
-                      errorCheck={setValidate}
-                      pdf={certificateAssest}
-                    />
-                    &ensp;
-                    {upload}
-                  </label>
-                  {sizeError === 1 && (
-                    <small style={{ color: 'red', marginLeft: '2rem' }}>
-                      Please Enter Resume under 2MB
-                    </small>
-                  )}
-                  {validate === 4 && (
-                    <small style={{ color: 'red', marginLeft: '2rem' }}>
-                      Please update resume under 2MB
-                    </small>
-                  )}
-                </fieldset>
+                {resumeLoading ? (
+                  <Loader />
+                ) : (
+                  <fieldset>
+                    <label htmlFor="resume">
+                      {certificateAssest
+                        ? certificateName.substring(0, 15)
+                        : 'Upload Resume'}
+                      <input
+                        type={'file'}
+                        id="resume"
+                        onChange={(e) => {
+                          e.target.files[0].size/ 1024 / 1024 > 2 ? '' : setResumeLoading(true)
+                          uploadImage(e.target.files[0], 'resume', 'RESUME')
+                          setCertificateName(e.target.files[0].name)
+                          
+                        }}
+                        accept=".pdf"
+                        placeholder="Upload Resume"
+                        errorCheck={setValidate}
+                        pdf={certificateAssest}
+                      />
+                      &ensp;
+                      {upload}
+                    </label>
+                    {sizeError === 1 && (
+                      <small style={{ color: 'red', marginLeft: '2rem' }}>
+                        Please Enter Resume under 2MB
+                      </small>
+                    )}
+                    {validate === 4 && (
+                      <small style={{ color: 'red', marginLeft: '2rem' }}>
+                        Please update resume under 2MB
+                      </small>
+                    )}
+                  </fieldset>
+                )}
               </div>
               <fieldset>
                 <input id="apply" type={'submit'} />

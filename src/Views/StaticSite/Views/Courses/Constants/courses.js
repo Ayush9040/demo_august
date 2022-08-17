@@ -7370,7 +7370,7 @@ const camps = {
     mostPopular: true,
     rating: 5,
     colorCode: '#EDBE66',
-    timing: 'Saturday to Friday : 7:00 am - 7:00 pm (IST)',
+    timing: 'Saturday : 8:30 am – 7:00 pm, Sunday to Thursday: 7:00 am – 7:00 pm, Friday: 7:00 am – 1:00 pm ' ,
     fees: {
       onlineFee: 0,
       offlineFee: { residentialFee: 12000, nonResidentialFee: 8000 },
@@ -7734,7 +7734,7 @@ const camps = {
     mostPopular: true,
     rating: 5,
     colorCode: '#EDBE66',
-    timing: 'Saturday to Friday : 7:00 am - 7:00 pm (IST)',
+    timing: 'Saturday : 8:30 am – 7:00 pm, Sunday to Thursday: 7:00 am – 7:00 pm, Friday: 7:00 am – 1:00 pm ',
     fees: {
       onlineFee: 0,
       offlineFee: { residentialFee: 12000, nonResidentialFee: 8000 },
@@ -11407,12 +11407,12 @@ const classes = {
             },
             {
               listItem:
-                ' Please note fees once paid will be non-refundable.                ',
+                ' Please note fees once paid will be non-refundable.',
               subItems: [],
             },
             {
               listItem:
-                'Join on any date. Your payment is valid for one month from the date of joining.              ',
+                'Join on any date. Your payment is valid for one month from the date of joining.',
               subItems: [],
             },
             {
@@ -11422,12 +11422,12 @@ const classes = {
             },
             {
               listItem:
-                ' 3 Days a week – Evening Batch – Monday, Wednesday, Friday. – 1 Hour sessions – this is what we are looking forward to starting from 1st April 2021, as some people find it difficult to join morning batch (timings can be 6:00 pm – 7:00 pm)                ',
+                ' 3 Days a week – Evening Batch – Monday, Wednesday, Friday. – 1 Hour sessions',
               subItems: [],
             },
             {
               listItem:
-                ' Rest is the same as the morning batch, a mix of philosophy and regular online asanas session.                ',
+                ' Rest is the same as the morning batch, a mix of philosophy and regular online asanas session.',
               subItems: [],
             },
           ],
@@ -11438,7 +11438,7 @@ const classes = {
         content: {
           title: 'WEEKDAYS SCHEDULE',
           text: [
-            'Monday, Wednesday & Friday : Morning: 5:30 am - 6:30 am  (IST) or Evening: 6:00 pm - 7:00 pm  (IST) (Join on any date)          ',
+            'Monday, Wednesday & Friday : Morning: 5:30 am - 6:30 am  (IST) or Evening: 6:00 pm - 7:00 pm  (IST) (Join on any date)',
           ],
         },
       },
