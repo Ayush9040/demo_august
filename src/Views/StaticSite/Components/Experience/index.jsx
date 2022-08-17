@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import Slider from 'react-slick'
@@ -8,8 +8,23 @@ import './style.scss'
 import CommonBtn from '../commonbtn'
 import baseDomain, { homeAssets } from '../../assets/images/imageAsset'
 import { Link } from 'react-router-dom'
+import useOnScreen from '../../../../helpers/InterSection'
 
 const Experience = () => {
+  const expRef = useRef(null)
+  const sliderRef = useRef(null)
+
+  const isInteracting = useOnScreen(expRef, { threshold: 0.5 })
+
+  useEffect(() => {
+    if (!sliderRef.current) return
+    if (isInteracting) sliderRef.current.slickPlay()
+    else {
+      sliderRef.current.slickPause()
+      sliderRef.current.slickGoTo(0)
+    }
+  }, [isInteracting])
+
   let settings = {
     dots: true,
     arrows: false,
@@ -22,8 +37,13 @@ const Experience = () => {
   }
 
   return (
-    <div className="experience-container">
-      <Slider {...settings}>
+    <div className="experience-container" ref={expRef}>
+      <Slider
+        {...settings}
+        ref={(slider) => {
+          sliderRef.current = slider
+        }}
+      >
         <div className="experience-carousel global-padding">
           <div className="carousel-content">
             <Heading
@@ -35,17 +55,24 @@ const Experience = () => {
               <h3>Shri Ram Nath Kovind</h3>
               <h4>The President of India</h4>
               <p>
-                
-                We are aware that “Lifestyle diseases are increasing in India. Those who do yoga from childhood (in school or college) will build up strength and immunity.“ I wish The Yoga Institute and everyone connected with it, all the best in their efforts to spread the goodness of Yoga and also  congratulate them for carrying on the good work  for the benefit of the people silently for the past ten decades
-                
+                We are aware that “Lifestyle diseases are increasing in India.
+                Those who do yoga from childhood (in school or college) will
+                build up strength and immunity.“ I wish The Yoga Institute and
+                everyone connected with it, all the best in their efforts to
+                spread the goodness of Yoga and also congratulate them for
+                carrying on the good work for the benefit of the people silently
+                for the past ten decades
               </p>
             </div>
-            <Link to="/testimonials" >
+            <Link to="/testimonials">
               <CommonBtn text={'View All'} />
             </Link>
           </div>
           <div className="carousel-image">
-            <img src={`${baseDomain}${homeAssets.homeAsset55}`} alt='Shri Ramnath Kovid'/>
+            <img
+              src={`${baseDomain}${homeAssets.homeAsset55}`}
+              alt="Shri Ramnath Kovid"
+            />
           </div>
         </div>
         <div className="experience-carousel global-padding">
@@ -69,12 +96,12 @@ const Experience = () => {
                 </q>
               </p>
             </div>
-            <Link to="/testimonials" >
+            <Link to="/testimonials">
               <CommonBtn text={'View All'} />
             </Link>
           </div>
           <div className="carousel-image">
-            <img src={`${baseDomain}${homeAssets.homeAsset56}`} alt='Modiji' />
+            <img src={`${baseDomain}${homeAssets.homeAsset56}`} alt="Modiji" />
           </div>
         </div>
         <div className="experience-carousel global-padding">
@@ -97,12 +124,12 @@ const Experience = () => {
                 </q>
               </p>
             </div>
-            <Link to="/testimonials" >
+            <Link to="/testimonials">
               <CommonBtn text={'View All'} />
             </Link>
           </div>
           <div className="carousel-image">
-            <img src={`${baseDomain}${homeAssets.homeAsset57}`} alt='Naiduji' />
+            <img src={`${baseDomain}${homeAssets.homeAsset57}`} alt="Naiduji" />
           </div>
         </div>
         <div className="experience-carousel global-padding">
@@ -125,12 +152,15 @@ const Experience = () => {
                 </q>
               </p>
             </div>
-            <Link to="/testimonials" >
+            <Link to="/testimonials">
               <CommonBtn text={'View All'} />
             </Link>
           </div>
           <div className="carousel-image">
-            <img src={`${baseDomain}${homeAssets.homeAsset58}`} alt='Amitabh Bachchan'/>
+            <img
+              src={`${baseDomain}${homeAssets.homeAsset58}`}
+              alt="Amitabh Bachchan"
+            />
           </div>
         </div>
       </Slider>
