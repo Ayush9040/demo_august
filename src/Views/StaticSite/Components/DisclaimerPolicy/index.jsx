@@ -32,10 +32,30 @@ const DisclaimerPolicy = ({
     document.body.appendChild(script)
   }, [])
 
-  const [mail,setmail]=useState(templateKey?.templateOnline)
+  const [mail,setmail]=useState(null)
+
   
 
   const navigate = useNavigate()
+
+  const pickMail = ()=>{
+    if(formData.mode==='ONLINE'){
+      setmail(templateKey?.templateOnline)
+      return templateKey?.templateOnline
+    }else if(formData.mode === 'OFFLINE' && formData.residental === ''){
+      setmail(templateKey?.templateOnline)
+      return templateKey?.templateOnline
+    }else{
+      if(formData.residental === 'RESIDENTIAL'){  
+        console.log(templateKey?.templateOffline?.templateResidential)
+        setmail(templateKey?.templateOffline?.templateResidential)
+        return templateKey?.templateOffline?.templateResidential
+      }else{
+        setmail(templateKey?.templateOffline?.templateNonResidential)
+        return templateKey?.templateOffline?.templateNonResidential
+      }
+    }
+  }
 
   const [empty, setEmpty] = useState(0)
 
@@ -45,17 +65,6 @@ const DisclaimerPolicy = ({
     }else if (disData.name === '') {
       return setEmpty(2)
     } else {
-      if(formData.mode==='ONLINE'){
-        setmail(templateKey?.templateOnline)
-      }else if(formData.mode === 'OFFLINE' && formData.residental === ''){
-        setmail(templateKey?.templateOnline)
-      }else{
-        if(formData.residental === 'RESIDENTIAL'){  
-          setmail(templateKey?.templateOffline?.templateResidential)
-        }else{
-          setmail(templateKey?.templateOffline?.templateNonResidential)
-        }
-      }
       setEmpty(0)
       let body = {
         personalDetails: {
@@ -131,10 +140,10 @@ const DisclaimerPolicy = ({
       // }
 
 
-
+      console.log(mail)
       let mailTemplate = {
         type: 'INFO_TYI',
-        HTMLTemplate: mail,
+        HTMLTemplate: pickMail(),
         subject: 'Enrollment Confirmation',
         data:{
           name: formData.name

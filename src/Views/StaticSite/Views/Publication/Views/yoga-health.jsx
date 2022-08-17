@@ -65,7 +65,7 @@ const YogaTotalHealth = () => {
         </div>
         <div className="publication-intro">
           <div className="mag-preview">
-            <img src={`${baseDomain}${publicationAssests.publicationAssests7}`}  alt='Yoga and Total Health'/>
+            <img src={`${baseDomain}${publicationAssests.publicationAssests85}`}  alt='Yoga and Total Health'/>
           </div>
           <div className="mag-details">
             <div className="journal">
@@ -85,20 +85,11 @@ const YogaTotalHealth = () => {
 
             <div className="month-year">
               <h2 className="jouranl-title">
-              October 2021
+              August 2022
                 <div className="bottom-line"></div>
               </h2>
               <p>
-              Dive in to learn the wonderful insights through our various
-              articles this month – Dr Jayadeva explains the hierarchy of duties
-              to help one be mindful of how one invests their time, an utmost
-              precious commodity. Hansa ji encourages one to reflect on whether
-              money is driving us or do we use it to run our lives? Devdutt
-              Pattanaik logically shares how the human mind has the power to
-              create value and also to strip value with interesting tales from
-              Indian mythology and many more... We also celebrate Hansa ji’s
-              birthday this month and pray for her good health and peace from
-              the safety of our homes.
+                {'During this August month of festivals, the journal\'s focus is on the Yamas and Niyamas. Dr Jayadeva throws light on the state of Ananda (Joy), with progressive little steps of Vitarka (discussion & thinking) and Vichara (very concentrated thinking) by learning to think deeply. Hansaji throws light on the power of routines and their ability to keep one sane, especially during extremely challenging times. A Sadhaka throws light on the need to make the most of ourselves by taking care of nature\'s gifts to us. Every single choice is important, make it count - An article on choices enforces one to reflect on one\'s everyday actions - active or passive - with its own set of consequences. "When one tugs at a single thing in nature, one finds it attached to the rest of the world" - John Muir. Understand and reflect on by clicking for the above and more!'}
               </p>
             </div>
           </div>

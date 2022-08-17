@@ -125,8 +125,8 @@ const Enrollment = () => {
       return setEmpty(1)
     } else if (
       formData.phone === '' ||
-      formData.phone.length < 10 ||
-      formData.phone.length > 10
+      formData.phone.length < 6 ||
+      formData.phone.length > 15
     ) {
       return setEmpty(3)
     } else if (!validateEmail(formData.email)) {

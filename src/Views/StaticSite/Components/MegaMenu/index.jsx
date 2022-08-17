@@ -64,7 +64,7 @@ const MegaMenu = ({ setNav }) => {
       { menu: 'Overview', link: '/museum-of-classical-yoga' },
       { menu: 'Virtual Tour', link: '/museum-of-classical-yoga/#virtual_tour' },
       { menu: 'Gallery', link: '/museum-of-classical-yoga/#gallery' },
-      { menu: 'location', link: '/museum-of-classical-yoga/#location' },
+      { menu: 'Location', link: '/museum-of-classical-yoga/#location' },
     ],
     FACILITIES: [
       { menu: 'Overview', link: '/facilities' },
@@ -275,25 +275,25 @@ const MegaMenu = ({ setNav }) => {
                 </li>
                 <Link onClick={() => {setNav(false)}}  to="/500-hrs-online-yoga-teacher-training-course-intermediate-level">
                   <li >
-                    3 Months TTC-Online-English
+                    3 Months TTC - Online-English
                   </li>
                 </Link>
                 <li className="text-bold">
                   Advance TTC (900 Hour Courses)</li>
                 <Link onClick={() => {setNav(false)}}  to="/3-months-advanced-teacher-training-course">
-                  <li>3 Months TTC-On Campus-English</li>
+                  <li>3 Months TTC - On Campus-English</li>
                 </Link>
                 <Link onClick={() => {setNav(false)}}  to="/900-hours-advanced-teacher-training-course">
-                  <li>4 Months TTC-Online-English</li>
+                  <li>4 Months TTC - Online-English</li>
                 </Link>
                 <Link onClick={() => {setNav(false)}}  to="/seven-month-ttc">
-                  <li>7 Months TTC-Online & On Campus-English</li>
+                  <li>7 Months TTC - Online & On Campus-English</li>
                 </Link>
                 <Link onClick={() => {setNav(false)}}  to="/one-year-ttc">
-                  <li>1 Year TTC-Online & On Campus-Hindi</li>
+                  <li>1 Year TTC - Online & On Campus-Hindi</li>
                 </Link>
                 <Link onClick={() => {setNav(false)}}  to="/two-year-ttc">
-                  <li>2 Years TTC-Online & On Campus-English</li>
+                  <li>2 Years TTC - Online & On Campus-English</li>
                 </Link>
                 <Link onClick={() => {setNav(false)}}  to="/certificate-yoga-therapy-course-online">
                   <li className="text-bold" >
@@ -343,11 +343,11 @@ const MegaMenu = ({ setNav }) => {
                 </Link>
                 <Link onClick={() => {setNav(false)}}  to='/samattvam'>
                   <h3 >
-                  Samattvam (Health Checkup)
+                  SAMATTVAM (HEALTH CHECKUP)
                   </h3>
                 </Link>
                 <Link onClick={() => {setNav(false)}}  to='/satsang'>
-                  <h3 style={{ marginTop:'0.75rem' }} >Satsang</h3></Link>
+                  <h3 style={{ marginTop:'0.75rem' }} >SATSANG</h3></Link>
                 <h3 style={{ marginTop:'0.75rem' }} >REGULAR CLASSES</h3>
                 <ul>
                   <Link onClick={() => {setNav(false)}}  to="/asana-regular-classes-on-campus">
@@ -366,10 +366,10 @@ const MegaMenu = ({ setNav }) => {
                     <li>Weekend Asana Classes (Men & Women) - Online</li>
                   </Link>
                   <Link onClick={() => {setNav(false)}}  to="/childrens-regular-classes">
-                    <li>Children&apos;s Regular Clasees - On Campus</li>
+                    <li>Children&apos;s Regular Classes - On Campus</li>
                   </Link>
                   <Link onClick={() => {setNav(false)}}  to="/childrens-regular-classes-on-campus">
-                    <li>Children&apos;s Weekend Clasees - On Campus</li>
+                    <li>Children&apos;s Weekend Classes - On Campus</li>
                   </Link>
                   <Link onClick={() => {setNav(false)}}  to="/advanced-regular-yoga-classes">
                     <li>
@@ -378,19 +378,19 @@ const MegaMenu = ({ setNav }) => {
                     </li>
                   </Link>
                   <Link onClick={() => {setNav(false)}}  to="/yog-prayas-online">
-                    <li>Yog Prayas-Online</li>
+                    <li>Yog Prayas - Online</li>
                   </Link>
                   <Link onClick={() => {setNav(false)}}  to="/meditation-foundation-course-online">
-                    <li>Meditation Foundation Course-Online</li>
+                    <li>Meditation Foundation Course - Online</li>
                   </Link>
                   <Link onClick={() => {setNav(false)}}  to="/regular-meditation-classes-online">
-                    <li>Regular Meditation Classes-Online</li>
+                    <li>Regular Meditation Classes - Online</li>
                   </Link>
                   <Link onClick={() => {setNav(false)}}  to="/anand-sadhna">
-                    <li>Anand Sadhna-Online & On Campus</li>
+                    <li>Anand Sadhna - Online & On Campus</li>
                   </Link>
                   <Link onClick={() => {setNav(false)}}  to="/couples-classes">
-                    <li>Couple&apos;s Classes-Online</li>
+                    <li>Couple&apos;s Classes - Online</li>
                   </Link>
                 </ul>
               </ul>
@@ -416,9 +416,9 @@ const MegaMenu = ({ setNav }) => {
                 <Link onClick={() => {setNav(false)}}  to='/diabetes-camp'><li>Diabetes Camp</li></Link>
               </ul>
               <Link onClick={() => {setNav(false)}}  to='/corporate-workshops'>
-                <h3 >Corporate Workshop</h3></Link>
+                <h3 style={{ marginTop:'0.75rem' }} >CORPORATE WORKSHOP</h3></Link>
               <Link onClick={() => {setNav(false)}}  to='/home-tuitions'>
-                <h3>Home Tutions</h3></Link>
+                <h3 style={{ marginTop:'0.75rem' }} >HOME TUITIONS</h3></Link>
               <div
                 className="filler"
                 style={{ position: 'relative', marginTop: '3rem' }}

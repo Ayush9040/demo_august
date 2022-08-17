@@ -136,7 +136,7 @@ const Personal = ({ handleEmpty1, empty, setFormData, formData, setEmpty }) => {
           <form>
             <div className='form_error'>
               <InputComponent
-                type="number"
+                type="text"
                 placeholder="Pincode*"
                 form={formData}
                 setField={setFormData}
