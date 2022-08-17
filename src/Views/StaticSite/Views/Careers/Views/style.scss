@@ -49,7 +49,7 @@
   width: 70%;
   margin: 0 auto;
   .job-requirements {
-    width: 400px;
+    width: 350px;
     ul {
       list-style: none;
       font-size: 1.25rem;
@@ -68,7 +68,7 @@
     position: relative;
     // left: 5rem;
     .job_input {
-      width: 80%;
+      width: 100%;
       // margin: 1rem 5rem;
     }
     fieldset {
@@ -138,7 +138,7 @@
   padding: 1rem 2rem;
   /* border: 1px solid rgba(96, 96, 96, 0.5019607843); */
   border-radius: 50px;
-  width: 700px;
+  width: 100%;
   margin: 0 auto;
   position: relative;
   bottom: 1rem;
@@ -155,6 +155,7 @@
     .job-details {
       .job-application {
         .job-form {
+          margin-top: 2rem;
           #apply {
             display: block;
             float: none;
@@ -174,7 +175,7 @@
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1050px) {
   .job-description {
     flex-direction: column;
     & > div {
@@ -229,6 +230,7 @@
     grid-template-columns: 1fr;
     gap: 3rem;
 }}
+
 
 
 @media (max-width: 500px) {
