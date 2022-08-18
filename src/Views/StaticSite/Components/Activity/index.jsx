@@ -32,7 +32,7 @@ const Activity = () => {
     speed: 500,
     slidesToShow: 2,
     slidesToScroll: 2,
-    autoplay: true,
+    autoplay: false,
     autoPlaySpeed: 5000,
     //centerMode: true,
     centerPadding: '20%',
@@ -53,6 +53,8 @@ const Activity = () => {
       },
     ],
   }
+
+  console.log(activitySliderRef,'aaa',isInteracting)
 
   return (
     <>

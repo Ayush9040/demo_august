@@ -32,7 +32,7 @@ const Experience = () => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: true,
+    autoplay: false,
     autoPlaySpeed: 5000,
   }
 
