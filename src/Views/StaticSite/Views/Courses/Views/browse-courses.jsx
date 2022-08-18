@@ -12,6 +12,8 @@ import { useParams } from 'react-router-dom'
 // import { courseArray } from '../../../Constants/courses/c200hr'
 import { AllCourses, c200hr,c500hr,c900hr,campsArr,classesArr } from '../Constants/courses'
 import CourseCard from '../../../Components/CourseCard'
+import { Helmet } from 'react-helmet'
+import metaDataObj from '../../../../../Constants/metaData.json'
 import './style.scss'
 
 const BrowseCourses = () => {
@@ -55,103 +57,109 @@ const BrowseCourses = () => {
   }, [type])
 
   return (
-    <div className="browse-courses">
-      <InnerNavComponent abc={ browseCourse } />
-      <div className="breadcrumbs">
-        <p>Browse &gt; {breadcrumbs}</p>
-      </div>
-      <div className="popular-courses">
-        <div className="course-accordian">
-          <Accordion allowZeroExpanded>
-            <AccordionItem>
-              <AccordionItemHeading>
-                <AccordionItemButton>
-                  <Link to="/courses/browse/most-popular">
-                    <p> Most Popular</p>
-                  </Link>
-                </AccordionItemButton>
-              </AccordionItemHeading>
-            </AccordionItem>
-            <AccordionItem>
-              <AccordionItemHeading>
-                <AccordionItemButton>
-                  <Link to="/courses/browse/ttc">
-                    <p>Teachers Training</p>
-                  </Link>
-                </AccordionItemButton>
-              </AccordionItemHeading>
-              <AccordionItemPanel>
-                <ul>
-                  <li
-                    style={{ cursor: 'pointer' }}
-                    onClick={() => {
-                      setCategory(
-                        [...c200hr]
-                      )
-                    }}
-                  >
+    <>
+      { metaDataObj['/courses'] && 
+    <Helmet
+      title={metaDataObj['/courses']?.title}
+    /> }
+      <div className="browse-courses">
+        <InnerNavComponent abc={ browseCourse } />
+        <div className="breadcrumbs">
+          <p>Browse &gt; {breadcrumbs}</p>
+        </div>
+        <div className="popular-courses">
+          <div className="course-accordian">
+            <Accordion allowZeroExpanded>
+              <AccordionItem>
+                <AccordionItemHeading>
+                  <AccordionItemButton>
+                    <Link to="/courses/browse/most-popular">
+                      <p> Most Popular</p>
+                    </Link>
+                  </AccordionItemButton>
+                </AccordionItemHeading>
+              </AccordionItem>
+              <AccordionItem>
+                <AccordionItemHeading>
+                  <AccordionItemButton>
+                    <Link to="/courses/browse/ttc">
+                      <p>Teachers Training</p>
+                    </Link>
+                  </AccordionItemButton>
+                </AccordionItemHeading>
+                <AccordionItemPanel>
+                  <ul>
+                    <li
+                      style={{ cursor: 'pointer' }}
+                      onClick={() => {
+                        setCategory(
+                          [...c200hr]
+                        )
+                      }}
+                    >
                     200 Hour Courses{' '}
-                  </li>
-                  <li
-                    style={{ cursor: 'pointer' }}
-                    onClick={() => {
-                      setCategory(
-                        [...c500hr]
-                      )
-                    }}
-                  >
+                    </li>
+                    <li
+                      style={{ cursor: 'pointer' }}
+                      onClick={() => {
+                        setCategory(
+                          [...c500hr]
+                        )
+                      }}
+                    >
                     500 Hour Courses
-                  </li>
-                  <li
-                    style={{ cursor: 'pointer' }}
-                    onClick={() => {
-                      setCategory(
-                        [...c900hr]
-                      )
-                    }}
-                  >
+                    </li>
+                    <li
+                      style={{ cursor: 'pointer' }}
+                      onClick={() => {
+                        setCategory(
+                          [...c900hr]
+                        )
+                      }}
+                    >
                     900 Hour Courses
-                  </li>
-                </ul>
-              </AccordionItemPanel>
-            </AccordionItem>
-            <AccordionItem>
-              <AccordionItemHeading>
-                <AccordionItemButton>
-                  <Link to="/courses/browse/camps-workshops">
-                    <p>Camps & Workshop</p>
-                  </Link>
-                </AccordionItemButton>
-              </AccordionItemHeading>
-            </AccordionItem>
-            <AccordionItem>
-              <AccordionItemHeading>
-                <AccordionItemButton>
-                  <Link to="/courses/browse/classes">
-                    <p>Regular Classes</p>
-                  </Link>
-                </AccordionItemButton>
-              </AccordionItemHeading>
-            </AccordionItem>
-          </Accordion>
-        </div>
-        <div className="course-grid">
-          {category?.map((item, i) => (
-            <CourseCard
-              key={i}
-              color={item.colorCode}
-              index={i}
-              courseTitle={item.title}
-              description={item.metaDescription}
-              path={item.key}
-              img={item.cardImage}
-              rating={item.rating}
-              dates={item.dates}
-            />
-          ))}
+                    </li>
+                  </ul>
+                </AccordionItemPanel>
+              </AccordionItem>
+              <AccordionItem>
+                <AccordionItemHeading>
+                  <AccordionItemButton>
+                    <Link to="/courses/browse/camps-workshops">
+                      <p>Camps & Workshop</p>
+                    </Link>
+                  </AccordionItemButton>
+                </AccordionItemHeading>
+              </AccordionItem>
+              <AccordionItem>
+                <AccordionItemHeading>
+                  <AccordionItemButton>
+                    <Link to="/courses/browse/classes">
+                      <p>Regular Classes</p>
+                    </Link>
+                  </AccordionItemButton>
+                </AccordionItemHeading>
+              </AccordionItem>
+            </Accordion>
+          </div>
+          <div className="course-grid">
+            {category?.map((item, i) => (
+              <CourseCard
+                key={i}
+                color={item.colorCode}
+                index={i}
+                courseTitle={item.title}
+                description={item.metaDescription}
+                path={item.key}
+                img={item.cardImage}
+                rating={item.rating}
+                dates={item.dates}
+              />
+            ))}
+          </div>
         </div>
       </div>
-    </div>
+    </>
   )
 }
 

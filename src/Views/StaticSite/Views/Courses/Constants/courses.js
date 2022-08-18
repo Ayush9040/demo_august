@@ -4015,7 +4015,7 @@ const ttc900hr = {
         content: {
           title: 'Course:',
 
-          text: ['900 hrs TTC 4 Months TTC On Campus - English'],
+          text: ['900 hrs TTC 4 Months TTC Online - English'],
         },
       },
 
@@ -10795,7 +10795,7 @@ const classes = {
   12: {
     id: '',
     title: 'Children\'s Weekend Class - On Campus',
-    key: 'childrens-regular-classes-on-campus',
+    key: 'childrens-weekend-classes-on-campus',
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
     templateId: {
