@@ -27,11 +27,12 @@ const SingleCourse = () => {
     menuColor: 'orange',
     menuItems: [],
   }
+
   return (
     <>
       { metaDataObj[location.pathname] && 
     <Helmet
-      title={metaDataObj[location.pathname || '']?.title || ''}
+      title={metaDataObj[`/${pageDate.key}`]?.title || ''}
     /> }
       <div className='single-course'>
         <InnerNavComponent abc={CareerNameBan}/>

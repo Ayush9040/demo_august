@@ -1,5 +1,6 @@
 import axios from 'axios'
 import React,{ lazy } from 'react'
+
 import { useEffect } from 'react'
 import { useState } from 'react'
 import { useParams } from 'react-router-dom'
@@ -13,6 +14,7 @@ const DescisionComp = () => {
 
   const [ isLoading,setIsLoading ] = useState(null)
   const { contentId } = useParams()
+
 
   useEffect(()=>{
     (async()=>{

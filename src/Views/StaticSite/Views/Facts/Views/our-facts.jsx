@@ -7,7 +7,6 @@ import InnerNavComponent from '../../../Components/InnerNavComponent'
 import useFacts from '../../../utils/hooks/useFacts'
 import { Helmet } from 'react-helmet'
 import metaDataObj from '../../../../../Constants/metaData.json'
-import { useLocation } from 'react-router-dom'
 
 const OurFacts = () => {
 
@@ -18,7 +17,6 @@ const OurFacts = () => {
     menuColor:'orange',
     menuItems:[]
   }
-  const location = useLocation() 
 
   useEffect(() => {
     window.scrollTo(0, 0)
@@ -27,9 +25,9 @@ const OurFacts = () => {
 
   return (
     <>
-      { metaDataObj[location.pathname] && 
+      { metaDataObj['/our-facts'] && 
     <Helmet
-      title={metaDataObj[location.pathname || '']?.title || ''}
+      title={`${metaDataObj['/our-facts'].title}`}
     /> }
       <InnerNavComponent abc={ facts }/>
       <div className="ourfacts-container flex">
