@@ -43,7 +43,8 @@
     "lint": "yarn run eslint --ext .ts,.tsx,.js,.jsx .",
     "lint:fix": "yarn run eslint --ext .ts,.tsx,.js,.jsx . --fix",
     "commit": "git-cz",
-    "release": "standard-version"
+    "release": "standard-version",
+    "postbuild": "react-snap"
   },
   "eslintConfig": {
     "extends": [
