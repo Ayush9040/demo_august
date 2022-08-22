@@ -5700,555 +5700,555 @@ const camps = {
   //   ],
   // },
 
-  5: {
-    id: '',
-    title: 'Digestion Camp',
-    key: 'digestion-camp',
-    batch: 1,
-    // templateId: 'GENERAL_AUTO_EMAIL',
-    templateId: {
-      templateOnline: 'GENERAL_AUTO_EMAIL',
-      templateOffline: {
-        templateResidential: '',
-        templateNonResidential: '',
-      },
-    },
-    mostPopular: false,
-    rating: 5,
-    colorCode: '#DDAB58',
-    timing: '9.30 AM to 5.30 PM',
-    fees: {
-      onlineFee: 500,
-      offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
-    },
-    category: 'camps',
-    metaDescription:
-      'Specific pranayama, and relaxation techniques to enhance your wellbeing',
-    image: `${baseDomain}${courseAssets.courseAsset13}`,
-    cardImage: `${baseDomain}${courseAssets.courseAsset106}`,
-    dates: [],
-    online: true,
-    onCampus: true,
-    nonResidential: false,
-    residential: false,
-    certficate: false,
-    details: [
-      {
-        type: 'paragraph',
-        content: {
-          title: 'Who is this workshop for?',
-          text: [
-            'Given our fast-paced and unhealthy lifestyles, it is no wonder that most of us struggle with our digestive systems – be it diarrhea, IBS, constipation, ulcers, acidity, and celiac disease. Fortunately, yoga shows us a holistic path out of this towards well-being and total health. At The Yoga Institute, we have designed a powerful health camp to help you tackle all your troubles with digestion. With the aid of Sattvik ahar, yogic guidelines, effective asanas, in no time your digestion will be your friend and not your enemy.                   ',
-          ],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'What can you expect?',
-          text: [
-            'If your digestion is good, all the cells in your body will be happy and free of disease. -Dr. Hansaji Yogendra ',
-          ],
-        },
-      },
-      {
-        type: 'u-list',
-        content: {
-          title: ' Program Offerings',
-          points: [
-            {
-              listItem:
-                'Yoga Sadhana: Specific pranayama, and relaxation techniques to enhance your wellbeing',
-              subItems: [],
-            },
-            {
-              listItem: 'Diet guidelines',
-              subItems: [],
-            },
-            {
-              listItem: 'Health counseling',
-              subItems: [],
-            },
-            {
-              listItem:
-                'Lifestyle tips by spiritual guru Dr. Hansaji who has decades of experience in the field',
-              subItems: [],
-            },
-            {
-              listItem: 'Fitness tips',
-              subItems: [],
-            },
-          ],
-        },
-      },
-      // {
-      //   type: 'u-list',
-      //   content: {
-      //     title: 'Offered with the program',
-      //     points: [
-      //       {
-      //         listItem: 'Booklet with guidelines  ',
-      //         subItems: [],
-      //       },
-      //       {
-      //         listItem: 'Wholesome Sattvik lunch',
-      //         subItems: [],
-      //       },
-      //       {
-      //         listItem: 'Healthy snacks  ',
-      //         subItems: [],
-      //       },
-      //     ],
-      //   },
-      // },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'Time',
-          text: ['9.30 AM to 5.30 PM'],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'Fees',
-          text: ['INR 500'],
-        },
-      },
-      {
-        type: 'u-list',
-        content: {
-          title: ' Guidelines',
-          points: [
-            {
-              listItem:
-                'Campers are requested to come attired to comfortable loose fitting clothes. Shorts, capris, tank tops, low cut shirts, short and sleeveless T-shirts are not permitted as per the Institute dress code.',
-              subItems: [],
-            },
-            // {
-            //   listItem:
-            //     'Campers are requested to have their breakfast and medication (as prescribed by their doctor). ',
-            //   subItems: [],
-            // },
-          ],
-        },
-      },
-    ],
-  },
+  // 5: {
+  //   id: '',
+  //   title: 'Digestion Camp',
+  //   key: 'digestion-camp',
+  //   batch: 1,
+  //   // templateId: 'GENERAL_AUTO_EMAIL',
+  //   templateId: {
+  //     templateOnline: 'GENERAL_AUTO_EMAIL',
+  //     templateOffline: {
+  //       templateResidential: '',
+  //       templateNonResidential: '',
+  //     },
+  //   },
+  //   mostPopular: false,
+  //   rating: 5,
+  //   colorCode: '#DDAB58',
+  //   timing: '9.30 AM to 5.30 PM',
+  //   fees: {
+  //     onlineFee: 500,
+  //     offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
+  //   },
+  //   category: 'camps',
+  //   metaDescription:
+  //     'Specific pranayama, and relaxation techniques to enhance your wellbeing',
+  //   image: `${baseDomain}${courseAssets.courseAsset13}`,
+  //   cardImage: `${baseDomain}${courseAssets.courseAsset106}`,
+  //   dates: [],
+  //   online: true,
+  //   onCampus: true,
+  //   nonResidential: false,
+  //   residential: false,
+  //   certficate: false,
+  //   details: [
+  //     {
+  //       type: 'paragraph',
+  //       content: {
+  //         title: 'Who is this workshop for?',
+  //         text: [
+  //           'Given our fast-paced and unhealthy lifestyles, it is no wonder that most of us struggle with our digestive systems – be it diarrhea, IBS, constipation, ulcers, acidity, and celiac disease. Fortunately, yoga shows us a holistic path out of this towards well-being and total health. At The Yoga Institute, we have designed a powerful health camp to help you tackle all your troubles with digestion. With the aid of Sattvik ahar, yogic guidelines, effective asanas, in no time your digestion will be your friend and not your enemy.                   ',
+  //         ],
+  //       },
+  //     },
+  //     {
+  //       type: 'paragraph',
+  //       content: {
+  //         title: 'What can you expect?',
+  //         text: [
+  //           'If your digestion is good, all the cells in your body will be happy and free of disease. -Dr. Hansaji Yogendra ',
+  //         ],
+  //       },
+  //     },
+  //     {
+  //       type: 'u-list',
+  //       content: {
+  //         title: ' Program Offerings',
+  //         points: [
+  //           {
+  //             listItem:
+  //               'Yoga Sadhana: Specific pranayama, and relaxation techniques to enhance your wellbeing',
+  //             subItems: [],
+  //           },
+  //           {
+  //             listItem: 'Diet guidelines',
+  //             subItems: [],
+  //           },
+  //           {
+  //             listItem: 'Health counseling',
+  //             subItems: [],
+  //           },
+  //           {
+  //             listItem:
+  //               'Lifestyle tips by spiritual guru Dr. Hansaji who has decades of experience in the field',
+  //             subItems: [],
+  //           },
+  //           {
+  //             listItem: 'Fitness tips',
+  //             subItems: [],
+  //           },
+  //         ],
+  //       },
+  //     },
+  //     // {
+  //     //   type: 'u-list',
+  //     //   content: {
+  //     //     title: 'Offered with the program',
+  //     //     points: [
+  //     //       {
+  //     //         listItem: 'Booklet with guidelines  ',
+  //     //         subItems: [],
+  //     //       },
+  //     //       {
+  //     //         listItem: 'Wholesome Sattvik lunch',
+  //     //         subItems: [],
+  //     //       },
+  //     //       {
+  //     //         listItem: 'Healthy snacks  ',
+  //     //         subItems: [],
+  //     //       },
+  //     //     ],
+  //     //   },
+  //     // },
+  //     {
+  //       type: 'paragraph',
+  //       content: {
+  //         title: 'Time',
+  //         text: ['9.30 AM to 5.30 PM'],
+  //       },
+  //     },
+  //     {
+  //       type: 'paragraph',
+  //       content: {
+  //         title: 'Fees',
+  //         text: ['INR 500'],
+  //       },
+  //     },
+  //     {
+  //       type: 'u-list',
+  //       content: {
+  //         title: ' Guidelines',
+  //         points: [
+  //           {
+  //             listItem:
+  //               'Campers are requested to come attired to comfortable loose fitting clothes. Shorts, capris, tank tops, low cut shirts, short and sleeveless T-shirts are not permitted as per the Institute dress code.',
+  //             subItems: [],
+  //           },
+  //           // {
+  //           //   listItem:
+  //           //     'Campers are requested to have their breakfast and medication (as prescribed by their doctor). ',
+  //           //   subItems: [],
+  //           // },
+  //         ],
+  //       },
+  //     },
+  //   ],
+  // },
 
-  6: {
-    id: '',
-    title: 'Karma Yoga',
-    key: 'karma-yoga-course',
-    batch: 1,
-    // templateId: 'GENERAL_AUTO_EMAIL',
-    templateId: {
-      templateOnline: 'GENERAL_AUTO_EMAIL',
-      templateOffline: {
-        templateResidential: '',
-        templateNonResidential: '',
-      },
-    },
-    mostPopular: false,
-    rating: 5,
-    colorCode: '#CE9B51',
-    timing: '9.30 AM to 5.30 PM',
-    fees: {
-      onlineFee: 500,
-      offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
-    },
-    category: 'camps',
-    metaDescription: 'Diet guidelines to manage your health',
-    image: `${baseDomain}${courseAssets.courseAsset10}`,
-    cardImage: `${baseDomain}${courseAssets.courseAsset10}`,
-    dates: [],
-    online: true,
-    onCampus: true,
-    nonResidential: false,
-    residential: false,
-    certficate: false,
-    details: [
-      {
-        type: 'paragraph',
-        content: {
-          title: 'Who is this workshop for?',
-          text: [
-            'This beautifully technique of Karma Yoga presented in Bhagvada Gita is relevant even today. It is a system that can help us be focused and efficient throughout the day in a time when are attentions ae divided among a multitude of tasks and responsibilities. This camp will give you a formula to manage your state of mind in your work and will help u attain success and efficiency in all activity. We hope to see you soon!                   ',
-          ],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'What can you expect?',
-          text: [
-            'Mere doing is not action. The intent behind every action is important. ',
-          ],
-        },
-      },
-      {
-        type: 'u-list',
-        content: {
-          title: ' Program Offerings',
-          points: [
-            {
-              listItem:
-                'Effective tools and techniques to help you manage your life',
-              subItems: [],
-            },
-            {
-              listItem:
-                'Specific pranayama, asana and relaxation techniques to enhance your state of mind',
-              subItems: [],
-            },
-            {
-              listItem: 'Easy high-fibre Sattvik recipes',
-              subItems: [],
-            },
-            {
-              listItem: 'Diet guidelines to manage your health',
-              subItems: [],
-            },
-            {
-              listItem:
-                'Tips to maintain health by our spiritual guru Institute Director, Dr. Hansaji who has decades of experience in the field',
-              subItems: [],
-            },
-            {
-              listItem: 'Fitness tips',
-              subItems: [],
-            },
-          ],
-        },
-      },
-      // {
-      //   type: 'u-list',
-      //   content: {
-      //     title: 'Offered with the program',
-      //     points: [
-      //       {
-      //         listItem: 'Booklet with guidelines  ',
-      //         subItems: [],
-      //       },
-      //       {
-      //         listItem: 'Wholesome Sattvik lunch',
-      //         subItems: [],
-      //       },
-      //       {
-      //         listItem: 'Healthy snacks  ',
-      //         subItems: [],
-      //       },
-      //     ],
-      //   },
-      // },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'Time',
-          text: ['9.30 AM to 5.30 PM'],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'Fees',
-          text: ['INR 500'],
-        },
-      },
-      {
-        type: 'u-list',
-        content: {
-          title: ' Guidelines',
-          points: [
-            {
-              listItem:
-                'Campers are requested to come attired to comfortable loose fitting clothes. Shorts, capris, tank tops, low cut shirts, short and sleeveless T-shirts are not permitted as per the Institute dress code.',
-              subItems: [],
-            },
-            // {
-            //   listItem:
-            //     'Campers are requested to have their breakfast and medication (as prescribed by their doctor). ',
-            //   subItems: [],
-            // },
-          ],
-        },
-      },
-    ],
-  },
+  // 6: {
+  //   id: '',
+  //   title: 'Karma Yoga',
+  //   key: 'karma-yoga-course',
+  //   batch: 1,
+  //   // templateId: 'GENERAL_AUTO_EMAIL',
+  //   templateId: {
+  //     templateOnline: 'GENERAL_AUTO_EMAIL',
+  //     templateOffline: {
+  //       templateResidential: '',
+  //       templateNonResidential: '',
+  //     },
+  //   },
+  //   mostPopular: false,
+  //   rating: 5,
+  //   colorCode: '#CE9B51',
+  //   timing: '9.30 AM to 5.30 PM',
+  //   fees: {
+  //     onlineFee: 500,
+  //     offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
+  //   },
+  //   category: 'camps',
+  //   metaDescription: 'Diet guidelines to manage your health',
+  //   image: `${baseDomain}${courseAssets.courseAsset10}`,
+  //   cardImage: `${baseDomain}${courseAssets.courseAsset10}`,
+  //   dates: [],
+  //   online: true,
+  //   onCampus: true,
+  //   nonResidential: false,
+  //   residential: false,
+  //   certficate: false,
+  //   details: [
+  //     {
+  //       type: 'paragraph',
+  //       content: {
+  //         title: 'Who is this workshop for?',
+  //         text: [
+  //           'This beautifully technique of Karma Yoga presented in Bhagvada Gita is relevant even today. It is a system that can help us be focused and efficient throughout the day in a time when are attentions ae divided among a multitude of tasks and responsibilities. This camp will give you a formula to manage your state of mind in your work and will help u attain success and efficiency in all activity. We hope to see you soon!                   ',
+  //         ],
+  //       },
+  //     },
+  //     {
+  //       type: 'paragraph',
+  //       content: {
+  //         title: 'What can you expect?',
+  //         text: [
+  //           'Mere doing is not action. The intent behind every action is important. ',
+  //         ],
+  //       },
+  //     },
+  //     {
+  //       type: 'u-list',
+  //       content: {
+  //         title: ' Program Offerings',
+  //         points: [
+  //           {
+  //             listItem:
+  //               'Effective tools and techniques to help you manage your life',
+  //             subItems: [],
+  //           },
+  //           {
+  //             listItem:
+  //               'Specific pranayama, asana and relaxation techniques to enhance your state of mind',
+  //             subItems: [],
+  //           },
+  //           {
+  //             listItem: 'Easy high-fibre Sattvik recipes',
+  //             subItems: [],
+  //           },
+  //           {
+  //             listItem: 'Diet guidelines to manage your health',
+  //             subItems: [],
+  //           },
+  //           {
+  //             listItem:
+  //               'Tips to maintain health by our spiritual guru Institute Director, Dr. Hansaji who has decades of experience in the field',
+  //             subItems: [],
+  //           },
+  //           {
+  //             listItem: 'Fitness tips',
+  //             subItems: [],
+  //           },
+  //         ],
+  //       },
+  //     },
+  //     // {
+  //     //   type: 'u-list',
+  //     //   content: {
+  //     //     title: 'Offered with the program',
+  //     //     points: [
+  //     //       {
+  //     //         listItem: 'Booklet with guidelines  ',
+  //     //         subItems: [],
+  //     //       },
+  //     //       {
+  //     //         listItem: 'Wholesome Sattvik lunch',
+  //     //         subItems: [],
+  //     //       },
+  //     //       {
+  //     //         listItem: 'Healthy snacks  ',
+  //     //         subItems: [],
+  //     //       },
+  //     //     ],
+  //     //   },
+  //     // },
+  //     {
+  //       type: 'paragraph',
+  //       content: {
+  //         title: 'Time',
+  //         text: ['9.30 AM to 5.30 PM'],
+  //       },
+  //     },
+  //     {
+  //       type: 'paragraph',
+  //       content: {
+  //         title: 'Fees',
+  //         text: ['INR 500'],
+  //       },
+  //     },
+  //     {
+  //       type: 'u-list',
+  //       content: {
+  //         title: ' Guidelines',
+  //         points: [
+  //           {
+  //             listItem:
+  //               'Campers are requested to come attired to comfortable loose fitting clothes. Shorts, capris, tank tops, low cut shirts, short and sleeveless T-shirts are not permitted as per the Institute dress code.',
+  //             subItems: [],
+  //           },
+  //           // {
+  //           //   listItem:
+  //           //     'Campers are requested to have their breakfast and medication (as prescribed by their doctor). ',
+  //           //   subItems: [],
+  //           // },
+  //         ],
+  //       },
+  //     },
+  //   ],
+  // },
 
-  7: {
-    id: '',
-    title: 'Life Management Camp',
-    key: 'life-management-camp',
-    batch: 1,
-    // templateId: 'GENERAL_AUTO_EMAIL',
-    templateId: {
-      templateOnline: 'GENERAL_AUTO_EMAIL',
-      templateOffline: {
-        templateResidential: '',
-        templateNonResidential: '',
-      },
-    },
-    mostPopular: false,
-    rating: 5,
-    colorCode: '#EDBE66',
-    timing: '5:00 pm – 8:00 pm (IST)',
-    fees: {
-      onlineFee: 500,
-      offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
-    },
-    category: 'camps',
-    metaDescription:
-      'Specific pranayama, asana and relaxation techniques to enhance your state of mind',
-    image: `${baseDomain}${courseAssets.courseAsset8}`,
-    cardImage: `${baseDomain}${courseAssets.courseAsset112}`,
-    dates: [],
-    online: true,
-    onCampus: true,
-    nonResidential: false,
-    residential: false,
-    certficate: false,
-    details: [
-      {
-        type: 'paragraph',
-        content: {
-          title: 'Who is this workshop for?',
-          text: [
-            'If you think about it, most of the time we are living our life without consciously thinking about what we are doing and why we are doing it. It is only when we face a problem of some kind, that we are forced to stop and take stock of things. This kind of approach does us no good. If you feel that you are stuck in life, or don’t know what to do next, or feel like your life is going nowhere, this is the camp for you! Here is a camp by The Yoga Institute to give you direction and discipline to go through your life happily, joyfully and with balance. Designed with the wisdom of ancient Indian teachings, there’s a whole treasure chest of tools waiting for you at this camp. Hope to see you soon!                   ',
-          ],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'What can you expect?',
-          text: [
-            'Life is a choice between B and D. Birth and Death. We are in control of C. That is the Choices we make, so make the right choices and live a happy life. -Dr. Hansaji Yogendra ',
-          ],
-        },
-      },
-      {
-        type: 'u-list',
-        content: {
-          title: ' Program Offerings',
-          points: [
-            {
-              listItem:
-                'Effective tools and techniques to help you manage your life',
-              subItems: [],
-            },
-            {
-              listItem:
-                'Specific pranayama, asana and relaxation techniques to enhance your state of mind',
-              subItems: [],
-            },
-            {
-              listItem: 'Diet guidelines to manage your health',
-              subItems: [],
-            },
-            {
-              listItem:
-                'Tips to maintain health by our spiritual guru Institute Director, Dr. Hansaji who has decades of experience in the field',
-              subItems: [],
-            },
-            {
-              listItem: 'Fitness tips',
-              subItems: [],
-            },
-          ],
-        },
-      },
-      // {
-      //   type: 'u-list',
-      //   content: {
-      //     title: 'Offered with the program',
-      //     points: [
-      //       {
-      //         listItem: 'Booklet with guidelines  ',
-      //         subItems: [],
-      //       },
-      //       {
-      //         listItem: 'Wholesome Sattvik lunch',
-      //         subItems: [],
-      //       },
-      //       {
-      //         listItem: 'Healthy snacks  ',
-      //         subItems: [],
-      //       },
-      //     ],
-      //   },
-      // },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'Time',
-          text: ['5:00 pm – 8:00 pm (IST)'],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'Fees',
-          text: ['INR 500'],
-        },
-      },
-      {
-        type: 'u-list',
-        content: {
-          title: ' Guidelines',
-          points: [
-            {
-              listItem:
-                'Campers are requested to come attired to comfortable loose fitting clothes. Shorts, capris, tank tops, low cut shirts, short and sleeveless T-shirts are not permitted as per the Institute dress code.',
-              subItems: [],
-            },
-            // {
-            //   listItem:
-            //     'Campers are requested to have their breakfast and medication (as prescribed by their doctor). ',
-            //   subItems: [],
-            // },
-          ],
-        },
-      },
-    ],
-  },
+  // 7: {
+  //   id: '',
+  //   title: 'Life Management Camp',
+  //   key: 'life-management-camp',
+  //   batch: 1,
+  //   // templateId: 'GENERAL_AUTO_EMAIL',
+  //   templateId: {
+  //     templateOnline: 'GENERAL_AUTO_EMAIL',
+  //     templateOffline: {
+  //       templateResidential: '',
+  //       templateNonResidential: '',
+  //     },
+  //   },
+  //   mostPopular: false,
+  //   rating: 5,
+  //   colorCode: '#EDBE66',
+  //   timing: '5:00 pm – 8:00 pm (IST)',
+  //   fees: {
+  //     onlineFee: 500,
+  //     offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
+  //   },
+  //   category: 'camps',
+  //   metaDescription:
+  //     'Specific pranayama, asana and relaxation techniques to enhance your state of mind',
+  //   image: `${baseDomain}${courseAssets.courseAsset8}`,
+  //   cardImage: `${baseDomain}${courseAssets.courseAsset112}`,
+  //   dates: [],
+  //   online: true,
+  //   onCampus: true,
+  //   nonResidential: false,
+  //   residential: false,
+  //   certficate: false,
+  //   details: [
+  //     {
+  //       type: 'paragraph',
+  //       content: {
+  //         title: 'Who is this workshop for?',
+  //         text: [
+  //           'If you think about it, most of the time we are living our life without consciously thinking about what we are doing and why we are doing it. It is only when we face a problem of some kind, that we are forced to stop and take stock of things. This kind of approach does us no good. If you feel that you are stuck in life, or don’t know what to do next, or feel like your life is going nowhere, this is the camp for you! Here is a camp by The Yoga Institute to give you direction and discipline to go through your life happily, joyfully and with balance. Designed with the wisdom of ancient Indian teachings, there’s a whole treasure chest of tools waiting for you at this camp. Hope to see you soon!                   ',
+  //         ],
+  //       },
+  //     },
+  //     {
+  //       type: 'paragraph',
+  //       content: {
+  //         title: 'What can you expect?',
+  //         text: [
+  //           'Life is a choice between B and D. Birth and Death. We are in control of C. That is the Choices we make, so make the right choices and live a happy life. -Dr. Hansaji Yogendra ',
+  //         ],
+  //       },
+  //     },
+  //     {
+  //       type: 'u-list',
+  //       content: {
+  //         title: ' Program Offerings',
+  //         points: [
+  //           {
+  //             listItem:
+  //               'Effective tools and techniques to help you manage your life',
+  //             subItems: [],
+  //           },
+  //           {
+  //             listItem:
+  //               'Specific pranayama, asana and relaxation techniques to enhance your state of mind',
+  //             subItems: [],
+  //           },
+  //           {
+  //             listItem: 'Diet guidelines to manage your health',
+  //             subItems: [],
+  //           },
+  //           {
+  //             listItem:
+  //               'Tips to maintain health by our spiritual guru Institute Director, Dr. Hansaji who has decades of experience in the field',
+  //             subItems: [],
+  //           },
+  //           {
+  //             listItem: 'Fitness tips',
+  //             subItems: [],
+  //           },
+  //         ],
+  //       },
+  //     },
+  //     // {
+  //     //   type: 'u-list',
+  //     //   content: {
+  //     //     title: 'Offered with the program',
+  //     //     points: [
+  //     //       {
+  //     //         listItem: 'Booklet with guidelines  ',
+  //     //         subItems: [],
+  //     //       },
+  //     //       {
+  //     //         listItem: 'Wholesome Sattvik lunch',
+  //     //         subItems: [],
+  //     //       },
+  //     //       {
+  //     //         listItem: 'Healthy snacks  ',
+  //     //         subItems: [],
+  //     //       },
+  //     //     ],
+  //     //   },
+  //     // },
+  //     {
+  //       type: 'paragraph',
+  //       content: {
+  //         title: 'Time',
+  //         text: ['5:00 pm – 8:00 pm (IST)'],
+  //       },
+  //     },
+  //     {
+  //       type: 'paragraph',
+  //       content: {
+  //         title: 'Fees',
+  //         text: ['INR 500'],
+  //       },
+  //     },
+  //     {
+  //       type: 'u-list',
+  //       content: {
+  //         title: ' Guidelines',
+  //         points: [
+  //           {
+  //             listItem:
+  //               'Campers are requested to come attired to comfortable loose fitting clothes. Shorts, capris, tank tops, low cut shirts, short and sleeveless T-shirts are not permitted as per the Institute dress code.',
+  //             subItems: [],
+  //           },
+  //           // {
+  //           //   listItem:
+  //           //     'Campers are requested to have their breakfast and medication (as prescribed by their doctor). ',
+  //           //   subItems: [],
+  //           // },
+  //         ],
+  //       },
+  //     },
+  //   ],
+  // },
 
-  8: {
-    id: '',
-    title: 'Meditation Camp',
-    key: 'meditation-camp',
-    batch: 1,
-    // templateId: 'GENERAL_AUTO_EMAIL',
-    templateId: {
-      templateOnline: 'GENERAL_AUTO_EMAIL',
-      templateOffline: {
-        templateResidential: '',
-        templateNonResidential: '',
-      },
-    },
-    mostPopular: false,
-    rating: 5,
-    colorCode: '#DDAB58',
-    timing: '9.30 AM to 5.30 PM',
-    fees: {
-      onlineFee: 500,
-      offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
-    },
-    category: 'camps',
-    metaDescription:
-      'Specific pranayama, asana and relaxation techniques to enhance your state of mind',
-    image: `${baseDomain}${courseAssets.courseAsset9}`,
-    cardImage: `${baseDomain}${courseAssets.courseAsset9}`,
-    dates: [],
-    online: true,
-    onCampus: true,
-    nonResidential: false,
-    residential: false,
-    certficate: false,
-    details: [
-      {
-        type: 'paragraph',
-        content: {
-          title: 'Who is this workshop for?',
-          text: [
-            'The Meditation Camp at The Yoga Institute will take you into a deep ocean of silence, focus and peace. Here, we will give you the tools to handle your daily stresses and challenges. With the unique techniques developed at The Yoga Institute, you will learn to be less reactive and more responsive to all of life’s situations and events. You will experience the power of tranquility in every aspect of your life. You will become a new person who is balanced no matter the situation they are in.                ',
-          ],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'What can you expect?',
-          text: [
-            'A meditative state can bring a change in your approach toward life and efficiency in work. -Dr. Hansaji Yogendra ',
-          ],
-        },
-      },
-      {
-        type: 'u-list',
-        content: {
-          title: ' Program Offerings',
-          points: [
-            {
-              listItem:
-                'Effective tools and techniques to help you manage your life',
-              subItems: [],
-            },
-            {
-              listItem:
-                'Specific pranayama, asana and relaxation techniques to enhance your state of mind',
-              subItems: [],
-            },
-            {
-              listItem: 'Diet guidelines to manage your health',
-              subItems: [],
-            },
-            {
-              listItem:
-                'Tips to maintain health by our spiritual guru Institute Director, Dr. Hansaji who has decades of experience in the field',
-              subItems: [],
-            },
-            {
-              listItem: 'Fitness tips',
-              subItems: [],
-            },
-          ],
-        },
-      },
-      // {
-      //   type: 'u-list',
-      //   content: {
-      //     title: 'Offered with the program',
-      //     points: [
-      //       {
-      //         listItem: 'Booklet with guidelines  ',
-      //         subItems: [],
-      //       },
-      //       {
-      //         listItem: 'Wholesome Sattvik lunch',
-      //         subItems: [],
-      //       },
-      //       {
-      //         listItem: 'Healthy snacks  ',
-      //         subItems: [],
-      //       },
-      //     ],
-      //   },
-      // },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'Time',
-          text: ['9.30 AM to 5.30 PM'],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'Fees',
-          text: ['INR 500'],
-        },
-      },
-      {
-        type: 'u-list',
-        content: {
-          title: ' Guidelines',
-          points: [
-            {
-              listItem:
-                'Campers are requested to come attired to comfortable loose fitting clothes. Shorts, capris, tank tops, low cut shirts, short and sleeveless T-shirts are not permitted as per the Institute dress code.',
-              subItems: [],
-            },
-            // {
-            //   listItem:
-            //     'Campers are requested to have their breakfast and medication (as prescribed by their doctor). ',
-            //   subItems: [],
-            // },
-          ],
-        },
-      },
-    ],
-  },
+  // 8: {
+  //   id: '',
+  //   title: 'Meditation Camp',
+  //   key: 'meditation-camp',
+  //   batch: 1,
+  //   // templateId: 'GENERAL_AUTO_EMAIL',
+  //   templateId: {
+  //     templateOnline: 'GENERAL_AUTO_EMAIL',
+  //     templateOffline: {
+  //       templateResidential: '',
+  //       templateNonResidential: '',
+  //     },
+  //   },
+  //   mostPopular: false,
+  //   rating: 5,
+  //   colorCode: '#DDAB58',
+  //   timing: '9.30 AM to 5.30 PM',
+  //   fees: {
+  //     onlineFee: 500,
+  //     offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
+  //   },
+  //   category: 'camps',
+  //   metaDescription:
+  //     'Specific pranayama, asana and relaxation techniques to enhance your state of mind',
+  //   image: `${baseDomain}${courseAssets.courseAsset9}`,
+  //   cardImage: `${baseDomain}${courseAssets.courseAsset9}`,
+  //   dates: [],
+  //   online: true,
+  //   onCampus: true,
+  //   nonResidential: false,
+  //   residential: false,
+  //   certficate: false,
+  //   details: [
+  //     {
+  //       type: 'paragraph',
+  //       content: {
+  //         title: 'Who is this workshop for?',
+  //         text: [
+  //           'The Meditation Camp at The Yoga Institute will take you into a deep ocean of silence, focus and peace. Here, we will give you the tools to handle your daily stresses and challenges. With the unique techniques developed at The Yoga Institute, you will learn to be less reactive and more responsive to all of life’s situations and events. You will experience the power of tranquility in every aspect of your life. You will become a new person who is balanced no matter the situation they are in.                ',
+  //         ],
+  //       },
+  //     },
+  //     {
+  //       type: 'paragraph',
+  //       content: {
+  //         title: 'What can you expect?',
+  //         text: [
+  //           'A meditative state can bring a change in your approach toward life and efficiency in work. -Dr. Hansaji Yogendra ',
+  //         ],
+  //       },
+  //     },
+  //     {
+  //       type: 'u-list',
+  //       content: {
+  //         title: ' Program Offerings',
+  //         points: [
+  //           {
+  //             listItem:
+  //               'Effective tools and techniques to help you manage your life',
+  //             subItems: [],
+  //           },
+  //           {
+  //             listItem:
+  //               'Specific pranayama, asana and relaxation techniques to enhance your state of mind',
+  //             subItems: [],
+  //           },
+  //           {
+  //             listItem: 'Diet guidelines to manage your health',
+  //             subItems: [],
+  //           },
+  //           {
+  //             listItem:
+  //               'Tips to maintain health by our spiritual guru Institute Director, Dr. Hansaji who has decades of experience in the field',
+  //             subItems: [],
+  //           },
+  //           {
+  //             listItem: 'Fitness tips',
+  //             subItems: [],
+  //           },
+  //         ],
+  //       },
+  //     },
+  //     // {
+  //     //   type: 'u-list',
+  //     //   content: {
+  //     //     title: 'Offered with the program',
+  //     //     points: [
+  //     //       {
+  //     //         listItem: 'Booklet with guidelines  ',
+  //     //         subItems: [],
+  //     //       },
+  //     //       {
+  //     //         listItem: 'Wholesome Sattvik lunch',
+  //     //         subItems: [],
+  //     //       },
+  //     //       {
+  //     //         listItem: 'Healthy snacks  ',
+  //     //         subItems: [],
+  //     //       },
+  //     //     ],
+  //     //   },
+  //     // },
+  //     {
+  //       type: 'paragraph',
+  //       content: {
+  //         title: 'Time',
+  //         text: ['9.30 AM to 5.30 PM'],
+  //       },
+  //     },
+  //     {
+  //       type: 'paragraph',
+  //       content: {
+  //         title: 'Fees',
+  //         text: ['INR 500'],
+  //       },
+  //     },
+  //     {
+  //       type: 'u-list',
+  //       content: {
+  //         title: ' Guidelines',
+  //         points: [
+  //           {
+  //             listItem:
+  //               'Campers are requested to come attired to comfortable loose fitting clothes. Shorts, capris, tank tops, low cut shirts, short and sleeveless T-shirts are not permitted as per the Institute dress code.',
+  //             subItems: [],
+  //           },
+  //           // {
+  //           //   listItem:
+  //           //     'Campers are requested to have their breakfast and medication (as prescribed by their doctor). ',
+  //           //   subItems: [],
+  //           // },
+  //         ],
+  //       },
+  //     },
+  //   ],
+  // },
 
   9: {
     id: '',
@@ -6527,140 +6527,140 @@ const camps = {
     ],
   },
 
-  11: {
-    id: '',
-    title: 'Respiratory Workshop',
-    key: 'respiratory-workshop',
-    batch: 1,
-    // templateId: 'GENERAL_AUTO_EMAIL',
-    templateId: {
-      templateOnline: 'GENERAL_AUTO_EMAIL',
-      templateOffline: {
-        templateResidential: '',
-        templateNonResidential: '',
-      },
-    },
-    dates: [],
-    mostPopular: false,
-    rating: 5,
-    colorCode: '#DDAB58',
-    timing: '5:00 pm – 8:00 pm (IST)',
-    fees: {
-      onlineFee: 500,
-      offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
-    },
-    category: 'camps',
-    metaDescription: 'Insightful session with a specialist',
-    image: `${baseDomain}${courseAssets.courseAsset83}`,
-    cardImage: `${baseDomain}${courseAssets.courseAsset83}`,
-    online: true,
-    onCampus: true,
-    nonResidential: false,
-    residential: false,
-    certficate: false,
-    details: [
-      {
-        type: 'paragraph',
-        content: {
-          title: 'Who is this workshop for?',
-          text: [
-            'Prana is the vital energy or life force, which exists in all of us. The fight against respiratory problems begins with a strong will to overcome one’s disability and has to be backed by an implicit faith in oneself. With a strong emphasis on ancient yogic knowledge and techniques, The Yoga Institute has been conducting powerful Respiratory Camps since 1987. Respiratory health has been well documented in traditional systems of wellbeing over several millennia. The Yogic life strengthens your will, augments your faith in yourself and opens air passages. How soon you can breathe with ease and on your own, depends on yourself. What are you waiting for? Begin now!    ',
-          ],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'What can you expect?',
-          text: [
-            'If you learn to breathe the right way, your life will be longer. -Dr. Hansaji Yogendra ',
-          ],
-        },
-      },
-      {
-        type: 'u-list',
-        content: {
-          title: ' Program Offerings',
-          points: [
-            {
-              listItem:
-                'Specific pranayama, and relaxation techniques to enhance your health',
-              subItems: [],
-            },
-            {
-              listItem: 'Diet guidelines to manage your health',
-              subItems: [],
-            },
-            {
-              listItem: 'Insightful session with a specialist',
-              subItems: [],
-            },
-            {
-              listItem:
-                'Tips to maintain health by our spiritual guru Institute Director, Dr. Hansaji who has decades of experience in the field',
-              subItems: [],
-            },
-            {
-              listItem: 'Fitness tips',
-              subItems: [],
-            },
-          ],
-        },
-      },
-      // {
-      //   type: 'u-list',
-      //   content: {
-      //     title: 'Offered with the program',
-      //     points: [
-      //       {
-      //         listItem: 'Booklet with guidelines  ',
-      //         subItems: [],
-      //       },
-      //       {
-      //         listItem: 'Wholesome Sattvik lunch',
-      //         subItems: [],
-      //       },
-      //       {
-      //         listItem: 'Healthy snacks  ',
-      //         subItems: [],
-      //       },
-      //     ],
-      //   },
-      // },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'Time',
-          text: ['5:00 pm – 8:00 pm (IST)'],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'Fees',
-          text: ['INR 500'],
-        },
-      },
-      {
-        type: 'u-list',
-        content: {
-          title: ' Guidelines',
-          points: [
-            {
-              listItem:
-                'Campers are requested to come attired to comfortable loose fitting clothes. Shorts, capris, tank tops, low cut shirts, short and sleeveless T-shirts are not permitted as per the Institute dress code.',
-              subItems: [],
-            },
-            // {
-            //   listItem:
-            //     'Campers are requested to have their breakfast and medication (as prescribed by their doctor). ',
-            //   subItems: [],
-            // },
-          ],
-        },
-      },
-    ],
-  },
+  // 11: {
+  //   id: '',
+  //   title: 'Respiratory Workshop',
+  //   key: 'respiratory-workshop',
+  //   batch: 1,
+  //   // templateId: 'GENERAL_AUTO_EMAIL',
+  //   templateId: {
+  //     templateOnline: 'GENERAL_AUTO_EMAIL',
+  //     templateOffline: {
+  //       templateResidential: '',
+  //       templateNonResidential: '',
+  //     },
+  //   },
+  //   dates: [],
+  //   mostPopular: false,
+  //   rating: 5,
+  //   colorCode: '#DDAB58',
+  //   timing: '5:00 pm – 8:00 pm (IST)',
+  //   fees: {
+  //     onlineFee: 500,
+  //     offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
+  //   },
+  //   category: 'camps',
+  //   metaDescription: 'Insightful session with a specialist',
+  //   image: `${baseDomain}${courseAssets.courseAsset83}`,
+  //   cardImage: `${baseDomain}${courseAssets.courseAsset83}`,
+  //   online: true,
+  //   onCampus: true,
+  //   nonResidential: false,
+  //   residential: false,
+  //   certficate: false,
+  //   details: [
+  //     {
+  //       type: 'paragraph',
+  //       content: {
+  //         title: 'Who is this workshop for?',
+  //         text: [
+  //           'Prana is the vital energy or life force, which exists in all of us. The fight against respiratory problems begins with a strong will to overcome one’s disability and has to be backed by an implicit faith in oneself. With a strong emphasis on ancient yogic knowledge and techniques, The Yoga Institute has been conducting powerful Respiratory Camps since 1987. Respiratory health has been well documented in traditional systems of wellbeing over several millennia. The Yogic life strengthens your will, augments your faith in yourself and opens air passages. How soon you can breathe with ease and on your own, depends on yourself. What are you waiting for? Begin now!    ',
+  //         ],
+  //       },
+  //     },
+  //     {
+  //       type: 'paragraph',
+  //       content: {
+  //         title: 'What can you expect?',
+  //         text: [
+  //           'If you learn to breathe the right way, your life will be longer. -Dr. Hansaji Yogendra ',
+  //         ],
+  //       },
+  //     },
+  //     {
+  //       type: 'u-list',
+  //       content: {
+  //         title: ' Program Offerings',
+  //         points: [
+  //           {
+  //             listItem:
+  //               'Specific pranayama, and relaxation techniques to enhance your health',
+  //             subItems: [],
+  //           },
+  //           {
+  //             listItem: 'Diet guidelines to manage your health',
+  //             subItems: [],
+  //           },
+  //           {
+  //             listItem: 'Insightful session with a specialist',
+  //             subItems: [],
+  //           },
+  //           {
+  //             listItem:
+  //               'Tips to maintain health by our spiritual guru Institute Director, Dr. Hansaji who has decades of experience in the field',
+  //             subItems: [],
+  //           },
+  //           {
+  //             listItem: 'Fitness tips',
+  //             subItems: [],
+  //           },
+  //         ],
+  //       },
+  //     },
+  //     // {
+  //     //   type: 'u-list',
+  //     //   content: {
+  //     //     title: 'Offered with the program',
+  //     //     points: [
+  //     //       {
+  //     //         listItem: 'Booklet with guidelines  ',
+  //     //         subItems: [],
+  //     //       },
+  //     //       {
+  //     //         listItem: 'Wholesome Sattvik lunch',
+  //     //         subItems: [],
+  //     //       },
+  //     //       {
+  //     //         listItem: 'Healthy snacks  ',
+  //     //         subItems: [],
+  //     //       },
+  //     //     ],
+  //     //   },
+  //     // },
+  //     {
+  //       type: 'paragraph',
+  //       content: {
+  //         title: 'Time',
+  //         text: ['5:00 pm – 8:00 pm (IST)'],
+  //       },
+  //     },
+  //     {
+  //       type: 'paragraph',
+  //       content: {
+  //         title: 'Fees',
+  //         text: ['INR 500'],
+  //       },
+  //     },
+  //     {
+  //       type: 'u-list',
+  //       content: {
+  //         title: ' Guidelines',
+  //         points: [
+  //           {
+  //             listItem:
+  //               'Campers are requested to come attired to comfortable loose fitting clothes. Shorts, capris, tank tops, low cut shirts, short and sleeveless T-shirts are not permitted as per the Institute dress code.',
+  //             subItems: [],
+  //           },
+  //           // {
+  //           //   listItem:
+  //           //     'Campers are requested to have their breakfast and medication (as prescribed by their doctor). ',
+  //           //   subItems: [],
+  //           // },
+  //         ],
+  //       },
+  //     },
+  //   ],
+  // },
 
   12: {
     id: '',
@@ -9392,7 +9392,7 @@ const classes = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'classes',
-    metaDescription: 'Meditation and relaxation',
+    metaDescription: 'An amazing opportunity for all our certified TYI teachers to stay connected with your practices of the advanced asana at The Yoga Institute.',
     image: `${baseDomain}${courseAssets.courseAsset67}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset108}`,
     dates: ['6:30 a.m. to 8:00 a.m', '5:30 p.m. to 7:00 p.m'],
@@ -9461,7 +9461,7 @@ const classes = {
       'Join now if you’re looking for an immunity and vitality boost, emotional release, anxiety and anger management, glowing skin, inner radiance and enhanced creativity.',
     join: true,
     timing:
-      'Monday & Wednesday - 7:30 am - 8:30 am  (IST) (Online) Tuesday & Thursday - 6:30 pm - 7.30 pm  (IST) (On campus) *',
+      'Monday & Wednesday - 7:30 am - 8:30 am  (IST) (Online) Tuesday & Thursday - 6:30 pm - 7.30 pm  (IST) (On campus) ',
     fees: {
       onlineFee: 1400,
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
@@ -10417,12 +10417,10 @@ const classes = {
       {
         type: 'paragraph',
         content: {
-          title: 'Certificate Yoga Therapy Course - Online',
+          title: 'YOGA THERAPY COURSE',
           text: [
             'Become a certified Yoga therapist through The Yoga Institute.',
-
             'Complete one-stop destination to enhance your skills in Yogic Management of diseases through our YOGA THERAPY COURSE.',
-
             'This is a detailed and comprehensive100 hours Yoga Therapy course wherein the lifestyle and yogic management of diseases is taught in a practical and simple manner for easy understanding and teaching. This course will qualify you to become an extremely capable and confident Yoga Therapist to handle any case.',
           ],
         },
@@ -10433,15 +10431,15 @@ const classes = {
           title: 'What the course entails?',
           points: [
             {
-              listItem: 'Understanding of 80+ diseases              ',
+              listItem: 'Understanding of 80+ diseases:',
               subItems: [],
             },
             {
               listItem:
-                'Practical application through Yogic management of each disease on the basis of               ',
+                'Practical application through Yogic management of each disease on the basis of',
               subItems: [
                 'Diet,',
-                '  Specific day to day care in that condition',
+                'Specific day to day care in that condition,',
                 'Relevant Asanas, Pranayamas and Kriyas',
                 'Modification and demonstration of Techniques as per the Age and Body limitations in regards specific disease.',
                 'Developing proper mental attitude to tackle the health conditions',
@@ -10451,44 +10449,43 @@ const classes = {
             {
               type: 'paragraph',
               content: {
-                title: 'Note',
+                title: 'Note:',
                 text: [
-                  ' This will assist students to understand the client’s Physical and Mental state in order to create a disease specific Professional Yogic Management Program.',
+                  'This will assist students to understand the client’s Physical and Mental state in order to create a disease specific Professional Yogic Management Program.',
                 ],
               },
             },
             {
               listItem:
-                ' Lectures on Anatomy/ Physiology and Pathology of each health condition along with causes and symptoms will be given by Dr Taruna Kardak and other visiting Medical Practitioners specialising in their particular fields.',
+                'Lectures on Anatomy/ Physiology and Pathology of each health condition along with causes and symptoms will be given by Dr Taruna Kardak and other visiting Medical Practitioners specialising in their particular fields.',
               subItems: [],
             },
             {
               listItem:
-                'Lecture on basic Ayurveda to understand the body and the role of doshas in specific health conditions.              ',
+                'Lecture on basic Ayurveda to understand the body and the role of doshas in specific health conditions.',
               subItems: [],
             },
             {
               listItem:
-                ' Students will be encouraged to apply the therapy learnt on their family and friends and prepare Case Studies of Combination Diseases to learn the practical application of the same while going through the course.',
+                'Students will be encouraged to apply the therapy learnt on their family and friends and prepare Case Studies of Combination Diseases to learn the practical application of the same while going through the course.',
+              subItems: [],
+            },
+            {
+              listItem: 'General & specialized topics covered in detail',
+              subItems: [],
+            },
+            {
+              listItem: 'Course material will be provided',
               subItems: [],
             },
             {
               listItem:
-                ' General & specialized topics covered in detail              ',
-              subItems: [],
-            },
-            {
-              listItem: 'Course material will be provided              ',
+                'Special topics covered: Male/Female infertility, Couples counselling, Cancer, Substance abuse',
               subItems: [],
             },
             {
               listItem:
-                'Special topics covered: Male/Female infertility, Couples counselling, Cancer, Substance abuse              ',
-              subItems: [],
-            },
-            {
-              listItem:
-                ' Exam will be conducted at the conclusion of the Yoga Therapy Course.              ',
+                'Exam will be conducted at the conclusion of the Yoga Therapy Course.',
               subItems: [],
             },
           ],
@@ -10497,7 +10494,7 @@ const classes = {
       {
         type: 'paragraph',
         content: {
-          title: 'Recording Policy of TYI          ',
+          title: 'Recording Policy of TYI',
           text: [
             'The Institute retains all rights to record the live interactive sessions for their internal usage & quality purposes. These recordings are strictly for the institute and the data is stored securely in a manner that reasonably protects it from misuse and loss and from unauthorized access, modification or disclosure. Students are prohibited from recording these live sessions. We will not share any recordings with the students.',
           ],
@@ -10506,25 +10503,25 @@ const classes = {
       {
         type: 'u-list',
         content: {
-          title: 'SYSTEMS COVERED',
+          title: 'SYSTEMS COVERED:',
           points: [
             {
               listItem: ' General disorders',
               subItems: ['Anaemia', ' Insomnia', ' Vertigo'],
             },
             {
-              listItem: ' Gastro intestinal (GI) tract problems',
+              listItem: 'Gastro intestinal (GI) tract problems',
               subItems: [
                 'Constipation',
-                ' Irritable bowel syndrome (IBS)',
+                'Irritable bowel syndrome (IBS)',
                 'Flatulence and bloating',
-                '  Haemorrhoids (piles) and anal fissures',
+                'Haemorrhoids (piles) and anal fissures',
                 'Acidity and GERD',
                 'Migraine',
               ],
             },
             {
-              listItem: 'Respiratory problems              ',
+              listItem: 'Respiratory problems',
               subItems: [
                 'Common cold',
                 'Respiratory allergies',
@@ -10532,15 +10529,15 @@ const classes = {
                 'Laryngitis',
                 'Sinusitis',
                 'Sleep apnoea',
-                ' Bronchitis',
+                'Bronchitis',
                 'Emphysema',
-                ' Chronic obstructive pulmonary disease (COPD)',
-                ' Asthma',
+                'Chronic obstructive pulmonary disease (COPD)',
+                'Asthma',
                 'Tuberculosis (TB)',
               ],
             },
             {
-              listItem: 'Circulatory system disorders              ',
+              listItem: 'Circulatory system disorders',
               subItems: [
                 'Low blood pressure',
                 'High blood pressure',
@@ -10551,7 +10548,7 @@ const classes = {
               ],
             },
             {
-              listItem: 'Orthopaedic problems              ',
+              listItem: 'Orthopaedic problems',
               subItems: [
                 'General management',
                 'Sprain/Strain',
@@ -10559,15 +10556,15 @@ const classes = {
                 'Hernia',
                 'Cervical spondylitis',
                 'Low back pain',
-                ' Lumbar disc prolapse (slipped disc)',
-                ' Lumbar canal stenosis',
+                'Lumbar disc prolapse (slipped disc)',
+                'Lumbar canal stenosis',
                 'Lumbar spondylosis (osteoarthritis of spine)',
-                ' Sciatica',
+                'Sciatica',
                 'Osteoporosis',
                 'Osteoarthritis',
-                ' Gout',
-                ' Tennis elbow/ lateral epicondylitis',
-                ' Frozen shoulder',
+                'Gout',
+                'Tennis elbow/ lateral epicondylitis',
+                'Frozen shoulder',
               ],
             },
             {
@@ -10583,30 +10580,30 @@ const classes = {
               subItems: ['Hypothyroidism', 'Hyperthyroidism'],
             },
             {
-              listItem: 'Weight Management              ',
-              subItems: ['Obesity              '],
+              listItem: 'Weight Management',
+              subItems: ['Obesity'],
             },
             {
-              listItem: 'Eating disorders              ',
+              listItem: 'Eating disorders',
               subItems: ['Anorexia nervosa', 'Binge eating', 'Bulimia nervosa'],
             },
             {
-              listItem: 'Urinary tract infection              ',
+              listItem: 'Urinary tract infection',
               subItems: [],
             },
             {
-              listItem: 'Female reproductive system              ',
+              listItem: 'Female reproductive system',
               subItems: [
                 'Dysmenorrhea',
                 'PMT (premenstrual tension)or PMS (premenstrual syndrome )',
                 'PCOS',
                 'Fibroids',
                 'Menopause',
-                ' Pregnancy',
+                'Pregnancy',
               ],
             },
             {
-              listItem: 'Infertility              ',
+              listItem: 'Infertility',
               subItems: [
                 'Male infertility',
                 'Female infertility',
@@ -10617,17 +10614,17 @@ const classes = {
               listItem: 'Skin disorders  ',
               subItems: [
                 'Acne',
-                ' Lichen planus',
+                'Lichen planus',
                 'Eczema',
                 'Psoriasis',
-                ' Peeling skin syndrome',
+                'Peeling skin syndrome',
               ],
             },
             {
-              listItem: 'Psychological and psychiatric disorders              ',
+              listItem: 'Psychological and psychiatric disorders',
               subItems: [
                 'Stress management',
-                ' Depression',
+                'Depression',
                 'Anxiety disorders',
                 'Phobias and panic disorders',
                 'Post-traumatic stress disorder',
@@ -10635,46 +10632,46 @@ const classes = {
               ],
             },
             {
-              listItem: 'Nervous system disorders              ',
+              listItem: 'Nervous system disorders',
               subItems: [
                 'Bipolar disorder',
                 'Obsessive compulsive disorder',
                 'Schizophrenia',
                 'Dementia',
-                ' Alzheimer’s disease',
+                'Alzheimer’s disease',
                 'Epilepsy',
                 'Parkinson’s disease',
               ],
             },
             {
-              listItem: 'Cancer              ',
+              listItem: 'Cancer',
               subItems: ['Oral cancer', 'Cervical cancer', 'Breast cancer'],
             },
             {
-              listItem: 'Prostate enlargement              ',
+              listItem: 'Prostate enlargement',
               subItems: [],
             },
           ],
         },
       },
+      // {
+      //   type: 'paragraph',
+      //   content: {
+      //     title: '',
+      //     text: [' access the detailed syllabus here:'],
+      //   },
+      // },
       {
         type: 'paragraph',
         content: {
-          title: '',
-          text: [' access the detailed syllabus here:'],
+          title: 'Conducted by:',
+          text: ['Dr Taruna Kardak, Homoeopath and Senior Yoga Teacher'],
         },
       },
       {
         type: 'paragraph',
         content: {
-          title: 'Conducted by',
-          text: [' Dr Taruna Kardak, Homoeopath and Senior Yoga Teacher '],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'Eligibility',
+          title: 'Eligibility:',
           text: [
             'ITTC (500 Hours Intermediate Level) or ATTC both from The Yoga Institute.',
           ],
@@ -10683,28 +10680,28 @@ const classes = {
       {
         type: 'paragraph',
         content: {
-          title: 'Duration',
+          title: 'Duration:',
           text: [' 4 months '],
         },
       },
       {
         type: 'paragraph',
         content: {
-          title: 'Date',
+          title: 'Date:',
           text: [' 24th August - 16th December 2022'],
         },
       },
       {
         type: 'paragraph',
         content: {
-          title: 'Timings',
-          text: [' Monday, Wednesday & Friday: 5:30 pm - 7:30 pm (IST)'],
+          title: 'Timings:',
+          text: ['Monday, Wednesday, Friday – 5:30 pm to 7:30 pm (IST)'],
         },
       },
       {
         type: 'paragraph',
         content: {
-          title: 'Fees',
+          title: 'Fees:',
           text: [' Rs. 35,000/-'],
         },
       },
@@ -10713,6 +10710,15 @@ const classes = {
         content: {
           title: 'Note:',
           text: ['Kindly note the fees once paid will not be refundable'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'NOTE:',
+          text: [
+            'All study material available for the students for any course in physical (hard copy) only. The same can be collected by the student directly from the Institute or can be delivered to them by courier, charges of which will have to be borne by the student.',
+          ],
         },
       },
     ],
