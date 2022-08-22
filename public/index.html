@@ -56,7 +56,9 @@
           CreateWhatsappChatWidget(options);
       };
       var x = document.getElementsByTagName('script')[0];
-      x.parentNode.insertBefore(s, x);
+      setTimeout(() => {
+        x.parentNode.insertBefore(s, x);
+      }, 10000);
   </script>
   </body>
 </html>
