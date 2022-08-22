@@ -24,12 +24,30 @@ if (isAuthorized()) {
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
-root.render(
-  <Provider store={store}>
+console.log(root['_internalRoot'].current.child)
+if (root['_internalRoot'].current.child) {
+  root.hydrate(  <Provider store={store}>
     <StrictMode>
       <Router>
         <App />
       </Router>
     </StrictMode>
-  </Provider>
-)
+  </Provider>, root)
+} else {
+  root.render(  <Provider store={store}>
+    <StrictMode>
+      <Router>
+        <App />
+      </Router>
+    </StrictMode>
+  </Provider>, root)
+}
+// root.render(
+//   <Provider store={store}>
+//     <StrictMode>
+//       <Router>
+//         <App />
+//       </Router>
+//     </StrictMode>
+//   </Provider>
+// )
