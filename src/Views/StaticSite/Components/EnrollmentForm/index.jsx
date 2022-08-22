@@ -184,9 +184,12 @@ const Enrollment = () => {
 
   const handleEmpty3 = (e) => {
     e.preventDefault()
-    if (formData.workfrom.length !== 0 && (formData.workfrom.length > 4 || formData.workfrom.length < 4 )) {
+    if(formData.company === '' && formData.leavejob ===''){
+      setBold(3)
+    }
+    else if (formData.workfrom.length > 4 || formData.workfrom.length < 4 ) {
       return setResgin(1)
-    } else if (formData.worktill.length !== 0 && (formData.worktill.length > 4 || formData.worktill.length < 4 )) {
+    } else if (formData.worktill.length > 4 || formData.worktill.length < 4 ) {
       return setResgin(2)
     } else{
       setListData([
@@ -200,6 +203,7 @@ const Enrollment = () => {
         },
       ])
       setBold(3)
+      setResgin(0)
     }
     setFormData({
       ...formData,
