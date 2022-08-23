@@ -1,6 +1,8 @@
 import React from 'react'
 import './formstyles.scss'
 import InputComponent from '../InputComponent'
+import 'react-phone-number-input/style.css'
+import PhoneInput from 'react-phone-number-input'
 
 const Personal = ({ handleEmpty1, empty, setFormData, formData, setEmpty }) => {
   //const today = new Date().toISOString().split('T')[0]
@@ -40,14 +42,11 @@ const Personal = ({ handleEmpty1, empty, setFormData, formData, setEmpty }) => {
               )}
             </div>
             <div className='form_error'>
-              <InputComponent
-                type="text"
-                placeholder="Phone Number*"
-                form={formData}
-                setField={setFormData}
-                keyName="phone"
-                errorCheck={setEmpty}
-              />
+              <PhoneInput
+                placeholder="Enter phone number"
+                defaultCountry='IN'
+                value={formData.phone}
+                onChange={(e)=>{ setFormData({ ...formData,phone:e }) }}/>
               {empty === 3 && (
                 <small>
                   {' '}

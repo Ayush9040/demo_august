@@ -13,6 +13,29 @@
     margin: 0;
   }
 
+  .PhoneInput{
+    display: flex;
+    align-items: center;
+    padding: 1rem 2rem;
+    border: 1px solid rgba(96, 96, 96, 0.5019607843);
+    border-radius: 50px;
+    width: 100%;
+    margin: 2rem;
+    .PhoneInputInput{
+      text-align: left;
+      font-size: 1.8rem;
+      border: none;
+      &:focus{
+        border: none;
+        outline: none;
+      }
+      &:focus-visible{
+        border: none;
+        outline: none;
+      }
+    }
+  }
+
   .header {
     grid-column: 1/7;
     margin-left: 60px;
