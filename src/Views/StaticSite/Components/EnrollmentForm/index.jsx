@@ -83,8 +83,8 @@ const Enrollment = () => {
         {
           companyName: formData.company,
           roleWhenLeaving: formData.leavejob,
-          workFrom: formData.workfrom,
-          workTill: formData.worktill,
+          workedFrom: formData.workfrom,
+          workedTill: formData.worktill,
           listedWorkExperience: formData.leavejob,
         },
       ])
@@ -182,11 +182,38 @@ const Enrollment = () => {
     }
   }
 
-  // const handleEmpty3 = () => {
-  //   if (listData.length === 0) {
-  //     return setEmpty(1)
-  //   } else {setBold(3); setResgin(0)}
-  // }
+  const handleEmpty3 = (e) => {
+    e.preventDefault()
+    if(formData.company === '' && formData.leavejob ===''){
+      setBold(3)
+    }
+    else if (formData.workfrom.length > 4 || formData.workfrom.length < 4 ) {
+      return setResgin(1)
+    } else if (formData.worktill.length > 4 || formData.worktill.length < 4 ) {
+      return setResgin(2)
+    } else{
+      setListData([
+        ...listData,
+        {
+          companyName: formData.company,
+          roleWhenLeaving: formData.leavejob,
+          workFrom: formData.workfrom,
+          workTill: formData.worktill,
+          listedWorkExperience: formData.leavejob,
+        },
+      ])
+      setBold(3)
+      setResgin(0)
+    }
+    setFormData({
+      ...formData,
+      //  resignation: '',
+      company: '',
+      leavejob: '',
+      workfrom: '',
+      worktill: '',
+    })
+  }
   const handleEmpty4 = () => {
     if (formData.source === '') {
       if (formData.sourceinfo === '') {
@@ -312,7 +339,7 @@ const Enrollment = () => {
                 formData={formData}
                 resgin={resgin}
                 setFormData={setFormData}
-                // handleEmpty3={handleEmpty3}
+                handleEmpty3={handleEmpty3}
                 setYearEmpty={setYearEmpty}
                 yearEmpty={yearEmpty}
                 listDetailHandler={listDetailHandler}

@@ -26,16 +26,6 @@ const CommonBannerLegacy = ({
 
   const founderData = [
     {
-      name: 'Paramhamsa Madhavadas ji',
-      founder: ['Founders Guru'],
-      year: '1798-1921',
-      desc: [
-        'Born in Bengal in 1798, Paramahamsa Madhavdas Ji was a true Yoga Master hailing from the Mukhopadhyaya family. During his long life of 123 years, he was notably responsible for the revival of yogic practices which had vanished from India at the time. His childhood and upbringing inspired in him a devotional faith towards yoga. He left home at the tender age of 23 to study various Hatha yoga techniques and the health advantages of Yoga practices in order to promote spiritual health and growth of consciousness.',
-      ],
-      route: 'paramhamsa-madhavadas-ji',
-      img: l1,
-    },
-    {
       name: 'Shri Yogendra ji',
       founder: ['Founder'],
       year: '1897 - 1989',
@@ -66,6 +56,16 @@ const CommonBannerLegacy = ({
       `,
       ],
       img: l0,
+    },
+    {
+      name: 'Paramhamsa Madhavadas ji',
+      founder: ['Founders Guru'],
+      year: '1798-1921',
+      desc: [
+        'Born in Bengal in 1798, Paramahamsa Madhavdas Ji was a true Yoga Master hailing from the Mukhopadhyaya family. During his long life of 123 years, he was notably responsible for the revival of yogic practices which had vanished from India at the time. His childhood and upbringing inspired in him a devotional faith towards yoga. He left home at the tender age of 23 to study various Hatha yoga techniques and the health advantages of Yoga practices in order to promote spiritual health and growth of consciousness.',
+      ],
+      route: 'paramhamsa-madhavadas-ji',
+      img: l1,
     },
     {
       name: 'Smt. Sitadevi Ji',

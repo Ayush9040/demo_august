@@ -9,7 +9,8 @@ const Work = ({
   setFormData,
   formData,
   resgin,
-  setResgin
+  setResgin,
+  handleEmpty3
   
 }) => {
   return (
@@ -97,7 +98,7 @@ const Work = ({
                   <p>{item.companyName}</p>
                   <p>{item.roleWhenLeaving}</p>
                   {/* <p>{item.yearOfresignation}</p> */}
-                  <p>{item.workFrom} to {item.workTill}</p>
+                  { item.workFrom && item.workTill && <p>{item.workFrom} to {item.workTill}</p>}
                   
                 </div>
               )
@@ -114,7 +115,7 @@ const Work = ({
         >
           Back
         </button>
-        <button className="next_button" onClick={()=>{setBold(3)}}>
+        <button className="next_button" onClick={(e)=>{handleEmpty3(e)}}>
           Next
         </button>
       </div>
