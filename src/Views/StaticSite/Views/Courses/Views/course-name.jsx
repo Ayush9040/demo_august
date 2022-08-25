@@ -20,6 +20,7 @@ const SingleCourse = () => {
     setIsLoadding(true)
     setPageData(AllCourses.find(item=>item.key === contentId))
     setIsLoadding(false)
+    document.title=`${metaDataObj[`/${pageDate.key}`]?.title}`
   }, [contentId])
   const CareerNameBan = {
     title: 'Career',
