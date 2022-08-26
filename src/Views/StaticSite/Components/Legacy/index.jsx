@@ -21,10 +21,10 @@ const Legacy = () => {
           <p>
             {`The Yoga Institute, world's first yoga center, was established in
             1918 by the legendary yogi Shri Yogendra Ji also known as the father
-            of the modern yoga renaissance. Our life-changing courses have
+            of the modern yoga Renaissance. Our life-changing courses have
             transformed millions of lives and created more than 100000+ teachers
             worldwide. We provide modern-day solutions to all life situations
-            and physical & mental ailments. The institute has won the
+            and physical & mental ailments. The Institute has won the
             prestigious prime minister's award for its outstanding service to
             the science of yoga.`}
           </p>
