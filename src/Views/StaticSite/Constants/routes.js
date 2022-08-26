@@ -52,6 +52,7 @@ const Values = lazy(() => import('../Views/Volunteer/Views/values'))
 const AlumniGallery = lazy(() => import('../Views/Alumni/Views/alumni-gallery'))
 const Support = lazy(() => import('../Views/Alumni/Views/support'))
 const Facts = lazy(() => import('../Views/Facts/Views/our-facts'))
+const Shop = lazy(()=>import('../Views/Shop/Views/shop/shop'))
 
 // import FAQ from '../Components/Faq'
 // import Shop from '../Views/Shop'
@@ -649,21 +650,15 @@ const staticSiteRoutes = [
   //   routePath: '/:contentId',
   //   name: 'Blog',
   // },
+  {
+    Component: Shop,
+    path: '/shop',
+    exact: true,
+    id: 'statisSiteShop',
+    routePath: '/shop',
+    name: 'Shop',
+  },
 ]
-// const getComponent = () => {
 
-//   switch (contentId) {
-//     case 'BLOG':
-//     return BlogAnother
-//     case 'Course':
-//     return SingleCourse
-//   }
-// }
-
-// return (
-//   <>
-//     {isLoading ? <Loader /> : getComponent()}
-//   </>
-// )
 
 export default staticSiteRoutes
