@@ -107,7 +107,7 @@ const ttc200hr = {
         type: 'paragraph',
         content: {
           title: 'Fees',
-          text: ['Rs. 22,000 /- Non-Residential: Rs. 28,000/- (Inclusive of course fee, study material, lunch, and snacks)',' Residential: Rs. 50,000/- (Inclusive of course fee, study material, accommodation on triple occupancy basis and 4 meals a day)'],
+          text: ['Online:Rs. 22,000 /-', 'Non-Residential: Rs. 28,000/- (Inclusive of course fee, study material, lunch, and snacks)',' Residential: Rs. 50,000/- (Inclusive of course fee, study material, accommodation on triple occupancy basis and 4 meals a day)'],
         },
       },
       {
@@ -428,7 +428,7 @@ const ttc200hr = {
           title: 'Fees',
           text: [
             'Non-Residential: Rs. 28,000/- (Inclusive of course fee, study material, and snacks)',
-            'Residential: Rs. 70,000/- (Inclusive of course fee, study material, accommodation and meals ) admission link',
+            'Residential: Rs. 70,000/- (Inclusive of course fee, study material, accommodation and meals )',
           ],
         },
       },
@@ -1971,7 +1971,7 @@ const ttc500hr = {
         type: 'u-list',
         content: {
           title: 'Benefits of 500 Hours IntermediateTeacher Training Course ',
-          point: [
+          points: [
             {
               listItem:
                 'You will learn the tools to master your physical, mental and spiritual well-being. You will see a marked improvement in your life, relationships and work.',
@@ -2148,7 +2148,7 @@ const ttc500hr = {
         },
       },
     ],
-    offering: [
+    offerings: [
       {
         type: 'u-list',
         content: {
@@ -3976,7 +3976,7 @@ const ttc900hr = {
           title: '',
 
           text: [
-            'With over 1,00,000/ 50,000 successfully certified students since 1918, the 1 Year Teacher Training Course (Hindi) at The Yoga Institute is an in-depth study of classical Ashtanga yoga (Eightfold Path Yoga). It teaches core yoga philosophy with a comprehensive approach to the science and technology of yoga. Strategically designed by the founder Shri Yogendraji, Smt. Sita Devi Yogendra, Dr. Jayadeva Yogendra, and Dr. Hansaji J Yogendra, the course serves as a valuable ‘life school’ to those seeking balance and fulfilment in life.',
+            'With over 1,00,000/ 50,000 successfully certified students since 1918, the 4 Months Teacher Training Course - Hindi at The Yoga Institute is an in-depth study of classical Ashtanga yoga (Eightfold Path Yoga). It teaches core yoga philosophy with a comprehensive approach to the science and technology of yoga. Strategically designed by the founder Shri Yogendraji, Smt. Sita Devi Yogendra, Dr. Jayadeva Yogendra, and Dr. Hansaji J Yogendra, the course serves as a valuable ‘life school’ to those seeking balance and fulfilment in life.',
 
             'This is an intensive advanced teacher training course, ideal for those who want an immersive yoga learning experience in a focused learning format. The curriculum is the same as the other ATTCs. Within 4 months, you can become an advanced yoga trainer. Kindly note that residential option is available for this course. Additional charges would be applicable for the same.',
 
@@ -10247,13 +10247,13 @@ const classes = {
           ],
         },
       },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'From',
-          text: ['__________ to __________'],
-        },
-      },
+      // {
+      //   type: 'paragraph',
+      //   content: {
+      //     title: 'From',
+      //     text: ['__________ to __________'],
+      //   },
+      // },
       {
         type: 'paragraph',
         content: {
@@ -10428,7 +10428,7 @@ const classes = {
       {
         type: 'u-list',
         content: {
-          title: 'What the course entails?',
+          title: 'What the course details?',
           points: [
             {
               listItem: 'Understanding of 80+ diseases:',
