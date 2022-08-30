@@ -656,7 +656,7 @@ const ttc200hr = {
     key: '200-hrs-part-time-ttc-online-english',
     // templateId: 'COURSE200_2M_TTC2',
     templateId: {
-      templateOnline: 'COURSE200_1M_ONLINE_TTC',
+      templateOnline: 'COURSE200_3M_TTC',
       templateOffline: {
         templateResidential: '',
         templateNonResidential: '',
