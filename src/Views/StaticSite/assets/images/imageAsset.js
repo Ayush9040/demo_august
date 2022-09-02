@@ -903,6 +903,7 @@ export const publicationAssests = {
   ythAssets85:'/Home/NewsLetter/Yogasattva-June2022--v3-1.jpg',
   ythAssets86:'/Home/NewsLetter/Yogasattva-July2022-Revised-1.jpg',
   ythAssets87:'/Home/NewsLetter/Yogasattva-August2022-1.jpg',
+  ythAssets88:'/Home/NewsLetter/Yogasattva-Sept-2022.jpg',
 
   //Library
   libraryAsset: '/Publications/Library/hero.jpg',
