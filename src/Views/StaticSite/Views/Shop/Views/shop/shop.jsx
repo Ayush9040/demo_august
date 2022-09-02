@@ -72,6 +72,7 @@ const Shop = () => {
                     title={item.name}
                     price={item.price}
                     thumbnail={item.productThumbnail}
+                    productId={item._id}
                   />
                 </Fragment>
               ))}
