@@ -197,8 +197,8 @@ const Enrollment = () => {
         {
           companyName: formData.company,
           roleWhenLeaving: formData.leavejob,
-          workFrom: formData.workfrom,
-          workTill: formData.worktill,
+          workedFrom: formData.workfrom,
+          workedTill: formData.worktill,
           listedWorkExperience: formData.leavejob,
         },
       ])

@@ -409,5 +409,5 @@
     <loc>https://staging.theyogainstituteonline.org/blog-posts.xml</loc>
     <changefreq>daily</changefreq>
     <priority>0.1</priority>
-  </url>
+    </url>
 </urlset>

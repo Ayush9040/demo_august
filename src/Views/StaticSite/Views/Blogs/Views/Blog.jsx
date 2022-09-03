@@ -16,13 +16,51 @@ import { useDispatch, useSelector } from 'react-redux'
 import { fetchBlogData } from '../Blogs.action'
 import { Helmet } from 'react-helmet'
 
+
 const BlogAnother = () => {
 
   const dispatch = useDispatch()
 
   const { contentId } = useParams()
   //const [pageData, setPageData] = useState({})
+  
   const { blog } = useSelector(state=>state.blogs)
+
+
+  const blogParseAlgo = (data='') => {
+    let headers = {
+      title: '',
+      links: [],
+      metaData: [],
+      script: '',
+    }
+    data = data.replace(/\\n/g, '')
+    data = data.split('\n')
+    data.forEach((el) =>{
+      if(el.includes('<meta') || el.includes('<link')){
+        let obj = {}
+        let regExp = /(\S+)="[^"]*/g
+        let regexMatches = el.match(regExp)
+                  
+        regexMatches.map(el=>{
+          let partition = el.split('="')
+          obj[partition[0]] = partition[1].replace(/"/g,'')
+        })
+                  
+        if(el.includes('<meta'))
+          headers.metaData.push(obj)
+        if(el.includes('<link'))
+          headers.links.push(obj)
+      }
+      else if(el.includes('<title'))
+        headers.title = el.replace('<title>','').replace('</title>','')
+      else if(el.includes('<script'))
+        headers.script = el
+              
+    })
+
+    return <Helmet title={`${headers?.title.trim()}`} meta={ headers?.metaData } />
+  }
 
   useEffect(() => {
     dispatch(fetchBlogData(contentId))
@@ -76,7 +114,7 @@ const BlogAnother = () => {
 
   return (
     <>
-      <Helmet title={`${ blog?.title || '' }`} />
+      { blogParseAlgo( blog?.meta ) }
       <div className='blog-page-container'>
         
         <InnerNavComponent abc={viewBlog}/>

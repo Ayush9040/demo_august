@@ -152,7 +152,7 @@ const CourseSection = ({
                 <Link to="/childrens-regular-classes">
                   <li>Children&apos;s Regular Class - On Campus</li>
                 </Link>
-                <Link to="/childrens-regular-classes-on-campus">
+                <Link to="/childrens-weekend-classes-on-campus">
                   <li>Children&apos;s Weekend Class - On Campus </li>
                 </Link>
                 <Link to="/advanced-regular-yoga-classes">

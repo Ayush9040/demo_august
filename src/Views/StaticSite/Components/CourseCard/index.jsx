@@ -107,7 +107,7 @@ const CourseCard = ({
           <Link
             to={
               selectDate === null
-                ? `/${path}/`
+                ? `/${path}`
                 : `/${path}/?date=${selectDate}`
             }
           >

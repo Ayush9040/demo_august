@@ -34,7 +34,7 @@ const Blog = () => {
     infinite: true,
     speed: 500,
     slidesToShow: 2,
-    slidesToScroll: 1,
+    slidesToScroll: 2,
     autoplay: false,
     autoPlaySpeed: 5000,
     //centerMode: true,
@@ -89,7 +89,7 @@ const Blog = () => {
             }}
           >
             {blogs.map((item, index) => {
-              if (index < 5) {
+              if (index < 10) {
                 return (
                   <div key={item.title}>
                     <BlogCard blogs={item} />
