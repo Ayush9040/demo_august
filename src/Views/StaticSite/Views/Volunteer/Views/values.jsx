@@ -52,7 +52,7 @@ const Values = () => {
       <div className='content-container pd-values'>
         <div className='text-content'>
           <p>
-          Life is not measured by how much you have attained for yourself; but rather by how much you have given to others. - Dr. Hansaji.J.Yogendra
+          “Life is not measured by how much you have attained for yourself; but rather by how much you have given to others.” - Dr. Hansaji.J.Yogendra
 
           </p>
           <p>

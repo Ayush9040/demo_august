@@ -58,14 +58,16 @@
         "ctaText":"Start Chat",
         "borderRadius":"25",
         "autoShow":false,
-        "phoneNumber":"917738155500"
+        "phoneNumber":"917011740532"
     }
   };
       s.onload = function() {
           CreateWhatsappChatWidget(options);
       };
       var x = document.getElementsByTagName('script')[0];
-      x.parentNode.insertBefore(s, x);
+      setTimeout(() => {
+        x.parentNode.insertBefore(s, x);
+      }, 10000);
   </script>
   </body>
 </html>
