@@ -43,6 +43,8 @@ const Values = () => {
           Heading='Values'
           isOnlyBanner={false}
           innerNav={true}
+          description={`“Life is not measured by how much you have attained for yourself; but rather by how much you have given to others.” - Dr. Hansaji.J.Yogendra 
+          Volunteer for the Institute's social outreach programmes or any of our in-house programmes  by selflessly sharing your most valuable resources: Time and Care. Volunteering activities at The Yoga Institute are based on this concept of giving to uplift the poor and underprivileged in society. These programmes function only on the concept of selflessness and kindness. Along with helping the needy, volunteers engage in a variety of additional activities that help  to keep the institute running smoothly and promote the benefits of yoga. Volunteers dedicate their time to activities like teaching, admin work, kitchen work, and much more. Explore our numerous social initiatives and institutional activities out and choose to volunteer for the ones that call out to you the most. Volunteers who are sure that they can devote time and energy to serving others are welcome to participate in the Institute's volunteer programs.`}
           bannerImg={`${baseDomain}${background.volunteer}`}
           overlay='#C88068D4'
         >

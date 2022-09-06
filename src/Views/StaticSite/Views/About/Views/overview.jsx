@@ -53,7 +53,7 @@ const AboutUs = () => {
           Heading="Overview"
           isOnlyBanner={false}
           innerNav={false}
-          description="We are the oldest organized Yoga center in the world. Our legacy of over 100 years, which was started by Shri Yogendra Ji.In 1918, Shri Yogendra ji laid the foundation of our 100-year legacy which drives us forward to this day.The Yoga Institute has incorporated the essence of classical and traditional yoga systems like Karma Yoga, Bhakti Yoga, Hatha Yoga, Mantra Yoga, Laya Yoga etc., so that people can comprehensively derive the benefits from all these systems rather than a single system. Our beloved and esteemed Director, Dr. Hansaji Yogendra, spearheads the efforts of the Institute in her unique and powerful way. Hansama has touched the lives of millions through her graceful and simple teachings."
+          description="We are the oldest organized Yoga center in the world. In 1918, Shri Yogendra ji laid the foundation of our 100-year legacy which drives us forward to this day. The Yoga Institute has incorporated the essence of classical and traditional yoga systems like Karma Yoga, Bhakti Yoga, Hatha Yoga, Mantra Yoga, Laya Yoga etc., so that people can comprehensively derive the benefits from all these systems rather than a single system. Our beloved and esteemed Director, Dr. Hansaji Yogendra, spearheads the efforts of the Institute in her unique and powerful way. Hansama has touched the lives of millions through her graceful and simple teachings."
         >
           <InnerNavComponent abc={AboutOverview}/>
         </CommonBannerAboutUs>
