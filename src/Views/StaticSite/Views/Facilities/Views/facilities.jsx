@@ -83,7 +83,7 @@ const Facilities = () => {
   }, [route.hash])
 
   let description =
-    'To ensure a fulfilling and memorable learning experience for our students and sadhakas, we offer a host of facilities. You can avail accommodation services, relax at the gazebo, meditate peacefully in the pods, shop merchandise at the Book Store, eat sattvic meals at Naivedyam and a lot more. All our facilities have been specially designed to give you a blissful and tranquil experience. Explore below! The different facilities scroll past really fast. Can’t read. Please slow it down. No one can read it.'
+    'To ensure a fulfilling and memorable learning experience for our students and sadhakas, we offer a host of facilities. You can avail accommodation services, relax at the gazebo, meditate peacefully in the pods, shop merchandise at the Book Store, eat sattvic meals at Naivedyam and a lot more. All our facilities have been specially designed to give you a blissful and tranquil experience. Explore below!'
   const FactBan = {
     title: 'Facilities',
     color: 'white',
@@ -374,7 +374,7 @@ const Facilities = () => {
               <p>
                 The favourite spot of most sadhakas on campus, the Kailashpati
                 tree has graced us with its presence for many years. It is the
-                best spot to meditate at, to soak in its spiritual vibrations.
+                best spot to meditate in, to soak in its spiritual vibrations.
                 The lovely fragrance of its flowers is the perfect accompaniment
                 to whatever activity you are pursuing under the tree. Come, take
                 the divine blessings from the tree!
