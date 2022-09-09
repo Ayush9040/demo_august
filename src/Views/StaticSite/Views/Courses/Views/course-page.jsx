@@ -81,10 +81,8 @@ const Courses = () => {
             decades.
             </p>
             <p>
-            Every course has been precisely created to provide you with the
-            best-desired results by incorporating 103 years of legacy, research,
-            and knowledge. Choose now from our innumerable courses to get
-            started on your journey of transformation!
+            Every course has been designed to deliver organic and holistic results by incorporating 103 years of legacy, research, and knowledge. Choose now from our innumerable courses to get started on your journey of transformation!
+
             </p>
           </div>
           <div className="intro-image">

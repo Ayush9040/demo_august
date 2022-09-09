@@ -25,7 +25,7 @@ const options = {
 
 const getBlogsMeta = async( slug )=>{
   try{
-    const res = await axios.get(`https://www.cms-dev-be.theyogainstitute.org/v1/post/${ slug }`)
+    const res = await axios.get(`https://www.cms-dev-be.theyogainstituteonline.org/v1/post/${ slug }`)
     let data =  res.data.data.meta
 
     let headers = {
@@ -82,6 +82,7 @@ app.get('*', async(req, res) => {
   let script = ''
   let h1Tag = null
   let h2Tags = []
+  let aTags = []
 
   if (metaData && metaData.title) titleTag = `<title>${metaData.title}</title>`
   if(metaData && metaData.links){
@@ -102,9 +103,12 @@ app.get('*', async(req, res) => {
   if(metaData && metaData.h2Tags) {
     h2Tags = metaData.h2Tags.map((string) => `<h2 class="meta-heading">${string}</h2>`)
   }
+  if(metaData && metaData.aTags) {
+    aTags = metaData.aTags.map((url)=>`<a class="meta-heading" href=${ url } >${ url }</a>`)
+  }
 
   $('head').append([titleTag, script, ...metaArray, ...linkArray])
-  $('body').append([h1Tag, ...h2Tags])
+  $('body').append([h1Tag, ...h2Tags,...aTags])
   res.status(200).send($.html())
 })
 
