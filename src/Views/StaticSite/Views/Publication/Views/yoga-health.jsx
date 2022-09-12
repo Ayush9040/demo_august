@@ -65,7 +65,7 @@ const YogaTotalHealth = () => {
         </div>
         <div className="publication-intro">
           <div className="mag-preview">
-            <img src={`${baseDomain}${publicationAssests.publicationAssests85}`}  alt='Yoga and Total Health'/>
+            <img src={`${baseDomain}${publicationAssests.publicationAssests86}`}  alt='Yoga and Total Health'/>
           </div>
           <div className="mag-details">
             <div className="journal">
@@ -80,11 +80,11 @@ const YogaTotalHealth = () => {
 
             <div className="month-year">
               <h2 className="jouranl-title">
-              August 2022
+              September 2022
                 <div className="bottom-line"></div>
               </h2>
               <p>
-                {'August is the month of festivals and this month the journal\'s focus is on Yamas and Niyamas. Dr Jayadeva throws light on the state of Ananda (Joy), with progressive little steps of Vitarka (discussion & thinking) and Vichara (very concentrated thinking) by learning to think deeply. Hansaji explains the power of routines and their ability to keep one sane, especially during extremely challenging times. A Sadhaka delves into the need to make the most of ourselves by taking care of nature\'s gifts to us. Every single choice is important, make it count - An article on choices enforces one to reflect on one\'s everyday actions - active or passive - with its own set of consequences. "When one tugs at a single thing in nature, one finds it attached to the rest of the world" - John Muir. Click now for deep reflections and insights.'}
+                {'The journal this month focuses on techniques that one may learn to take control of the mind. Dr Jayadeva suggests the possibility of understanding, learning and cultivating practicing to “stop thinking” as they key to control the mind. Hansaji suggests to begin with concentration. One may also use the Parikarmas (from the Yoga Sutras) – Maitri (friendliness towards the happy), Karuna (compassion for the unhappy), Mudita (delight in the virtuous), Upeksha (indifference towards the wicked) as ways to cleanse the mind and bring steadiness. Devdutt Pattanaik, an Indian mythologist, shares a very interesting take on consumption being the root cause of violence. Dive in for more on the above along with our regular features on The Yoga Sutras of Patanjali, Hatha Yoga Pradipika, Thoughts on the Gita and Yogic Ahara.'}
               </p>
             </div>
           </div>
