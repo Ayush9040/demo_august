@@ -10708,13 +10708,13 @@ const classes = {
           text: [' 4 months '],
         },
       },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'Date:',
-          text: [' 24th August - 16th December 2022'],
-        },
-      },
+      // {
+      //   type: 'paragraph',
+      //   content: {
+      //     title: 'Date:',
+      //     text: [' 24th August - 16th December 2022'],
+      //   },
+      // },
       {
         type: 'paragraph',
         content: {
