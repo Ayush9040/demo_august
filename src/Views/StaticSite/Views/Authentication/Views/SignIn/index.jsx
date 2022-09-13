@@ -56,9 +56,10 @@ const SignIn = () => {
             email: formData.email,
             password: formData.password,
           },
-          navigate
+          
         )
       )
+      isLoggedIn && course ? navigate(`/enrollment/${course}/?date=${selectDate}`):navigate('/')
       error.isError ? setModal(true) : setModal(false)
     }
   }
