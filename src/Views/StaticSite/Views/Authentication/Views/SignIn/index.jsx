@@ -42,7 +42,10 @@ const SignIn = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0)
+    
   }, [isLoggedIn])
+
+
 
   const handleSignIn = async() => {
     if (!validateEmail(formData.email)) {
@@ -56,11 +59,14 @@ const SignIn = () => {
             email: formData.email,
             password: formData.password,
           },
-          
+          navigate,
+          {
+            course:course,
+            date:selectDate
+          }
         )
       )
-      isLoggedIn && course ? navigate(`/enrollment/${course}/?date=${selectDate}`):navigate('/')
-      error.isError ? setModal(true) : setModal(false)
+    
     }
   }
 
@@ -85,14 +91,6 @@ const SignIn = () => {
             setField={setFormData}
             keyName='email'
           />
-          <InputComponent
-            icon={lock}
-            type='password'
-            placeholder='Enter Password'
-            form={formData}
-            setField={setFormData}
-            keyName='password'
-          />
           {validate === 1 && (
             <small
               style={{
@@ -105,6 +103,15 @@ const SignIn = () => {
               Please enter valid email
             </small>
           )}
+          <InputComponent
+            icon={lock}
+            type='password'
+            placeholder='Enter Password'
+            form={formData}
+            setField={setFormData}
+            keyName='password'
+          />
+          
           {validate === 2 && (
             <small
               style={{
