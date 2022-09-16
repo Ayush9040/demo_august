@@ -2221,7 +2221,7 @@ const ttc900hr = {
       offlineFee: { residentialFee: 150000, nonResidentialFee: 90000 },
     },
     category: 'ttc',
-    dates: ['22nd Oct to 21st Jan 2023'],
+    dates: ['22nd Oct to 15th Jan 2023'],
     online: false,
     onCampus: true,
     nonResidential: true,
@@ -10268,15 +10268,15 @@ const classes = {
           text: ['Rs. 20,000'],
         },
       },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'Eligibility',
-          text: [
-            'Completion of 500 hrs or 900 hrs TTC programme is mandatory.',
-          ],
-        },
-      },
+      // {
+      //   type: 'paragraph',
+      //   content: {
+      //     title: 'Eligibility',
+      //     text: [
+      //       'Completion of 500 hrs or 900 hrs TTC programme is mandatory.',
+      //     ],
+      //   },
+      // },
       {
         type: 'paragraph',
         content: {
@@ -10407,7 +10407,7 @@ const classes = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'classes',
-    dates: ['24th Aug to 16th Dec 2022'],
+    dates: ['2nd Jan to 26th Apr 2023'],
     online: true,
     onCampus: true,
     nonResidential: false,
@@ -10420,7 +10420,7 @@ const classes = {
           title: 'YOGA THERAPY COURSE',
           text: [
             'Become a certified Yoga therapist through The Yoga Institute.',
-            'Complete one-stop destination to enhance your skills in Yogic Management of diseases through our YOGA THERAPY COURSE.',
+            'Complete one-stop destination to enhance your skills in Yogic Management of diseases through our YOGA THERAPY COURSE.',
             'This is a detailed and comprehensive100 hours Yoga Therapy course wherein the lifestyle and yogic management of diseases is taught in a practical and simple manner for easy understanding and teaching. This course will qualify you to become an extremely capable and confident Yoga Therapist to handle any case.',
           ],
         },
@@ -10518,6 +10518,8 @@ const classes = {
                 'Haemorrhoids (piles) and anal fissures',
                 'Acidity and GERD',
                 'Migraine',
+                'Fatty Liver',
+                'Crohn’s disease',
               ],
             },
             {
@@ -10527,7 +10529,7 @@ const classes = {
                 'Respiratory allergies',
                 'Tonsillitis',
                 'Laryngitis',
-                'Sinusitis',
+                'Sinustis',
                 'Sleep apnoea',
                 'Bronchitis',
                 'Emphysema',
@@ -10548,94 +10550,116 @@ const classes = {
               ],
             },
             {
+              listItem: 'Diabetes',
+              subItems: [],
+            },
+            {
+              listItem: 'Thyroid',
+              subItems: [
+                'Hypothyroidism',
+                'Hyperthyroidism',
+              ],
+            },
+            {
+              listItem: 'Parathyroid Gland',
+              subItems: [
+                'Hyperparathyroidism',
+                'Hypoparathyroidism',
+              ],
+            },
+            {
+              listItem: 'Weight Management',
+              subItems: [
+                'Obesity',
+              ],
+            },
+            {
+              listItem: 'Eating Disorders',
+              subItems: [
+                'Anorexia Nervosa',
+                'Binge Eating Disorder',
+                'Bulimia Nervosa',
+              ],
+            },
+            {
+              listItem: 'Urinary Tract Infection',
+              subItems: [],
+            },
+            {
+              listItem: 'Female Reproductive System',
+              subItems: [
+                'Dysmenorrhea',
+                'PMT (Premenstrual Tension) Or PMS (Premenstrual Syndrome)',
+                'PCOS',
+                'Fibroids',
+                'Menopause',
+              ],
+            },
+            {
+              listItem: 'Pregnancy',
+              subItems: [],
+            },
+            {
+              listItem: 'Infertility',
+              subItems: [
+                'Male Infertility',
+                'Female Infertility',
+                'Counselling For Couples',
+              ],
+            },
+            {
               listItem: 'Orthopaedic problems',
               subItems: [
                 'General management',
                 'Sprain/Strain',
                 'Fibromyalgia',
                 'Hernia',
-                'Cervical spondylitis',
-                'Low back pain',
-                'Lumbar disc prolapse (slipped disc)',
-                'Lumbar canal stenosis',
-                'Lumbar spondylosis (osteoarthritis of spine)',
+                'Cervical Spondylitis',
+                'Low Back Pain',
+                'Lumbar Disc Prolapse (slipped Disc)',
+                'Lumbar Canal Stenosis',
+                'Lumbar Spondylosis (Osteoarthritis of Spine)',
                 'Sciatica',
+                'Piriformis Syndrome',
                 'Osteoporosis',
                 'Osteoarthritis',
                 'Gout',
-                'Tennis elbow/ lateral epicondylitis',
-                'Frozen shoulder',
+                'Tennis Elbow/Lateral Epicondylitis',
+                'Frozen Shoulder',
               ],
             },
             {
               listItem: 'Autoimmune disorder affecting the joints:',
-              subItems: ['Rheumatoid arthritis', 'Ankylosing spondylitis'],
+              subItems: ['Rheumatoid arthritis', 'Ankylosing spondylitis','Lupus'],
             },
             {
-              listItem: 'Diabetes',
-              subItems: [],
-            },
-            {
-              listItem: 'Thyroid',
-              subItems: ['Hypothyroidism', 'Hyperthyroidism'],
-            },
-            {
-              listItem: 'Weight Management',
-              subItems: ['Obesity'],
-            },
-            {
-              listItem: 'Eating disorders',
-              subItems: ['Anorexia nervosa', 'Binge eating', 'Bulimia nervosa'],
-            },
-            {
-              listItem: 'Urinary tract infection',
-              subItems: [],
-            },
-            {
-              listItem: 'Female reproductive system',
-              subItems: [
-                'Dysmenorrhea',
-                'PMT (premenstrual tension)or PMS (premenstrual syndrome )',
-                'PCOS',
-                'Fibroids',
-                'Menopause',
-                'Pregnancy',
-              ],
-            },
-            {
-              listItem: 'Infertility',
-              subItems: [
-                'Male infertility',
-                'Female infertility',
-                'Counselling for couples',
-              ],
-            },
-            {
-              listItem: 'Skin disorders  ',
+              listItem: 'Skin disorders',
               subItems: [
                 'Acne',
                 'Lichen planus',
                 'Eczema',
-                'Psoriasis',
+                'PsoriasisVitiligo',
                 'Peeling skin syndrome',
+                '',
               ],
             },
             {
               listItem: 'Psychological and psychiatric disorders',
               subItems: [
-                'Stress management',
+                'Stress Management',
                 'Depression',
-                'Anxiety disorders',
-                'Phobias and panic disorders',
-                'Post-traumatic stress disorder',
-                'Substance abuse / addiction',
+                'Anxiety Disorders',
+                'Phobias and Panic Disorders',
+                'Post-Traumatic Stress Disorder',
+                'Prolonged Grief Disorder',
+                'Substance Abuse/Addiction',
               ],
             },
             {
               listItem: 'Nervous system disorders',
               subItems: [
+                'Obsessive Compulsive Disorder',
                 'Bipolar disorder',
-                'Obsessive compulsive disorder',
                 'Schizophrenia',
                 'Dementia',
                 'Alzheimer’s disease',
@@ -10645,7 +10669,7 @@ const classes = {
             },
             {
               listItem: 'Cancer',
-              subItems: ['Oral cancer', 'Cervical cancer', 'Breast cancer'],
+              subItems: ['Oral cancer', 'Cervical cancer','Ovarian Cancer', 'Breast cancer'],
             },
             {
               listItem: 'Prostate enlargement',
@@ -10684,13 +10708,13 @@ const classes = {
           text: [' 4 months '],
         },
       },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'Date:',
-          text: [' 24th August - 16th December 2022'],
-        },
-      },
+      // {
+      //   type: 'paragraph',
+      //   content: {
+      //     title: 'Date:',
+      //     text: [' 24th August - 16th December 2022'],
+      //   },
+      // },
       {
         type: 'paragraph',
         content: {
@@ -10717,7 +10741,7 @@ const classes = {
         content: {
           title: 'NOTE:',
           text: [
-            'All study material available for the students for any course in physical (hard copy) only. The same can be collected by the student directly from the Institute or can be delivered to them by courier, charges of which will have to be borne by the student.',
+            ' All study material available for the students for any course in physical (hard copy) only. The same can be collected by the student directly from the Institute or can be delivered to them by courier, charges of which will have to be borne by the student.',
           ],
         },
       },

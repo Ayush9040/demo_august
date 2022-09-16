@@ -6,7 +6,7 @@ import { clearLocal, setLocal } from '../../../../Utils/localStorage'
 
 import { loginUserAPI, fetchUserDataAPI } from './Auth.apis'
 
-export function* handleLoginUserEffect({ payload, navigator }) {
+export function* handleLoginUserEffect({ payload, navigator, course }) {
   try {
     const { data } = yield call(loginUserAPI, payload)
     if(!data.accessToken || !data.refreshToken) {
@@ -18,7 +18,7 @@ export function* handleLoginUserEffect({ payload, navigator }) {
 
     yield put(loginUserSuccess())
     yield put(fetchUserData())
-    if (navigator) navigator('/')
+    if (navigator) { course.course ? navigator(`/enrollment/${course.course}/?date=${course.date}`) : navigator('/')}
   } catch (error) {
     console.log(error.data)
     yield put(loginUserError(error.data.error))
