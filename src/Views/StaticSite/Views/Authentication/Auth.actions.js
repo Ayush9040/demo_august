@@ -7,11 +7,12 @@ export const authActions = {
   FETCH_USER_DATA_SUCCESS: 'auth/FETCH_USER_DATA_SUCCESS',
 }
 
-export const loginUserAction = (payload, navigator) => {
+export const loginUserAction = (payload, navigator,course) => {
   return {
     type: authActions.LOGIN_USER,
     payload,
     navigator,
+    course
   }
 }
 
