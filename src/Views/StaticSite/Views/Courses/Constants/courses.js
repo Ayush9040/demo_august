@@ -3976,7 +3976,7 @@ const ttc900hr = {
           title: '',
 
           text: [
-            'With over 1,00,000/ 50,000 successfully certified students since 1918, the 4 Months Teacher Training Course - Hindi at The Yoga Institute is an in-depth study of classical Ashtanga yoga (Eightfold Path Yoga). It teaches core yoga philosophy with a comprehensive approach to the science and technology of yoga. Strategically designed by the founder Shri Yogendraji, Smt. Sita Devi Yogendra, Dr. Jayadeva Yogendra, and Dr. Hansaji J Yogendra, the course serves as a valuable ‘life school’ to those seeking balance and fulfilment in life.',
+            'With over 1,00,000/ 50,000 successfully certified students since 1918, the 4 Months Teacher Training Course - English at The Yoga Institute is an in-depth study of classical Ashtanga yoga (Eightfold Path Yoga). It teaches core yoga philosophy with a comprehensive approach to the science and technology of yoga. Strategically designed by the founder Shri Yogendraji, Smt. Sita Devi Yogendra, Dr. Jayadeva Yogendra, and Dr. Hansaji J Yogendra, the course serves as a valuable ‘life school’ to those seeking balance and fulfilment in life.',
 
             'This is an intensive advanced teacher training course, ideal for those who want an immersive yoga learning experience in a focused learning format. The curriculum is the same as the other ATTCs. Within 4 months, you can become an advanced yoga trainer. Kindly note that residential option is available for this course. Additional charges would be applicable for the same.',
 
