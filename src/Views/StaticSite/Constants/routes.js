@@ -67,6 +67,7 @@ const Facts = lazy(() => import('../Views/Facts/Views/our-facts'))
 // import Facts from '../Views/Facts'
 // import Gift from '../Views/Gifting'
 import Authentication from '../Views/Authentication'
+import SearchModal from '../Views/SearchModal'
 // import VolunteerPage from '../Views/Volunteer'
 // import VolunteerPage from '../Views/Volunteer'
 // import Thankyou from '../Components/EnrollmentForm/ThankYou'
@@ -641,29 +642,15 @@ const staticSiteRoutes = [
     routePath: '/our-branches',
     name: 'LocateUs',
   },
-  // {
-  //   Component: BlogAnother,
-  //   path: '/:contentId',
-  //   exact: true,
-  //   id: 'statisSiteBlog',
-  //   routePath: '/:contentId',
-  //   name: 'Blog',
-  // },
+  //Search
+  {
+    Component:SearchModal,
+    path:'/search',
+    id:'staticSearch',
+    routePath:'/search',
+    name:'Search'
+  }
 ]
-// const getComponent = () => {
 
-//   switch (contentId) {
-//     case 'BLOG':
-//     return BlogAnother
-//     case 'Course':
-//     return SingleCourse
-//   }
-// }
-
-// return (
-//   <>
-//     {isLoading ? <Loader /> : getComponent()}
-//   </>
-// )
 
 export default staticSiteRoutes

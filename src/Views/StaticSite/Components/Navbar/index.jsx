@@ -1,6 +1,6 @@
 import React, { useState,lazy } from 'react'
 import './styles.scss'
-import { Hamburger, Cart, Gift, User } from '../../assets/icons/icon'
+import { Hamburger, Cart, Gift, User, Search } from '../../assets/icons/icon'
 import { Link } from 'react-router-dom'
 import { logoutUserAction } from '../../Views/Authentication/Auth.actions'
 import { useNavigate } from 'react-router-dom'
@@ -39,7 +39,9 @@ const Navbar = ({ isUserLoggedIn }) => {
           </div>
           <div className="quick-actions">
             <ul>
-              {/* <li>{Search}</li> */}
+              <Link to='/search' >
+                <li>{Search}</li>
+              </Link>
               <Link className='comingSoon' to="/">
                 <li>{Cart}</li>
               </Link>
