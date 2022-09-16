@@ -148,7 +148,8 @@
     align-items: center;
     justify-content: inherit;
     padding: 0;
-    width: 0;
+    width: 100%;
+    overflow: hidden;
     margin: 0 !important;
   }
   .newsletter-container .magezines .images {
