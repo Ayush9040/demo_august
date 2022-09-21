@@ -53,6 +53,7 @@ const AlumniGallery = lazy(() => import('../Views/Alumni/Views/alumni-gallery'))
 const Support = lazy(() => import('../Views/Alumni/Views/support'))
 const Facts = lazy(() => import('../Views/Facts/Views/our-facts'))
 const Shop = lazy(()=>import('../Views/Shop/Views/shop/shop'))
+import SingleProduct from '../Views/Shop/Views/single-product'
 
 // import FAQ from '../Components/Faq'
 // import Shop from '../Views/Shop'
@@ -656,6 +657,14 @@ const staticSiteRoutes = [
     exact: true,
     id: 'statisSiteShop',
     routePath: '/shop',
+    name: 'Shop',
+  },
+  {
+    Component: SingleProduct,
+    path: '/shop/product/:productID',
+    exact: true,
+    id: 'statisSiteShop',
+    routePath: '/shop/product/:productID',
     name: 'Shop',
   },
 ]

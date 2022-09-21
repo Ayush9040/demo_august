@@ -16,6 +16,7 @@ import Footer from '../../Components/Footer'
 import Blog from '../../Components/BlogSection'
 import { Helmet } from 'react-helmet'
 import metaDataObj from '../../../../Constants/metaData.json'
+import AddToCart from '../Shop/Views/cart'
 
 const Home = () => {
   const route = useLocation()
@@ -33,6 +34,7 @@ const Home = () => {
     <Helmet
       title={metaDataObj[route.pathname || '']?.title || ''}
     /> }
+      <AddToCart/>
       <HeroSection isUserLoggedIn={isLoggedIn} />
       <Legacy />
       <OurOfferings />

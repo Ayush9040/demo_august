@@ -1,5 +1,5 @@
 import React from 'react'
-import './styles.css'
+import './styles.scss'
 import { CartButton } from '../../assets/icons/icon'
 import { Link, useNavigate } from 'react-router-dom'
 
