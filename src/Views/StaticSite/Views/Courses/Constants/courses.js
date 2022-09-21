@@ -10229,7 +10229,7 @@ const classes = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'classes',
-    dates: [' 16th Sept to 22th Oct 2022  '],
+    dates: ['4th Nov to 22th 10th Dec'],
     online: true,
     onCampus: true,
     nonResidential: false,
