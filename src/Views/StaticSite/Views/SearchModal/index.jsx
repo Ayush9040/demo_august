@@ -2,38 +2,54 @@ import axios from 'axios'
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { cross, Search } from '../../assets/icons/icon'
+import Pagination from 'react-js-pagination'
 import './style.scss'
 
 const SearchModal = () => {
   const [search, setSearch] = useState('')
   const [content, setContent] = useState([])
   const [isLoading, setIsLoading] = useState(false)
+  const [pagination, setPagination] = useState({
+    page: 1,
+    limit: 10,
+  })
+  const [count,setCount] = useState(0)
 
-  console.log(content)
 
-  const searchContent = () => {
-    if( search==='' ) return
+
+  const searchContent = (page=1,limit=10) => {
+    if (search === '') return
     try {
       setIsLoading(true)
       axios
         .get(
-          `https://cms-dev-be.theyogainstituteonline.org/v1/misc/search/${search}`
+          `https://cms-dev-be.theyogainstituteonline.org/v1/misc/search/?title=${search}&page=${page}&limit=${limit}`
         )
-        .then((res) => setContent(res.data.data))
-        .then(()=>{setIsLoading(false)})
+        .then((res) => {
+          setContent(res.data)
+          setPagination(res.data.pagination)
+          setCount(res.data.count)
+        })
+        .then(() => {
+          setIsLoading(false)
+        })
     } catch (err) {
       console.log(err)
     }
   }
 
-  console.log(isLoading, 'sdfdsa')
+  const handlePageChange = () => {
+    searchContent( pagination.page,pagination.limit )
+  }
+
+  
 
   return (
     <div className='search-modal'>
-      <Link to='/' >
-        <div className='close-search' >{ cross }</div>
+      <Link to='/'>
+        <div className='close-search'>{cross}</div>
       </Link>
-      <h2 style={{ fontWeight:'bold',textAlign:'center' }} >Search</h2>
+      <h2 style={{ fontWeight: 'bold', textAlign: 'center' }}>Search</h2>
       <label className='search-bar'>
         <input
           type='text'
@@ -50,91 +66,123 @@ const SearchModal = () => {
       </label>
 
       {isLoading ? (
-        <div className='search-loader'><div className='loader' >Fetching Results....</div><div>Fetching Results....</div></div>
-      ) : (
-        <div className='search-results'>
-          { content?.posts && <div className='blog-results'>
-            <h3>Blogs</h3>
-            <div className='result-blogs' >
-              {content.posts &&
-              content?.posts.map((item) => (
-                <>
-                  <div className='result-item'>
-                    <div className='result-img'>
-                      <img src={item?.coverImage} />
-                    </div>
-                    <div className='result-content'>
-                      <h4
-                        style={{ fontWeight: 'bold' }}
-                        dangerouslySetInnerHTML={{ __html: `${item.title}` }}
-                      ></h4>
-                      <p
-                        dangerouslySetInnerHTML={{ __html: `${item.excerpt}` }}
-                      ></p>
-                      <Link to={`/${item?.slug}`}>
-                        <button>Read More</button>
-                      </Link>
-                    </div>
-                  </div>
-                </>
-              ))}
-            </div>
-          </div>}
-          { content?.courses && content?.courses?.length!==0 && <div className='blog-results'>
-            <h3>Courses</h3>
-            <div className='course-results' >
-              {content.posts &&
-              content?.posts.map((item) => (
-                <>
-                  <div className='result-item'>
-                    <div className='result-img'>
-                      <img src={item?.coverImage} />
-                    </div>
-                    <div className='result-content'>
-                      <h4
-                        style={{ fontWeight: 'bold' }}
-                        dangerouslySetInnerHTML={{ __html: `${item.title}` }}
-                      ></h4>
-                      <p
-                        dangerouslySetInnerHTML={{ __html: `${item.excerpt}` }}
-                      ></p>
-                      <Link to={`/${item?.slug}`}>
-                        <button>Read More</button>
-                      </Link>
-                    </div>
-                  </div>
-                </>
-              ))}
-            </div>
-          </div>}
-          { content?.pages && content?.pages?.length!==0 && <div className='blog-results'>
-            <h3>Pages</h3>
-            <div className='page-results' >
-              {content.posts &&
-              content?.posts.map((item) => (
-                <>
-                  <div className='result-item'>
-                    <div className='result-img'>
-                      <img src={item?.coverImage} />
-                    </div>
-                    <div className='result-content'>
-                      <h4
-                        style={{ fontWeight: 'bold' }}
-                        dangerouslySetInnerHTML={{ __html: `${item.title}` }}
-                      ></h4>
-                      <p
-                        dangerouslySetInnerHTML={{ __html: `${item.excerpt}` }}
-                      ></p>
-                      <Link to={`/${item?.slug}`}>
-                        <button>Read More</button>
-                      </Link>
-                    </div>
-                  </div>
-                </>
-              ))}
-            </div>
-          </div>}
+        <div className='search-loader'>
+          <div className='loader'>Fetching Results....</div>
+          <div>Fetching Results....</div>
         </div>
+      ) : (
+        <>
+          <div className='search-results'>
+            {content?.data && (
+              <div className='blog-results'>
+                <h3>Blogs</h3>
+                <div className='result-blogs'>
+                  {content.data &&
+                    content?.data.map((item) => (
+                      <>
+                        <div className='result-item'>
+                          <div className='result-img'>
+                            <img src={item?.coverImage} />
+                          </div>
+                          <div className='result-content'>
+                            <h4
+                              style={{ fontWeight: 'bold' }}
+                              dangerouslySetInnerHTML={{
+                                __html: `${item.title}`,
+                              }}
+                            ></h4>
+                            <p
+                              dangerouslySetInnerHTML={{
+                                __html: `${item.excerpt}`,
+                              }}
+                            ></p>
+                            <Link to={`/${item?.slug}`}>
+                              <button>Read More</button>
+                            </Link>
+                          </div>
+                        </div>
+                      </>
+                    ))}
+                </div>
+              </div>
+            )}
+            {content?.courses && content?.courses?.length !== 0 && (
+              <div className='blog-results'>
+                <h3>Courses</h3>
+                <div className='course-results'>
+                  {content.posts &&
+                    content?.posts.map((item) => (
+                      <>
+                        <div className='result-item'>
+                          <div className='result-img'>
+                            <img src={item?.coverImage} />
+                          </div>
+                          <div className='result-content'>
+                            <h4
+                              style={{ fontWeight: 'bold' }}
+                              dangerouslySetInnerHTML={{
+                                __html: `${item.title}`,
+                              }}
+                            ></h4>
+                            <p
+                              dangerouslySetInnerHTML={{
+                                __html: `${item.excerpt}`,
+                              }}
+                            ></p>
+                            <Link to={`/${item?.slug}`}>
+                              <button>Read More</button>
+                            </Link>
+                          </div>
+                        </div>
+                      </>
+                    ))}
+                </div>
+              </div>
+            )}
+            {content?.pages && content?.pages?.length !== 0 && (
+              <div className='blog-results'>
+                <h3>Pages</h3>
+                <div className='page-results'>
+                  {content.posts &&
+                    content?.posts.map((item) => (
+                      <>
+                        <div className='result-item'>
+                          <div className='result-img'>
+                            <img src={item?.coverImage} />
+                          </div>
+                          <div className='result-content'>
+                            <h4
+                              style={{ fontWeight: 'bold' }}
+                              dangerouslySetInnerHTML={{
+                                __html: `${item.title}`,
+                              }}
+                            ></h4>
+                            <p
+                              dangerouslySetInnerHTML={{
+                                __html: `${item.excerpt}`,
+                              }}
+                            ></p>
+                            <Link to={`/${item?.slug}`}>
+                              <button>Read More</button>
+                            </Link>
+                          </div>
+                        </div>
+                      </>
+                    ))}
+                </div>
+              </div>
+            )}
+          </div>
+          <div className='pagination-container'>
+            <Pagination
+              activePage={pagination.page}
+              itemsCountPerPage={pagination.limit}
+              totalItemsCount={count}
+              pageRangeDisplayed={3}
+              onChange={(e) => handlePageChange(e)}
+            />
+          </div>
+        </>
       )}
     </div>
   )

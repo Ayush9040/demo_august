@@ -153,4 +153,27 @@ box-shadow: 5px 5px 5px 0px rgba(204,204,204,0.75);
     }
     
   }
+  .pagination-container{
+    .pagination{
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        li{
+          font-size: 2rem;
+          padding: 0 1rem;
+          background-color: #eee;
+          margin: 0 2rem;
+          cursor: pointer;
+          &:hover{
+            background: #96bcee80;
+            color: #fff;
+          }
+        }
+        .active{
+          background-color: #96bcee;
+          color: #fff;
+        }
+    }
+  }
 }
