@@ -1,10 +1,10 @@
-import baseDomain, { experienceAssets } from '../../../assets/images/imageAsset'
+import baseDomain, { experienceAssets, homeAssets } from '../../../assets/images/imageAsset'
 
 export const listData=[
   {
     name:'Shri Ram Nath Kovind ',
     designation:'President of India',
-    image:`${baseDomain}${experienceAssets.kovindji}`,
+    image:`${baseDomain}${homeAssets.homeAsset55}`,
     message:'We are aware that “Lifestyle diseases are increasing in India. Those who do yoga from childhood (in school or college) will build up strength and immunity.“I wish The Yoga Institute and everyone connected with it, all the best in their efforts to spread the goodness of Yoga and also  congratulate them for carrying on the good work  for the benefit of the people silently for the past ten decades'
   },
   {

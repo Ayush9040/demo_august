@@ -462,10 +462,10 @@ const staticSiteRoutes = [
   },
   {
     Component: FullmoonMeditation,
-    path: '/fullmoon_meditation',
+    path: '/fullmoon-meditation',
     exact: true,
     id: 'statisSiteUnderHighlightsFullmoonMeditation',
-    routePath: '/fullmoon_meditation',
+    routePath: '/fullmoon-meditation',
     name: 'FullmoonMedit3000ation',
   },
   {
