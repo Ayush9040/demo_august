@@ -6410,6 +6410,7 @@ const camps = {
     rating: 5,
     colorCode: '#EDBE66',
     timing: '5:00 pm – 8:00 pm (IST)',
+    join:true,
     fees: {
       onlineFee: 1500,
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
