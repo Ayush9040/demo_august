@@ -120,7 +120,7 @@
     <priority>0.8</priority> 
     </url>
     <url>
-    <loc>https://theyogainstitute.org/200-hrs-part-time-ttc-on-campus-english</loc>  Changes - 0.8 
+    <loc>https://theyogainstitute.org/200-hrs-part-time-ttc-on-campus-english</loc>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
     </url>
@@ -210,7 +210,7 @@
     <priority>0.8</priority>
     </url>
     <url>
-    <loc>https://theyogainstitute.org/childrens-regular-classes-on-campus</loc>
+    <loc>https://theyogainstitute.org/childrens-weekend-classes-on-campus</loc>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
     </url>
@@ -220,14 +220,9 @@
     <priority>0.5</priority>
     </url>
     <url>
-    <loc>https://theyogainstitute.org/fullmoon_meditation</loc>
+    <loc>https://theyogainstitute.org/fullmoon-meditation</loc>
     <changefreq>daily</changefreq>
-    <priority>0.1</priority>
-    </url>
-    <url>
-    <loc>https://theyogainstitute.org/meditation-camp</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
+    <priority>0.3</priority>
     </url>
     <url>
     <loc>https://theyogainstitute.org/satsang</loc>
@@ -312,57 +307,42 @@
     <url>
     <loc>https://theyogainstitute.org/stress-management-camp</loc>
     <changefreq>daily</changefreq>
-    <priority>0.5</priority>
+    <priority>0.6</priority>
     </url>
     <url>
     <loc>https://theyogainstitute.org/weight-management-workshop</loc>
     <changefreq>daily</changefreq>
-    <priority>0.5</priority>
+    <priority>0.6</priority>
     </url>
     <url>
     <loc>https://theyogainstitute.org/pregnancy-camp-for-ante-post-natal</loc>
     <changefreq>daily</changefreq>
-    <priority>0.5</priority>
+    <priority>0.6</priority>
     </url>
     <url>
     <loc>https://theyogainstitute.org/cardiac-hypertension-workshop</loc>
     <changefreq>daily</changefreq>
-    <priority>0.5</priority>
+    <priority>0.6</priority>
     </url>
     <url>
     <loc>https://theyogainstitute.org/back-joint-disorder-workshop</loc>
     <changefreq>daily</changefreq>
-    <priority>0.5</priority>
+    <priority>0.6</priority>
     </url>
     <url>
     <loc>https://theyogainstitute.org/pranayama-workshop</loc>
     <changefreq>daily</changefreq>
-    <priority>0.5</priority>
+    <priority>0.6</priority>
     </url>
     <url>
     <loc>https://theyogainstitute.org/womens-camp</loc>
     <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-    </url>
-    <url>
-    <loc>https://theyogainstitute.org/respiratory-workshop</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-    </url>
-    <url>
-    <loc>https://theyogainstitute.org/life-management-camp</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
+    <priority>0.6</priority>
     </url>
     <url>
     <loc>https://theyogainstitute.org/senior-citizen-workshop</loc>
     <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-    </url>
-    <url>
-    <loc>https://theyogainstitute.org/digestion-camp</loc> 
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
+    <priority>0.6</priority>
     </url>
     <url>
     <loc>https://theyogainstitute.org/diabetes-camp</loc> 
@@ -372,22 +352,22 @@
     <url>
     <loc>https://theyogainstitute.org/meditation-foundation-course-online</loc>
     <changefreq>daily</changefreq>
-    <priority>0.5</priority>
+    <priority>0.6</priority>
     </url>
     <url>
     <loc>https://theyogainstitute.org/yog-prayas-online</loc>
     <changefreq>daily</changefreq>
-    <priority>0.5</priority>
+    <priority>0.6</priority>
     </url>
     <url>
     <loc>https://theyogainstitute.org/anand-sadhna</loc>
     <changefreq>daily</changefreq>
-    <priority>0.5</priority>
+    <priority>0.6</priority>
     </url>
     <url>
     <loc>https://theyogainstitute.org/regular-meditation-classes-online</loc>
     <changefreq>daily</changefreq>
-    <priority>0.5</priority>
+    <priority>0.6</priority>
     </url>
     <url>
     <loc>https://theyogainstitute.org/media</loc>
@@ -395,18 +375,8 @@
     <priority>0.1</priority>
     </url>
     <url>
-    <loc>https://theyogainstitute.org/digestion-camp</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-    </url>
-    <url>
-    <loc>https://theyogainstitute.org/karma-yoga-course</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-     </url>
-    <url>
     <loc>https://theyogainstitute.org/blog-posts.xml</loc>
     <changefreq>daily</changefreq>
-    <priority>0.1</priority>
+    <priority>0.5</priority>
     </url>
 </urlset>

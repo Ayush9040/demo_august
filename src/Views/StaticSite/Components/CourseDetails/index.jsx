@@ -177,7 +177,7 @@ const CourseDetails = ({ pageDate }) => {
               'Lorem Ipsum is simply dummy text of the printing and typesetting industry. '}
             </p>
             {pageDate?.join === true && (
-              <p style={{ marginTop: '1.5rem' , fontSize:'1.5rem' }}>*Join on any date</p>
+              <p style={{ marginTop: '1.5rem' , fontSize:'1.5rem' }}>{ pageDate?.key === 'pregnancy-camp-for-ante-post-natal' ?  '*Please note, the camp is open only for women after 3 months of pregnancy till the 9 months of pregnancy.' : '*Join on any date'}</p>
             )}
             <div
               id="date-select-mobile"
@@ -320,7 +320,7 @@ const CourseDetails = ({ pageDate }) => {
         )}
         {pageDate?.category === 'ttc' && pageDate?.teaching?.length !== 0 && (
           <div className="details-section" id="teaching">
-            <h1>Teaching</h1>
+            <h1>Teaching & Certification</h1>
             {pageDate?.teaching?.map(({ type, content }) => {
               return selectComponent(type, content)
             })}

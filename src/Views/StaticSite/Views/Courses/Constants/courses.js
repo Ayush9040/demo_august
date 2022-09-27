@@ -2130,7 +2130,7 @@ const ttc500hr = {
         type: 'u-list',
         content: {
           title: '',
-          point: [
+          points: [
             {
               listItem: 'School children',
               subItems: [],
@@ -6410,6 +6410,7 @@ const camps = {
     rating: 5,
     colorCode: '#EDBE66',
     timing: '5:00 pm – 8:00 pm (IST)',
+    join:true,
     fees: {
       onlineFee: 1500,
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
@@ -8128,7 +8129,7 @@ const camps = {
       {
         type: 'u-list',
         content: {
-          title: ' TThe programme covers an introduction to: ',
+          title: ' The programme covers an introduction to: ',
           points: [
             {
               listItem: 'Astanga Yoga',
@@ -8166,13 +8167,13 @@ const camps = {
           ],
         },
       },
-      {
-        type: 'paragraph',
-        content: {
-          title: '',
-          text: ['Benefits of this camp:'],
-        },
-      },
+      // {
+      //   type: 'paragraph',
+      //   content: {
+      //     title: '',
+      //     text: ['Benefits of this camp:'],
+      //   },
+      // },
       {
         type: 'u-list',
         content: {
@@ -8454,7 +8455,7 @@ const camps = {
       {
         type: 'u-list',
         content: {
-          title: ' TThe programme covers an introduction to: ',
+          title: ' The programme covers an introduction to: ',
           points: [
             {
               listItem: 'Astanga Yoga',
@@ -8492,13 +8493,13 @@ const camps = {
           ],
         },
       },
-      {
-        type: 'paragraph',
-        content: {
-          title: '',
-          text: ['Benefits of this camp:'],
-        },
-      },
+      // {
+      //   type: 'paragraph',
+      //   content: {
+      //     title: '',
+      //     text: ['Benefits of this camp:'],
+      //   },
+      // },
       {
         type: 'u-list',
         content: {
@@ -8778,7 +8779,7 @@ const camps = {
       {
         type: 'u-list',
         content: {
-          title: ' TThe programme covers an introduction to: ',
+          title: ' The programme covers an introduction to: ',
           points: [
             {
               listItem: 'Astanga Yoga',
@@ -8816,13 +8817,13 @@ const camps = {
           ],
         },
       },
-      {
-        type: 'paragraph',
-        content: {
-          title: '',
-          text: ['Benefits of this camp:'],
-        },
-      },
+      // {
+      //   type: 'paragraph',
+      //   content: {
+      //     title: '',
+      //     text: ['Benefits of this camp:'],
+      //   },
+      // },
       {
         type: 'u-list',
         content: {
@@ -9106,7 +9107,7 @@ const camps = {
       {
         type: 'u-list',
         content: {
-          title: ' TThe programme covers an introduction to: ',
+          title: ' The programme covers an introduction to: ',
           points: [
             {
               listItem: 'Astanga Yoga',
@@ -9697,27 +9698,27 @@ const classes = {
         },
       },
 
-      // {
-      //   type: 'paragraph',
-      //   content: {
-      //     title: 'Monthly',
-      //     text: ['Rs.1000 '],
-      //   },
-      // },
-      // {
-      //   type: 'paragraph',
-      //   content: {
-      //     title: 'Half yearly',
-      //     text: ['Rs. 6000'],
-      //   },
-      // },
-      // {
-      //   type: 'paragraph',
-      //   content: {
-      //     title: 'Annual ',
-      //     text: ['Rs. 10,000'],
-      //   },
-      // },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Monthly',
+          text: ['Rs.1000 '],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Half yearly',
+          text: ['Rs. 6000'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Annual ',
+          text: ['Rs. 10,000'],
+        },
+      },
     ],
   },
   4: {
@@ -9972,7 +9973,7 @@ const classes = {
     },
     image: `${baseDomain}${courseAssets.courseAsset72}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset72}`,
-    metaDescription: 'Knowledge of nadi system and energy channels',
+    metaDescription: 'Join our Advanced Pranayama Techniques Certificate course to learn advanced breathing techniques through bandhas, mudras, mantras, and many more.',
     mostPopular: false,
     rating: 5,
     colorCode: '#B77E7E',
@@ -10219,7 +10220,7 @@ const classes = {
     image: `${baseDomain}${courseAssets.courseAsset74}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset74}`,
     metaDescription:
-      'We offer a supportive and compassionate support group to understand and discuss Cancer confidently and intelligently.',
+      'Yoga teachers understand the nature of cancer and its treatments and how safely and effectively apply practices to help students cope with side effects.',
     mostPopular: false,
     rating: 5,
     colorCode: '#C48E8C',
@@ -10398,7 +10399,7 @@ const classes = {
     cardImage: `${baseDomain}${courseAssets.courseAsset75}`,
     mostPopular: false,
     metaDescription:
-      'Become a certified Yoga therapist through The Yoga Institute.',
+      'This is our comprehensive 100 hours Certified Yoga Therapy course wherein the lifestyle, and yogic management of diseases are taught practically and simply.',
     rating: 5,
     colorCode: '#D3A29D',
     timing: 'Monday, Wednesday & Friday: 5:30 pm - 7:30 pm (IST)',
@@ -11256,7 +11257,7 @@ const classes = {
       {
         type: 'u-list',
         content: {
-          title: 'Duration          ',
+          title: 'Duration',
           points: [
             {
               listItem:
@@ -11281,22 +11282,51 @@ const classes = {
       {
         type: 'paragraph',
         content: {
-          title: 'Saturday & Sunday:Saturday',
-          text: [' 8:00 am - 9:30 am  (IST) and '],
+          title: 'Saturday & Sunday:',
+          text: [],
         },
       },
       {
         type: 'paragraph',
         content: {
-          title: 'Sunday',
-          text: [' 8:00 am - 9:30 am  (IST) or 10:30 am - 12:00 pm (IST)'],
+          title: '',
+          text: ['Saturday','8:00 am - 9:30 am  (IST) and'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: ['Sunday',' 8:00 am - 9:30 am  (IST) or 10:30 am - 12:00 pm (IST)'],
         },
       },
       {
         type: 'paragraph',
         content: {
           title: 'Fees ',
-          text: ['INR 1000'],
+          text: ['1000 INR'],
+        },
+      },
+
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Monthly',
+          text: ['Rs.1000 '],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Half yearly',
+          text: ['Rs. 6000'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Annual ',
+          text: ['Rs. 10,000'],
         },
       },
       {
@@ -11762,8 +11792,30 @@ const classes = {
       {
         type: 'paragraph',
         content: {
-          title: 'Fees',
-          text: ['INR 1000'],
+          title: 'Fees ',
+          text: ['1000 INR'],
+        },
+      },
+
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Monthly',
+          text: ['Rs.1000 '],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Half yearly',
+          text: ['Rs. 6000'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Annual ',
+          text: ['Rs. 10,000'],
         },
       },
       {
