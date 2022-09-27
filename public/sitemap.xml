@@ -408,6 +408,6 @@
   <url>
     <loc>https://staging.theyogainstituteonline.org/blog-posts.xml</loc>
     <changefreq>daily</changefreq>
-    <priority>0.1</priority>
+    <priority>0.5</priority>
     </url>
 </urlset>

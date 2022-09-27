@@ -20,7 +20,7 @@ export const activityData = [
     description:
       'On every full moon day under the guidance of our guru Dr. Hansaji Yogendra, we at the Yoga Institute sit under the divine light of the moon to meditate, find balance, and unburden our stresses.',
     image: `${baseDomain}${homeAssets.homeAsset14}`,
-    url: '/fullmoon_meditation',
+    url: '/fullmoon-meditation',
   },
   {
     title: '1:1 home tuition',
