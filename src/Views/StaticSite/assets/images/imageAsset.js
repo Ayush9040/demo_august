@@ -1407,6 +1407,7 @@ export const factAssets = {
   factAsset109: '/Home/Facts/new/1936-1956/1941_the-yoga-manual.jpg',
   factAsset110: '/Home/Facts/new/1936-1956/1948_the-yoga-institute-4X3.jpg',
   factAsset111: '/Home/Facts/new/1936-1956/1951_unesco-1X1.jpg',
+  factAsset146: '/Home/Facts/1936-1956/Bldg.jpg',
 
   //1956-1976
 

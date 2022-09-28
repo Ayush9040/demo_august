@@ -1,7 +1,7 @@
 export const experienceData = [
   {
     name:'Shri Ram Nath Kovind',
-    status:'The President of India',
+    status:'Former President of India',
     statement:'I wish The Yoga Institute and everyone connected with it, all the best in their efforts to spread the goodness of Yoga for the benefit of the people.',
         
   },
