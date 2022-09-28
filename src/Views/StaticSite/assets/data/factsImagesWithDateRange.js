@@ -280,7 +280,7 @@ const factsImagesWithDateRange = [
       `${baseDomain}${factAssets.factAsset132}`,
       `${baseDomain}${factAssets.factAsset133}`,
       `${baseDomain}${factAssets.factAsset134}`,
-      `${baseDomain}${factAssets.factAsset135}`,
+      `${baseDomain}${factAssets.factAsset131}`,
       `${baseDomain}${factAssets.factAsset61}`,
       `${baseDomain}${factAssets.factAsset62}`,
       `${baseDomain}${factAssets.factAsset63}`,
