@@ -44,6 +44,7 @@
   .search-results{
     display: flex;
     // grid-template-columns: repeat(3,1fr);
+    justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
   }
@@ -154,6 +155,7 @@ box-shadow: 5px 5px 5px 0px rgba(204,204,204,0.75);
     
   }
   .pagination-container{
+    margin-top: 3rem;
     .pagination{
         list-style: none;
         display: flex;

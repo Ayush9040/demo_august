@@ -173,7 +173,7 @@ const SearchModal = () => {
               </div>
             )}
           </div>
-          <div className='pagination-container'>
+          { content?.data?.length>0 && <div className='pagination-container'>
             <Pagination
               activePage={pagination.page}
               itemsCountPerPage={pagination.limit}
@@ -181,7 +181,7 @@ const SearchModal = () => {
               pageRangeDisplayed={3}
               onChange={(e) => handlePageChange(e)}
             />
-          </div>
+          </div>}
         </>
       )}
     </div>
