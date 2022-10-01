@@ -4,8 +4,9 @@ import { Link } from 'react-router-dom'
 import { cross, Search } from '../../assets/icons/icon'
 import Pagination from 'react-js-pagination'
 import './style.scss'
+import { useEffect } from 'react'
 
-const SearchModal = () => {
+const SearchModal = ({ setIsModalOpen }) => {
   const [search, setSearch] = useState('')
   const [content, setContent] = useState([])
   const [isLoading, setIsLoading] = useState(false)
@@ -17,7 +18,7 @@ const SearchModal = () => {
 
 
 
-  const searchContent = (page=1,limit=10) => {
+  const searchContent = (page,limit) => {
     if (search === '') return
     try {
       setIsLoading(true)
@@ -27,7 +28,6 @@ const SearchModal = () => {
         )
         .then((res) => {
           setContent(res.data)
-          setPagination(res.data.pagination)
           setCount(res.data.count)
         })
         .then(() => {
@@ -38,17 +38,19 @@ const SearchModal = () => {
     }
   }
 
-  const handlePageChange = () => {
-    searchContent( pagination.page,pagination.limit )
+  const handlePageChange = (pageNumber) => {
+    setPagination({ ...pagination,page:pageNumber, limit:10 })
   }
+
+  useEffect(()=>{
+    searchContent( pagination.page,pagination.limit )
+  },[pagination])
 
   
 
   return (
-    <div className='search-modal'>
-      <Link to='/'>
-        <div className='close-search'>{cross}</div>
-      </Link>
+    <div className='search-modal' onKeyDown={ (e)=>{ if(e.key === 'Enter'){ searchContent(1,10) } } } >
+      <div onClick={()=>{ setIsModalOpen(false) }}  className='close-search'>{cross}</div>
       <h2 style={{ fontWeight: 'bold', textAlign: 'center' }}>Search</h2>
       <label className='search-bar'>
         <input

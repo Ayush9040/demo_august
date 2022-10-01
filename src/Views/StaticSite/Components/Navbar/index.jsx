@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 const MegaMenu = lazy(()=>import('../MegaMenu'))
 
-const Navbar = ({ isUserLoggedIn }) => {
+const Navbar = ({ isUserLoggedIn, setIsModalOpen }) => {
   const navigate = useNavigate()
   const [nav, setNav] = useState(false)
   const [dropdown,setDropdown]=useState(false)
@@ -39,9 +39,7 @@ const Navbar = ({ isUserLoggedIn }) => {
           </div>
           <div className="quick-actions">
             <ul>
-              <Link to='/search' >
-                <li>{Search}</li>
-              </Link>
+              <li onClick={ ()=>{setIsModalOpen(true)} } >{Search}</li>
               <Link className='comingSoon' to="/">
                 <li>{Cart}</li>
               </Link>
