@@ -11,3 +11,9 @@
   justify-content:center;
   align-items: center;
 }
+
+@media (max-width: 786px) {
+  .search-modal-container{
+    align-items: flex-start;
+  }
+}

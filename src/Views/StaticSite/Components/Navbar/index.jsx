@@ -26,7 +26,8 @@ const Navbar = ({ isUserLoggedIn, setIsModalOpen }) => {
           
             {Hamburger}
           </div>
-          <div className="title-logo">
+          <div className="title-logo" >
+            <span className='mobile-search' onClick={ ()=>{setIsModalOpen(true)} } >{ Search }</span>
             <div className="header-logo">
               <img
                 style={{ transition: 'none !important' }}
