@@ -144,9 +144,11 @@
     }
   }
   .blog-carousel .slick-dots {
-    display: flex !important;
     align-items: center;
+    display: flex!important;
     justify-content: inherit;
+    margin: 0!important;
+    overflow: hidden;
     padding: 0;
     width: 100%;
     overflow: hidden;
