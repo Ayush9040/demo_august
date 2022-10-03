@@ -75,7 +75,7 @@ const SearchModal = ({ setIsModalOpen }) => {
       ) : (
         <>
           <div className='search-results'>
-            {content?.data && (
+            { content?.data && ( content?.data.length>0 ? (
               <div className='blog-results'>
                 <h3>Blogs</h3>
                 <div className='result-blogs'>
@@ -107,8 +107,8 @@ const SearchModal = ({ setIsModalOpen }) => {
                     ))}
                 </div>
               </div>
-            )}
-            {content?.courses && content?.courses?.length !== 0 && (
+            ):<div className='no-result-found' > No Result Found</div>)}
+            {/* {content?.courses && content?.courses?.length !== 0 && (
               <div className='blog-results'>
                 <h3>Courses</h3>
                 <div className='course-results'>
@@ -173,7 +173,7 @@ const SearchModal = ({ setIsModalOpen }) => {
                     ))}
                 </div>
               </div>
-            )}
+            )} */}
           </div>
           { content?.data?.length>0 && <div className='pagination-container'>
             <Pagination
