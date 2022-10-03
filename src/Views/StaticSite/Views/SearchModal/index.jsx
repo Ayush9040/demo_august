@@ -55,7 +55,7 @@ const SearchModal = ({ setIsModalOpen }) => {
       <label className='search-bar'>
         <input
           type='text'
-          placeholder='Search'
+          placeholder='Search blogs'
           name='search'
           value={search}
           onChange={(e) => {
