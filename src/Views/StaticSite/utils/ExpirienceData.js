@@ -13,7 +13,7 @@ export const experienceData = [
   },
   {
     name:'Shri M Venkaiah Naidu',
-    status:'Vice President of India',
+    status:'Former Vice President of India',
     statement:'It gives me immense joy to see the stupendous work done by the Institute in the last 100 years which has brought them great laurels and accolades. I congratulate the entire Yogendra Family for living up to this noble task of spreading yoga across the globe.',
     image:''
   },

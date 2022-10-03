@@ -81,34 +81,6 @@ const Experience = () => {
               largeText={'Experience'}
             />
             <div className="name-status">
-              <h3>Shri M Venkaiah Naidu</h3>
-              <h4>Vice President of India</h4>
-              <p>
-                <q>
-                  It gives me immense joy to see the stupendous work done by the
-                  Institute in the last 100 years which has brought them great
-                  laurels and accolades. I congratulate the entire Yogendra
-                  Family for living up to this noble task of spreading yoga
-                  across the globe.
-                </q>
-              </p>
-            </div>
-            <Link to="/testimonials">
-              <CommonBtn text={'View All'} />
-            </Link>
-          </div>
-          <div className="carousel-image">
-            <img src={`${baseDomain}${homeAssets.homeAsset57}`} alt="Naiduji" />
-          </div>
-        </div>
-        <div className="experience-carousel global-padding">
-          <div className="carousel-content">
-            <Heading
-              logo={experience}
-              smallText={'The Yoga Institute'}
-              largeText={'Experience'}
-            />
-            <div className="name-status">
               <h3>Shri Ram Nath Kovind</h3>
               <h4>Former President of India</h4>
               <p>
@@ -130,6 +102,34 @@ const Experience = () => {
               src={`${baseDomain}${homeAssets.homeAsset55}`}
               alt="Shri Ramnath Kovid"
             />
+          </div>
+        </div>
+        <div className="experience-carousel global-padding">
+          <div className="carousel-content">
+            <Heading
+              logo={experience}
+              smallText={'The Yoga Institute'}
+              largeText={'Experience'}
+            />
+            <div className="name-status">
+              <h3>Shri M Venkaiah Naidu</h3>
+              <h4>Former Vice President of India</h4>
+              <p>
+                <q>
+                  It gives me immense joy to see the stupendous work done by the
+                  Institute in the last 100 years which has brought them great
+                  laurels and accolades. I congratulate the entire Yogendra
+                  Family for living up to this noble task of spreading yoga
+                  across the globe.
+                </q>
+              </p>
+            </div>
+            <Link to="/testimonials">
+              <CommonBtn text={'View All'} />
+            </Link>
+          </div>
+          <div className="carousel-image">
+            <img src={`${baseDomain}${homeAssets.homeAsset57}`} alt="Naiduji" />
           </div>
         </div>
         <div className="experience-carousel global-padding">

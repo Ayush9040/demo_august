@@ -1,6 +1,6 @@
 export const socialData = [
   {
-    title: 'Annam Brahma',
+    title: 'Annan Brahma',
     description:
       'Annam Brahma is a social initiative aimed at serving fresh, nutritious, and healthy food to the underprivileged citizens of the country without discrimination. The food is served to over 1000 people daily, 365 days a year. ',
     url: '',
