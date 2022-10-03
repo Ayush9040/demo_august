@@ -158,17 +158,17 @@
             display: flex!important;
             align-items: center;
             justify-content: flex-end;
-            a{
-                margin-right: -30px;
-            }
+            gap: 20px;
               svg{
-                width: 120px!important;
-                height: 60px!important;
+                width: 60px!important;
+                height: 30px!important;
+                // margin-right: -20px;
               }
               .mobile-search{
                 display: block  ;
-                margin-right: -20px;
+                // margin-left: -30px;
                 svg{
+                    margin-right: 0px;
                     width: 25px!important;
                     height: 25px!important;
                     transform: scale(1)!important;
@@ -178,11 +178,23 @@
           .inner-nav-container .main-logo .mobile-search{
             display: block;
           }
-        //   #orange{
-        //     svg{
-        //         transform: scale(2);
-        //     }
-        //   }
+          #orange{
+            a{
+                margin-right: -30px;
+            }
+            svg{
+                width: 120px!important;
+                height: 60px!important;
+            }
+            .mobile-search{
+                margin-right: -30px;
+                    svg{
+                        width: 25px!important;
+                        height: 25px!important;
+                        transform: scale(1)!important;
+                    } 
+            }
+          }
           .career-navigation-lg {
             padding-top: 1rem;
               ul{
