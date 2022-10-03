@@ -4,6 +4,7 @@
   padding-top: 3rem;
   //color:#fff;
   box-sizing: border-box;
+  overflow-x: hidden;
   a {
       text-decoration: none;
       color: black;
@@ -45,6 +46,12 @@
   }
   .hamburger {
       cursor: pointer;
+  }
+  .main-logo{
+    display: block;
+    .mobile-search{
+        display: none;
+    }
   }
   .user-dropdown {
     position: absolute;
@@ -148,16 +155,34 @@
   }
   @media (max-width: "768px") {
           .main-logo {
+            display: flex!important;
+            align-items: center;
+            justify-content: flex-end;
+            a{
+                margin-right: -30px;
+            }
               svg{
-                width: 60px!important;
-                height: 30px!important;
+                width: 120px!important;
+                height: 60px!important;
               }
-          }
-          #orange{
-            svg{
-                transform: scale(2);
+              .mobile-search{
+                display: block  ;
+                margin-right: -20px;
+                svg{
+                    width: 25px!important;
+                    height: 25px!important;
+                    transform: scale(1)!important;
+                }
             }
           }
+          .inner-nav-container .main-logo .mobile-search{
+            display: block;
+          }
+        //   #orange{
+        //     svg{
+        //         transform: scale(2);
+        //     }
+        //   }
           .career-navigation-lg {
             padding-top: 1rem;
               ul{
