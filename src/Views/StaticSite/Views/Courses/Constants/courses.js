@@ -7083,7 +7083,7 @@ const camps = {
         templateNonResidential: '',
       },
     },
-    dates: ['13th August 2022', '8th October 2022', '10th December 2022'],
+    dates: ['13th August 2022', '10th December 2022'],
     mostPopular: false,
     rating: 5,
     colorCode: '#CE9B51',
