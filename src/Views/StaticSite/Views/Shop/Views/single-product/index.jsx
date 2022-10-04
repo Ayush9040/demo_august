@@ -5,6 +5,7 @@ import ShopCard from '../../../../Components/ShopCard/ShopCard'
 import CommonBtn from '../../../../Components/commonbtn'
 import { fetchSingleProduct } from '../../Shop.api'
 import { useParams } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 const SingleProduct = () => {
   const { productID } = useParams()
@@ -16,6 +17,7 @@ const SingleProduct = () => {
   }
 
   const [productDetail, setProductDetail] = useState({})
+  const navigate = useNavigate()
 
   const getSingleProducts = async() => {
     const { data } = await fetchSingleProduct(productID)
@@ -25,6 +27,17 @@ const SingleProduct = () => {
   useEffect(() => {
     getSingleProducts()
   }, [])
+
+  const buyProduct=()=>{
+    if(localStorage.getItem('cart')){
+      const prevCart = JSON.parse(localStorage.getItem('cart'))
+      localStorage.setItem('cart',JSON.stringify([...prevCart,productDetail]))
+    }
+    else {
+      localStorage.setItem('cart', JSON.stringify([productDetail]))
+    }
+    navigate('/shop/cart')
+  }
 
   return (
     <div className="single_product_div">
@@ -38,14 +51,14 @@ const SingleProduct = () => {
           <div className="single_prod_bg">
             <div className="price_prod_div">
               <div className="price_div">
-                <div className="product_details">{productDetail.name}</div>
-                <div className="product_details">{productDetail.price}</div>
-                <div className="prod_desc">{productDetail.description}</div>
+                <div className="product_details">{productDetail?.name}</div>
+                <div className="product_details">{productDetail?.price}</div>
+                <div className="prod_desc">{productDetail?.description}</div>
               </div>
 
               <div className="product_img_div">
                 <div className="product_image">
-                  <img src={productDetail.productThumbnail} alt="" />
+                  <img src={productDetail?.productThumbnail} alt="" />
                 </div>
                 <div className="other_product_images">
                   {productDetail?.productImage?.map((item, i) => (
@@ -60,8 +73,8 @@ const SingleProduct = () => {
             <div className="lower_box">
               
             </div>
-            <div className="buy_now_btn">
-              <CommonBtn text="Buy Now" />
+            <div className="buy_now_btn"  >
+              <CommonBtn text="Buy Now" buttonAction={ buyProduct } />
             </div>
           </div>
           <div className="other_similar_product">

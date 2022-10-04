@@ -8,6 +8,8 @@ import { useState } from 'react'
 import { useEffect } from 'react'
 import { fetchAllProductsAPI } from '../../Shop.api'
 import ShopCard from '../../../../Components/ShopCard/ShopCard'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faSearch } from '@fortawesome/free-solid-svg-icons'
 
 const Shop = () => {
   const [products, setProducts] = useState([])
@@ -21,7 +23,19 @@ const Shop = () => {
     getAllProducts()
   }, [])
 
-  console.log(products, 'dd')
+  const addLocal = ( productDetail )=>{
+    if(!localStorage.getItem('cart')) return [productDetail]
+    const prevCart = JSON.parse(localStorage.getItem('cart'))
+    return [...prevCart,productDetail]
+  }
+
+  const addCart = (idx,e) => {
+    e.stopPropagation()
+    const addProduct = products.find((item) => item._id === idx)
+    localStorage.setItem('cart', JSON.stringify( addLocal(addProduct) ))
+  }
+
+  
 
   let settings = {
     dots: true,
@@ -44,28 +58,31 @@ const Shop = () => {
 
   return (
     <>
-      <div className='shop'>
+      <div className="shop">
         <InnerNavComponent abc={shopNav} />
-        <div className='shop-page'>
-          <div className='category-search'>
-            <div>All Categories</div>
-            <div>Search</div>
+        <div className="shop-page">
+          <div className="category-search">
+            <div className='shop_categories'>All Categories</div>
+            <div className='shop_search'><label>
+              <input type={'text'} placeholder="Search" />
+              <FontAwesomeIcon icon={faSearch} />
+            </label></div>
           </div>
-          <div className='products-section'>
-            <div className='banner-section'>
+          <div className="products-section">
+            <div className="banner-section">
               <Slider {...settings}>
-                <div className='banner'>
-                  <div className='banner-img'>Banner Image</div>
+                <div className="banner">
+                  <div className="banner-img">Banner Image</div>
                 </div>
-                <div className='banner'>
-                  <div className='banner-img'>Banner Image</div>
+                <div className="banner">
+                  <div className="banner-img">Banner Image</div>
                 </div>
-                <div className='banner'>
-                  <div className='banner-img'>Banner Image</div>
+                <div className="banner">
+                  <div className="banner-img">Banner Image</div>
                 </div>
               </Slider>
             </div>
-            <div className='products-tray'>
+            <div className="products-tray">
               {products.map((item, i) => (
                 <Fragment key={i}>
                   <ShopCard
@@ -73,6 +90,7 @@ const Shop = () => {
                     price={item.price}
                     thumbnail={item.productThumbnail}
                     productId={item._id}
+                    addCart={addCart}
                   />
                 </Fragment>
               ))}
@@ -83,5 +101,6 @@ const Shop = () => {
     </>
   )
 }
+
 
 export default Shop

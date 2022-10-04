@@ -69,6 +69,7 @@ import SingleProduct from '../Views/Shop/Views/single-product'
 // import Facts from '../Views/Facts'
 // import Gift from '../Views/Gifting'
 import Authentication from '../Views/Authentication'
+import AddToCart from '../Views/Shop/Views/cart'
 // import VolunteerPage from '../Views/Volunteer'
 // import VolunteerPage from '../Views/Volunteer'
 // import Thankyou from '../Components/EnrollmentForm/ThankYou'
@@ -665,6 +666,14 @@ const staticSiteRoutes = [
     exact: true,
     id: 'statisSiteShop',
     routePath: '/shop/product/:productID',
+    name: 'Shop',
+  },
+  {
+    Component: AddToCart,
+    path: '/shop/cart',
+    exact: true,
+    id: 'statisSiteShop',
+    routePath: '/shop/cart',
     name: 'Shop',
   },
 ]
