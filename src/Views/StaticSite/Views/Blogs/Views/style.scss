@@ -24,8 +24,8 @@
       margin: 0 auto;
       h2 {
         display: flex;
+        align-items: baseline;
         //flex-wrap: wrap;
-        margin-top: -10rem;
         justify-content: space-between;
         .newsletter-title {
           font-size: 2.5rem;
@@ -33,8 +33,8 @@
           font-weight: 700;
         }
         .newsletter-date {
-          font-size: 2.5rem;
-          color: #aaa;
+          font-size: 2rem;
+          color: #ffffffd4;
           float: right;
         }
       }
@@ -79,7 +79,6 @@
       width: 80%;
       display: flex;
       border-radius: 40px;
-      margin-top: -12rem;
     }
   }
 }
@@ -138,7 +137,7 @@
       color: white;
     }
     .newsletter-date {
-      color: #aaa;
+      color: #ffffffd4;
     }
     .newsletter-content {
       p {
@@ -230,9 +229,6 @@
   .blog-series {
     .alumni-content {
       .newsletter-content {
-        h2 {
-          margin-top: -10rem;
-        }
         p {
           color: #fff;
           margin: 4rem 0;

@@ -32,11 +32,11 @@ const Blog = () => {
     dots: true,
     arrows: false,
     infinite: true,
-    speed: 500,
+    speed: 2000,
     slidesToShow: 2,
     slidesToScroll: 2,
     autoplay: false,
-    autoPlaySpeed: 5000,
+    autoPlaySpeed: 10000,
     //centerMode: true,
     centerPadding: '20%',
     responsive: [

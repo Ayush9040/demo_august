@@ -905,6 +905,7 @@ export const publicationAssests = {
   ythAssets86:'/Home/NewsLetter/Yogasattva-July2022-Revised-1.jpg',
   ythAssets87:'/Home/NewsLetter/Yogasattva-August2022-1.jpg',
   ythAssets88:'/Home/NewsLetter/Yogasattva-Sept-2022.jpg',
+  ythAssets89:'/Home/NewsLetter/Yogasattva-Oct-2022-21024_1.jpg',
 
   //Library
   libraryAsset: '/Publications/Library/hero.jpg',
@@ -1407,6 +1408,7 @@ export const factAssets = {
   factAsset109: '/Home/Facts/new/1936-1956/1941_the-yoga-manual.jpg',
   factAsset110: '/Home/Facts/new/1936-1956/1948_the-yoga-institute-4X3.jpg',
   factAsset111: '/Home/Facts/new/1936-1956/1951_unesco-1X1.jpg',
+  factAsset146: '/Home/Facts/1936-1956/Bldg.jpg',
 
   //1956-1976
 

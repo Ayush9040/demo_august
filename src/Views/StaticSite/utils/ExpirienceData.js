@@ -1,7 +1,7 @@
 export const experienceData = [
   {
     name:'Shri Ram Nath Kovind',
-    status:'The President of India',
+    status:'Former President of India',
     statement:'I wish The Yoga Institute and everyone connected with it, all the best in their efforts to spread the goodness of Yoga for the benefit of the people.',
         
   },
@@ -13,7 +13,7 @@ export const experienceData = [
   },
   {
     name:'Shri M Venkaiah Naidu',
-    status:'Vice President of India',
+    status:'Former Vice President of India',
     statement:'It gives me immense joy to see the stupendous work done by the Institute in the last 100 years which has brought them great laurels and accolades. I congratulate the entire Yogendra Family for living up to this noble task of spreading yoga across the globe.',
     image:''
   },

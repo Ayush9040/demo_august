@@ -1,13 +1,13 @@
 import React, { useState,lazy } from 'react'
 import './styles.scss'
-import { Hamburger, Cart, Gift, User } from '../../assets/icons/icon'
+import { Hamburger, Cart, Gift, User, Search } from '../../assets/icons/icon'
 import { Link } from 'react-router-dom'
 import { logoutUserAction } from '../../Views/Authentication/Auth.actions'
 import { useNavigate } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 const MegaMenu = lazy(()=>import('../MegaMenu'))
 
-const Navbar = ({ isUserLoggedIn }) => {
+const Navbar = ({ isUserLoggedIn, setIsModalOpen }) => {
   const navigate = useNavigate()
   const [nav, setNav] = useState(false)
   const [dropdown,setDropdown]=useState(false)
@@ -26,7 +26,8 @@ const Navbar = ({ isUserLoggedIn }) => {
           
             {Hamburger}
           </div>
-          <div className="title-logo">
+          <div className="title-logo" >
+            <span className='mobile-search' onClick={ ()=>{setIsModalOpen(true)} } >{ Search }</span>
             <div className="header-logo">
               <img
                 style={{ transition: 'none !important' }}
@@ -39,7 +40,7 @@ const Navbar = ({ isUserLoggedIn }) => {
           </div>
           <div className="quick-actions">
             <ul>
-              {/* <li>{Search}</li> */}
+              <li onClick={ ()=>{setIsModalOpen(true)} } >{Search}</li>
               <Link className='comingSoon' to="/">
                 <li>{Cart}</li>
               </Link>

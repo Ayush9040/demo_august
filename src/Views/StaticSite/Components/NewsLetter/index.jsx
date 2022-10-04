@@ -5,7 +5,7 @@ import CommonBtn from '../commonbtn'
 import './style.scss'
 import { Link } from 'react-router-dom'
 import { validateEmail } from '../../../../helpers'
-import baseDomain, { homeAssets } from '../../assets/images/imageAsset'
+import baseDomain, { publicationAssests } from '../../assets/images/imageAsset'
 import axios from 'axios'
 import { authBaseDomain } from '../../../../Constants/appSettings'
 
@@ -34,24 +34,24 @@ const NewsLetter = () => {
         <div className="images">
           <div className="image">
             <Link to="/yogasattva">
-              <img src={`${baseDomain}${homeAssets.homeAsset67}`} alt='Yogasattva-jan' />
+              <img src={`${baseDomain}${publicationAssests.ythAssets89}`} alt='Yogasattva-october' />
             </Link>
 
-            <p>January 2022</p>
+            <p>October 2022</p>
           </div>
           <div className="image">
             <Link to="/yogasattva">
-              <img src={`${baseDomain}${homeAssets.homeAsset68}`} alt='Yogasattva-feb'/>
+              <img src={`${baseDomain}${publicationAssests.ythAssets88}`} alt='Yogasattva-september' />
             </Link>
 
-            <p>Feburary 2022</p>
+            <p>September 2022</p>
           </div>
           <div className="image">
             <Link to="/yogasattva">
-              <img src={`${baseDomain}${homeAssets.homeAsset69}`} alt='Yogasattva-march'/>
+              <img src={`${baseDomain}${publicationAssests.ythAssets87}`} alt='Yogasattva-august'/>
             </Link>
 
-            <p>March 2022</p>
+            <p>August 2022</p>
           </div>
         </div>
         <div className="description">
