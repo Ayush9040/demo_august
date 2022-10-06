@@ -169,7 +169,7 @@ const Footer = () => {
           {mobile}
           <p>+91-22-26110506, +91-22-26103568</p>
           {email2}
-          <p>info@the yogainstitute.org</p>
+          <p>info@theyogainstitute.org</p>
           {copyright}
           <p >
             2022 <span>The Yoga Institute.</span> All rights reserved.
