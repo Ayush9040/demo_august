@@ -10,32 +10,38 @@ import { fetchAllProductsAPI } from '../../Shop.api'
 import ShopCard from '../../../../Components/ShopCard/ShopCard'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
+import Pagination from 'react-js-pagination'
 
 const Shop = () => {
   const [products, setProducts] = useState([])
+  const [pagination, setPagination] = useState({ page: 1, limit: 10 })
+  const [count, setCount] = useState(0)
 
-  const getAllProducts = async() => {
-    const { data } = await fetchAllProductsAPI()
+  const getAllProducts = async(page, limit) => {
+    const { data } = await fetchAllProductsAPI(page, limit)
     setProducts(data.data)
+    setCount(data.count)
+  }
+
+  const shopPagination = (num) => {
+    setPagination({ ...pagination, page: num, limit: 10 })
   }
 
   useEffect(() => {
-    getAllProducts()
-  }, [])
+    getAllProducts(pagination.page, pagination.limit)
+  }, [pagination])
 
-  const addLocal = ( productDetail )=>{
-    if(!localStorage.getItem('cart')) return [productDetail]
+  const addLocal = (productDetail) => {
+    if (!localStorage.getItem('cart')) return [productDetail]
     const prevCart = JSON.parse(localStorage.getItem('cart'))
-    return [...prevCart,productDetail]
+    return [...prevCart, productDetail]
   }
 
-  const addCart = (idx,e) => {
+  const addCart = (idx, e) => {
     e.stopPropagation()
     const addProduct = products.find((item) => item._id === idx)
-    localStorage.setItem('cart', JSON.stringify( addLocal(addProduct) ))
+    localStorage.setItem('cart', JSON.stringify(addLocal(addProduct)))
   }
-
-  
 
   let settings = {
     dots: true,
@@ -62,11 +68,13 @@ const Shop = () => {
         <InnerNavComponent abc={shopNav} />
         <div className="shop-page">
           <div className="category-search">
-            <div className='shop_categories'>All Categories</div>
-            <div className='shop_search'><label>
-              <input type={'text'} placeholder="Search" />
-              <FontAwesomeIcon icon={faSearch} />
-            </label></div>
+            <div className="shop_categories">All Categories</div>
+            <div className="shop_search">
+              <label>
+                <input type={'text'} placeholder="Search" />
+                <FontAwesomeIcon icon={faSearch} />
+              </label>
+            </div>
           </div>
           <div className="products-section">
             <div className="banner-section">
@@ -96,11 +104,19 @@ const Shop = () => {
               ))}
             </div>
           </div>
+          <div className="shop_pagination">
+            <Pagination
+              activePage={pagination.page}
+              itemsCountPerPage={pagination.limit}
+              totalItemsCount={count}
+              pageRangeDisplayed={3}
+              onChange={(e) => shopPagination(e)}
+            />
+          </div>
         </div>
       </div>
     </>
   )
 }
-
 
 export default Shop

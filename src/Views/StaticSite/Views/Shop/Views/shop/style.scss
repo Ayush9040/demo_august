@@ -5,6 +5,29 @@
   .shop-page {
     width: 90%;
     margin: 0 auto;
+    .shop_pagination{
+      .pagination{
+          list-style: none;
+          display: flex;
+          justify-content: center;
+          width: 100%;
+          li{
+            font-size: 2rem;
+            padding: 0 1rem;
+            background-color: #eee;
+            margin: 0 2rem;
+            cursor: pointer;
+            &:hover{
+              background: #96bcee80;
+              color: #fff;
+            }
+          }
+          .active{
+            background-color: #96bcee;
+            color: #fff;
+          }
+      }
+    }
   }
   .category-search {
     display: flex;
@@ -73,6 +96,8 @@
     background: #eeeeee;
     padding: 5rem;
     border-radius: 36px;
+   
+    
   }
   .banner {
     // width: 90%!important;

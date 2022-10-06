@@ -124,6 +124,7 @@
       }
     }
     .cart_price {
+      padding-top: 1.5rem;
       font-size: 2rem;
       .cart_amount {
         font-size: 3rem;
@@ -133,5 +134,40 @@
     }
   }
 
-  // .cart_lower_div{}
+  .cart_lower_div{
+    .check_out_div {
+      // display: flex;
+      // flex-direction: column;
+      // justify-content: flex-end;
+      // height: 68%;
+      padding-top: 30rem;
+      color: #000;
+      float: right;
+  
+      padding-right: 8rem;
+      .check_out {
+        text-align: right;
+  
+        padding-right: 2rem;
+        .check_out_price {
+          font-size: 2.8rem;
+          font-weight: 700;
+          padding: 1.5rem 0 1.5rem 1.5rem;
+        }
+      }
+      .check_out_btn {
+        text-align: center;
+        float: right;
+        .global-common-btn {
+          width: 20rem;
+          border: 1px solid black;
+          font-weight: 700;
+          margin-top: 3rem;
+          .global-common-btn-content {
+            font-size: 2rem;
+          }
+        }
+      }
+    }
+  }
 }

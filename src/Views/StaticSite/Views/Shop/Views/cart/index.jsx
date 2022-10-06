@@ -4,6 +4,7 @@ import InnerNavComponent from '../../../../Components/InnerNavComponent'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
 import { deleteIcon } from '../../../../assets/icons/icon'
+import CommonBtn from '../../../../Components/commonbtn'
 
 const AddToCart = () => {
   const cart = {
@@ -17,14 +18,17 @@ const AddToCart = () => {
   useEffect(() => {
     const cartItems = localStorage.getItem('cart')
     setAddCart(JSON.parse(cartItems))
-  }, [ ])
+  }, [])
 
-  const deleteProduct=(idx)=>{
+  const deleteProduct = (idx) => {
     localStorage.getItem('cart')
     const removeProduct = JSON.parse(localStorage.getItem('cart'))
-    setAddCart(removeProduct.filter((item)=> (item._id !== idx)))
-    localStorage.setItem('cart',JSON.stringify((removeProduct.filter((item)=> (item._id !== idx)))))
-    console.log(removeProduct,'qwerty')
+    setAddCart(removeProduct.filter((item) => item._id !== idx))
+    localStorage.setItem(
+      'cart',
+      JSON.stringify(removeProduct.filter((item) => item._id !== idx))
+    )
+    console.log(removeProduct, 'qwerty')
   }
 
   return (
@@ -55,7 +59,14 @@ const AddToCart = () => {
                         <option value="">Quantity</option>
                       </select>
                     </span>
-                    <span className="cart_delete" onClick={()=>{deleteProduct(item._id)}} >{deleteIcon}</span>
+                    <span
+                      className="cart_delete"
+                      onClick={() => {
+                        deleteProduct(item._id)
+                      }}
+                    >
+                      {deleteIcon}
+                    </span>
                   </div>
                   <div className="cart_date">Delivery: dd/mm/yyyy</div>
                 </div>
@@ -68,7 +79,18 @@ const AddToCart = () => {
           )
         })}
 
-        <div className="cart_lower_div"></div>
+        <div className="cart_lower_div">
+          <div className="check_out_div">
+            <div className="check_out">
+              <div>Subtotal (1 item)</div>
+              <div className="check_out_price">₹ 299</div>
+              <div>Inclusive of all taxes</div>
+            </div>
+            <div className="check_out_btn">
+              <CommonBtn text="Check Out" />
+            </div>
+          </div>
+        </div>
       </div>
     </>
   )
