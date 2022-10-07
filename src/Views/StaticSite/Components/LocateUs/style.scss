@@ -97,6 +97,15 @@
       }
     }
   }
+  a{
+    color: #ca4625;
+  }
+  a[href^='mailto:'] {
+    color: #ca4625;
+  }
+  a[href^='tel:'] {
+    color: #ca4625;
+  }
 }
 
 @media (max-width: 920px) {

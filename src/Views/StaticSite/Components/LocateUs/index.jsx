@@ -79,7 +79,7 @@ const LocateUs = () => {
             </span>
             {bold === 'Hong Kong' && <div className="bottom_line2"></div>}
           </li>
-          <li>
+          {/* <li>
             <span
               style={bold === 'Italy' ? { fontWeight: '700' } : {}}
               onClick={() => {
@@ -89,7 +89,7 @@ const LocateUs = () => {
               Italy
             </span>
             {bold === 'Italy' && <div className="bottom_line2"></div>}
-          </li>
+          </li> */}
           <li
             onClick={() => {
               setBold('Thailand')
@@ -124,11 +124,22 @@ const LocateUs = () => {
         </div>
         <div className="locate_country">
           <div className="locate_flag">
-            <img src={country.flag} alt="flag" />
+            <img src={country?.flag} alt="flag" />
           </div>
+
           <div className="locate_address">
-            <div className="locate_add">{country.add}</div>
-            <div className="locate_subadd"> {country.subAdd}</div>
+            <div className="locate_add">{country?.add}</div>
+            <div className="locate_subadd"> {country?.subAdd}</div>
+            <a className="locate_subadd" href={`tel:${country?.mobile}`}>
+              {country?.mobile}
+            </a>
+            <a className="locate_subadd" href={`mailto:${country?.email}`}>
+              {country?.email}
+            </a>
+            <a className="locate_subadd" href={country?.website}>
+              {' '}
+              {country?.website}
+            </a>
           </div>
         </div>
         <div className="locate_sub_address_container">
@@ -138,6 +149,22 @@ const LocateUs = () => {
                 <div className="sub_state" key={i}>
                   <div className="bold_state">{items?.state}</div>
                   <div className="not_bold">{items?.notstate}</div>
+                  <div className="not_bold">
+                    {' '}
+                    <a href={`tel:${items?.phone}`}>{items?.phone}</a>
+                  </div>
+                  <div className="not_bold">
+                    <a className="not_bold" href={`mailto:${items?.email}`}>
+                      {items?.email}
+                    </a>
+                  </div>
+                  <div className="not_bold">
+                    {' '}
+                    <a className="not_bold" href={items?.website}>
+                      {' '}
+                      {items?.website}
+                    </a>
+                  </div>
                 </div>
               )
             })}
