@@ -10697,7 +10697,10 @@ const classes = {
         content: {
           title: 'Eligibility:',
           text: [
-            'ITTC (500 Hours Intermediate Level) or ATTC both from The Yoga Institute.',
+            'Students who have completed 500/900 hrs TTC from The Yoga Institute.',
+            'Medical Doctors who have completed any TTC (200/500/900 hrs) from The Yoga Institute.',
+            'Students who have completed YCB Level 2 or 3.',
+            'Students who have completed minimum 500 hrs TTC from any institution, can apply to info@theyogainstitute.org with their certificates & course curriculum for Review.'
           ],
         },
       },
