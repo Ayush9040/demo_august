@@ -3,18 +3,20 @@
   transition: 0.3s;
   border-radius: 2rem;
   max-width: 450px;
+  width: 320px;
   &:hover {
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
   }
   .card-img-container {
     min-width: 300px;
-    width: 450px;
+    width: 320px;
     .card-img {
-      min-width: 100%;
-      width: 450px;
+      min-width: 300px;
+      width: 100%;
       border-top-left-radius: 2rem;
       border-top-right-radius: 2rem;
-      height: 400px;
+      height: 300px;
+      object-fit: cover;
     }
   }
   .text-container {
@@ -25,9 +27,10 @@
     justify-content: space-between;
     border-bottom-right-radius: 2rem;
     border-bottom-left-radius: 2rem;
-    height: 200px;
+    height: 130px;
     .card-title {
-      margin-bottom: 3rem;
+      margin-bottom: 2rem;
+      max-height: 3rem;
     }
     .price-container {
       display: flex;
@@ -53,7 +56,7 @@
     }
     .text-white {
       color: white;
-      font-size: 2rem;
+      font-size: 1.5rem;
     }
   }
 }

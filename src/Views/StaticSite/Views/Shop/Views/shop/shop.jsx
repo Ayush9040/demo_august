@@ -6,21 +6,36 @@ import 'slick-carousel/slick/slick-theme.css'
 import './style.scss'
 import { useState } from 'react'
 import { useEffect } from 'react'
-import { fetchAllProductsAPI } from '../../Shop.api'
+import { useNavigate } from 'react-router-dom'
+import { fetchAllProductsAPI,getProductByCategory, getAllCategories } from '../../Shop.api'
 import ShopCard from '../../../../Components/ShopCard/ShopCard'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
 import Pagination from 'react-js-pagination'
+import { useSelector } from 'react-redux'
+import MessageModal from '../../../../Components/MessageModal'
 
 const Shop = () => {
   const [products, setProducts] = useState([])
   const [pagination, setPagination] = useState({ page: 1, limit: 10 })
   const [count, setCount] = useState(0)
+  const [categories,setCategories] = useState([])
+  const [ modal,setModal ] = useState(false)
+
+  let { isLoggedIn } = useSelector(state=>state.auth)
+
+  isLoggedIn = true
+  const navigate = useNavigate()
 
   const getAllProducts = async(page, limit) => {
     const { data } = await fetchAllProductsAPI(page, limit)
     setProducts(data.data)
     setCount(data.count)
+  }
+  const fetchAllCategories = async()=>{
+    const { data } = await getAllCategories()
+    console.log(data,'categories')
+    setCategories(data.data)
   }
 
   const shopPagination = (num) => {
@@ -29,9 +44,11 @@ const Shop = () => {
 
   useEffect(() => {
     getAllProducts(pagination.page, pagination.limit)
+    fetchAllCategories()
   }, [pagination])
 
   const addLocal = (productDetail) => {
+    if(!isLoggedIn) return setModal(true)
     if (!localStorage.getItem('cart')) return [productDetail]
     const prevCart = JSON.parse(localStorage.getItem('cart'))
     return [...prevCart, productDetail]
@@ -62,13 +79,24 @@ const Shop = () => {
     menuItems: [],
   }
 
+  const productByCategory = async(category)=> {
+    
+    if(category==='all')return getAllProducts() 
+    // navigate(`/shop/?category=${ categories?.find(item=>item._id===category)?.name }`)
+    const { data } = await getProductByCategory(category)
+    setProducts(data.data)
+  }
+
   return (
     <>
       <div className="shop">
         <InnerNavComponent abc={shopNav} />
         <div className="shop-page">
           <div className="category-search">
-            <div className="shop_categories">All Categories</div>
+            <select onChange={ (e)=>{ productByCategory(e.target.value) } } className="shop_categories">
+              <option value='all' >All Categories</option>
+              { categories.map((item,i)=><option key={i} value={item._id} >{ item.name }</option>) }
+            </select>
             <div className="shop_search">
               <label>
                 <input type={'text'} placeholder="Search" />
@@ -115,6 +143,7 @@ const Shop = () => {
           </div>
         </div>
       </div>
+      {modal && <MessageModal type='WARNING' message='Please login first!' nav='/user/sign-in' closePopup={setModal} /> }
     </>
   )
 }

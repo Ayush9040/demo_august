@@ -1,7 +1,7 @@
 import React from 'react'
 import './styles.scss'
 import { CartButton } from '../../assets/icons/icon'
-import { Link, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 const ShopCard = ({
   title = 'Yoga chakra Mat Balance your mind',
@@ -39,7 +39,7 @@ const ShopCard = ({
           <p className="text-white">
             {currency === 'INR' ? '₹' : '$'}&nbsp;{price}
           </p>
-          <button type="button" className="cart-button" onClick={(e)=>(addCart(productId,e) , navigate('/shop/cart'))}>
+          <button type="button" className="cart-button" onClick={(e)=>(addCart(productId,e))}>
             <span className="svg-width">{CartButton}</span> Add to cart
           </button>
         </div>

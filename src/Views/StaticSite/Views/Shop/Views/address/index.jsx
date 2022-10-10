@@ -39,9 +39,9 @@ const ShippingAdd = () => {
                   form={formData}
                   setField={setFormData}
                   keyName="name"
-                  // errorCheck={setEmpty}
+                  errorCheck={setEmpty}
                 />
-                {/* {empty === 1 && <small> Please enter your name</small>} */}
+                {empty === 1 && <small> Please enter your name</small>}
               </div>
               <div className="form_error">
                 <InputComponent
@@ -50,9 +50,9 @@ const ShippingAdd = () => {
                   form={formData}
                   setField={setFormData}
                   keyName="add1"
-                  // errorCheck={setEmpty}
+                  errorCheck={setEmpty}
                 />
-                {/* {empty === 1 && <small> Please enter your name</small>} */}
+                {empty === 2 && <small> Please enter address</small>}
               </div>
               <div className="form_error">
                 <InputComponent
@@ -63,7 +63,7 @@ const ShippingAdd = () => {
                   keyName="add2"
                   // errorCheck={setEmpty}
                 />
-                {/* {empty === 1 && <small> Please enter your name</small>} */}
+                {/* {empty === 3 && <small> Please enter your name</small>} */}
               </div>
               <div className="form_error">
                 <InputComponent
@@ -72,9 +72,9 @@ const ShippingAdd = () => {
                   form={formData}
                   setField={setFormData}
                   keyName="country"
-                  // errorCheck={setEmpty}
+                  errorCheck={setEmpty}
                 />
-                {/* {empty === 1 && <small> Please enter your name</small>} */}
+                {empty === 3 && <small> Please enter your country*</small>}
               </div>
               <div className="form_error">
                 <InputComponent
@@ -83,9 +83,9 @@ const ShippingAdd = () => {
                   form={formData}
                   setField={setFormData}
                   keyName="state"
-                  // errorCheck={setEmpty}
+                  errorCheck={setEmpty}
                 />
-                {/* {empty === 1 && <small> Please enter your name</small>} */}
+                {empty === 4 && <small> Please enter your state*</small>}
               </div>
               <div className="form_error">
                 <InputComponent
@@ -94,9 +94,9 @@ const ShippingAdd = () => {
                   form={formData}
                   setField={setFormData}
                   keyName="city"
-                  // errorCheck={setEmpty}
+                  errorCheck={setEmpty}
                 />
-                {/* {empty === 1 && <small> Please enter your name</small>} */}
+                {empty === 5 && <small> Please enter your city*</small>}
               </div>
               <div className="form_error">
                 <InputComponent
@@ -105,9 +105,9 @@ const ShippingAdd = () => {
                   form={formData}
                   setField={setFormData}
                   keyName="pincode"
-                  // errorCheck={setEmpty}
+                  errorCheck={setEmpty}
                 />
-                {/* {empty === 1 && <small> Please enter your name</small>} */}
+                {empty === 6 && <small> Please enter your pincode*</small>}
               </div>
               <div>
                 <label className="save_add">

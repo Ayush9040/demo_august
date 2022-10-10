@@ -55,11 +55,11 @@
           z-index: 2;
           padding-left: 10rem;
           .global-common-btn {
-            width: 20rem;
+            width: 15rem;
             border: 2px solid white;
             font-weight: 700;
             .global-common-btn-content {
-              font-size: 2rem;
+              font-size: 1.5rem;
             }
           }
         }
@@ -179,10 +179,12 @@
           }
           .buy_now_btn {
             padding-bottom: 5rem;
+            padding-left: 0;
             .global-common-btn {
               margin-top: 0;
-              margin-left: auto;
-              margin-right: 5rem;
+              // margin-left: auto;
+              // margin-right: 5rem;
+              margin: 0 auto;
             }
           }
           .price_prod_div {
@@ -197,11 +199,10 @@
               margin: 0 auto;
               .prod_desc {
                 padding-top: 3rem;
-                font-size: 2.5rem;
               }
               .product_details {
                 color: #ffffff;
-                font-size: 4rem;
+                font-size: 2.5rem;
               }
             }
           }
@@ -235,8 +236,8 @@
             display: none;
           }
           .product_image{
-            height: 320px;
-            width: 320px;
+            height: 280px;
+            width: 280px;
           }
         }
       }

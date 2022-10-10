@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { Fragment, useEffect, useState } from 'react'
 import './style.scss'
 import InnerNavComponent from '../../../../Components/InnerNavComponent'
 import ShopCard from '../../../../Components/ShopCard/ShopCard'
@@ -80,12 +80,11 @@ const SingleProduct = () => {
           <div className="other_similar_product">
             <div className="similar_prod"> Other Similar Product:</div>
             <div className="similar_prod_card">
-              {/* {productDetail?.similarProducts?.map((item, i)=>(
-                <ShopCard />
-              ))} */}
-              {/* <ShopCard />
-              <ShopCard />
-              <ShopCard /> */}
+              {productDetail?.similarProducts?.map((item, i)=>(
+                <Fragment key={i} >
+                  <ShopCard  />
+                </Fragment>
+              ))}
             </div>
           </div>
           <div className="view_more_btn">

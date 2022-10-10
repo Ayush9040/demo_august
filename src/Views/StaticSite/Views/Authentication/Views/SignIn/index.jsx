@@ -50,9 +50,8 @@ const SignIn = () => {
       return setValidate(1)
     }else if(formData.password === ''){
       return setValidate(2)
-    }else(
+    }else{
       await dispatch(
-        error.isError !== false ? setModal(true) : setModal(false),
         loginUserAction(
           {
             email: formData.email,
@@ -61,7 +60,8 @@ const SignIn = () => {
           navigate
         )
       )
-    )
+      error.isError !== false ? setModal(true) : setModal(false)
+    }
   }
 
   const UserNav = {

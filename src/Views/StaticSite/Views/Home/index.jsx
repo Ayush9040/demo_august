@@ -16,8 +16,7 @@ import Footer from '../../Components/Footer'
 import Blog from '../../Components/BlogSection'
 import { Helmet } from 'react-helmet'
 import metaDataObj from '../../../../Constants/metaData.json'
-import OrderHistroy from '../Shop/Views/order-history'
-import ShippingAdd from '../Shop/Views/address'
+
 
 const Home = () => {
   const route = useLocation()
@@ -34,8 +33,6 @@ const Home = () => {
       {metaDataObj[route.pathname] && (
         <Helmet title={metaDataObj[route.pathname || '']?.title || ''} />
       )}
-      <ShippingAdd/>
-      {/* <OrderHistroy /> */}
       <HeroSection isUserLoggedIn={isLoggedIn} />
       <Legacy />
       <OurOfferings />
