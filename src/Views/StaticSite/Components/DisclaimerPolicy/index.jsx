@@ -78,7 +78,7 @@ const DisclaimerPolicy = ({
           city: formData.city,
           pincode: formData.pincode,
           gender: formData.gender,
-          age: formData.age,
+          age: formData.AGE,
           nationality: formData.nationality,
         },
         academicQualification: qualificationData,
