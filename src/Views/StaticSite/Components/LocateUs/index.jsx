@@ -123,9 +123,11 @@ const LocateUs = () => {
           </li>
         </div>
         <div className="locate_country">
-          <div className="locate_flag">
-            <img src={country?.flag} alt="flag" />
-          </div>
+          <a href={country?.website}>
+            <div className="locate_flag">
+              <img src={country?.flag} alt="flag" />
+            </div>
+          </a>
 
           <div className="locate_address">
             <div className="locate_add">{country?.add}</div>
@@ -160,7 +162,7 @@ const LocateUs = () => {
                   </div>
                   <div className="not_bold">
                     {' '}
-                    <a className="not_bold" href={items?.website}>
+                    <a className="website" href={items?.website}>
                       {' '}
                       {items?.website}
                     </a>

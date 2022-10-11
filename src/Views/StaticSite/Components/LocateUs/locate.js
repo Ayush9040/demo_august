@@ -7,6 +7,7 @@ export const locateData =[
     country:'India',
     add:'Head Quarte Santacruz East',
     subAdd:'Shri Yogendra Marg Prabhat Colony, Santacruz East Mumbai, Maharashtra 400055',
+    website:'https://theyogainstitute.org',
     branches :[
       // {
       //   state:'Andheri (W)',
