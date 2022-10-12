@@ -14,6 +14,8 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons'
 import Pagination from 'react-js-pagination'
 //import { useSelector } from 'react-redux'
 import MessageModal from '../../../../Components/MessageModal'
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 const Shop = () => {
   const [products, setProducts] = useState([])
@@ -63,10 +65,21 @@ const Shop = () => {
     }
   }
 
-  const addCart = (idx, e) => {
+  const addCart = async(idx, e) => {
     e.stopPropagation()
-    const addProduct = products.find((item) => item._id === idx)
-    localStorage.setItem('cart', JSON.stringify(addLocal(addProduct._id)))
+    const addProduct = await products.find((item) => item._id === idx)
+    await localStorage.setItem('cart', JSON.stringify(addLocal(addProduct._id)))
+    toast.success('Item Added to Cart Successfully!', {
+      position: 'top-right',
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: false,
+      draggable: true,
+      progress: undefined,
+      theme: 'light',
+    })
+
   }
 
   let settings = {
@@ -136,6 +149,18 @@ const Shop = () => {
                     thumbnail={item.productThumbnail}
                     productId={item._id}
                     addCart={addCart}
+                  />
+                  <ToastContainer
+                    // position="top-right"
+                    // autoClose={3000}
+                    // hideProgressBar={false}
+                    // newestOnTop={false}
+                    // closeOnClick
+                    // rtl={false}
+                    // pauseOnFocusLoss
+                    // draggable
+                    // pauseOnHover
+                    // theme="light"
                   />
                 </Fragment>
               ))}

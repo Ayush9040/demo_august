@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { Fragment, useEffect, useState } from 'react'
 import './style.scss'
 import InnerNavComponent from '../../../../Components/InnerNavComponent'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -6,6 +6,8 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons'
 import { deleteIcon } from '../../../../assets/icons/icon'
 import CommonBtn from '../../../../Components/commonbtn'
 import { fetchSingleProduct } from '../../Shop.api'
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 const AddToCart = () => {
 
@@ -36,14 +38,25 @@ const AddToCart = () => {
     displayCart(JSON.parse(cartItems))
   }, [])
 
-  const deleteProduct = (idx) => {
+  const deleteProduct = async(idx) => {
     localStorage.getItem('cart')
-    const removeProduct = JSON.parse(localStorage.getItem('cart'))
-    displayCart(removeProduct.filter((item) => item.product !== idx))
-    localStorage.setItem(
+    const removeProduct = await JSON.parse(localStorage.getItem('cart'))
+    await displayCart(removeProduct.filter((item) => item.product !== idx))
+    await localStorage.setItem(
       'cart',
       JSON.stringify(removeProduct.filter((item) => item.product !== idx))
     )
+    toast.error('Item Removed from cart!', {
+      position: 'top-right',
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: false,
+      draggable: true,
+      progress: undefined,
+      theme: 'colored',
+      icon:false
+    })
   }
 
   console.log(addCart,'addCart')
@@ -62,40 +75,43 @@ const AddToCart = () => {
         </div>
         {addCart?.map((item, i) => {
           return (
-            <div key={i} className="cart_upper_div">
-              <div className="cart_detail">
-                <div className="cart_img">
-                  <img src={item?.productThumbnail} alt="" />
-                </div>
-                <div className="cart_title_div">
-                  <div className="cart_title">{item?.name}</div>
-                  <div className="cart_dropdown">
-                    <span>
-                      <select value={item?.quantity} name="" id="" className="quantity_dropdown">
-                        <option selected={item.quantity===1} value={1}>1</option>
-                        <option selected={item.quantity===2} value={2}>2</option>
-                        <option selected={item.quantity===3} value={3}>3</option>
-                        <option selected={item.quantity===4} value={4}>4</option>
-                        <option selected={item.quantity===5} value={5}>5</option>
-                      </select>
-                    </span>
-                    <span
-                      className="cart_delete"
-                      onClick={() => {
-                        deleteProduct(item._id)
-                      }}
-                    >
-                      {deleteIcon}
-                    </span>
+            <Fragment key={i} >
+              <div className="cart_upper_div">
+                <div className="cart_detail">
+                  <div className="cart_img">
+                    <img src={item?.productThumbnail} alt="" />
                   </div>
-                  <div className="cart_date">Delivery: dd/mm/yyyy</div>
+                  <div className="cart_title_div">
+                    <div className="cart_title">{item?.name}</div>
+                    <div className="cart_dropdown">
+                      <span>
+                        <select value={item?.quantity} name="" id="" className="quantity_dropdown">
+                          <option selected={item.quantity===1} value={1}>1</option>
+                          <option selected={item.quantity===2} value={2}>2</option>
+                          <option selected={item.quantity===3} value={3}>3</option>
+                          <option selected={item.quantity===4} value={4}>4</option>
+                          <option selected={item.quantity===5} value={5}>5</option>
+                        </select>
+                      </span>
+                      <span
+                        className="cart_delete"
+                        onClick={() => {
+                          deleteProduct(item._id)
+                        }}
+                      >
+                        {deleteIcon}
+                      </span>
+                    </div>
+                    <div className="cart_date">Delivery: dd/mm/yyyy</div>
+                  </div>
+                </div>
+                <div className="cart_price">
+                Price
+                  <div className="cart_amount">{item?.price}</div>
                 </div>
               </div>
-              <div className="cart_price">
-                Price
-                <div className="cart_amount">{item?.price}</div>
-              </div>
-            </div>
+              <ToastContainer/>
+            </Fragment>
           )
         })}
 
