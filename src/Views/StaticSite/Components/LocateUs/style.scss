@@ -44,11 +44,12 @@
     .locate_country {
       display: flex;
       justify-content: center;
-      //align-items: center;
-      //margin: 6rem 0;
       gap: 8rem;
       margin-top: 6rem;
       margin-bottom: 6rem;
+      a{
+        color: #ca4625;
+      }
       .locate_flag {
         height: 10rem;
         width: 15rem;
@@ -92,11 +93,15 @@
           }
           .not_bold {
             font-size: 1.75rem;
+            a{
+              color: #ca4625;
+            }
           }
         }
       }
     }
   }
+ 
 }
 
 @media (max-width: 920px) {

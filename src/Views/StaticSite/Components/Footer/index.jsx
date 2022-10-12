@@ -148,13 +148,11 @@ const Footer = () => {
                 <li>Privacy Policy</li>
               </Link>
 
-              <a
-                href='https://www.google.com/maps/place/The+Yoga+Institute/@19.085104,72.843153,16z/data=!4m5!3m4!1s0x0:0xb1b1dcb9c91cb9a!8m2!3d19.0851499!4d72.8431203?hl=en&shorturl=1'
-                target="_blank"
-                rel='noreferrer'
+              <Link
+                to='/our-branches'
               >
                 <li>Locate us</li>
-              </a>
+              </Link>
             </ul>
           </div>
         </div>
@@ -162,10 +160,15 @@ const Footer = () => {
 
         <div className='logo-content' id='footer' >
           {location1}
-          <p>
-            Shri Yogendra Marg, Prabhat Colony, Santacruz East, Mumbai - 400055
-            India
-          </p>
+          <a
+            href='https://www.google.com/maps/place/The+Yoga+Institute/@19.085104,72.843153,16z/data=!4m5!3m4!1s0x0:0xb1b1dcb9c91cb9a!8m2!3d19.0851499!4d72.8431203?hl=en&shorturl=1'
+            target="_blank"
+            rel='noreferrer'
+          >
+            <li>Shri Yogendra Marg, Prabhat Colony, Santacruz East, Mumbai - 400055
+            India</li>
+          </a>
+        
           {mobile}
           <p>+91-22-26110506, +91-22-26103568</p>
           {email2}
