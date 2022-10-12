@@ -5,7 +5,7 @@ export const locateData =[
   {
     flag:`${baseDomain}${locateAsset.India}`,
     country:'India',
-    add:'Head Quarte Santacruz East',
+    add:'Head Quarter Santacruz East',
     subAdd:'Shri Yogendra Marg Prabhat Colony, Santacruz East Mumbai, Maharashtra 400055',
     website:'https://theyogainstitute.org',
     branches :[
@@ -21,7 +21,7 @@ export const locateData =[
       },
       {
         state:'Raipur',
-        notstate:'Namami Health Retreat &amp; A Wellness Sanctuary 7/156, Mulamkuzhy, Malayttoor, Ernakulam Kochi 683587 – Kerala, India.',
+        notstate:'Namami Health Retreat A Wellness Sanctuary 7/156, Mulamkuzhy, Malayttoor, Ernakulam Kochi 683587 – Kerala, India.',
         phone:'+91 9752550490 / 982035049',
         email:'tyiraipur@gmail.com',
         website:'https://theyogainstituteraipur.com'
