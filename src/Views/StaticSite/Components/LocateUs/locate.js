@@ -9,15 +9,12 @@ export const locateData =[
     subAdd:'Shri Yogendra Marg Prabhat Colony, Santacruz East Mumbai, Maharashtra 400055',
     website:'https://theyogainstitute.org',
     branches :[
-      // {
-      //   state:'Andheri (W)',
-      //   notstate:'Samartha Aishwarya, B-Wing, #710,7th floor, Above Marks & Spencer, Lion Sol Marg, Opp. Highland Park,Lokhandwala Complex, Andheri (West), Mumbai- 400053',
-      //   phone:''
-      // },
       {
-        state:'Kalyan',
-        notstate:'Saket College, Saket Vidyanagri Marg, Katemenivali, Chinchpada Road, Kalyan, Maharashtra - 421306',
-        phone:'+91-9664976447'
+        state:'Goa',
+        notstate:'Viva Chorão, Near Our Lady of Grace Church, Madel Chorão, Tiswadi Goa, 403102',
+        phone:'+91-9820557676',
+        website:'https://theyogainstitutegoa.com',
+        email:'goa@theyogainstitute.org'
       },
       {
         state:'Raipur',
@@ -27,10 +24,18 @@ export const locateData =[
         website:'https://theyogainstituteraipur.com'
       },
       {
-        state:'Juhu',
-        notstate:'Ground Floor Backside, Abhijat Bunglow, Plot No. 48, NS Road Number 7, Opp. Siddhivinayak Building, JVPD Scheme, Juhu.',
-        phone:'+91-9833864964',
-        email:'dhhruv.s@gmail.com'
+        state:'Kochi',
+        notstate:'Namami Health Retreat &amp; A Wellness Sanctuary 7/156, Mulamkuzhy, Malayttoor, Ernakulam Kochi 683587 – Kerala, India.',
+        phone:'+91 484 2621234, 9188952296',
+        email:'tyikochi@namamihealth.com',
+        website:'https://namamihealth.com'
+      },
+      {
+        state:'Delhi',
+        //notstate:'Swami Parmanand Prakritik Chikitsalaya (SPPC) Main Mother Dairy Road, Shanti Marg,Near Manglam Red Light, Narwana Rd, Block E, West Vinod Nagar, New Delhi, 110092',
+        phone:'+91-9899904455',
+        email:'tyidelhi@theyogainstitute.org',
+        website:'https://theyogainstitutedelhi.com'
       },
       {
         state:'Matunga (CR)',
@@ -38,18 +43,33 @@ export const locateData =[
         phone:'+91-887995500'
       },
       {
-        state:'Goa',
-        notstate:'Viva Chorão, Near Our Lady of Grace Church, Madel Chorão, Tiswadi Goa, 403102',
-        phone:'+91-9820557676',
-        website:'https://theyogainstitutegoa.com',
-        email:'goa@theyogainstitute.org'
-      },
-      {
         state:'Santacruz (W)',
         notstate:'Rotary Club of Bombay West Rotary Service Centre, Rotary Chowk, Juhu Tara Road, Santacruz W, Mumbai 400049.',
         phone:'+91-9833864964',
         email:'dhhruv.s@gmail.com'
       },
+      {
+        state:'Juhu',
+        notstate:'Ground Floor Backside, Abhijat Bunglow, Plot No. 48, NS Road Number 7, Opp. Siddhivinayak Building, JVPD Scheme, Juhu.',
+        phone:'+91-9833864964',
+        email:'dhhruv.s@gmail.com'
+      },
+      {
+        state:'Vile Parle',
+        notstate:'Sanyas Ashram Temple, Off. Bajaj Road, Vile Parle West, Mumbai - 400056',
+        phone:'+91-9833864964',
+        email:'dhhruv.s@gmail.com'
+      },
+      {
+        state:'Kalyan',
+        notstate:'Saket College, Saket Vidyanagri Marg, Katemenivali, Chinchpada Road, Kalyan, Maharashtra - 421306',
+        phone:'+91-9664976447'
+      },
+      // {
+      //   state:'Andheri (W)',
+      //   notstate:'Samartha Aishwarya, B-Wing, #710,7th floor, Above Marks & Spencer, Lion Sol Marg, Opp. Highland Park,Lokhandwala Complex, Andheri (West), Mumbai- 400053',
+      //   phone:''
+      // },
       // {
       //   state:'Powai',
       //   notstate:'The Yoga Institute, Powai C - 308, Kailas Business Park, Hiranandani Link Road, Powai,Mumbai'
@@ -58,26 +78,9 @@ export const locateData =[
       //   state:'Indore',
       //   notstate:'The Yoga Institute, 1st Plot No. 3, Akshay Deep Colony MR 9, AB Rd, near Lotus, Indore, Madhya Pradesh 452010'
       // },
-      {
-        state:'Vile Parle',
-        notstate:'Sanyas Ashram Temple, Off. Bajaj Road, Vile Parle West, Mumbai - 400056',
-        phone:'+91-9833864964',
-        email:'dhhruv.s@gmail.com'
-      },
-      {
-        state:'Delhi',
-        notstate:'Swami Parmanand Prakritik Chikitsalaya (SPPC) Main Mother Dairy Road, Shanti Marg,Near Manglam Red Light, Narwana Rd, Block E, West Vinod Nagar, New Delhi, 110092',
-        phone:'+91-9899904455',
-        email:'tyidelhi@theyogainstitute.org',
-        website:'https://theyogainstitutedelhi.com'
-      },
-      {
-        state:'Kochi',
-        notstate:'Namami Health Retreat &amp; A Wellness Sanctuary 7/156, Mulamkuzhy, Malayttoor, Ernakulam Kochi 683587 – Kerala, India.',
-        phone:'+91 484 2621234, 9188952296',
-        email:'tyikochi@namamihealth.com',
-        website:'https://namamihealth.com'
-      }
+    
+   
+     
     ]
   },
   {

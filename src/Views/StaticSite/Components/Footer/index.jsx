@@ -165,8 +165,8 @@ const Footer = () => {
             target="_blank"
             rel='noreferrer'
           >
-            <li>Shri Yogendra Marg, Prabhat Colony, Santacruz East, Mumbai - 400055
-            India</li>
+            Shri Yogendra Marg, Prabhat Colony, Santacruz East, Mumbai - 400055
+            India
           </a>
         
           {mobile}
