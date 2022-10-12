@@ -5,5 +5,5 @@ export const noError = {
 export const initialState = {
   error: noError,
   isLoading: false,
-  donationPrograms: []
+  cart: []
 }
