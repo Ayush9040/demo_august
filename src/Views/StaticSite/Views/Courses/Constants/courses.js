@@ -4242,7 +4242,7 @@ const ttc900hr = {
             ],
 
             [
-              'Internship- health & wellness camps, 7 days camp & other initiatives',
+              'Health & wellness camps, 7 days camp & other initiatives',
 
               '135 hours',
             ],
