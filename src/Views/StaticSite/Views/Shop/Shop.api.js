@@ -17,3 +17,7 @@ export const getProductByCategory = ( categoryId )=>{
 export const getAllCategories = ()=>{
   return axios.get(`${ ecomBaseDomin }/category`)
 }
+
+export const createCart = (payload)=>{
+  return axios.post(`${ ecomBaseDomin }/cart/`,payload)
+}

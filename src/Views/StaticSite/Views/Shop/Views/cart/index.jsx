@@ -1,15 +1,19 @@
 import React, { Fragment, useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import './style.scss'
 import InnerNavComponent from '../../../../Components/InnerNavComponent'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
 import { deleteIcon } from '../../../../assets/icons/icon'
+import { useSelector } from 'react-redux'
 import CommonBtn from '../../../../Components/commonbtn'
-import { fetchSingleProduct } from '../../Shop.api'
+import { fetchSingleProduct, createCart } from '../../Shop.api'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 
 const AddToCart = () => {
+
+  const navigate = useNavigate()
 
   const cart = {
     title: 'Shop',
@@ -18,14 +22,21 @@ const AddToCart = () => {
     menuItems: [],
   }
   const [addCart, setAddCart] = useState([])
+  const [ isLoading,setIsLoading ] = useState(null)
+
+  let { isLoggedIn,user } = useSelector(item=>item.auth)
+
+  isLoggedIn = true
 
   const displayCart =async( products )=>{
+    setIsLoading(true)
     const arr =[]
     for await (let item  of products){
-      const { data } = await fetchSingleProduct(item.product)
-      arr.push(data.data)
+      const { data } = await fetchSingleProduct(item.productId)
+      arr.push({ ...data.data,quantity:item.quantity })
     }
     setAddCart(arr)
+    setIsLoading(false)
   }
   
     
@@ -36,19 +47,30 @@ const AddToCart = () => {
   useEffect(() => {
     const cartItems = localStorage.getItem('cart')
     displayCart(JSON.parse(cartItems))
-  }, [])
+  }, [ ])
+
+  const updateQuantity = async( quantity,item )=>{
+    const cartItems = localStorage.getItem('cart')
+    const prevCart = JSON.parse(cartItems)
+    await prevCart.forEach(element => {
+      if(element.productId===item){
+        element.quantity = parseInt(quantity)
+      }
+    })
+    localStorage.setItem('cart',JSON.stringify(prevCart))
+  }
 
   const deleteProduct = async(idx) => {
     localStorage.getItem('cart')
     const removeProduct = await JSON.parse(localStorage.getItem('cart'))
-    await displayCart(removeProduct.filter((item) => item.product !== idx))
+    await displayCart(removeProduct.filter((item) => item.productId !== idx))
     await localStorage.setItem(
       'cart',
-      JSON.stringify(removeProduct.filter((item) => item.product !== idx))
+      JSON.stringify(removeProduct.filter((item) => item.productId !== idx))
     )
     toast.error('Item Removed from cart!', {
       position: 'top-right',
-      autoClose: 3000,
+      autoClose: 1000,
       hideProgressBar: false,
       closeOnClick: true,
       pauseOnHover: false,
@@ -57,6 +79,32 @@ const AddToCart = () => {
       theme: 'colored',
       icon:false
     })
+  }
+
+  const getTotal = ()=>{
+    if(addCart.length===0) return
+    let sum = 0
+    addCart.forEach(item=>{
+      sum+= (item.price * item.quantity)  
+    })
+    return sum
+  }
+
+  const checkout = async()=>{
+    if(!isLoggedIn) return navigate('/user/sign-in/?location=cart')
+    const finalCart = JSON.parse(localStorage.getItem('cart'))
+    try {
+      await createCart( {
+        items: finalCart,
+        user: user?.data?.id,
+        coupon:'633e7fd87a99054bade30875',
+        discount:0
+      } )
+      navigate('/shop/checkout')
+    } catch (error) {
+      console.log(error)
+    }
+    
   }
 
   console.log(addCart,'addCart')
@@ -73,7 +121,7 @@ const AddToCart = () => {
             </label>
           </div>
         </div>
-        {addCart?.map((item, i) => {
+        { isLoading ? <div className='global-loader' >Loading...</div>: addCart?.map((item, i) => {
           return (
             <Fragment key={i} >
               <div className="cart_upper_div">
@@ -85,12 +133,12 @@ const AddToCart = () => {
                     <div className="cart_title">{item?.name}</div>
                     <div className="cart_dropdown">
                       <span>
-                        <select value={item?.quantity} name="" id="" className="quantity_dropdown">
-                          <option selected={item.quantity===1} value={1}>1</option>
-                          <option selected={item.quantity===2} value={2}>2</option>
-                          <option selected={item.quantity===3} value={3}>3</option>
-                          <option selected={item.quantity===4} value={4}>4</option>
-                          <option selected={item.quantity===5} value={5}>5</option>
+                        <select value={item?.quantity} onChange={(e)=>{ updateQuantity(e.target.value, item._id) } } name="" id="" className="quantity_dropdown">
+                          <option selected={ item.quantity===1 } value={1}>1</option>
+                          <option selected={ item.quantity===2 } value={2}>2</option>
+                          <option selected={ item.quantity===3 } value={3}>3</option>
+                          <option selected={ item.quantity===4 } value={4}>4</option>
+                          <option selected={ item.quantity===5 } value={5}>5</option>
                         </select>
                       </span>
                       <span
@@ -107,26 +155,26 @@ const AddToCart = () => {
                 </div>
                 <div className="cart_price">
                 Price
-                  <div className="cart_amount">{item?.price}</div>
+                  <div className="cart_amount">₹ {item?.price}</div>
                 </div>
               </div>
               <ToastContainer/>
             </Fragment>
           )
         })}
-
-        <div className="cart_lower_div">
+        { isLoading==false && addCart.length===0 && <h1 className='empty_cart' >Your cart is Empty!</h1> }
+        { addCart.length>0 && <div className="cart_lower_div">
           <div className="check_out_div">
             <div className="check_out">
-              <div>Subtotal (1 item)</div>
-              <div className="check_out_price">₹ 299</div>
+              <div>Subtotal  ({addCart.length} item(s))</div>
+              <div className="check_out_price">₹ { getTotal() }</div>
               <div>Inclusive of all taxes</div>
             </div>
             <div className="check_out_btn">
-              <CommonBtn text="Check Out" />
+              <CommonBtn text="Check Out" buttonAction={ checkout } />
             </div>
           </div>
-        </div>
+        </div>}
       </div>
     </>
   )

@@ -29,18 +29,18 @@ const SingleProduct = () => {
   }, [])
 
   const buyProduct=()=>{
-    if (!localStorage.getItem('cart')) localStorage.setItem('cart',JSON.stringify([{ product:productDetail._id,quantity:1 }]))
+    if (!localStorage.getItem('cart')) localStorage.setItem('cart',JSON.stringify([{ productId:productDetail._id,quantity:1 }]))
     const prevCart = JSON.parse(localStorage.getItem('cart'))
-    if(prevCart.some(item=>item.product===productDetail._id)){
+    if(prevCart.some(item=>item.productId===productDetail._id)){
       prevCart.forEach(element => {
-        if(element.product===productDetail._id){
+        if(element.productId===productDetail._id){
           element.quantity = element.quantity+1
         }
       })
       
       localStorage.setItem('cart',JSON.stringify(prevCart))
     }else{
-      localStorage.setItem('cart',JSON.stringify([...prevCart,{ product:productDetail._id, quantity:1 }]))
+      localStorage.setItem('cart',JSON.stringify([...prevCart,{ productId:productDetail._id, quantity:1 }]))
       
     }
     navigate('/shop/cart')

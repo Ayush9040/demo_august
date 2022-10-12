@@ -53,34 +53,14 @@ const AlumniGallery = lazy(() => import('../Views/Alumni/Views/alumni-gallery'))
 const Support = lazy(() => import('../Views/Alumni/Views/support'))
 const Facts = lazy(() => import('../Views/Facts/Views/our-facts'))
 const Shop = lazy(()=>import('../Views/Shop/Views/shop/shop'))
-import SingleProduct from '../Views/Shop/Views/single-product'
+const SingleProduct = lazy(()=>import('../Views/Shop/Views/single-product'))
 
-// import FAQ from '../Components/Faq'
-// import Shop from '../Views/Shop'
-// import About from '../Views/About'
-// import Alumni from '../Views/Alumni'
-// import Media from '../Views/Media'
-// import Publication from '../Views/Publication'
-// import SingleCourse from '../Views/Courses/Views/course-name'
-// import Blogs from '../Views/Blogs/index.jsx'
-// import Career from '../Views/Careers'
-// import Donations from '../Views/Donation'
-// import Facility from '../Views/Facilities'
-// import Facts from '../Views/Facts'
-// import Gift from '../Views/Gifting'
 import Authentication from '../Views/Authentication'
 import AddToCart from '../Views/Shop/Views/cart'
-// import VolunteerPage from '../Views/Volunteer'
-// import VolunteerPage from '../Views/Volunteer'
-// import Thankyou from '../Components/EnrollmentForm/ThankYou'
-// import SattvikCooking from '../Components/Highlights/SattvikCooking'
-// import YogaByTheBay from '../Components/Highlights/YogaByTheBay'
-// import FullmoonMeditation from '../Components/Highlights/FullmoonMeditation'
-// import CorporateWorkshop from '../Components/Highlights/CorporateWorkshop'
-// import OnlineTution from '../Components/Highlights/OnlineTution'
+import ShippingAdd from '../Views/Shop/Views/address'
+
 const SingleJob = lazy(() => import('../Views/Careers/Views/single-job'))
 const VolunteerJob = lazy(() => import('../Views/Volunteer/Views/volunteerJob'))
-// import Values from '../Views/Volunteer/Views/values'
 const PrintMedia = lazy(() =>
   import('../Views/Media/Views/Print-Digital/print-media')
 )
@@ -584,15 +564,6 @@ const staticSiteRoutes = [
     routePath: '/user/*',
     name: 'Auth',
   },
-  // {
-  //   Component: Career,
-  //   path: '/careers/*',
-  //   exact: true,
-  //   id: 'statisSiteUnderCareers',
-  //   routePath: '/careers/*',
-  //   name: 'Careers',
-  // },
-  //donation
   {
     Component: DonationPage,
     path: '/donation',
@@ -632,9 +603,6 @@ const staticSiteRoutes = [
     id: 'statisSiteCourse',
     routePath: '/:contentId',
     name: 'singleCourse',
-    // 1. desComponent
-    // 2. Switch case
-    // render => loader => API call (Blog or course) => switch *Blog, *Course => loading stop
   },
   {
     Component: LocateUs,
@@ -644,14 +612,6 @@ const staticSiteRoutes = [
     routePath: '/our-branches',
     name: 'LocateUs',
   },
-  // {
-  //   Component: BlogAnother,
-  //   path: '/:contentId',
-  //   exact: true,
-  //   id: 'statisSiteBlog',
-  //   routePath: '/:contentId',
-  //   name: 'Blog',
-  // },
   {
     Component: Shop,
     path: '/shop',
@@ -672,10 +632,18 @@ const staticSiteRoutes = [
     Component: AddToCart,
     path: '/shop/cart',
     exact: true,
-    id: 'statisSiteShop',
+    id: 'statisSiteCart',
     routePath: '/shop/cart',
-    name: 'Shop',
+    name: 'Cart',
   },
+  {
+    Component: ShippingAdd,
+    path: '/shop/checkout',
+    exact: true,
+    id: 'statisSiteCheckout',
+    routePath: '/shop/checkout',
+    name: 'Checkout',
+  }
 ]
 
 

@@ -6,13 +6,11 @@ import 'slick-carousel/slick/slick-theme.css'
 import './style.scss'
 import { useState } from 'react'
 import { useEffect } from 'react'
-//import { useNavigate } from 'react-router-dom'
 import { fetchAllProductsAPI,getProductByCategory, getAllCategories } from '../../Shop.api'
 import ShopCard from '../../../../Components/ShopCard/ShopCard'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
 import Pagination from 'react-js-pagination'
-//import { useSelector } from 'react-redux'
 import MessageModal from '../../../../Components/MessageModal'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
@@ -23,11 +21,6 @@ const Shop = () => {
   const [count, setCount] = useState(0)
   const [categories,setCategories] = useState([])
   const [ modal,setModal ] = useState(false)
-
-  // let { isLoggedIn } = useSelector(state=>state.auth)
-
-  // isLoggedIn = true
-  // const navigate = useNavigate()
 
   const getAllProducts = async(page, limit) => {
     const { data } = await fetchAllProductsAPI(page, limit)
@@ -49,19 +42,18 @@ const Shop = () => {
     fetchAllCategories()
   }, [pagination])
 
-  const addLocal = (productId) => {
-    // if(!isLoggedIn) return setModal(true)
-    if (!localStorage.getItem('cart')) return [{ product:productId,quantity:1 }]
+  const addLocal = (productID) => {
+    if (!localStorage.getItem('cart')) return [{ productId:productID,quantity:1 }]
     const prevCart = JSON.parse(localStorage.getItem('cart'))
-    if(prevCart.some(item=>item.product===productId)){
+    if(prevCart.some(item=>item.productId===productID)){
       prevCart.forEach(element => {
-        if(element.product===productId){
+        if(element.productId===productID){
           element.quantity = element.quantity+1
         }
       })
       return prevCart
     }else{
-      return [...prevCart,{ product:productId, quantity:1 }]
+      return [...prevCart,{ productId:productID, quantity:1 }]
     }
   }
 
