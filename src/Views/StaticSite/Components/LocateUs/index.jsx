@@ -33,8 +33,7 @@ const LocateUs = () => {
         isOnlyBanner={false}
         innerNav={false}
         description={
-          'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Ipsum has been the industry\'s standard dummy text ever since the 1500s with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.'
-        }
+          'Established in 1918 by Shri Yogendraji, The Yoga Institute is the world\'s oldest government recognised Yoga Centre. The founder\'s vision and mission was to make Yoga accessible to each and everyone across the globe. His aim was to enrich people\'s lives through the goodness of Yoga. With a rich legacy of more than 100 years, The Yoga Institute stands strong and is committed to transforming people\'s lives through the education of Yogic concepts, asanas, pranayama and kriyas. Through Yoga, one can experience a self-transformation and a 360 degree change in their perspective and approach to life. In light of this objective and with the aim to reach the masses, The Yoga Institute is available in India and other countries across the world. Come, experience and achieve a balance in your life and harmony in the mind, body and soul. The Yoga Institute is your true companion in finding yourself in this journey called Life.'}
         bannerImg={`${baseDomain}${locateAsset.locate}`}
         overlay="#295e5bD4"
       >
