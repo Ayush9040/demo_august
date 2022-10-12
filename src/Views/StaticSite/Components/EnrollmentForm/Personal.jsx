@@ -44,7 +44,7 @@ const Personal = ({ handleEmpty1, empty, setFormData, formData, setEmpty }) => {
             </div>
             <div className='form_error'>
               <PhoneInput
-                placeholder="Enter phone number"
+                placeholder="Enter phone number*"
                 defaultCountry='IN'
                 value={formData.phone}
                 onChange={(e)=>{ setFormData({ ...formData,phone:e }) }}/>

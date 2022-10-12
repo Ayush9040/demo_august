@@ -94,8 +94,7 @@ const AboutUs = () => {
             insomnia, improving focus, concentration and productivity. Some of
             our most popular courses include the 21 Day Better Living Course,
             the Teacher Training Course, the 7 Day Healthy Living Course etc.
-            (Please add the titles of specific courses you may want to
-            highlight). Our students have repeatedly attested for the
+            Our students have repeatedly attested for the
             therapeutic value and the tangible benefits of these courses.{' '}
           </p>
           <p>

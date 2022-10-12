@@ -3961,7 +3961,7 @@ const ttc900hr = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'ttc',
-    dates: ['17th Oct to 4th Feb 2023'],
+    dates: ['31st Oct 2022 to 18th Feb 2023'],
     online: true,
     onCampus: false,
     nonResidential: false,
@@ -10697,7 +10697,10 @@ const classes = {
         content: {
           title: 'Eligibility:',
           text: [
-            'ITTC (500 Hours Intermediate Level) or ATTC both from The Yoga Institute.',
+            'Students who have completed 500/900 hrs TTC from The Yoga Institute.',
+            'Medical Doctors who have completed any TTC (200/500/900 hrs) from The Yoga Institute.',
+            'Students who have completed YCB Level 2 or 3.',
+            'Students who have completed minimum 500 hrs TTC from any institution, can apply to info@theyogainstitute.org with their certificates & course curriculum for Review.'
           ],
         },
       },
