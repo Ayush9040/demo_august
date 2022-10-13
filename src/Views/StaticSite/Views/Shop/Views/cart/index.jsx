@@ -7,7 +7,7 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons'
 import { deleteIcon } from '../../../../assets/icons/icon'
 import { useSelector } from 'react-redux'
 import CommonBtn from '../../../../Components/commonbtn'
-import { fetchSingleProduct, createCart } from '../../Shop.api'
+import { fetchSingleProduct } from '../../Shop.api'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 
@@ -24,9 +24,7 @@ const AddToCart = () => {
   const [addCart, setAddCart] = useState([])
   const [ isLoading,setIsLoading ] = useState(null)
 
-  let { isLoggedIn,user } = useSelector(item=>item.auth)
-
-  isLoggedIn = true
+  let { isLoggedIn } = useSelector(item=>item.auth)
 
   const displayCart =async( products )=>{
     setIsLoading(true)
@@ -92,19 +90,7 @@ const AddToCart = () => {
 
   const checkout = async()=>{
     if(!isLoggedIn) return navigate('/user/sign-in/?location=cart')
-    const finalCart = JSON.parse(localStorage.getItem('cart'))
-    try {
-      await createCart( {
-        items: finalCart,
-        user: user?.data?.id,
-        coupon:'633e7fd87a99054bade30875',
-        discount:0
-      } )
-      navigate('/shop/checkout')
-    } catch (error) {
-      console.log(error)
-    }
-    
+    navigate('/shop/checkout')
   }
 
   console.log(addCart,'addCart')

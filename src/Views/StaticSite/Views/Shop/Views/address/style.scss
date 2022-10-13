@@ -76,14 +76,16 @@
     background-color: #edeef0;
     border-radius: 3rem;
     //margin: 0 auto;
+    margin-bottom: 1rem;
 
     .ship_product_detail {
       display: grid;
-      grid-template-columns: 70% 30%;
+      grid-template-columns: 60% 40%;
       .ship_order_detail {
         display: flex;
         padding-top: 5.25rem;
         padding-left: 4.25rem;
+        gap: 1.75rem;
         .ship_order_img {
           height: 8rem;
           width: 8rem;
@@ -92,7 +94,6 @@
           border-radius: 1rem;
           img {
             height: 100%;
-            width: 100%;
             border-radius: 2rem;
             object-fit: fill;
           }
@@ -100,9 +101,8 @@
         .ship_title_div {
           display: flex;
           flex-direction: column;
-          padding-left: 2rem;
           .ship_title {
-            font-size: 2rem;
+            font-size: 1.75rem;
             font-weight: 700;
             color: black;
           }
@@ -114,12 +114,15 @@
       .ship_order_sum {
         color: #000;
         padding-top: 2rem;
+        padding-right: 2rem;
         .ship_price {
           font-weight: 700;
+          text-align: right;
         }
         .price {
           padding-left: 10rem;
           padding-top: 2rem;
+          text-align: right
         }
       }
     }
@@ -140,11 +143,6 @@
     }
   }
   .check_out_div {
-    // display: flex;
-    // flex-direction: column;
-    // justify-content: flex-end;
-    // height: 68%;
-    padding-top: 30rem;
     color: #000;
     float: right;
 
