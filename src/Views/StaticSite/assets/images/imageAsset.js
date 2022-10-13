@@ -2493,6 +2493,13 @@ export const locateAsset ={
   urugauy:'/Locate_us/uruguay.png',
   hongKong:'/Locate_us/hong_kong.jpg',
   locate:'/Locate_us/locate.jpg'
+}
 
+export const santaCruz = {
+  slide1: '/Santa-cruz-images/Slide-1.jpg',
+  slide2: '/Santa-cruz-images/Slide-2.jpg',
+  slide3: '/Santa-cruz-images/Slide-3.jpg',
+  apply: '/Santa-cruz-images/Pranayama_workshop.jpg',
+  details: '/Santa-cruz-images/Details.jpg',
 }
 export default baseDomain
