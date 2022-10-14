@@ -3,7 +3,7 @@ import InputComponent from '../../../../Components/InputComponent'
 import './style.scss'
 import InnerNavComponent from '../../../../Components/InnerNavComponent'
 import CommonBtn from '../../../../Components/commonbtn'
-import { fetchSingleProduct,createCart, addAddress,getAddress,createOrder } from '../../Shop.api'
+import { fetchSingleProduct,createCart, addAddress,getAddress,createOrder, getCoupon } from '../../Shop.api'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import { useSelector } from 'react-redux'
@@ -41,13 +41,12 @@ const ShippingAdd = () => {
   const [isLoading, setIsLoading] = useState(null)
   const [cart, setCart] = useState([])
   const [ prevAdd,setPrevAdd ] = useState([])
-  const [totatBill,setTotalBill] = useState()
   const [cartId,setCartId] = useState()
   const [ addresId,setAddressId ] = useState(null)
+  const [ discountAmt,setDiscountAmt ] = useState()
+  const [ isCouponAdded,setIsCouponAdded ] = useState()
 
   const fetchAddress = async( )=>{
-
-    console.log(user,'user')
     const { data } = await getAddress(user?.data?.userId)
     setPrevAdd(data.data)
   }
@@ -72,17 +71,26 @@ const ShippingAdd = () => {
     return sum
   }
 
-  const postCart = async( finalCart )=>{
+  const calcDiscount = ()=>{
+    if(!discountAmt) return 0
+    if( discountAmt?.type!=='PERCENTAGE' ) return discountAmt?.value
+    let total = getTotal()
+    let discount = total * ( discountAmt?.value/100 )
+    return discount
+  }
+
+  const postCart = async( finalCart, couponId )=>{
     const { data } =  await createCart({
       items: finalCart,
       user:user?.data?.userId,
+      coupon:couponId
     })
     setCartId(data.data._id)
-    setTotalBill(data.data.totalPrice)
+    return data.data._id
   }
 
   const usePrevAddress = ( addData )=>{
-    if(addresId=== addData._id ) return setAddressId(null) 
+    if(addresId === addData._id ) return setAddressId(null) 
     setAddressId(addData?._id)
   }
 
@@ -103,6 +111,7 @@ const ShippingAdd = () => {
         }
       )
       setAddressId(data.data._id)
+      return(data.data._id)
     }catch(err){
       toast.error(err.message, {
         position: 'top-right',
@@ -118,13 +127,33 @@ const ShippingAdd = () => {
     }
   }
 
+  const applyCoupon = async()=>{
+    const { data } = await getCoupon( formData.discount )
+    console.log(data,'couponDAta')
+    setDiscountAmt({
+      type: data.data[0].discountType,
+      value: data.data[0].couponDiscount,
+      id:data.data[0]._id
+    })
+    setIsCouponAdded(true)
+    return {
+      type: data.data.discountType,
+      value: data.data.couponDiscount,
+      id:data.data._id
+    }
+  }
+
   const makePayment = async()=>{
-    const { data } = await createOrder( cartId,{
+    const localCart = localStorage.getItem('cart')
+    const finalCart = JSON.parse(localCart)
+    const finalDiscount = discountAmt ? discountAmt.id : await applyCoupon()
+    const orderCartId =  cartId ? cartId : await postCart(finalCart, finalDiscount)
+    const finalAddId =  addresId ? addresId : await postNewAddress()
+    const { data } = await createOrder( orderCartId,{
       notes:{
-        description:'Order Placed'
+        description:finalAddId
       }
     } )
- 
     const options = {
       key: 'rzp_test_udmmUPuH3rTJe8', // Enter the Key ID generated from the Dashboard
       amount: data.amount, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
@@ -154,27 +183,23 @@ const ShippingAdd = () => {
     rzp.open() 
   }
 
+  const checkout = async()=>{
+    if(!usePrevAddress)
+    { if(formData.name === '')return setEmpty(1)
+      if(formData.add1 === '')return setEmpty(2)
+      if(formData.city === '')return setEmpty(3)
+      if(formData.state === '')return setEmpty(4)
+      if(formData.country === '')return setEmpty(5)
+      if(formData.pincode === '')return setEmpty(6)}
+    await makePayment()
+  }
+
   useEffect(() => {
     fetchAddress()
     const cartItems = localStorage.getItem('cart')
     displayCart(JSON.parse(cartItems))
   }, [ user?.data ])
 
-
-  const checkout = async()=>{
-    console.log(addresId)
-    if(!usePrevAddress){ if(formData.name === '')return setEmpty(1)
-      if(formData.add1 === '')return setEmpty(2)
-      if(formData.city === '')return setEmpty(3)
-      if(formData.state === '')return setEmpty(4)
-      if(formData.country === '')return setEmpty(5)
-      if(formData.pincode === '')return setEmpty(6)}
-    const localCart = localStorage.getItem('cart')
-    const finalCart = JSON.parse(localCart)
-    await postCart(finalCart)
-    !addresId && await postNewAddress()
-    await makePayment()
-  }
 
   return (
     <>
@@ -192,6 +217,7 @@ const ShippingAdd = () => {
                   setField={setFormData}
                   keyName='name'
                   errorCheck={setEmpty}
+                  blocked={ addresId ? true:false }
                 />
                 {empty === 1 && <small> Please enter your name</small>}
               </div>
@@ -203,6 +229,7 @@ const ShippingAdd = () => {
                   setField={setFormData}
                   keyName='add1'
                   errorCheck={setEmpty}
+                  blocked={ addresId ? true:false }
                 />
                 {empty === 2 && <small> Please enter address</small>}
               </div>
@@ -213,6 +240,7 @@ const ShippingAdd = () => {
                   form={formData}
                   setField={setFormData}
                   keyName='add2'
+                  blocked={ addresId ? true:false }
                   // errorCheck={setEmpty}
                 />
                 {/* {empty === 3 && <small> Please enter your name</small>} */}
@@ -225,6 +253,7 @@ const ShippingAdd = () => {
                   setField={setFormData}
                   keyName='country'
                   errorCheck={setEmpty}
+                  blocked={ addresId ? true:false }
                 />
                 {empty === 3 && <small> Please enter your country*</small>}
               </div>
@@ -236,6 +265,7 @@ const ShippingAdd = () => {
                   setField={setFormData}
                   keyName='state'
                   errorCheck={setEmpty}
+                  blocked={ addresId ? true:false }
                 />
                 {empty === 4 && <small> Please enter your state*</small>}
               </div>
@@ -247,17 +277,19 @@ const ShippingAdd = () => {
                   setField={setFormData}
                   keyName='city'
                   errorCheck={setEmpty}
+                  blocked={ addresId ? true:false }
                 />
                 {empty === 5 && <small> Please enter your city*</small>}
               </div>
               <div className='form_error'>
                 <InputComponent
-                  type='number'
+                  type='text'
                   placeholder='Pincode*'
                   form={formData}
                   setField={setFormData}
                   keyName='pincode'
                   errorCheck={setEmpty}
+                  blocked={ addresId ? true:false }
                 />
                 {empty === 6 && <small> Please enter your pincode*</small>}
               </div>
@@ -274,7 +306,7 @@ const ShippingAdd = () => {
             </form>
             {prevAdd.length>0 && prevAdd.map( (item,i)=><div key={i} style={ item._id === addresId ? { boxShadow:'0px 0px 20px 0px rgba(46,92,230,1)' }:{}}  onClick={()=>{ usePrevAddress(item) }} className='optional_add'>
               <div className='opt_add1'>
-                <div className='opt_name'>{ user?.data?.firstName }</div>
+                <div className='opt_name'>{ item?.name }</div>
                 <div className='opt_house'>{item?.houseNo}</div>
                 <div className='opt_house'>
                   { item?.street },{ item?.landmark }
@@ -318,13 +350,17 @@ const ShippingAdd = () => {
                     keyName='discount'
                   />
                 </div>
+                { isCouponAdded && <small style={{ textAlign:'right' }} >{ discountAmt ? discountAmt.type==='PERCENTAGE' ? `${ discountAmt.value }% is applied`: `Rs.${ discountAmt.value } off`: 'Invalid discount code'  }</small>}
               </form>
-              <div className='apply_discount'  >Apply</div>
+              <div className='apply_discount' onClick={ applyCoupon }  >Apply</div>
             </div>
             <div className='check_out_div'>
               <div className='check_out'>
                 <div>Subtotal  ({cart.length} item(s))</div>
-                <div className='check_out_price'>₹ { getTotal() }</div>
+                <br/>
+                { discountAmt && <div>Total: ₹{ getTotal()}</div>}
+                { discountAmt && <div>Discount: - ₹{ calcDiscount() }</div>}
+                <div className='check_out_price'>₹ { getTotal()- calcDiscount() }</div>
                 <div>Inclusive of all taxes</div>
               </div>
               <div className='check_out_btn'>

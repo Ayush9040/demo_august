@@ -7,7 +7,6 @@ const ShopCard = ({
   title = 'Yoga chakra Mat Balance your mind',
   price = '395',
   thumbnail = 'https://cdn.pixabay.com/photo/2016/04/19/13/39/store-1338629_1280.jpg',
-  currency,
   productId,
   addCart
 }) => {

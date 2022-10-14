@@ -36,3 +36,7 @@ export const getCartById = ( cartId )=>{
 export const createOrder = (cartId, description)=>{
   return axios.post(`${ ecomBaseDomin }/payment/order/${ cartId }`, description)
 }
+
+export const getCoupon = ( coupon )=>{
+  return axios.get(`${ ecomBaseDomin }/coupon/search/${ coupon }`)
+}
