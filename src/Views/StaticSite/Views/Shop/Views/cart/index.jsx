@@ -55,7 +55,8 @@ const AddToCart = () => {
         element.quantity = parseInt(quantity)
       }
     })
-    localStorage.setItem('cart',JSON.stringify(prevCart))
+    await localStorage.setItem('cart',JSON.stringify(prevCart))
+    window.location.reload()
   }
 
   const deleteProduct = async(idx) => {

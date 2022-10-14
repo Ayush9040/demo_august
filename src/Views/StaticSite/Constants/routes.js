@@ -58,6 +58,7 @@ const SingleProduct = lazy(()=>import('../Views/Shop/Views/single-product'))
 import Authentication from '../Views/Authentication'
 import AddToCart from '../Views/Shop/Views/cart'
 import ShippingAdd from '../Views/Shop/Views/address'
+import ShopThankyou from '../Views/Shop/Views/thankyoupage'
 
 const SingleJob = lazy(() => import('../Views/Careers/Views/single-job'))
 const VolunteerJob = lazy(() => import('../Views/Volunteer/Views/volunteerJob'))
@@ -643,6 +644,14 @@ const staticSiteRoutes = [
     id: 'statisSiteCheckout',
     routePath: '/shop/checkout',
     name: 'Checkout',
+  },
+  {
+    Component: ShopThankyou,
+    path:'/shop/thank-you',
+    exact:true,
+    id:'statisSiteShopThanks',
+    routePath:'/shop/checkout',
+    name:'ShopThanks'
   }
 ]
 
