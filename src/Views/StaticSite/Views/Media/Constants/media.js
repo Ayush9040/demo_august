@@ -4546,7 +4546,83 @@ const printMedia = [
         img: `${baseDomain}${printMediaAssest.printMediaAssest908}`,
         url:'https://twistarticle.com/piyush-goyal-to-grace-the-international-day-of-yoga-celebrations-on-tuesday-21-june-in-mumbai/',
         alt:'Twistarticle-20th-june-2022'
-      }
+      },
+      {
+        img: `${baseDomain}${printMediaAssest.printMediaAssest909}`,
+        url:'https://epaper.navbharattimes.com/imageview_104702_66966_4_16_01-08-2022_8_i_1_sf.html',
+        alt:'nbt-aug1-2022'
+      },
+      {
+        img: `${baseDomain}${printMediaAssest.printMediaAssest910}`,
+        url:'https://epaper.navbharattimes.com/imageview_106954_82666_4_16_14-08-2022_2_i_1_sf.html',
+        alt:'bnbt-aug14-2022'
+      },
+      {
+        img: `${baseDomain}${printMediaAssest.printMediaAssest911}`,
+        url:'https://epaper.navbharattimes.com/imageview_108314_70958_4_16_22-08-2022_6_i_1_sf.html',
+        alt:'nbt-aug22-2022'
+      },
+      {
+        img: `${baseDomain}${printMediaAssest.printMediaAssest912}`,
+        url:'https://epaper.navbharattimes.com/imageview_109314_77600_4_16_28-08-2022_2_i_1_sf.html',
+        alt:'nbt-aug28-2022'
+      },
+      {
+        img: `${baseDomain}${printMediaAssest.printMediaAssest913}`,
+        url:'https://epaper.navbharattimes.com/imageview_109476_71909_4_16_29-08-2022_6_i_1_sf.html',
+        alt:'nbt-aug29-2022'
+      },
+      {
+        img: `${baseDomain}${printMediaAssest.printMediaAssest914}`,
+        url:'https://epaper.navbharattimes.com/imageview_105777_22659552_4_16_07-08-2022_4_i_1_sf.html',
+        alt:'nbt-aug7-2022'
+      },
+      {
+        img: `${baseDomain}${printMediaAssest.printMediaAssest915}`,
+        url:'https://epaper.navbharattimes.com/imageview_105939_68611_4_16_08-08-2022_6_i_1_sf.html',
+        alt:'nbt-aug8-2022'
+      },
+      {
+        img: `${baseDomain}${printMediaAssest.printMediaAssest916}`,
+        url:'https://epaper.navbharattimes.com/imageview_101622_72416_4_16_10-07-2022_2_i_1_sf.html',
+        alt:'nbt-july10-2022'
+      },
+      {
+        img: `${baseDomain}${printMediaAssest.printMediaAssest917}`,
+        url:'https://epaper.navbharattimes.com/imageview_102478_77593_4_16_17-07-2022_2_i_1_sf.html',
+        alt:'nbt-july17-2022'
+      },
+      {
+        img: `${baseDomain}${printMediaAssest.printMediaAssest918}`,
+        url:'https://epaper.navbharattimes.com/imageview_102632_66995_4_16_18-07-2022_6_i_1_sf.html',
+        alt:'nbt-july18-2022'
+      },
+      {
+        img: `${baseDomain}${printMediaAssest.printMediaAssest919}`,
+        url:'https://epaper.navbharattimes.com/imageview_103521_76665_4_16_24-07-2022_2_i_1_sf.html',
+        alt:'nbt-july24-2022'
+      },
+      {
+        img: `${baseDomain}${printMediaAssest.printMediaAssest920}`,
+        url:'https://epaper.navbharattimes.com/imageview_103681_67796_4_16_25-07-2022_6_i_1_sf.html',
+        alt:'nbt-july25-2022'
+      },
+      {
+        img: `${baseDomain}${printMediaAssest.printMediaAssest921}`,
+        url:'https://epaper.navbharattimes.com/imageview_100512_74949_4_16_03-07-2022_4_i_1_sf.html',
+        alt:'nbt-july3-2022'
+      },
+      {
+        img: `${baseDomain}${printMediaAssest.printMediaAssest922}`,
+        url:'https://epaper.navbharattimes.com/imageview_104544_76625_4_16_31-07-2022_4_i_1_sf.html',
+        alt:'nbt-july31-2022'
+      },
+      {
+        img: `${baseDomain}${printMediaAssest.printMediaAssest923}`,
+        url:'https://epaper.navbharattimes.com/imageview_100656_67285_4_16_04-07-2022_6_i_1_sf.html',
+        alt:'nbt-july4-2022'
+      },
+
     ]
   }
 ]
