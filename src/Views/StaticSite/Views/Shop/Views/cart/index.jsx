@@ -26,7 +26,7 @@ const AddToCart = () => {
 
   let { isLoggedIn } = useSelector(item=>item.auth)
 
-  const displayCart =async( products )=>{
+  const displayCart =async( products=[] )=>{
     setIsLoading(true)
     const arr =[]
     for await (let item  of products){
@@ -44,7 +44,7 @@ const AddToCart = () => {
 
   useEffect(() => {
     const cartItems = localStorage.getItem('cart')
-    displayCart(JSON.parse(cartItems))
+    cartItems ? displayCart(JSON.parse(cartItems)):displayCart([])
   }, [ ])
 
   const updateQuantity = async( quantity,item )=>{
@@ -136,7 +136,6 @@ const AddToCart = () => {
                         {deleteIcon}
                       </span>
                     </div>
-                    <div className="cart_date">Delivery: dd/mm/yyyy</div>
                   </div>
                 </div>
                 <div className="cart_price">

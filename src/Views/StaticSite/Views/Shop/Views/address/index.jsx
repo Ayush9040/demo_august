@@ -3,11 +3,14 @@ import InputComponent from '../../../../Components/InputComponent'
 import './style.scss'
 import InnerNavComponent from '../../../../Components/InnerNavComponent'
 import CommonBtn from '../../../../Components/commonbtn'
-import { fetchSingleProduct,createCart, addAddress,getAddress, getCartById } from '../../Shop.api'
+import { fetchSingleProduct,createCart, addAddress,getAddress,createOrder } from '../../Shop.api'
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 import { useSelector } from 'react-redux'
+import { authServerClientId } from '../../../../../../Constants/appSettings'
 
 const ShippingAdd = () => {
-
+  const { user } = useSelector((state)=>state.auth)
   useEffect(() => {
     const script = document.createElement('script')
     script.src = 'https://checkout.razorpay.com/v1/checkout.js'
@@ -15,7 +18,6 @@ const ShippingAdd = () => {
     document.body.appendChild(script)
   }, [])
 
-  const { user } = useSelector(state=>state.auth)
 
   const shipping = {
     title: 'Shop',
@@ -41,10 +43,12 @@ const ShippingAdd = () => {
   const [ prevAdd,setPrevAdd ] = useState([])
   const [totatBill,setTotalBill] = useState()
   const [cartId,setCartId] = useState()
-  const [ addresId,setAddressId ] = useState()
+  const [ addresId,setAddressId ] = useState(null)
 
-  const fetchAddress = async()=>{
-    const { data } = await getAddress(user.data.userId)
+  const fetchAddress = async( )=>{
+
+    console.log(user,'user')
+    const { data } = await getAddress(user?.data?.userId)
     setPrevAdd(data.data)
   }
 
@@ -58,6 +62,7 @@ const ShippingAdd = () => {
     setCart(arr)
     setIsLoading(false)
   }
+
   const getTotal = ()=>{
     if(cart.length===0) return
     let sum = 0
@@ -76,36 +81,58 @@ const ShippingAdd = () => {
     setTotalBill(data.data.totalPrice)
   }
 
-  const postNewAddress = async()=>{
-    const { data } = await addAddress(
-      {
-        userId: '62b56e9f0a0c22fda9088003',
-        client: '62631b247dcbb81b8e3138d2',
-        houseNo: formData.add1,
-        street: formData.add2,
-        landmark: '',
-        city: formData.city,
-        state: formData.state,
-        pincode: formData.pincode,
-        country: formData.country
-      }
-    )
+  const usePrevAddress = ( addData )=>{
+    if(addresId=== addData._id ) return setAddressId(null) 
+    setAddressId(addData?._id)
+  }
 
-    setAddressId(data.data._id)
+  const postNewAddress = async()=>{
+    try{
+      const { data } = await addAddress(
+        {
+          userId: user?.data?.userId,
+          name: formData.name,
+          clientId: authServerClientId,
+          houseNo: formData.add1,
+          street: formData.add2,
+          landmark: '',
+          city: formData.city,
+          state: formData.state,
+          pincode: formData.pincode,
+          country: formData.country
+        }
+      )
+      setAddressId(data.data._id)
+    }catch(err){
+      toast.error(err.message, {
+        position: 'top-right',
+        autoClose: 1000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: true,
+        progress: undefined,
+        theme: 'colored',
+        icon:false
+      })
+    }
   }
 
   const makePayment = async()=>{
-    const { data } = await getCartById( cartId )
-    console.log(data)
-    if(!data.success) return
+    const { data } = await createOrder( cartId,{
+      notes:{
+        description:'Order Placed'
+      }
+    } )
+ 
     const options = {
       key: 'rzp_test_udmmUPuH3rTJe8', // Enter the Key ID generated from the Dashboard
-      amount: data.data.totalPrice, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+      amount: data.amount, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
       currency: 'INR',
       name: 'The Yoga Institute',
       description: 'Order Placed',
       // image: 'https://example.com/your_logo', // un comment and add TYI logo
-      order_id: data.data._id, // eslint-disable-line
+      order_id: data.id, // eslint-disable-line
       handler: async(res) => {
         // Navigare to Success if razorpay_payment_id, razorpay_order_id, razorpay_signature is there
         if(res.razorpay_payment_id && res.razorpay_order_id && res.razorpay_signature) {
@@ -131,15 +158,22 @@ const ShippingAdd = () => {
     fetchAddress()
     const cartItems = localStorage.getItem('cart')
     displayCart(JSON.parse(cartItems))
-  }, [])
+  }, [ user?.data ])
+
 
   const checkout = async()=>{
+    console.log(addresId)
+    if(!usePrevAddress){ if(formData.name === '')return setEmpty(1)
+      if(formData.add1 === '')return setEmpty(2)
+      if(formData.city === '')return setEmpty(3)
+      if(formData.state === '')return setEmpty(4)
+      if(formData.country === '')return setEmpty(5)
+      if(formData.pincode === '')return setEmpty(6)}
     const localCart = localStorage.getItem('cart')
     const finalCart = JSON.parse(localCart)
     await postCart(finalCart)
-    await postNewAddress()
+    !addresId && await postNewAddress()
     await makePayment()
-  
   }
 
   return (
@@ -238,7 +272,7 @@ const ShippingAdd = () => {
                 </label>
               </div> */}
             </form>
-            {prevAdd.length>0 && prevAdd.map( (item,i)=><div key={i} className='optional_add'>
+            {prevAdd.length>0 && prevAdd.map( (item,i)=><div key={i} style={ item._id === addresId ? { boxShadow:'0px 0px 20px 0px rgba(46,92,230,1)' }:{}}  onClick={()=>{ usePrevAddress(item) }} className='optional_add'>
               <div className='opt_add1'>
                 <div className='opt_name'>{ user?.data?.firstName }</div>
                 <div className='opt_house'>{item?.houseNo}</div>
@@ -261,7 +295,6 @@ const ShippingAdd = () => {
                       </div>
                       <div className='ship_title_div'>
                         <div className='ship_title'>{item?.name}</div>
-                        <div className='ship_del'>Delivery: dd/mm/yyyy</div>
                       </div>
                     </div>
                     <div className='ship_order_sum'>
@@ -279,14 +312,14 @@ const ShippingAdd = () => {
                 <div className='form_error'>
                   <InputComponent
                     type='text'
-                    placeholder='Discount*'
+                    placeholder='Discount'
                     form={formData}
                     setField={setFormData}
                     keyName='discount'
                   />
                 </div>
-                {}
               </form>
+              <div className='apply_discount'  >Apply</div>
             </div>
             <div className='check_out_div'>
               <div className='check_out'>
@@ -300,6 +333,7 @@ const ShippingAdd = () => {
             </div>
           </div>
         </div>
+        <ToastContainer/>
       </div>}
     </>
   )

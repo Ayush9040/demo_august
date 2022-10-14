@@ -128,7 +128,9 @@
     }
   }
   .discount {
+    display: flex;
     form {
+      
       .form_error {
         max-width: 23rem;
         //margin-left: -2rem;
@@ -141,6 +143,7 @@
         }
       }
     }
+   
   }
   .check_out_div {
     color: #000;

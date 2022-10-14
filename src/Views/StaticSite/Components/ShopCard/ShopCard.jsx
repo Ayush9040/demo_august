@@ -37,7 +37,7 @@ const ShopCard = ({
         </div>
         <div className="price-container">
           <p className="text-white">
-            {currency === 'INR' ? '₹' : '$'}&nbsp;{price}
+          ₹ {price}
           </p>
           <button type="button" className="cart-button" onClick={(e)=>(addCart(productId,e))}>
             <span className="svg-width">{CartButton}</span> Add to cart

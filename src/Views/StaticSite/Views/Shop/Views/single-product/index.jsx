@@ -49,17 +49,13 @@ const SingleProduct = () => {
   return (
     <div className="single_product_div">
       <InnerNavComponent abc={singleProduct} />
-      <div className="search_bar">
-        <div>All Categories</div>
-        <div>Search</div>
-      </div>
       <div className="product_section">
         <div className="product_background">
           <div className="single_prod_bg">
             <div className="price_prod_div">
               <div className="price_div">
                 <div className="product_details">{productDetail?.name}</div>
-                <div className="product_details">{productDetail?.price}</div>
+                <div className="product_details">₹ {productDetail?.price}</div>
                 <div className="prod_desc">{productDetail?.description}</div>
               </div>
 

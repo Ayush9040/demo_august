@@ -32,3 +32,7 @@ export const addAddress = (address)=>{
 export const getCartById = ( cartId )=>{
   return axios.get(`${ ecomBaseDomin }/cart/${ cartId }`)
 }
+
+export const createOrder = (cartId, description)=>{
+  return axios.post(`${ ecomBaseDomin }/payment/order/${ cartId }`, description)
+}
