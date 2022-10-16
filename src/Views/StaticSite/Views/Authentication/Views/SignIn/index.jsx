@@ -21,6 +21,7 @@ const SignIn = () => {
   const dispatch = useDispatch()
   const navigate = useNavigate()
   const { isLoggedIn, error } = useSelector((state) => state.auth)
+  const [ page,setPage ] = useState()
   const [course, setCourse] = useState()
   const [formData, setFormData] = useState({
     email: '',
@@ -38,6 +39,7 @@ const SignIn = () => {
 
   useEffect(() => {
     setSetselectDate(Params.get('date'))
+    setPage(Params.get('location'))
   }, [])
 
   useEffect(() => {
@@ -60,10 +62,7 @@ const SignIn = () => {
             password: formData.password,
           },
           navigate,
-          {
-            course:course,
-            date:selectDate
-          }
+          page!=='cart' ? `/enrollment/${ course }/?date=${ selectDate }`: '/shop/checkout',
         )
       )
       error.isError !== false ? setModal(true) : setModal(false)

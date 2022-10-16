@@ -4,7 +4,6 @@
   padding-top: 3rem;
   //color:#fff;
   box-sizing: border-box;
-  overflow-x: hidden;
   a {
       text-decoration: none;
       color: black;
@@ -92,7 +91,7 @@
         //position: absolute;
         display: none;
         flex-direction: column;
-        margin: 2.5rem 0;
+        margin: 0 0;
         width: 180px;
         //right: -80px;
         align-items: center;
@@ -154,6 +153,9 @@
       }
   }
   @media (max-width: "768px") {
+    .inner-nav-container{
+        overflow-x: hidden;
+    }
           .main-logo {
             display: flex!important;
             align-items: center;

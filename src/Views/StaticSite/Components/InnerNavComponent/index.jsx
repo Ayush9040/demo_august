@@ -32,17 +32,25 @@ const InnerNavComponent = ({ abc }) => {
   const [dropdown,setDropdown]=useState(false)
   const [ isModalOpen,setIsModalOpen ] = useState(false)
   const [bold, setBold] = useState(0)
+  // const [ cartItems,setCartItems ] = useState(0)
   const location = useLocation()
   const dispatch = useDispatch()
   console.log(bold,'b')
 
+  // const getCartItems = async()=>{
+  //   const cart = await JSON.parse(localStorage.getItem('cart'))
+  //   return cart.length
+    
+  // }
+
   useEffect(() => {
+    // setCartItems(getCartItems())
     if (location.pathname === '/media/video-gallery') {
       setBold(1)
     } else {
       setBold(0)
     }
-  }, [])
+  }, [] )
 
   return (
     <>
@@ -87,28 +95,28 @@ const InnerNavComponent = ({ abc }) => {
               })}
             </ul>
           </div>
-          <div className="user-container" >
+          <div className="user-container">
             <div onClick={ ()=>{setIsModalOpen(true)} } >{ abc.color === 'orange' ? Search:abc.color === 'black' ? SearchBlack : SearchWhite }</div>
             {abc.title==='Shop'
               ?    <Link to='/shop'>        
-                { Cart } </Link>
+                { Cart }  </Link>
               :null
             }
            
-            
-            <Link to={isLoggedIn ? '/user/profile':'/user/sign-in'} onMouseOver={()=>{setDropdown(true)}} onMouseOut={()=>{setDropdown(false)}} >
-              {abc.color === 'orange'
-                ? User
-                : abc.color === 'white'
-                  ? CommonUser
-                  : CommonUser1}
-            </Link>
-
-            <div style={dropdown===true && isLoggedIn ?{ display:'block' }:{}} className='user-dropdown'>
-              <ul>
-                <li onClick={()=>navigate('/user/profile')} >User Profile</li>
-                <li onClick={async()=>{await dispatch(logoutUserAction());navigate('/user/sign-in')}} >Logout</li>
-              </ul>
+            <div className='profile-container' onMouseOver={()=>{setDropdown(true)}} onMouseOut={()=>{setDropdown(false)}}  >
+              <Link to={isLoggedIn ? '/user/profile':'/user/sign-in'} >
+                {abc.color === 'orange'
+                  ? User
+                  : abc.color === 'white'
+                    ? CommonUser
+                    : CommonUser1}
+              </Link>
+              <div style={dropdown===true && isLoggedIn ?{ display:'block' }:{}} className='user-dropdown'>
+                <ul>
+                  <li onClick={()=>navigate('/user/profile')} >User Profile</li>
+                  <li onClick={async()=>{await dispatch(logoutUserAction());navigate('/user/sign-in')}} >Logout</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
