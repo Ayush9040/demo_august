@@ -17,7 +17,7 @@ const MessageModal = ({ message, type, nav, closePopup }) => {
           X
         </div>
         <h1>{type}</h1>
-        <h3>{message}</h3>
+        <h2>{message}</h2>
       </div>
     </div>
   )

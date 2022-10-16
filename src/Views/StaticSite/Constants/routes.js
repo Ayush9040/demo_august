@@ -52,20 +52,9 @@ const Values = lazy(() => import('../Views/Volunteer/Views/values'))
 const AlumniGallery = lazy(() => import('../Views/Alumni/Views/alumni-gallery'))
 const Support = lazy(() => import('../Views/Alumni/Views/support'))
 const Facts = lazy(() => import('../Views/Facts/Views/our-facts'))
+const Shop = lazy(()=>import('../Views/Shop/Views/shop/shop'))
+const SingleProduct = lazy(()=>import('../Views/Shop/Views/single-product'))
 
-// import FAQ from '../Components/Faq'
-// import Shop from '../Views/Shop'
-// import About from '../Views/About'
-// import Alumni from '../Views/Alumni'
-// import Media from '../Views/Media'
-// import Publication from '../Views/Publication'
-// import SingleCourse from '../Views/Courses/Views/course-name'
-// import Blogs from '../Views/Blogs/index.jsx'
-// import Career from '../Views/Careers'
-// import Donations from '../Views/Donation'
-// import Facility from '../Views/Facilities'
-// import Facts from '../Views/Facts'
-// import Gift from '../Views/Gifting'
 import Authentication from '../Views/Authentication'
 import SearchModal from '../Views/SearchModal'
 // import VolunteerPage from '../Views/Volunteer'
@@ -76,9 +65,12 @@ import SearchModal from '../Views/SearchModal'
 // import FullmoonMeditation from '../Components/Highlights/FullmoonMeditation'
 // import CorporateWorkshop from '../Components/Highlights/CorporateWorkshop'
 // import OnlineTution from '../Components/Highlights/OnlineTution'
+import AddToCart from '../Views/Shop/Views/cart'
+import ShippingAdd from '../Views/Shop/Views/address'
+import ShopThankyou from '../Views/Shop/Views/thankyoupage'
+
 const SingleJob = lazy(() => import('../Views/Careers/Views/single-job'))
 const VolunteerJob = lazy(() => import('../Views/Volunteer/Views/volunteerJob'))
-// import Values from '../Views/Volunteer/Views/values'
 const PrintMedia = lazy(() =>
   import('../Views/Media/Views/Print-Digital/print-media')
 )
@@ -582,15 +574,6 @@ const staticSiteRoutes = [
     routePath: '/user/*',
     name: 'Auth',
   },
-  // {
-  //   Component: Career,
-  //   path: '/careers/*',
-  //   exact: true,
-  //   id: 'statisSiteUnderCareers',
-  //   routePath: '/careers/*',
-  //   name: 'Careers',
-  // },
-  //donation
   {
     Component: DonationPage,
     path: '/donation',
@@ -630,9 +613,6 @@ const staticSiteRoutes = [
     id: 'statisSiteCourse',
     routePath: '/:contentId',
     name: 'singleCourse',
-    // 1. desComponent
-    // 2. Switch case
-    // render => loader => API call (Blog or course) => switch *Blog, *Course => loading stop
   },
   {
     Component: LocateUs,
@@ -649,6 +629,47 @@ const staticSiteRoutes = [
     id:'staticSearch',
     routePath:'/search',
     name:'Search'
+  },
+  //Shop
+  {
+    Component: Shop,
+    path: '/shop',
+    exact: true,
+    id: 'statisSiteShop',
+    routePath: '/shop',
+    name: 'Shop',
+  },
+  {
+    Component: SingleProduct,
+    path: '/shop/product/:productID',
+    exact: true,
+    id: 'statisSiteShop',
+    routePath: '/shop/product/:productID',
+    name: 'Shop',
+  },
+  {
+    Component: AddToCart,
+    path: '/shop/cart',
+    exact: true,
+    id: 'statisSiteCart',
+    routePath: '/shop/cart',
+    name: 'Cart',
+  },
+  {
+    Component: ShippingAdd,
+    path: '/shop/checkout',
+    exact: true,
+    id: 'statisSiteCheckout',
+    routePath: '/shop/checkout',
+    name: 'Checkout',
+  },
+  {
+    Component: ShopThankyou,
+    path:'/shop/thank-you',
+    exact:true,
+    id:'statisSiteShopThanks',
+    routePath:'/shop/checkout',
+    name:'ShopThanks'
   }
 ]
 

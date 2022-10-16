@@ -52,7 +52,7 @@ const SignIn = () => {
       return setValidate(1)
     } else if (formData.password === '') {
       return setValidate(2)
-    } else {
+    }else{
       await dispatch(
         loginUserAction(
           {
@@ -66,7 +66,7 @@ const SignIn = () => {
           }
         )
       )
-    
+      error.isError !== false ? setModal(true) : setModal(false)
     }
   }
 

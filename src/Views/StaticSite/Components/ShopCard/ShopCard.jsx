@@ -1,19 +1,23 @@
 import React from 'react'
-import './styles.css'
+import './styles.scss'
 import { CartButton } from '../../assets/icons/icon'
-import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 const ShopCard = ({
   title = 'Yoga chakra Mat Balance your mind',
   price = '395',
   thumbnail = 'https://cdn.pixabay.com/photo/2016/04/19/13/39/store-1338629_1280.jpg',
-  currency,
+  productId,
+  addCart
 }) => {
   let colorA = '#CE7780'
   let colorB = '#9A565B'
 
+  const navigate = useNavigate()
+  
+
   return (
-    <div className="card">
+    <div className="card" onClick={()=>navigate(`product/${productId}`)}>
       <div className="card-img-container">
         <img
           className="card-img"
@@ -32,17 +36,16 @@ const ShopCard = ({
         </div>
         <div className="price-container">
           <p className="text-white">
-            {currency === 'INR' ? '₹' : '$'}&nbsp;{price}
+          ₹ {price}
           </p>
-          <Link to="/shop/checkout">
-            <button type="button" className="cart-button">
-              <span className="svg-width">{CartButton}</span> Add to cart
-            </button>
-          </Link>
+          <button type="button" className="cart-button" onClick={(e)=>(addCart(productId,e))}>
+            <span className="svg-width">{CartButton}</span> Add to cart
+          </button>
         </div>
       </div>
     </div>
   )
 }
+
 
 export default ShopCard
