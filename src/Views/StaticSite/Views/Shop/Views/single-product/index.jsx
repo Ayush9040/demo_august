@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect, useState } from 'react'
+import React, { Fragment, useEffect, useState, useRef } from 'react'
 import './style.scss'
 import InnerNavComponent from '../../../../Components/InnerNavComponent'
 import ShopCard from '../../../../Components/ShopCard/ShopCard'
@@ -11,6 +11,9 @@ import { updateCartData } from '../../Shop.action'
 
 const SingleProduct = () => {
   const { productID } = useParams()
+  
+  const prevRef = useRef(null)
+
   const singleProduct = {
     title: 'Shop',
     color: 'orange',
@@ -20,11 +23,15 @@ const SingleProduct = () => {
   const dispatch = useDispatch()
 
   const [productDetail, setProductDetail] = useState({})
+  const [thumbnail,setThumbnail] = useState()
+  const [productImages,setProductImages] = useState([])
   const navigate = useNavigate()
 
   const getSingleProducts = async() => {
     const { data } = await fetchSingleProduct(productID)
     setProductDetail(data.data)
+    setThumbnail(data?.data?.productThumbnail)
+    setProductImages(data?.data?.productImage)
   }
 
   useEffect(() => {
@@ -66,12 +73,12 @@ const SingleProduct = () => {
 
               <div className="product_img_div">
                 <div className="product_image">
-                  <img src={productDetail?.productThumbnail} alt="" />
+                  <img src={thumbnail} alt="" />
                 </div>
                 <div className="other_product_images">
-                  {productDetail?.productImage?.map((item, i) => (
-                    <div className="more_options2" key={i}>
-                      <img src={item} alt="" />
+                  {productImages?.map((item, i) => (
+                    <div className="more_options2" onClick={()=>{ setThumbnail(item) }} key={i}>
+                      <img src={item} ref={ prevRef }  alt="" />
                     </div>
                   ))}
                 </div>

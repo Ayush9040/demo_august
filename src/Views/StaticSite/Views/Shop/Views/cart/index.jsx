@@ -14,8 +14,6 @@ import { updateCartData } from '../../Shop.action'
 
 const AddToCart = () => {
 
-  const { cart } = useSelector(state=>state.shop)
-
   const navigate = useNavigate()
 
   const cartNav = {
