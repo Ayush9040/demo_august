@@ -40,3 +40,7 @@ export const createOrder = (cartId, description)=>{
 export const getCoupon = ( coupon )=>{
   return axios.get(`${ ecomBaseDomin }/coupon/search/${ coupon }`)
 }
+
+export const searchProduct = ( searchValue )=>{
+  return axios.get(`${ ecomBaseDomin }/product/searchproduct/${ searchValue }`)
+}

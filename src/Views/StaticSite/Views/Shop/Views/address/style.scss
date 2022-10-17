@@ -94,6 +94,7 @@
           border: 1px solid black;
           border-radius: 1rem;
           img {
+            width: 100%;
             height: 100%;
             border-radius: 2rem;
             object-fit: fill;
@@ -175,6 +176,42 @@
         .global-common-btn-content {
           font-size: 2rem;
         }
+      }
+    }
+  }
+}
+
+@media (max-width:1024px){
+  .ship_main_div{
+    .ship_grid{
+      grid-template-columns: 100%;
+    }
+  }
+}
+
+@media (max-width:500px){
+  .ship_main_div{
+ .ship_right_div{
+  margin-top: 5rem;
+  height: auto;
+  min-height: 20rem;
+  .ship_product_detail{
+    grid-template-columns: 100%;
+  }
+ }
+ .discount{
+  margin-bottom: 5rem;
+ }
+  }
+  .ship_main_div .ship_right_div .ship_product_detail .ship_order_detail {
+    padding: 2rem;
+    display: block;
+    width: 100%;
+    .ship_order_img{
+      width: 100%;
+      height: 100%;
+      img{
+        width: 100%;
       }
     }
   }

@@ -5,17 +5,20 @@ import InnerNavComponent from '../../../../Components/InnerNavComponent'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
 import { deleteIcon } from '../../../../assets/icons/icon'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import CommonBtn from '../../../../Components/commonbtn'
 import { fetchSingleProduct } from '../../Shop.api'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
+import { updateCartData } from '../../Shop.action'
 
 const AddToCart = () => {
 
+  const { cart } = useSelector(state=>state.shop)
+
   const navigate = useNavigate()
 
-  const cart = {
+  const cartNav = {
     title: 'Shop',
     color: 'orange',
     menuColor: 'orange',
@@ -23,6 +26,7 @@ const AddToCart = () => {
   }
   const [addCart, setAddCart] = useState([])
   const [ isLoading,setIsLoading ] = useState(null)
+  const dispatch = useDispatch()
 
   let { isLoggedIn } = useSelector(item=>item.auth)
 
@@ -45,6 +49,7 @@ const AddToCart = () => {
   useEffect(() => {
     const cartItems = localStorage.getItem('cart')
     cartItems ? displayCart(JSON.parse(cartItems)):displayCart([])
+    dispatch(updateCartData(cartItems ? JSON.parse(cartItems) : []))
   }, [ ])
 
   const updateQuantity = async( quantity,item )=>{
@@ -56,6 +61,7 @@ const AddToCart = () => {
       }
     })
     await localStorage.setItem('cart',JSON.stringify(prevCart))
+    dispatch(updateCartData(prevCart))
     window.location.reload()
   }
 
@@ -67,6 +73,8 @@ const AddToCart = () => {
       'cart',
       JSON.stringify(removeProduct.filter((item) => item.productId !== idx))
     )
+    dispatch(updateCartData(removeProduct.filter((item) => item.productId !== idx)))
+    
     toast.error('Item Removed from cart!', {
       position: 'top-right',
       autoClose: 1000,
@@ -97,7 +105,7 @@ const AddToCart = () => {
   console.log(addCart,'addCart')
   return (
     <>
-      <InnerNavComponent abc={cart} />
+      <InnerNavComponent abc={cartNav} />
       <div className="cart_div">
         <div className="cart_search">
           <div className="cart">Cart</div>

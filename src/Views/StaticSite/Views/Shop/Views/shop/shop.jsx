@@ -6,7 +6,7 @@ import 'slick-carousel/slick/slick-theme.css'
 import './style.scss'
 import { useState } from 'react'
 import { useEffect } from 'react'
-import { fetchAllProductsAPI,getProductByCategory, getAllCategories } from '../../Shop.api'
+import { fetchAllProductsAPI,getProductByCategory, getAllCategories, searchProduct } from '../../Shop.api'
 import ShopCard from '../../../../Components/ShopCard/ShopCard'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
@@ -14,13 +14,19 @@ import Pagination from 'react-js-pagination'
 import MessageModal from '../../../../Components/MessageModal'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
+import { updateCartData } from '../../Shop.action'
+import { useDispatch } from 'react-redux'
 
 const Shop = () => {
+  const dispatch = useDispatch()
+
   const [products, setProducts] = useState([])
   const [pagination, setPagination] = useState({ page: 1, limit: 10 })
   const [count, setCount] = useState(0)
   const [categories,setCategories] = useState([])
   const [ modal,setModal ] = useState(false)
+  const [search,setSearch] =useState('')
+  const [searched,isSearched] = useState(false)
 
   const getAllProducts = async(page, limit) => {
     const { data } = await fetchAllProductsAPI(page, limit)
@@ -29,18 +35,31 @@ const Shop = () => {
   }
   const fetchAllCategories = async()=>{
     const { data } = await getAllCategories()
-    console.log(data,'categories')
     setCategories(data.data)
   }
 
   const shopPagination = (num) => {
     setPagination({ ...pagination, page: num, limit: 10 })
   }
+  const searchProductAction = async()=>{
+    try{
+      const { data } = await searchProduct( search )
+      setProducts(data.data)
+      // setPagination({ page:1,limit:100 })
+      setCount(10)
+      isSearched(true)
+    }catch(err){
+      getAllProducts(1,10)
+    }
+  }
 
   useEffect(() => {
     getAllProducts(pagination.page, pagination.limit)
+    dispatch(updateCartData(JSON.parse(localStorage.getItem('cart'))))
     fetchAllCategories()
   }, [pagination])
+
+
 
   const addLocal = (productID) => {
     if (!localStorage.getItem('cart')) return [{ productId:productID,quantity:1 }]
@@ -48,7 +67,7 @@ const Shop = () => {
     if(prevCart.some(item=>item.productId===productID)){
       prevCart.forEach(element => {
         if(element.productId===productID){
-          element.quantity = element.quantity+1
+          element.quantity = element.quantity + 1
         }
       })
       return prevCart
@@ -57,10 +76,11 @@ const Shop = () => {
     }
   }
 
-  const addCart = async(idx, e) => {
+  const addCart = (idx, e) => {
     e.stopPropagation()
-    const addProduct = await products.find((item) => item._id === idx)
-    await localStorage.setItem('cart', JSON.stringify(addLocal(addProduct._id)))
+    const addProduct =  products.find((item) => item._id === idx)
+    localStorage.setItem('cart', JSON.stringify(addLocal(addProduct._id)))
+    dispatch(updateCartData( JSON.parse(localStorage.getItem('cart'))))
     toast.success('Item Added to Cart Successfully!', {
       position: 'top-right',
       autoClose: 3000,
@@ -113,8 +133,10 @@ const Shop = () => {
             </select>
             <div className="shop_search">
               <label>
-                <input type={'text'} placeholder="Search" />
-                <FontAwesomeIcon icon={faSearch} />
+                <input type={'text'} value={ search } onChange={(e)=>{ setSearch(e.target.value) }}  placeholder="Search" />
+                <span onClick={searchProductAction} >
+                  <FontAwesomeIcon icon={faSearch} />
+                </span>
               </label>
             </div>
           </div>
@@ -132,7 +154,7 @@ const Shop = () => {
                 </div>
               </Slider>
             </div>
-            <div className="products-tray">
+            {!searched &&  <div className="products-tray">
               {products.map((item, i) => (
                 <Fragment key={i}>
                   <ShopCard
@@ -156,9 +178,35 @@ const Shop = () => {
                   />
                 </Fragment>
               ))}
-            </div>
+            </div>}
+            {searched && products.length>0 ?  
+              <div className="products-tray">
+                {products.map((item, i) => (
+                  <Fragment key={i}>
+                    <ShopCard
+                      title={item.name}
+                      price={item.price}
+                      thumbnail={item.productThumbnail}
+                      productId={item._id}
+                      addCart={addCart}
+                    />
+                    <ToastContainer
+                      // position="top-right"
+                      // autoClose={3000}
+                      // hideProgressBar={false}
+                      // newestOnTop={false}
+                      // closeOnClick
+                      // rtl={false}
+                      // pauseOnFocusLoss
+                      // draggable
+                      // pauseOnHover
+                      // theme="light"
+                    />
+                  </Fragment>
+                ))}
+              </div>:<h1 style={{ textAlign:'center' }} >{searched && 'No result found'}</h1>}
           </div>
-          <div className="shop_pagination">
+          {!searched && <div className="shop_pagination">
             <Pagination
               activePage={pagination.page}
               itemsCountPerPage={pagination.limit}
@@ -166,7 +214,7 @@ const Shop = () => {
               pageRangeDisplayed={3}
               onChange={(e) => shopPagination(e)}
             />
-          </div>
+          </div>}
         </div>
       </div>
       {modal && <MessageModal type='WARNING' message='Please login first!' nav='/user/sign-in' closePopup={setModal} /> }

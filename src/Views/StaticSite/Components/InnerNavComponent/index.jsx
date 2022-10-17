@@ -32,26 +32,33 @@ const InnerNavComponent = ({ abc }) => {
   const [dropdown,setDropdown]=useState(false)
   const [ isModalOpen,setIsModalOpen ] = useState(false)
   const [bold, setBold] = useState(0)
-  // const [ cartItems,setCartItems ] = useState(0)
+  const [ cartItems,setCartItems ] = useState(0)
   const location = useLocation()
   const dispatch = useDispatch()
-  console.log(bold,'b')
+ 
+  const { cart } = useSelector((state)=>state.shop)
 
-  // const getCartItems = async()=>{
-  //   const cart = await JSON.parse(localStorage.getItem('cart'))
-  //   return cart.length
-    
-  // }
+  const getTotal = ()=>{
+    if(cart?.length===0) return
+    let sum = 0
+    cart?.forEach(item=>{
+      sum+= item.quantity  
+    })
+    console.log(sum,'sum')
+    return sum
+  }
+
 
   useEffect(() => {
-    // setCartItems(getCartItems())
+    setCartItems(getTotal())
     if (location.pathname === '/media/video-gallery') {
       setBold(1)
     } else {
       setBold(0)
     }
-  }, [] )
+  }, [ cart ] )
 
+  console.log(bold,'bold')
   return (
     <>
       <div className="inner-nav-container">
@@ -99,7 +106,7 @@ const InnerNavComponent = ({ abc }) => {
             <div onClick={ ()=>{setIsModalOpen(true)} } >{ abc.color === 'orange' ? Search:abc.color === 'black' ? SearchBlack : SearchWhite }</div>
             {abc.title==='Shop'
               ?    <Link to='/shop'>        
-                { Cart }  </Link>
+                { Cart }  <span style={{ color:'#CA4625' }} className='cart-count' >{ cartItems }</span></Link>
               :null
             }
            

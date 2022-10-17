@@ -6,6 +6,8 @@ import CommonBtn from '../../../../Components/commonbtn'
 import { fetchSingleProduct } from '../../Shop.api'
 import { useParams } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
+import { useDispatch } from 'react-redux'
+import { updateCartData } from '../../Shop.action'
 
 const SingleProduct = () => {
   const { productID } = useParams()
@@ -15,6 +17,7 @@ const SingleProduct = () => {
     menuColor: 'orange',
     menuItems: [],
   }
+  const dispatch = useDispatch()
 
   const [productDetail, setProductDetail] = useState({})
   const navigate = useNavigate()
@@ -26,6 +29,7 @@ const SingleProduct = () => {
 
   useEffect(() => {
     getSingleProducts()
+    dispatch(updateCartData(JSON.parse(localStorage.getItem('cart'))))
   }, [])
 
   const buyProduct=()=>{
@@ -39,9 +43,10 @@ const SingleProduct = () => {
       })
       
       localStorage.setItem('cart',JSON.stringify(prevCart))
+      dispatch(updateCartData(prevCart))
     }else{
       localStorage.setItem('cart',JSON.stringify([...prevCart,{ productId:productDetail._id, quantity:1 }]))
-      
+      dispatch(updateCartData([...prevCart,{ productId:productDetail._id, quantity:1 }]))
     }
     navigate('/shop/cart')
   }

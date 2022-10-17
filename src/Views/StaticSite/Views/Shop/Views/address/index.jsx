@@ -13,13 +13,14 @@ import {
 } from '../../Shop.api'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { authServerClientId } from '../../../../../../Constants/appSettings'
 import { useNavigate } from 'react-router-dom'
+import { updateCartData } from '../../Shop.action'
 
 const ShippingAdd = () => {
   const { user } = useSelector((state) => state.auth)
-
+  const dispatch = useDispatch()
   const navigate = useNavigate()
 
   useEffect(() => {
@@ -143,18 +144,21 @@ const ShippingAdd = () => {
   }
 
   const applyCoupon = async() => {
-    const { data } = await getCoupon(formData.discount)
-    console.log(data, 'couponDAta')
-    setDiscountAmt({
-      type: data.data[0].discountType,
-      value: data.data[0].couponDiscount,
-      id: data.data[0]._id,
-    })
-    setIsCouponAdded(true)
-    return {
-      type: data.data.discountType,
-      value: data.data.couponDiscount,
-      id: data.data._id,
+    try{
+      const { data } = await getCoupon(formData.discount)
+      setDiscountAmt({
+        type: data?.data?.[0]?.discountType,
+        value: data?.data?.[0]?.couponDiscount,
+        id: data?.data?.[0]?._id,
+      })
+      setIsCouponAdded(true)
+      return {
+        type: data?.data?.discountType,
+        value: data?.data?.couponDiscount,
+        id: data?.data?._id,
+      }
+    }catch(err){
+      console.log(err)
     }
   }
 
@@ -166,11 +170,13 @@ const ShippingAdd = () => {
       ? cartId
       : await postCart(finalCart, finalDiscount)
     const finalAddId = addresId ? addresId : await postNewAddress()
+    if( !finalAddId ) return
     const { data } = await createOrder(orderCartId, {
       notes: {
         description: finalAddId,
       },
     })
+    localStorage.removeItem('cart')
     const options = {
       key: 'rzp_test_udmmUPuH3rTJe8', // Enter the Key ID generated from the Dashboard
       amount: data.amount, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
@@ -220,6 +226,7 @@ const ShippingAdd = () => {
     fetchAddress()
     const cartItems = localStorage.getItem('cart')
     displayCart(JSON.parse(cartItems))
+    dispatch(updateCartData(JSON.parse(cartItems)))
   }, [user?.data])
 
   return (
@@ -390,6 +397,7 @@ const ShippingAdd = () => {
                       form={formData}
                       setField={setFormData}
                       keyName='discount'
+                      blocked={ isCouponAdded ? true:false }
                     />
                   </div>
                   {isCouponAdded && (
@@ -402,7 +410,7 @@ const ShippingAdd = () => {
                     </small>
                   )}
                 </form>
-                <div className='apply_discount' onClick={applyCoupon}>
+                <div className='apply_discount' style={ formData.discount!=='' ? { color:'#121212' }:{} }  onClick={applyCoupon}>
                   Apply
                 </div>
               </div>

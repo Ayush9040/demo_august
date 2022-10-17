@@ -1,4 +1,5 @@
 .shop {
+  padding-bottom: 2rem;
   .slick-dots {
     bottom: 50px !important;
   }
@@ -6,6 +7,7 @@
     width: 90%;
     margin: 0 auto;
     .shop_pagination{
+      margin: 2rem auto;
       .pagination{
           list-style: none;
           display: flex;
@@ -32,6 +34,7 @@
   .category-search {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     margin: 2rem 0;
     padding: 0 1rem;
     .shop_categories {
@@ -72,9 +75,9 @@
       }
       label {
         display: inline-block;
-        min-width: 400px;
+        min-width: 300px;
         width: 100%;
-        padding: 0.75rem 1rem;
+        padding: 0.25rem 1rem;
         border: 1px solid #60606080;
         border-radius: 50px;
         font-size: 1.75rem;
@@ -83,22 +86,22 @@
           border: none;
           box-shadow: none;
           width: 90%;
-          font-size: 1.75rem;
+          font-size: 1.5rem;
           padding-left: 1rem;
-          color: #60606080;
+          color: #121212;
           &:focus-visible {
             border: none;
             outline: none;
             box-shadow: none;
           }
           &::placeholder {
-            font-size: 2rem;
+            font-size: 1.5rem;
             color: #60606080;
           }
         }
         svg {
           float: inline-end;
-          font-size: 2.25rem;
+          width: 20px;
           path {
             fill: #aaa !important;
           }
@@ -138,6 +141,9 @@
     gap: 2rem;
     flex-wrap: wrap;
     justify-content: center;
+    .card{
+      cursor: pointer;
+    }
   }
 }
 
