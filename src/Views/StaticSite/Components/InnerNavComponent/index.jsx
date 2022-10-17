@@ -105,7 +105,7 @@ const InnerNavComponent = ({ abc }) => {
           <div className="user-container">
             <div onClick={ ()=>{setIsModalOpen(true)} } >{ abc.color === 'orange' ? Search:abc.color === 'black' ? SearchBlack : SearchWhite }</div>
             {abc.title==='Shop'
-              ?    <Link to='/shop'>        
+              ?    <Link to='/shop/cart'>        
                 { Cart }  <span style={{ color:'#CA4625' }} className='cart-count' >{ cartItems }</span></Link>
               :null
             }
