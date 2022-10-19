@@ -283,7 +283,7 @@ const Yogasattva = () => {
     2022: [
       {
         img:`${baseDomain}${publicationAssests.ythAssets89}`,
-        pdf:`${baseDomain}/books/2022/Yogasattva-Oct-2022-2.pdf`,
+        pdf:`${baseDomain}/books/2022/Yogasattva-Oct-2022.pdf`,
       },
       {
         img:`${baseDomain}${publicationAssests.ythAssets88}`,
