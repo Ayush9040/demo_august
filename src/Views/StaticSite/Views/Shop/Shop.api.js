@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { ecomBaseDomin } from '../../../../Constants/appSettings'
+import { ecomBaseDomin,authBaseDomain } from '../../../../Constants/appSettings'
 
 export const fetchAllProductsAPI = ( page, limit ) => {
   console.log(page,limit,'und')
@@ -16,4 +16,31 @@ export const getProductByCategory = ( categoryId )=>{
 
 export const getAllCategories = ()=>{
   return axios.get(`${ ecomBaseDomin }/category`)
+}
+
+export const createCart = (payload)=>{
+  return axios.post(`${ ecomBaseDomin }/cart/`,payload)
+}
+
+export const getAddress = (userID)=>{
+  return axios.get(`${ authBaseDomain }/address/user/${ userID }`)
+}
+
+export const addAddress = (address)=>{
+  return axios.post(`${ authBaseDomain }/address`, address)
+}
+export const getCartById = ( cartId )=>{
+  return axios.get(`${ ecomBaseDomin }/cart/${ cartId }`)
+}
+
+export const createOrder = (cartId, description)=>{
+  return axios.post(`${ ecomBaseDomin }/payment/order/${ cartId }`, description)
+}
+
+export const getCoupon = ( coupon )=>{
+  return axios.get(`${ ecomBaseDomin }/coupon/search/${ coupon }`)
+}
+
+export const searchProduct = ( searchValue )=>{
+  return axios.get(`${ ecomBaseDomin }/product/searchproduct/${ searchValue }`)
 }

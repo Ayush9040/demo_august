@@ -57,6 +57,7 @@
       border: 1px solid #edeef0;
       background-color: #edeef0;
       border-radius: 3rem;
+      cursor: pointer;
       .opt_add1 {
         padding: 4rem;
         .opt_name {
@@ -76,14 +77,16 @@
     background-color: #edeef0;
     border-radius: 3rem;
     //margin: 0 auto;
+    margin-bottom: 1rem;
 
     .ship_product_detail {
       display: grid;
-      grid-template-columns: 70% 30%;
+      grid-template-columns: 60% 40%;
       .ship_order_detail {
         display: flex;
         padding-top: 5.25rem;
         padding-left: 4.25rem;
+        gap: 1.75rem;
         .ship_order_img {
           height: 8rem;
           width: 8rem;
@@ -91,8 +94,8 @@
           border: 1px solid black;
           border-radius: 1rem;
           img {
-            height: 100%;
             width: 100%;
+            height: 100%;
             border-radius: 2rem;
             object-fit: fill;
           }
@@ -100,9 +103,8 @@
         .ship_title_div {
           display: flex;
           flex-direction: column;
-          padding-left: 2rem;
           .ship_title {
-            font-size: 2rem;
+            font-size: 1.75rem;
             font-weight: 700;
             color: black;
           }
@@ -114,17 +116,22 @@
       .ship_order_sum {
         color: #000;
         padding-top: 2rem;
+        padding-right: 2rem;
         .ship_price {
           font-weight: 700;
+          text-align: right;
         }
         .price {
           padding-left: 10rem;
           padding-top: 2rem;
+          text-align: right
         }
       }
     }
   }
   .discount {
+    display: flex;
+    gap: 10px;
     form {
       .form_error {
         max-width: 23rem;
@@ -138,13 +145,12 @@
         }
       }
     }
+   .apply_discount{
+    margin-top: 4.5rem;
+    cursor: pointer;
+   }
   }
   .check_out_div {
-    // display: flex;
-    // flex-direction: column;
-    // justify-content: flex-end;
-    // height: 68%;
-    padding-top: 30rem;
     color: #000;
     float: right;
 
@@ -170,6 +176,42 @@
         .global-common-btn-content {
           font-size: 2rem;
         }
+      }
+    }
+  }
+}
+
+@media (max-width:1024px){
+  .ship_main_div{
+    .ship_grid{
+      grid-template-columns: 100%;
+    }
+  }
+}
+
+@media (max-width:500px){
+  .ship_main_div{
+ .ship_right_div{
+  margin-top: 5rem;
+  height: auto;
+  min-height: 20rem;
+  .ship_product_detail{
+    grid-template-columns: 100%;
+  }
+ }
+ .discount{
+  margin-bottom: 5rem;
+ }
+  }
+  .ship_main_div .ship_right_div .ship_product_detail .ship_order_detail {
+    padding: 2rem;
+    display: block;
+    width: 100%;
+    .ship_order_img{
+      width: 100%;
+      height: 100%;
+      img{
+        width: 100%;
       }
     }
   }

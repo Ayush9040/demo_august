@@ -17,6 +17,9 @@
       .blog_view_button {
         // margin-left: 10rem;
         margin-top: -3rem;
+        a{
+          color: #000;
+        }
       }
     }
     .blog-carousel {
@@ -141,11 +144,14 @@
     }
   }
   .blog-carousel .slick-dots {
-    display: flex !important;
     align-items: center;
+    display: flex!important;
     justify-content: inherit;
+    margin: 0!important;
+    overflow: hidden;
     padding: 0;
-    width: 0;
+    width: 100%;
+    overflow: hidden;
     margin: 0 !important;
   }
   .newsletter-container .magezines .images {

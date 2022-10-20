@@ -83,7 +83,7 @@ const Facilities = () => {
   }, [route.hash])
 
   let description =
-    'To ensure absolute comfort to our students and sadhakas, we provide a host of facilities. You can avail of accommodation services, relax at the gazebo, meditate peacefully in the pods, shop merchandise at the Book Store, eat a sattvic meal at the Naivedyam, and a lot more. All our facilities have been specially designed to give you a blissful and tranquil experience. Explore below!'
+    'To ensure a fulfilling and memorable learning experience for our students and sadhakas, we offer a host of facilities. You can avail accommodation services, relax at the gazebo, meditate peacefully in the pods, shop merchandise at the Book Store, eat sattvic meals at Naivedyam and a lot more. All our facilities have been specially designed to give you a blissful and tranquil experience. Explore below!'
   const FactBan = {
     title: 'Facilities',
     color: 'white',
@@ -359,7 +359,7 @@ const Facilities = () => {
                 One of the most special spaces at the Institute, the gazebo is a
                 great place for deep meditation practice, group study, practice
                 your asanas and pranayamas, amidst the soothing sounds of
-                flowing water. Overlooked by the great kailashpati tree, it is
+                flowing water. Overlooked by the great Kailashpati tree, it is
                 also great opportunity to take in the peace at this relaxation
                 area.
               </p>
@@ -374,7 +374,7 @@ const Facilities = () => {
               <p>
                 The favourite spot of most sadhakas on campus, the Kailashpati
                 tree has graced us with its presence for many years. It is the
-                best spot to meditate at, to soak in its spiritual vibrations.
+                best spot to meditate in, to soak in its spiritual vibrations.
                 The lovely fragrance of its flowers is the perfect accompaniment
                 to whatever activity you are pursuing under the tree. Come, take
                 the divine blessings from the tree!

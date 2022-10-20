@@ -141,10 +141,10 @@ const CourseDetails = ({
                   }
                   disabled={
                     currentCourse.residential === false ||
-                    formData.mode === 'ONLINE'
+                    formData.mode === 'ONLINE' || ( currentCourse.key === '7-days-camp-english' && courseDate == '24th Sept to 30th Sept 2022' )
                   }
                   style={
-                    currentCourse.residential === false
+                    (currentCourse.residential === false || ( currentCourse.key === '7-days-camp-english' && courseDate == '24th Sept to 30th Sept 2022' ) )
                       ? {
                         background:
                             'url(https://ecom-static-site.oss-ap-south-1.aliyuncs.com/icons/icons8-multiply-24.png)',

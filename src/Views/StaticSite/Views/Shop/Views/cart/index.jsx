@@ -1,31 +1,42 @@
 import React, { Fragment, useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import './style.scss'
 import InnerNavComponent from '../../../../Components/InnerNavComponent'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
 import { deleteIcon } from '../../../../assets/icons/icon'
+import { useDispatch, useSelector } from 'react-redux'
 import CommonBtn from '../../../../Components/commonbtn'
 import { fetchSingleProduct } from '../../Shop.api'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
+import { updateCartData } from '../../Shop.action'
 
 const AddToCart = () => {
 
-  const cart = {
+  const navigate = useNavigate()
+
+  const cartNav = {
     title: 'Shop',
     color: 'orange',
     menuColor: 'orange',
     menuItems: [],
   }
   const [addCart, setAddCart] = useState([])
+  const [ isLoading,setIsLoading ] = useState(null)
+  const dispatch = useDispatch()
 
-  const displayCart =async( products )=>{
+  let { isLoggedIn } = useSelector(item=>item.auth)
+
+  const displayCart =async( products=[] )=>{
+    setIsLoading(true)
     const arr =[]
     for await (let item  of products){
-      const { data } = await fetchSingleProduct(item.product)
-      arr.push(data.data)
+      const { data } = await fetchSingleProduct(item.productId)
+      arr.push({ ...data.data,quantity:item.quantity })
     }
     setAddCart(arr)
+    setIsLoading(false)
   }
   
     
@@ -35,20 +46,36 @@ const AddToCart = () => {
 
   useEffect(() => {
     const cartItems = localStorage.getItem('cart')
-    displayCart(JSON.parse(cartItems))
-  }, [])
+    cartItems ? displayCart(JSON.parse(cartItems)):displayCart([])
+    dispatch(updateCartData(cartItems ? JSON.parse(cartItems) : []))
+  }, [ ])
+
+  const updateQuantity = async( quantity,item )=>{
+    const cartItems = localStorage.getItem('cart')
+    const prevCart = JSON.parse(cartItems)
+    await prevCart.forEach(element => {
+      if(element.productId===item){
+        element.quantity = parseInt(quantity)
+      }
+    })
+    await localStorage.setItem('cart',JSON.stringify(prevCart))
+    dispatch(updateCartData(prevCart))
+    window.location.reload()
+  }
 
   const deleteProduct = async(idx) => {
     localStorage.getItem('cart')
     const removeProduct = await JSON.parse(localStorage.getItem('cart'))
-    await displayCart(removeProduct.filter((item) => item.product !== idx))
+    await displayCart(removeProduct.filter((item) => item.productId !== idx))
     await localStorage.setItem(
       'cart',
-      JSON.stringify(removeProduct.filter((item) => item.product !== idx))
+      JSON.stringify(removeProduct.filter((item) => item.productId !== idx))
     )
+    dispatch(updateCartData(removeProduct.filter((item) => item.productId !== idx)))
+    
     toast.error('Item Removed from cart!', {
       position: 'top-right',
-      autoClose: 3000,
+      autoClose: 1000,
       hideProgressBar: false,
       closeOnClick: true,
       pauseOnHover: false,
@@ -59,10 +86,24 @@ const AddToCart = () => {
     })
   }
 
+  const getTotal = ()=>{
+    if(addCart.length===0) return
+    let sum = 0
+    addCart.forEach(item=>{
+      sum+= (item.price * item.quantity)  
+    })
+    return sum
+  }
+
+  const checkout = async()=>{
+    if(!isLoggedIn) return navigate('/user/sign-in/?location=cart')
+    navigate('/shop/checkout')
+  }
+
   console.log(addCart,'addCart')
   return (
     <>
-      <InnerNavComponent abc={cart} />
+      <InnerNavComponent abc={cartNav} />
       <div className="cart_div">
         <div className="cart_search">
           <div className="cart">Cart</div>
@@ -73,7 +114,7 @@ const AddToCart = () => {
             </label>
           </div>
         </div>
-        {addCart?.map((item, i) => {
+        { isLoading ? <div className='global-loader' >Loading...</div>: addCart?.map((item, i) => {
           return (
             <Fragment key={i} >
               <div className="cart_upper_div">
@@ -85,12 +126,12 @@ const AddToCart = () => {
                     <div className="cart_title">{item?.name}</div>
                     <div className="cart_dropdown">
                       <span>
-                        <select value={item?.quantity} name="" id="" className="quantity_dropdown">
-                          <option selected={item.quantity===1} value={1}>1</option>
-                          <option selected={item.quantity===2} value={2}>2</option>
-                          <option selected={item.quantity===3} value={3}>3</option>
-                          <option selected={item.quantity===4} value={4}>4</option>
-                          <option selected={item.quantity===5} value={5}>5</option>
+                        <select value={item?.quantity} onChange={(e)=>{ updateQuantity(e.target.value, item._id) } } name="" id="" className="quantity_dropdown">
+                          <option selected={ item.quantity===1 } value={1}>1</option>
+                          <option selected={ item.quantity===2 } value={2}>2</option>
+                          <option selected={ item.quantity===3 } value={3}>3</option>
+                          <option selected={ item.quantity===4 } value={4}>4</option>
+                          <option selected={ item.quantity===5 } value={5}>5</option>
                         </select>
                       </span>
                       <span
@@ -102,31 +143,30 @@ const AddToCart = () => {
                         {deleteIcon}
                       </span>
                     </div>
-                    <div className="cart_date">Delivery: dd/mm/yyyy</div>
                   </div>
                 </div>
                 <div className="cart_price">
                 Price
-                  <div className="cart_amount">{item?.price}</div>
+                  <div className="cart_amount">₹ {item?.price}</div>
                 </div>
               </div>
               <ToastContainer/>
             </Fragment>
           )
         })}
-
-        <div className="cart_lower_div">
+        { isLoading==false && addCart.length===0 && <h1 className='empty_cart' >Your cart is Empty!</h1> }
+        { addCart.length>0 && <div className="cart_lower_div">
           <div className="check_out_div">
             <div className="check_out">
-              <div>Subtotal (1 item)</div>
-              <div className="check_out_price">₹ 299</div>
+              <div>Subtotal  ({addCart.length} item(s))</div>
+              <div className="check_out_price">₹ { getTotal() }</div>
               <div>Inclusive of all taxes</div>
             </div>
             <div className="check_out_btn">
-              <CommonBtn text="Check Out" />
+              <CommonBtn text="Check Out" buttonAction={ checkout } />
             </div>
           </div>
-        </div>
+        </div>}
       </div>
     </>
   )

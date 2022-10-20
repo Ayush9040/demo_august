@@ -27,7 +27,7 @@ const MegaMenu = ({ setNav }) => {
       id: 9,
       key: 'PUBLICATIONS',
     },
-    { name: 'SHOP', link: '/', id: 10, key: 'SHOP' },
+    { name: 'SHOP', link: '/shop', id: 10, key: 'SHOP' },
     {
       name: 'NEWS, EVENTS & MEDIA',
       link: '/image-gallery',
@@ -154,7 +154,7 @@ const MegaMenu = ({ setNav }) => {
           {navItems &&
             navItems.map((item, i) => {
            
-              if((item.key==='DONATION'||item.key==='GIFTING'||item.key==='ONLINE'||item.key==='SHOP')){
+              if((item.key==='DONATION'||item.key==='GIFTING'||item.key==='ONLINE')){
                 return(
                  
                   <div

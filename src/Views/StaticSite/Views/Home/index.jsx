@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useLocation } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 
@@ -16,10 +16,14 @@ import Footer from '../../Components/Footer'
 import Blog from '../../Components/BlogSection'
 import { Helmet } from 'react-helmet'
 import metaDataObj from '../../../../Constants/metaData.json'
-import OrderHistroy from '../Shop/Views/order-history'
+import SearchModal from '../SearchModal'
+import './style.scss'
 
 
 const Home = () => {
+
+  const [ isModalOpen,setIsModalOpen ] = useState(false)
+
   const route = useLocation()
   const { isLoggedIn } = useSelector((state) => state.auth)
   useEffect(() => {
@@ -31,11 +35,11 @@ const Home = () => {
   })
   return (
     <>
-      {metaDataObj[route.pathname] && (
-        <Helmet title={metaDataObj[route.pathname || '']?.title || ''} />
-      )}
-      <OrderHistroy/>
-      <HeroSection isUserLoggedIn={isLoggedIn} />
+      { metaDataObj[route.pathname] && 
+    <Helmet
+      title={metaDataObj[route.pathname || '']?.title || ''}
+    /> }
+      <HeroSection setIsModalOpen={ setIsModalOpen }  isUserLoggedIn={isLoggedIn} />
       <Legacy />
       <OurOfferings />
       <Activity />
@@ -47,6 +51,9 @@ const Home = () => {
       <VideosSection />
       <NewsLetter />
       <Footer />
+      { isModalOpen && <div className='search-modal-container' >
+        <SearchModal setIsModalOpen={ setIsModalOpen } />
+      </div> }
     </>
   )
 }

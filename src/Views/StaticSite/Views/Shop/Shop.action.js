@@ -1,17 +1,10 @@
-export const donationActions = {
-  FETCH_DONATIONS_DATA : 'donation/FETCH_DONATIONS_DATA',
-  FETCH_DONATIONS_DATA_SUCCESS: 'donation/FETCH_DONATIONS_DATA_SUCCESS',
-  FETCH_DONATIONS_DATA_ERROR: 'doantion/FETCH_DONATIONS_DATA_ERROR'
+export const shopActions = {
+  UPDATE_CART : 'shop/UPDATE_CART',
 }
 
-export const fetchDonationsData = () => {
-  return { type: donationActions.FETCH_DONATIONS_DATA }
+export const updateCartData = ( payload ) => {
+  
+  console.log(payload,'check')
+  return { type: shopActions.UPDATE_CART,payload }
 }
 
-export const fetchDonationsDataSuccess = (payload) => {
-  return { type: donationActions.FETCH_DONATIONS_DATA_SUCCESS, payload }
-}
-
-export const fetchDonationsDataError = () => {
-  return { type: donationActions.FETCH_DONATIONS_DATA_ERROR }
-}

@@ -20,7 +20,7 @@ const SingleCourse = () => {
     setIsLoadding(true)
     setPageData(AllCourses.find(item=>item.key === contentId))
     setIsLoadding(false)
-    document.title=`${metaDataObj[`/${pageDate.key}`]?.title}`
+    document.title = `${metaDataObj[location.pathname]?.title}`
   }, [contentId])
   const CareerNameBan = {
     title: 'Career',
@@ -31,9 +31,9 @@ const SingleCourse = () => {
 
   return (
     <>
-      { metaDataObj[location.pathname] && 
+      { metaDataObj[location.pathname] &&    
     <Helmet
-      title={metaDataObj[`/${pageDate.key}`]?.title || ''}
+      title={metaDataObj[location.pathname]?.title || ''}
     /> }
       <div className='single-course'>
         <InnerNavComponent abc={CareerNameBan}/>

@@ -107,7 +107,7 @@ const ttc200hr = {
         type: 'paragraph',
         content: {
           title: 'Fees',
-          text: ['Rs. 22,000 /- Non-Residential: Rs. 28,000/- (Inclusive of course fee, study material, lunch, and snacks)',' Residential: Rs. 50,000/- (Inclusive of course fee, study material, accommodation on triple occupancy basis and 4 meals a day)'],
+          text: ['Online:Rs. 22,000 /-', 'Non-Residential: Rs. 28,000/- (Inclusive of course fee, study material, lunch, and snacks)',' Residential: Rs. 50,000/- (Inclusive of course fee, study material, accommodation on triple occupancy basis and 4 meals a day)'],
         },
       },
       {
@@ -428,7 +428,7 @@ const ttc200hr = {
           title: 'Fees',
           text: [
             'Non-Residential: Rs. 28,000/- (Inclusive of course fee, study material, and snacks)',
-            'Residential: Rs. 70,000/- (Inclusive of course fee, study material, accommodation and meals ) admission link',
+            'Residential: Rs. 70,000/- (Inclusive of course fee, study material, accommodation and meals )',
           ],
         },
       },
@@ -1971,7 +1971,7 @@ const ttc500hr = {
         type: 'u-list',
         content: {
           title: 'Benefits of 500 Hours IntermediateTeacher Training Course ',
-          point: [
+          points: [
             {
               listItem:
                 'You will learn the tools to master your physical, mental and spiritual well-being. You will see a marked improvement in your life, relationships and work.',
@@ -2130,7 +2130,7 @@ const ttc500hr = {
         type: 'u-list',
         content: {
           title: '',
-          point: [
+          points: [
             {
               listItem: 'School children',
               subItems: [],
@@ -2148,7 +2148,7 @@ const ttc500hr = {
         },
       },
     ],
-    offering: [
+    offerings: [
       {
         type: 'u-list',
         content: {
@@ -2221,7 +2221,7 @@ const ttc900hr = {
       offlineFee: { residentialFee: 150000, nonResidentialFee: 90000 },
     },
     category: 'ttc',
-    dates: ['22nd Oct to 21st Jan 2023'],
+    dates: ['22nd Oct to 15th Jan 2023'],
     online: false,
     onCampus: true,
     nonResidential: true,
@@ -3976,7 +3976,7 @@ const ttc900hr = {
           title: '',
 
           text: [
-            'With over 1,00,000/ 50,000 successfully certified students since 1918, the 1 Year Teacher Training Course (Hindi) at The Yoga Institute is an in-depth study of classical Ashtanga yoga (Eightfold Path Yoga). It teaches core yoga philosophy with a comprehensive approach to the science and technology of yoga. Strategically designed by the founder Shri Yogendraji, Smt. Sita Devi Yogendra, Dr. Jayadeva Yogendra, and Dr. Hansaji J Yogendra, the course serves as a valuable ‘life school’ to those seeking balance and fulfilment in life.',
+            'With over 1,00,000/ 50,000 successfully certified students since 1918, the 4 Months Teacher Training Course - English at The Yoga Institute is an in-depth study of classical Ashtanga yoga (Eightfold Path Yoga). It teaches core yoga philosophy with a comprehensive approach to the science and technology of yoga. Strategically designed by the founder Shri Yogendraji, Smt. Sita Devi Yogendra, Dr. Jayadeva Yogendra, and Dr. Hansaji J Yogendra, the course serves as a valuable ‘life school’ to those seeking balance and fulfilment in life.',
 
             'This is an intensive advanced teacher training course, ideal for those who want an immersive yoga learning experience in a focused learning format. The curriculum is the same as the other ATTCs. Within 4 months, you can become an advanced yoga trainer. Kindly note that residential option is available for this course. Additional charges would be applicable for the same.',
 
@@ -6410,6 +6410,7 @@ const camps = {
     rating: 5,
     colorCode: '#EDBE66',
     timing: '5:00 pm – 8:00 pm (IST)',
+    join:true,
     fees: {
       onlineFee: 1500,
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
@@ -8128,7 +8129,7 @@ const camps = {
       {
         type: 'u-list',
         content: {
-          title: ' TThe programme covers an introduction to: ',
+          title: ' The programme covers an introduction to: ',
           points: [
             {
               listItem: 'Astanga Yoga',
@@ -8166,13 +8167,13 @@ const camps = {
           ],
         },
       },
-      {
-        type: 'paragraph',
-        content: {
-          title: '',
-          text: ['Benefits of this camp:'],
-        },
-      },
+      // {
+      //   type: 'paragraph',
+      //   content: {
+      //     title: '',
+      //     text: ['Benefits of this camp:'],
+      //   },
+      // },
       {
         type: 'u-list',
         content: {
@@ -8415,8 +8416,8 @@ const camps = {
     ],
     online: true,
     onCampus: true,
-    nonResidential: true,
-    residential: true,
+    nonResidential: false,
+    residential: false,
     certficate: false,
     mostPopular: true,
     rating: 5,
@@ -8454,7 +8455,7 @@ const camps = {
       {
         type: 'u-list',
         content: {
-          title: ' TThe programme covers an introduction to: ',
+          title: ' The programme covers an introduction to: ',
           points: [
             {
               listItem: 'Astanga Yoga',
@@ -8492,13 +8493,13 @@ const camps = {
           ],
         },
       },
-      {
-        type: 'paragraph',
-        content: {
-          title: '',
-          text: ['Benefits of this camp:'],
-        },
-      },
+      // {
+      //   type: 'paragraph',
+      //   content: {
+      //     title: '',
+      //     text: ['Benefits of this camp:'],
+      //   },
+      // },
       {
         type: 'u-list',
         content: {
@@ -8778,7 +8779,7 @@ const camps = {
       {
         type: 'u-list',
         content: {
-          title: ' TThe programme covers an introduction to: ',
+          title: ' The programme covers an introduction to: ',
           points: [
             {
               listItem: 'Astanga Yoga',
@@ -8816,13 +8817,13 @@ const camps = {
           ],
         },
       },
-      {
-        type: 'paragraph',
-        content: {
-          title: '',
-          text: ['Benefits of this camp:'],
-        },
-      },
+      // {
+      //   type: 'paragraph',
+      //   content: {
+      //     title: '',
+      //     text: ['Benefits of this camp:'],
+      //   },
+      // },
       {
         type: 'u-list',
         content: {
@@ -9106,7 +9107,7 @@ const camps = {
       {
         type: 'u-list',
         content: {
-          title: ' TThe programme covers an introduction to: ',
+          title: ' The programme covers an introduction to: ',
           points: [
             {
               listItem: 'Astanga Yoga',
@@ -9697,27 +9698,27 @@ const classes = {
         },
       },
 
-      // {
-      //   type: 'paragraph',
-      //   content: {
-      //     title: 'Monthly',
-      //     text: ['Rs.1000 '],
-      //   },
-      // },
-      // {
-      //   type: 'paragraph',
-      //   content: {
-      //     title: 'Half yearly',
-      //     text: ['Rs. 6000'],
-      //   },
-      // },
-      // {
-      //   type: 'paragraph',
-      //   content: {
-      //     title: 'Annual ',
-      //     text: ['Rs. 10,000'],
-      //   },
-      // },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Monthly',
+          text: ['Rs.1000 '],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Half yearly',
+          text: ['Rs. 6000'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Annual ',
+          text: ['Rs. 10,000'],
+        },
+      },
     ],
   },
   4: {
@@ -9972,7 +9973,7 @@ const classes = {
     },
     image: `${baseDomain}${courseAssets.courseAsset72}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset72}`,
-    metaDescription: 'Knowledge of nadi system and energy channels',
+    metaDescription: 'Join our Advanced Pranayama Techniques Certificate course to learn advanced breathing techniques through bandhas, mudras, mantras, and many more.',
     mostPopular: false,
     rating: 5,
     colorCode: '#B77E7E',
@@ -9982,7 +9983,7 @@ const classes = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'classes',
-    dates: [' 5th sept to 21st Oct 2022 '],
+    dates: ['7th Nov - 26th Dec 2022'],
     online: true,
     onCampus: false,
     nonResidential: false,
@@ -10205,7 +10206,7 @@ const classes = {
   },
   8: {
     id: '',
-    title: 'Certificate Program on Yoga for Cancer - Online    ',
+    title: 'Certificate Program on Yoga for Cancer - Online & On Campus',
     key: 'certificate-program-on-yoga-for-cancer',
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
@@ -10219,7 +10220,7 @@ const classes = {
     image: `${baseDomain}${courseAssets.courseAsset74}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset74}`,
     metaDescription:
-      'We offer a supportive and compassionate support group to understand and discuss Cancer confidently and intelligently.',
+      'Yoga teachers understand the nature of cancer and its treatments and how safely and effectively apply practices to help students cope with side effects.',
     mostPopular: false,
     rating: 5,
     colorCode: '#C48E8C',
@@ -10229,9 +10230,9 @@ const classes = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'classes',
-    dates: [' 9th Sept to 15th Oct 2022  '],
+    dates: ['4th Nov to 10th Dec 2022'],
     online: true,
-    onCampus: false,
+    onCampus: true,
     nonResidential: false,
     residential: false,
     certficate: true,
@@ -10247,13 +10248,13 @@ const classes = {
           ],
         },
       },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'From',
-          text: ['__________ to __________'],
-        },
-      },
+      // {
+      //   type: 'paragraph',
+      //   content: {
+      //     title: 'From',
+      //     text: ['__________ to __________'],
+      //   },
+      // },
       {
         type: 'paragraph',
         content: {
@@ -10268,15 +10269,15 @@ const classes = {
           text: ['Rs. 20,000'],
         },
       },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'Eligibility',
-          text: [
-            'Completion of 500 hrs or 900 hrs TTC programme is mandatory.',
-          ],
-        },
-      },
+      // {
+      //   type: 'paragraph',
+      //   content: {
+      //     title: 'Eligibility',
+      //     text: [
+      //       'Completion of 500 hrs or 900 hrs TTC programme is mandatory.',
+      //     ],
+      //   },
+      // },
       {
         type: 'paragraph',
         content: {
@@ -10383,7 +10384,7 @@ const classes = {
   },
   10: {
     id: '',
-    title: 'Certificate Yoga Therapy Course - Online',
+    title: 'Certificate Yoga Therapy Course - Online & On Campus',
     key: 'certificate-yoga-therapy-course-online',
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
@@ -10398,7 +10399,7 @@ const classes = {
     cardImage: `${baseDomain}${courseAssets.courseAsset75}`,
     mostPopular: false,
     metaDescription:
-      'Become a certified Yoga therapist through The Yoga Institute.',
+      'This is our comprehensive 100 hours Certified Yoga Therapy course wherein the lifestyle, and yogic management of diseases are taught practically and simply.',
     rating: 5,
     colorCode: '#D3A29D',
     timing: 'Monday, Wednesday & Friday: 5:30 pm - 7:30 pm (IST)',
@@ -10407,7 +10408,7 @@ const classes = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'classes',
-    dates: ['24th Aug to 16th Dec 2022'],
+    dates: ['2nd Jan to 26th Apr 2023'],
     online: true,
     onCampus: true,
     nonResidential: false,
@@ -10420,7 +10421,7 @@ const classes = {
           title: 'YOGA THERAPY COURSE',
           text: [
             'Become a certified Yoga therapist through The Yoga Institute.',
-            'Complete one-stop destination to enhance your skills in Yogic Management of diseases through our YOGA THERAPY COURSE.',
+            'Complete one-stop destination to enhance your skills in Yogic Management of diseases through our YOGA THERAPY COURSE.',
             'This is a detailed and comprehensive100 hours Yoga Therapy course wherein the lifestyle and yogic management of diseases is taught in a practical and simple manner for easy understanding and teaching. This course will qualify you to become an extremely capable and confident Yoga Therapist to handle any case.',
           ],
         },
@@ -10428,7 +10429,7 @@ const classes = {
       {
         type: 'u-list',
         content: {
-          title: 'What the course entails?',
+          title: 'What the course details?',
           points: [
             {
               listItem: 'Understanding of 80+ diseases:',
@@ -10518,6 +10519,8 @@ const classes = {
                 'Haemorrhoids (piles) and anal fissures',
                 'Acidity and GERD',
                 'Migraine',
+                'Fatty Liver',
+                'Crohn’s disease',
               ],
             },
             {
@@ -10527,7 +10530,7 @@ const classes = {
                 'Respiratory allergies',
                 'Tonsillitis',
                 'Laryngitis',
-                'Sinusitis',
+                'Sinustis',
                 'Sleep apnoea',
                 'Bronchitis',
                 'Emphysema',
@@ -10548,94 +10551,116 @@ const classes = {
               ],
             },
             {
+              listItem: 'Diabetes',
+              subItems: [],
+            },
+            {
+              listItem: 'Thyroid',
+              subItems: [
+                'Hypothyroidism',
+                'Hyperthyroidism',
+              ],
+            },
+            {
+              listItem: 'Parathyroid Gland',
+              subItems: [
+                'Hyperparathyroidism',
+                'Hypoparathyroidism',
+              ],
+            },
+            {
+              listItem: 'Weight Management',
+              subItems: [
+                'Obesity',
+              ],
+            },
+            {
+              listItem: 'Eating Disorders',
+              subItems: [
+                'Anorexia Nervosa',
+                'Binge Eating Disorder',
+                'Bulimia Nervosa',
+              ],
+            },
+            {
+              listItem: 'Urinary Tract Infection',
+              subItems: [],
+            },
+            {
+              listItem: 'Female Reproductive System',
+              subItems: [
+                'Dysmenorrhea',
+                'PMT (Premenstrual Tension) Or PMS (Premenstrual Syndrome)',
+                'PCOS',
+                'Fibroids',
+                'Menopause',
+              ],
+            },
+            {
+              listItem: 'Pregnancy',
+              subItems: [],
+            },
+            {
+              listItem: 'Infertility',
+              subItems: [
+                'Male Infertility',
+                'Female Infertility',
+                'Counselling For Couples',
+              ],
+            },
+            {
               listItem: 'Orthopaedic problems',
               subItems: [
                 'General management',
                 'Sprain/Strain',
                 'Fibromyalgia',
                 'Hernia',
-                'Cervical spondylitis',
-                'Low back pain',
-                'Lumbar disc prolapse (slipped disc)',
-                'Lumbar canal stenosis',
-                'Lumbar spondylosis (osteoarthritis of spine)',
+                'Cervical Spondylitis',
+                'Low Back Pain',
+                'Lumbar Disc Prolapse (slipped Disc)',
+                'Lumbar Canal Stenosis',
+                'Lumbar Spondylosis (Osteoarthritis of Spine)',
                 'Sciatica',
+                'Piriformis Syndrome',
                 'Osteoporosis',
                 'Osteoarthritis',
                 'Gout',
-                'Tennis elbow/ lateral epicondylitis',
-                'Frozen shoulder',
+                'Tennis Elbow/Lateral Epicondylitis',
+                'Frozen Shoulder',
               ],
             },
             {
               listItem: 'Autoimmune disorder affecting the joints:',
-              subItems: ['Rheumatoid arthritis', 'Ankylosing spondylitis'],
+              subItems: ['Rheumatoid arthritis', 'Ankylosing spondylitis','Lupus'],
             },
             {
-              listItem: 'Diabetes',
-              subItems: [],
-            },
-            {
-              listItem: 'Thyroid',
-              subItems: ['Hypothyroidism', 'Hyperthyroidism'],
-            },
-            {
-              listItem: 'Weight Management',
-              subItems: ['Obesity'],
-            },
-            {
-              listItem: 'Eating disorders',
-              subItems: ['Anorexia nervosa', 'Binge eating', 'Bulimia nervosa'],
-            },
-            {
-              listItem: 'Urinary tract infection',
-              subItems: [],
-            },
-            {
-              listItem: 'Female reproductive system',
-              subItems: [
-                'Dysmenorrhea',
-                'PMT (premenstrual tension)or PMS (premenstrual syndrome )',
-                'PCOS',
-                'Fibroids',
-                'Menopause',
-                'Pregnancy',
-              ],
-            },
-            {
-              listItem: 'Infertility',
-              subItems: [
-                'Male infertility',
-                'Female infertility',
-                'Counselling for couples',
-              ],
-            },
-            {
-              listItem: 'Skin disorders  ',
+              listItem: 'Skin disorders',
               subItems: [
                 'Acne',
                 'Lichen planus',
                 'Eczema',
-                'Psoriasis',
+                'PsoriasisVitiligo',
                 'Peeling skin syndrome',
+                '',
               ],
             },
             {
               listItem: 'Psychological and psychiatric disorders',
               subItems: [
-                'Stress management',
+                'Stress Management',
                 'Depression',
-                'Anxiety disorders',
-                'Phobias and panic disorders',
-                'Post-traumatic stress disorder',
-                'Substance abuse / addiction',
+                'Anxiety Disorders',
+                'Phobias and Panic Disorders',
+                'Post-Traumatic Stress Disorder',
+                'Prolonged Grief Disorder',
+                'Substance Abuse/Addiction',
               ],
             },
             {
               listItem: 'Nervous system disorders',
               subItems: [
+                'Obsessive Compulsive Disorder',
                 'Bipolar disorder',
-                'Obsessive compulsive disorder',
                 'Schizophrenia',
                 'Dementia',
                 'Alzheimer’s disease',
@@ -10645,7 +10670,7 @@ const classes = {
             },
             {
               listItem: 'Cancer',
-              subItems: ['Oral cancer', 'Cervical cancer', 'Breast cancer'],
+              subItems: ['Oral cancer', 'Cervical cancer','Ovarian Cancer', 'Breast cancer'],
             },
             {
               listItem: 'Prostate enlargement',
@@ -10684,13 +10709,13 @@ const classes = {
           text: [' 4 months '],
         },
       },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'Date:',
-          text: [' 24th August - 16th December 2022'],
-        },
-      },
+      // {
+      //   type: 'paragraph',
+      //   content: {
+      //     title: 'Date:',
+      //     text: [' 24th August - 16th December 2022'],
+      //   },
+      // },
       {
         type: 'paragraph',
         content: {
@@ -10717,7 +10742,7 @@ const classes = {
         content: {
           title: 'NOTE:',
           text: [
-            'All study material available for the students for any course in physical (hard copy) only. The same can be collected by the student directly from the Institute or can be delivered to them by courier, charges of which will have to be borne by the student.',
+            ' All study material available for the students for any course in physical (hard copy) only. The same can be collected by the student directly from the Institute or can be delivered to them by courier, charges of which will have to be borne by the student.',
           ],
         },
       },
@@ -11232,7 +11257,7 @@ const classes = {
       {
         type: 'u-list',
         content: {
-          title: 'Duration          ',
+          title: 'Duration',
           points: [
             {
               listItem:
@@ -11257,22 +11282,51 @@ const classes = {
       {
         type: 'paragraph',
         content: {
-          title: 'Saturday & Sunday:Saturday',
-          text: [' 8:00 am - 9:30 am  (IST) and '],
+          title: 'Saturday & Sunday:',
+          text: [],
         },
       },
       {
         type: 'paragraph',
         content: {
-          title: 'Sunday',
-          text: [' 8:00 am - 9:30 am  (IST) or 10:30 am - 12:00 pm (IST)'],
+          title: '',
+          text: ['Saturday','8:00 am - 9:30 am  (IST) and'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: ['Sunday',' 8:00 am - 9:30 am  (IST) or 10:30 am - 12:00 pm (IST)'],
         },
       },
       {
         type: 'paragraph',
         content: {
           title: 'Fees ',
-          text: ['INR 1000'],
+          text: ['1000 INR'],
+        },
+      },
+
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Monthly',
+          text: ['Rs.1000 '],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Half yearly',
+          text: ['Rs. 6000'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Annual ',
+          text: ['Rs. 10,000'],
         },
       },
       {
@@ -11738,8 +11792,30 @@ const classes = {
       {
         type: 'paragraph',
         content: {
-          title: 'Fees',
-          text: ['INR 1000'],
+          title: 'Fees ',
+          text: ['1000 INR'],
+        },
+      },
+
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Monthly',
+          text: ['Rs.1000 '],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Half yearly',
+          text: ['Rs. 6000'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Annual ',
+          text: ['Rs. 10,000'],
         },
       },
       {

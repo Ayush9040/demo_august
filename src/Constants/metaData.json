@@ -198,9 +198,27 @@
   "/blessings":{
     "title":"Pujya Maa Dr Hansaji’s blessings",
     "h1Tag":"Pujya Maa Dr Hansaji’s blessings",
-    "h2Tags":[]
+    "h2Tags":[],
+    "metaData": [
+      {
+        "name": "description",
+        "content": "The Yoga Institute - Dr Hansaji’s says “Give every day the chance to become the most beautiful day of your life.” "
+      },
+      {
+        "property": "og:description",
+        "content": "The Yoga Institute - Dr Hansaji’s says “Give every day the chance to become the most beautiful day of your life.” "
+      },
+      {
+        "property": "og:title",
+        "content": "Pujya Maa Dr Hansaji’s blessings"
+      },
+      {
+        "property": "og:type",
+        "content": "Website"
+      }
+    ]
   },
-  "/hostel": {
+  "/hostels": {
     "title": "Hostels - The Yoga Institute Santacruz East Mumbai",
     "h1Tag": "Hostels",
     "h2Tags": ["Hostel", "Facilities"],
@@ -256,11 +274,11 @@
       },
       {
         "name": "description",
-        "content": "The Yoga Institute, one of the oldest yoga schools in the world, provides hostel accommodation that can be best described as a home away from home."
+        "content": "The Yoga Institutes provide Facilities to ensure comfort and a blissful experience for yoga students and sadhakas."
       },
       {
         "property": "og:description",
-        "content": "The Yoga Institute, one of the oldest yoga schools in the world, provides hostel accommodation that can be best described as a home away from home."
+        "content": "The Yoga Institutes provide Facilities to ensure comfort and a blissful experience for yoga students and sadhakas."
       },
       {
         "property": "og:title",
@@ -1351,11 +1369,11 @@
       },
       {
         "name": "description",
-        "content": "Our volunteer helps others to build meaningful connection and do a good thing for society."
+        "content": "The Yoga Institute’s gifting initiative enables you to support the ones you love with the gift of wisdom, a new career, or health and wellness."
       },
       {
         "property": "og:description",
-        "content": "Our volunteer helps others to build meaningful connection and do a good thing for society."
+        "content": "The Yoga Institute’s gifting initiative enables you to support the ones you love with the gift of wisdom, a new career, or health and wellness."
       },
       {
         "property": "og:title",
@@ -1436,7 +1454,7 @@
     "h2Tags": []
   },
   "/one-month-ttc": {
-    "title": "One Month Yoga Teacher Training Course In Mumbai, India - The Yoga Institute",
+    "title": "One Month Yoga Teacher Training Course In Mumbai,India",
     "h1Tag": "",
     "h2Tags": [
       "A – KNOWLEDGE",
@@ -1461,7 +1479,7 @@
       },
       {
         "property": "og:title",
-        "content": "One Month Yoga Teacher Training Course In Mumbai, India - The Yoga Institute"
+        "content": "One Month Yoga Teacher Training Course In Mumbai, India"
       },
       {
         "property": "og:url",
@@ -1636,7 +1654,7 @@
     "links":[
       {
         "rel":"canonical",
-        "href":"https://theyogainstitute.org/200-hrs-parttime-ttc-online-english"
+        "href":"https://theyogainstitute.org/200-hrs-part-time-ttc-online-english-batch-5"
       }
     ]
   },
@@ -1798,11 +1816,11 @@
       },
       {
         "name": "description",
-        "content": "The 500 + hours part-time program is Teachers’ Training certificate course that prepares students for teaching Yoga techniques to normal adults."
+        "content": "900 Hour Advanced Yoga Teacher Training Course designed by the yoga institute to deeply study and practice yoga techniques from basic to advance levels."
       },
       {
         "property": "og:description",
-        "content": "The 500 + hours part-time program is Teachers’ Training certificate course that prepares students for teaching Yoga techniques to normal adults."
+        "content": "900 Hour Advanced Yoga Teacher Training Course designed by the yoga institute to deeply study and practice yoga techniques from basic to advance levels."
       },
       {
         "property": "og:title",
@@ -2027,11 +2045,11 @@
       },
       {
         "name": "description",
-        "content": "The Yoga Institute designed Yoga asanas Regular Classes for men through Online and On-Campus mode.  This classes covers Sukhasana, Yog Mudra,  Vakrasana,.."
+        "content": "The Yoga Institute offers Online Yoga Asanas Regular classes for Men & Women to experience good and healthy day-to-day life. This Online Yoga classes cover.."
       },
       {
         "property": "og:description",
-        "content": "The Yoga Institute designed Yoga asanas Regular Classes for men through Online and On-Campus mode.  This classes covers Sukhasana, Yog Mudra,  Vakrasana,.."
+        "content": "The Yoga Institute offers Online Yoga Asanas Regular classes for Men & Women to experience good and healthy day-to-day life. This Online Yoga classes cover."
       },
       {
         "property": "og:title",
@@ -2882,11 +2900,11 @@
       },
       {
         "name": "description",
-        "content": "Our Yoga Library contains more than 6,000 books in various languages and on various subjects related to the study of yoga and spirituality."
+        "content": "Our Yoga Library contains the world's largest collection of texts and books on yoga, spirituality, and Indian Philosophy."
       },
       {
         "property": "og:description",
-        "content": "Our Yoga Library contains more than 6,000 books in various languages and on various subjects related to the study of yoga and spirituality."
+        "content": "Our Yoga Library contains the world's largest collection of texts and books on yoga, spirituality, and Indian Philosophy."
       },
       {
         "property": "og:title",
@@ -3242,11 +3260,11 @@
       },
       {
         "name": "description",
-        "content": "The Yoga Institute conducts 7 days health Camp Insights into Yoga which covers all types of workshop with different courses that changes the day to day lifestyle"
+        "content": "The yoga institute offers 7 days health camp in Hindi to quickly experience the yogic lifestyle. This yoga camp covers Yoga Asanas, Pranayama, Meditation, diet,"
       },
       {
         "property": "og:description",
-        "content": "The Yoga Institute conducts 7 days health Camp Insights into Yoga which covers all types of workshop with different courses that changes the day to day lifestyle"
+        "content": "The yoga institute offers 7 days health camp in Hindi to quickly experience the yogic lifestyle. This yoga camp covers Yoga Asanas, Pranayama, Meditation, diet,"
       },
       {
         "property": "og:title",
@@ -3287,7 +3305,7 @@
       },
       {
         "name": "description",
-        "content": "The most awaited and popular course conducted at The Yoga Institute is now back on campus."
+        "content": "The 21 days better living course is specially designed for working professionals to learn the yogic concept and practice yoga techniques. Yoga in english."
       },
       {
         "property": "og:description",
@@ -3322,7 +3340,7 @@
     ]
   },
   "/21-days-better-living-course-batch-3": {
-    "title": "21 Days Better Living Course (Online & OnCampus - Hindi) - The Yoga Institute",
+    "title": "21 Days Better Living Course (Online & OnCampus - Hindi)",
     "h1Tag": "21 Days Better Living Course (Online & OnCampus - Hindi)",
     "h2Tags": [],
     "metaData": [
@@ -3332,7 +3350,7 @@
       },
       {
         "name": "description",
-        "content": "The most awaited and popular course conducted at The Yoga Institute is now back on campus."
+        "content": "The Yoga Institute offers The 21 Days Better Living Course in Hindi to begin a journey into the discovery of Yoga. It is a Certificate Course designed for."
       },
       {
         "property": "og:description",
@@ -3340,7 +3358,7 @@
       },
       {
         "property": "og:title",
-        "content": "21 Days Better Living Course (On Campus) - The Yoga Institute"
+        "content": "21 Days Better Living Course (On Campus)"
       },
       {
         "property": "og:url",
@@ -3389,78 +3407,279 @@
   "/stress-management-camp":{
     "title":"Online Stress Management Camp - The Yoga Institute",
     "h1Tag": "Online Stress Management Camp",
-    "h2Tags": []
+    "h2Tags": [],
+    "metaData": [
+      {
+        "name": "description",
+        "content": "Do you want to manage stress? Here is The yoga institute offers Online Stress Management camp so that individuals can enhance yoga for stress management."
+      },
+      {
+        "property": "og:description",
+        "content": "Do you want to manage stress? Here is The yoga institute offers Online Stress Management camp so that individuals can enhance yoga for stress management."
+      },
+      {
+        "property": "og:title",
+        "content": "Online Stress Management Camp - The Yoga Institute"
+      },
+      {
+        "property": "og:type",
+        "content": "Website"
+      }
+    ]
   },
   "/weight-management-workshop":{
     "title":"Online Weight Management Workshop - The Yoga Institute",
     "h1Tag": "Online Weight Management Workshop",
-    "h2Tags": []
+    "h2Tags": [],
+    "metaData": [
+      {
+        "name": "description",
+        "content": "The Yoga Institute conducts Online Weight Management Workshop, which helps healthy weight loss and provides yogic diet tips and regular yoga practices."
+      },
+      {
+        "property": "og:description",
+        "content": "The Yoga Institute conducts Online Weight Management Workshop, which helps healthy weight loss and provides yogic diet tips and regular yoga practices."
+      },
+      {
+        "property": "og:title",
+        "content": "Online Weight Management Workshop - The Yoga Institute"
+      },
+      {
+        "property": "og:type",
+        "content": "Website"
+      }
+    ]
   },
   "/pregnancy-camp-for-ante-post-natal":{
     "title":"Online Pregnancy Camp For Ante & Post Natal - The Yoga Institute",
     "h1Tag": "Online Pregnancy Camp For Ante & Post Natal",
-    "h2Tags": []
+    "h2Tags": [],
+    "metaData": [
+      {
+        "name": "description",
+        "content": "The Yoga Institute offers yoga for pregnant women camp to experience a happy and healthy pregnancy and easy delivery by following yoga techniques, practical.."
+      },
+      {
+        "property": "og:description",
+        "content": "The Yoga Institute offers yoga for pregnant women camp to experience a happy and healthy pregnancy and easy delivery by following yoga techniques, practical.."
+      },
+      {
+        "property": "og:title",
+        "content": "Online Pregnancy Camp For Ante & Post Natal - The Yoga Institute"
+      },
+      {
+        "property": "og:type",
+        "content": "Website"
+      }
+    ]
   },
   "/cardiac-hypertension-workshop":{
     "title":"Online Cardiac and Hypertension Health Workshop - The Yoga Institute",
     "h1Tag": "Online Cardiac and Hypertension Health Workshop",
-    "h2Tags": []
+    "h2Tags": [],
+    "metaData": [
+      {
+        "name": "description",
+        "content": "The Cardiac and Hypertension Health workshop approach to cure heart disease. It helps the mind, body, and soul to overcome bodily disability through lifestyle."
+      },
+      {
+        "property": "og:description",
+        "content": "The Cardiac and Hypertension Health workshop approach to cure heart disease. It helps the mind, body, and soul to overcome bodily disability through lifestyle."
+      },
+      {
+        "property": "og:title",
+        "content": "Online Cardiac and Hypertension Health Workshop - The Yoga Institute"
+      },
+      {
+        "property": "og:type",
+        "content": "Website"
+      }
+    ]
   },
   "/back-joint-disorder-workshop":{
     "title":"Online Back and Joint Disorder Workshop - The Yoga Institute",
     "h1Tag": "Online Back and Joint Disorder Workshop",
-    "h2Tags": []
+    "h2Tags": [],
+    "metaData": [
+      {
+        "name": "description",
+        "content": "The Yoga Institute’s researcher shows the effectiveness of yogic methods to heal back and joint disorders. Attend our one-day back and joint workshop."
+      },
+      {
+        "property": "og:description",
+        "content": "The Yoga Institute’s researcher shows the effectiveness of yogic methods to heal back and joint disorders. Attend our one-day back and joint workshop."
+      },
+      {
+        "property": "og:title",
+        "content": "Online Back and Joint Disorder Workshop - The Yoga Institute"
+      },
+      {
+        "property": "og:type",
+        "content": "Website"
+      }
+    ]
   },
   "/pranayama-workshop":{
     "title":"Online Pranayama Workshop - The Yoga Institute",
     "h1Tag": "Online Pranayama Workshop",
-    "h2Tags": []
+    "h2Tags": [],
+    "metaData": [
+      {
+        "name": "description",
+        "content": "Our Pranayama workshop will help you to regulate your healthy living, keep you meditative, breathe and enhance your life more effectively."
+      },
+      {
+        "property": "og:description",
+        "content": "Our Pranayama workshop will help you to regulate your healthy living, keep you meditative, breathe and enhance your life more effectively"
+      },
+      {
+        "property": "og:title",
+        "content": "Online Pranayama Workshop - The Yoga Institute"
+      },
+      {
+        "property": "og:type",
+        "content": "Website"
+      }
+    ]
   },
   "/womens-camp":{
     "title":"Women's Camp - The Yoga Institute",
     "h1Tag": "Women's Camp",
-    "h2Tags": []
-  },
-  "/respiratory-workshop":{
-    "title":"Online Respiratory Workshop - The Yoga Institute",
-    "h1Tag": "Online Respiratory Workshop",
-    "h2Tags": []
-  },
-  "/life-management-camp":{
-    "title":"Life Management Camp - The Yoga Institute",
-    "h1Tag": "Life Management Camp",
-    "h2Tags": []
+    "h2Tags": [],
+    "metaData": [
+      {
+        "name": "description",
+        "content": "The Yoga Institute conducts Wellness Women camps specifically designed to improve women's lives through the yogic way of life."
+      },
+      {
+        "property": "og:description",
+        "content": "The Yoga Institute conducts Wellness Women camps specifically designed to improve women's lives through the yogic way of life."
+      },
+      {
+        "property": "og:title",
+        "content": "Women's Camp - The Yoga Institute"
+      },
+      {
+        "property": "og:type",
+        "content": "Website"
+      }
+    ]
   },
   "/senior-citizen-workshop":{
     "title":"Senior Citizen Workshop - The Yoga Institute",
     "h1Tag": "Senior Citizen Workshop",
-    "h2Tags": []
-  },
-  "/diet-workshop":{
-    "title":"Diet Workshop - The Yoga Institute",
-    "h1Tag": "Diet Workshop",
-    "h2Tags": []
+    "h2Tags": [],
+    "metaData": [
+      {
+        "name": "description",
+        "content": "In Yoga, Age is just a number! The Yoga Institute offers yoga for Senior citizen workshop to improve mental flexibility, self-reliance, health, and stamina."
+      },
+      {
+        "property": "og:description",
+        "content": "In Yoga, Age is just a number! The Yoga Institute offers yoga for Senior citizen workshop to improve mental flexibility, self-reliance, health, and stamina."
+      },
+      {
+        "property": "og:title",
+        "content": "Senior Citizen Workshop - The Yoga Institute"
+      },
+      {
+        "property": "og:type",
+        "content": "Website"
+      }
+    ]
   },
   "/meditation-foundation-course-online":{
     "title":"Meditation Foundation Course - Online - The Yoga Institute",
     "h1Tag":"Meditation Foundation Course - Online",
-    "h2Tags":[]
+    "h2Tags":[],
+    "metaData": [
+      {
+        "name": "description",
+        "content": "The Yoga Institute provides Yoga Meditation Foundation Course to learn mindfulness in living, the science behind meditation, guided meditation practices,.."
+      },
+      {
+        "property": "og:description",
+        "content": "The Yoga Institute provides Yoga Meditation Foundation Course to learn mindfulness in living, the science behind meditation, guided meditation practices,.."
+      },
+      {
+        "property": "og:title",
+        "content": "Meditation Foundation Course - Online - The Yoga Institute"
+      },
+      {
+        "property": "og:type",
+        "content": "Website"
+      }
+    ]
   },
   "/yog-prayas-online":{
     "title":"Yog Prayas Online - The Yoga Institute",
     "h1Tag":"Yog Prayas Online",
-    "h2Tags":[]
+    "h2Tags":[],
+    "metaData": [
+      {
+        "name": "description",
+        "content": "The yoga institute offers Yog Prayas Program to those who want to become yoga professionals and build an effort toward their self-development."
+      },
+      {
+        "property": "og:description",
+        "content": "The yoga institute offers Yog Prayas Program to those who want to become yoga professionals and build an effort toward their self-development."
+      },
+      {
+        "property": "og:title",
+        "content": "Yog Prayas Online - The Yoga Institute"
+      },
+      {
+        "property": "og:type",
+        "content": "Website"
+      }
+    ]
   },
   "/anand-sadhna":{
     "title":"Anand Sadhna - The Yoga Institute",
     "h1Tag":"Anand Sadhna",
-    "h2Tag": []
+    "h2Tag": [],
+    "metaData": [
+      {
+        "name": "description",
+        "content": "The Yoga Institute’s Anand Sadhna classes are specially designed for those who seek stress management, trauma healing, anger management, glowing skin, immunity"
+      },
+      {
+        "property": "og:description",
+        "content": "The Yoga Institute’s Anand Sadhna classes are specially designed for those who seek stress management, trauma healing, anger management, glowing skin, immunity"
+      },
+      {
+        "property": "og:title",
+        "content": "Anand Sadhna - The Yoga Institute"
+      },
+      {
+        "property": "og:type",
+        "content": "Website"
+      }
+    ]
   },
 
   "/regular-meditation-classes-online":{
     "title":"Regular Online Meditation Practice Classes - The Yoga Institute",
     "h1Tag":"Regular Meditation Classes Online",
-    "h2Tag": []
+    "h2Tag": [],
+    "metaData": [
+      {
+        "name": "description",
+        "content": "The Yoga Institute's Online Meditation classes explore meditation journeys to make a daily habit of yoga meditation and mindfulness practices."
+      },
+      {
+        "property": "og:description",
+        "content": "The Yoga Institute's Online Meditation classes explore meditation journeys to make a daily habit of yoga meditation and mindfulness practices."
+      },
+      {
+        "property": "og:title",
+        "content": "Regular Online Meditation Practice Classes - The Yoga Institute"
+      },
+      {
+        "property": "og:type",
+        "content": "Website"
+      }
+    ]
   },
   "/digestion-camp":{
     "title":"Digestion Camp - The Yoga Institute",
@@ -3520,7 +3739,24 @@
     "title":"Blogs - The Yoga Institute",
     "h1Tag": "Blogs",
     "h2Tags": [],
-    "metaData": []
+    "metaData": [
+      {
+        "name": "description",
+        "content": "The Yoga Institute blog includes Yoga techniques, Healthy living tips, Healthy food tips, a Yogic lifestyle, Mental health tips, Physical health tips,."
+      },
+      {
+        "property": "og:description",
+        "content": "The Yoga Institute blog includes Yoga techniques, Healthy living tips, Healthy food tips, a Yogic lifestyle, Mental health tips, Physical health tips,."
+      },
+      {
+        "property": "og:title",
+        "content": "Blogs - The Yoga Institute"
+      },
+      {
+        "property": "og:type",
+        "content": "Website"
+      }
+    ]
   },
   "/courses":{
     "title":"Courses - The Yoga Institute",
@@ -3553,5 +3789,21 @@
     "title":"Digital Media - The Yoga Institute",
     "h1Tag":"Digital Media",
     "h2Tags":[]
+  },
+  "/diabetes-camp":{
+    "title":"Diabete Camp - The Yoga Institue",
+    "h1Tag":"Diabete Camp",
+    "h2Tags":[]
+  },
+  "/fullmoon-meditation":{
+    "title":"Full Moon Meditation - The Yoga Institue",
+    "h1Tag":"ull Moon Meditation",
+    "h2Tags":[]
+  },
+  "/sattvik-cooking":{
+    "title":"Sattvik Cooking - The Yoga Institute",
+    "h1Tag":"Sattvik Cooking",
+    "h2Tags":[],
+    "metaData":[]
   }
 }

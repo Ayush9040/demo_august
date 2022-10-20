@@ -225,6 +225,38 @@ export const Search = (
     />
   </svg>
 )
+export const SearchBlack = (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    id="Layer_1"
+    data-name="Layer 1"
+    width="28px"
+    height="28px"
+    viewBox="0 0 50 50"
+  >
+    <path
+      fill="#121212"
+      className="cls-1"
+      d="M48.12,43.18l-9.44-9.44A20.93,20.93,0,0,0,43,21.13,21.13,21.13,0,1,0,21.83,42.26a20.91,20.91,0,0,0,10.93-3.14l9.71,9.71a4,4,0,0,0,5.65-5.65ZM8.7,21.13A13.14,13.14,0,1,1,21.83,34.27,13.15,13.15,0,0,1,8.7,21.13Z"
+    />
+  </svg>
+)
+export const SearchWhite = (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    id="Layer_1"
+    data-name="Layer 1"
+    width="28px"
+    height="28px"
+    viewBox="0 0 50 50"
+  >
+    <path
+      fill="#ffffff"
+      className="cls-1"
+      d="M48.12,43.18l-9.44-9.44A20.93,20.93,0,0,0,43,21.13,21.13,21.13,0,1,0,21.83,42.26a20.91,20.91,0,0,0,10.93-3.14l9.71,9.71a4,4,0,0,0,5.65-5.65ZM8.7,21.13A13.14,13.14,0,1,1,21.83,34.27,13.15,13.15,0,0,1,8.7,21.13Z"
+    />
+  </svg>
+)
 
 export const Cart = (
   <svg

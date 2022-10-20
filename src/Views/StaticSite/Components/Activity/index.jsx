@@ -83,7 +83,7 @@ const Activity = () => {
           <div className="activity-wrapper">
             <Heading
               logo={highlights}
-              smallText="In the"
+              smallText=""
               largeText="Highlight"
             />
             <div className="activity-text">

@@ -2,6 +2,7 @@ import React, { useState, useEffect,lazy } from 'react'
 import { useLocation } from 'react-router-dom'
 import './style.scss'
 import { useNavigate } from 'react-router-dom'
+import SearchModal from '../../Views/SearchModal'
 import { useDispatch, useSelector } from 'react-redux'
 // import axios from 'axios'
 import {
@@ -15,6 +16,9 @@ import {
   // legacy2,
   MainLogo,
   MainLogo1,
+  Search,
+  SearchBlack,
+  SearchWhite,
   Cart,
 } from '../../assets/icons/icon'
 import { Link } from 'react-router-dom'
@@ -26,20 +30,35 @@ const InnerNavComponent = ({ abc }) => {
   const { isLoggedIn } = useSelector((state) => state.auth)
   const [nav, setNav] = useState(false)
   const [dropdown,setDropdown]=useState(false)
-
+  const [ isModalOpen,setIsModalOpen ] = useState(false)
   const [bold, setBold] = useState(0)
+  const [ cartItems,setCartItems ] = useState(0)
   const location = useLocation()
   const dispatch = useDispatch()
-  console.log(bold,'b')
+ 
+  const { cart } = useSelector((state)=>state.shop)
+
+  const getTotal = ()=>{
+    if(cart?.length===0) return
+    let sum = 0
+    cart?.forEach(item=>{
+      sum+= item.quantity  
+    })
+    console.log(sum,'sum')
+    return sum
+  }
+
 
   useEffect(() => {
+    setCartItems(getTotal())
     if (location.pathname === '/media/video-gallery') {
       setBold(1)
     } else {
       setBold(0)
     }
-  }, [])
+  }, [ cart ] )
 
+  console.log(bold,'bold')
   return (
     <>
       <div className="inner-nav-container">
@@ -52,6 +71,7 @@ const InnerNavComponent = ({ abc }) => {
                 : Hamburger}
           </div>
           <div className="main-logo" id={`${ abc.color }`} >
+            <span className='mobile-search' onClick={ ()=>{setIsModalOpen(true)} } >{ abc.color === 'orange' ? Search:abc.color === 'black' ? SearchBlack : SearchWhite }</span>
             <Link to="/">
               {abc.color === 'orange'
                 ? legacy1
@@ -82,28 +102,28 @@ const InnerNavComponent = ({ abc }) => {
               })}
             </ul>
           </div>
-          <div className="user-container" onMouseOver={()=>{setDropdown(true)}} onMouseOut={()=>{setDropdown(false)}} >
-            
+          <div className="user-container">
+            <div onClick={ ()=>{setIsModalOpen(true)} } >{ abc.color === 'orange' ? Search:abc.color === 'black' ? SearchBlack : SearchWhite }</div>
             {abc.title==='Shop'
-              ?    <Link to='/shop'>        
-                { Cart } </Link>
+              ?    <Link to='/shop/cart'>        
+                { Cart }  <span style={{ color:'#CA4625' }} className='cart-count' >{ cartItems }</span></Link>
               :null
             }
            
-
-            <Link to={isLoggedIn ? '/user/profile':'/user/sign-in'}>
-              {abc.color === 'orange'
-                ? User
-                : abc.color === 'white'
-                  ? CommonUser
-                  : CommonUser1}
-            </Link>
-
-            <div style={dropdown===true && isLoggedIn ?{ display:'block' }:{}} className='user-dropdown'>
-              <ul>
-                <li onClick={()=>navigate('/user/profile')} >User Profile</li>
-                <li onClick={async()=>{await dispatch(logoutUserAction());navigate('/user/sign-in')}} >Logout</li>
-              </ul>
+            <div className='profile-container' onMouseOver={()=>{setDropdown(true)}} onMouseOut={()=>{setDropdown(false)}}  >
+              <Link to={isLoggedIn ? '/user/profile':'/user/sign-in'} >
+                {abc.color === 'orange'
+                  ? User
+                  : abc.color === 'white'
+                    ? CommonUser
+                    : CommonUser1}
+              </Link>
+              <div style={dropdown===true && isLoggedIn ?{ display:'block' }:{}} className='user-dropdown'>
+                <ul>
+                  <li onClick={()=>navigate('/user/profile')} >User Profile</li>
+                  <li onClick={async()=>{await dispatch(logoutUserAction());navigate('/user/sign-in')}} >Logout</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
@@ -166,6 +186,9 @@ const InnerNavComponent = ({ abc }) => {
           <MegaMenu setNav={setNav} />
         </div>
       )}
+      { isModalOpen && <div className='search-modal-container' >
+        <SearchModal setIsModalOpen={ setIsModalOpen } />
+      </div> }
     </>
   )
 }

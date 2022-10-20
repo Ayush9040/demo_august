@@ -15,13 +15,13 @@ import InnerNavComponent from '../../../../Components/InnerNavComponent'
 import { validateEmail } from '../../../../../../helpers'
 import MessageModal from '../../../../Components/MessageModal'
 
-
 const SignIn = () => {
   const [modal, setModal] = useState(false)
-  const [validate, setValidate]= useState()
+  const [validate, setValidate] = useState()
   const dispatch = useDispatch()
   const navigate = useNavigate()
   const { isLoggedIn, error } = useSelector((state) => state.auth)
+  const [ page,setPage ] = useState()
   const [course, setCourse] = useState()
   const [formData, setFormData] = useState({
     email: '',
@@ -39,16 +39,20 @@ const SignIn = () => {
 
   useEffect(() => {
     setSetselectDate(Params.get('date'))
+    setPage(Params.get('location'))
   }, [])
 
   useEffect(() => {
     window.scrollTo(0, 0)
+    
   }, [isLoggedIn])
 
+
+
   const handleSignIn = async() => {
-    if(!validateEmail(formData.email)){
+    if (!validateEmail(formData.email)) {
       return setValidate(1)
-    }else if(formData.password === ''){
+    } else if (formData.password === '') {
       return setValidate(2)
     }else{
       await dispatch(
@@ -57,7 +61,8 @@ const SignIn = () => {
             email: formData.email,
             password: formData.password,
           },
-          navigate
+          navigate,
+          page!=='cart' ? `/enrollment/${ course }/?date=${ selectDate }`: '/shop/checkout',
         )
       )
       error.isError !== false ? setModal(true) : setModal(false)
@@ -72,29 +77,52 @@ const SignIn = () => {
   }
   console.log(error.isError)
   return (
-    <div className="signin-container">
+    <div className='signin-container'>
       <InnerNavComponent abc={UserNav} />
-      <div className="signin-form">
+      <div className='signin-form'>
         <form>
           <h1>Sign In</h1>
           <InputComponent
             icon={mail}
-            type="text"
-            placeholder="Enter Email"
+            type='text'
+            placeholder='Enter Email'
             form={formData}
             setField={setFormData}
-            keyName="email"
+            keyName='email'
           />
+          {validate === 1 && (
+            <small
+              style={{
+                position: 'relative',
+                bottom: '1rem',
+                color: 'red',
+                fontSize: '1rem',
+              }}
+            >
+              Please enter valid email
+            </small>
+          )}
           <InputComponent
             icon={lock}
-            type="password"
-            placeholder="Enter Password"
+            type='password'
+            placeholder='Enter Password'
             form={formData}
             setField={setFormData}
-            keyName="password"
+            keyName='password'
           />
-          {validate === 1 && <small style={{ position: 'relative', bottom: '1rem', color: 'red', fontSize: '1rem' }}>Please enter valid email</small>}
-          {validate === 2 && <small style={{ position: 'relative', bottom: '1rem', color: 'red', fontSize: '1rem' }}>Please enter the password</small>}
+          
+          {validate === 2 && (
+            <small
+              style={{
+                position: 'relative',
+                bottom: '1rem',
+                color: 'red',
+                fontSize: '1rem',
+              }}
+            >
+              Please enter the password
+            </small>
+          )}
           {/* <label className="other-options">
             <div className="remember-me">
               <input type={'checkbox'} />
@@ -102,8 +130,8 @@ const SignIn = () => {
             </div>
             <div className="forgot-password">Forgot Password ?</div>
           </label> */}
-          <label className="signin-btn">
-            <CommonBtn text="Sign In" buttonAction={handleSignIn} />
+          <label className='signin-btn'>
+            <CommonBtn text='Sign In' buttonAction={handleSignIn} />
             <Link
               to={
                 course !== undefined
@@ -115,8 +143,8 @@ const SignIn = () => {
             </Link>
           </label>
         </form>
-        <Link to="/user/sign-up">
-          <div className="social-logins guest">
+        <Link to='/user/sign-up'>
+          <div className='social-logins guest'>
             <h3>Sign Up</h3>
           </div>
         </Link>
@@ -135,7 +163,7 @@ const SignIn = () => {
       </div>
       {modal !== false && (
         <MessageModal
-          type="ERROR"
+          type='ERROR'
           message={error.isError}
           closePopup={setModal}
         />

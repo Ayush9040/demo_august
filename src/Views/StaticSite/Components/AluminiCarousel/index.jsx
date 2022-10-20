@@ -15,7 +15,7 @@ const AlumniCarousel = () => {
     dots: true,
     arrows: true,
     infinite: true,
-    speed: 500,
+    speed: 1000,
     autoplay: true,
     autoPlaySpeed: 5000,
     slidesToShow: 1,

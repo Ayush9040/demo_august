@@ -24,6 +24,7 @@ const Personal = ({ handleEmpty1, empty, setFormData, formData, setEmpty }) => {
               {empty === 1 && <small> Please enter your name</small>}
             </div>
             
+            
             <div className='form_error'>
               <InputComponent
                 type="email"

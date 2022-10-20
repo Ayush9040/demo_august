@@ -1,28 +1,14 @@
-import { donationActions } from './Donation.action'
-import { initialState, noError } from './Donation.defaultStates'
+import { shopActions } from './Shop.action'
+import { initialState, noError } from './Shop.defaultStates'
 
-export const donationReducer = (state = initialState, action) => {
+export const shopReducer = (state = initialState, action) => {
   switch (action.type) {
-  case donationActions.FETCH_DONATIONS_DATA:
+  case shopActions.UPDATE_CART:
     return {
       ...state,
       isLoading: true,
-      donationPrograms: [],
+      cart: action.payload,
       error: noError,
-    }
-  case donationActions.FETCH_DONATIONS_DATA_SUCCESS:
-    return {
-      ...state,
-      isLoading: false,
-      donationPrograms: action.payload,
-      error: noError,
-    }
-  case donationActions.FETCH_DONATIONS_DATA_ERROR:
-    return {
-      ...state,
-      isLoading: false,
-      donationPrograms: [],
-      error: true,
     }
   default:
     return { ...state }

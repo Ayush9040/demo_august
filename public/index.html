@@ -3,6 +3,29 @@
   <head>
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-76029695-1"
+    ></script>
+    <script>
+      ;(function (w, d, s, l, i) {
+        w[l] = w[l] || []
+        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' })
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : ''
+        j.async = true
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl
+        f.parentNode.insertBefore(j, f)
+        console.log(w, d, s, l, i)
+      })(window, document, 'script', 'dataLayer', 'GTM-MCV83ML')
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta http-equiv="ScreenOrientation" content="autoRotate:disabled" />
+    <!-- <script src="https://checkout.razorpay.com/v1/checkout.js"></script> -->
+  </head>
+  <body>
     <style>
       .meta-heading {
         clip: rect(1px, 1px, 1px, 1px);
@@ -23,11 +46,12 @@
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <script>
-      var url = 'https://wati-integration-service.clare.ai/ShopifyWidget/shopifyWidget.js?25511';
-      var s = document.createElement('script');
-      s.type = 'text/javascript';
-      s.async = true;
-      s.src = url;
+      var url =
+        'https://wati-integration-service.clare.ai/ShopifyWidget/shopifyWidget.js?25511'
+      var s = document.createElement('script')
+      s.type = 'text/javascript'
+      s.async = true
+      s.src = url
       var options = {
     "enabled":true,
     "chatButtonSetting":{
@@ -57,8 +81,8 @@
       };
       var x = document.getElementsByTagName('script')[0];
       setTimeout(() => {
-        x.parentNode.insertBefore(s, x);
-      }, 10000);
-  </script>
+        x.parentNode.insertBefore(s, x)
+      }, 10000)
+    </script>
   </body>
 </html>
