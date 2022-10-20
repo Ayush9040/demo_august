@@ -16,12 +16,14 @@ import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import { updateCartData } from '../../Shop.action'
 import { useDispatch } from 'react-redux'
+import { useNavigate } from 'react-router-dom'
 
 const Shop = () => {
   const dispatch = useDispatch()
+  const navigate = useNavigate()
 
   const [products, setProducts] = useState([])
-  const [pagination, setPagination] = useState({ page: 1, limit: 10 })
+  const [pagination, setPagination] = useState({ page: 1, limit: 12 })
   const [count, setCount] = useState(0)
   const [categories,setCategories] = useState([])
   const [ modal,setModal ] = useState(false)
@@ -39,7 +41,7 @@ const Shop = () => {
   }
 
   const shopPagination = (num) => {
-    setPagination({ ...pagination, page: num, limit: 10 })
+    setPagination({ ...pagination, page: num, limit: 12 })
   }
   const searchProductAction = async()=>{
     try{
@@ -58,6 +60,7 @@ const Shop = () => {
     dispatch(updateCartData(JSON.parse(localStorage.getItem('cart'))))
     fetchAllCategories()
   }, [pagination])
+
 
 
 
@@ -93,12 +96,31 @@ const Shop = () => {
     })
 
   }
+  const buyProduct = (idx,e) => {
+    e.stopPropagation()
+    if (!localStorage.getItem('cart')) localStorage.setItem('cart',JSON.stringify([{ productId:idx,quantity:1 }]))
+    const prevCart = JSON.parse(localStorage.getItem('cart'))
+    if(prevCart.some(item=>item.productId===idx)){
+      prevCart.forEach(element => {
+        if(element.productId===idx){
+          element.quantity = element.quantity+1
+        }
+      })
+      
+      localStorage.setItem('cart',JSON.stringify(prevCart))
+      dispatch(updateCartData(prevCart))
+    }else{
+      localStorage.setItem('cart',JSON.stringify([...prevCart,{ productId:idx, quantity:1 }]))
+      dispatch(updateCartData([...prevCart,{ productId:idx, quantity:1 }]))
+    }
+    navigate('/shop/cart')
+  }
 
   let settings = {
     dots: true,
     arrows: false,
     infinite: true,
-    speed: 500,
+    speed: 3000,
     slidesToShow: 1,
     slidesToScroll: 1,
     centerPadding: '70px',
@@ -115,10 +137,15 @@ const Shop = () => {
 
   const productByCategory = async(category)=> {
     
-    if(category==='all')return getAllProducts() 
-    // navigate(`/shop/?category=${ categories?.find(item=>item._id===category)?.name }`)
-    const { data } = await getProductByCategory(category)
-    setProducts(data.data)
+    if(category==='all'){
+      getAllProducts()
+      navigate('/shop')
+    }
+    else{ 
+      navigate(`/shop/?category=${ categories?.find(item=>item._id===category)?.name }`)
+      const { data } = await getProductByCategory(category)
+      setProducts(data.data)
+    }
   }
 
   return (
@@ -163,6 +190,7 @@ const Shop = () => {
                     thumbnail={item.productThumbnail}
                     productId={item._id}
                     addCart={addCart}
+                    buyProduct={buyProduct}
                   />
                   <ToastContainer
                     // position="top-right"
@@ -189,6 +217,7 @@ const Shop = () => {
                       thumbnail={item.productThumbnail}
                       productId={item._id}
                       addCart={addCart}
+                      buyProduct={buyProduct}
                     />
                     <ToastContainer
                       // position="top-right"

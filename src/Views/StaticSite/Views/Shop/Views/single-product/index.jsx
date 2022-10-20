@@ -8,6 +8,7 @@ import { useParams } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import { updateCartData } from '../../Shop.action'
+import { ToastContainer, toast } from 'react-toastify'
 
 const SingleProduct = () => {
   const { productID } = useParams()
@@ -38,6 +39,38 @@ const SingleProduct = () => {
     getSingleProducts()
     dispatch(updateCartData(JSON.parse(localStorage.getItem('cart'))))
   }, [])
+
+  const addLocal = (productID) => {
+    if (!localStorage.getItem('cart')) return [{ productId:productID,quantity:1 }]
+    const prevCart = JSON.parse(localStorage.getItem('cart'))
+    if(prevCart.some(item=>item.productId===productID)){
+      prevCart.forEach(element => {
+        if(element.productId===productID){
+          element.quantity = element.quantity + 1
+        }
+      })
+      return prevCart
+    }else{
+      return [...prevCart,{ productId:productID, quantity:1 }]
+    }
+  }
+
+  const addCart = (idx) => {
+    console.log(addLocal(idx))
+    localStorage.setItem('cart', JSON.stringify(addLocal(idx)))
+    dispatch(updateCartData( JSON.parse(localStorage.getItem('cart'))))
+    toast.success('Item Added to Cart Successfully!', {
+      position: 'top-right',
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: false,
+      draggable: true,
+      progress: undefined,
+      theme: 'light',
+    })
+
+  }
 
   const buyProduct=()=>{
     if (!localStorage.getItem('cart')) localStorage.setItem('cart',JSON.stringify([{ productId:productDetail._id,quantity:1 }]))
@@ -90,6 +123,7 @@ const SingleProduct = () => {
             </div>
             <div className="buy_now_btn"  >
               <CommonBtn text="Buy Now" buttonAction={ buyProduct } />
+              <CommonBtn text='Add to Cart' buttonAction={ ()=>{addCart(productDetail?._id)} } />
             </div>
           </div>
           <div className="other_similar_product">
@@ -107,6 +141,7 @@ const SingleProduct = () => {
           </div>
         </div>
       </div>
+      <ToastContainer/>
     </div>
   )
 }

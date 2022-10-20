@@ -49,6 +49,8 @@
           z-index: 1;
         }
         .buy_now_btn {
+          display: flex;
+          flex-wrap: wrap;
           color: white;
           text-align: center;
           position: relative;

@@ -41,12 +41,14 @@
       font-size: 1.5rem;
       width: 250px;
       font-weight: 700;
-      margin-left: 2rem;
+      // margin-left: 2rem;
       border: none;
-      background: none;
-      background: #eee;
+      // background: none;
+      background-color: #eee;
       padding: 0 1rem;
-      border-radius: 0;
+      border-radius: 50px;
+      // padding-right: 10px;
+
       &:focus{
         border: none;
       }
@@ -75,8 +77,8 @@
       }
       label {
         display: inline-block;
-        min-width: 300px;
-        width: 100%;
+        min-width: 250px;
+        width: 280px;
         padding: 0.25rem 1rem;
         border: 1px solid #60606080;
         border-radius: 50px;
@@ -114,6 +116,13 @@
     padding: 5rem;
     border-radius: 36px;
    
+    
+  }
+  .banner-section{
+
+    .slick-slider .slick-list{
+      border-radius: 20px;
+    }
     
   }
   .banner {

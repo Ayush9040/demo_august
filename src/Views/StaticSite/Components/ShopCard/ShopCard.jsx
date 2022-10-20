@@ -8,13 +8,14 @@ const ShopCard = ({
   price = '395',
   thumbnail = 'https://cdn.pixabay.com/photo/2016/04/19/13/39/store-1338629_1280.jpg',
   productId,
-  addCart
+  addCart,
+  buyProduct
 }) => {
   let colorA = '#CE7780'
   let colorB = '#9A565B'
 
   const navigate = useNavigate()
-  
+
 
   return (
     <div className="card" onClick={()=>navigate(`product/${productId}`)}>
@@ -38,9 +39,14 @@ const ShopCard = ({
           <p className="text-white">
           ₹ {price}
           </p>
-          <button type="button" className="cart-button" onClick={(e)=>(addCart(productId,e))}>
-            <span className="svg-width">{CartButton}</span> Add to cart
-          </button>
+          <div>
+            <button type="button" className="cart-button" onClick={(e)=>(addCart(productId,e))}>
+              <span className="svg-width">{CartButton}</span> Add to cart
+            </button>
+            <button type="button" className="cart-button" onClick={(e)=>(buyProduct(productId,e))}>
+              <span className="svg-width">Buy Now</span>
+            </button>
+          </div>
         </div>
       </div>
     </div>

@@ -27,7 +27,7 @@
     justify-content: space-between;
     border-bottom-right-radius: 2rem;
     border-bottom-left-radius: 2rem;
-    height: 130px;
+    height: 150px;
     .card-title {
       margin-bottom: 2rem;
       max-height: 3rem;
@@ -35,7 +35,8 @@
     .price-container {
       display: flex;
       justify-content: space-between;
-      align-items: center;
+      align-items: flex-end;
+      padding-bottom: 10px;
       .cart-button {
         display: flex;
         align-items: center;
@@ -47,7 +48,9 @@
         color: white;
         background: none;
         cursor: pointer;
-
+        &:first-child{
+          margin-bottom: 10px;
+        }
         .svg-width svg {
           width: 12px;
           height: 12px;
