@@ -12,81 +12,76 @@ const StepProgessBar = () => {
   }
 
   const [progessBar, SetProgessBar] = useState({
-    orderPlaced:0,
-    orderShipped:33.33,
-    outOfDelivery:66.66,
-    arrivalDate:100,
+    orderPlaced: 0,
+    orderShipped: 33.33,
+    outOfDelivery: 66.66,
+    arrivalDate: 100,
   })
   return (
     <div className="progess_div">
-      <ProgressBar
-        filledBackground="linear-gradient(to right, #fefb72, #d44040)"
-        percent={progessBar.orderShipped}
-      >
-        <Step >
-          {({ accomplished, transitionState,index }) => (
-            <div
-              style={transitionStyles[transitionState]}
-              className={`transitionStep ${
-                accomplished ? 'accomplished' : null
-              }`}
-              
-            >{index+1}
-              🌑
-            </div>
+      <ProgressBar filledBackground="#CC4625" percent={progessBar.orderShipped}>
+        <Step>
+          {({ accomplished, transitionState }) => (
+            <>
+              {' '}
+              <div
+                style={transitionStyles[transitionState]}
+                className={`transitionStep ${
+                  accomplished ? 'accomplished' : null
+                }`}
+              >
+                <div className="date">ORDER DATE</div>
+              </div>
+            </>
+          )}
+        </Step>
+
+        <Step>
+          {({ accomplished, transitionState }) => (
+            <>
+              {' '}
+              <div
+                style={transitionStyles[transitionState]}
+                className={`transitionStep ${
+                  accomplished ? 'accomplished' : null
+                }`}
+              >
+                <div className="date">SHIPPED</div>
+              </div>
+            </>
           )}
         </Step>
         <Step>
-          {({ accomplished,transitionState, position,index }) => (
-            <div
-              style={transitionStyles[transitionState]}
-              className={`transitionStep ${
-                accomplished ? 'accomplished' : null
-              }`}
-            >{index+1}
-              🌒
-            </div>
+          {({ accomplished, transitionState }) => (
+            <>
+              {' '}
+              <div
+                style={transitionStyles[transitionState]}
+                className={`transitionStep ${
+                  accomplished ? 'accomplished' : null
+                }`}
+              >
+                <div className="date">OUT FOR DELIVERY</div>
+              </div>
+            </>
           )}
         </Step>
         <Step>
-          {({ accomplished, transitionState,index }) => (
-            <div
-              style={transitionStyles[transitionState]}
-              className={`transitionStep ${
-                accomplished ? 'accomplished' : null
-              }`}
-              position={50}
-            >{index+1}
-              🌓
-            </div>
+          {({ accomplished, transitionState }) => (
+            <>
+              {' '}
+              <div
+                style={transitionStyles[transitionState]}
+                className={`transitionStep ${
+                  accomplished ? 'accomplished' : null
+                }`}
+              >
+                {' '}
+                <div className="date">ARRIVAL DATE</div>
+              </div>
+            </>
           )}
         </Step>
-        <Step>
-          {({ accomplished, transitionState,index }) => (
-            <div
-              style={transitionStyles[transitionState]}
-              className={`transitionStep ${
-                accomplished ? 'accomplished' : null
-              }`}
-              position={75}
-            >{index+1}
-              🌔
-            </div>
-          )}
-        </Step>
-        {/* <Step transition="scale">
-          {({ accomplished, transitionState,index }) => (
-            <div
-              style={transitionStyles[transitionState]}
-              className={`transitionStep ${
-                accomplished ? 'accomplished' : null
-              }`}
-              position={100}
-            >{index+1}
-              🌕
-            </div>
-          )}
-        </Step>  */}
       </ProgressBar>
     </div>
   )

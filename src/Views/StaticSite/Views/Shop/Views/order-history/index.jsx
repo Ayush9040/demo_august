@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import './style.scss'
 import InnerNavComponent from '../../../../Components/InnerNavComponent'
-import { deleteIcon } from '../../../../assets/icons/icon'
 import CommonBtn from '../../../../Components/commonbtn'
+import StepProgessBar from '../../../../Components/StepProgressBar'
 
 const OrderHistroy = () => {
   const order = {
@@ -46,19 +46,9 @@ const OrderHistroy = () => {
               <div className="order_title_div">
                 <div className="order_title">name</div>
                 <div className="order_dropdown">
-                  <span>
-                    <select name="" id="" className="quantity_dropdown">
-                      <option value="">Quantity</option>
-                    </select>
-                  </span>
-                  <span
-                    className="order_delete"
-                    // onClick={() => {
-                    //   deleteProduct(item._id)
-                    // }}
-                  >
-                    {deleteIcon}
-                  </span>
+                  <select name="" id="" className="quantity_dropdown">
+                    <option value="">Quantity</option>
+                  </select>
                 </div>
               </div>
             </div>
@@ -77,7 +67,7 @@ const OrderHistroy = () => {
                 <div className="contact_btn">
                   <CommonBtn text="Contact Delivery Personnel" />
                 </div>
-                <div>track line</div>
+                <StepProgessBar />
               </div>
               <div className="order_add">
                 <div>Shipping Address</div>
@@ -119,19 +109,9 @@ const OrderHistroy = () => {
               <div className="order_title_div">
                 <div className="order_title">name</div>
                 <div className="order_dropdown">
-                  <span>
-                    <select name="" id="" className="quantity_dropdown">
-                      <option value="">Quantity</option>
-                    </select>
-                  </span>
-                  <span
-                    className="order_delete"
-                    // onClick={() => {
-                    //   deleteProduct(item._id)
-                    // }}
-                  >
-                    {deleteIcon}
-                  </span>
+                  <select name="" id="" className="quantity_dropdown">
+                    <option value="">Quantity</option>
+                  </select>
                 </div>
               </div>
             </div>
@@ -175,19 +155,9 @@ const OrderHistroy = () => {
                 <div className="order_title_div">
                   <div className="order_title">name</div>
                   <div className="order_dropdown">
-                    <span>
-                      <select name="" id="" className="quantity_dropdown">
-                        <option value="">Quantity</option>
-                      </select>
-                    </span>
-                    {/* <span
-                    className="order_delete"
-                    onClick={() => {
-                      deleteProduct(item._id)
-                    }}
-                  >
-                    {deleteIcon}
-                  </span> */}
+                    <select name="" id="" className="quantity_dropdown">
+                      <option value="">Quantity</option>
+                    </select>
                   </div>
                 </div>
               </div>

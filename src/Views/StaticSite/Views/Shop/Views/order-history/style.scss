@@ -97,8 +97,9 @@
     display: grid;
     grid-template-columns: 70% 30%;
     .contact_delivery {
+      padding-left: 4.25rem;
       .contact_btn {
-        padding-left: 4.25rem;
+        padding-bottom: 3rem;
         .global-common-btn {
           width: 27rem;
           //height: 4rem;
@@ -189,7 +190,7 @@
   }
 }
 
-@media (max-width: '1024px') {
+@media (max-width: '1200px') {
   .order_history_div {
     .track_btn {
       .global-common-btn {
@@ -201,6 +202,9 @@
         width: 25rem;
       }
     }
+    .track_order{
+      display: block;
+    }
   }
 }
 
@@ -211,12 +215,9 @@
         padding: 2.5rem 0 2.5rem 0;
       }
     }
-    .track_order{
-      display: block;
-      // .order_add{
-      //   padding-left: 0;
-      // }
-    }
+    // .track_order{
+    //   display: block;
+    // }
     .order_date {
       padding-left: 2rem;
     }
