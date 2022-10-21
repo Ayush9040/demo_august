@@ -18,7 +18,7 @@ export const locateData =[
       },
       {
         state:'Raipur',
-        notstate:'Namami Health Retreat A Wellness Sanctuary 7/156, Mulamkuzhy, Malayttoor, Ernakulam Kochi 683587 – Kerala, India.',
+        notstate:'The Yoga Institute, Opp. Indian Chilly Square, Near Vidya Hospital, Shankar Nagar, Raipur, India – 492007',
         phone:'+91 9752550490 / 982035049',
         email:'tyiraipur@gmail.com',
         website:'https://theyogainstituteraipur.com'
@@ -65,6 +65,13 @@ export const locateData =[
         notstate:'Saket College, Saket Vidyanagri Marg, Katemenivali, Chinchpada Road, Kalyan, Maharashtra - 421306',
         phone:'+91-9664976447'
       },
+      {
+        state:'Maharashtra',
+        notstate:'The Yoga Institute, Lokhandwala 703, Aston Building, Above Mercedes Benz Showroom, Andheri, Near Lokhandwala Circle',
+        phone:'+91-9833864964',
+        email:'dhhruv.s@gmail.com'
+      },
+
       // {
       //   state:'Andheri (W)',
       //   notstate:'Samartha Aishwarya, B-Wing, #710,7th floor, Above Marks & Spencer, Lion Sol Marg, Opp. Highland Park,Lokhandwala Complex, Andheri (West), Mumbai- 400053',
