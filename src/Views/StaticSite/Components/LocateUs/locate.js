@@ -66,7 +66,7 @@ export const locateData =[
         phone:'+91-9664976447'
       },
       {
-        state:'Maharashtra',
+        state:'Lokhandwala',
         notstate:'The Yoga Institute, Lokhandwala 703, Aston Building, Above Mercedes Benz Showroom, Andheri, Near Lokhandwala Circle',
         phone:'+91-9833864964',
         email:'dhhruv.s@gmail.com'
