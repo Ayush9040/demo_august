@@ -1,5 +1,9 @@
 .order_history_div {
-  height: 100vh;
+  margin-bottom: 3rem;
+  .order_date {
+    padding-left: 5rem;
+    font-size: 1.5rem;
+  }
   .order_heading {
     font-size: 2rem;
     font-weight: 700;
@@ -21,10 +25,6 @@
         padding: 2.5rem 0;
         display: flex;
         // padding-left: -1.5rem;
-        .order_date {
-          padding-left: 5rem;
-          font-size: 1.5rem;
-        }
       }
     }
     .order_line {
@@ -34,7 +34,7 @@
     }
     .order_num {
       font-size: 1.5rem;
-      padding: 2.5rem 0 3rem 12rem;
+      padding: 2.5rem 0 3rem 8rem;
     }
   }
   .product_detail {
@@ -65,56 +65,31 @@
           font-size: 2.5rem;
           font-weight: 700;
         }
-        .order_dropdown {
-          padding-top: 4rem;
-          .quantity_dropdown {
-            background-color: #cecece;
-            padding: 1.25rem;
-            font-size: 1.75rem;
-            border: none;
-            cursor: pointer;
-            border-radius: 1.5rem;
-          }
-        }
+       
         .order_delete {
           padding-left: 3rem;
+          vertical-align: middle;
           svg {
             width: 3rem;
             height: 3rem;
+            
           }
         }
       }
+     
     }
     .track_package {
       padding-left: 5rem;
-      .track_btn {
-        .global-common-btn {
-          width: 30rem;
-          height: 4rem;
-          border: 1px solid #cc4625;
-          font-weight: 500;
-          color: white;
-          background-color: #cc4625;
-          padding: 1rem;
-          .global-common-btn-content {
-            font-size: 1.5rem;
-            text-align: center;
-          }
-        }
-      }
-      .request_btn {
-        .global-common-btn {
-          margin-top: 3rem;
-          padding-top: 1rem;
-          width: 30rem;
-          height: 4rem;
-          border: 1px solid black;
-          font-weight: 500;
-          .global-common-btn-content {
-            font-size: 1.5rem;
-            text-align: center;
-          }
-        }
+    }
+    .order_dropdown {
+      padding-top: 4rem;
+      .quantity_dropdown {
+        background-color: #cecece;
+        padding: 1.25rem;
+        font-size: 1.75rem;
+        border: none;
+        cursor: pointer;
+        border-radius: 1.5rem;
       }
     }
   }
@@ -122,15 +97,16 @@
     display: grid;
     grid-template-columns: 70% 30%;
     .contact_delivery {
+      padding-left: 4.25rem;
       .contact_btn {
-        padding-left: 4.25rem;
+        padding-bottom: 3rem;
         .global-common-btn {
           width: 27rem;
           //height: 4rem;
           border: none;
           border-radius: 1.5rem;
           font-weight: 500;
-          background-color: #CECECE;
+          background-color: #cecece;
           padding: 1rem;
           margin-top: 2rem;
           .global-common-btn-content {
@@ -140,10 +116,147 @@
         }
       }
     }
-    .order_add{
-      padding: 2rem 0; 
+    .order_add {
+      padding: 2rem 0;
       font-size: 1.5rem;
+      padding-left: 5rem;
+    }
+  }
+  .retrun_order {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .option_btn {
+      .global-common-btn {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        padding-top: 1rem;
+        width: 50rem;
+        height: 4rem;
+        border: 1px solid black;
+        font-weight: 500;
+        .global-common-btn-content {
+          font-size: 1.5rem;
+          text-align: center;
+        }
+      }
+    }
+  }
+  .track_btn {
+    .global-common-btn {
+      width: 30rem;
+      height: 4rem;
+      border: 1px solid #cc4625;
+      font-weight: 500;
+      color: white;
+      background-color: #cc4625;
+      padding: 1rem;
+      .global-common-btn-content {
+        font-size: 1.5rem;
+        text-align: center;
+      }
+    }
+  }
+  .request_btn {
+    .global-common-btn {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      width: 30rem;
+      height: 4rem;
+      border: 1px solid black;
+      font-weight: 500;
+      .global-common-btn-content {
+        font-size: 1.5rem;
+        text-align: center;
+      }
+    }
+  }
+}
 
+@media (max-width: '1350px') {
+  .order_history_div {
+    .product_detail {
+      grid-template-columns: 60% 40%;
+    }
+    .order_history {
+      .order_placed {
+        grid-template-columns: 60% 40%;
+      }
+    }
+    .track_order {
+      grid-template-columns: 60% 40%;
+    }
+  }
+}
+
+@media (max-width: '1200px') {
+  .order_history_div {
+    .track_btn {
+      .global-common-btn {
+        width: 25rem;
+      }
+    }
+    .request_btn {
+      .global-common-btn {
+        width: 25rem;
+      }
+    }
+    .track_order{
+      display: block;
+    }
+  }
+}
+
+@media (max-width: '786px') {
+  .order_history_div {
+    .order_history {
+      .order_num {
+        padding: 2.5rem 0 2.5rem 0;
+      }
+    }
+    // .track_order{
+    //   display: block;
+    // }
+    .order_date {
+      padding-left: 2rem;
+    }
+    .product_detail {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: end;
+      padding-right: 2.5rem;
+      padding-bottom: 3rem;
+      .track_package {
+        padding-left: 0;
+      }
+      .order_detail {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: '450px') {
+  .order_history_div {
+    .order_history {
+      .order_num{
+        text-align: center;
+      }
+      .order_placed {
+        display: block;
+        .order_date_div{
+          justify-content: center;
+        }
+      }
+    }
+    .product_detail{
+      .order_dropdown{
+        .quantity_dropdown{
+          margin-bottom: 2rem;
+        }
+      }
     }
   }
 }
