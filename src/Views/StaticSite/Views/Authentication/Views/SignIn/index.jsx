@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import {
   Link,
-  useLocation,
   useNavigate,
   useSearchParams,
 } from 'react-router-dom'
@@ -22,16 +21,16 @@ const SignIn = () => {
   const navigate = useNavigate()
   const { isLoggedIn, error } = useSelector((state) => state.auth)
   const [ page,setPage ] = useState()
-  const [course, setCourse] = useState()
+  // const [course, setCourse] = useState()
   const [formData, setFormData] = useState({
     email: '',
     password: '',
   })
-  const location = useLocation()
+  // const location = useLocation()
 
-  useEffect(() => {
-    setCourse(location?.pathname?.split('/')?.[3])
-  }, [location])
+  // useEffect(() => {
+  //   setCourse(location?.pathname?.split('/')?.[3])
+  // }, [location])
 
   const [Params] = useSearchParams()
 
@@ -62,7 +61,7 @@ const SignIn = () => {
             password: formData.password,
           },
           navigate,
-          page!=='cart' ? `/enrollment/${ course }/?date=${ selectDate }`: '/shop/checkout',
+          page!=='cart' ? `/enrollment/${ page }/?date=${ selectDate }`: '/shop/checkout',
         )
       )
       error.isError !== false ? setModal(true) : setModal(false)
@@ -134,8 +133,7 @@ const SignIn = () => {
             <CommonBtn text='Sign In' buttonAction={handleSignIn} />
             <Link
               to={
-                course !== undefined
-                  ? `/enrollment/${course}/?date=${selectDate}`
+                (page !== undefined && page!=='cart') ? `/enrollment/${page}/?date=${selectDate}`
                   : '/'
               }
             >
