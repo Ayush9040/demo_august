@@ -37,6 +37,10 @@ export const createOrder = (cartId, description)=>{
   return axios.post(`${ ecomBaseDomin }/payment/order/${ cartId }`, description)
 }
 
+export const orderCallback = (payload)=>{
+  return axios.post(`${ ecomBaseDomin }/payment/callback`,payload)
+}
+
 export const getCoupon = ( coupon )=>{
   return axios.get(`${ ecomBaseDomin }/coupon/search/${ coupon }`)
 }

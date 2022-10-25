@@ -47,6 +47,8 @@ const SignIn = () => {
   }, [isLoggedIn])
 
 
+  console.log(page)
+
 
   const handleSignIn = async() => {
     if (!validateEmail(formData.email)) {
@@ -61,7 +63,7 @@ const SignIn = () => {
             password: formData.password,
           },
           navigate,
-          page!=='cart' ? `/enrollment/${ page }/?date=${ selectDate }`: '/shop/checkout',
+          page ? page!=='cart' ? `/enrollment/${ page }/?date=${ selectDate }`: '/shop/checkout' : '/',
         )
       )
       error.isError !== false ? setModal(true) : setModal(false)
@@ -133,7 +135,7 @@ const SignIn = () => {
             <CommonBtn text='Sign In' buttonAction={handleSignIn} />
             <Link
               to={
-                (page !== undefined && page!=='cart') ? `/enrollment/${page}/?date=${selectDate}`
+                (page && page!=='cart') ? `/enrollment/${page}/?date=${selectDate}`
                   : '/'
               }
             >

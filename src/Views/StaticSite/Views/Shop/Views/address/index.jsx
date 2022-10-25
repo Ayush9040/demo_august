@@ -10,6 +10,7 @@ import {
   getAddress,
   createOrder,
   getCoupon,
+  orderCallback,
 } from '../../Shop.api'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
@@ -192,9 +193,14 @@ const ShippingAdd = () => {
           res.razorpay_order_id &&
           res.razorpay_signature
         ) {
-          // await axios.post(`${ authBaseDomain }/ali/mail`, mailTemplate)
+          orderCallback({   
+            razorpay_payment_id:res.razorpay_payment_id,// eslint-disable-line
+            razorpay_order_id:res.razorpay_order_id,// eslint-disable-line
+            razorpay_signature:res.razorpay_signature,// eslint-disable-line
+            userId:user?.data?.userId,
+            cartId:orderCartId
+          })
           navigate('/shop/thank-you')
-          console.log('success')
         }
       },
       prefill: {
