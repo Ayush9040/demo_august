@@ -4,8 +4,6 @@ import './style.scss'
 
 const HistoryList = ({ title,options=['a','b','c','d'], data=[] }) => {
 
-
-
   return (
     <div className='history-list' >
       <div className='filter-history' >
@@ -15,7 +13,10 @@ const HistoryList = ({ title,options=['a','b','c','d'], data=[] }) => {
         </select>
       </div>
       <div className='history-listitems' >
-        {data.map(item=><HistoryCard key={item} status={item%2===0 ? 'Completed':'On-going'} />)}
+        {data.map(item=>{
+          const date = new Date(item.createdAt)
+          return <HistoryCard key={item._id} order={ item.cartId } orderId={ item.orderId } timeline={ date.toLocaleDateString()  }  status={item.deliveryStatus} />
+        })}
       </div>
     </div>
   )

@@ -1,9 +1,9 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './style.scss'
 import 'react-step-progress-bar/styles.css'
 import { ProgressBar, Step } from 'react-step-progress-bar'
 
-const StepProgessBar = () => {
+const StepProgessBar = ( { status=33.33 } ) => {
   const transitionStyles = {
     entering: { transform: 'scale(1.75)' },
     entered: { transform: 'scale(1)' },
@@ -11,15 +11,10 @@ const StepProgessBar = () => {
     exited: { transform: 'scale(1)' },
   }
 
-  const [progessBar, SetProgessBar] = useState({
-    orderPlaced: 0,
-    orderShipped: 33.33,
-    outOfDelivery: 66.66,
-    arrivalDate: 100,
-  })
+ 
   return (
     <div className="progess_div">
-      <ProgressBar filledBackground="#CC4625" percent={progessBar.orderShipped}>
+      <ProgressBar filledBackground="#CC4625" percent={status}>
         <Step>
           {({ accomplished, transitionState }) => (
             <>

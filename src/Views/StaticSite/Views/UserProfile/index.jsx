@@ -1,13 +1,15 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
-//import HistoryList from '../HistoryList'
-import InnerNavComponent from '../InnerNavComponent'
+import HistoryList from './HistoryList'
+import InnerNavComponent from '../../Components/InnerNavComponent'
+import { fetchUserOrders } from './Profile.api'
 import './style.scss'
 
 const UserProfile = () => {
   const [module, setModule] = useState(0)
   const { user } = useSelector((state) => state.auth)
+  const [ orders,setOrders ] = useState([])
   const navItems = [
     { option: user?.data?.firstName || 'firstName', key: 0 },
     { option: 'Courses', key: 1 },
@@ -22,6 +24,19 @@ const UserProfile = () => {
     menuItems: [],
   }
 
+
+
+  const getOrderData = async() => {
+    const { data } = await fetchUserOrders(user?.data?.userId)
+    setOrders(data.data)
+  }
+
+
+
+
+  useEffect(() => {
+    getOrderData()
+  }, [ user ])
   return (
     <div className="user-profile">
       <InnerNavComponent abc={UserNav} />
@@ -31,10 +46,10 @@ const UserProfile = () => {
             <div id="profile-picture"></div>
             <ul>
               {navItems.map((item) => {
-                if (item.key === 1 || item.key === 2) {
+                if (item.key === 1) {
                   return (
                     <div
-                      onMouseOver={() => setModule(item.key)}
+                      onClick={() => setModule(item.key)}
                       key={item.key}
                       className="coming-soon"
                     >
@@ -83,11 +98,11 @@ const UserProfile = () => {
             <div className="profile-overview">
               <h1 style={{ display: 'inline-block' }}>Overview</h1>
               <div id="order-list">
-                {/* <HistoryList
-                  title='Courses'
-                  data={[]}
-                  options={['All', 'Completed', 'On-going']}
-                /> */}
+                <HistoryList
+                  title='Orders'
+                  data={orders}
+                  options={['All', 'Placed', 'Shipped','Out_for_Delivery','Delivered']}
+                />
                 {/* <HistoryList
                   title='Orders'
                   data={[]}
@@ -107,11 +122,11 @@ const UserProfile = () => {
           )}
           {module === 2 && (
             <div className="user-orders profile-overview">
-              {/* <HistoryList
+              <HistoryList
                 title='Orders'
-                data={[]}
-                options={['All', 'Delivered', 'On-going']}
-              /> */}
+                data={orders}
+                options={['All', 'Placed', 'Shipped','Out_for_Delivery','Delivered']}
+              />
             </div>
           )}
           {module === 3 && (

@@ -48,3 +48,7 @@ export const getCoupon = ( coupon )=>{
 export const searchProduct = ( searchValue )=>{
   return axios.get(`${ ecomBaseDomin }/product/searchproduct/${ searchValue }`)
 }
+
+export const getOrderByOrderId = ( orderId ) => {
+  return axios.get(`${ ecomBaseDomin }/payment/order/${ orderId }`)
+}
