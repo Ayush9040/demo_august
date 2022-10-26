@@ -53,7 +53,7 @@ const OrderHistroy = () => {
   return (
     <>
       <InnerNavComponent abc={order} />
-      { order.deliveryStatus!=='delivered' ? <InProgress orderDetails={ orderDetails } products={ products } totalAmount={ totalAmount }  /> : <Delivered orderDetails={ orderDetails } products={ products } totalAmount={ totalAmount } /> }
+      { order.deliveryStatus!=='DELIVERED' ? <InProgress orderDetails={ orderDetails } products={ products } totalAmount={ totalAmount }  /> : <Delivered orderDetails={ orderDetails } products={ products } totalAmount={ totalAmount } /> }
     </>
   )
 }

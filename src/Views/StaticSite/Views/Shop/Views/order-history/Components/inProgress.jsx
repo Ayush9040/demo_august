@@ -11,10 +11,10 @@ const InProgress = ( { orderDetails,products,totalAmount } ) => {
 
   const checkOrderStatus = ()=>{
     switch(orderDetails?.deliveryStatus){
-    case 'placed': return 0
-    case 'shipped': return 33.33
-    case 'out_for_delivery': return 66.66
-    case 'delivered': return 100
+    case 'ORDER_PLACED': return 0
+    case 'SHIPPED': return 33.35
+    case 'OUT_FOR_DELIVERY': return 66.67
+    case 'DELIVERED': return 100
     }
   }
 
@@ -68,10 +68,12 @@ const InProgress = ( { orderDetails,products,totalAmount } ) => {
         {trackPackage && (
           <div className="track_order">
             <div className="contact_delivery">
-              <div className="contact_btn" style={{ visibility:'hidden' }} >
-                <CommonBtn text="Contact Delivery Personnel" />
+              <div className="contact_btn"  >
+                {/* <CommonBtn text="Contact Delivery Personnel" /> */}
+                <h4>Delivery Partner:{ orderDetails.deliveryPartner }<br/>TrackingId:{ orderDetails.trackingId }</h4>
               </div>
               <StepProgessBar status={ checkOrderStatus() }  />
+              
             </div>
             <div className="order_add">
               <div>Shipping Address</div>

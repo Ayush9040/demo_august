@@ -25,7 +25,7 @@ const StepProgessBar = ( { status=33.33 } ) => {
                   accomplished ? 'accomplished' : null
                 }`}
               >
-                <div className="date">ORDER DATE</div>
+                <div className="date">ORDER PLACED</div>
               </div>
             </>
           )}
@@ -72,7 +72,7 @@ const StepProgessBar = ( { status=33.33 } ) => {
                 }`}
               >
                 {' '}
-                <div className="date">ARRIVAL DATE</div>
+                <div className="date">DELIVERED</div>
               </div>
             </>
           )}
