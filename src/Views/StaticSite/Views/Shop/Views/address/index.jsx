@@ -174,7 +174,8 @@ const ShippingAdd = () => {
     if( !finalAddId ) return
     const { data } = await createOrder(orderCartId, {
       notes: {
-        description: finalAddId,
+        description: `order_${ orderCartId }`,
+        addressId:finalAddId
       },
     })
     localStorage.removeItem('cart')
@@ -198,7 +199,8 @@ const ShippingAdd = () => {
             razorpay_order_id:res.razorpay_order_id,// eslint-disable-line
             razorpay_signature:res.razorpay_signature,// eslint-disable-line
             userId:user?.data?.userId,
-            cartId:orderCartId
+            cartId:orderCartId,
+            addresId:finalAddId
           })
           navigate('/shop/thank-you')
         }
