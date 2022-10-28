@@ -200,7 +200,7 @@ const ShippingAdd = () => {
             razorpay_signature:res.razorpay_signature,// eslint-disable-line
             userId:user?.data?.userId,
             cartId:orderCartId,
-            addresId:finalAddId
+            addressId:finalAddId
           })
           navigate('/shop/thank-you')
         }
