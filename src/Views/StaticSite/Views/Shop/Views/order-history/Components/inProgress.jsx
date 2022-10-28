@@ -8,6 +8,8 @@ const InProgress = ( { orderDetails,products,totalAmount } ) => {
   const date = new Date( orderDetails?.createdAt )
 
   const [trackPackage, setTrackPackage] = useState(false)
+  
+  const address = orderDetails?.addressId
 
   const checkOrderStatus = ()=>{
     switch(orderDetails?.deliveryStatus){
@@ -17,6 +19,8 @@ const InProgress = ( { orderDetails,products,totalAmount } ) => {
     case 'DELIVERED': return 100
     }
   }
+
+  console.log(orderDetails)
 
   console.log(products,'s')
 
@@ -36,7 +40,7 @@ const InProgress = ( { orderDetails,products,totalAmount } ) => {
             </div>
             <div className="order_date">
               <div>SHIP TO:</div>
-              <div> Jonathan Adriel</div>
+              <div>{ address?.name }</div>
             </div>
           </div>
           <div className="order_num"> ORDER #{ orderDetails?.orderId }</div>
@@ -70,17 +74,17 @@ const InProgress = ( { orderDetails,products,totalAmount } ) => {
             <div className="contact_delivery">
               <div className="contact_btn"  >
                 {/* <CommonBtn text="Contact Delivery Personnel" /> */}
-                <h4>Delivery Partner:{ orderDetails.deliveryPartner }<br/>TrackingId:{ orderDetails.trackingId }</h4>
+                <p style={{ color:'#00000080' }} >Delivery Partner:<span style={{ color:'#000000' }} >{ orderDetails.deliveryPartner }</span><br/>TrackingId:<span style={{ color:'#000000' }} >{ orderDetails.trackingId }</span></p>
               </div>
               <StepProgessBar status={ checkOrderStatus() }  />
               
             </div>
             <div className="order_add">
               <div>Shipping Address</div>
-              <div>Jonathan Adriel</div>
-              <div>684/A,</div>
-              <div>5th Main Road, Hal 3rd Stage, New Thippasandra</div>
-              <div>BENGALURU, KARNATAKA 560075</div>
+              <div>{ address.name }</div>
+              <div>{address?.houseNo}</div>
+              <div>{address?.street},{address?.landmark}</div>
+              <div>{address?.city},{address?.country} - {address?.pincode}</div>
             </div>
           </div>
         )}

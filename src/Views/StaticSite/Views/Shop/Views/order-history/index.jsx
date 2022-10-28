@@ -41,8 +41,8 @@ const OrderHistroy = () => {
 
   const getOrders = async()=>{
     const { data } = await getOrderByOrderId(orderId)
-    setOrderDetails(data.data?.[0])
-    getCart(data.data?.[0]?.cartId)
+    setOrderDetails(data.data)
+    getCart(data.data?.cartId)
 
   }
 

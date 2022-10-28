@@ -130,7 +130,7 @@ const ShippingAdd = () => {
       setAddressId(data.data._id)
       return data.data._id
     } catch (err) {
-      toast.error(err.message, {
+      toast.error('Please Select Address', {
         position: 'top-right',
         autoClose: 1000,
         hideProgressBar: false,
