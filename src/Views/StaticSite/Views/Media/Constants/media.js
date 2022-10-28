@@ -4243,6 +4243,11 @@ const printMedia = [
     year:'2022',
     media:[
       {
+        img: `${baseDomain}${printMediaAssest.printMediaAssest924}`,
+        url:'https://epaper.navbharattimes.com/imageview_100656_67285_4_16_04-07-2022_6_i_1_sf.html',
+        alt:'nbt-october23-2022'
+      },
+      {
         img: `${baseDomain}${printMediaAssest.printMediaAssest848}`,
         url:'https://businessnewsweek.in/news/honble-cabinet-minister-piyush-goyal-to-grace-international-day-of-yoga-celebrations-on-tuesday-21-june-in-mumbai/',
         alt:'Bussiness-News-Week-20th-June-2022'

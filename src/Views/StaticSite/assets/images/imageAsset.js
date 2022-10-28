@@ -802,7 +802,7 @@ export const publicationAssests = {
 
   //emag
   publicationAssests85:'/Publications/Yoga%20%26%20Total%20Health/YTH-Aug-22-Emag-1.jpg',
-  publicationAssests86:'/Publications/Yoga%20%26%20Total%20Health/Yoga%20and%20Total%20Health_sep.JPG',
+  publicationAssests86:'/Publications/Yoga%20%26%20Total%20Health/Yoga%26Total-Helath-Oct-2022.JPG',
 
   // Yogasattva-Newsletter
   // 2017
@@ -2497,7 +2497,7 @@ export const printMediaAssest = {
   printMediaAssest921:'/print_media/new2022/july3.jpg',
   printMediaAssest922:'/print_media/new2022/july31.jpg',
   printMediaAssest923:'/print_media/new2022/july4.jpg',
-
+  printMediaAssest924:'/print_media/2022/Navbharat-Times-Epaper-23rd-October-2022.jpg'
 }
 
 export const locateAsset ={
