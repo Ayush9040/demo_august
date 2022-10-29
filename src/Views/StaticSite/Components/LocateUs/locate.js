@@ -141,7 +141,7 @@ export const locateData =[
   {
     flag:`${baseDomain}${locateAsset.costaRica}`,
     country:'Costa Rica',
-    add:'The Yoga Institute, Costa Rica, Finca Elefante,',
+    add:'The Yoga Institute, Costa Rica, Modo Elefante,',
     subAdd:'Provincia de Alajuela, Atenas, 20501',
     mobile:'(506) 8729 3102',
     email:'tyi@modoelefante.org',
