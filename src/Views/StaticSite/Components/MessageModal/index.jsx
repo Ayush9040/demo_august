@@ -14,10 +14,10 @@ const MessageModal = ({ message, type, nav, closePopup }) => {
             nav ? navigate(`${nav}`) : closePopup(false)
           }}
         >
-          X
+          &#10005; 
         </div>
         <h1>{type}</h1>
-        <h2>{message}</h2>
+        <h2 className='message' >{message}</h2>
       </div>
     </div>
   )

@@ -37,6 +37,8 @@ export function* handleFetchUserDataEffect() {
     yield put(loginUserSuccess(data))
   } catch (error) {
     yield put(loginUserError(error))
+    localStorage.removeItem('authToken')
+    localStorage.removeItem('refreshToken')
     // yield put(setAlert({ message: error.response.data.message, type: 'ERROR' }))
   }
 }

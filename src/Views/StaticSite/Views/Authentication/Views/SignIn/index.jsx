@@ -21,6 +21,7 @@ const SignIn = () => {
   const navigate = useNavigate()
   const { isLoggedIn, error } = useSelector((state) => state.auth)
   const [ page,setPage ] = useState()
+  const [ errMsg,setErrMsg ] = useState('')
   // const [course, setCourse] = useState()
   const [formData, setFormData] = useState({
     email: '',
@@ -47,7 +48,13 @@ const SignIn = () => {
   }, [isLoggedIn])
 
 
-  console.log(page)
+  const handleContinueAsGuest = ()=>{
+    if(!page) return navigate('/')
+    if(page!=='cart') navigate(`/enrollment/${page}/?date=${selectDate}`)
+    setErrMsg('Please login to continue purchase!')
+    setModal(true)
+    
+  }
 
 
   const handleSignIn = async() => {
@@ -66,7 +73,7 @@ const SignIn = () => {
           page ? page!=='cart' ? `/enrollment/${ page }/?date=${ selectDate }`: '/shop/checkout' : '/',
         )
       )
-      error.isError !== false ? setModal(true) : setModal(false)
+      if(error.isError !== false){  setModal(true);setErrMsg( error.isError ) }else{ setModal(false)}
     }
   }
 
@@ -76,7 +83,7 @@ const SignIn = () => {
     menuColor: 'black',
     menuItems: [],
   }
-  console.log(error.isError)
+
   return (
     <div className='signin-container'>
       <InnerNavComponent abc={UserNav} />
@@ -133,14 +140,7 @@ const SignIn = () => {
           </label> */}
           <label className='signin-btn'>
             <CommonBtn text='Sign In' buttonAction={handleSignIn} />
-            <Link
-              to={
-                (page && page!=='cart') ? `/enrollment/${page}/?date=${selectDate}`
-                  : '/'
-              }
-            >
-              <CommonBtn text={'Continue as a guest'} isColor={'#EA4335'} />
-            </Link>
+            <CommonBtn text={'Continue as a guest'} isColor={'#EA4335'} buttonAction={handleContinueAsGuest} />
           </label>
         </form>
         <Link to='/user/sign-up'>
@@ -164,7 +164,7 @@ const SignIn = () => {
       {modal !== false && (
         <MessageModal
           type='ERROR'
-          message={error.isError}
+          message={errMsg}
           closePopup={setModal}
         />
       )}
