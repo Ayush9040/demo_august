@@ -4243,6 +4243,16 @@ const printMedia = [
     year:'2022',
     media:[
       {
+        img: `${baseDomain}${printMediaAssest.printMediaAssest925}`,
+        url:'https://epaper.navbharattimes.com/imageview_3286_79811_4_16_30-10-2022_4_i_1_sf.html',
+        alt:'nbt-october30-2022'
+      },
+      {
+        img: `${baseDomain}${printMediaAssest.printMediaAssest926}`,
+        url:'https://epaper.navbharattimes.com/imageview_3259_67154_4_16_31-10-2022_6_i_1_sf.html',
+        alt:'nbt-october31-2022'
+      },
+      {
         img: `${baseDomain}${printMediaAssest.printMediaAssest924}`,
         url:'https://epaper.navbharattimes.com/imageview_100656_67285_4_16_04-07-2022_6_i_1_sf.html',
         alt:'nbt-october23-2022'
