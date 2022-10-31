@@ -18,12 +18,6 @@ export const locateData =[
         url:''
       },
       {
-        state:'Kalyan',
-        notstate:'Saket College, Saket Vidyanagri Marg, Katemenivali, Chinchpada Road, Kalyan, Maharashtra - 421306',
-        phone:'+91-9664976447',
-        url:''
-      },
-      {
         state:'Raipur',
         notstate:'Namami Health Retreat &amp; A Wellness Sanctuary 7/156, Mulamkuzhy, Malayttoor, Ernakulam Kochi 683587 – Kerala, India.',
         phone:'+91 9752550490 / 982035049',
@@ -48,13 +42,6 @@ export const locateData =[
         url:''
       },
       {
-        state:'Juhu',
-        notstate:'Ground Floor Backside, Abhijat Bunglow, Plot No. 48, NS Road Number 7, Opp. Siddhivinayak Building, JVPD Scheme, Juhu.',
-        phone:'+91-9833864964',
-        email:'dhhruv.s@gmail.com',
-        url: ''
-      },
-      {
         state:'Matunga (CR)',
         notstate:'Sri Kanyaka Parmeshwari Temple, Plot No 403, Vasavi Nilayam, Telang Road, Matunga (CR), Mumbai.',
         phone:'+91-887995500',
@@ -66,6 +53,20 @@ export const locateData =[
         phone:'+91-9833864964',
         email:'dhhruv.s@gmail.com',
         url:'',
+      },
+      {
+        state:'Juhu',
+        notstate:'Ground Floor Backside, Abhijat Bunglow, Plot No. 48, NS Road Number 7, Opp. Siddhivinayak Building, JVPD Scheme, Juhu.',
+        phone:'+91-9833864964',
+        email:'dhhruv.s@gmail.com',
+        url: ''
+      },
+      {
+        state:'Vile Parle',
+        notstate:'Sanyas Ashram Temple, Off. Bajaj Road, Vile Parle West, Mumbai - 400056',
+        phone:'+91-9833864964',
+        email:'dhhruv.s@gmail.com',
+        url: ''
       },
       {
         state:'Kalyan',
@@ -94,13 +95,6 @@ export const locateData =[
       //   state:'Indore',
       //   notstate:'The Yoga Institute, 1st Plot No. 3, Akshay Deep Colony MR 9, AB Rd, near Lotus, Indore, Madhya Pradesh 452010'
       // },
-      {
-        state:'Vile Parle',
-        notstate:'Sanyas Ashram Temple, Off. Bajaj Road, Vile Parle West, Mumbai - 400056',
-        phone:'+91-9833864964',
-        email:'dhhruv.s@gmail.com',
-        url: ''
-      },
     ]
   },
   {
