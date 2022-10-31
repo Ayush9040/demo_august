@@ -2156,22 +2156,22 @@ const ttc500hr = {
           points: [
             {
               listItem:
-                'You will have an opportunity to directly interact with spiritual Guru Dr. Hansaji Yogendra. She is available to attend to your queries and give counsel. ',
+                'You will have an opportunity to directly interact with spiritual Guru Dr. Hansaji Yogendra. She is available to attend to your queries and give counsel.',
               subItems: [],
             },
             {
               listItem:
-                'You Our expert trainers for the course, over 40 in number, have mastered the yogic way of life and are proficient in passing on their learnings in a simple and practical way. Armed with decades of experience, they offer tremendous value and insight to new learners. have an opportunity to directly interact with our Guru Dr. Hansaji Yogendra. She is always available to attend to your queries and give counsel.',
+                'Our expert trainers for the course, over 40 in number, have mastered the yogic way of life and are proficient in passing on their learnings in a simple and practical way. Armed with decades of experience, they offer tremendous value and insight to new learners.',
               subItems: [],
             },
             {
               listItem:
-                'You will have Apart from the main yoga curriculum, you will learn immensely from the class experience itself. You will meet people with diverse backgrounds and experiences that you can gain insights from. There will be sadhakas of all age groups – right from teenagers to senior citizens. Every person has had a unique experience in life and it will be enriching to know all these stories. opportunity to directly interact with our Guru Dr. Hansaji Yogendra. She is always available to attend to your queries and give counsel.',
+                'Apart from the main yoga curriculum, you will learn immensely from the class experience itself. You will meet people with diverse backgrounds and experiences that you can gain insights from. There will be sadhakas of all age groups – right from teenagers to senior citizens. Every person has had a unique experience in life and it will be enriching to know all these stories.',
               subItems: [],
             },
             {
               listItem:
-                'You will have This one-of-a-kind experience will groom you to calmly and mindfully handle people and situations  opportunity to directly interact with our Guru Dr. Hansaji Yogendra. She is always available to attend to your queries and give counsel.',
+                'This one-of-a-kind experience will groom you to calmly and mindfully handle people and situations.',
               subItems: [],
             },
           ],
@@ -3961,7 +3961,7 @@ const ttc900hr = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'ttc',
-    dates: ['17th Oct to 4th Feb 2023'],
+    dates: ['31st Oct 2022 to 18th Feb 2023'],
     online: true,
     onCampus: false,
     nonResidential: false,
@@ -4242,7 +4242,7 @@ const ttc900hr = {
             ],
 
             [
-              'Internship- health & wellness camps, 7 days camp & other initiatives',
+              'Health & wellness camps, 7 days camp & other initiatives',
 
               '135 hours',
             ],

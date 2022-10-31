@@ -101,6 +101,8 @@ const data=
       <li>During your stay here, kindly maintain an atmosphere of peace and calm that is conducive to yogic practices at all times. </li>
       <li>Maintain the sanctity of the institute and conduct yourself positively.</li>
       <li>Keep in mind that you are here not merely to study the ancient discipline of Yoga, but also apply the same discipline and lifestyle to yourself in day-to-day activities; therefore, conduct yourself with restraint.</li>
+      <li>Fees once paid will not be refundable. Fees subject to change and will be updated each calendar year accordingly. For further queries, kindly email us on <span style={{ fontWeight: 'bold' }}><a href='mailto:info@theyogainstitute.org'>info@theyogainstitute.org</a></span></li>
+      <li>If one does not join the course within a year from the date of fees paid then the admission will be terminated. There will be no adjustments or refund of the fees once the admission is terminated.</li>
     </ul>
   }
 ]
