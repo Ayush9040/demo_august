@@ -1,0 +1,192 @@
+.heading-main {
+  width: 100%;
+  margin-top: 50px;
+  text-align: center;
+  .heading-1 {
+    font-size: 3.75rem;
+    font-weight: 700;
+  }
+  .heading-2 {
+    font-size: 28px;
+    font-weight: 500;
+  }
+}
+
+.carosoul-main {
+  overflow-x: hidden;
+  margin: 10px auto;
+  .carosoul-main h2 {
+    margin: 0 auto;
+  }
+  .carosoul-main h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  .carosoul-slide img {
+    width: 95%;
+    height: 600px;
+    margin: 0 auto;
+    border-radius: 50px;
+  }
+}
+
+.courses-details {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 200px;
+  .courses-details-left {
+    margin-left: 10%;
+  }
+  .courses-details-left img {
+    width: 65%;
+    height: 450px;
+    border-radius: 50px;
+    margin-left: 15%;
+  }
+  .courses-details-right {
+    width: 80%;
+  }.courses-details-right h2{
+    font-weight: bold;
+  }.courses-details-right p{
+    font-size: 1.75rem;
+    margin-top: 20px;
+    width: 80%;
+  }
+}
+
+.apply-main {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 200px;
+  margin-left: 6%;
+  .apply-duration p{
+    font-size: 1.75rem;
+    margin-top: 20px;
+  }
+  .apply-right {
+    margin-left: 10%;
+    width: 70%;
+  }.apply-right h2{
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }.apply-timing h5{
+    font-size: 1.75rem;
+    margin-top: 10px;
+  }.apply-para{
+    margin-top: 10px;
+  }
+  .apply-timing p {
+    font-size: 1.75rem;
+  }
+  .apply-timing ol {
+    font-size: 1.75rem;
+    padding-left: 20px;
+  }
+  .apply-packages h5{
+    font-size: 1.75rem;
+    margin-top: 10px;
+  }
+  .apply-packages p {
+    font-size: 1.75rem;
+  }
+  .apply-timing p {
+    font-size: 1.75rem;
+  }.apply-fees h5{
+    font-size: 1.75rem;
+    margin-top: 10px;
+  }
+  .apply-fees p {
+    font-size: 1.75rem;
+  }.apply-address{
+    margin-top: 10px;
+  }
+  .apply-address h5 {
+    font-size: 1.75rem;
+  }
+  .apply-details-left img {
+    width: 65%;
+    height: 450px;
+    border-radius: 50px;
+  }
+}
+
+.apply-timing ol li::marker {
+  margin-left: 5px;
+}
+
+@media (max-width: 1200px) {
+  .carosoul-main .carosoul-slide img {
+    height: 500px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .carosoul-main .carosoul-slide img {
+    height: 450px;
+  }
+  .courses-details .courses-details-left img {
+    height: 500px;
+    background-size: cover
+  }
+  .apply-main .apply-details-left img{
+    height: 500px;
+  }
+}
+
+@media (max-width: 900px) {
+  .courses-details {
+    grid-template-columns: 1fr;
+    margin-left: 30px;
+    .courses-details-left {
+      margin: 20px auto;
+      width: 80%;
+      img {
+        width: 100%;
+        height: 450px;
+        margin-left: 0 !important;
+      }
+    }
+    .courses-details-right {
+      width: 80%;
+      margin: 0 auto;
+    }.courses-details-right h2{
+      // margin-left: 50px;
+    }
+    .courses-details-right p{
+      // margin-left: 50px;
+      width: 100%;
+    }
+  }
+  .apply-main {
+    display: flex;
+    flex-direction: column-reverse;
+    .apply-right {
+      width: 80%;
+      margin: 0 auto;
+    }
+    .apply-details-left {
+      width: 80%;
+      margin: 20px auto;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+@media (max-width: 480px) {
+  .apply-main, .courses-details {
+    margin-top: 100px;
+  }
+  .carosoul-main .carosoul-slide img {
+    height: 300px;
+  }
+  .courses-details .courses-details-left img {
+    height: 300px;
+  }
+  .apply-main .apply-details-left img {
+    height: 300px;
+  }
+}

@@ -96,6 +96,7 @@ const Careers = lazy(() => import('../Views/Careers/Views/careers'))
 const Gifting = lazy(() => import('../Views/Gifting/Views/gifting'))
 const DescisionComp = lazy(() => import('../Views/DecisionComponent'))
 const LocateUs = lazy(()=> import ('../Components/LocateUs'))
+const LocateDetails = lazy(()=> import ('../Components/LocateUs/LocationDetails'))
 const staticSiteRoutes = [
   //Home
   {
@@ -641,6 +642,14 @@ const staticSiteRoutes = [
     id: 'statisLocateUs',
     routePath: '/our-branches',
     name: 'LocateUs',
+  },
+  {
+    Component: LocateDetails,
+    path: '/our-branches/:country',
+    exact: true,
+    id: 'statisLocateUs',
+    routePath: '/our-branches/:country',
+    name: 'LocateDetails',
   },
   //Search
   {
