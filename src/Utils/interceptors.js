@@ -3,6 +3,16 @@ import axios from 'axios'
 import { refreshSessionAndGetData } from './refreshToken'
 
 console.log('Initilise Interseptor')
+axios.interceptors.request.use(
+  (config) => {
+    config.headers['x-clientId'] = 'cmsDev_qt9up36idOpBAcrrd'
+    return config
+  },
+  (err) => {
+    return Promise.reject(err)
+  }
+)
+
 axios.interceptors.response.use(
   (config) => {
     return config

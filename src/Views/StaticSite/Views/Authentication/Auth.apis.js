@@ -1,8 +1,8 @@
 import axios from 'axios'
-import { authBaseDomain,authServerClientId } from '../../../../Constants/appSettings'
+import { authBaseDomain } from '../../../../Constants/appSettings'
 
 export const loginUserAPI = (data) => {
-  return axios.post(`${ authBaseDomain }/user/login?clientId=${authServerClientId}`, data)
+  return axios.post(`${ authBaseDomain }/authdoor/login`, data)
 }
 
 export const fetchUserDataAPI = () => {

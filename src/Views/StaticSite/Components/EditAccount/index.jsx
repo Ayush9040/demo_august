@@ -89,7 +89,7 @@ const EditAccount = () => {
     else{
       setEmpty(0)
       try{
-        await axios.patch(`${ authBaseDomain }/user/profile`,formData)
+        await axios.pu(`${ authBaseDomain }/user/update`,formData)
         setModal('success')
       }catch(err){
         setModal('error')
