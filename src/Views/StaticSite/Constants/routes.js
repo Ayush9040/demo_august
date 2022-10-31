@@ -95,7 +95,8 @@ const News = lazy(() => import('../Views/Media/Views/news'))
 const Careers = lazy(() => import('../Views/Careers/Views/careers'))
 const Gifting = lazy(() => import('../Views/Gifting/Views/gifting'))
 const DescisionComp = lazy(() => import('../Views/DecisionComponent'))
-const LocateUs = lazy(()=> import ('../Components/LocateUs'))
+const LocateUs = lazy(() => import('../Components/LocateUs'))
+const JuhuVileLoc = lazy(() => import('../Components/LocateUs/JuhuVileLoc'))
 const staticSiteRoutes = [
   //Home
   {
@@ -642,15 +643,23 @@ const staticSiteRoutes = [
     routePath: '/our-branches',
     name: 'LocateUs',
   },
+
+  {
+    Component: JuhuVileLoc,
+    path: '/our-branches/JuhuVileLoc',
+    exact: true,
+    id: 'statisLocateUs',
+    routePath: '/our-branches/JuhuVileLoc',
+    name: 'LocateUs',
+  },
   //Search
   {
-    Component:SearchModal,
-    path:'/search',
-    id:'staticSearch',
-    routePath:'/search',
-    name:'Search'
-  }
+    Component: SearchModal,
+    path: '/search',
+    id: 'staticSearch',
+    routePath: '/search',
+    name: 'Search',
+  },
 ]
-
 
 export default staticSiteRoutes

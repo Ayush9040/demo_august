@@ -2509,6 +2509,6 @@ export const locateAsset ={
   urugauy:'/Locate_us/uruguay.png',
   hongKong:'/Locate_us/hong_kong.jpg',
   locate:'/Locate_us/locate.jpg'
-
 }
+
 export default baseDomain
