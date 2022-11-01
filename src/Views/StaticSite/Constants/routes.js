@@ -646,12 +646,41 @@ const staticSiteRoutes = [
 
   {
     Component: JuhuVileLoc,
-    path: '/our-branches/JuhuVileLoc',
+    path: '/our-branches/Juhu',
     exact: true,
     id: 'statisLocateUs',
-    routePath: '/our-branches/JuhuVileLoc',
+    routePath: '/our-branches/Juhu',
     name: 'LocateUs',
   },
+
+  {
+    Component: JuhuVileLoc,
+    path: '/our-branches/vileParle',
+    exact: true,
+    id: 'statisLocateUs',
+    routePath: '/our-branches/vileParle',
+    name: 'LocateUs',
+  },
+
+  {
+    Component: JuhuVileLoc,
+    path: '/our-branches/santaCruz',
+    exact: true,
+    id: 'statisLocateUs',
+    routePath: '/our-branches/santaCruz',
+    name: 'LocateUs',
+  },
+
+  {
+    Component: JuhuVileLoc,
+    path: '/our-branches/LokhandWala',
+    exact: true,
+    id: 'statisLocateUs',
+    routePath: '/our-branches/LokhandWala',
+    name: 'LocateUs',
+  },
+
+
   //Search
   {
     Component: SearchModal,
