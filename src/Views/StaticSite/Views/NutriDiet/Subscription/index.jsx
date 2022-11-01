@@ -1,4 +1,4 @@
-import React,{ useState } from 'react'
+import React,{ useState,useEffect } from 'react'
 import InputComponent from '../../../Components/InputComponent'
 import PhoneInput from 'react-phone-number-input'
 import 'react-phone-number-input/style.css'
@@ -8,6 +8,13 @@ import { createNutriOrder, enrollPlan, successMail } from '../Api'
 import { useNavigate } from 'react-router-dom'
 
 const SubcriptionForm = ({ packageName, packagePrice,  closeForm }) => {
+
+  useEffect(() => {
+    const script = document.createElement('script')
+    script.src = 'https://checkout.razorpay.com/v1/checkout.js'
+    script.async = true
+    document.body.appendChild(script)
+  }, [])
 
   const navigate = useNavigate()
 
@@ -39,7 +46,7 @@ const SubcriptionForm = ({ packageName, packagePrice,  closeForm }) => {
     if(!paymentOrderResponse?.data?.amount && !paymentOrderResponse?.data?.id) return 0
             
     const options = {
-      key: 'rzp_live_KyhtrIyJ546bd2', // Enter the Key ID generated from the Dashboard
+      key: 'rzp_test_udmmUPuH3rTJe8', // Enter the Key ID generated from the Dashboard
       amount: paymentOrderResponse.data.amount, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
       currency: 'INR',
       name: 'The Yoga Institute',
@@ -49,7 +56,15 @@ const SubcriptionForm = ({ packageName, packagePrice,  closeForm }) => {
       handler: async(res) => {
         // Navigare to Success if razorpay_payment_id, razorpay_order_id, razorpay_signature is there
         if(res.razorpay_payment_id && res.razorpay_order_id && res.razorpay_signature) {
-          await successMail()
+          await successMail({
+            type: 'INFO_TYI',
+            HTMLTemplate: 'NUTRI_DIET_CLINIC_CONFIRMATION_MAIL',
+            subject: 'Enrollment Confirmation',
+            data:{
+              name: formData.name
+            },
+            receivers: [formData.email,'info@theyogainstitute.org']
+          })
           navigate('/enrollment_thankyou')
         }
       },
