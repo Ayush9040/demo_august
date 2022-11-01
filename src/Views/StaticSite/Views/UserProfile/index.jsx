@@ -62,12 +62,12 @@ const UserProfile = () => {
                 } 
                 else {
                   return (
-                    <div>
+                    <div key={item.key} >
                       <li
                         onClick={() => {
                           setModule(item.key)
                         }}
-                        key={item.key}
+                        
                         style={
                           module === item.key || item.key === 0
                             ? { fontWeight: '700' }

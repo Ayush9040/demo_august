@@ -46,6 +46,7 @@
                 "objectsInObjects": true
             }
         ],
+        "react/no-unknown-property": 0,
         // "object-curly-newline": ["error", {
         //     "minProperties": true
         // }],
