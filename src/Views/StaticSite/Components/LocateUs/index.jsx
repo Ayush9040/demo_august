@@ -7,6 +7,7 @@ import { useState } from 'react'
 import { locateData } from './locate'
 import { useEffect } from 'react'
 import { locateAsset } from '../../assets/images/imageAsset'
+import { useNavigate } from 'react-router-dom'
 
 const LocateUs = () => {
   const Locate = {
@@ -22,6 +23,8 @@ const LocateUs = () => {
   useEffect(() => {
     setCountry(locateData.find((item) => item.country === bold))
   }, [bold])
+
+  const navigate = useNavigate()
   return (
     <div className="locate_us_main">
       <CommonBanner
@@ -166,6 +169,7 @@ const LocateUs = () => {
                       {items?.website}
                     </a>
                   </div>
+                  {items.key !== '' ? <button className='details-btn' onClick={()=> navigate(`/our-branches/${items?.key}`)}>Details</button> : ''}
                 </div>
               )
             })}

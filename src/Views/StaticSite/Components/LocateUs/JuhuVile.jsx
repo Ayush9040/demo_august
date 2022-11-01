@@ -1,7 +1,7 @@
 import React from 'react'
 import Slider from 'react-slick'
-// import baseDomain from '../../assets/images/imageAsset'
-// import { santaCruz } from '../../assets/images/imageAsset'
+import baseDomain from '../../assets/images/imageAsset'
+import { juhuVileAsset } from '../../assets/images/imageAsset'
 const JuhuVile = () => {
   const settings = {
     dots: false,
@@ -33,13 +33,13 @@ const JuhuVile = () => {
       <div className='carosoul-main'>
         <Slider {...settings}>
           <div className='carosoul-slide'>
-            <h2>Image</h2>
+            <img src={`${baseDomain}${juhuVileAsset.carosoul1}`} />
           </div>
           <div className='carosoul-slide'>
-            <h2>Image</h2>
+            <img src={`${baseDomain}${juhuVileAsset.carosoul2}`} />
           </div>
           <div className='carosoul-slide'>
-            <h2>Image</h2>
+            <img src={`${baseDomain}${juhuVileAsset.carosoul3}`} />
           </div>
         </Slider>
         <div className='title'>
@@ -47,7 +47,7 @@ const JuhuVile = () => {
         </div>
         <div className="courses-details">
           <div className="courses-details-left">
-            {/* <img src={`${baseDomain}${santaCruz.details}`} /> */}
+            <img src={`${baseDomain}${juhuVileAsset.left}`} />
           </div>
           <div className="courses-details-right">
             <h2>Details on courses and Center</h2>
@@ -134,10 +134,26 @@ const JuhuVile = () => {
                 </li>
                 <li>Timings:<span className='timings-font'> 8:00 am to 9:30 am</span></li>
               </ul>
+              <div className="apply-address apply para">
+                <h5>The Yoga Institute, Lokhandwala</h5>
+                <h5>G703, Aston Building, Above Mercedes Benz Showroom, Andheri, Near Lokhandwala Circle</h5>
+                <p>All Classes are for 1 Hour (unless specified)</p>
+              </div>
+              <div className="apply-packages">
+                <ul className='apply-para'>
+                  <li>Mon – Wed - Fri</li>
+                  <p><span className='title-font'>Timings : </span>6:30 am, 7:30 am, 8:30 am, 9:30 am, 10:30 am and 11:30 am
+                    4:00 pm, 5:00 pm, 6:00 pm and 7:00 pm</p>
+                  <li className='apply-para title-font'>Advance Class
+                    <p className='timings-font'>Sunday 10.30 am to 12.00 pm</p></li>
+                  <li className='apply-para title-font'>Weekend class
+                    <p><span className='title-font'>Timing :</span> 9:30am to 10:30 am</p></li>
+                </ul>
+              </div>
             </div>
           </div>
           <div className="apply-details-left">
-            {/* <img src={`${baseDomain}${santaCruz.apply}`} /> */}
+            <img src={`${baseDomain}${juhuVileAsset.right}`} />
           </div>
         </div>
       </div>

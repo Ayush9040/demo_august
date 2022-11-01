@@ -12,6 +12,10 @@ const JuhuVileLoc = () => {
   return (
     <>
       <InnerNavComponent abc={viewBlog} />
+      <div className='heading-main'>
+        <h1 className='heading-1'>JUHU-VILE PARLE-SANTACRUZ-LOKHANDWALA (WEST)</h1>
+        <h1 className='heading-2'>Mumbai, India</h1>
+      </div>
       <div className='carosoul-main'>
         <JuhuVile />
       </div>
