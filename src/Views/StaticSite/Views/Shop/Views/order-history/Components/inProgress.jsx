@@ -81,7 +81,7 @@ const InProgress = ( { orderDetails,products,totalAmount } ) => {
             </div>
             <div className="order_add">
               <div>Shipping Address</div>
-              <div>{ address.name }</div>
+              <div>{ address?.name }</div>
               <div>{address?.houseNo}</div>
               <div>{address?.street},{address?.landmark}</div>
               <div>{address?.city},{address?.country} - {address?.pincode}</div>
