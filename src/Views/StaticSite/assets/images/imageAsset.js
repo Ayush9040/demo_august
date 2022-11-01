@@ -800,6 +800,7 @@ export const publicationAssests = {
   publicationAssests6: '/Publications/Library/Library-6.jpg',
   publicationAssests7: '/Publications/Yoga & Total Health/YTH-main.png',
 
+
   //emag
   publicationAssests85:'/Publications/Yoga%20%26%20Total%20Health/YTH-Aug-22-Emag-1.jpg',
   publicationAssests86:'/Publications/Yoga%20%26%20Total%20Health/Yoga%26Total-Helath-Oct-2022.JPG',
@@ -906,6 +907,7 @@ export const publicationAssests = {
   ythAssets87:'/Home/NewsLetter/Yogasattva-August2022-1.jpg',
   ythAssets88:'/Home/NewsLetter/Yogasattva-Sept-2022.jpg',
   ythAssets89:'/Home/NewsLetter/Yogasattva-Oct-2022-21024_1.jpg',
+  ythAssets90:'/Home/NewsLetter/Yogasattva-Nov-2022-cover-page.jpg',
 
   //Library
   libraryAsset: '/Publications/Library/hero.jpg',
