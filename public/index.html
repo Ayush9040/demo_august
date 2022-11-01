@@ -36,14 +36,15 @@
         width: 1px;
       }
     </style>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta http-equiv="ScreenOrientation" content="autoRotate:disabled" />
-    <!-- <script src="https://checkout.razorpay.com/v1/checkout.js"></script> -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-76029695-1"></script>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <noscript>
+      <iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-MCV83ML"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      >
+      </iframe>
+    </noscript>
     <div id="root"></div>
     <script>
       var url =
@@ -53,33 +54,34 @@
       s.async = true
       s.src = url
       var options = {
-    "enabled":true,
-    "chatButtonSetting":{
-        "backgroundColor":"#4dc247",
-        "ctaText":"",
-        "borderRadius":"25",
-        "marginLeft":"0",
-        "marginBottom":"25",
-        "marginRight":"50",
-        "position":"right"
-    },
-    "brandSetting":{
-        "brandName":"The Yoga Institute",
-        "brandSubTitle":"Typically replies within a day",
-        "brandImg":"https://ecom-static-site.oss-ap-south-1.aliyuncs.com/mainLogo.jpg",
-        "welcomeText":"Namaste!\nHow can we help you?",
-        "messageText":"Hello, I have a question about {{page_link}}",
-        "backgroundColor":"#0a5f54",
-        "ctaText":"Start Chat",
-        "borderRadius":"25",
-        "autoShow":false,
-        "phoneNumber":"917011740532"
-    }
-  };
-      s.onload = function() {
-          CreateWhatsappChatWidget(options);
-      };
-      var x = document.getElementsByTagName('script')[0];
+        enabled: true,
+        chatButtonSetting: {
+          backgroundColor: '#4dc247',
+          ctaText: '',
+          borderRadius: '25',
+          marginLeft: '0',
+          marginBottom: '25',
+          marginRight: '50',
+          position: 'right',
+        },
+        brandSetting: {
+          brandName: 'The Yoga Institute',
+          brandSubTitle: 'Typically replies within a day',
+          brandImg:
+            'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/mainLogo.jpg',
+          welcomeText: 'Namaste!\nHow can we help you?',
+          messageText: 'Hello, I have a question about {{page_link}}',
+          backgroundColor: '#0a5f54',
+          ctaText: 'Start Chat',
+          borderRadius: '25',
+          autoShow: false,
+          phoneNumber: '917738155500',
+        },
+      }
+      s.onload = function () {
+        CreateWhatsappChatWidget(options)
+      }
+      var x = document.getElementsByTagName('script')[0]
       setTimeout(() => {
         x.parentNode.insertBefore(s, x)
       }, 10000)

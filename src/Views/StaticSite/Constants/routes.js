@@ -56,8 +56,9 @@ const Shop = lazy(()=>import('../Views/Shop/Views/shop/shop'))
 const SingleProduct = lazy(()=>import('../Views/Shop/Views/single-product'))
 
 import Authentication from '../Views/Authentication'
-import SearchModal from '../Views/SearchModal'
 import OrderHistroy from '../Views/Shop/Views/order-history'
+const SearchModal = lazy(()=>import( '../Views/SearchModal'))
+
 // import VolunteerPage from '../Views/Volunteer'
 // import VolunteerPage from '../Views/Volunteer'
 // import Thankyou from '../Components/EnrollmentForm/ThankYou'
@@ -89,6 +90,8 @@ const Careers = lazy(() => import('../Views/Careers/Views/careers'))
 const Gifting = lazy(() => import('../Views/Gifting/Views/gifting'))
 const DescisionComp = lazy(() => import('../Views/DecisionComponent'))
 const LocateUs = lazy(()=> import ('../Components/LocateUs'))
+const LocateDetails = lazy(()=> import ('../Components/LocateUs/LocationDetails'))
+const NutriDiet = lazy(()=>import('../Views/NutriDiet'))
 const staticSiteRoutes = [
   //Home
   {
@@ -623,6 +626,14 @@ const staticSiteRoutes = [
     routePath: '/our-branches',
     name: 'LocateUs',
   },
+  {
+    Component: LocateDetails,
+    path: '/our-branches/:country',
+    exact: true,
+    id: 'statisLocateUs',
+    routePath: '/our-branches/:country',
+    name: 'LocateDetails',
+  },
   //Search
   {
     Component:SearchModal,
@@ -678,6 +689,13 @@ const staticSiteRoutes = [
     id:'statisSiteOrderHistory',
     routePath:'/user/order/:orderId',
     name:'OrderHistory'
+  },
+  {
+    Component:NutriDiet,
+    path:'/nutri-diet',
+    id:'staticNutriDiet',
+    routePath:'/nutri-diet',
+    name:'NutriDiet'
   }
 ]
 

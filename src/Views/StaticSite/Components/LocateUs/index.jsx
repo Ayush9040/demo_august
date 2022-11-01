@@ -7,6 +7,7 @@ import { useState } from 'react'
 import { locateData } from './locate'
 import { useEffect } from 'react'
 import { locateAsset } from '../../assets/images/imageAsset'
+import { useNavigate } from 'react-router-dom'
 
 const LocateUs = () => {
   const Locate = {
@@ -21,7 +22,11 @@ const LocateUs = () => {
 
   useEffect(() => {
     setCountry(locateData.find((item) => item.country === bold))
+
   }, [bold])
+
+  const navigate = useNavigate()
+
   return (
     <div className="locate_us_main">
       <CommonBanner
@@ -33,8 +38,7 @@ const LocateUs = () => {
         isOnlyBanner={false}
         innerNav={false}
         description={
-          'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Ipsum has been the industry\'s standard dummy text ever since the 1500s with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.'
-        }
+          'Established in 1918 by Shri Yogendraji, The Yoga Institute is the world\'s oldest government recognised Yoga Centre. The founder\'s vision and mission was to make Yoga accessible to each and everyone across the globe. His aim was to enrich people\'s lives through the goodness of Yoga. With a rich legacy of more than 100 years, The Yoga Institute stands strong and is committed to transforming people\'s lives through the education of Yogic concepts, asanas, pranayama and kriyas. Through Yoga, one can experience a self-transformation and a 360 degree change in their perspective and approach to life. In light of this objective and with the aim to reach the masses, The Yoga Institute is available in India and other countries across the world. Come, experience and achieve a balance in your life and harmony in the mind, body and soul. The Yoga Institute is your true companion in finding yourself in this journey called Life.'}
         bannerImg={`${baseDomain}${locateAsset.locate}`}
         overlay="#295e5bD4"
       >
@@ -79,7 +83,7 @@ const LocateUs = () => {
             </span>
             {bold === 'Hong Kong' && <div className="bottom_line2"></div>}
           </li>
-          <li>
+          {/* <li>
             <span
               style={bold === 'Italy' ? { fontWeight: '700' } : {}}
               onClick={() => {
@@ -89,7 +93,7 @@ const LocateUs = () => {
               Italy
             </span>
             {bold === 'Italy' && <div className="bottom_line2"></div>}
-          </li>
+          </li> */}
           <li
             onClick={() => {
               setBold('Thailand')
@@ -123,21 +127,52 @@ const LocateUs = () => {
           </li>
         </div>
         <div className="locate_country">
-          <div className="locate_flag">
-            <img src={country.flag} alt="flag" />
-          </div>
+          <a href={country?.website}>
+            <div className="locate_flag">
+              <img src={country?.flag} alt="flag" />
+            </div>
+          </a>
+
           <div className="locate_address">
-            <div className="locate_add">{country.add}</div>
-            <div className="locate_subadd"> {country.subAdd}</div>
+            <div className="locate_add">{country?.add}</div>
+            <div className="locate_subadd"> {country?.subAdd}</div>
+            <a className="locate_subadd" href={`tel:${country?.mobile}`}>
+              {country?.mobile}
+            </a>
+            <a className="locate_subadd" href={`mailto:${country?.email}`}>
+              {country?.email}
+            </a>
+            <a className="locate_subadd" href={country?.website}>
+              {' '}
+              {country?.website}
+            </a>
+            {/* <button className='country-details-btn'>Details</button> */}
           </div>
         </div>
         <div className="locate_sub_address_container">
           <div className="locate_container">
-            {country?.branches?.map((items, i) => {
+            {country?.branches?.map((items, index) => {
               return (
-                <div className="sub_state" key={i}>
+                <div className="sub_state" key={index}>
                   <div className="bold_state">{items?.state}</div>
                   <div className="not_bold">{items?.notstate}</div>
+                  <div className="not_bold">
+                    {' '}
+                    <a href={`tel:${items?.phone}`}>{items?.phone}</a>
+                  </div>
+                  <div className="not_bold">
+                    <a className="not_bold" href={`mailto:${items?.email}`}>
+                      {items?.email}
+                    </a>
+                  </div>
+                  <div className="not_bold">
+                    {' '}
+                    <a className="website" href={items?.website}>
+                      {' '}
+                      {items?.website}
+                    </a>
+                    {items?.url !== '' && <button className='country-details-btn' onClick={()=>navigate(`/our-branches/${items?.url}`)}>Details</button>}
+                  </div>
                 </div>
               )
             })}

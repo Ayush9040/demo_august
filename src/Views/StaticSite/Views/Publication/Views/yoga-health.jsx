@@ -80,11 +80,11 @@ const YogaTotalHealth = () => {
 
             <div className="month-year">
               <h2 className="jouranl-title">
-              September 2022
+              October 2022
                 <div className="bottom-line"></div>
               </h2>
               <p>
-                {'The journal this month focuses on techniques that one may learn to take control of the mind. Dr Jayadeva suggests the possibility of understanding, learning and cultivating practicing to “stop thinking” as they key to control the mind. Hansaji suggests to begin with concentration. One may also use the Parikarmas (from the Yoga Sutras) – Maitri (friendliness towards the happy), Karuna (compassion for the unhappy), Mudita (delight in the virtuous), Upeksha (indifference towards the wicked) as ways to cleanse the mind and bring steadiness. Devdutt Pattanaik, an Indian mythologist, shares a very interesting take on consumption being the root cause of violence. Dive in for more on the above along with our regular features on The Yoga Sutras of Patanjali, Hatha Yoga Pradipika, Thoughts on the Gita and Yogic Ahara.'}
+                The journal this month emphasises on becoming aware of our thoughts. Dr Jayadeva prompts us to cultivate an attitude without desires through Ashukla Akrishna Actions - actions in which there is no personal benefit and there is no desire to hurt. Hansa ji emphasises on making every thought count... either think positively, or do not think at all. A Sadhaka shares the benefits of drinking lukewarm / hot water daily like flushing toxins out of the system, keeping our throat warm & protected, and aiding digestion (when having post meals). Another Sadhaka shares how the whole process of spititual science is to elevate us to an experience that is beyond the five senses. And yet another shares how one may improve one&apos;s quality of life by less consumption. Let us also wish Hansa ji a very happy 75th birthday this month before we jump into reading our regular features on The Yoga Sutras of Patanjali, Hatha Yoga Pradipika, Thoughts on the Gita and Yogic Ahara.
               </p>
             </div>
           </div>

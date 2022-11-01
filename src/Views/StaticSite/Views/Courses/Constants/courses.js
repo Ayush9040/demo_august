@@ -2130,7 +2130,7 @@ const ttc500hr = {
         type: 'u-list',
         content: {
           title: '',
-          points: [
+          point: [
             {
               listItem: 'School children',
               subItems: [],
@@ -2156,22 +2156,22 @@ const ttc500hr = {
           points: [
             {
               listItem:
-                'You will have an opportunity to directly interact with spiritual Guru Dr. Hansaji Yogendra. She is available to attend to your queries and give counsel. ',
+                'You will have an opportunity to directly interact with spiritual Guru Dr. Hansaji Yogendra. She is available to attend to your queries and give counsel.',
               subItems: [],
             },
             {
               listItem:
-                'You Our expert trainers for the course, over 40 in number, have mastered the yogic way of life and are proficient in passing on their learnings in a simple and practical way. Armed with decades of experience, they offer tremendous value and insight to new learners. have an opportunity to directly interact with our Guru Dr. Hansaji Yogendra. She is always available to attend to your queries and give counsel.',
+                'Our expert trainers for the course, over 40 in number, have mastered the yogic way of life and are proficient in passing on their learnings in a simple and practical way. Armed with decades of experience, they offer tremendous value and insight to new learners.',
               subItems: [],
             },
             {
               listItem:
-                'You will have Apart from the main yoga curriculum, you will learn immensely from the class experience itself. You will meet people with diverse backgrounds and experiences that you can gain insights from. There will be sadhakas of all age groups – right from teenagers to senior citizens. Every person has had a unique experience in life and it will be enriching to know all these stories. opportunity to directly interact with our Guru Dr. Hansaji Yogendra. She is always available to attend to your queries and give counsel.',
+                'Apart from the main yoga curriculum, you will learn immensely from the class experience itself. You will meet people with diverse backgrounds and experiences that you can gain insights from. There will be sadhakas of all age groups – right from teenagers to senior citizens. Every person has had a unique experience in life and it will be enriching to know all these stories.',
               subItems: [],
             },
             {
               listItem:
-                'You will have This one-of-a-kind experience will groom you to calmly and mindfully handle people and situations  opportunity to directly interact with our Guru Dr. Hansaji Yogendra. She is always available to attend to your queries and give counsel.',
+                'This one-of-a-kind experience will groom you to calmly and mindfully handle people and situations.',
               subItems: [],
             },
           ],
@@ -3961,7 +3961,7 @@ const ttc900hr = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'ttc',
-    dates: ['17th Oct to 4th Feb 2023'],
+    dates: ['31st Oct 2022 to 18th Feb 2023'],
     online: true,
     onCampus: false,
     nonResidential: false,
@@ -4242,7 +4242,7 @@ const ttc900hr = {
             ],
 
             [
-              'Internship- health & wellness camps, 7 days camp & other initiatives',
+              'Health & wellness camps, 7 days camp & other initiatives',
 
               '135 hours',
             ],
@@ -6410,7 +6410,6 @@ const camps = {
     rating: 5,
     colorCode: '#EDBE66',
     timing: '5:00 pm – 8:00 pm (IST)',
-    join:true,
     fees: {
       onlineFee: 1500,
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
@@ -7084,7 +7083,7 @@ const camps = {
         templateNonResidential: '',
       },
     },
-    dates: ['13th August 2022', '8th October 2022', '10th December 2022'],
+    dates: ['13th August 2022','10th December 2022'],
     mostPopular: false,
     rating: 5,
     colorCode: '#CE9B51',
@@ -8129,7 +8128,7 @@ const camps = {
       {
         type: 'u-list',
         content: {
-          title: ' The programme covers an introduction to: ',
+          title: ' TThe programme covers an introduction to: ',
           points: [
             {
               listItem: 'Astanga Yoga',
@@ -8167,13 +8166,13 @@ const camps = {
           ],
         },
       },
-      // {
-      //   type: 'paragraph',
-      //   content: {
-      //     title: '',
-      //     text: ['Benefits of this camp:'],
-      //   },
-      // },
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: ['Benefits of this camp:'],
+        },
+      },
       {
         type: 'u-list',
         content: {
@@ -8455,7 +8454,7 @@ const camps = {
       {
         type: 'u-list',
         content: {
-          title: ' The programme covers an introduction to: ',
+          title: ' TThe programme covers an introduction to: ',
           points: [
             {
               listItem: 'Astanga Yoga',
@@ -8493,13 +8492,13 @@ const camps = {
           ],
         },
       },
-      // {
-      //   type: 'paragraph',
-      //   content: {
-      //     title: '',
-      //     text: ['Benefits of this camp:'],
-      //   },
-      // },
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: ['Benefits of this camp:'],
+        },
+      },
       {
         type: 'u-list',
         content: {
@@ -8779,7 +8778,7 @@ const camps = {
       {
         type: 'u-list',
         content: {
-          title: ' The programme covers an introduction to: ',
+          title: ' TThe programme covers an introduction to: ',
           points: [
             {
               listItem: 'Astanga Yoga',
@@ -8817,13 +8816,13 @@ const camps = {
           ],
         },
       },
-      // {
-      //   type: 'paragraph',
-      //   content: {
-      //     title: '',
-      //     text: ['Benefits of this camp:'],
-      //   },
-      // },
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: ['Benefits of this camp:'],
+        },
+      },
       {
         type: 'u-list',
         content: {
@@ -9107,7 +9106,7 @@ const camps = {
       {
         type: 'u-list',
         content: {
-          title: ' The programme covers an introduction to: ',
+          title: ' TThe programme covers an introduction to: ',
           points: [
             {
               listItem: 'Astanga Yoga',
@@ -9698,27 +9697,27 @@ const classes = {
         },
       },
 
-      {
-        type: 'paragraph',
-        content: {
-          title: 'Monthly',
-          text: ['Rs.1000 '],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'Half yearly',
-          text: ['Rs. 6000'],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'Annual ',
-          text: ['Rs. 10,000'],
-        },
-      },
+      // {
+      //   type: 'paragraph',
+      //   content: {
+      //     title: 'Monthly',
+      //     text: ['Rs.1000 '],
+      //   },
+      // },
+      // {
+      //   type: 'paragraph',
+      //   content: {
+      //     title: 'Half yearly',
+      //     text: ['Rs. 6000'],
+      //   },
+      // },
+      // {
+      //   type: 'paragraph',
+      //   content: {
+      //     title: 'Annual ',
+      //     text: ['Rs. 10,000'],
+      //   },
+      // },
     ],
   },
   4: {
@@ -9973,7 +9972,7 @@ const classes = {
     },
     image: `${baseDomain}${courseAssets.courseAsset72}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset72}`,
-    metaDescription: 'Join our Advanced Pranayama Techniques Certificate course to learn advanced breathing techniques through bandhas, mudras, mantras, and many more.',
+    metaDescription: 'Knowledge of nadi system and energy channels',
     mostPopular: false,
     rating: 5,
     colorCode: '#B77E7E',
@@ -10220,7 +10219,7 @@ const classes = {
     image: `${baseDomain}${courseAssets.courseAsset74}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset74}`,
     metaDescription:
-      'Yoga teachers understand the nature of cancer and its treatments and how safely and effectively apply practices to help students cope with side effects.',
+      'We offer a supportive and compassionate support group to understand and discuss Cancer confidently and intelligently.',
     mostPopular: false,
     rating: 5,
     colorCode: '#C48E8C',
@@ -10399,7 +10398,7 @@ const classes = {
     cardImage: `${baseDomain}${courseAssets.courseAsset75}`,
     mostPopular: false,
     metaDescription:
-      'This is our comprehensive 100 hours Certified Yoga Therapy course wherein the lifestyle, and yogic management of diseases are taught practically and simply.',
+      'Become a certified Yoga therapist through The Yoga Institute.',
     rating: 5,
     colorCode: '#D3A29D',
     timing: 'Monday, Wednesday & Friday: 5:30 pm - 7:30 pm (IST)',
@@ -10698,7 +10697,10 @@ const classes = {
         content: {
           title: 'Eligibility:',
           text: [
-            'ITTC (500 Hours Intermediate Level) or ATTC both from The Yoga Institute.',
+            'Students who have completed 500/900 hrs TTC from The Yoga Institute.',
+            'Medical Doctors who have completed any TTC (200/500/900 hrs) from The Yoga Institute.',
+            'Students who have completed YCB Level 2 or 3.',
+            'Students who have completed minimum 500 hrs TTC from any institution, can apply to info@theyogainstitute.org with their certificates & course curriculum for Review.'
           ],
         },
       },
@@ -11257,7 +11259,7 @@ const classes = {
       {
         type: 'u-list',
         content: {
-          title: 'Duration',
+          title: 'Duration          ',
           points: [
             {
               listItem:
@@ -11282,51 +11284,22 @@ const classes = {
       {
         type: 'paragraph',
         content: {
-          title: 'Saturday & Sunday:',
-          text: [],
+          title: 'Saturday & Sunday:Saturday',
+          text: [' 8:00 am - 9:30 am  (IST) and '],
         },
       },
       {
         type: 'paragraph',
         content: {
-          title: '',
-          text: ['Saturday','8:00 am - 9:30 am  (IST) and'],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: '',
-          text: ['Sunday',' 8:00 am - 9:30 am  (IST) or 10:30 am - 12:00 pm (IST)'],
+          title: 'Sunday',
+          text: [' 8:00 am - 9:30 am  (IST) or 10:30 am - 12:00 pm (IST)'],
         },
       },
       {
         type: 'paragraph',
         content: {
           title: 'Fees ',
-          text: ['1000 INR'],
-        },
-      },
-
-      {
-        type: 'paragraph',
-        content: {
-          title: 'Monthly',
-          text: ['Rs.1000 '],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'Half yearly',
-          text: ['Rs. 6000'],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'Annual ',
-          text: ['Rs. 10,000'],
+          text: ['INR 1000'],
         },
       },
       {
@@ -11792,30 +11765,8 @@ const classes = {
       {
         type: 'paragraph',
         content: {
-          title: 'Fees ',
-          text: ['1000 INR'],
-        },
-      },
-
-      {
-        type: 'paragraph',
-        content: {
-          title: 'Monthly',
-          text: ['Rs.1000 '],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'Half yearly',
-          text: ['Rs. 6000'],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'Annual ',
-          text: ['Rs. 10,000'],
+          title: 'Fees',
+          text: ['INR 1000'],
         },
       },
       {

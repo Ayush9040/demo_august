@@ -78,7 +78,7 @@ const DisclaimerPolicy = ({
           city: formData.city,
           pincode: formData.pincode,
           gender: formData.gender,
-          age: formData.age,
+          age: formData.AGE,
           nationality: formData.nationality,
         },
         academicQualification: qualificationData,
@@ -177,7 +177,7 @@ const DisclaimerPolicy = ({
             if(!paymentOrderResponse?.data?.amount && !paymentOrderResponse?.data?.id) return 0
             
             const options = {
-              key: 'rzp_test_udmmUPuH3rTJe8', // Enter the Key ID generated from the Dashboard
+              key: 'rzp_live_KyhtrIyJ546bd2', // Enter the Key ID generated from the Dashboard
               amount: paymentOrderResponse.data.amount, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
               currency: 'INR',
               name: 'The Yoga Institute',

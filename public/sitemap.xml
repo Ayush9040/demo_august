@@ -3,410 +3,379 @@
     <loc>https://theyogainstitute.org/</loc>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://staging.theyogainstituteonline.org/social-initiatives</loc>
+    </url>
+    <url>
+    <loc>https://theyogainstitute.org/social-initiatives</loc>
     <changefreq>daily</changefreq>
     <priority>0.1</priority>
-  </url>
-  <url>
-    <loc>https://staging.theyogainstituteonline.org/know-us-better</loc>
+    </url>
+    <url>
+    <loc>https://theyogainstitute.org/know-us-better</loc>
     <changefreq>daily</changefreq>
     <priority>0.1</priority>
-  </url>
-  <url>
-    <loc>https://staging.theyogainstituteonline.org/our-legacy</loc>
+    </url>
+    <url>
+    <loc>https://theyogainstitute.org/our-legacy</loc>
     <changefreq>daily</changefreq>
     <priority>0.1</priority>
-  </url>
-  <url>
-    <loc>https://staging.theyogainstituteonline.org/blessings</loc>
+    </url>
+    <url>
+    <loc>https://theyogainstitute.org/blessings</loc>
     <changefreq>daily</changefreq>
     <priority>0.1</priority>
-  </url>
-  <url>
-  <loc>https://staging.theyogainstituteonline.org/facilities</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.1</priority>
-  </url>
-  <url>
-    <loc>https://staging.theyogainstituteonline.org/museum-of-classical-yoga</loc>
+    </url>
+    <url>
+    <loc>https://theyogainstitute.org/facilities</loc>
     <changefreq>daily</changefreq>
     <priority>0.1</priority>
-  </url>
-  <url>
-    <loc>https://staging.theyogainstituteonline.org/image-gallery</loc>
+    </url>
+    <url>
+    <loc>https://theyogainstitute.org/museum-of-classical-yoga</loc>
     <changefreq>daily</changefreq>
     <priority>0.1</priority>
-  </url>
-  <url>
-    <loc>https://staging.theyogainstituteonline.org/yoga-and-total-health</loc>
+    </url>
+    <url>
+    <loc>https://theyogainstitute.org/image-gallery</loc>
     <changefreq>daily</changefreq>
     <priority>0.1</priority>
-  </url>
-  <url>
-    <loc>https://staging.theyogainstituteonline.org/yogasattva</loc>
+    </url>
+    <url>
+    <loc>https://theyogainstitute.org/yoga-and-total-health</loc>
     <changefreq>daily</changefreq>
     <priority>0.1</priority>
-  </url>
-  <url>
-    <loc>https://staging.theyogainstituteonline.org/library</loc>
+    </url>
+    <url>
+    <loc>https://theyogainstitute.org/yogasattva</loc>
     <changefreq>daily</changefreq>
     <priority>0.1</priority>
-  </url>
-  <url>
-    <loc>https://staging.theyogainstituteonline.org/blogs</loc>
+    </url>
+    <url>
+    <loc>https://theyogainstitute.org/library</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.1</priority>
+    </url>
+    <url>
+    <loc>https://theyogainstitute.org/blogs</loc>
     <changefreq>daily</changefreq>
     <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://staging.theyogainstituteonline.org/terms-and-condition</loc>
+    </url>
+    <url>
+    <loc>https://theyogainstitute.org/terms-and-condition</loc>
     <changefreq>daily</changefreq>
     <priority>0.1</priority>
-  </url>
-  <url>
-    <loc>https://staging.theyogainstituteonline.org/privacy-policy</loc>
+    </url>
+    <url>
+    <loc>https://theyogainstitute.org/privacy-policy</loc>
     <changefreq>daily</changefreq>
     <priority>0.1</priority>
-  </url>
-  <url>
-    <loc>https://staging.theyogainstituteonline.org/affiliations</loc>
+    </url>
+    <url>
+    <loc>https://theyogainstitute.org/affiliations</loc>
     <changefreq>daily</changefreq>
     <priority>0.1</priority>
-  </url>
-  <url>
-    <loc>https://staging.theyogainstituteonline.org/wellness</loc>
+    </url>
+    <url>
+    <loc>https://theyogainstitute.org/wellness</loc>
     <changefreq>daily</changefreq>
     <priority>0.1</priority>
-  </url>
-  <url>
-    <loc>https://staging.theyogainstituteonline.org/testimonials</loc>
+    </url>
+    <url>
+    <loc>https://theyogainstitute.org/testimonials</loc>
     <changefreq>daily</changefreq>
     <priority>0.1</priority>
-  </url>
-  <url>
-    <loc>https://staging.theyogainstituteonline.org/Rules-and-Regulations</loc>
+    </url>
+    <url>
+    <loc>https://theyogainstitute.org/Rules-and-Regulations</loc>
     <changefreq>daily</changefreq>
     <priority>0.1</priority>
-  </url>
-  <url>
-    <loc>https://staging.theyogainstituteonline.org/our-facts</loc>
+    </url>
+    <url>
+    <loc>https://theyogainstitute.org/our-facts</loc>
     <changefreq>daily</changefreq>
     <priority>0.1</priority>
-  </url>
-  <url>
-    <loc>https://staging.theyogainstituteonline.org/alumni-gallery</loc>
+    </url>
+    <url>
+    <loc>https://theyogainstitute.org/alumni-gallery</loc>
     <changefreq>daily</changefreq>
     <priority>0.1</priority>
-  </url>
-  <url>
-    <loc>https://staging.theyogainstituteonline.org/support-your-alma-mater</loc>
+    </url>
+    <url>
+    <loc>https://theyogainstitute.org/support-your-alma-mater</loc>
     <changefreq>daily</changefreq>
     <priority>0.1</priority>
-  </url>
-  <url>
-    <loc>https://staging.theyogainstituteonline.org/volunteer</loc>
+     </url>
+    <url>
+    <loc>https://theyogainstitute.org/volunteer</loc>
     <changefreq>daily</changefreq>
     <priority>0.1</priority>
-  </url>
-  <url>
-    <loc>https://staging.theyogainstituteonline.org/values</loc>
+    </url>
+    <url>
+    <loc>https://theyogainstitute.org/values</loc>
     <changefreq>daily</changefreq>
     <priority>0.1</priority>
-  </url>
-  <url>
-    <loc>https://staging.theyogainstituteonline.org/one-month-ttc</loc>
+    </url>
+    <url>
+    <loc>https://theyogainstitute.org/one-month-ttc</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority> 
+    </url>
+    <url>
+    <loc>https://theyogainstitute.org/200-hrs-part-time-ttc-on-campus-english</loc>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://staging.theyogainstituteonline.org/200-hrs-part-time-ttc-on-campus-english</loc>
-    Changes - 0.8
+    </url>
+    <url>
+    <loc>https://theyogainstitute.org/200-hrs-part-time-ttc-online-english</loc>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://staging.theyogainstituteonline.org/200-hrs-part-time-ttc-online-english</loc>
+    </url>
+    <url>
+    <loc>https://theyogainstitute.org/200-hrs-part-time-ttc-online-english-batch-5</loc>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://staging.theyogainstituteonline.org/200-hrs-part-time-ttc-online-english-batch-5</loc>
+    </url>
+    <url>
+    <loc>https://theyogainstitute.org/200-hrs-part-time-ttc-online</loc>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://staging.theyogainstituteonline.org/200-hrs-part-time-ttc-online</loc>
+    </url>
+    <url>
+    <loc>https://theyogainstitute.org/weekend-teacher-training-course</loc>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://staging.theyogainstituteonline.org/weekend-teacher-training-course</loc>
+    </url>
+    <url>
+    <loc>https://theyogainstitute.org/500-hrs-online-yoga-teacher-training-course-intermediate-level</loc>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://staging.theyogainstituteonline.org/500-hrs-online-yoga-teacher-training-course-intermediate-level</loc>
+    </url>
+    <url>
+    <loc>https://theyogainstitute.org/3-months-advanced-teacher-training-course</loc>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://staging.theyogainstituteonline.org/3-months-advanced-teacher-training-course</loc>
+    </url>
+    <url>
+    <loc>https://theyogainstitute.org/900-hours-advanced-teacher-training-course</loc>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://staging.theyogainstituteonline.org/900-hours-advanced-teacher-training-course</loc>
+    </url>
+    <url>
+    <loc>https://theyogainstitute.org/seven-month-ttc</loc>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://staging.theyogainstituteonline.org/seven-month-ttc</loc>
+    </url>
+    <url>
+    <loc>https://theyogainstitute.org/one-year-ttc</loc>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://staging.theyogainstituteonline.org/one-year-ttc</loc>
+    </url>
+    <url>
+    <loc>https://theyogainstitute.org/two-year-ttc</loc>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://staging.theyogainstituteonline.org/two-year-ttc</loc>
+    </url>
+    <url>
+    <loc>https://theyogainstitute.org/asana-regular-classes-online</loc>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://staging.theyogainstituteonline.org/asana-regular-classes-online</loc>
+    </url>
+    <url>
+    <loc>https://theyogainstitute.org/asana-regular-classes-on-campus</loc>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://staging.theyogainstituteonline.org/asana-regular-classes-on-campus</loc>
+    </url>
+    <url>
+    <loc>https://theyogainstitute.org/asana-regular-classes-on-campus-women</loc>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://staging.theyogainstituteonline.org/asana-regular-classes-on-campus-women</loc>
+    </url>
+    <url>
+    <loc>https://theyogainstitute.org/advanced-regular-yoga-classes</loc>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://staging.theyogainstituteonline.org/advanced-regular-yoga-classes</loc>
+    </url>
+    <url>
+    <loc>https://theyogainstitute.org/weekend-classes</loc>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://staging.theyogainstituteonline.org/weekend-classes</loc>
+    </url>
+    <url>
+    <loc>https://theyogainstitute.org/weekend-classes-online</loc>
+    <changefreq>daily</changefreq> 
+    <priority>0.8</priority>
+    </url>
+    <url>
+    <loc>https://theyogainstitute.org/childrens-regular-classes</loc>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://staging.theyogainstituteonline.org/weekend-classes-online</loc>
+    </url>
+    <url>
+    <loc>https://theyogainstitute.org/childrens-weekend-classes-on-campus</loc>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://staging.theyogainstituteonline.org/childrens-regular-classes</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://staging.theyogainstituteonline.org/childrens-weekend-classes-on-campus</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://staging.theyogainstituteonline.org/yoga-by-the-bay</loc>
+    </url>
+    <url>
+    <loc>https://theyogainstitute.org/yoga-by-the-bay</loc>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://staging.theyogainstituteonline.org/fullmoon_meditation</loc>
+    </url>
+    <url>
+    <loc>https://theyogainstitute.org/fullmoon-meditation</loc>
     <changefreq>daily</changefreq>
-    <priority>0.1</priority>
-  </url>
-  <url>
-    <loc>https://staging.theyogainstituteonline.org/meditation-camp</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://staging.theyogainstituteonline.org/satsang</loc>
+    <priority>0.3</priority>
+    </url>
+    <url>
+    <loc>https://theyogainstitute.org/satsang</loc>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://staging.theyogainstituteonline.org/samattvam</loc>
+    </url>
+    <url>
+    <loc>https://theyogainstitute.org/samattvam</loc>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://staging.theyogainstituteonline.org/7-days-camp-english</loc>
+    </url>
+    <url>
+    <loc>https://theyogainstitute.org/7-days-camp-english</loc>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://staging.theyogainstituteonline.org/7-days-camp</loc>
+    </url>
+    <url>
+    <loc>https://theyogainstitute.org/7-days-camp</loc>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://staging.theyogainstituteonline.org/21-days-better-living-course</loc>
+    </url>
+    <url>
+    <loc>https://theyogainstitute.org/21-days-better-living-course</loc>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://staging.theyogainstituteonline.org/21-days-better-living-course-batch-2</loc>
+    </url>
+    <url>
+    <loc>https://theyogainstitute.org/21-days-better-living-course-batch-2</loc>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://staging.theyogainstituteonline.org/21-days-better-living-course-batch-3</loc>
+    </url>
+    <url>
+    <loc>https://theyogainstitute.org/21-days-better-living-course-batch-3</loc>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://staging.theyogainstituteonline.org/21-days-better-living-course-batch-4</loc>
+    </url>
+    <url>
+    <loc>https://theyogainstitute.org/21-days-better-living-course-batch-4</loc>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://staging.theyogainstituteonline.org/corporate-workshops</loc>
+    </url>
+    <url>
+    <loc>https://theyogainstitute.org/corporate-workshops</loc>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://staging.theyogainstituteonline.org/home-tuitions</loc>
+    </url>
+    <url>
+    <loc>https://theyogainstitute.org/home-tuitions</loc>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://staging.theyogainstituteonline.org/couples-classes</loc>
+    </url>
+    <url>
+    <loc>https://theyogainstitute.org/couples-classes</loc>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://staging.theyogainstituteonline.org/certificate-yoga-therapy-course-online</loc>
+    </url>
+    <url>
+    <loc>https://theyogainstitute.org/certificate-yoga-therapy-course-online</loc>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://staging.theyogainstituteonline.org/certification-course-on-yoga-sutra-online</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
+    </url>
+    <url>
+    <loc>https://theyogainstitute.org/certification-course-on-yoga-sutra-online</loc>
+    <changefreq>daily</changefreq>  
+    <priority>0.8</priority>  
+    </url>
+    <url>
     <loc>https://www.theyogainstitute.org/certificate-program-on-yoga-for-cancer</loc>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://staging.theyogainstituteonline.org/certification-program-on-yoga-for-lung-cancer-online</loc>
+    </url>
+    <url>
+    <loc>https://theyogainstitute.org/certification-program-on-yoga-for-lung-cancer-online</loc>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://staging.theyogainstituteonline.org/certificate-course-on-advanced-pranayama-techniques</loc>
+    </url>
+    <url>
+    <loc>https://theyogainstitute.org/certificate-course-on-advanced-pranayama-techniques</loc>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://staging.theyogainstituteonline.org/stress-management-camp</loc>
+    </url>
+    <url>
+    <loc>https://theyogainstitute.org/stress-management-camp</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+    </url>
+    <url>
+    <loc>https://theyogainstitute.org/weight-management-workshop</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+    </url>
+    <url>
+    <loc>https://theyogainstitute.org/pregnancy-camp-for-ante-post-natal</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+    </url>
+    <url>
+    <loc>https://theyogainstitute.org/cardiac-hypertension-workshop</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+    </url>
+    <url>
+    <loc>https://theyogainstitute.org/back-joint-disorder-workshop</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+    </url>
+    <url>
+    <loc>https://theyogainstitute.org/pranayama-workshop</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+    </url>
+    <url>
+    <loc>https://theyogainstitute.org/womens-camp</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+    </url>
+    <url>
+    <loc>https://theyogainstitute.org/senior-citizen-workshop</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+    </url>
+    <url>
+    <loc>https://theyogainstitute.org/diabetes-camp</loc> 
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://staging.theyogainstituteonline.org/weight-management-workshop</loc>
+    </url>
+    <url>
+    <loc>https://theyogainstitute.org/meditation-foundation-course-online</loc>
     <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://staging.theyogainstituteonline.org/pregnancy-camp-for-ante-post-natal</loc>
+    <priority>0.6</priority>
+    </url>
+    <url>
+    <loc>https://theyogainstitute.org/yog-prayas-online</loc>
     <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://staging.theyogainstituteonline.org/cardiac-hypertension-workshop</loc>
+    <priority>0.6</priority>
+    </url>
+    <url>
+    <loc>https://theyogainstitute.org/anand-sadhna</loc>
     <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://staging.theyogainstituteonline.org/back-joint-disorder-workshop</loc>
+    <priority>0.6</priority>
+    </url>
+    <url>
+    <loc>https://theyogainstitute.org/regular-meditation-classes-online</loc>
     <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://staging.theyogainstituteonline.org/pranayama-workshop</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://staging.theyogainstituteonline.org/womens-camp</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://staging.theyogainstituteonline.org/respiratory-workshop</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://staging.theyogainstituteonline.org/life-management-camp</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://staging.theyogainstituteonline.org/senior-citizen-workshop</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://staging.theyogainstituteonline.org/digestion-camp</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://staging.theyogainstituteonline.org/diabetes-camp</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://staging.theyogainstituteonline.org/meditation-foundation-course-online</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://staging.theyogainstituteonline.org/yog-prayas-online</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://staging.theyogainstituteonline.org/anand-sadhna</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://staging.theyogainstituteonline.org/regular-meditation-classes-online</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://staging.theyogainstituteonline.org/media</loc>
+    <priority>0.6</priority>
+    </url>
+    <url>
+    <loc>https://theyogainstitute.org/media</loc>
     <changefreq>daily</changefreq>
     <priority>0.1</priority>
-  </url>
-  <url>
-    <loc>https://staging.theyogainstituteonline.org/digestion-camp</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://staging.theyogainstituteonline.org/karma-yoga-course</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://staging.theyogainstituteonline.org/blog-posts.xml</loc>
+    </url>
+    <url>
+    <loc>https://theyogainstitute.org/blog-posts.xml</loc>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
     </url>

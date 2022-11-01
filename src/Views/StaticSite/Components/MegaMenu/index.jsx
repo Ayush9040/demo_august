@@ -18,9 +18,9 @@ const MegaMenu = ({ setNav }) => {
     { name: 'MUSEUM', link: '/museum-of-classical-yoga', id: 4, key: 'MUSEUM' },
     { name: 'BLOGS', link:'/blogs',id:'14',key:'BLOGS' },
     { name: 'DONATE', link: '', id: 5, key: 'DONATION' },
-    { name: 'GIFTING', link: '', id: 6, key: 'GIFTING' },
+    // { name: 'GIFTING', link: '', id: 6, key: 'GIFTING' },
     { name: 'NISPAND', link: 'https://nispand.com/', id: 7, key: 'NISPAND' },
-    { name: 'TYI ONLINE', link: '', id: 8, key: 'ONLINE' },
+    // { name: 'TYI ONLINE', link: '', id: 8, key: 'ONLINE' },
     {
       name: 'PUBLICATIONS',
       link: '/yoga-and-total-health',
@@ -36,6 +36,7 @@ const MegaMenu = ({ setNav }) => {
     },
     { name: 'ALUMNI', link: '/alumni-gallery', id: 12, key: 'ALUMNI' },
     { name: 'VOLUNTEER', link: '/volunteer', id: 13, key: 'VOLUNTEER' },
+    { name: 'LOCATE US', link:'/our-branches', id: 14, key: 'LOCATE' },
   ]
 
   const subMenu = {
@@ -415,6 +416,8 @@ const MegaMenu = ({ setNav }) => {
                 <Link onClick={() => {setNav(false)}}  to='/senior-citizen-workshop'><li>Senior citizen Workshop</li></Link>
                 <Link onClick={() => {setNav(false)}}  to='/diabetes-camp'><li>Diabetes Camp</li></Link>
               </ul>
+              <Link onClick={() => {setNav(false)}}  to='/nutri-diet'>
+                <h3 style={{ marginTop:'0.75rem' }} >NUTRI DIET CLINIC</h3></Link>
               <Link onClick={() => {setNav(false)}}  to='/corporate-workshops'>
                 <h3 style={{ marginTop:'0.75rem' }} >CORPORATE WORKSHOP</h3></Link>
               <Link onClick={() => {setNav(false)}}  to='/home-tuitions'>

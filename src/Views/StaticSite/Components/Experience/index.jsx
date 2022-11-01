@@ -52,37 +52,6 @@ const Experience = () => {
               largeText={'Experience'}
             />
             <div className="name-status">
-              <h3>Shri Ram Nath Kovind</h3>
-              <h4>The President of India</h4>
-              <p>
-                We are aware that “Lifestyle diseases are increasing in India.
-                Those who do yoga from childhood (in school or college) will
-                build up strength and immunity.“ I wish The Yoga Institute and
-                everyone connected with it, all the best in their efforts to
-                spread the goodness of Yoga and also congratulate them for
-                carrying on the good work for the benefit of the people silently
-                for the past ten decades
-              </p>
-            </div>
-            <Link to="/testimonials">
-              <CommonBtn text={'View All'} />
-            </Link>
-          </div>
-          <div className="carousel-image">
-            <img
-              src={`${baseDomain}${homeAssets.homeAsset55}`}
-              alt="Shri Ramnath Kovid"
-            />
-          </div>
-        </div>
-        <div className="experience-carousel global-padding">
-          <div className="carousel-content">
-            <Heading
-              logo={experience}
-              smallText={'The Yoga Institute'}
-              largeText={'Experience'}
-            />
-            <div className="name-status">
               <h3>Shri Narendra Modi</h3>
               <h4>Honorable Prime Minister of India</h4>
               <p>
@@ -112,8 +81,39 @@ const Experience = () => {
               largeText={'Experience'}
             />
             <div className="name-status">
+              <h3>Shri Ram Nath Kovind</h3>
+              <h4>Former President of India</h4>
+              <p>
+                We are aware that “Lifestyle diseases are increasing in India.
+                Those who do yoga from childhood (in school or college) will
+                build up strength and immunity.“ I wish The Yoga Institute and
+                everyone connected with it, all the best in their efforts to
+                spread the goodness of Yoga and also congratulate them for
+                carrying on the good work for the benefit of the people silently
+                for the past ten decades
+              </p>
+            </div>
+            <Link to="/testimonials">
+              <CommonBtn text={'View All'} />
+            </Link>
+          </div>
+          <div className="carousel-image">
+            <img
+              src={`${baseDomain}${homeAssets.homeAsset55}`}
+              alt="Shri Ramnath Kovid"
+            />
+          </div>
+        </div>
+        <div className="experience-carousel global-padding">
+          <div className="carousel-content">
+            <Heading
+              logo={experience}
+              smallText={'The Yoga Institute'}
+              largeText={'Experience'}
+            />
+            <div className="name-status">
               <h3>Shri M Venkaiah Naidu</h3>
-              <h4>Vice President of India</h4>
+              <h4>Former Vice President of India</h4>
               <p>
                 <q>
                   It gives me immense joy to see the stupendous work done by the

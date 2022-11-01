@@ -802,7 +802,7 @@ export const publicationAssests = {
 
   //emag
   publicationAssests85:'/Publications/Yoga%20%26%20Total%20Health/YTH-Aug-22-Emag-1.jpg',
-  publicationAssests86:'/Publications/Yoga%20%26%20Total%20Health/Yoga%20and%20Total%20Health_sep.JPG',
+  publicationAssests86:'/Publications/Yoga%20%26%20Total%20Health/Yoga%26Total-Helath-Oct-2022.JPG',
 
   // Yogasattva-Newsletter
   // 2017
@@ -905,6 +905,7 @@ export const publicationAssests = {
   ythAssets86:'/Home/NewsLetter/Yogasattva-July2022-Revised-1.jpg',
   ythAssets87:'/Home/NewsLetter/Yogasattva-August2022-1.jpg',
   ythAssets88:'/Home/NewsLetter/Yogasattva-Sept-2022.jpg',
+  ythAssets89:'/Home/NewsLetter/Yogasattva-Oct-2022-21024_1.jpg',
 
   //Library
   libraryAsset: '/Publications/Library/hero.jpg',
@@ -1407,6 +1408,7 @@ export const factAssets = {
   factAsset109: '/Home/Facts/new/1936-1956/1941_the-yoga-manual.jpg',
   factAsset110: '/Home/Facts/new/1936-1956/1948_the-yoga-institute-4X3.jpg',
   factAsset111: '/Home/Facts/new/1936-1956/1951_unesco-1X1.jpg',
+  factAsset146: '/Home/Facts/1936-1956/Bldg.jpg',
 
   //1956-1976
 
@@ -2479,7 +2481,25 @@ export const printMediaAssest = {
   printMediaAssest905:'/print_media/2022/Online-media-cafe-20th-june-2022.jpeg',
   printMediaAssest906:'/print_media/2022/Speaking-Tree.jpeg',
   printMediaAssest907:'/print_media/2022/The-Cambay-Post-21st-june-2022.jpeg',
-  printMediaAssest908:'/print_media/2022/Twistarticle-20th-june-2022.jpeg'
+  printMediaAssest908:'/print_media/2022/Twistarticle-20th-june-2022.jpeg',
+  printMediaAssest909:'/print_media/new2022/aug1.jpg',
+  printMediaAssest910:'/print_media/new2022/aug14.jpg',
+  printMediaAssest911:'/print_media/new2022/aug22.jpg',
+  printMediaAssest912:'/print_media/new2022/aug28.jpg',
+  printMediaAssest913:'/print_media/new2022/aug31.jpg',
+  printMediaAssest914:'/print_media/new2022/aug7.jpg',
+  printMediaAssest915:'/print_media/new2022/aug8.jpg',
+  printMediaAssest916:'/print_media/new2022/july10.jpg',
+  printMediaAssest917:'/print_media/new2022/july17.jpg',
+  printMediaAssest918:'/print_media/new2022/july18.jpg',
+  printMediaAssest919:'/print_media/new2022/july24.jpg',
+  printMediaAssest920:'/print_media/new2022/july25.jpg',
+  printMediaAssest921:'/print_media/new2022/july3.jpg',
+  printMediaAssest922:'/print_media/new2022/july31.jpg',
+  printMediaAssest923:'/print_media/new2022/july4.jpg',
+  printMediaAssest924:'/print_media/2022/Navbharat-Times-Epaper-23rd-October-2022.jpg',
+  printMediaAssest925:'/print_media/2022/Navbharat-Times-Epaper-30th-October-2022.jpg',
+  printMediaAssest926:'/print_media/2022/Navbharat-Times-Epaper-31st-October-2022.jpg'
 }
 
 export const locateAsset ={
@@ -2491,6 +2511,18 @@ export const locateAsset ={
   urugauy:'/Locate_us/uruguay.png',
   hongKong:'/Locate_us/hong_kong.jpg',
   locate:'/Locate_us/locate.jpg'
+}
 
+export const santaCruz = {
+  slide1: '/Santa-cruz-images/Slide-1.jpg',
+  slide2: '/Santa-cruz-images/Slide-2.jpg',
+  slide3: '/Santa-cruz-images/Slide-3.jpg',
+  apply: '/Santa-cruz-images/Pranayama_workshop.jpg',
+  details: '/Santa-cruz-images/Details.jpg',
+}
+
+export const nutriDiet = {
+  nutriDietMain:'/nutri-diet/PHOTO-2022-11-01-12-59-38.jpg',
+  nutriDietCard:'/nutri-diet/Nutri-Diet-Clinic-Post.jpg'
 }
 export default baseDomain

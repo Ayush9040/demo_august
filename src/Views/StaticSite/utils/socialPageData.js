@@ -4,7 +4,7 @@ import baseDomain, {
 
 export const socialPageData = [
   {
-    title: 'Annam Barhma',
+    title: 'Annam Brahma',
     description: `Annam Brahma is a social initiative aimed at serving
     fresh, nutritious, and healthy food to the underprivileged
     citizens of the country without discrimination. The food is
