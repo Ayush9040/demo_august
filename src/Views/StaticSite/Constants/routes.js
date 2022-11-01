@@ -67,7 +67,8 @@ const Facts = lazy(() => import('../Views/Facts/Views/our-facts'))
 // import Facts from '../Views/Facts'
 // import Gift from '../Views/Gifting'
 import Authentication from '../Views/Authentication'
-import SearchModal from '../Views/SearchModal'
+const SearchModal = lazy(()=>import( '../Views/SearchModal'))
+
 // import VolunteerPage from '../Views/Volunteer'
 // import VolunteerPage from '../Views/Volunteer'
 // import Thankyou from '../Components/EnrollmentForm/ThankYou'
@@ -97,6 +98,7 @@ const Gifting = lazy(() => import('../Views/Gifting/Views/gifting'))
 const DescisionComp = lazy(() => import('../Views/DecisionComponent'))
 const LocateUs = lazy(()=> import ('../Components/LocateUs'))
 const LocateDetails = lazy(()=> import ('../Components/LocateUs/LocationDetails'))
+const NutriDiet = lazy(()=>import('../Views/NutriDiet'))
 const staticSiteRoutes = [
   //Home
   {
@@ -658,6 +660,13 @@ const staticSiteRoutes = [
     id:'staticSearch',
     routePath:'/search',
     name:'Search'
+  },
+  {
+    Component:NutriDiet,
+    path:'/nutri-diet',
+    id:'staticNutriDiet',
+    routePath:'/nutri-diet',
+    name:'NutriDiet'
   }
 ]
 
