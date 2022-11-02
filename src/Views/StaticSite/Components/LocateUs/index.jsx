@@ -157,8 +157,9 @@ const LocateUs = () => {
                   <div className="bold_state">{items?.state}</div>
                   <div className="not_bold">{items?.notstate}</div>
                   <div className="not_bold">
-                    {' '}
-                    <a href={`tel:${items?.phone}`}>{items?.phone}</a>
+                    {
+                      items?.phone?.map((number,i)=>i=== 0 ? <a href={`tel:${number}`}>{number}</a>:<>,&nbsp;<a href={`tel:${number}`}>{number}</a></> )
+                    }
                   </div>
                   <div className="not_bold">
                     <a className="not_bold" href={`mailto:${items?.email}`}>
