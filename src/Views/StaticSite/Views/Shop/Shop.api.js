@@ -50,5 +50,5 @@ export const searchProduct = ( searchValue )=>{
 }
 
 export const getOrderByOrderId = ( orderId ) => {
-  return axios.get(`${ ecomBaseDomin }/payment/order/${ orderId }`)
+  return axios.get(`${ ecomBaseDomin }/order/${ orderId }`)
 }

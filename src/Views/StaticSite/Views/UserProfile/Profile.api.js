@@ -2,7 +2,7 @@ import axios from 'axios'
 import { ecomBaseDomin } from '../../../../Constants/appSettings'
 
 export const fetchUserOrders = ( userID ) => {
-  return axios.get(`${ ecomBaseDomin }/payment/order/user/${ userID }`)
+  return axios.get(`${ ecomBaseDomin }/order/user/${ userID }`)
 }
 
 export const fetchCartDetails = ( cartID ) => {

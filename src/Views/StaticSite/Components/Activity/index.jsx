@@ -29,12 +29,13 @@ const Activity = () => {
     dots: true,
     arrows: false,
     infinite: true,
-    speed: 500,
+    speed: 1000,
     slidesToShow: 2,
     slidesToScroll: 2,
     autoplay: false,
     autoPlaySpeed: 5000,
     //centerMode: true,
+    pauseOnHover:true,
     centerPadding: '20%',
     responsive: [
       {

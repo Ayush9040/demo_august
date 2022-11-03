@@ -4,7 +4,7 @@ export const activityData = [
   {
     title: 'Nutri Diet Clinic',
     description:
-      'We provide professionally supervised nutritious tailor-made diet plans as per your lifestyle. Our nutritional plans consist of well-balanced diet, homemade simple recipes and a detailed workout plan.',
+      'Get professionally supervised nutritious tailor-made diet plans as per your lifestyle. Our nutritional plans consist of well-balanced diet, homemade simple recipes and a detailed workout plan.',
     image: `${baseDomain}${nutriDiet.nutriDietCard}`,
     url: '/nutri-diet',
   },

@@ -12,20 +12,21 @@
       margin-top: 2rem;
       .global-common-btn{
         border-color: white;
+        margin-top: 2rem;
       }
       small{
         margin-left: 20px;
       }
       h1 {
         display: inline-block;
-        margin: 5rem 0;
+        margin: 5rem 0 2rem;
       }
       #date-select{
         margin: 0 auto;
       }
-      #date-select-mobile{
-        display: none;
-      }
+      // #date-select-mobile{
+      //   display: none;
+      // }
     }
     .highlight-cover {
       height: 500px;
@@ -93,6 +94,12 @@
     }
 
     .sattvik-section {
+      .nutri-page-bold{
+        font-weight: 700;
+      }
+      .nutri-page-semi-bold{
+        font-weight: 600;
+      }
       ul {
         margin-left: 3rem;
         li {
