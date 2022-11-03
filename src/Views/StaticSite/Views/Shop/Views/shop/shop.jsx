@@ -16,11 +16,14 @@ import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import { updateCartData } from '../../Shop.action'
 import { useDispatch } from 'react-redux'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate,useSearchParams } from 'react-router-dom'
+import baseDomain from '../../../../assets/images/imageAsset'
+import { banner } from '../../../../assets/images/imageAsset'
 
 const Shop = () => {
   const dispatch = useDispatch()
   const navigate = useNavigate()
+  const [Params] = useSearchParams()
 
   const [products, setProducts] = useState([])
   const [pagination, setPagination] = useState({ page: 1, limit: 12 })
@@ -30,14 +33,35 @@ const Shop = () => {
   const [search,setSearch] =useState('')
   const [searched,isSearched] = useState(false)
 
+  
+
+  const fetchAllCategories = async()=>{
+    const { data } = await getAllCategories()
+    setCategories(data.data)
+  }
+
   const getAllProducts = async(page, limit) => {
+    if(Params.get('category')){
+      console.log(categories.find(item=>item._id=== Params.get('category'))?._id,'AAA')
+      const { data } = await getProductByCategory(categories.find(item=>{ return item._id===Params.get('category')})?._id)
+      setProducts(data.data)
+    }
     const { data } = await fetchAllProductsAPI(page, limit)
     setProducts(data.data)
     setCount(data.count)
   }
-  const fetchAllCategories = async()=>{
-    const { data } = await getAllCategories()
-    setCategories(data.data)
+
+  const productByCategory = async(category)=> {
+
+    if(category==='all'){
+      getAllProducts()
+      navigate('/shop')
+    }
+    else{
+      navigate(`/shop/?category=${ categories?.find(item=>item._id===category)?._id }`)
+      const { data } = await getProductByCategory(category)
+      setProducts(data.data)
+    }
   }
 
   const shopPagination = (num) => {
@@ -56,12 +80,15 @@ const Shop = () => {
   }
 
   useEffect(() => {
+    fetchAllCategories()
     getAllProducts(pagination.page, pagination.limit)
     dispatch(updateCartData(JSON.parse(localStorage.getItem('cart'))))
-    fetchAllCategories()
-  }, [pagination])
+  }, [ pagination ])
 
 
+  useEffect(()=>{
+    console.log('test')
+  },[ categories ])
 
 
   const addLocal = (productID) => {
@@ -106,7 +133,7 @@ const Shop = () => {
           element.quantity = element.quantity+1
         }
       })
-      
+
       localStorage.setItem('cart',JSON.stringify(prevCart))
       dispatch(updateCartData(prevCart))
     }else{
@@ -135,17 +162,10 @@ const Shop = () => {
     menuItems: [],
   }
 
-  const productByCategory = async(category)=> {
-    
-    if(category==='all'){
-      getAllProducts()
-      navigate('/shop')
-    }
-    else{ 
-      navigate(`/shop/?category=${ categories?.find(item=>item._id===category)?.name }`)
-      const { data } = await getProductByCategory(category)
-      setProducts(data.data)
-    }
+
+  const handleBanner = (categories) => {
+    console.log(categories)
+    // setProducts(categories?.filter(category=>category._id == id))
   }
 
   return (
@@ -156,7 +176,7 @@ const Shop = () => {
           <div className="category-search">
             <select onChange={ (e)=>{ productByCategory(e.target.value) } } className="shop_categories">
               <option value='all' >All Categories</option>
-              { categories.map((item,i)=><option key={i} value={item._id} >{ item.name }</option>) }
+              { categories.map((item,i)=><option key={i} selected={ item._id===Params.get('category') } value={item._id} >{ item.name }</option>) }
             </select>
             <div className="shop_search">
               <label>
@@ -171,17 +191,23 @@ const Shop = () => {
             <div className="banner-section">
               <Slider {...settings}>
                 <div className="banner">
-                  <div className="banner-img">Banner Image</div>
+                  <div className="banner-img" onClick={()=>{handleBanner(categories)}}>
+                    <img src={`${baseDomain}${banner.storeMats}`} className='carosoul-img' />
+                  </div>
                 </div>
                 <div className="banner">
-                  <div className="banner-img">Banner Image</div>
+                  <div className="banner-img">
+                    <img src={`${baseDomain}${banner.storeTshirts}`} className='carosoul-img' />
+                  </div>
                 </div>
                 <div className="banner">
-                  <div className="banner-img">Banner Image</div>
+                  <div className="banner-img">
+                    <img src={`${baseDomain}${banner.storeBooks}`} className='carosoul-img' />
+                  </div>
                 </div>
               </Slider>
             </div>
-            {!searched &&  <div className="products-tray">
+            {!searched && <div className="products-tray">
               {products.map((item, i) => (
                 <Fragment key={i}>
                   <ShopCard
@@ -193,21 +219,21 @@ const Shop = () => {
                     buyProduct={buyProduct}
                   />
                   <ToastContainer
-                    // position="top-right"
-                    // autoClose={3000}
-                    // hideProgressBar={false}
-                    // newestOnTop={false}
-                    // closeOnClick
-                    // rtl={false}
-                    // pauseOnFocusLoss
-                    // draggable
-                    // pauseOnHover
-                    // theme="light"
+                  // position="top-right"
+                  // autoClose={3000}
+                  // hideProgressBar={false}
+                  // newestOnTop={false}
+                  // closeOnClick
+                  // rtl={false}
+                  // pauseOnFocusLoss
+                  // draggable
+                  // pauseOnHover
+                  // theme="light"
                   />
                 </Fragment>
               ))}
             </div>}
-            {searched && products.length>0 ?  
+            {searched && products.length>0 ?
               <div className="products-tray">
                 {products.map((item, i) => (
                   <Fragment key={i}>
@@ -220,16 +246,16 @@ const Shop = () => {
                       buyProduct={buyProduct}
                     />
                     <ToastContainer
-                      // position="top-right"
-                      // autoClose={3000}
-                      // hideProgressBar={false}
-                      // newestOnTop={false}
-                      // closeOnClick
-                      // rtl={false}
-                      // pauseOnFocusLoss
-                      // draggable
-                      // pauseOnHover
-                      // theme="light"
+                    // position="top-right"
+                    // autoClose={3000}
+                    // hideProgressBar={false}
+                    // newestOnTop={false}
+                    // closeOnClick
+                    // rtl={false}
+                    // pauseOnFocusLoss
+                    // draggable
+                    // pauseOnHover
+                    // theme="light"
                     />
                   </Fragment>
                 ))}

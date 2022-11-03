@@ -2525,4 +2525,11 @@ export const nutriDiet = {
   nutriDietMain:'/nutri-diet/PHOTO-2022-11-01-12-59-38.jpg',
   nutriDietCard:'/nutri-diet/Nutri-Diet-Clinic-Post.jpg'
 }
+
+export const banner = {
+  storeMats:'/shop-banner/TYI-Store-Banners-Mats.png',
+  storeTshirts:'/shop-banner/TYI-Store-Banners-TShirts.png',
+  storeBooks:'/shop-banner/TYI-Store-Banners-Books.png'
+}
+
 export default baseDomain
