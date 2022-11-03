@@ -8,7 +8,6 @@ import axios from 'axios'
 import InnerNavComponent from '../../../../Components/InnerNavComponent'
 import {
   authBaseDomain,
-  authServerClientId,
 } from '../../../../../../Constants/appSettings'
 import MessageModal from '../../../../Components/MessageModal'
 
@@ -34,7 +33,7 @@ const SignUp = () => {
   const createUserSignIn = async(data) => {
     try {
       await axios.post(
-        `${authBaseDomain}/user/register?clientId=${authServerClientId}`,
+        `${authBaseDomain}/authdoor/register`,
         data
       )
       navigate('/user/sign-in')
