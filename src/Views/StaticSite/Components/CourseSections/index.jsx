@@ -122,11 +122,40 @@ const CourseSection = ({
     switch (title) {
     case 'Teacher Training Courses':
       return (
-        <Accordian
-          sliderVal={customVal}
-          setSliderVal={setCustomVal}
-          data={coursesList}
-        />
+        <>
+          <Accordian
+            sliderVal={customVal}
+            setSliderVal={setCustomVal}
+            data={coursesList}
+          />
+          <ul id='therapy-course' >
+            <Link to="/certificate-yoga-therapy-course-online">
+              <li className="text-bold" >
+                    Certificate Yoga Therapy Course
+              </li>
+            </Link>
+            <Link to="/certificate-program-on-yoga-for-cancer">
+              <li className="text-bold" >
+                    Certificate Program on Yoga for Cancer
+              </li>
+            </Link>
+            <Link to="/certification-program-on-yoga-for-lung-cancer-online">
+              <li className="text-bold" >
+                    Certificate Program on Yoga for Lung Cancer - Online
+              </li>
+            </Link>
+            <Link to="/certificate-course-on-advanced-pranayama-techniques">
+              <li className="text-bold" >
+                    Certificate Course on Advanced Pranayama Techniques
+              </li>
+            </Link>
+            <Link to="/certification-course-on-yoga-sutra-online">
+              <li className="text-bold" >
+                    Certificate Course on Yoga Sutra-Online
+              </li>
+            </Link>
+          </ul>
+        </>
       )
     case 'Regular Classes':
       return (

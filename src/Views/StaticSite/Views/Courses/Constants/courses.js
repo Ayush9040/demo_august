@@ -355,7 +355,7 @@ const ttc200hr = {
       offlineFee: { residentialFee: 70000, nonResidentialFee: 28000 },
     },
     category: 'ttc',
-    title: '200 hrs TTC - 2 Months TTC On Campus – English - Batch 2',
+    title: '200 hrs TTC - 2 Months TTC On Campus-English-Batch 2',
     dates: [
       '5th Sept to 28th Oct 2022',
       '31st Oct to 23rd Dec 2022',
@@ -677,7 +677,7 @@ const ttc200hr = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'ttc',
-    title: '200 hrs TTC - 2 Months TTC Online – English - Batch 3 ',
+    title: '200 hrs TTC - 2 Months TTC Online-English-Batch 3',
     dates: [
       '8th Aug to 1st Oct 2022',
       '10th Oct to 3rd Dec 2022',
@@ -997,7 +997,7 @@ const ttc200hr = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'ttc',
-    title: '200 hrs TTC - 2 Months TTC Online – Hindi - Batch 4 ',
+    title: '200 hrs TTC - 2 Months TTC Online-Hindi-Batch 4',
     dates: [
       '15th Aug to 8th Oct 2022',
       '17th Oct to 10th Dec 2022',
@@ -1315,7 +1315,7 @@ const ttc200hr = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'ttc',
-    title: '200 hrs TTC - 2 Months TTC Online – English - Batch 5 ',
+    title: '200 hrs TTC - 2 Months TTC Online-English-Batch 5',
     dates: ['29th Aug to 22nd Oct 2022', '31st Oct to 24th Dec 2022'],
     online: true,
     onCampus: false,
@@ -1630,7 +1630,7 @@ const ttc200hr = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'ttc',
-    title: '200 hrs TTC - 3 Months Weekend TTC Online – English - Batch 6',
+    title: '200 hrs TTC - 3 Months Weekend TTC Online-English-Batch 6',
     dates: ['27th Aug to 13th Nov 2022', '19th Nov to 5th Feb 2023'],
     online: true,
     onCampus: false,
@@ -2206,7 +2206,7 @@ const ttc900hr = {
 
     metaDescription:
       'You will learn the tools to master your physical, mental and spiritual well-being. You will see a marked improvement in your life, relationships and work.',
-    title: '900 hrs TTC  3 Months TTC On Campus - English',
+    title: '900 hrs TTC-3 Months TTC On Campus - English',
 
     image: `${baseDomain}${courseAssets.courseAsset40}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset103}`,
@@ -3948,7 +3948,7 @@ const ttc900hr = {
 
     metaDescription:
       'You will learn the tools to master your physical, mental and spiritual well-being. You will see a marked improvement in your life, relationships and work.',
-    title: '900 hrs TTC  4 Months TTC Online - English',
+    title: '900 hrs TTC-4 Months TTC Online - English',
     image: `${baseDomain}${courseAssets.courseAsset40}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset103}`,
     mostPopular: false,
@@ -4553,7 +4553,7 @@ const ttc900hr = {
 
     metaDescription:
       'You will learn the tools to master your physical, mental and spiritual well-being. You will see a marked improvement in your life, relationships and work.',
-    title: '900 hrs TTC  7 Months TTC Online & On Campus - English',
+    title: '900 hrs TTC-7 Months TTC Online & On Campus - English',
 
     image: `${baseDomain}${courseAssets.courseAsset40}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset103}`,
@@ -7072,7 +7072,7 @@ const camps = {
 
   15: {
     id: '',
-    title: 'Women’s Camp',
+    title: 'Women`s Camp',
     key: 'womens-camp',
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
