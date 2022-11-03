@@ -160,7 +160,7 @@ change in your lifestyle”.</p>
               <li><span className='nutri-page-semi-bold' >Kids Nutrition</span></li>
             </ul>
             <p className='nutri-page-bold' >
-            Stepwise process:
+            Stepwise Process:
             </p>
             <ul>
 
@@ -174,7 +174,7 @@ change in your lifestyle”.</p>
               <li> Daily WhatsApp support</li>
             </ul>
             <p className='nutri-page-bold' >
-            Our services:
+            Our Services:
             </p>
             <ul>
               <li>Easy homemade recipes according to their culture.</li>
@@ -186,7 +186,7 @@ change in your lifestyle”.</p>
             <p>
             Achieve long-term wellness through simple, cultural and holistic changes in your nutrition, eating habits and cognitive thinking.
             </p>
-            <p>Call on <a style={{ color:'blue' }} href='tel:+919967429596' >+91-9967429596</a> for appointments.</p>
+            <p><b>Call on <a style={{ color:'blue' }} href='tel:+919967429596' >+91-9967429596</a> for appointments.</b></p>
           </div>
         </div>
       </div>
