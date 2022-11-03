@@ -67,7 +67,7 @@ const CourseSection = ({
           },
           {
             url: '/900-hours-advanced-teacher-training-course',
-            text: '4 Months TTC-On Campus-English',
+            text: '4 Months TTC-Online-English',
           },
           {
             url: '/seven-month-ttc',
@@ -131,27 +131,27 @@ const CourseSection = ({
           <ul id='therapy-course' >
             <Link to="/certificate-yoga-therapy-course-online">
               <li className="text-bold" >
-                    Certificate Yoga Therapy Course
+              Certificate Yoga Therapy Course - Online & On Campus
               </li>
             </Link>
             <Link to="/certificate-program-on-yoga-for-cancer">
               <li className="text-bold" >
-                    Certificate Program on Yoga for Cancer
+              Certificate Program on Yoga for Cancer – Online & On Campus
               </li>
             </Link>
             <Link to="/certification-program-on-yoga-for-lung-cancer-online">
               <li className="text-bold" >
-                    Certificate Program on Yoga for Lung Cancer - Online
+              Certificate Program on Yoga for Lung Cancer - Online
               </li>
             </Link>
             <Link to="/certificate-course-on-advanced-pranayama-techniques">
               <li className="text-bold" >
-                    Certificate Course on Advanced Pranayama Techniques
+              Certificate Course on Advanced Pranayama Techniques - Online
               </li>
             </Link>
             <Link to="/certification-course-on-yoga-sutra-online">
               <li className="text-bold" >
-                    Certificate Course on Yoga Sutra-Online
+              Certificate Course on Yoga Sutra - Online
               </li>
             </Link>
           </ul>
