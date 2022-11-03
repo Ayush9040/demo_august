@@ -186,7 +186,7 @@ change in your lifestyle”.</p>
             <p>
             Achieve long-term wellness through simple, cultural and holistic changes in your nutrition, eating habits and cognitive thinking.
             </p>
-            <p>Call on <a style={{ color:'blue' }} href='tel:+919967429596' >9967429596</a> for prior consultations.</p>
+            <p>Call on <a style={{ color:'blue' }} href='tel:+919967429596' >+91-9967429596</a> for appointments.</p>
           </div>
         </div>
       </div>

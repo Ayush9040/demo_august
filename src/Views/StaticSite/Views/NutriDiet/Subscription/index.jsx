@@ -1,4 +1,4 @@
-import React,{ useState,useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import InputComponent from '../../../Components/InputComponent'
 import PhoneInput from 'react-phone-number-input'
 import 'react-phone-number-input/style.css'
@@ -7,8 +7,7 @@ import CommonBtn from '../../../Components/commonbtn'
 import { createNutriOrder, enrollPlan, successMail } from '../Api'
 import { useNavigate } from 'react-router-dom'
 
-const SubcriptionForm = ({ packageName, packagePrice,  closeForm }) => {
-
+const SubcriptionForm = ({ packageName, packagePrice, closeForm }) => {
   useEffect(() => {
     const script = document.createElement('script')
     script.src = 'https://checkout.razorpay.com/v1/checkout.js'
@@ -18,33 +17,34 @@ const SubcriptionForm = ({ packageName, packagePrice,  closeForm }) => {
 
   const navigate = useNavigate()
 
-  const [ formData,setFormData ] = useState({
-    name:'',
-    phone:'',
-    email:'',
-    city:'',
-    country:'',
+  const [formData, setFormData] = useState({
+    name: '',
+    phone: '',
+    email: '',
+    city: '',
+    country: '',
   })
-  const [ agree,setAgree ] = useState(false)
-  const [empty,setEmpty] = useState()
+  const [agree, setAgree] = useState(false)
+  const [empty, setEmpty] = useState()
 
-  const submitForm = async()=>{
+  const submitForm = async() => {
     const { data } = await enrollPlan({
       personalDetails: formData,
       courseDetails: {
-        cousreId: `${packageName}_${ packagePrice }`,
+        cousreId: `${packageName}_${packagePrice}`,
         cousreName: 'Nutri Diet Clinic',
-        plan: packageName
-      }
+        plan: packageName,
+      },
     })
-    const paymentOrderResponse =  await createNutriOrder(data.data._id , {
+    const paymentOrderResponse = await createNutriOrder(data.data._id, {
       amount: packagePrice,
       notes: {
-        description:'Nutri Diet Clinic',
-      }
+        description: 'Nutri Diet Clinic',
+      },
     })
-    if(!paymentOrderResponse?.data?.amount && !paymentOrderResponse?.data?.id) return 0
-            
+    if (!paymentOrderResponse?.data?.amount && !paymentOrderResponse?.data?.id)
+      return 0
+
     const options = {
       key: 'rzp_test_udmmUPuH3rTJe8', // Enter the Key ID generated from the Dashboard
       amount: paymentOrderResponse.data.amount, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
@@ -55,15 +55,19 @@ const SubcriptionForm = ({ packageName, packagePrice,  closeForm }) => {
       order_id: paymentOrderResponse.data.id, // eslint-disable-line
       handler: async(res) => {
         // Navigare to Success if razorpay_payment_id, razorpay_order_id, razorpay_signature is there
-        if(res.razorpay_payment_id && res.razorpay_order_id && res.razorpay_signature) {
+        if (
+          res.razorpay_payment_id &&
+          res.razorpay_order_id &&
+          res.razorpay_signature
+        ) {
           await successMail({
             type: 'INFO_TYI',
             HTMLTemplate: 'NUTRI_DIET_CLINIC_CONFIRMATION_MAIL',
             subject: 'Enrollment Confirmation',
-            data:{
-              name: formData.name
+            data: {
+              name: formData.name,
             },
-            receivers: [formData.email,'info@theyogainstitute.org']
+            receivers: [formData.email, 'info@theyogainstitute.org'],
           })
           navigate('/enrollment_thankyou')
         }
@@ -71,129 +75,136 @@ const SubcriptionForm = ({ packageName, packagePrice,  closeForm }) => {
       prefill: {
         name: formData.name,
         email: formData.email,
-        contact: formData.phone
+        contact: formData.phone,
       },
-      notes:{
-        description:packageName,
-        formData:data.data._id
+      notes: {
+        description: packageName,
+        formData: data.data._id,
       },
       theme: {
-        color: '#3399cc' // enter theme color for our website
-      }
+        color: '#3399cc', // enter theme color for our website
+      },
     }
     const rzp = new window.Razorpay(options)
     rzp.open()
   }
 
-
-  const handleEnrollment = ()=>{
-    if( formData.name==='' ){
+  const handleEnrollment = () => {
+    if (formData.name === '') {
       setEmpty(1)
-    }else if( formData.email==='' ){
+    } else if (formData.email === '') {
       setEmpty(2)
-    }else if( formData.phone==='' ){
+    } else if (formData.phone === '') {
       setEmpty(3)
-    }else if( formData.country==='' ){
+    } else if (formData.country === '') {
       setEmpty(4)
-    }else if( formData.city==='' ){
+    } else if (formData.city === '') {
       setEmpty(5)
-    }else if( agree===false ){
+    } else if (agree === false) {
       setEmpty(6)
-    }else{
+    } else {
       submitForm()
     }
   }
 
   return (
-    <div className='nutri-subscription-form' >
-      <div style={{ float:'right',fontSize:'32px',color:'#000000', cursor:'pointer' }} onClick={ ()=>{ closeForm(false) }} >&#10005;</div>
-      <h2>Course Duration:{ packageName }</h2>
-      <h4>Fees: Rs. { packagePrice }</h4>
+    <div className='nutri-subscription-form'>
+      <div
+        style={{
+          float: 'right',
+          fontSize: '32px',
+          color: '#000000',
+          cursor: 'pointer',
+        }}
+        onClick={() => {
+          closeForm(false)
+        }}
+      >
+        &#10005;
+      </div>
+      <h2>Course Duration:{packageName}</h2>
+      <h4>Fees: Rs. {packagePrice}</h4>
       <form>
-        <div className="form-field">
+        <div className='form-field'>
           <InputComponent
-            type="text"
-            placeholder="Enter Full Name*"
+            type='text'
+            placeholder='Enter Full Name*'
             form={formData}
             setField={setFormData}
-            keyName="name"
+            keyName='name'
           />
           {empty === 1 && (
             <small style={{ color: 'red', marginLeft: '0' }}>
-                *Please Enter Name!
+              *Please Enter Name!
             </small>
           )}
         </div>
-        <div className="form-field">
+        <div className='form-field'>
           <InputComponent
-            type="email"
-            placeholder="Enter Email Address*"
+            type='email'
+            placeholder='Enter Email Address*'
             form={formData}
             setField={setFormData}
-            keyName="email"
+            keyName='email'
           />
           {empty === 2 && (
             <small style={{ color: 'red', marginLeft: '0' }}>
-                *Please Enter Valid Email!
+              *Please Enter Valid Email!
             </small>
           )}
         </div>
-        <div className="form-field">
+        <div className='form-field'>
           <PhoneInput
-            placeholder="Enter phone number*"
+            placeholder='Enter phone number*'
             defaultCountry='IN'
             value={formData.phone}
-            onChange={(e)=>{ setFormData({ ...formData,phone:e }) }}/>
-          {empty === 3 && (
-            <small>
-              {' '}
-                  Please enter a valid phone number
-            </small>
-          )}
+            onChange={(e) => {
+              setFormData({ ...formData, phone: e })
+            }}
+          />
+          {empty === 3 && <small> Please enter a valid phone number</small>}
         </div>
         <div className='form-field'>
           <InputComponent
-            type="text"
-            placeholder="Country*"
+            type='text'
+            placeholder='Country*'
             form={formData}
             setField={setFormData}
-            keyName="country"
+            keyName='country'
             errorCheck={setEmpty}
           />
-          {empty === 4 && (
-            <small>
-              {' '}
-                  Please enter your country
-            </small>
-          )}
+          {empty === 4 && <small> Please enter your country</small>}
         </div>
         <div className='form-field'>
           <InputComponent
-            type="text"
-            placeholder="City*"
+            type='text'
+            placeholder='City*'
             form={formData}
             setField={setFormData}
-            keyName="city"
+            keyName='city'
             errorCheck={setEmpty}
           />
-          {empty === 5 && (
-            <small >
-              {' '}
-                  Please enter your city
-            </small>
-          )}
+          {empty === 5 && <small> Please enter your city</small>}
         </div>
-        <div className='form-field' style={{ textAlign:'left' }} id="t-n-c" >
-          <ol>Terms & Conditions
+        <div className='form-field' style={{ textAlign: 'left' }} id='t-n-c'>
+          <ol>
+            Terms & Conditions
             <li>Fees are non- refundable and non-transferable.</li>
-            <li>Program dates cannot be shifted in any circumstances.</li> 
-            <li>Appointments will be scheduled between 10: 30 am to 5: 30 pm IST, Tues- Fri.</li>
+            <li>
+              By submitting the contact form or by subscribing to any package
+              via this website, you agree to receive Phone Calls, SMS, WhatsApp,
+              and E-mails from Nutri Diet Clinic.
+            </li>
+            <li>
+              Call on +91 9967429596 for appointments between 10:00 am to 6:30 pm IST
+              (Monday to Saturday).
+            </li>
           </ol>
         </div>
-        <div className="terms-conditions">
+        <div className='terms-conditions'>
           <input
-            type="checkbox"
-            onChange={() => setAgree( agree ? false : true)}
+            type='checkbox'
+            onChange={() => setAgree(agree ? false : true)}
           />
 
           <p>I have read and agree to the above terms and conditions.</p>
@@ -204,7 +215,11 @@ const SubcriptionForm = ({ packageName, packagePrice,  closeForm }) => {
           )}
         </div>
       </form>
-      <CommonBtn isColor='#ca4625' text='Continue' buttonAction={ handleEnrollment  } />
+      <CommonBtn
+        isColor='#ca4625'
+        text='Continue'
+        buttonAction={handleEnrollment}
+      />
     </div>
   )
 }
