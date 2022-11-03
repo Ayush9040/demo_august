@@ -2501,7 +2501,8 @@ export const printMediaAssest = {
   printMediaAssest923:'/print_media/new2022/july4.jpg',
   printMediaAssest924:'/print_media/2022/Navbharat-Times-Epaper-23rd-October-2022.jpg',
   printMediaAssest925:'/print_media/2022/Navbharat-Times-Epaper-30th-October-2022.jpg',
-  printMediaAssest926:'/print_media/2022/Navbharat-Times-Epaper-31st-October-2022.jpg'
+  printMediaAssest926:'/print_media/2022/Navbharat-Times-Epaper-31st-October-2022.jpg',
+  printMediaAssest927:'/print_media/new2022/Sakal-Paper-3rd-November -2022-Page-10.jpg'
 }
 
 export const locateAsset ={
