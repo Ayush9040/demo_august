@@ -97,6 +97,7 @@ const Gifting = lazy(() => import('../Views/Gifting/Views/gifting'))
 const DescisionComp = lazy(() => import('../Views/DecisionComponent'))
 const LocateUs = lazy(()=> import ('../Components/LocateUs'))
 const LocateDetails = lazy(()=> import ('../Components/LocateUs/LocationDetails'))
+const NutriDiet = lazy(()=>import('../Views/NutriDiet'))
 const staticSiteRoutes = [
   //Home
   {
@@ -658,6 +659,13 @@ const staticSiteRoutes = [
     id:'staticSearch',
     routePath:'/search',
     name:'Search'
+  },
+  {
+    Component:NutriDiet,
+    path:'/nutri-diet',
+    id:'staticNutriDiet',
+    routePath:'/nutri-diet',
+    name:'NutriDiet'
   }
 ]
 

@@ -416,6 +416,8 @@ const MegaMenu = ({ setNav }) => {
                 <Link onClick={() => {setNav(false)}}  to='/senior-citizen-workshop'><li>Senior citizen Workshop</li></Link>
                 <Link onClick={() => {setNav(false)}}  to='/diabetes-camp'><li>Diabetes Camp</li></Link>
               </ul>
+              <Link onClick={() => {setNav(false)}}  to='/nutri-diet'>
+                <h3 style={{ marginTop:'0.75rem' }} >NUTRI DIET CLINIC</h3></Link>
               <Link onClick={() => {setNav(false)}}  to='/corporate-workshops'>
                 <h3 style={{ marginTop:'0.75rem' }} >CORPORATE WORKSHOP</h3></Link>
               <Link onClick={() => {setNav(false)}}  to='/home-tuitions'>

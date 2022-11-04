@@ -2522,4 +2522,11 @@ export const santaCruz = {
   apply: '/Santa-cruz-images/Pranayama_workshop.jpg',
   details: '/Santa-cruz-images/Details.jpg',
 }
+
+
+export const nutriDiet = {
+  nutriDietMain:'/nutri-diet/PHOTO-2022-11-01-12-59-38.jpg',
+  nutriDietCard:'/nutri-diet/Nutri-Diet-Clinic-Post.jpg'
+}
+
 export default baseDomain
