@@ -4244,7 +4244,7 @@ const printMedia = [
     media:[
       {
         img: `${baseDomain}${printMediaAssest.printMediaAssest927}`,
-        // url:'https://epaper.navbharattimes.com/imageview_3286_79811_4_16_30-10-2022_4_i_1_sf.html',
+        url:'',
         alt:'Sakal-Paper-3rd-November-2022'
       },
       {
