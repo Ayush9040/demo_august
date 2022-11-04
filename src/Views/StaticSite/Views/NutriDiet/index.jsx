@@ -92,8 +92,7 @@ const NutriDiet = () => {
         <div className="main-container">
           <div className="highlight-info">
             <h1>Nutri Diet Clinic – Achieve your goals with customized diet plans.</h1>
-            <p>“Take a step for your well-being and enroll in our health programs to get a holistic
-change in your lifestyle”.</p>
+            <p>Take a step for your well-being and enroll in our customized diet plans to get a holistic change in your lifestyle.</p>
             <div
               id="date-select-mobile"
             >
