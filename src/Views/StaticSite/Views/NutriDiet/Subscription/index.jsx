@@ -191,11 +191,6 @@ const SubcriptionForm = ({ packageName, packagePrice, closeForm }) => {
             Terms & Conditions
             <li>Fees are non- refundable and non-transferable.</li>
             <li>
-              By submitting the contact form or by subscribing to any package
-              via this website, you agree to receive Phone Calls, SMS, WhatsApp,
-              and E-mails from Nutri Diet Clinic.
-            </li>
-            <li>
               Call on +91 9967429596 for appointments between 10:00 am to 6:30 pm IST
               (Monday to Saturday).
             </li>

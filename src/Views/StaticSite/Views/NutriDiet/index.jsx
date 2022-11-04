@@ -105,7 +105,7 @@ change in your lifestyle”.</p>
                 dates={options}
               />{' '}
             </div>
-            <CommonBtn text='Enroll Form' buttonAction={ enrollFrom }   />
+            <CommonBtn text='Enroll Now' buttonAction={ enrollFrom }   />
             { err && <small> Please select package* </small>}
           </div>
           <div className="highlight-cover">
