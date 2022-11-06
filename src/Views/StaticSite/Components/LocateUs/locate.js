@@ -44,7 +44,7 @@ export const locateData =[
       {
         state:'Matunga (CR)',
         notstate:'Sri Kanyaka Parmeshwari Temple, Plot No 403, Vasavi Nilayam, Telang Road, Matunga (CR), Mumbai.',
-        phone:['+91-887995500','+91-9343517490'],
+        phone:['+91-9343517490'],
         url: 'matunga'
       },
       {
