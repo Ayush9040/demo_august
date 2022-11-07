@@ -61,48 +61,15 @@ const LocateUs = () => {
             </span>
             {bold === 'India' && <div className="bottom_line2"></div>}
           </li>
-          <li>
-            <span
-              style={bold === 'Uruguay' ? { fontWeight: '700' } : {}}
-              onClick={() => {
-                setBold('Uruguay')
-              }}
-            >
-              Uruguay
-            </span>
-            {bold === 'Uruguay' && <div className="bottom_line2"></div>}
-          </li>
-          <li>
-            <span
-              style={bold === 'Hong Kong' ? { fontWeight: '700' } : {}}
-              onClick={() => {
-                setBold('Hong Kong')
-              }}
-            >
-              Hong Kong
-            </span>
-            {bold === 'Hong Kong' && <div className="bottom_line2"></div>}
-          </li>
-          {/* <li>
-            <span
-              style={bold === 'Italy' ? { fontWeight: '700' } : {}}
-              onClick={() => {
-                setBold('Italy')
-              }}
-            >
-              Italy
-            </span>
-            {bold === 'Italy' && <div className="bottom_line2"></div>}
-          </li> */}
           <li
             onClick={() => {
-              setBold('Thailand')
+              setBold('Costa Rica')
             }}
           >
-            <span style={bold === 'Thailand' ? { fontWeight: '700' } : {}}>
-              Thailand
+            <span style={bold === 'Costa Rica' ? { fontWeight: '700' } : {}}>
+              Costa Rica
             </span>
-            {bold === 'Thailand' && <div className="bottom_line2"></div>}
+            {bold === 'Costa Rica' && <div className="bottom_line2"></div>}
           </li>
           <li>
             <span
@@ -115,16 +82,61 @@ const LocateUs = () => {
             </span>
             {bold === 'France' && <div className="bottom_line2"></div>}
           </li>
+          <li>
+            <span
+              style={bold === 'Hong Kong' ? { fontWeight: '700' } : {}}
+              onClick={() => {
+                setBold('Hong Kong')
+              }}
+            >
+              Hong Kong
+            </span>
+            {bold === 'Hong Kong' && <div className="bottom_line2"></div>}
+          </li>
           <li
             onClick={() => {
-              setBold('Costa Rica')
+              setBold('Thailand')
             }}
           >
-            <span style={bold === 'Costa Rica' ? { fontWeight: '700' } : {}}>
-              Costa Rica
+            <span style={bold === 'Thailand' ? { fontWeight: '700' } : {}}>
+              Thailand
             </span>
-            {bold === 'Costa Rica' && <div className="bottom_line2"></div>}
+            {bold === 'Thailand' && <div className="bottom_line2"></div>}
           </li>
+          <li>
+            <span
+              style={bold === 'U.A.E.' ? { fontWeight: '700' } : {}}
+              onClick={() => {
+                setBold('U.A.E.')
+              }}
+            >
+              U.A.E.
+            </span>
+            {bold === 'U.A.E.' && <div className="bottom_line2"></div>}
+          </li>
+          <li>
+            <span
+              style={bold === 'Uruguay' ? { fontWeight: '700' } : {}}
+              onClick={() => {
+                setBold('Uruguay')
+              }}
+            >
+              Uruguay
+            </span>
+            {bold === 'Uruguay' && <div className="bottom_line2"></div>}
+          </li>
+          {/* <li>
+            <span
+              style={bold === 'Italy' ? { fontWeight: '700' } : {}}
+              onClick={() => {
+                setBold('Italy')
+              }}
+            >
+              Italy
+            </span>
+            {bold === 'Italy' && <div className="bottom_line2"></div>}
+          </li> */}
+
         </div>
         <div className="locate_country">
           <a href={country?.website}>

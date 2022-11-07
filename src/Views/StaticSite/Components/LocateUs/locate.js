@@ -98,41 +98,13 @@ export const locateData =[
     ]
   },
   {
-    flag:`${baseDomain}${locateAsset.urugauy}`,
-    country:'Uruguay',
-    add:'The Yoga Institute,',
-    subAdd:'Studio Jivam Selto, Uruguay',
-    mobile:'(598) 92918278',
-    whatapp:'+59892918278',
-    email:'padmaranidd@gmail.com',
-    website:'https://studiojiva.com',
-    branches:[]
-  },
-  {
-    flag:`${baseDomain}${locateAsset.hongKong}`,
-    country:'Hong Kong',
-    add:'Kowloon, Hong Kong, (Opposite Kimberley Hotel),The Yoga Institute,',
-    subAdd:'Nearest MTR exit is :- Tsim Sha Tsui (TST) Exit B',
-    mobile:'21919651',
-    website:'https://yoga.org.hk/',
-    email:'life@yoga.org.hk',
-    branches:[]
-  },
-  // {
-  //   flag:`${baseDomain}${locateAsset.italy}`,
-  //   country:'Italy',
-  //   add:'The Yoga Institute,',
-  //   subAdd:'Italy',
-  //   branches:[]
-  // },
-  {
-    flag:`${baseDomain}${locateAsset.thailand}`,
-    country:'Thailand',
-    add:'Wise Living Yoga Academy, Thailand (Doi Saket Yoga Training Center) 198 Moo 2,',
-    subAdd:'Luang Nuea Sub-Ditrict, Doi Saket - 50220 Chiang Mai - Thailand.',
-    mobile:'+66 931783213',
-    email:'info@wiselivingyoga.com',
-    website:'https://teachertraining.wiselivingyoga.com/',
+    flag:`${baseDomain}${locateAsset.costaRica}`,
+    country:'Costa Rica',
+    add:'The Yoga Institute, Costa Rica, Modo Elefante,',
+    subAdd:'Provincia de Alajuela, Atenas, 20501',
+    mobile:'(506) 8729 3102',
+    email:'tyi@modoelefante.org',
+    website:'https://modoelefante.org/',
     branches:[]
   },
   {
@@ -146,13 +118,51 @@ export const locateData =[
     branches:[]
   },
   {
-    flag:`${baseDomain}${locateAsset.costaRica}`,
-    country:'Costa Rica',
-    add:'The Yoga Institute, Costa Rica, Modo Elefante,',
-    subAdd:'Provincia de Alajuela, Atenas, 20501',
-    mobile:'(506) 8729 3102',
-    email:'tyi@modoelefante.org',
-    website:'https://modoelefante.org/',
+    flag:`${baseDomain}${locateAsset.hongKong}`,
+    country:'Hong Kong',
+    add:'Kowloon, Hong Kong, (Opposite Kimberley Hotel),The Yoga Institute,',
+    subAdd:'Nearest MTR exit is :- Tsim Sha Tsui (TST) Exit B',
+    mobile:'21919651',
+    website:'https://yoga.org.hk/',
+    email:'life@yoga.org.hk',
     branches:[]
-  }
+  },
+  {
+    flag:`${baseDomain}${locateAsset.thailand}`,
+    country:'Thailand',
+    add:'Wise Living Yoga Academy, Thailand (Doi Saket Yoga Training Center) 198 Moo 2,',
+    subAdd:'Luang Nuea Sub-Ditrict, Doi Saket - 50220 Chiang Mai - Thailand.',
+    mobile:'+66 931783213',
+    email:'info@wiselivingyoga.com',
+    website:'https://teachertraining.wiselivingyoga.com/',
+    branches:[]
+  },
+  {
+    flag:`${ baseDomain }${ locateAsset.uae }`,
+    country:'U.A.E.',
+    add:'Jumeirah Lake Towers, Dubai',
+    subAdd:'',
+    mobile:'+971563801232',
+    email:'Info@yogihearts.com',
+    website:'www.yogihearts.com',
+    branches:[]
+  },
+  {
+    flag:`${baseDomain}${locateAsset.urugauy}`,
+    country:'Uruguay',
+    add:'The Yoga Institute,',
+    subAdd:'Studio Jivam Selto, Uruguay',
+    mobile:'(598) 92918278',
+    whatapp:'+59892918278',
+    email:'padmaranidd@gmail.com',
+    website:'https://studiojiva.com',
+    branches:[]
+  },
+  // {
+  //   flag:`${baseDomain}${locateAsset.italy}`,
+  //   country:'Italy',
+  //   add:'The Yoga Institute,',
+  //   subAdd:'Italy',
+  //   branches:[]
+  // },
 ]

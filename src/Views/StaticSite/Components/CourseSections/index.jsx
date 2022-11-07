@@ -205,9 +205,18 @@ const CourseSection = ({
           <Accordian data={campsAccordian} />
           <div>
             <h4>
-              <ul>
+              <ul id='camps-workshop' >
                 <Link to="/corporate-workshops">
                   <li>Corporate Workshop</li>
+                </Link>
+                <Link to="/satsang">
+                  <li>Satsang</li>
+                </Link>
+                <Link to="/samattvam">
+                  <li>Samattvam(Health Checkup) - On Campus</li>
+                </Link>
+                <Link to="/couples-classes">
+                  <li>Couple&apos;s classes - Online</li>
                 </Link>
                 <Link to="/stress-management-camp">
                   <li>Stress Management Camp</li>

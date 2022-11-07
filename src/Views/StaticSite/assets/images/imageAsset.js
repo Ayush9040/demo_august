@@ -2513,6 +2513,7 @@ export const locateAsset ={
   france:'/Locate_us/france.jpg',
   urugauy:'/Locate_us/uruguay.png',
   hongKong:'/Locate_us/hong_kong.jpg',
+  uae:'/Locate_us/UAE.png',
   locate:'/Locate_us/locate.jpg'
 }
 
