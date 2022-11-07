@@ -23,9 +23,10 @@ const OrderHistroy = () => {
   const getOrderItems = async(products) => {
     const arr = []
     for await (let item of products) {
+      console.log(item,'item')
       try {
         const { data } = await fetchSingleProduct(item.productId)
-        arr.push({ ...data.data, quantity: item.quantity })
+        arr.push({ ...data.data, quantity: item.quantity , trackingId: item.trackingId, deliveryStatus:item.deliveryStatus, deliveryPartner:item.deliverPartner  })
       } catch (err) {
         console.log(err)
       }
@@ -36,13 +37,13 @@ const OrderHistroy = () => {
   const getCart = async(cartId) => {
     const { data } = await getCartById(cartId)
     setTotalAmount(data.data.totalPrice)
-    getOrderItems( data.data.items )
   }
 
   const getOrders = async()=>{
     const { data } = await getOrderByOrderId(orderId)
     setOrderDetails(data.data)
     getCart(data.data?.cartId)
+    getOrderItems( data.data.items )
 
   }
 

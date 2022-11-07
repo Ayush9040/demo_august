@@ -39,9 +39,9 @@ const HistoryCard = ({ timeline='', status='On-going', order='', orderId='' }) =
         <img  src={ products?.[0]?.productThumbnail } alt={products?.[0]?.name}/>
       </div>
       <div className='purchase-details' >
-        { products.map((item,i)=><><p key={i} >{ item.name }</p><h4 style={{ textAlign:'right' }} >Quantity:{ item.quantity }</h4></>) }
-        <h3 style={{ textAlign:'right' }} >Placed On:{ timeline }</h3>
+        { products.map((item,i)=><><p key={i} >{ item.name }</p><h4>Quantity:{ item.quantity }</h4></>) }
       </div>
+      <h3 style={{ textAlign:'right',marginTop:'1rem' }} >Placed On:{ timeline }</h3>
       <h3 className='purchase-status' >{ status }</h3>
     </div>
   )

@@ -11,8 +11,8 @@ const InProgress = ( { orderDetails,products,totalAmount } ) => {
   
   const address = orderDetails?.addressId
 
-  const checkOrderStatus = ()=>{
-    switch(orderDetails?.deliveryStatus){
+  const checkOrderStatus = (product)=>{
+    switch(product?.deliveryStatus){
     case 'ORDER_PLACED': return 0
     case 'SHIPPED': return 33.35
     case 'OUT_FOR_DELIVERY': return 66.67
@@ -20,9 +20,8 @@ const InProgress = ( { orderDetails,products,totalAmount } ) => {
     }
   }
 
-  console.log(orderDetails)
+  console.log(products)
 
-  console.log(products,'s')
 
   return (
     <div className="order_history_div">
