@@ -218,6 +218,9 @@ const CourseSection = ({
                 <Link to="/couples-classes">
                   <li>Couple&apos;s classes - Online</li>
                 </Link>
+                <Link to="/home-tuitions">
+                  <li>Home Tuitions</li>
+                </Link>
                 <Link to="/stress-management-camp">
                   <li>Stress Management Camp</li>
                 </Link>

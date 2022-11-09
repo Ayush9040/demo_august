@@ -5311,7 +5311,7 @@ const camps = {
       'Powerful and effective asana, pranayama, and relaxation techniques to alleviate heart ailments',
     image: `${baseDomain}${courseAssets.courseAsset111}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset6}`,
-    dates: ['26th December 2022'],
+    dates: ['24th December 2022'],
     online: true,
     onCampus: true,
     nonResidential: false,

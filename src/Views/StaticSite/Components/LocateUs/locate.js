@@ -143,7 +143,7 @@ export const locateData =[
     add:'Jumeirah Lake Towers, Dubai',
     subAdd:'',
     mobile:'+971563801232',
-    email:'Info@yogihearts.com',
+    email:'info@yogihearts.com',
     website:'www.yogihearts.com',
     branches:[]
   },
