@@ -9,23 +9,24 @@
     .highlight-info {
       width: 40%;
       color: #fff;
-      margin-top: 2rem;
+      margin: 2rem 0 0 auto;
       .global-common-btn{
         border-color: white;
+        margin-top: 2rem;
       }
       small{
         margin-left: 20px;
       }
       h1 {
         display: inline-block;
-        margin: 5rem 0;
+        margin: 5rem 0 2rem;
       }
       #date-select{
         margin: 0 auto;
       }
-      #date-select-mobile{
-        display: none;
-      }
+      // #date-select-mobile{
+      //   display: none;
+      // }
     }
     .highlight-cover {
       height: 500px;
@@ -37,7 +38,10 @@
     }
   }
   .about-section {
+    margin: 0 auto;
     padding: 2rem 10rem;
+    scroll-behavior: smooth;
+    width: 85%;
     p {
       padding: 0.75rem 0;
       font-size: 1.7rem;
@@ -93,6 +97,12 @@
     }
 
     .sattvik-section {
+      .nutri-page-bold{
+        font-weight: 700;
+      }
+      .nutri-page-semi-bold{
+        font-weight: 600;
+      }
       ul {
         margin-left: 3rem;
         li {

@@ -16,7 +16,7 @@ import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import { updateCartData } from '../../Shop.action'
 import { useDispatch } from 'react-redux'
-import { useNavigate,useSearchParams } from 'react-router-dom'
+import { Link, useNavigate,useSearchParams } from 'react-router-dom'
 import baseDomain from '../../../../assets/images/imageAsset'
 import { banner } from '../../../../assets/images/imageAsset'
 
@@ -42,9 +42,9 @@ const Shop = () => {
 
   const getAllProducts = async(page, limit) => {
     if(Params.get('category')){
-      console.log(categories.find(item=>item._id=== Params.get('category'))?._id,'AAA')
-      const { data } = await getProductByCategory(categories.find(item=>{ return item._id===Params.get('category')})?._id)
+      const { data } = await getProductByCategory(Params.get('category'))
       setProducts(data.data)
+      return
     }
     const { data } = await fetchAllProductsAPI(page, limit)
     setProducts(data.data)
@@ -83,7 +83,7 @@ const Shop = () => {
     fetchAllCategories()
     getAllProducts(pagination.page, pagination.limit)
     dispatch(updateCartData(JSON.parse(localStorage.getItem('cart'))))
-  }, [ pagination ])
+  }, [ pagination,Params.get('category') ])
 
 
   useEffect(()=>{
@@ -150,7 +150,8 @@ const Shop = () => {
     speed: 3000,
     slidesToShow: 1,
     slidesToScroll: 1,
-    centerPadding: '70px',
+    centerMode: false,
+    centerPadding: '0',
     autoplay: true,
     autoPlaySpeed: 5000,
   }
@@ -160,12 +161,6 @@ const Shop = () => {
     color: 'orange',
     menuColor: 'orange',
     menuItems: [],
-  }
-
-
-  const handleBanner = (categories) => {
-    console.log(categories)
-    // setProducts(categories?.filter(category=>category._id == id))
   }
 
   return (
@@ -190,21 +185,15 @@ const Shop = () => {
           <div className="products-section">
             <div className="banner-section">
               <Slider {...settings}>
-                <div className="banner">
-                  <div className="banner-img" onClick={()=>{handleBanner(categories)}}>
-                    <img src={`${baseDomain}${banner.storeMats}`} className='carosoul-img' />
-                  </div>
-                </div>
-                <div className="banner">
-                  <div className="banner-img">
-                    <img src={`${baseDomain}${banner.storeTshirts}`} className='carosoul-img' />
-                  </div>
-                </div>
-                <div className="banner">
-                  <div className="banner-img">
-                    <img src={`${baseDomain}${banner.storeBooks}`} className='carosoul-img' />
-                  </div>
-                </div>
+                <Link to='/shop/?category=626c33ed9a61db0013224fad' >
+                  <img className="banner-img" src={`${baseDomain}${banner.storeMats}`} />
+                </Link>
+                <Link to='/shop/?category=626cbc599a61db001322518e' >
+                  <img className="banner-img" src={`${baseDomain}${banner.storeTshirts}`}/>
+                </Link>
+                <Link to='/shop/?category=626bb3a23916070012713dd1' >
+                  <img className="banner-img" src={`${baseDomain}${banner.storeBooks}`} />
+                </Link>
               </Slider>
             </div>
             {!searched && <div className="products-tray">

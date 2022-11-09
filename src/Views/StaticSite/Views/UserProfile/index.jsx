@@ -1,14 +1,15 @@
 import React, { useState, useEffect } from 'react'
 import { useSelector } from 'react-redux'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import HistoryList from './HistoryList'
 import InnerNavComponent from '../../Components/InnerNavComponent'
 import { fetchUserOrders } from './Profile.api'
 import './style.scss'
 
 const UserProfile = () => {
+  let navigate = useNavigate()
   const [module, setModule] = useState(0)
-  const { user } = useSelector((state) => state.auth)
+  const { user,isLoggedIn } = useSelector((state) => state.auth)
   const [ orders,setOrders ] = useState([])
   const navItems = [
     { option: user?.data?.firstName || 'firstName', key: 0 },
@@ -27,7 +28,7 @@ const UserProfile = () => {
 
 
   const getOrderData = async() => {
-    const { data } = await fetchUserOrders(user?.data?.userId)
+    const { data } = await fetchUserOrders(user?.data?._id)
     setOrders(data.data)
   }
 
@@ -35,7 +36,7 @@ const UserProfile = () => {
 
 
   useEffect(() => {
-    getOrderData()
+    isLoggedIn ? getOrderData():navigate('/user/sign-in')
   }, [ user ])
   return (
     <div className="user-profile">

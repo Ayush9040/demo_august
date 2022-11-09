@@ -118,11 +118,6 @@
         }
       }
     }
-    .order_add {
-      padding: 2rem 0;
-      font-size: 1.5rem;
-      padding-left: 5rem;
-    }
   }
   .retrun_order {
     display: flex;
@@ -173,6 +168,11 @@
         text-align: center;
       }
     }
+  }
+  .order_add {
+    text-align: end;
+    padding: 2rem 5rem;
+    font-size: 1.5rem;
   }
 }
 

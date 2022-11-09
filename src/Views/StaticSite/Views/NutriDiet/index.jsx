@@ -28,29 +28,29 @@ const NutriDiet = () => {
     menuItems: [],
   }
 
-  const selectStyles = {
-    cursor: 'pointer',
-    background: 'white',
-    borderColor: 'black',
-    color: 'black',
-    fontSize: '1.5rem',
-    fontWeight: '900',
-    borderWidth: '0.1rem',
-    borderRadius: '20px',
-    borderStyle: 'solid',
-    maxWidth: 'fit-content',
-    marginTop: '2rem',
-  }
+  // const selectStyles = {
+  //   cursor: 'pointer',
+  //   background: 'white',
+  //   borderColor: 'black',
+  //   color: 'black',
+  //   fontSize: '1.5rem',
+  //   fontWeight: '900',
+  //   borderWidth: '0.1rem',
+  //   borderRadius: '20px',
+  //   borderStyle: 'solid',
+  //   maxWidth: 'fit-content',
+  //   marginTop: '2rem',
+  // }
 
   const selectStyles1 = {
     cursor: 'pointer',
-    background: '#c9705f',
+    background: '#E18C71',
     borderColor: 'white',
     color: 'white',
     fontSize: '1.5rem',
     fontWeight: '900',
-    borderWidth: '0.1rem',
-    borderRadius: '20px',
+    borderWidth: '0.25rem',
+    borderRadius: '24px',
     borderStyle: 'solid',
     maxWidth: 'fit-content',
     marginTop: '2rem',
@@ -91,7 +91,9 @@ const NutriDiet = () => {
         <InnerNavComponent abc={highlight} />
         <div className="main-container">
           <div className="highlight-info">
-            <h1>Nutri Diet Clinic</h1>
+            <h1>Nutri Diet Clinic – Achieve your goals with customized diet plans.</h1>
+            <p>“Take a step for your well-being and enroll in our health programs to get a holistic
+change in your lifestyle”.</p>
             <div
               id="date-select-mobile"
             >
@@ -111,7 +113,7 @@ const NutriDiet = () => {
           </div>
         </div>
         <div className="about-section">
-          <div
+          {/* <div
             id="date-select"
           >
             <SelectDropDown
@@ -121,7 +123,7 @@ const NutriDiet = () => {
               isStyles={selectStyles}
               dates={options}
             />
-          </div>
+          </div> */}
           <p>
           Food is an integral part of our life. It does give us energy but also affects our moods and the way we think.     In other words, “we are what we eat”.
           </p>
@@ -144,21 +146,21 @@ const NutriDiet = () => {
           Our ancient scriptures lay strong emphasis on Sattvik Diet which is pure, natural, energy-containing, fresh food. The diet plans are based on these same foundations which we recommend to every individual.
           </p>
           <div className="sattvik-section">
-            <p>
+            <p className='nutri-page-bold' >
               Our Programs:
             </p>
             <ul>
-              <li>Shape up program (weight loss/ weight gain/ muscle gain)</li>
-              <li>Hormonal imbalance program (PCOS/ Thyroid)</li>
-              <li>Gut Health program (acidity/ constipation/digestion issues)</li>
-              <li>Metabolic disorder program (diabetes mellitus/ hypertension/ cholesterol)</li>
-              <li>Pregnancy/ lactation program</li>
-              <li>Therapeutic plans (respiratory/ gastroesophageal/ liver/ kidney)</li>
-              <li>Other types of diet (vegan diet/ keto diet / intermittent fasting/lactose intolerant/ gluten free diet)</li>
-              <li>Kids Nutrition</li>
+              <li><span className='nutri-page-semi-bold' >Shape up program</span> (weight loss/ weight gain/ muscle gain)</li>
+              <li><span className='nutri-page-semi-bold' >Hormonal imbalance program</span> (PCOS/ Thyroid)</li>
+              <li><span className='nutri-page-semi-bold' >Gut Health program</span> (acidity/ constipation/digestion issues)</li>
+              <li><span className='nutri-page-semi-bold' >Metabolic disorder program </span>(diabetes mellitus/ hypertension/ cholesterol)</li>
+              <li><span className='nutri-page-semi-bold' >Pregnancy/ lactation program </span></li>
+              <li><span className='nutri-page-semi-bold' >Therapeutic plans </span> (respiratory/ gastroesophageal/ liver/ kidney)</li>
+              <li><span className='nutri-page-semi-bold' >Other types of diet </span> (vegan diet/ keto diet / intermittent fasting/lactose intolerant/ gluten free diet)</li>
+              <li><span className='nutri-page-semi-bold' >Kids Nutrition</span></li>
             </ul>
-            <p>
-            Stepwise process:
+            <p className='nutri-page-bold' >
+            Stepwise Process:
             </p>
             <ul>
 
@@ -171,8 +173,8 @@ const NutriDiet = () => {
               <li> Weekly follow-ups</li>
               <li> Daily WhatsApp support</li>
             </ul>
-            <p>
-            Our services:
+            <p className='nutri-page-bold' >
+            Our Services:
             </p>
             <ul>
               <li>Easy homemade recipes according to their culture.</li>
@@ -184,7 +186,7 @@ const NutriDiet = () => {
             <p>
             Achieve long-term wellness through simple, cultural and holistic changes in your nutrition, eating habits and cognitive thinking.
             </p>
-            <p>Call on <a style={{ color:'blue' }} href='tel:+919967429596' >9967429596</a> for prior consultations.</p>
+            <p><b>Call on <a style={{ color:'blue' }} href='tel:+919967429596' >+91-9967429596</a> for appointments.</b></p>
           </div>
         </div>
       </div>

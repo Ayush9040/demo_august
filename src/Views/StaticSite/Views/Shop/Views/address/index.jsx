@@ -58,7 +58,7 @@ const ShippingAdd = () => {
   const [isCouponAdded, setIsCouponAdded] = useState()
 
   const fetchAddress = async() => {
-    const { data } = await getAddress(user?.data?.userId)
+    const { data } = await getAddress(user?.data?._id)
     setPrevAdd(data.data)
   }
 
@@ -116,7 +116,7 @@ const ShippingAdd = () => {
   const postNewAddress = async() => {
     try {
       const { data } = await addAddress({
-        userId: user?.data?.userId,
+        userId: user?.data?._id,
         name: formData.name,
         clientId: authServerClientId,
         houseNo: formData.add1,
