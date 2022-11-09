@@ -26,7 +26,7 @@ const OrderHistroy = () => {
       console.log(item,'item')
       try {
         const { data } = await fetchSingleProduct(item.productId)
-        arr.push({ ...data.data, quantity: item.quantity , trackingId: item.trackingId, deliveryStatus:item.deliveryStatus, deliveryPartner:item.deliverPartner  })
+        arr.push({ ...data.data, quantity: item.quantity , trackingId: item.trackingId, deliveryStatus:item.deliveryStatus, deliveryPartner:item.deliveryPartner  })
       } catch (err) {
         console.log(err)
       }

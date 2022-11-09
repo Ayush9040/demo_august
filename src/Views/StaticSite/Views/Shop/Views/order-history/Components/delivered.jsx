@@ -30,27 +30,22 @@ const Delivered = ({ orderDetails,products,totalAmount }) => {
           </div>
           <div className="order_line"></div>
           <div className="product_detail">
-            <div className="order_detail">
+            { products.map(item=>{ return <><div className="order_detail">
               <div className="order_img">
-                {/* <img src={item?.productThumbnail} alt="" /> */}
+                <img src={item.productThumbnail} alt="" />
               </div>
               <div className="order_title_div">
-                <div className="order_title">{ products?.map((item,i)=><><p key={i} >{ item.name }</p><h4 style={{ textAlign:'right' }} >Quantity:{ item.quantity }</h4></>) }</div>
-                {/* <div className="order_dropdown">
-              <select name="" id="" className="quantity_dropdown">
-                <option value="">Quantity</option>
-              </select>
-            </div> */}
+                <div className="order_title"><><p >{ item.name }</p><h4 style={{ textAlign:'right' }} >Quantity:{ item.quantity }</h4></></div>
               </div>
             </div>
             <div className="track_package">
-              <div className="request_btn" onClick={() => setCancel(true)}>
+              <div className="request_btn" onClick={() => setCancel(item._id)}>
                 <CommonBtn text="RETURN OR REPLACE ITEMS" />
               </div>
               <div className="request_btn">
                 <CommonBtn text="REQUEST REFUND" />
               </div>
-            </div>
+            </div></>})}
           </div>
         </div>
       </div>
