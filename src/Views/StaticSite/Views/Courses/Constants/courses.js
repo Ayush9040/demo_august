@@ -1,6 +1,7 @@
 import baseDomain, {
   courseAssets,
   homeAssets,
+  nutriDiet,
 } from '../../../assets/images/imageAsset'
 
 const ttc200hr = {
@@ -1614,7 +1615,7 @@ const ttc200hr = {
       'You will learn the tools to master your physical, mental and spiritual well-being. You will see a marked improvement in your life, relationships and work.',
     image: `${baseDomain}${courseAssets.courseAsset38}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset101}`,
-    mostPopular: false,
+    mostPopular: true,
     rating: 5,
     colorCode: '#E38F73',
     timing:
@@ -1932,7 +1933,7 @@ const ttc500hr = {
     batch: 1,
     metaDescription:
       'You will learn the tools to master your physical, mental and spiritual well-being. You will see a marked improvement in your life, relationships and work.',
-    mostPopular: false,
+    mostPopular: true,
     rating: 5,
     colorCode: '#D88068',
     timing:
@@ -11762,12 +11763,27 @@ const classes = {
   },
 }
 
+const extra = {
+  1:{
+    id:'',
+    key:'nutri-diet',
+    title:'Nutri Diet Clinic',
+    cardImage:`${ baseDomain }${ nutriDiet.nutriDietCard }`,
+    mostPopular:true,
+    colorCode:'#B77E7E',
+    dates:[],
+    metaDescription:'Take a step for your well-being and enroll in our customized diet plans to get a holistic change in your lifestyle.'
+  }
+}
+
 export const c200hr = Object.values(ttc200hr)
 export const c500hr = Object.values(ttc500hr)
 export const c900hr = Object.values(ttc900hr)
 export const campsArr = Object.values(camps)
 export const classesArr = Object.values(classes)
+export const extraArr = Object.values(extra)
 export const AllCourses = [
+  ...extraArr,
   ...c200hr,
   ...c500hr,
   ...c900hr,

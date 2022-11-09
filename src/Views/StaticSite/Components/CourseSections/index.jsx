@@ -324,10 +324,9 @@ const CourseSection = ({
             .filter((item) => item.mostPopular === true)
             .map((item, i) => {
               if (
-                item.key === 'seven-month-ttc' ||
-                  item.key === 'one-month-ttc' ||
-                  // item.key === '7-days-camp' ||
-                  item.key === '21-days-better-living-course'
+                item.key === '500-hrs-online-yoga-teacher-training-course-intermediate-level' ||
+                  item.key === 'weekend-teacher-training-course' ||
+                  item.key === 'nutri-diet'
               ) {
                 return (
                   <CourseCard
