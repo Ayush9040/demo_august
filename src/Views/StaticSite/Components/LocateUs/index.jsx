@@ -184,7 +184,7 @@ const LocateUs = () => {
                       {' '}
                       {items?.website}
                     </a>
-                    {items?.url !== '' && <button className='country-details-btn' onClick={()=>navigate(`/our-branches/${items?.url}`)}>Details</button>}
+                    {items?.url !== '' && <button className='country-details-btn' onClick={()=>navigate(`/${items?.url}`)}>Details</button>}
                   </div>
                 </div>
               )

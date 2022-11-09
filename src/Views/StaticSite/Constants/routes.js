@@ -626,17 +626,6 @@ const staticSiteRoutes = [
     name: 'Job',
   },
   {
-    Component: DescisionComp,
-    path: '/:contentId',
-    exact: true,
-    id: 'statisSiteCourse',
-    routePath: '/:contentId',
-    name: 'singleCourse',
-    // 1. desComponent
-    // 2. Switch case
-    // render => loader => API call (Blog or course) => switch *Blog, *Course => loading stop
-  },
-  {
     Component: LocateUs,
     path: '/our-branches',
     exact: true,
@@ -646,11 +635,11 @@ const staticSiteRoutes = [
   },
   {
     Component: LocateDetails,
-    path: '/our-branches/:country',
+    path: '/matunga',
     exact: true,
-    id: 'statisLocateUs',
-    routePath: '/our-branches/:country',
-    name: 'LocateDetails',
+    id: 'statisMatunga',
+    routePath: '/matunga',
+    name: 'Matunga',
   },
   //Search
   {
@@ -666,7 +655,18 @@ const staticSiteRoutes = [
     id:'staticNutriDiet',
     routePath:'/nutri-diet',
     name:'NutriDiet'
-  }
+  },
+  {
+    Component: DescisionComp,
+    path: '/:contentId',
+    exact: true,
+    id: 'statisSiteCourse',
+    routePath: '/:contentId',
+    name: 'singleCourse',
+    // 1. desComponent
+    // 2. Switch case
+    // render => loader => API call (Blog or course) => switch *Blog, *Course => loading stop
+  },
 ]
 
 
