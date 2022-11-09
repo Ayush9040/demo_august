@@ -803,7 +803,7 @@ export const publicationAssests = {
 
   //emag
   publicationAssests85:'/Publications/Yoga%20%26%20Total%20Health/YTH-Aug-22-Emag-1.jpg',
-  publicationAssests86:'/Publications/Yoga%20%26%20Total%20Health/Yoga%26Total-Helath-Oct-2022.JPG',
+  publicationAssests86:'/Publications/Yoga & Total Health/Yoga&Total-Health-November-2022.JPG',
 
   // Yogasattva-Newsletter
   // 2017
@@ -2502,7 +2502,8 @@ export const printMediaAssest = {
   printMediaAssest924:'/print_media/2022/Navbharat-Times-Epaper-23rd-October-2022.jpg',
   printMediaAssest925:'/print_media/2022/Navbharat-Times-Epaper-30th-October-2022.jpg',
   printMediaAssest926:'/print_media/2022/Navbharat-Times-Epaper-31st-October-2022.jpg',
-  printMediaAssest927:'/print_media/new2022/Sakal-Paper-3rd-November -2022-Page-10.jpg'
+  printMediaAssest927:'/print_media/new2022/Sakal-Paper-3rd-November -2022-Page-10.jpg',
+  printMediaAssest928:'/print_media/2022/Navbharat%20Times%20Epaper%20-%206th%20November%202022.jpg'
 }
 
 export const locateAsset ={

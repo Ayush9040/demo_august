@@ -4243,6 +4243,11 @@ const printMedia = [
     year:'2022',
     media:[
       {
+        img:`${ baseDomain }${ printMediaAssest.printMediaAssest928 }`,
+        url:'https://epaper.navbharattimes.com/imageview_4273_75342_4_16_06-11-2022_2_i_1_sf.html',
+        alt:'nbt-november6-2022'
+      },
+      {
         img: `${baseDomain}${printMediaAssest.printMediaAssest927}`,
         url:'',
         alt:'Sakal-Paper-3rd-November-2022'

@@ -80,11 +80,11 @@ const YogaTotalHealth = () => {
 
             <div className="month-year">
               <h2 className="jouranl-title">
-              October 2022
+              November 2022
                 <div className="bottom-line"></div>
               </h2>
               <p>
-                The journal this month emphasises on becoming aware of our thoughts. Dr Jayadeva prompts us to cultivate an attitude without desires through Ashukla Akrishna Actions - actions in which there is no personal benefit and there is no desire to hurt. Hansa ji emphasises on making every thought count... either think positively, or do not think at all. A Sadhaka shares the benefits of drinking lukewarm / hot water daily like flushing toxins out of the system, keeping our throat warm & protected, and aiding digestion (when having post meals). Another Sadhaka shares how the whole process of spititual science is to elevate us to an experience that is beyond the five senses. And yet another shares how one may improve one&apos;s quality of life by less consumption. Let us also wish Hansa ji a very happy 75th birthday this month before we jump into reading our regular features on The Yoga Sutras of Patanjali, Hatha Yoga Pradipika, Thoughts on the Gita and Yogic Ahara.
+              The 125th Birth Anniversary of Shri Yogendraji, Founder of the Yoga Institute, is in November! A few of the gems from the journal – Hansaji’s favourite story of the horse and the donkey, and Devdutt Pattanaik’s views on the synthesis between Yagna and yoga. Learn how to handle a hectic festival season. Read fascinating stories connected with Shri Krishna from Shrimad Bhagwat Mahapurana. Prepare for the upcoming change in weather, with Ber Chutney whose recipe is featured in Yogic Ahara. We have (in Hindi) Sutra 2.15 and Samkhya explaining creation through Prakriti. So, pick up these gems, today!!!
               </p>
             </div>
           </div>
