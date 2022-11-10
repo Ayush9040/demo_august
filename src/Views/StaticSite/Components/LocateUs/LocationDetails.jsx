@@ -2,8 +2,12 @@ import React from 'react'
 import InnerNavComponent from '../InnerNavComponent/index.jsx'
 import Carousel from './Carousel.js'
 import './LocationDetails.scss'
+import { useLocation } from 'react-router-dom'
+import { Helmet } from 'react-helmet'
+import metaDataObj from '../../../../Constants/metaData.json'
 const LocationDetails = () => {
-
+ 
+  const location = useLocation()
   const viewBlog = {
     title: 'Blogs',
     color: 'orange',
@@ -12,6 +16,10 @@ const LocationDetails = () => {
   }
   return (
     <>
+      {metaDataObj[location.pathname] &&
+        <Helmet
+          title={metaDataObj[location.pathname || '']?.title || ''}
+        />}
       <InnerNavComponent abc={viewBlog}/>
       <div className='heading-main'>
         <h2 className='heading-1'>MATUNGA</h2>
