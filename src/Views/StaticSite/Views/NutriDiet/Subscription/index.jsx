@@ -20,7 +20,7 @@ const SubcriptionForm = ({ packageName, packagePrice, closeForm }) => {
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
-    email: '',
+    emailId: '',
     city: '',
     country: '',
   })
@@ -92,7 +92,7 @@ const SubcriptionForm = ({ packageName, packagePrice, closeForm }) => {
   const handleEnrollment = () => {
     if (formData.name === '') {
       setEmpty(1)
-    } else if (formData.email === '') {
+    } else if (formData.emailId === '') {
       setEmpty(2)
     } else if (formData.phone === '') {
       setEmpty(3)
@@ -145,7 +145,7 @@ const SubcriptionForm = ({ packageName, packagePrice, closeForm }) => {
             placeholder='Enter Email Address*'
             form={formData}
             setField={setFormData}
-            keyName='email'
+            keyName='emailId'
           />
           {empty === 2 && (
             <small style={{ color: 'red', marginLeft: '0' }}>
