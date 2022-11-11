@@ -10220,7 +10220,6 @@ const classes = {
           text: [
             'Yoga offers a safe, effective and low cost modality that can add considerable value to any Cancer care continuum. This program is designed to create a cadre of Yoga Professionals who are well-trained in Cancer care that is accessible and effective. The Certificate Program is a specialized Yoga module for the special needs of Cancer patients. This oncology based program trains Yoga teachers to safely and effectively work with Cancer survivors. Learn practices and techniques to address Cancer specific issues such as scar tissue, bone loss, lymphedema, weight gain, fatigue, sleeplessness and stress.',
             'We offer a supportive and compassionate support group to understand and discuss Cancer confidently and intelligently.',
-            'Access the detailed syllabus here',
           ],
         },
       },
@@ -10322,7 +10321,6 @@ const classes = {
           title: '',
           text: [
             'Help boost your body’s efforts in its fight against Lung Cancer with the Yoga for Lung Cancer Programme. The programme includes specific asanas, pranayamas, mudras, meditation and dietary practices that will aid you in your cancer care and management. The theory part of the course will help you understand the anatomy and physiology of the lungs, causes of lung cancer, its symptoms and type, stages of lung cancer, treatments and side effects of treatments. The Yoga based practical part of the programme will be a holistic approach to Cancer management and care using asanas, pranayamas and dietary modifications.',
-            'access the detailed syllabus here',
           ],
         },
       },
