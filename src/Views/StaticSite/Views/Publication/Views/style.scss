@@ -63,20 +63,30 @@
   margin-bottom: 20px;
 }
 .hard-copy{
+  display: flex;
+  gap: 6rem;
+  justify-content: center;
   position: relative;
-  width: fit-content;
+  //width: fit-content;
   margin: 0 auto;
- &:hover{
-  &::after{
-    content: 'Coming Soon';
-    position: absolute;
-    color: black;
-    width: 100px;
-    top: 110%;
-    left: 50%;
-    transform: translateX(-50%);
+  &>.global-common-btn{
+    margin: 3rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
   }
- }
+//  &:hover{
+//   &::after{
+//     content: 'Coming Soon';
+//     position: absolute;
+//     color: black;
+//     width: 100px;
+//     top: 110%;
+//     left: 50%;
+//     transform: translateX(-50%);
+//   }
+//  }
 }
 
 //books

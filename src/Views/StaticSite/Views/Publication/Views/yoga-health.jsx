@@ -98,7 +98,8 @@ const YogaTotalHealth = () => {
             <CommonBtn text={'Subscribe Now (E-Mag)'} />
           </a>
           <div className='hard-copy' >
-            <CommonBtn text={'Hard Copy'} />
+            <CommonBtn text={'Hard Copy (India)'} />
+            <CommonBtn text={'Hard Copy (International)'} />
           </div>
           <p>
           For complaints or non-receipt of journal, write to –
