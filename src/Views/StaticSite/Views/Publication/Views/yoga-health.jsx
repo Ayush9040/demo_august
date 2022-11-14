@@ -98,7 +98,12 @@ const YogaTotalHealth = () => {
             <CommonBtn text={'Subscribe Now (E-Mag)'} />
           </a>
           <div className='hard-copy' >
-            <CommonBtn text={'Hard Copy'} />
+            <a href="https://rzp.io/l/zMFTO9F0l3" rel='noreferrer' target="_blank">
+              <CommonBtn text={'Hard Copy (India)'} />
+            </a>
+            <a href="https://rzp.io/l/MMLnvukYe" rel='noreferrer' target="_blank">
+              <CommonBtn text={'Hard Copy (International)'} />
+            </a>
           </div>
           <p>
           For complaints or non-receipt of journal, write to –

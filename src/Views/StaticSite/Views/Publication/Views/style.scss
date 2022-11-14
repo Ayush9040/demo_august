@@ -63,20 +63,36 @@
   margin-bottom: 20px;
 }
 .hard-copy{
+  display: flex;
+  gap: 6rem;
+  justify-content: center;
   position: relative;
-  width: fit-content;
-  margin: 0 auto;
- &:hover{
-  &::after{
-    content: 'Coming Soon';
-    position: absolute;
-    color: black;
-    width: 100px;
-    top: 110%;
-    left: 50%;
-    transform: translateX(-50%);
+  //width: fit-content;
+ // margin: 0 auto;
+ margin-bottom: 20px;
+  &>a{
+    display: block;
+    width: 305px;
+    &>.global-common-btn{
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+    }
   }
- }
+
+//  &:hover{
+//   &::after{
+//     content: 'Coming Soon';
+//     position: absolute;
+//     color: black;
+//     width: 100px;
+//     top: 110%;
+//     left: 50%;
+//     transform: translateX(-50%);
+//   }
+//  }
 }
 
 //books
