@@ -19,7 +19,7 @@ const SearchModal = ({ setIsModalOpen }) => {
 
 
 
-  const searchContent = (page,limit) => {
+  const searchContent = (page=1,limit=10) => {
     if (search === '') return
     try {
       setIsLoading(true)
