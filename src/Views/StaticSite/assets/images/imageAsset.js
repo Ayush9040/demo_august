@@ -800,9 +800,10 @@ export const publicationAssests = {
   publicationAssests6: '/Publications/Library/Library-6.jpg',
   publicationAssests7: '/Publications/Yoga & Total Health/YTH-main.png',
 
+
   //emag
   publicationAssests85:'/Publications/Yoga%20%26%20Total%20Health/YTH-Aug-22-Emag-1.jpg',
-  publicationAssests86:'/Publications/Yoga%20%26%20Total%20Health/Yoga%20and%20Total%20Health_sep.JPG',
+  publicationAssests86:'/Publications/Yoga & Total Health/Yoga&Total-Health-November-2022.JPG',
 
   // Yogasattva-Newsletter
   // 2017
@@ -906,6 +907,7 @@ export const publicationAssests = {
   ythAssets87:'/Home/NewsLetter/Yogasattva-August2022-1.jpg',
   ythAssets88:'/Home/NewsLetter/Yogasattva-Sept-2022.jpg',
   ythAssets89:'/Home/NewsLetter/Yogasattva-Oct-2022-21024_1.jpg',
+  ythAssets90:'/Home/NewsLetter/Yogasattva-Nov-2022-cover-page.jpg',
 
   //Library
   libraryAsset: '/Publications/Library/hero.jpg',
@@ -2497,7 +2499,11 @@ export const printMediaAssest = {
   printMediaAssest921:'/print_media/new2022/july3.jpg',
   printMediaAssest922:'/print_media/new2022/july31.jpg',
   printMediaAssest923:'/print_media/new2022/july4.jpg',
-
+  printMediaAssest924:'/print_media/2022/Navbharat-Times-Epaper-23rd-October-2022.jpg',
+  printMediaAssest925:'/print_media/2022/Navbharat-Times-Epaper-30th-October-2022.jpg',
+  printMediaAssest926:'/print_media/2022/Navbharat-Times-Epaper-31st-October-2022.jpg',
+  printMediaAssest927:'/print_media/new2022/Sakal-Paper-3rd-November -2022-Page-10.jpg',
+  printMediaAssest928:'/print_media/2022/Navbharat%20Times%20Epaper%20-%206th%20November%202022.jpg'
 }
 
 export const locateAsset ={
@@ -2508,7 +2514,22 @@ export const locateAsset ={
   france:'/Locate_us/france.jpg',
   urugauy:'/Locate_us/uruguay.png',
   hongKong:'/Locate_us/hong_kong.jpg',
+  uae:'/Locate_us/UAE.png',
   locate:'/Locate_us/locate.jpg'
-
 }
+
+export const santaCruz = {
+  slide1: '/Santa-cruz-images/Slide-1.jpg',
+  slide2: '/Santa-cruz-images/Slide-2.jpg',
+  slide3: '/Santa-cruz-images/Slide-3.jpg',
+  apply: '/Santa-cruz-images/Pranayama_workshop.jpg',
+  details: '/Santa-cruz-images/Details.jpg',
+}
+
+
+export const nutriDiet = {
+  nutriDietMain:'/nutri-diet/PHOTO-2022-11-01-12-59-38.jpg',
+  nutriDietCard:'/nutri-diet/Nutri-Diet-Clinic-Post.jpg'
+}
+
 export default baseDomain

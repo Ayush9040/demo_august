@@ -43,10 +43,10 @@ const PrintMedia = () => {
 
   return (
     <>
-      { metaDataObj[location.pathname] && 
-    <Helmet
-      title={metaDataObj[location.pathname || '']?.title || ''}
-    /> }
+      {metaDataObj[location.pathname] &&
+        <Helmet
+          title={metaDataObj[location.pathname || '']?.title || ''}
+        />}
       <div className='print-media-container'>
         {/* <MediaNav title={'News'} /> */}
         <InnerNavComponent abc={MediaNews} />
@@ -62,8 +62,8 @@ const PrintMedia = () => {
                 {item.media.map((image, idx) => {
                   if (image.url !== '') {
                     return (
-                      <a href={`${image.url}`} target='_blank' rel='noreferrer'>
-                        <div key={idx} className='news-card'>
+                      <a key={idx} href={`${image.url}`} target='_blank' rel='noreferrer'>
+                        <div className='news-card'>
                           <img src={image.img} alt={image.alt} />
                           <div className='news-details'>
                             <p>{image.alt}</p>
@@ -74,7 +74,7 @@ const PrintMedia = () => {
                   } else {
                     return (
                       <>
-                        <div key={idx} className='news-card' 
+                        <div key={idx} className='news-card'
                           onClick={() => {
                             setViewCarousel(idx)
                             setModalData(
@@ -109,12 +109,12 @@ const PrintMedia = () => {
                             </div>
                             <div
                               style={{
-                                height:'100%',
-                                padding:'2rem',
+                                height: '100%',
+                                padding: '2rem',
                                 width: '100%',
                                 position: 'fixed',
                                 top: '5%',
-                                background:'#00000080',
+                                background: '#00000080',
                                 boxShadow:
                                   'rgb(0 0 0 / 94%) 248px 161px 327px 383px',
                                 zIndex: '9999',

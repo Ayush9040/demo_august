@@ -4243,6 +4243,31 @@ const printMedia = [
     year:'2022',
     media:[
       {
+        img:`${ baseDomain }${ printMediaAssest.printMediaAssest928 }`,
+        url:'https://epaper.navbharattimes.com/imageview_4273_75342_4_16_06-11-2022_2_i_1_sf.html',
+        alt:'nbt-november6-2022'
+      },
+      {
+        img: `${baseDomain}${printMediaAssest.printMediaAssest927}`,
+        url:'',
+        alt:'Sakal-Paper-3rd-November-2022'
+      },
+      {
+        img: `${baseDomain}${printMediaAssest.printMediaAssest925}`,
+        url:'https://epaper.navbharattimes.com/imageview_3286_79811_4_16_30-10-2022_4_i_1_sf.html',
+        alt:'nbt-october30-2022'
+      },
+      {
+        img: `${baseDomain}${printMediaAssest.printMediaAssest926}`,
+        url:'https://epaper.navbharattimes.com/imageview_3259_67154_4_16_31-10-2022_6_i_1_sf.html',
+        alt:'nbt-october31-2022'
+      },
+      {
+        img: `${baseDomain}${printMediaAssest.printMediaAssest924}`,
+        url:'https://epaper.navbharattimes.com/imageview_100656_67285_4_16_04-07-2022_6_i_1_sf.html',
+        alt:'nbt-october23-2022'
+      },
+      {
         img: `${baseDomain}${printMediaAssest.printMediaAssest848}`,
         url:'https://businessnewsweek.in/news/honble-cabinet-minister-piyush-goyal-to-grace-international-day-of-yoga-celebrations-on-tuesday-21-june-in-mumbai/',
         alt:'Bussiness-News-Week-20th-June-2022'

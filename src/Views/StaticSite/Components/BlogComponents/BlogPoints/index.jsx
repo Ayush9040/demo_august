@@ -14,7 +14,7 @@ const BlogPoints = ({ points }) => {
                 } else {
                   if (para.type === 'unordered') {
                     return (
-                      <ul>
+                      <ul key={i} >
                         {para?.list?.map((item, i) => {
                           return (
                             <li className='u_list' key={i}>
@@ -44,6 +44,7 @@ const BlogPoints = ({ points }) => {
                         frameBorder='0'
                         allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
                         allowFullScreen
+                        key={i}
                       ></iframe>
                     )
                   }

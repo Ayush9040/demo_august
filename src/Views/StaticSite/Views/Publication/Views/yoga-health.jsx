@@ -80,11 +80,11 @@ const YogaTotalHealth = () => {
 
             <div className="month-year">
               <h2 className="jouranl-title">
-              September 2022
+              November 2022
                 <div className="bottom-line"></div>
               </h2>
               <p>
-                {'The journal this month focuses on techniques that one may learn to take control of the mind. Dr Jayadeva suggests the possibility of understanding, learning and cultivating practicing to “stop thinking” as they key to control the mind. Hansaji suggests to begin with concentration. One may also use the Parikarmas (from the Yoga Sutras) – Maitri (friendliness towards the happy), Karuna (compassion for the unhappy), Mudita (delight in the virtuous), Upeksha (indifference towards the wicked) as ways to cleanse the mind and bring steadiness. Devdutt Pattanaik, an Indian mythologist, shares a very interesting take on consumption being the root cause of violence. Dive in for more on the above along with our regular features on The Yoga Sutras of Patanjali, Hatha Yoga Pradipika, Thoughts on the Gita and Yogic Ahara.'}
+              The 125th Birth Anniversary of Shri Yogendraji, Founder of the Yoga Institute, is in November! A few of the gems from the journal – Hansaji’s favourite story of the horse and the donkey, and Devdutt Pattanaik’s views on the synthesis between Yagna and yoga. Learn how to handle a hectic festival season. Read fascinating stories connected with Shri Krishna from Shrimad Bhagwat Mahapurana. Prepare for the upcoming change in weather, with Ber Chutney whose recipe is featured in Yogic Ahara. We have (in Hindi) Sutra 2.15 and Samkhya explaining creation through Prakriti. So, pick up these gems, today!!!
               </p>
             </div>
           </div>
@@ -98,7 +98,12 @@ const YogaTotalHealth = () => {
             <CommonBtn text={'Subscribe Now (E-Mag)'} />
           </a>
           <div className='hard-copy' >
-            <CommonBtn text={'Hard Copy'} />
+            <a href="https://rzp.io/l/zMFTO9F0l3" rel='noreferrer' target="_blank">
+              <CommonBtn text={'Hard Copy (India)'} />
+            </a>
+            <a href="https://rzp.io/l/MMLnvukYe" rel='noreferrer' target="_blank">
+              <CommonBtn text={'Hard Copy (International)'} />
+            </a>
           </div>
           <p>
           For complaints or non-receipt of journal, write to –

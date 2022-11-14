@@ -91,7 +91,7 @@ const OurOfferings = () => {
       name: 'Children’s Regular Classes',
       description:
         'Especially designed for children, the asana class helps them balance their academics along with their physical and mental health.',
-      redirect: '/childrens-regular-classes-on-campus',
+      redirect: '/childrens-regular-classes',
       timeline: 'Any Day',
       price: '1000',
     },

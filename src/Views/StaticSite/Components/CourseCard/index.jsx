@@ -127,7 +127,7 @@ const CourseCard = ({
                 </Link>
               ) : (
                 <CommonBtn text={'Enroll Now'} />
-              )):( <Link
+              )):  (path!=='nutri-diet' ? <Link
                 to={
                   isLoggedIn
                     ? `/enrollment/${path}/?date=${selectDate}`
@@ -135,7 +135,7 @@ const CourseCard = ({
                 }
               >
                 <CommonBtn text={'Enroll Now'} />
-              </Link>)}
+              </Link>:<Link to='/nutri-diet' ><CommonBtn text={'Enroll Now'} /></Link>)}
           </div>
         </div>
       </div>

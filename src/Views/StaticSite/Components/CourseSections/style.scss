@@ -61,6 +61,17 @@
         }
       }
     }
+    #therapy-course{
+      padding-left: 2.5rem;
+      margin-top: -2.5rem;
+      font-weight: bold;
+      li{
+        font-size: 1.75rem;
+      }
+    }
+    #camps-workshop{
+      font-weight: bold;
+    }
     .course-list-content {
       display: flex;
       .global-common-btn {

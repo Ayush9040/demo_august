@@ -67,7 +67,7 @@ const CourseSection = ({
           },
           {
             url: '/900-hours-advanced-teacher-training-course',
-            text: '4 Months TTC-On Campus-English',
+            text: '4 Months TTC-Online-English',
           },
           {
             url: '/seven-month-ttc',
@@ -122,11 +122,40 @@ const CourseSection = ({
     switch (title) {
     case 'Teacher Training Courses':
       return (
-        <Accordian
-          sliderVal={customVal}
-          setSliderVal={setCustomVal}
-          data={coursesList}
-        />
+        <>
+          <Accordian
+            sliderVal={customVal}
+            setSliderVal={setCustomVal}
+            data={coursesList}
+          />
+          <ul id='therapy-course' >
+            <Link to="/certificate-yoga-therapy-course-online">
+              <li className="text-bold" >
+              Certificate Yoga Therapy Course - Online & On Campus
+              </li>
+            </Link>
+            <Link to="/certificate-program-on-yoga-for-cancer">
+              <li className="text-bold" >
+              Certificate Program on Yoga for Cancer – Online & On Campus
+              </li>
+            </Link>
+            <Link to="/certification-program-on-yoga-for-lung-cancer-online">
+              <li className="text-bold" >
+              Certificate Program on Yoga for Lung Cancer - Online
+              </li>
+            </Link>
+            <Link to="/certificate-course-on-advanced-pranayama-techniques">
+              <li className="text-bold" >
+              Certificate Course on Advanced Pranayama Techniques - Online
+              </li>
+            </Link>
+            <Link to="/certification-course-on-yoga-sutra-online">
+              <li className="text-bold" >
+              Certificate Course on Yoga Sutra - Online
+              </li>
+            </Link>
+          </ul>
+        </>
       )
     case 'Regular Classes':
       return (
@@ -176,9 +205,21 @@ const CourseSection = ({
           <Accordian data={campsAccordian} />
           <div>
             <h4>
-              <ul>
+              <ul id='camps-workshop' >
                 <Link to="/corporate-workshops">
                   <li>Corporate Workshop</li>
+                </Link>
+                <Link to="/satsang">
+                  <li>Satsang</li>
+                </Link>
+                <Link to="/samattvam">
+                  <li>Samattvam(Health Checkup) - On Campus</li>
+                </Link>
+                <Link to="/couples-classes">
+                  <li>Couple&apos;s classes - Online</li>
+                </Link>
+                <Link to="/home-tuitions">
+                  <li>Home Tuitions</li>
                 </Link>
                 <Link to="/stress-management-camp">
                   <li>Stress Management Camp</li>
@@ -283,10 +324,9 @@ const CourseSection = ({
             .filter((item) => item.mostPopular === true)
             .map((item, i) => {
               if (
-                item.key === 'seven-month-ttc' ||
-                  item.key === 'one-month-ttc' ||
-                  // item.key === '7-days-camp' ||
-                  item.key === '21-days-better-living-course'
+                item.key === '500-hrs-online-yoga-teacher-training-course-intermediate-level' ||
+                  item.key === 'weekend-teacher-training-course' ||
+                  item.key === 'nutri-diet'
               ) {
                 return (
                   <CourseCard

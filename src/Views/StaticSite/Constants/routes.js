@@ -96,6 +96,8 @@ const Careers = lazy(() => import('../Views/Careers/Views/careers'))
 const Gifting = lazy(() => import('../Views/Gifting/Views/gifting'))
 const DescisionComp = lazy(() => import('../Views/DecisionComponent'))
 const LocateUs = lazy(()=> import ('../Components/LocateUs'))
+const LocateDetails = lazy(()=> import ('../Components/LocateUs/LocationDetails'))
+const NutriDiet = lazy(()=>import('../Views/NutriDiet'))
 const staticSiteRoutes = [
   //Home
   {
@@ -624,6 +626,37 @@ const staticSiteRoutes = [
     name: 'Job',
   },
   {
+    Component: LocateUs,
+    path: '/our-branches',
+    exact: true,
+    id: 'statisLocateUs',
+    routePath: '/our-branches',
+    name: 'LocateUs',
+  },
+  {
+    Component: LocateDetails,
+    path: '/matunga',
+    exact: true,
+    id: 'statisMatunga',
+    routePath: '/matunga',
+    name: 'Matunga',
+  },
+  //Search
+  {
+    Component:SearchModal,
+    path:'/search',
+    id:'staticSearch',
+    routePath:'/search',
+    name:'Search'
+  },
+  {
+    Component:NutriDiet,
+    path:'/nutri-diet',
+    id:'staticNutriDiet',
+    routePath:'/nutri-diet',
+    name:'NutriDiet'
+  },
+  {
     Component: DescisionComp,
     path: '/:contentId',
     exact: true,
@@ -634,22 +667,6 @@ const staticSiteRoutes = [
     // 2. Switch case
     // render => loader => API call (Blog or course) => switch *Blog, *Course => loading stop
   },
-  {
-    Component: LocateUs,
-    path: '/our-branches',
-    exact: true,
-    id: 'statisLocateUs',
-    routePath: '/our-branches',
-    name: 'LocateUs',
-  },
-  //Search
-  {
-    Component:SearchModal,
-    path:'/search',
-    id:'staticSearch',
-    routePath:'/search',
-    name:'Search'
-  }
 ]
 
 

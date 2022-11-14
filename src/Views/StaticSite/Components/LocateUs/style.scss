@@ -47,7 +47,7 @@
       gap: 8rem;
       margin-top: 6rem;
       margin-bottom: 6rem;
-      a{
+      a {
         color: #ca4625;
       }
       .locate_flag {
@@ -74,6 +74,16 @@
           display: flex;
           // justify-content: center;
         }
+        .country-details-btn {
+          border-radius: 50px;
+          font-size: 16px;
+          font-weight: 700;
+          background-color: white;
+          width: 150px;
+          height: 40px;
+          margin-top: 2rem;
+          cursor: pointer;
+        }
       }
     }
 
@@ -93,15 +103,24 @@
           }
           .not_bold {
             font-size: 1.75rem;
-            a{
+            a {
               color: #ca4625;
+            }
+            .country-details-btn {
+              border-radius: 50px;
+              font-size: 16px;
+              font-weight: 700;
+              background-color: white;
+              width: 150px;
+              height: 40px;
+              margin-top: 2rem;
+              cursor: pointer;
             }
           }
         }
       }
     }
   }
- 
 }
 
 @media (max-width: 920px) {
