@@ -10,7 +10,7 @@ import {
 import InnerNavComponent from '../../../Components/InnerNavComponent'
 import { useParams } from 'react-router-dom'
 // import { courseArray } from '../../../Constants/courses/c200hr'
-import { AllCourses, c200hr,c500hr,c900hr,campsArr,classesArr } from '../Constants/courses'
+import { AllCourses, c200hr,c500hr,c900hr,campsArr,certificateArr,classesArr } from '../Constants/courses'
 import CourseCard from '../../../Components/CourseCard'
 import { Helmet } from 'react-helmet'
 import metaDataObj from '../../../../../Constants/metaData.json'
@@ -37,6 +37,8 @@ const BrowseCourses = () => {
       setBreadcrumbs('Camps & Workshops')
     } else if (type === 'classes') {
       setBreadcrumbs('Classes')
+    } else if (type === 'certificate-course') {
+      setBreadcrumbs('Certificate Courses')
     }
     return breadcrumbs
 
@@ -50,8 +52,10 @@ const BrowseCourses = () => {
       setCategory(AllCourses.filter((item) => item.mostPopular === true))
     } else if (type === 'camps-workshops') {
       setCategory([...campsArr])
-    } else {
+    } else if(type === 'classes') {
       setCategory([...classesArr])
+    } else {
+      setCategory ([...certificateArr])
     }
     ChangeContent()
   }, [type])
@@ -136,6 +140,15 @@ const BrowseCourses = () => {
                   <AccordionItemButton>
                     <Link to="/courses/browse/classes">
                       <p>Regular Classes</p>
+                    </Link>
+                  </AccordionItemButton>
+                </AccordionItemHeading>
+              </AccordionItem>
+              <AccordionItem>
+                <AccordionItemHeading>
+                  <AccordionItemButton>
+                    <Link to="/courses/browse/certificate-courses">
+                      <p>Certificate Courses</p>
                     </Link>
                   </AccordionItemButton>
                 </AccordionItemHeading>

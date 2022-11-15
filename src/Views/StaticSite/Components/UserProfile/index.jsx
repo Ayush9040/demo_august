@@ -1,13 +1,17 @@
 import React, { useState } from 'react'
+import { useEffect } from 'react'
 import { useSelector } from 'react-redux'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 //import HistoryList from '../HistoryList'
 import InnerNavComponent from '../InnerNavComponent'
 import './style.scss'
 
 const UserProfile = () => {
+
+  const navigate = useNavigate()
+
   const [module, setModule] = useState(0)
-  const { user } = useSelector((state) => state.auth)
+  const { user,isLoggedIn } = useSelector((state) => state.auth)
   const navItems = [
     { option: user?.data?.firstName || 'firstName', key: 0 },
     { option: 'Courses', key: 1 },
@@ -21,6 +25,10 @@ const UserProfile = () => {
     menuColor: 'black',
     menuItems: [],
   }
+  useEffect(()=>{
+    if(isLoggedIn) return
+    navigate('/user/sign-in')
+  },[])
 
   return (
     <div className="user-profile">
@@ -47,12 +55,11 @@ const UserProfile = () => {
                 } 
                 else {
                   return (
-                    <div>
+                    <div key={item.key} >
                       <li
                         onClick={() => {
                           setModule(item.key)
                         }}
-                        key={item.key}
                         style={
                           module === item.key || item.key === 0
                             ? { fontWeight: '700' }

@@ -95,8 +95,10 @@ const News = lazy(() => import('../Views/Media/Views/news'))
 const Careers = lazy(() => import('../Views/Careers/Views/careers'))
 const Gifting = lazy(() => import('../Views/Gifting/Views/gifting'))
 const DescisionComp = lazy(() => import('../Views/DecisionComponent'))
-const LocateUs = lazy(() => import('../Components/LocateUs'))
 const JuhuVileLoc = lazy(() => import('../Components/LocateUs/JuhuVileLoc'))
+const LocateUs = lazy(()=> import ('../Components/LocateUs'))
+const LocateDetails = lazy(()=> import ('../Components/LocateUs/LocationDetails'))
+const NutriDiet = lazy(()=>import('../Views/NutriDiet'))
 const staticSiteRoutes = [
   //Home
   {
@@ -368,10 +370,10 @@ const staticSiteRoutes = [
   },
   {
     Component: TermsCondition,
-    path: '/terms-and-condition',
+    path: '/terms-and-conditions',
     exact: true,
     id: 'statisSiteUnderTermsCondition',
-    routePath: '/terms-and-condition',
+    routePath: '/terms-and-conditions',
     name: 'TermsCondition',
   },
   {
@@ -625,17 +627,6 @@ const staticSiteRoutes = [
     name: 'Job',
   },
   {
-    Component: DescisionComp,
-    path: '/:contentId',
-    exact: true,
-    id: 'statisSiteCourse',
-    routePath: '/:contentId',
-    name: 'singleCourse',
-    // 1. desComponent
-    // 2. Switch case
-    // render => loader => API call (Blog or course) => switch *Blog, *Course => loading stop
-  },
-  {
     Component: LocateUs,
     path: '/our-branches',
     exact: true,
@@ -655,28 +646,28 @@ const staticSiteRoutes = [
 
   {
     Component: JuhuVileLoc,
-    path: '/our-branches/vileParle',
+    path: '/vileParle',
     exact: true,
     id: 'statisLocateUs',
-    routePath: '/our-branches/vileParle',
+    routePath: '/vileParle',
     name: 'LocateUs',
   },
 
   {
     Component: JuhuVileLoc,
-    path: '/our-branches/santaCruz',
+    path: '/santaCruz',
     exact: true,
     id: 'statisLocateUs',
-    routePath: '/our-branches/santaCruz',
+    routePath: '/santaCruz',
     name: 'LocateUs',
   },
 
   {
     Component: JuhuVileLoc,
-    path: '/our-branches/LokhandWala',
+    path: '/LokhandWala',
     exact: true,
     id: 'statisLocateUs',
-    routePath: '/our-branches/LokhandWala',
+    routePath: '/LokhandWala',
     name: 'LocateUs',
   },
 
@@ -688,6 +679,40 @@ const staticSiteRoutes = [
     id: 'staticSearch',
     routePath: '/search',
     name: 'Search',
+  },
+  {
+    Component: LocateDetails,
+    path: '/matunga',
+    exact: true,
+    id: 'statisMatunga',
+    routePath: '/matunga',
+    name: 'Matunga',
+  },
+  //Search
+  {
+    Component:SearchModal,
+    path:'/search',
+    id:'staticSearch',
+    routePath:'/search',
+    name:'Search'
+  },
+  {
+    Component:NutriDiet,
+    path:'/nutri-diet',
+    id:'staticNutriDiet',
+    routePath:'/nutri-diet',
+    name:'NutriDiet'
+  },
+  {
+    Component: DescisionComp,
+    path: '/:contentId',
+    exact: true,
+    id: 'statisSiteCourse',
+    routePath: '/:contentId',
+    name: 'singleCourse',
+    // 1. desComponent
+    // 2. Switch case
+    // render => loader => API call (Blog or course) => switch *Blog, *Course => loading stop
   },
 ]
 

@@ -1,6 +1,12 @@
-import baseDomain, { homeAssets } from '../assets/images/imageAsset'
+import baseDomain, { homeAssets,nutriDiet } from '../assets/images/imageAsset'
 
 export const activityData = [
+  {
+    title: 'Nutri Diet Clinic',
+    description:'Take a step for your well-being and enroll in our customized diet plans to get a holistic change in your lifestyle.',
+    image: `${baseDomain}${nutriDiet.nutriDietMain}`,
+    url: '/nutri-diet',
+  },
   {
     title: 'Yoga by the bay',
     description:

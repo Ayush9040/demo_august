@@ -1,6 +1,7 @@
 import baseDomain, {
   courseAssets,
   homeAssets,
+  nutriDiet,
 } from '../../../assets/images/imageAsset'
 
 const ttc200hr = {
@@ -32,9 +33,6 @@ const ttc200hr = {
     category: 'ttc',
     title: '200 hrs TTC - 1 Month TTC Online & On Campus - English - Batch 1 ',
     dates: [
-      '1st Aug to 31st Aug 2022',
-      '1st Sept to 30th Sept 2022',
-      '1st Oct to 31st Oct 2022',
       '1st Nov to 30th Nov 2022',
       '1st Dec to 31st Dec 2022',
     ],
@@ -355,9 +353,8 @@ const ttc200hr = {
       offlineFee: { residentialFee: 70000, nonResidentialFee: 28000 },
     },
     category: 'ttc',
-    title: '200 hrs TTC - 2 Months TTC On Campus – English - Batch 2',
+    title: '200 hrs TTC - 2 Months TTC On Campus-English-Batch 2',
     dates: [
-      '5th Sept to 28th Oct 2022',
       '31st Oct to 23rd Dec 2022',
       '26th Dec to 17th Feb 2023',
     ],
@@ -677,9 +674,8 @@ const ttc200hr = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'ttc',
-    title: '200 hrs TTC - 2 Months TTC Online – English - Batch 3 ',
+    title: '200 hrs TTC - 2 Months TTC Online-English-Batch 3',
     dates: [
-      '8th Aug to 1st Oct 2022',
       '10th Oct to 3rd Dec 2022',
       '12th Dec to 4th Feb 2023',
     ],
@@ -997,9 +993,8 @@ const ttc200hr = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'ttc',
-    title: '200 hrs TTC - 2 Months TTC Online – Hindi - Batch 4 ',
+    title: '200 hrs TTC - 2 Months TTC Online-Hindi-Batch 4',
     dates: [
-      '15th Aug to 8th Oct 2022',
       '17th Oct to 10th Dec 2022',
       '19th Dec to 11th Feb 2023',
     ],
@@ -1315,8 +1310,8 @@ const ttc200hr = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'ttc',
-    title: '200 hrs TTC - 2 Months TTC Online – English - Batch 5 ',
-    dates: ['29th Aug to 22nd Oct 2022', '31st Oct to 24th Dec 2022'],
+    title: '200 hrs TTC - 2 Months TTC Online-English-Batch 5',
+    dates: ['31st Oct to 24th Dec 2022'],
     online: true,
     onCampus: false,
     nonResidential: false,
@@ -1620,7 +1615,7 @@ const ttc200hr = {
       'You will learn the tools to master your physical, mental and spiritual well-being. You will see a marked improvement in your life, relationships and work.',
     image: `${baseDomain}${courseAssets.courseAsset38}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset101}`,
-    mostPopular: false,
+    mostPopular: true,
     rating: 5,
     colorCode: '#E38F73',
     timing:
@@ -1630,8 +1625,8 @@ const ttc200hr = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'ttc',
-    title: '200 hrs TTC - 3 Months Weekend TTC Online – English - Batch 6',
-    dates: ['27th Aug to 13th Nov 2022', '19th Nov to 5th Feb 2023'],
+    title: '200 hrs TTC - 3 Months Weekend TTC Online-English-Batch 6',
+    dates: ['19th Nov to 5th Feb 2023'],
     online: true,
     onCampus: false,
     nonResidential: false,
@@ -1938,7 +1933,7 @@ const ttc500hr = {
     batch: 1,
     metaDescription:
       'You will learn the tools to master your physical, mental and spiritual well-being. You will see a marked improvement in your life, relationships and work.',
-    mostPopular: false,
+    mostPopular: true,
     rating: 5,
     colorCode: '#D88068',
     timing:
@@ -1951,7 +1946,7 @@ const ttc500hr = {
     title: '500 hrs TTC 3 Months TTC Online - English',
     image: `${baseDomain}${courseAssets.courseAsset39}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset102}`,
-    dates: ['15th Aug to 5th Nov 2022', '14th Nov to 4th Feb 2023'],
+    dates: ['14th Nov to 4th Feb 2023'],
     online: true,
     onCampus: false,
     nonResidential: false,
@@ -2206,7 +2201,7 @@ const ttc900hr = {
 
     metaDescription:
       'You will learn the tools to master your physical, mental and spiritual well-being. You will see a marked improvement in your life, relationships and work.',
-    title: '900 hrs TTC  3 Months TTC On Campus - English',
+    title: '900 hrs TTC-3 Months TTC On Campus - English',
 
     image: `${baseDomain}${courseAssets.courseAsset40}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset103}`,
@@ -3948,7 +3943,7 @@ const ttc900hr = {
 
     metaDescription:
       'You will learn the tools to master your physical, mental and spiritual well-being. You will see a marked improvement in your life, relationships and work.',
-    title: '900 hrs TTC  4 Months TTC Online - English',
+    title: '900 hrs TTC-4 Months TTC Online - English',
     image: `${baseDomain}${courseAssets.courseAsset40}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset103}`,
     mostPopular: false,
@@ -4553,7 +4548,7 @@ const ttc900hr = {
 
     metaDescription:
       'You will learn the tools to master your physical, mental and spiritual well-being. You will see a marked improvement in your life, relationships and work.',
-    title: '900 hrs TTC  7 Months TTC Online & On Campus - English',
+    title: '900 hrs TTC-7 Months TTC Online & On Campus - English',
 
     image: `${baseDomain}${courseAssets.courseAsset40}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset103}`,
@@ -5317,7 +5312,7 @@ const camps = {
       'Powerful and effective asana, pranayama, and relaxation techniques to alleviate heart ailments',
     image: `${baseDomain}${courseAssets.courseAsset111}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset6}`,
-    dates: ['27th August 2022', '22nd October 2022', '26th December 2022'],
+    dates: ['24th December 2022'],
     online: true,
     onCampus: true,
     nonResidential: false,
@@ -5436,7 +5431,7 @@ const camps = {
         templateNonResidential: '',
       },
     },
-    dates: ['7th August 2022', '2nd October 2022', '4th December 2022'],
+    dates: ['4th December 2022'],
     mostPopular: false,
     rating: 5,
     colorCode: '#CE9B51',
@@ -6263,7 +6258,7 @@ const camps = {
         templateNonResidential: '',
       },
     },
-    dates: ['21st August 2022', '16th October 2022', '18th December 2022'],
+    dates: ['18th December 2022'],
     mostPopular: false,
     rating: 5,
     colorCode: '#CE9B51',
@@ -6401,9 +6396,6 @@ const camps = {
       },
     },
     dates: [
-      '18th Jun to 19th Jun 2022',
-      '20th Aug to 21st Aug 2022',
-      '15th Oct to 16th Oct 2022',
       '17th Dec to 18th Dec 2022',
     ],
     mostPopular: false,
@@ -6812,7 +6804,7 @@ const camps = {
         templateNonResidential: '',
       },
     },
-    dates: ['14th August 2022', '9th October 2022', '11th December 2022'],
+    dates: ['11th December 2022'],
     mostPopular: false,
     rating: 5,
     colorCode: '#EDBE66',
@@ -6948,7 +6940,7 @@ const camps = {
         templateNonResidential: '',
       },
     },
-    dates: ['6th August 2022', '1st October 2022', '3rd December 2022'],
+    dates: ['3rd December 2022'],
     mostPopular: false,
     rating: 5,
     colorCode: '#DDAB58',
@@ -7072,7 +7064,7 @@ const camps = {
 
   15: {
     id: '',
-    title: 'Women’s Camp',
+    title: 'Women`s Camp',
     key: 'womens-camp',
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
@@ -7083,7 +7075,7 @@ const camps = {
         templateNonResidential: '',
       },
     },
-    dates: ['13th August 2022','10th December 2022'],
+    dates: ['10th December 2022'],
     mostPopular: false,
     rating: 5,
     colorCode: '#CE9B51',
@@ -7224,7 +7216,7 @@ const camps = {
         templateNonResidential: '',
       },
     },
-    dates: ['28th August 2022', '23rd October 2022', '25th December 2022'],
+    dates: ['25th December 2022'],
     mostPopular: false,
     rating: 5,
     colorCode: '#EDBE66',
@@ -7358,7 +7350,7 @@ const camps = {
         templateNonResidential: 'CAMP_FOR_7_DAYS_HEALTH',
       },
     },
-    dates: ['13th Aug to 19th Aug 2022', '12th Nov to 18th Nov 2022'],
+    dates: ['12th Nov to 18th Nov 2022'],
     online: false,
     onCampus: true,
     nonResidential: true,
@@ -7717,9 +7709,6 @@ const camps = {
       },
     },
     dates: [
-      '27th Aug to 2nd Sept 2022',
-      '24th Sept to 30th Sept 2022',
-      '22nd Oct to 28th Oct 2022',
       '26th Nov to 2nd Dec 2022',
       '24th Dec to 30th Dec 2022',
     ],
@@ -8081,9 +8070,6 @@ const camps = {
     },
     batch: 1,
     dates: [
-      '7th Aug to 27th Aug 2022',
-      '4th Sept to 24th Sept 2022',
-      '2nd Oct to 22nd Oct 2022',
       '6th Nov to 26th Nov 2022',
       '4th Dec to 24th Dec 2022',
     ],
@@ -8407,9 +8393,6 @@ const camps = {
       },
     },
     dates: [
-      '7th Aug to 27th Aug 2022',
-      '4th Sept to 24th Sept 2022',
-      '2nd Oct to 22nd Oct 2022',
       '6th Nov to 26th Nov 2022',
       '4th Dec to 24th Dec 2022',
     ],
@@ -8733,8 +8716,6 @@ const camps = {
       },
     },
     dates: [
-      '7th Aug to 27th Aug 2022',
-      '2nd Oct to 22nd Oct 2022',
       '4th Dec to 24th Dec 2022',
     ],
     online: true,
@@ -9057,10 +9038,6 @@ const camps = {
       },
     },
     dates: [
-      '14th Aug to 3rd Sept 2022',
-      '4th Sept to 24th Sept 2022',
-      '25th Sept to 15th Oct 2022',
-      '16th Oct to 5th Nov 2022',
       '6th Nov to 26th Nov 2022',
       '27th Nov to 17th Dec 2022',
       '18th Dec to 7th Jan 2023',
@@ -9957,799 +9934,6 @@ const classes = {
       },
     ],
   },
-  6: {
-    id: '',
-    title: 'Certificate Course on Advanced Pranayama Techniques - Online',
-    key: 'certificate-course-on-advanced-pranayama-techniques',
-    batch: 1,
-    // templateId: 'GENERAL_AUTO_EMAIL',
-    templateId: {
-      templateOnline: 'GENERAL_AUTO_EMAIL',
-      templateOffline: {
-        templateResidential: '',
-        templateNonResidential: '',
-      },
-    },
-    image: `${baseDomain}${courseAssets.courseAsset72}`,
-    cardImage: `${baseDomain}${courseAssets.courseAsset72}`,
-    metaDescription: 'Knowledge of nadi system and energy channels',
-    mostPopular: false,
-    rating: 5,
-    colorCode: '#B77E7E',
-    timing: 'Mondays, Tuesdays & Thursdays: 11:30 am - 12:30 pm (IST)',
-    fees: {
-      onlineFee: 20000,
-      offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
-    },
-    category: 'classes',
-    dates: ['7th Nov - 26th Dec 2022'],
-    online: true,
-    onCampus: false,
-    nonResidential: false,
-    residential: false,
-    certficate: false,
-    details: [
-      {
-        type: 'paragraph',
-        content: {
-          title: '',
-          text: [
-            'Now that you have mastered the basics of pranayama practices, it is time to go one step ahead! The certificate course on advanced pranayama techniques by The Yoga Institute will help you get the hang of various advanced pranayama techniques along with the right teaching methodology to teach these techniques efficiently.',
-            'Pranayamas are powerful yogic breathing techniques that boost your body’s bioenergy as well as strengthen both body and mind. Maharishi Patanjali mentions in his text “Yoga Darshanam” which was written around 2500 years ago that pranayamas are powerful techniques to achieve the highest degree of awareness and profound meditative state. It prepares you for deep meditation. ',
-          ],
-        },
-      },
-      {
-        type: 'u-list',
-        content: {
-          title: 'Course content',
-          points: [
-            {
-              listItem: 'Knowledge of nadi system and energy channels',
-              subItems: [],
-            },
-            {
-              listItem: 'Bandhas, mudras and mantras in pranayama practice ',
-              subItems: [],
-            },
-            {
-              listItem: 'Teaching techniques to become a capable teacher ',
-              subItems: [],
-            },
-          ],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: '',
-          text: [
-            'You will receive a printed manual with a detailed list of subjects.',
-            'access the detailed syllabus here',
-          ],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: '',
-          text: ['Course Timings and fees:'],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'Online Sessions',
-          text: [
-            'Mondays, Tuesdays & Thursdays: 11:30 am - 12:30 pm (IST)',
-            '24 sessions of one hour each',
-          ],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'Fees',
-          text: ['Rs. 20000/-'],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'NOTE',
-          text: [
-            'THE PRINTED MANUAL IS COMPULSORY FOR ALL ASPIRING STUDENTS; HOWEVER, THE KIT IS MANDATORY BUT NOT NECESSARY TO BE BOUGHT FROM THE INSTITUTE. (THE COURIER CHARGES SHALL BE INCURRED BY THE STUDENTS.)',
-          ],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'NOTE',
-          text: [
-            'All study material available for the students for any course in physical (hard copy) only. The same can be collected by the student directly from the Institute or can be delivered to them by courier, charges of which will have to be borne by the student.',
-          ],
-        },
-      },
-    ],
-  },
-  7: {
-    id: '',
-    title: 'Certificate Course on Yoga Sutra - Online',
-    key: 'certification-course-on-yoga-sutra-online',
-    batch: 1,
-    // templateId: 'GENERAL_AUTO_EMAIL',
-    templateId: {
-      templateOnline: 'GENERAL_AUTO_EMAIL',
-      templateOffline: {
-        templateResidential: '',
-        templateNonResidential: '',
-      },
-    },
-    image: `${baseDomain}${courseAssets.courseAsset73}`,
-    cardImage: `${baseDomain}${courseAssets.courseAsset73}`,
-    metaDescription:
-      'The Yoga Sutras help you unravel the mystical, the seemingly miraculous possibilities and powers that lie dormant within you',
-    mostPopular: false,
-    rating: 5,
-    colorCode: '#D3A29D',
-    timing: '1st Sunday of every month: 10:40 am - 12:30 pm (IST)',
-    fees: {
-      onlineFee: 8000,
-      offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
-    },
-    category: 'classes',
-    dates: [],
-    online: true,
-    onCampus: false,
-    nonResidential: false,
-    residential: false,
-    certficate: false,
-    details: [
-      {
-        type: 'paragraph',
-        content: {
-          title: 'What is the course about?',
-          text: [
-            'Patanjali’s Yoga Sutras say that by learning to develop a certain introspective awareness, with a commitment to making objective observations of oneself, we can begin a journey away from the pressures and pains of daily life. We become able to see things as they are, with a greater sense of perspective. It is not escapism, but instead a kind of ‘waking up’.',
-            'Think of everything that you have always wanted to do. And think of what comes in the way of that. Even if it is hard to admit, the answer is – yourself. With this dynamic and powerful course on the Yoga Sutra of Patanjali, you will unlock the key to all that you want from yourself, and your life.',
-            'The Yoga Sutras help you unravel the mystical, the seemingly miraculous possibilities and powers that lie dormant within you. Come, experience the power that is waiting within you!',
-            'access the detailed syllabus here',
-          ],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'Eligibility',
-          text: ['Open to all.  Prior knowledge of Yoga or the earlier chapters though not a prerequisite, would be helpful.'],
-        },
-      },
-      // {
-      //   type: 'paragraph',
-      //   content: {
-      //     title: 'Details (in tabular form)',
-      //     text: [''],
-      //   },
-      // },
-      // {
-      //   type: 'paragraph',
-      //   content: {
-      //     title: 'Schedule',
-      //     text: [''],
-      //   },
-      // },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'Prerequisites',
-          text: [
-            'Open to all. Prior knowledge of yoga not required, though helpful.',
-          ],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'Duration',
-          text: ['1 year – 1st & 3rd 2022, Sunday of every month'],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'Fees',
-          text: [
-            'Rs. 15000/-',
-            'Please note fees once paid will be non-refundable.',
-          ],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'Timings',
-          text: ['1st Sunday of every month: 10:40 am - 12:30 pm (IST)'],
-        },
-      },
-      
-      // {
-      //   type: 'paragraph',
-      //   content: {
-      //     title: 'Guidelines',
-      //     text: [''],
-      //   },
-      // },
-      // {
-      //   type: 'paragraph',
-      //   content: {
-      //     title: 'Contact Details',
-      //     text: [''],
-      //   },
-      // },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'Registration',
-          text: ['REGISTRATIONS ARE CLOSED..STAY TUNED FOR OUR NEXT BATCH.'],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'Conducted By',
-          text: ['Shri Kartik Vyas'],
-        },
-      },
-    ],
-  },
-  8: {
-    id: '',
-    title: 'Certificate Program on Yoga for Cancer - Online & On Campus',
-    key: 'certificate-program-on-yoga-for-cancer',
-    batch: 1,
-    // templateId: 'GENERAL_AUTO_EMAIL',
-    templateId: {
-      templateOnline: 'GENERAL_AUTO_EMAIL',
-      templateOffline: {
-        templateResidential: '',
-        templateNonResidential: '',
-      },
-    },
-    image: `${baseDomain}${courseAssets.courseAsset74}`,
-    cardImage: `${baseDomain}${courseAssets.courseAsset74}`,
-    metaDescription:
-      'We offer a supportive and compassionate support group to understand and discuss Cancer confidently and intelligently.',
-    mostPopular: false,
-    rating: 5,
-    colorCode: '#C48E8C',
-    timing: 'Fridays & Saturdays: 3:00 pm - 5:00 pm (IST)',
-    fees: {
-      onlineFee: 20000,
-      offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
-    },
-    category: 'classes',
-    dates: ['4th Nov to 10th Dec 2022'],
-    online: true,
-    onCampus: true,
-    nonResidential: false,
-    residential: false,
-    certficate: true,
-    details: [
-      {
-        type: 'paragraph',
-        content: {
-          title: 'Contact Details',
-          text: [
-            'Yoga offers a safe, effective and low cost modality that can add considerable value to any Cancer care continuum. This program is designed to create a cadre of Yoga Professionals who are well-trained in Cancer care that is accessible and effective. The Certificate Program is a specialized Yoga module for the special needs of Cancer patients. This oncology based program trains Yoga teachers to safely and effectively work with Cancer survivors. Learn practices and techniques to address Cancer specific issues such as scar tissue, bone loss, lymphedema, weight gain, fatigue, sleeplessness and stress.',
-            'We offer a supportive and compassionate support group to understand and discuss Cancer confidently and intelligently.',
-            'Access the detailed syllabus here',
-          ],
-        },
-      },
-      // {
-      //   type: 'paragraph',
-      //   content: {
-      //     title: 'From',
-      //     text: ['__________ to __________'],
-      //   },
-      // },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'Days',
-          text: ['Fridays & Saturdays: 3:00 pm - 5:00 pm (IST)'],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'Fees',
-          text: ['Rs. 20,000'],
-        },
-      },
-      // {
-      //   type: 'paragraph',
-      //   content: {
-      //     title: 'Eligibility',
-      //     text: [
-      //       'Completion of 500 hrs or 900 hrs TTC programme is mandatory.',
-      //     ],
-      //   },
-      // },
-      {
-        type: 'paragraph',
-        content: {
-          title: '',
-          text: [
-            'Write to us at info@theyogainstitute.org or call us at +91-22-26122185 or +91-22-26110506',
-          ],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'Rules',
-          text: ['Recordings are strictly prohibited.'],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'Note',
-          text: [
-            ' All study materials are available in physical form only.',
-            'Physical copies maybe collected from the Institute.',
-            'For delivery, the courier charges will have to be borne by the participant.',
-          ],
-        },
-      },
-    ],
-  },
-  9: {
-    id: '',
-    title: 'Certificate Program on Yoga for Lung Cancer - Online',
-    key: 'certification-program-on-yoga-for-lung-cancer-online',
-    batch: 1,
-    // templateId: 'GENERAL_AUTO_EMAIL',
-    templateId: {
-      templateOnline: 'GENERAL_AUTO_EMAIL',
-      templateOffline: {
-        templateResidential: '',
-        templateNonResidential: '',
-      },
-    },
-    image: `${baseDomain}${courseAssets.courseAsset113}`,
-    cardImage: `${baseDomain}${courseAssets.courseAsset114}`,
-    mostPopular: false,
-    metaDescription:
-      'The programme includes specific asanas, pranayamas, mudras, meditation and dietary practices that will aid you in your cancer care and management',
-    rating: 5,
-    colorCode: '#B77E7E',
-    timing: 'Tuesdays to Friday: 5:00 p.m. - 7:00 p.m. (IST)',
-    fees: {
-      onlineFee: 8000,
-      offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
-    },
-    category: 'classes',
-    dates: [],
-    online: true,
-    onCampus: false,
-    nonResidential: false,
-    residential: false,
-    certficate: false,
-    details: [
-      {
-        type: 'paragraph',
-        content: {
-          title: '',
-          text: [
-            'Help boost your body’s efforts in its fight against Lung Cancer with the Yoga for Lung Cancer Programme. The programme includes specific asanas, pranayamas, mudras, meditation and dietary practices that will aid you in your cancer care and management. The theory part of the course will help you understand the anatomy and physiology of the lungs, causes of lung cancer, its symptoms and type, stages of lung cancer, treatments and side effects of treatments. The Yoga based practical part of the programme will be a holistic approach to Cancer management and care using asanas, pranayamas and dietary modifications.',
-            'access the detailed syllabus here',
-          ],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'Duration',
-          text: [],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'Time',
-          text: ['Tuesdays to Friday: 5:00 p.m. - 7:00 p.m. (IST)'],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'Fees',
-          text: ['8000/-'],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'Eligibility:',
-          text: [
-            'Completion of the Basic Programme on Yoga for Cancer Rehabilitation and Recovery.',
-          ],
-        },
-      },
-    ],
-  },
-  10: {
-    id: '',
-    title: 'Certificate Yoga Therapy Course - Online & On Campus',
-    key: 'certificate-yoga-therapy-course-online',
-    batch: 1,
-    // templateId: 'GENERAL_AUTO_EMAIL',
-    templateId: {
-      templateOnline: 'GENERAL_AUTO_EMAIL',
-      templateOffline: {
-        templateResidential: '',
-        templateNonResidential: '',
-      },
-    },
-    image: `${baseDomain}${courseAssets.courseAsset75}`,
-    cardImage: `${baseDomain}${courseAssets.courseAsset75}`,
-    mostPopular: false,
-    metaDescription:
-      'Become a certified Yoga therapist through The Yoga Institute.',
-    rating: 5,
-    colorCode: '#D3A29D',
-    timing: 'Monday, Wednesday & Friday: 5:30 pm - 7:30 pm (IST)',
-    fees: {
-      onlineFee: 35000,
-      offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
-    },
-    category: 'classes',
-    dates: ['2nd Jan to 26th Apr 2023'],
-    online: true,
-    onCampus: true,
-    nonResidential: false,
-    residential: false,
-    certficate: true,
-    details: [
-      {
-        type: 'paragraph',
-        content: {
-          title: 'YOGA THERAPY COURSE',
-          text: [
-            'Become a certified Yoga therapist through The Yoga Institute.',
-            'Complete one-stop destination to enhance your skills in Yogic Management of diseases through our YOGA THERAPY COURSE.',
-            'This is a detailed and comprehensive100 hours Yoga Therapy course wherein the lifestyle and yogic management of diseases is taught in a practical and simple manner for easy understanding and teaching. This course will qualify you to become an extremely capable and confident Yoga Therapist to handle any case.',
-          ],
-        },
-      },
-      {
-        type: 'u-list',
-        content: {
-          title: 'What the course details?',
-          points: [
-            {
-              listItem: 'Understanding of 80+ diseases:',
-              subItems: [],
-            },
-            {
-              listItem:
-                'Practical application through Yogic management of each disease on the basis of',
-              subItems: [
-                'Diet,',
-                'Specific day to day care in that condition,',
-                'Relevant Asanas, Pranayamas and Kriyas',
-                'Modification and demonstration of Techniques as per the Age and Body limitations in regards specific disease.',
-                'Developing proper mental attitude to tackle the health conditions',
-                'Lectures by Expert Guest Speakers from the field of Ayurveda and Specialist Doctors from various fields- for better understanding of the disease to help you design a Yoga Program for your clients.',
-              ],
-            },
-            {
-              type: 'paragraph',
-              content: {
-                title: 'Note:',
-                text: [
-                  'This will assist students to understand the client’s Physical and Mental state in order to create a disease specific Professional Yogic Management Program.',
-                ],
-              },
-            },
-            {
-              listItem:
-                'Lectures on Anatomy/ Physiology and Pathology of each health condition along with causes and symptoms will be given by Dr Taruna Kardak and other visiting Medical Practitioners specialising in their particular fields.',
-              subItems: [],
-            },
-            {
-              listItem:
-                'Lecture on basic Ayurveda to understand the body and the role of doshas in specific health conditions.',
-              subItems: [],
-            },
-            {
-              listItem:
-                'Students will be encouraged to apply the therapy learnt on their family and friends and prepare Case Studies of Combination Diseases to learn the practical application of the same while going through the course.',
-              subItems: [],
-            },
-            {
-              listItem: 'General & specialized topics covered in detail',
-              subItems: [],
-            },
-            {
-              listItem: 'Course material will be provided',
-              subItems: [],
-            },
-            {
-              listItem:
-                'Special topics covered: Male/Female infertility, Couples counselling, Cancer, Substance abuse',
-              subItems: [],
-            },
-            {
-              listItem:
-                'Exam will be conducted at the conclusion of the Yoga Therapy Course.',
-              subItems: [],
-            },
-          ],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'Recording Policy of TYI',
-          text: [
-            'The Institute retains all rights to record the live interactive sessions for their internal usage & quality purposes. These recordings are strictly for the institute and the data is stored securely in a manner that reasonably protects it from misuse and loss and from unauthorized access, modification or disclosure. Students are prohibited from recording these live sessions. We will not share any recordings with the students.',
-          ],
-        },
-      },
-      {
-        type: 'u-list',
-        content: {
-          title: 'SYSTEMS COVERED:',
-          points: [
-            {
-              listItem: ' General disorders',
-              subItems: ['Anaemia', ' Insomnia', ' Vertigo'],
-            },
-            {
-              listItem: 'Gastro intestinal (GI) tract problems',
-              subItems: [
-                'Constipation',
-                'Irritable bowel syndrome (IBS)',
-                'Flatulence and bloating',
-                'Haemorrhoids (piles) and anal fissures',
-                'Acidity and GERD',
-                'Migraine',
-                'Fatty Liver',
-                'Crohn’s disease',
-              ],
-            },
-            {
-              listItem: 'Respiratory problems',
-              subItems: [
-                'Common cold',
-                'Respiratory allergies',
-                'Tonsillitis',
-                'Laryngitis',
-                'Sinustis',
-                'Sleep apnoea',
-                'Bronchitis',
-                'Emphysema',
-                'Chronic obstructive pulmonary disease (COPD)',
-                'Asthma',
-                'Tuberculosis (TB)',
-              ],
-            },
-            {
-              listItem: 'Circulatory system disorders',
-              subItems: [
-                'Low blood pressure',
-                'High blood pressure',
-                'Ischemic heart disease',
-                'Varicose veins',
-                'Stroke',
-                'Facial paralysis',
-              ],
-            },
-            {
-              listItem: 'Diabetes',
-              subItems: [],
-            },
-            {
-              listItem: 'Thyroid',
-              subItems: [
-                'Hypothyroidism',
-                'Hyperthyroidism',
-              ],
-            },
-            {
-              listItem: 'Parathyroid Gland',
-              subItems: [
-                'Hyperparathyroidism',
-                'Hypoparathyroidism',
-              ],
-            },
-            {
-              listItem: 'Weight Management',
-              subItems: [
-                'Obesity',
-              ],
-            },
-            {
-              listItem: 'Eating Disorders',
-              subItems: [
-                'Anorexia Nervosa',
-                'Binge Eating Disorder',
-                'Bulimia Nervosa',
-              ],
-            },
-            {
-              listItem: 'Urinary Tract Infection',
-              subItems: [],
-            },
-            {
-              listItem: 'Female Reproductive System',
-              subItems: [
-                'Dysmenorrhea',
-                'PMT (Premenstrual Tension) Or PMS (Premenstrual Syndrome)',
-                'PCOS',
-                'Fibroids',
-                'Menopause',
-              ],
-            },
-            {
-              listItem: 'Pregnancy',
-              subItems: [],
-            },
-            {
-              listItem: 'Infertility',
-              subItems: [
-                'Male Infertility',
-                'Female Infertility',
-                'Counselling For Couples',
-              ],
-            },
-            {
-              listItem: 'Orthopaedic problems',
-              subItems: [
-                'General management',
-                'Sprain/Strain',
-                'Fibromyalgia',
-                'Hernia',
-                'Cervical Spondylitis',
-                'Low Back Pain',
-                'Lumbar Disc Prolapse (slipped Disc)',
-                'Lumbar Canal Stenosis',
-                'Lumbar Spondylosis (Osteoarthritis of Spine)',
-                'Sciatica',
-                'Piriformis Syndrome',
-                'Osteoporosis',
-                'Osteoarthritis',
-                'Gout',
-                'Tennis Elbow/Lateral Epicondylitis',
-                'Frozen Shoulder',
-              ],
-            },
-            {
-              listItem: 'Autoimmune disorder affecting the joints:',
-              subItems: ['Rheumatoid arthritis', 'Ankylosing spondylitis','Lupus'],
-            },
-            {
-              listItem: 'Skin disorders',
-              subItems: [
-                'Acne',
-                'Lichen planus',
-                'Eczema',
-                'PsoriasisVitiligo',
-                'Peeling skin syndrome',
-                '',
-              ],
-            },
-            {
-              listItem: 'Psychological and psychiatric disorders',
-              subItems: [
-                'Stress Management',
-                'Depression',
-                'Anxiety Disorders',
-                'Phobias and Panic Disorders',
-                'Post-Traumatic Stress Disorder',
-                'Prolonged Grief Disorder',
-                'Substance Abuse/Addiction',
-              ],
-            },
-            {
-              listItem: 'Nervous system disorders',
-              subItems: [
-                'Obsessive Compulsive Disorder',
-                'Bipolar disorder',
-                'Schizophrenia',
-                'Dementia',
-                'Alzheimer’s disease',
-                'Epilepsy',
-                'Parkinson’s disease',
-              ],
-            },
-            {
-              listItem: 'Cancer',
-              subItems: ['Oral cancer', 'Cervical cancer','Ovarian Cancer', 'Breast cancer'],
-            },
-            {
-              listItem: 'Prostate enlargement',
-              subItems: [],
-            },
-          ],
-        },
-      },
-      // {
-      //   type: 'paragraph',
-      //   content: {
-      //     title: '',
-      //     text: [' access the detailed syllabus here:'],
-      //   },
-      // },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'Conducted by:',
-          text: ['Dr Taruna Kardak, Homoeopath and Senior Yoga Teacher'],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'Eligibility:',
-          text: [
-            'Students who have completed 500/900 hrs TTC from The Yoga Institute.',
-            'Medical Doctors who have completed any TTC (200/500/900 hrs) from The Yoga Institute.',
-            'Students who have completed YCB Level 2 or 3.',
-            'Students who have completed minimum 500 hrs TTC from any institution, can apply to info@theyogainstitute.org with their certificates & course curriculum for Review.'
-          ],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'Duration:',
-          text: [' 4 months '],
-        },
-      },
-      // {
-      //   type: 'paragraph',
-      //   content: {
-      //     title: 'Date:',
-      //     text: [' 24th August - 16th December 2022'],
-      //   },
-      // },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'Timings:',
-          text: ['Monday, Wednesday, Friday – 5:30 pm to 7:30 pm (IST)'],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'Fees:',
-          text: [' Rs. 35,000/-'],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'Note:',
-          text: ['Kindly note the fees once paid will not be refundable'],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'NOTE:',
-          text: [
-            ' All study material available for the students for any course in physical (hard copy) only. The same can be collected by the student directly from the Institute or can be delivered to them by courier, charges of which will have to be borne by the student.',
-          ],
-        },
-      },
-    ],
-  },
   11: {
     id: '',
     title: 'Children\'s Regular Class - On Campus',
@@ -10920,9 +10104,6 @@ const classes = {
     },
     category: 'classes',
     dates: [
-      '1st Aug to 26th Aug 2022',
-      '5th Sept to 30th Sept 2022',
-      '3rd Oct to 28th Oct 2022',
       '7th Nov to 2nd Dec 2022',
       '5th Dec to 30th Dec 2022',
     ],
@@ -11789,12 +10970,823 @@ const classes = {
   },
 }
 
+const extra = {
+  1:{
+    id:'',
+    key:'nutri-diet',
+    title:'Nutri Diet Clinic',
+    cardImage:`${ baseDomain }${ nutriDiet.nutriDietCard }`,
+    mostPopular:true,
+    colorCode:'#B77E7E',
+    dates:[],
+    metaDescription:'Take a step for your well-being and enroll in our customized diet plans to get a holistic change in your lifestyle.'
+  }
+}
+
+const certificate = {
+  1: {
+    id: '',
+    title: 'Certificate Course on Advanced Pranayama Techniques - Online',
+    key: 'certificate-course-on-advanced-pranayama-techniques',
+    batch: 1,
+    // templateId: 'GENERAL_AUTO_EMAIL',
+    templateId: {
+      templateOnline: 'GENERAL_AUTO_EMAIL',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: '',
+      },
+    },
+    image: `${baseDomain}${courseAssets.courseAsset72}`,
+    cardImage: `${baseDomain}${courseAssets.courseAsset72}`,
+    metaDescription: 'Knowledge of nadi system and energy channels',
+    mostPopular: false,
+    rating: 5,
+    colorCode: '#B77E7E',
+    timing: 'Mondays, Tuesdays & Thursdays: 11:30 am - 12:30 pm (IST)',
+    fees: {
+      onlineFee: 20000,
+      offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
+    },
+    category: 'certificate-course',
+    dates: ['20th Feb - 13th Apr 2023'],
+    online: true,
+    onCampus: false,
+    nonResidential: false,
+    residential: false,
+    certficate: false,
+    details: [
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: [
+            'Now that you have mastered the basics of pranayama practices, it is time to go one step ahead! The certificate course on advanced pranayama techniques by The Yoga Institute will help you get the hang of various advanced pranayama techniques along with the right teaching methodology to teach these techniques efficiently.',
+            'Pranayamas are powerful yogic breathing techniques that boost your body’s bioenergy as well as strengthen both body and mind. Maharishi Patanjali mentions in his text “Yoga Darshanam” which was written around 2500 years ago that pranayamas are powerful techniques to achieve the highest degree of awareness and profound meditative state. It prepares you for deep meditation. ',
+          ],
+        },
+      },
+      {
+        type: 'u-list',
+        content: {
+          title: 'Course content',
+          points: [
+            {
+              listItem: 'Knowledge of nadi system and energy channels',
+              subItems: [],
+            },
+            {
+              listItem: 'Bandhas, mudras and mantras in pranayama practice ',
+              subItems: [],
+            },
+            {
+              listItem: 'Teaching techniques to become a capable teacher ',
+              subItems: [],
+            },
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: [
+            'You will receive a printed manual with a detailed list of subjects.',
+            'access the detailed syllabus here',
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: ['Course Timings and fees:'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Online Sessions',
+          text: [
+            'Mondays, Tuesdays & Thursdays: 11:30 am - 12:30 pm (IST)',
+            '24 sessions of one hour each',
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Fees',
+          text: ['Rs. 20000/-'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'NOTE',
+          text: [
+            'THE PRINTED MANUAL IS COMPULSORY FOR ALL ASPIRING STUDENTS; HOWEVER, THE KIT IS MANDATORY BUT NOT NECESSARY TO BE BOUGHT FROM THE INSTITUTE. (THE COURIER CHARGES SHALL BE INCURRED BY THE STUDENTS.)',
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'NOTE',
+          text: [
+            'All study material available for the students for any course in physical (hard copy) only. The same can be collected by the student directly from the Institute or can be delivered to them by courier, charges of which will have to be borne by the student.',
+          ],
+        },
+      },
+    ],
+  },
+  2: {
+    id: '',
+    title: 'Certificate Course on Yoga Sutra - Online',
+    key: 'certification-course-on-yoga-sutra-online',
+    batch: 1,
+    // templateId: 'GENERAL_AUTO_EMAIL',
+    templateId: {
+      templateOnline: 'GENERAL_AUTO_EMAIL',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: '',
+      },
+    },
+    image: `${baseDomain}${courseAssets.courseAsset73}`,
+    cardImage: `${baseDomain}${courseAssets.courseAsset73}`,
+    metaDescription:
+      'The Yoga Sutras help you unravel the mystical, the seemingly miraculous possibilities and powers that lie dormant within you',
+    mostPopular: false,
+    rating: 5,
+    colorCode: '#D3A29D',
+    timing: '1st Sunday of every month: 10:40 am - 12:30 pm (IST)',
+    fees: {
+      onlineFee: 8000,
+      offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
+    },
+    category: 'certificate-course',
+    dates: [],
+    online: true,
+    onCampus: false,
+    nonResidential: false,
+    residential: false,
+    certficate: false,
+    details: [
+      {
+        type: 'paragraph',
+        content: {
+          title: 'What is the course about?',
+          text: [
+            'Patanjali’s Yoga Sutras say that by learning to develop a certain introspective awareness, with a commitment to making objective observations of oneself, we can begin a journey away from the pressures and pains of daily life. We become able to see things as they are, with a greater sense of perspective. It is not escapism, but instead a kind of ‘waking up’.',
+            'Think of everything that you have always wanted to do. And think of what comes in the way of that. Even if it is hard to admit, the answer is – yourself. With this dynamic and powerful course on the Yoga Sutra of Patanjali, you will unlock the key to all that you want from yourself, and your life.',
+            'The Yoga Sutras help you unravel the mystical, the seemingly miraculous possibilities and powers that lie dormant within you. Come, experience the power that is waiting within you!',
+            'access the detailed syllabus here',
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Eligibility',
+          text: ['Open to all.  Prior knowledge of Yoga or the earlier chapters though not a prerequisite, would be helpful.'],
+        },
+      },
+      // {
+      //   type: 'paragraph',
+      //   content: {
+      //     title: 'Details (in tabular form)',
+      //     text: [''],
+      //   },
+      // },
+      // {
+      //   type: 'paragraph',
+      //   content: {
+      //     title: 'Schedule',
+      //     text: [''],
+      //   },
+      // },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Prerequisites',
+          text: [
+            'Open to all. Prior knowledge of yoga not required, though helpful.',
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Duration',
+          text: ['1 year – 1st & 3rd 2022, Sunday of every month'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Fees',
+          text: [
+            'Rs. 15000/-',
+            'Please note fees once paid will be non-refundable.',
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Timings',
+          text: ['1st Sunday of every month: 10:40 am - 12:30 pm (IST)'],
+        },
+      },
+      
+      // {
+      //   type: 'paragraph',
+      //   content: {
+      //     title: 'Guidelines',
+      //     text: [''],
+      //   },
+      // },
+      // {
+      //   type: 'paragraph',
+      //   content: {
+      //     title: 'Contact Details',
+      //     text: [''],
+      //   },
+      // },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Registration',
+          text: ['REGISTRATIONS ARE CLOSED..STAY TUNED FOR OUR NEXT BATCH.'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Conducted By',
+          text: ['Shri Kartik Vyas'],
+        },
+      },
+    ],
+  },
+  3: {
+    id: '',
+    title: 'Certificate Program on Yoga for Cancer - Online & On Campus',
+    key: 'certificate-program-on-yoga-for-cancer',
+    batch: 1,
+    // templateId: 'GENERAL_AUTO_EMAIL',
+    templateId: {
+      templateOnline: 'GENERAL_AUTO_EMAIL',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: '',
+      },
+    },
+    image: `${baseDomain}${courseAssets.courseAsset74}`,
+    cardImage: `${baseDomain}${courseAssets.courseAsset74}`,
+    metaDescription:
+      'We offer a supportive and compassionate support group to understand and discuss Cancer confidently and intelligently.',
+    mostPopular: false,
+    rating: 5,
+    colorCode: '#C48E8C',
+    timing: 'Fridays & Saturdays: 3:00 pm - 5:00 pm (IST)',
+    fees: {
+      onlineFee: 20000,
+      offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
+    },
+    category: 'certificate-course',
+    dates: ['3rd Mar to 8th Apr 2023'],
+    online: true,
+    onCampus: true,
+    nonResidential: false,
+    residential: false,
+    certficate: true,
+    details: [
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Contact Details',
+          text: [
+            'Yoga offers a safe, effective and low cost modality that can add considerable value to any Cancer care continuum. This program is designed to create a cadre of Yoga Professionals who are well-trained in Cancer care that is accessible and effective. The Certificate Program is a specialized Yoga module for the special needs of Cancer patients. This oncology based program trains Yoga teachers to safely and effectively work with Cancer survivors. Learn practices and techniques to address Cancer specific issues such as scar tissue, bone loss, lymphedema, weight gain, fatigue, sleeplessness and stress.',
+            'We offer a supportive and compassionate support group to understand and discuss Cancer confidently and intelligently.',
+          ],
+        },
+      },
+      // {
+      //   type: 'paragraph',
+      //   content: {
+      //     title: 'From',
+      //     text: ['__________ to __________'],
+      //   },
+      // },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Days',
+          text: ['Fridays & Saturdays: 3:00 pm - 5:00 pm (IST)'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Fees',
+          text: ['Rs. 20,000'],
+        },
+      },
+      // {
+      //   type: 'paragraph',
+      //   content: {
+      //     title: 'Eligibility',
+      //     text: [
+      //       'Completion of 500 hrs or 900 hrs TTC programme is mandatory.',
+      //     ],
+      //   },
+      // },
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: [
+            'Write to us at info@theyogainstitute.org or call us at +91-22-26122185 or +91-22-26110506',
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Rules',
+          text: ['Recordings are strictly prohibited.'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Note',
+          text: [
+            ' All study materials are available in physical form only.',
+            'Physical copies maybe collected from the Institute.',
+            'For delivery, the courier charges will have to be borne by the participant.',
+          ],
+        },
+      },
+    ],
+  },
+  4: {
+    id: '',
+    title: 'Certificate Program on Yoga for Lung Cancer - Online',
+    key: 'certification-program-on-yoga-for-lung-cancer-online',
+    batch: 1,
+    // templateId: 'GENERAL_AUTO_EMAIL',
+    templateId: {
+      templateOnline: 'GENERAL_AUTO_EMAIL',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: '',
+      },
+    },
+    image: `${baseDomain}${courseAssets.courseAsset113}`,
+    cardImage: `${baseDomain}${courseAssets.courseAsset114}`,
+    mostPopular: false,
+    metaDescription:
+      'The programme includes specific asanas, pranayamas, mudras, meditation and dietary practices that will aid you in your cancer care and management',
+    rating: 5,
+    colorCode: '#B77E7E',
+    timing: 'Tuesdays to Friday: 5:00 p.m. - 7:00 p.m. (IST)',
+    fees: {
+      onlineFee: 8000,
+      offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
+    },
+    category: 'certificate-course',
+    dates: [],
+    online: true,
+    onCampus: false,
+    nonResidential: false,
+    residential: false,
+    certficate: false,
+    details: [
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: [
+            'Help boost your body’s efforts in its fight against Lung Cancer with the Yoga for Lung Cancer Programme. The programme includes specific asanas, pranayamas, mudras, meditation and dietary practices that will aid you in your cancer care and management. The theory part of the course will help you understand the anatomy and physiology of the lungs, causes of lung cancer, its symptoms and type, stages of lung cancer, treatments and side effects of treatments. The Yoga based practical part of the programme will be a holistic approach to Cancer management and care using asanas, pranayamas and dietary modifications.',
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Duration',
+          text: [],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Time',
+          text: ['Tuesdays to Friday: 5:00 p.m. - 7:00 p.m. (IST)'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Fees',
+          text: ['8000/-'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Eligibility:',
+          text: [
+            'Completion of the Basic Programme on Yoga for Cancer Rehabilitation and Recovery.',
+          ],
+        },
+      },
+    ],
+  },
+  5: {
+    id: '',
+    title: 'Certificate Yoga Therapy Course - Online & On Campus',
+    key: 'certificate-yoga-therapy-course-online',
+    batch: 1,
+    // templateId: 'GENERAL_AUTO_EMAIL',
+    templateId: {
+      templateOnline: 'GENERAL_AUTO_EMAIL',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: '',
+      },
+    },
+    image: `${baseDomain}${courseAssets.courseAsset75}`,
+    cardImage: `${baseDomain}${courseAssets.courseAsset75}`,
+    mostPopular: false,
+    metaDescription:
+      'Become a certified Yoga therapist through The Yoga Institute.',
+    rating: 5,
+    colorCode: '#D3A29D',
+    timing: 'Monday, Wednesday & Friday: 5:30 pm - 7:30 pm (IST)',
+    fees: {
+      onlineFee: 35000,
+      offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
+    },
+    category: 'certificate-course',
+    dates: ['2nd Jan to 26th Apr 2023'],
+    online: true,
+    onCampus: true,
+    nonResidential: false,
+    residential: false,
+    certficate: true,
+    details: [
+      {
+        type: 'paragraph',
+        content: {
+          title: 'YOGA THERAPY COURSE',
+          text: [
+            'Become a certified Yoga therapist through The Yoga Institute.',
+            'Complete one-stop destination to enhance your skills in Yogic Management of diseases through our YOGA THERAPY COURSE.',
+            'This is a detailed and comprehensive100 hours Yoga Therapy course wherein the lifestyle and yogic management of diseases is taught in a practical and simple manner for easy understanding and teaching. This course will qualify you to become an extremely capable and confident Yoga Therapist to handle any case.',
+          ],
+        },
+      },
+      {
+        type: 'u-list',
+        content: {
+          title: 'What the course details?',
+          points: [
+            {
+              listItem: 'Understanding of 80+ diseases:',
+              subItems: [],
+            },
+            {
+              listItem:
+                'Practical application through Yogic management of each disease on the basis of',
+              subItems: [
+                'Diet,',
+                'Specific day to day care in that condition,',
+                'Relevant Asanas, Pranayamas and Kriyas',
+                'Modification and demonstration of Techniques as per the Age and Body limitations in regards specific disease.',
+                'Developing proper mental attitude to tackle the health conditions',
+                'Lectures by Expert Guest Speakers from the field of Ayurveda and Specialist Doctors from various fields- for better understanding of the disease to help you design a Yoga Program for your clients.',
+              ],
+            },
+            {
+              type: 'paragraph',
+              content: {
+                title: 'Note:',
+                text: [
+                  'This will assist students to understand the client’s Physical and Mental state in order to create a disease specific Professional Yogic Management Program.',
+                ],
+              },
+            },
+            {
+              listItem:
+                'Lectures on Anatomy/ Physiology and Pathology of each health condition along with causes and symptoms will be given by Dr Taruna Kardak and other visiting Medical Practitioners specialising in their particular fields.',
+              subItems: [],
+            },
+            {
+              listItem:
+                'Lecture on basic Ayurveda to understand the body and the role of doshas in specific health conditions.',
+              subItems: [],
+            },
+            {
+              listItem:
+                'Students will be encouraged to apply the therapy learnt on their family and friends and prepare Case Studies of Combination Diseases to learn the practical application of the same while going through the course.',
+              subItems: [],
+            },
+            {
+              listItem: 'General & specialized topics covered in detail',
+              subItems: [],
+            },
+            {
+              listItem: 'Course material will be provided',
+              subItems: [],
+            },
+            {
+              listItem:
+                'Special topics covered: Male/Female infertility, Couples counselling, Cancer, Substance abuse',
+              subItems: [],
+            },
+            {
+              listItem:
+                'Exam will be conducted at the conclusion of the Yoga Therapy Course.',
+              subItems: [],
+            },
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Recording Policy of TYI',
+          text: [
+            'The Institute retains all rights to record the live interactive sessions for their internal usage & quality purposes. These recordings are strictly for the institute and the data is stored securely in a manner that reasonably protects it from misuse and loss and from unauthorized access, modification or disclosure. Students are prohibited from recording these live sessions. We will not share any recordings with the students.',
+          ],
+        },
+      },
+      {
+        type: 'u-list',
+        content: {
+          title: 'SYSTEMS COVERED:',
+          points: [
+            {
+              listItem: ' General disorders',
+              subItems: ['Anaemia', ' Insomnia', ' Vertigo'],
+            },
+            {
+              listItem: 'Gastro intestinal (GI) tract problems',
+              subItems: [
+                'Constipation',
+                'Irritable bowel syndrome (IBS)',
+                'Flatulence and bloating',
+                'Haemorrhoids (piles) and anal fissures',
+                'Acidity and GERD',
+                'Migraine',
+                'Fatty Liver',
+                'Crohn’s disease',
+              ],
+            },
+            {
+              listItem: 'Respiratory problems',
+              subItems: [
+                'Common cold',
+                'Respiratory allergies',
+                'Tonsillitis',
+                'Laryngitis',
+                'Sinustis',
+                'Sleep apnoea',
+                'Bronchitis',
+                'Emphysema',
+                'Chronic obstructive pulmonary disease (COPD)',
+                'Asthma',
+                'Tuberculosis (TB)',
+              ],
+            },
+            {
+              listItem: 'Circulatory system disorders',
+              subItems: [
+                'Low blood pressure',
+                'High blood pressure',
+                'Ischemic heart disease',
+                'Varicose veins',
+                'Stroke',
+                'Facial paralysis',
+              ],
+            },
+            {
+              listItem: 'Diabetes',
+              subItems: [],
+            },
+            {
+              listItem: 'Thyroid',
+              subItems: [
+                'Hypothyroidism',
+                'Hyperthyroidism',
+              ],
+            },
+            {
+              listItem: 'Parathyroid Gland',
+              subItems: [
+                'Hyperparathyroidism',
+                'Hypoparathyroidism',
+              ],
+            },
+            {
+              listItem: 'Weight Management',
+              subItems: [
+                'Obesity',
+              ],
+            },
+            {
+              listItem: 'Eating Disorders',
+              subItems: [
+                'Anorexia Nervosa',
+                'Binge Eating Disorder',
+                'Bulimia Nervosa',
+              ],
+            },
+            {
+              listItem: 'Urinary Tract Infection',
+              subItems: [],
+            },
+            {
+              listItem: 'Female Reproductive System',
+              subItems: [
+                'Dysmenorrhea',
+                'PMT (Premenstrual Tension) Or PMS (Premenstrual Syndrome)',
+                'PCOS',
+                'Fibroids',
+                'Menopause',
+              ],
+            },
+            {
+              listItem: 'Pregnancy',
+              subItems: [],
+            },
+            {
+              listItem: 'Infertility',
+              subItems: [
+                'Male Infertility',
+                'Female Infertility',
+                'Counselling For Couples',
+              ],
+            },
+            {
+              listItem: 'Orthopaedic problems',
+              subItems: [
+                'General management',
+                'Sprain/Strain',
+                'Fibromyalgia',
+                'Hernia',
+                'Cervical Spondylitis',
+                'Low Back Pain',
+                'Lumbar Disc Prolapse (slipped Disc)',
+                'Lumbar Canal Stenosis',
+                'Lumbar Spondylosis (Osteoarthritis of Spine)',
+                'Sciatica',
+                'Piriformis Syndrome',
+                'Osteoporosis',
+                'Osteoarthritis',
+                'Gout',
+                'Tennis Elbow/Lateral Epicondylitis',
+                'Frozen Shoulder',
+              ],
+            },
+            {
+              listItem: 'Autoimmune disorder affecting the joints:',
+              subItems: ['Rheumatoid arthritis', 'Ankylosing spondylitis','Lupus'],
+            },
+            {
+              listItem: 'Skin disorders',
+              subItems: [
+                'Acne',
+                'Lichen planus',
+                'Eczema',
+                'PsoriasisVitiligo',
+                'Peeling skin syndrome',
+                '',
+              ],
+            },
+            {
+              listItem: 'Psychological and psychiatric disorders',
+              subItems: [
+                'Stress Management',
+                'Depression',
+                'Anxiety Disorders',
+                'Phobias and Panic Disorders',
+                'Post-Traumatic Stress Disorder',
+                'Prolonged Grief Disorder',
+                'Substance Abuse/Addiction',
+              ],
+            },
+            {
+              listItem: 'Nervous system disorders',
+              subItems: [
+                'Obsessive Compulsive Disorder',
+                'Bipolar disorder',
+                'Schizophrenia',
+                'Dementia',
+                'Alzheimer’s disease',
+                'Epilepsy',
+                'Parkinson’s disease',
+              ],
+            },
+            {
+              listItem: 'Cancer',
+              subItems: ['Oral cancer', 'Cervical cancer','Ovarian Cancer', 'Breast cancer'],
+            },
+            {
+              listItem: 'Prostate enlargement',
+              subItems: [],
+            },
+          ],
+        },
+      },
+      // {
+      //   type: 'paragraph',
+      //   content: {
+      //     title: '',
+      //     text: [' access the detailed syllabus here:'],
+      //   },
+      // },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Conducted by:',
+          text: ['Dr Taruna Kardak, Homoeopath and Senior Yoga Teacher'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Eligibility:',
+          text: [
+            'Students who have completed 500/900 hrs TTC from The Yoga Institute.',
+            'Medical Doctors who have completed any TTC (200/500/900 hrs) from The Yoga Institute.',
+            'Students who have completed YCB Level 2 or 3.',
+            'Students who have completed minimum 500 hrs TTC from any institution, can apply to info@theyogainstitute.org with their certificates & course curriculum for Review.'
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Duration:',
+          text: [' 4 months '],
+        },
+      },
+      // {
+      //   type: 'paragraph',
+      //   content: {
+      //     title: 'Date:',
+      //     text: [' 24th August - 16th December 2022'],
+      //   },
+      // },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Timings:',
+          text: ['Monday, Wednesday, Friday – 5:30 pm to 7:30 pm (IST)'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Fees:',
+          text: [' Rs. 35,000/-'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Note:',
+          text: ['Kindly note the fees once paid will not be refundable'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'NOTE:',
+          text: [
+            ' All study material available for the students for any course in physical (hard copy) only. The same can be collected by the student directly from the Institute or can be delivered to them by courier, charges of which will have to be borne by the student.',
+          ],
+        },
+      },
+    ],
+  },
+}
+
 export const c200hr = Object.values(ttc200hr)
 export const c500hr = Object.values(ttc500hr)
 export const c900hr = Object.values(ttc900hr)
 export const campsArr = Object.values(camps)
 export const classesArr = Object.values(classes)
+export const extraArr = Object.values(extra)
+export const certificateArr = Object.values(certificate)
 export const AllCourses = [
+  ...certificateArr,
+  ...extraArr,
   ...c200hr,
   ...c500hr,
   ...c900hr,
