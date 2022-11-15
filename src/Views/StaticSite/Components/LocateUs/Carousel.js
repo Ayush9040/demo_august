@@ -100,8 +100,8 @@ const Carousel = () => {
           <div className="apply-packages">
             <h5>Fees and packages -</h5>
             <p>
-              6 Days - Rs. 2,500/- (1 month), Rs. 6,700 (3 months), Rs. 13,000/-
-              (6 months), Rs. 25,000/- (1 year)
+              6 Days - ₹ 2,500/- (1 month), ₹ 6,700 (3 months), ₹ 13,000/-
+              (6 months), ₹ 25,000/- (1 year)
             </p>
           </div>
           <div className="apply-timing">
@@ -113,8 +113,8 @@ const Carousel = () => {
           <div className="apply-fees">
             <h5>Fees and packages -</h5>
             <p>
-              Rs. 1,500/- (1 month), Rs. 4,000 (3 months), Rs. 7,600/- (6
-              months), Rs. 15,000/- (1 year)
+            ₹ 1,500/- (1 month), ₹ 4,000 (3 months), ₹ 7,600/- (6
+              months), ₹ 15,000/- (1 year)
             </p>
           </div>
           <div className="apply-address">
@@ -125,7 +125,7 @@ const Carousel = () => {
               Telang Road, Matunga
             </h5>
             <h5>(CR),Mumbai</h5>
-            <h5>Contact us - 9343517490</h5>
+            <h5>Contact us - <a href='tel: + 91 9343517490'>+ 91 9343517490</a></h5>
           </div>
         </div>
         <div className="apply-details-left">
