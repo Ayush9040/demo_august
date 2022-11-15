@@ -369,10 +369,10 @@ const staticSiteRoutes = [
   },
   {
     Component: TermsCondition,
-    path: '/terms-and-condition',
+    path: '/terms-and-conditions',
     exact: true,
     id: 'statisSiteUnderTermsCondition',
-    routePath: '/terms-and-condition',
+    routePath: '/terms-and-conditions',
     name: 'TermsCondition',
   },
   {
