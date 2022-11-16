@@ -182,6 +182,9 @@
 
 @media(max-width:786px){
   .landing-page{
+    &>nav{
+      justify-content: center
+    }
    &>main{
     .form-section{
       padding: 2rem;
