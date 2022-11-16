@@ -348,7 +348,7 @@ const LandingPage = () => {
           </Link>
         </section>
       </main>
-      { modal && <CampaignThankYou name={name} /> }
+      { !modal && <CampaignThankYou name={name} /> }
     </div>
   )
 }

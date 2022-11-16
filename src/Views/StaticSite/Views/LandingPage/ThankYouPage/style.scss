@@ -33,3 +33,12 @@
     }
   }
 }
+
+@media(max-width:768px){
+.thank_you_div{
+  .thank_you_text_div{
+    width: 90vw;
+    text-align: center;
+  }
+}
+}
