@@ -1,0 +1,29 @@
+.thank_you_div{
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  .thank_you_text_div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid #000;
+    height: 400px;
+    border-radius: 5rem;
+    width: 80vw;
+    h1{
+      font-weight: 700;
+      color: #ea4335;
+    }
+    .thank_you_text{
+      font-size: 2rem;
+      font-weight: 700;
+      padding: 1rem;
+      color: #737272;
+      a{
+        color: blue;
+      }
+    }
+  }
+}

@@ -19,6 +19,7 @@ import metaDataObj from '../../../../Constants/metaData.json'
 import SearchModal from '../SearchModal'
 import './style.scss'
 import LandingPage from '../LandingPage'
+import CourseThankYou from '../LandingPage/ThankYouPage'
 
 const Home = () => {
 
@@ -39,6 +40,7 @@ const Home = () => {
     <Helmet
       title={metaDataObj[route.pathname || '']?.title || ''}
     /> }
+      <CourseThankYou/>
       <LandingPage/>
       <HeroSection setIsModalOpen={ setIsModalOpen }  isUserLoggedIn={isLoggedIn} />
       <Legacy />
