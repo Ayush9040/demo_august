@@ -98,6 +98,7 @@ const DescisionComp = lazy(() => import('../Views/DecisionComponent'))
 const LocateUs = lazy(()=> import ('../Components/LocateUs'))
 const LocateDetails = lazy(()=> import ('../Components/LocateUs/LocationDetails'))
 const NutriDiet = lazy(()=>import('../Views/NutriDiet'))
+const LandingPage = lazy( ()=>import('../Views/LandingPage'))
 const staticSiteRoutes = [
   //Home
   {
@@ -655,6 +656,13 @@ const staticSiteRoutes = [
     id:'staticNutriDiet',
     routePath:'/nutri-diet',
     name:'NutriDiet'
+  },
+  {
+    Component:LandingPage,
+    path:'/ad-campaign',
+    id:'staticLandingPage',
+    routePath:'/ad-campaign',
+    name:'LandingPage'
   },
   {
     Component: DescisionComp,
