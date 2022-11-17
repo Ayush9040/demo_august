@@ -1,9 +1,7 @@
 import React from 'react'
-import { useNavigate } from 'react-router-dom'
 import './style.scss'
 
 const CampaignThankYou = ({ name = 'user', setModal, setFormData }) => {
-  const navigate = useNavigate()
   return (
     <div className="thank_you_div">
       <div className="thank_you_text_div">
