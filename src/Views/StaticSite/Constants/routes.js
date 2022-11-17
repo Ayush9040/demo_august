@@ -67,6 +67,7 @@ const Facts = lazy(() => import('../Views/Facts/Views/our-facts'))
 // import Facts from '../Views/Facts'
 // import Gift from '../Views/Gifting'
 import Authentication from '../Views/Authentication'
+import CampaignThankYou from '../Views/LandingPage/ThankYouPage'
 import SearchModal from '../Views/SearchModal'
 // import VolunteerPage from '../Views/Volunteer'
 // import VolunteerPage from '../Views/Volunteer'
@@ -663,6 +664,13 @@ const staticSiteRoutes = [
     id:'staticLandingPage',
     routePath:'/ad-campaign',
     name:'LandingPage'
+  },
+  {
+    Component:CampaignThankYou,
+    path:'/campaign-thank-you',
+    id:'staticLandingPageThankYou',
+    routePath:'/campaign-thank-you',
+    name:'LandingPageThankYou'
   },
   {
     Component: DescisionComp,
