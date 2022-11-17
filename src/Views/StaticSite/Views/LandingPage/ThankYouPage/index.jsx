@@ -1,10 +1,13 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 import './style.scss'
 
 const CampaignThankYou = ({ name='user' }) => {
+  const navigate =  useNavigate()
   return (
     <div className="thank_you_div">
       <div className="thank_you_text_div">
+        <div onClick={()=> navigate('/ad-campaign')} className='close_btn'>&times;</div>
         <h1>
           Thank You { name } for signing up for the course.
         </h1>

@@ -58,7 +58,7 @@ const LandingPage = () => {
       await successMail({
         type: 'INFO_TYI',
         HTMLTemplate: 'SOCIAL_MEDIA_ADD_CAMPAIGN_CONFIRMATION_MAIL',
-        subject: 'Thank you from yoga The Yoga Institute',
+        subject: 'Thank you from The Yoga Institute',
         data: {
           name: name,
         },
@@ -348,7 +348,7 @@ const LandingPage = () => {
           </Link>
         </section>
       </main>
-      { !modal && <CampaignThankYou name={name} /> }
+      { modal && <CampaignThankYou name={name} /> }
     </div>
   )
 }
