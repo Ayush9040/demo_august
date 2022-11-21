@@ -11358,7 +11358,9 @@ const certificate = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'certificate-course',
-    dates: [],
+    dates: [
+      '17th Jan to 21st jan 2023'
+    ],
     online: true,
     onCampus: false,
     nonResidential: false,
