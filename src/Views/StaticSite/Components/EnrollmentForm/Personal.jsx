@@ -149,11 +149,11 @@ const Personal = ({ handleEmpty1, empty, setFormData, formData, setEmpty }) => {
                 value={values.country}
                 onChange={(value) => {
                   setValues({ country: value, state: null, city: null }, false)
+                  setFormData(prev=>{ return { ...prev, country: value.name } })
                 }}
               />
               {empty === 5 && (
                 <small>
-                  {' '}
                   Please enter your country
                 </small>
               )}
@@ -171,8 +171,8 @@ const Personal = ({ handleEmpty1, empty, setFormData, formData, setEmpty }) => {
                 options={updatedStates(values.country?.isoCode)}
                 value={values.state}
                 onChange={(value) => {
-                  console.log(value,'sss')
                   setValues({ country: values.country, state: value, city: null }, false)
+                  setFormData(prev=>{ return { ...prev, state: value.name } })
                 }}
               />
               {empty === 6 && (
@@ -196,6 +196,7 @@ const Personal = ({ handleEmpty1, empty, setFormData, formData, setEmpty }) => {
                 value={values.city}
                 onChange={(value) => {
                   setValues({ country: values.country, state: values.state, city: value }, false)
+                  setFormData(prev=>{ return { ...prev, city: value.name } })
                 }}
               />
               {empty === 7 && (

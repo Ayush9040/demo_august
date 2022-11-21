@@ -6,7 +6,7 @@ import './style.scss'
 import CommonBtn from '../../../Components/commonbtn'
 import { createNutriOrder, enrollPlan, successMail } from '../Api'
 import Select from 'react-select'
-import { Country, State, City } from 'country-state-city'
+import { Country, City } from 'country-state-city'
 import { useNavigate } from 'react-router-dom'
 
 const SubcriptionForm = ({ packageName, packagePrice, closeForm }) => {
@@ -118,12 +118,8 @@ const SubcriptionForm = ({ packageName, packagePrice, closeForm }) => {
     ...country,
   }))
 
-  // const city = City.getAllCities()
-
   const updatedCities = (countryId,stateId) => {
-    // console.log(countryId,stateId,'stateId')
     return City.getCitiesOfCountry(countryId,stateId).map((city) => {
-      // console.log(city,'city')
       return (
         {
           label: city.name,
@@ -138,12 +134,9 @@ const SubcriptionForm = ({ packageName, packagePrice, closeForm }) => {
       background: 'white',
       borderRadius: '50px',
       padding: '0.5rem 2rem',
-      // Overwrittes the different states of border
       borderColor: state.isFocused ? 'rgba(96, 96, 96, 0.5019607843)' : 'rgba(96, 96, 96, 0.5019607843)',
-      // Removes weird border around container
       boxShadow: state.isFocused ? null : null,
       '&:hover': {
-        // Overwrittes the different states of border
         borderColor: state.isFocused ? 'rgba(96, 96, 96, 0.5019607843)' : 'rgba(96, 96, 96, 0.5019607843)'
       }
     })
@@ -207,14 +200,6 @@ const SubcriptionForm = ({ packageName, packagePrice, closeForm }) => {
           {empty === 3 && <small> Please enter a valid phone number</small>}
         </div>
         <div className='form-field'>
-          {/* <InputComponent
-            type='text'
-            placeholder='Country*'
-            form={formData}
-            setField={setFormData}
-            keyName='country'
-            errorCheck={setEmpty}
-          /> */}
           <Select 
             styles={customStyles}
             id="country"
@@ -229,36 +214,13 @@ const SubcriptionForm = ({ packageName, packagePrice, closeForm }) => {
             options={updatedCountries}
             value={values.country}
             onChange={(value) => {
-              setValues({ country: value, state: null, city: null }, false)
+              setValues({ country: value, city: null }, false)
+              setFormData(prev=>{ return { ...prev, country: value.name } })
             }}
           />
-      
           {empty === 4 && <small> Please enter your country</small>}
         </div>
-
-        {/* <div className='form-field'>
-          <Select
-            id="state"
-            name="state"
-            placeholder="state"
-            className='select'
-            options={updatedStates(values.country?.isoCode)}
-            value={values.state}
-            onChange={(value) => {
-              console.log(value,'sss')
-              setValues({ country: values.country, state: value, city: null }, false)
-            }}
-          />
-        </div> */}
         <div className='form-field'>
-          {/* <InputComponent
-            type='text'
-            placeholder='City*'
-            form={formData}
-            setField={setFormData}
-            keyName='city'
-            errorCheck={setEmpty}
-          /> */}
           <Select 
             styles={customStyles}
             id="city"
@@ -273,7 +235,8 @@ const SubcriptionForm = ({ packageName, packagePrice, closeForm }) => {
             options={updatedCities(values?.country?.isoCode,values?.state?.isoCode)}
             value={values.city}
             onChange={(value) => {
-              setValues({ country: values.country, state: values.state, city: value }, false)
+              setValues({ country: values.country, city: value }, false)
+              setFormData(prev=> { return { ...prev,city: value.name }})
             }}
           />
           {empty === 5 && <small> Please enter your city</small>}
