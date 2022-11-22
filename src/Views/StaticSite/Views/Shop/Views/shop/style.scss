@@ -1,7 +1,7 @@
 .shop {
   padding-bottom: 2rem;
   .slick-dots {
-    bottom: 0px !important;
+    bottom: -5px !important;
   }
   .shop-page {
     width: 90%;
@@ -119,11 +119,13 @@
     
   }
   .banner-section{
-
     .slick-slider .slick-list{
-      border-radius: 20px;
+      border-radius: 36px !important;
     }
-    
+    .slick-slider img{
+      width: 100%;
+      border-radius: 36px!important;
+    }
   }
   .banner {
     width: 90%!important;
