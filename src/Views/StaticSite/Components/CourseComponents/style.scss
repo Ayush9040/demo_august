@@ -24,6 +24,7 @@
   p {
     font-size: 1.7rem;
     margin-bottom: 0.75rem;
+    margin-top: 0.75rem;
   }
 }
 
@@ -61,12 +62,9 @@
 .course_list {
   margin-top: 2rem;
   margin-bottom: 2rem;
-
-
   ul{
     padding-left: 20px;
   }
-
   li {
     font-size: 1.75rem;
     margin: 1rem 0rem;
@@ -74,6 +72,11 @@
       padding-left: 50px;
     }
   }
+}
+
+.course_olist ol{
+  padding-left: 3rem;
+  font-size: 1.75rem;
 }
 
 .sub_heading
