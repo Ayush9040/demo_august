@@ -233,6 +233,7 @@ const ShippingAdd = () => {
   useEffect(() => {
     fetchAddress()
     const cartItems = localStorage.getItem('cart')
+    postCart(JSON.parse(cartItems))
     displayCart(JSON.parse(cartItems))
     dispatch(updateCartData(JSON.parse(cartItems)))
   }, [user?.data])

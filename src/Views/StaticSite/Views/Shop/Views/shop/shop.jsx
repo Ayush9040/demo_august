@@ -19,6 +19,7 @@ import { useDispatch } from 'react-redux'
 import { Link, useNavigate,useSearchParams } from 'react-router-dom'
 import baseDomain from '../../../../assets/images/imageAsset'
 import { banner } from '../../../../assets/images/imageAsset'
+import { updateLocalCart } from '../../helpers/helper'
 
 const Shop = () => {
   const dispatch = useDispatch()
@@ -91,26 +92,25 @@ const Shop = () => {
   },[ categories ])
 
 
-  const addLocal = (productID) => {
-    if (!localStorage.getItem('cart')) return [{ productId:productID,quantity:1 }]
-    const prevCart = JSON.parse(localStorage.getItem('cart'))
-    if(prevCart.some(item=>item.productId===productID)){
-      prevCart.forEach(element => {
-        if(element.productId===productID){
-          element.quantity = element.quantity + 1
-        }
-      })
-      return prevCart
-    }else{
-      return [...prevCart,{ productId:productID, quantity:1 }]
-    }
-  }
+  // const addLocal = (productID) => {
+  //   if (!localStorage.getItem('cart')) return [{ productId:productID,quantity:1 }]
+  //   const prevCart = JSON.parse(localStorage.getItem('cart'))
+  //   if(prevCart.some(item=>item.productId===productID)){
+  //     prevCart.forEach(element => {
+  //       if(element.productId===productID){
+  //         element.quantity = element.quantity + 1
+  //       }
+  //     })
+  //     return prevCart
+  //   }else{
+  //     return [...prevCart,{ productId:productID, quantity:1 }]
+  //   }
+  // }
 
   const addCart = (idx, e) => {
     e.stopPropagation()
-    const addProduct =  products.find((item) => item._id === idx)
-    localStorage.setItem('cart', JSON.stringify(addLocal(addProduct._id)))
-    dispatch(updateCartData( JSON.parse(localStorage.getItem('cart'))))
+    localStorage.setItem('cart',JSON.stringify(updateLocalCart(idx)))
+    dispatch(updateCartData(JSON.parse(localStorage.getItem('cart'))))
     toast.success('Item Added to Cart Successfully!', {
       position: 'top-right',
       autoClose: 3000,
@@ -125,21 +125,8 @@ const Shop = () => {
   }
   const buyProduct = (idx,e) => {
     e.stopPropagation()
-    if (!localStorage.getItem('cart')) localStorage.setItem('cart',JSON.stringify([{ productId:idx,quantity:1 }]))
-    const prevCart = JSON.parse(localStorage.getItem('cart'))
-    if(prevCart.some(item=>item.productId===idx)){
-      prevCart.forEach(element => {
-        if(element.productId===idx){
-          element.quantity = element.quantity+1
-        }
-      })
-
-      localStorage.setItem('cart',JSON.stringify(prevCart))
-      dispatch(updateCartData(prevCart))
-    }else{
-      localStorage.setItem('cart',JSON.stringify([...prevCart,{ productId:idx, quantity:1 }]))
-      dispatch(updateCartData([...prevCart,{ productId:idx, quantity:1 }]))
-    }
+    localStorage.setItem('cart',JSON.stringify(updateLocalCart(idx)))
+    dispatch(updateCartData(JSON.parse(localStorage.getItem('cart'))))
     navigate('/shop/cart')
   }
 

@@ -9,6 +9,7 @@ import { useNavigate } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import { updateCartData } from '../../Shop.action'
 import { ToastContainer, toast } from 'react-toastify'
+import { updateLocalCart } from '../../helpers/helper'
 
 const SingleProduct = () => {
   const { productID } = useParams()
@@ -40,24 +41,10 @@ const SingleProduct = () => {
     dispatch(updateCartData(JSON.parse(localStorage.getItem('cart'))))
   }, [])
 
-  const addLocal = (productID) => {
-    if (!localStorage.getItem('cart')) return [{ productId:productID,quantity:1 }]
-    const prevCart = JSON.parse(localStorage.getItem('cart'))
-    if(prevCart.some(item=>item.productId===productID)){
-      prevCart.forEach(element => {
-        if(element.productId===productID){
-          element.quantity = element.quantity + 1
-        }
-      })
-      return prevCart
-    }else{
-      return [...prevCart,{ productId:productID, quantity:1 }]
-    }
-  }
+
 
   const addCart = (idx) => {
-    console.log(addLocal(idx))
-    localStorage.setItem('cart', JSON.stringify(addLocal(idx)))
+    localStorage.setItem('cart', JSON.stringify(updateLocalCart(idx)))
     dispatch(updateCartData( JSON.parse(localStorage.getItem('cart'))))
     toast.success('Item Added to Cart Successfully!', {
       position: 'top-right',
@@ -73,21 +60,8 @@ const SingleProduct = () => {
   }
 
   const buyProduct=()=>{
-    if (!localStorage.getItem('cart')) localStorage.setItem('cart',JSON.stringify([{ productId:productDetail._id,quantity:1 }]))
-    const prevCart = JSON.parse(localStorage.getItem('cart'))
-    if(prevCart.some(item=>item.productId===productDetail._id)){
-      prevCart.forEach(element => {
-        if(element.productId===productDetail._id){
-          element.quantity = element.quantity+1
-        }
-      })
-      
-      localStorage.setItem('cart',JSON.stringify(prevCart))
-      dispatch(updateCartData(prevCart))
-    }else{
-      localStorage.setItem('cart',JSON.stringify([...prevCart,{ productId:productDetail._id, quantity:1 }]))
-      dispatch(updateCartData([...prevCart,{ productId:productDetail._id, quantity:1 }]))
-    }
+    localStorage.setItem('cart', JSON.stringify(updateLocalCart(productDetail?._id)))
+    dispatch(updateCartData( JSON.parse(localStorage.getItem('cart'))))
     navigate('/shop/cart')
   }
 
