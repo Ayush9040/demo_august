@@ -27,6 +27,7 @@ const AddToCart = () => {
   const dispatch = useDispatch()
 
   let { isLoggedIn } = useSelector(item=>item.auth)
+  let { location } = useSelector(item=>item.location)
 
   const displayCart =async( products=[] )=>{
     setIsLoading(true)
@@ -89,8 +90,12 @@ const AddToCart = () => {
   const getTotal = ()=>{
     if(addCart.length===0) return
     let sum = 0
-    addCart.forEach(item=>{
-      sum+= (item.price * item.quantity)  
+    addCart.forEach((item) => {
+      if(location==='IN'){
+        sum += item.price * item.quantity
+      }else{
+        sum += item.priceInternational * item.quantity
+      }
     })
     return sum
   }
@@ -147,7 +152,7 @@ const AddToCart = () => {
                 </div>
                 <div className="cart_price">
                 Price
-                  <div className="cart_amount">₹ {item?.price}</div>
+                  <div className="cart_amount">{ location==='IN' ? `₹ ${item?.price}`:`$ ${item?.priceInternational}`}</div>
                 </div>
               </div>
               <ToastContainer/>

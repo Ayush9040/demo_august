@@ -22,6 +22,10 @@ if (isAuthorized()) {
   })
 }
 
+store.dispatch({
+  type: 'locationAcions/GET_LOCATION'
+})
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(

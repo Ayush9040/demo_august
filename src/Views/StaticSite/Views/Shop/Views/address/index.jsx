@@ -56,11 +56,18 @@ const ShippingAdd = () => {
   const [addresId, setAddressId] = useState(null)
   const [discountAmt, setDiscountAmt] = useState()
   const [isCouponAdded, setIsCouponAdded] = useState()
+  const [totalAmount,setTotalAmount] = useState()
+  const [shippingAmt,setShippingAmt] = useState()
+
+
+  const { location } = useSelector(state=>state.location)
 
   const fetchAddress = async() => {
     const { data } = await getAddress(user?.data?._id)
     setPrevAdd(data.data)
   }
+
+
 
   const displayCart = async(products) => {
     setIsLoading(true)
@@ -81,7 +88,11 @@ const ShippingAdd = () => {
     if (cart.length === 0) return
     let sum = 0
     cart.forEach((item) => {
-      sum += item.price * item.quantity
+      if(location==='IN'){
+        sum += item.price * item.quantity
+      }else{
+        sum += item.priceInternational * item.quantity
+      }
     })
     return sum
   }
@@ -101,12 +112,16 @@ const ShippingAdd = () => {
         user: user?.data?.userId,
         coupon: couponId,
       })
+      displayCart(data.data.items)
       setCartId(data.data._id)
+      setTotalAmount(data.data.totalPrice)
+      setShippingAmt(data.data.shippingAmount)
       return data.data._id
     } catch (err) {
       console.log(err)
     }
   }
+
 
   const usePrevAddress = (addData) => {
     if (addresId === addData._id) return setAddressId(null)
@@ -164,12 +179,7 @@ const ShippingAdd = () => {
   }
 
   const makePayment = async() => {
-    const localCart = localStorage.getItem('cart')
-    const finalCart = JSON.parse(localCart)
-    const finalDiscount = discountAmt ? discountAmt.id : await applyCoupon()
     const orderCartId = cartId
-      ? cartId
-      : await postCart(finalCart, finalDiscount)
     const finalAddId = addresId ? addresId : await postNewAddress()
     if( !finalAddId ) return
     const { data } = await createOrder(orderCartId, {
@@ -233,7 +243,7 @@ const ShippingAdd = () => {
   useEffect(() => {
     fetchAddress()
     const cartItems = localStorage.getItem('cart')
-    displayCart(JSON.parse(cartItems))
+    postCart(JSON.parse(cartItems))
     dispatch(updateCartData(JSON.parse(cartItems)))
   }, [user?.data])
 
@@ -426,10 +436,11 @@ const ShippingAdd = () => {
                 <div className='check_out'>
                   <div>Subtotal ({cart.length} item(s))</div>
                   <br />
-                  {discountAmt && <div>Total: ₹{getTotal()}</div>}
-                  {discountAmt && <div>Discount: - ₹{calcDiscount()}</div>}
+                  { ( shippingAmt || discountAmt ) && <div>Total: { location==='IN' ? `₹ ${ getTotal() }`:`$ ${ getTotal() }` }</div>}
+                  {discountAmt && <div>Discount: - { location==='IN' ? `₹ ${ calcDiscount() }`:`$ ${ calcDiscount() }` }</div>}
+                  { shippingAmt && <div>Shipping: +{ location==='IN' ? `₹ ${ shippingAmt }`:`$ ${ shippingAmt }` } </div> }
                   <div className='check_out_price'>
-                    ₹ {getTotal() - calcDiscount()}
+                    { location==='IN' ? `₹ ${ totalAmount - calcDiscount() }`:`$ ${ totalAmount - calcDiscount() }` }
                   </div>
                   <div>Inclusive of all taxes</div>
                 </div>

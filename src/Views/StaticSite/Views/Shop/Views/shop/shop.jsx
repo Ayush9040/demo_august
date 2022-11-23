@@ -15,7 +15,7 @@ import MessageModal from '../../../../Components/MessageModal'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import { updateCartData } from '../../Shop.action'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { Link, useNavigate,useSearchParams } from 'react-router-dom'
 import baseDomain from '../../../../assets/images/imageAsset'
 import { banner } from '../../../../assets/images/imageAsset'
@@ -24,7 +24,6 @@ const Shop = () => {
   const dispatch = useDispatch()
   const navigate = useNavigate()
   const [Params] = useSearchParams()
-
   const [products, setProducts] = useState([])
   const [pagination, setPagination] = useState({ page: 1, limit: 12 })
   const [count, setCount] = useState(0)
@@ -32,7 +31,7 @@ const Shop = () => {
   const [ modal,setModal ] = useState(false)
   const [search,setSearch] =useState('')
   const [searched,isSearched] = useState(false)
-
+  const { location } = useSelector(state=>state.location)
   
 
   const fetchAllCategories = async()=>{
@@ -201,10 +200,11 @@ const Shop = () => {
                 <Fragment key={i}>
                   <ShopCard
                     title={item.name}
-                    price={item.price}
+                    price={location==='IN' ?item.price : item.priceInternational}
                     thumbnail={item.productThumbnail}
                     productId={item._id}
                     addCart={addCart}
+                    currency = { location==='IN'?'INR':'USD' }
                     buyProduct={buyProduct}
                   />
                   <ToastContainer
@@ -228,10 +228,11 @@ const Shop = () => {
                   <Fragment key={i}>
                     <ShopCard
                       title={item.name}
-                      price={item.price}
+                      price={ location==='IN' ?item.price : item.priceInternational }
                       thumbnail={item.productThumbnail}
                       productId={item._id}
                       addCart={addCart}
+                      currency = { location==='IN'?'INR':'USD' }
                       buyProduct={buyProduct}
                     />
                     <ToastContainer

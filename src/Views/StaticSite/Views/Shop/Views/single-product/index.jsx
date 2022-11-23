@@ -6,7 +6,7 @@ import CommonBtn from '../../../../Components/commonbtn'
 import { fetchSingleProduct } from '../../Shop.api'
 import { useParams } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { updateCartData } from '../../Shop.action'
 import { ToastContainer, toast } from 'react-toastify'
 
@@ -27,7 +27,7 @@ const SingleProduct = () => {
   const [thumbnail,setThumbnail] = useState()
   const [productImages,setProductImages] = useState([])
   const navigate = useNavigate()
-
+  const { location } = useSelector(state=>state.location)
   const getSingleProducts = async() => {
     const { data } = await fetchSingleProduct(productID)
     setProductDetail(data.data)
@@ -100,7 +100,7 @@ const SingleProduct = () => {
             <div className="price_prod_div">
               <div className="price_div">
                 <div className="product_details">{productDetail?.name}</div>
-                <div className="product_details">₹ {productDetail?.price}</div>
+                <div className="product_details">{ location==='IN' ? `₹${productDetail?.price}` : `$${ productDetail?.priceInternational }`}</div>
                 <div className="prod_desc">{productDetail?.description}</div>
               </div>
 
