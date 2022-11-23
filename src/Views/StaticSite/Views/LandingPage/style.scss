@@ -39,11 +39,10 @@
 
       .form_img_div {
         .form_img1 {
-          height: 1400px;
+          height: 1000px;
           background: url('https://ecom-static-site.oss-ap-south-1.aliyuncs.com/Landing_page/curve1.png')
             no-repeat center / cover;
           & > img {
-            height: 100%;
             object-fit: cover;
             width: 100%;
           }
@@ -52,10 +51,7 @@
           display: flex;
           justify-content: space-evenly;
           align-items: center;
-          height: 100%;
           & > .form_img2 {
-            display: flex;
-            justify-content: center;
             & > img {
               width: 80%;
             }
@@ -454,6 +450,9 @@
         }
       }
     }
+  }
+  .landing-page > main .form-section .form_img_div .img_form > .form_img2 > img{
+    width: 100%;
   }
 }
 
