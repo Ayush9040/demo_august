@@ -2,7 +2,8 @@ import React,{ useState } from 'react'
 import CommonBtn from '../../../../../Components/commonbtn'
 import './style.scss'
 
-const Delivered = ({ orderDetails,products,totalAmount }) => {
+const Delivered = ({ orderDetails,products,totalAmount, currency }) => {
+
 
   const date = new Date( orderDetails?.createdAt )
   const [cancel, setCancel] = useState(false)
@@ -19,7 +20,7 @@ const Delivered = ({ orderDetails,products,totalAmount }) => {
               </div>
               <div className="order_date">
                 <div>TOTAL</div>
-                <div>₹ {totalAmount }</div>
+                <div>{ currency==='INR' ? `₹ ${totalAmount }`:`$ ${totalAmount }`}</div>
               </div>
               <div className="order_date">
                 <div>SHIP TO:</div>

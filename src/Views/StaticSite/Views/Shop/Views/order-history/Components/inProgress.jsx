@@ -3,7 +3,7 @@ import CommonBtn from '../../../../../Components/commonbtn'
 import StepProgessBar from '../../../../../Components/StepProgressBar'
 import './style.scss'
 
-const InProgress = ( { orderDetails,products,totalAmount } ) => {
+const InProgress = ( { orderDetails,products,totalAmount, currency } ) => {
 
   const date = new Date( orderDetails?.createdAt )
 
@@ -35,7 +35,7 @@ const InProgress = ( { orderDetails,products,totalAmount } ) => {
             </div>
             <div className="order_date">
               <div>TOTAL</div>
-              <div>₹ {totalAmount }</div>
+              <div>{ currency==='INR' ? `₹ ${totalAmount }`:`$ ${totalAmount }`}</div>
             </div>
             <div className="order_date">
               <div>SHIP TO:</div>
