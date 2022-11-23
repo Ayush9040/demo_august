@@ -3,12 +3,15 @@ import PhoneInput from 'react-phone-number-input'
 import 'react-phone-number-input/style.css'
 import { Link } from 'react-router-dom'
 import Slider from 'react-slick'
-import CommonBtn from '../../Components/commonbtn'
-import { creatForm,successMail } from './Api'
-import { testimonialData } from './constant'
-
+import LandingButton from '../../Components/LandingCourse/LandingButton'
+import { creatForm, successMail } from './Api'
+import { testimonialData, popularCourses } from './constant'
 import './style.scss'
 import CampaignThankYou from './ThankYouPage'
+import FeatuedBlogs from '../../Components/LandingCourse'
+import { landingLogo } from '../../assets/icons/icon'
+
+import baseDomain, { landingPage } from '../../assets/images/imageAsset'
 
 const LandingPage = () => {
   let settings = {
@@ -44,7 +47,7 @@ const LandingPage = () => {
   })
 
   const [err, setErr] = useState(0)
-  const [modal,setModal] = useState(false)
+  const [modal, setModal] = useState(false)
 
   const { name, email, contact, city, country } = formData
 
@@ -52,7 +55,7 @@ const LandingPage = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value })
   }
 
-  const submitForm = async()=>{
+  const submitForm = async() => {
     try {
       await creatForm(formData)
       await successMail({
@@ -62,7 +65,7 @@ const LandingPage = () => {
         data: {
           name: name,
         },
-        receivers: [ email ],
+        receivers: [email],
       })
       setModal(true)
     } catch (error) {
@@ -87,135 +90,155 @@ const LandingPage = () => {
   }
 
   return (
-    <div className='landing-page'>
-      <nav className='landing-navigation'>
-        <div className='tyi-logo'>
-          <img
-            style={{ transition: 'none !important' }}
-            placeholder='none'
-            alt='The Yoga Institute'
-            src='http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Home/tyi.png'
-          />
-        </div>
-        <div className='call-cta'>
+    <div className="landing-page">
+      <nav className="landing-navigation">
+        <Link to='/'>
+          <div className="tyi-logo">
+            {landingLogo}
+          </div>
+        </Link>
+       
+        <div className="call-cta">
           <h2>
-            Call On:<a href='tel:+919136668224'>+91-9136668224</a>
+            Call On:<a href="tel:+919136668224">+91-9136668224</a>
           </h2>
-          <p>And get all your queries resolved!</p>
+          <p>Get all your queries resolved!</p>
         </div>
       </nav>
       <main>
-        <section className='form-section'>
-          <div className='landing-text'>
-            <h1>
-              Become an Internationally Certified Yoga Teacher From the World’s
-              Oldest Organised Yoga Center!
-            </h1>
-          </div>
-          <div className='form-cta'>
-            <form>
-              <h2>Sign-Up for the course!</h2>
-              <label htmlFor='name'>
-                <input
-                  type={'text'}
-                  name='name'
-                  id='name'
-                  placeholder='Enter Name'
-                  value={name}
-                  onChange={handleInput}
-                />
-                {err === 1 && (
-                  <small style={{ color: 'red', marginLeft: '0' }}>
-                    *Please Enter Name!
-                  </small>
-                )}
-              </label>
-              <label htmlFor='contact'>
-                <PhoneInput
-                  placeholder='Enter phone number*'
-                  defaultCountry='IN'
-                  id='contact'
-                  value={contact}
-                  onChange={(e) => {
-                    setFormData({ ...formData, contact: e })
-                  }}
-                />
-                {err === 3 && <small> Please enter a valid phone number</small>}
-              </label>
-              <label htmlFor='email'>
-                <input
-                  type={'email'}
-                  name='email'
-                  id='email'
-                  placeholder='Enter email'
-                  value={email}
-                  onChange={handleInput}
-                />
-                {err === 2 && (
-                  <small style={{ color: 'red', marginLeft: '0' }}>
-                    *Please Enter Valid Email!
-                  </small>
-                )}
-              </label>
-              <label htmlFor='country'>
-                <input
-                  type={'text'}
-                  name='country'
-                  id='country'
-                  placeholder='Enter country'
-                  value={country}
-                  onChange={handleInput}
-                />
-                {err === 4 && <small> Please enter your country</small>}
-              </label>
-              <label htmlFor='city'>
-                <input
-                  type={'text'}
-                  name='city'
-                  id='city'
-                  placeholder='Enter city'
-                  value={city}
-                  onChange={handleInput}
-                />
-                {err === 5 && <small> Please enter your city</small>}
-              </label>
-              <CommonBtn buttonAction={handleSubmit} text={'Sign Up'} />
-            </form>
+        <section className="form-section">
+          <div className="form_img_div">
+            <div className="form_img1">
+              <div className="img_form">
+                <div className="form_img2">
+                  <img src={`${baseDomain}${landingPage.text}`} alt="" />
+                </div>
+                <div className="form-cta">
+                  <form>
+                    <h2>Sign-Up for the course!</h2>
+                    <label htmlFor="name">
+                      <input
+                        type={'text'}
+                        name="name"
+                        id="name"
+                        placeholder="Enter Name"
+                        value={name}
+                        onChange={handleInput}
+                      />
+                      {err === 1 && (
+                        <small style={{ color: 'red', marginLeft: '0' }}>
+                          *Please Enter Name!
+                        </small>
+                      )}
+                    </label>
+                    <label htmlFor="contact">
+                      <PhoneInput
+                        placeholder="Enter phone number*"
+                        defaultCountry="IN"
+                        id="contact"
+                        value={contact}
+                        onChange={(e) => {
+                          setFormData({ ...formData, contact: e })
+                        }}
+                      />
+                      {err === 3 && (
+                        <small> Please enter a valid phone number</small>
+                      )}
+                    </label>
+                    <label htmlFor="email">
+                      <input
+                        type={'email'}
+                        name="email"
+                        id="email"
+                        placeholder="Enter email"
+                        value={email}
+                        onChange={handleInput}
+                      />
+                      {err === 2 && (
+                        <small style={{ color: 'red', marginLeft: '0' }}>
+                          *Please Enter Valid Email!
+                        </small>
+                      )}
+                    </label>
+                    <label htmlFor="country">
+                      <input
+                        type={'text'}
+                        name="country"
+                        id="country"
+                        placeholder="Enter country"
+                        value={country}
+                        onChange={handleInput}
+                      />
+                      {err === 4 && <small> Please enter your country</small>}
+                    </label>
+                    <label htmlFor="city">
+                      <input
+                        type={'text'}
+                        name="city"
+                        id="city"
+                        placeholder="Enter city"
+                        value={city}
+                        onChange={handleInput}
+                      />
+                      {err === 5 && <small> Please enter your city</small>}
+                    </label>
+                    <LandingButton
+                      text={'Sign Up'}
+                      textColor={'#fff'}
+                      isColor={'#F78A86'}
+                      btnBorder={'#F78A86'}
+                      btnAction={handleSubmit}
+                    />
+                  </form>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
-        <section className='details-section'>
-          <p>Course Learnings</p>
-          <ul>
-            <li>
-              <p>Experiential Sessions of Yoga Asanas</p>
-            </li>
-            <li>
-              <p>
-                Learn, experience and transform yourself with Yogic techniques –
-                Pranayamas, Kriyas, Meditation, Sattvic food{' '}
-              </p>
-            </li>
-            <li>
-              <p>
-                Patanjali Yoga Sutras and Hatha Yoga Texts with special
-                reference to Hatha Yoga Pradipika
-              </p>
-            </li>
-            <li>
-              <p>Anatomy & Physiology</p>
-            </li>
-            <li>
-              <p>Yoga for Wellness and Stress Management</p>
-            </li>
-          </ul>
-          <p>Course Benefits</p>
-          <h4>
-            With 200-Hrs TTC, you will get an in-depth understanding of the
-            Yogic practices and learn the tools to master physical, mental and
-            spiritual well-being
-          </h4>
-          <div className='benefits-grid'>
-            <div className='benefit'>
+        <section className="details-section">
+          <div className="learning_benefits">
+            <div>
+              <div className="learning_heading">Course Learnings</div>
+              <ul>
+                <li>
+                  <p>Experiential Sessions of Yoga Asanas</p>
+                </li>
+                <li>
+                  <p>
+                    Learn, experience and transform yourself with Yogic
+                    techniques – Pranayamas, Kriyas, Meditation, Sattvic food{' '}
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Patanjali Yoga Sutras and Hatha Yoga Texts with special
+                    reference to Hatha Yoga Pradipika
+                  </p>
+                </li>
+                <li>
+                  <p>Anatomy & Physiology</p>
+                </li>
+                <li>
+                  <p>Yoga for Wellness and Stress Management</p>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <div className="learning_heading">Course Benefits</div>
+              <ul>
+                <li>
+                  <p>
+                    With 200-Hrs TTC, you will get an in-depth understanding of
+                    the Yogic practices and learn the tools to master physical,
+                    mental and spiritual well-being
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="benefits-grid">
+            <div className="benefit">
               <h3>PHYSICAL</h3>
               <p>Strength</p>
               <p>Stamina</p>
@@ -223,7 +246,7 @@ const LandingPage = () => {
               <p>Endurance</p>
               <p>Balance</p>
             </div>
-            <div className='benefit'>
+            <div className="benefit">
               <h3>MENTAL</h3>
               <p>Mindfulness</p>
               <p>Calmness</p>
@@ -231,14 +254,14 @@ const LandingPage = () => {
               <p>Increased Focus</p>
               <p>Better Clarity</p>
             </div>
-            <div className='benefit'>
+            <div className="benefit">
               <h3>SPIRITUAL</h3>
               <p>Increased Happiness</p>
               <p>Optimism</p>
               <p>Inner peace</p>
             </div>
           </div>
-          <p>Course USPs</p>
+          <div className="learning_heading">Course USPs</div>
           <ul>
             <li>
               <p>
@@ -267,88 +290,90 @@ const LandingPage = () => {
               </p>
             </li>
           </ul>
-          <p>Special Interaction with Dr. Hansaji Yogendra</p>
-          <h4>
-            Imbibe wisdom and get solutions to your problems by the legendary
-            Yoga Guru Dr. Hansaji Yogendra.
-          </h4>
-          <p>Duration</p>
-          <h4>
-            200 Hrs TTC Batch 1 - 1 Month TTC Online &amp; On Campus - English
-          </h4>
-          <p>Timings</p>
-          <h4>Monday to Saturday: 10:00 am - 6:00 pm (IST)</h4>
-          <p>Other Popular Courses</p>
-          <h4>The Yoga Institute offers a wide range of courses including:</h4>
-          <ul>
-            <li>
-              <p>
-                <Link to='/3-months-advanced-teacher-training-course'>
-                  Advance TTC (900 Hrs){' '}
-                </Link>
-              </p>
-            </li>
-            <li>
-              <p>
-                <Link to='/21-days-better-living-course'>
-                  21 Days Better Living Course{' '}
-                </Link>
-              </p>
-            </li>
-            <li>
-              <p>
-                <Link to='/7-days-camp-english'>
-                  7 Days Health Camp
-                </Link>
-              </p>
-            </li>
-            <li>
-              <p>
-                <Link to='/certificate-yoga-therapy-course-online'>
-                  Certificate Yoga Therapy Course
-                </Link>
-              </p>
-            </li>
-            <li>
-              <p>
-                <Link to='/nutri-diet'>
-                  Nutri Diet Clinic
-                </Link>
-              </p>
-            </li>
-          </ul>
+          <div className="border_line">
+            <div className="line_shadow"></div>
+          </div>
+          <div className="landing_img">
+            <img src={`${baseDomain}${landingPage.curve2}`} alt="" />
+          </div>
+          <div className="interaction_div">
+            <div className="interaction">
+              <p>SPECIAL INTERACTION WITH DR. HANSAJI YOGENDRA</p>
+              <div className="mataji1">
+                <img src={`${baseDomain}${landingPage.mataji}`} alt="" />
+              </div>
+              <h2>
+                Imbibe wisdom and get solutions to your problems by the
+                legendary Yoga Guru Dr. Hansaji Yogendra.
+              </h2>
+              <h3>Duration</h3>
+              <h4>
+                200 Hrs TTC Batch 1 - 1 Month TTC Online &amp; On Campus -
+                English
+              </h4>
+              <h3>Timings</h3>
+              <h2>Monday to Saturday: 10:00 am - 6:00 pm (IST)</h2>
+            </div>
+            <div className="other_img">
+              <img src={`${baseDomain}${landingPage.mataji}`} alt="" />
+            </div>
+          </div>
+          <div className="other_div">
+            <div className="other_line"></div>
+            <div className="landing_other">Other Popular Courses</div>
+            <div className="other_line"></div>
+          </div>
+
+          <div className="popular_div">
+            {popularCourses.map((item, idx) => (
+              <div key={idx} className="pop_courses_div">
+                <div className="popular_img">
+                  <img src={item?.img} alt="" />
+                </div>
+                <div className="popular_text">
+                  <Link to={item?.url}>{item?.text}</Link>
+                </div>
+              </div>
+            ))}
+          </div>
         </section>
-        <section className='testimonials-section'>
+        <section className="testimonials-section">
           <Slider {...settings}>
             {testimonialData.map((item, i) => (
-              <div key={i} className='testimonial'>
-                <div className='left'>
+              <div key={i} className="testimonial">
+                <div className="left">
                   <img src={item.img} alt={`testimonial-${i + 1}`} />
                 </div>
-                <div className='right'>
-                  <p className='heading'>{item.name}</p>
+                <div className="right">
+                  <p className="heading">{item.name}</p>
                   <span>{item.info}</span>
-                  <p className='content'>{item.message}</p>
+                  <p className="content">{item.message}</p>
                 </div>
               </div>
             ))}
           </Slider>
         </section>
-        <section className='featured-section'>
-          <p>Featured Blogs</p>
-          <h4>
-            Read our informative blogs and increase your knowledge about Yoga,
-            Asanas, Pranayamas and much more.
-          </h4>
-          <Link to='/one-month-yoga-teachers-training-course-yoga-instructor-training/'>
-            http://www.theyogainstitute.org/one-month-yoga-teachers-training-course-yoga-instructor-training/
-          </Link>
-          <Link to='/importance-and-benefits-of-yoga'>
-            http://www.theyogainstitute.org/importance-and-benefits-of-yoga
-          </Link>
+        <div className="other_div">
+          <div className="other_line"></div>
+          <div className="landing_other">Featured Blogs</div>
+          <div className="other_line"></div>
+        </div>
+
+        <section className="featured-section">
+          <FeatuedBlogs />
+        </section>
+        <section className='last_div'>
+          <div className="last_logo">{landingLogo}</div>
+          <div className="last_text">Address: Shri Yogendra Marg, Prabhat Colony, Santacruz East, Mumbai Maharashtra 400055</div>
         </section>
       </main>
-      { modal && <CampaignThankYou name={name} setModal={setModal} setFormData={setFormData} /> }
+      {modal && (
+        <CampaignThankYou
+          name={name}
+          setModal={setModal}
+          setFormData={setFormData}
+        />
+      )}
     </div>
   )
 }
