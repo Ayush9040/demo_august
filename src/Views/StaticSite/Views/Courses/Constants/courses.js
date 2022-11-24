@@ -94,7 +94,7 @@ const ttc200hr = {
       //   type: 'paragraph',
       //   content: {
       //     title: 'Duration',
-      //     text: [
+      //     text: [o
       //       '1 Month | Course commences on Commences on the 1st day of each month',
       //     ],
       //   },
@@ -10869,31 +10869,74 @@ const classes = {
       {
         type: 'paragraph',
         content: {
-          title: '',
+          title: 'About Couples Class',
           text: [
-            'The Yoga Institute’s Couple Class is an absolute must for anyone who is in a relationship. Being conducted since the last 50 years, the class provides value in several different ways: improved understanding between two people, reduces conflict, increased maturity levels. You will learn to grow together, find common ground, explore new things together and enhance the strength of your relationship.',
+            'Since 1973, The Yoga Institute has been conducting Couples Class to strengthen the bond, nurture the relationship, and build intimacy and trust among couples. Relationships need constant efforts from both partners and an immense amount of understanding and compatibility.',
           ],
         },
       },
       {
-        type: 'u-list',
+        type: 'paragraph',
         content: {
-          title: 'What you stand to gain:',
+          title: 'Why Choose Couples Class?',
+          text: [
+            'Yoga when performed with your partner brings multiple benefits as it creates more awareness of the self and others, enhances communication and fortifies the connection. Through regular yoga practice, couples will learn to share, grow, build, trust, bond and have fun with each other.',
+            'Most importantly, couples learn to give each other space when required and resolve conflicts constructively and respectfully. The Yoga Institute’s Couples Class will train you to work as one unit, work towards making your relationship better and stronger and lead a healthy and stress-free life.',
+            'The Yoga Institute’s Couples Class will cover the following topics that will help couples to make their relationship healthy and successful '
+          ],
+        },
+      },
+      {
+        type: 'o-list',
+        content: {
+          title: '',
           points: [
             {
-              listItem: 'Better conflict resolution and reduced stress levels ',
+              listItem: 'Understanding the Importance of Marriage',
               subItems: [],
             },
             {
-              listItem: 'Improved coordination as a team',
+              listItem: 'Role of Honesty and Faithfulness',
               subItems: [],
             },
             {
-              listItem: 'Strengthen bond with yogic way of living',
+              listItem: 'Being a Supportive Partner',
               subItems: [],
             },
             {
-              listItem: 'Develop accountability',
+              listItem: 'Enhancing your Communication Skills',
+              subItems: [],
+            },
+            {
+              listItem: 'Coping with Difficulties',
+              subItems: [],
+            },
+            {
+              listItem: 'Building Spiritual Connection',
+              subItems: [],
+            },
+            {
+              listItem: 'Performing Marital Duties Selflessly',
+              subItems: [],
+            },
+            {
+              listItem: 'Acceptance, Patience & Understanding',
+              subItems: [],
+            },
+            {
+              listItem: 'Open to Adjustment',
+              subItems: [],
+            },
+            {
+              listItem: 'Financial Transparency & Management ',
+              subItems: [],
+            },
+            {
+              listItem: 'Balancing Interpersonal relationships',
+              subItems: [],
+            },
+            {
+              listItem: 'Positive Role Models to Children',
               subItems: [],
             },
           ],
@@ -10902,9 +10945,9 @@ const classes = {
       {
         type: 'paragraph',
         content: {
-          title: '',
+          title: 'USP of Couples Class',
           text: [
-            'Smt. Hansaji address the group once a month on various topics relevant to householders. Lectures by eminent personalities are also organised periodically. Further, group discussions and personal sharing on specific topics are regular features, which have been well appreciated by members.',
+            'Smt. Hansaji addresses the Couples Class once a month where various topics are discussed to help the householders in their daily commitments. Lectures by eminent personalities work as guidance to the couples. Further, group discussions and personal sharing on specific topics are regular features, which have been well-appreciated by members.',
           ],
         },
       },
@@ -10913,7 +10956,7 @@ const classes = {
         content: {
           title: 'Duration',
           text: [
-            'Enrolment is for a calendar year. Meetings are held on the last Sunday of every month from 5.00 p.m. to 7.00 p.m.in the Institute. Additionally, co-ordinated couples meet once during the same month in their respective groups.',
+            'Enrollment is for a calendar year. Meetings are held on the last Sunday of every month from 5.00 p.m. to 7.00 p.m.in the Institute. Additionally, co-ordinated couples meet once during the same month in their respective groups.',
           ],
         },
       },
@@ -10929,8 +10972,8 @@ const classes = {
       {
         type: 'paragraph',
         content: {
-          title: 'Registration & Fees',
-          text: ['Starts 30th January 2022'],
+          title: 'Registration',
+          text: ['Starts 29th January 2023'],
         },
       },
       {
@@ -10938,8 +10981,8 @@ const classes = {
         content: {
           title: 'Fees',
           text: [
-            'Annual fees are Rs. 3500/- (per year for a couple)',
-            '*Please note fees once paid will be non-refundable.',
+            'Annual fees - Rs. 3,500/- (per year for a couple)',
+            '*Please note: Fees once paid will be non-refundable.',
           ],
         },
       },
@@ -10948,7 +10991,7 @@ const classes = {
         content: {
           title: 'Note:',
           text: [
-            'Please take the screenshot of your order receipt immediately after the payment is made to info@theyogainstitute.org',
+            'Please take screenshot of your order receipt immediately after the payment is made to info@theyogainstitute.org',
           ],
         },
       },
@@ -11436,7 +11479,9 @@ const certificate = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'certificate-course',
-    dates: [],
+    dates: [
+      '17th Jan to 21st jan 2023'
+    ],
     online: true,
     onCampus: false,
     nonResidential: false,
