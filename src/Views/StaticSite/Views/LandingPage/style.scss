@@ -23,6 +23,10 @@
         font-weight: 600;
         color: #50514f;
         font-size: 2.5rem;
+        &>svg{
+          height: 30px;
+          width: 30px;
+        }
       }
       & > p {
         text-align: end;
@@ -52,6 +56,7 @@
           justify-content: space-evenly;
           align-items: center;
           & > .form_img2 {
+            
             & > img {
               width: 80%;
             }
@@ -335,6 +340,7 @@
         font-size: 2.5rem;
         color: #949494;
         font-weight: 600;
+        text-align: center;
       }
     }
   }
@@ -366,8 +372,15 @@
       }
       .form-section {
         .form_img_div {
+          .form_img1{
+            height: 1200px;
+          }
           .img_form {
             flex-wrap: wrap;
+            .form_img2{
+              display: flex;
+              justify-content: center;
+            }
           }
         }
       }
@@ -468,6 +481,19 @@
           display: flex;
           flex-direction: column;
         }
+      }
+      .form-section{
+        .form_img_div{
+          .form-cta{
+            min-width: 320px;
+            form{
+              label{
+                min-width: 270px;
+              }
+            }
+          }
+        }
+        
       }
     }
   }

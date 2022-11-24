@@ -9,13 +9,12 @@ import { testimonialData, popularCourses } from './constant'
 import './style.scss'
 import CampaignThankYou from './ThankYouPage'
 import FeatuedBlogs from '../../Components/LandingCourse'
-import { landingLogo } from '../../assets/icons/icon'
-
+import { landingLogo, phone } from '../../assets/icons/icon'
 import baseDomain, { landingPage } from '../../assets/images/imageAsset'
 
 const LandingPage = () => {
   let settings = {
-    dots: true,
+    dots: false,
     arrows: false,
     infinite: true,
     speed: 2000,
@@ -100,7 +99,7 @@ const LandingPage = () => {
        
         <div className="call-cta">
           <h2>
-            Call On:<a href="tel:+919136668224">+91-9136668224</a>
+            {phone}<a href="tel:+919136668224">+91-9136668224</a>
           </h2>
           <p>Get all your queries resolved!</p>
         </div>
