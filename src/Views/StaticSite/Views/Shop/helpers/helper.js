@@ -1,7 +1,10 @@
+
+
 export const updateLocalCart = ( productId,quantity=1)=>{
   const localCart = localStorage.getItem('cart')
   if (!localCart){ 
     const product = [{ productId:productId,quantity:quantity }]
+    
     return product
   }
   const prevCart = JSON.parse(localCart)

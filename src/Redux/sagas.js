@@ -3,10 +3,11 @@ import { authSagas } from '../Views/StaticSite/Views/Authentication/Auth.watcher
 import { blogsSaga } from '../Views/StaticSite/Views/Blogs/Blogs.watchers'
 import { careerSaga } from '../Views/StaticSite/Views/Careers/Career.watchers'
 import { donationSagas } from '../Views/StaticSite/Views/Donation/Donation.watchers'
+import { shopSagas } from '../Views/StaticSite/Views/Shop/Shop.watchers'
 import { volunteerSagas } from '../Views/StaticSite/Views/Volunteer/Volunteer.watchers'
 // import { shopSagas } from '../Views/StaticSite/Views/Shop/Shop.watchers'
 
 export default function* rootSaga() {
-  yield all([authSagas(),volunteerSagas(),careerSaga(),donationSagas(),blogsSaga()])
+  yield all([authSagas(),volunteerSagas(),careerSaga(),donationSagas(),blogsSaga(),shopSagas()])
 
 }

@@ -1,8 +1,9 @@
 import axios from 'axios'
 import { ecomBaseDomin,authBaseDomain } from '../../../../Constants/appSettings'
 
+//let ecomBaseDomin = 'http://192.168.0.70:6060/v1'
+
 export const fetchAllProductsAPI = ( page, limit ) => {
-  console.log(page,limit,'und')
   return axios.get(`${ecomBaseDomin}/product/?page=${page}&limit=${limit}`)
 }
 
@@ -18,8 +19,16 @@ export const getAllCategories = ()=>{
   return axios.get(`${ ecomBaseDomin }/category`)
 }
 
+export const getActiveCart = ()=>{
+  return axios.get(`${ ecomBaseDomin }/cart/activeCart`)
+}
+
 export const createCart = (payload)=>{
   return axios.post(`${ ecomBaseDomin }/cart/`,payload)
+}
+
+export const updateCart = ( cartId,payload )=>{
+  return axios.put(`${ ecomBaseDomin }/cart/${ cartId }`, payload)
 }
 
 export const getAddress = (userID)=>{

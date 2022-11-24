@@ -6,7 +6,7 @@ import 'slick-carousel/slick/slick-theme.css'
 import './style.scss'
 import { useState } from 'react'
 import { useEffect } from 'react'
-import { fetchAllProductsAPI,getProductByCategory, getAllCategories, searchProduct } from '../../Shop.api'
+import { fetchAllProductsAPI,getProductByCategory, getAllCategories, searchProduct, updateCart, createCart } from '../../Shop.api'
 import ShopCard from '../../../../Components/ShopCard/ShopCard'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
@@ -14,8 +14,8 @@ import Pagination from 'react-js-pagination'
 import MessageModal from '../../../../Components/MessageModal'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
-import { updateCartData } from '../../Shop.action'
-import { useDispatch } from 'react-redux'
+import { getActiveCartData, updateCartData } from '../../Shop.action'
+import { useDispatch, useSelector } from 'react-redux'
 import { Link, useNavigate,useSearchParams } from 'react-router-dom'
 import baseDomain from '../../../../assets/images/imageAsset'
 import { banner } from '../../../../assets/images/imageAsset'
@@ -24,6 +24,8 @@ import { updateLocalCart } from '../../helpers/helper'
 const Shop = () => {
   const dispatch = useDispatch()
   const navigate = useNavigate()
+  const { activeCartId } = useSelector(state=>state.shop)
+  const { isLoggedIn } = useSelector(state=>state.auth)
   const [Params] = useSearchParams()
 
   const [products, setProducts] = useState([])
@@ -83,7 +85,9 @@ const Shop = () => {
   useEffect(() => {
     fetchAllCategories()
     getAllProducts(pagination.page, pagination.limit)
-    dispatch(updateCartData(JSON.parse(localStorage.getItem('cart'))))
+    if(localStorage.getItem('cart')){
+      dispatch(updateCartData(JSON.parse(localStorage.getItem('cart'))))
+    }
   }, [ pagination,Params.get('category') ])
 
 
@@ -92,25 +96,12 @@ const Shop = () => {
   },[ categories ])
 
 
-  // const addLocal = (productID) => {
-  //   if (!localStorage.getItem('cart')) return [{ productId:productID,quantity:1 }]
-  //   const prevCart = JSON.parse(localStorage.getItem('cart'))
-  //   if(prevCart.some(item=>item.productId===productID)){
-  //     prevCart.forEach(element => {
-  //       if(element.productId===productID){
-  //         element.quantity = element.quantity + 1
-  //       }
-  //     })
-  //     return prevCart
-  //   }else{
-  //     return [...prevCart,{ productId:productID, quantity:1 }]
-  //   }
-  // }
-
   const addCart = (idx, e) => {
     e.stopPropagation()
     localStorage.setItem('cart',JSON.stringify(updateLocalCart(idx)))
     dispatch(updateCartData(JSON.parse(localStorage.getItem('cart'))))
+    isLoggedIn && activeCartId ?  updateCart(activeCartId,{ items:JSON.parse(localStorage.getItem('cart')) }) : createCart({ items:JSON.parse(localStorage.getItem('cart')) })
+    dispatch(getActiveCartData())
     toast.success('Item Added to Cart Successfully!', {
       position: 'top-right',
       autoClose: 3000,
@@ -127,6 +118,8 @@ const Shop = () => {
     e.stopPropagation()
     localStorage.setItem('cart',JSON.stringify(updateLocalCart(idx)))
     dispatch(updateCartData(JSON.parse(localStorage.getItem('cart'))))
+    isLoggedIn && activeCartId ?  updateCart(activeCartId,{ items:JSON.parse(localStorage.getItem('cart')) }) : createCart({ items:JSON.parse(localStorage.getItem('cart')) })
+    dispatch(getActiveCartData())
     navigate('/shop/cart')
   }
 

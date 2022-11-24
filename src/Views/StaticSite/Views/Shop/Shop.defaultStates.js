@@ -5,5 +5,6 @@ export const noError = {
 export const initialState = {
   error: noError,
   isLoading: false,
-  cart: []
+  cart: [],
+  activeCartId:''
 }

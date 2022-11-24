@@ -1,12 +1,11 @@
-// import { takeEvery, all, fork } from 'redux-saga/effects'
-// // import { handleUpdateCartDataEffect } from './Shop.effects'
-// // import { donationActions } from './Donation.action'
-// import { shopActions } from './Shop.action'
+import { takeEvery, all, fork } from 'redux-saga/effects'
+import { shopActions } from './Shop.action'
+import { handleGetActiveCartDataEffect } from './Shop.effects'
 
-// // function* watchUpdateCartData(){
-// //   yield takeEvery(shopActions.UPDATE_CART, handleUpdateCartDataEffect)
-// // }
+function* watchGetActiveCartData(){
+  yield takeEvery(shopActions.GET_ACTIVE_CART, handleGetActiveCartDataEffect)
+}
 
-// export const shopSagas = function* rootSaga(){
-//   yield all([fork(watchUpdateCartData)])
-// }
+export const shopSagas = function* rootSaga(){
+  yield all([fork(watchGetActiveCartData)])
+}

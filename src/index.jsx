@@ -20,7 +20,11 @@ if (isAuthorized()) {
   store.dispatch({
     type: 'auth/FETCH_USER_DATA'
   })
+  store.dispatch({
+    type:'shop/GET_ACTIVE_CART'
+  })
 }
+
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
