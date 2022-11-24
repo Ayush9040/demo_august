@@ -1,5 +1,5 @@
 .landing-page {
-  padding-bottom: 5rem;
+  // padding-bottom: 5rem;
   & > nav {
     display: flex;
     justify-content: space-between;
@@ -43,7 +43,7 @@
 
       .form_img_div {
         .form_img1 {
-          height: 1000px;
+          height: 1400px;
           background: url('https://ecom-static-site.oss-ap-south-1.aliyuncs.com/Landing_page/curve1.png')
             no-repeat center / cover;
           & > img {
@@ -166,74 +166,8 @@
           left: 0;
         }
       }
-      .landing_img {
-        & > img {
-          height: 100%;
-          object-fit: cover;
-          width: 100%;
-        }
-      }
-      .interaction_div {
-        display: flex;
-        .other_img {
-          margin-top: 5rem;
-        }
-        .interaction {
-          .mataji1 {
-            display: none;
-          }
-          & > p {
-            font-size: 4.25rem;
-            font-weight: 700;
-            margin-top: 8rem;
-            letter-spacing: 2px;
-          }
-          & > h3 {
-            font-size: 2rem;
-            font-weight: 700;
-            letter-spacing: 2px;
-            text-decoration: underline solid #949494 1px;
-            margin-top: 2rem;
-          }
-          & > h2 {
-            font-size: 2rem;
-            letter-spacing: 2px;
-            margin-top: 1rem;
-            margin-bottom: 4rem;
-          }
-          & > h4 {
-            font-size: 2rem;
-            letter-spacing: 2px;
-            margin-top: 1rem;
-            font-weight: 700;
-          }
-        }
-      }
-      .popular_div {
-        display: flex;
-        // grid-template-columns: 20% 20% 20% 20% 20%;
-        .pop_courses_div {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          flex-direction: column;
-        }
-        .popular_img {
-          height: 200px;
-          width: 200px;
-          img {
-            height: 100%;
-            object-fit: cover;
-            width: 100%;
-            border-radius: 50%;
-          }
-        }
-        .popular_text {
-          font-size: 2.5rem;
-          text-align: center;
-          margin-top: 1rem;
-        }
-      }
+
+     
     }
     .testimonials-section {
       padding: 5rem;
@@ -324,7 +258,8 @@
       justify-content: center;
       align-items: center;
       flex-direction: column;
-      margin: 10rem;
+      padding-bottom: 25rem;
+      margin: 10rem 10rem 0 10rem;
       .last_logo {
         & > svg {
           width: 250px;
@@ -341,8 +276,106 @@
         color: #949494;
         font-weight: 600;
         text-align: center;
+        width: 60%;
       }
     }
+    .arc{
+      position: relative;
+      .arc1{
+        position: absolute;
+        margin-top: -11rem;
+        z-index: -1;
+        &>img{
+          width: 100%;
+        }     
+      }
+      .arc2{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        z-index: -1;
+        &>img{
+          width: 100vw;
+        }
+       
+      }
+    }
+    .interaction_div {
+      padding: 2rem 8rem;
+      display: flex;
+      .other_img {
+        margin-top: 3rem;
+      }
+      .interaction {
+        .mataji1 {
+          display: none;
+        }
+        & > p {
+          font-size: 4.25rem;
+          font-weight: 700;
+          margin-top: 6rem;
+          letter-spacing: 2px;
+        }
+        & > h3 {
+          font-size: 2rem;
+          font-weight: 700;
+          letter-spacing: 2px;
+          text-decoration: underline solid #949494 1px;
+          margin-top: 2rem;
+        }
+        & > h2 {
+          font-size: 2rem;
+          letter-spacing: 2px;
+          margin-top: 1rem;
+          margin-bottom: 4rem;
+        }
+        & > h4 {
+          font-size: 2rem;
+          letter-spacing: 2px;
+          margin-top: 1rem;
+          font-weight: 700;
+        }
+      }
+    }
+    .popular_div {
+      padding: 2rem 8rem;
+      display: flex;
+      align-items: flex-start;
+      .pop_courses_div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        min-width: 20%;
+      }
+      .popular_img {
+        height: 200px;
+        width: 200px;
+        img {
+          height: 100%;
+          object-fit: cover;
+          width: 100%;
+          border-radius: 50%;
+        }
+      }
+      .popular_text {
+        font-size: 2.5rem;
+        text-align: center;
+        margin-top: 1rem;
+      }
+    }
+    .landing_img {
+      & > img {
+        height: 100%;
+        object-fit: cover;
+        width: 100%;
+      }
+    }
+  }
+  .border_top{
+    border: 1px solid #F46765;
+    height: 3rem;
+    background-color: #F46765 ;
   }
 }
 
@@ -350,33 +383,34 @@
 @media (max-width: 1200px) {
   .landing-page {
     & > main {
-      .details-section {
-        .popular_div {
-          display: flex;
-          flex-direction: column;
+      .popular_div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+      }
+      .interaction_div {
+        .other_img {
+          display: none;
         }
-        .interaction_div {
-          .other_img {
-            display: none;
-          }
-          .interaction {
-            .mataji1 {
-              display: flex;
-              justify-content: center;
-              & > img {
-                width: 80%;
-              }
+        .interaction {
+          .mataji1 {
+            display: flex;
+            justify-content: center;
+            & > img {
+              width: 80%;
             }
           }
         }
       }
+    
       .form-section {
         .form_img_div {
           .form_img1{
             height: 1200px;
           }
           .img_form {
-            flex-wrap: wrap;
+            padding-top: 80px;
             .form_img2{
               display: flex;
               justify-content: center;
@@ -390,11 +424,14 @@
 
 @media (max-width: 786px) {
   .landing-page {
-    & > nav {
-      justify-content: center;
-    }
+    
     & > main {
       .form-section {
+        .form_img_div{
+          .img_form{
+            flex-wrap: wrap;
+          }
+        }
         padding: 2rem;
         & > .landing-text {
           width: 100%;
@@ -471,16 +508,20 @@
 
 @media (max-width: 520px) {
   .landing-page {
+    & > nav {
+      justify-content: center;
+    }
     & > main {
+      .popular_div {
+        display: flex;
+        flex-direction: column;
+      }
       .details-section {
         .benefits-grid {
           display: flex;
           flex-direction: column;
         }
-        .popular_div {
-          display: flex;
-          flex-direction: column;
-        }
+        
       }
       .form-section{
         .form_img_div{
