@@ -11,6 +11,8 @@ import CampaignThankYou from './ThankYouPage'
 import FeatuedBlogs from '../../Components/LandingCourse'
 import { landingLogo, phone } from '../../assets/icons/icon'
 import baseDomain, { landingPage } from '../../assets/images/imageAsset'
+import Arc1 from '../../assets/images/arc1.png'
+import Arc2 from '../../assets/images/arc2.png'
 
 const LandingPage = () => {
   let settings = {
@@ -90,6 +92,7 @@ const LandingPage = () => {
 
   return (
     <div className="landing-page">
+      <div className="border_top"></div>
       <nav className="landing-navigation">
         <Link to='/'>
           <div className="tyi-logo">
@@ -194,6 +197,8 @@ const LandingPage = () => {
             </div>
           </div>
         </section>
+     
+          
         <section className="details-section">
           <div className="learning_benefits">
             <div>
@@ -292,8 +297,14 @@ const LandingPage = () => {
           <div className="border_line">
             <div className="line_shadow"></div>
           </div>
-          <div className="landing_img">
-            <img src={`${baseDomain}${landingPage.curve2}`} alt="" />
+         
+        </section>
+        <div className="landing_img">
+          <img src={`${baseDomain}${landingPage.curve2}`} alt="" />
+        </div>
+        <div className="arc">
+          <div className="arc1">
+            <img src={Arc1} alt="" />
           </div>
           <div className="interaction_div">
             <div className="interaction">
@@ -335,37 +346,44 @@ const LandingPage = () => {
               </div>
             ))}
           </div>
-        </section>
-        <section className="testimonials-section">
-          <Slider {...settings}>
-            {testimonialData.map((item, i) => (
-              <div key={i} className="testimonial">
-                <div className="left">
-                  <img src={item.img} alt={`testimonial-${i + 1}`} />
+        
+          <section className="testimonials-section">
+            <Slider {...settings}>
+              {testimonialData.map((item, i) => (
+                <div key={i} className="testimonial">
+                  <div className="left">
+                    <img src={item.img} alt={`testimonial-${i + 1}`} />
+                  </div>
+                  <div className="right">
+                    <p className="heading">{item.name}</p>
+                    <span>{item.info}</span>
+                    <p className="content">{item.message}</p>
+                  </div>
                 </div>
-                <div className="right">
-                  <p className="heading">{item.name}</p>
-                  <span>{item.info}</span>
-                  <p className="content">{item.message}</p>
-                </div>
-              </div>
-            ))}
-          </Slider>
-        </section>
-        <div className="other_div">
-          <div className="other_line"></div>
-          <div className="landing_other">Featured Blogs</div>
-          <div className="other_line"></div>
-        </div>
+              ))}
+            </Slider>
+          </section>
+          <div className="other_div">
+            <div className="other_line"></div>
+            <div className="landing_other">Featured Blogs</div>
+            <div className="other_line"></div>
+          </div>
 
-        <section className="featured-section">
-          <FeatuedBlogs />
-        </section>
-        <section className='last_div'>
-          <div className="last_logo">{landingLogo}</div>
-          <div className="last_text">Address: Shri Yogendra Marg, Prabhat Colony, Santacruz East, Mumbai Maharashtra 400055</div>
-        </section>
+          <section className="featured-section">
+            <FeatuedBlogs />
+          </section>
+          <section className='last_div'>
+            <div className="last_logo">{landingLogo}</div>
+            <div className="last_text">Address: Shri Yogendra Marg, Prabhat Colony, Santacruz East, Mumbai Maharashtra 400055</div>
+          </section>
+          <div className="arc2">
+            <img src={Arc2} alt="" />
+          </div>
+        </div>
+        
+          
       </main>
+      <div className="border_top"></div>
       {modal && (
         <CampaignThankYou
           name={name}
