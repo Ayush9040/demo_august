@@ -172,11 +172,6 @@
     .testimonials-section {
       padding: 5rem;
       background-color: #eee;
-      & > .slick-slider {
-        & > .slick-dots {
-          display: none !important;
-        }
-      }
       .testimonial {
         display: flex !important;
         justify-content: center;

@@ -117,7 +117,7 @@ const LandingPage = () => {
                 </div>
                 <div className="form-cta">
                   <form>
-                    <h2>Sign-Up for the course!</h2>
+                    <h2>Sign-Up for the Course!</h2>
                     <label htmlFor="name">
                       <input
                         type={'text'}
@@ -210,7 +210,7 @@ const LandingPage = () => {
                 <li>
                   <p>
                     Learn, experience and transform yourself with Yogic
-                    techniques – Pranayamas, Kriyas, Meditation, Sattvic food{' '}
+                    techniques – Pranayamas, Kriyas, Meditation, Sattvik food{' '}
                   </p>
                 </li>
                 <li>
