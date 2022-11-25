@@ -9,7 +9,6 @@ import { Country, State, City } from 'country-state-city'
 const Personal = ({ handleEmpty1, empty, setFormData, formData, setEmpty }) => {
   //const today = new Date().toISOString().split('T')[0]
   const [values, setValues] = useState([])
-
   const countries = Country.getAllCountries()
 
   const updatedCountries = countries.map((country) => ({
@@ -43,8 +42,8 @@ const Personal = ({ handleEmpty1, empty, setFormData, formData, setEmpty }) => {
       ...base,
       background: 'white',
       borderRadius: '50px',
-      width: '735px',
-      padding: '0.5rem 2rem',
+      width: '100%',
+      padding: '0.25rem 2rem',
       marginTop: '2rem',
       marginLeft: '2rem',
       // Overwrittes the different states of border
@@ -143,7 +142,7 @@ const Personal = ({ handleEmpty1, empty, setFormData, formData, setEmpty }) => {
                 className='select'
                 form={formData}
                 setField={setFormData}
-                keyName="address2"
+                keyName="country"
                 errorCheck={setEmpty}
                 options={updatedCountries}
                 value={values.country}
@@ -166,7 +165,7 @@ const Personal = ({ handleEmpty1, empty, setFormData, formData, setEmpty }) => {
                 placeholder='State'
                 form={formData}
                 setField={setFormData}
-                keyName="address2"
+                keyName="state"
                 errorCheck={setEmpty}
                 options={updatedStates(values.country?.isoCode)}
                 value={values.state}
@@ -190,7 +189,7 @@ const Personal = ({ handleEmpty1, empty, setFormData, formData, setEmpty }) => {
                 placeholder='City'
                 form={formData}
                 setField={setFormData}
-                keyName="address2"
+                keyName="city"
                 errorCheck={setEmpty}
                 options={updatedCities(values?.country?.isoCode,values?.state?.isoCode)}
                 value={values.city}
