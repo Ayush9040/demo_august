@@ -2503,7 +2503,13 @@ export const printMediaAssest = {
   printMediaAssest925:'/print_media/2022/Navbharat-Times-Epaper-30th-October-2022.jpg',
   printMediaAssest926:'/print_media/2022/Navbharat-Times-Epaper-31st-October-2022.jpg',
   printMediaAssest927:'/print_media/new2022/Sakal-Paper-3rd-November -2022-Page-10.jpg',
-  printMediaAssest928:'/print_media/2022/Navbharat%20Times%20Epaper%20-%206th%20November%202022.jpg'
+  printMediaAssest928:'/print_media/2022/Navbharat%20Times%20Epaper%20-%206th%20November%202022.jpg',
+  printMediaAssest929:'/print_media/new2022/Divya Bhaskar 16th November 2022.jfif',
+  printMediaAssest930:'/print_media/new2022/FreePressJournal-13th November 2022.jpg',
+  printMediaAssest932:'/print_media/new2022/Mid-Day-22nd-Nov-2022.jpg',
+  printMediaAssest933:'/print_media/new2022/Mid-day-19-nov-2022 .jpg',
+  printMediaAssest934:'/print_media/new2022/Navbharat-Times-Epaper-21st-November-2022 .jpg',
+  printMediaAssest935:'/print_media/new2022/Navbharat Times Epaper - 20th November 2022.jpg',
 }
 
 export const locateAsset ={
