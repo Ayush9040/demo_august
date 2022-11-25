@@ -74,7 +74,8 @@ const LandingPage = () => {
     }
   }
 
-  const handleSubmit = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault()
     if (name === '') {
       setErr(1)
     } else if (email === '') {
