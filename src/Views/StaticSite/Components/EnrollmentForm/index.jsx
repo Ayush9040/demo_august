@@ -25,6 +25,7 @@ const Enrollment = () => {
   useEffect(() => {
     setCurrentCourse(AllCourses.find((item) => item.key === courseId))
     setCourseDate(Params.get('date'))
+    console.log(currentCourse)
     // setDate(
     //   today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate()
     // )
