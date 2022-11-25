@@ -4243,6 +4243,41 @@ const printMedia = [
     year:'2022',
     media:[
       {
+        img:`${ baseDomain }${ printMediaAssest.printMediaAssest930 }`,
+        url:'https://epaper.freepressjournal.in/3614878/Free-Press-Mumbai-Epaper-Edition/13-Nov-2022#page/17/2',
+        alt:'nbt-november13-2022'
+      },
+      {
+        img:`${ baseDomain }${ printMediaAssest.printMediaAssest929}`,
+        url:'',
+        alt:'nbt-november16-2022'
+      },
+      {
+        img:`${ baseDomain }${ printMediaAssest.printMediaAssest933}`,
+        url:'',
+        alt:'midday-november19-2022'
+      },
+      {
+        img:`${ baseDomain }${ printMediaAssest.printMediaAssest935 }`,
+        url:'https://epaper.navbharattimes.com/imageview_6582_81518_4_16_20-11-2022_2_i_1_sf.html',
+        alt:'nbt-november20-2022'
+      },
+      {
+        img:`${ baseDomain }${ printMediaAssest.printMediaAssest934 }`,
+        url:'https://epaper.navbharattimes.com/imageview_6742_67208_4_16_21-11-2022_6_i_1_sf.html',
+        alt:'nbt-november21-2022'
+      },
+      {
+        img:`${ baseDomain }${ printMediaAssest.printMediaAssest932 }`,
+        url:'https://epaper.navbharattimes.com/imageview_6742_67208_4_16_21-11-2022_6_i_1_sf.html',
+        alt:'midday-november22-2022'
+      },
+      {
+        img:`${ baseDomain }${ printMediaAssest.printMediaAssest933 }`,
+        url:'',
+        alt:'nbt-november13-2022'
+      },
+      {
         img:`${ baseDomain }${ printMediaAssest.printMediaAssest928 }`,
         url:'https://epaper.navbharattimes.com/imageview_4273_75342_4_16_06-11-2022_2_i_1_sf.html',
         alt:'nbt-november6-2022'
