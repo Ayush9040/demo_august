@@ -44,7 +44,7 @@
       .form_img_div {
         .form_img1 {
           height: 1100px;
-          background: url('https://ecom-static-site.oss-ap-south-1.aliyuncs.com/Landing_page/curve1.png')
+          background: url('https://ecom-static-site.oss-ap-south-1.aliyuncs.com/Landing_page/curve1.jpg')
             no-repeat center / cover;
           & > img {
             object-fit: cover;
@@ -405,7 +405,7 @@
       .form-section {
         .form_img_div {
           .form_img1{
-            height: 1300px;
+            height: 750px;
           }
           .img_form {
             padding-top: 80px;
@@ -425,7 +425,10 @@
     
     & > main {
       .form-section {
-        .form_img_div{
+        .form_img_div{ .form_img1{
+          height: 1300px;
+        }
+
           .img_form{
             flex-wrap: wrap;
           }
