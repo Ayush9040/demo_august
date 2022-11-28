@@ -7,10 +7,10 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons'
 import { deleteIcon } from '../../../../assets/icons/icon'
 import { useDispatch, useSelector } from 'react-redux'
 import CommonBtn from '../../../../Components/commonbtn'
-import { fetchSingleProduct } from '../../Shop.api'
+import { fetchSingleProduct,updateCart } from '../../Shop.api'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
-import { updateCartData } from '../../Shop.action'
+import { updateCartData, getActiveCartData } from '../../Shop.action'
 
 const AddToCart = () => {
 
@@ -27,6 +27,7 @@ const AddToCart = () => {
   const dispatch = useDispatch()
 
   let { isLoggedIn } = useSelector(item=>item.auth)
+  let { activeCartId } = useSelector(item=>item.shop)
 
   const displayCart =async( products=[] )=>{
     setIsLoading(true)
@@ -60,6 +61,8 @@ const AddToCart = () => {
     })
     await localStorage.setItem('cart',JSON.stringify(prevCart))
     dispatch(updateCartData(prevCart))
+    isLoggedIn && activeCartId &&  updateCart(activeCartId,{ items:JSON.parse(localStorage.getItem('cart')) })
+    dispatch(getActiveCartData())
     window.location.reload()
   }
 
@@ -72,6 +75,8 @@ const AddToCart = () => {
       JSON.stringify(removeProduct.filter((item) => item.productId !== idx))
     )
     dispatch(updateCartData(removeProduct.filter((item) => item.productId !== idx)))
+    isLoggedIn && activeCartId &&  updateCart(activeCartId,{ items:JSON.parse(localStorage.getItem('cart')) })
+    dispatch(getActiveCartData())
     
     toast.error('Item Removed from cart!', {
       position: 'top-right',
@@ -100,7 +105,6 @@ const AddToCart = () => {
     navigate('/shop/checkout')
   }
 
-  console.log(addCart,'addCart')
   return (
     <>
       <InnerNavComponent abc={cartNav} />
