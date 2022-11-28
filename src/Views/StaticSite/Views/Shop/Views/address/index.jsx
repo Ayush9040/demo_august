@@ -399,7 +399,7 @@ const ShippingAdd = () => {
                       <div className='ship_order_sum'>
                         <div className='ship_price'>Order summary</div>
                         <div className='price'>Price</div>
-                        <div className='ship_price'>₹ {item.price}</div>
+                        <div className='ship_price'>{ location ==='IN' ? `₹ ${item?.price}`:`$ ${item?.priceInternational}`}</div>
                         <div className='price'>Qunatity</div>
                         <div className='ship_price'>{item.quantity}</div>
                       </div>

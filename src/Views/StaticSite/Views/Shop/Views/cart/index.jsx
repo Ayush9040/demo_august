@@ -152,7 +152,7 @@ const AddToCart = () => {
                 </div>
                 <div className="cart_price">
                 Price
-                  <div className="cart_amount">{ location==='IN' ? `₹ ${item?.price}`:`$ ${item?.priceInternational}`}</div>
+                  <div className="cart_amount">{ location ==='IN' ? `₹ ${item?.price}`:`$ ${item?.priceInternational}`}</div>
                 </div>
               </div>
               <ToastContainer/>
@@ -164,7 +164,7 @@ const AddToCart = () => {
           <div className="check_out_div">
             <div className="check_out">
               <div>Subtotal  ({addCart.length} item(s))</div>
-              <div className="check_out_price">₹ { getTotal() }</div>
+              <div className="check_out_price">{ location ==='IN' ? `₹ ${getTotal()}`:`$ ${getTotal()}`}</div>
               <div>Inclusive of all taxes</div>
             </div>
             <div className="check_out_btn">

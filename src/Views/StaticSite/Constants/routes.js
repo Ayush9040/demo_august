@@ -56,6 +56,7 @@ const Shop = lazy(()=>import('../Views/Shop/Views/shop/shop'))
 const SingleProduct = lazy(()=>import('../Views/Shop/Views/single-product'))
 
 import Authentication from '../Views/Authentication'
+import LandingPage from '../Views/LandingPage'
 import OrderHistroy from '../Views/Shop/Views/order-history'
 const SearchModal = lazy(()=>import( '../Views/SearchModal'))
 
@@ -696,6 +697,13 @@ const staticSiteRoutes = [
     id:'staticNutriDiet',
     routePath:'/nutri-diet',
     name:'NutriDiet'
+  },
+  {
+    Component:LandingPage,
+    path:'/ad-campaign',
+    id:'staticLandingPage',
+    routePath:'/ad-campaign',
+    name:'LandingPage'
   }
 ]
 

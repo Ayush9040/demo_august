@@ -5,6 +5,8 @@ import 'react-phone-number-input/style.css'
 import './style.scss'
 import CommonBtn from '../../../Components/commonbtn'
 import { createNutriOrder, enrollPlan, successMail } from '../Api'
+import Select from 'react-select'
+import { Country, City } from 'country-state-city'
 import { useNavigate } from 'react-router-dom'
 
 const SubcriptionForm = ({ packageName, packagePrice, closeForm }) => {
@@ -26,6 +28,7 @@ const SubcriptionForm = ({ packageName, packagePrice, closeForm }) => {
   })
   const [agree, setAgree] = useState(false)
   const [empty, setEmpty] = useState()
+  const [values, setValues] = useState([])
 
   const submitForm = async() => {
     const { data } = await enrollPlan({
@@ -107,6 +110,38 @@ const SubcriptionForm = ({ packageName, packagePrice, closeForm }) => {
     }
   }
 
+  const countries = Country.getAllCountries()
+
+  const updatedCountries = countries.map((country) => ({
+    label: country.name,
+    value: country.id,
+    ...country,
+  }))
+
+  const updatedCities = (countryId,stateId) => {
+    return City.getCitiesOfCountry(countryId,stateId).map((city) => {
+      return (
+        {
+          label: city.name,
+          value: city.id,
+          ...city,
+        })})
+  }
+
+  const customStyles = {
+    control: (base, state) => ({
+      ...base,
+      background: 'white',
+      borderRadius: '50px',
+      padding: '0.5rem 2rem',
+      borderColor: state.isFocused ? 'rgba(96, 96, 96, 0.5019607843)' : 'rgba(96, 96, 96, 0.5019607843)',
+      boxShadow: state.isFocused ? null : null,
+      '&:hover': {
+        borderColor: state.isFocused ? 'rgba(96, 96, 96, 0.5019607843)' : 'rgba(96, 96, 96, 0.5019607843)'
+      }
+    })
+  }
+
   return (
     <div className='nutri-subscription-form'>
       <div
@@ -165,24 +200,44 @@ const SubcriptionForm = ({ packageName, packagePrice, closeForm }) => {
           {empty === 3 && <small> Please enter a valid phone number</small>}
         </div>
         <div className='form-field'>
-          <InputComponent
-            type='text'
-            placeholder='Country*'
+          <Select 
+            styles={customStyles}
+            id="country"
+            name="country"
+            label="country"
+            placeholder='Country'
+            className='select'
             form={formData}
             setField={setFormData}
             keyName='country'
             errorCheck={setEmpty}
+            options={updatedCountries}
+            value={values.country}
+            onChange={(value) => {
+              setValues({ country: value, city: null }, false)
+              setFormData(prev=>{ return { ...prev, country: value.name } })
+            }}
           />
           {empty === 4 && <small> Please enter your country</small>}
         </div>
         <div className='form-field'>
-          <InputComponent
-            type='text'
-            placeholder='City*'
+          <Select 
+            styles={customStyles}
+            id="city"
+            name="city"
+            label="city"
+            placeholder='City'
+            className='select'
             form={formData}
             setField={setFormData}
             keyName='city'
             errorCheck={setEmpty}
+            options={updatedCities(values?.country?.isoCode,values?.state?.isoCode)}
+            value={values.city}
+            onChange={(value) => {
+              setValues({ country: values.country, city: value }, false)
+              setFormData(prev=> { return { ...prev,city: value.name }})
+            }}
           />
           {empty === 5 && <small> Please enter your city</small>}
         </div>
