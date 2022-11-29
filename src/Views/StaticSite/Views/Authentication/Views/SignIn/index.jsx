@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import {
   Link,
-  useLocation,
   useNavigate,
   useSearchParams,
 } from 'react-router-dom'
@@ -21,16 +20,18 @@ const SignIn = () => {
   const dispatch = useDispatch()
   const navigate = useNavigate()
   const { isLoggedIn, error } = useSelector((state) => state.auth)
-  const [course, setCourse] = useState()
+  const [ page,setPage ] = useState()
+  const [ errMsg,setErrMsg ] = useState('')
+  // const [course, setCourse] = useState()
   const [formData, setFormData] = useState({
     email: '',
     password: '',
   })
-  const location = useLocation()
+  // const location = useLocation()
 
-  useEffect(() => {
-    setCourse(location?.pathname?.split('/')?.[3])
-  }, [location])
+  // useEffect(() => {
+  //   setCourse(location?.pathname?.split('/')?.[3])
+  // }, [location])
 
   const [Params] = useSearchParams()
 
@@ -38,6 +39,7 @@ const SignIn = () => {
 
   useEffect(() => {
     setSetselectDate(Params.get('date'))
+    setPage(Params.get('location'))
   }, [])
 
   useEffect(() => {
@@ -46,13 +48,21 @@ const SignIn = () => {
   }, [isLoggedIn])
 
 
+  const handleContinueAsGuest = ()=>{
+    if(!page) return navigate('/')
+    if(page!=='cart') navigate(`/enrollment/${page}/?date=${selectDate}`)
+    setErrMsg('Please login to continue purchase!')
+    setModal(true)
+    
+  }
+
 
   const handleSignIn = async() => {
     if (!validateEmail(formData.email)) {
       return setValidate(1)
     } else if (formData.password === '') {
       return setValidate(2)
-    } else {
+    }else{
       await dispatch(
         loginUserAction(
           {
@@ -60,13 +70,10 @@ const SignIn = () => {
             password: formData.password,
           },
           navigate,
-          {
-            course:course,
-            date:selectDate
-          }
+          page ? page!=='cart' ? `/enrollment/${ page }/?date=${ selectDate }`: '/shop/checkout' : '/',
         )
       )
-    
+      if(error.isError !== false){  setModal(true);setErrMsg( error.isError ) }else{ setModal(false)}
     }
   }
 
@@ -76,7 +83,7 @@ const SignIn = () => {
     menuColor: 'black',
     menuItems: [],
   }
-  console.log(error.isError)
+
   return (
     <div className='signin-container'>
       <InnerNavComponent abc={UserNav} />
@@ -133,15 +140,7 @@ const SignIn = () => {
           </label> */}
           <label className='signin-btn'>
             <CommonBtn text='Sign In' buttonAction={handleSignIn} />
-            <Link
-              to={
-                course !== undefined
-                  ? `/enrollment/${course}/?date=${selectDate}`
-                  : '/'
-              }
-            >
-              <CommonBtn text={'Continue as a guest'} isColor={'#EA4335'} />
-            </Link>
+            <CommonBtn text={'Continue as a guest'} isColor={'#EA4335'} buttonAction={handleContinueAsGuest} />
           </label>
         </form>
         <Link to='/user/sign-up'>
@@ -165,7 +164,7 @@ const SignIn = () => {
       {modal !== false && (
         <MessageModal
           type='ERROR'
-          message={error.isError}
+          message={errMsg}
           closePopup={setModal}
         />
       )}

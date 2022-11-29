@@ -6,7 +6,7 @@ console.log('Initilise Interseptor')
 
 axios.interceptors.request.use(
   (config) => {
-    config.headers['x-clientId'] = 'cmsProd_qt9up36idOpBAcrrd'
+    config.headers['x-clientId'] = 'cmsDev_qt9up36idOpBAcrrd'
     return config
   },
   (err) => {

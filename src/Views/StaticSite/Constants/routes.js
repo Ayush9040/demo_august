@@ -52,23 +52,13 @@ const Values = lazy(() => import('../Views/Volunteer/Views/values'))
 const AlumniGallery = lazy(() => import('../Views/Alumni/Views/alumni-gallery'))
 const Support = lazy(() => import('../Views/Alumni/Views/support'))
 const Facts = lazy(() => import('../Views/Facts/Views/our-facts'))
+const Shop = lazy(()=>import('../Views/Shop/Views/shop/shop'))
+const SingleProduct = lazy(()=>import('../Views/Shop/Views/single-product'))
 
-// import FAQ from '../Components/Faq'
-// import Shop from '../Views/Shop'
-// import About from '../Views/About'
-// import Alumni from '../Views/Alumni'
-// import Media from '../Views/Media'
-// import Publication from '../Views/Publication'
-// import SingleCourse from '../Views/Courses/Views/course-name'
-// import Blogs from '../Views/Blogs/index.jsx'
-// import Career from '../Views/Careers'
-// import Donations from '../Views/Donation'
-// import Facility from '../Views/Facilities'
-// import Facts from '../Views/Facts'
-// import Gift from '../Views/Gifting'
 import Authentication from '../Views/Authentication'
+import OrderHistroy from '../Views/Shop/Views/order-history'
+const SearchModal = lazy(()=>import( '../Views/SearchModal'))
 import CampaignThankYou from '../Views/LandingPage/ThankYouPage'
-import SearchModal from '../Views/SearchModal'
 // import VolunteerPage from '../Views/Volunteer'
 // import VolunteerPage from '../Views/Volunteer'
 // import Thankyou from '../Components/EnrollmentForm/ThankYou'
@@ -77,9 +67,12 @@ import SearchModal from '../Views/SearchModal'
 // import FullmoonMeditation from '../Components/Highlights/FullmoonMeditation'
 // import CorporateWorkshop from '../Components/Highlights/CorporateWorkshop'
 // import OnlineTution from '../Components/Highlights/OnlineTution'
+const AddToCart  = lazy(()=>import('../Views/Shop/Views/cart'))
+const ShippingAdd  = lazy(()=>import('../Views/Shop/Views/address'))
+const ShopThankyou  = lazy(()=>import('../Views/Shop/Views/thankyoupage'))
+
 const SingleJob = lazy(() => import('../Views/Careers/Views/single-job'))
 const VolunteerJob = lazy(() => import('../Views/Volunteer/Views/volunteerJob'))
-// import Values from '../Views/Volunteer/Views/values'
 const PrintMedia = lazy(() =>
   import('../Views/Media/Views/Print-Digital/print-media')
 )
@@ -586,15 +579,6 @@ const staticSiteRoutes = [
     routePath: '/user/*',
     name: 'Auth',
   },
-  // {
-  //   Component: Career,
-  //   path: '/careers/*',
-  //   exact: true,
-  //   id: 'statisSiteUnderCareers',
-  //   routePath: '/careers/*',
-  //   name: 'Careers',
-  // },
-  //donation
   {
     Component: DonationPage,
     path: '/donation',
@@ -672,6 +656,54 @@ const staticSiteRoutes = [
     routePath:'/campaign-thank-you',
     name:'LandingPageThankYou'
   },
+  //Shop
+  {
+    Component: Shop,
+    path: '/shop',
+    exact: true,
+    id: 'statisSiteShop',
+    routePath: '/shop',
+    name: 'Shop',
+  },
+  {
+    Component: SingleProduct,
+    path: '/shop/product/:productID',
+    exact: true,
+    id: 'statisSiteShop',
+    routePath: '/shop/product/:productID',
+    name: 'Shop',
+  },
+  {
+    Component: AddToCart,
+    path: '/shop/cart',
+    exact: true,
+    id: 'statisSiteCart',
+    routePath: '/shop/cart',
+    name: 'Cart',
+  },
+  {
+    Component: ShippingAdd,
+    path: '/shop/checkout',
+    exact: true,
+    id: 'statisSiteCheckout',
+    routePath: '/shop/checkout',
+    name: 'Checkout',
+  },
+  {
+    Component: ShopThankyou,
+    path:'/shop/thank-you',
+    exact:true,
+    id:'statisSiteShopThanks',
+    routePath:'/shop/checkout',
+    name:'ShopThanks'
+  },{
+    Component:OrderHistroy,
+    path:'/user/order/:orderId',
+    exact:true,
+    id:'statisSiteOrderHistory',
+    routePath:'/user/order/:orderId',
+    name:'OrderHistory'
+  },
   {
     Component: DescisionComp,
     path: '/:contentId',
@@ -679,9 +711,6 @@ const staticSiteRoutes = [
     id: 'statisSiteCourse',
     routePath: '/:contentId',
     name: 'singleCourse',
-    // 1. desComponent
-    // 2. Switch case
-    // render => loader => API call (Blog or course) => switch *Blog, *Course => loading stop
   },
 ]
 

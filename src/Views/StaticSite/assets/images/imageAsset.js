@@ -2534,17 +2534,23 @@ export const santaCruz = {
   details: '/Santa-cruz-images/Details.jpg',
 }
 
-
 export const nutriDiet = {
   nutriDietMain:'/nutri-diet/PHOTO-2022-11-01-12-59-38.jpg',
   nutriDietCard:'/nutri-diet/Nutri-Diet-Clinic-Post.jpg'
 }
 
+export const banner = {
+  storeMats:'/shop-banner/TYI-Store-Banners-Mats.png',
+  storeTshirts:'/shop-banner/TYI-Store-Banners-TShirts.png',
+  storeBooks:'/shop-banner/TYI-Store-Banners-Books.png'
+}
+
 export const landingPage = {
   mataji:'/Landing_page/mataji.png',
   curve1:'/Landing_page/curve1.png',
-  curve2:'/Landing_page/curve2.jpeg',
+  curve2:'/Landing_page/curve2.png',
   text:'/Landing_page/Text.png'
 }
+
 
 export default baseDomain

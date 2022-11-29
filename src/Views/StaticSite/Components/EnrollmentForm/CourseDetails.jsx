@@ -53,7 +53,7 @@ const CourseDetails = ({
           <div className="details_box">
             <div className="details_course_box">
               <div className="detail_image_box">
-                <img src={currentCourse?.image} alt={currentCourse.title} />
+                <img src={currentCourse?.image} alt={currentCourse?.title} />
               </div>
               <div className="current_duration">
                 <div>

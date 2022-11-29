@@ -111,6 +111,21 @@
     input::placeholder {
       color: #60606080;
     }
+    #react-select-3-placeholder{
+      color: rgba(96, 96, 96, 0.5019607843) !important;
+      padding-left: 1rem;
+    }
+    #react-select-5-placeholder{
+      color: rgba(96, 96, 96, 0.5019607843) !important;
+      padding-left: 1rem;
+    }
+    #react-select-7-placeholder{
+      color: rgba(96, 96, 96, 0.5019607843) !important;
+      padding-left: 1rem;
+    }
+    #react-select-5-live-region{
+      margin-left: 2rem !important;
+    }
   }
 
   small {
@@ -304,11 +319,11 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      form {
-        label {
-          width: auto;
-        }
-      }
+      // form {
+      //   label {
+      //     width: auto;
+      //   }
+      // }
       .left_grid {
         .work_flex_box {
           .worked {
