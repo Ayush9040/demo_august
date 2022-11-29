@@ -198,9 +198,8 @@ const ShippingAdd = () => {
         addressId:finalAddId
       },
     })
-    localStorage.removeItem('cart')
     const options = {
-      key: 'rzp_test_udmmUPuH3rTJe8', // Enter the Key ID generated from the Dashboard
+      key: 'rzp_live_KyhtrIyJ546bd2', // Enter the Key ID generated from the Dashboard
       amount: data.amount, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
       currency: 'INR',
       name: 'The Yoga Institute',
@@ -222,6 +221,7 @@ const ShippingAdd = () => {
             cartId:cartId,
             addressId:finalAddId
           })
+          localStorage.removeItem('cart')
           navigate('/shop/thank-you')
         }
       },
