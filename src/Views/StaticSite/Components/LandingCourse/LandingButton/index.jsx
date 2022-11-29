@@ -10,17 +10,25 @@ const LandingButton = ({
   btnAction,
   url,
 }) => {
+  console.log({ url,text })
   return (
     <div className="btn_div">
-      <Link to={ `${ url }`}>
+      { url ? 
+        <Link to={ `${ url }`}>
+          <button
+            className="global_btn"
+            style={{ background: isColor, border: btnBorder, color: textColor }}
+          >
+            <div className="global_btn_text">{text}</div>
+          </button>
+        </Link> :         
         <button
           className="global_btn"
           style={{ background: isColor, border: btnBorder, color: textColor }}
           onClick={btnAction}
         >
           <div className="global_btn_text">{text}</div>
-        </button>
-      </Link>
+        </button>}
     </div>
   )
 }

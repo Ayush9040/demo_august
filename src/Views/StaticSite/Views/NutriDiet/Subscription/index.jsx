@@ -5,8 +5,6 @@ import 'react-phone-number-input/style.css'
 import './style.scss'
 import CommonBtn from '../../../Components/commonbtn'
 import { createNutriOrder, enrollPlan, successMail } from '../Api'
-import Select from 'react-select'
-import { Country, City } from 'country-state-city'
 import { useNavigate } from 'react-router-dom'
 
 const SubcriptionForm = ({ packageName, packagePrice, closeForm }) => {
@@ -22,13 +20,12 @@ const SubcriptionForm = ({ packageName, packagePrice, closeForm }) => {
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
-    email: '',
+    emailId: '',
     city: '',
     country: '',
   })
   const [agree, setAgree] = useState(false)
   const [empty, setEmpty] = useState()
-  const [values, setValues] = useState([])
 
   const submitForm = async() => {
     const { data } = await enrollPlan({
@@ -49,7 +46,7 @@ const SubcriptionForm = ({ packageName, packagePrice, closeForm }) => {
       return 0
 
     const options = {
-      key: 'rzp_test_udmmUPuH3rTJe8', // Enter the Key ID generated from the Dashboard
+      key: 'rzp_live_KyhtrIyJ546bd2', // Enter the Key ID generated from the Dashboard
       amount: paymentOrderResponse.data.amount, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
       currency: 'INR',
       name: 'The Yoga Institute',
@@ -70,14 +67,14 @@ const SubcriptionForm = ({ packageName, packagePrice, closeForm }) => {
             data: {
               name: formData.name,
             },
-            receivers: [formData.email, 'info@theyogainstitute.org'],
+            receivers: [formData.emailId,'info@yogainstitute.org'],
           })
           navigate('/enrollment_thankyou')
         }
       },
       prefill: {
         name: formData.name,
-        email: formData.email,
+        email: formData.emailId,
         contact: formData.phone,
       },
       notes: {
@@ -95,7 +92,7 @@ const SubcriptionForm = ({ packageName, packagePrice, closeForm }) => {
   const handleEnrollment = () => {
     if (formData.name === '') {
       setEmpty(1)
-    } else if (formData.email === '') {
+    } else if (formData.emailId === '') {
       setEmpty(2)
     } else if (formData.phone === '') {
       setEmpty(3)
@@ -108,38 +105,6 @@ const SubcriptionForm = ({ packageName, packagePrice, closeForm }) => {
     } else {
       submitForm()
     }
-  }
-
-  const countries = Country.getAllCountries()
-
-  const updatedCountries = countries.map((country) => ({
-    label: country.name,
-    value: country.id,
-    ...country,
-  }))
-
-  const updatedCities = (countryId,stateId) => {
-    return City.getCitiesOfCountry(countryId,stateId).map((city) => {
-      return (
-        {
-          label: city.name,
-          value: city.id,
-          ...city,
-        })})
-  }
-
-  const customStyles = {
-    control: (base, state) => ({
-      ...base,
-      background: 'white',
-      borderRadius: '50px',
-      padding: '0.5rem 2rem',
-      borderColor: state.isFocused ? 'rgba(96, 96, 96, 0.5019607843)' : 'rgba(96, 96, 96, 0.5019607843)',
-      boxShadow: state.isFocused ? null : null,
-      '&:hover': {
-        borderColor: state.isFocused ? 'rgba(96, 96, 96, 0.5019607843)' : 'rgba(96, 96, 96, 0.5019607843)'
-      }
-    })
   }
 
   return (
@@ -180,7 +145,7 @@ const SubcriptionForm = ({ packageName, packagePrice, closeForm }) => {
             placeholder='Enter Email Address*'
             form={formData}
             setField={setFormData}
-            keyName='email'
+            keyName='emailId'
           />
           {empty === 2 && (
             <small style={{ color: 'red', marginLeft: '0' }}>
@@ -200,44 +165,24 @@ const SubcriptionForm = ({ packageName, packagePrice, closeForm }) => {
           {empty === 3 && <small> Please enter a valid phone number</small>}
         </div>
         <div className='form-field'>
-          <Select 
-            styles={customStyles}
-            id="country"
-            name="country"
-            label="country"
-            placeholder='Country'
-            className='select'
+          <InputComponent
+            type='text'
+            placeholder='Country*'
             form={formData}
             setField={setFormData}
             keyName='country'
             errorCheck={setEmpty}
-            options={updatedCountries}
-            value={values.country}
-            onChange={(value) => {
-              setValues({ country: value, city: null }, false)
-              setFormData(prev=>{ return { ...prev, country: value.name } })
-            }}
           />
           {empty === 4 && <small> Please enter your country</small>}
         </div>
         <div className='form-field'>
-          <Select 
-            styles={customStyles}
-            id="city"
-            name="city"
-            label="city"
-            placeholder='City'
-            className='select'
+          <InputComponent
+            type='text'
+            placeholder='City*'
             form={formData}
             setField={setFormData}
             keyName='city'
             errorCheck={setEmpty}
-            options={updatedCities(values?.country?.isoCode,values?.state?.isoCode)}
-            value={values.city}
-            onChange={(value) => {
-              setValues({ country: values.country, city: value }, false)
-              setFormData(prev=> { return { ...prev,city: value.name }})
-            }}
           />
           {empty === 5 && <small> Please enter your city</small>}
         </div>

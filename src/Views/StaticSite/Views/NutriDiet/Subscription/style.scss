@@ -8,41 +8,6 @@
   text-align: center;
   background: #fff;
   overflow-y: scroll;
-  .form-field{
-    .css-b62m3t-container{
-      border-radius: 50px;
-    }
-    .css-1s2u09g-control{
-      max-width: 400px;
-      padding: 0.5rem 1rem;
-      margin: 0 auto;
-      border-radius: 50px;
-    }
-    .css-14el2xx-placeholder{
-      font-size: 1.8rem;
-    }
-    .css-1f43avz-a11yText-A11yText{
-      max-width: 400px;
-    }
-    .css-319lph-ValueContainer{
-      border-radius: 50px !important;
-    }
-    .select{
-      max-width: 400px;
-      margin: 0 auto;
-      font-size: 1.8rem;
-      background-color: white;
-    }
-    .select::placeholder{
-      font-size: 1.8rem;
-    }
-    .styled__control-is-focused{
-      outline: none;
-    }
-    .react-select-3-input{
-      outline: none;
-    }
-  }
   &>h2{
     width: fit-content;
     margin: 0 auto;

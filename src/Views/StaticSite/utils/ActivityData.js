@@ -1,11 +1,10 @@
-import baseDomain, { homeAssets, nutriDiet } from '../assets/images/imageAsset'
+import baseDomain, { homeAssets,nutriDiet } from '../assets/images/imageAsset'
 
 export const activityData = [
   {
     title: 'Nutri Diet Clinic',
-    description:
-      'Get professionally supervised nutritious tailor-made diet plans as per your lifestyle. Our nutritional plans consist of well-balanced diet, homemade simple recipes and a detailed workout plan.',
-    image: `${baseDomain}${nutriDiet.nutriDietCard}`,
+    description:'Take a step for your well-being and enroll in our customized diet plans to get a holistic change in your lifestyle.',
+    image: `${baseDomain}${nutriDiet.nutriDietMain}`,
     url: '/nutri-diet',
   },
   {

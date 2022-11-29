@@ -174,12 +174,12 @@ const Personal = ({ handleEmpty1, empty, setFormData, formData, setEmpty }) => {
                   setFormData(prev=>{ return { ...prev, state: value.name } })
                 }}
               />
-              {empty === 6 && (
+              {/* {empty === 6 && (
                 <small>
                   {' '}
                   Please enter your state
                 </small>
-              )}
+              )} */}
             </div>
             <div className='form_error'>
               <Select
@@ -198,12 +198,12 @@ const Personal = ({ handleEmpty1, empty, setFormData, formData, setEmpty }) => {
                   setFormData(prev=>{ return { ...prev, city: value.name } })
                 }}
               />
-              {empty === 7 && (
+              {/* {empty === 7 && (
                 <small >
                   {' '}
                   Please enter your city
                 </small>
-              )}
+              )} */}
             </div>
           </form>
         </div>

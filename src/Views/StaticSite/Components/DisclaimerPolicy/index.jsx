@@ -198,7 +198,7 @@ const DisclaimerPolicy = ({
               },
               notes:{
                 description:currentCourse?.metaDescription,
-                formData:response['_id']
+                formData:response.data.data['_id']
               },
               theme: {
                 color: '#3399cc' // enter theme color for our website

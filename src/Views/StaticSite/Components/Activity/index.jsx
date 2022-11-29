@@ -29,7 +29,7 @@ const Activity = () => {
     dots: true,
     arrows: false,
     infinite: true,
-    speed: 1000,
+    speed: 1500,
     slidesToShow: 2,
     slidesToScroll: 2,
     autoplay: false,

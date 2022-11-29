@@ -56,10 +56,9 @@ const Shop = lazy(()=>import('../Views/Shop/Views/shop/shop'))
 const SingleProduct = lazy(()=>import('../Views/Shop/Views/single-product'))
 
 import Authentication from '../Views/Authentication'
-import LandingPage from '../Views/LandingPage'
 import OrderHistroy from '../Views/Shop/Views/order-history'
 const SearchModal = lazy(()=>import( '../Views/SearchModal'))
-
+import CampaignThankYou from '../Views/LandingPage/ThankYouPage'
 // import VolunteerPage from '../Views/Volunteer'
 // import VolunteerPage from '../Views/Volunteer'
 // import Thankyou from '../Components/EnrollmentForm/ThankYou'
@@ -93,6 +92,7 @@ const DescisionComp = lazy(() => import('../Views/DecisionComponent'))
 const LocateUs = lazy(()=> import ('../Components/LocateUs'))
 const LocateDetails = lazy(()=> import ('../Components/LocateUs/LocationDetails'))
 const NutriDiet = lazy(()=>import('../Views/NutriDiet'))
+const LandingPage = lazy( ()=>import('../Views/LandingPage'))
 const staticSiteRoutes = [
   //Home
   {
@@ -364,10 +364,10 @@ const staticSiteRoutes = [
   },
   {
     Component: TermsCondition,
-    path: '/terms-and-condition',
+    path: '/terms-and-conditions',
     exact: true,
     id: 'statisSiteUnderTermsCondition',
-    routePath: '/terms-and-condition',
+    routePath: '/terms-and-conditions',
     name: 'TermsCondition',
   },
   {
@@ -612,14 +612,6 @@ const staticSiteRoutes = [
     name: 'Job',
   },
   {
-    Component: DescisionComp,
-    path: '/:contentId',
-    exact: true,
-    id: 'statisSiteCourse',
-    routePath: '/:contentId',
-    name: 'singleCourse',
-  },
-  {
     Component: LocateUs,
     path: '/our-branches',
     exact: true,
@@ -629,11 +621,11 @@ const staticSiteRoutes = [
   },
   {
     Component: LocateDetails,
-    path: '/our-branches/:country',
+    path: '/matunga',
     exact: true,
-    id: 'statisLocateUs',
-    routePath: '/our-branches/:country',
-    name: 'LocateDetails',
+    id: 'statisMatunga',
+    routePath: '/matunga',
+    name: 'Matunga',
   },
   //Search
   {
@@ -642,6 +634,27 @@ const staticSiteRoutes = [
     id:'staticSearch',
     routePath:'/search',
     name:'Search'
+  },
+  {
+    Component:NutriDiet,
+    path:'/nutri-diet',
+    id:'staticNutriDiet',
+    routePath:'/nutri-diet',
+    name:'NutriDiet'
+  },
+  {
+    Component:LandingPage,
+    path:'/ad-campaign',
+    id:'staticLandingPage',
+    routePath:'/ad-campaign',
+    name:'LandingPage'
+  },
+  {
+    Component:CampaignThankYou,
+    path:'/campaign-thank-you',
+    id:'staticLandingPageThankYou',
+    routePath:'/campaign-thank-you',
+    name:'LandingPageThankYou'
   },
   //Shop
   {
@@ -692,19 +705,13 @@ const staticSiteRoutes = [
     name:'OrderHistory'
   },
   {
-    Component:NutriDiet,
-    path:'/nutri-diet',
-    id:'staticNutriDiet',
-    routePath:'/nutri-diet',
-    name:'NutriDiet'
+    Component: DescisionComp,
+    path: '/:contentId',
+    exact: true,
+    id: 'statisSiteCourse',
+    routePath: '/:contentId',
+    name: 'singleCourse',
   },
-  {
-    Component:LandingPage,
-    path:'/ad-campaign',
-    id:'staticLandingPage',
-    routePath:'/ad-campaign',
-    name:'LandingPage'
-  }
 ]
 
 

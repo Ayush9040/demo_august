@@ -5,6 +5,7 @@ import { cross, Search } from '../../assets/icons/icon'
 import Pagination from 'react-js-pagination'
 import './style.scss'
 import { useEffect } from 'react'
+import { cmsBaseDomain } from '../../../../Constants/appSettings'
 
 const SearchModal = ({ setIsModalOpen }) => {
   const [search, setSearch] = useState('')
@@ -18,13 +19,13 @@ const SearchModal = ({ setIsModalOpen }) => {
 
 
 
-  const searchContent = (page,limit) => {
+  const searchContent = (page=1,limit=10) => {
     if (search === '') return
     try {
       setIsLoading(true)
       axios
         .get(
-          `https://cms-dev-be.theyogainstituteonline.org/v1/misc/search/?title=${search}&page=${page}&limit=${limit}`
+          `${ cmsBaseDomain }/misc/search/?title=${search}&page=${page}&limit=${limit}`
         )
         .then((res) => {
           setContent(res.data)

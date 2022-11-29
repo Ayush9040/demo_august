@@ -49,7 +49,7 @@ const Facts = () => {
           {selectedRange?.images.map((img, idx) => {
             if (idx < 6) {
               return (
-                <div className={'grid-img-' + (idx + 1)} key={idx} >
+                <div  key={idx} className={'grid-img-' + (idx + 1)} >
                   <img src={img} alt={selectedRange.range}  />
                 </div>
               )

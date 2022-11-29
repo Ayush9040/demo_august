@@ -149,7 +149,7 @@ const OnlineTution = () => {
           </div>
           <p>
           For enquiries on home tuitions, you may SMS us (or drop a message on
-          WhatsApp) at +91-22-26122185, +91-22-26110506 or email us at
+          WhatsApp) at +91-22-26122185, +91-22-26110506, +91-7777007727 or email us at
           info@theyogainstitute.org.
           </p>
           <p>

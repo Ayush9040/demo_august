@@ -43,8 +43,8 @@
 
       .form_img_div {
         .form_img1 {
-          height: 1400px;
-          background: url('https://ecom-static-site.oss-ap-south-1.aliyuncs.com/Landing_page/curve1.png')
+          height: 1100px;
+          background: url('https://ecom-static-site.oss-ap-south-1.aliyuncs.com/Landing_page/curve1.jpg')
             no-repeat center / cover;
           & > img {
             object-fit: cover;
@@ -155,7 +155,7 @@
       }
       .border_line {
         margin-top: 14rem;
-        margin-bottom: 22rem;
+        margin-bottom: 18rem;
         .line_shadow {
           background-color: #fff;
           box-shadow: 0 -15px 15px 0 rgb(0 0 0 / 20%);
@@ -172,11 +172,6 @@
     .testimonials-section {
       padding: 5rem;
       background-color: #eee;
-      & > .slick-slider {
-        & > .slick-dots {
-          display: none !important;
-        }
-      }
       .testimonial {
         display: flex !important;
         justify-content: center;
@@ -304,6 +299,8 @@
     .interaction_div {
       padding: 2rem 8rem;
       display: flex;
+      justify-content: center;
+      align-items: center;
       .other_img {
         margin-top: 3rem;
       }
@@ -408,7 +405,7 @@
       .form-section {
         .form_img_div {
           .form_img1{
-            height: 1200px;
+            height: 750px;
           }
           .img_form {
             padding-top: 80px;
@@ -428,7 +425,10 @@
     
     & > main {
       .form-section {
-        .form_img_div{
+        .form_img_div{ .form_img1{
+          height: 1300px;
+        }
+
           .img_form{
             flex-wrap: wrap;
           }

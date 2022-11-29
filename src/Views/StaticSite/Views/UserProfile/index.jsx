@@ -24,6 +24,10 @@ const UserProfile = () => {
     menuColor: 'black',
     menuItems: [],
   }
+  useEffect(()=>{
+    if(isLoggedIn) return
+    navigate('/user/sign-in')
+  },[])
 
 
 
