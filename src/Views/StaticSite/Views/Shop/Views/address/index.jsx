@@ -11,6 +11,7 @@ import {
   createOrder,
   getCoupon,
   orderCallback,
+  getActiveCart,
 } from '../../Shop.api'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
@@ -61,11 +62,14 @@ const ShippingAdd = () => {
 
 
   const { location } = useSelector(state=>state.location)
+  const { activCartId } = useSelector(state=>state.shop)
 
   const fetchAddress = async() => {
     const { data } = await getAddress(user?.data?._id)
     setPrevAdd(data.data)
   }
+
+  
 
 
 
@@ -106,17 +110,26 @@ const ShippingAdd = () => {
   }
 
   const postCart = async(finalCart) => {
-    try {
-      const { data } = await createCart({
-        items: finalCart,
-      })
+    if(activCartId){
+      const { data } = getActiveCart()
       displayCart(data.data.items)
       setCartId(data.data._id)
       setTotalAmount(data.data.totalPrice)
       setShippingAmt(data.data.shippingAmount)
       return data.data._id
-    } catch (err) {
-      console.log(err)
+    }else{
+      try {
+        const { data } = await createCart({
+          items: finalCart,
+        })
+        displayCart(data.data.items)
+        setCartId(data.data._id)
+        setTotalAmount(data.data.totalPrice)
+        setShippingAmt(data.data.shippingAmount)
+        return data.data._id
+      } catch (err) {
+        console.log(err)
+      }
     }
   }
 
