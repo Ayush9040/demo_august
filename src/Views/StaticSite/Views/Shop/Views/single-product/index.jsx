@@ -1,7 +1,7 @@
-import React, { Fragment, useEffect, useState, useRef } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 import './style.scss'
 import InnerNavComponent from '../../../../Components/InnerNavComponent'
-import ShopCard from '../../../../Components/ShopCard/ShopCard'
+//import ShopCard from '../../../../Components/ShopCard/ShopCard'
 import CommonBtn from '../../../../Components/commonbtn'
 import { fetchSingleProduct, updateCart, createCart } from '../../Shop.api'
 import { useParams } from 'react-router-dom'
@@ -123,7 +123,7 @@ const SingleProduct = () => {
               />
             </div>
           </div>
-          <div className='other_similar_product'>
+          {/* <div className='other_similar_product'>
             <div className='similar_prod'> Other Similar Product:</div>
             <div className='similar_prod_card'>
               {productDetail?.similarProducts?.map((item, i) => (
@@ -132,7 +132,7 @@ const SingleProduct = () => {
                 </Fragment>
               ))}
             </div>
-          </div>
+          </div> */}
           <div className='view_more_btn'>
             <CommonBtn text='View More' />
           </div>

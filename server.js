@@ -25,7 +25,7 @@ const options = {
 
 const getBlogsMeta = async( slug )=>{
   try{
-    const res = await axios.get(`https://www.cms-dev-be.theyogainstituteonline.org/v1/post/${ slug }`)
+    const res = await axios.get(`https://www.cms-prod-be.theyogainstitute.org/v1/post/${ slug }`)
     let data =  res.data.data.meta
 
     let headers = {
