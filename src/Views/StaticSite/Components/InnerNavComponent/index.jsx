@@ -72,6 +72,11 @@ const InnerNavComponent = ({ abc }) => {
           </div>
           <div className="main-logo" id={`${ abc.color }`} >
             <span className='mobile-search' onClick={ ()=>{setIsModalOpen(true)} } >{ abc.color === 'orange' ? Search:abc.color === 'black' ? SearchBlack : SearchWhite }</span>
+            {abc.title==='Shop'
+              ?    <Link className='mobile-search mobile-cart' style={{ marginLeft:'15px' }} to='/shop/cart'>        
+                { Cart }  <span  style={{ color:'#CA4625' }} className='cart-count' >{ cartItems }</span></Link>
+              :null
+            }
             <Link to="/">
               {abc.color === 'orange'
                 ? legacy1
