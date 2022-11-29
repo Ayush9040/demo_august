@@ -2510,6 +2510,8 @@ export const printMediaAssest = {
   printMediaAssest933:'/print_media/new2022/Mid-day-19-nov-2022 .jpg',
   printMediaAssest934:'/print_media/new2022/Navbharat-Times-Epaper-21st-November-2022 .jpg',
   printMediaAssest935:'/print_media/new2022/Navbharat Times Epaper - 20th November 2022.jpg',
+  printMediaAssest936:'/print_media/new2022/Navbharat-Times-Epaper-27th-November-2022.jpg',
+  printMediaAssest937:'/print_media/new2022/Navbharat-Times-Epaper-28th-November-2022.jpg',
 }
 
 export const locateAsset ={

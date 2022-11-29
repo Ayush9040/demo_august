@@ -4243,6 +4243,16 @@ const printMedia = [
     year:'2022',
     media:[
       {
+        img:`${ baseDomain }${ printMediaAssest.printMediaAssest936 }`,
+        url:'https://epaper.navbharattimes.com/imageview_7744_78256_4_16_27-11-2022_4_i_1_sf.html',
+        alt:'nbt-november13-2022'
+      },
+      {
+        img:`${ baseDomain }${ printMediaAssest.printMediaAssest937 }`,
+        url:'	https://epaper.navbharattimes.com/imageview_7894_66581_4_16_28-11-2022_8_i_1_sf.html',
+        alt:'nbt-november13-2022'
+      },
+      {
         img:`${ baseDomain }${ printMediaAssest.printMediaAssest930 }`,
         url:'https://epaper.freepressjournal.in/3614878/Free-Press-Mumbai-Epaper-Edition/13-Nov-2022#page/17/2',
         alt:'nbt-november13-2022'
