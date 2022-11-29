@@ -1,7 +1,7 @@
 import axios from 'axios'
-import { ecomBaseDomin } from '../../../../Constants/appSettings'
+import { ecomBaseDomain } from '../../../../Constants/appSettings'
 
 export const getLocationAPI = () => {
-  return axios.get(`${ ecomBaseDomin }/payment/ip`)
+  return axios.get(`${ ecomBaseDomain }/payment/ip`)
 }
 

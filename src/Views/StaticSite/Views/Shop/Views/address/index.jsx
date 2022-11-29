@@ -242,6 +242,7 @@ const ShippingAdd = () => {
     if (!usePrevAddress) {
       if (formData.name === '') return setEmpty(1)
       if (formData.add1 === '') return setEmpty(2)
+      if (formData.add2 === '') return setEmpty(7)
       if (formData.city === '') return setEmpty(3)
       if (formData.state === '') return setEmpty(4)
       if (formData.country === '') return setEmpty(5)
@@ -295,14 +296,14 @@ const ShippingAdd = () => {
                 <div className='form_error'>
                   <InputComponent
                     type='text'
-                    placeholder='Address Line 2'
+                    placeholder='Address Line 2*'
                     form={formData}
                     setField={setFormData}
                     keyName='add2'
                     blocked={addresId ? true : false}
-                    // errorCheck={setEmpty}
+                    errorCheck={setEmpty}
                   />
-                  {/* {empty === 3 && <small> Please enter your name</small>} */}
+                  {empty === 7 && <small> Please enter address</small>}
                 </div>
                 <div className='form_error'>
                   <InputComponent
