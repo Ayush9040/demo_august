@@ -27,12 +27,14 @@ const AddToCart = () => {
   const dispatch = useDispatch()
 
   let { isLoggedIn } = useSelector(item=>item.auth)
-  let { activeCartId } = useSelector(item=>item.shop)
+  let { activeCartId,cart } = useSelector(item=>item.shop)
   let { location } = useSelector(item=>item.location)
 
-  const displayCart =async( products=[] )=>{
+  const displayCart =async( )=>{
+
     setIsLoading(true)
     const arr =[]
+    const products = cart.length >0 ? cart : JSON.parse(localStorage.getItem('cart'))
     for await (let item  of products){
       const { data } = await fetchSingleProduct(item.productId)
       arr.push({ ...data.data,quantity:item.quantity })
@@ -47,10 +49,8 @@ const AddToCart = () => {
  
 
   useEffect(() => {
-    const cartItems = localStorage.getItem('cart')
-    cartItems ? displayCart(JSON.parse(cartItems)):displayCart([])
-    dispatch(updateCartData(cartItems ? JSON.parse(cartItems) : []))
-  }, [ ])
+    displayCart()
+  }, [ activeCartId ])
 
   const updateQuantity = async( quantity,item )=>{
     const cartItems = localStorage.getItem('cart')
@@ -62,9 +62,9 @@ const AddToCart = () => {
     })
     await localStorage.setItem('cart',JSON.stringify(prevCart))
     dispatch(updateCartData(prevCart))
-    isLoggedIn && activeCartId &&  updateCart(activeCartId,{ items:JSON.parse(localStorage.getItem('cart')) })
+    isLoggedIn && activeCartId &&  await updateCart(activeCartId,{ items:JSON.parse(localStorage.getItem('cart')) })
     dispatch(getActiveCartData())
-    window.location.reload()
+    // window.location.reload()
   }
 
   const deleteProduct = async(idx) => {
@@ -76,7 +76,7 @@ const AddToCart = () => {
       JSON.stringify(removeProduct.filter((item) => item.productId !== idx))
     )
     dispatch(updateCartData(removeProduct.filter((item) => item.productId !== idx)))
-    isLoggedIn && activeCartId &&  updateCart(activeCartId,{ items:JSON.parse(localStorage.getItem('cart')) })
+    isLoggedIn && activeCartId && await updateCart(activeCartId,{ items:JSON.parse(localStorage.getItem('cart')) })
     dispatch(getActiveCartData())
     
     toast.error('Item Removed from cart!', {

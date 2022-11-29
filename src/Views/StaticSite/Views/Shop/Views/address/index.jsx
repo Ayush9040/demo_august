@@ -107,28 +107,28 @@ const ShippingAdd = () => {
     return discount
   }
 
-  const postCart = async(finalCart) => {
-    if(activCartId){
-      const { data } = getActiveCart()
+  const postCart = async() => {
+
+    try {
+      const { data } = await createCart({
+        items: JSON.parse(localStorage.getItem('cart')),
+      })
       displayCart(data.data.items)
       setCartId(data.data._id)
       setTotalAmount(data.data.totalPrice)
       setShippingAmt(data.data.shippingAmount)
       return data.data._id
-    }else{
-      try {
-        const { data } = await createCart({
-          items: finalCart,
-        })
-        displayCart(data.data.items)
-        setCartId(data.data._id)
-        setTotalAmount(data.data.totalPrice)
-        setShippingAmt(data.data.shippingAmount)
-        return data.data._id
-      } catch (err) {
-        console.log(err)
-      }
+    } catch (err) {
+      const { data } = await getActiveCart()
+      displayCart(data.data.items.map((item) => {
+        return { productId: item.productId._id, quantity: item.quantity }
+      }))
+      setCartId(data.data._id)
+      setTotalAmount(data.data.totalPrice)
+      setShippingAmt(data.data.shippingAmount)
+      return data.data._id
     }
+
   }
 
 
@@ -254,9 +254,9 @@ const ShippingAdd = () => {
   useEffect(() => {
     fetchAddress()
     const cartItems = localStorage.getItem('cart')
-    postCart(JSON.parse(cartItems))
+    postCart()
     dispatch(updateCartData(JSON.parse(cartItems)))
-  }, [user?.data])
+  }, [user?.data, activCartId ])
 
   return (
     <>
@@ -417,7 +417,7 @@ const ShippingAdd = () => {
                     </div>
                   </div>
                 ))}
-              <div className='discount'>
+              <div  style={{ display:'none' }}  className='discount'>
                 <form>
                   <div className='form_error'>
                     <InputComponent

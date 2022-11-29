@@ -43,7 +43,7 @@ export const getCartById = ( cartId )=>{
 }
 
 export const createOrder = (description)=>{
-  return axios.post(`${ ecomBaseDomain }/payment/order/`, description)
+  return axios.post(`${ ecomBaseDomain }/payment/cart/`, description)
 }
 
 export const orderCallback = (payload)=>{
@@ -51,7 +51,7 @@ export const orderCallback = (payload)=>{
 }
 
 export const getCoupon = ( coupon )=>{
-  return axios.get(`${ ecomBaseDomain }/coupon/search/${ coupon }`)
+  return axios.get(`${ ecomBaseDomain }/coupon/search/?couponCode=${ coupon }&couponType=CART`)
 }
 
 export const searchProduct = ( searchValue )=>{

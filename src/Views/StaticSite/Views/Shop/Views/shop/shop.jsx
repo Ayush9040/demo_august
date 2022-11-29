@@ -95,11 +95,11 @@ const Shop = () => {
   },[ categories ])
 
 
-  const addCart = (idx, e) => {
+  const addCart = async(idx, e) => {
     e.stopPropagation()
     localStorage.setItem('cart',JSON.stringify(updateLocalCart(idx)))
     dispatch(updateCartData(JSON.parse(localStorage.getItem('cart'))))
-    isLoggedIn && activeCartId ?  updateCart(activeCartId,{ items:JSON.parse(localStorage.getItem('cart')) }) : createCart({ items:JSON.parse(localStorage.getItem('cart')) })
+    isLoggedIn && activeCartId ?  await updateCart(activeCartId,{ items:JSON.parse(localStorage.getItem('cart')) }) : await createCart({ items:JSON.parse(localStorage.getItem('cart')) })
     dispatch(getActiveCartData())
     toast.success('Item Added to Cart Successfully!', {
       position: 'top-right',
@@ -113,11 +113,11 @@ const Shop = () => {
     })
 
   }
-  const buyProduct = (idx,e) => {
+  const buyProduct = async(idx,e) => {
     e.stopPropagation()
     localStorage.setItem('cart',JSON.stringify(updateLocalCart(idx)))
     dispatch(updateCartData(JSON.parse(localStorage.getItem('cart'))))
-    isLoggedIn && activeCartId ?  updateCart(activeCartId,{ items:JSON.parse(localStorage.getItem('cart')) }) : createCart({ items:JSON.parse(localStorage.getItem('cart')) })
+    isLoggedIn && activeCartId ?  await updateCart(activeCartId,{ items:JSON.parse(localStorage.getItem('cart')) }) : await createCart({ items:JSON.parse(localStorage.getItem('cart')) })
     dispatch(getActiveCartData())
     navigate('/shop/cart')
   }
