@@ -7379,7 +7379,7 @@ const camps = {
         templateNonResidential: 'CAMP_FOR_7_DAYS_HEALTH',
       },
     },
-    dates: ['12th Nov to 18th Nov 2022'],
+    dates: ['14th Jan to 20th Jan 2023','11th Mar to 17th Mar 2023','13th May to 19th May 2023','8th Jul to 14th Jul 2023','9th Sep to 15th Sep 2023','11th Nov to 17th Nov 2023',],
     online: false,
     onCampus: true,
     nonResidential: true,
@@ -7388,7 +7388,7 @@ const camps = {
     mostPopular: true,
     rating: 5,
     colorCode: '#EDBE66',
-    timing: 'Saturday : 8:30 am – 7:00 pm, Sunday to Thursday: 7:00 am – 7:00 pm, Friday: 7:00 am – 1:00 pm ' ,
+    timing: 'Saturday to Friday : 7:00 am - 7:00 pm (IST)' ,
     fees: {
       onlineFee: 0,
       offlineFee: { residentialFee: 12000, nonResidentialFee: 8000 },
@@ -7550,10 +7550,7 @@ const camps = {
         content: {
           title: 'Timings',
           text: [
-            'Saturday : 8:30 am – 7:00 pm',
-            'Sunday to Thursday: 7:00 am – 7:00 pm',
-            'Friday: 7:00 am – 1:00 pm',
-          ],
+            'Saturday to Friday : 7:00 am - 7:00 pm (IST)'],
         },
       },
       {
@@ -7740,6 +7737,18 @@ const camps = {
     dates: [
       '26th Nov to 2nd Dec 2022',
       '24th Dec to 30th Dec 2022',
+      '28th Jan to 3rd Feb 2023', 
+      '25th Feb to 3rd Mar 2023',
+      '25th Mar to 31st Mar 2023',
+      '22nd Apr to 28th Apr 2023',
+      '27th May to 2nd Jun 2023',
+      '24th Jun to 30th Jun 2023',
+      '22nd Jul to 28th Jul 2023',
+      '26th Aug to 1st Sep 2023',
+      '23rd Sep to 29th Sep 2023',
+      '28th Oct to 3rd Nov 2023',
+      '25th Nov to 1st Dec 2023',
+      '23rd Dec to 29th Dec 2023'
     ],
     online: false,
     onCampus: true,
@@ -7749,7 +7758,7 @@ const camps = {
     mostPopular: true,
     rating: 5,
     colorCode: '#EDBE66',
-    timing: 'Saturday : 8:30 am – 7:00 pm, Sunday to Thursday: 7:00 am – 7:00 pm, Friday: 7:00 am – 1:00 pm ',
+    timing: 'Saturday to Friday : 7:00 am - 7:00 pm (IST)',
     fees: {
       onlineFee: 0,
       offlineFee: { residentialFee: 12000, nonResidentialFee: 8000 },
@@ -7911,9 +7920,7 @@ const camps = {
         content: {
           title: 'Timings',
           text: [
-            'Saturday : 8:30 am – 7:00 pm',
-            'Sunday to Thursday: 7:00 am – 7:00 pm',
-            'Friday: 7:00 am – 1:00 pm',
+            'Saturday to Friday : 7:00 am - 7:00 pm (IST)'
           ],
         },
       },
