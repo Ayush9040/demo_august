@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { useEffect } from 'react'
+import { useSelector } from 'react-redux'
 import { useParams } from 'react-router-dom'
 import InnerNavComponent from '../../../../Components/InnerNavComponent'
 import { getOrderByOrderId, getCartById,fetchSingleProduct  } from '../../Shop.api'
@@ -18,6 +19,7 @@ const OrderHistroy = () => {
   const [orderDetails,setOrderDetails] = useState() 
   const [ totalAmount, setTotalAmount] = useState()
   const [ products,setProducts ] = useState([])
+  const { location } = useSelector(state=>state.location)
 
 
   const getOrderItems = async(products) => {
@@ -54,7 +56,7 @@ const OrderHistroy = () => {
   return (
     <>
       <InnerNavComponent abc={order} />
-      { order.deliveryStatus!=='DELIVERED' ? <InProgress orderDetails={ orderDetails } products={ products } totalAmount={ totalAmount }  /> : <Delivered orderDetails={ orderDetails } products={ products } totalAmount={ totalAmount } /> }
+      { order.deliveryStatus!=='DELIVERED' ? <InProgress orderDetails={ orderDetails } products={ products } totalAmount={ totalAmount } currency={ location==='IN' ? 'INR':'USD' }   /> : <Delivered orderDetails={ orderDetails } products={ products } totalAmount={ totalAmount } currency={ location==='IN' ? 'INR':'USD' } /> }
     </>
   )
 }

@@ -2532,4 +2532,12 @@ export const banner = {
   storeBooks:'/shop-banner/TYI-Store-Banners-Books.png'
 }
 
+export const landingPage = {
+  mataji:'/Landing_page/mataji.png',
+  curve1:'/Landing_page/curve1.png',
+  curve2:'/Landing_page/curve2.png',
+  text:'/Landing_page/Text.png'
+}
+
+
 export default baseDomain

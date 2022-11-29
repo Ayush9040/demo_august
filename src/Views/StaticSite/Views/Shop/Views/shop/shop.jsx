@@ -27,7 +27,6 @@ const Shop = () => {
   const { activeCartId } = useSelector(state=>state.shop)
   const { isLoggedIn } = useSelector(state=>state.auth)
   const [Params] = useSearchParams()
-
   const [products, setProducts] = useState([])
   const [pagination, setPagination] = useState({ page: 1, limit: 12 })
   const [count, setCount] = useState(0)
@@ -35,7 +34,7 @@ const Shop = () => {
   const [ modal,setModal ] = useState(false)
   const [search,setSearch] =useState('')
   const [searched,isSearched] = useState(false)
-
+  const { location } = useSelector(state=>state.location)
   
 
   const fetchAllCategories = async()=>{
@@ -181,10 +180,11 @@ const Shop = () => {
                 <Fragment key={i}>
                   <ShopCard
                     title={item.name}
-                    price={item.price}
+                    price={location==='IN' ?item.price : item.priceInternational}
                     thumbnail={item.productThumbnail}
                     productId={item._id}
                     addCart={addCart}
+                    currency = { location==='IN'?'INR':'USD' }
                     buyProduct={buyProduct}
                   />
                   <ToastContainer
@@ -208,10 +208,11 @@ const Shop = () => {
                   <Fragment key={i}>
                     <ShopCard
                       title={item.name}
-                      price={item.price}
+                      price={ location==='IN' ?item.price : item.priceInternational }
                       thumbnail={item.productThumbnail}
                       productId={item._id}
                       addCart={addCart}
+                      currency = { location==='IN'?'INR':'USD' }
                       buyProduct={buyProduct}
                     />
                     <ToastContainer

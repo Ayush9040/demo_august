@@ -69,8 +69,6 @@ const ShippingAdd = () => {
     setPrevAdd(data.data)
   }
 
-  
-
 
 
   const displayCart = async(products) => {

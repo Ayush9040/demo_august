@@ -1,11 +1,62 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './formstyles.scss'
 import InputComponent from '../InputComponent'
 import 'react-phone-number-input/style.css'
 import PhoneInput from 'react-phone-number-input'
+import Select from 'react-select'
+import { Country, State, City } from 'country-state-city'
 
 const Personal = ({ handleEmpty1, empty, setFormData, formData, setEmpty }) => {
   //const today = new Date().toISOString().split('T')[0]
+  const [values, setValues] = useState([])
+  const countries = Country.getAllCountries()
+
+  const updatedCountries = countries.map((country) => ({
+    label: country.name,
+    value: country.id,
+    ...country,
+  }))
+
+  const updatedStates = (countryId) =>{
+    return State.getStatesOfCountry(countryId).map((state) => (
+      {
+        label: state.name,
+        value: state.id,
+        ...state,
+      }))
+  }
+
+  const updatedCities = (countryId,stateId) => {
+    // console.log(countryId,stateId,'stateId')
+    return City.getCitiesOfState(countryId,stateId).map((city) => {
+      // console.log(city,'city')
+      return (
+        {
+          label: city.name,
+          value: city.id,
+          ...city,
+        })})
+  }
+  const customStyles = {
+    control: (base, state) => ({
+      ...base,
+      background: 'white',
+      borderRadius: '50px',
+      width: '100%',
+      padding: '0.25rem 2rem',
+      marginTop: '2rem',
+      marginLeft: '2rem',
+      // Overwrittes the different states of border
+      borderColor: state.isFocused ? 'rgba(96, 96, 96, 0.5019607843)' : 'rgba(96, 96, 96, 0.5019607843)',
+      // Removes weird border around container
+      boxShadow: state.isFocused ? null : null,
+      '&:hover': {
+        // Overwrittes the different states of border
+        borderColor: state.isFocused ? 'rgba(96, 96, 96, 0.5019607843)' : 'rgba(96, 96, 96, 0.5019607843)'
+      }
+    })
+  }
+
 
   return (
     <div className="main_div">
@@ -82,30 +133,46 @@ const Personal = ({ handleEmpty1, empty, setFormData, formData, setEmpty }) => {
               />
             </div>
             <div className='form_error'>
-              <InputComponent
-                type="text"
-                placeholder="Country*"
+              <Select
+                styles={customStyles}
+                id="country"
+                name="country"
+                placeholder='Country'
+                label="country"
+                className='select'
                 form={formData}
                 setField={setFormData}
                 keyName="country"
                 errorCheck={setEmpty}
+                options={updatedCountries}
+                value={values.country}
+                onChange={(value) => {
+                  setValues({ country: value, state: null, city: null }, false)
+                  setFormData(prev=>{ return { ...prev, country: value.name } })
+                }}
               />
               {empty === 5 && (
                 <small>
-                  {' '}
                   Please enter your country
                 </small>
               )}
             </div>
             <div className='form_error'>
-              {' '}
-              <InputComponent
-                type="text"
-                placeholder="State*"
+              <Select
+                styles={customStyles}
+                id="state"
+                name="state"
+                placeholder='State'
                 form={formData}
                 setField={setFormData}
                 keyName="state"
                 errorCheck={setEmpty}
+                options={updatedStates(values.country?.isoCode)}
+                value={values.state}
+                onChange={(value) => {
+                  setValues({ country: values.country, state: value, city: null }, false)
+                  setFormData(prev=>{ return { ...prev, state: value.name } })
+                }}
               />
               {empty === 6 && (
                 <small>
@@ -115,13 +182,21 @@ const Personal = ({ handleEmpty1, empty, setFormData, formData, setEmpty }) => {
               )}
             </div>
             <div className='form_error'>
-              <InputComponent
-                type="text"
-                placeholder="City*"
+              <Select
+                styles={customStyles}
+                id="city"
+                name="city"
+                placeholder='City'
                 form={formData}
                 setField={setFormData}
                 keyName="city"
                 errorCheck={setEmpty}
+                options={updatedCities(values?.country?.isoCode,values?.state?.isoCode)}
+                value={values.city}
+                onChange={(value) => {
+                  setValues({ country: values.country, state: values.state, city: value }, false)
+                  setFormData(prev=>{ return { ...prev, city: value.name } })
+                }}
               />
               {empty === 7 && (
                 <small >

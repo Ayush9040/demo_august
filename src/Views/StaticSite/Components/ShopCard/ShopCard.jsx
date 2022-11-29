@@ -2,14 +2,14 @@ import React from 'react'
 import './styles.scss'
 import { CartButton } from '../../assets/icons/icon'
 import { useNavigate } from 'react-router-dom'
-
 const ShopCard = ({
   title = 'Yoga chakra Mat Balance your mind',
   price = '395',
   thumbnail = 'https://cdn.pixabay.com/photo/2016/04/19/13/39/store-1338629_1280.jpg',
   productId,
   addCart,
-  buyProduct
+  buyProduct,
+  currency
 }) => {
   let colorA = '#CE7780'
   let colorB = '#9A565B'
@@ -37,7 +37,7 @@ const ShopCard = ({
         </div>
         <div className="price-container">
           <p className="text-white">
-          ₹ {price}
+            { currency==='INR'? `₹ ${price}`:`$ ${price}`}
           </p>
           <div>
             <button type="button" className="cart-button" onClick={(e)=>(addCart(productId,e))}>

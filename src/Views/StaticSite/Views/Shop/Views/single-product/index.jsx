@@ -30,7 +30,7 @@ const SingleProduct = () => {
   const [thumbnail, setThumbnail] = useState()
   const [productImages, setProductImages] = useState([])
   const navigate = useNavigate()
-
+  const { location } = useSelector(state=>state.location)
   const getSingleProducts = async() => {
     const { data } = await fetchSingleProduct(productID)
     setProductDetail(data.data)
@@ -82,14 +82,14 @@ const SingleProduct = () => {
   return (
     <div className='single_product_div'>
       <InnerNavComponent abc={singleProduct} />
-      <div className='product_section'>
-        <div className='product_background'>
-          <div className='single_prod_bg'>
-            <div className='price_prod_div'>
-              <div className='price_div'>
-                <div className='product_details'>{productDetail?.name}</div>
-                <div className='product_details'>₹ {productDetail?.price}</div>
-                <div className='prod_desc'>{productDetail?.description}</div>
+      <div className="product_section">
+        <div className="product_background">
+          <div className="single_prod_bg">
+            <div className="price_prod_div">
+              <div className="price_div">
+                <div className="product_details">{productDetail?.name}</div>
+                <div className="product_details">{ location==='IN' ? `₹${productDetail?.price}` : `$${ productDetail?.priceInternational }`}</div>
+                <div className="prod_desc">{productDetail?.description}</div>
               </div>
 
               <div className='product_img_div'>
