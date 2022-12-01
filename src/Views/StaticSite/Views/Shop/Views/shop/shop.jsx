@@ -99,7 +99,7 @@ const Shop = () => {
     e.stopPropagation()
     localStorage.setItem('cart',JSON.stringify(updateLocalCart(idx)))
     dispatch(updateCartData(JSON.parse(localStorage.getItem('cart'))))
-    isLoggedIn && activeCartId ?  await updateCart(activeCartId,{ items:JSON.parse(localStorage.getItem('cart')) }) : await createCart({ items:JSON.parse(localStorage.getItem('cart')) })
+    isLoggedIn ? activeCartId ?  await updateCart(activeCartId,{ items:JSON.parse(localStorage.getItem('cart')) }) : await createCart({ items:JSON.parse(localStorage.getItem('cart')) }):null
     dispatch(getActiveCartData())
     toast.success('Item Added to Cart Successfully!', {
       position: 'top-right',
@@ -117,7 +117,7 @@ const Shop = () => {
     e.stopPropagation()
     localStorage.setItem('cart',JSON.stringify(updateLocalCart(idx)))
     dispatch(updateCartData(JSON.parse(localStorage.getItem('cart'))))
-    isLoggedIn && activeCartId ?  await updateCart(activeCartId,{ items:JSON.parse(localStorage.getItem('cart')) }) : await createCart({ items:JSON.parse(localStorage.getItem('cart')) })
+    isLoggedIn ? activeCartId ?  await updateCart(activeCartId,{ items:JSON.parse(localStorage.getItem('cart')) }) : await createCart({ items:JSON.parse(localStorage.getItem('cart')) }):null
     dispatch(getActiveCartData())
     navigate('/shop/cart')
   }

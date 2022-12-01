@@ -64,7 +64,7 @@ const AddToCart = () => {
     dispatch(updateCartData(prevCart))
     isLoggedIn && activeCartId &&  await updateCart(activeCartId,{ items:JSON.parse(localStorage.getItem('cart')) })
     dispatch(getActiveCartData())
-    // window.location.reload()
+    window.location.reload()
   }
 
   const deleteProduct = async(idx) => {
@@ -90,6 +90,7 @@ const AddToCart = () => {
       theme: 'colored',
       icon:false
     })
+    window.location.reload()
   }
 
   const getTotal = ()=>{

@@ -30,7 +30,7 @@ export const shopReducer = (state = initialState, action) => {
     return {
       ...state,
       isLoading: false,
-      cart: [],
+      cart: JSON.parse(localStorage.getItem('cart')) || [],
       error: true,
     }
   default:

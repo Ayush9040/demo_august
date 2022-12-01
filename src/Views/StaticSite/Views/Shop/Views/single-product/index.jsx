@@ -46,11 +46,11 @@ const SingleProduct = () => {
   const addCart = (idx) => {
     localStorage.setItem('cart', JSON.stringify(updateLocalCart(idx)))
     dispatch(updateCartData(JSON.parse(localStorage.getItem('cart'))))
-    isLoggedIn && activeCartId
+    isLoggedIn ? activeCartId
       ? updateCart(activeCartId, {
         items: JSON.parse(localStorage.getItem('cart')),
       })
-      : createCart({ items: JSON.parse(localStorage.getItem('cart')) })
+      : createCart({ items: JSON.parse(localStorage.getItem('cart')) }):null
     dispatch(getActiveCartData())
     toast.success('Item Added to Cart Successfully!', {
       position: 'top-right',
@@ -70,11 +70,11 @@ const SingleProduct = () => {
       JSON.stringify(updateLocalCart(productDetail?._id))
     )
     dispatch(updateCartData(JSON.parse(localStorage.getItem('cart'))))
-    isLoggedIn && activeCartId
+    isLoggedIn ? activeCartId
       ? updateCart(activeCartId, {
         items: JSON.parse(localStorage.getItem('cart')),
       })
-      : createCart({ items: JSON.parse(localStorage.getItem('cart')) })
+      : createCart({ items: JSON.parse(localStorage.getItem('cart')) }):null
     dispatch(getActiveCartData())
     navigate('/shop/cart')
   }
