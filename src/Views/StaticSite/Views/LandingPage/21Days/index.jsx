@@ -104,9 +104,12 @@ const LandingPageNew = () => {
           <div className="bg_img_21">
             <div className="img_form_21">
               <div className="form_text">
-                <p>BUILD HEALTHY HABITS</p>
-                <p>IN JUST 21 DAYS!</p>
-                <p> LEARN FROM THE WORLDS OLDEST ORGANISED YOGA CENTRE</p>
+                <div className="main_heading1">BUILD HEALTHY </div>
+                <div className="main_heading1">HABITS</div>
+                <div className="main_heading2">IN JUST 21 DAYS!</div>
+                <div className="main_heading1"> LEARN FROM THE WORLDS </div>
+                <div className="main_heading1">OLDEST ORGANISED</div>
+                <div className="main_heading1">YOGA CENTRE</div>
               </div>
               <div className="form-cta_21">
                 <form>
@@ -275,9 +278,8 @@ const LandingPageNew = () => {
         <section className="section_3">
           <div className="int_img_text21">
             <div className="int_text21">
-              <div className="title_21">
-                Special Interaction with Dr. Hansaji Yogendra
-              </div>
+              <div className="title_21">Special Interaction with</div>
+              <div className="title_21">Dr. Hansaji Yogendra </div>
               <div className="subtitle_21">
                 Imbibe wisdom and get solutions to your problems by the
                 legendary Yoga Guru Dr. Hansaji Yogendra.
