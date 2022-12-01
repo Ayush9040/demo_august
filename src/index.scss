@@ -1,9 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+@font-face {
+  font-family: "hero";
+  src: url("./Views/StaticSite/assets/font/HeroLight-Light(1).woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "bebas-neue";
+  src: url("./Views/StaticSite/assets/font/bebas_neue/BebasNeue-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "futura";
+  src: url("./Views/StaticSite/assets/font/FuturaStd-Medium.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 :root {
   --primary-color: #ebb38a;
   --brick-red: #ca4625;
   --brick-red-1: #bc4f31;
   --ocean-blue: #a2c8d6;
+  --hero : hero;
+  --bebas-neue: bebas-neue;
+  --futura: futura;
+
 }
 .wa-chat-box-poweredby{
   display: none;
