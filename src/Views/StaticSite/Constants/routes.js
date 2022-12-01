@@ -29,7 +29,7 @@ const FullmoonMeditation = lazy(() =>
 const CorporateWorkshop = lazy(() =>
   import('../Components/Highlights/CorporateWorkshop')
 )
-const OnlineTution = lazy(() => import('../Components/Highlights/OnlineTution'))
+const OnlineTution = lazy(() => import('../Views/HomeTuitions/Tutions'))
 const AboutUs = lazy(() => import('../Views/About/Views/overview'))
 const OurLegacy = lazy(() => import('../Views/About/Views/our-legacy'))
 const Blessings = lazy(() => import('../Views/About/Views/blessings'))

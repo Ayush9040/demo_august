@@ -1,0 +1,234 @@
+.signin_container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  width: 100vw;
+  height: 100vh;
+  overflow: scroll;
+  padding-bottom: 5rem;
+  &>h1{
+    text-align: center;
+  }
+  .tutions_btn{
+    display: flex;
+    justify-content: center;
+    .global-common-btn{
+      border: 2px solid #CF5335;
+      margin-top: 2rem;
+    }
+  }
+  .signin_form {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin: 3rem;
+    small {
+      color: red;
+      font-size: 1.25rem;
+      float: right;
+      margin: -1.75rem 0 2rem 0;
+    }
+    form {
+      label {
+        width: 100%;
+        margin: 2rem;
+        input {
+          text-align: left;
+        }
+      }
+    }
+    .left_grid {
+      width: 85%;
+      .form-field {
+        input[type=number]::-webkit-inner-spin-button, 
+        input[type=number]::-webkit-outer-spin-button { 
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            margin: 0; 
+        }
+        .css-14el2xx-placeholder {
+          text-align: left;
+          font-size: 1.8rem;
+          padding: 0.5rem 2rem;
+          color: #606060;
+        }
+        .css-8jo54h-control {
+          padding: 0;
+        }
+        // .css-319lph-ValueContainer {
+        //   padding-left: 20px;
+        // }
+        .css-6j8wv5-Input {
+          font-size: 1.8rem;
+        }
+        .css-qc6sy-singleValue{
+          font-size: 1.8rem;
+          padding-left: 20px;
+        }
+      }
+      .form-field > .form-content > form > label > input {
+        text-align: left;
+        color: #606060;
+      }
+    }
+    .right_grid {
+      width: 85%;
+      .personal_gender {
+        font-size: 1.8rem;
+        color: #606060;
+        display: flex;
+        align-items: center;
+      }
+      .gender {
+        display: flex;
+        margin: 2.5rem;
+        input[type='radio'] {
+          appearance: none;
+          -webkit-appearance: none;
+          border: 1px solid #d3d3d3;
+          width: 30px;
+          height: 30px;
+          content: none;
+          outline: none;
+          margin: 0;
+        }
+        input[type='radio']:checked {
+          appearance: none;
+          outline: none;
+          padding: 0;
+          content: none;
+          border: none;
+        }
+        input[type='radio']:checked::before {
+          position: absolute;
+          color: #60606080 !important;
+          content: '\00A0\2713\00A0' !important;
+          border: 1px solid #d3d3d3;
+          font-weight: bolder;
+          font-size: 24px;
+        }
+        .gender_radio {
+          display: flex;
+          align-items: center;
+          font-size: 1.8rem;
+          color: #606060;
+          padding-left: 20px;
+        }
+      }
+      .form-field {
+        input[type=number]::-webkit-inner-spin-button, 
+        input[type=number]::-webkit-outer-spin-button { 
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            margin: 0; 
+        }
+        select {
+          display: block;
+          font-weight: 400;
+          margin-left: 2rem;
+          margin-top: 20px;
+          padding: 1rem 2.5rem;
+          color: #606060;
+          width: 100%;
+          border-radius: 50px;
+          font-size: 1.8rem;
+          background-color: white;
+          text-align: left;
+          border: 1px solid #606060;
+
+          ::after {
+            width: 0;
+            height: 0;
+            border-left: 6px solid transparent;
+            border-right: 6px solid transparent;
+            border-top: 6px solid #f00;
+            position: absolute;
+            top: 40%;
+            right: 5px;
+            content: '>';
+            z-index: 98;
+            .edit-account-gender {
+              position: relative;
+              right: 1rem;
+            }
+          }
+          options {
+            color: black;
+            font-size: 2rem;
+          }
+        }
+      }
+    }
+  }
+  .home_text_box {
+    margin-left: 5.5rem;
+    width: 87%;
+  }
+  .text_area{
+    margin-top: 2rem;
+    textarea {
+      border: 1px solid #60606080;
+      border-radius: 10px;
+      padding: 17px;
+      &::placeholder {
+        color: #606060;
+        font-size: 1.8rem;
+      }
+    }
+  }
+  small {
+    color: red;
+    font-size: 1.25rem;
+    margin-left: 6rem;
+    
+  }
+ 
+}
+
+.tutions-container {
+  width: 100%;
+  text-align: center;
+}
+
+@media (max-width:768px) {
+  .signin_container{
+    .text_area{
+      display: flex;
+      justify-content: center;
+    }
+    .home_text_box{
+      width: 80%;
+      margin-left: 0;
+    }
+    .signin_form{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      form{
+        label{
+          margin: 0;
+        }
+      }
+      .left_grid{
+        .form-field{
+          .css-8jo54h-control{
+            margin-left: 0;
+          }
+        }
+      }
+      .right_grid{
+        .gender{
+          justify-content: center;
+        }
+        .form-field{
+          select{
+            margin-left: 0;
+          }
+        }
+      }
+    }
+  }
+}
