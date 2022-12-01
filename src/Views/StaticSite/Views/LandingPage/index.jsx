@@ -58,7 +58,7 @@ const LandingPage = () => {
 
   const submitForm = async() => {
     try {
-      await creatForm(formData)
+      await creatForm({ ...formData,formType: 'SOCIALMEDIAADD' })
       await successMail({
         type: 'INFO_TYI',
         HTMLTemplate: 'SOCIAL_MEDIA_ADD_CAMPAIGN_CONFIRMATION_MAIL',
