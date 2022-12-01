@@ -3,7 +3,7 @@ import { useEffect } from 'react'
 import { useSelector } from 'react-redux'
 import { useParams } from 'react-router-dom'
 import InnerNavComponent from '../../../../Components/InnerNavComponent'
-import { getOrderByOrderId, getCartById,fetchSingleProduct  } from '../../Shop.api'
+import { getOrderByOrderId, fetchSingleProduct  } from '../../Shop.api'
 import Delivered from './Components/delivered'
 import InProgress from './Components/inProgress'
 
@@ -36,15 +36,12 @@ const OrderHistroy = () => {
     setProducts(arr)
   }
 
-  const getCart = async(cartId) => {
-    const { data } = await getCartById(cartId)
-    setTotalAmount(data.data.totalPrice)
-  }
+
 
   const getOrders = async()=>{
     const { data } = await getOrderByOrderId(orderId)
     setOrderDetails(data.data)
-    getCart(data.data?.cartId)
+    setTotalAmount(data.data.cartId.totalPrice)
     getOrderItems( data.data.items )
 
   }
@@ -52,11 +49,12 @@ const OrderHistroy = () => {
   useEffect(()=>{
     getOrders()
   },[])
+  console.log(orderDetails,'order')
 
   return (
     <>
       <InnerNavComponent abc={order} />
-      { order.deliveryStatus!=='DELIVERED' ? <InProgress orderDetails={ orderDetails } products={ products } totalAmount={ totalAmount } currency={ location==='IN' ? 'INR':'USD' }   /> : <Delivered orderDetails={ orderDetails } products={ products } totalAmount={ totalAmount } currency={ location==='IN' ? 'INR':'USD' } /> }
+      { orderDetails?.items[0].deliveryStatus!=='DELIVERED'? <InProgress orderDetails={ orderDetails } products={ products } totalAmount={ totalAmount } currency={ location==='IN' ? 'INR':'USD' }   /> : <Delivered orderDetails={ orderDetails } products={ products } totalAmount={ totalAmount } currency={ location==='IN' ? 'INR':'USD' } /> }
     </>
   )
 }

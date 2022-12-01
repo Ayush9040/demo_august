@@ -1,12 +1,13 @@
-import React,{ useState } from 'react'
-import CommonBtn from '../../../../../Components/commonbtn'
+import React from 'react'
+//import CommonBtn from '../../../../../Components/commonbtn'
 import './style.scss'
 
 const Delivered = ({ orderDetails,products,totalAmount, currency }) => {
 
 
   const date = new Date( orderDetails?.createdAt )
-  const [cancel, setCancel] = useState(false)
+  //  const [cancel, setCancel] = useState(false)
+
 
   return (
     <>
@@ -39,18 +40,19 @@ const Delivered = ({ orderDetails,products,totalAmount, currency }) => {
                 <div className="order_title"><><p >{ item.name }</p><h4 style={{ textAlign:'right' }} >Quantity:{ item.quantity }</h4></></div>
               </div>
             </div>
-            <div className="track_package">
+            {/* <div className="track_package">
               <div className="request_btn" onClick={() => setCancel(item._id)}>
                 <CommonBtn text="RETURN OR REPLACE ITEMS" />
               </div>
               <div className="request_btn">
                 <CommonBtn text="REQUEST REFUND" />
               </div>
-            </div></>})}
+            </div> */}
+            </>})}
           </div>
         </div>
       </div>
-      {cancel !== false && (
+      {/* {cancel !== false && (
         <div className="order_history_div">
           <div className="order_history">
             <div className="order_placed">
@@ -74,7 +76,7 @@ const Delivered = ({ orderDetails,products,totalAmount, currency }) => {
             <div className="product_detail">
               <div className="order_detail">
                 <div className="order_img">
-                  {/* <img src={item?.productThumbnail} alt="" /> */}
+                  <img src={item?.productThumbnail} alt="" />
                 </div>
                 <div className="order_title_div">
                   <div className="order_title">name</div>
@@ -89,9 +91,9 @@ const Delivered = ({ orderDetails,products,totalAmount, currency }) => {
                 <div className="request_btn">
                   <CommonBtn text="RETURN OR REPLACE ITEMS" />
                 </div>
-                {/* <div className="request_btn" onClick={() => setCancel(true)}>
+                <div className="request_btn" onClick={() => setCancel(true)}>
                 <CommonBtn text="REQUEST CANCELLATION" />
-              </div> */}
+              </div>
               </div>
             </div>
 
@@ -107,7 +109,7 @@ const Delivered = ({ orderDetails,products,totalAmount, currency }) => {
             </div>
           </div>
         </div>
-      )}
+      )} */}
     </ >
   )
 }
