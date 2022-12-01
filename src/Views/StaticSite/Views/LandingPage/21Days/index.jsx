@@ -94,7 +94,7 @@ const LandingPageNew = () => {
         </Link>
         <div className="call-cta_21">
           <h2>
-            Call On <a href="tel:+919136668224">+91-9136668224</a>
+            Call On<a href="tel:+919136668224">+91-9136668224</a>
           </h2>
           <p>Get all your queries resolved!</p>
         </div>
@@ -107,7 +107,7 @@ const LandingPageNew = () => {
                 <div className="main_heading1">BUILD HEALTHY </div>
                 <div className="main_heading1">HABITS</div>
                 <div className="main_heading2">IN JUST 21 DAYS!</div>
-                <div className="main_heading1"> LEARN FROM THE WORLD'S </div>
+                <div className="main_heading1"> LEARN FROM THE WORLDS </div>
                 <div className="main_heading1">OLDEST ORGANISED</div>
                 <div className="main_heading1">YOGA CENTRE</div>
               </div>
@@ -309,7 +309,7 @@ const LandingPageNew = () => {
         <section className="section_2">
           <div className="heading_21">Glimpse of the Course</div>
           <div className="text_21">
-            Here's an insight into the 21-Days Better Living Course. This program
+            Heres an insight into the 21-Days Better Living Course. This program
             will transform your life and help you to maintain a mind-body
             balance. Come experience, explore and learn Yoga to lead a joyful
             life.{' '}
