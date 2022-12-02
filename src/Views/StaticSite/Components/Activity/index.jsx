@@ -55,12 +55,10 @@ const Activity = () => {
     ],
   }
 
-  console.log(activitySliderRef,'aaa',isInteracting)
-
   return (
     <>
       <div className="activity-container glabal-padding">
-        <div className="activity-card-container" ref={activityRef}>
+        <div className="activity-card-container" ref={activityRef} onMouseEnter={ ()=>activitySliderRef.current.slickPause() } onMouseLeave={ ()=>activitySliderRef.current.slickPlay() } >
           <Slider
             {...settings}
             ref={(slider) => {
