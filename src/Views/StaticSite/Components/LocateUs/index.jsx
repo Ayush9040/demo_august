@@ -32,7 +32,6 @@ const LocateUs = () => {
   }, [bold])
 
   const navigate = useNavigate()
-
   return (
     <>
       {metaDataObj[location.pathname] &&
