@@ -530,7 +530,7 @@ export const mediaAssets = {
   //05052018
 
   mediaAssets58: '/Media/gallery/05052018/IMG-20180507-WA0013.jpg',
-  mediaAssets59: '/Media/gallery/05052018/IMG-20180507-WA0014.jpg',
+  mediaAssets59: '/Media/gallery/05052018/IMG-20180507-WA0014.jpg', 
   mediaAssets60: '/Media/gallery/05052018/IMG_6125.jpeg',
   mediaAssets61: '/Media/gallery/05052018/IMG_6137.jpeg',
   mediaAssets62: '/Media/gallery/05052018/IMG_6427.jpeg',
@@ -908,6 +908,7 @@ export const publicationAssests = {
   ythAssets88:'/Home/NewsLetter/Yogasattva-Sept-2022.jpg',
   ythAssets89:'/Home/NewsLetter/Yogasattva-Oct-2022-21024_1.jpg',
   ythAssets90:'/Home/NewsLetter/Yogasattva-Nov-2022-cover-page.jpg',
+  ythAssets91:'/Home/NewsLetter/Yogasattva-Dec-2022-Cover.jpg',
 
   //Library
   libraryAsset: '/Publications/Library/hero.jpg',
