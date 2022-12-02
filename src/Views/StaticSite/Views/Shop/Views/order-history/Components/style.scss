@@ -80,6 +80,11 @@
     }
     .track_package {
       padding-left: 5rem;
+      #cancelled{
+        margin-top: 5rem;
+        margin-left: auto;
+        margin-right: 10rem
+      }
     }
     .order_dropdown {
       padding-top: 4rem;
@@ -254,6 +259,11 @@
       }
     }
     .product_detail{
+      .track_package{
+        #cancelled{
+          margin-right: 0;
+        }
+      }
       .order_dropdown{
         .quantity_dropdown{
           margin-bottom: 2rem;
