@@ -62,9 +62,30 @@
         .css-6j8wv5-Input {
           font-size: 1.8rem;
         }
+        .css-qbdosj-Input{
+          padding-bottom: 20px;
+        }
         .css-qc6sy-singleValue{
           font-size: 1.8rem;
           padding-left: 20px;
+        }
+        #react-select-3-placeholder{
+          font-size: 1.8rem;
+          padding-left: 8px;
+          color: #606060;
+        }
+        #react-select-5-placeholder{
+          font-size: 1.8rem;
+          padding-left: 8px;
+          color: #606060;
+        }
+        #react-select-7-placeholder{
+          font-size: 1.8rem;
+          padding-left: 8px;
+          color: #606060;
+        }
+        .css-1dimb5e-singleValue{
+          font-size:1.8rem;
         }
       }
       .form-field > .form-content > form > label > input {
@@ -184,6 +205,31 @@
     margin-left: 6rem;
     
   }
+
+  .PhoneInput{
+    display: flex;
+    align-items: center;
+    padding: 1rem 2rem;
+    border: 1px solid rgba(96, 96, 96, 0.5019607843);
+    border-radius: 50px;
+    max-width: 800px;
+    margin-left: 2rem;
+    margin-right: -2rem;
+    .PhoneInputInput{
+      width: 800px;
+      text-align: center;
+      font-size: 1.8rem;
+      border: none;
+      &:focus{
+        border: none;
+        outline: none;
+      }
+      &:focus-visible{
+        border: none;
+        outline: none;
+      }
+    }
+  }
  
 }
 
@@ -232,3 +278,40 @@
     }
   }
 }
+
+@media (max-width:520px) {
+  .signin_container{
+    .PhoneInput{
+      display: flex;
+      align-items: center;
+      padding: 1rem 2rem;
+      border: 1px solid rgba(96, 96, 96, 0.5019607843);
+      border-radius: 50px;
+      max-width: 800px;
+      margin-right: 0rem;
+      margin-left: 0rem;
+      .PhoneInputInput{
+        width: 800px;
+        text-align: center;
+        font-size: 1.8rem;
+        border: none;
+        &:focus{
+          border: none;
+          outline: none;
+        }
+        &:focus-visible{
+          border: none;
+          outline: none;
+        }
+      }
+    }
+
+    .css-jdrdjc-control {
+      margin-left: 0rem;
+      padding: 0 2rem;
+    }
+   
+  }
+}
+
+
