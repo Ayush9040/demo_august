@@ -31,6 +31,30 @@ export const testimonialData = [
   },
 ]
 
+export const testimonialData2 = [
+  {
+    name: 'PRAKASH SHARMA, SADHAKA',
+    info: '',
+    img: 'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/Landing_page/1.png',
+    message:
+    'I came to know about The Yoga Institute as my wife did one year TTC in 2012. She encouraged me to do 21 days better living course, and I enjoyed it to the fullest. In the same year my slip disc and asthma got cured with regular practice of 45 minutes of Yoga and 30 minutes walk helped me in keeping my mind and body healthy. Wise lessons of Hansaji and positive vibration from The Yoga Institute & its team has enriched my life. I’m really blessed to be a part of an institute that is 100 years old.',
+  },
+  {
+    name: 'MAJOR V SREEDHARAN (RETD)',
+    info: '',
+    img: 'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/Landing_page/2.png',
+    message:
+    'It is a great privilege to be a part of The Yoga Institute. I was lucky enough to begin with a 7 Day Health Camp in 2014 then 1 month TTC & 21 days health camp. My quest to better myself didn’t end there until I underwent a 3 Months Advanced Teachers’ Training Course. For all the above programmes, I have travelled from Hyderabad to Mumbai. The serenity at the Institute complex, the faculty for various subjects, the delicious food provided and the hostel accommodation are highly commendable, especially in Mumbai. Above all, the Director of the Institute, Dr. Hansaji, & the staff under her, are so helpful at all times. The Institute has progressed so much with regard to its infrastructure in the last few years, catering to the needs of one and all. The Oldest Organised Yoga Centre in the World ensures, “The light of Yoga once lit will never dim.” For an Army Officer like me, it is a wonderful experience.',
+  },
+  {
+    name: 'Amar Patil, Police Inspector',
+    info: '',
+    img: 'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/Landing_page/3.png',
+    message:
+    'In 2012, I was at Vakola Police Station. That time, Vice President Shri Venkaih Naidu had come and I was introduced to Hrishi Sir and The Yoga Institute. Though it was my dream to join the Institute and do a course, I could not due to time constraints. When online courses started recently, I joined the 21-Days course. It teaches discipline, concentration, diet control and many other useful topics. The teachers also taught us how to be positive and useful - I feel all the negativity is over now. I am very thankful to The Yoga Institute, especially Hansaji, Hrishi Sir, Monica Ma\'am, Meena Ma\'am and Abhay Sir.',
+  }
+]
+
 export const popularCourses = [
   {
     img: `${baseDomain}${courseAssets.courseAsset40}`,
@@ -71,3 +95,17 @@ export const landingFeaturedBlogs =[
     url:'/importance-and-benefits-of-yoga'
   }
 ]
+
+export const landingFeaturedBlogs2 =[
+  {
+    img:'https://theyogainstitute.oss-ap-south-1.aliyuncs.com/uploads/2022/07/21-Days-Better-Living-Course.jpeg',
+    text:'New to Yoga? Take this 21 Day Challenge',
+    url:'/new-to-yoga-twenty-one-days-challenge'
+  },
+  {
+    img:'https://theyogainstitute.oss-ap-south-1.aliyuncs.com/uploads/2020/08/yoga-preparation-tyi-blog.jpg',
+    text:'How do I prepare for my Yoga class',
+    url:'/how-do-i-prepare-for-my-yoga-class'
+  }
+]
+
