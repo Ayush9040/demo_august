@@ -19,6 +19,7 @@ import metaDataObj from '../../../../Constants/metaData.json'
 import SearchModal from '../SearchModal'
 import './style.scss'
 
+
 const Home = () => {
 
   const [ isModalOpen,setIsModalOpen ] = useState(false)

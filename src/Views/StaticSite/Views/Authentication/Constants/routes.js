@@ -1,5 +1,5 @@
 import EditAccount from '../../../Components/EditAccount'
-import UserProfile from '../../../Components/UserProfile'
+import UserProfile from '../../UserProfile'
 import SignIn from '../Views/SignIn'
 import SignUp from '../Views/Signup'
 

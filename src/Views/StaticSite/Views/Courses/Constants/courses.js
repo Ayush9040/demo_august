@@ -35,6 +35,18 @@ const ttc200hr = {
     dates: [
       '1st Nov to 30th Nov 2022',
       '1st Dec to 31st Dec 2022',
+      '2nd Jan to 31st Jan 2023',
+      '1st Feb to 28th Feb 2023',
+      '1st Mar to 31st Mar 2023',
+      '1st Apr to 29th Apr 2023',
+      '1st May to 31st May 2023',
+      '1st Jun to 30th Jun 2023',
+      '1st Jul to 31st Jul 2023',
+      '1st Aug to 31st Aug 2022',
+      '1st Sep to 30th Sep 2023',
+      '2nd Oct to 31st Oct 2023',
+      '1st Nov to 30th Nov 2023',
+      '1st Dec to 30th Dec 2023'
     ],
     online: true,
     onCampus: true,
@@ -82,7 +94,7 @@ const ttc200hr = {
       //   type: 'paragraph',
       //   content: {
       //     title: 'Duration',
-      //     text: [
+      //     text: [o
       //       '1 Month | Course commences on Commences on the 1st day of each month',
       //     ],
       //   },
@@ -357,6 +369,12 @@ const ttc200hr = {
     dates: [
       '31st Oct to 23rd Dec 2022',
       '26th Dec to 17th Feb 2023',
+      '20th Feb to 14th Apr 2023',
+      '17th Apr to 9th Jun 2023',
+      '12th Jun to 4th Aug 2023',
+      '7th Aug to 29th Sep 2023',
+      '2nd Oct to 24th Nov 2023',
+      '27th Nov to 19th Jan 2024'
     ],
     online: false,
     onCampus: true,
@@ -653,7 +671,7 @@ const ttc200hr = {
     key: '200-hrs-part-time-ttc-online-english',
     // templateId: 'COURSE200_2M_TTC2',
     templateId: {
-      templateOnline: 'COURSE200_1M_ONLINE_TTC',
+      templateOnline: 'COURSE200_2M_ONLINE_TTC',
       templateOffline: {
         templateResidential: '',
         templateNonResidential: '',
@@ -678,6 +696,12 @@ const ttc200hr = {
     dates: [
       '10th Oct to 3rd Dec 2022',
       '12th Dec to 4th Feb 2023',
+      '13th Feb to 8th Apr 2023',
+      '17th Apr to 10th Jun 2023',
+      '19th Jun to 12th Aug 2023',
+      '21st Aug to 14th Oct 2023',
+      '23rd Oct to 16th Dec 2023',
+      '25th Dec to 17th Feb 2024'
     ],
     online: true,
     onCampus: false,
@@ -997,6 +1021,11 @@ const ttc200hr = {
     dates: [
       '17th Oct to 10th Dec 2022',
       '19th Dec to 11th Feb 2023',
+      '20th Feb to 15th Apr 2023',
+      '24th Apr to 17th Jun 2023',
+      '26th Jun to 19th Aug 2023',
+      '28th Aug to 21st Oct 2023',
+      '30th Oct to 23rd Dec 2023'
     ],
     online: true,
     onCampus: false,
@@ -1290,7 +1319,7 @@ const ttc200hr = {
     key: '200-hrs-part-time-ttc-online-english-batch-5',
     // templateId: 'COURSE200_2M_TTC',
     templateId: {
-      templateOnline: 'COURSE200_2M_ONLINE_TTC',
+      templateOnline: 'COURSE200_2M_TTC',
       templateOffline: {
         templateResidential: '',
         templateNonResidential: '',
@@ -1311,7 +1340,7 @@ const ttc200hr = {
     },
     category: 'ttc',
     title: '200 hrs TTC - 2 Months TTC Online-English-Batch 5',
-    dates: ['31st Oct to 24th Dec 2022'],
+    dates: ['31st Oct to 24th Dec 2022','2nd Jan to 25th Feb 2022','6th Mar to 29th Apr 2023','8th May to 1st Jul 2023','10th Jul to 2nd Sep 2023','11th Sep to 4th Nov 2023', '13th Nov to 6th Jan 2024'],
     online: true,
     onCampus: false,
     nonResidential: false,
@@ -1626,7 +1655,7 @@ const ttc200hr = {
     },
     category: 'ttc',
     title: '200 hrs TTC - 3 Months Weekend TTC Online-English-Batch 6',
-    dates: ['19th Nov to 5th Feb 2023'],
+    dates: ['19th Nov to 5th Feb 2023','11th Feb to 30th Apr 2023', '6th May to 23rd Jul 2023', '29th Jul to 15th Oct 2023', '21st Oct to 7th Jan 2024'],
     online: true,
     onCampus: false,
     nonResidential: false,
@@ -1946,7 +1975,7 @@ const ttc500hr = {
     title: '500 hrs TTC 3 Months TTC Online - English',
     image: `${baseDomain}${courseAssets.courseAsset39}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset102}`,
-    dates: ['14th Nov to 4th Feb 2023'],
+    dates: ['14th Nov to 4th Feb 2023', '13th Feb to 6th May 2023', '15th May to 5th Aug 2023', '14th Aug to 4th Nov 2023', '13th Nov to 3rd Feb 2024'],
     online: true,
     onCampus: false,
     nonResidential: false,
@@ -2216,7 +2245,7 @@ const ttc900hr = {
       offlineFee: { residentialFee: 150000, nonResidentialFee: 90000 },
     },
     category: 'ttc',
-    dates: ['22nd Oct to 15th Jan 2023'],
+    dates: ['22nd Oct to 15th Jan 2023','28th Jan to 16th Apr 2023','22nd Apr to 16th July 2023', '22nd Jul to 15th Oct 2023','28th Oct to 21st Jan 2024'],
     online: false,
     onCampus: true,
     nonResidential: true,
@@ -3956,7 +3985,7 @@ const ttc900hr = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'ttc',
-    dates: ['31st Oct 2022 to 18th Feb 2023'],
+    dates: ['31st Oct 2022 to 18th Feb 2023','27th Feb to 17th Jun 2023','26th June to 14th Oct 2023','23 Oct to 10th Feb 2024'],
     online: true,
     onCampus: false,
     nonResidential: false,
@@ -7350,7 +7379,7 @@ const camps = {
         templateNonResidential: 'CAMP_FOR_7_DAYS_HEALTH',
       },
     },
-    dates: ['12th Nov to 18th Nov 2022'],
+    dates: ['14th Jan to 20th Jan 2023','11th Mar to 17th Mar 2023','13th May to 19th May 2023','8th Jul to 14th Jul 2023','9th Sep to 15th Sep 2023','11th Nov to 17th Nov 2023',],
     online: false,
     onCampus: true,
     nonResidential: true,
@@ -7359,7 +7388,7 @@ const camps = {
     mostPopular: true,
     rating: 5,
     colorCode: '#EDBE66',
-    timing: 'Saturday : 8:30 am – 7:00 pm, Sunday to Thursday: 7:00 am – 7:00 pm, Friday: 7:00 am – 1:00 pm ' ,
+    timing: 'Saturday to Friday : 7:00 am - 7:00 pm (IST)' ,
     fees: {
       onlineFee: 0,
       offlineFee: { residentialFee: 12000, nonResidentialFee: 8000 },
@@ -7521,10 +7550,7 @@ const camps = {
         content: {
           title: 'Timings',
           text: [
-            'Saturday : 8:30 am – 7:00 pm',
-            'Sunday to Thursday: 7:00 am – 7:00 pm',
-            'Friday: 7:00 am – 1:00 pm',
-          ],
+            'Saturday to Friday : 7:00 am - 7:00 pm (IST)'],
         },
       },
       {
@@ -7711,6 +7737,18 @@ const camps = {
     dates: [
       '26th Nov to 2nd Dec 2022',
       '24th Dec to 30th Dec 2022',
+      '28th Jan to 3rd Feb 2023', 
+      '25th Feb to 3rd Mar 2023',
+      '25th Mar to 31st Mar 2023',
+      '22nd Apr to 28th Apr 2023',
+      '27th May to 2nd Jun 2023',
+      '24th Jun to 30th Jun 2023',
+      '22nd Jul to 28th Jul 2023',
+      '26th Aug to 1st Sep 2023',
+      '23rd Sep to 29th Sep 2023',
+      '28th Oct to 3rd Nov 2023',
+      '25th Nov to 1st Dec 2023',
+      '23rd Dec to 29th Dec 2023'
     ],
     online: false,
     onCampus: true,
@@ -7720,7 +7758,7 @@ const camps = {
     mostPopular: true,
     rating: 5,
     colorCode: '#EDBE66',
-    timing: 'Saturday : 8:30 am – 7:00 pm, Sunday to Thursday: 7:00 am – 7:00 pm, Friday: 7:00 am – 1:00 pm ',
+    timing: 'Saturday to Friday : 7:00 am - 7:00 pm (IST)',
     fees: {
       onlineFee: 0,
       offlineFee: { residentialFee: 12000, nonResidentialFee: 8000 },
@@ -7882,9 +7920,7 @@ const camps = {
         content: {
           title: 'Timings',
           text: [
-            'Saturday : 8:30 am – 7:00 pm',
-            'Sunday to Thursday: 7:00 am – 7:00 pm',
-            'Friday: 7:00 am – 1:00 pm',
+            'Saturday to Friday : 7:00 am - 7:00 pm (IST)'
           ],
         },
       },
@@ -8072,6 +8108,18 @@ const camps = {
     dates: [
       '6th Nov to 26th Nov 2022',
       '4th Dec to 24th Dec 2022',
+      '2nd Jan to 22nd Jan 2023',
+      '5th Feb to 25th Feb 2023',
+      '5th Mar to 25th Mar 2023',
+      '2nd Apr to 22nd Apr 2023',
+      '7th May to 27th May 2023',
+      '4th Jun to 24th Jun 2023',
+      '2nd Jul to 22nd Jul 2023',
+      '6th Aug to 26th Aug 2023',
+      '3rd Sep to 23rd Sep 2023',
+      '1st Oct to 21st Oct 2023',
+      '5th Nov to 25th Nov 2023',
+      '3rd Dec to 23rd Dec 2023'
     ],
     online: false,
     onCampus: true,
@@ -8395,6 +8443,18 @@ const camps = {
     dates: [
       '6th Nov to 26th Nov 2022',
       '4th Dec to 24th Dec 2022',
+      '2nd Jan to 22nd Jan 2023',
+      '5th Feb to 25th Feb 2023',
+      '5th Mar to 25th Mar 2023',
+      '2nd Apr to 22nd Apr 2023',
+      '7th May to 27th May 2023',
+      '4th Jun to 24th Jun 2023',
+      '2nd Jul to 22nd Jul 2023',
+      '6th Aug to 26th Aug 2023',
+      '3rd Sep to 23rd Sep 2023',
+      '1st Oct to 21st Oct 2023',
+      '5th Nov to 25th Nov 2023',
+      '3rd Dec to 23rd Dec 2023'
     ],
     online: true,
     onCampus: true,
@@ -8717,6 +8777,12 @@ const camps = {
     },
     dates: [
       '4th Dec to 24th Dec 2022',
+      '2nd Jan to 22nd Jan 2023',
+      '5th Mar to 25th Mar 2023',
+      '7th May to 27th May 2023',
+      '2nd Jul to 22nd Jul 2023',
+      '3rd Sep to 23rd Sep 2023',
+      '5th Nov to 25th Nov 2023'
     ],
     online: true,
     onCampus: true,
@@ -9040,7 +9106,26 @@ const camps = {
     dates: [
       '6th Nov to 26th Nov 2022',
       '27th Nov to 17th Dec 2022',
+      '8th Jan to 28th Jan 2023',
+      '29th Jan to 18th Feb 2023',
       '18th Dec to 7th Jan 2023',
+      '19th Feb to 11th Mar 2023',
+      '12th Mar to 1st Apr 2023',
+      '2nd Apr to 22nd Apr 2023', 
+      '23rd Apr to 13th May 2023',
+      '14th May to 3rd Jun 2023',
+      '4th Jun to 24th Jun 2023',
+      '25th Jun to 15th Jul 2023',
+      '16th Jul to 5th Aug 2023 ',
+      '6th Aug to 26th Aug 2023',
+      '27th Aug to 16th Sep 2023',
+      '17th Sep to 7th Oct 2023',
+      '8th Oct to 28th Oct 2023',
+      '29th Oct to 18th Nov 2023',
+      '19th Nov to 9th Dec 2023',
+      '10th Dec to 30th Dec 2023',
+      '31st Dec to 20th Jan 2024'
+
     ],
     online: true,
     onCampus: false,
@@ -10791,31 +10876,74 @@ const classes = {
       {
         type: 'paragraph',
         content: {
-          title: '',
+          title: 'About Couples Class',
           text: [
-            'The Yoga Institute’s Couple Class is an absolute must for anyone who is in a relationship. Being conducted since the last 50 years, the class provides value in several different ways: improved understanding between two people, reduces conflict, increased maturity levels. You will learn to grow together, find common ground, explore new things together and enhance the strength of your relationship.',
+            'Since 1973, The Yoga Institute has been conducting Couples Class to strengthen the bond, nurture the relationship, and build intimacy and trust among couples. Relationships need constant efforts from both partners and an immense amount of understanding and compatibility.',
           ],
         },
       },
       {
-        type: 'u-list',
+        type: 'paragraph',
         content: {
-          title: 'What you stand to gain:',
+          title: 'Why Choose Couples Class?',
+          text: [
+            'Yoga when performed with your partner brings multiple benefits as it creates more awareness of the self and others, enhances communication and fortifies the connection. Through regular yoga practice, couples will learn to share, grow, build, trust, bond and have fun with each other.',
+            'Most importantly, couples learn to give each other space when required and resolve conflicts constructively and respectfully. The Yoga Institute’s Couples Class will train you to work as one unit, work towards making your relationship better and stronger and lead a healthy and stress-free life.',
+            'The Yoga Institute’s Couples Class will cover the following topics that will help couples to make their relationship healthy and successful '
+          ],
+        },
+      },
+      {
+        type: 'o-list',
+        content: {
+          title: '',
           points: [
             {
-              listItem: 'Better conflict resolution and reduced stress levels ',
+              listItem: 'Understanding the Importance of Marriage',
               subItems: [],
             },
             {
-              listItem: 'Improved coordination as a team',
+              listItem: 'Role of Honesty and Faithfulness',
               subItems: [],
             },
             {
-              listItem: 'Strengthen bond with yogic way of living',
+              listItem: 'Being a Supportive Partner',
               subItems: [],
             },
             {
-              listItem: 'Develop accountability',
+              listItem: 'Enhancing your Communication Skills',
+              subItems: [],
+            },
+            {
+              listItem: 'Coping with Difficulties',
+              subItems: [],
+            },
+            {
+              listItem: 'Building Spiritual Connection',
+              subItems: [],
+            },
+            {
+              listItem: 'Performing Marital Duties Selflessly',
+              subItems: [],
+            },
+            {
+              listItem: 'Acceptance, Patience & Understanding',
+              subItems: [],
+            },
+            {
+              listItem: 'Open to Adjustment',
+              subItems: [],
+            },
+            {
+              listItem: 'Financial Transparency & Management ',
+              subItems: [],
+            },
+            {
+              listItem: 'Balancing Interpersonal relationships',
+              subItems: [],
+            },
+            {
+              listItem: 'Positive Role Models to Children',
               subItems: [],
             },
           ],
@@ -10824,9 +10952,9 @@ const classes = {
       {
         type: 'paragraph',
         content: {
-          title: '',
+          title: 'USP of Couples Class',
           text: [
-            'Smt. Hansaji address the group once a month on various topics relevant to householders. Lectures by eminent personalities are also organised periodically. Further, group discussions and personal sharing on specific topics are regular features, which have been well appreciated by members.',
+            'Smt. Hansaji addresses the Couples Class once a month where various topics are discussed to help the householders in their daily commitments. Lectures by eminent personalities work as guidance to the couples. Further, group discussions and personal sharing on specific topics are regular features, which have been well-appreciated by members.',
           ],
         },
       },
@@ -10835,7 +10963,7 @@ const classes = {
         content: {
           title: 'Duration',
           text: [
-            'Enrolment is for a calendar year. Meetings are held on the last Sunday of every month from 5.00 p.m. to 7.00 p.m.in the Institute. Additionally, co-ordinated couples meet once during the same month in their respective groups.',
+            'Enrollment is for a calendar year. Meetings are held on the last Sunday of every month from 5.00 p.m. to 7.00 p.m.in the Institute. Additionally, co-ordinated couples meet once during the same month in their respective groups.',
           ],
         },
       },
@@ -10851,8 +10979,8 @@ const classes = {
       {
         type: 'paragraph',
         content: {
-          title: 'Registration & Fees',
-          text: ['Starts 30th January 2022'],
+          title: 'Registration',
+          text: ['Starts 29th January 2023'],
         },
       },
       {
@@ -10860,8 +10988,8 @@ const classes = {
         content: {
           title: 'Fees',
           text: [
-            'Annual fees are Rs. 3500/- (per year for a couple)',
-            '*Please note fees once paid will be non-refundable.',
+            'Annual fees - Rs. 3,500/- (per year for a couple)',
+            '*Please note: Fees once paid will be non-refundable.',
           ],
         },
       },
@@ -10870,7 +10998,7 @@ const classes = {
         content: {
           title: 'Note:',
           text: [
-            'Please take the screenshot of your order receipt immediately after the payment is made to info@theyogainstitute.org',
+            'Please take screenshot of your order receipt immediately after the payment is made to info@theyogainstitute.org',
           ],
         },
       },
@@ -11009,7 +11137,7 @@ const certificate = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'certificate-course',
-    dates: ['20th Feb - 13th Apr 2023'],
+    dates: ['27th Feb to 20th Apr 2023'],
     online: true,
     onCampus: false,
     nonResidential: false,
@@ -11358,7 +11486,9 @@ const certificate = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'certificate-course',
-    dates: [],
+    dates: [
+      '17th Jan to 21st jan 2023'
+    ],
     online: true,
     onCampus: false,
     nonResidential: false,

@@ -4,6 +4,8 @@ import { blogsReducer } from '../Views/StaticSite/Views/Blogs/Blogs.reducer'
 import { careerReducer } from '../Views/StaticSite/Views/Careers/Career.reducer'
 import { donationReducer } from '../Views/StaticSite/Views/Donation/Donation.reducer'
 import { volunteerReducer } from '../Views/StaticSite/Views/Volunteer/Volunteer.reducer'
+import { shopReducer } from '../Views/StaticSite/Views/Shop/Shop.reducer'
+import { locationReducer } from '../Views/StaticSite/utils/location/Location.reducer'
 
 
 const reducers = combineReducers({
@@ -11,7 +13,9 @@ const reducers = combineReducers({
   volunteer:volunteerReducer,
   career:careerReducer,
   donation:donationReducer,
-  blogs:blogsReducer
+  blogs:blogsReducer,
+  shop:shopReducer,
+  location: locationReducer
 })
 
 export default reducers

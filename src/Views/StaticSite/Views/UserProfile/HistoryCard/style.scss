@@ -1,0 +1,42 @@
+.history-card {
+  width: 100%;
+  border-radius: 17px;
+  background: transparent;
+  position: relative;
+  margin-top: 2rem;
+  padding: 2rem;
+  padding-bottom: 1rem;
+  background-color: #fff;
+  cursor: pointer;
+  .purchase-img {
+    width: 100%;
+    img {
+      width: 100%;
+      background-color: #aaa;
+      border-radius: 20px;
+    }
+  }
+  .purchase-details {
+    border-radius: 16px;
+    background-color: #EDEEF0;
+    padding: 1rem;
+    margin-top: 1rem;
+    &>p {
+      font-size: 1.15rem;
+      word-break: break-all;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    &>h4 {
+      font-weight: 600;
+      font-size: 1rem;
+      margin-bottom: 10px;
+    }
+  }
+  .purchase-status {
+    position: absolute;
+    right: 15px;
+    top: 2px;
+    display: inline-block;
+  }
+}

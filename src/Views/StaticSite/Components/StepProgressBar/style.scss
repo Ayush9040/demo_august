@@ -1,0 +1,62 @@
+.progess_div {
+  width: 55rem;
+  padding-left: 2.5rem;
+  padding-bottom: 3.25rem;
+  .RSPBprogressBar {
+    height: 2px;
+    background-color: #cc462580;
+  }
+
+}
+
+.transitionStep {
+  //filter: grayscale(1);
+  border: 1px solid #cc4625;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: #fff;
+  color: #cc4625;
+  
+}
+
+.date{
+  font-size: 1.25rem;
+  padding-top: 2rem;
+  color: #000;
+  display: flex;
+  justify-content: center;
+}
+
+.transitionStep.accomplished {
+  filter: grayscale(0);
+  border: 1px solid #cc4625;
+  background-color: #cc4625;
+}
+
+@media (max-width:'1200px') {
+  .progess_div{
+    margin-bottom: 3rem;
+  }
+}
+
+@media (max-width: '768px') {
+  .progess_div{
+    width: 30rem;
+    /* padding-left: 2.5rem; */
+    height: 32rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    transform: rotate(90deg);
+    
+  }
+  .date{
+    transform: rotate(270deg);
+    margin-top: -10rem;
+    margin-left: -6rem;
+    min-width: 12rem;
+    text-align: left;
+    justify-content: left;
+  }
+}

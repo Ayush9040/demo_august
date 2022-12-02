@@ -120,7 +120,7 @@ const CourseCard = ({
                   to={
                     isLoggedIn
                       ? `/enrollment/${path}/?date=${selectDate}`
-                      : `/user/sign-in/${path}/?date=${selectDate}`
+                      : `/user/sign-in/?location=${path}&date=${selectDate}`
                   }
                 >
                   <CommonBtn text={'Enroll Now'} />
@@ -131,7 +131,7 @@ const CourseCard = ({
                 to={
                   isLoggedIn
                     ? `/enrollment/${path}/?date=${selectDate}`
-                    : `/user/sign-in/${path}/?date=${selectDate}`
+                    : `/user/sign-in/?location=${path}&date=${selectDate}`
                 }
               >
                 <CommonBtn text={'Enroll Now'} />

@@ -11,6 +11,7 @@ import CourseQuote from '../CourseComponents/CourseQuote'
 import CourseURL from '../CourseComponents/CourseURL'
 import SelectDropDown from '../Select Dropdown'
 import { useSelector } from 'react-redux'
+import CourseOList from '../CourseComponents/CourseOLList'
 //import { useParams } from 'react-router-dom'
 
 
@@ -144,6 +145,8 @@ const CourseDetails = ({ pageDate }) => {
       return <CoursePara content={content} />
     case 'u-list':
       return <CourseULIst content={content} />
+    case 'o-list':
+      return <CourseOList content={content} />
     case 'table':
       return <CourseTable content={content} />
     case 'quote':
@@ -207,7 +210,7 @@ const CourseDetails = ({ pageDate }) => {
                       to={
                         isLoggedIn
                           ? `/enrollment/${pageDate.key}/?date=${selectDate}`
-                          : `/user/sign-in/${pageDate.key}/?date=${selectDate}`
+                          : `/user/sign-in/?location=${pageDate.key}&date=${selectDate}`
                       }
                     >
                       <CommonBtn text={'Enroll Now'} />
@@ -220,7 +223,7 @@ const CourseDetails = ({ pageDate }) => {
                     to={
                       isLoggedIn
                         ? `/enrollment/${pageDate.key}/?date=${selectDate}`
-                        : `/user/sign-in/${pageDate.key}/?date=${selectDate}`
+                        : `/user/sign-in/?location=${pageDate.key}&date=${selectDate}`
                     }
                   >
                     <CommonBtn text={'Enroll Now'} />

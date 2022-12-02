@@ -35,6 +35,7 @@ const Activity = () => {
     autoplay: false,
     autoPlaySpeed: 5000,
     //centerMode: true,
+    pauseOnHover:true,
     centerPadding: '20%',
     responsive: [
       {

@@ -4,7 +4,6 @@
   padding-top: 3rem;
   //color:#fff;
   box-sizing: border-box;
-  overflow-x: hidden;
   a {
       text-decoration: none;
       color: black;
@@ -81,6 +80,12 @@
   }
   }
 
+  .cart-count{
+    position: relative;
+    top: -80%;
+    left: -5px;
+  }
+
   .career-navigation-sm {
       display: none;
   }
@@ -92,7 +97,7 @@
         //position: absolute;
         display: none;
         flex-direction: column;
-        margin: 2.5rem 0;
+        margin: 0 0;
         width: 180px;
         //right: -80px;
         align-items: center;
@@ -154,6 +159,9 @@
       }
   }
   @media (max-width: "768px") {
+    .inner-nav-container{
+        overflow-x: hidden;
+    }
           .main-logo {
             display: flex!important;
             align-items: center;
@@ -193,6 +201,12 @@
                         height: 25px!important;
                         transform: scale(1)!important;
                     } 
+            }
+            .mobile-cart{
+                svg{
+                 width: 32px!important;
+                 height: 32px!important;
+                }
             }
           }
           .career-navigation-lg {
