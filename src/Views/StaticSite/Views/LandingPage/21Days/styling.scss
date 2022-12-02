@@ -215,7 +215,7 @@
             font-size: 5rem;
             font-weight: 700;
             padding: 1rem 0rem 1rem 10rem;
-            min-height: 100px;
+            min-height: fit-content;
             font-family: var(--futura);
           }
           .subtitle_21 {
@@ -417,23 +417,13 @@
       }
     }
   }
-  .main_div_21
-    > main
-    .section_1
-    .bg_img_21
-    .img_form_21
-    .form_text
+  .main_div_21 > main .section_1 .bg_img_21 .img_form_21 .form_text {
     .main_heading1 {
-    font-size: 4rem;
-  }
-  .main_div_21
-    > main
-    .section_1
-    .bg_img_21
-    .img_form_21
-    .form_text
+      font-size: 4rem;
+    }
     .main_heading2 {
-    font-size: 6rem;
+      font-size: 6rem;
+    }
   }
 }
 
@@ -548,22 +538,86 @@
     }
   }
   .main_div_21 > main .section_1 .bg_img_21 .img_form_21 {
-    flex-wrap: wrap;
-  }
-  .main_div_21 > main .section_1 .bg_img_21 .img_form_21 .form_text {
-    text-align: center;
+    display: block;
+    .form_text {
+      text-align: center;
+      padding: 2rem 1rem;
+    }
   }
 }
 
 @media (max-width: 520px) {
   .main_div_21 {
+    & > nav {
+      justify-content: center;
+      .tyi-logo_21 {
+        & > svg {
+          width: 150px;
+        }
+      }
+      .call-cta_21 {
+        & > h2 {
+          font-size: 1.5rem;
+          text-align: center;
+        }
+      }
+    }
     & > main {
       .details-section21 {
         padding: 3rem;
+        .learning_benefits21 > div > ul {
+          margin-bottom: 3rem;
+          > li > p {
+            font-size: 2rem;
+          }
+        }
       }
       .last_div21 {
+        margin: 0;
+        padding-bottom: 10rem;
         .last_text21 {
           width: 100%;
+        }
+      }
+      .text_21 {
+        font-size: 2rem;
+      }
+      .section_3 {
+        .details_21 {
+          .detail_heading {
+            font-size: 3.5rem;
+          }
+          .details_text {
+            font-size: 2rem;
+          }
+        }
+        .int_img_text21 .int_text21 {
+          .subtitle_21 {
+            font-size: 2rem;
+          }
+          .title_21 {
+            font-size: 3.5rem;
+          }
+        }
+      }
+      .section_1 {
+        .bg_img_21 {
+         min-height: fit-content;
+          .img_form_21 {
+            .form-cta_21 {
+              width: 90%;
+              min-width: 300px;
+              margin: 0 auto;
+            }
+            .form_text {
+              .main_heading1 {
+                font-size: 3rem;
+              }
+              .main_heading2 {
+                font-size: 4.5rem;
+              }
+            }
+          }
         }
       }
     }

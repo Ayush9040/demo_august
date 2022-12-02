@@ -2527,6 +2527,14 @@ export const locateAsset ={
   locate:'/Locate_us/locate.jpg'
 }
 
+export const juhuVileAsset = {
+  carosoul1:'/JuhuVile-images/carosoul1.jpg',
+  carosoul2:'/JuhuVile-images/carosoul2.jpg', 
+  carosoul3:'/JuhuVile-images/carosoul3.jpg',
+  left:'/JuhuVile-images/Left.jpg',
+  right:'/JuhuVile-images/right.jpg',
+}
+
 export const santaCruz = {
   slide1: '/Santa-cruz-images/Slide-1.jpg',
   slide2: '/Santa-cruz-images/Slide-2.jpg',

@@ -89,6 +89,7 @@ const News = lazy(() => import('../Views/Media/Views/news'))
 const Careers = lazy(() => import('../Views/Careers/Views/careers'))
 const Gifting = lazy(() => import('../Views/Gifting/Views/gifting'))
 const DescisionComp = lazy(() => import('../Views/DecisionComponent'))
+const JuhuVileLoc = lazy(() => import('../Components/LocateUs/JuhuVileLoc'))
 const LocateUs = lazy(()=> import ('../Components/LocateUs'))
 const LocateDetails = lazy(()=> import ('../Components/LocateUs/LocationDetails'))
 const NutriDiet = lazy(()=>import('../Views/NutriDiet'))
@@ -621,6 +622,52 @@ const staticSiteRoutes = [
     routePath: '/our-branches',
     name: 'LocateUs',
   },
+
+  {
+    Component: JuhuVileLoc,
+    path: '/Juhu',
+    exact: true,
+    id: 'statisLocateUs',
+    routePath: '/our-branches/Juhu',
+    name: 'LocateUs',
+  },
+
+  {
+    Component: JuhuVileLoc,
+    path: '/vileParle',
+    exact: true,
+    id: 'statisLocateUs',
+    routePath: '/vileParle',
+    name: 'LocateUs',
+  },
+
+  {
+    Component: JuhuVileLoc,
+    path: '/santaCruz',
+    exact: true,
+    id: 'statisLocateUs',
+    routePath: '/santaCruz',
+    name: 'LocateUs',
+  },
+
+  {
+    Component: JuhuVileLoc,
+    path: '/LokhandWala',
+    exact: true,
+    id: 'statisLocateUs',
+    routePath: '/LokhandWala',
+    name: 'LocateUs',
+  },
+
+
+  //Search
+  {
+    Component: SearchModal,
+    path: '/search',
+    id: 'staticSearch',
+    routePath: '/search',
+    name: 'Search',
+  },
   {
     Component: LocateDetails,
     path: '/matunga',
@@ -722,6 +769,5 @@ const staticSiteRoutes = [
     name: 'singleCourse',
   },
 ]
-
 
 export default staticSiteRoutes

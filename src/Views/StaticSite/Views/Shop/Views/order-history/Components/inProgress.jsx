@@ -66,10 +66,11 @@ const InProgress = ( { orderDetails,products,totalAmount, currency } ) => {
                 <div className="track_btn" onClick={() => setTrackPackage(item._id)}>
                   <CommonBtn text="TRACK PACKAGE" />
                 </div>
-              </div>:                 <div className="track_btn" onClick={() => setTrackPackage(item._id)}>
-                <h2>Cancelled</h2>
-                <p>{ item.trackingId || item.deliveryPartner }</p>
-              </div> }
+              </div>:                 
+                <div className="track_btn" id='cancelled'>
+                  <h2>Cancelled</h2>
+                  <p>{ item.trackingId || item.deliveryPartner }</p>
+                </div> }
             </div>
             { trackPackage=== item._id && (
               <div className="track_order">

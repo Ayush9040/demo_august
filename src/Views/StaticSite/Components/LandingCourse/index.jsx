@@ -1,12 +1,12 @@
 import React from 'react'
 import './style.scss'
-import { landingFeaturedBlogs } from '../../Views/LandingPage/constant'
+import { landingFeaturedBlogs2 } from '../../Views/LandingPage/constant'
 import LandingButton from './LandingButton'
 
 const FeatuedBlogs = () => {
   return (
     <div className="featured_blogs">
-      {landingFeaturedBlogs.map((item, idx) => (
+      {landingFeaturedBlogs2.map((item, idx) => (
         <div key={idx} className="featured_blogs_div">
           <div className="featured_blogs_img">
             <img src={item?.img} alt="" />

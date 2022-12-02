@@ -44,29 +44,30 @@ export const locateData =[
       {
         state:'Matunga (CR)',
         notstate:'Sri Kanyaka Parmeshwari Temple, Plot No 403, Vasavi Nilayam, Telang Road, Matunga (CR), Mumbai.',
+       
         phone:['+91-9343517490'],
         url: 'matunga'
       },
       {
         state:'Santacruz (W)',
         notstate:'Rotary Club of Bombay West Rotary Service Centre, Rotary Chowk, Juhu Tara Road, Santacruz W, Mumbai 400049.',
-        phone:['+91-9833864964'],
         email:'dhhruv.s@gmail.com',
-        url:'',
+        url: 'santaCruz',
+        phone:['+91-9833864964'],
       },
       {
         state:'Juhu',
         notstate:'Ground Floor Backside, Abhijat Bunglow, Plot No. 48, NS Road Number 7, Opp. Siddhivinayak Building, JVPD Scheme, Juhu.',
-        phone:['+91-9833864964'],
         email:'dhhruv.s@gmail.com',
-        url: ''
+        url: 'Juhu',
+        phone:['+91-9833864964'],
       },
       {
         state:'Vile Parle',
         notstate:'Sanyas Ashram Temple, Off. Bajaj Road, Vile Parle West, Mumbai - 400056',
-        phone:['+91-9833864964'],
         email:'dhhruv.s@gmail.com',
-        url: ''
+        url: 'vileParle',
+        phone:['+91-9833864964'],
       },
       {
         state:'Kalyan',
@@ -77,9 +78,9 @@ export const locateData =[
       {
         state:'Lokhandwala',
         notstate:'The Yoga Institute, Lokhandwala 703, Aston Building, Above Mercedes Benz Showroom, Andheri, Near Lokhandwala Circle',
-        phone:['+91-9833864964'],
         email:'dhhruv.s@gmail.com',
-        url:''
+        url: 'LokhandWala',
+        phone:['+91-9833864964'],
       },
 
       // {
