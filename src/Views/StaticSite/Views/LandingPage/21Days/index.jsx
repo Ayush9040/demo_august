@@ -7,7 +7,7 @@ import LandingButton from '../../../Components/LandingCourse/LandingButton'
 import PhoneInput from 'react-phone-number-input'
 import 'react-phone-number-input/style.css'
 import FeatuedBlogs from '../../../Components/LandingCourse'
-import { testimonialData } from '../constant'
+import { testimonialData2 } from '../constant'
 import { popularCourses } from '../constant'
 import Slider from 'react-slick'
 import CampaignThankYou from '../ThankYouPage'
@@ -107,7 +107,7 @@ const LandingPageNew = () => {
                 <div className="main_heading1">BUILD HEALTHY </div>
                 <div className="main_heading1">HABITS</div>
                 <div className="main_heading2">IN JUST 21 DAYS!</div>
-                <div className="main_heading1"> LEARN FROM THE WORLD`S </div>
+                <div className="main_heading1"> LEARN FROM THE WORLD&apos;S </div>
                 <div className="main_heading1">OLDEST ORGANISED</div>
                 <div className="main_heading1">YOGA CENTRE</div>
               </div>
@@ -203,7 +203,7 @@ const LandingPageNew = () => {
             <div className="heading_21">About the Program</div>
             <div className="text_21">
               The 21-Days Better Living Course is a Certificate Course designed
-              to help people build healthy habits, imbibe yogic principles and
+              to help people build healthy habits, imbibe Yogic principles and
               lead a well-balanced life.{' '}
             </div>
             <div className="text_21">
@@ -260,7 +260,7 @@ const LandingPageNew = () => {
                   <p>Physical strength & flexibility</p>
                 </li>
                 <li>
-                  <p>Better Interpersonal relationships </p>
+                  <p>Better interpersonal relationships </p>
                 </li>
                 <li>
                   <p>Reduced anger, stress and anxiety</p>
@@ -309,7 +309,7 @@ const LandingPageNew = () => {
         <section className="section_2">
           <div className="heading_21">Glimpse of the Course</div>
           <div className="text_21">
-            Here`s an insight into the 21-Days Better Living Course. This program
+            Here&apos;s an insight into the 21-Days Better Living Course. This program
             will transform your life and help you to maintain a mind-body
             balance. Come experience, explore and learn Yoga to lead a joyful
             life.{' '}
@@ -342,15 +342,15 @@ const LandingPageNew = () => {
 
         <section className="testimonials-section21">
           <Slider {...settings}>
-            {testimonialData.map((item, i) => (
+            {testimonialData2.map((item, i) => (
               <div key={i} className="testimonial21">
                 <div className="left21">
-                  <img src={item.img} alt={`testimonial-${i + 1}`} />
+                  <img src={item?.img} alt={`testimonial-${i + 1}`} />
                 </div>
                 <div className="right21">
-                  <p className="heading21">{item.name}</p>
-                  <span>{item.info}</span>
-                  <p className="content21">{item.message}</p>
+                  <p className="heading21">{item?.name}</p>
+                  <span>{item?.info}</span>
+                  <p className="content21">{item?.message}</p>
                 </div>
               </div>
             ))}
