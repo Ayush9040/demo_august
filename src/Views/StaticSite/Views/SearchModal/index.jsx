@@ -1,6 +1,6 @@
 import axios from 'axios'
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate, useSearchParams } from 'react-router-dom'
 import { cross, Search } from '../../assets/icons/icon'
 import Pagination from 'react-js-pagination'
 import './style.scss'
@@ -16,11 +16,40 @@ const SearchModal = ({ setIsModalOpen }) => {
     limit: 10,
   })
   const [count,setCount] = useState(0)
+  const [Params] = useSearchParams()  
 
-
-
-  const searchContent = (page=1,limit=10) => {
-    if (search === '') return
+  const navigate = useNavigate()
+  const getSearchData = ()=>{
+    if(Params.get('search')){
+      try {
+        setIsLoading(true)
+        setSearch(Params.get('search'))
+        axios
+          .get(
+            `https://cms-dev-be.theyogainstituteonline.org/v1/misc/search/?title=${Params.get('search')}&page=${pagination.page}&limit=${pagination.limit}`
+          )
+          .then((res) => {
+            setContent(res.data)
+            setCount(res.data.count)
+          })
+          .then(() => {
+            setIsLoading(false)
+          })
+        Params.set('search',search)
+      } catch (err) {
+        console.log(err)
+      }
+      return
+    }
+  }
+  const searchContent = (page,limit) => {
+    if (search === '') {
+      setSearch('')
+      setContent([])
+      navigate('/search')
+      return
+    }
+    navigate(`/search/?search=${search}`)
     try {
       setIsLoading(true)
       axios
@@ -41,11 +70,12 @@ const SearchModal = ({ setIsModalOpen }) => {
 
   const handlePageChange = (pageNumber) => {
     setPagination({ ...pagination,page:pageNumber, limit:10 })
+    searchContent( pageNumber,10)
   }
 
   useEffect(()=>{
-    searchContent( pagination.page,pagination.limit )
-  },[pagination])
+    getSearchData()
+  },[])
 
   
 
