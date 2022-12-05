@@ -3,6 +3,8 @@ import Select from 'react-select'
 import { Country, City, State } from 'country-state-city'
 import './style.scss'
 import InputComponent from '../../../Components/InputComponent'
+import PhoneInput from 'react-phone-number-input'
+import 'react-phone-number-input/style.css'
 import { validateEmail } from '../../../../../helpers'
 import CommonBtn from '../../../Components/commonbtn'
 import { createHomeTution } from '../Api'
@@ -192,7 +194,7 @@ const HomeTutions = () => {
             {empty === 2 && <small> Please enter an valid E-mail</small>}
           </div>
           <div className="form-field">
-            <InputComponent
+            <PhoneInput
               type="number"
               placeholder="Enter mobile number*"
               value={contact}
@@ -200,6 +202,10 @@ const HomeTutions = () => {
               setField={setFormData}
               keyName="contact"
               errorCheck={setEmpty}
+              defaultCountry='IN'
+              onChange={(e) => {
+                setFormData({ ...formData, phone: e })
+              }}
             />
             {empty === 3 && <small> Please enter your phone number</small>}
           </div>

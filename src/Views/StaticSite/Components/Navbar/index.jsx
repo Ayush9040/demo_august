@@ -1,4 +1,4 @@
-import React, { useState,lazy } from 'react'
+import React, { useState,lazy, useEffect } from 'react'
 import './styles.scss'
 import { Hamburger, Cart, Gift, User, Search } from '../../assets/icons/icon'
 import { Link } from 'react-router-dom'
@@ -11,12 +11,25 @@ const Navbar = ({ isUserLoggedIn, setIsModalOpen }) => {
   const navigate = useNavigate()
   const [nav, setNav] = useState(false)
   const [dropdown,setDropdown]=useState(false)
+  const [scrollClass,setScrollClass] = useState(false)
+  const [scrollImg,setScrollClImg] = useState(false)
   const dispatch = useDispatch()
 
+  useEffect(() => {
+    window.addEventListener('scroll',()=>{
+      if(window.pageYOffset >= 150) {
+        setScrollClass(true)
+        setScrollClImg(true)
+      }else {
+        setScrollClass(false)
+        setScrollClImg(false)
+      }
+    })
+  }, [])
   return (
     <>
       <div id='hero-overlay' >
-        <div className="navbar-container">
+        <div className={`navbar-container ${scrollClass? 'navigation-color' : '' }`}>
           <div
             className="hamburger"
             onClick={() => {
@@ -28,7 +41,7 @@ const Navbar = ({ isUserLoggedIn, setIsModalOpen }) => {
           </div>
           <div className="title-logo" >
             <span className='mobile-search' onClick={ ()=>{setIsModalOpen(true)} } >{ Search }</span>
-            <div className="header-logo">
+            <div className={`header-logo ${scrollImg? 'navigation-img' : ''}`}>
               <img
                 style={{ transition: 'none !important' }}
                 placeholder="none"
