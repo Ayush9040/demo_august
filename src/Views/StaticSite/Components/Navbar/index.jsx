@@ -53,7 +53,8 @@ const Navbar = ({ isUserLoggedIn, setIsModalOpen }) => {
           </div>
           <div className="quick-actions">
             <ul>
-              <li onClick={ ()=>{setIsModalOpen(true)} } >{Search}</li>
+              <Link to='/search'>
+                <li onClick={ ()=>{setIsModalOpen(true)} } >{Search}</li></Link>
               <Link to="/shop">
                 <li>{Cart}</li>
               </Link>
