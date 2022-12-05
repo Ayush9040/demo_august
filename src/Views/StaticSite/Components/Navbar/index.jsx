@@ -1,6 +1,6 @@
 import React, { useState,lazy } from 'react'
 import './styles.scss'
-import { Hamburger, Cart, Gift, User, Search } from '../../assets/icons/icon'
+import { Hamburger, Cart, User, Search } from '../../assets/icons/icon'
 import { Link } from 'react-router-dom'
 import { logoutUserAction } from '../../Views/Authentication/Auth.actions'
 import { useNavigate } from 'react-router-dom'
@@ -44,9 +44,9 @@ const Navbar = ({ isUserLoggedIn, setIsModalOpen }) => {
               <Link to="/shop">
                 <li>{Cart}</li>
               </Link>
-              <Link className='comingSoon' to="/">
+              {/* <Link className='comingSoon' to="/">
                 <li>{Gift}</li>
-              </Link>
+              </Link> */}
               <Link onMouseOver={()=>{setDropdown(true)}} onMouseOut={()=>{setDropdown(false)}} to={isUserLoggedIn ? '/user/profile' : '/user/sign-in'}>
                 <li>{User}
                   <div style={dropdown===true && isUserLoggedIn ?{ display:'block' }:{}} className='user-dropdown'>
