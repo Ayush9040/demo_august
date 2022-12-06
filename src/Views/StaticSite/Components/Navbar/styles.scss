@@ -1,3 +1,24 @@
+// html:not([data-scroll='0']) .navbar-container{ 
+//     background: linear-gradient(#000000e6 ,#000000d4 ,#00000080,#00000000)
+// }
+
+html:not([data-scroll='0']) .header-logo img{ 
+    width: 50%;
+    margin: 0 auto;
+    object-fit: contain !important;
+}
+
+.navigation-color {
+    // background: black !important;
+    max-width: 100% !important;
+}
+
+.navigation-img {
+    width: 90% !important;
+    margin: 0 auto;
+    object-fit: contain !important;
+}
+
 .navbar-container {
     display: flex;
     justify-content: space-evenly;
@@ -15,6 +36,7 @@
     }
 
     .title-logo{
+  
         .mobile-search{
             display: none;
         }

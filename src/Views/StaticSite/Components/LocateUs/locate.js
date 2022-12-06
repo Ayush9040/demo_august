@@ -52,22 +52,25 @@ export const locateData =[
         state:'Santacruz (W)',
         notstate:'Rotary Club of Bombay West Rotary Service Centre, Rotary Chowk, Juhu Tara Road, Santacruz W, Mumbai 400049.',
         email:'dhhruv.s@gmail.com',
-        url: 'santaCruz',
+        url: 'https://jal.theyogainstitute.org/',
         phone:['+91-9833864964'],
+        toRedirect: true
       },
       {
         state:'Juhu',
         notstate:'Ground Floor Backside, Abhijat Bunglow, Plot No. 48, NS Road Number 7, Opp. Siddhivinayak Building, JVPD Scheme, Juhu.',
         email:'dhhruv.s@gmail.com',
-        url: 'Juhu',
+        url: 'https://jal.theyogainstitute.org/',
         phone:['+91-9833864964'],
+        toRedirect: true
       },
       {
         state:'Vile Parle',
         notstate:'Sanyas Ashram Temple, Off. Bajaj Road, Vile Parle West, Mumbai - 400056',
         email:'dhhruv.s@gmail.com',
-        url: 'vileParle',
+        url: 'https://jal.theyogainstitute.org/',
         phone:['+91-9833864964'],
+        toRedirect: true
       },
       {
         state:'Kalyan',
@@ -79,8 +82,9 @@ export const locateData =[
         state:'Lokhandwala',
         notstate:'The Yoga Institute, Lokhandwala 703, Aston Building, Above Mercedes Benz Showroom, Andheri, Near Lokhandwala Circle',
         email:'dhhruv.s@gmail.com',
-        url: 'LokhandWala',
+        url: 'https://jal.theyogainstitute.org/',
         phone:['+91-9833864964'],
+        toRedirect: true
       },
 
       // {

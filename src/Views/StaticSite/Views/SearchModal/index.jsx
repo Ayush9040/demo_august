@@ -25,7 +25,7 @@ const SearchModal = ({ setIsModalOpen }) => {
       setIsLoading(true)
       axios
         .get(
-          `${ cmsBaseDomain }/misc/search/?title=${search}&page=${page}&limit=${limit}`
+          `${ cmsBaseDomain }/misc/search/?search=${search}&page=${page}&limit=${limit}`
         )
         .then((res) => {
           setContent(res.data)

@@ -32,6 +32,7 @@ const LocateUs = () => {
   }, [bold])
 
   const navigate = useNavigate()
+
   return (
     <>
       {metaDataObj[location.pathname] &&
@@ -194,7 +195,9 @@ const LocateUs = () => {
                         {' '}
                         {items?.website}
                       </a>
-                      {items?.url !== '' && <button className='country-details-btn' onClick={()=>navigate(`/${items?.url}`)}>Details</button>}
+                      <div>
+                        {items?.url !== '' ? items?.toRedirect ?<a href='https://jal.theyogainstitute.org/' target='_blank' rel='noreferrer' ><button className='country-details-btn'>Details</button></a> :  <button className='country-details-btn' onClick={()=>navigate('/matunga')}>Details</button>: null}
+                      </div>
                     </div>
                   </div>
                 )
