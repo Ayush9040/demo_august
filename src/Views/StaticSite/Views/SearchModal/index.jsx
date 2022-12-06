@@ -7,7 +7,7 @@ import './style.scss'
 import { useEffect } from 'react'
 import { cmsBaseDomain } from '../../../../Constants/appSettings'
 
-const SearchModal = ({ setIsModalOpen }) => {
+const SearchModal = () => {
   const [search, setSearch] = useState('')
   const [content, setContent] = useState([])
   const [isLoading, setIsLoading] = useState(false)
