@@ -2,7 +2,6 @@ import React, { useState, useEffect,lazy } from 'react'
 import { useLocation } from 'react-router-dom'
 import './style.scss'
 import { useNavigate } from 'react-router-dom'
-import SearchModal from '../../Views/SearchModal'
 import { useDispatch, useSelector } from 'react-redux'
 // import axios from 'axios'
 import {
@@ -30,7 +29,6 @@ const InnerNavComponent = ({ abc }) => {
   const { isLoggedIn } = useSelector((state) => state.auth)
   const [nav, setNav] = useState(false)
   const [dropdown,setDropdown]=useState(false)
-  const [ isModalOpen,setIsModalOpen ] = useState(false)
   const [bold, setBold] = useState(0)
   const [ cartItems,setCartItems ] = useState(0)
   const location = useLocation()
@@ -71,7 +69,7 @@ const InnerNavComponent = ({ abc }) => {
                 : Hamburger}
           </div>
           <div className="main-logo" id={`${ abc.color }`} >
-            <span className='mobile-search' onClick={ ()=>{setIsModalOpen(true)} } >{ abc.color === 'orange' ? Search:abc.color === 'black' ? SearchBlack : SearchWhite }</span>
+            <span className='mobile-search' onClick={ ()=>{navigate('/')} } >{ abc.color === 'orange' ? Search:abc.color === 'black' ? SearchBlack : SearchWhite }</span>
             {abc.title==='Shop'
               ?    <Link className='mobile-search mobile-cart' style={{ marginLeft:'15px' }} to='/shop/cart'>        
                 { Cart }  <span  style={{ color:'#CA4625' }} className='cart-count' >{ cartItems }</span></Link>
@@ -108,7 +106,7 @@ const InnerNavComponent = ({ abc }) => {
             </ul>
           </div>
           <div className="user-container">
-            <div onClick={ ()=>{setIsModalOpen(true)} } >{ abc.color === 'orange' ? Search:abc.color === 'black' ? SearchBlack : SearchWhite }</div>
+            <div onClick={ ()=>{navigate('/')} } >{ abc.color === 'orange' ? Search:abc.color === 'black' ? SearchBlack : SearchWhite }</div>
             {abc.title==='Shop'
               ?    <Link to='/shop/cart'>        
                 { Cart }  <span style={{ color:'#CA4625' }} className='cart-count' >{ cartItems }</span></Link>
@@ -191,9 +189,7 @@ const InnerNavComponent = ({ abc }) => {
           <MegaMenu setNav={setNav} />
         </div>
       )}
-      { isModalOpen && <div className='search-modal-container' >
-        <SearchModal setIsModalOpen={ setIsModalOpen } />
-      </div> }
+      
     </>
   )
 }
