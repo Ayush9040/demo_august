@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 const MegaMenu = lazy(()=>import('../MegaMenu'))
 
-const Navbar = ({ isUserLoggedIn, setIsModalOpen }) => {
+const Navbar = ({ isUserLoggedIn }) => {
   const navigate = useNavigate()
   const [nav, setNav] = useState(false)
   const [dropdown,setDropdown]=useState(false)
@@ -40,7 +40,7 @@ const Navbar = ({ isUserLoggedIn, setIsModalOpen }) => {
             {Hamburger}
           </div>
           <div className="title-logo" >
-            <span className='mobile-search' onClick={ ()=>{setIsModalOpen(true)} } >{ Search }</span>
+            <span className='mobile-search' onClick={ ()=>{navigate('/')} } >{ Search }</span>
             <div className={`header-logo ${scrollImg? 'navigation-img' : ''}`}>
               <img
                 style={{ transition: 'none !important' }}
@@ -54,7 +54,7 @@ const Navbar = ({ isUserLoggedIn, setIsModalOpen }) => {
           <div className="quick-actions">
             <ul>
               <Link to='/search'>
-                <li onClick={ ()=>{setIsModalOpen(true)} } >{Search}</li></Link>
+                <li onClick={ ()=>{navigate('/')} } >{Search}</li></Link>
               <Link to="/shop">
                 <li>{Cart}</li>
               </Link>
