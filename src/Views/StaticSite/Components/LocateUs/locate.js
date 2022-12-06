@@ -19,7 +19,7 @@ export const locateData =[
       },
       {
         state:'Raipur',
-        notstate:'Namami Health Retreat &amp; A Wellness Sanctuary 7/156, Mulamkuzhy, Malayttoor, Ernakulam Kochi 683587 – Kerala, India.',
+        notstate:'The Yoga Institute, Raipur Besides Vidya Kidney Hospital,In front of Indian Chilly Restaurant,Shankar Nagar Main RoadRaipur, CG 492012',
         phone:['+91-9752550490','+91-982035049'],
         email:'tyiraipur@gmail.com',
         website:'https://theyogainstituteraipur.com',
