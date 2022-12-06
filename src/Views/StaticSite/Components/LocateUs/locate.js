@@ -19,7 +19,7 @@ export const locateData =[
       },
       {
         state:'Raipur',
-        notstate:'The Yoga Institute, Raipur Besides Vidya Kidney Hospital,In front of Indian Chilly Restaurant,Shankar Nagar Main RoadRaipur, CG 492012',
+        notstate:'The Yoga Institute, Raipur Besides Vidya Kidney Hospital,In front of Indian Chilly Restaurant,Shankar Nagar Main Road Raipur, CG 492012',
         phone:['+91-9752550490','+91-982035049'],
         email:'tyiraipur@gmail.com',
         website:'https://theyogainstituteraipur.com',
