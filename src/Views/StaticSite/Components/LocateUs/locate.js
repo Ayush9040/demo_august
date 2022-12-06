@@ -27,7 +27,7 @@ export const locateData =[
       },
       {
         state:'Kochi',
-        notstate:'Namami Health Retreat &amp; A Wellness Sanctuary 7/156, Mulamkuzhy, Malayttoor, Ernakulam Kochi 683587 – Kerala, India.',
+        notstate:'Namami Health Retreat`s A Wellness Sanctuary 7/156, Mulamkuzhy, Malayttoor, Ernakulam Kochi 683587 – Kerala, India.',
         phone:['+91-4842621234', '+91-9188952296'],
         email:'tyikochi@namamihealth.com',
         website:'https://namamihealth.com',
