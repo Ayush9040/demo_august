@@ -65,6 +65,10 @@ const getBlogsMeta = async( slug )=>{
 
 
 }
+const getBogLinks = async()=>{
+  const { data } = await axios.get('https://cms-prod-be.theyogainstitute.org/v1/misc/urlsarray')
+  return data.data
+}
 
 app.use(express.static('build', options))
 
@@ -79,11 +83,14 @@ app.get('*', async(req, res) => {
   let titleTag = null
   let metaArray = []
   let linkArray = []
+  let linkArryBlogs = await getBogLinks()
   let script = ''
   let h1Tag = null
   let h2Tags = []
   let aTags = []
+  let blogATags =[]
 
+  console.log(linkArryBlogs)
   if (metaData && metaData.title) titleTag = `<title>${metaData.title}</title>`
   if(metaData && metaData.links){
     linkArray = metaData.links.map((link)=>{
@@ -105,10 +112,12 @@ app.get('*', async(req, res) => {
   }
   if(metaData && metaData.aTags) {
     aTags = metaData.aTags.map((url)=>`<a class="meta-heading" href=${ url } >${ url }</a>`)
+    blogATags = linkArryBlogs.map((url)=>`<a class="meta-heading" href=${ url } >${ url }</a>`)
   }
+  
 
   $('head').append([titleTag, script, ...metaArray, ...linkArray])
-  $('body').append([h1Tag, ...h2Tags,...aTags])
+  $('body').append([h1Tag, ...h2Tags,...aTags,...blogATags])
   res.status(200).send($.html())
 })
 

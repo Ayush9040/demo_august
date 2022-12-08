@@ -142,6 +142,7 @@ const BlogAnother = () => {
       
     
       { Object.keys(blog).length===0 ? <div className='global-loader' >Loading...</div> : <div className='blog-container' id='blog-container' >
+        <h1 className='meta-heading' dangerouslySetInnerHTML={{ __html:`${blog?.title}` }} ></h1>
         <h2 dangerouslySetInnerHTML={{ __html:`${blog?.title}` }} ></h2>
         <br/>
         { blog?.coverImage &&  <div className='blog_img' >
