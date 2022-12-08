@@ -195,7 +195,7 @@ const HomeTutions = () => {
           </div>
           <div className="form-field">
             <PhoneInput
-              type="number"
+              // type="number"
               placeholder="Enter mobile number*"
               value={contact}
               form={formData}
