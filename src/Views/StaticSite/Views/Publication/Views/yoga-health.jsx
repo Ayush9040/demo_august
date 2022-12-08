@@ -65,7 +65,7 @@ const YogaTotalHealth = () => {
         </div>
         <div className="publication-intro">
           <div className="mag-preview">
-            <img src={`${baseDomain}${publicationAssests.publicationAssests86}`}  alt='Yoga and Total Health'/>
+            <img src={`${baseDomain}${publicationAssests.publicationAssests87}`}  alt='Yoga and Total Health'/>
           </div>
           <div className="mag-details">
             <div className="journal">
@@ -80,11 +80,11 @@ const YogaTotalHealth = () => {
 
             <div className="month-year">
               <h2 className="jouranl-title">
-              November 2022
+              December 2022
                 <div className="bottom-line"></div>
               </h2>
               <p>
-              The 125th Birth Anniversary of Shri Yogendraji, Founder of the Yoga Institute, is in November! A few of the gems from the journal – Hansaji’s favourite story of the horse and the donkey, and Devdutt Pattanaik’s views on the synthesis between Yagna and yoga. Learn how to handle a hectic festival season. Read fascinating stories connected with Shri Krishna from Shrimad Bhagwat Mahapurana. Prepare for the upcoming change in weather, with Ber Chutney whose recipe is featured in Yogic Ahara. We have (in Hindi) Sutra 2.15 and Samkhya explaining creation through Prakriti. So, pick up these gems, today!!!
+              The Yoga Institute celebrates 104th year of its selfless services this month. Dr Jayadeva emphasizes the need for learning to relax and explains how cultivating very strong faith in a higher reality will help one to relax. Hansaji explains how a little inquisitiveness with a purpose is helpful and throws light on some useless customs that may still exist around us in the lack thereof. Learn how Dates, in a variety of forms and recipes, can improve our health during the current winter season. We have (in Hindi) Samkhya Karika 57 as well as an article sharing the importance of good sleep for better health. On the last page, find an extremely simple answer by Dr Jayadeva to the Question – What is the most important thing in life?
               </p>
             </div>
           </div>
