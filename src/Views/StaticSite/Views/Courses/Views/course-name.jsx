@@ -8,6 +8,7 @@ import { AllCourses } from '../Constants/courses'
 import { Helmet } from 'react-helmet'
 import metaDataObj from '../../../../../Constants/metaData.json'
 import { cmsBaseDomain } from '../../../../../Constants/appSettings'
+import RelatedCourse from './Component'
 
 const SingleCourse = () => {
 
@@ -17,6 +18,7 @@ const SingleCourse = () => {
   const [pageDate, setPageData] = useState({})
   const [isLoading, setIsLoadding] = useState(false)
   const [ metaData,setMetaData ] = useState([])
+  const [ cardData,setCardData ] = useState([])
 
   const parsingAlgo = async()=>{
     try {
@@ -24,7 +26,9 @@ const SingleCourse = () => {
         `${ cmsBaseDomain }/seometatags/?pagePath=${contentId}`
       )
       let data = res.data.data.meta
-
+      setCardData( res.data.data.relatedCourses.map( item=>{
+        return AllCourses.find(el=>el.key===item)
+      } ) )
       let headers = {
         title: '',
         links: [],
@@ -83,6 +87,12 @@ const SingleCourse = () => {
         <InnerNavComponent abc={CareerNameBan}/>
         {!isLoading && <CourseDetails pageDate={pageDate} />}
       </div>
+      <RelatedCourse
+        title={'Related Courses'}
+        description={' lorem ipsum '}
+        cardData={ cardData }
+        url={'/courses'}
+      />
     </>
   )
 }
