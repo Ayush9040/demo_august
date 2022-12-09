@@ -10,7 +10,7 @@ const CoursePara = ({ content }) => {
         {content.title}
       </h2>}
       {content.text.map((point, i) => {
-        return <p key={i} >{point}</p>
+        return <p className='para' key={i} >{point}</p>
       })}
     </div>
   )
