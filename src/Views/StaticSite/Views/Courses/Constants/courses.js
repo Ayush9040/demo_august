@@ -411,10 +411,10 @@ const ttc200hr = {
     // id: '',
     // templateId: 'COURSE200_1M_TTC2',
     templateId: {
-      templateOnline: '',
+      templateOnline: 'COURSE_200_HRS_ONLINE_CONFIRMATION_MAIL',
       templateOffline: {
-        templateResidential: 'COURSE200_2M_RES_TTC',
-        templateNonResidential: 'COURSE200_2M_NONRES_TTC',
+        templateResidential: 'COURSE_200_HRS_RESIDENTIAL_CONFIRMATION_MAIL',
+        templateNonResidential: 'COURSE_200_HRS_NONRESIDENTIAL_CONFIRMATION_MAIL',
       },
     },
     batch: 2,
@@ -427,11 +427,11 @@ const ttc200hr = {
     colorCode: '#E38F73',
     timing: 'Monday to Friday : 12:00 noon - 4:00 pm (IST)',
     fees: {
-      onlineFee: 0,
+      onlineFee: 22000,
       offlineFee: { residentialFee: 70000, nonResidentialFee: 28000 },
     },
     category: 'ttc',
-    title: '200 hrs TTC - 2 Months TTC On Campus-English-Batch 2',
+    title: '200 hrs TTC - 2 Months TTC Online and On Campus-English-Batch 2',
     dates: [
       '31st Oct to 23rd Dec 2022',
       '26th Dec to 17th Feb 2023',
@@ -442,7 +442,7 @@ const ttc200hr = {
       '2nd Oct to 24th Nov 2023',
       '27th Nov to 19th Jan 2024'
     ],
-    online: false,
+    online: true,
     onCampus: true,
     nonResidential: true,
     residential: true,
