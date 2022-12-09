@@ -296,7 +296,73 @@ const ttc200hr = {
         },
       },
     ],
-    teaching: [],
+    teaching: [
+      {
+        type: 'u-list',
+        content: {
+          title: 'Course Attendance Criteria',
+          points: [
+            {
+              listItem:
+                'A student is required to have a minimum 80% attendance',
+              subItems: [],
+            },
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: [
+            'After qualifying the attendance criteria, students can appear for the exam (100 marks). Details below:',
+          ],
+        },
+      },
+      {
+        type: 'table',
+        content: {
+          title: '',
+          tableHeading: ['Deatils', 'Marks', 'Minimum Scrore Req.'],
+          tableData: [['Theory Component', '50', '50%']],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: [
+            'On successfully passing the exam, students will be awarded a certificate – Basic Teacher Training Certificate (200 hours) by The Yoga Institute, which is recognized by Yoga Certification Board (AYUSH Level-1) and Yoga Alliance USA (RYT 200).',
+          ],
+        },
+      },
+      {
+        type: 'u-list',
+        content: {
+          title:
+            'Post qualification, a number of opportunities are open to you, like:',
+          points: [
+            {
+              listItem: 'Working with schools and teaching children',
+              subItems: [],
+            },
+            {
+              listItem:
+                'Opening your own yoga center for healthy adults and children',
+              subItems: [],
+            },
+            {
+              listItem: 'Working with corporates for their wellness programs',
+              subItems: [],
+            },
+            {
+              listItem: 'Personal yoga coaching',
+              subItems: [],
+            },
+          ],
+        },
+      },
+    ],
     offerings: [
       {
         type: 'u-list',
@@ -557,6 +623,8 @@ const ttc200hr = {
           url: 'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/courses_pdf/200hr.pdf',
         },
       },
+    ],
+    teaching: [
       {
         type: 'u-list',
         content: {
@@ -623,7 +691,6 @@ const ttc200hr = {
         },
       },
     ],
-    teaching: [],
     offerings: [
       {
         type: 'u-list',
@@ -949,7 +1016,73 @@ const ttc200hr = {
         },
       },
     ],
-    teaching: [],
+    teaching: [
+      {
+        type: 'u-list',
+        content: {
+          title: 'Course Attendance Criteria',
+          points: [
+            {
+              listItem:
+                'A student is required to have a minimum 80% attendance',
+              subItems: [],
+            },
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: [
+            'After qualifying the attendance criteria, students can appear for the exam (100 marks). Details below:',
+          ],
+        },
+      },
+      {
+        type: 'table',
+        content: {
+          title: '',
+          tableHeading: ['Deatils', 'Marks', 'Minimum Scrore Req.'],
+          tableData: [['Theory Component', '50', '50%']],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: [
+            'On successfully passing the exam, students will be awarded a certificate – Basic Teacher Training Certificate (200 hours) by The Yoga Institute, which is recognized by Yoga Certification Board (AYUSH Level-1) and Yoga Alliance USA (RYT 200).',
+          ],
+        },
+      },
+      {
+        type: 'u-list',
+        content: {
+          title:
+            'Post qualification, a number of opportunities are open to you, like:',
+          points: [
+            {
+              listItem: 'Working with schools and teaching children',
+              subItems: [],
+            },
+            {
+              listItem:
+                'Opening your own yoga center for healthy adults and children',
+              subItems: [],
+            },
+            {
+              listItem: 'Working with corporates for their wellness programs',
+              subItems: [],
+            },
+            {
+              listItem: 'Personal yoga coaching',
+              subItems: [],
+            },
+          ],
+        },
+      },
+    ],
     offerings: [
       {
         type: 'u-list',
@@ -1271,7 +1404,73 @@ const ttc200hr = {
         },
       },
     ],
-    teaching: [],
+    teaching: [
+      {
+        type: 'u-list',
+        content: {
+          title: 'Course Attendance Criteria',
+          points: [
+            {
+              listItem:
+                'A student is required to have a minimum 80% attendance',
+              subItems: [],
+            },
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: [
+            'After qualifying the attendance criteria, students can appear for the exam (100 marks). Details below:',
+          ],
+        },
+      },
+      {
+        type: 'table',
+        content: {
+          title: '',
+          tableHeading: ['Deatils', 'Marks', 'Minimum Scrore Req.'],
+          tableData: [['Theory Component', '50', '50%']],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: [
+            'On successfully passing the exam, students will be awarded a certificate – Basic Teacher Training Certificate (200 hours) by The Yoga Institute, which is recognized by Yoga Certification Board (AYUSH Level-1) and Yoga Alliance USA (RYT 200).',
+          ],
+        },
+      },
+      {
+        type: 'u-list',
+        content: {
+          title:
+            'Post qualification, a number of opportunities are open to you, like:',
+          points: [
+            {
+              listItem: 'Working with schools and teaching children',
+              subItems: [],
+            },
+            {
+              listItem:
+                'Opening your own yoga center for healthy adults and children',
+              subItems: [],
+            },
+            {
+              listItem: 'Working with corporates for their wellness programs',
+              subItems: [],
+            },
+            {
+              listItem: 'Personal yoga coaching',
+              subItems: [],
+            },
+          ],
+        },
+      },
+    ],
     offerings: [
       {
         type: 'u-list',
@@ -1585,7 +1784,73 @@ const ttc200hr = {
         },
       },
     ],
-    teaching: [],
+    teaching: [
+      {
+        type: 'u-list',
+        content: {
+          title: 'Course Attendance Criteria',
+          points: [
+            {
+              listItem:
+                'A student is required to have a minimum 80% attendance',
+              subItems: [],
+            },
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: [
+            'After qualifying the attendance criteria, students can appear for the exam (100 marks). Details below:',
+          ],
+        },
+      },
+      {
+        type: 'table',
+        content: {
+          title: '',
+          tableHeading: ['Deatils', 'Marks', 'Minimum Scrore Req.'],
+          tableData: [['Theory Component', '50', '50%']],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: [
+            'On successfully passing the exam, students will be awarded a certificate – Basic Teacher Training Certificate (200 hours) by The Yoga Institute, which is recognized by Yoga Certification Board (AYUSH Level-1) and Yoga Alliance USA (RYT 200).',
+          ],
+        },
+      },
+      {
+        type: 'u-list',
+        content: {
+          title:
+            'Post qualification, a number of opportunities are open to you, like:',
+          points: [
+            {
+              listItem: 'Working with schools and teaching children',
+              subItems: [],
+            },
+            {
+              listItem:
+                'Opening your own yoga center for healthy adults and children',
+              subItems: [],
+            },
+            {
+              listItem: 'Working with corporates for their wellness programs',
+              subItems: [],
+            },
+            {
+              listItem: 'Personal yoga coaching',
+              subItems: [],
+            },
+          ],
+        },
+      },
+    ],
     offerings: [
       {
         type: 'u-list',
@@ -1902,7 +2167,73 @@ const ttc200hr = {
         },
       },
     ],
-    teaching: [],
+    teaching: [
+      {
+        type: 'u-list',
+        content: {
+          title: 'Course Attendance Criteria',
+          points: [
+            {
+              listItem:
+                'A student is required to have a minimum 80% attendance',
+              subItems: [],
+            },
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: [
+            'After qualifying the attendance criteria, students can appear for the exam (100 marks). Details below:',
+          ],
+        },
+      },
+      {
+        type: 'table',
+        content: {
+          title: '',
+          tableHeading: ['Deatils', 'Marks', 'Minimum Scrore Req.'],
+          tableData: [['Theory Component', '50', '50%']],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: [
+            'On successfully passing the exam, students will be awarded a certificate – Basic Teacher Training Certificate (200 hours) by The Yoga Institute, which is recognized by Yoga Certification Board (AYUSH Level-1) and Yoga Alliance USA (RYT 200).',
+          ],
+        },
+      },
+      {
+        type: 'u-list',
+        content: {
+          title:
+            'Post qualification, a number of opportunities are open to you, like:',
+          points: [
+            {
+              listItem: 'Working with schools and teaching children',
+              subItems: [],
+            },
+            {
+              listItem:
+                'Opening your own yoga center for healthy adults and children',
+              subItems: [],
+            },
+            {
+              listItem: 'Working with corporates for their wellness programs',
+              subItems: [],
+            },
+            {
+              listItem: 'Personal yoga coaching',
+              subItems: [],
+            },
+          ],
+        },
+      },
+    ],
     offerings: [
       {
         type: 'u-list',
@@ -6545,6 +6876,13 @@ const camps = {
           ],
         },
       },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Note',
+          text: ['*Please note, the camp is open only for women after 3 months of pregnancy till the 9 months of pregnancy.'],
+        },
+      },
     ],
   },
 
@@ -7461,8 +7799,8 @@ const camps = {
       {
         type: 'paragraph',
         content: {
-          title: '',
-          text: ['Benefits of this camp'],
+          title: 'Benefits of this camp',
+          text: [],
         },
       },
       {
@@ -7831,8 +8169,8 @@ const camps = {
       {
         type: 'paragraph',
         content: {
-          title: '',
-          text: ['Benefits of this camp'],
+          title: 'Benefits of this camp',
+          text: [],
         },
       },
       {
@@ -9754,8 +10092,29 @@ const classes = {
       {
         type: 'paragraph',
         content: {
-          title: 'Fees ',
-          text: ['1000 INR'],
+          title: 'Fees',
+          text: [''],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Monthly Fees',
+          text: ['Rs. 1000/-'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Six Months Fees',
+          text: ['Rs. 6000/-'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Annual Fees',
+          text: ['Rs. 10000/-'],
         },
       },
 
@@ -10550,8 +10909,15 @@ const classes = {
       {
         type: 'paragraph',
         content: {
-          title: 'Saturday & Sunday:Saturday',
-          text: [' 8:00 am - 9:30 am  (IST) and '],
+          title: 'Saturday & Sunday',
+          text: [],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Saturday',
+          text: [' 8:00 am - 9:30 am  (IST)'],
         },
       },
       {
@@ -10565,9 +10931,31 @@ const classes = {
         type: 'paragraph',
         content: {
           title: 'Fees ',
-          text: ['INR 1000'],
+          text: [''],
         },
       },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Monthly Fees',
+          text: ['Rs. 1000/-'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Six Months Fees',
+          text: ['Rs. 6000/-'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Annual Fees',
+          text: ['Rs. 10000/-'],
+        },
+      },
+
       {
         type: 'paragraph',
         content: {
@@ -11075,9 +11463,31 @@ const classes = {
         type: 'paragraph',
         content: {
           title: 'Fees',
-          text: ['INR 1000'],
+          text: [],
         },
       },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Monthly Fees',
+          text: ['Rs. 1000/-'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Six Months Fees',
+          text: ['Rs. 6000/-'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Annual Fees',
+          text: ['Rs. 10000/-'],
+        },
+      },
+
       {
         type: 'paragraph',
         content: {
