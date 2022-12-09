@@ -19,6 +19,7 @@ const SingleCourse = () => {
   const [isLoading, setIsLoadding] = useState(false)
   const [ metaData,setMetaData ] = useState([])
   const [ cardData,setCardData ] = useState([])
+  const [ titleTag,setTitleTag ] = useState('')
 
   const parsingAlgo = async()=>{
     try {
@@ -55,6 +56,7 @@ const SingleCourse = () => {
         else if (el.includes('<script')) headers.script = el
       })
 
+      setTitleTag(headers.title.trim())
       setMetaData(headers.metaData)
     } catch (err) {
       console.log(err)
@@ -80,7 +82,7 @@ const SingleCourse = () => {
     <>
       { metaDataObj[location.pathname] &&    
     <Helmet
-      title={metaDataObj[location.pathname]?.title || ''}
+      title={ titleTag }
       meta={ metaData }
     /> }
       <div className='single-course'>
