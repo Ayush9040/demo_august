@@ -59,7 +59,7 @@ const getMetaData = async( path )=>{
         headers.title = el.replace('<title>','').replace('</title>','')
       else if (el.includes('<script')) headers.script = el
     })
-    return headers
+    return { ...headers, h1Tag: metaDataObj?.[path]?.h1Tag, h2Tags: metaDataObj?.[path?.h2Tags] }
   } catch (err) {
     if(metaDataObj[path]) return metaDataObj[path]
     try{
