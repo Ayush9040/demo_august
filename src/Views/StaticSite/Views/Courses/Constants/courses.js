@@ -508,6 +508,7 @@ const ttc200hr = {
         content: {
           title: 'Fees',
           text: [
+            'Online:Rs. 22,000 /-',
             'Non-Residential: Rs. 28,000/- (Inclusive of course fee, study material, and snacks)',
             'Residential: Rs. 70,000/- (Inclusive of course fee, study material, accommodation and meals )',
           ],
