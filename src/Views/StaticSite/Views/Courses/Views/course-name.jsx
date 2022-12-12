@@ -89,12 +89,12 @@ const SingleCourse = () => {
         <InnerNavComponent abc={CareerNameBan}/>
         {!isLoading && <CourseDetails pageDate={pageDate} />}
       </div>
-      <RelatedCourse
+      { cardData && cardData.length>0 && <RelatedCourse
         title={'Related Courses'}
         description={' lorem ipsum '}
         cardData={ cardData }
         url={'/courses'}
-      />
+      />}
     </>
   )
 }

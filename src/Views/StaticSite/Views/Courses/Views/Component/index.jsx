@@ -5,7 +5,6 @@ import CourseCard from '../../../../Components/CourseCard'
 import CommonBtn from '../../../../Components/commonbtn'
 const RelatedCourse = ({
   title,
-  description,
   url,
   cardData,
 }) => {
@@ -46,7 +45,6 @@ const RelatedCourse = ({
                 <div className="bottom-line"></div>
               </h1>
             </div>
-            <p>{description}</p>
           </div>
           <Link to={url ? url:'/'}>
             <CommonBtn text={'View All'}/>
