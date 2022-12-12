@@ -256,7 +256,7 @@ const MegaMenu = ({ setNav }) => {
                   <li>Batch 1 - 1 Month TTC-Online & On Campus-English</li>
                 </Link>
                 <Link onClick={() => {setNav(false)}} to="/200-hrs-part-time-ttc-on-campus-english">
-                  <li>Batch 2 - 2 Months TTC-On Campus-English</li>
+                  <li>Batch 2 - 2 Months TTC-Online & On Campus-English</li>
                 </Link>
                 <Link  onClick={() => {setNav(false)}} to="/200-hrs-part-time-ttc-online-english">
                   <li>Batch 3 - 2 Months TTC-Online-English</li>
