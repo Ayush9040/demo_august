@@ -27,13 +27,12 @@ const ttc200hr = {
   
     timing: 'Monday to Saturday: 10:00 am - 6:00 pm (IST)',
     fees: {
-      onlineFee: 22000,
-      offlineFee: { residentialFee: 50000, nonResidentialFee: 28000 },
+      onlineFee: 25000,
+      offlineFee: { residentialFee: 55000, nonResidentialFee: 30000 },
     },
     category: 'ttc',
     title: '200 hrs TTC - 1 Month TTC Online & On Campus - English - Batch 1 ',
     dates: [
-      '1st Nov to 30th Nov 2022',
       '1st Dec to 31st Dec 2022',
       '2nd Jan to 31st Jan 2023',
       '1st Feb to 28th Feb 2023',
@@ -117,7 +116,7 @@ const ttc200hr = {
         type: 'paragraph',
         content: {
           title: 'Fees',
-          text: ['Online:Rs. 22,000 /-', 'Non-Residential: Rs. 28,000/- (Inclusive of course fee, study material, lunch, and snacks)',' Residential: Rs. 50,000/- (Inclusive of course fee, study material, accommodation on triple occupancy basis and 4 meals a day)'],
+          text: ['Online:Rs. 25,000 /-', 'Non-Residential: Rs. 30,000/- (Inclusive of course fee, study material, lunch, and snacks)',' Residential: Rs. 55,000/- (Inclusive of course fee, study material, accommodation on triple occupancy basis and 4 meals a day)'],
         },
       },
       {
@@ -408,6 +407,7 @@ const ttc200hr = {
   2: {
     id: '',
     key: '200-hrs-part-time-ttc-on-campus-english',
+    join:true,
     // id: '',
     // templateId: 'COURSE200_1M_TTC2',
     templateId: {
@@ -427,13 +427,12 @@ const ttc200hr = {
     colorCode: '#E38F73',
     timing: 'Monday to Friday : 12:00 noon - 4:00 pm (IST)',
     fees: {
-      onlineFee: 22000,
-      offlineFee: { residentialFee: 70000, nonResidentialFee: 28000 },
+      onlineFee: 25000,
+      offlineFee: { residentialFee: 80000, nonResidentialFee: 30000 },
     },
     category: 'ttc',
     title: '200 hrs TTC - 2 Months TTC Online and On Campus-English-Batch 2',
     dates: [
-      '31st Oct to 23rd Dec 2022',
       '26th Dec to 17th Feb 2023',
       '20th Feb to 14th Apr 2023',
       '17th Apr to 9th Jun 2023',
@@ -479,7 +478,7 @@ const ttc200hr = {
         type: 'paragraph',
         content: {
           title: 'Course',
-          text: ['200 hrs TTC Batch 2 - 2 Months TTC On Campus - English'],
+          text: ['200 hrs TTC Batch 2 - 2 Months TTC Online & On Campus - English'],
         },
       },
       // {
@@ -508,9 +507,9 @@ const ttc200hr = {
         content: {
           title: 'Fees',
           text: [
-            'Online:Rs. 22,000 /-',
-            'Non-Residential: Rs. 28,000/- (Inclusive of course fee, study material, and snacks)',
-            'Residential: Rs. 70,000/- (Inclusive of course fee, study material, accommodation and meals )',
+            'Online: Rs: 25,000/-',
+            'Non-Residential: Rs. 30,000/- (Inclusive of course fee, study material, and snacks)',
+            'Residential: Rs. 80,000/- (Inclusive of course fee, study material, accommodation and meals )',
           ],
         },
       },
@@ -756,7 +755,7 @@ const ttc200hr = {
     timing:
       'Monday to Saturday: Morning: 7:00 am - 8:30 am (IST) and Evening : 6:30 pm - 8:30 pm (IST) (Both the time slots are mandatory)',
     fees: {
-      onlineFee: 22000,
+      onlineFee: 25000,
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'ttc',
@@ -838,7 +837,7 @@ const ttc200hr = {
         type: 'paragraph',
         content: {
           title: 'Fees',
-          text: ['Rs. 22,000 /-'],
+          text: ['Rs. 25,000 /-'],
         },
       },
       {
@@ -1129,6 +1128,7 @@ const ttc200hr = {
   4: {
     id: '',
     key: '200-hrs-part-time-ttc-online',
+    join:true,
     // templateId: 'COURSE200_2M_TTC_HINDI',
     templateId: {
       templateOnline: 'COURSE200_2M_ONLINE_HINDI_TTC',
@@ -1535,7 +1535,7 @@ const ttc200hr = {
     colorCode: '#E38F73',
     timing: 'Monday to Saturday: 4:30 pm – 8:00 pm (IST)',
     fees: {
-      onlineFee: 22000,
+      onlineFee: 25000,
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'ttc',
@@ -1606,7 +1606,7 @@ const ttc200hr = {
         type: 'paragraph',
         content: {
           title: 'Fees',
-          text: ['Rs. 22,000/-'],
+          text: ['Rs. 25,000/-'],
         },
       },
       {
@@ -1916,7 +1916,7 @@ const ttc200hr = {
     timing:
       'Saturday & Sunday: Saturday Sessions: 10:00 am – 8:30 pm (IST) and Sunday Sessions 10:00 am – 1:30 pm (IST)',
     fees: {
-      onlineFee: 22000,
+      onlineFee: 25000,
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'ttc',
@@ -1989,7 +1989,7 @@ const ttc200hr = {
         type: 'paragraph',
         content: {
           title: 'Fees',
-          text: ['Rs. 22,000/-'],
+          text: ['Rs. 25,000/-'],
         },
       },
       {
@@ -2300,7 +2300,7 @@ const ttc500hr = {
     timing:
       'Monday to Saturday: Morning: 7:00 am - 8:30 am (IST) and  Evening: 4:30 pm - 8:30 pm (IST) (Both the time slots are mandatory)',
     fees: {
-      onlineFee: 35000,
+      onlineFee: 37000,
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'ttc',
@@ -2368,7 +2368,7 @@ const ttc500hr = {
         type: 'paragraph',
         content: {
           title: 'Fees',
-          text: [' Rs. 35,000/- '],
+          text: [' Rs. 37,000/- '],
         },
       },
       {
@@ -2574,7 +2574,7 @@ const ttc900hr = {
     timing: 'Monday to Saturday:6:30 am to 8:00 pm Holiday on all Sundays',
     fees: {
       onlineFee: 0,
-      offlineFee: { residentialFee: 150000, nonResidentialFee: 90000 },
+      offlineFee: { residentialFee: 175000, nonResidentialFee: 97000 },
     },
     category: 'ttc',
     dates: ['22nd Oct to 15th Jan 2023','28th Jan to 16th Apr 2023','22nd Apr to 16th July 2023', '22nd Jul to 15th Oct 2023','28th Oct to 21st Jan 2024'],
@@ -2659,8 +2659,8 @@ const ttc900hr = {
           title: 'Fees:',
 
           text: [
-            'Non-Residential: INR 90,000/- (Inclusive of course fee, study material, 4 meals a day and 7 Days Camp)',
-            'Residential: INR 1,50,000/- (Inclusive of course fee, study material, accommodation on triple occupancy basis and 4 meals a day and 7 Days Camp)',
+            'Non-Residential: INR 97,000/- (Inclusive of course fee, study material, 4 meals a day and 7 Days Camp)',
+            'Residential: INR 1,75,000/- (Inclusive of course fee, study material, accommodation on triple occupancy basis and 4 meals a day and 7 Days Camp)',
           ],
         },
       },
@@ -3084,8 +3084,8 @@ const ttc900hr = {
     colorCode: '#C9705F',
     timing: 'Monday to Friday : 1:30 pm - 4:00 pm (IST)',
     fees: {
-      onlineFee: 50000,
-      offlineFee: { residentialFee: 50000, nonResidentialFee: 50000 },
+      onlineFee: 55000,
+      offlineFee: { residentialFee: 55000, nonResidentialFee: 55000 },
     },
     category: 'ttc',
     dates: ['1st Sept 2022', '1st Oct 2022', '1st Nov 2022', '1st Dec 2022'],
@@ -3696,8 +3696,8 @@ const ttc900hr = {
     timing:
       'Saturday & Sunday: Saturday: 4:30 pm – 7.30 pm (IST) and Sunday: 9:30 am – 1:30 pm (IST) (Both the time slots are mandatory)',
     fees: {
-      onlineFee: 50000,
-      offlineFee: { residentialFee: 50000, nonResidentialFee: 50000 },
+      onlineFee: 55000,
+      offlineFee: { residentialFee: 55000, nonResidentialFee: 55000 },
     },
     category: 'ttc',
     dates: [],
@@ -4919,8 +4919,8 @@ const ttc900hr = {
     colorCode: '#C9705F',
     timing: 'Monday to Saturday: 5:00 p.m. - 8:00 p.m. (IST)',
     fees: {
-      onlineFee: 50000,
-      offlineFee: { residentialFee: 50000, nonResidentialFee: 50000 },
+      onlineFee: 55000,
+      offlineFee: { residentialFee: 55000, nonResidentialFee: 55000 },
     },
     category: 'ttc',
     dates: ['1st Sept 2022', '1st Oct 2022', '1st Nov 2022', '1st Dec 2022'],
@@ -5665,7 +5665,7 @@ const camps = {
     colorCode: '#DDAB58',
     timing: '5:00 pm – 8:00 pm (IST)',
     fees: {
-      onlineFee: 500,
+      onlineFee: 1000,
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'camps',
@@ -5760,7 +5760,7 @@ const camps = {
         type: 'paragraph',
         content: {
           title: 'Fees',
-          text: ['INR 500'],
+          text: ['INR 1000'],
         },
       },
       {
@@ -5798,7 +5798,7 @@ const camps = {
     colorCode: '#CE9B51',
     timing: '5:00 pm – 8:00 pm (IST)',
     fees: {
-      onlineFee: 500,
+      onlineFee: 1000,
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'camps',
@@ -5896,7 +5896,7 @@ const camps = {
         type: 'paragraph',
         content: {
           title: 'Fees',
-          text: ['INR 500'],
+          text: ['INR 1000'],
         },
       },
       {
@@ -6625,7 +6625,7 @@ const camps = {
     colorCode: '#CE9B51',
     timing: '8:00 am – 11:00 am (IST)',
     fees: {
-      onlineFee: 500,
+      onlineFee: 1000,
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'camps',
@@ -6719,7 +6719,7 @@ const camps = {
         type: 'paragraph',
         content: {
           title: 'Fees',
-          text: ['INR 500'],
+          text: ['INR 1000'],
         },
       },
       {
@@ -7041,7 +7041,7 @@ const camps = {
     colorCode: '#CE9B51',
     timing: '5:00 pm – 8:00 pm (IST)',
     fees: {
-      onlineFee: 500,
+      onlineFee: 1000,
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'camps',
@@ -7135,7 +7135,7 @@ const camps = {
         type: 'paragraph',
         content: {
           title: 'Fees',
-          text: ['INR 500'],
+          text: ['INR 1000'],
         },
       },
       {
@@ -7178,7 +7178,7 @@ const camps = {
     colorCode: '#EDBE66',
     timing: '5:00 pm – 8:00 pm (IST)',
     fees: {
-      onlineFee: 500,
+      onlineFee: 1000,
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'camps',
@@ -7271,7 +7271,7 @@ const camps = {
         type: 'paragraph',
         content: {
           title: 'Fees',
-          text: ['INR 500'],
+          text: ['INR 1000'],
         },
       },
       {
@@ -7314,7 +7314,7 @@ const camps = {
     colorCode: '#DDAB58',
     timing: '5:00 pm – 8:00 pm (IST)',
     fees: {
-      onlineFee: 500,
+      onlineFee: 1000,
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'camps',
@@ -7406,7 +7406,7 @@ const camps = {
         type: 'paragraph',
         content: {
           title: 'Fees',
-          text: ['INR 500'],
+          text: ['INR 1000'],
         },
       },
       {
@@ -7449,7 +7449,7 @@ const camps = {
     colorCode: '#CE9B51',
     timing: '5:00 pm – 8:00 pm (IST)',
     fees: {
-      onlineFee: 500,
+      onlineFee: 1000,
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'camps',
@@ -7547,7 +7547,7 @@ const camps = {
         type: 'paragraph',
         content: {
           title: 'Fees',
-          text: ['INR 500'],
+          text: ['INR 1000'],
         },
       },
       {
@@ -7590,7 +7590,7 @@ const camps = {
     colorCode: '#EDBE66',
     timing: '5:00 pm – 8:00 pm (IST)',
     fees: {
-      onlineFee: 500,
+      onlineFee: 1000,
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'camps',
@@ -7682,7 +7682,7 @@ const camps = {
         type: 'paragraph',
         content: {
           title: 'Fees',
-          text: ['INR 500'],
+          text: ['INR 1000'],
         },
       },
       {
@@ -7709,6 +7709,7 @@ const camps = {
     id: '',
     title: '7 Days Health Camp - On Campus - Hindi ',
     key: '7-days-camp',
+    join:true,
     batch: 1,
     // templateId: 'CAMP_FOR_7_DAYS_HEALTH',
     templateId: {
@@ -7730,7 +7731,7 @@ const camps = {
     timing: 'Saturday to Friday : 7:00 am - 7:00 pm (IST)' ,
     fees: {
       onlineFee: 0,
-      offlineFee: { residentialFee: 12000, nonResidentialFee: 8000 },
+      offlineFee: { residentialFee: 14000, nonResidentialFee: 8000 },
     },
     category: 'camps',
     metaDescription:
@@ -7922,9 +7923,9 @@ const camps = {
         content: {
           title: 'Residential',
           text: [
-            'Rs. 12,000/- Triple Sharing (Inclusive of course fee and 4 meals a day)',
-            'Rs. 18,000/- Dual Sharing (Inclusive of course fee and 4 meals a day)',
-            'Rs. 30,000/- Single Occupancy (Inclusive of course fee and 4 meals a day)',
+            'Rs. 13,000/- Triple Sharing (Inclusive of course fee and 4 meals a day)',
+            'Rs. 20,000/- Dual Sharing (Inclusive of course fee and 4 meals a day)',
+            'Rs. 34,000/- Single Occupancy (Inclusive of course fee and 4 meals a day)',
           ],
         },
       },
@@ -8064,6 +8065,7 @@ const camps = {
     id: '',
     title: '7 Days Health Camp - On Campus - English',
     key: '7-days-camp-english',
+    join:true,
     batch: 1,
     // templateId: 'CAMP_FOR_7_DAYS_HEALTH',
     templateId: {
@@ -8100,7 +8102,7 @@ const camps = {
     timing: 'Saturday to Friday : 7:00 am - 7:00 pm (IST)',
     fees: {
       onlineFee: 0,
-      offlineFee: { residentialFee: 12000, nonResidentialFee: 8000 },
+      offlineFee: { residentialFee: 14000, nonResidentialFee: 8000 },
     },
     category: 'camps',
     metaDescription:
@@ -8293,9 +8295,9 @@ const camps = {
         content: {
           title: 'Residential',
           text: [
-            'Rs. 12,000/- Triple Sharing (Inclusive of course fee and 4 meals a day)',
-            'Rs. 18,000/- Dual Sharing (Inclusive of course fee and 4 meals a day)',
-            'Rs. 30,000/- Single Occupancy (Inclusive of course fee and 4 meals a day)',
+            'Rs. 13,000/- Triple Sharing (Inclusive of course fee and 4 meals a day)',
+            'Rs. 20,000/- Dual Sharing (Inclusive of course fee and 4 meals a day)',
+            'Rs. 34,000/- Single Occupancy (Inclusive of course fee and 4 meals a day)',
           ],
         },
       },
