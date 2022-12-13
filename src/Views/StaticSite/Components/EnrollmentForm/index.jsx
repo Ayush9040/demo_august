@@ -136,10 +136,6 @@ const Enrollment = () => {
       return setEmpty(4)
     } else if (formData.country === '') {
       return setEmpty(5)
-    } else if (formData.state === '') {
-      return setEmpty(6)
-    } else if (formData.city === '') {
-      return setEmpty(7)
     } else if (formData.pincode === '') {
       return setEmpty(8)
     } else if (formData.AGE === null||formData.AGE<4 || formData.AGE>99) {
