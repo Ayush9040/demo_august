@@ -5664,7 +5664,7 @@ const camps = {
     timing: '9:30 am – 5:30 pm (IST)',
     fees: {
       onlineFee: 1000,
-      offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
+      offlineFee: { residentialFee: 0, nonResidentialFee: 1000 },
     },
     category: 'camps',
     metaDescription:
@@ -5797,7 +5797,7 @@ const camps = {
     timing: '9:30 am – 5:30 pm (IST)',
     fees: {
       onlineFee: 1000,
-      offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
+      offlineFee: { residentialFee: 0, nonResidentialFee: 1000 },
     },
     category: 'camps',
     metaDescription:
@@ -6624,7 +6624,7 @@ const camps = {
     timing: '8:00 am – 11:00 am (IST)',
     fees: {
       onlineFee: 1000,
-      offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
+      offlineFee: { residentialFee: 0, nonResidentialFee: 1000 },
     },
     category: 'camps',
     metaDescription:
@@ -6776,7 +6776,7 @@ const camps = {
     timing: '9:30 am – 5:30 pm (IST)',
     fees: {
       onlineFee: 1500,
-      offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
+      offlineFee: { residentialFee: 0, nonResidentialFee: 1500 },
     },
     category: 'camps',
     metaDescription: 'Insightful session with a medical specialists.',
@@ -7053,7 +7053,7 @@ const camps = {
     timing: '9:30 am – 5:30 pm (IST)',
     fees: {
       onlineFee: 1000,
-      offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
+      offlineFee: { residentialFee: 0, nonResidentialFee: 1000 },
     },
     category: 'camps',
     metaDescription:
@@ -7190,7 +7190,7 @@ const camps = {
     timing: '9:30 am – 5:30 pm (IST)',
     fees: {
       onlineFee: 1000,
-      offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
+      offlineFee: { residentialFee: 0, nonResidentialFee: 1000 },
     },
     category: 'camps',
     metaDescription:
@@ -7326,7 +7326,7 @@ const camps = {
     timing: '9:30 am – 5:30 pm (IST)',
     fees: {
       onlineFee: 1000,
-      offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
+      offlineFee: { residentialFee: 0, nonResidentialFee: 1000 },
     },
     category: 'camps',
     metaDescription: 'Low-calorie diet recipe',
@@ -7461,7 +7461,7 @@ const camps = {
     timing: '9:30 am – 5:30 pm (IST)',
     fees: {
       onlineFee: 1000,
-      offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
+      offlineFee: { residentialFee: 0, nonResidentialFee: 1000 },
     },
     category: 'camps',
     metaDescription:
@@ -7602,7 +7602,7 @@ const camps = {
     timing: '9:30 am – 5:30 pm (IST)',
     fees: {
       onlineFee: 1000,
-      offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
+      offlineFee: { residentialFee: 0, nonResidentialFee: 1000 },
     },
     category: 'camps',
     metaDescription: 'Insightful session with an ortho-specialist',
@@ -8458,7 +8458,6 @@ const camps = {
     },
     batch: 1,
     dates: [
-      '6th Nov to 26th Nov 2022',
       '4th Dec to 24th Dec 2022',
       '2nd Jan to 22nd Jan 2023',
       '5th Feb to 25th Feb 2023',
