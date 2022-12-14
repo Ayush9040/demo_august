@@ -3169,7 +3169,7 @@ const ttc900hr = {
         content: {
           title: 'Fees:',
 
-          text: ['INR. 50,000/- (Inclusive of course fee and study material)'],
+          text: ['INR. 55,000/- (Inclusive of course fee and study material)'],
         },
       },
 
@@ -3785,7 +3785,7 @@ const ttc900hr = {
         content: {
           title: 'Fees:',
 
-          text: ['INR. 50,000/- (Inclusive of course fee and study material)'],
+          text: ['INR. 55,000/- (Inclusive of course fee and study material)'],
         },
       },
 
