@@ -11662,13 +11662,13 @@ const certificate = {
     mostPopular: false,
     rating: 5,
     colorCode: '#D3A29D',
-    timing: '1st Sunday of every month: 10:40 am - 12:30 pm (IST)',
+    timing: '1st Sunday of every month: 10:00 am - 12:30 pm (IST)',
     fees: {
       onlineFee: 8000,
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'certificate-course',
-    dates: [],
+    dates: ['10:00 am - 12:30 pm'],
     online: true,
     onCampus: false,
     nonResidential: false,
@@ -11738,7 +11738,7 @@ const certificate = {
         type: 'paragraph',
         content: {
           title: 'Timings',
-          text: ['1st Sunday of every month: 10:40 am - 12:30 pm (IST)'],
+          text: ['1st Sunday of every month: 10:00 am - 12:30 pm (IST)'],
         },
       },
       
