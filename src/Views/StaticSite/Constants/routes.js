@@ -95,6 +95,7 @@ const LocateDetails = lazy(()=> import ('../Components/LocateUs/LocationDetails'
 const NutriDiet = lazy(()=>import('../Views/NutriDiet'))
 const LandingPage = lazy( ()=>import('../Views/LandingPage'))
 const LandingPageNew = lazy( ()=>import('../Views/LandingPage/21Days/index'))
+const NutriClinic = lazy( ()=>import('../Views/NutriDietClinic/AboutClinic/index'))
 
 const staticSiteRoutes = [
   //Home
@@ -767,6 +768,14 @@ const staticSiteRoutes = [
     id: 'statisSiteCourse',
     routePath: '/:contentId',
     name: 'singleCourse',
+  },
+  {
+    Component: NutriClinic,
+    path: '/:Nutri-clinic',
+    exact: true,
+    id: 'statisSiteCourse',
+    routePath: '/:NutriClinic',
+    name: 'NutriClinic',
   },
 ]
 

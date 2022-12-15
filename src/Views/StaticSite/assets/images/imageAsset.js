@@ -2562,5 +2562,8 @@ export const landingPage = {
   text:'/Landing_page/Text.png'
 }
 
+export const nutriClinic = {
+  main: '/Nutri-Clinic/Salad.png'
+}
 
 export default baseDomain

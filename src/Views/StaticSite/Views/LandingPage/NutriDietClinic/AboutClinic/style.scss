@@ -1,0 +1,715 @@
+.main-nutri-clinic {
+//   .PhoneInputCountryIconImg {
+//     display: block;
+//     height: 100%;
+//     width: 10%;
+// }
+// .PhoneInputCountrySelect{
+//   visibility: hidden;
+// }
+
+  & > nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 8rem;
+    background-color: #ffffff;
+    flex-wrap: wrap;
+  }
+}
+.nutri-logo {
+  & > svg {
+    width: 200px;
+    .d {
+      fill: #f25f5c !important;
+    }
+    .e {
+      fill: #50514f !important;
+    }
+  }
+}
+
+.phone-info {
+  & > h2 {
+    font-weight: bold !important;
+    color: #50514f;
+    font-size: 2.5rem;
+    & > svg {
+      height: 30px;
+      width: 30px;
+    }
+}
+  & > p {
+    font-weight: 900;
+    text-align: end;
+    color: #50514f;
+  }
+}
+
+// & > main{
+.section_1 {
+  .bg_img_21 {
+    background: url('https://ecom-static-site.oss-ap-south-1.aliyuncs.com/Nutri-Clinic/main%20image.jpg') 
+    no-repeat center / cover;
+    height: 900px;
+    & > img {
+      object-fit: cover;
+      width: 100%;
+    }
+    .img_form_21 {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      // background: #d95d53d4;
+      width: 100%;
+      height: 100%;
+      .form_text {
+        font-size: 3rem;
+        color: #fff;
+        .left_heading1 {
+          font-size: 6rem;
+          font-weight: 500;
+          font-family: var(--futura);
+          color: black;
+          letter-spacing: 5px;
+        }
+        .left_heading_bold {
+          font-size: 6rem;
+          font-family: var(--futura);
+          font-weight: 700;
+          color: black;
+          letter-spacing: 5px;
+        }
+        .left_heading2 {
+          font-size: 6rem;
+          font-family: var(--futura);
+          font-weight: bold;
+          color: black;
+          letter-spacing: 5px;
+        }
+        .left_heading_text {
+          font-size: 6rem;
+          font-family: var(--futura);
+          font-weight: 600;
+          color: black;
+          letter-spacing: 5px;
+        }
+      }
+      .form-phone-info {
+        width: 25%;
+        min-width: 400px;
+        background: #fff;
+        padding: 2rem;
+        border-radius: 24px;
+        height: fit-content;
+        & > form {
+          & > h2 {
+            font-weight: 700;
+            text-align: center;
+          }
+          & > label {
+            width: 60%;
+            margin: 2rem auto;
+            min-width: 300px;
+            display: block;
+            height: 40px;
+            border: 1px solid black;
+            border-radius: 24px;
+            padding: 5px 10px;
+            input {
+              width: 100%;
+              height: 28px;
+              border: none;
+              &:focus,
+              &:focus-visible {
+                border: none;
+                outline: none;
+              }
+            }
+          }
+          & > .global-common-btn {
+            margin: 0 auto;
+          }
+        }
+      }
+    }
+  }
+}
+
+.about_clinic {
+  color: black;
+  background-color: rgb(244, 244, 172);
+  font-size: 3.5rem;
+  font-weight: 600;
+  width: fit-content;
+  padding: 0.25rem 1.5rem;
+  margin-bottom: 2rem;
+  letter-spacing: 5px;
+  font-family: var(--bebas-neue);
+  &:nth-child(2n + 1) {
+    width: 33%;
+    color: rgb(84, 136, 84);
+    text-align: center;
+    border-radius: 0 30px 30px 0;
+    margin-top: 2rem;
+    padding: 1rem 0 0 0;
+  }
+}
+.about_clinic_info {
+  font-size: 2rem;
+  margin-top: 2rem;
+  width: 100%;
+  padding: 1rem 12rem;
+}
+
+.programs-info {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-top: 2rem;
+  background-color: rgb(234, 227, 227);
+  border-radius: 50px;
+  width: 100%;
+  padding: 1rem 12rem;
+  ul {
+    margin-top: 2rem;
+  }
+  li {
+    list-style-type: disc;
+  }
+  .img-programs{
+    width: 250px;
+    height: 300px;
+    margin-top: 50px;
+    float: right;
+  }
+  .program-font{
+    font-weight: normal;
+  }
+  .programs-benefits {
+    font-size: 2rem;
+    margin-top: 2rem;
+    width: 100%;
+    padding: 1rem 0rem;
+    .programs{
+      font-weight: bold;
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+.section_3 {
+  .int_img_text21 {
+    display: flex;
+    margin-right: 5rem;
+    & > div {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      /* align-items: center; */
+      justify-content: center;
+    }
+    .int_text21 {
+      .title_21 {
+          border: 1px solid #e7e7e7;
+          background-color: rgb(244, 244, 172);
+          color: rgb(84, 136, 84);
+          font-size: 5rem;
+          font-weight: 600;
+          padding-left: 40rem;
+          padding-right: 35rem;
+          padding-top: 2rem;
+          display: inline;
+          width: max-content;
+          min-height: fit-content;
+          font-family: var(--futura);
+      }
+      .subtitle_21 {
+        margin-top: 1rem;
+        margin-left: 9rem;
+        font-size: 3rem;
+        font-family: var(--hero);
+        width: 82%;
+      }
+    }
+    .int_img21 {
+      border-radius: 50%;
+      height: 50%;
+      width: 50%;
+      // background-color: #e7e7e7;
+      margin-left: -10rem;
+      & > img {
+        // width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+        padding: 10%;
+      }
+    }
+  }
+}
+
+.details_21 {
+  margin-left: 35rem;
+  /* margin-bottom: 4rem; */
+  margin-top: -12rem;
+  .detail_heading {
+    font-family: var(--bebas-neue);
+    color: #40200b;
+    font-size: 5rem;
+    text-decoration: underline;
+  }
+  .title_21{
+    margin-left: 5rem;
+  }
+  .details_text {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+  }
+}
+.other_div21 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  .other_line21 {
+    border: 2px solid #f78b89;
+    width: 40%;
+    background-color: #f78b89;
+  }
+  .landing_other21 {
+    font-size: 3rem;
+    font-weight: 500;
+    text-align: center;
+    margin: 1rem;
+  }
+}
+.featured-section21 {
+  padding: 2rem 8rem;
+  & > p {
+    font-weight: 700;
+    text-decoration: underline;
+    margin-top: 2rem;
+  }
+  & > h4 {
+    font-size: 2rem;
+    font-weight: 400;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  & > a {
+    font-size: 2rem;
+    color: rgb(75, 95, 207);
+    display: block;
+  }
+}
+.last_div21 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  // padding-bottom: 12rem;
+  margin: 10rem 10rem 0 10rem;
+  .last_logo21 {
+    & > svg {
+      width: 250px;
+      .d {
+        fill: #f25f5c !important;
+      }
+      .e {
+        fill: #50514f !important;
+      }
+    }
+  }
+  .last_text21 {
+    font-size: 2.5rem;
+    color: #949494;
+    font-weight: 600;
+    text-align: center;
+    width: 60%;
+  }
+  img{
+    // width: 100vw;
+    // height: 500px;
+    // margin-bottom: 50px;
+    margin-top: -40rem;
+
+  }
+}
+.testimonials-section21 {
+  padding: 5rem;
+  background-color: #eee;
+  .testimonial21 {
+    display: flex !important;
+    justify-content: center;
+    // align-items: center;
+    padding: 50px;
+    border: none;
+    background-color: #ffffff;
+    height: 350px;
+    border-radius: 24px;
+    .left21 {
+      img {
+        width: 200px;
+        object-fit: cover;
+        border-radius: 10px;
+      }
+    }
+    .right21 {
+      padding: 20px 10px;
+      .heading21 {
+        font-size: 1.75rem;
+        font-weight: bold;
+        padding-left: 10px;
+      }
+      span {
+        display: block;
+        color: #cc4d2e;
+        font-size: 1.6rem;
+        font-weight: bold;
+        margin-bottom: 20px;
+        padding-left: 10px;
+      }
+
+      .content21 {
+        font-size: 1.6rem;
+        padding: 0 0 20px 10px;
+        text-align: justify;
+      }
+    }
+  }
+}
+
+.popular_div21 {
+  padding: 2rem 8rem;
+  display: flex;
+  align-items: flex-start;
+  .pop_courses_div21 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-width: 20%;
+  }
+  .popular_img21 {
+    height: 200px;
+    width: 200px;
+    img {
+      height: 100%;
+      object-fit: cover;
+      width: 100%;
+      border-radius: 50%;
+    }
+  }
+  .popular_text21 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-top: 1rem;
+  }
+}
+.fruits-img{
+  margin-top: -60rem;
+}
+
+@media (max-width: 1220px) {
+  .main-nutri-clinic {
+    & > main {
+      .popular_div21 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+      }
+      .section_3 {
+        .int_img_text21 {
+          align-items: flex-end;
+          .int_text21 {
+            .subtitle_21 {
+              width: 70%;
+            }
+          }
+        }
+        .details_21 {
+          .detail_heading {
+            margin-top: 3rem;
+          }
+        }
+      }
+    }
+  }
+  .main-nutri-clinic > main .section_1 .bg_img_21 .img_form_21 .form_text {
+    .main_heading1 {
+      font-size: 4rem;
+    }
+    .main_heading2 {
+      font-size: 6rem;
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+  .main-nutri-clinic {
+    & > main {
+      .section_2 {
+        padding: 1.5rem;
+        margin: 4rem;
+      }
+      .section_3 {
+        .details_21 {
+          margin-left: 5rem;
+        }
+        .int_img_text21 {
+          margin-right: 0;
+          .int_text21 {
+            .title_21 {
+              padding: 1rem;
+              text-align: center;
+            }
+            .subtitle_21 {
+              width: 88%;
+              margin: 4rem;
+            }
+          }
+          flex-wrap: wrap;
+          .int_img21 {
+            margin: 0 auto;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 786px) {
+  .main-nutri-clinic {
+    & > main {
+      .section_2 {
+        margin: 4rem 5rem 4rem 5rem;
+        flex-wrap: wrap;
+        .sec2_text {
+          margin-top: 3rem;
+          margin-left: 0;
+        }
+      }
+      .text_21 {
+        margin-top: 2rem;
+      }
+      .heading_21 {
+        margin: 0 auto;
+      }
+      .testimonials-section21 {
+        padding: 1rem;
+        .testimonial21 {
+          flex-wrap: wrap;
+          padding: 10px;
+          height: 650px;
+          min-height: fit-content;
+          .left21 {
+            width: 100%;
+            text-align: center;
+            img {
+              display: block;
+              margin: 0 auto;
+            }
+          }
+          .right21 {
+            padding: 5px;
+            .heading21 {
+              font-size: 1.75rem;
+              font-weight: bold;
+              padding-left: 10px;
+            }
+            span {
+              display: block;
+              color: #cc4d2e;
+              font-size: 1.6rem;
+              font-weight: bold;
+              margin-bottom: 20px;
+              padding-left: 10px;
+            }
+
+            .content21 {
+              font-size: 1.25rem;
+              padding: 0 0 20px 10px;
+              text-align: justify;
+            }
+          }
+        }
+      }
+      .featured-section21 {
+        padding: 2rem;
+        & > h4 {
+          font-size: 1.5rem;
+        }
+        & > a {
+          font-size: 1.5rem;
+        }
+      }
+      .details-section21 {
+        .learning_benefits21 {
+          display: block;
+          & > div {
+            & > ul {
+              margin-top: 2rem;
+            }
+          }
+        }
+      }
+    }
+  }
+  .main-nutri-clinic > main .section_1 .bg_img_21 .img_form_21 {
+    display: block;
+    .form_text {
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+  }
+}
+
+@media (max-width: 520px) {
+  .main-nutri-clinic {
+    & > nav {
+      justify-content: center;
+      .nutri-logo {
+        & > svg {
+          width: 150px;
+        }
+      }
+    .about_clinic_info{
+      padding: 1rem 10rem;
+    }
+      .phone-info {
+        & > h2 {
+          font-size: 1.5rem;
+          text-align: center;
+        }
+        p{
+          text-align: center;
+        }
+        .about_clinic:nth-child(2n+1){
+          width: 100%;
+          color: rgb(84, 136, 84);
+          text-align: center;
+          border-radius: 0 30px 30px 0;
+          margin-top: 2rem;
+          padding: 1rem 0 0 0;
+      }
+    }
+    & > main {
+      .details-section21 {
+        padding: 3rem;
+        .learning_benefits21 > div > ul {
+          margin-bottom: 3rem;
+          > li > p {
+            font-size: 2rem;
+          }
+        }
+      }
+      .last_div21 {
+        margin: 0;
+        padding-bottom: 10rem;
+        img{
+          margin-top: -15rem;
+          width: 100vw;
+        }
+        .last_text21 {
+          width: 100%;
+        }
+      }
+      .text_21 {
+        font-size: 2rem;
+      }
+      .section_3 {
+        .details_21 {
+          .detail_heading {
+            font-size: 3.5rem;
+          }
+          .details_text {
+            font-size: 2rem;
+            margin-top: 2rem;
+            text-align: center;
+          }
+        }
+        .int_img_text21 .int_text21 {
+          .subtitle_21 {
+            font-size: 2rem;
+          }
+          .title_21 {
+            font-size: 3.5rem;
+          }
+        }
+      
+      .section_1 {
+        .bg_img_21 {
+         min-height: fit-content;
+          .img_form_21 {
+            .form-cta_21 {
+              width: 90%;
+              min-width: 300px;
+              margin: 0 auto;
+            }
+            .form_text {
+              .main_heading1 {
+                font-size: 3rem;
+              }
+              .main_heading2 {
+                font-size: 4.5rem;
+              }
+              .fruits-img{
+                width: 100%;
+                .fruits-image{
+                  width: 100%;
+                  margin-top: 30rem;
+                }
+              }
+            }
+          }
+        }
+      }
+      .about_clinic_info {
+        font-size: 2rem;
+        margin-top: 2rem;
+        width: 100%;
+        padding: 1rem 12rem;
+      }
+      
+      .programs-info {
+        font-size: 2rem;
+        font-weight: bold;
+        margin-top: 2rem;
+        background-color: rgb(234, 227, 227);
+        border-radius: 50px;
+        width: 100%;
+        padding: 1rem 5rem;
+        ul {
+          margin-top: 2rem;
+        }
+        li {
+          list-style-type: disc;
+        }
+        .img-programs{
+          width: 250px;
+          height: 300px;
+          margin-top: 50px;
+          float: right;
+        }
+        .program-font{
+          font-weight: normal;
+        }
+        .programs-benefits {
+          font-size: 2rem;
+          margin-top: 2rem;
+          width: 100%;
+          padding: 1rem 0rem;
+          .programs{
+            font-weight: bold;
+            margin-bottom: 2rem;
+          }
+        }
+      }
+    }
+  }
+}
+}
+}

@@ -83,6 +83,34 @@ export const popularCourses = [
   },
 ]
 
+export const CampsWorkShops = [
+  {
+    img: 'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/Courses/Camps/Stress_management.jpg',
+    text: 'Stress Management Camp)',
+    url: '/stress-management-camp',
+  },
+  {
+    img: 'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/Courses/Camps/Weight_management.jpg',
+    text: 'Weight Management Workshop',
+    url: '/weight-management-workshop',
+  },
+  {
+    img: 'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/Courses/Camps/Diabetes_camp.jpg',
+    url: '/diabetes-camp',
+    text: 'Diabetes Camp',
+  },
+  {
+    img: 'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/Courses/Camps/cardiac-&-hypertension-43-1.png',
+    url: '/cardiac-hypertension-workshop',
+    text: 'Cardiac & Hypertension Workshop',
+  },
+  {
+    img: 'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/Courses/Camps/Orthopaedic_Camp_for_Back_and_Joint_Disorders.jpg',
+    url: '/back-joint-disorder-workshop',
+    text: 'Back & Joint Disorder Workshop',
+  },
+]
+
 export const landingFeaturedBlogs =[
   {
     img:'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/Landing_page/1ttc.jpg',
@@ -106,6 +134,19 @@ export const landingFeaturedBlogs2 =[
     img:'https://theyogainstitute.oss-ap-south-1.aliyuncs.com/uploads/2020/08/yoga-preparation-tyi-blog.jpg',
     text:'How do I prepare for my Yoga class',
     url:'/how-do-i-prepare-for-my-yoga-class'
+  }
+]
+
+export const NutriClinicBlogs =[
+  {
+    img: 'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/Nutri-Clinic/nutri1.jpg',
+    text:'Why  should i adopt a sattvik diet',
+    url:'/why-should-i-adopt-a-sattvik-diet'
+  },
+  {
+    img:'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/Nutri-Clinic/nutri2.jpg',
+    text:'Super foods and its importance in our diet',
+    url:'/super-foods-and-its-importance-in-our-diet'
   }
 ]
 
