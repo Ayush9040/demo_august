@@ -13,7 +13,29 @@ import Slider from 'react-slick'
 import { testimonialData3 } from '../../constant'
 
 const NutriDietClinic = () => {
-
+  let settings = {
+    dots: false,
+    arrows: false,
+    infinite: true,
+    speed: 2000,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoPlaySpeed: 5000,
+    centerMode: false,
+    centerPadding: '20%',
+    swipe: false,
+    responsive: [
+      {
+        breakpoint: 900,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          centerMode: false,
+        },
+      },
+    ],
+  }
 
   const [modal, setModal] = useState(false)
   const [err, setErr] = useState(0)
