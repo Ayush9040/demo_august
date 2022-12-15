@@ -38,6 +38,31 @@ const CourseDetails = ({
   //   }
   // }
 
+  const modecheck = ()=>{
+
+    switch( currentCourse?.key ){
+    case 'cardiac-hypertension-workshop': if(courseDate !== '24th December 2022'){
+      
+      return true
+    } 
+      break
+    case 'pregnancy-camp-for-ante-post-natal': if(courseDate !== '17th Dec to 18th Dec 2022'){
+      
+      return true
+    } 
+      break
+    case 'back-joint-disorder-workshop': if(courseDate !== '25th December 2022'){
+      
+      return true
+    } 
+      break
+    case 'pranayama-workshop': if(courseDate !== '18th December 2022'){
+      
+      return true
+    } 
+    }
+  }
+
   const uploadDoc = async(file, type, changeValue) => {
     const url = await uploadFile(file, type)
     if (changeValue === 'CERTIFICATE') {
@@ -45,6 +70,56 @@ const CourseDetails = ({
       setEmpty(0)
     } else if (changeValue === 'IMAGE') setCourseAsset1(url)
     setLoading(false)
+  }
+
+  const updatedFees = (course, mode) => {
+    switch (course) {
+    case 'one-month-ttc':
+      if (courseDate === '1st Dec to 31st Dec 2022') {
+        if (mode === 'ONLINE') return 22000
+        if (mode === 'RESIDENTIAL') return 50000
+        if (mode === 'NONRESIDENTIAL') return 28000
+      } else {
+        if (mode === 'ONLINE') return currentCourse.fees.onlineFee
+        if (mode === 'RESIDENTIAL')
+          return currentCourse.fees.offlineFee.residentialFee
+        if (mode === 'NONRESIDENTIAL')
+          return currentCourse.fees.offlineFee.nonResidentialFee
+      }
+      break
+    case '200-hrs-part-time-ttc-online-english':
+      if (courseDate === '12th Dec to 4th Feb 2023') {
+        if (mode === 'ONLINE') return 22000
+      } else {
+        if (mode === 'ONLINE') return currentCourse.fees.onlineFee
+      }
+      break
+    case '200-hrs-part-time-ttc-on-campus-english':
+      if (courseDate === '26th Dec to 17th Feb 2023') {
+        if (mode === 'ONLINE') return 22000
+        if (mode === 'RESIDENTIAL') return 70000
+        if (mode === 'NONRESIDENTIAL') return 28000
+      } else {
+        if (mode === 'ONLINE') return currentCourse.fees.onlineFee
+        if (mode === 'RESIDENTIAL')
+          return currentCourse.fees.offlineFee.residentialFee
+        if (mode === 'NONRESIDENTIAL')
+          return currentCourse.fees.offlineFee.nonResidentialFee
+      }
+      break
+    case '200-hrs-part-time-ttc-online': if(courseDate === '19th Dec to 11th Feb 2023') {
+      if (mode === 'ONILINE') return 22000
+    }else {
+      if (mode === 'ONLINE') return currentCourse.fees.onlineFee
+    }
+      break
+    default: return ()=>{
+      if (mode === 'ONLINE') return currentCourse.fees.onlineFee
+      if(mode === 'OFFLINE') return currentCourse.fees.offlineFee.nonResidentialFee
+      if (mode === 'RESIDENTIAL')  return currentCourse.fees.offlineFee.residentialFee
+      if (mode === 'NONRESIDENTIAL')return currentCourse.fees.offlineFee.nonResidentialFee
+    }
+    }
   }
   return (
     <div className="main-container">
@@ -91,7 +166,8 @@ const CourseDetails = ({
                         mode: e.target.value,
                       })
                       setEmpty(0)
-                      setCourseFee(currentCourse?.fees?.onlineFee)
+                      // setCourseFee(currentCourse?.fees?.onlineFee)
+                      setCourseFee(updatedFees( currentCourse?.key,'OFFLINE' ))
                     }
                   }}
                 />
@@ -102,10 +178,10 @@ const CourseDetails = ({
                   type="radio"
                   name="mode"
                   value="ONLINE"
-                  disabled={currentCourse.online === false}
+                  disabled={currentCourse.online === false ||  modecheck() }
                   checked={formData.mode === 'ONLINE'}
                   style={
-                    currentCourse.online === false
+                    (currentCourse.online === false || modecheck())
                       ? {
                         background:
                             'url(https://ecom-static-site.oss-ap-south-1.aliyuncs.com/icons/icons8-multiply-24.png)',
@@ -119,7 +195,8 @@ const CourseDetails = ({
                         mode: e.target.value,
                       })
                       setEmpty(0)
-                      setCourseFee(currentCourse?.fees?.onlineFee)
+                      // setCourseFee(currentCourse?.fees?.onlineFee)
+                      setCourseFee(updatedFees( currentCourse?.key,'ONLINE' ))
                     }
                   }}
                 />{' '}
@@ -141,10 +218,14 @@ const CourseDetails = ({
                   }
                   disabled={
                     currentCourse.residential === false ||
-                    formData.mode === 'ONLINE' || ( currentCourse.key === '7-days-camp-english' && courseDate == '24th Sept to 30th Sept 2022' )
+                    formData.mode === 'ONLINE' ||
+                    (currentCourse.key === '7-days-camp-english' &&
+                      courseDate == '24th Sept to 30th Sept 2022')
                   }
                   style={
-                    (currentCourse.residential === false || ( currentCourse.key === '7-days-camp-english' && courseDate == '24th Sept to 30th Sept 2022' ) )
+                    currentCourse.residential === false ||
+                    (currentCourse.key === '7-days-camp-english' &&
+                      courseDate == '24th Sept to 30th Sept 2022')
                       ? {
                         background:
                             'url(https://ecom-static-site.oss-ap-south-1.aliyuncs.com/icons/icons8-multiply-24.png)',
@@ -158,9 +239,10 @@ const CourseDetails = ({
                         residental: e.target.value,
                       })
                       setEmpty(0)
-                      setCourseFee(
-                        currentCourse?.fees?.offlineFee?.residentialFee
-                      )
+                      // setCourseFee(
+                      //   currentCourse?.fees?.offlineFee?.residentialFee
+                      // )
+                      setCourseFee(updatedFees( currentCourse?.key,'RESIDENTIAL' ))
                     }
                   }}
                 />{' '}
@@ -194,9 +276,10 @@ const CourseDetails = ({
                         residental: e.target.value,
                       })
                       setEmpty(0)
-                      setCourseFee(
-                        currentCourse?.fees?.offlineFee?.nonResidentialFee
-                      )
+                      // setCourseFee(
+                      //   currentCourse?.fees?.offlineFee?.nonResidentialFee
+                      // )
+                      setCourseFee(updatedFees( currentCourse?.key,'NONRESIDENTIAL' ))
                     }
                   }}
                 />{' '}
