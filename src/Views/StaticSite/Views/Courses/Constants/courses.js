@@ -427,8 +427,8 @@ const ttc200hr = {
     colorCode: '#E38F73',
     timing: 'Monday to Friday : 12:00 noon - 4:00 pm (IST)',
     fees: {
-      onlineFee: 25000,
-      offlineFee: { residentialFee: 80000, nonResidentialFee: 30000 },
+      onlineFee: 22000,
+      offlineFee: { residentialFee: 70000, nonResidentialFee: 28000 },
     },
     category: 'ttc',
     title: '200 hrs TTC - 2 Months TTC Online and On Campus-English-Batch 2',
