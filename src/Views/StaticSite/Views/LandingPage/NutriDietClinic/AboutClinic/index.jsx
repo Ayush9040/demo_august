@@ -1,15 +1,13 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import PhoneInput from 'react-phone-number-input'
-import { CampsWorkShops } from '../../LandingPage/constant'
-import baseDomain, { nutriClinic } from '../../../assets/images/imageAsset'
-import Slider from 'react-slick'
-import NutriBlogs from '../../../Components/LandingCourse/NutriBlogs'
-import { landingLogo } from '../../../assets/icons/icon'
 import NutriThankYou from '../ThankYouPage/Index'
-import LandingButton from '../../../Components/LandingCourse/LandingButton'
-import { creatForm, successMail } from '../../LandingPage/Api'
+import { creatForm, successMail } from '../../../LandingPage/Api'
 import './style.scss'
+import { CampsWorkShops } from '../../constant'
+import { landingLogo } from '../../../../assets/icons/icon'
+import LandingButton from '../../../../Components/LandingCourse/LandingButton'
+import NutriBlogs from '../../../../Components/LandingCourse/NutriBlogs'
 
 const NutriDietClinic = () => {
   let settings = {

@@ -1,5 +1,5 @@
 import { lazy } from 'react'
-
+import NutriDietClinic from '../Views/LandingPage/NutriDietClinic/AboutClinic'
 const Home = lazy(() => import('../Views/Home'))
 const TermsCondition = lazy(() => import('../Components/TermsandCondition'))
 const PrivacyPolicy = lazy(() => import('../Components/PrivacyPolicy'))
@@ -95,7 +95,7 @@ const LocateDetails = lazy(()=> import ('../Components/LocateUs/LocationDetails'
 const NutriDiet = lazy(()=>import('../Views/NutriDiet'))
 const LandingPage = lazy( ()=>import('../Views/LandingPage'))
 const LandingPageNew = lazy( ()=>import('../Views/LandingPage/21Days/index'))
-const NutriClinic = lazy( ()=>import('../Views/NutriDietClinic/AboutClinic/index'))
+const NutriClinic = lazy( ()=>import('../Views/LandingPage/NutriDietClinic/AboutClinic/index'))
 
 const staticSiteRoutes = [
   //Home
@@ -770,8 +770,8 @@ const staticSiteRoutes = [
     name: 'singleCourse',
   },
   {
-    Component: NutriClinic,
-    path: '/:Nutri-clinic',
+    Component: NutriDietClinic,
+    path: '/Nutri-clinic-landing-page',
     exact: true,
     id: 'statisSiteCourse',
     routePath: '/:NutriClinic',
