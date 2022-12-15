@@ -8725,6 +8725,20 @@ const camps = {
       {
         type: 'paragraph',
         content: {
+          title: 'Please Note',
+          text: [],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'The payment validity and session attendance for 21-Days Better Living Course is only applicable for one month. However, in emergency circumstances, the participant can attend the 21-Days BLC sessions for the next month but only on approval of the management. Without authorisation, the participant will not be allowed to attend the sessions post the actual sessions of the course.',
+          text: [],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
           title: 'UNIQUE OFFERINGS ',
           text: [''],
         },
@@ -9060,6 +9074,20 @@ const camps = {
       {
         type: 'paragraph',
         content: {
+          title: 'Please Note',
+          text: [],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'The payment validity and session attendance for 21-Days Better Living Course is only applicable for one month. However, in emergency circumstances, the participant can attend the 21-Days BLC sessions for the next month but only on approval of the management. Without authorisation, the participant will not be allowed to attend the sessions post the actual sessions of the course.',
+          text: [],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
           title: 'UNIQUE OFFERINGS ',
           text: [''],
         },
@@ -9383,6 +9411,20 @@ const camps = {
           text: [
             'Only 35 seats are available. Registrations on a first come, first-serve basis only.',
           ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Please Note',
+          text: [],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'The payment validity and session attendance for 21-Days Better Living Course is only applicable for one month. However, in emergency circumstances, the participant can attend the 21-Days BLC sessions for the next month but only on approval of the management. Without authorisation, the participant will not be allowed to attend the sessions post the actual sessions of the course.',
+          text: [],
         },
       },
       {
@@ -9720,6 +9762,20 @@ const camps = {
           text: [
             'Only 35 seats are available. Registrations on a first come, first-serve basis only.',
           ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Please Note',
+          text: [],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'The payment validity and session attendance for 21-Days Better Living Course is only applicable for one month. However, in emergency circumstances, the participant can attend the 21-Days BLC sessions for the next month but only on approval of the management. Without authorisation, the participant will not be allowed to attend the sessions post the actual sessions of the course.',
+          text: [],
         },
       },
       {
