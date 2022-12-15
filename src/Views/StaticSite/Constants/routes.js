@@ -773,8 +773,8 @@ const staticSiteRoutes = [
     Component: NutriDietClinic,
     path: '/Nutri-clinic-landing-page',
     exact: true,
-    id: 'statisSiteCourse',
-    routePath: '/:NutriClinic',
+    id: 'statisSiteNutriClinic',
+    routePath: '/Nutri-clinic-landing-page',
     name: 'NutriClinic',
   },
 ]

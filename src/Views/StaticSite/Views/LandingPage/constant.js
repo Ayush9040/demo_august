@@ -55,6 +55,31 @@ export const testimonialData2 = [
   }
 ]
 
+export const testimonialData3 = [
+  {
+    name: 'Shvetika Kaul',
+    info: '',
+    img: 'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/Nutri-Clinic/Shvetika%20Kaul.jpg',
+    message:
+    'I had gained weight and was feeling stuck for a very long time. I decided to take the weight loss diet program with The Yoga Institute’s Nutri Diet Clinic last month. The nutritionist guided me on the importance of food, when and how to consume. I was introduced to the varieties of millet, vegetables, lentils, spices, seeds and nuts. The first week itself made me feel light, energetic and gave me a feeling of happiness. The diet plan with easy to make recipes had all the varieties along with nutrients. I found myself thoroughly enjoying the process of eating food with the changes brought about in my diet. I look forward to each day with enthusiasm in my weight loss journey through Nutri Diet Clinic’s weight loss program.',
+  },
+  {
+    name: 'Pallavi Raj',
+    info: '',
+    img: 'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/Nutri-Clinic/Pallavi.jpg',
+    message: 'I am a big fan of The Yoga Institute and all its courses. Nutri Diet Clinic is yet another beneficial program from the institute. The appreciation for the institute got me to enrol for their 1-month plan. But the guidance, proactive support, the effort taken by my Nutritionist to develop positive attitude for food when I was unable to follow the diet for the day is responsible for me to extend it to their 6-months plan. I was provided with customized diet plan which made eating healthy food very easy. I always found following diet difficult but not when healthy food is so delicious at the same time. I thank my nutritionist and gratitude to the institute for taking this initiative.'
+  },
+  {
+    name: 'Aditi kaku',
+    info: '',
+    img: 'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/Nutri-Clinic/Aditi-kaku.jpg',
+    message:
+    'I was looking for some good intermittent fasting options and TYI’s Nutri Diet Clinic was able to cater to my needs. I was provided with a customized plan based on my needs and preferences and healthy recipes were shared with me. It definitely changed my eating habits and I was able to lose some inches and weight as well. All my doubts were cleared with utmost patience, dedication by the team of the Nutri Diet Clinic.',
+  }
+]
+
+
+
 export const popularCourses = [
   {
     img: `${baseDomain}${courseAssets.courseAsset40}`,

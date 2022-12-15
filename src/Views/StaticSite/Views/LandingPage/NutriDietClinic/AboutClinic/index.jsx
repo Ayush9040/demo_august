@@ -8,6 +8,8 @@ import { CampsWorkShops } from '../../constant'
 import { landingLogo } from '../../../../assets/icons/icon'
 import LandingButton from '../../../../Components/LandingCourse/LandingButton'
 import NutriBlogs from '../../../../Components/LandingCourse/NutriBlogs'
+import Slider from 'react-slick'
+import { testimonialData3 } from '../../constant'
 
 const NutriDietClinic = () => {
   let settings = {
@@ -96,7 +98,7 @@ const NutriDietClinic = () => {
         </div>
       </nav>
       <main>
-        <section className="section_1">
+        <section className="section_1_2">
           <div className="bg_img_21">
             <div className="img_form_21">
               <div className="form_text">
@@ -225,7 +227,7 @@ const NutriDietClinic = () => {
             </div>
           </div>
         </section>
-        <section className="section_3">
+        <section className="section_3_2">
           <div className="int_img_text21">
             <div className="int_text21">
               <div className="title_21">CONSULTATION TIMINGS</div>
@@ -237,7 +239,7 @@ const NutriDietClinic = () => {
               />
             </div>
           </div>
-          <div className="details_21">
+          <div className="details_21_2">
             <div className="details_text">
               10:00AM to 6:30PM (IST)
             </div>
@@ -263,9 +265,9 @@ const NutriDietClinic = () => {
             </div>
           ))}
         </div>
-        {/* <section className="testimonials-section21">
+        <section className="testimonials-section21">
           <Slider {...settings}>
-            {testimonialData2.map((item, i) => (
+            {testimonialData3.map((item, i) => (
               <div key={i} className="testimonial21">
                 <div className="left21">
                   <img src={item?.img} alt={`testimonial-${i + 1}`} />
@@ -278,7 +280,7 @@ const NutriDietClinic = () => {
               </div>
             ))}
           </Slider>
-        </section> */}
+        </section>
         <div className="other_div21">
           <div className="other_line21"></div>
           <div className="landing_other21">Featured Blogs</div>
@@ -294,11 +296,10 @@ const NutriDietClinic = () => {
             Address: Shri Yogendra Marg, Prabhat Colony, Santacruz East, Mumbai
             Maharashtra 400055
           </div>
-          <img src='https://ecom-static-site.oss-ap-south-1.aliyuncs.com/Nutri-Clinic/top-view-fruits-vegetables-with-copy-space.png'  className='fruit-image'/>
         </section>
-        {/* <div className='fruits-img'>
-          <img src='https://ecom-static-site.oss-ap-south-1.aliyuncs.com/Nutri-Clinic/top-view-fruits-vegetables-with-copy-space.png'  className='fruit-image'/>
-        </div> */}
+        <div className='bottom-img-div'>
+          <img src='https://ecom-static-site.oss-ap-south-1.aliyuncs.com/Nutri-Clinic/top-view-fruits-vegetables-with-copy-space.png'  className='bottom-image'/>
+        </div>
       </main>
       {modal && (
         <NutriThankYou
