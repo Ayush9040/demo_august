@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import PhoneInput from 'react-phone-number-input'
+import 'react-phone-number-input/style.css'
 import NutriThankYou from '../ThankYouPage/Index'
 import { creatForm, successMail } from '../../../LandingPage/Api'
 import './style.scss'
@@ -12,29 +13,7 @@ import Slider from 'react-slick'
 import { testimonialData3 } from '../../constant'
 
 const NutriDietClinic = () => {
-  let settings = {
-    dots: false,
-    arrows: false,
-    infinite: true,
-    speed: 2000,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoPlaySpeed: 5000,
-    centerMode: false,
-    centerPadding: '20%',
-    swipe: false,
-    responsive: [
-      {
-        breakpoint: 900,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          centerMode: false,
-        },
-      },
-    ],
-  }
+
 
   const [modal, setModal] = useState(false)
   const [err, setErr] = useState(0)
