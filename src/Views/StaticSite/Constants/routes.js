@@ -95,7 +95,6 @@ const LocateDetails = lazy(()=> import ('../Components/LocateUs/LocationDetails'
 const NutriDiet = lazy(()=>import('../Views/NutriDiet'))
 const LandingPage = lazy( ()=>import('../Views/LandingPage'))
 const LandingPageNew = lazy( ()=>import('../Views/LandingPage/21Days/index'))
-const NutriClinic = lazy( ()=>import('../Views/LandingPage/NutriDietClinic/AboutClinic/index'))
 
 const staticSiteRoutes = [
   //Home
