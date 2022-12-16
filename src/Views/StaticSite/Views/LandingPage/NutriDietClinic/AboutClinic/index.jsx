@@ -289,7 +289,7 @@ const NutriDietClinic = () => {
         <section className="featured-section21">
           <NutriBlogs />
         </section>
-        <section className="last_div21">
+        <section className="last_div21-2">
           <div className="last_logo21">{landingLogo}</div>
           <div className="last_text21">
             Address: Shri Yogendra Marg, Prabhat Colony, Santacruz East, Mumbai
