@@ -90,7 +90,7 @@ const NutriDietClinic = () => {
       <nav>
         <Link to='/'>
           <div className='nutri-logo'>
-            <img src='https://ecom-static-site.oss-ap-south-1.aliyuncs.com/Nutri-Clinic/main-logo.png' />
+            <img src='https://ecom-static-site.oss-ap-south-1.aliyuncs.com/Nutri-Clinic/main-logo.png' className='nutri-image'/>
           </div>
         </Link>
         <div className='phone-info'>

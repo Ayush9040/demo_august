@@ -627,6 +627,13 @@
 
 @media (max-width: 520px) {
   .main-nutri-clinic {
+    .nutri-logo{
+      margin-right: 5rem;
+      .nutri-image{
+        width: 225px;
+        padding: 2rem;
+      }
+    }
     & > nav {
       justify-content: center;
       .nutri-logo {
@@ -636,7 +643,7 @@
       }
       .phone-info {
         & > h2 {
-          font-size: 1.5rem;
+          font-size: 2rem;
           text-align: center;
         }
         p{
@@ -731,11 +738,26 @@
   font-size: 2rem;
   padding: 2rem 5%;
 }
+
+// .main-nutri-clinic .nutri-logo{
+//   margin-right: 5rem;
+// } .nutri-clinic-logo{
+//   width: 175px;
+//   padding: 2rem;
+// }
 .main-nutri-clinic > main .about_clinic:nth-child(2n+1) {
   min-width: max-content;
   padding: 2rem;
   margin: 20px auto;
   border-radius: 30px !important;
+}
+
+.last_div21 .last_text21 {
+  font-size: 2.5rem;
+  color: #949494;
+  font-weight: 600;
+  text-align: center;
+  width: 100%;
 }
 .last_div21 .last_logo21 > svg {
   width: 250px;
@@ -758,5 +780,9 @@
   overflow-x: hidden;
   margin-top: -10rem;
   object-fit: cover;
+  .bottom-image{
+    width: 100%;
+    margin-top: 3rem;
+  }
 }
 }
