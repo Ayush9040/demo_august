@@ -110,27 +110,27 @@ export const popularCourses = [
 
 export const CampsWorkShops = [
   {
-    img: 'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/Courses/Camps/Stress_management.jpg',
+    img: 'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/Courses/Camps/Stress_Management_Camp.jpeg',
     text: 'Stress Management Camp)',
     url: '/stress-management-camp',
   },
   {
-    img: 'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/Courses/Camps/Weight_management.jpg',
+    img: 'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/Courses/Camps/Weight_Management_Workshop.jpeg',
     text: 'Weight Management Workshop',
     url: '/weight-management-workshop',
   },
   {
-    img: 'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/Courses/Camps/Diabetes_camp.jpg',
+    img: 'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/Courses/Camps/Diabetes_Camp.jpeg',
     url: '/diabetes-camp',
     text: 'Diabetes Camp',
   },
   {
-    img: 'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/Courses/Camps/cardiac-&-hypertension-43-1.png',
+    img: 'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/Courses/Camps/Cardiac_Hypertension_Workshop.jpeg',
     url: '/cardiac-hypertension-workshop',
     text: 'Cardiac & Hypertension Workshop',
   },
   {
-    img: 'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/Courses/Camps/Orthopaedic_Camp_for_Back_and_Joint_Disorders.jpg',
+    img: 'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/Courses/Camps/Back_Joint_Disorder_Workshop.jpeg',
     url: '/back-joint-disorder-workshop',
     text: 'Back & Joint Disorder Workshop',
   },

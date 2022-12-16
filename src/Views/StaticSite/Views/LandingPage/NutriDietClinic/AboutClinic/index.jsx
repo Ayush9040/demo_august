@@ -90,7 +90,7 @@ const NutriDietClinic = () => {
       <nav>
         <Link to='/'>
           <div className='nutri-logo'>
-            <img src='https://mail.google.com/mail/u/0?ui=2&ik=21ca1f2dc7&attid=0.1&permmsgid=msg-f:1752172342980195098&th=1850f7766899331a&view=att&disp=safe&realattid=f_lbnb8mrr0' alt='Nutri-clinic-logo' />
+            <img src='https://ecom-static-site.oss-ap-south-1.aliyuncs.com/Nutri-Clinic/main-logo.png' />
           </div>
         </Link>
         <div className='phone-info'>
@@ -202,8 +202,8 @@ const NutriDietClinic = () => {
         <section>
           <div className='programs-info'>OUR PROGRAMS:
             <ul>
-              <li>Shape-Up Program<span className='program-font'>(Weight Loss/Weight Gain/Muscle Gain)</span></li>
-              <li>Hormonal Imbalance Program<span className='program-font'>(PCOS/ Thyroid)</span></li>
+              <li>Shape-Up Program<span className='program-font'> (Weight Loss/Weight Gain/Muscle Gain)</span></li>
+              <li>Hormonal Imbalance Program<span className='program-font'> (PCOS/ Thyroid)</span></li>
               <li>Gut Health Program <span className='program-font'>(Acidity/Constipation/Digestion Issues)</span></li>
               <li>Metabolic Disorder Program <span className='program-font'>(Diabetes Mellitus/Hypertension/Cholesterol)</span></li>
               <li>Pregnancy/Lactation Program</li>
@@ -215,14 +215,12 @@ const NutriDietClinic = () => {
               <img className='img-programs' src='https://ecom-static-site.oss-ap-south-1.aliyuncs.com/Nutri-Clinic/Salad.png' />
               <div className='programs-benefits'><span className='programs'>PROGRAMS BENIFITS:</span>
                 <ul>
-                  <li>Customized Holistic Diet Plans
-                    <p>(As per the client’s routine, lifestyle, and preferences)</p>
-                  </li>
-                  <li>Nutritional Counselling</li>
-                  <li>Personalized Workout Plan</li>
-                  <li>Healthy Home-Made Recipes</li>
-                  <li>Dietary Solutions &amp; Guidelines</li>
-                  <li>Daily WhatsApp Support (Daily diet recall and instant problem-solving)</li>
+                  <li className='program-font'>Customized Holistic Diet Plans (As per the client’s routine, lifestyle, and preferences)</li>
+                  <li className='program-font'>Nutritional Counselling</li>
+                  <li className='program-font'>Personalized Workout Plan</li>
+                  <li className='program-font'>Healthy Home-Made Recipes</li>
+                  <li className='program-font'>Dietary Solutions &amp; Guidelines</li>
+                  <li className='program-font'>Daily WhatsApp Support (Daily diet recall and instant problem-solving)</li>
                 </ul>
               </div>
             </div>
@@ -242,7 +240,7 @@ const NutriDietClinic = () => {
           </div>
           <div className="details_21_2">
             <div className="details_text">
-              10:00AM to 6:30PM (IST)
+              10:00 AM to 6:30PM (IST)
             </div>
             <div className="details_text">
               4:30 AM to 1:00 PM (GMT)
@@ -299,7 +297,7 @@ const NutriDietClinic = () => {
           </div>
         </section>
         <div className='bottom-img-div'>
-          <img src='https://ecom-static-site.oss-ap-south-1.aliyuncs.com/Nutri-Clinic/top-view-fruits-vegetables-with-copy-space.png'  className='bottom-image'/>
+          <img src='https://ecom-static-site.oss-ap-south-1.aliyuncs.com/Nutri-Clinic/ezgif.com-gif-maker.png'  className='bottom-image'/>
         </div>
       </main>
       {modal && (

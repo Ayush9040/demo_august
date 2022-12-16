@@ -49,7 +49,7 @@
 // & > main{
 .section_1_2 {
   .bg_img_21 {
-    background: url('https://ecom-static-site.oss-ap-south-1.aliyuncs.com/Nutri-Clinic/main%20image.jpg') 
+    background: url('https://ecom-static-site.oss-ap-south-1.aliyuncs.com/Nutri-Clinic/main-image.jpg') 
     no-repeat center / cover;
     height: 900px;
     & > img {
@@ -167,10 +167,10 @@
   font-size: 2rem;
   font-weight: bold;
   margin-top: 2rem;
-  background-color: rgb(234, 227, 227);
+  background-color: #ECECEC;
   border-radius: 50px;
   width: 100%;
-  padding: 3rem 30% 3rem 12rem;
+  padding: 3rem 26% 3rem 12rem;
   ul {
     margin-top: 2rem;
   }
@@ -461,7 +461,10 @@
 .bottom-img-div{
   width: 100%;
   overflow-x: hidden;
-  margin-top: -50rem;
+  margin-top: -9.5rem;
+  .bottom-image{
+    width: 100%;
+  }
 }
 
 @media (max-width: 1100px) {
@@ -681,6 +684,7 @@
             font-size: 2rem;
             margin-top: 2rem;
             text-align: center;
+            letter-spacing: 2px;
           }
         }
         .int_img_text21 .int_text21 {
@@ -730,6 +734,12 @@
 .main-nutri-clinic > main .about_clinic:nth-child(2n+1) {
   min-width: max-content;
   padding: 2rem;
+  margin: 20px auto;
+  border-radius: 30px !important;
+}
+.last_div21 .last_logo21 > svg {
+  width: 250px;
+  margin-top: -5rem;
 }
 .about_clinic_info {
   font-size: 2rem;
@@ -742,5 +752,11 @@
   .img-programs{
     display: none;
   }
+}
+.bottom-img-div{
+  width: 100%;
+  overflow-x: hidden;
+  margin-top: -10rem;
+  object-fit: cover;
 }
 }
