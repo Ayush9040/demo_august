@@ -113,6 +113,46 @@ const CourseDetails = ({
       if (mode === 'ONLINE') return currentCourse.fees.onlineFee
     }
       break
+    case 'cardiac-hypertension-workshop': if(courseDate === '24th December 2022'){
+      
+      if (mode === 'ONILINE') return 500
+      if (mode === 'OFFILINE') return 500
+    } else{
+      if (mode === 'ONLINE') return currentCourse.fees.onlineFee
+      if (mode === 'OFFLINE')
+        return currentCourse.fees.offlineFee.nonResidentialFee
+    }
+      break
+    case 'pregnancy-camp-for-ante-post-natal': if(courseDate === '17th Dec to 18th Dec 2022'){
+        
+      if (mode === 'ONILINE') return 500
+      if (mode === 'OFFILINE') return 500
+    } else{
+      if (mode === 'ONLINE') return currentCourse.fees.onlineFee
+      if (mode === 'OFFLINE')
+        return currentCourse.fees.offlineFee.nonResidentialFee
+    }
+      break
+    case 'back-joint-disorder-workshop': if(courseDate === '25th December 2022'){
+        
+      if (mode === 'ONILINE') return 500
+      if (mode === 'OFFILINE') return 500
+    } else{
+      if (mode === 'ONLINE') return currentCourse.fees.onlineFee
+      if (mode === 'OFFLINE')
+        return currentCourse.fees.offlineFee.nonResidentialFee
+    }
+      break
+    case 'pranayama-workshop': if(courseDate === '18th December 2022'){
+        
+      if (mode === 'ONILINE') return 500
+      if (mode === 'OFFILINE') return 500
+    } else{
+      if (mode === 'ONLINE') return currentCourse.fees.onlineFee
+      if (mode === 'OFFLINE')
+        return currentCourse.fees.offlineFee.nonResidentialFee
+    }
+      break
     default: return ()=>{
       if (mode === 'ONLINE') return currentCourse.fees.onlineFee
       if(mode === 'OFFLINE') return currentCourse.fees.offlineFee.nonResidentialFee
