@@ -27,7 +27,7 @@ const CourseSection = ({
           },
           {
             url: '/200-hrs-part-time-ttc-on-campus-english',
-            text: '2 Months TTC On Campus – English - Batch 2',
+            text: '2 Months TTC Online & On Campus – English - Batch 2',
           },
           {
             url: '/200-hrs-part-time-ttc-online-english',

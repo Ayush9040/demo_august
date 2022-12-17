@@ -761,7 +761,6 @@ const ttc200hr = {
     category: 'ttc',
     title: '200 hrs TTC - 2 Months TTC Online-English-Batch 3',
     dates: [
-      '10th Oct to 3rd Dec 2022',
       '12th Dec to 4th Feb 2023',
       '13th Feb to 8th Apr 2023',
       '17th Apr to 10th Jun 2023',
@@ -1147,13 +1146,12 @@ const ttc200hr = {
     colorCode: '#E38F73',
     timing: 'Monday to Saturday: 1:00 pm - 4:30 pm (IST)',
     fees: {
-      onlineFee: 22000,
+      onlineFee: 25000,
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'ttc',
     title: '200 hrs TTC - 2 Months TTC Online-Hindi-Batch 4',
     dates: [
-      '17th Oct to 10th Dec 2022',
       '19th Dec to 11th Feb 2023',
       '20th Feb to 15th Apr 2023',
       '24th Apr to 17th Jun 2023',
@@ -1540,7 +1538,7 @@ const ttc200hr = {
     },
     category: 'ttc',
     title: '200 hrs TTC - 2 Months TTC Online-English-Batch 5',
-    dates: ['31st Oct to 24th Dec 2022','2nd Jan to 25th Feb 2022','6th Mar to 29th Apr 2023','8th May to 1st Jul 2023','10th Jul to 2nd Sep 2023','11th Sep to 4th Nov 2023', '13th Nov to 6th Jan 2024'],
+    dates: ['2nd Jan to 25th Feb 2023','6th Mar to 29th Apr 2023','8th May to 1st Jul 2023','10th Jul to 2nd Sep 2023','11th Sep to 4th Nov 2023', '13th Nov to 6th Jan 2024'],
     online: true,
     onCampus: false,
     nonResidential: false,
@@ -5663,17 +5661,17 @@ const camps = {
     mostPopular: false,
     rating: 5,
     colorCode: '#DDAB58',
-    timing: '5:00 pm – 8:00 pm (IST)',
+    timing: '9:30 am – 5:30 pm (IST)',
     fees: {
       onlineFee: 1000,
-      offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
+      offlineFee: { residentialFee: 0, nonResidentialFee: 1000 },
     },
     category: 'camps',
     metaDescription:
       'Powerful and effective asana, pranayama, and relaxation techniques to alleviate heart ailments',
     image: `${baseDomain}${courseAssets.courseAsset111}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset6}`,
-    dates: ['24th December 2022'],
+    dates: ['24th December 2022','1st January 2023', '5th March 2023','7th May 2023','2nd June 2023','3rd September 2023','5th November 2023'],
     online: true,
     onCampus: true,
     nonResidential: false,
@@ -5753,7 +5751,7 @@ const camps = {
         type: 'paragraph',
         content: {
           title: 'Time',
-          text: ['5:00 pm – 8:00 pm (IST)'],
+          text: ['9:30 am – 5:30 pm (IST)'],
         },
       },
       {
@@ -5792,21 +5790,21 @@ const camps = {
         templateNonResidential: '',
       },
     },
-    dates: ['4th December 2022'],
+    dates: ['5th February 2023','2nd April 2023','4th June 2023','6th August 2023','1st October 2023','3rd December 2023'],
     mostPopular: false,
     rating: 5,
     colorCode: '#CE9B51',
-    timing: '5:00 pm – 8:00 pm (IST)',
+    timing: '9:30 am – 5:30 pm (IST)',
     fees: {
       onlineFee: 1000,
-      offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
+      offlineFee: { residentialFee: 0, nonResidentialFee: 1000 },
     },
     category: 'camps',
     metaDescription:
       'Wholesome tools and techniques to help you manage your condition completely',
     image: `${baseDomain}${courseAssets.courseAsset7}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset105}`,
-    online: true,
+    online: false,
     onCampus: true,
     nonResidential: false,
     residential: false,
@@ -5937,7 +5935,7 @@ const camps = {
   //   mostPopular: false,
   //   rating: 5,
   //   colorCode: '#EDBE66',
-  //   timing: '5:00 pm – 8:00 pm (IST)',
+  //   timing: '9:30 am – 5:30 pm (IST)',
   //   fees: {
   //     onlineFee: 500,
   //     offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
@@ -6350,8 +6348,8 @@ const camps = {
     colorCode: '#EDBE66',
     timing: '5:00 pm – 8:00 pm (IST)',
     fees: {
-      onlineFee: 500,
-      offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
+      onlineFee: 1000,
+      offlineFee: { residentialFee: 0, nonResidentialFee: 1000 },
     },
     category: 'camps',
     metaDescription:
@@ -6619,14 +6617,14 @@ const camps = {
         templateNonResidential: '',
       },
     },
-    dates: ['18th December 2022'],
+    dates: ['18th December 2022','8th January 2023','12th March 2023','14th May 2023','9th July 2023','10th September 2023','12th November 2023'],
     mostPopular: false,
     rating: 5,
     colorCode: '#CE9B51',
     timing: '8:00 am – 11:00 am (IST)',
     fees: {
       onlineFee: 1000,
-      offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
+      offlineFee: { residentialFee: 0, nonResidentialFee: 1000 },
     },
     category: 'camps',
     metaDescription:
@@ -6759,14 +6757,26 @@ const camps = {
     },
     dates: [
       '17th Dec to 18th Dec 2022',
+      '23rd & 24th January 2023',
+      '18th & 19th February 2023',
+      '20th & 21st March 2023',
+      '15th & 16th April 2023',
+      '15th & 16th May 2023',
+      '17th & 18th June 2023',
+      '17th & 18th July 2023',
+      '19th & 20th August 2023',
+      '18th & 19th September 2023',
+      '21st & 22nd October 2023',
+      '20th & 21st November 2023',
+      '16th & 17th December 2023'
     ],
     mostPopular: false,
     rating: 5,
     colorCode: '#EDBE66',
-    timing: '5:00 pm – 8:00 pm (IST)',
+    timing: '9:30 am – 5:30 pm (IST)',
     fees: {
       onlineFee: 1500,
-      offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
+      offlineFee: { residentialFee: 0, nonResidentialFee: 1500 },
     },
     category: 'camps',
     metaDescription: 'Insightful session with a medical specialists.',
@@ -6850,7 +6860,7 @@ const camps = {
         type: 'paragraph',
         content: {
           title: 'Time',
-          text: ['5:00 pm – 8:00 pm (IST)'],
+          text: ['9:30 am – 5:30 pm (IST)'],
         },
       },
       {
@@ -6907,8 +6917,8 @@ const camps = {
     colorCode: '#DDAB58',
     timing: '5:00 pm – 8:00 pm (IST)',
     fees: {
-      onlineFee: 500,
-      offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
+      onlineFee: 1000,
+      offlineFee: { residentialFee: 0, nonResidentialFee: 1000 },
     },
     category: 'camps',
     metaDescription: 'Insightful session with a specialist',
@@ -7036,21 +7046,21 @@ const camps = {
         templateNonResidential: '',
       },
     },
-    dates: [],
+    dates: ['29th January 2023','30th April 2023','30th July 2023','29th October 2023',''],
     mostPopular: false,
     rating: 5,
     colorCode: '#CE9B51',
-    timing: '5:00 pm – 8:00 pm (IST)',
+    timing: '9:30 am – 5:30 pm (IST)',
     fees: {
       onlineFee: 1000,
-      offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
+      offlineFee: { residentialFee: 0, nonResidentialFee: 1000 },
     },
     category: 'camps',
     metaDescription:
       'Specific pranayama, asana and relaxation techniques to enhance your state of mind',
     image: `${baseDomain}${courseAssets.courseAsset12}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset12}`,
-    online: true,
+    online: false,
     onCampus: true,
     nonResidential: false,
     residential: false,
@@ -7129,7 +7139,7 @@ const camps = {
         type: 'paragraph',
         content: {
           title: 'Time',
-          text: ['5:00 pm – 8:00 pm (IST)'],
+          text: ['9:30 am – 5:30 pm (IST)'],
         },
       },
       {
@@ -7173,21 +7183,21 @@ const camps = {
         templateNonResidential: '',
       },
     },
-    dates: ['11th December 2022'],
+    dates: ['8th January 2023','12th February 2023','12th March 2023','9th April 2023','14th May 2023','11th June 2023','9th July 2023','13th August 2023','10th September 2023','8th October 2023','12th November 2023','10th December 2023'],
     mostPopular: false,
     rating: 5,
     colorCode: '#EDBE66',
-    timing: '5:00 pm – 8:00 pm (IST)',
+    timing: '9:30 am – 5:30 pm (IST)',
     fees: {
       onlineFee: 1000,
-      offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
+      offlineFee: { residentialFee: 0, nonResidentialFee: 1000 },
     },
     category: 'camps',
     metaDescription:
       'Specific pranayama, asana and relaxation techniques to enhance your state of mind',
     image: `${baseDomain}${courseAssets.courseAsset13}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset13}`,
-    online: true,
+    online: false,
     onCampus: true,
     nonResidential: false,
     residential: false,
@@ -7265,7 +7275,7 @@ const camps = {
         type: 'paragraph',
         content: {
           title: 'Time',
-          text: ['5:00 pm – 8:00 pm (IST)'],
+          text: ['9:30 am – 5:30 pm (IST)'],
         },
       },
       {
@@ -7309,20 +7319,20 @@ const camps = {
         templateNonResidential: '',
       },
     },
-    dates: ['3rd December 2022'],
+    dates: ['7th January 2023','4th February 2023','4th March 2023','1st April 2023','6th May 2023','3rd June 2023','1st July 2023','5th August 2023','2nd September 2023','7th October 2023','4th November 2023','2nd December 2023'],
     mostPopular: false,
     rating: 5,
     colorCode: '#DDAB58',
-    timing: '5:00 pm – 8:00 pm (IST)',
+    timing: '9:30 am – 5:30 pm (IST)',
     fees: {
       onlineFee: 1000,
-      offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
+      offlineFee: { residentialFee: 0, nonResidentialFee: 1000 },
     },
     category: 'camps',
     metaDescription: 'Low-calorie diet recipe',
     image: `${baseDomain}${courseAssets.courseAsset15}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset15}`,
-    online: true,
+    online: false,
     onCampus: true,
     nonResidential: false,
     residential: false,
@@ -7400,7 +7410,7 @@ const camps = {
         type: 'paragraph',
         content: {
           title: 'Time',
-          text: ['5:00 pm – 8:00 pm (IST)'],
+          text: ['9:30 am – 5:30 pm (IST)'],
         },
       },
       {
@@ -7444,21 +7454,21 @@ const camps = {
         templateNonResidential: '',
       },
     },
-    dates: ['10th December 2022'],
+    dates: ['11th February 2023','8th April 2023','10th June 2023','12th August 2023','14th October 2023','9th December 2023'],
     mostPopular: false,
     rating: 5,
     colorCode: '#CE9B51',
-    timing: '5:00 pm – 8:00 pm (IST)',
+    timing: '9:30 am – 5:30 pm (IST)',
     fees: {
       onlineFee: 1000,
-      offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
+      offlineFee: { residentialFee: 0, nonResidentialFee: 1000 },
     },
     category: 'camps',
     metaDescription:
       'Specific asana, pranayama, and relaxation techniques to enhance your health',
     image: `${baseDomain}${courseAssets.courseAsset84}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset84}`,
-    online: true,
+    online: false,
     onCampus: true,
     nonResidential: false,
     residential: false,
@@ -7541,7 +7551,7 @@ const camps = {
         type: 'paragraph',
         content: {
           title: 'Time',
-          text: ['5:00 pm – 8:00 pm (IST)'],
+          text: ['9:30 am – 5:30 pm (IST)'],
         },
       },
       {
@@ -7585,14 +7595,14 @@ const camps = {
         templateNonResidential: '',
       },
     },
-    dates: ['25th December 2022'],
+    dates: ['25th December 2022','22nd January 2023','26th February 2023','26th March 2023','23rd April 2023','28th May 2023','25th June 2023','23rd July 2023','27th August 2023','24th September 2023','22nd  October 2023','26th November 2023','24th December 2023'],
     mostPopular: false,
     rating: 5,
     colorCode: '#EDBE66',
-    timing: '5:00 pm – 8:00 pm (IST)',
+    timing: '9:30 am – 5:30 pm (IST)',
     fees: {
       onlineFee: 1000,
-      offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
+      offlineFee: { residentialFee: 0, nonResidentialFee: 1000 },
     },
     category: 'camps',
     metaDescription: 'Insightful session with an ortho-specialist',
@@ -7676,7 +7686,7 @@ const camps = {
         type: 'paragraph',
         content: {
           title: 'Time',
-          text: ['5:00 pm – 8:00 pm (IST)'],
+          text: ['9:30 am – 5:30 pm (IST)'],
         },
       },
       {
@@ -8448,7 +8458,6 @@ const camps = {
     },
     batch: 1,
     dates: [
-      '6th Nov to 26th Nov 2022',
       '4th Dec to 24th Dec 2022',
       '2nd Jan to 22nd Jan 2023',
       '5th Feb to 25th Feb 2023',
@@ -8720,6 +8729,20 @@ const camps = {
           text: [
             'Only 35 seats are available. Registrations on a first come, first-serve basis only.',
           ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Please Note',
+          text: [],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'The payment validity and session attendance for 21-Days Better Living Course is only applicable for one month. However, in emergency circumstances, the participant can attend the 21-Days BLC sessions for the next month but only on approval of the management. Without authorisation, the participant will not be allowed to attend the sessions post the actual sessions of the course.',
+          text: [],
         },
       },
       {
@@ -9060,6 +9083,20 @@ const camps = {
       {
         type: 'paragraph',
         content: {
+          title: 'Please Note',
+          text: [],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'The payment validity and session attendance for 21-Days Better Living Course is only applicable for one month. However, in emergency circumstances, the participant can attend the 21-Days BLC sessions for the next month but only on approval of the management. Without authorisation, the participant will not be allowed to attend the sessions post the actual sessions of the course.',
+          text: [],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
           title: 'UNIQUE OFFERINGS ',
           text: [''],
         },
@@ -9383,6 +9420,20 @@ const camps = {
           text: [
             'Only 35 seats are available. Registrations on a first come, first-serve basis only.',
           ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Please Note',
+          text: [],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'The payment validity and session attendance for 21-Days Better Living Course is only applicable for one month. However, in emergency circumstances, the participant can attend the 21-Days BLC sessions for the next month but only on approval of the management. Without authorisation, the participant will not be allowed to attend the sessions post the actual sessions of the course.',
+          text: [],
         },
       },
       {
@@ -9720,6 +9771,20 @@ const camps = {
           text: [
             'Only 35 seats are available. Registrations on a first come, first-serve basis only.',
           ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Please Note',
+          text: [],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'The payment validity and session attendance for 21-Days Better Living Course is only applicable for one month. However, in emergency circumstances, the participant can attend the 21-Days BLC sessions for the next month but only on approval of the management. Without authorisation, the participant will not be allowed to attend the sessions post the actual sessions of the course.',
+          text: [],
         },
       },
       {
@@ -11662,13 +11727,13 @@ const certificate = {
     mostPopular: false,
     rating: 5,
     colorCode: '#D3A29D',
-    timing: '1st Sunday of every month: 10:40 am - 12:30 pm (IST)',
+    timing: '1st Sunday of every month: 10:00 am - 12:30 pm (IST)',
     fees: {
-      onlineFee: 8000,
+      onlineFee: 15000,
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'certificate-course',
-    dates: [],
+    dates: ['10:00 am - 12:30 pm'],
     online: true,
     onCampus: false,
     nonResidential: false,
@@ -11738,7 +11803,7 @@ const certificate = {
         type: 'paragraph',
         content: {
           title: 'Timings',
-          text: ['1st Sunday of every month: 10:40 am - 12:30 pm (IST)'],
+          text: ['1st Sunday of every month: 10:00 am - 12:30 pm (IST)'],
         },
       },
       
