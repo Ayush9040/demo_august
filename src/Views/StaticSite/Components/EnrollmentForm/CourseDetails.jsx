@@ -123,16 +123,7 @@ const CourseDetails = ({
         return currentCourse.fees.offlineFee.nonResidentialFee
     }
       break
-    case 'pregnancy-camp-for-ante-post-natal': if(courseDate === '17th Dec to 18th Dec 2022'){
-        
-      if (mode === 'ONLINE') return 500
-      if (mode === 'OFFLINE') return 500
-    } else{
-      if (mode === 'ONLINE') return currentCourse.fees.onlineFee
-      if (mode === 'OFFLINE')
-        return currentCourse.fees.offlineFee.nonResidentialFee
-    }
-      break
+
     case 'back-joint-disorder-workshop': if(courseDate === '25th December 2022'){
         
       if (mode === 'ONLINE') return 500
