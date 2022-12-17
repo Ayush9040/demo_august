@@ -1,4 +1,4 @@
-import baseDomain, { courseAssets } from '../../assets/images/imageAsset'
+import baseDomain, { courseAssets,nutriDiet } from '../../../assets/images/imageAsset'
 
 export const popularCourses = [
   {
