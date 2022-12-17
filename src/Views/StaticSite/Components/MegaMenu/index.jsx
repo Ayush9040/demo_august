@@ -411,8 +411,8 @@ const MegaMenu = ({ setNav }) => {
                 <Link onClick={() => {setNav(false)}}  to='/back-joint-disorder-workshop'><li>Back & Joint Disorder Workshop</li></Link>
                 <Link onClick={() => {setNav(false)}}  to='/pranayama-workshop'><li>Prayanama Workshop</li></Link>
                 <Link onClick={() => {setNav(false)}}  to='/womens-camp'><li>Women&apos;s Camp</li></Link>
-                {/* <Link onClick={() => {setNav(false)}}  to='/respiratory-workshop'><li>Respiratory Workshop</li></Link>
-                <Link onClick={() => {setNav(false)}}  to='/life-management-camp'><li>Life Management Camp</li></Link> */}
+                <Link onClick={() => {setNav(false)}}  to='/respiratory-workshop'><li>Respiratory Workshop</li></Link>
+                <Link onClick={() => {setNav(false)}}  to='/life-management-camp'><li>Life Management Camp</li></Link> 
                 <Link onClick={() => {setNav(false)}}  to='/senior-citizen-workshop'><li>Senior citizen Workshop</li></Link>
                 <Link onClick={() => {setNav(false)}}  to='/diabetes-camp'><li>Diabetes Camp</li></Link>
               </ul>

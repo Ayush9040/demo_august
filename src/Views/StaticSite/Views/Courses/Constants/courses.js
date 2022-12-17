@@ -6330,142 +6330,142 @@ const camps = {
   //   ],
   // },
 
-  // 7: {
-  //   id: '',
-  //   title: 'Life Management Camp',
-  //   key: 'life-management-camp',
-  //   batch: 1,
-  //   // templateId: 'GENERAL_AUTO_EMAIL',
-  //   templateId: {
-  //     templateOnline: 'GENERAL_AUTO_EMAIL',
-  //     templateOffline: {
-  //       templateResidential: '',
-  //       templateNonResidential: '',
-  //     },
-  //   },
-  //   mostPopular: false,
-  //   rating: 5,
-  //   colorCode: '#EDBE66',
-  //   timing: '9:30 am – 5:30 pm (IST)',
-  //   fees: {
-  //     onlineFee: 500,
-  //     offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
-  //   },
-  //   category: 'camps',
-  //   metaDescription:
-  //     'Specific pranayama, asana and relaxation techniques to enhance your state of mind',
-  //   image: `${baseDomain}${courseAssets.courseAsset8}`,
-  //   cardImage: `${baseDomain}${courseAssets.courseAsset112}`,
-  //   dates: [],
-  //   online: true,
-  //   onCampus: true,
-  //   nonResidential: false,
-  //   residential: false,
-  //   certficate: false,
-  //   details: [
-  //     {
-  //       type: 'paragraph',
-  //       content: {
-  //         title: 'Who is this workshop for?',
-  //         text: [
-  //           'If you think about it, most of the time we are living our life without consciously thinking about what we are doing and why we are doing it. It is only when we face a problem of some kind, that we are forced to stop and take stock of things. This kind of approach does us no good. If you feel that you are stuck in life, or don’t know what to do next, or feel like your life is going nowhere, this is the camp for you! Here is a camp by The Yoga Institute to give you direction and discipline to go through your life happily, joyfully and with balance. Designed with the wisdom of ancient Indian teachings, there’s a whole treasure chest of tools waiting for you at this camp. Hope to see you soon!                   ',
-  //         ],
-  //       },
-  //     },
-  //     {
-  //       type: 'paragraph',
-  //       content: {
-  //         title: 'What can you expect?',
-  //         text: [
-  //           'Life is a choice between B and D. Birth and Death. We are in control of C. That is the Choices we make, so make the right choices and live a happy life. -Dr. Hansaji Yogendra ',
-  //         ],
-  //       },
-  //     },
-  //     {
-  //       type: 'u-list',
-  //       content: {
-  //         title: ' Program Offerings',
-  //         points: [
-  //           {
-  //             listItem:
-  //               'Effective tools and techniques to help you manage your life',
-  //             subItems: [],
-  //           },
-  //           {
-  //             listItem:
-  //               'Specific pranayama, asana and relaxation techniques to enhance your state of mind',
-  //             subItems: [],
-  //           },
-  //           {
-  //             listItem: 'Diet guidelines to manage your health',
-  //             subItems: [],
-  //           },
-  //           {
-  //             listItem:
-  //               'Tips to maintain health by our spiritual guru Institute Director, Dr. Hansaji who has decades of experience in the field',
-  //             subItems: [],
-  //           },
-  //           {
-  //             listItem: 'Fitness tips',
-  //             subItems: [],
-  //           },
-  //         ],
-  //       },
-  //     },
-  //     // {
-  //     //   type: 'u-list',
-  //     //   content: {
-  //     //     title: 'Offered with the program',
-  //     //     points: [
-  //     //       {
-  //     //         listItem: 'Booklet with guidelines  ',
-  //     //         subItems: [],
-  //     //       },
-  //     //       {
-  //     //         listItem: 'Wholesome Sattvik lunch',
-  //     //         subItems: [],
-  //     //       },
-  //     //       {
-  //     //         listItem: 'Healthy snacks  ',
-  //     //         subItems: [],
-  //     //       },
-  //     //     ],
-  //     //   },
-  //     // },
-  //     {
-  //       type: 'paragraph',
-  //       content: {
-  //         title: 'Time',
-  //         text: ['9:30 am – 5:30 pm (IST)'],
-  //       },
-  //     },
-  //     {
-  //       type: 'paragraph',
-  //       content: {
-  //         title: 'Fees',
-  //         text: ['INR 500'],
-  //       },
-  //     },
-  //     {
-  //       type: 'u-list',
-  //       content: {
-  //         title: ' Guidelines',
-  //         points: [
-  //           {
-  //             listItem:
-  //               'Campers are requested to come attired to comfortable loose fitting clothes. Shorts, capris, tank tops, low cut shirts, short and sleeveless T-shirts are not permitted as per the Institute dress code.',
-  //             subItems: [],
-  //           },
-  //           // {
-  //           //   listItem:
-  //           //     'Campers are requested to have their breakfast and medication (as prescribed by their doctor). ',
-  //           //   subItems: [],
-  //           // },
-  //         ],
-  //       },
-  //     },
-  //   ],
-  // },
+  7: {
+    id: '',
+    title: 'Life Management Camp',
+    key: 'life-management-camp',
+    batch: 1,
+    // templateId: 'GENERAL_AUTO_EMAIL',
+    templateId: {
+      templateOnline: 'GENERAL_AUTO_EMAIL',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: '',
+      },
+    },
+    mostPopular: false,
+    rating: 5,
+    colorCode: '#EDBE66',
+    timing: '5:00 pm – 8:00 pm (IST)',
+    fees: {
+      onlineFee: 1000,
+      offlineFee: { residentialFee: 0, nonResidentialFee: 1000 },
+    },
+    category: 'camps',
+    metaDescription:
+      'Specific pranayama, asana and relaxation techniques to enhance your state of mind',
+    image: `${baseDomain}${courseAssets.courseAsset8}`,
+    cardImage: `${baseDomain}${courseAssets.courseAsset112}`,
+    dates: ['15th January 2023', '19th March 2023', '21st May 2023', '16th July 2023', '17th September 2023', '19th November 2023', ''],
+    online: true,
+    onCampus: true,
+    nonResidential: false,
+    residential: false,
+    certficate: false,
+    details: [
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Who is this workshop for?',
+          text: [
+            'If you think about it, most of the time we are living our life without consciously thinking about what we are doing and why we are doing it. It is only when we face a problem of some kind, that we are forced to stop and take stock of things. This kind of approach does us no good. If you feel that you are stuck in life, or don’t know what to do next, or feel like your life is going nowhere, this is the camp for you! Here is a camp by The Yoga Institute to give you direction and discipline to go through your life happily, joyfully and with balance. Designed with the wisdom of ancient Indian teachings, there’s a whole treasure chest of tools waiting for you at this camp. Hope to see you soon!                   ',
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'What can you expect?',
+          text: [
+            'Life is a choice between B and D. Birth and Death. We are in control of C. That is the Choices we make, so make the right choices and live a happy life. -Dr. Hansaji Yogendra ',
+          ],
+        },
+      },
+      {
+        type: 'u-list',
+        content: {
+          title: ' Program Offerings',
+          points: [
+            {
+              listItem:
+                'Effective tools and techniques to help you manage your life',
+              subItems: [],
+            },
+            {
+              listItem:
+                'Specific pranayama, asana and relaxation techniques to enhance your state of mind',
+              subItems: [],
+            },
+            {
+              listItem: 'Diet guidelines to manage your health',
+              subItems: [],
+            },
+            {
+              listItem:
+                'Tips to maintain health by our spiritual guru Institute Director, Dr. Hansaji who has decades of experience in the field',
+              subItems: [],
+            },
+            {
+              listItem: 'Fitness tips',
+              subItems: [],
+            },
+          ],
+        },
+      },
+      {
+        type: 'u-list',
+        content: {
+          title: 'Offered with the program',
+          points: [
+            {
+              listItem: 'Booklet with guidelines  ',
+              subItems: [],
+            },
+            {
+              listItem: 'Wholesome Sattvik lunch',
+              subItems: [],
+            },
+            {
+              listItem: 'Healthy snacks  ',
+              subItems: [],
+            },
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Time',
+          text: ['5:00 pm – 8:00 pm (IST)'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Fees',
+          text: ['INR 500'],
+        },
+      },
+      {
+        type: 'u-list',
+        content: {
+          title: ' Guidelines',
+          points: [
+            {
+              listItem:
+                'Campers are requested to come attired to comfortable loose fitting clothes. Shorts, capris, tank tops, low cut shirts, short and sleeveless T-shirts are not permitted as per the Institute dress code.',
+              subItems: [],
+            },
+            {
+              listItem:
+                'Campers are requested to have their breakfast and medication (as prescribed by their doctor). ',
+              subItems: [],
+            },
+          ],
+        },
+      },
+    ],
+  },
 
   // 8: {
   //   id: '',
@@ -6898,140 +6898,140 @@ const camps = {
     ],
   },
 
-  // 11: {
-  //   id: '',
-  //   title: 'Respiratory Workshop',
-  //   key: 'respiratory-workshop',
-  //   batch: 1,
-  //   // templateId: 'GENERAL_AUTO_EMAIL',
-  //   templateId: {
-  //     templateOnline: 'GENERAL_AUTO_EMAIL',
-  //     templateOffline: {
-  //       templateResidential: '',
-  //       templateNonResidential: '',
-  //     },
-  //   },
-  //   dates: [],
-  //   mostPopular: false,
-  //   rating: 5,
-  //   colorCode: '#DDAB58',
-  //   timing: '9:30 am – 5:30 pm (IST)',
-  //   fees: {
-  //     onlineFee: 500,
-  //     offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
-  //   },
-  //   category: 'camps',
-  //   metaDescription: 'Insightful session with a specialist',
-  //   image: `${baseDomain}${courseAssets.courseAsset83}`,
-  //   cardImage: `${baseDomain}${courseAssets.courseAsset83}`,
-  //   online: true,
-  //   onCampus: true,
-  //   nonResidential: false,
-  //   residential: false,
-  //   certficate: false,
-  //   details: [
-  //     {
-  //       type: 'paragraph',
-  //       content: {
-  //         title: 'Who is this workshop for?',
-  //         text: [
-  //           'Prana is the vital energy or life force, which exists in all of us. The fight against respiratory problems begins with a strong will to overcome one’s disability and has to be backed by an implicit faith in oneself. With a strong emphasis on ancient yogic knowledge and techniques, The Yoga Institute has been conducting powerful Respiratory Camps since 1987. Respiratory health has been well documented in traditional systems of wellbeing over several millennia. The Yogic life strengthens your will, augments your faith in yourself and opens air passages. How soon you can breathe with ease and on your own, depends on yourself. What are you waiting for? Begin now!    ',
-  //         ],
-  //       },
-  //     },
-  //     {
-  //       type: 'paragraph',
-  //       content: {
-  //         title: 'What can you expect?',
-  //         text: [
-  //           'If you learn to breathe the right way, your life will be longer. -Dr. Hansaji Yogendra ',
-  //         ],
-  //       },
-  //     },
-  //     {
-  //       type: 'u-list',
-  //       content: {
-  //         title: ' Program Offerings',
-  //         points: [
-  //           {
-  //             listItem:
-  //               'Specific pranayama, and relaxation techniques to enhance your health',
-  //             subItems: [],
-  //           },
-  //           {
-  //             listItem: 'Diet guidelines to manage your health',
-  //             subItems: [],
-  //           },
-  //           {
-  //             listItem: 'Insightful session with a specialist',
-  //             subItems: [],
-  //           },
-  //           {
-  //             listItem:
-  //               'Tips to maintain health by our spiritual guru Institute Director, Dr. Hansaji who has decades of experience in the field',
-  //             subItems: [],
-  //           },
-  //           {
-  //             listItem: 'Fitness tips',
-  //             subItems: [],
-  //           },
-  //         ],
-  //       },
-  //     },
-  //     // {
-  //     //   type: 'u-list',
-  //     //   content: {
-  //     //     title: 'Offered with the program',
-  //     //     points: [
-  //     //       {
-  //     //         listItem: 'Booklet with guidelines  ',
-  //     //         subItems: [],
-  //     //       },
-  //     //       {
-  //     //         listItem: 'Wholesome Sattvik lunch',
-  //     //         subItems: [],
-  //     //       },
-  //     //       {
-  //     //         listItem: 'Healthy snacks  ',
-  //     //         subItems: [],
-  //     //       },
-  //     //     ],
-  //     //   },
-  //     // },
-  //     {
-  //       type: 'paragraph',
-  //       content: {
-  //         title: 'Time',
-  //         text: ['9:30 am – 5:30 pm (IST)'],
-  //       },
-  //     },
-  //     {
-  //       type: 'paragraph',
-  //       content: {
-  //         title: 'Fees',
-  //         text: ['INR 500'],
-  //       },
-  //     },
-  //     {
-  //       type: 'u-list',
-  //       content: {
-  //         title: ' Guidelines',
-  //         points: [
-  //           {
-  //             listItem:
-  //               'Campers are requested to come attired to comfortable loose fitting clothes. Shorts, capris, tank tops, low cut shirts, short and sleeveless T-shirts are not permitted as per the Institute dress code.',
-  //             subItems: [],
-  //           },
-  //           // {
-  //           //   listItem:
-  //           //     'Campers are requested to have their breakfast and medication (as prescribed by their doctor). ',
-  //           //   subItems: [],
-  //           // },
-  //         ],
-  //       },
-  //     },
-  //   ],
-  // },
+  11: {
+    id: '',
+    title: 'Respiratory Workshop',
+    key: 'respiratory-workshop',
+    batch: 1,
+    // templateId: 'GENERAL_AUTO_EMAIL',
+    templateId: {
+      templateOnline: 'GENERAL_AUTO_EMAIL',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: '',
+      },
+    },
+    dates: ['14th January 2023', '11th March 2023', '13th May 2023', '8th July 2023', '9th September 2023', '11th November 2023', ''],
+    mostPopular: false,
+    rating: 5,
+    colorCode: '#DDAB58',
+    timing: '5:00 pm – 8:00 pm (IST)',
+    fees: {
+      onlineFee: 1000,
+      offlineFee: { residentialFee: 0, nonResidentialFee: 1000 },
+    },
+    category: 'camps',
+    metaDescription: 'Insightful session with a specialist',
+    image: `${baseDomain}${courseAssets.courseAsset83}`,
+    cardImage: `${baseDomain}${courseAssets.courseAsset83}`,
+    online: true,
+    onCampus: true,
+    nonResidential: false,
+    residential: false,
+    certficate: false,
+    details: [
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Who is this workshop for?',
+          text: [
+            'Prana is the vital energy or life force, which exists in all of us. The fight against respiratory problems begins with a strong will to overcome one’s disability and has to be backed by an implicit faith in oneself. With a strong emphasis on ancient yogic knowledge and techniques, The Yoga Institute has been conducting powerful Respiratory Camps since 1987. Respiratory health has been well documented in traditional systems of wellbeing over several millennia. The Yogic life strengthens your will, augments your faith in yourself and opens air passages. How soon you can breathe with ease and on your own, depends on yourself. What are you waiting for? Begin now!    ',
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'What can you expect?',
+          text: [
+            'If you learn to breathe the right way, your life will be longer. -Dr. Hansaji Yogendra ',
+          ],
+        },
+      },
+      {
+        type: 'u-list',
+        content: {
+          title: ' Program Offerings',
+          points: [
+            {
+              listItem:
+                'Specific pranayama, and relaxation techniques to enhance your health',
+              subItems: [],
+            },
+            {
+              listItem: 'Diet guidelines to manage your health',
+              subItems: [],
+            },
+            {
+              listItem: 'Insightful session with a specialist',
+              subItems: [],
+            },
+            {
+              listItem:
+                'Tips to maintain health by our spiritual guru Institute Director, Dr. Hansaji who has decades of experience in the field',
+              subItems: [],
+            },
+            {
+              listItem: 'Fitness tips',
+              subItems: [],
+            },
+          ],
+        },
+      },
+      {
+        type: 'u-list',
+        content: {
+          title: 'Offered with the program',
+          points: [
+            {
+              listItem: 'Booklet with guidelines  ',
+              subItems: [],
+            },
+            {
+              listItem: 'Wholesome Sattvik lunch',
+              subItems: [],
+            },
+            {
+              listItem: 'Healthy snacks  ',
+              subItems: [],
+            },
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Time',
+          text: ['5:00 pm – 8:00 pm (IST)'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Fees',
+          text: ['INR 500'],
+        },
+      },
+      {
+        type: 'u-list',
+        content: {
+          title: ' Guidelines',
+          points: [
+            {
+              listItem:
+                'Campers are requested to come attired to comfortable loose fitting clothes. Shorts, capris, tank tops, low cut shirts, short and sleeveless T-shirts are not permitted as per the Institute dress code.',
+              subItems: [],
+            },
+            {
+              listItem:
+                'Campers are requested to have their breakfast and medication (as prescribed by their doctor). ',
+              subItems: [],
+            },
+          ],
+        },
+      },
+    ],
+  },
 
   12: {
     id: '',

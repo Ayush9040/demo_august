@@ -3545,6 +3545,53 @@
       }
     ]
   },
+  "/respiratory-workshop":{
+    "title":"Respiratory-Workshop - The Yoga Institute",
+    "h1Tag": "respiratory-workshop",
+    "h2Tags": [],
+    "metaData": [
+      {
+        "name": "description",
+        "content": "Insightful session with a specialist"
+      },
+      {
+        "property": "og:description",
+        "content": "Insightful session with a specialist"
+      },
+      {
+        "property": "og:title",
+        "content": "respiratory-workshop - The Yoga Institute"
+      },
+      {
+        "property": "og:type",
+        "content": "Website"
+      }
+    ]
+  },
+
+  "/life-management-camp":{
+    "title":"Life-Management-Camp - The Yoga Institute",
+    "h1Tag": "life-management-camp",
+    "h2Tags": [],
+    "metaData": [
+      {
+        "name": "description",
+        "content": "Specific pranayama, asana and relaxation techniques to enhance your state of mind"
+      },
+      {
+        "property": "og:description",
+        "content": "Specific pranayama, asana and relaxation techniques to enhance your state of mind"
+      },
+      {
+        "property": "og:title",
+        "content": "life-management-camp - The Yoga Institute"
+      },
+      {
+        "property": "og:type",
+        "content": "Website"
+      }
+    ]
+  },
   "/cardiac-hypertension-workshop":{
     "title":"Online Cardiac and Hypertension Health Workshop - The Yoga Institute",
     "h1Tag": "Online Cardiac and Hypertension Health Workshop",
