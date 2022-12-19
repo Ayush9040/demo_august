@@ -6623,8 +6623,8 @@ const camps = {
     colorCode: '#CE9B51',
     timing: '8:00 am – 11:00 am (IST)',
     fees: {
-      onlineFee: 1000,
-      offlineFee: { residentialFee: 0, nonResidentialFee: 1000 },
+      onlineFee: 500,
+      offlineFee: { residentialFee: 0, nonResidentialFee: 500 },
     },
     category: 'camps',
     metaDescription:
@@ -6717,7 +6717,7 @@ const camps = {
         type: 'paragraph',
         content: {
           title: 'Fees',
-          text: ['INR 1000'],
+          text: ['INR 500'],
         },
       },
       {
@@ -7742,7 +7742,7 @@ const camps = {
     timing: 'Saturday to Friday : 7:00 am - 7:00 pm (IST)' ,
     fees: {
       onlineFee: 0,
-      offlineFee: { residentialFee: 14000, nonResidentialFee: 8000 },
+      offlineFee: { residentialFee: 12000, nonResidentialFee: 8000 },
     },
     category: 'camps',
     metaDescription:
@@ -8087,7 +8087,6 @@ const camps = {
       },
     },
     dates: [
-      '26th Nov to 2nd Dec 2022',
       '24th Dec to 30th Dec 2022',
       '28th Jan to 3rd Feb 2023', 
       '25th Feb to 3rd Mar 2023',
@@ -8113,7 +8112,7 @@ const camps = {
     timing: 'Saturday to Friday : 7:00 am - 7:00 pm (IST)',
     fees: {
       onlineFee: 0,
-      offlineFee: { residentialFee: 14000, nonResidentialFee: 8000 },
+      offlineFee: { residentialFee: 12000, nonResidentialFee: 8000 },
     },
     category: 'camps',
     metaDescription:
@@ -9497,28 +9496,7 @@ const camps = {
       },
     },
     dates: [
-      '6th Nov to 26th Nov 2022',
-      '27th Nov to 17th Dec 2022',
       '8th Jan to 28th Jan 2023',
-      '29th Jan to 18th Feb 2023',
-      '18th Dec to 7th Jan 2023',
-      '19th Feb to 11th Mar 2023',
-      '12th Mar to 1st Apr 2023',
-      '2nd Apr to 22nd Apr 2023', 
-      '23rd Apr to 13th May 2023',
-      '14th May to 3rd Jun 2023',
-      '4th Jun to 24th Jun 2023',
-      '25th Jun to 15th Jul 2023',
-      '16th Jul to 5th Aug 2023 ',
-      '6th Aug to 26th Aug 2023',
-      '27th Aug to 16th Sep 2023',
-      '17th Sep to 7th Oct 2023',
-      '8th Oct to 28th Oct 2023',
-      '29th Oct to 18th Nov 2023',
-      '19th Nov to 9th Dec 2023',
-      '10th Dec to 30th Dec 2023',
-      '31st Dec to 20th Jan 2024'
-
     ],
     online: true,
     onCampus: false,
@@ -10617,7 +10595,6 @@ const classes = {
     },
     category: 'classes',
     dates: [
-      '5th Dec to 30th Dec 2022',
       '2nd Jan to 27th Jan 2023',
       '6th Feb to 3rd Mar 2023',
       '6th Mar to 31st Mar 2023',
