@@ -1,13 +1,13 @@
 import React, { useState,lazy, useEffect } from 'react'
 import './styles.scss'
-import { Hamburger, Cart, Gift, User, Search } from '../../assets/icons/icon'
+import { Hamburger, Cart, User, Search } from '../../assets/icons/icon'
 import { Link } from 'react-router-dom'
 import { logoutUserAction } from '../../Views/Authentication/Auth.actions'
 import { useNavigate } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 const MegaMenu = lazy(()=>import('../MegaMenu'))
 
-const Navbar = ({ isUserLoggedIn, setIsModalOpen }) => {
+const Navbar = ({ isUserLoggedIn }) => {
   const navigate = useNavigate()
   const [nav, setNav] = useState(false)
   const [dropdown,setDropdown]=useState(false)
@@ -40,7 +40,7 @@ const Navbar = ({ isUserLoggedIn, setIsModalOpen }) => {
             {Hamburger}
           </div>
           <div className="title-logo" >
-            <span className='mobile-search' onClick={ ()=>{setIsModalOpen(true)} } >{ Search }</span>
+            <span className='mobile-search' onClick={ ()=>{navigate('/')} } >{ Search }</span>
             <div className={`header-logo ${scrollImg? 'navigation-img' : ''}`}>
               <img
                 style={{ transition: 'none !important' }}
@@ -53,13 +53,14 @@ const Navbar = ({ isUserLoggedIn, setIsModalOpen }) => {
           </div>
           <div className="quick-actions">
             <ul>
-              <li onClick={ ()=>{setIsModalOpen(true)} } >{Search}</li>
+              <Link to='/search'>
+                <li onClick={ ()=>{navigate('/')} } >{Search}</li></Link>
               <Link to="/shop">
                 <li>{Cart}</li>
               </Link>
-              <Link className='comingSoon' to="/">
+              {/* <Link className='comingSoon' to="/">
                 <li>{Gift}</li>
-              </Link>
+              </Link> */}
               <Link onMouseOver={()=>{setDropdown(true)}} onMouseOut={()=>{setDropdown(false)}} to={isUserLoggedIn ? '/user/profile' : '/user/sign-in'}>
                 <li>{User}
                   <div style={dropdown===true && isUserLoggedIn ?{ display:'block' }:{}} className='user-dropdown'>

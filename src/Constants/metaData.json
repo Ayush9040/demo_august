@@ -1506,7 +1506,7 @@
     ]
   },
   "/200-hrs-part-time-ttc-on-campus-english": {
-    "title": "200 Hrs Part Time TTC (On Campus-English | May) - The Yoga Institute",
+    "title": "200 Hrs Part Time TTC (Online and On Campus-English) - The Yoga Institute",
     "h1Tag": "200 Hrs Part Time TTC (English On Campus)",
     "h2Tags": [
       "A – KNOWLEDGE",
@@ -1530,7 +1530,7 @@
       },
       {
         "property": "og:title",
-        "content": "200 Hrs Part Time TTC (On Campus-English | May) - The Yoga Institute"
+        "content": "200 Hrs Part Time TTC (Online and On Campus-English) - The Yoga Institute"
       },
       {
         "property": "og:url",
@@ -3387,22 +3387,94 @@
   "/certificate-yoga-therapy-course-online":{
     "title":"Yoga Therapy Course - The Yoga Institute",
     "h1Tag": "Certificate Yoga Therapy Course Online - The Yoga Institute",
-    "h2Tags": []
+    "h2Tags": [],
+    "metaData": [
+      {
+        "name": "description",
+        "content": "This is our comprehensive 100 hours Certified Yoga Therapy course wherein the lifestyle, and yogic management of diseases are taught practically and simply."
+      },
+      {
+        "property": "og:description",
+        "content": "This is our comprehensive 100 hours Certified Yoga Therapy course wherein the lifestyle, and yogic management of diseases are taught practically and simply."
+      },
+      {
+        "property": "og:title",
+        "content": "Yoga Therapy Course - The Yoga Institute"
+      },
+      {
+        "property": "og:type",
+        "content": "Website"
+      }
+    ]
   },
   "/certificate-program-on-yoga-for-cancer":{
     "title":"Yoga For Cancer - The Yoga Institute",
     "h1Tag": "Certificate Yoga For Cancer",
-    "h2Tags": []
+    "h2Tags": [],
+    "metaData": [
+      {
+        "name": "description",
+        "content": "Yoga teachers understand the nature of cancer and its treatments and how safely and effectively apply practices to help students cope with side effects."
+      },
+      {
+        "property": "og:description",
+        "content": "Yoga teachers understand the nature of cancer and its treatments and how safely and effectively apply practices to help students cope with side effects."
+      },
+      {
+        "property": "og:title",
+        "content": "Yoga For Cancer - The Yoga Institute"
+      },
+      {
+        "property": "og:type",
+        "content": "Website"
+      }
+    ]
   },
   "/certification-program-on-yoga-for-lung-cancer-online":{
     "title":"Yoga For Lung Cancer Online - The Yoga Institute",
     "h1Tag": "Certificate Yoga For Lung Cancer Online",
-    "h2Tags": []
+    "h2Tags": [],
+    "metaData": [
+      {
+        "name": "description",
+        "content": "Our Yoga for Lung Cancer Certificate course will help you to understand the anatomy and physiology of the lungs, causes, symptoms, stages, and yogic treatment."
+      },
+      {
+        "property": "og:description",
+        "content": "Our Yoga for Lung Cancer Certificate course will help you to understand the anatomy and physiology of the lungs, causes, symptoms, stages, and yogic treatment."
+      },
+      {
+        "property": "og:title",
+        "content": "Yoga For Lung Cancer Online - The Yoga Institute"
+      },
+      {
+        "property": "og:type",
+        "content": "Website"
+      }
+    ]
   },
   "/certificate-course-on-advanced-pranayama-techniques":{
     "title":"Advanced Pranayama Techniques -The Yoga Institute",
     "h1Tag": "Certificate Yoga Course For Advance Pranayam",
-    "h2Tags": []
+    "h2Tags": [],
+    "metaData": [
+      {
+        "name": "description",
+        "content": "Join our Advanced Pranayama Techniques Certificate course to learn advanced breathing techniques through bandhas, mudras, mantras, and many more."
+      },
+      {
+        "property": "og:description",
+        "content": "Join our Advanced Pranayama Techniques Certificate course to learn advanced breathing techniques through bandhas, mudras, mantras, and many more."
+      },
+      {
+        "property": "og:title",
+        "content": "Advanced Pranayama Techniques -The Yoga Institute"
+      },
+      {
+        "property": "og:type",
+        "content": "Website"
+      }
+    ]
   },
   "/stress-management-camp":{
     "title":"Online Stress Management Camp - The Yoga Institute",
@@ -3466,6 +3538,53 @@
       {
         "property": "og:title",
         "content": "Online Pregnancy Camp For Ante & Post Natal - The Yoga Institute"
+      },
+      {
+        "property": "og:type",
+        "content": "Website"
+      }
+    ]
+  },
+  "/respiratory-workshop":{
+    "title":"Respiratory-Workshop - The Yoga Institute",
+    "h1Tag": "respiratory-workshop",
+    "h2Tags": [],
+    "metaData": [
+      {
+        "name": "description",
+        "content": "Insightful session with a specialist"
+      },
+      {
+        "property": "og:description",
+        "content": "Insightful session with a specialist"
+      },
+      {
+        "property": "og:title",
+        "content": "respiratory-workshop - The Yoga Institute"
+      },
+      {
+        "property": "og:type",
+        "content": "Website"
+      }
+    ]
+  },
+
+  "/life-management-camp":{
+    "title":"Life-Management-Camp - The Yoga Institute",
+    "h1Tag": "life-management-camp",
+    "h2Tags": [],
+    "metaData": [
+      {
+        "name": "description",
+        "content": "Specific pranayama, asana and relaxation techniques to enhance your state of mind"
+      },
+      {
+        "property": "og:description",
+        "content": "Specific pranayama, asana and relaxation techniques to enhance your state of mind"
+      },
+      {
+        "property": "og:title",
+        "content": "life-management-camp - The Yoga Institute"
       },
       {
         "property": "og:type",

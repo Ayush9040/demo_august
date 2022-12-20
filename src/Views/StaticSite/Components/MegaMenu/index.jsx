@@ -253,10 +253,10 @@ const MegaMenu = ({ setNav }) => {
               <ul>
                 <li className="text-bold">Basic TTC (200 Hour Courses)</li>
                 <Link onClick={() => {setNav(false)}} to="/one-month-ttc">
-                  <li>Batch 1 - 1 Month TTC-Online & on Campus-English</li>
+                  <li>Batch 1 - 1 Month TTC-Online & On Campus-English</li>
                 </Link>
                 <Link onClick={() => {setNav(false)}} to="/200-hrs-part-time-ttc-on-campus-english">
-                  <li>Batch 2 - 2 Months TTC-On Campus-English</li>
+                  <li>Batch 2 - 2 Months TTC-Online & On Campus-English</li>
                 </Link>
                 <Link  onClick={() => {setNav(false)}} to="/200-hrs-part-time-ttc-online-english">
                   <li>Batch 3 - 2 Months TTC-Online-English</li>
@@ -411,8 +411,8 @@ const MegaMenu = ({ setNav }) => {
                 <Link onClick={() => {setNav(false)}}  to='/back-joint-disorder-workshop'><li>Back & Joint Disorder Workshop</li></Link>
                 <Link onClick={() => {setNav(false)}}  to='/pranayama-workshop'><li>Prayanama Workshop</li></Link>
                 <Link onClick={() => {setNav(false)}}  to='/womens-camp'><li>Women&apos;s Camp</li></Link>
-                {/* <Link onClick={() => {setNav(false)}}  to='/respiratory-workshop'><li>Respiratory Workshop</li></Link>
-                <Link onClick={() => {setNav(false)}}  to='/life-management-camp'><li>Life Management Camp</li></Link> */}
+                <Link onClick={() => {setNav(false)}}  to='/respiratory-workshop'><li>Respiratory Workshop</li></Link>
+                <Link onClick={() => {setNav(false)}}  to='/life-management-camp'><li>Life Management Camp</li></Link> 
                 <Link onClick={() => {setNav(false)}}  to='/senior-citizen-workshop'><li>Senior citizen Workshop</li></Link>
                 <Link onClick={() => {setNav(false)}}  to='/diabetes-camp'><li>Diabetes Camp</li></Link>
               </ul>

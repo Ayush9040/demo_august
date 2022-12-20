@@ -27,13 +27,12 @@ const ttc200hr = {
   
     timing: 'Monday to Saturday: 10:00 am - 6:00 pm (IST)',
     fees: {
-      onlineFee: 22000,
-      offlineFee: { residentialFee: 50000, nonResidentialFee: 28000 },
+      onlineFee: 25000,
+      offlineFee: { residentialFee: 55000, nonResidentialFee: 30000 },
     },
     category: 'ttc',
     title: '200 hrs TTC - 1 Month TTC Online & On Campus - English - Batch 1 ',
     dates: [
-      '1st Nov to 30th Nov 2022',
       '1st Dec to 31st Dec 2022',
       '2nd Jan to 31st Jan 2023',
       '1st Feb to 28th Feb 2023',
@@ -117,7 +116,7 @@ const ttc200hr = {
         type: 'paragraph',
         content: {
           title: 'Fees',
-          text: ['Online:Rs. 22,000 /-', 'Non-Residential: Rs. 28,000/- (Inclusive of course fee, study material, lunch, and snacks)',' Residential: Rs. 50,000/- (Inclusive of course fee, study material, accommodation on triple occupancy basis and 4 meals a day)'],
+          text: ['Online:Rs. 25,000 /-', 'Non-Residential: Rs. 30,000/- (Inclusive of course fee, study material, lunch, and snacks)',' Residential: Rs. 55,000/- (Inclusive of course fee, study material, accommodation on triple occupancy basis and 4 meals a day)'],
         },
       },
       {
@@ -296,7 +295,73 @@ const ttc200hr = {
         },
       },
     ],
-    teaching: [],
+    teaching: [
+      {
+        type: 'u-list',
+        content: {
+          title: 'Course Attendance Criteria',
+          points: [
+            {
+              listItem:
+                'A student is required to have a minimum 80% attendance',
+              subItems: [],
+            },
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: [
+            'After qualifying the attendance criteria, students can appear for the exam (100 marks). Details below:',
+          ],
+        },
+      },
+      {
+        type: 'table',
+        content: {
+          title: '',
+          tableHeading: ['Deatils', 'Marks', 'Minimum Scrore Req.'],
+          tableData: [['Theory Component', '50', '50%']],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: [
+            'On successfully passing the exam, students will be awarded a certificate – Basic Teacher Training Certificate (200 hours) by The Yoga Institute, which is recognized by Yoga Certification Board (AYUSH Level-1) and Yoga Alliance USA (RYT 200).',
+          ],
+        },
+      },
+      {
+        type: 'u-list',
+        content: {
+          title:
+            'Post qualification, a number of opportunities are open to you, like:',
+          points: [
+            {
+              listItem: 'Working with schools and teaching children',
+              subItems: [],
+            },
+            {
+              listItem:
+                'Opening your own yoga center for healthy adults and children',
+              subItems: [],
+            },
+            {
+              listItem: 'Working with corporates for their wellness programs',
+              subItems: [],
+            },
+            {
+              listItem: 'Personal yoga coaching',
+              subItems: [],
+            },
+          ],
+        },
+      },
+    ],
     offerings: [
       {
         type: 'u-list',
@@ -342,13 +407,14 @@ const ttc200hr = {
   2: {
     id: '',
     key: '200-hrs-part-time-ttc-on-campus-english',
+    join:true,
     // id: '',
     // templateId: 'COURSE200_1M_TTC2',
     templateId: {
-      templateOnline: '',
+      templateOnline: 'COURSE_200_HRS_ONLINE_CONFIRMATION_MAIL',
       templateOffline: {
-        templateResidential: 'COURSE200_2M_RES_TTC',
-        templateNonResidential: 'COURSE200_2M_NONRES_TTC',
+        templateResidential: 'COURSE_200_HRS_RESIDENTIAL_CONFIRMATION_MAIL',
+        templateNonResidential: 'COURSE_200_HRS_NONRESIDENTIAL_CONFIRMATION_MAIL',
       },
     },
     batch: 2,
@@ -361,13 +427,12 @@ const ttc200hr = {
     colorCode: '#E38F73',
     timing: 'Monday to Friday : 12:00 noon - 4:00 pm (IST)',
     fees: {
-      onlineFee: 0,
-      offlineFee: { residentialFee: 70000, nonResidentialFee: 28000 },
+      onlineFee: 25000,
+      offlineFee: { residentialFee: 80000, nonResidentialFee: 30000 },
     },
     category: 'ttc',
-    title: '200 hrs TTC - 2 Months TTC On Campus-English-Batch 2',
+    title: '200 hrs TTC - 2 Months TTC Online and On Campus-English-Batch 2',
     dates: [
-      '31st Oct to 23rd Dec 2022',
       '26th Dec to 17th Feb 2023',
       '20th Feb to 14th Apr 2023',
       '17th Apr to 9th Jun 2023',
@@ -376,7 +441,7 @@ const ttc200hr = {
       '2nd Oct to 24th Nov 2023',
       '27th Nov to 19th Jan 2024'
     ],
-    online: false,
+    online: true,
     onCampus: true,
     nonResidential: true,
     residential: true,
@@ -413,7 +478,7 @@ const ttc200hr = {
         type: 'paragraph',
         content: {
           title: 'Course',
-          text: ['200 hrs TTC Batch 2 - 2 Months TTC On Campus - English'],
+          text: ['200 hrs TTC Batch 2 - 2 Months TTC Online & On Campus - English'],
         },
       },
       // {
@@ -442,8 +507,9 @@ const ttc200hr = {
         content: {
           title: 'Fees',
           text: [
-            'Non-Residential: Rs. 28,000/- (Inclusive of course fee, study material, and snacks)',
-            'Residential: Rs. 70,000/- (Inclusive of course fee, study material, accommodation and meals )',
+            'Online: Rs: 25,000/-',
+            'Non-Residential: Rs. 30,000/- (Inclusive of course fee, study material, and snacks)',
+            'Residential: Rs. 80,000/- (Inclusive of course fee, study material, accommodation and meals )',
           ],
         },
       },
@@ -557,6 +623,8 @@ const ttc200hr = {
           url: 'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/courses_pdf/200hr.pdf',
         },
       },
+    ],
+    teaching: [
       {
         type: 'u-list',
         content: {
@@ -623,7 +691,6 @@ const ttc200hr = {
         },
       },
     ],
-    teaching: [],
     offerings: [
       {
         type: 'u-list',
@@ -688,13 +755,12 @@ const ttc200hr = {
     timing:
       'Monday to Saturday: Morning: 7:00 am - 8:30 am (IST) and Evening : 6:30 pm - 8:30 pm (IST) (Both the time slots are mandatory)',
     fees: {
-      onlineFee: 22000,
+      onlineFee: 25000,
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'ttc',
     title: '200 hrs TTC - 2 Months TTC Online-English-Batch 3',
     dates: [
-      '10th Oct to 3rd Dec 2022',
       '12th Dec to 4th Feb 2023',
       '13th Feb to 8th Apr 2023',
       '17th Apr to 10th Jun 2023',
@@ -770,7 +836,7 @@ const ttc200hr = {
         type: 'paragraph',
         content: {
           title: 'Fees',
-          text: ['Rs. 22,000 /-'],
+          text: ['Rs. 25,000 /-'],
         },
       },
       {
@@ -949,7 +1015,73 @@ const ttc200hr = {
         },
       },
     ],
-    teaching: [],
+    teaching: [
+      {
+        type: 'u-list',
+        content: {
+          title: 'Course Attendance Criteria',
+          points: [
+            {
+              listItem:
+                'A student is required to have a minimum 80% attendance',
+              subItems: [],
+            },
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: [
+            'After qualifying the attendance criteria, students can appear for the exam (100 marks). Details below:',
+          ],
+        },
+      },
+      {
+        type: 'table',
+        content: {
+          title: '',
+          tableHeading: ['Deatils', 'Marks', 'Minimum Scrore Req.'],
+          tableData: [['Theory Component', '50', '50%']],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: [
+            'On successfully passing the exam, students will be awarded a certificate – Basic Teacher Training Certificate (200 hours) by The Yoga Institute, which is recognized by Yoga Certification Board (AYUSH Level-1) and Yoga Alliance USA (RYT 200).',
+          ],
+        },
+      },
+      {
+        type: 'u-list',
+        content: {
+          title:
+            'Post qualification, a number of opportunities are open to you, like:',
+          points: [
+            {
+              listItem: 'Working with schools and teaching children',
+              subItems: [],
+            },
+            {
+              listItem:
+                'Opening your own yoga center for healthy adults and children',
+              subItems: [],
+            },
+            {
+              listItem: 'Working with corporates for their wellness programs',
+              subItems: [],
+            },
+            {
+              listItem: 'Personal yoga coaching',
+              subItems: [],
+            },
+          ],
+        },
+      },
+    ],
     offerings: [
       {
         type: 'u-list',
@@ -995,6 +1127,7 @@ const ttc200hr = {
   4: {
     id: '',
     key: '200-hrs-part-time-ttc-online',
+    join:true,
     // templateId: 'COURSE200_2M_TTC_HINDI',
     templateId: {
       templateOnline: 'COURSE200_2M_ONLINE_HINDI_TTC',
@@ -1013,13 +1146,12 @@ const ttc200hr = {
     colorCode: '#E38F73',
     timing: 'Monday to Saturday: 1:00 pm - 4:30 pm (IST)',
     fees: {
-      onlineFee: 22000,
+      onlineFee: 25000,
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'ttc',
     title: '200 hrs TTC - 2 Months TTC Online-Hindi-Batch 4',
     dates: [
-      '17th Oct to 10th Dec 2022',
       '19th Dec to 11th Feb 2023',
       '20th Feb to 15th Apr 2023',
       '24th Apr to 17th Jun 2023',
@@ -1271,7 +1403,73 @@ const ttc200hr = {
         },
       },
     ],
-    teaching: [],
+    teaching: [
+      {
+        type: 'u-list',
+        content: {
+          title: 'Course Attendance Criteria',
+          points: [
+            {
+              listItem:
+                'A student is required to have a minimum 80% attendance',
+              subItems: [],
+            },
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: [
+            'After qualifying the attendance criteria, students can appear for the exam (100 marks). Details below:',
+          ],
+        },
+      },
+      {
+        type: 'table',
+        content: {
+          title: '',
+          tableHeading: ['Deatils', 'Marks', 'Minimum Scrore Req.'],
+          tableData: [['Theory Component', '50', '50%']],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: [
+            'On successfully passing the exam, students will be awarded a certificate – Basic Teacher Training Certificate (200 hours) by The Yoga Institute, which is recognized by Yoga Certification Board (AYUSH Level-1) and Yoga Alliance USA (RYT 200).',
+          ],
+        },
+      },
+      {
+        type: 'u-list',
+        content: {
+          title:
+            'Post qualification, a number of opportunities are open to you, like:',
+          points: [
+            {
+              listItem: 'Working with schools and teaching children',
+              subItems: [],
+            },
+            {
+              listItem:
+                'Opening your own yoga center for healthy adults and children',
+              subItems: [],
+            },
+            {
+              listItem: 'Working with corporates for their wellness programs',
+              subItems: [],
+            },
+            {
+              listItem: 'Personal yoga coaching',
+              subItems: [],
+            },
+          ],
+        },
+      },
+    ],
     offerings: [
       {
         type: 'u-list',
@@ -1335,12 +1533,12 @@ const ttc200hr = {
     colorCode: '#E38F73',
     timing: 'Monday to Saturday: 4:30 pm – 8:00 pm (IST)',
     fees: {
-      onlineFee: 22000,
+      onlineFee: 25000,
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'ttc',
     title: '200 hrs TTC - 2 Months TTC Online-English-Batch 5',
-    dates: ['31st Oct to 24th Dec 2022','2nd Jan to 25th Feb 2022','6th Mar to 29th Apr 2023','8th May to 1st Jul 2023','10th Jul to 2nd Sep 2023','11th Sep to 4th Nov 2023', '13th Nov to 6th Jan 2024'],
+    dates: ['2nd Jan to 25th Feb 2023','6th Mar to 29th Apr 2023','8th May to 1st Jul 2023','10th Jul to 2nd Sep 2023','11th Sep to 4th Nov 2023', '13th Nov to 6th Jan 2024'],
     online: true,
     onCampus: false,
     nonResidential: false,
@@ -1406,7 +1604,7 @@ const ttc200hr = {
         type: 'paragraph',
         content: {
           title: 'Fees',
-          text: ['Rs. 22,000/-'],
+          text: ['Rs. 25,000/-'],
         },
       },
       {
@@ -1585,7 +1783,73 @@ const ttc200hr = {
         },
       },
     ],
-    teaching: [],
+    teaching: [
+      {
+        type: 'u-list',
+        content: {
+          title: 'Course Attendance Criteria',
+          points: [
+            {
+              listItem:
+                'A student is required to have a minimum 80% attendance',
+              subItems: [],
+            },
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: [
+            'After qualifying the attendance criteria, students can appear for the exam (100 marks). Details below:',
+          ],
+        },
+      },
+      {
+        type: 'table',
+        content: {
+          title: '',
+          tableHeading: ['Deatils', 'Marks', 'Minimum Scrore Req.'],
+          tableData: [['Theory Component', '50', '50%']],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: [
+            'On successfully passing the exam, students will be awarded a certificate – Basic Teacher Training Certificate (200 hours) by The Yoga Institute, which is recognized by Yoga Certification Board (AYUSH Level-1) and Yoga Alliance USA (RYT 200).',
+          ],
+        },
+      },
+      {
+        type: 'u-list',
+        content: {
+          title:
+            'Post qualification, a number of opportunities are open to you, like:',
+          points: [
+            {
+              listItem: 'Working with schools and teaching children',
+              subItems: [],
+            },
+            {
+              listItem:
+                'Opening your own yoga center for healthy adults and children',
+              subItems: [],
+            },
+            {
+              listItem: 'Working with corporates for their wellness programs',
+              subItems: [],
+            },
+            {
+              listItem: 'Personal yoga coaching',
+              subItems: [],
+            },
+          ],
+        },
+      },
+    ],
     offerings: [
       {
         type: 'u-list',
@@ -1650,7 +1914,7 @@ const ttc200hr = {
     timing:
       'Saturday & Sunday: Saturday Sessions: 10:00 am – 8:30 pm (IST) and Sunday Sessions 10:00 am – 1:30 pm (IST)',
     fees: {
-      onlineFee: 22000,
+      onlineFee: 25000,
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'ttc',
@@ -1723,7 +1987,7 @@ const ttc200hr = {
         type: 'paragraph',
         content: {
           title: 'Fees',
-          text: ['Rs. 22,000/-'],
+          text: ['Rs. 25,000/-'],
         },
       },
       {
@@ -1902,7 +2166,73 @@ const ttc200hr = {
         },
       },
     ],
-    teaching: [],
+    teaching: [
+      {
+        type: 'u-list',
+        content: {
+          title: 'Course Attendance Criteria',
+          points: [
+            {
+              listItem:
+                'A student is required to have a minimum 80% attendance',
+              subItems: [],
+            },
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: [
+            'After qualifying the attendance criteria, students can appear for the exam (100 marks). Details below:',
+          ],
+        },
+      },
+      {
+        type: 'table',
+        content: {
+          title: '',
+          tableHeading: ['Deatils', 'Marks', 'Minimum Scrore Req.'],
+          tableData: [['Theory Component', '50', '50%']],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: [
+            'On successfully passing the exam, students will be awarded a certificate – Basic Teacher Training Certificate (200 hours) by The Yoga Institute, which is recognized by Yoga Certification Board (AYUSH Level-1) and Yoga Alliance USA (RYT 200).',
+          ],
+        },
+      },
+      {
+        type: 'u-list',
+        content: {
+          title:
+            'Post qualification, a number of opportunities are open to you, like:',
+          points: [
+            {
+              listItem: 'Working with schools and teaching children',
+              subItems: [],
+            },
+            {
+              listItem:
+                'Opening your own yoga center for healthy adults and children',
+              subItems: [],
+            },
+            {
+              listItem: 'Working with corporates for their wellness programs',
+              subItems: [],
+            },
+            {
+              listItem: 'Personal yoga coaching',
+              subItems: [],
+            },
+          ],
+        },
+      },
+    ],
     offerings: [
       {
         type: 'u-list',
@@ -1968,7 +2298,7 @@ const ttc500hr = {
     timing:
       'Monday to Saturday: Morning: 7:00 am - 8:30 am (IST) and  Evening: 4:30 pm - 8:30 pm (IST) (Both the time slots are mandatory)',
     fees: {
-      onlineFee: 35000,
+      onlineFee: 37000,
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'ttc',
@@ -2036,7 +2366,7 @@ const ttc500hr = {
         type: 'paragraph',
         content: {
           title: 'Fees',
-          text: [' Rs. 35,000/- '],
+          text: [' Rs. 37,000/- '],
         },
       },
       {
@@ -2242,7 +2572,7 @@ const ttc900hr = {
     timing: 'Monday to Saturday:6:30 am to 8:00 pm Holiday on all Sundays',
     fees: {
       onlineFee: 0,
-      offlineFee: { residentialFee: 150000, nonResidentialFee: 90000 },
+      offlineFee: { residentialFee: 175000, nonResidentialFee: 97000 },
     },
     category: 'ttc',
     dates: ['22nd Oct to 15th Jan 2023','28th Jan to 16th Apr 2023','22nd Apr to 16th July 2023', '22nd Jul to 15th Oct 2023','28th Oct to 21st Jan 2024'],
@@ -2327,8 +2657,8 @@ const ttc900hr = {
           title: 'Fees:',
 
           text: [
-            'Non-Residential: INR 90,000/- (Inclusive of course fee, study material, 4 meals a day and 7 Days Camp)',
-            'Residential: INR 1,50,000/- (Inclusive of course fee, study material, accommodation on triple occupancy basis and 4 meals a day and 7 Days Camp)',
+            'Non-Residential: INR 97,000/- (Inclusive of course fee, study material, 4 meals a day and 7 Days Camp)',
+            'Residential: INR 1,75,000/- (Inclusive of course fee, study material, accommodation on triple occupancy basis and 4 meals a day and 7 Days Camp)',
           ],
         },
       },
@@ -2752,8 +3082,8 @@ const ttc900hr = {
     colorCode: '#C9705F',
     timing: 'Monday to Friday : 1:30 pm - 4:00 pm (IST)',
     fees: {
-      onlineFee: 50000,
-      offlineFee: { residentialFee: 50000, nonResidentialFee: 50000 },
+      onlineFee: 55000,
+      offlineFee: { residentialFee: 55000, nonResidentialFee: 55000 },
     },
     category: 'ttc',
     dates: ['1st Sept 2022', '1st Oct 2022', '1st Nov 2022', '1st Dec 2022'],
@@ -2837,7 +3167,7 @@ const ttc900hr = {
         content: {
           title: 'Fees:',
 
-          text: ['INR. 50,000/- (Inclusive of course fee and study material)'],
+          text: ['INR. 55,000/- (Inclusive of course fee and study material)'],
         },
       },
 
@@ -3364,8 +3694,8 @@ const ttc900hr = {
     timing:
       'Saturday & Sunday: Saturday: 4:30 pm – 7.30 pm (IST) and Sunday: 9:30 am – 1:30 pm (IST) (Both the time slots are mandatory)',
     fees: {
-      onlineFee: 50000,
-      offlineFee: { residentialFee: 50000, nonResidentialFee: 50000 },
+      onlineFee: 55000,
+      offlineFee: { residentialFee: 55000, nonResidentialFee: 55000 },
     },
     category: 'ttc',
     dates: [],
@@ -3453,7 +3783,7 @@ const ttc900hr = {
         content: {
           title: 'Fees:',
 
-          text: ['INR. 50,000/- (Inclusive of course fee and study material)'],
+          text: ['INR. 55,000/- (Inclusive of course fee and study material)'],
         },
       },
 
@@ -4587,8 +4917,8 @@ const ttc900hr = {
     colorCode: '#C9705F',
     timing: 'Monday to Saturday: 5:00 p.m. - 8:00 p.m. (IST)',
     fees: {
-      onlineFee: 50000,
-      offlineFee: { residentialFee: 50000, nonResidentialFee: 50000 },
+      onlineFee: 55000,
+      offlineFee: { residentialFee: 55000, nonResidentialFee: 55000 },
     },
     category: 'ttc',
     dates: ['1st Sept 2022', '1st Oct 2022', '1st Nov 2022', '1st Dec 2022'],
@@ -5331,17 +5661,17 @@ const camps = {
     mostPopular: false,
     rating: 5,
     colorCode: '#DDAB58',
-    timing: '5:00 pm – 8:00 pm (IST)',
+    timing: '9:30 am – 5:30 pm (IST)',
     fees: {
-      onlineFee: 500,
-      offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
+      onlineFee: 1000,
+      offlineFee: { residentialFee: 0, nonResidentialFee: 1000 },
     },
     category: 'camps',
     metaDescription:
       'Powerful and effective asana, pranayama, and relaxation techniques to alleviate heart ailments',
     image: `${baseDomain}${courseAssets.courseAsset111}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset6}`,
-    dates: ['24th December 2022'],
+    dates: ['24th December 2022','1st January 2023', '5th March 2023','7th May 2023','2nd June 2023','3rd September 2023','5th November 2023'],
     online: true,
     onCampus: true,
     nonResidential: false,
@@ -5421,14 +5751,14 @@ const camps = {
         type: 'paragraph',
         content: {
           title: 'Time',
-          text: ['5:00 pm – 8:00 pm (IST)'],
+          text: ['9:30 am – 5:30 pm (IST)'],
         },
       },
       {
         type: 'paragraph',
         content: {
           title: 'Fees',
-          text: ['INR 500'],
+          text: ['INR 1000'],
         },
       },
       {
@@ -5460,21 +5790,21 @@ const camps = {
         templateNonResidential: '',
       },
     },
-    dates: ['4th December 2022'],
+    dates: ['5th February 2023','2nd April 2023','4th June 2023','6th August 2023','1st October 2023','3rd December 2023'],
     mostPopular: false,
     rating: 5,
     colorCode: '#CE9B51',
-    timing: '5:00 pm – 8:00 pm (IST)',
+    timing: '9:30 am – 5:30 pm (IST)',
     fees: {
-      onlineFee: 500,
-      offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
+      onlineFee: 1000,
+      offlineFee: { residentialFee: 0, nonResidentialFee: 1000 },
     },
     category: 'camps',
     metaDescription:
       'Wholesome tools and techniques to help you manage your condition completely',
     image: `${baseDomain}${courseAssets.courseAsset7}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset105}`,
-    online: true,
+    online: false,
     onCampus: true,
     nonResidential: false,
     residential: false,
@@ -5564,7 +5894,7 @@ const camps = {
         type: 'paragraph',
         content: {
           title: 'Fees',
-          text: ['INR 500'],
+          text: ['INR 1000'],
         },
       },
       {
@@ -5605,7 +5935,7 @@ const camps = {
   //   mostPopular: false,
   //   rating: 5,
   //   colorCode: '#EDBE66',
-  //   timing: '5:00 pm – 8:00 pm (IST)',
+  //   timing: '9:30 am – 5:30 pm (IST)',
   //   fees: {
   //     onlineFee: 500,
   //     offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
@@ -6000,142 +6330,142 @@ const camps = {
   //   ],
   // },
 
-  // 7: {
-  //   id: '',
-  //   title: 'Life Management Camp',
-  //   key: 'life-management-camp',
-  //   batch: 1,
-  //   // templateId: 'GENERAL_AUTO_EMAIL',
-  //   templateId: {
-  //     templateOnline: 'GENERAL_AUTO_EMAIL',
-  //     templateOffline: {
-  //       templateResidential: '',
-  //       templateNonResidential: '',
-  //     },
-  //   },
-  //   mostPopular: false,
-  //   rating: 5,
-  //   colorCode: '#EDBE66',
-  //   timing: '5:00 pm – 8:00 pm (IST)',
-  //   fees: {
-  //     onlineFee: 500,
-  //     offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
-  //   },
-  //   category: 'camps',
-  //   metaDescription:
-  //     'Specific pranayama, asana and relaxation techniques to enhance your state of mind',
-  //   image: `${baseDomain}${courseAssets.courseAsset8}`,
-  //   cardImage: `${baseDomain}${courseAssets.courseAsset112}`,
-  //   dates: [],
-  //   online: true,
-  //   onCampus: true,
-  //   nonResidential: false,
-  //   residential: false,
-  //   certficate: false,
-  //   details: [
-  //     {
-  //       type: 'paragraph',
-  //       content: {
-  //         title: 'Who is this workshop for?',
-  //         text: [
-  //           'If you think about it, most of the time we are living our life without consciously thinking about what we are doing and why we are doing it. It is only when we face a problem of some kind, that we are forced to stop and take stock of things. This kind of approach does us no good. If you feel that you are stuck in life, or don’t know what to do next, or feel like your life is going nowhere, this is the camp for you! Here is a camp by The Yoga Institute to give you direction and discipline to go through your life happily, joyfully and with balance. Designed with the wisdom of ancient Indian teachings, there’s a whole treasure chest of tools waiting for you at this camp. Hope to see you soon!                   ',
-  //         ],
-  //       },
-  //     },
-  //     {
-  //       type: 'paragraph',
-  //       content: {
-  //         title: 'What can you expect?',
-  //         text: [
-  //           'Life is a choice between B and D. Birth and Death. We are in control of C. That is the Choices we make, so make the right choices and live a happy life. -Dr. Hansaji Yogendra ',
-  //         ],
-  //       },
-  //     },
-  //     {
-  //       type: 'u-list',
-  //       content: {
-  //         title: ' Program Offerings',
-  //         points: [
-  //           {
-  //             listItem:
-  //               'Effective tools and techniques to help you manage your life',
-  //             subItems: [],
-  //           },
-  //           {
-  //             listItem:
-  //               'Specific pranayama, asana and relaxation techniques to enhance your state of mind',
-  //             subItems: [],
-  //           },
-  //           {
-  //             listItem: 'Diet guidelines to manage your health',
-  //             subItems: [],
-  //           },
-  //           {
-  //             listItem:
-  //               'Tips to maintain health by our spiritual guru Institute Director, Dr. Hansaji who has decades of experience in the field',
-  //             subItems: [],
-  //           },
-  //           {
-  //             listItem: 'Fitness tips',
-  //             subItems: [],
-  //           },
-  //         ],
-  //       },
-  //     },
-  //     // {
-  //     //   type: 'u-list',
-  //     //   content: {
-  //     //     title: 'Offered with the program',
-  //     //     points: [
-  //     //       {
-  //     //         listItem: 'Booklet with guidelines  ',
-  //     //         subItems: [],
-  //     //       },
-  //     //       {
-  //     //         listItem: 'Wholesome Sattvik lunch',
-  //     //         subItems: [],
-  //     //       },
-  //     //       {
-  //     //         listItem: 'Healthy snacks  ',
-  //     //         subItems: [],
-  //     //       },
-  //     //     ],
-  //     //   },
-  //     // },
-  //     {
-  //       type: 'paragraph',
-  //       content: {
-  //         title: 'Time',
-  //         text: ['5:00 pm – 8:00 pm (IST)'],
-  //       },
-  //     },
-  //     {
-  //       type: 'paragraph',
-  //       content: {
-  //         title: 'Fees',
-  //         text: ['INR 500'],
-  //       },
-  //     },
-  //     {
-  //       type: 'u-list',
-  //       content: {
-  //         title: ' Guidelines',
-  //         points: [
-  //           {
-  //             listItem:
-  //               'Campers are requested to come attired to comfortable loose fitting clothes. Shorts, capris, tank tops, low cut shirts, short and sleeveless T-shirts are not permitted as per the Institute dress code.',
-  //             subItems: [],
-  //           },
-  //           // {
-  //           //   listItem:
-  //           //     'Campers are requested to have their breakfast and medication (as prescribed by their doctor). ',
-  //           //   subItems: [],
-  //           // },
-  //         ],
-  //       },
-  //     },
-  //   ],
-  // },
+  7: {
+    id: '',
+    title: 'Life Management Camp',
+    key: 'life-management-camp',
+    batch: 1,
+    // templateId: 'GENERAL_AUTO_EMAIL',
+    templateId: {
+      templateOnline: 'GENERAL_AUTO_EMAIL',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: '',
+      },
+    },
+    mostPopular: false,
+    rating: 5,
+    colorCode: '#EDBE66',
+    timing: '5:00 pm – 8:00 pm (IST)',
+    fees: {
+      onlineFee: 1000,
+      offlineFee: { residentialFee: 0, nonResidentialFee: 1000 },
+    },
+    category: 'camps',
+    metaDescription:
+      'Specific pranayama, asana and relaxation techniques to enhance your state of mind',
+    image: `${baseDomain}${courseAssets.courseAsset8}`,
+    cardImage: `${baseDomain}${courseAssets.courseAsset112}`,
+    dates: ['15th January 2023', '19th March 2023', '21st May 2023', '16th July 2023', '17th September 2023', '19th November 2023', ''],
+    online: true,
+    onCampus: true,
+    nonResidential: false,
+    residential: false,
+    certficate: false,
+    details: [
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Who is this workshop for?',
+          text: [
+            'If you think about it, most of the time we are living our life without consciously thinking about what we are doing and why we are doing it. It is only when we face a problem of some kind, that we are forced to stop and take stock of things. This kind of approach does us no good. If you feel that you are stuck in life, or don’t know what to do next, or feel like your life is going nowhere, this is the camp for you! Here is a camp by The Yoga Institute to give you direction and discipline to go through your life happily, joyfully and with balance. Designed with the wisdom of ancient Indian teachings, there’s a whole treasure chest of tools waiting for you at this camp. Hope to see you soon!                   ',
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'What can you expect?',
+          text: [
+            'Life is a choice between B and D. Birth and Death. We are in control of C. That is the Choices we make, so make the right choices and live a happy life. -Dr. Hansaji Yogendra ',
+          ],
+        },
+      },
+      {
+        type: 'u-list',
+        content: {
+          title: ' Program Offerings',
+          points: [
+            {
+              listItem:
+                'Effective tools and techniques to help you manage your life',
+              subItems: [],
+            },
+            {
+              listItem:
+                'Specific pranayama, asana and relaxation techniques to enhance your state of mind',
+              subItems: [],
+            },
+            {
+              listItem: 'Diet guidelines to manage your health',
+              subItems: [],
+            },
+            {
+              listItem:
+                'Tips to maintain health by our spiritual guru Institute Director, Dr. Hansaji who has decades of experience in the field',
+              subItems: [],
+            },
+            {
+              listItem: 'Fitness tips',
+              subItems: [],
+            },
+          ],
+        },
+      },
+      {
+        type: 'u-list',
+        content: {
+          title: 'Offered with the program',
+          points: [
+            {
+              listItem: 'Booklet with guidelines  ',
+              subItems: [],
+            },
+            {
+              listItem: 'Wholesome Sattvik lunch',
+              subItems: [],
+            },
+            {
+              listItem: 'Healthy snacks  ',
+              subItems: [],
+            },
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Time',
+          text: ['5:00 pm – 8:00 pm (IST)'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Fees',
+          text: ['INR 500'],
+        },
+      },
+      {
+        type: 'u-list',
+        content: {
+          title: ' Guidelines',
+          points: [
+            {
+              listItem:
+                'Campers are requested to come attired to comfortable loose fitting clothes. Shorts, capris, tank tops, low cut shirts, short and sleeveless T-shirts are not permitted as per the Institute dress code.',
+              subItems: [],
+            },
+            {
+              listItem:
+                'Campers are requested to have their breakfast and medication (as prescribed by their doctor). ',
+              subItems: [],
+            },
+          ],
+        },
+      },
+    ],
+  },
 
   // 8: {
   //   id: '',
@@ -6287,14 +6617,14 @@ const camps = {
         templateNonResidential: '',
       },
     },
-    dates: ['18th December 2022'],
+    dates: ['18th December 2022','8th January 2023','12th March 2023','14th May 2023','9th July 2023','10th September 2023','12th November 2023'],
     mostPopular: false,
     rating: 5,
     colorCode: '#CE9B51',
     timing: '8:00 am – 11:00 am (IST)',
     fees: {
       onlineFee: 500,
-      offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
+      offlineFee: { residentialFee: 0, nonResidentialFee: 500 },
     },
     category: 'camps',
     metaDescription:
@@ -6416,6 +6746,7 @@ const camps = {
     title: 'Pregnancy Camp For Ante & Post Natal',
     key: 'pregnancy-camp-for-ante-post-natal',
     batch: 1,
+    join:true,
     // templateId: 'GENERAL_AUTO_EMAIL',
     templateId: {
       templateOnline: 'GENERAL_AUTO_EMAIL',
@@ -6426,14 +6757,26 @@ const camps = {
     },
     dates: [
       '17th Dec to 18th Dec 2022',
+      '23rd & 24th January 2023',
+      '18th & 19th February 2023',
+      '20th & 21st March 2023',
+      '15th & 16th April 2023',
+      '15th & 16th May 2023',
+      '17th & 18th June 2023',
+      '17th & 18th July 2023',
+      '19th & 20th August 2023',
+      '18th & 19th September 2023',
+      '21st & 22nd October 2023',
+      '20th & 21st November 2023',
+      '16th & 17th December 2023'
     ],
     mostPopular: false,
     rating: 5,
     colorCode: '#EDBE66',
-    timing: '5:00 pm – 8:00 pm (IST)',
+    timing: '9:30 am – 5:30 pm (IST)',
     fees: {
       onlineFee: 1500,
-      offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
+      offlineFee: { residentialFee: 0, nonResidentialFee: 1500 },
     },
     category: 'camps',
     metaDescription: 'Insightful session with a medical specialists.',
@@ -6517,7 +6860,7 @@ const camps = {
         type: 'paragraph',
         content: {
           title: 'Time',
-          text: ['5:00 pm – 8:00 pm (IST)'],
+          text: ['9:30 am – 5:30 pm (IST)'],
         },
       },
       {
@@ -6545,143 +6888,150 @@ const camps = {
           ],
         },
       },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Note',
+          text: ['*Please note, the camp is open only for women after 3 months of pregnancy till the 9 months of pregnancy.'],
+        },
+      },
     ],
   },
 
-  // 11: {
-  //   id: '',
-  //   title: 'Respiratory Workshop',
-  //   key: 'respiratory-workshop',
-  //   batch: 1,
-  //   // templateId: 'GENERAL_AUTO_EMAIL',
-  //   templateId: {
-  //     templateOnline: 'GENERAL_AUTO_EMAIL',
-  //     templateOffline: {
-  //       templateResidential: '',
-  //       templateNonResidential: '',
-  //     },
-  //   },
-  //   dates: [],
-  //   mostPopular: false,
-  //   rating: 5,
-  //   colorCode: '#DDAB58',
-  //   timing: '5:00 pm – 8:00 pm (IST)',
-  //   fees: {
-  //     onlineFee: 500,
-  //     offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
-  //   },
-  //   category: 'camps',
-  //   metaDescription: 'Insightful session with a specialist',
-  //   image: `${baseDomain}${courseAssets.courseAsset83}`,
-  //   cardImage: `${baseDomain}${courseAssets.courseAsset83}`,
-  //   online: true,
-  //   onCampus: true,
-  //   nonResidential: false,
-  //   residential: false,
-  //   certficate: false,
-  //   details: [
-  //     {
-  //       type: 'paragraph',
-  //       content: {
-  //         title: 'Who is this workshop for?',
-  //         text: [
-  //           'Prana is the vital energy or life force, which exists in all of us. The fight against respiratory problems begins with a strong will to overcome one’s disability and has to be backed by an implicit faith in oneself. With a strong emphasis on ancient yogic knowledge and techniques, The Yoga Institute has been conducting powerful Respiratory Camps since 1987. Respiratory health has been well documented in traditional systems of wellbeing over several millennia. The Yogic life strengthens your will, augments your faith in yourself and opens air passages. How soon you can breathe with ease and on your own, depends on yourself. What are you waiting for? Begin now!    ',
-  //         ],
-  //       },
-  //     },
-  //     {
-  //       type: 'paragraph',
-  //       content: {
-  //         title: 'What can you expect?',
-  //         text: [
-  //           'If you learn to breathe the right way, your life will be longer. -Dr. Hansaji Yogendra ',
-  //         ],
-  //       },
-  //     },
-  //     {
-  //       type: 'u-list',
-  //       content: {
-  //         title: ' Program Offerings',
-  //         points: [
-  //           {
-  //             listItem:
-  //               'Specific pranayama, and relaxation techniques to enhance your health',
-  //             subItems: [],
-  //           },
-  //           {
-  //             listItem: 'Diet guidelines to manage your health',
-  //             subItems: [],
-  //           },
-  //           {
-  //             listItem: 'Insightful session with a specialist',
-  //             subItems: [],
-  //           },
-  //           {
-  //             listItem:
-  //               'Tips to maintain health by our spiritual guru Institute Director, Dr. Hansaji who has decades of experience in the field',
-  //             subItems: [],
-  //           },
-  //           {
-  //             listItem: 'Fitness tips',
-  //             subItems: [],
-  //           },
-  //         ],
-  //       },
-  //     },
-  //     // {
-  //     //   type: 'u-list',
-  //     //   content: {
-  //     //     title: 'Offered with the program',
-  //     //     points: [
-  //     //       {
-  //     //         listItem: 'Booklet with guidelines  ',
-  //     //         subItems: [],
-  //     //       },
-  //     //       {
-  //     //         listItem: 'Wholesome Sattvik lunch',
-  //     //         subItems: [],
-  //     //       },
-  //     //       {
-  //     //         listItem: 'Healthy snacks  ',
-  //     //         subItems: [],
-  //     //       },
-  //     //     ],
-  //     //   },
-  //     // },
-  //     {
-  //       type: 'paragraph',
-  //       content: {
-  //         title: 'Time',
-  //         text: ['5:00 pm – 8:00 pm (IST)'],
-  //       },
-  //     },
-  //     {
-  //       type: 'paragraph',
-  //       content: {
-  //         title: 'Fees',
-  //         text: ['INR 500'],
-  //       },
-  //     },
-  //     {
-  //       type: 'u-list',
-  //       content: {
-  //         title: ' Guidelines',
-  //         points: [
-  //           {
-  //             listItem:
-  //               'Campers are requested to come attired to comfortable loose fitting clothes. Shorts, capris, tank tops, low cut shirts, short and sleeveless T-shirts are not permitted as per the Institute dress code.',
-  //             subItems: [],
-  //           },
-  //           // {
-  //           //   listItem:
-  //           //     'Campers are requested to have their breakfast and medication (as prescribed by their doctor). ',
-  //           //   subItems: [],
-  //           // },
-  //         ],
-  //       },
-  //     },
-  //   ],
-  // },
+  11: {
+    id: '',
+    title: 'Respiratory Workshop',
+    key: 'respiratory-workshop',
+    batch: 1,
+    // templateId: 'GENERAL_AUTO_EMAIL',
+    templateId: {
+      templateOnline: 'GENERAL_AUTO_EMAIL',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: '',
+      },
+    },
+    dates: ['14th January 2023', '11th March 2023', '13th May 2023', '8th July 2023', '9th September 2023', '11th November 2023', ''],
+    mostPopular: false,
+    rating: 5,
+    colorCode: '#DDAB58',
+    timing: '5:00 pm – 8:00 pm (IST)',
+    fees: {
+      onlineFee: 1000,
+      offlineFee: { residentialFee: 0, nonResidentialFee: 1000 },
+    },
+    category: 'camps',
+    metaDescription: 'Insightful session with a specialist',
+    image: `${baseDomain}${courseAssets.courseAsset83}`,
+    cardImage: `${baseDomain}${courseAssets.courseAsset83}`,
+    online: true,
+    onCampus: true,
+    nonResidential: false,
+    residential: false,
+    certficate: false,
+    details: [
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Who is this workshop for?',
+          text: [
+            'Prana is the vital energy or life force, which exists in all of us. The fight against respiratory problems begins with a strong will to overcome one’s disability and has to be backed by an implicit faith in oneself. With a strong emphasis on ancient yogic knowledge and techniques, The Yoga Institute has been conducting powerful Respiratory Camps since 1987. Respiratory health has been well documented in traditional systems of wellbeing over several millennia. The Yogic life strengthens your will, augments your faith in yourself and opens air passages. How soon you can breathe with ease and on your own, depends on yourself. What are you waiting for? Begin now!    ',
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'What can you expect?',
+          text: [
+            'If you learn to breathe the right way, your life will be longer. -Dr. Hansaji Yogendra ',
+          ],
+        },
+      },
+      {
+        type: 'u-list',
+        content: {
+          title: ' Program Offerings',
+          points: [
+            {
+              listItem:
+                'Specific pranayama, and relaxation techniques to enhance your health',
+              subItems: [],
+            },
+            {
+              listItem: 'Diet guidelines to manage your health',
+              subItems: [],
+            },
+            {
+              listItem: 'Insightful session with a specialist',
+              subItems: [],
+            },
+            {
+              listItem:
+                'Tips to maintain health by our spiritual guru Institute Director, Dr. Hansaji who has decades of experience in the field',
+              subItems: [],
+            },
+            {
+              listItem: 'Fitness tips',
+              subItems: [],
+            },
+          ],
+        },
+      },
+      {
+        type: 'u-list',
+        content: {
+          title: 'Offered with the program',
+          points: [
+            {
+              listItem: 'Booklet with guidelines  ',
+              subItems: [],
+            },
+            {
+              listItem: 'Wholesome Sattvik lunch',
+              subItems: [],
+            },
+            {
+              listItem: 'Healthy snacks  ',
+              subItems: [],
+            },
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Time',
+          text: ['5:00 pm – 8:00 pm (IST)'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Fees',
+          text: ['INR 500'],
+        },
+      },
+      {
+        type: 'u-list',
+        content: {
+          title: ' Guidelines',
+          points: [
+            {
+              listItem:
+                'Campers are requested to come attired to comfortable loose fitting clothes. Shorts, capris, tank tops, low cut shirts, short and sleeveless T-shirts are not permitted as per the Institute dress code.',
+              subItems: [],
+            },
+            {
+              listItem:
+                'Campers are requested to have their breakfast and medication (as prescribed by their doctor). ',
+              subItems: [],
+            },
+          ],
+        },
+      },
+    ],
+  },
 
   12: {
     id: '',
@@ -6696,21 +7046,21 @@ const camps = {
         templateNonResidential: '',
       },
     },
-    dates: [],
+    dates: ['29th January 2023','30th April 2023','30th July 2023','29th October 2023',''],
     mostPopular: false,
     rating: 5,
     colorCode: '#CE9B51',
-    timing: '5:00 pm – 8:00 pm (IST)',
+    timing: '9:30 am – 5:30 pm (IST)',
     fees: {
-      onlineFee: 500,
-      offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
+      onlineFee: 1000,
+      offlineFee: { residentialFee: 0, nonResidentialFee: 1000 },
     },
     category: 'camps',
     metaDescription:
       'Specific pranayama, asana and relaxation techniques to enhance your state of mind',
     image: `${baseDomain}${courseAssets.courseAsset12}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset12}`,
-    online: true,
+    online: false,
     onCampus: true,
     nonResidential: false,
     residential: false,
@@ -6789,14 +7139,14 @@ const camps = {
         type: 'paragraph',
         content: {
           title: 'Time',
-          text: ['5:00 pm – 8:00 pm (IST)'],
+          text: ['9:30 am – 5:30 pm (IST)'],
         },
       },
       {
         type: 'paragraph',
         content: {
           title: 'Fees',
-          text: ['INR 500'],
+          text: ['INR 1000'],
         },
       },
       {
@@ -6833,21 +7183,21 @@ const camps = {
         templateNonResidential: '',
       },
     },
-    dates: ['11th December 2022'],
+    dates: ['8th January 2023','12th February 2023','12th March 2023','9th April 2023','14th May 2023','11th June 2023','9th July 2023','13th August 2023','10th September 2023','8th October 2023','12th November 2023','10th December 2023'],
     mostPopular: false,
     rating: 5,
     colorCode: '#EDBE66',
-    timing: '5:00 pm – 8:00 pm (IST)',
+    timing: '9:30 am – 5:30 pm (IST)',
     fees: {
-      onlineFee: 500,
-      offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
+      onlineFee: 1000,
+      offlineFee: { residentialFee: 0, nonResidentialFee: 1000 },
     },
     category: 'camps',
     metaDescription:
       'Specific pranayama, asana and relaxation techniques to enhance your state of mind',
     image: `${baseDomain}${courseAssets.courseAsset13}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset13}`,
-    online: true,
+    online: false,
     onCampus: true,
     nonResidential: false,
     residential: false,
@@ -6925,14 +7275,14 @@ const camps = {
         type: 'paragraph',
         content: {
           title: 'Time',
-          text: ['5:00 pm – 8:00 pm (IST)'],
+          text: ['9:30 am – 5:30 pm (IST)'],
         },
       },
       {
         type: 'paragraph',
         content: {
           title: 'Fees',
-          text: ['INR 500'],
+          text: ['INR 1000'],
         },
       },
       {
@@ -6969,20 +7319,20 @@ const camps = {
         templateNonResidential: '',
       },
     },
-    dates: ['3rd December 2022'],
+    dates: ['7th January 2023','4th February 2023','4th March 2023','1st April 2023','6th May 2023','3rd June 2023','1st July 2023','5th August 2023','2nd September 2023','7th October 2023','4th November 2023','2nd December 2023'],
     mostPopular: false,
     rating: 5,
     colorCode: '#DDAB58',
-    timing: '5:00 pm – 8:00 pm (IST)',
+    timing: '9:30 am – 5:30 pm (IST)',
     fees: {
-      onlineFee: 500,
-      offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
+      onlineFee: 1000,
+      offlineFee: { residentialFee: 0, nonResidentialFee: 1000 },
     },
     category: 'camps',
     metaDescription: 'Low-calorie diet recipe',
     image: `${baseDomain}${courseAssets.courseAsset15}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset15}`,
-    online: true,
+    online: false,
     onCampus: true,
     nonResidential: false,
     residential: false,
@@ -7060,14 +7410,14 @@ const camps = {
         type: 'paragraph',
         content: {
           title: 'Time',
-          text: ['5:00 pm – 8:00 pm (IST)'],
+          text: ['9:30 am – 5:30 pm (IST)'],
         },
       },
       {
         type: 'paragraph',
         content: {
           title: 'Fees',
-          text: ['INR 500'],
+          text: ['INR 1000'],
         },
       },
       {
@@ -7104,21 +7454,21 @@ const camps = {
         templateNonResidential: '',
       },
     },
-    dates: ['10th December 2022'],
+    dates: ['11th February 2023','8th April 2023','10th June 2023','12th August 2023','14th October 2023','9th December 2023'],
     mostPopular: false,
     rating: 5,
     colorCode: '#CE9B51',
-    timing: '5:00 pm – 8:00 pm (IST)',
+    timing: '9:30 am – 5:30 pm (IST)',
     fees: {
-      onlineFee: 500,
-      offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
+      onlineFee: 1000,
+      offlineFee: { residentialFee: 0, nonResidentialFee: 1000 },
     },
     category: 'camps',
     metaDescription:
       'Specific asana, pranayama, and relaxation techniques to enhance your health',
     image: `${baseDomain}${courseAssets.courseAsset84}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset84}`,
-    online: true,
+    online: false,
     onCampus: true,
     nonResidential: false,
     residential: false,
@@ -7201,14 +7551,14 @@ const camps = {
         type: 'paragraph',
         content: {
           title: 'Time',
-          text: ['5:00 pm – 8:00 pm (IST)'],
+          text: ['9:30 am – 5:30 pm (IST)'],
         },
       },
       {
         type: 'paragraph',
         content: {
           title: 'Fees',
-          text: ['INR 500'],
+          text: ['INR 1000'],
         },
       },
       {
@@ -7245,14 +7595,14 @@ const camps = {
         templateNonResidential: '',
       },
     },
-    dates: ['25th December 2022'],
+    dates: ['25th December 2022','22nd January 2023','26th February 2023','26th March 2023','23rd April 2023','28th May 2023','25th June 2023','23rd July 2023','27th August 2023','24th September 2023','22nd  October 2023','26th November 2023','24th December 2023'],
     mostPopular: false,
     rating: 5,
     colorCode: '#EDBE66',
-    timing: '5:00 pm – 8:00 pm (IST)',
+    timing: '9:30 am – 5:30 pm (IST)',
     fees: {
-      onlineFee: 500,
-      offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
+      onlineFee: 1000,
+      offlineFee: { residentialFee: 0, nonResidentialFee: 1000 },
     },
     category: 'camps',
     metaDescription: 'Insightful session with an ortho-specialist',
@@ -7336,14 +7686,14 @@ const camps = {
         type: 'paragraph',
         content: {
           title: 'Time',
-          text: ['5:00 pm – 8:00 pm (IST)'],
+          text: ['9:30 am – 5:30 pm (IST)'],
         },
       },
       {
         type: 'paragraph',
         content: {
           title: 'Fees',
-          text: ['INR 500'],
+          text: ['INR 1000'],
         },
       },
       {
@@ -7370,6 +7720,7 @@ const camps = {
     id: '',
     title: '7 Days Health Camp - On Campus - Hindi ',
     key: '7-days-camp',
+    join:true,
     batch: 1,
     // templateId: 'CAMP_FOR_7_DAYS_HEALTH',
     templateId: {
@@ -7461,8 +7812,8 @@ const camps = {
       {
         type: 'paragraph',
         content: {
-          title: '',
-          text: ['Benefits of this camp'],
+          title: 'Benefits of this camp',
+          text: [],
         },
       },
       {
@@ -7583,9 +7934,9 @@ const camps = {
         content: {
           title: 'Residential',
           text: [
-            'Rs. 12,000/- Triple Sharing (Inclusive of course fee and 4 meals a day)',
-            'Rs. 18,000/- Dual Sharing (Inclusive of course fee and 4 meals a day)',
-            'Rs. 30,000/- Single Occupancy (Inclusive of course fee and 4 meals a day)',
+            'Rs. 13,000/- Triple Sharing (Inclusive of course fee and 4 meals a day)',
+            'Rs. 20,000/- Dual Sharing (Inclusive of course fee and 4 meals a day)',
+            'Rs. 34,000/- Single Occupancy (Inclusive of course fee and 4 meals a day)',
           ],
         },
       },
@@ -7725,6 +8076,7 @@ const camps = {
     id: '',
     title: '7 Days Health Camp - On Campus - English',
     key: '7-days-camp-english',
+    join:true,
     batch: 1,
     // templateId: 'CAMP_FOR_7_DAYS_HEALTH',
     templateId: {
@@ -7735,7 +8087,6 @@ const camps = {
       },
     },
     dates: [
-      '26th Nov to 2nd Dec 2022',
       '24th Dec to 30th Dec 2022',
       '28th Jan to 3rd Feb 2023', 
       '25th Feb to 3rd Mar 2023',
@@ -7831,8 +8182,8 @@ const camps = {
       {
         type: 'paragraph',
         content: {
-          title: '',
-          text: ['Benefits of this camp'],
+          title: 'Benefits of this camp',
+          text: [],
         },
       },
       {
@@ -7954,9 +8305,9 @@ const camps = {
         content: {
           title: 'Residential',
           text: [
-            'Rs. 12,000/- Triple Sharing (Inclusive of course fee and 4 meals a day)',
-            'Rs. 18,000/- Dual Sharing (Inclusive of course fee and 4 meals a day)',
-            'Rs. 30,000/- Single Occupancy (Inclusive of course fee and 4 meals a day)',
+            'Rs. 13,000/- Triple Sharing (Inclusive of course fee and 4 meals a day)',
+            'Rs. 20,000/- Dual Sharing (Inclusive of course fee and 4 meals a day)',
+            'Rs. 34,000/- Single Occupancy (Inclusive of course fee and 4 meals a day)',
           ],
         },
       },
@@ -8106,7 +8457,6 @@ const camps = {
     },
     batch: 1,
     dates: [
-      '6th Nov to 26th Nov 2022',
       '4th Dec to 24th Dec 2022',
       '2nd Jan to 22nd Jan 2023',
       '5th Feb to 25th Feb 2023',
@@ -8378,6 +8728,20 @@ const camps = {
           text: [
             'Only 35 seats are available. Registrations on a first come, first-serve basis only.',
           ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Please Note',
+          text: [],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'The payment validity and session attendance for 21-Days Better Living Course is only applicable for one month. However, in emergency circumstances, the participant can attend the 21-Days BLC sessions for the next month but only on approval of the management. Without authorisation, the participant will not be allowed to attend the sessions post the actual sessions of the course.',
+          text: [],
         },
       },
       {
@@ -8718,6 +9082,20 @@ const camps = {
       {
         type: 'paragraph',
         content: {
+          title: 'Please Note',
+          text: [],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'The payment validity and session attendance for 21-Days Better Living Course is only applicable for one month. However, in emergency circumstances, the participant can attend the 21-Days BLC sessions for the next month but only on approval of the management. Without authorisation, the participant will not be allowed to attend the sessions post the actual sessions of the course.',
+          text: [],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
           title: 'UNIQUE OFFERINGS ',
           text: [''],
         },
@@ -9046,6 +9424,20 @@ const camps = {
       {
         type: 'paragraph',
         content: {
+          title: 'Please Note',
+          text: [],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'The payment validity and session attendance for 21-Days Better Living Course is only applicable for one month. However, in emergency circumstances, the participant can attend the 21-Days BLC sessions for the next month but only on approval of the management. Without authorisation, the participant will not be allowed to attend the sessions post the actual sessions of the course.',
+          text: [],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
           title: 'UNIQUE OFFERINGS ',
           text: [''],
         },
@@ -9104,28 +9496,7 @@ const camps = {
       },
     },
     dates: [
-      '6th Nov to 26th Nov 2022',
-      '27th Nov to 17th Dec 2022',
       '8th Jan to 28th Jan 2023',
-      '29th Jan to 18th Feb 2023',
-      '18th Dec to 7th Jan 2023',
-      '19th Feb to 11th Mar 2023',
-      '12th Mar to 1st Apr 2023',
-      '2nd Apr to 22nd Apr 2023', 
-      '23rd Apr to 13th May 2023',
-      '14th May to 3rd Jun 2023',
-      '4th Jun to 24th Jun 2023',
-      '25th Jun to 15th Jul 2023',
-      '16th Jul to 5th Aug 2023 ',
-      '6th Aug to 26th Aug 2023',
-      '27th Aug to 16th Sep 2023',
-      '17th Sep to 7th Oct 2023',
-      '8th Oct to 28th Oct 2023',
-      '29th Oct to 18th Nov 2023',
-      '19th Nov to 9th Dec 2023',
-      '10th Dec to 30th Dec 2023',
-      '31st Dec to 20th Jan 2024'
-
     ],
     online: true,
     onCampus: false,
@@ -9378,6 +9749,20 @@ const camps = {
           text: [
             'Only 35 seats are available. Registrations on a first come, first-serve basis only.',
           ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Please Note',
+          text: [],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'The payment validity and session attendance for 21-Days Better Living Course is only applicable for one month. However, in emergency circumstances, the participant can attend the 21-Days BLC sessions for the next month but only on approval of the management. Without authorisation, the participant will not be allowed to attend the sessions post the actual sessions of the course.',
+          text: [],
         },
       },
       {
@@ -9754,8 +10139,29 @@ const classes = {
       {
         type: 'paragraph',
         content: {
-          title: 'Fees ',
-          text: ['1000 INR'],
+          title: 'Fees',
+          text: [''],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Monthly Fees',
+          text: ['Rs. 1000/-'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Six Months Fees',
+          text: ['Rs. 6000/-'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Annual Fees',
+          text: ['Rs. 10000/-'],
         },
       },
 
@@ -10189,8 +10595,18 @@ const classes = {
     },
     category: 'classes',
     dates: [
-      '7th Nov to 2nd Dec 2022',
-      '5th Dec to 30th Dec 2022',
+      '2nd Jan to 27th Jan 2023',
+      '6th Feb to 3rd Mar 2023',
+      '6th Mar to 31st Mar 2023',
+      '3rd Apr to 28th Apr 2023',
+      '1st May to 26th May 2023',
+      '5th Jun to 30th Jun 2023',
+      '3rd Jul to 28th Jul 2023',
+      '7th Aug to 1st Sep 2023',
+      '4th Sep to 29th Sep 2023',
+      '2nd Oct to 27th Oct 2023',
+      '6th Nov to 1st Dec 2023',
+      '4th Dec to 29th Dec 2023'
     ],
     online: true,
     onCampus: false,
@@ -10550,8 +10966,15 @@ const classes = {
       {
         type: 'paragraph',
         content: {
-          title: 'Saturday & Sunday:Saturday',
-          text: [' 8:00 am - 9:30 am  (IST) and '],
+          title: 'Saturday & Sunday',
+          text: [],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Saturday',
+          text: [' 8:00 am - 9:30 am  (IST)'],
         },
       },
       {
@@ -10565,9 +10988,31 @@ const classes = {
         type: 'paragraph',
         content: {
           title: 'Fees ',
-          text: ['INR 1000'],
+          text: [''],
         },
       },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Monthly Fees',
+          text: ['Rs. 1000/-'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Six Months Fees',
+          text: ['Rs. 6000/-'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Annual Fees',
+          text: ['Rs. 10000/-'],
+        },
+      },
+
       {
         type: 'paragraph',
         content: {
@@ -11075,9 +11520,31 @@ const classes = {
         type: 'paragraph',
         content: {
           title: 'Fees',
-          text: ['INR 1000'],
+          text: [],
         },
       },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Monthly Fees',
+          text: ['Rs. 1000/-'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Six Months Fees',
+          text: ['Rs. 6000/-'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Annual Fees',
+          text: ['Rs. 10000/-'],
+        },
+      },
+
       {
         type: 'paragraph',
         content: {
@@ -11248,13 +11715,13 @@ const certificate = {
     mostPopular: false,
     rating: 5,
     colorCode: '#D3A29D',
-    timing: '1st Sunday of every month: 10:40 am - 12:30 pm (IST)',
+    timing: '1st Sunday of every month: 10:00 am - 12:30 pm (IST)',
     fees: {
-      onlineFee: 8000,
+      onlineFee: 15000,
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'certificate-course',
-    dates: [],
+    dates: ['10:00 am - 12:30 pm'],
     online: true,
     onCampus: false,
     nonResidential: false,
@@ -11324,7 +11791,7 @@ const certificate = {
         type: 'paragraph',
         content: {
           title: 'Timings',
-          text: ['1st Sunday of every month: 10:40 am - 12:30 pm (IST)'],
+          text: ['1st Sunday of every month: 10:00 am - 12:30 pm (IST)'],
         },
       },
       

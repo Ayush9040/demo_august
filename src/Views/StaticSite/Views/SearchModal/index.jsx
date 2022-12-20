@@ -1,13 +1,13 @@
 import axios from 'axios'
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate, useSearchParams } from 'react-router-dom'
 import { cross, Search } from '../../assets/icons/icon'
 import Pagination from 'react-js-pagination'
 import './style.scss'
 import { useEffect } from 'react'
 import { cmsBaseDomain } from '../../../../Constants/appSettings'
 
-const SearchModal = ({ setIsModalOpen }) => {
+const SearchModal = () => {
   const [search, setSearch] = useState('')
   const [content, setContent] = useState([])
   const [isLoading, setIsLoading] = useState(false)
@@ -16,16 +16,45 @@ const SearchModal = ({ setIsModalOpen }) => {
     limit: 10,
   })
   const [count,setCount] = useState(0)
+  const [Params] = useSearchParams()  
 
-
-
-  const searchContent = (page=1,limit=10) => {
-    if (search === '') return
+  const navigate = useNavigate()
+  const getSearchData = ()=>{
+    if(Params.get('search')){
+      try {
+        setIsLoading(true)
+        setSearch(Params.get('search'))
+        axios
+          .get(
+            `https://cms-prod-be.theyogainstitute.org/v1/misc/search/?search=${Params.get('search')}&page=${pagination.page}&limit=${pagination.limit}`
+          )
+          .then((res) => {
+            setContent(res.data)
+            setCount(res.data.count)
+          })
+          .then(() => {
+            setIsLoading(false)
+          })
+        Params.set('search',search)
+      } catch (err) {
+        console.log(err)
+      }
+      return
+    }
+  }
+  const searchContent = (page,limit) => {
+    if (search === '') {
+      setSearch('')
+      setContent([])
+      navigate('/search')
+      return
+    }
+    navigate(`/search/?search=${search}`)
     try {
       setIsLoading(true)
       axios
         .get(
-          `${ cmsBaseDomain }/misc/search/?title=${search}&page=${page}&limit=${limit}`
+          `${ cmsBaseDomain }/misc/search/?search=${search}&page=${page}&limit=${limit}`
         )
         .then((res) => {
           setContent(res.data)
@@ -41,17 +70,18 @@ const SearchModal = ({ setIsModalOpen }) => {
 
   const handlePageChange = (pageNumber) => {
     setPagination({ ...pagination,page:pageNumber, limit:10 })
+    searchContent( pageNumber,10)
   }
 
   useEffect(()=>{
-    searchContent( pagination.page,pagination.limit )
-  },[pagination])
+    getSearchData()
+  },[])
 
   
 
   return (
     <div className='search-modal' onKeyDown={ (e)=>{ if(e.key === 'Enter'){ searchContent(1,10) } } } >
-      <div onClick={()=>{ setIsModalOpen(false) }}  className='close-search'>{cross}</div>
+      <div onClick={()=>{ navigate('/') }}  className='close-search'>{cross}</div>
       <h2 style={{ fontWeight: 'bold', textAlign: 'center' }}>Search</h2>
       <label className='search-bar'>
         <input

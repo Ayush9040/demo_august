@@ -156,6 +156,45 @@ const CourseDetails = ({ pageDate }) => {
     }
   }
 
+  const displayNote = ( course )=>{
+    switch( course ){
+    case 'pregnancy-camp-for-ante-post-natal': return <p style={{ fontSize:'inherit' }} >*Please note, the camp is open only for women after 3 months of pregnancy till the 9 months of pregnancy.</p>
+    case '7-days-camp': return <p style={{ fontSize:'inherit' }}  >*Please Note: The fees of 7 Days Health Camp - On Campus - Hindi is getting revised from January 2023.
+   Below is the revision of fees:
+    <br/>
+   Rs. 13,000/- Triple Sharing
+    <br/>
+   Rs. 20,000/- Dual Sharing
+    <br/>
+   Rs. 34,000/- Single Occupancy </p>
+    case '7-days-camp-english': return <p style={{ fontSize:'inherit' }}  >*Please Note: The fees of 7 Days Health Camp - On Campus - Hindi is getting revised from January 2023.
+   Below is the revision of fees:
+    <br/>
+   Rs. 13,000/- Triple Sharing
+    <br/>
+   Rs. 20,000/- Dual Sharing
+    <br/>
+   Rs. 34,000/- Single Occupancy </p>
+    case '200-hrs-part-time-ttc-online': return <p style={{ fontSize:'inherit' }}  >
+   *Please Note: The fees of 2-months TTC Online-Hindi is getting revised from January 2023.
+   Below is the revision of fees:
+      <br/>
+   Online: Rs. 25,000/-</p>
+    case '200-hrs-part-time-ttc-on-campus-english': return <p style={{ fontSize:'inherit' }}  >
+   *Please Note: The fees of 2-months TTC Online & On Campus - English  is getting revised from January 2023.
+   Below is the revision of fees:
+      <br/>
+   Online: Rs. 25,000/-
+      <br/>
+   Non-residential: Rs. 30,000/-
+      <br/>
+   Residential: Rs. 80,000/-
+    </p>
+    
+    default: return <p style={{ fontSize:'inherit' }}  >*Join on any date</p>
+    }
+  }
+
   return (
     <>
       <div className="course-detail-page" id="registration">
@@ -180,7 +219,9 @@ const CourseDetails = ({ pageDate }) => {
               'Lorem Ipsum is simply dummy text of the printing and typesetting industry. '}
             </p>
             {pageDate?.join === true && (
-              <p style={{ marginTop: '1.5rem' , fontSize:'1.5rem' }}>{ pageDate?.key === 'pregnancy-camp-for-ante-post-natal' ?  '*Please note, the camp is open only for women after 3 months of pregnancy till the 9 months of pregnancy.' : '*Join on any date'}</p>
+              <p style={{ marginTop: '1.5rem' , fontSize:'1.5rem' }}>{displayNote(pageDate?.key)}</p>
+              
+              
             )}
             <div
               id="date-select-mobile"

@@ -23,11 +23,17 @@ const options = {
   },
 }
 
-const getBlogsMeta = async( slug )=>{
-  try{
-    const res = await axios.get(`https://www.cms-prod-be.theyogainstitute.org/v1/post/${ slug }`)
-    let data =  res.data.data.meta
 
+
+//metaDataObj[correctPath] || await getBlogsMeta(correctPath)
+
+const getMetaData = async( path )=>{
+  let pathName = path.slice(1)
+  try {
+    const res = await axios.get(
+      `https://www.cms-prod-be.theyogainstitute.org/v1/seometatags/?pagePath=${pathName}`
+    )
+    let data = res.data.data.meta
     let headers = {
       title: '',
       links: [],
@@ -36,34 +42,68 @@ const getBlogsMeta = async( slug )=>{
     }
     data = data.replace(/\\n/g, '')
     data = data.split('\n')
-    data.forEach((el) =>{
-      if(el.includes('<meta') || el.includes('<link')){
+    data.forEach((el) => {
+      if (el.includes('<meta') || el.includes('<link')) {
         let obj = {}
         let regExp = /(\S+)="[^"]*/g
         let regexMatches = el.match(regExp)
-                    
-        regexMatches.map(el=>{
+
+        regexMatches.map((el) => {
           let partition = el.split('="')
-          obj[partition[0]] = partition[1].replace(/"/g,'')
+          obj[partition[0]] = partition[1].replace(/"/g, '')
         })
-                    
-        if(el.includes('<meta'))
-          headers.metaData.push(obj)
-        if(el.includes('<link'))
-          headers.links.push(obj)
-      }
-      else if(el.includes('<title'))
+
+        if (el.includes('<meta')) headers.metaData.push(obj)
+        if (el.includes('<link')) headers.links.push(obj)
+      } else if (el.includes('<title'))
         headers.title = el.replace('<title>','').replace('</title>','')
-      else if(el.includes('<script'))
-        headers.script = el
-                
+      else if (el.includes('<script')) headers.script = el
     })
-    return headers
-  }catch(err){
-    console.log(err)
+    return { ...headers, h1Tag: metaDataObj?.[path]?.h1Tag, h2Tags: metaDataObj?.[path?.h2Tags] }
+  } catch (err) {
+    if(metaDataObj[path]) return metaDataObj[path]
+    try{
+      const res = await axios.get(`https://www.cms-prod-be.theyogainstitute.org/v1/post${ path }`)
+      let data =  res.data.data.meta
+      let headers = {
+        title: '',
+        links: [],
+        metaData: [],
+        script: '',
+      }
+      data = data.replace(/\\n/g, '')
+      data = data.split('\n')
+      data.forEach((el) =>{
+        if(el.includes('<meta') || el.includes('<link')){
+          let obj = {}
+          let regExp = /(\S+)="[^"]*/g
+          let regexMatches = el.match(regExp)
+                      
+          regexMatches.map(el=>{
+            let partition = el.split('="')
+            obj[partition[0]] = partition[1].replace(/"/g,'')
+          })
+                      
+          if(el.includes('<meta'))
+            headers.metaData.push(obj)
+          if(el.includes('<link'))
+            headers.links.push(obj)
+        }
+        else if(el.includes('<title'))
+          headers.title = el.replace('<title>','').replace('</title>','')
+        else if(el.includes('<script'))
+          headers.script = el
+                  
+      })
+      return headers
+    }catch(err){
+      console.log(err)
+    }
   }
-
-
+}
+const getBogLinks = async()=>{
+  const { data } = await axios.get('https://cms-prod-be.theyogainstitute.org/v1/misc/urlsarray')
+  return data.data
 }
 
 app.use(express.static('build', options))
@@ -75,15 +115,18 @@ app.get('*', async(req, res) => {
   const indexHtml = fs.readFileSync(indexHtmlPath)
   const $ = cheerio.load(indexHtml)
   if (reqPath.endsWith('/') && !(reqPath.length === 1 && reqPath === '/')) correctPath = reqPath.slice(0, -1)
-  const metaData = metaDataObj[correctPath] || await getBlogsMeta(correctPath)
+  const metaData = await getMetaData( correctPath )
   let titleTag = null
   let metaArray = []
   let linkArray = []
+  let linkArryBlogs = await getBogLinks()
   let script = ''
   let h1Tag = null
   let h2Tags = []
   let aTags = []
+  let blogATags =[]
 
+  console.log(linkArryBlogs)
   if (metaData && metaData.title) titleTag = `<title>${metaData.title}</title>`
   if(metaData && metaData.links){
     linkArray = metaData.links.map((link)=>{
@@ -105,10 +148,12 @@ app.get('*', async(req, res) => {
   }
   if(metaData && metaData.aTags) {
     aTags = metaData.aTags.map((url)=>`<a class="meta-heading" href=${ url } >${ url }</a>`)
+    blogATags = linkArryBlogs.map((url)=>`<a class="meta-heading" href=${ url } >${ url }</a>`)
   }
+  
 
   $('head').append([titleTag, script, ...metaArray, ...linkArray])
-  $('body').append([h1Tag, ...h2Tags,...aTags])
+  $('body').append([h1Tag, ...h2Tags,...aTags,...blogATags])
   res.status(200).send($.html())
 })
 
