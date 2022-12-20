@@ -4243,8 +4243,53 @@ const printMedia = [
     year:'2022',
     media:[
       {
+        img:`${ baseDomain }${ printMediaAssest.printMediaAssest938}`,
+        url:'https://epaper.navbharattimes.com/imageview_8916_76949_4_16_04-12-2022_6_i_1_sf.html',
+        alt:'nbt-december4-2022'
+      },
+      {
+        img:`${ baseDomain }${ printMediaAssest.printMediaAssest939}`,
+        url:'	https://epaper.navbharattimes.com/imageview_8975_58416_4_13_05-12-2022_10_i_1_sf.html',
+        alt:'nbt-december5-2022'
+      },
+      {
+        img:`${ baseDomain }${ printMediaAssest.printMediaAssest940}`,
+        url:'https://epaper-sakal-application.s3.ap-south-1.amazonaws.com/EpaperData/Sakal/Pune/2022/12/08/Main/Sakal_Pune_2022_12_08_Main_DA_003/44_130_1276_990.jpg',
+        alt:'esakal-december8-2022'
+      },
+      {
+        img:`${ baseDomain }${ printMediaAssest.printMediaAssest941}`,
+        url:'https://epaper.esakal.com/FlashClient/Client_Panel.aspx#',
+        alt:'esakal-december8-2022'
+      },
+      {
+        img:`${ baseDomain }${ printMediaAssest.printMediaAssest942}`,
+        url:'https://epaper.navbharattimes.com/imageview_10092_77252_4_16_11-12-2022_2_i_1_sf.html',
+        alt:'nbt-december11-2022'
+      },
+      {
+        img:`${ baseDomain }${ printMediaAssest.printMediaAssest943}`,
+        url:'	https://epaper.navbharattimes.com/imageview_10246_67423_4_16_12-12-2022_8_i_1_sf.html',
+        alt:'nbt-december12-2022'
+      },
+      {
+        img:`${ baseDomain }${ printMediaAssest.printMediaAssest944}`,
+        url:'https://epaper-sakal-application.s3.ap-south-1.amazonaws.com/EpaperData/Sakal/Pune/2022/12/12/Main/Sakal_Pune_2022_12_12_Main_GN_0102/44_1236_808_2430.jpg',
+        alt:'esakal-november12-2022'
+      },
+      {
+        img:`${ baseDomain }${ printMediaAssest.printMediaAssest945}`,
+        url:'https://epaper.navbharattimes.com/imageview_11242_77638_4_16_18-12-2022_6_i_1_sf.html',
+        alt:'nbt-december18-2022'
+      },
+      {
+        img:`${ baseDomain }${ printMediaAssest.printMediaAssest946}`,
+        url:'https://epaper.timesgroup.com/article-share?article=18_12_2022_017_016_toim_TOI',
+        alt:'Times of India Mumbai-december18-2022'
+      },
+      {
         img:`${ baseDomain }${ printMediaAssest.printMediaAssest936 }`,
-        url:'https://epaper.navbharattimes.com/imageview_7744_78256_4_16_27-11-2022_4_i_1_sf.html',
+        url:'https://epaper.navbharattimes.com/imageview_11242_77638_4_16_18-12-2022_6_i_1_sf.html',
         alt:'nbt-november13-2022'
       },
       {
