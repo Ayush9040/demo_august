@@ -4275,7 +4275,7 @@ const printMedia = [
       {
         img:`${ baseDomain }${ printMediaAssest.printMediaAssest944}`,
         url:'https://epaper-sakal-application.s3.ap-south-1.amazonaws.com/EpaperData/Sakal/Pune/2022/12/12/Main/Sakal_Pune_2022_12_12_Main_GN_0102/44_1236_808_2430.jpg',
-        alt:'esakal-november12-2022'
+        alt:'esakal-december12-2022'
       },
       {
         img:`${ baseDomain }${ printMediaAssest.printMediaAssest945}`,
