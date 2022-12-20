@@ -2514,7 +2514,17 @@ export const printMediaAssest = {
   printMediaAssest935:'/print_media/new2022/Navbharat Times Epaper - 20th November 2022.jpg',
   printMediaAssest936:'/print_media/new2022/Navbharat-Times-Epaper-27th-November-2022.jpg',
   printMediaAssest937:'/print_media/new2022/Navbharat-Times-Epaper-28th-November-2022.jpg',
+  printMediaAssest938:'/print_media/new2022/Navbharat Times Epaper - 4th December 2022.jpg',
+  printMediaAssest939:'/print_media/new2022/Navbharat-Times-Epaper-5th-December-2022.jpg',
+  printMediaAssest940:'/print_media/new2022/sakal- 4-dec-2022.jpg',
+  printMediaAssest941:'/print_media/new2022/sakal-2-4-dec.jpg',
+  printMediaAssest942:'/print_media/new2022/Navbharat Times Epaper - 11th December 2022.jpg',
+  printMediaAssest943:'/print_media/new2022/Navbharat-Times-Epaper-12th-December-2022.jpg',
+  printMediaAssest944:'/print_media/new2022/esakal-12th-December-2022.jpg',
+  printMediaAssest945:'/print_media/new2022/Navbharat-Times-Epaper-18th-December-2022.jpg',
+  printMediaAssest946:'/print_media/new2022/TOI_Mumbai_18-12-2022-1.jpg'
 }
+
 
 export const locateAsset ={
   India:'/Locate_us/Flag-India.jpg',
