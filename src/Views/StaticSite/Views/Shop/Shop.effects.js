@@ -12,6 +12,7 @@ export function* handleGetActiveCartDataEffect() {
       cartItems: cartData,
       activeCartId: data.data._id
     }))
+    localStorage.setItem('cart',JSON.stringify(cartData))
   } catch (err) {
     yield put(getActiveCartDataError())
   }

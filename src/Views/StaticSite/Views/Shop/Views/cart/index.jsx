@@ -31,7 +31,6 @@ const AddToCart = () => {
   let { location } = useSelector(item=>item.location)
 
   const displayCart =async( )=>{
-    await dispatch(getActiveCartData())
     setIsLoading(true)
     const arr =[]
     const products = cart.length >0 ? cart : localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) :[]
