@@ -59,6 +59,7 @@ import Authentication from '../Views/Authentication'
 import OrderHistroy from '../Views/Shop/Views/order-history'
 const SearchModal = lazy(()=>import( '../Views/SearchModal'))
 import CampaignThankYou from '../Views/LandingPage/ThankYouPage'
+import StudentExperience from '../Views/Experience/Views/StudentExperience'
 // import VolunteerPage from '../Views/Volunteer'
 // import VolunteerPage from '../Views/Volunteer'
 // import Thankyou from '../Components/EnrollmentForm/ThankYou'
@@ -364,6 +365,14 @@ const staticSiteRoutes = [
     id: 'statisSiteTestimonials',
     routePath: '/testimonials',
     name: 'Testimonials',
+  },
+  {
+    Component: StudentExperience,
+    path: '/student-experience',
+    exact: true,
+    id: 'statisSitestudent-experience',
+    routePath: '/student-experience',
+    name: 'student-experience',
   },
   {
     Component: TermsCondition,

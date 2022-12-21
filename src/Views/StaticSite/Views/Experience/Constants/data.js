@@ -1,4 +1,4 @@
-import baseDomain, { experienceAssets, homeAssets } from '../../../assets/images/imageAsset'
+import baseDomain, { experienceAssets, homeAssets, studentExperienceAssests } from '../../../assets/images/imageAsset'
 
 export const listData=[
   {
@@ -190,4 +190,61 @@ export const listData1=[
   //   designation:'7m offline',
   //   message:'After a messy break-up, I needed to heal. My parents recommended that I involve myself with Yoga. At first, I was quite hesitant, because I didn’t know if it would help. But stepping into the place itself, I could feel a change of energy within me. There are such strong positive vibrations over here – you cannot help feeling relaxed and rejuvenated. I am doing the 7-month TTC course here and I learn something new every day, which I love!'
   // },
+]
+
+export const listData2 = [
+  {
+    name:'Rohan Singh',
+    designation:'Student from 7 months TTC',
+    image:`${baseDomain}${studentExperienceAssests.Rohan}`,
+    message:'My life has completely changed ever since I have been associated with The Yoga Institute. I have started to be more present, more mindful in all my tasks and relationships. The pace of my life has slowed down; I can appreciate the little things and the small details of life. My many thanks to Hansama and the Institute.'
+  },
+  {
+    name:'Tamara Bućma Kecman',
+    designation:'Student from Bosnia and Herzegovina',
+    image:`${baseDomain}${studentExperienceAssests.Tamara}`,
+    message:'I have been practicing Yoga asanas for a long time, but always felt that the physical part is not sufficient, that it lacked the substance. I came across the two-month Online BTT Course by pure chance, and now I am so glad and grateful that I did. The course is wonderful, the syllabus is wisely structured for beginners to get the information needed to start slowly building their own practice, and the teachers are very knowledgeable, dedicated, and sincerely interested in student`s success and overcoming challenges. The bonus part is the people in the group, the classmates, who become the true support group and friends without prejudices. I have enjoyed every single moment.'
+  },
+  {
+    name:'Kiran Kapoor',
+    designation:'Student from London',
+    image:`${baseDomain}${studentExperienceAssests.Kiran}`,
+    message:'I had always wanted to learn more about yoga, beyond the asanas. It was covid time that my friend introduced me to yoga institute and after following for few months I took the plunge. And I am extremely happy that I did this for myself. I learned a lot and it has changed my complete perspective of looking at other things, situations and myself. I would highly recommend this to someone who like me is sitting on the edge for joining this course. Online option worked perfectly well for me and all the teachers were very knowledgeable, disciplined and approachable. I surely would like to advance on this journey in near future with yoga institute.'
+  },
+  {
+    name:'Tanvi Jain',
+    designation:'200 hrs TTC Student',
+    image:`${baseDomain}${studentExperienceAssests.Tanvi}`,
+    message:'Enrolling myself for the BTTC program at TYI has been my best decision so far. I have learnt a lot, not just about Yoga but about LIFE. Teachers &amp; Coordinators are knowledgeable and inspiring. They gave their best and answered queries with patience. Along with that, I got to learn from my classmates. The whole ambience of the class was so positive. Being a new mother, I was not sure that I will be able to fully dedicate to the classes but I didn`t miss out on any class. I looked forward to them every day. It was such a great learning experience. And its not the end but just the beginning. I want to Thank everyone for their continuous support in this journey. Grateful'
+  },
+  {
+    name:'Virginie Albar Mounier',
+    designation:'Student from France',
+    image:`${baseDomain}${studentExperienceAssests.Virginie}`,
+    message:'I have been wanting to become a Yoga teacher and I really wanted to follow the course in India. For me, Yoga has a deep and true meaning, as my grandfather taught me a few lines of Yoga philosophy when I was a child. After the lockdown, the path opened, leading straight to The Yoga Institute. Coming from France, I really wanted to enrol in an “on-campus” class to receive good knowledge. I chose the 2 Months part-time TTC to allow me to get enough time to settle in the course. During this period, I also stayed at the hostel. It was a total immersion in yogic life. I met wonderful teachers, formed sincere links with beautiful people, ate fresh and delicious food, walked in the magnificent garden and had the opportunity to meet Dr. Hansaji Yogendra many times. My life changed in a positive way! I have learned to respect and love myself, to keep faith and hope in every situation. I allow myself to live my own life, to be me just as I am. I am now a Yoga instructor in France, teaching with dedication and happiness. I feel really blessed and very grateful'
+  },
+  {
+    name:'Jacqueline Mulliert',
+    designation:'Student from Mexico',
+    image:`${baseDomain}${studentExperienceAssests.Jacqueline}`,
+    message:'I can say that the 2 Months Online Teacher Training Course is just mind blowing! I`m Mexican and here, when we think of yoga, 98% of people will just picture postures that will make you look like a beautiful `pretzel` or someone in a meditative posture “being Zen”. After much research, I found this Institute, which definitely changed my life for good and I am always going to be grateful for it. Because here, I could not only study yoga, to understand this amazing way of life, the root and essence of it. What is so valuable is that for every technique, asanas, kriya, pranayama, meditation, etc., teachers explained limitations and contraindications also. What I experience in my country or even online are so many studios that just teach you the postures and refer to it as a workout and not even talk about the limitations or what yoga means. For me, every session was a mind-blowing moment of knowledge. Every teacher is so amazing, happy and smiling. They teach such difficult knowledge like Yoga Sutras in a very simple way, and the way they prepare you in Practice Teaching classes to become a teacher is amazing; for me, each one of them is my guru. I am definitely coming back to do the advanced course.'
+  },
+  {
+    name:'Vaidehi Ajit Kale',
+    designation:'Student from 2 Months Teachers Training Course',
+    image:`${baseDomain}${studentExperienceAssests.Vaidehi}`,
+    message:'The Yoga Institute has helped me with deep learning, compassion and joy. In today`s world with so many options to learn yoga, finding the Institute was the best decision I took to discover what my body needs. The teachers at the Institute touch the spirit of what yoga means and are extremely generous in imparting the knowledge with us. The real transformation for me is that I feel calmer and more peaceful. I wish I had taken up an offline class rather than an online class. Looking forward to joining an offline class or visiting the Institute someday to experience the tranquillity. The journey for me towards self growth has just begun and I intend to grow more with the Yogic path. I am happily in my best physical and mental state ever. Gratitude towards all the teachers for being kind, helpful, guiding us and making us feel a part of the yoga community'
+  },
+  {
+    name:'Sankshita Zutshi',
+    designation:'Yoga Therapy Student',
+    image:`${baseDomain}${studentExperienceAssests.Sankshita}`,
+    message:'Learning never stops and as a Yoga professional, it is your `Dharma` to constantly work on improving yourself. And this Yoga Therapy course helps you do that and gives you so much more. It`s rich in theory, as well as in its practical application on 80+ diseases. Each medical condition is explained in great detail by Taruna Ma`am in class. And the written course material is well structured and in-depth. The virtual classes run so smoothly, you won’t even realize how 4 months pass by and soon you`ll be appearing for your exams! Tip for future students: Study from Day 1, you`ll soon know why.'
+  },
+  {
+    name:'Monika Mehta,',
+    designation:'BTTC Student',
+    image:`${baseDomain}${studentExperienceAssests.Monika}`,
+    message:'This course at TYI has been a teacher, a reminder. I learned a lot. For example, I used to never pay importance to the physical aspect of life, the value of breathing or of easy ways of leaving life with a sattvik attitude. The Yoga Institute has an amazing team and the same attitude towards everyone from the teachers, familiarizing us with the mental and emotional as well as physical attitude towards life. A mere ‘thank you’ seems not enough to express my gratitude..'
+  },
 ]
