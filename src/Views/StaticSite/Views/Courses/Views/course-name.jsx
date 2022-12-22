@@ -9,6 +9,7 @@ import { Helmet } from 'react-helmet'
 import metaDataObj from '../../../../../Constants/metaData.json'
 import { cmsBaseDomain } from '../../../../../Constants/appSettings'
 import RelatedCourse from './Component'
+import RelatedBlogs from './RelatedBlogs'
 
 const SingleCourse = () => {
 
@@ -19,6 +20,7 @@ const SingleCourse = () => {
   const [isLoading, setIsLoadding] = useState(false)
   const [ metaData,setMetaData ] = useState([])
   const [ cardData,setCardData ] = useState([])
+  const [ blogData,setBlogData ] = useState([])
   const [ titleTag,setTitleTag ] = useState('')
 
   const parsingAlgo = async()=>{
@@ -30,6 +32,10 @@ const SingleCourse = () => {
       setCardData( res.data.data.relatedCourses.map( item=>{
         return AllCourses.find(el=>el.key===item)
       } ) )
+      setBlogData( res.data.data.relatedPosts.map( async(item)=>{
+        const { data } = await axios.get(`${ cmsBaseDomain }/misc/slug/${ item }`)
+        return data.data
+      }) )
       let headers = {
         title: '',
         links: [],
@@ -63,7 +69,6 @@ const SingleCourse = () => {
     }
   }
   
-  
   useEffect(() =>{
     setIsLoadding(true)
     setPageData(AllCourses.find(item=>item.key === contentId))
@@ -93,6 +98,13 @@ const SingleCourse = () => {
         title={'Related Courses'}
         description={' lorem ipsum '}
         cardData={ cardData }
+        url={'/courses'}
+      />}
+
+      { blogData && blogData.length>0 && <RelatedBlogs
+        title={'Related Courses'}
+        description={' lorem ipsum '}
+        cardData={ blogData }
         url={'/courses'}
       />}
     </>
