@@ -56,10 +56,7 @@ const CourseDetails = ({
       return true
     } 
       break
-    case 'pranayama-workshop': if(courseDate !== '18th December 2022'){
-      
-      return true
-    } 
+    default: return false  
     }
   }
 

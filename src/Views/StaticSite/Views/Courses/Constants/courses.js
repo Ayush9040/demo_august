@@ -6756,7 +6756,6 @@ const camps = {
       },
     },
     dates: [
-      '17th Dec to 18th Dec 2022',
       '23rd & 24th January 2023',
       '18th & 19th February 2023',
       '20th & 21st March 2023',
@@ -6775,8 +6774,8 @@ const camps = {
     colorCode: '#EDBE66',
     timing: '9:30 am – 5:30 pm (IST)',
     fees: {
-      onlineFee: 1500,
-      offlineFee: { residentialFee: 0, nonResidentialFee: 1500 },
+      onlineFee: 2000,
+      offlineFee: { residentialFee: 0, nonResidentialFee: 2000 },
     },
     category: 'camps',
     metaDescription: 'Insightful session with a medical specialists.',
