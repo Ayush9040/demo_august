@@ -105,7 +105,7 @@ const SingleCourse = () => {
         title={'Related Courses'}
         description={' lorem ipsum '}
         cardData={ blogData }
-        url={'/courses'}
+        url={'/blogs'}
       />}
     </>
   )

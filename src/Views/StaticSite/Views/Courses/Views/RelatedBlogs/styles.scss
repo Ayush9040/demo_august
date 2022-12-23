@@ -1,0 +1,114 @@
+.related_courses_div {
+  padding: 6rem 10rem;
+  gap: 5rem;
+  .content-container {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    gap: 2rem;
+    align-items: flex-start;
+    .course-cards {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      gap: 2rem;
+      .course-card {
+        width: 100%;
+        max-width: 360px;
+      }
+    }
+  }
+  .pd-career {
+    padding: 2rem;
+  }
+  .text-content {
+    padding: 2rem 5rem 0 0;
+    font-size: 1.5rem;
+    width: 100%;
+  }
+  .text-content-right {
+    padding: 0rem 0rem 5rem 2rem;
+    margin-top: 1rem;
+    p {
+      font-size: 2rem;
+      margin-bottom: 3rem;
+    }
+  }
+  .banner-heading {
+    margin: 0;
+    font-size: 2.75rem;
+    width: max-content;
+    font-weight: bolder;
+    h1 {
+      font-size: 3rem;
+      display: inline-block;
+    }
+  }
+  .bottom-line {
+    height: 3px;
+    border-radius: 200%;
+    width: 100%;
+    background: #bc4f31;
+
+    margin-bottom: 1rem;
+  }
+  .image-content {
+    padding: 1rem;
+    width: 100%;
+  }
+  .image-content img {
+    border-radius: 50px;
+    width: 95%;
+    margin-left: 5%;
+  }
+}
+
+@media (max-width: 1220px) {
+  .related_courses_div {
+    .content-container{
+      display: flex;
+      flex-wrap: wrap-reverse;
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .related_courses_div {
+    .content-container {
+      .course-cards {
+        justify-content: center;
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .related_courses_div {
+    .banner-heading {
+      h1 {
+        width: 100%;
+        text-align: center;
+      }
+    }
+    .content-container{
+      .course-cards{
+        flex-wrap: wrap;
+        justify-content: center;
+        .course-card{
+          max-width: 320px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 620px) {
+  .related_courses_div {
+    .content-container {
+      .course-cards {
+        flex-direction: column;
+        min-width: 100%;
+      }
+    }
+  }
+}
