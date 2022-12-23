@@ -133,9 +133,9 @@ const SingleProduct = () => {
               ))}
             </div>
           </div> */}
-          <div className='view_more_btn'>
+          {/* <div className='view_more_btn'>
             <CommonBtn text='View More' />
-          </div>
+          </div> */}
         </div>
       </div>
       <ToastContainer />

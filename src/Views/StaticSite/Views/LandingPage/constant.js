@@ -111,7 +111,7 @@ export const popularCourses = [
 export const CampsWorkShops = [
   {
     img: 'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/Courses/Camps/Stress_Management_Camp.jpeg',
-    text: 'Stress Management Camp)',
+    text: 'Stress Management Camp',
     url: '/stress-management-camp',
   },
   {

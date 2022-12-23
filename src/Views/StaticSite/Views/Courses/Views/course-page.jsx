@@ -9,6 +9,13 @@ import { c200hr,c500hr,c900hr,campsArr,AllCourses, classesArr } from '../Constan
 import baseDomain,{ certificates } from '../../../assets/images/imageAsset'
 import { Helmet } from 'react-helmet'
 import metaDataObj from '../../../../../Constants/metaData.json'
+import { Link } from 'react-router-dom'
+import {
+  Accordion,
+  AccordionItem,
+  AccordionItemHeading,
+  AccordionItemButton,
+} from 'react-accessible-accordion'
 
 // import {
 //   courseArray,
@@ -70,6 +77,57 @@ const Courses = () => {
           </label>
         </div> */}
         </div>
+        <div className="popular-courses">
+          <div className="course-accordian">
+            <Accordion allowZeroExpanded>
+              <AccordionItem>
+                <AccordionItemHeading>
+                  <AccordionItemButton>
+                    <Link to="/courses/browse/most-popular">
+                      <p> Most Popular</p>
+                    </Link>
+                  </AccordionItemButton>
+                </AccordionItemHeading>
+              </AccordionItem>
+              <AccordionItem>
+                <AccordionItemHeading>
+                  <AccordionItemButton>
+                    <Link to="/courses/browse/ttc">
+                      <p>Teachers Training</p>
+                    </Link>
+                  </AccordionItemButton>
+                </AccordionItemHeading>
+              </AccordionItem>
+              <AccordionItem>
+                <AccordionItemHeading>
+                  <AccordionItemButton>
+                    <Link to="/courses/browse/camps-workshops">
+                      <p>Camps & Workshop</p>
+                    </Link>
+                  </AccordionItemButton>
+                </AccordionItemHeading>
+              </AccordionItem>
+              <AccordionItem>
+                <AccordionItemHeading>
+                  <AccordionItemButton>
+                    <Link to="/courses/browse/classes">
+                      <p>Regular Classes</p>
+                    </Link>
+                  </AccordionItemButton>
+                </AccordionItemHeading>
+              </AccordionItem>
+              <AccordionItem>
+                <AccordionItemHeading>
+                  <AccordionItemButton>
+                    <Link to="/courses/browse/certificate-courses">
+                      <p>Certificate Courses</p>
+                    </Link>
+                  </AccordionItemButton>
+                </AccordionItemHeading>
+              </AccordionItem>
+            </Accordion>
+          </div></div>
+
         <div className="courses-introduction">
           <div className="intro-text">
             <h1>More than just learning</h1>
