@@ -770,10 +770,10 @@ const staticSiteRoutes = [
   },
   {
     Component: NutriDietClinic,
-    path: '/Nutri-clinic-landing-page',
+    path: '/nutri-clinic-landing-page',
     exact: true,
     id: 'statisSiteNutriClinic',
-    routePath: '/Nutri-clinic-landing-page',
+    routePath: '/nutri-clinic-landing-page',
     name: 'NutriClinic',
   },
 ]
