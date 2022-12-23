@@ -7952,46 +7952,6 @@ const camps = {
       {
         type: 'paragraph',
         content: {
-          title: 'PRE-REQUISITES',
-          text: [],
-        },
-      },
-      {
-        type: 'u-list',
-        content: {
-          title: ' A MANDATORY PREREQUISITE FOR THIS COURSE IS',
-          points: [
-            {
-              listItem:
-                'Covid test RT-PCR results dated 20th January 2022to 28th January 2022and later for entry into the premises post prior registration. ',
-              subItems: [],
-            },
-            {
-              listItem:
-                'Students must use personal vehicles for commuting, throughout the course duration. We would discourage the use of public transport. (For non-residential students)',
-              subItems: [],
-            },
-            {
-              listItem:
-                'This course is for healthy individuals. Kindly note if you suffer from any health issues like diabetes, hypertension, or orthopaedic problems, kindly take prior approval.',
-              subItems: [],
-            },
-            {
-              listItem:
-                'For international Students, it is mandatory to do 14 Day Quarantine as per the laws of Government of India along with RT-PCR test reports. ',
-              subItems: [],
-            },
-            {
-              listItem:
-                'Last but not the least, do not forget your masks and Yoga Mats',
-              subItems: [],
-            },
-          ],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
           title: 'FAQs  ',
           text: [],
         },
@@ -8317,46 +8277,6 @@ const camps = {
           title: '',
           text: [
             '*Please note fees once paid will be non-refundable. We support all credit cards. For making payments using MasterCard. Alternatively, you can also make payments using net banking or opt for wire transfer by writing to us.',
-          ],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'PRE-REQUISITES',
-          text: [],
-        },
-      },
-      {
-        type: 'u-list',
-        content: {
-          title: ' A MANDATORY PREREQUISITE FOR THIS COURSE IS',
-          points: [
-            {
-              listItem:
-                'Covid test RT-PCR results dated 20th January 2022to 28th January 2022and later for entry into the premises post prior registration. ',
-              subItems: [],
-            },
-            {
-              listItem:
-                'Students must use personal vehicles for commuting, throughout the course duration. We would discourage the use of public transport. (For non-residential students)',
-              subItems: [],
-            },
-            {
-              listItem:
-                'This course is for healthy individuals. Kindly note if you suffer from any health issues like diabetes, hypertension, or orthopaedic problems, kindly take prior approval.',
-              subItems: [],
-            },
-            {
-              listItem:
-                'For international Students, it is mandatory to do 14 Day Quarantine as per the laws of Government of India along with RT-PCR test reports. ',
-              subItems: [],
-            },
-            {
-              listItem:
-                'Last but not the least, do not forget your masks and Yoga Mats',
-              subItems: [],
-            },
           ],
         },
       },
