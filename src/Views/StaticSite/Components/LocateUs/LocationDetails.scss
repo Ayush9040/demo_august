@@ -32,6 +32,10 @@
   }
 }
 
+.apply-address h5 {
+  font-size: 1.75rem;
+}
+
 .courses-details {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -103,9 +107,6 @@
   }.apply-address{
     margin-top: 10px;
     padding-bottom: 3rem;
-  }
-  .apply-address h5 {
-    font-size: 1.75rem;
   }
   .apply-details-left img {
     width: 65%;

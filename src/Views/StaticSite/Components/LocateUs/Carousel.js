@@ -59,6 +59,16 @@ const Carousel = () => {
             Yogic lifestyle recommendations. Further, based on participant
             health conditions separate guidance is given.
           </p>
+          <div className="apply-address">
+            <h5>Address -</h5>
+            <h5>The Yoga Institute, Matunga </h5>
+            <h5>
+              Sri Kanyaka Parmeshwari Temple, Plot No 403, Vasavi Nilayam,
+              Telang Road, Matunga
+            </h5>
+            <h5>(CR),Mumbai</h5>
+            <h5>Contact us - <a href='tel: + 91 9343517490'>+ 91 9343517490</a></h5>
+          </div>
         </div>
       </div>
       <div className="apply-main">
