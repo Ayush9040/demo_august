@@ -481,18 +481,11 @@
         .int_img_text21 {
           margin-right: 0;
           .int_text21 {
-            .title_21 {
-              // padding: 1rem;
-              // text-align: center;
-            }
+
             .subtitle_21 {
               width: 88%;
               margin: 4rem;
             }
-          }
-          // flex-wrap: wrap;
-          .int_img21 {
-            // margin: 0 auto;
           }
         }
       }
@@ -526,6 +519,19 @@
       border-radius: 0 30px 30px 0;
       margin-top: 2rem;
       padding: 1rem 0 0 0;
+    }
+
+    .section_1_2 .bg_img_21 .img_form_21 .form_text .left_heading1{
+      font-size: 4.5rem;
+    }
+    .section_1_2 .bg_img_21 .img_form_21 .form_text .left_heading_text{
+      font-size: 4rem;
+    }
+    .section_1_2 .bg_img_21 .img_form_21 .form_text .left_heading_bold{
+      font-size: 4.5rem;
+    }
+    .section_1_2 .bg_img_21 .img_form_21 .form_text .left_heading2{
+      font-size: 5rem;
     }
       .section_1_2 .bg_img_21 .img_form_21 .form-phone-info {
         width: 25%;

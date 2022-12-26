@@ -1533,7 +1533,7 @@ export const studentExperienceAssests = {
   Kiran:'/Home/Student-Experience/Kiran-Kapoor.png',
   Monika:'/Home/Student-Experience/Monika-Mehta.png',
   Sankshita:'/Home/Student-Experience/Sankshita-Zutshi.png',
-  Tamara:'/Home/Student-Experience/Tamara-Bućma-Kecman .png',
+  Tamara:'/Home/Student-Experience/Tamara-Bućma-Kecman.png',
   Tanvi:'/Home/Student-Experience/Tanvi-Jain-200-hrs-TTC-student.png',
   Vaidehi:'/Home/Student-Experience/Vaidehi-Ajit-Kale.png',
   Virginie:'/Home/Student-Experience/Virginie-Albar-Mounier.png'
