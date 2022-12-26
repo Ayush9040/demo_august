@@ -126,7 +126,7 @@ const Shop = () => {
     dots: true,
     arrows: false,
     infinite: true,
-    speed: 3000,
+    speed: 5000,
     slidesToShow: 1,
     slidesToScroll: 1,
     centerMode: false,

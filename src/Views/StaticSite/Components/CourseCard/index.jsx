@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import React from 'react'
 
 import CommonBtn from '../commonbtn'
@@ -56,6 +56,7 @@ const CourseCard = ({
   //     setRatingArr(arr)
   //   }
   // }, [])
+  const navigate = useNavigate()
 
   const [selectDate, setSetselectDate] = useState(null)
   // localStorage.setItem('selectedDate', selectDate)
@@ -74,7 +75,7 @@ const CourseCard = ({
   return (
     <div className="course-card">
       <div className="course-card-image">
-        <img src={img} alt={courseTitle} />
+        <img src={img} alt={courseTitle} onClick={()=>{ navigate(`/${path}`)}} />
         {/* <div className="stars">
           {ratingArr.length !== 0 &&
             ratingArr.map((item, id) => <StarIcon key={id} />)}
