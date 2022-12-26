@@ -10,6 +10,8 @@ import { landingLogo } from '../../../../assets/icons/icon'
 import LandingButton from '../../../../Components/LandingCourse/LandingButton'
 import NutriBlogs from '../../../../Components/LandingCourse/NutriBlogs'
 import Slider from 'react-slick'
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css'
 import { testimonialData3 } from '../../constant'
 
 const NutriDietClinic = () => {

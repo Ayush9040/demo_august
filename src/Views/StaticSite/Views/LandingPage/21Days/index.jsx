@@ -10,6 +10,8 @@ import FeatuedBlogs from '../../../Components/LandingCourse'
 import { testimonialData2 } from '../constant'
 import { popularCourses } from '../constant'
 import Slider from 'react-slick'
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css'
 import CampaignThankYou from '../ThankYouPage'
 import { creatForm, successMail } from '../Api'
 
