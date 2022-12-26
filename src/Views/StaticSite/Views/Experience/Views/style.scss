@@ -46,6 +46,9 @@
         object-fit: cover;
         border-radius: 10px;
       }
+      .student-img{
+        object-fit: contain;
+      }
     }
     .right {
       padding: 20px 10px;

@@ -1,7 +1,6 @@
 import React from 'react'
 import InnerNavComponent from '../../../Components/InnerNavComponent'
 import { listData2 } from '../Constants/data'
-import AlumniCarousel from '../../../Components/AluminiCarousel'
 import { Helmet } from 'react-helmet'
 import metaDataObj from '../../../../../Constants/metaData.json'
 import { useLocation } from 'react-router-dom'
@@ -48,7 +47,6 @@ const StudentExperience = () => {
               </div>
             ))}
           </section>
-          <AlumniCarousel />
         </div>
       </div>
     </>
