@@ -5,6 +5,7 @@ import { Helmet } from 'react-helmet'
 import metaDataObj from '../../../../../Constants/metaData.json'
 import { useLocation } from 'react-router-dom'
 import './style.scss'
+import { useEffect } from 'react'
 
 
 const StudentExperience = () => {
@@ -17,6 +18,9 @@ const StudentExperience = () => {
     menuColor:'orange',
     menuItems:[]
   }
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
   return (
     <>
       { metaDataObj[location.pathname] && 
