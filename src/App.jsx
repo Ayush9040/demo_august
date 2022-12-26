@@ -8,7 +8,7 @@ import {
 import MetaTags from './Components/MetaTags'
 
 import { MainRoutes } from './Constants/routes'
-import Home from './Views/StaticSite/Views/Home'
+import Pagenotfound from './Views/StaticSite/Components/404 Error'
 
 
 const App = () => {
@@ -20,7 +20,7 @@ const App = () => {
         {MainRoutes.map(({ Component, path }) => {
           return <Route element={<Component />} path={path} key={path} />
         })}
-        <Route path='*' element={ <Home/>} />
+        <Route path='*' element={ <Pagenotfound/>} />
       </Routes>
     </Suspense>
   )

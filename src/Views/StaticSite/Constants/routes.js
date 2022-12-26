@@ -761,20 +761,20 @@ const staticSiteRoutes = [
     name:'OrderHistory'
   },
   {
-    Component: DescisionComp,
-    path: '/:contentId',
-    exact: true,
-    id: 'statisSiteCourse',
-    routePath: '/:contentId',
-    name: 'singleCourse',
-  },
-  {
     Component: NutriDietClinic,
     path: '/nutri-clinic-landing-page',
     exact: true,
     id: 'statisSiteNutriClinic',
     routePath: '/nutri-clinic-landing-page',
     name: 'NutriClinic',
+  },
+  {
+    Component: DescisionComp,
+    path: '/:contentId',
+    exact: true,
+    id: 'statisSiteCourse',
+    routePath: '/:contentId',
+    name: 'singleCourse',
   },
 ]
 

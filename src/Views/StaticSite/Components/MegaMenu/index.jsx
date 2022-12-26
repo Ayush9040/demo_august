@@ -316,11 +316,11 @@ const MegaMenu = ({ setNav }) => {
                     Certificate Course on Advanced Pranayama Techniques
                   </li>
                 </Link>
-                <Link onClick={() => {setNav(false)}}  to="/certification-course-on-yoga-sutra-online">
+                {/* <Link onClick={() => {setNav(false)}}  to="/certification-course-on-yoga-sutra-online">
                   <li className="text-bold" >
                     Certificate Course on Yoga Sutra-Online
                   </li>
-                </Link>
+                </Link> */}
               </ul>
             </div>
             <div className="single-menu">

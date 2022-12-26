@@ -149,11 +149,11 @@ const CourseSection = ({
               Certificate Course on Advanced Pranayama Techniques - Online
               </li>
             </Link>
-            <Link to="/certification-course-on-yoga-sutra-online">
+            {/* <Link to="/certification-course-on-yoga-sutra-online">
               <li className="text-bold" >
               Certificate Course on Yoga Sutra - Online
               </li>
-            </Link>
+            </Link> */}
           </ul>
         </>
       )
