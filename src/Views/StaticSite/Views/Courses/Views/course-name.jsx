@@ -23,6 +23,19 @@ const SingleCourse = () => {
   const [ blogData,setBlogData ] = useState([])
   const [ titleTag,setTitleTag ] = useState('')
 
+  const getBlogsData = async(posts)=>{
+    const arr=[]
+    for await (let item of posts){
+      try{
+        const { data } = await axios.get(`${ cmsBaseDomain }/misc/slug/${ item }`)
+        arr.push(data.data)
+      }catch(err){
+        console.log(err)
+      }
+    }
+    return arr
+  }
+
   const parsingAlgo = async()=>{
     try {
       const res = await axios.get(
@@ -32,10 +45,9 @@ const SingleCourse = () => {
       setCardData( res.data.data.relatedCourses.map( item=>{
         return AllCourses.find(el=>el.key===item)
       } ) )
-      setBlogData( res.data.data.relatedPosts.map( async(item)=>{
-        const { data } = await axios.get(`${ cmsBaseDomain }/misc/slug/${ item }`)
-        return data.data
-      }) )
+
+      setBlogData(await getBlogsData(res.data.data.relatedPosts))
+
       let headers = {
         title: '',
         links: [],
@@ -102,7 +114,7 @@ const SingleCourse = () => {
       />}
 
       { blogData && blogData.length>0 && <RelatedBlogs
-        title={'Related Courses'}
+        title={'Related Blogs'}
         description={' lorem ipsum '}
         cardData={ blogData }
         url={'/blogs'}

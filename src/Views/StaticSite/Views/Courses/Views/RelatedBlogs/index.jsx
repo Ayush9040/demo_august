@@ -2,11 +2,12 @@ import React from 'react'
 import BlogCard from '../../../../Components/BlogSection/BlogCard'
 import CommonBtn from '../../../../Components/commonbtn'
 import { Link } from 'react-router-dom'
+import './styles.scss'
 
 const RelatedBlogs = ({ cardData, title, url }) => {
   return (
     <div>
-      <div className="related_courses_div">
+      <div className="related_blogs_div">
         <div className="content-container pd-career">
           <div className="text-content-right right-container">
             <div className="text-part">

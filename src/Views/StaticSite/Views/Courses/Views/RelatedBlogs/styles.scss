@@ -1,4 +1,4 @@
-.related_courses_div {
+.related_blogs_div {
   padding: 6rem 10rem;
   gap: 5rem;
   .content-container {
@@ -11,7 +11,7 @@
       display: flex;
       justify-content: flex-end;
       gap: 2rem;
-      .course-card {
+      .blog-card {
         width: 100%;
         max-width: 360px;
       }
@@ -94,7 +94,7 @@
       .course-cards{
         flex-wrap: wrap;
         justify-content: center;
-        .course-card{
+        .blog-card{
           max-width: 320px;
         }
       }
