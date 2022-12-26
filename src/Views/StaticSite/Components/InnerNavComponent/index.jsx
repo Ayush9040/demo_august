@@ -19,6 +19,8 @@ import {
   SearchBlack,
   SearchWhite,
   Cart,
+  CartBlack,
+  CartWhite,
 } from '../../assets/icons/icon'
 import { Link } from 'react-router-dom'
 const MegaMenu = lazy(()=>import('../MegaMenu'))
@@ -70,11 +72,9 @@ const InnerNavComponent = ({ abc }) => {
           </div>
           <div className="main-logo" id={`${ abc.color }`} >
             <span className='mobile-search' onClick={ ()=>{navigate('/')} } >{ abc.color === 'orange' ? Search:abc.color === 'black' ? SearchBlack : SearchWhite }</span>
-            {abc.title==='Shop'
-              ?    <Link className='mobile-search mobile-cart' style={{ marginLeft:'15px' }} to='/shop/cart'>        
-                { Cart }  <span  style={{ color:'#CA4625' }} className='cart-count' >{ cartItems }</span></Link>
-              :null
-            }
+            <Link className='mobile-search mobile-cart' style={{ marginLeft:'15px' }} to='/shop/cart'>        
+              { abc.color === 'orange' ? Cart : abc.color === 'white' ? CartWhite : CartBlack }  <span  style={{ color:'#CA4625' }} className='cart-count' >{ cartItems }</span></Link>
+              
             <Link to="/">
               {abc.color === 'orange'
                 ? legacy1
@@ -107,11 +107,9 @@ const InnerNavComponent = ({ abc }) => {
           </div>
           <div className="user-container">
             <div onClick={ ()=>{navigate('/')} } >{ abc.color === 'orange' ? Search:abc.color === 'black' ? SearchBlack : SearchWhite }</div>
-            {abc.title==='Shop'
-              ?    <Link to='/shop/cart'>        
-                { Cart }  <span style={{ color:'#CA4625' }} className='cart-count' >{ cartItems }</span></Link>
-              :null
-            }
+            <Link to='/shop/cart'>   
+
+              { abc.color === 'orange' ? Cart : abc.color === 'white' ? CartWhite : CartBlack }  <span style={{ color:'#CA4625' }} className='cart-count' >{ cartItems }</span></Link>
            
             <div className='profile-container' onMouseOver={()=>{setDropdown(true)}} onMouseOut={()=>{setDropdown(false)}}  >
               <Link to={isLoggedIn ? '/user/profile':'/user/sign-in'} >
