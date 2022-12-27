@@ -8,6 +8,7 @@ import SevenDaysBlogs from '../../../../Components/LandingCourse/SevenDaysBlogs'
 import SevenDaysThankYou from '../ThankYou'
 import Slider from 'react-slick'
 import { testimonialData4 } from '../../constant'
+import { creatForm, successMail } from '../../Api'
 import './style.scss'
 
 const AboutCamp = () => {
@@ -50,6 +51,25 @@ const AboutCamp = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value })
   }
 
+  const handleForm = async() => {
+    try {
+      await creatForm({ ...formData, formType: 'DAYS7CAMPAIGN' })
+      await successMail({
+        type: 'INFO_TYI',
+        HTMLTemplate: 'DAYS_7_COURSE_FORM_SUBMISSION_MAIL',
+        subject: 'Thank you from The Yoga Institute',
+        data: {
+          name: name,
+        },
+        receivers: [email],
+      })
+
+      setModal(true)
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
   const handleSubmit = (e) => {
     e.preventDefault()
     if (name === '') {
@@ -61,11 +81,10 @@ const AboutCamp = () => {
     } else if (country === '') {
       setErr(4)
     } else {
-      setErr(0)
+      handleForm()
     }
   }
 
-  const intro ='The 7-Day Health Camp is an introductory course to the theoretical and practical aspects of Yoga. Through this camp, the participants will get to learn about the principles of Yoga, and experience the Yogic lifestyle. This health camp will take you on a self-transformational journey which will reshape your life on the physical, mental and spiritual levels.'
   return (
     <div className='main-nutri-seven-days'>
       <main>
