@@ -78,7 +78,20 @@ export const testimonialData3 = [
   }
 ]
 
-
+export const testimonialData4 = [
+  {
+    name: 'Brianne Vaillancourt',
+    info: 'Student from Canada',
+    img: 'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/seven-days/Brianne.png',
+    message: 'For five years, I was in search of a Yoga centre that offers a Teacher Training Course and then finally, I found The Yoga Institute. I came to this place without any expectations and in return, I received a rich and holistic learning experience. The Yoga Institute has a warm and welcoming atmosphere. I recommend the institute and its teacher training course to anyone who is looking for an authentic Yogic experience.'
+  },
+  {
+    name: 'Parineeta Gupta',
+    info: 'Sadhaka',
+    img: 'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/seven-days/Parineeta.png',
+    message:'The 7-day health camp was a much-needed retreat and yet it felt like a home away from home. It was great to soak in the positivity of the ambience at The Yoga Institute. For me, it brought back memories of the camp I attended 20 years ago in the presence of respected Dr. Jayadeva. The Asana classes at the beginning and end of the day were energizing and rejuvenating. The Karma Yoga sessions and learning Yogic concepts through games & enactment were enriching. The music, dance and laughter sessions towards the evening helped to release stress and experience a sense of freedom. Hansaji’s talks about Yoga and interesting stories reflected its practical application and integration into everyday life. All the teachers were very approachable and the volunteers were helpful. All in all, the 7-day health camp was Yoga-in-practice - it kept us joyfully, positively and actively engaged throughout. I shall always cherish the experience.',
+  },
+]
 
 export const popularCourses = [
   {
@@ -172,6 +185,19 @@ export const NutriClinicBlogs =[
     img:'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/Nutri-Clinic/nutri2.jpg',
     text:'Super foods and its importance in our diet',
     url:'/super-foods-and-its-importance-in-our-diet'
+  }
+]
+
+export const SevenBlogs =[
+  {
+    img: 'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/seven-days/importance-and-benefits-of-yoga.jpg',
+    text:'Importance and benefits of yoga',
+    url:'/importance-and-benefits-of-yoga'
+  },
+  {
+    img:'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/seven-days/Yoga-Dos-and-Donts-for-Beginners.jpg',
+    text:'Yoga Dos and Donts for Beginners',
+    url:'/yoga-asanas-dos-and-donts-for-beginners'
   }
 ]
 
