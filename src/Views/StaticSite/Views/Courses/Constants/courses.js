@@ -3086,7 +3086,7 @@ const ttc900hr = {
       offlineFee: { residentialFee: 55000, nonResidentialFee: 55000 },
     },
     category: 'ttc',
-    dates: ['1st Sept 2022', '1st Oct 2022', '1st Nov 2022', '1st Dec 2022'],
+    dates: ['2nd January 2023', '1st February 2023', '1st March 2023', '1st April 2023', '1st May 2023', '1st June 2023', '1st July 2023', '1st August 2023', '1st September 2023', '2nd October 2023', '1st November 2023', '1st December 2023'],
     online: true,
     onCampus: true,
     nonResidential: true,
@@ -4921,7 +4921,7 @@ const ttc900hr = {
       offlineFee: { residentialFee: 55000, nonResidentialFee: 55000 },
     },
     category: 'ttc',
-    dates: ['1st Sept 2022', '1st Oct 2022', '1st Nov 2022', '1st Dec 2022'],
+    dates: ['2nd January 2023', '1st February 2023', '1st March 2023', '1st April 2023', '1st May 2023', '1st June 2023', '1st July 2023', '1st August 2023', '1st September 2023', '2nd October 2023', '1st November 2023', '1st December 2023'],
     online: true,
     onCampus: true,
     nonResidential: true,
@@ -6756,7 +6756,6 @@ const camps = {
       },
     },
     dates: [
-      '17th Dec to 18th Dec 2022',
       '23rd & 24th January 2023',
       '18th & 19th February 2023',
       '20th & 21st March 2023',
@@ -6775,8 +6774,8 @@ const camps = {
     colorCode: '#EDBE66',
     timing: '9:30 am – 5:30 pm (IST)',
     fees: {
-      onlineFee: 1500,
-      offlineFee: { residentialFee: 0, nonResidentialFee: 1500 },
+      onlineFee: 2000,
+      offlineFee: { residentialFee: 0, nonResidentialFee: 2000 },
     },
     category: 'camps',
     metaDescription: 'Insightful session with a medical specialists.',
@@ -11232,8 +11231,8 @@ const classes = {
     },
     category: 'classes',
     dates: ['5:00 p.m. to 7:00 p.m'],
-    online: false,
-    onCampus: true,
+    online: true,
+    onCampus: false,
     nonResidential: false,
     residential: false,
     certficate: false,
@@ -11615,136 +11614,136 @@ const certificate = {
       },
     ],
   },
-  2: {
-    id: '',
-    title: 'Certificate Course on Yoga Sutra - Online',
-    key: 'certification-course-on-yoga-sutra-online',
-    batch: 1,
-    // templateId: 'GENERAL_AUTO_EMAIL',
-    templateId: {
-      templateOnline: 'GENERAL_AUTO_EMAIL',
-      templateOffline: {
-        templateResidential: '',
-        templateNonResidential: '',
-      },
-    },
-    image: `${baseDomain}${courseAssets.courseAsset73}`,
-    cardImage: `${baseDomain}${courseAssets.courseAsset73}`,
-    metaDescription:
-      'The Yoga Sutras help you unravel the mystical, the seemingly miraculous possibilities and powers that lie dormant within you',
-    mostPopular: false,
-    rating: 5,
-    colorCode: '#D3A29D',
-    timing: '1st Sunday of every month: 10:00 am - 12:30 pm (IST)',
-    fees: {
-      onlineFee: 15000,
-      offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
-    },
-    category: 'certificate-course',
-    dates: ['10:00 am - 12:30 pm'],
-    online: true,
-    onCampus: false,
-    nonResidential: false,
-    residential: false,
-    certficate: false,
-    details: [
-      {
-        type: 'paragraph',
-        content: {
-          title: 'What is the course about?',
-          text: [
-            'Patanjali’s Yoga Sutras say that by learning to develop a certain introspective awareness, with a commitment to making objective observations of oneself, we can begin a journey away from the pressures and pains of daily life. We become able to see things as they are, with a greater sense of perspective. It is not escapism, but instead a kind of ‘waking up’.',
-            'Think of everything that you have always wanted to do. And think of what comes in the way of that. Even if it is hard to admit, the answer is – yourself. With this dynamic and powerful course on the Yoga Sutra of Patanjali, you will unlock the key to all that you want from yourself, and your life.',
-            'The Yoga Sutras help you unravel the mystical, the seemingly miraculous possibilities and powers that lie dormant within you. Come, experience the power that is waiting within you!',
-            'access the detailed syllabus here',
-          ],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'Eligibility',
-          text: ['Open to all.  Prior knowledge of Yoga or the earlier chapters though not a prerequisite, would be helpful.'],
-        },
-      },
-      // {
-      //   type: 'paragraph',
-      //   content: {
-      //     title: 'Details (in tabular form)',
-      //     text: [''],
-      //   },
-      // },
-      // {
-      //   type: 'paragraph',
-      //   content: {
-      //     title: 'Schedule',
-      //     text: [''],
-      //   },
-      // },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'Prerequisites',
-          text: [
-            'Open to all. Prior knowledge of yoga not required, though helpful.',
-          ],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'Duration',
-          text: ['1 year – 1st & 3rd 2022, Sunday of every month'],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'Fees',
-          text: [
-            'Rs. 15000/-',
-            'Please note fees once paid will be non-refundable.',
-          ],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'Timings',
-          text: ['1st Sunday of every month: 10:00 am - 12:30 pm (IST)'],
-        },
-      },
+  // 2: {
+  //   id: '',
+  //   title: 'Certificate Course on Yoga Sutra - Online',
+  //   key: 'certification-course-on-yoga-sutra-online',
+  //   batch: 1,
+  //   // templateId: 'GENERAL_AUTO_EMAIL',
+  //   templateId: {
+  //     templateOnline: 'GENERAL_AUTO_EMAIL',
+  //     templateOffline: {
+  //       templateResidential: '',
+  //       templateNonResidential: '',
+  //     },
+  //   },
+  //   image: `${baseDomain}${courseAssets.courseAsset73}`,
+  //   cardImage: `${baseDomain}${courseAssets.courseAsset73}`,
+  //   metaDescription:
+  //     'The Yoga Sutras help you unravel the mystical, the seemingly miraculous possibilities and powers that lie dormant within you',
+  //   mostPopular: false,
+  //   rating: 5,
+  //   colorCode: '#D3A29D',
+  //   timing: '1st Sunday of every month: 10:00 am - 12:30 pm (IST)',
+  //   fees: {
+  //     onlineFee: 15000,
+  //     offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
+  //   },
+  //   category: 'certificate-course',
+  //   dates: ['10:00 am - 12:30 pm'],
+  //   online: true,
+  //   onCampus: false,
+  //   nonResidential: false,
+  //   residential: false,
+  //   certficate: false,
+  //   details: [
+  //     {
+  //       type: 'paragraph',
+  //       content: {
+  //         title: 'What is the course about?',
+  //         text: [
+  //           'Patanjali’s Yoga Sutras say that by learning to develop a certain introspective awareness, with a commitment to making objective observations of oneself, we can begin a journey away from the pressures and pains of daily life. We become able to see things as they are, with a greater sense of perspective. It is not escapism, but instead a kind of ‘waking up’.',
+  //           'Think of everything that you have always wanted to do. And think of what comes in the way of that. Even if it is hard to admit, the answer is – yourself. With this dynamic and powerful course on the Yoga Sutra of Patanjali, you will unlock the key to all that you want from yourself, and your life.',
+  //           'The Yoga Sutras help you unravel the mystical, the seemingly miraculous possibilities and powers that lie dormant within you. Come, experience the power that is waiting within you!',
+  //           'access the detailed syllabus here',
+  //         ],
+  //       },
+  //     },
+  //     {
+  //       type: 'paragraph',
+  //       content: {
+  //         title: 'Eligibility',
+  //         text: ['Open to all.  Prior knowledge of Yoga or the earlier chapters though not a prerequisite, would be helpful.'],
+  //       },
+  //     },
+  //     // {
+  //     //   type: 'paragraph',
+  //     //   content: {
+  //     //     title: 'Details (in tabular form)',
+  //     //     text: [''],
+  //     //   },
+  //     // },
+  //     // {
+  //     //   type: 'paragraph',
+  //     //   content: {
+  //     //     title: 'Schedule',
+  //     //     text: [''],
+  //     //   },
+  //     // },
+  //     {
+  //       type: 'paragraph',
+  //       content: {
+  //         title: 'Prerequisites',
+  //         text: [
+  //           'Open to all. Prior knowledge of yoga not required, though helpful.',
+  //         ],
+  //       },
+  //     },
+  //     {
+  //       type: 'paragraph',
+  //       content: {
+  //         title: 'Duration',
+  //         text: ['1 year – 1st & 3rd 2022, Sunday of every month'],
+  //       },
+  //     },
+  //     {
+  //       type: 'paragraph',
+  //       content: {
+  //         title: 'Fees',
+  //         text: [
+  //           'Rs. 15000/-',
+  //           'Please note fees once paid will be non-refundable.',
+  //         ],
+  //       },
+  //     },
+  //     {
+  //       type: 'paragraph',
+  //       content: {
+  //         title: 'Timings',
+  //         text: ['1st Sunday of every month: 10:00 am - 12:30 pm (IST)'],
+  //       },
+  //     },
       
-      // {
-      //   type: 'paragraph',
-      //   content: {
-      //     title: 'Guidelines',
-      //     text: [''],
-      //   },
-      // },
-      // {
-      //   type: 'paragraph',
-      //   content: {
-      //     title: 'Contact Details',
-      //     text: [''],
-      //   },
-      // },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'Registration',
-          text: ['REGISTRATIONS ARE CLOSED..STAY TUNED FOR OUR NEXT BATCH.'],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'Conducted By',
-          text: ['Shri Kartik Vyas'],
-        },
-      },
-    ],
-  },
+  //     // {
+  //     //   type: 'paragraph',
+  //     //   content: {
+  //     //     title: 'Guidelines',
+  //     //     text: [''],
+  //     //   },
+  //     // },
+  //     // {
+  //     //   type: 'paragraph',
+  //     //   content: {
+  //     //     title: 'Contact Details',
+  //     //     text: [''],
+  //     //   },
+  //     // },
+  //     {
+  //       type: 'paragraph',
+  //       content: {
+  //         title: 'Registration',
+  //         text: ['REGISTRATIONS ARE CLOSED..STAY TUNED FOR OUR NEXT BATCH.'],
+  //       },
+  //     },
+  //     {
+  //       type: 'paragraph',
+  //       content: {
+  //         title: 'Conducted By',
+  //         text: ['Shri Kartik Vyas'],
+  //       },
+  //     },
+  //   ],
+  // },
   3: {
     id: '',
     title: 'Certificate Program on Yoga for Cancer - Online & On Campus',

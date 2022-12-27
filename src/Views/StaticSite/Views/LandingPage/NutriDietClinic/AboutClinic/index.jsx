@@ -10,6 +10,8 @@ import { landingLogo } from '../../../../assets/icons/icon'
 import LandingButton from '../../../../Components/LandingCourse/LandingButton'
 import NutriBlogs from '../../../../Components/LandingCourse/NutriBlogs'
 import Slider from 'react-slick'
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css'
 import { testimonialData3 } from '../../constant'
 
 const NutriDietClinic = () => {
@@ -94,7 +96,7 @@ const NutriDietClinic = () => {
           </div>
         </Link>
         <div className='phone-info'>
-          <h2>Book Your consultation Now</h2>
+          <h2>Book Your Consultation Now</h2>
           <p>Call on<a href="tel:+919136668224">&ensp;+91-9136668224</a></p>
         </div>
       </nav>
@@ -103,7 +105,7 @@ const NutriDietClinic = () => {
           <div className="bg_img_21">
             <div className="img_form_21">
               <div className="form_text">
-                <div className="left_heading1">Get<span className='left_heading_text'> Customised</span></div>
+                <div className="left_heading1">Get<span className='left_heading_text'> Customized</span></div>
                 <div className="left_heading1"><span className='left_heading_bold'>Diet Plans</span> From</div>
                 <div className="left_heading2">NUTRI DIET CLINIC</div>
               </div>

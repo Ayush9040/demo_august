@@ -48,8 +48,7 @@ const AlumniCarousel = () => {
         })}
       </Slider>
       {/* <AlumniGrid images={[]} notEvent={true} /> */}
-      <Link to="/testimonials">
-        {' '}
+      <Link to="/student-experience">
         <CommonBtn text={'Explore All'} />
       </Link>
     </div>

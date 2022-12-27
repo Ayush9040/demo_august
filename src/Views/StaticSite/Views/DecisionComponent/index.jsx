@@ -5,8 +5,8 @@ import { useEffect } from 'react'
 import { useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { cmsBaseDomain } from '../../../../Constants/appSettings'
+import Pagenotfound from '../../Components/404 Error'
 import { AllCourses } from '../Courses/Constants/courses'
-import Home from '../Home'
 const BlogAnother = lazy(()=>import('../../Views/Blogs/Views/Blog'))
 const SingleCourse = lazy(()=>import('../../Views/Courses/Views/course-name'))
 
@@ -22,7 +22,7 @@ const DescisionComp = () => {
       console.log(data?.type ,'ress')
       setIsLoading(data?.type)
     })()
-  },[])
+  },[ contentId ])
 
   const getComponent = (_contentId) => {
 
@@ -30,7 +30,7 @@ const DescisionComp = () => {
     case 'BLOG': 
       return <BlogAnother/>
     case 'COURSE': 
-      return AllCourses.filter((item)=>item.key===contentId).length!==0 ? <SingleCourse/>: <Home/>
+      return AllCourses.filter((item)=>item.key===contentId).length!==0 ? <SingleCourse/>: <Pagenotfound/>
     }
   }
 

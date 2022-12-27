@@ -4,7 +4,7 @@
   justify-content: center;
   gap: 5rem;
 
-  &:nth-child(odd) {
+  &:nth-child(even) {
     flex-direction: row-reverse;
   }
   .course-list {
@@ -191,6 +191,7 @@
 @media (max-width: 1000px) {
   .course-section {
     flex-wrap: wrap;
+    // justify-content: left;
     .course-list {
       .course-list-content {
         justify-content: center;
@@ -199,9 +200,9 @@
     .vertical-scrollbar {
       display: none;
     }
-    .course-list {
-      text-align: center;
-    }
+    // .course-list {
+    //   text-align: center;
+    // }
     .course-cards {
       justify-content: center;
       width: 100%;
