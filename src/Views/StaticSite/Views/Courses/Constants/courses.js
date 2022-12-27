@@ -4315,7 +4315,7 @@ const ttc900hr = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'ttc',
-    dates: ['31st Oct 2022 to 18th Feb 2023','27th Feb to 17th Jun 2023','26th June to 14th Oct 2023','23 Oct to 10th Feb 2024'],
+    dates: ['27th Feb to 17th Jun 2023','26th June to 14th Oct 2023','23 Oct to 10th Feb 2024'],
     online: true,
     onCampus: false,
     nonResidential: false,

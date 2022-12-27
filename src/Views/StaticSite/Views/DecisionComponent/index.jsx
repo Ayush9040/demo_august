@@ -15,28 +15,19 @@ const DescisionComp = () => {
   const [ isLoading,setIsLoading ] = useState(null)
   const { contentId } = useParams()
 
-
+  const getType = async()=>{
+    const { data } = await axios.get(`${ cmsBaseDomain }/misc/slug/${contentId}`)
+    setIsLoading(data?.type)
+  }
   useEffect(()=>{
-    (async()=>{
-      const { data } = await axios.get(`${ cmsBaseDomain }/misc/slug/${contentId}`)
-      console.log(data?.type ,'ress')
-      setIsLoading(data?.type)
-    })()
+    console.log(contentId)
+    getType()
   },[ contentId ])
 
-  const getComponent = (_contentId) => {
-
-    switch (_contentId) {
-    case 'BLOG': 
-      return <BlogAnother/>
-    case 'COURSE': 
-      return AllCourses.filter((item)=>item.key===contentId).length!==0 ? <SingleCourse/>: <Pagenotfound/>
-    }
-  }
 
   return (
     <>
-      { isLoading ? getComponent(isLoading) : <div className='global-loader' >Loading...</div> }
+      { isLoading ? isLoading==='BLOG' ? <BlogAnother/> : AllCourses.filter((item)=>item.key===contentId).length!==0 ? <SingleCourse/>: <Pagenotfound/>  : <div className='global-loader' >Loading...</div> }
     </>
   )
 }

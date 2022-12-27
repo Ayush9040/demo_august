@@ -77,6 +77,8 @@ const SingleCourse = () => {
       setTitleTag(headers.title.trim())
       setMetaData(headers.metaData)
     } catch (err) {
+      setBlogData([])
+      setCardData([])
       console.log(err)
     }
   }
@@ -87,7 +89,9 @@ const SingleCourse = () => {
     setIsLoadding(false)
     document.title = `${metaDataObj[location.pathname]?.title}`
     parsingAlgo()
-  }, [contentId])
+    scrollTo(0,0)
+  }, [ contentId ])
+
   const CareerNameBan = {
     title: 'Career',
     color: 'orange',
