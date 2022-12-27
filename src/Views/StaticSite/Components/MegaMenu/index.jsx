@@ -391,7 +391,7 @@ const MegaMenu = ({ setNav }) => {
                     <li>Anand Sadhna - Online & On Campus</li>
                   </Link>
                   <Link onClick={() => {setNav(false)}}  to="/couples-classes">
-                    <li>Couple&apos;s Classes - Online</li>
+                    <li>Couples&apos; Classes - Online</li>
                   </Link>
                 </ul>
               </ul>

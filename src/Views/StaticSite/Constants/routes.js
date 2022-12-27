@@ -96,6 +96,7 @@ const LocateDetails = lazy(()=> import ('../Components/LocateUs/LocationDetails'
 const NutriDiet = lazy(()=>import('../Views/NutriDiet'))
 const LandingPage = lazy( ()=>import('../Views/LandingPage'))
 const LandingPageNew = lazy( ()=>import('../Views/LandingPage/21Days/index'))
+const SevenDays = lazy( ()=>import('../Views/LandingPage/SevenDays/AboutCamp/index'))
 
 const staticSiteRoutes = [
   //Home
@@ -776,6 +777,14 @@ const staticSiteRoutes = [
     id: 'statisSiteNutriClinic',
     routePath: '/nutri-clinic-landing-page',
     name: 'NutriClinic',
+  },
+  {
+    Component: SevenDays,
+    path: '/seven-days-landing-page',
+    exact: true,
+    id: 'statisSiteNutriClinic',
+    routePath: '/seven-days-landing-page',
+    name: 'SevenDays',
   },
   {
     Component: DescisionComp,
