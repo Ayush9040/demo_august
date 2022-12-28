@@ -7741,7 +7741,7 @@ const camps = {
     timing: 'Saturday to Friday : 7:00 am - 7:00 pm (IST)' ,
     fees: {
       onlineFee: 0,
-      offlineFee: { residentialFee: 12000, nonResidentialFee: 8000 },
+      offlineFee: { residentialFee: 12000, nonResidentialFee: 9000 },
     },
     category: 'camps',
     metaDescription:
@@ -7924,7 +7924,7 @@ const camps = {
         content: {
           title: 'FEES',
           text: [
-            'Non-Residential: 8,000/- (inclusive of course fees and 4 Meals)',
+            'Non-Residential: 9,000/- (inclusive of course fees and 4 Meals)',
           ],
         },
       },
@@ -8071,7 +8071,7 @@ const camps = {
     timing: 'Saturday to Friday : 7:00 am - 7:00 pm (IST)',
     fees: {
       onlineFee: 0,
-      offlineFee: { residentialFee: 12000, nonResidentialFee: 8000 },
+      offlineFee: { residentialFee: 12000, nonResidentialFee: 9000 },
     },
     category: 'camps',
     metaDescription:
@@ -8255,7 +8255,7 @@ const camps = {
         content: {
           title: 'FEES',
           text: [
-            'Non-Residential: 8,000/- (inclusive of course fees and 4 Meals)',
+            'Non-Residential: 9,000/- (inclusive of course fees and 4 Meals)',
           ],
         },
       },
@@ -9827,7 +9827,7 @@ const classes = {
       'Join now if you’re looking for an immunity and vitality boost, emotional release, anxiety and anger management, glowing skin, inner radiance and enhanced creativity.',
     join: true,
     timing:
-      'Monday & Wednesday - 7:30 am - 8:30 am  (IST) (Online) Tuesday & Thursday - 6:30 pm - 7.30 pm  (IST) (On campus) ',
+      'Monday & Wednesday - 7:30 am - 8:30 am  (IST) (Online) Tuesday & Thursday - 6pm - 7pm  (IST) (On campus) ',
     fees: {
       onlineFee: 1400,
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
