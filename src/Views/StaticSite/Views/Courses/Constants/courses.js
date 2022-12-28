@@ -1538,7 +1538,7 @@ const ttc200hr = {
     },
     category: 'ttc',
     title: '200 hrs TTC - 2 Months TTC Online-English-Batch 5',
-    dates: ['2nd Jan to 25th Feb 2023','6th Mar to 29th Apr 2023','8th May to 1st Jul 2023','10th Jul to 2nd Sep 2023','11th Sep to 4th Nov 2023', '13th Nov to 6th Jan 2024'],
+    dates: ['16th Jan to 11th Mar 2023','20th Mar to 13th May 2023','22th May to 15th Jul 2023','24th Jul to 16th Sep 2023','25th Sep to 18th Nov 2023', '27th Nov to 20th Jan 2024'],
     online: true,
     onCampus: false,
     nonResidential: false,
