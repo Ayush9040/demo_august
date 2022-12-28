@@ -56,7 +56,7 @@ const AboutCamp = () => {
       await creatForm({ ...formData, formType: 'DAYS7CAMPAIGN' })
       await successMail({
         type: 'INFO_TYI',
-        HTMLTemplate: 'DAYS_7_COURSE_FORM_SUBMISSION_MAIL',
+        HTMLTemplate: 'DAYS_7_COURSE_FORM_CONFIRMATION_MAIL',
         subject: 'Thank you from The Yoga Institute',
         data: {
           name: name,
