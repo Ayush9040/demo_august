@@ -254,7 +254,9 @@
         }
     }
 }
-.popular-courses{
+
+.browse-courses{
+    .popular-courses{
     margin-top: 5rem;
     grid-template-columns: 100%;
     .course-accordian{
@@ -278,7 +280,6 @@
     }
     
 }
-.browse-courses{
     .course-grid{
         justify-content: center;
         width: 100%;
