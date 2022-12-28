@@ -47,12 +47,13 @@
     /* left: 50%; */
     transform: translate(-50%, -50%);
     background-color: #ffffff;
+    box-shadow: 10px white;
     width: 80%;
     font-size: 2rem;
     font-weight: bold;
     text-align: center;
     line-height: 2;
-    height: 10%;
+    height: 12%;
   }
   // & > main{
   .section_1_2 {
@@ -209,7 +210,8 @@
     // padding: 0.25rem 1.5rem;
     padding-top: 10rem;
     margin-bottom: 2rem;
-    font-family: var(--bebas-neue);
+    font-weight: bold;
+    // font-family: var(--hero);
     &:nth-child(2n + 1) {
       width: fit-content;
     }
@@ -217,9 +219,10 @@
   .text_21 {
     font-size: 2rem;
     margin-bottom: 2rem;
-    font-weight: 600;
+    font-weight: bold;
     text-align: justify;
     width: 90%;
+    color: #737272;
     // &:nth-child(2n + 1) {
     //   text-align: center;
     // }
@@ -256,15 +259,17 @@
         .heading21{
           .text_21{
             width: 50%;
+            color: black;
+            font-weight: 700;
           }
         }
       }
       .sec2_text_mobile{
         position: absolute;
         top: 0%;
-        left: 45%;
+        left: 42%;
         // transform: translate(-50%,-50%);
-        width: 50%;
+        width: 60%;
         height: 90%;
         // background-color: #00000090;
         padding: 2rem;
@@ -321,6 +326,8 @@
       font-size: 2rem;
       font-weight: 700;
       padding: 1rem 4rem;
+      color: #6c6c6c;
+      font-weight: bold;
      }
     }
     .registration-dates{
@@ -336,6 +343,11 @@
       }
       .dates-reg{
         font-size: 4rem;
+        color: #6c6969;
+      }
+      .dates-reg-2{
+        font-size: 4rem;
+        font-weight: 600;
         color: #6c6969;
       }
       .reg-note{
@@ -574,6 +586,7 @@
         .heading21{
           .text_21{
             width: 50%;
+            font-family: var;
           }
         }
       }
