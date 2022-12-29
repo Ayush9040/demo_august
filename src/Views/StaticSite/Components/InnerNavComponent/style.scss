@@ -45,11 +45,14 @@
   }
   .hamburger {
       cursor: pointer;
+    //   width: 100%;
   }
   .main-logo{
     display: block;
+    width: 0%;
     .mobile-search{
         display: none;
+        
     }
   }
   .user-dropdown {
@@ -91,7 +94,7 @@
   }
   .user-container{
       position: relative;
-      display: flex;
+      display: flex;      
       gap:10px;
       .user-dropdown {
         //position: absolute;
