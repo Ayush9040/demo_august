@@ -8401,7 +8401,7 @@ const camps = {
     timing: 'Morning: 7:00 am – 8:30 am (IST)',
     fees: {
       onlineFee: 2100,
-      offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
+      offlineFee: { residentialFee: 0, nonResidentialFee: 2100 },
     },
     category: 'camps',
     metaDescription:
@@ -8750,7 +8750,7 @@ const camps = {
     timing: 'Evening 6:30 pm – 8:00 pm (IST)',
     fees: {
       onlineFee: 2100,
-      offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
+      offlineFee: { residentialFee: 0, nonResidentialFee: 2100 },
     },
     category: 'camps',
     metaDescription:
@@ -9092,7 +9092,7 @@ const camps = {
     timing: 'Evening 6:30 pm – 8:00 pm (IST)',
     fees: {
       onlineFee: 2100,
-      offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
+      offlineFee: { residentialFee: 0, nonResidentialFee: 2100 },
     },
     category: 'camps',
     metaDescription:
