@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import PhoneInput from 'react-phone-number-input'
 import 'react-phone-number-input/style.css'
-import NutriThankYou from '../ThankYouPage/Index'
+import CampaignThankYou from '../../ThankYouPage'
 import { creatForm, successMail } from '../../../LandingPage/Api'
 import './style.scss'
 import { CampsWorkShops } from '../../constant'
@@ -303,7 +303,7 @@ const NutriDietClinic = () => {
         </div>
       </main>
       {modal && (
-        <NutriThankYou
+        <CampaignThankYou
           name={name}
           setModal={setModal}
           setFormData={setFormData}

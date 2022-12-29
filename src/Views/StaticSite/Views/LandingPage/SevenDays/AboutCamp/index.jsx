@@ -5,7 +5,7 @@ import LandingButton from '../../../../Components/LandingCourse/LandingButton'
 import PhoneInput from 'react-phone-number-input'
 import { CampsWorkShops } from '../../constant'
 import SevenDaysBlogs from '../../../../Components/LandingCourse/SevenDaysBlogs'
-import SevenDaysThankYou from '../ThankYou'
+import CampaignThankYou from '../../ThankYouPage'
 import Slider from 'react-slick'
 import { testimonialData4 } from '../../constant'
 import { creatForm, successMail } from '../../Api'
@@ -303,7 +303,7 @@ const AboutCamp = () => {
         </section>
       </main>
       {modal && (
-        <SevenDaysThankYou
+        <CampaignThankYou
           name={name}
           setModal={setModal}
           setFormData={setFormData}
