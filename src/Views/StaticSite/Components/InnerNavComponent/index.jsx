@@ -80,7 +80,7 @@ const InnerNavComponent = ({ abc }) => {
                 ? legacy1
                 : abc.color === 'black'
                   ? MainLogo1
-                  : MainLogo}
+                  : MainLogo}  
             </Link>
           </div>
           <div className="career-navigation-sm">
