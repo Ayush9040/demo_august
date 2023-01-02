@@ -34,6 +34,13 @@ const NewsLetter = () => {
         <div className="images">
           <div className="image">
             <Link to="/yogasattva">
+              <img src={`${baseDomain}${publicationAssests.ythAssets92}`} alt='Yogasattva-January' />
+            </Link>
+
+            <p>January 2023</p>
+          </div>
+          <div className="image">
+            <Link to="/yogasattva">
               <img src={`${baseDomain}${publicationAssests.ythAssets91}`} alt='Yogasattva-December' />
             </Link>
 
@@ -45,13 +52,6 @@ const NewsLetter = () => {
             </Link>
 
             <p>November 2022</p>
-          </div>
-          <div className="image">
-            <Link to="/yogasattva">
-              <img src={`${baseDomain}${publicationAssests.ythAssets89}`} alt='Yogasattva-october' />
-            </Link>
-
-            <p>October 2022</p>
           </div>
         </div>
         <div className="description">

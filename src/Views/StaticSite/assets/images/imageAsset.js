@@ -911,6 +911,10 @@ export const publicationAssests = {
   ythAssets90:'/Home/NewsLetter/Yogasattva-Nov-2022-cover-page.jpg',
   ythAssets91:'/Home/NewsLetter/Yogasattva-Dec-2022-Cover.jpg',
 
+  //2023 
+
+  ythAssets92:'/Publications/Yogsattava/PreviousIssues/2023/Yogasattva-Jan-2023.jpg',
+
   //Library
   libraryAsset: '/Publications/Library/hero.jpg',
 

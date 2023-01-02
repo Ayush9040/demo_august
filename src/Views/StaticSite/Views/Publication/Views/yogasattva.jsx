@@ -322,13 +322,18 @@ const Yogasattva = () => {
         pdf: `${baseDomain}/books/newsletter/Yogasattva-Jan-2022.pdf`,
       },
     ],
-  }
+    2023: [
+      {
+        img: `${baseDomain}${publicationAssests.ythAssets92}`,
+        pdf: `${baseDomain}/books/2023/Yogasattva-Jan-2023.pdf`,
+      }
+    ] }
 
-  const [bold, setBold] = useState(6)
+  const [bold, setBold] = useState(7)
 
   const nextHandler = () => {
     if (bold === 1) {
-      setBold(6)
+      setBold(7)
     } else {
       setBold(bold - 1)
     }
@@ -521,6 +526,16 @@ const Yogasattva = () => {
               ) : bold === 6 ? (
                 <>
                   {images[2022].map((image, i) => (
+                    <div key={i} className="preivous-box">
+                      <a href={image.pdf} download>
+                        <img src={image.img} alt="root-image" />
+                      </a>
+                    </div>
+                  ))}
+                </>
+              ) : bold === 7 ? (
+                <>
+                  {images[2023].map((image, i) => (
                     <div key={i} className="preivous-box">
                       <a href={image.pdf} download>
                         <img src={image.img} alt="root-image" />
