@@ -8,6 +8,14 @@ const PublicationDateNav = ({ bold, setBold }) => {
         <ul>
           <li
             style={
+              bold === 7 ? { fontWeight: 'bold' } : { fontWeight: 'normal' }
+            }
+            onClick={()=>setBold(7)}
+          >
+            2023|
+          </li>
+          <li
+            style={
               bold === 6 ? { fontWeight: 'bold' } : { fontWeight: 'normal' }
             }
             onClick={() => setBold(6)}
