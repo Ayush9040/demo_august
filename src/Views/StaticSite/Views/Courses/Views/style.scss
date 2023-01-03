@@ -283,7 +283,30 @@
         justify-content: center;
         width: 100%;
     }
-    
+    .popular-courses{
+        margin-top: 5rem;
+        grid-template-columns: 100%;
+        .course-accordian{
+            width: 80%;
+            margin: 0 auto;
+        }
+        
+        .accordion__panel{
+            width: 100%;
+            box-sizing: border-box;
+            padding:  0 3rem;
+            ul{
+                padding-left: 0;
+                text-align: center;
+            }
+        }
+        .accordion__item{
+            background-color:#EBB38A;
+            padding: 0.5rem;
+            margin-bottom: 2px;
+        }
+        
+    }
 }
 
 
