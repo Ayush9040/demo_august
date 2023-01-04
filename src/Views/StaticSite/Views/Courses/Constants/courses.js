@@ -1224,7 +1224,7 @@ const ttc200hr = {
         type: 'paragraph',
         content: {
           title: 'Fees',
-          text: ['Rs. 22,000/-'],
+          text: ['Rs. 25,000/-'],
         },
       },
       {
@@ -6346,7 +6346,7 @@ const camps = {
     mostPopular: false,
     rating: 5,
     colorCode: '#EDBE66',
-    timing: '5:00 pm – 8:00 pm (IST)',
+    timing: '9:30 pm – 5:30 pm (IST)',
     fees: {
       onlineFee: 1000,
       offlineFee: { residentialFee: 0, nonResidentialFee: 1000 },
@@ -6436,14 +6436,14 @@ const camps = {
         type: 'paragraph',
         content: {
           title: 'Time',
-          text: ['5:00 pm – 8:00 pm (IST)'],
+          text: ['9:30 am – 5:30 pm (IST)'],
         },
       },
       {
         type: 'paragraph',
         content: {
           title: 'Fees',
-          text: ['INR 500'],
+          text: ['INR 1000'],
         },
       },
       {
@@ -6914,7 +6914,7 @@ const camps = {
     mostPopular: false,
     rating: 5,
     colorCode: '#DDAB58',
-    timing: '5:00 pm – 8:00 pm (IST)',
+    timing: '9:30 am – 5:30 pm (IST)',
     fees: {
       onlineFee: 1000,
       offlineFee: { residentialFee: 0, nonResidentialFee: 1000 },
@@ -7001,14 +7001,14 @@ const camps = {
         type: 'paragraph',
         content: {
           title: 'Time',
-          text: ['5:00 pm – 8:00 pm (IST)'],
+          text: ['9:30 am – 5:30 pm (IST)'],
         },
       },
       {
         type: 'paragraph',
         content: {
           title: 'Fees',
-          text: ['INR 500'],
+          text: ['INR 1000'],
         },
       },
       {
