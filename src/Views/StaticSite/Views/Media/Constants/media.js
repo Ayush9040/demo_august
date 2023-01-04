@@ -4772,6 +4772,11 @@ const printMedia = [
         url:'	https://epaper.navbharattimes.com/imageview_13787_58221_4_13_04-01-2023_16_i_1_sf.html',
         alt:'nbt-january4-2022'
       },
+      {
+        img: `${baseDomain}${printMediaAssest.printMediaAssest953}`,
+        url:'https://epaper.esakal.com/FlashClient/Show_Story_IPad.aspx?storySrc=aHR0cHM6Ly9lcGFwZXItc2FrYWwtYXBwbGljYXRpb24uczMuYXAtc291dGgtMS5hbWF6b25hd3MuY29tL0VwYXBlckRhdGEvU2FrYWwvTXVtYmFpLzIwMjMvMDEvMDMvTWFpbi9TYWthbF9NdW1iYWlfMjAyM18wMV8wM19NYWluX0RBXzAwOF9QUi5qcGcmcGc9MTA=&uname=&ipad=N',
+        alt:'sakal-news-paper'
+      },
     ]
   }
 ]
