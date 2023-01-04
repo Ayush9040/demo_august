@@ -6866,7 +6866,7 @@ const camps = {
         type: 'paragraph',
         content: {
           title: 'Fees',
-          text: ['INR 1,500'],
+          text: ['INR 2,000'],
         },
       },
       {
@@ -9802,7 +9802,7 @@ const classes = {
   },
   2: {
     id: '',
-    title: 'Anand Sadhna - Online & On Campus ',
+    title: 'Healing Movement & Rhythm - Online & On Campus ',
     key: 'anand-sadhna',
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
@@ -9840,7 +9840,7 @@ const classes = {
         content: {
           title: '',
           text: [
-            'Harness the power of movement to unleash the power of positivity and joy in your life. Anand Sadhana is The Yoga Institute’s movement based therapy programme for stress management, emotional well-being and trauma healing.',
+            'Harness the power of movement to unleash the power of positivity and joy in your life. Healing Movement & Rhythm is The Yoga Institute’s movement based therapy programme for stress management, emotional well-being and trauma healing.',
             ' Join now if you’re looking for an immunity and vitality boost, emotional release, anxiety and anger management, glowing skin, inner radiance and enhanced creativity.',
             '#hackyourhappyhormones',
           ],

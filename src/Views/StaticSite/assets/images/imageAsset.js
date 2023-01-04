@@ -2538,8 +2538,18 @@ export const printMediaAssest = {
   printMediaAssest943:'/print_media/new2022/Navbharat-Times-Epaper-12th-December-2022.jpg',
   printMediaAssest944:'/print_media/new2022/esakal-12th-December-2022.jpg',
   printMediaAssest945:'/print_media/new2022/Navbharat-Times-Epaper-18th-December-2022.jpg',
-  printMediaAssest946:'/print_media/new2022/TOI_Mumbai_18-12-2022-1.jpg'
+  printMediaAssest946:'/print_media/new2022/TOI_Mumbai_18-12-2022-1.jpg',
+  printMediaAssest947:'/print_media/new2022/Navbharat-Times-Epaper-20th-December-2022.jpg',
+  printMediaAssest948:'/print_media/new2022/Navbharat-Times-Epaper-25th-December-2022.jpg',
+  printMediaAssest949:'/print_media/new2022/Navbharat-Times-Epaper-27th-December-2022.jpg',
+
+  //2023
+  printMediaAssest950:'/print_media/2023/Navbharat-Times-Epaper-1st-January-2023.jpg',
+  printMediaAssest951:'/print_media/2023/Sakal-Epaper-3rd-January-2023.jpg',
+  printMediaAssest952:'/print_media/2023/Navbharat-Times-Epaper-4th-January-2023.jpg',
 }
+
+
 
 
 export const locateAsset ={
