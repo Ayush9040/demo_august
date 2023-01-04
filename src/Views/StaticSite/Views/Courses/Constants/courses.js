@@ -6346,7 +6346,7 @@ const camps = {
     mostPopular: false,
     rating: 5,
     colorCode: '#EDBE66',
-    timing: '9:30 pm – 5:30 pm (IST)',
+    timing: '9:30 am – 5:30 pm (IST)',
     fees: {
       onlineFee: 1000,
       offlineFee: { residentialFee: 0, nonResidentialFee: 1000 },
