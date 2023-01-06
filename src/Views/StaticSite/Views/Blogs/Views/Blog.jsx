@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom'
 //import CommonBannerNav from '../../../Components/CommonBannerNav'
 import './style.scss'
 import Heading from '../../../Components/Heading'
@@ -155,6 +155,15 @@ const BlogAnother = () => {
             })}
           </div> */}
         </div>
+        <div className='tagsInput' >
+          <p style={{ display:'inline-block' }} ><b >Tags:&ensp;</b></p>
+          {
+            blog?.tags?.map((el)=>{
+              if(el.objectType!=='CATEGORY'){
+                return <Link to={`/tag/${el._id}` } >{el.name},&nbsp;</Link>
+              }
+            })
+          }</div>
       </div> }
     </>
   )

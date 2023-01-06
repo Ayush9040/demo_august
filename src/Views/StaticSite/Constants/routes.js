@@ -60,6 +60,7 @@ import OrderHistroy from '../Views/Shop/Views/order-history'
 const SearchModal = lazy(()=>import( '../Views/SearchModal'))
 import CampaignThankYou from '../Views/LandingPage/ThankYouPage'
 import StudentExperience from '../Views/Experience/Views/StudentExperience'
+import BlogsByTag from '../Views/BlogByTag'
 // import VolunteerPage from '../Views/Volunteer'
 // import VolunteerPage from '../Views/Volunteer'
 // import Thankyou from '../Components/EnrollmentForm/ThankYou'
@@ -785,6 +786,13 @@ const staticSiteRoutes = [
     id: 'statisSiteNutriClinic',
     routePath: '/seven-days-landing-page',
     name: 'SevenDays',
+  },{
+    Component: BlogsByTag,
+    path:'/tag/:tagId',
+    exact:true,
+    id:'statisSiteBlogsByTag',
+    routePath:'/tag/:tagId',
+    name:'Blogs By Tag'
   },
   {
     Component: DescisionComp,
