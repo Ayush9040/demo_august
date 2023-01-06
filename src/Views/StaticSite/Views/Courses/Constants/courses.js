@@ -5887,7 +5887,7 @@ const camps = {
         type: 'paragraph',
         content: {
           title: 'Time',
-          text: ['5:00 pm – 8:00 pm (IST) '],
+          text: ['9:30 am – 5:30 pm (IST) '],
         },
       },
       {
