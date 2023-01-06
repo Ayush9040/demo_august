@@ -1,5 +1,5 @@
 import { lazy } from 'react'
-const NutriDietClinic = lazy(()=>import('../Views/LandingPage/NutriDietClinic/AboutClinic'))
+import NutriDietClinic from '../Views/LandingPage/NutriDietClinic/AboutClinic'
 const Home = lazy(() => import('../Views/Home'))
 const TermsCondition = lazy(() => import('../Components/TermsandCondition'))
 const PrivacyPolicy = lazy(() => import('../Components/PrivacyPolicy'))
