@@ -1,5 +1,5 @@
 import { lazy } from 'react'
-import NutriDietClinic from '../Views/LandingPage/NutriDietClinic/AboutClinic'
+const NutriDietClinic = lazy(()=>import('../Views/LandingPage/NutriDietClinic/AboutClinic'))
 const Home = lazy(() => import('../Views/Home'))
 const TermsCondition = lazy(() => import('../Components/TermsandCondition'))
 const PrivacyPolicy = lazy(() => import('../Components/PrivacyPolicy'))
@@ -55,19 +55,11 @@ const Facts = lazy(() => import('../Views/Facts/Views/our-facts'))
 const Shop = lazy(()=>import('../Views/Shop/Views/shop/shop'))
 const SingleProduct = lazy(()=>import('../Views/Shop/Views/single-product'))
 
-import Authentication from '../Views/Authentication'
-import OrderHistroy from '../Views/Shop/Views/order-history'
+const  Authentication = lazy(()=>import('../Views/Authentication')) 
+const  OrderHistroy = lazy(()=>import('../Views/Shop/Views/order-history')) 
 const SearchModal = lazy(()=>import( '../Views/SearchModal'))
-import CampaignThankYou from '../Views/LandingPage/ThankYouPage'
-import StudentExperience from '../Views/Experience/Views/StudentExperience'
-// import VolunteerPage from '../Views/Volunteer'
-// import VolunteerPage from '../Views/Volunteer'
-// import Thankyou from '../Components/EnrollmentForm/ThankYou'
-// import SattvikCooking from '../Components/Highlights/SattvikCooking'
-// import YogaByTheBay from '../Components/Highlights/YogaByTheBay'
-// import FullmoonMeditation from '../Components/Highlights/FullmoonMeditation'
-// import CorporateWorkshop from '../Components/Highlights/CorporateWorkshop'
-// import OnlineTution from '../Components/Highlights/OnlineTution'
+const  CampaignThankYou = lazy (()=>import( '../Views/LandingPage/ThankYouPage'))
+const   StudentExperience = lazy(()=>import('../Views/Experience/Views/StudentExperience')) 
 const AddToCart  = lazy(()=>import('../Views/Shop/Views/cart'))
 const ShippingAdd  = lazy(()=>import('../Views/Shop/Views/address'))
 const ShopThankyou  = lazy(()=>import('../Views/Shop/Views/thankyoupage'))
