@@ -4243,6 +4243,21 @@ const printMedia = [
     year:'2022',
     media:[
       {
+        img:`${ baseDomain }${ printMediaAssest.printMediaAssest947}`,
+        url:'	https://epaper.navbharattimes.com/imageview_11518_68948_4_16_20-12-2022_6_i_1_sf.html',
+        alt:'nbt-december20-2022'
+      },
+      {
+        img:`${ baseDomain }${ printMediaAssest.printMediaAssest948}`,
+        url:'https://epaper.navbharattimes.com/imageview_12410_75547_4_16_25-12-2022_2_i_1_sf.html',
+        alt:'nbt-december25-2022'
+      },
+      {
+        img:`${ baseDomain }${ printMediaAssest.printMediaAssest949}`,
+        url:'https://epaper.navbharattimes.com/imageview_12680_73291_4_16_27-12-2022_6_i_1_sf.html ',
+        alt:'nbt-december27-2022'
+      },
+      {
         img:`${ baseDomain }${ printMediaAssest.printMediaAssest938}`,
         url:'https://epaper.navbharattimes.com/imageview_8916_76949_4_16_04-12-2022_6_i_1_sf.html',
         alt:'nbt-december4-2022'
@@ -4737,7 +4752,31 @@ const printMedia = [
         url:'https://epaper.navbharattimes.com/imageview_100656_67285_4_16_04-07-2022_6_i_1_sf.html',
         alt:'nbt-july4-2022'
       },
-
+    ]
+  },
+  {
+    year:'2023',
+    media:[
+      {
+        img: `${baseDomain}${printMediaAssest.printMediaAssest950}`,
+        url:'https://epaper.navbharattimes.com/imageview_13464_77604_4_16_01-01-2023_2_i_1_sf.html',
+        alt:'nbt-january1-2022'
+      },
+      {
+        img: `${baseDomain}${printMediaAssest.printMediaAssest951}`,
+        url:'	https://epaper.esakal.com/FlashClient/Client_Panel.aspx#currPage=10',
+        alt:'sakal-january3-2022'
+      },
+      {
+        img: `${baseDomain}${printMediaAssest.printMediaAssest952}`,
+        url:'	https://epaper.navbharattimes.com/imageview_13787_58221_4_13_04-01-2023_16_i_1_sf.html',
+        alt:'nbt-january4-2022'
+      },
+      {
+        img: `${baseDomain}${printMediaAssest.printMediaAssest953}`,
+        url:'https://epaper.esakal.com/FlashClient/Show_Story_IPad.aspx?storySrc=aHR0cHM6Ly9lcGFwZXItc2FrYWwtYXBwbGljYXRpb24uczMuYXAtc291dGgtMS5hbWF6b25hd3MuY29tL0VwYXBlckRhdGEvU2FrYWwvTXVtYmFpLzIwMjMvMDEvMDMvTWFpbi9TYWthbF9NdW1iYWlfMjAyM18wMV8wM19NYWluX0RBXzAwOF9QUi5qcGcmcGc9MTA=&uname=&ipad=N',
+        alt:'sakal-news-paper'
+      },
     ]
   }
 ]
