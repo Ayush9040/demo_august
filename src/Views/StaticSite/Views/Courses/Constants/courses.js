@@ -1224,7 +1224,7 @@ const ttc200hr = {
         type: 'paragraph',
         content: {
           title: 'Fees',
-          text: ['Rs. 22,000/-'],
+          text: ['Rs. 25,000/-'],
         },
       },
       {
@@ -5001,7 +5001,7 @@ const ttc900hr = {
           title: 'Fees:',
 
           text: [
-            ' INR. 50,000/- (Inclusive of course fee and study material) ',
+            ' INR. 55,000/- (Inclusive of course fee and study material) ',
           ],
         },
       },
@@ -5887,7 +5887,7 @@ const camps = {
         type: 'paragraph',
         content: {
           title: 'Time',
-          text: ['5:00 pm – 8:00 pm (IST) '],
+          text: ['9:30 am – 5:30 pm (IST) '],
         },
       },
       {
@@ -6346,7 +6346,7 @@ const camps = {
     mostPopular: false,
     rating: 5,
     colorCode: '#EDBE66',
-    timing: '5:00 pm – 8:00 pm (IST)',
+    timing: '9:30 am – 5:30 pm (IST)',
     fees: {
       onlineFee: 1000,
       offlineFee: { residentialFee: 0, nonResidentialFee: 1000 },
@@ -6436,14 +6436,14 @@ const camps = {
         type: 'paragraph',
         content: {
           title: 'Time',
-          text: ['5:00 pm – 8:00 pm (IST)'],
+          text: ['9:30 am – 5:30 pm (IST)'],
         },
       },
       {
         type: 'paragraph',
         content: {
           title: 'Fees',
-          text: ['INR 500'],
+          text: ['INR 1000'],
         },
       },
       {
@@ -6866,7 +6866,7 @@ const camps = {
         type: 'paragraph',
         content: {
           title: 'Fees',
-          text: ['INR 1,500'],
+          text: ['INR 2,000'],
         },
       },
       {
@@ -6914,7 +6914,7 @@ const camps = {
     mostPopular: false,
     rating: 5,
     colorCode: '#DDAB58',
-    timing: '5:00 pm – 8:00 pm (IST)',
+    timing: '9:30 am – 5:30 pm (IST)',
     fees: {
       onlineFee: 1000,
       offlineFee: { residentialFee: 0, nonResidentialFee: 1000 },
@@ -7001,14 +7001,14 @@ const camps = {
         type: 'paragraph',
         content: {
           title: 'Time',
-          text: ['5:00 pm – 8:00 pm (IST)'],
+          text: ['9:30 am – 5:30 pm (IST)'],
         },
       },
       {
         type: 'paragraph',
         content: {
           title: 'Fees',
-          text: ['INR 500'],
+          text: ['INR 1000'],
         },
       },
       {
@@ -9802,7 +9802,7 @@ const classes = {
   },
   2: {
     id: '',
-    title: 'Anand Sadhna - Online & On Campus ',
+    title: 'Healing Movement & Rhythm - Online & On Campus ',
     key: 'anand-sadhna',
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
@@ -9840,7 +9840,7 @@ const classes = {
         content: {
           title: '',
           text: [
-            'Harness the power of movement to unleash the power of positivity and joy in your life. Anand Sadhana is The Yoga Institute’s movement based therapy programme for stress management, emotional well-being and trauma healing.',
+            'Harness the power of movement to unleash the power of positivity and joy in your life. Healing Movement & Rhythm is The Yoga Institute’s movement based therapy programme for stress management, emotional well-being and trauma healing.',
             ' Join now if you’re looking for an immunity and vitality boost, emotional release, anxiety and anger management, glowing skin, inner radiance and enhanced creativity.',
             '#hackyourhappyhormones',
           ],

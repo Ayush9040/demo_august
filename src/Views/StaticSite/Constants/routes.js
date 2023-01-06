@@ -60,6 +60,7 @@ const  OrderHistroy = lazy(()=>import('../Views/Shop/Views/order-history'))
 const SearchModal = lazy(()=>import( '../Views/SearchModal'))
 const  CampaignThankYou = lazy (()=>import( '../Views/LandingPage/ThankYouPage'))
 const   StudentExperience = lazy(()=>import('../Views/Experience/Views/StudentExperience')) 
+const  BlogsByTag = lazy(()=>import('../Views/BlogByTag')) 
 const AddToCart  = lazy(()=>import('../Views/Shop/Views/cart'))
 const ShippingAdd  = lazy(()=>import('../Views/Shop/Views/address'))
 const ShopThankyou  = lazy(()=>import('../Views/Shop/Views/thankyoupage'))
@@ -777,6 +778,13 @@ const staticSiteRoutes = [
     id: 'statisSiteNutriClinic',
     routePath: '/seven-days-landing-page',
     name: 'SevenDays',
+  },{
+    Component: BlogsByTag,
+    path:'/tag/:tagId',
+    exact:true,
+    id:'statisSiteBlogsByTag',
+    routePath:'/tag/:tagId',
+    name:'Blogs By Tag'
   },
   {
     Component: DescisionComp,
