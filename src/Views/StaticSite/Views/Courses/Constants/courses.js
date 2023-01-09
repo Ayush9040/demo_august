@@ -33,7 +33,6 @@ const ttc200hr = {
     category: 'ttc',
     title: '200 hrs TTC - 1 Month TTC Online & On Campus - English - Batch 1 ',
     dates: [
-      '1st Dec to 31st Dec 2022',
       '2nd Jan to 31st Jan 2023',
       '1st Feb to 28th Feb 2023',
       '1st Mar to 31st Mar 2023',
@@ -433,7 +432,6 @@ const ttc200hr = {
     category: 'ttc',
     title: '200 hrs TTC - 2 Months TTC Online and On Campus-English-Batch 2',
     dates: [
-      '26th Dec to 17th Feb 2023',
       '20th Feb to 14th Apr 2023',
       '17th Apr to 9th Jun 2023',
       '12th Jun to 4th Aug 2023',
@@ -761,7 +759,6 @@ const ttc200hr = {
     category: 'ttc',
     title: '200 hrs TTC - 2 Months TTC Online-English-Batch 3',
     dates: [
-      '12th Dec to 4th Feb 2023',
       '13th Feb to 8th Apr 2023',
       '17th Apr to 10th Jun 2023',
       '19th Jun to 12th Aug 2023',
@@ -1152,7 +1149,6 @@ const ttc200hr = {
     category: 'ttc',
     title: '200 hrs TTC - 2 Months TTC Online-Hindi-Batch 4',
     dates: [
-      '19th Dec to 11th Feb 2023',
       '20th Feb to 15th Apr 2023',
       '24th Apr to 17th Jun 2023',
       '26th Jun to 19th Aug 2023',
@@ -1919,7 +1915,7 @@ const ttc200hr = {
     },
     category: 'ttc',
     title: '200 hrs TTC - 3 Months Weekend TTC Online-English-Batch 6',
-    dates: ['19th Nov to 5th Feb 2023','11th Feb to 30th Apr 2023', '6th May to 23rd Jul 2023', '29th Jul to 15th Oct 2023', '21st Oct to 7th Jan 2024'],
+    dates: ['11th Feb to 30th Apr 2023', '6th May to 23rd Jul 2023', '29th Jul to 15th Oct 2023', '21st Oct to 7th Jan 2024'],
     online: true,
     onCampus: false,
     nonResidential: false,
@@ -2305,7 +2301,7 @@ const ttc500hr = {
     title: '500 hrs TTC 3 Months TTC Online - English',
     image: `${baseDomain}${courseAssets.courseAsset39}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset102}`,
-    dates: ['14th Nov to 4th Feb 2023', '13th Feb to 6th May 2023', '15th May to 5th Aug 2023', '14th Aug to 4th Nov 2023', '13th Nov to 3rd Feb 2024'],
+    dates: ['13th Feb to 6th May 2023', '15th May to 5th Aug 2023', '14th Aug to 4th Nov 2023', '13th Nov to 3rd Feb 2024'],
     online: true,
     onCampus: false,
     nonResidential: false,
@@ -2350,7 +2346,7 @@ const ttc500hr = {
         type: 'paragraph',
         content: {
           title: 'Duration',
-          text: ['15th August 2022to 5th November 2022'],
+          text: ['3 months'],
         },
       },
       {
@@ -2575,7 +2571,7 @@ const ttc900hr = {
       offlineFee: { residentialFee: 175000, nonResidentialFee: 97000 },
     },
     category: 'ttc',
-    dates: ['22nd Oct to 15th Jan 2023','28th Jan to 16th Apr 2023','22nd Apr to 16th July 2023', '22nd Jul to 15th Oct 2023','28th Oct to 21st Jan 2024'],
+    dates: ['28th Jan to 16th Apr 2023','22nd Apr to 16th July 2023', '22nd Jul to 15th Oct 2023','28th Oct to 21st Jan 2024'],
     online: false,
     onCampus: true,
     nonResidential: true,
@@ -10855,7 +10851,7 @@ const classes = {
       {
         type: 'u-list',
         content: {
-          title: 'Duration          ',
+          title: 'Duration',
           points: [
             {
               listItem:
