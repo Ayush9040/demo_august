@@ -360,6 +360,81 @@ const ttc200hr = {
           ],
         },
       },
+      {
+        type:'paragraph',
+        content:{
+          title:'Exam Details',
+          text:[],
+        }
+      },
+      {
+        type: 'u-list',
+        content: {
+          title:
+            'A. BTTC – 1 Month Hybrid Course',
+          points: [
+            {
+              listItem: 'Students will be eligible to appear for the Final certification exams only if they have completed all the required course submissions, class work and the required attendance',
+              subItems: [],
+            },
+            {
+              listItem:
+                'Students will have to appear for the final exams within 60 days from the course end date.',
+              subItems: [],
+            },
+            {
+              listItem: 'Students will be permitted a maximum of 3 attempts, to clear the final exams, failing which they will have to repeat the course.',
+              subItems: ['In the 2nd attempt, they will be exempted from either theory or practical’s, if they have cleared it in their 1st attempt.',
+                'They will have to appear for both in case of a 3rd attempt.'
+              ],
+            },
+            {
+              listItem: 'Students can register for either online or on-campus exams.',
+              subItems: ['Once finalized, students will not be permitted to switch from online to on-campus and vice versa.'],
+            },
+            {
+              listItem:'Examiners will evaluate students only as per the final approved list.',
+              subItems:[],
+            },
+
+           
+          ],
+          
+        },
+      },
+      {
+        type:'u-list',
+        content:{
+          title:'Exam Schedule ',
+          points:[
+            {
+              listItem:'On-campus Final exams (both theory and practical’s) will be conducted on the last working day of each month, or as announced (in case of exigencies), between 10 am (IST) and 2 pm IST.',
+              subItems:[
+                
+              ],
+            },
+            {
+              listItem:'Online Final exams will be conducted on the 1st Sat and the 3rd Sat of each month or as announced (in case of exigencies), subject to a minimum quorum of 8 students.',
+              subItems:[
+                'Theory exams will be conducted online at 5pm (IST)',
+                'Practical exams will be conducted online at 3.30 pm (IST) / 6.30 pm (IST), subject to quorum.'
+              ],
+            },
+            {
+              listItem:'Students, after submission, can log out /leave only with the explicit permission of the examiner.',
+              subItems:[
+                'For practical’s - students will have to wait till the exams of all students are completed.',
+                'The examiner may call out students at random and not necessarily in alphabetic order'
+              ],
+            },
+            {
+              listItem:'A Mock test will be held 7 -14 days prior to the course end date, to familiarise students with the exam process.',
+              subItems:[],
+            },
+          ],
+        }
+      }
+
     ],
     offerings: [
       {
@@ -8359,7 +8434,7 @@ const camps = {
   },
   19: {
     id: '',
-    title: '21-Days BLC - Morning On Campus – English - Batch 1',
+    title: '21-Days BLC - Morning Online and On Campus – English - Batch 1',
     key: '21-days-better-living-course',
     // templateId: 'GENERAL_AUTO_EMAIL',
     templateId: {
@@ -8384,7 +8459,7 @@ const camps = {
       '5th Nov to 25th Nov 2023',
       '3rd Dec to 23rd Dec 2023'
     ],
-    online: false,
+    online: true,
     onCampus: true,
     nonResidential: false,
     residential: false,
@@ -9392,336 +9467,336 @@ const camps = {
       },
     ],
   },
-  22: {
-    id: '',
-    title: '21 Days BLC - Morning - Online – English - Batch 4',
-    key: '21-days-better-living-course-batch-4',
-    batch: 4,
-    // templateId: 'GENERAL_AUTO_EMAIL',
-    templateId: {
-      templateOnline: 'GENERAL_AUTO_EMAIL',
-      templateOffline: {
-        templateResidential: '',
-        templateNonResidential: '',
-      },
-    },
-    dates: [
-      '8th Jan to 28th Jan 2023',
-    ],
-    online: true,
-    onCampus: false,
-    nonResidential: false,
-    residential: false,
-    certficate: false,
-    mostPopular: true,
-    rating: 5,
-    colorCode: '#EDBE66',
-    timing: 'Morning 7:00 am – 8:30 am (IST)',
-    fees: {
-      onlineFee: 2100,
-      offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
-    },
-    category: 'camps',
-    metaDescription:
-      'Become successful, healthy, stress-free, and more mindful in your relationships by learning the yogic way of living. Join The Yoga Institute’s 21-Days Better Living Course. ',
-    image: `${baseDomain}${courseAssets.courseAsset34}`,
-    cardImage: `${baseDomain}${courseAssets.courseAsset34}`,
-    details: [
-      {
-        type: 'paragraph',
-        content: {
-          title: 'Overview',
-          text: [
-            'Become successful, healthy, stress-free, and more mindful in your relationships by learning the yogic way of living. Join The Yoga Institute’s 21-Days Better Living Course. ',
-          ],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: '',
-          text: [
-            'It takes 21 days to build a habit into your daily routine. The Yoga Institute’s 21 Days Better Living Course is a course specifically designed to introduce you to the yogic way of living. begin your journey into the discovery of Yoga. Working professionals and house makers can take just one hour from their day to practice and learn yoga and begin their transformational journey. ',
-            'This is a certificate course and has been successfully conducted for 50 years by the Institute. The program trains you holistically and enables you to achieve equilibrium between your mind and body and thus achieve a state of peace and happiness in life. The course is conducted by trained teachers at the Institute.',
-          ],
-        },
-      },
-      {
-        type: 'u-list',
-        content: {
-          title: ' TThe programme covers an introduction to: ',
-          points: [
-            {
-              listItem: 'Astanga Yoga',
-              subItems: [],
-            },
-            {
-              listItem: 'Asanas',
-              subItems: [],
-            },
-            {
-              listItem: 'Pranayama',
-              subItems: [],
-            },
-            {
-              listItem: 'Kriyas',
-              subItems: [],
-            },
-            {
-              listItem: 'Attitude training  ',
-              subItems: [],
-            },
-            {
-              listItem: 'Parisamvad (sessions with Dr. Hansaji)',
-              subItems: [],
-            },
-          ],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: '',
-          text: [
-            'It is ideal for anyone who wants to live a yoga way of life and experience peace within. It helps you to incorporate Yogic ideals in every field of your daily life. ',
-          ],
-        },
-      },
+  // 22: {
+  //   id: '',
+  //   title: '21 Days BLC - Morning - Online – English - Batch 4',
+  //   key: '21-days-better-living-course-batch-4',
+  //   batch: 4,
+  //   // templateId: 'GENERAL_AUTO_EMAIL',
+  //   templateId: {
+  //     templateOnline: 'GENERAL_AUTO_EMAIL',
+  //     templateOffline: {
+  //       templateResidential: '',
+  //       templateNonResidential: '',
+  //     },
+  //   },
+  //   dates: [
+  //     '8th Jan to 28th Jan 2023',
+  //   ],
+  //   online: true,
+  //   onCampus: false,
+  //   nonResidential: false,
+  //   residential: false,
+  //   certficate: false,
+  //   mostPopular: true,
+  //   rating: 5,
+  //   colorCode: '#EDBE66',
+  //   timing: 'Morning 7:00 am – 8:30 am (IST)',
+  //   fees: {
+  //     onlineFee: 2100,
+  //     offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
+  //   },
+  //   category: 'camps',
+  //   metaDescription:
+  //     'Become successful, healthy, stress-free, and more mindful in your relationships by learning the yogic way of living. Join The Yoga Institute’s 21-Days Better Living Course. ',
+  //   image: `${baseDomain}${courseAssets.courseAsset34}`,
+  //   cardImage: `${baseDomain}${courseAssets.courseAsset34}`,
+  //   details: [
+  //     {
+  //       type: 'paragraph',
+  //       content: {
+  //         title: 'Overview',
+  //         text: [
+  //           'Become successful, healthy, stress-free, and more mindful in your relationships by learning the yogic way of living. Join The Yoga Institute’s 21-Days Better Living Course. ',
+  //         ],
+  //       },
+  //     },
+  //     {
+  //       type: 'paragraph',
+  //       content: {
+  //         title: '',
+  //         text: [
+  //           'It takes 21 days to build a habit into your daily routine. The Yoga Institute’s 21 Days Better Living Course is a course specifically designed to introduce you to the yogic way of living. begin your journey into the discovery of Yoga. Working professionals and house makers can take just one hour from their day to practice and learn yoga and begin their transformational journey. ',
+  //           'This is a certificate course and has been successfully conducted for 50 years by the Institute. The program trains you holistically and enables you to achieve equilibrium between your mind and body and thus achieve a state of peace and happiness in life. The course is conducted by trained teachers at the Institute.',
+  //         ],
+  //       },
+  //     },
+  //     {
+  //       type: 'u-list',
+  //       content: {
+  //         title: ' TThe programme covers an introduction to: ',
+  //         points: [
+  //           {
+  //             listItem: 'Astanga Yoga',
+  //             subItems: [],
+  //           },
+  //           {
+  //             listItem: 'Asanas',
+  //             subItems: [],
+  //           },
+  //           {
+  //             listItem: 'Pranayama',
+  //             subItems: [],
+  //           },
+  //           {
+  //             listItem: 'Kriyas',
+  //             subItems: [],
+  //           },
+  //           {
+  //             listItem: 'Attitude training  ',
+  //             subItems: [],
+  //           },
+  //           {
+  //             listItem: 'Parisamvad (sessions with Dr. Hansaji)',
+  //             subItems: [],
+  //           },
+  //         ],
+  //       },
+  //     },
+  //     {
+  //       type: 'paragraph',
+  //       content: {
+  //         title: '',
+  //         text: [
+  //           'It is ideal for anyone who wants to live a yoga way of life and experience peace within. It helps you to incorporate Yogic ideals in every field of your daily life. ',
+  //         ],
+  //       },
+  //     },
 
-      {
-        type: 'u-list',
-        content: {
-          title: ' Benefits of this camp: ',
-          points: [
-            {
-              listItem:
-                'Helps you in developing and maintaining the right routine for your overall health ',
-              subItems: [],
-            },
+  //     {
+  //       type: 'u-list',
+  //       content: {
+  //         title: ' Benefits of this camp: ',
+  //         points: [
+  //           {
+  //             listItem:
+  //               'Helps you in developing and maintaining the right routine for your overall health ',
+  //             subItems: [],
+  //           },
 
-            {
-              listItem: 'Helps you reduce stress and anxiety',
-              subItems: [],
-            },
-            {
-              listItem: 'Helps you feel energetic throughout the day',
-              subItems: [],
-            },
-            {
-              listItem: 'Helps you become mindful in your relationships',
-              subItems: [],
-            },
-            {
-              listItem: ' Helps you get more in control of your feelings',
-              subItems: [],
-            },
-          ],
-        },
-      },
+  //           {
+  //             listItem: 'Helps you reduce stress and anxiety',
+  //             subItems: [],
+  //           },
+  //           {
+  //             listItem: 'Helps you feel energetic throughout the day',
+  //             subItems: [],
+  //           },
+  //           {
+  //             listItem: 'Helps you become mindful in your relationships',
+  //             subItems: [],
+  //           },
+  //           {
+  //             listItem: ' Helps you get more in control of your feelings',
+  //             subItems: [],
+  //           },
+  //         ],
+  //       },
+  //     },
 
-      {
-        type: 'paragraph',
-        content: {
-          title: '',
-          text: [
-            'Come and experience, amidst nature and beauty, our enriching 21 Days Better Living Course.',
-          ],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'PROGRAM DETAILS',
-          text: [
-            'The course is held once a month, starting on the first Sunday (7:00 a.m.) of every month. The classes are of 1 hr. 30 mins each day for 21 consecutive days. Participants can opt for the morning or evening batches.',
-          ],
-        },
-      },
-      // {
-      //   type: 'paragraph',
-      //   content: {
-      //     title: 'UPCOMING DATES FOR 2022',
-      //     text: [],
-      //   },
-      // },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'Timings',
-          text: ['Morning 7:00 am – 8:30 am (IST)'],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'REGISTRATION',
-          text: [],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: '',
-          text: [
-            'For registration in the 21 Days Better Living Course, please click on the link below and fill in all the details. Within 24 hours after registering, you will receive an email containing the link to the payment portal. You can use the link to make the payment.',
-          ],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'FEES',
-          text: [],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'Rs. 2100/-',
-          text: [
-            '*Please note fees once paid will be non-refundable.',
-            ' We support all credit cards. For making payments using MasterCard. Alternatively, you can also make payments using net banking or opt for wire transfer by writing to us.',
-          ],
-        },
-      },
+  //     {
+  //       type: 'paragraph',
+  //       content: {
+  //         title: '',
+  //         text: [
+  //           'Come and experience, amidst nature and beauty, our enriching 21 Days Better Living Course.',
+  //         ],
+  //       },
+  //     },
+  //     {
+  //       type: 'paragraph',
+  //       content: {
+  //         title: 'PROGRAM DETAILS',
+  //         text: [
+  //           'The course is held once a month, starting on the first Sunday (7:00 a.m.) of every month. The classes are of 1 hr. 30 mins each day for 21 consecutive days. Participants can opt for the morning or evening batches.',
+  //         ],
+  //       },
+  //     },
+  //     // {
+  //     //   type: 'paragraph',
+  //     //   content: {
+  //     //     title: 'UPCOMING DATES FOR 2022',
+  //     //     text: [],
+  //     //   },
+  //     // },
+  //     {
+  //       type: 'paragraph',
+  //       content: {
+  //         title: 'Timings',
+  //         text: ['Morning 7:00 am – 8:30 am (IST)'],
+  //       },
+  //     },
+  //     {
+  //       type: 'paragraph',
+  //       content: {
+  //         title: 'REGISTRATION',
+  //         text: [],
+  //       },
+  //     },
+  //     {
+  //       type: 'paragraph',
+  //       content: {
+  //         title: '',
+  //         text: [
+  //           'For registration in the 21 Days Better Living Course, please click on the link below and fill in all the details. Within 24 hours after registering, you will receive an email containing the link to the payment portal. You can use the link to make the payment.',
+  //         ],
+  //       },
+  //     },
+  //     {
+  //       type: 'paragraph',
+  //       content: {
+  //         title: 'FEES',
+  //         text: [],
+  //       },
+  //     },
+  //     {
+  //       type: 'paragraph',
+  //       content: {
+  //         title: 'Rs. 2100/-',
+  //         text: [
+  //           '*Please note fees once paid will be non-refundable.',
+  //           ' We support all credit cards. For making payments using MasterCard. Alternatively, you can also make payments using net banking or opt for wire transfer by writing to us.',
+  //         ],
+  //       },
+  //     },
 
-      // {
-      //   type: 'paragraph',
-      //   content: {
-      //     title: 'PRE-REQUISITES',
-      //     text: [],
-      //   },
-      // },
-      // {
-      //   type: 'u-list',
-      //   content: {
-      //     title: ' A MANDATORY PREREQUISITE FOR THIS COURSE IS:',
-      //     points: [
-      //       {
-      //         listItem:
-      //           'Covid test RT-PCR results dated 20th January 2022to 28th January 2022and later for entry into the premises post prior registration. ',
-      //         subItems: [],
-      //       },
-      //       {
-      //         listItem:
-      //           'Students must use personal vehicles for commuting, throughout the course duration. We would discourage the use of public transport. (For non-residential students)',
-      //         subItems: [],
-      //       },
-      //       {
-      //         listItem:
-      //           'This course is for healthy individuals. Kindly note if you suffer from any health issues like diabetes, hypertension, or orthopaedic problems, kindly take prior approval.',
-      //         subItems: [],
-      //       },
-      //       {
-      //         listItem:
-      //           'For international Students, it is mandatory to do 14 Day Quarantine as per the laws of Government of India along with RT-PCR test reports. ',
-      //         subItems: [],
-      //       },
-      //       {
-      //         listItem:
-      //           'Last but not the least, do not forget your masks and Yoga Mats',
-      //         subItems: [],
-      //       },
-      //     ],
-      //   },
-      // },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'FAQs  ',
-          text: [],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title:
-            '  1. What is the time to reach the Institute during the course duration?  ',
-          text: [
-            'For residential campers, students should arrive at The Yoga Institute between 7.00 a.m. to 7.00 p.m. IST (Indian Standard Time). Please read on Hostel Facility for more details. ',
-          ],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title:
-            ' 2. Can a person who has problem with sitting on the floor for a long time enroll for the course?',
-          text: [
-            'Backrest and chairs are available on request in special and exceptional cases. – Rest and recreation are also a part of the course.',
-          ],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: '3. How many seats are available in one course?',
-          text: [
-            'Only 35 seats are available. Registrations on a first come, first-serve basis only.',
-          ],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'Please Note',
-          text: [],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'The payment validity and session attendance for 21-Days Better Living Course is only applicable for one month. However, in emergency circumstances, the participant can attend the 21-Days BLC sessions for the next month but only on approval of the management. Without authorisation, the participant will not be allowed to attend the sessions post the actual sessions of the course.',
-          text: [],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'UNIQUE OFFERINGS ',
-          text: [''],
-        },
-      },
-      {
-        type: 'u-list',
-        content: {
-          title: 'Our Amenities / Our Facilities',
-          points: [
-            {
-              listItem:
-                'Library: Explore one of largest collections of spiritual and philosophical books to expand your knowledge ',
-              subItems: [],
-            },
-            {
-              listItem:
-                'Internet Room: Access the internet in a comfortable setting when you need Meditation Pods: Meditate on the five fundamental natural elements, the Panchamahabhutas,',
-              subItems: [],
-            },
-            {
-              listItem:
-                'Acupressure Path: Give your feet a natural massage and activate your vital energies',
-              subItems: [],
-            },
-            {
-              listItem:
-                'Yogic Gazebo: Enjoy the soothing sounds of flowing water and take in the peace and at this relaxation area',
-              subItems: [],
-            },
-            {
-              listItem:
-                'Dining Area: Enjoy wholesome Sattvik meals, specially prepared for your nourishment',
-              subItems: [],
-            },
-            {
-              listItem:
-                'Book Store: Shop in a wide selection of TYI publications. Find yourself the best yogic attire and mats.',
-              subItems: [],
-            },
-          ],
-        },
-      },
-    ],
-  },
+  //     // {
+  //     //   type: 'paragraph',
+  //     //   content: {
+  //     //     title: 'PRE-REQUISITES',
+  //     //     text: [],
+  //     //   },
+  //     // },
+  //     // {
+  //     //   type: 'u-list',
+  //     //   content: {
+  //     //     title: ' A MANDATORY PREREQUISITE FOR THIS COURSE IS:',
+  //     //     points: [
+  //     //       {
+  //     //         listItem:
+  //     //           'Covid test RT-PCR results dated 20th January 2022to 28th January 2022and later for entry into the premises post prior registration. ',
+  //     //         subItems: [],
+  //     //       },
+  //     //       {
+  //     //         listItem:
+  //     //           'Students must use personal vehicles for commuting, throughout the course duration. We would discourage the use of public transport. (For non-residential students)',
+  //     //         subItems: [],
+  //     //       },
+  //     //       {
+  //     //         listItem:
+  //     //           'This course is for healthy individuals. Kindly note if you suffer from any health issues like diabetes, hypertension, or orthopaedic problems, kindly take prior approval.',
+  //     //         subItems: [],
+  //     //       },
+  //     //       {
+  //     //         listItem:
+  //     //           'For international Students, it is mandatory to do 14 Day Quarantine as per the laws of Government of India along with RT-PCR test reports. ',
+  //     //         subItems: [],
+  //     //       },
+  //     //       {
+  //     //         listItem:
+  //     //           'Last but not the least, do not forget your masks and Yoga Mats',
+  //     //         subItems: [],
+  //     //       },
+  //     //     ],
+  //     //   },
+  //     // },
+  //     {
+  //       type: 'paragraph',
+  //       content: {
+  //         title: 'FAQs  ',
+  //         text: [],
+  //       },
+  //     },
+  //     {
+  //       type: 'paragraph',
+  //       content: {
+  //         title:
+  //           '  1. What is the time to reach the Institute during the course duration?  ',
+  //         text: [
+  //           'For residential campers, students should arrive at The Yoga Institute between 7.00 a.m. to 7.00 p.m. IST (Indian Standard Time). Please read on Hostel Facility for more details. ',
+  //         ],
+  //       },
+  //     },
+  //     {
+  //       type: 'paragraph',
+  //       content: {
+  //         title:
+  //           ' 2. Can a person who has problem with sitting on the floor for a long time enroll for the course?',
+  //         text: [
+  //           'Backrest and chairs are available on request in special and exceptional cases. – Rest and recreation are also a part of the course.',
+  //         ],
+  //       },
+  //     },
+  //     {
+  //       type: 'paragraph',
+  //       content: {
+  //         title: '3. How many seats are available in one course?',
+  //         text: [
+  //           'Only 35 seats are available. Registrations on a first come, first-serve basis only.',
+  //         ],
+  //       },
+  //     },
+  //     {
+  //       type: 'paragraph',
+  //       content: {
+  //         title: 'Please Note',
+  //         text: [],
+  //       },
+  //     },
+  //     {
+  //       type: 'paragraph',
+  //       content: {
+  //         title: 'The payment validity and session attendance for 21-Days Better Living Course is only applicable for one month. However, in emergency circumstances, the participant can attend the 21-Days BLC sessions for the next month but only on approval of the management. Without authorisation, the participant will not be allowed to attend the sessions post the actual sessions of the course.',
+  //         text: [],
+  //       },
+  //     },
+  //     {
+  //       type: 'paragraph',
+  //       content: {
+  //         title: 'UNIQUE OFFERINGS ',
+  //         text: [''],
+  //       },
+  //     },
+  //     {
+  //       type: 'u-list',
+  //       content: {
+  //         title: 'Our Amenities / Our Facilities',
+  //         points: [
+  //           {
+  //             listItem:
+  //               'Library: Explore one of largest collections of spiritual and philosophical books to expand your knowledge ',
+  //             subItems: [],
+  //           },
+  //           {
+  //             listItem:
+  //               'Internet Room: Access the internet in a comfortable setting when you need Meditation Pods: Meditate on the five fundamental natural elements, the Panchamahabhutas,',
+  //             subItems: [],
+  //           },
+  //           {
+  //             listItem:
+  //               'Acupressure Path: Give your feet a natural massage and activate your vital energies',
+  //             subItems: [],
+  //           },
+  //           {
+  //             listItem:
+  //               'Yogic Gazebo: Enjoy the soothing sounds of flowing water and take in the peace and at this relaxation area',
+  //             subItems: [],
+  //           },
+  //           {
+  //             listItem:
+  //               'Dining Area: Enjoy wholesome Sattvik meals, specially prepared for your nourishment',
+  //             subItems: [],
+  //           },
+  //           {
+  //             listItem:
+  //               'Book Store: Shop in a wide selection of TYI publications. Find yourself the best yogic attire and mats.',
+  //             subItems: [],
+  //           },
+  //         ],
+  //       },
+  //     },
+  //   ],
+  // },
 }
 
 const classes = {
