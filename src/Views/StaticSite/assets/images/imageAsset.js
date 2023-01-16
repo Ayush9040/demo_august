@@ -2549,6 +2549,8 @@ export const printMediaAssest = {
   printMediaAssest951:'/print_media/2023/Sakal-Epaper-3rd-January-2023.jpg',
   printMediaAssest952:'/print_media/2023/Navbharat-Times-Epaper-4th-January-2023.jpg',
   printMediaAssest953:'/print_media/2023/Sakad-news-paper.jpg',
+  printMediaAssest954:'/print_media/2023/Navbharat%20Times%20Epaper%20-%2015th%20January%202023.jpg',
+  printMediaAssest955:'/print_media/2023/Navbharat%20Times%20Epaper%20-%2016th%20January%202023.jpg',
 }
 
 
