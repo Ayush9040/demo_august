@@ -125,7 +125,7 @@ const LocateUs = () => {
               </span>
               {bold === 'U.A.E.' && <div className="bottom_line2"></div>}
             </li>
-            <li>
+            {/* <li>
               <span
                 style={bold === 'Uruguay' ? { fontWeight: '700' } : {}}
                 onClick={() => {
@@ -135,7 +135,7 @@ const LocateUs = () => {
               Uruguay
               </span>
               {bold === 'Uruguay' && <div className="bottom_line2"></div>}
-            </li>
+            </li> */}
             {/* <li>
             <span
               style={bold === 'Italy' ? { fontWeight: '700' } : {}}

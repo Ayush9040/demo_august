@@ -152,17 +152,17 @@ export const locateData =[
     website:'www.yogihearts.com',
     branches:[]
   },
-  {
-    flag:`${baseDomain}${locateAsset.urugauy}`,
-    country:'Uruguay',
-    add:'The Yoga Institute,',
-    subAdd:'Studio Jivam Selto, Uruguay',
-    mobile:'(598) 92918278',
-    whatapp:'+59892918278',
-    email:'padmaranidd@gmail.com',
-    website:'https://studiojiva.com',
-    branches:[]
-  },
+  // {
+  //   flag:`${baseDomain}${locateAsset.urugauy}`,
+  //   country:'Uruguay',
+  //   add:'The Yoga Institute,',
+  //   subAdd:'Studio Jivam Selto, Uruguay',
+  //   mobile:'(598) 92918278',
+  //   whatapp:'+59892918278',
+  //   email:'padmaranidd@gmail.com',
+  //   website:'https://studiojiva.com',
+  //   branches:[]
+  // },
   // {
   //   flag:`${baseDomain}${locateAsset.italy}`,
   //   country:'Italy',
