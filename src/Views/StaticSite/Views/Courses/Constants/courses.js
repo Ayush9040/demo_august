@@ -371,7 +371,7 @@ const ttc200hr = {
         type: 'u-list',
         content: {
           title:
-            'A. BTTC – 1 Month Hybrid Course',
+            ' ',
           points: [
             {
               listItem: 'Students will be eligible to appear for the Final certification exams only if they have completed all the required course submissions, class work and the required attendance',
@@ -763,7 +763,82 @@ const ttc200hr = {
           ],
         },
       },
+      {
+        type:'paragraph',
+        content:{
+          title:'Exam Details',
+          text:[],
+        }
+      },
+      {
+        type: 'u-list',
+        content: {
+          title:
+            ' ',
+          points: [
+            {
+              listItem: 'Students will be eligible to appear for the Final certification exams only if they have completed all the required course submissions, class work and the required attendance',
+              subItems: [],
+            },
+            {
+              listItem:
+                'Students will have to appear for the final exams within 60 days from the course end date.',
+              subItems: [],
+            },
+            {
+              listItem: 'Students will be permitted a maximum of 3 attempts, to clear the final exams, failing which they will have to repeat the course.',
+              subItems: ['In the 2nd attempt, they will be exempted from either theory or practical’s, if they have cleared it in their 1st attempt.',
+                'They will have to appear for both in case of a 3rd attempt.'
+              ],
+            },
+            {
+              listItem: 'Students can register for either online or on-campus exams.',
+              subItems: ['Once finalized, students will not be permitted to switch from online to on-campus and vice versa.'],
+            },
+            {
+              listItem:'Examiners will evaluate students only as per the final approved list.',
+              subItems:[],
+            },
+
+           
+          ],
+          
+        },
+      },
+      {
+        type:'u-list',
+        content:{
+          title:'Exam Schedule ',
+          points:[
+            {
+              listItem:'On-campus Final exams (both theory and practical’s) will be conducted on the last working day of each month, or as announced (in case of exigencies), between 10 am (IST) and 2 pm IST.',
+              subItems:[
+                
+              ],
+            },
+            {
+              listItem:'Online Final exams will be conducted on the 1st Sat and the 3rd Sat of each month or as announced (in case of exigencies), subject to a minimum quorum of 8 students.',
+              subItems:[
+                'Theory exams will be conducted online at 5pm (IST)',
+                'Practical exams will be conducted online at 3.30 pm (IST) / 6.30 pm (IST), subject to quorum.'
+              ],
+            },
+            {
+              listItem:'Students, after submission, can log out /leave only with the explicit permission of the examiner.',
+              subItems:[
+                'For practical’s - students will have to wait till the exams of all students are completed.',
+                'The examiner may call out students at random and not necessarily in alphabetic order'
+              ],
+            },
+            {
+              listItem:'A Mock test will be held 7 -14 days prior to the course end date, to familiarise students with the exam process.',
+              subItems:[],
+            },
+          ],
+        }
+      }
     ],
+
     offerings: [
       {
         type: 'u-list',
@@ -1086,6 +1161,82 @@ const ttc200hr = {
           ],
         },
       },
+      {
+        type:'paragraph',
+        content:{
+          title:'Exam Details',
+          text:[],
+        }
+      },
+      {
+        type: 'u-list',
+        content: {
+          title:
+            '',
+          points: [
+            {
+              listItem: 'Students will be eligible to appear for the Final certification exams only if they have completed all the required course submissions, class work and the required attendance',
+              subItems: [],
+            },
+            {
+              listItem:
+                'Students will have to appear for the final exams within 60 days from the course end date.',
+              subItems: [],
+            },
+            {
+              listItem: 'Students will be permitted a maximum of 3 attempts, to clear the final exams, failing which they will have to repeat the course.',
+              subItems: ['In the 2nd attempt, they will be exempted from either theory or practical’s, if they have cleared it in their 1st attempt.',
+                'They will have to appear for both in case of a 3rd attempt.'
+              ],
+            },
+            {
+              listItem:'Examiners will evaluate students only as per the final approved list.',
+              subItems:[],
+            },
+
+           
+          ],
+          
+        },
+      },
+      {
+        type:'u-list',
+        content:{
+          title:'All Exams / tests will be conducted online.',
+          points:[
+            {
+              listItem:'Students, after submission, can log out only with the explicit permission of the examiner.',
+              subItems:[
+                'For practical’s - students will have to wait till the exams of all students are completed.',
+                'The examiner may call out students at random and not necessarily in alphabetic order'
+              ],
+            },
+           
+          ],
+        }
+      },
+      {
+        type:'u-list',
+        content:{
+          title:'Exam Schedule ',
+          points:[
+            {
+              listItem:'Final exams will be conducted online on the 1st Sat and the 3rd Sat of each month or as announced (in case of exigencies), subject to a quorum of 8 students.',
+              subItems:[
+                'Theory exams will be conducted online at 5pm (IST)',
+                'Practical exams will be conducted at 3.30 pm (IST) / 6.30 pm (IST), subject to quorum.'
+              ],
+            },
+            {
+              listItem:'A Mock test will be held 7 -14 days prior to the course end date, to familiarise students with the exam process.',
+              subItems:[
+                
+              ],
+            },
+           
+          ],
+        }
+      }
     ],
     teaching: [
       {
@@ -1540,6 +1691,82 @@ const ttc200hr = {
           ],
         },
       },
+      {
+        type:'paragraph',
+        content:{
+          title:'Exam Details',
+          text:[],
+        }
+      },
+      {
+        type: 'u-list',
+        content: {
+          title:
+            '',
+          points: [
+            {
+              listItem: 'Students will be eligible to appear for the Final certification exams only if they have completed all the required course submissions, class work and the required attendance',
+              subItems: [],
+            },
+            {
+              listItem:
+                'Students will have to appear for the final exams within 60 days from the course end date.',
+              subItems: [],
+            },
+            {
+              listItem: 'Students will be permitted a maximum of 3 attempts, to clear the final exams, failing which they will have to repeat the course.',
+              subItems: ['In the 2nd attempt, they will be exempted from either theory or practical’s, if they have cleared it in their 1st attempt.',
+                'They will have to appear for both in case of a 3rd attempt.'
+              ],
+            },
+            {
+              listItem:'Examiners will evaluate students only as per the final approved list.',
+              subItems:[],
+            },
+
+           
+          ],
+          
+        },
+      },
+      {
+        type:'u-list',
+        content:{
+          title:'All Exams / tests will be conducted online.',
+          points:[
+            {
+              listItem:'Students, after submission, can log out only with the explicit permission of the examiner.',
+              subItems:[
+                'For practical’s - students will have to wait till the exams of all students are completed.',
+                'The examiner may call out students at random and not necessarily in alphabetic order'
+              ],
+            },
+           
+          ],
+        }
+      },
+      {
+        type:'u-list',
+        content:{
+          title:'Exam Schedule ',
+          points:[
+            {
+              listItem:'Final exams will be conducted online on the 1st Sat and the 3rd Sat of each month or as announced (in case of exigencies), subject to a quorum of 8 students.',
+              subItems:[
+                'Theory exams will be conducted online at 5pm (IST)',
+                'Practical exams will be conducted at 3.30 pm (IST) / 6.30 pm (IST), subject to quorum.'
+              ],
+            },
+            {
+              listItem:'A Mock test will be held 7 -14 days prior to the course end date, to familiarise students with the exam process.',
+              subItems:[
+                
+              ],
+            },
+           
+          ],
+        }
+      }
     ],
     offerings: [
       {
@@ -1853,6 +2080,82 @@ const ttc200hr = {
           ],
         },
       },
+      {
+        type:'paragraph',
+        content:{
+          title:'Exam Details',
+          text:[],
+        }
+      },
+      {
+        type: 'u-list',
+        content: {
+          title:
+            '',
+          points: [
+            {
+              listItem: 'Students will be eligible to appear for the Final certification exams only if they have completed all the required course submissions, class work and the required attendance',
+              subItems: [],
+            },
+            {
+              listItem:
+                'Students will have to appear for the final exams within 60 days from the course end date.',
+              subItems: [],
+            },
+            {
+              listItem: 'Students will be permitted a maximum of 3 attempts, to clear the final exams, failing which they will have to repeat the course.',
+              subItems: ['In the 2nd attempt, they will be exempted from either theory or practical’s, if they have cleared it in their 1st attempt.',
+                'They will have to appear for both in case of a 3rd attempt.'
+              ],
+            },
+            {
+              listItem:'Examiners will evaluate students only as per the final approved list.',
+              subItems:[],
+            },
+
+           
+          ],
+          
+        },
+      },
+      {
+        type:'u-list',
+        content:{
+          title:'All Exams / tests will be conducted online.',
+          points:[
+            {
+              listItem:'Students, after submission, can log out only with the explicit permission of the examiner.',
+              subItems:[
+                'For practical’s - students will have to wait till the exams of all students are completed.',
+                'The examiner may call out students at random and not necessarily in alphabetic order'
+              ],
+            },
+           
+          ],
+        }
+      },
+      {
+        type:'u-list',
+        content:{
+          title:'Exam Schedule ',
+          points:[
+            {
+              listItem:'Final exams will be conducted online on the 1st Sat and the 3rd Sat of each month or as announced (in case of exigencies), subject to a quorum of 8 students.',
+              subItems:[
+                'Theory exams will be conducted online at 5pm (IST)',
+                'Practical exams will be conducted at 3.30 pm (IST) / 6.30 pm (IST), subject to quorum.'
+              ],
+            },
+            {
+              listItem:'A Mock test will be held 7 -14 days prior to the course end date, to familiarise students with the exam process.',
+              subItems:[
+                
+              ],
+            },
+           
+          ],
+        }
+      }
     ],
     teaching: [
       {
@@ -2303,6 +2606,82 @@ const ttc200hr = {
           ],
         },
       },
+      {
+        type:'paragraph',
+        content:{
+          title:'Exam Details',
+          text:[],
+        }
+      },
+      {
+        type: 'u-list',
+        content: {
+          title:
+            '',
+          points: [
+            {
+              listItem: 'Students will be eligible to appear for the Final certification exams only if they have completed all the required course submissions, class work and the required attendance',
+              subItems: [],
+            },
+            {
+              listItem:
+                'Students will have to appear for the final exams within 60 days from the course end date.',
+              subItems: [],
+            },
+            {
+              listItem: 'Students will be permitted a maximum of 3 attempts, to clear the final exams, failing which they will have to repeat the course.',
+              subItems: ['In the 2nd attempt, they will be exempted from either theory or practical’s, if they have cleared it in their 1st attempt.',
+                'They will have to appear for both in case of a 3rd attempt.'
+              ],
+            },
+            {
+              listItem:'Examiners will evaluate students only as per the final approved list.',
+              subItems:[],
+            },
+
+           
+          ],
+          
+        },
+      },
+      {
+        type:'u-list',
+        content:{
+          title:'All Exams / tests will be conducted online.',
+          points:[
+            {
+              listItem:'Students, after submission, can log out only with the explicit permission of the examiner.',
+              subItems:[
+                'For practical’s - students will have to wait till the exams of all students are completed.',
+                'The examiner may call out students at random and not necessarily in alphabetic order'
+              ],
+            },
+           
+          ],
+        }
+      },
+      {
+        type:'u-list',
+        content:{
+          title:'Exam Schedule ',
+          points:[
+            {
+              listItem:'Final exams will be conducted online on the 1st Sat and the 3rd Sat of each month or as announced (in case of exigencies), subject to a quorum of 8 students.',
+              subItems:[
+                'Theory exams will be conducted online at 5pm (IST)',
+                'Practical exams will be conducted at 3.30 pm (IST) / 6.30 pm (IST), subject to quorum.'
+              ],
+            },
+            {
+              listItem:'A Mock test will be held 7 -14 days prior to the course end date, to familiarise students with the exam process.',
+              subItems:[
+                
+              ],
+            },
+           
+          ],
+        }
+      }
     ],
     offerings: [
       {
@@ -2572,6 +2951,82 @@ const ttc500hr = {
           ],
         },
       },
+      {
+        type:'paragraph',
+        content:{
+          title:'Exam Details',
+          text:[],
+        }
+      },
+      {
+        type: 'u-list',
+        content: {
+          title:
+            '',
+          points: [
+            {
+              listItem: 'Students will be eligible to appear for the Final certification exams only if they have completed all the required course submissions, class work and the required attendance',
+              subItems: [],
+            },
+            {
+              listItem:
+                'Students will have to appear for the final exams within 60 days from the course end date.',
+              subItems: [],
+            },
+            {
+              listItem: 'Students will be permitted a maximum of 3 attempts, to clear the final exams, failing which they will have to repeat the course.',
+              subItems: ['In the 2nd attempt, they will be exempted from either theory or practical’s, if they have cleared it in their 1st attempt.',
+                'They will have to appear for both in case of a 3rd attempt.'
+              ],
+            },
+            {
+              listItem:'Examiners will evaluate students only as per the final approved list.',
+              subItems:[],
+            },
+
+           
+          ],
+          
+        },
+      },
+      {
+        type:'u-list',
+        content:{
+          title:'All Exams / tests will be conducted online.',
+          points:[
+            {
+              listItem:'Students, after submission, can log out only with the explicit permission of the examiner.',
+              subItems:[
+                'For practical’s - students will have to wait till the exams of all students are completed.',
+                'The examiner may call out students at random and not necessarily in alphabetic order'
+              ],
+            },
+           
+          ],
+        }
+      },
+      {
+        type:'u-list',
+        content:{
+          title:'Exam Schedule ',
+          points:[
+            {
+              listItem:'Final exams will be conducted online on the 1st Sat and the 3rd Sat of each month or as announced (in case of exigencies), subject to a quorum of 8 students.',
+              subItems:[
+                'Theory exams will be conducted online at 5pm (IST)',
+                'Practical exams will be conducted at 3.30 pm (IST) / 6.30 pm (IST), subject to quorum.'
+              ],
+            },
+            {
+              listItem:'A Mock test will be held 7 -14 days prior to the course end date, to familiarise students with the exam process.',
+              subItems:[
+                
+              ],
+            },
+           
+          ],
+        }
+      }
     ],
     offerings: [
       {
@@ -3017,6 +3472,80 @@ const ttc900hr = {
           ],
         },
       },
+      {
+        type:'paragraph',
+        content:{
+          title:'Exam Details',
+          text:[],
+        }
+      },
+      {
+        type: 'u-list',
+        content: {
+          title:
+            ' ',
+          points: [
+            {
+              listItem: 'Students will be eligible to appear for the Final certification exams only if they have completed all the required course submissions, class work and the required attendance',
+              subItems: [],
+            },
+            {
+              listItem:
+                'Students will have to appear for the final exams within 60 days from the course end date.',
+              subItems: [],
+            },
+            {
+              listItem: 'Students will be permitted a maximum of 3 attempts, to clear the final exams, failing which they will have to repeat the course.',
+              subItems: ['In the 2nd attempt, they will be exempted from either theory or practical’s, if they have cleared it in their 1st attempt.',
+                'They will have to appear for both in case of a 3rd attempt.'
+              ],
+            },
+            {
+              listItem: 'Students can register for either online or on-campus exams.',
+              subItems: ['Once finalized, students will not be permitted to switch from online to on-campus and vice versa.'],
+            },
+            {
+              listItem:'Examiners will evaluate students only as per the final approved list.',
+              subItems:[],
+            },
+
+           
+          ],
+          
+        },
+      },
+      {
+        type:'u-list',
+        content:{
+          title:'Exam Schedule ',
+          points:[
+            {
+              listItem:'On-campus Final exams (both theory and practical’s) will be conducted on the last working day of each month, or as announced (in case of exigencies), between 10 am (IST) and 2 pm IST.',
+              subItems:[
+                
+              ],
+            },
+            {
+              listItem:'Online Final exams will be conducted on the 1st Sat and the 3rd Sat of each month or as announced (in case of exigencies), subject to a minimum quorum of 8 students.',
+              subItems:[
+                'Theory exams will be conducted online at 5pm (IST)',
+                'Practical exams will be conducted online at 3.30 pm (IST) / 6.30 pm (IST), subject to quorum.'
+              ],
+            },
+            {
+              listItem:'Students, after submission, can log out /leave only with the explicit permission of the examiner.',
+              subItems:[
+                'For practical’s - students will have to wait till the exams of all students are completed.',
+                'The examiner may call out students at random and not necessarily in alphabetic order'
+              ],
+            },
+            {
+              listItem:'A Mock test will be held 7 -14 days prior to the course end date, to familiarise students with the exam process.',
+              subItems:[],
+            },
+          ],
+        }
+      }
     ],
 
     offerings: [
@@ -3386,6 +3915,7 @@ const ttc900hr = {
           url: 'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/courses_pdf/900hr.pdf',
         },
       },
+     
     ],
     teaching: [
       {
@@ -3626,6 +4156,80 @@ const ttc900hr = {
           ],
         },
       },
+      {
+        type:'paragraph',
+        content:{
+          title:'Exam Details',
+          text:[],
+        }
+      },
+      {
+        type: 'u-list',
+        content: {
+          title:
+            ' ',
+          points: [
+            {
+              listItem: 'Students will be eligible to appear for the Final certification exams only if they have completed all the required course submissions, class work and the required attendance',
+              subItems: [],
+            },
+            {
+              listItem:
+                'Students will have to appear for the final exams within 60 days from the course end date.',
+              subItems: [],
+            },
+            {
+              listItem: 'Students will be permitted a maximum of 3 attempts, to clear the final exams, failing which they will have to repeat the course.',
+              subItems: ['In the 2nd attempt, they will be exempted from either theory or practical’s, if they have cleared it in their 1st attempt.',
+                'They will have to appear for both in case of a 3rd attempt.'
+              ],
+            },
+            {
+              listItem: 'Students can register for either online or on-campus exams.',
+              subItems: ['Once finalized, students will not be permitted to switch from online to on-campus and vice versa.'],
+            },
+            {
+              listItem:'Examiners will evaluate students only as per the final approved list.',
+              subItems:[],
+            },
+
+           
+          ],
+          
+        },
+      },
+      {
+        type:'u-list',
+        content:{
+          title:'Exam Schedule ',
+          points:[
+            {
+              listItem:'On-campus Final exams (both theory and practical’s) will be conducted on the last working day of each month, or as announced (in case of exigencies), between 10 am (IST) and 2 pm IST.',
+              subItems:[
+                
+              ],
+            },
+            {
+              listItem:'Online Final exams will be conducted on the 1st Sat and the 3rd Sat of each month or as announced (in case of exigencies), subject to a minimum quorum of 8 students.',
+              subItems:[
+                'Theory exams will be conducted online at 5pm (IST)',
+                'Practical exams will be conducted online at 3.30 pm (IST) / 6.30 pm (IST), subject to quorum.'
+              ],
+            },
+            {
+              listItem:'Students, after submission, can log out /leave only with the explicit permission of the examiner.',
+              subItems:[
+                'For practical’s - students will have to wait till the exams of all students are completed.',
+                'The examiner may call out students at random and not necessarily in alphabetic order'
+              ],
+            },
+            {
+              listItem:'A Mock test will be held 7 -14 days prior to the course end date, to familiarise students with the exam process.',
+              subItems:[],
+            },
+          ],
+        }
+      }
     ],
     offerings: [
       {
@@ -4244,6 +4848,80 @@ const ttc900hr = {
           ],
         },
       },
+      {
+        type:'paragraph',
+        content:{
+          title:'Exam Details',
+          text:[],
+        }
+      },
+      {
+        type: 'u-list',
+        content: {
+          title:
+            ' ',
+          points: [
+            {
+              listItem: 'Students will be eligible to appear for the Final certification exams only if they have completed all the required course submissions, class work and the required attendance',
+              subItems: [],
+            },
+            {
+              listItem:
+                'Students will have to appear for the final exams within 60 days from the course end date.',
+              subItems: [],
+            },
+            {
+              listItem: 'Students will be permitted a maximum of 3 attempts, to clear the final exams, failing which they will have to repeat the course.',
+              subItems: ['In the 2nd attempt, they will be exempted from either theory or practical’s, if they have cleared it in their 1st attempt.',
+                'They will have to appear for both in case of a 3rd attempt.'
+              ],
+            },
+            {
+              listItem: 'Students can register for either online or on-campus exams.',
+              subItems: ['Once finalized, students will not be permitted to switch from online to on-campus and vice versa.'],
+            },
+            {
+              listItem:'Examiners will evaluate students only as per the final approved list.',
+              subItems:[],
+            },
+
+           
+          ],
+          
+        },
+      },
+      {
+        type:'u-list',
+        content:{
+          title:'Exam Schedule ',
+          points:[
+            {
+              listItem:'On-campus Final exams (both theory and practical’s) will be conducted on the last working day of each month, or as announced (in case of exigencies), between 10 am (IST) and 2 pm IST.',
+              subItems:[
+                
+              ],
+            },
+            {
+              listItem:'Online Final exams will be conducted on the 1st Sat and the 3rd Sat of each month or as announced (in case of exigencies), subject to a minimum quorum of 8 students.',
+              subItems:[
+                'Theory exams will be conducted online at 5pm (IST)',
+                'Practical exams will be conducted online at 3.30 pm (IST) / 6.30 pm (IST), subject to quorum.'
+              ],
+            },
+            {
+              listItem:'Students, after submission, can log out /leave only with the explicit permission of the examiner.',
+              subItems:[
+                'For practical’s - students will have to wait till the exams of all students are completed.',
+                'The examiner may call out students at random and not necessarily in alphabetic order'
+              ],
+            },
+            {
+              listItem:'A Mock test will be held 7 -14 days prior to the course end date, to familiarise students with the exam process.',
+              subItems:[],
+            },
+          ],
+        }
+      }
     ],
 
     offerings: [
@@ -4850,6 +5528,80 @@ const ttc900hr = {
           ],
         },
       },
+      {
+        type:'paragraph',
+        content:{
+          title:'Exam Details',
+          text:[],
+        }
+      },
+      {
+        type: 'u-list',
+        content: {
+          title:
+            ' ',
+          points: [
+            {
+              listItem: 'Students will be eligible to appear for the Final certification exams only if they have completed all the required course submissions, class work and the required attendance',
+              subItems: [],
+            },
+            {
+              listItem:
+                'Students will have to appear for the final exams within 60 days from the course end date.',
+              subItems: [],
+            },
+            {
+              listItem: 'Students will be permitted a maximum of 3 attempts, to clear the final exams, failing which they will have to repeat the course.',
+              subItems: ['In the 2nd attempt, they will be exempted from either theory or practical’s, if they have cleared it in their 1st attempt.',
+                'They will have to appear for both in case of a 3rd attempt.'
+              ],
+            },
+            {
+              listItem: 'Students can register for either online or on-campus exams.',
+              subItems: ['Once finalized, students will not be permitted to switch from online to on-campus and vice versa.'],
+            },
+            {
+              listItem:'Examiners will evaluate students only as per the final approved list.',
+              subItems:[],
+            },
+
+           
+          ],
+          
+        },
+      },
+      {
+        type:'u-list',
+        content:{
+          title:'Exam Schedule ',
+          points:[
+            {
+              listItem:'On-campus Final exams (both theory and practical’s) will be conducted on the last working day of each month, or as announced (in case of exigencies), between 10 am (IST) and 2 pm IST.',
+              subItems:[
+                
+              ],
+            },
+            {
+              listItem:'Online Final exams will be conducted on the 1st Sat and the 3rd Sat of each month or as announced (in case of exigencies), subject to a minimum quorum of 8 students.',
+              subItems:[
+                'Theory exams will be conducted online at 5pm (IST)',
+                'Practical exams will be conducted online at 3.30 pm (IST) / 6.30 pm (IST), subject to quorum.'
+              ],
+            },
+            {
+              listItem:'Students, after submission, can log out /leave only with the explicit permission of the examiner.',
+              subItems:[
+                'For practical’s - students will have to wait till the exams of all students are completed.',
+                'The examiner may call out students at random and not necessarily in alphabetic order'
+              ],
+            },
+            {
+              listItem:'A Mock test will be held 7 -14 days prior to the course end date, to familiarise students with the exam process.',
+              subItems:[],
+            },
+          ],
+        }
+      }
     ],
 
     offerings: [
@@ -5463,6 +6215,80 @@ const ttc900hr = {
           ],
         },
       },
+      {
+        type:'paragraph',
+        content:{
+          title:'Exam Details',
+          text:[],
+        }
+      },
+      {
+        type: 'u-list',
+        content: {
+          title:
+            ' ',
+          points: [
+            {
+              listItem: 'Students will be eligible to appear for the Final certification exams only if they have completed all the required course submissions, class work and the required attendance',
+              subItems: [],
+            },
+            {
+              listItem:
+                'Students will have to appear for the final exams within 60 days from the course end date.',
+              subItems: [],
+            },
+            {
+              listItem: 'Students will be permitted a maximum of 3 attempts, to clear the final exams, failing which they will have to repeat the course.',
+              subItems: ['In the 2nd attempt, they will be exempted from either theory or practical’s, if they have cleared it in their 1st attempt.',
+                'They will have to appear for both in case of a 3rd attempt.'
+              ],
+            },
+            {
+              listItem: 'Students can register for either online or on-campus exams.',
+              subItems: ['Once finalized, students will not be permitted to switch from online to on-campus and vice versa.'],
+            },
+            {
+              listItem:'Examiners will evaluate students only as per the final approved list.',
+              subItems:[],
+            },
+
+           
+          ],
+          
+        },
+      },
+      {
+        type:'u-list',
+        content:{
+          title:'Exam Schedule ',
+          points:[
+            {
+              listItem:'On-campus Final exams (both theory and practical’s) will be conducted on the last working day of each month, or as announced (in case of exigencies), between 10 am (IST) and 2 pm IST.',
+              subItems:[
+                
+              ],
+            },
+            {
+              listItem:'Online Final exams will be conducted on the 1st Sat and the 3rd Sat of each month or as announced (in case of exigencies), subject to a minimum quorum of 8 students.',
+              subItems:[
+                'Theory exams will be conducted online at 5pm (IST)',
+                'Practical exams will be conducted online at 3.30 pm (IST) / 6.30 pm (IST), subject to quorum.'
+              ],
+            },
+            {
+              listItem:'Students, after submission, can log out /leave only with the explicit permission of the examiner.',
+              subItems:[
+                'For practical’s - students will have to wait till the exams of all students are completed.',
+                'The examiner may call out students at random and not necessarily in alphabetic order'
+              ],
+            },
+            {
+              listItem:'A Mock test will be held 7 -14 days prior to the course end date, to familiarise students with the exam process.',
+              subItems:[],
+            },
+          ],
+        }
+      }
     ],
 
     offerings: [
