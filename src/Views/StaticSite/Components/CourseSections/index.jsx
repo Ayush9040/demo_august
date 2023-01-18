@@ -98,10 +98,10 @@ const CourseSection = ({
             url: '/21-days-better-living-course-batch-3',
             text: 'Evening - Online & On Campus – Hindi - Batch 3',
           },
-          {
-            url: '/21-days-better-living-course-batch-4',
-            text: 'Morning - Online – English - Batch 4',
-          },
+          // {
+          //   url: '/21-days-better-living-course-batch-4',
+          //   text: 'Morning - Online – English - Batch 4',
+          // },
         ],
       },
       {

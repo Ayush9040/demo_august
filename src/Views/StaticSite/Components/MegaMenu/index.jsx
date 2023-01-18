@@ -339,9 +339,9 @@ const MegaMenu = ({ setNav }) => {
                     Batch 3 - 21-Days BLC - Evening Online & On Campus-Hindi
                   </li>
                 </Link>
-                <Link onClick={() => {setNav(false)}}  to="/21-days-better-living-course-batch-4">
+                {/* <Link onClick={() => {setNav(false)}}  to="/21-days-better-living-course-batch-4">
                   <li>Batch 4 - 21-Days BLC-Morning-Online English</li>
-                </Link>
+                </Link> */}
                 <Link onClick={() => {setNav(false)}}  to='/samattvam'>
                   <h3 >
                   SAMATTVAM (HEALTH CHECKUP)

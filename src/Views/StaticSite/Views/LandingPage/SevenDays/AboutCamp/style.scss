@@ -1006,7 +1006,7 @@
     transform: translate(-50%, -50%);
     background-color: #ffffff;
     width: 80%;
-    font-size: 1.75rem !important;
+    font-size: 2.25rem !important;
     font-weight: bold;
     text-align: center;
     line-height: 2;
@@ -1195,11 +1195,29 @@
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: #ffffff;
-    width: 80%;
-    font-size: 1.25rem !important;
+    width: 85%!important;
+    font-size: 1.6rem !important;
     font-weight: bold;
     text-align: center;
     line-height: 2;
-    height: 14% !important;
+    height: 30% !important;
   }
 }
+
+@media (max-width: 320px) {
+
+  .overlap-heading {
+    position: absolute;
+    z-index: 99;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    width: 90%!important;
+    font-size: 1.3rem !important;
+    font-weight: bold;
+    text-align: center;
+    height: 20% !important;
+  }
+}
+
+

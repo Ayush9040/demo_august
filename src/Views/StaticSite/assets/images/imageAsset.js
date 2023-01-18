@@ -2554,6 +2554,7 @@ export const printMediaAssest = {
   printMediaAssest956:'/print_media/2023/Sakad_news_paper_3rd_Jan_2023.jpg',
   printMediaAssest957:'/print_media/2023/hamaramahanagar_10th_Jan_2023.jpg',
 
+  
 }
 
 

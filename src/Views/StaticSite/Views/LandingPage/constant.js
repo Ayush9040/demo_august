@@ -83,7 +83,7 @@ export const testimonialData4 = [
     name: 'Brianne Vaillancourt',
     info: 'Student from Canada',
     img: 'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/seven-days/Brianne.png',
-    message: 'For five years, I was in search of a Yoga centre that offers a Teacher Training Course and then finally, I found The Yoga Institute. I came to this place without any expectations and in return, I received a rich and holistic learning experience. The Yoga Institute has a warm and welcoming atmosphere. I recommend the institute and its teacher training course to anyone who is looking for an authentic Yogic experience.'
+    message: 'For five years, I was in search of a Yoga centre that offers a Teacher Training Course and then finally, I found The Yoga Institute. I came to this place without any expectations and in return, I received a rich and holistic learning experience from the TTC and 7-days health camp. The Yoga Institute has a warm and welcoming atmosphere. I recommend the institute, its 7-days health camp and teacher training course to anyone who is looking for an authentic Yogic experience.'
   },
   {
     name: 'Parineeta Gupta',
