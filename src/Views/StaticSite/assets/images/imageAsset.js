@@ -2549,6 +2549,11 @@ export const printMediaAssest = {
   printMediaAssest951:'/print_media/2023/Sakal-Epaper-3rd-January-2023.jpg',
   printMediaAssest952:'/print_media/2023/Navbharat-Times-Epaper-4th-January-2023.jpg',
   printMediaAssest953:'/print_media/2023/Sakad-news-paper.jpg',
+  printMediaAssest954:'/print_media/2023/Navbharat_Times_Epaper-8th_January_2023.jpg',
+  printMediaAssest955:'/print_media/2023/Navbharat_Times_Epaper-9th_January_2023.jpg',
+  printMediaAssest956:'/print_media/2023/Sakad_news_paper_3rd_Jan_2023.jpg',
+  printMediaAssest957:'/print_media/2023/hamaramahanagar_10th_Jan_2023.jpg',
+
 }
 
 

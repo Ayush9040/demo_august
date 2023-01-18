@@ -4758,6 +4758,26 @@ const printMedia = [
     year:'2023',
     media:[
       {
+        img: `${baseDomain}${printMediaAssest.printMediaAssest954}`,
+        url:'https://epaper.navbharattimes.com/imageview_14540_78294_4_16_08-01-2023_2_i_1_sf.html',
+        alt:'NBT-8JAN'
+      },
+      {
+        img: `${baseDomain}${printMediaAssest.printMediaAssest955}`,
+        url:'https://epaper.navbharattimes.com/imageview_14696_67514_4_16_09-01-2023_6_i_1_sf.html',
+        alt:'NBT-9JAN'
+      },
+      {
+        img: `${baseDomain}${printMediaAssest.printMediaAssest956}`,
+        url:'http://epaper.hindisaamana.com/ArticlePage/APpage.php?edn=Hindi%20Saamana&articleid=SAMANA_HSAM_20230110_7_2&artwidth=155px',
+        alt:'hindisaamana'
+      },
+      {
+        img: `${baseDomain}${printMediaAssest.printMediaAssest957}`,
+        url:'https://epaper.hamaramahanagar.net/clip/855',
+        alt:'hamaramahanagar'
+      },
+      {
         img: `${baseDomain}${printMediaAssest.printMediaAssest950}`,
         url:'https://epaper.navbharattimes.com/imageview_13464_77604_4_16_01-01-2023_2_i_1_sf.html',
         alt:'nbt-january1-2022'
@@ -4777,6 +4797,8 @@ const printMedia = [
         url:'https://epaper.esakal.com/FlashClient/Show_Story_IPad.aspx?storySrc=aHR0cHM6Ly9lcGFwZXItc2FrYWwtYXBwbGljYXRpb24uczMuYXAtc291dGgtMS5hbWF6b25hd3MuY29tL0VwYXBlckRhdGEvU2FrYWwvTXVtYmFpLzIwMjMvMDEvMDMvTWFpbi9TYWthbF9NdW1iYWlfMjAyM18wMV8wM19NYWluX0RBXzAwOF9QUi5qcGcmcGc9MTA=&uname=&ipad=N',
         alt:'sakal-news-paper'
       },
+      
+      
     ]
   }
 ]
