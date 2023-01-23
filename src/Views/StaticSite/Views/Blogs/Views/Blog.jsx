@@ -27,13 +27,14 @@ const BlogAnother = () => {
   const { blog } = useSelector(state=>state.blogs)
 
 
-  const blogParseAlgo = (data='') => {
+  const blogParseAlgo = (data='', title) => {
     let headers = {
       title: '',
       links: [],
       metaData: [],
       script: '',
     }
+    headers.h1Tag = title
     data = data.replace(/\\n/g, '')
     data = data.split('\n')
     data.forEach((el) =>{
@@ -114,7 +115,7 @@ const BlogAnother = () => {
 
   return (
     <>
-      { blogParseAlgo( blog?.meta ) }
+      { blogParseAlgo( blog?.meta, blog?.title ) }
       <div className='blog-page-container'>
         
         <InnerNavComponent abc={viewBlog}/>

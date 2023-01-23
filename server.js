@@ -40,6 +40,7 @@ const getMetaData = async( path )=>{
       metaData: [],
       script: '',
     }
+    
     data = data.replace(/\\n/g, '')
     data = data.split('\n')
     data.forEach((el) => {
@@ -56,7 +57,9 @@ const getMetaData = async( path )=>{
         if (el.includes('<meta')) headers.metaData.push(obj)
         if (el.includes('<link')) headers.links.push(obj)
       } else if (el.includes('<title'))
+      {
         headers.title = el.replace('<title>','').replace('</title>','')
+      }
       else if (el.includes('<script')) headers.script = el
     })
     return { ...headers, h1Tag: metaDataObj?.[path]?.h1Tag, h2Tags: metaDataObj?.[path?.h2Tags] }
@@ -70,7 +73,9 @@ const getMetaData = async( path )=>{
         links: [],
         metaData: [],
         script: '',
+        h1Tag:'',
       }
+      headers.h1Tag = res.data.data.title
       data = data.replace(/\\n/g, '')
       data = data.split('\n')
       data.forEach((el) =>{
@@ -90,7 +95,9 @@ const getMetaData = async( path )=>{
             headers.links.push(obj)
         }
         else if(el.includes('<title'))
+        {
           headers.title = el.replace('<title>','').replace('</title>','')
+        }
         else if(el.includes('<script'))
           headers.script = el
                   
@@ -126,7 +133,6 @@ app.get('*', async(req, res) => {
   let aTags = []
   let blogATags =[]
 
-  console.log(linkArryBlogs)
   if (metaData && metaData.title) titleTag = `<title>${metaData.title}</title>`
   if(metaData && metaData.links){
     linkArray = metaData.links.map((link)=>{
