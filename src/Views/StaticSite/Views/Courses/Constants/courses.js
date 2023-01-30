@@ -8068,7 +8068,7 @@ const camps = {
 
   13: {
     id: '',
-    title: 'Stress Management Camp - Online and On Campus',
+    title: 'Stress Management Camp -On Campus',
     key: 'stress-management-camp',
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
