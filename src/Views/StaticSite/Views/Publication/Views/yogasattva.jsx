@@ -324,9 +324,14 @@ const Yogasattva = () => {
     ],
     2023: [
       {
+        img:`${baseDomain}${publicationAssests.ythAssets93}`,
+        pdf:`${baseDomain}/books/2023/Yogasattva-Feb-2023.pdf`
+      },
+      {
         img: `${baseDomain}${publicationAssests.ythAssets92}`,
         pdf: `${baseDomain}/books/2023/Yogasattva-Jan-2023.pdf`,
       }
+     
     ] }
 
   const [bold, setBold] = useState(7)

@@ -7678,7 +7678,7 @@ const camps = {
     metaDescription: 'Insightful session with a medical specialists.',
     image: `${baseDomain}${courseAssets.courseAsset11}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset11}`,
-    online: true,
+    online: false,
     onCampus: true,
     nonResidential: false,
     residential: false,
