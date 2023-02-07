@@ -806,6 +806,7 @@ export const publicationAssests = {
   publicationAssests86:'/Publications/Yoga & Total Health/Yoga&Total-Health-November-2022.JPG',
   publicationAssests87:'/Publications/Yoga & Total Health/Yoga-and-Total-Health-December-2022.JPG',
   publicationAssests88:'/Publications/Yoga & Total Health/Yoga&Total-Health-January-2023.JPG',
+  publicationAssests89:'/Publications/Yoga & Total Health/Yoga-and-Total-Health-February-2023.JPG',
 
   // Yogasattva-Newsletter
   // 2017

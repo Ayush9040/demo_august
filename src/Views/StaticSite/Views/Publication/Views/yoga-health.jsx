@@ -65,7 +65,7 @@ const YogaTotalHealth = () => {
         </div>
         <div className="publication-intro">
           <div className="mag-preview">
-            <img src={`${baseDomain}${publicationAssests.publicationAssests88}`}  alt='Yoga and Total Health'/>
+            <img src={`${baseDomain}${publicationAssests.publicationAssests89}`}  alt='Yoga and Total Health'/>
           </div>
           <div className="mag-details">
             <div className="journal">
@@ -80,11 +80,11 @@ const YogaTotalHealth = () => {
 
             <div className="month-year">
               <h2 className="jouranl-title">
-              January 2023
+              February 2023
                 <div className="bottom-line"></div>
               </h2>
               <p>
-              Wishing you and yours a very happy, healthy and peaceful year ahead! Check out the New Year Resolutions listed by a Sadhaka, they are refreshingly different and meaningful :) Another Sadhaka shares wonderful insights on how appreciation can develop empathy, motivation, gratitude, freedom, liberty and also release stress. Dr Jayadeva beautifully and simply explains Karmasu Kaushalam - excellence in whatever one does, with full attention & joy. Hansaji emphasises on (creative) action after acceptance, in any given situation. In an article in Hindi, Hansaji outlines yogic ways to counter irregular periods. Dive in for more on the above along with our regular articles on The Yoga Sutras of Patanjali, Hatha Yoga Pradipika, Thoughts on the Gita and Yogic Ahara.
+              We warmly pay our regards to Dr Jayadeva this month of February, on his 5th death anniversary. Dr Jayadeva shares how Buddha practiced Padmasana, that it became a turning point in his life. He further shares the one thing we have to learn in yoga is training the mind to remain steady for a long time to gain experience. Hansaji elaborates on this experience of peace, steadiness, quietude and awareness. Shri Devdutt Pattanaik, an Indian mythologist, explains a greater heaven is not where all wishes are fulfilled, it is a heaven where you have outgrown hunger and desires fully. Dive in to understand the difference between friendship and friendliness along with our regular articles on Hatha Yoga Pradipika, Shrimad Bhagawat Mahapurana, Yoga Sutras of Patanjali, Thoughts on the Gita, Yogic Ahara et cetera. Get your copy today!
               </p>
             </div>
           </div>
