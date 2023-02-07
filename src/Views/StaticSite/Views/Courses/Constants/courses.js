@@ -9300,7 +9300,7 @@ const camps = {
     },
     category: 'camps',
     metaDescription:
-    `Become successful, healthy, stress-free, and more mindful in your relationships by learning the yogic way of living. Join The Yoga Institute’s 21-Days Better Living Course.*
+    `Become successful, healthy, stress-free, and more mindful in your relationships by learning the yogic way of living. Join The Yoga Institute’s 21-Days Better Living Course.¿
     Please Note: The first session of 21-Days BLC i.e. on Sunday will be from 8:30 am to 10:30 am. This session also includes Satsang. `,
     image: `${baseDomain}${courseAssets.courseAsset34}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset34}`,
@@ -9648,7 +9648,7 @@ const camps = {
     },
     category: 'camps',
     metaDescription:
-      `Become successful, healthy, stress-free, and more mindful in your relationships by learning the yogic way of living. Join The Yoga Institute’s 21-Days Better Living Course.*
+      `Become successful, healthy, stress-free, and more mindful in your relationships by learning the yogic way of living. Join The Yoga Institute’s 21-Days Better Living Course.¿
       Please Note: The first session of 21-Days BLC i.e. on Sunday will be from 8:30 am to 10:30 am. This session also includes Satsang. `,
     image: `${baseDomain}${courseAssets.courseAsset35}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset35}`,
@@ -9989,7 +9989,7 @@ const camps = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 2100 },
     },
     category: 'camps',
-    metaDescription:`Become successful, healthy, stress-free, and more mindful in your relationships by learning the yogic way of living. Join The Yoga Institute"s 21-Days Better Living Course.*
+    metaDescription:`Become successful, healthy, stress-free, and more mindful in your relationships by learning the yogic way of living. Join The Yoga Institute"s 21-Days Better Living Course.¿
     Please Note: The first session of 21-Days BLC i.e. on Sunday will be from 8:30 am to 10:30 am. This session also includes Satsang.`,
     image: `${baseDomain}${courseAssets.courseAsset34}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset34}`,

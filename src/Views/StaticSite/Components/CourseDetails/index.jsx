@@ -177,7 +177,7 @@ const CourseDetails = ({ pageDate }) => {
               )}
             </h1>
             <p>{pageDate?.timing}</p>
-            {pageDate?.metaDescription?.split('*').map((para,i)=> {
+            {pageDate?.metaDescription?.split('¿').map((para,i)=> {
               return <p key={i} style={{ marginTop: '20px' }}>{para}</p>
             })}
             {/* 'Lorem Ipsum is simply dummy text of theprinting and typesetting industry.'} */}
