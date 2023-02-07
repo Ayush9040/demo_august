@@ -32,7 +32,7 @@ const CommonBannerLegacy = ({
       route: 'shree-yogendra-ji',
 
       desc: [
-        `Shri Yogendra Ji is laid down the foundation of The Yoga Institute, the oldest organized yoga center in the world, in 1918. He is the architect of the evolution of Yoga that has happened in the world in the last 100 years. Furthermore, the western world was introduced to Yoga, for the first time ever, when Yogendra Ji set up the first yoga center in New York, America in 1920. 
+        `Shri Yogendra Ji laid down the foundation of The Yoga Institute, the oldest organized yoga center in the world, in 1918. He is the architect of the evolution of Yoga that has happened in the world in the last 100 years. Furthermore, the western world was introduced to Yoga, for the first time ever, when Yogendra Ji set up the first yoga center in New York, America in 1920. 
       `,
 
         `
