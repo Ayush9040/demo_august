@@ -177,14 +177,12 @@ const CourseDetails = ({ pageDate }) => {
               )}
             </h1>
             <p>{pageDate?.timing}</p>
-            <p style={{ marginTop: '20px' }}>
-              {pageDate.metaDescription ||
-              'Lorem Ipsum is simply dummy text of the printing and typesetting industry. '}
-            </p>
+            {pageDate?.metaDescription?.split('*').map((para,i)=> {
+              return <p key={i} style={{ marginTop: '20px' }}>{para}</p>
+            })}
+            {/* 'Lorem Ipsum is simply dummy text of theprinting and typesetting industry.'} */}
             {pageDate?.join === true && (
               <p style={{ marginTop: '1.5rem' , fontSize:'1.5rem' }}>*Join on any date</p>
-              
-              
             )}
             <div
               id="date-select-mobile"
