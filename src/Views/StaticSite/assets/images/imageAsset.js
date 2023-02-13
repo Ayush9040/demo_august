@@ -2559,7 +2559,11 @@ export const printMediaAssest = {
   printMediaAssest960:'/print_media/2023/Navbharat_Times_Epaper-22nd_January_2023.jpg',
   printMediaAssest961:'/print_media/2023/Navbharat_Times_Epaper-29th_January 2023.jpg',
   printMediaAssest962:'/print_media/2023/Navbharat_Times_Epaper-30th_January_2023.jpg',
-  
+  printMediaAssest963:'/print_media/2023/Navbharat-Times-Epaper-5th-February-2023.png',
+  printMediaAssest964:'/print_media/2023/Navbharat-Times-Epaper-6th-February-2023.jpg',
+  printMediaAssest965:'/print_media/2023/Times-Economics-Times-11th-Feb-2023.jpg',
+  printMediaAssest966:'/print_media/2023/Navbharat-Times-Epaper-12th-February-2023.PNG',
+  printMediaAssest967:'/print_media/2023/Navbharat-Times-Epaper-13th-February-2023.jpg',
 }
 
 
