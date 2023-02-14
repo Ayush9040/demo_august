@@ -6655,7 +6655,7 @@ const camps = {
         type: 'paragraph',
         content: {
           title: 'Fees',
-          text: ['INR 1000'],
+          text: ['INR 1000 (Inclusive Lunch and Snacks)'],
         },
       },
       {
@@ -6791,7 +6791,7 @@ const camps = {
         type: 'paragraph',
         content: {
           title: 'Fees',
-          text: ['INR 1000'],
+          text: ['INR 1000 (Inclusive Lunch and Snacks)'],
         },
       },
       {
@@ -7340,7 +7340,7 @@ const camps = {
         type: 'paragraph',
         content: {
           title: 'Fees',
-          text: ['INR 1000'],
+          text: ['INR 1000 (Inclusive Lunch and Snacks)'],
         },
       },
       {
@@ -7763,7 +7763,7 @@ const camps = {
         type: 'paragraph',
         content: {
           title: 'Fees',
-          text: ['INR 2,000'],
+          text: ['INR 2,000 (Inclusive Lunch and Snacks)'],
         },
       },
       {
@@ -7806,7 +7806,7 @@ const camps = {
         templateResidential: '',
         templateNonResidential: '',
       },
-    },
+    },text: ['INR 2,000'],
     dates: ['14th January 2023', '11th March 2023', '13th May 2023', '8th July 2023', '9th September 2023', '11th November 2023'],
     mostPopular: false,
     rating: 5,
@@ -7905,7 +7905,7 @@ const camps = {
         type: 'paragraph',
         content: {
           title: 'Fees',
-          text: ['INR 1000'],
+          text: ['INR 1000 (Inclusive Lunch and Snacks)'],
         },
       },
       {
@@ -8035,14 +8035,14 @@ const camps = {
         type: 'paragraph',
         content: {
           title: 'Time',
-          text: ['9:30 am – 5:30 pm (IST)'],
+          text: ['10.00 am to 1:00 pm (IST)'],
         },
       },
       {
         type: 'paragraph',
         content: {
           title: 'Fees',
-          text: ['INR 1000'],
+          text: ['INR 500 (Inclusive Lunch and Snacks)'],
         },
       },
       {
@@ -8178,7 +8178,7 @@ const camps = {
         type: 'paragraph',
         content: {
           title: 'Fees',
-          text: ['INR 1000'],
+          text: ['INR 1000 (Inclusive Lunch and Snacks)'],
         },
       },
       {
@@ -8313,7 +8313,7 @@ const camps = {
         type: 'paragraph',
         content: {
           title: 'Fees',
-          text: ['INR 1000'],
+          text: ['INR 1000 (Inclusive Lunch and Snacks)'],
         },
       },
       {
@@ -8454,7 +8454,7 @@ const camps = {
         type: 'paragraph',
         content: {
           title: 'Fees',
-          text: ['INR 1000'],
+          text: ['INR 1000 (Inclusive Lunch and Snacks)'],
         },
       },
       {
@@ -8589,7 +8589,7 @@ const camps = {
         type: 'paragraph',
         content: {
           title: 'Fees',
-          text: ['INR 1000'],
+          text: ['INR 1000 (Inclusive Lunch and Snacks)'],
         },
       },
       {
@@ -11787,14 +11787,14 @@ const classes = {
         type: 'paragraph',
         content: {
           title: 'Saturday',
-          text: [' 8:00 am - 9:30 am  (IST)'],
+          text: ['8:00 am - 9:30 am - 5:00 pm to 6:30 pm (IST)'],
         },
       },
       {
         type: 'paragraph',
         content: {
           title: 'Sunday',
-          text: [' 8:00 am - 9:30 am  (IST) or 10:30 am - 12:00 pm (IST)'],
+          text: ['8:00 am - 9:30 am (IST) or 10:30 am - 12:00 pm (IST)'],
         },
       },
       {
