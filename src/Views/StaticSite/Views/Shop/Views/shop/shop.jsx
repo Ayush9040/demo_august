@@ -164,6 +164,9 @@ const Shop = () => {
           <div className="products-section">
             <div className="banner-section">
               <Slider {...settings}>
+                <Link to='/shop/product/63e9c6acbd45e500128569ac' >
+                  <img className="banner-img" src={`${baseDomain}${banner.newBook}`} />
+                </Link>
                 <Link to='/shop/?category=626c33ed9a61db0013224fad' >
                   <img className="banner-img" src={`${baseDomain}${banner.storeMats}`} />
                 </Link>

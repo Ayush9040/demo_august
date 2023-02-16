@@ -1,6 +1,13 @@
 import baseDomain, { homeAssets,nutriDiet } from '../assets/images/imageAsset'
 
 export const activityData = [
+
+  {
+    title:'',
+    description:'The ultimate guide to finding your inner balance and happiness in life.',
+    image:`${baseDomain}${homeAssets.homeAsset26}`,
+    url:'/shop/product/63e9c6acbd45e500128569ac',
+  },
   {
     title: 'Nutri Diet Clinic',
     description:'Take a step for your well-being and enroll in our customized diet plans to get a holistic change in your lifestyle.',

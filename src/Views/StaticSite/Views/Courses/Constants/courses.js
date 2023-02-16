@@ -33,7 +33,6 @@ const ttc200hr = {
     category: 'ttc',
     title: '200 hrs TTC - 1 Month TTC Online & On Campus - English - Batch 1 ',
     dates: [
-      '2nd Jan to 31st Jan 2023',
       '1st Feb to 28th Feb 2023',
       '1st Mar to 31st Mar 2023',
       '1st Apr to 29th Apr 2023',
@@ -1836,7 +1835,7 @@ const ttc200hr = {
     },
     category: 'ttc',
     title: '200 hrs TTC - 2 Months TTC Online-English-Batch 5',
-    dates: ['16th Jan to 11th Mar 2023','20th Mar to 13th May 2023','22th May to 15th Jul 2023','24th Jul to 16th Sep 2023','25th Sep to 18th Nov 2023', '27th Nov to 20th Jan 2024'],
+    dates: ['20th Mar to 13th May 2023','22th May to 15th Jul 2023','24th Jul to 16th Sep 2023','25th Sep to 18th Nov 2023', '27th Nov to 20th Jan 2024'],
     online: true,
     onCampus: false,
     nonResidential: false,
@@ -3101,7 +3100,7 @@ const ttc900hr = {
       offlineFee: { residentialFee: 175000, nonResidentialFee: 97000 },
     },
     category: 'ttc',
-    dates: ['28th Jan to 16th Apr 2023','22nd Apr to 16th July 2023', '22nd Jul to 15th Oct 2023','28th Oct to 21st Jan 2024'],
+    dates: ['22nd Apr to 16th July 2023', '22nd Jul to 15th Oct 2023','28th Oct to 21st Jan 2024'],
     online: false,
     onCampus: true,
     nonResidential: true,
@@ -8626,7 +8625,7 @@ const camps = {
         templateNonResidential: 'CAMP_FOR_7_DAYS_HEALTH',
       },
     },
-    dates: ['14th Jan to 20th Jan 2023','11th Mar to 17th Mar 2023','13th May to 19th May 2023','8th Jul to 14th Jul 2023','9th Sep to 15th Sep 2023','11th Nov to 17th Nov 2023',],
+    dates: ['11th Mar to 17th Mar 2023','13th May to 19th May 2023','8th Jul to 14th Jul 2023','9th Sep to 15th Sep 2023','11th Nov to 17th Nov 2023',],
     online: false,
     onCampus: true,
     nonResidential: true,
@@ -8943,7 +8942,6 @@ const camps = {
       },
     },
     dates: [
-      '28th Jan to 3rd Feb 2023', 
       '25th Feb to 3rd Mar 2023',
       '25th Mar to 31st Mar 2023',
       '22nd Apr to 28th Apr 2023',
@@ -9272,7 +9270,6 @@ const camps = {
     },
     batch: 1,
     dates: [
-      '2nd Jan to 22nd Jan 2023',
       '5th Feb to 25th Feb 2023',
       '5th Mar to 25th Mar 2023',
       '2nd Apr to 22nd Apr 2023',
@@ -9620,7 +9617,6 @@ const camps = {
       },
     },
     dates: [
-      '2nd Jan to 22nd Jan 2023',
       '5th Feb to 25th Feb 2023',
       '5th Mar to 25th Mar 2023',
       '2nd Apr to 22nd Apr 2023',
@@ -9968,7 +9964,6 @@ const camps = {
       },
     },
     dates: [
-      '2nd Jan to 22nd Jan 2023',
       '5th Mar to 25th Mar 2023',
       '7th May to 27th May 2023',
       '2nd Jul to 22nd Jul 2023',
@@ -11408,7 +11403,6 @@ const classes = {
     },
     category: 'classes',
     dates: [
-      '2nd Jan to 27th Jan 2023',
       '6th Feb to 3rd Mar 2023',
       '6th Mar to 31st Mar 2023',
       '3rd Apr to 28th Apr 2023',
@@ -12767,7 +12761,6 @@ const certificate = {
     },
     category: 'certificate-course',
     dates: [
-      '17th Jan to 21st jan 2023'
     ],
     online: true,
     onCampus: false,

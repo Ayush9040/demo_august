@@ -52,7 +52,7 @@ export const homeAssets = {
   homeAsset23: '/Home/Nispand/AppStore.png',
   homeAsset24: '/Home/Nispand/nispandApp.png',
   homeAsset25: '/Home/Nispand/nispand-icon.png',
-  homeAsset26: '/',
+  homeAsset26: '/Home/Highlights/Web_site_banner.jpg',
   homeAsset27: '/',
   homeAsset28: '/',
   homeAsset29: '/',
@@ -2605,7 +2605,8 @@ export const nutriDiet = {
 export const banner = {
   storeMats:'/shop-banner/TYI-Store-Banners-Mats.png',
   storeTshirts:'/shop-banner/TYI-Store-Banners-TShirts.png',
-  storeBooks:'/shop-banner/TYI-Store-Banners-Books.png'
+  storeBooks:'/shop-banner/TYI-Store-Banners-Books.png',
+  newBook:'/shop-banner/Web_site_banner_new_book.jpg'
 }
 
 export const landingPage = {
