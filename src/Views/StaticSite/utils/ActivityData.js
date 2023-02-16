@@ -3,7 +3,7 @@ import baseDomain, { homeAssets,nutriDiet } from '../assets/images/imageAsset'
 export const activityData = [
 
   {
-    title:'',
+    title:'7 Rules to Reset Mind and Body',
     description:'The ultimate guide to finding your inner balance and happiness in life.',
     image:`${baseDomain}${homeAssets.homeAsset26}`,
     url:'/shop/product/63e9c6acbd45e500128569ac',
