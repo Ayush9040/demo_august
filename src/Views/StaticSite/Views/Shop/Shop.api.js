@@ -61,3 +61,7 @@ export const searchProduct = ( searchValue )=>{
 export const getOrderByOrderId = ( orderId ) => {
   return axios.get(`${ ecomBaseDomain }/order/${ orderId }`)
 }
+
+export const getBanner = () =>{
+  return axios.get(`${ecomBaseDomain}/bannerimage`)
+}
