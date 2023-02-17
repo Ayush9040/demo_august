@@ -149,7 +149,7 @@ export const locateData =[
     subAdd:'',
     mobile:'+971563801232',
     email:'info@yogihearts.com',
-    website:'www.yogihearts.com',
+    website:'https://yogihearts.com/',
     branches:[]
   },
   // {
