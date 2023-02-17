@@ -6,7 +6,7 @@ import 'slick-carousel/slick/slick-theme.css'
 import './style.scss'
 import { useState } from 'react'
 import { useEffect } from 'react'
-import { fetchAllProductsAPI,getProductByCategory, getAllCategories, searchProduct, updateCart, createCart } from '../../Shop.api'
+import { fetchAllProductsAPI,getProductByCategory, getAllCategories, searchProduct, updateCart, createCart, getBanner } from '../../Shop.api'
 import ShopCard from '../../../../Components/ShopCard/ShopCard'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
@@ -17,8 +17,8 @@ import 'react-toastify/dist/ReactToastify.css'
 import { getActiveCartData, updateCartData } from '../../Shop.action'
 import { useDispatch, useSelector } from 'react-redux'
 import { Link, useNavigate,useSearchParams } from 'react-router-dom'
-import baseDomain from '../../../../assets/images/imageAsset'
-import { banner } from '../../../../assets/images/imageAsset'
+// import baseDomain from '../../../../assets/images/imageAsset'
+// import { banner } from '../../../../assets/images/imageAsset'
 import { updateLocalCart } from '../../helpers/helper'
 
 const Shop = () => {
@@ -35,6 +35,7 @@ const Shop = () => {
   const [search,setSearch] =useState('')
   const [searched,isSearched] = useState(false)
   const { location } = useSelector(state=>state.location)
+  const [banner, setBanner] = useState([])
   
 
   const fetchAllCategories = async()=>{
@@ -81,6 +82,12 @@ const Shop = () => {
     }
   }
 
+  const getAllBanner = async()=>{
+    const { data } = await getBanner()
+    setBanner(data.data)
+    console.log(data.data,'banner')
+  }
+  
   useEffect(() => {
     fetchAllCategories()
     getAllProducts(pagination.page, pagination.limit)
@@ -94,6 +101,7 @@ const Shop = () => {
     console.log('test')
   },[ categories ])
 
+  useEffect(()=>{getAllBanner()},[])
 
   const addCart = async(idx, e) => {
     e.stopPropagation()
@@ -164,18 +172,22 @@ const Shop = () => {
           <div className="products-section">
             <div className="banner-section">
               <Slider {...settings}>
-                <Link to='/shop/product/63e9c6acbd45e500128569ac' >
-                  <img className="banner-img" src={`${baseDomain}${banner.newBook}`} />
-                </Link>
-                <Link to='/shop/?category=626c33ed9a61db0013224fad' >
-                  <img className="banner-img" src={`${baseDomain}${banner.storeMats}`} />
-                </Link>
-                <Link to='/shop/?category=626cbc599a61db001322518e' >
-                  <img className="banner-img" src={`${baseDomain}${banner.storeTshirts}`}/>
-                </Link>
-                <Link to='/shop/?category=626bb3a23916070012713dd1' >
-                  <img className="banner-img" src={`${baseDomain}${banner.storeBooks}`} />
-                </Link>
+                {banner.map((item, idx)=>{
+                  return(
+                    <>
+                      {
+                        item.type === 'CATEGORY' && <Link to={`/shop/?category=${item.categoryId}`}>
+                          <img key={idx} className='banner-img' src={item.imageLink} />
+                        </Link>
+                      }
+                      {
+                        item.type === 'PRODUCT' && <Link to={`/shop/product/${item.productId}`}>
+                          <img key={idx} className='banner-img' src={item.imageLink} />
+                        </Link>
+                      }
+                      
+                    </>)
+                })}
               </Slider>
             </div>
             {!searched && <div className="products-tray">
