@@ -1374,11 +1374,11 @@ const ttc200hr = {
     category: 'ttc',
     title: '200 hrs TTC - 2 Months TTC Online-Hindi-Batch 4',
     dates: [
-      '20th Feb to 15th Apr 2023',
-      '24th Apr to 17th Jun 2023',
-      '26th Jun to 19th Aug 2023',
-      '28th Aug to 21st Oct 2023',
-      '30th Oct to 23rd Dec 2023'
+      '6th Mar to 29th Apr 2023',
+      '8th May to 1st Jul 2023',
+      '10th Jul to 2nd Sep 2023',
+      '11th Sep to 4th Nov 2023',
+      '13th Nov to 6th Jan 2024'
     ],
     online: true,
     onCampus: false,

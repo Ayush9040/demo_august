@@ -7,7 +7,7 @@ import { useState } from 'react'
 import { locateData } from './locate'
 import { useEffect } from 'react'
 import { locateAsset } from '../../assets/images/imageAsset'
-import { useNavigate,useLocation } from 'react-router-dom'
+import { useNavigate, useLocation } from 'react-router-dom'
 import { Helmet } from 'react-helmet'
 import metaDataObj from '../../../../Constants/metaData.json'
 
@@ -57,71 +57,71 @@ const LocateUs = () => {
         </CommonBanner>
         <div className="locate_container">
           <div className="Locate_heading">
-          Branches
+            Branches
             <div className="bottom_line"></div>
           </div>
           <div className="locate_ul">
-            <li>
+            <li key="India">
               <span
                 style={bold === 'India' ? { fontWeight: '700' } : {}}
                 onClick={() => {
                   setBold('India')
                 }}
               >
-              India
+                India
               </span>
               {bold === 'India' && <div className="bottom_line2"></div>}
             </li>
-            <li
+            <li key="Costa Rica"
               onClick={() => {
                 setBold('Costa Rica')
               }}
             >
               <span style={bold === 'Costa Rica' ? { fontWeight: '700' } : {}}>
-              Costa Rica
+                Costa Rica
               </span>
               {bold === 'Costa Rica' && <div className="bottom_line2"></div>}
             </li>
-            <li>
+            <li key="France">
               <span
                 style={bold === 'France' ? { fontWeight: '700' } : {}}
                 onClick={() => {
                   setBold('France')
                 }}
               >
-              France
+                France
               </span>
               {bold === 'France' && <div className="bottom_line2"></div>}
             </li>
-            <li>
+            <li key="Hong Kong">
               <span
                 style={bold === 'Hong Kong' ? { fontWeight: '700' } : {}}
                 onClick={() => {
                   setBold('Hong Kong')
                 }}
               >
-              Hong Kong
+                Hong Kong
               </span>
               {bold === 'Hong Kong' && <div className="bottom_line2"></div>}
             </li>
-            <li
+            <li key="Thailand"
               onClick={() => {
                 setBold('Thailand')
               }}
             >
               <span style={bold === 'Thailand' ? { fontWeight: '700' } : {}}>
-              Thailand
+                Thailand
               </span>
               {bold === 'Thailand' && <div className="bottom_line2"></div>}
             </li>
-            <li>
+            <li key="U.A.E.">
               <span
                 style={bold === 'U.A.E.' ? { fontWeight: '700' } : {}}
                 onClick={() => {
                   setBold('U.A.E.')
                 }}
               >
-              U.A.E.
+                U.A.E.
               </span>
               {bold === 'U.A.E.' && <div className="bottom_line2"></div>}
             </li>
@@ -181,7 +181,15 @@ const LocateUs = () => {
                     <div className="not_bold">{items?.notstate}</div>
                     <div className="not_bold">
                       {
-                        items?.phone?.map((number,i)=>i=== 0 ? <a href={`tel:${number}`}>{number}</a>:<>,&nbsp;<a href={`tel:${number}`}>{number}</a></> )
+                        //-----------------------------------------Old code here----------------------------------------------
+                        // items?.phone?.map((number, i) => i === 0 ? <a href={`tel:${number}`}>{number}</a> : <>,&nbsp;<a href={`tel:${number}`}>{number}</a></>)
+                      
+                        //Added key to the phone number items to avoid confusing eslint
+                        items?.phone?.map((number, i) => {
+                          const key = `phone-link-${i}`
+                          const link = <a href={`tel:${number}`} key={key}>{number}</a>
+                          return i === 0 ? link : <React.Fragment key={key}>,&nbsp;{link}</React.Fragment>
+                        })
                       }
                     </div>
                     <div className="not_bold">
@@ -196,7 +204,7 @@ const LocateUs = () => {
                         {items?.website}
                       </a>
                       <div>
-                        {items?.url !== '' ? items?.toRedirect ?<a href='https://jal.theyogainstitute.org/' target='_blank' rel='noreferrer' ><button className='country-details-btn'>Details</button></a> :  <button className='country-details-btn' onClick={()=>navigate('/matunga')}>Details</button>: null}
+                        {items?.url !== '' ? items?.toRedirect ? <a href='https://jal.theyogainstitute.org/' target='_blank' rel='noreferrer' ><button className='country-details-btn'>Details</button></a> : <button className='country-details-btn' onClick={() => navigate('/matunga')}>Details</button> : null}
                       </div>
                     </div>
                   </div>
