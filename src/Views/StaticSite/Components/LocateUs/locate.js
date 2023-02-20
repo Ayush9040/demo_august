@@ -12,7 +12,7 @@ export const locateData =[
       {
         state:'Goa',
         notstate:'Viva Chorão, Near Our Lady of Grace Church, Madel Chorão, Tiswadi Goa, 403102',
-        phone:['+91-9820557676'],
+        phone:['+91-9307047148'],
         website:'https://theyogainstitutegoa.com',
         email:'goa@theyogainstitute.org',
         url:''
