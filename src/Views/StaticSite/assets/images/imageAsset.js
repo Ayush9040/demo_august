@@ -2564,6 +2564,9 @@ export const printMediaAssest = {
   printMediaAssest965:'/print_media/2023/Times-Economics-Times-11th-Feb-2023.jpg',
   printMediaAssest966:'/print_media/2023/Navbharat-Times-Epaper-12th-February-2023.PNG',
   printMediaAssest967:'/print_media/2023/Navbharat-Times-Epaper-13th-February-2023.jpg',
+  printMediaAssest968:'/print_media/2023/Esaka_Epaper-14th_February_2023.jpg',
+  printMediaAssest969:'/print_media/2023/Navbharat_Times_Epaper-19th_February_2023.jpg',
+  printMediaAssest970:'/print_media/2023/Navbharat_Times_Epaper-20th_February_2023.jpg',
 }
 
 

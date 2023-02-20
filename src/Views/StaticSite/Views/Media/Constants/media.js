@@ -4758,6 +4758,21 @@ const printMedia = [
     year:'2023',
     media:[
       {
+        img:`${baseDomain}${printMediaAssest.printMediaAssest968}`,
+        url:'https://epaper-sakal-application.s3.ap-south-1.amazonaws.com/EpaperData/Sakal/Mumbai/2023/02/14/Main/Sakal_Mumbai_2023_02_14_Main_DA_008/358_2388_1904_3014.jpg',
+        alt:'Esaka_Epaper-14th_February_2023',
+      },
+      {
+        img:`${baseDomain}${printMediaAssest.printMediaAssest969}`,
+        url:'https://epaper.navbharattimes.com/imageview_6885_75735_4_16_19-02-2023_2_i_1_sf.html',
+        alt:'Navbharat_Times_Epaper-19th_February_2023',
+      },
+      {
+        img:`${baseDomain}${printMediaAssest.printMediaAssest970}`,
+        url:'https://epaper.navbharattimes.com/imageview_7043_67324_4_16_20-02-2023_6_i_1_sf.html',
+        alt:'Navbharat_Times_Epaper-20th_February_2023',
+      },
+      {
         img:`${baseDomain}${printMediaAssest.printMediaAssest963}`,
         url:'https://epaper.navbharattimes.com/imageview_4442_75814_4_16_05-02-2023_9_i_1_sf.html',
         alt:'Navbharat Times Epaper-5th February 2023',
