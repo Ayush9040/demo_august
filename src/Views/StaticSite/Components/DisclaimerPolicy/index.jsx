@@ -138,8 +138,6 @@ const DisclaimerPolicy = ({
       //     setmail(templateKey)
       //   }
       // }
-
-
       console.log(mail)
       let mailTemplate = {
         type: 'INFO_TYI',
@@ -199,7 +197,11 @@ const DisclaimerPolicy = ({
               notes:{
                 description:currentCourse?.metaDescription,
                 formData:response.data.data['_id'],
-                courseName: currentCourse.title
+                courseName: currentCourse.title,
+                name: formData.name,
+                email: formData.email,
+                contact: formData.phone,
+                fee : courseFee
               },
               theme: {
                 color: '#3399cc' // enter theme color for our website
