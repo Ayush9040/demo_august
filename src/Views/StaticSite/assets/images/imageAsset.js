@@ -2598,6 +2598,9 @@ export const santaCruz = {
   slide3: '/Santa-cruz-images/Slide-3.jpg',
   apply: '/Santa-cruz-images/Pranayama_workshop.jpg',
   details: '/Santa-cruz-images/Details.jpg',
+  malad1:'/Santa-cruz-images/malad1.jpg',
+  malad2:'/Santa-cruz-images/malad2.jpg',
+  malad3:'/Santa-cruz-images/malad3.jpg',
 }
 
 export const nutriDiet = {

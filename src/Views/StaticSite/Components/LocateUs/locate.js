@@ -44,7 +44,7 @@ export const locateData =[
       {
         state:'Matunga (CR)',
         notstate:'Sri Kanyaka Parmeshwari Temple, Plot No 403, Vasavi Nilayam, Telang Road, Matunga (CR), Mumbai.',
-       
+        email:'tyimatunga@theyogainstitute.org',
         phone:['+91-9343517490'],
         url: 'matunga'
       },
@@ -85,6 +85,14 @@ export const locateData =[
         url: 'https://jal.theyogainstitute.org/',
         phone:['+91-9833864964'],
         toRedirect: true
+      },
+      {
+        state:'Malad',
+        notstate:'201 & 202, B Wing, 2nd Floor, Solitaire 2, Opp Infinity Mall, Near Malad West Metro Station, New Link Road, Ekta Nagar, Malad West, Mumbai – 400064.',
+        email:'malad@theyogainstitute.in',
+        url: 'malad',
+        phone:['+91 9343517490'],
+        toRedirect: false
       },
 
       // {

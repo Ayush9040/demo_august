@@ -204,7 +204,7 @@ const LocateUs = () => {
                         {items?.website}
                       </a>
                       <div>
-                        {items?.url !== '' ? items?.toRedirect ? <a href='https://jal.theyogainstitute.org/' target='_blank' rel='noreferrer' ><button className='country-details-btn'>Details</button></a> : <button className='country-details-btn' onClick={() => navigate('/matunga')}>Details</button> : null}
+                        {items?.url !== '' ? items?.toRedirect ? <a href='https://jal.theyogainstitute.org/' target='_blank' rel='noreferrer' ><button className='country-details-btn'>Details</button></a> : <button className='country-details-btn' onClick={() => navigate(`/${items?.url}`)}>Details</button> : null}
                       </div>
                     </div>
                   </div>
