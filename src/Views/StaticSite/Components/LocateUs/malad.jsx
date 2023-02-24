@@ -82,11 +82,11 @@ const MaladPage = () => {
           </p>
           <div className="apply-address">
             <h5>Address -</h5>
-            <h5>The Yoga Institute, Malad </h5>
-            <h5>
+            <p>The Yoga Institute, Malad </p>
+            <p>
             201 & 202, B Wing, 2nd Floor, Solitaire 2, Opp Infinity Mall, Near Malad West Metro Station, New Link Road, Ekta Nagar, Malad West.
-            </h5>
-            <h5>Mumbai – 400064</h5>
+            </p>
+            <p>Mumbai – 400064</p>
             <h5>Contact us - <a href='tel: + 91 9343517490'>+ 91 9343517490</a></h5>
           </div>
         </div>
