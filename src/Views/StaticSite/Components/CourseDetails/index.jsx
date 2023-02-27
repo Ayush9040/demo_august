@@ -221,15 +221,7 @@ const CourseDetails = ({ pageDate }) => {
                     scroll()
                   )
                 ) : (
-                  <Link
-                    to={
-                      isLoggedIn
-                        ? `/enrollment/${pageDate.key}/?date=${selectDate}`
-                        : `/user/sign-in/?location=${pageDate.key}&date=${selectDate}`
-                    }
-                  >
-                    <CommonBtn text={'Enroll Now'} />
-                  </Link>
+                  <CommonBtn text={'Enroll Now'} />
                 )}
                 {error === 1 && (
                   <small
