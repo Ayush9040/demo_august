@@ -12410,7 +12410,7 @@ const certificate = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'certificate-course',
-    dates: [],
+    dates: ['5th Jun to 27th Jul 2023'],
     online: true,
     onCampus: false,
     nonResidential: false,
