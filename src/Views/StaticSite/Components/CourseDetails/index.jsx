@@ -189,7 +189,7 @@ const CourseDetails = ({ pageDate }) => {
               style={
                 pageDate?.dates?.length !== 0
                   ? { visibility: 'visible' }
-                  : { visibility: 'hidden' }
+                  : { display : 'none' }
               }
             >
               <SelectDropDown
@@ -221,7 +221,12 @@ const CourseDetails = ({ pageDate }) => {
                     scroll()
                   )
                 ) : (
-                  <CommonBtn text={'Enroll Now'} />
+                  <div >
+                    <div style={{ opacity : '0.4' }}> 
+                      <CommonBtn text={'Enroll Now'} /> 
+                    </div>
+                    <div style={{ fontSize:'1.5rem' , padding : '1.5rem' }}>No dates available for this course</div>
+                  </div>
                 )}
                 {error === 1 && (
                   <small
