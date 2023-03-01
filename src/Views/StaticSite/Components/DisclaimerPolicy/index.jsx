@@ -186,7 +186,7 @@ const DisclaimerPolicy = ({
                 // Navigare to Success if razorpay_payment_id, razorpay_order_id, razorpay_signature is there
                 if(res.razorpay_payment_id && res.razorpay_order_id && res.razorpay_signature) {
                   await axios.post(`${ authBaseDomain }/ali/mail`, mailTemplate)
-                  navigate('/enrollment_thankyou')
+                  navigate(`/enrollment_thankyou/${currentCourse.key}`)
                 }
               },
               prefill: {
@@ -215,7 +215,7 @@ const DisclaimerPolicy = ({
             if(currentCourse.key==='satsang'){
               navigate('/satsang_thankyou')
             }else{
-              navigate('/enrollment_thankyou')
+              navigate(`/enrollment_thankyou/${currentCourse.key}`)
             }
           }
         }

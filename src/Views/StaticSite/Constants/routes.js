@@ -427,10 +427,10 @@ const staticSiteRoutes = [
   },
   {
     Component: Thankyou,
-    path: '/enrollment_thankyou',
-    exact: true,
+    path: '/enrollment_thankyou/:courseName',
+    exact: false,
     id: 'statisSiteUnderEnrollmentThankyou',
-    routePath: '/enrollment_thankyou',
+    routePath: '/enrollment_thankyou/:courseName',
     name: 'EnrollmentThankyou',
   },
   {
