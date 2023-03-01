@@ -4758,6 +4758,31 @@ const printMedia = [
     year:'2023',
     media:[
       {
+        img:`${baseDomain}${printMediaAssest.printMediaAssest971}`,
+        url:'https://epaper.navbharattimes.com/imageview_8223_67344_4_16_27-02-2023_6_i_1_sf.html',
+        alt:'Navbharat_Times_Epaper-27th_February2023',
+      },
+      {
+        img:`${baseDomain}${printMediaAssest.printMediaAssest972}`,
+        url:'https://epaper.navbharattimes.com/imageview_8065_3400522_4_16_26-02-2023_6_i_1_sf.html',
+        alt:'Navbharat_Time_Epaper-26th_February',
+      },
+      {
+        img:`${baseDomain}${printMediaAssest.printMediaAssest973}`,
+        url:'https://epaper-sakal-application.s3.ap-south-1.amazonaws.com/EpaperData/Sakal/Mumbai/2023/02/21/Main/Sakal_Mumbai_2023_02_21_Main_DA_006/44_34_1906_3014.jpg',
+        alt:'Esaka_Epaper-21st_February_2023',
+      },
+      {
+        img:`${baseDomain}${printMediaAssest.printMediaAssest974}`,
+        url:'https://epaper-sakal-application.s3.ap-south-1.amazonaws.com/EpaperData/Sakal/Mumbai/2023/02/28/Main/Sakal_Mumbai_2023_02_28_Main_DA_008/1424_998_1904_2358.jpg',
+        alt:'Esaka_Epaper-28th_February_2023',
+      },
+      {
+        img:`${baseDomain}${printMediaAssest.printMediaAssest975}`,
+        url:'https://www.freepressjournal.in/education/mumbai-yoga-session-at-st-xaviers-college-for-students-with-disabilities/',
+        alt:'Freepressjournal.in-23rd_February_2023.',
+      },
+      {
         img:`${baseDomain}${printMediaAssest.printMediaAssest968}`,
         url:'https://epaper-sakal-application.s3.ap-south-1.amazonaws.com/EpaperData/Sakal/Mumbai/2023/02/14/Main/Sakal_Mumbai_2023_02_14_Main_DA_008/358_2388_1904_3014.jpg',
         alt:'Esaka_Epaper-14th_February_2023',
