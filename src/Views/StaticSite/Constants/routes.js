@@ -1,5 +1,6 @@
 import { lazy } from 'react'
 import MaladPage from '../Components/LocateUs/malad'
+import IBYcourse from '../Views/IBY'
 import NutriDietClinic from '../Views/LandingPage/NutriDietClinic/AboutClinic'
 const Home = lazy(() => import('../Views/Home'))
 const TermsCondition = lazy(() => import('../Components/TermsandCondition'))
@@ -702,6 +703,13 @@ const staticSiteRoutes = [
     id:'staticNutriDiet',
     routePath:'/nutri-diet',
     name:'NutriDiet'
+  },
+  {
+    Component:IBYcourse,
+    path:'/IYB-course',
+    id:'staticIYBcourse',
+    routePath:'/IYB-course',
+    name:'IYBcourse'
   },
   {
     Component:LandingPage,

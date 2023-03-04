@@ -2632,4 +2632,8 @@ export const nutriClinic = {
   main: '/Nutri-Clinic/Salad.png'
 }
 
+export const iybCourse = { 
+  main : '/Courses/IBY_Course_ad_for_website.jpg'
+}
+
 export default baseDomain
