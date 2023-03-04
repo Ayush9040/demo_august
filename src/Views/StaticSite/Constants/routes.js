@@ -706,9 +706,9 @@ const staticSiteRoutes = [
   },
   {
     Component:IBYcourse,
-    path:'/IYB-course',
+    path:'/IBY-course',
     id:'staticIYBcourse',
-    routePath:'/IYB-course',
+    routePath:'/IBY-course',
     name:'IYBcourse'
   },
   {

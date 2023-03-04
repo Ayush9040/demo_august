@@ -9,6 +9,7 @@ import { useNavigate } from 'react-router-dom'
 import { IYBenroll, createIYBorder, successMail } from '../api'
 import { uploadFile } from '../../../../../helpers/OssHelper'
 import { upload } from '../../../assets/icons/icon'
+import Loader from '../../../Components/Loader'
 
 const IBYform = ({ setOpenForm }) => {
 
@@ -29,6 +30,7 @@ const IBYform = ({ setOpenForm }) => {
   const [courseAsset, setCourseAsset] = useState(null)
   const [empty, setEmpty] = useState(0)
   const [certificateName, setcertificateName] = useState('')
+  const [loading, setLoading] = useState(false)
 
   const submitForm = async() => {
     const { data } = await IYBenroll({
@@ -84,6 +86,9 @@ const IBYform = ({ setOpenForm }) => {
       notes: {
         // description: plan,
         formData: data.data._id,
+        name: formData.name,
+        email: formData.emailId,
+        contact: formData.phone,
       },
       theme: {
         color: '#3399cc', // enter theme color for our website
@@ -98,6 +103,7 @@ const IBYform = ({ setOpenForm }) => {
     const url = await uploadFile(file, type)
     setCourseAsset(url)
     setEmpty(0)
+    setLoading(false)
   }
 
   const handleEnrollment = () => {
@@ -190,34 +196,38 @@ const IBYform = ({ setOpenForm }) => {
          
         </div>
         <div className='uploads'>
-          <fieldset>
-            <label htmlFor="resume">
-              {courseAsset
-                ? certificateName.substring(0, 15)
-                : 'Upload Certificate '}
-              <input
-                type={'file'}
-                onChange={(e) => {
-                  uploadDoc(
-                    e.target.files[0],
-                    'applicant_certificate',
-                    'CERTIFICATE'
-                  )
-                  setcertificateName(e.target.files[0].name)
-                }}
-                id="resume"
-                accept=".pdf"
-                placeholder="Upload Cerificate"
-              />
-              &ensp;
-              {upload}
-            </label>
-            {empty === 5 && (
-              <small style={{ color: 'red' }}>
-              Please upload relevant certificate
-              </small>
-            )}
-          </fieldset>
+          {loading ?  <Loader/> : 
+          
+            <fieldset>
+              <label htmlFor="resume">
+                {courseAsset
+                  ? certificateName.substring(0, 15)
+                  : 'Upload Certificate '}
+                <input
+                  type={'file'}
+                  onChange={(e) => {
+                    setLoading(true)
+                    uploadDoc(
+                      e.target.files[0],
+                      'applicant_certificate',
+                      'CERTIFICATE'
+                    )
+                    setcertificateName(e.target.files[0].name)
+                  }}
+                  id="resume"
+                  accept=".pdf"
+                  placeholder="Upload Cerificate"
+                />
+            &ensp;
+                {upload}
+              </label>
+              {empty === 5 && (
+                <small style={{ color: 'red' }}>
+            Please upload relevant certificate
+                </small>
+              )}
+            </fieldset>}
+         
 
         </div>
       </form>

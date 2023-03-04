@@ -393,7 +393,7 @@ const MegaMenu = ({ setNav }) => {
                   <Link onClick={() => {setNav(false)}}  to="/couples-classes">
                     <li>Couples&apos; Classes - Online</li>
                   </Link>
-                  <Link onClick={() => {setNav(false)}}  to="/IYB-course">
+                  <Link onClick={() => {setNav(false)}}  to="/IBY-course">
                     <li>IBY Class (Only for TYI TTC Teachers)</li>
                   </Link>
                 </ul>
