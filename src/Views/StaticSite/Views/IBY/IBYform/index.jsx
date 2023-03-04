@@ -68,7 +68,7 @@ const IBYform = ({ setOpenForm }) => {
         ) {
           await successMail({
             type: 'INFO_TYI',
-            HTMLTemplate: 'IBY_CLASS_FORM_SUB_MAIL',
+            HTMLTemplate: 'IBY_CLASS_FORM_CONFIRMATION_MAIL',
             subject: 'Enrollment Confirmation',
             data: {
               name: formData.name,
@@ -116,9 +116,7 @@ const IBYform = ({ setOpenForm }) => {
     } else if (formData.country === '') {
       setEmpty(4)
     } 
-    else if (certificateName === '') {
-      setEmpty(5)
-    }
+   
     else {
       submitForm()
     }
@@ -221,14 +219,7 @@ const IBYform = ({ setOpenForm }) => {
             &ensp;
                 {upload}
               </label>
-              {empty === 5 && (
-                <small style={{ color: 'red' }}>
-            Please upload relevant certificate
-                </small>
-              )}
             </fieldset>}
-         
-
         </div>
       </form>
       <CommonBtn
