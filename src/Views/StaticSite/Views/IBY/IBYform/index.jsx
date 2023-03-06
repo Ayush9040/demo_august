@@ -10,6 +10,7 @@ import { IYBenroll, createIYBorder, successMail } from '../api'
 import { uploadFile } from '../../../../../helpers/OssHelper'
 import { upload } from '../../../assets/icons/icon'
 import Loader from '../../../Components/Loader'
+import InnerNavComponent from '../../../Components/InnerNavComponent'
 
 const IBYform = ({ setOpenForm }) => {
 
@@ -25,12 +26,20 @@ const IBYform = ({ setOpenForm }) => {
     phone: '',
     emailId: '',
     country: '',
+    mode:'',
   })
+  const highlight = {
+    title: 'Career',
+    color: 'orange',
+    menuColor: 'orange',
+    menuItems: [],
+  }
   const navigate = useNavigate()
   const [courseAsset, setCourseAsset] = useState(null)
   const [empty, setEmpty] = useState(0)
   const [certificateName, setcertificateName] = useState('')
   const [loading, setLoading] = useState(false)
+  const [agree, setAgree] = useState(false)
 
   const submitForm = async() => {
     const { data } = await IYBenroll({
@@ -40,7 +49,6 @@ const IBYform = ({ setOpenForm }) => {
         certificationDocs:` ${courseAsset}` 
       },
     })
-    console.log(formData,'data')
    
     const paymentOrderResponse = await createIYBorder(data.data._id, {
       amount: 2000,
@@ -89,6 +97,7 @@ const IBYform = ({ setOpenForm }) => {
         name: formData.name,
         email: formData.emailId,
         contact: formData.phone,
+        mode:  formData.mode,
       },
       theme: {
         color: '#3399cc', // enter theme color for our website
@@ -115,119 +124,188 @@ const IBYform = ({ setOpenForm }) => {
       setEmpty(3)
     } else if (formData.country === '') {
       setEmpty(4)
+    }  else if (formData.mode === '') {
+      setEmpty(5)
+    }  else if (agree === false) {
+      setEmpty(6)
     } 
-   
     else {
       submitForm()
     }
   }
   
   return (
-    <div className='IBY-subscription-form'>
-      <div
-        style={{
-          float: 'right',
-          fontSize: '32px',
-          color: '#000000',
-          cursor: 'pointer',
-        }}
-        onClick={() => {
-          setOpenForm(false)
-        }}
-      >
+    <>
+      <InnerNavComponent abc={highlight}/>
+      <div className='IBY-subscription-form'>
+        <div
+          style={{
+            float: 'right',
+            fontSize: '32px',
+            color: '#000000',
+            cursor: 'pointer',
+          }}
+          onClick={() => {
+            setOpenForm(false)
+          }}
+        >
       &#10005;
-      </div>
-    
-      <form>
-        <div className='form-field'>
-          <InputComponent
-            type='text'
-            placeholder='Enter Full Name*'
-            form={formData}
-            setField={setFormData}
-            keyName='name'
-          />
-          {empty === 1 && (
-            <small style={{ color: 'red', marginLeft: '0' }}>
+        </div>
+        <h2>IBY Class (Only for TYI TTC Teachers)</h2>
+        <form>
+          <div className='form-field'>
+            <InputComponent
+              type='text'
+              placeholder='Enter Full Name*'
+              form={formData}
+              setField={setFormData}
+              keyName='name'
+            />
+            {empty === 1 && (
+              <small style={{ color: 'red', marginLeft: '0' }}>
             *Please Enter Name!
-            </small>
-          )}
-        </div>
-        <div className='form-field'>
-          <InputComponent
-            type='email'
-            placeholder='Enter Email Address*'
-            form={formData}
-            setField={setFormData}
-            keyName='emailId'
-          />
-          {empty === 2 && (
-            <small style={{ color: 'red', marginLeft: '0' }}>
+              </small>
+            )}
+          </div>
+          <div className='form-field'>
+            <InputComponent
+              type='email'
+              placeholder='Enter Email Address*'
+              form={formData}
+              setField={setFormData}
+              keyName='emailId'
+            />
+            {empty === 2 && (
+              <small style={{ color: 'red', marginLeft: '0' }}>
             *Please Enter Valid Email!
-            </small>
-          )}
-        </div>
-        <div className='form-field'>
-          <PhoneInput
-            placeholder='Enter phone number*'
-            defaultCountry='IN'
-            value={formData.phone}
-            onChange={(e) => {
-              setFormData({ ...formData, phone: e })
-            }}
-          />
-          {empty === 3 && <small> Please enter a valid phone number</small>}
-        </div>
-        <div className='form-field'>
-          <InputComponent
-            type='text'
-            placeholder='Country*'
-            form={formData}
-            setField={setFormData}
-            keyName='country'
-            errorCheck={setEmpty}
-          />
-          {empty === 4 && <small> Please enter your country</small>}
-        </div>
+              </small>
+            )}
+          </div>
+          <div className='form-field'>
+            <PhoneInput
+              placeholder='Enter phone number*'
+              defaultCountry='IN'
+              value={formData.phone}
+              onChange={(e) => {
+                setFormData({ ...formData, phone: e })
+              }}
+            />
+            {empty === 3 && <small> Please enter a valid phone number</small>}
+          </div>
+          <div className='form-field'>
+            <InputComponent
+              type='text'
+              placeholder='Country*'
+              form={formData}
+              setField={setFormData}
+              keyName='country'
+              errorCheck={setEmpty}
+            />
+            {empty === 4 && <small> Please enter your country</small>}
+          </div>
        
-        <div className='form-field' style={{ textAlign: 'left' }} id='t-n-c'>
+          <div className='form-field' style={{ textAlign: 'left' }} id='t-n-c'>
          
-        </div>
-        <div className='uploads'>
-          {loading ?  <Loader/> : 
-          
-            <fieldset>
-              <label htmlFor="resume">
-                {courseAsset
-                  ? certificateName.substring(0, 15)
-                  : 'Upload Certificate '}
+          </div>
+          <div className="residential-form"> 
+            <div className="last_radio_button">
+              <label htmlFor="" className="course_details_text">
                 <input
-                  type={'file'}
+                  type="radio"
+                  name="mode"
+                  value="OFFLINE"
+                  checked={formData.mode === 'OFFLINE'}
                   onChange={(e) => {
-                    setLoading(true)
-                    uploadDoc(
-                      e.target.files[0],
-                      'applicant_certificate',
-                      'CERTIFICATE'
-                    )
-                    setcertificateName(e.target.files[0].name)
+                    if (e.target.checked) {
+                      setFormData({
+                        ...formData,
+                        mode: e.target.value,
+                      })
+                      setEmpty(0)
+                    }
                   }}
-                  id="resume"
-                  accept=".pdf"
-                  placeholder="Upload Cerificate"
                 />
-            &ensp;
-                {upload}
+              &nbsp;Offline
               </label>
-            </fieldset>}
-        </div>
-      </form>
-      <CommonBtn
-        isColor='#ca4625'
-        text='Continue'
-        buttonAction={handleEnrollment}
-      />
-    </div>
+              
+            </div>
+            <div className="last_radio_button" ><label htmlFor="" className="course_details_text">
+              <input
+                type="radio"
+                name="mode"
+                value="ONLINE"
+                checked={formData.mode === 'ONLINE'}
+                onChange={(e) => {
+                  if (e.target.checked) {
+                    setFormData({
+                      ...formData,
+                      mode: e.target.value,
+                    })
+                    setEmpty(0)
+                  }
+                }}
+              />
+              &nbsp;Online
+            </label>
+
+            </div>
+            {empty === 5 && (
+              <small style={{ color: 'red', marginLeft: '0' }}>
+              *Please select one of the options
+              </small>
+            )}
+          </div>
+          <div className='uploads'>
+            {loading ?  <Loader/> : 
+          
+              <fieldset>
+                <label htmlFor="resume">
+                  {courseAsset
+                    ? certificateName.substring(0, 15)
+                    : 'Upload Certificate '}
+                  <input
+                    type={'file'}
+                    onChange={(e) => {
+                      setLoading(true)
+                      uploadDoc(
+                        e.target.files[0],
+                        'applicant_certificate',
+                        'CERTIFICATE'
+                      )
+                      setcertificateName(e.target.files[0].name)
+                    }}
+                    id="resume"
+                    accept=".pdf"
+                    placeholder="Upload Cerificate"
+                  />
+            &ensp;
+                  {upload}
+                </label>
+              </fieldset>}
+          </div>
+         
+          <div className='terms-conditions'>
+            <input
+              type='checkbox'
+              onChange={() => setAgree(agree ? false : true)}
+            />
+
+            <p>I have read and agree to the above terms and conditions.</p>
+            {empty === 6 && (
+              <small style={{ color: 'red', marginLeft: '0' }}>
+              *Please agree to the condition!
+              </small>
+            )}
+          </div>
+        </form>
+        <CommonBtn
+          isColor='#ca4625'
+          text='Continue'
+          buttonAction={handleEnrollment}
+        />
+      </div>
+    </>
+   
   )
 }
 

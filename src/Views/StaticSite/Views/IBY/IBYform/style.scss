@@ -28,8 +28,6 @@
 
 
       & > fieldset {
-        margin-top: 17px;
-
         border: none;
       }
       label {
@@ -52,6 +50,20 @@
         padding-right: 2rem;
         font-size: 1.15rem;
       }
+    }
+  }
+  &>form .terms-conditions {
+    display: flex;
+    align-items: center;
+    max-width: fit-content;
+    margin: 2rem auto;
+    input {
+      height: 20px;
+      width: 20px;
+    }
+    p {
+      font-size: 1.4rem;
+      padding-left: 1rem;
     }
   }
   .PhoneInput{
@@ -81,6 +93,67 @@
       margin: 0 auto;
       border: none;
   }
+
+  .residential-form{
+display: flex;
+justify-content: center;
+    .last_radio_button {
+      margin: 3rem 0;
+      gap: 17px;
+      input[type='radio'] {
+        appearance: none;
+        -webkit-appearance: none;
+        border: 1px solid #d3d3d3;
+        width: 30px;
+        height: 30px;
+        content: none;
+        outline: none;
+        margin: 0;
+      }
+      input[type='radio']:checked {
+        appearance: none;
+        outline: none;
+        padding: 0;
+        content: none;
+        border: none;
+      }
+      input[type='radio']:checked::before {
+        position: absolute;
+        color: #60606080 !important;
+        content: '\00A0\2713\00A0' !important;
+        border: 1px solid #d3d3d3;
+        font-weight: bolder;
+        font-size: 24px;
+      }
+      .course_details_text {
+        color: rgba(96, 96, 96, 0.502);
+        font-size: 20px;
+        // margin: 0 17px;
+        min-width: 170px;    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+    .last_radio_button-cols {
+      display: flex;
+      flex-direction: column;
+      
+
+      .course_details_text {
+        color: rgba(96, 96, 96, 0.502);
+        font-size: 20px;
+        margin-left: 17px;
+        // margin: 17px;
+        min-width: 230px;
+        text-align: left;
+        
+      }
+    }
+  }
+ 
+   
+  
 }
 
 @media(max-width:415px){

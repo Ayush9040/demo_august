@@ -33,7 +33,7 @@ const IBYcourse = () => {
         <InnerNavComponent abc={highlight}/>
         <div className="main-container">
           <div className="highlight-info">
-            <h1>IBY Class (Only for TYI TTC Teachers) </h1>
+            <h1>IBY Class (Only for TYI TTC Teachers) - Online & On Campus</h1>
             <p>One of the most-awaited and popular classes of The Yoga Institute, IBY Class is back. The classes has been running for more than two decades. </p>
             <CommonBtn text='Enroll Now' buttonAction={ ()=>setOpenForm(true) }   />
           </div>
@@ -51,7 +51,7 @@ const IBYcourse = () => {
               <li>This interactive session will give participants the opportunity to get their queries resolved and get insights from Hansa Maa on various subjects. </li>
             </ul>
 
-            <p className='nutri-page-bold'> Timings & Fees: </p>
+            <p className='nutri-page-bold'> Timings & Fees (Online & On campus) </p>
             <ul>
               <li><span className='nutri-page-semi-bold' > Date: </span>Starting from 10th March, 2023</li>
               <li><span className='nutri-page-semi-bold' > Time: </span> Every Friday, 3:30 pm to 5:00 pm (IST)</li>

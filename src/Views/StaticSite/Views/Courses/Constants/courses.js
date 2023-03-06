@@ -6543,7 +6543,7 @@ const camps = {
 
   2: {
     id: '',
-    title: 'Cardiac & Hypertension Workshop',
+    title: 'Cardiac & Hypertension Workshop - On Campus',
     key: 'cardiac-hypertension-workshop',
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
@@ -6675,7 +6675,7 @@ const camps = {
 
   3: {
     id: '',
-    title: 'Diabetes Camp ',
+    title: 'Diabetes Camp - On Campus',
     key: 'diabetes-camp',
     // batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
@@ -7228,7 +7228,7 @@ const camps = {
 
   7: {
     id: '',
-    title: 'Life Management Camp',
+    title: 'Life Management Camp - On Campus',
     key: 'life-management-camp',
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
@@ -7639,7 +7639,7 @@ const camps = {
 
   10: {
     id: '',
-    title: 'Pregnancy Camp For Ante & Post Natal',
+    title: 'Pregnancy Camp For Ante & Post Natal - On Campus',
     key: 'pregnancy-camp-for-ante-post-natal',
     batch: 1,
     join:true,
@@ -7794,7 +7794,7 @@ const camps = {
 
   11: {
     id: '',
-    title: 'Respiratory Workshop',
+    title: 'Respiratory Workshop - On Campus',
     key: 'respiratory-workshop',
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
@@ -7929,7 +7929,7 @@ const camps = {
 
   12: {
     id: '',
-    title: 'Senior Citizen Workshop',
+    title: 'Senior Citizen Workshop - On Campus',
     key: 'senior-citizen-workshop',
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',

@@ -207,10 +207,10 @@ const CourseSection = ({
             <h4>
               <ul id='camps-workshop' >
                 <Link to="/corporate-workshops">
-                  <li>Corporate Workshop</li>
+                  <li>Corporate Workshop - On Campus</li>
                 </Link>
                 <Link to="/satsang">
-                  <li>Satsang</li>
+                  <li>Satsang - On Campus</li>
                 </Link>
                 <Link to="/samattvam">
                   <li>Samattvam(Health Checkup) - On Campus</li>
@@ -219,25 +219,25 @@ const CourseSection = ({
                   <li>Couple&apos;s classes - Online</li>
                 </Link>
                 <Link to="/IBY-course">
-                  <li>IBY classes</li>
+                  <li>IBY classes - On Campus & Online</li>
                 </Link>
                 <Link to="/home-tuitions">
                   <li>Home Tuitions</li>
                 </Link>
                 <Link to="/stress-management-camp">
-                  <li>Stress Management Camp</li>
+                  <li>Stress Management Camp - On Campus</li>
                 </Link>
                 <Link to="/weight-management-workshop">
-                  <li>Weight Management Workshop</li>
+                  <li>Weight Management Workshop - On Campus</li>
                 </Link>
                 <Link to="/pregnancy-camp-for-ante-post-natal">
-                  <li>Pregnancy Camp for Ante & Post Natal</li>
+                  <li>Pregnancy Camp for Ante & Post Natal - On Campus</li>
                 </Link>
                 <Link to="/cardiac-hypertension-workshop">
-                  <li>Cardiac & Hypertension Workshop</li>
+                  <li>Cardiac & Hypertension Workshop - On Campus</li>
                 </Link>
                 <Link to="/back-joint-disorder-workshop">
-                  <li>Back & Joint Disorder Workshop</li>
+                  <li>Back & Joint Disorder Workshop - On Campus</li>
                 </Link>
                 <Link to="/pranayama-workshop">
                   <li>Pranayama Workshop</li>
