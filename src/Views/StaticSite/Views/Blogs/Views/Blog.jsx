@@ -88,12 +88,12 @@ const BlogAnother = () => {
         <div className='blog-grid' dangerouslySetInnerHTML={{ __html:`${blog?.content}` }} >
          
         </div>
-        <div className='tagsInput' >
+        <div className='tagsInput'>
           <p style={{ display:'inline-block' }} ><b >Tags:&ensp;</b></p>
           {
-            blog?.tags?.map((el)=>{
+            blog?.tags?.map((el, i)=>{
               if(el.objectType!=='CATEGORY'){
-                return <Link to={`/tag/${el._id}` } >{el.name},&nbsp;</Link>
+                return <Link to={`/tag/${el._id}` } key={i}>{el.name},&nbsp;</Link>
               }
             })
           }</div>

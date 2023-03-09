@@ -26,7 +26,7 @@ const RelatedBlogs = ({ cardData, title, url }) => {
             { cardData?.map((item, i) => {
               if (i < 3) {
                 return (
-                  <div>
+                  <div key={i}>
                     <BlogCard  blogs={item} />
                   </div>
                 )
