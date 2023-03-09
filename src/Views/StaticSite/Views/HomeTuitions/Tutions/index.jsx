@@ -73,7 +73,7 @@ const OnlineTution = () => {
 
             <p>Fees:</p>
             <p>The fee structure is as follows:</p>
-
+            <h2>Home Tuitions</h2>
             <table>
               <thead>
                 <tr>
@@ -88,37 +88,80 @@ const OnlineTution = () => {
                   <td>1a</td>
                   <td>1</td>
                   <td>12</td>
-                  <td>Rs 6,000</td>
+                  <td>Rs 7,500</td>
                 </tr>
                 <tr>
                   <td>1b</td>
                   <td>1</td>
                   <td>24</td>
-                  <td>Rs. 10,800</td>
+                  <td>Rs. 13,500</td>
+                </tr>
+                <tr>
+                  <td>1c</td>
+                  <td>1</td>
+                  <td>30</td>
+                  <td>Rs. 16,900</td>
                 </tr>
                 <tr>
                   <td>2a</td>
                   <td>2</td>
                   <td>12</td>
-                  <td>Rs. 8.400</td>
+                  <td>Rs. 10,500</td>
                 </tr>
                 <tr>
                   <td>2b</td>
                   <td>2</td>
                   <td>24</td>
-                  <td>Rs. 15.200</td>
+                  <td>Rs. 19,000</td>
+                </tr>
+                <tr>
+                  <td>2c</td>
+                  <td>2</td>
+                  <td>30</td>
+                  <td>Rs. 23,700</td>
                 </tr>
                 <tr>
                   <td>3a</td>
                   <td>3 or 4</td>
                   <td>12</td>
-                  <td>Rs. 10,800</td>
+                  <td>Rs. 13,500</td>
                 </tr>
                 <tr>
                   <td>3b</td>
                   <td>3 or 4</td>
                   <td>24</td>
-                  <td>Rs. 19,500</td>
+                  <td>Rs. 24,300</td>
+                </tr>
+                <tr>
+                  <td>3c</td>
+                  <td>3 or 4</td>
+                  <td>30</td>
+                  <td>Rs. 30,000</td>
+                </tr>
+              </tbody>
+            </table>
+            <h2>Yoga Therapy Sessions</h2>
+            <table>
+              <thead>
+                <tr>
+                  <th>Sr. No.</th>
+                  <th>Participants</th>
+                  <th>Sessions (3 sessions per week)</th>
+                  <th>Fees</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1.</td>
+                  <td>1</td>
+                  <td>12</td>
+                  <td>Rs 12,000</td>
+                </tr>
+                <tr>
+                  <td>2.</td>
+                  <td>2</td>
+                  <td>24</td>
+                  <td>Rs 21,000</td>
                 </tr>
               </tbody>
             </table>
