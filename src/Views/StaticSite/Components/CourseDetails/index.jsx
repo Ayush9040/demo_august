@@ -43,7 +43,7 @@ const CourseDetails = ({ pageDate }) => {
     setSetselectDate(Params.get('date'))
 
     window.scrollTo(0, 0)
-
+    console.log(pageDate?.key,'heoo')
     // {Params.get('date')===null? window.scrollTo(0, 0): document.getElementById('date-select').scrollIntoView()}
   }, [])
 
@@ -206,28 +206,41 @@ const CourseDetails = ({ pageDate }) => {
             </Link> :  scroll() } */}
 
               <div onClick={checkHandler}>
-                {pageDate?.dates?.length !== 0 ? (
-                  selectDate ? (
-                    <Link
-                      to={
-                        isLoggedIn
-                          ? `/enrollment/${pageDate.key}/?date=${selectDate}`
-                          : `/user/sign-in/?location=${pageDate.key}&date=${selectDate}`
-                      }
-                    >
-                      <CommonBtn text={'Enroll Now'} />
-                    </Link>
-                  ) : (
-                    scroll()
+                {pageDate?.dates?.length !== 0 ? 
+                  (
+                    selectDate ? (
+                      <Link
+                        to={
+                          isLoggedIn
+                            ? `/enrollment/${pageDate.key}/?date=${selectDate}`
+                            : `/user/sign-in/?location=${pageDate.key}&date=${selectDate}`
+                        }
+                      >
+                        <CommonBtn text={'Enroll Now'} />
+                      </Link>
+                    ) : (
+                      scroll()
+                    )
+                  ) : 
+                  ( pageDate?.key === 'samattvam' ? <Link
+                    to={
+                      isLoggedIn
+                        ? `/enrollment/${pageDate.key}/?date=${selectDate}`
+                        : `/user/sign-in/?location=${pageDate.key}&date=${selectDate}`
+                    }
+                  >
+                    <CommonBtn text={'Enroll Now'} />
+                  </Link> : 
+                    ( <div > 
+                      <div style={{ opacity : '0.4' }}> 
+                        <CommonBtn text={'Enroll Now'} /> 
+                      </div>
+                      <div style={{ fontSize:'1.5rem' , padding : '1.5rem' }}>No dates available for this course</div>
+                    </div>)
+                  
                   )
-                ) : (
-                  <div >
-                    <div style={{ opacity : '0.4' }}> 
-                      <CommonBtn text={'Enroll Now'} /> 
-                    </div>
-                    <div style={{ fontSize:'1.5rem' , padding : '1.5rem' }}>No dates available for this course</div>
-                  </div>
-                )}
+                }
+                
                 {error === 1 && (
                   <small
                     style={{
