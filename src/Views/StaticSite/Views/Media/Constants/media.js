@@ -4758,6 +4758,26 @@ const printMedia = [
     year:'2023',
     media:[
       {
+        img:`${baseDomain}${printMediaAssest.printMediaAssest976}`,
+        url:'https://epaper.navbharattimes.com/imageview_10153_70916_4_16_12-03-2023_4_i_1_sf.html',
+        alt:'Navbharat_Times_Epaper-12th_March_2023',
+      },
+      {
+        img:`${baseDomain}${printMediaAssest.printMediaAssest977}`,
+        url:'https://epaper.navbharattimes.com/imageview_10317_67461_4_16_13-03-2023_6_i_1_sf.html',
+        alt:'Navbharat_Times_Epaper-13th_March_2023',
+      },
+      {
+        img:`${baseDomain}${printMediaAssest.printMediaAssest978}`,
+        url:'https://epaper.navbharattimes.com/imageview_9209_78472_4_16_05-03-2023_4_i_1_sf.html',
+        alt:'Navbharat_Times_Epaper-5th_March_2023',
+      },
+      {
+        img:`${baseDomain}${printMediaAssest.printMediaAssest979}`,
+        url:'https://epaper.navbharattimes.com/imageview_9357_68982_4_16_06-03-2023_6_i_1_sf.html',
+        alt:'Navbharat_Times_Epaper-6th_March_2023',
+      },
+      {
         img:`${baseDomain}${printMediaAssest.printMediaAssest971}`,
         url:'https://epaper.navbharattimes.com/imageview_8223_67344_4_16_27-02-2023_6_i_1_sf.html',
         alt:'Navbharat_Times_Epaper-27th_February2023',

@@ -2574,6 +2574,10 @@ export const printMediaAssest = {
   printMediaAssest973:'/print_media/2023/Esaka_Epaper-21st_February_2023.jpg',
   printMediaAssest974:'/print_media/2023/Esaka_Epaper-28th_February_2023.jpg',
   printMediaAssest975:'/print_media/2023/Freepressjournal.in-23rd_February_2023.jpg',
+  printMediaAssest976:'/print_media/2023/Navbharat_Times_Epaper-12th_March_2023.jpg',
+  printMediaAssest977:'/print_media/2023/Navbharat_Times_Epaper-13th_March_2023.jpg',
+  printMediaAssest978:'/print_media/2023/Navbharat_Times_Epaper-5th_March_2023.jpg',
+  printMediaAssest979:'/print_media/2023/Navbharat_Times_Epaper-6th_March_2023.jpg',
 
 }
 
