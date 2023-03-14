@@ -260,7 +260,7 @@ const CourseDetails = ({ pageDate }) => {
               {/* <CommonBtn text={'Gift Course'} /> */}
             </div>
           </div>
-          <div className="course-cover">
+          <div className="course-cover course-cover-2">
             {pageDate?.image ? (
               <img src={pageDate?.image} alt={pageDate.title} />
             ) : (

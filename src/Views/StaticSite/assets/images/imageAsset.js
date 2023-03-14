@@ -158,6 +158,7 @@ export const courseAssets = {
   courseAsset85: '/Courses/diet_workshp.jpg',
   courseAsset111: '/Courses/Camps/cardiac-&-hypertension-43-1.png',
   courseAsset112: '/Courses/Camps/LifeMC.jpg',
+  courseAssets113: '/Courses/Camps/pregnacy.jpg',
 
   // certificate
 
