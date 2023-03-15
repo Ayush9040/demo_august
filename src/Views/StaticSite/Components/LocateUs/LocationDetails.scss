@@ -14,12 +14,11 @@
 
 .updated-div h5{
     font-size: 1.75rem;
-    // margin-top: 10px;
-    // margin-left: 5%;
     margin: 1% 5% ;
 }
 
 .updated-div p{
+  font-size: 1.75rem;
   margin: 0 5%;
 }
 
@@ -164,6 +163,16 @@
 }
 
 @media (max-width: 900px) {
+  .updated-div h5{
+    font-size: 1.75rem;
+    margin: 1% 3% ;
+}
+
+.updated-div p{
+  font-size: 1.75rem;
+  margin: 0 3%;
+}
+
   .courses-details {
     grid-template-columns: 1fr;
     .courses-details-left {
