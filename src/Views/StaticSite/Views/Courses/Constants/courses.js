@@ -10619,6 +10619,7 @@ const camps = {
   //     },
   //   ],
   // },
+  
 }
 
 const classes = {
@@ -12364,6 +12365,123 @@ const classes = {
           title: '',
           text: [
             '*Note: Kindly note the fees once paid will not be refundable',
+          ],
+        },
+      },
+    ],
+  },
+  21: {
+    id: '',
+    title: 'Regular Pregnancy Class (Online & On-Campus)',
+    key: 'regular-pregnacy-classes',
+    batch: 1,
+    // templateId: 'GENERAL_AUTO_EMAIL',
+    templateId: {
+      templateOnline: 'GENERAL_AUTO_EMAIL',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: '',
+      },
+    },
+    image: `${baseDomain}${courseAssets.courseAssets113}`,
+    cardImage: `${baseDomain}${courseAssets.courseAssets113}`,
+    mostPopular: false,
+    metaDescription:
+      'Begin your pregnancy journey with The Yoga Institute. We will get you ready to welcome your little bundle of joy in a healthy and happy way!',
+    rating: 5,
+    colorCode: '#C48E8C',
+    timing: '8:30 am to 9:30 am (Monday, Wednesday, Friday)',
+    fees: {
+      onlineFee: 1000,
+      offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
+    },
+    category: 'classes',
+    dates: ['8:30 am to 9:30 am'],
+    online: false,
+    onCampus: true,
+    nonResidential: false,
+    residential: false,
+    certficate: false,
+    details: [
+      {
+        type: 'paragraph',
+        content: {
+          title: 'About The Class:',
+          text: [
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: [
+            'Pregnancy and parenthood are the two most beautiful and crucial phases of a woman’s life.',
+            'During pregnancy, a woman’s body goes through multiple changes. The techniques offered at The Yoga Institute are tailored to assist the would-be-mother to adapt to these changes, cope with her emotions, be mindful, build strength, enjoy the process, connect with the baby and be prepared to welcome the child both on mental and physical level.',
+            'So, come and join the class for a healthy and happy pregnancy and easy delivery.'
+          ],
+        },
+      },
+      {
+        type: 'u-list',
+        content: {
+          title: 'Class Offerings:',
+          points: [
+            {
+              listItem: 'Asana',
+              subItems: [],
+            },
+            {
+              listItem: 'Guided Meditation',
+              subItems: [],
+            },
+            {
+              listItem: 'Breathing Technique',
+              subItems: [],
+            },
+            {
+              listItem: 'Yoga for Easy Delivery',
+              subItems: [],
+            },
+            {
+              listItem: 'Garbhsanskar',
+              subItems: [],
+            },
+            {
+              listItem: 'Prayer &amp; Mantra Chanting',
+              subItems: [],
+            },
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Days:',
+          text: ['Monday, Wednesday, Friday'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Time:',
+          text: ['8:30 am to 9:30 am'],
+        },
+      },
+
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Fees:',
+          text: ['Rs. 1,500/- per month'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: '*Please Note:',
+          text: [
+            'Women can join only after completing the first trimester of their pregnancy',
           ],
         },
       },

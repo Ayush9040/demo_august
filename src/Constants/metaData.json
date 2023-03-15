@@ -3569,6 +3569,31 @@
     ]
   },
 
+  "/regular-pregnacy-classes":{
+    "title":"Regular Pregnancy Class - The Yoga Institute",
+    "h1Tag": "regular-pregnacy-classes",
+    "h2Tags": [],
+    "metaData": [
+      {
+        "name": "description",
+        "content": "We will get you ready to welcome your little bundle of joy in a healthy and happy way!"
+      },
+      {
+        "property": "og:description",
+        "content": "We will get you ready to welcome your little bundle of joy in a healthy and happy way!"
+      },
+      {
+        "property": "og:title",
+        "content": "regular pregnancy class - The Yoga Institute"
+      },
+      {
+        "property": "og:type",
+        "content": "Website"
+      }
+    ]
+  },
+  
+
   "/life-management-camp":{
     "title":"Life-Management-Camp - The Yoga Institute",
     "h1Tag": "life-management-camp",
