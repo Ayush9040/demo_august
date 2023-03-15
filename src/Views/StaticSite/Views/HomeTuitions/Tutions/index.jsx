@@ -99,8 +99,8 @@ const OnlineTution = () => {
                 <tr>
                   <td>1c</td>
                   <td>1</td>
-                  <td>30</td>
-                  <td>Rs. 16,900</td>
+                  <td>48</td>
+                  <td>Rs. 24,000</td>
                 </tr>
                 <tr>
                   <td>2a</td>
@@ -117,8 +117,8 @@ const OnlineTution = () => {
                 <tr>
                   <td>2c</td>
                   <td>2</td>
-                  <td>30</td>
-                  <td>Rs. 23,700</td>
+                  <td>48</td>
+                  <td>Rs. 33,500</td>
                 </tr>
                 <tr>
                   <td>3a</td>
@@ -135,8 +135,8 @@ const OnlineTution = () => {
                 <tr>
                   <td>3c</td>
                   <td>3 or 4</td>
-                  <td>30</td>
-                  <td>Rs. 30,000</td>
+                  <td>48</td>
+                  <td>Rs. 43,000</td>
                 </tr>
               </tbody>
             </table>
@@ -152,16 +152,28 @@ const OnlineTution = () => {
               </thead>
               <tbody>
                 <tr>
-                  <td>1.</td>
+                  <td>1a</td>
                   <td>1</td>
                   <td>12</td>
                   <td>Rs 12,000</td>
                 </tr>
                 <tr>
-                  <td>2.</td>
+                  <td>1b</td>
+                  <td>1</td>
+                  <td>24</td>
+                  <td>Rs 21,500</td>
+                </tr>
+                <tr>
+                  <td>2a</td>
+                  <td>2</td>
+                  <td>12</td>
+                  <td>Rs 17,000</td>
+                </tr>
+                <tr>
+                  <td>2b</td>
                   <td>2</td>
                   <td>24</td>
-                  <td>Rs 21,000</td>
+                  <td>Rs 30,500</td>
                 </tr>
               </tbody>
             </table>
