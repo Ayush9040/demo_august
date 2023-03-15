@@ -218,6 +218,9 @@ const CourseSection = ({
                 <Link to="/couples-classes">
                   <li>Couple&apos;s classes - Online</li>
                 </Link>
+                <Link to="/regular-pregnacy-classes">
+                  <li>Pregnancy Camp</li>
+                </Link>
                 <Link to="/IBY-course">
                   <li>IBY classes - On Campus & Online</li>
                 </Link>
@@ -241,9 +244,6 @@ const CourseSection = ({
                 </Link>
                 <Link to="/pranayama-workshop">
                   <li>Pranayama Workshop</li>
-                </Link>
-                <Link to="/regular-pregnacy-classes">
-                  <li>Pregnancy Camp</li>
                 </Link>
               </ul>
             </h4>
