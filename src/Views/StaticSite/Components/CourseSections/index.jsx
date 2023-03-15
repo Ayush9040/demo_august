@@ -219,7 +219,7 @@ const CourseSection = ({
                   <li>Couple&apos;s classes - Online</li>
                 </Link>
                 <Link to="/regular-pregnacy-classes">
-                  <li>Pregnancy Camp</li>
+                  <li>Regular Pregnancy Class</li>
                 </Link>
                 <Link to="/IBY-course">
                   <li>IBY classes - On Campus & Online</li>
