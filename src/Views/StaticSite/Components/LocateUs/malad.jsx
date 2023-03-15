@@ -69,7 +69,6 @@ const MaladPage = () => {
             <img src={`${baseDomain}${courseAssets.courseAsset13}`} />
           </div>
         </Slider>
-        <h2>Regular Classes</h2>
       </div>
       <div className="courses-details">
         <div className="courses-details-left">
@@ -142,31 +141,24 @@ const MaladPage = () => {
             <p>6 Months – Rs. 7,700/-</p>
             <p>12 Months – Rs. 14,500 /-</p>
           </div>
-          <div className='apply-timing'>
-            <h5>To Be Updated Soon : </h5>
-            <p>21 Days Better Living Course, 200 Hour Teacher Training Course, Workshops and Health Camps.</p>
-            <p>The Yoga Institute Malad is an abode to honoring wellness of your mind body and soul.</p>
-            <p>The Yoga Institute is the world’s oldest organized Yoga center, founded by Father of the Modern Yoga Renaissance Shri Yogendraji in 1918.</p>
-            <p>The Yoga Institute is recognized worldwide for spreading the awareness of Yoga authentically and preserving the purity of our country’s rich ancient heritage.</p>
-            <p>It has been awarded by the Prestigious Prime Mister Award.</p>
-            <p>TYI has branches all over the world, the MALAD branch is managed by Yash Tongia, who has been teaching and practicing Yoga for almost a decade.</p>
-            <p>Our work together here at The Yoga Institute Malad is of simplicity and consistency by nurturing life’s four pillars Ahar (Diet), Vihar (Recreation), Achar (Behavior), and Vichar (Thinking Process).</p>
-            <p>At our yoga studio, experience specially curated programs, practices, books, workshop/camps and teacher training courses which will calm your mind, fortify your resiliency, address and resolve the health and life challenges.</p>
-            <p>These yoga classes invite you into a deeper experience of your own body and mind, as you align with nature. Each session reflects the distinct personality and strengths of the teacher. We take great pride in the fact that we teach and practice the traditional yogic techniques.</p>
-          </div> {/* <div className="apply-address">
-            <h5>Address -</h5>
-            <h5>The Yoga Institute, Matunga </h5>
-            <h5>
-              Sri Kanyaka Parmeshwari Temple, Plot No 403, Vasavi Nilayam,
-              Telang Road, Matunga
-            </h5>
-            <h5>(CR),Mumbai</h5>
-            <h5>Contact us - <a href='tel: + 91 9343517490'>+ 91 9343517490</a></h5>
-          </div> */}
+          
         </div>
+        
         <div className="apply-details-left">
           <img src={`${baseDomain}${santaCruz.malad3}`} />
         </div>
+      </div>
+      <div className='updated-div'>
+        <h5>To Be Updated Soon : </h5>
+        <p>21 Days Better Living Course, 200 Hour Teacher Training Course, Workshops and Health Camps.</p>
+        <p>The Yoga Institute Malad is an abode to honoring wellness of your mind body and soul.</p>
+        <p>The Yoga Institute is the world’s oldest organized Yoga center, founded by Father of the Modern Yoga Renaissance Shri Yogendraji in 1918.</p>
+        <p>The Yoga Institute is recognized worldwide for spreading the awareness of Yoga authentically and preserving the purity of our country’s rich ancient heritage.</p>
+        <p>It has been awarded by the Prestigious Prime Mister Award.</p>
+        <p>TYI has branches all over the world, the MALAD branch is managed by Yash Tongia, who has been teaching and practicing Yoga for almost a decade.</p>
+        <p>Our work together here at The Yoga Institute Malad is of simplicity and consistency by nurturing life’s four pillars Ahar (Diet), Vihar (Recreation), Achar (Behavior), and Vichar (Thinking Process).</p>
+        <p>At our yoga studio, experience specially curated programs, practices, books, workshop/camps and teacher training courses which will calm your mind, fortify your resiliency, address and resolve the health and life challenges.</p>
+        <p>These yoga classes invite you into a deeper experience of your own body and mind, as you align with nature. Each session reflects the distinct personality and strengths of the teacher. We take great pride in the fact that we teach and practice the traditional yogic techniques.</p>
       </div>
     </>
   )

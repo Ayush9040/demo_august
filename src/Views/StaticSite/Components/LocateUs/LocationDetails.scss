@@ -12,6 +12,19 @@
   }
 }
 
+.updated-div h5{
+    font-size: 1.75rem;
+    // margin-top: 10px;
+    // margin-left: 5%;
+    margin: 1% 5% ;
+}
+
+.updated-div p{
+  margin: 0 5%;
+}
+
+
+
 .carosoul-main {
   overflow-x: hidden;
   margin: 10px auto;
@@ -51,9 +64,9 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   margin-top: 80px;
-  .courses-details-left {
-    margin-left: 10%;
-  }
+  // .courses-details-left {
+  //   // margin-left: 10%;
+  // }
   .courses-details-left img {
     width: 65%;
     height: 450px;
@@ -75,7 +88,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   margin-top: 80px;
-  margin-left: 6%;
+  // margin-left: 6%;
   .apply-duration p{
     font-size: 1.75rem;
     margin-top: 20px;
