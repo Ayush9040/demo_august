@@ -1,0 +1,168 @@
+.Kids-camps-subscription-form {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 3rem;
+  text-align: center;
+  background: #fff;
+  overflow-y: scroll;
+  & > h2 {
+    width: fit-content;
+    margin: 0 auto;
+    text-align: left;
+  }
+  & > h3 {
+    width: fit-content;
+    margin: 0 auto;
+    text-align: left;
+  }
+  & > form {
+    margin-top: 5rem;
+    .form-field {
+      .css-b62m3t-container {
+        display: flex;
+        justify-content: center;
+      }
+      .css-k1c1o1-control {
+        margin-left: 0;
+        margin-top: 0;
+      }
+    }
+    .uploads {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 4rem;
+
+      & > fieldset {
+        border: none;
+      }
+      label {
+        width: 100%;
+        display: block;
+        box-sizing: border-box;
+        padding: 1rem 3rem;
+        font-size: 1.25rem;
+        border: 2px solid #60606080;
+        color: #60606080;
+        border-radius: 50px;
+        text-align: center;
+        input {
+          display: none;
+        }
+      }
+      small {
+        color: #60606080;
+        float: right;
+        padding-right: 2rem;
+        font-size: 1.15rem;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+  & > form .terms-conditions {
+    display: flex;
+    align-items: center;
+    max-width: fit-content;
+    margin: 2rem auto;
+    input {
+      height: 20px;
+      width: 20px;
+    }
+    p {
+      font-size: 1.4rem;
+      padding-left: 1rem;
+    }
+  }
+  .PhoneInput {
+    display: flex;
+    align-items: center;
+    padding: 1rem 2rem;
+    border: 1px solid rgba(96, 96, 96, 0.5019607843);
+    border-radius: 50px;
+    max-width: 400px;
+    margin: 2rem;
+    margin: 0 auto;
+    .PhoneInputInput {
+      text-align: center;
+      font-size: 1.8rem;
+      border: none;
+      &:focus {
+        border: none;
+        outline: none;
+      }
+      &:focus-visible {
+        border: none;
+        outline: none;
+      }
+    }
+  }
+  & > .global-common-btn {
+    margin: 0 auto;
+    border: none;
+  }
+
+  .residential-form {
+    display: flex;
+    justify-content: center;
+    .last_radio_button {
+      margin: 3rem 0;
+      gap: 17px;
+      input[type='radio'] {
+        appearance: none;
+        -webkit-appearance: none;
+        border: 1px solid #d3d3d3;
+        width: 30px;
+        height: 30px;
+        content: none;
+        outline: none;
+        margin: 0;
+      }
+      input[type='radio']:checked {
+        appearance: none;
+        outline: none;
+        padding: 0;
+        content: none;
+        border: none;
+      }
+      input[type='radio']:checked::before {
+        position: absolute;
+        color: #60606080 !important;
+        content: '\00A0\2713\00A0' !important;
+        border: 1px solid #d3d3d3;
+        font-weight: bolder;
+        font-size: 24px;
+      }
+      .course_details_text {
+        color: rgba(96, 96, 96, 0.502);
+        font-size: 20px;
+        min-width: 170px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+    .last_radio_button-cols {
+      display: flex;
+      flex-direction: column;
+
+      .course_details_text {
+        color: rgba(96, 96, 96, 0.502);
+        font-size: 20px;
+        margin-left: 17px;
+        min-width: 230px;
+        text-align: left;
+      }
+    }
+  }
+}
+
+@media (max-width: 415px) {
+  .Kids-camps-subscription-form {
+    .PhoneInput {
+      max-width: 300px;
+    }
+  }
+}

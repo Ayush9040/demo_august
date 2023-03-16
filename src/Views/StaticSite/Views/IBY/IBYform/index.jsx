@@ -23,10 +23,12 @@ const IBYform = ({ setOpenForm }) => {
 
   const [formData, setFormData] = useState({
     name: '',
-    phone: '',
-    emailId: '',
+    phoneNumber: '',
+    email: '',
     country: '',
-    mode:'',
+    paymentInfo:'',
+    certificationDocs:'',
+    courseInfo:'IBY class',
   })
   const highlight = {
     title: 'Career',
@@ -42,19 +44,22 @@ const IBYform = ({ setOpenForm }) => {
   const [agree, setAgree] = useState(false)
 
   const submitForm = async() => {
-    const { data } = await IYBenroll({
-      personalDetails: formData,
-      courseDetails: {
-        cousreName: 'IBY course',
-        certificationDocs:` ${courseAsset}` 
-      },
-    })
+    const { data } = await IYBenroll(
+      { name: formData.name,
+        phoneNumber: formData.phoneNumber,
+        email: formData.email,
+        country: formData.country,
+        paymentInfo:formData.paymentInfo,
+        certificationDocs:` ${courseAsset}` ,
+        courseInfo:'IBY class', 
+        
+      }
+    )
    
     const paymentOrderResponse = await createIYBorder(data.data._id, {
       amount: 2000,
-      notes: {
-        description: 'IYB course',
-      },
+      notes: 'IYB course',
+      objectType : 'IBY',
     })
     if (!paymentOrderResponse?.data?.amount && !paymentOrderResponse?.data?.id)
       return 0
@@ -81,23 +86,23 @@ const IBYform = ({ setOpenForm }) => {
             data: {
               name: formData.name,
             },
-            receivers: [formData.emailId,'info@yogainstitute.org'],
+            receivers: [formData.email,'info@yogainstitute.org'],
           })
           navigate('/enrollment_thankyou')
         }
       },
       prefill: {
         name: formData.name,
-        email: formData.emailId,
-        contact: formData.phone,
+        email: formData.email,
+        contact: formData.phoneNumber,
       },
       notes: {
         // description: plan,
         formData: data.data._id,
         name: formData.name,
-        email: formData.emailId,
-        contact: formData.phone,
-        mode:  formData.mode,
+        email: formData.email,
+        contact: formData.phoneNumber,
+        paymentInfo:  formData.paymentInfo,
       },
       theme: {
         color: '#3399cc', // enter theme color for our website
@@ -118,13 +123,13 @@ const IBYform = ({ setOpenForm }) => {
   const handleEnrollment = () => {
     if (formData.name === '') {
       setEmpty(1)
-    } else if (formData.emailId === '') {
+    } else if (formData.email === '') {
       setEmpty(2)
-    } else if (formData.phone === '') {
+    } else if (formData.phoneNumber === '') {
       setEmpty(3)
     } else if (formData.country === '') {
       setEmpty(4)
-    }  else if (formData.mode === '') {
+    }  else if (formData.paymentInfo === '') {
       setEmpty(5)
     }  else if (agree === false) {
       setEmpty(6)
@@ -173,7 +178,7 @@ const IBYform = ({ setOpenForm }) => {
               placeholder='Enter Email Address*'
               form={formData}
               setField={setFormData}
-              keyName='emailId'
+              keyName='email'
             />
             {empty === 2 && (
               <small style={{ color: 'red', marginLeft: '0' }}>
@@ -185,9 +190,9 @@ const IBYform = ({ setOpenForm }) => {
             <PhoneInput
               placeholder='Enter phone number*'
               defaultCountry='IN'
-              value={formData.phone}
+              value={formData.phoneNumber}
               onChange={(e) => {
-                setFormData({ ...formData, phone: e })
+                setFormData({ ...formData, phoneNumber: e })
               }}
             />
             {empty === 3 && <small> Please enter a valid phone number</small>}
@@ -212,14 +217,14 @@ const IBYform = ({ setOpenForm }) => {
               <label htmlFor="" className="course_details_text">
                 <input
                   type="radio"
-                  name="mode"
+                  name="paymentInfo"
                   value="OFFLINE"
-                  checked={formData.mode === 'OFFLINE'}
+                  checked={formData.paymentInfo === 'OFFLINE'}
                   onChange={(e) => {
                     if (e.target.checked) {
                       setFormData({
                         ...formData,
-                        mode: e.target.value,
+                        paymentInfo: e.target.value,
                       })
                       setEmpty(0)
                     }
@@ -232,14 +237,14 @@ const IBYform = ({ setOpenForm }) => {
             <div className="last_radio_button" ><label htmlFor="" className="course_details_text">
               <input
                 type="radio"
-                name="mode"
+                name="paymentInfo"
                 value="ONLINE"
-                checked={formData.mode === 'ONLINE'}
+                checked={formData.paymentInfo === 'ONLINE'}
                 onChange={(e) => {
                   if (e.target.checked) {
                     setFormData({
                       ...formData,
-                      mode: e.target.value,
+                      paymentInfo: e.target.value,
                     })
                     setEmpty(0)
                   }

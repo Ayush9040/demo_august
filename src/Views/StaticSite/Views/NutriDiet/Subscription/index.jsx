@@ -38,9 +38,8 @@ const SubcriptionForm = ({ packageName, packagePrice, closeForm }) => {
     })
     const paymentOrderResponse = await createNutriOrder(data.data._id, {
       amount: packagePrice,
-      notes: {
-        description: 'Nutri Diet Clinic',
-      },
+      notes:'Nutri Diet Clinic',
+      objectType:'NUTRI'
     })
     if (!paymentOrderResponse?.data?.amount && !paymentOrderResponse?.data?.id)
       return 0
