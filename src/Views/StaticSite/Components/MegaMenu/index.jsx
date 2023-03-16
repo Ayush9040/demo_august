@@ -396,6 +396,8 @@ const MegaMenu = ({ setNav }) => {
                   <Link onClick={() => {setNav(false)}}  to="/IBY-course">
                     <li>IBY Class (Only for TYI TTC Teachers)</li>
                   </Link>
+                  <Link onClick={() => {setNav(false)}}  to='/regular-pregnacy-classes'><li>Regular Pregnancy Class</li></Link>
+
                 </ul>
               </ul>
             </div>
@@ -418,7 +420,6 @@ const MegaMenu = ({ setNav }) => {
                 <Link onClick={() => {setNav(false)}}  to='/life-management-camp'><li>Life Management Camp</li></Link> 
                 <Link onClick={() => {setNav(false)}}  to='/senior-citizen-workshop'><li>Senior citizen Workshop</li></Link>
                 <Link onClick={() => {setNav(false)}}  to='/diabetes-camp'><li>Diabetes Camp</li></Link>
-                <Link onClick={() => {setNav(false)}}  to='/regular-pregnacy-classes'><li>Regular Pregnancy Class</li></Link>
               </ul>
               <Link onClick={() => {setNav(false)}}  to='/nutri-diet'>
                 <h3 style={{ marginTop:'0.75rem' }} >NUTRI DIET CLINIC</h3></Link>
@@ -426,6 +427,8 @@ const MegaMenu = ({ setNav }) => {
                 <h3 style={{ marginTop:'0.75rem' }} >CORPORATE WORKSHOP</h3></Link>
               <Link onClick={() => {setNav(false)}}  to='/home-tuitions'>
                 <h3 style={{ marginTop:'0.75rem' }} >HOME TUITIONS</h3></Link>
+              <Link onClick={() => {setNav(false)}}  to='/kids-camp'>
+                <h3 style={{ marginTop:'0.75rem' }} >KIDS YOGA SUMMER CAMP (ON-CAMPUS)</h3></Link>
               <div
                 className="filler"
                 style={{ position: 'relative', marginTop: '3rem' }}
