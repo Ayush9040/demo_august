@@ -168,9 +168,8 @@ const DisclaimerPolicy = ({
             console.log(response.data.data['_id'])
             const paymentOrderResponse =  await axios.post(`${ cmsBaseDomain }/payment/order?enrollmentFormId=${response.data.data['_id']}`, {
               amount: courseFee,
-              notes: {
-                description:currentCourse.metaDescription,
-              }
+              notes: currentCourse.metaDescription,
+              objectType:'ENROLLMENT'
             })
             if(!paymentOrderResponse?.data?.amount && !paymentOrderResponse?.data?.id) return 0
             

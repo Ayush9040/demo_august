@@ -159,6 +159,7 @@ export const courseAssets = {
   courseAsset111: '/Courses/Camps/cardiac-&-hypertension-43-1.png',
   courseAsset112: '/Courses/Camps/LifeMC.jpg',
   courseAssets113: '/Courses/Camps/pregnacy.jpg',
+  courseAssets114:'/Courses/Camps/Kid.jpg',
 
   // certificate
 
