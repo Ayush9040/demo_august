@@ -4372,7 +4372,7 @@ const ttc900hr = {
       offlineFee: { residentialFee: 55000, nonResidentialFee: 55000 },
     },
     category: 'ttc',
-    dates: [],
+    dates: ['1st April 2023', '5th August 2023', '2nd December 2023'],
     online: true,
     onCampus: true,
     nonResidential: true,
