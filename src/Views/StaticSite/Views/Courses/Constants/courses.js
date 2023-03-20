@@ -12372,7 +12372,7 @@ const classes = {
   },
   21: {
     id: '',
-    title: 'Regular Pregnancy Class - On Campus',
+    title: 'Regular Pregnancy Class - Online & On Campus',
     key: 'regular-pregnacy-classes',
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
