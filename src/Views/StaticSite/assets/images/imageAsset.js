@@ -2641,7 +2641,8 @@ export const nutriClinic = {
 }
 
 export const iybCourse = { 
-  main : '/Courses/IBY_Course_ad_for_website.jpg'
+  main : '/Courses/IBY_Course_ad_for_website.jpg',
+  mainImage: '/Courses/Regular-pregnancy-camp.jpg'
 }
 
 export default baseDomain

@@ -38,7 +38,7 @@ const IBYcourse = () => {
             <CommonBtn text='Enroll Now' buttonAction={ ()=>setOpenForm(true) }   />
           </div>
           <div className="highlight-cover">
-            <img src={`${baseDomain}${iybCourse.main}`} alt="IYB-image" />
+            <img src={`${baseDomain}${iybCourse.mainImage}`} alt="IYB-image" />
           </div>
         </div>
         <div className="about-section">
