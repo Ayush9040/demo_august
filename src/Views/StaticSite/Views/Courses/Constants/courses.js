@@ -12397,7 +12397,7 @@ const classes = {
     },
     category: 'classes',
     dates: ['8:30 am to 9:30 am'],
-    online: false,
+    online: true,
     onCampus: true,
     nonResidential: false,
     residential: false,
