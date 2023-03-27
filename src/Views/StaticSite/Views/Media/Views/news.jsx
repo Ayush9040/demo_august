@@ -14,7 +14,7 @@ const News = () => {
 
   const MediaNews = {
     title: 'news',
-    color: 'black',
+    color: 'orange',
     menuColor: 'black',
     menuItems: [
       {

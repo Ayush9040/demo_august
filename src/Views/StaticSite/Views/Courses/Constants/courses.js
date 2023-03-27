@@ -4386,7 +4386,7 @@ const ttc900hr = {
           title: '',
 
           text: [
-            'With over 1,00,000/ 50,000 successfully certified students since 1918, the 1 Year Teacher Training Course (Hindi) at The Yoga Institute is an in-depth study of classical Ashtanga yoga (Eightfold Path Yoga). It teaches core yoga philosophy with a comprehensive approach to the science and technology of yoga. Strategically designed by the founder Shri Yogendraji, Smt. Sita Devi Yogendra, Dr. Jayadeva Yogendra, and Dr. Hansaji J Yogendra, the course serves as a valuable ‘life school’ to those seeking balance and fulfilment in life.',
+            'With over 1,00,000/ 50,000 successfully certified students since 1918, the 2 Year Teacher Training Course (English) at The Yoga Institute is an in-depth study of classical Ashtanga yoga (Eightfold Path Yoga). It teaches core yoga philosophy with a comprehensive approach to the science and technology of yoga. Strategically designed by the founder Shri Yogendraji, Smt. Sita Devi Yogendra, Dr. Jayadeva Yogendra, and Dr. Hansaji J Yogendra, the course serves as a valuable ‘life school’ to those seeking balance and fulfilment in life.',
 
             'This course is ideal for those who have daily commitments at home, like homemakers. With the suitable schedule of this course, they can have access to advanced yoga training at their convenience and can become certified yoga trainers within one year.',
           ],

@@ -13,7 +13,7 @@ const PrintMedia = () => {
 
   const MediaNews = {
     title: 'news',
-    color: 'black',
+    color: 'orange',
     menuColor: 'black',
     menuItems: [
       // {

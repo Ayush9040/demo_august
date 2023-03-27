@@ -17,7 +17,7 @@ const DigitalMedia = () => {
 
   const MediaNews = {
     title: 'news',
-    color: 'black',
+    color: 'orange',
     menuColor: 'black',
     menuItems: [
     ],
