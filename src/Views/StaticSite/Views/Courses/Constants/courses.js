@@ -12383,8 +12383,8 @@ const classes = {
         templateNonResidential: '',
       },
     },
-    image: `${baseDomain}${courseAssets.courseAssets113}`,
-    cardImage: `${baseDomain}${courseAssets.courseAssets113}`,
+    image: `${baseDomain}${courseAssets.courseAssets115}`,
+    cardImage: `${baseDomain}${courseAssets.courseAssets115}`,
     mostPopular: false,
     metaDescription:
       'Begin your pregnancy journey with The Yoga Institute. We will get you ready to welcome your little bundle of joy in a healthy and happy way!',

@@ -33,8 +33,8 @@ const KidsCamp = () => {
           </div>
           <div className="highlight-cover">
             <img
-              src={`${baseDomain}${courseAssets.courseAssets114}`}
-              alt="IYB-image"
+              src={`${baseDomain}${courseAssets.courseAssets116}`}
+              alt="Kids-camp-image"
             />
           </div>
         </div>

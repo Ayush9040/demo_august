@@ -160,6 +160,8 @@ export const courseAssets = {
   courseAsset112: '/Courses/Camps/LifeMC.jpg',
   courseAssets113: '/Courses/Camps/pregnacy.jpg',
   courseAssets114:'/Courses/Camps/Kid.jpg',
+  courseAssets115: '/Courses/pregnancy-camp.jpg',
+  courseAssets116: '/Courses/kid-camp.jpg',
 
   // certificate
 
