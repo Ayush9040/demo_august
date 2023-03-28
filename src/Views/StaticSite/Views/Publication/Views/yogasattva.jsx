@@ -310,6 +310,14 @@ const Yogasattva = () => {
         pdf: `${baseDomain}/books/newsletter/Yogasattva-June2022-%20v3.pdf`,
       },
       {
+        img: `${baseDomain}${publicationAssests.ythAssets96}`,
+        pdf: `${baseDomain}/books/2022/Yogasattva-May2022.pdf`,
+      },
+      {
+        img: `${baseDomain}${publicationAssests.ythAssets95}`,
+        pdf: `${baseDomain}/books/2022/Yogasattva-April22.pdf`,
+      },
+      {
         img: `${baseDomain}${homeAssets.homeAsset69}`,
         pdf: `${baseDomain}/books/newsletter/Yogasattva-Mar-2022.pdf`,
       },

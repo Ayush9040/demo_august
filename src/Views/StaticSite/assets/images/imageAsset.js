@@ -910,6 +910,8 @@ export const publicationAssests = {
   ythAssets24: '/Publications/Yogsattava/PreviousIssues/2021/yth2021-6.jpg',
 
   //2022
+  ythAssets95: '/Home/NewsLetter/Yogasattva-April 2022.jpg',
+  ythAssets96:'/Home/NewsLetter/Yogasattva-May2022.jpg',
   ythAssets85:'/Home/NewsLetter/Yogasattva-June2022--v3-1.jpg',
   ythAssets86:'/Home/NewsLetter/Yogasattva-July2022-Revised-1.jpg',
   ythAssets87:'/Home/NewsLetter/Yogasattva-August2022-1.jpg',
@@ -917,6 +919,7 @@ export const publicationAssests = {
   ythAssets89:'/Home/NewsLetter/Yogasattva-Oct-2022-21024_1.jpg',
   ythAssets90:'/Home/NewsLetter/Yogasattva-Nov-2022-cover-page.jpg',
   ythAssets91:'/Home/NewsLetter/Yogasattva-Dec-2022-Cover.jpg',
+  
 
   //2023 
 
