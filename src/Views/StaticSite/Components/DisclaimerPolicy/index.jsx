@@ -165,7 +165,6 @@ const DisclaimerPolicy = ({
 
         if(response?.data?.success){
           if(currentCourse.key!=='satsang' && formData?.residental!=='RESIDENTIAL'){
-            console.log(response.data.data['_id'])
             const paymentOrderResponse =  await axios.post(`${ cmsBaseDomain }/payment/order?enrollmentFormId=${response.data.data['_id']}`, {
               amount: courseFee,
               notes: currentCourse.metaDescription,
@@ -194,20 +193,21 @@ const DisclaimerPolicy = ({
                 contact: formData.phone
               },
               notes:{
-                description:currentCourse?.metaDescription,
-                formData:response.data.data['_id'],
                 courseName: currentCourse.title,
                 name: formData.name,
                 email: formData.email,
                 contact: formData.phone,
-                fee : courseFee
+                date: courseDate,
+                time : currentCourse.timing,
+                mode : formData.mode,
               },
               theme: {
                 color: '#3399cc' // enter theme color for our website
               }
+              
             }
             const rzp = new window.Razorpay(options)
-            rzp.open()   
+            rzp.open()  
           }else{
             await axios.post(`${ authBaseDomain }/ali/mail`, mailTemplate)
 
@@ -223,7 +223,10 @@ const DisclaimerPolicy = ({
         console.error(err)
       } 
     }
+
+  
   }
+ 
   return (
     <div className="disclaimer-container">
       <button className="close" onClick={()=>setBold(4)} >x</button>
