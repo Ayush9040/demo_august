@@ -926,6 +926,7 @@ export const publicationAssests = {
   ythAssets92:'/Publications/Yogsattava/PreviousIssues/2023/Yogasattva-Jan-2023.jpg',
   ythAssets93:'/Publications/Yogsattava/PreviousIssues/2023/Yogasattva-Feb-2023.jpg',
   ythAssets94:'/Publications/Yogsattava/PreviousIssues/2023/Yogasattva-Mar-2023.jpg',
+  ythAssets97:'/Publications/Yogsattava/PreviousIssues/2023/Yogasattva-April2023.jpg',
   //Library
   libraryAsset: '/Publications/Library/hero.jpg',
 
