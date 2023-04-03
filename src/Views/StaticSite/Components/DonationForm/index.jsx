@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import InnerNavComponent from '../InnerNavComponent'
 import InputComponent from '../InputComponent'
+import Select from 'react-select'
+import { Country } from 'country-state-city'
 import './style.scss'
 
 const DonationForm = () => {
@@ -20,11 +22,47 @@ const DonationForm = () => {
     panNum: '',
     phone: '',
     dob: '',
-    terms: 'no'
+    terms: 'no',
+    country: ''
   })
 
   const [validate, setValidate] = useState(0)
   const [isDisabled, setIsDisabled] = useState(false)
+
+  const [values, setValues] = useState([])
+  const countries = Country.getAllCountries()
+
+  const updatedCountries = countries.map((country) => ({
+    label: country.name,
+    value: country.id,
+    ...country,
+  }))
+
+  const customStyles = {
+    control: (base, state) => ({
+      ...base,
+      background: 'rgb(240,234,234)',
+      borderRadius: '50px',
+      width: '100%',
+      // padding: '1rem 2rem',
+      // marginTop: '2rem',
+      // marginLeft: '2rem',
+      // backgroundColor:'blue',
+      // Overwrittes the different states of border
+      border: state.isFocused ? 0 : 0,
+      borderColor: state.isFocused ? '0' : '0',
+      // Removes weird border around container
+      boxShadow: state.isFocused ? null : null,
+      '&:hover': {
+        // Overwrittes the different states of border
+        borderColor: state.isFocused ? '0' : '0'
+      }
+    })
+  }
+
+  const stylesSelect = {
+    background: 'rgb(240,234,234)'
+  }
 
   const donationFormHandler = (e) => {
     e.preventDefault()
@@ -44,6 +82,8 @@ const DonationForm = () => {
       return setValidate(7)
     } else if (formData.terms === 'no') {
       return setValidate(8)
+    } else if (formData.country === '' && isDisabled === false) {
+      return setValidate(9)
     } else {
       return
     }
@@ -52,7 +92,7 @@ const DonationForm = () => {
   const handleClick = () => {
     if (isDisabled === false) {
       setIsDisabled(true)
-      setFormData({ ...formData, fName: '', lName: '', email: '', panNum: '', phone: '', dob: '' })
+      setFormData({ ...formData, fName: '', lName: '', email: '', panNum: '', phone: '', dob: '', country: '' })
     } else {
       setIsDisabled(false)
     }
@@ -165,9 +205,10 @@ const DonationForm = () => {
               />
 
               <InputComponent
-                type="text"
-                placeholder="Date of birth*"
+                type="date"
+                placeholder='Date of birth*'
                 form={formData}
+                onfocus="text.type = Date of birth*"
                 setField={setFormData}
                 keyName="dob"
                 errorCheck={setValidate}
@@ -178,12 +219,39 @@ const DonationForm = () => {
                 *Please Enter Phone Number!
               </small>)}
             </div>
+            <div>
+              <Select
+                styles={isDisabled === true ? customStyles : {}}
+                id="country"
+                name="country"
+                placeholder='Country'
+                label="country"
+                className='select'
+                form={formData}
+                setField={setFormData}
+                keyName="country"
+                errorCheck={setValidate}
+                options={updatedCountries}
+                value={values.country}
+                onChange={(value) => {
+                  setValues({ country: value, state: null, city: null }, false)
+                  setFormData(prev => { return { ...prev, country: value.name } })
+                }}
+                isDisabled={isDisabled}
+              />
+              {/* {validate === 9 && (<small style={{ color: 'red', marginLeft: '0' }}>
+                *Please Select Country!
+              </small>)} */}
+            </div>
             {validate === 7 && (<small style={{ color: 'red', marginLeft: '440px', position: 'relative', bottom: '20px' }}>
               *Please Enter Date of Birth!
             </small>)}
           </div>
           {validate === 8 && (<small style={{ color: 'red', marginLeft: '0' }}>
             *Please accept Terms & Conditions!
+          </small>)}
+          {validate === 9 && (<small style={{ color: 'red', marginLeft: '0' }}>
+            *Please Select Country!
           </small>)}
           <div className="terms-conditions">
             <div className='terms-conditions-parts'>
@@ -193,7 +261,7 @@ const DonationForm = () => {
                 keyName='check1'
                 onChange={() => setValidate({ ...validate, terms: 'yes' })}
               />
-              <p>I accept all Terms & Conditions. <a href='#' className='conditions-underline'>View Terms & Conditions</a></p>
+              <p>I accept all Terms & Conditions. <a href='https://theyogainstitute.org/terms-and-conditions' className='conditions-underline'>View Terms & Conditions</a></p>
             </div>
             <div className='terms-conditions-parts'>
               <input
