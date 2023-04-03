@@ -47,21 +47,16 @@ const DonationForm = () => {
       // padding: '1rem 2rem',
       // marginTop: '2rem',
       // marginLeft: '2rem',
-      // backgroundColor:'blue',
       // Overwrittes the different states of border
       border: state.isFocused ? 0 : 0,
-      borderColor: state.isFocused ? '0' : '0',
-      // Removes weird border around container
+      backgroundColor: state.isFocused ? 'rgb(240,234,234)' : 'rgb(240,234,234)',
+      // Removes weirdgroundCborder around container
       boxShadow: state.isFocused ? null : null,
       '&:hover': {
         // Overwrittes the different states of border
         borderColor: state.isFocused ? '0' : '0'
       }
     })
-  }
-
-  const stylesSelect = {
-    background: 'rgb(240,234,234)'
   }
 
   const donationFormHandler = (e) => {
@@ -80,9 +75,9 @@ const DonationForm = () => {
       return setValidate(6)
     } else if (formData.dob === '' && isDisabled === false) {
       return setValidate(7)
-    } else if (formData.terms === 'no') {
-      return setValidate(8)
     } else if (formData.country === '' && isDisabled === false) {
+      return setValidate(8)
+    } else if (formData.terms === 'no') {
       return setValidate(9)
     } else {
       return
@@ -143,7 +138,7 @@ const DonationForm = () => {
                 keyName="fName"
                 errorCheck={setValidate}
                 blocked={isDisabled}
-                css={isDisabled === true ? { backgroundColor: ('rgb(240,234,234)') } : {}}
+                css={isDisabled === true ? { backgroundColor: 'hsl(0, 0%, 95%)' } : {}}
               />
               {validate === 2 && (<small style={{ color: 'red', marginLeft: '-450px', width: '100%', position: 'relative', top: '60px' }}>
                 *Please Enter First Name!
@@ -156,7 +151,7 @@ const DonationForm = () => {
                 keyName="lName"
                 errorCheck={setValidate}
                 blocked={isDisabled}
-                css={isDisabled === true ? { backgroundColor: ('rgb(240,234,234)') } : {}}
+                css={isDisabled === true ? { backgroundColor: ('hsl(0, 0%, 95%)') } : {}}
               />
               {validate === 3 && (<small style={{ color: 'red', marginLeft: '-300px', position: 'relative', top: '60px' }}>
                 *Please Enter Last Name!
@@ -172,7 +167,7 @@ const DonationForm = () => {
                 keyName="email"
                 errorCheck={setValidate}
                 blocked={isDisabled}
-                css={isDisabled === true ? { backgroundColor: ('rgb(240,234,234)') } : {}}
+                css={isDisabled === true ? { backgroundColor: ('hsl(0, 0%, 95%)') } : {}}
               />
 
               <InputComponent
@@ -183,7 +178,7 @@ const DonationForm = () => {
                 keyName="panNum"
                 errorCheck={setValidate}
                 blocked={isDisabled}
-                css={isDisabled === true ? { backgroundColor: ('rgb(240,234,234)') } : {}}
+                css={isDisabled === true ? { backgroundColor: ('hsl(0, 0%, 95%)') } : {}}
               />
               {validate === 4 && (<small style={{ color: 'red', marginLeft: '-86rem', width: '100%', position: 'relative', top: '60px' }}>
                 *Please Enter your email!
@@ -201,7 +196,7 @@ const DonationForm = () => {
                 keyName="phone"
                 errorCheck={setValidate}
                 blocked={isDisabled}
-                css={isDisabled === true ? { backgroundColor: ('rgb(240,234,234)') } : {}}
+                css={isDisabled === true ? { backgroundColor: ('hsl(0, 0%, 95%)') } : {}}
               />
 
               <InputComponent
@@ -213,7 +208,7 @@ const DonationForm = () => {
                 keyName="dob"
                 errorCheck={setValidate}
                 blocked={isDisabled}
-                css={isDisabled === true ? { backgroundColor: ('rgb(240,234,234)') } : {}}
+                css={isDisabled === true ? { backgroundColor: ('hsl(0, 0%, 95%)') } : {}}
               />
               {validate === 6 && (<small style={{ color: 'red', marginLeft: '-86rem', width: '100%', position: 'relative', top: '60px' }}>
                 *Please Enter Phone Number!
@@ -221,8 +216,8 @@ const DonationForm = () => {
             </div>
             <div>
               <Select
-                styles={isDisabled === true ? customStyles : {}}
-                id="country"
+                styles={isDisabled === true ? { customStyles } : {}}
+                id="country"flas
                 name="country"
                 placeholder='Country'
                 label="country"
@@ -248,10 +243,10 @@ const DonationForm = () => {
             </small>)}
           </div>
           {validate === 8 && (<small style={{ color: 'red', marginLeft: '0' }}>
-            *Please accept Terms & Conditions!
+            *Please Select Country!
           </small>)}
           {validate === 9 && (<small style={{ color: 'red', marginLeft: '0' }}>
-            *Please Select Country!
+            *Please accept Terms & Conditions!
           </small>)}
           <div className="terms-conditions">
             <div className='terms-conditions-parts'>
