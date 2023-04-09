@@ -270,6 +270,10 @@
     outline: grey;
   }
 
+  .react-datepicker__month-container{
+    font-size: 12px;
+  }
+
 }
 
 @media (max-width: 1700px) {
@@ -315,6 +319,14 @@
     .terms-conditions-parts {
       width: 50% !important;
     }
+    .css-13cymwt-control{
+      width: 400px;
+      padding: 4px!important;
+      margin: 0 auto;
+    }
+    .css-t3ipsp-control{
+      padding: 4px;
+    }
   }
 
   @media (max-width: 1270px) {
@@ -339,6 +351,14 @@
       .donation-toggle-paragraph {
         margin: 20px 0px 0 -50px !important;
         font-size: 2rem;
+      }
+      .css-13cymwt-control{
+        width: 400px;
+        padding: 0px!important;
+        margin: 0 auto;
+      }
+      .css-t3ipsp-control{
+        padding: 0px;
       }
     }
   }
@@ -370,6 +390,14 @@
       .donation-amount-align {
         width: 60%;
       }
+      .css-13cymwt-control{
+        width: 400px;
+        padding: 0px!important;
+        margin: 0 auto;
+      }
+      .css-t3ipsp-control{
+        padding: 0px;
+      }
     }
   }
 
@@ -394,6 +422,14 @@
         margin: 0 200px;
         justify-content: flex-start;
       }
+      .css-13cymwt-control{
+        width: 400px;
+        padding: 0px!important;
+        margin: 0 auto;
+      }
+      .css-t3ipsp-control{
+        padding: 0px;
+      }
     }
   }
 
@@ -406,6 +442,14 @@
         align-items: center;
         margin: 0 120px;
         justify-content: flex-start;
+      }
+      .css-13cymwt-control{
+        width: 400px;
+        padding: 0px!important;
+        margin: 0 auto;
+      }
+      .css-t3ipsp-control{
+        padding: 0px;
       }
     }
   }
@@ -444,6 +488,19 @@
       .global-common-btn {
         width: 25% !important;
       }
+
+      .react-datepicker__month-container{
+        font-size: 12px;
+      }
+
+       .css-13cymwt-control{
+        width: 400px;
+        padding: 0px!important;
+        margin: 0 auto;
+      }
+      .css-t3ipsp-control{
+        padding: 0px;
+      }
     }
   }
 
@@ -477,8 +534,14 @@
         margin: 0 auto;
       }
 
+      .css-t3ipsp-control{
+        padding: 0px;
+      }
+
       .css-13cymwt-control{
         width: 300px;
+        padding: 0px!important;
+        margin: 0 auto;
       }
       .css-1fdsijx-ValueContainer {
         font-size: 1.8rem;
@@ -494,6 +557,10 @@
 
       .input-box {
         width: 50px;
+      }
+
+      .react-datepicker__month-container{
+        font-size: 12px;
       }
     }
   }
