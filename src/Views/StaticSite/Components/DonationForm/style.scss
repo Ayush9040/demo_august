@@ -1,4 +1,5 @@
 .donation-container {
+  overflow: hidden;
   .donation-form {
     text-align: center;
   }
@@ -22,6 +23,42 @@
 
   .donation_input {
     margin-bottom: 20px;
+  }
+
+  .date-of-birth {
+    font-size: 1.8rem;
+    padding: 1rem 2rem;
+    text-align: center;
+    border: none;
+    background-color: hsl(0, 0%, 95%);
+    border-radius: 50px;
+    width: 400px;
+    margin: 0 auto;
+  }
+
+  .date-birth {
+    font-size: 1.8rem;
+    padding: 1rem 2rem;
+    text-align: center;
+    border: 0.5px solid hsl(0, 0%, 80%);
+    border-radius: 50px;
+    width: 400px;
+    margin: 0 auto;
+  }
+
+  .date-of-birth:focus {
+    border: none;
+  }
+
+  .picker {
+    grid-column: 5/10;
+    grid-row: 2/4;
+    background: cornflowerblue;
+
+    input {
+      border: none;
+      background-color: red;
+    }
   }
 
   .donation-toggle-paragraph {
@@ -79,6 +116,12 @@
     width: 15%;
     text-align: center;
     margin: 30px auto;
+  }
+
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
   }
 
   //toggle button 
@@ -151,21 +194,14 @@
     margin: 0 auto;
   }
 
-  // .css-b62m3t-container{
-  //   width: 400px;
-  //   padding: 0.5rem 2rem;
-  //   margin: 0 auto;
-  //   border-radius: 50px;
-  //   border: 1px solid rgba(96, 96, 96, 0.5019607843);
-  //   // background: rgb(240,234,234)
-  // }
   .css-13cymwt-control {
+    padding: 6px;
     border-radius: 50px;
     width: 400px;
     margin: 0 auto;
   }
 
-  #country{
+  #country {
     border-radius: 50px;
   }
 
@@ -173,7 +209,7 @@
     width: 400px;
   }
 
-  .css-16xfy0z-control{
+  .css-16xfy0z-control {
     padding: 6px;
     border-radius: 50px;
   }
@@ -203,6 +239,11 @@
     font-size: 1.8rem;
     font-weight: 500;
   }
+
+  .css-13cymwt-control:focus {
+    border-color: none;
+  }
+
 }
 
 @media (max-width: 1700px) {
@@ -388,6 +429,37 @@
         align-items: center;
         margin: 0 auto;
         justify-content: center;
+      }
+      .date-of-birth {
+        font-size: 1.8rem;
+        padding: 1rem 2rem;
+        text-align: center;
+        border: none;
+        background-color: hsl(0, 0%, 95%);
+        border-radius: 50px;
+        width: 300px;
+        margin: 0 auto;
+      }
+    
+      .date-birth {
+        font-size: 1.8rem;
+        padding: 1rem 2rem;
+        text-align: center;
+        border: 0.5px solid hsl(0, 0%, 80%);
+        border-radius: 50px;
+        width: 300px;
+        margin: 0 auto;
+      }
+
+      .css-13cymwt-control{
+        width: 300px;
+      }
+      .css-1fdsijx-ValueContainer {
+        font-size: 1.8rem;
+        width: 300px;
+      }
+      .css-b62m3t-container{
+        width: 300px;
       }
 
       .global-common-btn {

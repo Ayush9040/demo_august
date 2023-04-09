@@ -3,7 +3,10 @@ import InnerNavComponent from '../InnerNavComponent'
 import InputComponent from '../InputComponent'
 import Select from 'react-select'
 import { Country } from 'country-state-city'
+import DatePicker from 'react-datepicker'
+import 'react-datepicker/dist/react-datepicker.css'
 import './style.scss'
+import { AnonymousDonation } from './api'
 
 const DonationForm = () => {
 
@@ -22,14 +25,16 @@ const DonationForm = () => {
     panNum: '',
     phone: '',
     dob: '',
-    terms: 'no',
-    country: ''
+    country: '',
   })
 
   const [validate, setValidate] = useState(0)
   const [isDisabled, setIsDisabled] = useState(false)
-
+  const [selectedDate, setSelectedDate] = useState(null)
   const [values, setValues] = useState([])
+  const [currency, setCurrency] = useState('INR')
+  const [agree, setAgree] = useState(false)
+  const [tax, setTax] = useState(false)
   const countries = Country.getAllCountries()
 
   const updatedCountries = countries.map((country) => ({
@@ -41,25 +46,50 @@ const DonationForm = () => {
   const customStyles = {
     control: (base, state) => ({
       ...base,
-      background: 'rgb(240,234,234)',
+      background: 'hsl(0, 0%, 95%)',
       borderRadius: '50px',
-      width: '100%',
-      // padding: '1rem 2rem',
-      // marginTop: '2rem',
-      // marginLeft: '2rem',
-      // Overwrittes the different states of border
+      width: '400px',
+      padding: '6px',
+      borderColor: 'black',
       border: state.isFocused ? 0 : 0,
       backgroundColor: state.isFocused ? 'rgb(240,234,234)' : 'rgb(240,234,234)',
       // Removes weirdgroundCborder around container
       boxShadow: state.isFocused ? null : null,
-      '&:hover': {
-        // Overwrittes the different states of border
-        borderColor: state.isFocused ? '0' : '0'
-      }
     })
   }
 
+  const submitForm = async() => {
+    if (isDisabled === false) {
+      await AnonymousDonation({
+        amount: formData.amount,
+        isAnonymous: isDisabled,
+        tnc: agree,
+        tax: tax,
+        firstName: formData.fName,
+        lastName: formData.lName,
+        email: formData.email,
+        pan: formData.panNum,
+        phoneNumber: formData.phone,
+        DOB: formData.dob,
+        icountry: formData.country,
+        currency: values.country.currency !== 'INR' ? 'USD' : 'INR'
+      }  
+      )
+    } else {
+      await AnonymousDonation(
+        {
+          amount: formData.amount,
+          isAnonymous: isDisabled,
+          tnc: agree,
+          tax: tax,
+          currency: currency
+        }
+      )
+    }
+  }
+
   const donationFormHandler = (e) => {
+    console.log(formData)
     e.preventDefault()
     if (formData.amount === '' || formData.amount < 1) {
       return setValidate(1)
@@ -77,22 +107,24 @@ const DonationForm = () => {
       return setValidate(7)
     } else if (formData.country === '' && isDisabled === false) {
       return setValidate(8)
-    } else if (formData.terms === 'no') {
+    } else if (agree !== true) {
       return setValidate(9)
     } else {
-      return
+      submitForm()
     }
   }
 
   const handleClick = () => {
+    console.log(values.country)
     if (isDisabled === false) {
       setIsDisabled(true)
       setFormData({ ...formData, fName: '', lName: '', email: '', panNum: '', phone: '', dob: '', country: '' })
+      setValues({ ...values, country: null })
+      setSelectedDate(null)
     } else {
       setIsDisabled(false)
     }
   }
-
 
   return (
     <div className='donation-container'>
@@ -114,6 +146,7 @@ const DonationForm = () => {
                 setField={setFormData}
                 keyName="amount"
                 errorCheck={setValidate}
+                css={isDisabled === true ? {} : { border: '0.5px solid hsl(0, 0%, 80%)' }}
               />
               {validate === 1 && (<small style={{ color: 'red', marginLeft: '0' }}>
                 *Please Enter Amount!
@@ -130,131 +163,144 @@ const DonationForm = () => {
           </div>
           <div>
             <div className='donation-field'>
-              <InputComponent
-                type='text'
-                placeholder="First Name*"
-                form={formData}
-                setField={setFormData}
-                keyName="fName"
-                errorCheck={setValidate}
-                blocked={isDisabled}
-                css={isDisabled === true ? { backgroundColor: 'hsl(0, 0%, 95%)' } : {}}
-              />
-              {validate === 2 && (<small style={{ color: 'red', marginLeft: '-450px', width: '100%', position: 'relative', top: '60px' }}>
+              <div className='alignment'>
+                <InputComponent
+                  type='text'
+                  placeholder="First Name*"
+                  form={formData}
+                  setField={setFormData}
+                  keyName="fName"
+                  errorCheck={setValidate}
+                  blocked={isDisabled}
+                  css={isDisabled === true ? { backgroundColor: 'hsl(0, 0%, 95%)', border: 'none' } : { border: '0.5px solid hsl(0, 0%, 80%)' }}
+                />
+                {validate === 2 && (<small style={{ color: 'red' }}>
                 *Please Enter First Name!
-              </small>)}
-              <InputComponent
-                type="text"
-                placeholder="Last Name*"
-                form={formData}
-                setField={setFormData}
-                keyName="lName"
-                errorCheck={setValidate}
-                blocked={isDisabled}
-                css={isDisabled === true ? { backgroundColor: ('hsl(0, 0%, 95%)') } : {}}
-              />
-              {validate === 3 && (<small style={{ color: 'red', marginLeft: '-300px', position: 'relative', top: '60px' }}>
+                </small>)}
+              </div>
+              <div className='alignment'>
+                <InputComponent
+                  type="text"
+                  placeholder="Last Name*"
+                  form={formData}
+                  setField={setFormData}
+                  keyName="lName"
+                  errorCheck={setValidate}
+                  blocked={isDisabled}
+                  css={isDisabled === true ? { backgroundColor: ('hsl(0, 0%, 95%)'), border: 'none' } : { border: '0.5px solid hsl(0, 0%, 80%)' }}
+                />
+                {validate === 3 && (<small style={{ color: 'red' }}>
                 *Please Enter Last Name!
-              </small>)}
+                </small>)}
+              </div>
             </div>
 
             <div className='donation-field'>
-              <InputComponent
-                type="email"
-                placeholder="Email ID*"
-                form={formData}
-                setField={setFormData}
-                keyName="email"
-                errorCheck={setValidate}
-                blocked={isDisabled}
-                css={isDisabled === true ? { backgroundColor: ('hsl(0, 0%, 95%)') } : {}}
-              />
-
-              <InputComponent
-                type="text"
-                placeholder="PAN Number*"
-                form={formData}
-                setField={setFormData}
-                keyName="panNum"
-                errorCheck={setValidate}
-                blocked={isDisabled}
-                css={isDisabled === true ? { backgroundColor: ('hsl(0, 0%, 95%)') } : {}}
-              />
-              {validate === 4 && (<small style={{ color: 'red', marginLeft: '-86rem', width: '100%', position: 'relative', top: '60px' }}>
+              <div className='alignment'>
+                <InputComponent
+                  type="email"
+                  placeholder="Email ID*"
+                  form={formData}
+                  setField={setFormData}
+                  keyName="email"
+                  errorCheck={setValidate}
+                  blocked={isDisabled}
+                  css={isDisabled === true ? { backgroundColor: ('hsl(0, 0%, 95%)'), border: 'none' } : { border: '0.5px solid hsl(0, 0%, 80%)' }}
+                />
+                {validate === 4 && (<small style={{ color: 'red' }}>
                 *Please Enter your email!
-              </small>)}
-              {validate === 5 && (<small style={{ color: 'red', marginLeft: '-450px', width: '100%', position: 'relative', top: '60px' }}>
+                </small>)}
+              </div>
+              <div className='alignment'>
+                <InputComponent
+                  type="text"
+                  placeholder="PAN Number*"
+                  form={formData}
+                  setField={setFormData}
+                  keyName="panNum"
+                  errorCheck={setValidate}
+                  blocked={isDisabled}
+                  css={isDisabled === true ? { backgroundColor: ('hsl(0, 0%, 95%)'), border: 'none' } : { border: '0.5px solid hsl(0, 0%, 80%)' }}
+                />
+                {validate === 5 && (<small style={{ color: 'red' }}>
                 *Please Enter PAN number!
-              </small>)}
+                </small>)}
+              </div>
             </div>
             <div className='donation-field'>
-              <InputComponent
-                type="number"
-                placeholder="Phone*"
-                form={formData}
-                setField={setFormData}
-                keyName="phone"
-                errorCheck={setValidate}
-                blocked={isDisabled}
-                css={isDisabled === true ? { backgroundColor: ('hsl(0, 0%, 95%)') } : {}}
-              />
-
-              <InputComponent
-                type="date"
-                placeholder='Date of birth*'
-                form={formData}
-                onfocus="text.type = Date of birth*"
-                setField={setFormData}
-                keyName="dob"
-                errorCheck={setValidate}
-                blocked={isDisabled}
-                css={isDisabled === true ? { backgroundColor: ('hsl(0, 0%, 95%)') } : {}}
-              />
-              {validate === 6 && (<small style={{ color: 'red', marginLeft: '-86rem', width: '100%', position: 'relative', top: '60px' }}>
+              <div className='alignment'>
+                <InputComponent
+                  type="number"
+                  placeholder="Phone*"
+                  form={formData}
+                  setField={setFormData}
+                  keyName="phone"
+                  errorCheck={setValidate}
+                  blocked={isDisabled}
+                  css={isDisabled === true ? { backgroundColor: ('hsl(0, 0%, 95%)'), border: 'none' } : { border: '0.5px solid hsl(0, 0%, 80%)' }}
+                />
+                {validate === 6 && (<small style={{ color: 'red' }}>
                 *Please Enter Phone Number!
-              </small>)}
+                </small>)}
+              </div>
+
+              <div className='alignment'>
+                <DatePicker
+                  type='number'
+                  className={isDisabled === true ? 'date-of-birth' : 'date-birth'}
+                  placeholderText="Date of Birth*"
+                  selected={selectedDate}
+                  value={selectedDate}
+                  form={formData}
+                  setField={setFormData}
+                  keyName='dob'
+                  dateFormat="dd/MM/yyyy"
+                  onChange={(selectedDate) => {
+                    setSelectedDate(selectedDate)
+                    setFormData({ ...formData, dob: selectedDate.toString() })
+                  }}
+                  disabled={isDisabled}
+                />
+                {validate === 7 && (<small style={{ color: 'red' }}>
+              *Please Enter Date of Birth!
+                </small>)}
+              </div>
             </div>
             <div>
-              <Select
-                styles={isDisabled === true ? { customStyles } : {}}
-                id="country"flas
-                name="country"
-                placeholder='Country'
-                label="country"
-                className='select'
-                form={formData}
-                setField={setFormData}
-                keyName="country"
-                errorCheck={setValidate}
-                options={updatedCountries}
-                value={values.country}
-                onChange={(value) => {
-                  setValues({ country: value, state: null, city: null }, false)
-                  setFormData(prev => { return { ...prev, country: value.name } })
-                }}
-                isDisabled={isDisabled}
-              />
-              {/* {validate === 9 && (<small style={{ color: 'red', marginLeft: '0' }}>
-                *Please Select Country!
-              </small>)} */}
-            </div>
-            {validate === 7 && (<small style={{ color: 'red', marginLeft: '440px', position: 'relative', bottom: '20px' }}>
-              *Please Enter Date of Birth!
-            </small>)}
-          </div>
-          {validate === 8 && (<small style={{ color: 'red', marginLeft: '0' }}>
+              <div className='alignment'>
+                <Select
+                  styles={isDisabled === true ? { customStyles } : {}}
+                  id="country"
+                  name="country"
+                  placeholder='Country'
+                  label="country"
+                  className='select'
+                  form={formData}
+                  setField={setFormData}
+                  keyName="country"
+                  errorCheck={setValidate}
+                  options={updatedCountries}
+                  value={values.country}
+                  onChange={(value) => {
+                    setValues({ country: value, state: null, city: null }, false)
+                    setFormData(prev => { return { ...prev, country: value.name } })
+                  }}
+                  isDisabled={isDisabled}
+                />
+                {validate === 8 && (<small style={{ color: 'red' }}>
             *Please Select Country!
-          </small>)}
-          {validate === 9 && (<small style={{ color: 'red', marginLeft: '0' }}>
-            *Please accept Terms & Conditions!
-          </small>)}
+                </small>)}
+              </div>
+            </div>
+          </div>
           <div className="terms-conditions">
             <div className='terms-conditions-parts'>
               <input
                 type="checkbox"
                 className='input-box'
-                keyName='check1'
-                onChange={() => setValidate({ ...validate, terms: 'yes' })}
+                onChange={(e) => {
+                  setAgree(e.target.checked)
+                }}
               />
               <p>I accept all Terms & Conditions. <a href='https://theyogainstitute.org/terms-and-conditions' className='conditions-underline'>View Terms & Conditions</a></p>
             </div>
@@ -262,13 +308,16 @@ const DonationForm = () => {
               <input
                 type="checkbox"
                 className='input-box'
-                keyName='check2'
-                onChange={() => setValidate({ ...validate, terms: 'yes' })}
+                disabled={isDisabled}
+                onChange={(e)=> setTax(e.target.checked)}
               />
               <p>Do you wish to avail 80G tax exemption</p>
             </div>
-            <button className='donate-button global-common-btn' onClick={donationFormHandler}>Donate</button>
+            {validate === 9 && (<small style={{ color: 'red', marginLeft: '0' }}>
+            *Please agree to Terms & conditions!
+            </small>)}
           </div>
+          <button className='donate-button global-common-btn' onClick={donationFormHandler}>Donate</button>
         </form>
       </div>
     </div>
