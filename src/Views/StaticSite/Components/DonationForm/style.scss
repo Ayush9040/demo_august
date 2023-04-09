@@ -47,7 +47,8 @@
   }
 
   .date-of-birth:focus {
-    border: none;
+    outline: none;
+    box-shadow: none
   }
 
   .picker {
@@ -214,6 +215,27 @@
     border-radius: 50px;
   }
 
+  .css-t3ipsp-control{
+    box-shadow:0 0 0 1px #fff;
+    background-color:  0.5px solid hsl(0deg, 0%, 80%);
+    border-color: grey;
+    padding: 6px;
+    border-radius: 50px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .css-t3ipsp-control:focus{
+    box-shadow:0 0 0 1px #fff;
+    border-color: grey;
+    background-color: hsl(0, 0%, 10%);
+  }
+
+  .css-t3ipsp-control:hover{
+    box-shadow:0 0 0 1px #fff;
+    border-color: grey;
+  }
+
   .Select {
     width: 400px;
   }
@@ -242,6 +264,10 @@
 
   .css-13cymwt-control:focus {
     border-color: none;
+  }
+  
+  .react-datepicker-ignore-onclickoutside{
+    outline: grey;
   }
 
 }
