@@ -1,14 +1,25 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import InnerNavComponent from '../InnerNavComponent'
 import InputComponent from '../InputComponent'
 import Select from 'react-select'
 import { Country } from 'country-state-city'
 import DatePicker from 'react-datepicker'
+import { useNavigate, useParams } from 'react-router'
 import 'react-datepicker/dist/react-datepicker.css'
 import './style.scss'
-import { AnonymousDonation } from './api'
+import { AnonymousDonation, donationPaymentOrder } from './api'
 
 const DonationForm = () => {
+
+  const navigate = useNavigate()
+
+  useEffect(() => {
+    const script = document.createElement('script')
+    script.src = 'https://checkout.razorpay.com/v1/checkout.js'
+    script.async = true
+    document.body.appendChild(script)
+  }, [])
+
 
   const Donate = {
     title: '',
@@ -60,33 +71,139 @@ const DonationForm = () => {
 
   const submitForm = async() => {
     if (isDisabled === false) {
-      await AnonymousDonation({
-        amount: formData.amount,
-        isAnonymous: isDisabled,
-        tnc: agree,
-        tax: tax,
-        firstName: formData.fName,
-        lastName: formData.lName,
-        email: formData.email,
-        pan: formData.panNum,
-        phoneNumber: formData.phone,
-        DOB: formData.dob,
-        icountry: formData.country,
-        currency: values.country.currency !== 'INR' ? 'USD' : 'INR'
-      }  
-      )
-    } else {
-      await AnonymousDonation(
+      const { data } =  await AnonymousDonation(
         {
           amount: formData.amount,
           isAnonymous: isDisabled,
           tnc: agree,
           tax: tax,
+          firstName: formData.fName,
+          lastName: formData.lName,
+          email: formData.email,
+          pan: formData.panNum,
+          phoneNumber: formData.phone,
+          DOB: formData.dob,
+          icountry: formData.country,
+          currency: values.country.currency !== 'INR' ? 'USD' : 'INR'
+        }  
+      )
+      const paymentOrderResponse = await donationPaymentOrder(data.data._id, {
+        amount: formData.amount,
+        donationFormId: data.data._id,
+        currency: values.country.currency !== 'INR' ? 'USD' : 'INR',
+        notes : {
+          description: 'DONATION TRANSACTION',
+          donationFormId: data.data._id
+        }
+      })
+      if (!paymentOrderResponse?.data?.amount && !paymentOrderResponse?.data?.id)
+        return 0
+  
+      const options = {
+        key: 'rzp_test_udmmUPuH3rTJe8', // Enter the Key ID generated from the Dashboard
+        amount: paymentOrderResponse.data.amount, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+        currency: 'INR',
+        name: 'The Yoga Institute',
+        description: 'Donation Transaction',
+        order_id: paymentOrderResponse.data.id, // eslint-disable-line
+        handler: async(res) => {
+          // Navigate to Success if razorpay_payment_id, razorpay_order_id, razorpay_signature is there
+          res.razorpay_payment_id &&
+            res.razorpay_order_id &&
+            res.razorpay_signature
+        },
+        prefill: {
+          firstName: formData.fName,
+          lastName: formData.lName,
+          email: formData.email,
+          pan: formData.panNum,
+          phoneNumber: formData.phone,
+          DOB: formData.dob,
+          icountry: formData.country
+        },
+        notes: {
+          // description: plan,
+          formData: data.data._id,
+          firstName: formData.fName,
+          lastName: formData.lName,
+          email: formData.email,
+          pan: formData.panNum,
+          phoneNumber: formData.phone,
+          DOB: formData.dob,
+          icountry: formData.country
+        },
+        theme: {
+          color: '#3399cc', // enter theme color for our website
+        },
+      }
+      console.log(paymentOrderResponse,'helotjiogery]iug')
+      const rzp = new window.Razorpay(options)
+      rzp.open()
+    } else{
+      const { data } = await AnonymousDonation(
+        {
+          amount: formData.amount,
+          isAnonymous: isDisabled,
+          tnc: agree,
+          tax: false,
           currency: currency
         }
       )
+      const paymentOrderResponse = await donationPaymentOrder(data.data._id, {
+        amount: formData.amount,
+        donationFormId: data.data._id,
+        notes : {
+          description: 'DONATION TRANSACTION',
+          donationFormId: data.data._id
+        }
+      })
+      if (!paymentOrderResponse?.data?.amount && !paymentOrderResponse?.data?.id)
+        return 0
+  
+      const options = {
+        key: 'rzp_test_udmmUPuH3rTJe8', // Enter the Key ID generated from the Dashboard
+        amount: paymentOrderResponse.data.amount, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+        currency: 'INR',
+        name: 'The Yoga Institute',
+        description: 'Donation Transaction',
+        order_id: paymentOrderResponse.data.id, // eslint-disable-line
+        handler: async(res) => {
+          // Navigate to Success if razorpay_payment_id, razorpay_order_id, razorpay_signature is there
+          res.razorpay_payment_id &&
+            res.razorpay_order_id &&
+            res.razorpay_signature
+        },
+        prefill: {
+          firstName: formData.fName,
+          lastName: formData.lName,
+          email: formData.email,
+          pan: formData.panNum,
+          phoneNumber: formData.phone,
+          DOB: formData.dob,
+          icountry: formData.country
+        },
+        notes: {
+          // description: plan,
+          formData: data.data._id,
+          firstName: formData.fName,
+          lastName: formData.lName,
+          email: formData.email,
+          pan: formData.panNum,
+          phoneNumber: formData.phone,
+          DOB: formData.dob,
+          icountry: formData.country
+        },
+        theme: {
+          color: '#3399cc', // enter theme color for our website
+        },
+      }
+      console.log(paymentOrderResponse,'helotjiogery]iug')
+      const rzp = new window.Razorpay(options)
+      rzp.open()
     }
+ 
   }
+
 
   const donationFormHandler = (e) => {
     console.log(formData)
@@ -115,13 +232,13 @@ const DonationForm = () => {
   }
 
   const handleClick = () => {
-    console.log(values.country)
     if (isDisabled === false) {
       setIsDisabled(true)
       setFormData({ ...formData, fName: '', lName: '', email: '', panNum: '', phone: '', dob: '', country: '' })
       setValues({ ...values, country: null })
       setSelectedDate(null)
     } else {
+      setTax(tax.checked === false)
       setIsDisabled(false)
     }
   }
@@ -308,6 +425,7 @@ const DonationForm = () => {
               <input
                 type="checkbox"
                 className='input-box'
+                checked={isDisabled === false ? tax === true : ''}
                 disabled={isDisabled}
                 onChange={(e)=> setTax(e.target.checked)}
               />

@@ -218,7 +218,7 @@
   .css-t3ipsp-control{
     box-shadow:0 0 0 1px #fff;
     background-color:  0.5px solid hsl(0deg, 0%, 80%);
-    border-color: grey;
+    border-color: hsl(0, 0%, 80%)grey;
     padding: 6px;
     border-radius: 50px;
     width: 100%;
@@ -227,8 +227,8 @@
 
   .css-t3ipsp-control:focus{
     box-shadow:0 0 0 1px #fff;
-    border-color: grey;
-    background-color: hsl(0, 0%, 10%);
+    border-color: hsl(0, 0%, 80%);
+    // background-color: hsl(0, 0%, 10%);
   }
 
   .css-t3ipsp-control:hover{
