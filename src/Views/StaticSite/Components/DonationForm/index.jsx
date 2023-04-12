@@ -121,7 +121,7 @@ const DonationForm = () => {
               data: {
                 name: formData.fName + ' ' + formData.lName
               },
-              receivers: [formData.email,'info@yogainstitute.org'],
+              receivers: [formData.email,'info@theyogainstitute.org'],
             })
             navigate('/donation')
           }

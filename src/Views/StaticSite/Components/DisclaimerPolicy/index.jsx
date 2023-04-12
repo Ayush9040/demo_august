@@ -146,7 +146,7 @@ const DisclaimerPolicy = ({
         data:{
           name: formData.name
         },
-        receivers: [formData.email,'info@yogainstitute.org']
+        receivers: [formData.email,'info@theyogainstitute.org']
       }
  
       try{

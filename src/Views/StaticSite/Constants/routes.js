@@ -3,8 +3,9 @@ import MaladPage from '../Components/LocateUs/malad'
 import IBYcourse from '../Views/IBY'
 import KidsCamp from '../Views/KidsCamps'
 import NutriDietClinic from '../Views/LandingPage/NutriDietClinic/AboutClinic'
-import DonationForm from '../Components/DonationForm'
-import DonationThankYou from '../Components/Thank'
+// import DonationForm from '../Components/DonationForm'
+const DonationForm = lazy(()=>import('../Components/DonationForm'))
+const DonationThankYou = lazy (()=> import('../Components/Thank'))
 const Home = lazy(() => import('../Views/Home'))
 const TermsCondition = lazy(() => import('../Components/TermsandCondition'))
 const PrivacyPolicy = lazy(() => import('../Components/PrivacyPolicy'))
