@@ -44,7 +44,7 @@ const DonationForm = () => {
   const [isDisabled, setIsDisabled] = useState(false)
   const [selectedDate, setSelectedDate] = useState(null)
   const [values, setValues] = useState([])
-  const [currency, setCurrency] = useState('INR')
+  const [currency, setCurrency] = useState('INR')  // eslint-disable-line
   const [agree, setAgree] = useState(false)
   const [tax, setTax] = useState(false)
   const countries = Country.getAllCountries()
