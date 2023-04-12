@@ -4,6 +4,7 @@ import IBYcourse from '../Views/IBY'
 import KidsCamp from '../Views/KidsCamps'
 import NutriDietClinic from '../Views/LandingPage/NutriDietClinic/AboutClinic'
 import DonationForm from '../Components/DonationForm'
+import DonationThankYou from '../Components/Thank'
 const Home = lazy(() => import('../Views/Home'))
 const TermsCondition = lazy(() => import('../Components/TermsandCondition'))
 const PrivacyPolicy = lazy(() => import('../Components/PrivacyPolicy'))
@@ -437,6 +438,14 @@ const staticSiteRoutes = [
     name: 'EnrollmentThankyou',
   },
   {
+    Component: DonationThankYou,
+    path: '/donation',
+    exact: true,
+    id: 'statisSiteUnderDonation',
+    routePath: '/donation',
+    name: 'DonationThankYou',
+  },
+  {
     Component: SatsangThankyou,
     path: '/satsang_thankyou',
     exact: true,
@@ -823,9 +832,9 @@ const staticSiteRoutes = [
   },
   {
     Component:DonationForm,
-    path:'/donate-form',
+    path:'/donation-form',
     id:'staticDonateForm',
-    routePath:'/donate-form',
+    routePath:'/donation-form',
   },
 ]
 

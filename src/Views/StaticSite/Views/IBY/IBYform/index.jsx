@@ -88,7 +88,7 @@ const IBYform = ({ setOpenForm }) => {
             },
             receivers: [formData.email,'info@yogainstitute.org'],
           })
-          navigate('/enrollment_thankyou')
+          navigate(`/enrollment_thankyou/${'IBY-course'}`)
         }
       },
       prefill: {

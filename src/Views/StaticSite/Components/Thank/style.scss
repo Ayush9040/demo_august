@@ -1,0 +1,124 @@
+.donation-thankyou{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5rem;
+}
+.donation-border{
+  position: absolute;
+  border: 1px solid black;
+  width: 80vw;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 5rem;
+  margin: 0 auto;
+}
+.donation-icon{
+  position: relative;
+  font-size: 24px;
+  bottom: 5rem;
+  left: 0.5rem;
+  z-index: -999;
+}
+
+.donation-close{
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  display: block;
+  font-size: 3.5rem;
+  margin-left: auto;
+  margin-right: 2%;
+  cursor: pointer;
+}
+.browse-more{
+  width: max-content;
+    border: 3px solid black;
+    padding: 1rem 2rem;
+    border-radius: 5rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 2rem;
+    cursor: pointer;
+    margin-left: 0.5rem;
+  }
+
+.donation-heading{
+  font-size: 80px;
+  color: #EA4335;
+  font-weight: bold;
+  position: relative;
+  bottom: 5rem;
+  z-index: -999;
+}
+
+.donation-paragraph{
+  color: #737272;
+  font-weight: 700;
+  position: relative;
+  bottom: 5rem;
+  z-index: -999;
+}
+
+@media screen and (max-width: 525px) {
+  .donation-close{
+  font-size: 3.5rem;
+  position: relative;
+  bottom: 20rem;
+  margin-left: auto;
+  margin-right: 5%;
+  cursor: pointer;
+  }
+
+  .donation-heading{
+      font-size: 36px;
+      color: #EA4335;
+      font-weight: bold;
+      position: relative;
+      bottom: 5rem;
+      z-index: -999;
+  }
+  
+  .donation-paragraph{
+      color: #737272;
+      font-weight: 700;
+      position: relative;
+      bottom: 5rem;
+      z-index: -999;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .donation-border{
+      border: 1px solid black;
+      width: 80vw;
+      height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      border-radius: 5rem;
+      margin: auto;
+  }
+  .donation-heading{
+      font-size: 36px;
+      color: #EA4335;
+      font-weight: bold;
+      position: relative;
+      bottom: 5rem;
+      z-index: -999;
+  }
+  
+  .donation-paragraph{
+      color: #737272;
+      font-weight: 700;
+      position: relative;
+      bottom: 5rem;
+      z-index: -999;
+  }
+}

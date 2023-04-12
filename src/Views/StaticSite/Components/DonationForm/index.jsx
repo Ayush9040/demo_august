@@ -4,10 +4,11 @@ import InputComponent from '../InputComponent'
 import Select from 'react-select'
 import { Country } from 'country-state-city'
 import DatePicker from 'react-datepicker'
-import { useNavigate, useParams } from 'react-router'
+import { useNavigate } from 'react-router'
 import 'react-datepicker/dist/react-datepicker.css'
 import './style.scss'
-import { AnonymousDonation, donationPaymentOrder } from './api'
+import { AnonymousDonation, donationPaymentOrder, successMail } from './api'
+
 
 const DonationForm = () => {
 
@@ -100,7 +101,7 @@ const DonationForm = () => {
         return 0
   
       const options = {
-        key: 'rzp_test_udmmUPuH3rTJe8', // Enter the Key ID generated from the Dashboard
+        key: 'rzp_live_KyhtrIyJ546bd2', // Enter the Key ID generated from the Dashboard
         amount: paymentOrderResponse.data.amount, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
         currency: 'INR',
         name: 'The Yoga Institute',
@@ -108,9 +109,22 @@ const DonationForm = () => {
         order_id: paymentOrderResponse.data.id, // eslint-disable-line
         handler: async(res) => {
           // Navigate to Success if razorpay_payment_id, razorpay_order_id, razorpay_signature is there
-          res.razorpay_payment_id &&
-            res.razorpay_order_id &&
-            res.razorpay_signature
+          if (
+            res.razorpay_payment_id &&
+          res.razorpay_order_id &&
+          res.razorpay_signature
+          ){
+            await successMail({
+              type: 'INFO_TYI',
+              HTMLTemplate: 'DONATION_FORM_CONFIRMATION_MAIL',
+              subject: 'Donation',
+              data: {
+                name: formData.fName + ' ' + formData.lName
+              },
+              receivers: [formData.email,'info@yogainstitute.org'],
+            })
+            navigate('/donation')
+          }
         },
         prefill: {
           firstName: formData.fName,
@@ -122,7 +136,6 @@ const DonationForm = () => {
           icountry: formData.country
         },
         notes: {
-          // description: plan,
           formData: data.data._id,
           firstName: formData.fName,
           lastName: formData.lName,
@@ -136,7 +149,6 @@ const DonationForm = () => {
           color: '#3399cc', // enter theme color for our website
         },
       }
-      console.log(paymentOrderResponse,'helotjiogery]iug')
       const rzp = new window.Razorpay(options)
       rzp.open()
     } else{
@@ -161,7 +173,7 @@ const DonationForm = () => {
         return 0
   
       const options = {
-        key: 'rzp_test_udmmUPuH3rTJe8', // Enter the Key ID generated from the Dashboard
+        key: 'rzp_live_KyhtrIyJ546bd2', // Enter the Key ID generated from the Dashboard
         amount: paymentOrderResponse.data.amount, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
         currency: 'INR',
         name: 'The Yoga Institute',
@@ -169,29 +181,12 @@ const DonationForm = () => {
         order_id: paymentOrderResponse.data.id, // eslint-disable-line
         handler: async(res) => {
           // Navigate to Success if razorpay_payment_id, razorpay_order_id, razorpay_signature is there
-          res.razorpay_payment_id &&
+          if (          res.razorpay_payment_id &&
             res.razorpay_order_id &&
-            res.razorpay_signature
-        },
-        prefill: {
-          firstName: formData.fName,
-          lastName: formData.lName,
-          email: formData.email,
-          pan: formData.panNum,
-          phoneNumber: formData.phone,
-          DOB: formData.dob,
-          icountry: formData.country
-        },
-        notes: {
-          // description: plan,
-          formData: data.data._id,
-          firstName: formData.fName,
-          lastName: formData.lName,
-          email: formData.email,
-          pan: formData.panNum,
-          phoneNumber: formData.phone,
-          DOB: formData.dob,
-          icountry: formData.country
+            res.razorpay_signature){
+            navigate('/donation')
+          }
+
         },
         theme: {
           color: '#3399cc', // enter theme color for our website
@@ -201,7 +196,6 @@ const DonationForm = () => {
       const rzp = new window.Razorpay(options)
       rzp.open()
     }
- 
   }
 
 
