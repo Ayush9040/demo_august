@@ -17,7 +17,7 @@ const MegaMenu = ({ setNav }) => {
     { name: 'FACILITIES', link: '/facilities', id: 3, key: 'FACILITIES' },
     { name: 'MUSEUM', link: '/museum-of-classical-yoga', id: 4, key: 'MUSEUM' },
     { name: 'BLOGS', link:'/blogs',id:'14',key:'BLOGS' },
-    { name: 'DONATE', link: '', id: 5, key: 'DONATION' },
+    { name: 'DONATE', link: '/donation-form', id: 5, key: 'DONATION' },
     // { name: 'GIFTING', link: '', id: 6, key: 'GIFTING' },
     { name: 'NISPAND', link: 'https://nispand.com/', id: 7, key: 'NISPAND' },
     // { name: 'TYI ONLINE', link: '', id: 8, key: 'ONLINE' },
@@ -155,7 +155,7 @@ const MegaMenu = ({ setNav }) => {
           {navItems &&
             navItems.map((item, i) => {
            
-              if((item.key==='DONATION'||item.key==='GIFTING'||item.key==='ONLINE')){
+              if((item.key==='GIFTING'||item.key==='ONLINE')){
                 return(
                  
                   <div
