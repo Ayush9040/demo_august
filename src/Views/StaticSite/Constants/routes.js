@@ -3,6 +3,8 @@ import MaladPage from '../Components/LocateUs/malad'
 import IBYcourse from '../Views/IBY'
 import KidsCamp from '../Views/KidsCamps'
 import NutriDietClinic from '../Views/LandingPage/NutriDietClinic/AboutClinic'
+import DonationForm from '../Components/DonationForm'
+import DonationThankYou from '../Components/Thank'
 const Home = lazy(() => import('../Views/Home'))
 const TermsCondition = lazy(() => import('../Components/TermsandCondition'))
 const PrivacyPolicy = lazy(() => import('../Components/PrivacyPolicy'))
@@ -93,7 +95,6 @@ const NutriDiet = lazy(()=>import('../Views/NutriDiet'))
 const LandingPage = lazy( ()=>import('../Views/LandingPage'))
 const LandingPageNew = lazy( ()=>import('../Views/LandingPage/21Days/index'))
 const SevenDays = lazy( ()=>import('../Views/LandingPage/SevenDays/AboutCamp/index'))
-
 
 const staticSiteRoutes = [
   //Home
@@ -435,6 +436,14 @@ const staticSiteRoutes = [
     id: 'statisSiteUnderEnrollmentThankyou',
     routePath: '/enrollment_thankyou/:courseName',
     name: 'EnrollmentThankyou',
+  },
+  {
+    Component: DonationThankYou,
+    path: '/donation',
+    exact: true,
+    id: 'statisSiteUnderDonation',
+    routePath: '/donation',
+    name: 'DonationThankYou',
   },
   {
     Component: SatsangThankyou,
@@ -820,6 +829,12 @@ const staticSiteRoutes = [
     id:'staticIYBcourse',
     routePath:'/kids-camps',
     name:'KidsCamp'
+  },
+  {
+    Component:DonationForm,
+    path:'/donation-form',
+    id:'staticDonateForm',
+    routePath:'/donation-form',
   },
 ]
 

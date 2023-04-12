@@ -34,6 +34,7 @@ const InputComponent = ({
               return false
             }}}
             disabled={blocked}
+            autocomplete="off"
           />
         </label>
       </form>
