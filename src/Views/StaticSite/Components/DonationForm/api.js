@@ -11,6 +11,6 @@ export const donationPaymentOrder = (id, payload) => {
 }
 
 export const successMail = (mail)=>{
-  return axios.post(`${authBaseDomain}ali/mail`, mail)
+  return axios.post(`${authBaseDomain}/ali/mail`, mail)
 }
 
