@@ -330,7 +330,7 @@ const DonationForm = () => {
                   setField={setFormData}
                   keyName="panNum"
                   errorCheck={setValidate}
-                  blocked={isDisabled}
+                  blocked={formData?.country !== 'India' ? true: isDisabled}
                   css={isDisabled === true ? { backgroundColor: ('hsl(0, 0%, 95%)'), border: 'none' } : { border: '0.5px solid hsl(0, 0%, 80%)' }}
                 />
                 {validate === 5 && (<small style={{ color: 'red' }}>
