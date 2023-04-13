@@ -200,7 +200,6 @@ const DonationForm = () => {
 
 
   const donationFormHandler = (e) => {
-    console.log(formData)
     e.preventDefault()
     if (formData.amount === '' || formData.amount < 1) {
       return setValidate(1)
@@ -227,6 +226,7 @@ const DonationForm = () => {
 
   const handleClick = () => {
     if (isDisabled === false) {
+      setValidate(0)
       setIsDisabled(true)
       setFormData({ ...formData, fName: '', lName: '', email: '', panNum: '', phone: '', dob: '', country: '' })
       setValues({ ...values, country: null })
@@ -236,6 +236,7 @@ const DonationForm = () => {
       setIsDisabled(false)
     }
   }
+
 
   return (
     <div className='donation-container'>
@@ -330,8 +331,8 @@ const DonationForm = () => {
                   setField={setFormData}
                   keyName="panNum"
                   errorCheck={setValidate}
-                  blocked={formData?.country !== 'India' ? true: isDisabled}
-                  css={isDisabled === true ? { backgroundColor: ('hsl(0, 0%, 95%)'), border: 'none' } : { border: '0.5px solid hsl(0, 0%, 80%)' }}
+                  blocked={ formData?.country ==='India' && true ? formData?.country === '' && false :  true  }
+                  css={isDisabled === true || formData?.country !=='India'? { backgroundColor: ('hsl(0, 0%, 95%)'), border: 'none' } : { border: '0.5px solid hsl(0, 0%, 80%)' }}
                 />
                 {validate === 5 && (<small style={{ color: 'red' }}>
                 *Please Enter PAN number!

@@ -65,7 +65,7 @@
   }
 
   .donation-toggle-paragraph {
-    margin: 20px 40px 0 40px;
+    margin: 25px 40px 0 40px;
     font-size: 2rem;
     font-weight: 600;
   }
@@ -146,9 +146,9 @@
   .slider {
     position: absolute;
     cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
+    top: 10px;
+    left: 10px;
+    right: -10px;
     bottom: 0;
     background-color: #ccc;
     -webkit-transition: .4s;
@@ -158,9 +158,9 @@
   .slider:before {
     position: absolute;
     content: "";
-    height: 26px;
-    width: 26px;
-    left: 4px;
+    height: 16px;
+    width: 15px;
+    left: 8px;
     bottom: 4px;
     background-color: white;
     -webkit-transition: .4s;
@@ -353,7 +353,7 @@
       }
 
       .donation-toggle-paragraph {
-        margin: 20px 0px 0 -50px !important;
+        margin: 25px 0px 0 -50px !important;
         font-size: 2rem;
       }
 
@@ -389,7 +389,7 @@
       }
 
       .donation-toggle-paragraph {
-        margin: 20px 0px 0 -50px !important;
+        margin: 10px 0px 0 -50px !important;
         font-size: 2rem;
       }
 
@@ -421,6 +421,10 @@
 
       .donation-amount-align {
         width: 40% !important;
+      }
+
+      .donation-toggle-paragraph{
+        margin: 30px 0px 0 -50px !important;
       }
 
       .terms-conditions-parts {
@@ -534,7 +538,7 @@
         border: none;
         background-color: hsl(0, 0%, 95%);
         border-radius: 50px;
-        width: 300px;
+        width: 400px;
         margin: 0 auto;
       }
 
@@ -626,6 +630,10 @@
 
       .css-t3ipsp-control {
         padding: 0px;
+      }
+
+      .css-3iigni-container{
+        width: 300px;
       }
 
       .css-13cymwt-control {
