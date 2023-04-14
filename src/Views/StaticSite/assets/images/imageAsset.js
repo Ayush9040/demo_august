@@ -21,38 +21,38 @@ export const certificates = {
 }
 
 export const socialInitiativeNew = {
-  socialNew1: '/Home/Social%20Initiatives/new11/SocialAnnamBhrama.jpg',
+  socialNew1: '/home_page/ShriYogendraj.webp',
   socialNew2: '/Home/Social%20Initiatives/new11/SocialPolice.jpg',
   socialNew3: '/SocialResponsibility/cover_image.jpg',
 }
 
 export const homeAssets = {
-  homeAsset1: '/Home/Legacy/Madhavdasji.jpg',
+  homeAsset1: '/home_page/Madhavdasji.webp',
   homeAsset2: '/Home/Legacy/ShriYogendraj.jpg',
-  homeAsset3: '/Home/Legacy/Sitadevi.jpg',
-  homeAsset4: '/Home/Legacy/Jayadeva.jpg',
-  homeAsset5: '/Home/Legacy/Hansaji.jpg',
-  homeAsset6: '/Home/Legacy/Hrishi .jpg',
-  homeAsset7: '/Home/Offerings/7dayscamp.jpg',
+  homeAsset3: '/home_page/Sitadevi.webp',
+  homeAsset4: '/home_page/Jayadeva.webp',
+  homeAsset5: '/home_page/Hansaji.webp',
+  homeAsset6: '/home_page/Hrishi.webp',
+  homeAsset7: '/home_page/7dayscamp_copy.webp',
   homeAsset8: '/Home/Offerings/21days.jpg',
   homeAsset9: '/Home/Offerings/200hrsTTC.jpg',
-  homeAsset10: '/Home/Offerings/Childrencamp.jpg',
+  homeAsset10: '/home_page/Childrencam_%20copy.webp',
   homeAsset11: '/Home/Offerings/900hrs.jpg',
-  homeAsset12: '/Home/Highlights/marinedrive.jpg',
-  homeAsset13: '/Home/Highlights/couple.jpg',
-  homeAsset14: '/Home/Highlights/fullmoon.jpg',
+  homeAsset12: '/home_page/marinedrive.webp',
+  homeAsset13: '/home_page/couple_copy.webp',
+  homeAsset14: '/home_page/fullmoon.webp',
   homeAsset15: '/Home/Highlights/homeSession.jpg',
-  homeAsset16: '/Home/Highlights/satvam.jpg',
-  homeAsset17: '/Home/Highlights/corporate.jpg',
-  homeAsset18: '/Home/Highlights/cooking.jpg',
+  homeAsset16: '/home_page/satvam.webp',
+  homeAsset17: '/home_page/corporate_copy.webp',
+  homeAsset18: '/home_page/cooking_copy.webp',
   homeAsset19: '/Home/Social Initiatives/SocialAnnamBhrama.jpg',
   homeAsset20: '/Home/Social Initiatives/SocialPolice.jpg',
   homeAsset21: '/Home/Social Initiatives/SocialBMCSchools.jpg',
   homeAsset22: '/Home/Nispand/google-play-logo-10628.png',
   homeAsset23: '/Home/Nispand/AppStore.png',
-  homeAsset24: '/Home/Nispand/nispandApp.png',
+  homeAsset24: '/home_page/nispandApp.webp',
   homeAsset25: '/Home/Nispand/nispand-icon.png',
-  homeAsset26: '/Home/Highlights/Web_site_banner.jpg',
+  homeAsset26: '/home_page/Web_site_banner.webp',
   homeAsset27: '/',
   homeAsset28: '/',
   homeAsset29: '/',
@@ -86,10 +86,10 @@ export const homeAssets = {
 
   // experience
 
-  homeAsset55: '/Home/Experience/shriramnathkovid.jpg',
-  homeAsset56: '/Home/Experience/Modiji.jpg',
+  homeAsset55: '/home_page/shriramnathkovid.webp',
+  homeAsset56: '/home_page/Modiji.webp',
   homeAsset57: '/Home/Experience/Naiduji.jpg',
-  homeAsset58: '/Home/Experience/AmitabhBachchan.jpg',
+  homeAsset58: '/home_page/AmitabhBachchan_copy.webp',
 
   // blogs
 
@@ -118,9 +118,9 @@ export const homeAssets = {
 
   // videos
 
-  homeAsset64: '/vedio/v1copy1.webp',
-  homeAsset65: '/Home/Videos/v2.jpg',
-  homeAsset66: '/Home/Videos/v3.jpg',
+  homeAsset64: '/home_page/v1.webp',
+  homeAsset65: '/home_page/v2.webp',
+  homeAsset66: '/home_page/v3.webp',
 
   // newsletter
   homeAsset67: '/Home/NewsLetter/Yogasattva-jan.jpg',
@@ -291,7 +291,7 @@ export const courseAssets = {
   courseAsset109: '/Courses/Class/new11/anand-sadhna-online-on-campus.JPG',
   courseAsset110:
     '/Courses/Class/new11/weekend-asana-classes-%28men-women%29%20-%20common.jpg',
-  courseAsset115:'/Home/Offerings/Regular_asana_class.jpg',  
+  courseAsset115:'/home_page/Regular_asana_class.webp',  
 }
 
 export const facilitiyAssets = {
@@ -924,8 +924,8 @@ export const publicationAssests = {
   //2023 
 
   ythAssets92:'/Publications/Yogsattava/PreviousIssues/2023/Yogasattva-Jan-2023.jpg',
-  ythAssets93:'/Publications/Yogsattava/PreviousIssues/2023/Yogasattva-Feb-2023.jpg',
-  ythAssets94:'/Publications/Yogsattava/PreviousIssues/2023/Yogasattva-Mar-2023.jpg',
+  ythAssets93:'/home_page/Yogasattva-Feb-2023.webp',
+  ythAssets94:'/home_page/Yogasattva-Mar-2023.webp',
   ythAssets97:'/Publications/Yogsattava/PreviousIssues/2023/Yogasattva-April2023.jpg',
   //Library
   libraryAsset: '/Publications/Library/hero.jpg',
@@ -1293,7 +1293,7 @@ export const volunteerAssets = {
 
 export const factAssets = {
   // 1916-1936
-  factAsset1: '/Home/Facts/1916-1936/1916.jpg',
+  factAsset1: '/home_page/1916_copy.webp',
   factAsset2: '/Home/Facts/1916-1936/1918.jpg',
   factAsset3: '/Home/Facts/1916-1936/1920.jpg',
   factAsset4: '/Home/Facts/1916-1936/1921.jpg',
@@ -1411,14 +1411,14 @@ export const factAssets = {
   //updated facts image
 
   //1916-1936
-  factAsset100: '/Home/Facts/new/1916-1936/( 3)-1x1.jpg',
-  factAsset101: '/Home/Facts/new/1916-1936/(1 )1918_versova-4x3.jpg',
+  factAsset100: '/home_page/(3)-1x1copy.webp',
+  factAsset101: '/home_page/1918_versova-4x3copy.webp',
   factAsset102:
     '/Home/Facts/new/1916-1936/(4 )1916_shri-madhavdasji_founder-4x3.jpg',
-  factAsset103: '/Home/Facts/new/1916-1936/1920_harriman-usa-16x9.jpg',
+  factAsset103: '/home_page/1920_harriman-usa-16x9_copy.webp',
   factAsset104:
-    '/Home/Facts/new/1916-1936/1924_surendranath-das-gupta-16x9.jpg',
-  factAsset105: '/Home/Facts/new/1916-1936/1928_yoga-hygiene-1x1.jpg',
+    '/home_page/1924_surendranath-das-gupta-16x9_copy.webp',
+  factAsset105: '/home_page/1928_yoga-hygiene-1x1_copy.webp',
 
   //1936-1956
 
