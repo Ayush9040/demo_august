@@ -8,6 +8,7 @@ import { useNavigate } from 'react-router'
 import 'react-datepicker/dist/react-datepicker.css'
 import './style.scss'
 import { AnonymousDonation, donationPaymentOrder, successMail } from './api'
+import Loader from '../Loader'
 
 
 const DonationForm = () => {
@@ -47,6 +48,7 @@ const DonationForm = () => {
   const [currency, setCurrency] = useState('INR')  // eslint-disable-line
   const [agree, setAgree] = useState(false)
   const [tax, setTax] = useState(false)
+  const [loading, setLoading] = useState(false)
   const countries = Country.getAllCountries()
 
   const updatedCountries = countries.map((country) => ({
@@ -72,129 +74,155 @@ const DonationForm = () => {
 
   const submitForm = async() => {
     if (isDisabled === false) {
-      const { data } =  await AnonymousDonation(
-        {
+      setLoading(true)
+      try {
+        const { data } =  await AnonymousDonation(
+          {
+            amount: formData.amount,
+            isAnonymous: isDisabled,
+            tnc: agree,
+            tax: tax,
+            firstName: formData.fName,
+            lastName: formData.lName,
+            email: formData.email,
+            pan: formData.panNum,
+            phoneNumber: formData.phone,
+            DOB: formData.dob,
+            icountry: formData.country,
+            currency: values.country.currency !== 'INR' ? 'USD' : 'INR'
+          }  
+        )
+        const paymentOrderResponse = await donationPaymentOrder(data.data._id, {
           amount: formData.amount,
-          isAnonymous: isDisabled,
-          tnc: agree,
-          tax: tax,
-          firstName: formData.fName,
-          lastName: formData.lName,
-          email: formData.email,
-          pan: formData.panNum,
-          phoneNumber: formData.phone,
-          DOB: formData.dob,
-          icountry: formData.country,
-          currency: values.country.currency !== 'INR' ? 'USD' : 'INR'
-        }  
-      )
-      const paymentOrderResponse = await donationPaymentOrder(data.data._id, {
-        amount: formData.amount,
-        donationFormId: data.data._id,
-        currency: values.country.currency !== 'INR' ? 'USD' : 'INR',
-        notes : {
-          description: 'DONATION TRANSACTION',
-          donationFormId: data.data._id
-        }
-      })
-      if (!paymentOrderResponse?.data?.amount && !paymentOrderResponse?.data?.id)
-        return 0
-  
-      const options = {
-        key: 'rzp_live_KyhtrIyJ546bd2', // Enter the Key ID generated from the Dashboard
-        amount: paymentOrderResponse.data.amount, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
-        currency: 'INR',
-        name: 'The Yoga Institute',
-        description: 'Donation Transaction',
-        order_id: paymentOrderResponse.data.id, // eslint-disable-line
-        handler: async(res) => {
-          // Navigate to Success if razorpay_payment_id, razorpay_order_id, razorpay_signature is there
-          if (
-            res.razorpay_payment_id &&
-          res.razorpay_order_id &&
-          res.razorpay_signature
-          ){
-            await successMail({
-              type: 'INFO_TYI',
-              HTMLTemplate: 'DONATION_FORM_CONFIRMATION_MAIL',
-              subject: 'Donation',
-              data: {
-                name: formData.fName + ' ' + formData.lName
-              },
-              receivers: [formData.email,'info@theyogainstitute.org'],
-            })
-            navigate('/donation')
+          donationFormId: data.data._id,
+          currency: values.country.currency !== 'INR' ? 'USD' : 'INR',
+          notes : {
+            description: 'DONATION TRANSACTION',
+            donationFormId: data.data._id
           }
-        },
-        prefill: {
-          firstName: formData.fName,
-          lastName: formData.lName,
-          email: formData.email,
-          pan: formData.panNum,
-          phoneNumber: formData.phone,
-          DOB: formData.dob,
-          icountry: formData.country
-        },
-        notes: {
-          formData: data.data._id,
-          firstName: formData.fName,
-          lastName: formData.lName,
-          email: formData.email,
-          pan: formData.panNum,
-          phoneNumber: formData.phone,
-          DOB: formData.dob,
-          icountry: formData.country
-        },
-        theme: {
-          color: '#3399cc', // enter theme color for our website
-        },
-      }
-      const rzp = new window.Razorpay(options)
-      rzp.open()
-    } else{
-      const { data } = await AnonymousDonation(
-        {
-          amount: formData.amount,
-          isAnonymous: isDisabled,
-          tnc: agree,
-          tax: false,
-          currency: currency
-        }
-      )
-      const paymentOrderResponse = await donationPaymentOrder(data.data._id, {
-        amount: formData.amount,
-        donationFormId: data.data._id,
-        notes : {
-          description: 'DONATION TRANSACTION',
-          donationFormId: data.data._id
-        }
-      })
-      if (!paymentOrderResponse?.data?.amount && !paymentOrderResponse?.data?.id)
-        return 0
-  
-      const options = {
-        key: 'rzp_live_KyhtrIyJ546bd2', // Enter the Key ID generated from the Dashboard
-        amount: paymentOrderResponse.data.amount, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
-        currency: 'INR',
-        name: 'The Yoga Institute',
-        description: 'Donation Transaction',
-        order_id: paymentOrderResponse.data.id, // eslint-disable-line
-        handler: async(res) => {
-          // Navigate to Success if razorpay_payment_id, razorpay_order_id, razorpay_signature is there
-          if (          res.razorpay_payment_id &&
+        })
+        if (!paymentOrderResponse?.data?.amount && !paymentOrderResponse?.data?.id)
+          return 0
+    
+        const options = {
+          key: 'rzp_live_KyhtrIyJ546bd2', // Enter the Key ID generated from the Dashboard
+          amount: paymentOrderResponse.data.amount, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+          currency: 'INR',
+          name: 'The Yoga Institute',
+          description: 'Donation Transaction',
+          order_id: paymentOrderResponse.data.id, // eslint-disable-line
+          handler: async(res) => {
+            // Navigate to Success if razorpay_payment_id, razorpay_order_id, razorpay_signature is there
+            if (
+              res.razorpay_payment_id &&
             res.razorpay_order_id &&
-            res.razorpay_signature){
-            navigate('/donation')
-          }
-
-        },
-        theme: {
-          color: '#3399cc', // enter theme color for our website
-        },
+            res.razorpay_signature
+            ){
+              await successMail({
+                type: 'INFO_TYI',
+                HTMLTemplate: 'DONATION_FORM_CONFIRMATION_MAIL',
+                subject: 'Donation',
+                data: {
+                  name: formData.fName + ' ' + formData.lName
+                },
+                receivers: [formData.email,'info@theyogainstitute.org'],
+              })
+              navigate('/donation')
+            }
+          },
+          prefill: {
+            firstName: formData.fName,
+            lastName: formData.lName,
+            email: formData.email,
+            pan: formData.panNum,
+            phoneNumber: formData.phone,
+            DOB: formData.dob,
+            icountry: formData.country
+          },
+          notes: {
+            formData: data.data._id,
+            firstName: formData.fName,
+            lastName: formData.lName,
+            email: formData.email,
+            pan: formData.panNum,
+            phoneNumber: formData.phone,
+            DOB: formData.dob,
+            icountry: formData.country
+          },
+          theme: {
+            color: '#3399cc', // enter theme color for our website
+          },
+        }
+        setLoading(false)
+        const rzp = new window.Razorpay(options)
+        rzp.open()
+      } catch (error) {
+        console.log(error,'error')
+        setLoading(false)
       }
-      console.log(paymentOrderResponse,'helotjiogery]iug')
-      const rzp = new window.Razorpay(options)
-      rzp.open()
+
+    } else{
+      setLoading(true)
+      try {
+        const { data } = await AnonymousDonation(
+          {
+            amount: formData.amount,
+            isAnonymous: isDisabled,
+            tnc: agree,
+            tax: false,
+            currency: currency
+          }
+        )
+        const paymentOrderResponse = await donationPaymentOrder(data.data._id, {
+          amount: formData.amount,
+          donationFormId: data.data._id,
+          notes : {
+            description: 'DONATION TRANSACTION',
+            donationFormId: data.data._id
+          }
+        })
+        if (!paymentOrderResponse?.data?.amount && !paymentOrderResponse?.data?.id)
+          return 0
+    
+        const options = {
+          key: 'rzp_live_KyhtrIyJ546bd2', // Enter the Key ID generated from the Dashboard
+          amount: paymentOrderResponse.data.amount, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+          currency: 'INR',
+          name: 'The Yoga Institute',
+          description: 'Donation Transaction',
+          order_id: paymentOrderResponse.data.id, // eslint-disable-line
+          handler: async(res) => {
+            // Navigate to Success if razorpay_payment_id, razorpay_order_id, razorpay_signature is there
+            if (          res.razorpay_payment_id &&
+              res.razorpay_order_id &&
+              res.razorpay_signature){
+              navigate('/donation')
+            }
+  
+          },
+          theme: {
+            color: '#3399cc', // enter theme color for our website
+          },
+        }
+        setLoading(false)
+        const rzp = new window.Razorpay(options)
+        rzp.open()
+      
+      } catch (error) {
+        console.log(error, 'error')
+        setLoading(false)
+      }
+    }
+  }
+
+  const checkCountry = () =>{
+    if(formData.country === 'India' && isDisabled === false) {
+      if (formData.panNum === '' && isDisabled === false) {
+        return setValidate(5)
+        
+      } else{
+        setValidate(0)
+      }
     }
   }
 
@@ -209,8 +237,8 @@ const DonationForm = () => {
       return setValidate(3)
     } else if (formData.email === '' && isDisabled === false) {
       return setValidate(4)
-    } else if (formData.panNum === '' && isDisabled === false) {
-      return setValidate(5)
+    } else if (checkCountry()) {
+      return setValidate(0)
     } else if (formData.phone === '' && isDisabled === false) {
       return setValidate(6)
     } else if (formData.dob === '' && isDisabled === false) {
@@ -221,6 +249,7 @@ const DonationForm = () => {
       return setValidate(9)
     } else {
       submitForm()
+      setLoading(true)
     }
   }
 
@@ -324,39 +353,6 @@ const DonationForm = () => {
                 </small>)}
               </div>
               <div className='alignment'>
-                <InputComponent
-                  type="text"
-                  placeholder="PAN Number*"
-                  form={formData}
-                  setField={setFormData}
-                  keyName="panNum"
-                  errorCheck={setValidate}
-                  blocked={formData?.country === '' || formData?.country ==='India' ? isDisabled :  true  }
-                  css={isDisabled || formData?.country !=='India' && formData?.country !== ''? { backgroundColor: ('hsl(0, 0%, 95%)'), border: 'none' } : { border: '0.5px solid hsl(0, 0%, 80%)' }}
-                />
-                {validate === 5 && (<small style={{ color: 'red' }}>
-                *Please Enter PAN number!
-                </small>)}
-              </div>
-            </div>
-            <div className='donation-field'>
-              <div className='alignment'>
-                <InputComponent
-                  type="number"
-                  placeholder="Phone*"
-                  form={formData}
-                  setField={setFormData}
-                  keyName="phone"
-                  errorCheck={setValidate}
-                  blocked={isDisabled}
-                  css={isDisabled === true ? { backgroundColor: ('hsl(0, 0%, 95%)'), border: 'none' } : { border: '0.5px solid hsl(0, 0%, 80%)' }}
-                />
-                {validate === 6 && (<small style={{ color: 'red' }}>
-                *Please Enter Phone Number!
-                </small>)}
-              </div>
-
-              <div className='alignment'>
                 <DatePicker
                   type='number'
                   className={isDisabled === true ? 'date-of-birth' : 'date-birth'}
@@ -378,32 +374,66 @@ const DonationForm = () => {
                 </small>)}
               </div>
             </div>
-            <div>
+            <div className='donation-field'>
               <div className='alignment'>
-                <Select
-                  styles={isDisabled === true ? { customStyles } : {}}
-                  id="country"
-                  name="country"
-                  placeholder='Country'
-                  label="country"
-                  className='select'
+                <InputComponent
+                  type="number"
+                  placeholder="Phone*"
                   form={formData}
                   setField={setFormData}
-                  keyName="country"
+                  keyName="phone"
                   errorCheck={setValidate}
-                  options={updatedCountries}
-                  value={values.country}
-                  onChange={(value) => {
-                    setValues({ country: value, state: null, city: null }, false)
-                    setFormData(prev => { return { ...prev, country: value.name } })
-                  }}
-                  isDisabled={isDisabled}
+                  blocked={isDisabled}
+                  css={isDisabled === true ? { backgroundColor: ('hsl(0, 0%, 95%)'), border: 'none' } : { border: '0.5px solid hsl(0, 0%, 80%)' }}
                 />
-                {validate === 8 && (<small style={{ color: 'red' }}>
+                {validate === 6 && (<small style={{ color: 'red' }}>
+                *Please Enter Phone Number!
+                </small>)}
+              </div>
+
+              <div>
+                <div className='alignment'>
+                  <Select
+                    styles={isDisabled === true ? { customStyles } : {}}
+                    id="country"
+                    name="country"
+                    placeholder='Country'
+                    label="country"
+                    className='select'
+                    form={formData}
+                    setField={setFormData}
+                    keyName="country"
+                    errorCheck={setValidate}
+                    options={updatedCountries}
+                    value={values.country}
+                    onChange={(value) => {
+                      setValues({ country: value, state: null, city: null }, false)
+                      setFormData(prev => { return { ...prev, country: value.name } })
+                    }}
+                    isDisabled={isDisabled}
+                  />
+                  {validate === 8 && (<small style={{ color: 'red' }}>
             *Please Select Country!
+                  </small>)}
+                </div>
+              </div>
+              <div className='alignment'>
+                <InputComponent
+                  type="text"
+                  placeholder="PAN Number*"
+                  form={formData}
+                  setField={setFormData}
+                  keyName="panNum"
+                  errorCheck={setValidate}
+                  blocked={formData?.country === '' || formData?.country ==='India' ? isDisabled :  true  }
+                  css={isDisabled || formData?.country !=='India' && formData?.country !== ''? { backgroundColor: ('hsl(0, 0%, 95%)'), border: 'none' } : { border: '0.5px solid hsl(0, 0%, 80%)' }}
+                />
+                {validate === 5 && (<small style={{ color: 'red' }}>
+                *Please Enter PAN number!
                 </small>)}
               </div>
             </div>
+           
           </div>
           <div className="terms-conditions">
             <div className='terms-conditions-parts'>
@@ -430,7 +460,9 @@ const DonationForm = () => {
             *Please agree to Terms & conditions!
             </small>)}
           </div>
-          <button className='donate-button global-common-btn' onClick={donationFormHandler}>Donate</button>
+          <button className='donate-button global-common-btn' onClick={donationFormHandler}>
+            {loading ? <Loader/> : 'Donate' }
+          </button>
         </form>
       </div>
     </div>

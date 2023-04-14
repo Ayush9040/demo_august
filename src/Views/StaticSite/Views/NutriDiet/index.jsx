@@ -9,6 +9,12 @@ import CommonBtn from '../../Components/commonbtn'
 import SelectDropDown from '../../Components/Select Dropdown'
 import { useState } from 'react'
 import SubcriptionForm from './Subscription'
+import RelatedBlogs from '../Courses/Views/RelatedBlogs'
+import RelatedCourse from '../Courses/Views/Component'
+import axios from 'axios'
+import { cmsBaseDomain } from '../../../../Constants/appSettings'
+import { AllCourses } from '../Courses/Constants/courses'
+
 
 const NutriDiet = () => {
   useEffect(() => {
@@ -20,6 +26,9 @@ const NutriDiet = () => {
   const [ price,setPrice ] = useState()
   const [ err,setErr ] = useState(false)
   const [ openForm,setOpenForm ] = useState(false)
+  const [ cardData,setCardData ] = useState([])
+  const [ blogData,setBlogData ] = useState([])
+  const [ metaData,setMetaData ] = useState([])  //eslint-disable-line
 
   const highlight = {
     title: 'Career',
@@ -81,7 +90,74 @@ const NutriDiet = () => {
     }
   }
 
+  const getBlogsData = async(posts)=>{
+    const arr=[]
+    for await (let item of posts){
+      try{
+        const { data } = await axios.get(`${ cmsBaseDomain }/misc/slug/${ item }`)
+        arr.push(data.data)
+      }catch(err){
+        console.log(err)
+      }
+    }
+    return arr
+  }
 
+  const parsingAlgo = async()=>{
+    try {
+      const res = await axios.get(
+        `${ cmsBaseDomain }/seometatags/?pagePath=${'nutri-diet'}`
+      )
+      let data = res.data.data.meta
+      console.log(data,'data')
+      setCardData( res.data.data.relatedCourses.map( item=>{
+        return AllCourses.find(el=>el.key===item)
+      } ) )
+
+      setBlogData(await getBlogsData(res.data.data.relatedPosts))
+
+      let headers = {
+        title: '',
+        links: [],
+        metaData: [],
+        script: '',
+      }
+      data = data.replace(/\\n/g, '')
+      data = data.split('\n')
+      data.forEach((el) => {
+        if (el.includes('<meta') || el.includes('<link')) {
+          let obj = {}
+          let regExp = /(\S+)="[^"]*/g
+          let regexMatches = el.match(regExp)
+
+          regexMatches.map((el) => {
+            let partition = el.split('="')
+            obj[partition[0]] = partition[1].replace(/"/g, '')
+          })
+
+          if (el.includes('<meta')) headers.metaData.push(obj)
+          if (el.includes('<link')) headers.links.push(obj)
+        } else if (el.includes('<title'))
+          headers.title = el.replace('<title>', '').replace('</title>', '')
+        else if (el.includes('<script')) headers.script = el
+      })
+
+      // setTitleTag(headers.title.trim())
+      setMetaData(headers.metaData)
+    } catch (err) {
+      setBlogData([])
+      setCardData([])
+      console.log(err)
+    }
+    console.log(cardData,'card')
+    console.log(blogData,'blog')
+    console.log(AllCourses,'all')
+  }
+
+  useEffect(()=>{
+    parsingAlgo()
+    scrollTo(0,0)
+  },[])
   const options = ['1 month','3 months','6 months','Single Visit']
 
   return (
@@ -190,6 +266,20 @@ const NutriDiet = () => {
         </div>
       </div>
       { openForm && <SubcriptionForm packageName={ plan } packagePrice={ price }  closeForm={ setOpenForm } />}
+
+      { cardData && cardData.length>0 && <RelatedCourse
+        title={'Related Courses'}
+        description={' lorem ipsum '}
+        cardData={ cardData }
+        url={'/courses'}
+      />}
+
+      { blogData && blogData.length>0 && <RelatedBlogs
+        title={'Related Blogs'}
+        description={' lorem ipsum '}
+        cardData={ blogData }
+        url={'/blogs'}
+      />}
     </>
   )
 }
