@@ -118,7 +118,7 @@ export const homeAssets = {
 
   // videos
 
-  homeAsset64: '/Home/Videos/v1.jpg',
+  homeAsset64: '/vedio/v1copy1.webp',
   homeAsset65: '/Home/Videos/v2.jpg',
   homeAsset66: '/Home/Videos/v3.jpg',
 

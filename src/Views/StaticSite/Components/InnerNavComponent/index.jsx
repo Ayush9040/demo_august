@@ -31,7 +31,7 @@ const InnerNavComponent = ({ abc }) => {
   const { isLoggedIn } = useSelector((state) => state.auth)
   const [nav, setNav] = useState(false)
   const [dropdown,setDropdown]=useState(false)
-  const [bold, setBold] = useState(0)
+  const [bold, setBold] = useState(0)  // eslint-disable-line
   const [ cartItems,setCartItems ] = useState(0)
   const location = useLocation()
   const dispatch = useDispatch()
@@ -58,7 +58,7 @@ const InnerNavComponent = ({ abc }) => {
     }
   }, [ cart ] )
 
-  console.log(bold,'bold')
+  // console.log(bold,'bold')
   return (
     <>
       <div className="inner-nav-container">

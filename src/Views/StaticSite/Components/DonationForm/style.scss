@@ -1,5 +1,6 @@
 .donation-container {
   overflow: hidden;
+
   .donation-form {
     text-align: center;
     margin-top: 5rem;
@@ -64,7 +65,7 @@
   }
 
   .donation-toggle-paragraph {
-    margin: 20px 40px 0 40px;
+    margin: 25px 40px 0 40px;
     font-size: 2rem;
     font-weight: 600;
   }
@@ -132,7 +133,7 @@
     position: relative;
     display: inline-block;
     width: 60px;
-    height: 34px;
+    height: 30px;
     margin-top: 20px;
   }
 
@@ -145,9 +146,9 @@
   .slider {
     position: absolute;
     cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
+    top: 10px;
+    left: 10px;
+    right: -16px;
     bottom: 0;
     background-color: #ccc;
     -webkit-transition: .4s;
@@ -157,9 +158,9 @@
   .slider:before {
     position: absolute;
     content: "";
-    height: 26px;
-    width: 26px;
-    left: 4px;
+    height: 16px;
+    width: 15px;
+    left: 13px;
     bottom: 4px;
     background-color: white;
     -webkit-transition: .4s;
@@ -167,11 +168,11 @@
   }
 
   input:checked+.slider {
-    background-color: #2196F3;
+    background-color:  hsl(0, 0%, 80%)grey;
   }
 
   input:focus+.slider {
-    box-shadow: 0 0 1px #2196F3;
+    box-shadow: 0 0 1px  hsl(0, 0%, 80%)grey;
   }
 
   input:checked+.slider:before {
@@ -187,6 +188,10 @@
 
   .slider.round:before {
     border-radius: 50%;
+    padding: 6px;
+    background-color: white;
+    border: 3px solid #CC4625;
+    margin: -10px;
   }
 
   .donation-amount-align {
@@ -216,9 +221,9 @@
     border-radius: 50px;
   }
 
-  .css-t3ipsp-control{
-    box-shadow:0 0 0 1px #fff;
-    background-color:  0.5px solid hsl(0deg, 0%, 80%);
+  .css-t3ipsp-control {
+    box-shadow: 0 0 0 1px #fff;
+    background-color: 0.5px solid hsl(0deg, 0%, 80%);
     border-color: hsl(0, 0%, 80%)grey;
     padding: 6px;
     border-radius: 50px;
@@ -226,14 +231,14 @@
     margin: 0 auto;
   }
 
-  .css-t3ipsp-control:focus{
-    box-shadow:0 0 0 1px #fff;
+  .css-t3ipsp-control:focus {
+    box-shadow: 0 0 0 1px #fff;
     border-color: hsl(0, 0%, 80%);
     // background-color: hsl(0, 0%, 10%);
   }
 
-  .css-t3ipsp-control:hover{
-    box-shadow:0 0 0 1px #fff;
+  .css-t3ipsp-control:hover {
+    box-shadow: 0 0 0 1px #fff;
     border-color: grey;
   }
 
@@ -266,12 +271,12 @@
   .css-13cymwt-control:focus {
     border-color: none;
   }
-  
-  .react-datepicker-ignore-onclickoutside{
+
+  .react-datepicker-ignore-onclickoutside {
     outline: grey;
   }
 
-  .react-datepicker__month-container{
+  .react-datepicker__month-container {
     font-size: 12px;
   }
 
@@ -302,7 +307,7 @@
       position: relative;
       display: inline-block;
       width: 90px !important;
-      height: 34px !important;
+      height: 30px !important;
       margin-top: 20px;
     }
 
@@ -320,12 +325,14 @@
     .terms-conditions-parts {
       width: 50% !important;
     }
-    .css-13cymwt-control{
+
+    .css-13cymwt-control {
       width: 400px;
-      padding: 4px!important;
+      padding: 4px !important;
       margin: 0 auto;
     }
-    .css-t3ipsp-control{
+
+    .css-t3ipsp-control {
       padding: 4px;
     }
   }
@@ -345,20 +352,22 @@
         position: relative;
         display: inline-block;
         width: 60px !important;
-        height: 34px !important;
+        height: 30px !important;
         margin-top: 20px;
       }
 
       .donation-toggle-paragraph {
-        margin: 20px 0px 0 -50px !important;
+        margin: 25px 0px 0 -50px !important;
         font-size: 2rem;
       }
-      .css-13cymwt-control{
+
+      .css-13cymwt-control {
         width: 400px;
-        padding: 0px!important;
+        padding: 0px !important;
         margin: 0 auto;
       }
-      .css-t3ipsp-control{
+
+      .css-t3ipsp-control {
         padding: 0px;
       }
     }
@@ -379,24 +388,26 @@
         position: relative;
         display: inline-block;
         width: 60px !important;
-        height: 34px !important;
+        height: 30px !important;
         margin-top: 20px;
       }
 
       .donation-toggle-paragraph {
-        margin: 20px 0px 0 -50px !important;
+        // margin: 10px 0px 0 -50px !important;
         font-size: 2rem;
       }
 
       .donation-amount-align {
         width: 60%;
       }
-      .css-13cymwt-control{
+
+      .css-13cymwt-control {
         width: 400px;
-        padding: 0px!important;
+        padding: 0px !important;
         margin: 0 auto;
       }
-      .css-t3ipsp-control{
+
+      .css-t3ipsp-control {
         padding: 0px;
       }
     }
@@ -416,6 +427,10 @@
         width: 40% !important;
       }
 
+      .donation-toggle-paragraph{
+        margin: 30px 0px 0 -50px !important;
+      }
+
       .terms-conditions-parts {
         width: 70% !important;
         display: flex;
@@ -423,12 +438,14 @@
         margin: 0 200px;
         justify-content: flex-start;
       }
-      .css-13cymwt-control{
+
+      .css-13cymwt-control {
         width: 400px;
-        padding: 0px!important;
+        padding: 0px !important;
         margin: 0 auto;
       }
-      .css-t3ipsp-control{
+
+      .css-t3ipsp-control {
         padding: 0px;
       }
     }
@@ -444,12 +461,14 @@
         margin: 0 120px;
         justify-content: flex-start;
       }
-      .css-13cymwt-control{
+
+      .css-13cymwt-control {
         width: 400px;
-        padding: 0px!important;
+        padding: 0px !important;
         margin: 0 auto;
       }
-      .css-t3ipsp-control{
+
+      .css-t3ipsp-control {
         padding: 0px;
       }
     }
@@ -490,16 +509,17 @@
         width: 25% !important;
       }
 
-      .react-datepicker__month-container{
+      .react-datepicker__month-container {
         font-size: 12px;
       }
 
-       .css-13cymwt-control{
+      .css-13cymwt-control {
         width: 400px;
-        padding: 0px!important;
+        padding: 0px !important;
         margin: 0 auto;
       }
-      .css-t3ipsp-control{
+
+      .css-t3ipsp-control {
         padding: 0px;
       }
     }
@@ -514,6 +534,83 @@
         margin: 0 auto;
         justify-content: center;
       }
+
+      .date-of-birth {
+        font-size: 1.8rem;
+        padding: 1rem 2rem;
+        text-align: center;
+        border: none;
+        background-color: hsl(0, 0%, 95%);
+        border-radius: 50px;
+        width: 400px;
+        margin: 0 auto;
+      }
+
+      .date-birth {
+        font-size: 1.8rem;
+        padding: 1rem 2rem;
+        text-align: center;
+        border: 0.5px solid hsl(0, 0%, 80%);
+        border-radius: 50px;
+        width: 400px;
+        margin: 0 auto;
+      }
+
+      .css-t3ipsp-control {
+        padding: 0px;
+      }
+
+      .css-13cymwt-control {
+        width: 400px;
+        padding: 0px !important;
+        margin: 0 auto;
+      }
+
+      .css-1fdsijx-ValueContainer {
+        font-size: 1.8rem;
+        width: 300px;
+      }
+
+      // .css-b62m3t-container{
+      //   width: 300px;
+      // }
+
+      .css-b62m3t-container {
+        width: 400px;
+      }
+
+      .global-common-btn {
+        width: 30% !important;
+      }
+
+      .input-box {
+        width: 50px;
+      }
+
+      .react-datepicker__month-container {
+        font-size: 12px;
+      }
+    }
+  }
+
+  @media (max-width: 420px) {
+    .donation-container {
+      .terms-conditions {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+      }
+
+      .terms-conditions-parts {
+        width: 66% !important;
+        display: flex;
+        align-items: center;
+        margin: 0 auto;
+        justify-content: center;
+      }
+
       .date-of-birth {
         font-size: 1.8rem;
         padding: 1rem 2rem;
@@ -524,7 +621,7 @@
         width: 300px;
         margin: 0 auto;
       }
-    
+
       .date-birth {
         font-size: 1.8rem;
         padding: 1rem 2rem;
@@ -535,20 +632,27 @@
         margin: 0 auto;
       }
 
-      .css-t3ipsp-control{
+      .css-t3ipsp-control {
         padding: 0px;
       }
 
-      .css-13cymwt-control{
+      .css-3iigni-container{
         width: 300px;
-        padding: 0px!important;
+      }
+
+      .css-13cymwt-control {
+        width: 300px;
+        padding: 0px !important;
         margin: 0 auto;
       }
+
       .css-1fdsijx-ValueContainer {
         font-size: 1.8rem;
         width: 300px;
       }
-      .css-b62m3t-container{
+
+
+      .css-b62m3t-container {
         width: 300px;
       }
 
@@ -560,7 +664,7 @@
         width: 50px;
       }
 
-      .react-datepicker__month-container{
+      .react-datepicker__month-container {
         font-size: 12px;
       }
     }
