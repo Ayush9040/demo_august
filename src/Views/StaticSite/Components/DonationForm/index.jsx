@@ -218,11 +218,9 @@ const DonationForm = () => {
   const checkCountry = () =>{
     if(formData.country === 'India' && isDisabled === false) {
       if (formData.panNum === '' && isDisabled === false) {
-        return setValidate(5)
-        
-      } else{
-        setValidate(0)
-      }
+        console.log('first')
+        return true
+      } 
     }
   }
 
@@ -237,8 +235,9 @@ const DonationForm = () => {
       return setValidate(3)
     } else if (formData.email === '' && isDisabled === false) {
       return setValidate(4)
-    } else if (checkCountry()) {
-      return setValidate(0)
+    } else if (checkCountry() === true) {
+      console.log('object')
+      return setValidate(5)
     } else if (formData.phone === '' && isDisabled === false) {
       return setValidate(6)
     } else if (formData.dob === '' && isDisabled === false) {
@@ -417,6 +416,9 @@ const DonationForm = () => {
                   </small>)}
                 </div>
               </div>
+              
+            </div>
+            <div>
               <div className='alignment'>
                 <InputComponent
                   type="text"
@@ -433,7 +435,6 @@ const DonationForm = () => {
                 </small>)}
               </div>
             </div>
-           
           </div>
           <div className="terms-conditions">
             <div className='terms-conditions-parts'>
