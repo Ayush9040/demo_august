@@ -4,6 +4,7 @@ import baseDomain,{ CSR } from '../../assets/images/imageAsset'
 import CommonBanner from '../Common-banner'
 import './style.scss'
 import CsrBlock from './data'
+import CsrOut from './outsideData'
 import { Link } from 'react-router-dom'
 import InnerNavComponent from '../InnerNavComponent'
 
@@ -30,7 +31,7 @@ const CorporateSocialResponsibilty = () => {
       >
         <InnerNavComponent abc={ CSRPage } />
       </CommonBanner>
-      <div className="csr-main-section">
+      {/* <div className="csr-main-section">
         <div className="main-top-section">
           Our Objective
           <div className="bottom-line"></div>
@@ -64,9 +65,9 @@ const CorporateSocialResponsibilty = () => {
           </p>
           <p>Please get in touch with us so we can help you meet your goals.</p>
         </div>
-      </div>
+      </div> */}
       <div className="last-container">
-        {CsrBlock.map((support) => {
+        {CsrOut.map((support) => {
           return (
             <>
               <div className="content-container-section">
@@ -83,7 +84,7 @@ const CorporateSocialResponsibilty = () => {
                       <button>Support Us</button>
                     </div>
                   </div>
-                  <div className="description">{support.description[0]}</div>
+                  <div className="description">{support.description}</div>
                   <div className="last-btn">
                     <Link to={`/csr/${support.id}`} >
                       <span className="btn-div">

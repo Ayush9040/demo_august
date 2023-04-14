@@ -1,23 +1,25 @@
 import baseDomain, { studentExperienceAssests } from '../../assets/images/imageAsset'
 
 export const data=[
+
+  // {  
+  //   id:8,
+  //   alluminiImg:`${baseDomain}${studentExperienceAssests.dishaVakhani}`,
+  //   name:'Disha Vakani',
+  //   alt:'Disha Vakani',
+  //   post:'Film actress',
+  //   info:'The Yoga Institute has a very positive vibe to it. I came to this institution seeking relief from stress and anxiety. The ambience of this place is very homely and inviting. The Yoga teachers, staff, hostel facility, a Sattvic kitchen and volunteers are of great help. It was a great opportunity to meet Smt. Hansaji and get guidance about Yoga in daily life. A sublime human being with so much wisdom; I am in awe of this place and her teachings. Smt Hansaji taught me how to get satisfaction from work as well as balance enjoyment of domestic life. I feel blessed to be associated with an institute that is almost a hundred years old. ',
+  //   img:[
+  //     `${baseDomain}${studentExperienceAssests.dishaVakhani}`,
+  //     `${baseDomain}${studentExperienceAssests.dishaVakhani}`,
+  //     `${baseDomain}${studentExperienceAssests.dishaVakhani}`,
+  //     `${baseDomain}${studentExperienceAssests.dishaVakhani}`,
+  //     `${baseDomain}${studentExperienceAssests.dishaVakhani}`,
+  //   ]
+  // },
+  
   {
     id:0,
-    alluminiImg:`${baseDomain}${studentExperienceAssests.Rohan}`,
-    name:'Rohan Singh',
-    post:'Student from 7 months TTC',
-    alt:'Rohan Singh',
-    info:'My life has completely changed ever since I have been associated with The Yoga Institute. I have started to be more present, more mindful in all my tasks and relationships. The pace of my life has slowed down; I can appreciate the little things and the small details of life. My many thanks to Hansama and the Institute.',
-    img:[
-      `${baseDomain}${studentExperienceAssests.Rohan}`,
-      `${baseDomain}${studentExperienceAssests.Rohan}`,
-      `${baseDomain}${studentExperienceAssests.Rohan}`,
-      `${baseDomain}${studentExperienceAssests.Rohan}`,
-      `${baseDomain}${studentExperienceAssests.Rohan}`,
-    ]
-  },
-  {
-    id:1,
     alluminiImg:`${baseDomain}${studentExperienceAssests.Tamara}`,
     name:'Tamara Bućma Kecman',
     alt :'Tamara Bućma Kecman',
@@ -59,6 +61,21 @@ export const data=[
       `${baseDomain}${studentExperienceAssests.Sankshita}`,
       `${baseDomain}${studentExperienceAssests.Sankshita}`,
       `${baseDomain}${studentExperienceAssests.Sankshita}`,
+    ]
+  },
+  {
+    id:1,
+    alluminiImg:`${baseDomain}${studentExperienceAssests.Rohan}`,
+    name:'Rohan Singh',
+    post:'Student from 7 months TTC',
+    alt:'Rohan Singh',
+    info:'My life has completely changed ever since I have been associated with The Yoga Institute. I have started to be more present, more mindful in all my tasks and relationships. The pace of my life has slowed down; I can appreciate the little things and the small details of life. My many thanks to Hansama and the Institute.',
+    img:[
+      `${baseDomain}${studentExperienceAssests.Rohan}`,
+      `${baseDomain}${studentExperienceAssests.Rohan}`,
+      `${baseDomain}${studentExperienceAssests.Rohan}`,
+      `${baseDomain}${studentExperienceAssests.Rohan}`,
+      `${baseDomain}${studentExperienceAssests.Rohan}`,
     ]
   },
   // {
