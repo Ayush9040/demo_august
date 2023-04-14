@@ -331,8 +331,8 @@ const DonationForm = () => {
                   setField={setFormData}
                   keyName="panNum"
                   errorCheck={setValidate}
-                  blocked={ formData?.country ==='India' && true ? formData?.country === '' && false :  true  }
-                  css={isDisabled === true || formData?.country !=='India'? { backgroundColor: ('hsl(0, 0%, 95%)'), border: 'none' } : { border: '0.5px solid hsl(0, 0%, 80%)' }}
+                  blocked={formData?.country === '' || formData?.country ==='India' ? isDisabled :  true  }
+                  css={isDisabled || formData?.country !=='India' && formData?.country !== ''? { backgroundColor: ('hsl(0, 0%, 95%)'), border: 'none' } : { border: '0.5px solid hsl(0, 0%, 80%)' }}
                 />
                 {validate === 5 && (<small style={{ color: 'red' }}>
                 *Please Enter PAN number!
