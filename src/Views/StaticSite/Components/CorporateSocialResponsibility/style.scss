@@ -42,11 +42,15 @@
 
       .image-container {
         width: 40%;
-        padding: 0 2rem;
+        padding: 0 2.5rem;
         img {
           width: 100%;
-          border-radius: 30px;
+          border-radius: 0px 150px 0px 150px;
+          
         }
+      }
+      .orderOne{
+        order:1
       }
       .description-content {
         width: 60%;

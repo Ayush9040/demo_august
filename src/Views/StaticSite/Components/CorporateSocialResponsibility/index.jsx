@@ -67,11 +67,11 @@ const CorporateSocialResponsibilty = () => {
         </div>
       </div> */}
       <div className="last-container">
-        {CsrOut.map((support) => {
+        {CsrOut.map((support,i) => {
           return (
             <>
-              <div className="content-container-section">
-                <div className="image-container">
+              <div className="content-container-section" style={ i % 2 ===0 ? { flexDirection:'row-reverse' } : { } }>
+                <div className="image-container " >
                   <img src={support.image} alt={support.title}/>
                 </div>
                 <div className="description-content">
@@ -80,9 +80,9 @@ const CorporateSocialResponsibilty = () => {
                       <h1>{support.title}</h1>
                       <div className="bottom-line"></div>
                     </div>
-                    <div className="header-btn">
+                    {/* <div className="header-btn">
                       <button>Support Us</button>
-                    </div>
+                    </div> */}
                   </div>
                   <div className="description">{support.description}</div>
                   <div className="last-btn">
