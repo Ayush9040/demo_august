@@ -31,7 +31,7 @@ const ttc200hr = {
       offlineFee: { residentialFee: 55000, nonResidentialFee: 30000 },
     },
     category: 'ttc',
-    title: '200 hrs TTC - 1 Month TTC Online & On Campus - English - Batch 1 ',
+    title: '200-Hour Yoga Teacher Training - 1 Month TTC Online & On Campus - English - Batch 1 ',
     dates: [
       '1st Feb to 28th Feb 2023',
       '1st Mar to 31st Mar 2023',
@@ -56,14 +56,14 @@ const ttc200hr = {
         content: {
           title: '',
           text: [
-            'With over 1,00,000 successfully certified students, the 200 Hours Teacher Training Course at The Yoga Institute covers the nuances of Traditional Yoga. This includes an introduction to the study of principal Yoga Asanas, Pranayamas, Meditation, Kriyas, Patanjali’s Yoga Sutra, and Hatha Yoga Pradipika. Further, complete immersion into practical experiences of the concept studies, public speaking, the methodology of teaching, etc. are covered. Strategically designed by the founder Shri Yogendraji, Smt. Sita Devi Yogendra, Dr. Jayadeva Yogendra, and Dr. Hansaji J Yogendra, the course serves as a valuable‘ life school’ to those seeking balance and fulfilment in life.',
+            'With over 1,00,000 successfully certified students, the 200 Hour Yoga Teacher Training Course at The Yoga Institute covers the nuances of Traditional Yoga. This includes an introduction to the study of principal Yoga Asanas, Pranayamas, Meditation, Kriyas, Patanjali’s Yoga Sutra, and Hatha Yoga Pradipika. Further, complete immersion into practical experiences of the concept studies, public speaking, the methodology of teaching, etc. are covered. Strategically designed by the founder Shri Yogendraji, Smt. Sita Devi Yogendra, Dr. Jayadeva Yogendra, and Dr. Hansaji J Yogendra, the one month yoga course serves as a valuable‘ life school’ to those seeking balance and fulfilment in life.',
           ],
         },
       },
       {
         type: 'u-list',
         content: {
-          title: 'Benefits of 200 Hours Teacher Training Course',
+          title: 'Benefits of 200 Hour Yoga Teacher Training Course',
           points: [
             {
               listItem:
@@ -83,7 +83,7 @@ const ttc200hr = {
         content: {
           title: 'Course',
           text: [
-            '200 hrs TTC  Batch 1 - 1 Month TTC Online & On Campus - English',
+            '200 hrs Yoga TTC  Batch 1 - 1 Month TTC Online & On Campus - English',
           ],
         },
       },
@@ -121,11 +121,18 @@ const ttc200hr = {
         type: 'paragraph',
         content: {
           title: 'Prerequisites',
-          text: ['None'],
+          text: ['None', '200 Hour Yoga Teacher Training'],
         },
       },
     ],
     curriculum: [
+      {
+        type: 'paragraph',
+        content: {
+          title: '200 Hour Yoga Teacher Training Curriculum',
+          text: [],
+        },
+      },
       {
         type: 'u-list',
         content: {
@@ -187,10 +194,10 @@ const ttc200hr = {
               subItems: [],
             },
             {
-              listItem: 'Asanas',
+              listItem: 'Yoga Asanas',
               subItems: [
                 'Knowledge of selected postures and demonstrated ability to perform these postures – meditative and cultural (dynamic and static versions).',
-                'Selected psychophysical and conceptual techniques pioneered by The Yoga Institute.',
+                'Selected psychophysical and conceptual Yoga techniques pioneered by The Yoga Institute.',
               ],
             },
             {
@@ -200,7 +207,7 @@ const ttc200hr = {
               ],
             },
             {
-              listItem: 'Practices leading to Meditation',
+              listItem: 'Practices leading to Yoga Meditation',
               subItems: [],
             },
             {
@@ -223,7 +230,7 @@ const ttc200hr = {
       {
         type: 'url',
         content: {
-          text: 'Access the detailed curriculum here:',
+          text: 'Access the detailed One Month Yoga Teacher Training Course here:',
           url: 'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/courses_pdf/200hr.pdf',
         },
       },
@@ -373,7 +380,7 @@ const ttc200hr = {
             ' ',
           points: [
             {
-              listItem: 'Students will be eligible to appear for the Final certification exams only if they have completed all the required course submissions, class work and the required attendance',
+              listItem: 'Yoga Students will be eligible to appear for the Final certification exams only if they have completed all the required course submissions, class work and the required attendance',
               subItems: [],
             },
             {
@@ -448,7 +455,7 @@ const ttc200hr = {
             },
             {
               listItem:
-                'Our expert trainers for the course, over 40 in number, have mastered the yogic way of life and are proficient in passing on their learnings in a simple and practical way. Armed with decades of experience, they offer tremendous value and insight to new learners.',
+                ' Our Yoga expert trainers for the 200 Hour Yoga Teacher Training course, over 40 in number, have mastered the yogic way of life and are proficient in passing on their learnings in a simple and practical way. Armed with decades of experience, they offer tremendous value and insight to new learners.',
               subItems: [],
             },
             {
@@ -504,7 +511,7 @@ const ttc200hr = {
       offlineFee: { residentialFee: 80000, nonResidentialFee: 30000 },
     },
     category: 'ttc',
-    title: '200 hrs TTC - 2 Months TTC Online and On Campus-English-Batch 2',
+    title: '200 Hours Yoga Teacher Training Course - 2 Months TTC Online and On Campus-English-Batch 2',
     dates: [
       '20th Feb to 14th Apr 2023',
       '17th Apr to 9th Jun 2023',
@@ -524,14 +531,14 @@ const ttc200hr = {
         content: {
           title: '',
           text: [
-            'With over 1,00,000 successfully certified students, the 200 Hours Teacher Training Course at The Yoga Institute covers the nuances of Traditional Yoga. This includes an introduction to the study of principal Yoga Asanas, Pranayamas, Meditation, Kriyas, Patanjali’s Yoga Sutra, and Hatha Yoga Pradipika. Further, complete immersion into practical experiences of the concept studies, public speaking, the methodology of teaching, etc. are covered. Strategically designed by the founder Shri Yogendraji, Smt. Sita Devi Yogendra, Dr. Jayadeva Yogendra, and Dr. Hansaji J Yogendra, the course serves as a valuable‘ life school’ to those seeking balance and fulfilment in life.',
+            'With over 1,00,000 successfully certified students, the 200 Hours Yoga Teacher Training Course at The Yoga Institute covers the nuances of Traditional Yoga. This includes an introduction to the study of principal Yoga Asanas, Pranayamas, Meditation, Kriyas, Patanjali’s Yoga Sutra, and Hatha Yoga Pradipika. Further, complete immersion into practical experiences of the concept studies, public speaking, the methodology of teaching, etc. are covered. Strategically designed by the founder Shri Yogendraji, Smt. Sita Devi Yogendra, Dr. Jayadeva Yogendra, and Dr. Hansaji J Yogendra, ttc course serves as a valuable‘ life school’ to those seeking balance and fulfilment in life.',
           ],
         },
       },
       {
         type: 'u-list',
         content: {
-          title: 'Benefits of 200 Hours Teacher Training Course',
+          title: 'Benefits of  200 Hours Yoga Teacher Training Course',
           points: [
             {
               listItem:
@@ -550,7 +557,7 @@ const ttc200hr = {
         type: 'paragraph',
         content: {
           title: 'Course',
-          text: ['200 hrs TTC Batch 2 - 2 Months TTC Online & On Campus - English'],
+          text: ['200 hrs Yoga TTC Batch 2 - 2 Months TTC Online & On Campus - English'],
         },
       },
       // {
@@ -594,6 +601,13 @@ const ttc200hr = {
       },
     ],
     curriculum: [
+      {
+        type: 'paragraph',
+        content: {
+          title: '200 Hour Yoga Teacher Training Curriculum',
+          text: [],
+        },
+      },
       {
         type: 'u-list',
         content: {
@@ -655,10 +669,10 @@ const ttc200hr = {
               subItems: [],
             },
             {
-              listItem: 'Asanas',
+              listItem: 'Yoga Asanas',
               subItems: [
                 'Knowledge of selected postures and demonstrated ability to perform these postures – meditative and cultural (dynamic and static versions).',
-                'Selected psychophysical and conceptual techniques pioneered by The Yoga Institute.',
+                'Selected psychophysical and conceptual yoga techniques pioneered by The Yoga Institute.',
               ],
             },
             {
@@ -691,7 +705,7 @@ const ttc200hr = {
       {
         type: 'url',
         content: {
-          text: 'Access the detailed curriculum here:',
+          text: 'Access the detailed 200 hour yttc curriculum:',
           url: 'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/courses_pdf/200hr.pdf',
         },
       },
@@ -776,7 +790,7 @@ const ttc200hr = {
             ' ',
           points: [
             {
-              listItem: 'Students will be eligible to appear for the Final certification exams only if they have completed all the required course submissions, class work and the required attendance',
+              listItem: 'Yoga Students will be eligible to appear for the Final certification exams only if they have completed all the required course submissions, class work and the required attendance',
               subItems: [],
             },
             {
@@ -851,7 +865,7 @@ const ttc200hr = {
             },
             {
               listItem:
-                'Our expert trainers for the course, over 40 in number, have mastered the yogic way of life and are proficient in passing on their learnings in a simple and practical way. Armed with decades of experience, they offer tremendous value and insight to new learners.',
+                'Our Yoga expert trainers for the 200 hrs yoga teacher training course, over 40 in number, have mastered the yogic way of life and are proficient in passing on their learnings in a simple and practical way. Armed with decades of experience, they offer tremendous value and insight to new learners.',
               subItems: [],
             },
             {
@@ -906,7 +920,7 @@ const ttc200hr = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'ttc',
-    title: '200 hrs TTC - 2 Months TTC Online-English-Batch 3',
+    title: '200-Hour Yoga Teacher Training Online Course - 2 Months TTC Online-English-Batch 3',
     dates: [
       '24th Apr to 17th Jun 2023',
       '26th Jun to 19th Aug 2023',
@@ -924,14 +938,14 @@ const ttc200hr = {
         content: {
           title: '',
           text: [
-            'With over 1,00,000 successfully certified students, the 200 Hours Teacher Training Course at The Yoga Institute covers the nuances of Traditional Yoga. This includes an introduction to the study of principal Yoga Asanas, Pranayamas, Meditation, Kriyas, Patanjali’s Yoga Sutra, and Hatha Yoga Pradipika. Further, complete immersion into practical experiences of the concept studies, public speaking, the methodology of teaching, etc. are covered. Strategically designed by the founder Shri Yogendraji, Smt. Sita Devi Yogendra, Dr. Jayadeva Yogendra, and Dr. Hansaji J Yogendra, the course serves as a valuable‘ life school’ to those seeking balance and fulfilment in life.',
+            'With over 1,00,000 successfully certified students, the 200-Hour Yoga Teacher Training Online Course at The Yoga Institute covers the nuances of Traditional Yoga. This includes an introduction to the study of principal Yoga Asanas, Pranayamas, Meditation, Kriyas, Patanjali’s Yoga Sutra, and Hatha Yoga Pradipika. Further, complete immersion into practical experiences of the concept studies, public speaking, the methodology of teaching, etc. are covered. Strategically designed by the founder Shri Yogendraji, Smt. Sita Devi Yogendra, Dr. Jayadeva Yogendra, and Dr. Hansaji J Yogendra, the online yoga course serve as a valuable life school’ to those seeking balance and fulfillment in life.'
           ],
         },
       },
       {
         type: 'u-list',
         content: {
-          title: 'Benefits of 200 Hours Teacher Training Course',
+          title: 'Benefits of 200-Hour Yoga Teacher Training Online',
           points: [
             {
               listItem:
@@ -950,7 +964,7 @@ const ttc200hr = {
         type: 'paragraph',
         content: {
           title: 'Course',
-          text: ['200 hrs TTC Batch 3 - 2 Months TTC Online  - English'],
+          text: ['200 hrs Yoga TTC Batch 3 - 2 Months TTC Online  - English'],
         },
       },
       // {
@@ -992,6 +1006,13 @@ const ttc200hr = {
       },
     ],
     curriculum: [
+      {
+        type: 'paragraph',
+        content: {
+          title: '200 Hour Yoga Teacher Training Curriculum',
+          text: [],
+        },
+      },
       {
         type: 'u-list',
         content: {
@@ -1053,7 +1074,7 @@ const ttc200hr = {
               subItems: [],
             },
             {
-              listItem: 'Asanas',
+              listItem: 'Yoga Asanas',
               subItems: [
                 'Knowledge of selected postures and demonstrated ability to perform these postures – meditative and cultural (dynamic and static versions).',
                 'Selected psychophysical and conceptual techniques pioneered by The Yoga Institute.',
@@ -1089,7 +1110,7 @@ const ttc200hr = {
       {
         type: 'url',
         content: {
-          text: 'Access the detailed curriculum here:',
+          text: 'Access the online yoga certification course detailed curriculum here:',
           url: 'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/courses_pdf/200hr.pdf',
         },
       },
@@ -1315,7 +1336,7 @@ const ttc200hr = {
             },
             {
               listItem:
-                'Our expert trainers for the course, over 40 in number, have mastered the yogic way of life and are proficient in passing on their learnings in a simple and practical way. Armed with decades of experience, they offer tremendous value and insight to new learners.',
+                'Our Yoga expert trainers for the 200-Hour Yoga Teacher Training Online course, over 40 in number, have mastered the yogic way of life and are proficient in passing on their learnings in a simple and practical way. Armed with decades of experience, they offer tremendous value and insight to new learners.',
               subItems: [],
             },
             {
@@ -1370,7 +1391,7 @@ const ttc200hr = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'ttc',
-    title: '200 hrs TTC - 2 Months TTC Online-Hindi-Batch 4',
+    title: '200 Hours Hindi Teacher Training Course - 2 Months TTC Online - Hindi - Batch 4',
     dates: [
       '6th Mar to 29th Apr 2023',
       '8th May to 1st Jul 2023',
@@ -1389,14 +1410,14 @@ const ttc200hr = {
         content: {
           title: '',
           text: [
-            'With over 1,00,000 successfully certified students, the 200 Hours Teacher Training Course at The Yoga Institute covers the nuances of Traditional Yoga. This includes an introduction to the study of principal Yoga Asanas, Pranayamas, Meditation, Kriyas, Patanjali’s Yoga Sutra, and Hatha Yoga Pradipika. Further, complete immersion into practical experiences of the concept studies, public speaking, the methodology of teaching, etc. are covered. Strategically designed by the founder Shri Yogendraji, Smt. Sita Devi Yogendra, Dr. Jayadeva Yogendra, and Dr. Hansaji J Yogendra, the course serves as a valuable‘ life school’ to those seeking balance and fulfilment in life.',
+            'With over 1,00,000 successfully certified students, the 200 Hours Hindi Teacher Training Course at The Yoga Institute covers the nuances of Traditional Yoga. This includes an introduction to the study of principal Yoga Asanas, Pranayamas, Meditation, Kriyas, Patanjali’s Yoga Sutra, and Hatha Yoga Pradipika. Further, complete immersion into practical experiences of the concept studies, public speaking, the methodology of teaching, etc. are covered. Strategically designed by the founder Shri Yogendraji, Smt. Sita Devi Yogendra, Dr. Jayadeva Yogendra, and Dr. Hansaji J Yogendra, the TTC course serves as a valuable life school’ to those seeking balance and fulfillment in life.'
           ],
         },
       },
       {
         type: 'u-list',
         content: {
-          title: 'Benefits of 200 Hours Teacher Training Course',
+          title: 'Benefits of 200 Hours Hindi Teacher Training Course',
           points: [
             {
               listItem:
@@ -1415,7 +1436,7 @@ const ttc200hr = {
         type: 'paragraph',
         content: {
           title: 'Course',
-          text: ['200 hrs TTC Batch 4 - 2 Months TTC Online  - Hindi'],
+          text: ['200 hrs Yoga TTC Batch 4 - 2 Months TTC Online  - Hindi'],
         },
       },
       // {
@@ -1516,7 +1537,7 @@ const ttc200hr = {
               subItems: [],
             },
             {
-              listItem: 'Asanas',
+              listItem: 'Yoga Asanas',
               subItems: [
                 'Knowledge of selected postures and demonstrated ability to perform these postures – meditative and cultural (dynamic and static versions).',
                 'Selected psychophysical and conceptual techniques pioneered by The Yoga Institute.',
@@ -1552,7 +1573,7 @@ const ttc200hr = {
       {
         type: 'url',
         content: {
-          text: 'Access the detailed curriculum here:',
+          text: 'Access the detailed Online Hindi Teacher Training Course curriculum here:',
           url: 'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/courses_pdf/200hr.pdf',
         },
       },
@@ -1778,7 +1799,7 @@ const ttc200hr = {
             },
             {
               listItem:
-                'Our expert trainers for the course, over 40 in number, have mastered the yogic way of life and are proficient in passing on their learnings in a simple and practical way. Armed with decades of experience, they offer tremendous value and insight to new learners.',
+                'Our expert trainers for the ttc course, over 40 in number, have mastered the yogic way of life and are proficient in passing on their learnings in a simple and practical way. Armed with decades of experience, they offer tremendous value and insight to new learners.',
               subItems: [],
             },
             {
@@ -1832,7 +1853,7 @@ const ttc200hr = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'ttc',
-    title: '200 hrs TTC - 2 Months TTC Online-English-Batch 5',
+    title: '200 Hours Yoga TTC - 2 Months Online Yoga Teacher Training Course - English - Batch 5',
     dates: ['20th Mar to 13th May 2023','22th May to 15th Jul 2023','24th Jul to 16th Sep 2023','25th Sep to 18th Nov 2023', '27th Nov to 20th Jan 2024'],
     online: true,
     onCampus: false,
@@ -1845,14 +1866,14 @@ const ttc200hr = {
         content: {
           title: '',
           text: [
-            'With over 1,00,000 successfully certified students, the 200 Hours Teacher Training Course at The Yoga Institute covers the nuances of Traditional Yoga. This includes an introduction to the study of principal Yoga Asanas, Pranayamas, Meditation, Kriyas, Patanjali’s Yoga Sutra, and Hatha Yoga Pradipika. Further, complete immersion into practical experiences of the concept studies, public speaking, the methodology of teaching, etc. are covered. Strategically designed by the founder Shri Yogendraji, Smt. Sita Devi Yogendra, Dr. Jayadeva Yogendra, and Dr. Hansaji J Yogendra, the course serves as a valuable‘ life school’ to those seeking balance and fulfilment in life.',
+            'With over 1,00,000 successfully certified students, the 200 Hours Online Yoga Teacher Training Course at The Yoga Institute covers the nuances of Traditional Yoga. This includes an introduction to the study of principal Yoga Asanas, Pranayamas, Meditation, Kriyas, Patanjali’s Yoga Sutra, and Hatha Yoga Pradipika. Further, complete immersion into practical experiences of the concept studies, public speaking, the methodology of teaching, etc. are covered. Strategically designed by the founder Shri Yogendraji, Smt. Sita Devi Yogendra, Dr. Jayadeva Yogendra, and Dr. Hansaji J Yogendra, the Online Teacher Training Course  serves as a valuable‘ life school’ to those seeking balance and fulfilment in life.'
           ],
         },
       },
       {
         type: 'u-list',
         content: {
-          title: 'Benefits of 200 Hours Teacher Training Course',
+          title: 'Benefits of 200 Hours Online Yoga Teacher Training Course',
           points: [
             {
               listItem:
@@ -1871,7 +1892,7 @@ const ttc200hr = {
         type: 'paragraph',
         content: {
           title: 'Course',
-          text: ['200 hrs TTC Batch 5 - 2 Months TTC Online  - English'],
+          text: ['200 hrs Yoga TTC Batch 5 - 2 Months TTC Online  - English'],
         },
       },
       // {
@@ -1911,6 +1932,13 @@ const ttc200hr = {
       },
     ],
     curriculum: [
+      {
+        type: 'paragraph',
+        content: {
+          title: '200 Hour Yoga Teacher Training Curriculum',
+          text: [],
+        },
+      },
       {
         type: 'u-list',
         content: {
@@ -1972,7 +2000,7 @@ const ttc200hr = {
               subItems: [],
             },
             {
-              listItem: 'Asanas',
+              listItem: 'Yoga Asanas',
               subItems: [
                 'Knowledge of selected postures and demonstrated ability to perform these postures – meditative and cultural (dynamic and static versions).',
                 'Selected psychophysical and conceptual techniques pioneered by The Yoga Institute.',
@@ -1985,7 +2013,7 @@ const ttc200hr = {
               ],
             },
             {
-              listItem: 'Practices leading to Meditation',
+              listItem: 'Practices leading to Yoga Meditation',
               subItems: [],
             },
             {
@@ -2019,7 +2047,7 @@ const ttc200hr = {
           points: [
             {
               listItem:
-                'A student is required to have a minimum 80% attendance',
+                'A yoga student is required to have a minimum 80% attendance',
               subItems: [],
             },
           ],
@@ -2234,7 +2262,7 @@ const ttc200hr = {
             },
             {
               listItem:
-                'Our expert trainers for the course, over 40 in number, have mastered the yogic way of life and are proficient in passing on their learnings in a simple and practical way. Armed with decades of experience, they offer tremendous value and insight to new learners.',
+                'Our expert trainers for the ttc course, over 40 in number, have mastered the yogic way of life and are proficient in passing on their learnings in a simple and practical way. Armed with decades of experience, they offer tremendous value and insight to new learners.',
               subItems: [],
             },
             {
@@ -2289,7 +2317,7 @@ const ttc200hr = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'ttc',
-    title: '200 hrs TTC - 3 Months Weekend TTC Online-English-Batch 6',
+    title: '200 Hours Yoga TTC  - 3 Months Weekend Yoga Teacher Training Course Online - English - Batch 6',
     dates: ['11th Feb to 30th Apr 2023', '6th May to 23rd Jul 2023', '29th Jul to 15th Oct 2023', '21st Oct to 7th Jan 2024'],
     online: true,
     onCampus: false,
@@ -2302,14 +2330,14 @@ const ttc200hr = {
         content: {
           title: '',
           text: [
-            'With over 1,00,000 successfully certified students, the 200 Hours Teacher Training Course at The Yoga Institute covers the nuances of Traditional Yoga. This includes an introduction to the study of principal Yoga Asanas, Pranayamas, Meditation, Kriyas, Patanjali’s Yoga Sutra, and Hatha Yoga Pradipika. Further, complete immersion into practical experiences of the concept studies, public speaking, the methodology of teaching, etc. are covered. Strategically designed by the founder Shri Yogendraji, Smt. Sita Devi Yogendra, Dr. Jayadeva Yogendra, and Dr. Hansaji J Yogendra, the course serves as a valuable‘ life school’ to those seeking balance and fulfilment in life.',
+            'With over 1,00,000 successfully certified students, the 200 Hours Weekend Yoga Teacher Training Course at The Yoga Institute covers the nuances of Traditional Yoga. This includes an introduction to the study of principal Yoga Asanas, Pranayamas, Meditation, Kriyas, Patanjali’s Yoga Sutra, and Hatha Yoga Pradipika. Further, complete immersion into practical experiences of the concept studies, public speaking, the methodology of teaching, etc. are covered. Strategically designed by the founder Shri Yogendraji, Smt. Sita Devi Yogendra, Dr. Jayadeva Yogendra, and Dr. Hansaji J Yogendra, the yoga on weekends course serves as a valuable life school’ to those seeking balance and fulfillment in life.'
           ],
         },
       },
       {
         type: 'u-list',
         content: {
-          title: 'Benefits of 200 Hours Teacher Training Course',
+          title: 'Benefits of 200 Hours Weekend Yoga Teacher Training Course',
           points: [
             {
               listItem:
@@ -2328,7 +2356,7 @@ const ttc200hr = {
         type: 'paragraph',
         content: {
           title: 'Course',
-          text: ['Batch 6 - 3 Months Weekend TTC Online - English'],
+          text: ['Batch 6 - 3 Months Weekend Yoga TTC Online - English'],
         },
       },
       // {
@@ -2467,7 +2495,7 @@ const ttc200hr = {
       {
         type: 'url',
         content: {
-          text: 'Access the detailed curriculum here:',
+          text: 'Access the yoga classes weekend detailed curriculum here:',
           url: 'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/courses_pdf/200hr.pdf',
         },
       },
@@ -2693,7 +2721,7 @@ const ttc200hr = {
             },
             {
               listItem:
-                'Our expert trainers for the course, over 40 in number, have mastered the yogic way of life and are proficient in passing on their learnings in a simple and practical way. Armed with decades of experience, they offer tremendous value and insight to new learners.',
+                'Our expert trainers for the ttc course, over 40 in number, have mastered the yogic way of life and are proficient in passing on their learnings in a simple and practical way. Armed with decades of experience, they offer tremendous value and insight to new learners.',
               subItems: [],
             },
             {
@@ -2749,7 +2777,7 @@ const ttc500hr = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'ttc',
-    title: '500 hrs TTC 3 Months TTC Online - English',
+    title: '500-Hour Yoga Teacher Training Online Course - 3 Months TTC Online - English',
     image: `${baseDomain}${courseAssets.courseAsset39}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset102}`,
     dates: ['13th Feb to 6th May 2023', '15th May to 5th Aug 2023', '14th Aug to 4th Nov 2023', '13th Nov to 3rd Feb 2024'],
@@ -2764,14 +2792,14 @@ const ttc500hr = {
         content: {
           title: 'PROGRAM DETAILS',
           text: [
-            'With over 1,00,000 successfully certified students, the 500 Hours Intermediate Teacher Training Course at The Yoga Institute covers the nuances of Traditional Yoga. This includes an introduction to the study of principal Yoga Asanas, Pranayamas, Meditation, Kriyas, Patanjali’s Yoga Sutra, and Hatha Yoga Pradipika. Further, complete immersion into practical experiences of the concept studies, public speaking, the methodology of teaching, etc. are covered. Strategically designed by the founder Shri Yogendraji, Smt. Sita Devi Yogendra, Dr. Jayadeva Yogendra, and Dr. Hansaji J Yogendra, the course serves as a valuable ‘life school’ to those seeking balance and fulfilment in life.',
+            'With over 1,00,000 successfully certified students, the 500-Hour Yoga Teacher Training Course(Intermediate) at The Yoga Institute covers the nuances of Traditional Yoga. This includes an introduction to the study of principal Yoga Asanas, Pranayamas, Meditation, Kriyas, Patanjali’s Yoga Sutra, and Hatha Yoga Pradipika. Further, complete immersion into practical experiences of the concept studies, public speaking, the methodology of teaching, etc. are covered. Strategically designed by the founder Shri Yogendraji, Smt. Sita Devi Yogendra, Dr. Jayadeva Yogendra, and Dr. Hansaji J Yogendra, the online yoga course serves as a valuable ‘life school’ to those seeking balance and fulfillment in life.'
           ],
         },
       },
       {
         type: 'u-list',
         content: {
-          title: 'Benefits of 500 Hours IntermediateTeacher Training Course ',
+          title: 'Benefits of 500-Hour Yoga Teacher Training Online ',
           points: [
             {
               listItem:
@@ -2790,7 +2818,7 @@ const ttc500hr = {
         type: 'paragraph',
         content: {
           title: 'Course',
-          text: ['3 Months TTC Online - English'],
+          text: ['3 Months Yoga Teacher Training Course - Online English'],
         },
       },
       {
@@ -2828,7 +2856,7 @@ const ttc500hr = {
       {
         type: 'table',
         content: {
-          title: 'Curriculum at a Glance',
+          title: '500-Hour Yoga Teacher Training Online Course Curriculum at a Glance',
           tableHeading: [],
           tableData: [
             [
@@ -2881,7 +2909,7 @@ const ttc500hr = {
       {
         type: 'url',
         content: {
-          text: 'Access the detailed syllabus here:',
+          text: 'Access the 3 months teacher training course detailed syllabus here:',
           url: 'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/courses_pdf/500hr.pdf',
         },
       },
@@ -2923,7 +2951,7 @@ const ttc500hr = {
         content: {
           title: '',
           text: [
-            'On successfully passing the exam, students may avail of the triple certification benefit. The Yoga Institute is recognised by the Government of India (Ministry of AYUSH – QCI) and is the first Yoga school to be accredited after the AYUSH -QCI scheme was launched. The course conforms to the syllabus of Level 2 – Yoga Teacher YCB scheme– mentored by AYUSH (Government of India). Once The Yoga Institute’s exams are successfully cleared by the students/participants they are eligible to appear for AYUSH Level 2 exams. This is a RYT 500-hour course, fully accredited with the Yoga Alliance USA and the participant is eligible to apply on the Yoga Alliance site as Register Yoga Teacher. After successfully completing the course, ITTC certificate holders will be qualified to conduct Yoga sessions for:',
+            'On successfully passing the exam, students may avail of the triple certification benefit. The Yoga Institute is recognised by the Government of India (Ministry of AYUSH – QCI) and is the first Yoga school to be accredited after the AYUSH -QCI scheme was launched. The course conforms to the syllabus of Level 2 – Yoga Teacher YCB scheme– mentored by AYUSH (Government of India). Once The Yoga Institute’s exams are successfully cleared by the yoga students/participants they are eligible to appear for AYUSH Level 2 exams. This is an RYT 500-hour yoga teacher training course, fully accredited with the Yoga Alliance USA and the participant is eligible to apply on the Yoga Alliance site as Register Yoga Teacher. After successfully completing the online yoga certification course, ITTC certificate holders will be qualified to conduct Yoga sessions for:'
           ],
         },
       },
@@ -3038,7 +3066,7 @@ const ttc500hr = {
             },
             {
               listItem:
-                'Our expert trainers for the course, over 40 in number, have mastered the yogic way of life and are proficient in passing on their learnings in a simple and practical way. Armed with decades of experience, they offer tremendous value and insight to new learners.',
+                'Our expert trainers for the online yoga course, over 40 in number, have mastered the yogic way of life and are proficient in passing on their learnings in a simple and practical way. Armed with decades of experience, they offer tremendous value and insight to new learners.',
               subItems: [],
             },
             {
@@ -3083,7 +3111,7 @@ const ttc900hr = {
 
     metaDescription:
       'You will learn the tools to master your physical, mental and spiritual well-being. You will see a marked improvement in your life, relationships and work.',
-    title: '900 hrs TTC-3 Months TTC On Campus - English',
+    title: '900 Hours Yoga TTC - 3 Months Teacher Training Course On Campus - English',
 
     image: `${baseDomain}${courseAssets.courseAsset40}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset103}`,
@@ -3112,7 +3140,7 @@ const ttc900hr = {
           title: '',
 
           text: [
-            'With over 1,00,000 successfully certified students since 1918, the 900 Hours Teacher Training Course at The Yoga Institute is an in-depth study of classical Ashtanga yoga (Eightfold Path Yoga). It teaches core yoga philosophy with a comprehensive approach to the science and technology of yoga. Strategically designed by the founder Shri Yogendraji, Smt. Sita Devi Yogendra, Dr. Jayadeva Yogendra, and Dr. Hansaji J Yogendra, the course serves as a valuable ‘life school’ to those seeking balance and fulfilment in life. ',
+            'With over 1,00,000 successfully certified students since 1918, the 900 Hours Yoga Teacher Training Course at The Yoga Institute is an in-depth study of classical Ashtanga yoga (Eightfold Path Yoga). It teaches core yoga philosophy with a comprehensive approach to the science and technology of yoga. Strategically designed by the founder Shri Yogendraji, Smt. Sita Devi Yogendra, Dr. Jayadeva Yogendra, and Dr. Hansaji J Yogendra, the yoga teacher course serve as a valuable ‘life school’ to those seeking balance and fulfilment in life.'
           ],
         },
       },
@@ -3147,7 +3175,7 @@ const ttc900hr = {
         content: {
           title: 'Course:',
 
-          text: ['900 hrs TTC 3 Months TTC On Campus - English'],
+          text: ['900 hrs Advanced Yoga Teacher Training Course 3 Months YTTC On Campus - English'],
         },
       },
 
@@ -3204,7 +3232,7 @@ const ttc900hr = {
         type: 'table',
 
         content: {
-          title: 'Curriculum at a Glance',
+          title: '3 Months Teacher Training Course Curriculum at a Glance',
 
           tableHeading: [],
 
@@ -3282,7 +3310,7 @@ const ttc900hr = {
         type: 'url',
 
         content: {
-          text: 'Access the detailed syllabus here:',
+          text: 'Access the advanced yoga teacher training course detailed syllabus here:',
 
           url: 'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/courses_pdf/900hr.pdf',
         },
@@ -3365,7 +3393,7 @@ const ttc900hr = {
           points: [
             {
               listItem:
-                'Awarded a certificate – Advanced Teacher Training Certificate (900 hours) by The Yoga Institute',
+                'Awarded a certificate – Advanced Yoga Teacher Training Certificate (900 hours) by The Yoga Institute',
 
               subItems: [],
             },
@@ -3437,7 +3465,7 @@ const ttc900hr = {
         content: {
           title: '',
 
-          text: ['This course makes you eligible to teach:'],
+          text: ['This 3 months teacher training course makes you eligible to teach:'],
         },
       },
 
@@ -3605,7 +3633,7 @@ const ttc900hr = {
           points: [
             {
               listItem:
-                'Library: Explore one of largest collections of spiritual and philosophical books to expand your knowledge',
+                'Yoga Library: Explore one of largest collections of spiritual and philosophical books to expand your knowledge',
 
               subItems: [],
             },
@@ -3647,7 +3675,7 @@ const ttc900hr = {
 
             {
               listItem:
-                'Book Store: Shop in a wide selection of TYI publications. Find yourself the best yogic attire and mats.',
+                'Yoga Book Store: Shop in a wide selection of TYI publications. Find yourself the best yogic attire and mats.',
 
               subItems: [],
             },
@@ -3671,7 +3699,7 @@ const ttc900hr = {
     batch: 1,
     metaDescription:
       'You will learn the tools to master your physical, mental and spiritual well-being. You will see a marked improvement in your life, relationships and work.',
-    title: '900 hrs TTC  1 Year TTC Online & On Campus - Hindi',
+    title: '900 hrs Yoga TTC - 1 Year Course Online & On Campus - Hindi',
     image: `${baseDomain}${courseAssets.courseAsset40}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset103}`,
     mostPopular: false,
@@ -3697,7 +3725,7 @@ const ttc900hr = {
           title: '',
 
           text: [
-            'With over 1,00,000/ 50,000 successfully certified students since 1918, the 1 Year Teacher Training Course (Hindi) at The Yoga Institute is an in-depth study of classical Ashtanga yoga (Eightfold Path Yoga). It teaches core yoga philosophy with a comprehensive approach to the science and technology of yoga. Strategically designed by the founder Shri Yogendraji, Smt. Sita Devi Yogendra, Dr. Jayadeva Yogendra, and Dr. Hansaji J Yogendra, the course serves as a valuable ‘life school’ to those seeking balance and fulfilment in life.',
+            'With over 1,00,000/ 50,000 successfully certified students since 1918, the 1 Year Advanced Yoga Teacher Training Course (Hindi) at The Yoga Institute is an in-depth study of classical Ashtanga yoga (Eightfold Path Yoga). It teaches core yoga philosophy with a comprehensive approach to the science and technology of yoga. Strategically designed by the founder Shri Yogendraji, Smt. Sita Devi Yogendra, Dr. Jayadeva Yogendra, and Dr. Hansaji J Yogendra, The Yoga Institute course serves as a valuable ‘life school’ to those seeking balance and fulfillment in life.',
 
             'This course is ideal for those who have daily commitments at home, like homemakers. With the suitable schedule of this course, they can have access to advanced yoga training at their convenience and can become certified yoga trainers within one year.',
           ],
@@ -3708,7 +3736,7 @@ const ttc900hr = {
         type: 'u-list',
 
         content: {
-          title: 'Benefits of 1 Year Teacher Training Course',
+          title: 'Benefits of 1 Year Advanced Yoga Teacher Training Course',
 
           points: [
             {
@@ -3734,7 +3762,7 @@ const ttc900hr = {
         content: {
           title: 'Course:',
 
-          text: ['900 hrs TTC 1 Year TTC Online & On Campus - Hindi'],
+          text: ['900 hrs YTTC 1 Year Advanced Yoga Teacher Training Course Online & On Campus - Hindi'],
         },
       },
 
@@ -3907,7 +3935,7 @@ const ttc900hr = {
         type: 'url',
 
         content: {
-          text: 'Access the detailed syllabus here:',
+          text: 'Access the advanced yoga certificate course detailed syllabus here:',
 
           url: 'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/courses_pdf/900hr.pdf',
         },
@@ -4121,7 +4149,7 @@ const ttc900hr = {
         content: {
           title: '',
 
-          text: ['This course makes you eligible to teach:'],
+          text: ['This advanced yoga certificate course course makes you eligible to teach:'],
         },
       },
 
@@ -4288,7 +4316,7 @@ const ttc900hr = {
           points: [
             {
               listItem:
-                'Library: Explore one of largest collections of spiritual and philosophical books to expand your knowledge',
+                'Yoga Library: Explore one of largest collections of spiritual and philosophical books to expand your knowledge',
 
               subItems: [],
             },
@@ -4330,7 +4358,7 @@ const ttc900hr = {
 
             {
               listItem:
-                'Book Store: Shop in a wide selection of TYI publications. Find yourself the best yogic attire and mats.',
+                'Yoga Book Store: Shop in a wide selection of TYI publications. Find yourself the best yogic attire and mats.',
 
               subItems: [],
             },
@@ -4355,7 +4383,7 @@ const ttc900hr = {
 
     metaDescription:
       'You will learn the tools to master your physical, mental and spiritual well-being. You will see a marked improvement in your life, relationships and work.',
-    title: '900 hrs TTC  2 Years TTC Online & On Campus - English',
+    title: '900 Hours YTTC - 2 Years Course Online & On Campus - English',
 
     image: `${baseDomain}${courseAssets.courseAsset40}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset103}`,
@@ -4384,7 +4412,7 @@ const ttc900hr = {
           title: '',
 
           text: [
-            'With over 1,00,000/ 50,000 successfully certified students since 1918, the 2 Year Teacher Training Course (English) at The Yoga Institute is an in-depth study of classical Ashtanga yoga (Eightfold Path Yoga). It teaches core yoga philosophy with a comprehensive approach to the science and technology of yoga. Strategically designed by the founder Shri Yogendraji, Smt. Sita Devi Yogendra, Dr. Jayadeva Yogendra, and Dr. Hansaji J Yogendra, the course serves as a valuable ‘life school’ to those seeking balance and fulfilment in life.',
+            'With over 1,00,000/ 50,000 successfully certified students since 1918, the 2 Year Advanced Yoga Teacher Training Certificate Course (English) at The Yoga Institute is an in-depth study of classical Ashtanga yoga (Eightfold Path Yoga). It teaches core yoga philosophy with a comprehensive approach to the science and technology of yoga. Strategically designed by the founder Shri Yogendraji, Smt. Sita Devi Yogendra, Dr. Jayadeva Yogendra, and Dr. Hansaji J Yogendra, The Yoga Institute course serves as a valuable ‘life school’ to those seeking balance and fulfillment in life.',
 
             'This course is ideal for those who have daily commitments at home, like homemakers. With the suitable schedule of this course, they can have access to advanced yoga training at their convenience and can become certified yoga trainers within one year.',
           ],
@@ -4395,7 +4423,7 @@ const ttc900hr = {
         type: 'u-list',
 
         content: {
-          title: 'Benefits of 2 Year Teacher Training Course',
+          title: 'Benefits of 2-Year Yoga Teacher Training Certificate Course',
 
           points: [
             {
@@ -4529,7 +4557,7 @@ const ttc900hr = {
             [
               'In-depth practice of asana, pranayama and kriya',
 
-              'Mastery over asana, pranayama and kriyas transforms and resets your body to its highest efficiency, making it strong and flexible. Your blocked energies will begin to flow again, giving you vitality. Kriyas help release that which harms our prana.',
+              'Mastery over Advanced Yoga Asana, pranayama and kriyas transforms and resets your body to its highest efficiency, making it strong and flexible. Your blocked energies will begin to flow again, giving you vitality. Kriyas help release that which harms our prana.',
             ],
 
             [
@@ -4599,7 +4627,7 @@ const ttc900hr = {
         type: 'url',
 
         content: {
-          text: 'Access the detailed syllabus here:',
+          text: 'Access the Advanced Yoga Teacher Training Certificate Course detailed syllabus:',
 
           url: 'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/courses_pdf/900hr.pdf',
         },
@@ -4813,7 +4841,7 @@ const ttc900hr = {
         content: {
           title: '',
 
-          text: ['This course makes you eligible to teach:'],
+          text: ['This Yoga Teacher Training Certificate Course makes you eligible to teach:'],
         },
       },
 
@@ -4981,7 +5009,7 @@ const ttc900hr = {
           points: [
             {
               listItem:
-                'Library: Explore one of largest collections of spiritual and philosophical books to expand your knowledge',
+                'Yoga Library: Explore one of largest collections of spiritual and philosophical books to expand your knowledge',
 
               subItems: [],
             },
@@ -5023,7 +5051,7 @@ const ttc900hr = {
 
             {
               listItem:
-                'Book Store: Shop in a wide selection of TYI publications. Find yourself the best yogic attire and mats.',
+                'Yoga Book Store: Shop in a wide selection of TYI publications. Find yourself the best yogic attire and mats.',
 
               subItems: [],
             },
@@ -5048,7 +5076,7 @@ const ttc900hr = {
 
     metaDescription:
       'You will learn the tools to master your physical, mental and spiritual well-being. You will see a marked improvement in your life, relationships and work.',
-    title: '900 hrs TTC-4 Months TTC Online - English',
+    title: '900 Hours Yoga TTC - 4 Months Course - English',
     image: `${baseDomain}${courseAssets.courseAsset40}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset103}`,
     mostPopular: false,
@@ -5076,7 +5104,7 @@ const ttc900hr = {
           title: '',
 
           text: [
-            'With over 1,00,000/ 50,000 successfully certified students since 1918, the 4 Months Teacher Training Course - English at The Yoga Institute is an in-depth study of classical Ashtanga yoga (Eightfold Path Yoga). It teaches core yoga philosophy with a comprehensive approach to the science and technology of yoga. Strategically designed by the founder Shri Yogendraji, Smt. Sita Devi Yogendra, Dr. Jayadeva Yogendra, and Dr. Hansaji J Yogendra, the course serves as a valuable ‘life school’ to those seeking balance and fulfilment in life.',
+            'With over 1,00,000/ 50,000 successfully certified students since 1918, the 4 Months Online Yoga Teacher Training Course - English at The Yoga Institute is an in-depth study of classical Ashtanga yoga (Eightfold Path Yoga). It teaches core yoga philosophy with a comprehensive approach to the science and technology of yoga. Strategically designed by the founder Shri Yogendraji, Smt. Sita Devi Yogendra, Dr. Jayadeva Yogendra, and Dr. Hansaji J Yogendra, the teacher training programs serves as a valuable ‘life school’ to those seeking balance and fulfilment in life.'
           ],
         },
       },
@@ -5085,7 +5113,7 @@ const ttc900hr = {
         type: 'u-list',
 
         content: {
-          title: 'Benefits of 4 Months Teacher Training Course',
+          title: 'Benefits of 4 Months Online Yoga Teacher Training Course',
 
           points: [
             {
@@ -5111,7 +5139,7 @@ const ttc900hr = {
         content: {
           title: 'Course:',
 
-          text: ['900 hrs TTC 4 Months TTC Online - English'],
+          text: ['900 hrs Advanced Yoga Teacher Training Course - 4 Months YTTC Online - English'],
         },
       },
 
@@ -5209,7 +5237,7 @@ const ttc900hr = {
         type: 'table',
 
         content: {
-          title: 'Curriculum at a Glance',
+          title: '900 Hours Online Yoga Teacher Training Course Curriculum at a Glance',
 
           tableHeading: [],
 
@@ -5287,7 +5315,7 @@ const ttc900hr = {
         type: 'url',
 
         content: {
-          text: 'Access the detailed syllabus here:',
+          text: 'Access the 900 Hour Online Yoga Teacher Training Course detailed syllabus here:',
 
           url: 'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/courses_pdf/900hr.pdf',
         },
@@ -5338,7 +5366,7 @@ const ttc900hr = {
             ],
 
             [
-              'Health & wellness camps, 7 days camp & other initiatives',
+              'Health & wellness camps, 7 days yoga camp & other initiatives',
 
               '135 hours',
             ],
@@ -5417,7 +5445,7 @@ const ttc900hr = {
           points: [
             {
               listItem:
-                'Awarded a certificate – Advanced Teacher Training Certificate (900 hours) by The Yoga Institute',
+                'Awarded a certificate – Advanced Yoga Teacher Training Certificate (900 hours) by The Yoga Institute',
 
               subItems: [],
             },
@@ -5489,7 +5517,7 @@ const ttc900hr = {
         content: {
           title: '',
 
-          text: ['This course makes you eligible to teach:'],
+          text: ['This Online Yoga Certification course makes you eligible to teach:'],
         },
       },
 
@@ -5657,7 +5685,7 @@ const ttc900hr = {
           points: [
             {
               listItem:
-                'Library: Explore one of largest collections of spiritual and philosophical books to expand your knowledge',
+                'Yoga Library: Explore one of largest collections of spiritual and philosophical books to expand your knowledge',
 
               subItems: [],
             },
@@ -5699,7 +5727,7 @@ const ttc900hr = {
 
             {
               listItem:
-                'Book Store: Shop in a wide selection of TYI publications. Find yourself the best yogic attire and mats.',
+                'Yoga Book Store: Shop in a wide selection of TYI publications. Find yourself the best yogic attire and mats.',
 
               subItems: [],
             },
@@ -5723,7 +5751,7 @@ const ttc900hr = {
 
     metaDescription:
       'You will learn the tools to master your physical, mental and spiritual well-being. You will see a marked improvement in your life, relationships and work.',
-    title: '900 hrs TTC-7 Months TTC Online & On Campus - English',
+    title: '900 Hours Yoga TTC - 7 Months - Online & On Campus - English',
 
     image: `${baseDomain}${courseAssets.courseAsset40}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset103}`,
@@ -5751,7 +5779,7 @@ const ttc900hr = {
           title: '',
 
           text: [
-            'With over 1,00,000 successfully certified students since 1918, the 7 Month Teacher Training Course at The Yoga Institute is an in-depth study of classical Ashtanga yoga (Eightfold Path Yoga). It teaches core yoga philosophy with a comprehensive approach to the science and technology of yoga. Strategically designed by the founder Shri Yogendraji, Smt. Sita Devi Yogendra, Dr. Jayadeva Yogendra, and Dr. Hansaji J Yogendra, the course serves as a valuable ‘life school’ to those seeking balance and fulfilment in life. ',
+            'With over 1,00,000 successfully certified students since 1918, the 7 Month Yoga Teacher Training Course at The Yoga Institute is an in-depth study of classical Ashtanga yoga (Eightfold Path Yoga). It teaches core yoga philosophy with a comprehensive approach to the science and technology of yoga. Strategically designed by the founder Shri Yogendraji, Smt. Sita Devi Yogendra, Dr. Jayadeva Yogendra, and Dr. Hansaji J Yogendra, The Yoga Institute course serves as a valuable ‘life school’ to those seeking balance and fulfillment in life.'
           ],
         },
       },
@@ -5760,7 +5788,7 @@ const ttc900hr = {
         type: 'u-list',
 
         content: {
-          title: 'Benefits of 7 Months Teacher Training Course ',
+          title: 'Benefits of 7 Months Yoga Teacher Training Course',
 
           points: [
             {
@@ -5786,7 +5814,7 @@ const ttc900hr = {
         content: {
           title: 'Course:',
 
-          text: ['900 hrs TTC 7 Months TTC Online & On Campus - English '],
+          text: ['900 hrs TTC 7 Months YTTC Online & On Campus - English '],
         },
       },
 
@@ -5858,7 +5886,7 @@ const ttc900hr = {
             [
               'Details',
 
-              'All classes will be online except the last 15 days which are to be done mandatorily on-campus at the end of the course',
+              'All yoga classes will be online except the last 15 days which are to be done mandatorily on-campus at the end of the course',
 
               'All classes to be attended on campus',
             ],
@@ -5884,7 +5912,7 @@ const ttc900hr = {
         type: 'table',
 
         content: {
-          title: 'Curriculum at a Glance',
+          title: 'Seven Month Yoga Teacher Training Course Curriculum at a Glance',
 
           tableHeading: [],
 
@@ -5962,7 +5990,7 @@ const ttc900hr = {
         type: 'url',
 
         content: {
-          text: 'Access the detailed syllabus here:',
+          text: 'Access the advanced certified yoga instructor course detailed syllabus here:',
 
           url: 'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/courses_pdf/900hr.pdf',
         },
@@ -6104,7 +6132,7 @@ const ttc900hr = {
           points: [
             {
               listItem:
-                'Awarded a certificate – Advanced Teacher Training Certificate (900 hours) by The Yoga Institute',
+                'Awarded a certificate –  Advanced Yoga Teacher Training Certificate (900 hours) by The Yoga Institute',
 
               subItems: [],
             },
@@ -6176,7 +6204,7 @@ const ttc900hr = {
         content: {
           title: '',
 
-          text: ['This course makes you eligible to teach:'],
+          text: ['This Advanced Yoga Teacher Training course makes you eligible to teach:'],
         },
       },
 
@@ -6344,7 +6372,7 @@ const ttc900hr = {
           points: [
             {
               listItem:
-                'Library: Explore one of largest collections of spiritual and philosophical books to expand your knowledge',
+                'Yoga Library: Explore one of largest collections of spiritual and philosophical books to expand your knowledge',
 
               subItems: [],
             },
@@ -6386,7 +6414,7 @@ const ttc900hr = {
 
             {
               listItem:
-                'Book Store: Shop in a wide selection of TYI publications. Find yourself the best yogic attire and mats.',
+                'Yoga Book Store: Shop in a wide selection of TYI publications. Find yourself the best yogic attire and mats.',
 
               subItems: [],
             },
@@ -6537,7 +6565,7 @@ const camps = {
 
   2: {
     id: '',
-    title: 'Cardiac & Hypertension Workshop - On Campus',
+    title: 'Cardiac & Hypertension Yoga Workshop - On Campus',
     key: 'cardiac-hypertension-workshop',
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
@@ -6571,9 +6599,9 @@ const camps = {
       {
         type: 'paragraph',
         content: {
-          title: 'Who is this workshop for?',
+          title: 'Who is this yoga workshop for?',
           text: [
-            'The heart, which has always been a symbol of light and love, of joy and happiness, has recently been heaped with relentless abuse. This workshop / camp has been thoughtfully designed by Dr. Hansaji Yogendra for individuals struggling with hypertension and heart ailments. India has one of the highest burdens of cardiovascular disease worldwide. It is thought to be incurable, but we at The Yoga Institute have formulated a holistic and yogic pathway with ancient knowledge, where the mind, body and soul are aligned to overcome this.                   ',
+            'The heart, which has always been a symbol of light and love, of joy and happiness, has recently been heaped with relentless abuse. This yoga for Hypertension & Cardiac workshop / camp has been thoughtfully designed by Dr. Hansaji Yogendra for individuals struggling with hypertension and heart ailments. India has one of the highest burdens of cardiovascular disease worldwide. It is thought to be incurable, but we at The Yoga Institute have formulated a holistic and yogic pathway with ancient knowledge, where the mind, body and soul are aligned to overcome this.',
             'In collaboration with medical specialists, we have conducted various researches on the beneficial effects of our techniques on individuals with coronary artery blockages, ischemic chest pains, HBP, Myocardial Infarction, and have found promising results among patients. ',
           ],
         },
@@ -6602,7 +6630,7 @@ const camps = {
               subItems: [],
             },
             {
-              listItem: 'Insightful session with heart specialist ',
+              listItem: 'Insightful yoga session with heart specialist ',
               subItems: [],
             },
             {
@@ -6669,7 +6697,7 @@ const camps = {
 
   3: {
     id: '',
-    title: 'Diabetes Camp - On Campus',
+    title: 'Diabetes Yoga Camp - On Campus',
     key: 'diabetes-camp',
     // batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
@@ -6703,9 +6731,9 @@ const camps = {
       {
         type: 'paragraph',
         content: {
-          title: 'Who is this workshop for?',
+          title: 'Who is this Yoga Camp for?',
           text: [
-            'Diabetes is an insidious disease that can remain symptomless and undetected for years. The modern management of diabetes works more at the physical level; it is only Yoga that has the capability to influence the psychopathogenesis as well. Carefully curated by our Director Dr. Hansaji Yogendra, the aim of this health camp is to train you in yogic dinacharya and ritucharya to help you take charge of your diabetes through proper self-management. Whether you have been recently diagnosed or are working with diabetes for a while, this camp will give you valuable tools to enhance your life. The Yoga Institute’s work in the area of diabetes since the last 60 years has received immense recognition in the community.             ',
+            'Diabetes is an insidious disease that can remain symptomless and undetected for years. The modern management of diabetes works more at the physical level; it is only Yoga that has the capability to influence the psychopathogenesis as well. Carefully curated by our Director Dr. Hansaji Yogendra, the aim of this yoga health camp is to train you in yogic dinacharya and ritucharya to help you take charge of your diabetes through proper self-management. Whether you have been recently diagnosed or are working with diabetes for a while, this yoga for diabetes camp will give you valuable tools to enhance your life. The Yoga Institute’s work in the area of diabetes since the last 60 years has received immense recognition in the community.'
           ],
         },
       },
@@ -6730,7 +6758,7 @@ const camps = {
             },
             {
               listItem:
-                'Specific asana, pranayama, and relaxation techniques to enhance your health',
+                'Specific yoga asanas for diabetes, pranayama, and relaxation techniques to enhance your health',
               subItems: [],
             },
             {
@@ -6738,7 +6766,7 @@ const camps = {
               subItems: [],
             },
             {
-              listItem: 'Insightful session with diabetes specialist',
+              listItem: 'Insightful yoga session with diabetes specialist',
               subItems: [],
             },
             {
@@ -7222,7 +7250,7 @@ const camps = {
 
   7: {
     id: '',
-    title: 'Life Management Camp - On Campus',
+    title: 'Life Management Yoga Camp - On Campus',
     key: 'life-management-camp',
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
@@ -7256,9 +7284,9 @@ const camps = {
       {
         type: 'paragraph',
         content: {
-          title: 'Who is this workshop for?',
+          title: 'Who is this Yoga Camp for?',
           text: [
-            'If you think about it, most of the time we are living our life without consciously thinking about what we are doing and why we are doing it. It is only when we face a problem of some kind, that we are forced to stop and take stock of things. This kind of approach does us no good. If you feel that you are stuck in life, or don’t know what to do next, or feel like your life is going nowhere, this is the camp for you! Here is a camp by The Yoga Institute to give you direction and discipline to go through your life happily, joyfully and with balance. Designed with the wisdom of ancient Indian teachings, there’s a whole treasure chest of tools waiting for you at this camp. Hope to see you soon!                   ',
+            'If you think about it, most of the time we are living our life without consciously thinking about what we are doing and why we are doing it. It is only when we face a problem of some kind, that we are forced to stop and take stock of things. This kind of approach does us no good. If you feel that you are stuck in life, or don’t know what to do next, or feel like your life is going nowhere, this is the camp for you! Here is a Life management yoga camp by The Yoga Institute to give you direction and discipline to go through your life happily, joyfully and with balance. Designed with the wisdom of ancient Indian teachings, there’s a whole treasure chest of tools waiting for you at this camp. Hope to see you soon!'
           ],
         },
       },
@@ -7283,11 +7311,11 @@ const camps = {
             },
             {
               listItem:
-                'Specific pranayama, asana and relaxation techniques to enhance your state of mind',
+                'Specific pranayama, yoga asana and relaxation techniques to enhance your state of mind',
               subItems: [],
             },
             {
-              listItem: 'Diet guidelines to manage your health',
+              listItem: 'Yogic Diet guidelines to manage your health',
               subItems: [],
             },
             {
@@ -7496,7 +7524,7 @@ const camps = {
 
   9: {
     id: '',
-    title: 'Pranayama Workshop',
+    title: 'Pranayama Yoga Workshop',
     key: 'pranayama-workshop',
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
@@ -7518,7 +7546,7 @@ const camps = {
     },
     category: 'camps',
     metaDescription:
-      'Specific pranayama, asana and relaxation techniques to enhance your state of mind',
+      'Specific pranayama, yoga asana and relaxation techniques to enhance your state of mind',
     image: `${baseDomain}${courseAssets.courseAsset37}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset37}`,
     online: true,
@@ -7530,9 +7558,9 @@ const camps = {
       {
         type: 'paragraph',
         content: {
-          title: 'Who is this workshop for?',
+          title: 'Who is this yoga workshop for?',
           text: [
-            'Prana, the essence of life, regulates your biological system. Bio-energy is the key to your physical, mental, and spiritual wellbeing. Pranayama, the yogic system of regulating your life force, will help you regulate your being, keeping you meditative and balanced. At the Yoga Institute, we have pioneered specific pranayama techniques to help you enhance your life. Come, experience the power of pranayama with us!  ',
+            'Prana, the essence of life, regulates your biological system. Bio-energy is the key to your physical, mental, and spiritual wellbeing. Pranayama, the yogic system of regulating your life force, will help you regulate your being, keeping you meditative and balanced. At the Yoga Institute, we have pioneered specific yoga breathing techniques and pranayama techniques to help you enhance your life. Come, experience the power of pranayama with us!  ',
           ],
         },
       },
@@ -7557,11 +7585,11 @@ const camps = {
             },
             {
               listItem:
-                'Specific pranayama, asana and relaxation techniques to enhance your state of mind',
+                'Specific pranayama techniques, yoga asana and relaxation techniques to enhance your state of mind',
               subItems: [],
             },
             {
-              listItem: 'Diet guidelines to manage your health',
+              listItem: 'Yogic Diet guidelines to manage your health',
               subItems: [],
             },
             {
@@ -7633,7 +7661,7 @@ const camps = {
 
   10: {
     id: '',
-    title: 'Pregnancy Camp For Ante & Post Natal - On Campus',
+    title: 'Pregnancy Yoga Camp For Ante & Post Natal - On Campus',
     key: 'pregnancy-camp-for-ante-post-natal',
     batch: 1,
     join:true,
@@ -7679,9 +7707,9 @@ const camps = {
       {
         type: 'paragraph',
         content: {
-          title: 'Who is this workshop for?',
+          title: 'Who is this yoga camp for?',
           text: [
-            'Parenthood is a career that never ends and the ancient path of yoga has great lessons to offer on this path. At The Yoga Institute, we have pioneered techniques that are simple, scientific and useful for expecting mothers. You will be able to experience a happy and healthy pregnancy and easy delivery by following simple techniques and practical guidance at our Pregnancy Camp. Come – join us, learn and practice simple yoga techniques for a happier pregnancy, delivery and baby!      ',
+            'Parenthood is a career that never ends and the ancient path of yoga has great lessons to offer on this path. At The Yoga Institute, we have pioneered yoga techniques that are simple, scientific and useful for expecting mothers. You will be able to experience a happy and healthy pregnancy and easy delivery by following simple yoga techniques and practical guidance at our Pregnancy Yoga Camp. Come – join us, learn and practice simple yoga techniques for a happier pregnancy, delivery and baby!'
           ],
         },
       },
@@ -7705,11 +7733,11 @@ const camps = {
               subItems: [],
             },
             {
-              listItem: 'Diet guidelines to manage your health',
+              listItem: 'Yogic Diet guidelines to manage your health',
               subItems: [],
             },
             {
-              listItem: 'Insightful session with a medical specialists.',
+              listItem: 'Insightful yoga session with a medical specialists.',
               subItems: [],
             },
             {
@@ -7780,7 +7808,7 @@ const camps = {
         type: 'paragraph',
         content: {
           title: 'Note',
-          text: ['*Please note, the camp is open only for women after 3 months of pregnancy till the 9 months of pregnancy.'],
+          text: ['*Please note, the pregnancy yoga camp is open only for women after 3 months of pregnancy till the 9 months of pregnancy.'],
         },
       },
     ],
@@ -7788,7 +7816,7 @@ const camps = {
 
   11: {
     id: '',
-    title: 'Respiratory Workshop - On Campus',
+    title: 'Respiratory Yoga Workshop - On Campus',
     key: 'respiratory-workshop',
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
@@ -7821,9 +7849,9 @@ const camps = {
       {
         type: 'paragraph',
         content: {
-          title: 'Who is this workshop for?',
+          title: 'Who is this yoga workshop for?',
           text: [
-            'Prana is the vital energy or life force, which exists in all of us. The fight against respiratory problems begins with a strong will to overcome one’s disability and has to be backed by an implicit faith in oneself. With a strong emphasis on ancient yogic knowledge and techniques, The Yoga Institute has been conducting powerful Respiratory Camps since 1987. Respiratory health has been well documented in traditional systems of wellbeing over several millennia. The Yogic life strengthens your will, augments your faith in yourself and opens air passages. How soon you can breathe with ease and on your own, depends on yourself. What are you waiting for? Begin now!    ',
+            'Prana is the vital energy or life force, which exists in all of us. The fight against respiratory problems begins with a strong will to overcome one’s disability and has to be backed by an implicit faith in oneself. With a strong emphasis on ancient yogic knowledge and techniques, The Yoga Institute has been conducting powerful Respiratory Camps since 1987. In these camps, participants are taught yoga breathing techniques and pranayama techniques for improving lung capacity and function, mind-body balance, increased calmness and healing. Respiratory health has been well-documented in traditional systems of well-being over several millennia. The Yogic life strengthens your will, augments your faith in yourself and opens air passages. How soon you can breathe with ease and on your own, depends on yourself. What are you waiting for? Begin now!'
           ],
         },
       },
@@ -7843,7 +7871,7 @@ const camps = {
           points: [
             {
               listItem:
-                'Specific pranayama, and relaxation techniques to enhance your health',
+                'Specific pranayama techniques and relaxation techniques to enhance your health',
               subItems: [],
             },
             {
@@ -7851,7 +7879,7 @@ const camps = {
               subItems: [],
             },
             {
-              listItem: 'Insightful session with a specialist',
+              listItem: 'Insightful yoga session with a specialist',
               subItems: [],
             },
             {
@@ -7923,7 +7951,7 @@ const camps = {
 
   12: {
     id: '',
-    title: 'Senior Citizen Workshop - On Campus',
+    title: 'Senior Citizen Yoga Workshop - On Campus',
     key: 'senior-citizen-workshop',
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
@@ -7945,7 +7973,7 @@ const camps = {
     },
     category: 'camps',
     metaDescription:
-      'Specific pranayama, asana and relaxation techniques to enhance your state of mind',
+      'Specific pranayama, yoga asana and relaxation techniques to enhance your state of mind',
     image: `${baseDomain}${courseAssets.courseAsset12}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset12}`,
     online: false,
@@ -7959,7 +7987,7 @@ const camps = {
         content: {
           title: 'Who is this workshop for?',
           text: [
-            'Aging is a natural and unavoidable part of life but how you handle yourself at every age can determine the quality of your life. If you are looking to improve your quality of life at a mature age, this camp will have immense value for you. At The Yoga Institute, we teach specially simplified asana that you can do with ease and enhance your wellbeing. These techniques will help you keep your body system strong and help you live a fuller life                   ',
+            'Aging is a natural and unavoidable part of life but how you handle yourself at every age can determine the quality of your life. If you are looking to improve your quality of life at a mature age, this yoga for senior citizens camp will have immense value for you. At The Yoga Institute, we teach specially simplified asana that you can do with ease and enhance your wellbeing. These yoga techniques will help you keep your body system strong and help you live a fuller life'
           ],
         },
       },
@@ -7984,11 +8012,11 @@ const camps = {
             },
             {
               listItem:
-                'Specific pranayama, asana and relaxation techniques to enhance your state of mind',
+                'Specific pranayama,  yoga asana and relaxation techniques to enhance your state of mind',
               subItems: [],
             },
             {
-              listItem: 'Diet guidelines to manage your health',
+              listItem: 'Yogic Diet guidelines to manage your health',
               subItems: [],
             },
             {
@@ -8060,7 +8088,7 @@ const camps = {
 
   13: {
     id: '',
-    title: 'Stress Management Camp - On Campus',
+    title: 'Stress Management Yoga Camp - On Campus',
     key: 'stress-management-camp',
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
@@ -8094,9 +8122,9 @@ const camps = {
       {
         type: 'paragraph',
         content: {
-          title: 'Who is this workshop for?',
+          title: 'Who is this yoga workshop for?',
           text: [
-            'Stress is the “wear and tear” our bodies experience as we adjust to our continually changing environment. It has physical and emotional effects on us and can create positive or negative feelings. Stress loses its sting when the balanced mind perceives a stressful situation from a different scale of observation. Our goal here at the Yoga Institute is not to eliminate stress but to learn how to manage it and how to use it to help us. Learn to lead a healthy life under stressful situations at our 1-day Stress Management camp.    ',
+            'Stress is the “wear and tear” our bodies experience as we adjust to our continually changing environment. It has physical and emotional effects on us and can create positive or negative feelings. Stress loses its sting when the balanced mind perceives a stressful situation from a different scale of observation. Our goal here at the Yoga Institute is not to eliminate stress but to learn how to manage it and how to use it to help us. Learn to lead a healthy life under stressful situations at our 1-day Yoga for Stress Management camp.'
           ],
         },
       },
@@ -8120,7 +8148,7 @@ const camps = {
               subItems: [],
             },
             {
-              listItem: 'Diet guidelines',
+              listItem: 'Yogic Diet guidelines',
               subItems: [],
             },
             {
@@ -8196,7 +8224,7 @@ const camps = {
 
   14: {
     id: '',
-    title: 'Weight Management Workshop',
+    title: 'Weight Management Yoga Workshop',
     key: 'weight-management-workshop',
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
@@ -8229,9 +8257,9 @@ const camps = {
       {
         type: 'paragraph',
         content: {
-          title: 'Who is this workshop for?',
+          title: 'Who is this yoga workshop for?',
           text: [
-            'Obesity is increasing at an alarming rate all over the world and particularly in India. There are several contributing factors towards this problem. Despite following different type of diet and weight loss programs, the results are often not satisfactory. The basic reason for this ‘yoyo effect’ is that obesity is not the cause of the problem. It’s only the effect of some deep-rooted problem within one’s total personality complex. Yoga deals with obesity at all levels- physical, mental, spiritual along with diet. Keeping all these in mind, The Yoga Institute has designed a special 1-day camp on Weight Management.    ',
+            'Obesity is increasing at an alarming rate all over the world and particularly in India. There are several contributing factors towards this problem. Despite following different types of diet and weight loss programs, the results are often not satisfactory. The basic reason for this ‘yo-yo effect’ is that obesity is not the cause of the problem. It’s only the effect of some deep-rooted problem within one’s total personality complex. Yoga deals with obesity at all levels - physical, mental and spiritual and with a focus on diet. Keeping these factors in mind, The Yoga Institute has designed a special 1-day yoga camp on Weight Management. This camp will provide you with a holistic approach on wellness and train you in effective Yoga poses for weight loss.',
           ],
         },
       },
@@ -8249,6 +8277,11 @@ const camps = {
         content: {
           title: ' Program Offerings',
           points: [
+            {
+              listItem:
+                'Yoga for weight loss',
+              subItems: [],
+            },
             {
               listItem:
                 'Specific pranayama, and relaxation techniques to enhance your health',
@@ -8331,7 +8364,7 @@ const camps = {
 
   15: {
     id: '',
-    title: 'Women`s Camp',
+    title: 'Women’s Yoga Camp',
     key: 'womens-camp',
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
@@ -8365,9 +8398,9 @@ const camps = {
       {
         type: 'paragraph',
         content: {
-          title: 'Who is this workshop for?',
+          title: 'Who is this yoga workshop for?',
           text: [
-            'As a woman, to say that you face a multitude of challenges would be an understatement. So, you need the power of yoga in your life to help you cope and thrive with these challenges. Additionally, there a lot of biological changes that come at different stages of life – menopause, pregnancy, and menstruation can cause a variety of symptoms like premenstrual syndrome, menstrual cramps, headaches, and a lot of other things. We, at The Yoga Institute, have devised this camp to help you be strong, focused, energetic, and balanced, so that you can take on everything that comes your way and continue being the superwoman that you are! With a strong emphasis on powerful yogic routines like ritucharya and dinacharya, the camp will give you the toolbox to help you create your desired life.     ',
+            'As a woman, to say that you face a multitude of challenges would be an understatement. So, you need the power of yoga in your life to help you cope and thrive with these challenges. Additionally, there a lot of biological changes that come at different stages of life – menopause, pregnancy, and menstruation can cause a variety of symptoms like premenstrual syndrome, menstrual cramps, headaches, and a lot of other things. We, at The Yoga Institute, have devised this women’s yoga camp to help you be strong, focused, energetic, and balanced, so that you can take on everything that comes your way and continue being the superwoman that you are! With a strong emphasis on powerful yogic routines like ritucharya and dinacharya, the yoga for women’s health camp will give you the toolbox to help you create your desired life.'
           ],
         },
       },
@@ -8387,7 +8420,7 @@ const camps = {
           points: [
             {
               listItem:
-                'Wholesome tools and techniques to help you manage your health',
+                'Wholesome tools and yoga techniques to help you manage your health',
               subItems: [],
             },
             {
@@ -8396,11 +8429,11 @@ const camps = {
               subItems: [],
             },
             {
-              listItem: 'Diet guidelines to manage your health',
+              listItem: 'Yogic Diet guidelines to manage your health',
               subItems: [],
             },
             {
-              listItem: 'Insightful session with medical specialist',
+              listItem: 'Insightful yoga session with medical specialist',
               subItems: [],
             },
             {
@@ -8472,7 +8505,7 @@ const camps = {
 
   16: {
     id: '',
-    title: 'Back & Joint Disorder Workshop',
+    title: 'Back & Joint Disorder Yoga Workshop',
     key: 'back-joint-disorder-workshop',
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
@@ -8505,9 +8538,9 @@ const camps = {
       {
         type: 'paragraph',
         content: {
-          title: 'Who is this workshop for?',
+          title: 'Who is this yoga workshop for?',
           text: [
-            'Chances are that you have accepted your back and joint pain as part of your life. But it need not be so. There is potential for healing to take place within us if we cooperate with our innate healing powers. At The Yoga Institute, we have been conducting specialized orthopedic camps for over 60 years and more so, our research shows the effectiveness of our methods. We give you potent yogic methods that will have a life-changing effect. Come attend our 1-day camp for back and joint disorders and experience the potential for well-being in your life.   ',
+            'Chances are that you have accepted your back and joint pain as part of your life. But it need not be so. There is potential for healing to take place within us if we cooperate with our innate healing powers. At The Yoga Institute, we have been conducting specialized orthopedic camps for over 60 years and more so, our research shows the effectiveness of our methods. We give you potent yogic methods that will have a life-changing effect. Come attend our 1-day yoga camp for back and joint disorders and experience the potential for well-being in your life.'
           ],
         },
       },
@@ -8526,11 +8559,11 @@ const camps = {
           title: ' Program Offerings',
           points: [
             {
-              listItem: 'Diet guidelines to manage your condition and health',
+              listItem: 'Yogic Diet guidelines to manage your condition and health',
               subItems: [],
             },
             {
-              listItem: 'Insightful session with an ortho-specialist',
+              listItem: 'Insightful yoga session with an ortho-specialist',
               subItems: [],
             },
             {
@@ -8606,7 +8639,7 @@ const camps = {
   },
   17: {
     id: '',
-    title: '7 Days Health Camp - On Campus - Hindi ',
+    title: '7 Days - On Campus - Yoga Camp - Hindi',
     key: '7-days-camp',
     join:true,
     batch: 1,
@@ -8634,7 +8667,7 @@ const camps = {
     },
     category: 'camps',
     metaDescription:
-      'Are you feeling burned out and looking for ways to develop mental strength, improve focus & emotional quotient and reduce stress? Join our 7-Days Health Camp reshape your life and health. ',
+      'Are you feeling burned out and looking for ways to develop mental strength, improve focus & emotional quotient and reduce stress? Join our 7-Days Yoga Camp reshape your life and health. ',
     image: `${baseDomain}${courseAssets.courseAsset35}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset35}`,
     details: [
@@ -8644,7 +8677,7 @@ const camps = {
           title: 'Overview',
           text: [
             'Are you feeling burned out and looking for ways to develop mental strength, improve focus & emotional quotient and reduce stress? Join our 7-Days Health Camp reshape your life and health.',
-            'The 7 Days Health Camp is an experiential, introductory course to Yoga theory and practice where one can get a glimpse of a yogic lifestyle within the premises of The Yoga Institute. In this program you will learn how to achieve a balance between your mind, body, and soul. Through its powerful processes, this program presents to you the possibility to access and re-configure your life and health in a way that improves productivity and imparts better control on your emotions. In this fast-paced and unwavering world, this 7 Days’ Health Camp offers you the much-needed respite to connect with yourself and experience the abundant joy and beauty in life. ',
+            'The 7 Days Health Camp is an experiential, introductory course to Yoga theory and practice where one can get a glimpse of a yogic lifestyle within the premises of The Yoga Institute. In this yoga program you will learn how to achieve a balance between your mind, body, and soul. Through its powerful processes, this 7 days yoga program presents to you the possibility to access and re-configure your life and health in a way that improves productivity and imparts better control on your emotions. In this fast-paced and unwavering world, this 7 Days’ Health Camp offers you the much-needed respite to connect with yourself and experience the abundant joy and beauty in life.',
           ],
         },
       },
@@ -8654,7 +8687,7 @@ const camps = {
           title: ' The programme covers',
           points: [
             {
-              listItem: 'Asanas',
+              listItem: 'Yoga Asanas',
               subItems: [],
             },
             {
@@ -8700,7 +8733,7 @@ const camps = {
       {
         type: 'paragraph',
         content: {
-          title: 'Benefits of this camp',
+          title: 'Benefits of this yoga camp',
           text: [],
         },
       },
@@ -8766,7 +8799,7 @@ const camps = {
         content: {
           title: '',
           text: [
-            'Trained teachers at The Yoga Institute will be conducting this course.Come and experience, amidst nature and beauty, our rejuvenating 7 Days Health Camp, which has transformed millions of people.',
+            'Trained teachers at The Yoga Institute will be conducting 7 days course course.Come and experience, amidst nature and beauty, our rejuvenating 7 Days Health Camp, which has transformed millions of people.',
           ],
         },
       },
@@ -8804,7 +8837,7 @@ const camps = {
         content: {
           title: '',
           text: [
-            'For registration in the 7-Days Health Camp, please click on the link below and fill in all the details. Within 24 hours after registering, you will receive an email containing the link to the payment portal. You can use the link to make the payment.',
+            'For registration in the 7-Days Yoga Camp, please click on the link below and fill in all the details. Within 24 hours after registering, you will receive an email containing the link to the payment portal. You can use the link to make the payment.',
           ],
         },
       },
@@ -8887,7 +8920,7 @@ const camps = {
           points: [
             {
               listItem:
-                'Library: Explore one of largest collections of spiritual and philosophical books to expand your knowledge ',
+                'Yoga Library: Explore one of largest collections of spiritual and philosophical books to expand your knowledge ',
               subItems: [],
             },
             {
@@ -8912,7 +8945,7 @@ const camps = {
             },
             {
               listItem:
-                'Book Store: Shop in a wide selection of TYI publications. Find yourself the best yogic attire and mats.',
+                'Yoga Book Store: Shop in a wide selection of TYI publications. Find yourself the best yogic attire and mats.',
               subItems: [],
             },
           ],
@@ -8922,7 +8955,7 @@ const camps = {
   },
   18: {
     id: '',
-    title: '7 Days Health Camp - On Campus - English',
+    title: '7 Days - On Campus - Yoga Camp - English',
     key: '7-days-camp-english',
     join:true,
     batch: 1,
@@ -8962,7 +8995,7 @@ const camps = {
     },
     category: 'camps',
     metaDescription:
-      'Are you feeling burned out and looking for ways to develop mental strength, improve focus & emotional quotient and reduce stress? Join our 7-Days Health Camp reshape your life and health.',
+      'Are you feeling burned out and looking for ways to develop mental strength, improve focus & emotional quotient and reduce stress? Join our 7-Days Yoga Camp reshape your life and health.',
     image: `${baseDomain}${courseAssets.courseAsset34}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset34}`,
     details: [
@@ -8972,7 +9005,7 @@ const camps = {
           title: 'Overview',
           text: [
             'Are you feeling burned out and looking for ways to develop mental strength, improve focus & emotional quotient and reduce stress? Join our 7-Days Health Camp reshape your life and health.',
-            'The 7 Days Health Camp is an experiential, introductory course to Yoga theory and practice where one can get a glimpse of a yogic lifestyle within the premises of The Yoga Institute. In this program you will learn how to achieve a balance between your mind, body, and soul. Through its powerful processes, this program presents to you the possibility to access and re-configure your life and health in a way that improves productivity and imparts better control on your emotions. In this fast-paced and unwavering world, this 7 Days’ Health Camp offers you the much-needed respite to connect with yourself and experience the abundant joy and beauty in life. ',
+            'The 7 Days Health Camp is an experiential, introductory course to Yoga theory and practice where one can get a glimpse of a yogic lifestyle within the premises of The Yoga Institute. In this yoga camp you will learn how to achieve a balance between your mind, body, and soul. Through its powerful processes, this yoga program presents to you the possibility to access and re-configure your life and health in a way that improves productivity and imparts better control on your emotions. In this fast-paced and unwavering world, this 7 Days Yoga Camp offers you the much-needed respite to connect with yourself and experience the abundant joy and beauty in life.',
           ],
         },
       },
@@ -8990,7 +9023,7 @@ const camps = {
               subItems: [],
             },
             {
-              listItem: 'Kriyas',
+              listItem: 'Kriya Yoga',
               subItems: [],
             },
             {
@@ -9028,7 +9061,7 @@ const camps = {
       {
         type: 'paragraph',
         content: {
-          title: 'Benefits of this camp',
+          title: 'Benefits of this yoga camp',
           text: [],
         },
       },
@@ -9094,7 +9127,7 @@ const camps = {
         content: {
           title: '',
           text: [
-            'Trained teachers at The Yoga Institute will be conducting this course.Come and experience, amidst nature and beauty, our rejuvenating 7 Days Health Camp, which has transformed millions of people.',
+            'Trained yoga teachers at The Yoga Institute will be conducting this yoga course.Come and experience, amidst nature and beauty, our rejuvenating 7 Days Health Camp, which has transformed millions of people.',
           ],
         },
       },
@@ -9133,7 +9166,7 @@ const camps = {
         content: {
           title: '',
           text: [
-            'For registration in the 7-Days Health Camp, please click on the link below and fill in all the details. Within 24 hours after registering, you will receive an email containing the link to the payment portal. You can use the link to make the payment.',
+            'For registration in the 7-Days Yoga Camp, please click on the link below and fill in all the details. Within 24 hours after registering, you will receive an email containing the link to the payment portal. You can use the link to make the payment.',
           ],
         },
       },
@@ -9216,7 +9249,7 @@ const camps = {
           points: [
             {
               listItem:
-                'Library: Explore one of largest collections of spiritual and philosophical books to expand your knowledge ',
+                'Yoga Library: Explore one of largest collections of spiritual and philosophical books to expand your knowledge ',
               subItems: [],
             },
             {
@@ -9241,7 +9274,7 @@ const camps = {
             },
             {
               listItem:
-                'Book Store: Shop in a wide selection of TYI publications. Find yourself the best yogic attire and mats.',
+                'Yoga Book Store: Shop in a wide selection of TYI publications. Find yourself the best yogic attire and mats.',
               subItems: [],
             },
           ],
@@ -9251,7 +9284,7 @@ const camps = {
   },
   19: {
     id: '',
-    title: '21-Days BLC - Morning Online and On Campus – English - Batch 1',
+    title: '21-Days Better Living Yoga Course - Morning Online and On Campus – English - Batch 1',
     key: '21-days-better-living-course',
     // templateId: 'GENERAL_AUTO_EMAIL',
     templateId: {
@@ -9300,7 +9333,7 @@ const camps = {
         content: {
           title: 'Overview',
           text: [
-            'Become successful, healthy, stress-free, and more mindful in your relationships by learning the yogic way of living. Join The Yoga Institute’s 21-Days Better Living Course. ',
+            'Become successful, healthy, stress-free, and more mindful in your relationships by learning the yogic way of living. Join The Yoga Institute’s 21-Days Better Living Yoga Course. ',
           ],
         },
       },
@@ -9309,8 +9342,8 @@ const camps = {
         content: {
           title: '',
           text: [
-            'It takes 21 days to build a habit into your daily routine. The Yoga Institute’s 21 Days Better Living Course is a course specifically designed to introduce you to the yogic way of living. begin your journey into the discovery of Yoga. Working professionals and house makers can take just one hour from their day to practice and learn yoga and begin their transformational journey. ',
-            'This is a certificate course and has been successfully conducted for 50 years by the Institute. The program trains you holistically and enables you to achieve equilibrium between your mind and body and thus achieve a state of peace and happiness in life. The course is conducted by trained teachers at the Institute.',
+            'It takes 21 days to build a habit into your daily routine. The Yoga Institute’s 21 Days Better Living Course is a yoga course specifically designed to introduce you to the yogic way of living. begin your journey into the discovery of Yoga. Working professionals and house makers can take just one hour from their day to practice and learn yoga and begin their transformational journey. ',
+            'This is a yoga certificate course and has been successfully conducted for 50 years by the Institute. The yoga program trains you holistically and enables you to achieve equilibrium between your mind and body and thus achieve a state of peace and happiness in life. The course is conducted by trained teachers at the Institute.',
           ],
         },
       },
@@ -9324,7 +9357,7 @@ const camps = {
               subItems: [],
             },
             {
-              listItem: 'Asanas',
+              listItem: 'Yoga Asanas',
               subItems: [],
             },
             {
@@ -9407,7 +9440,7 @@ const camps = {
         content: {
           title: 'PROGRAM DETAILS',
           text: [
-            'The course is held once a month, starting on the first Sunday (7:00 a.m.) of every month. The classes are of 1 hr. 30 mins each day for 21 consecutive days. Participants can opt for the morning or evening batches.',
+            'The yoga certificate course is held once a month, starting on the first Sunday (7:00 a.m.) of every month. The yoga classes are of 1 hr 30 mins each day for 21 consecutive days. Participants can opt for the morning or evening batches.',
           ],
         },
       },
@@ -9422,7 +9455,7 @@ const camps = {
         type: 'paragraph',
         content: {
           title: 'Timings',
-          text: ['Morning 7:00 am – 8:30 am (IST)','Please Note: The first session of 21-Days BLC i.e. on Sunday will be from 8:30 am to 10:30 am. This session also includes Satsang.'],
+          text: ['Please Note: The first session of 21-Days BLC i.e. on Sunday will be from 8:30 am to 10:30 am. This yoga session also includes Satsang.'],
         },
       },
       {
@@ -9437,7 +9470,7 @@ const camps = {
         content: {
           title: '',
           text: [
-            'For registration in the 21 Days Better Living Course, please click on the link below and fill in all the details. Within 24 hours after registering, you will receive an email containing the link to the payment portal. You can use the link to make the payment.',
+            'For registration in the 21 Days Better Living Yoga Course, please click on the link below and fill in all the details. Within 24 hours after registering, you will receive an email containing the link to the payment portal. You can use the link to make the payment.',
           ],
         },
       },
@@ -9520,7 +9553,7 @@ const camps = {
         type: 'paragraph',
         content: {
           title:
-            ' 2. Can a person who has problem with sitting on the floor for a long time enroll for the course?',
+            ' 2. Can a person who has problem with sitting on the floor for a long time enroll for the yoga course?',
           text: [
             'Backrest and chairs are available on request in special and exceptional cases. – Rest and recreation are also a part of the course.',
           ],
@@ -9563,7 +9596,7 @@ const camps = {
           points: [
             {
               listItem:
-                'Library: Explore one of largest collections of spiritual and philosophical books to expand your knowledge ',
+                'Yoga Library: Explore one of largest collections of spiritual and philosophical books to expand your knowledge ',
               subItems: [],
             },
             {
@@ -9588,7 +9621,7 @@ const camps = {
             },
             {
               listItem:
-                'Book Store: Shop in a wide selection of TYI publications. Find yourself the best yogic attire and mats.',
+                'Yoga Book Store: Shop in a wide selection of TYI publications. Find yourself the best yogic attire and mats.',
               subItems: [],
             },
           ],
@@ -9598,7 +9631,7 @@ const camps = {
   },
   20: {
     id: '',
-    title: '21 Days BLC - Evening - Online & On Campus – English - Batch 2',
+    title: '21-Days Better Living Yoga Course - Evening - Online & On Campus – English - Batch 2',
     key: '21-days-better-living-course-batch-2',
     batch: 2,
     // templateId: 'GENERAL_AUTO_EMAIL',
@@ -9637,7 +9670,7 @@ const camps = {
     },
     category: 'camps',
     metaDescription:
-      `Become successful, healthy, stress-free, and more mindful in your relationships by learning the yogic way of living. Join The Yoga Institute’s 21-Days Better Living Course.¿
+      `Become successful, healthy, stress-free, and more mindful in your relationships by learning the yogic way of living. Join The Yoga Institute’s 21-Days Better Living Yoga Course.¿
       Please Note: The first session of 21-Days BLC i.e. on Sunday will be from 8:30 am to 10:30 am. This session also includes Satsang. `,
     image: `${baseDomain}${courseAssets.courseAsset35}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset35}`,
@@ -9657,7 +9690,7 @@ const camps = {
           title: '',
           text: [
             'It takes 21 days to build a habit into your daily routine. The Yoga Institute’s 21 Days Better Living Course is a course specifically designed to introduce you to the yogic way of living. begin your journey into the discovery of Yoga. Working professionals and house makers can take just one hour from their day to practice and learn yoga and begin their transformational journey. ',
-            'This is a certificate course and has been successfully conducted for 50 years by the Institute. The program trains you holistically and enables you to achieve equilibrium between your mind and body and thus achieve a state of peace and happiness in life. The course is conducted by trained teachers at the Institute.',
+            'This is a yoga certificate course and has been successfully conducted for 50 years by the Institute. The program trains you holistically and enables you to achieve equilibrium between your mind and body and thus achieve a state of peace and happiness in life. The course is conducted by trained teachers at the Institute.',
           ],
         },
       },
@@ -9671,7 +9704,7 @@ const camps = {
               subItems: [],
             },
             {
-              listItem: 'Asanas',
+              listItem: 'Yoga Asanas',
               subItems: [],
             },
             {
@@ -9745,7 +9778,7 @@ const camps = {
         content: {
           title: '',
           text: [
-            'Come and experience, amidst nature and beauty, our enriching 21 Days Better Living Course.',
+            'Come and experience, amidst nature and beauty, our enriching 21 Days Better Living yoga Course.',
           ],
         },
       },
@@ -9784,7 +9817,7 @@ const camps = {
         content: {
           title: '',
           text: [
-            'For registration in the 21 Days Better Living Course, please click on the link below and fill in all the details. Within 24 hours after registering, you will receive an email containing the link to the payment portal. You can use the link to make the payment.',
+            'For registration in the 21 Days Better Living Yoga Course, please click on the link below and fill in all the details. Within 24 hours after registering, you will receive an email containing the link to the payment portal. You can use the link to make the payment.',
           ],
         },
       },
@@ -9910,7 +9943,7 @@ const camps = {
           points: [
             {
               listItem:
-                'Library: Explore one of largest collections of spiritual and philosophical books to expand your knowledge ',
+                'Yoga Library: Explore one of largest collections of spiritual and philosophical books to expand your knowledge ',
               subItems: [],
             },
             {
@@ -9935,7 +9968,7 @@ const camps = {
             },
             {
               listItem:
-                'Book Store: Shop in a wide selection of TYI publications. Find yourself the best yogic attire and mats.',
+                'Yoga Book Store: Shop in a wide selection of TYI publications. Find yourself the best yogic attire and mats.',
               subItems: [],
             },
           ],
@@ -9945,7 +9978,7 @@ const camps = {
   },
   21: {
     id: '',
-    title: '21 Days BLC - Evening - Online & On Campus – Hindi - Batch 3',
+    title: '21-Days Better Living Yoga Course - Evening - Online & On Campus – Hindi - Batch 3',
     key: '21-days-better-living-course-batch-3',
     batch: 3,
     // templateId: 'GENERAL_AUTO_EMAIL',
@@ -9987,7 +10020,7 @@ const camps = {
         content: {
           title: 'Overview',
           text: [
-            'Become successful, healthy, stress-free, and more mindful in your relationships by learning the yogic way of living. Join The Yoga Institute’s 21-Days Better Living Course. ',
+            'Become successful, healthy, stress-free, and more mindful in your relationships by learning the yogic way of living. Join The Yoga Institute’s 21-Days Better Living Yoga Course. ',
           ],
         },
       },
@@ -9997,7 +10030,7 @@ const camps = {
           title: '',
           text: [
             'It takes 21 days to build a habit into your daily routine. The Yoga Institute’s 21 Days Better Living Course is a course specifically designed to introduce you to the yogic way of living. begin your journey into the discovery of Yoga. Working professionals and house makers can take just one hour from their day to practice and learn yoga and begin their transformational journey. ',
-            'This is a certificate course and has been successfully conducted for 50 years by the Institute. The program trains you holistically and enables you to achieve equilibrium between your mind and body and thus achieve a state of peace and happiness in life. The course is conducted by trained teachers at the Institute.',
+            'This is a yoga certificate course and has been successfully conducted for 50 years by the Institute. The yoga program trains you holistically and enables you to achieve equilibrium between your mind and body and thus achieve a state of peace and happiness in life. The course is conducted by trained teachers at the Institute.',
           ],
         },
       },
@@ -10011,7 +10044,7 @@ const camps = {
               subItems: [],
             },
             {
-              listItem: 'Asanas',
+              listItem: 'Yoga Asanas',
               subItems: [],
             },
             {
@@ -10085,7 +10118,7 @@ const camps = {
         content: {
           title: '',
           text: [
-            'Come and experience, amidst nature and beauty, our enriching 21 Days Better Living Course.',
+            'Come and experience, amidst nature and beauty, our enriching 21 Days BBetter Living Yoga Course.',
           ],
         },
       },
@@ -10094,7 +10127,7 @@ const camps = {
         content: {
           title: 'PROGRAM DETAILS',
           text: [
-            'The course is held once a month, starting on the first Sunday (7:00 a.m.) of every month. The classes are of 1 hr. 30 mins each day for 21 consecutive days. Participants can opt for the morning or evening batches.',
+            'The yoga course is held once a month, starting on the first Sunday (7:00 a.m.) of every month. The classes are of 1 hr. 30 mins each day for 21 consecutive days. Participants can opt for the morning or evening batches.',
           ],
         },
       },
@@ -10109,7 +10142,7 @@ const camps = {
         type: 'paragraph',
         content: {
           title: 'Timings',
-          text: ['Evening 6:30 pm – 8:00 pm (IST)','Please Note: The first session of 21-Days BLC i.e. on Sunday will be from 8:30 am to 10:30 am. This session also includes Satsang.'],
+          text: ['Evening 6:30 pm – 8:00 pm (IST) ( Yoga in Hindi)','Please Note: The first session of 21-Days BLC i.e. on Sunday will be from 8:30 am to 10:30 am. This session also includes Satsang.'],
         },
       },
       {
@@ -10250,7 +10283,7 @@ const camps = {
           points: [
             {
               listItem:
-                'Library: Explore one of largest collections of spiritual and philosophical books to expand your knowledge ',
+                'Yoga Library: Explore one of largest collections of spiritual and philosophical books to expand your knowledge ',
               subItems: [],
             },
             {
@@ -10275,7 +10308,7 @@ const camps = {
             },
             {
               listItem:
-                'Book Store: Shop in a wide selection of TYI publications. Find yourself the best yogic attire and mats.',
+                'Yoga Book Store: Shop in a wide selection of TYI publications. Find yourself the best yogic attire and mats.',
               subItems: [],
             },
           ],
@@ -10619,7 +10652,7 @@ const camps = {
 const classes = {
   1: {
     id: '',
-    title: 'Advance Asana Regular Class - Online (Only for TYI Teachers) ',
+    title: 'Advanced Yoga Asana Regular Class - Online (Only for TYI Teachers) ',
     key: 'advanced-regular-yoga-classes',
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
@@ -10656,8 +10689,8 @@ const classes = {
         content: {
           title: '',
           text: [
-            'So, you have finished with your basic or advanced yoga teacher training course! Good job! Now you wish to continue your association with The Yoga Institute and we have just the right offering for you. Here is an opportunity to stay updated and connected with the gurus, expert teachers, and advanced asana practices of The Yoga Institute.',
-            'This course shall help you to maintain the continuity with our TTC practices and techniques. Join us to stay with our Gurus and expert teachers forever.        ',
+            'So, you have finished with your basic or advanced yoga teacher training course! Good job! Now you wish to continue your association with The Yoga Institute and we have just the right offering for you. Here is an opportunity to stay updated and connected with the gurus, expert teachers, and advanced yoga asana practices of The Yoga Institute.',
+            'This course shall help you to maintain continuity with our Yoga TTC practices and techniques. Join us to stay with our Gurus and expert teachers forever.'
           ],
         },
       },
@@ -10666,7 +10699,7 @@ const classes = {
         content: {
           title: 'Course content',
           text: [
-            'Each session will be 1.5 hrs. ',
+            'Each yoga session will be 1.5 hrs. ',
             'First 1 hour 15 minutes will include the following practice',
             'Advanced Yoga asana and stretches',
             'Pranayam and kriyas',
@@ -10690,7 +10723,7 @@ const classes = {
   },
   2: {
     id: '',
-    title: 'Healing Movement & Rhythm - Online & On Campus ',
+    title: 'Healing Yoga Movement & Rhythm - Online & On Campus ',
     key: 'anand-sadhna',
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
@@ -10728,7 +10761,7 @@ const classes = {
         content: {
           title: '',
           text: [
-            'Harness the power of movement to unleash the power of positivity and joy in your life. Healing Movement & Rhythm is The Yoga Institute’s movement based therapy programme for stress management, emotional well-being and trauma healing.',
+            'Harness the power of movement to unleash the power of positivity and joy in your life. Healing Yoga Movement & Rhythm is The Yoga Institute’s movement based therapy programme for stress management, emotional well-being and trauma healing.',
             ' Join now if you’re looking for an immunity and vitality boost, emotional release, anxiety and anger management, glowing skin, inner radiance and enhanced creativity.',
             '#hackyourhappyhormones',
           ],
@@ -10779,7 +10812,7 @@ const classes = {
   },
   3: {
     id: '',
-    title: 'Asana Regular Classes - (Men & Women) - Online',
+    title: 'Yoga Asana Regular Classes - (Men & Women) - Online Yoga Classes',
     key: 'asana-regular-classes-online',
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
@@ -10825,7 +10858,7 @@ const classes = {
         content: {
           title: '',
           text: [
-            'Explore the world of Yoga asanas from the comfort of right where you are with our online asana classes. Whether you want to perfect your headstand or work on your splits or if you are looking for a place to begin, we have you covered. If you are goal-oriented and are looking to lose the few extra kilos or get your emotions under control or become more flexible; we can get you there as well. Join now for an exciting journey in asanas, pranayamas, yogic-lifestyle techniques and mindful living.           ',
+            'Explore the world of Yoga asanas from the comfort of right where you are with our online asana classes. Whether you want to perfect your headstand or work on your splits or if you are looking for a place to begin, we have you covered. If you are goal-oriented and are looking to lose the few extra kilos or get your emotions under control or become more flexible; we can get you there as well. Join now for an exciting journey in yoga asanas, pranayamas, yogic-lifestyle techniques and mindful living.'
           ],
         },
       },
@@ -10844,7 +10877,7 @@ const classes = {
               subItems: [],
             },
             {
-              listItem: 'Classes are conducted via live Zoom sessions.',
+              listItem: 'Online yoga classes are conducted via live Zoom sessions.',
               subItems: [],
             },
             {
@@ -10861,7 +10894,7 @@ const classes = {
           points: [
             {
               listItem:
-                'Missed classes cannot be compensated in other classes. ',
+                'Missed online yoga classes cannot be compensated in other classes. ',
               subItems: [],
             },
             {
@@ -10870,7 +10903,7 @@ const classes = {
             },
             {
               listItem:
-                'Any form of recording of these sessions is prohibited.',
+                'Any form of recording of these yoga sessions is prohibited.',
               subItems: [],
             },
             {
@@ -10992,7 +11025,7 @@ const classes = {
   },
   4: {
     id: '',
-    title: 'Asana Regular Classes for Men - On Campus  ',
+    title: 'Yoga Classes for Men  (Regular Asana) - On Campus  ',
     key: 'asana-regular-classes-on-campus',
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
@@ -11036,7 +11069,7 @@ const classes = {
         content: {
           title: '',
           text: [
-            'This is a special men-only regular asana class conducted by The Yoga Institute. The classes cover Asanas, Pranayamas, Kriyas, diet and Yogic lifestyle recommendations, personal attention on health and counselling on other aspects of life.',
+            'This is a special men-only regular yoga asana class conducted by The Yoga Institute. The yoga classes for men cover Asanas, Pranayamas, Kriyas, diet and Yogic lifestyle recommendations, personal attention on health, and counseling on other aspects of life.'
           ],
         },
       },
@@ -11045,7 +11078,7 @@ const classes = {
         content: {
           title: 'Duration',
           text: [
-            'Classes are of 1-hour duration held every Monday, Tuesday, Thursday, Friday',
+            'Yoga Classes for Men are of 1-hour duration held every Monday, Tuesday, Thursday, Friday',
             'A minimum attendance of 3 months is recommended, to experience the difference in your life. Can join on any day of the month.          ',
           ],
         },
@@ -11102,7 +11135,7 @@ const classes = {
   },
   5: {
     id: '',
-    title: 'Asana Regular Classes for Women - On Campus',
+    title: 'Yoga Classes for Women (Regular Asana) - On Campus',
     key: 'asana-regular-classes-on-campus-women',
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
@@ -11154,7 +11187,7 @@ const classes = {
         content: {
           title: '',
           text: [
-            'This is a special women-only regular asana class conducted by The Yoga Institute. The classes cover Asanas, Pranayamas, Kriyas, diet and Yogic lifestyle recommendations, personal attention on health and counselling on other aspects of life.',
+            'This is a special women-only regular yoga asana class conducted by The Yoga Institute. The yoga classes for women cover Yoga Asanas, Pranayamas, Kriyas, diet and Yogic lifestyle recommendations, personal attention on health and counselling on other aspects of life.'
           ],
         },
       },
@@ -11163,7 +11196,7 @@ const classes = {
         content: {
           title: 'Duration',
           text: [
-            'Classes are of 1-hour duration held every Monday, Tuesday, Thursday, Friday.',
+            'Yoga Classes for Women are of 1-hour duration held every Monday, Tuesday, Thursday, Friday.',
             'A minimum attendance of 3 months is recommended, to experience the difference in your life. Can join on any day of the month. ',
           ],
         },
@@ -11229,7 +11262,7 @@ const classes = {
   },
   11: {
     id: '',
-    title: 'Children\'s Regular Class - On Campus',
+    title: 'Children\'s Regular Yoga Class - On Campus',
     key: 'childrens-regular-classes',
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
@@ -11265,7 +11298,7 @@ const classes = {
         content: {
           title: '',
           text: [
-            'Introduce your child to mindfulness with our special program for children. Use the power of Yoga to improve your child’s focus, memory, discipline, determiantion and value system. The course covers simple asanas and a simple introduction to yogic philosophy through games, arts and other child-friendly activities. Ideal for children between the ages of 5-13 years and will not place any extra academic burden on the child.  Classes are conducted in Hindi and English. Parents are encouraged to be actively involved in these classes. ',
+            'Introduce your child to mindfulness with our special program for children. Use the power of Yoga to improve your child’s focus, memory, discipline, determiantion and value system. The children`s yoga classes covers simple yoga asanas and a simple introduction to yogic philosophy through games, arts and other child-friendly activities. Ideal for children between the ages of 5-13 years and will not place any extra academic burden on the child.  Children`s yoga classes are conducted in Hindi and English. Parents are encouraged to be actively involved in these for children classes. ',
           ],
         },
       },
@@ -11304,7 +11337,7 @@ const classes = {
   },
   12: {
     id: '',
-    title: 'Children\'s Weekend Class - On Campus',
+    title: 'Children\'s Weekend Yoga Class - On Campus',
     key: 'childrens-weekend-classes-on-campus',
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
@@ -11340,9 +11373,9 @@ const classes = {
         type: 'paragraph',
         content: {
           title: '',
-          text: [
-            ' Don’t let your child waste the weekend. Make the end of the week super-fun and super-special with our Weekend Yoga Class for children. Let your child explore the world of Yoga to become more grounded, friendly, less bored and more happy. The course covers simple asanas, games, arts and other child-friendly activities that introduce your child to profound Yogic ideas and a yogic lifestyle. Ideal for children between the ages of 5-13 years.',
-            'Classes are conducted in Hindi and English. ',
+          text:[
+            'Don’t let your child waste the weekend. Make the end of the week super-fun and super-special with our Weekend Yoga Class for children. Let your child explore the world of Yoga to become more grounded, friendly, less bored and more happy. The Weekend kids yoga classes cover simple asanas, games, arts and other child-friendly activities that introduce your child to profound Yogic ideas and a yogic lifestyle. Ideal for children between the ages of 5-13 years.',
+            'This kids yoga classes are conducted in Hindi and English.'
           ],
         },
       },
@@ -11373,7 +11406,7 @@ const classes = {
   },
   13: {
     id: '',
-    title: 'Meditation Foundation Course - Online ',
+    title: 'Online Meditation Course (Foundation Course)',
     key: 'meditation-foundation-course-online',
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
@@ -11421,7 +11454,7 @@ const classes = {
           title: '',
           text: [
             ' Simple recommendations are provided in these meditation workshops to demonstrate how meditation can lead to a meditative state throughout the day, assisting in job and life efficiency. Recent research has demonstrated that frequent meditation improves brain waves. ',
-            'This is a 12-session meditation course starting on the 1st of every month           ',
+            'This is a 12-session online meditation course starting on the 1st of every month           ',
           ],
         },
       },
@@ -11475,7 +11508,7 @@ const classes = {
   },
   14: {
     id: '',
-    title: 'Regular Meditation Classes - Online ',
+    title: 'Regular Online Meditation Classes',
     key: 'regular-meditation-classes-online',
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
@@ -11513,7 +11546,7 @@ const classes = {
         content: {
           title: '',
           text: [
-            'Developing your meditation practice is easier than ever before with our regular meditation practice classes. Connect with our renowned community of meditators and gurus and explore your meditation journey. You can join the Regular Meditation Practice as a beginner or as an experienced meditator. The programme helps you develop a daily habit of meditation and mindfulness. If you just can’t keep up with your meditation goals, we’ll make sure you never miss them again. You can join us any day of the week! ',
+            'Developing your meditation practice is easier than ever before with our regular meditation practice classes. Connect with our renowned community of meditators and gurus and explore your meditation journey. You can join the Regular Online Meditation Classes as a beginner or as an experienced meditator. The programme helps you develop a daily habit of meditation and mindfulness. If you just can’t keep up with your meditation goals, we’ll make sure you never miss them again. You can join us any day of the week! ',
             'Click now to meditate daily! ',
             ' Click now if you want to make bliss and calm a part of your life daily.',
           ],
@@ -11642,7 +11675,7 @@ const classes = {
         content: {
           title: '',
           text: [
-            ' Satsang is the oldest activity of the institute and it was initiated by Shri Yogendra Ji himself. Till date millions of people have benefitted from this offering of the Institute.',
+            ' Satsang is the oldest activity of the The Yoga Institute and it was initiated by Shri Yogendra Ji himself. Till date millions of people have benefitted from this offering of the Institute.',
           ],
         },
       },
@@ -11698,7 +11731,7 @@ const classes = {
   },
   16: {
     id: '',
-    title: 'Weekend Asana Classes - (Men & Women) - On Campus',
+    title: 'Weekend Yoga Asana Classes - (Men & Women) - On Campus',
     key: 'weekend-classes',
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
@@ -11735,7 +11768,7 @@ const classes = {
         content: {
           title: '',
           text: [
-            ' Struggling to meet your yoga goals during the week? No worries, we got you! You have the option to register for regular weekend yoga class with The Yoga Institute. These are regular classes for those who are unable to attend on weekdays owing to other obligations. Weekend Yoga Regular Class is an excellent course for daily yoga practise. Asanas, Pranayamas, Kriyas, and food and Yogic lifestyle suggestions are all covered in these classes. Participants are divided into groups based on their health status, and each group receives distinct training. In addition, as needed, all students receive individual attention. ',
+            'Struggling to meet your yoga goals during the week? No worries, we got you! You have the option to register for regular weekend yoga class with The Yoga Institute. These are regular weekend yoga classes for those who are unable to attend on weekdays owing to other obligations. Weekend Yoga Asana Regular Class is an excellent course for daily yoga practise. Yoga Asanas, Pranayamas, Kriyas, and food and Yogic lifestyle suggestions are all covered in these weekend yoga classes. Participants are divided into groups based on their health status, and each group receives distinct training. In addition, as needed, all students receive individual attention.'
           ],
         },
       },
@@ -11746,7 +11779,7 @@ const classes = {
           points: [
             {
               listItem:
-                ' Classes are of 1 and half hour duration held every Saturday and sunday',
+                ' Weekend Yoga Classes are of 1 and half hour duration held every Saturday and sunday',
               subItems: [],
             },
             {
@@ -11871,9 +11904,9 @@ const classes = {
         type: 'paragraph',
         content: {
           title:
-            'Few of the basic qualities we look forward to in a Sadhaka for this program are',
+            'Few of the basic qualities we look forward to in a Sadhaka for this yoga program are',
           text: [
-            'Focus for practice',
+            'Focus for yoga practice',
             'Curiosity for yogic knowledge',
             'Application of Yogic Principals in Practical life',
           ],
@@ -11886,7 +11919,7 @@ const classes = {
           points: [
             {
               listItem:
-                ' The program offers the best time for YOGASANA PRACTICE (early morning) in relation to Sattvik energy of the rising sun.',
+                ' The yoga program offers the best time for YOGASANA PRACTICE (early morning) in relation to Sattvik energy of the rising sun.',
               subItems: [],
             },
             {
@@ -11901,12 +11934,12 @@ const classes = {
             },
             {
               listItem:
-                'A balance of Asanas, Pranayamas, relaxation techniques and much more.              ',
+                'A balance of Yoga Asanas, Pranayamas, relaxation techniques and much more.              ',
               subItems: [],
             },
             {
               listItem:
-                'The class shall be a live session via the Zoom App.              ',
+                'The yoga practice class shall be a live session via the Zoom App.              ',
               subItems: [],
             },
             {
@@ -11916,7 +11949,7 @@ const classes = {
             },
             {
               listItem:
-                'This programme is open to both males and females.              ',
+                'This online yoga program is open to both males and females.              ',
               subItems: [],
             },
           ],
@@ -11968,7 +12001,7 @@ const classes = {
             },
             {
               listItem:
-                ' Rest is the same as the morning batch, a mix of philosophy and regular online asanas session.',
+                ' Rest is the same as the morning batch, a mix of philosophy and regular online yoga asanas session.',
               subItems: [],
             },
           ],
@@ -12032,7 +12065,7 @@ const classes = {
         content: {
           title: '',
           text: [
-            'Samatvam is one-of-a-kind personalised wellbeing program launched by The Yoga Institute under the guidance of Dr. Hansaji Yogendra. The program focuses on providing individual guidance for life management.',
+            'Samatvam is one-of-a-kind personalised wellbeing program launched by The Yoga Institute under the guidance of Dr. Hansaji Yogendra. The health program focuses on providing individual guidance for life management.'
           ],
         },
       },
@@ -12041,7 +12074,7 @@ const classes = {
         content: {
           title: '',
           text: [
-            'The program consists of a session conducted by Dr. Hansaji on the importance of implementing yoga in daily life. Individuals can also interact with medical experts from various fields and yoga counsellors to get the right guidance for their requirements. Every case is examined on its merit and recommendations are given accordingly. People who could benefit just by following simple yogic techniques are suggested to join specific classes or camps. Others who require medical intervention are instructed accordingly.',
+            'The health program consists of a session conducted by Dr. Hansaji on the importance of implementing yoga in daily life. Individuals can also interact with medical experts from various fields and yoga counsellors to get the right guidance for their requirements. Every case is examined on its merit and recommendations are given accordingly. People who could benefit just by following simple yogic techniques are suggested to join specific yoga classes or yoga camps. Others who require medical intervention are instructed accordingly.',
           ],
         },
       },
@@ -12050,7 +12083,7 @@ const classes = {
         content: {
           title: '',
           text: [
-            'Samatvam is an essential pre-requisite for special classes and regular weekend classes conducted at the Institute.',
+            'Samatvam is an essential pre-requisite for special yoga classes and regular weekend yoga classes conducted at the Institute.'
           ],
         },
       },
@@ -12088,7 +12121,7 @@ const classes = {
   },
   19: {
     id: '',
-    title: 'Couples’ Classes  - Online',
+    title: 'Couples’ Yoga Classes  - Online',
     key: 'couples-classes',
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
@@ -12122,9 +12155,9 @@ const classes = {
       {
         type: 'paragraph',
         content: {
-          title: 'About Couples Class',
+          title: 'About Couples Yoga Class',
           text: [
-            'Since 1973, The Yoga Institute has been conducting Couples Class to strengthen the bond, nurture the relationship, and build intimacy and trust among couples. Relationships need constant efforts from both partners and an immense amount of understanding and compatibility.',
+            'Since 1973, The Yoga Institute has been conducting Couples Yoga Class to strengthen the bond, nurture the relationship, and build intimacy and trust among couples. Relationships need constant efforts from both partners and an immense amount of understanding and compatibility.',
           ],
         },
       },
@@ -12200,7 +12233,7 @@ const classes = {
         content: {
           title: 'USP of Couples Class',
           text: [
-            'Smt. Hansaji addresses the Couples Class once a month where various topics are discussed to help the householders in their daily commitments. Lectures by eminent personalities work as guidance to the couples. Further, group discussions and personal sharing on specific topics are regular features, which have been well-appreciated by members.',
+            'Smt. Hansaji addresses the Couples Yoga Classes once a month where various topics are discussed to help the householders in their daily commitments. Lectures by eminent personalities work as guidance to the couples. Further, group discussions and personal sharing on specific topics are regular features, which have been well-appreciated by members.',
           ],
         },
       },
@@ -12252,7 +12285,7 @@ const classes = {
   },
   20: {
     id: '',
-    title: 'Weekend Asana Classes - (Men & Women) - Online',
+    title: 'Weekend Yoga Asana Classes - (Men & Women) - Online',
     key: 'weekend-classes-online',
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
@@ -12288,7 +12321,7 @@ const classes = {
         content: {
           title: '',
           text: [
-            'Struggling to meet your yoga goals during the week? No worries, we got you! You have the option to register for regular weekend yoga class with The Yoga Institute. These are regular classes for those who are unable to attend on weekdays owing to other obligations. Weekend Yoga Regular Class is an excellent course for daily yoga practice. Asanas, Pranayamas, Kriyas, and food and Yogic lifestyle suggestions are all covered in these classes. Participants are divided into groups based on their health status, and each group receives distinct training. In addition, as needed, all students receive individual attention.',
+            'Struggling to meet your yoga goals during the week? No worries, we got you! You have the option to register for regular weekend yoga asana class with The Yoga Institute. These are regular classes for those who are unable to attend on weekdays owing to other obligations. Weekend Yoga Asana Regular Class is an excellent course for daily yoga practice. Yoga Asanas, Pranayamas, Kriyas, and food and Yogic lifestyle suggestions are all covered in these weekend yoga classes. Participants are divided into groups based on their health status, and each group receives distinct training. In addition, as needed, all students receive individual attention.'
           ],
         },
       },
@@ -12299,7 +12332,7 @@ const classes = {
           points: [
             {
               listItem:
-                'Classes are of 1 and half hour duration held every Saturday and sunday',
+                'Weekend Yoga Classes are of 1 and half hour duration held every Saturday and sunday',
               subItems: [],
             },
             {
@@ -12350,7 +12383,7 @@ const classes = {
         type: 'paragraph',
         content: {
           title: '',
-          text: ['Please note : Classes will be conducted on Zoom'],
+          text: ['Please note : Yoga Classes will be conducted on Zoom'],
         },
       },
       {
@@ -12366,7 +12399,7 @@ const classes = {
   },
   21: {
     id: '',
-    title: 'Regular Pregnancy Class - Online & On Campus',
+    title: 'Regular Pregnancy Yoga Classes - Online & On Campus',
     key: 'regular-pregnacy-classes',
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
@@ -12412,7 +12445,7 @@ const classes = {
           text: [
             'Pregnancy and parenthood are the two most beautiful and crucial phases of a woman’s life.',
             'During pregnancy, a woman’s body goes through multiple changes. The techniques offered at The Yoga Institute are tailored to assist the would-be-mother to adapt to these changes, cope with her emotions, be mindful, build strength, enjoy the process, connect with the baby and be prepared to welcome the child both on mental and physical level.',
-            'So, come and join the class for a healthy and happy pregnancy and easy delivery.'
+            'So, come and join the Pregnancy Yoga classes for a healthy and happy pregnancy and easy delivery.'
           ],
         },
       },
@@ -12422,7 +12455,7 @@ const classes = {
           title: 'Class Offerings:',
           points: [
             {
-              listItem: 'Asana',
+              listItem: 'Yoga Asana',
               subItems: [],
             },
             {
@@ -12499,7 +12532,7 @@ const extra = {
 const certificate = {
   1: {
     id: '',
-    title: 'Certificate Course on Advanced Pranayama Techniques - Online',
+    title: 'Certificate Course on Advanced Pranayama Techniques (Pranayama Online Course)',
     key: 'certificate-course-on-advanced-pranayama-techniques',
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
@@ -12534,22 +12567,22 @@ const certificate = {
         content: {
           title: '',
           text: [
-            'Now that you have mastered the basics of pranayama practices, it is time to go one step ahead! The certificate course on advanced pranayama techniques by The Yoga Institute will help you get the hang of various advanced pranayama techniques along with the right teaching methodology to teach these techniques efficiently.',
-            'Pranayamas are powerful yogic breathing techniques that boost your body’s bioenergy as well as strengthen both body and mind. Maharishi Patanjali mentions in his text “Yoga Darshanam” which was written around 2500 years ago that pranayamas are powerful techniques to achieve the highest degree of awareness and profound meditative state. It prepares you for deep meditation. ',
+            'Now that you have mastered the basics of pranayama practices, it is time to go one step ahead! The certificate course on advanced pranayama techniques by The Yoga Institute will help you get the hang of various advanced pranayama techniques along with the right teaching methodology to teach these breathing techniques efficiently.',
+            'Pranayamas are powerful yogic breathing techniques that boost your body’s bioenergy as well as strengthen both body and mind. Maharishi Patanjali mentions in his text “Yoga Darshanam” which was written around 2500 years ago that pranayamas are powerful techniques to achieve the highest degree of breathe awareness and profound meditative state. It prepares you for deep meditation. ',
           ],
         },
       },
       {
         type: 'u-list',
         content: {
-          title: 'Course content',
+          title: 'Advanced Pranayama Online Course content',
           points: [
             {
               listItem: 'Knowledge of nadi system and energy channels',
               subItems: [],
             },
             {
-              listItem: 'Bandhas, mudras and mantras in pranayama practice ',
+              listItem: 'Bandha yoga, yoga mudras, and mantras in pranayama practice ',
               subItems: [],
             },
             {
@@ -12579,7 +12612,7 @@ const certificate = {
       {
         type: 'paragraph',
         content: {
-          title: 'Online Sessions',
+          title: 'Online Yoga Sessions',
           text: [
             'Mondays, Tuesdays & Thursdays: 11:30 am - 12:30 pm (IST)',
             '24 sessions of one hour each',
@@ -12598,7 +12631,7 @@ const certificate = {
         content: {
           title: 'NOTE',
           text: [
-            'THE PRINTED MANUAL IS COMPULSORY FOR ALL ASPIRING STUDENTS; HOWEVER, THE KIT IS MANDATORY BUT NOT NECESSARY TO BE BOUGHT FROM THE INSTITUTE. (THE COURIER CHARGES SHALL BE INCURRED BY THE STUDENTS.)',
+            'THE PRINTED MANUAL IS COMPULSORY FOR ALL ASPIRING YOGA STUDENTS; HOWEVER, THE KIT IS MANDATORY BUT NOT NECESSARY TO BE BOUGHT FROM THE INSTITUTE. (THE COURIER CHARGES SHALL BE INCURRED BY THE STUDENTS.)',
           ],
         },
       },
@@ -12781,7 +12814,7 @@ const certificate = {
         content: {
           title: 'Contact Details',
           text: [
-            'Yoga offers a safe, effective and low cost modality that can add considerable value to any Cancer care continuum. This program is designed to create a cadre of Yoga Professionals who are well-trained in Cancer care that is accessible and effective. The Certificate Program is a specialized Yoga module for the special needs of Cancer patients. This oncology based program trains Yoga teachers to safely and effectively work with Cancer survivors. Learn practices and techniques to address Cancer specific issues such as scar tissue, bone loss, lymphedema, weight gain, fatigue, sleeplessness and stress.',
+            'Yoga offers a safe, effective and low cost modality that can add considerable value to any Cancer care continuum. This yoga for cancer patients program is designed to create a cadre of Yoga Professionals who are well-trained in Cancer care that is accessible and effective. The Yoga Certificate Program is a specialized Yoga module for the special needs of Cancer patients. This oncology based program trains Yoga teachers to safely and effectively work with Cancer survivors. Learn yoga practices and yoga techniques to address Cancer specific issues such as scar tissue, bone loss, lymphedema, weight gain, fatigue, sleeplessness and stress.',
             'We offer a supportive and compassionate support group to understand and discuss Cancer confidently and intelligently.',
           ],
         },
@@ -12862,7 +12895,7 @@ const certificate = {
     cardImage: `${baseDomain}${courseAssets.courseAsset114}`,
     mostPopular: false,
     metaDescription:
-      'The programme includes specific asanas, pranayamas, mudras, meditation and dietary practices that will aid you in your cancer care and management',
+      'The programme includes specific yoga asanas, pranayamas, mudras, meditation and dietary practices that will aid you in your cancer care and management',
     rating: 5,
     colorCode: '#B77E7E',
     timing: 'Tuesdays to Friday: 5:00 p.m. - 7:00 p.m. (IST)',
@@ -12884,7 +12917,7 @@ const certificate = {
         content: {
           title: '',
           text: [
-            'Help boost your body’s efforts in its fight against Lung Cancer with the Yoga for Lung Cancer Programme. The programme includes specific asanas, pranayamas, mudras, meditation and dietary practices that will aid you in your cancer care and management. The theory part of the course will help you understand the anatomy and physiology of the lungs, causes of lung cancer, its symptoms and type, stages of lung cancer, treatments and side effects of treatments. The Yoga based practical part of the programme will be a holistic approach to Cancer management and care using asanas, pranayamas and dietary modifications.',
+            'Help boost your body’s efforts in its fight against Lung Cancer with the Yoga for Lung Cancer Programme. The programme includes specific yoga asanas, pranayamas, mudras, meditation and dietary practices that will aid you in your cancer care and management. The theory part of the course will help you understand the anatomy and physiology of the yoga for lungs, causes of lung cancer, its symptoms and type, stages of lung cancer, treatments and side effects of treatments. The Yoga based practical part of the programme will be a holistic approach to Cancer management and care usingc yoga asanas, pranayamas and dietary modifications.'
           ],
         },
       },
@@ -12960,7 +12993,7 @@ const certificate = {
           text: [
             'Become a certified Yoga therapist through The Yoga Institute.',
             'Complete one-stop destination to enhance your skills in Yogic Management of diseases through our YOGA THERAPY COURSE.',
-            'This is a detailed and comprehensive100 hours Yoga Therapy course wherein the lifestyle and yogic management of diseases is taught in a practical and simple manner for easy understanding and teaching. This course will qualify you to become an extremely capable and confident Yoga Therapist to handle any case.',
+            'This is a detailed and comprehensive100 hours Yoga Therapy course wherein the yogic lifestyle and yogic management of diseases is taught in a practical and simple manner for easy understanding and teaching. This yoga therapy certification course will qualify you to become an extremely capable and confident Yoga Therapist to handle any case.',
           ],
         },
       },
@@ -12977,10 +13010,10 @@ const certificate = {
               listItem:
                 'Practical application through Yogic management of each disease on the basis of',
               subItems: [
-                'Diet,',
+                'Yogic Diet,',
                 'Specific day to day care in that condition,',
-                'Relevant Asanas, Pranayamas and Kriyas',
-                'Modification and demonstration of Techniques as per the Age and Body limitations in regards specific disease.',
+                'Relevant Yoga Asanas, Pranayamas and Kriyas',
+                'Modification and demonstration of Yoga Therapy Techniques as per the Age and Body limitations in regards specific disease.',
                 'Developing proper mental attitude to tackle the health conditions',
                 'Lectures by Expert Guest Speakers from the field of Ayurveda and Specialist Doctors from various fields- for better understanding of the disease to help you design a Yoga Program for your clients.',
               ],
@@ -13006,7 +13039,7 @@ const certificate = {
             },
             {
               listItem:
-                'Students will be encouraged to apply the therapy learnt on their family and friends and prepare Case Studies of Combination Diseases to learn the practical application of the same while going through the course.',
+                'Students will be encouraged to apply the yoga therapy learnt on their family and friends and prepare Case Studies of Combination Diseases to learn the practical application of the same while going through the course.',
               subItems: [],
             },
             {
@@ -13035,7 +13068,7 @@ const certificate = {
         content: {
           title: 'Recording Policy of TYI',
           text: [
-            'The Institute retains all rights to record the live interactive sessions for their internal usage & quality purposes. These recordings are strictly for the institute and the data is stored securely in a manner that reasonably protects it from misuse and loss and from unauthorized access, modification or disclosure. Students are prohibited from recording these live sessions. We will not share any recordings with the students.',
+            'The Yoga Institute retains all rights to record the live interactive yoga sessions for their internal usage & quality purposes. These recordings are strictly for the institute and the data is stored securely in a manner that reasonably protects it from misuse and loss and from unauthorized access, modification or disclosure. Yoga Students are prohibited from recording these live sessions. We will not share any recordings with the students.'
           ],
         },
       },

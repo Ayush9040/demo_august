@@ -22,12 +22,12 @@ const CorporateWorkshop = () => {
 
   return (
     <>
-      { metaDataObj[location.pathname] && <Helmet  title={metaDataObj[location.pathname]?.title || ''}/> }
+      {metaDataObj[location.pathname] && <Helmet title={metaDataObj[location.pathname]?.title || ''} />}
       <div className='highlight-sections'>
         <InnerNavComponent abc={highlight} />
         <div className='main-container'>
           <div className='highlight-info'>
-            <h1>Corporate Workshops</h1>
+            <h1>Corporate Yoga Workshops</h1>
           </div>
           <div className='highlight-cover'>
             <img
@@ -47,14 +47,7 @@ const CorporateWorkshop = () => {
             culture and values.
           </p>
           <p>
-            A brilliantly thought-out plan to execute a campaign or manage a
-            product launch can take a toll on your physical and mental wellness.
-            Rushing to meet the deadlines can lead to stress and anxiety and
-            reduces efficiency. Doing some yoga poses or breathing exercises
-            before the start of your working day or during one can drastically
-            impact your focus and productivity. Opt for The Yoga Institute’s
-            thoughtfully designed corporate workshops on Stress Management and
-            see the difference.
+            A brilliantly thought-out plan to execute a campaign or manage a product launch can take a toll on your physical and mental wellness. Rushing to meet the deadlines can lead to stress and anxiety and reduces efficiency. Doing some yoga poses or breathing exercises before the start of your working day or during one can drastically impact your focus and productivity. Opt for The Yoga Institute’s thoughtfully designed corporate yoga workshops on Stress Management and see the difference.
           </p>
           <p>
             Yoga and meditation can effectively help your employees deal with
@@ -63,11 +56,11 @@ const CorporateWorkshop = () => {
           </p>
           <div className='details'>Details:</div>
           <p>
-            The corporate workshops are of 6 hours duration and have
-            particularly useful contents. The broad contents are as under:
+            The corporate yoga workshops are of 6 hours duration and have particularly useful contents. The broad contents are as under:
+
           </p>
           <ul>
-            <li> Related Asanas</li>
+            <li> Related Yoga Asanas</li>
             <li>Various techniques of Pranayama</li>
             <li>Conscious Relaxation Techniques</li>
             <li>
@@ -80,8 +73,9 @@ const CorporateWorkshop = () => {
             <li> Interactive games based on yogic concepts.</li>
           </ul>
           <p>
-            These workshops are unique, refreshing, and enjoyable for the
-            participants.
+
+            These yoga workshops are unique, refreshing, and enjoyable for the participants.
+
           </p>
           <p>
             We conduct these workshops at our Institute. Alternatively, we can
@@ -93,7 +87,7 @@ const CorporateWorkshop = () => {
             <div className='contact'>Contact:</div>
             <ul>
               <li>
-                Please contact our Institute and ask for “Corporate Workshops”
+                Please contact our Institute and ask for Corporate Yoga Workshops”
                 division.
               </li>
               <li>Email-address: corporate.training@theyogainstitute.org</li>

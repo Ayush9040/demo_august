@@ -44,7 +44,7 @@ const KidsCamp = () => {
             fun, creative activities. Yoga practices and technique helps in
             skill development and enhancement. It also uplifts and strengthens
             them on physical, emotional and mental level. This summer, give the
-            gift of Yoga to your children through this camp.
+            gift of Yoga to your children through this yoga for kids camp.
           </p>
         </div>
         <div className="about-section">
@@ -57,22 +57,22 @@ const KidsCamp = () => {
             develop physical and mental fitness, instill kindness and calmness.
           </p>
           <p>
-            The Camp activities are tailored to ensure that the child learns to
+            The kids yoga camp activities are tailored to ensure that the child learns to
             make optimum utilization of his/her potential. They are taught about
             importance of discipline and duty through activities, games and
-            storytelling. These techniques helps the child to understand the
+            storytelling. These yoga techniques helps the child to understand the
             true meaning of life which will help them grow and be better
             prepared for the outside world.
           </p>
           <p>
-            Additionally, the camp helps to develop the social skills of a
+            Additionally, the yoga for kids camp helps to develop the social skills of a
             child, increases their focus, sharpens their memory, improves
             immunity and behavioral skills and trains them to cope with stress.
           </p>
           <div className="sattvik-section">
             <p className="nutri-page-bold">Camp Activities</p>
             <ul>
-              <li>Asanas</li>
+              <li>Yoga Asanas</li>
               <li>Pranayamas</li>
               <li>Relaxation Techniques</li>
               <li>Concentration Techniques</li>
