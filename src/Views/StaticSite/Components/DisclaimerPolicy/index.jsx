@@ -146,7 +146,7 @@ const DisclaimerPolicy = ({
         data:{
           name: formData.name
         },
-        receivers: [formData.email,'info@yogainstitute.org']
+        receivers: [formData.email,'info@theyogainstitute.org']
       }
  
       try{
@@ -312,7 +312,7 @@ const DisclaimerPolicy = ({
             onChange={() => setDisData({ ...disData, terms: 'yes' })}
           />
 
-          <p>I have read and agree to the above terms and conditions.</p>
+          <p>I have read and agree to the above terms and conditionsterms.</p>
           {empty === 1 && (
             <small style={{ color: 'red', marginLeft: '0' }}>
               *Please agree to the condition!

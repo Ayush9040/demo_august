@@ -66,7 +66,7 @@ const SubcriptionForm = ({ packageName, packagePrice, closeForm }) => {
             data: {
               name: formData.name,
             },
-            receivers: [formData.emailId,'info@yogainstitute.org'],
+            receivers: [formData.emailId,'info@theyogainstitute.org'],
           })
           navigate('/enrollment_thankyou')
         }
