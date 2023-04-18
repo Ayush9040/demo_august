@@ -9,6 +9,7 @@ import { data } from '../../AluminiCarousel/data'
 import InnerNavComponent from '../../InnerNavComponent'
 import Heading from '../../Heading'
 import Slider from 'react-slick'
+import { Link } from 'react-router-dom'
 // import { museumAssets } from '../../../assets/images/imageAsset'
 import Blessing from '../../../assets/images/blessings.png'
 
@@ -169,7 +170,9 @@ const SingleCsr = () => {
           </p>
         </div>
         <div className="donate-btn">
-          <button className="donate-button">Donate</button>
+          <Link to = '/donation-form'>
+            <button className="donate-button">Donate</button>
+          </Link>
         </div>
       </div>
     </div>
