@@ -33,7 +33,7 @@ const IBYcourse = () => {
         <InnerNavComponent abc={highlight}/>
         <div className="main-container">
           <div className="highlight-info">
-            <h1>IBY Class (Only for TYI TTC Teachers) - Online & On Campus</h1>
+            <h1>IBY Class (Only for TYI Yoga TTC Teachers) - Online & On Campus</h1>
             <p>One of the most-awaited and popular classes of The Yoga Institute, IBY Class is back. The classes has been running for more than two decades. </p>
             <CommonBtn text='Enroll Now' buttonAction={ ()=>setOpenForm(true) }   />
           </div>
@@ -57,7 +57,7 @@ const IBYcourse = () => {
               <li><span className='nutri-page-semi-bold' > Time: </span> Every Friday, 3:30 pm to 5:00 pm (IST)</li>
               <li><span className='nutri-page-semi-bold' > Annual Fees:: </span>Rs. 2,000/-</li>
             </ul>
-            <p className='nutri-page-bold'>Open to all the teachers who have completed Basic TTC, Intermediate TTC and Advanced TTC from the institute</p>
+            <p className='nutri-page-bold'>Open to all the teachers who have completed Basic Yoga TTC, Intermediate Yoga TTC and Advanced Yoga TTC from the institute</p>
           </div>
         </div>
         

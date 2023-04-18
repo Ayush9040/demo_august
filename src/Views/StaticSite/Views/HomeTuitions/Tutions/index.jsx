@@ -47,7 +47,7 @@ const OnlineTution = () => {
             activity every week is required for maintaining optimum health.
             There is nothing better to fill those minutes with than yoga and
             meditation. Yoga makes your body more flexible, while boosting your
-            overall immunity. Asanas and breathing techniques help remove
+            overall immunity. Yoga Asanas and breathing techniques help remove
             accumulated toxins from the body and boost the nervous system.{' '}
           </p>
           <p>
@@ -58,22 +58,22 @@ const OnlineTution = () => {
           <p>
             The Yoga Institute’s online home tuition is designed to give you all
             these benefits from the comfort of your home at your convenient
-            time. These classes cover:
+            time. These yoga tuition cover:
           </p>
           <div className="online_table">
             <p>
               <ul>
-                <li>Asanas</li>
+                <li>Yoga Asanas</li>
                 <li>Pranayamas</li>
                 <li>Kriyas</li>
-                <li>Diet recommendation</li>
+                <li>Yogic Diet recommendation</li>
                 <li>Introduction to yogic lifestyle </li>
               </ul>
             </p>
 
             <p>Fees:</p>
             <p>The fee structure is as follows:</p>
-            <h2>Home Tuitions</h2>
+            <h2>Home Yoga Tuitions</h2>
             <table>
               <thead>
                 <tr>
@@ -214,7 +214,7 @@ const OnlineTution = () => {
             </ul>
           </div>
           <p>
-            For enquiries on home tuitions, you may SMS us (or drop a message on
+            For enquiries on online home tuitions, you may SMS us (or drop a message on
             WhatsApp) at +91-22-26122185, +91-22-26110506 or email us at
             info@theyogainstitute.org.
           </p>

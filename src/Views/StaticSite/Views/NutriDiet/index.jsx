@@ -167,8 +167,8 @@ const NutriDiet = () => {
         <InnerNavComponent abc={highlight} />
         <div className="main-container">
           <div className="highlight-info">
-            <h1>Nutri Diet Clinic – Achieve your goals with customized diet plans.</h1>
-            <p>Take a step for your well-being and enroll in our customized diet plans to get a holistic change in your lifestyle.</p>
+            <h1>Nutri Diet Clinic – Custom Diet Plans.</h1>
+            <p>Take a step for your well-being and enroll in our custom diet plans to get a holistic change in your lifestyle.</p>
             <div
               id="date-select-mobile"
             >
@@ -215,24 +215,24 @@ const NutriDiet = () => {
           We do not impose our decisions of “what to eat” and “what not to” on clients. We simply nudge them towards the goal, so they have faith in themselves to undergo the change and transformation.
           </p>
           <p>
-          We provide professionally supervised nutritious tailor-made diet plans as per their lifestyle. Our nutritional plans consist of well-balanced diet, homemade simple recipes and a detailed workout plan.
+          We provide professionally supervised nutritious custom diet plans as per their lifestyle. Our nutritional plans consist of well-balanced diet, homemade simple recipes and a detailed workout plan.
           </p>
           <p>
-          Our ancient scriptures lay strong emphasis on Sattvik Diet which is pure, natural, energy-containing, fresh food. The diet plans are based on these same foundations which we recommend to every individual.
+          Our ancient scriptures lay strong emphasis on Sattvik Diet which is pure, natural, energy-containing, fresh food. The custom diet plans are based on these same foundations which we recommend to every individual.
           </p>
           <div className="sattvik-section">
             <p className='nutri-page-bold' >
               Our Programs:
             </p>
             <ul>
-              <li><span className='nutri-page-semi-bold' >Shape up program</span> (weight loss/ weight gain/ muscle gain)</li>
-              <li><span className='nutri-page-semi-bold' >Hormonal imbalance program</span> (PCOS/ Thyroid)</li>
-              <li><span className='nutri-page-semi-bold' >Gut Health program</span> (acidity/ constipation/digestion issues)</li>
-              <li><span className='nutri-page-semi-bold' >Metabolic disorder program </span>(diabetes mellitus/ hypertension/ cholesterol)</li>
+              <li><span className='nutri-page-semi-bold' >Shape up program</span> (Diet plan for weight loss/ weight gain/ muscle gain)</li>
+              <li><span className='nutri-page-semi-bold' >Hormonal imbalance diet program </span> (PCOS diet plan / Thyroid diet plan)</li>
+              <li><span className='nutri-page-semi-bold' >Gut Health program</span> (acidity/digestion issues/constipation diet plan)</li>
+              <li><span className='nutri-page-semi-bold' >Metabolic disorder program </span>(diabetes mellitus/cholesterol/hypertension diet plan)</li>
               <li><span className='nutri-page-semi-bold' >Pregnancy/ lactation program </span></li>
               <li><span className='nutri-page-semi-bold' >Therapeutic plans </span> (respiratory/ gastroesophageal/ liver/ kidney)</li>
               <li><span className='nutri-page-semi-bold' >Other types of diet </span> (vegan diet/ keto diet / intermittent fasting/lactose intolerant/ gluten free diet)</li>
-              <li><span className='nutri-page-semi-bold' >Kids Nutrition</span></li>
+              <li><span className='nutri-page-semi-bold' >Nutrition for kids ( Kids diet plan)</span></li>
             </ul>
             <p className='nutri-page-bold' >
             Stepwise Process:
@@ -253,10 +253,12 @@ const NutriDiet = () => {
             </p>
             <ul>
               <li>Easy homemade recipes according to their culture.</li>
-              <li>Daily WhatsApp support (daily diet recall & instant problem solving).</li>
+              <li>Daily WhatsApp support (daily diet recall & instant problem solving & affirmations).</li>
               <li>Detailed workout regimen according to duration of selected program.</li>
               <li>Dietary therapeutic guidelines along with food avoid list.</li>
               <li>Nutritional counseling</li>
+              <li>Maintenance plan</li>
+              <li>Daily progress tracker</li>
             </ul>
             <p>
             Achieve long-term wellness through simple, cultural and holistic changes in your nutrition, eating habits and cognitive thinking.
