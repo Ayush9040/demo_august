@@ -65,7 +65,7 @@ const YogaTotalHealth = () => {
         </div>
         <div className="publication-intro">
           <div className="mag-preview">
-            <img src={`${baseDomain}${publicationAssests.publicationAssests90}`}  alt='Yoga and Total Health'/>
+            <img src={`${baseDomain}${publicationAssests.publicationAssests91}`}  alt='Yoga and Total Health'/>
           </div>
           <div className="mag-details">
             <div className="journal">
@@ -80,11 +80,11 @@ const YogaTotalHealth = () => {
 
             <div className="month-year">
               <h2 className="jouranl-title">
-              March 2023
+              April 2023
                 <div className="bottom-line"></div>
               </h2>
               <p>
-              On the occasion of International Women’s Day (8th March) - Our mother, mother-in law, grand-mother, sister, wife, daughter, grand-daughter – Let us acknowledge and be grateful for their presence and contribution in our life. And let us also help them to focus on themselves to live a healthy and balanced lifestyle – prompts a Sadhaka. Dr Jayadeva simplifies the concept of Vairagya for us in this issue… consciously giving away things that we love 😊 to someone more in need of it, than us. Hansaji encourages each one of us to focus on experiential learning, understand a few good things and put them into practice. Devdutt Pattanaik, an Indian mythologist, explains the power of repetition, that it is enlightenment – it ignites awareness so one can see what no one else can. Dive into the journal for more of the above along with our regular articles on The Yoga Sutras of Patanjali, Hatha Yoga Pradipika, Thoughts on the Gita, Yogic Ahara et cetera.
+              Dr Jayadeva explains in very simple terms how one may livehappily with acceptance of change, the only constant. The nature of the mind is to think. Hansaji clearly defines in one of her articles this month, what to think :) A senior Sadhaka fondly reminisces about Dr Jayadeva’srole in improving oneself with real life incidents. Another Sadhaka shares herinsightful experiences with respect to Tapa (fortitude), the third technique ofNiyama. Gulp down the Neem juice (recipe listed in the journal) asan immunity booster to prevent seasonal diseases. Dive in for more of the above along with our regulararticles on Hatha Yoga Pradipika, Shrimad Bhagawat Mahapurana, Yoga Sutras ofPatanjali, Thoughts on the Gita et cetera.
               </p>
             </div>
           </div>
