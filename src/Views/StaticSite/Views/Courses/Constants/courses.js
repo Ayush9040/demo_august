@@ -538,7 +538,7 @@ const ttc200hr = {
       {
         type: 'u-list',
         content: {
-          title: 'Benefits of 200 Hours Yoga Teacher Training Cours',
+          title: 'Benefits of 200 Hours Yoga Teacher Training Course',
           points: [
             {
               listItem:
