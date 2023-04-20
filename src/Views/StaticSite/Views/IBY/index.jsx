@@ -42,13 +42,14 @@ const IBYcourse = () => {
           </div>
         </div>
         <div className="about-section">
+          <p style={{ fontWeight: '700' }}>One of the most-awaited and popular classes of The Yoga Institute, IBY Class is back. The classes has been running for more than two decades.</p>
           <p> Come and immerse yourself in the in-depth knowledge of asanas, pranayamas, kriyas and meditation. This class will help you in mastering the techniques, acquiring a deeper understanding of the self, others and the universe. </p>
           <div className="sattvik-section">
             <p className='nutri-page-bold'>USP of the IBY Class:</p>
             <ul>
               <li>This class will be held by our senior teacher Ramendra Sir.</li>
-              <li>The teachers can imbibe wisdom from Dr. Hansaji’s rich experiences and teachings. </li>
-              <li>This interactive session will give participants the opportunity to get their queries resolved and get insights from Hansa Maa on various subjects. </li>
+              <li>The teachers can imbibe wisdom from Dr. Hansaji’s rich experiences and teachings.</li>
+              <li>This interactive session will give participants the opportunity to get their queries resolved and get insights from Hansa Maa on various subjects.</li>
             </ul>
 
             <p className='nutri-page-bold'> Timings & Fees (Online & On campus) </p>
