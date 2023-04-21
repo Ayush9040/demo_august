@@ -21,7 +21,7 @@ const OnlineTution = () => {
     menuColor: 'orange',
     menuItems: [],
   }
-  const [openForm,setOpenForm] = useState(false)
+  const [openForm, setOpenForm] = useState(false)
   return (
     <>
       {metaDataObj[location.pathname] && (
@@ -32,7 +32,7 @@ const OnlineTution = () => {
         <div className="main-container">
           <div className="highlight-info">
             <h1>Online Home Tuition</h1>
-            <CommonBtn text={'Enroll Now'} buttonAction={()=>setOpenForm(true)}/>
+            <CommonBtn text={'Enroll Now'} buttonAction={() => setOpenForm(true)} />
           </div>
           <div className="highlight-cover">
             <img
@@ -43,22 +43,14 @@ const OnlineTution = () => {
         </div>
         <div className="about-section">
           <p>
-            Research has shown that doing a 150-minutes of moderate intensity
-            activity every week is required for maintaining optimum health.
-            There is nothing better to fill those minutes with than yoga and
-            meditation. Yoga makes your body more flexible, while boosting your
-            overall immunity. Yoga Asanas and breathing techniques help remove
-            accumulated toxins from the body and boost the nervous system.{' '}
+            Research has shown that doing a 150-minutes of moderate intensity activity every week is required for maintaining optimum health. There is nothing better to fill those minutes with than yoga and meditation. Yoga makes your body more flexible, while boosting your overall immunity. Yoga Asanas and breathing techniques help remove accumulated toxins from the body and boost the nervous system.
+
           </p>
           <p>
-            Practicing meditation can help overcome negative emotions, destress,
-            focus, and will equip you to deal with your day-to-day problems in a
-            much more efficient manner.{' '}
+            Practicing meditation can help overcome negative emotions, destress, focus, and will equip you to deal with your day-to-day problems in a much more efficient manner.
           </p>
           <p>
-            The Yoga Institute’s online home tuition is designed to give you all
-            these benefits from the comfort of your home at your convenient
-            time. These yoga tuition cover:
+            The Yoga Institute’s online home tuition is designed to give you all these benefits from the comfort of your home at your convenient time. These yoga tuition cover:
           </p>
           <div className="online_table">
             <p>
@@ -67,7 +59,7 @@ const OnlineTution = () => {
                 <li>Pranayamas</li>
                 <li>Kriyas</li>
                 <li>Yogic Diet recommendation</li>
-                <li>Introduction to yogic lifestyle </li>
+                <li>Introduction to yogic lifestyle</li>
               </ul>
             </p>
 
@@ -181,12 +173,11 @@ const OnlineTution = () => {
           <p>
             <b>Please note:</b>
             <span>
-              For a hassle-free admission, kindly specify the following details
-              while making the payment:
+              For a hassle-free admission, kindly specify the following details while making the payment:
             </span>
           </p>
           <p>
-            – Name of the Student (In case a third party transfers the funds)
+            Name of the Student (In case a third party transfers the funds)
           </p>
           <p>– Bank Transaction UTR number</p>
           <p>– Name of the Transferee</p>
@@ -201,30 +192,24 @@ const OnlineTution = () => {
             </p>
             <ul>
               <li>
-                Full fees must be paid in advance, at the time of booking. You
-                can make account payee cheque drawn in favour of ‘International
-                Board of Yoga’. Payment by cash will not be accepted.
+                Full fees must be paid in advance, at the time of booking. You can make account payee cheque drawn in favour of ‘International Board of Yoga’. Payment by cash will not be accepted.
               </li>
               <li>The fees is non-refundable.</li>
               <li>
-                The fees quoted are for the course duration of 4 weeks (12
-                sessions) or 8 weeks (24 sessions). A maximum extension of 2
-                weeks can be considered in very special cases.
+                The fees quoted are for the course duration of 4 weeks (12 sessions) or 8 weeks (24 sessions). A maximum extension of 2 weeks can be considered in very special cases.
+
               </li>
             </ul>
           </div>
           <p>
-            For enquiries on online home tuitions, you may SMS us (or drop a message on
-            WhatsApp) at +91-22-26122185, +91-22-26110506 or email us at
-            info@theyogainstitute.org.
+            For enquiries on online home tuitions, you may SMS us (or drop a message on WhatsApp) at +91-22-26122185, +91-22-26110506 or email us at info@theyogainstitute.org.
           </p>
           <p>
-            Corporate enquiries can be addressed to
-            corporate.training@theyogainstitute.org
+            Corporate enquiries can be addressed to corporate.training@theyogainstitute.org
           </p>
         </div>
       </div>
-      {openForm && <HomeTutions/>}
+      {openForm && <HomeTutions />}
     </>
   )
 }

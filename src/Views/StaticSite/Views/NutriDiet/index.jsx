@@ -167,7 +167,7 @@ const NutriDiet = () => {
         <InnerNavComponent abc={highlight} />
         <div className="main-container">
           <div className="highlight-info">
-            <h1>Nutri Diet Clinic – Custom Diet Plans.</h1>
+            <h1>Nutri Diet Clinic – Get Your Custom Diet Plans.</h1>
             <p>Take a step for your well-being and enroll in our custom diet plans to get a holistic change in your lifestyle.</p>
             <div
               id="date-select-mobile"
@@ -200,7 +200,7 @@ const NutriDiet = () => {
             />
           </div> */}
           <p>
-          Food is an integral part of our life. It does give us energy but also affects our moods and the way we think.     In other words, “we are what we eat”.
+          Food is an integral part of our life. It does give us energy but also affects our moods and the way we think. In other words, “we are what we eat”.
           </p>
           <p>
           To lead a healthy life, we need to be aware of our body. And for that we need to keep our mind even and balanced.
@@ -209,7 +209,8 @@ const NutriDiet = () => {
           The Yoga Institute introduces Nutri Diet Clinic, a first-of-its-kind health clinic that offers individual dietary solutions not just for the body but also for the mind.
           </p>
           <p>
-          When a person comes to us for a treatment, we “LISTEN” to things that are being spoken and more importantly to things that are unsaid. We look at the root cause and analyze it with positive attitude.  With consideration, watchfulness, and patience, we understand the problem before offering any guidance.
+          When a person comes to us for a treatment, we “LISTEN” to things that are being spoken and more importantly to things that are unsaid. We look at the root cause and analyze it with positive attitude. With consideration, watchfulness, and patience, we understand the problem before offering any guidance.
+
           </p>
           <p>
           We do not impose our decisions of “what to eat” and “what not to” on clients. We simply nudge them towards the goal, so they have faith in themselves to undergo the change and transformation.
@@ -225,10 +226,10 @@ const NutriDiet = () => {
               Our Programs:
             </p>
             <ul>
-              <li><span className='nutri-page-semi-bold' >Shape up program</span> (Diet plan for weight loss/ weight gain/ muscle gain)</li>
+              <li><span className='nutri-page-semi-bold' >Shape up program </span> (Diet plan for weight loss/ weight gain/ muscle gain)</li>
               <li><span className='nutri-page-semi-bold' >Hormonal imbalance diet program </span> (PCOS diet plan / Thyroid diet plan)</li>
-              <li><span className='nutri-page-semi-bold' >Gut Health program</span> (acidity/digestion issues/constipation diet plan)</li>
-              <li><span className='nutri-page-semi-bold' >Metabolic disorder program </span>(diabetes mellitus/cholesterol/hypertension diet plan)</li>
+              <li><span className='nutri-page-semi-bold' >Gut Health program </span> ( acidity/digestion issues/ constipation diet plan)</li>
+              <li><span className='nutri-page-semi-bold' >Metabolic disorder program </span> (diabetes mellitus// cholesterol/ hypertension diet plan)</li>
               <li><span className='nutri-page-semi-bold' >Pregnancy/ lactation program </span></li>
               <li><span className='nutri-page-semi-bold' >Therapeutic plans </span> (respiratory/ gastroesophageal/ liver/ kidney)</li>
               <li><span className='nutri-page-semi-bold' >Other types of diet </span> (vegan diet/ keto diet / intermittent fasting/lactose intolerant/ gluten free diet)</li>
