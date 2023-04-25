@@ -22,14 +22,14 @@ const RelatedCourse = ({
                 return (
                   <CourseCard
                     key={i}
-                    color={item.colorCode}
+                    color={item?.colorCode}
                     index={i}
-                    courseTitle={item.title}
-                    description={item.metaDescription}
-                    path={item.key}
-                    img={item.cardImage}
-                    rating={item.rating}
-                    dates={item.dates}
+                    courseTitle={item?.title}
+                    description={item?.metaDescription}
+                    path={item?.key}
+                    img={item?.cardImage}
+                    rating={item?.rating}
+                    dates={item?.dates}
                   />
                 )
               }

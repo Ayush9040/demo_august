@@ -10503,7 +10503,7 @@ const classes = {
   2: {
     id: '',
     title: 'Healing Yoga Movement & Rhythm - Online & On Campus',
-    key: 'anand-sadhna',
+    key: 'healing-movement-and-rhythm',
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
     templateId: {
@@ -11902,7 +11902,7 @@ const classes = {
   },
   19: {
     id: '',
-    title: 'Couples’ Yoga Classes - Online',
+    title: 'Couples’ Yoga Classes  - Online',
     key: 'couples-classes',
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
@@ -11920,7 +11920,7 @@ const classes = {
       'The Yoga Institute’s Couple Class is an absolute must for anyone who is in a relationship.',
     rating: 5,
     colorCode: '#C48E8C',
-    timing: 'Last Sunday of every month from 5.00 p.m. to 7.00 p.m',
+    timing: 'Last Sunday of every month from 5.00 p.m. to 7.00 p.m.',
     fees: {
       onlineFee: 3500,
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
@@ -11938,7 +11938,7 @@ const classes = {
         content: {
           title: 'About Couples Yoga Class',
           text: [
-            'Since 1973, The Yoga Institute has been conducting Couples Yoga Classes to strengthen the bond, nurture the relationship, and build intimacy and trust among couples. Relationships need constant efforts from both partners and an immense amount of understanding and compatibility.',
+            'Since 1973, The Yoga Institute has been conducting Couples Yoga Class to strengthen the bond, nurture the relationship, and build intimacy and trust among couples. Relationships need constant efforts from both partners and an immense amount of understanding and compatibility.',
           ],
         },
       },
@@ -11949,7 +11949,7 @@ const classes = {
           text: [
             'Yoga when performed with your partner brings multiple benefits as it creates more awareness of the self and others, enhances communication and fortifies the connection. Through regular yoga practice, couples will learn to share, grow, build, trust, bond and have fun with each other.',
             'Most importantly, couples learn to give each other space when required and resolve conflicts constructively and respectfully. The Yoga Institute’s Couples Class will train you to work as one unit, work towards making your relationship better and stronger and lead a healthy and stress-free life.',
-            'The Yoga Institute’s Couples Class will cover the following topics that will help couples to make their relationship healthy and successful'
+            'The Yoga Institute’s Couples Class will cover the following topics that will help couples to make their relationship healthy and successful '
           ],
         },
       },
