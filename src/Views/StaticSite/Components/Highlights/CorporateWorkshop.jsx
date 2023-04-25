@@ -97,7 +97,7 @@ const CorporateWorkshop = () => {
     parsingAlgo()
     scrollTo(0, 0)
   }, [])
-  const options = ['1 month', '3 months', '6 months', 'Single Visit']
+  console.log(metaData) //eslint-disable-line
 
 
   return (
