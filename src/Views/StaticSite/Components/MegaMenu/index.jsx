@@ -382,13 +382,13 @@ const MegaMenu = ({ setNav }) => {
                     <li>Yog Prayas - Online</li>
                   </Link>
                   <Link onClick={() => {setNav(false)}}  to="/meditation-foundation-course-online">
-                    <li>Meditation Foundation Course - Online</li>
+                    <li>Online Meditation Course (Foundation Course)</li>
                   </Link>
                   <Link onClick={() => {setNav(false)}}  to="/regular-meditation-classes-online">
-                    <li>Regular Meditation Classes - Online</li>
+                    <li>Regular Online Meditation Classes</li>
                   </Link>
-                  <Link onClick={() => {setNav(false)}}  to="/anand-sadhna">
-                    <li>Anand Sadhna - Online & On Campus</li>
+                  <Link onClick={() => {setNav(false)}}  to="/healing-movement-and-rhythm">
+                    <li>Healing Movement and Rhythm Classes</li>
                   </Link>
                   <Link onClick={() => {setNav(false)}}  to="/couples-classes">
                     <li>Couples&apos; Classes - Online</li>
@@ -396,7 +396,7 @@ const MegaMenu = ({ setNav }) => {
                   <Link onClick={() => {setNav(false)}}  to="/IBY-course">
                     <li>IBY Class (Only for TYI TTC Teachers)</li>
                   </Link>
-                  <Link onClick={() => {setNav(false)}}  to='/regular-pregnacy-classes'><li>Regular Pregnancy Class</li></Link>
+                  <Link onClick={() => {setNav(false)}}  to='/regular-pregnacy-classes'><li>Regular Pregnancy Yoga Class - Online & On Campus</li></Link>
 
                 </ul>
               </ul>
@@ -409,24 +409,24 @@ const MegaMenu = ({ setNav }) => {
               </ul>
               <h3>CAMPS & WORKSHOPS</h3>
               <ul>
-                <Link onClick={() => {setNav(false)}}  to='/stress-management-camp'><li>Stress Management Camp</li></Link>
-                <Link onClick={() => {setNav(false)}}  to='/weight-management-workshop'><li>Weight Management Workshop</li></Link>
-                <Link onClick={() => {setNav(false)}}  to='/pregnancy-camp-for-ante-post-natal'><li>Pregnancy Camp For Ante & Post Natal</li></Link>
-                <Link onClick={() => {setNav(false)}}  to='/cardiac-hypertension-workshop'><li>Cardiac & Hypertension Workshop</li></Link>
-                <Link onClick={() => {setNav(false)}}  to='/back-joint-disorder-workshop'><li>Back & Joint Disorder Workshop</li></Link>
+                <Link onClick={() => {setNav(false)}}  to='/stress-management-camp'><li>Stress Management Yoga Camp - On Campus</li></Link>
+                <Link onClick={() => {setNav(false)}}  to='/weight-management-workshop'><li>Weight Management Yoga Workshop</li></Link>
+                <Link onClick={() => {setNav(false)}}  to='/pregnancy-camp-for-ante-post-natal'><li>Pregnancy Yoga Camp For Ante & Post Natal - On Campus</li></Link>
+                <Link onClick={() => {setNav(false)}}  to='/cardiac-hypertension-workshop'><li>Cardiac & Hypertension Yoga Workshop - On Campus</li></Link>
+                <Link onClick={() => {setNav(false)}}  to='/back-joint-disorder-workshop'><li>Back & Joint Disorder Yoga Workshop</li></Link>
                 <Link onClick={() => {setNav(false)}}  to='/pranayama-workshop'><li>Prayanama Workshop</li></Link>
-                <Link onClick={() => {setNav(false)}}  to='/womens-camp'><li>Women&apos;s Camp</li></Link>
-                <Link onClick={() => {setNav(false)}}  to='/respiratory-workshop'><li>Respiratory Workshop</li></Link>
-                <Link onClick={() => {setNav(false)}}  to='/life-management-camp'><li>Life Management Camp</li></Link> 
-                <Link onClick={() => {setNav(false)}}  to='/senior-citizen-workshop'><li>Senior citizen Workshop</li></Link>
-                <Link onClick={() => {setNav(false)}}  to='/diabetes-camp'><li>Diabetes Camp</li></Link>
+                <Link onClick={() => {setNav(false)}}  to='/womens-camp'><li>Women&apos;s Yoga Camp</li></Link>
+                <Link onClick={() => {setNav(false)}}  to='/respiratory-workshop'><li>Respiratory Yoga Workshop - On Campus</li></Link>
+                <Link onClick={() => {setNav(false)}}  to='/life-management-camp'><li>Life Management Yoga Camp - On Campus</li></Link> 
+                <Link onClick={() => {setNav(false)}}  to='/senior-citizen-workshop'><li>Senior Citizen Yoga Workshop - On Campus</li></Link>
+                <Link onClick={() => {setNav(false)}}  to='/diabetes-camp'><li>Diabetes Yoga Camp - On Campus</li></Link>
               </ul>
               <Link onClick={() => {setNav(false)}}  to='/nutri-diet'>
                 <h3 style={{ marginTop:'0.75rem' }} >NUTRI DIET CLINIC</h3></Link>
               <Link onClick={() => {setNav(false)}}  to='/corporate-workshops'>
                 <h3 style={{ marginTop:'0.75rem' }} >CORPORATE WORKSHOP</h3></Link>
               <Link onClick={() => {setNav(false)}}  to='/home-tuitions'>
-                <h3 style={{ marginTop:'0.75rem' }} >HOME TUITIONS</h3></Link>
+                <h3 style={{ marginTop:'0.75rem' }} >ONLINE HOME TUITIONS (YOGA TUITIONS)</h3></Link>
               <Link onClick={() => {setNav(false)}}  to='/kids-camp'>
                 <h3 style={{ marginTop:'0.75rem' }} >KIDS YOGA SUMMER CAMP (ON-CAMPUS)</h3></Link>
               <div

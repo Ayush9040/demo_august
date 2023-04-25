@@ -10503,7 +10503,7 @@ const classes = {
   2: {
     id: '',
     title: 'Healing Yoga Movement & Rhythm - Online & On Campus',
-    key: 'anand-sadhna',
+    key: 'healing-movement-and-rhythm',
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
     templateId: {

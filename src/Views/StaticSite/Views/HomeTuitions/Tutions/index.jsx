@@ -9,6 +9,11 @@ import { Helmet } from 'react-helmet'
 import metaDataObj from '../../../../../Constants/metaData.json'
 import CommonBtn from '../../../Components/commonbtn'
 import HomeTutions from '../Form'
+import axios from 'axios'
+import { AllCourses } from '../../Courses/Constants/courses'
+import { cmsBaseDomain } from '../../../../../Constants/appSettings'
+import RelatedBlogs from '../../Courses/Views/RelatedBlogs'
+import RelatedCourse from '../../Courses/Views/Component'
 
 const OnlineTution = () => {
   useEffect(() => {
@@ -22,6 +27,82 @@ const OnlineTution = () => {
     menuItems: [],
   }
   const [openForm, setOpenForm] = useState(false)
+  const [blogData, setBlogData] = useState([])
+  const [cardData, setCardData] = useState([])
+  const [metaData, setMetaData] = useState([])
+
+  const getBlogsData = async(posts) => {
+    const arr = []
+    for await (let item of posts) {
+      try {
+        const { data } = await axios.get(`${cmsBaseDomain}/misc/slug/${item}`)
+        arr.push(data.data)
+      } catch (err) {
+        console.log(err)
+      }
+    }
+    return arr
+  }
+
+
+  const parsingAlgo = async() => {
+    try {
+      const res = await axios.get(
+        `${cmsBaseDomain}/seometatags/?pagePath=${'home-tuitions'}`
+      )
+      let data = res.data.data.meta
+      console.log(data, 'data')
+      setCardData(res.data.data.relatedCourses.map(item => {
+        return AllCourses.find(el => el.key === item)
+      }))
+
+      setBlogData(await getBlogsData(res.data.data.relatedPosts))
+
+      let headers = {
+        title: '',
+        links: [],
+        metaData: [],
+        script: '',
+      }
+      data = data.replace(/\\n/g, '')
+      data = data.split('\n')
+      data.forEach((el) => {
+        if (el.includes('<meta') || el.includes('<link')) {
+          let obj = {}
+          let regExp = /(\S+)="[^"]*/g
+          let regexMatches = el.match(regExp)
+
+          regexMatches.map((el) => {
+            let partition = el.split('="')
+            obj[partition[0]] = partition[1].replace(/"/g, '')
+          })
+
+          if (el.includes('<meta')) headers.metaData.push(obj)
+          if (el.includes('<link')) headers.links.push(obj)
+        } else if (el.includes('<title'))
+          headers.title = el.replace('<title>', '').replace('</title>', '')
+        else if (el.includes('<script')) headers.script = el
+      })
+
+      // setTitleTag(headers.title.trim())
+      setMetaData(headers.metaData)
+    } catch (err) {
+      setBlogData([])
+      setCardData([])
+      console.log(err)
+    }
+    console.log(cardData, 'card')
+    console.log(blogData, 'blog')
+    console.log(AllCourses, 'all')
+  }
+
+  useEffect(() => {
+    parsingAlgo()
+    scrollTo(0, 0)
+  }, [])
+  const options = ['1 month', '3 months', '6 months', 'Single Visit']
+
+
   return (
     <>
       {metaDataObj[location.pathname] && (
@@ -210,6 +291,19 @@ const OnlineTution = () => {
         </div>
       </div>
       {openForm && <HomeTutions />}
+      {cardData && cardData.length > 0 && <RelatedCourse
+        title={'Related Courses'}
+        description={' lorem ipsum '}
+        cardData={cardData}
+        url={'/courses'}
+      />}
+
+      {blogData && blogData.length > 0 && <RelatedBlogs
+        title={'Related Blogs'}
+        description={' lorem ipsum '}
+        cardData={blogData}
+        url={'/blogs'}
+      />}
     </>
   )
 }
