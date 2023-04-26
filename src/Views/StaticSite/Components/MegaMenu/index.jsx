@@ -306,11 +306,11 @@ const MegaMenu = ({ setNav }) => {
                     Certificate Program on Yoga for Cancer
                   </li>
                 </Link>
-                <Link onClick={() => {setNav(false)}}  to="/certification-program-on-yoga-for-lung-cancer-online">
+                {/* <Link onClick={() => {setNav(false)}}  to="/certification-program-on-yoga-for-lung-cancer-online">
                   <li className="text-bold" >
                     Certificate Program on Yoga for Lung Cancer - Online
                   </li>
-                </Link>
+                </Link> */}
                 <Link onClick={() => {setNav(false)}}  to="/certificate-course-on-advanced-pranayama-techniques">
                   <li className="text-bold" >
                     Certificate Course on Advanced Pranayama Techniques

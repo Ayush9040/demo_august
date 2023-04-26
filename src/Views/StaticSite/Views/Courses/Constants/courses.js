@@ -12659,81 +12659,81 @@ const certificate = {
       },
     ],
   },
-  4: {
-    id: '',
-    title: 'Certificate Program on Yoga for Lung Cancer - Online',
-    key: 'certification-program-on-yoga-for-lung-cancer-online',
-    batch: 1,
-    // templateId: 'GENERAL_AUTO_EMAIL',
-    templateId: {
-      templateOnline: 'GENERAL_AUTO_EMAIL',
-      templateOffline: {
-        templateResidential: '',
-        templateNonResidential: '',
-      },
-    },
-    image: `${baseDomain}${courseAssets.courseAsset113}`,
-    cardImage: `${baseDomain}${courseAssets.courseAsset114}`,
-    mostPopular: false,
-    metaDescription:
-      'The programme includes specific yoga asanas, pranayamas, mudras, meditation and dietary practices that will aid you in your cancer care and management',
-    rating: 5,
-    colorCode: '#B77E7E',
-    timing: 'Tuesdays to Friday: 5:00 p.m. - 7:00 p.m. (IST)',
-    fees: {
-      onlineFee: 8000,
-      offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
-    },
-    category: 'certificate-course',
-    dates: [
-    ],
-    online: true,
-    onCampus: false,
-    nonResidential: false,
-    residential: false,
-    certficate: false,
-    details: [
-      {
-        type: 'paragraph',
-        content: {
-          title: '',
-          text: [
-            'Help boost your body’s efforts in its fight against Lung Cancer with the Yoga for Lung Cancer Programme. The programme includes specific yoga asanas, pranayamas, mudras, meditation and dietary practices that will aid you in your cancer care and management. The theory part of the course will help you understand the anatomy and physiology of the yoga for lungs, causes of lung cancer, its symptoms and type, stages of lung cancer, treatments and side effects of treatments. The Yoga based practical part of the programme will be a holistic approach to Cancer management and care usingc yoga asanas, pranayamas and dietary modifications.'
-          ],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'Duration',
-          text: [],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'Time',
-          text: ['Tuesdays to Friday: 5:00 p.m. - 7:00 p.m. (IST)'],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'Fees',
-          text: ['8000/-'],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'Eligibility:',
-          text: [
-            'Completion of the Basic Programme on Yoga for Cancer Rehabilitation and Recovery.',
-          ],
-        },
-      },
-    ],
-  },
+  // 4: {
+  //   id: '',
+  //   title: 'Certificate Program on Yoga for Lung Cancer - Online',
+  //   key: 'certification-program-on-yoga-for-lung-cancer-online',
+  //   batch: 1,
+  //   // templateId: 'GENERAL_AUTO_EMAIL',
+  //   templateId: {
+  //     templateOnline: 'GENERAL_AUTO_EMAIL',
+  //     templateOffline: {
+  //       templateResidential: '',
+  //       templateNonResidential: '',
+  //     },
+  //   },
+  //   image: `${baseDomain}${courseAssets.courseAsset113}`,
+  //   cardImage: `${baseDomain}${courseAssets.courseAsset114}`,
+  //   mostPopular: false,
+  //   metaDescription:
+  //     'The programme includes specific yoga asanas, pranayamas, mudras, meditation and dietary practices that will aid you in your cancer care and management',
+  //   rating: 5,
+  //   colorCode: '#B77E7E',
+  //   timing: 'Tuesdays to Friday: 5:00 p.m. - 7:00 p.m. (IST)',
+  //   fees: {
+  //     onlineFee: 8000,
+  //     offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
+  //   },
+  //   category: 'certificate-course',
+  //   dates: [
+  //   ],
+  //   online: true,
+  //   onCampus: false,
+  //   nonResidential: false,
+  //   residential: false,
+  //   certficate: false,
+  //   details: [
+  //     {
+  //       type: 'paragraph',
+  //       content: {
+  //         title: '',
+  //         text: [
+  //           'Help boost your body’s efforts in its fight against Lung Cancer with the Yoga for Lung Cancer Programme. The programme includes specific yoga asanas, pranayamas, mudras, meditation and dietary practices that will aid you in your cancer care and management. The theory part of the course will help you understand the anatomy and physiology of the yoga for lungs, causes of lung cancer, its symptoms and type, stages of lung cancer, treatments and side effects of treatments. The Yoga based practical part of the programme will be a holistic approach to Cancer management and care usingc yoga asanas, pranayamas and dietary modifications.'
+  //         ],
+  //       },
+  //     },
+  //     {
+  //       type: 'paragraph',
+  //       content: {
+  //         title: 'Duration',
+  //         text: [],
+  //       },
+  //     },
+  //     {
+  //       type: 'paragraph',
+  //       content: {
+  //         title: 'Time',
+  //         text: ['Tuesdays to Friday: 5:00 p.m. - 7:00 p.m. (IST)'],
+  //       },
+  //     },
+  //     {
+  //       type: 'paragraph',
+  //       content: {
+  //         title: 'Fees',
+  //         text: ['8000/-'],
+  //       },
+  //     },
+  //     {
+  //       type: 'paragraph',
+  //       content: {
+  //         title: 'Eligibility:',
+  //         text: [
+  //           'Completion of the Basic Programme on Yoga for Cancer Rehabilitation and Recovery.',
+  //         ],
+  //       },
+  //     },
+  //   ],
+  // },
   5: {
     id: '',
     title: 'Certificate Yoga Therapy Course - Online & On Campus',
