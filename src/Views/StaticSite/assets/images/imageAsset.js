@@ -183,8 +183,7 @@ export const courseAssets = {
   courseAsset30: '/Courses/Class/yog_prayas.jpg',
   courseAsset31: '/Courses/Class/yoga_therapy.jpg',
   courseAsset32: '/Courses/Class/yogasutra_class.jpg',
-  courseAsset67:
-    '/SEO-New-Images/Courses/advance-yoga-asana-regular-class-online-(only-for-tYI-teachers).webp',
+  courseAsset67: '/SEO-New-Images/Courses/advance-yoga-asana-regular-class-online-(only-for-tYI-teachers).webp',
   courseAsset68: '/SEO-New-Images/Courses/healing-yoga-movement-&-rythm-classes.webp',
   //courseAsset69: '/Courses/Class/Anand_Sadhna_online%20_%20On_Campus.jpeg',
   courseAsset70: '/SEO-New-Images/Courses/yoga-asana-regular-classes-for-men.webp',
@@ -2625,7 +2624,7 @@ export const santaCruz = {
 
 export const nutriDiet = {
   nutriDietMain: '/SEO-New-Images/Others/nutri-diet-get-custom-diet-plan.webp',
-  nutriDietCard: '/nutri-diet/Nutri-Diet-Clinic-Post.jpg'
+  nutriDietCard: '/SEO-New-Images/Courses/Nutri-Diet-Clinic-Post.webp'
 }
 
 export const banner = {
