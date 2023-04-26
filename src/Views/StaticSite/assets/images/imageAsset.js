@@ -140,9 +140,9 @@ export const courseAssets = {
   courseAsset4: '/Courses/detailImg.png',
   courseAsset5: '/Courses/courses_More_than_just_learning.jpg',
   // camps
-  courseAsset6: '/Courses/Camps/new43/cardiac-&-hypertension-43.png',
+  courseAsset6: '/SEO-New-Images/Courses/cardiac-_-hypertension-yoga-camp-the-yoga-institute.webp',
   courseAsset7: '/SEO-New-Images/Courses/diabetes-yoga-camp.webp',
-  courseAsset8: '/Courses/Camps/Life_Management_Camp.jpg',
+  courseAsset8: '/SEO-New-Images/Courses/life-management-yoga-camp.webp',
   courseAsset9: '/Courses/Camps/Meditation_Camp.jpg',
   courseAsset10:
     '/SEO-New-Images/Courses/orthopaedic-yoga-camp-for-back-and-joint-disorders.webp',
@@ -150,13 +150,13 @@ export const courseAssets = {
   courseAsset12: '/SEO-New-Images/Courses/senior-citizens-yoga-camp-the-yoga-institute.webp',
   courseAsset13: '/SEO-New-Images/Courses/stress-management-yoga-camp.webp',
   courseAsset14: '/SEO-New-Images/Courses/weight-management-the-yoga-institute.webp',
-  courseAsset15: '/Courses/Camps/Weight_management.jpg',
+  courseAsset15: '/SEO-New-Images/Courses/weight-management-the-yoga-institute.webp',
   courseAsset16: '/Courses/Camps/Weight_management.jpg',
   courseAsset83: '/SEO-New-Images/Courses/respiratory-yoga-workshop.webp',
   courseAsset84: '/SEO-New-Images/Courses/women-yoga-camp-the-yoga-institute.webp',
   courseAsset85: '/Courses/diet_workshp.jpg',
   courseAsset111: '/SEO-New-Images/Courses/cardiac-_-hypertension-yoga-camp-the-yoga-institute.webp',
-  courseAsset112: '/Courses/Camps/LifeMC.jpg',
+  courseAsset112: '/SEO-New-Images/Courses/life-management-yoga-camp.webp',
   courseAssets113: '/Courses/Camps/pregnacy.jpg',
   courseAssets114: '/Courses/Camps/Kid.jpg',
   courseAssets115: '/SEO-New-Images/Courses/pregnancy-yoga-camp.webp',
@@ -185,7 +185,7 @@ export const courseAssets = {
   courseAsset32: '/Courses/Class/yogasutra_class.jpg',
   courseAsset67:
     '/SEO-New-Images/Courses/advance-yoga-asana-regular-class-online-(only-for-tYI-teachers).webp',
-  courseAsset68: '/Courses/Class/Anand_Sadhna_online%20_%20On_Campus.jpeg',
+  courseAsset68: '/SEO-New-Images/Courses/healing-yoga-movement-&-rythm-classes.webp',
   //courseAsset69: '/Courses/Class/Anand_Sadhna_online%20_%20On_Campus.jpeg',
   courseAsset70: '/SEO-New-Images/Courses/yoga-asana-regular-classes-for-men.webp',
   courseAsset71: '/SEO-New-Images/Courses/asana-regular-classes_for-women.webp',
@@ -198,7 +198,7 @@ export const courseAssets = {
   courseAsset75: '/SEO-New-Images/Courses/certificate-yoga-therapy_course-online.webp',
   courseAsset76:
     '/SEO-New-Images/Courses/children-camp-the-yoga-institute.webp',
-  courseAsset77: '/SEO-New-Images/Courses/couples-yoga-classes-online-the-yoga-institute.webp',
+  courseAsset77: '/SEO-New-Images/Courses/weekend-yoga-Asana-Classes_-Men-Women.webp',
   courseAsset78: '/Courses/Class/Regular_Meditation_Classes_Online.jpeg',
   courseAsset79: '/Courses/Class/Samattvam_%28Health_Checkup%29.jpeg',
   courseAsset80: '/SEO-New-Images/Courses/Satsang.webp',
@@ -279,7 +279,7 @@ export const courseAssets = {
   //camps&worshop-card images
 
   courseAsset104: '/Courses/Camps/new11/cardiac-hypertension-workshop.jpg',
-  courseAsset105: '/Courses/Camps/new11/diabetes-camp.jpg',
+  courseAsset105: '/SEO-New-Images/Courses/diabetes-yoga-camp.webp',
   courseAsset106: '/Courses/Camps/new11/digestion-camp.jpg',
   courseAsset107: '/Courses/Camps/new11/life-management-camp.jpg',
 
@@ -2648,7 +2648,7 @@ export const nutriClinic = {
 
 export const iybCourse = {
   main: '/Courses/IBY_Course_ad_for_website.jpg',
-  mainImage: '/Courses/Regular-pregnancy-camp.jpg'
+  mainImage: '/SEO-New-Images/Courses/iby-classes-for-tyi-yoga-ttc-teacher.webp'
 }
 
 export default baseDomain
