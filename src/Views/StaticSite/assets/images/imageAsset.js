@@ -27,11 +27,11 @@ export const socialInitiativeNew = {
 }
 
 export const homeAssets = {
-  homeAsset1: '/home_page/Madhavdasji.webp',
-  homeAsset2: '/Home/Legacy/ShriYogendraj.jpg',
-  homeAsset3: '/home_page/Sitadevi.webp',
-  homeAsset4: '/home_page/Jayadeva.webp',
-  homeAsset5: '/home_page/Hansaji.webp',
+  homeAsset1: '/SEO-New-Images/Others/Madhavdasji.webp',
+  homeAsset2: '/SEO-New-Images/Others/shriyogendraji-the-yoga-institute.webp',
+  homeAsset3: '/SEO-New-Images/Others/Sitadevi.webp',
+  homeAsset4: '/SEO-New-Images/Others/Jayadeva.webp',
+  homeAsset5: '/SEO-New-Images/Others/Hansaji.webp',
   homeAsset6: '/home_page/Hrishi.webp',
   homeAsset7: '/home_page/7dayscamp_copy.webp',
   homeAsset8: '/Home/Offerings/21days.jpg',

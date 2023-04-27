@@ -114,7 +114,7 @@ const KidsCamp = () => {
           <div className="highlight-cover">
             <img
               src={`${baseDomain}${courseAssets.courseAssets116}`}
-              alt="Kids-camp-image"
+              alt="kids yoga camp the yoga institute"
             />
           </div>
         </div>
