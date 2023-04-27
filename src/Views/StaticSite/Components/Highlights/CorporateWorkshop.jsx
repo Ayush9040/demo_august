@@ -112,7 +112,7 @@ const CorporateWorkshop = () => {
           <div className='highlight-cover'>
             <img
               src={`${baseDomain}${homeAssets.homeAsset17}`}
-              alt='corporate'
+              alt='Corporate yoga workshop'
             />
           </div>
         </div>

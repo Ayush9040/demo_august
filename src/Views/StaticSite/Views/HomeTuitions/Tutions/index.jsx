@@ -118,7 +118,7 @@ const OnlineTution = () => {
           <div className="highlight-cover">
             <img
               src={`${baseDomain}${homeAssets.homeAsset15}`}
-              alt="online-tution"
+              alt="Online Yoga Tuition the yoga institute"
             />
           </div>
         </div>
