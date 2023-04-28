@@ -1,4 +1,4 @@
-import baseDomain,{ mediaAssets } from '../imageAsset'
+import baseDomain,{ mediaAssets,csrBmc } from '../imageAsset'
 
 export const harmonyImagesData=[
   `${baseDomain}${mediaAssets.mediaAsset1}`,
@@ -19,4 +19,8 @@ export const fondationDayImagesData=[
   `${baseDomain}${mediaAssets.mediaAsset12}`,
   `${baseDomain}${mediaAssets.mediaAsset13}`,
   `${baseDomain}${mediaAssets.mediaAsset14}`,
+]
+
+export const csrBmcImages =[
+  `${baseDomain}${csrBmc.bmc1}`
 ]

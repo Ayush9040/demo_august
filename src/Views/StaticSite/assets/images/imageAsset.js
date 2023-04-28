@@ -2651,4 +2651,25 @@ export const iybCourse = {
   mainImage: '/Courses/Regular-pregnancy-camp.jpg'
 }
 
+// Csr (bmc images)
+
+export const csrBmc ={
+  bmcCover : '/Social_Res/bmc-cover.webp',
+  bmc1 : '/Social_Res/bmc-1.webp',
+  bmc2 : '/Social_Res/bmc-2.webp',
+  bmc3 : '/Social_Res/bmc-3.webp',
+  bmc4 : '/Social_Res/bmc-4.webp',
+  bmc5 : '/Social_Res/bmc-5.webp',
+  bmc6 : '/Social_Res/bmc-6.webp',
+  bmc7 : '/Social_Res/bmc-7.webp',
+  bmc8 : '/Social_Res/bmc-8.webp',
+  bmc9 : '/Social_Res/bmc-9.webp',
+  bmc10 : '/Social_Res/bmc-10.webp',
+  bmc11 : '/Social_Res/bmc-11.webp',
+  bmc12 : '/Social_Res/bmc-12.webp',
+  bmc13 : '/Social_Res/bmc-13.webp',
+  bmc14 : '/Social_Res/bmc-14.webp',
+  bmc15 : '/Social_Res/bmc-15.webp',
+
+}
 export default baseDomain

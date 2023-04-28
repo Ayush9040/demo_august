@@ -1,4 +1,4 @@
-import baseDomain, { homeAssets } from '../../assets/images/imageAsset'
+import baseDomain, { homeAssets,csrBmc } from '../../assets/images/imageAsset'
 
 export const CsrIn = [
 
@@ -6,14 +6,33 @@ export const CsrIn = [
     image: `${baseDomain}${homeAssets.homeAsset10}`,
     id : 'Annam_Brahma',
     title : 'Annam Brahma',
-    description : 'India is home to 25% of the world’s hungry population. Established in 2018, Annam Brahma (Food is God), a charitable initiative from The Yoga Institute is a tribute to Dr. Jayadeva Yogendra who envisioned enriching the lives of the poor with healthy and clean Sattvik food. We aim to eradicate malnutrition, and poverty-driven hunger and change the dynamics of society. The food is prepared with less oil, spices, and fats and rather it is filled with nutrition by including ghee, dry fruits, and fresh vegetables in the preparation of the food.Every day, fresh, nutritious, healthy Sattvik food is served twice a day for 365 days to needy and poor people. Till date, more than 40 lakh meals have been distributed. Presently, this drive has been extended to ‘Annam Brahma on Wheels’ distributing food to many hospitals like VN Desai Hospital in Santacruz and Bhabha Hospital in Bandra etc. and various slums of Mumbai. Our goal for the coming year is to provide 30,000 meals in and around BMC hospitals and slum areas.'
+    description : 'India is home to 25% of the world’s hungry population. Established in 2018, Annam Brahma (Food is God), a charitable initiative from The Yoga Institute is a tribute to Dr. Jayadeva Yogendra who envisioned enriching the lives of the poor with healthy and clean Sattvik food. We aim to eradicate malnutrition, and poverty-driven hunger and change the dynamics of society. The food is prepared with less oil, spices, and fats and rather it is filled with nutrition by including ghee, dry fruits, and fresh vegetables in the preparation of the food.Every day, fresh, nutritious, healthy Sattvik food is served twice a day for 365 days to needy and poor people. Till date, more than 40 lakh meals have been distributed. Presently, this drive has been extended to ‘Annam Brahma on Wheels’ distributing food to many hospitals like VN Desai Hospital in Santacruz and Bhabha Hospital in Bandra etc. and various slums of Mumbai. Our goal for the coming year is to provide 30,000 meals in and around BMC hospitals and slum areas.',
+   
   },
 
   {
-    image: `${baseDomain}${homeAssets.homeAsset10}`,
+    image: `${baseDomain}${csrBmc.bmcCover}`,
     id : 'Yoga_Education_for_BMC_School_Children',
     title : 'Yoga Education for BMC School Children',
-    description : 'Since 1994, Yoga Education for BMC School Students has been successfully running.According to UNDP Sustainable Development Goals for 2030, Yoga Education in BMC Schools contributes to good health and well-being, as well as to improve the quality of education and reduce inequality. Healthy students are less likely to drop out of school and in the long run are better able to contribute to their countries’ development, thereby,significantly contributing to the UNDP Sustainable Development Goal of No Poverty by 2030.Yoga Education is provided to the students using an optimum mix of Yoga Asanas,Pranayamas, Kriyas and Philosophy for holistic development of the students. The sessions are a mix of practice and interactive like Yogic Games, Better Living Concepts and Story Telling.Following this program, the students observed positive changes such as reduced absenteeism &amp; aggressive behaviour, increased concentration &amp; awareness, improved physical strength,better immunity &amp; mental balance, enhanced memory &amp; brain power and boost in happiness.'
+    description : 'Since 1994, Yoga Education for BMC School Students has been successfully running. According to UNDP Sustainable Development Goals for 2030, Yoga Education in BMC Schools contributes to good health and well-being, as well as to improve the quality of education & reduce inequality. Healthy students are less likely to drop out of school and in the long run are better able to contribute to their countries development thereby, significantly contributing to the UNDP Sustainable Development Goal of No Poverty by 2030. Yoga Education is provided to the students using an optimum mix of Yoga Asanas, Kriyas Philosophy for holistic development of the students. The sessions are a mix of practice and interactive like Yogic Games, Better Living Concepts and Story Telling. Following this program, the students observed positive changes such as reduced absenteeism aggressive behaviour, increased concentration awareness, improved physical strength, better immunity mental balance and enhanced memory brain power and boost in happiness.',
+    sliderImg:[
+      `${baseDomain}${csrBmc.bmc1}`,
+      `${baseDomain}${csrBmc.bmc2}`,
+      `${baseDomain}${csrBmc.bmc3}`,
+      `${baseDomain}${csrBmc.bmc4}`,
+      `${baseDomain}${csrBmc.bmc5}`,
+      `${baseDomain}${csrBmc.bmc6}`,
+      `${baseDomain}${csrBmc.bmc7}`,
+      `${baseDomain}${csrBmc.bmc8}`,
+      `${baseDomain}${csrBmc.bmc9}`,
+      `${baseDomain}${csrBmc.bmc10}`,
+      `${baseDomain}${csrBmc.bmc11}`,
+      `${baseDomain}${csrBmc.bmc12}`,
+      `${baseDomain}${csrBmc.bmc13}`,
+      `${baseDomain}${csrBmc.bmc14}`,
+      `${baseDomain}${csrBmc.bmc15}`,
+      
+    ]
   },
 
   {
@@ -41,7 +60,7 @@ export const CsrIn = [
     image: `${baseDomain}${homeAssets.homeAsset10}`,
     id : 'Yoga_for_Transgender/LGBTQ_Community',
     title : 'Yoga for Transgender/LGBTQ Community',
-    description : '‘Yoga for Transgender/LGBTQ’ initiative was established to provide a safe and supportive space for members of the transgender and LGBTQ communities to practice yoga. They face a range of physical, emotional, and psychological challenges, and through this program, we aim to provide them with a safe and supportive space to practice Yoga and develop greater resilience and inner strength. We aim to provide an inclusive and welcoming environment where people of all genders and sexual orientations can come together to experience the physical, mental, and spiritual benefits of Yoga.The program includes Yoga and meditation sessions that are specifically designed to meet the unique needs and challenges of the transgender and LGBTQ communities. It focuses on developing physical strength and flexibility, improving breathing techniques, and cultivating mental clarity and focus. The program also includes workshops on self-awareness,mindfulness, and stress management. By practicing Yoga, individuals can connect with their bodies and cultivate a sense of inner peace and acceptance, which can help them navigate the challenges of their daily lives.'
+    description : 'Yoga for Transgender/LGBTQ initiative was established to provide a safe and supportive space for members of the transgender and LGBTQ communities to practice yoga. They face a range of physical, emotional, and psychological challenges, and through this program, we aim to provide them with a safe and supportive space to practice Yoga and develop greater resilience and inner strength. We aim to provide an inclusive and welcoming environment where people of all genders and sexual orientations can come together to experience the physical, mental, and spiritual benefits of Yoga.The program includes Yoga and meditation sessions that are specifically designed to meet the unique needs and challenges of the transgender and LGBTQ communities. It focuses on developing physical strength and flexibility, improving breathing techniques, and cultivating mental clarity and focus. The program also includes workshops on self-awareness,mindfulness, and stress management. By practicing Yoga, individuals can connect with their bodies and cultivate a sense of inner peace and acceptance, which can help them navigate the challenges of their daily lives.'
   },
 
   {

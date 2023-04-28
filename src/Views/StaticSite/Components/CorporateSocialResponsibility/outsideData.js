@@ -1,5 +1,5 @@
 
-import baseDomain , { homeAssets } from '../../assets/images/imageAsset'
+import baseDomain , { homeAssets , csrBmc } from '../../assets/images/imageAsset'
 
 const CsrOut = [
   
@@ -12,7 +12,7 @@ const CsrOut = [
   },
    
   {
-    image: `${baseDomain}${homeAssets.homeAsset10}`,
+    image: `${baseDomain}${csrBmc.bmcCover}`,
     id : 'Yoga_Education_for_BMC_School_Children',
     title : 'Yoga Education for BMC School Children',
     description : 

@@ -43,10 +43,11 @@
       .image-container {
         width: 40%;
         padding: 0 2.5rem;
+        
         img {
           width: 100%;
           border-radius: 0px 150px 0px 150px;
-          
+          margin-top: 1rem;  
         }
       }
       .orderOne{
@@ -74,16 +75,17 @@
           font-size: 1.8rem;
         }
         .last-btn {
-          padding-top: 3rem;
+          padding-top: 2rem;
           .btn-div {
-            border: 3px solid black;
+            border: 2px solid rgb(65, 60, 52);
             padding: 15px;
             border-radius: 30px;
+            
             .view_btn {
               background: transparent;
             }
             button {
-              font-size: 2rem;
+              font-size: 1.75rem;
               border: none;
               cursor: pointer;
             }

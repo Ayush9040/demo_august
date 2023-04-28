@@ -11,10 +11,11 @@ import { AnonymousDonation, donationPaymentOrder, successMail } from './api'
 import Loader from '../Loader'
 
 
-const DonationForm = () => {
+const DonationForm = ( { csrId } ) => {
 
   const navigate = useNavigate()
-
+  console.log( csrId ,'csrId')
+  
   useEffect(() => {
     const script = document.createElement('script')
     script.src = 'https://checkout.razorpay.com/v1/checkout.js'
@@ -93,6 +94,7 @@ const DonationForm = () => {
           }  
         )
         const paymentOrderResponse = await donationPaymentOrder(data.data._id, {
+          
           amount: formData.amount,
           donationFormId: data.data._id,
           currency: values.country.currency !== 'INR' ? 'USD' : 'INR',
@@ -100,6 +102,7 @@ const DonationForm = () => {
             description: 'DONATION TRANSACTION',
             donationFormId: data.data._id
           }
+          
         })
         if (!paymentOrderResponse?.data?.amount && !paymentOrderResponse?.data?.id)
           return 0
@@ -128,6 +131,7 @@ const DonationForm = () => {
                 receivers: [formData.email,'info@theyogainstitute.org'],
               })
               navigate('/donation')
+
             }
           },
           prefill: {
