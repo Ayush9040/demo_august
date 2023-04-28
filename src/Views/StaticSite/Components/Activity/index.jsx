@@ -69,11 +69,13 @@ const Activity = () => {
               return (
                 <Activitycard
                   key={i}
+                  id={item.id}
                   title={item.title}
                   images={item.image}
                   description={item.description}
                   url={item.url}
                 />
+                
               )
             })}
           </Slider>
