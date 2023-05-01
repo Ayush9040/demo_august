@@ -926,10 +926,7 @@ export const publicationAssests = {
   ythAssets93: '/home_page/Yogasattva-Feb-2023.webp',
   ythAssets94: '/home_page/Yogasattva-Mar-2023.webp',
   ythAssets97: '/SEO-New-Images/Yogsattva/Yogasattva-April2023-the-yoga-institute.webp',
-  //Library
-  libraryAsset: '/Publications/Library/hero.jpg',
-
-  //yogasattava
+  ythAssets98: '/Publications/Yogsattava/PreviousIssues/2023/Yogasattva May 2023 first page.jpg',
 
   //2017
 

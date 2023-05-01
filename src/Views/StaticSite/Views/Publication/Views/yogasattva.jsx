@@ -332,6 +332,10 @@ const Yogasattva = () => {
     ],
     2023: [
       {
+        img: `${baseDomain}${publicationAssests.ythAssets98}`,
+        pdf: `${baseDomain}/books/2023/Yogasattva May 2023.pdf`,
+      },
+      {
         img: `${baseDomain}${publicationAssests.ythAssets97}`,
         pdf: `${baseDomain}/books/2023/Yogasattva-April2023.pdf`,
       },
