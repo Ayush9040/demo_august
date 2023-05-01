@@ -3876,9 +3876,17 @@ const ttc900hr = {
     ],
     teaching: [
       {
+        type:'paragraph',
+        content:{
+          title:'Note: For the month of May, it will be a holiday and no classes will be held.',
+          text:[],
+        },
+      },
+      {
         type: 'u-list',
 
         content: {
+          
           title: 'Course Attendance Criteria',
 
           points: [
