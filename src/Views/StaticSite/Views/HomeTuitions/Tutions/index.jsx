@@ -112,7 +112,7 @@ const OnlineTution = () => {
         <InnerNavComponent abc={highlight} />
         <div className="main-container">
           <div className="highlight-info">
-            <h1>Online Home Tuition</h1>
+            <h1>Online Home Tuition (Yoga Tuition)</h1>
             <CommonBtn text={'Enroll Now'} buttonAction={() => setOpenForm(true)} />
           </div>
           <div className="highlight-cover">

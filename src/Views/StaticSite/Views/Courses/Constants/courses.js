@@ -3328,7 +3328,7 @@ const ttc900hr = {
         content: {
           title: '',
 
-          tableHeading: ['Details', 'Marks', 'Minimum Score Req.'],
+          tableHeading: ['Details', 'Marks', 'Minimum Score Req.', ''],
 
           tableData: [
             [
@@ -3964,7 +3964,7 @@ const ttc900hr = {
         content: {
           title: '',
 
-          tableHeading: ['Details', 'Marks', 'Minimum Score Req.'],
+          tableHeading: ['Details', 'Marks', 'Minimum Score Req.',''],
 
           tableData: [
             [
@@ -4638,7 +4638,7 @@ const ttc900hr = {
         content: {
           title: '',
 
-          tableHeading: ['Details', 'Marks', 'Minimum Score Req.'],
+          tableHeading: ['Details', 'Marks', 'Minimum Score Req.', ''],
 
           tableData: [
             [
@@ -5281,7 +5281,7 @@ const ttc900hr = {
         content: {
           title: '',
 
-          tableHeading: ['Details', 'Marks', 'Minimum Score Req.'],
+          tableHeading: ['Details', 'Marks', 'Minimum Score Req.', ''],
 
           tableData: [
             [
@@ -5914,7 +5914,7 @@ const ttc900hr = {
         content: {
           title: '',
 
-          tableHeading: ['Details', 'Marks', 'Minimum Score Req.'],
+          tableHeading: ['Details', 'Marks', 'Minimum Score Req.',''],
 
           tableData: [
             [
@@ -7338,7 +7338,7 @@ const camps = {
 
   9: {
     id: '',
-    title: 'Pranayama Yoga Workshop',
+    title: 'Pranayama Workshop',
     key: 'pranayama-workshop',
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
@@ -8832,7 +8832,7 @@ const camps = {
               subItems: [],
             },
             {
-              listItem: 'Yogic concepts',
+              listItem: 'Kriya Yoga',
               subItems: [],
             },
             {
@@ -11046,7 +11046,7 @@ const classes = {
   },
   11: {
     id: '',
-    title: 'Children\'s Regular Yoga Class - On Campus',
+    title: 'Children\'s Yoga Classes (Regular) - On Campus',
     key: 'childrens-regular-classes',
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
