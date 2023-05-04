@@ -32,7 +32,7 @@ const SingleCsr = () => {
     arrows: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 7,
+    slidesToShow: 4,
     slidesToScroll: 1,
     centerPadding: '0px',
     autoplay: false,

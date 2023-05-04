@@ -28,14 +28,28 @@
   width: 85%;
   margin-left: 8rem;
   margin-top: 1rem;
+  // background-color: #CC4625;
   .slick-next{
     right:1rem;
+    // font-size: 25px;
+  }
+  .slick-prev{
+    left: 0.5rem;
+    z-index: 999;
+  }
+  .slick-prev:before{
+    font-size: 25px;
+   
+  }
+  .slick-next:before{
+    font-size: 25px;
   } 
   .options {
   // padding:5px;
+  
   // gap: 25px;
   .blessing {
-    width: 208px;
+    width: 369px;
     height: 369px;
     // padding: 0.6rem;
   }
@@ -57,8 +71,6 @@
         margin-top: 0.3rem;
        }
     }
-   
-   
   }
 }
 
