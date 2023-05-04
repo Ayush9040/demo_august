@@ -4,7 +4,7 @@ import baseDomain , { homeAssets , csrBmc } from '../../assets/images/imageAsset
 const CsrOut = [
   
   {
-    image: `${baseDomain}${homeAssets.homeAsset10}`,
+    image: `${baseDomain}${csrBmc.abCover}`,
     id : 'Annam_Brahma',
     title : 'Annam Brahma',
     description : 
@@ -20,7 +20,7 @@ const CsrOut = [
   },
 
   {
-    image: `${baseDomain}${homeAssets.homeAsset10}`,
+    image: `${baseDomain}${csrBmc.yfskCover}`,
     id : 'Yoga_for_Children_with_Special_Needs',
     title : 'Yoga for Children with Special Needs',
     description : 
@@ -28,7 +28,7 @@ const CsrOut = [
   },
 
   {
-    image: `${baseDomain}${homeAssets.homeAsset10}`,
+    image: `${baseDomain}${csrBmc.taCover}`,
     id : 'Truck_asana',
     title : 'Truckasana',
     description : 
@@ -44,15 +44,15 @@ const CsrOut = [
   },
 
   {
-    image: `${baseDomain}${homeAssets.homeAsset10}`,
-    id : 'Yoga_for_Transgender/LGBTQ_Community',
+    image: `${baseDomain}${csrBmc.transCover}`,
+    id : 'Yoga_for_Transgender',
     title : 'Yoga for Transgender/LGBTQ Community',
     description : 
     'The Yoga Institute believes that everyone deserves to be treated with respect and dignity and promotes Yoga for everyone. Through practice of various yogic techniques and pranayamas and orientation of need and benefits of Yoga, we help them in improving their physical, mental and emotional health. LGBTQ people don’t frequently discuss psychological well-being and may need mindfulness about emotional well-being conditions. Hence, through these sessions, they have benefitted greatly and have expressed a strong desire to learn Yoga more frequently.'
   },
 
   {
-    image: `${baseDomain}${homeAssets.homeAsset10}`,
+    image: `${baseDomain}${csrBmc.tpCover}`,
     id : 'Tree_Plantation',
     title : 'Tree Plantation',
     description :
@@ -60,7 +60,7 @@ const CsrOut = [
   },
 
   {
-    image: `${baseDomain}${homeAssets.homeAsset10}`,
+    image: `${baseDomain}${csrBmc.kycCover}`,
     id : 'Skill_Development',
     title : 'Skill Development',
     description :
