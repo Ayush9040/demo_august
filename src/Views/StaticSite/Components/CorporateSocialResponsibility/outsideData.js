@@ -36,7 +36,7 @@ const CsrOut = [
   },
 
   {
-    image: `${baseDomain}${homeAssets.homeAsset10}`,
+    image: `${baseDomain}${csrBmc.policeCover}`,
     id : 'Yoga_for_Police',
     title : 'Yoga for Police',
     description :

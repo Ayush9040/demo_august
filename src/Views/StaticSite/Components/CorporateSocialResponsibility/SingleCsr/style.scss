@@ -1,21 +1,22 @@
 
+.main-container{
 .title-heading{
   padding-bottom: 2rem;
   &>.heading-container{
-    margin-left: 14rem;
+    margin-left: 11rem;
     margin-top: 4rem;
   }}
   .content-container{
     display: flex;
-    margin-left: 14rem;
-    gap: 5rem;
+    margin-left: 11rem;
+    gap: 6rem;
     .text-container{
-    width: 38%;
+    width: 39%;
     font-size: 1.75rem;
     }
     .image-con{
-     &>img{
-      width: 750px;
+     .img{
+      width: 770px;
       height: 600px;
       border-radius: 50px;
       border-bottom: 50px;  
@@ -25,13 +26,11 @@
 
   .slide {
   padding: 1.5%;
-  width: 85%;
-  margin-left: 8rem;
+  width: 86%;
+  margin-left: 8.5rem;
   margin-top: 1rem;
-  // background-color: #CC4625;
   .slick-next{
-    right:1rem;
-    // font-size: 25px;
+    right:1.5rem;
   }
   .slick-prev{
     left: 0.5rem;
@@ -46,12 +45,9 @@
   } 
   .options {
   // padding:5px;
-  
-  // gap: 25px;
   .blessing {
     width: 369px;
     height: 369px;
-    // padding: 0.6rem;
   }
   }
   }
@@ -88,7 +84,6 @@
   }
 }
 .donate-btn{
-  // border: 1px solid red;
   display: flex;
   justify-content: center;
   padding: 2rem;
@@ -101,17 +96,213 @@
   background-color: #CC4625;
   color: white;
   font-size: larger;
+  cursor: pointer;
 }
 
 }
 .alumini-carousel-data{
  padding: 2rem;
-
-
 .carousel-head{
   display: flex;
   justify-content: center;
   font-size: x-large;
   font-weight: bolder;
 }
+}
+}
+
+@media only screen and (max-width:576px) {
+  .main-container{
+    .title-heading{
+      // margin: 2rem;
+    }
+    .content-container{
+      display: block;
+      
+      .text-container{
+       width:70%;
+      }
+      .image-con{
+        .img{
+          width: 25rem;
+          height: 20rem;
+        }
+      }
+    }
+    .slide{
+      width: 70%;
+      .options-container{
+        .options{
+          width: 20px;
+        }
+      }
+    }
+    .arrows{
+      .alumini-carousel-detail{
+      .carousel-head{
+        width: 200px;
+      }
+    }
+    }
+    .support{
+      width: 90%;
+    }
+  }
+}
+
+
+@media only screen and (max-width:768px) {
+  .main-container{
+    .title-heading{
+      // margin: 2rem;
+    }
+    .content-container{
+      display: block;
+      
+      .text-container{
+       width:73%;
+      }
+      .image-con{
+        padding-top: 2rem;
+        img{
+          width: 55rem;
+          height: 38rem;
+        }
+      }
+    }
+    .slide{
+      width: 70%;
+      .options-container{
+        .options{
+          width: 20px;
+        }
+      }
+    }
+    .back-caraousel{
+     .carousel-heading{
+      margin-right: 10rem;
+     }
+    
+    .arrows{
+      width: 100%;
+      
+      .alumini-carousel-detail{
+      .carousel-text{
+        margin-right: 2rem;
+      }
+    }
+    }
+    .support{
+      .support-head{
+        margin-right: 6rem;
+      }
+    }
+  }
+  .support{
+    margin-left: 11rem;}
+}
+}
+
+//
+@media only screen and (max-width:992px) {
+  .main-container{
+    .title-heading{
+      margin-left: 22rem;
+    }
+    .content-container{
+      display: block;
+      
+      .text-container{
+       width:88% ;
+      }
+      .image-con{
+        padding-top: 2rem;
+        img{
+          width: 70rem;
+          height: 50rem;
+        }
+      }
+    }
+    .slide{
+      width: 80%;
+      .options-container{
+        .options{
+          width: 20px;
+        }
+      }
+    }
+    .back-caraousel{
+     .carousel-heading{
+      margin-right: 10rem;
+     }
+    
+    .arrows{
+      width: 100%;
+      
+      .alumini-carousel-detail{
+      .carousel-text{
+        margin-right: 2rem;
+      }
+    }
+    }
+    .support{
+      .support-head{
+        margin-right: 6rem;
+      }
+    }
+  }
+  .support{
+    margin-left: 18rem;}
+}
+
+}
+///
+@media only screen and (max-width:1200px) {
+  .main-container{
+    .title-heading{
+      // margin-left: 35rem;
+    }
+    .content-container{
+      display: block;
+      
+      .text-container{
+       width:88% ;
+      }
+      .image-con{
+        padding-top: 2rem;
+        img{
+          width: 95rem;
+          height: 57rem;
+        }
+      }
+    }
+    .slide{
+      width: 83%;
+      .options-container{
+        .options{
+          // width: 200px;
+        }
+      }
+    }
+    .back-caraousel{
+     .carousel-heading{
+      margin-right: 10rem;
+     }
+    
+    .arrows{
+      width: 100%;
+      
+      .alumini-carousel-detail{
+      .carousel-text{
+        margin-right: 2rem;
+      }
+    }
+    }
+    }
+  
+  .support
+  {
+    margin-left: 30rem;}
+}
+
 }

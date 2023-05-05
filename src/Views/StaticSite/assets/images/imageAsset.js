@@ -2795,5 +2795,28 @@ export const csrBmc ={
   kyc6 : '/Csr-kyc/kyc6.webp',
   kyc7 : '/Csr-kyc/kyc7.webp',
 
+  //Yoga for police
+  policeCover : '/Csr-police/policeCover.webp',
+  police1 : '/Csr-police/police1.webp',
+  police2 : '/Csr-police/police2.webp',
+  police3 : '/Csr-police/police3.webp',
+  police4 : '/Csr-police/police4.webp',
+  police5 : '/Csr-police/police5.webp',
+  police6 : '/Csr-police/police6.webp',
+  police7 : '/Csr-police/police7.webp',
+  police8 : '/Csr-police/police8.webp',
+  police9 : '/Csr-police/police9.webp',
+  police10 : '/Csr-police/police10.webp',
+  police11 : '/Csr-police/police11.webp',
+  police12 : '/Csr-police/police12.webp',
+  police13 : '/Csr-police/police13.webp',
+  police14 : '/Csr-police/police14.webp',
+  police15 : '/Csr-police/police15.webp',
+  police16 : '/Csr-police/police16.webp',
+  police17 : '/Csr-police/police17.webp',
+  police18 : '/Csr-police/police18.webp',
+ 
+
+
 }
 export default baseDomain

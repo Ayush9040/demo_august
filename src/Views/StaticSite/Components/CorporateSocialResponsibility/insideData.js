@@ -133,10 +133,32 @@ export const CsrIn = [
   },
 
   {
-    image: `${baseDomain}${homeAssets.homeAsset10}`,
+    image: `${baseDomain}${csrBmc.policeCover}`,
     id : 'Yoga_for_Police',
     title : 'Yoga for Police',
-    description : 'Police officers face a high level of stress in their line of duty, and the ‘Yoga for Police’ initiative provides them with a practical and effective way to manage that stress. It provides the police personnel with the tools to manage their stress levels and improve their overall health and performance. It includes a series of Yoga and meditation sessions that are specially designed to meet the needs of police officers. This was done in an effort to overcome stress and stress-related illnesses like heart disease, asthma, obesity, diabetes, headaches,depression, and anxiety.These sessions focus on developing physical strength and flexibility, improving breathing techniques, and cultivating mental clarity and focus. The Yoga Institute&#39;s Yoga for Police initiative is a unique and innovative approach to promoting the well-being of police officers, and it has received widespread recognition and support from law enforcement agencies and officials since its inception in 2008. By empowering police officers with the tools to manage their stress and improve their overall health, the initiative is helping to create a safer and healthier environment for both police officers and the communities they serve.'
+    description : 'Police officers face a high level of stress in their line of duty, and the ‘Yoga for Police’ initiative provides them with a practical and effective way to manage that stress. It provides the police personnel with the tools to manage their stress levels and improve their overall health and performance. It includes a series of Yoga and meditation sessions that are specially designed to meet the needs of police officers. This was done in an effort to overcome stress and stress-related illnesses like heart disease, asthma, obesity, diabetes, headaches,depression, and anxiety.These sessions focus on developing physical strength and flexibility, improving breathing techniques, and cultivating mental clarity and focus. The Yoga Institute&#39;s Yoga for Police initiative is a unique and innovative approach to promoting the well-being of police officers, and it has received widespread recognition and support from law enforcement agencies and officials since its inception in 2008. By empowering police officers with the tools to manage their stress and improve their overall health, the initiative is helping to create a safer and healthier environment for both police officers and the communities they serve.',
+    sliderImg : [
+      `${baseDomain}${csrBmc.police1}`,
+      `${baseDomain}${csrBmc.police2}`,
+      `${baseDomain}${csrBmc.police3}`,
+      `${baseDomain}${csrBmc.police4}`,
+      `${baseDomain}${csrBmc.police5}`,
+      `${baseDomain}${csrBmc.police6}`,
+      `${baseDomain}${csrBmc.police7}`,
+      `${baseDomain}${csrBmc.police8}`,
+      `${baseDomain}${csrBmc.police9}`,
+      `${baseDomain}${csrBmc.police10}`,
+      `${baseDomain}${csrBmc.police11}`,
+      `${baseDomain}${csrBmc.police12}`,
+      `${baseDomain}${csrBmc.police13}`,
+      `${baseDomain}${csrBmc.police14}`,
+      `${baseDomain}${csrBmc.police15}`,
+      `${baseDomain}${csrBmc.police16}`,
+      `${baseDomain}${csrBmc.police17}`,
+      `${baseDomain}${csrBmc.police18}`,
+      
+
+    ]
   },
 
   {
