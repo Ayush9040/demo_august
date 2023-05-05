@@ -11420,10 +11420,10 @@ const classes = {
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
     templateId: {
-      templateOnline: 'GENERAL_AUTO_EMAIL',
+      templateOnline: 'SATSANG_FORM_CONFIRMATION_MAIL',
       templateOffline: {
-        templateResidential: '',
-        templateNonResidential: '',
+        templateResidential: 'SATSANG_FORM_CONFIRMATION_MAIL',
+        templateNonResidential: 'SATSANG_FORM_CONFIRMATION_MAIL',
       },
     },
     image: `${baseDomain}${courseAssets.courseAsset80}`,
