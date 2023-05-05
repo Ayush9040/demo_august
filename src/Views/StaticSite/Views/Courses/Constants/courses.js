@@ -11451,7 +11451,7 @@ const classes = {
         content: {
           title: '',
           text: [
-            'Satsang is the word derived from Sanskrit language where ‘Sat’ means “the ideal; pure and true essence” and ‘Sang’ meaning “association”.',
+            'The Yoga Institute’s Founder, Shri Yogendraji introduced Satsang with an objective for people to come together and find solutions for their worldly problems. It takes place on Sundays and is open to all so that everyone can benefit from the 1-hour session.',
           ],
         },
       },
@@ -11460,7 +11460,15 @@ const classes = {
         content: {
           title: '',
           text: [
-            'Satsang is the oldest activity of The Yoga Institute and it was initiated by Shri Yogendra Ji himself. Till date millions of people have benefitted from this offering of the Institute.',
+            'The highlighted aspect of Satsang is a discourse by the Spiritual Guru and Director of TYI, Dr. Hansaji whoshares her enlightening wisdom on various topics including health &amp; wellness, relationships, career, food,parenting, family and so on. Through her compassionate and personalized approach, Dr. Hansaji has helped countless individuals overcome their challenges and find greater health and well-being.'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: [
+            'You can get your queries resolved by Dr. Hansaji as she is dedicated to helping you find the support and guidance you need to thrive. She helps people solve their problems by focusing on the root cause of their issues, rather than simply addressing symptoms. She understands that many physical and emotional problems are interconnected and that by addressing the underlying causes, individuals can experience long-term relief.',
           ],
         },
       },
@@ -11469,16 +11477,7 @@ const classes = {
         content: {
           title: '',
           text: [
-            'At the Yoga institute we live up to the true essence of Satsang in the presence of Dr Hansaji Yogendra. Hansaji’s profound discourses enhances and enriches the lives of all who attend it and it provides an opportunity to stay connected with wisdom.',
-          ],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: '',
-          text: [
-            'Her Satsang helps bring positivity and awareness into our lives. She shares profound wisdom of the ancient scriptures and a yogic way of living which enhances the lives of all the satsangis and is relevant in the present time and age.',
+            'Yoga is a powerful tool for managing physical, mental and emotional challenges and helping individuals find greater peace and balance in their lives. Satsang helps bring positivity and awareness into our lives. Dr. Hansaji shares profound wisdom of the ancient scriptures and a Yogic way of living which enhances the lives of all the satsangis and is relevant in the present time and age.',
           ],
         },
       },
