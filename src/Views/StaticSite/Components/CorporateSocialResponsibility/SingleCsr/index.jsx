@@ -26,7 +26,7 @@ const SingleCsr = () => {
     autoplay: true,
     autoPlaySpeed: 3500,
   }
-  const sliderImage = {
+  let sliderImage = {
     dots: false,
     arrows: true,
     infinite: true,
@@ -36,6 +36,48 @@ const SingleCsr = () => {
     centerPadding: '0px',
     autoplay: false,
     autoPlaySpeed: 5000,
+    responsive: [
+      {
+        breakpoint:420,
+        settings : {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows:true,
+          infinite:true,
+          initialSlide:2,
+        }
+      },
+      {
+        breakpoint:720,
+        settings : {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          arrows:true,
+          infinite:true,
+          
+        }
+      },
+      {
+        breakpoint:900,
+        settings : {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          arrows:true,
+          infinite:true,
+          initialSlide:2,
+        }
+      },
+      {
+        breakpoint:1200,
+        settings : {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          arrows:true,
+          infinite:true,
+          initialSlide:2,
+        }
+      }
+    ]
   }
   const { csrId } = useParams()
   const [pageData, setPageData] = useState({})
