@@ -327,7 +327,7 @@ const MegaMenu = ({ setNav }) => {
               <h3>21 DAYS BETTER LIVING COURSE</h3>
               <ul>
                 <Link onClick={() => {setNav(false)}}  to="/21-days-better-living-course">
-                  <li>Batch 1 - 21-Days BLC - Morning On Campus-English</li>
+                  <li>Batch 1 - 21-Days BLC - Morning Online & On Campus-English</li>
                 </Link>
                 <Link onClick={() => {setNav(false)}}  to="/21-days-better-living-course-batch-2">
                   <li>
