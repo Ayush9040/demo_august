@@ -8,7 +8,6 @@ import Heading from '../../Heading'
 import Slider from 'react-slick'
 import { Link } from 'react-router-dom'
 
-
 const SingleCsr = () => {
   const csr = {
     title: 'single-csr',
@@ -27,7 +26,7 @@ const SingleCsr = () => {
     autoplay: true,
     autoPlaySpeed: 3500,
   }
-  const sliderImage = {
+  let sliderImage = {
     dots: false,
     arrows: true,
     infinite: true,
@@ -37,25 +36,68 @@ const SingleCsr = () => {
     centerPadding: '0px',
     autoplay: false,
     autoPlaySpeed: 5000,
-    
+    responsive: [
+      {
+        breakpoint:420,
+        settings : {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows:true,
+          infinite:true,
+          initialSlide:2,
+        }
+      },
+      {
+        breakpoint:720,
+        settings : {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          arrows:true,
+          infinite:true,
+          
+        }
+      },
+      {
+        breakpoint:900,
+        settings : {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          arrows:true,
+          infinite:true,
+          initialSlide:2,
+        }
+      },
+      {
+        breakpoint:1200,
+        settings : {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          arrows:true,
+          infinite:true,
+          initialSlide:2,
+        }
+      }
+    ]
   }
   const { csrId } = useParams()
   const [pageData, setPageData] = useState({})
-  
 
   useEffect(() => {
     setPageData(CsrIn.find((item) => item.id === csrId))
   }, [])
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   return (
     <div className="main-container">
       <InnerNavComponent abc={csr} />
       <div className="title-heading">
-        <Heading className='small' smallText={pageData.title} />
+        <Heading className="small" smallText={pageData.title} />
       </div>
       <div className="content-container">
-        <div className="text-container">
-          {pageData.description}
-        </div>
+        <div className="text-container">{pageData.description}</div>
         <div className="image-con">
           <img src={pageData.image} alt="coverImage" />
         </div>
@@ -63,42 +105,41 @@ const SingleCsr = () => {
       <div className="slide">
         <div className="options-conatiner">
           <Slider {...sliderImage}>
-            { pageData.sliderImg && pageData.sliderImg.map (( items ) => {
-              return(
-                <>
-                  <div className="options">
-                    <img className='blessing' src={items} alt="virtual-gallery" />
+            {pageData.sliderImg &&
+              pageData.sliderImg.map((items) => {
+                return (
+                  <div key={items.csr} className="options">
+                    <img
+                      className="blessing"
+                      src={items}
+                      alt="virtual-gallery"
+                    />
                   </div>
-                </>
-              )
-            }) }
+                )
+              })}
           </Slider>
         </div>
       </div>
-      <div className='back-caraousel'>
+      <div className="back-caraousel">
         <div className="carousel-text">
           <div className="carousel-heading">
             <Heading smallText={'Testimonials'} />
           </div>
-          <div className='arrows'>
-            <Slider {...settings}> 
-              {data.map((item, idx) => {
-                if (idx < 4) {
-                  return (
-                    <div key={item.id}>
-                      <div className="alumini-carousel-data">
-                        <div className="alumini-carousel-detail">
-                          <div className="carousel-head">
-                            {item.name},{item.post}
-                          </div>
-                          <div className='donate-text'>
-                            {item.info}
-                          </div>
+          <div className="arrows">
+            <Slider {...settings}>
+              {data.map((item) => {
+                return (
+                  <div key={item.id}>
+                    <div className="alumini-carousel-data">
+                      <div className="alumini-carousel-detail">
+                        <div className="carousel-head">
+                          {item.name},{item.post}
                         </div>
+                        <div className="donate-text">{item.info}</div>
                       </div>
                     </div>
-                  )
-                }
+                  </div>
+                )
               })}
             </Slider>
           </div>
@@ -109,14 +150,13 @@ const SingleCsr = () => {
           <Heading smallText={'Support Our Cause'} />
         </div>
         <div className="donate-text">
-            Let us be responsible and mindful for the well-being of people in
-            our society.
-        </div>
-        
-        <div className="donate-btn">
-          <Link to = '/donation-form'>
-            <button className="donate-button">Donate</button>
-          </Link>
+          Let us be responsible and mindful for the well-being of people in our
+          society.
+          <div className="donate-btn">
+            <Link to="/donation-form">
+              <button className="donate-button">Donate</button>
+            </Link>
+          </div>
         </div>
       </div>
     </div>

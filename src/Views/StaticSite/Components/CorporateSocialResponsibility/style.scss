@@ -77,17 +77,20 @@
         .last-btn {
           padding-top: 2rem;
           .btn-div {
-            border: 2px solid rgb(65, 60, 52);
-            padding: 15px;
+            border: 1px solid transparent; 
+            padding: 12px;
             border-radius: 30px;
+            background-color: #CC4625;
+            
             
             .view_btn {
               background: transparent;
             }
             button {
-              font-size: 1.75rem;
+              font-size: 1.45rem;
               border: none;
               cursor: pointer;
+              color: white;
             }
           }
         }
