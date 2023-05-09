@@ -2582,8 +2582,8 @@ export const printMediaAssest = {
   printMediaAssest977: '/print_media/2023/Navbharat_Times_Epaper-13th_March_2023.jpg',
   printMediaAssest978: '/print_media/2023/Navbharat_Times_Epaper-5th_March_2023.jpg',
   printMediaAssest979: '/print_media/2023/Navbharat_Times_Epaper-6th_March_2023.jpg',
-  printMediaAssest980: '/print_media/2023/Navarashtra - 30th April 2023 (1).jpg'
-
+  printMediaAssest980: '/print_media/2023/Navarashtra - 30th April 2023 (1).jpg',
+  printMediaAssest981:  '/print_media/2023/Toi.jpg'
 }
 
 

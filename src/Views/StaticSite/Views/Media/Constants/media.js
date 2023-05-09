@@ -4758,6 +4758,11 @@ const printMedia = [
     year:'2023',
     media:[
       {
+        img:`${baseDomain}${printMediaAssest.printMediaAssest981}`,
+        url:'https://timesofindia.indiatimes.com/blogs/voices/strengthen-your-nervous-system-with-this-mudra/',
+        alt:'Toi-20-04-2023 ',
+      },
+      {
         img:`${baseDomain}${printMediaAssest.printMediaAssest980}`,
         url:'https://epaper.navarashtra.com/article-30-april-2023-kshitij-edition-kshitij/3-4/',
         alt:'kshitij-edition-30-April_2023',
