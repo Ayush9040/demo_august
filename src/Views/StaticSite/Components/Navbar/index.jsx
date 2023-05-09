@@ -46,7 +46,7 @@ const Navbar = ({ isUserLoggedIn }) => {
                 style={{ transition: 'none !important' }}
                 placeholder="none"
                 alt='The Yoga Institute'
-                src="http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Home/tyi.png"
+                src="https://ecom-static-site.oss-ap-south-1.aliyuncs.com/Home/tyi.png"
               />
             </div>
             <div className="header-title"></div>

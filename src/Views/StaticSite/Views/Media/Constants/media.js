@@ -4758,6 +4758,11 @@ const printMedia = [
     year:'2023',
     media:[
       {
+        img:`${baseDomain}${printMediaAssest.printMediaAssest980}`,
+        url:'https://epaper.navarashtra.com/article-30-april-2023-kshitij-edition-kshitij/3-4/',
+        alt:'kshitij-edition-30-April_2023',
+      },
+      {
         img:`${baseDomain}${printMediaAssest.printMediaAssest976}`,
         url:'https://epaper.navbharattimes.com/imageview_10153_70916_4_16_12-03-2023_4_i_1_sf.html',
         alt:'Navbharat_Times_Epaper-12th_March_2023',

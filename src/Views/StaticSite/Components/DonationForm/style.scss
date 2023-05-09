@@ -48,6 +48,15 @@
     margin: 0 auto;
   }
 
+  .css-1jqq78o-placeholder {
+    grid-area: 1/1/2/3;
+    color: hsl(0, 0%, 50%);
+    margin-left: 50px;
+    margin-right: 2px;
+    box-sizing: border-box;
+    font-size: 1.8rem!important;
+  }
+
   .date-of-birth:focus {
     outline: none;
     box-shadow: none

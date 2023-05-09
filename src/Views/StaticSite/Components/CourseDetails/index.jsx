@@ -222,7 +222,7 @@ const CourseDetails = ({ pageDate }) => {
                       scroll()
                     )
                   ) : 
-                  ( pageDate?.key === 'samattvam' ? <Link
+                  ( pageDate?.key === 'samattvam' || pageDate?.key === 'satsang' ? <Link
                     to={
                       isLoggedIn
                         ? `/enrollment/${pageDate.key}/?date=${selectDate}`

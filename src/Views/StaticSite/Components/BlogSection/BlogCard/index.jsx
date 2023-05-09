@@ -9,7 +9,7 @@ const BlogCard = ({ blogs }) => {
   return (
     <div className="blog-card" onClick={ ()=>{navigate(`/${ blogs?.slug }`)} } >
       <div className="blog-card-image">
-        <img src={blogs?.coverImage || 'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/Courses/courses-hero%20%281%29.jpg'} />
+        <img src={blogs?.coverImage || 'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/SEO-New-Images/Courses/yoga-teacher-training-courses-hero.webp'} />
       </div>
       <div className="blog-card-text">
         <p
