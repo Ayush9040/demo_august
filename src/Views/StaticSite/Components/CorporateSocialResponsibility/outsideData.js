@@ -1,5 +1,5 @@
 
-import baseDomain , { homeAssets , csrBmc } from '../../assets/images/imageAsset'
+import baseDomain , { csrBmc } from '../../assets/images/imageAsset'
 
 const CsrOut = [
   

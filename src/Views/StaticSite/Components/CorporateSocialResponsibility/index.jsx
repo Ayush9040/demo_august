@@ -31,7 +31,7 @@ const CorporateSocialResponsibilty = () => {
         {CsrOut.map((support,i) => {
           return (
             <>
-              <div className="content-container-section" style={ i % 2 ===0 ? { flexDirection:'row-reverse' } : { } }>
+              <div className = { i % 2 ===0 ? 'content-container-section-even'  : 'content-container-section' }>
                 <div className="image-container " >
                   <img src={support.image} alt={support.title}/>
                 </div>

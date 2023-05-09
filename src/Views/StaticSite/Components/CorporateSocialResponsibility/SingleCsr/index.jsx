@@ -91,21 +91,29 @@ const SingleCsr = () => {
   }, [])
 
   return (
-    <div className="main-container">
+    <>
+
       <InnerNavComponent abc={csr} />
-      <div className="title-heading">
-        <Heading className="small" smallText={pageData.title} />
-      </div>
-      <div className="content-container">
-        <div className="text-container">{pageData.description}</div>
-        <div className="image-con">
-          <img src={pageData.image} alt="coverImage" />
+      <div className="main-container">
+     
+     
+        <div className="content-container">
+          <div className='title_con'>
+            <div className="title-heading">
+              {/* <div className="small">{pageData.title}</div> */}
+              <Heading  smallText={pageData.title}/>
+            </div>
+            <div className="text-container">{pageData.description}</div>
+          </div>
+        
+          <div className="image-con">
+            <img src={pageData.image} alt="coverImage" />
+          </div>
         </div>
-      </div>
-      <div className="slide">
-        <div className="options-conatiner">
-          <Slider {...sliderImage}>
-            {pageData.sliderImg &&
+        <div className="slide">
+          <div className="options-conatiner">
+            <Slider {...sliderImage}>
+              {pageData.sliderImg &&
               pageData.sliderImg.map((items) => {
                 return (
                   <div key={items.csr} className="options">
@@ -117,49 +125,51 @@ const SingleCsr = () => {
                   </div>
                 )
               })}
-          </Slider>
-        </div>
-      </div>
-      <div className="back-caraousel">
-        <div className="carousel-text">
-          <div className="carousel-heading">
-            <Heading smallText={'Testimonials'} />
-          </div>
-          <div className="arrows">
-            <Slider {...settings}>
-              {data.map((item) => {
-                return (
-                  <div key={item.id}>
-                    <div className="alumini-carousel-data">
-                      <div className="alumini-carousel-detail">
-                        <div className="carousel-head">
-                          {item.name},{item.post}
-                        </div>
-                        <div className="donate-text">{item.info}</div>
-                      </div>
-                    </div>
-                  </div>
-                )
-              })}
             </Slider>
           </div>
         </div>
-      </div>
-      <div className="support">
-        <div className="support-head">
-          <Heading smallText={'Support Our Cause'} />
+        <div className="back-caraousel">
+          <div className="carousel-text">
+            <div className="carousel-heading">
+              <Heading smallText={'Testimonials'} />
+            </div>
+            <div className="arrows">
+              <Slider {...settings}>
+                {data.map((item) => {
+                  return (
+                    <div key={item.id}>
+                      <div className="alumini-carousel-data">
+                        <div className="alumini-carousel-detail">
+                          <div className="carousel-head">
+                            {item.name},{item.post}
+                          </div>
+                          <div className="donate-text">{item.info}</div>
+                        </div>
+                      </div>
+                    </div>
+                  )
+                })}
+              </Slider>
+            </div>
+          </div>
         </div>
-        <div className="donate-text">
+        <div className="support">
+          <div className="support-head">
+            <Heading smallText={'Support Our Cause'} />
+          </div>
+          <div className="donate-text">
           Let us be responsible and mindful for the well-being of people in our
           society.
-          <div className="donate-btn">
-            <Link to="/donation-form">
-              <button className="donate-button">Donate</button>
-            </Link>
+            <div className="donate-btn">
+              <Link to="/donation-form">
+                <button className="donate-button">Donate</button>
+              </Link>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </>
+   
   )
 }
 

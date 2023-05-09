@@ -1,4 +1,4 @@
-import baseDomain, { homeAssets,csrBmc } from '../../assets/images/imageAsset'
+import baseDomain, { csrBmc } from '../../assets/images/imageAsset'
 
 export const CsrIn = [
 
