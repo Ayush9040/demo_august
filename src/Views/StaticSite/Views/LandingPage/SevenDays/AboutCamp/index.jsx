@@ -244,7 +244,7 @@ const AboutCamp = () => {
           </div>
           <div className='registration-dates'>
             <div><span className='registration-heading'>Duration:</span></div>
-            <div><span className='dates-reg'>28th January to 3rd February, 2023</span></div>
+            {/* <div><span className='dates-reg'>28th January to 3rd February, 2023</span></div> */}
             <div className='dates-reg-2'>(Residential &amp; Non-Residential)</div>
             <div className='reg-note'>Please Note: Limited seats are available. Registrations are on a first come first serve basis.</div>
             <div><span className='registration-heading'>Timings:</span></div>
