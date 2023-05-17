@@ -1,59 +1,56 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Heading from '../Heading'
 import { newsletter } from '../../assets/icons/icon'
 import CommonBtn from '../commonbtn'
 import './style.scss'
 import { Link } from 'react-router-dom'
 import { validateEmail } from '../../../../helpers'
-import baseDomain, { publicationAssests } from '../../assets/images/imageAsset'
 import axios from 'axios'
 import { authBaseDomain } from '../../../../Constants/appSettings'
-
+import { getByYearYogsattva } from '../../Views/Publication/Views/Api'
 const NewsLetter = () => {
-
-  const [mail,setMail] = useState('')
-  const [err,setErr]=useState(false)
-  const [sucess,setSuccess]=useState(false)
-
-
-
-  const checkMail = async()=>{
-    if(!validateEmail(mail)){
+  const [mail, setMail] = useState('')
+  const [err, setErr] = useState(false)
+  const [sucess, setSuccess] = useState(false)
+  const [yogsattvaData, setYogsattvaData] = useState([])
+  const getByYearYogsattvaData = async(year) => {
+    try {
+      const { data } = await getByYearYogsattva(year)
+      setYogsattvaData(data.data)
+      console.log(data?.data, 'qwewvregr')
+    } catch (error) {
+      console.log(error)
+    }
+  }
+  useEffect(() => {
+    getByYearYogsattvaData(2023)
+  }, [])
+  const checkMail = async() => {
+    if (!validateEmail(mail)) {
       setErr(true)
-    }else{
-      const response = await axios.post(`${ authBaseDomain }/ali/newslettermail`,{ email:mail })
-      if(response.data.success===true){
+    } else {
+      const response = await axios.post(`${authBaseDomain}/ali/newslettermail`, { email: mail })
+      if (response.data.success === true) {
         setSuccess(true)
       }
     }
   }
-
   return (
     <div className="newsletter-container global-padding" id='Newsletter'>
       <div className="magezines">
         <div className="images">
           <div className="image">
             <Link to="/yogasattva">
-              <img src={`${baseDomain}${publicationAssests.ythAssets97}`} alt='Yogasattva-January' />
+              <div className="row">
+                {yogsattvaData.slice(-5, -2).map((image, i) => (
+                  <div key={i} className="container">
+                    <img src={image.imageUrl} alt={image.title} />
+                    <p>{image.title}</p>
+                  </div>
+                ))}
+              </div>
             </Link>
-
-            <p>April 2023</p>
           </div>
-          <div className="image">
-            <Link to="/yogasattva">
-              <img src={`${baseDomain}${publicationAssests.ythAssets94}`} alt='Yogasattva-March' />
-            </Link>
-
-            <p>March 2023</p>
-          </div>
-          <div className="image">
-            <Link to="/yogasattva">
-              <img src={`${baseDomain}${publicationAssests.ythAssets93}`} alt='Yogasattva-february'/>
-            </Link>
-
-            <p>February 2023</p>
-          </div>
-          
         </div>
         <div className="description">
           <p>
@@ -73,15 +70,14 @@ const NewsLetter = () => {
           largeText={'Newsletter'}
         />
         <div className="subscription-form">
-          {sucess===false ? <input type={'email'} onChange={(e)=>{setMail(e.target.value);setErr(false)}} placeholder="Enter Your Email Id" />:<p>Thank You for subscribing</p>}
+          {sucess === false ? <input type={'email'} onChange={(e) => { setMail(e.target.value); setErr(false) }} placeholder="Enter Your Email Id" /> : <p>Thank You for subscribing</p>}
           {err && <small>Please Enter Valid Email</small>}
         </div>
-        {sucess===false && <div onClick={checkMail} >
+        {sucess === false && <div onClick={checkMail} >
           <CommonBtn text={'Subscribe Now'} />
         </div>}
       </div>
     </div>
   )
 }
-
 export default NewsLetter
