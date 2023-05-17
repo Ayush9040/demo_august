@@ -6408,7 +6408,7 @@ const camps = {
       'Powerful and effective yoga asana, pranayama, and relaxation techniques to alleviate heart ailments',
     image: `${baseDomain}${courseAssets.courseAsset111}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset6}`,
-    dates: ['7th May 2023','2nd June 2023','3rd September 2023','5th November 2023'],
+    dates: ['3rd September 2023','5th November 2023'],
     online: false,
     onCampus: true,
     nonResidential: false,
