@@ -87,7 +87,8 @@ const SingleCourse = () => {
     setIsLoadding(true)
     setPageData(AllCourses.find(item=>item.key === contentId))
     setIsLoadding(false)
-    document.title = `${metaDataObj[location.pathname]?.title}`
+    // document.title = `${metaDataObj[location.pathname]?.title}`
+    // console.log(`${metaDataObj[location.pathname]?.title}`,'title')
     parsingAlgo()
     scrollTo(0,0)
   }, [ contentId ])
