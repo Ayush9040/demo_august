@@ -105,7 +105,7 @@ const SingleProduct = () => {
                       }}
                       key={i}
                     >
-                      <img src={item} ref={prevRef} alt='' />
+                      {item && <img src={item} ref={prevRef} alt='' />}
                     </div>
                   ))}
                 </div>
