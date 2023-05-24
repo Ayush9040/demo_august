@@ -136,7 +136,7 @@ const Footer = () => {
             <Link className="soon" to="/#footer">
               <li>Careers</li>
             </Link>
-            <Link className="soon" to="/#footer">
+            <Link to="/csr">
               <li>CSR</li>
             </Link>
           </ul>
