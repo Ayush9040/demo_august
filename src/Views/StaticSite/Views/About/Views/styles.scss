@@ -1,106 +1,110 @@
 //benifits
 .content-container {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    // gap: 5rem;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  // gap: 5rem;
 }
 // .pd-career {
 //     // padding: 10rem;
 // }
 .text-content {
-    padding: 2rem 5rem 0 0;
-    margin-top: 3rem;
-    font-size: 1.5rem;
+  padding: 2rem 5rem 0 0;
+  margin-top: 3rem;
+  font-size: 1.5rem;
 }
-.tyi-text-container > p{
-    margin-bottom: 20px;
+.tyi-text-container > p {
+  margin-bottom: 20px;
 }
 .text-content-right {
-    padding: 0rem 0rem 5rem 2rem;
-    font-size: 1.5rem;
-    margin-top: 3rem;
+  padding: 0rem 0rem 5rem 2rem;
+  font-size: 1.5rem;
+  margin-top: 3rem;
 }
 .banner-heading {
-    margin: 0;
-    font-size: 2.75rem;
-    width: max-content;
-    font-weight: bolder;
+  margin: 0;
+  font-size: 2.75rem;
+  width: max-content;
+  font-weight: bolder;
 }
 .bottom-line {
-    height: 3px;
-    border-radius: 200%;
-    width: 100%;    
-    background: #BC4F31;
-    // margin-top: 0.5rem;
-    margin-bottom: 1rem;
+  height: 3px;
+  border-radius: 200%;
+  width: 100%;
+  background: #bc4f31;
+  // margin-top: 0.5rem;
+  margin-bottom: 1rem;
 }
 .image-content {
-    padding: 1rem;
+  padding: 1rem;
 }
-.image-content img {
-border-radius: 50px;
-width: 95%;
-margin-left: 5%;
+.image-content {
+  margin-top: 3rem;
+  img {
+    border-radius: 50px;
+    width: 95%;
+    height: auto;
+    margin-left: 5%;
+  }
 }
 //blessings
-.blessings-container{
-    .common-container{
-         .banner-container{
-         .banner-heading{
-             margin-left: 0!important;
-         }
+.blessings-container {
+  .common-container {
+    .banner-container {
+      .banner-heading {
+        margin-left: 0 !important;
+      }
     }
-}
+  }
 }
 
-@media (max-width: "900px") {
-    .image-content {
-        padding: 0
-    }
-    .text-content {
-        font-size: 1.3rem;
-    }
+@media (max-width: '900px') {
+  .image-content {
+    padding: 0;
+  }
+  .text-content {
+    font-size: 1.3rem;
+  }
 }
-@media (max-width: "768px") {
-    .blessings-container{
-        .common-container{
-             .banner-container{
-             margin-left: 0;
-        }
+@media (max-width: '768px') {
+  .blessings-container {
+    .common-container {
+      .banner-container {
+        margin-left: 0;
+      }
     }
-    }
-    
-.content-container {
+  }
+
+  .content-container {
     grid-template-columns: 1fr;
-    &:nth-child(3){
-        display: flex!important;
-        flex-direction: column-reverse;
+    &:nth-child(3) {
+      display: flex !important;
+      flex-direction: column-reverse;
     }
-}
-.text-content {
+  }
+  .text-content {
     padding: 5rem;
     text-align: center;
-}
-.banner-heading {
+  }
+  .banner-heading {
     margin: 0 auto;
-}
-.pd-career {
-padding: 5rem;
-}
+  }
+  .pd-career {
+    padding: 5rem;
+  }
 }
 
 //our-career
 .career-cards {
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
 .bh-center {
-    margin: 0 auto 2rem auto ;
+  margin: 0 auto 2rem auto;
 }
 
-@media (max-width: "768px") {
-    .career-cards {
-        grid-template-columns: 1fr;
-        gap: 3rem;
-    }
+@media (max-width: '768px') {
+  .career-cards {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
 }
