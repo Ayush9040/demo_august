@@ -107,7 +107,7 @@ const SingleCsr = () => {
           </div>
         
           <div className="image-con">
-            <img src={pageData.image} alt="coverImage" />
+            <img src={pageData.image} alt={pageData.alt} />
           </div>
         </div>
         <div className="slide">
@@ -120,7 +120,7 @@ const SingleCsr = () => {
                     <img
                       className="blessing"
                       src={items}
-                      alt="virtual-gallery"
+                      alt={items.alt}
                     />
                   </div>
                 )
