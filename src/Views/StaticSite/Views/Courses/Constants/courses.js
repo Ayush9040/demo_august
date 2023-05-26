@@ -4460,17 +4460,17 @@ const ttc900hr = {
         },
       },
 
-      {
-        type: 'paragraph',
+      // {
+      //   type: 'paragraph',
 
-        content: {
-          title: '',
+      //   content: {
+      //     title: '',
 
-          text: [
-            'Note: The course is currently being conducted online ONLY. Once the pandemic restrictions ease, we will open the course for on-campus attendance as well. Students can then choose to either continue their course online OR switch to on-campus mode.',
-          ],
-        },
-      },
+      //     text: [
+      //       'Note: The course is currently being conducted online ONLY. Once the pandemic restrictions ease, we will open the course for on-campus attendance as well. Students can then choose to either continue their course online OR switch to on-campus mode.',
+      //     ],
+      //   },
+      // },
     ],
 
     curriculum: [
