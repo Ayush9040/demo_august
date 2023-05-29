@@ -7343,7 +7343,7 @@ const camps = {
 
   9: {
     id: '',
-    title: 'Pranayama Workshop',
+    title: 'Pranayama Workshop - On Campus & Online',
     key: 'pranayama-workshop',
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
