@@ -91,6 +91,13 @@ const Footer = () => {
             >
               <li>{instagramhindi}</li>
             </a>
+            <a
+              href="https://instagram.com/nutridietclinicofficial?igshid=YmMyMTA2M2Y="
+              target="_blank"
+              rel="noreferrer"
+            >
+              <li>{instagram}</li>
+            </a>
           </ul>
         </div>
       </div>
@@ -98,7 +105,7 @@ const Footer = () => {
         <div className="footer-content">
           <div className="footer-logo">{years}</div>
           <div className="footer-text">
-            <p>103+</p>
+            <p>104+</p>
             <span>Number of Years</span>
           </div>
         </div>

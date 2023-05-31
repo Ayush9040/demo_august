@@ -18,28 +18,28 @@ export const data=[
   //   ]
   // },
   
-  {
-    id:0,
-    alluminiImg:`${baseDomain}${studentExperienceAssests.Tamara}`,
-    name:'Tamara Bućma Kecman',
-    alt :'Tamara Bućma Kecman',
-    post:'Student from Bosnia and Herzegovina',
-    info:'I have been practicing Yoga asanas for a long time, but always felt that the physical part is not sufficient, that it lacked the substance. I came across the two-month Online BTT Course by pure chance, and now I am so glad and grateful that I did. The course is wonderful, the syllabus is wisely structured for beginners to get the information needed to start slowly building their own practice, and the teachers are very knowledgeable, dedicated, and sincerely interested in student`s success and overcoming challenges. The bonus part is the people in the group, the classmates, who become the true support group and friends without prejudices. I have enjoyed every single moment.',
-    img:[
-      `${baseDomain}${studentExperienceAssests.Tamara}`,
-      `${baseDomain}${studentExperienceAssests.Tamara}`,
-      `${baseDomain}${studentExperienceAssests.Tamara}`,
-      `${baseDomain}${studentExperienceAssests.Tamara}`,
-      `${baseDomain}${studentExperienceAssests.Tamara}`,
-    ]
-  },
+  // {
+  //   id:0,
+  //   alluminiImg:`${baseDomain}${studentExperienceAssests.Tamara}`,
+  //   name:'Tamara Bućma Kecman',
+  //   alt :'Tamara Bućma Kecman',
+  //   post:'Student from Bosnia and Herzegovina',
+  //   info:'I have been practicing Yoga asanas for a long time, but always felt that the physical part is not sufficient, that it lacked the substance. I came across the two-month Online BTT Course by pure chance, and now I am so glad and grateful that I did. The course is wonderful, the syllabus is wisely structured for beginners to get the information needed to start slowly building their own practice, and the teachers are very knowledgeable, dedicated, and sincerely interested in student`s success and overcoming challenges. The bonus part is the people in the group, the classmates, who become the true support group and friends without prejudices. I have enjoyed every single moment.',
+  //   img:[
+  //     `${baseDomain}${studentExperienceAssests.Tamara}`,
+  //     `${baseDomain}${studentExperienceAssests.Tamara}`,
+  //     `${baseDomain}${studentExperienceAssests.Tamara}`,
+  //     `${baseDomain}${studentExperienceAssests.Tamara}`,
+  //     `${baseDomain}${studentExperienceAssests.Tamara}`,
+  //   ]
+  // },
   {
     id:2,
     alluminiImg:`${baseDomain}${studentExperienceAssests.Kiran}`,
     name:'Kiran Kapoor',
     post:'Student from London',
     alt:'Kiran Kapoor',
-    info:'I had always wanted to learn more about yoga, beyond the asanas. It was covid time that my friend introduced me to yoga institute and after following for few months I took the plunge. And I am extremely happy that I did this for myself. I learned a lot and it has changed my complete perspective of looking at other things, situations and myself. I would highly recommend this to someone who like me is sitting on the edge for joining this course. Online option worked perfectly well for me and all the teachers were very knowledgeable, disciplined and approachable. I surely would like to advance on this journey in near future with yoga institute.',
+    info:'I had always wanted to learn more about Yoga, beyond the asanas. It was covid time that my friend introduced me to a Yoga institute and after following for a few months, I took the plunge. And I am extremely happy that I did this for myself. I learned a lot and it has changed my complete perspective of looking at other things, situations and myself.',
     img:[
       `${baseDomain}${studentExperienceAssests.Kiran}`,
       `${baseDomain}${studentExperienceAssests.Kiran}`,
@@ -54,7 +54,7 @@ export const data=[
     name:'Sankshita Zutshi',
     alt:'Sankshita Zutshi',
     post:'Yoga Therapy Student',
-    info:'Learning never stops and as a Yoga professional, it is your `Dharma` to constantly work on improving yourself. And this Yoga Therapy course helps you do that and gives you so much more. It`s rich in theory, as well as in its practical application on 80+ diseases. Each medical condition is explained in great detail by Taruna Ma`am in class. And the written course material is well structured and in-depth. The virtual classes run so smoothly, you won’t even realize how 4 months pass by and soon you`ll be appearing for your exams! Tip for future students: Study from Day 1, you`ll soon know why.',
+    info:'Learning never stops and as a Yoga professional, it is your ‘Dharma’ to constantly work on improving yourself. And this Yoga Therapy course helps you do that and gives you so much more. It’s rich in theory, as well as in its practical application on 80+ diseases. Written course material is in-depth and well-structured. Each medical condition is explained in-detail.',
     img:[
       `${baseDomain}${studentExperienceAssests.Sankshita}`,
       `${baseDomain}${studentExperienceAssests.Sankshita}`,
@@ -115,21 +115,21 @@ export const data=[
   //     `${baseDomain}${studentExperienceAssests.Jacqueline}`,
   //   ]
   // },
-  // {
-  //   id:6,
-  //   alluminiImg:`${baseDomain}${studentExperienceAssests.Vaidehi}`,
-  //   name:'Vaidehi Ajit Kale',
-  //   alt:'Vaidehi Ajit Kale',
-  //   post:'Student from 2 Months Teachers Training Course',
-  //   info:'The Yoga Institute has helped me with deep learning, compassion and joy. In today`s world with so many options to learn yoga, finding the Institute was the best decision I took to discover what my body needs. The teachers at the Institute touch the spirit of what yoga means and are extremely generous in imparting the knowledge with us. The real transformation for me is that I feel calmer and more peaceful. I wish I had taken up an offline class rather than an online class. Looking forward to joining an offline class or visiting the Institute someday to experience the tranquillity. The journey for me towards self growth has just begun and I intend to grow more with the Yogic path. I am happily in my best physical and mental state ever. Gratitude towards all the teachers for being kind, helpful, guiding us and making us feel a part of the yoga community',
-  //   img:[
-  //     `${baseDomain}${studentExperienceAssests.Vaidehi}`,
-  //     `${baseDomain}${studentExperienceAssests.Vaidehi}`,
-  //     `${baseDomain}${studentExperienceAssests.Vaidehi}`,
-  //     `${baseDomain}${studentExperienceAssests.Vaidehi}`,
-  //     `${baseDomain}${studentExperienceAssests.Vaidehi}`,
-  //   ]
-  // },
+  {
+    id:6,
+    alluminiImg:`${baseDomain}${studentExperienceAssests.Vaidehi}`,
+    name:'Vaidehi Ajit Kale',
+    alt:'Vaidehi Ajit Kale',
+    post:'Student from 2 Months Teachers Training Course',
+    info:'TYI has helped me with deep learning, compassion and joy. In today’s world with so many options to learn yoga, finding the Institute was the best decision I took to discover what my body needs. The teachers at the Institute touch the spirit of what yoga means and are extremely generous in imparting the knowledge with us. My journey of self growth has just begun',
+    img:[
+      `${baseDomain}${studentExperienceAssests.Vaidehi}`,
+      `${baseDomain}${studentExperienceAssests.Vaidehi}`,
+      `${baseDomain}${studentExperienceAssests.Vaidehi}`,
+      `${baseDomain}${studentExperienceAssests.Vaidehi}`,
+      `${baseDomain}${studentExperienceAssests.Vaidehi}`,
+    ]
+  },
   // {
   //   id:7,
   //   alluminiImg:`${baseDomain}${studentExperienceAssests.ankitaSood}`,

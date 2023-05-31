@@ -106,7 +106,7 @@ const InnerNavComponent = ({ abc }) => {
             </ul>
           </div>
           <div className="user-container">
-            <div onClick={ ()=>{navigate('/')} } >{ abc.color === 'orange' ? Search:abc.color === 'black' ? SearchBlack : SearchWhite }</div>
+            <div onClick={ ()=>{navigate('/search')} } >{ abc.color === 'orange' ? Search:abc.color === 'black' ? SearchBlack : SearchWhite }</div>
             <Link to='/shop/cart'>   
 
               { abc.color === 'orange' ? Cart : abc.color === 'white' ? CartWhite : CartBlack }  <span style={{ color:'#CA4625' }} className='cart-count' >{ cartItems }</span></Link>

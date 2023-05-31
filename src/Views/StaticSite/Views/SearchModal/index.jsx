@@ -81,7 +81,7 @@ const SearchModal = () => {
 
   return (
     <div className='search-modal' onKeyDown={ (e)=>{ if(e.key === 'Enter'){ searchContent(1,10) } } } >
-      <div onClick={()=>{ navigate('/') }}  className='close-search'>{cross}</div>
+      <div onClick={()=>{ navigate('/blogs') }}  className='close-search'>{cross}</div>
       <h2 style={{ fontWeight: 'bold', textAlign: 'center' }}>Search</h2>
       <label className='search-bar'>
         <input

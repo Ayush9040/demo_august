@@ -18,7 +18,7 @@ const ttc200hr = {
     },
     batch: 1,
     metaDescription:
-      'You will learn the tools to master your physical, mental and spiritual well-being. You will see a marked improvement in your life, relationships and work.',
+      'Master your physical, mental, and spiritual well-being by learning the skills',
     image: `${baseDomain}${courseAssets.courseAsset38}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset101}`,
     mostPopular: true,
@@ -2297,7 +2297,7 @@ const ttc200hr = {
     },
     batch: 6,
     metaDescription:
-      'You will learn the tools to master your physical, mental and spiritual well-being. You will see a marked improvement in your life, relationships and work.',
+      ' Learn the yogic principles and practices for a balanced life',
     image: `${baseDomain}${courseAssets.courseAsset38}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset101}`,
     mostPopular: true,
@@ -2765,7 +2765,7 @@ const ttc500hr = {
     },
     batch: 1,
     metaDescription:
-      'You will learn the tools to master your physical, mental, and spiritual well-being. You will see a marked improvement in your life, relationships, and work.',
+      'Learn and witness marked improvement in your life, relationships, and work',
     mostPopular: true,
     rating: 5,
     colorCode: '#D88068',
@@ -3109,7 +3109,7 @@ const ttc900hr = {
     batch: 1,
 
     metaDescription:
-      'You will learn the tools to master your physical, mental and spiritual well-being. You will see a marked improvement in your life, relationships and work.',
+      'Achieve balance and fulfillment in life through yogic tools and techniques.',
     title: '900 Hours Yoga TTC - 3 Months Teacher Training Course On Campus - English',
 
     image: `${baseDomain}${courseAssets.courseAsset40}`,
@@ -10457,7 +10457,7 @@ const classes = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'classes',
-    metaDescription: 'An amazing opportunity for all our certified TYI teachers to stay connected with your practices of the advanced yoga asana at The Yoga Institute. *Join on any date.',
+    metaDescription: 'Stay connected with your practices of the advanced Yoga asanas at TYI',
     image: `${baseDomain}${courseAssets.courseAsset67}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset108}`,
     dates: ['6:30 a.m. to 8:00 a.m', '5:30 p.m. to 7:00 p.m'],
@@ -10523,7 +10523,7 @@ const classes = {
     rating: 5,
     colorCode: '#C48E8C',
     metaDescription:
-      'Join now if you’re looking for an immunity and vitality boost, emotional release, anxiety and anger management, glowing skin, inner radiance and enhanced creativity.',
+      'A movement-based therapy programme for stress management, emotional well-being',
     join: true,
     timing:
       'Monday & Wednesday - 7:30 am - 8:30 am (IST) (Online) Tuesday & Thursday - 6pm - 7pm (IST) (On campus)',
@@ -10610,7 +10610,7 @@ const classes = {
     cardImage: `${baseDomain}${courseAssets.courseAsset81}`,
     mostPopular: false,
     metaDescription:
-      'Explore the world of Yoga asanas from the comfort of right where you are with our online yoga classes',
+      'Explore the world of Yoga asanas, practices from the comfort of your own home',
     rating: 5,
     colorCode: '#B77E7E',
     join: true,
@@ -12309,7 +12309,7 @@ const extra = {
     mostPopular:true,
     colorCode:'#B77E7E',
     dates:[],
-    metaDescription:'Take a step for your well-being and enroll in our customized diet plans to get a holistic change in your lifestyle.'
+    metaDescription:'Get customized diet plans and holistic approach to health and wellness'
   }
 }
 

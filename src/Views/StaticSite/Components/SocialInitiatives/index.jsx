@@ -43,7 +43,7 @@ const SocialInitiatives = ({ alumni, setImageChanger }) => {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: false,
-    autoPlaySpeed: 5000,
+    autoPlaySpeed: 500,
     beforeChange: (oldIndex, index) => {
       setImage(images[index])
       setImageChanger && setImageChanger(index)

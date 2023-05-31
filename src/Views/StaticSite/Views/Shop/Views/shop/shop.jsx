@@ -94,6 +94,7 @@ const Shop = () => {
     if(localStorage.getItem('cart')){
       dispatch(updateCartData(JSON.parse(localStorage.getItem('cart'))))
     }
+    window.scrollTo(0,0)
   }, [ pagination,Params.get('category') ])
 
 
@@ -134,13 +135,13 @@ const Shop = () => {
     dots: true,
     arrows: false,
     infinite: true,
-    speed: 5000,
+    speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
     centerMode: false,
     centerPadding: '0',
     autoplay: true,
-    autoPlaySpeed: 5000,
+    autoPlaySpeed: 500,
   }
 
   const shopNav = {

@@ -33,7 +33,7 @@ const Experience = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: false,
-    autoPlaySpeed: 5000,
+    autoPlaySpeed: 500,
   }
 
   return (
@@ -56,12 +56,7 @@ const Experience = () => {
               <h4>Honorable Prime Minister of India</h4>
               <p>
                 <q>
-                  Yoga has been a traditional lifestyle in every household of
-                  our country since ancient times. It enhances inner calm,
-                  peace, and brotherhood among the people. Heartiest
-                  congratulations and best wishes to the organizers and all the
-                  people joining the Centenary celebrations of the Yoga
-                  Institute.
+                Yoga has been a traditional lifestyle in every household of our country since ancient times. It enhances inner calm, peace, and brotherhood among the people. Heartiest congratulations and best wishes to The Yoga Institute.
                 </q>
               </p>
             </div>
@@ -84,13 +79,7 @@ const Experience = () => {
               <h3>Shri Ram Nath Kovind</h3>
               <h4>Former President of India</h4>
               <p>
-                We are aware that “Lifestyle diseases are increasing in India.
-                Those who do yoga from childhood (in school or college) will
-                build up strength and immunity.“ I wish The Yoga Institute and
-                everyone connected with it, all the best in their efforts to
-                spread the goodness of Yoga and also congratulate them for
-                carrying on the good work for the benefit of the people silently
-                for the past ten decades
+              We are aware that ”Lifestyle diseases are increasing in India. Those who do Yoga from childhood (in school or college) will build up strength and immunity.” I wish The Yoga Institute all the best in their efforts to spread the goodness of Yoga. 
               </p>
             </div>
             <Link to="/testimonials">
@@ -116,11 +105,7 @@ const Experience = () => {
               <h4>Former Vice President of India</h4>
               <p>
                 <q>
-                  It gives me immense joy to see the stupendous work done by the
-                  Institute in the last 100 years which has brought them great
-                  laurels and accolades. I congratulate the entire Yogendra
-                  Family for living up to this noble task of spreading yoga
-                  across the globe.
+                It gives me immense joy to see the stupendous work done by the Institute in the last 100 years which has brought them great laurels and accolades. I congratulate the entire Yogendra Family for living up to this noble task of spreading Yoga across the globe.
                 </q>
               </p>
             </div>
@@ -144,11 +129,7 @@ const Experience = () => {
               <h4>Padma Vibhushan, Actor</h4>
               <p>
                 <q>
-                  {`The classic book, 'Yoga for All' written by Dr. Hansaji is a
-                  humble recognition of the need in modern society for guidance
-                  towards a way of living that is in greater harmony with our
-                  natural surroundings and more synergistic with our fellow
-                  beings. (Foreword for 'Yoga for All' by Shri Amitabh Bachchan)`}
+                  {'The classic book, \'Yoga for All\' written by Dr. Hansaji is a humble recognition of the need in modern society for guidance towards a way of living that is in greater harmony with our natural surroundings and more synergistic with our fellow beings. '}
                 </q>
               </p>
             </div>

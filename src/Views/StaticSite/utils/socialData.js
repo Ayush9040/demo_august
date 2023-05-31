@@ -2,19 +2,19 @@ export const socialData = [
   {
     title: 'Annam Brahma',
     description:
-      'Annam Brahma is a social initiative aimed at serving fresh, nutritious, and healthy food to the underprivileged citizens of the country without discrimination. The food is served to over 1000 people daily, 365 days a year. ',
+      'Annam Brahma (Food is God) was established in the loving memory of Dr. Jayadeva Yogendra in 2018. Every day, fresh, nutritious, healthy Sattvik food is served twice a day for 365 days to underprivileged and poor people.',
     url: '',
   },
   {
     title: 'Police',
     description:
-      'The Yoga Institute has teamed up with Mumbai Police to train more than 13,000 men and women of the force in yoga techniques. This has helped them immensely to fight the daily stress, improve their overall physical health, become more focused and mindful.',
+      'This initiative gives police officers a practical and efficient way to deal with the high levels of stress they face on the job. With Yoga, they learn to control their stress, boost their overall health and performance.',
     url: '',
   },
   {
     title: 'Underprivileged Children and BMC',
     description:
-      'The Yoga Institute\'s Scholarship Programs is aimed at transforming children\'s lives by ensuring quality education and training them in the ways of yogic life. In association with BMC, The Yoga Institute educated 10000 students in 60 schools.',
+      'Since 1994, Yoga Education program for BMC School Students has been successfully running. The sessions are a mix of Yoga Asanas, Pranayamas, Kriyas and Philosophy and Yogic Games, for holistic development of the students.',
     url: '',
   },
 ]

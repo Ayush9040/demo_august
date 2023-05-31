@@ -28,45 +28,11 @@ const OurOfferings = () => {
     }
   }, [isInteracting])
 
-  // let vHeight = (window.innerHeight-400 || document.documentElement.clientHeight-400)
-  // const animateCarousel = () => {
-  //   let offeringContainer = document.querySelector('.our-offerings-container')
-  //   const rect = offeringContainer.getBoundingClientRect()
-  //   const { top, bottom } = offeringContainer.getBoundingClientRect()
-
-  //   return (
-  //     (top > 0 || bottom > 0) &&
-  //     top < vHeight
-  //   )
-  // const vWidth = window.innerWidth || document.documentElement.clientWidth
-  // const vHeight = window.innerHeight || document.documentElement.clientHeight
-  // // Return false if it's not in the viewport
-  // if (rect.right < 0 || rect.bottom < 0
-  //           || rect.left > vWidth || rect.top > vHeight) { return false }
-  // // Return true if any of its four corners are visible
-  // // return (
-  // console.log(document.elementFromPoint(rect.left, rect.top))
-  // console.log(efp(rect.left, rect.top))
-  // console.log(efp(rect.right, rect.top))
-  // console.log(efp(rect.right, rect.bottom))
-  // console.log(efp(rect.left, rect.bottom))
-  // )
-  // }
-  // useEffect(()=> {
-  //   let offeringContainer = document.getElementsByClassName('our-offerings-container')
-  //   if (offeringContainer[0]) {
-  //     window.addEventListener('scroll',() => {
-  //       let inViewPort = animateCarousel()
-  //       console.log('inViewPort',inViewPort)
-  //     }
-  //     )}
-  //   // return () => window.removeEventListener('scroll', animateCarousel)
-  // },[])
   const carouselData = [
     {
       name: '7-day Yoga Health Camp',
       description:
-        'A powerful and life-changing experience, this is an introductory course to yoga theory and practice, within the premises of The Yoga Institute.',
+        'An introductory course to yoga theory and practice in which students experience yogic lifestyle and learn how to achieve life balance.',
       redirect: '/7-days-camp',
       timeline: '7 days',
       price: '8000',
@@ -74,7 +40,7 @@ const OurOfferings = () => {
     {
       name: '21-Day Better Living Course',
       description:
-        'This popular course aims to integrate yoga philosophy and healthy routines in everyday life. We give you tools and techniques to help you manage your studies, home life, work life and other activities.',
+        'This course will assist you in incorporating yoga philosophy and healthy habits into daily life by taking a holistic approach.',
       redirect: '/21-days-better-living-course',
       timeline: '21 days',
       price: '2100',
@@ -82,7 +48,7 @@ const OurOfferings = () => {
     {
       name: 'Regular Asana Classes',
       description:
-        'Daily one hour asana classes for people of all age groups to help them bring balance and serenity into their lives.',
+        'Improve your physical and mental health by practicing asanas, pranayama, and a yogic lifestyle and living mindfully.',
       redirect: '/asana-regular-classes-online',
       timeline: 'Any Day',
       price: '1000',
@@ -90,7 +56,7 @@ const OurOfferings = () => {
     {
       name: 'Children’s Regular Classes',
       description:
-        'Especially designed for children, the asana class helps them balance their academics along with their physical and mental health.',
+        'This asana class will help children develop their focus, memory, discipline, determination, and value system.',
       redirect: '/childrens-regular-classes',
       timeline: 'Any Day',
       price: '1000',
@@ -98,7 +64,7 @@ const OurOfferings = () => {
     {
       name: '7-month TTC',
       description:
-        'This course provides an in-depth study of classical ashtanga yoga which teaches core yoga philosophy and technology. Participants can become internationally certified yoga trainers on completing the course.',
+        'With this course, you will acquire the skills necessary to master your mental, spiritual, and physical health and lead a fulfilling life.',
       redirect: '/seven-month-ttc',
       timeline: '7-month',
       price: '50,000',
@@ -172,43 +138,53 @@ const OurOfferings = () => {
               className="course-offered"
               dataSettings={JSON.stringify(settings)}
             >
-              <img
-                src={`${baseDomain}${homeAssets.homeAsset7}`}
-                placeholder="none"
-                alt="7days-camp"
-              />
+              <Link to={'/7-days-camp'}>
+                <img
+                  src={`${baseDomain}${homeAssets.homeAsset7}`}
+                  placeholder="none"
+                  alt="7days-camp"
+                />
+              </Link>
               <h4>7-day Yoga Health Camp</h4>
             </div>
             <div className="course-offered">
-              <img
-                src={`${baseDomain}${homeAssets.homeAsset8}`}
-                placeholder="none"
-                alt="21days"
-              />
+              <Link to={'/21-days-better-living-course'}>
+                <img
+                  src={`${baseDomain}${homeAssets.homeAsset8}`}
+                  placeholder="none"
+                  alt="21days"
+                />
+              </Link>
               <h4>21-Day Better Living Course</h4>
             </div>
             <div className="course-offered">
-              <img
-                src={`${baseDomain}${courseAssets.courseAsset115}`}
-                placeholder="none"
-                alt="200hrsTTC"
-              />
+              <Link to={'/asana-regular-classes-online'}>
+                <img
+                  src={`${baseDomain}${courseAssets.courseAsset115}`}
+                  placeholder="none"
+                  alt="200hrsTTC"
+                />
+              </Link>
               <h4>Regular Asana Classes</h4>
             </div>
             <div className="course-offered">
-              <img
-                src={`${baseDomain}${homeAssets.homeAsset10}`}
-                placeholder="none"
-                alt="Children-camp"
-              />
+              <Link to={'/childrens-regular-classes'}>
+                <img
+                  src={`${baseDomain}${homeAssets.homeAsset10}`}
+                  placeholder="none"
+                  alt="Children-camp"
+                />
+              </Link>
               <h4>Children’s Regular Classes</h4>
             </div>
             <div className="course-offered">
-              <img
-                src={`${baseDomain}${homeAssets.homeAsset11}`}
-                placeholder="none"
-                alt="900hrs"
-              />
+              <Link to={'/seven-month-ttc'}>
+                <img
+                  src={`${baseDomain}${homeAssets.homeAsset11}`}
+                  placeholder="none"
+                  alt="900hrs"
+                />
+              </Link>
               <h4>7-month TTC</h4>
             </div>
           </Slider>

@@ -59,7 +59,7 @@ const library = () => {
             <div className="cardImg">
               <div>
                 <img
-                  src={`${baseDomain}${publicationAssests.libraryAsset}`}
+                  src={`${baseDomain}${publicationAssests.publicationAssests6}`}
                   alt="library"
                   style={{
                     width: '100%',
