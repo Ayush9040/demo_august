@@ -10,11 +10,9 @@ export const data = [
     year: '1947',
 
     desc: [
-      `
-        Dr. Hansaji Yogendra is a globally acclaimed Spiritual Yoga Guru and the Director of The Yoga Institute, Mumbai. She is a mentor and role model to millions of lives and has conducted more than 50,000 powerful sessions on yoga, wellness, and mental health. Dr. Hansaji has enriched the world with her wisdom by authoring and co-authoring more than 100 books. 
-        `,
-      `An epitome of grace and wisdom, she is a global symbol of peace, balanced living, and yoga. Dr. Hansaji is on the board of multiple national and international committees in charge of devising yoga syllabi and shaping yoga policy worldwide. Using her profound knowledge and immense experience she has designed special techniques, specific health and well-being camps, unique sessions to transform the lives of people of all ages with varied life-related problems and ailments.
-        `,
+      `Dr. Hansaji Yogendra is a globally acclaimed Spiritual Yoga Guru and the Director of The Yoga Institute. She is a mentor and role model to millions of lives and has conducted more than 50,000 powerful sessions on Yoga, wellness, and mental health. Dr. Hansaji has enriched the world with her wisdom by authoring and co-authoring more than 100 books.
+      `,
+      'An epitome of grace and wisdom, she is a global symbol of peace, balanced living, and Yoga. Shei is on the board of multiple national and international committees in charge of devising Yoga syllabi and shaping Yoga policy worldwide. Using her profound knowledge and immense experience, she has designed special techniques, specific health and well-being camps, and unique sessions to transform the lives of people of all ages with varied life-related problems and ailments.',
       `
         Dr. Hansaji was honored with the Bharat Gaurav Award at the House of Commons, British Parliament (2019), Woman of the Year Award (2000) by the American Biographical Institute, USA. Shaped under her leadership and guidance, The Yoga Institute received the prestigious PM Award in 2018.
         `,
@@ -40,15 +38,9 @@ export const data = [
     founder: ['President'],
     year: '1929 - 2018',
     desc: [
-      `
-      Dr. Jayadeva Yogendra, fondly known as Dr. Sahab, was a true yogi who showed the world how to live a balanced and perfect yogic life. He served as the President of The Yoga Institute and continued his father’s legacy with aplomb until he took samadhi in 2018. Dr. Jayadeva’s teachings, filled with deep wisdom, holds answers to life’s various problems problems even today.
+      'Dr. Jayadeva Yogendra, fondly known as Dr. Sahab, was a true Yogi who showed the world how to live a balanced and perfect Yogic life. He served as the President of The Yoga Institute and continued his father’s legacy with aplomb until he took samadhi in 2018. Dr. Jayadeva’s teachings, filled with deep wisdom, holds answers to life’s various problems even today.',
 
-          `,
-
-      `
-      Dr. Jayadeva completed his Masters in Samkhya and Yoga in 1952 from Mumbai University. He was awarded the Hargobindas Scholarship for a Ph.D. (Dr. of Philosophy), in 1955, for his thesis on 'Moksha Parvan'. He was a guru, a guide, and an ideal to millions who came to him. His uniqueness lay in his simplicity and ability to provide simple solutions to complex problems. Dr. Jayadeva was a true yogi in the middle of a bustling world; never desiring publicity or self-renown for himself. Yet experts from a wide array of fields thronged to him for guidance and mentorship.
-  
-          `,
+      'Dr. Jayadeva completed his Masters in Samkhya and Yoga in 1952 from Mumbai University. He was awarded the Hargobindas Scholarship for a Ph.D. (Dr. of Philosophy), in 1955, for his thesis on \'Moksha Parvan\'. He was a guru, a guide, and an ideal to millions who came to him. His uniqueness lay in his simplicity and ability to provide simple solutions to complex problems. Dr. Jayadeva was a true yogi in the middle of a bustling world; never desiring publicity or self-renown for himself. ',
 
       `
       Dr. Sahab is the architect of the Institute’s signature courses and curriculum – The Teacher Training Courses, Camps, And Other Wellness Programs. He specially designed these for the common man and his common problems. He integrated attitude-based concepts into yoga training and life activities which was the greatest contribution to the school of yoga. He also served as the Editor of the Institute’s monthly Journal, “Yoga & Total Health.” 
@@ -79,8 +71,8 @@ export const data = [
     year: '1988',
 
     desc: [
-      'Born on 5th January 1988 to two visionaries, Dr. Jayadeva and Dr. Hansaji Yogendra, Hrishi Jayadeva Hansaji Yogendra is the third generation of Yogendra lineage. As the Assistant Director & Secretary of The Yoga Institute, Hrishi is using his advantage of standing on the shoulders of giants only to further the vision and the spread the teachings of the Gurus at The Yoga Institute. ',
-      'After completing his Masters, Hrishi immersed himself completely in understanding the workings of the Institute and the impact its teachings have on the millions of lives over the years. He realised the immense need of utilising the fast-evolving digital landscape to spread the authentic teachings of the Founders to the furthest reaches of the world and help millions more benefit from it.',
+      'Born on 5th January 1988 to two visionaries, Dr. Jayadeva and Dr. Hansaji Yogendra, Hrishi Jayadeva Hansaji Yogendra is the third generation of Yogendra lineage. As the Assistant Director & Secretary of The Yoga Institute, Hrishiji is using his advantage of standing on the shoulders of giants only to further the vision and spread the teachings of the Gurus at The Yoga Institute.',
+      'After completing Masters, he immersed himself completely in understanding the workings of the Institute and the impact its teachings have on millions of lives over the years. He realised the immense need of utilising the fast-evolving digital landscape to spread the authentic teachings of the Founders to the furthest reaches of the world and help millions more benefit from it. Today, Hrishiji is tirelessly spearheading all the operations at the Institute',
       'Today, Hrishi is tirelessly spearheading all the operations at the Institute with a simple goal of creating a lasting impact on the mankind. Under his leadership the Institute accelerated its reach through various digital and social media initiatives and reforms, that have helped millions of people rise and transform their lives, mentally, emotionally, physically, and spiritually. He also serves the Yoga community as the Vice President of the International board of Yoga.',
     ],
     leftImg: `${baseDomain}${aboutAssets.aboutAsset35}`,
@@ -99,10 +91,8 @@ export const data = [
     founder: ['Founder Guru'],
     year: '1798-1921',
     desc: [
-      'Born in Bengal in 1798, Paramahamsa Madhavdas Ji was a true Yoga Master hailing from the Mukhopadhyaya family. His childhood and upbringing inspired in him a devotional faith towards yoga. He left home at the age of 23 to study various Hatha yoga techniques and health advantages of Yoga practices in order to promote spiritual health and growth of consciousness. During his 123 year long life, he was worked for the revival of yogic practices which were fast disappearing from India at the time. ',
-      `Paramhamsa Madhavdas Ji was giving a talk in Madhavbaug, Mumbai, in 1916, when he met Shri Yogendra Ji. Shri Yogendra Ji was awestruck by his teacher's wisdom and eminence. Madhavdas Ji, too, noticed a special spark in Shri Yogendra Ji. The first thing he told Yogendra Ji was, “I have waited for you for all these years.” Madhavdas Ji was 118 at the time. During his lifetime, Paramahamsa Madhavdas Ji selected just 2 pupils for learning Hatha Yoga. He had a keen sense of the future of yoga and, after a long search, picked Shri Yogendra Ji to carry the "Yoga torch" around the world.
-    Paramahamsa Madhavdas Ji was a master of many different Yoga traditions. He was well-versed in holy practices, but the spiritual upliftment of the masses was his most important goal. He arranged an All-India Sadhu convention in 1909 to reform the hermit order. His outstanding contribution to Yoga continues to this day. The Yoga Institute, now nearly 100 years old, continues to practice the message of humanity, peace, and goodwill by following the values established by the Founder and his holiness Paramahamsa Madhavdas Ji. 
-    `,
+      ' Born in Bengal in 1798, Paramahamsa Madhavdas ji was a true Yoga Master hailing from the Mukhopadhyaya family. His childhood and upbringing inspired in him a devotional faith towards Yoga. He left home at the age of 23 to study various Hatha yoga techniques and health advantages of Yoga practices in order to promote spiritual health and growth of consciousness. During his 123 year long life, he worked for the revival of yogic practices which were fast disappearing from India at the time.',
+      'During his lifetime, Paramahamsa Madhavdas Ji selected just 2 pupils for learning Hatha Yoga. He had a keen sense of the future of Yoga and, after a long search, picked Shri Yogendra Ji to carry the "Yoga torch" around the world. Madhavdas Ji was a master of many different Yoga traditions. His outstanding contribution to Yoga continues to this day. ',
     ],
     route: 'paramhamsa-madhavadas-ji',
     leftImg: `${baseDomain}${homeAssets.homeAsset1}`,
@@ -123,13 +113,9 @@ export const data = [
     year: '1897 - 1989',
 
     desc: [
-      `Shri Yogendra Ji laid the foundation of The Yoga Institute, the world’s oldest organized yoga center, in 1918. He pioneered the evolution of Yoga across the world over the past 100 years. Yogendra Ji set up the first yoga center in New York, America in 1920 and initiated the Western world into the tenets of Yoga. 
-        `,
+      'Shri Yogendra Ji laid down the foundation of The Yoga Institute, the oldest organized Yoga center in the world, in 1918. He is the architect of the evolution of Yoga that has happened in the world in the last 100 years. Furthermore, the western world was introduced to Yoga, for the first time ever, when Yogendra ji set up the first Yoga center in New York, America in 1920',
 
-      `
-      Yogendra Ji’s work drew the attention of researchers and scientists from all over the world. Yogendra Ji adopted a scientific and empirical basis for the study and practice of Yoga. His scientific yet humane temperament attracted much intellectual and academic interest in The Yoga Institute from Universities across the globe.  The Yoga Institute has guided Harvard, UNESCO and several other organizations of world renown in their study of Yoga.
-  
-        `,
+      ' Yogendra Ji’s work drew the attention of researchers and scientists from all over the world. Experts and scholars from various universities began visiting the institute for further studies. He took a scientific approach to the study of Yoga, which was never done before. Yogendra ji firmly believed that people must be educated about Yoga before they start practicing it.  Some of his greatest works are Hatha Yoga Simplified, Asana Simplified, Hygiene Simplified, and so on.',
       `
       But the heart and soul of Shri Yogendraji’s mission was always focused on introducing Yoga to the common man. He believed that Yoga was meant to be in service of the common man and not meant to be confined to ascetics or kept  as a cultural secret This was truly revolutionary for the day and age He simplified complex yogic practices so that every common people could adopt and practice it safely. Some of his greatest works are Hatha Yoga Simplified, Asana Simplified, Hygiene Simplified, Facts about Yoga, and Guide to Meditation. 
   
@@ -164,13 +150,10 @@ export const data = [
     founder: ['Mother'],
     year: '1912 - 2008',
     desc: [
-      `
-      Smt. Sitadevi Yogendra, fondly known as Mother, married Shri Yogendraji in 1927 and joined him in his mission of spreading the knowledge of yoga in the world. Smt. Sitadevi was instrumental in the establishment of the Institute. Not only did she manage the daily activities of the Institute with Yogendrajibut she also began teaching women and children at The Yoga Institute. Sitadevi ji worked tirelessly to empower women and educate them about the benefits of good physical and mental health. 
-          `,
+      ' Smt. Sitadevi Yogendra, fondly known as Mother, married Shri Yogendraji in 1927 and joined him in his mission of spreading the knowledge of Yoga in the world. Smt. Sitadevi was instrumental in the establishment of the Institute. Not only did she manage the daily activities of the Institute with Yogendraji but she also began teaching women and children at The Yoga Institute. Sitadevi ji worked tirelessly to empower women and educate them about the benefits of good physical and mental health.',
 
-      `
-      Through her relentless effort she managed to create a Yoga program for women at the Institute. Through her books, articles, sermons and other intellectual and practical endeavors she worked to dispel the myth that Yoga was only meant for men. Her book Yoga Physical Education for Women was the first ever book written for women on the subject. The book is preserved in the Crypt of Civilization, to be opened six thousand years later. Mother Sitadevi passed away in 2008 at the age of 97. Google India honored the contribution of Smt. Sitadevi ji, towards empowering women, by featuring her amongst six women who brought change in the Indian society. 
-          `,
+      `Through her relentless effort she managed to create a Yoga program for women at the Institute. Through her books, articles, sermons and other intellectual and practical endeavors, she worked to dispel the myth that Yoga was only meant for men. Mother Sitadevi passed away in 2008 at the age of 97. Google India honored her contribution of empowering women.
+      `,
     ],
     leftImg: `${baseDomain}${aboutAssets.aboutAsset11}`,
     rightImg: `${baseDomain}${aboutAssets.aboutAsset12}`,
