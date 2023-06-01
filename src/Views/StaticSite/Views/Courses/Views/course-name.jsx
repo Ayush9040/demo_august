@@ -36,6 +36,7 @@ const SingleCourse = () => {
     return arr
   }
 
+
   const parsingAlgo = async()=>{
     try {
       const res = await axios.get(
@@ -69,8 +70,9 @@ const SingleCourse = () => {
 
           if (el.includes('<meta')) headers.metaData.push(obj)
           if (el.includes('<link')) headers.links.push(obj)
-        } else if (el.includes('<title'))
+        } else if (el.includes('<title')){
           headers.title = el.replace('<title>', '').replace('</title>', '')
+          document.title = headers.title}
         else if (el.includes('<script')) headers.script = el
       })
 
