@@ -10506,7 +10506,7 @@ const classes = {
   },
   2: {
     id: '',
-    title: 'Healing Yoga Movement & Rhythm - Online & On Campus',
+    title: 'Healing Yoga Movement & Rhythm - Online',
     key: 'healing-movement-and-rhythm',
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
@@ -10526,13 +10526,13 @@ const classes = {
       'A movement-based therapy programme for stress management, emotional well-being',
     join: true,
     timing:
-      'Monday & Wednesday - 7:30 am - 8:30 am (IST) (Online) Tuesday & Thursday - 6pm - 7pm (IST) (On campus)',
+      'Tuesday & Thursday - 8pm - 9pm (IST) (Online)',
     fees: {
       onlineFee: 1400,
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'classes',
-    dates: ['7:30 a.m to 8:30 a.m.', '6:30 p.m. to 7:30 p.m.'],
+    dates: ['8pm - 9pm'],
     online: true,
     onCampus: true,
     nonResidential: false,
@@ -10569,8 +10569,7 @@ const classes = {
         content: {
           title: 'Classes',
           text: [
-            'Monday & Wednesday - 7:30 am - 8:30 am (IST) (Online)',
-            'Tuesday & Thursday - 6:30 pm - 7.30 pm (IST) (On campus)',
+            'Tuesday & Thursday - 8 pm - 9 pm (IST) (Online)',
             '(Join on any date)',
           ],
         },
@@ -10579,7 +10578,7 @@ const classes = {
         type: 'paragraph',
         content: {
           title: 'Mode',
-          text: ['Offline & Online'],
+          text: ['Online'],
         },
       },
       {
