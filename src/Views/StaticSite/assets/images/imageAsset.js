@@ -1548,9 +1548,19 @@ export const studentExperienceAssests = {
   Tamara: '/Home/Student-Experience/Tamara-Bućma-Kecman.png',
   Tanvi: '/Home/Student-Experience/Tanvi-Jain-200-hrs-TTC-student.png',
   Vaidehi: '/Home/Student-Experience/Vaidehi-Ajit-Kale.png',
-  Virginie: '/Home/Student-Experience/Virginie-Albar-Mounier.png'
+  Virginie: '/Home/Student-Experience/Virginie-Albar-Mounier.png',
+  Angela:'/Alumni/new_alumni/Angela.png',
+  Deepti :'/Alumni/new_alumni/Deepti.png',
+  Hirak:'/Alumni/new_alumni/Hirak.png',
+  Jose:'/Alumni/new_alumni/Jose.png',
+  Kelly:'/Alumni/new_alumni/Kelly.png',
+  Marwa :'/Alumni/new_alumni/Marwa.png',
+  Neeran:'/Alumni/new_alumni/Neeran.png',
+  Niki :'/Alumni/new_alumni/Niki.png',
+  Pascal:'/Alumni/new_alumni/Pascal.png',
+  Tonatiuh:'/Alumni/new_alumni/Tonatiuh.png',
+  Tran:'/Alumni/new_alumni/tran.png',
 }
-
 export const CSR = {
   peace: '/CSR/peace-justice.png',
   hunger: '/CSR/zero-hunger.png',

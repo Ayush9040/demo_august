@@ -247,4 +247,70 @@ export const listData2 = [
     image:`${baseDomain}${studentExperienceAssests.Monika}`,
     message:'This course at TYI has been a teacher, a reminder. I learned a lot. For example, I used to never pay importance to the physical aspect of life, the value of breathing or of easy ways of leaving life with a sattvik attitude. The Yoga Institute has an amazing team and the same attitude towards everyone from the teachers, familiarizing us with the mental and emotional as well as physical attitude towards life. A mere ‘thank you’ seems not enough to express my gratitude..'
   },
+  {
+    name:'Tran Hoan Thien',
+    designation:'1-MTTC Student from Vietnam',
+    image:`${baseDomain}${studentExperienceAssests.tran}`,
+    message:'I came to The Yoga Institute to study more about Yoga philosophy and to deepen my understanding, for I knew Yoga is not physical exercises but it’s a whole universe within. During the 1-Month Teacher Training Course, I got to know many yogic techniques to apply to my daily routines and I also learned from a wide variety of teachers through their life experience.'
+  },
+  {
+    name:'Angela Alvarez',
+    designation:'Student from Spain Before',
+    image:`${baseDomain}${studentExperienceAssests.Angela}`,
+    message:'I got involved with The Yoga Institute through the Basic Teacher Training Course, I wasn’t sure about how to move forward into my Yoga practice. The course surprised me with a lot of meaningful experiences and content shared by the teachers and other students with so much passion and a remarkable vibrant energy. It gave a deeper knowledge on a discipline like Yoga.'
+  },
+  {
+    name:'Deepti Panjabi',
+    designation:'Student from North Carolina, United States',
+    image:`${baseDomain}${studentExperienceAssests.Deepti}`,
+    message:'When I started my TTC, I knew I was exactly where I was supposed to be. The images that I placed on my vision board started to come to life - meditation, asana pictures, words written: pure joy, devoted, grounded, and awaken your senses. Each teacher guided me to go inward and improve, opened my eyes, and created space for me to grow. Grateful to be able to join the program!'
+  },
+  {
+    name:'Niki Wadhwa',
+    designation:'Yoga Therapy Course Student from Vancouver, Canada ',
+    image:`${baseDomain}${studentExperienceAssests.Niki}`,
+    message:'The Course is a wonderful stepping stone after the Basic and Advanced TTC’s to incorporate modifications in yogic lifestyle, including asanas and pranayama for the management of 80+ diseases. The program lays out in a simple and concise way the do’s and don’ts of simple Yogic techniques for controlling and managing various health conditions. '
+  },
+  {
+    name:'Marwa Saleh',
+    designation:'200-Hrs TTC Student from Germany',
+    image:`${baseDomain}${studentExperienceAssests.Marwa}`,
+    message:'A friend recommended The Yoga Institute for my 200-Hrs TTC, and I decided to join. Even though it was an online format, we were able to bond with our teachers. They were always open for taking all our questions, and we were able to learn a lot and had a fun atmosphere in each class. The course broadened my understanding of Yoga and I can’t wait to take on my next course.'
+  },
+  {
+    name:'Pascal Baerten',
+    designation:'3-M ATTC Student from Belgium ',
+    image:`${baseDomain}${studentExperienceAssests.Pascal}`,
+    message:'I joined the 3 Months Advanced TTC at The Yoga Institute and I learned a lot about Yoga (both practical and theoretical) but the more important is that this was done in an immersive yogic atmosphere that gradually brought my mind to a state of tranquillity. The knowledge of the teachers is impressive and their sincerity. It changed my perspective towards way of life.'
+  },
+  {
+    name:'Kelly Mason',
+    designation:'Student from Melbourne',
+    image:`${baseDomain}${studentExperienceAssests.Kelly}`,
+    message:'During the TTC, I have discovered not only within myself but with the knowledge given to me from the wonderfully devoted teachers here. The Yoga Institute has been providing gifts to many people who pass through the gates. It gives invaluable, beautiful tools and practices for all those in search of growth. We shall share what we have gained.'
+  },
+  {
+    name:'Hirak Shah',
+    designation:'Mumbai, 7-months ATTC student',
+    image:`${baseDomain}${studentExperienceAssests.Hirak}`,
+    message:'From flavoursome Sattvik meals to soothing Yogic techniques I learnt during the 7-MATTC it has been a miraculous journey. Things here are not just limited to theory classes, I have had such soul enriching experiences while volunteering for Yogic camps. The amount of exposure that I got about the ‘Yoga World’ here is quite utilitarian. The upbeat environment here along with respected Dr. Hansaji Yogendra’s presence has been so enchanting'
+  },
+  {
+    name:'Tonatiuh Miguel Liévano Beltrán,',
+    designation:'Mexico, 1-Month TTC',
+    image:`${baseDomain}${studentExperienceAssests.Tonatiuh}`,
+    message:'I enrolled for the Institute’s 1-Month TTC following a desire to deepen my knowledge of yoga, which had shown me a way to cultivate harmony, awareness, and equanimity. I come away with wonderful memories, invaluable lessons, and the determination to continue growing; and recommend the Institute to anyone interested in cultivating discipline and leading a healthier, more balanced life.'
+  },
+  {
+    name:'Neeran Alomran',
+    designation:'Student from UAE',
+    image:`${baseDomain}${studentExperienceAssests.Neeran}`,
+    message:'The TTC classes always nourish me in the most amazing ways. I really loved the meditation, breathing exercises and chanting that we did at the beginning of class and found it so helpful. The asanas were amazing. I learned a lot about my beautiful, amazing created body: How to maintain it more and listen to its pain. It was released on different levels and dimensions as a healer.'
+  },
+  {
+    name:'José Manuel González Márquez',
+    designation:' Model at Francina Models',
+    image:`${baseDomain}${studentExperienceAssests.Jose}`,
+    message:'At The Yoga Institute, I learnt what real Yoga is. I discovered that Yoga is not just a set of gymnastic stretches but comprises philosophy and study of mind. I did 21-Days Better Living Course, which I loved and I really recommend it. Later I did my Teachers Training Course and now I’m a Yoga instructor. Also, the Institute is QCI certified and the Sattvic food offered is delicious.'
+  },
 ]
