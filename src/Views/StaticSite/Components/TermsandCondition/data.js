@@ -90,8 +90,13 @@ const data=
     points:
     <ul>
       <li>Refrigeration facility is there to store medicines and permitted eatables as fruits and salad ingredients only. </li>
-      <li>Storage and consumption of non-vegetarian food and alcohol is strictly prohibited on the institute premises.</li>
-      <li>Cooled and UV filtered drinking water is available at the water stations.</li>
+    </ul>
+  },
+  {
+    heading:'Recording Policy of TYI',
+    points:
+    <ul>
+      <li> The Institute retains all rights to record the sessions for their internal usage & quality purposes. These recordings are strictly for the institute and the data is stored securely in a manner that reasonably protects it from misuse and loss and from unauthorized access, modification or disclosure. Students are prohibited from recording these live sessions. We will not share any recordings with the students.</li>
     </ul>
   },
   {
