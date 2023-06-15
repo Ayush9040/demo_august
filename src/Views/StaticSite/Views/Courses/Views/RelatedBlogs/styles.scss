@@ -71,16 +71,16 @@
 }
 
 @media (max-width: 1220px) {
-  .related_courses_div {
+  .related_blogs_div {
     .content-container{
       display: flex;
-      flex-wrap: wrap-reverse;
+      flex-wrap: wrap;
     }
   }
 }
 
 @media (max-width: 1000px) {
-  .related_courses_div {
+  .related_blogs_div {
     .content-container {
       .course-cards {
         justify-content: center;
@@ -91,7 +91,7 @@
 }
 
 @media (max-width: 900px) {
-  .related_courses_div {
+  .related_blogs_div {
     .banner-heading {
       h1 {
         width: 100%;
@@ -111,12 +111,17 @@
 }
 
 @media (max-width: 620px) {
-  .related_courses_div {
+  .related_blogs_div {
     .content-container {
       .course-cards {
         flex-direction: column;
         min-width: 100%;
       }
     }
+  }
+}
+@media (max-width: 500px) {
+  .related_blogs_div {
+    padding: 1rem 2rem;
   }
 }
