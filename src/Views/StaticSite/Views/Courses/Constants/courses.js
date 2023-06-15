@@ -8975,7 +8975,7 @@ const camps = {
         content: {
           title: '',
           text: [
-            'For registration in the 7-Days Yoga Camp, please click on the link below and fill in all the details. Within 24 hours after registering, you will receive an email containing the link to the payment portal. You can use the link to make the payment.',
+            'For registration in the 7-Days Yoga Camp, Within 24 hours after registering, you will receive an email containing the link to the payment portal. You can use the link to make the payment.',
           ],
         },
       },
