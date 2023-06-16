@@ -14,6 +14,7 @@ import { cmsBaseDomain } from '../../../../Constants/appSettings'
 import RelatedBlogs from '../Courses/Views/RelatedBlogs'
 import RelatedCourse from '../Courses/Views/Component'
 import { AllCourses } from '../Courses/Constants/courses'
+import SelectDropDown from '../../Components/Select Dropdown'
 
 const IBYcourse = () => {
 
@@ -25,6 +26,9 @@ const IBYcourse = () => {
   const [blogData, setBlogData] = useState([])
   const [cardData, setCardData] = useState([])
   const [metaData, setMetaData] = useState([])
+  const [selectBatch, setSelectBatch] = useState('')
+  const [ price, setPrice] = useState('')
+  const [error, setError] =  useState(false)
 
   const getBlogsData = async(posts) => {
     const arr = []
@@ -105,6 +109,45 @@ const IBYcourse = () => {
   }
 
 
+  const selectStyles1 = {
+    cursor: 'pointer',
+    background: 'white',
+    borderColor: 'black',
+    color: 'black',
+    fontSize: '1.5rem',
+    fontWeight: '900',
+    borderWidth: '0.25rem',
+    borderRadius: '24px',
+    borderStyle: 'solid',
+    maxWidth: 'fit-content',
+    marginTop: '2rem',
+    marginLeft:'14.5rem'
+  }
+
+
+  const date = () =>{
+    if(selectBatch === ''){
+      setError(true) ; setOpenForm(false)
+    } else {
+      switch (selectBatch) {
+      case 'JUN - AUG 2023':
+        setPrice(1500) ; setError(false) 
+        break
+      case 'SEP - NOV 2023': 
+        setPrice(1000); setError(false)
+        break
+      case 'DEC 2023 - FEB 2024':
+        setPrice(500); setError(false)
+        break
+      default:
+        break
+      }
+    }
+  }
+
+  const batchOptions = ['JUN - AUG 2023','SEP - NOV 2023','DEC 2023 - FEB 2024']
+
+
   return (
     <div>
       { metaDataObj[location.pathname] && <Helmet  title={metaDataObj[location.pathname]?.title || ''}/> }
@@ -114,11 +157,21 @@ const IBYcourse = () => {
           <div className="highlight-info">
             <h1>IBY Class (Only for TYI Yoga TTC Teachers) - Online & On Campus</h1>
             <p>One of the most-awaited and popular classes of The Yoga Institute, IBY Class is back. The classes has been running for more than two decades. </p>
-            <CommonBtn text='Enroll Now' buttonAction={ ()=>setOpenForm(true) }   />
+            <CommonBtn text='Enroll Now' buttonAction={ ()=>(setOpenForm(true), date() )}   />
+            {error && <small> Please select batch* </small>}
           </div>
           <div className="highlight-cover">
             <img src={`${baseDomain}${iybCourse.mainImage}`} alt="IYB-image" />
           </div>
+        </div>
+        <div>
+          <SelectDropDown
+            currentValue={selectBatch}
+            changeCurrentValue={setSelectBatch}
+            text={'Select Batch'}
+            isStyles={selectStyles1}
+            dates={batchOptions}
+          /> 
         </div>
         <div className="about-section">
           <p style={{ fontWeight: '700' }}>One of the most-awaited and popular classes of The Yoga Institute, IBY Class is back. The classes has been running for more than two decades.</p>
@@ -135,14 +188,23 @@ const IBYcourse = () => {
             <ul>
               <li><span className='nutri-page-semi-bold' > Date: </span>Starting from 10th March, 2023</li>
               <li><span className='nutri-page-semi-bold' > Time: </span> Every Friday, 3:30 pm to 5:00 pm (IST)</li>
-              <li><span className='nutri-page-semi-bold' > Annual Fees:: </span>Rs. 2,000/-</li>
+              <li><span className='nutri-page-semi-bold' > Friday Class Fees </span>
+                <ul>
+                  <li><span  > March 2023 - May 2023 : </span>Rs. 2,000/-</li>
+                  <li><span  > June 2023 - August 2023 : </span>Rs. 1,500/-</li>
+                  <li><span  > September 2023 - November 2023	: </span>Rs. 1,000/-</li>
+                  <li><span> December 2023 - February 2024 : </span> Rs. 500/-</li>
+                </ul>
+              </li>
+              
+
             </ul>
             <p className='nutri-page-bold'>Open to all the teachers who have completed Basic Yoga TTC, Intermediate Yoga TTC and Advanced Yoga TTC from the institute</p>
           </div>
         </div>
         
        
-        {openForm && <IBYform  setOpenForm={setOpenForm} />}
+        {openForm && <IBYform  setOpenForm={setOpenForm} price={price} selectBatch={selectBatch} />}
       </div>
       {cardData && cardData.length > 0 && <RelatedCourse
         title={'Related Courses'}

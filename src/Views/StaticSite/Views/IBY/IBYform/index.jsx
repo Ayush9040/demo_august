@@ -12,7 +12,7 @@ import { upload } from '../../../assets/icons/icon'
 import Loader from '../../../Components/Loader'
 import InnerNavComponent from '../../../Components/InnerNavComponent'
 
-const IBYform = ({ setOpenForm }) => {
+const IBYform = ({ setOpenForm, price, selectBatch }) => {
 
   useEffect(() => {
     const script = document.createElement('script')
@@ -57,7 +57,7 @@ const IBYform = ({ setOpenForm }) => {
     )
    
     const paymentOrderResponse = await createIYBorder(data.data._id, {
-      amount: 2000,
+      amount: price,
       notes: 'IYB course',
       objectType : 'IBY',
     })
@@ -208,7 +208,10 @@ const IBYform = ({ setOpenForm }) => {
             />
             {empty === 4 && <small> Please enter your country</small>}
           </div>
-       
+          <div >
+            <div className='batch_price'>Batch : {selectBatch}</div>
+            <div className='batch_price'>  Amount Payable : {price}</div>
+          </div>
           <div className='form-field' style={{ textAlign: 'left' }} id='t-n-c'>
          
           </div>

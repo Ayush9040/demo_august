@@ -20,6 +20,10 @@
   }
   &>form{
     margin-top: 5rem;
+    .batch_price{
+      font-size: 1.25rem;
+      color:#606060 ;
+    }
     .uploads {
       display: flex;
       flex-direction: column;
