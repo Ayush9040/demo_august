@@ -315,6 +315,7 @@ export const careerAssets = {
 
 export const aboutAssets = {
   aboutAsset1: '/About/Overview/about-overview.jpg',
+  aboutAsset50 :'/About/Overview/bhopal.webp',
 
   // shree Yogendra jI
 

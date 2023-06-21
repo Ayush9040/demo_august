@@ -6403,7 +6403,7 @@ const camps = {
     },
     category: 'camps',
     metaDescription:
-      'Powerful and effective yoga asana, pranayama, and relaxation techniques to alleviate heart ailments',
+      'Asanas, pranayamas, and relaxation techniques for treating heart conditions',
     image: `${baseDomain}${courseAssets.courseAsset111}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset6}`,
     dates: ['2nd July 2023','3rd September 2023','5th November 2023'],
@@ -6536,7 +6536,7 @@ const camps = {
     },
     category: 'camps',
     metaDescription:
-      'Wholesome tools and techniques to help you manage your condition completely',
+      'Holistic approach with wholesome tools and technique for managing diabetes',
     image: `${baseDomain}${courseAssets.courseAsset7}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset105}`,
     online: false,
@@ -7088,7 +7088,7 @@ const camps = {
     },
     category: 'camps',
     metaDescription:
-      'Specific pranayama, asana and relaxation techniques to enhance your state of mind',
+      'Enhance state of mind with pranayama, yoga asana and relaxation techniques',
     image: `${baseDomain}${courseAssets.courseAsset8}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset112}`,
     dates: ['16th July 2023', '17th September 2023', '19th November 2023'],
@@ -9153,7 +9153,7 @@ const camps = {
       {
         type: 'u-list',
         content: {
-          title: ' TThe programme covers an introduction to: ',
+          title: ' The programme covers an introduction to: ',
           points: [
             {
               listItem: 'Astanga Yoga',
@@ -9819,7 +9819,7 @@ const camps = {
       {
         type: 'u-list',
         content: {
-          title: ' TThe programme covers an introduction to: ',
+          title: ' The programme covers an introduction to: ',
           points: [
             {
               listItem: 'Astanga Yoga',
@@ -10148,7 +10148,7 @@ const camps = {
   //     {
   //       type: 'u-list',
   //       content: {
-  //         title: ' TThe programme covers an introduction to: ',
+  //         title: ' The programme covers an introduction to: ',
   //         points: [
   //           {
   //             listItem: 'Astanga Yoga',

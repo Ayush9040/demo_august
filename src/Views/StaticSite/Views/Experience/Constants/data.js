@@ -250,7 +250,7 @@ export const listData2 = [
   {
     name:'Tran Hoan Thien',
     designation:'1-MTTC Student from Vietnam',
-    image:`${baseDomain}${studentExperienceAssests.tran}`,
+    image:`${baseDomain}${studentExperienceAssests.Tran}`,
     message:'I came to The Yoga Institute to study more about Yoga philosophy and to deepen my understanding, for I knew Yoga is not physical exercises but it’s a whole universe within. During the 1-Month Teacher Training Course, I got to know many yogic techniques to apply to my daily routines and I also learned from a wide variety of teachers through their life experience.'
   },
   {

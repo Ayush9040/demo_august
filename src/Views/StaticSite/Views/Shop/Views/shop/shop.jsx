@@ -20,6 +20,7 @@ import { Link, useNavigate,useSearchParams } from 'react-router-dom'
 // import baseDomain from '../../../../assets/images/imageAsset'
 // import { banner } from '../../../../assets/images/imageAsset'
 import { updateLocalCart } from '../../helpers/helper'
+import Footer from '../../../../Components/Footer'
 
 const Shop = () => {
   const dispatch = useDispatch()
@@ -79,6 +80,12 @@ const Shop = () => {
       isSearched(true)
     }catch(err){
       getAllProducts(1,10)
+    }
+  }
+
+  const onEnter = (e) =>{
+    if (e.keyCode === 13) {
+      searchProductAction()
     }
   }
 
@@ -161,7 +168,7 @@ const Shop = () => {
               <option value='all' >All Categories</option>
               { categories.map((item,i)=><option key={i} selected={ item._id===Params.get('category') } value={item._id} >{ item.name }</option>) }
             </select>
-            <div className="shop_search">
+            <div className="shop_search" onKeyDown={(e)=>{onEnter(e)}} >
               <label>
                 <input type={'text'} value={ search } onChange={(e)=>{ setSearch(e.target.value) }}  placeholder="Search" />
                 <span onClick={searchProductAction} >
@@ -257,6 +264,7 @@ const Shop = () => {
             />
           </div>}
         </div>
+        <Footer/>
       </div>
       {modal && <MessageModal type='WARNING' message='Please login first!' nav='/user/sign-in' closePopup={setModal} /> }
     </>

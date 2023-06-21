@@ -60,14 +60,14 @@ const AboutUs = () => {
       </div>
       <div className="content-container pd-career">
         <div className="image-content">
-          <img src={`${baseDomain}${aboutAssets.aboutAsset1}`} />
+          <img src={`${baseDomain}${aboutAssets.aboutAsset50}`} />
         </div>
         <div className="text-content-right tyi-text-container">
           <div className="banner-heading">
             <h1>The Yoga Institute</h1>
             <div className="bottom-line"></div>
           </div>
-          <p>The Enduring Foundation Spirit</p>
+          <p className='mobile_view'>The Enduring Foundation Spirit</p>
           <p>
             The Yoga Institute, established by Shri Yogendra Ji in 1918 is the
             world’s oldest Yoga Center. Being the world’s first established yoga
