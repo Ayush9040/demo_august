@@ -2594,7 +2594,14 @@ export const printMediaAssest = {
   printMediaAssest978: '/print_media/2023/Navbharat_Times_Epaper-5th_March_2023.jpg',
   printMediaAssest979: '/print_media/2023/Navbharat_Times_Epaper-6th_March_2023.jpg',
   printMediaAssest980: '/print_media/2023/Navarashtra - 30th April 2023 (1).jpg',
-  printMediaAssest981:  '/print_media/2023/Toi.jpg'
+  printMediaAssest981:  '/print_media/2023/Toi.jpg',
+  printMediaAssest982: '/Print%20Media/2023/PressRelease%20-%2022-05-2023%20%281%29.jpg',
+  printMediaAssest983: '/Print%20Media/2023/Hindusthan-Samachar-23rdMay2023.jpg',
+  printMediaAssest984: '/Print%20Media/2023/Shiksha-23rdMay2023.jpg',
+  printMediaAssest985: '/Print%20Media/2023/Ani-News-23rdMay2023.jpg',
+  printMediaAssest986: '/Print%20Media/2023/Insamachar-23rdMay2023.jpg',
+  printMediaAssest987: '/Print%20Media/2023/Navbharat-Times-21stJune2023.jpg',
+  printMediaAssest988: '/Print%20Media/2023/Dainik-Jagran-21stJune2023.png'
 }
 
 
