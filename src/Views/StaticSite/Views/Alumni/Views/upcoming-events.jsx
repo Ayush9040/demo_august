@@ -45,7 +45,7 @@ const Seminar = () => {
           The Yoga Institute has been at the forefront of spreading Yoga around the world. Our mission has connected us to more than 1 lakh+ students who are now part of the family at the Yoga Institute. Our students come from all walks of life and most often continue to share the essence of our teachings in Yoga and the Yogic way of life long after the official completion of their courses. We are proud to say that many of our alumni find a sense of belonging and an immovable belief in our work that compels them to actively collaborate with us in all our endeavours.
           </p>
           <div className="options">
-            <button>View Story</button>
+            <button>Read Blog</button>
             <div className="share-icon">{share}</div>
           </div>
         </div>

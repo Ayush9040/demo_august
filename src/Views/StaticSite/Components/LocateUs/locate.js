@@ -75,7 +75,7 @@ export const locateData =[
       {
         state:'Kalyan',
         notstate:'Saket College, Saket Vidyanagri Marg, Katemenivali, Chinchpada Road, Kalyan, Maharashtra - 421306',
-        phone:['+91-9664976447'],
+        phone:['+91-9673134471'],
         url:''
       },
       {
@@ -140,16 +140,16 @@ export const locateData =[
     email:'life@yoga.org.hk',
     branches:[]
   },
-  {
-    flag:`${baseDomain}${locateAsset.thailand}`,
-    country:'Thailand',
-    add:'Wise Living Yoga Academy, Thailand (Doi Saket Yoga Training Center) 198 Moo 2,',
-    subAdd:'Luang Nuea Sub-Ditrict, Doi Saket - 50220 Chiang Mai - Thailand.',
-    mobile:'+66 931783213',
-    email:'info@wiselivingyoga.com',
-    website:'https://teachertraining.wiselivingyoga.com/',
-    branches:[]
-  },
+  // {
+  //   flag:`${baseDomain}${locateAsset.thailand}`,
+  //   country:'Thailand',
+  //   add:'Wise Living Yoga Academy, Thailand (Doi Saket Yoga Training Center) 198 Moo 2,',
+  //   subAdd:'Luang Nuea Sub-Ditrict, Doi Saket - 50220 Chiang Mai - Thailand.',
+  //   mobile:'+66 931783213',
+  //   email:'info@wiselivingyoga.com',
+  //   website:'https://teachertraining.wiselivingyoga.com/',
+  //   branches:[]
+  // },
   {
     flag:`${ baseDomain }${ locateAsset.uae }`,
     country:'U.A.E.',

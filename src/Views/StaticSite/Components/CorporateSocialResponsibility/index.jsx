@@ -46,7 +46,7 @@ const CorporateSocialResponsibilty = () => {
                   <div className="last-btn">
                     <Link to={`/csr/${support.id}`} >
                       <span className="btn-div">
-                        <button className='view_btn'>View Story</button>
+                        <button className='view_btn'>Read Blog</button>
                       </span>
                     </Link>
                   </div>

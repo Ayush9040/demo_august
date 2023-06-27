@@ -78,7 +78,7 @@ const BlogPage = () => {
             <p dangerouslySetInnerHTML={{ __html:`${blog.excerpt}` }} ></p>
             <div className="options">
               <Link to={`/${blog.slug}`}>
-                <button>Read Story</button>
+                <button>Read Blog</button>
               </Link>
               {/* <div className="share-icon">{share}</div> */}
             </div>

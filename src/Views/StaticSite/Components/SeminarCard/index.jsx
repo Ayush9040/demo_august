@@ -8,7 +8,7 @@ const SeminarCard = ({
   bgImage,
   desc,
   url = '',
-  btnText = 'View Story',
+  btnText = 'Read Blog',
   date
 }) => {
 
