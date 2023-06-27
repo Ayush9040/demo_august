@@ -4758,6 +4758,41 @@ const printMedia = [
     year:'2023',
     media:[
       {
+        img:`${baseDomain}${printMediaAssest.printMediaAssest988}`,
+        url:'',
+        alt:'Dainik Jagran - 21st June 2023',
+      },
+      {
+        img:`${baseDomain}${printMediaAssest.printMediaAssest987}`,
+        url:'https://epaper.navbharattimes.com/imageview_9524_68669_4_16_21-06-2023_2_i_1_sf.html',
+        alt:'Navbharat Times - 21st June 2023',
+      },
+      {
+        img:`${baseDomain}${printMediaAssest.printMediaAssest986}`,
+        url: 'https://insamachar.com/aiia-launches-international-yoga-day-2023-celebrations/',
+        alt:'Insamachar - 23rd May 2023',
+      },
+      {
+        img:`${baseDomain}${printMediaAssest.printMediaAssest985}`,
+        url:'https://www-aninews-in.translate.goog/news/national/general-news/yoga-day-2023-all-india-institute-of-ayurveda-kick-starts-celebrations-under-ministry-of-ayush20230522212734/?_x_tr_sl=en&_x_tr_tl=hi&_x_tr_hl=hi&_x_tr_pto=tc',
+        alt:'Ani News - 23rd May 2023',
+      },
+      {
+        img:`${baseDomain}${printMediaAssest.printMediaAssest984}`,
+        url:'https://www.shiksha.com/news/medicine-health-sciences-aiia-kick-starts-its-international-yoga-day-2023-celebrations-blogId-125525',
+        alt:'Shiksha - 23rd May 2023',
+      },
+      {
+        img:`${baseDomain}${printMediaAssest.printMediaAssest983}`,
+        url:'https://www.hindusthansamachar.in/Encyc/2023/5/22/AIIA-began-its-program-on-yoga-day.php',
+        alt:'Hindusthan Samachar - 23rd May 2023',
+      },
+      {
+        img:`${baseDomain}${printMediaAssest.printMediaAssest982}`,
+        url:'https://pib.gov.in/PressReleaseIframePage.aspx?PRID=1926466',
+        alt:'PressRelease - 22-05-2023',
+      },
+      {
         img:`${baseDomain}${printMediaAssest.printMediaAssest981}`,
         url:'https://timesofindia.indiatimes.com/blogs/voices/strengthen-your-nervous-system-with-this-mudra/',
         alt:'Toi-20-04-2023 ',
