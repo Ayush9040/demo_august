@@ -12635,6 +12635,13 @@ const certificate = {
       {
         type: 'paragraph',
         content: {
+          title: 'Eligibility',
+          text: ['Eligible for those who have completed minimum 200 hours TTC from any Institution..'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
           title: 'Rules',
           text: ['Recordings are strictly prohibited.'],
         },
