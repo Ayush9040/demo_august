@@ -7779,7 +7779,7 @@ const camps = {
     mostPopular: false,
     rating: 5,
     colorCode: '#CE9B51',
-    timing: '9:30 am – 5:30 pm (IST)',
+    timing: '10.00 am to 1:00 pm (IST)',
     fees: {
       onlineFee: 1000,
       offlineFee: { residentialFee: 0, nonResidentialFee: 1000 },
@@ -12636,7 +12636,7 @@ const certificate = {
         type: 'paragraph',
         content: {
           title: 'Eligibility',
-          text: ['Eligible for those who have completed minimum 200 hours TTC from any Institution..'],
+          text: ['Eligible for those who have completed minimum 200 hours TTC from any Institution.'],
         },
       },
       {
