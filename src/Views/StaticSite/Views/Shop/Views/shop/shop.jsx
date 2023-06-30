@@ -37,8 +37,8 @@ const Shop = () => {
   const [searched,isSearched] = useState(false)
   const { location } = useSelector(state=>state.location)
   const [banner, setBanner] = useState([])
-  
-
+  const [ page, setPage] = useState(1)
+ 
   const fetchAllCategories = async()=>{
     const { data } = await getAllCategories()
     setCategories(data.data)
@@ -48,11 +48,18 @@ const Shop = () => {
     if(Params.get('category')){
       const { data } = await getProductByCategory(Params.get('category'))
       setProducts(data.data)
+      if(data?.data?.length <= 24 && data?.data?.length >= 12) {
+        setPage(2)
+      } else if (data?.data?.length <12){setPage(1)}
+      else {setPage(3) }
       return
     }
+    
     const { data } = await fetchAllProductsAPI(page, limit)
     setProducts(data.data)
+    console.log(data,'cat')
     setCount(data.count)
+    setPage(3)
   }
 
   const productByCategory = async(category)=> {
@@ -259,7 +266,7 @@ const Shop = () => {
               activePage={pagination.page}
               itemsCountPerPage={pagination.limit}
               totalItemsCount={count}
-              pageRangeDisplayed={3}
+              pageRangeDisplayed={page}
               onChange={(e) => shopPagination(e)}
             />
           </div>}
