@@ -46,8 +46,9 @@ const Shop = () => {
 
   const getAllProducts = async(page, limit) => {
     if(Params.get('category')){
-      const { data } = await getProductByCategory(Params.get('category'))
+      const { data } = await getProductByCategory(Params.get('category'), page, limit)
       setProducts(data.data)
+      setCount(data.count)
       if(data?.data?.length <= 24 && data?.data?.length >= 12) {
         setPage(2)
       } else if (data?.data?.length <12){setPage(1)}
@@ -75,7 +76,7 @@ const Shop = () => {
     }
   }
 
-  const shopPagination = (num) => {
+  const shopPagination = (num) => {    
     setPagination({ ...pagination, page: num, limit: 12 })
   }
   const searchProductAction = async()=>{

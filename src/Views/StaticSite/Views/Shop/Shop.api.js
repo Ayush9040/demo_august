@@ -11,8 +11,8 @@ export const fetchSingleProduct =( productID )=>{
   return axios.get(`${ecomBaseDomain}/product/${productID}`)
 }
 
-export const getProductByCategory = ( categoryId )=>{
-  return axios.get(`${ecomBaseDomain}/product/productsbycategory/${ categoryId }`)
+export const getProductByCategory = ( categoryId , page, limit)=>{
+  return axios.get(`${ecomBaseDomain}/product/productsbycategory/${ categoryId }?page=${page}&limit=${limit}`)
 }
 
 export const getAllCategories = ()=>{
