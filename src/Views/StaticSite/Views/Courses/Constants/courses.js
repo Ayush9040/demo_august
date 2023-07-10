@@ -12775,8 +12775,8 @@ const certificate = {
           text: [
             'Become a certified Yoga therapist through The Yoga Institute.',
             'Complete a one-stop destination to enhance your skills in Yogic Management of diseases through our YOGA THERAPY COURSE.',
-            'This is a detailed and comprehensive100 hours Yoga Therapy course wherein the yogic lifestyle and yogic management of diseases is taught in a practical and simple manner for easy understanding and teaching. This yoga therapy certification course will qualify you to become an extremely capable and confident Yoga Therapist to handle any case.',
-          ],
+            'This is a detailed and comprehensive100 hours Yoga Therapy course wherein the yogic lifestyle and yogic management of diseases is taught in a practical and simple manner for easy understanding and teaching. This yoga therapy certification course will qualify you to become an extremely capable and confident Yoga Therapist to handle any case.'
+],
         },
       },
       {
@@ -12840,6 +12840,11 @@ const certificate = {
             {
               listItem:
                 'Exam will be conducted at the conclusion of the Yoga Therapy Course.',
+              subItems: [],
+            },
+            {
+              listItem:
+                ' An opportunity to intern at the signature program conducted by The Yoga Institute called “Samatvam” where patients walk in to get guidance on resolving some of their chronic issues using the holistic approach taken by yoga. This is a 12 week (1 hour per week) as certified internship possible to be taken up only by Yoga Therapy pass outs.',
               subItems: [],
             },
           ],
@@ -12980,6 +12985,7 @@ const certificate = {
                 'Gout',
                 'Tennis Elbow/Lateral Epicondylitis',
                 'Frozen Shoulder',
+                'Kyphosis',
               ],
             },
             {
@@ -12992,9 +12998,9 @@ const certificate = {
                 'Acne',
                 'Lichen planus',
                 'Eczema',
-                'PsoriasisVitiligo',
+                'Psoriasis',
                 'Peeling skin syndrome',
-                '',
+                'Vitiligo',
               ],
             },
             {
@@ -13020,6 +13026,10 @@ const certificate = {
                 'Epilepsy',
                 'Parkinson’s disease',
               ],
+            },
+            {
+              listItem: 'Geriatric Care',
+              subItems: [],
             },
             {
               listItem: 'Cancer',
