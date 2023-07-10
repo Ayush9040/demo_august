@@ -12776,7 +12776,7 @@ const certificate = {
             'Become a certified Yoga therapist through The Yoga Institute.',
             'Complete a one-stop destination to enhance your skills in Yogic Management of diseases through our YOGA THERAPY COURSE.',
             'This is a detailed and comprehensive100 hours Yoga Therapy course wherein the yogic lifestyle and yogic management of diseases is taught in a practical and simple manner for easy understanding and teaching. This yoga therapy certification course will qualify you to become an extremely capable and confident Yoga Therapist to handle any case.'
-],
+          ],
         },
       },
       {
