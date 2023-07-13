@@ -12869,16 +12869,18 @@ const certificate = {
                 'Acidity and GERD',
                 'Migraine',
                 'Fatty Liver',
-                'Inflammatory Bowel Disease (IBD)'
-              ],
-            },
-            {
-              listItem: 'Inflammatory Bowel Disease (IBD)',
-              subItems: [
+                'Inflammatory Bowel Disease (IBD)',
                 'Ulcerative Colitis',
                 'Crohn’s Disease',
               ],
             },
+            // {
+            //   listItem: 'Inflammatory Bowel Disease (IBD)',
+            //   subItems: [
+            //     'Ulcerative Colitis',
+            //     'Crohn’s Disease',
+            //   ],
+            // },
             {
               listItem: 'Respiratory problems',
               subItems: [
