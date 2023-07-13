@@ -24,7 +24,7 @@ const ttc200hr = {
     mostPopular: true,
     rating: 5,
     colorCode: '#E38F73',
-  
+
     timing: 'Monday to Saturday: 10:00 am - 6:00 pm (IST)',
     fees: {
       onlineFee: 25000,
@@ -110,7 +110,7 @@ const ttc200hr = {
         type: 'paragraph',
         content: {
           title: 'Fees',
-          text: ['Online:Rs. 25,000 /-', 'Non-Residential: Rs. 30,000/- (Inclusive of course fee, study material, lunch, and snacks)',' Residential: Rs. 55,000/- (Inclusive of course fee, study material, accommodation on triple occupancy basis and 4 meals a day)'],
+          text: ['Online:Rs. 25,000 /-', 'Non-Residential: Rs. 30,000/- (Inclusive of course fee, study material, lunch, and snacks)', ' Residential: Rs. 55,000/- (Inclusive of course fee, study material, accommodation on triple occupancy basis and 4 meals a day)'],
         },
       },
       {
@@ -363,10 +363,10 @@ const ttc200hr = {
         },
       },
       {
-        type:'paragraph',
-        content:{
-          title:'Exam Details',
-          text:[],
+        type: 'paragraph',
+        content: {
+          title: 'Exam Details',
+          text: [],
         }
       },
       {
@@ -395,43 +395,43 @@ const ttc200hr = {
               subItems: ['Once finalized, students will not be permitted to switch from online to on-campus and vice versa.'],
             },
             {
-              listItem:'Examiners will evaluate students only as per the final approved list.',
-              subItems:[],
+              listItem: 'Examiners will evaluate students only as per the final approved list.',
+              subItems: [],
             },
 
-           
+
           ],
-          
+
         },
       },
       {
-        type:'u-list',
-        content:{
-          title:'Exam Schedule ',
-          points:[
+        type: 'u-list',
+        content: {
+          title: 'Exam Schedule ',
+          points: [
             {
-              listItem:'On-campus Final exams (both theory and practical’s) will be conducted on the last working day of each month, or as announced (in case of exigencies), between 10 am (IST) and 2 pm IST.',
-              subItems:[
-                
+              listItem: 'On-campus Final exams (both theory and practical’s) will be conducted on the last working day of each month, or as announced (in case of exigencies), between 10 am (IST) and 2 pm IST.',
+              subItems: [
+
               ],
             },
             {
-              listItem:'Online Final exams will be conducted on the 1st Sat and the 3rd Sat of each month or as announced (in case of exigencies), subject to a minimum quorum of 8 students.',
-              subItems:[
+              listItem: 'Online Final exams will be conducted on the 1st Sat and the 3rd Sat of each month or as announced (in case of exigencies), subject to a minimum quorum of 8 students.',
+              subItems: [
                 'Theory exams will be conducted online at 5pm (IST)',
                 'Practical exams will be conducted online at 3.30 pm (IST) / 6.30 pm (IST), subject to quorum.'
               ],
             },
             {
-              listItem:'Students, after submission, can log out /leave only with the explicit permission of the examiner.',
-              subItems:[
+              listItem: 'Students, after submission, can log out /leave only with the explicit permission of the examiner.',
+              subItems: [
                 'For practical’s - students will have to wait till the exams of all students are completed.',
                 'The examiner may call out students at random and not necessarily in alphabetic order'
               ],
             },
             {
-              listItem:'A Mock test will be held 7 -14 days prior to the course end date, to familiarise students with the exam process.',
-              subItems:[],
+              listItem: 'A Mock test will be held 7 -14 days prior to the course end date, to familiarise students with the exam process.',
+              subItems: [],
             },
           ],
         }
@@ -483,7 +483,7 @@ const ttc200hr = {
   2: {
     id: '',
     key: '200-hrs-part-time-ttc-on-campus-english',
-    join:true,
+    join: true,
     // id: '',
     // templateId: 'COURSE200_1M_TTC2',
     templateId: {
@@ -771,10 +771,10 @@ const ttc200hr = {
         },
       },
       {
-        type:'paragraph',
-        content:{
-          title:'Exam Details',
-          text:[],
+        type: 'paragraph',
+        content: {
+          title: 'Exam Details',
+          text: [],
         }
       },
       {
@@ -803,43 +803,43 @@ const ttc200hr = {
               subItems: ['Once finalized, students will not be permitted to switch from online to on-campus and vice versa.'],
             },
             {
-              listItem:'Examiners will evaluate students only as per the final approved list.',
-              subItems:[],
+              listItem: 'Examiners will evaluate students only as per the final approved list.',
+              subItems: [],
             },
 
-           
+
           ],
-          
+
         },
       },
       {
-        type:'u-list',
-        content:{
-          title:'Exam Schedule ',
-          points:[
+        type: 'u-list',
+        content: {
+          title: 'Exam Schedule ',
+          points: [
             {
-              listItem:'On-campus Final exams (both theory and practical’s) will be conducted on the last working day of each month, or as announced (in case of exigencies), between 10 am (IST) and 2 pm IST.',
-              subItems:[
-                
+              listItem: 'On-campus Final exams (both theory and practical’s) will be conducted on the last working day of each month, or as announced (in case of exigencies), between 10 am (IST) and 2 pm IST.',
+              subItems: [
+
               ],
             },
             {
-              listItem:'Online Final exams will be conducted on the 1st Sat and the 3rd Sat of each month or as announced (in case of exigencies), subject to a minimum quorum of 8 students.',
-              subItems:[
+              listItem: 'Online Final exams will be conducted on the 1st Sat and the 3rd Sat of each month or as announced (in case of exigencies), subject to a minimum quorum of 8 students.',
+              subItems: [
                 'Theory exams will be conducted online at 5pm (IST)',
                 'Practical exams will be conducted online at 3.30 pm (IST) / 6.30 pm (IST), subject to quorum.'
               ],
             },
             {
-              listItem:'Students, after submission, can log out /leave only with the explicit permission of the examiner.',
-              subItems:[
+              listItem: 'Students, after submission, can log out /leave only with the explicit permission of the examiner.',
+              subItems: [
                 'For practical’s - students will have to wait till the exams of all students are completed.',
                 'The examiner may call out students at random and not necessarily in alphabetic order'
               ],
             },
             {
-              listItem:'A Mock test will be held 7 -14 days prior to the course end date, to familiarise students with the exam process.',
-              subItems:[],
+              listItem: 'A Mock test will be held 7 -14 days prior to the course end date, to familiarise students with the exam process.',
+              subItems: [],
             },
           ],
         }
@@ -1173,10 +1173,10 @@ const ttc200hr = {
         },
       },
       {
-        type:'paragraph',
-        content:{
-          title:'Exam Details',
-          text:[],
+        type: 'paragraph',
+        content: {
+          title: 'Exam Details',
+          text: [],
         }
       },
       {
@@ -1201,50 +1201,50 @@ const ttc200hr = {
               ],
             },
             {
-              listItem:'Examiners will evaluate students only as per the final approved list.',
-              subItems:[],
+              listItem: 'Examiners will evaluate students only as per the final approved list.',
+              subItems: [],
             },
 
-           
+
           ],
-          
+
         },
       },
       {
-        type:'u-list',
-        content:{
-          title:'All Exams / tests will be conducted online.',
-          points:[
+        type: 'u-list',
+        content: {
+          title: 'All Exams / tests will be conducted online.',
+          points: [
             {
-              listItem:'Students, after submission, can log out only with the explicit permission of the examiner.',
-              subItems:[
+              listItem: 'Students, after submission, can log out only with the explicit permission of the examiner.',
+              subItems: [
                 'For practical’s - students will have to wait till the exams of all students are completed.',
                 'The examiner may call out students at random and not necessarily in alphabetic order'
               ],
             },
-           
+
           ],
         }
       },
       {
-        type:'u-list',
-        content:{
-          title:'Exam Schedule ',
-          points:[
+        type: 'u-list',
+        content: {
+          title: 'Exam Schedule ',
+          points: [
             {
-              listItem:'Final exams will be conducted online on the 1st Sat and the 3rd Sat of each month or as announced (in case of exigencies), subject to a quorum of 8 students.',
-              subItems:[
+              listItem: 'Final exams will be conducted online on the 1st Sat and the 3rd Sat of each month or as announced (in case of exigencies), subject to a quorum of 8 students.',
+              subItems: [
                 'Theory exams will be conducted online at 5pm (IST)',
                 'Practical exams will be conducted at 3.30 pm (IST) / 6.30 pm (IST), subject to quorum.'
               ],
             },
             {
-              listItem:'A Mock test will be held 7 -14 days prior to the course end date, to familiarise students with the exam process.',
-              subItems:[
-                
+              listItem: 'A Mock test will be held 7 -14 days prior to the course end date, to familiarise students with the exam process.',
+              subItems: [
+
               ],
             },
-           
+
           ],
         }
       }
@@ -1361,7 +1361,7 @@ const ttc200hr = {
   4: {
     id: '',
     key: '200-hrs-part-time-ttc-online',
-    join:true,
+    join: true,
     // templateId: 'COURSE200_2M_TTC_HINDI',
     templateId: {
       templateOnline: 'COURSE200_2M_ONLINE_HINDI_TTC',
@@ -1701,10 +1701,10 @@ const ttc200hr = {
         },
       },
       {
-        type:'paragraph',
-        content:{
-          title:'Exam Details',
-          text:[],
+        type: 'paragraph',
+        content: {
+          title: 'Exam Details',
+          text: [],
         }
       },
       {
@@ -1729,50 +1729,50 @@ const ttc200hr = {
               ],
             },
             {
-              listItem:'Examiners will evaluate students only as per the final approved list.',
-              subItems:[],
+              listItem: 'Examiners will evaluate students only as per the final approved list.',
+              subItems: [],
             },
 
-           
+
           ],
-          
+
         },
       },
       {
-        type:'u-list',
-        content:{
-          title:'All Exams / tests will be conducted online.',
-          points:[
+        type: 'u-list',
+        content: {
+          title: 'All Exams / tests will be conducted online.',
+          points: [
             {
-              listItem:'Students, after submission, can log out only with the explicit permission of the examiner.',
-              subItems:[
+              listItem: 'Students, after submission, can log out only with the explicit permission of the examiner.',
+              subItems: [
                 'For practical’s - students will have to wait till the exams of all students are completed.',
                 'The examiner may call out students at random and not necessarily in alphabetic order'
               ],
             },
-           
+
           ],
         }
       },
       {
-        type:'u-list',
-        content:{
-          title:'Exam Schedule ',
-          points:[
+        type: 'u-list',
+        content: {
+          title: 'Exam Schedule ',
+          points: [
             {
-              listItem:'Final exams will be conducted online on the 1st Sat and the 3rd Sat of each month or as announced (in case of exigencies), subject to a quorum of 8 students.',
-              subItems:[
+              listItem: 'Final exams will be conducted online on the 1st Sat and the 3rd Sat of each month or as announced (in case of exigencies), subject to a quorum of 8 students.',
+              subItems: [
                 'Theory exams will be conducted online at 5pm (IST)',
                 'Practical exams will be conducted at 3.30 pm (IST) / 6.30 pm (IST), subject to quorum.'
               ],
             },
             {
-              listItem:'A Mock test will be held 7 -14 days prior to the course end date, to familiarise students with the exam process.',
-              subItems:[
-                
+              listItem: 'A Mock test will be held 7 -14 days prior to the course end date, to familiarise students with the exam process.',
+              subItems: [
+
               ],
             },
-           
+
           ],
         }
       }
@@ -1845,7 +1845,7 @@ const ttc200hr = {
     },
     category: 'ttc',
     title: '200 Hours Yoga TTC - 2 Months Online Yoga Teacher Training Course - English - Batch 5',
-    dates: ['22th May to 15th Jul 2023','24th Jul to 16th Sep 2023','25th Sep to 18th Nov 2023', '27th Nov to 20th Jan 2024'],
+    dates: ['22th May to 15th Jul 2023', '24th Jul to 16th Sep 2023', '25th Sep to 18th Nov 2023', '27th Nov to 20th Jan 2024'],
     online: true,
     onCampus: false,
     nonResidential: false,
@@ -2097,10 +2097,10 @@ const ttc200hr = {
         },
       },
       {
-        type:'paragraph',
-        content:{
-          title:'Exam Details',
-          text:[],
+        type: 'paragraph',
+        content: {
+          title: 'Exam Details',
+          text: [],
         }
       },
       {
@@ -2125,50 +2125,50 @@ const ttc200hr = {
               ],
             },
             {
-              listItem:'Examiners will evaluate students only as per the final approved list.',
-              subItems:[],
+              listItem: 'Examiners will evaluate students only as per the final approved list.',
+              subItems: [],
             },
 
-           
+
           ],
-          
+
         },
       },
       {
-        type:'u-list',
-        content:{
-          title:'All Exams / tests will be conducted online.',
-          points:[
+        type: 'u-list',
+        content: {
+          title: 'All Exams / tests will be conducted online.',
+          points: [
             {
-              listItem:'Students, after submission, can log out only with the explicit permission of the examiner.',
-              subItems:[
+              listItem: 'Students, after submission, can log out only with the explicit permission of the examiner.',
+              subItems: [
                 'For practical’s - students will have to wait till the exams of all students are completed.',
                 'The examiner may call out students at random and not necessarily in alphabetic order'
               ],
             },
-           
+
           ],
         }
       },
       {
-        type:'u-list',
-        content:{
-          title:'Exam Schedule ',
-          points:[
+        type: 'u-list',
+        content: {
+          title: 'Exam Schedule ',
+          points: [
             {
-              listItem:'Final exams will be conducted online on the 1st Sat and the 3rd Sat of each month or as announced (in case of exigencies), subject to a quorum of 8 students.',
-              subItems:[
+              listItem: 'Final exams will be conducted online on the 1st Sat and the 3rd Sat of each month or as announced (in case of exigencies), subject to a quorum of 8 students.',
+              subItems: [
                 'Theory exams will be conducted online at 5pm (IST)',
                 'Practical exams will be conducted at 3.30 pm (IST) / 6.30 pm (IST), subject to quorum.'
               ],
             },
             {
-              listItem:'A Mock test will be held 7 -14 days prior to the course end date, to familiarise students with the exam process.',
-              subItems:[
-                
+              listItem: 'A Mock test will be held 7 -14 days prior to the course end date, to familiarise students with the exam process.',
+              subItems: [
+
               ],
             },
-           
+
           ],
         }
       }
@@ -2629,10 +2629,10 @@ const ttc200hr = {
         },
       },
       {
-        type:'paragraph',
-        content:{
-          title:'Exam Details',
-          text:[],
+        type: 'paragraph',
+        content: {
+          title: 'Exam Details',
+          text: [],
         }
       },
       {
@@ -2657,50 +2657,50 @@ const ttc200hr = {
               ],
             },
             {
-              listItem:'Examiners will evaluate students only as per the final approved list.',
-              subItems:[],
+              listItem: 'Examiners will evaluate students only as per the final approved list.',
+              subItems: [],
             },
 
-           
+
           ],
-          
+
         },
       },
       {
-        type:'u-list',
-        content:{
-          title:'All Exams / tests will be conducted online.',
-          points:[
+        type: 'u-list',
+        content: {
+          title: 'All Exams / tests will be conducted online.',
+          points: [
             {
-              listItem:'Students, after submission, can log out only with the explicit permission of the examiner.',
-              subItems:[
+              listItem: 'Students, after submission, can log out only with the explicit permission of the examiner.',
+              subItems: [
                 'For practical’s - students will have to wait till the exams of all students are completed.',
                 'The examiner may call out students at random and not necessarily in alphabetic order'
               ],
             },
-           
+
           ],
         }
       },
       {
-        type:'u-list',
-        content:{
-          title:'Exam Schedule ',
-          points:[
+        type: 'u-list',
+        content: {
+          title: 'Exam Schedule ',
+          points: [
             {
-              listItem:'Final exams will be conducted online on the 1st Sat and the 3rd Sat of each month or as announced (in case of exigencies), subject to a quorum of 8 students.',
-              subItems:[
+              listItem: 'Final exams will be conducted online on the 1st Sat and the 3rd Sat of each month or as announced (in case of exigencies), subject to a quorum of 8 students.',
+              subItems: [
                 'Theory exams will be conducted online at 5pm (IST)',
                 'Practical exams will be conducted at 3.30 pm (IST) / 6.30 pm (IST), subject to quorum.'
               ],
             },
             {
-              listItem:'A Mock test will be held 7 -14 days prior to the course end date, to familiarise students with the exam process.',
-              subItems:[
-                
+              listItem: 'A Mock test will be held 7 -14 days prior to the course end date, to familiarise students with the exam process.',
+              subItems: [
+
               ],
             },
-           
+
           ],
         }
       }
@@ -2974,10 +2974,10 @@ const ttc500hr = {
       //   },
       // },
       {
-        type:'paragraph',
-        content:{
-          title:'Exam Details',
-          text:[],
+        type: 'paragraph',
+        content: {
+          title: 'Exam Details',
+          text: [],
         }
       },
       {
@@ -3002,50 +3002,50 @@ const ttc500hr = {
               ],
             },
             {
-              listItem:'Examiners will evaluate students only as per the final approved list.',
-              subItems:[],
+              listItem: 'Examiners will evaluate students only as per the final approved list.',
+              subItems: [],
             },
 
-           
+
           ],
-          
+
         },
       },
       {
-        type:'u-list',
-        content:{
-          title:'All Exams / tests will be conducted online.',
-          points:[
+        type: 'u-list',
+        content: {
+          title: 'All Exams / tests will be conducted online.',
+          points: [
             {
-              listItem:'Students, after submission, can log out only with the explicit permission of the examiner.',
-              subItems:[
+              listItem: 'Students, after submission, can log out only with the explicit permission of the examiner.',
+              subItems: [
                 'For practical’s - students will have to wait till the exams of all students are completed.',
                 'The examiner may call out students at random and not necessarily in alphabetic order'
               ],
             },
-           
+
           ],
         }
       },
       {
-        type:'u-list',
-        content:{
-          title:'Exam Schedule ',
-          points:[
+        type: 'u-list',
+        content: {
+          title: 'Exam Schedule ',
+          points: [
             {
-              listItem:'Final exams will be conducted online on the 1st Sat and the 3rd Sat of each month or as announced (in case of exigencies), subject to a quorum of 8 students.',
-              subItems:[
+              listItem: 'Final exams will be conducted online on the 1st Sat and the 3rd Sat of each month or as announced (in case of exigencies), subject to a quorum of 8 students.',
+              subItems: [
                 'Theory exams will be conducted online at 5pm (IST)',
                 'Practical exams will be conducted at 3.30 pm (IST) / 6.30 pm (IST), subject to quorum.'
               ],
             },
             {
-              listItem:'A Mock test will be held 7 -14 days prior to the course end date, to familiarise students with the exam process.',
-              subItems:[
-                
+              listItem: 'A Mock test will be held 7 -14 days prior to the course end date, to familiarise students with the exam process.',
+              subItems: [
+
               ],
             },
-           
+
           ],
         }
       }
@@ -3123,7 +3123,7 @@ const ttc900hr = {
       offlineFee: { residentialFee: 175000, nonResidentialFee: 97000 },
     },
     category: 'ttc',
-    dates: ['22nd Jul to 15th Oct 2023','28th Oct to 21st Jan 2024'],
+    dates: ['22nd Jul to 15th Oct 2023', '28th Oct to 21st Jan 2024'],
     online: false,
     onCampus: true,
     nonResidential: true,
@@ -3455,10 +3455,10 @@ const ttc900hr = {
         },
       },
       {
-        type:'paragraph',
-        content:{
-          title:'Exam Details',
-          text:[],
+        type: 'paragraph',
+        content: {
+          title: 'Exam Details',
+          text: [],
         }
       },
       {
@@ -3486,41 +3486,41 @@ const ttc900hr = {
               subItems: ['Once finalized, students will not be permitted to switch from online to on-campus and vice versa.'],
             },
             {
-              listItem:'Examiners will evaluate students only as per the final approved list.',
-              subItems:[],
+              listItem: 'Examiners will evaluate students only as per the final approved list.',
+              subItems: [],
             },
 
-           
+
           ],
-          
+
         },
       },
       {
-        type:'u-list',
-        content:{
-          title:'Exam Schedule ',
-          points:[
+        type: 'u-list',
+        content: {
+          title: 'Exam Schedule ',
+          points: [
             {
-              listItem:'On-campus Final exams (both theory and practical’s) will be conducted on the last working day of each month, or as announced (in case of exigencies), between 10 am (IST) and 2 pm IST.',
-              subItems:[],
+              listItem: 'On-campus Final exams (both theory and practical’s) will be conducted on the last working day of each month, or as announced (in case of exigencies), between 10 am (IST) and 2 pm IST.',
+              subItems: [],
             },
             {
-              listItem:'Online Final exams will be conducted on the 1st Sat and the 3rd Sat of each month or as announced (in case of exigencies), subject to a minimum quorum of 8 students.',
-              subItems:[
+              listItem: 'Online Final exams will be conducted on the 1st Sat and the 3rd Sat of each month or as announced (in case of exigencies), subject to a minimum quorum of 8 students.',
+              subItems: [
                 'Theory exams will be conducted online at 5pm (IST)',
                 'Practical exams will be conducted online at 3.30 pm (IST) / 6.30 pm (IST), subject to quorum.'
               ],
             },
             {
-              listItem:'Students, after submission, can log out /leave only with the explicit permission of the examiner.',
-              subItems:[
+              listItem: 'Students, after submission, can log out /leave only with the explicit permission of the examiner.',
+              subItems: [
                 'For practical’s - students will have to wait till the exams of all students are completed.',
                 'The examiner may call out students at random and not necessarily in alphabetic order'
               ],
             },
             {
-              listItem:'A Mock test will be held 7 -14 days prior to the course end date, to familiarise students with the exam process.',
-              subItems:[],
+              listItem: 'A Mock test will be held 7 -14 days prior to the course end date, to familiarise students with the exam process.',
+              subItems: [],
             },
           ],
         }
@@ -3867,21 +3867,21 @@ const ttc900hr = {
           url: 'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/courses_pdf/900hr.pdf',
         },
       },
-     
+
     ],
     teaching: [
       {
-        type:'paragraph',
-        content:{
-          title:'Note: For the month of May, it will be a holiday and no classes will be held.',
-          text:[],
+        type: 'paragraph',
+        content: {
+          title: 'Note: For the month of May, it will be a holiday and no classes will be held.',
+          text: [],
         },
       },
       {
         type: 'u-list',
 
         content: {
-          
+
           title: 'Course Attendance Criteria',
 
           points: [
@@ -3967,7 +3967,7 @@ const ttc900hr = {
         content: {
           title: '',
 
-          tableHeading: ['Details', 'Marks', 'Minimum Score Req.',''],
+          tableHeading: ['Details', 'Marks', 'Minimum Score Req.', ''],
 
           tableData: [
             [
@@ -4117,10 +4117,10 @@ const ttc900hr = {
         },
       },
       {
-        type:'paragraph',
-        content:{
-          title:'Exam Details',
-          text:[],
+        type: 'paragraph',
+        content: {
+          title: 'Exam Details',
+          text: [],
         }
       },
       {
@@ -4149,41 +4149,41 @@ const ttc900hr = {
               subItems: ['Once finalized, students will not be permitted to switch from online to on-campus and vice versa.'],
             },
             {
-              listItem:'Examiners will evaluate students only as per the final approved list.',
-              subItems:[],
+              listItem: 'Examiners will evaluate students only as per the final approved list.',
+              subItems: [],
             },
 
-           
+
           ],
-          
+
         },
       },
       {
-        type:'u-list',
-        content:{
-          title:'Exam Schedule ',
-          points:[
+        type: 'u-list',
+        content: {
+          title: 'Exam Schedule ',
+          points: [
             {
-              listItem:'On-campus Final exams (both theory and practical’s) will be conducted on the last working day of each month, or as announced (in case of exigencies), between 10 am (IST) and 2 pm IST.',
-              subItems:[],
+              listItem: 'On-campus Final exams (both theory and practical’s) will be conducted on the last working day of each month, or as announced (in case of exigencies), between 10 am (IST) and 2 pm IST.',
+              subItems: [],
             },
             {
-              listItem:'Online Final exams will be conducted on the 1st Sat and the 3rd Sat of each month or as announced (in case of exigencies), subject to a minimum quorum of 8 students.',
-              subItems:[
+              listItem: 'Online Final exams will be conducted on the 1st Sat and the 3rd Sat of each month or as announced (in case of exigencies), subject to a minimum quorum of 8 students.',
+              subItems: [
                 'Theory exams will be conducted online at 5pm (IST)',
                 'Practical exams will be conducted online at 3.30 pm (IST) / 6.30 pm (IST), subject to quorum.'
               ],
             },
             {
-              listItem:'Students, after submission, can log out /leave only with the explicit permission of the examiner.',
-              subItems:[
+              listItem: 'Students, after submission, can log out /leave only with the explicit permission of the examiner.',
+              subItems: [
                 'For practical’s - students will have to wait till the exams of all students are completed.',
                 'The examiner may call out students at random and not necessarily in alphabetic order'
               ],
             },
             {
-              listItem:'A Mock test will be held 7 -14 days prior to the course end date, to familiarise students with the exam process.',
-              subItems:[],
+              listItem: 'A Mock test will be held 7 -14 days prior to the course end date, to familiarise students with the exam process.',
+              subItems: [],
             },
           ],
         }
@@ -4791,10 +4791,10 @@ const ttc900hr = {
         },
       },
       {
-        type:'paragraph',
-        content:{
-          title:'Exam Details',
-          text:[],
+        type: 'paragraph',
+        content: {
+          title: 'Exam Details',
+          text: [],
         }
       },
       {
@@ -4823,43 +4823,43 @@ const ttc900hr = {
               subItems: ['Once finalized, students will not be permitted to switch from online to on-campus and vice versa.'],
             },
             {
-              listItem:'Examiners will evaluate students only as per the final approved list.',
-              subItems:[],
+              listItem: 'Examiners will evaluate students only as per the final approved list.',
+              subItems: [],
             },
 
-           
+
           ],
-          
+
         },
       },
       {
-        type:'u-list',
-        content:{
-          title:'Exam Schedule ',
-          points:[
+        type: 'u-list',
+        content: {
+          title: 'Exam Schedule ',
+          points: [
             {
-              listItem:'On-campus Final exams (both theory and practical’s) will be conducted on the last working day of each month, or as announced (in case of exigencies), between 10 am (IST) and 2 pm IST.',
-              subItems:[
-                
+              listItem: 'On-campus Final exams (both theory and practical’s) will be conducted on the last working day of each month, or as announced (in case of exigencies), between 10 am (IST) and 2 pm IST.',
+              subItems: [
+
               ],
             },
             {
-              listItem:'Online Final exams will be conducted on the 1st Sat and the 3rd Sat of each month or as announced (in case of exigencies), subject to a minimum quorum of 8 students.',
-              subItems:[
+              listItem: 'Online Final exams will be conducted on the 1st Sat and the 3rd Sat of each month or as announced (in case of exigencies), subject to a minimum quorum of 8 students.',
+              subItems: [
                 'Theory exams will be conducted online at 5pm (IST)',
                 'Practical exams will be conducted online at 3.30 pm (IST) / 6.30 pm (IST), subject to quorum.'
               ],
             },
             {
-              listItem:'Students, after submission, can log out /leave only with the explicit permission of the examiner.',
-              subItems:[
+              listItem: 'Students, after submission, can log out /leave only with the explicit permission of the examiner.',
+              subItems: [
                 'For practical’s - students will have to wait till the exams of all students are completed.',
                 'The examiner may call out students at random and not necessarily in alphabetic order'
               ],
             },
             {
-              listItem:'A Mock test will be held 7 -14 days prior to the course end date, to familiarise students with the exam process.',
-              subItems:[],
+              listItem: 'A Mock test will be held 7 -14 days prior to the course end date, to familiarise students with the exam process.',
+              subItems: [],
             },
           ],
         }
@@ -4999,7 +4999,7 @@ const ttc900hr = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'ttc',
-    dates: ['26th June to 14th Oct 2023','23 Oct to 10th Feb 2024'],
+    dates: ['26th June to 14th Oct 2023', '23 Oct to 10th Feb 2024'],
     online: true,
     onCampus: false,
     nonResidential: false,
@@ -5425,10 +5425,10 @@ const ttc900hr = {
         },
       },
       {
-        type:'paragraph',
-        content:{
-          title:'Exam Details',
-          text:[],
+        type: 'paragraph',
+        content: {
+          title: 'Exam Details',
+          text: [],
         }
       },
       {
@@ -5457,41 +5457,41 @@ const ttc900hr = {
               subItems: ['Once finalized, students will not be permitted to switch from online to on-campus and vice versa.'],
             },
             {
-              listItem:'Examiners will evaluate students only as per the final approved list.',
-              subItems:[],
-            },           
+              listItem: 'Examiners will evaluate students only as per the final approved list.',
+              subItems: [],
+            },
           ],
-          
+
         },
       },
       {
-        type:'u-list',
-        content:{
-          title:'Exam Schedule ',
-          points:[
+        type: 'u-list',
+        content: {
+          title: 'Exam Schedule ',
+          points: [
             {
-              listItem:'On-campus Final exams (both theory and practical’s) will be conducted on the last working day of each month, or as announced (in case of exigencies), between 10 am (IST) and 2 pm IST.',
-              subItems:[
-                
+              listItem: 'On-campus Final exams (both theory and practical’s) will be conducted on the last working day of each month, or as announced (in case of exigencies), between 10 am (IST) and 2 pm IST.',
+              subItems: [
+
               ],
             },
             {
-              listItem:'Online Final exams will be conducted on the 1st Sat and the 3rd Sat of each month or as announced (in case of exigencies), subject to a minimum quorum of 8 students.',
-              subItems:[
+              listItem: 'Online Final exams will be conducted on the 1st Sat and the 3rd Sat of each month or as announced (in case of exigencies), subject to a minimum quorum of 8 students.',
+              subItems: [
                 'Theory exams will be conducted online at 5pm (IST)',
                 'Practical exams will be conducted online at 3.30 pm (IST) / 6.30 pm (IST), subject to quorum.'
               ],
             },
             {
-              listItem:'Students, after submission, can log out /leave only with the explicit permission of the examiner.',
-              subItems:[
+              listItem: 'Students, after submission, can log out /leave only with the explicit permission of the examiner.',
+              subItems: [
                 'For practical’s - students will have to wait till the exams of all students are completed.',
                 'The examiner may call out students at random and not necessarily in alphabetic order'
               ],
             },
             {
-              listItem:'A Mock test will be held 7 -14 days prior to the course end date, to familiarise students with the exam process.',
-              subItems:[],
+              listItem: 'A Mock test will be held 7 -14 days prior to the course end date, to familiarise students with the exam process.',
+              subItems: [],
             },
           ],
         }
@@ -5917,7 +5917,7 @@ const ttc900hr = {
         content: {
           title: '',
 
-          tableHeading: ['Details', 'Marks', 'Minimum Score Req.',''],
+          tableHeading: ['Details', 'Marks', 'Minimum Score Req.', ''],
 
           tableData: [
             [
@@ -6054,10 +6054,10 @@ const ttc900hr = {
         },
       },
       {
-        type:'paragraph',
-        content:{
-          title:'Exam Details',
-          text:[],
+        type: 'paragraph',
+        content: {
+          title: 'Exam Details',
+          text: [],
         }
       },
       {
@@ -6086,43 +6086,43 @@ const ttc900hr = {
               subItems: ['Once finalized, students will not be permitted to switch from online to on-campus and vice versa.'],
             },
             {
-              listItem:'Examiners will evaluate students only as per the final approved list.',
-              subItems:[],
+              listItem: 'Examiners will evaluate students only as per the final approved list.',
+              subItems: [],
             },
 
-           
+
           ],
-          
+
         },
       },
       {
-        type:'u-list',
-        content:{
-          title:'Exam Schedule ',
-          points:[
+        type: 'u-list',
+        content: {
+          title: 'Exam Schedule ',
+          points: [
             {
-              listItem:'On-campus Final exams (both theory and practical’s) will be conducted on the last working day of each month, or as announced (in case of exigencies), between 10 am (IST) and 2 pm IST.',
-              subItems:[
-                
+              listItem: 'On-campus Final exams (both theory and practical’s) will be conducted on the last working day of each month, or as announced (in case of exigencies), between 10 am (IST) and 2 pm IST.',
+              subItems: [
+
               ],
             },
             {
-              listItem:'Online Final exams will be conducted on the 1st Sat and the 3rd Sat of each month or as announced (in case of exigencies), subject to a minimum quorum of 8 students.',
-              subItems:[
+              listItem: 'Online Final exams will be conducted on the 1st Sat and the 3rd Sat of each month or as announced (in case of exigencies), subject to a minimum quorum of 8 students.',
+              subItems: [
                 'Theory exams will be conducted online at 5pm (IST)',
                 'Practical exams will be conducted online at 3.30 pm (IST) / 6.30 pm (IST), subject to quorum.'
               ],
             },
             {
-              listItem:'Students, after submission, can log out /leave only with the explicit permission of the examiner.',
-              subItems:[
+              listItem: 'Students, after submission, can log out /leave only with the explicit permission of the examiner.',
+              subItems: [
                 'For practical’s - students will have to wait till the exams of all students are completed.',
                 'The examiner may call out students at random and not necessarily in alphabetic order'
               ],
             },
             {
-              listItem:'A Mock test will be held 7 -14 days prior to the course end date, to familiarise students with the exam process.',
-              subItems:[],
+              listItem: 'A Mock test will be held 7 -14 days prior to the course end date, to familiarise students with the exam process.',
+              subItems: [],
             },
           ],
         }
@@ -6406,7 +6406,7 @@ const camps = {
       'Asanas, pranayamas, and relaxation techniques for treating heart conditions',
     image: `${baseDomain}${courseAssets.courseAsset111}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset6}`,
-    dates: ['2nd July 2023','3rd September 2023','5th November 2023'],
+    dates: ['2nd July 2023', '3rd September 2023', '5th November 2023'],
     online: false,
     onCampus: true,
     nonResidential: false,
@@ -6525,7 +6525,7 @@ const camps = {
         templateNonResidential: '',
       },
     },
-    dates: ['4th June 2023','6th August 2023','1st October 2023','3rd December 2023'],
+    dates: ['4th June 2023', '6th August 2023', '1st October 2023', '3rd December 2023'],
     mostPopular: false,
     rating: 5,
     colorCode: '#CE9B51',
@@ -7352,7 +7352,7 @@ const camps = {
         templateNonResidential: '',
       },
     },
-    dates: ['9th July 2023','10th September 2023','12th November 2023'],
+    dates: ['9th July 2023', '10th September 2023', '12th November 2023'],
     mostPopular: false,
     rating: 5,
     colorCode: '#CE9B51',
@@ -7481,7 +7481,7 @@ const camps = {
     title: 'Pregnancy Yoga Camp For Ante & Post Natal - On Campus',
     key: 'pregnancy-camp-for-ante-post-natal',
     batch: 1,
-    join:true,
+    join: true,
     // templateId: 'GENERAL_AUTO_EMAIL',
     templateId: {
       templateOnline: 'GENERAL_AUTO_EMAIL',
@@ -7639,7 +7639,7 @@ const camps = {
         templateResidential: '',
         templateNonResidential: '',
       },
-    },text: ['INR 2,000'],
+    }, text: ['INR 2,000'],
     dates: ['8th July 2023', '9th September 2023', '11th November 2023'],
     mostPopular: false,
     rating: 5,
@@ -7775,7 +7775,7 @@ const camps = {
         templateNonResidential: '',
       },
     },
-    dates: ['30th July 2023','29th October 2023',''],
+    dates: ['30th July 2023', '29th October 2023', ''],
     mostPopular: false,
     rating: 5,
     colorCode: '#CE9B51',
@@ -7912,7 +7912,7 @@ const camps = {
         templateNonResidential: '',
       },
     },
-    dates: ['11th June 2023','9th July 2023','13th August 2023','10th September 2023','8th October 2023','12th November 2023','10th December 2023'],
+    dates: ['11th June 2023', '9th July 2023', '13th August 2023', '10th September 2023', '8th October 2023', '12th November 2023', '10th December 2023'],
     mostPopular: false,
     rating: 5,
     colorCode: '#EDBE66',
@@ -8048,7 +8048,7 @@ const camps = {
         templateNonResidential: '',
       },
     },
-    dates: ['3rd June 2023','1st July 2023','5th August 2023','2nd September 2023','7th October 2023','4th November 2023','2nd December 2023'],
+    dates: ['3rd June 2023', '1st July 2023', '5th August 2023', '2nd September 2023', '7th October 2023', '4th November 2023', '2nd December 2023'],
     mostPopular: false,
     rating: 5,
     colorCode: '#DDAB58',
@@ -8188,7 +8188,7 @@ const camps = {
         templateNonResidential: '',
       },
     },
-    dates: ['10th June 2023','12th August 2023','14th October 2023','9th December 2023'],
+    dates: ['10th June 2023', '12th August 2023', '14th October 2023', '9th December 2023'],
     mostPopular: false,
     rating: 5,
     colorCode: '#CE9B51',
@@ -8329,7 +8329,7 @@ const camps = {
         templateNonResidential: '',
       },
     },
-    dates: ['28th May 2023','25th June 2023','23rd July 2023','27th August 2023','24th September 2023','22nd  October 2023','26th November 2023','24th December 2023'],
+    dates: ['28th May 2023', '25th June 2023', '23rd July 2023', '27th August 2023', '24th September 2023', '22nd  October 2023', '26th November 2023', '24th December 2023'],
     mostPopular: false,
     rating: 5,
     colorCode: '#EDBE66',
@@ -8454,7 +8454,7 @@ const camps = {
     id: '',
     title: '7 Days Health Camp - On Campus - Yoga Camp - Hindi',
     key: '7-days-camp',
-    join:true,
+    join: true,
     batch: 1,
     // templateId: 'CAMP_FOR_7_DAYS_HEALTH',
     templateId: {
@@ -8464,7 +8464,7 @@ const camps = {
         templateNonResidential: 'CAMP_FOR_7_DAYS_HEALTH',
       },
     },
-    dates: ['8th Jul to 14th Jul 2023','9th Sep to 15th Sep 2023','11th Nov to 17th Nov 2023',],
+    dates: ['8th Jul to 14th Jul 2023', '9th Sep to 15th Sep 2023', '11th Nov to 17th Nov 2023',],
     online: false,
     onCampus: true,
     nonResidential: true,
@@ -8770,7 +8770,7 @@ const camps = {
     id: '',
     title: '7 Days Health Camp - On Campus - Yoga Camp - English',
     key: '7-days-camp-english',
-    join:true,
+    join: true,
     batch: 1,
     // templateId: 'CAMP_FOR_7_DAYS_HEALTH',
     templateId: {
@@ -9127,7 +9127,7 @@ const camps = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 2100 },
     },
     category: 'camps',
-    metaDescription:'Become successful, healthy, stress-free, and more mindful in your relationships by learning the yogic way of living. Join The Yoga Institute’s 21-Days Better Living Course. Please Note: The first session of 21-Days BLC i.e. on Sunday will be from 8:30 am to 10:30 am. This session also includes Satsang.',
+    metaDescription: 'Become successful, healthy, stress-free, and more mindful in your relationships by learning the yogic way of living. Join The Yoga Institute’s 21-Days Better Living Course. Please Note: The first session of 21-Days BLC i.e. on Sunday will be from 8:30 am to 10:30 am. This session also includes Satsang.',
     image: `${baseDomain}${courseAssets.courseAsset34}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset34}`,
     details: [
@@ -9251,7 +9251,7 @@ const camps = {
         type: 'paragraph',
         content: {
           title: 'Timings',
-          text: ['Morning 7:00 am – 8:30 am (IST)','Please Note: The first session of 21-Days BLC i.e. on Sunday will be from 8:30 am to 10:30 am. This yoga session also includes Satsang.'],
+          text: ['Morning 7:00 am – 8:30 am (IST)', 'Please Note: The first session of 21-Days BLC i.e. on Sunday will be from 8:30 am to 10:30 am. This yoga session also includes Satsang.'],
         },
       },
       {
@@ -9587,7 +9587,7 @@ const camps = {
         type: 'paragraph',
         content: {
           title: 'Timings',
-          text: ['Evening 6:30 pm – 8:00 pm (IST)','Please Note: The first session of 21-Days BLC i.e. on Sunday will be from 8:30 am to 10:30 am. This session also includes Satsang.'],
+          text: ['Evening 6:30 pm – 8:00 pm (IST)', 'Please Note: The first session of 21-Days BLC i.e. on Sunday will be from 8:30 am to 10:30 am. This session also includes Satsang.'],
         },
       },
       {
@@ -9793,7 +9793,7 @@ const camps = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 2100 },
     },
     category: 'camps',
-    metaDescription:'Become successful, healthy, stress-free, and more mindful in your relationships by learning the yogic way of living. Join The Yoga Institute"s 21-Days Better Living Course. Please Note: The first session of 21-Days BLC i.e. on Sunday will be from 8:30 am to 10:30 am. This session also includes Satsang.',
+    metaDescription: 'Become successful, healthy, stress-free, and more mindful in your relationships by learning the yogic way of living. Join The Yoga Institute"s 21-Days Better Living Course. Please Note: The first session of 21-Days BLC i.e. on Sunday will be from 8:30 am to 10:30 am. This session also includes Satsang.',
     image: `${baseDomain}${courseAssets.courseAsset34}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset34}`,
     details: [
@@ -9917,7 +9917,7 @@ const camps = {
         type: 'paragraph',
         content: {
           title: 'Timings',
-          text: ['Evening 6:30 pm – 8:00 pm (IST) ( Yoga in Hindi)','Please Note: The first session of 21-Days BLC i.e. on Sunday will be from 8:30 am to 10:30 am. This session also includes Satsang.'],
+          text: ['Evening 6:30 pm – 8:00 pm (IST) ( Yoga in Hindi)', 'Please Note: The first session of 21-Days BLC i.e. on Sunday will be from 8:30 am to 10:30 am. This session also includes Satsang.'],
         },
       },
       {
@@ -10015,7 +10015,7 @@ const camps = {
         type: 'paragraph',
         content: {
           title:
-          '2. Can a person who has problem with sitting on the floor for a long time enroll for the course?',
+            '2. Can a person who has problem with sitting on the floor for a long time enroll for the course?',
           text: [
             'Backrest and chairs are available on request in special and exceptional cases. – Rest and recreation are also a part of the course.',
           ],
@@ -10421,7 +10421,7 @@ const camps = {
   //     },
   //   ],
   // },
-  
+
 }
 
 const classes = {
@@ -11152,7 +11152,7 @@ const classes = {
         type: 'paragraph',
         content: {
           title: '',
-          text:[
+          text: [
             'Don’t let your child waste the weekend. Make the end of the week super-fun and super-special with our Weekend Yoga Class for children. Let your child explore the world of Yoga to become more grounded, friendly, less bored and more happy. The Weekend kids yoga classes cover simple asanas, games, arts and other child-friendly activities that introduce your child to profound Yogic ideas and a yogic lifestyle. Ideal for children between the ages of 5-13 years.',
             'This kids yoga classes are conducted in Hindi and English.'
           ],
@@ -12083,7 +12083,7 @@ const classes = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'classes',
-    dates: ['7:30 am to 9:00 am',''],
+    dates: ['7:30 am to 9:00 am', ''],
     online: true,
     onCampus: false,
     nonResidential: false,
@@ -12291,15 +12291,15 @@ const classes = {
 }
 
 const extra = {
-  1:{
-    id:'',
-    key:'nutri-diet',
-    title:'Nutri Diet Clinic',
-    cardImage:`${ baseDomain }${ nutriDiet.nutriDietCard }`,
-    mostPopular:true,
-    colorCode:'#B77E7E',
-    dates:[],
-    metaDescription:'Get customized diet plans and holistic approach to health and wellness'
+  1: {
+    id: '',
+    key: 'nutri-diet',
+    title: 'Nutri Diet Clinic',
+    cardImage: `${baseDomain}${nutriDiet.nutriDietCard}`,
+    mostPopular: true,
+    colorCode: '#B77E7E',
+    dates: [],
+    metaDescription: 'Get customized diet plans and holistic approach to health and wellness'
   }
 }
 
@@ -12519,7 +12519,7 @@ const certificate = {
   //         text: ['1st Sunday of every month: 10:00 am - 12:30 pm (IST)'],
   //       },
   //     },
-      
+
   //     // {
   //     //   type: 'paragraph',
   //     //   content: {
@@ -12761,7 +12761,7 @@ const certificate = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'certificate-course',
-    dates: [ '23rd Aug to 15th Dec 2023'],
+    dates: ['23rd Aug to 15th Dec 2023'],
     online: true,
     onCampus: true,
     nonResidential: false,
@@ -12773,9 +12773,9 @@ const certificate = {
         content: {
           title: 'YOGA THERAPY COURSE',
           text: [
-            'Become a certified Yoga therapist through The Yoga Institute.',
+            'Become a certified Yoga therapist through The Yoga Institute',
             'Complete a one-stop destination to enhance your skills in Yogic Management of diseases through our YOGA THERAPY COURSE.',
-            'This is a detailed and comprehensive100 hours Yoga Therapy course wherein the yogic lifestyle and yogic management of diseases is taught in a practical and simple manner for easy understanding and teaching. This yoga therapy certification course will qualify you to become an extremely capable and confident Yoga Therapist to handle any case.'
+            'This is a detailed and comprehensive 100 hours Yoga Therapy course wherein the yogic lifestyle and yogic management of diseases are taught in a practical and simple manner for easy understanding and teaching. This yoga therapy certification course will qualify you to become an extremely capable and confident Yoga Therapist to handle any case.'
           ],
         },
       },
@@ -12785,7 +12785,7 @@ const certificate = {
           title: 'What the course details?',
           points: [
             {
-              listItem: 'Understanding of 80+ diseases:',
+              listItem: 'Understanding of 90+ diseases:',
               subItems: [],
             },
             {
@@ -12800,18 +12800,9 @@ const certificate = {
                 'Lectures by Expert Guest Speakers from the field of Ayurveda and Specialist Doctors from various fields- for better understanding of the disease to help you design a Yoga Program for your clients.',
               ],
             },
-            // {
-            //   type: 'paragraph',
-            //   content: {
-            //     title: 'Note:',
-            //     text: [
-            //       'This will assist students to understand the client’s Physical and Mental state in order to create a disease specific Professional Yogic Management Program.',
-            //     ],
-            //   },
-            // },
             {
               listItem:
-                'Lectures on Anatomy/ Physiology and Pathology of each health condition along with causes and symptoms will be given by Dr Taruna Kardak and other visiting Medical Practitioners specialising in their particular fields.',
+                'Lectures on Anatomy/ Physiology and Pathology of each health condition along with causes and symptoms will be given by Dr. Taruna Kardak and other visiting Medical Practitioners specialising in their particular fields.',
               subItems: [],
             },
             {
@@ -12839,12 +12830,12 @@ const certificate = {
             },
             {
               listItem:
-                'Exam will be conducted at the conclusion of the Yoga Therapy Course.',
+                'An exam will be conducted at the conclusion of the Yoga Therapy Course',
               subItems: [],
             },
             {
               listItem:
-                ' An opportunity to intern at the signature program conducted by The Yoga Institute called “Samatvam” where patients walk in to get guidance on resolving some of their chronic issues using the holistic approach taken by yoga. This is a 12 week (1 hour per week) as certified internship possible to be taken up only by Yoga Therapy pass outs.',
+                'An opportunity to intern at the signature program conducted by The Yoga Institute called “Samatvam” where patients walk in to get guidance on resolving some of their chronic issues using the holistic approach taken by yoga. This is a 12 week (1 hour per week) as certified internship possible to be taken up only by Yoga Therapy pass outs.',
               subItems: [],
             },
           ],
@@ -12878,7 +12869,14 @@ const certificate = {
                 'Acidity and GERD',
                 'Migraine',
                 'Fatty Liver',
-                'Crohn’s disease',
+                'Inflammatory Bowel Disease (IBD)'
+              ],
+            },
+            {
+              listItem: 'Inflammatory Bowel Disease (IBD)',
+              subItems: [
+                'Ulcerative Colitis',
+                'Crohn’s Disease',
               ],
             },
             {
@@ -12990,7 +12988,7 @@ const certificate = {
             },
             {
               listItem: 'Autoimmune disorder affecting the joints:',
-              subItems: ['Rheumatoid arthritis', 'Ankylosing spondylitis','Lupus'],
+              subItems: ['Rheumatoid arthritis', 'Ankylosing spondylitis', 'Lupus'],
             },
             {
               listItem: 'Skin disorders',
@@ -13033,7 +13031,7 @@ const certificate = {
             },
             {
               listItem: 'Cancer',
-              subItems: ['Oral cancer', 'Cervical cancer','Ovarian Cancer', 'Breast cancer'],
+              subItems: ['Oral cancer', 'Cervical cancer', 'Ovarian Cancer', 'Breast cancer'],
             },
             {
               listItem: 'Prostate enlargement',
@@ -13053,7 +13051,7 @@ const certificate = {
         type: 'paragraph',
         content: {
           title: 'Conducted by:',
-          text: ['Dr Taruna Kardak, Homoeopath and Senior Yoga Teacher'],
+          text: ['Dr. Taruna Kardak, Homoeopath and Senior Yoga Teacher'],
         },
       },
       {
@@ -13064,7 +13062,7 @@ const certificate = {
             'Students who have completed 500/900 hrs TTC from The Yoga Institute.',
             'Medical Doctors who have completed any TTC (200/500/900 hrs) from The Yoga Institute.',
             'Students who have completed YCB Level 2 or 3.',
-            'Students who have completed minimum 500 hrs TTC from any institution, can apply to info@theyogainstitute.org with their certificates & course curriculum for Review.'
+            'Students who have completed minimum 500 hrs TTC from any institution, can apply to info@theyogainstitute.org with their certificates & course curriculum for review.'
           ],
         },
       },
@@ -13099,15 +13097,9 @@ const certificate = {
       {
         type: 'paragraph',
         content: {
-          title: 'Note:',
-          text: ['Kindly note the fees once paid will not be refundable'],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
           title: 'NOTE:',
           text: [
+            'The fees once paid will not be refundable',
             ' All study material available for the students for any course in physical (hard copy) only. The same can be collected by the student directly from the Institute or can be delivered to them by courier, charges of which will have to be borne by the student.',
           ],
         },
