@@ -3520,6 +3520,29 @@
       }
     ]
   },
+  "/restorative-yoga-for-cancer-survivors":{
+    "title":"Restorative Yoga for Cancer Survivors - The Yoga Institute",
+    "h1Tag": "Restorative Yoga for Cancer Survivors",
+    "h2Tags": [],
+    "metaData": [
+      {
+        "name": "description",
+        "content": "Surviving to Thriving: Embracing Life After Cancer"
+      },
+      {
+        "property": "og:description",
+        "content": "Surviving to Thriving: Embracing Life After Cancer"
+      },
+      {
+        "property": "og:title",
+        "content": "Restorative Yoga for Cancer Survivors - The Yoga Institute"
+      },
+      {
+        "property": "og:type",
+        "content": "Website"
+      }
+    ]
+  },
   "/certification-program-on-yoga-for-lung-cancer-online":{
     "title":"Yoga For Lung Cancer Online - The Yoga Institute",
     "h1Tag": "Certificate Yoga For Lung Cancer Online",

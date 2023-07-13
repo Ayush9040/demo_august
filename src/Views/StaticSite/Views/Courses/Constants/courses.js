@@ -13126,6 +13126,149 @@ const certificate = {
       },
     ],
   },
+  6: {
+    id: '',
+    title: 'Restorative Yoga for Cancer Survivors - Online Program',
+    key: 'restorative-yoga-for-cancer-survivors',
+    batch: 1,
+    // templateId: 'GENERAL_AUTO_EMAIL',
+    templateId: {
+      templateOnline: 'RESTORATIVE_YOGA_FOR_CANCER_PROGRAM_COFIRMATION_MAIL',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: '',
+      },
+    },
+    image: `${baseDomain}${courseAssets.courseAsset74}`,
+    cardImage: `${baseDomain}${courseAssets.courseAsset74}`,
+    metaDescription:
+      'Surviving to Thriving: Embracing Life After Cancer',
+    mostPopular: false,
+    rating: 5,
+    colorCode: '#C48E8C',
+    timing: 'Wed, Fri, Sat 11.30 a.m. to 12.30 p.m.',
+    fees: {
+      onlineFee: 27000,
+      offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
+    },
+    category: 'certificate-course',
+    dates: ['2nd August, 2023'],
+    online: true,
+    onCampus: false,
+    nonResidential: false,
+    residential: false,
+    certficate: true,
+    details: [
+      {
+        type: 'paragraph',
+        content: {
+          title: 'About the Program',
+          text: [
+            'Restorative Yoga for Cancer is a specialized healing program that helps facilitate cancer recovery, support breast, ovaries and prostate health, reduce cancer related fatigue and manage lymphedema. This program takes into consideration the psychological effects as well as all the emotional upheavals associated with cancer.',
+            'This is a new system of supported, gentle “flowing” Yoga that can be easily practiced at home. Sequencing the breath and Yoga pose is vital for overall physical and emotional recovery. These specialized Yoga poses are meant to strengthen and open every part of the body. Not only will these pose stretch, lengthen muscles and breast tissue - they will also improve the circulation of lymph fluid and blood flow. The use of Yoga props is recommended and encouraged with each pose in order to receive maximum healing benefits. These poses tone the internal organs, glands and nerves. The results are measured in increased vitality, energy and hope, sense of balance and mental peace.',
+          ],
+        },
+      },
+      {
+        type: 'u-list',
+        content: {
+          title: 'Program Highlights',
+          points: [
+            {
+              listItem: 'Specific Yoga asanas addressing side effects of cancer treatments.',
+              subItems: [],
+            },
+            {
+              listItem: 'Pranayama practices to improve breathing as well as bringing mental calm and poise.',
+              subItems: [],
+            },
+            {
+              listItem: 'Meditative practices and Kriyas for cleansing.',
+              subItems: [],
+            },
+            {
+              listItem: 'You will receive specialized training from highly experienced and certified yoga teachers who possess deep knowledge and empathy towards the physical, psychological, and emotional struggles faced by cancer survivors.',
+              subItems: [],
+            },
+          ],
+        },
+      }, {
+        type: 'u-list',
+        content: {
+          title: 'Program Benefits',
+          points: [
+            {
+              listItem: 'The gentle and therapeutic movements will aid in restoring your body’s vitality and flexibility.',
+              subItems: [],
+            },
+            {
+              listItem: 'Improvements in your physical well-being and increased energy levels.',
+              subItems: [],
+            },
+            {
+              listItem: 'Pranayama practices can enhance your respiratory function, reduce anxiety, and bring a sense of calm and serenity to your mind.',
+              subItems: [],
+            },
+            {
+              listItem: 'Finding inner peace, releasing stress, and cultivating a positive mindset, empowering you to face the future with renewed optimism and resilience.',
+              subItems: [],
+            },
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Program Duration',
+          text: ['3-Months Online Program (Total of 36 sessions)',
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Timings',
+          text: [
+            'Starts from 2nd August, 2023 (Wednesday)',
+            'Wed, Fri, Sat 11.30 a.m. to 12.30 p.m.'
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Program Fees',
+          text: ['1st 12 sessions: ₹12,000 (Learning major techniques)',
+            'Next 12 sessions: ₹6,000 (Practicing)',
+            'Next 12 sessions: ₹6,000 (Practicing)',
+            'Cancer Kit: ₹3,000',
+            'Total: ₹27,000'
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Admission Criteria',
+          text: ['Open to breast, ovarian, prostate, and uterine cancer survivors who have completed surgery, chemotherapy, radiation therapy and other treatments.'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Get in Touch',
+          text: ['To learn more about our Cancer Survivor’s Rehabilitation Program or to enroll, please contact on WhatsApp: Dharmesh Sukhadia – 9892550595, Puja Heliwal – 9911543557 or email us at info@theyogainstitute.org.'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Medical Disclaimer',
+          text: ['The programme will only aid in providing the best Yoga support to cancer survivors. It should not be a substitute to professional medical advice, diagnosis or treatment. A qualified healthcare professional should be consulted for medical advice and answers to personal health questions. This program is not an attempt to practice medicine. It is assumed that the participant has sought permission from their respective consulting oncologist for the practice of Yoga.'],
+        },
+      },
+    ],
+  },
 }
 
 export const c200hr = Object.values(ttc200hr)
