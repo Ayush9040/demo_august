@@ -13057,14 +13057,26 @@ const certificate = {
         },
       },
       {
-        type: 'paragraph',
+        type: 'u-list',
         content: {
           title: 'Eligibility:',
-          text: [
-            'Students who have completed 500/900 hrs TTC from The Yoga Institute.',
-            'Medical Doctors who have completed any TTC (200/500/900 hrs) from The Yoga Institute.',
-            'Students who have completed YCB Level 2 or 3.',
-            'Students who have completed minimum 500 hrs TTC from any institution, can apply to info@theyogainstitute.org with their certificates & course curriculum for review.'
+          points: [
+            {
+              listItem: 'Students who have completed 500/900 hrs TTC from The Yoga Institute',
+              subItems: [],
+            },
+            {
+              listItem: 'Medical Doctors who have completed any TTC (200/500/900 hrs) from The Yoga Institute.',
+              subItems: [],
+            },
+            {
+              listItem: 'Students who have completed YCB Level 2 or 3.',
+              subItems: [],
+            },
+            {
+              listItem: 'Students who have completed minimum 500 hrs TTC from any institution, can apply to info@theyogainstitute.org with their certificates & course curriculum for review.',
+              subItems: [],
+            },
           ],
         },
       },
@@ -13097,12 +13109,18 @@ const certificate = {
         },
       },
       {
-        type: 'paragraph',
+        type: 'u-list',
         content: {
-          title: 'NOTE:',
-          text: [
-            'The fees once paid will not be refundable',
-            ' All study material available for the students for any course in physical (hard copy) only. The same can be collected by the student directly from the Institute or can be delivered to them by courier, charges of which will have to be borne by the student.',
+          title: 'Note:',
+          points: [
+            {
+              listItem: 'The fees once paid will not be refundable.',
+              subItems: [],
+            },
+            {
+              listItem: 'All study material available for the students for any course in physical (hard copy) only. The same can be collected by the student directly from the Institute or can be delivered to them by courier, charges of which will have to be borne by the student.',
+              subItems: [],
+            },
           ],
         },
       },
