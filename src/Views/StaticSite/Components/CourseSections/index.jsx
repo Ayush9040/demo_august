@@ -139,6 +139,9 @@ const CourseSection = ({
               Certificate Program on Yoga for Cancer – Online & On Campus
               </li>
             </Link>
+            <Link to="/restorative-yoga-for-cancer-survivors">
+              <li  className="text-bold" >Restorative Yoga for Cancer Survivors - Online Program</li>
+            </Link>
             <Link to="/certification-program-on-yoga-for-lung-cancer-online">
               <li className="text-bold" >
               Certificate Program on Yoga for Lung Cancer - Online
