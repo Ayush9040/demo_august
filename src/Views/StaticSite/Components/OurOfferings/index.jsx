@@ -35,7 +35,7 @@ const OurOfferings = () => {
         'An introductory course to yoga theory and practice in which students experience yogic lifestyle and learn how to achieve life balance.',
       redirect: '/7-days-camp',
       timeline: '7 days',
-      price: '8000',
+      price: '9000',
     },
     {
       name: '21-Day Better Living Course',
@@ -67,7 +67,7 @@ const OurOfferings = () => {
         'With this course, you will acquire the skills necessary to master your mental, spiritual, and physical health and lead a fulfilling life.',
       redirect: '/seven-month-ttc',
       timeline: '7-month',
-      price: '50,000',
+      price: '55,000',
     },
   ]
   const [smallDescription, setSmallDescription] = useState(
