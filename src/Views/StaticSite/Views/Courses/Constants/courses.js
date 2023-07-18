@@ -13136,7 +13136,7 @@ const certificate = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'certificate-course',
-    dates: ['2nd August, 2023'],
+    dates: ['9nd August, 2023'],
     online: true,
     onCampus: false,
     nonResidential: false,
@@ -13241,7 +13241,7 @@ const certificate = {
         type: 'paragraph',
         content: {
           title: 'Get in Touch',
-          text: ['To learn more about our Cancer Survivor’s Rehabilitation Program or to enroll, please contact on WhatsApp: Dharmesh Sukhadia – 9892550595, Puja Heliwal – 9911543557 or email us at info@theyogainstitute.org.'],
+          text: ['To learn more about our Program or to enroll, please contact on WhatsApp: Dharmesh Sukhadia – 9892550595, Puja Heliwal – 9911543557 or email us at info@theyogainstitute.org.'],
         },
       },
       {
