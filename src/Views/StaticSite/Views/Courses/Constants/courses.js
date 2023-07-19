@@ -13123,8 +13123,8 @@ const certificate = {
         templateNonResidential: '',
       },
     },
-    image: `${baseDomain}${courseAssets.courseAsset116}`,
-    cardImage: `${baseDomain}${courseAssets.courseAsset116}`,
+    image: `${baseDomain}${courseAssets.courseAsset117}`,
+    cardImage: `${baseDomain}${courseAssets.courseAsset117}`,
     metaDescription:
       'Surviving to Thriving: Embracing Life After Cancer',
     mostPopular: false,
