@@ -13123,8 +13123,8 @@ const certificate = {
         templateNonResidential: '',
       },
     },
-    image: `${baseDomain}${courseAssets.courseAsset74}`,
-    cardImage: `${baseDomain}${courseAssets.courseAsset74}`,
+    image: `${baseDomain}${courseAssets.courseAsset116}`,
+    cardImage: `${baseDomain}${courseAssets.courseAsset116}`,
     metaDescription:
       'Surviving to Thriving: Embracing Life After Cancer',
     mostPopular: false,
@@ -13213,7 +13213,7 @@ const certificate = {
         content: {
           title: 'Timings',
           text: [
-            'Starts from 2nd August, 2023 (Wednesday)',
+            'Starts from 9th August, 2023 (Wednesday)',
             'Wed, Fri, Sat 11.30 a.m. to 12.30 p.m.'
           ],
         },

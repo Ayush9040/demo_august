@@ -290,6 +290,7 @@ export const courseAssets = {
   courseAsset110:
     '/Courses/Class/new11/weekend-asana-classes-%28men-women%29%20-%20common.jpg',
   courseAsset115: '/home_page/Regular_asana_class.webp',
+  courseAsset116:'/SEO-New-Images/Courses/Restorative_Yoga_for_Cancer.webp'
 }
 
 export const facilitiyAssets = {
