@@ -3725,7 +3725,7 @@ const ttc900hr = {
           title: 'Prerequisites:',
 
           text: [
-            '200 HRS TTC / 7 Day Health Camp / 21 Days Better Living Course',
+            '200 HRS TTC / 7 Day Health Camp / 21 Days Better Living Course for the Yoga Institute',
           ],
         },
       },
@@ -4416,7 +4416,7 @@ const ttc900hr = {
           title: 'Prerequisites:',
 
           text: [
-            '200 HRS TTC / 7 Day Health Camp / 21 Days Better Living Course',
+            '200 HRS TTC / 7 Day Health Camp / 21 Days Better Living Course for the Yoga Institute',
           ],
         },
       },
@@ -5695,7 +5695,7 @@ const ttc900hr = {
           title: 'Prerequisites:',
 
           text: [
-            '200 HRS TTC / 7 Day Health Camp / 21 Days Better Living Course',
+            '200 HRS TTC / 7 Day Health Camp / 21 Days Better Living Course for the Yoga Institute',
           ],
         },
       },
@@ -9346,15 +9346,15 @@ const camps = {
           ],
         },
       },
-      {
-        type: 'paragraph',
-        content: {
-          title: '3. How many seats are available in one course?',
-          text: [
-            'Only 35 seats are available. Registrations on a first come, first-serve basis only',
-          ],
-        },
-      },
+      // {
+      //   type: 'paragraph',
+      //   content: {
+      //     title: '3. How many seats are available in one course?',
+      //     text: [
+      //       'Only 35 seats are available. Registrations on a first come, first-serve basis only',
+      //     ],
+      //   },
+      // },
       {
         type: 'paragraph',
         content: {
@@ -9680,15 +9680,15 @@ const camps = {
           ],
         },
       },
-      {
-        type: 'paragraph',
-        content: {
-          title: '3. How many seats are available in one course?',
-          text: [
-            'Only 35 seats are available. Registrations on a first come, first-serve basis only.',
-          ],
-        },
-      },
+      // {
+      //   type: 'paragraph',
+      //   content: {
+      //     title: '3. How many seats are available in one course?',
+      //     text: [
+      //       'Only 35 seats are available. Registrations on a first come, first-serve basis only.',
+      //     ],
+      //   },
+      // },
       {
         type: 'paragraph',
         content: {
@@ -10009,15 +10009,15 @@ const camps = {
           ],
         },
       },
-      {
-        type: 'paragraph',
-        content: {
-          title: '3. How many seats are available in one course?',
-          text: [
-            'Only 35 seats are available. Registrations on a first come, first-serve basis only.',
-          ],
-        },
-      },
+      // {
+      //   type: 'paragraph',
+      //   content: {
+      //     title: '3. How many seats are available in one course?',
+      //     text: [
+      //       'Only 35 seats are available. Registrations on a first come, first-serve basis only.',
+      //     ],
+      //   },
+      // },
       {
         type: 'paragraph',
         content: {
@@ -12769,7 +12769,7 @@ const certificate = {
           title: 'What the course details?',
           points: [
             {
-              listItem: 'Understanding of 90+ diseases:',
+              listItem: 'Understanding of 95+ diseases:',
               subItems: [],
             },
             {
