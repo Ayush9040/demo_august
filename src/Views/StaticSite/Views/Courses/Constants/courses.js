@@ -3725,7 +3725,7 @@ const ttc900hr = {
           title: 'Prerequisites:',
 
           text: [
-            '200 HRS TTC / 7 Day Health Camp / 21 Days Better Living Course for the Yoga Institute',
+            '200 HRS TTC / 7 Day Health Camp / 21 Days Better Living Course from the Yoga Institute',
           ],
         },
       },
@@ -4416,7 +4416,7 @@ const ttc900hr = {
           title: 'Prerequisites:',
 
           text: [
-            '200 HRS TTC / 7 Day Health Camp / 21 Days Better Living Course for the Yoga Institute',
+            '200 HRS TTC / 7 Day Health Camp / 21 Days Better Living Course from the Yoga Institute',
           ],
         },
       },
@@ -5695,7 +5695,7 @@ const ttc900hr = {
           title: 'Prerequisites:',
 
           text: [
-            '200 HRS TTC / 7 Day Health Camp / 21 Days Better Living Course for the Yoga Institute',
+            '200 HRS TTC / 7 Day Health Camp / 21 Days Better Living Course from the Yoga Institute',
           ],
         },
       },
