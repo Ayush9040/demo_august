@@ -9118,7 +9118,7 @@ const camps = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 2100 },
     },
     category: 'camps',
-    metaDescription: 'Become successful, healthy, stress-free, and more mindful in your relationships by learning the yogic way of living. Join The Yoga Institute’s 21-Days Better Living Course. Please Note: The first session of 21-Days BLC i.e. on Sunday will be from 8:30 am to 10:30 am. This session also includes Satsang.',
+    metaDescription: 'Become successful, healthy, stress-free, and more mindful in your relationships by learning the yogic way of living. Join The Yoga Institute’s 21-Days Better Living Course. Please Note: Both morning and evening batches are required to participate in Satsang, followed by their classes, on all Sundays during their 21-day course duration. Class timings are from 8:30 am to 9:30 am, followed by Satsang from 9:30 am to 10:30 am.',
     image: `${baseDomain}${courseAssets.courseAsset34}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset34}`,
     details: [
@@ -9242,7 +9242,7 @@ const camps = {
         type: 'paragraph',
         content: {
           title: 'Timings',
-          text: ['Morning 7:00 am – 8:30 am (IST)', 'Please Note: The first session of 21-Days BLC i.e. on Sunday will be from 8:30 am to 10:30 am. This yoga session also includes Satsang.'],
+          text: ['Morning 7:00 am – 8:30 am (IST)', 'Please Note: Both morning and evening batches are required to participate in Satsang, followed by their classes, on all Sundays during their 21-day course duration. Class timings are from 8:30 am to 9:30 am, followed by Satsang from 9:30 am to 10:30 am.'],
         },
       },
       {
@@ -9273,7 +9273,7 @@ const camps = {
         content: {
           title: 'Rs. 2100/-',
           text: [
-            '*Please note fees once paid will be non-refundable.',
+            '*Please note fees once paid will be non-refundable. Also, after making the payment, please provide us with a screenshot of the transaction.',
             'We support all credit cards. For making payments using MasterCard. Alternatively, you can also make payments using net banking or opt for wire transfer by writing to us.',
           ],
         },
@@ -9319,6 +9319,16 @@ const camps = {
       //     ],
       //   },
       // },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'COURSE CERTIFICATION',
+          text: [
+            'To be eligible for a certificate, a minimum of 18 days attendance is compulsory.',
+            'Online students must activate their video cameras for attendance to be recorded.'
+          ],
+        },
+      },
       {
         type: 'paragraph',
         content: {
@@ -9452,7 +9462,7 @@ const camps = {
     category: 'camps',
     metaDescription:
       `Become successful, healthy, stress-free, and more mindful in your relationships by learning the yogic way of living. Join The Yoga Institute’s 21-Days Better Living Yoga Course.¿
-      Please Note: The first session of 21-Days BLC i.e. on Sunday will be from 8:30 am to 10:30 am. This yoga session also includes Satsang.`,
+      Please Note: Both morning and evening batches are required to participate in Satsang, followed by their classes, on all Sundays during their 21-day course duration. Class timings are from 8:30 am to 9:30 am, followed by Satsang from 9:30 am to 10:30 am.`,
     image: `${baseDomain}${courseAssets.courseAsset35}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset35}`,
     details: [
@@ -9576,7 +9586,7 @@ const camps = {
         type: 'paragraph',
         content: {
           title: 'Timings',
-          text: ['Evening 6:30 pm – 8:00 pm (IST)', 'Please Note: The first session of 21-Days BLC i.e. on Sunday will be from 8:30 am to 10:30 am. This session also includes Satsang.'],
+          text: ['Evening 6:30 pm – 8:00 pm (IST)', 'Please Note: Both morning and evening batches are required to participate in Satsang, followed by their classes, on all Sundays during their 21-day course duration. Class timings are from 8:30 am to 9:30 am, followed by Satsang from 9:30 am to 10:30 am.'],
         },
       },
       {
@@ -9607,7 +9617,7 @@ const camps = {
         content: {
           title: 'Rs. 2100/-',
           text: [
-            '*Please note fees once paid will be non-refundable.',
+            '*Please note fees once paid will be non-refundable. Also, after making the payment, please provide us with a screenshot of the transaction.',
             'We support all credit cards. For making payments using MasterCard. Alternatively, you can also make payments using net banking or opt for wire transfer by writing to us.',
           ],
         },
@@ -9653,6 +9663,16 @@ const camps = {
       //     ],
       //   },
       // },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'COURSE CERTIFICATION',
+          text: [
+            'To be eligible for a certificate, a minimum of 18 days attendance is compulsory.',
+            'Online students must activate their video cameras for attendance to be recorded.'
+          ],
+        },
+      },
       {
         type: 'paragraph',
         content: {
@@ -9781,7 +9801,7 @@ const camps = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 2100 },
     },
     category: 'camps',
-    metaDescription: 'Become successful, healthy, stress-free, and more mindful in your relationships by learning the yogic way of living. Join The Yoga Institute"s 21-Days Better Living Course. Please Note: The first session of 21-Days BLC i.e. on Sunday will be from 8:30 am to 10:30 am. This session also includes Satsang.',
+    metaDescription: 'Become successful, healthy, stress-free, and more mindful in your relationships by learning the yogic way of living. Join The Yoga Institute"s 21-Days Better Living Course. Please Note: Both morning and evening batches are required to participate in Satsang, followed by their classes, on all Sundays during their 21-day course duration. Class timings are from 8:30 am to 9:30 am, followed by Satsang from 9:30 am to 10:30 am.',
     image: `${baseDomain}${courseAssets.courseAsset34}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset34}`,
     details: [
@@ -9905,7 +9925,7 @@ const camps = {
         type: 'paragraph',
         content: {
           title: 'Timings',
-          text: ['Evening 6:30 pm – 8:00 pm (IST) ( Yoga in Hindi)', 'Please Note: The first session of 21-Days BLC i.e. on Sunday will be from 8:30 am to 10:30 am. This session also includes Satsang.'],
+          text: ['Evening 6:30 pm – 8:00 pm (IST) ( Yoga in Hindi)', 'Please Note: Both morning and evening batches are required to participate in Satsang, followed by their classes, on all Sundays during their 21-day course duration. Class timings are from 8:30 am to 9:30 am, followed by Satsang from 9:30 am to 10:30 am.'],
         },
       },
       {
@@ -9936,7 +9956,7 @@ const camps = {
         content: {
           title: 'Rs. 2100/-',
           text: [
-            '*Please note fees once paid will be non-refundable.',
+            '*Please note fees once paid will be non-refundable. Also, after making the payment, please provide us with a screenshot of the transaction.',
             'We support all credit cards. For making payments using MasterCard. Alternatively, you can also make payments using net banking or opt for wire transfer by writing to us.',
           ],
         },
@@ -9982,6 +10002,16 @@ const camps = {
       //     ],
       //   },
       // },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'COURSE CERTIFICATION',
+          text: [
+            'To be eligible for a certificate, a minimum of 18 days attendance is compulsory.',
+            'Online students must activate their video cameras for attendance to be recorded.'
+          ],
+        },
+      },
       {
         type: 'paragraph',
         content: {
