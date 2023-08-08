@@ -9136,8 +9136,8 @@ const camps = {
         content: {
           title: '',
           text: [
-            'It takes 21 days to build a habit into your daily routine. The Yoga Institute’s 21 Days Better Living Course is a yoga course specifically designed to introduce you to the yogic way of living. begin your journey into the discovery of Yoga. Working professionals and house makers can take just one hour from their day to practice and learn yoga and begin their transformational journey.',
-            'This is a yoga certificate course and has been successfully conducted for 50 years by the Institute. The yoga program trains you holistically and enables you to achieve equilibrium between your mind and body and thus achieve a state of peace and happiness in life. The course is conducted by trained teachers at the Institute.',
+            'It takes 21 days to build a habit into your daily routine. The Yoga Institute’s 21 Days Better Living Course is a course specifically designed to introduce you to the yogic way of living. begin your journey into the discovery of Yoga. Working professionals and house makers can take just one hour from their day to practice and learn yoga and begin their transformational journey.',
+            'This is a yoga certificate course and has been successfully conducted for 50 years by the Institute. The program trains you holistically and enables you to achieve equilibrium between your mind and body and thus achieve a state of peace and happiness in life. The course is conducted by trained teachers at the Institute.',
           ],
         },
       },
@@ -9218,7 +9218,7 @@ const camps = {
         content: {
           title: '',
           text: [
-            'Come and experience, amidst nature and beauty, our enriching 21 Days Better Living Course.',
+            'Come and experience, amidst nature and beauty, our enriching 21 Days Better Living yoga Course.',
           ],
         },
       },
@@ -9227,7 +9227,7 @@ const camps = {
         content: {
           title: 'PROGRAM DETAILS',
           text: [
-            'The yoga certificate course is held once a month, starting on the first Sunday (7:00 a.m.) of every month. The yoga classes are of 1 hr 30 mins each day for 21 consecutive days. Participants can opt for the morning or evening batches.',
+            'The yoga certificate course is held once a month, starting on the first Sunday (7:00 a.m.) of every month. The classes are of 1 hr. 30 mins each day for 21 consecutive days. Participants can opt for the morning or evening batches.',
           ],
         },
       },
@@ -9324,7 +9324,7 @@ const camps = {
         content: {
           title: 'COURSE CERTIFICATION',
           text: [
-            'To be eligible for a certificate, a minimum of 18 days attendance is compulsory.',
+            'To be eligible for a certificate, a minimum of 18 days attendance is compulsory.  If, for any reason, you were unable to attend 2 or 3 sessions and would like to make up for these in the upcoming batch, you will be required to re-enroll for the course and complete the payment process again.',
             'Online students must activate their video cameras for attendance to be recorded.'
           ],
         },
@@ -9375,7 +9375,7 @@ const camps = {
       {
         type: 'paragraph',
         content: {
-          title: 'The payment validity and session attendance for 21-Days Better Living Course is only applicable for one month. However, in emergency circumstances, the participant can attend the 21-Days BLC sessions for the next month but only on approval of the management. Without authorisation, the participant will not be allowed to attend the sessions post the actual sessions of the course.',
+          title: 'The payment validity and session attendance for 21-Days Better Living Course is only applicable for one month.',
           text: [],
         },
       },
@@ -9668,7 +9668,7 @@ const camps = {
         content: {
           title: 'COURSE CERTIFICATION',
           text: [
-            'To be eligible for a certificate, a minimum of 18 days attendance is compulsory.',
+            'To be eligible for a certificate, a minimum of 18 days attendance is compulsory.  If, for any reason, you were unable to attend 2 or 3 sessions and would like to make up for these in the upcoming batch, you will be required to re-enroll for the course and complete the payment process again.',
             'Online students must activate their video cameras for attendance to be recorded.'
           ],
         },
@@ -9820,7 +9820,7 @@ const camps = {
           title: '',
           text: [
             'It takes 21 days to build a habit into your daily routine. The Yoga Institute’s 21 Days Better Living Course is a course specifically designed to introduce you to the yogic way of living. begin your journey into the discovery of Yoga. Working professionals and house makers can take just one hour from their day to practice and learn yoga and begin their transformational journey.',
-            'This is a yoga certificate course and has been successfully conducted for 50 years by the Institute. The yoga program trains you holistically and enables you to achieve equilibrium between your mind and body and thus achieve a state of peace and happiness in life. The course is conducted by trained teachers at the Institute.',
+            'This is a yoga certificate course and has been successfully conducted for 50 years by the Institute. The program trains you holistically and enables you to achieve equilibrium between your mind and body and thus achieve a state of peace and happiness in life. The course is conducted by trained teachers at the Institute.',
           ],
         },
       },
@@ -9901,7 +9901,7 @@ const camps = {
         content: {
           title: '',
           text: [
-            'Come and experience, amidst nature and beauty, our enriching 21 Days Better Living Yoga Course.',
+            'Come and experience, amidst nature and beauty, our enriching 21 Days Better Living yoga Course.',
           ],
         },
       },
@@ -10007,7 +10007,7 @@ const camps = {
         content: {
           title: 'COURSE CERTIFICATION',
           text: [
-            'To be eligible for a certificate, a minimum of 18 days attendance is compulsory.',
+            'To be eligible for a certificate, a minimum of 18 days attendance is compulsory.  If, for any reason, you were unable to attend 2 or 3 sessions and would like to make up for these in the upcoming batch, you will be required to re-enroll for the course and complete the payment process again.',
             'Online students must activate their video cameras for attendance to be recorded.'
           ],
         },
