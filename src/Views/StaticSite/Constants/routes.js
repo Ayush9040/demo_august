@@ -96,7 +96,7 @@ const NutriDiet = lazy(()=>import('../Views/NutriDiet'))
 const LandingPage = lazy( ()=>import('../Views/LandingPage'))
 const LandingPageNew = lazy( ()=>import('../Views/LandingPage/21Days/index'))
 const SevenDays = lazy( ()=>import('../Views/LandingPage/SevenDays/AboutCamp/index'))
-
+const TyiLandingPage = lazy(() => import('../Views/LandingPage/NewLandingPage/index'))
 const staticSiteRoutes = [
   //Home
   {
@@ -837,6 +837,13 @@ const staticSiteRoutes = [
     id:'staticDonateForm',
     routePath:'/donation-form',
   },
+  {
+    Component:TyiLandingPage,
+    path:'/new-landing-page',
+    id:'staticNewLandingPage',
+    routePath:'/new-landing-page',
+    name:'NewLandingPage'
+  }
 ]
 
 export default staticSiteRoutes
