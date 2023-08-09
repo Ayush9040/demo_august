@@ -840,16 +840,16 @@ const staticSiteRoutes = [
   },
   {
     Component:TyiLandingPage,
-    path:'/new-landing-page',
+    path:'/ad-campaign-3-months-900hours',
     id:'staticNewLandingPage',
-    routePath:'/new-landing-page',
+    routePath:'/ad-campaign-3-months-900hours',
     name:'NewLandingPage'
   },
   {
     Component:TyiLandingPage7Months,
-    path:'/new-landing-page2',
+    path:'/ad-campaign-7-months-900hours',
     id:'staticNewLandingPage2',
-    routePath:'/new-landing-page2',
+    routePath:'/ad-campaign-7-months-900hours',
     name:'NewLandingPage2'
   }
 ]

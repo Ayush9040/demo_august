@@ -87,7 +87,7 @@ const LandingPageTyi7Months = () => {
             <div className="form_text">
               <div className="left_heading1">JOIN OUR</div>
               <div className="left_heading2">
-                <span className="left_heading_bold">900-HRS (3-MONTHS)</span>{' '}
+                <span className="left_heading_bold">900-HRS (7-MONTHS)</span>{' '}
               </div>
               <div className="left_heading2">
                 <span className="left_head_bold">TEACHER TRAINING COURSE</span>{' '}
