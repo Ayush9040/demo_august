@@ -20,7 +20,7 @@ import Course4 from '../../../assets/images/popCo4.png'
 import CommonBtn from '../../../Components/commonbtn'
 import { creatForm, successMail } from '../Api'
 
-const LandingPageTyi = () => {
+const LandingPageTyi7Months = () => {
   const [modal, setModal] = useState(false)
   const [err, setErr] = useState(0)
   const [formData, setFormData] = useState({
@@ -352,13 +352,13 @@ const LandingPageTyi = () => {
           <u>Duration</u>
         </div>
         <div className="durationText">
-          900 HRS TTC Batch- 3 Months TTC On Campus - English
+          900 HRS TTC Batch- 7 Months TTC Online and On Campus - English
         </div>
         <div className="timing">
           <u>TIMING</u>
         </div>
         <div className="timingText">
-          Monday to Saturday:6:30 am - 8:00pm (IST)
+          Monday to Saturday:5:00 pm - 8:00pm (IST)
         </div>
       </div>
       <div className="otherCourses">
@@ -454,4 +454,4 @@ const LandingPageTyi = () => {
   )
 }
 
-export default LandingPageTyi
+export default LandingPageTyi7Months
