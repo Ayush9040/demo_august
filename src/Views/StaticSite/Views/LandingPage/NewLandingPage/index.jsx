@@ -6,6 +6,10 @@ import { useState } from 'react'
 import PhoneInput from 'react-phone-number-input'
 import GroupImg from '../../../assets/images/overview-bg.jpg'
 import CampaignThankYou from '../ThankYouPage'
+import Slider from 'react-slick'
+import { testimonialData4 } from '../constant'
+import SevenDaysBlogs from '../../../Components/LandingCourse/SevenDaysBlogs'
+import { popularCourses } from '../constant'
 
 import { creatForm, successMail } from '../Api'
 
@@ -52,12 +56,34 @@ const LandingPageTyi = () => {
       setErr(3)
     } else if (country === '') {
       setErr(4)
-    } else if (city === ''){
-      setErr(5) 
-    } 
-    else {
+    } else if (city === '') {
+      setErr(5)
+    } else {
       handleForm()
     }
+  }
+  let settings = {
+    dots: false,
+    arrows: false,
+    infinite: true,
+    speed: 2000,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoPlaySpeed: 5000,
+    centerMode: false,
+    centerPadding: '20%',
+    swipe: false,
+    responsive: [
+      {
+        breakpoint: 900,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          centerMode: false,
+        },
+      },
+    ],
   }
 
   return (
@@ -91,7 +117,7 @@ const LandingPageTyi = () => {
                 <h5>
                   EMBARK ON <br /> A TRANSFORMATIVE JOURNEY
                   <br />
-                  SIGNUP FOR THE COURSE
+                  <span className='lightWeight'>SIGNUP FOR THE COURSE</span>
                 </h5>
                 <label htmlFor="name">
                   <input
@@ -159,7 +185,7 @@ const LandingPageTyi = () => {
                   />
                   {err === 5 && <small> Please enter your city</small>}
                 </label>
-                <button className="submit-btn" onClick={(e)=>handleSubmit(e)}>
+                <button className="submit-btn" onClick={(e) => handleSubmit(e)}>
                   SUBMIT
                 </button>
               </form>
@@ -169,7 +195,10 @@ const LandingPageTyi = () => {
       </section>
       <div className="overlap-container">
         <div className="img-container">
-          <img src="https://ecom-static-site.oss-ap-south-1.aliyuncs.com/New-landing-page/first.png" alt="image" />
+          <img
+            src="https://ecom-static-site.oss-ap-south-1.aliyuncs.com/New-landing-page/first.png"
+            alt="image"
+          />
         </div>
         <div className="content-container1">
           Through Our
@@ -194,24 +223,41 @@ const LandingPageTyi = () => {
           </span>{' '}
         </div>
         <div className="img-container">
-          <img src="https://ecom-static-site.oss-ap-south-1.aliyuncs.com/New-landing-page/second.png" alt="image" />
+          <img
+            src="https://ecom-static-site.oss-ap-south-1.aliyuncs.com/New-landing-page/second.png"
+            alt="image"
+          />
         </div>
       </div>
       <div className="gradient-container">
         <div className="grad-label"> WHAT WILL YOU LEARN ? </div>
         <div className="label-list">
+          <div className="list1"></div>
+          <div className="list2"></div>
           <ul>
             <li>
-              <img src='https://ecom-static-site.oss-ap-south-1.aliyuncs.com/New-landing-page/flower.jpg' alt="Flower Icon" className="flowerIcon" />
+              <img
+                src="https://ecom-static-site.oss-ap-south-1.aliyuncs.com/New-landing-page/flower.jpg"
+                alt="Flower Icon"
+                className="flowerIcon"
+              />
               Experiential Yoga Asana Sessions
             </li>
             <li>
-              <img src='https://ecom-static-site.oss-ap-south-1.aliyuncs.com/New-landing-page/flower.jpg' alt="Flower Icon" className="flowerIcon" />
+              <img
+                src="https://ecom-static-site.oss-ap-south-1.aliyuncs.com/New-landing-page/flower.jpg"
+                alt="Flower Icon"
+                className="flowerIcon"
+              />
               Quintessence of Bhagavad Gita <br />{' '}
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;and Samkhya Philosophy.
             </li>
             <li>
-              <img src='https://ecom-static-site.oss-ap-south-1.aliyuncs.com/New-landing-page/flower.jpg' alt="Flower Icon" className="flowerIcon" />
+              <img
+                src="https://ecom-static-site.oss-ap-south-1.aliyuncs.com/New-landing-page/flower.jpg"
+                alt="Flower Icon"
+                className="flowerIcon"
+              />
               Yogic Techniques: Pranayams,
               <br />
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Kriyas and importance of Sattvik{' '}
@@ -219,18 +265,30 @@ const LandingPageTyi = () => {
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Food
             </li>
             <li>
-              <img src='https://ecom-static-site.oss-ap-south-1.aliyuncs.com/New-landing-page/flower.jpg' alt="Flower Icon" className="flowerIcon" />
+              <img
+                src="https://ecom-static-site.oss-ap-south-1.aliyuncs.com/New-landing-page/flower.jpg"
+                alt="Flower Icon"
+                className="flowerIcon"
+              />
               Anatomy and Physiology
             </li>
             <li>
-              <img src='https://ecom-static-site.oss-ap-south-1.aliyuncs.com/New-landing-page/flower.jpg' alt="Flower Icon" className="flowerIcon" />
+              <img
+                src="https://ecom-static-site.oss-ap-south-1.aliyuncs.com/New-landing-page/flower.jpg"
+                alt="Flower Icon"
+                className="flowerIcon"
+              />
               Patanjali Yoga Sutras and Hatha <br />{' '}
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Yoga Texts, with an emphasis on
               <br />
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hatha Yoga Pradipika
             </li>
             <li>
-              <img src='https://ecom-static-site.oss-ap-south-1.aliyuncs.com/New-landing-page/flower.jpg' alt="Flower Icon" className="flowerIcon" />
+              <img
+                src="https://ecom-static-site.oss-ap-south-1.aliyuncs.com/New-landing-page/flower.jpg"
+                alt="Flower Icon"
+                className="flowerIcon"
+              />
               Yoga for Wellness and Stress <br />{' '}
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;management
             </li>
@@ -238,43 +296,79 @@ const LandingPageTyi = () => {
         </div>
       </div>
       <div className="gradient-container2">
+        <div className="partitions1"></div>
+        <div className="partitions2"></div>
+        <div className="partitions3"></div>
         <div className="grad-label2"> COURSE BENEFITS </div>
+
         <div className="label-list2">
           <ul>
             <li>
-              <img src='https://ecom-static-site.oss-ap-south-1.aliyuncs.com/New-landing-page/flower.jpg' alt="Flower Icon" className="flowerIcon" />
+              <img
+                src="https://ecom-static-site.oss-ap-south-1.aliyuncs.com/New-landing-page/flower.jpg"
+                alt="Flower Icon"
+                className="flowerIcon"
+              />
               Triple Accreditation
             </li>
             <li>
-              <img src='https://ecom-static-site.oss-ap-south-1.aliyuncs.com/New-landing-page/flower.jpg' alt="Flower Icon" className="flowerIcon" />
+              <img
+                src="https://ecom-static-site.oss-ap-south-1.aliyuncs.com/New-landing-page/flower.jpg"
+                alt="Flower Icon"
+                className="flowerIcon"
+              />
               Practical Experience <br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;and
               Learning.
             </li>
             <li>
-              <img src='https://ecom-static-site.oss-ap-south-1.aliyuncs.com/New-landing-page/flower.jpg' alt="Flower Icon" className="flowerIcon" />
+              <img
+                src="https://ecom-static-site.oss-ap-south-1.aliyuncs.com/New-landing-page/flower.jpg"
+                alt="Flower Icon"
+                className="flowerIcon"
+              />
               Personal Growth
             </li>
             <li>
-              <img src='https://ecom-static-site.oss-ap-south-1.aliyuncs.com/New-landing-page/flower.jpg' alt="Flower Icon" className="flowerIcon" />
+              <img
+                src="https://ecom-static-site.oss-ap-south-1.aliyuncs.com/New-landing-page/flower.jpg"
+                alt="Flower Icon"
+                className="flowerIcon"
+              />
               In-Depth Knoweledge <br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;and
               Practice
             </li>
             <li>
-              <img src='https://ecom-static-site.oss-ap-south-1.aliyuncs.com/New-landing-page/flower.jpg' alt="Flower Icon" className="flowerIcon" />
+              <img
+                src="https://ecom-static-site.oss-ap-south-1.aliyuncs.com/New-landing-page/flower.jpg"
+                alt="Flower Icon"
+                className="flowerIcon"
+              />
               Physical and Mental <br />{' '}
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Well-being
             </li>
             <li>
-              <img src='https://ecom-static-site.oss-ap-south-1.aliyuncs.com/New-landing-page/flower.jpg' alt="Flower Icon" className="flowerIcon" />
+              <img
+                src="https://ecom-static-site.oss-ap-south-1.aliyuncs.com/New-landing-page/flower.jpg"
+                alt="Flower Icon"
+                className="flowerIcon"
+              />
               Attitude Training
             </li>
             <li>
-              <img src='https://ecom-static-site.oss-ap-south-1.aliyuncs.com/New-landing-page/flower.jpg' alt="Flower Icon" className="flowerIcon" />
+              <img
+                src="https://ecom-static-site.oss-ap-south-1.aliyuncs.com/New-landing-page/flower.jpg"
+                alt="Flower Icon"
+                className="flowerIcon"
+              />
               Internationally <br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Recognized{' '}
               <br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Certification
             </li>
             <li>
-              <img src='https://ecom-static-site.oss-ap-south-1.aliyuncs.com/New-landing-page/flower.jpg' alt="Flower Icon" className="flowerIcon" />
+              <img
+                src="https://ecom-static-site.oss-ap-south-1.aliyuncs.com/New-landing-page/flower.jpg"
+                alt="Flower Icon"
+                className="flowerIcon"
+              />
               Holistic Approach
             </li>
           </ul>
@@ -288,13 +382,21 @@ const LandingPageTyi = () => {
         <div className="courseHeadItems">
           <ul>
             <li>
-              <img src='https://ecom-static-site.oss-ap-south-1.aliyuncs.com/New-landing-page/flower.jpg' alt="Flower Icon" className="flowerIcon" />
+              <img
+                src="https://ecom-static-site.oss-ap-south-1.aliyuncs.com/New-landing-page/flower.jpg"
+                alt="Flower Icon"
+                className="flowerIcon"
+              />
               Over 1,00,000 students certified since 1954, a testament to our
               rich legacy and expertise <br />{' '}
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;in yoga education.
             </li>
             <li>
-              <img src='https://ecom-static-site.oss-ap-south-1.aliyuncs.com/New-landing-page/flower.jpg' alt="Flower Icon" className="flowerIcon" />
+              <img
+                src="https://ecom-static-site.oss-ap-south-1.aliyuncs.com/New-landing-page/flower.jpg"
+                alt="Flower Icon"
+                className="flowerIcon"
+              />
               Triple accreditation: Yoga Certification Board ( AYUSH Level-1
               ),Yoga Alliance USA (RYT 200),
               <br />
@@ -302,14 +404,22 @@ const LandingPageTyi = () => {
               ensuring international recognition and credibility.
             </li>
             <li>
-              <img src='https://ecom-static-site.oss-ap-south-1.aliyuncs.com/New-landing-page/flower.jpg' alt="Flower Icon" className="flowerIcon" />
+              <img
+                src="https://ecom-static-site.oss-ap-south-1.aliyuncs.com/New-landing-page/flower.jpg"
+                alt="Flower Icon"
+                className="flowerIcon"
+              />
               Embracing the essence of Traditional Yoga, this course serves as a
               transformative <br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               journey,guiding individuals towards balance and fulfillment in all
               aspects of life.
             </li>
             <li>
-              <img src='https://ecom-static-site.oss-ap-south-1.aliyuncs.com/New-landing-page/flower.jpg' alt="Flower Icon" className="flowerIcon" />
+              <img
+                src="https://ecom-static-site.oss-ap-south-1.aliyuncs.com/New-landing-page/flower.jpg"
+                alt="Flower Icon"
+                className="flowerIcon"
+              />
               The curriculum seamlessly integrates theoretical knowledge and
               practical skills, <br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               providing a comprehensive and well-rounded learning experience.
@@ -320,7 +430,10 @@ const LandingPageTyi = () => {
       <div className="founderContainer">
         <div className="founderImage">
           {' '}
-          <img src='https://ecom-static-site.oss-ap-south-1.aliyuncs.com/New-landing-page/founder.png' alt="founderImage" />
+          <img
+            src="https://ecom-static-site.oss-ap-south-1.aliyuncs.com/New-landing-page/founder.png"
+            alt="founderImage"
+          />
         </div>
         <div className="cusp"></div>
         <div className="founderContent">
@@ -333,9 +446,9 @@ const LandingPageTyi = () => {
             <br />
             guidance from the legendary Yoga Guru,
             <br />
-            Dr. Hansaji Yogendra, to find solutions to your
+            Dr. Hansaji Yogendra, to find solutions to 
             <br />
-            challenges and deepen your Yogic journey.
+            you challenges and deepen your Yogic journey.
           </div>
         </div>
       </div>
@@ -359,10 +472,13 @@ const LandingPageTyi = () => {
           The Yoga Institute offers a wide range of courses including:
         </div>
       </div>
-      <div className="popularCourses">
+      {/* <div className="popularCourses">
         <div className="popCourses">
           <div className="image123">
-            <img src='https://ecom-static-site.oss-ap-south-1.aliyuncs.com/New-landing-page/popCo1.png' alt="course1" />
+            <img
+              src="https://ecom-static-site.oss-ap-south-1.aliyuncs.com/New-landing-page/popCo1.png"
+              alt="course1"
+            />
           </div>
           <div className="popCo1Text">
             &nbsp;&nbsp;Advance TTC <br />
@@ -371,7 +487,10 @@ const LandingPageTyi = () => {
         </div>
         <div className="popCourses">
           <div className="image123">
-            <img src='https://ecom-static-site.oss-ap-south-1.aliyuncs.com/New-landing-page/popCo2.png' alt="course1" />
+            <img
+              src="https://ecom-static-site.oss-ap-south-1.aliyuncs.com/New-landing-page/popCo2.png"
+              alt="course1"
+            />
           </div>
           <div className="popCo1Text">
             &nbsp;&nbsp;21 Days Better
@@ -381,7 +500,10 @@ const LandingPageTyi = () => {
         </div>
         <div className="popCourses">
           <div className="image123">
-            <img src='https://ecom-static-site.oss-ap-south-1.aliyuncs.com/New-landing-page/popCo3.png' alt="course1" />
+            <img
+              src="https://ecom-static-site.oss-ap-south-1.aliyuncs.com/New-landing-page/popCo3.png"
+              alt="course1"
+            />
           </div>
           <div className="popCo1Text">
             &nbsp;&nbsp; 7 Days Health
@@ -391,7 +513,10 @@ const LandingPageTyi = () => {
         </div>
         <div className="popCourses">
           <div className="image123">
-            <img src='https://ecom-static-site.oss-ap-south-1.aliyuncs.com/New-landing-page/popCo4.png' alt="course1" />
+            <img
+              src="https://ecom-static-site.oss-ap-south-1.aliyuncs.com/New-landing-page/popCo4.png"
+              alt="course1"
+            />
           </div>
           <div className="popCo1Text">
             Certificate Yoga
@@ -401,40 +526,59 @@ const LandingPageTyi = () => {
         </div>
         <div className="popCourses">
           <div className="image123">
-            <img src='https://ecom-static-site.oss-ap-south-1.aliyuncs.com/New-landing-page/popCo1.png' alt="course1" />
+            <img
+              src="https://ecom-static-site.oss-ap-south-1.aliyuncs.com/New-landing-page/popCo1.png"
+              alt="course1"
+            />
           </div>
           <div className="popCo1Text">Nutri Diet Clinic</div>
         </div>
+      </div> */}
+      <div className="popularCourses">
+        {popularCourses.map((item, idx) => (
+          <div key={idx} className="popCourses">
+            <div className="image123">
+              <img src={item?.img} alt="" />
+            </div>
+            <div className="popCo1Text">
+              <Link to={item?.url}>{item?.text}</Link>
+            </div>
+          </div>
+        ))}
+      </div>
+      <section className="testimonials-section21">
+        <Slider {...settings}>
+          {testimonialData4.map((item, i) => (
+            <div key={i} className="testimonial21">
+              <div className="left21">
+                <img src={item?.img} alt={`testimonial-${i + 1}`} />
+              </div>
+              <div className="right21">
+                <p className="heading21">{item?.name}</p>
+                <span>{item?.info}</span>
+                <p className="content21">{item?.message}</p>
+              </div>
+            </div>
+          ))}
+        </Slider>
+      </section>
+      <div className="other_div21">
+        <div className="other_line21"></div>
+        <div className="landing_other21">Featured Blogs</div>
+        <div className="other_line21"></div>
       </div>
 
-      <div className="testimonials">
-        <div className="testHead">TESTIMONIALS</div>
-        <div className="testText">
-          Discover the invaluable feedback and firsthand experiences
-          <br />
-          shared by our students, offering insights into the transformative{' '}
-          <br />
-          journey they have embarked upon at The Yoga Institute.
-          &nbsp;&nbsp;&nbsp;
-          <Link to="/student-experience" className="viewExp">
-            Click here
-          </Link>
+      <section className="featured-section21">
+        <SevenDaysBlogs />
+      </section>
+      <section className="last_div21-2">
+        <div className="last_logo21">{landingLogo}</div>
+        <div className="last_text21">
+          Address: Shri Yogendra Marg, Prabhat Colony, Santacruz East, Mumbai
+          Maharashtra 400055
         </div>
-      </div>
-      <div className="testimonials2">
-        <div className="testHead2">FEATURED BLOGS</div>
-        <div className="testText2">
-          Expand your knowledge on Yoga, Asanas, Pranayams,
-          <br />
-          and more through our insightful and informative blogs, <br />
-          empowering you to delve deeper into the world of yoga.
-        </div>
-      </div>
-      <div className="underline">
-        <u className="footer">
-          ______________________________________________________________________________________________________________________________________
-        </u>
-      </div>
+      </section>
+
       {modal && (
         <CampaignThankYou
           name={name}
