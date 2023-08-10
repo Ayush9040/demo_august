@@ -4,20 +4,9 @@ import { Link } from 'react-router-dom'
 import { landingLogo } from '../../../assets/icons/icon'
 import { useState } from 'react'
 import PhoneInput from 'react-phone-number-input'
-import LandingButton from '../../../Components/LandingCourse/LandingButton'
-import ImageProp from '../../../../StaticSite/assets/images/museum1_.jpg'
-import Flower from '../../../assets/images/flower.jpg'
 import GroupImg from '../../../assets/images/overview-bg.jpg'
 import CampaignThankYou from '../ThankYouPage'
-import CoverImage from '../../../assets/images/cover.png'
-import FirstImage from '../../../assets/images/first.png'
-import SecondImage from '../../../assets/images/second.png'
-import FounderImage from '../../../assets/images/founder.png'
-import Course1 from '../../../assets/images/popCo1.png'
-import Course2 from '../../../assets/images/popCo2.png'
-import Course3 from '../../../assets/images/popCo3.png'
-import Course4 from '../../../assets/images/popCo4.png'
-import CommonBtn from '../../../Components/commonbtn'
+
 import { creatForm, successMail } from '../Api'
 
 const LandingPageTyi = () => {
@@ -38,10 +27,10 @@ const LandingPageTyi = () => {
   }
   const handleForm = async() => {
     try {
-      await creatForm({ ...formData, formType: 'TEACHERTRAININGCOURSE3' })
+      await creatForm({ ...formData, formType: 'MONTHS3HRS900CAMPAIGN' })
       await successMail({
         type: 'MONTHS3HRS900CAMPAIGN',
-        HTMLTemplate: ' MONTHS_3_900_HRS_FORM_CONFIRMATION_MAIL',
+        HTMLTemplate: 'MONTHS_3_900_HRS_FORM_CONFIRMATION_MAIL',
         subject: 'Thank you from The Yoga Institute',
         data: {
           name: name,
@@ -57,13 +46,16 @@ const LandingPageTyi = () => {
     e.preventDefault()
     if (name === '') {
       setErr(1)
-    } else if (email === '') {
-      setErr(2)
     } else if (contact === '') {
+      setErr(2)
+    } else if (email === '') {
       setErr(3)
     } else if (country === '') {
       setErr(4)
-    } else {
+    } else if (city === ''){
+      setErr(5) 
+    } 
+    else {
       handleForm()
     }
   }
@@ -167,7 +159,7 @@ const LandingPageTyi = () => {
                   />
                   {err === 5 && <small> Please enter your city</small>}
                 </label>
-                <button className="submit-btn" btnAction={handleSubmit}>
+                <button className="submit-btn" onClick={(e)=>handleSubmit(e)}>
                   SUBMIT
                 </button>
               </form>

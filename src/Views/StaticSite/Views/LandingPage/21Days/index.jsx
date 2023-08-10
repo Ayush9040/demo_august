@@ -73,6 +73,7 @@ const LandingPageNew = () => {
     }
   }
   const handleSubmit = (e) => {
+    console.log('hello')
     e.preventDefault()
     if (name === '') {
       setErr(1)
