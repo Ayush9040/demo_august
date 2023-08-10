@@ -28,8 +28,8 @@ const LandingPageTyi7months = () => {
     try {
       await creatForm({ ...formData, formType: 'MONTHS3HRS900CAMPAIGN' })
       await successMail({
-        type: 'MONTHS3HRS900CAMPAIGN',
-        HTMLTemplate: 'MONTHS_3_900_HRS_FORM_CONFIRMATION_MAIL',
+        type: 'MONTHS7HRS900CAMPAIGN',
+        HTMLTemplate: 'MONTHS_7_900_HRS_FORM_CONFIRMATION_MAIL',
         subject: 'Thank you from The Yoga Institute',
         data: {
           name: name,
