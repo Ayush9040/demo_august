@@ -11,7 +11,7 @@
       & > svg {
         width: 200px;
         .d {
-          fill: #F45752 !important;
+          fill: #f45752 !important;
         }
         .e {
           fill: black !important;
@@ -38,8 +38,8 @@
     padding: 1%;
     position: relative;
     .backgroundImage {
-      background: url('https://ecom-static-site.oss-ap-south-1.aliyuncs.com/New-landing-page/cover.png') no-repeat center /
-        cover;
+      background: url('https://ecom-static-site.oss-ap-south-1.aliyuncs.com/New-landing-page/cover.png')
+        no-repeat center / cover;
       height: 900px;
 
       .backgroundTitle {
@@ -73,7 +73,7 @@
             font-size: 6rem;
             // font-family: var(--futura);
             font-weight: 800;
-            color: #F45752;
+            color: #f45752;
             letter-spacing: 4px;
           }
         }
@@ -89,8 +89,11 @@
             & > h5 {
               font-weight: 800;
               text-align: center;
-              background-color: #F45752;
+              background-color: #f45752;
               color: #ffffff;
+              .lightWeight{
+                font-weight: 400;
+              }
             }
             & > label {
               width: 60%;
@@ -120,7 +123,8 @@
               margin-bottom: 10px;
               width: 30%;
               padding: 2%;
-              background-color: #F45752;
+              cursor: pointer;
+              background-color: #f45752;
             }
           }
         }
@@ -156,11 +160,11 @@
       line-height: 2.2;
       .selected-content1 {
         font-weight: bold;
-        color: #F45752;
+        color: #f45752;
 
         .underlined-text {
           display: inline-block;
-          border-bottom: 15px solid #F45752;
+          border-bottom: 15px solid #f45752;
           margin-top: 5px;
         }
       }
@@ -184,14 +188,14 @@
       margin-top: 1%;
       line-height: 2.2;
       .span-select {
-        color: #F45752;
+        color: #f45752;
       }
       .selected-content2 {
         font-weight: bold;
-        color: #F45752;
+        color: #f45752;
         .underlined-text2 {
           display: inline-block;
-          border-bottom: 15px solid #F45752;
+          border-bottom: 15px solid #f45752;
           margin-top: 5px;
         }
       }
@@ -217,7 +221,7 @@
     .grad-label {
       font-size: 3em;
       font-weight: 800;
-      background-image: linear-gradient(to left, rgba(255, 0, 0, 0), #F45752);
+      background-image: linear-gradient(to left, rgba(255, 0, 0, 0), #f45752);
       padding: 1%;
       width: auto;
     }
@@ -225,15 +229,29 @@
       text-align: center;
       width: 99%;
       margin: 1.5% auto;
-      background-image: url('https://ecom-static-site.oss-ap-south-1.aliyuncs.com/New-landing-page/yoga-1.png');
-      background-size: contain; 
-      background-position: center center;
-      background-repeat: no-repeat;
       font-size: 2em;
+      padding: 1.5%;
       border: 1px solid transparent;
       box-sizing: border-box;
       box-shadow: 2px 2px 20px 2px grey;
       margin-top: 0;
+      .list1 {
+        width: 75%;
+        height: 1px;
+        align-self: center;
+        margin-left: 2%;
+        position: relative;
+        border: 1px dashed #f45752;
+        top: 150px;
+      }
+      .list2 {
+        width: 75%;
+        height: 1px;
+        margin-left: 2%;
+        position: relative;
+        border: 1px dashed #f45752;
+        top: 300px;
+      }
     }
 
     .label-list ul {
@@ -266,13 +284,38 @@
     width: 98%;
     // height: 600px;
     margin: 0 2.5%;
+    .partitions1{
+      width: 50%;
+      height: 1px;
+      margin-left: 2%;
+      position: relative;
+      border: 1px dashed #f45752;
+      top: 220px;
+    }
+    .partitions2{
+      width: 50%;
+      height: 1px;
+      margin-left: 2%;
+      position: relative;
+      border: 1px dashed #f45752;
+      top: 360px;
+    }
+    .partitions3{
+      width: 50%;
+      height: 1px;
+      margin-left: 2%;
+      position: relative;
+      border: 1px dashed #f45752;
+      top: 530px;
+    }
 
     .grad-label2 {
       font-size: 3em;
       font-weight: 800;
-      background-image: linear-gradient(to left, rgba(255, 0, 0, 0), #F45752);
+      background-image: linear-gradient(to left, rgba(255, 0, 0, 0), #f45752);
       padding: 1%;
       width: auto;
+      
     }
     .label-list2 {
       text-align: center;
@@ -285,6 +328,7 @@
       box-sizing: border-box;
       box-shadow: 2px 2px 20px 2px grey;
       margin-top: 0;
+      
     }
     .label-list2 ul {
       display: flex;
@@ -322,19 +366,24 @@
       font-weight: 800;
       padding: 1%;
       width: 800px;
-      background-color: #F45752;
+      background-color: #f45752;
     }
     .courseHeadItems {
-      margin: 1.5% auto;
+      margin: 1% auto;
       width: 90%;
       font-size: 2em;
       font-weight: 400;
+      padding: 1%;
       box-sizing: border-box;
       box-shadow: 2px 5px 20px 2px grey;
+      background-image: url('https://ecom-static-site.oss-ap-south-1.aliyuncs.com/New-landing-page/yoga-1.png');
+      background-size: contain;
+      background-position: center center;
+      background-repeat: no-repeat;
     }
     .courseHeadItems ul {
       list-style: none;
-      padding-left: 22%;
+      padding-left: 15%;
     }
     .courseHeadItems li {
       text-align: left;
@@ -367,10 +416,9 @@
         height: 100%;
         object-fit: cover;
         z-index: 10;
-        
       }
     }
-    .cusp{
+    .cusp {
       background-color: white;
       height: 205px;
       width: 55px;
@@ -382,22 +430,19 @@
     .founderContent {
       .founderArc {
         font-size: 4em;
-        background-image: linear-gradient(to left, rgba(255, 0, 0, 0), #F45752);
+        background-image: linear-gradient(to left, rgba(255, 0, 0, 0), #f45752);
         text-align: center;
         padding: 3%;
         z-index: 10;
         // margin-right: 1%;
-        
-        
+
         .founderName {
           font-weight: 800;
         }
-        
       }
       .founderText {
         font-size: 3em;
         margin-left: 4%;
-        
       }
     }
   }
@@ -409,7 +454,7 @@
       font-size: 3.5em;
       padding-left: 5%;
       font-weight: 500;
-      color: #F45752;
+      color: #f45752;
     }
     .durationText {
       font-size: 2.5em;
@@ -420,7 +465,7 @@
       font-size: 3.5em;
       padding-left: 5%;
       font-weight: 500;
-      color: #F45752;
+      color: #f45752;
     }
     .timingText {
       font-size: 2.5em;
@@ -453,7 +498,7 @@
         overflow: hidden;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
         margin-top: 3%;
-        border: 5px solid #F45752;
+        border: 5px solid #f45752;
       }
 
       img {
@@ -464,72 +509,14 @@
     }
   }
   .popCo1Text {
-    font-size: 2em;
+    font-size: 1.25em;
     font-weight: 400;
-    margin-top: 20%;
-    
-  }
-  .testimonials {
-    // border: 1px solid transparent;
-    box-sizing: border-box;
-    box-shadow: 2px 2px 20px 2px grey;
-    width: 92%;
-    padding: 1%;
-    margin-top: 5%;
-    margin-left: 2%;
-    .viewExp {
-      display: inline-block;
-      margin-top: 10px;
-      font-size:medium;
-      // font-weight: bold;
-      color: #F45752;
-      text-decoration: underline;
-    }
-    .testHead {
-      text-align: center;
-      padding: 1%;
-      font-size: 4em;
-      color: #F45752;
-      font-weight: 800;
-    }
-    .testText {
-      text-align: center;
-      font-size: 3em;
-      font-weight: 600;
-    }
-  }
-  .testimonials2 {
-    box-sizing: border-box;
-    box-shadow: 2px 2px 20px 2px grey;
-    width: 92%;
-    padding: 1%;
-    margin-top: 5%;
-    margin-left: 2%;
-    .testHead2 {
-      text-align: center;
-      padding: 1%;
-      font-size: 4em;
-      color: #F45752;
-      font-weight: 800;
-    }
-    .testText2 {
-      text-align: center;
-      font-size: 3em;
-      font-weight: 600;
-    }
-  }
-  .underline {
+    margin-top: 1rem;
     text-align: center;
-    margin-top: 6%;
-  }
-  footer u {
-    display: inline-block;
-    border-bottom: 40px solid #F45752;
-    margin-top: 5px;
   }
 }
 // @media (max-width: 1220px){
-  
+
 //   .main-container {
 //     .section_1 {
 //       .backgroundImage{
@@ -538,11 +525,10 @@
 //              > {form
 //                > {label {
 //                 input{
-    
-//   }}} }}}}}}
-    
-// }
 
+//   }}} }}}}}}
+
+// }
 
 // 1220
 // 1100
