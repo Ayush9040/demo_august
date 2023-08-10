@@ -88,16 +88,21 @@ const NutriDietClinic = () => {
     }
   }
   return (
-    <div className='main-nutri-clinic'>
+    <div className="main-nutri-clinic">
       <nav>
-        <Link to='/'>
-          <div className='nutri-logo'>
-            <img src='https://ecom-static-site.oss-ap-south-1.aliyuncs.com/Nutri-Clinic/main-logo.png' className='nutri-image'/>
+        <Link to="/">
+          <div className="nutri-logo">
+            <img
+              src="https://ecom-static-site.oss-ap-south-1.aliyuncs.com/Nutri-Clinic/main-logo.png"
+              className="nutri-image"
+            />
           </div>
         </Link>
-        <div className='phone-info'>
+        <div className="phone-info">
           <h2>Book Your Consultation Now</h2>
-          <p>Call on<a href="tel:+919136668224">&ensp;+91-9136668224</a></p>
+          <p>
+            Call on<a href="tel:+919136668224">&ensp;+91-9136668224</a>
+          </p>
         </div>
       </nav>
       <main>
@@ -105,8 +110,12 @@ const NutriDietClinic = () => {
           <div className="bg_img_21">
             <div className="img_form_21">
               <div className="form_text">
-                <div className="left_heading1">Get<span className='left_heading_text'> Customized</span></div>
-                <div className="left_heading1"><span className='left_heading_bold'>Diet Plans</span> From</div>
+                <div className="left_heading1">
+                  Get<span className="left_heading_text"> Customized</span>
+                </div>
+                <div className="left_heading1">
+                  <span className="left_heading_bold">Diet Plans</span> From
+                </div>
                 <div className="left_heading2">NUTRI DIET CLINIC</div>
               </div>
               <div className="form-phone-info">
@@ -191,38 +200,90 @@ const NutriDietClinic = () => {
           </div>
         </section>
         <section>
-          <div className='about_clinic'>ABOUT THE CLINIC</div>
-          <div className='about_clinic_info'>Nutri Diet Clinic, introduced by The Yoga Institute is a unique health clinic offering dietary
-            solutions for the body as well as the mind.</div>
-          <div className='about_clinic_info'>Based on our client’s lifestyle, habits, preferences and culture, we will provide professionally
-            supervised customized diet plans. The nutritional plans consist of a well-balanced diet,
-            homemade quick and healthy recipes and a complete workout plan.</div>
-          <div className='about_clinic_info'>Our ancient scriptures have laid importance on Sattvik Diet which is pure, natural, energy-
-            containing and fresh food. Our diet plans will be based on the concept of Sattvik food to help
-            our clients lead a healthy life on physical, mental and emotional levels.</div>
+          <div className="about_clinic">ABOUT THE CLINIC</div>
+          <div className="about_clinic_info">
+            Nutri Diet Clinic, introduced by The Yoga Institute is a unique
+            health clinic offering dietary solutions for the body as well as the
+            mind.
+          </div>
+          <div className="about_clinic_info">
+            Based on our client’s lifestyle, habits, preferences and culture, we
+            will provide professionally supervised customized diet plans. The
+            nutritional plans consist of a well-balanced diet, homemade quick
+            and healthy recipes and a complete workout plan.
+          </div>
+          <div className="about_clinic_info">
+            Our ancient scriptures have laid importance on Sattvik Diet which is
+            pure, natural, energy- containing and fresh food. Our diet plans
+            will be based on the concept of Sattvik food to help our clients
+            lead a healthy life on physical, mental and emotional levels.
+          </div>
         </section>
         <section>
-          <div className='programs-info'>OUR PROGRAMS:
+          <div className="programs-info">
+            OUR PROGRAMS:
             <ul>
-              <li>Shape-Up Program<span className='program-font'> (Weight Loss/Weight Gain/Muscle Gain)</span></li>
-              <li>Hormonal Imbalance Program<span className='program-font'> (PCOS/ Thyroid)</span></li>
-              <li>Gut Health Program <span className='program-font'>(Acidity/Constipation/Digestion Issues)</span></li>
-              <li>Metabolic Disorder Program <span className='program-font'>(Diabetes Mellitus/Hypertension/Cholesterol)</span></li>
+              <li>
+                Shape-Up Program
+                <span className="program-font">
+                  {' '}
+                  (Weight Loss/Weight Gain/Muscle Gain)
+                </span>
+              </li>
+              <li>
+                Hormonal Imbalance Program
+                <span className="program-font"> (PCOS/ Thyroid)</span>
+              </li>
+              <li>
+                Gut Health Program{' '}
+                <span className="program-font">
+                  (Acidity/Constipation/Digestion Issues)
+                </span>
+              </li>
+              <li>
+                Metabolic Disorder Program{' '}
+                <span className="program-font">
+                  (Diabetes Mellitus/Hypertension/Cholesterol)
+                </span>
+              </li>
               <li>Pregnancy/Lactation Program</li>
-              <li>Therapeutic Plans <span className='program-font'>(Respiratory/Gastroesophageal/Liver/Kidney)</span></li>
-              <li>Other Types of Diet <span className='program-font'>(Vegan Diet/Keto Diet/Intermittent Fasting/Lactose Intolerant/Gluten Free Diet)</span></li>
+              <li>
+                Therapeutic Plans{' '}
+                <span className="program-font">
+                  (Respiratory/Gastroesophageal/Liver/Kidney)
+                </span>
+              </li>
+              <li>
+                Other Types of Diet{' '}
+                <span className="program-font">
+                  (Vegan Diet/Keto Diet/Intermittent Fasting/Lactose
+                  Intolerant/Gluten Free Diet)
+                </span>
+              </li>
               <li>Kids Nutrition</li>
             </ul>
             <div>
-              <img className='img-programs' src='https://ecom-static-site.oss-ap-south-1.aliyuncs.com/Nutri-Clinic/Salad.png' />
-              <div className='programs-benefits'><span className='programs'>PROGRAMS BENIFITS:</span>
+              <img
+                className="img-programs"
+                src="https://ecom-static-site.oss-ap-south-1.aliyuncs.com/Nutri-Clinic/Salad.png"
+              />
+              <div className="programs-benefits">
+                <span className="programs">PROGRAMS BENIFITS:</span>
                 <ul>
-                  <li className='program-font'>Customized Holistic Diet Plans (As per the client’s routine, lifestyle, and preferences)</li>
-                  <li className='program-font'>Nutritional Counselling</li>
-                  <li className='program-font'>Personalized Workout Plan</li>
-                  <li className='program-font'>Healthy Home-Made Recipes</li>
-                  <li className='program-font'>Dietary Solutions &amp; Guidelines</li>
-                  <li className='program-font'>Daily WhatsApp Support (Daily diet recall and instant problem-solving)</li>
+                  <li className="program-font">
+                    Customized Holistic Diet Plans (As per the client’s routine,
+                    lifestyle, and preferences)
+                  </li>
+                  <li className="program-font">Nutritional Counselling</li>
+                  <li className="program-font">Personalized Workout Plan</li>
+                  <li className="program-font">Healthy Home-Made Recipes</li>
+                  <li className="program-font">
+                    Dietary Solutions &amp; Guidelines
+                  </li>
+                  <li className="program-font">
+                    Daily WhatsApp Support (Daily diet recall and instant
+                    problem-solving)
+                  </li>
                 </ul>
               </div>
             </div>
@@ -241,17 +302,15 @@ const NutriDietClinic = () => {
             </div>
           </div>
           <div className="details_21_2">
-            <div className="details_text">
-              10:00 AM to 6:30PM (IST)
-            </div>
-            <div className="details_text">
-              4:30 AM to 1:00 PM (GMT)
-            </div>
+            <div className="details_text">10:00 AM to 6:30PM (IST)</div>
+            <div className="details_text">4:30 AM to 1:00 PM (GMT)</div>
           </div>
         </section>
         <div className="other_div21">
           <div className="other_line21"></div>
-          <div className="landing_other21">Other Popular Camps and Workshops</div>
+          <div className="landing_other21">
+            Other Popular Camps and Workshops
+          </div>
           <div className="other_line21"></div>
         </div>
         <div className="popular_div21">
@@ -298,8 +357,11 @@ const NutriDietClinic = () => {
             Maharashtra 400055
           </div>
         </section>
-        <div className='bottom-img-div'>
-          <img src='https://ecom-static-site.oss-ap-south-1.aliyuncs.com/Nutri-Clinic/ezgif.com-gif-maker.png'  className='bottom-image'/>
+        <div className="bottom-img-div">
+          <img
+            src="https://ecom-static-site.oss-ap-south-1.aliyuncs.com/Nutri-Clinic/ezgif.com-gif-maker.png"
+            className="bottom-image"
+          />
         </div>
       </main>
       {modal && (

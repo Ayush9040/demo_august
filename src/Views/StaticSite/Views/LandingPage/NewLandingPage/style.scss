@@ -1,0 +1,550 @@
+.main-container {
+  overflow-x: hidden;
+  & > nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 8rem;
+    background-color: #ffffff;
+    flex-wrap: wrap;
+    .tyi-logo_21 {
+      & > svg {
+        width: 200px;
+        .d {
+          fill: #F45752 !important;
+        }
+        .e {
+          fill: black !important;
+        }
+      }
+    }
+    .call-cta_21 {
+      & > h2 {
+        font-weight: 800;
+        color: black;
+        font-size: 2.5rem;
+        & > svg {
+          height: 30px;
+          width: 30px;
+        }
+      }
+      & > p {
+        text-align: end;
+        color: black;
+      }
+    }
+  }
+  .section_1 {
+    padding: 1%;
+    position: relative;
+    .backgroundImage {
+      background: url('https://ecom-static-site.oss-ap-south-1.aliyuncs.com/New-landing-page/cover.png') no-repeat center /
+        cover;
+      height: 900px;
+
+      .backgroundTitle {
+        // display: flex;
+        // justify-content: space-evenly;
+
+        // background: #d95d53d4;
+        width: 100%;
+        // height: 55%;
+        .form_text {
+          // font-size: 4rem;
+          color: black;
+          margin-left: 5%;
+          // margin-bottom: 12%;
+
+          .left_heading1 {
+            font-size: 6rem;
+            font-weight: 800;
+            // font-family: var(--futura);
+            color: black;
+            letter-spacing: 5px;
+          }
+          .left_heading_bold {
+            font-size: 6rem;
+            // font-family: var(--futura);
+            font-weight: 800;
+            color: black;
+            letter-spacing: 5px;
+          }
+          .left_head_bold {
+            font-size: 6rem;
+            // font-family: var(--futura);
+            font-weight: 800;
+            color: #F45752;
+            letter-spacing: 4px;
+          }
+        }
+        .form-phone-info {
+          width: 20%;
+          background: #fff;
+          margin-top: 2%;
+          text-align: center;
+          height: fit-content;
+
+          margin-left: 58%;
+          & > form {
+            & > h5 {
+              font-weight: 800;
+              text-align: center;
+              background-color: #F45752;
+              color: #ffffff;
+            }
+            & > label {
+              width: 60%;
+              margin: 2rem auto;
+              min-width: 300px;
+              display: block;
+              height: 40px;
+              border: 1px solid black;
+              padding: 5px 10px;
+              input {
+                width: 100%;
+                height: 28px;
+                border: none;
+                &:focus,
+                &:focus-visible {
+                  border: none;
+                  outline: none;
+                }
+              }
+            }
+            & > button {
+              margin: 0 auto;
+              font-size: large;
+              color: #fff;
+              border: none;
+              font-weight: 400;
+              margin-bottom: 10px;
+              width: 30%;
+              padding: 2%;
+              background-color: #F45752;
+            }
+          }
+        }
+      }
+    }
+  }
+  .overlap-container {
+    display: flex;
+    transform: translate(-0.5%, -10%);
+    background-color: white;
+    border: 1px solid transparent;
+    box-shadow: 12px 8px 28px 0px grey;
+    gap: 8%;
+    padding: 1%;
+    box-sizing: border-box;
+    z-index: 2;
+    width: 95%;
+    margin: 0 2.5%;
+
+    .img-container {
+      & > img {
+        width: 650px;
+        height: 500px;
+        border-radius: 20px;
+      }
+    }
+    .content-container1 {
+      font-size: 3.5em;
+      text-align: center;
+      font-weight: 600;
+      margin-left: 1%;
+      margin-top: 1%;
+      line-height: 2.2;
+      .selected-content1 {
+        font-weight: bold;
+        color: #F45752;
+
+        .underlined-text {
+          display: inline-block;
+          border-bottom: 15px solid #F45752;
+          margin-top: 5px;
+        }
+      }
+    }
+  }
+  .container_2 {
+    display: flex;
+    background-color: white;
+    border: 1px solid transparent;
+    box-shadow: 0px 8px 10px 1px grey;
+    gap: 8%;
+    padding: 1%;
+    box-sizing: border-box;
+    width: 95%;
+    margin: 0 2%;
+    .content-container2 {
+      font-weight: 600;
+      font-size: 3.5em;
+      text-align: center;
+      margin-right: 1%;
+      margin-top: 1%;
+      line-height: 2.2;
+      .span-select {
+        color: #F45752;
+      }
+      .selected-content2 {
+        font-weight: bold;
+        color: #F45752;
+        .underlined-text2 {
+          display: inline-block;
+          border-bottom: 15px solid #F45752;
+          margin-top: 5px;
+        }
+      }
+    }
+    .img-container {
+      & > img {
+        width: 650px;
+        height: 500px;
+        border-radius: 20px;
+      }
+    }
+  }
+  .gradient-container {
+    // background-color: aqua;
+    text-align: center;
+    margin-top: 2%;
+    border: 1px solid transparent;
+    box-sizing: border-box;
+    padding: 1.5%;
+    width: 98%;
+
+    margin: 0 2.5%;
+    .grad-label {
+      font-size: 3em;
+      font-weight: 800;
+      background-image: linear-gradient(to left, rgba(255, 0, 0, 0), #F45752);
+      padding: 1%;
+      width: auto;
+    }
+    .label-list {
+      text-align: center;
+      width: 99%;
+      margin: 1.5% auto;
+      background-image: url('https://ecom-static-site.oss-ap-south-1.aliyuncs.com/New-landing-page/yoga-1.png');
+      background-size: contain; 
+      background-position: center center;
+      background-repeat: no-repeat;
+      font-size: 2em;
+      border: 1px solid transparent;
+      box-sizing: border-box;
+      box-shadow: 2px 2px 20px 2px grey;
+      margin-top: 0;
+    }
+
+    .label-list ul {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 0;
+      list-style-type: none;
+    }
+
+    .label-list li {
+      flex: 0 0 45%;
+      text-align: left;
+      margin-top: 3%;
+    }
+
+    .label-list img.flowerIcon {
+      width: 30px;
+      height: 30px;
+      vertical-align: middle;
+      margin-right: 5px;
+    }
+  }
+  .gradient-container2 {
+    text-align: center;
+    margin-top: 2%;
+    border: 1px solid transparent;
+    box-sizing: border-box;
+    padding: 1.5%;
+    width: 98%;
+    // height: 600px;
+    margin: 0 2.5%;
+
+    .grad-label2 {
+      font-size: 3em;
+      font-weight: 800;
+      background-image: linear-gradient(to left, rgba(255, 0, 0, 0), #F45752);
+      padding: 1%;
+      width: auto;
+    }
+    .label-list2 {
+      text-align: center;
+      margin: 1.5% auto;
+      font-size: 2em;
+      display: flex;
+      font-weight: 600;
+      height: max-content;
+      border: 1px solid transparent;
+      box-sizing: border-box;
+      box-shadow: 2px 2px 20px 2px grey;
+      margin-top: 0;
+    }
+    .label-list2 ul {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 0;
+      list-style-type: none;
+    }
+    .label-list2 li {
+      flex: 0 0 45%;
+      text-align: left;
+      margin-top: 3%;
+    }
+    .label-list2 img.flowerIcon {
+      width: 30px;
+      height: 30px;
+      vertical-align: middle;
+      margin-right: 5px;
+    }
+    .groupImage {
+      width: 90%;
+      height: max-content;
+      .group {
+        background: contain;
+        width: 800px;
+        height: 650px;
+      }
+    }
+  }
+  .featureCourse {
+    text-align: center;
+    .courseHead {
+      display: inline-block;
+      font-size: 3em;
+      font-weight: 800;
+      padding: 1%;
+      width: 800px;
+      background-color: #F45752;
+    }
+    .courseHeadItems {
+      margin: 1.5% auto;
+      width: 90%;
+      font-size: 2em;
+      font-weight: 400;
+      box-sizing: border-box;
+      box-shadow: 2px 5px 20px 2px grey;
+    }
+    .courseHeadItems ul {
+      list-style: none;
+      padding-left: 22%;
+    }
+    .courseHeadItems li {
+      text-align: left;
+      margin-top: 2.5%;
+      padding: 0.5%;
+    }
+    .courseHeadItems img.flowerIcon {
+      width: 40px;
+      height: 40px;
+      vertical-align: middle;
+      margin-right: 5px;
+    }
+  }
+  .founderContainer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+
+    .founderImage {
+      width: 900px;
+      height: 900px;
+      border-radius: 50%;
+      overflow: hidden;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      margin-top: 3%;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 10;
+        
+      }
+    }
+    .cusp{
+      background-color: white;
+      height: 205px;
+      width: 55px;
+      right: 45%;
+      top: 25%;
+      position: absolute;
+      border-top-right-radius: 150px 455px;
+    }
+    .founderContent {
+      .founderArc {
+        font-size: 4em;
+        background-image: linear-gradient(to left, rgba(255, 0, 0, 0), #F45752);
+        text-align: center;
+        padding: 3%;
+        z-index: 10;
+        // margin-right: 1%;
+        
+        
+        .founderName {
+          font-weight: 800;
+        }
+        
+      }
+      .founderText {
+        font-size: 3em;
+        margin-left: 4%;
+        
+      }
+    }
+  }
+  .schedule {
+    // background-color: aquamarine;
+    line-height: 2;
+    padding: 1%;
+    .duration {
+      font-size: 3.5em;
+      padding-left: 5%;
+      font-weight: 500;
+      color: #F45752;
+    }
+    .durationText {
+      font-size: 2.5em;
+      padding-left: 5%;
+      // margin-top: 1%;
+    }
+    .timing {
+      font-size: 3.5em;
+      padding-left: 5%;
+      font-weight: 500;
+      color: #F45752;
+    }
+    .timingText {
+      font-size: 2.5em;
+      padding-left: 5%;
+    }
+  }
+  .otherCourses {
+    .otherCoursesHead {
+      text-align: center;
+      font-size: 4em;
+      padding: 1%;
+      font-weight: 800;
+    }
+    .offers {
+      text-align: center;
+      font-size: 3em;
+      font-weight: 600;
+    }
+  }
+  .popularCourses {
+    display: flex;
+    justify-content: space-evenly;
+
+    .popCourses {
+      padding: 2%;
+      .image123 {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        overflow: hidden;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        margin-top: 3%;
+        border: 5px solid #F45752;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+  .popCo1Text {
+    font-size: 2em;
+    font-weight: 400;
+    margin-top: 20%;
+    
+  }
+  .testimonials {
+    // border: 1px solid transparent;
+    box-sizing: border-box;
+    box-shadow: 2px 2px 20px 2px grey;
+    width: 92%;
+    padding: 1%;
+    margin-top: 5%;
+    margin-left: 2%;
+    .viewExp {
+      display: inline-block;
+      margin-top: 10px;
+      font-size:medium;
+      // font-weight: bold;
+      color: #F45752;
+      text-decoration: underline;
+    }
+    .testHead {
+      text-align: center;
+      padding: 1%;
+      font-size: 4em;
+      color: #F45752;
+      font-weight: 800;
+    }
+    .testText {
+      text-align: center;
+      font-size: 3em;
+      font-weight: 600;
+    }
+  }
+  .testimonials2 {
+    box-sizing: border-box;
+    box-shadow: 2px 2px 20px 2px grey;
+    width: 92%;
+    padding: 1%;
+    margin-top: 5%;
+    margin-left: 2%;
+    .testHead2 {
+      text-align: center;
+      padding: 1%;
+      font-size: 4em;
+      color: #F45752;
+      font-weight: 800;
+    }
+    .testText2 {
+      text-align: center;
+      font-size: 3em;
+      font-weight: 600;
+    }
+  }
+  .underline {
+    text-align: center;
+    margin-top: 6%;
+  }
+  footer u {
+    display: inline-block;
+    border-bottom: 40px solid #F45752;
+    margin-top: 5px;
+  }
+}
+// @media (max-width: 1220px){
+  
+//   .main-container {
+//     .section_1 {
+//       .backgroundImage{
+//          .backgroundTitle {
+//           .form-phone-info{
+//              > {form
+//                > {label {
+//                 input{
+    
+//   }}} }}}}}}
+    
+// }
+
+
+// 1220
+// 1100
+// 786
+// 520

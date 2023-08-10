@@ -73,6 +73,7 @@ const LandingPageNew = () => {
     }
   }
   const handleSubmit = (e) => {
+    console.log('hello')
     e.preventDefault()
     if (name === '') {
       setErr(1)
@@ -103,7 +104,7 @@ const LandingPageNew = () => {
       </nav>
       <main>
         <section className="section_1">
-          <div className="bg_img_21">
+          <div className="bg_img_21"> 
             <div className="img_form_21">
               <div className="form_text">
                 <div className="main_heading1">BUILD HEALTHY </div>

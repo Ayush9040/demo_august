@@ -96,7 +96,8 @@ const NutriDiet = lazy(()=>import('../Views/NutriDiet'))
 const LandingPage = lazy( ()=>import('../Views/LandingPage'))
 const LandingPageNew = lazy( ()=>import('../Views/LandingPage/21Days/index'))
 const SevenDays = lazy( ()=>import('../Views/LandingPage/SevenDays/AboutCamp/index'))
-
+const TyiLandingPage = lazy(() => import('../Views/LandingPage/NewLandingPage/index'))
+const TyiLandingPage7Months = lazy(() =>import('../Views/LandingPage/NewLandingPage2/index'))
 const staticSiteRoutes = [
   //Home
   {
@@ -837,6 +838,20 @@ const staticSiteRoutes = [
     id:'staticDonateForm',
     routePath:'/donation-form',
   },
+  {
+    Component:TyiLandingPage,
+    path:'/ad-campaign-3-months-900hours',
+    id:'staticNewLandingPage',
+    routePath:'/ad-campaign-3-months-900hours',
+    name:'NewLandingPage'
+  },
+  {
+    Component:TyiLandingPage7Months,
+    path:'/ad-campaign-7-months-900hours',
+    id:'staticNewLandingPage2',
+    routePath:'/ad-campaign-7-months-900hours',
+    name:'NewLandingPage2'
+  }
 ]
 
 export default staticSiteRoutes
