@@ -41,7 +41,6 @@
       background: url('https://ecom-static-site.oss-ap-south-1.aliyuncs.com/New-landing-page/cover.png')
         no-repeat center / cover;
       height: 900px;
-
       .backgroundTitle {
         // display: flex;
         // justify-content: space-evenly;
@@ -83,7 +82,6 @@
           margin-top: 2%;
           text-align: center;
           height: fit-content;
-
           margin-left: 58%;
           & > form {
             & > h5 {
@@ -96,9 +94,10 @@
               }
             }
             & > label {
-              width: 60%;
+              width: 80%;
+              
               margin: 2rem auto;
-              min-width: 300px;
+              // min-width: 300px;
               display: block;
               height: 40px;
               border: 1px solid black;
@@ -515,7 +514,7 @@
     text-align: center;
   }
 }
-// @media (max-width: 1220px){
+// @media (max-width: 1420px){
 
 //   .main-container {
 //     .section_1 {
@@ -524,11 +523,69 @@
 //           .form-phone-info{
 //              > {form
 //                > {label {
+//                 // background-color: #f45752;
+                
 //                 input{
-
+//                   width: auto;
+ 
 //   }}} }}}}}}
 
 // }
+@media screen and (max-width: 1440px) {
+  .section_1 {
+      .backgroundTitle {
+          .form_text {
+              .left_heading1 {
+                  font-size: 4rem;
+                  letter-spacing: 3px;
+              }
+              .left_heading_bold {
+                  font-size: 4rem;
+                  letter-spacing: 3px;
+              }
+              .left_head_bold {
+                  font-size: 4rem;
+                  letter-spacing: 3px;
+              }
+          }
+          .form-phone-info {
+              width: 80%;
+              margin: 2% auto;
+              // padding: 5% 0;
+              box-sizing: border-box;
+
+              & > form {
+                  // & > h5 {
+                  //     font-size: 2rem;
+                  // }
+                  & > label {
+                      height: 30px;
+                  }
+                  & > button {
+                      font-size: medium;
+                      width: 40%;
+                      padding: 2% 5%;
+                  }
+              }
+          }
+      }
+  }
+}
+@media screen and (min-width: 1280px) and (max-width: 1439px) {
+  
+}
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+  
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  
+}
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  
+}
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  
+}
 
 // 1220
 // 1100
