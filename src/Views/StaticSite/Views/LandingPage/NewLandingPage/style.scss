@@ -514,25 +514,10 @@
     text-align: center;
   }
 }
-// @media (max-width: 1420px){
 
-//   .main-container {
-//     .section_1 {
-//       .backgroundImage{
-//          .backgroundTitle {
-//           .form-phone-info{
-//              > {form
-//                > {label {
-//                 // background-color: #f45752;
-                
-//                 input{
-//                   width: auto;
- 
-//   }}} }}}}}}
-
-// }
-@media screen and (max-width: 1440px) {
-  .section_1 {
+@media screen and (min-width: 1280px) and (max-width: 1439px) {
+  .main-container{
+    .section_1 {
       .backgroundTitle {
           .form_text {
               .left_heading1 {
@@ -553,7 +538,7 @@
               margin: 2% auto;
               // padding: 5% 0;
               box-sizing: border-box;
-
+  
               & > form {
                   // & > h5 {
                   //     font-size: 2rem;
@@ -570,9 +555,15 @@
           }
       }
   }
-}
-@media screen and (min-width: 1280px) and (max-width: 1439px) {
-  
+    .gradient-container{
+      .label-list{
+        .list1{
+          top: 110px;
+        }
+        .list2{}
+      }
+    }
+   }
 }
 @media screen and (min-width: 1024px) and (max-width: 1279px) {
   
