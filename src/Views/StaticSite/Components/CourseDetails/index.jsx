@@ -181,8 +181,47 @@ const CourseDetails = ({ pageDate }) => {
               return <p key={i} style={{ marginTop: '20px' }}>{para}</p>
             })}
             {/* 'Lorem Ipsum is simply dummy text of theprinting and typesetting industry.'} */}
-            {pageDate?.join === true && (
-              <p style={{ marginTop: '1.5rem' , fontSize:'1.5rem' }}>*Join on any date</p>
+            {pageDate?.key === 'respiratory-workshop'  && (
+              <p style={{ marginTop: '1.5rem' , fontSize:'1.5rem' }}>This camp is designed specifically for individuals who are currently facing respiratory issues. It is tailored to provide support, guidance, and exercises to help improve respiratory health.</p>
+            )}
+            {pageDate?.key === 'respiratory-workshop' && (
+              <p style={{ marginTop: '1.5rem' , fontSize:'1.5rem' }}>*Kindly Note: The camp is not available to the general public who might be interested in attending for the purpose of gaining general knowledge.</p>
+            )}
+            {pageDate?.key === 'stress-management-camp'   && (
+              <p style={{ marginTop: '1.5rem' , fontSize:'1.5rem' }}>This camp is uniquely crafted for individuals currently experiencing stress-related challenges. Its focus is on offering specialized assistance, direction, and techniques to address issues stemming from stress.</p>
+            )}
+            {pageDate?.key === 'stress-management-camp' && (
+              <p style={{ marginTop: '1.5rem' , fontSize:'1.5rem' }}>*Kindly Note: The camp is not available to the general public who might be interested in attending for the purpose of gaining general knowledge.</p>
+            )}
+            {pageDate?.key === 'weight-management-workshop'  && (
+              <p style={{ marginTop: '1.5rem' , fontSize:'1.5rem' }}>This camp is thoughtfully designed for individuals who face challenges in weight loss and achieving their ideal weight. Our emphasis is on providing a comprehensive strategy for weight management, incorporating yoga postures, pranayamas, and a nourishing diet. </p>
+            )}
+            {pageDate?.key === 'weight-management-workshop' && (
+              <p style={{ marginTop: '1.5rem' , fontSize:'1.5rem' }}>*Kindly Note: The camp is not available to the general public who might be interested in attending for the purpose of gaining general knowledge.</p>
+            )}
+            {pageDate?.key === 'pregnancy-camp-for-ante-post-natal'  && (
+              <p style={{ marginTop: '1.5rem' , fontSize:'1.5rem' }}>This camp is tailored exclusively for pregnant women. Our goal is to offer you an enriching journey towards a joyful and healthy pregnancy, along with a smooth delivery, achieved through yoga techniques and practical guidance. </p>
+            )}
+            {pageDate?.key === 'pregnancy-camp-for-ante-post-natal' && (
+              <p style={{ marginTop: '1.5rem' , fontSize:'1.5rem' }}>*Kindly Note: The camp is not available to the general public who might be interested in attending for the purpose of gaining general knowledge.</p>
+            )}
+            {pageDate?.key === 'cardiac-hypertension-workshop'  && (
+              <p style={{ marginTop: '1.5rem' , fontSize:'1.5rem' }}>This workshop is exclusively crafted for people presently dealing with heart and hypertension concerns. Our objective is to offer assistance, guidance, and yogic practices to effectively address these concerns. </p>
+            )}
+            {pageDate?.key === 'cardiac-hypertension-workshop' && (
+              <p style={{ marginTop: '1.5rem' , fontSize:'1.5rem' }}>*Kindly Note: The camp is not available to the general public who might be interested in attending for the purpose of gaining general knowledge.</p>
+            )}
+            {pageDate?.key === 'back-joint-disorder-workshop'  && (
+              <p style={{ marginTop: '1.5rem' , fontSize:'1.5rem' }}>This workshop is uniquely created for individuals presently experiencing back and joint issues. It is custom-tailored to offer support, guidance, and specialized exercises aimed at addressing and alleviating these concerns. </p>
+            )}
+            {pageDate?.key === 'back-joint-disorder-workshop' && (
+              <p style={{ marginTop: '1.5rem' , fontSize:'1.5rem' }}>*Kindly Note: The camp is not available to the general public who might be interested in attending for the purpose of gaining general knowledge.</p>
+            )}
+            {pageDate?.key === 'diabetes-camp'  && (
+              <p style={{ marginTop: '1.5rem' , fontSize:'1.5rem' }}>This camp is exclusively designed for individuals currently managing diabetes. It is customized to offer support, guidance, and equip you with essential resources to improve your quality of life. </p>
+            )}
+            {pageDate?.key === 'diabetes-camp' && (
+              <p style={{ marginTop: '1.5rem' , fontSize:'1.5rem' }}>*Kindly Note: The camp is not available to the general public who might be interested in attending for the purpose of gaining general knowledge.</p>
             )}
             <div
               id="date-select-mobile"
