@@ -183,12 +183,22 @@ const LocateUs = () => {
                       {
                         //-----------------------------------------Old code here----------------------------------------------
                         // items?.phone?.map((number, i) => i === 0 ? <a href={`tel:${number}`}>{number}</a> : <>,&nbsp;<a href={`tel:${number}`}>{number}</a></>)
-                      
+
                         //Added key to the phone number items to avoid confusing eslint
                         items?.phone?.map((number, i) => {
                           const key = `phone-link-${i}`
-                          const link = <a href={`tel:${number}`} key={key}>{number}</a>
-                          return i === 0 ? link : <React.Fragment key={key}>,&nbsp;{link}</React.Fragment>
+                          const link = (
+                            <a href={`tel:${number}`} key={key}>
+                              {number}
+                            </a>
+                          )
+                          return i === 0 ? (
+                            link
+                          ) : (
+                            <React.Fragment key={key}>
+                              ,&nbsp;{link}
+                            </React.Fragment>
+                          )
                         })
                       }
                     </div>
@@ -204,7 +214,26 @@ const LocateUs = () => {
                         {items?.website}
                       </a>
                       <div>
-                        {items?.url !== '' ? items?.toRedirect ? <a href='https://jal.theyogainstitute.org/' target='_blank' rel='noreferrer' ><button className='country-details-btn'>Details</button></a> : <button className='country-details-btn' onClick={() => navigate(`/${items?.url}`)}>Details</button> : null}
+                        {items?.url !== '' ? (
+                          items?.toRedirect ? (
+                            <a
+                              href={`${items?.url}`}
+                              target="_blank"
+                              rel="noreferrer"
+                            >
+                              <button className="country-details-btn">
+                                Details
+                              </button>
+                            </a>
+                          ) : (
+                            <button
+                              className="country-details-btn"
+                              onClick={() => navigate(`/${items?.url}`)}
+                            >
+                              Details
+                            </button>
+                          )
+                        ) : null}
                       </div>
                     </div>
                   </div>

@@ -15,7 +15,8 @@ export const locateData =[
         phone:['+91-9307047148'],
         website:'https://theyogainstitutegoa.com',
         email:'goa@theyogainstitute.org',
-        url:''
+        url:'https://jal.theyogainstitute.org/',
+        toRedirect: true
       },
       {
         state:'Raipur',
@@ -23,7 +24,8 @@ export const locateData =[
         phone:['+91-9752550490','+91-982035049'],
         email:'tyiraipur@gmail.com',
         website:'https://theyogainstituteraipur.com',
-        url:''
+        url:'https://jal.theyogainstitute.org/',
+        toRedirect: true
       },
       {
         state:'Kochi',
@@ -31,7 +33,8 @@ export const locateData =[
         phone:['+91-4842621234', '+91-9188952296'],
         email:'tyikochi@namamihealth.com',
         website:'https://namamihealth.com',
-        url:''
+        url:'https://jal.theyogainstitute.org/',
+        toRedirect: true
       },
       {
         state:'Delhi',
@@ -39,7 +42,8 @@ export const locateData =[
         phone:['+91-9899904455'],
         email:'tyidelhi@theyogainstitute.org',
         website:'https://theyogainstitutedelhi.com',
-        url:''
+        url:'https://jal.theyogainstitute.org/',
+        toRedirect: true
       },
       {
         state:'Matunga (CR)',
@@ -52,7 +56,7 @@ export const locateData =[
         state:'Santacruz (W)',
         notstate:'Rotary Club of Bombay West Rotary Service Centre, Rotary Chowk, Juhu Tara Road, Santacruz W, Mumbai 400049.',
         email:'dhhruv.s@gmail.com',
-        url: 'https://jal.theyogainstitute.org/',
+        url:'https://jal.theyogainstitute.org/',
         phone:['+91-9833864964'],
         toRedirect: true
       },
@@ -60,7 +64,7 @@ export const locateData =[
         state:'Juhu',
         notstate:'Ground Floor Backside, Abhijat Bunglow, Plot No. 48, NS Road Number 7, Opp. Siddhivinayak Building, JVPD Scheme, Juhu.',
         email:'dhhruv.s@gmail.com',
-        url: 'https://jal.theyogainstitute.org/',
+        url:'https://jal.theyogainstitute.org/',
         phone:['+91-9833864964'],
         toRedirect: true
       },
@@ -68,7 +72,7 @@ export const locateData =[
         state:'Vile Parle',
         notstate:'Sanyas Ashram Temple, Off. Bajaj Road, Vile Parle West, Mumbai - 400056',
         email:'dhhruv.s@gmail.com',
-        url: 'https://jal.theyogainstitute.org/',
+        url:'https://jal.theyogainstitute.org/',
         phone:['+91-9833864964'],
         toRedirect: true
       },
@@ -76,13 +80,14 @@ export const locateData =[
         state:'Kalyan',
         notstate:'Saket College, Saket Vidyanagri Marg, Katemenivali, Chinchpada Road, Kalyan, Maharashtra - 421306',
         phone:['+91-9673134471'],
-        url:''
+        url:'https://jal.theyogainstitute.org/',
+        toRedirect: true
       },
       {
         state:'Lokhandwala',
         notstate:'The Yoga Institute, Lokhandwala 703, Aston Building, Above Mercedes Benz Showroom, Andheri, Near Lokhandwala Circle',
         email:'dhhruv.s@gmail.com',
-        url: 'https://jal.theyogainstitute.org/',
+        url:'https://jal.theyogainstitute.org/',
         phone:['+91-9833864964'],
         toRedirect: true
       },
@@ -93,6 +98,14 @@ export const locateData =[
         url: 'malad',
         phone:['+91 9343517490'],
         toRedirect: false
+      },
+      {
+        state:'Rishikesh',
+        notstate:'House No. 4, Gali No. 4, Ward No. 1 Shri Badri Kedar Colony Lakkad ghat, Khadri khadakmaaf Yoga Nagri Rishikesh Uttarakhand - 249204',
+        email:'theyogainstitute.rishikesh@gmail.com',
+        url: 'https://theyogainstituterishikesh.com/',
+        phone:['+91-7236022022'],
+        toRedirect: true
       },
 
       // {
