@@ -472,68 +472,7 @@ const LandingPageTyi = () => {
           The Yoga Institute offers a wide range of courses including:
         </div>
       </div>
-      {/* <div className="popularCourses">
-        <div className="popCourses">
-          <div className="image123">
-            <img
-              src="https://ecom-static-site.oss-ap-south-1.aliyuncs.com/New-landing-page/popCo1.png"
-              alt="course1"
-            />
-          </div>
-          <div className="popCo1Text">
-            &nbsp;&nbsp;Advance TTC <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;(200-Hrs)
-          </div>
-        </div>
-        <div className="popCourses">
-          <div className="image123">
-            <img
-              src="https://ecom-static-site.oss-ap-south-1.aliyuncs.com/New-landing-page/popCo2.png"
-              alt="course1"
-            />
-          </div>
-          <div className="popCo1Text">
-            &nbsp;&nbsp;21 Days Better
-            <br />
-            &nbsp;&nbsp;Living course
-          </div>
-        </div>
-        <div className="popCourses">
-          <div className="image123">
-            <img
-              src="https://ecom-static-site.oss-ap-south-1.aliyuncs.com/New-landing-page/popCo3.png"
-              alt="course1"
-            />
-          </div>
-          <div className="popCo1Text">
-            &nbsp;&nbsp; 7 Days Health
-            <br />
-            &nbsp;&nbsp;&nbsp;Camp
-          </div>
-        </div>
-        <div className="popCourses">
-          <div className="image123">
-            <img
-              src="https://ecom-static-site.oss-ap-south-1.aliyuncs.com/New-landing-page/popCo4.png"
-              alt="course1"
-            />
-          </div>
-          <div className="popCo1Text">
-            Certificate Yoga
-            <br />
-            Therapy Course
-          </div>
-        </div>
-        <div className="popCourses">
-          <div className="image123">
-            <img
-              src="https://ecom-static-site.oss-ap-south-1.aliyuncs.com/New-landing-page/popCo1.png"
-              alt="course1"
-            />
-          </div>
-          <div className="popCo1Text">Nutri Diet Clinic</div>
-        </div>
-      </div> */}
+      
       <div className="popularCourses">
         {popularCourses.map((item, idx) => (
           <div key={idx} className="popCourses">
