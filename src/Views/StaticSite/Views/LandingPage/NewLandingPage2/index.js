@@ -13,7 +13,7 @@ import { popularCourses } from '../constant'
 
 import { creatForm, successMail } from '../Api'
 
-const LandingPageTyi7Months = () => {
+const TyiLandingPage7Months = () => {
   const [modal, setModal] = useState(false)
   const [err, setErr] = useState(0)
   const [formData, setFormData] = useState({
@@ -31,10 +31,10 @@ const LandingPageTyi7Months = () => {
   }
   const handleForm = async() => {
     try {
-      await creatForm({ ...formData, formType: 'MONTHS7HRS900CAMPAIGN' })
+      await creatForm({ ...formData, formType: 'MONTHS3HRS900CAMPAIGN' })
       await successMail({
-        type: 'MONTHS7HRS900CAMPAIGN',
-        HTMLTemplate: 'MONTHS_7_900_HRS_FORM_CONFIRMATION_MAIL',
+        type: 'MONTHS3HRS900CAMPAIGN',
+        HTMLTemplate: 'MONTHS_3_900_HRS_FORM_CONFIRMATION_MAIL',
         subject: 'Thank you from The Yoga Institute',
         data: {
           name: name,
@@ -438,8 +438,8 @@ const LandingPageTyi7Months = () => {
         <div className="cusp"></div>
         <div className="founderContent">
           <div className="founderArc">
-            SPECIAL INTERACTION WITH <br />
-            <span className="founderName">DR. HANSAJI YOGENDRA</span>
+            SPECIAL INTERACTION WITH 
+            <p><span className="founderName">DR. HANSAJI YOGENDRA</span></p>
           </div>
           <div className="founderText">
             Experience profound wisdom and recieve
@@ -472,68 +472,7 @@ const LandingPageTyi7Months = () => {
           The Yoga Institute offers a wide range of courses including:
         </div>
       </div>
-      {/* <div className="popularCourses">
-        <div className="popCourses">
-          <div className="image123">
-            <img
-              src="https://ecom-static-site.oss-ap-south-1.aliyuncs.com/New-landing-page/popCo1.png"
-              alt="course1"
-            />
-          </div>
-          <div className="popCo1Text">
-            &nbsp;&nbsp;Advance TTC <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;(200-Hrs)
-          </div>
-        </div>
-        <div className="popCourses">
-          <div className="image123">
-            <img
-              src="https://ecom-static-site.oss-ap-south-1.aliyuncs.com/New-landing-page/popCo2.png"
-              alt="course1"
-            />
-          </div>
-          <div className="popCo1Text">
-            &nbsp;&nbsp;21 Days Better
-            <br />
-            &nbsp;&nbsp;Living course
-          </div>
-        </div>
-        <div className="popCourses">
-          <div className="image123">
-            <img
-              src="https://ecom-static-site.oss-ap-south-1.aliyuncs.com/New-landing-page/popCo3.png"
-              alt="course1"
-            />
-          </div>
-          <div className="popCo1Text">
-            &nbsp;&nbsp; 7 Days Health
-            <br />
-            &nbsp;&nbsp;&nbsp;Camp
-          </div>
-        </div>
-        <div className="popCourses">
-          <div className="image123">
-            <img
-              src="https://ecom-static-site.oss-ap-south-1.aliyuncs.com/New-landing-page/popCo4.png"
-              alt="course1"
-            />
-          </div>
-          <div className="popCo1Text">
-            Certificate Yoga
-            <br />
-            Therapy Course
-          </div>
-        </div>
-        <div className="popCourses">
-          <div className="image123">
-            <img
-              src="https://ecom-static-site.oss-ap-south-1.aliyuncs.com/New-landing-page/popCo1.png"
-              alt="course1"
-            />
-          </div>
-          <div className="popCo1Text">Nutri Diet Clinic</div>
-        </div>
-      </div> */}
+      
       <div className="popularCourses">
         {popularCourses.map((item, idx) => (
           <div key={idx} className="popCourses">
@@ -590,4 +529,4 @@ const LandingPageTyi7Months = () => {
   )
 }
 
-export default LandingPageTyi7Months
+export default TyiLandingPage7Months
