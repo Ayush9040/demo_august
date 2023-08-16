@@ -438,8 +438,8 @@ const TyiLandingPage7Months = () => {
         <div className="cusp"></div>
         <div className="founderContent">
           <div className="founderArc">
-            SPECIAL INTERACTION WITH <br />
-            <span className="founderName">DR. HANSAJI YOGENDRA</span>
+            SPECIAL INTERACTION WITH 
+            <p><span className="founderName">DR. HANSAJI YOGENDRA</span></p>
           </div>
           <div className="founderText">
             Experience profound wisdom and recieve

@@ -404,8 +404,8 @@
     position: relative;
 
     .founderImage {
-      width: 900px;
-      height: 900px;
+      width: 35%;
+      height: 35%;
       border-radius: 50%;
       overflow: hidden;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -420,10 +420,10 @@
     }
     .cusp {
       background-color: white;
-      height: 205px;
-      width: 55px;
-      right: 45%;
-      top: 25%;
+      height: 211px;
+      width: 87px;
+      right: 48%;
+      top: 17%;
       position: absolute;
       border-top-right-radius: 150px 455px;
     }
@@ -436,9 +436,11 @@
         z-index: 10;
         // margin-right: 1%;
 
-        .founderName {
+        p{
+          font-size: 1em; 
+          .founderName {
           font-weight: 800;
-        }
+        }}
       }
       .founderText {
         font-size: 3em;
@@ -581,10 +583,10 @@
         height: 450px;
       }
       .cusp{
-        height: 155px;
-        width: 65px;
-        right: 51%;
-        top: 13%;
+        height: 155px!important;
+        width: 65px!important;
+        right: 51%!important;
+        top: 13%!important;
       }
     }
    }
@@ -612,10 +614,10 @@
     .gradient-container{
       .label-list{
         .list1{
-          top: 110px;
+          top: 100px!important;
         }
         .list2{
-          top:220px
+          top:220px!important;
         }
       }
     }
@@ -648,10 +650,10 @@
           height: 450px;
         }
         .cusp{
-          height: 170px;
-          width: 58px;
-          right: 54%;
-          top: 11%;
+          height: 160px!important;
+          width: 69px!important;
+          right: 53%!important;
+          top: 13%!important;
         }
     }
     .popularCourses{
@@ -679,11 +681,11 @@
   .gradient-container{
     .label-list{
       .list1{
-        top: 90px;
+        top: 100px!important;
         width: 85%;
       }
       .list2{
-        top:190px;
+        top:200px!important;
         width: 85%;
       }
     }
@@ -1065,7 +1067,7 @@
 
   }
 }
-@media (max-width:1800px){
+@media screen and (min-width:1440px) and (max-width:1559px){
 .main-container{
   .gradient-container{
     .label-list{
@@ -1077,16 +1079,92 @@
       }
     }
   }
-  .founderContainer{
-    .cusp{
-      height: 166px;
-      width: 66px;
-      right: 39%;
-      top: 30%;
+  .gradient-container2{
+    .partitions1{
+      width: 37%;
+    }
+    .partitions2{
+      width: 37%;
+    }
+    .partitions3{
+      width: 37%;
     }
   }
-
+  .founderContainer{
+    .cusp{
+      height: 172px!important;
+      width: 68px!important;
+      right: 48%!important;
+      top: 17%!important;
+    }
+  }
 }
+}
+@media screen and (min-width:1560px) and (max-width: 1680px) {
+  .main-container{
+    .gradient-container{
+      .label-list{
+        .list1{
+          top: 120px;
+        }
+        .list2{
+          top:250px
+        }
+      }
+    }
+    .gradient-container2{
+      .partitions1{
+        width: 38%;
+      }
+      .partitions2{
+        width: 38%;
+      }
+      .partitions3{
+        width: 38%;
+      }
+    }
+    .founderContainer{
+      .cusp{
+        height: 168px!important;
+        width: 74px!important;
+        right: 45%!important;
+        top: 20%!important;
+      }
+    }
+  }
+}
+@media screen and (min-width:1681px) and (max-width:1800px){
+  .main-container{
+    .gradient-container{
+      .label-list{
+        .list1{
+          top: 120px;
+        }
+        .list2{
+          top:250px
+        }
+      }
+    }
+    .gradient-container2{
+      .partitions1{
+        width: 38%;
+      }
+      .partitions2{
+        width: 38%;
+      }
+      .partitions3{
+        width: 38%;
+      }
+    }
+    .founderContainer{
+      .cusp{
+        height: 167px!important;
+        width: 73px!important;
+        right: 44%!important;
+        top: 22%!important;
+      }
+    }
+  }
 }
 
 
