@@ -41,7 +41,6 @@
       background: url('https://ecom-static-site.oss-ap-south-1.aliyuncs.com/New-landing-page/cover.png')
         no-repeat center / cover;
       height: 900px;
-
       .backgroundTitle {
         // display: flex;
         // justify-content: space-evenly;
@@ -71,7 +70,7 @@
           }
           .left_head_bold {
             font-size: 6rem;
-            // font-family: var(--futura);
+
             font-weight: 800;
             color: #f45752;
             letter-spacing: 4px;
@@ -79,11 +78,11 @@
         }
         .form-phone-info {
           width: 20%;
+          min-width: 300px;
           background: #fff;
           margin-top: 2%;
           text-align: center;
           height: fit-content;
-
           margin-left: 58%;
           & > form {
             & > h5 {
@@ -96,9 +95,10 @@
               }
             }
             & > label {
-              width: 60%;
+              width: 80%;
+              
               margin: 2rem auto;
-              min-width: 300px;
+              // min-width: 300px;
               display: block;
               height: 40px;
               border: 1px solid black;
@@ -515,22 +515,578 @@
     text-align: center;
   }
 }
-// @media (max-width: 1220px){
 
-//   .main-container {
-//     .section_1 {
-//       .backgroundImage{
-//          .backgroundTitle {
-//           .form-phone-info{
-//              > {form
-//                > {label {
-//                 input{
+@media screen and (min-width: 1280px) and (max-width: 1439px) {
+  .main-container{
+    .section_1 {
+      .backgroundTitle {
+          .form_text {
+              .left_heading1 {
+                  font-size: 4rem;
+                  letter-spacing: 3px;
+              }
+              .left_heading_bold {
+                  font-size: 4rem;
+                  letter-spacing: 3px;
+              }
+              .left_head_bold {
+                  font-size: 4rem;
+                  letter-spacing: 3px;
+              }
+          }
+          .form-phone-info {
+              width: 80%;
+              margin: 2% auto;
+              // padding: 5% 0;
+              box-sizing: border-box;
+  
+              & > form {
+                  
+                  & > label {
+                      height: 30px;
+                  }
+                  & > button {
+                      font-size: medium;
+                      width: 40%;
+                      padding: 2% 5%;
+                  }
+              }
+          }
+      }
+  }
+    .gradient-container{
+      .label-list{
+        .list1{
+          top: 110px;
+        }
+        .list2{
+          top:220px
+        }
+      }
+    }
+    .gradient-container2{
+      .partitions1{
+        width: 30%;
+      }
+      .partitions2{
+        width: 30%;
+      }
+      .partitions3{
+        width: 30%;
+      }
+    }
+    .founderContainer{
+      .founderImage{
+        width: 450px;
+        height: 450px;
+      }
+      .cusp{
+        height: 155px;
+        width: 65px;
+        right: 51%;
+        top: 13%;
+      }
+    }
+   }
+}
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+  .main-container{
+    .overlap-container{
+      .img-container {
+        & > img {
+          width: 450px;
+          height: 400px;
+          border-radius: 20px;
+        }
+      }
+    }
+    .container_2{
+      .img-container {
+        & > img {
+          width: 450px;
+          height: 400px;
+          border-radius: 20px;
+        }
+      }
+    }
+    .gradient-container{
+      .label-list{
+        .list1{
+          top: 110px;
+        }
+        .list2{
+          top:220px
+        }
+      }
+    }
+    .gradient-container2{
+      .partitions1{
+        width: 45%;
+        top: 170px;
+      }
+      .partitions2{
+        width: 45%;
+        top: 275px;
+      }
+      .partitions3{
+        width: 45%;
+        top: 385px;
+      }
+    }
+    .label-list2{
+      .groupImage{
+        .group {
+          background: contain;
+          width: 500px;
+          height: 450px;
+        }
+      }
+    }
+    .founderContainer{
+        .founderImage{
+          width: 450px;
+          height: 450px;
+        }
+        .cusp{
+          height: 170px;
+          width: 58px;
+          right: 54%;
+          top: 11%;
+        }
+    }
+    .popularCourses{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+    }
 
-//   }}} }}}}}}
+   }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+ .main-container{
+  .overlap-container{
+    display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+  .container_2{
+    display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+  }
+  .gradient-container{
+    .label-list{
+      .list1{
+        top: 90px;
+        width: 85%;
+      }
+      .list2{
+        top:190px;
+        width: 85%;
+      }
+    }
+  }
+  .gradient-container2{
+    .partitions1{
+      width: 75%;
+      top: 150px;
+    }
+    .partitions2{
+      width: 75%;
+      top: 234px;
+    }
+    .partitions3{
+      width: 75%;
+      top: 310px;
+    }
+    .label-list2{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .groupImage{
+        .group {
+          background: contain;
+          width: 600px;
+          height: 450px;
+        }
+      }
+    }
+  }
+  .founderContainer{
+    display: flex;
+    flex-direction: column;
+    .founderImage{
+      width: 450px;
+      height: 450px;
+    }
+    .cusp{
+      display: none;
+    }
+  }
+  .popularCourses{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+ }
+}
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .main-container{
+    
+    .section_1{
+      .backgroundImage{
+        .backgroundTitle{
+          .form_text{
+            .left_heading1{
+              font-size: 5em;
+            }
+            .left_heading_bold{
+              font-size: 5em;
+            }
+            .left_head_bold{
+              font-size: 5em;
+            }
+          }
+          .form-phone-info{
+            margin-left: 20%;
+          }
+        }
+      }
+    }
+    .overlap-container{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .img-container {
+        & > img {
+          width: 450px;
+          height: 350px;
+          border-radius: 20px;
+        }
+      }
+    }
+    .container_2{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      .img-container {
+        & > img {
+          width: 450px;
+          height: 350px;
+          border-radius: 20px;
+        }
+      }
+    }
+    .gradient-container{
+      .label-list{
+        .list1{
+          display: none;
+        }
+        .list2{
+          display: none;
+        }
+      }
+      .label-list ul{
+        display: flex;
+        flex-direction: column;
+        margin-left: 25%;
+      }
+    }
+    .gradient-container2{
+      .partitions1{
+        width: 80%;
+        top: 140px;
+      }
+      .partitions2{
+        width: 80%;
+        top: 204px;
+      }
+      .partitions3{
+        width: 80%;
+        top: 280px;
+      }
+      .label-list2{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .groupImage{
+          .group {
+            background: contain;
+            width: 400px;
+            height: 250px;
+          }
+        }
+      }
+    }
+    .featureCourse{
+      .courseHead{
+        font-size: 2em;
+        width: fit-content;
+      }
+    }
+    .founderContainer{
+      display: flex;
+      flex-direction: column;
+      .founderImage{
+        width: 450px;
+        height: 450px;
+      }
+      .cusp{
+        display: none;
+      }
+    }
+    .popularCourses{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+    }
+    .testimonials-section21 {
+      padding: 1rem;
+      .testimonial21 {
+        flex-wrap: wrap;
+        padding: 10px;
+        height: 650px;
+        min-height: fit-content;
+        .left21 {
+          width: 100%;
+          text-align: center;
+          img {
+            display: block;
+            margin: 0 auto;
+          }
+        }
+        .right21 {
+          padding: 5px;
+          .heading21 {
+            font-size: 1.75rem;
+            font-weight: bold;
+            padding-left: 10px;
+          }
+          span {
+            display: block;
+            color: #cc4d2e;
+            font-size: 1.6rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            padding-left: 10px;
+          }
 
-// }
+          .content21 {
+            font-size: 1.25rem;
+            padding: 0 0 20px 10px;
+            text-align: justify;
+          }
+        }
+      }
+    }
 
-// 1220
-// 1100
-// 786
-// 520
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .main-container{
+    .section_1{
+      .backgroundImage{
+        .backgroundTitle{
+          .form_text{
+            .left_heading1{
+              font-size: 4em;
+            }
+            .left_heading_bold{
+              font-size: 4em;
+            }
+            .left_head_bold{
+              font-size: 4em;
+            }
+          }
+          .form-phone-info{
+            margin-left: 2%;
+          }
+        }
+      }
+    }
+    .overlap-container{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transform: translate(-0.5%, -1%);
+      .img-container {
+        & > img {
+          width: 250px;
+          height: 200px;
+          border-radius: 20px;
+        }
+      }
+      .content-container1{
+        font-size: 2em;
+      }
+    }
+    .container_2{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      .img-container {
+        & > img {
+          width: 250px;
+          height: 200px;
+          border-radius: 20px;
+        }
+      }
+      .content-container2{
+        font-size: 2em;
+      }
+    }
+    .gradient-container{
+      .label-list{
+        font-size: 2em;
+        
+        .list1{
+         display: none;
+        }
+        .list2{
+          display: none;
+        }
+      }
+      .label-list ul{
+        display: flex;
+        flex-direction: column;
+      }
+    }
+    .gradient-container2{
+      .partitions1{
+       display: none;
+      }
+      .partitions2{
+        display: none;
+      }
+      .partitions3{
+        display: none;
+      }
+      .label-list2{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 2em;
+        .groupImage{
+          .group {
+            background: contain;
+            width: 250px;
+            height: 150px;
+          }
+        }
+      }
+      .label-list2 ul{
+        display: flex;
+        flex-direction: column;
+      }
+    }
+    .featureCourse{
+      .courseHead{
+        font-size: 2em;
+        width: fit-content;
+      }
+    }
+    .founderContainer{
+      display: flex;
+      flex-direction: column;
+      .founderImage{
+        width: 250px;
+        height: 250px;
+      }
+      .cusp{
+        display: none;
+      }
+      .founderContent{
+        font-size: 0.6em;
+      }
+      
+    }
+    .schedule{
+      font-size: 0.6em;
+    }
+    .otherCourses{
+      .otherCoursesHead{
+        font-size: 3em;
+      }
+      .offers{
+        font-size: 2em;
+      }
+    }
+    .popularCourses{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+    }
+    .testimonials-section21 {
+      padding: 1rem;
+      .testimonial21 {
+        flex-wrap: wrap;
+        padding: 10px;
+        height: 650px;
+        min-height: fit-content;
+        .left21 {
+          width: 100%;
+          text-align: center;
+          img {
+            display: block;
+            margin: 0 auto;
+          }
+        }
+        .right21 {
+          padding: 5px;
+          .heading21 {
+            font-size: 1.75rem;
+            font-weight: bold;
+            padding-left: 10px;
+          }
+          span {
+            display: block;
+            color: #cc4d2e;
+            font-size: 1.6rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            padding-left: 10px;
+          }
+
+          .content21 {
+            font-size: 1.25rem;
+            padding: 0 0 20px 10px;
+            text-align: justify;
+          }
+        }
+      }
+    }
+
+  }
+}
+@media (max-width:1800px){
+.main-container{
+  .gradient-container{
+    .label-list{
+      .list1{
+        top: 120px;
+      }
+      .list2{
+        top:250px
+      }
+    }
+  }
+  .founderContainer{
+    .cusp{
+      height: 166px;
+      width: 66px;
+      right: 39%;
+      top: 30%;
+    }
+  }
+
+}
+}
+
+

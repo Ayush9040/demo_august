@@ -70,7 +70,7 @@
           }
           .left_head_bold {
             font-size: 6rem;
-            // font-family: var(--futura);
+
             font-weight: 800;
             color: #f45752;
             letter-spacing: 4px;
@@ -1065,8 +1065,28 @@
 
   }
 }
+@media (max-width:1800px){
+.main-container{
+  .gradient-container{
+    .label-list{
+      .list1{
+        top: 120px;
+      }
+      .list2{
+        top:250px
+      }
+    }
+  }
+  .founderContainer{
+    .cusp{
+      height: 166px;
+      width: 66px;
+      right: 39%;
+      top: 30%;
+    }
+  }
 
-// 1220
-// 1100
-// 786
-// 520
+}
+}
+
+
