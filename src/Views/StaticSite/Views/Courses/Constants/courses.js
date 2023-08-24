@@ -509,7 +509,9 @@ const ttc200hr = {
     dates: [
       '7th Aug to 29th Sep 2023',
       '2nd Oct to 24th Nov 2023',
-      '27th Nov to 19th Jan 2024'
+      '9th Oct to 2nd Dec 2023',
+      '27th Nov 2023 to 19th Jan 2024',
+      '4th Dec 2023 to 27th Jan 2024'
     ],
     online: true,
     onCampus: true,
