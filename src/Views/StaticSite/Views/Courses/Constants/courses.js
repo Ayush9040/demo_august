@@ -507,7 +507,6 @@ const ttc200hr = {
     category: 'ttc',
     title: '200 Hours Yoga Teacher Training Course - 2 Months Yoga TTC Online and On Campus - English - Batch 2',
     dates: [
-      '7th Aug to 29th Sep 2023',
       '2nd Oct to 24th Nov 2023',
       '9th Oct to 2nd Dec 2023',
       '27th Nov 2023 to 19th Jan 2024',
