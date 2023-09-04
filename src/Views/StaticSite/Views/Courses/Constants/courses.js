@@ -9786,7 +9786,7 @@ const camps = {
     },
     dates: [
       '3rd Sep to 23rd Sep 2023',
-      '5th Nov to 25th Nov 2023'
+      '12th Nov to 2nd Dec 2023'
     ],
     online: true,
     onCampus: true,
