@@ -10608,7 +10608,7 @@ const classes = {
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
     templateId: {
-      templateOnline: 'GENERAL_AUTO_EMAIL',
+      templateOnline: 'YOGA_ASANA_REGULAR_CLASSES_M_AND_F_ONLINE',
       templateOffline: {
         templateResidential: '',
         templateNonResidential: '',
@@ -10656,7 +10656,7 @@ const classes = {
       {
         type: 'u-list',
         content: {
-          title: ' Program Details',
+          title: '',
           points: [
             {
               listItem: 'Join on any date.',
@@ -10793,6 +10793,13 @@ const classes = {
         content: {
           title: 'Annual Fees',
           text: ['Rs. 10000/-'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Note:-',
+          text: ['We kindly urge you to regularly check your email inboxes, including your spam/junk folders, for important updates from the (email id - asanaclasses@theyogainstitute.in) from the institute regarding regular yoga asanas. Additionally, kindly note that new members will be added to the WhatsApp group on Wednesdays and Saturdays only.'],
         },
       },
 
