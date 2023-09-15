@@ -13,9 +13,7 @@ const CommonBanner = ({
   bannerImg = DefaultImg,
   overlay = '#000000',
 }) => {
-
   return (
-  
     <>
       <div
         className={`common-container ${PageType}-container ${
@@ -24,7 +22,7 @@ const CommonBanner = ({
         style={{ backgroundImage: `url(${bannerImg})` }}
       >
         <div
-          className='overlay'
+          className="overlay"
           style={{
             width: '100%',
             height: '100%',
@@ -43,15 +41,25 @@ const CommonBanner = ({
               !isOnlyBanner && 'banner-container-responsive'
             }`}
           >
-            <div className='why-text banner-text'>
-              <div className='banner-heading'>
+            <div className="why-text banner-text">
+              <div className="banner-heading">
                 {Heading}
-                <div className='bottom-line'></div>
+                <div className="bottom-line"></div>
               </div>
-              {description
-                ? `${description}`
-                : 'Celebrate the Joy of Giving and bring smiles and happiness to the lives of others. The Yoga Institute’s gifting initiative enables you to support the ones you love with the gift of wisdom, a new career, or the invaluable gift of health and wellness. To uplift and cheer your loved ones, choose from a variety of courses, camps, books, and other options. Gift now!'}
-              { PageType==='donation' && <b><br/>Join us</b>}
+              <div>
+                Revolutionize Your Corporate Wellness Culture. <br />
+                Focused on building a healthier, happier and more productive
+                workforce !
+              </div>
+              {/* ? `${description}`
+                : 'Celebrate the Joy of Giving and bring smiles and happiness to the lives of others. The Yoga Institute’s gifting initiative enables you to support the ones you love with the gift of wisdom, a new career, or the invaluable gift of health and wellness. To uplift and cheer your loved ones, choose from a variety of courses, camps, books, and other options. Gift now!'}</div>
+               */}
+              {PageType === 'donation' && (
+                <b>
+                  <br />
+                  Join us
+                </b>
+              )}
             </div>
           </div>
         </div>

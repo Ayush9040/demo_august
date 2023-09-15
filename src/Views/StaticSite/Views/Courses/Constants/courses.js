@@ -257,14 +257,26 @@ const ttc200hr = {
         },
       },
       {
-        type: 'paragraph',
+        type: 'u-list',
         content: {
-          title: '',
-          text: [
-            'On successfully passing the exam, students will be awarded a certificate – Basic Teacher Training Certificate (200 hours) by The Yoga Institute, which is recognized by Yoga Certification Board (AYUSH Level-1) and Yoga Alliance USA (RYT 200).',
-          ],
+          title: 'On successfully passing the exam, students will be .',
+          points: [
+            {
+              listItem: 'Awarded a certificate – Basic Yoga Teacher Training Certificate (200 hours) by The Yoga Institute',
+              subItems:[]
+            },
+            {
+              listItem: 'Qualified by Yoga Certification Board (AYUSH Level-1)',
+              subItems:[]
+            },
+            {
+              listItem: 'Eligible to apply with Yoga Alliance USA (RYT 200)',
+              subItems:[]
+            }
+          ]
         },
       },
+      //sdjkhfjkshdfjkhsdjkfhsdjkhfjksdgfjkdgfjkgdsfkgsdkfgsdkhgfhksdgfhgfhksdgkfgsdhgfksdgfsdhkgfhksdfghksdgf
       {
         type: 'u-list',
         content: {
@@ -730,12 +742,23 @@ const ttc200hr = {
         },
       },
       {
-        type: 'paragraph',
+        type: 'u-list',
         content: {
-          title: '',
-          text: [
-            'On successfully passing the exam, students will be awarded a certificate – Basic Teacher Training Certificate (200 hours) by The Yoga Institute, which is recognized by Yoga Certification Board (AYUSH Level-1) and Yoga Alliance USA (RYT 200).',
-          ],
+          title: 'On successfully passing the exam, students will be .',
+          points: [
+            {
+              listItem: 'Awarded a certificate – Basic Yoga Teacher Training Certificate (200 hours) by The Yoga Institute',
+              subItems:[]
+            },
+            {
+              listItem: 'Qualified by Yoga Certification Board (AYUSH Level-1)',
+              subItems:[]
+            },
+            {
+              listItem: 'Eligible to apply with Yoga Alliance USA (RYT 200)',
+              subItems:[]
+            }
+          ]
         },
       },
       {
@@ -1130,12 +1153,23 @@ const ttc200hr = {
         },
       },
       {
-        type: 'paragraph',
+        type: 'u-list',
         content: {
-          title: '',
-          text: [
-            'On successfully passing the exam, students will be awarded a certificate – Basic Teacher Training Certificate (200 hours) by The Yoga Institute, which is recognized by Yoga Certification Board (AYUSH Level-1) and Yoga Alliance USA (RYT 200).',
-          ],
+          title: 'On successfully passing the exam, students will be .',
+          points: [
+            {
+              listItem: 'Awarded a certificate – Basic Yoga Teacher Training Certificate (200 hours) by The Yoga Institute',
+              subItems:[]
+            },
+            {
+              listItem: 'Qualified by Yoga Certification Board (AYUSH Level-1)',
+              subItems:[]
+            },
+            {
+              listItem: 'Eligible to apply with Yoga Alliance USA (RYT 200)',
+              subItems:[]
+            }
+          ]
         },
       },
       {
@@ -1657,12 +1691,23 @@ const ttc200hr = {
         },
       },
       {
-        type: 'paragraph',
+        type: 'u-list',
         content: {
-          title: '',
-          text: [
-            'On successfully passing the exam, students will be awarded a certificate – Basic Teacher Training Certificate (200 hours) by The Yoga Institute, which is recognized by Yoga Certification Board (AYUSH Level-1) and Yoga Alliance USA (RYT 200).',
-          ],
+          title: 'On successfully passing the exam, students will be .',
+          points: [
+            {
+              listItem: 'Awarded a certificate – Basic Yoga Teacher Training Certificate (200 hours) by The Yoga Institute',
+              subItems:[]
+            },
+            {
+              listItem: 'Qualified by Yoga Certification Board (AYUSH Level-1)',
+              subItems:[]
+            },
+            {
+              listItem: 'Eligible to apply with Yoga Alliance USA (RYT 200)',
+              subItems:[]
+            }
+          ]
         },
       },
       {
@@ -2053,12 +2098,23 @@ const ttc200hr = {
         },
       },
       {
-        type: 'paragraph',
+        type: 'u-list',
         content: {
-          title: '',
-          text: [
-            'On successfully passing the exam, students will be awarded a certificate – Basic Teacher Training Certificate (200 hours) by The Yoga Institute, which is recognized by Yoga Certification Board (AYUSH Level-1) and Yoga Alliance USA (RYT 200).',
-          ],
+          title: 'On successfully passing the exam, students will be .',
+          points: [
+            {
+              listItem: 'Awarded a certificate – Basic Yoga Teacher Training Certificate (200 hours) by The Yoga Institute',
+              subItems:[]
+            },
+            {
+              listItem: 'Qualified by Yoga Certification Board (AYUSH Level-1)',
+              subItems:[]
+            },
+            {
+              listItem: 'Eligible to apply with Yoga Alliance USA (RYT 200)',
+              subItems:[]
+            }
+          ]
         },
       },
       {
@@ -2512,12 +2568,23 @@ const ttc200hr = {
         },
       },
       {
-        type: 'paragraph',
+        type: 'u-list',
         content: {
-          title: '',
-          text: [
-            'On successfully passing the exam, students will be awarded a certificate – Basic Teacher Training Certificate (200 hours) by The Yoga Institute, which is recognized by Yoga Certification Board (AYUSH Level-1) and Yoga Alliance USA (RYT 200).',
-          ],
+          title: 'On successfully passing the exam, students will be .',
+          points: [
+            {
+              listItem: 'Awarded a certificate – Basic Yoga Teacher Training Certificate (200 hours) by The Yoga Institute',
+              subItems:[]
+            },
+            {
+              listItem: 'Qualified by Yoga Certification Board (AYUSH Level-1)',
+              subItems:[]
+            },
+            {
+              listItem: 'Eligible to apply with Yoga Alliance USA (RYT 200)',
+              subItems:[]
+            }
+          ]
         },
       },
       {
@@ -8656,8 +8723,8 @@ const camps = {
         content: {
           title: 'Residential',
           text: [
-            'Rs. 13,000/- Triple Sharing (Inclusive of course fee and 4 meals a day)',
-            'Rs. 20,000/- Dual Sharing (Inclusive of course fee and 4 meals a day)',
+            'Rs. 13,000/- Triple Sharing per person (Inclusive of course fee and 4 meals a day)',
+            'Rs. 20,000/- Dual Sharing per person (Inclusive of course fee and 4 meals a day)',
             'Rs. 34,000/- Single Occupancy (Inclusive of course fee and 4 meals a day)',
           ],
         },
@@ -8978,8 +9045,8 @@ const camps = {
         content: {
           title: 'Residential',
           text: [
-            'Rs. 13,000/- Triple Sharing (Inclusive of course fee and 4 meals a day)',
-            'Rs. 20,000/- Dual Sharing (Inclusive of course fee and 4 meals a day)',
+            'Rs. 13,000/- Triple Sharing per person (Inclusive of course fee and 4 meals a day)',
+            'Rs. 20,000/- Dual Sharing per person (Inclusive of course fee and 4 meals a day)',
             'Rs. 34,000/- Single Occupancy (Inclusive of course fee and 4 meals a day)',
           ],
         },
@@ -10613,7 +10680,7 @@ const classes = {
     colorCode: '#B77E7E',
     join: true,
     timing:
-      'Monday, Tuesday,Thursday & Friday *: Morning Batch:6:30 am to 7:30 am, 7:30 am to 8:30 am, 8:30 am to 9:30 am   Evening Batch:4pm to 5pm, 5pm to 6pm, 6pm to 7pm, 7pm to 8pm  Weekend Schedule(Sat-Sun): 7:30 am to 9 am',
+      'Regular Asana Classes is conducted 4 days in a week.  Monday ,  Tuesday , Thursday and Friday  Morning Batch: 6:30 am to 7:30 am, 7:30 am to 8:30 am, 8:30 am to 9:30 am   Evening Batch : 4pm to 5pm, 5pm to 6pm, 6pm to 7pm, 7pm to 8pm . We also have Weekend batches and the details are:Weekend Schedule(Sat-Sun): 7:30 am to 9 am',
     fees: {
       onlineFee: 1000,
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },

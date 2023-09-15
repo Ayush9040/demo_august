@@ -76,8 +76,8 @@ const corporateWellness = () => {
     autoplay: 3000,
   }
 
-  let description =
-    'Revolutionize Your Corporate Wellness Culture Focused on building a healthier, happier and more productive workforce !'
+  // let description =
+  // 'Revolutionize Your Corporate Wellness Culture Focused on building a healthier, happier and more productive workforce !'
 
   const CorporateWellessProgram = {
     title: 'Holistic Workplace Wellness Program',
@@ -97,7 +97,7 @@ const corporateWellness = () => {
           Heading="Holistic Workplace Wellness Program"
           isOnlyBanner={false}
           innerNav={false}
-          description={description}
+          // description={description}
           bannerImg={`${baseDomain}${courseAssets.courseAsset118}`}
           overlay="rgba(59, 78, 74, 0.80)"
         >
@@ -598,7 +598,7 @@ const corporateWellness = () => {
               <ul>
                 <li> 89% witnessed decrease in stress levels</li>
                 <li> 82% observed improve physical stamina</li>
-                <li> 75% reported higher employee satisfaction</li>
+                <li> &nbsp; &nbsp; &nbsp; 75% reported higher employee satisfaction</li>
               </ul>
             </div>
           </div>
