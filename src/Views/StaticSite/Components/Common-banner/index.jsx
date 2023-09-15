@@ -9,7 +9,7 @@ const CommonBanner = ({
   isOnlyBanner,
   innerNav,
   children,
-  description,
+  // description,
   bannerImg = DefaultImg,
   overlay = '#000000',
 }) => {
