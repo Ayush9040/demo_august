@@ -3,6 +3,7 @@ import MaladPage from '../Components/LocateUs/malad'
 import IBYcourse from '../Views/IBY'
 import KidsCamp from '../Views/KidsCamps'
 import NutriDietClinic from '../Views/LandingPage/NutriDietClinic/AboutClinic'
+import corporateWellness from '../Views/LandingPage/CorporateWellness'
 // import DonationForm from '../Components/DonationForm'
 const DonationForm = lazy(()=>import('../Components/DonationForm'))
 const DonationThankYou = lazy (()=> import('../Components/Thank'))
@@ -86,6 +87,7 @@ const SingleDonation = lazy(() =>
   import('../Views/Donation/Views/single-donation')
 )
 const News = lazy(() => import('../Views/Media/Views/news'))
+
 const Careers = lazy(() => import('../Views/Careers/Views/careers'))
 const Gifting = lazy(() => import('../Views/Gifting/Views/gifting'))
 const DescisionComp = lazy(() => import('../Views/DecisionComponent'))
@@ -818,6 +820,14 @@ const staticSiteRoutes = [
     name:'Blogs By Tag'
   },
   {
+    Component: corporateWellness,
+    path: '/corporate-wellness',
+    exact: true,
+    id: 'statisSitecorporateWellness',
+    routePath: '/corporate-wellness',
+    name: 'CorporateWellness',
+  },
+  {
     Component: DescisionComp,
     path: '/:contentId',
     exact: true,
@@ -838,6 +848,7 @@ const staticSiteRoutes = [
     id:'staticDonateForm',
     routePath:'/donation-form',
   },
+
   {
     Component:TyiLandingPage,
     path:'/MB/ad-campaign-3-months-900hours',

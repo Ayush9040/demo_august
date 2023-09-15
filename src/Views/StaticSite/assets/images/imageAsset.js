@@ -290,7 +290,9 @@ export const courseAssets = {
   courseAsset110:
     '/Courses/Class/new11/weekend-asana-classes-%28men-women%29%20-%20common.jpg',
   courseAsset115: '/home_page/Regular_asana_class.webp',
-  courseAsset117:'/SEO-New-Images/Courses/Restorative_Yoga_for_Cancer.webp'
+  courseAsset117:'/SEO-New-Images/Courses/Restorative_Yoga_for_Cancer.webp',
+  courseAsset118:'/home_page/corporate_copy.webp'
+  
 }
 
 export const facilitiyAssets = {
@@ -2656,6 +2658,28 @@ export const landingPage = {
   curve1: '/Landing_page/curve1.png',
   curve2: '/Landing_page/curve2.jpeg',
   text: '/Landing_page/Text.png'
+}
+export const CorporateWellnessLogos = {
+  BankOfBarodaNew: '/Corporate-wellness/BANKBARODA.png',
+  bankOfBaroda: '/Corporate-wellness/Bank_of_Baroda_Logo.png',
+  indianOil: '/Corporate-wellness/Indian_Oil_Corporation.png',
+  lnt: '/Corporate-wellness/L&T.png',
+  pFizer: '/Corporate-wellness/Pfizer_(2021).svg.png',
+  unionBank:'/Corporate-wellness/Union-Bank-of-India.png',
+  deutscheBank:'/Corporate-wellness/deutsche-bank-logo.png',
+  siemens:'/Corporate-wellness/siemens-logo.png',
+  lifeStyle: '/Corporate-wellness/Lifestyle & Disease Management.jpg',
+  WellnessProgram: '/Corporate-wellness/What Makes Our Corporate Wellness Programs Unique.JPG',
+  ManageStress: '/Corporate-wellness/How to Manage Stress at Work.jpg',
+  WorkpaceProgram: '/Corporate-wellness/Holistic Workplace Wellness Program.jpg',
+  corporateWheel: '/Corporate-wellness/corporate-wheel.png',
+  corporate: '/Corporate-wellness/corporate.png',
+  workspace: '/Corporate-wellness/WorkspaceNew.png',
+  holisticFirst: '/Corporate-wellness/1v.jpg',
+  holisticSecond: '/Corporate-wellness/2v.jpg',
+  holisticThird: '/Corporate-wellness/3v.jpg',
+  holisticFourth: '/Corporate-wellness/4v.jpg'
+  
 }
 
 export const nutriClinic = {
