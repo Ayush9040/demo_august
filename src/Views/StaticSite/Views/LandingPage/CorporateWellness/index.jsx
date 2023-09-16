@@ -98,7 +98,7 @@ const corporateWellness = () => {
           isOnlyBanner={false}
           innerNav={false}
           description={description}
-          bannerImg={`${baseDomain}${courseAssets.courseAsset118}`}
+          bannerImg={`${baseDomain}${courseAssets.courseAssets122}`}
           overlay="rgba(59, 78, 74, 0.80)"
         >
           <CorporateWellnessNavComponent abc={CorporateWellessProgram} />

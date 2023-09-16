@@ -161,6 +161,7 @@ export const courseAssets = {
   courseAssets114: '/Courses/Camps/Kid.jpg',
   courseAssets115: '/SEO-New-Images/Courses/pregnancy-yoga-camp.webp',
   courseAssets116: '/SEO-New-Images/Courses/kids-yoga-camp.webp',
+  courseAssets122: '/SEO-New-Images/Courses/newCorpWellness.jpeg',
 
   // certificate
 
@@ -2678,7 +2679,8 @@ export const CorporateWellnessLogos = {
   holisticFirst: '/Corporate-wellness/1v.jpg',
   holisticSecond: '/Corporate-wellness/2v.jpg',
   holisticThird: '/Corporate-wellness/3v.jpg',
-  holisticFourth: '/Corporate-wellness/4v.jpg'
+  holisticFourth: '/Corporate-wellness/4v.jpg',
+  corpWellness: '/Corporate-wellness/newCorpWellness.jpeg'
   
 }
 
