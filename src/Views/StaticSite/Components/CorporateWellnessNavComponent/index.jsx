@@ -104,7 +104,7 @@ const CorporateWellnessNavComponent = ({ abc }) => {
           </div>
           <div className="user-container">
             <button style={{ border: '0.5px solid #fff', backgroundColor: 'transparent', fontSize:'18px', fontWeight:'600', cursor:'pointer', borderRadius:'20px', color:'#fff', padding: '7px 16px' }} className='getinTouchbtn'>Get in Touch</button>
-            <div className='profile-container' onMouseOver={()=>{setDropdown(true)}} onMouseOut={()=>{setDropdown(false)}}  >
+            <div style= {{ marginTop: '7px' }}className='profile-container' onMouseOver={()=>{setDropdown(true)}} onMouseOut={()=>{setDropdown(false)}}  >
               <Link to={isLoggedIn ? '/user/profile':'/user/sign-in'} >
                 {abc.color === 'orange'
                   ? User

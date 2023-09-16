@@ -14,6 +14,7 @@ import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import InputComponent from '../../../Components/InputComponent'
 import { CreateForm, successMail } from './Api'
+import '../../../../StaticSite/Components/TermsandCondition/style.scss'
 
 const corporateWellness = () => {
   const [formData, setFormData] = useState({
@@ -77,7 +78,7 @@ const corporateWellness = () => {
   }
 
   let description =
-  'Revolutionize Your Corporate Wellness Culture \n Focused on building a healthier, happier and more productive workforce !'
+  'Revolutionize Your Corporate Wellness Culture. Focused on building a healthier, happier and more productive workforce !'
 
   const CorporateWellessProgram = {
     title: 'Holistic Workplace Wellness Program',
@@ -106,7 +107,7 @@ const corporateWellness = () => {
         <div className="trusted-companies-container">
           <div className="trusted-companies-heading">
             <h1>Trusted by 500+ Leading Corporate Companies</h1>
-            <div className="line-heading"></div>
+            <div className="bottom-line"></div>
             <p>
               A pioneer in the workplace wellness space with more than 104 years
               of experience.
@@ -186,7 +187,7 @@ const corporateWellness = () => {
               Transformed and Enriched Lives
             </h1>
             <h1>of 10+ Million Employees</h1>
-            <div className="line-heading-1"></div>
+            <div className="custom-border global-top-margin-1"></div>
           </div>
           <div className="tranformed-companies-corosuel">
             <div className="company-corosuel">
@@ -203,7 +204,7 @@ const corporateWellness = () => {
         <div className="wellness-support-features">
           <h1 className="wellness1">What Makes Our </h1>
           <h1 className="wellness2">Corporate Wellness Programs Unique?</h1>
-          <div className="line-heading-2"></div>
+          <div className="bottom-line-2"></div>
           <div className="wellness-support">
             <div className="wellness-features">Customized Programs</div>
             <div className="wellness-features">
@@ -225,14 +226,14 @@ const corporateWellness = () => {
           {/* <div className='filler-main-logo'>{filler1}</div> */}
         </div>
         <div className="workplace-challenges-container">
-          <div className="line-heading-second"></div>
+          <div className="custom-border global-top-margin-second"></div>
           <div className="workplace-challenges-div">
             <div className="Workplace-challenges-img">
               <img src={`${baseDomain}${CorporateWellnessLogos.workspace}`} />
             </div>
             <div className="workplace-challenges-reasons">
               <h2>Workplace Challenges</h2>
-              {/* <div className='line-heading-3'></div> */}
+              {/* <div className='custom-border global-top-margin-3'></div> */}
               <div className="workspace-parts">
                 <p>Burnout Stress</p>
                 <p>Performance Issues</p>
@@ -251,9 +252,9 @@ const corporateWellness = () => {
         <div className="holistic-corporate-wellness-program-container">
           <h1>
             Our Holistic Corporate Wellness Programs{' '}
-            <div className="line-heading-4"></div>
+            <div className="bottom-line-3"></div>
           </h1>
-          <div className="line-heading-second"></div>
+          <div className="custom-border global-top-margin-second"></div>
           <Slider {...settings}>
             <div className="holistic-corporate-div-container">
               <div className="holistic-corporate-div">
@@ -605,7 +606,7 @@ const corporateWellness = () => {
         </div>
         <div className="happy-customer-experience">
           <h1>Experience Shared by Our Happy Clients</h1>
-          <div className="line-heading-second"></div>
+          <div className="bottom-line-customer"></div>
           <Slider {...settings}>
             <div className="expierence">
               <h3>
@@ -707,8 +708,8 @@ const corporateWellness = () => {
           </Slider>
         </div>
         <div className="corporate-wellness-blog-section">
-          <h1>Enhance Your Knowledge</h1>
-          <div className="line-heading-5"></div>
+          <h1> Wellness Blogs</h1>
+          <div className="bottom-line-blogs"></div>
           <p>Read Our Latest Blogs and Educate Yourself.</p>
           <div className="blog-card-container">
             <div className="blog-card">
@@ -766,7 +767,7 @@ const corporateWellness = () => {
         <div className="corporate-wellness-form-container" id="#hoverOverthis">
           <div className="corporate-wellness-form-heading">
             <h1>
-              Have Questions?<div className="line-heading-6"></div>
+              Have Questions?<div className="custom-border global-top-margin-6"></div>
             </h1>
             <p>Get in Touch with Us!</p>
           </div>
