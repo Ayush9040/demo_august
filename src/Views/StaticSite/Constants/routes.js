@@ -473,14 +473,14 @@ const staticSiteRoutes = [
     routePath: '/sattvik-cooking',
     name: 'SattvikCooking',
   },
-  {
-    Component: CorporateWorkshop,
-    path: '/corporate-workshops',
-    exact: true,
-    id: 'statisSiteUnderHighlightsCorporateWorkshop',
-    routePath: '/corporate-workshops',
-    name: 'CorporateWorkshop',
-  },
+  // {
+  //   Component: CorporateWorkshop,
+  //   path: '/corporate-workshops',
+  //   exact: true,
+  //   id: 'statisSiteUnderHighlightsCorporateWorkshop',
+  //   routePath: '/corporate-workshops',
+  //   name: 'CorporateWorkshop',
+  // },
   {
     Component: FullmoonMeditation,
     path: '/fullmoon-meditation',
@@ -821,10 +821,10 @@ const staticSiteRoutes = [
   },
   {
     Component: corporateWellness,
-    path: '/corporate-wellness',
+    path: '/corporate-workshop',
     exact: true,
     id: 'statisSitecorporateWellness',
-    routePath: '/corporate-wellness',
+    routePath: '/corporate-workshop',
     name: 'CorporateWellness',
   },
   {
