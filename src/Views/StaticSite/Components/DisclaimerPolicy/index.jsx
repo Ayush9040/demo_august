@@ -239,23 +239,12 @@ const DisclaimerPolicy = ({
       <div className="mid-content">
         <div className="mid-1">
           <p>No Refund Policy :</p>
-          <ol type="a">
-            <li>
-              The Yoga Institute has a no-refund policy for all its programmes.
+          <ol>
+          The Yoga Institute has a no-refund policy for all its programmes.
               The only exception to this policy is in the event of a programme
               being cancelled by the Institute. In such an event, the
               student/participant will be offered a credit which can be utilised
               for any other programme of the Institute.
-            </li>
-            <li>
-              In case a student/participant is forced to miss a programme due to
-              medical reasons a full refund will be made, subject to supporting
-              evidence from a registered medical practitioner.
-            </li>
-            <li>
-              The decision with regards to refund lies with the Management of
-              The Yoga Institute and will be final and binding.
-            </li>
           </ol>
         </div>
         <div className="mid-2">
@@ -312,7 +301,7 @@ const DisclaimerPolicy = ({
             onChange={() => setDisData({ ...disData, terms: 'yes' })}
           />
 
-          <p>I have read and agree to the above terms and conditionsterms.</p>
+          <p>I have read and agree to the above terms and conditions.</p>
           {empty === 1 && (
             <small style={{ color: 'red', marginLeft: '0' }}>
               *Please agree to the condition!
