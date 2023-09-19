@@ -240,11 +240,11 @@ const DisclaimerPolicy = ({
         <div className="mid-1">
           <p>No Refund Policy :</p>
           <ol>
-          The Yoga Institute has a no-refund policy for all its programmes.
+          The Yoga Institute has no-refund policy for all its programmes.
               The only exception to this policy is in the event of a programme
-              being cancelled by the Institute. In such an event, the
-              student/participant will be offered a credit which can be utilised
-              for any other programme of the Institute.
+              cancelled by the Institute. In such cases, the
+              student/participant will be offered a credit that can be used
+              for any other institute programme or a refund of the event fee.
           </ol>
         </div>
         <div className="mid-2">
