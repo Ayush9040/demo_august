@@ -4016,10 +4016,15 @@
     ]
   },
   "/courses":{
-    "title":"Courses - The Yoga Institute",
-    "h1Tag": "Courses",
+    "title":"Yoga Certificate Courses - The Yoga Institute",
+    "h1Tag": "Yoga Certificate Courses",
     "h2Tags": [],
-    "metaData": []
+    "metaData": [
+      {
+        "property": "og:description",
+        "content": "Enroll in our Yoga Certificate Courses at The Yoga Institute. Explore comprehensive yoga courses and earn your yoga certification with us."
+      }
+    ]
   },
   "/weekend-asana-classes-online":{
     "title":"Weekend Asana Classes -(Men & Women) - Online",
