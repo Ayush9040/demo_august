@@ -1,111 +1,131 @@
 import baseDomain from '../../assets/images/imageAsset'
 import { locateAsset } from '../../assets/images/imageAsset'
 
-export const locateData =[
+export const locateData = [
   {
-    flag:`${baseDomain}${locateAsset.India}`,
-    country:'India',
-    add:'Head Quarter Santacruz East',
-    subAdd:'Shri Yogendra Marg Prabhat Colony, Santacruz East Mumbai, Maharashtra 400055',
-    website:'https://theyogainstitute.org',
-    branches :[
+    flag: `${baseDomain}${locateAsset.India}`,
+    country: 'India',
+    add: 'Head Quarter Santacruz East',
+    subAdd:
+      'Shri Yogendra Marg Prabhat Colony, Santacruz East Mumbai, Maharashtra 400055',
+    website: 'https://theyogainstitute.org',
+    branches: [
       {
-        state:'Goa',
-        notstate:'Viva Chorão, Near Our Lady of Grace Church, Madel Chorão, Tiswadi Goa, 403102',
-        phone:['+91-9307047148'],
-        website:'https://theyogainstitutegoa.com',
-        email:'goa@theyogainstitute.org',
-        url:'https://jal.theyogainstitute.org/',
-        toRedirect: true
+        state: 'Goa',
+        notstate:
+          'Viva Chorão, Near Our Lady of Grace Church, Madel Chorão, Tiswadi Goa, 403102',
+        phone: ['+91-9307047148'],
+        website: 'https://theyogainstitutegoa.com',
+        email: 'goa@theyogainstitute.org',
+        url: 'https://jal.theyogainstitute.org/',
+        toRedirect: true,
       },
       {
-        state:'Raipur',
-        notstate:'The Yoga Institute, Raipur Besides Vidya Kidney Hospital,In front of Indian Chilly Restaurant,Shankar Nagar Main Road Raipur, CG 492012',
-        phone:['+91-9752550490','+91-982035049'],
-        email:'tyiraipur@gmail.com',
-        website:'https://theyogainstituteraipur.com',
-        url:'https://jal.theyogainstitute.org/',
-        toRedirect: true
+        state: 'Raipur',
+        notstate:
+          'The Yoga Institute, Raipur Besides Vidya Kidney Hospital,In front of Indian Chilly Restaurant,Shankar Nagar Main Road Raipur, CG 492012',
+        phone: ['+91-9752550490', '+91-982035049'],
+        email: 'tyiraipur@gmail.com',
+        website: 'https://theyogainstituteraipur.com',
+        url: 'https://jal.theyogainstitute.org/',
+        toRedirect: true,
       },
       {
-        state:'Kochi',
-        notstate:'Namami Health Retreat`s A Wellness Sanctuary 7/156, Mulamkuzhy, Malayttoor, Ernakulam Kochi 683587 – Kerala, India.',
-        phone:['+91-4842621234', '+91-9188952296'],
-        email:'tyikochi@namamihealth.com',
-        website:'https://namamihealth.com',
-        url:'https://jal.theyogainstitute.org/',
-        toRedirect: true
+        state: 'Kochi',
+        notstate:
+          'Namami Health Retreat`s A Wellness Sanctuary 7/156, Mulamkuzhy, Malayttoor, Ernakulam Kochi 683587 – Kerala, India.',
+        phone: ['+91-4842621234', '+91-9188952296'],
+        email: 'tyikochi@namamihealth.com',
+        website: 'https://namamihealth.com',
+        url: 'https://jal.theyogainstitute.org/',
+        toRedirect: true,
       },
       {
-        state:'Delhi',
+        state: 'Delhi',
         //notstate:'Swami Parmanand Prakritik Chikitsalaya (SPPC) Main Mother Dairy Road, Shanti Marg,Near Manglam Red Light, Narwana Rd, Block E, West Vinod Nagar, New Delhi, 110092',
-        phone:['+91-9899904455'],
-        email:'tyidelhi@theyogainstitute.org',
-        website:'https://theyogainstitutedelhi.com',
-        url:'https://jal.theyogainstitute.org/',
-        toRedirect: true
+        phone: ['+91-9899904455'],
+        email: 'tyidelhi@theyogainstitute.org',
+        website: 'https://theyogainstitutedelhi.com',
+        url: 'https://jal.theyogainstitute.org/',
+        toRedirect: true,
       },
       {
-        state:'Matunga (CR)',
-        notstate:'Sri Kanyaka Parmeshwari Temple, Plot No 403, Vasavi Nilayam, Telang Road, Matunga (CR), Mumbai.',
-        email:'tyimatunga@theyogainstitute.org',
-        phone:['+91-9343517490'],
-        url: 'matunga'
+        state: 'Matunga (CR)',
+        notstate:
+          'Sri Kanyaka Parmeshwari Temple, Plot No 403, Vasavi Nilayam, Telang Road, Matunga (CR), Mumbai.',
+        email: 'tyimatunga@theyogainstitute.org',
+        phone: ['+91-9343517490'],
+        url: 'matunga',
       },
       {
-        state:'Santacruz (W)',
-        notstate:'Rotary Club of Bombay West Rotary Service Centre, Rotary Chowk, Juhu Tara Road, Santacruz W, Mumbai 400049.',
-        email:'dhhruv.s@gmail.com',
-        url:'https://jal.theyogainstitute.org/',
-        phone:['+91-9833864964'],
-        toRedirect: true
+        state: 'Santacruz (W)',
+        notstate:
+          'Rotary Club of Bombay West Rotary Service Centre, Rotary Chowk, Juhu Tara Road, Santacruz W, Mumbai 400049.',
+        email: 'dhhruv.s@gmail.com',
+        url: 'https://jal.theyogainstitute.org/',
+        phone: ['+91-9833864964'],
+        toRedirect: true,
       },
       {
-        state:'Juhu',
-        notstate:'Ground Floor Backside, Abhijat Bunglow, Plot No. 48, NS Road Number 7, Opp. Siddhivinayak Building, JVPD Scheme, Juhu.',
-        email:'dhhruv.s@gmail.com',
-        url:'https://jal.theyogainstitute.org/',
-        phone:['+91-9833864964'],
-        toRedirect: true
+        state: 'Juhu',
+        notstate:
+          'Ground Floor Backside, Abhijat Bunglow, Plot No. 48, NS Road Number 7, Opp. Siddhivinayak Building, JVPD Scheme, Juhu.',
+        email: 'dhhruv.s@gmail.com',
+        url: 'https://jal.theyogainstitute.org/',
+        phone: ['+91-9833864964'],
+        toRedirect: true,
       },
       {
-        state:'Vile Parle',
-        notstate:'Sanyas Ashram Temple, Off. Bajaj Road, Vile Parle West, Mumbai - 400056',
-        email:'dhhruv.s@gmail.com',
-        url:'https://jal.theyogainstitute.org/',
-        phone:['+91-9833864964'],
-        toRedirect: true
+        state: 'Vile Parle',
+        notstate:
+          'Sanyas Ashram Temple, Off. Bajaj Road, Vile Parle West, Mumbai - 400056',
+        email: 'dhhruv.s@gmail.com',
+        url: 'https://jal.theyogainstitute.org/',
+        phone: ['+91-9833864964'],
+        toRedirect: true,
       },
       {
-        state:'Kalyan',
-        notstate:'Saket College, Saket Vidyanagri Marg, Katemenivali, Chinchpada Road, Kalyan, Maharashtra - 421306',
-        phone:['+91-9673134471'],
-        url:'https://jal.theyogainstitute.org/',
-        toRedirect: true
+        state: 'Kalyan',
+        notstate:
+          'Saket College, Saket Vidyanagri Marg, Katemenivali, Chinchpada Road, Kalyan, Maharashtra - 421306',
+        phone: ['+91-9673134471'],
+        url: 'https://jal.theyogainstitute.org/',
+        toRedirect: true,
       },
       {
-        state:'Lokhandwala',
-        notstate:'The Yoga Institute, Lokhandwala 703, Aston Building, Above Mercedes Benz Showroom, Andheri, Near Lokhandwala Circle',
-        email:'dhhruv.s@gmail.com',
-        url:'https://jal.theyogainstitute.org/',
-        phone:['+91-9833864964'],
-        toRedirect: true
+        state: 'Lokhandwala',
+        notstate:
+          'The Yoga Institute, Lokhandwala 703, Aston Building, Above Mercedes Benz Showroom, Andheri, Near Lokhandwala Circle',
+        email: 'dhhruv.s@gmail.com',
+        url: 'https://jal.theyogainstitute.org/',
+        phone: ['+91-9833864964'],
+        toRedirect: true,
       },
       {
-        state:'Malad',
-        notstate:'201 & 202, B Wing, 2nd Floor, Solitaire 2, Opp Infinity Mall, Near Malad West Metro Station, New Link Road, Ekta Nagar, Malad West, Mumbai – 400064.',
-        email:'malad@theyogainstitute.in',
+        state: 'Malad',
+        notstate:
+          '201 & 202, B Wing, 2nd Floor, Solitaire 2, Opp Infinity Mall, Near Malad West Metro Station, New Link Road, Ekta Nagar, Malad West, Mumbai – 400064.',
+        email: 'malad@theyogainstitute.in',
         url: 'malad',
-        phone:['+91 9343517490'],
-        toRedirect: false
+        phone: ['+91 9343517490'],
+        toRedirect: false,
       },
       {
-        state:'Rishikesh',
-        notstate:'The Yoga Institute Rishikesh, BHAVYAM, House No. 4, Gali No. 4, Ward No. 1, Shri Badri Kedar Colony, Lakkad ghat, Khadri khadakmaaf, Yoga Nagri Rishikesh, Uttarakhand - 249204',
-        email:'theyogainstitute.rishikesh@gmail.com',
+        state: 'Rishikesh',
+        notstate:
+          'The Yoga Institute Rishikesh, BHAVYAM, House No. 4, Gali No. 4, Ward No. 1, Shri Badri Kedar Colony, Lakkad ghat, Khadri khadakmaaf, Yoga Nagri Rishikesh, Uttarakhand - 249204',
+        email: 'theyogainstitute.rishikesh@gmail.com',
         url: 'https://theyogainstituterishikesh.com/',
-        phone:['+91-7236022022'],
-        toRedirect: true
+        phone: ['+91-7236022022'],
+        toRedirect: true,
+      },
+      {
+        state: 'Vikhroli',
+        notstate: 'The Yoga Institute, Vikhroli Unit-1, Mahajan Silk Compound, Lal Bahadur Shastri Marg,Surya Nagar, HMPL Surya Nagar,Vikhroli West. Mumbai - 400079',
+        email: 'tyivikhroli@gmail.com',
+        url: 'https://theyogainstitutevikhroli.com/',
+        phone: ['+91-9820696800'],
+        toRedirect: true,
       },
 
       // {
@@ -121,37 +141,37 @@ export const locateData =[
       //   state:'Indore',
       //   notstate:'The Yoga Institute, 1st Plot No. 3, Akshay Deep Colony MR 9, AB Rd, near Lotus, Indore, Madhya Pradesh 452010'
       // },
-    ]
+    ],
   },
   {
-    flag:`${baseDomain}${locateAsset.costaRica}`,
-    country:'Costa Rica',
-    add:'The Yoga Institute, Costa Rica, Modo Elefante,',
-    subAdd:'Provincia de Alajuela, Atenas, 20501',
-    mobile:'(506) 8729 3102',
-    email:'tyi@modoelefante.org',
-    website:'https://modoelefante.org/',
-    branches:[]
+    flag: `${baseDomain}${locateAsset.costaRica}`,
+    country: 'Costa Rica',
+    add: 'The Yoga Institute, Costa Rica, Modo Elefante,',
+    subAdd: 'Provincia de Alajuela, Atenas, 20501',
+    mobile: '(506) 8729 3102',
+    email: 'tyi@modoelefante.org',
+    website: 'https://modoelefante.org/',
+    branches: [],
   },
   {
-    flag:`${baseDomain}${locateAsset.france}`,
-    country:'France',
-    add:'The Yoga Institute, France Centre Lothlorien,',
-    subAdd:'Domaine de Moiron 52800 Foulain, France',
-    mobile:'+33 (0) 325034086',
-    website:'https://centrelothlorien.com/',
-    email:'centrelothlorien@gmail.com',
-    branches:[]
+    flag: `${baseDomain}${locateAsset.france}`,
+    country: 'France',
+    add: 'The Yoga Institute, France Centre Lothlorien,',
+    subAdd: 'Domaine de Moiron 52800 Foulain, France',
+    mobile: '+33 (0) 325034086',
+    website: 'https://centrelothlorien.com/',
+    email: 'centrelothlorien@gmail.com',
+    branches: [],
   },
   {
-    flag:`${baseDomain}${locateAsset.hongKong}`,
-    country:'Hong Kong',
-    add:'Kowloon, Hong Kong, (Opposite Kimberley Hotel),The Yoga Institute,',
-    subAdd:'Nearest MTR exit is :- Tsim Sha Tsui (TST) Exit B',
-    mobile:'21919651',
-    website:'https://yoga.org.hk/',
-    email:'life@yoga.org.hk',
-    branches:[]
+    flag: `${baseDomain}${locateAsset.hongKong}`,
+    country: 'Hong Kong',
+    add: 'Kowloon, Hong Kong, (Opposite Kimberley Hotel),The Yoga Institute,',
+    subAdd: 'Nearest MTR exit is :- Tsim Sha Tsui (TST) Exit B',
+    mobile: '21919651',
+    website: 'https://yoga.org.hk/',
+    email: 'life@yoga.org.hk',
+    branches: [],
   },
   // {
   //   flag:`${baseDomain}${locateAsset.thailand}`,
@@ -164,14 +184,14 @@ export const locateData =[
   //   branches:[]
   // },
   {
-    flag:`${ baseDomain }${ locateAsset.uae }`,
-    country:'U.A.E.',
-    add:'Jumeirah Lake Towers, Dubai',
-    subAdd:'',
-    mobile:'+971563801232',
-    email:'info@yogihearts.com',
-    website:'https://yogihearts.com/',
-    branches:[]
+    flag: `${baseDomain}${locateAsset.uae}`,
+    country: 'U.A.E.',
+    add: 'Jumeirah Lake Towers, Dubai',
+    subAdd: '',
+    mobile: '+971563801232',
+    email: 'info@yogihearts.com',
+    website: 'https://yogihearts.com/',
+    branches: [],
   },
   // {
   //   flag:`${baseDomain}${locateAsset.urugauy}`,
