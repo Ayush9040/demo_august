@@ -33,9 +33,9 @@ const YogaByTheBay = lazy(() => import('../Components/Highlights/YogaByTheBay'))
 const FullmoonMeditation = lazy(() =>
   import('../Components/Highlights/FullmoonMeditation')
 )
-const CorporateWorkshop = lazy(() =>
-  import('../Components/Highlights/CorporateWorkshop')
-)
+// const CorporateWorkshop = lazy(() =>
+//   import('../Components/Highlights/CorporateWorkshop')
+// )
 const OnlineTution = lazy(() => import('../Views/HomeTuitions/Tutions'))
 const AboutUs = lazy(() => import('../Views/About/Views/overview'))
 const OurLegacy = lazy(() => import('../Views/About/Views/our-legacy'))
@@ -473,14 +473,14 @@ const staticSiteRoutes = [
     routePath: '/sattvik-cooking',
     name: 'SattvikCooking',
   },
-  {
-    Component: CorporateWorkshop,
-    path: '/corporate-workshops',
-    exact: true,
-    id: 'statisSiteUnderHighlightsCorporateWorkshop',
-    routePath: '/corporate-workshops',
-    name: 'CorporateWorkshop',
-  },
+  // {
+  //   Component: CorporateWorkshop,
+  //   path: '/corporates',
+  //   exact: true,
+  //   id: 'statisSiteUnderHighlightsCorporateWorkshop',
+  //   routePath: '/corporate-workshops',
+  //   name: 'CorporateWorkshop',
+  // },
   {
     Component: FullmoonMeditation,
     path: '/fullmoon-meditation',
@@ -821,7 +821,7 @@ const staticSiteRoutes = [
   },
   {
     Component: corporateWellness,
-    path: '/corporate-workshop',
+    path: '/corporate-workshops',
     exact: true,
     id: 'statisSitecorporateWellness',
     routePath: '/corporate-workshop',
