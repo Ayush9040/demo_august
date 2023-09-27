@@ -1803,7 +1803,7 @@ body {
 
     .workplace-challenges-container {
       width: 100%;
-      height: 800px;
+      height: 900px;
       background: linear-gradient(90deg, rgba(226, 226, 236, 1) 7%, rgba(221, 221, 230, 1) 28%, rgba(173, 173, 180, 1) 28%, rgba(193, 193, 199, 1) 28%, rgba(221, 221, 228, 1) 28%, rgba(255, 255, 255, 1) 100%, rgba(0, 212, 255, 1) 100%);
 
       .workplace-challenges-div {
@@ -1818,7 +1818,7 @@ body {
           img {
             width: 500px;
             margin-top: 50px;
-            height: 750px;
+            height: 850px;
             padding-left: 3rem;
           }
         }
@@ -1847,7 +1847,7 @@ body {
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: 18px;
+            font-size: 16px;
             font-weight: 700;
           }
 
@@ -2123,7 +2123,7 @@ body {
 
     .workplace-challenges-container {
       width: 100%;
-      height: 800px;
+      height: 865px;
       background: linear-gradient(90deg, rgba(226, 226, 236, 1) 7%, rgba(221, 221, 230, 1) 28%, rgba(173, 173, 180, 1) 28%, rgba(193, 193, 199, 1) 28%, rgba(221, 221, 228, 1) 28%, rgba(255, 255, 255, 1) 100%, rgba(0, 212, 255, 1) 100%);
 
       .workplace-challenges-div {
@@ -2138,7 +2138,7 @@ body {
           img {
             width: 400px;
             margin-top: 50px;
-            height: 750px;
+            height: 813px;
             padding-left: 0rem;
 
           }
@@ -2164,11 +2164,11 @@ body {
             background: transparent linear-gradient(30deg, #EFC09E 0%, #E0A0AD 100%) 0% 0% no-repeat padding-box;
             border-radius: 30px;
             text-align: center;
-            padding: 12px 24px;
+            padding: 12px 24px; 
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: 18px;
+            font-size: 16px;
             font-weight: 700;
           }
 
@@ -2254,7 +2254,7 @@ body {
 
     .workplace-challenges-container {
       width: 100%;
-      height: 750px;
+      height: 900px;
       background: linear-gradient(90deg, rgba(226, 226, 236, 1) 7%, rgba(221, 221, 230, 1) 28%, rgba(173, 173, 180, 1) 28%, rgba(193, 193, 199, 1) 28%, rgba(221, 221, 228, 1) 28%, rgba(255, 255, 255, 1) 100%, rgba(0, 212, 255, 1) 100%);
 
       .workplace-challenges-div {
@@ -2267,11 +2267,11 @@ body {
           // margin: 0 auto;
 
           img {
-            width: 325px;
+            width: 390px;
             margin-top: 50px;
-            height: 700px;
+            height: 848px;
             position: relative;
-            right: 5rem;
+            // right: 3rem;
             padding-left: 0rem;
           }
         }
@@ -2513,24 +2513,24 @@ body {
 
     .workplace-challenges-container {
       width: 100%;
-      height: 750px;
+      height: 890px;
       background: linear-gradient(90deg, rgba(226, 226, 236, 1) 7%, rgba(221, 221, 230, 1) 28%, rgba(173, 173, 180, 1) 28%, rgba(193, 193, 199, 1) 28%, rgba(221, 221, 228, 1) 28%, rgba(255, 255, 255, 1) 100%, rgba(0, 212, 255, 1) 100%);
 
       .workplace-challenges-div {
         display: flex;
         justify-content: left;
-        gap: 0rem;
+        // gap: 0rem;
 
         .Workplace-challenges-img {
           // width: 100%;
           // margin: 0 auto;
 
           img {
-            width: 300px;
+            width: 389px;
             margin-top: 50px;
-            height: 700px;
+            height: 838px;
             position: relative;
-            right: 10rem;
+            // right: 10rem;
             padding-left: 0rem;
           }
         }
@@ -2540,6 +2540,23 @@ body {
           justify-content: center;
           flex-direction: column;
           align-items: center;
+          .workspace-parts{
+            p {
+              border: none;
+              margin: 0 auto;
+              width: 190px;
+              height: 55px;
+              background: transparent linear-gradient(30deg, #EFC09E 0%, #E0A0AD 100%) 0% 0% no-repeat padding-box;
+              border-radius: 30px;
+              text-align: center;
+              padding: 12px 24px; 
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              font-size: 15px;
+              font-weight: 700;
+            }
+          }
         }
       }
     }
@@ -2773,7 +2790,7 @@ body {
 
     .workplace-challenges-container {
       width: 100%;
-      height: 750px;
+      height: 800px;
       background: linear-gradient(90deg, rgba(226, 226, 236, 1) 7%, rgba(221, 221, 230, 1) 28%, rgba(173, 173, 180, 1) 28%, rgba(193, 193, 199, 1) 28%, rgba(221, 221, 228, 1) 28%, rgba(255, 255, 255, 1) 100%, rgba(0, 212, 255, 1) 100%);
 
       .workplace-challenges-div {
@@ -2786,18 +2803,35 @@ body {
           // margin: 0 auto;
 
           img {
-            width: 300px;
+            width: 335px;
             margin-top: 50px;
-            height: 700px;
+            height: 748px;
             position: relative;
-            right: 10rem;
+            // right: 10rem;
             padding-left: 0rem;
           }
         }
 
         .workplace-challenges-reasons {
           position: relative;
-          right: 4rem;
+          // right: 4rem;
+          .workspace-parts{
+            p {
+              border: none;
+              margin: 0 auto;
+              width: 190px;
+              height: 52px;
+              background: transparent linear-gradient(30deg, #EFC09E 0%, #E0A0AD 100%) 0% 0% no-repeat padding-box;
+              border-radius: 30px;
+              text-align: center;
+              padding: 12px 24px; 
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              font-size: 14px;
+              font-weight: 700;
+            }
+          }
         }
       }
     }
@@ -3136,7 +3170,7 @@ body {
 
     .workplace-challenges-container {
       width: 100%;
-      height: 700px;
+      height: 750px;
       background: linear-gradient(90deg, rgba(226, 226, 236, 1) 7%, rgba(221, 221, 230, 1) 28%, rgba(173, 173, 180, 1) 28%, rgba(193, 193, 199, 1) 28%, rgba(221, 221, 228, 1) 28%, rgba(255, 255, 255, 1) 100%, rgba(0, 212, 255, 1) 100%);
 
       .workplace-challenges-div {
@@ -3149,26 +3183,40 @@ body {
           // margin: 0 auto;
 
           img {
-            width: 300px;
+            width: 320px;
             margin-top: 50px;
-            height: 650px;
+            height: 768px;
             position: relative;
-            right: 10rem;
+            // right: 10rem;
             padding-left: 0rem;
+            display: none;
           }
         }
 
         .workplace-challenges-reasons {
-          position: relative;
-          right: 10rem;
+          // position: relative;
+          // right: 10rem;
+          width: 100%;
 
-          h2 {
-            font-size: 2.75rem;
-          }
 
-          p {
-            width: 210px;
-            font-size: 16px;
+          .workspace-parts{
+            display: flex;
+              text-align: center;
+              justify-content: center;
+              flex-direction: column;
+            h2 {
+              font-size: 2.75rem;
+              
+            }
+  
+            p {
+              width: 185px;
+              font-size: 14px;
+              font-weight: 700;
+              height: 50px;
+              padding: 12px 24px; 
+             
+            }
           }
         }
       }
@@ -3503,7 +3551,7 @@ body {
 
     .workplace-challenges-container {
       width: 100%;
-      height: 550px;
+      height: 860px;
       background: linear-gradient(90deg, rgba(226, 226, 236, 1) 7%, rgba(221, 221, 230, 1) 28%, rgba(173, 173, 180, 1) 28%, rgba(193, 193, 199, 1) 28%, rgba(221, 221, 228, 1) 28%, rgba(255, 255, 255, 1) 100%, rgba(0, 212, 255, 1) 100%);
 
       .workplace-challenges-div {
