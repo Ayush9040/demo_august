@@ -8519,7 +8519,7 @@ const camps = {
         templateNonResidential: 'CAMP_FOR_7_DAYS_HEALTH',
       },
     },
-    dates: ['11th Nov to 17th Nov 2023',],
+    dates: ['18th Nov to 24th Nov 2023',],
     online: false,
     onCampus: true,
     nonResidential: true,

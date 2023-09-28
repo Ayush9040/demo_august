@@ -475,7 +475,7 @@ const staticSiteRoutes = [
   },
   // {
   //   Component: CorporateWorkshop,
-  //   path: '/corporate-workshops',
+  //   path: '/corporates',
   //   exact: true,
   //   id: 'statisSiteUnderHighlightsCorporateWorkshop',
   //   routePath: '/corporate-workshops',
@@ -821,7 +821,7 @@ const staticSiteRoutes = [
   },
   {
     Component: corporateWellness,
-    path: '/corporate-workshop',
+    path: '/corporate-workshops',
     exact: true,
     id: 'statisSitecorporateWellness',
     routePath: '/corporate-workshop',
