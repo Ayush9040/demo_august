@@ -100,6 +100,13 @@ const data=
     </ul>
   },
   {
+    heading:'No Refund Policy',
+    points:
+    <ul>
+      <li>The Yoga Institute has no refund policy for all its programmes. The only exception to this policy is in the event of a programme cancelled by the institute. In such cases, the student/participant will be offered a credit that can be used for any other institute programme or a refund of the event fee.</li>
+    </ul>
+  },
+  {
     heading:'Kindly Note',
     points:
     <ul>

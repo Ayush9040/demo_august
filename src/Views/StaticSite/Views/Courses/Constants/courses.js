@@ -9841,7 +9841,7 @@ const camps = {
       },
     },
     dates: [
-      '12th Nov to 2nd Dec 2023'
+      '19th Nov to 9th Dec 2023'
     ],
     online: true,
     onCampus: true,
