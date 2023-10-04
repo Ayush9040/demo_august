@@ -12406,7 +12406,7 @@ const certificate = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'certificate-course',
-    dates: ['21st Aug to 12th Oct 2023', '20th Nov 2023 to 11th Jan 2024'],
+    dates: ['21st Aug to 12th Oct 2023', '20th Nov 2023 to 11th Jan 2024','1st Dec 2023 to 24th Jan 2024'],
     online: true,
     onCampus: false,
     nonResidential: false,
@@ -12465,7 +12465,10 @@ const certificate = {
         content: {
           title: 'Online Yoga Sessions',
           text: [
-            'Mondays, Tuesdays & Thursdays: 11:30 am - 12:30 pm (IST)',
+            'Morning batch : Mondays, Tuesdays & Thursdays: 11:30 am - 12:30 pm (IST)',
+            'Date: 20th November 2023 to 11th January 2024',
+            'Evening batch: Wednesday, Friday & Saturday: 6:00 pm - 7:00 pm (IST)',
+            'Date: 1st December 2023 to 24th January 2024',
             '24 sessions of one hour each',
           ],
         },
