@@ -8531,7 +8531,7 @@ const camps = {
     timing: 'Saturday to Friday : 7:00 am - 7:00 pm (IST)',
     fees: {
       onlineFee: 0,
-      offlineFee: { residentialFee: 12000, nonResidentialFee: 9000 },
+      offlineFee: { residentialFee: 13000, nonResidentialFee: 9000 },
     },
     category: 'camps',
     metaDescription:
@@ -8724,8 +8724,8 @@ const camps = {
           title: 'Residential',
           text: [
             'Rs. 13,000/- Triple Sharing per person (Inclusive of course fee and 4 meals a day)',
-            'Rs. 20,000/- Dual Sharing per person (Inclusive of course fee and 4 meals a day)',
-            'Rs. 34,000/- Single Occupancy (Inclusive of course fee and 4 meals a day)',
+            // 'Rs. 20,000/- Dual Sharing per person (Inclusive of course fee and 4 meals a day)',
+            // 'Rs. 34,000/- Single Occupancy (Inclusive of course fee and 4 meals a day)',
           ],
         },
       },
@@ -8852,7 +8852,7 @@ const camps = {
     timing: 'Saturday to Friday : 7:00 am - 7:00 pm (IST)',
     fees: {
       onlineFee: 0,
-      offlineFee: { residentialFee: 12000, nonResidentialFee: 9000 },
+      offlineFee: { residentialFee: 13000, nonResidentialFee: 9000 },
     },
     category: 'camps',
     metaDescription:
@@ -9046,8 +9046,8 @@ const camps = {
           title: 'Residential',
           text: [
             'Rs. 13,000/- Triple Sharing per person (Inclusive of course fee and 4 meals a day)',
-            'Rs. 20,000/- Dual Sharing per person (Inclusive of course fee and 4 meals a day)',
-            'Rs. 34,000/- Single Occupancy (Inclusive of course fee and 4 meals a day)',
+            // 'Rs. 20,000/- Dual Sharing per person (Inclusive of course fee and 4 meals a day)',
+            // 'Rs. 34,000/- Single Occupancy (Inclusive of course fee and 4 meals a day)',
           ],
         },
       },
