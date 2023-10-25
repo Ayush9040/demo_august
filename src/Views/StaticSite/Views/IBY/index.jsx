@@ -186,14 +186,15 @@ const IBYcourse = () => {
 
             <p className='nutri-page-bold'> Timings & Fees (Online & On campus) </p>
             <ul>
-              <li><span className='nutri-page-semi-bold' > Date: </span>Starting from 10th March, 2023</li>
-              <li><span className='nutri-page-semi-bold' > Time: </span> Every Friday, 3:30 pm to 5:00 pm (IST)</li>
-              <li><span className='nutri-page-semi-bold' > Friday Class Fees </span>
+              <li><span className='nutri-page-semi-bold' > Day and Time:- </span>Every Friday, 3:30 pm to 5:00 pm (IST)</li>
+              {/* <li><span className='nutri-page-semi-bold' > Time: </span> Every Friday, 3:30 pm to 5:00 pm (IST)</li> */}
+              <li><span className='nutri-page-semi-bold' > Fees: </span>
                 <ul>
-                  <li><span  > March 2023 - May 2023 : </span>Rs. 2,000/-</li>
-                  <li><span  > June 2023 - August 2023 : </span>Rs. 1,500/-</li>
-                  <li><span  > September 2023 - November 2023	: </span>Rs. 1,000/-</li>
-                  <li><span> December 2023 - February 2024 : </span> Rs. 500/-</li>
+                  <li><span  > Q1 (Quarter1: March-April-May 2023) - </span> Rs. 500/-</li>
+                  <li><span  > Q2 (Quarter2: June- July- August 2023) - </span> Rs. 500/-</li>
+                  <li><span  > Q3 (Quarter3: September- October- November 2023) - </span> Rs. 500/-</li>
+                  <li><span> Q4 (Quarter4: December-January-February 2024) - </span> Rs. 500/-</li>
+                  <li><span> Annually- Rs 2000/- (March 2023 - February 2024) </span></li>
                 </ul>
               </li>
               

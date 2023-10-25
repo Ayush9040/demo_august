@@ -113,7 +113,7 @@ const ttc200hr = {
         type: 'paragraph',
         content: {
           title: 'Prerequisites',
-          text: ['None', '200 Hour Yoga Teacher Training'],
+          text: ['None'],
         },
       },
     ],
@@ -252,7 +252,7 @@ const ttc200hr = {
         type: 'table',
         content: {
           title: '',
-          tableHeading: ['Deatils', 'Marks', 'Minimum Scrore Req.'],
+          tableHeading: ['Details', 'Marks', 'Minimum Score Req.'],
           tableData: [['Theory Component', '50', '50%']],
         },
       },
@@ -276,7 +276,7 @@ const ttc200hr = {
           ]
         },
       },
-      //sdjkhfjkshdfjkhsdjkfhsdjkhfjksdgfjkdgfjkgdsfkgsdkfgsdkhgfhksdgfhgfhksdgkfgsdhgfksdgfsdhkgfhksdfghksdgf
+
       {
         type: 'u-list',
         content: {
@@ -331,7 +331,7 @@ const ttc200hr = {
         type: 'table',
         content: {
           title: '',
-          tableHeading: ['Deatils', 'Marks', 'Minimum Scrore Req.'],
+          tableHeading: ['Details', 'Marks', 'Minimum Score Req.'],
           tableData: [['Theory Component', '50', '50%']],
         },
       },
@@ -1148,7 +1148,7 @@ const ttc200hr = {
         type: 'table',
         content: {
           title: '',
-          tableHeading: ['Deatils', 'Marks', 'Minimum Scrore Req.'],
+          tableHeading: ['Details', 'Marks', 'Minimum Score Req.'],
           tableData: [['Theory Component', '50', '50%']],
         },
       },
@@ -1302,7 +1302,7 @@ const ttc200hr = {
         type: 'table',
         content: {
           title: '',
-          tableHeading: ['Deatils', 'Marks', 'Minimum Scrore Req.'],
+          tableHeading: ['Details', 'Marks', 'Minimum Score Req.'],
           tableData: [['Theory Component', '50', '50%']],
         },
       },
@@ -1455,20 +1455,7 @@ const ttc200hr = {
           text: ['200 hrs Yoga TTC Batch 4 - 2 Months TTC Online  - Hindi'],
         },
       },
-      // {
-      //   type: 'paragraph',
-      //   content: {
-      //     title: 'Duration',
-      //     text: ['2 Months (Part Time)'],
-      //   },
-      // },
-      // {
-      //   type: 'paragraph',
-      //   content: {
-      //     title: 'Date',
-      //     text: ['15th Aug 2022 to 8th Oct 2022'],
-      //   },
-      // },
+
       {
         type: 'paragraph',
         content: {
@@ -1619,7 +1606,7 @@ const ttc200hr = {
         type: 'table',
         content: {
           title: '',
-          tableHeading: ['Deatils', 'Marks', 'Minimum Scrore Req.'],
+          tableHeading: ['Details', 'Marks', 'Minimum Score Req.'],
           tableData: [['Theory Component', '50', '50%']],
         },
       },
@@ -1686,7 +1673,7 @@ const ttc200hr = {
         type: 'table',
         content: {
           title: '',
-          tableHeading: ['Deatils', 'Marks', 'Minimum Scrore Req.'],
+          tableHeading: ['Details', 'Marks', 'Minimum Score Req.'],
           tableData: [['Theory Component', '50', '50%']],
         },
       },
@@ -2093,7 +2080,7 @@ const ttc200hr = {
         type: 'table',
         content: {
           title: '',
-          tableHeading: ['Deatils', 'Marks', 'Minimum Scrore Req.'],
+          tableHeading: ['Details', 'Marks', 'Minimum Score Req.'],
           tableData: [['Theory Component', '50', '50%']],
         },
       },
@@ -2247,7 +2234,7 @@ const ttc200hr = {
         type: 'table',
         content: {
           title: '',
-          tableHeading: ['Deatils', 'Marks', 'Minimum Scrore Req.'],
+          tableHeading: ['Details', 'Marks', 'Minimum Score Req.'],
           tableData: [['Theory Component', '50', '50%']],
         },
       },
@@ -2563,7 +2550,7 @@ const ttc200hr = {
         type: 'table',
         content: {
           title: '',
-          tableHeading: ['Deatils', 'Marks', 'Minimum Scrore Req.'],
+          tableHeading: ['Details', 'Marks', 'Minimum Score Req.'],
           tableData: [['Theory Component', '50', '50%']],
         },
       },
@@ -2647,7 +2634,7 @@ const ttc200hr = {
         type: 'table',
         content: {
           title: '',
-          tableHeading: ['Deatils', 'Marks', 'Minimum Scrore Req.'],
+          tableHeading: ['Details', 'Marks', 'Minimum Score Req.'],
           tableData: [['Theory Component', '50', '50%']],
         },
       },
@@ -10769,7 +10756,7 @@ const classes = {
       {
         type: 'paragraph',
         content: {
-          title: 'Weekday Schedule',
+          title: 'Weekday Schedule for Regular Asana Class (Four Days in a week)',
           text: ['Mon-Tues-Thur-Fri'],
         },
       },
@@ -10820,7 +10807,7 @@ const classes = {
       {
         type: 'paragraph',
         content: {
-          title: 'Weekend Schedule',
+          title: 'Weekend Schedule for Regular Asana Class (Weekend batch)',
           text: ['Sat & Sun', '7:30 am to 9 am'],
         },
       },
