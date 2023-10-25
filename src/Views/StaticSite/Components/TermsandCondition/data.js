@@ -1,121 +1,321 @@
-const data=
-[
+const data = [
   {
-    heading:'Campus Rules',
-    points:
-    <ul>
-      <li>Residential students are not allowed to stay overnight off campus.</li>
-      <li>Fans and lights must be switched off when you leave your room. Light must be switched off when you go to bed. </li>
-      <li>If you have left the institute with permission, please ensure that you return to campus by 9:00pm. </li>
-      <li>IMPORTANT: All lights must be turned off and activities ceased at 10:00 p.m. </li>
-    </ul>
+    heading: 'Common Terms (For Online & Offline Students):',
   },
+
   {
-    heading:'Hostel Rules',
-    points:
-    <ul>
-      <li>Room furniture, electrical fittings etc. are required to be maintained in good condition. </li>
-      <li>Lock your room properly when you go out for your bath, classes, visit the dining hall etc.</li>
-      <li>Keep your room, toilets and lobby of the living areas clean. </li>
-      <li>Keep your passport and valuables including currency in your own room locker.</li>
-      <li>Accommodation is on a shared basis. Please use the keys and locks provided by the hostel management. </li>
-      <li>Bed linen will be changed once a week unless in an emergency. Sheets, pillow cases blankets, mosquito nets are provided. Kindly bring your own towels. </li>
-      <li>Laundry service is outsourced and has to be settled directly with the service provider. Institute is only a facilitator. </li>
-      <li>Your room/locker can be inspected at any time by the hostel caretaker.</li>
-    </ul>
-  },
-  {
-    heading:'Internet',
-    points:
-    <ul>
-      <li>An internet-enabled computer is available at the institute. This can be used to check emails with permission. </li>
-      <li>Using the internet facility during class hours is not allowed. </li>
-      <li>Timings for internet access will be allocated by the Course Coordinator.</li>
-    </ul>
-  },
-  {
-    heading:'The Following are STRICTLY PROHIBITED',
-    points:
-    <ul>
-      <li>Smoking, drinking of alcohol or use of illicit drugs</li>
-      <li>Students of opposite sexes will not enter each other’s rooms</li>
-      <li>Outside food (hotel, restaurant, fast food etc.) is STRICTLY NOT ALLOWED</li>
-      <li>Students can get their own fresh fruits or dry fruits from the local market.</li>
-    </ul>
-  },
-  {
-    heading:'Dress Code ',
-    points:
-    <ul>
-      <li>You are required to be decently dressed when you are out of your room, in the Campus and in the classroom</li>
-      <li>Please dress keeping modesty and decency in mind</li>
-      <li>You can wear a loose salwar-kameez or kurtas or pants and full tops.</li>
-    </ul>
-  },
-  {
-    heading:'Dining Hall Rules    ',
-    points:
-    <ul>
-      <li>Kindly partake the simple vegetarian non-spicy food that is served in the dining hall.</li>
-      <li>All meals should be had during meal times only.</li>
-      <ul className='dining-hall' >
-        <li>Breakfast 8.00 a.m. to 9.00 a.m.</li>
-        <li>Lunch 12.00 noon to 1:00 p.m.</li>
-        <li>Tea and snacks 4.00 p.m. to 5.00 p.m.</li>
-        <li>Dinner 7.30 p.m. to 8.30 p.m.  </li>
+    heading: 'Recording Policy',
+    points: (
+      <ul>
+        The Institute retains all rights to record the sessions for their
+        internal usage & quality purposes. These recordings are exclusively
+        intended for the Institute’s use, and the data is securely stored to
+        reasonably safeguard it against misuse, loss, and unauthorized access,
+        modification, or disclosure. Please note that students are kindly
+        requested not to make their own recordings of these live sessions. As
+        per our policy, the recordings will not be available to the students.
       </ul>
-      <li>With the exception of fruits, no outside food is allowed into the dining hall.</li>
-      <li>Talking during meals is prohibited. </li>
-      <li>In case you will not be having a meal or meals on a certain day, kindly inform the office and the kitchen in writing.</li>
-    </ul>
+    ),
   },
   {
-    heading:'Interaction with Institute Staff',
-    points:
-    <ul>
-      <li>Kindly treat the staff and housekeeping staff of the hostel with due courtesy at all times.</li>
-      <li>You are not permitted to use the service of the housekeeping staff for private or personal work. </li>
-      <li>Do not give any tips in cash or kind to the staff of the institute.</li>
-    </ul>
+    heading: 'Photography and Videography Policy',
+    points: (
+      <ul>
+        As part of our ongoing commitment to promoting the practice of yoga and
+        sharing the positive experiences of our students, we may capture
+        photographs or videos for internal usage, promotional materials, and our
+        social media platforms. However, if you prefer not to be photographed or
+        video graphed, kindly inform your course coordinator at the time of the
+        admission.
+      </ul>
+    ),
   },
   {
-    heading:'Leave Request',
-    points:
-    <ul>
-      <li>You are required to fill up and submit the ‘Leave Permission’ form if you leave the campus for some time.</li>
-    </ul>
+    heading: 'No Refund Policy',
+    points: (
+      <ul>
+        The Yoga Institute has no refund policy for all its programmes. The only
+        exception to this policy is in the event of a programme cancelled by the
+        institute. In such cases, the student/participant will be offered a
+        credit that can be used for any other programme or a refund of the event
+        fee.
+      </ul>
+    ),
   },
   {
-    heading:'Refrigeration Facilities',
-    points:
-    <ul>
-      <li>Refrigeration facility is there to store medicines and permitted eatables as fruits and salad ingredients only. </li>
-    </ul>
+    heading: 'Age Eligibility',
+    points: (
+      <ul>
+        <li>Teacher training course</li>
+        The Teacher Training Course is open to individuals aged 18 years and
+        above.
+        <li>7-Days Health Camp and 21-Days Better Living Course:</li>
+        To enrol in the 7-days Health Camp and 21-days Better Living Course,
+        candidates must be aged 16 years and above.
+        <li>Specialized Camps and Workshops:</li>
+        Specialized camps and workshops, such as those focused on diabetes,
+        pregnancy, and other specific conditions, are designed exclusively for
+        individuals experiencing those conditions. Enrolment in these
+        specialized programs is limited to individuals who meet the specific
+        condition’s criteria.
+      </ul>
+    ),
   },
   {
-    heading:'Recording Policy of TYI',
-    points:
-    <ul>
-      <li> The Institute retains all rights to record the sessions for their internal usage & quality purposes. These recordings are strictly for the institute and the data is stored securely in a manner that reasonably protects it from misuse and loss and from unauthorized access, modification or disclosure. Students are prohibited from recording these live sessions. We will not share any recordings with the students.</li>
-    </ul>
+    heading: 'Course Fee Updates',
+    points: (
+      <ul>
+        <li>
+          The course fees are subject to change, and any adjustments will be
+          promptly updated on our website. If you have any further inquiries or
+          require additional information, please do not hesitate to reach out to
+          us at info@theyogainstitute.org.
+        </li>
+      </ul>
+    ),
   },
   {
-    heading:'No Refund Policy',
-    points:
-    <ul>
-      <li>The Yoga Institute has no refund policy for all its programmes. The only exception to this policy is in the event of a programme cancelled by the institute. In such cases, the student/participant will be offered a credit that can be used for any other institute programme or a refund of the event fee.</li>
-    </ul>
+    heading: 'Attendance Criteria for All Certification Courses',
+    points: (
+      <ul>
+        <li>
+          Attendance of 80% for all the certification courses is mandatory
+        </li>
+      </ul>
+    ),
   },
   {
-    heading:'Kindly Note',
-    points:
-    <ul>
-      <li>During your stay here, kindly maintain an atmosphere of peace and calm that is conducive to yogic practices at all times. </li>
-      <li>Maintain the sanctity of the institute and conduct yourself positively.</li>
-      <li>Keep in mind that you are here not merely to study the ancient discipline of Yoga, but also apply the same discipline and lifestyle to yourself in day-to-day activities; therefore, conduct yourself with restraint.</li>
-      <li>Fees once paid will not be refundable. Fees subject to change and will be updated each calendar year accordingly. For further queries, kindly email us on <span style={{ fontWeight: 'bold' }}><a href='mailto:info@theyogainstitute.org'>info@theyogainstitute.org</a></span></li>
-      <li>If one does not join the course within a year from the date of fees paid then the admission will be terminated. There will be no adjustments or refund of the fees once the admission is terminated.</li>
-    </ul>
-  }
+    heading: 'Leave Request Policy',
+    points: (
+      <ul>
+        <li>
+          Should you foresee the necessity to request leave during any
+          certification course, we kindly request that you provide advance
+          notification to the course coordinator. If you are enrolled in any
+          other course apart from the certification courses, kindly give a prior
+          notice to the coordinator. Kindly note that your leave period will not
+          be extended
+        </li>
+      </ul>
+    ),
+  },
+  {
+    heading: 'Dress Code',
+    points: (
+      <ul>
+        <li>
+          Students are kindly requested to adhere to the Institute’s dress code
+          by opting for comfortable and modest attire. Please refrain from
+          wearing shorts above the knees, narrow sleeveless tops and t-shirts,
+          capris, tank tops, low-cut shirts.
+        </li>
+      </ul>
+    ),
+  },
+  {
+    heading: 'Communication Guidelines',
+    points: (
+      <ul>
+        <li>
+          We encourage all communication to be conducted within our online
+          WhatsApp group community. If you have any concerns or questions,
+          please do not hesitate to reach out to the coordinator directly. If,
+          for any reason, you are not comfortable using WhatsApp or being a part
+          of the WhatsApp group, we kindly request that you inform the
+          coordinator at the time of admission.
+        </li>
+      </ul>
+    ),
+  },
+  {
+    heading: 'Specific Terms for Offline Students',
+  },
+  {
+    heading: 'Hostel Rules',
+    points: (
+      <ul>
+        <li>
+          <b>Leaving and Returning Policy</b>
+        </li>
+        In the event that you need to leave the Institute for any reason, please
+        ensure you have obtained prior permission from your course coordinator.
+        Additionally, upon your return, please ensure that you are back on
+        campus by 9:00 p.m.
+        <li>
+          <b>Lights Out and Activity Curfew</b>
+        </li>
+        We kindly request that all lights be turned off and activities cease by
+        10:00 p.m. This will help you in feeling energised and refreshed the
+        following day.
+        <li>
+          <b>Substance Use Policy</b>
+        </li>
+        It is strictly prohibited to carry and consume any of the substances
+        like tobacco, alcohol or illicit drugs on the campus.
+        <li>
+          <b>Visitation between Students of Opposite Sex.</b>
+        </li>
+        We uphold a policy where students of opposite sexes are not permitted to
+        enter each other’s hostel rooms. This policy is established to ensure
+        the privacy, comfort, and security of all residents.
+        <li>
+          <b>Fostering a Serene Environment and Positive Conduct</b>
+        </li>
+        During your tenure here, we earnestly request that you cultivate an
+        atmosphere characterized by tranquillity and serenity, conducive to the
+        practice of yoga. Simultaneously, maintain the sanctity of the institute
+        through positive and respectful behaviour.
+        <li>
+          <b>Property Maintenance</b>
+        </li>
+        Students are expected to maintain the Institute’s property in good
+        condition. If any damage occurs, the student will be responsible for
+        bearing the associated costs.
+        <li>
+          <b>Shared Accommodation:</b>
+        </li>
+        Accommodation is provided on a shared basis. Kindly utilize the keys and
+        locks provided by the hostel management for security. Take due care of
+        your personal belongings and valuables; the institute is not liable for
+        any losses.
+        <li>
+          <b>Cleanliness and Hygiene:</b>
+        </li>
+        It is essential to maintain cleanliness in your room, toilets, and
+        common living areas.
+        <li>
+          <b>Bed Linen and Towels:</b>
+        </li>
+        Bed linen, including sheets, pillowcases, blankets, and mosquito nets,
+        will be changed weekly, unless under emergency circumstances. Kindly
+        bring your own towels.
+        <li>
+          <b>Laundry Services:</b>
+        </li>
+        Laundry services are outsourced and must be settled directly with the
+        service provider. It’s important to note that the Institute serves
+        solely as a facilitator for this service and holds no responsibility for
+        any damage caused to the clothes. Alternatively, you have the option to
+        wash your clothes in the bathroom and use the provided racks in every
+        room for drying. This self-service option is available for your
+        convenience.
+        <li>
+          <b>Inspections:</b>
+        </li>
+        Kindly be aware that your room or locker may be subject to inspection by
+        the hostel caretaker at any time.
+        <li>
+          <b>Provision for Refrigeration Facility</b>
+        </li>
+        The primary function of our refrigeration facilities is to provide
+        secure storage for medicines, as well as approved consumables such as
+        fruits and salad ingredients. Each floor is equipped with a shared
+        refrigerator for your use. You may store your food in it, but please
+        remember to label your items and only consume what belongs to you.
+      </ul>
+    ),
+  },
+  {
+    heading: 'Internet Usage Terms',
+    points: (
+      <ul>
+        An internet-enabled computer is provided at the Institute, which may be
+        used for email access with prior permission. Internet use during class
+        hours is not permitted. The timing for internet access will be allocated
+        by the Course Coordinator.
+      </ul>
+    ),
+  },
+  {
+    heading: 'Dining Etiquette and Meal Protocol',
+    points: (
+      <ul>
+        *Please Note: If you’re attending our courses, camps, or workshops with
+        inclusive meal services, you can enjoy Sattvik food at Naivedyam. If you
+        prefer eating Sattvik food that’s not included in your course, please
+        let us know in advance. There’s an additional cost for this, and we’ll
+        be happy to arrange it for you.
+      </ul>
+    ),
+  },
+  {
+    heading: 'Nutritious Sattvik Dining',
+    points: (
+      <ul>
+        We encourage students to partake in the highly nutritious sattvik food
+        served within our dining hall at “Naivedyam”.
+      </ul>
+    ),
+  },
+  {
+    heading: 'Scheduled Meal Times',
+    points: (
+      <ul>
+        To ensure an organized dining experience, we kindly request that all
+        meals be enjoyed during the designated meal times.
+        <ul>Breakfast - 8.00 a.m. to 9.00 a.m.</ul>
+        <ul>Lunch - 12.00 noon to 1:00 p.m.</ul>
+        <ul>Tea and snacks - 4.00 p.m. to 5.00 p.m.</ul>
+        <ul>Dinner - 7.30 p.m. to 8.30 p.m.</ul>
+        <li>
+          <b>Restrictions on Outside Food</b>
+        </li>
+        No outside food to be brought into the dining hall.
+        <li>
+          <b>Silent Dining Environment</b>
+        </li>
+        To create a tranquil and focused dining environment, we maintain a
+        policy prohibiting talking during meals. Practice “mauna”, be mindful
+        and engage all your five senses while eating.
+        <li>
+          <b>Meal Absence Notification</b>
+        </li>
+        In situations where you will not be partaking in a meal or meals on a
+        particular day, we request that you inform the office, the kitchen
+        department, and your course coordinator in writing.
+      </ul>
+    ),
+  },
+  {
+    heading: 'Respectful Interaction with Institute Staff',
+    points: (
+      <ul>
+        <li>
+          <b>Courteous Treatment of Staff</b>
+        </li>
+        We kindly request that all individuals treat our staff, including
+        housekeeping personnel, with the utmost courtesy and respect at all
+        times. This practice fosters an atmosphere of mutual regard and
+        professionalism.
+        <li>
+          <b>Housekeeping Services</b>
+        </li>
+        Please be advised that our housekeeping staff is here to maintain the
+        cleanliness and orderliness of our facilities. As such, their services
+        are not to be engaged for personal or private tasks.
+        <li>
+          <b>No Tipping</b>
+        </li>
+        In adherence to our Institutional policy, we ask that you refrain from
+        offering tips in cash or kind to any members of our staff.
+      </ul>
+    ),
+  },
+  {
+    heading: 'Courier Services Protocol',
+    points: (
+      <ul>
+        <li>
+          Please inform our reception in advance regarding expected parcels.
+          Kindly retrieve your courier parcels at the main gate of our premises.
+          To maintain security, courier personnel are not allowed inside the
+          premises. Upon receipt, take a moment to verify the contents of your
+          courier parcel to ensure order accuracy and delivery integrity.
+        </li>
+      </ul>
+    ),
+  },
+
+
 ]
 export default data

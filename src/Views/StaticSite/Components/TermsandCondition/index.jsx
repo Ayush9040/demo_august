@@ -42,12 +42,12 @@ const TermsCondition = () => {
             </div>
           )
         })}
-        <p className='t-c-notes' >
+        {/* <p className='t-c-notes' >
           Students found violating these instructions wilfully or whose presence
           is considered undesirable, for any reason, will be asked to leave
           immediately by the Course Coordinator without giving any reason or
           prior notice. It goes without saying that fees will not be refunded.
-        </p>
+        </p> */}
       </div>
     </>
   )
