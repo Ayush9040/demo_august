@@ -177,6 +177,11 @@ const CourseDetails = ({ pageDate }) => {
               )}
             </h1>
             <p>{pageDate?.timing}</p>
+            <p>{pageDate?.textdescription1}</p>
+            <p>{pageDate?.textdescription2}</p>
+            <p>{pageDate?.textdescription3}</p>
+            <p>{pageDate?.textdescription4}</p>
+            <p>{pageDate?.textdescription5}</p>
             {pageDate?.metaDescription?.split('¿').map((para,i)=> {
               return <p key={i} style={{ marginTop: '20px' }}>{para}</p>
             })}
@@ -223,6 +228,7 @@ const CourseDetails = ({ pageDate }) => {
             {pageDate?.key === 'diabetes-camp' && (
               <p style={{ marginTop: '1.5rem' , fontSize:'1.5rem' }}>*Kindly Note: The camp is not available to the general public who might be interested in attending for the purpose of gaining general knowledge.</p>
             )}
+            
             <div
               id="date-select-mobile"
               style={
