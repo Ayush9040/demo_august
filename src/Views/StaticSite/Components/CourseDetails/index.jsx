@@ -185,6 +185,12 @@ const CourseDetails = ({ pageDate }) => {
             {pageDate?.metaDescription?.split('¿').map((para,i)=> {
               return <p key={i} style={{ marginTop: '20px' }}>{para}</p>
             })}
+            
+            <p>{pageDate?.textdescription6}</p>
+            <p>{pageDate?.textdescription7}</p>
+            <p>{pageDate?.textdescription8}</p>
+            <p>{pageDate?.textdescription9}</p>
+            <p>{pageDate?.textdescription10}</p>
             {/* 'Lorem Ipsum is simply dummy text of theprinting and typesetting industry.'} */}
             {pageDate?.key === 'respiratory-workshop'  && (
               <p style={{ marginTop: '1.5rem' , fontSize:'1.5rem' }}>This camp is designed specifically for individuals who are currently facing respiratory issues. It is tailored to provide support, guidance, and exercises to help improve respiratory health.</p>
@@ -228,6 +234,7 @@ const CourseDetails = ({ pageDate }) => {
             {pageDate?.key === 'diabetes-camp' && (
               <p style={{ marginTop: '1.5rem' , fontSize:'1.5rem' }}>*Kindly Note: The camp is not available to the general public who might be interested in attending for the purpose of gaining general knowledge.</p>
             )}
+
             
             <div
               id="date-select-mobile"
