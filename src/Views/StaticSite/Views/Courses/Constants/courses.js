@@ -7,6 +7,11 @@ import baseDomain, {
 const ttc200hr = {
   1: {
     id: '',
+    textdescription1:'',
+    textdescription2:'',
+    textdescription3:'',
+    textdescription4:'',
+    textdescription5:'',
     key: 'one-month-ttc',
     // templateId: 'COURSE200_1M_TTC',
     templateId: {
@@ -490,9 +495,14 @@ const ttc200hr = {
   },
   2: {
     id: '',
+    textdescription1:'',
+    textdescription2:'',
+    textdescription3:'',
+    textdescription4:'',
+    textdescription5:'',
     key: '200-hrs-part-time-ttc-on-campus-english',
     join: true,
-    // id: '',
+
     // templateId: 'COURSE200_1M_TTC2',
     templateId: {
       templateOnline: 'COURSE_200_HRS_ONLINE_CONFIRMATION_MAIL',
@@ -907,6 +917,11 @@ const ttc200hr = {
   },
   3: {
     id: '',
+    textdescription1:'',
+    textdescription2:'',
+    textdescription3:'',
+    textdescription4:'',
+    textdescription5:'',
     key: '200-hrs-part-time-ttc-online-english',
     // templateId: 'COURSE200_2M_TTC2',
     templateId: {
@@ -918,7 +933,8 @@ const ttc200hr = {
     },
     batch: 3,
     metaDescription:
-      'You will learn the tools to master your physical, mental and spiritual well-being. You will see a marked improvement in your life, relationships and work.',
+      'You will learn the tools to master your physical, mental and spiritual well-being.',
+    textDescription: 'You will see a marked improvement in your life, relationships and work.',
     image: `${baseDomain}${courseAssets.courseAsset38}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset101}`,
     mostPopular: false,
@@ -1386,6 +1402,11 @@ const ttc200hr = {
   },
   4: {
     id: '',
+    textdescription1:'',
+    textdescription2:'',
+    textdescription3:'',
+    textdescription4:'',
+    textdescription5:'',
     key: '200-hrs-part-time-ttc-online',
     join: true,
     // templateId: 'COURSE200_2M_TTC_HINDI',
@@ -1844,6 +1865,11 @@ const ttc200hr = {
   },
   5: {
     id: '',
+    textdescription1:'',
+    textdescription2:'',
+    textdescription3:'',
+    textdescription4:'',
+    textdescription5:'',
     key: '200-hrs-part-time-ttc-online-english-batch-5',
     // templateId: 'COURSE200_2M_TTC',
     templateId: {
@@ -2318,6 +2344,11 @@ const ttc200hr = {
   },
   6: {
     id: '',
+    textdescription1:'',
+    textdescription2:'',
+    textdescription3:'',
+    textdescription4:'',
+    textdescription5:'',
     key: 'weekend-teacher-training-course',
     // templateId: 'COURSE200_3M_TTC',
     templateId: {
@@ -2797,6 +2828,11 @@ const ttc200hr = {
 const ttc500hr = {
   1: {
     id: '',
+    textdescription1:'',
+    textdescription2:'',
+    textdescription3:'',
+    textdescription4:'',
+    textdescription5:'',
     key: '500-hrs-online-yoga-teacher-training-course-intermediate-level',
     // templateId: 'COURSE500_3M_TTC',
     templateId: {
@@ -3140,6 +3176,11 @@ const ttc500hr = {
 const ttc900hr = {
   1: {
     id: '',
+    textdescription1:'',
+    textdescription2:'',
+    textdescription3:'',
+    textdescription4:'',
+    textdescription5:'',
     key: '3-months-advanced-teacher-training-course',
     // templateId: 'GENERAL_AUTO_EMAIL',
     templateId: {
@@ -3662,8 +3703,13 @@ const ttc900hr = {
   },
   2: {
     id: '',
+    textdescription1:'',
+    textdescription2:'',
+    textdescription3:'',
+    textdescription4:'',
+    textdescription5:'',
     key: 'one-year-ttc',
-    // id: '',
+
     // templateId: 'COURSE900_1Y_TTC',
     templateId: {
       templateOnline: 'COURSE900_1Y_ON_HINDI_TTC',
@@ -4345,6 +4391,11 @@ const ttc900hr = {
   3: {
     // templateId: 'COURSE900_1Y_TTC',
     id: '',
+    textdescription1:'',
+    textdescription2:'',
+    textdescription3:'',
+    textdescription4:'',
+    textdescription5:'',
     key: 'two-year-ttc',
     // templateId: 'COURSE900_2Y_TTC',
     templateId: {
@@ -5017,8 +5068,12 @@ const ttc900hr = {
   },
   4: {
     id: '',
-    key: '900-hours-advanced-teacher-training-course',
-    // id: '',
+    textdescription1:'',
+    textdescription2:'',
+    textdescription3:'',
+    textdescription4:'',
+    textdescription5:'',
+    key: '900-hours-advanced-teacher-training-course', 
     // templateId: 'COURSE900_4M_TTC',
     templateId: {
       templateOnline: 'COURSE900_4M_ON_TTC',
@@ -5635,6 +5690,11 @@ const ttc900hr = {
   },
   5: {
     id: '',
+    textdescription1:'',
+    textdescription2:'',
+    textdescription3:'',
+    textdescription4:'',
+    textdescription5:'',
     key: 'seven-month-ttc',
     // templateId: 'COURSE900_7M_TTC',
     templateId: {
@@ -6290,6 +6350,11 @@ const ttc900hr = {
 const camps = {
   // 1: {
   //   id: '',
+  // textdescription1:'',
+  // textdescription2:'',
+  // textdescription3:'',
+  // textdescription4:'',
+  // textdescription5:'',
   //   title: 'Bhava Workshop',
   //   key: 'bhava-workshop',
   //   batch: 1,
@@ -6427,6 +6492,11 @@ const camps = {
 
   2: {
     id: '',
+    textdescription1:'',
+    textdescription2:'',
+    textdescription3:'',
+    textdescription4:'',
+    textdescription5:'',
     title: 'Cardiac & Hypertension Yoga Workshop - On Campus',
     key: 'cardiac-hypertension-workshop',
     batch: 1,
@@ -6559,6 +6629,11 @@ const camps = {
 
   3: {
     id: '',
+    textdescription1:'',
+    textdescription2:'',
+    textdescription3:'',
+    textdescription4:'',
+    textdescription5:'',
     title: 'Diabetes Yoga Camp - On Campus',
     key: 'diabetes-camp',
     // batch: 1,
@@ -6700,6 +6775,11 @@ const camps = {
 
   // 4: {
   //   id: '',
+  // textdescription1:'',
+  // textdescription2:'',
+  // textdescription3:'',
+  // textdescription4:'',
+  // textdescription5:'',
   //   title: 'Diet Workshop',
   //   key: 'diet-workshop',
   //   batch: 1,
@@ -6836,6 +6916,11 @@ const camps = {
 
   // 5: {
   //   id: '',
+  // textdescription1:'',
+  // textdescription2:'',
+  // textdescription3:'',
+  // textdescription4:'',
+  // textdescription5:'',
   //   title: 'Digestion Camp',
   //   key: 'digestion-camp',
   //   batch: 1,
@@ -6972,6 +7057,11 @@ const camps = {
 
   // 6: {
   //   id: '',
+  // textdescription1:'',
+  // textdescription2:'',
+  // textdescription3:'',
+  // textdescription4:'',
+  // textdescription5:'',
   //   title: 'Karma Yoga',
   //   key: 'karma-yoga-course',
   //   batch: 1,
@@ -7112,6 +7202,11 @@ const camps = {
 
   7: {
     id: '',
+    textdescription1:'',
+    textdescription2:'',
+    textdescription3:'',
+    textdescription4:'',
+    textdescription5:'',
     title: 'Life Management Yoga Camp - On Campus',
     key: 'life-management-camp',
     batch: 1,
@@ -7249,6 +7344,11 @@ const camps = {
 
   // 8: {
   //   id: '',
+  // textdescription1:'',
+  // textdescription2:'',
+  // textdescription3:'',
+  // textdescription4:'',
+  // textdescription5:'',
   //   title: 'Meditation Camp',
   //   key: 'meditation-camp',
   //   batch: 1,
@@ -7386,6 +7486,11 @@ const camps = {
 
   9: {
     id: '',
+    textdescription1:'',
+    textdescription2:'',
+    textdescription3:'',
+    textdescription4:'',
+    textdescription5:'',
     title: 'Pranayama Workshop - On Campus & Online',
     key: 'pranayama-workshop',
     batch: 1,
@@ -7523,6 +7628,11 @@ const camps = {
 
   10: {
     id: '',
+    textdescription1:'',
+    textdescription2:'',
+    textdescription3:'',
+    textdescription4:'',
+    textdescription5:'',
     title: 'Pregnancy Yoga Camp For Ante & Post Natal - On Campus',
     key: 'pregnancy-camp-for-ante-post-natal',
     batch: 1,
@@ -7671,6 +7781,11 @@ const camps = {
 
   11: {
     id: '',
+    textdescription1:'',
+    textdescription2:'',
+    textdescription3:'',
+    textdescription4:'',
+    textdescription5:'',
     title: 'Respiratory Yoga Workshop - On Campus',
     key: 'respiratory-workshop',
     batch: 1,
@@ -7806,6 +7921,11 @@ const camps = {
 
   12: {
     id: '',
+    textdescription1:'',
+    textdescription2:'',
+    textdescription3:'',
+    textdescription4:'',
+    textdescription5:'',
     title: 'Senior Citizen Yoga Workshop - On Campus',
     key: 'senior-citizen-workshop',
     batch: 1,
@@ -7943,6 +8063,11 @@ const camps = {
 
   13: {
     id: '',
+    textdescription1:'',
+    textdescription2:'',
+    textdescription3:'',
+    textdescription4:'',
+    textdescription5:'',
     title: 'Stress Management Yoga Camp - On Campus',
     key: 'stress-management-camp',
     batch: 1,
@@ -8079,6 +8204,11 @@ const camps = {
 
   14: {
     id: '',
+    textdescription1:'',
+    textdescription2:'',
+    textdescription3:'',
+    textdescription4:'',
+    textdescription5:'',
     title: 'Weight Management Yoga Workshop',
     key: 'weight-management-workshop',
     batch: 1,
@@ -8219,6 +8349,11 @@ const camps = {
 
   15: {
     id: '',
+    textdescription1:'',
+    textdescription2:'',
+    textdescription3:'',
+    textdescription4:'',
+    textdescription5:'',
     title: 'Women’s Yoga Camp',
     key: 'womens-camp',
     batch: 1,
@@ -8360,6 +8495,11 @@ const camps = {
 
   16: {
     id: '',
+    textdescription1:'',
+    textdescription2:'',
+    textdescription3:'',
+    textdescription4:'',
+    textdescription5:'',
     title: 'Back & Joint Disorder Yoga Workshop',
     key: 'back-joint-disorder-workshop',
     batch: 1,
@@ -8494,6 +8634,11 @@ const camps = {
   },
   17: {
     id: '',
+    textdescription1:'',
+    textdescription2:'',
+    textdescription3:'',
+    textdescription4:'',
+    textdescription5:'',
     title: '7 Days Health Camp - On Campus - Yoga Camp - Hindi',
     key: '7-days-camp',
     join: true,
@@ -8810,6 +8955,11 @@ const camps = {
   },
   18: {
     id: '',
+    textdescription1:'',
+    textdescription2:'',
+    textdescription3:'',
+    textdescription4:'',
+    textdescription5:'',
     title: '7 Days Health Camp - On Campus - Yoga Camp - English',
     key: '7-days-camp-english',
     join: true,
@@ -9132,6 +9282,11 @@ const camps = {
   },
   19: {
     id: '',
+    textdescription1:'',
+    textdescription2:'',
+    textdescription3:'',
+    textdescription4:'',
+    textdescription5:'',
     title: '21-Days Better Living Yoga Course - Morning Online and On Campus – English - Batch 1',
     key: '21-days-better-living-course',
     // templateId: 'GENERAL_AUTO_EMAIL',
@@ -9472,6 +9627,11 @@ const camps = {
   },
   20: {
     id: '',
+    textdescription1:'',
+    textdescription2:'',
+    textdescription3:'',
+    textdescription4:'',
+    textdescription5:'',
     title: '21-Days Better Living Yoga Course - Evening - Online & On Campus – English - Batch 2',
     key: '21-days-better-living-course-batch-2',
     batch: 2,
@@ -9816,6 +9976,11 @@ const camps = {
   },
   21: {
     id: '',
+    textdescription1:'',
+    textdescription2:'',
+    textdescription3:'',
+    textdescription4:'',
+    textdescription5:'',
     title: '21-Days Better Living Yoga Course - Evening - Online & On Campus – Hindi - Batch 3',
     key: '21-days-better-living-course-batch-3',
     batch: 3,
@@ -10154,6 +10319,11 @@ const camps = {
   },
   // 22: {
   //   id: '',
+  // textdescription1:'',
+  // textdescription2:'',
+  // textdescription3:'',
+  // textdescription4:'',
+  // textdescription5:'',
   //   title: '21 Days BLC - Morning - Online – English - Batch 4',
   //   key: '21-days-better-living-course-batch-4',
   //   batch: 4,
@@ -10488,6 +10658,11 @@ const camps = {
 const classes = {
   1: {
     id: '',
+    textdescription1:'',
+    textdescription2:'',
+    textdescription3:'',
+    textdescription4:'',
+    textdescription5:'',
     title: 'Advanced Yoga Asana Regular Class - Online (Only for TYI Teachers)',
     key: 'advanced-regular-yoga-classes',
     batch: 1,
@@ -10559,6 +10734,11 @@ const classes = {
   },
   2: {
     id: '',
+    textdescription1:'',
+    textdescription2:'',
+    textdescription3:'',
+    textdescription4:'',
+    textdescription5:'',
     title: 'Healing Yoga Movement & Rhythm - Online',
     key: 'healing-movement-and-rhythm',
     batch: 1,
@@ -10647,6 +10827,12 @@ const classes = {
   },
   3: {
     id: '',
+    textdescription1:' Monday ,  Tuesday , Thursday and Friday',
+    textdescription2:'Morning Batch: 6:30 am to 7:30 am, 7:30 am to 8:30 am, 8:30 am to 9:30 am',
+    textdescription3:'Evening Batch : 4pm to 5pm, 5pm to 6pm, 6pm to 7pm, 7pm to 8pm',
+    textdescription4:'We also have Weekend batches and the details are:',
+    textdescription5:'Weekend Schedule(Sat-Sun): 7:30 am to 9 am',
+    
     title: 'Yoga Asana Regular Classes - (Men & Women) - Online Yoga Classes',
     key: 'asana-regular-classes-online',
     batch: 1,
@@ -10667,7 +10853,7 @@ const classes = {
     colorCode: '#B77E7E',
     join: true,
     timing:
-      'Regular Asana Classes is conducted 4 days in a week.  Monday ,  Tuesday , Thursday and Friday  Morning Batch: 6:30 am to 7:30 am, 7:30 am to 8:30 am, 8:30 am to 9:30 am   Evening Batch : 4pm to 5pm, 5pm to 6pm, 6pm to 7pm, 7pm to 8pm . We also have Weekend batches and the details are:Weekend Schedule(Sat-Sun): 7:30 am to 9 am',
+      'Regular Asana Classes is conducted 4 days in a week. ',
     fees: {
       onlineFee: 1000,
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
@@ -10872,6 +11058,11 @@ const classes = {
   },
   4: {
     id: '',
+    textdescription1:'',
+    textdescription2:'',
+    textdescription3:'',
+    textdescription4:'',
+    textdescription5:'',
     title: 'Yoga Classes for Men (Regular Asana) - On Campus',
     key: 'asana-regular-classes-on-campus',
     batch: 1,
@@ -10982,6 +11173,11 @@ const classes = {
   },
   5: {
     id: '',
+    textdescription1:'',
+    textdescription2:'',
+    textdescription3:'',
+    textdescription4:'',
+    textdescription5:'',
     title: 'Yoga Classes for Women (Regular Asana) - On Campus',
     key: 'asana-regular-classes-on-campus-women',
     batch: 1,
@@ -11109,6 +11305,11 @@ const classes = {
   },
   11: {
     id: '',
+    textdescription1:'',
+    textdescription2:'',
+    textdescription3:'',
+    textdescription4:'',
+    textdescription5:'',
     title: 'Children\'s Yoga Classes (Regular) - On Campus',
     key: 'childrens-regular-classes',
     batch: 1,
@@ -11184,6 +11385,11 @@ const classes = {
   },
   12: {
     id: '',
+    textdescription1:'',
+    textdescription2:'',
+    textdescription3:'',
+    textdescription4:'',
+    textdescription5:'',
     title: 'Children\'s Weekend Yoga Class - On Campus',
     key: 'childrens-weekend-classes-on-campus',
     batch: 1,
@@ -11253,6 +11459,11 @@ const classes = {
   },
   13: {
     id: '',
+    textdescription1:'',
+    textdescription2:'',
+    textdescription3:'',
+    textdescription4:'',
+    textdescription5:'',
     title: 'Online Meditation Course  (Foundation Course)',
     key: 'meditation-foundation-course-online',
     batch: 1,
@@ -11347,6 +11558,11 @@ const classes = {
   },
   14: {
     id: '',
+    textdescription1:'',
+    textdescription2:'',
+    textdescription3:'',
+    textdescription4:'',
+    textdescription5:'',
     title: 'Regular Online Meditation Classes',
     key: 'regular-meditation-classes-online',
     batch: 1,
@@ -11469,6 +11685,11 @@ const classes = {
   },
   15: {
     id: '',
+    textdescription1:'',
+    textdescription2:'',
+    textdescription3:'',
+    textdescription4:'',
+    textdescription5:'',
     title: ' Satsang ',
     key: 'satsang',
     batch: 1,
@@ -11569,6 +11790,11 @@ const classes = {
   },
   16: {
     id: '',
+    textdescription1:'',
+    textdescription2:'',
+    textdescription3:'',
+    textdescription4:'',
+    textdescription5:'',
     title: 'Weekend Yoga Asana Classes - (Men & Women) - On Campus',
     key: 'weekend-classes',
     batch: 1,
@@ -11696,6 +11922,11 @@ const classes = {
   },
   17: {
     id: '',
+    textdescription1:'',
+    textdescription2:'',
+    textdescription3:'',
+    textdescription4:'',
+    textdescription5:'',
     title: 'Yog Prayas - Online',
     key: 'yog-prayas-online',
     batch: 1,
@@ -11858,6 +12089,11 @@ const classes = {
   },
   18: {
     id: '',
+    textdescription1:'',
+    textdescription2:'',
+    textdescription3:'',
+    textdescription4:'',
+    textdescription5:'',
     title: 'Samattvam (Health Checkup) - On Campus',
     key: 'samattvam',
     batch: 1,
@@ -11959,6 +12195,11 @@ const classes = {
   },
   19: {
     id: '',
+    textdescription1:'',
+    textdescription2:'',
+    textdescription3:'',
+    textdescription4:'',
+    textdescription5:'',
     title: 'Couples’ Yoga Classes  - Online',
     key: 'couples-classes',
     batch: 1,
@@ -12123,6 +12364,11 @@ const classes = {
   },
   20: {
     id: '',
+    textdescription1:'',
+    textdescription2:'',
+    textdescription3:'',
+    textdescription4:'',
+    textdescription5:'',
     title: 'Weekend Yoga Asana Classes - (Men & Women) - Online',
     key: 'weekend-classes-online',
     batch: 1,
@@ -12237,6 +12483,11 @@ const classes = {
   },
   21: {
     id: '',
+    textdescription1:'',
+    textdescription2:'',
+    textdescription3:'',
+    textdescription4:'',
+    textdescription5:'',
     title: 'Regular Pregnancy Yoga Classes - Online & On Campus',
     key: 'regular-pregnacy-classes',
     batch: 1,
@@ -12357,6 +12608,11 @@ const classes = {
 const extra = {
   1: {
     id: '',
+    textdescription1:'',
+    textdescription2:'',
+    textdescription3:'',
+    textdescription4:'',
+    textdescription5:'',
     key: 'nutri-diet',
     title: 'Nutri Diet Clinic',
     cardImage: `${baseDomain}${nutriDiet.nutriDietCard}`,
@@ -12370,6 +12626,11 @@ const extra = {
 const certificate = {
   1: {
     id: '',
+    textdescription1:'',
+    textdescription2:'',
+    textdescription3:'',
+    textdescription4:'',
+    textdescription5:'',
     title: 'Certificate Course on Advanced Pranayama Techniques ( Pranayama Online Course)',
     key: 'certificate-course-on-advanced-pranayama-techniques',
     batch: 1,
@@ -12489,6 +12750,11 @@ const certificate = {
   },
   // 2: {
   //   id: '',
+  textdescription1:'',
+  textdescription2:'',
+  textdescription3:'',
+  textdescription4:'',
+  textdescription5:'',
   //   title: 'Certificate Course on Yoga Sutra - Online',
   //   key: 'certification-course-on-yoga-sutra-online',
   //   batch: 1,
@@ -12619,6 +12885,11 @@ const certificate = {
   // },
   3: {
     id: '',
+    textdescription1:'',
+    textdescription2:'',
+    textdescription3:'',
+    textdescription4:'',
+    textdescription5:'',
     title: 'Certificate Program on Yoga for Cancer - Online & On Campus',
     key: 'certificate-program-on-yoga-for-cancer',
     batch: 1,
@@ -12728,6 +12999,11 @@ const certificate = {
   },
   4: {
     id: '',
+    textdescription1:'',
+    textdescription2:'',
+    textdescription3:'',
+    textdescription4:'',
+    textdescription5:'',
     title: 'Certificate Program on Yoga for Lung Cancer - Online',
     key: 'certification-program-on-yoga-for-lung-cancer-online',
     batch: 1,
@@ -12802,6 +13078,11 @@ const certificate = {
   },
   5: {
     id: '',
+    textdescription1:'',
+    textdescription2:'',
+    textdescription3:'',
+    textdescription4:'',
+    textdescription5:'',
     title: 'Certificate Yoga Therapy Course - Online & On Campus',
     key: 'certificate-yoga-therapy-course-online',
     batch: 1,
@@ -13193,6 +13474,11 @@ const certificate = {
   },
   6: {
     id: '',
+    textdescription1:'',
+    textdescription2:'',
+    textdescription3:'',
+    textdescription4:'',
+    textdescription5:'',
     title: 'Restorative Yoga for Cancer Survivors - Online Program',
     key: 'restorative-yoga-for-cancer-survivors',
     batch: 1,
