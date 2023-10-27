@@ -9152,8 +9152,8 @@ const camps = {
         content: {
           title: 'Overview',
           text: [
-            'Are you feeling burned out and looking for ways to develop mental strength, improve focus & emotional quotient and reduce stress? Join our 7-Days Health Camp reshape your life and health.',
-            'The 7 Days Health Camp is an experiential, introductory course to Yoga theory and practice where one can get a glimpse of a yogic lifestyle within the premises of The Yoga Institute. In this yoga camp you will learn how to achieve a balance between your mind, body, and soul. Through its powerful processes, this yoga program presents to you the possibility to access and re-configure your life and health in a way that improves productivity and imparts better control on your emotions. In this fast-paced and unwavering world, this 7 Days’ Yoga Camp offers you the much-needed respite to connect with yourself and experience the abundant joy and beauty in life.',
+            'Are you feeling burned out and looking for ways to develop mental strength, improve focus emotional quotient and reduce stress? Join our 7-Days Health Camp reshape your life and health.',
+            'The 7 Days Health Camp is an experiential, introductory course to Yoga theory and practice where one can get a glimpse of a yogic lifestyle within the premises of The Yoga Institute. In this yoga health-camp you will learn how to achieve a balance between your mind, body, and soul. Through its powerful processes, this yoga program presents to you the possibility to access and re-configure your life and health in a way that improves productivity and imparts better control on your emotions. In this fast-paced and unwavering world, this 7 Days’ Yoga Health Camp offers you the much-needed respite to connect with yourself and experience the abundant joy and beauty in life.'
           ],
         },
       },
