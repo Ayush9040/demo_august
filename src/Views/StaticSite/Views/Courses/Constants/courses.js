@@ -5154,7 +5154,7 @@ const ttc900hr = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'ttc',
-    dates: ['23 Oct to 10th Feb 2024'],
+    dates: [],
     online: true,
     onCampus: false,
     nonResidential: false,
