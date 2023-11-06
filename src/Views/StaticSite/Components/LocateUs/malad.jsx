@@ -171,7 +171,7 @@ const MaladPage = () => {
         
       </div>
      
-      <div className='updated-div' style={{ marginBottom: '20px' }}>
+      <div className='updated-div' style={{ marginBottom: '40px' }}>
       
         <h5>About 200 Hours BTTC -</h5>
         <p>200 Hour Yoga Teacher’s Training Certification (TTC) is a basic yoga teacher training course which prepares/certifies students for teaching Yogic Techniques to normal healthy adults and school children.</p>
