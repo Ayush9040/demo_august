@@ -147,7 +147,7 @@ const MaladPage = () => {
           </div>
           <div className="apply-fees">
             <h5>Date</h5>
-            <p>4th September to 27th October 2023</p>
+            <p>20th November 2023 to 12th January 2024</p>
           </div>
           <div className="apply-fees">
             <h5>Timings</h5>
@@ -171,7 +171,7 @@ const MaladPage = () => {
         
       </div>
      
-      <div className='updated-div'>
+      <div className='updated-div' style={{ marginBottom: '20px' }}>
       
         <h5>About 200 Hours BTTC -</h5>
         <p>200 Hour Yoga Teacher’s Training Certification (TTC) is a basic yoga teacher training course which prepares/certifies students for teaching Yogic Techniques to normal healthy adults and school children.</p>
