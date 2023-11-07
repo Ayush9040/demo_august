@@ -958,13 +958,15 @@ const ttc200hr = {
     timing:
       'Monday to Saturday: Morning: 7:00 am - 8:30 am (IST) and Evening : 6:30 pm - 8:30 pm (IST) (Both the time slots are mandatory)',
     fees: {
-      onlineFee: 25000,
+      onlineFee: 80000,
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'ttc',
     title: '200-Hour Yoga Teacher Training Online Course - 2 Months TTC Online - English - Batch 3',
     dates: [
-      '30th Oct to 23rd Dec 2023',
+      '19th Feb - 8th June 2024',
+      '17th June - 5th Oct 2024',
+      '14th Oct - 1st Feb 2025'
     ],
     online: true,
     onCampus: false,
