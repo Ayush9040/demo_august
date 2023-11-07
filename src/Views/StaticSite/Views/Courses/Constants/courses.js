@@ -1453,8 +1453,12 @@ const ttc200hr = {
     category: 'ttc',
     title: '200 Hours Hindi Teacher Training Course - 2 Months TTC Online - Hindi - Batch 4',
     dates: [
-      '11th Sep to 4th Nov 2023',
-      '13th Nov to 6th Jan 2024'
+      '15th Jan to 9th Mar 2024',
+      '18th Mar - 11th May 2024',
+      '20th May - 13th July 2024',
+      '22nd July - 14th Sep 2024',
+      '23rd Sep - 16th Nov 2025',
+      '25th Nov - 18th Jan 2025'
     ],
     online: true,
     onCampus: false,
