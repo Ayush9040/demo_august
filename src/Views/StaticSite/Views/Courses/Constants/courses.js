@@ -1449,7 +1449,7 @@ const ttc200hr = {
     colorCode: '#E38F73',
     timing: 'Monday to Saturday: 1:00 pm - 4:30 pm (IST)',
     fees: {
-      onlineFee: 25000,
+      onlineFee: 27500,
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'ttc',
@@ -1514,7 +1514,7 @@ const ttc200hr = {
         type: 'paragraph',
         content: {
           title: 'Fees',
-          text: ['Rs. 25,000/-'],
+          text: ['Rs. 27,500/-'],
         },
       },
       {
