@@ -5156,11 +5156,11 @@ const ttc900hr = {
     timing:
       'Monday to Saturday: Morning: 7:00 am to 9:00 am (IST) and Evening: 4:30 pm to 8:00 pm (IST) (Both the time slots are mandatory)',
     fees: {
-      onlineFee: 75000,
+      onlineFee: 80000,
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'ttc',
-    dates: [],
+    dates: ['19th Feb - 8th Jun 2024', '17th Jun - 5th Oct 2024','14th Oct 2024 - 1st Feb 2025'],
     online: true,
     onCampus: false,
     nonResidential: false,
@@ -5231,7 +5231,7 @@ const ttc900hr = {
         content: {
           title: 'Fees:',
 
-          text: ['INR. 75,000/-(Inclusive of course fee and study material)'],
+          text: ['INR. 80,000/-(Inclusive of course fee and study material)'],
         },
       },
 
@@ -13305,11 +13305,11 @@ const certificate = {
     colorCode: '#B77E7E',
     timing: 'Tuesdays to Friday: 5:00 p.m. - 7:00 p.m. (IST)',
     fees: {
-      onlineFee: 8000,
+      onlineFee: 10000,
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'certificate-course',
-    dates: [],
+    dates: ['16th Jan to 20th Jan 2024','11th Jun to 15th Jun 2024',''],
     online: true,
     onCampus: false,
     nonResidential: false,
@@ -13343,7 +13343,7 @@ const certificate = {
         type: 'paragraph',
         content: {
           title: 'Fees',
-          text: ['8000/-'],
+          text: ['10,000/-'],
         },
       },
       {
@@ -13389,7 +13389,7 @@ const certificate = {
     colorCode: '#D3A29D',
     timing: 'Monday, Wednesday & Friday: 5:30 pm - 7:30 pm (IST)',
     fees: {
-      onlineFee: 35000,
+      onlineFee: 38500,
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'certificate-course',
@@ -13737,7 +13737,7 @@ const certificate = {
         type: 'paragraph',
         content: {
           title: 'Fees:',
-          text: [' Rs. 35,000/-'],
+          text: [' Rs. 38,500/-'],
         },
       },
       {
