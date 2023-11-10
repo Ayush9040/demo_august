@@ -955,12 +955,16 @@ const ttc200hr = {
     timing:
       'Monday to Saturday: Morning: 7:00 am - 8:30 am (IST) and Evening : 6:30 pm - 8:30 pm (IST) (Both the time slots are mandatory)',
     fees: {
-      onlineFee: 25000,
+      onlineFee: 80000,
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'ttc',
     title: '200-Hour Yoga Teacher Training Online Course - 2 Months TTC Online - English - Batch 3',
-    dates: [],
+    dates: [
+      '19th Feb - 8th June 2024',
+      '17th June - 5th Oct 2024',
+      '14th Oct - 1st Feb 2025'
+    ],
     online: true,
     onCampus: false,
     nonResidential: false,
@@ -1442,13 +1446,18 @@ const ttc200hr = {
     colorCode: '#E38F73',
     timing: 'Monday to Saturday: 1:00 pm - 4:30 pm (IST)',
     fees: {
-      onlineFee: 25000,
+      onlineFee: 27500,
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'ttc',
     title: '200 Hours Hindi Teacher Training Course - 2 Months TTC Online - Hindi - Batch 4',
     dates: [
-      '13th Nov to 6th Jan 2024'
+      '15th Jan to 9th Mar 2024',
+      '18th Mar - 11th May 2024',
+      '20th May - 13th July 2024',
+      '22nd July - 14th Sep 2024',
+      '23rd Sep - 16th Nov 2025',
+      '25th Nov - 18th Jan 2025'
     ],
     online: true,
     onCampus: false,
@@ -1502,7 +1511,7 @@ const ttc200hr = {
         type: 'paragraph',
         content: {
           title: 'Fees',
-          text: ['Rs. 25,000/-'],
+          text: ['Rs. 27,500/-'],
         },
       },
       {
@@ -5144,11 +5153,11 @@ const ttc900hr = {
     timing:
       'Monday to Saturday: Morning: 7:00 am to 9:00 am (IST) and Evening: 4:30 pm to 8:00 pm (IST) (Both the time slots are mandatory)',
     fees: {
-      onlineFee: 75000,
+      onlineFee: 80000,
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'ttc',
-    dates: [],
+    dates: ['19th Feb - 8th Jun 2024', '17th Jun - 5th Oct 2024','14th Oct 2024 - 1st Feb 2025'],
     online: true,
     onCampus: false,
     nonResidential: false,
@@ -5219,7 +5228,7 @@ const ttc900hr = {
         content: {
           title: 'Fees:',
 
-          text: ['INR. 75,000/-(Inclusive of course fee and study material)'],
+          text: ['INR. 80,000/-(Inclusive of course fee and study material)'],
         },
       },
 
@@ -13351,11 +13360,11 @@ const certificate = {
     colorCode: '#B77E7E',
     timing: 'Tuesdays to Friday: 5:00 p.m. - 7:00 p.m. (IST)',
     fees: {
-      onlineFee: 8000,
+      onlineFee: 10000,
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'certificate-course',
-    dates: [],
+    dates: ['16th Jan to 20th Jan 2024','11th Jun to 15th Jun 2024',''],
     online: true,
     onCampus: false,
     nonResidential: false,
@@ -13389,7 +13398,7 @@ const certificate = {
         type: 'paragraph',
         content: {
           title: 'Fees',
-          text: ['8000/-'],
+          text: ['10,000/-'],
         },
       },
       {
@@ -13435,7 +13444,7 @@ const certificate = {
     colorCode: '#D3A29D',
     timing: 'Monday, Wednesday & Friday: 5:30 pm - 7:30 pm (IST)',
     fees: {
-      onlineFee: 35000,
+      onlineFee: 38500,
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'certificate-course',
@@ -13783,7 +13792,7 @@ const certificate = {
         type: 'paragraph',
         content: {
           title: 'Fees:',
-          text: [' Rs. 35,000/-'],
+          text: [' Rs. 38,500/-'],
         },
       },
       {
