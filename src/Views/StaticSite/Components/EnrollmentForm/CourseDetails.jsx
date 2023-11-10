@@ -48,6 +48,110 @@ const CourseDetails = ({
     setLoading(false)
   }
 
+
+  const updatedFees = (course, mode) => {
+    switch (course) {
+    case 'certificate-program-on-yoga-for-cancer':
+      if (courseDate === '24th Nov 2023 to 30th Dec 2023') {
+        if (mode === 'ONLINE') return 20000
+      } else {
+        if (mode === 'ONLINE') return currentCourse.fees.onlineFee
+      }
+      break
+
+    case 'two-year-ttc':
+      if (courseDate === '2nd Dec 2023') {
+        if (mode === 'ONLINE') return 55000
+        if (mode === 'RESIDENTIAL') return 55000
+        if (mode === 'NONRESIDENTIAL') return 55000
+      } else {
+        if (mode === 'ONLINE') return currentCourse.fees.onlineFee
+        if (mode === 'NONRESIDENTIAL')
+          return currentCourse.fees.offlineFee.nonResidentialFee
+        if (mode === 'RESIDENTIAL')
+          return currentCourse.fees.offlineFee.residentialFee
+      }
+      break
+
+    case '21-days-better-living-course':
+      if (
+        courseDate === ('5th Nov to 25th Nov 2023' ||
+          '3rd Dec to 23rd Dec 2023')
+      ) {
+        if (mode === 'ONLINE') return 2100
+        if (mode === 'NONRESIDENTIAL') return 2100
+      } else {
+        if (mode === 'ONLINE') return currentCourse.fees.onlineFee
+        if (mode === 'NONRESIDENTIAL')
+          return currentCourse.fees.offlineFee.nonResidentialFee
+      }
+      break
+
+    case '21-days-better-living-course-batch-2':
+      if (
+        courseDate === ('5th Nov to 25th Nov 2023' ||
+          '3rd Dec to 23rd Dec 2023')
+      ) {
+        if (mode === 'ONLINE') return 2100
+        if (mode === 'NONRESIDENTIAL') return 2100
+      } else {
+        if (mode === 'ONLINE') return currentCourse.fees.onlineFee
+        if (mode === 'NONRESIDENTIAL')
+          return currentCourse.fees.offlineFee.nonResidentialFee
+      }
+      break
+    case '21-days-better-living-course-batch-3':
+      if (courseDate === '19th Nov to 9th Dec 2023') {
+        if (mode === 'ONLINE') return 2100
+        if (mode === 'NONRESIDENTIAL') return 2100
+      } else {
+        if (mode === 'ONLINE') return currentCourse.fees.onlineFee
+        if (mode === 'NONRESIDENTIAL')
+          return currentCourse.fees.offlineFee.nonResidentialFee
+      }
+      break
+
+    case 'meditation-foundation-course-online':
+      if (
+        courseDate === ('6th Nov to 1st Dec 2023' ||
+          '6th Nov to 1st Dec 2023')
+      ) {
+        if (mode === 'ONLINE') return 1000
+      } else {
+        if (mode === 'ONLINE') return currentCourse.fees.onlineFee
+      }
+      break
+    case 'certificate-course-on-advanced-pranayama-techniques':
+      if (
+        courseDate === ('20th Nov 2023 to 11th Jan 2024' ||
+          '1st Dec 2023 to 24th Jan 2024')
+      ) {
+        if (mode === 'ONLINE') return 20000
+      } else {
+        if (mode === 'ONLINE') return currentCourse.fees.onlineFee
+      }
+      break
+    // case 'certificate-program-on-yoga-for-cancer':
+    //   if (courseDate === '24th Nov 2023 to 30th Dec 2023') {
+    //     if (mode === 'ONLINE') return 2000
+    //   } else {
+    //     if (mode === 'ONLINE') return currentCourse.fees.onlineFee
+    //   }
+    //   break
+    default:
+      return () => {
+        if (mode === 'ONLINE') return currentCourse.fees.onlineFee
+        if (mode === 'OFFLINE')
+          return currentCourse.fees.offlineFee.nonResidentialFee
+        if (mode === 'RESIDENTIAL')
+          return currentCourse.fees.offlineFee.residentialFee
+        if (mode === 'NONRESIDENTIAL')
+          return currentCourse.fees.offlineFee.nonResidentialFee
+      }
+    }
+  }
+
+
   return (
     <div className="main-container">
       <div className="course-main-container">
@@ -93,8 +197,8 @@ const CourseDetails = ({
                         mode: e.target.value,
                       })
                       setEmpty(0)
-                      setCourseFee(currentCourse?.fees?.onlineFee)
-                      // setCourseFee(updatedFees( currentCourse?.key,'OFFLINE' ))
+                      // setCourseFee(currentCourse?.fees?.onlineFee)
+                      setCourseFee(updatedFees( currentCourse?.key,'OFFLINE' ))
                     }
                   }}
                 />
@@ -108,7 +212,7 @@ const CourseDetails = ({
                   disabled={currentCourse.online === false }
                   checked={formData.mode === 'ONLINE'}
                   style={
-                    (currentCourse.online === false)
+                    (currentCourse.online === false )
                       ? {
                         background:
                             'url(https://ecom-static-site.oss-ap-south-1.aliyuncs.com/icons/icons8-multiply-24.png)',
@@ -122,8 +226,8 @@ const CourseDetails = ({
                         mode: e.target.value,
                       })
                       setEmpty(0)
-                      setCourseFee(currentCourse?.fees?.onlineFee)
-                      // setCourseFee(updatedFees( currentCourse?.key,'ONLINE' ))
+                      // setCourseFee(currentCourse?.fees?.onlineFee)
+                      setCourseFee(updatedFees( currentCourse?.key,'ONLINE' ))
                     }
                   }}
                 />{' '}
@@ -166,10 +270,10 @@ const CourseDetails = ({
                         residental: e.target.value,
                       })
                       setEmpty(0)
-                      setCourseFee(
-                        currentCourse?.fees?.offlineFee?.residentialFee
-                      )
-                      // setCourseFee(updatedFees( currentCourse?.key,'RESIDENTIAL' ))
+                      // setCourseFee(
+                      //   currentCourse?.fees?.offlineFee?.residentialFee
+                      // )
+                      setCourseFee(updatedFees( currentCourse?.key,'RESIDENTIAL' ))
                     }
                   }}
                 />{' '}
@@ -203,10 +307,10 @@ const CourseDetails = ({
                         residental: e.target.value,
                       })
                       setEmpty(0)
-                      setCourseFee(
-                        currentCourse?.fees?.offlineFee?.nonResidentialFee
-                      )
-                      // setCourseFee(updatedFees( currentCourse?.key,'NONRESIDENTIAL' ))
+                      // setCourseFee(
+                      //   currentCourse?.fees?.offlineFee?.nonResidentialFee
+                      // )
+                      setCourseFee(updatedFees( currentCourse?.key,'NONRESIDENTIAL' ))
                     }
                   }}
                 />{' '}

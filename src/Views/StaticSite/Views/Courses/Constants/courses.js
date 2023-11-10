@@ -43,8 +43,6 @@ const ttc200hr = {
     category: 'ttc',
     title: '200-Hour Yoga Teacher Training Course - 1 Month Yoga TTC Online & On Campus - English - Batch 1',
     dates: [
-      '2nd Oct to 31st Oct 2023',
-      '1st Nov to 30th Nov 2023',
       '1st Dec to 30th Dec 2023'
     ],
     online: true,
@@ -537,7 +535,6 @@ const ttc200hr = {
     category: 'ttc',
     title: '200 Hours Yoga Teacher Training Course - 2 Months Yoga TTC Online and On Campus - English - Batch 2',
     dates: [
-      '9th Oct to 2nd Dec 2023',
       '4th Dec 2023 to 27th Jan 2024'
     ],
     online: true,
@@ -963,9 +960,7 @@ const ttc200hr = {
     },
     category: 'ttc',
     title: '200-Hour Yoga Teacher Training Online Course - 2 Months TTC Online - English - Batch 3',
-    dates: [
-      '30th Oct to 23rd Dec 2023',
-    ],
+    dates: [],
     online: true,
     onCampus: false,
     nonResidential: false,
@@ -1453,7 +1448,6 @@ const ttc200hr = {
     category: 'ttc',
     title: '200 Hours Hindi Teacher Training Course - 2 Months TTC Online - Hindi - Batch 4',
     dates: [
-      '11th Sep to 4th Nov 2023',
       '13th Nov to 6th Jan 2024'
     ],
     online: true,
@@ -1919,7 +1913,7 @@ const ttc200hr = {
     },
     category: 'ttc',
     title: '200 Hours Yoga TTC - 2 Months Online Yoga Teacher Training Course - English - Batch 5',
-    dates: ['25th Sep to 18th Nov 2023', '27th Nov to 20th Jan 2024'],
+    dates: ['27th Nov to 20th Jan 2024'],
     online: true,
     onCampus: false,
     nonResidential: false,
@@ -2404,7 +2398,7 @@ const ttc200hr = {
     },
     category: 'ttc',
     title: '200 Hours Yoga TTC  - 3 Months Weekend Yoga Teacher Training Course Online - English - Batch 6',
-    dates: ['21st Oct to 7th Jan 2024'],
+    dates: [],
     online: true,
     onCampus: false,
     nonResidential: false,
@@ -2449,7 +2443,7 @@ const ttc200hr = {
       //   type: 'paragraph',
       //   content: {
       //     title: 'Duration',
-      //     text: ['27th August 2022to 13th November 2022'],
+      //     text: ['27th August 2022to 13th Nov 2022'],
       //   },
       // },
       // {
@@ -2893,7 +2887,7 @@ const ttc500hr = {
     title: '500-Hour Yoga Teacher Training Online Course - 3 Months Yoga TTC - English',
     image: `${baseDomain}${courseAssets.courseAsset39}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset102}`,
-    dates: ['14th Aug to 4th Nov 2023', '13th Nov to 3rd Feb 2024'],
+    dates: ['13th Nov to 3rd Feb 2024'],
     online: true,
     onCampus: false,
     nonResidential: false,
@@ -3249,7 +3243,7 @@ const ttc900hr = {
       offlineFee: { residentialFee: 175000, nonResidentialFee: 97000 },
     },
     category: 'ttc',
-    dates: ['22nd Jul to 15th Oct 2023', '28th Oct to 21st Jan 2024'],
+    dates: [],
     online: false,
     onCampus: true,
     nonResidential: true,
@@ -3778,7 +3772,7 @@ const ttc900hr = {
       offlineFee: { residentialFee: 55000, nonResidentialFee: 55000 },
     },
     category: 'ttc',
-    dates: ['2nd October 2023', '1st November 2023', '1st December 2023'],
+    dates: ['1st Dec 2023'],
     online: true,
     onCampus: true,
     nonResidential: true,
@@ -4474,7 +4468,7 @@ const ttc900hr = {
       offlineFee: { residentialFee: 55000, nonResidentialFee: 55000 },
     },
     category: 'ttc',
-    dates: ['2nd December 2023','6th April 2024','3rd Aug 2024','7th Dec 2024'],
+    dates: ['2nd Dec 2023','6th April 2024','3rd Aug 2024','7th Dec 2024'],
     online: true,
     onCampus: true,
     nonResidential: true,
@@ -4533,7 +4527,7 @@ const ttc900hr = {
           title: 'Duration',
 
           text: [
-            '2 Years | Course commences on 1st April, August, December each year',
+            '2 Years | Course commences on 1st April, August, Dec each year',
           ],
         },
       },
@@ -5782,7 +5776,7 @@ const ttc900hr = {
       offlineFee: { residentialFee: 55000, nonResidentialFee: 55000 },
     },
     category: 'ttc',
-    dates: ['1st August 2023', '1st September 2023', '2nd October 2023', '1st November 2023', '1st December 2023'],
+    dates: ['1st Dec 2023'],
     online: true,
     onCampus: true,
     nonResidential: true,
@@ -6444,7 +6438,7 @@ const camps = {
   //     'Specific pranayama, asana and relaxation techniques to enhance your state of mind',
   //   image: `${baseDomain}${courseAssets.courseAsset8}`,
   //   cardImage: `${baseDomain}${courseAssets.courseAsset112}`,
-  //   dates: ['27th August 2022', '22nd October 2022', '26th December 2022'],
+  //   dates: ['27th August 2022', '22nd October 2022', '26th Dec 2022'],
   //   online: true,
   //   onCampus: true,
   //   nonResidential: false,
@@ -6720,7 +6714,7 @@ const camps = {
         templateNonResidential: '',
       },
     },
-    dates: ['3rd December 2023','4th Feb 2024','7th April 2024','2nd June 2024','4th Aug 2024','6th Oct 2024','1st Dec 2024'],
+    dates: ['3rd Dec 2023','4th Feb 2024','7th April 2024','2nd June 2024','4th Aug 2024','6th Oct 2024','1st Dec 2024'],
     mostPopular: false,
     rating: 5,
     colorCode: '#CE9B51',
@@ -7326,7 +7320,7 @@ const camps = {
       'Enhance state of mind with pranayama, yoga asana and relaxation techniques',
     image: `${baseDomain}${courseAssets.courseAsset8}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset112}`,
-    dates: ['19th November 2023','21st Jan 2024','17th Mar 2024','19th May 2024','21st July 2024','15th Sep 2024','17th Nov 2024'],
+    dates: ['19th Nov 2023','21st Jan 2024','17th Mar 2024','19th May 2024','21st July 2024','15th Sep 2024','17th Nov 2024'],
     online: false,
     onCampus: true,
     nonResidential: false,
@@ -7607,7 +7601,7 @@ const camps = {
         templateNonResidential: '',
       },
     },
-    dates: ['12th November 2023','14th Jan 2024','10th Mar 2024','12th May 2024','14th July 2024','8th Sep 2024','10th Nov 2024',],
+    dates: ['12th Nov 2023','14th Jan 2024','10th Mar 2024','12th May 2024','14th July 2024','8th Sep 2024','10th Nov 2024',],
     mostPopular: false,
     rating: 5,
     colorCode: '#CE9B51',
@@ -7756,8 +7750,8 @@ const camps = {
       },
     },
     dates: [
-      '20th & 21st November 2023',
-      '16th & 17th December 2023',
+      '20th & 21st Nov 2023',
+      '16th & 17th Dec 2023',
       '22nd Jan & 23rd Jan 2024',
       '17th Feb & 18th Feb 2024',
       '18th Mar & 19th Mar 2024',
@@ -8214,7 +8208,7 @@ const camps = {
         templateNonResidential: '',
       },
     },
-    dates: ['10th December 2023','14th Jan 2024','11th Feb 2024','10th Mar 2024','14th April 2024','12th May 2024','9th June 2024','14th July 2024','11th Aug 2024','15th Sep 2024','13th Oct 2024','10th Nov 2024','8th Dec 2024'],
+    dates: ['10th Dec 2023','14th Jan 2024','11th Feb 2024','10th Mar 2024','14th April 2024','12th May 2024','9th June 2024','14th July 2024','11th Aug 2024','15th Sep 2024','13th Oct 2024','10th Nov 2024','8th Dec 2024'],
     mostPopular: false,
     rating: 5,
     colorCode: '#EDBE66',
@@ -8360,7 +8354,7 @@ const camps = {
         templateNonResidential: '',
       },
     },
-    dates: ['2nd December 2023','6th Jan 2024','3rd Feb 2024','2nd Mar 2024','6th April 2024','4th May 2024','1st June 2024','6th July 2024','3rd Aug 2024','7th Sep 2024','5th Oct 2024','2nd Nov 2024','7th Dec 2024'],
+    dates: ['2nd Dec 2023','6th Jan 2024','3rd Feb 2024','2nd Mar 2024','6th April 2024','4th May 2024','1st June 2024','6th July 2024','3rd Aug 2024','7th Sep 2024','5th Oct 2024','2nd Nov 2024','7th Dec 2024'],
     mostPopular: false,
     rating: 5,
     colorCode: '#DDAB58',
@@ -8510,7 +8504,7 @@ const camps = {
         templateNonResidential: '',
       },
     },
-    dates: ['9th December 2023','13th Jan 2024','9th Mar 2024','11th May 2024','13th July 2024','14th Sep 2024','9th Nov 2024'],
+    dates: ['9th Dec 2023','13th Jan 2024','9th Mar 2024','11th May 2024','13th July 2024','14th Sep 2024','9th Nov 2024'],
     mostPopular: false,
     rating: 5,
     colorCode: '#CE9B51',
@@ -8661,7 +8655,7 @@ const camps = {
         templateNonResidential: '',
       },
     },
-    dates: ['26th November 2023', '24th December 2023','28th Jan 2024','25th Feb 2024','24th Mar 2024','28th April 2024','26th May 2024','23rd June 2024','28th July 2024','25th Aug 2024','22nd Sep 2024','27th oct 2024','24th Nov 2024','22nd Dec 2024'],
+    dates: ['26th Nov 2023', '24th Dec 2023','28th Jan 2024','25th Feb 2024','24th Mar 2024','28th April 2024','26th May 2024','23rd June 2024','28th July 2024','25th Aug 2024','22nd Sep 2024','27th oct 2024','24th Nov 2024','22nd Dec 2024'],
     mostPopular: false,
     rating: 5,
     colorCode: '#EDBE66',
@@ -9678,7 +9672,7 @@ const camps = {
       //     points: [
       //       {
       //         listItem:
-      //           'Covid test RT-PCR results dated 20th January 2022to 28th January 2022and later for entry into the premises post prior registration. ',
+      //           'Covid test RT-PCR results dated 20th Jan 2022to 28th Jan 2022and later for entry into the premises post prior registration. ',
       //         subItems: [],
       //       },
       //       {
@@ -10041,7 +10035,7 @@ const camps = {
       //     points: [
       //       {
       //         listItem:
-      //           'Covid test RT-PCR results dated 20th January 2022to 28th January 2022and later for entry into the premises post prior registration. ',
+      //           'Covid test RT-PCR results dated 20th Jan 2022to 28th Jan 2022and later for entry into the premises post prior registration. ',
       //         subItems: [],
       //       },
       //       {
@@ -10396,7 +10390,7 @@ const camps = {
       //     points: [
       //       {
       //         listItem:
-      //           'Covid test RT-PCR results dated 20th January 2022to 28th January 2022and later for entry into the premises post prior registration. ',
+      //           'Covid test RT-PCR results dated 20th Jan 2022to 28th Jan 2022and later for entry into the premises post prior registration. ',
       //         subItems: [],
       //       },
       //       {
@@ -10746,7 +10740,7 @@ const camps = {
   //     //     points: [
   //     //       {
   //     //         listItem:
-  //     //           'Covid test RT-PCR results dated 20th January 2022to 28th January 2022and later for entry into the premises post prior registration. ',
+  //     //           'Covid test RT-PCR results dated 20th Jan 2022to 28th Jan 2022and later for entry into the premises post prior registration. ',
   //     //         subItems: [],
   //     //       },
   //     //       {
@@ -12636,7 +12630,7 @@ const classes = {
         type: 'paragraph',
         content: {
           title: 'Registration',
-          text: ['Starts 28th January 2024'],
+          text: ['Starts 28th Jan 2024'],
         },
       },
       {
@@ -13032,9 +13026,9 @@ const certificate = {
           title: 'Online Yoga Sessions',
           text: [
             'Morning batch : Mondays, Tuesdays & Thursdays: 11:30 am - 12:30 pm (IST)',
-            'Date: 20th November 2023 to 11th January 2024',
+            'Date: 20th Nov 2023 to 11th Jan 2024',
             'Evening batch: Wednesday, Friday & Saturday: 6:00 pm - 7:00 pm (IST)',
-            'Date: 1st December 2023 to 24th January 2024',
+            'Date: 1st Dec 2023 to 24th Jan 2024',
             '24 sessions of one hour each',
           ],
         },
@@ -13445,7 +13439,7 @@ const certificate = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'certificate-course',
-    dates: ['5th January to 29th April 2024', '3rd May to 26th August 2024', '28th August  to 20th December 2024'],
+    dates: ['5th Jan to 29th April 2024', '3rd May to 26th August 2024', '28th August  to 20th Dec 2024'],
     online: true,
     onCampus: true,
     nonResidential: false,
@@ -13775,7 +13769,7 @@ const certificate = {
       //   type: 'paragraph',
       //   content: {
       //     title: 'Date:',
-      //     text: [' 24th August - 16th December 2022'],
+      //     text: [' 24th August - 16th Dec 2022'],
       //   },
       // },
       {
@@ -13846,7 +13840,7 @@ const certificate = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'certificate-course',
-    dates: ['9th August, 2023'],
+    dates: [],
     online: true,
     onCampus: false,
     nonResidential: false,
@@ -13922,10 +13916,7 @@ const certificate = {
         type: 'paragraph',
         content: {
           title: 'Timings',
-          text: [
-            'Starts from 9th August, 2023 (Wednesday)',
-            'Wed, Fri, Sat 11.30 a.m. to 12.30 p.m.'
-          ],
+          text: [],
         },
       },
       {
