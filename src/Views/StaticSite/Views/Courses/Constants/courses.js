@@ -4470,11 +4470,11 @@ const ttc900hr = {
     timing:
       'Saturday & Sunday: Saturday: 4:30 pm – 7.30 pm (IST) and Sunday: 9:30 am – 1:30 pm (IST) (Both time slots are mandatory)',
     fees: {
-      onlineFee: 55000,
+      onlineFee: 60000,
       offlineFee: { residentialFee: 55000, nonResidentialFee: 55000 },
     },
     category: 'ttc',
-    dates: ['2nd December 2023'],
+    dates: ['2nd December 2023','6th April 2024','3rd Aug 2024','7th Dec 2024'],
     online: true,
     onCampus: true,
     nonResidential: true,
@@ -4556,7 +4556,7 @@ const ttc900hr = {
         content: {
           title: 'Fees:',
 
-          text: ['INR. 55,000/- (Inclusive of course fee and study material)'],
+          text: ['INR. 60,000/- (Inclusive of course fee and study material)'],
         },
       },
 
@@ -6591,7 +6591,7 @@ const camps = {
       'Asanas, pranayamas, and relaxation techniques for treating heart conditions',
     image: `${baseDomain}${courseAssets.courseAsset111}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset6}`,
-    dates: ['3rd September 2023', '5th November 2023'],
+    dates: ['7th Jan 2024','3rd Mar 2024','5th May 2024','7th July 2024','1st Sep 2024','3rd Nov 2024'],
     online: false,
     onCampus: true,
     nonResidential: false,
@@ -6720,7 +6720,7 @@ const camps = {
         templateNonResidential: '',
       },
     },
-    dates: ['1st October 2023', '3rd December 2023'],
+    dates: ['3rd December 2023','4th Feb 2024','7th April 2024','2nd June 2024','4th Aug 2024','6th Oct 2024','1st Dec 2024'],
     mostPopular: false,
     rating: 5,
     colorCode: '#CE9B51',
@@ -7326,7 +7326,7 @@ const camps = {
       'Enhance state of mind with pranayama, yoga asana and relaxation techniques',
     image: `${baseDomain}${courseAssets.courseAsset8}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset112}`,
-    dates: ['17th September 2023', '19th November 2023'],
+    dates: ['19th November 2023','21st Jan 2024','17th Mar 2024','19th May 2024','21st July 2024','15th Sep 2024','17th Nov 2024'],
     online: false,
     onCampus: true,
     nonResidential: false,
@@ -7607,7 +7607,7 @@ const camps = {
         templateNonResidential: '',
       },
     },
-    dates: ['10th September 2023', '12th November 2023'],
+    dates: ['12th November 2023','14th Jan 2024','10th Mar 2024','12th May 2024','14th July 2024','8th Sep 2024','10th Nov 2024',],
     mostPopular: false,
     rating: 5,
     colorCode: '#CE9B51',
@@ -7756,10 +7756,20 @@ const camps = {
       },
     },
     dates: [
-      '18th & 19th September 2023',
-      '21st & 22nd October 2023',
       '20th & 21st November 2023',
-      '16th & 17th December 2023'
+      '16th & 17th December 2023',
+      '22nd Jan & 23rd Jan 2024',
+      '17th Feb & 18th Feb 2024',
+      '18th Mar & 19th Mar 2024',
+      '20th April & 21st April 2024',
+      '20th May & 21st May 2024',
+      '15th June & 16th June 2024',
+      '15th July & 16th July 2024',
+      '17th Aug to 18th Aug 2024',
+      '16th Sep to 17th Sep 2024',
+      '19th Oct & 20th Oct 2024',
+      '18th Nov & 19th Nov 2024',
+      '14th Dec & 15th Dec 2024'
     ],
     mostPopular: false,
     rating: 5,
@@ -7912,7 +7922,7 @@ const camps = {
         templateNonResidential: '',
       },
     }, text: ['INR 2,000'],
-    dates: ['11th November 2023'],
+    dates: ['10th Feb 2024','13th April 2024','8th June 2024','10th Aug 2024','12th Oct 2024','14th Dec 2024'],
     mostPopular: false,
     rating: 5,
     colorCode: '#DDAB58',
@@ -8057,13 +8067,13 @@ const camps = {
         templateNonResidential: '',
       },
     },
-    dates: ['29th October 2023', ''],
+    dates: ['28th Jan 2024', '28th April 2024','28th July 2024','27th Oct 2024'],
     mostPopular: false,
     rating: 5,
     colorCode: '#CE9B51',
     timing: '10.00 am to 1:00 pm (IST)',
     fees: {
-      onlineFee: 500,
+      onlineFee: 1000,
       offlineFee: { residentialFee: 0, nonResidentialFee: 500 },
     },
     category: 'camps',
@@ -8204,7 +8214,7 @@ const camps = {
         templateNonResidential: '',
       },
     },
-    dates: ['8th October 2023', '12th November 2023', '10th December 2023'],
+    dates: ['10th December 2023','14th Jan 2024','11th Feb 2024','10th Mar 2024','14th April 2024','12th May 2024','9th June 2024','14th July 2024','11th Aug 2024','15th Sep 2024','13th Oct 2024','10th Nov 2024','8th Dec 2024'],
     mostPopular: false,
     rating: 5,
     colorCode: '#EDBE66',
@@ -8350,7 +8360,7 @@ const camps = {
         templateNonResidential: '',
       },
     },
-    dates: ['7th October 2023', '4th November 2023', '2nd December 2023'],
+    dates: ['2nd December 2023','6th Jan 2024','3rd Feb 2024','2nd Mar 2024','6th April 2024','4th May 2024','1st June 2024','6th July 2024','3rd Aug 2024','7th Sep 2024','5th Oct 2024','2nd Nov 2024','7th Dec 2024'],
     mostPopular: false,
     rating: 5,
     colorCode: '#DDAB58',
@@ -8500,7 +8510,7 @@ const camps = {
         templateNonResidential: '',
       },
     },
-    dates: ['12th August 2023', '14th October 2023', '9th December 2023'],
+    dates: ['9th December 2023','13th Jan 2024','9th Mar 2024','11th May 2024','13th July 2024','14th Sep 2024','9th Nov 2024'],
     mostPopular: false,
     rating: 5,
     colorCode: '#CE9B51',
@@ -8651,7 +8661,7 @@ const camps = {
         templateNonResidential: '',
       },
     },
-    dates: ['24th September 2023', '22nd  October 2023', '26th November 2023', '24th December 2023'],
+    dates: ['26th November 2023', '24th December 2023','28th Jan 2024','25th Feb 2024','24th Mar 2024','28th April 2024','26th May 2024','23rd June 2024','28th July 2024','25th Aug 2024','22nd Sep 2024','27th oct 2024','24th Nov 2024','22nd Dec 2024'],
     mostPopular: false,
     rating: 5,
     colorCode: '#EDBE66',
@@ -8796,7 +8806,7 @@ const camps = {
         templateNonResidential: 'CAMP_FOR_7_DAYS_HEALTH',
       },
     },
-    dates: ['18th Nov to 24th Nov 2023',],
+    dates: ['13th Jan to 19th Jan 2024','9th Mar to 15th Mar 2024','11th May to 17th May 2024','13rd July to 19th July 2024','14th Sep to 20th Sep 2024','9th Nov to 15th Nov 2024',''],
     online: false,
     onCampus: true,
     nonResidential: true,
@@ -8808,7 +8818,7 @@ const camps = {
     timing: 'Saturday to Friday : 7:00 am - 7:00 pm (IST)',
     fees: {
       onlineFee: 0,
-      offlineFee: { residentialFee: 13000, nonResidentialFee: 9000 },
+      offlineFee: { residentialFee: 13000, nonResidentialFee: 10000 },
     },
     category: 'camps',
     metaDescription:
@@ -8991,7 +9001,7 @@ const camps = {
         content: {
           title: 'FEES',
           text: [
-            'Non-Residential: 9,000/- (inclusive of course fees and 4 Meals)',
+            'Non-Residential: 10,000/- (inclusive of course fees and 4 Meals)',
           ],
         },
       },
@@ -9000,9 +9010,9 @@ const camps = {
         content: {
           title: 'Residential',
           text: [
-            'Rs. 13,000/- Triple Sharing per person (Inclusive of course fee and 4 meals a day)',
-            // 'Rs. 20,000/- Dual Sharing per person (Inclusive of course fee and 4 meals a day)',
-            // 'Rs. 34,000/- Single Occupancy (Inclusive of course fee and 4 meals a day)',
+            'Rs. 15,000/- Triple Sharing per person (Inclusive of course fee and 4 meals a day)',
+            'Rs. 23,000/- Dual Sharing per person (Inclusive of course fee and 4 meals a day)',
+            'Rs. 38,000/- Single Occupancy (Inclusive of course fee and 4 meals a day)',
           ],
         },
       },
@@ -9123,10 +9133,20 @@ const camps = {
       },
     },
     dates: [
-      '23rd Sep to 29th Sep 2023',
-      '28th Oct to 3rd Nov 2023',
       '25th Nov to 1st Dec 2023',
-      '23rd Dec to 29th Dec 2023'
+      '23rd Dec to 29th Dec 2023',
+      '27th Jan to 2th Feb 2024',
+      '24th Feb to 1st Mar 2024',
+      '23rd Mar to 29th Mar 2024',
+      '3rd April to 27th April 2024',
+      '25th May to 31st May 2024',
+      '22nd June to 28th June 2024',
+      '27th July to 2nd Aug 2024',
+      '24th Aug to 30th Aug 2024',
+      '21st Sep to 27th Sep 2024',
+      '26th Oct to 1st Nov 2024',
+      '23rd Nov to 29th Nov 2024',
+      '28th Dec to 3rd Jan 2025'
     ],
     online: false,
     onCampus: true,
@@ -9323,7 +9343,7 @@ const camps = {
         content: {
           title: 'FEES',
           text: [
-            'Non-Residential: 9,000/- (inclusive of course fees and 4 Meals)',
+            'Non-Residential: 10,000/- (inclusive of course fees and 4 Meals)',
           ],
         },
       },
@@ -9332,9 +9352,9 @@ const camps = {
         content: {
           title: 'Residential',
           text: [
-            'Rs. 13,000/- Triple Sharing per person (Inclusive of course fee and 4 meals a day)',
-            // 'Rs. 20,000/- Dual Sharing per person (Inclusive of course fee and 4 meals a day)',
-            // 'Rs. 34,000/- Single Occupancy (Inclusive of course fee and 4 meals a day)',
+            'Rs. 15,000/- Triple Sharing per person (Inclusive of course fee and 4 meals a day)',
+            'Rs. 23,000/- Dual Sharing per person (Inclusive of course fee and 4 meals a day)',
+            'Rs. 38,000/- Single Occupancy (Inclusive of course fee and 4 meals a day)',
           ],
         },
       },
@@ -9454,9 +9474,20 @@ const camps = {
     },
     batch: 1,
     dates: [
-      '1st Oct to 21st Oct 2023',
       '5th Nov to 25th Nov 2023',
-      '3rd Dec to 23rd Dec 2023'
+      '3rd Dec to 23rd Dec 2023',
+      '7th Jan to 27th Jan 2024',
+      '4th Feb to 24th Feb 2024',
+      '3rd Mar to 23rd Mar 2024',
+      '7th April to 27th April 2024',
+      '5th May to 25th May 2024',
+      '2nd June to 22nd June 2024',
+      '7th July to 27th July 2024',
+      '4th Aug to 24th Aug 2024',
+      '1st Sep to 21st Sep 2024',
+      '6th Oct to 26th Oct 2024',
+      '3rd Nov to 23rd Nov 2024',
+      '1st Dec to 21st Dec 2024'
     ],
     online: true,
     onCampus: true,
@@ -9468,7 +9499,7 @@ const camps = {
     colorCode: '#EDBE66',
     timing: 'Morning: 7:00 am – 8:30 am (IST)',
     fees: {
-      onlineFee: 2100,
+      onlineFee: 2500,
       offlineFee: { residentialFee: 0, nonResidentialFee: 2100 },
     },
     category: 'camps',
@@ -9625,7 +9656,7 @@ const camps = {
       {
         type: 'paragraph',
         content: {
-          title: 'Rs. 2100/-',
+          title: 'Rs. 2500/-',
           text: [
             '*Please note fees once paid will be non-refundable. Also, after making the payment, please provide us with a screenshot of the transaction.',
             'We support all credit cards. For making payments using MasterCard. Alternatively, you can also make payments using net banking or opt for wire transfer by writing to us.',
@@ -9804,11 +9835,20 @@ const camps = {
       },
     },
     dates: [
-      '6th Aug to 26th Aug 2023',
-      '3rd Sep to 23rd Sep 2023',
-      '1st Oct to 21st Oct 2023',
       '5th Nov to 25th Nov 2023',
-      '3rd Dec to 23rd Dec 2023'
+      '3rd Dec to 23rd Dec 2023',
+      '7th Jan to 27th Jan 2024',
+      '4th Feb to 24th Feb 2024',
+      '3rd Mar to 23rd Mar 2024',
+      '7th April to 27th April 2024',
+      '5th May to 25th May 2024',
+      '2nd June to 22nd June 2024',
+      '7th July to 27th July 2024',
+      '4th Aug to 24th Aug 2024',
+      '1st Sep to 21st Sep 2024',
+      '6th Oct to 26th Oct 2024',
+      '3rd Nov to 23rd Nov 2024',
+      '1st Dec to 21st Dec 2024'
     ],
     online: true,
     onCampus: true,
@@ -9820,7 +9860,7 @@ const camps = {
     colorCode: '#EDBE66',
     timing: 'Evening 6:30 pm – 8:00 pm (IST)',
     fees: {
-      onlineFee: 2100,
+      onlineFee: 2500,
       offlineFee: { residentialFee: 0, nonResidentialFee: 2100 },
     },
     category: 'camps',
@@ -9979,7 +10019,7 @@ const camps = {
       {
         type: 'paragraph',
         content: {
-          title: 'Rs. 2100/-',
+          title: 'Rs. 2500/-',
           text: [
             '*Please note fees once paid will be non-refundable. Also, after making the payment, please provide us with a screenshot of the transaction.',
             'We support all credit cards. For making payments using MasterCard. Alternatively, you can also make payments using net banking or opt for wire transfer by writing to us.',
@@ -10158,7 +10198,14 @@ const camps = {
       },
     },
     dates: [
-      '19th Nov to 9th Dec 2023'
+      '19th Nov to 9th Dec 2023',
+      '14th Jan to 3rd Feb 2024',
+      '10th Mar to 30th Mar 2024',
+      '12th May to 1st June 2024',
+      '14th July to 3rd Aug 2024',
+      '8th Sep to 28th Sep 2024',
+      '10th Nov to 30th Nov 2024',
+
     ],
     online: true,
     onCampus: true,
@@ -10170,7 +10217,7 @@ const camps = {
     colorCode: '#EDBE66',
     timing: 'Evening 6:30 pm – 8:00 pm (IST)',
     fees: {
-      onlineFee: 2100,
+      onlineFee: 2500,
       offlineFee: { residentialFee: 0, nonResidentialFee: 2100 },
     },
     category: 'camps',
@@ -10327,7 +10374,7 @@ const camps = {
       {
         type: 'paragraph',
         content: {
-          title: 'Rs. 2100/-',
+          title: 'Rs. 2500/-',
           text: [
             '*Please note fees once paid will be non-refundable. Also, after making the payment, please provide us with a screenshot of the transaction.',
             'We support all credit cards. For making payments using MasterCard. Alternatively, you can also make payments using net banking or opt for wire transfer by writing to us.',
@@ -10941,7 +10988,7 @@ const classes = {
     timing:
       'Tuesday & Thursday - 8pm - 9pm (IST) (Online)',
     fees: {
-      onlineFee: 1400,
+      onlineFee: 1500,
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'classes',
@@ -10974,7 +11021,7 @@ const classes = {
         type: 'paragraph',
         content: {
           title: 'Fees',
-          text: ['1400'],
+          text: ['1500'],
         },
       },
       {
@@ -11040,7 +11087,7 @@ const classes = {
     timing:
       'Regular Asana Classes is conducted 4 days in a week. ',
     fees: {
-      onlineFee: 1000,
+      onlineFee: 1100,
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'classes',
@@ -11193,7 +11240,7 @@ const classes = {
         type: 'paragraph',
         content: {
           title: 'Monthly Fees',
-          text: ['Rs. 1000/-'],
+          text: ['Rs. 1100/-'],
         },
       },
       {
@@ -11275,7 +11322,7 @@ const classes = {
     timing:
       'Monday,Tuesday,Thursday,Friday * :6:30 am to 7:30 am, 7:30 am to 8:30 am, 1:00 pm to 2:00 pm, 6:00 pm to 7:00 pm, 7:00 pm to 8:00 pm',
     fees: {
-      onlineFee: 1000,
+      onlineFee: 1100,
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'classes',
@@ -11335,7 +11382,7 @@ const classes = {
         type: 'paragraph',
         content: {
           title: 'Monthly Fees',
-          text: ['Rs. 1000/-'],
+          text: ['Rs. 1100/-'],
         },
       },
       {
@@ -11395,7 +11442,7 @@ const classes = {
     timing:
       'Monday,Tuesday,Thursday,Friday * :6:30 am to 7:30 am, 7:30 am to 8:30 am,8:30 am to 9:30 am, 9:30 am to 10:30 am, 10:30 am to 11:30 am, 11:30 am to 12:30 pm, 1:00 pm to 2:00 pm, 2:00 pm to 3:00 pm, 3:00 pm to 4:00 pm, 4:00 pm to 5:00 pm, 5:00 pm to 6:00 pm, 6:00 pm to 7:00 pm, 7:00 pm to 8:00 pm',
     fees: {
-      onlineFee: 1000,
+      onlineFee: 1100,
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'classes',
@@ -11472,7 +11519,7 @@ const classes = {
         type: 'paragraph',
         content: {
           title: 'Monthly Fees',
-          text: ['Rs. 1000/-'],
+          text: ['Rs. 1100/-'],
         },
       },
       {
@@ -11530,7 +11577,7 @@ const classes = {
     colorCode: '#C48E8C',
     timing: '4:00 pm -5:00 pm (Mon, Tues, Thurs, Fri)',
     fees: {
-      onlineFee: 1000,
+      onlineFee: 1100,
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'classes',
@@ -11561,7 +11608,7 @@ const classes = {
         type: 'paragraph',
         content: {
           title: 'Fees',
-          text: [' Rs 1000 per month'],
+          text: [' Rs 1100 per month'],
         },
       },
 
@@ -11616,7 +11663,7 @@ const classes = {
     join: true,
     timing: 'Saturday & Sunday: 8:00 am - 9:30 am (IST) *',
     fees: {
-      onlineFee: 1000,
+      onlineFee: 1100,
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'classes',
@@ -11650,7 +11697,7 @@ const classes = {
         type: 'paragraph',
         content: {
           title: 'Fees',
-          text: [' Rs 1000 per month'],
+          text: [' Rs 1100 per month'],
         },
       },
       {
@@ -11693,14 +11740,25 @@ const classes = {
     colorCode: '#D3A29D',
     timing: 'Monday, Wednesday & Friday: 7:00 am - 8:00 am (IST)',
     fees: {
-      onlineFee: 1000,
+      onlineFee: 1100,
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'classes',
     dates: [
-      '2nd Oct to 27th Oct 2023',
       '6th Nov to 1st Dec 2023',
-      '4th Dec to 29th Dec 2023'
+      '4th Dec to 29th Dec 2023',
+      '8th Jan to 2nd Feb 2024',
+      '5th Feb to 1st Mar 2024',
+      '4th Mar to 29th Mar 2024',
+      '8th April to 3rd May 2024',
+      '6th May to 31st May 2024',
+      '3rd June to 28th June 2024',
+      '8th July to 2nd Aug 2024',
+      '5th Aug to 30th Aug 2024',
+      '2nd Sep to 27th Sep 2024',
+      '1st Oct to 7th Oct 2024',
+      '4th Nov to 29th Nov 2024',
+      '2nd Dec to 27th Dec 2024'
     ],
     online: true,
     onCampus: false,
@@ -11752,7 +11810,7 @@ const classes = {
         type: 'paragraph',
         content: {
           title: 'Fees',
-          text: [' INR 1000'],
+          text: [' INR 1100'],
         },
       },
       {
@@ -11800,7 +11858,7 @@ const classes = {
     timing:
       'Tuesday, Thursday & Saturday: 7:00 am - 7:45 am (IST) *',
     fees: {
-      onlineFee: 1000,
+      onlineFee: 1100,
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'classes',
@@ -11849,7 +11907,7 @@ const classes = {
         type: 'paragraph',
         content: {
           title: 'Fees',
-          text: [' Rs 1000/- '],
+          text: [' Rs 1100/- '],
         },
       },
       {
@@ -12041,7 +12099,7 @@ const classes = {
     timing:
       'Saturday & Sunday: Saturday: 8:00 am - 9:30 am (IST) and Sunday: 8:00 am - 9:30 am (IST) or 10:30 am - 12:00 pm (IST)',
     fees: {
-      onlineFee: 1000,
+      onlineFee: 1100,
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'classes',
@@ -12118,7 +12176,7 @@ const classes = {
         type: 'paragraph',
         content: {
           title: 'Monthly Fees',
-          text: ['Rs. 1000/-'],
+          text: ['Rs. 1100/-'],
         },
       },
       {
@@ -12578,7 +12636,7 @@ const classes = {
         type: 'paragraph',
         content: {
           title: 'Registration',
-          text: ['Starts 29th January 2023'],
+          text: ['Starts 28th January 2024'],
         },
       },
       {
@@ -12634,7 +12692,7 @@ const classes = {
     colorCode: '#C48E8C',
     timing: 'Saturday & Sunday: 7:30 am - 9:00 am  (IST)',
     fees: {
-      onlineFee: 1000,
+      onlineFee: 1100,
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'classes',
@@ -12690,7 +12748,7 @@ const classes = {
         type: 'paragraph',
         content: {
           title: 'Monthly Fees',
-          text: ['Rs. 1000/-'],
+          text: ['Rs. 1100/-'],
         },
       },
       {
@@ -12910,11 +12968,11 @@ const certificate = {
     colorCode: '#B77E7E',
     timing: 'Mondays, Tuesdays & Thursdays: 11:30 am - 12:30 pm (IST)',
     fees: {
-      onlineFee: 20000,
+      onlineFee: 24000,
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'certificate-course',
-    dates: ['21st Aug to 12th Oct 2023', '20th Nov 2023 to 11th Jan 2024', '1st Dec 2023 to 24th Jan 2024'],
+    dates: ['20th Nov 2023 to 11th Jan 2024', '1st Dec 2023 to 24th Jan 2024','19th Feb to 11th April 2024','13th May to 4th July 2024','5th Aug to 26th Sep 2024','11th Nov to 2nd Jan 2025'],
     online: true,
     onCampus: false,
     nonResidential: false,
@@ -12985,7 +13043,7 @@ const certificate = {
         type: 'paragraph',
         content: {
           title: 'Fees',
-          text: ['Rs. 20000/-'],
+          text: ['Rs. 24,000/-'],
         },
       },
       {
@@ -13180,11 +13238,11 @@ const certificate = {
     colorCode: '#C48E8C',
     timing: 'Fridays & Saturdays: 3:00 pm - 5:00 pm (IST)',
     fees: {
-      onlineFee: 20000,
+      onlineFee: 24000,
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'certificate-course',
-    dates: ['18th Aug to 23rd Sep 2023', '24th Nov 2023 to 30th Dec 2023'],
+    dates: ['24th Nov 2023 to 30th Dec 2023','23rd Feb to 30th Mar 2024','3rd May to 8th June 2024','2nd Aug to 7th Sep 2024','15th Nov to 21'],
     online: true,
     onCampus: true,
     nonResidential: false,
@@ -13219,7 +13277,7 @@ const certificate = {
         type: 'paragraph',
         content: {
           title: 'Fees',
-          text: ['Rs. 20,000'],
+          text: ['Rs. 24,000'],
         },
       },
       // {
