@@ -5,8 +5,26 @@ import 'react-phone-number-input/style.css'
 import PhoneInput from 'react-phone-number-input'
 import Select from 'react-select'
 import { Country, State, City } from 'country-state-city'
+import Other from './Other'
+import CourseDetails from './CourseDetails'
 
-const Personal = ({ handleEmpty1, empty, setFormData, formData, setEmpty }) => {
+const Personal = ({
+  empty,
+  setFormData,
+  formData,
+  setEmpty,
+  courseDate,
+  currentCourse,
+  courseAsset1,
+  setCourseAsset1,
+  courseAsset2,
+  setCourseAsset2,
+  handleSubmit,
+  courseFee,
+  setCourseFee,
+  uploadCheck,
+  setUploadCheck
+}) => {
   //const today = new Date().toISOString().split('T')[0]
   const [values, setValues] = useState([])
   const countries = Country.getAllCountries()
@@ -17,25 +35,24 @@ const Personal = ({ handleEmpty1, empty, setFormData, formData, setEmpty }) => {
     ...country,
   }))
 
-  const updatedStates = (countryId) =>{
-    return State.getStatesOfCountry(countryId).map((state) => (
-      {
-        label: state.name,
-        value: state.id,
-        ...state,
-      }))
+  const updatedStates = (countryId) => {
+    return State.getStatesOfCountry(countryId).map((state) => ({
+      label: state.name,
+      value: state.id,
+      ...state,
+    }))
   }
 
-  const updatedCities = (countryId,stateId) => {
+  const updatedCities = (countryId, stateId) => {
     // console.log(countryId,stateId,'stateId')
-    return City.getCitiesOfState(countryId,stateId).map((city) => {
+    return City.getCitiesOfState(countryId, stateId).map((city) => {
       // console.log(city,'city')
-      return (
-        {
-          label: city.name,
-          value: city.id,
-          ...city,
-        })})
+      return {
+        label: city.name,
+        value: city.id,
+        ...city,
+      }
+    })
   }
   const customStyles = {
     control: (base, state) => ({
@@ -47,23 +64,26 @@ const Personal = ({ handleEmpty1, empty, setFormData, formData, setEmpty }) => {
       marginTop: '2rem',
       marginLeft: '2rem',
       // Overwrittes the different states of border
-      borderColor: state.isFocused ? 'rgba(96, 96, 96, 0.5019607843)' : 'rgba(96, 96, 96, 0.5019607843)',
+      borderColor: state.isFocused
+        ? 'rgba(96, 96, 96, 0.5019607843)'
+        : 'rgba(96, 96, 96, 0.5019607843)',
       // Removes weird border around container
       boxShadow: state.isFocused ? null : null,
       '&:hover': {
         // Overwrittes the different states of border
-        borderColor: state.isFocused ? 'rgba(96, 96, 96, 0.5019607843)' : 'rgba(96, 96, 96, 0.5019607843)'
-      }
-    })
+        borderColor: state.isFocused
+          ? 'rgba(96, 96, 96, 0.5019607843)'
+          : 'rgba(96, 96, 96, 0.5019607843)',
+      },
+    }),
   }
-
 
   return (
     <div className="main_div">
       <div className="grid_box">
         <div className="left_grid">
           <form>
-            <div className='form_error'>
+            <div className="form_error">
               <InputComponent
                 type="text"
                 placeholder="Name*"
@@ -74,9 +94,8 @@ const Personal = ({ handleEmpty1, empty, setFormData, formData, setEmpty }) => {
               />
               {empty === 1 && <small> Please enter your name</small>}
             </div>
-            
-            
-            <div className='form_error'>
+
+            <div className="form_error">
               <InputComponent
                 type="email"
                 id="text"
@@ -86,27 +105,20 @@ const Personal = ({ handleEmpty1, empty, setFormData, formData, setEmpty }) => {
                 keyName="email"
                 errorCheck={setEmpty}
               />
-              {empty === 2 && (
-                <small>
-                  {' '}
-                  Please enter a valid email
-                </small>
-              )}
+              {empty === 2 && <small> Please enter a valid email</small>}
             </div>
-            <div className='form_error'>
+            <div className="form_error">
               <PhoneInput
                 placeholder="Enter phone number*"
-                defaultCountry='IN'
+                defaultCountry="IN"
                 value={formData.phone}
-                onChange={(e)=>{ setFormData({ ...formData,phone:e }) }}/>
-              {empty === 3 && (
-                <small>
-                  {' '}
-                  Please enter a valid phone number
-                </small>
-              )}
+                onChange={(e) => {
+                  setFormData({ ...formData, phone: e })
+                }}
+              />
+              {empty === 3 && <small> Please enter a valid phone number</small>}
             </div>
-            <div className='form_error'>
+            <div className="form_error">
               <InputComponent
                 type="text"
                 placeholder="Address Line 1*"
@@ -115,14 +127,9 @@ const Personal = ({ handleEmpty1, empty, setFormData, formData, setEmpty }) => {
                 keyName="address1"
                 errorCheck={setEmpty}
               />
-              {empty === 4 && (
-                <small>
-                  {' '}
-                  Please enter your address
-                </small>
-              )}
+              {empty === 4 && <small> Please enter your address</small>}
             </div>
-            <div className='form_error'>
+            <div className="form_error">
               <InputComponent
                 type="text"
                 placeholder="Address Line 2"
@@ -132,14 +139,14 @@ const Personal = ({ handleEmpty1, empty, setFormData, formData, setEmpty }) => {
                 errorCheck={setEmpty}
               />
             </div>
-            <div className='form_error'>
+            <div className="form_error">
               <Select
                 styles={customStyles}
                 id="country"
                 name="country"
-                placeholder='Country'
+                placeholder="Country"
                 label="country"
-                className='select'
+                className="select"
                 form={formData}
                 setField={setFormData}
                 keyName="country"
@@ -148,21 +155,19 @@ const Personal = ({ handleEmpty1, empty, setFormData, formData, setEmpty }) => {
                 value={values.country}
                 onChange={(value) => {
                   setValues({ country: value, state: null, city: null }, false)
-                  setFormData(prev=>{ return { ...prev, country: value.name } })
+                  setFormData((prev) => {
+                    return { ...prev, country: value.name }
+                  })
                 }}
               />
-              {empty === 5 && (
-                <small>
-                  Please enter your country
-                </small>
-              )}
+              {empty === 5 && <small>Please enter your country</small>}
             </div>
-            <div className='form_error'>
+            <div className="form_error">
               <Select
                 styles={customStyles}
                 id="state"
                 name="state"
-                placeholder='State'
+                placeholder="State"
                 form={formData}
                 setField={setFormData}
                 keyName="state"
@@ -170,8 +175,13 @@ const Personal = ({ handleEmpty1, empty, setFormData, formData, setEmpty }) => {
                 options={updatedStates(values.country?.isoCode)}
                 value={values.state}
                 onChange={(value) => {
-                  setValues({ country: values.country, state: value, city: null }, false)
-                  setFormData(prev=>{ return { ...prev, state: value.name } })
+                  setValues(
+                    { country: values.country, state: value, city: null },
+                    false
+                  )
+                  setFormData((prev) => {
+                    return { ...prev, state: value.name }
+                  })
                 }}
               />
               {/* {empty === 6 && (
@@ -181,21 +191,33 @@ const Personal = ({ handleEmpty1, empty, setFormData, formData, setEmpty }) => {
                 </small>
               )} */}
             </div>
-            <div className='form_error'>
+            <div className="form_error">
               <Select
                 styles={customStyles}
                 id="city"
                 name="city"
-                placeholder='City'
+                placeholder="City"
                 form={formData}
                 setField={setFormData}
                 keyName="city"
                 errorCheck={setEmpty}
-                options={updatedCities(values?.country?.isoCode,values?.state?.isoCode)}
+                options={updatedCities(
+                  values?.country?.isoCode,
+                  values?.state?.isoCode
+                )}
                 value={values.city}
                 onChange={(value) => {
-                  setValues({ country: values.country, state: values.state, city: value }, false)
-                  setFormData(prev=>{ return { ...prev, city: value.name } })
+                  setValues(
+                    {
+                      country: values.country,
+                      state: values.state,
+                      city: value,
+                    },
+                    false
+                  )
+                  setFormData((prev) => {
+                    return { ...prev, city: value.name }
+                  })
                 }}
               />
               {/* {empty === 7 && (
@@ -205,11 +227,7 @@ const Personal = ({ handleEmpty1, empty, setFormData, formData, setEmpty }) => {
                 </small>
               )} */}
             </div>
-          </form>
-        </div>
-        <div className="right_grid">
-          <form>
-            <div className='form_error'>
+            <div className="form_error">
               <InputComponent
                 type="text"
                 placeholder="Pincode*"
@@ -218,75 +236,62 @@ const Personal = ({ handleEmpty1, empty, setFormData, formData, setEmpty }) => {
                 keyName="pincode"
                 errorCheck={setEmpty}
               />
-              {empty === 8 && (
-                <small >
-                  {' '}
-                  Please enter your pincode
-                </small>
-              )}
+              {empty === 8 && <small> Please enter your pincode</small>}
             </div>
 
-            <div className="personal_gender">Gender*</div>
-            <div className="gender form_error">
-              <label className="gender_radio">
-                Male&nbsp;
-                <input
-                  type="radio"
-                  value="MALE"
-                  name="gender"
-                  checked={formData.gender==='MALE'}
-                  onChange={(e) => {
-                    if (e.target.checked) {
-                      setFormData({ ...formData, gender: e.target.value })
-                      setEmpty(0)
-                    }
-                  }}
-                />
-              </label>
-              <label className="gender_radio">
-                Female&nbsp;
-                <input
-                  className="radio"
-                  type="radio"
-                  value="FEMALE"
-                  name="gender"
-                  checked={formData.gender==='FEMALE'}
-                  onChange={(e) => {
-                    if (e.target.checked) {
-                      setFormData(
-                        { ...formData, gender: e.target.value },
+            <div className="personal_gender">
+              <span className="gender-text">Gender*</span>
+              <div className="gender form_error">
+                <label className="gender_radio">
+                  Male&nbsp;
+                  <input
+                    type="radio"
+                    value="MALE"
+                    name="gender"
+                    checked={formData.gender === 'MALE'}
+                    onChange={(e) => {
+                      if (e.target.checked) {
+                        setFormData({ ...formData, gender: e.target.value })
                         setEmpty(0)
-                      )
-                    }
-                  }}
-                />
-              </label>
-              {empty === 11 && (
-                <small>
-                  {' '}
-                  Please select one option
-                </small>
-              )}
+                      }
+                    }}
+                  />
+                </label>
+                <label className="gender_radio">
+                  Female&nbsp;
+                  <input
+                    className="radio"
+                    type="radio"
+                    value="FEMALE"
+                    name="gender"
+                    checked={formData.gender === 'FEMALE'}
+                    onChange={(e) => {
+                      if (e.target.checked) {
+                        setFormData(
+                          { ...formData, gender: e.target.value },
+                          setEmpty(0)
+                        )
+                      }
+                    }}
+                  />
+                </label>
+                {empty === 11 && <small> Please select one option</small>}
+              </div>
             </div>
             <div className="DOB_box form_error">
               <InputComponent
                 type="number"
                 placeholder="Age*"
                 minnum="4"
-                maxnum='99'
+                maxnum="99"
                 form={formData}
                 setField={setFormData}
                 keyName="AGE"
                 errorCheck={setEmpty}
               />
-              {empty === 9 && (
-                <small>
-                  {' '}
-                  Please enter age between 4 & 100
-                </small>
-              )}
+              {empty === 9 && <small> Please enter age between 4 & 100</small>}
             </div>
-            <div className='form_error'>
+            <div className="form_error">
               <InputComponent
                 type="text"
                 placeholder="Nationality*"
@@ -295,18 +300,59 @@ const Personal = ({ handleEmpty1, empty, setFormData, formData, setEmpty }) => {
                 keyName="nationality"
                 errorCheck={setEmpty}
               />
-              {empty === 10 && (
-                <small>
-                  {' '}
-                  Please enter your nationality
-                </small>
-              )}
+              {empty === 10 && <small> Please enter your nationality</small>}
             </div>
+          </form>
+        </div>
+        <div className="right_grid">
+          <form>
+            {/* <div className="medical-section">
+              <p className="medical-label">
+                Medical History & Current Health Issues :
+              </p>
+              <textarea
+                className="text_box"
+                type="text"
+                rows="5"
+                cols="40"
+                onChange={(e) => {
+                  setFormData({
+                    ...formData,
+                    medicalstatus: e.target.value,
+                  })
+                }}
+              />
+            </div> */}
+            <Other
+              // setBold={setBold}
+              empty={empty}
+              formData={formData}
+              setFormData={setFormData}
+              // handleEmpty4={handleEmpty4}
+            />
+            <CourseDetails
+              courseDate={courseDate}
+              currentCourse={currentCourse}
+              formData={formData}
+              setFormData={setFormData}
+              courseAsset1={courseAsset1}
+              setCourseAsset1={setCourseAsset1}
+              courseAsset2={courseAsset2}
+              setCourseAsset2={setCourseAsset2}
+              // setBold={setBold}
+              handleSubmit={handleSubmit}
+              empty={empty}
+              setEmpty={setEmpty}
+              courseFee={courseFee}
+              setCourseFee={setCourseFee}
+              uploadCheck={uploadCheck}
+              setUploadCheck={setUploadCheck}
+            />
           </form>
         </div>
       </div>
       <div className="button_box">
-        <button className="next_button" onClick={handleEmpty1}>
+        <button className="next_button" onClick={handleSubmit}>
           Next
         </button>
       </div>
