@@ -11813,7 +11813,7 @@ const classes = {
     colorCode: '#D3A29D',
     timing: 'Monday, Wednesday & Friday: 7:00 am - 8:00 am (IST)',
     fees: {
-      onlineFee: 1000,
+      onlineFee: 1100,
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'classes',
@@ -11883,7 +11883,7 @@ const classes = {
         type: 'paragraph',
         content: {
           title: 'Fees',
-          text: [' INR 1000'],
+          text: [' INR 1100'],
         },
       },
       {
