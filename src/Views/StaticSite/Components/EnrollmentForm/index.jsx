@@ -7,11 +7,11 @@ import { validateEmail } from '../../../../helpers'
 import { Link, useSearchParams } from 'react-router-dom'
 import DisclaimerPolicy from '../DisclaimerPolicy'
 import { useSelector } from 'react-redux'
-import Other from './Other'
-import CourseDetails from './CourseDetails'
-import Academic from './Academic'
+// import Other from './Other'
+// import CourseDetails from './CourseDetails'
+// import Academic from './Academic'
 import Personal from './Personal'
-import Work from './Work'
+// import Work from './Work'
 import { legacy2 } from '../../assets/icons/icon'
 
 const Enrollment = () => {
@@ -19,7 +19,7 @@ const Enrollment = () => {
   const { courseId } = useParams()
   const [currentCourse, setCurrentCourse] = useState({})
   const [courseDate, setCourseDate] = useState(null)
-  const[Params]= useSearchParams()
+  const [Params] = useSearchParams()
   //const [date, setDate] = useState('')
 
   useEffect(() => {
@@ -34,18 +34,17 @@ const Enrollment = () => {
   // var today = new Date()
 
   const [empty, setEmpty] = useState(0)
-  const [ courseFee,setCourseFee ]=useState(null)
+  const [courseFee, setCourseFee] = useState(null)
   const [bold, setBold] = useState(0)
-  const [yearEmpty, setYearEmpty] = useState(0)
-  const [resgin, setResgin] = useState(0)
   const [listData, setListData] = useState([])
   const [qualificationData, setQualificationData] = useState([])
   const [courseAsset1, setCourseAsset1] = useState(null)
   const [courseAsset2, setCourseAsset2] = useState(null)
+  const [uploadCheck, setUploadCheck] = useState(true)
   const [formData, setFormData] = useState({
     name: user?.data?.firstName,
     phone: '',
-    email:  user?.data?.email,
+    email: user?.data?.email,
     address1: '',
     address2: '',
     country: '',
@@ -68,61 +67,17 @@ const Enrollment = () => {
     source: '',
     purpose: '',
     info: '',
-    mode:'',
+    mode: '',
     residental: '',
   })
 
-  const listDetailHandler = (e) => {
-    e.preventDefault()
-    if (formData.workfrom.length !== 4) {
-      return setResgin(1)
-    } else if (formData.worktill.length !== 4) {
-      return setResgin(2)
-    } else
-      setListData([
-        ...listData,
-        {
-          companyName: formData.company,
-          roleWhenLeaving: formData.leavejob,
-          workedFrom: formData.workfrom,
-          workedTill: formData.worktill,
-          listedWorkExperience: formData.leavejob,
-        },
-      ])
-    setFormData({
-      ...formData,
-      //  resignation: '',
-      company: '',
-      leavejob: '',
-      workfrom: '',
-      worktill: '',
-    })
-  }
-
-  const QualificationDetailHandler = () => {
-    if (formData.school === '') {
-      setYearEmpty(1)
-    } else if (formData.course === '') {
-      setYearEmpty(2)
-    } else if (formData.completion.length !== 4) {
-      return setYearEmpty(3)
-    } else
-      setQualificationData([
-        ...qualificationData,
-        {
-          schoolOrCollege: formData.school,
-          course: formData.course,
-          yearOfCompletion: formData.completion,
-          listedQualification: formData.course,
-        },
-      ])
-    setEmpty(0)
-    setFormData({ ...formData, school: '', course: '', completion: '' })
-  }
-
   const handleEmpty1 = (e) => {
     e.preventDefault()
-    if (formData.name === '' || formData.name===undefined || formData.name===null ) {
+    if (
+      formData.name === '' ||
+      formData.name === undefined ||
+      formData.name === null
+    ) {
       return setEmpty(1)
     } else if (
       formData.phone === '' ||
@@ -138,7 +93,7 @@ const Enrollment = () => {
       return setEmpty(5)
     } else if (formData.pincode === '') {
       return setEmpty(8)
-    } else if (formData.AGE === null||formData.AGE<4 || formData.AGE>99) {
+    } else if (formData.AGE === null || formData.AGE < 4 || formData.AGE > 99) {
       return setEmpty(9)
     } else if (formData.nationality === '') {
       return setEmpty(10)
@@ -146,116 +101,76 @@ const Enrollment = () => {
       return setEmpty(11)
     } else {
       setEmpty(0)
-      setBold(1)
+      setBold(4)
     }
   }
-
-  const handleEmpty2 = () => {
-    if (qualificationData.length === 0) {
-      if (formData.school === '') {
-        setYearEmpty(1)
-      } else if (formData.course === '') {
-        setYearEmpty(2)
-      } else if (formData.completion.length !== 4) {
-        return setYearEmpty(3)
-      } else{
-        setQualificationData([
-          ...qualificationData,
-          {
-            schoolOrCollege: formData.school,
-            course: formData.course,
-            yearOfCompletion: formData.completion,
-            listedQualification: formData.course,
-          },
-        ])
-        setEmpty(0)
-        setFormData({ ...formData, school: '', course: '', completion: '' })
-        setBold(2)
-      } 
-    }
-    else{
-      setEmpty(0)
-      setBold(2)
-    }
-  }
-
-  const handleEmpty3 = (e) => {
-    e.preventDefault()
-    if(formData.company === '' && formData.leavejob ===''){
-      setBold(3)
-    }
-    else if (formData.workfrom.length > 4 || formData.workfrom.length < 4 ) {
-      return setResgin(1)
-    } else if (formData.worktill.length > 4 || formData.worktill.length < 4 ) {
-      return setResgin(2)
-    } else{
-      setListData([
-        ...listData,
-        {
-          companyName: formData.company,
-          roleWhenLeaving: formData.leavejob,
-          workedFrom: formData.workfrom,
-          workedTill: formData.worktill,
-          listedWorkExperience: formData.leavejob,
-        },
-      ])
-      setBold(3)
-      setResgin(0)
-    }
-    setFormData({
-      ...formData,
-      //  resignation: '',
-      company: '',
-      leavejob: '',
-      workfrom: '',
-      worktill: '',
-    })
-  }
-  const handleEmpty4 = () => {
-    if (formData.source === '') {
-      if (formData.sourceinfo === '') {
-        return setEmpty(2)
-      }
-    } else setBold(4)
-  }
-
+  
   const handleSubmit = () => {
-    if(formData.mode===''){
+    if (
+      formData.name === '' ||
+      formData.name === undefined ||
+      formData.name === null
+    ) {
+      setEmpty(1)
+    } else if (
+      formData.phone === '' ||
+      formData.phone.length < 6 ||
+      formData.phone.length > 15
+    ) {
+      setEmpty(3)
+    } else if (!validateEmail(formData.email)) {
+      setEmpty(2)
+    } else if (formData.address1 === '') {
+      setEmpty(4)
+    } else if (formData.country === '') {
+      setEmpty(5)
+    } else if (formData.pincode === '') {
+      setEmpty(8)
+    } else if (formData.AGE === null || formData.AGE < 4 || formData.AGE > 99) {
+      setEmpty(9)
+    } else if (formData.nationality === '') {
+      setEmpty(10)
+    } else if (formData.gender === '') {
+      setEmpty(11)
+    } else if (formData.mode === '') {
       setEmpty('mode')
     }
-    else if(formData.mode==='ONLINE'){
-      setBold(5)
-    }
-    else if(formData.mode==='OFFLINE' && (currentCourse.residential===true || currentCourse.nonResidential===true)){
-      if(formData.residental===''){
+    else if (
+      formData.mode === 'OFFLINE' &&
+      (currentCourse.residential === true ||
+        currentCourse.nonResidential === true)
+    ) {
+      if (formData.residental === '') {
         setEmpty('subMode')
-      }
-      else{
+      } else {
         setBold(5)
       }
-    
-    }
-    else if( currentCourse.certficate === true && (courseAsset2 ==='' || courseAsset2 === null) ){
+    } else if (
+      currentCourse.certficate === true &&
+      (courseAsset2 === '' || courseAsset2 === null)
+    ) {
       setEmpty('certificate')
-    }    
-    else{
+    } else if (courseAsset1 === '' || courseAsset1 === null) {
+      setEmpty('uploadImage')
+      console.log(courseAsset1, 'asdffgghhfhfgh')
+    } else {
       setBold(5)
     }
-    
   }
 
   return (
     <>
       <div className="enrollment_container ">
-        {bold<5 && <div className="header">
-          <Link to="/courses">
-            <button className="x">x</button>
-          </Link>
-          <span className="flower">{legacy2}</span>
+        {bold < 5 && (
+          <div className="header">
+            <Link to="/courses">
+              <button className="x">x</button>
+            </Link>
+            <span className="flower">{legacy2}</span>
 
-          <div className="student">Student Enrollment</div>
+            <div className="student">Student Enrollment</div>
 
-          <ul className="header_ul">
+            {/* <ul className="header_ul">
             <li
               style={
                 bold === 0 ? { fontWeight: '600', fontSize: '2.5rem' } : {}
@@ -299,8 +214,9 @@ const Enrollment = () => {
               Course Details
               {bold === 4 && <div className="bottom-line"></div>}
             </li>
-          </ul>
-        </div>}
+          </ul> */}
+          </div>
+        )}
 
         {bold === 0 ? (
           <>
@@ -311,80 +227,40 @@ const Enrollment = () => {
               setFormData={setFormData}
               handleEmpty1={handleEmpty1}
               setEmpty={setEmpty}
+              courseDate={courseDate}
+              currentCourse={currentCourse}
+              courseAsset1={courseAsset1}
+              setCourseAsset1={setCourseAsset1}
+              courseAsset2={courseAsset2}
+              setCourseAsset2={setCourseAsset2}
+              handleSubmit={handleSubmit}
+
+              courseFee={courseFee}
+              setCourseFee={setCourseFee}
+              uploadCheck={uploadCheck}
+              setUploadCheck={setUploadCheck}
             />
           </>
-        ) : bold === 1 ? (
+        ) : null}
+
+        {bold === 5 ? (
           <>
-            <Academic
-              setBold={setBold}
-              empty={empty}
+            <DisclaimerPolicy
+              templateKey={currentCourse?.templateId}
               formData={formData}
-              yearEmpty={yearEmpty}
-              setYearEmpty={setYearEmpty}
-              setFormData={setFormData}
-              handleEmpty2={handleEmpty2}
               qualificationData={qualificationData}
-              QualificationDetailHandler={QualificationDetailHandler}
-            />
-          </>
-        ) : bold === 2 ? (
-          <>
-            <>
-              <Work
-                setBold={setBold}
-                empty={empty}
-                formData={formData}
-                resgin={resgin}
-                setFormData={setFormData}
-                handleEmpty3={handleEmpty3}
-                setYearEmpty={setYearEmpty}
-                yearEmpty={yearEmpty}
-                listDetailHandler={listDetailHandler}
-                listData={listData}
-              />
-            </>
-          </>
-        ) : bold === 3 ? (
-          <>
-            <Other
+              listData={listData}
+              currentCourse={currentCourse}
+              courseAsset1={courseAsset1}
+              courseAsset2={courseAsset2}
               setBold={setBold}
-              empty={empty}
-              formData={formData}
-              setFormData={setFormData}
-              handleEmpty4={handleEmpty4}
+              courseFee={courseFee}
+              courseDate={courseDate}
+              setListData={setListData}
+              setQualificationData={setQualificationData}
             />
           </>
-        ) : bold === 4 ? (
-          <CourseDetails
-            courseDate={courseDate}
-            currentCourse={currentCourse}
-            formData={formData}
-            setFormData={setFormData}
-            courseAsset1={courseAsset1}
-            setCourseAsset1={setCourseAsset1}
-            courseAsset2={courseAsset2}
-            setCourseAsset2={setCourseAsset2}
-            setBold={setBold}
-            handleSubmit={handleSubmit}
-            empty={empty}
-            setEmpty={setEmpty}
-            courseFee={courseFee}
-            setCourseFee={setCourseFee}
-          />
-        ) : (
-          <DisclaimerPolicy
-            templateKey={currentCourse?.templateId}
-            formData={formData}
-            qualificationData={qualificationData}
-            listData={listData}
-            currentCourse={currentCourse}
-            courseAsset1={courseAsset1}
-            courseAsset2={courseAsset2}
-            setBold={setBold}
-            courseFee={courseFee}
-            courseDate={ courseDate }
-          />
-        )}
+        ) : null}
       </div>
     </>
   )

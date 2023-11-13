@@ -2,7 +2,6 @@ import React, { useEffect } from 'react'
 import { useState } from 'react'
 import { upload } from '../../assets/icons/icon'
 import { uploadFile } from '../../../../helpers/OssHelper'
-import Loader from '../Loader'
 const CourseDetails = ({
   currentCourse,
   courseDate,
@@ -12,11 +11,11 @@ const CourseDetails = ({
   setCourseAsset1,
   courseAsset2,
   setCourseAsset2,
-  handleSubmit,
   empty,
   setEmpty,
   courseFee,
   setCourseFee,
+
 }) => {
   useEffect(() => {
     if (formData.mode === 'ONLINE') {
@@ -26,7 +25,7 @@ const CourseDetails = ({
 
   const [pictureName, setPictureName] = useState('')
   const [certificateName, setcertificateName] = useState('')
-  const [loading, setLoading] = useState(false)
+  // const [loading, setLoading] = useState(false)
 
   // const getBase64 = (file, cb)=>{
   //   let reader = new FileReader()
@@ -38,14 +37,12 @@ const CourseDetails = ({
   //   }
   // }
 
-
   const uploadDoc = async(file, type, changeValue) => {
     const url = await uploadFile(file, type)
     if (changeValue === 'CERTIFICATE') {
       setCourseAsset2(url)
       setEmpty(0)
     } else if (changeValue === 'IMAGE') setCourseAsset1(url)
-    setLoading(false)
   }
 
 
@@ -209,10 +206,10 @@ const CourseDetails = ({
                   type="radio"
                   name="mode"
                   value="ONLINE"
-                  disabled={currentCourse.online === false }
+                  disabled={currentCourse.online === false}
                   checked={formData.mode === 'ONLINE'}
                   style={
-                    (currentCourse.online === false )
+                    currentCourse.online === false
                       ? {
                         background:
                             'url(https://ecom-static-site.oss-ap-south-1.aliyuncs.com/icons/icons8-multiply-24.png)',
@@ -356,43 +353,39 @@ const CourseDetails = ({
                     )}
                   </fieldset>
                 )}
-                {loading ? (
-                  <Loader />
-                ) : (
-                  <fieldset>
-                    <label htmlFor="image">
-                      {courseAsset1
-                        ? pictureName.substring(0, 15)
-                        : 'Upload Passport size photo'}
-                      <input
-                        type={'file'}
-                        id="image"
-                        onChange={(e) => {
-                          setLoading(true)
-                          uploadDoc(
-                            e.target.files[0],
-                            'applicant_image',
-                            'IMAGE'
-                          )
-                          setPictureName(e.target.files[0].name)
-                        }}
-                        placeholder="Upload Passport size photo"
-                        accept="image/*"
-                      />
-                      &ensp;
-                      {upload}
-                    </label>
-                  </fieldset>
-                )}
+                <fieldset>
+                  <label htmlFor="image">
+                    {courseAsset1
+                      ? pictureName.substring(0, 15)
+                      : 'Upload Passport size photo'}
+                    <input
+                      type={'file'}
+                      name="uploadImage"
+                      id="image"
+                      onChange={(e) => {
+                        
+                        uploadDoc(e.target.files[0], 'applicant_image', 'IMAGE')
+                        setPictureName(e.target.files[0].name)
+                      }}
+                      placeholder="Upload Passport size photo"
+                      accept="image/*"
+                    />
+                    &ensp;
+                    {upload}
+                  </label>
+                  {empty === 'uploadImage' && (
+                    <small style={{ color: 'red' }} className="mode-err">Please upload a image</small>
+                  )}
+                </fieldset>
               </div>
             </p>
           </div>
         </div>
-        <div className="footer-submit">
+        {/* <div className="footer-submit">
           <button className="submit" onClick={handleSubmit}>
             Submit
           </button>
-        </div>
+        </div> */}
       </div>
     </div>
   )

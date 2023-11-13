@@ -1,19 +1,19 @@
 import React from 'react'
 import './formstyles.scss'
 
-const Other = ({ empty, formData, setBold, setFormData,handleEmpty4 }) => {
+const Other = ({ empty, formData, setFormData }) => {
   return (
     <div className="other-container">
       <div className="other-section-half">
         <div className="medical-section">
           <p className="medical-label">
-          Medical History & Current Health Issues :
+            Medical History & Current Health Issues :
           </p>
           <textarea
             className="text_box"
             type="text"
             rows="5"
-            cols="40"
+            cols="30"
             onChange={(e) => {
               setFormData({
                 ...formData,
@@ -24,9 +24,9 @@ const Other = ({ empty, formData, setBold, setFormData,handleEmpty4 }) => {
         </div>
 
         <div className="about-us">
-          <p className="about-label">How do you hear about us?*</p>
+          {/* <p className="about-label">How do you hear about us?*</p> */}
           <div className="radio-section">
-            <form className="radio-text">
+            {/* <form className="radio-text">
               <label className="label-1">
               Internet&nbsp;
                 <input
@@ -111,8 +111,8 @@ const Other = ({ empty, formData, setBold, setFormData,handleEmpty4 }) => {
                     }
                   }}
                 />
-              </label>
-              {/* {empty === 1 && (
+              </label> */}
+            {/* {empty === 1 && (
                 <small
                   style={{
                     color: 'red',
@@ -123,11 +123,11 @@ const Other = ({ empty, formData, setBold, setFormData,handleEmpty4 }) => {
                 *Please select one!
                 </small>
               )} */}
-            </form>
+            {/* </form> */}
           </div>
         </div>
       </div>
-      <div className="other-last">
+      {/* <div className="other-last">
         <input
           className="reason-input"
           type="text"
@@ -139,11 +139,9 @@ const Other = ({ empty, formData, setBold, setFormData,handleEmpty4 }) => {
             })
           }}
         />
-      </div>
+      </div> */}
       {empty === 2 && (
-        <small
-          style={{ color: 'red', marginLeft: '45px', fontSize: '15px' }}
-        >
+        <small style={{ color: 'red', marginLeft: '45px', fontSize: '15px' }}>
           *Please Choose a source
         </small>
       )}
@@ -239,7 +237,7 @@ const Other = ({ empty, formData, setBold, setFormData,handleEmpty4 }) => {
                 }}
               />
             </div> */}
-      <div className="footer">
+      {/* <div className="footer">
         <button
           className="back"
           onClick={() => {
@@ -249,7 +247,7 @@ const Other = ({ empty, formData, setBold, setFormData,handleEmpty4 }) => {
         Back
         </button>
         <button className="next_1" onClick={handleEmpty4}>Next</button>
-      </div>
+      </div> */}
     </div>
   )
 }
