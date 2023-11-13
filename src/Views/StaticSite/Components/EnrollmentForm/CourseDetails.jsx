@@ -84,6 +84,38 @@ const CourseDetails = ({
       }
       break
 
+    case 'seven-month-ttc':
+      if (
+        courseDate ==='1st Dec 2023'
+      ) {
+        if (mode === 'ONLINE') return 55000
+        if (mode === 'RESIDENTIAL') return 55000
+        if (mode === 'NONRESIDENTIAL') return 55000
+      } else {
+        if (mode === 'ONLINE') return currentCourse.fees.onlineFee
+        if (mode === 'RESIDENTIAL')
+          return currentCourse.fees.offlineFee.ResidentialFee
+        if (mode === 'NONRESIDENTIAL')
+          return currentCourse.fees.offlineFee.nonResidentialFee
+      }
+      break
+
+    case 'one-year-ttc':
+      if (
+        courseDate ==='1st Dec 2023'
+      ) {
+        if (mode === 'ONLINE') return 55000
+        if (mode === 'RESIDENTIAL') return 55000
+        if (mode === 'NONRESIDENTIAL') return 55000
+      } else {
+        if (mode === 'ONLINE') return currentCourse.fees.onlineFee
+        if (mode === 'RESIDENTIAL')
+          return currentCourse.fees.offlineFee.ResidentialFee
+        if (mode === 'NONRESIDENTIAL')
+          return currentCourse.fees.offlineFee.nonResidentialFee
+      }
+      break
+
     case '21-days-better-living-course-batch-2':
       if (
         courseDate === ('5th Nov to 25th Nov 2023' ||
@@ -128,13 +160,17 @@ const CourseDetails = ({
         if (mode === 'ONLINE') return currentCourse.fees.onlineFee
       }
       break
-    // case 'certificate-program-on-yoga-for-cancer':
-    //   if (courseDate === '24th Nov 2023 to 30th Dec 2023') {
-    //     if (mode === 'ONLINE') return 2000
-    //   } else {
-    //     if (mode === 'ONLINE') return currentCourse.fees.onlineFee
-    //   }
-    //   break
+    case 'one-month-ttc':
+      if (courseDate === '1st Dec to 30th Dec 2023') {
+        if (mode === 'ONLINE') return 25000
+        if (mode === 'RESIDENTIAL') return 55000
+        if (mode === 'NONRESIDENTIAL') return 30000
+      } else {
+        if (mode === 'ONLINE') return currentCourse.fees.onlineFee
+        if (mode === 'RESIDENTIAL') return currentCourse.fees.onlineFee
+        if (mode === 'NONRESIDENTIAL') return currentCourse.fees.onlineFee
+      }
+      break
     default:
       return () => {
         if (mode === 'ONLINE') return currentCourse.fees.onlineFee
