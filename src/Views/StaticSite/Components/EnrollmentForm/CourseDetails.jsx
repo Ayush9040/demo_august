@@ -191,7 +191,19 @@ const CourseDetails = ({
       break
 
     case '7-days-camp-english':
-      if (courseDate === ('25th Nov to 1st Dec 2023' ||courseDate === '23rd Dec to 29th Dec 2023')) {
+      if (courseDate === '25th Nov to 1st Dec 2023' || courseDate === '23rd Dec to 29th Dec 2023') {
+        // if (mode === 'ONLINE') return 25000
+        if (mode === 'RESIDENTIAL') return 13000
+        if (mode === 'NONRESIDENTIAL') return 9000
+      } else {
+        // if (mode === 'ONLINE') return currentCourse.fees.onlineFee
+        if (mode === 'RESIDENTIAL') return currentCourse.fees.offlineFee.residentialFee
+        if (mode === 'NONRESIDENTIAL') return currentCourse.fees.offlineFee.nonResidentialFee
+      }
+      break
+
+    case '7-days-camp':
+      if (courseDate === '19th Nov to 25th Nov 2023') {
         // if (mode === 'ONLINE') return 25000
         if (mode === 'RESIDENTIAL') return 13000
         if (mode === 'NONRESIDENTIAL') return 9000
