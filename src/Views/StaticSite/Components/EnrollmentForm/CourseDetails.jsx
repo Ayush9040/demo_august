@@ -72,11 +72,23 @@ const CourseDetails = ({
 
     case '21-days-better-living-course':
       if (
-        courseDate === ('5th Nov to 25th Nov 2023' ||
-          '3rd Dec to 23rd Dec 2023')
+        courseDate === '5th Nov to 25th Nov 2023' || courseDate ===  '3rd Dec to 23rd Dec 2023'
       ) {
         if (mode === 'ONLINE') return 2100
         if (mode === 'NONRESIDENTIAL') return 2100
+      } else {
+        if (mode === 'ONLINE') return currentCourse.fees.onlineFee
+        if (mode === 'NONRESIDENTIAL')
+          return currentCourse.fees.offlineFee.nonResidentialFee
+      }
+      break
+
+    case 'stress-management-camp':
+      if (
+        courseDate === '10th Dec 2023'
+      ) {
+        if (mode === 'ONLINE') return 500
+        if (mode === 'NONRESIDENTIAL') return 500
       } else {
         if (mode === 'ONLINE') return currentCourse.fees.onlineFee
         if (mode === 'NONRESIDENTIAL')
@@ -94,7 +106,7 @@ const CourseDetails = ({
       } else {
         if (mode === 'ONLINE') return currentCourse.fees.onlineFee
         if (mode === 'RESIDENTIAL')
-          return currentCourse.fees.offlineFee.ResidentialFee
+          return currentCourse.fees.offlineFee.residentialFee
         if (mode === 'NONRESIDENTIAL')
           return currentCourse.fees.offlineFee.nonResidentialFee
       }
@@ -110,7 +122,7 @@ const CourseDetails = ({
       } else {
         if (mode === 'ONLINE') return currentCourse.fees.onlineFee
         if (mode === 'RESIDENTIAL')
-          return currentCourse.fees.offlineFee.ResidentialFee
+          return currentCourse.fees.offlineFee.residentialFee
         if (mode === 'NONRESIDENTIAL')
           return currentCourse.fees.offlineFee.nonResidentialFee
       }
@@ -118,8 +130,7 @@ const CourseDetails = ({
 
     case '21-days-better-living-course-batch-2':
       if (
-        courseDate === ('5th Nov to 25th Nov 2023' ||
-          '3rd Dec to 23rd Dec 2023')
+        courseDate === '5th Nov to 25th Nov 2023' || courseDate === '3rd Dec to 23rd Dec 2023'
       ) {
         if (mode === 'ONLINE') return 2100
         if (mode === 'NONRESIDENTIAL') return 2100
@@ -142,8 +153,7 @@ const CourseDetails = ({
 
     case 'meditation-foundation-course-online':
       if (
-        courseDate === ('6th Nov to 1st Dec 2023' ||
-          '6th Nov to 1st Dec 2023')
+        courseDate === '6th Nov to 1st Dec 2023' || courseDate === '4th Dec to 29th Dec 2023'
       ) {
         if (mode === 'ONLINE') return 1000
       } else {
@@ -152,14 +162,46 @@ const CourseDetails = ({
       break
     case 'certificate-course-on-advanced-pranayama-techniques':
       if (
-        courseDate === ('20th Nov 2023 to 11th Jan 2024' ||
-          '1st Dec 2023 to 24th Jan 2024')
+        courseDate === '20th Nov to 11th Jan 2024' || courseDate === '1st Dec to 24th Jan 2024'
       ) {
         if (mode === 'ONLINE') return 20000
       } else {
         if (mode === 'ONLINE') return currentCourse.fees.onlineFee
       }
       break
+    // case 'certificate-course-on-advanced-pranayama-techniques':
+    //   if (
+    //     (courseDate === ('1st Dec 2023 to 24th Jan 2024'))
+    //   ) {
+    //     if (mode === 'ONLINE') return 20000
+    //   } else {
+    //     if (mode === 'ONLINE') return currentCourse.fees.onlineFee
+    //   }
+    //   break
+    case '200-hrs-part-time-ttc-on-campus-english':
+      if (courseDate === '4th Dec 2023 to 27th Jan 2024') {
+        if (mode === 'ONLINE') return 25000
+        if (mode === 'RESIDENTIAL') return 55000
+        if (mode === 'NONRESIDENTIAL') return 30000
+      } else {
+        if (mode === 'ONLINE') return currentCourse.fees.onlineFee
+        if (mode === 'RESIDENTIAL') return currentCourse.fees.offlineFee.residentialFee
+        if (mode === 'NONRESIDENTIAL') return currentCourse.fees.offlineFee.nonResidentialFee
+      }
+      break
+
+    case '7-days-camp-english':
+      if (courseDate === ('25th Nov to 1st Dec 2023' ||courseDate === '23rd Dec to 29th Dec 2023')) {
+        // if (mode === 'ONLINE') return 25000
+        if (mode === 'RESIDENTIAL') return 13000
+        if (mode === 'NONRESIDENTIAL') return 9000
+      } else {
+        // if (mode === 'ONLINE') return currentCourse.fees.onlineFee
+        if (mode === 'RESIDENTIAL') return currentCourse.fees.offlineFee.residentialFee
+        if (mode === 'NONRESIDENTIAL') return currentCourse.fees.offlineFee.nonResidentialFee
+      }
+      break
+
     case 'one-month-ttc':
       if (courseDate === '1st Dec to 30th Dec 2023') {
         if (mode === 'ONLINE') return 25000
@@ -167,8 +209,8 @@ const CourseDetails = ({
         if (mode === 'NONRESIDENTIAL') return 30000
       } else {
         if (mode === 'ONLINE') return currentCourse.fees.onlineFee
-        if (mode === 'RESIDENTIAL') return currentCourse.fees.onlineFee
-        if (mode === 'NONRESIDENTIAL') return currentCourse.fees.onlineFee
+        if (mode === 'RESIDENTIAL') return currentCourse.fees.offlineFee.residentialFee
+        if (mode === 'NONRESIDENTIAL') return currentCourse.fees.offlineFee.nonResidentialFee
       }
       break
     default:

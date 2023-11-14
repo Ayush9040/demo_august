@@ -44,18 +44,18 @@ const ttc200hr = {
     title: '200-Hour Yoga Teacher Training Course - 1 Month Yoga TTC Online & On Campus - English - Batch 1',
     dates: [
       '1st Dec to 30th Dec 2023',
-      '1st Jan - 31st Jan 2024',
-      '1st Feb - 29th Feb 2024',
-      '1st Mar - 31st Mar 2024',
-      '1st Apr - 30th Apr 2024',
-      '1st May - 31st May 2024',
-      '1st Jun - 30th Jun 2024 ',
-      '1st Jul - 31st Jul 2024 ',
-      '1st Aug - 31st Aug 2024',
-      '1st Sep - 30th Sep 2024 ',
-      '1st Oct - 31st Oct 2024',
-      '2nd Nov - 30th Nov 2024',
-      '1st Dec - 31st Dec 2024',
+      '1st Jan to 31st Jan 2024',
+      '1st Feb to 29th Feb 2024',
+      '1st Mar to 31st Mar 2024',
+      '1st Apr to 30th Apr 2024',
+      '1st May to 31st May 2024',
+      '1st Jun to 30th Jun 2024 ',
+      '1st Jul to 31st Jul 2024 ',
+      '1st Aug to 31st Aug 2024',
+      '1st Sep to 30th Sep 2024 ',
+      '1st Oct to 31st Oct 2024',
+      '2nd Nov to 30th Nov 2024',
+      '1st Dec to 31st Dec 2024',
 
     ],
     online: true,
@@ -127,7 +127,10 @@ const ttc200hr = {
         type: 'paragraph',
         content: {
           title: 'Fees',
-          text: ['Online:Rs. 25,000 /-', 'Non-Residential: Rs. 30,000/- (Inclusive of course fee, study material, lunch, and snacks)', ' Residential: Rs. 55,000/- (Inclusive of course fee, study material, accommodation on triple occupancy basis and 4 meals a day)'],
+          text: [
+
+            '2024 : Online:Rs. 27,500 /-', 'Non-Residential: Rs. 33,000/- (Inclusive of course fee, study material, lunch, and snacks)', ' Residential: Rs. 60,000/- (Inclusive of course fee, study material, accommodation on triple occupancy basis and 4 meals a day)',
+            '2023 : Online:Rs. 25,000 /-', 'Non-Residential: Rs. 30,000/- (Inclusive of course fee, study material, lunch, and snacks)', ' Residential: Rs. 55,000/- (Inclusive of course fee, study material, accommodation on triple occupancy basis and 4 meals a day)'],
         },
       },
       {
@@ -549,12 +552,12 @@ const ttc200hr = {
     title: '200 Hours Yoga Teacher Training Course - 2 Months Yoga TTC Online and On Campus - English - Batch 2',
     dates: [
       '4th Dec 2023 to 27th Jan 2024',
-      '12th February – 6th April 2024',
-      '15th April – 8th June 2024',
-      '10th June – 3rd August 2024',
-      '5th August – 28th September 2024',
-      '7th October – 30th November 2024',
-      '9th December – 1st February 2025'
+      '12th Feb – 6th Apr 2024',
+      '15th Apr – 8th Jun 2024',
+      '10th Jun – 3rd Aug 2024',
+      '5th Aug – 28th Sep 2024',
+      '7th Oct – 30th Nov 2024',
+      '9th Dec – 1st Feb 2025'
     ],
     online: true,
     onCampus: true,
@@ -622,10 +625,9 @@ const ttc200hr = {
         content: {
           title: 'Fees',
           text: [
-            'Online: Rs: 27,500/-',
-            'Non-Residential: Rs. 33,000/- (Inclusive of course fee, study material, and snacks)',
-            'Residential: Rs. 90,000/- (Inclusive of course fee, study material, accommodation and meals )',
-          ],
+            '2024 : Online:Rs. 27,500 /-', 'Non-Residential: Rs. 33,000/- (Inclusive of course fee, study material, lunch, and snacks)', ' Residential: Rs. 90,000/- (Inclusive of course fee, study material, accommodation on triple occupancy basis and 4 meals a day)',
+            '2023 : Online:Rs. 25,000 /-', 'Non-Residential: Rs. 30,000/- (Inclusive of course fee, study material, lunch, and snacks)', ' Residential: Rs. 55,000/- (Inclusive of course fee, study material, accommodation on triple occupancy basis and 4 meals a day)'],
+       
         },
       },
       {
@@ -980,12 +982,12 @@ const ttc200hr = {
     category: 'ttc',
     title: '200-Hour Yoga Teacher Training Online Course - 2 Months TTC Online - English - Batch 3',
     dates: [
-      '8th January – 2nd March 2024',
-      '11th March – 4th May 2024',
-      '13th May – 6th July 2024',
-      '15th July – 7th September 2024',
-      '16th September – 9th November 2024',
-      '18th November – 11th January 2025',
+      '8th Jan – 2nd Mar 2024',
+      '11th Mar – 4th May 2024',
+      '13th May – 6th Jul 2024',
+      '15th Jul – 7th Sep 2024',
+      '16th Sep – 9th Nov 2024',
+      '18th Nov – 11th Jan 2025',
       // '19th Feb - 8th Jun 2024',
       // '17th Jun - 5th Oct 2024',
       // '14th Oct - 1st Feb 2025'
@@ -2433,11 +2435,11 @@ const ttc200hr = {
     category: 'ttc',
     title: '200 Hours Yoga TTC  - 3 Months Weekend Yoga Teacher Training Course Online - English - Batch 6',
     dates: [
-      '21st January  to 8th April 2024',
-      '14th April  to 1st July 2024',
-      '6th July to 22nd September 2024',
-      '28th September to 15th December 2024 ',
-      '21st December to 9th March 2025',
+      '21st Jan  to 8th Apr 2024',
+      '14th Apr  to 1st Jul 2024',
+      '6th Jul to 22nd Sep 2024',
+      '28th Sep to 15th Dec 2024 ',
+      '21st Dec to 9th Mar 2025',
     ],
     online: true,
     onCampus: false,
@@ -2928,10 +2930,10 @@ const ttc500hr = {
     image: `${baseDomain}${courseAssets.courseAsset39}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset102}`,
     dates: [
-      '12th February  - 4th May 2024',
-      '13th May - 3rd August 2024',
-      '12th August - 2nd November 2024',
-      '11th November - 1st February 2025',
+      '12th Feb  - 4th May 2024',
+      '13th May - 3rd Aug 2024',
+      '12th Aug - 2nd Nov 2024',
+      '11th Nov - 1st Feb 2025',
     ],
     online: true,
     onCampus: false,
@@ -3289,10 +3291,10 @@ const ttc900hr = {
     },
     category: 'ttc',
     dates: [
-      '27th January 2024 to 21st April 2024      ',
-      '27th April 2024 to 21st July 2024      ',
-      '27th July 2024 to 20th October 2024      ',
-      '26th October 2024 to 20th January 2025      ',
+      '27th Jan to 21st Apr 2024',
+      '27th Apr to 21st Jul 2024',
+      '27th Jul to 20th Oct 2024',
+      '26th Oct to 20th Jan 2025',
     ],
     online: false,
     onCampus: true,
@@ -3913,7 +3915,9 @@ const ttc900hr = {
         content: {
           title: 'Fees:',
 
-          text: ['INR. 60,000/- (Inclusive of course fee and study material)'],
+          text: [
+            ' 2023 : INR. 55,000/- (Inclusive of course fee and study material)',
+            ' 2024 : INR. 60,000/- (Inclusive of course fee and study material)'],
         },
       },
 
@@ -4614,7 +4618,10 @@ const ttc900hr = {
         content: {
           title: 'Fees:',
 
-          text: ['INR. 60,000/- (Inclusive of course fee and study material)'],
+          text: [
+            '2023 : INR. 55,000/- (Inclusive of course fee and study material)',
+            '2024: INR. 60,000/- (Inclusive of course fee and study material)'
+          ],
         },
       },
 
@@ -5927,7 +5934,8 @@ const ttc900hr = {
           title: 'Fees:',
 
           text: [
-            ' INR. 60,000/- (Inclusive of course fee and study material) ',
+            ' 2023 : INR. 60,000/- (Inclusive of course fee and study material) ',
+            ' 2024 : INR. 60,000/- (Inclusive of course fee and study material) ',
           ],
         },
       },
@@ -8146,8 +8154,8 @@ const camps = {
     colorCode: '#CE9B51',
     timing: '10.00 am to 1:00 pm (IST)',
     fees: {
-      onlineFee: 1000,
-      offlineFee: { residentialFee: 0, nonResidentialFee: 500 },
+      onlineFee: 0,
+      offlineFee: { residentialFee: 0, nonResidentialFee: 1000 },
     },
     category: 'camps',
     metaDescription:
@@ -8891,7 +8899,7 @@ const camps = {
     timing: 'Saturday to Friday : 7:00 am - 7:00 pm (IST)',
     fees: {
       onlineFee: 0,
-      offlineFee: { residentialFee: 13000, nonResidentialFee: 10000 },
+      offlineFee: { residentialFee: 15000, nonResidentialFee: 10000 },
     },
     category: 'camps',
     metaDescription:
@@ -9074,7 +9082,8 @@ const camps = {
         content: {
           title: 'FEES',
           text: [
-            'Non-Residential: 10,000/- (inclusive of course fees and 4 Meals)',
+            '2023: Non-Residential: 9,000/- (inclusive of course fees and 4 Meals)',
+            '2024: Non-Residential: 10,000/- (inclusive of course fees and 4 Meals)',
           ],
         },
       },
@@ -9083,6 +9092,11 @@ const camps = {
         content: {
           title: 'Residential',
           text: [
+            '2023:',
+            'Rs. 13,000/- Triple Sharing per person (Inclusive of course fee and 4 meals a day)',
+            'Rs. 20,000/- Dual Sharing per person (Inclusive of course fee and 4 meals a day)',
+            'Rs. 34,000/- Single Occupancy (Inclusive of course fee and 4 meals a day)',
+            '2024:',
             'Rs. 15,000/- Triple Sharing per person (Inclusive of course fee and 4 meals a day)',
             'Rs. 23,000/- Dual Sharing per person (Inclusive of course fee and 4 meals a day)',
             'Rs. 38,000/- Single Occupancy (Inclusive of course fee and 4 meals a day)',
@@ -9232,7 +9246,7 @@ const camps = {
     timing: 'Saturday to Friday : 7:00 am - 7:00 pm (IST)',
     fees: {
       onlineFee: 0,
-      offlineFee: { residentialFee: 13000, nonResidentialFee: 9000 },
+      offlineFee: { residentialFee: 15000, nonResidentialFee: 10000 },
     },
     category: 'camps',
     metaDescription:
@@ -9416,7 +9430,8 @@ const camps = {
         content: {
           title: 'FEES',
           text: [
-            'Non-Residential: 10,000/- (inclusive of course fees and 4 Meals)',
+            '2023: Non-Residential: 9,000/- (inclusive of course fees and 4 Meals)',
+            '2024: Non-Residential: 10,000/- (inclusive of course fees and 4 Meals)',
           ],
         },
       },
@@ -9425,6 +9440,11 @@ const camps = {
         content: {
           title: 'Residential',
           text: [
+            '2023:',
+            'Rs. 13,000/- Triple Sharing per person (Inclusive of course fee and 4 meals a day)',
+            'Rs. 20,000/- Dual Sharing per person (Inclusive of course fee and 4 meals a day)',
+            'Rs. 34,000/- Single Occupancy (Inclusive of course fee and 4 meals a day)',
+            '2024:',
             'Rs. 15,000/- Triple Sharing per person (Inclusive of course fee and 4 meals a day)',
             'Rs. 23,000/- Dual Sharing per person (Inclusive of course fee and 4 meals a day)',
             'Rs. 38,000/- Single Occupancy (Inclusive of course fee and 4 meals a day)',
@@ -9723,13 +9743,16 @@ const camps = {
         type: 'paragraph',
         content: {
           title: 'FEES',
-          text: [],
+          text: [
+            '2023: Rs. 2100/-',
+            '2024: Rs. 2500/-'
+          ],
         },
       },
       {
         type: 'paragraph',
         content: {
-          title: 'Rs. 2500/-',
+          // title: '',
           text: [
             '*Please note fees once paid will be non-refundable. Also, after making the payment, please provide us with a screenshot of the transaction.',
             'We support all credit cards. For making payments using MasterCard. Alternatively, you can also make payments using net banking or opt for wire transfer by writing to us.',
@@ -10086,13 +10109,16 @@ const camps = {
         type: 'paragraph',
         content: {
           title: 'FEES',
-          text: [],
+          text: [
+            '2023: Rs. 2100/-',
+            '2024: Rs. 2500/-'
+          ],
         },
       },
       {
         type: 'paragraph',
         content: {
-          title: 'Rs. 2500/-',
+          // title: 'Rs. 2500/-',
           text: [
             '*Please note fees once paid will be non-refundable. Also, after making the payment, please provide us with a screenshot of the transaction.',
             'We support all credit cards. For making payments using MasterCard. Alternatively, you can also make payments using net banking or opt for wire transfer by writing to us.',
@@ -10441,13 +10467,16 @@ const camps = {
         type: 'paragraph',
         content: {
           title: 'FEES',
-          text: [],
+          text: [
+            '2023: Rs. 2100/-',
+            '2024: Rs. 2500/-'
+          ],
         },
       },
       {
         type: 'paragraph',
         content: {
-          title: 'Rs. 2500/-',
+          // title: 'Rs. 2500/-',
           text: [
             '*Please note fees once paid will be non-refundable. Also, after making the payment, please provide us with a screenshot of the transaction.',
             'We support all credit cards. For making payments using MasterCard. Alternatively, you can also make payments using net banking or opt for wire transfer by writing to us.',
@@ -11883,7 +11912,10 @@ const classes = {
         type: 'paragraph',
         content: {
           title: 'Fees',
-          text: [' INR 1100'],
+          text: [
+            '2023: Rs. 1000/-',
+            '2024: Rs. 1100/-'
+          ],
         },
       },
       {
@@ -12595,7 +12627,7 @@ const classes = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'classes',
-    dates: [ '28th January 2024'],
+    dates: [ '28th Jan 2024'],
     online: true,
     onCampus: false,
     nonResidential: false,
@@ -13045,7 +13077,7 @@ const certificate = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'certificate-course',
-    dates: ['20th Nov 2023 to 11th Jan 2024', '1st Dec 2023 to 24th Jan 2024','19th Feb to 11th Apr 2024','13th May to 4th Jul 2024','5th Aug to 26th Sep 2024','11th Nov to 2nd Jan 2025'],
+    dates: ['20th Nov to 11th Jan 2024', '1st Dec to 24th Jan 2024','19th Feb to 11th Apr 2024','13th May to 4th Jul 2024','5th Aug to 26th Sep 2024','11th Nov to 2nd Jan 2025'],
     online: true,
     onCampus: false,
     nonResidential: false,
@@ -13116,7 +13148,10 @@ const certificate = {
         type: 'paragraph',
         content: {
           title: 'Fees',
-          text: ['Rs. 24,000/-'],
+          text: [
+            '2023 : Rs. 20,000/-',
+            '2024 : Rs. 24,000/-'
+          ],
         },
       },
       {
@@ -13350,7 +13385,10 @@ const certificate = {
         type: 'paragraph',
         content: {
           title: 'Fees',
-          text: ['Rs. 24,000'],
+          text: [
+            '2023: Rs. 20,000/-',
+            '2024: Rs. 24,000/-'
+          ],
         },
       },
       // {
