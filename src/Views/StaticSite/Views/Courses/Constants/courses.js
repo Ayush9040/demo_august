@@ -5934,7 +5934,7 @@ const ttc900hr = {
           title: 'Fees:',
 
           text: [
-            ' 2023 : INR. 60,000/- (Inclusive of course fee and study material) ',
+            ' 2023 : INR. 55,000/- (Inclusive of course fee and study material) ',
             ' 2024 : INR. 60,000/- (Inclusive of course fee and study material) ',
           ],
         },
