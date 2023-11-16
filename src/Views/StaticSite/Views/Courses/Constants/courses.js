@@ -12204,8 +12204,8 @@ const classes = {
     timing:
       'Saturday & Sunday: Saturday: 8:00 am - 9:30 am (IST) and Sunday: 8:00 am - 9:30 am (IST) or 10:30 am - 12:00 pm (IST)',
     fees: {
-      onlineFee: 1000,
-      offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
+      onlineFee: 0,
+      offlineFee: { residentialFee: 0, nonResidentialFee: 1000 },
     },
     category: 'classes',
     dates: ['Saturday', 'Sunday'],
