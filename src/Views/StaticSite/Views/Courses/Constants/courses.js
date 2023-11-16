@@ -11162,8 +11162,8 @@ const classes = {
     textdescription9: '',
     textdescription10: '',
     textdescription1: ' Monday ,  Tuesday , Thursday and Friday',
-    textdescription2: 'Morning Batch: 6:30 am to 7:30 am, 7:30 am to 8:30 am, 8:30 am to 9:30 am',
-    textdescription3: 'Evening Batch : 4pm to 5pm, 5pm to 6pm, 6pm to 7pm, 7pm to 8pm',
+    textdescription2: 'Morning Batch (IST): 6:30 am to 7:30 am, 7:30 am to 8:30 am, 8:30 am to 9:30 am',
+    textdescription3: 'Evening Batch (IST): 4pm to 5pm, 5pm to 6pm, 6pm to 7pm, 7pm to 8pm',
     textdescription4: 'We also have Weekend batches and the details are:',
     textdescription5: 'Weekend Schedule(Sat-Sun): 7:30 am to 9 am',
 
