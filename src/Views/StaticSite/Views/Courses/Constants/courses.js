@@ -8887,7 +8887,7 @@ const camps = {
         templateNonResidential: 'CAMP_FOR_7_DAYS_HEALTH',
       },
     },
-    dates: ['19th Nov to 25th Nov 2023','13th Jan to 19th Jan 2024','9th Mar to 15th Mar 2024','11th May to 17th May 2024','13rd Jul to 19th Jul 2024','14th Sep to 20th Sep 2024','9th Nov to 15th Nov 2024',''],
+    dates: ['18th Nov to 24th Nov 2023','13th Jan to 19th Jan 2024','9th Mar to 15th Mar 2024','11th May to 17th May 2024','13rd Jul to 19th Jul 2024','14th Sep to 20th Sep 2024','9th Nov to 15th Nov 2024',''],
     online: false,
     onCampus: true,
     nonResidential: true,
