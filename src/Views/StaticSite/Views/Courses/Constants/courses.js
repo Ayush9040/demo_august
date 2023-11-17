@@ -1483,7 +1483,7 @@ const ttc200hr = {
       '18th Mar to 11th May 2024',
       '20th May to 13th Jul 2024',
       '22nd Jul to 14th Sep 2024',
-      '23rd Sep to 16th Nov 2025',
+      '23rd Sep to 16th Nov 2024',
       '25th Nov to 18th Jan 2025'
     ],
     online: true,
