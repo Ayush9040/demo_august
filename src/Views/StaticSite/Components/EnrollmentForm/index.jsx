@@ -150,9 +150,6 @@ const Enrollment = () => {
       (courseAsset2 === '' || courseAsset2 === null)
     ) {
       setEmpty('certificate')
-    } else if (courseAsset1 === '' || courseAsset1 === null) {
-      setEmpty('uploadImage')
-      console.log(courseAsset1, 'asdffgghhfhfgh')
     } else {
       setBold(5)
     }

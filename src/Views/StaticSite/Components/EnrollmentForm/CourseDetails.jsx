@@ -463,9 +463,9 @@ const CourseDetails = ({
                     &ensp;
                     {upload}
                   </label>
-                  {empty === 'uploadImage' && (
+                  {/* {empty === 'uploadImage' && (
                     <small style={{ color: 'red' }} className="mode-err">Please upload a image</small>
-                  )}
+                  )} */}
                 </fieldset>
               </div>
             </p>
