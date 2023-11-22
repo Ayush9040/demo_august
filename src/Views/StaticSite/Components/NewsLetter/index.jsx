@@ -42,7 +42,7 @@ const NewsLetter = () => {
           <div className="image">
             <Link to="/yogasattva">
               <div className="row">
-                {yogsattvaData.slice(-5, -2).map((image, i) => (
+                {yogsattvaData.slice(0,3).map((image, i) => (
                   <div key={i} className="container">
                     <img src={image.imageUrl} alt={image.title} />
                     <p>{image.title}</p>
