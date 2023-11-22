@@ -625,8 +625,8 @@ const ttc200hr = {
         content: {
           title: 'Fees',
           text: [
-            '2024 : Online:Rs. 27,500 /-', 'Non-Residential: Rs. 33,000/- (Inclusive of course fee, study material, lunch, and snacks)', ' Residential: Rs. 90,000/- (Inclusive of course fee, study material, accommodation on triple occupancy basis and 4 meals a day)',
-            '2023 : Online:Rs. 25,000 /-', 'Non-Residential: Rs. 30,000/- (Inclusive of course fee, study material, lunch, and snacks)', ' Residential: Rs. 80,000/- (Inclusive of course fee, study material, accommodation on triple occupancy basis and 4 meals a day)'],
+            '2024 : Online:Rs. 27,500 /-', 'Non-Residential: Rs. 33,000/- (Inclusive of course fee, study material.)', ' Residential: Rs. 90,000/- (Inclusive of course fee, study material, accommodation on triple occupancy basis and 4 meals a day)',
+            '2023 : Online:Rs. 25,000 /-', 'Non-Residential: Rs. 30,000/- (Inclusive of course fee, study material.)', ' Residential: Rs. 80,000/- (Inclusive of course fee, study material, accommodation on triple occupancy basis and 4 meals a day)'],
        
         },
       },
