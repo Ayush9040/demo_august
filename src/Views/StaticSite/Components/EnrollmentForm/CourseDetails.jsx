@@ -162,7 +162,7 @@ const CourseDetails = ({
       break
     case 'certificate-course-on-advanced-pranayama-techniques':
       if (
-        courseDate === '20th Nov to 11th Jan 2024' || courseDate === '1st Dec to 24th Jan 2024'
+        courseDate === '20th Nov to 11th Jan 2024 · Morning' || courseDate === '1st Dec to 24th Jan 2024 · Evening'
       ) {
         if (mode === 'ONLINE') return 20000
       } else {
