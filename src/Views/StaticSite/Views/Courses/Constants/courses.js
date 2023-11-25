@@ -13350,7 +13350,7 @@ const certificate = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'certificate-course',
-    dates: ['24th Nov 2023 to 30th Dec 2023','23rd Feb to 30th Mar 2024','3rd May to 8th Jun 2024','2nd Aug to 7th Sep 2024','15th Nov to 21'],
+    dates: ['23rd Feb to 30th Mar 2024','3rd May to 8th Jun 2024','2nd Aug to 7th Sep 2024','15th Nov to 21'],
     online: true,
     onCampus: true,
     nonResidential: false,
@@ -13386,7 +13386,6 @@ const certificate = {
         content: {
           title: 'Fees',
           text: [
-            '2023: Rs. 20,000/-',
             '2024: Rs. 24,000/-'
           ],
         },
