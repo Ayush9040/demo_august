@@ -9097,7 +9097,7 @@ const camps = {
             // 'Rs. 20,000/- Dual Sharing per person (Inclusive of course fee and 4 meals a day)',
             // 'Rs. 34,000/- Single Occupancy (Inclusive of course fee and 4 meals a day)',
             '2024:',
-            'Rs. 15,000/- Triple Sharing per person (Inclusive of course fee and 4 meals a day)',
+            'Rs. 16,500/- Triple Sharing per person (Inclusive of course fee and 4 meals a day)',
             // 'Rs. 23,000/- Dual Sharing per person (Inclusive of course fee and 4 meals a day)',
             // 'Rs. 38,000/- Single Occupancy (Inclusive of course fee and 4 meals a day)',
           ],
@@ -9445,7 +9445,7 @@ const camps = {
             // 'Rs. 20,000/- Dual Sharing per person (Inclusive of course fee and 4 meals a day)',
             // 'Rs. 34,000/- Single Occupancy (Inclusive of course fee and 4 meals a day)',
             '2024:',
-            'Rs. 15,000/- Triple Sharing per person (Inclusive of course fee and 4 meals a day)',
+            'Rs. 16,500/- Triple Sharing per person (Inclusive of course fee and 4 meals a day)',
             // 'Rs. 23,000/- Dual Sharing per person (Inclusive of course fee and 4 meals a day)',
             // 'Rs. 38,000/- Single Occupancy (Inclusive of course fee and 4 meals a day)',
           ],
@@ -13465,7 +13465,7 @@ const certificate = {
       'The programme includes specific yoga asanas, pranayamas, mudras, meditation and dietary practices that will aid you in your cancer care and management',
     rating: 5,
     colorCode: '#B77E7E',
-    timing: 'Tuesdays to Friday: 5:00 p.m. - 7:00 p.m. (IST)',
+    timing: 'Tuesdays to Saturday: 5:00 p.m. - 7:00 p.m. (IST)',
     fees: {
       onlineFee: 10000,
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
@@ -13498,7 +13498,7 @@ const certificate = {
         type: 'paragraph',
         content: {
           title: 'Time',
-          text: ['Tuesdays to Friday: 5:00 p.m. - 7:00 p.m. (IST)'],
+          text: ['Tuesdays to Saturday: 5:00 p.m. - 7:00 p.m. (IST)'],
         },
       },
       {
