@@ -100,6 +100,7 @@ const LandingPageNew = lazy( ()=>import('../Views/LandingPage/21Days/index'))
 const SevenDays = lazy( ()=>import('../Views/LandingPage/SevenDays/AboutCamp/index'))
 const TyiLandingPage = lazy(() => import('../Views/LandingPage/NewLandingPage/index'))
 const TyiLandingPage7Months = lazy(() =>import('../Views/LandingPage/NewLandingPage2/index'))
+const NutriGut = lazy(() => import('../Views/LandingPage/Nutrigut/index') )
 const staticSiteRoutes = [
   //Home
   {
@@ -862,6 +863,13 @@ const staticSiteRoutes = [
     id:'staticNewLandingPage2',
     routePath:'/ad-campaign-7-months-900hours',
     name:'NewLandingPage2'
+  },
+  {
+    Component:NutriGut,
+    path:'/GUT-CLEANSE-DETOX-WORKSHOP',
+    id:'staticNutriGut',
+    routePath:'/GUT-CLEANSE-DETOX-WORKSHOP',
+    name:'Nutrigut'
   }
 ]
 

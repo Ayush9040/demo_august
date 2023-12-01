@@ -1,0 +1,266 @@
+.main-container{
+ background-color: FEFEFE;
+}
+.head {
+  position: relative;
+}
+
+.bg-image {
+  position: relative;
+}
+
+.head-content {
+  position: absolute;
+  top: 10%;
+  right: 1%;
+  padding: 2px;
+  
+}
+.first-order{
+  font-size: 4rem;
+  color: white;
+}
+.second-order{
+  font-size: 8rem;
+  font-weight: 800;
+  color: #F7E22E ;
+}
+.third-order{
+  font-size: 8rem;
+  font-weight: 800;
+  color: #F7E22E ;
+
+}
+.empty-bar{
+  background-color: aliceblue;
+  height: 13px;
+  width: 65%;
+  position: relative;
+  float: right;
+  
+}
+.workshop-details{
+  /* background-color: #F7E22E; */
+  position: relative;
+  margin-top: 4%;
+  font-size: 2.3rem;
+  color: white;
+}
+.durations{
+  width: 95%;
+  margin-top: 10%;
+  margin-left: 8%;
+  font-size: 2.5rem;
+  padding: 1%;
+}
+
+.slogan{
+  color: #3B764A;
+  font-size: 2.5rem;
+}
+.flex-items{
+  display: flex;
+  justify-content:flex-start;
+  gap:25%;
+  padding: 20px;
+}
+.flex-content{
+  display: flex;
+  gap: 14%;
+}
+.flex-1{
+  background-color: #4FC132;
+  color: white;
+  width: 20%;
+  border-radius: 5px 30px 30px 5px;
+  text-align: center;
+  padding: 1%;
+}
+.flex-head{
+  display: flex;
+  gap: 1%;
+}
+.start-head-end{
+  height: 13px;
+  width: 37%;
+  background-color: #4FC132;
+  margin-top: 2rem;
+
+}
+.start-head{
+  font-size: 3.5rem;
+  font-weight: 700;
+}
+.form{
+  color:#4FC132;
+}
+.start-head-bar{
+  height: 13px;
+  width: 37%;
+  background-color: black;
+  margin-top: 1%;
+  margin-top: 2rem;
+}
+.form-details{
+  border: 2px solid #E5E4E4;
+  width: 80%;
+  font-size: 2.5rem;
+  margin: auto;
+  background: linear-gradient(149deg, #CFD0D0 50.58%, #CFD0D0 30.61%, #F0F2F2 94.81%, #E9EAEA 100%);
+  border-radius: 0px 0px 20px 20px;
+}
+
+.form-field {
+  position: relative;
+  margin-bottom: 5px;
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+.form-field input[type="text"],
+.form-field input[type="tel"],
+.form-field input[type="email"],
+.form-field input[type="country"],
+.form-field select {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  outline: none;
+  /* border-bottom: 1px solid #ccc; */
+  box-sizing: border-box;
+  background-color: #F0F2F2;
+  position: relative;
+  z-index: 1;
+}
+.mode-options{
+  display: flex;
+  justify-content: space-between;
+  /* gap: 10px; */
+  border-top: 10px;
+
+}
+.mode-options input[type="checkbox"] {
+  margin-right: 2rem; 
+  transform: scale(3.2);
+  vertical-align: 5px;
+}
+.submit-btn{
+  /* padding-left: 50%; */
+  padding: 5%;
+
+  
+}
+.st-btn{
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 1.9rem;
+  background-color: lightgray;
+  color: black;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+/* insights start here */
+
+.img-container{
+  background-color: #4FC132;
+  /* width: 90%; */
+  border-radius: 0px 70px 70px 0px;
+  display: flex;
+  justify-content:right;
+  
+}
+.micro-image{
+  
+  margin-right: 3rem;
+  
+}
+.head-health{
+  font-size: 3rem;
+  color: #4FC132;
+  padding-left: 6rem;
+  padding-top: 3rem;
+  font-weight: 600;
+}
+.line-break{
+  width: 100%;
+  margin-left: 4rem;
+  margin-top: 1rem;
+  border: 1px solid yellow;
+
+}
+.insight-content{
+  font-size: 1.5rem;
+  padding-left: 5rem;
+  margin-top: 1rem;
+}
+.image-container{
+  background-color: #4FC132;
+  /* width: 75%; */
+  border-radius:70px ;
+  margin-left: 5rem;
+  margin-top: 5px;
+  display: flex;
+  justify-content:center;
+}
+
+.images-container{
+  background-color: #4FC132;
+  /* width: 90%; */
+  border-radius: 90px 0px 0px 90px;
+  display: flex;
+  justify-content:left;
+  /* margin-left: 50px; */
+}
+.micro-imagess{
+  width: 38%;
+  height: 38%;
+  margin-left: 4rem;
+}
+.work-insight{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3rem;
+ 
+}
+.footer{
+  background: linear-gradient(180deg, rgba(135, 241, 106, 0.822) 26.56%, rgba(128, 247, 96, 0.68) 30%, rgba(121,231,132, 0.23) 22.56%);
+  text-align: center;
+  
+ 
+  padding: 2rem;
+}
+.footer-head{
+  padding: 1rem;
+  /* background-color:#4FC132; */
+  font-size: 3rem;
+  font-weight: 600;
+}
+.partition{
+  border: 1px solid lightgreen;
+  /* width: 80%; */
+}
+.footer-foot{
+  /* background-color:#4FC132; */
+  padding: 1rem;
+  font-size: 3rem;
+  font-weight: 600;
+}
+.banner-line{
+  border: 1px solid #4FC132;
+  margin-top: 5rem;
+  
+}
+.banner-head{
+  background-color: #4FC132;
+  width: 60%;
+  border-radius: 25px;
+  position: relative;
+  left: 26rem;
+  bottom: 2rem;
+  font-size: 3rem;
+  color: white;
+}
+.reg-banner{
+  text-align: center;
+}
+
