@@ -226,13 +226,13 @@ const Nutrigut = () => {
               <img className="micro-imagess" src={Third} />
             </div>
             <div className="head-health">
-              Understanding <br />
-              &nbsp;&nbsp;Gut Health
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Yoga for <br />
+              Better Gut Health
             </div>
             <hr className="line-break" />
             <div className="insight-content">
-              Explore the importance of healthy gut <br /> and its impact on
-              overall well-being.
+              Understand importance of certain asanas <br/> and paranayam that invokes in better <br/>
+              digestion and certain kriyas which helps <br/>in inner cleansing.
             </div>
           </div>
         </div>
@@ -242,13 +242,13 @@ const Nutrigut = () => {
               <img className="micro-image" src={Fourth} />
             </div>
             <div className="head-health">
-              Understanding <br />
-              &nbsp;&nbsp;Gut Health
+            &nbsp;&nbsp;Nutrition for <br />
+              &nbsp;&nbsp;Gut Renewal
             </div>
             <hr className="line-break" />
             <div className="insight-content">
-              Explore the importance of healthy gut <br /> and its impact on
-              overall well-being.
+              Explore the gut friendly diet with<br /> emphasison on foods that support digestion<br/>
+              reduce inflammation, and aid in nutrient<br/>absorption.
             </div>
           </div>
           <div className="microbiome">
@@ -256,16 +256,14 @@ const Nutrigut = () => {
               <img className="micro-img" src={Fifth} />
             </div>
             <div className="head-health">
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Balancing <br />
-              &nbsp;&nbsp;the Microbiome
+              &nbsp;&nbsp;&nbsp;Detoxification <br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Techniques
             </div>
             <hr className="line-break" />
             <div className="insight-content">
-              Understand the role of gut bacteria in <br /> digestion and immune
-              function,and <br />
-              discover ways to promote a balanced
-              <br />
-              microbiome overall well-being.
+              Learn about different detoxification <br /> methods that are believed to help<br/>
+              cleanse the gut
+              
             </div>
           </div>
           <div className="gut-yoga">
@@ -273,13 +271,12 @@ const Nutrigut = () => {
               <img className="micro-imagess" src={Sixth} />
             </div>
             <div className="head-health">
-              Understanding <br />
-              &nbsp;&nbsp;Gut Health
+            &nbsp;&nbsp;&nbsp;&nbsp;Herbal Support <br/>
+              &nbsp;&nbsp;and Supplements
             </div>
             <hr className="line-break" />
             <div className="insight-content">
-              Explore the importance of healthy gut <br /> and its impact on
-              overall well-being.
+              Explore natural supplements and herbal <br /> remedies that can aid in gut health and<br/>support the body`s detoxification<br/>processes.
             </div>
           </div>
         </div>
@@ -289,13 +286,13 @@ const Nutrigut = () => {
               <img className="micro-image" src={Seventh} />
             </div>
             <div className="head-health">
-              Understanding <br />
-              &nbsp;&nbsp;Gut Health
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mindful <br />
+              &nbsp;&nbsp;Eating Practices
             </div>
             <hr className="line-break" />
             <div className="insight-content">
-              Explore the importance of healthy gut <br /> and its impact on
-              overall well-being.
+              Discover the connection between <br /> mindfulness and digestive health, & learn<br/>
+              techniques for cultivating mindful eating<br/>habits.
             </div>
           </div>
           <div className="microbiome">
@@ -303,16 +300,15 @@ const Nutrigut = () => {
               <img className="micro-img" src={Eighth} />
             </div>
             <div className="head-health">
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Balancing <br />
-              &nbsp;&nbsp;the Microbiome
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Creating <br />
+              &nbsp;&nbsp;Sustainable Habits
             </div>
             <hr className="line-break" />
             <div className="insight-content">
-              Understand the role of gut bacteria in <br /> digestion and immune
-              function,and <br />
-              discover ways to promote a balanced
+              Recieve guidance on incorporating long <br /> term habits that promote ongoing gut <br />
+              health,ensuring lasting benefits beyond
               <br />
-              microbiome overall well-being.
+              the workshop.
             </div>
           </div>
           <div className="gut-yoga">
@@ -320,14 +316,13 @@ const Nutrigut = () => {
               <img className="micro-imagess" src={Ninth} />
             </div>
             <div className="head-health">
-              Understanding <br />
-              &nbsp;&nbsp;Gut Health
+              Q&A and <br />
+              &nbsp;&nbsp;Personalized Guidance
             </div>
             <hr className="line-break" />
-            <div className="insight-content">
-              Explore the importance of healthy gut <br /> and its impact on
-              overall well-being.
-            </div>
+            {/* <div className="insight-content">
+              Engage in discussions,ask questions, and <br /> receive personalized tips for implementing<br/>a post-Diwali gut cleanse based on <br/>indiviual needs.
+            </div> */}
           </div>
         </div>
       </div>
