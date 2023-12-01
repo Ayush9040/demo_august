@@ -104,7 +104,7 @@ const Nutrigut = () => {
         <div className="form-details">
           <form onSubmit={handleSubmit}>
             <div className="form-field">
-              <label htmlFor="fullName">Full Name:</label>
+              <label htmlFor="fullName">Full Name:&nbsp;&nbsp;</label>
               <input
                 type="text"
                 id="fullName"
@@ -113,10 +113,9 @@ const Nutrigut = () => {
                 onChange={handleChange}
                 required
               />
-              {/* <hr className="line-after" /> */}
             </div>
             <div className="form-field">
-              <label htmlFor="contactNumber">Contact Number:</label>
+              <label htmlFor="contactNumber">Contact No:&nbsp;</label>
               <input
                 type="tel"
                 id="contactNumber"
@@ -125,10 +124,9 @@ const Nutrigut = () => {
                 onChange={handleChange}
                 required
               />
-              {/* <hr className="line-after" /> */}
             </div>
             <div className="form-field">
-              <label htmlFor="email">Email ID:</label>
+              <label htmlFor="email">Email ID:&nbsp;&nbsp;</label>
               <input
                 type="email"
                 id="email"
@@ -137,11 +135,10 @@ const Nutrigut = () => {
                 onChange={handleChange}
                 required
               />
-              {/* <hr className="line-after" /> */}
             </div>
             <div className="form-field">
               <div className="mode-options">
-                <label>Mode:</label>
+                <label>Mode:&nbsp;&nbsp;</label>
                 <label htmlFor="online">
                   <input
                     type="checkbox"
@@ -164,11 +161,10 @@ const Nutrigut = () => {
                   />
                   Offline
                 </label>
-                {/* <hr className="line-after" /> */}
               </div>
             </div>
             <div className="form-field">
-              <label htmlFor="email">Country</label>
+              <label htmlFor="email">Country:&nbsp;&nbsp;</label>
               <input
                 type="country"
                 id="country"
