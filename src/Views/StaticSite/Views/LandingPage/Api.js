@@ -8,3 +8,5 @@ export const creatForm = (payload)=>{
 export const successMail = (mail)=>{
   return axios.post(`${ authBaseDomain }/ali/mail`, mail)
 }
+
+
