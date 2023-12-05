@@ -8,7 +8,5 @@ export const creatForm = (payload)=>{
 export const successMail = (mail)=>{
   return axios.post(`${ authBaseDomain }/ali/mail`, mail)
 }
-export const createDetoxForm = (payload)=>{
-  return axios.post(`${ cmsBaseDomain }/addcampaign`,payload)
-}
+
 
