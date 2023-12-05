@@ -10,17 +10,26 @@ import Sixth from '../../../assets/images/6.png'
 import Seventh from '../../../assets/images/7.png'
 import Eighth from '../../../assets/images/8.png'
 import Ninth from '../../../assets/images/9.png'
+import Back from '../../../assets/images/bg.svg'
+import Model from '../../../assets/images/model.png'
+import { creatForm, successMail } from '../Api'
+import CampaignThankYou from '../ThankYouPage'
 
 import { useState } from 'react'
 
 const Nutrigut = () => {
   const [formData, setFormData] = useState({
-    fullName: '',
-    contactNumber: '',
+    name: '',
+    contact: '',
     email: '',
     mode: [],
     country: '',
   })
+  const [modal, setModal] = useState(false)
+  const { name, email, contact, mode, country } = formData
+  const handleInput = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value })
+  }
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target
 
@@ -36,23 +45,47 @@ const Nutrigut = () => {
       setFormData({ ...formData, [name]: value })
     }
   }
+  const handleForm = async() => {
+    try {
+      await creatForm({ ...formData, formType: 'DETOXCAMPAIGN' })
+      await successMail({
+        type: 'INFO_TYI',
+        HTMLTemplate: 'DETOXCAMPAIGN',
+        subject: 'Thank you from The Yoga Institute',
+        data: {
+          name: name,
+        },
+        receivers: [email],
+      })
+
+      setModal(true)
+    } catch (error) {
+      console.log(error)
+    }
+  }
   const handleSubmit = (e) => {
     e.preventDefault()
-    console.log(formData)
+    handleForm()
   }
 
   return (
     <div className="main-container">
-      <div className="head">
-        <div className="bg-image">
-          <img src={BgImage} />
+      <div className="header">
+        <div className="model-container">
+          <img className="model-image" src={Model} />
         </div>
+
+        <div className="content-container">
+          <h2>hello</h2>
+        </div>
+      </div>
+      <div className="bg-container">
         <div className="head-content">
           <p>
             <span className="first-order">WELCOME TO OUR</span>
           </p>
           <p>
-            <span className="second-order">GUT CLEANSE</span>
+            <span className="third-order">GUT CLEANSE</span>
           </p>
           <p>
             <span className="third-order">DETOX WORKSHOP!</span>
@@ -60,7 +93,7 @@ const Nutrigut = () => {
           <div className="empty-bar"></div>
           <div className="workshop-details">
             Join our workshop to discover effective startegies for restoring gut
-            health.Learn
+            health. Learn
             <br />
             about nourishing foods,mindful eating practices, and simple detox
             techniques to
@@ -70,24 +103,88 @@ const Nutrigut = () => {
           </div>
           <div className="durations">
             <span className="slogan">
-              Lets kickstart the healthier you after the festive celeberations.
+              Let&apos;s kick start the healthier you after the festive
+              celeberations!
             </span>
-            <div className="flex-items">
-              <div className="flex-1"> DATE</div>
-              <div className="flex-1"> MODE</div>
-            </div>
-            <div className="flex-content">
-              <div className="flex-content1">2nd December 2023</div>
-              <div className="flex-content1">Online/On-Campus</div>
-            </div>
-            <div className="flex-items">
-              <div className="flex-1"> TIME</div>
-              <div className="flex-1"> LOCATION</div>
-            </div>
-            <div className="flex-content">
-              <div className="flex-content1">10:30 AM to 12:30 PM</div>
-              <div className="flex-content1">
-                The Yoga Institute,Santacruz [East]
+            {/* <div className="flex-items-container">
+              <div className="flex-border">
+                
+                <div className="flex-1">
+                  {' '}
+                  <span className="pop">&gt;</span>DATE
+                </div>
+                <div className="flex-content1">9th December 2023</div>
+              </div>
+              <div className="flex-border">
+                
+                <div className="flex-1">
+                  {' '}
+                  <span className="pop">&gt;</span>DATE
+                </div>
+                <div className="flex-content1">9th December 2023</div>
+              </div>
+              <div className="flex-border">
+                
+                <div className="flex-1">
+                  {' '}
+                  <span className="pop">&gt;</span>DATE
+                </div>
+                <div className="flex-content1">9th December 2023</div>
+              </div>
+              <div className="flex-border">
+               
+                <div className="flex-1">
+                  {' '}
+                  <span className="pop">&gt;</span>DATE
+                </div>
+                <div className="flex-content1">9th December 2023</div>
+              </div>
+              
+            </div> */}
+            {/* <div className="grid-container">
+              <div className="flex-items">
+                <div className="flex-border">
+                  <div className="flex-1">
+                    <span className="pop">&gt;</span>DATE
+                  </div>
+                  <div className="flex-content1">9th December 2023</div>
+                </div>
+              </div>
+            </div> */}
+            <div className="grid-container">
+              <div className="flex-items">
+                <div className="flex-border">
+                  <div className="flex-1">
+                    <span className="pop">&gt;</span>DATE
+                  </div>
+                </div>
+                <div className="flex-content1">9th December 2023</div>
+              </div>
+              <div className="flex-items">
+                <div className="flex-border">
+                  <div className="flex-1">
+                    <span className="pop">&gt;</span>MODE
+                  </div>
+                </div>
+                <div className="flex-content1">Online/On-Campus</div>
+              </div>
+              <div className="flex-items">
+                <div className="flex-border">
+                  <div className="flex-1">
+                    <span className="pop">&gt;</span>TIME
+                  </div>
+                </div>
+                <div className="flex-content1">10:30 AM to 12:30 PM</div>
+              </div>
+              <div className="flex-items">
+                <div className="flex-border">
+                  <div className="flex-1">
+                    <span className="pop">&gt;</span>LOCATION
+                  </div>
+                </div>
+                <div className="flex-content1">
+                  The Yoga Institute,Santacruz[East]
+                </div>
               </div>
             </div>
           </div>
@@ -107,9 +204,9 @@ const Nutrigut = () => {
               <label htmlFor="fullName">Full Name:&nbsp;&nbsp;</label>
               <input
                 type="text"
-                id="fullName"
-                name="fullName"
-                value={formData.fullName}
+                id="name"
+                name="name"
+                value={formData.name}
                 onChange={handleChange}
                 required
               />
@@ -120,8 +217,8 @@ const Nutrigut = () => {
                 type="tel"
                 id="contactNumber"
                 name="contactNumber"
-                value={formData.contactNumber}
-                onChange={handleChange}
+                value={formData.contact}
+                onChange={handleInput}
                 required
               />
             </div>
@@ -132,7 +229,7 @@ const Nutrigut = () => {
                 id="email"
                 name="email"
                 value={formData.email}
-                onChange={handleChange}
+                onChange={handleInput}
                 required
               />
             </div>
@@ -170,7 +267,7 @@ const Nutrigut = () => {
                 id="country"
                 name="country"
                 value={formData.country}
-                onChange={handleChange}
+                onChange={handleInput}
                 required
               />
               {/* <hr className="line-after" /> */}
@@ -226,13 +323,15 @@ const Nutrigut = () => {
               <img className="micro-imagess" src={Third} />
             </div>
             <div className="head-health">
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Yoga for <br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Yoga for <br />
               Better Gut Health
             </div>
             <hr className="line-break" />
             <div className="insight-content">
-              Understand importance of certain asanas <br/> and paranayam that invokes in better <br/>
-              digestion and certain kriyas which helps <br/>in inner cleansing.
+              Understand importance of certain asanas <br /> and paranayam that
+              invokes in better <br />
+              digestion and certain kriyas which helps <br />
+              in inner cleansing.
             </div>
           </div>
         </div>
@@ -242,13 +341,17 @@ const Nutrigut = () => {
               <img className="micro-image" src={Fourth} />
             </div>
             <div className="head-health">
-            &nbsp;&nbsp;Nutrition for <br />
+              &nbsp;&nbsp;Nutrition for <br />
               &nbsp;&nbsp;Gut Renewal
             </div>
             <hr className="line-break" />
             <div className="insight-content">
-              Explore the gut friendly diet with<br /> emphasison on foods that support digestion<br/>
-              reduce inflammation, and aid in nutrient<br/>absorption.
+              Explore the gut friendly diet with
+              <br /> emphasison on foods that support digestion
+              <br />
+              reduce inflammation, and aid in nutrient
+              <br />
+              absorption.
             </div>
           </div>
           <div className="microbiome">
@@ -261,9 +364,10 @@ const Nutrigut = () => {
             </div>
             <hr className="line-break" />
             <div className="insight-content">
-              Learn about different detoxification <br /> methods that are believed to help<br/>
+              Learn about different detoxification <br /> methods that are
+              believed to help
+              <br />
               cleanse the gut
-              
             </div>
           </div>
           <div className="gut-yoga">
@@ -271,12 +375,17 @@ const Nutrigut = () => {
               <img className="micro-imagess" src={Sixth} />
             </div>
             <div className="head-health">
-            &nbsp;&nbsp;&nbsp;&nbsp;Herbal Support <br/>
+              &nbsp;&nbsp;&nbsp;&nbsp;Herbal Support <br />
               &nbsp;&nbsp;and Supplements
             </div>
             <hr className="line-break" />
             <div className="insight-content">
-              Explore natural supplements and herbal <br /> remedies that can aid in gut health and<br/>support the body`s detoxification<br/>processes.
+              Explore natural supplements and herbal <br /> remedies that can
+              aid in gut health and
+              <br />
+              support the body`s detoxification
+              <br />
+              processes.
             </div>
           </div>
         </div>
@@ -286,13 +395,17 @@ const Nutrigut = () => {
               <img className="micro-image" src={Seventh} />
             </div>
             <div className="head-health">
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mindful <br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mindful <br />
               &nbsp;&nbsp;Eating Practices
             </div>
             <hr className="line-break" />
             <div className="insight-content">
-              Discover the connection between <br /> mindfulness and digestive health, & learn<br/>
-              techniques for cultivating mindful eating<br/>habits.
+              Discover the connection between <br /> mindfulness and digestive
+              health, & learn
+              <br />
+              techniques for cultivating mindful eating
+              <br />
+              habits.
             </div>
           </div>
           <div className="microbiome">
@@ -300,12 +413,14 @@ const Nutrigut = () => {
               <img className="micro-img" src={Eighth} />
             </div>
             <div className="head-health">
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Creating <br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Creating{' '}
+              <br />
               &nbsp;&nbsp;Sustainable Habits
             </div>
             <hr className="line-break" />
             <div className="insight-content">
-              Recieve guidance on incorporating long <br /> term habits that promote ongoing gut <br />
+              Recieve guidance on incorporating long <br /> term habits that
+              promote ongoing gut <br />
               health,ensuring lasting benefits beyond
               <br />
               the workshop.
@@ -316,13 +431,16 @@ const Nutrigut = () => {
               <img className="micro-imagess" src={Ninth} />
             </div>
             <div className="head-health">
-              Q&A and <br />
+              &nbsp;&nbsp;&nbsp;&nbsp;Q&A and <br />
               &nbsp;&nbsp;Personalized Guidance
             </div>
             <hr className="line-break" />
-            {/* <div className="insight-content">
-              Engage in discussions,ask questions, and <br /> receive personalized tips for implementing<br/>a post-Diwali gut cleanse based on <br/>indiviual needs.
-            </div> */}
+            <div className="insight-content">
+              Engage in discussions,ask questions, and <br /> receive
+              personalized tips for implementing
+              <br />a post-Diwali gut cleanse based on <br />
+              indiviual needs.
+            </div>
           </div>
         </div>
       </div>
@@ -347,6 +465,13 @@ const Nutrigut = () => {
         <hr className="banner-line" />
         <div className="banner-head">PRIOR REGISTERATIONS ARE MANDATORY</div>
       </div>
+      {modal && (
+        <CampaignThankYou
+          name={name}
+          setModal={setModal}
+          setFormData={setFormData}
+        />
+      )}
     </div>
   )
 }

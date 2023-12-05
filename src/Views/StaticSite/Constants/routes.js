@@ -866,9 +866,9 @@ const staticSiteRoutes = [
   },
   {
     Component:NutriGut,
-    path:'/GUT-CLEANSE-DETOX-WORKSHOP',
+    path:'/gut-cleanse-detox-workshop',
     id:'staticNutriGut',
-    routePath:'/GUT-CLEANSE-DETOX-WORKSHOP',
+    routePath:'/gut-cleanse-detox-workshop',
     name:'Nutrigut'
   }
 ]

@@ -17,6 +17,48 @@
   font-weight: normal;
   font-style: normal;
 }
+/* Anek Regular*/
+@font-face {
+  font-family: "Anek Regular";
+  src: url('../src/Views/StaticSite/assets/font/Anek/AnekLatin-Regular.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Anek Condensed Thin";
+  src: url('../src/Views/StaticSite/assets/font/Anek/AnekLatin_Condensed-Thin.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Anek Condensed Regular";
+  src: url('../src/Views/StaticSite/assets/font/Anek/AnekLatin_Condensed-Regular.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Anek SemiExpanded ExtraThin";
+  src: url('../src/Views/StaticSite/assets/font/Anek/AnekLatin_SemiExpanded-ExtraLight.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Anek ExtraLight";
+  src: url('../src/Views/StaticSite/assets/font/Anek/AnekLatin-ExtraLight.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: "Futura";
+  src: url('../src/Views/StaticSite/assets/font/FUTURA/tt0144m_.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 :root {
   --primary-color: #ebb38a;
   --brick-red: #ca4625;
@@ -25,6 +67,7 @@
   --hero : hero;
   --bebas-neue: bebas-neue;
   --futura: futura;
+  --anek: Anek
 
 }
 .wa-chat-box-poweredby{
