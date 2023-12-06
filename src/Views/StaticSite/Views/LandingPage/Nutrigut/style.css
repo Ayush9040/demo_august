@@ -381,6 +381,12 @@
    margin-top: 3rem;
    
  }
+ .work-insight-res{
+  display:none ;
+}
+.health-container-res-cen{
+  display: none;
+}
 
 
  .footer{
@@ -566,6 +572,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* Two columns */
   grid-gap: 20px; /* Adjust gap between divs */
+  
 }
 
 /* grid layout  */

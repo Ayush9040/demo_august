@@ -562,7 +562,7 @@ const Nutrigut = () => {
         </div>
         <div className="reg-banner">
           <hr className="banner-line" />
-          <div className="banner-head">PRIOR REGISTERATION IS MANDATORY</div>
+          <div className="banner-head">PRIOR REGISTRATION IS MANDATORY</div>
         </div>
       </div>
       {modal && (
