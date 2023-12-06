@@ -25,7 +25,7 @@
    /* height: 99%; */
  }
  .content-container{
-   width: 41.5%;
+   width: 42%;
    height: 6%;
    bottom: -5%;
    /* margin-left: 1.5%; */
@@ -115,6 +115,7 @@
    background-color: white;
    border-radius: 5rem 0 0 0;
    align-items: start;
+   overflow: hidden;
  }
  .slogan{
    color: #3B764A;
@@ -152,6 +153,7 @@
    /* max-width: fit-content; */
  }
  
+ 
  .flex-1{
    background-color: #4FC132;
    color: white;
@@ -170,20 +172,30 @@
  
  .start-head-end{
    height: 13px;
-   width: 36.5%;
+   width: 42%;
    background-color: #20B856;
    margin-top: 2rem;
  }
  .start-head{
    font-size: 3.5rem;
    font-family: 'Anek Bold';
+   text-align: center;
+   margin-top: 10px;
  }
+ .start-head-form{
+  font-size: 3.5rem;
+  font-family: 'Anek Bold';
+  text-align: center;
+  margin-top: 10px;
+  min-width: fit-content;
+}
  .form{
    color:#20B856;
  }
+ 
  .start-head-bar{
    height: 13px;
-   width: 36%;
+   width: 42%;
    background-color: black;
    margin-top: 1%;
    margin-top: 2rem;
@@ -439,7 +451,7 @@
  /* responsiveness */
 
  
- @media only screen and (max-width: 576px){
+ @media only screen and (min-width:420px) and (max-width: 576px){
   .main-container{
     background-color: FEFEFE;
     /* box-sizing:border-box; */
@@ -454,7 +466,6 @@
     content: url('../../../assets/images/mobile\ screen.png');
      width: 100%;
      position: relative;
-     
   }
  
   .bg-container {
@@ -666,6 +677,7 @@
 }
 .health-container-res-cen{
   text-align: center;
+  display: block;
 }
 .img-container-res-cen{
   background-color: #4FC132;
@@ -717,6 +729,289 @@
   font-size: 2rem;
   width: 60%;
   left: 20%;
+}
+
+ }
+ @media screen and (max-width: 360px){
+
+  .logo-nutrigut{
+    width: 40%;
+  }
+  .model-container{
+    content: url('../../../assets/images/mobile\ screen.png');
+     width: 100%;
+     position: relative;
+  }
+  .bg-container {
+    position: absolute;
+    top: 10%;
+    width: 100%;
+    height: 10%; 
+    z-index: 1; 
+  }
+  .head-content{
+    left: 0%;
+    top: -40%;
+    
+  }
+  .first-order{
+    font-size: 2rem;
+  }
+  .third-order{
+    font-size: 3rem;
+    font-weight: 800;
+    color: #FCF050 ;
+    text-shadow: -4px 4px 4px #4138091e;
+  }
+  .empty-bar{
+    background-color: aliceblue;
+    height: 6px;
+    width: 70%;
+    position: relative;
+    float:right;
+    margin-top: 2%;  
+  }
+  .durations{
+    width: 55%;
+    float: right;
+    margin-left: 1%;
+    
+  }
+  .flex-border{
+    border-radius: 10px;
+    width: 13rem;
+    
+  }
+  .flex-content1{
+    text-align: left;
+    font-size: 1.5rem;
+  }
+  .flex-items {
+    max-width: 20%;
+    text-align: center;
+  }
+  .pop{
+    display: none;
+  }
+  .flex-1{
+    border-radius: 5px;
+    padding: 0%;
+    font-size: 1.8rem;
+    font-family: 'Anek Condensed Regular';
+  }
+  .slogan{
+    font-size: 1.5rem;
+    margin-left: 0;
+    padding: 4px;
+  }
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+    padding: 0rem;
+  }
+  .content-container{
+    display: none;
+  }
+  
+  .workshop-details{
+    display: none;
+  }
+  .workshop-details-res{
+    display: block;
+    font-size: 1.5rem;
+    margin-top: 6%;
+   color: white;
+   font-family: 'Anek ExtraLight';
+  }
+  .start-head{
+    margin-top: 3%;
+    font-size: 2.5rem;
+  }
+  .start-head-form{
+    margin-top: 3%;
+    font-size: 2.5rem;
+  }
+  .form-details{
+    font-size: 1rem;
+    width: 90%;
+  }
+  .form-field{
+    padding-left: 2rem;
+  }
+  .form-field input[type="text"],
+ .form-field input[type="tel"],
+ .form-field input[type="email"],
+ .form-field input[type="country"],
+ .form-field select {
+   width: 80%;
+   font-size: 1rem;
+   
+ }
+ .mode-options input[type="checkbox"] {
+  margin-top: 1%;
+  transform: scale(1.4);
+}
+.st-btn{
+  font-size: 1rem;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+
+.work-insight{
+  display: none;
+}
+.work-insight-res{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns */
+  grid-gap: 20px; /* Adjust gap between divs */
+  margin-top: 8%;
+  
+}
+
+/* grid layout  */
+
+
+.health-container-res{
+  text-align: left;
+}
+.img-container-res{
+  background-color: #4FC132;
+  width: 150px;
+  border-radius: 0px 70px 70px 0px;
+  display: flex;
+  justify-content:right;
+}
+.micro-image-res{
+  margin-right: 4rem;
+  height: 70px;
+  max-height: 140px;
+}
+.head-health-res{
+  font-size: 2rem;
+  color: #4FC132;
+  padding-left: 4.5rem;  
+  padding-top: 3rem;
+  text-align: start;
+  /* font-weight: 400; */
+  font-family: 'Anek Regular';
+  margin-right: 10%;
+}
+.line-break-res{
+  width: 80%;
+  margin-left: 3rem;
+  margin-top: 1rem;
+  border: 1px solid yellow;
+}
+.insight-content-res{
+  font-size: 1.4rem;
+  padding-left: 4.5rem;
+  margin-top: 1rem;
+  font-family: 'Anek Regular';
+  color: #3D3D3D;
+  line-height: 1.4;
+  width: 200px;
+}
+
+.health-container-res-left{
+  text-align: right;
+}
+.img-container-res-left{
+  background-color: #4FC132;
+  width: 150px;
+  border-radius: 70px 0px 0px 70px;
+  display: flex;
+  justify-content:left;
+  
+}
+.micro-image-res-left{
+  margin-left: 2rem;
+  height: 70px;
+  max-height: 140px;
+}
+.head-health-res-left{
+  font-size: 2rem;
+  color: #4FC132;
+  padding-right: 4rem;
+  padding-top: 3rem;
+  text-align: start;
+  /* margin-left: 56%; */
+  /* font-weight: 800; */
+  font-family: 'Anek Regular';
+  margin-left: 5%;
+  /* width: 100px; */
+  
+}
+.line-break-res-left{
+  width: 80%;
+  /* margin-left: 4rem; */
+  margin-top: 1rem;
+  border: 1px solid yellow;
+  margin-left: 5%;
+}
+.insight-content-res-left{
+  font-size: 1.4rem;
+  padding-right: 1rem;
+  margin-top: 1rem;
+  font-family: 'Anek Regular';
+  color: #3D3D3D;
+  line-height: 1.4;
+  width: 140px;
+  /* margin-left: 10%; */
+}
+.health-container-res-cen{
+  text-align: center;
+  display: block;
+}
+.img-container-res-cen{
+  background-color: #4FC132;
+  width: 150px;
+  border-radius:  70px;
+  display: flex;
+  justify-content:center;
+  margin-left: 30%;
+}
+.micro-image-res-cen{
+  height: 70px;
+  max-height: 140px;
+}
+.head-health-res-cen{
+  font-size: 2rem;
+  color: #4FC132;
+  padding-top: 2rem;
+  text-align: start;
+  font-family: 'Anek Regular';
+  margin-left: 30%;
+}
+.line-break-res-cen{
+  width: 60%;
+  margin-top: 1rem;
+  border: 1px solid yellow;
+  margin-left: 22%;
+}
+.insight-content-res-cen{
+  font-size: 1.4rem;
+  padding-right: 1rem;
+  margin-top: 1rem;
+  font-family: 'Anek Regular';
+  color: #3D3D3D;
+  line-height: 1.4;
+  width: 160px;
+  margin-left: 30%;
+}
+.footer-head{
+  font-size: 1.5rem;
+}
+.footer-foot{
+  font-size: 1.5rem;
+}
+.banner-head{
+  font-size: 1.3rem;
+  width: 60%;
+  left: 20%;
+  margin-top: 5px;
+
 }
 
  }
