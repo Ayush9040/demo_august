@@ -78,7 +78,7 @@ const Nutrigut = () => {
       <div className="main-container">
         <div className="header">
           <div class="header-logo-nutrigut">
-            <img
+            <img className='logo-nutrigut'
               placeholder="none"
               alt="The Yoga Institute"
               src={NutriGutLogo}
@@ -109,6 +109,16 @@ const Nutrigut = () => {
               about nourishing foods,mindful eating practices, and simple detox
               techniques to
               <br />
+              promote digestion, reduce bloating and rejuvenate your overall
+              well-being.
+            </div>
+            <div className="workshop-details-res">
+              Join our workshop to discover effective startegies for restoring
+              gut health. Learn
+              
+              about nourishing foods,mindful eating practices, and simple detox
+              techniques to
+              
               promote digestion, reduce bloating and rejuvenate your overall
               well-being.
             </div>

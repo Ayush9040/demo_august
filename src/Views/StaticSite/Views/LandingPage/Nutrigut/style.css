@@ -103,6 +103,9 @@
    color: white;
    font-family: 'Anek ExtraLight';
  }
+ .workshop-details-res{
+  display: none;
+ }
  .durations{
    width: 101%;
    margin-top: 2.5%;
@@ -120,11 +123,6 @@
    font-family: 'Anek ExtraLight';
    margin-left: 3.5rem;
  }
- /* .flex-items-container{
-   display: grid;
-   grid-template-columns: repeat(2, 100px);
-   grid-gap: 250px;
- } */
  .flex-content1{
    font-family: 'Anek ExtraLight';
    font-weight: 600;
@@ -151,13 +149,9 @@
    display: grid;
    grid-template-rows: auto auto; /* Two rows for each flex-border and flex-content1 */
    grid-gap: 10px; /* Adjust gap as needed */
+   /* max-width: fit-content; */
  }
- /* .flex-border {
- } */
- /* .flex-1 {
- } */
- /* .flex-content1 {
- } */
+ 
  .flex-1{
    background-color: #4FC132;
    color: white;
@@ -167,29 +161,13 @@
    font-size: 3.5rem;
    font-family: 'Anek Condensed Regular';
  }
- /* .flex-location{
-   background-color: #4FC132;
-   color: white;
-   border-radius: 5px 35px 35px 5px;
-   padding: 3%;
-   width: 18rem;
-   margin: 5px;
-   font-size: 3.5rem;
-   font-family: 'Anek Condensed Regular';
- } */
  .flex-head{
    display: flex;
    gap: 1%;
    margin-top: 6%;
  }
- .flex-items-container {
-   display: grid;
-   grid-template-columns: repeat(2, 1fr); /* Two columns using fraction units */
-   grid-auto-rows: minmax(100px, auto); /* Auto rows, adjust as needed */
-   grid-gap: 10px; /* Adjust as needed - gap between items */}
- .flex-items {
-   grid-column: span 1; /* Each item spans one column */
- }
+
+ 
  .start-head-end{
    height: 13px;
    width: 36.5%;
@@ -448,95 +426,96 @@
  .reg-banner{
    text-align: center;
  }
+ 
  /* responsiveness */
- @media (max-width: 360px) {
-   .main-image{
-     content: url('../../../assets/images/mobile\ screen.png');
-     width: 100%;
-   }
-   .head-content{
-   /* position: absolute; */
-   top: 1%;
-   left: 3%;
-   padding: 0px;
-   }
-   .first-order{
-     font-size: 2rem;
-     /* padding-left: 40%; */
-   }
-   .second-order{
-     font-size: 3.5rem;
-     /* padding-left: 40%; */
-   }
-   .third-order{
-     font-size: 3.5rem;
-     /* padding-left: 40%; */
-   }
-   .empty-bar{
-     height: 5px;
-     width: 64%;
-   }
-   .workshop-details{
-     font-size: 9px;
-   }
-   .durations{
-     background-color: aliceblue;
-     font-size: 1rem;
-     width: 55%;
-     margin-top: 16%;
-     margin-left: 48%;
-     padding: 1%;
-   }
-   .slogan{
-     font-size: 1rem;
-   }
-   .flex-items-container{
-     display: block;
-   }
-   .flex-content1{
-     padding: 0.5rem;
-   }
-   .start-head{
-     font-size: 2rem;
-     margin-top: 2.5%;
 
+ 
+ @media only screen and (max-width: 576px){
+  .main-container{
+    background-color: FEFEFE;
+    /* box-sizing:border-box; */
+    overflow:hidden;
+    
    }
-   .start-head-bar{
-     height: 5px;
-     /* margin-bottom: 6px; */
-   }
-   .start-head-end{
-     height: 5px;
-   }
-   .form-details{
-     width: 95%;
-     font-size: 1.5rem;
-     margin: auto;
-   }
-   .form-field {
+  
+  .logo-nutrigut{
+    width: 50%;
+  }
+  .model-container{
+    content: url('../../../assets/images/mobile\ screen.png');
+     width: 100%;
      position: relative;
-     margin-bottom: 5px;
-     padding-left: 4rem;
-     display: flex;
-   }
-   .st-btn{
-     font-size: 1.5rem;
-     border-radius: 14px;
-     padding: 1.5rem;
-   }
-   .form-field select {
-     width: 30%;
-     padding: 5px;
-     border: none;
-     outline: none;
-     border-bottom: 1px solid black;
-     box-sizing: border-box;
-     background-color: transparent;
-     position: relative;
-     font-size: 1.5rem;
-     z-index: 1;
-   }
+     
+  }
+ 
+  .bg-container {
+    position: absolute;
+    top: 10%;
+    width: 100%;
+    height: 10%; 
+    z-index: 1; 
+  }
+  
+  .first-order{
+    font-size: 3rem;
+  }
+
+  .third-order{
+    font-size: 5rem;
+    font-weight: 800;
+    color: #FCF050 ;
+    text-shadow: -4px 4px 4px #4138091e
+    ;
+  }
+  
+  .empty-bar{
+    background-color: aliceblue;
+    height: 8px;
+    width: 70%;
+    position: relative;
+    float:right;
+    margin-top: 2%;  
+  }
+  
+  .durations{
+    width: 55%;
+    float: right;
+   
+    bottom: 20%;
+    /* position: relative;background-color: #3D3D3D; */
+  }
+  
+  .flex-items {
+    width: 20%;
+  }
+  .slogan{
+    font-size: 2.2rem;
+    margin-left: 0;
+    padding: 4px;
+  }
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+     
+    padding: 3rem;
+    
+  }
+  
+  .workshop-details{
+    display: none;
+  }
+  .workshop-details-res{
+    display: block;
+    font-size: 2rem;
+    margin-top: 6%;
+   
+   color: white;
+   font-family: 'Anek ExtraLight';
+  }
+
  }
+
  @media (max-width:1728px){
    .main-image{
      width: max-content;
