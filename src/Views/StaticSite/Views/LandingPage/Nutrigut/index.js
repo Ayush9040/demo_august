@@ -549,7 +549,7 @@ const Nutrigut = () => {
             <br />
             HAVING MORE THAN 25 YEARS OF EXPERIENCE AND QUALIFIED
             <br />
-            NUTRIRIONIST/CLINICAL DIETICIAN.
+            NUTRITIONIST/CLINICAL DIETICIAN.
           </div>
           <hr className="partition" />
           <div className="footer-foot">
@@ -562,7 +562,7 @@ const Nutrigut = () => {
         </div>
         <div className="reg-banner">
           <hr className="banner-line" />
-          <div className="banner-head">PRIOR REGISTERATION IS MANDATORY</div>
+          <div className="banner-head">PRIOR REGISTRATION IS MANDATORY</div>
         </div>
       </div>
       {modal && (
