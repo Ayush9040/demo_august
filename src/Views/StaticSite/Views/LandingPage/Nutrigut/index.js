@@ -406,7 +406,7 @@ const Nutrigut = () => {
             <br />
             HAVING MORE THAN 25 YEARS OF EXPERIENCE AND QUALIFIED
             <br />
-            NUTRIRIONIST/CLINICAL DIETICIAN.
+            NUTRITIONIST/CLINICAL DIETICIAN.
           </div>
           <hr className="partition" />
           <div className="footer-foot">
