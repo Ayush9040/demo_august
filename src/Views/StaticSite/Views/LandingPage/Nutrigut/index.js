@@ -261,7 +261,7 @@ const Nutrigut = () => {
         <div className="insights">
           <div className="flex-head">
             <div className="start-head-end"></div>
-            <div className="start-head">
+            <div className="start-head-form">
               <span className="form">INSIGHTS OF </span>WORKSHOP
             </div>
             <div className="start-head-bar"></div>
