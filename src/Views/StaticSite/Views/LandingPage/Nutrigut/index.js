@@ -79,12 +79,13 @@ const Nutrigut = () => {
         <div className="header">
           <div class="header-logo-nutrigut">
             <img
+              className="logo-nutrigut"
               placeholder="none"
               alt="The Yoga Institute"
               src={NutriGutLogo}
             />
           </div>
-          <div className="model-container">   
+          <div className="model-container">
             <img className="model-image" src={Model} />
           </div>
 
@@ -111,6 +112,12 @@ const Nutrigut = () => {
               <br />
               promote digestion, reduce bloating and rejuvenate your overall
               well-being.
+            </div>
+            <div className="workshop-details-res">
+              Join our workshop to discover effective startegies for restoring
+              gut health. Learn about nourishing foods,mindful eating practices,
+              and simple detox techniques to promote digestion, reduce bloating
+              and rejuvenate your overall well-being.
             </div>
             <div className="durations">
               <span className="slogan">
@@ -397,6 +404,142 @@ const Nutrigut = () => {
                 tips for implementing a post-Diwali gut cleanse based on
                 indiviual needs.
               </div>
+            </div>
+          </div>
+          <div className="work-insight-res">
+            <div className="health-container-res">
+              <div className="img-container-res">
+                <img className="micro-image-res" src={First} />
+              </div>
+              <div className="head-health-res">
+              Understanding 
+                Gut Health
+              </div>
+              <hr className="line-break-res" />
+              <div className="insight-content-res">
+              Explore the importance of healthy gut and its impact on overall
+                well-being.
+              </div>
+            </div>
+            <div className="health-container-res-left">
+              <div className="img-container-res-left">
+                <img className="micro-image-res-left" src={Second} />
+              </div>
+              <div className="head-health-res-left">
+              Balancing 
+                the Microbiome
+              </div>
+              <hr className="line-break-res-left" />
+              <div className="insight-content-res-left">
+              Understand the role of gut bacteria in digestion and immune
+                function,and discover ways to promote a balanced microbiome.
+              </div>
+            </div>
+            <div className="health-container-res">
+              <div className="img-container-res">
+                <img className="micro-image-res" src={Third} />
+              </div>
+              <div className="head-health-res">
+              Yoga for <br />
+                Better Gut Health
+              </div>
+              <hr className="line-break-res" />
+              <div className="insight-content-res">
+              Understand importance of certain asanas and paranayam that
+                invokes in better digestion and certain kriyas which helps in
+                inner cleansing.
+              </div>
+            </div>
+            <div className="health-container-res-left">
+              <div className="img-container-res-left">
+                <img className="micro-image-res-left" src={Fourth} />
+              </div>
+              <div className="head-health-res-left">
+              Nutrition for 
+                Gut Renewal
+              </div>
+              <hr className="line-break-res-left" />
+              <div className="insight-content-res-left">
+              Explore the gut friendly diet with emphasison on foods that
+                support digestion reduce inflammation, and aid in nutrient
+                absorption.
+              </div>
+            </div>
+            <div className="health-container-res">
+              <div className="img-container-res">
+                <img className="micro-image-res" src={Fifth} />
+              </div>
+              <div className="head-health-res">
+              Detoxification <br />
+                Techniques
+              </div>
+              <hr className="line-break-res" />
+              <div className="insight-content-res">
+              Learn about different detoxification <br /> methods that are
+                believed to help
+                <br />
+                cleanse the gut
+              </div>
+            </div>
+            <div className="health-container-res-left">
+              <div className="img-container-res-left">
+                <img className="micro-image-res-left" src={Sixth} />
+              </div>
+              <div className="head-health-res-left">
+              Herbal Support <br />
+                and Supplements
+              </div>
+              <hr className="line-break-res-left" />
+              <div className="insight-content-res-left">
+              Explore natural supplements and herbal remedies that can aid in
+                gut health and support the body`s detoxification processes. 
+              </div>
+            </div>
+            <div className="health-container-res">
+              <div className="img-container-res">
+                <img className="micro-image-res" src={Seventh} />
+              </div>
+              <div className="head-health-res">
+                Mindful <br />
+                Eating Practices
+              </div>
+              <hr className="line-break-res" />
+              <div className="insight-content-res">
+                Discover the connection between mindfulness and digestive
+                health, & learn techniques for cultivating mindful eating
+                habits.
+              </div>
+            </div>
+            <div className="health-container-res-left">
+              <div className="img-container-res-left">
+                <img className="micro-image-res-left" src={Eighth} />
+              </div>
+              <div className="head-health-res-left">
+              Creating
+                <br />
+                Sustainable Habits
+              </div>
+              <hr className="line-break-res-left" />
+              <div className="insight-content-res-left">
+              Recieve guidance on incorporating long term habits that promote
+                ongoing gut health,ensuring lasting benefits beyond the
+                workshop.
+              </div>
+            </div>
+          </div>
+          <div className="health-container-res-cen">
+            <div className="img-container-res-cen">
+              <img className="micro-image-res-cen" src={Ninth} />
+            </div>
+            <div className="head-health-res-cen">
+            Q&A and <br />
+                Personalized Guidance
+            </div>
+            <hr className="line-break-res-cen" />
+            <div className="insight-content-res-cen">
+            Engage in discussions, ask questions, and receive personalized
+                tips for implementing a post-Diwali gut cleanse based on
+                indiviual needs.
             </div>
           </div>
         </div>
