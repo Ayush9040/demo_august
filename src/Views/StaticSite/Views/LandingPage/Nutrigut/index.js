@@ -77,7 +77,7 @@ const Nutrigut = () => {
     <>
       <div className="main-container">
         <div className="header">
-          <div class="header-logo-nutrigut">
+          <div className="header-logo-nutrigut">
             <img
               className="logo-nutrigut"
               placeholder="none"
