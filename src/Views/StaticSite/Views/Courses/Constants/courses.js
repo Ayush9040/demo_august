@@ -9225,7 +9225,7 @@ const camps = {
       '27th Jan to 2th Feb 2024',
       '24th Feb to 1st Mar 2024',
       '23rd Mar to 29th Mar 2024',
-      '3rd Apr to 27th Apr 2024',
+      '27th Apr to 3rd May 2024',
       '25th May to 31st May 2024',
       '22nd Jun to 28th Jun 2024',
       '27th Jul to 2nd Aug 2024',
