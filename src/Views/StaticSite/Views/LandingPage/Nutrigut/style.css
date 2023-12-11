@@ -709,10 +709,10 @@
 }
 }
 
- @media only screen and (min-width:361px) and (max-width: 419px){
-   
+ @media only screen and (min-width:361px) and (max-width: 420px){
+  
   .logo-nutrigut{
-    width: 60%;
+    width: 50%;
   }
   .model-container{
     content: url('../../../assets/images/mobile\ screen.png');
@@ -728,13 +728,13 @@
   }
   .head-content{
     left: 0%;
-    top: 0%;
+    top: -40%;
   }
   .first-order{
-    font-size: 2.5rem;
+    font-size: 2.3rem;
   }
   .third-order{
-    font-size: 3.8rem;
+    font-size: 3.4rem;
     font-weight: 800;
     color: #FCF050 ;
     text-shadow: -4px 4px 4px #4138091e;
@@ -973,7 +973,7 @@
   color: #3D3D3D;
   line-height: 1.4;
   width: 160px;
-  margin-left: 20%;
+  margin-left: 30%;
   text-align: center;
 }
 .footer-head{
@@ -992,7 +992,284 @@
 
 }
 
-@media only screen and (min-width:420px) and (max-width: 576px){
+@media only screen and (min-width:421px) and (max-width:484px){
+  .main-container{
+    background-color: FEFEFE;
+    overflow:hidden;
+   }
+  
+  .logo-nutrigut{
+    width: 50%;
+  }
+  .model-container{
+    content: url('../../../assets/images/mobile\ screen.png');
+     width: 100%;
+     position: relative;
+  }
+ 
+  .bg-container {
+    position: absolute;
+    top: 6%;
+    width: 100%;
+    height: 10%; 
+    z-index: 1; 
+  }
+  
+  
+  .first-order{
+    font-size: 2.8rem;
+  }
+ 
+  .third-order{
+    font-size: 4rem;
+    font-weight: 800;
+    color: #FCF050 ;
+    text-shadow: -4px 4px 4px #4138091e
+    ;
+  }
+  
+  .empty-bar{
+    background-color: aliceblue;
+    height: 8px;
+    width: 70%;
+    position: relative;
+    float:right;
+    margin-top: 2%;  
+  }
+  
+  .durations{
+    width: 55%;
+    float: right;
+    margin-left: 1%;
+    min-height: fit-content;
+    
+  }
+  .flex-border{
+    border-radius: 10px;
+  }
+  .flex-content1{
+    text-align: left;
+  }
+  
+  .flex-items {
+    max-width: 20%;
+    text-align: center;
+  }
+  .pop{
+    display: none;
+  }
+  .flex-1{
+    
+    border-radius: 5px ;
+    padding: 1%;
+    margin: 5px;
+    font-size: 1.6rem;
+    font-family: 'Anek Condensed Regular';
+  }
+  .slogan{
+    font-size: 1.7rem;
+    margin-left: 20px;
+    display: block;
+    width: 80%;
+    
+  }
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+    padding: 3rem;
+  }
+  .content-container{
+    display: none;
+  }
+  
+  .workshop-details{
+    display: none;
+  }
+  .workshop-details-res{
+    display: block;
+    font-size: 2rem;
+    margin-top: 6%;
+   color: white;
+   font-family: 'Anek ExtraLight';
+  }
+  .start-head{
+    margin-top: 1%;
+  }
+  .form-details{
+    font-size: 1.5rem;
+    width: 90%;
+  }
+  .form-field{
+    padding-left: 2rem;
+  }
+  .form-field input[type="text"],
+ .form-field input[type="tel"],
+ .form-field input[type="email"],
+ .form-field input[type="country"],
+ .form-field select {
+   width: 80%;
+   font-size: 1rem;
+   
+ }
+ .mode-options input[type="checkbox"] {
+  margin-top: 1%;
+  transform: scale(1.8);
+ }
+ .work-insight{
+  display: none;
+ }
+ .work-insight-res{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns */
+  grid-gap: 20px; /* Adjust gap between divs */ 
+  margin-top: 4%;
+ }
+ .health-container-res{
+  text-align: left;
+ }
+ .img-container-res{
+  background-color: #4FC132;
+  width: 220px;
+  border-radius: 0px 70px 70px 0px;
+  display: flex;
+  justify-content:right;
+ }
+ 
+ .micro-image-res{
+  margin-right: 3rem;
+  height: 90px;
+  max-height: 140px;
+ }
+ .head-health-res{
+  font-size: 2.8rem;
+  color: #4FC132;
+  padding-left: 3rem;  
+  padding-top: 3rem;
+  text-align: center;
+  font-family: 'Anek Regular';
+  /* margin-right: 20%; */
+ }
+ .line-break-res{
+  width: 80%;
+  margin-left: 4rem;
+  margin-top: 1rem;
+  border: 1px solid yellow;
+ }
+ .insight-content-res{
+  font-size: 1.8rem;
+  padding-left: 6rem;
+  margin-top: 1rem;
+  font-family: 'Anek Regular';
+  color: #3D3D3D;
+  line-height: 1.4;
+  /* width: 200px; */
+  text-align: center;
+  margin-right:10%;
+ }
+ 
+ .health-container-res-left{
+  text-align: right;
+ }
+ .img-container-res-left{
+  background-color: #4FC132;
+  width: 230px;
+  border-radius: 70px 0px 0px 70px;
+  display: flex;
+  justify-content:left;
+  margin-left: 20%;
+ }
+ .micro-image-res-left{
+  margin-left: 3rem;
+  height: 90px;
+  max-height: 140px;
+ }
+ .head-health-res-left{
+  font-size: 2.8rem;
+  color: #4FC132;
+  padding-right: 3rem;
+  padding-top: 3rem;
+  text-align: center;
+  font-family: 'Anek Regular';
+  /* margin-left: 30%; */
+  
+ }
+ .line-break-res-left{
+  width: 70%;
+  margin-top: 1rem;
+  border: 1px solid yellow;
+  margin-left: 20%;
+ }
+ .insight-content-res-left{
+  font-size: 1.8rem;
+  padding-right: 1rem;
+  margin-top: 1rem;
+  font-family: 'Anek Regular';
+  color: #3D3D3D;
+  line-height: 1.4;
+  width: 200px;
+  margin-left: 10%;
+  text-align: center;
+ }
+ .health-container-res-cen{
+  text-align: center;
+  display: block;
+ }
+ .img-container-res-cen{
+  background-color: #4FC132;
+  width: 220px;
+  border-radius:  70px;
+  display: flex;
+  justify-content:center;
+  margin-left: 30%;
+ }
+ .micro-image-res-cen{
+  height: 90px;
+  max-height: 140px;
+ }
+ .head-health-res-cen{
+  font-size: 2.8rem;
+  color: #4FC132;
+  padding-top: 3rem;
+  text-align: start;
+  font-family: 'Anek Regular';
+  /* margin-left: 40%; */
+  text-align: center;
+ }
+ .line-break-res-cen{
+  width: 40%;
+  margin-top: 1rem;
+  border: 1px solid yellow;
+  margin-left: 33%;
+ }
+ .insight-content-res-cen{
+  font-size: 1.8rem;
+  /* padding-right: 4rem; */
+  margin-top: 1rem;
+  font-family: 'Anek Regular';
+  color: #3D3D3D;
+  line-height: 1.4;
+  width: 200px;
+  margin-left: 32%;
+  text-align: center;
+ 
+ }
+ .footer-head{
+  font-size: 2rem;
+ }
+ .footer-foot{
+  font-size: 2rem;
+ }
+ .banner-head{
+  font-size: 2rem;
+  width: 60%;
+  left: 20%;
+ }
+ 
+
+}
+
+@media only screen and (min-width:485px) and (max-width: 576px){
  .main-container{
    background-color: FEFEFE;
    overflow:hidden;
