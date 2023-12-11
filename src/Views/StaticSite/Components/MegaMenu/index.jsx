@@ -264,11 +264,11 @@ const MegaMenu = ({ setNav }) => {
                 <Link onClick={() => { setNav(false) }} to="/200-hrs-part-time-ttc-online">
                   <li>Batch 4 - 2 Months TTC-Online-Hindi</li>
                 </Link>
-                <Link onClick={() => { setNav(false) }} to="/200-hrs-part-time-ttc-online-english-batch-5">
+                {/* <Link onClick={() => { setNav(false) }} to="/200-hrs-part-time-ttc-online-english-batch-5">
                   <li>Batch 5 - 2 Months TTC-Online-English</li>
-                </Link>
+                </Link> */}
                 <Link onClick={() => { setNav(false) }} to="/weekend-teacher-training-course">
-                  <li>Batch 6 - 3 Months Weekend TTC-Online-English</li>
+                  <li>Batch 5 - 3 Months Weekend TTC-Online-English</li>
                 </Link>
 
                 <li className="text-bold">
