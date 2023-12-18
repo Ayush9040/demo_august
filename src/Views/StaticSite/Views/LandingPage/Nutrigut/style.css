@@ -709,7 +709,7 @@
 }
 }
 
- @media only screen and (min-width:361px) and (max-width: 420px){
+ @media only screen and (min-width:361px) and (max-width: 440px){
   
   .logo-nutrigut{
     width: 50%;
@@ -728,16 +728,18 @@
   }
   .head-content{
     left: 0%;
-    top: -40%;
+    top: -30%;
   }
   .first-order{
     font-size: 2.3rem;
+    margin-left: 1%;
   }
   .third-order{
     font-size: 3.4rem;
     font-weight: 800;
     color: #FCF050 ;
     text-shadow: -4px 4px 4px #4138091e;
+    margin-left: 1.5%;
   }
   .empty-bar{
     background-color: aliceblue;
@@ -748,7 +750,7 @@
     margin-top: 2%;  
   }
   .durations{
-    width: 54%;
+    width: 54.5%;
     float: right;
     margin-left: 1%;
   }
@@ -797,6 +799,7 @@
     margin-top: 6%;
     color: white;
    font-family: 'Anek ExtraLight';
+   margin-left: 1.5%;
   }
   .start-head{
     margin-top: 3%;
@@ -899,7 +902,7 @@
   
 }
 .micro-image-res-left{
-  margin-left: 2rem;
+  margin-left: 5rem;
   height: 70px;
   max-height: 140px;
 }
@@ -992,7 +995,7 @@
 
 }
 
-@media only screen and (min-width:421px) and (max-width:484px){
+@media only screen and (min-width:441px) and (max-width:484px){
   .main-container{
     background-color: FEFEFE;
     overflow:hidden;
