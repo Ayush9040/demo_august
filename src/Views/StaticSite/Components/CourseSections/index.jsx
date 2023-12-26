@@ -38,13 +38,14 @@ const CourseSection = ({
             text: '2 Months TTC Online – Hindi - Batch 4 ',
           },
           {
-            url: '/200-hrs-part-time-ttc-online-english-batch-5',
-            text: '2 Months TTC Online – English - Batch 5',
+            url: '/weekend-teacher-training-course',
+            text: '3 Months Weekend TTC Online – English - Batch 5',
           },
           {
-            url: '/weekend-teacher-training-course',
-            text: '3 Months Weekend TTC Online – English - Batch 6',
+            url: '/200-hrs-part-time-ttc-online-english-batch-6',
+            text: '2 Months TTC Online – English - Batch 6',
           },
+          // /200-hrs-part-time-ttc-online-english-batch-5
         ],
       },
       {
@@ -139,9 +140,9 @@ const CourseSection = ({
               Certificate Program on Yoga for Cancer – Online & On Campus
               </li>
             </Link>
-            <Link to="/restorative-yoga-for-cancer-survivors">
+            {/* <Link to="/restorative-yoga-for-cancer-survivors">
               <li  className="text-bold" >Restorative Yoga for Cancer Survivors - Online Program</li>
-            </Link>
+            </Link> */}
             <Link to="/certification-program-on-yoga-for-lung-cancer-online">
               <li className="text-bold" >
               Certificate Program on Yoga for Lung Cancer - Online
@@ -230,9 +231,9 @@ const CourseSection = ({
                 <Link to="/home-tuitions">
                   <li>Home Tuitions</li>
                 </Link>
-                <Link to="/kids-camp">
+                {/* <Link to="/kids-camp">
                   <li>Kids Yoga Summer Camp (On-Campus)</li>
-                </Link>
+                </Link> */}
                 <Link to="/stress-management-camp">
                   <li>Stress Management Camp - On Campus</li>
                 </Link>

@@ -1,7 +1,7 @@
 import { lazy } from 'react'
 import MaladPage from '../Components/LocateUs/malad'
 import IBYcourse from '../Views/IBY'
-import KidsCamp from '../Views/KidsCamps'
+// import KidsCamp from '../Views/KidsCamps'
 import NutriDietClinic from '../Views/LandingPage/NutriDietClinic/AboutClinic'
 import corporateWellness from '../Views/LandingPage/CorporateWellness'
 // import DonationForm from '../Components/DonationForm'
@@ -836,13 +836,13 @@ const staticSiteRoutes = [
     routePath: '/:contentId',
     name: 'singleCourse',
   },
-  {
-    Component:KidsCamp,
-    path:'/kids-camp',
-    id:'staticIYBcourse',
-    routePath:'/kids-camps',
-    name:'KidsCamp'
-  },
+  // {
+  //   Component:KidsCamp,
+  //   path:'/kids-camp',
+  //   id:'staticIYBcourse',
+  //   routePath:'/kids-camps',
+  //   name:'KidsCamp'
+  // },
   {
     Component:DonationForm,
     path:'/donation-form',

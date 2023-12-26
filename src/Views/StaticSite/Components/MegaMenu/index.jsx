@@ -264,11 +264,11 @@ const MegaMenu = ({ setNav }) => {
                 <Link onClick={() => { setNav(false) }} to="/200-hrs-part-time-ttc-online">
                   <li>Batch 4 - 2 Months TTC-Online-Hindi</li>
                 </Link>
-                {/* <Link onClick={() => { setNav(false) }} to="/200-hrs-part-time-ttc-online-english-batch-5">
-                  <li>Batch 5 - 2 Months TTC-Online-English</li>
-                </Link> */}
                 <Link onClick={() => { setNav(false) }} to="/weekend-teacher-training-course">
                   <li>Batch 5 - 3 Months Weekend TTC-Online-English</li>
+                </Link>
+                <Link onClick={() => { setNav(false) }} to="/200-hrs-part-time-ttc-online-english-batch-6">
+                  <li>Batch 6 - 2 Months TTC-Online-English</li>
                 </Link>
 
                 <li className="text-bold">
@@ -306,11 +306,11 @@ const MegaMenu = ({ setNav }) => {
                     Certificate Program on Yoga for Cancer
                   </li>
                 </Link>
-                <Link onClick={() => { setNav(false) }} to="/restorative-yoga-for-cancer-survivors">
+                {/* <Link onClick={() => { setNav(false) }} to="/restorative-yoga-for-cancer-survivors">
                   <li className="text-bold" >
                     Restorative Yoga for Cancer Survivors
                   </li>
-                </Link>
+                </Link> */}
                 <Link onClick={() => { setNav(false) }} to="/certification-program-on-yoga-for-lung-cancer-online">
                   <li className="text-bold" >
                     Certificate Program on Yoga for Lung Cancer - Online
@@ -432,8 +432,8 @@ const MegaMenu = ({ setNav }) => {
                 <h3 style={{ marginTop: '0.75rem' }} >CORPORATE WORKSHOP</h3></Link>
               <Link onClick={() => { setNav(false) }} to='/home-tuitions'>
                 <h3 style={{ marginTop: '0.75rem' }} >ONLINE HOME TUITIONS (YOGA TUITIONS)</h3></Link>
-              <Link onClick={() => { setNav(false) }} to='/kids-camp'>
-                <h3 style={{ marginTop: '0.75rem' }} >KIDS YOGA SUMMER CAMP (ON-CAMPUS)</h3></Link>
+              {/* <Link onClick={() => { setNav(false) }} to='/kids-camp'>
+                <h3 style={{ marginTop: '0.75rem' }} >KIDS YOGA SUMMER CAMP (ON-CAMPUS)</h3></Link> */}
               <div
                 className="filler"
                 style={{ position: 'relative', marginTop: '3rem' }}

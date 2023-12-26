@@ -1912,491 +1912,7 @@ const ttc200hr = {
     ],
     regsitraion: [],
     faq: [],
-  },
-  // 5: {
-  //   id: '',
-  //   textdescription6: '',
-  //   textdescription7: '',
-  //   textdescription8: '',
-  //   textdescription9: '',
-  //   textdescription10: '',
-  //   textdescription1: '',
-  //   textdescription2: '',
-  //   textdescription3: '',
-  //   textdescription4: '',
-  //   textdescription5: '',
-  //   key: '200-hrs-part-time-ttc-online-english-batch-5',
-  //   // templateId: 'COURSE200_2M_TTC',
-  //   templateId: {
-  //     templateOnline: 'COURSE200_2M_ONLINE_TTC_BATCH5',
-  //     templateOffline: {
-  //       templateResidential: '',
-  //       templateNonResidential: '',
-  //     },
-  //   },
-  //   batch: 5,
-  //   metaDescription:
-  //     'You will learn the tools to master your physical, mental and spiritual well-being. You will see a marked improvement in your life, relationships and work.',
-  //   image: `${baseDomain}${courseAssets.courseAsset38}`,
-  //   cardImage: `${baseDomain}${courseAssets.courseAsset101}`,
-  //   mostPopular: false,
-  //   rating: 5,
-  //   colorCode: '#E38F73',
-  //   timing: 'Monday to Saturday: 4:30 pm – 8:00 pm (IST)',
-  //   fees: {
-  //     onlineFee: 25000,
-  //     offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
-  //   },
-  //   category: 'ttc',
-  //   title: '200 Hours Yoga TTC - 2 Months Online Yoga Teacher Training Course - English - Batch 5',
-  //   dates: ['27th Nov to 20th Jan 2024'],
-  //   online: true,
-  //   onCampus: false,
-  //   nonResidential: false,
-  //   residential: false,
-  //   certficate: false,
-  //   details: [
-  //     {
-  //       type: 'paragraph',
-  //       content: {
-  //         title: '',
-  //         text: [
-  //           'With over 1,00,000 successfully certified students, the 200 Hours Online Yoga Teacher Training Course at The Yoga Institute covers the nuances of Traditional Yoga. This includes an introduction to the study of principal Yoga Asanas, Pranayamas, Meditation, Kriyas, Patanjali’s Yoga Sutra, and Hatha Yoga Pradipika. Further, complete immersion into practical experiences of the concept studies, public speaking, the methodology of teaching, etc. are covered. Strategically designed by the founder Shri Yogendraji, Smt. Sita Devi Yogendra, Dr. Jayadeva Yogendra, and Dr. Hansaji J Yogendra, the Online Teacher Training Course  serves as a valuable‘ life school’ to those seeking balance and fulfilment in life.'
-  //         ],
-  //       },
-  //     },
-  //     {
-  //       type: 'u-list',
-  //       content: {
-  //         title: 'Benefits of 200 Hours Online Yoga Teacher Training Course',
-  //         points: [
-  //           {
-  //             listItem:
-  //               'You will learn the tools to master your physical, mental and spiritual well-being. You will see a marked improvement in your life, relationships and work.',
-  //             subItems: [],
-  //           },
-  //           {
-  //             listItem:
-  //               'A new career avenue opens up for you where you can pass on the knowledge to others and facilitate their wellness journeys. The art of Yoga is something you can teach anywhere, no matter where you are.',
-  //             subItems: [],
-  //           },
-  //         ],
-  //       },
-  //     },
-  //     {
-  //       type: 'paragraph',
-  //       content: {
-  //         title: 'Course',
-  //         text: ['200 hrs Yoga TTC Batch 5 - 2 Months TTC Online - English'],
-  //       },
-  //     },
-  //     // {
-  //     //   type: 'paragraph',
-  //     //   content: {
-  //     //     title: 'Duration',
-  //     //     text: [],
-  //     //   },
-  //     // },
-  //     // {
-  //     //   type: 'paragraph',
-  //     //   content: {
-  //     //     title: 'Date',
-  //     //     text: [''],
-  //     //   },
-  //     // },
-  //     {
-  //       type: 'paragraph',
-  //       content: {
-  //         title: 'Timings',
-  //         text: ['Monday to Saturday: 4:30 pm – 8:00 pm (IST)'],
-  //       },
-  //     },
-  //     {
-  //       type: 'paragraph',
-  //       content: {
-  //         title: 'Fees',
-  //         text: ['Rs. 25,000/-'],
-  //       },
-  //     },
-  //     {
-  //       type: 'paragraph',
-  //       content: {
-  //         title: 'Prerequisites',
-  //         text: ['None'],
-  //       },
-  //     },
-  //   ],
-  //   curriculum: [
-  //     {
-  //       type: 'paragraph',
-  //       content: {
-  //         title: 'Online Yoga Teacher Training Course Curriculum',
-  //         text: [],
-  //       },
-  //     },
-  //     {
-  //       type: 'u-list',
-  //       content: {
-  //         title: 'A – KNOWLEDGE',
-  //         points: [
-  //           {
-  //             listItem: 'Introduction to Yoga and Yogic Practices.',
-  //             subItems: [],
-  //           },
-  //           {
-  //             listItem: 'Introduction to Hatha Yoga.',
-  //             subItems: [
-  //               'Introduction to important Hatha Yoga Texts with special reference to Hatha Yoga Pradipika.',
-  //             ],
-  //           },
-  //           {
-  //             listItem: 'Introduction to Patanjali Yoga Sutras.',
-  //             subItems: [],
-  //           },
-  //           {
-  //             listItem: 'Bhavas of the Buddhi – Basis of Yoga Education.',
-  //             subItems: [],
-  //           },
-  //           {
-  //             listItem: 'Introduction to Anatomy and Physiology.',
-  //             subItems: [],
-  //           },
-  //           {
-  //             listItem: 'Introduction to Human Systems, Yoga and Health',
-  //             subItems: [],
-  //           },
-  //           {
-  //             listItem:
-  //               'Yoga for wellness – prevention and promotion of positive health',
-  //             subItems: [],
-  //           },
-  //           {
-  //             listItem: 'Yoga and stress management.',
-  //             subItems: [],
-  //           },
-  //         ],
-  //       },
-  //     },
-  //     {
-  //       type: 'u-list',
-  //       content: {
-  //         title: 'B-SKILL',
-  //         points: [
-  //           {
-  //             listItem: 'Sahajbhava Asanas',
-  //             subItems: [],
-  //           },
-  //           {
-  //             listItem: 'Shat Karmas',
-  //             subItems: [],
-  //           },
-  //           {
-  //             listItem: 'Surya Namaskar (Sun Salutation)',
-  //             subItems: [],
-  //           },
-  //           {
-  //             listItem: 'Yoga Asanas',
-  //             subItems: [
-  //               'Knowledge of selected postures and demonstrated ability to perform these postures – meditative and cultural (dynamic and static versions).',
-  //               'Selected psychophysical and conceptual techniques pioneered by The Yoga Institute.',
-  //             ],
-  //           },
-  //           {
-  //             listItem: 'Pranayamas',
-  //             subItems: [
-  //               'Knowledge, teaching, and demonstrated ability to select Pranayamas.',
-  //             ],
-  //           },
-  //           {
-  //             listItem: 'Practices leading to Yoga Meditation',
-  //             subItems: [],
-  //           },
-  //           {
-  //             listItem: 'Communication and Teaching Practice',
-  //             subItems: [
-  //               'Understanding and practice of basic skills of public speaking.',
-  //               'Familiarity and demonstration ability to apply teaching methods.',
-  //               'Adapt the above to unique styles of learning.',
-  //               'Provide supportive and effective feedback.',
-  //               'Acknowledge the aspirant’s progress and ability to cope with difficulties.',
-  //             ],
-  //           },
-  //           {
-  //             listItem: 'Principles and skills for working with groups.',
-  //             subItems: [],
-  //           },
-  //         ],
-  //       },
-  //     },
-  //     {
-  //       type: 'url',
-  //       content: {
-  //         text: 'Access the detailed curriculum here:',
-  //         url: 'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/courses_pdf/200hr.pdf',
-  //       },
-  //     },
-  //     {
-  //       type: 'u-list',
-  //       content: {
-  //         title: 'Course Attendance Criteria',
-  //         points: [
-  //           {
-  //             listItem:
-  //               'A yoga student is required to have a minimum 80% attendance',
-  //             subItems: [],
-  //           },
-  //         ],
-  //       },
-  //     },
-  //     {
-  //       type: 'paragraph',
-  //       content: {
-  //         title: '',
-  //         text: [
-  //           'After qualifying the attendance criteria, students can appear for the exam (100 marks). Details below:',
-  //         ],
-  //       },
-  //     },
-  //     {
-  //       type: 'table',
-  //       content: {
-  //         title: '',
-  //         tableHeading: ['Details', 'Marks', 'Minimum Score Req.'],
-  //         tableData: [['Theory Component', '50', '50%']],
-  //       },
-  //     },
-  //     {
-  //       type: 'u-list',
-  //       content: {
-  //         title: 'On successfully passing the exam, students will be .',
-  //         points: [
-  //           {
-  //             listItem: 'Awarded a certificate – Basic Yoga Teacher Training Certificate (200 hours) by The Yoga Institute',
-  //             subItems: []
-  //           },
-  //           {
-  //             listItem: 'Qualified by Yoga Certification Board (AYUSH Level-1)',
-  //             subItems: []
-  //           },
-  //           {
-  //             listItem: 'Eligible to apply with Yoga Alliance USA (RYT 200)',
-  //             subItems: []
-  //           }
-  //         ]
-  //       },
-  //     },
-  //     {
-  //       type: 'u-list',
-  //       content: {
-  //         title:
-  //           'Post qualification, a number of opportunities are open to you, like:',
-  //         points: [
-  //           {
-  //             listItem: 'Working with schools and teaching children',
-  //             subItems: [],
-  //           },
-  //           {
-  //             listItem:
-  //               'Opening your own yoga center for healthy adults and children',
-  //             subItems: [],
-  //           },
-  //           {
-  //             listItem: 'Working with corporates for their wellness programs',
-  //             subItems: [],
-  //           },
-  //           {
-  //             listItem: 'Personal yoga coaching',
-  //             subItems: [],
-  //           },
-  //         ],
-  //       },
-  //     },
-  //     {
-  //       type: 'paragraph',
-  //       content: {
-  //         title: 'Exam Details',
-  //         text: [],
-  //       }
-  //     },
-  //     {
-  //       type: 'u-list',
-  //       content: {
-  //         title:
-  //           '',
-  //         points: [
-  //           {
-  //             listItem: 'Students will be eligible to appear for the Final certification exams only if they have completed all the required course submissions, class work and the required attendance',
-  //             subItems: [],
-  //           },
-  //           {
-  //             listItem:
-  //               'Students will have to appear for the final exams within 60 days from the course end date.',
-  //             subItems: [],
-  //           },
-  //           {
-  //             listItem: 'Students will be permitted a maximum of 3 attempts, to clear the final exams, failing which they will have to repeat the course.',
-  //             subItems: ['In the 2nd attempt, they will be exempted from either theory or practical’s, if they have cleared it in their 1st attempt.',
-  //               'They will have to appear for both in case of a 3rd attempt.'
-  //             ],
-  //           },
-  //           {
-  //             listItem: 'Examiners will evaluate students only as per the final approved list.',
-  //             subItems: [],
-  //           },
-
-
-  //         ],
-
-  //       },
-  //     },
-  //     {
-  //       type: 'u-list',
-  //       content: {
-  //         title: 'All Exams / tests will be conducted online.',
-  //         points: [
-  //           {
-  //             listItem: 'Students, after submission, can log out only with the explicit permission of the examiner.',
-  //             subItems: [
-  //               'For practical’s - students will have to wait till the exams of all students are completed.',
-  //               'The examiner may call out students at random and not necessarily in alphabetic order'
-  //             ],
-  //           },
-
-  //         ],
-  //       }
-  //     },
-  //     {
-  //       type: 'u-list',
-  //       content: {
-  //         title: 'Exam Schedule ',
-  //         points: [
-  //           {
-  //             listItem: 'Final exams will be conducted online on the 1st Sat and the 3rd Sat of each month or as announced (in case of exigencies), subject to a quorum of 8 students.',
-  //             subItems: [
-  //               'Theory exams will be conducted online at 5pm (IST)',
-  //               'Practical exams will be conducted at 3.30 pm (IST) / 6.30 pm (IST), subject to quorum.'
-  //             ],
-  //           },
-  //           {
-  //             listItem: 'A Mock test will be held 7 -14 days prior to the course end date, to familiarise students with the exam process.',
-  //             subItems: [
-
-  //             ],
-  //           },
-
-  //         ],
-  //       }
-  //     }
-  //   ],
-  //   teaching: [
-  //     {
-  //       type: 'u-list',
-  //       content: {
-  //         title: 'Course Attendance Criteria',
-  //         points: [
-  //           {
-  //             listItem:
-  //               'A student is required to have a minimum 80% attendance',
-  //             subItems: [],
-  //           },
-  //         ],
-  //       },
-  //     },
-  //     {
-  //       type: 'paragraph',
-  //       content: {
-  //         title: '',
-  //         text: [
-  //           'After qualifying the attendance criteria, students can appear for the exam (100 marks). Details below:',
-  //         ],
-  //       },
-  //     },
-  //     {
-  //       type: 'table',
-  //       content: {
-  //         title: '',
-  //         tableHeading: ['Details', 'Marks', 'Minimum Score Req.'],
-  //         tableData: [['Theory Component', '50', '50%']],
-  //       },
-  //     },
-  //     {
-  //       type: 'paragraph',
-  //       content: {
-  //         title: '',
-  //         text: [
-  //           'On successfully passing the exam, students will be awarded a certificate – Basic Teacher Training Certificate (200 hours) by The Yoga Institute, which is recognized by Yoga Certification Board (AYUSH Level-1) and Yoga Alliance USA (RYT 200).',
-  //         ],
-  //       },
-  //     },
-  //     {
-  //       type: 'u-list',
-  //       content: {
-  //         title:
-  //           'Post qualification, a number of opportunities are open to you, like:',
-  //         points: [
-  //           {
-  //             listItem: 'Working with schools and teaching children',
-  //             subItems: [],
-  //           },
-  //           {
-  //             listItem:
-  //               'Opening your own yoga center for healthy adults and children',
-  //             subItems: [],
-  //           },
-  //           {
-  //             listItem: 'Working with corporates for their wellness programs',
-  //             subItems: [],
-  //           },
-  //           {
-  //             listItem: 'Personal yoga coaching',
-  //             subItems: [],
-  //           },
-  //         ],
-  //       },
-  //     },
-  //   ],
-  //   offerings: [
-  //     {
-  //       type: 'u-list',
-  //       content: {
-  //         title: '',
-  //         points: [
-  //           {
-  //             listItem:
-  //               'You will have an opportunity to directly interact with spiritual Guru Dr. Hansaji Yogendra. She is available to attend to your queries and give counsel.',
-  //             subItems: [],
-  //           },
-  //           {
-  //             listItem:
-  //               'Our expert trainers for the TTC Course, over 40 in number, have mastered the yogic way of life and are proficient in passing on their learnings in a simple and practical way. Armed with decades of experience, they offer tremendous value and insight to new learners.',
-  //             subItems: [],
-  //           },
-  //           {
-  //             listItem:
-  //               'Apart from the main yoga curriculum, you will learn immensely from the class experience itself. You will meet people with diverse backgrounds and experiences that you can gain insights from. There will be sadhakas of all age groups – right from teenagers to senior citizens. Every person has had a unique experience in life and it will be enriching to know all these stories.',
-  //             subItems: [],
-  //           },
-  //           {
-  //             listItem:
-  //               'This one-of-a-kind experience will groom you to calmly and mindfully handle people and situations',
-  //             subItems: [],
-  //           },
-  //         ],
-  //       },
-  //     },
-  //     {
-  //       type: 'quote',
-  //       content: {
-  //         title: '',
-  //         text: [
-  //           'This is an exclusive experience, and the wisdom you gain here will guide you all your life!',
-  //         ],
-  //       },
-  //     },
-  //   ],
-  //   regsitraion: [],
-  //   faq: [],
-  // },
+  },  
   5: {
     id: '',
     textdescription6: '',
@@ -2861,6 +2377,490 @@ const ttc200hr = {
             {
               listItem:
                 'Our expert trainers for the ttc course, over 40 in number, have mastered the yogic way of life and are proficient in passing on their learnings in a simple and practical way. Armed with decades of experience, they offer tremendous value and insight to new learners.',
+              subItems: [],
+            },
+            {
+              listItem:
+                'Apart from the main yoga curriculum, you will learn immensely from the class experience itself. You will meet people with diverse backgrounds and experiences that you can gain insights from. There will be sadhakas of all age groups – right from teenagers to senior citizens. Every person has had a unique experience in life and it will be enriching to know all these stories.',
+              subItems: [],
+            },
+            {
+              listItem:
+                'This one-of-a-kind experience will groom you to calmly and mindfully handle people and situations',
+              subItems: [],
+            },
+          ],
+        },
+      },
+      {
+        type: 'quote',
+        content: {
+          title: '',
+          text: [
+            'This is an exclusive experience, and the wisdom you gain here will guide you all your life!',
+          ],
+        },
+      },
+    ],
+    regsitraion: [],
+    faq: [],
+  },
+  6: {
+    id: '',
+    textdescription6: '',
+    textdescription7: '',
+    textdescription8: '',
+    textdescription9: '',
+    textdescription10: '',
+    textdescription1: '',
+    textdescription2: '',
+    textdescription3: '',
+    textdescription4: '',
+    textdescription5: '',
+    key: '200-hrs-part-time-ttc-online-english-batch-6',
+    // templateId: 'COURSE200_2M_TTC',
+    templateId: {
+      templateOnline: 'COURSE200_2M_ONLINE_TTC_BATCH5',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: '',
+      },
+    },
+    batch: 5,
+    metaDescription:
+      'You will learn the tools to master your physical, mental and spiritual well-being. You will see a marked improvement in your life, relationships and work.',
+    image: `${baseDomain}${courseAssets.courseAsset38}`,
+    cardImage: `${baseDomain}${courseAssets.courseAsset101}`,
+    mostPopular: false,
+    rating: 5,
+    colorCode: '#E38F73',
+    timing: 'Monday to Saturday: 4:30 pm – 8:00 pm (IST)',
+    fees: {
+      onlineFee: 25000,
+      offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
+    },
+    category: 'ttc',
+    title: '200 Hours Yoga TTC - 2 Months Online Yoga Teacher Training Course - English - Batch 6 ',
+    dates: ['27th Nov to 20th Jan 2024'],
+    online: true,
+    onCampus: false,
+    nonResidential: false,
+    residential: false,
+    certficate: false,
+    details: [
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: [
+            'With over 1,00,000 successfully certified students, the 200 Hours Online Yoga Teacher Training Course at The Yoga Institute covers the nuances of Traditional Yoga. This includes an introduction to the study of principal Yoga Asanas, Pranayamas, Meditation, Kriyas, Patanjali’s Yoga Sutra, and Hatha Yoga Pradipika. Further, complete immersion into practical experiences of the concept studies, public speaking, the methodology of teaching, etc. are covered. Strategically designed by the founder Shri Yogendraji, Smt. Sita Devi Yogendra, Dr. Jayadeva Yogendra, and Dr. Hansaji J Yogendra, the Online Teacher Training Course  serves as a valuable‘ life school’ to those seeking balance and fulfilment in life.'
+          ],
+        },
+      },
+      {
+        type: 'u-list',
+        content: {
+          title: 'Benefits of 200 Hours Online Yoga Teacher Training Course',
+          points: [
+            {
+              listItem:
+                'You will learn the tools to master your physical, mental and spiritual well-being. You will see a marked improvement in your life, relationships and work.',
+              subItems: [],
+            },
+            {
+              listItem:
+                'A new career avenue opens up for you where you can pass on the knowledge to others and facilitate their wellness journeys. The art of Yoga is something you can teach anywhere, no matter where you are.',
+              subItems: [],
+            },
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Course',
+          text: ['200 hrs Yoga TTC Batch 6 - 2 Months TTC Online - English'],
+        },
+      },
+      // {
+      //   type: 'paragraph',
+      //   content: {
+      //     title: 'Duration',
+      //     text: [],
+      //   },
+      // },
+      // {
+      //   type: 'paragraph',
+      //   content: {
+      //     title: 'Date',
+      //     text: [''],
+      //   },
+      // },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Timings',
+          text: ['Monday to Saturday: 4:30 pm – 8:00 pm (IST)'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Fees',
+          text: ['Rs. 25,000/-'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Prerequisites',
+          text: ['None'],
+        },
+      },
+    ],
+    curriculum: [
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Online Yoga Teacher Training Course Curriculum',
+          text: [],
+        },
+      },
+      {
+        type: 'u-list',
+        content: {
+          title: 'A – KNOWLEDGE',
+          points: [
+            {
+              listItem: 'Introduction to Yoga and Yogic Practices.',
+              subItems: [],
+            },
+            {
+              listItem: 'Introduction to Hatha Yoga.',
+              subItems: [
+                'Introduction to important Hatha Yoga Texts with special reference to Hatha Yoga Pradipika.',
+              ],
+            },
+            {
+              listItem: 'Introduction to Patanjali Yoga Sutras.',
+              subItems: [],
+            },
+            {
+              listItem: 'Bhavas of the Buddhi – Basis of Yoga Education.',
+              subItems: [],
+            },
+            {
+              listItem: 'Introduction to Anatomy and Physiology.',
+              subItems: [],
+            },
+            {
+              listItem: 'Introduction to Human Systems, Yoga and Health',
+              subItems: [],
+            },
+            {
+              listItem:
+                'Yoga for wellness – prevention and promotion of positive health',
+              subItems: [],
+            },
+            {
+              listItem: 'Yoga and stress management.',
+              subItems: [],
+            },
+          ],
+        },
+      },
+      {
+        type: 'u-list',
+        content: {
+          title: 'B-SKILL',
+          points: [
+            {
+              listItem: 'Sahajbhava Asanas',
+              subItems: [],
+            },
+            {
+              listItem: 'Shat Karmas',
+              subItems: [],
+            },
+            {
+              listItem: 'Surya Namaskar (Sun Salutation)',
+              subItems: [],
+            },
+            {
+              listItem: 'Yoga Asanas',
+              subItems: [
+                'Knowledge of selected postures and demonstrated ability to perform these postures – meditative and cultural (dynamic and static versions).',
+                'Selected psychophysical and conceptual techniques pioneered by The Yoga Institute.',
+              ],
+            },
+            {
+              listItem: 'Pranayamas',
+              subItems: [
+                'Knowledge, teaching, and demonstrated ability to select Pranayamas.',
+              ],
+            },
+            {
+              listItem: 'Practices leading to Yoga Meditation',
+              subItems: [],
+            },
+            {
+              listItem: 'Communication and Teaching Practice',
+              subItems: [
+                'Understanding and practice of basic skills of public speaking.',
+                'Familiarity and demonstration ability to apply teaching methods.',
+                'Adapt the above to unique styles of learning.',
+                'Provide supportive and effective feedback.',
+                'Acknowledge the aspirant’s progress and ability to cope with difficulties.',
+              ],
+            },
+            {
+              listItem: 'Principles and skills for working with groups.',
+              subItems: [],
+            },
+          ],
+        },
+      },
+      {
+        type: 'url',
+        content: {
+          text: 'Access the detailed curriculum here:',
+          url: 'https://ecom-static-site.oss-ap-south-1.aliyuncs.com/courses_pdf/200hr.pdf',
+        },
+      },
+      {
+        type: 'u-list',
+        content: {
+          title: 'Course Attendance Criteria',
+          points: [
+            {
+              listItem:
+                'A yoga student is required to have a minimum 80% attendance',
+              subItems: [],
+            },
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: [
+            'After qualifying the attendance criteria, students can appear for the exam (100 marks). Details below:',
+          ],
+        },
+      },
+      {
+        type: 'table',
+        content: {
+          title: '',
+          tableHeading: ['Details', 'Marks', 'Minimum Score Req.'],
+          tableData: [['Theory Component', '50', '50%']],
+        },
+      },
+      {
+        type: 'u-list',
+        content: {
+          title: 'On successfully passing the exam, students will be .',
+          points: [
+            {
+              listItem: 'Awarded a certificate – Basic Yoga Teacher Training Certificate (200 hours) by The Yoga Institute',
+              subItems: []
+            },
+            {
+              listItem: 'Qualified by Yoga Certification Board (AYUSH Level-1)',
+              subItems: []
+            },
+            {
+              listItem: 'Eligible to apply with Yoga Alliance USA (RYT 200)',
+              subItems: []
+            }
+          ]
+        },
+      },
+      {
+        type: 'u-list',
+        content: {
+          title:
+            'Post qualification, a number of opportunities are open to you, like:',
+          points: [
+            {
+              listItem: 'Working with schools and teaching children',
+              subItems: [],
+            },
+            {
+              listItem:
+                'Opening your own yoga center for healthy adults and children',
+              subItems: [],
+            },
+            {
+              listItem: 'Working with corporates for their wellness programs',
+              subItems: [],
+            },
+            {
+              listItem: 'Personal yoga coaching',
+              subItems: [],
+            },
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Exam Details',
+          text: [],
+        }
+      },
+      {
+        type: 'u-list',
+        content: {
+          title:
+            '',
+          points: [
+            {
+              listItem: 'Students will be eligible to appear for the Final certification exams only if they have completed all the required course submissions, class work and the required attendance',
+              subItems: [],
+            },
+            {
+              listItem:
+                'Students will have to appear for the final exams within 60 days from the course end date.',
+              subItems: [],
+            },
+            {
+              listItem: 'Students will be permitted a maximum of 3 attempts, to clear the final exams, failing which they will have to repeat the course.',
+              subItems: ['In the 2nd attempt, they will be exempted from either theory or practical’s, if they have cleared it in their 1st attempt.',
+                'They will have to appear for both in case of a 3rd attempt.'
+              ],
+            },
+            {
+              listItem: 'Examiners will evaluate students only as per the final approved list.',
+              subItems: [],
+            },
+
+
+          ],
+
+        },
+      },
+      {
+        type: 'u-list',
+        content: {
+          title: 'All Exams / tests will be conducted online.',
+          points: [
+            {
+              listItem: 'Students, after submission, can log out only with the explicit permission of the examiner.',
+              subItems: [
+                'For practical’s - students will have to wait till the exams of all students are completed.',
+                'The examiner may call out students at random and not necessarily in alphabetic order'
+              ],
+            },
+
+          ],
+        }
+      },
+      {
+        type: 'u-list',
+        content: {
+          title: 'Exam Schedule ',
+          points: [
+            {
+              listItem: 'Final exams will be conducted online on the 1st Sat and the 3rd Sat of each month or as announced (in case of exigencies), subject to a quorum of 8 students.',
+              subItems: [
+                'Theory exams will be conducted online at 5pm (IST)',
+                'Practical exams will be conducted at 3.30 pm (IST) / 6.30 pm (IST), subject to quorum.'
+              ],
+            },
+            {
+              listItem: 'A Mock test will be held 7 -14 days prior to the course end date, to familiarise students with the exam process.',
+              subItems: [
+
+              ],
+            },
+
+          ],
+        }
+      }
+    ],
+    teaching: [
+      {
+        type: 'u-list',
+        content: {
+          title: 'Course Attendance Criteria',
+          points: [
+            {
+              listItem:
+                'A student is required to have a minimum 80% attendance',
+              subItems: [],
+            },
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: [
+            'After qualifying the attendance criteria, students can appear for the exam (100 marks). Details below:',
+          ],
+        },
+      },
+      {
+        type: 'table',
+        content: {
+          title: '',
+          tableHeading: ['Details', 'Marks', 'Minimum Score Req.'],
+          tableData: [['Theory Component', '50', '50%']],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: [
+            'On successfully passing the exam, students will be awarded a certificate – Basic Teacher Training Certificate (200 hours) by The Yoga Institute, which is recognized by Yoga Certification Board (AYUSH Level-1) and Yoga Alliance USA (RYT 200).',
+          ],
+        },
+      },
+      {
+        type: 'u-list',
+        content: {
+          title:
+            'Post qualification, a number of opportunities are open to you, like:',
+          points: [
+            {
+              listItem: 'Working with schools and teaching children',
+              subItems: [],
+            },
+            {
+              listItem:
+                'Opening your own yoga center for healthy adults and children',
+              subItems: [],
+            },
+            {
+              listItem: 'Working with corporates for their wellness programs',
+              subItems: [],
+            },
+            {
+              listItem: 'Personal yoga coaching',
+              subItems: [],
+            },
+          ],
+        },
+      },
+    ],
+    offerings: [
+      {
+        type: 'u-list',
+        content: {
+          title: '',
+          points: [
+            {
+              listItem:
+                'You will have an opportunity to directly interact with spiritual Guru Dr. Hansaji Yogendra. She is available to attend to your queries and give counsel.',
+              subItems: [],
+            },
+            {
+              listItem:
+                'Our expert trainers for the TTC Course, over 40 in number, have mastered the yogic way of life and are proficient in passing on their learnings in a simple and practical way. Armed with decades of experience, they offer tremendous value and insight to new learners.',
               subItems: [],
             },
             {
@@ -11675,7 +11675,7 @@ const classes = {
     colorCode: '#C48E8C',
     timing: '4:00 pm -5:00 pm (Mon, Tues, Thurs, Fri)',
     fees: {
-      onlineFee: 1000,
+      onlineFee: 1100,
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'classes',
@@ -11706,7 +11706,7 @@ const classes = {
         type: 'paragraph',
         content: {
           title: 'Fees',
-          text: [' Rs 1000 per month'],
+          text: [' Rs 1100 per month'],
         },
       },
 
@@ -11761,7 +11761,7 @@ const classes = {
     join: true,
     timing: 'Saturday & Sunday: 8:00 am - 9:30 am (IST) *',
     fees: {
-      onlineFee: 1000,
+      onlineFee: 1100,
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'classes',
@@ -11795,7 +11795,7 @@ const classes = {
         type: 'paragraph',
         content: {
           title: 'Fees',
-          text: [' Rs 1000 per month'],
+          text: [' Rs 1100 per month'],
         },
       },
       {
