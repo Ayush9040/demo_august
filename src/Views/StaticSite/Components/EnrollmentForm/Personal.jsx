@@ -184,12 +184,7 @@ const Personal = ({
                   })
                 }}
               />
-              {/* {empty === 6 && (
-                <small>
-                  {' '}
-                  Please enter your state
-                </small>
-              )} */}
+              
             </div>
             <div className="form_error">
               <Select
