@@ -2436,12 +2436,12 @@ const ttc200hr = {
     colorCode: '#E38F73',
     timing: 'Monday to Saturday: 4:30 pm – 8:00 pm (IST)',
     fees: {
-      onlineFee: 25000,
+      onlineFee: 27500,
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'ttc',
     title: '200 Hours Yoga TTC - 2 Months Online Yoga Teacher Training Course - English - Batch 6 ',
-    dates: ['27th Nov to 20th Jan 2024'],
+    dates: ['19th Feb to 13th April 2024'],
     online: true,
     onCampus: false,
     nonResidential: false,
@@ -2507,7 +2507,7 @@ const ttc200hr = {
         type: 'paragraph',
         content: {
           title: 'Fees',
-          text: ['Rs. 25,000/-'],
+          text: ['Rs. 27,500/-'],
         },
       },
       {

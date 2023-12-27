@@ -127,7 +127,7 @@ const Personal = ({
                 keyName="address1"
                 errorCheck={setEmpty}
               />
-              {empty === 4 && <small> Please enter your address</small>}
+              {empty === 4 && <small> Please enter your address</small> }
             </div>
             <div className="form_error">
               <InputComponent
@@ -140,7 +140,7 @@ const Personal = ({
               />
             </div>
             <div className="form_error">
-              <Select
+              <Select 
                 styles={customStyles}
                 id="country"
                 name="country"
@@ -160,7 +160,7 @@ const Personal = ({
                   })
                 }}
               />
-              {empty === 5 && <small>Please enter your country</small>}
+              {empty === 5 && <p>Please enter your country</p>}
             </div>
             <div className="form_error">
               <Select

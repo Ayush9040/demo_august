@@ -7,11 +7,7 @@ import { validateEmail } from '../../../../helpers'
 import { Link, useSearchParams } from 'react-router-dom'
 import DisclaimerPolicy from '../DisclaimerPolicy'
 import { useSelector } from 'react-redux'
-// import Other from './Other'
-// import CourseDetails from './CourseDetails'
-// import Academic from './Academic'
 import Personal from './Personal'
-// import Work from './Work'
 import { legacy2 } from '../../assets/icons/icon'
 
 const Enrollment = () => {
@@ -20,7 +16,6 @@ const Enrollment = () => {
   const [currentCourse, setCurrentCourse] = useState({})
   const [courseDate, setCourseDate] = useState(null)
   const [Params] = useSearchParams()
-  //const [date, setDate] = useState('')
 
   useEffect(() => {
     setCurrentCourse(AllCourses.find((item) => item.key === courseId))
@@ -30,8 +25,6 @@ const Enrollment = () => {
     //   today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate()
     // )
   }, [])
-
-  // var today = new Date()
 
   const [empty, setEmpty] = useState(0)
   const [courseFee, setCourseFee] = useState(null)
@@ -73,36 +66,36 @@ const Enrollment = () => {
 
   const handleEmpty1 = (e) => {
     e.preventDefault()
-    if (
-      formData.name === '' ||
-      formData.name === undefined ||
-      formData.name === null
-    ) {
-      return setEmpty(1)
-    } else if (
-      formData.phone === '' ||
-      formData.phone.length < 6 ||
-      formData.phone.length > 15
-    ) {
-      return setEmpty(3)
-    } else if (!validateEmail(formData.email)) {
-      return setEmpty(2)
-    } else if (formData.address1 === '') {
-      return setEmpty(4)
-    } else if (formData.country === '') {
-      return setEmpty(5)
-    } else if (formData.pincode === '') {
-      return setEmpty(8)
-    } else if (formData.AGE === null || formData.AGE < 4 || formData.AGE > 99) {
-      return setEmpty(9)
-    } else if (formData.nationality === '') {
-      return setEmpty(10)
-    } else if (formData.gender === '') {
-      return setEmpty(11)
-    } else {
-      setEmpty(0)
-      setBold(4)
-    }
+    // if (
+    //   formData.name === '' ||
+    //   formData.name === undefined ||
+    //   formData.name === null
+    // ) {
+    //   return setEmpty(1)
+    // } else if (
+    //   formData.phone === '' ||
+    //   formData.phone.length < 6 ||
+    //   formData.phone.length > 15
+    // ) {
+    //   return setEmpty(3)
+    // } else if (!validateEmail(formData.email)) {
+    //   return setEmpty(2)
+    // } else if (formData.address1 === '') {
+    //   return setEmpty(4)
+    // } else if (formData.country === '') {
+    //   return setEmpty(5)
+    // } else if (formData.pincode === '') {
+    //   return setEmpty(8)
+    // } else if (formData.AGE === null || formData.AGE < 4 || formData.AGE > 99) {
+    //   return setEmpty(9)
+    // } else if (formData.nationality === '') {
+    //   return setEmpty(10)
+    // } else if (formData.gender === '') {
+    //   return setEmpty(11)
+    // } else {
+    //   setEmpty(0)
+    //   setBold(4)
+    // }
   }
   
   const handleSubmit = () => {
@@ -122,7 +115,7 @@ const Enrollment = () => {
       setEmpty(2)
     } else if (formData.address1 === '') {
       setEmpty(4)
-    } else if (formData.country === '') {
+    } else if (formData.country === '' ) {
       setEmpty(5)
     } else if (formData.pincode === '') {
       setEmpty(8)
