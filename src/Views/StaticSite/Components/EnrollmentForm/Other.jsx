@@ -7,10 +7,11 @@ const Other = ({ empty, formData, setFormData }) => {
       <div className="other-section-half">
         <div className="medical-section">
           <p className="medical-label">
-            Medical History & Current Health Issues :
+            {/* Medical History & Current Health Issues : */}
           </p>
           <textarea
             className="text_box"
+            placeholder='Medical History & Current Health Issues '
             type="text"
             rows="5"
             cols="30"

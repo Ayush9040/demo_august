@@ -276,7 +276,7 @@ const Personal = ({
             <div className="DOB_box form_error">
               <InputComponent
                 type="number"
-                placeholder="Age*"
+                placeholder="Age"
                 minnum="4"
                 maxnum="99"
                 form={formData}
@@ -289,7 +289,7 @@ const Personal = ({
             <div className="form_error">
               <InputComponent
                 type="text"
-                placeholder="Nationality*"
+                placeholder="Nationality"
                 form={formData}
                 setField={setFormData}
                 keyName="nationality"
@@ -297,6 +297,14 @@ const Personal = ({
               />
               {empty === 10 && <small> Please enter your nationality</small>}
             </div>
+            <Other
+              // setBold={setBold}
+              empty={empty}
+              formData={formData}
+              setFormData={setFormData}
+              // handleEmpty4={handleEmpty4}
+            />
+            
           </form>
         </div>
         <div className="right_grid">
@@ -318,13 +326,7 @@ const Personal = ({
                 }}
               />
             </div> */}
-            <Other
-              // setBold={setBold}
-              empty={empty}
-              formData={formData}
-              setFormData={setFormData}
-              // handleEmpty4={handleEmpty4}
-            />
+            
             <CourseDetails
               courseDate={courseDate}
               currentCourse={currentCourse}
@@ -343,14 +345,16 @@ const Personal = ({
               uploadCheck={uploadCheck}
               setUploadCheck={setUploadCheck}
             />
+
           </form>
+          <div className="button_box">
+            <button className="next_button" onClick={handleSubmit}>
+            Next
+            </button>
+          </div>
         </div>
       </div>
-      <div className="button_box">
-        <button className="next_button" onClick={handleSubmit}>
-          Next
-        </button>
-      </div>
+      
     </div>
   )
 }

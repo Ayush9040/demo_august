@@ -119,11 +119,13 @@ const Enrollment = () => {
       setEmpty(5)
     } else if (formData.pincode === '') {
       setEmpty(8)
-    } else if (formData.AGE === null || formData.AGE < 4 || formData.AGE > 99) {
-      setEmpty(9)
-    } else if (formData.nationality === '') {
-      setEmpty(10)
-    } else if (formData.gender === '') {
+    }
+    //  else if (formData.AGE === null || formData.AGE < 4 || formData.AGE > 99) {
+    //   setEmpty(9)
+    // } else if (formData.nationality === '') {
+    //   setEmpty(10)
+    // }
+    else if (formData.gender === '') {
       setEmpty(11)
     } else if (formData.mode === '') {
       setEmpty('mode')
