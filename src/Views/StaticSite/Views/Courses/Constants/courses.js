@@ -11184,7 +11184,7 @@ const classes = {
     timing:
       'Regular Asana Classes is conducted 4 days in a week. ',
     fees: {
-      onlineFee: 1000,
+      onlineFee: 1100,
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'classes',
@@ -11337,21 +11337,21 @@ const classes = {
         type: 'paragraph',
         content: {
           title: 'Monthly Fees',
-          text: ['Rs. 1000/-'],
+          text: ['Rs. 1100/-'],
         },
       },
       {
         type: 'paragraph',
         content: {
           title: 'Six Months Fees',
-          text: ['Rs. 6000/-'],
+          text: ['Rs. 6600/-'],
         },
       },
       {
         type: 'paragraph',
         content: {
           title: 'Annual Fees',
-          text: ['Rs. 10000/-'],
+          text: ['Rs. 11000/-'],
         },
       },
       {
@@ -11419,7 +11419,7 @@ const classes = {
     timing:
       'Monday,Tuesday,Thursday,Friday * :6:30 am to 7:30 am, 7:30 am to 8:30 am, 1:00 pm to 2:00 pm, 6:00 pm to 7:00 pm, 7:00 pm to 8:00 pm',
     fees: {
-      onlineFee: 1000,
+      onlineFee: 1100,
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'classes',
@@ -11479,21 +11479,21 @@ const classes = {
         type: 'paragraph',
         content: {
           title: 'Monthly Fees',
-          text: ['Rs. 1000/-'],
+          text: ['Rs. 1100/-'],
         },
       },
       {
         type: 'paragraph',
         content: {
           title: 'Six Months Fees',
-          text: ['Rs. 6000/-'],
+          text: ['Rs. 6600/-'],
         },
       },
       {
         type: 'paragraph',
         content: {
           title: 'Annual Fees',
-          text: ['Rs. 10000/-'],
+          text: ['Rs. 11000/-'],
         },
       },
       {
@@ -11539,7 +11539,7 @@ const classes = {
     timing:
       'Monday,Tuesday,Thursday,Friday * :6:30 am to 7:30 am, 7:30 am to 8:30 am,8:30 am to 9:30 am, 9:30 am to 10:30 am, 10:30 am to 11:30 am, 11:30 am to 12:30 pm, 1:00 pm to 2:00 pm, 2:00 pm to 3:00 pm, 3:00 pm to 4:00 pm, 4:00 pm to 5:00 pm, 5:00 pm to 6:00 pm, 6:00 pm to 7:00 pm, 7:00 pm to 8:00 pm',
     fees: {
-      onlineFee: 1000,
+      onlineFee: 1100,
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'classes',
@@ -11616,21 +11616,21 @@ const classes = {
         type: 'paragraph',
         content: {
           title: 'Monthly Fees',
-          text: ['Rs. 1000/-'],
+          text: ['Rs. 1100/-'],
         },
       },
       {
         type: 'paragraph',
         content: {
           title: 'Six Months Fees',
-          text: ['Rs. 6000/-'],
+          text: ['Rs. 6600/-'],
         },
       },
       {
         type: 'paragraph',
         content: {
           title: 'Annual Fees',
-          text: ['Rs. 10000/-'],
+          text: ['Rs. 11000/-'],
         },
       },
       {
@@ -11957,7 +11957,7 @@ const classes = {
     timing:
       'Tuesday, Thursday & Saturday: 7:00 am - 7:45 am (IST) *',
     fees: {
-      onlineFee: 1000,
+      onlineFee: 1100,
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'classes',
@@ -12006,7 +12006,7 @@ const classes = {
         type: 'paragraph',
         content: {
           title: 'Fees',
-          text: [' Rs 1000/- '],
+          text: [' Rs 1100/- '],
         },
       },
       {
@@ -12275,21 +12275,21 @@ const classes = {
         type: 'paragraph',
         content: {
           title: 'Monthly Fees',
-          text: ['Rs. 1000/-'],
+          text: ['Rs. 1100/-'],
         },
       },
       {
         type: 'paragraph',
         content: {
           title: 'Six Months Fees',
-          text: ['Rs. 6000/-'],
+          text: ['Rs. 6600/-'],
         },
       },
       {
         type: 'paragraph',
         content: {
           title: 'Annual Fees',
-          text: ['Rs. 10000/-'],
+          text: ['Rs. 11000/-'],
         },
       },
 
@@ -12791,7 +12791,7 @@ const classes = {
     colorCode: '#C48E8C',
     timing: 'Saturday & Sunday: 7:30 am - 9:00 am  (IST)',
     fees: {
-      onlineFee: 1000,
+      onlineFee: 1100,
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'classes',
@@ -12847,21 +12847,21 @@ const classes = {
         type: 'paragraph',
         content: {
           title: 'Monthly Fees',
-          text: ['Rs. 1000/-'],
+          text: ['Rs. 1100/-'],
         },
       },
       {
         type: 'paragraph',
         content: {
           title: 'Six Months Fees',
-          text: ['Rs. 6000/-'],
+          text: ['Rs. 6600/-'],
         },
       },
       {
         type: 'paragraph',
         content: {
           title: 'Annual Fees',
-          text: ['Rs. 10000/-'],
+          text: ['Rs. 11000/-'],
         },
       },
 
