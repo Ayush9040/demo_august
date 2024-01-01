@@ -47,10 +47,6 @@
                 "objectsInObjects": true
             }
         ],
-        "react/no-unknown-property": 0,
-        // "object-curly-newline": ["error", {
-        //     "minProperties": true
-        // }],
         "max-len": ["error", {
                 "code": 13000,
                 "tabWidth": 2

@@ -31,7 +31,7 @@ const Yogasattva = () => {
   }
 
   useEffect(() => {
-    getByYearYogsattvaData(2023)
+    getByYearYogsattvaData(2024)
   }, [])
 
 
@@ -343,17 +343,17 @@ const Yogasattva = () => {
   //   ]
   // }
 
-  const [bold, setBold] = useState(7)
+  const [bold, setBold] = useState(8)
 
   const nextHandler = () => {
     if (yearValue === 2017) {
-      setYearValue(2023)
+      setYearValue(2024)
     } else {
       setYearValue(yearValue - 1)
     }
     getByYearYogsattvaData(yearValue)
     if (bold === 1) {
-      setBold(7)
+      setBold(8)
     } else {
       setBold(bold - 1)
     }
