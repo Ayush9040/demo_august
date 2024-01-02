@@ -46,197 +46,197 @@ const CourseDetails = ({
   }
 
 
-  const updatedFees = (course, mode) => {
-    switch (course) {
-    case 'certificate-program-on-yoga-for-cancer':
-      if (courseDate === '24th Nov 2023 to 30th Dec 2023') {
-        if (mode === 'ONLINE') return 20000
-      } else {
-        if (mode === 'ONLINE') return currentCourse.fees.onlineFee
-      }
-      break
+  // const updatedFees = (course, mode) => {
+  //   switch (course) {
+  //   case 'certificate-program-on-yoga-for-cancer':
+  //     if (courseDate === '24th Nov 2023 to 30th Dec 2023') {
+  //       if (mode === 'ONLINE') return 20000
+  //     } else {
+  //       if (mode === 'ONLINE') return currentCourse.fees.onlineFee
+  //     }
+  //     break
 
-    case 'two-year-ttc':
-      if (courseDate === '2nd Dec 2023') {
-        if (mode === 'ONLINE') return 55000
-        if (mode === 'RESIDENTIAL') return 55000
-        if (mode === 'NONRESIDENTIAL') return 55000
-      } else {
-        if (mode === 'ONLINE') return currentCourse.fees.onlineFee
-        if (mode === 'NONRESIDENTIAL')
-          return currentCourse.fees.offlineFee.nonResidentialFee
-        if (mode === 'RESIDENTIAL')
-          return currentCourse.fees.offlineFee.residentialFee
-      }
-      break
+  //   case 'two-year-ttc':
+  //     if (courseDate === '2nd Dec 2023') {
+  //       if (mode === 'ONLINE') return 55000
+  //       if (mode === 'RESIDENTIAL') return 55000
+  //       if (mode === 'NONRESIDENTIAL') return 55000
+  //     } else {
+  //       if (mode === 'ONLINE') return currentCourse.fees.onlineFee
+  //       if (mode === 'NONRESIDENTIAL')
+  //         return currentCourse.fees.offlineFee.nonResidentialFee
+  //       if (mode === 'RESIDENTIAL')
+  //         return currentCourse.fees.offlineFee.residentialFee
+  //     }
+  //     break
 
-    case '21-days-better-living-course':
-      if (
-        courseDate === '5th Nov to 25th Nov 2023' || courseDate ===  '3rd Dec to 23rd Dec 2023'
-      ) {
-        if (mode === 'ONLINE') return 2100
-        if (mode === 'NONRESIDENTIAL') return 2100
-      } else {
-        if (mode === 'ONLINE') return currentCourse.fees.onlineFee
-        if (mode === 'NONRESIDENTIAL')
-          return currentCourse.fees.offlineFee.nonResidentialFee
-      }
-      break
+  //   case '21-days-better-living-course':
+  //     if (
+  //       courseDate === '5th Nov to 25th Nov 2023' || courseDate ===  '3rd Dec to 23rd Dec 2023'
+  //     ) {
+  //       if (mode === 'ONLINE') return 2100
+  //       if (mode === 'NONRESIDENTIAL') return 2100
+  //     } else {
+  //       if (mode === 'ONLINE') return currentCourse.fees.onlineFee
+  //       if (mode === 'NONRESIDENTIAL')
+  //         return currentCourse.fees.offlineFee.nonResidentialFee
+  //     }
+  //     break
 
-    case 'stress-management-camp':
-      if (
-        courseDate === '10th Dec 2023'
-      ) {
-        if (mode === 'ONLINE') return 500
-        if (mode === 'NONRESIDENTIAL') return 500
-      } else {
-        if (mode === 'ONLINE') return currentCourse.fees.onlineFee
-        if (mode === 'NONRESIDENTIAL')
-          return currentCourse.fees.offlineFee.nonResidentialFee
-      }
-      break
+  //   case 'stress-management-camp':
+  //     if (
+  //       courseDate === '10th Dec 2023'
+  //     ) {
+  //       if (mode === 'ONLINE') return 500
+  //       if (mode === 'NONRESIDENTIAL') return 500
+  //     } else {
+  //       if (mode === 'ONLINE') return currentCourse.fees.onlineFee
+  //       if (mode === 'NONRESIDENTIAL')
+  //         return currentCourse.fees.offlineFee.nonResidentialFee
+  //     }
+  //     break
 
-    case 'seven-month-ttc':
-      if (
-        courseDate ==='1st Dec 2023'
-      ) {
-        if (mode === 'ONLINE') return 55000
-        if (mode === 'RESIDENTIAL') return 55000
-        if (mode === 'NONRESIDENTIAL') return 55000
-      } else {
-        if (mode === 'ONLINE') return currentCourse.fees.onlineFee
-        if (mode === 'RESIDENTIAL')
-          return currentCourse.fees.offlineFee.residentialFee
-        if (mode === 'NONRESIDENTIAL')
-          return currentCourse.fees.offlineFee.nonResidentialFee
-      }
-      break
+  //   case 'seven-month-ttc':
+  //     if (
+  //       courseDate ==='1st Dec 2023'
+  //     ) {
+  //       if (mode === 'ONLINE') return 55000
+  //       if (mode === 'RESIDENTIAL') return 55000
+  //       if (mode === 'NONRESIDENTIAL') return 55000
+  //     } else {
+  //       if (mode === 'ONLINE') return currentCourse.fees.onlineFee
+  //       if (mode === 'RESIDENTIAL')
+  //         return currentCourse.fees.offlineFee.residentialFee
+  //       if (mode === 'NONRESIDENTIAL')
+  //         return currentCourse.fees.offlineFee.nonResidentialFee
+  //     }
+  //     break
 
-    case 'one-year-ttc':
-      if (
-        courseDate ==='1st Dec 2023'
-      ) {
-        if (mode === 'ONLINE') return 55000
-        if (mode === 'RESIDENTIAL') return 55000
-        if (mode === 'NONRESIDENTIAL') return 55000
-      } else {
-        if (mode === 'ONLINE') return currentCourse.fees.onlineFee
-        if (mode === 'RESIDENTIAL')
-          return currentCourse.fees.offlineFee.residentialFee
-        if (mode === 'NONRESIDENTIAL')
-          return currentCourse.fees.offlineFee.nonResidentialFee
-      }
-      break
+  //   case 'one-year-ttc':
+  //     if (
+  //       courseDate ==='1st Dec 2023'
+  //     ) {
+  //       if (mode === 'ONLINE') return 55000
+  //       if (mode === 'RESIDENTIAL') return 55000
+  //       if (mode === 'NONRESIDENTIAL') return 55000
+  //     } else {
+  //       if (mode === 'ONLINE') return currentCourse.fees.onlineFee
+  //       if (mode === 'RESIDENTIAL')
+  //         return currentCourse.fees.offlineFee.residentialFee
+  //       if (mode === 'NONRESIDENTIAL')
+  //         return currentCourse.fees.offlineFee.nonResidentialFee
+  //     }
+  //     break
 
-    case '21-days-better-living-course-batch-2':
-      if (
-        courseDate === '5th Nov to 25th Nov 2023' || courseDate === '3rd Dec to 23rd Dec 2023'
-      ) {
-        if (mode === 'ONLINE') return 2100
-        if (mode === 'NONRESIDENTIAL') return 2100
-      } else {
-        if (mode === 'ONLINE') return currentCourse.fees.onlineFee
-        if (mode === 'NONRESIDENTIAL')
-          return currentCourse.fees.offlineFee.nonResidentialFee
-      }
-      break
-    case '21-days-better-living-course-batch-3':
-      if (courseDate === '19th Nov to 9th Dec 2023') {
-        if (mode === 'ONLINE') return 2100
-        if (mode === 'NONRESIDENTIAL') return 2100
-      } else {
-        if (mode === 'ONLINE') return currentCourse.fees.onlineFee
-        if (mode === 'NONRESIDENTIAL')
-          return currentCourse.fees.offlineFee.nonResidentialFee
-      }
-      break
+  //   case '21-days-better-living-course-batch-2':
+  //     if (
+  //       courseDate === '5th Nov to 25th Nov 2023' || courseDate === '3rd Dec to 23rd Dec 2023'
+  //     ) {
+  //       if (mode === 'ONLINE') return 2100
+  //       if (mode === 'NONRESIDENTIAL') return 2100
+  //     } else {
+  //       if (mode === 'ONLINE') return currentCourse.fees.onlineFee
+  //       if (mode === 'NONRESIDENTIAL')
+  //         return currentCourse.fees.offlineFee.nonResidentialFee
+  //     }
+  //     break
+  //   case '21-days-better-living-course-batch-3':
+  //     if (courseDate === '19th Nov to 9th Dec 2023') {
+  //       if (mode === 'ONLINE') return 2100
+  //       if (mode === 'NONRESIDENTIAL') return 2100
+  //     } else {
+  //       if (mode === 'ONLINE') return currentCourse.fees.onlineFee
+  //       if (mode === 'NONRESIDENTIAL')
+  //         return currentCourse.fees.offlineFee.nonResidentialFee
+  //     }
+  //     break
 
-    case 'meditation-foundation-course-online':
-      if (
-        courseDate === '6th Nov to 1st Dec 2023' || courseDate === '4th Dec to 29th Dec 2023'
-      ) {
-        if (mode === 'ONLINE') return 1000
-      } else {
-        if (mode === 'ONLINE') return currentCourse.fees.onlineFee
-      }
-      break
-    case 'certificate-course-on-advanced-pranayama-techniques':
-      if (
-        courseDate === '20th Nov to 11th Jan 2024 · Morning' || courseDate === '1st Dec to 24th Jan 2024 · Evening'
-      ) {
-        if (mode === 'ONLINE') return 20000
-      } else {
-        if (mode === 'ONLINE') return currentCourse.fees.onlineFee
-      }
-      break
-    // case 'certificate-course-on-advanced-pranayama-techniques':
-    //   if (
-    //     (courseDate === ('1st Dec 2023 to 24th Jan 2024'))
-    //   ) {
-    //     if (mode === 'ONLINE') return 20000
-    //   } else {
-    //     if (mode === 'ONLINE') return currentCourse.fees.onlineFee
-    //   }
-    //   break
-    case '200-hrs-part-time-ttc-on-campus-english':
-      if (courseDate === '4th Dec 2023 to 27th Jan 2024') {
-        if (mode === 'ONLINE') return 25000
-        if (mode === 'RESIDENTIAL') return 55000
-        if (mode === 'NONRESIDENTIAL') return 30000
-      } else {
-        if (mode === 'ONLINE') return currentCourse.fees.onlineFee
-        if (mode === 'RESIDENTIAL') return currentCourse.fees.offlineFee.residentialFee
-        if (mode === 'NONRESIDENTIAL') return currentCourse.fees.offlineFee.nonResidentialFee
-      }
-      break
+  //   case 'meditation-foundation-course-online':
+  //     if (
+  //       courseDate === '6th Nov to 1st Dec 2023' || courseDate === '4th Dec to 29th Dec 2023'
+  //     ) {
+  //       if (mode === 'ONLINE') return 1000
+  //     } else {
+  //       if (mode === 'ONLINE') return currentCourse.fees.onlineFee
+  //     }
+  //     break
+  //   case 'certificate-course-on-advanced-pranayama-techniques':
+  //     if (
+  //       courseDate === '20th Nov to 11th Jan 2024 · Morning' || courseDate === '1st Dec to 24th Jan 2024 · Evening'
+  //     ) {
+  //       if (mode === 'ONLINE') return 20000
+  //     } else {
+  //       if (mode === 'ONLINE') return currentCourse.fees.onlineFee
+  //     }
+  //     break
+  //   // case 'certificate-course-on-advanced-pranayama-techniques':
+  //   //   if (
+  //   //     (courseDate === ('1st Dec 2023 to 24th Jan 2024'))
+  //   //   ) {
+  //   //     if (mode === 'ONLINE') return 20000
+  //   //   } else {
+  //   //     if (mode === 'ONLINE') return currentCourse.fees.onlineFee
+  //   //   }
+  //   //   break
+  //   case '200-hrs-part-time-ttc-on-campus-english':
+  //     if (courseDate === '4th Dec 2023 to 27th Jan 2024') {
+  //       if (mode === 'ONLINE') return 25000
+  //       if (mode === 'RESIDENTIAL') return 55000
+  //       if (mode === 'NONRESIDENTIAL') return 30000
+  //     } else {
+  //       if (mode === 'ONLINE') return currentCourse.fees.onlineFee
+  //       if (mode === 'RESIDENTIAL') return currentCourse.fees.offlineFee.residentialFee
+  //       if (mode === 'NONRESIDENTIAL') return currentCourse.fees.offlineFee.nonResidentialFee
+  //     }
+  //     break
 
-    case '7-days-camp-english':
-      if (courseDate === '25th Nov to 1st Dec 2023' || courseDate === '23rd Dec to 29th Dec 2023') {
-        // if (mode === 'ONLINE') return 25000
-        if (mode === 'RESIDENTIAL') return 13000
-        if (mode === 'NONRESIDENTIAL') return 9000
-      } else {
-        // if (mode === 'ONLINE') return currentCourse.fees.onlineFee
-        if (mode === 'RESIDENTIAL') return currentCourse.fees.offlineFee.residentialFee
-        if (mode === 'NONRESIDENTIAL') return currentCourse.fees.offlineFee.nonResidentialFee
-      }
-      break
+  //   case '7-days-camp-english':
+  //     if (courseDate === '25th Nov to 1st Dec 2023' || courseDate === '23rd Dec to 29th Dec 2023') {
+  //       // if (mode === 'ONLINE') return 25000
+  //       if (mode === 'RESIDENTIAL') return 13000
+  //       if (mode === 'NONRESIDENTIAL') return 9000
+  //     } else {
+  //       // if (mode === 'ONLINE') return currentCourse.fees.onlineFee
+  //       if (mode === 'RESIDENTIAL') return currentCourse.fees.offlineFee.residentialFee
+  //       if (mode === 'NONRESIDENTIAL') return currentCourse.fees.offlineFee.nonResidentialFee
+  //     }
+  //     break
 
-    case '7-days-camp':
-      if (courseDate === '19th Nov to 25th Nov 2023') {
-        // if (mode === 'ONLINE') return 25000
-        if (mode === 'RESIDENTIAL') return 13000
-        if (mode === 'NONRESIDENTIAL') return 9000
-      } else {
-        // if (mode === 'ONLINE') return currentCourse.fees.onlineFee
-        if (mode === 'RESIDENTIAL') return currentCourse.fees.offlineFee.residentialFee
-        if (mode === 'NONRESIDENTIAL') return currentCourse.fees.offlineFee.nonResidentialFee
-      }
-      break
+  //   case '7-days-camp':
+  //     if (courseDate === '19th Nov to 25th Nov 2023') {
+  //       // if (mode === 'ONLINE') return 25000
+  //       if (mode === 'RESIDENTIAL') return 13000
+  //       if (mode === 'NONRESIDENTIAL') return 9000
+  //     } else {
+  //       // if (mode === 'ONLINE') return currentCourse.fees.onlineFee
+  //       if (mode === 'RESIDENTIAL') return currentCourse.fees.offlineFee.residentialFee
+  //       if (mode === 'NONRESIDENTIAL') return currentCourse.fees.offlineFee.nonResidentialFee
+  //     }
+  //     break
 
-    case 'one-month-ttc':
-      if (courseDate === '1st Dec to 30th Dec 2023') {
-        if (mode === 'ONLINE') return 25000
-        if (mode === 'RESIDENTIAL') return 55000
-        if (mode === 'NONRESIDENTIAL') return 30000
-      } else {
-        if (mode === 'ONLINE') return currentCourse.fees.onlineFee
-        if (mode === 'RESIDENTIAL') return currentCourse.fees.offlineFee.residentialFee
-        if (mode === 'NONRESIDENTIAL') return currentCourse.fees.offlineFee.nonResidentialFee
-      }
-      break
-    default:
-      return () => {
-        if (mode === 'ONLINE') return currentCourse.fees.onlineFee
-        if (mode === 'OFFLINE')
-          return currentCourse.fees.offlineFee.nonResidentialFee
-        if (mode === 'RESIDENTIAL')
-          return currentCourse.fees.offlineFee.residentialFee
-        if (mode === 'NONRESIDENTIAL')
-          return currentCourse.fees.offlineFee.nonResidentialFee
-      }
-    }
-  }
+  //   case 'one-month-ttc':
+  //     if (courseDate === '1st Dec to 30th Dec 2023') {
+  //       if (mode === 'ONLINE') return 25000
+  //       if (mode === 'RESIDENTIAL') return 55000
+  //       if (mode === 'NONRESIDENTIAL') return 30000
+  //     } else {
+  //       if (mode === 'ONLINE') return currentCourse.fees.onlineFee
+  //       if (mode === 'RESIDENTIAL') return currentCourse.fees.offlineFee.residentialFee
+  //       if (mode === 'NONRESIDENTIAL') return currentCourse.fees.offlineFee.nonResidentialFee
+  //     }
+  //     break
+  //   default:
+  //     return () => {
+  //       if (mode === 'ONLINE') return currentCourse.fees.onlineFee
+  //       if (mode === 'OFFLINE')
+  //         return currentCourse.fees.offlineFee.nonResidentialFee
+  //       if (mode === 'RESIDENTIAL')
+  //         return currentCourse.fees.offlineFee.residentialFee
+  //       if (mode === 'NONRESIDENTIAL')
+  //         return currentCourse.fees.offlineFee.nonResidentialFee
+  //     }
+  //   }
+  // }
 
 
   return (
@@ -284,8 +284,8 @@ const CourseDetails = ({
                         mode: e.target.value,
                       })
                       setEmpty(0)
-                      // setCourseFee(currentCourse?.fees?.onlineFee)
-                      setCourseFee(updatedFees( currentCourse?.key,'OFFLINE' ))
+                      setCourseFee(currentCourse?.fees?.onlineFee)
+                      // setCourseFee(updatedFees( currentCourse?.key,'OFFLINE' ))
                     }
                   }}
                 />
@@ -313,8 +313,8 @@ const CourseDetails = ({
                         mode: e.target.value,
                       })
                       setEmpty(0)
-                      // setCourseFee(currentCourse?.fees?.onlineFee)
-                      setCourseFee(updatedFees( currentCourse?.key,'ONLINE' ))
+                      setCourseFee(currentCourse?.fees?.onlineFee)
+                      // setCourseFee(updatedFees( currentCourse?.key,'ONLINE' ))
                     }
                   }}
                 />{' '}
@@ -357,10 +357,10 @@ const CourseDetails = ({
                         residental: e.target.value,
                       })
                       setEmpty(0)
-                      // setCourseFee(
-                      //   currentCourse?.fees?.offlineFee?.residentialFee
-                      // )
-                      setCourseFee(updatedFees( currentCourse?.key,'RESIDENTIAL' ))
+                      setCourseFee(
+                        currentCourse?.fees?.offlineFee?.residentialFee
+                      )
+                      // setCourseFee(updatedFees( currentCourse?.key,'RESIDENTIAL' ))
                     }
                   }}
                 />{' '}
@@ -394,10 +394,10 @@ const CourseDetails = ({
                         residental: e.target.value,
                       })
                       setEmpty(0)
-                      // setCourseFee(
-                      //   currentCourse?.fees?.offlineFee?.nonResidentialFee
-                      // )
-                      setCourseFee(updatedFees( currentCourse?.key,'NONRESIDENTIAL' ))
+                      setCourseFee(
+                        currentCourse?.fees?.offlineFee?.nonResidentialFee
+                      )
+                      // setCourseFee(updatedFees( currentCourse?.key,'NONRESIDENTIAL' ))
                     }
                   }}
                 />{' '}

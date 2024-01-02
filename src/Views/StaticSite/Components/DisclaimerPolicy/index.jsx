@@ -164,7 +164,7 @@ const DisclaimerPolicy = ({
         }
 
         if(response?.data?.success){
-          if(currentCourse.key!=='satsang' && formData?.residental!=='RESIDENTIAL' && formData.mode == 'ONLINE'){
+          if(currentCourse.key!=='satsang' && formData?.residental!=='RESIDENTIAL'){
             const paymentOrderResponse =  await axios.post(`${ cmsBaseDomain }/payment/order?enrollmentFormId=${response.data.data['_id']}`, {
               amount: courseFee,
               notes: currentCourse.metaDescription,
