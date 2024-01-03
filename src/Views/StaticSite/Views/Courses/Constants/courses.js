@@ -130,7 +130,7 @@ const ttc200hr = {
           text: [
 
             '2024 : Online:Rs. 27,500 /-', 'Non-Residential: Rs. 33,000/- (Inclusive of course fee, study material, lunch, and snacks)', ' Residential: Rs. 60,000/- (Inclusive of course fee, study material, accommodation on triple occupancy basis and 4 meals a day)',
-            '2023 : Online:Rs. 25,000 /-', 'Non-Residential: Rs. 30,000/- (Inclusive of course fee, study material, lunch, and snacks)', ' Residential: Rs. 55,000/- (Inclusive of course fee, study material, accommodation on triple occupancy basis and 4 meals a day)'],
+          ],
         },
       },
       {
@@ -625,7 +625,7 @@ const ttc200hr = {
           title: 'Fees',
           text: [
             '2024 : Online:Rs. 27,500 /-', 'Non-Residential: Rs. 33,000/- (Inclusive of course fee, study material.)', ' Residential: Rs. 90,000/- (Inclusive of course fee, study material, accommodation on triple occupancy basis and 4 meals a day)',
-            '2023 : Online:Rs. 25,000 /-', 'Non-Residential: Rs. 30,000/- (Inclusive of course fee, study material.)', ' Residential: Rs. 80,000/- (Inclusive of course fee, study material, accommodation on triple occupancy basis and 4 meals a day)'],
+          ],
        
         },
       },
@@ -3915,7 +3915,6 @@ const ttc900hr = {
           title: 'Fees:',
 
           text: [
-            ' 2023 : INR. 55,000/- (Inclusive of course fee and study material)',
             ' 2024 : INR. 60,000/- (Inclusive of course fee and study material)'],
         },
       },
@@ -4618,7 +4617,6 @@ const ttc900hr = {
           title: 'Fees:',
 
           text: [
-            '2023 : INR. 55,000/- (Inclusive of course fee and study material)',
             '2024: INR. 60,000/- (Inclusive of course fee and study material)'
           ],
         },
@@ -5932,7 +5930,6 @@ const ttc900hr = {
           title: 'Fees:',
 
           text: [
-            ' 2023 : INR. 55,000/- (Inclusive of course fee and study material) ',
             ' 2024 : INR. 60,000/- (Inclusive of course fee and study material) ',
           ],
         },
@@ -7835,8 +7832,7 @@ const camps = {
       },
     },
     dates: [
-      '20th & 21st Nov 2023',
-      '16th & 17th Dec 2023',
+    
       '22nd Jan & 23rd Jan 2024',
       '17th Feb & 18th Feb 2024',
       '18th Mar & 19th Mar 2024',
@@ -8740,7 +8736,7 @@ const camps = {
         templateNonResidential: '',
       },
     },
-    dates: ['26th Nov 2023', '24th Dec 2023','28th Jan 2024','25th Feb 2024','24th Mar 2024','28th Apr 2024','26th May 2024','23rd Jun 2024','28th Jul 2024','25th Aug 2024','22nd Sep 2024','27th oct 2024','24th Nov 2024','22nd Dec 2024'],
+    dates: ['28th Jan 2024','25th Feb 2024','24th Mar 2024','28th Apr 2024','26th May 2024','23rd Jun 2024','28th Jul 2024','25th Aug 2024','22nd Sep 2024','27th oct 2024','24th Nov 2024','22nd Dec 2024'],
     mostPopular: false,
     rating: 5,
     colorCode: '#EDBE66',
@@ -9080,7 +9076,7 @@ const camps = {
         content: {
           title: 'FEES',
           text: [
-            '2023: Non-Residential: 9,000/- (inclusive of course fees and 4 Meals)',
+            
             '2024: Non-Residential: 10,000/- (inclusive of course fees and 4 Meals)',
           ],
         },
@@ -9090,10 +9086,7 @@ const camps = {
         content: {
           title: 'Residential',
           text: [
-            '2023:',
-            'Rs. 13,000/- Triple Sharing per person (Inclusive of course fee and 4 meals a day)',
-            // 'Rs. 20,000/- Dual Sharing per person (Inclusive of course fee and 4 meals a day)',
-            // 'Rs. 34,000/- Single Occupancy (Inclusive of course fee and 4 meals a day)',
+            
             '2024:',
             'Rs. 16,500/- Triple Sharing per person (Inclusive of course fee and 4 meals a day)',
             // 'Rs. 23,000/- Dual Sharing per person (Inclusive of course fee and 4 meals a day)',
@@ -9219,7 +9212,6 @@ const camps = {
     },
     dates: [
       
-      '23rd Dec to 29th Dec 2023',
       '27th Jan to 2th Feb 2024',
       '24th Feb to 1st Mar 2024',
       '23rd Mar to 29th Mar 2024',
@@ -9428,7 +9420,6 @@ const camps = {
         content: {
           title: 'FEES',
           text: [
-            '2023: Non-Residential: 9,000/- (inclusive of course fees and 4 Meals)',
             '2024: Non-Residential: 10,000/- (inclusive of course fees and 4 Meals)',
           ],
         },
@@ -9438,10 +9429,7 @@ const camps = {
         content: {
           title: 'Residential',
           text: [
-            '2023:',
-            'Rs. 13,000/- Triple Sharing per person (Inclusive of course fee and 4 meals a day)',
-            // 'Rs. 20,000/- Dual Sharing per person (Inclusive of course fee and 4 meals a day)',
-            // 'Rs. 34,000/- Single Occupancy (Inclusive of course fee and 4 meals a day)',
+         
             '2024:',
             'Rs. 16,500/- Triple Sharing per person (Inclusive of course fee and 4 meals a day)',
             // 'Rs. 23,000/- Dual Sharing per person (Inclusive of course fee and 4 meals a day)',
@@ -9741,7 +9729,7 @@ const camps = {
         content: {
           title: 'FEES',
           text: [
-            '2023: Rs. 2100/-',
+            
             '2024: Rs. 2500/-'
           ],
         },
@@ -10105,7 +10093,7 @@ const camps = {
         content: {
           title: 'FEES',
           text: [
-            '2023: Rs. 2100/-',
+            
             '2024: Rs. 2500/-'
           ],
         },
@@ -10463,7 +10451,7 @@ const camps = {
         content: {
           title: 'FEES',
           text: [
-            '2023: Rs. 2100/-',
+            
             '2024: Rs. 2500/-'
           ],
         },
@@ -10650,7 +10638,7 @@ const camps = {
   //     },
   //   },
   //   dates: [
-  //     '8th Jan to 28th Jan 2023',
+  //     '8th Jan to 28th ',
   //   ],
   //   online: true,
   //   onCampus: false,
@@ -11907,7 +11895,7 @@ const classes = {
         content: {
           title: 'Fees',
           text: [
-            '2023: Rs. 1000/-',
+            
             '2024: Rs. 1100/-'
           ],
         },
@@ -13131,9 +13119,9 @@ const certificate = {
           title: 'Online Yoga Sessions',
           text: [
             'Morning batch : Mondays, Tuesdays & Thursdays: 11:30 am - 12:30 pm (IST)',
-            'Date: 20th Nov 2023 to 11th Jan 2024',
+            
             'Evening batch: Wednesday, Friday & Saturday: 6:00 pm - 7:00 pm (IST)',
-            'Date: 1st Dec 2023 to 24th Jan 2024',
+            
             '24 sessions of one hour each',
           ],
         },
@@ -13143,7 +13131,7 @@ const certificate = {
         content: {
           title: 'Fees',
           text: [
-            '2023 : Rs. 20,000/-',
+            
             '2024 : Rs. 24,000/-'
           ],
         },
