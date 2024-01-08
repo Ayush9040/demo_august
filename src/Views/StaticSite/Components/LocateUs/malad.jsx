@@ -155,7 +155,7 @@ const MaladPage = () => {
           </div>
           <div className="apply-fees">
             <h5>Fees</h5>
-            <p>On Campus : Rs. 28,000/- (Inclusive of course fee, study material)</p>
+            <p>On Campus : Rs. 31,000/- (Inclusive of course fee, study material)</p>
           </div>
           <div className="apply-fees">
             <h5>Prerequisites</h5>
