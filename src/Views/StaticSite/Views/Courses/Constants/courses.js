@@ -12603,13 +12603,13 @@ const classes = {
       'The Yoga Institute’s Couple Class is an absolute must for anyone who is in a relationship.',
     rating: 5,
     colorCode: '#C48E8C',
-    timing: 'Last Sunday of every month from 5.00 p.m. to 7.00 p.m.',
+    timing: 'Third Sunday of every month from 5.00 p.m. to 7.00 p.m.',
     fees: {
       onlineFee: 3500,
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'classes',
-    dates: [ '28th Jan 2024'],
+    dates: [ '21st Jan 2024'],
     online: true,
     onCampus: false,
     nonResidential: false,
@@ -12706,7 +12706,7 @@ const classes = {
         content: {
           title: 'Duration',
           text: [
-            'Enrollment is for a calendar year. Meetings are held on the last Sunday of every month from 5.00 p.m. to 7.00 p.m.in the Institute. Additionally, co-ordinated couples meet once during the same month in their respective groups.',
+            'Enrollment is for a calendar year. Meetings are held on the third Sunday of every month from 5.00 p.m. to 7.00 p.m.in the Institute. Additionally, co-ordinated couples meet once during the same month in their respective groups.',
           ],
         },
       },
@@ -12723,7 +12723,7 @@ const classes = {
         type: 'paragraph',
         content: {
           title: 'Registration',
-          text: ['Starts 28th Jan 2024'],
+          text: ['Starts 21st Jan 2024'],
         },
       },
       {
