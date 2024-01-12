@@ -17,7 +17,7 @@ export const locateData = [
         phone: ['+91-9307047148'],
         website: 'https://theyogainstitutegoa.com',
         email: 'goa@theyogainstitute.org',
-        url: 'https://jal.theyogainstitute.org/',
+        url: 'https://theyogainstitutegoa.com/',
         toRedirect: true,
       },
       {
@@ -27,88 +27,8 @@ export const locateData = [
         phone: ['+91-9752550490', '+91-982035049'],
         email: 'tyiraipur@gmail.com',
         website: 'https://theyogainstituteraipur.com',
-        url: 'https://jal.theyogainstitute.org/',
+        url: 'https://theyogainstituteraipur.com/',
         toRedirect: true,
-      },
-      {
-        state: 'Kochi',
-        notstate:
-          'Namami Health Retreat`s A Wellness Sanctuary 7/156, Mulamkuzhy, Malayttoor, Ernakulam Kochi 683587 – Kerala, India.',
-        phone: ['+91-4842621234', '+91-9188952296'],
-        email: 'tyikochi@namamihealth.com',
-        website: 'https://namamihealth.com',
-        url: 'https://jal.theyogainstitute.org/',
-        toRedirect: true,
-      },
-      {
-        state: 'Delhi',
-        //notstate:'Swami Parmanand Prakritik Chikitsalaya (SPPC) Main Mother Dairy Road, Shanti Marg,Near Manglam Red Light, Narwana Rd, Block E, West Vinod Nagar, New Delhi, 110092',
-        phone: ['+91-9899904455'],
-        email: 'tyidelhi@theyogainstitute.org',
-        website: 'https://theyogainstitutedelhi.com',
-        url: 'https://jal.theyogainstitute.org/',
-        toRedirect: true,
-      },
-      {
-        state: 'Matunga (CR)',
-        notstate:
-          'Sri Kanyaka Parmeshwari Temple, Plot No 403, Vasavi Nilayam, Telang Road, Matunga (CR), Mumbai.',
-        email: 'tyimatunga@theyogainstitute.org',
-        phone: ['+91-9343517490'],
-        url: 'matunga',
-      },
-      {
-        state: 'Santacruz (W)',
-        notstate:
-          'Rotary Club of Bombay West Rotary Service Centre, Rotary Chowk, Juhu Tara Road, Santacruz W, Mumbai 400049.',
-        email: 'dhhruv.s@gmail.com',
-        url: 'https://jal.theyogainstitute.org/',
-        phone: ['+91-9833864964'],
-        toRedirect: true,
-      },
-      {
-        state: 'Juhu',
-        notstate:
-          'Ground Floor Backside, Abhijat Bunglow, Plot No. 48, NS Road Number 7, Opp. Siddhivinayak Building, JVPD Scheme, Juhu.',
-        email: 'dhhruv.s@gmail.com',
-        url: 'https://jal.theyogainstitute.org/',
-        phone: ['+91-9833864964'],
-        toRedirect: true,
-      },
-      {
-        state: 'Vile Parle',
-        notstate:
-          'Sanyas Ashram Temple, Off. Bajaj Road, Vile Parle West, Mumbai - 400056',
-        email: 'dhhruv.s@gmail.com',
-        url: 'https://jal.theyogainstitute.org/',
-        phone: ['+91-9833864964'],
-        toRedirect: true,
-      },
-      {
-        state: 'Kalyan',
-        notstate:
-          'Saket College, Saket Vidyanagri Marg, Katemenivali, Chinchpada Road, Kalyan, Maharashtra - 421306',
-        phone: ['+91-9673134471'],
-        url: 'https://jal.theyogainstitute.org/',
-        toRedirect: true,
-      },
-      {
-        state: 'Lokhandwala',
-        notstate:
-          'The Yoga Institute, Lokhandwala 703, Aston Building, Above Mercedes Benz Showroom, Andheri, Near Lokhandwala Circle',
-        email: 'dhhruv.s@gmail.com',
-        url: 'https://jal.theyogainstitute.org/',
-        phone: ['+91-9833864964'],
-        toRedirect: true,
-      },
-      {
-        state: 'Malad',
-        notstate:
-          '201 & 202, B Wing, 2nd Floor, Solitaire 2, Opp Infinity Mall, Near Malad West Metro Station, New Link Road, Ekta Nagar, Malad West, Mumbai – 400064.',
-        email: 'malad@theyogainstitute.in',
-        url: 'malad',
-        phone: ['+91 9343517490'],
-        toRedirect: false,
       },
       {
         state: 'Rishikesh',
@@ -120,11 +40,102 @@ export const locateData = [
         toRedirect: true,
       },
       {
-        state: 'Vikhroli',
-        notstate: 'The Yoga Institute, Vikhroli Unit-1, Mahajan Silk Compound, Lal Bahadur Shastri Marg,Surya Nagar, HMPL Surya Nagar,Vikhroli West. Mumbai - 400079',
+        state: 'Delhi',
+        //notstate:'Swami Parmanand Prakritik Chikitsalaya (SPPC) Main Mother Dairy Road, Shanti Marg,Near Manglam Red Light, Narwana Rd, Block E, West Vinod Nagar, New Delhi, 110092',
+        phone: ['+91-9899904455'],
+        email: 'tyidelhi@theyogainstitute.org',
+        website: 'https://theyogainstitutedelhi.com',
+        url: 'https://theyogainstitutedelhi.com/',
+        toRedirect: true,
+      },
+      {
+        state: 'Kochi',
+        notstate:
+          'Namami Health Retreat`s A Wellness Sanctuary 7/156, Mulamkuzhy, Malayttoor, Ernakulam Kochi 683587 – Kerala, India.',
+        phone: ['+91-4842621234', '+91-9188952296'],
+        email: 'tyikochi@namamihealth.com',
+        website: 'https://namamihealth.com',
+        url: 'https://namamihealth.com/',
+        toRedirect: true,
+      },
+      {
+        state: 'Matunga (CR), Mumbai',
+        notstate:
+          'Sri Kanyaka Parmeshwari Temple, Plot No 403, Vasavi Nilayam, Telang Road, Matunga (CR), Mumbai.',
+        email: 'tyimatunga@theyogainstitute.org',
+        phone: ['+91-9343517490'],
+        url: 'matunga',
+      },
+      {
+        state: 'Santacruz (W), Mumbai',
+        notstate:
+          'Rotary Club of Bombay West Rotary Service Centre, Rotary Chowk, Juhu Tara Road, Santacruz W, Mumbai 400049.',
+        email: 'dhhruv.s@gmail.com',
+        url: 'https://jal.theyogainstitute.org/',
+        phone: ['+91-9833864964'],
+        toRedirect: true,
+      },
+      // {
+      //   state: 'Juhu',
+      //   notstate:
+      //     'Ground Floor Backside, Abhijat Bunglow, Plot No. 48, NS Road Number 7, Opp. Siddhivinayak Building, JVPD Scheme, Juhu.',
+      //   email: 'dhhruv.s@gmail.com',
+      //   url: 'https://jal.theyogainstitute.org/',
+      //   phone: ['+91-9833864964'],
+      //   toRedirect: true,
+      // },
+      // {
+      //   state: 'Vile Parle',
+      //   notstate:
+      //     'Sanyas Ashram Temple, Off. Bajaj Road, Vile Parle West, Mumbai - 400056',
+      //   email: 'dhhruv.s@gmail.com',
+      //   url: 'https://jal.theyogainstitute.org/',
+      //   phone: ['+91-9833864964'],
+      //   toRedirect: true,
+      // },
+      {
+        state: 'Kalyan, Mumbai',
+        notstate:
+          'Saket College, Saket Vidyanagri Marg, Katemenivali, Chinchpada Road, Kalyan, Maharashtra - 421306',
+        phone: ['+91-9673134471'],
+        url: 'https://jal.theyogainstitute.org/',
+        toRedirect: true,
+      },
+      // {
+      //   state: 'Lokhandwala',
+      //   notstate:
+      //     'The Yoga Institute, Lokhandwala 703, Aston Building, Above Mercedes Benz Showroom, Andheri, Near Lokhandwala Circle',
+      //   email: 'dhhruv.s@gmail.com',
+      //   url: 'https://jal.theyogainstitute.org/',
+      //   phone: ['+91-9833864964'],
+      //   toRedirect: true,
+      // },
+      {
+        state: 'Malad, Mumbai',
+        notstate:
+          '201 & 202, B Wing, 2nd Floor, Solitaire 2, Opp Infinity Mall, Near Malad West Metro Station, New Link Road, Ekta Nagar, Malad West, Mumbai – 400064.',
+        email: 'malad@theyogainstitute.in',
+        url: 'malad',
+        phone: ['+91 9343517490'],
+        toRedirect: false,
+      },
+      {
+        state: 'Vikhroli, Mumbai',
+        notstate:
+          'The Yoga Institute, Vikhroli Unit-1, Mahajan Silk Compound, Lal Bahadur Shastri Marg,Surya Nagar, HMPL Surya Nagar,Vikhroli West. Mumbai - 400079',
         email: 'tyivikhroli@gmail.com',
         url: 'https://theyogainstitutevikhroli.com/',
         phone: ['+91-9820696800'],
+        toRedirect: true,
+      },
+      {
+        state: 'Andheri(W), Mumbai',
+        notstate:
+          'MANTHAN Counseling, Lifestyle Management and Yoga Therapy Clinic Madhaveshwar CHS, Madhav Nagar 11/12, Flat no. 9, 1st floor Next to bus depot, Andheri station West, North Gate, Landmark: Merwans Cake shop building',
+        email: 'dr_atulvp@yahoo.co.in',
+        website: 'https://yogpsychology.com',
+        url: 'https://yogpsychology.com/',
+        phone: ['+91-7208001104'],
         toRedirect: true,
       },
 
