@@ -1950,8 +1950,8 @@ const ttc200hr = {
     category: 'ttc',
     title: '200 Hours Yoga TTC  - 3 Months Weekend Yoga Teacher Training Course Online - English - Batch 5',
     dates: [
-      '21st Jan  to 8th Apr 2024',
-      '14th Apr  to 1st Jul 2024',
+      '20th Jan to 7th Apr 2024',
+      '13th Apr to 30th Jun 2024',
       '6th Jul to 22nd Sep 2024',
       '28th Sep to 15th Dec 2024 ',
       '21st Dec to 9th Mar 2025',
