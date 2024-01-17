@@ -35,7 +35,7 @@ const OurOfferings = () => {
         'An introductory course to yoga theory and practice in which students experience yogic lifestyle and learn how to achieve life balance.',
       redirect: '/7-days-camp',
       timeline: '7 days',
-      price: '9000',
+      price: '10000',
     },
     {
       name: '21-Day Better Living Course',
@@ -43,7 +43,7 @@ const OurOfferings = () => {
         'This course will assist you in incorporating yoga philosophy and healthy habits into daily life by taking a holistic approach.',
       redirect: '/21-days-better-living-course',
       timeline: '21 days',
-      price: '2100',
+      price: '2500',
     },
     {
       name: 'Regular Asana Classes',
@@ -51,7 +51,7 @@ const OurOfferings = () => {
         'Improve your physical and mental health by practicing asanas, pranayama, and a yogic lifestyle and living mindfully.',
       redirect: '/asana-regular-classes-online',
       timeline: 'Any Day',
-      price: '1000',
+      price: '1100',
     },
     {
       name: 'Children’s Regular Classes',
@@ -59,7 +59,7 @@ const OurOfferings = () => {
         'This asana class will help children develop their focus, memory, discipline, determination, and value system.',
       redirect: '/childrens-regular-classes',
       timeline: 'Any Day',
-      price: '1000',
+      price: '1100',
     },
     {
       name: '7-month TTC',
@@ -67,7 +67,7 @@ const OurOfferings = () => {
         'With this course, you will acquire the skills necessary to master your mental, spiritual, and physical health and lead a fulfilling life.',
       redirect: '/seven-month-ttc',
       timeline: '7-month',
-      price: '55,000',
+      price: '60,000',
     },
   ]
   const [smallDescription, setSmallDescription] = useState(
