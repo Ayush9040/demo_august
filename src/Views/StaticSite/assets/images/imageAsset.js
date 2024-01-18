@@ -45,6 +45,7 @@ export const homeAssets = {
   homeAsset16: '/home_page/satvam.webp',
   homeAsset17: '/home_page/corporate_copy.webp',
   homeAsset18: '/home_page/cooking_copy.webp',
+  homeAsset099: '/home_page/saatvik.png',
   homeAsset19: '/Home/Social Initiatives/SocialAnnamBhrama.jpg',
   homeAsset20: '/Home/Social Initiatives/SocialPolice.jpg',
   homeAsset21: '/Home/Social Initiatives/SocialBMCSchools.jpg',

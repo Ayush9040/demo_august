@@ -3,6 +3,15 @@ import baseDomain, { homeAssets,nutriDiet } from '../assets/images/imageAsset'
 export const activityData = [
 
   {
+    id: 10,
+    title: 'Sattvik Kitchen',
+    description:
+        'A curation of Sattvik recipes by Spiritual Guru Dr. Hansaji Yogendra, these are carefully designed to ensure nutrition and balance in the body.',
+    image:`${baseDomain}${homeAssets.homeAsset099}`,
+    url: '/shop/product/65a8f78181ad17001903ab5e'
+  },
+
+  {
     id: 1,
     title:'7 Rules to Reset Mind and Body',
     description:'A definite manual for joy and harmony throughout everyday life. Achieve balance and fulfillment through power-packed lessons.',
@@ -72,4 +81,12 @@ export const activityData = [
     image: `${baseDomain}${homeAssets.homeAsset18}`,
     url: '/sattvik-cooking',
   },
+  // {
+  //   id: 10,
+  //   title: 'Sattvik Kitchen',
+  //   description:
+  //       'A curation of Sattvik recipes by Spiritual Guru Dr. Hansaji Yogendra, these are carefully designed to ensure nutrition and balance in the body.',
+  //   image:`${baseDomain}${homeAssets.homeAsset099}`,
+  //   url: '/shop/product/65a8f78181ad17001903ab5e'
+  // }
 ]
