@@ -8893,7 +8893,7 @@ const camps = {
     timing: 'Saturday to Friday : 7:00 am - 7:00 pm (IST)',
     fees: {
       onlineFee: 0,
-      offlineFee: { residentialFee: 15000, nonResidentialFee: 10000 },
+      offlineFee: { residentialFee: 16500, nonResidentialFee: 10000 },
     },
     category: 'camps',
     metaDescription:
@@ -9236,7 +9236,7 @@ const camps = {
     timing: 'Saturday to Friday : 7:00 am - 7:00 pm (IST)',
     fees: {
       onlineFee: 0,
-      offlineFee: { residentialFee: 15000, nonResidentialFee: 10000 },
+      offlineFee: { residentialFee: 16500, nonResidentialFee: 10000 },
     },
     category: 'camps',
     metaDescription:
