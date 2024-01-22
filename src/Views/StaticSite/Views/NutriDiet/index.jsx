@@ -72,13 +72,13 @@ const NutriDiet = () => {
     }else{
       switch (plan) {
       case '1 month':
-        setPrice(3000);setErr(false);setOpenForm(true) 
+        setPrice(3999);setErr(false);setOpenForm(true) 
         break
       case '3 months':
-        setPrice(7500);setErr(false);setOpenForm(true)
+        setPrice(8999);setErr(false);setOpenForm(true)
         break
       case '6 months':
-        setPrice(11000);setErr(false);setOpenForm(true)
+        setPrice(13999);setErr(false);setOpenForm(true)
         break
       case 'Single Visit':
         setPrice(1000);setErr(false);setOpenForm(true)
