@@ -13453,7 +13453,7 @@ const certificate = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'certificate-course',
-    dates: ['6th Feb to 10th Feb 2024','11th Jun to 15th Jun 2024',],
+    dates: ['6th Feb to 10th Feb 2024','2nd July to 6th July 2024',],
     online: true,
     onCampus: false,
     nonResidential: false,
