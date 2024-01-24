@@ -80,9 +80,9 @@ const NutriDiet = () => {
       case '6 months':
         setPrice(13999);setErr(false);setOpenForm(true)
         break
-      case 'Single Visit':
-        setPrice(1000);setErr(false);setOpenForm(true)
-        break
+        // case 'Single Visit':
+        //   setPrice(1000);setErr(false);setOpenForm(true)
+        //   break
           
       default: 
         break
@@ -158,7 +158,7 @@ const NutriDiet = () => {
     parsingAlgo()
     scrollTo(0,0)
   },[])
-  const options = ['1 month','3 months','6 months','Single Visit']
+  const options = ['1 month','3 months','6 months']
 
   return (
     <>
