@@ -5231,7 +5231,7 @@ const ttc900hr = {
           text: [
             'With over 1,00,000/ 50,000 successfully certified students since 1918, the 4 Months Online Yoga Teacher Training Course - English at The Yoga Institute is an in-depth study of classical Ashtanga yoga (Eightfold Path Yoga). It teaches core yoga philosophy with a comprehensive approach to the science and technology of yoga. Strategically designed by the founder Shri Yogendraji, Smt. Sita Devi Yogendra, Dr. Jayadeva Yogendra, and Dr. Hansaji J Yogendra, the teacher training programs serves as a valuable ‘life school’ to those seeking balance and fulfillment in life.',
             'This is an intensive advanced teacher training course, ideal for those who want an immersive yoga learning experience in a focused learning format. The curriculum is the same as the other ATTCs. Within 4 months, you can become an advanced yoga trainer. Kindly note that residential option is available for this course. Additional charges would be applicable for the same.',
-            'Residential Course: this is a great option for those who want to be completely immersed in the yogi way of life. You would have access to a total yogic lifestyle at the Yoga Institute during the duration of your course. Wholesome Sattvik meals, a healthy daily routine in the peaceful environment of the Yoga Institute will reset your energies.',
+            // 'Residential Course: this is a great option for those who want to be completely immersed in the yogi way of life. You would have access to a total yogic lifestyle at the Yoga Institute during the duration of your course. Wholesome Sattvik meals, a healthy daily routine in the peaceful environment of the Yoga Institute will reset your energies.',
           ],
         },
       },
@@ -9220,7 +9220,7 @@ const camps = {
       '22nd Jun to 28th Jun 2024',
       '27th Jul to 2nd Aug 2024',
       '24th Aug to 30th Aug 2024',
-      '21st Sep to 27th Sep 2024',
+      '28th Sep to 4th Oct 2024',
       '26th Oct to 1st Nov 2024',
       '23rd Nov to 29th Nov 2024',
       '28th Dec to 3rd Jan 2025'
