@@ -190,11 +190,11 @@ const IBYcourse = () => {
               {/* <li><span className='nutri-page-semi-bold' > Time: </span> Every Friday, 3:30 pm to 5:00 pm (IST)</li> */}
               <li><span className='nutri-page-semi-bold' > Fees: </span>
                 <ul>
-                  <li><span  > Q1 (Quarter1: March-April-May 2023) - </span> Rs. 500/-</li>
-                  <li><span  > Q2 (Quarter2: June- July- August 2023) - </span> Rs. 500/-</li>
-                  <li><span  > Q3 (Quarter3: September- October- November 2023) - </span> Rs. 500/-</li>
-                  <li><span> Q4 (Quarter4: December-January-February 2024) - </span> Rs. 500/-</li>
-                  <li><span> Annually- Rs 2000/- (March 2023 - February 2024) </span></li>
+                  <li><span  > Q1 (Quarter1: March-April-May 2024) - </span> Rs. 2,500/-</li>
+                  <li><span  > Q2 (Quarter2: June- July- August 2024) - </span> Rs. 1875/-</li>
+                  <li><span  > Q3 (Quarter3: September- October- November 2024) - </span> Rs. 1250/-</li>
+                  <li><span> Q4 (Quarter4: December-January-February 2025) - </span> Rs. 625/-</li>
+                  <li><span> Annually- Rs 2500/- (March 2024 - February 2025) </span></li>
                 </ul>
               </li>
               
