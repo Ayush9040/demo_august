@@ -195,6 +195,7 @@ const IBYcourse = () => {
                   <li><span  > Q3 (Quarter3: September- October- November 2024) - </span> Rs. 1250/-</li>
                   <li><span> Q4 (Quarter4: December-January-February 2025) - </span> Rs. 625/-</li>
                   <li><span> Annually- Rs 2500/- (March 2024 - February 2025) </span></li>
+                  
                 </ul>
               </li>
               
