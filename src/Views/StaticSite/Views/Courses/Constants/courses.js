@@ -12492,7 +12492,7 @@ const classes = {
       'Samatvam is one-of-a-kind personalised wellbeing program launched by The Yoga Institute under the guidance of Dr. Hansaji Yogendra. The program focuses on providing individual guidance for life management.',
     rating: 5,
     colorCode: '#C48E8C',
-    timing: 'Every Saturday: 2.00 p.m. - 5.30 p.m. (IST)',
+    timing: 'Every Saturday: 2.00 p.m. - 5.00 p.m. (IST)',
     fees: {
       onlineFee: 200,
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },

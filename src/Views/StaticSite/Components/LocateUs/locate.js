@@ -75,24 +75,24 @@ export const locateData = [
         phone: ['+91-9833864964'],
         toRedirect: true,
       },
-      // {
-      //   state: 'Juhu',
-      //   notstate:
-      //     'Ground Floor Backside, Abhijat Bunglow, Plot No. 48, NS Road Number 7, Opp. Siddhivinayak Building, JVPD Scheme, Juhu.',
-      //   email: 'dhhruv.s@gmail.com',
-      //   url: 'https://jal.theyogainstitute.org/',
-      //   phone: ['+91-9833864964'],
-      //   toRedirect: true,
-      // },
-      // {
-      //   state: 'Vile Parle',
-      //   notstate:
-      //     'Sanyas Ashram Temple, Off. Bajaj Road, Vile Parle West, Mumbai - 400056',
-      //   email: 'dhhruv.s@gmail.com',
-      //   url: 'https://jal.theyogainstitute.org/',
-      //   phone: ['+91-9833864964'],
-      //   toRedirect: true,
-      // },
+      {
+        state: 'Juhu',
+        notstate:
+          'Ground Floor Backside, Abhijat Bunglow, Plot No. 48, NS Road Number 7, Opp. Siddhivinayak Building, JVPD Scheme, Juhu.',
+        email: 'dhhruv.s@gmail.com',
+        url: 'https://jal.theyogainstitute.org/',
+        phone: ['+91-9833864964'],
+        toRedirect: true,
+      },
+      {
+        state: 'Vile Parle',
+        notstate:
+          'Sanyas Ashram Temple, Off. Bajaj Road, Vile Parle West, Mumbai - 400056',
+        email: 'dhhruv.s@gmail.com',
+        url: 'https://jal.theyogainstitute.org/',
+        phone: ['+91-9833864964'],
+        toRedirect: true,
+      },
       {
         state: 'Kalyan, Mumbai',
         notstate:
@@ -101,15 +101,15 @@ export const locateData = [
         url: 'https://jal.theyogainstitute.org/',
         toRedirect: true,
       },
-      // {
-      //   state: 'Lokhandwala',
-      //   notstate:
-      //     'The Yoga Institute, Lokhandwala 703, Aston Building, Above Mercedes Benz Showroom, Andheri, Near Lokhandwala Circle',
-      //   email: 'dhhruv.s@gmail.com',
-      //   url: 'https://jal.theyogainstitute.org/',
-      //   phone: ['+91-9833864964'],
-      //   toRedirect: true,
-      // },
+      {
+        state: 'Lokhandwala',
+        notstate:
+          'The Yoga Institute, Lokhandwala 703, Aston Building, Above Mercedes Benz Showroom, Andheri, Near Lokhandwala Circle',
+        email: 'dhhruv.s@gmail.com',
+        url: 'https://jal.theyogainstitute.org/',
+        phone: ['+91-9833864964'],
+        toRedirect: true,
+      },
       {
         state: 'Malad, Mumbai',
         notstate:
