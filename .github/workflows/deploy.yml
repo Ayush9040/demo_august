@@ -4,30 +4,141 @@ on:
  issues:
    types: [opened]
    
+env:
+  PASS: ${{ secrets.REG_PASS }}
+
 jobs:
-  prod-check:
+  staging-check:
     if: ${{ github.event.issue.title == 'deploy staging' }}
     runs-on: ubuntu-latest
     steps:  
+
     - uses: actions/checkout@v3
       with:
-        ref: 'static-staging'
-    - name: Use Node.js 14.18.1
+        ref: 'staging'
+    - name: Use Node.js 16.16.0
       uses: actions/setup-node@v3
       with:
-        node-version: 14.18.1
-        cache: 'npm'
-        cache-dependency-path: './package.json'
-    - run: yarn
-    - run: yarn run build 
+        node-version: 16.16.0
+        cache: 'yarn'
+        #cache-dependency-path: './package.json'
+    - run: yarn install
+    - run: yarn run build
     
     - name: parent working directory
       run: pwd
+      
+    - name: Copy repo
+      env:
+        ACCESS_TOKEN: ${{ secrets.GIT_TOKEN }}
+      run: git clone "https://"$ACCESS_TOKEN"@github.com/NexGenIoT/docker-compose-ops.git"
+      
+    - name: Build docker image
+      run: |
+        cp /home/runner/work/tyi-user-webapp/tyi-user-webapp/docker-compose-ops/tyi-user-webapp/staging/docker-compose.yml /home/runner/work/tyi-user-webapp/tyi-user-webapp/
+        rm -rf docker-compose-ops
+        docker build -t registry-intl.ap-south-1.aliyuncs.com/ecom_be/ecom-staging-site:latest .
+        docker login --username=kush-ecom@5181746632446528 registry-intl.ap-south-1.aliyuncs.com -p $PASS
+        docker push registry-intl.ap-south-1.aliyuncs.com/ecom_be/ecom-staging-site:latest
+      
+    - name: Docker container pull and up
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.HOST}}
+        username: ${{ secrets.USERNAME}}
+        password: ${{ secrets.PASSPHRASE }}
+        command_timeout: 200m
+        script: |
+          cd /home/kush/docker-compose-ops/tyi-user-webapp/staging
+          docker login --username=kush-ecom@5181746632446528 registry-intl.ap-south-1.aliyuncs.com -p ${{ secrets.REG_PASS }}
+          docker-compose pull
+          docker-compose up -d
+          docker image prune -f
+          docker ps    
+        
+    - name: Configure AWS Credentials
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region: ${{ secrets.REGION }}
     
-    - if: startsWith(github.event.issue.title, 'deploy staging') != 'true'
+    - name: create CloudFront Invalidation
+      run: |
+        AWS_MAX_ATTEMPTS=10 aws cloudfront create-invalidation --distribution-id ${{ secrets.AWS_CLOUFRONT_ID }} --paths "/*"
+        
+    - if: ${{ github.event.issue.title == 'deploy staging' }} 
       name: Close Issue
       uses: peter-evans/close-issue@v2
       with:
         comment: |
           Issue title must start with 'deploy staging'.
           Auto-closing this issue.
+          
+  prod-check:
+    if: ${{ github.event.issue.title == 'deploy prod' }}
+    runs-on: ubuntu-latest
+    steps:  
+
+    - uses: actions/checkout@v3
+      with:
+        ref: 'production'
+    - name: Use Node.js 14.18.1
+      uses: actions/setup-node@v3
+      with:
+        node-version: 14.18.1
+        cache: 'yarn'
+        #cache-dependency-path: './package.json'
+    - run: yarn install
+    - run: yarn run build
+    
+    - name: parent working directory
+      run: pwd
+      
+    - name: Copy repo
+      env:
+        ACCESS_TOKEN: ${{ secrets.GIT_TOKEN }}
+      run: git clone "https://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@github.com/NexGenIoT/docker-compose-ops.git"
+      
+    - name: Build docker image
+      run: |
+        cp /home/runner/work/tyi-user-webapp/tyi-user-webapp/docker-compose-ops/tyi-user-webapp/production/docker-compose.yml /home/runner/work/tyi-user-webapp/tyi-user-webapp/
+        rm -rf docker-compose-ops
+        docker build -t registry-intl.ap-south-1.aliyuncs.com/ecom_be/ecom_prod_site:latest .
+        docker login --username=kush-ecom@5181746632446528 registry-intl.ap-south-1.aliyuncs.com -p ${{ secrets.REG_PASS }}
+        docker push registry-intl.ap-south-1.aliyuncs.com/ecom_be/ecom_prod_site:latest
+      
+    - name: Docker container pull and up
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.HOST_PROD }}
+        username: ${{ secrets.USERNAME_PROD }}
+        password: ${{ secrets.PASSPHRASE_PROD }}
+        script: |
+          cd /root/docker-compose-ops/tyi-user-webapp/production
+          docker login --username=kush-ecom@5181746632446528 registry-intl.ap-south-1.aliyuncs.com -p ${{ secrets.REG_PASS }}
+          docker-compose pull
+          docker-compose up -d
+          docker image prune -f
+          docker ps    
+        
+    - name: Configure AWS Credentials
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region: ${{ secrets.REGION }}
+ 
+    - name: create CloudFront Invalidation
+      run: |
+        AWS_MAX_ATTEMPTS=10 aws cloudfront create-invalidation --distribution-id ${{ secrets.AWS_CLOUFRONT_ID_PROD }} --paths "/*"
+        
+    - if: ${{ github.event.issue.title == 'deploy prod' }} 
+      name: Close Issue
+      uses: peter-evans/close-issue@v2
+      with:
+        comment: |
+          Issue title must start with 'deploy prod'.
+          Auto-closing this issue.   
+          
+  
