@@ -12510,7 +12510,7 @@ const classes = {
         content: {
           title: '',
           text: [
-            'Are you looking for the right advice to deal with your health problems? Visit The Yoga Institute every Saturday between 2 pm to 5:30 pm and get advised from leading health experts and yoga practitioners.',
+            'Are you looking for the right advice to deal with your health problems? Visit The Yoga Institute every Saturday between 2 pm to 5:00 pm and get advised from leading health experts and yoga practitioners.',
           ],
         },
       },
