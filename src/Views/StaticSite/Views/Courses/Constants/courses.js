@@ -12533,7 +12533,7 @@ const classes = {
         type: 'paragraph',
         content: {
           title: 'Duration',
-          text: ['Every Saturday: 2.00 p.m. - 5.30 p.m. (IST)'],
+          text: ['Every Saturday: 2.00 p.m. - 5.00 p.m. (IST)'],
         },
       },
       {

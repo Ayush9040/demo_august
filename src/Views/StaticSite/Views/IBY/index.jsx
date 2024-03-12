@@ -125,19 +125,25 @@ const IBYcourse = () => {
   }
 
 
-  const date = () =>{
-    if(selectBatch === ''){
-      setError(true) ; setOpenForm(false)
+  const date = () => {
+    if (selectBatch === '') {
+      setError(true); setOpenForm(false)
     } else {
       switch (selectBatch) {
-      case 'JUN - AUG 2023':
-        setPrice(1500) ; setError(false) 
+      case 'MAR - MAY 2024':
+        setPrice(2500); setError(false)
         break
-      case 'SEP - NOV 2023': 
-        setPrice(1000); setError(false)
+      case 'JUN - AUG 2024':
+        setPrice(1875); setError(false)
         break
-      case 'DEC 2023 - FEB 2024':
-        setPrice(500); setError(false)
+      case 'SEP - NOV 2024':
+        setPrice(1250); setError(false)
+        break
+      case 'DEC 2024 - FEB 2025':
+        setPrice(625); setError(false)
+        break
+      case 'MAR 2024 - FEB 2025':
+        setPrice(2500); setError(false)
         break
       default:
         break
@@ -145,7 +151,7 @@ const IBYcourse = () => {
     }
   }
 
-  const batchOptions = ['JUN - AUG 2023','SEP - NOV 2023','DEC 2023 - FEB 2024']
+  const batchOptions = ['MAR - MAY 2024','JUN - AUG 2024','SEP - NOV 2024','DEC 2024 - FEB 2025', 'MAR 2024 ']
 
 
   return (
