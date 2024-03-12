@@ -188,6 +188,13 @@ const NutriDiet = () => {
     parsingAlgo()
     scrollTo(0,0)
   },[])
+  useEffect(() => {
+    if (openForm) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = 'auto'
+    }
+  }, [openForm])
   const options = ['1 month','3 months','6 months']
   const options1 = ['Shape up','Hormonal imbalance diet', 'Gut Health', 'Metabolic disorder', 'Pregnancy/lactation', 'Therapeutic','Other types', 'Nutrition for kids', 'Clinical Plans']
 
