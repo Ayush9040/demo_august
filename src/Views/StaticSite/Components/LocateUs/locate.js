@@ -76,7 +76,7 @@ export const locateData = [
         toRedirect: true,
       },
       {
-        state: 'Juhu',
+        state: 'Juhu, Mumbai',
         notstate:
           'Ground Floor Backside, Abhijat Bunglow, Plot No. 48, NS Road Number 7, Opp. Siddhivinayak Building, JVPD Scheme, Juhu.',
         email: 'dhhruv.s@gmail.com',
@@ -85,7 +85,7 @@ export const locateData = [
         toRedirect: true,
       },
       {
-        state: 'Vile Parle',
+        state: 'Vile Parle, Mumbai',
         notstate:
           'Sanyas Ashram Temple, Off. Bajaj Road, Vile Parle West, Mumbai - 400056',
         email: 'dhhruv.s@gmail.com',
@@ -102,7 +102,7 @@ export const locateData = [
         toRedirect: true,
       },
       {
-        state: 'Lokhandwala',
+        state: 'Lokhandwala, Mumbai',
         notstate:
           'The Yoga Institute, Lokhandwala 703, Aston Building, Above Mercedes Benz Showroom, Andheri, Near Lokhandwala Circle',
         email: 'dhhruv.s@gmail.com',
