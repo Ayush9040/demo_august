@@ -104,7 +104,7 @@ export const locateData = [
       {
         state: 'Lokhandwala, Mumbai',
         notstate:
-          'The Yoga Institute, Lokhandwala 703, Aston Building, Above Mercedes Benz Showroom, Andheri, Near Lokhandwala Circle',
+          'A/209, Royal Sands, Shastri Nagar Road, Lokhandwala, Andheri (W), Mumbai - 400053',
         email: 'dhhruv.s@gmail.com',
         url: 'https://jal.theyogainstitute.org/',
         phone: ['+91-9833864964'],

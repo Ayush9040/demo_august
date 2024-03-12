@@ -433,14 +433,14 @@ const NutriDiet = () => {
       </div>
       { openForm && <SubcriptionForm packageName={ plan } packagePrice={ price }  closeForm={ setOpenForm } />}
 
-      { cardData && cardData.length>0 && <RelatedCourse
+      {!openForm && cardData && cardData.length>0 && <RelatedCourse
         title={'Related Courses'}
         description={' lorem ipsum '}
         cardData={ cardData }
         url={'/courses'}
       />}
 
-      { blogData && blogData.length>0 && <RelatedBlogs
+      {!openForm && blogData && blogData.length>0 && <RelatedBlogs
         title={'Related Blogs'}
         description={' lorem ipsum '}
         cardData={ blogData }
