@@ -23,6 +23,7 @@ const NutriDiet = () => {
 
   const location = useLocation()
   const [ plan,setPlan ] = useState('')
+  const [program, setProgram] = useState('')
   const [ price,setPrice ] = useState()
   const [ err,setErr ] = useState(false)
   const [ openForm,setOpenForm ] = useState(false)
@@ -63,11 +64,36 @@ const NutriDiet = () => {
     borderStyle: 'solid',
     maxWidth: 'fit-content',
     marginTop: '2rem',
-    //marginLeft:'10rem'
+    marginRight:'3rem'
+  }
+
+  const enrollForm2 = ()=>{
+    if(plan==='' || program ==='' ){
+      setErr(true)
+    }else{
+      switch (plan) {
+      case '1 month':
+        setPrice(4999);setErr(false);setOpenForm(true) 
+        break
+      case '3 months':
+        setPrice(9999);setErr(false);setOpenForm(true)
+        break
+      case '6 months':
+        setPrice(14999);setErr(false);setOpenForm(true)
+        break
+        // case 'Single Visit':
+        //   setPrice(1000);setErr(false);setOpenForm(true)
+        //   break
+        
+          
+      default: 
+        break
+      }
+    }
   }
 
   const enrollFrom = ()=>{
-    if(plan==='' ){
+    if(plan==='' || program ==='' ){
       setErr(true)
     }else{
       switch (plan) {
@@ -83,12 +109,16 @@ const NutriDiet = () => {
         // case 'Single Visit':
         //   setPrice(1000);setErr(false);setOpenForm(true)
         //   break
-          
       default: 
         break
       }
+      if (program === 'Clinical Plans') {
+        enrollForm2()
+      }
     }
   }
+
+
 
   const getBlogsData = async(posts)=>{
     const arr=[]
@@ -159,6 +189,7 @@ const NutriDiet = () => {
     scrollTo(0,0)
   },[])
   const options = ['1 month','3 months','6 months']
+  const options1 = ['Shape up','Hormonal imbalance diet', 'Gut Health', 'Metabolic disorder', 'Pregnancy/lactation', 'Therapeutic','Other types', 'Nutrition for kids', 'Clinical Plans']
 
   return (
     <>
@@ -171,6 +202,7 @@ const NutriDiet = () => {
             <p>Take a step for your well-being and enroll in our custom diet plans to get a holistic change in your lifestyle.</p>
             <div
               id="date-select-mobile"
+              style={ { display: 'flex' } }
             >
               <SelectDropDown
                 currentValue={plan}
@@ -179,9 +211,16 @@ const NutriDiet = () => {
                 isStyles={selectStyles1}
                 dates={options}
               />{' '}
+              <SelectDropDown
+                currentValue={program}
+                changeCurrentValue={setProgram}
+                text={'Select Program'}
+                isStyles={selectStyles1}
+                dates={options1}
+              />
             </div>
             <CommonBtn text='Enroll Now' buttonAction={ enrollFrom }   />
-            { err && <small> Please select package* </small>}
+            { err && <small> Please select package/program* </small>}
           </div>
           <div className="highlight-cover">
             <img src={`${baseDomain}${nutriDiet.nutriDietMain}`} alt="sattvik-cooking" />
@@ -233,7 +272,8 @@ const NutriDiet = () => {
               <li><span className='nutri-page-semi-bold' >Pregnancy/ lactation program </span></li>
               <li><span className='nutri-page-semi-bold' >Therapeutic plans </span> (respiratory/ gastroesophageal/ liver/ kidney)</li>
               <li><span className='nutri-page-semi-bold' >Other types of diet </span> (vegan diet/ keto diet / intermittent fasting/lactose intolerant/ gluten free diet)</li>
-              <li><span className='nutri-page-semi-bold' >Nutrition for kids ( Kids diet plan)</span></li>
+              <li><span className='nutri-page-semi-bold' >Nutrition for kids </span>( Kids diet plan)</li>
+              <li><span className='nutri-page-semi-bold' >Clinical Plans </span>( For Diabetes on Insulin/Kidney/Cancer/IBS )</li>
             </ul>
             <p className='nutri-page-bold' >
             Stepwise Process:
@@ -265,6 +305,129 @@ const NutriDiet = () => {
             Achieve long-term wellness through simple, cultural and holistic changes in your nutrition, eating habits and cognitive thinking.
             </p>
             <p><b>Call on <a style={{ color:'blue' }} href='tel:+919967429596' >+91-9967429596</a> for appointments.</b></p>
+            <div>
+              <p>Fee Structure:</p>
+              <h2>Our Programs</h2>
+              {/* <table>
+                <thead>
+                  <tr>
+                    <th>Sr. No.</th>
+                    <th>Program</th>
+                    <th>Package</th>
+                    <th>Fees</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1a</td>
+                    <td>Shape up program</td>
+                    <td>1 Month</td>
+                    <td>Rs 3,999</td>
+                  </tr>
+                  <tr>
+                    <td>1b</td>
+                    <td>Shape up program</td>
+                    <td>3 Months</td>
+                    <td>Rs. 8,999</td>
+                  </tr>
+                  <tr>
+                    <td>1c</td>
+                    <td>Shape up program</td>
+                    <td>6 Months</td>
+                    <td>Rs. 13,999</td>
+                  </tr>
+
+                  <tr>
+                    <td>2a</td>
+                    <td>Hormonal imbalance diet program </td>
+                    <td>1 Month</td>
+                    <td>Rs 3,999</td>
+                  </tr>
+                  <tr>
+                    <td>2b</td>
+                    <td>Hormonal imbalance diet program </td>
+                    <td>3 Months</td>
+                    <td>Rs. 8,999</td>
+                  </tr>
+                  <tr>
+                    <td>2c</td>
+                    <td>Hormonal imbalance diet program </td>
+                    <td>6 Months</td>
+                    <td>Rs. 13,999</td>
+                  </tr>
+
+                  <tr>
+                    <td>3a</td>
+                    <td>Gut Health program </td>
+                    <td>1 Month</td>
+                    <td>Rs 3,999</td>
+                  </tr>
+                  <tr>
+                    <td>3b</td>
+                    <td>Gut Health program </td>
+                    <td>3 Months</td>
+                    <td>Rs. 8,999</td>
+                  </tr>
+                  <tr>
+                    <td>3c</td>
+                    <td>Gut Health program </td>
+                    <td>6 Months</td>
+                    <td>Rs. 13,999</td>
+                  </tr>
+                </tbody>
+              </table> */}
+
+              <table>
+                <thead>
+                  <tr>
+                    <th>Sr. No.</th>
+                    <th>Program</th>
+                    <th>Package</th>
+                    <th>Fees</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1a</td>
+                    <td>Shape up, Hormonal imbalance diet, Gut Health, Metabolic disorder, Pregnancy/ lactation, Therapeutic plans, Other Types of Diet, Nutrition for kids </td>
+                    <td>1 Month</td>
+                    <td>Rs 3,999</td>
+                  </tr>
+                  <tr>
+                    <td>1b</td>
+                    <td>Shape up, Hormonal imbalance diet, Gut Health, Metabolic disorder, Pregnancy/ lactation, Therapeutic plans, Other Types of Diet, Nutrition for kids </td>
+                    <td>3 Months</td>
+                    <td>Rs. 8,999</td>
+                  </tr>
+                  <tr>
+                    <td>1c</td>
+                    <td>Shape up, Hormonal imbalance diet, Gut Health, Metabolic disorder, Pregnancy/ lactation, Therapeutic plans, Other Types of Diet, Nutrition for kids </td>
+                    <td>6 Months</td>
+                    <td>Rs. 13,999</td>
+                  </tr>
+
+                  <tr>
+                    <td>2a</td>
+                    <td>Clinical Plans </td>
+                    <td>1 Month</td>
+                    <td>Rs 4,999</td>
+                  </tr>
+                  <tr>
+                    <td>2b</td>
+                    <td>Clinical Plans </td>
+                    <td>3 Months</td>
+                    <td>Rs. 9,999</td>
+                  </tr>
+                  <tr>
+                    <td>2c</td>
+                    <td>Clinical Plans </td>
+                    <td>6 Months</td>
+                    <td>Rs. 14,999</td>
+                  </tr>
+                </tbody>
+              </table>
+
+            </div>
           </div>
         </div>
       </div>
