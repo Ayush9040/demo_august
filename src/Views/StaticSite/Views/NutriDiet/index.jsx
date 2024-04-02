@@ -192,6 +192,7 @@ const NutriDiet = () => {
     if (openForm) {
       document.body.style.overflow = 'hidden'
     } else {
+      
       document.body.style.overflow = 'auto'
     }
   }, [openForm])
