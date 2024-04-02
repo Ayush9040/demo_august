@@ -87,7 +87,7 @@ export const locateData = [
       {
         state: 'Vile Parle, Mumbai',
         notstate:
-          '4th floor, Kasturba Health Society Medical Research Center, K.D. Road (W), Mumbai - 400056',
+          '4th floor, Kasturba Health Society Medical Research Center, K.D. Road, Vile Parle (W), Mumbai - 400056',
         email: 'dhhruv.s@gmail.com',
         url: 'https://jal.theyogainstitute.org/',
         phone: ['+91-9833864964'],
