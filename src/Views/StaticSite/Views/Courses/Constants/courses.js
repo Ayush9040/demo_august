@@ -46,7 +46,7 @@ const ttc200hr = {
       
       // '1st Jan to 31st Jan 2024',
       // '1st Feb to 29th Feb 2024',
-      '1st Mar to 31st Mar 2024',
+      // '1st Mar to 31st Mar 2024',
       '1st Apr to 30th Apr 2024',
       '1st May to 31st May 2024',
       '1st Jun to 30th Jun 2024 ',
@@ -3828,7 +3828,7 @@ const ttc900hr = {
       // '1st Jan 2024',
       // '1st Feb 2024',
       // '1st Mar 2024',
-      '1st Apr 2024',
+      // '1st Apr 2024',
       '1st May 2024',
       '1st Jun 2024',
       '1st Jul 2024',
@@ -5848,7 +5848,7 @@ const ttc900hr = {
       // '1st Jan 2024',
       // '1st Feb 2024',
       // '1st Mar 2024',
-      '1st Apr 2024',
+      // '1st Apr 2024',
       '1st May 2024',
       '1st Jun 2024',
       '1st Jul 2024',
@@ -7833,7 +7833,7 @@ const camps = {
     },
     dates: [
     
-      '18th Mar & 19th Mar 2024',
+      // '18th Mar & 19th Mar 2024',
       '20th Apr & 21st Apr 2024',
       '20th May & 21st May 2024',
       '15th Jun & 16th Jun 2024',
@@ -8879,7 +8879,7 @@ const camps = {
         templateNonResidential: 'CAMP_FOR_7_DAYS_HEALTH',
       },
     },
-    dates: ['9th Mar to 15th Mar 2024','11th May to 17th May 2024','13rd Jul to 19th Jul 2024','14th Sep to 20th Sep 2024','9th Nov to 15th Nov 2024',''],
+    dates: ['11th May to 17th May 2024','13rd Jul to 19th Jul 2024','14th Sep to 20th Sep 2024','9th Nov to 15th Nov 2024',''],
     online: false,
     onCampus: true,
     nonResidential: true,
@@ -9210,7 +9210,7 @@ const camps = {
     },
     dates: [
       
-      '23rd Mar to 29th Mar 2024',
+      // '23rd Mar to 29th Mar 2024',
       '27th Apr to 3rd May 2024',
       '25th May to 31st May 2024',
       '22nd Jun to 28th Jun 2024',
@@ -9550,7 +9550,7 @@ const camps = {
     batch: 1,
     dates: [
       
-      '3rd Mar to 23rd Mar 2024',
+      // '3rd Mar to 23rd Mar 2024',
       '7th Apr to 27th Apr 2024',
       '5th May to 25th May 2024',
       '2nd Jun to 22nd Jun 2024',
@@ -9910,7 +9910,7 @@ const camps = {
       },
     },
     dates: [
-      '3rd Mar to 23rd Mar 2024',
+      // '3rd Mar to 23rd Mar 2024',
       '7th Apr to 27th Apr 2024',
       '5th May to 25th May 2024',
       '2nd Jun to 22nd Jun 2024',
@@ -10273,7 +10273,7 @@ const camps = {
     },
     dates: [
       
-      '10th Mar to 30th Mar 2024',
+      // '10th Mar to 30th Mar 2024',
       '12th May to 1st Jun 2024',
       '14th Jul to 3rd Aug 2024',
       '8th Sep to 28th Sep 2024',
@@ -11821,7 +11821,7 @@ const classes = {
     },
     category: 'classes',
     dates: [
-      '4th Mar to 29th Mar 2024',
+      // '4th Mar to 29th Mar 2024',
       '8th Apr to 3rd May 2024',
       '6th May to 31st May 2024',
       '3rd Jun to 28th Jun 2024',
@@ -13630,12 +13630,15 @@ const certificate = {
                 'Irritable bowel syndrome (IBS)',
                 'Flatulence and bloating',
                 'Haemorrhoids (piles) and anal fissures',
+                'Perianal abscess and Anal Fistula',
+                'Pilonidal Sinus',
                 'Acidity and GERD',
                 'Migraine',
                 'Fatty Liver',
                 'Inflammatory Bowel Disease (IBD)',
                 'Ulcerative Colitis',
                 'Crohn’s Disease',
+                'Diverticulitis'
               ],
             },
             // {
@@ -13650,6 +13653,7 @@ const certificate = {
               subItems: [
                 'Common cold',
                 'Respiratory allergies',
+                'Pharyngitis',
                 'Tonsillitis',
                 'Laryngitis',
                 'Sinustis',
@@ -13666,8 +13670,14 @@ const certificate = {
               subItems: [
                 'Low blood pressure',
                 'High blood pressure',
+                'Ventricular Septal Defect (VSD)',
+                'Valvular Defects',
+                'Pacemaker',
+                'Atherosclerosis',
+                'Angina',
                 'Ischemic heart disease',
                 'Varicose veins',
+                'Deep Vein Thrombosis',
                 'Stroke',
                 'Facial paralysis',
               ],
@@ -13681,15 +13691,18 @@ const certificate = {
               subItems: [
                 'Hypothyroidism',
                 'Hyperthyroidism',
-              ],
-            },
-            {
-              listItem: 'Parathyroid Gland',
-              subItems: [
+                'Parathyroid Gland',
                 'Hyperparathyroidism',
-                'Hypoparathyroidism',
+                'Hypoparathyroidism'
               ],
             },
+            // {
+            //   listItem: 'Parathyroid Gland',
+            //   subItems: [
+            //     'Hyperparathyroidism',
+            //     'Hypoparathyroidism',
+            //   ],
+            // },
             {
               listItem: 'Weight Management',
               subItems: [
@@ -13702,6 +13715,7 @@ const certificate = {
                 'Anorexia Nervosa',
                 'Binge Eating Disorder',
                 'Bulimia Nervosa',
+                'Orthorexia Nervosa'
               ],
             },
             {
@@ -13716,6 +13730,7 @@ const certificate = {
                 'PCOS',
                 'Fibroids',
                 'Menopause',
+                'Uterine Prolapse'
               ],
             },
             {
@@ -13735,6 +13750,7 @@ const certificate = {
               subItems: [
                 'General management',
                 'Sprain/Strain',
+                'Fascia and Myofacial Pain',
                 'Fibromyalgia',
                 'Hernia',
                 'Cervical Spondylitis',
@@ -13744,6 +13760,7 @@ const certificate = {
                 'Lumbar Spondylosis (Osteoarthritis of Spine)',
                 'Sciatica',
                 'Piriformis Syndrome',
+                'Coccydenia',
                 'Osteoporosis',
                 'Osteoarthritis',
                 'Gout',
@@ -13770,6 +13787,9 @@ const certificate = {
             {
               listItem: 'Psychological and psychiatric disorders',
               subItems: [
+                'Hormones/Chemicals Behind Our Moods',
+                'Happy Hormones',
+                'Stress Hormones',
                 'Stress Management',
                 'Depression',
                 'Anxiety Disorders',

@@ -87,7 +87,7 @@ export const locateData = [
       {
         state: 'Vile Parle, Mumbai',
         notstate:
-          'Sanyas Ashram Temple, Off. Bajaj Road, Vile Parle West, Mumbai - 400056',
+          '4th floor, Kasturba Health Society Medical Research Center, K.D. Road (W), Mumbai - 400056',
         email: 'dhhruv.s@gmail.com',
         url: 'https://jal.theyogainstitute.org/',
         phone: ['+91-9833864964'],
@@ -107,7 +107,7 @@ export const locateData = [
           'A/209, Royal Sands, Shastri Nagar Road, Lokhandwala, Andheri (W), Mumbai - 400053',
         email: 'dhhruv.s@gmail.com',
         url: 'https://jal.theyogainstitute.org/',
-        phone: ['+91-9833864964'],
+        phone: ['+91-8369667701'],
         toRedirect: true,
       },
       {
