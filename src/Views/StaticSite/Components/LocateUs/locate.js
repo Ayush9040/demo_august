@@ -141,6 +141,7 @@ export const locateData = [
 
       // {
       //   state:'Andheri (W)',
+      
       //   notstate:'Samartha Aishwarya, B-Wing, #710,7th floor, Above Marks & Spencer, Lion Sol Marg, Opp. Highland Park,Lokhandwala Complex, Andheri (West), Mumbai- 400053',
       //   phone:''
       // },
