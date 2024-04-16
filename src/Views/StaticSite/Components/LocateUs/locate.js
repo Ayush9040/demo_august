@@ -41,7 +41,7 @@ export const locateData = [
       },
       {
         state: 'Delhi',
-        //notstate:'Swami Parmanand Prakritik Chikitsalaya (SPPC) Main Mother Dairy Road, Shanti Marg,Near Manglam Red Light, Narwana Rd, Block E, West Vinod Nagar, New Delhi, 110092',
+        notstate:'W-1, W Block (Lower Ground Floor) Greater Kailash Part-1, New Delhi-110048',
         phone: ['+91-9899904455'],
         email: 'tyidelhi@theyogainstitute.org',
         website: 'https://theyogainstitutedelhi.com',
@@ -70,7 +70,7 @@ export const locateData = [
         state: 'Santacruz (W), Mumbai',
         notstate:
           'Rotary Club of Bombay West Rotary Service Centre, Rotary Chowk, Juhu Tara Road, Santacruz W, Mumbai 400049.',
-        email: 'dhhruv.s@gmail.com',
+        email: 'juhuandheri@theyogainstitute.in',
         url: 'https://jal.theyogainstitute.org/',
         phone: ['+91-9833864964'],
         toRedirect: true,
@@ -78,8 +78,8 @@ export const locateData = [
       {
         state: 'Juhu, Mumbai',
         notstate:
-          'Ground Floor Backside, Abhijat Bunglow, Plot No. 48, NS Road Number 7, Opp. Siddhivinayak Building, JVPD Scheme, Juhu.',
-        email: 'dhhruv.s@gmail.com',
+          '4th floor, Kasturba Health Society Medical Research Center, K.D. Road, Vile Parle (W), Mumbai - 400056',
+        email: 'juhuandheri@theyogainstitute.in',
         url: 'https://jal.theyogainstitute.org/',
         phone: ['+91-9833864964'],
         toRedirect: true,
@@ -87,8 +87,8 @@ export const locateData = [
       {
         state: 'Vile Parle, Mumbai',
         notstate:
-          '4th floor, Kasturba Health Society Medical Research Center, K.D. Road, Vile Parle (W), Mumbai - 400056',
-        email: 'dhhruv.s@gmail.com',
+          'Sanyas Ashram Temple, Bajaj Road, Vile Parle West, Near Vile Parle Railway Station, Mumbai- 400056',
+        email: 'juhuandheri@theyogainstitute.in',
         url: 'https://jal.theyogainstitute.org/',
         phone: ['+91-9833864964'],
         toRedirect: true,
@@ -105,7 +105,7 @@ export const locateData = [
         state: 'Lokhandwala, Mumbai',
         notstate:
           'A/209, Royal Sands, Shastri Nagar Road, Lokhandwala, Andheri (W), Mumbai - 400053',
-        email: 'dhhruv.s@gmail.com',
+        email: 'juhuandheri@theyogainstitute.in',
         url: 'https://jal.theyogainstitute.org/',
         phone: ['+91-9833864964'],
         toRedirect: true,
