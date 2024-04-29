@@ -12442,6 +12442,7 @@ const classes = {
               listItem:
                 'Rest is the same as the morning batch, a mix of philosophy and regular online yogaasanas session.',
               subItems: [],
+              
             },
           ],
         },
