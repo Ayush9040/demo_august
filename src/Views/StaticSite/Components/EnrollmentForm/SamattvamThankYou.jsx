@@ -13,7 +13,7 @@ const SamattvamThankyou = () => {
         <div id="text">
           <p className="thankyou">Thank you</p>
           <p className="message">
-          Enjoy the blissful satsang every sunday from 9.30am to 10.30am in the divine presence of Dr. Hansaji Yogendra
+          Enjoy the blissful samattvam every sunday from 9.30am to 10.30am in the divine presence of Dr. Hansaji Yogendra
           </p>
         </div>
       </div>
