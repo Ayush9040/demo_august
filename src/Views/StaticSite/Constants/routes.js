@@ -83,6 +83,8 @@ const DigitalMedia = lazy(() =>
 const SatsangThankyou = lazy(() =>
   import('../Components/EnrollmentForm/SatsangThankYou')
 )
+
+const SamatvamThankyou = lazy(()=> import ('../Components/EnrollmentForm/SamattvamThankYou'))
 const SingleDonation = lazy(() =>
   import('../Views/Donation/Views/single-donation')
 )
@@ -456,6 +458,14 @@ const staticSiteRoutes = [
     exact: true,
     id: 'statisSiteUnderEnrollmentThankyou',
     routePath: '/satsang_thankyou',
+    name: 'EnrollmentThankyou',
+  },
+  {
+    Component: SamatvamThankyou,
+    path: '/samattvam_thankyou',
+    exact: true,
+    id: 'statisSiteUnderEnrollmentThankyou',
+    routePath: '/samattvam_thankyou',
     name: 'EnrollmentThankyou',
   },
   {

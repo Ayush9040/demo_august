@@ -3290,7 +3290,7 @@ const ttc900hr = {
     },
     category: 'ttc',
     dates: [
-      '27th Jan to 21st Apr 2024',
+      // '27th Jan to 21st Apr 2024',
       '27th Apr to 21st Jul 2024',
       '27th Jul to 20th Oct 2024',
       '26th Oct to 20th Jan 2025',
@@ -3926,7 +3926,9 @@ const ttc900hr = {
           title: 'Prerequisites:',
 
           text: [
-            '200 HRS TTC / 7 Day Health Camp / 21 Days Better Living Course from the Yoga Institute',
+            // 'Health Camp / 21 Days Better Living Course from the Yoga Institute',
+            'To enroll in the 1-year Teacher Training Course, completion of the 7-days Health Camp, 21-days Better Living Course, or 200-hour TTC is required.',
+            'You can apply for the 1-year TTC within three months of finishing any of these prerequisite courses.'
           ],
         },
       },
@@ -3938,7 +3940,7 @@ const ttc900hr = {
           title: '',
 
           text: [
-            'Students have a choice to register for an online or offline (on-campus) course. Admissions are open for both options.',
+            // 'Students have a choice to register for an online or offline (on-campus) course. Admissions are open for both options.',
           ],
         },
       },
@@ -4629,7 +4631,9 @@ const ttc900hr = {
           title: 'Prerequisites:',
 
           text: [
-            '200 HRS TTC / 7 Day Health Camp / 21 Days Better Living Course from the Yoga Institute',
+            // '200 HRS TTC / 7 Day Health Camp / 21 Days Better Living Course from the Yoga Institute',
+            'To enroll in the 2-year Teacher Training Course, completion of the 7-days Health Camp, 21-days Better Living Course, or 200-hour TTC is required.',
+            'You can apply for the 2-year TTC within three months of finishing any of these prerequisite courses'
           ],
         },
       },
@@ -4641,7 +4645,7 @@ const ttc900hr = {
           title: '',
 
           text: [
-            'Students have a choice to register for an online or offline (on-campus) course. Admissions are open for both options.',
+            // 'Students have a choice to register for an online or offline (on-campus) course. Admissions are open for both options.',
           ],
         },
       },
@@ -5941,7 +5945,9 @@ const ttc900hr = {
           title: 'Prerequisites:',
 
           text: [
-            '200 HRS TTC / 7 Day Health Camp / 21 Days Better Living Course from the Yoga Institute',
+            // '200 HRS TTC / 7 Day Health Camp / 21 Days Better Living Course from the Yoga Institute',
+            'To enroll in the 7-month Teacher Training Course, completion of the 7-days Health Camp, 21-days Better Living Course, or 200-hour TTC is required.',
+            'You can apply for the 7-month TTC within three months of finishing any of these prerequisite courses.'
           ],
         },
       },
@@ -5952,7 +5958,7 @@ const ttc900hr = {
           title: '',
 
           text: [
-            'Students have a choice to register for an online or offline (on-campus) course. Admissions are open for both options.',
+            // 'Students have a choice to register for an online or offline (on-campus) course. Admissions are open for both options.',
           ],
         },
       },
@@ -7834,7 +7840,7 @@ const camps = {
     dates: [
     
       // '18th Mar & 19th Mar 2024',
-      '20th Apr & 21st Apr 2024',
+      // '20th Apr & 21st Apr 2024',
       '20th May & 21st May 2024',
       '15th Jun & 16th Jun 2024',
       '15th Jul & 16th Jul 2024',
@@ -8140,7 +8146,7 @@ const camps = {
         templateNonResidential: '',
       },
     },
-    dates: ['28th Apr 2024','28th Jul 2024','27th Oct 2024'],
+    dates: ['28th Jul 2024','27th Oct 2024'],
     mostPopular: false,
     rating: 5,
     colorCode: '#CE9B51',
@@ -8734,7 +8740,7 @@ const camps = {
         templateNonResidential: '',
       },
     },
-    dates: ['28th Apr 2024','26th May 2024','23rd Jun 2024','28th Jul 2024','25th Aug 2024','22nd Sep 2024','27th oct 2024','24th Nov 2024','22nd Dec 2024'],
+    dates: ['26th May 2024','23rd Jun 2024','28th Jul 2024','25th Aug 2024','22nd Sep 2024','27th oct 2024','24th Nov 2024','22nd Dec 2024'],
     mostPopular: false,
     rating: 5,
     colorCode: '#EDBE66',
@@ -9551,7 +9557,7 @@ const camps = {
     dates: [
       
       // '3rd Mar to 23rd Mar 2024',
-      '7th Apr to 27th Apr 2024',
+      // '7th Apr to 27th Apr 2024',
       '5th May to 25th May 2024',
       '2nd Jun to 22nd Jun 2024',
       '7th Jul to 27th Jul 2024',
@@ -9911,7 +9917,7 @@ const camps = {
     },
     dates: [
       // '3rd Mar to 23rd Mar 2024',
-      '7th Apr to 27th Apr 2024',
+      // '7th Apr to 27th Apr 2024',
       '5th May to 25th May 2024',
       '2nd Jun to 22nd Jun 2024',
       '7th Jul to 27th Jul 2024',
@@ -12174,7 +12180,8 @@ const classes = {
     timing:
       'Saturday & Sunday: Saturday: 8:00 am - 9:30 am (IST) and Sunday: 8:00 am - 9:30 am (IST) or 10:30 am - 12:00 pm (IST)',
     fees: {
-      onlineFee: 0,
+      onlineFee: 1100,
+      // onlineFee: 0,
       offlineFee: { residentialFee: 0, nonResidentialFee: 1000 },
     },
     category: 'classes',
@@ -12201,7 +12208,7 @@ const classes = {
           points: [
             {
               listItem:
-                'Weekend Yoga Classes are of 1 and half hour duration held every Saturday and sunda',
+                'Weekend Yoga Classes are of 1 and half hour duration held every Saturday and Sunday',
               subItems: [],
             },
             {
@@ -12467,10 +12474,10 @@ const classes = {
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
     templateId: {
-      templateOnline: 'GENERAL_AUTO_EMAIL',
+      templateOnline: 'SAMATTVAM_FORM_CONFIRMATION_MAIL',
       templateOffline: {
-        templateResidential: '',
-        templateNonResidential: '',
+        templateResidential: 'SAMATTVAM_FORM_CONFIRMATION_MAIL',
+        templateNonResidential: 'SAMATTVAM_FORM_CONFIRMATION_MAIL',
       },
     },
     image: `${baseDomain}${homeAssets.homeAsset16}`,
@@ -12482,14 +12489,14 @@ const classes = {
     colorCode: '#C48E8C',
     timing: 'Every Saturday: 2.00 p.m. - 5.00 p.m. (IST)',
     fees: {
-      onlineFee: 200,
+      onlineFee: 0,
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'classes',
     dates: [],
     online: false,
     onCampus: true,
-    nonResidential: false,
+    nonResidential: true,
     residential: false,
     certficate: false,
     details: [
@@ -12533,7 +12540,7 @@ const classes = {
         type: 'paragraph',
         content: {
           title: 'Duration',
-          text: ['Every Saturday: 2.00 p.m. - 5.00 p.m. (IST)'],
+          text: ['Every Saturday: 2.00 p.m. - 5.00 p.m. (IST)','1.30 p.m. - 2.00 p.m. : Registration (Outside C1 Hall)', '2.00 p.m. - 2.30 p.m. : Physical Parameter Assessments', '2.30 p.m. - 3.00 p.m. : Institute Overview & Asana Introduction', '3.00 p.m. - 3.30 p.m. : Lifestyle Management Video by  Dr. Hansaji Yogendra', '3.30 p.m. - 3.45 p.m. : Sattvik Snack', '3.45 p.m. - 4.10 p.m. :  Special Talk by Doctor/Counsellor', '4:10 p.m. : Personalized one-on-one consultations with:-', 'Doctor', 'Yoga Counsellor', 'Asana Teacher (if required) '],
         },
       },
       {
@@ -12552,13 +12559,13 @@ const classes = {
           text: ['On Saturday only between 1.30 p.m. and 2.00 p.m.'],
         },
       },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'Fees',
-          text: ['Rs. 200/- per person (inclusive of snacks).'],
-        },
-      },
+      // {
+      //   type: 'paragraph',
+      //   content: {
+      //     title: 'Fees',
+      //     text: ['Rs. 200/- per person (inclusive of snacks).'],
+      //   },
+      // },
     ],
   },
   19: {

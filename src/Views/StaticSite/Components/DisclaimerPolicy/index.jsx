@@ -164,7 +164,7 @@ const DisclaimerPolicy = ({
         }
 
         if(response?.data?.success){
-          if(currentCourse.key!=='satsang' && formData?.residental!=='RESIDENTIAL'){
+          if(currentCourse.key!=='satsang' || currentCourse.key!=='samattvam' && formData?.residental!=='RESIDENTIAL'){
             const paymentOrderResponse =  await axios.post(`${ cmsBaseDomain }/payment/order?enrollmentFormId=${response.data.data['_id']}`, {
               amount: courseFee,
               notes: currentCourse.metaDescription,
@@ -213,6 +213,8 @@ const DisclaimerPolicy = ({
 
             if(currentCourse.key==='satsang'){
               navigate('/satsang_thankyou')
+            }else if(currentCourse.key ==='samattvam'){
+              navigate('/samattvam_thankyou')
             }else{
               
               navigate(`/enrollment_thankyou/${currentCourse.key}`)
