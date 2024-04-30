@@ -98,7 +98,7 @@ jobs:
     - name: Copy repo
       env:
         ACCESS_TOKEN: ${{ secrets.GIT_TOKEN }}
-      run: git clone "https://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@github.com/NexGenIoT/docker-compose-ops.git"
+      run: git clone "https://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@github.com/NexGenIoT/docker-compose-ops.git"
       
     - name: Build docker image
       run: |
