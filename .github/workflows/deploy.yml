@@ -98,8 +98,8 @@ jobs:
     - name: Copy repo
       env:
         ACCESS_TOKEN: ${{ secrets.GIT_TOKEN }}
-      run: git clone "https://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@github.com/NexGenIoT/docker-compose-ops.git"
-      
+      run: git clone "https://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/NexGenIoT/docker-compose-ops.git"
+      @github.com
     - name: Build docker image
       run: |
         cp /home/runner/work/tyi-user-webapp/tyi-user-webapp/docker-compose-ops/tyi-user-webapp/production/docker-compose.yml /home/runner/work/tyi-user-webapp/tyi-user-webapp/
