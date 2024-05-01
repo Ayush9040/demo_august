@@ -47,7 +47,7 @@ const ttc200hr = {
       // '1st Jan to 31st Jan 2024',
       // '1st Feb to 29th Feb 2024',
       // '1st Mar to 31st Mar 2024',
-      '1st Apr to 30th Apr 2024',
+      // '1st Apr to 30th Apr 2024',
       '1st May to 31st May 2024',
       '1st Jun to 30th Jun 2024 ',
       '1st Jul to 31st Jul 2024 ',
@@ -12474,11 +12474,18 @@ const classes = {
     key: 'samattvam',
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
+    // templateId: {
+    //   templateOnline: 'SAMATTVAM_FORM_CONFIRMATION_MAIL',
+    //   templateOffline: {
+    //     templateResidential: 'SAMATTVAM_FORM_CONFIRMATION_MAIL',
+    //     templateNonResidential: 'SAMATTVAM_FORM_CONFIRMATION_MAIL',
+    //   },
+    // },
     templateId: {
-      templateOnline: 'SAMATTVAM_FORM_CONFIRMATION_MAIL',
+      templateOnline: 'SAMATTVAM_CLASSES',
       templateOffline: {
-        templateResidential: 'SAMATTVAM_FORM_CONFIRMATION_MAIL',
-        templateNonResidential: 'SAMATTVAM_FORM_CONFIRMATION_MAIL',
+        templateResidential: 'SAMATTVAM_CLASSES',
+        templateNonResidential: 'SAMATTVAM_CLASSES',
       },
     },
     image: `${baseDomain}${homeAssets.homeAsset16}`,
