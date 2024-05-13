@@ -69,7 +69,7 @@ export const locateData = [
       {
         state: 'Santacruz (W), Mumbai',
         notstate:
-          'Rotary Club of Bombay West Rotary Service Centre, Rotary Chowk, Juhu Tara Road, Santacruz W, Mumbai 400049.',
+          'Sangit Mahabharati Vidhyalaya,N.S. Road No. 10, JVPD Scheme, Juhu, Mumbai 400049.',
         email: 'juhuandheri@theyogainstitute.in',
         url: 'https://jal.theyogainstitute.org/',
         phone: ['+91-9833864964'],
@@ -78,7 +78,7 @@ export const locateData = [
       {
         state: 'Juhu, Mumbai',
         notstate:
-          '4th floor, Kasturba Health Society Medical Research Center, K.D. Road, Vile Parle (W), Mumbai - 400056',
+          'Jamnabai Narsee School,N.S. Road No.7, JVPD Scheme, Juhu, Mumbai - 400049',
         email: 'juhuandheri@theyogainstitute.in',
         url: 'https://jal.theyogainstitute.org/',
         phone: ['+91-9833864964'],
