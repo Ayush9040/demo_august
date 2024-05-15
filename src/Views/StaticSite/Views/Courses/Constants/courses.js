@@ -2440,7 +2440,7 @@ const ttc200hr = {
     },
     category: 'ttc',
     title: '200 Hours Yoga TTC - 2 Months Online Yoga Teacher Training Course - English - Batch 6 ',
-    dates: ['22nd April to 15th June 2024'],
+    dates: ['24th June to 17th August 2024'],
     online: true,
     onCampus: false,
     nonResidential: false,
