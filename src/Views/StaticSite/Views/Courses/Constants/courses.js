@@ -1479,8 +1479,8 @@ const ttc200hr = {
     title: '200 Hours Hindi Teacher Training Course - 2 Months TTC Online - Hindi - Batch 4',
     dates: [
       // '15th Jan to 9th Mar 2024',
-      '18th Mar to 11th May 2024',
-      '20th May to 13th Jul 2024',
+      // '18th Mar to 11th May 2024',
+      // '20th May to 13th Jul 2024',
       '22nd Jul to 14th Sep 2024',
       '23rd Sep to 16th Nov 2024',
       '25th Nov to 18th Jan 2025'
@@ -3829,7 +3829,7 @@ const ttc900hr = {
       // '1st Feb 2024',
       // '1st Mar 2024',
       // '1st Apr 2024',
-      '1st May 2024',
+      // '1st May 2024',
       '1st Jun 2024',
       '1st Jul 2024',
       '1st Aug 2024',
@@ -3904,7 +3904,7 @@ const ttc900hr = {
         content: {
           title: 'Timings',
 
-          text: ['900 hrs TTC 1 Year TTC Online & On Campus - Hindi'],
+          text: ['Monday to Friday : 1:30 pm - 4:00 pm (IST)'],
         },
       },
 
@@ -10280,10 +10280,12 @@ const camps = {
     dates: [
       
       // '10th Mar to 30th Mar 2024',
-      '12th May to 1st Jun 2024',
       '14th Jul to 3rd Aug 2024',
+      '11th Aug to 31st Aug 2024',
       '8th Sep to 28th Sep 2024',
+      '13th Oct to 2nd Nov 2024',
       '10th Nov to 30th Nov 2024',
+      '8th Dec to 28th Dec 2024',
 
     ],
     online: true,
@@ -11828,10 +11830,10 @@ const classes = {
     category: 'classes',
     dates: [
       // '4th Mar to 29th Mar 2024',
-      '8th Apr to 3rd May 2024',
+      // '8th Apr to 3rd May 2024',
       '6th May to 31st May 2024',
       '3rd Jun to 28th Jun 2024',
-      '8th Jul to 2nd Aug 2024',
+      '1st Jul to 28th Jul 2024',
       '5th Aug to 30th Aug 2024',
       '2nd Sep to 27th Sep 2024',
       '1st Oct to 7th Oct 2024',
@@ -13055,7 +13057,7 @@ const certificate = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'certificate-course',
-    dates: [ '1st May 2024 to 28th June 2024· Evening','13th May to 4th Jul 2024· Morning','5th Aug to 26th Sep 2024· Morning','6th November 2024 to 28th December 2024· Evening','11th Nov to 2nd Jan 2025· Morning'],
+    dates: [ '5th Aug to 26th Sep 2024· Morning','6th November 2024 to 28th December 2024· Evening','11th Nov to 2nd Jan 2025· Morning'],
     online: true,
     onCampus: false,
     nonResidential: false,
@@ -13328,7 +13330,7 @@ const certificate = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'certificate-course',
-    dates: ['3rd May to 8th Jun 2024','2nd Aug to 7th Sep 2024',],
+    dates: ['2nd Aug to 7th Sep 2024','15th Nov - 21st Dec 2024'],
     online: true,
     onCampus: true,
     nonResidential: false,
@@ -13533,7 +13535,7 @@ const certificate = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'certificate-course',
-    dates: ['3rd May to 26th Aug 2024', '28th Aug  to 20th Dec 2024'],
+    dates: [ '28th Aug  to 20th Dec 2024'],
     online: true,
     onCampus: true,
     nonResidential: false,
