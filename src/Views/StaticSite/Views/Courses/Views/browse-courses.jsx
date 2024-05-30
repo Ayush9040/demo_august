@@ -10,19 +10,26 @@ import {
 import InnerNavComponent from '../../../Components/InnerNavComponent'
 import { useParams } from 'react-router-dom'
 // import { courseArray } from '../../../Constants/courses/c200hr'
-import { AllCourses, c200hr,c500hr,c900hr,campsArr,certificateArr,classesArr } from '../Constants/courses'
+import {
+  AllCourses,
+  c200hr,
+  c500hr,
+  c900hr,
+  campsArr,
+  certificateArr,
+  classesArr,
+} from '../Constants/courses'
 import CourseCard from '../../../Components/CourseCard'
 import { Helmet } from 'react-helmet'
 import metaDataObj from '../../../../../Constants/metaData.json'
 import './style.scss'
 
 const BrowseCourses = () => {
-
   const browseCourse = {
-    title:'browse-course',
-    color:'orange',
-    menuColor:'orange',
-    menuItems:[]
+    title: 'browse-course',
+    color: 'orange',
+    menuColor: 'orange',
+    menuItems: [],
   }
 
   const { type } = useParams()
@@ -41,33 +48,29 @@ const BrowseCourses = () => {
       setBreadcrumbs('Certificate Courses')
     }
     return breadcrumbs
-
   }
   useEffect(() => {
     if (type === 'ttc') {
-      setCategory(
-        [...c200hr,...c500hr,...c900hr]
-      )
+      setCategory([...c200hr, ...c500hr, ...c900hr])
     } else if (type === 'most-popular') {
       setCategory(AllCourses.filter((item) => item.mostPopular === true))
     } else if (type === 'camps-workshops') {
       setCategory([...campsArr])
-    } else if(type === 'classes') {
+    } else if (type === 'classes') {
       setCategory([...classesArr])
     } else {
-      setCategory ([...certificateArr])
+      setCategory([...certificateArr])
     }
     ChangeContent()
   }, [type])
 
   return (
     <>
-      { metaDataObj['/courses'] && 
-    <Helmet
-      title={metaDataObj['/courses']?.title}
-    /> }
+      {metaDataObj['/courses'] && (
+        <Helmet title={metaDataObj['/courses']?.title} />
+      )}
       <div className="browse-courses">
-        <InnerNavComponent abc={ browseCourse } />
+        <InnerNavComponent abc={browseCourse} />
         <div className="breadcrumbs">
           <p>Browse &gt; {breadcrumbs}</p>
         </div>
@@ -96,32 +99,26 @@ const BrowseCourses = () => {
                     <li
                       style={{ cursor: 'pointer' }}
                       onClick={() => {
-                        setCategory(
-                          [...c200hr]
-                        )
+                        setCategory([...c200hr])
                       }}
                     >
-                    200 Hour Courses{' '}
+                      200 Hour Courses{' '}
                     </li>
                     <li
                       style={{ cursor: 'pointer' }}
                       onClick={() => {
-                        setCategory(
-                          [...c500hr]
-                        )
+                        setCategory([...c500hr])
                       }}
                     >
-                    500 Hour Courses
+                      500 Hour Courses
                     </li>
                     <li
                       style={{ cursor: 'pointer' }}
                       onClick={() => {
-                        setCategory(
-                          [...c900hr]
-                        )
+                        setCategory([...c900hr])
                       }}
                     >
-                    900 Hour Courses
+                      900 Hour Courses
                     </li>
                   </ul>
                 </AccordionItemPanel>
@@ -156,7 +153,7 @@ const BrowseCourses = () => {
             </Accordion>
           </div>
           <div className="course-grid">
-            {category?.map((item, i) => (
+            {category?.slice(0, 5).map((item, i) => (
               <CourseCard
                 key={i}
                 color={item.colorCode}
