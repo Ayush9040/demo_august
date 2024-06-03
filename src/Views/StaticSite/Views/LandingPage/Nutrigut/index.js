@@ -131,7 +131,7 @@ const Nutrigut = () => {
                       <span className="pop">&gt;</span>DATE
                     </div>
                   </div>
-                  <div className="flex-content1">6th January 2024</div>
+                  <div className="flex-content1">11th May 2024</div>
                 </div>
                 <div className="flex-items">
                   <div className="flex-border">
