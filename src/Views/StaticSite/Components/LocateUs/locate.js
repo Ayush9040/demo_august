@@ -69,19 +69,37 @@ export const locateData = [
       {
         state: 'Santacruz (W), Mumbai',
         notstate:
-          'Sangit Mahabharati Vidhyalaya,N.S. Road No. 10, JVPD Scheme, Juhu, Mumbai 400049.',
+          'Rotary Club of Bombay West, Rotary Service Center, Opp. Pernia Pop-up Shop, Mangelwadi, Juhu Tara Road, Santacruz (W), Mumbai - 54.',
         email: 'juhuandheri@theyogainstitute.in',
         url: 'https://jal.theyogainstitute.org/',
         phone: ['+91-9833864964'],
         toRedirect: true,
       },
       {
-        state: 'Juhu, Mumbai',
+        state: 'Juhu Center 1, Mumbai',
         notstate:
-          'Jamnabai Narsee School,N.S. Road No.7, JVPD Scheme, Juhu, Mumbai - 400049',
+          'Sangit Mahabharati Vidhyalaya, N.S. Road No. 10, JVPD Scheme, Juhu, Mumbai 400049',
         email: 'juhuandheri@theyogainstitute.in',
         url: 'https://jal.theyogainstitute.org/',
         phone: ['+91-9833864964'],
+        toRedirect: true,
+      },
+      {
+        state: 'Juhu Center 2, Mumbai',
+        notstate:
+          'Jamnabai Narsee School, N.S. Road No. 7, JVPD Scheme, Juhu, Mumbai 400049.',
+        email: 'juhuandheri@theyogainstitute.in',
+        url: 'https://jal.theyogainstitute.org/',
+        phone: ['+91-9833864964'],
+        toRedirect: true,
+      },
+      {
+        state: 'Mira Road, Mumbai',
+        notstate:
+          'Royal College of Arts, Science & Commerce , Bhaktivedanta Swami Marg, Srishti Complex, Mira Road East, Maharashtra 401107.',
+        email: 'juhuandheri@theyogainstitute.in',
+        url: 'https://jal.theyogainstitute.org/',
+        phone: ['+91-9833864964', '+91-8655940060'],
         toRedirect: true,
       },
       {
