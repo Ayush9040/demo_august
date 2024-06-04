@@ -10,7 +10,14 @@ export const activityData = [
     image:`${baseDomain}${homeAssets.homeAsset099}`,
     url: '/shop/product/65a8f78181ad17001903ab5e'
   },
-
+  {
+    id: 5,
+    title: 'Full Moon Meditation',
+    description:
+      'Join us on full moon nights for meditation practice with Dr. Hansaji Yogendra to let go of stress and feel your worries melt away in the cool night breeze.',
+    image: `${baseDomain}${homeAssets.homeAsset14}`,
+    url: '/fullmoon-meditation',
+  },
   {
     id: 1,
     title:'7 Rules to Reset Mind and Body',
@@ -34,20 +41,20 @@ export const activityData = [
     url: '/yoga-by-the-bay',
   },
   {
+    id: 11,
+    title: 'MA Yoga Shastra',
+    description:
+        'A comprehensive two-year program designed to deepen your understanding and practice of yoga.',
+    image:`${baseDomain}${homeAssets.homeAsset099}`,
+    url: '/ma-yoga-shastra'
+  },
+  {
     id: 4,
     title: 'Couple’s class',
     description:
       'This class will help couples fortify their bond, support the relationship, build intimacy and trust among couples. Join our year-long sessions.',
     image: `${baseDomain}${homeAssets.homeAsset13}`,
     url: '/couples-classes',
-  },
-  {
-    id: 5,
-    title: 'Full Moon Meditation',
-    description:
-      'Join us on full moon nights for meditation practice with Dr. Hansaji Yogendra to let go of stress and feel your worries melt away in the cool night breeze.',
-    image: `${baseDomain}${homeAssets.homeAsset14}`,
-    url: '/fullmoon-meditation',
   },
   {
     id: 6,

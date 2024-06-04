@@ -18,12 +18,20 @@ const Activity = () => {
 
   useEffect(() => {
     if (!activitySliderRef.current) return
-    if (isInteracting) activitySliderRef.current.slickPlay()
-    else {
-      activitySliderRef.current.slickPause()
-      activitySliderRef.current.slickGoTo(0)
+    if (isInteracting) {
+      if (typeof activitySliderRef.current.slickPlay === 'function') {
+        activitySliderRef.current.slickPlay()
+      }
+    } else {
+      if (typeof activitySliderRef.current.slickPause === 'function') {
+        activitySliderRef.current.slickPause()
+      }
+      if (typeof activitySliderRef.current.slickGoTo === 'function') {
+        activitySliderRef.current.slickGoTo(0)
+      }
     }
   }, [isInteracting])
+
 
   let settings = {
     dots: true,
@@ -35,7 +43,7 @@ const Activity = () => {
     autoplay: false,
     autoPlaySpeed: 500,
     //centerMode: true,
-    pauseOnHover:true,
+    pauseOnHover: true,
     centerPadding: '20%',
     responsive: [
       {
@@ -58,7 +66,18 @@ const Activity = () => {
   return (
     <>
       <div className="activity-container glabal-padding">
-        <div className="activity-card-container" ref={activityRef} onMouseEnter={ ()=>activitySliderRef.current.slickPause() } onMouseLeave={ ()=>activitySliderRef.current.slickPlay() } >
+        <div className="activity-card-container" ref={activityRef}
+          onMouseEnter={() => {
+            if (activitySliderRef.current && typeof activitySliderRef.current.slickPause === 'function') {
+              activitySliderRef.current.slickPause()
+            }
+          }}
+          onMouseLeave={() => {
+            if (activitySliderRef.current && typeof activitySliderRef.current.slickPlay === 'function') {
+              activitySliderRef.current.slickPlay()
+            }
+          }}
+        >
           <Slider
             {...settings}
             ref={(slider) => {
@@ -75,7 +94,7 @@ const Activity = () => {
                   description={item.description}
                   url={item.url}
                 />
-                
+
               )
             })}
           </Slider>

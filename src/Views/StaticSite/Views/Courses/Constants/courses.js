@@ -13003,6 +13003,178 @@ const classes = {
       },
     ],
   },
+  22: {
+    id: '',
+    textdescription6: '',
+    textdescription7: '',
+    textdescription8: '',
+    textdescription9: '',
+    textdescription10: '',
+    textdescription1: '',
+    textdescription2: '',
+    textdescription3: '',
+    textdescription4: '',
+    textdescription5: '',
+    title: 'MA Yoga Shastra',
+    key: 'ma-yoga-shastra',
+    batch: 1,
+    // templateId: 'GENERAL_AUTO_EMAIL',
+    templateId: {
+      templateOnline: 'MA_YOGA_SHASTRA',
+      templateOffline: {
+        templateResidential: 'MA_YOGA_SHASTRA',
+        templateNonResidential: 'MA_YOGA_SHASTRA',
+      },
+    },
+    image: `${baseDomain}${courseAssets.courseAssets115}`,
+    cardImage: `${baseDomain}${courseAssets.courseAssets115}`,
+    mostPopular: false,
+    metaDescription:
+      'The Master of Arts (MA) in Yoga Shastra at The Yoga Institute, Santacruz East, is a comprehensive two-year program designed to deepen your understanding and practice of yoga.',
+    rating: 5,
+    colorCode: '#C48E8C',
+    timing: '4:30 am to 8:30 am (Monday, Wednesday, Friday) 9:00 am to 3:00 pm (Saturday)',
+    fees: {
+      // onlineFee: 1500,
+      offlineFee: { residentialFee: 40000, nonResidentialFee: 0 },
+      internationalFee : '$3950',
+    },
+    category: 'classes',
+    dates: ['Monday, Wednesday, Friday - 4:30 to 8:30pm', 'Saturday - 9:00 am to 3:00 pm'],
+    online: false,
+    onCampus: true,
+    nonResidential: false,
+    residential: true,
+    certficate: false,
+    details: [
+      // {
+      //   type: 'paragraph',
+      //   content: {
+      //     title: 'About The Class:',
+      //     text: [
+      //     ],
+      //   },
+      // },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Overview',
+          text: [
+            'The Master of Arts (MA) in Yoga Shastra at The Yoga Institute, Santacruz East, is a comprehensive two-year program designed to deepen your understanding and practice of yoga. Established in 1918 by Shri Yogendraji, The Yoga Institute is the worlds oldest organized yoga centre. Our institute has a rich legacy of over 100 years, promoting the ideals, wisdom, and practice of yoga and the yogic way of life. This course integrates ancient yogic wisdom with modern scientific knowledge, preparing students for advanced studies and professional practice in yoga.'
+          ],
+        },
+      },
+      {
+        type: 'u-list',
+        content: {
+          title: 'The MA Yoga Shastra program includes a blend of theoretical and practical components, covering a wide range of topics such as:',
+          points: [
+            {
+              listItem: 'Semester - I',
+              subItems: ['Sanskrit', 'Fundamentals of Indian Philosophy', 'Human Anatomy and Physiology', 'Yoga Tradition and Classical Texts', 'Practical and Yoga Teaching'],
+            },
+            {
+              listItem: 'Semester - II',
+              subItems: ['Principles of Indian Philosophy', 'Patanjali Yoga Sutras', 'Yogaopanishad and modern philosophers', 'Applied Yoga', 'Practical and Yoga Teaching'],
+            },
+            {
+              listItem: 'Semester - III',
+              subItems: ['Traditional Yoga Texts – I', 'Yoga and allied sciences', 'Research Methodology', 'Yoga applications', 'Practical and Yoga Teaching'],
+            },
+            {
+              listItem: 'Semester - IV',
+              subItems: ['Traditional Yoga Texts – II', 'Western Psychology', 'Yogopanisahd', 'Nature cure therapy', 'Practical and Yoga Teaching'],
+            },
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Eligibility',
+          text: ['Educational Qualification: Any Bachelors degree from a recognized university.'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Admission Process',
+          text: ['Application Deadline: 15th June.', 'Selection Criteria: Based on merit and timely registration.'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Pricing',
+          text: ['40,000 per year', 'For International Students : $3950 per year'],
+        },
+      },
+      {
+        type: 'u-list',
+        content: {
+          title: 'Career Opportunities',
+          points: [
+            {
+              listItem: 'Graduates of the MA Yoga Shastra program can pursue careers as:',
+              subItems: ['Yoga Instructors', 'Yoga Advisors', 'Academic Professors in Yoga Studies', 'Yoga Researchers',],
+            },
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'How to Apply',
+          text: [
+            'Interested candidates can apply through our website or contact our admissions office at Shri Yogendra Marg, Prabhat Colony, Santacruz East, Mumbai - 400055 India',
+            'For more information, please visit our website or reach out to us at info@theyogainstitute.org or +91-22-26110506, +91-22-26103568. '
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Why Study MA Yoga Shastra at The Yoga Institute?',
+          text: [
+            'Rich Legacy: The Yoga Institute, established in 1918, is the world`s oldest organized yoga center.',
+            'Experienced Faculty: Learn from highly qualified and experienced yoga practitioners and scholars.',
+            'Holistic Approach: Our program emphasizes a holistic approach to yoga, integrating physical, mental, emotional, and spiritual aspects.',
+            'Personalized Attention: We maintain a low student-to-teacher ratio, ensuring personalized attention and guidance',
+            'State-of-the-Art Facilities: Enjoy access to advanced yoga studios, libraries, and research centers.',
+            'Innovative Teaching Methods: Our faculty uses innovative teaching methods that blend traditional knowledge with modern pedagogical techniques.',
+            'Research Opportunities: Engage in research in yoga and its applications, contributing to the growing body of scientific literature.',
+            'Global Recognition: Our graduates are recognized globally and are in demand for their expertise and knowledge.',
+            'Lifelong Learning: We offer lifelong learning opportunities through workshops, seminars, and advanced courses.',
+            'Join us to embark on a transformative journey in the world of Yoga Shastra!'
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Contact Us',
+          text: [
+            'The Yoga Institute',
+            'Santacruz East',
+            'Mumbai, Maharashtra 400055',
+            'Email id - info@theyogainstitute.org',
+            'Phone -  +91-22-26110506, +91-22-26103568.'
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Apply Now',
+          text: [
+            '',
+            '',
+            'Affiliation: Affiliation is under the final stage of approval from a recognized university for the academic year 2024-25.'
+          ],
+        },
+      },
+    ],
+  },
 }
 
 const extra = {

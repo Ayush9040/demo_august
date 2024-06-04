@@ -164,7 +164,7 @@ const DisclaimerPolicy = ({
         }
 
         if(response?.data?.success){
-          if(currentCourse.key!=='satsang' && currentCourse.key!=='samattvam' && formData?.residental!=='RESIDENTIAL'){
+          if(currentCourse.key!=='satsang' && currentCourse.key!=='samattvam'  && (formData?.residental!=='RESIDENTIAL' || currentCourse?.key=='ma-yoga-shastra')){
             const paymentOrderResponse =  await axios.post(`${ cmsBaseDomain }/payment/order?enrollmentFormId=${response.data.data['_id']}`, {
               amount: courseFee,
               notes: currentCourse.metaDescription,

@@ -46,6 +46,7 @@ export const homeAssets = {
   homeAsset17: '/home_page/corporate_copy.webp',
   homeAsset18: '/home_page/cooking_copy.webp',
   homeAsset099: '/home_page/saatvik.png',
+  homeAsset109: '/home_page/',
   homeAsset19: '/Home/Social Initiatives/SocialAnnamBhrama.jpg',
   homeAsset20: '/Home/Social Initiatives/SocialPolice.jpg',
   homeAsset21: '/Home/Social Initiatives/SocialBMCSchools.jpg',
@@ -2647,6 +2648,7 @@ export const nutriDiet = {
   nutriDietMain: '/SEO-New-Images/Others/nutri-diet-get-custom-diet-plan.webp',
   nutriDietCard: '/SEO-New-Images/Courses/Nutri-Diet-Clinic-Post.webp'
 }
+
 
 export const banner = {
   storeMats: '/shop-banner/TYI-Store-Banners-Mats.png',
