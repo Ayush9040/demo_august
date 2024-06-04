@@ -1,5 +1,6 @@
 import baseDomain, {
   courseAssets,
+  extraImage,
   homeAssets,
   nutriDiet,
 } from '../../../assets/images/imageAsset'
@@ -13026,8 +13027,10 @@ const classes = {
         templateNonResidential: 'MA_YOGA_SHASTRA',
       },
     },
-    image: `${baseDomain}${courseAssets.courseAssets115}`,
-    cardImage: `${baseDomain}${courseAssets.courseAssets115}`,
+    // image: `${baseDomain}${courseAssets.courseAssets115}`,
+    // cardImage: `${baseDomain}${courseAssets.courseAssets115}`,
+    image: `${extraImage.mayogaImg}`,
+    cardImage: `${extraImage.mayogaImg}`,
     mostPopular: false,
     metaDescription:
       'The Master of Arts (MA) in Yoga Shastra at The Yoga Institute, Santacruz East, is a comprehensive two-year program designed to deepen your understanding and practice of yoga.',
@@ -13037,7 +13040,7 @@ const classes = {
     fees: {
       // onlineFee: 1500,
       offlineFee: { residentialFee: 40000, nonResidentialFee: 0 },
-      internationalFee : { residentialFee: 3950, nonResidentialFee: 0 },
+      // internationalFee : { residentialFee: 3950, nonResidentialFee: 0 },
     },
     category: 'classes',
     dates: ['Monday, Wednesday, Friday - 4:30 to 8:30pm', 'Saturday - 9:00 am to 3:00 pm'],
