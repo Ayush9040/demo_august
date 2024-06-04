@@ -13037,7 +13037,7 @@ const classes = {
     fees: {
       // onlineFee: 1500,
       offlineFee: { residentialFee: 40000, nonResidentialFee: 0 },
-      internationalFee : '$3950',
+      internationalFee : { residentialFee: 3950, nonResidentialFee: 0 },
     },
     category: 'classes',
     dates: ['Monday, Wednesday, Friday - 4:30 to 8:30pm', 'Saturday - 9:00 am to 3:00 pm'],

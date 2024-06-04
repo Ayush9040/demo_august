@@ -1,4 +1,4 @@
-import baseDomain, { homeAssets,nutriDiet } from '../assets/images/imageAsset'
+import baseDomain, { extraImage, homeAssets,nutriDiet } from '../assets/images/imageAsset'
 
 export const activityData = [
 
@@ -45,7 +45,7 @@ export const activityData = [
     title: 'MA Yoga Shastra',
     description:
         'A comprehensive two-year program designed to deepen your understanding and practice of yoga.',
-    image:`${baseDomain}${homeAssets.homeAsset099}`,
+    image:`${extraImage.mayogaImg}`,
     url: '/ma-yoga-shastra'
   },
   {

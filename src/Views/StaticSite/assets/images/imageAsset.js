@@ -1,4 +1,9 @@
 const baseDomain = 'https://ecom-static-site.oss-ap-south-1.aliyuncs.com'
+import  mayoga  from '../images/mayoga.jpg'
+
+export const extraImage = {
+  mayogaImg: `${mayoga}`
+}
 
 export const background = {
   donation: '/backgrounds/donation_bg.jpg',
@@ -46,7 +51,7 @@ export const homeAssets = {
   homeAsset17: '/home_page/corporate_copy.webp',
   homeAsset18: '/home_page/cooking_copy.webp',
   homeAsset099: '/home_page/saatvik.png',
-  homeAsset109: '/home_page/',
+  homeAsset109: '../../StaticSite/assets/images/mayoga.jpg',
   homeAsset19: '/Home/Social Initiatives/SocialAnnamBhrama.jpg',
   homeAsset20: '/Home/Social Initiatives/SocialPolice.jpg',
   homeAsset21: '/Home/Social Initiatives/SocialBMCSchools.jpg',
