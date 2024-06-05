@@ -13043,7 +13043,7 @@ const classes = {
       internationalFee : { residentialFee: 329837, nonResidentialFee: 0 },
     },
     category: 'classes',
-    dates: ['Monday, Wednesday, Friday - 4:30 to 8:30pm', 'Saturday - 9:00 am to 3:00 pm'],
+    dates: [],
     online: false,
     onCampus: true,
     nonResidential: false,

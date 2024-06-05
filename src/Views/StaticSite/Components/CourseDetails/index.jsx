@@ -274,7 +274,7 @@ const CourseDetails = ({ pageDate }) => {
                       scroll()
                     )
                   ) : 
-                  ( pageDate?.key === 'samattvam' || pageDate?.key === 'satsang' ? <Link
+                  ( pageDate?.key === 'samattvam' || pageDate?.key === 'satsang' || pageDate?.key === 'ma-yoga-shastra' ? <Link
                     to={
                       isLoggedIn
                         ? `/enrollment/${pageDate.key}/?date=${selectDate}`
@@ -332,13 +332,14 @@ const CourseDetails = ({ pageDate }) => {
               : { visibility: 'hidden' }
           }
         >
-          <SelectDropDown
+          {pageDate.key === 'ma-yoga-shastra' ? '' : <SelectDropDown
             currentValue={selectDate}
             changeCurrentValue={setSetselectDate}
             text={'Select Date/Time'}
             isStyles={selectStyles}
             dates={pageDate.dates}
-          />{' '}
+          />}
+          {' '}
         </div>
 
         {pageDate.category === 'ttc' && (
