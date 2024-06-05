@@ -368,9 +368,11 @@ const CourseDetails = ({
                         residental: e.target.value,
                       })
                       setEmpty(0)
-                      setCourseFee(
-                        currentCourse?.fees?.offlineFee?.residentialFee
-                      )
+                      if(currentCourse?.key === 'ma-yoga-shastra' && currentCourse.country !== 'India'){
+                        setCourseFee(currentCourse?.fees?.internationalFee?.residentialFee)
+                      } else {
+                        setCourseFee(currentCourse?.fees?.offlineFee?.residentialFee)
+                      }
                       // setCourseFee(updatedFees( currentCourse?.key,'RESIDENTIAL' ))
                     }
                   }}
