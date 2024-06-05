@@ -13040,7 +13040,7 @@ const classes = {
     fees: {
       // onlineFee: 1500,
       offlineFee: { residentialFee: 40000, nonResidentialFee: 0 },
-      // internationalFee : { residentialFee: 3950, nonResidentialFee: 0 },
+      internationalFee : { residentialFee: 329837, nonResidentialFee: 0 },
     },
     category: 'classes',
     dates: ['Monday, Wednesday, Friday - 4:30 to 8:30pm', 'Saturday - 9:00 am to 3:00 pm'],
@@ -13109,7 +13109,7 @@ const classes = {
         type: 'paragraph',
         content: {
           title: 'Pricing',
-          text: ['40,000 per year', 'For International Students : $3950 per year'],
+          text: ['For National Students : ₹40,000 per year', 'For International Students : $3950 per year'],
         },
       },
       {

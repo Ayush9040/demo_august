@@ -23,6 +23,17 @@ const CourseDetails = ({
     }
   }, [formData.mode])
 
+  useEffect(()=>{
+    if (currentCourse.key === 'ma-yoga-shastra' && formData.country !== 'India') {
+      setCourseFee(currentCourse?.fees?.internationalFee?.residentialFee)
+    } else if (currentCourse.key === 'ma-yoga-shastra'){
+      setCourseFee(currentCourse?.fees?.offlineFee?.residentialFee)
+    }
+  }, [formData.country])
+
+  console.log(currentCourse)
+  console.log(formData)
+
   const [pictureName, setPictureName] = useState('')
   const [certificateName, setcertificateName] = useState('')
   // const [loading, setLoading] = useState(false)
@@ -253,7 +264,7 @@ const CourseDetails = ({
                   {currentCourse?.title}&nbsp;
                   {courseDate !== 'null' ? courseDate : ''}
                 </div>
-                {courseFee && <p className="current_fees"> ₹ {courseFee}</p>}
+                {courseFee && <p className="current_fees"> {currentCourse.key === 'ma-yoga-shastra' && formData.country !== 'India' ? '$ 3950' : formData.country === '' ? '₹' : `₹ ${courseFee}`}</p>}
               </div>
             </div>
           </div>
