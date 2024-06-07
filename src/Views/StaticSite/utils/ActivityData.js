@@ -3,6 +3,14 @@ import baseDomain, { extraImage, homeAssets,nutriDiet } from '../assets/images/i
 export const activityData = [
 
   {
+    id: 11,
+    title: 'MA Yoga Shastra',
+    description:
+        'A comprehensive two-year program designed to deepen your understanding and practice of yoga.',
+    image:`${extraImage.mayogaImg}`,
+    url: '/ma-yoga-shastra'
+  },
+  {
     id: 10,
     title: 'Sattvik Kitchen',
     description:
@@ -39,14 +47,6 @@ export const activityData = [
       'Practice Yoga amidst the mesmerizing symphony of crashing waves, chirping birds, whistling winds and serenity of the sea at Marine Drive',
     image: `${baseDomain}${homeAssets.homeAsset12}`,
     url: '/yoga-by-the-bay',
-  },
-  {
-    id: 11,
-    title: 'MA Yoga Shastra',
-    description:
-        'A comprehensive two-year program designed to deepen your understanding and practice of yoga.',
-    image:`${extraImage.mayogaImg}`,
-    url: '/ma-yoga-shastra'
   },
   {
     id: 4,

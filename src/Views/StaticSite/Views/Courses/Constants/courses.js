@@ -13039,14 +13039,14 @@ const classes = {
     timing: '4:30 am to 8:30 am (Monday, Wednesday, Friday) 9:00 am to 3:00 pm (Saturday)',
     fees: {
       // onlineFee: 1500,
-      offlineFee: { residentialFee: 40000, nonResidentialFee: 0 },
-      internationalFee : { residentialFee: 329837, nonResidentialFee: 0 },
+      offlineFee: { residentialFee: 0, nonResidentialFee: 40000 },
+      internationalFee : { residentialFee: 0, nonResidentialFee: 329837 },
     },
     category: 'classes',
     dates: [],
     online: false,
     onCampus: true,
-    nonResidential: false,
+    nonResidential: true,
     residential: true,
     certficate: false,
     details: [
@@ -13170,9 +13170,9 @@ const classes = {
         content: {
           title: 'Apply Now',
           text: [
+            ' ',
             '',
-            '',
-            'Affiliation: Affiliation is under the final stage of approval from a recognized university for the academic year 2024-25.'
+            '* Affiliation: Affiliation is under the final stage of approval from a recognized university for the academic year 2024-25.'
           ],
         },
       },

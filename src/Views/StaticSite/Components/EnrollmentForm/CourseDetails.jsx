@@ -24,15 +24,13 @@ const CourseDetails = ({
   }, [formData.mode])
 
   useEffect(()=>{
-    if (currentCourse.key === 'ma-yoga-shastra' && formData.country !== 'India') {
-      setCourseFee(currentCourse?.fees?.internationalFee?.residentialFee)
-    } else if (currentCourse.key === 'ma-yoga-shastra'){
-      setCourseFee(currentCourse?.fees?.offlineFee?.residentialFee)
+    if (currentCourse.key === 'ma-yoga-shastra' && formData.country !== 'India' && formData?.residental === 'NONRESIDENTIAL') {
+      setCourseFee(currentCourse?.fees?.internationalFee?.nonResidentialFee)
+    } else if (currentCourse.key === 'ma-yoga-shastra' && formData?.residental === 'NONRESIDENTIAL'){
+      setCourseFee(currentCourse?.fees?.offlineFee?.nonResidentialFee)
     }
-  }, [formData.country])
+  }, [formData])
 
-  console.log(currentCourse)
-  console.log(formData)
 
   const [pictureName, setPictureName] = useState('')
   const [certificateName, setcertificateName] = useState('')
