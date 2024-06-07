@@ -13036,7 +13036,7 @@ const classes = {
       'The Master of Arts (MA) in Yoga Shastra at The Yoga Institute, Santacruz East, is a comprehensive two-year program designed to deepen your understanding and practice of yoga.',
     rating: 5,
     colorCode: '#C48E8C',
-    timing: '4:30 am to 8:30 am (Monday, Wednesday, Friday) 9:00 am to 3:00 pm (Saturday)',
+    timing: '4:30 pm to 8:30 pm (Monday, Wednesday, Friday) 9:00 am to 3:00 pm (Saturday)',
     fees: {
       // onlineFee: 1500,
       offlineFee: { residentialFee: 0, nonResidentialFee: 40000 },
