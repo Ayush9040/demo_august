@@ -262,7 +262,8 @@ const CourseDetails = ({
                   {currentCourse?.title}&nbsp;
                   {courseDate !== 'null' ? courseDate : ''}
                 </div>
-                {courseFee && <p className="current_fees"> {currentCourse.key === 'ma-yoga-shastra' && formData.country !== 'India' ? '$ 3950' : formData.country === '' ? '₹' : `₹ ${courseFee}`}</p>}
+                {courseFee && <p className="current_fees"> {currentCourse.key === 'ma-yoga-shastra' && formData.country !== 'India' ? '$ 3950' : `₹ ${courseFee}`}</p>}
+                {/* {courseFee && <p className="current_fees"> ₹ {courseFee}</p>} */}
               </div>
             </div>
           </div>
