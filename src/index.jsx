@@ -13,6 +13,7 @@ import App from './App'
 
 import './Utils/interceptors'
 import { isAuthorized } from './Utils/localStorage'
+// import ReactGA from 'react-ga'
 
 export const store = configureStore({})
 
@@ -32,6 +33,8 @@ store.dispatch({
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
+// ReactGA.initialize('374034779')
+// ReactGA.pageview('/')
 root.render(
   <Provider store={store}>
     <StrictMode>
