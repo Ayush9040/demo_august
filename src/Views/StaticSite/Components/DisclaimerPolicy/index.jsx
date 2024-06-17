@@ -153,12 +153,12 @@ const DisclaimerPolicy = ({
         let response
         if(formData.mode==='ONLINE' || (currentCourse.residential===false && currentCourse.nonResidential===false)){
           response = await axios.post(
-            `${ cmsBaseDomain }/form`,
+            `${ cmsBaseDomain }/forms`,
             body1
           )
         }else{
           response = await axios.post(
-            `${ cmsBaseDomain }/form`,
+            `${ cmsBaseDomain }/forms`,
             body
           )
         }

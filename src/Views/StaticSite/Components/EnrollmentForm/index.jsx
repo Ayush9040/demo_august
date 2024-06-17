@@ -226,7 +226,6 @@ const Enrollment = () => {
               courseAsset2={courseAsset2}
               setCourseAsset2={setCourseAsset2}
               handleSubmit={handleSubmit}
-
               courseFee={courseFee}
               setCourseFee={setCourseFee}
               uploadCheck={uploadCheck}
