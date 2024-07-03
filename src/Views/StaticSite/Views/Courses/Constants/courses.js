@@ -13240,6 +13240,7 @@ const certificate = {
     },
     category: 'certificate-course',
     dates: [ '7th Aug to 28th Sep 2024· Evening','6th November 2024 to 28th December 2024· Evening','11th Nov to 2nd Jan 2025· Morning'],
+    
     online: true,
     onCampus: false,
     nonResidential: false,
