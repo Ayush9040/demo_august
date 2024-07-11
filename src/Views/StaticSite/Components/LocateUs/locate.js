@@ -42,7 +42,7 @@ export const locateData = [
       {
         state: 'Delhi',
         notstate:'W-1, W Block (Lower Ground Floor) Greater Kailash Part-1, New Delhi-110048',
-        phone: ['+91-9899904455'],
+        phone: [ '011-35009463', '+91-9599904455', '  +91-9899904455'],
         email: 'tyidelhi@theyogainstitute.org',
         website: 'https://theyogainstitutedelhi.com',
         url: 'https://theyogainstitutedelhi.com/',
