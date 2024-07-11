@@ -13239,7 +13239,7 @@ const certificate = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'certificate-course',
-    dates: [ '5th Aug to 26th Sep 2024 - Morning', '7th Aug to 28th Sep 2024· Evening','6th November 2024 to 28th December 2024· Evening','11th Nov to 2nd Jan 2025· Morning'],
+    dates: [ '5th Aug to 26th Sep 2024· Morning', '7th Aug to 28th Sep 2024· Evening','6th November 2024 to 28th December 2024· Evening','11th Nov to 2nd Jan 2025· Morning'],
     
     online: true,
     onCampus: false,
