@@ -13102,7 +13102,7 @@ const classes = {
         type: 'paragraph',
         content: {
           title: 'Admission Process',
-          text: ['Application Deadline: 15th July.', 'Selection Criteria: Based on merit and timely registration.'],
+          text: ['Application Deadline: 1st August', 'Selection Criteria: Based on merit and timely registration.'],
         },
       },
       {
