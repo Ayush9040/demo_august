@@ -198,7 +198,7 @@ const LandingPageNew = () => {
         <section className="section_2">
           <div className="sec2_img">
             <img
-              src="https://ecom-static-site.oss-ap-south-1.aliyuncs.com/Courses/Camps/Weight_management.jpg"
+              src="https://ecom-static-site-prod.oss-ap-southeast-1.aliyuncs.com/Courses/Camps/Weight_management.jpg"
               alt=""
             />
           </div>
@@ -290,7 +290,7 @@ const LandingPageNew = () => {
             </div>
             <div className="int_img21">
               <img
-                src="https://ecom-static-site.oss-ap-south-1.aliyuncs.com/Landing_page/Hansaji.jpg"
+                src="https://ecom-static-site-prod.oss-ap-southeast-1.aliyuncs.com/Landing_page/Hansaji.jpg"
                 alt=""
               />
             </div>

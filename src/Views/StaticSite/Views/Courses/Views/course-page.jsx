@@ -145,7 +145,7 @@ const Courses = () => {
           </div>
           <div className="intro-image">
         
-            <img src="https://ecom-static-site.oss-ap-south-1.aliyuncs.com/SEO-New-Images/Courses/yoga-teacher-training-courses-hero.webp" alt='more than just reading'/>
+            <img src="https://ecom-static-site-prod.oss-ap-southeast-1.aliyuncs.com/SEO-New-Images/Courses/yoga-teacher-training-courses-hero.webp" alt='more than just reading'/>
           </div>
         </div>
         {courseCardData &&

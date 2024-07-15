@@ -71,7 +71,7 @@ const MainVideo = () => {
       <div className='pop-video' >
         <video
           ref={videoRef}
-          src="https://ecom-static-site.oss-ap-south-1.aliyuncs.com/Home/PlayVideo/tyi-home-bs.mp4"
+          src="https://ecom-static-site-prod.oss-ap-southeast-1.aliyuncs.com/Home/PlayVideo/tyi-home-bs.mp4"
           controls={false}
           disablePictureInPicture
           controlsList="nodownload noremoteplayback noplaybackrate"
@@ -91,7 +91,7 @@ const MainVideo = () => {
       <div className='mobile-pop-video' >
         <video
           ref={videoRef1}
-          src="https://ecom-static-site.oss-ap-south-1.aliyuncs.com/Home/PlayVideo/tyi-home-bg-mobile.mp4"
+          src="https://ecom-static-site-prod.oss-ap-southeast-1.aliyuncs.com/Home/PlayVideo/tyi-home-bg-mobile.mp4"
           controls={false}
           disablePictureInPicture
           controlsList="nodownload noremoteplayback noplaybackrate"

@@ -40,7 +40,7 @@
       },
       {
         "property": "og:image",
-        "content": "https://ecom-static-site.oss-ap-south-1.aliyuncs.com/metaImages/tyi-featured-section-2.jpg"
+        "content": "https://ecom-static-site-prod.oss-ap-southeast-1.aliyuncs.com/metaImages/tyi-featured-section-2.jpg"
       },
       {
         "property": "og:type",
@@ -85,7 +85,7 @@
       },
       {
         "property": "og:image",
-        "content": "https://ecom-static-site.oss-ap-south-1.aliyuncs.com/metaImages/Anna-bramha.jpg"
+        "content": "https://ecom-static-site-prod.oss-ap-southeast-1.aliyuncs.com/metaImages/Anna-bramha.jpg"
       },
       {
         "property": "og:type",
@@ -130,7 +130,7 @@
       },
       {
         "property": "og:image",
-        "content": "https://ecom-static-site.oss-ap-south-1.aliyuncs.com/metaImages/the-yoga-institute-timelines.jpg"
+        "content": "https://ecom-static-site-prod.oss-ap-southeast-1.aliyuncs.com/metaImages/the-yoga-institute-timelines.jpg"
       },
       {
         "property": "og:type",
@@ -181,7 +181,7 @@
       },
       {
         "property": "og:image",
-        "content": "https://ecom-static-site.oss-ap-south-1.aliyuncs.com/metaImages/paramhamsa-madhavadasji.jpg"
+        "content": "https://ecom-static-site-prod.oss-ap-southeast-1.aliyuncs.com/metaImages/paramhamsa-madhavadasji.jpg"
       },
       {
         "property": "og:type",
@@ -249,7 +249,7 @@
       },
       {
         "property": "og:image",
-        "content": "https://ecom-static-site.oss-ap-south-1.aliyuncs.com/metaImages/HOSTELS.jpg"
+        "content": "https://ecom-static-site-prod.oss-ap-southeast-1.aliyuncs.com/metaImages/HOSTELS.jpg"
       },
       {
         "property": "og:type",
@@ -294,7 +294,7 @@
       },
       {
         "property": "og:image",
-        "content": "https://ecom-static-site.oss-ap-south-1.aliyuncs.com/metaImages/HOSTELS.jpg"
+        "content": "https://ecom-static-site-prod.oss-ap-southeast-1.aliyuncs.com/metaImages/HOSTELS.jpg"
       },
       {
         "property": "og:type",
@@ -339,7 +339,7 @@
       },
       {
         "property": "og:image",
-        "content": "https://ecom-static-site.oss-ap-south-1.aliyuncs.com/metaImages/tyi-conference-room.jpg"
+        "content": "https://ecom-static-site-prod.oss-ap-southeast-1.aliyuncs.com/metaImages/tyi-conference-room.jpg"
       },
       {
         "property": "og:type",
@@ -384,7 +384,7 @@
       },
       {
         "property": "og:image",
-        "content": "http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Publications/Library/hero.jpg"
+        "content": "http://ecom-static-site-prod.oss-ap-southeast-1.aliyuncs.com/Publications/Library/hero.jpg"
       },
       {
         "property": "og:type",
@@ -429,7 +429,7 @@
       },
       {
         "property": "og:image",
-        "content": "https://ecom-static-site.oss-ap-south-1.aliyuncs.com/metaImages/book-club-tyi.jpg"
+        "content": "https://ecom-static-site-prod.oss-ap-southeast-1.aliyuncs.com/metaImages/book-club-tyi.jpg"
       },
       {
         "property": "og:type",
@@ -474,7 +474,7 @@
       },
       {
         "property": "og:image",
-        "content": "http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Facilities/Yogic%20Halls/yogahalls.jpg"
+        "content": "http://ecom-static-site-prod.oss-ap-southeast-1.aliyuncs.com/Facilities/Yogic%20Halls/yogahalls.jpg"
       },
       {
         "property": "og:type",
@@ -519,7 +519,7 @@
       },
       {
         "property": "og:image",
-        "content": "http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Facilities/Yogic%20Halls/yogahalls.jpg"
+        "content": "http://ecom-static-site-prod.oss-ap-southeast-1.aliyuncs.com/Facilities/Yogic%20Halls/yogahalls.jpg"
       },
       {
         "property": "og:type",
@@ -564,7 +564,7 @@
       },
       {
         "property": "og:image",
-        "content": "https://ecom-static-site.oss-ap-south-1.aliyuncs.com/metaImages/terrace-tyi.jpg"
+        "content": "https://ecom-static-site-prod.oss-ap-southeast-1.aliyuncs.com/metaImages/terrace-tyi.jpg"
       },
       {
         "property": "og:type",
@@ -609,7 +609,7 @@
       },
       {
         "property": "og:image",
-        "content": "https://ecom-static-site.oss-ap-south-1.aliyuncs.com/metaImages/oga-institute-dining-hall.jpg"
+        "content": "https://ecom-static-site-prod.oss-ap-southeast-1.aliyuncs.com/metaImages/oga-institute-dining-hall.jpg"
       },
       {
         "property": "og:type",
@@ -654,7 +654,7 @@
       },
       {
         "property": "og:image",
-        "content": "https://ecom-static-site.oss-ap-south-1.aliyuncs.com/metaImages/Nature.jpg"
+        "content": "https://ecom-static-site-prod.oss-ap-southeast-1.aliyuncs.com/metaImages/Nature.jpg"
       },
       {
         "property": "og:type",
@@ -699,7 +699,7 @@
       },
       {
         "property": "og:image",
-        "content": "https://ecom-static-site.oss-ap-south-1.aliyuncs.com/metaImages/the-yoga-institute-gazebo.jpg"
+        "content": "https://ecom-static-site-prod.oss-ap-southeast-1.aliyuncs.com/metaImages/the-yoga-institute-gazebo.jpg"
       },
       {
         "property": "og:type",
@@ -744,7 +744,7 @@
       },
       {
         "property": "og:image",
-        "content": "https://ecom-static-site.oss-ap-south-1.aliyuncs.com/metaImages/the-yoga-museum-the-yoga-institute.jpg"
+        "content": "https://ecom-static-site-prod.oss-ap-southeast-1.aliyuncs.com/metaImages/the-yoga-museum-the-yoga-institute.jpg"
       },
       {
         "property": "og:type",
@@ -789,7 +789,7 @@
       },
       {
         "property": "og:image",
-        "content": "http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Media/gallery/igceremony.jpg"
+        "content": "http://ecom-static-site-prod.oss-ap-southeast-1.aliyuncs.com/Media/gallery/igceremony.jpg"
       },
       {
         "property": "og:type",
@@ -879,7 +879,7 @@
       },
       {
         "property": "og:image",
-        "content": "https://ecom-static-site.oss-ap-south-1.aliyuncs.com/metaImages/June-2022.jpg"
+        "content": "https://ecom-static-site-prod.oss-ap-southeast-1.aliyuncs.com/metaImages/June-2022.jpg"
       },
       {
         "property": "og:type",
@@ -984,7 +984,7 @@
       },
       {
         "property": "og:image",
-        "content": "http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Home/Blogs/Blog2.jpg"
+        "content": "http://ecom-static-site-prod.oss-ap-southeast-1.aliyuncs.com/Home/Blogs/Blog2.jpg"
       },
       {
         "property": "og:type",
@@ -1119,7 +1119,7 @@
       },
       {
         "property": "og:image",
-        "content": "http://ecom-static-site.oss-ap-south-1.aliyuncs.com/cerificates/YCB-logo.PNG"
+        "content": "http://ecom-static-site-prod.oss-ap-southeast-1.aliyuncs.com/cerificates/YCB-logo.PNG"
       },
       {
         "property": "og:type",
@@ -1164,7 +1164,7 @@
       },
       {
         "property": "og:image",
-        "content": "http://ecom-static-site.oss-ap-south-1.aliyuncs.com/wellness/Our_offerings_right.png"
+        "content": "http://ecom-static-site-prod.oss-ap-southeast-1.aliyuncs.com/wellness/Our_offerings_right.png"
       },
       {
         "property": "og:type",
@@ -1209,7 +1209,7 @@
       },
       {
         "property": "og:image",
-        "content": "http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Home/Experience/shriramnathkovid.png"
+        "content": "http://ecom-static-site-prod.oss-ap-southeast-1.aliyuncs.com/Home/Experience/shriramnathkovid.png"
       },
       {
         "property": "og:type",
@@ -1254,7 +1254,7 @@
       },
       {
         "property": "og:image",
-        "content": "http://ecom-static-site.oss-ap-south-1.aliyuncs.co…-1936/(4%20)1916_shri-madhavdasji_founder-4x3.jpg"
+        "content": "http://ecom-static-site-prod.oss-ap-southeast-1.aliyuncs.co…-1936/(4%20)1916_shri-madhavdasji_founder-4x3.jpg"
       },
       {
         "property": "og:type",
@@ -1299,7 +1299,7 @@
       },
       {
         "property": "og:image",
-        "content": "http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Alumni/Alumni%20Day/alumniGallery2.jpg"
+        "content": "http://ecom-static-site-prod.oss-ap-southeast-1.aliyuncs.com/Alumni/Alumni%20Day/alumniGallery2.jpg"
       },
       {
         "property": "og:type",
@@ -1344,7 +1344,7 @@
       },
       {
         "property": "og:image",
-        "content": "http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Volunteer/Annam-Brahma/annam-1.jpg"
+        "content": "http://ecom-static-site-prod.oss-ap-southeast-1.aliyuncs.com/Volunteer/Annam-Brahma/annam-1.jpg"
       },
       {
         "property": "og:type",
@@ -1389,7 +1389,7 @@
       },
       {
         "property": "og:image",
-        "content": "http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Volunteer/our-values.jpg"
+        "content": "http://ecom-static-site-prod.oss-ap-southeast-1.aliyuncs.com/Volunteer/our-values.jpg"
       },
       {
         "property": "og:type",
@@ -1434,7 +1434,7 @@
       },
       {
         "property": "og:image",
-        "content": "http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Facilities/new11/kelashpati.JPG"
+        "content": "http://ecom-static-site-prod.oss-ap-southeast-1.aliyuncs.com/Facilities/new11/kelashpati.JPG"
       },
       {
         "property": "og:type",
@@ -1491,7 +1491,7 @@
       },
       {
         "property": "og:image",
-        "content": "http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Courses/TTC/200_hrs_TTC.jpg"
+        "content": "http://ecom-static-site-prod.oss-ap-southeast-1.aliyuncs.com/Courses/TTC/200_hrs_TTC.jpg"
       },
       {
         "property": "og:type",
@@ -1542,7 +1542,7 @@
       },
       {
         "property": "og:image",
-        "content": "http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Courses/TTC/200_hrs_TTC.jpg"
+        "content": "http://ecom-static-site-prod.oss-ap-southeast-1.aliyuncs.com/Courses/TTC/200_hrs_TTC.jpg"
       },
       {
         "property": "og:type",
@@ -1593,7 +1593,7 @@
       },
       {
         "property": "og:image",
-        "content": "http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Courses/TTC/200_hrs_TTC.jpg"
+        "content": "http://ecom-static-site-prod.oss-ap-southeast-1.aliyuncs.com/Courses/TTC/200_hrs_TTC.jpg"
       },
       {
         "property": "og:type",
@@ -1644,7 +1644,7 @@
       },
       {
         "property": "og:image",
-        "content": "http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Courses/TTC/200_hrs_TTC.jpg"
+        "content": "http://ecom-static-site-prod.oss-ap-southeast-1.aliyuncs.com/Courses/TTC/200_hrs_TTC.jpg"
       },
       {
         "property": "og:type",
@@ -1695,7 +1695,7 @@
       },
       {
         "property": "og:image",
-        "content": "http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Courses/TTC/200_hrs_TTC.jpg"
+        "content": "http://ecom-static-site-prod.oss-ap-southeast-1.aliyuncs.com/Courses/TTC/200_hrs_TTC.jpg"
       },
       {
         "property": "og:type",
@@ -1746,7 +1746,7 @@
       },
       {
         "property": "og:image",
-        "content": "http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Courses/TTC/200_hrs_TTC.jpg"
+        "content": "http://ecom-static-site-prod.oss-ap-southeast-1.aliyuncs.com/Courses/TTC/200_hrs_TTC.jpg"
       },
       {
         "property": "og:type",
@@ -1791,7 +1791,7 @@
       },
       {
         "property": "og:image",
-        "content": "http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Courses/TTC/500_hrs_TTC.jpg"
+        "content": "http://ecom-static-site-prod.oss-ap-southeast-1.aliyuncs.com/Courses/TTC/500_hrs_TTC.jpg"
       },
       {
         "property": "og:type",
@@ -1836,7 +1836,7 @@
       },
       {
         "property": "og:image",
-        "content": "http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Courses/TTC/900_hrs_TTC.jpg"
+        "content": "http://ecom-static-site-prod.oss-ap-southeast-1.aliyuncs.com/Courses/TTC/900_hrs_TTC.jpg"
       },
       {
         "property": "og:type",
@@ -1881,7 +1881,7 @@
       },
       {
         "property": "og:image",
-        "content": "http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Courses/TTC/900_hrs_TTC.jpg"
+        "content": "http://ecom-static-site-prod.oss-ap-southeast-1.aliyuncs.com/Courses/TTC/900_hrs_TTC.jpg"
       },
       {
         "property": "og:type",
@@ -1928,7 +1928,7 @@
       },
       {
         "property": "og:image",
-        "content": "http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Courses/TTC/900_hrs_TTC.jpg"
+        "content": "http://ecom-static-site-prod.oss-ap-southeast-1.aliyuncs.com/Courses/TTC/900_hrs_TTC.jpg"
       },
       {
         "property": "og:type",
@@ -1975,7 +1975,7 @@
       },
       {
         "property": "og:image",
-        "content": "http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Courses/TTC/900_hrs_TTC.jpg"
+        "content": "http://ecom-static-site-prod.oss-ap-southeast-1.aliyuncs.com/Courses/TTC/900_hrs_TTC.jpg"
       },
       {
         "property": "og:type",
@@ -2020,7 +2020,7 @@
       },
       {
         "property": "og:image",
-        "content": "http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Courses/TTC/900_hrs_TTC.jpg"
+        "content": "http://ecom-static-site-prod.oss-ap-southeast-1.aliyuncs.com/Courses/TTC/900_hrs_TTC.jpg"
       },
       {
         "property": "og:type",
@@ -2065,7 +2065,7 @@
       },
       {
         "property": "og:image",
-        "content": "http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Courses/Class/Asana%20_Regular_Classes_for_Men_common.jpeg"
+        "content": "http://ecom-static-site-prod.oss-ap-southeast-1.aliyuncs.com/Courses/Class/Asana%20_Regular_Classes_for_Men_common.jpeg"
       },
       {
         "property": "og:type",
@@ -2110,7 +2110,7 @@
       },
       {
         "property": "og:image",
-        "content": "http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Courses/Class/Asana%20_Regular_Classes_for_Men_common.jpeg"
+        "content": "http://ecom-static-site-prod.oss-ap-southeast-1.aliyuncs.com/Courses/Class/Asana%20_Regular_Classes_for_Men_common.jpeg"
       },
       {
         "property": "og:type",
@@ -2155,7 +2155,7 @@
       },
       {
         "property": "og:image",
-        "content": "http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Courses/Class/Asana_Regular_Classes_for_Women_common.jpeg"
+        "content": "http://ecom-static-site-prod.oss-ap-southeast-1.aliyuncs.com/Courses/Class/Asana_Regular_Classes_for_Women_common.jpeg"
       },
       {
         "property": "og:type",
@@ -2200,7 +2200,7 @@
       },
       {
         "property": "og:image",
-        "content": "https://ecom-static-site.oss-ap-south-1.aliyuncs.com/metaImages/advance-regular-yoga-classes-may-2022.jpg"
+        "content": "https://ecom-static-site-prod.oss-ap-southeast-1.aliyuncs.com/metaImages/advance-regular-yoga-classes-may-2022.jpg"
       },
       {
         "property": "og:type",
@@ -2245,7 +2245,7 @@
       },
       {
         "property": "og:image",
-        "content": "http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Courses/Class/Couples_Classes_Online.jpeg"
+        "content": "http://ecom-static-site-prod.oss-ap-southeast-1.aliyuncs.com/Courses/Class/Couples_Classes_Online.jpeg"
       },
       {
         "property": "og:type",
@@ -2335,7 +2335,7 @@
       },
       {
         "property": "og:image",
-        "content": "https://ecom-static-site.oss-ap-south-1.aliyuncs.com/metaImages/Regular-Classes-Kids.jpg"
+        "content": "https://ecom-static-site-prod.oss-ap-southeast-1.aliyuncs.com/metaImages/Regular-Classes-Kids.jpg"
       },
       {
         "property": "og:type",
@@ -2380,7 +2380,7 @@
       },
       {
         "property": "og:image",
-        "content": "https://ecom-static-site.oss-ap-south-1.aliyuncs.com/metaImages/Regular-Classes-Kids.jpg"
+        "content": "https://ecom-static-site-prod.oss-ap-southeast-1.aliyuncs.com/metaImages/Regular-Classes-Kids.jpg"
       },
       {
         "property": "og:type",
@@ -2425,7 +2425,7 @@
       },
       {
         "property": "og:image",
-        "content": "https://ecom-static-site.oss-ap-south-1.aliyuncs.com/SEO-New-Images/Courses/kids-yoga-camp.webp"
+        "content": "https://ecom-static-site-prod.oss-ap-southeast-1.aliyuncs.com/SEO-New-Images/Courses/kids-yoga-camp.webp"
       },
       {
         "property": "og:type",
@@ -2470,7 +2470,7 @@
       },
       {
         "property": "og:image",
-        "content": "http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Home/Highlights/marinedrive.jpg"
+        "content": "http://ecom-static-site-prod.oss-ap-southeast-1.aliyuncs.com/Home/Highlights/marinedrive.jpg"
       },
       {
         "property": "og:type",
@@ -2515,7 +2515,7 @@
       },
       {
         "property": "og:image",
-        "content": "http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Home/Highlights/fullmoon.jpg"
+        "content": "http://ecom-static-site-prod.oss-ap-southeast-1.aliyuncs.com/Home/Highlights/fullmoon.jpg"
       },
       {
         "property": "og:type",
@@ -2560,7 +2560,7 @@
       },
       {
         "property": "og:image",
-        "content": "https://ecom-static-site.oss-ap-south-1.aliyuncs.com/Courses/Regular-pregnancy-camp.jpg"
+        "content": "https://ecom-static-site-prod.oss-ap-southeast-1.aliyuncs.com/Courses/Regular-pregnancy-camp.jpg"
       },
       {
         "property": "og:type",
@@ -2650,7 +2650,7 @@
       },
       {
         "property": "og:image",
-        "content": "http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Courses/Camps/Meditation_Camp.jpg"
+        "content": "http://ecom-static-site-prod.oss-ap-southeast-1.aliyuncs.com/Courses/Camps/Meditation_Camp.jpg"
       },
       {
         "property": "og:type",
@@ -2785,7 +2785,7 @@
       },
       {
         "property": "og:image",
-        "content": "http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Courses/Class/Satsang.jpeg"
+        "content": "http://ecom-static-site-prod.oss-ap-southeast-1.aliyuncs.com/Courses/Class/Satsang.jpeg"
       },
       {
         "property": "og:type",
@@ -2830,7 +2830,7 @@
       },
       {
         "property": "og:image",
-        "content": "https://ecom-static-site.oss-ap-south-1.aliyuncs.com/metaImages/book-club-tyi.jpg"
+        "content": "https://ecom-static-site-prod.oss-ap-southeast-1.aliyuncs.com/metaImages/book-club-tyi.jpg"
       },
       {
         "property": "og:type",
@@ -2920,7 +2920,7 @@
       },
       {
         "property": "og:image",
-        "content": "http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Home/Highlights/satvam.jpg"
+        "content": "http://ecom-static-site-prod.oss-ap-southeast-1.aliyuncs.com/Home/Highlights/satvam.jpg"
       },
       {
         "property": "og:type",
@@ -3010,7 +3010,7 @@
       },
       {
         "property": "og:image",
-        "content": "http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Publications/Library/hero.jpg"
+        "content": "http://ecom-static-site-prod.oss-ap-southeast-1.aliyuncs.com/Publications/Library/hero.jpg"
       },
       {
         "property": "og:type",
@@ -3055,7 +3055,7 @@
       },
       {
         "property": "og:image",
-        "content": "https://ecom-static-site.oss-ap-south-1.aliyuncs.com/metaImages/7-day-health-camp.jpg"
+        "content": "https://ecom-static-site-prod.oss-ap-southeast-1.aliyuncs.com/metaImages/7-day-health-camp.jpg"
       },
       {
         "property": "og:type",
@@ -3100,7 +3100,7 @@
       },
       {
         "property": "og:image",
-        "content": "http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Courses/Class/Certificate_Course_on_Yoga_Sutra%2BOnline.jpeg"
+        "content": "http://ecom-static-site-prod.oss-ap-southeast-1.aliyuncs.com/Courses/Class/Certificate_Course_on_Yoga_Sutra%2BOnline.jpeg"
       },
       {
         "property": "og:type",
@@ -3145,7 +3145,7 @@
       },
       {
         "property": "og:image",
-        "content": "https://ecom-static-site.oss-ap-south-1.aliyuncs.com/metaImages/concentrated-woman-meditating-nature.jpg"
+        "content": "https://ecom-static-site-prod.oss-ap-southeast-1.aliyuncs.com/metaImages/concentrated-woman-meditating-nature.jpg"
       },
       {
         "property": "og:type",
@@ -3190,7 +3190,7 @@
       },
       {
         "property": "og:image",
-        "content": "https://ecom-static-site.oss-ap-south-1.aliyuncs.com/metaImages/concentrated-woman-meditating-nature.jpg"
+        "content": "https://ecom-static-site-prod.oss-ap-southeast-1.aliyuncs.com/metaImages/concentrated-woman-meditating-nature.jpg"
       },
       {
         "property": "og:type",
@@ -3235,7 +3235,7 @@
       },
       {
         "property": "og:image",
-        "content": "https://ecom-static-site.oss-ap-south-1.aliyuncs.com/metaImages/corporate-workshops-tyi.jpg"
+        "content": "https://ecom-static-site-prod.oss-ap-southeast-1.aliyuncs.com/metaImages/corporate-workshops-tyi.jpg"
       },
       {
         "property": "og:type",
@@ -3280,7 +3280,7 @@
       },
       {
         "property": "og:image",
-        "content": "https://ecom-static-site.oss-ap-south-1.aliyuncs.com/metaImages/online-tuition-tyi-1.jpg"
+        "content": "https://ecom-static-site-prod.oss-ap-southeast-1.aliyuncs.com/metaImages/online-tuition-tyi-1.jpg"
       },
       {
         "property": "og:type",
@@ -3325,7 +3325,7 @@
       },
       {
         "property": "og:image",
-        "content": "https://ecom-static-site.oss-ap-south-1.aliyuncs.com/metaImages/couple%20classes%202022.jpg"
+        "content": "https://ecom-static-site-prod.oss-ap-southeast-1.aliyuncs.com/metaImages/couple%20classes%202022.jpg"
       },
       {
         "property": "og:type",
@@ -3370,7 +3370,7 @@
       },
       {
         "property": "og:image",
-        "content": "https://ecom-static-site.oss-ap-south-1.aliyuncs.com/metaImages/7-day-health-camp.jpg"
+        "content": "https://ecom-static-site-prod.oss-ap-southeast-1.aliyuncs.com/metaImages/7-day-health-camp.jpg"
       },
       {
         "property": "og:type",
@@ -3415,7 +3415,7 @@
       },
       {
         "property": "og:image",
-        "content": "https://ecom-static-site.oss-ap-south-1.aliyuncs.com/metaImages/concentrated-woman-meditating-nature.jpg"
+        "content": "https://ecom-static-site-prod.oss-ap-southeast-1.aliyuncs.com/metaImages/concentrated-woman-meditating-nature.jpg"
       },
       {
         "property": "og:type",
@@ -3460,7 +3460,7 @@
       },
       {
         "property": "og:image",
-        "content": "https://ecom-static-site.oss-ap-south-1.aliyuncs.com/metaImages/concentrated-woman-meditating-nature.jpg"
+        "content": "https://ecom-static-site-prod.oss-ap-southeast-1.aliyuncs.com/metaImages/concentrated-woman-meditating-nature.jpg"
       },
       {
         "property": "og:type",
@@ -3978,7 +3978,7 @@
       },
       {
         "property": "og:image",
-        "content": "https://ecom-static-site.oss-ap-south-1.aliyuncs.com/metaImages/The-Times-of-India.jpg"
+        "content": "https://ecom-static-site-prod.oss-ap-southeast-1.aliyuncs.com/metaImages/The-Times-of-India.jpg"
       },
       {
         "property": "og:type",

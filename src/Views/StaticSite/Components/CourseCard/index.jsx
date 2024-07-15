@@ -24,7 +24,7 @@ const CourseCard = ({
   courseTitle,
   description,
   path,
-  img = 'http://ecom-static-site.oss-ap-south-1.aliyuncs.com/Courses/course%20%281%29.png',
+  img = 'http://ecom-static-site-prod.oss-ap-southeast-1.aliyuncs.com/Courses/course%20%281%29.png',
   //rating = 5,
   dates = [],
 }) => {

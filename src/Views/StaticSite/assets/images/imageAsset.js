@@ -1,4 +1,4 @@
-const baseDomain = 'https://ecom-static-site.oss-ap-south-1.aliyuncs.com'
+const baseDomain = 'https://ecom-static-site-prod.oss-ap-southeast-1.aliyuncs.com'
 import  mayoga  from '../images/mayoga.jpg'
 
 export const extraImage = {

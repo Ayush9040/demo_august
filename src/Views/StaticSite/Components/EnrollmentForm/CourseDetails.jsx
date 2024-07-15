@@ -283,7 +283,7 @@ const CourseDetails = ({
                     currentCourse.onCampus === false
                       ? {
                         background:
-                            'url(https://ecom-static-site.oss-ap-south-1.aliyuncs.com/icons/icons8-multiply-24.png)',
+                            'url(https://ecom-static-site-prod.oss-ap-southeast-1.aliyuncs.com/icons/icons8-multiply-24.png)',
                       }
                       : {}
                   }
@@ -312,7 +312,7 @@ const CourseDetails = ({
                     currentCourse.online === false
                       ? {
                         background:
-                            'url(https://ecom-static-site.oss-ap-south-1.aliyuncs.com/icons/icons8-multiply-24.png)',
+                            'url(https://ecom-static-site-prod.oss-ap-southeast-1.aliyuncs.com/icons/icons8-multiply-24.png)',
                       }
                       : {}
                   }
@@ -356,7 +356,7 @@ const CourseDetails = ({
                       courseDate == '24th Sept to 30th Sept 2022')
                       ? {
                         background:
-                            'url(https://ecom-static-site.oss-ap-south-1.aliyuncs.com/icons/icons8-multiply-24.png)',
+                            'url(https://ecom-static-site-prod.oss-ap-southeast-1.aliyuncs.com/icons/icons8-multiply-24.png)',
                       }
                       : {}
                   }
@@ -395,7 +395,7 @@ const CourseDetails = ({
                     currentCourse.nonResidential === false
                       ? {
                         background:
-                            'url(https://ecom-static-site.oss-ap-south-1.aliyuncs.com/icons/icons8-multiply-24.png)',
+                            'url(https://ecom-static-site-prod.oss-ap-southeast-1.aliyuncs.com/icons/icons8-multiply-24.png)',
                       }
                       : {}
                   }

@@ -714,7 +714,7 @@ const corporateWellness = () => {
           <div className="blog-card-container">
             <div className="blog-card">
               <img
-                src="https://theyogainstitute.oss-ap-south-1.aliyuncs.com/uploads/2020/01/Blog-Thumbnail_01.jpg"
+                src="https://theyogainstituteprod.oss-ap-southeast-1.aliyuncs.com/uploads/2020/01/Blog-Thumbnail_01.jpg"
                 alt=""
               />
               <p>
@@ -729,7 +729,7 @@ const corporateWellness = () => {
             </div>
             <div className="blog-card">
               <img
-                src="https://theyogainstitute.oss-ap-south-1.aliyuncs.com/uploads/2021/07/Do-this-to-Protect-your-Eyes-from-the-Screen.jpg"
+                src="https://theyogainstituteprod.oss-ap-southeast-1.aliyuncs.com/uploads/2021/07/Do-this-to-Protect-your-Eyes-from-the-Screen.jpg"
                 alt=""
               />
               <p>
@@ -744,7 +744,7 @@ const corporateWellness = () => {
             </div>
             <div className="blog-card">
               <img
-                src="https://theyogainstitute.oss-ap-south-1.aliyuncs.com/uploads/2017/10/work-blog.jpg"
+                src="https://theyogainstituteprod.oss-ap-southeast-1.aliyuncs.com/uploads/2017/10/work-blog.jpg"
                 alt=""
               />
               <p>

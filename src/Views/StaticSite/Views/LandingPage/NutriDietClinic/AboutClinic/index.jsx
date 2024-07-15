@@ -93,7 +93,7 @@ const NutriDietClinic = () => {
         <Link to="/">
           <div className="nutri-logo">
             <img
-              src="https://ecom-static-site.oss-ap-south-1.aliyuncs.com/Nutri-Clinic/main-logo.png"
+              src="https://ecom-static-site-prod.oss-ap-southeast-1.aliyuncs.com/Nutri-Clinic/main-logo.png"
               className="nutri-image"
             />
           </div>
@@ -265,7 +265,7 @@ const NutriDietClinic = () => {
             <div>
               <img
                 className="img-programs"
-                src="https://ecom-static-site.oss-ap-south-1.aliyuncs.com/Nutri-Clinic/Salad.png"
+                src="https://ecom-static-site-prod.oss-ap-southeast-1.aliyuncs.com/Nutri-Clinic/Salad.png"
               />
               <div className="programs-benefits">
                 <span className="programs">PROGRAMS BENIFITS:</span>
@@ -296,7 +296,7 @@ const NutriDietClinic = () => {
             </div>
             <div className="int_img21">
               <img
-                src="https://ecom-static-site.oss-ap-south-1.aliyuncs.com/Nutri-Clinic/Thali.png"
+                src="https://ecom-static-site-prod.oss-ap-southeast-1.aliyuncs.com/Nutri-Clinic/Thali.png"
                 alt=""
               />
             </div>
@@ -359,7 +359,7 @@ const NutriDietClinic = () => {
         </section>
         <div className="bottom-img-div">
           <img
-            src="https://ecom-static-site.oss-ap-south-1.aliyuncs.com/Nutri-Clinic/ezgif.com-gif-maker.png"
+            src="https://ecom-static-site-prod.oss-ap-southeast-1.aliyuncs.com/Nutri-Clinic/ezgif.com-gif-maker.png"
             className="bottom-image"
           />
         </div>
