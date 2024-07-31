@@ -26,7 +26,7 @@ const SearchModal = () => {
         setSearch(Params.get('search'))
         axios
           .get(
-            `https://cms-prod-be.theyogainstitute.org/v1/misc/search/?search=${Params.get('search')}&page=${pagination.page}&limit=${pagination.limit}`
+            `${cmsBaseDomain}/misc/search/?search=${Params.get('search')}&page=${pagination.page}&limit=${pagination.limit}`
           )
           .then((res) => {
             setContent(res.data)

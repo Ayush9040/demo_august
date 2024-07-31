@@ -33,7 +33,7 @@ export const mediaData = [
       `${baseDomain}${mediaAssets.mediaAsset222}`,
       `${baseDomain}${mediaAssets.mediaAsset223}`,
     ],
-    heroImage:'https://ecom-static-site-prod.oss-ap-southeast-1.aliyuncs.com/Media/gallery/seminar.png'
+    heroImage:'https://ecom-static-site-prod.s3.ap-south-1.amazonaws.com/Media/gallery/seminar.png'
     // `${baseDomain}${mediaAssets.seminarImg}`
   },
   {
@@ -51,7 +51,7 @@ export const mediaData = [
       `${baseDomain}${mediaAssets.mediaAsset8}`,
       `${baseDomain}${mediaAssets.mediaAsset9}`,
     ],
-    heroImage: 'https://ecom-static-site-prod.oss-ap-southeast-1.aliyuncs.com/Media/gallery/99FoundationDay/Hero%20image%20.jpg'
+    heroImage: 'https://ecom-static-site-prod.s3.ap-south-1.amazonaws.com/Media/gallery/99FoundationDay/Hero%20image%20.jpg'
     // `${baseDomain}${mediaAssets.mediaAssetsHero}`
   },
   {

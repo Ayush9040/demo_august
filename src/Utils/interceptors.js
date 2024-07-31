@@ -1,12 +1,13 @@
 import axios from 'axios'
 
 import { refreshSessionAndGetData } from './refreshToken'
+import { authServerClientId } from '../Constants/appSettings'
 
 console.log('Initilise Interseptor')
 
 axios.interceptors.request.use(
   (config) => {
-    config.headers['x-clientId'] = 'cmsProd_qt9up36idOpBAcrrd'
+    config.headers['x-clientId'] = authServerClientId
     return config
   },
   (err) => {

@@ -9,6 +9,7 @@ import 'react-datepicker/dist/react-datepicker.css'
 import './style.scss'
 import { AnonymousDonation, donationPaymentOrder, successMail } from './api'
 import Loader from '../Loader'
+import { razorPayKey } from '../../../../Constants/appSettings'
 
 
 const DonationForm = ( { csrId } ) => {
@@ -108,7 +109,7 @@ const DonationForm = ( { csrId } ) => {
           return 0
     
         const options = {
-          key: 'rzp_live_KyhtrIyJ546bd2', // Enter the Key ID generated from the Dashboard
+          key: razorPayKey,//'rzp_live_KyhtrIyJ546bd2', // Enter the Key ID generated from the Dashboard
           amount: paymentOrderResponse.data.amount, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
           currency: 'INR',
           name: 'The Yoga Institute',

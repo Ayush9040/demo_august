@@ -248,7 +248,7 @@ const ttc200hr = {
         type: 'url',
         content: {
           text: 'Access the detailed One Month Yoga Teacher Training Course curriculum here:',
-          url: 'https://ecom-static-site-prod.oss-ap-southeast-1.aliyuncs.com/courses_pdf/200hr.pdf',
+          url: 'https://ecom-static-site-prod.s3.ap-south-1.amazonaws.com/courses_pdf/200hr.pdf',
         },
       },
       {
@@ -744,7 +744,7 @@ const ttc200hr = {
         type: 'url',
         content: {
           text: 'Access the detailed 200 hour yttc curriculum:',
-          url: 'https://ecom-static-site-prod.oss-ap-southeast-1.aliyuncs.com/courses_pdf/200hr.pdf',
+          url: 'https://ecom-static-site-prod.s3.ap-south-1.amazonaws.com/courses_pdf/200hr.pdf',
         },
       },
     ],
@@ -1176,7 +1176,7 @@ const ttc200hr = {
         type: 'url',
         content: {
           text: 'Access the online yoga certification course detailed curriculum here:',
-          url: 'https://ecom-static-site-prod.oss-ap-southeast-1.aliyuncs.com/courses_pdf/200hr.pdf',
+          url: 'https://ecom-static-site-prod.s3.ap-south-1.amazonaws.com/courses_pdf/200hr.pdf',
         },
       },
       {
@@ -1648,7 +1648,7 @@ const ttc200hr = {
         type: 'url',
         content: {
           text: 'Access the detailed Online Hindi Teacher Training Course curriculum here:',
-          url: 'https://ecom-static-site-prod.oss-ap-southeast-1.aliyuncs.com/courses_pdf/200hr.pdf',
+          url: 'https://ecom-static-site-prod.s3.ap-south-1.amazonaws.com/courses_pdf/200hr.pdf',
         },
       },
       {
@@ -2134,7 +2134,7 @@ const ttc200hr = {
         type: 'url',
         content: {
           text: 'Access the yoga classes weekend detailed curriculum here:',
-          url: 'https://ecom-static-site-prod.oss-ap-southeast-1.aliyuncs.com/courses_pdf/200hr.pdf',
+          url: 'https://ecom-static-site-prod.s3.ap-south-1.amazonaws.com/courses_pdf/200hr.pdf',
         },
       },
       {
@@ -2624,7 +2624,7 @@ const ttc200hr = {
         type: 'url',
         content: {
           text: 'Access the detailed curriculum here:',
-          url: 'https://ecom-static-site-prod.oss-ap-southeast-1.aliyuncs.com/courses_pdf/200hr.pdf',
+          url: 'https://ecom-static-site-prod.s3.ap-south-1.amazonaws.com/courses_pdf/200hr.pdf',
         },
       },
       {
@@ -3064,7 +3064,7 @@ const ttc500hr = {
         type: 'url',
         content: {
           text: 'Access the 3 months teacher training course detailed syllabus here:',
-          url: 'https://ecom-static-site-prod.oss-ap-southeast-1.aliyuncs.com/courses_pdf/500hr.pdf',
+          url: 'https://ecom-static-site-prod.s3.ap-south-1.amazonaws.com/courses_pdf/500hr.pdf',
         },
       },
     ],
@@ -3459,7 +3459,7 @@ const ttc900hr = {
         content: {
           text: 'Access the advanced yoga teacher training course detailed syllabus here:',
 
-          url: 'https://ecom-static-site-prod.oss-ap-southeast-1.aliyuncs.com/courses_pdf/900hr.pdf',
+          url: 'https://ecom-static-site-prod.s3.ap-south-1.amazonaws.com/courses_pdf/900hr.pdf',
         },
       },
     ],
@@ -4063,7 +4063,7 @@ const ttc900hr = {
         content: {
           text: 'Access the advanced yoga certificate course detailed syllabus here:',
 
-          url: 'https://ecom-static-site-prod.oss-ap-southeast-1.aliyuncs.com/courses_pdf/900hr.pdf',
+          url: 'https://ecom-static-site-prod.s3.ap-south-1.amazonaws.com/courses_pdf/900hr.pdf',
         },
       },
 
@@ -4759,7 +4759,7 @@ const ttc900hr = {
         content: {
           text: 'Access the Advanced Yoga Teacher Training Certificate Course detailed syllabus here:',
 
-          url: 'https://ecom-static-site-prod.oss-ap-southeast-1.aliyuncs.com/courses_pdf/900hr.pdf',
+          url: 'https://ecom-static-site-prod.s3.ap-south-1.amazonaws.com/courses_pdf/900hr.pdf',
         },
       },
     ],
@@ -5426,7 +5426,7 @@ const ttc900hr = {
         type: 'url',
         content: {
           text: 'Access the 900 Hour Online Yoga Teacher Training Course detailed syllabus here:',
-          url: 'https://ecom-static-site-prod.oss-ap-southeast-1.aliyuncs.com/courses_pdf/900hr.pdf',
+          url: 'https://ecom-static-site-prod.s3.ap-south-1.amazonaws.com/courses_pdf/900hr.pdf',
         },
       },
     ],
@@ -6070,7 +6070,7 @@ const ttc900hr = {
         content: {
           text: 'Access the advanced certified yoga instructor course detailed syllabus here:',
 
-          url: 'https://ecom-static-site-prod.oss-ap-southeast-1.aliyuncs.com/courses_pdf/900hr.pdf',
+          url: 'https://ecom-static-site-prod.s3.ap-south-1.amazonaws.com/courses_pdf/900hr.pdf',
         },
       },
     ],

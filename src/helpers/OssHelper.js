@@ -133,7 +133,7 @@ export const uploadFile = (file, type) =>
         // }
       )
       resolve(
-        `https://${bucket}.${data.data.ossBucketRegion}.aliyuncs.com/${name}`
+        `https://${bucket}.${data.data.ossBucketRegion}.amazonaws.com/${name}`
       )
     } catch (error) {
       console.log(error,'err')

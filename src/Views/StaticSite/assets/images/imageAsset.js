@@ -1,4 +1,4 @@
-const baseDomain = 'https://ecom-static-site-prod.oss-ap-southeast-1.aliyuncs.com'
+const baseDomain = 'https://ecom-static-site-prod.s3.ap-south-1.amazonaws.com'
 import  mayoga  from '../images/mayoga.jpg'
 
 export const extraImage = {
@@ -315,7 +315,7 @@ export const facilitiyAssets = {
   facilitiyAssets9: '/SEO-New-Images/Facilities/Gazebo-the-yoga-institute.webp',
   facilitiyAssets10: '/SEO-New-Images/Facilities/kelashpati-the-yoga-institute.webp',
   homeAsset70: '/Home/Footer/tyi.png',
-  facilitiyAssets11: '//SEO-New-Images/Facilities/kelashpati-the-yoga-institute.webp',
+  facilitiyAssets11: '/SEO-New-Images/Facilities/kelashpati-the-yoga-institute.webp',
   facilitiyAssets12: '/SEO-New-Images/Facilities/dininghall-the-yoga-institute.webp',
 }
 
@@ -697,11 +697,11 @@ export const mediaAssets = {
   //IIT_29th_Feb_2020_Hansaji
 
   mediaAssets147: '/Media/gallery/IIT_29th_Feb_2020_Hansaji/868A0965.jpeg',
-  mediaAssets148: '//Media/gallery/IIT_29th_Feb_2020_Hansaji/868A0969.jpeg',
-  mediaAssets149: '//Media/gallery/IIT_29th_Feb_2020_Hansaji/868A0970.jpeg',
-  mediaAssets150: '//Media/gallery/IIT_29th_Feb_2020_Hansaji/868A0972.jpeg',
-  mediaAssets151: '//Media/gallery/IIT_29th_Feb_2020_Hansaji/868A0974.jpeg',
-  mediaAssets152: '//Media/gallery/IIT_29th_Feb_2020_Hansaji/868A0976.jpeg',
+  mediaAssets148: '/Media/gallery/IIT_29th_Feb_2020_Hansaji/868A0969.jpeg',
+  mediaAssets149: '/Media/gallery/IIT_29th_Feb_2020_Hansaji/868A0970.jpeg',
+  mediaAssets150: '/Media/gallery/IIT_29th_Feb_2020_Hansaji/868A0972.jpeg',
+  mediaAssets151: '/Media/gallery/IIT_29th_Feb_2020_Hansaji/868A0974.jpeg',
+  mediaAssets152: '/Media/gallery/IIT_29th_Feb_2020_Hansaji/868A0976.jpeg',
   mediaAssets153: '/Media/gallery/IIT_29th_Feb_2020_Hansaji/868A0980.jpeg',
 
   //Mass_Yoga_Bhopal

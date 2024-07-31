@@ -5,6 +5,7 @@ const path = require('path')
 const fs = require('fs')
 const metaDataObj = require('./src/Constants/metaData.json')
 const axios = require('axios')
+const { cmsBaseDomain } = require('./src/Constants/appSettings')
 //import { cmsBaseDomain } from './src/Constants/appSettings' 
 
 const PORT = 5500
@@ -31,7 +32,7 @@ const getMetaData = async( path )=>{
   let pathName = path.slice(1)
   try {
     const res = await axios.get(
-      `https://www.cms-prod-be.theyogainstitute.org/v1/seometatags/?pagePath=${pathName}`
+      `${cmsBaseDomain}/seometatags/?pagePath=${pathName}`
     )
     let data = res.data.data.meta
     let headers = {
@@ -66,7 +67,7 @@ const getMetaData = async( path )=>{
   } catch (err) {
     if(metaDataObj[path]) return metaDataObj[path]
     try{
-      const res = await axios.get(`https://www.cms-prod-be.theyogainstitute.org/v1/post${ path }`)
+      const res = await axios.get(`${cmsBaseDomain}/post${ path }`)
       let data =  res.data.data.meta
       let headers = {
         title: '',
@@ -109,7 +110,7 @@ const getMetaData = async( path )=>{
   }
 }
 const getBogLinks = async()=>{
-  const { data } = await axios.get('https://cms-prod-be.theyogainstitute.org/v1/misc/urlsarray')
+  const { data } = await axios.get(`${cmsBaseDomain}/misc/urlsarray`)
   return data.data
 }
 

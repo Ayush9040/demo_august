@@ -196,7 +196,7 @@ const TyiLandingPage7Months = () => {
       <div className="overlap-container">
         <div className="img-container">
           <img
-            src="https://ecom-static-site-prod.oss-ap-southeast-1.aliyuncs.com/New-landing-page/first.png"
+            src="https://ecom-static-site-prod.s3.ap-south-1.amazonaws.com/New-landing-page/first.png"
             alt="image"
           />
         </div>
@@ -224,7 +224,7 @@ const TyiLandingPage7Months = () => {
         </div>
         <div className="img-container">
           <img
-            src="https://ecom-static-site-prod.oss-ap-southeast-1.aliyuncs.com/New-landing-page/second.png"
+            src="https://ecom-static-site-prod.s3.ap-south-1.amazonaws.com/New-landing-page/second.png"
             alt="image"
           />
         </div>
@@ -237,7 +237,7 @@ const TyiLandingPage7Months = () => {
           <ul>
             <li>
               <img
-                src="https://ecom-static-site-prod.oss-ap-southeast-1.aliyuncs.com/New-landing-page/flower.jpg"
+                src="https://ecom-static-site-prod.s3.ap-south-1.amazonaws.com/New-landing-page/flower.jpg"
                 alt="Flower Icon"
                 className="flowerIcon"
               />
@@ -245,7 +245,7 @@ const TyiLandingPage7Months = () => {
             </li>
             <li>
               <img
-                src="https://ecom-static-site-prod.oss-ap-southeast-1.aliyuncs.com/New-landing-page/flower.jpg"
+                src="https://ecom-static-site-prod.s3.ap-south-1.amazonaws.com/New-landing-page/flower.jpg"
                 alt="Flower Icon"
                 className="flowerIcon"
               />
@@ -254,7 +254,7 @@ const TyiLandingPage7Months = () => {
             </li>
             <li>
               <img
-                src="https://ecom-static-site-prod.oss-ap-southeast-1.aliyuncs.com/New-landing-page/flower.jpg"
+                src="https://ecom-static-site-prod.s3.ap-south-1.amazonaws.com/New-landing-page/flower.jpg"
                 alt="Flower Icon"
                 className="flowerIcon"
               />
@@ -266,7 +266,7 @@ const TyiLandingPage7Months = () => {
             </li>
             <li>
               <img
-                src="https://ecom-static-site-prod.oss-ap-southeast-1.aliyuncs.com/New-landing-page/flower.jpg"
+                src="https://ecom-static-site-prod.s3.ap-south-1.amazonaws.com/New-landing-page/flower.jpg"
                 alt="Flower Icon"
                 className="flowerIcon"
               />
@@ -274,7 +274,7 @@ const TyiLandingPage7Months = () => {
             </li>
             <li>
               <img
-                src="https://ecom-static-site-prod.oss-ap-southeast-1.aliyuncs.com/New-landing-page/flower.jpg"
+                src="https://ecom-static-site-prod.s3.ap-south-1.amazonaws.com/New-landing-page/flower.jpg"
                 alt="Flower Icon"
                 className="flowerIcon"
               />
@@ -285,7 +285,7 @@ const TyiLandingPage7Months = () => {
             </li>
             <li>
               <img
-                src="https://ecom-static-site-prod.oss-ap-southeast-1.aliyuncs.com/New-landing-page/flower.jpg"
+                src="https://ecom-static-site-prod.s3.ap-south-1.amazonaws.com/New-landing-page/flower.jpg"
                 alt="Flower Icon"
                 className="flowerIcon"
               />
@@ -305,7 +305,7 @@ const TyiLandingPage7Months = () => {
           <ul>
             <li>
               <img
-                src="https://ecom-static-site-prod.oss-ap-southeast-1.aliyuncs.com/New-landing-page/flower.jpg"
+                src="https://ecom-static-site-prod.s3.ap-south-1.amazonaws.com/New-landing-page/flower.jpg"
                 alt="Flower Icon"
                 className="flowerIcon"
               />
@@ -313,7 +313,7 @@ const TyiLandingPage7Months = () => {
             </li>
             <li>
               <img
-                src="https://ecom-static-site-prod.oss-ap-southeast-1.aliyuncs.com/New-landing-page/flower.jpg"
+                src="https://ecom-static-site-prod.s3.ap-south-1.amazonaws.com/New-landing-page/flower.jpg"
                 alt="Flower Icon"
                 className="flowerIcon"
               />
@@ -322,7 +322,7 @@ const TyiLandingPage7Months = () => {
             </li>
             <li>
               <img
-                src="https://ecom-static-site-prod.oss-ap-southeast-1.aliyuncs.com/New-landing-page/flower.jpg"
+                src="https://ecom-static-site-prod.s3.ap-south-1.amazonaws.com/New-landing-page/flower.jpg"
                 alt="Flower Icon"
                 className="flowerIcon"
               />
@@ -330,7 +330,7 @@ const TyiLandingPage7Months = () => {
             </li>
             <li>
               <img
-                src="https://ecom-static-site-prod.oss-ap-southeast-1.aliyuncs.com/New-landing-page/flower.jpg"
+                src="https://ecom-static-site-prod.s3.ap-south-1.amazonaws.com/New-landing-page/flower.jpg"
                 alt="Flower Icon"
                 className="flowerIcon"
               />
@@ -339,7 +339,7 @@ const TyiLandingPage7Months = () => {
             </li>
             <li>
               <img
-                src="https://ecom-static-site-prod.oss-ap-southeast-1.aliyuncs.com/New-landing-page/flower.jpg"
+                src="https://ecom-static-site-prod.s3.ap-south-1.amazonaws.com/New-landing-page/flower.jpg"
                 alt="Flower Icon"
                 className="flowerIcon"
               />
@@ -348,7 +348,7 @@ const TyiLandingPage7Months = () => {
             </li>
             <li>
               <img
-                src="https://ecom-static-site-prod.oss-ap-southeast-1.aliyuncs.com/New-landing-page/flower.jpg"
+                src="https://ecom-static-site-prod.s3.ap-south-1.amazonaws.com/New-landing-page/flower.jpg"
                 alt="Flower Icon"
                 className="flowerIcon"
               />
@@ -356,7 +356,7 @@ const TyiLandingPage7Months = () => {
             </li>
             <li>
               <img
-                src="https://ecom-static-site-prod.oss-ap-southeast-1.aliyuncs.com/New-landing-page/flower.jpg"
+                src="https://ecom-static-site-prod.s3.ap-south-1.amazonaws.com/New-landing-page/flower.jpg"
                 alt="Flower Icon"
                 className="flowerIcon"
               />
@@ -365,7 +365,7 @@ const TyiLandingPage7Months = () => {
             </li>
             <li>
               <img
-                src="https://ecom-static-site-prod.oss-ap-southeast-1.aliyuncs.com/New-landing-page/flower.jpg"
+                src="https://ecom-static-site-prod.s3.ap-south-1.amazonaws.com/New-landing-page/flower.jpg"
                 alt="Flower Icon"
                 className="flowerIcon"
               />
@@ -383,7 +383,7 @@ const TyiLandingPage7Months = () => {
           <ul>
             <li>
               <img
-                src="https://ecom-static-site-prod.oss-ap-southeast-1.aliyuncs.com/New-landing-page/flower.jpg"
+                src="https://ecom-static-site-prod.s3.ap-south-1.amazonaws.com/New-landing-page/flower.jpg"
                 alt="Flower Icon"
                 className="flowerIcon"
               />
@@ -393,7 +393,7 @@ const TyiLandingPage7Months = () => {
             </li>
             <li>
               <img
-                src="https://ecom-static-site-prod.oss-ap-southeast-1.aliyuncs.com/New-landing-page/flower.jpg"
+                src="https://ecom-static-site-prod.s3.ap-south-1.amazonaws.com/New-landing-page/flower.jpg"
                 alt="Flower Icon"
                 className="flowerIcon"
               />
@@ -405,7 +405,7 @@ const TyiLandingPage7Months = () => {
             </li>
             <li>
               <img
-                src="https://ecom-static-site-prod.oss-ap-southeast-1.aliyuncs.com/New-landing-page/flower.jpg"
+                src="https://ecom-static-site-prod.s3.ap-south-1.amazonaws.com/New-landing-page/flower.jpg"
                 alt="Flower Icon"
                 className="flowerIcon"
               />
@@ -416,7 +416,7 @@ const TyiLandingPage7Months = () => {
             </li>
             <li>
               <img
-                src="https://ecom-static-site-prod.oss-ap-southeast-1.aliyuncs.com/New-landing-page/flower.jpg"
+                src="https://ecom-static-site-prod.s3.ap-south-1.amazonaws.com/New-landing-page/flower.jpg"
                 alt="Flower Icon"
                 className="flowerIcon"
               />
@@ -431,7 +431,7 @@ const TyiLandingPage7Months = () => {
         <div className="founderImage">
           {' '}
           <img
-            src="https://ecom-static-site-prod.oss-ap-southeast-1.aliyuncs.com/New-landing-page/founder.png"
+            src="https://ecom-static-site-prod.s3.ap-south-1.amazonaws.com/New-landing-page/founder.png"
             alt="founderImage"
           />
         </div>

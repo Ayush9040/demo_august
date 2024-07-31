@@ -191,7 +191,7 @@ const AboutCamp = () => {
         <section className="section_2">
           <div className="sec2_img">
             <img
-              src="https://ecom-static-site-prod.oss-ap-southeast-1.aliyuncs.com/seven-days/About-Camp.jpg"
+              src="https://ecom-static-site-prod.s3.ap-south-1.amazonaws.com/seven-days/About-Camp.jpg"
               alt=""
             />
             <div className='sec2_text_desktop'>
@@ -253,7 +253,7 @@ const AboutCamp = () => {
         </section>
         <section>
           <div className='background-img' style={{ position:'relative' }} >
-            <img className='img-bg-sec' src='https://ecom-static-site-prod.oss-ap-southeast-1.aliyuncs.com/seven-days/Rectangle-6-copy-5.jpg' />
+            <img className='img-bg-sec' src='https://ecom-static-site-prod.s3.ap-south-1.amazonaws.com/seven-days/Rectangle-6-copy-5.jpg' />
             <div className="overlap-heading">OTHER POPULAR CAMPS AND WORKSHOPS</div>
           </div>
         </section>
