@@ -36,7 +36,7 @@
         "@typescript-eslint/no-use-before-define": "warn",
         "@typescript-eslint/no-unused-vars": "warn",
         "no-use-before-define": "warn",
-        "space-before-function-paren": ["error", "never"],
+        // "space-before-function-paren": ["error", "never"],
         "switch-colon-spacing": ["error",{
             "after": true,
             "before": false
@@ -65,10 +65,10 @@
         "quotes": [
             "error",
             "single"
-        ],
-        "semi": [
-            "error",
-            "never"
         ]
+        // "semi": [
+        //     "error",
+        //     "never"
+        // ]
     }
 }
