@@ -13078,7 +13078,7 @@ const classes = {
             },
             {
               listItem: 'Semester - II',
-              subItems: ['Principles of Indian Philosophy', 'Patanjali Yoga Sutras', 'Yogaopanishad and modern philosophers', 'Applied Yoga', 'Practical and Yoga Teaching'],
+              subItems: ['Principles of Indian Philosophy', 'Patanjali Yoga Sutras', 'Yoga Upanishad and modern philosophers', 'Applied Yoga', 'Practical and Yoga Teaching'],
             },
             {
               listItem: 'Semester - III',
@@ -13086,7 +13086,7 @@ const classes = {
             },
             {
               listItem: 'Semester - IV',
-              subItems: ['Traditional Yoga Texts – II', 'Western Psychology', 'Yogopanisahd', 'Nature cure therapy', 'Practical and Yoga Teaching'],
+              subItems: ['Traditional Yoga Texts – II', 'Western Psychology', 'Yoga Upanishad', 'Nature cure therapy', 'Practical and Yoga Teaching'],
             },
           ],
         },
@@ -13102,7 +13102,7 @@ const classes = {
         type: 'paragraph',
         content: {
           title: 'Admission Process',
-          text: ['Application Deadline: 1st August', 'Selection Criteria: Based on merit and timely registration.'],
+          text: ['Application Deadline: 10th August','Course Commencement Date: 16th August 2024', 'Selection Criteria: Based on merit and timely registration.'],
         },
       },
       {
@@ -13172,7 +13172,7 @@ const classes = {
           text: [
             ' ',
             '',
-            '* Affiliation: Affiliation is under the final stage of approval from a recognized university for the academic year 2024-25.'
+            '* Affiliation: This course is affiliated with Kavikulaguru Kalidas Sanskrit University (KKSU) Ramtek, Nagpur, awarded with "A+" grade by the National Assessment and Accreditation Council (NAAC).'
           ],
         },
       },
