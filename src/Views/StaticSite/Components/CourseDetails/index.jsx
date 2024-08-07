@@ -26,12 +26,12 @@ const CourseDetails = ({ pageDate }) => {
   //   setCourseDate(localStorage.getItem('selectedDate'))
   // }, [])
   const { isLoggedIn } = useSelector((state) => state.auth)
-  const [selectDate, setSetselectDate] = useState(null)
+  const [selectDate, setSetselectDate] = useState('null')
 
   const checkHandler = () => {
     if (pageDate.dates.length !== 0) {
       if (selectDate === null) {
-        setError(1)
+        setError(0)//1
       } else {
         setError(0)
       }
@@ -43,7 +43,7 @@ const CourseDetails = ({ pageDate }) => {
     setSetselectDate(Params.get('date'))
 
     window.scrollTo(0, 0)
-    console.log(pageDate?.key,'heoo')
+    console.log(pageDate?.key, 'heoo')
     // {Params.get('date')===null? window.scrollTo(0, 0): document.getElementById('date-select').scrollIntoView()}
   }, [])
 
@@ -116,43 +116,43 @@ const CourseDetails = ({ pageDate }) => {
 
   const selectMenu = (name) => {
     switch (name) {
-    case 'Program Details':
-      setDetail(1)
-      break
-    case 'curriculum':
-      setDetail(2)
-      break
-    case 'Teaching & Certification':
-      setDetail(3)
-      break
-    case 'Our Unique Offerings':
-      setDetail(4)
-      break
-    case 'Registration':
-      setDetail(5)
-      break
-    case 'FAQ':
-      setDetail(6)
-      break
-    default:
-      setDetail(1)
+      case 'Program Details':
+        setDetail(1)
+        break
+      case 'curriculum':
+        setDetail(2)
+        break
+      case 'Teaching & Certification':
+        setDetail(3)
+        break
+      case 'Our Unique Offerings':
+        setDetail(4)
+        break
+      case 'Registration':
+        setDetail(5)
+        break
+      case 'FAQ':
+        setDetail(6)
+        break
+      default:
+        setDetail(1)
     }
   }
 
   const selectComponent = (type, content) => {
     switch (type) {
-    case 'paragraph':
-      return <CoursePara content={content} />
-    case 'u-list':
-      return <CourseULIst content={content} />
-    case 'o-list':
-      return <CourseOList content={content} />
-    case 'table':
-      return <CourseTable content={content} />
-    case 'quote':
-      return <CourseQuote content={content} />
-    case 'url':
-      return <CourseURL content={content} />
+      case 'paragraph':
+        return <CoursePara content={content} />
+      case 'u-list':
+        return <CourseULIst content={content} />
+      case 'o-list':
+        return <CourseOList content={content} />
+      case 'table':
+        return <CourseTable content={content} />
+      case 'quote':
+        return <CourseQuote content={content} />
+      case 'url':
+        return <CourseURL content={content} />
     }
   }
 
@@ -182,61 +182,61 @@ const CourseDetails = ({ pageDate }) => {
             <p>{pageDate?.textdescription3}</p>
             <p>{pageDate?.textdescription4}</p>
             <p>{pageDate?.textdescription5}</p>
-            {pageDate?.metaDescription?.split('¿').map((para,i)=> {
+            {pageDate?.metaDescription?.split('¿').map((para, i) => {
               return <p key={i} style={{ marginTop: '20px' }}>{para}</p>
             })}
-            
+
             <p>{pageDate?.textdescription6}</p>
             <p>{pageDate?.textdescription7}</p>
             <p>{pageDate?.textdescription8}</p>
             <p>{pageDate?.textdescription9}</p>
             <p>{pageDate?.textdescription10}</p>
             {/* 'Lorem Ipsum is simply dummy text of theprinting and typesetting industry.'} */}
-            {pageDate?.key === 'respiratory-workshop'  && (
-              <p style={{ marginTop: '1.5rem' , fontSize:'1.5rem' }}>This camp is designed specifically for individuals who are currently facing respiratory issues. It is tailored to provide support, guidance, and exercises to help improve respiratory health.</p>
+            {pageDate?.key === 'respiratory-workshop' && (
+              <p style={{ marginTop: '1.5rem', fontSize: '1.5rem' }}>This camp is designed specifically for individuals who are currently facing respiratory issues. It is tailored to provide support, guidance, and exercises to help improve respiratory health.</p>
             )}
             {pageDate?.key === 'respiratory-workshop' && (
-              <p style={{ marginTop: '1.5rem' , fontSize:'1.5rem' }}>*Kindly Note: The camp is not available to the general public who might be interested in attending for the purpose of gaining general knowledge.</p>
-            )}
-            {pageDate?.key === 'stress-management-camp'   && (
-              <p style={{ marginTop: '1.5rem' , fontSize:'1.5rem' }}>This camp is uniquely crafted for individuals currently experiencing stress-related challenges. Its focus is on offering specialized assistance, direction, and techniques to address issues stemming from stress.</p>
+              <p style={{ marginTop: '1.5rem', fontSize: '1.5rem' }}>*Kindly Note: The camp is not available to the general public who might be interested in attending for the purpose of gaining general knowledge.</p>
             )}
             {pageDate?.key === 'stress-management-camp' && (
-              <p style={{ marginTop: '1.5rem' , fontSize:'1.5rem' }}>*Kindly Note: The camp is not available to the general public who might be interested in attending for the purpose of gaining general knowledge.</p>
+              <p style={{ marginTop: '1.5rem', fontSize: '1.5rem' }}>This camp is uniquely crafted for individuals currently experiencing stress-related challenges. Its focus is on offering specialized assistance, direction, and techniques to address issues stemming from stress.</p>
             )}
-            {pageDate?.key === 'weight-management-workshop'  && (
-              <p style={{ marginTop: '1.5rem' , fontSize:'1.5rem' }}>This camp is thoughtfully designed for individuals who face challenges in weight loss and achieving their ideal weight. Our emphasis is on providing a comprehensive strategy for weight management, incorporating yoga postures, pranayamas, and a nourishing diet. </p>
+            {pageDate?.key === 'stress-management-camp' && (
+              <p style={{ marginTop: '1.5rem', fontSize: '1.5rem' }}>*Kindly Note: The camp is not available to the general public who might be interested in attending for the purpose of gaining general knowledge.</p>
             )}
             {pageDate?.key === 'weight-management-workshop' && (
-              <p style={{ marginTop: '1.5rem' , fontSize:'1.5rem' }}>*Kindly Note: The camp is not available to the general public who might be interested in attending for the purpose of gaining general knowledge.</p>
+              <p style={{ marginTop: '1.5rem', fontSize: '1.5rem' }}>This camp is thoughtfully designed for individuals who face challenges in weight loss and achieving their ideal weight. Our emphasis is on providing a comprehensive strategy for weight management, incorporating yoga postures, pranayamas, and a nourishing diet. </p>
             )}
-            {pageDate?.key === 'pregnancy-camp-for-ante-post-natal'  && (
-              <p style={{ marginTop: '1.5rem' , fontSize:'1.5rem' }}>This camp is tailored exclusively for pregnant women. Our goal is to offer you an enriching journey towards a joyful and healthy pregnancy, along with a smooth delivery, achieved through yoga techniques and practical guidance. </p>
+            {pageDate?.key === 'weight-management-workshop' && (
+              <p style={{ marginTop: '1.5rem', fontSize: '1.5rem' }}>*Kindly Note: The camp is not available to the general public who might be interested in attending for the purpose of gaining general knowledge.</p>
             )}
             {pageDate?.key === 'pregnancy-camp-for-ante-post-natal' && (
-              <p style={{ marginTop: '1.5rem' , fontSize:'1.5rem' }}>*Kindly Note: The camp is not available to the general public who might be interested in attending for the purpose of gaining general knowledge.</p>
+              <p style={{ marginTop: '1.5rem', fontSize: '1.5rem' }}>This camp is tailored exclusively for pregnant women. Our goal is to offer you an enriching journey towards a joyful and healthy pregnancy, along with a smooth delivery, achieved through yoga techniques and practical guidance. </p>
             )}
-            {pageDate?.key === 'cardiac-hypertension-workshop'  && (
-              <p style={{ marginTop: '1.5rem' , fontSize:'1.5rem' }}>This workshop is exclusively crafted for people presently dealing with heart and hypertension concerns. Our objective is to offer assistance, guidance, and yogic practices to effectively address these concerns. </p>
+            {pageDate?.key === 'pregnancy-camp-for-ante-post-natal' && (
+              <p style={{ marginTop: '1.5rem', fontSize: '1.5rem' }}>*Kindly Note: The camp is not available to the general public who might be interested in attending for the purpose of gaining general knowledge.</p>
             )}
             {pageDate?.key === 'cardiac-hypertension-workshop' && (
-              <p style={{ marginTop: '1.5rem' , fontSize:'1.5rem' }}>*Kindly Note: The camp is not available to the general public who might be interested in attending for the purpose of gaining general knowledge.</p>
+              <p style={{ marginTop: '1.5rem', fontSize: '1.5rem' }}>This workshop is exclusively crafted for people presently dealing with heart and hypertension concerns. Our objective is to offer assistance, guidance, and yogic practices to effectively address these concerns. </p>
             )}
-            {pageDate?.key === 'back-joint-disorder-workshop'  && (
-              <p style={{ marginTop: '1.5rem' , fontSize:'1.5rem' }}>This workshop is uniquely created for individuals presently experiencing back and joint issues. It is custom-tailored to offer support, guidance, and specialized exercises aimed at addressing and alleviating these concerns. </p>
+            {pageDate?.key === 'cardiac-hypertension-workshop' && (
+              <p style={{ marginTop: '1.5rem', fontSize: '1.5rem' }}>*Kindly Note: The camp is not available to the general public who might be interested in attending for the purpose of gaining general knowledge.</p>
             )}
             {pageDate?.key === 'back-joint-disorder-workshop' && (
-              <p style={{ marginTop: '1.5rem' , fontSize:'1.5rem' }}>*Kindly Note: The camp is not available to the general public who might be interested in attending for the purpose of gaining general knowledge.</p>
+              <p style={{ marginTop: '1.5rem', fontSize: '1.5rem' }}>This workshop is uniquely created for individuals presently experiencing back and joint issues. It is custom-tailored to offer support, guidance, and specialized exercises aimed at addressing and alleviating these concerns. </p>
             )}
-            {pageDate?.key === 'diabetes-camp'  && (
-              <p style={{ marginTop: '1.5rem' , fontSize:'1.5rem' }}>This camp is exclusively designed for individuals currently managing diabetes. It is customized to offer support, guidance, and equip you with essential resources to improve your quality of life. </p>
+            {pageDate?.key === 'back-joint-disorder-workshop' && (
+              <p style={{ marginTop: '1.5rem', fontSize: '1.5rem' }}>*Kindly Note: The camp is not available to the general public who might be interested in attending for the purpose of gaining general knowledge.</p>
             )}
             {pageDate?.key === 'diabetes-camp' && (
-              <p style={{ marginTop: '1.5rem' , fontSize:'1.5rem' }}>*Kindly Note: The camp is not available to the general public who might be interested in attending for the purpose of gaining general knowledge.</p>
+              <p style={{ marginTop: '1.5rem', fontSize: '1.5rem' }}>This camp is exclusively designed for individuals currently managing diabetes. It is customized to offer support, guidance, and equip you with essential resources to improve your quality of life. </p>
+            )}
+            {pageDate?.key === 'diabetes-camp' && (
+              <p style={{ marginTop: '1.5rem', fontSize: '1.5rem' }}>*Kindly Note: The camp is not available to the general public who might be interested in attending for the purpose of gaining general knowledge.</p>
             )}
 
-            
-            <div
+
+            {/* <div
               id="date-select-mobile"
               style={
                 pageDate?.dates?.length !== 0
@@ -251,49 +251,58 @@ const CourseDetails = ({ pageDate }) => {
                 isStyles={selectStyles1}
                 dates={pageDate.dates}
               />{' '}
-            </div>
+            </div> */}
             <div className="course-options">
               {/* {selectDate ? <Link to={ isLoggedIn ? `/enrollment/${pageDate.key}/?date=${selectDate}`:`/user/sign-in/${pageDate.key}/?date=${selectDate}`}>
               <CommonBtn text={'Enroll Now'} />
             </Link> :  scroll() } */}
 
               <div onClick={checkHandler}>
-                {pageDate?.dates?.length !== 0 ? 
+                {pageDate?.dates?.length !== 0 ?
                   (
                     selectDate ? (
                       <Link
                         to={
                           isLoggedIn
-                            ? `/enrollment/${pageDate.key}/?date=${selectDate}`
-                            : `/user/sign-in/?location=${pageDate.key}&date=${selectDate}`
+                            ? `/enrollment/${pageDate.key}`///?date=${selectDate}
+                            : `/user/sign-in/?location=${pageDate.key}`//&date=${selectDate}
                         }
                       >
                         <CommonBtn text={'Enroll Now'} />
                       </Link>
                     ) : (
-                      scroll()
+                      // scroll()
+                      <Link
+                        to={
+                          isLoggedIn
+                            ? `/enrollment/${pageDate.key}`///?date=${selectDate}
+                            : `/user/sign-in/?location=${pageDate.key}`//&date=${selectDate}
+                        }
+                      >
+                        <CommonBtn text={'Enroll Now'} />
+                      </Link>
                     )
-                  ) : 
-                  ( pageDate?.key === 'samattvam' || pageDate?.key === 'satsang' || pageDate?.key === 'ma-yoga-shastra' ? <Link
+                  ) :
+                  (pageDate?.key === 'samattvam' || pageDate?.key === 'satsang' || pageDate?.key === 'ma-yoga-shastra' ? <Link
                     to={
                       isLoggedIn
-                        ? `/enrollment/${pageDate.key}/?date=${selectDate}`
-                        : `/user/sign-in/?location=${pageDate.key}&date=${selectDate}`
+                        ? `/enrollment/${pageDate.key}`///?date=${selectDate}
+                        : `/user/sign-in/?location=${pageDate.key}`//&date=${selectDate}
                     }
                   >
                     <CommonBtn text={'Enroll Now'} />
-                  </Link> : 
-                    ( <div > 
-                      <div style={{ opacity : '0.4' }}> 
-                        <CommonBtn text={'Enroll Now'} /> 
+                  </Link> :
+                    (<div >
+                      <div style={{ opacity: '0.4' }}>
+                        <CommonBtn text={'Enroll Now'} />
                       </div>
-                      <div style={{ fontSize:'1.5rem' , padding : '1.5rem' }}>No dates available for this course</div>
+                      <div style={{ fontSize: '1.5rem', padding: '1.5rem' }}>No dates available for this course</div>
                     </div>)
-                  
+
                   )
                 }
-                
-                {error === 1 && (
+
+                {/* {error === 1 && (
                   <small
                     style={{
                       color: 'white',
@@ -306,7 +315,7 @@ const CourseDetails = ({ pageDate }) => {
                   >
                   *Please Select Date/Time!
                   </small>
-                )}
+                )} */}
               </div>
 
               {/* <CommonBtn text={'Gift Course'} /> */}
@@ -332,13 +341,15 @@ const CourseDetails = ({ pageDate }) => {
               : { visibility: 'hidden' }
           }
         >
-          {pageDate.key === 'ma-yoga-shastra' ? '' : <SelectDropDown
+          {/* {pageDate.key === 'ma-yoga-shastra' ? '' : 
+          <SelectDropDown
             currentValue={selectDate}
             changeCurrentValue={setSetselectDate}
             text={'Select Date/Time'}
             isStyles={selectStyles}
             dates={pageDate.dates}
-          />}
+          />
+          } */}
           {' '}
         </div>
 
@@ -361,7 +372,7 @@ const CourseDetails = ({ pageDate }) => {
                       <em className={idx + 1 === detail && 'active'}>
                         {item.title}
                       </em>
-                    &nbsp;
+                      &nbsp;
                     </li>
                   </a>
                 ))}

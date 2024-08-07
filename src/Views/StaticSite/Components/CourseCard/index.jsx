@@ -45,9 +45,9 @@ const CourseCard = ({
   }
   // const [ratingArr, setRatingArr] = useState([])
   const { isLoggedIn } = useSelector((state) => state.auth)
-  const [error,setError]=useState(0)
+  const [error, setError] = useState(0)
 
- 
+
 
   // useEffect(() => {
   //   let arr = []
@@ -58,24 +58,24 @@ const CourseCard = ({
   // }, [])
   const navigate = useNavigate()
 
-  const [selectDate, setSetselectDate] = useState(null)
+  const [selectDate, setSetselectDate] = useState('null')//null
   // localStorage.setItem('selectedDate', selectDate)
 
-  const checkEmpty =()=>{
-    if(dates.length!==0){
-      if(selectDate===null)
-      {
-        setError(1)
+  const checkEmpty = () => {
+    if (dates.length !== 0) {
+      if (selectDate === null) {
+        setError(0)//1
       }
-      else{
+      else {
         setError(0)
-      }}
+      }
+    }
   }
 
   return (
     <div className="course-card">
       <div className="course-card-image">
-        <img src={img} alt={courseTitle} onClick={()=>{ navigate(`/${path}`)}} />
+        <img src={img} alt={courseTitle} onClick={() => { navigate(`/${path}`) }} />
         {/* <div className="stars">
           {ratingArr.length !== 0 &&
             ratingArr.map((item, id) => <StarIcon key={id} />)}
@@ -87,17 +87,17 @@ const CourseCard = ({
           background: `${color}`,
         }}
       >
-        <h4>{courseTitle?.slice(0,55)}...</h4>
-        <h3>{ description?.slice(0,90) }...</h3>
+        <h4>{courseTitle?.slice(0, 55)}...</h4>
+        <h3>{description?.slice(0, 90)}...</h3>
         {/* <SelectDropDown currentValue={selectDate} changeCurrentValue={setSetselectDate} text={'Select Dates'} isStyles={selectStyles} /> */}
         <div className="course-card-dropdown">
-          <div style={dates.length!==0 ? { visibility:'visible' }:{ visibility:'hidden' }} ><SelectDropDown
+          {/* <div style={dates.length !== 0 ? { visibility: 'visible' } : { visibility: 'hidden' }} ><SelectDropDown
             currentValue={selectDate}
             changeCurrentValue={setSetselectDate}
             text={'Select Date/Time'}
             isStyles={selectStyles}
             dates={dates}
-          /></div>
+          /></div> */}
           {/* <SelectDropDown
             dates={dates}
             text={'Select Dates'}
@@ -109,39 +109,39 @@ const CourseCard = ({
             to={
               selectDate === null
                 ? `/${path}`
-                : `/${path}/?date=${selectDate}`
+                : `/${path}`///?date=${selectDate}
             }
           >
             <CommonBtn text={'View Details'} />
           </Link>
           <div onClick={checkEmpty}>
-            {dates.length!==0 ? 
+            {dates.length !== 0 ?
               (selectDate ? (
                 <Link
                   to={
                     isLoggedIn
-                      ? `/enrollment/${path}/?date=${selectDate}`
-                      : `/user/sign-in/?location=${path}&date=${selectDate}`
+                      ? `/enrollment/${path}`///?date=${selectDate}
+                      : `/user/sign-in/?location=${path}`//&date=${selectDate}
                   }
                 >
                   <CommonBtn text={'Enroll Now'} />
                 </Link>
               ) : (
                 <CommonBtn text={'Enroll Now'} />
-              )):  (path!=='nutri-diet' ? <Link
+              )) : (path !== 'nutri-diet' ? <Link
                 to={
                   isLoggedIn
-                    ? `/enrollment/${path}/?date=${selectDate}`
-                    : `/user/sign-in/?location=${path}&date=${selectDate}`
+                    ? `/enrollment/${path}` ///?date=${selectDate}
+                    : `/user/sign-in/?location=${path}`//&date=${selectDate}
                 }
               >
                 <CommonBtn text={'Enroll Now'} />
-              </Link>:<Link to='/nutri-diet' ><CommonBtn text={'Enroll Now'} /></Link>)}
+              </Link> : <Link to='/nutri-diet' ><CommonBtn text={'Enroll Now'} /></Link>)}
           </div>
         </div>
       </div>
-      {error===1 && <small style={{ color: 'red', marginLeft: '0' }}>
-                        *Please Select Date/Time!
+      {error === 1 && <small style={{ color: 'red', marginLeft: '0' }}>
+        *Please Select Date/Time!
       </small>}
     </div>
   )
