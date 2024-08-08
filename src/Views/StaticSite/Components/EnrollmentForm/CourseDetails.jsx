@@ -420,7 +420,7 @@ const CourseDetails = ({
               )}
             </div>
           </form>
-          <div className="upload-section">
+          {/* <div className="upload-section">
             <p className="course-details-text">
               {currentCourse.certficate === true &&
                 'Please upload the relevant TYI certificate pre requisite*'}
@@ -474,14 +474,14 @@ const CourseDetails = ({
                     />
                     &ensp;
                     {upload}
-                  </label>
+                  </label> */}
                   {/* {empty === 'uploadImage' && (
                     <small style={{ color: 'red' }} className="mode-err">Please upload a image</small>
                   )} */}
-                </fieldset>
+                {/* </fieldset>
               </div>
             </p>
-          </div>
+          </div> */}
         </div>
         {/* <div className="footer-submit">
           <button className="submit" onClick={handleSubmit}>

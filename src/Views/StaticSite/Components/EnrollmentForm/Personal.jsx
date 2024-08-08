@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import './formstyles.scss'
 import InputComponent from '../InputComponent'
 import 'react-phone-number-input/style.css'
@@ -7,6 +7,8 @@ import Select from 'react-select'
 import { Country, State, City } from 'country-state-city'
 import Other from './Other'
 import CourseDetails from './CourseDetails'
+import SelectDropDown from '../Select Dropdown'
+import { Link, useSearchParams } from 'react-router-dom'
 
 const Personal = ({
   empty,
@@ -25,15 +27,27 @@ const Personal = ({
   uploadCheck,
   setUploadCheck
 }) => {
+  // {console.log(handleSubmit)}
   //const today = new Date().toISOString().split('T')[0]
   const [values, setValues] = useState([])
   const countries = Country.getAllCountries()
+  const [selectDate, setSetselectDate] = useState(null)
+  const [Params] = useSearchParams()
+  const [fixDate, setFixDate] = useState([]);
 
   const updatedCountries = countries.map((country) => ({
     label: country.name,
     value: country.id,
     ...country,
   }))
+
+  useEffect(() => {
+    // setSetselectDate(Params.get('date'))
+
+    // window.scrollTo(0, 0)
+    // console.log(pageDate?.key,'heoo')
+    // {Params.get('date')===null? window.scrollTo(0, 0): document.getElementById('date-select').scrollIntoView()}
+  }, [])
 
   const updatedStates = (countryId) => {
     return State.getStatesOfCountry(countryId).map((state) => ({
@@ -78,8 +92,36 @@ const Personal = ({
     }),
   }
 
+  const selectStyles = {
+    cursor: 'pointer',
+    background: 'blue',
+    borderColor: 'white',
+    color: 'white',
+    fontSize: '1.5rem',
+    fontWeight: '900',
+    borderWidth: '0.1rem',
+    borderRadius: '20px',
+    borderStyle: 'solid',
+    maxWidth: 'fit-content',
+  }
+
+
+  const testSubmit = (e) => {
+    e.preventDefault();
+    console.log(formData);
+  };
+
+
+  const formattedDates = currentCourse?.dates?.map(date => ({
+    label: date,
+    value: date
+  })) || [];
+
+  
+
   return (
     <div className="main_div">
+      
       <div className="grid_box">
         <div className="left_grid">
           <form>
@@ -234,7 +276,65 @@ const Personal = ({
               {empty === 8 && <small> Please enter your pincode</small>}
             </div>
 
-            <div className="personal_gender">
+            {/* <div className="form_error">
+            <div className="course-card-dropdown">
+          <div >
+           
+          <SelectDropDown
+                  currentValue={selectDate}
+                  changeCurrentValue={setSetselectDate}
+                  text={'Select Date/Time'}
+                  isStyles={selectStyles}
+                  dates={currentCourse.dates}
+                  keyName="sdate"
+                  form={formData}
+                  setFormData={setFormData}
+                  value={values.selectDate}
+                  onChange={(value) => {
+                    setValues({ ...values, sdate: value })
+                    setFormData((prev) => ({
+                      ...prev,
+                      sdate: value.keyName
+                  }))
+                  }}
+          />
+         
+          </div>
+          </div>
+          </div> */}
+
+
+          <div className="form_error">
+              <Select
+                styles={customStyles}
+                id="sdate"
+                name="sdate"
+                placeholder="Course Date"
+                form={formData}
+                setField={setFormData}
+                keyName="sdate"
+                errorCheck={setEmpty}
+                options={formattedDates}
+                value={values.selectDate}
+                onChange={(value) => {
+                  setValues(
+                    { country: values.country, state: values.state, city: values.city, sdate: value },
+                    false
+                  )
+                  setFormData((prev) => {
+                    return { ...prev, sdate: value.value, courseDetails: {
+                      ...prev.courseDetails,
+                      date: value.value 
+                    } }
+                  })
+                }}
+              />
+              
+            </div>
+
+          
+        
+            {/* <div className="personal_gender">
               <span className="gender-text">Gender*</span>
               <div className="gender form_error">
                 <label className="gender_radio">
@@ -272,8 +372,10 @@ const Personal = ({
                 </label>
                 {empty === 11 && <small> Please select one option</small>}
               </div>
-            </div>
-            <div className="DOB_box form_error">
+            </div> */}
+
+            
+            {/* <div className="DOB_box form_error">
               <InputComponent
                 type="number"
                 placeholder="Age"
@@ -285,8 +387,8 @@ const Personal = ({
                 errorCheck={setEmpty}
               />
               {empty === 9 && <small> Please enter age between 4 & 100</small>}
-            </div>
-            <div className="form_error">
+            </div> */}
+            {/* <div className="form_error">
               <InputComponent
                 type="text"
                 placeholder="Nationality"
@@ -296,7 +398,7 @@ const Personal = ({
                 errorCheck={setEmpty}
               />
               {empty === 10 && <small> Please enter your nationality</small>}
-            </div>
+            </div> */}
             <Other
               // setBold={setBold}
               empty={empty}
@@ -326,6 +428,8 @@ const Personal = ({
                 }}
               />
             </div> */}
+
+
             
             <CourseDetails
               courseDate={courseDate}

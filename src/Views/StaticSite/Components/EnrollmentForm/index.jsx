@@ -62,6 +62,7 @@ const Enrollment = () => {
     info: '',
     mode: '',
     residental: '',
+    sdate: ''
   })
 
   const handleEmpty1 = (e) => {

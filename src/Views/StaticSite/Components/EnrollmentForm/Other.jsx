@@ -7,9 +7,9 @@ const Other = ({ empty, formData, setFormData }) => {
       <div className="other-section-half">
         <div className="medical-section">
           <p className="medical-label">
-            {/* Medical History & Current Health Issues : */}
+           
           </p>
-          <textarea
+          {/* <textarea
             className="text_box"
             placeholder='Medical History & Current Health Issues '
             type="text"
@@ -21,7 +21,7 @@ const Other = ({ empty, formData, setFormData }) => {
                 medicalstatus: e.target.value,
               })
             }}
-          />
+          /> */}
         </div>
 
         <div className="about-us">
