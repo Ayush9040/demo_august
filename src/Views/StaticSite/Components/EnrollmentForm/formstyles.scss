@@ -1,5 +1,318 @@
 // enrolment form satrt
 
+
+// ********************************* CSS Check ****************************************
+
+.check_course {
+  // margin: auto;
+  // padding: 1.5em 0;
+  // width: calc(100% - 3em);
+  width: 14em;
+}
+.check_course .btn {
+  background-color: transparent;
+  border-radius: 0.25rem;
+  box-shadow: 0 0 0 1px hsl(var(--hue),10%,80%) inset;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.833em;
+  line-height: 1.8;
+  margin-inline-start: auto;
+  padding: 0 0.5rem;
+}
+.check_course .btn:hover {
+  background-color: hsl(var(--hue),10%,95%);
+}
+.check_course .btn-success {
+  background-color: hsl(133,90%,30%);
+  box-shadow: 0 0 0 1px hsl(133,90%,30%) inset;
+  color: var(--bg);
+}
+.check_course .btn-success:hover {
+  background-color: hsl(133,90%,20%);
+  box-shadow: 0 0 0 1px hsl(133,90%,20%) inset;
+}
+.check_course .btn-lg {
+  font-size: 1em;
+  line-height: 1.5;
+  padding: 0.75em 1.5em;
+  width: 100%;
+}
+.check_course .grid {
+  display: grid;
+  grid-gap: 1em;
+  margin-bottom: 2.25em;
+}
+.check_course .grid-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 0.25em;
+}
+.check_course .icon {
+  flex-shrink: 0;
+  width: 1em;
+  height: 1em;
+}
+.check_course .btn .icon {
+  margin-inline-end: 0.5em;
+}
+.check_course.item-input,
+.check_course.item-label {
+  box-shadow: 0 0 0 2px hsl(var(--hue),10%,80%) inset;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+.check_course .item-input {
+  border-radius: 50%;
+  position: absolute;
+  top: 0.875em;
+  right: 1em;
+  width: 1em;
+  height: 1em;
+  -webkit-appearance: none;
+  appearance: none;
+}
+[dir="rtl"] .check_course .item-input {
+  right: auto;
+  left: 1em;
+}
+.check_course .item-input:before {
+  background-color: hsl(0,0%,100%);
+  border-radius: inherit;
+  box-shadow: 0 0 0 0.3em hsl(var(--hue),90%,50%);
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0.3em;
+  left: 0.3em;
+  width: 0.4em;
+  height: 0.4em;
+  transition: transform var(--trans-dur) var(--trans-timing1);
+  transform: scale(0);
+}
+.check_course .item-label {
+  border-radius: 0.375em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0.75em 1em;
+  padding-inline-end: 2em;
+  position: relative;
+  transition:
+    background-color var(--trans-dur) var(--trans-timing1),
+    box-shadow var(--trans-dur) var(--trans-timing1);
+}
+.check_course .item-label:hover {
+  background-color: hsl(var(--hue),10%,95%);
+}
+.check_course .item-label .icon {
+  color: var(--fg);
+  position: absolute;
+  top: 0.75em;
+  left: 1em;
+  margin: 0.25em 0;
+}
+.item-label:has(.icon) {
+  padding-inline-start: 2.75em;
+}
+[dir="rtl"] .item-label .icon {
+  right: 1em;
+  left: auto;
+}
+.item-name,
+.item-price,
+.item-shipping,
+.item-label .icon {
+  transition: color var(--trans-dur) var(--trans-timing1);
+}
+.item-name,
+.item-price {
+  color: var(--fg);
+}
+.item-name {
+  margin-inline-end: 0.5em;
+}
+.item-price {
+  display: inline-block;
+  font-weight: 500;
+  margin-top: 0.75em;
+}
+.item-shipping {
+  color: hsl(var(--hue),10%,40%);
+  font-size: 0.833em;
+  line-height: 1.8;
+}
+/* `:checked` state */
+.item-input:checked:before {
+  transform: scale(1);
+  transition-timing-function: var(--trans-timing2);
+}
+.item-input:checked ~ .icon,
+.item-input:checked ~ .item-info .item-name,
+.item-input:checked ~ .item-info .item-shipping,
+.item-input:checked ~ .item-price {
+  color: hsl(var(--hue),90%,50%);
+}
+.item-label:has(.item-input:checked) {
+  background-color: hsl(var(--hue),90%,95%);
+  box-shadow: 0 0 0 2px hsl(var(--hue),90%,50%) inset;
+}
+
+/* Dark theme */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: hsl(var(--hue),10%,10%);
+    --fg: hsl(var(--hue),10%,90%);
+  }
+  .btn {
+    box-shadow: 0 0 0 1px hsl(var(--hue),10%,30%) inset;
+  }
+  .btn:hover {
+    background-color: hsl(var(--hue),10%,20%);
+    box-shadow: 0 0 0 1px hsl(var(--hue),10%,40%) inset;
+  }
+  .btn-success {
+    background-color: hsl(133,90%,40%);
+    box-shadow: 0 0 0 1px hsl(133,90%,40%) inset;
+    color: var(--bg);
+  }
+  .btn-success:hover {
+    background-color: hsl(133,90%,30%);
+    box-shadow: 0 0 0 1px hsl(133,90%,30%) inset;
+  }
+  .item-input,
+  .item-label {
+    box-shadow: 0 0 0 2px hsl(var(--hue),10%,30%) inset;
+  }
+  .item-label:hover {
+    background-color: hsl(var(--hue),10%,20%);
+    box-shadow: 0 0 0 2px hsl(var(--hue),10%,40%) inset;
+  }
+  .item-shipping {
+    color: hsl(var(--hue),10%,60%);
+  }
+  /* `:checked` state */
+  .item-input:checked ~ .icon,
+  .item-input:checked ~ .item-info .item-name,
+  .item-input:checked ~ .item-info .item-shipping,
+  .item-input:checked ~ .item-price {
+    color: hsl(var(--hue),90%,70%);
+  }
+  .item-label:has(.item-input:checked) {
+    background-color: hsl(var(--hue),90%,15%);
+  }
+}
+
+/* Tablet, Desktop */
+@media (min-width: 768px) {
+  .grid-2 {
+    grid-template-columns: repeat(2,1fr);
+  }
+  .grid-3 {
+    grid-template-columns: repeat(3,1fr);
+  }
+}
+
+
+
+
+
+
+
+.check_course button {
+  color: hsl(223,10%,10%);
+  font: 1em/1.5 Nunito, sans-serif;
+  transition:
+    background-color  0.3s cubic-bezier(0.37,0,0.63,1),
+    box-shadow 0.3s cubic-bezier(0.37,0,0.63,1),
+    color 0.3s cubic-bezier(0.37,0,0.63,1);
+}
+
+.check_course .item-input,
+.check_course .item-label {
+  box-shadow: 0 0 0 2px hsl(233,10%,80%) inset;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+
+.check_course .item-input {
+  border-radius: 50%;
+  position: absolute;
+  top: 0.875em;
+  right: 1em;
+  width: 1em;
+  height: 1em;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.check_course .item-input:before {
+  background-color: hsl(0,0%,100%);
+  border-radius: inherit;
+  box-shadow: 0 0 0 0.3em hsl(233,90%,50%);
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0.3em;
+  left: 0.3em;
+  width: 0.4em;
+  height: 0.4em;
+  transition: transform 0.3s cubic-bezier(0.37,0,0.63,1);
+  transform: scale(0);
+}
+.check_course .item-label {
+  border-radius: 0.375em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0.75em 1em;
+  padding-inline-end: 2em;
+  position: relative;
+  transition:
+    background-color 0.3s cubic-bezier(0.37,0,0.63,1),
+    box-shadow 0.3s cubic-bezier(0.37,0,0.63,1);
+}
+.check_course .item-label:hover {
+  background-color: hsl(233,10%,95%);
+}
+.check_course .item-label .icon {
+  color: var(--fg);
+  position: absolute;
+  top: 0.75em;
+  left: 1em;
+  margin: 0.25em 0;
+}
+
+
+
+.check_course .item-input:checked ~ .icon,
+.check_course .item-input:checked ~ .item-info .item-name,
+.check_course .item-input:checked ~ .item-info .item-shipping,
+.check_course .item-input:checked ~ .item-price {
+  color: hsl(233,90%,50%);
+}
+.check_course .item-label:has(.item-input:checked) {
+  background-color: hsl(233,90%,95%);
+  box-shadow: 0 0 0 2px hsl(233,90%,50%) inset;
+}
+
+.check_course .item-label{
+  margin: 0rem !important;
+  margin-bottom: 12px !important;
+}
+
+
+
+
+
+
+// ********************************* CSS Check ****************************************
+
 .enrollment_container {
   height: 95%;
   width: 95%;
@@ -1128,6 +1441,17 @@ input[type='radio']:checked::before {
   border-radius: 30px;
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+.chip {
+  color: #00000080;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 6px 16px;
+  border-radius: 12px;
+  border: 1px solid #00000080;
+  width: max-content;
+  cursor: pointer; 
 }
 
 @media (max-width: 600px) {
