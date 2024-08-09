@@ -14091,6 +14091,10 @@ const certificate = {
           title: 'Note:',
           points: [
             {
+              listItem: 'Please note only 30 percent of the sessions will be on campus( for those opting for on campus class)',
+              subItems: [],
+            },
+            {
               listItem: 'The fees once paid will not be refundable.',
               subItems: [],
             },
