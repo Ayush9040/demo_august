@@ -46,7 +46,7 @@ const Enrollment = () => {
     pincode: '',
     AGE: '',
     nationality: '',
-    gender: '',
+    // gender: '',
     school: '',
     course: '',
     completion: '',

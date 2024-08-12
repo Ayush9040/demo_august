@@ -77,7 +77,7 @@ const DisclaimerPolicy = ({
           state: formData.state,
           city: formData.city,
           pincode: formData.pincode,
-          gender: formData.gender,
+          // gender: formData.gender,
           age: formData.AGE,
           nationality: formData.nationality,
         },
@@ -95,7 +95,8 @@ const DisclaimerPolicy = ({
           batch:currentCourse.batch,
           imageAsset: courseAsset1,
           certificateImgAsset: courseAsset2,
-          date:courseDate,
+          // date:courseDate,
+          date: formData.sdate,
           timing:currentCourse.timing
         },
       }
@@ -110,7 +111,7 @@ const DisclaimerPolicy = ({
           state: formData.state,
           city: formData.city,
           pincode: formData.pincode,
-          gender: formData.gender,
+          // gender: formData.gender,
           age: formData.AGE,
           nationality: formData.nationality,
         },
@@ -127,7 +128,8 @@ const DisclaimerPolicy = ({
           batch:currentCourse.batch,
           imageAsset: courseAsset1,
           certificateImgAsset: courseAsset2,
-          date:courseDate,
+          // date:courseDate,
+          date: formData.sdate,
           timing:currentCourse.timing
         },
       }
@@ -173,7 +175,7 @@ const DisclaimerPolicy = ({
             if(!paymentOrderResponse?.data?.amount && !paymentOrderResponse?.data?.id) return 0
             
             const options = {
-              key: 'rzp_live_KyhtrIyJ546bd2', // Enter the Key ID generated from the Dashboard
+              key: 'rzp_test_hWMewRlYQKgJIk', // Enter the Key ID generated from the Dashboard
               amount: paymentOrderResponse.data.amount, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
               currency: 'INR',
               name: 'The Yoga Institute',
@@ -197,7 +199,8 @@ const DisclaimerPolicy = ({
                 name: formData.name,
                 email: formData.email,
                 contact: formData.phone,
-                date: courseDate,
+                // date: courseDate,
+                date: formData.sdate,
                 time : currentCourse.timing,
                 mode : formData.mode,
               },
@@ -376,7 +379,7 @@ const DisclaimerPolicy = ({
           )}
         </div> */}
         <div className="privacy-button">
-          <button onClick={handleSubmit1}>Submit</button>
+          <button onClick={handleSubmit1}>Proceed To Payement</button>
         </div>
       </div>
     </div>

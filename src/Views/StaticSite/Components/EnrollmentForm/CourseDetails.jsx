@@ -36,6 +36,7 @@ const CourseDetails = ({
   const [pictureName, setPictureName] = useState('')
   const [certificateName, setcertificateName] = useState('')
   const [selectedMode, setSelectedMode] = useState('');
+  const [selectedOption, setSelectedOption] = useState('');
 
 
   const handleModeSelection = (mode) => {
@@ -296,7 +297,7 @@ const CourseDetails = ({
                   {currentCourse?.title}&nbsp;
                   {courseDate !== 'null' ? courseDate : ''}
                 </div>
-                {courseFee && <p className="current_fees"> {currentCourse.key === 'ma-yoga-shastra' && formData.country !== 'India' ? '$ 3950' : `₹ ${courseFee}`}</p>}
+                {/* {courseFee && <p className="current_fees"> {currentCourse.key === 'ma-yoga-shastra' && formData.country !== 'India' ? '$ 3950' : `₹ ${courseFee}`}</p>} */}
                 {/* {courseFee && <p className="current_fees"> ₹ {courseFee}</p>} */}
               </div>
             </div>
@@ -307,8 +308,8 @@ const CourseDetails = ({
           {console.log('CC',currentCourse)}
           <form className="residential-form check_course">
             <div className="last_radio_button ">
-              {/* {shouldShowOfflineOption() && (
-                <label htmlFor="" className="course_details_text">
+               {shouldShowOfflineOption() && (
+                <label htmlFor="" className="course_details_text" >
                 <input
                   type="radio"
                   name="mode"
@@ -338,7 +339,7 @@ const CourseDetails = ({
                 &nbsp;Offline 
               </label>
               
-              )} */}
+              )} 
              
              {shouldShowOnlineOption() && (
             //    <label htmlFor="" className="course_details_text">
@@ -373,7 +374,25 @@ const CourseDetails = ({
 
 
 <label class="item-label">
-<input class="item-input" type="radio" name="delivery" value="standard" aria-labelledby="delivery-0-name" aria-describedby="delivery-0-shipping delivery-0-price" />
+<input class="item-input" 
+type="radio" name="mode" 
+value="ONLINE" 
+aria-labelledby="delivery-0-name" 
+aria-describedby="delivery-0-shipping delivery-0-price"
+checked={selectedOption === 'ONLINE'}
+
+onChange={(e) => {
+  setSelectedOption('ONLINE')
+        if (e.target.checked) {
+            setFormData({
+              ...formData,
+              mode: e.target.value,
+          })
+            setEmpty(0)
+            setCourseFee(currentCourse?.fees?.onlineFee)
+            // setCourseFee(updatedFees( currentCourse?.key,'ONLINE' ))
+        }
+        }} />
 <span class="item-info">
   <span id="delivery-0-name" class="item-name">Online</span>
   <br />
@@ -434,7 +453,26 @@ const CourseDetails = ({
 
 
 <label class="item-label">
-<input class="item-input" type="radio" name="delivery" value="standard" aria-labelledby="delivery-0-name" aria-describedby="delivery-0-shipping delivery-0-price"  />
+<input class="item-input" type="radio" name="resident" value="RESIDENTIAL" aria-labelledby="delivery-0-name" aria-describedby="delivery-0-shipping delivery-0-price"  
+checked={selectedOption === 'RESIDENTIAL'}
+onChange={(e) => {
+  setSelectedOption('RESIDENTIAL');
+         if (e.target.checked) {
+           setFormData({
+             ...formData,
+             residental: e.target.value,
+             mode: 'OFFLINE'
+           })
+           setEmpty(0)
+           if(currentCourse?.key === 'ma-yoga-shastra' && currentCourse.country !== 'India'){
+             setCourseFee(currentCourse?.fees?.internationalFee?.residentialFee)
+           } else {
+             setCourseFee(currentCourse?.fees?.offlineFee?.residentialFee)
+           }
+           // setCourseFee(updatedFees( currentCourse?.key,'RESIDENTIAL' ))
+         }
+       }}
+/>
 <span class="item-info">
   <span id="delivery-0-name" class="item-name">Residential</span>
   <br />
@@ -484,7 +522,24 @@ const CourseDetails = ({
 
 
 <label class="item-label">
-<input class="item-input" type="radio" name="delivery" value="standard" aria-labelledby="delivery-0-name" aria-describedby="delivery-0-shipping delivery-0-price"  />
+<input class="item-input" type="radio" name="resident" value="NONRESIDENTIAL" aria-labelledby="delivery-0-name" aria-describedby="delivery-0-shipping delivery-0-price" 
+checked={selectedOption === 'NONRESIDENTIAL'}
+onChange={(e) => {
+  setSelectedOption('NONRESIDENTIAL')
+         if (e.target.checked) {
+           setFormData({
+             ...formData,
+             residental: e.target.value,
+             mode: 'OFFLINE'
+           })
+           setEmpty(0)
+           setCourseFee(
+             currentCourse?.fees?.offlineFee?.nonResidentialFee
+           )
+           // setCourseFee(updatedFees( currentCourse?.key,'NONRESIDENTIAL' ))
+         }
+       }}
+/>
 <span class="item-info">
   <span id="delivery-0-name" class="item-name">Non-Residential</span>
   <br />

@@ -8,6 +8,7 @@
   // padding: 1.5em 0;
   // width: calc(100% - 3em);
   width: 14em;
+  margin-top: 15px;
 }
 .check_course .btn {
   background-color: transparent;
@@ -249,6 +250,7 @@
   height: 1em;
   -webkit-appearance: none;
   appearance: none;
+  display: none;
 }
 
 .check_course .item-input:before {
@@ -304,6 +306,60 @@
 .check_course .item-label{
   margin: 0rem !important;
   margin-bottom: 12px !important;
+}
+
+.check_course input[type=radio]:checked {
+  display: none;
+}
+
+
+.check_course .item-label {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.check_course .item-label {
+  border-radius: 0.375em;
+  display: flex;
+
+  justify-content: space-between;
+  padding: 0.75em 0.5em;
+  padding-inline-end: 0.5em;
+  position: relative;
+  transition: background-color 0.3s cubic-bezier(0.37, 0, 0.63, 1), box-shadow 0.3s cubic-bezier(0.37, 0, 0.63, 1);
+}
+
+.item-price {
+  display: inline-block;
+  font-weight: 500;
+  margin-top: 0em;
+}
+
+.check_course .item-label:has(.item-input:checked) {
+  background-color: rgba(202, 70, 37, 0.1);
+  box-shadow: 0 0 0 2px rgba(202, 70, 37, 1) inset;
+  
+}
+
+.check_course .item-input:checked ~ .item-info .item-name {
+  color: rgba(202, 70, 37, 1); 
+}
+
+.check_course .item-input:checked ~ .item-price {
+  color: rgba(202, 70, 37, 1);
+}
+
+
+.main_div small {
+  color: red;
+  font-size: 1.25rem;
+  float: right;
+  margin: -8.75rem 0 2rem !important;
+}
+
+.course-main-container .course-secondary-container .residential-form .last_radio_button .course_details_text{
+  display: none;
 }
 
 
