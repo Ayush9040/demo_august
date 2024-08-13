@@ -105,7 +105,7 @@ const Footer = () => {
         <div className="footer-content">
           <div className="footer-logo">{years}</div>
           <div className="footer-text">
-            <p>104+</p>
+            <p>105+</p>
             <span>Number of Years</span>
           </div>
         </div>
@@ -178,7 +178,8 @@ const Footer = () => {
 
           {mobile}
           <p>
-            <a href="tel:+912226110506">+91-22-26110506,&nbsp;</a>
+            <a href="tel:+912226110506">+91-7738155500,&nbsp;</a>
+            <a href="tel:+912226110506">+91-22-26110506,<br /></a>
             <a href="tel:+912226103568">+91-22-26103568</a>
           </p>
           {email2}
@@ -189,7 +190,7 @@ const Footer = () => {
           </p>
           {copyright}
           <p>
-            2022 <span>The Yoga Institute.</span> All rights reserved.
+            2024 <span>The Yoga Institute.</span> All rights reserved.
           </p>
         </div>
       </div>
