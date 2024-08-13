@@ -362,7 +362,18 @@
   display: none;
 }
 
+.main_div .phone_err {
+  margin: 0 !important;
+  float: left !important;
+}
 
+.created_phone_err {
+  color: red;
+    font-size: 14px;
+    margin-top: -10px;
+    margin-left: 35px;
+    margin-bottom: -10px;
+}
 
 
 

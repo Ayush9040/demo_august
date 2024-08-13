@@ -9,6 +9,7 @@ import Other from './Other'
 import CourseDetails from './CourseDetails'
 import SelectDropDown from '../Select Dropdown'
 import { Link, useSearchParams } from 'react-router-dom'
+import { parsePhoneNumberFromString, isValidPhoneNumber } from 'libphonenumber-js'
 
 const Personal = ({
   empty,
@@ -34,12 +35,77 @@ const Personal = ({
   const [selectDate, setSetselectDate] = useState(null)
   const [Params] = useSearchParams()
   const [fixDate, setFixDate] = useState([]);
+  const [validationErrors, setValidationErrors] = useState([]);
+
+  const validatePhoneNumber = (phoneNumber) => {
+    const errors = [];
+    const parsedNumber = parsePhoneNumberFromString(phoneNumber);
+
+    if (!parsedNumber) {
+      errors.push('Invalid phone number format.');
+      return errors;
+    }
+
+    // Format Validation
+    const formatted = parsedNumber.formatInternational();
+    const actualFormat = formatted.replace(/\s+/g, '');
+    // console.log('format My : ',actualFormat);
+    // console.log('phoneNumber My : ',phoneNumber);
+    if (phoneNumber !== actualFormat) {
+      errors.push(`Incorrect format. Should be ${formatted}`);
+    }
+
+    // Country Code Validation
+    if (!parsedNumber.country) {
+      errors.push('Invalid or missing country code.');
+    }
+
+    // Length Validation
+    if (!isValidPhoneNumber(phoneNumber)) {
+      errors.push('Phone number is not valid for the selected country.');
+    }
+
+    // National and International Numbering Validation
+    if (!parsedNumber.isPossible()) {
+      errors.push('Phone number is not possible.');
+    }
+
+    // Region-Specific Checks
+    const areaCode = parsedNumber.nationalNumber.slice(0, 3); // Correctly access the national number
+    // console.log('ac',areaCode);
+    
+    if (parsedNumber.country === 'US' && !['202', '212', '213'].includes(areaCode)) {
+      errors.push('Invalid area code for the region.');
+    }
+
+    // Invalid Number Patterns
+    if (/(\d)\1{6,}/.test(parsedNumber.nationalNumber)) {  // Use nationalNumber property directly
+      errors.push('Phone number contains invalid patterns (e.g., too many repeated digits).');
+    }
+
+    return errors;
+  };
 
   const updatedCountries = countries.map((country) => ({
     label: country.name,
     value: country.id,
     ...country,
   }))
+
+   const handlePhoneChange = (value) => {
+    setFormData({ ...formData, phone: value });
+
+    if (value) {
+      const errors = validatePhoneNumber(value);
+      // console.log('ph', value, '', errors);
+      
+      setValidationErrors(errors);
+    } else {
+      setValidationErrors([]);
+    }
+
+   
+  };
 
   useEffect(() => {
     // setSetselectDate(Params.get('date'))
@@ -108,7 +174,7 @@ const Personal = ({
 
   const testSubmit = (e) => {
     e.preventDefault();
-    console.log(formData);
+    // console.log(formData);
   };
 
 
@@ -153,12 +219,27 @@ const Personal = ({
               <PhoneInput
                 placeholder="Enter phone number*"
                 defaultCountry="IN"
+                // country="IN"
                 value={formData.phone}
-                onChange={(e) => {
-                  setFormData({ ...formData, phone: e })
-                }}
+                // onChange={(e) => {
+                //   setFormData({ ...formData, phone: e })
+                // }}
+                onChange={handlePhoneChange}
               />
-              {empty === 3 && <small> Please enter a valid phone number</small>}
+              {/* {empty === 3 && <small> Please enter a valid phone number</small>} */}
+              {/* {phoneError && <small>{phoneError}</small>} */}
+
+              {validationErrors.length > 0 && (
+        // <ul>
+        //   {validationErrors.map((error, index) => (
+        //     <li key={index}><small class="phone_err">{error}</small></li>
+        //   ))}
+        // </ul>
+        
+        <div class="created_phone_err">Invalid Number</div>
+        
+      )}
+
             </div>
             <div className="form_error">
               <InputComponent
@@ -169,7 +250,7 @@ const Personal = ({
                 keyName="address1"
                 errorCheck={setEmpty}
               />
-              {empty === 4 && <small> Please enter your address</small> }
+              {empty === 4 && <p> Please enter your address</p> }
             </div>
             <div className="form_error">
               <InputComponent
