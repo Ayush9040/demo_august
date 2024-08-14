@@ -12,7 +12,7 @@
 // export const ecomBaseDomain = 'https://tyi-uat-ecom.dotcod.in/api/v1'
 // export const razorPayKey = 'rzp_test_hWMewRlYQKgJIk'
 
-export const authServerClientId = 'cmsProd_qt9up36idOpBAcrrd'
+ export const authServerClientId = 'cmsProd_qt9up36idOpBAcrrd'
 // export const cmsBaseDomain = 'https://cms-prod-be.theyogainstitute.org/v1'
 // export const authBaseDomain = 'https://authserver-prod-be.theyogainstitute.org/v2'
 // export const ecomBaseDomain = 'https://ecom-prod-be.theyogainstitute.org/v1'

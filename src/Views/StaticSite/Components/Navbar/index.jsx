@@ -4,16 +4,35 @@ import { Hamburger, Cart, User, Search } from '../../assets/icons/icon'
 import { Link } from 'react-router-dom'
 import { logoutUserAction } from '../../Views/Authentication/Auth.actions'
 import { useNavigate } from 'react-router-dom'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
+import {
+  CartBlack,
+  CartWhite,
+} from '../../assets/icons/icon'
+
 const MegaMenu = lazy(()=>import('../MegaMenu'))
 
-const Navbar = ({ isUserLoggedIn }) => {
+const Navbar = ({ isUserLoggedIn, abc }) => {
   const navigate = useNavigate()
   const [nav, setNav] = useState(false)
   const [dropdown,setDropdown]=useState(false)
   const [scrollClass,setScrollClass] = useState(false)
   const [scrollImg,setScrollClImg] = useState(false)
   const dispatch = useDispatch()
+  const [bold, setBold] = useState(0) 
+  const [ cartItems,setCartItems ] = useState(0)
+
+  const { cart } = useSelector((state)=>state.shop)
+
+  const getTotal = ()=>{
+    if(cart?.length===0) return
+    let sum = 0
+    cart?.forEach(item=>{
+      sum+= item.quantity  
+    })
+    console.log(sum,'sum')
+    return sum
+  }
 
   useEffect(() => {
     window.addEventListener('scroll',()=>{
@@ -26,6 +45,25 @@ const Navbar = ({ isUserLoggedIn }) => {
       }
     })
   }, [])
+
+  const hasItems = cartItems && cartItems > 0;
+
+  useEffect(() => {
+    setCartItems(getTotal())
+    if (location.pathname === '/media/video-gallery') {
+      setBold(1)
+    } else {
+      setBold(0)
+    }
+  }, [ cart ] )
+
+ 
+  console.log('hasItems', hasItems);
+  console.log('cartItems from Nav', cartItems);
+
+  
+
+
   return (
     <>
       <div id='hero-overlay' >
@@ -55,9 +93,18 @@ const Navbar = ({ isUserLoggedIn }) => {
             <ul>
               <Link to='/search'>
                 <li onClick={ ()=>{navigate('/')} } >{Search}</li></Link>
-              <Link to="/shop">
+              {/* <Link to="/shop">
                 <li>{Cart}</li>
-              </Link>
+              </Link> */}
+
+{hasItems && (
+                <Link to='/shop/cart'>   
+
+                <li>{ abc.color === 'white' ? Cart : abc.color === 'orange' ? CartWhite : CartBlack }  <span style={{ color:'#CA4625' }} className='cart-count' >{ cartItems }</span></li></Link>
+            )}
+              
+
+            
               {/* <Link className='comingSoon' to="/">
                 <li>{Gift}</li>
               </Link> */}

@@ -166,7 +166,7 @@
         overflow-x: hidden;
     }
           .main-logo {
-            display: flex!important;
+            display: none !important;
             align-items: center;
             justify-content: flex-end;
             gap: 20px;
@@ -232,7 +232,7 @@
               font-size: 1.3rem;
           }
           .user-container {
-              display: none;
+              display: flex;
           }
   }
   @media (max-width: "480px") {

@@ -59,7 +59,7 @@ const getMetaData = async( path )=>{
         if (el.includes('<link')) headers.links.push(obj)
       } else if (el.includes('<title'))
       {
-        headers.title = el.replace('<title>','').replace('</title>','')
+        headers?.title = el.replace('<title>','').replace('</title>','')
       }
       else if (el.includes('<script')) headers.script = el
     })
@@ -97,7 +97,7 @@ const getMetaData = async( path )=>{
         }
         else if(el.includes('<title'))
         {
-          headers.title = el.replace('<title>','').replace('</title>','')
+          headers?.title = el.replace('<title>','').replace('</title>','')
         }
         else if(el.includes('<script'))
           headers.script = el

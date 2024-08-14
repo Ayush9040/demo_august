@@ -4,7 +4,7 @@ import './style.scss'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 import { legacydisclaimer } from '../../assets/icons/icon'
-import { authBaseDomain, cmsBaseDomain } from '../../../../Constants/appSettings'
+import { authBaseDomain, cmsBaseDomain, razorPayKey } from '../../../../Constants/appSettings'
 //import { mail } from '../../assets/icons/icon'
 
 const DisclaimerPolicy = ({
@@ -58,8 +58,11 @@ const DisclaimerPolicy = ({
   }
 
   const [empty, setEmpty] = useState(0)
+  const [isLoad, setIsLoad] = useState(false)
+  const [disable, setDisable] = useState(false)
 
   const handleSubmit1 = async() => {
+    setIsLoad(true);
     if (disData.terms === 'no') {
       return setEmpty(1)
     }else if (disData.name === '') {
@@ -175,7 +178,9 @@ const DisclaimerPolicy = ({
             if(!paymentOrderResponse?.data?.amount && !paymentOrderResponse?.data?.id) return 0
             
             const options = {
-              key: 'rzp_test_hWMewRlYQKgJIk', // Enter the Key ID generated from the Dashboard
+              // key: 'rzp_test_hWMewRlYQKgJIk', 
+              // Enter the Key ID generated from the Dashboard
+              key: razorPayKey,
               amount: paymentOrderResponse.data.amount, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
               currency: 'INR',
               name: 'The Yoga Institute',
@@ -183,6 +188,8 @@ const DisclaimerPolicy = ({
               // image: 'https://example.com/your_logo', // un comment and add TYI logo
               order_id: paymentOrderResponse.data.id, // eslint-disable-line
               handler: async(res) => {
+
+                setIsLoad(false);
                 // Navigare to Success if razorpay_payment_id, razorpay_order_id, razorpay_signature is there
                 if(res.razorpay_payment_id && res.razorpay_order_id && res.razorpay_signature) {
                   await axios.post(`${ authBaseDomain }/ali/mail`, mailTemplate)
@@ -206,9 +213,23 @@ const DisclaimerPolicy = ({
               },
               theme: {
                 color: '#3399cc' // enter theme color for our website
-              }
+              },
+              modal: {
+                ondismiss: function () {
+                  // The user closed the payment modal
+                  setIsLoad(false);
+                  console.log("Payment modal closed by user.");
+                  // alert("Payment process was canceled.");
+                  // Perform any necessary cleanup or UI updates
+                },
+              },
+
+
+              
               
             }
+
+
             const rzp = new window.Razorpay(options)
             rzp.open()  
           }else{
@@ -227,6 +248,7 @@ const DisclaimerPolicy = ({
         }
       } 
       catch(err){
+        setIsLoad(false);
         console.error(err)
       } 
     }
@@ -379,7 +401,15 @@ const DisclaimerPolicy = ({
           )}
         </div> */}
         <div className="privacy-button">
-          <button onClick={handleSubmit1}>Proceed To Payement</button>
+          {/* <button onClick={handleSubmit1}>Proceed To Payement</button> */}
+
+          <button onClick={handleSubmit1} className={!isLoad ? 'button register-primary-btn' : 'button register-primary-btn no-event'} disabled={isLoad}>
+                {!isLoad ? <><span id="txt">Proceed To Payement&nbsp; </span> </> : <><span className="loader">
+                    <span className="dot"></span>
+                    <span className="dot"></span>
+                    <span className="dot"></span>
+                </span></>}
+            </button>
         </div>
       </div>
     </div>

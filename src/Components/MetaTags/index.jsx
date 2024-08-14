@@ -50,7 +50,7 @@ const MetaTags = () => {
 
       return (
         <Helmet
-          title={`${headers?.title || ''} `}
+          title={`${headers.title || ''} `}
           meta={headers?.metaData || []}
         />
       )

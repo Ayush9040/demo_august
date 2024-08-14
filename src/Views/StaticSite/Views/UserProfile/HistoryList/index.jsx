@@ -14,7 +14,7 @@ const HistoryList = ({ title,options=['a','b','c','d'], data=[] }) => {
       </div>
       <div className='history-listitems' >
         {data.map(item=>{
-          const date = new Date(item.createdAt)
+          const date = new Date(item?.createdAt)
           return <HistoryCard key={item._id} order={ item.cartId } orderId={ item.orderId } timeline={ date.toLocaleDateString()  }  status={item.deliveryStatus} />
         })}
       </div>

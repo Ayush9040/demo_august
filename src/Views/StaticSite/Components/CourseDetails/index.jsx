@@ -27,6 +27,20 @@ const CourseDetails = ({ pageDate }) => {
   // }, [])
   const { isLoggedIn } = useSelector((state) => state.auth)
   const [selectDate, setSetselectDate] = useState('null')
+  const [showFixedDiv, setShowFixedDiv] = useState(false);
+
+
+  const handleScroll = () => {
+    const enrollButton = document.getElementById("enrollButton");
+    const enrollButtonPosition = enrollButton.getBoundingClientRect().bottom;
+
+    // Show fixed div when the enrollButton crosses a certain point
+    if (enrollButtonPosition < 0) {
+      setShowFixedDiv(true);
+    } else {
+      setShowFixedDiv(false);
+    }
+  };
 
   const checkHandler = () => {
     if (pageDate.dates.length !== 0) {
@@ -51,6 +65,16 @@ const CourseDetails = ({ pageDate }) => {
     // document.getElementById('date-select').scrollIntoView()
     return <CommonBtn text={'Enroll Now'} />
   }
+
+  useEffect(() => {
+    if (window.innerWidth <= 768) {
+      window.addEventListener("scroll", handleScroll);
+    }
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   let options = [
     {
@@ -257,11 +281,12 @@ const CourseDetails = ({ pageDate }) => {
               <CommonBtn text={'Enroll Now'} />
             </Link> :  scroll() } */}
 
-              <div onClick={checkHandler}>
+              <div onClick={checkHandler} >
                 {pageDate?.dates?.length !== 0 ?
                   (
                     selectDate ? (
                       <Link
+                      
                         to={
                           isLoggedIn
                             ? `/enrollment/${pageDate.key}`///?date=${selectDate}
@@ -360,7 +385,7 @@ const CourseDetails = ({ pageDate }) => {
                 {options.map((item, idx) => (
                   <a
                     key={item.id}
-                    id={item.title === 'FAQ' ? 'comingsoon' : ''}
+                    id={item?.title === 'FAQ' ? 'comingsoon' : ''}
                     href={`#${item.id}`}
                   >
                     <li
@@ -414,6 +439,74 @@ const CourseDetails = ({ pageDate }) => {
           </div>
         )}
       </div>
+
+      {showFixedDiv && (
+        <div className="fixed-div">
+          <span>{pageDate?.title}</span>
+          {/* <button className="enroll-now-button">Enroll Now</button> */}
+          <div onClick={checkHandler} className='common-btn-footer'>
+                {pageDate?.dates?.length !== 0 ?
+                  (
+                    selectDate ? (
+                      <Link
+                      
+                        to={
+                          isLoggedIn
+                            ? `/enrollment/${pageDate.key}`///?date=${selectDate}
+                            : `/user/sign-in/?location=${pageDate.key}`//&date=${selectDate}
+                        }
+                      >
+                        <CommonBtn text={'Enroll Now'} />
+                      </Link>
+                    ) : (
+                      // scroll()
+                      <Link
+                        to={
+                          isLoggedIn
+                            ? `/enrollment/${pageDate.key}`///?date=${selectDate}
+                            : `/user/sign-in/?location=${pageDate.key}`//&date=${selectDate}
+                        }
+                      >
+                        <CommonBtn text={'Enroll Now'} />
+                      </Link>
+                    )
+                  ) :
+                  (pageDate?.key === 'samattvam' || pageDate?.key === 'satsang' || pageDate?.key === 'ma-yoga-shastra' ? <Link
+                    to={
+                      isLoggedIn
+                        ? `/enrollment/${pageDate.key}`///?date=${selectDate}
+                        : `/user/sign-in/?location=${pageDate.key}`//&date=${selectDate}
+                    }
+                  >
+                    <CommonBtn text={'Enroll Now'} />
+                  </Link> :
+                    (<div >
+                      <div style={{ opacity: '0.4' }}>
+                        <CommonBtn text={'Enroll Now'} />
+                      </div>
+                      <div style={{ fontSize: '1.5rem', padding: '1.5rem' }}>No dates available for this course</div>
+                    </div>)
+
+                  )
+                }
+
+                {/* {error === 1 && (
+                  <small
+                    style={{
+                      color: 'white',
+                      marginLeft: '0',
+                      position: 'relative',
+                      top: '1rem',
+                      left: '2rem',
+                      fontSize: '1.2rem',
+                    }}
+                  >
+                  *Please Select Date/Time!
+                  </small>
+                )} */}
+              </div>
+        </div>
+      )}
     </>
   )
 }

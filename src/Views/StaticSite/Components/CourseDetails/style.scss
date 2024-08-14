@@ -343,3 +343,60 @@
     }
   }
 }
+
+
+
+section {
+  padding: 20px;
+  text-align: center;
+}
+
+.enroll-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+.fixed-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  gap: 15px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgb(201, 112, 95);
+  padding: 10px 17px;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.fixed-div span {
+  font-size: 14px;
+  color: #fff;
+}
+
+.enroll-now-button {
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+.common-btn-footer a div {
+  margin-top: 0em;
+  padding: 0.5rem 0.5rem;
+}
+
+
+/* Only show the fixed div on mobile view */
+@media (min-width: 769px) {
+  .fixed-div {
+    display: none;
+  }
+  
+}
+
+.common-btn-footer .global-common-btn {
+  border: 3px solid #fff;
+  color: #fff;
+}
+

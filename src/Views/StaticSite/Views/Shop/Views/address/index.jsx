@@ -16,7 +16,7 @@ import {
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import { useDispatch, useSelector } from 'react-redux'
-import { authServerClientId } from '../../../../../../Constants/appSettings'
+import { authServerClientId, razorPayKey } from '../../../../../../Constants/appSettings'
 import { useNavigate } from 'react-router-dom'
 import { updateCartData } from '../../Shop.action'
 
@@ -199,7 +199,9 @@ const ShippingAdd = () => {
       },
     })
     const options = {
-      key: 'rzp_test_hWMewRlYQKgJIk', // Enter the Key ID generated from the Dashboard
+      // key: 'rzp_test_hWMewRlYQKgJIk',
+       // Enter the Key ID generated from the Dashboard
+       key: razorPayKey,
       amount: data.amount, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
       currency: 'INR',
       name: 'The Yoga Institute',

@@ -48,6 +48,8 @@ const InnerNavComponent = ({ abc }) => {
     return sum
   }
 
+  const hasItems = cart && cart.length > 0;
+
 
   useEffect(() => {
     setCartItems(getTotal())
@@ -90,7 +92,7 @@ const InnerNavComponent = ({ abc }) => {
                   <Link key={items.title} to={items.url}>
                     <li
                       className={
-                        abc.title === items.innerTitle ? 'nav-active' : ''
+                        abc?.title === items.innerTitle ? 'nav-active' : ''
                       }
                       style={
                         abc.menuColor === 'black'
@@ -107,9 +109,14 @@ const InnerNavComponent = ({ abc }) => {
           </div>
           <div className="user-container">
             <div onClick={ ()=>{navigate('/search')} } >{ abc.color === 'orange' ? Search:abc.color === 'black' ? SearchBlack : SearchWhite }</div>
-            <Link to='/shop/cart'>   
+            
 
-              { abc.color === 'orange' ? Cart : abc.color === 'white' ? CartWhite : CartBlack }  <span style={{ color:'#CA4625' }} className='cart-count' >{ cartItems }</span></Link>
+
+              {hasItems && (
+                <Link to='/shop/cart'>   
+
+                { abc.color === 'orange' ? Cart : abc.color === 'white' ? CartWhite : CartBlack }  <span style={{ color:'#CA4625' }} className='cart-count' >{ cartItems }</span></Link>
+            )}
            
             <div className='profile-container' onMouseOver={()=>{setDropdown(true)}} onMouseOut={()=>{setDropdown(false)}}  >
               <Link to={isLoggedIn ? '/user/profile':'/user/sign-in'} >
@@ -131,7 +138,7 @@ const InnerNavComponent = ({ abc }) => {
 
         {abc.menuItems.length!==0 && <div
           className={'career-navigation-lg'}
-          id={abc.title === 'gallery' ? 'toggles' : ''}
+          id={abc?.title === 'gallery' ? 'toggles' : ''}
         >
           {/* {abc.title === 'gallery' && (
             <ul id="gallery-toggle">
@@ -157,7 +164,7 @@ const InnerNavComponent = ({ abc }) => {
                 <Link key={items.title} to={items.url}>
                   <li
                     className={
-                      abc.title === items.innerTitle ? 'nav-active' : ''
+                      abc?.title === items.innerTitle ? 'nav-active' : ''
                     }
                     style={
                       abc.menuColor === 'black'

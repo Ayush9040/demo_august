@@ -332,3 +332,41 @@
     }
   }
 }
+
+
+.loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 5px 3px;
+  background-color: #fff;
+  border-radius: 50%;
+  animation: blink 1.2s infinite both;
+}
+
+.dot:nth-child(1) {
+  animation-delay: -0.42s;
+}
+
+.dot:nth-child(2) {
+  animation-delay: -0.26s;
+}
+
+@keyframes blink {
+
+  0%,
+  80%,
+  100% {
+      opacity: 0;
+  }
+
+  40% {
+      opacity: 1;
+  }
+}

@@ -7,7 +7,7 @@ const CourseOList = ({ content }) => {
 
   return (
     <div className="course_olist">
-      {content.title && <h2 className='sub_heading' >
+      {content?.title && <h2 className='sub_heading' >
         {content.title}
       </h2>}
       <ol type="disc">

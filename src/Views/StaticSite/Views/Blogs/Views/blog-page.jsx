@@ -46,7 +46,7 @@ const BlogPage = () => {
     pageNumber!==1 ? setPagination({ ...pagination,page:pageNumber, limit:9 }):setPagination({ ...pagination,page:pageNumber, limit:10 })
   }
   
-  let formatDate = new Date( blog.createdAt )
+  let formatDate = new Date( blog?.createdAt )
 
   let blogDate = formatDate.getDate() + '/'+ (formatDate.getMonth()+1)+'/'+formatDate.getFullYear() 
   
@@ -72,12 +72,12 @@ const BlogPage = () => {
         <div className="alumni-content" id="seminar">
           <div className="newsletter-content">
             <h2>
-              <span className="newsletter-title" dangerouslySetInnerHTML={{ __html:`${blog.title}` }} ></span>
+              <span className="newsletter-title" dangerouslySetInnerHTML={{ __html:`${blog?.title}` }} ></span>
               <span className="newsletter-date">{blogDate}</span>
             </h2>
-            <p dangerouslySetInnerHTML={{ __html:`${blog.excerpt}` }} ></p>
+            <p dangerouslySetInnerHTML={{ __html:`${blog?.excerpt}` }} ></p>
             <div className="options">
-              <Link to={`/${blog.slug}`}>
+              <Link to={`/${blog?.slug}`}>
                 <button>Read Blog</button>
               </Link>
               {/* <div className="share-icon">{share}</div> */}
@@ -87,7 +87,7 @@ const BlogPage = () => {
             <img
               className="blog-image"
               alt="Upcoming Seminar"
-              src={blog.coverImage}
+              src={blog?.coverImage}
             />
           </div>
         </div>
@@ -112,7 +112,7 @@ const BlogPage = () => {
 
             {
               blogs.map((item,idx)=>{
-                if(item.slug!== blog.slug) return <SeminarCard key={idx} date={item.createdAt} bgImage={item.coverImage} title={item.title} desc={item.excerpt} url={`/${item.slug}`} />
+                if(item.slug!== blog.slug) return <SeminarCard key={idx} date={item?.createdAt} bgImage={item.coverImage} title={item?.title} desc={item?.excerpt} url={`/${item.slug}`} />
               })
             }
           </div>

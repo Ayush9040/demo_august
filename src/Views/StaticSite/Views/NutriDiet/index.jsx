@@ -168,7 +168,9 @@ const NutriDiet = () => {
           if (el.includes('<meta')) headers.metaData.push(obj)
           if (el.includes('<link')) headers.links.push(obj)
         } else if (el.includes('<title'))
-          headers.title = el.replace('<title>', '').replace('</title>', '')
+          if(headers) {
+            headers.title = el.replace('<title>', '').replace('</title>', '')
+          }
         else if (el.includes('<script')) headers.script = el
       })
 

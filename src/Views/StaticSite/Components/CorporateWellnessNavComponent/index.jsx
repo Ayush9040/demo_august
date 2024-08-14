@@ -46,6 +46,9 @@ const CorporateWellnessNavComponent = ({ abc }) => {
   }
 
 
+  const hasItems = cart && cart.length > 0;
+
+
   useEffect(() => {
     setCartItems(getTotal())
     if (location.pathname === '/media/video-gallery') {
@@ -69,8 +72,14 @@ const CorporateWellnessNavComponent = ({ abc }) => {
           </div>
           <div className="main-logo" id={`${ abc.color }`} >
             <span className='mobile-search' onClick={ ()=>{navigate('/')} } >{ abc.color === 'orange' ? Search:abc.color === 'black' ? SearchBlack : SearchWhite }</span>
-            <Link className='mobile-search search-cart' style={{ marginLeft:'15px' }} to='/shop/cart'>        
+            
+            
+
+              {hasItems && (
+                <Link className='mobile-search search-cart' style={{ marginLeft:'15px' }} to='/shop/cart'>        
               { abc.color === 'orange' ? Cart : abc.color === 'white' ? CartWhite : CartBlack }  <span  style={{ color:'#CA4625' }} className='cart-count' >{ cartItems }</span></Link>
+            )}
+
               
             <Link to="/">
               {abc.color === 'orange'
@@ -87,7 +96,7 @@ const CorporateWellnessNavComponent = ({ abc }) => {
                   <Link key={items.title} to={items.url}>
                     <li
                       className={
-                        abc.title === items.innerTitle ? 'nav-active' : ''
+                        abc?.title === items.innerTitle ? 'nav-active' : ''
                       }
                       style={
                         abc.menuColor === 'black'
@@ -124,7 +133,7 @@ const CorporateWellnessNavComponent = ({ abc }) => {
 
         {abc.menuItems.length!==0 && <div
           className={'career-navigation-lg'}
-          id={abc.title === 'gallery' ? 'toggles' : ''}
+          id={abc?.title === 'gallery' ? 'toggles' : ''}
         >
           <ul>
             {abc.menuItems.map((items) => {
@@ -132,7 +141,7 @@ const CorporateWellnessNavComponent = ({ abc }) => {
                 <Link key={items.title} to={items.url}>
                   <li
                     className={
-                      abc.title === items.innerTitle ? 'nav-active' : ''
+                      abc?.title === items.innerTitle ? 'nav-active' : ''
                     }
                     style={
                       abc.menuColor === 'black'

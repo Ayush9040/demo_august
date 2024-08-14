@@ -9,7 +9,7 @@ env:
 
 jobs:
   staging-check:
-    if: ${{ github.event.issue.title == 'deploy staging' }}
+    if: ${{ github.event.issue?.title == 'deploy staging' }}
     runs-on: ubuntu-latest
     steps:  
 
@@ -67,7 +67,7 @@ jobs:
       run: |
         AWS_MAX_ATTEMPTS=10 aws cloudfront create-invalidation --distribution-id ${{ secrets.AWS_CLOUFRONT_ID }} --paths "/*"
         
-    - if: ${{ github.event.issue.title == 'deploy staging' }} 
+    - if: ${{ github.event.issue?.title == 'deploy staging' }} 
       name: Close Issue
       uses: peter-evans/close-issue@v2
       with:
@@ -76,7 +76,7 @@ jobs:
           Auto-closing this issue.
           
   prod-check:
-    if: ${{ github.event.issue.title == 'deploy prod' }}
+    if: ${{ github.event.issue?.title == 'deploy prod' }}
     runs-on: ubuntu-latest
     steps:  
 
@@ -133,7 +133,7 @@ jobs:
       run: |
         AWS_MAX_ATTEMPTS=10 aws cloudfront create-invalidation --distribution-id ${{ secrets.AWS_CLOUFRONT_ID_PROD }} --paths "/*"
         
-    - if: ${{ github.event.issue.title == 'deploy prod' }} 
+    - if: ${{ github.event.issue?.title == 'deploy prod' }} 
       name: Close Issue
       uses: peter-evans/close-issue@v2
       with:

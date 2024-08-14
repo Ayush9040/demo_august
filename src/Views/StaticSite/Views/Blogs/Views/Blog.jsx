@@ -44,7 +44,10 @@ const BlogAnother = () => {
           headers.links.push(obj)
       }
       else if(el.includes('<title'))
-        headers.title = el.replace('<title>','').replace('</title>','')
+        // headers.title = el.replace('<title>','').replace('</title>','')
+      if (headers) {
+        headers.title = el.replace('<title>', '').replace('</title>', '');
+      }
       else if(el.includes('<script'))
         headers.script = el
               
@@ -57,7 +60,7 @@ const BlogAnother = () => {
   useEffect(() => {
     dispatch(fetchBlogData(contentId))
     window.scrollTo(0,0)
-  },[ document.title ])
+  },[ document?.title ])
 
   const viewBlog = {
     title: 'Blogs',

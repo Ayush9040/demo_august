@@ -6,18 +6,18 @@ const CoursePara = ({ content }) => {
   const navigate = useNavigate()
 
   const handleTitleClick = () => {
-    if (content.title === 'Apply Now') {
+    if (content?.title === 'Apply Now') {
       navigate('/user/sign-in/?location=ma-yoga-shastra&date=null')
     }
   }
 
   return (
     <div className="course_para">
-      {content.title && (
+      {content?.title && (
         <h2
-          className={`sub_heading ${content.title === 'Apply Now' ? 'apply-now' : ''}`}
+          className={`sub_heading ${content?.title === 'Apply Now' ? 'apply-now' : ''}`}
           onClick={handleTitleClick}
-          style={{ cursor: content.title === 'Apply Now' ? 'pointer' : 'default' }}
+          style={{ cursor: content?.title === 'Apply Now' ? 'pointer' : 'default' }}
         >
           {content.title}
         </h2>

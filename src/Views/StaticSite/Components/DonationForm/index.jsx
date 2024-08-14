@@ -190,7 +190,9 @@ const DonationForm = ( { csrId } ) => {
           return 0
     
         const options = {
-          key: 'rzp_test_hWMewRlYQKgJIk', // Enter the Key ID generated from the Dashboard
+          // key: 'rzp_test_hWMewRlYQKgJIk',
+           // Enter the Key ID generated from the Dashboard
+           key: razorPayKey,
           amount: paymentOrderResponse.data.amount, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
           currency: 'INR',
           name: 'The Yoga Institute',

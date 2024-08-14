@@ -11,6 +11,7 @@ import { uploadFile } from '../../../../../helpers/OssHelper'
 import { upload } from '../../../assets/icons/icon'
 import Loader from '../../../Components/Loader'
 import InnerNavComponent from '../../../Components/InnerNavComponent'
+import { razorPayKey } from '../../../../../Constants/appSettings'
 
 const IBYform = ({ setOpenForm, price, selectBatch }) => {
 
@@ -65,7 +66,9 @@ const IBYform = ({ setOpenForm, price, selectBatch }) => {
       return 0
 
     const options = {
-      key: 'rzp_test_hWMewRlYQKgJIk', // Enter the Key ID generated from the Dashboard
+      // key: 'rzp_test_hWMewRlYQKgJIk', 
+      // Enter the Key ID generated from the Dashboard
+      key: razorPayKey,
       amount: paymentOrderResponse.data.amount, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
       currency: 'INR',
       name: 'The Yoga Institute',
