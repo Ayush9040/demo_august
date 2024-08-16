@@ -100,6 +100,7 @@ const Enrollment = () => {
   }
   
   const handleSubmit = () => {
+
     if (
       formData.name === '' ||
       formData.name === undefined ||
@@ -120,6 +121,8 @@ const Enrollment = () => {
       setEmpty(5)
     } else if (formData.pincode === '') {
       setEmpty(8)
+    }else if (formData.sdate === '') {
+      setEmpty(18)
     }
     //  else if (formData.AGE === null || formData.AGE < 4 || formData.AGE > 99) {
     //   setEmpty(9)

@@ -355,8 +355,10 @@
   color: red;
   font-size: 1.25rem;
   float: right;
-  margin: -8.75rem 0 2rem !important;
+  margin: -6.45rem 0 2rem !important;
 }
+
+
 
 .course-main-container .course-secondary-container .residential-form .last_radio_button .course_details_text{
   display: none;
@@ -369,10 +371,11 @@
 
 .created_phone_err {
   color: red;
-    font-size: 14px;
-    margin-top: -10px;
+    font-size: 12px;
+    margin-top: -81px;
     margin-left: 35px;
     margin-bottom: -10px;
+    float: right;
 }
 
 
@@ -478,11 +481,11 @@
     }
   }
 }
-.mode-err {
+.main_div .mode-err {
   color: red;
   font-size: 1.25rem;
   float: right;
-  margin: -1.75rem 0 2rem 0;
+  margin: -8.25rem 0 2rem 0 !important;
 }
 .main_div {
   color: #60606080;
@@ -516,8 +519,9 @@
   }
   p{
     color: red;
-    font-size: 1.25rem;
+    font-size: 12px;
     float: right;
+    margin-top: -8.25rem;
     // margin: -1.75rem 0 2rem 0;
   }
 
@@ -708,6 +712,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      margin: 3rem 3rem 3rem 1rem;
       // form {
       //   label {
       //     width: auto;
@@ -1343,7 +1348,7 @@ input[type='radio']:checked::before {
       .details_box {
         border: 1px solid rgba(96, 96, 96, 0.5019607843);
         border-radius: 10px;
-        width: 430px;
+        width: 390px;
         /* height: 200px; */
         margin-left: 14px;
         height: auto;
@@ -1591,4 +1596,30 @@ input[type='radio']:checked::before {
   }
   
   
+}
+
+.countries_list p {
+  font-size: 12px;
+  margin-top: -6rem;
+}
+
+.pincode_err small {
+  font-size: 12px !important;
+  margin-top: -8rem !important;
+}
+
+@media (max-width: 768px) {
+  .countries_list p {
+    font-size: 12px;
+    margin-top: -7rem;
+  }
+
+  .pincode_err small {
+    font-size: 12px !important;
+    margin-top: -8.5rem !important;
+  }
+}
+
+.main_div .name_err {
+  margin-top: -8.2rem !important;
 }

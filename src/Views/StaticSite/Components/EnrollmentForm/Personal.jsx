@@ -36,6 +36,7 @@ const Personal = ({
   const [Params] = useSearchParams()
   const [fixDate, setFixDate] = useState([]);
   const [validationErrors, setValidationErrors] = useState([]);
+  const [phoneValue, setPhoneValue] = useState(formData.phone);
 
   const validatePhoneNumber = (phoneNumber) => {
     const errors = [];
@@ -93,12 +94,14 @@ const Personal = ({
   }))
 
    const handlePhoneChange = (value) => {
+    setPhoneValue(value);
     setFormData({ ...formData, phone: value });
 
     if (value) {
       const errors = validatePhoneNumber(value);
-      // console.log('ph', value, '', errors);
       
+      // console.log('ph', value, '', errors);
+      console.log('phone err', validationErrors);
       setValidationErrors(errors);
     } else {
       setValidationErrors([]);
@@ -183,6 +186,15 @@ const Personal = ({
     value: date
   })) || [];
 
+
+  useEffect(() => {
+    if (validationErrors.length > 0) {
+      setFormData(prevState => ({ ...prevState, phone: '' })); // Clear phone value if errors are present
+    } else {
+      setFormData(prevState => ({ ...prevState, phone: phoneValue })); // Update phone value if no errors
+    }
+  }, [validationErrors, phoneValue]);
+
   
 
   return (
@@ -200,7 +212,7 @@ const Personal = ({
                 keyName="name"
                 errorCheck={setEmpty}
               />
-              {empty === 1 && <small> Please enter your name</small>}
+              {empty === 1 && <small class="name_err"> Please enter your name</small>}
             </div>
 
             <div className="form_error">
@@ -213,14 +225,14 @@ const Personal = ({
                 keyName="email"
                 errorCheck={setEmpty}
               />
-              {empty === 2 && <small> Please enter a valid email</small>}
+              {empty === 2 && <small class="name_err"> Please enter a valid email</small>}
             </div>
             <div className="form_error">
               <PhoneInput
                 placeholder="Enter phone number*"
                 defaultCountry="IN"
                 // country="IN"
-                value={formData.phone}
+                value={phoneValue}
                 // onChange={(e) => {
                 //   setFormData({ ...formData, phone: e })
                 // }}
@@ -239,6 +251,7 @@ const Personal = ({
         <div class="created_phone_err">Invalid Number</div>
         
       )}
+      {console.log('ve',validationErrors)}
 
             </div>
             <div className="form_error">
@@ -262,7 +275,7 @@ const Personal = ({
                 errorCheck={setEmpty}
               />
             </div>
-            <div className="form_error">
+            <div className="form_error countries_list">
               <Select 
                 styles={customStyles}
                 id="country"
@@ -345,7 +358,7 @@ const Personal = ({
                 </small>
               )} */}
             </div>
-            <div className="form_error">
+            <div className="form_error pincode_err">
               <InputComponent
                 type="text"
                 placeholder="Pincode*"
@@ -385,7 +398,7 @@ const Personal = ({
           </div> */}
 
 
-          <div className="form_error">
+          <div className="form_error course_date">
               <Select
                 styles={customStyles}
                 id="sdate"
@@ -410,6 +423,8 @@ const Personal = ({
                   })
                 }}
               />
+              {empty === 18 && <small id="fill_err"> Please select course date</small>}
+        
               
             </div>
 

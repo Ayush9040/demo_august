@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import './style.scss'
 //import baseDomain, { homeAssets } from '../../assets/images/imageAsset'
 import axios from 'axios'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, Link } from 'react-router-dom'
 import { legacydisclaimer } from '../../assets/icons/icon'
 import { authBaseDomain, cmsBaseDomain, razorPayKey } from '../../../../Constants/appSettings'
 //import { mail } from '../../assets/icons/icon'
@@ -258,7 +258,10 @@ const DisclaimerPolicy = ({
  
   return (
     <div className="disclaimer-container">
-      <button className="close" onClick={()=>setBold(4)} >x</button>
+      {/* <button className="close" onClick={()=>setBold(4)} >x</button> */}
+      <Link to="/courses">
+              <button className="close x">x</button>
+            </Link>
       <div className="disclaimer-heading">
         <div className='legacy1'>
           {legacydisclaimer}
