@@ -30,6 +30,16 @@ const Home = () => {
         .scrollIntoView()
     }
   })
+
+  useEffect(() => {
+    // Track page view event
+    if (window?.clevertap) {
+      window?.clevertap?.event.push('Home Page Viewed', { pageName: 'Home Page' });
+      
+    }
+    console.log('ppppppppppppppppppp',window?.clevertap?.event);
+  }, []);
+
   return (
     <>
       { metaDataObj[route.pathname] && 
