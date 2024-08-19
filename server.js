@@ -59,7 +59,7 @@ const getMetaData = async( path )=>{
         if (el.includes('<link')) headers.links.push(obj)
       } else if (el.includes('<title'))
       {
-        headers?.title = el.replace('<title>','').replace('</title>','')
+        headers.title = el.replace('<title>','').replace('</title>','')
       }
       else if (el.includes('<script')) headers.script = el
     })
@@ -97,7 +97,7 @@ const getMetaData = async( path )=>{
         }
         else if(el.includes('<title'))
         {
-          headers?.title = el.replace('<title>','').replace('</title>','')
+          headers.title = el.replace('<title>','').replace('</title>','')
         }
         else if(el.includes('<script'))
           headers.script = el
@@ -137,13 +137,13 @@ app.get('*', async(req, res) => {
   if (metaData && metaData.title) titleTag = `<title>${metaData.title}</title>`
   if(metaData && metaData.links){
     linkArray = metaData.links.map((link)=>{
-      if(link?.rel) return `<link rel=${ link.rel || '' } href=${ link.href || '' }  />`
+      if(link.rel) return `<link rel=${ link.rel || '' } href=${ link.href || '' }  />`
     })
   }
   if (metaData && metaData.metaData) {
     metaArray = metaData.metaData.map((meta) => {
-      if (meta?.name) return `<meta name="${meta.name || ''}" content="${String(meta.content) || ''}" data-react-helmet="true" />`
-      if (meta?.property) return `<meta property="${meta.property || ''}" content="${String(meta.content) || ''}" data-react-helmet="true" />`
+      if (meta.name) return `<meta name="${meta.name || ''}" content="${String(meta.content) || ''}" data-react-helmet="true" />`
+      if (meta.property) return `<meta property="${meta.property || ''}" content="${String(meta.content) || ''}" data-react-helmet="true" />`
       return null
     })
   }
