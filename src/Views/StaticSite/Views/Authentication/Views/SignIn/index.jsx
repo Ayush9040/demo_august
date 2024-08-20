@@ -37,6 +37,8 @@ const SignIn = () => {
 
   const [selectDate, setSetselectDate] = useState()
 
+  const clevertap = window.clevertap;
+
   useEffect(() => {
     setSetselectDate(Params.get('date'))
     setPage(Params.get('location'))
@@ -74,6 +76,22 @@ const SignIn = () => {
         )
       )
       if(error.isError !== false){  setModal(true);setErrMsg( error.isError ) }else{ setModal(false)}
+
+      
+    clevertap.onUserLogin.push({
+      "Site": {
+        "Email": formData.email,         // Email address of the user
+     // optional fields. controls whether the user will be sent email, push etc.
+        "MSG-email": false,                // Disable email notifications
+        "MSG-push": false,                  // Enable push notifications
+        "MSG-sms": false,                   // Enable sms notifications
+        "MSG-whatsapp": false,              // Enable WhatsApp notifications
+      }
+     })
+
+     console.log('New User From Clever Tap', clevertap);
+
+     
     }
   }
 

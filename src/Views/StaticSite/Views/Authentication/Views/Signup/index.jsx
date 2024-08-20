@@ -24,6 +24,8 @@ const SignUp = () => {
 
   const { firstName, email, password, confirmPassword } = formData
 
+  const clevertap = window.clevertap;
+
   const [empty, setEmpty] = useState(0)
 
   useEffect(() => {
@@ -37,10 +39,27 @@ const SignUp = () => {
         data
       )
       navigate('/user/sign-in')
+
+      
+    clevertap.onUserLogin.push({
+      "Site": {
+        "Name": firstName,            // String
+        "Email": email,         // Email address of the user               // Date of Birth. Date object
+     // optional fields. controls whether the user will be sent email, push etc.
+        "MSG-email": false,                // Disable email notifications
+        "MSG-push": false,                  // Enable push notifications
+        "MSG-sms": false,                   // Enable sms notifications
+        "MSG-whatsapp": false,              // Enable WhatsApp notifications
+      }
+     })
+
+     console.log('New User From Clever Tap', clevertap);
+     
     } catch (error) {
       setErrorMessage(error.data.message)
       setModal(true)
     }
+
     console.log(errorMessage)
   }
 
@@ -62,6 +81,8 @@ const SignUp = () => {
       password,
       confirmPassword,
     })
+
+    
   }
 
   const UserNav = {
