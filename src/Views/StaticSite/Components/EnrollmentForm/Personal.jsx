@@ -8,14 +8,20 @@ import { Country, State, City } from 'country-state-city'
 import Other from './Other'
 import CourseDetails from './CourseDetails'
 import SelectDropDown from '../Select Dropdown'
-import { Link, useSearchParams } from 'react-router-dom'
+import { Link, useSearchParams, useNavigate } from 'react-router-dom'
 import { parsePhoneNumberFromString, isValidPhoneNumber } from 'libphonenumber-js'
+import { authBaseDomain, cmsBaseDomain, razorPayKey } from '../../../../Constants/appSettings'
+import axios from 'axios'
+import { validateEmail } from '../../../../helpers'
 
 const Personal = ({
   empty,
   setFormData,
   formData,
   setEmpty,
+  templateKey,
+  qualificationData,
+  listData,
   courseDate,
   currentCourse,
   courseAsset1,
@@ -26,7 +32,8 @@ const Personal = ({
   courseFee,
   setCourseFee,
   uploadCheck,
-  setUploadCheck
+  setUploadCheck,
+  isLoad
 }) => {
   // {console.log(handleSubmit)}
   //const today = new Date().toISOString().split('T')[0]
@@ -37,6 +44,26 @@ const Personal = ({
   const [fixDate, setFixDate] = useState([]);
   const [validationErrors, setValidationErrors] = useState([]);
   const [phoneValue, setPhoneValue] = useState(formData.phone);
+  const [bold, setBold] = useState(0)
+
+  // const [empty, setEmpty] = useState(0)
+  // const [isLoad, setIsLoad] = useState(false)
+  const [disable, setDisable] = useState(false)
+
+  const [isChecked, setIsChecked] = useState(true); // Checkbox is checked by default
+
+  
+
+  const [disData, setDisData] = useState({
+    terms: 'yes',
+  })
+
+  const handleCheckboxChange = () => {
+    setIsChecked(!isChecked);
+    setDisData({ terms: 'no' })
+  };
+  
+  const navigate = useNavigate()
 
   const validatePhoneNumber = (phoneNumber) => {
     const errors = [];
@@ -188,12 +215,294 @@ const Personal = ({
 
 
   useEffect(() => {
-    if (validationErrors.length > 0) {
+    if (validationErrors?.length > 0) {
       setFormData(prevState => ({ ...prevState, phone: '' })); // Clear phone value if errors are present
     } else {
       setFormData(prevState => ({ ...prevState, phone: phoneValue })); // Update phone value if no errors
     }
   }, [validationErrors, phoneValue]);
+
+
+  const [mail,setmail]=useState(null)
+
+
+  const pickMail = ()=>{
+    if(formData.mode==='ONLINE'){
+      setmail(templateKey?.templateOnline)
+      return templateKey?.templateOnline
+    }else if(formData.mode === 'OFFLINE' && formData.residental === ''){
+      setmail(templateKey?.templateOnline)
+      return templateKey?.templateOnline
+    }else{
+      if(formData.residental === 'RESIDENTIAL'){  
+        console.log(templateKey?.templateOffline?.templateResidential)
+        setmail(templateKey?.templateOffline?.templateResidential)
+        return templateKey?.templateOffline?.templateResidential
+      }else{
+        setmail(templateKey?.templateOffline?.templateNonResidential)
+        return templateKey?.templateOffline?.templateNonResidential
+      }
+    }
+  }
+
+
+  // const handleSubmit1 = async() => {
+  //   if (
+  //     formData.name === '' ||
+  //     formData.name === undefined ||
+  //     formData.name === null
+  //   ) {
+  //     setEmpty(1)
+  //   } else if (
+  //     formData.phone === '' ||
+  //     formData.phone?.length < 6 ||
+  //     formData.phone?.length > 15
+  //   ) {
+  //     setEmpty(3)
+  //   } else if (!validateEmail(formData.email)) {
+  //     setEmpty(2)
+  //   } else if (formData.address1 === '') {
+  //     setEmpty(4)
+  //   } else if (formData.country === '' ) {
+  //     setEmpty(5)
+  //   } else if (formData.pincode === '') {
+  //     setEmpty(8)
+  //   }else if (formData.sdate === '') {
+  //     setEmpty(18)
+  //   }
+  //   //  else if (formData.AGE === null || formData.AGE < 4 || formData.AGE > 99) {
+  //   //   setEmpty(9)
+  //   // } else if (formData.nationality === '') {
+  //   //   setEmpty(10)
+  //   // }
+  //   else if (formData.gender === '') {
+  //     setEmpty(11)
+  //   } else if (formData.mode === '') {
+  //     setEmpty('mode')
+  //   }
+  //   else if (
+  //     formData.mode === 'OFFLINE' &&
+  //     (currentCourse.residential === true ||
+  //       currentCourse.nonResidential === true)
+  //   ) {
+  //     if (formData.residental === '') {
+  //       setEmpty('subMode')
+  //     } else {
+  //       setBold(5)
+  //     }
+  //   } else if (
+  //     currentCourse.certficate === true &&
+  //     (courseAsset2 === '' || courseAsset2 === null)
+  //   ) {
+  //     setEmpty('certificate')
+  //   } else {
+  //     setBold(5)
+  //   }
+
+
+  //   // setIsLoad(true);
+  //   if (disData.terms === 'no') {
+  //     return setEmpty(1)
+  //   }else {
+  //     setEmpty(0)
+  //     let body = {
+  //       personalDetails: {
+  //         name: formData.name,
+  //         emailId: formData.email,
+  //         phone: formData.phone,
+  //         addressLane1: formData.address1,
+  //         addressLane2: formData.address2,
+  //         country: formData.country,
+  //         state: formData.state,
+  //         city: formData.city,
+  //         pincode: formData.pincode,
+  //         // gender: formData.gender,
+  //         age: formData.AGE,
+  //         nationality: formData.nationality,
+  //       },
+  //       academicQualification: qualificationData,
+  //       workExperience: listData,
+  //       others: {
+  //         medicalHistory: formData.medicalstatus,
+  //         howDoYouHearAboutUs: formData.source || formData.sourceinfo,
+  //       },
+  //       courseDetails: {
+  //         courseId: currentCourse.key,
+  //         courseName:currentCourse.title,
+  //         mode: formData.mode,
+  //         subMode:formData.residental,
+  //         batch:currentCourse.batch,
+  //         imageAsset: courseAsset1,
+  //         certificateImgAsset: courseAsset2,
+  //         // date:courseDate,
+  //         date: formData.sdate,
+  //         timing:currentCourse.timing
+  //       },
+  //     }
+  //     let body1 = {
+  //       personalDetails: {
+  //         name: formData.name,
+  //         emailId: formData.email,
+  //         phone: formData.phone,
+  //         addressLane1: formData.address1,
+  //         addressLane2: formData.address2,
+  //         country: formData.country,
+  //         state: formData.state,
+  //         city: formData.city,
+  //         pincode: formData.pincode,
+  //         // gender: formData.gender,
+  //         age: formData.AGE,
+  //         nationality: formData.nationality,
+  //       },
+  //       academicQualification: qualificationData,
+  //       workExperience: listData,
+  //       others: {
+  //         medicalHistory: formData.medicalstatus,
+  //         howDoYouHearAboutUs: formData.source || formData.sourceinfo,
+  //       },
+  //       courseDetails: {
+  //         courseId: currentCourse.key,
+  //         courseName:currentCourse.title,
+  //         mode: formData.mode,
+  //         batch:currentCourse.batch,
+  //         imageAsset: courseAsset1,
+  //         certificateImgAsset: courseAsset2,
+  //         // date:courseDate,
+  //         date: formData.sdate,
+  //         timing:currentCourse.timing
+  //       },
+  //     }
+  //     // if(currentCourse.key==='batch-1-200hr'){
+  //     //   if(formData?.residental==='RESIDENTIAL'){
+  //     //     setmail(templateKey)
+  //     //   }else{
+  //     //     setmail(templateKey)
+  //     //   }
+  //     // }
+  //     console.log(mail)
+  //     console.log('body ', body)
+  //     console.log('body 1 ', body1)
+  //     let mailTemplate = {
+  //       type: 'INFO_TYI',
+  //       HTMLTemplate: pickMail(),
+  //       subject: 'Enrollment Confirmation',
+  //       data:{
+  //         name: formData.name
+  //       },
+  //       receivers: [formData.email,'info@theyogainstitute.org']
+  //     }
+ 
+  //     try{
+  //       let response
+  //       if(formData.mode==='ONLINE' || (currentCourse.residential===false && currentCourse.nonResidential===false)){
+  //         response = await axios.post(
+  //           `${ cmsBaseDomain }/forms`,
+  //           body1
+  //         )
+  //       }else{
+  //         response = await axios.post(
+  //           `${ cmsBaseDomain }/forms`,
+  //           body
+  //         )
+  //       }
+
+  //       if(response?.data?.success){
+  //         if(currentCourse.key!=='satsang' && currentCourse.key!=='samattvam' ){
+  //           const paymentOrderResponse =  await axios.post(`${ cmsBaseDomain }/payment/order?enrollmentFormId=${response.data.data['_id']}`, {
+  //             amount: courseFee,
+  //             notes: currentCourse.metaDescription,
+  //             objectType:'ENROLLMENT'
+  //           })
+  //           console.log('Hello From 1 step')
+  //           if(!paymentOrderResponse?.data?.amount && !paymentOrderResponse?.data?.id) return 0
+  //           console.log('Hello From 2 step')
+  //           console.log('amount : ',paymentOrderResponse.data.amount,)
+  //           console.log('amount : ',paymentOrderResponse.data.id,)
+  //           console.log('razorPayKey : ',razorPayKey)
+  //           console.log('handler : ', );
+            
+  //           const options = {
+  //             // key: 'rzp_test_hWMewRlYQKgJIk', 
+  //             // Enter the Key ID generated from the Dashboard
+  //             key: razorPayKey,
+  //             amount: paymentOrderResponse.data.amount, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+  //             currency: 'INR',
+  //             name: 'The Yoga Institute',
+  //             description: 'Course Transaction',
+  //             // image: 'https://example.com/your_logo', // un comment and add TYI logo
+  //             order_id: paymentOrderResponse.data.id, // eslint-disable-line
+  //             handler: async(res) => {
+
+  //               // setIsLoad(false);
+  //               console.log('Hello From rzr', res)
+  //               // Navigare to Success if razorpay_payment_id, razorpay_order_id, razorpay_signature is there
+  //               if(res.razorpay_payment_id && res.razorpay_order_id && res.razorpay_signature) {
+  //                 await axios.post(`${ authBaseDomain }/ali/mail`, mailTemplate)
+  //                 navigate(`/enrollment_thankyou/${currentCourse.key}`)
+  //               }
+  //             },
+  //             prefill: {
+  //               name: formData.name,
+  //               email: formData.email,
+  //               contact: formData.phone
+  //             },
+  //             notes:{
+  //               courseName: currentCourse.title,
+  //               name: formData.name,
+  //               email: formData.email,
+  //               contact: formData.phone,
+  //               // date: courseDate,
+  //               date: formData.sdate,
+  //               time : currentCourse.timing,
+  //               mode : formData.mode,
+  //             },
+  //             theme: {
+  //               color: '#3399cc' // enter theme color for our website
+  //             },
+  //             modal: {
+  //               ondismiss: function () {
+  //                 // The user closed the payment modal
+  //                 setIsLoad(false);
+  //                 console.log("Payment modal closed by user.");
+  //                 // alert("Payment process was canceled.");
+  //                 // Perform any necessary cleanup or UI updates
+  //               },
+  //             },
+
+
+              
+              
+  //           }
+
+  //           console.log('Befor razorpay', options)
+  //           console.log('Befor razorpay', options.handler())
+  //           const rzp = new window.Razorpay(options)
+
+  //           rzp.open()  
+  //           console.log('Can See !!!!!!!!')
+  //         }else{
+  //           await axios.post(`${ authBaseDomain }/ali/mail`, mailTemplate)
+
+  //           if(currentCourse.key==='satsang'){
+  //             navigate('/satsang_thankyou')
+  //           }else if(currentCourse.key ==='samattvam'){
+  //             navigate('/samattvam_thankyou')
+  //           }else{
+              
+  //             navigate(`/enrollment_thankyou/${currentCourse.key}`)
+              
+  //           }
+  //         }
+  //       }
+  //     } 
+  //     catch(err){
+  //       setIsLoad(false);
+  //       console.error(err)
+  //     } 
+  //   }
+
+  
+  // }
 
   
 
@@ -226,6 +535,10 @@ const Personal = ({
                 errorCheck={setEmpty}
               />
               {empty === 2 && <small class="name_err"> Please enter a valid email</small>}
+
+
+
+              
             </div>
             <div className="form_error">
               <PhoneInput
@@ -238,10 +551,10 @@ const Personal = ({
                 // }}
                 onChange={handlePhoneChange}
               />
-              {/* {empty === 3 && <small> Please enter a valid phone number</small>} */}
+               {/* {empty === 3 && <small> Please enter a valid phone number</small>}  */}
               {/* {phoneError && <small>{phoneError}</small>} */}
 
-              {validationErrors.length > 0 && (
+              {/* {validationErrors?.length > 0 ? (
         // <ul>
         //   {validationErrors.map((error, index) => (
         //     <li key={index}><small class="phone_err">{error}</small></li>
@@ -250,7 +563,13 @@ const Personal = ({
         
         <div class="created_phone_err">Invalid Number</div>
         
-      )}
+      ) : ((empty === 3) ? <small class="phone_error"> Please enter a valid phone number</small> : " ") } */}
+
+{validationErrors?.length > 0 ? (
+  <div className="created_phone_err">Invalid Number</div>
+) : (empty === 3 && !formData.phone ? (
+  <small className="phone_error">Please enter a valid phone number</small>
+) : " ")}
       {console.log('ve',validationErrors)}
 
             </div>
@@ -547,9 +866,37 @@ const Personal = ({
             />
 
           </form>
+          
+          <div className='terms'>
+                  <label>
+                    <input
+                      type="checkbox"
+                      checked={isChecked}
+                      onChange={handleCheckboxChange}
+                      
+                      
+                    />
+                    I agree to 
+                    <a href="https://theyogainstitute.org/terms-and-conditions"
+                     target="_blank"
+                     rel="noopener noreferrer">
+                     Terms & Conditions
+                    </a>
+                  </label>
+                </div>
           <div className="button_box">
-            <button className="next_button" onClick={handleSubmit}>
-            Next
+            {/* <button className="next_button" onClick={handleSubmit}>
+            Proceed to payment
+            </button> */}
+
+
+
+            <button  type="button" onClick={handleSubmit} className={!isLoad ? 'next_button button register-primary-btn' : 'next_button button register-primary-btn no-event'} disabled={isLoad}>
+                {!isLoad ? <><span id="txt">Proceed To Payement&nbsp; </span> </> : <><span className="loader">
+                    <span className="dot"></span>
+                    <span className="dot"></span>
+                    <span className="dot"></span>
+                </span></>}
             </button>
           </div>
         </div>

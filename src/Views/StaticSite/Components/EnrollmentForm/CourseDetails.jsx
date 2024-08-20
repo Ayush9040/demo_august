@@ -18,6 +18,8 @@ const CourseDetails = ({
 
 }) => {
 
+  const [optionsCount, setOptionsCount] = useState(0);
+
   useEffect(() => {
     if (formData.mode === 'ONLINE') {
       setFormData({ ...formData, residental: '' })
@@ -271,16 +273,22 @@ const CourseDetails = ({
 
 
   const shouldShowOnlineOption = () => {
+ 
     return currentCourse.online;
   };
 
   const shouldShowResidentialOption = () => {
+    
     return currentCourse.residential;
   };
 
   const shouldShowNonResidentialOption = () => {
+    
     return currentCourse.nonResidential;
   };
+
+
+  
 
 
   return (
@@ -303,7 +311,7 @@ const CourseDetails = ({
             </div>
           </div>
           <div className="course-details-text">
-            Please select one of these options*
+             Please select one of these options*
           </div>
           {console.log('CC',currentCourse)}
           <form className="residential-form check_course">
