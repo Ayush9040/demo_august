@@ -54,14 +54,9 @@ const Personal = ({
 
   
 
-  const [disData, setDisData] = useState({
-    terms: 'yes',
-  })
+  const [disData, setDisData] = useState('yes')
 
-  const handleCheckboxChange = () => {
-    setIsChecked(!isChecked);
-    setDisData({ terms: 'no' })
-  };
+  
   
   const navigate = useNavigate()
 
@@ -137,13 +132,25 @@ const Personal = ({
    
   };
 
+  const handleCheckboxChange = () => {
+
+    setIsChecked(prevChecked => {
+      const newChecked = !prevChecked;
+      setDisData('no');
+      setFormData({ ...formData, terms: newChecked });
+      return newChecked;
+    });
+  };
+
   useEffect(() => {
+
+    
     // setSetselectDate(Params.get('date'))
 
     // window.scrollTo(0, 0)
     // console.log(pageDate?.key,'heoo')
     // {Params.get('date')===null? window.scrollTo(0, 0): document.getElementById('date-select').scrollIntoView()}
-  }, [])
+  }, [isChecked])
 
   const updatedStates = (countryId) => {
     return State.getStatesOfCountry(countryId).map((state) => ({
@@ -883,6 +890,12 @@ const Personal = ({
                      Terms & Conditions
                     </a>
                   </label>
+                  {empty === 19 && (
+            <div style={{ color: 'red', marginLeft: '0', marginTop: '1rem' }} className='mar_top'>
+              *Please agree to the condition!
+            </div>
+          )}
+          {console.log(isChecked)}
                 </div>
           <div className="button_box">
             {/* <button className="next_button" onClick={handleSubmit}>

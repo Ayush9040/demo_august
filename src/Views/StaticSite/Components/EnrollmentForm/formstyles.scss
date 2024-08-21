@@ -366,6 +366,14 @@
   margin: -8rem 0 2rem !important;
 }
 
+.main-div .right_grid .terms small {
+  margin: -2rem 0 0 !important;
+}
+
+.main-div .mar_top {
+  margin: -2rem !important;
+}
+
 
 
 .course-main-container .course-secondary-container .residential-form .last_radio_button .course_details_text{
@@ -805,6 +813,11 @@
         }
         .personal_gender {
           padding-left: 4rem;
+        }
+        .terms{
+          .mar_top {
+            margin: -2rem !important;
+          }
         }
       }
     }
