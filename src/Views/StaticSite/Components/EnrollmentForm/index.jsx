@@ -139,6 +139,7 @@ const Enrollment = () => {
     if(formData.terms === false) {
       setEmpty(19);
     } else {
+      setIsLoad(true);
       let body = {
         personalDetails: {
           name: formData.name,
@@ -263,7 +264,7 @@ const Enrollment = () => {
               order_id: paymentOrderResponse.data.id, // eslint-disable-line
               handler: async(res) => {
   
-                setIsLoad(true);
+                
                 // Navigare to Success if razorpay_payment_id, razorpay_order_id, razorpay_signature is there
                 if(res.razorpay_payment_id && res.razorpay_order_id && res.razorpay_signature) {
                   await axios.post(`${ authBaseDomain }/ali/mail`, mailTemplate)
@@ -351,12 +352,13 @@ const Enrollment = () => {
       setEmpty(1)
     } else if (formData.email === '' || !validateEmail(formData.email) || formData.email === undefined ||
     formData.email === null) {
-      console.log('maile : ',empty);
+      console.log('mail : ',empty);
       setEmpty(2)
     } else if (
       formData.phone === '' ||
-      formData.phone.length < 6 ||
-      formData.phone.length > 15
+      formData.phone?.length < 6 ||
+      formData.phone?.length > 15 || 
+      formData.phone === undefined
     ) {
       setEmpty(3)
     }  else if (formData.address1 === '') {

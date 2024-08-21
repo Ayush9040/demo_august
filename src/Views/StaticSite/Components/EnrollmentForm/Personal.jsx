@@ -574,7 +574,7 @@ const Personal = ({
 
 {validationErrors?.length > 0 ? (
   <div className="created_phone_err">Invalid Number</div>
-) : (empty === 3 && !formData.phone ? (
+) : (empty === 3 && (!formData.phone || (formData.phone === '')) ? (
   <small className="phone_error">Please enter a valid phone number</small>
 ) : " ")}
       {console.log('ve',validationErrors)}
@@ -890,11 +890,11 @@ const Personal = ({
                      Terms & Conditions
                     </a>
                   </label>
-                  {empty === 19 && (
+                  {isChecked === false ? empty === 19 && (
             <div style={{ color: 'red', marginLeft: '0', marginTop: '1rem' }} className='mar_top'>
               *Please agree to the condition!
             </div>
-          )}
+          ) : ''}
           {console.log(isChecked)}
                 </div>
           <div className="button_box">
