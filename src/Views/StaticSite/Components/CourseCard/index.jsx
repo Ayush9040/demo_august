@@ -9,6 +9,7 @@ import SelectDropDown from '../Select Dropdown'
 //import StarIcon from './star-icon'
 import { useState } from 'react'
 import { useSelector } from 'react-redux'
+import { handleCTCourseClick } from '../../../../CleverTap/buttonClicked';
 // import { faHelicopterSymbol } from '@fortawesome/free-solid-svg-icons'
 
 // const Error = () => {
@@ -113,7 +114,7 @@ const CourseCard = ({
                 : `/${path}`///?date=${selectDate}
             }
           >
-            <CommonBtn text={'View Details'} />
+            <CommonBtn text={'View Details'} buttonAction={handleCTCourseClick}/>
           </Link>
           <div onClick={checkEmpty}>
             {dates.length !== 0 ?
