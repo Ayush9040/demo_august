@@ -22,12 +22,15 @@ import { handleCTCourseClick } from '../../../../CleverTap/buttonClicked';
 
 const CourseCard = ({
   color,
+  key,
   courseTitle,
   description,
   path,
   img = 'https://ecom-static-site-prod.s3.ap-south-1.amazonaws.com/Courses/course%20%281%29.png',
   //rating = 5,
   dates = [],
+  fees,
+  timing
 }) => {
 
 
@@ -114,7 +117,13 @@ const CourseCard = ({
                 : `/${path}`///?date=${selectDate}
             }
           >
-            <CommonBtn text={'View Details'} buttonAction={handleCTCourseClick}/>
+            <CommonBtn text={'View Details'} buttonAction={() => handleCTCourseClick({
+              courseTitle,
+              description,
+              key,
+              fees,
+              timing
+            })}/>
           </Link>
           <div onClick={checkEmpty}>
             {dates.length !== 0 ?

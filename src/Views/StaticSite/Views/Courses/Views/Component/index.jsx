@@ -30,6 +30,8 @@ const RelatedCourse = ({
                     img={item?.cardImage}
                     rating={item?.rating}
                     dates={item?.dates}
+                    fees={item?.fees}
+                    timing={item?.timing}
                   />
                 )
               }
