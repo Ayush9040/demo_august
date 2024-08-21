@@ -267,9 +267,7 @@ const CourseDetails = ({
   // }
 
 
-  const shouldShowOfflineOption = () => {
-    return currentCourse.onCampus;
-  };
+  
 
 
   const shouldShowOnlineOption = () => {
@@ -285,6 +283,11 @@ const CourseDetails = ({
   const shouldShowNonResidentialOption = () => {
     
     return currentCourse.nonResidential;
+  };
+
+  const shouldShowOfflineOption = () => {
+    const result = (currentCourse.online === false && currentCourse.residential === false && currentCourse.nonResidential === false) ? true : false;
+    return result;
   };
 
 
@@ -316,38 +319,70 @@ const CourseDetails = ({
           {console.log('CC',currentCourse)}
           <form className="residential-form check_course">
             <div className="last_radio_button ">
-               {shouldShowOfflineOption() && (
-                <label htmlFor="" className="course_details_text" >
-                <input
-                  type="radio"
-                  name="mode"
-                  value="OFFLINE"
-                  disabled={currentCourse.onCampus === false}
-                  checked={formData.mode === 'OFFLINE'}
-                  style={
-                    currentCourse.onCampus === false
-                      ? {
-                        background:
-                            'url(https://ecom-static-site-prod.s3.ap-south-1.amazonaws.com/icons/icons8-multiply-24.png)',
-                      }
-                      : {}
-                  }
-                  onChange={(e) => {
-                    if (e.target.checked) {
-                      setFormData({
-                        ...formData,
-                        mode: e.target.value,
-                      })
-                      setEmpty(0)
-                      setCourseFee(currentCourse?.fees?.onlineFee)
-                      // setCourseFee(updatedFees( currentCourse?.key,'OFFLINE' ))
-                    }
-                  }}
-                />
-                &nbsp;Offline 
-              </label>
+               {shouldShowOfflineOption() && 
+              //  (
+              //   <label htmlFor="" className="course_details_text" >
+              //   <input
+              //     type="radio"
+              //     name="mode"
+              //     value="OFFLINE"
+              //     disabled={currentCourse.onCampus === false}
+              //     checked={formData.mode === 'OFFLINE'}
+              //     style={
+              //       currentCourse.onCampus === false
+              //         ? {
+              //           background:
+              //               'url(https://ecom-static-site-prod.s3.ap-south-1.amazonaws.com/icons/icons8-multiply-24.png)',
+              //         }
+              //         : {}
+              //     }
+              //     onChange={(e) => {
+              //       if (e.target.checked) {
+              //         setFormData({
+              //           ...formData,
+              //           mode: e.target.value,
+              //         })
+              //         setEmpty(0)
+              //         setCourseFee(currentCourse?.fees?.onlineFee)
+              //         // setCourseFee(updatedFees( currentCourse?.key,'OFFLINE' ))
+              //       }
+              //     }}
+              //   />
+              //   &nbsp;Offline 
+              // </label>
               
-              )} 
+              // )
+              (
+                <label class="item-label">
+<input class="item-input" 
+type="radio" name="mode" 
+value="OFFLINE" 
+aria-labelledby="delivery-0-name" 
+aria-describedby="delivery-0-shipping delivery-0-price"
+checked={selectedOption === 'OFFLINE'}
+
+onChange={(e) => {
+  setSelectedOption('OFFLINE')
+        if (e.target.checked) {
+            setFormData({
+              ...formData,
+              mode: e.target.value,
+          })
+            setEmpty(0)
+            setCourseFee(currentCourse?.fees?.onlineFee)
+            // setCourseFee(updatedFees( currentCourse?.key,'ONLINE' ))
+        }
+        }} />
+<span class="item-info">
+  <span id="delivery-0-name" class="item-name">OFFLINE</span>
+  <br />
+  {/* <small id="delivery-0-shipping" class="item-shipping">5–10 business days</small> */}
+</span>
+<strong id="delivery-0-price" class="item-price">&#8377;{currentCourse?.fees?.onlineFee}</strong>
+</label>
+             
+              )
+              } 
              
              {shouldShowOnlineOption() && (
             //    <label htmlFor="" className="course_details_text">
