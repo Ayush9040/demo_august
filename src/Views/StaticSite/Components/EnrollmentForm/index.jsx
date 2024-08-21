@@ -234,13 +234,13 @@ const Enrollment = () => {
             `${ cmsBaseDomain }/forms`,
             body1
           )
-          setIsLoad(false);
+          // setIsLoad(false);
         }else{
           response = await axios.post(
             `${ cmsBaseDomain }/forms`,
             body
           )
-          setIsLoad(false);
+          // setIsLoad(false);
         }
   
         if(response?.data?.success){
@@ -250,6 +250,7 @@ const Enrollment = () => {
               notes: currentCourse.metaDescription,
               objectType:'ENROLLMENT'
             })
+            setIsLoad(false);
             if(!paymentOrderResponse?.data?.amount && !paymentOrderResponse?.data?.id) return 0
             
             const options = {
@@ -324,7 +325,7 @@ const Enrollment = () => {
         }
       } 
       catch(err){
-       
+        setIsLoad(false)
         console.error(err)
       } 
   
@@ -363,9 +364,11 @@ const Enrollment = () => {
       setEmpty(3)
     }  else if (formData.address1 === '') {
       setEmpty(4)
-    } else if (formData.country === '' ) {
+    } 
+    else if (formData.country === '' ) {
       setEmpty(5)
-    } else if (formData.pincode === '') {
+    } 
+    else if (formData.pincode === '') {
       setEmpty(8)
     }else if (formData.sdate === '') {
       setEmpty(18)
