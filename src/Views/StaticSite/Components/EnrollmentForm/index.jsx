@@ -110,33 +110,35 @@ const Enrollment = () => {
     document.body.appendChild(script)
   }, [])
 
-  const [mail,setmail]=useState(null)
-  const [isLoad, setIsLoad ] = useState(false);
+  const [mail, setmail] = useState(null)
+  const [isLoad, setIsLoad] = useState(false);
 
 
-  const pickMail = ()=>{
-    if(formData.mode==='ONLINE'){
+  const pickMail = () => {
+    if (formData.mode === 'ONLINE') {
       setmail(currentCourse?.templateId?.templateOnline)
       return currentCourse?.templateId?.templateOnline
-    }else if(formData.mode === 'OFFLINE' && formData.residental === ''){
+    } else if (formData.mode === 'OFFLINE' && formData.residental === '') {
       setmail(currentCourse?.templateId?.templateOnline)
       return currentCourse?.templateId?.templateOnline
-    }else{
-      if(formData.residental === 'RESIDENTIAL'){  
+    } else {
+      if (formData.residental === 'RESIDENTIAL') {
         console.log(currentCourse?.templateId?.templateOffline?.templateResidential)
         setmail(currentCourse?.templateId?.templateOffline?.templateResidential)
         return currentCourse?.templateId?.templateOffline?.templateResidential
-      }else{
+      } else {
         setmail(currentCourse?.templateId?.templateOffline?.templateNonResidential)
         return currentCourse?.templateId?.templateOffline?.templateNonResidential
       }
     }
   }
 
-  
-  const handleSubmit1 = async() => {
-    
-    if(formData.terms === false) {
+
+  const handleSubmit1 = async () => {
+    localStorage.setItem('courseName', currentCourse.title)
+    localStorage.setItem('courseFee', courseFee)
+    localStorage.setItem('courseStartDate', formData.sdate)
+    if (formData.terms === false) {
       setEmpty(19);
     } else {
       setIsLoad(true);
@@ -163,16 +165,17 @@ const Enrollment = () => {
         },
         courseDetails: {
           courseId: currentCourse.key,
-          courseName:currentCourse.title,
+          courseName: currentCourse.title,
           mode: formData.mode,
-          subMode:formData.residental,
-          batch:currentCourse.batch,
+          subMode: formData.residental,
+          batch: currentCourse.batch,
           imageAsset: courseAsset1,
           certificateImgAsset: courseAsset2,
           // date:courseDate,
           date: formData.sdate,
-          timing:currentCourse.timing
+          timing: currentCourse.timing
         },
+        userId: localStorage.getItem('userAppId')?localStorage.getItem('userAppId'):null
       }
       let body1 = {
         personalDetails: {
@@ -197,15 +200,16 @@ const Enrollment = () => {
         },
         courseDetails: {
           courseId: currentCourse.key,
-          courseName:currentCourse.title,
+          courseName: currentCourse.title,
           mode: formData.mode,
-          batch:currentCourse.batch,
+          batch: currentCourse.batch,
           imageAsset: courseAsset1,
           certificateImgAsset: courseAsset2,
           // date:courseDate,
           date: formData.sdate,
-          timing:currentCourse.timing
+          timing: currentCourse.timing
         },
+        userId: localStorage.getItem('userAppId')?localStorage.getItem('userAppId'):null
       }
       // if(currentCourse.key==='batch-1-200hr'){
       //   if(formData?.residental==='RESIDENTIAL'){
@@ -215,44 +219,43 @@ const Enrollment = () => {
       //   }
       // }
       console.log(mail)
-      
-      
+
+
       let mailTemplate = {
         type: 'INFO_TYI',
         HTMLTemplate: pickMail(),
         subject: 'Enrollment Confirmation',
-        data:{
+        data: {
           name: formData.name
         },
-        receivers: [formData.email,'info@theyogainstitute.org']
+        receivers: [formData.email, 'info@theyogainstitute.org']
       }
-  
-      try{
+
+      try {
         let response
-        if(formData.mode==='ONLINE' || (currentCourse.residential===false && currentCourse.nonResidential===false)){
+        if (formData.mode === 'ONLINE' || (currentCourse.residential === false && currentCourse.nonResidential === false)) {
           response = await axios.post(
-            `${ cmsBaseDomain }/forms`,
+            `${cmsBaseDomain}/forms`,
             body1
           )
           // setIsLoad(false);
-        }else{
+        } else {
           response = await axios.post(
-            `${ cmsBaseDomain }/forms`,
+            `${cmsBaseDomain}/forms`,
             body
           )
           // setIsLoad(false);
         }
-  
-        if(response?.data?.success){
-          if(currentCourse.key!=='satsang' && currentCourse.key!=='samattvam' ){
-            const paymentOrderResponse =  await axios.post(`${ cmsBaseDomain }/payment/order?enrollmentFormId=${response.data.data['_id']}`, {
+
+        if (response?.data?.success) {
+          if (currentCourse.key !== 'satsang' && currentCourse.key !== 'samattvam' && localStorage.getItem('isResidential') == 'false') { //for residential no payment required
+            const paymentOrderResponse = await axios.post(`${cmsBaseDomain}/payment/order?enrollmentFormId=${response.data.data['_id']}`, {
               amount: courseFee,
               notes: currentCourse.metaDescription,
-              objectType:'ENROLLMENT'
+              objectType: 'ENROLLMENT'
             })
             setIsLoad(false);
-            if(!paymentOrderResponse?.data?.amount && !paymentOrderResponse?.data?.id) return 0
-            
+            if (!paymentOrderResponse?.data?.amount && !paymentOrderResponse?.data?.id) return 0
             const options = {
               // key: 'rzp_test_hWMewRlYQKgJIk', 
               // Enter the Key ID generated from the Dashboard
@@ -263,12 +266,10 @@ const Enrollment = () => {
               description: 'Course Transaction',
               // image: 'https://example.com/your_logo', // un comment and add TYI logo
               order_id: paymentOrderResponse.data.id, // eslint-disable-line
-              handler: async(res) => {
-  
-                
+              handler: async (res) => {
                 // Navigare to Success if razorpay_payment_id, razorpay_order_id, razorpay_signature is there
-                if(res.razorpay_payment_id && res.razorpay_order_id && res.razorpay_signature) {
-                  await axios.post(`${ authBaseDomain }/ali/mail`, mailTemplate)
+                if (res.razorpay_payment_id && res.razorpay_order_id && res.razorpay_signature) {
+                  await axios.post(`${authBaseDomain}/ali/mail`, mailTemplate)
                   navigate(`/enrollment_thankyou/${currentCourse.key}`)
                 }
               },
@@ -277,15 +278,15 @@ const Enrollment = () => {
                 email: formData.email,
                 contact: formData.phone
               },
-              notes:{
+              notes: {
                 courseName: currentCourse.title,
                 name: formData.name,
                 email: formData.email,
                 contact: formData.phone,
                 // date: courseDate,
                 date: formData.sdate,
-                time : currentCourse.timing,
-                mode : formData.mode,
+                time: currentCourse.timing,
+                mode: formData.mode,
               },
               theme: {
                 color: '#3399cc' // enter theme color for our website
@@ -299,44 +300,41 @@ const Enrollment = () => {
                   // Perform any necessary cleanup or UI updates
                 },
               },
-  
-  
-              
-              
             }
-  
-  
             const rzp = new window.Razorpay(options)
             setIsLoad(true);
-            rzp.open()  
-          }else{
-            await axios.post(`${ authBaseDomain }/ali/mail`, mailTemplate)
-  
-            if(currentCourse.key==='satsang'){
+            rzp.open()
+          } else {
+            if (currentCourse.key === 'satsang') {
+              await axios.post(`${authBaseDomain}/ali/mail`, mailTemplate);
               navigate('/satsang_thankyou')
-            }else if(currentCourse.key ==='samattvam'){
+            } else if (currentCourse.key === 'samattvam') {
+              await axios.post(`${authBaseDomain}/ali/mail`, mailTemplate)
               navigate('/samattvam_thankyou')
-            }else{
-              
+            } else if (localStorage.getItem('isResidential') == 'true') {//only for residential course without payment navigate to success screen
+              navigate(`/enrollment_submitted/${currentCourse.key}`)
+            }
+            else {
               navigate(`/enrollment_thankyou/${currentCourse.key}`)
-              
             }
           }
         }
-      } 
-      catch(err){
+
+
+      }
+      catch (err) {
         setIsLoad(false)
         console.error(err)
-      } 
-  
+      }
+
     }
 
 
-  
 
 
-}
-    
+
+  }
+
 
   const handleSubmit = (e) => {
 
@@ -352,25 +350,25 @@ const Enrollment = () => {
     ) {
       setEmpty(1)
     } else if (formData.email === '' || !validateEmail(formData.email) || formData.email === undefined ||
-    formData.email === null) {
-      console.log('mail : ',empty);
+      formData.email === null) {
+      console.log('mail : ', empty);
       setEmpty(2)
     } else if (
       formData.phone === '' ||
       formData.phone?.length < 6 ||
-      formData.phone?.length > 15 || 
+      formData.phone?.length > 15 ||
       formData.phone === undefined
     ) {
       setEmpty(3)
-    }  else if (formData.address1 === '') {
+    } else if (formData.address1 === '') {
       setEmpty(4)
-    } 
-    else if (formData.country === '' ) {
+    }
+    else if (formData.country === '') {
       setEmpty(5)
-    } 
+    }
     else if (formData.pincode === '') {
       setEmpty(8)
-    }else if (formData.sdate === '') {
+    } else if (formData.sdate === '') {
       setEmpty(18)
     }
     //  else if (formData.AGE === null || formData.AGE < 4 || formData.AGE > 99) {
@@ -380,21 +378,13 @@ const Enrollment = () => {
     // }
     else if (formData.gender === '') {
       setEmpty(11)
-    }  else if (formData.mode === '') {
+    } else if (formData.mode === '') {
       setEmpty('mode')
-    } 
+    }
     else {
       // setBold(5)
       handleSubmit1();
     }
-
-
-    
-    
-    console.log('formData for check ', formData)
-
-    
-
 
   }
 

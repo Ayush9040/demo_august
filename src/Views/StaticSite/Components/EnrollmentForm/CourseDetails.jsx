@@ -15,7 +15,7 @@ const CourseDetails = ({
   setEmpty,
   courseFee,
   setCourseFee,
-
+  handleResidential
 }) => {
 
   const [optionsCount, setOptionsCount] = useState(0);
@@ -26,10 +26,10 @@ const CourseDetails = ({
     }
   }, [formData.mode])
 
-  useEffect(()=>{
+  useEffect(() => {
     if (currentCourse.key === 'ma-yoga-shastra' && formData.country !== 'India' && formData?.residental === 'NONRESIDENTIAL') {
       setCourseFee(currentCourse?.fees?.internationalFee?.nonResidentialFee)
-    } else if (currentCourse.key === 'ma-yoga-shastra' && formData?.residental === 'NONRESIDENTIAL'){
+    } else if (currentCourse.key === 'ma-yoga-shastra' && formData?.residental === 'NONRESIDENTIAL') {
       setCourseFee(currentCourse?.fees?.offlineFee?.nonResidentialFee)
     }
   }, [formData])
@@ -65,7 +65,7 @@ const CourseDetails = ({
   //   }
   // }
 
-  const uploadDoc = async(file, type, changeValue) => {
+  const uploadDoc = async (file, type, changeValue) => {
     const url = await uploadFile(file, type)
     if (changeValue === 'CERTIFICATE') {
       setCourseAsset2(url)
@@ -267,21 +267,21 @@ const CourseDetails = ({
   // }
 
 
-  
+
 
 
   const shouldShowOnlineOption = () => {
- 
+
     return currentCourse.online;
   };
 
   const shouldShowResidentialOption = () => {
-    
+
     return currentCourse.residential;
   };
 
   const shouldShowNonResidentialOption = () => {
-    
+
     return currentCourse.nonResidential;
   };
 
@@ -291,7 +291,7 @@ const CourseDetails = ({
   };
 
 
-  
+
 
 
   return (
@@ -314,282 +314,286 @@ const CourseDetails = ({
             </div>
           </div>
           <div className="course-details-text">
-             Please select one of these options*
+            Please select one of these options*
           </div>
-          {console.log('CC',currentCourse)}
+          {console.log('CC', currentCourse)}
           <form className="residential-form check_course">
             <div className="last_radio_button ">
-               {shouldShowOfflineOption() && 
-              //  (
-              //   <label htmlFor="" className="course_details_text" >
-              //   <input
-              //     type="radio"
-              //     name="mode"
-              //     value="OFFLINE"
-              //     disabled={currentCourse.onCampus === false}
-              //     checked={formData.mode === 'OFFLINE'}
-              //     style={
-              //       currentCourse.onCampus === false
-              //         ? {
-              //           background:
-              //               'url(https://ecom-static-site-prod.s3.ap-south-1.amazonaws.com/icons/icons8-multiply-24.png)',
-              //         }
-              //         : {}
-              //     }
-              //     onChange={(e) => {
-              //       if (e.target.checked) {
-              //         setFormData({
-              //           ...formData,
-              //           mode: e.target.value,
-              //         })
-              //         setEmpty(0)
-              //         setCourseFee(currentCourse?.fees?.onlineFee)
-              //         // setCourseFee(updatedFees( currentCourse?.key,'OFFLINE' ))
-              //       }
-              //     }}
-              //   />
-              //   &nbsp;Offline 
-              // </label>
-              
-              // )
-              (
+              {shouldShowOfflineOption() &&
+                //  (
+                //   <label htmlFor="" className="course_details_text" >
+                //   <input
+                //     type="radio"
+                //     name="mode"
+                //     value="OFFLINE"
+                //     disabled={currentCourse.onCampus === false}
+                //     checked={formData.mode === 'OFFLINE'}
+                //     style={
+                //       currentCourse.onCampus === false
+                //         ? {
+                //           background:
+                //               'url(https://ecom-static-site-prod.s3.ap-south-1.amazonaws.com/icons/icons8-multiply-24.png)',
+                //         }
+                //         : {}
+                //     }
+                //     onChange={(e) => {
+                //       if (e.target.checked) {
+                //         setFormData({
+                //           ...formData,
+                //           mode: e.target.value,
+                //         })
+                //         setEmpty(0)
+                //         setCourseFee(currentCourse?.fees?.onlineFee)
+                //         // setCourseFee(updatedFees( currentCourse?.key,'OFFLINE' ))
+                //       }
+                //     }}
+                //   />
+                //   &nbsp;Offline 
+                // </label>
+
+                // )
+                (
+                  <label class="item-label">
+                    <input class="item-input"
+                      type="radio" name="mode"
+                      value="OFFLINE"
+                      aria-labelledby="delivery-0-name"
+                      aria-describedby="delivery-0-shipping delivery-0-price"
+                      checked={selectedOption === 'OFFLINE'}
+
+                      onChange={(e) => {
+                        handleResidential(false);
+                        setSelectedOption('OFFLINE')
+                        if (e.target.checked) {
+                          setFormData({
+                            ...formData,
+                            mode: e.target.value,
+                          })
+                          setEmpty(0)
+                          setCourseFee(currentCourse?.fees?.onlineFee)
+                          // setCourseFee(updatedFees( currentCourse?.key,'ONLINE' ))
+                        }
+                      }} />
+                    <span class="item-info">
+                      <span id="delivery-0-name" class="item-name">OFFLINE</span>
+                      <br />
+                      {/* <small id="delivery-0-shipping" class="item-shipping">5–10 business days</small> */}
+                    </span>
+                    <strong id="delivery-0-price" class="item-price">&#8377;{currentCourse?.fees?.onlineFee}</strong>
+                  </label>
+
+                )
+              }
+
+              {shouldShowOnlineOption() && (
+                //    <label htmlFor="" className="course_details_text">
+                //    <input
+                //      type="radio"
+                //      name="mode"
+                //      value="ONLINE"
+                //      disabled={currentCourse.online === false}
+                //      checked={formData.mode === 'ONLINE'}
+                //      style={
+                //        currentCourse.online === false
+                //          ? {
+                //            background:
+                //                'url(https://ecom-static-site-prod.s3.ap-south-1.amazonaws.com/icons/icons8-multiply-24.png)',
+                //          }
+                //          : {}
+                //      }
+                //      onChange={(e) => {
+                //        if (e.target.checked) {
+                //          setFormData({
+                //            ...formData,
+                //            mode: e.target.value,
+                //          })
+                //          setEmpty(0)
+                //          setCourseFee(currentCourse?.fees?.onlineFee)
+                //          // setCourseFee(updatedFees( currentCourse?.key,'ONLINE' ))
+                //        }
+                //      }}
+                //    />{' '}
+                //    &nbsp; Online - {currentCourse?.fees?.onlineFee}
+                //  </label>
+
+
                 <label class="item-label">
-<input class="item-input" 
-type="radio" name="mode" 
-value="OFFLINE" 
-aria-labelledby="delivery-0-name" 
-aria-describedby="delivery-0-shipping delivery-0-price"
-checked={selectedOption === 'OFFLINE'}
+                  <input class="item-input"
+                    type="radio" name="mode"
+                    value="ONLINE"
+                    aria-labelledby="delivery-0-name"
+                    aria-describedby="delivery-0-shipping delivery-0-price"
+                    checked={selectedOption === 'ONLINE'}
 
-onChange={(e) => {
-  setSelectedOption('OFFLINE')
-        if (e.target.checked) {
-            setFormData({
-              ...formData,
-              mode: e.target.value,
-          })
-            setEmpty(0)
-            setCourseFee(currentCourse?.fees?.onlineFee)
-            // setCourseFee(updatedFees( currentCourse?.key,'ONLINE' ))
-        }
-        }} />
-<span class="item-info">
-  <span id="delivery-0-name" class="item-name">OFFLINE</span>
-  <br />
-  {/* <small id="delivery-0-shipping" class="item-shipping">5–10 business days</small> */}
-</span>
-<strong id="delivery-0-price" class="item-price">&#8377;{currentCourse?.fees?.onlineFee}</strong>
-</label>
-             
-              )
-              } 
-             
-             {shouldShowOnlineOption() && (
-            //    <label htmlFor="" className="course_details_text">
-            //    <input
-            //      type="radio"
-            //      name="mode"
-            //      value="ONLINE"
-            //      disabled={currentCourse.online === false}
-            //      checked={formData.mode === 'ONLINE'}
-            //      style={
-            //        currentCourse.online === false
-            //          ? {
-            //            background:
-            //                'url(https://ecom-static-site-prod.s3.ap-south-1.amazonaws.com/icons/icons8-multiply-24.png)',
-            //          }
-            //          : {}
-            //      }
-            //      onChange={(e) => {
-            //        if (e.target.checked) {
-            //          setFormData({
-            //            ...formData,
-            //            mode: e.target.value,
-            //          })
-            //          setEmpty(0)
-            //          setCourseFee(currentCourse?.fees?.onlineFee)
-            //          // setCourseFee(updatedFees( currentCourse?.key,'ONLINE' ))
-            //        }
-            //      }}
-            //    />{' '}
-            //    &nbsp; Online - {currentCourse?.fees?.onlineFee}
-            //  </label>
-
-
-<label class="item-label">
-<input class="item-input" 
-type="radio" name="mode" 
-value="ONLINE" 
-aria-labelledby="delivery-0-name" 
-aria-describedby="delivery-0-shipping delivery-0-price"
-checked={selectedOption === 'ONLINE'}
-
-onChange={(e) => {
-  setSelectedOption('ONLINE')
-        if (e.target.checked) {
-            setFormData({
-              ...formData,
-              mode: e.target.value,
-          })
-            setEmpty(0)
-            setCourseFee(currentCourse?.fees?.onlineFee)
-            // setCourseFee(updatedFees( currentCourse?.key,'ONLINE' ))
-        }
-        }} />
-<span class="item-info">
-  <span id="delivery-0-name" class="item-name">Online</span>
-  <br />
-  {/* <small id="delivery-0-shipping" class="item-shipping">5–10 business days</small> */}
-</span>
-<strong id="delivery-0-price" class="item-price">&#8377;{currentCourse?.fees?.onlineFee}</strong>
-</label>
-             )}
+                    onChange={(e) => {
+                      handleResidential(false);
+                      setSelectedOption('ONLINE')
+                      if (e.target.checked) {
+                        setFormData({
+                          ...formData,
+                          mode: e.target.value,
+                        })
+                        setEmpty(0)
+                        setCourseFee(currentCourse?.fees?.onlineFee)
+                        // setCourseFee(updatedFees( currentCourse?.key,'ONLINE' ))
+                      }
+                    }} />
+                  <span class="item-info">
+                    <span id="delivery-0-name" class="item-name">Online</span>
+                    <br />
+                    {/* <small id="delivery-0-shipping" class="item-shipping">5–10 business days</small> */}
+                  </span>
+                  <strong id="delivery-0-price" class="item-price">&#8377;{currentCourse?.fees?.onlineFee}</strong>
+                </label>
+              )}
             </div>
             {empty === 'mode' && (
               <small className="mode-err">Please select 1 mode</small>
             )}
             <div className="last_radio_button-cols">
               {shouldShowResidentialOption() && (
-              //   <label htmlFor="" className="course_details_text">
-              //   <input
-              //     type="radio"
-              //     name="resident"
-              //     value="RESIDENTIAL"
-              //     checked={
-              //        //formData.mode === 'OFFLINE' &&
-              //       formData.residental === 'RESIDENTIAL'
-              //     }
-              //     disabled={
-              //       currentCourse.residential === false ||
-              //       formData.mode === 'ONLINE' ||
-              //       (currentCourse.key === '7-days-camp-english' &&
-              //         courseDate == '24th Sept to 30th Sept 2022')
-              //     }
-              //     style={
-              //       currentCourse.residential === false ||
-              //       (currentCourse.key === '7-days-camp-english' &&
-              //         courseDate == '24th Sept to 30th Sept 2022')
-              //         ? {
-              //           background:
-              //               'url(https://ecom-static-site-prod.s3.ap-south-1.amazonaws.com/icons/icons8-multiply-24.png)',
-              //         }
-              //         : {}
-              //     }
-              //     onChange={(e) => {
-              //       if (e.target.checked) {
-              //         setFormData({
-              //           ...formData,
-              //           residental: e.target.value,
-              //         })
-              //         setEmpty(0)
-              //         if(currentCourse?.key === 'ma-yoga-shastra' && currentCourse.country !== 'India'){
-              //           setCourseFee(currentCourse?.fees?.internationalFee?.residentialFee)
-              //         } else {
-              //           setCourseFee(currentCourse?.fees?.offlineFee?.residentialFee)
-              //         }
-              //         // setCourseFee(updatedFees( currentCourse?.key,'RESIDENTIAL' ))
-              //       }
-              //     }}
-              //   />{' '}
-              //   &nbsp; Residential - {currentCourse?.fees?.offlineFee?.residentialFee}
-              // </label>
+                //   <label htmlFor="" className="course_details_text">
+                //   <input
+                //     type="radio"
+                //     name="resident"
+                //     value="RESIDENTIAL"
+                //     checked={
+                //        //formData.mode === 'OFFLINE' &&
+                //       formData.residental === 'RESIDENTIAL'
+                //     }
+                //     disabled={
+                //       currentCourse.residential === false ||
+                //       formData.mode === 'ONLINE' ||
+                //       (currentCourse.key === '7-days-camp-english' &&
+                //         courseDate == '24th Sept to 30th Sept 2022')
+                //     }
+                //     style={
+                //       currentCourse.residential === false ||
+                //       (currentCourse.key === '7-days-camp-english' &&
+                //         courseDate == '24th Sept to 30th Sept 2022')
+                //         ? {
+                //           background:
+                //               'url(https://ecom-static-site-prod.s3.ap-south-1.amazonaws.com/icons/icons8-multiply-24.png)',
+                //         }
+                //         : {}
+                //     }
+                //     onChange={(e) => {
+                //       if (e.target.checked) {
+                //         setFormData({
+                //           ...formData,
+                //           residental: e.target.value,
+                //         })
+                //         setEmpty(0)
+                //         if(currentCourse?.key === 'ma-yoga-shastra' && currentCourse.country !== 'India'){
+                //           setCourseFee(currentCourse?.fees?.internationalFee?.residentialFee)
+                //         } else {
+                //           setCourseFee(currentCourse?.fees?.offlineFee?.residentialFee)
+                //         }
+                //         // setCourseFee(updatedFees( currentCourse?.key,'RESIDENTIAL' ))
+                //       }
+                //     }}
+                //   />{' '}
+                //   &nbsp; Residential - {currentCourse?.fees?.offlineFee?.residentialFee}
+                // </label>
 
 
-<label class="item-label">
-<input class="item-input" type="radio" name="resident" value="RESIDENTIAL" aria-labelledby="delivery-0-name" aria-describedby="delivery-0-shipping delivery-0-price"  
-checked={selectedOption === 'RESIDENTIAL'}
-onChange={(e) => {
-  setSelectedOption('RESIDENTIAL');
-         if (e.target.checked) {
-           setFormData({
-             ...formData,
-             residental: e.target.value,
-             mode: 'OFFLINE'
-           })
-           setEmpty(0)
-           if(currentCourse?.key === 'ma-yoga-shastra' && currentCourse.country !== 'India'){
-             setCourseFee(currentCourse?.fees?.internationalFee?.residentialFee)
-           } else {
-             setCourseFee(currentCourse?.fees?.offlineFee?.residentialFee)
-           }
-           // setCourseFee(updatedFees( currentCourse?.key,'RESIDENTIAL' ))
-         }
-       }}
-/>
-<span class="item-info">
-  <span id="delivery-0-name" class="item-name">Residential</span>
-  <br />
-  {/* <small id="delivery-0-shipping" class="item-shipping">5–10 business days</small> */}
-</span>
-<strong id="delivery-0-price" class="item-price">&#8377;{currentCourse?.fees?.offlineFee?.residentialFee}</strong>
-</label>
+                <label class="item-label">
+                  <input class="item-input" type="radio" name="resident" value="RESIDENTIAL" aria-labelledby="delivery-0-name" aria-describedby="delivery-0-shipping delivery-0-price"
+                    checked={selectedOption === 'RESIDENTIAL'}
+                    onChange={(e) => {
+                      setSelectedOption('RESIDENTIAL');
+                      handleResidential(true);
+                      if (e.target.checked) {
+                        setFormData({
+                          ...formData,
+                          residental: e.target.value,
+                          mode: 'OFFLINE'
+                        })
+                        setEmpty(0)
+                        if (currentCourse?.key === 'ma-yoga-shastra' && currentCourse.country !== 'India') {
+                          setCourseFee(currentCourse?.fees?.internationalFee?.residentialFee)
+                        } else {
+                          setCourseFee(currentCourse?.fees?.offlineFee?.residentialFee)
+                        }
+                        // setCourseFee(updatedFees( currentCourse?.key,'RESIDENTIAL' ))
+                      }
+                    }}
+                  />
+                  <span class="item-info">
+                    <span id="delivery-0-name" class="item-name">Residential</span>
+                    <br />
+                    {/* <small id="delivery-0-shipping" class="item-shipping">5–10 business days</small> */}
+                  </span>
+                  <strong id="delivery-0-price" class="item-price">&#8377;{currentCourse?.fees?.offlineFee?.residentialFee}</strong>
+                </label>
               )}
               {shouldShowNonResidentialOption() && (
-              //   <label htmlFor="" className="course_details_text">
-              //   <input
-              //     type="radio"
-              //     name="resident"
-              //     value="NONRESIDENTIAL"
-              //     checked={
-              //       formData.mode === 'OFFLINE' &&
-              //       formData.residental === 'NONRESIDENTIAL'
-              //     }
-              //     disabled={
-              //       currentCourse.nonResidential === false ||
-              //       formData.mode === 'ONLINE'
-              //     }
-              //     style={
-              //       currentCourse.nonResidential === false
-              //         ? {
-              //           background:
-              //               'url(https://ecom-static-site-prod.s3.ap-south-1.amazonaws.com/icons/icons8-multiply-24.png)',
-              //         }
-              //         : {}
-              //     }
-              //     onChange={(e) => {
-              //       if (e.target.checked) {
-              //         setFormData({
-              //           ...formData,
-              //           residental: e.target.value,
-              //         })
-              //         setEmpty(0)
-              //         setCourseFee(
-              //           currentCourse?.fees?.offlineFee?.nonResidentialFee
-              //         )
-              //         // setCourseFee(updatedFees( currentCourse?.key,'NONRESIDENTIAL' ))
-              //       }
-              //     }}
-              //   />{' '}
-              //   &nbsp; Non-Residential - {currentCourse?.fees?.offlineFee?.nonResidentialFee}
-              // </label>
+                //   <label htmlFor="" className="course_details_text">
+                //   <input
+                //     type="radio"
+                //     name="resident"
+                //     value="NONRESIDENTIAL"
+                //     checked={
+                //       formData.mode === 'OFFLINE' &&
+                //       formData.residental === 'NONRESIDENTIAL'
+                //     }
+                //     disabled={
+                //       currentCourse.nonResidential === false ||
+                //       formData.mode === 'ONLINE'
+                //     }
+                //     style={
+                //       currentCourse.nonResidential === false
+                //         ? {
+                //           background:
+                //               'url(https://ecom-static-site-prod.s3.ap-south-1.amazonaws.com/icons/icons8-multiply-24.png)',
+                //         }
+                //         : {}
+                //     }
+                //     onChange={(e) => {
+                //       if (e.target.checked) {
+                //         setFormData({
+                //           ...formData,
+                //           residental: e.target.value,
+                //         })
+                //         setEmpty(0)
+                //         setCourseFee(
+                //           currentCourse?.fees?.offlineFee?.nonResidentialFee
+                //         )
+                //         // setCourseFee(updatedFees( currentCourse?.key,'NONRESIDENTIAL' ))
+                //       }
+                //     }}
+                //   />{' '}
+                //   &nbsp; Non-Residential - {currentCourse?.fees?.offlineFee?.nonResidentialFee}
+                // </label>
 
 
-<label class="item-label">
-<input class="item-input" type="radio" name="resident" value="NONRESIDENTIAL" aria-labelledby="delivery-0-name" aria-describedby="delivery-0-shipping delivery-0-price" 
-checked={selectedOption === 'NONRESIDENTIAL'}
-onChange={(e) => {
-  setSelectedOption('NONRESIDENTIAL')
-         if (e.target.checked) {
-           setFormData({
-             ...formData,
-             residental: e.target.value,
-             mode: 'OFFLINE'
-           })
-           setEmpty(0)
-           setCourseFee(
-             currentCourse?.fees?.offlineFee?.nonResidentialFee
-           )
-           // setCourseFee(updatedFees( currentCourse?.key,'NONRESIDENTIAL' ))
-         }
-       }}
-/>
-<span class="item-info">
-  <span id="delivery-0-name" class="item-name">Non-Residential</span>
-  <br />
-  {/* <small id="delivery-0-shipping" class="item-shipping">5–10 business days</small> */}
-</span>
-<strong id="delivery-0-price" class="item-price"> &#8377;{currentCourse?.fees?.offlineFee?.nonResidentialFee}</strong>
-</label>
+                <label class="item-label">
+                  <input class="item-input" type="radio" name="resident" value="NONRESIDENTIAL" aria-labelledby="delivery-0-name" aria-describedby="delivery-0-shipping delivery-0-price"
+                    checked={selectedOption === 'NONRESIDENTIAL'}
+                    onChange={(e) => {
+                      handleResidential(false);
+                      setSelectedOption('NONRESIDENTIAL')
+                      if (e.target.checked) {
+                        setFormData({
+                          ...formData,
+                          residental: e.target.value,
+                          mode: 'OFFLINE'
+                        })
+                        setEmpty(0)
+                        setCourseFee(
+                          currentCourse?.fees?.offlineFee?.nonResidentialFee
+                        )
+                        // setCourseFee(updatedFees( currentCourse?.key,'NONRESIDENTIAL' ))
+                      }
+                    }}
+                  />
+                  <span class="item-info">
+                    <span id="delivery-0-name" class="item-name">Non-Residential</span>
+                    <br />
+                    {/* <small id="delivery-0-shipping" class="item-shipping">5–10 business days</small> */}
+                  </span>
+                  <strong id="delivery-0-price" class="item-price"> &#8377;{currentCourse?.fees?.offlineFee?.nonResidentialFee}</strong>
+                </label>
               )}
               {empty === 'subMode' && (
                 <small className="mode-err">Please select submode</small>
@@ -603,10 +607,10 @@ onChange={(e) => {
 
 
           <form class="check_course" onsubmit="return false">
-  
-  
-  {/* <div class="grid grid-2"> */}
-  {/* <label class="item-label">
+
+
+            {/* <div class="grid grid-2"> */}
+            {/* <label class="item-label">
       <input class="item-input" type="radio" name="delivery" value="standard" aria-labelledby="delivery-0-name" aria-describedby="delivery-0-shipping delivery-0-price" checked />
       <span class="item-info">
         <span id="delivery-0-name" class="item-name">Standard</span>
@@ -626,14 +630,14 @@ onChange={(e) => {
       </span>
       <strong id="delivery-1-price" class="item-price">$15.00</strong>
     </label> */}
-  {/* </div> */}
+            {/* </div> */}
 
-</form>
-
-
+          </form>
 
 
-          
+
+
+
           {/* <div className="upload-section">
             <p className="course-details-text">
               {currentCourse.certficate === true &&
@@ -689,10 +693,10 @@ onChange={(e) => {
                     &ensp;
                     {upload}
                   </label> */}
-                  {/* {empty === 'uploadImage' && (
+          {/* {empty === 'uploadImage' && (
                     <small style={{ color: 'red' }} className="mode-err">Please upload a image</small>
                   )} */}
-                {/* </fieldset>
+          {/* </fieldset>
               </div>
             </p>
           </div> */}

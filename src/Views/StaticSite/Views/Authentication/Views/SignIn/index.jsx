@@ -20,8 +20,8 @@ const SignIn = () => {
   const dispatch = useDispatch()
   const navigate = useNavigate()
   const { isLoggedIn, error } = useSelector((state) => state.auth)
-  const [ page,setPage ] = useState()
-  const [ errMsg,setErrMsg ] = useState('')
+  const [page, setPage] = useState()
+  const [errMsg, setErrMsg] = useState('')
   // const [course, setCourse] = useState()
   const [formData, setFormData] = useState({
     email: '',
@@ -38,31 +38,32 @@ const SignIn = () => {
   const [selectDate, setSetselectDate] = useState()
 
   useEffect(() => {
+    localStorage.removeItem('userAppId')
     setSetselectDate(Params.get('date'))
     setPage(Params.get('location'))
   }, [])
 
   useEffect(() => {
     window.scrollTo(0, 0)
-    
+
   }, [isLoggedIn])
 
 
-  const handleContinueAsGuest = ()=>{
-    if(!page) return navigate('/')
-    if(page!=='cart') navigate(`/enrollment/${page}/?date=${selectDate}`)
+  const handleContinueAsGuest = () => {
+    if (!page) return navigate('/')
+    if (page !== 'cart') navigate(`/enrollment/${page}/?date=${selectDate}`)
     setErrMsg('Please login to continue purchase!')
     setModal(true)
-    
+
   }
 
 
-  const handleSignIn = async() => {
+  const handleSignIn = async () => {
     if (!validateEmail(formData.email)) {
       return setValidate(1)
     } else if (formData.password === '') {
       return setValidate(2)
-    }else{
+    } else {
       await dispatch(
         loginUserAction(
           {
@@ -70,10 +71,10 @@ const SignIn = () => {
             password: formData.password,
           },
           navigate,
-          page ? page!=='cart' ? `/enrollment/${ page }/?date=${ selectDate }`: '/shop/checkout' : '/',
+          page ? page !== 'cart' ? `/enrollment/${page}/?date=${selectDate}` : '/shop/checkout' : '/',
         )
       )
-      if(error.isError !== false){  setModal(true);setErrMsg( error.isError ) }else{ setModal(false)}
+      if (error.isError !== false) { setModal(true); setErrMsg(error.isError) } else { setModal(false) }
     }
   }
 
@@ -118,7 +119,7 @@ const SignIn = () => {
             setField={setFormData}
             keyName='password'
           />
-          
+
           {validate === 2 && (
             <small
               style={{

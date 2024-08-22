@@ -34,6 +34,7 @@ export function handleLogoutUserEffect() {
 export function* handleFetchUserDataEffect() {
   try {
     const { data } = yield call(fetchUserDataAPI)
+    localStorage.setItem('userAppId',data.data?._id)//to pass 
     yield put(loginUserSuccess(data))
   } catch (error) {
     yield put(loginUserError(error))

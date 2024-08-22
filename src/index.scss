@@ -1,22 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
 @font-face {
   font-family: "hero";
   src: url("./Views/StaticSite/assets/font/HeroLight-Light(1).woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
+
 @font-face {
   font-family: "bebas-neue";
   src: url("./Views/StaticSite/assets/font/bebas_neue/BebasNeue-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
+
 @font-face {
   font-family: "futura";
   src: url("./Views/StaticSite/assets/font/FuturaStd-Medium.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
+
 /* Anek Regular*/
 @font-face {
   font-family: "Anek Regular";
@@ -38,18 +42,21 @@
   font-weight: normal;
   font-style: normal;
 }
+
 @font-face {
   font-family: "Anek Condensed Regular";
   src: url('../src/Views/StaticSite/assets/font/Anek/AnekLatin_Condensed-Regular.ttf');
   font-weight: normal;
   font-style: normal;
 }
+
 @font-face {
   font-family: "Anek SemiExpanded ExtraThin";
   src: url('../src/Views/StaticSite/assets/font/Anek/AnekLatin_SemiExpanded-ExtraLight.ttf');
   font-weight: normal;
   font-style: normal;
 }
+
 @font-face {
   font-family: "Anek ExtraLight";
   src: url('../src/Views/StaticSite/assets/font/Anek/AnekLatin-ExtraLight.ttf');
@@ -71,15 +78,16 @@
   --brick-red: #ca4625;
   --brick-red-1: #bc4f31;
   --ocean-blue: #a2c8d6;
-  --hero : hero;
+  --hero: hero;
   --bebas-neue: bebas-neue;
   --futura: futura;
   --anek: Anek
-
 }
-.wa-chat-box-poweredby{
+
+.wa-chat-box-poweredby {
   display: none;
 }
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -97,12 +105,15 @@ body {
   font-family: 'Open Sans', sans-serif;
   overflow-x: hidden;
 }
+
 .global-padding {
   padding: 5rem 5rem 2rem 5rem;
 }
+
 .global-top-margin {
   margin-top: 3rem;
 }
+
 .global-common-btn {
   width: max-content;
   border: 3px solid black;
@@ -113,12 +124,45 @@ body {
   margin-top: 2rem;
   cursor: pointer;
   margin-left: 0.5rem;
-  .global-common-btn-content{
+
+  .global-common-btn-content {
     min-width: fit-content;
   }
 }
 
-.global-loader{
+.enroll-btn {
+  width: max-content;
+  background-color: #FFFFFF;
+  box-shadow: 2px 3px 9px 0px #0000001A;
+  color: #C9705F;
+  padding: 1rem 2rem;
+  border-radius: 5rem;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-top: 2.3rem;
+  cursor: pointer;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  margin-left: 0.5rem;
+
+  .img {
+    height: 1.3rem;
+  }
+
+  &:hover {
+    background-color: #FFE3DE;
+    box-shadow: 0px 5px 4px 0px #71382E;
+  }
+
+  .enroll-btn-content {
+    min-width: fit-content;
+  }
+
+}
+
+.global-loader {
   display: flex;
   width: 100%;
   height: 100vh;
@@ -150,6 +194,7 @@ h5 {
   font-size: 1.5rem;
   font-weight: 700;
 }
+
 h6 {
   margin: 0;
   font-size: 1.5rem;
@@ -161,6 +206,7 @@ p {
   font-size: 2rem;
   font-weight: 400;
 }
+
 a {
   text-decoration: none;
   color: inherit;
@@ -197,7 +243,8 @@ a {
 .user-container {
   cursor: pointer;
 }
-.form-field{
+
+.form-field {
   margin: 2rem auto;
 }
 
@@ -206,14 +253,17 @@ a {
   html {
     font-size: 80%;
   }
+
   .global-common-btn {
     padding: 1.5rem 2rem;
     font-size: 1.5rem;
     margin-top: 5rem;
   }
+
   .global-top-margin {
     margin-top: 1rem;
   }
+
   .slick-dots li {
     margin: 0 3rem !important;
   }
@@ -223,10 +273,12 @@ a {
   html {
     font-size: 62.5%;
   }
+
   .global-common-btn {
     padding: 1rem 2rem;
     font-size: 1.5rem;
   }
+
   .global-top-margin {
     margin-top: 0;
   }
@@ -236,10 +288,12 @@ a {
   html {
     font-size: 55%;
   }
+
   .slick-dots li {
     margin: 0 1rem !important;
   }
-  .global-padding{
+
+  .global-padding {
     padding: 1.5rem;
   }
 }
@@ -248,12 +302,15 @@ a {
   h1 {
     font-size: 2.5rem;
   }
+
   h2 {
     font-size: 2rem;
   }
+
   p {
     font-size: 1.5rem;
   }
+
   .global-padding {
     padding: 1.5rem;
   }

@@ -12,6 +12,7 @@ import CourseURL from '../CourseComponents/CourseURL'
 import SelectDropDown from '../Select Dropdown'
 import { useSelector } from 'react-redux'
 import CourseOList from '../CourseComponents/CourseOLList'
+import EnrollBtn from '../enrollBtn'
 //import { useParams } from 'react-router-dom'
 
 
@@ -293,7 +294,8 @@ const CourseDetails = ({ pageDate }) => {
                             : `/user/sign-in/?location=${pageDate.key}`//&date=${selectDate}
                         }
                       >
-                        <CommonBtn text={'Enroll Now'} />
+                        {/* <CommonBtn text={'Enroll Now'} /> */}
+                        <EnrollBtn text={'Enroll Now'} /> 
                       </Link>
                     ) : (
                       // scroll()
@@ -304,7 +306,8 @@ const CourseDetails = ({ pageDate }) => {
                             : `/user/sign-in/?location=${pageDate.key}`//&date=${selectDate}
                         }
                       >
-                        <CommonBtn text={'Enroll Now'} />
+                        {/* <CommonBtn text={'Enroll Now'} /> */}
+                        <EnrollBtn text={'Enroll Now'} /> 
                       </Link>
                     )
                   ) :
@@ -315,11 +318,13 @@ const CourseDetails = ({ pageDate }) => {
                         : `/user/sign-in/?location=${pageDate.key}`//&date=${selectDate}
                     }
                   >
-                    <CommonBtn text={'Enroll Now'} />
+                    {/* <CommonBtn text={'Enroll Now'} /> */}
+                    <EnrollBtn text={'Enroll Now'} /> 
                   </Link> :
                     (<div >
                       <div style={{ opacity: '0.4' }}>
-                        <CommonBtn text={'Enroll Now'} />
+                        {/* <CommonBtn text={'Enroll Now'} /> */}
+                        <EnrollBtn text={'Enroll Now'} /> 
                       </div>
                       <div style={{ fontSize: '1.5rem', padding: '1.5rem' }}>No dates available for this course</div>
                     </div>)
@@ -456,7 +461,8 @@ const CourseDetails = ({ pageDate }) => {
                             : `/user/sign-in/?location=${pageDate.key}`//&date=${selectDate}
                         }
                       >
-                        <CommonBtn text={'Enroll Now'} />
+                        {/* <CommonBtn text={'Enroll Now'} /> */}
+                        <EnrollBtn text={'Enroll Now'} /> 
                       </Link>
                     ) : (
                       // scroll()
@@ -467,7 +473,8 @@ const CourseDetails = ({ pageDate }) => {
                             : `/user/sign-in/?location=${pageDate.key}`//&date=${selectDate}
                         }
                       >
-                        <CommonBtn text={'Enroll Now'} />
+                        {/* <CommonBtn text={'Enroll Now'} /> */}
+                        <EnrollBtn text={'Enroll Now'} /> 
                       </Link>
                     )
                   ) :
@@ -478,11 +485,13 @@ const CourseDetails = ({ pageDate }) => {
                         : `/user/sign-in/?location=${pageDate.key}`//&date=${selectDate}
                     }
                   >
-                    <CommonBtn text={'Enroll Now'} />
+                    {/* <CommonBtn text={'Enroll Now'} /> */}
+                    <EnrollBtn text={'Enroll Now'} /> 
                   </Link> :
                     (<div >
                       <div style={{ opacity: '0.4' }}>
-                        <CommonBtn text={'Enroll Now'} />
+                        {/* <CommonBtn text={'Enroll Now'} /> */}
+                        <EnrollBtn text={'Enroll Now'} /> 
                       </div>
                       <div style={{ fontSize: '1.5rem', padding: '1.5rem' }}>No dates available for this course</div>
                     </div>)

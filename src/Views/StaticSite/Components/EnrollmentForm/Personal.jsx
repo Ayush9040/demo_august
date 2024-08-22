@@ -52,12 +52,16 @@ const Personal = ({
 
   const [isChecked, setIsChecked] = useState(true); // Checkbox is checked by default
 
-  
+
 
   const [disData, setDisData] = useState('yes')
+  const [isResidential, setIsResidential] = useState(false)
 
-  
-  
+
+  const handleResidential = (value) => {
+    setIsResidential(value);
+    localStorage.setItem('isResidential',value)
+  }
   const navigate = useNavigate()
 
   const validatePhoneNumber = (phoneNumber) => {
@@ -96,7 +100,7 @@ const Personal = ({
     // Region-Specific Checks
     const areaCode = parsedNumber.nationalNumber.slice(0, 3); // Correctly access the national number
     // console.log('ac',areaCode);
-    
+
     if (parsedNumber.country === 'US' && !['202', '212', '213'].includes(areaCode)) {
       errors.push('Invalid area code for the region.');
     }
@@ -115,13 +119,13 @@ const Personal = ({
     ...country,
   }))
 
-   const handlePhoneChange = (value) => {
+  const handlePhoneChange = (value) => {
     setPhoneValue(value);
     setFormData({ ...formData, phone: value });
 
     if (value) {
       const errors = validatePhoneNumber(value);
-      
+
       // console.log('ph', value, '', errors);
       console.log('phone err', validationErrors);
       setValidationErrors(errors);
@@ -129,7 +133,7 @@ const Personal = ({
       setValidationErrors([]);
     }
 
-   
+
   };
 
   const handleCheckboxChange = () => {
@@ -144,7 +148,7 @@ const Personal = ({
 
   useEffect(() => {
 
-    
+
     // setSetselectDate(Params.get('date'))
 
     // window.scrollTo(0, 0)
@@ -230,22 +234,22 @@ const Personal = ({
   }, [validationErrors, phoneValue]);
 
 
-  const [mail,setmail]=useState(null)
+  const [mail, setmail] = useState(null)
 
 
-  const pickMail = ()=>{
-    if(formData.mode==='ONLINE'){
+  const pickMail = () => {
+    if (formData.mode === 'ONLINE') {
       setmail(templateKey?.templateOnline)
       return templateKey?.templateOnline
-    }else if(formData.mode === 'OFFLINE' && formData.residental === ''){
+    } else if (formData.mode === 'OFFLINE' && formData.residental === '') {
       setmail(templateKey?.templateOnline)
       return templateKey?.templateOnline
-    }else{
-      if(formData.residental === 'RESIDENTIAL'){  
+    } else {
+      if (formData.residental === 'RESIDENTIAL') {
         console.log(templateKey?.templateOffline?.templateResidential)
         setmail(templateKey?.templateOffline?.templateResidential)
         return templateKey?.templateOffline?.templateResidential
-      }else{
+      } else {
         setmail(templateKey?.templateOffline?.templateNonResidential)
         return templateKey?.templateOffline?.templateNonResidential
       }
@@ -398,7 +402,7 @@ const Personal = ({
   //       },
   //       receivers: [formData.email,'info@theyogainstitute.org']
   //     }
- 
+
   //     try{
   //       let response
   //       if(formData.mode==='ONLINE' || (currentCourse.residential===false && currentCourse.nonResidential===false)){
@@ -427,7 +431,7 @@ const Personal = ({
   //           console.log('amount : ',paymentOrderResponse.data.id,)
   //           console.log('razorPayKey : ',razorPayKey)
   //           console.log('handler : ', );
-            
+
   //           const options = {
   //             // key: 'rzp_test_hWMewRlYQKgJIk', 
   //             // Enter the Key ID generated from the Dashboard
@@ -477,8 +481,8 @@ const Personal = ({
   //             },
 
 
-              
-              
+
+
   //           }
 
   //           console.log('Befor razorpay', options)
@@ -495,9 +499,9 @@ const Personal = ({
   //           }else if(currentCourse.key ==='samattvam'){
   //             navigate('/samattvam_thankyou')
   //           }else{
-              
+
   //             navigate(`/enrollment_thankyou/${currentCourse.key}`)
-              
+
   //           }
   //         }
   //       }
@@ -508,14 +512,14 @@ const Personal = ({
   //     } 
   //   }
 
-  
+
   // }
 
-  
+
 
   return (
     <div className="main_div">
-      
+
       <div className="grid_box">
         <div className="left_grid">
           <form>
@@ -545,7 +549,7 @@ const Personal = ({
 
 
 
-              
+
             </div>
             <div className="form_error">
               <PhoneInput
@@ -558,7 +562,7 @@ const Personal = ({
                 // }}
                 onChange={handlePhoneChange}
               />
-               {/* {empty === 3 && <small> Please enter a valid phone number</small>}  */}
+              {/* {empty === 3 && <small> Please enter a valid phone number</small>}  */}
               {/* {phoneError && <small>{phoneError}</small>} */}
 
               {/* {validationErrors?.length > 0 ? (
@@ -572,12 +576,12 @@ const Personal = ({
         
       ) : ((empty === 3) ? <small class="phone_error"> Please enter a valid phone number</small> : " ") } */}
 
-{validationErrors?.length > 0 ? (
-  <div className="created_phone_err">Invalid Number</div>
-) : (empty === 3 && (!formData.phone || (formData.phone === '')) ? (
-  <small className="phone_error">Please enter a valid phone number</small>
-) : " ")}
-      {console.log('ve',validationErrors)}
+              {validationErrors?.length > 0 ? (
+                <div className="created_phone_err">Invalid Number</div>
+              ) : (empty === 3 && (!formData.phone || (formData.phone === '')) ? (
+                <small className="phone_error">Please enter a valid phone number</small>
+              ) : " ")}
+              {console.log('ve', validationErrors)}
 
             </div>
             <div className="form_error">
@@ -589,7 +593,7 @@ const Personal = ({
                 keyName="address1"
                 errorCheck={setEmpty}
               />
-              {empty === 4 && <p> Please enter your address</p> }
+              {empty === 4 && <p> Please enter your address</p>}
             </div>
             <div className="form_error">
               <InputComponent
@@ -602,7 +606,7 @@ const Personal = ({
               />
             </div>
             <div className="form_error countries_list">
-              <Select 
+              <Select
                 styles={customStyles}
                 id="country"
                 name="country"
@@ -646,7 +650,7 @@ const Personal = ({
                   })
                 }}
               />
-              
+
             </div>
             <div className="form_error">
               <Select
@@ -724,12 +728,12 @@ const Personal = ({
           </div> */}
 
 
-          <div className="form_error course_date">
+            <div className="form_error course_date">
               <Select
                 styles={customStyles}
                 id="sdate"
                 name="sdate"
-                placeholder="Course Date"
+                placeholder="Select Date/Time*"
                 form={formData}
                 setField={setFormData}
                 keyName="sdate"
@@ -742,20 +746,22 @@ const Personal = ({
                     false
                   )
                   setFormData((prev) => {
-                    return { ...prev, sdate: value.value, courseDetails: {
-                      ...prev.courseDetails,
-                      date: value.value 
-                    } }
+                    return {
+                      ...prev, sdate: value.value, courseDetails: {
+                        ...prev.courseDetails,
+                        date: value.value
+                      }
+                    }
                   })
                 }}
               />
               {empty === 18 && <small id="fill_err"> Please select course date</small>}
-        
-              
+
+
             </div>
 
-          
-        
+
+
             {/* <div className="personal_gender">
               <span className="gender-text">Gender*</span>
               <div className="gender form_error">
@@ -796,7 +802,7 @@ const Personal = ({
               </div>
             </div> */}
 
-            
+
             {/* <div className="DOB_box form_error">
               <InputComponent
                 type="number"
@@ -826,9 +832,9 @@ const Personal = ({
               empty={empty}
               formData={formData}
               setFormData={setFormData}
-              // handleEmpty4={handleEmpty4}
+            // handleEmpty4={handleEmpty4}
             />
-            
+
           </form>
         </div>
         <div className="right_grid">
@@ -852,7 +858,7 @@ const Personal = ({
             </div> */}
 
 
-            
+
             <CourseDetails
               courseDate={courseDate}
               currentCourse={currentCourse}
@@ -870,51 +876,59 @@ const Personal = ({
               setCourseFee={setCourseFee}
               uploadCheck={uploadCheck}
               setUploadCheck={setUploadCheck}
+              handleResidential={handleResidential}
             />
 
           </form>
-          
+
           <div className='terms'>
-                  <label>
-                    <input
-                      type="checkbox"
-                      checked={isChecked}
-                      onChange={handleCheckboxChange}
-                      
-                      
-                    />
-                    I agree to 
-                    <a href="https://theyogainstitute.org/terms-and-conditions"
-                     target="_blank"
-                     rel="noopener noreferrer">
-                     Terms & Conditions
-                    </a>
-                  </label>
-                  {isChecked === false ? empty === 19 && (
-            <div style={{ color: 'red', marginLeft: '0', marginTop: '1rem' }} className='mar_top'>
-              *Please agree to the condition!
-            </div>
-          ) : ''}
-          {console.log(isChecked)}
-                </div>
+            <label>
+              <input
+                type="checkbox"
+                checked={isChecked}
+                onChange={handleCheckboxChange}
+
+
+              />
+              I agree to
+              <a href="https://theyogainstitute.org/terms-and-conditions"
+                target="_blank"
+                rel="noopener noreferrer">
+                Terms & Conditions
+              </a>
+            </label>
+            {isChecked === false ? empty === 19 && (
+              <div style={{ color: 'red', marginLeft: '0', marginTop: '1rem' }} className='mar_top'>
+                *Please agree to the condition!
+              </div>
+            ) : ''}
+            {console.log(isChecked)}
+          </div>
           <div className="button_box">
             {/* <button className="next_button" onClick={handleSubmit}>
             Proceed to payment
             </button> */}
 
+            {!isResidential && <button type="button" onClick={handleSubmit} className={!isLoad ? 'next_button button register-primary-btn' : 'next_button button register-primary-btn no-event'} disabled={isLoad}>
+              {!isLoad ? <><span id="txt">Proceed To Payment&nbsp; </span> </> : <><span className="loader">
+                <span className="dot"></span>
+                <span className="dot"></span>
+                <span className="dot"></span>
+              </span></>}
+            </button>}
 
+            {isResidential && <button type="button" onClick={handleSubmit} className={!isLoad ? 'next_button button register-primary-btn' : 'next_button button register-primary-btn no-event'} disabled={isLoad}>
+              {!isLoad ? <><span id="txt">Submit&nbsp; </span> </> : <><span className="loader">
+                <span className="dot"></span>
+                <span className="dot"></span>
+                <span className="dot"></span>
+              </span></>}
+            </button>}
 
-            <button  type="button" onClick={handleSubmit} className={!isLoad ? 'next_button button register-primary-btn' : 'next_button button register-primary-btn no-event'} disabled={isLoad}>
-                {!isLoad ? <><span id="txt">Proceed To Payement&nbsp; </span> </> : <><span className="loader">
-                    <span className="dot"></span>
-                    <span className="dot"></span>
-                    <span className="dot"></span>
-                </span></>}
-            </button>
           </div>
         </div>
       </div>
-      
+
     </div>
   )
 }

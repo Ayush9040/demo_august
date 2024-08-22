@@ -5,8 +5,8 @@ import IBYcourse from '../Views/IBY'
 import NutriDietClinic from '../Views/LandingPage/NutriDietClinic/AboutClinic'
 import corporateWellness from '../Views/LandingPage/CorporateWellness'
 // import DonationForm from '../Components/DonationForm'
-const DonationForm = lazy(()=>import('../Components/DonationForm'))
-const DonationThankYou = lazy (()=> import('../Components/Thank'))
+const DonationForm = lazy(() => import('../Components/DonationForm'))
+const DonationThankYou = lazy(() => import('../Components/Thank'))
 const Home = lazy(() => import('../Views/Home'))
 const TermsCondition = lazy(() => import('../Components/TermsandCondition'))
 const PrivacyPolicy = lazy(() => import('../Components/PrivacyPolicy'))
@@ -26,6 +26,7 @@ const BrowseCourses = lazy(() =>
 const Experiences = lazy(() => import('../Views/Experience'))
 const Museum = lazy(() => import('../Views/Museum'))
 const Thankyou = lazy(() => import('../Components/EnrollmentForm/ThankYou'))
+const EnrolledSuccess = lazy(() => import('../Components/EnrollmentForm/EnrolledSuccess'))
 const SattvikCooking = lazy(() =>
   import('../Components/Highlights/SattvikCooking')
 )
@@ -59,18 +60,18 @@ const Values = lazy(() => import('../Views/Volunteer/Views/values'))
 const AlumniGallery = lazy(() => import('../Views/Alumni/Views/alumni-gallery'))
 const Support = lazy(() => import('../Views/Alumni/Views/support'))
 const Facts = lazy(() => import('../Views/Facts/Views/our-facts'))
-const Shop = lazy(()=>import('../Views/Shop/Views/shop/shop'))
-const SingleProduct = lazy(()=>import('../Views/Shop/Views/single-product'))
+const Shop = lazy(() => import('../Views/Shop/Views/shop/shop'))
+const SingleProduct = lazy(() => import('../Views/Shop/Views/single-product'))
 
-const  Authentication = lazy(()=>import('../Views/Authentication')) 
-const  OrderHistroy = lazy(()=>import('../Views/Shop/Views/order-history')) 
-const SearchModal = lazy(()=>import( '../Views/SearchModal'))
-const  CampaignThankYou = lazy (()=>import( '../Views/LandingPage/ThankYouPage'))
-const   StudentExperience = lazy(()=>import('../Views/Experience/Views/StudentExperience')) 
-const  BlogsByTag = lazy(()=>import('../Views/BlogByTag')) 
-const AddToCart  = lazy(()=>import('../Views/Shop/Views/cart'))
-const ShippingAdd  = lazy(()=>import('../Views/Shop/Views/address'))
-const ShopThankyou  = lazy(()=>import('../Views/Shop/Views/thankyoupage'))
+const Authentication = lazy(() => import('../Views/Authentication'))
+const OrderHistroy = lazy(() => import('../Views/Shop/Views/order-history'))
+const SearchModal = lazy(() => import('../Views/SearchModal'))
+const CampaignThankYou = lazy(() => import('../Views/LandingPage/ThankYouPage'))
+const StudentExperience = lazy(() => import('../Views/Experience/Views/StudentExperience'))
+const BlogsByTag = lazy(() => import('../Views/BlogByTag'))
+const AddToCart = lazy(() => import('../Views/Shop/Views/cart'))
+const ShippingAdd = lazy(() => import('../Views/Shop/Views/address'))
+const ShopThankyou = lazy(() => import('../Views/Shop/Views/thankyoupage'))
 
 const SingleJob = lazy(() => import('../Views/Careers/Views/single-job'))
 const VolunteerJob = lazy(() => import('../Views/Volunteer/Views/volunteerJob'))
@@ -84,7 +85,7 @@ const SatsangThankyou = lazy(() =>
   import('../Components/EnrollmentForm/SatsangThankYou')
 )
 
-const SamatvamThankyou = lazy(()=> import ('../Components/EnrollmentForm/SamattvamThankYou'))
+const SamatvamThankyou = lazy(() => import('../Components/EnrollmentForm/SamattvamThankYou'))
 const SingleDonation = lazy(() =>
   import('../Views/Donation/Views/single-donation')
 )
@@ -94,15 +95,15 @@ const Careers = lazy(() => import('../Views/Careers/Views/careers'))
 const Gifting = lazy(() => import('../Views/Gifting/Views/gifting'))
 const DescisionComp = lazy(() => import('../Views/DecisionComponent'))
 const JuhuVileLoc = lazy(() => import('../Components/LocateUs/JuhuVileLoc'))
-const LocateUs = lazy(()=> import ('../Components/LocateUs'))
-const LocateDetails = lazy(()=> import ('../Components/LocateUs/LocationDetails'))
-const NutriDiet = lazy(()=>import('../Views/NutriDiet'))
-const LandingPage = lazy( ()=>import('../Views/LandingPage'))
-const LandingPageNew = lazy( ()=>import('../Views/LandingPage/21Days/index'))
-const SevenDays = lazy( ()=>import('../Views/LandingPage/SevenDays/AboutCamp/index'))
+const LocateUs = lazy(() => import('../Components/LocateUs'))
+const LocateDetails = lazy(() => import('../Components/LocateUs/LocationDetails'))
+const NutriDiet = lazy(() => import('../Views/NutriDiet'))
+const LandingPage = lazy(() => import('../Views/LandingPage'))
+const LandingPageNew = lazy(() => import('../Views/LandingPage/21Days/index'))
+const SevenDays = lazy(() => import('../Views/LandingPage/SevenDays/AboutCamp/index'))
 const TyiLandingPage = lazy(() => import('../Views/LandingPage/NewLandingPage/index'))
-const TyiLandingPage7Months = lazy(() =>import('../Views/LandingPage/NewLandingPage2/index'))
-const NutriGut = lazy(() => import('../Views/LandingPage/Nutrigut/index') )
+const TyiLandingPage7Months = lazy(() => import('../Views/LandingPage/NewLandingPage2/index'))
+const NutriGut = lazy(() => import('../Views/LandingPage/Nutrigut/index'))
 const staticSiteRoutes = [
   //Home
   {
@@ -445,6 +446,14 @@ const staticSiteRoutes = [
     name: 'EnrollmentThankyou',
   },
   {
+    Component: EnrolledSuccess,
+    path: '/enrollment_submitted/:courseName',
+    exact: false,
+    id: 'statisSiteUnderEnrollment',
+    routePath: '/enrollment_submitted/:courseName',
+    name: 'EnrollmentSuccess',
+  },
+  {
     Component: DonationThankYou,
     path: '/donation',
     exact: true,
@@ -717,47 +726,47 @@ const staticSiteRoutes = [
   },
   //Search
   {
-    Component:SearchModal,
-    path:'/search',
-    id:'staticSearch',
-    routePath:'/search',
-    name:'Search'
+    Component: SearchModal,
+    path: '/search',
+    id: 'staticSearch',
+    routePath: '/search',
+    name: 'Search'
   },
   {
-    Component:NutriDiet,
-    path:'/nutri-diet',
-    id:'staticNutriDiet',
-    routePath:'/nutri-diet',
-    name:'NutriDiet'
+    Component: NutriDiet,
+    path: '/nutri-diet',
+    id: 'staticNutriDiet',
+    routePath: '/nutri-diet',
+    name: 'NutriDiet'
   },
   {
-    Component:IBYcourse,
-    path:'/IBY-course',
-    id:'staticIYBcourse',
-    routePath:'/IBY-course',
-    name:'IYBcourse'
+    Component: IBYcourse,
+    path: '/IBY-course',
+    id: 'staticIYBcourse',
+    routePath: '/IBY-course',
+    name: 'IYBcourse'
   },
-  
+
   {
-    Component:LandingPage,
-    path:'/ad-campaign',
-    id:'staticLandingPage',
-    routePath:'/ad-campaign',
-    name:'LandingPage'
-  },
-  {
-    Component:LandingPageNew,
-    path:'/ad-campaign-21-days',
-    id:'staticLandingPage',
-    routePath:'/ad-campaign-21-days',
-    name:'LandingPage'
+    Component: LandingPage,
+    path: '/ad-campaign',
+    id: 'staticLandingPage',
+    routePath: '/ad-campaign',
+    name: 'LandingPage'
   },
   {
-    Component:CampaignThankYou,
-    path:'/campaign-thank-you',
-    id:'staticLandingPageThankYou',
-    routePath:'/campaign-thank-you',
-    name:'LandingPageThankYou'
+    Component: LandingPageNew,
+    path: '/ad-campaign-21-days',
+    id: 'staticLandingPage',
+    routePath: '/ad-campaign-21-days',
+    name: 'LandingPage'
+  },
+  {
+    Component: CampaignThankYou,
+    path: '/campaign-thank-you',
+    id: 'staticLandingPageThankYou',
+    routePath: '/campaign-thank-you',
+    name: 'LandingPageThankYou'
   },
   //Shop
   {
@@ -794,18 +803,18 @@ const staticSiteRoutes = [
   },
   {
     Component: ShopThankyou,
-    path:'/shop/thank-you',
-    exact:true,
-    id:'statisSiteShopThanks',
-    routePath:'/shop/checkout',
-    name:'ShopThanks'
-  },{
-    Component:OrderHistroy,
-    path:'/user/order/:orderId',
-    exact:true,
-    id:'statisSiteOrderHistory',
-    routePath:'/user/order/:orderId',
-    name:'OrderHistory'
+    path: '/shop/thank-you',
+    exact: true,
+    id: 'statisSiteShopThanks',
+    routePath: '/shop/checkout',
+    name: 'ShopThanks'
+  }, {
+    Component: OrderHistroy,
+    path: '/user/order/:orderId',
+    exact: true,
+    id: 'statisSiteOrderHistory',
+    routePath: '/user/order/:orderId',
+    name: 'OrderHistory'
   },
   {
     Component: NutriDietClinic,
@@ -822,13 +831,13 @@ const staticSiteRoutes = [
     id: 'statisSiteNutriClinic',
     routePath: '/seven-days-landing-page',
     name: 'SevenDays',
-  },{
+  }, {
     Component: BlogsByTag,
-    path:'/tag/:tagId',
-    exact:true,
-    id:'statisSiteBlogsByTag',
-    routePath:'/tag/:tagId',
-    name:'Blogs By Tag'
+    path: '/tag/:tagId',
+    exact: true,
+    id: 'statisSiteBlogsByTag',
+    routePath: '/tag/:tagId',
+    name: 'Blogs By Tag'
   },
   {
     Component: corporateWellness,
@@ -854,32 +863,32 @@ const staticSiteRoutes = [
   //   name:'KidsCamp'
   // },
   {
-    Component:DonationForm,
-    path:'/donation-form',
-    id:'staticDonateForm',
-    routePath:'/donation-form',
+    Component: DonationForm,
+    path: '/donation-form',
+    id: 'staticDonateForm',
+    routePath: '/donation-form',
   },
 
   {
-    Component:TyiLandingPage,
-    path:'/MB/ad-campaign-3-months-900hours',
-    id:'staticNewLandingPage',
-    routePath:'/ad-campaign-3-months-900hours',
-    name:'NewLandingPage'
+    Component: TyiLandingPage,
+    path: '/MB/ad-campaign-3-months-900hours',
+    id: 'staticNewLandingPage',
+    routePath: '/ad-campaign-3-months-900hours',
+    name: 'NewLandingPage'
   },
   {
-    Component:TyiLandingPage7Months,
-    path:'/NK/ad-campaign-7-months-900hours',
-    id:'staticNewLandingPage2',
-    routePath:'/ad-campaign-7-months-900hours',
-    name:'NewLandingPage2'
+    Component: TyiLandingPage7Months,
+    path: '/NK/ad-campaign-7-months-900hours',
+    id: 'staticNewLandingPage2',
+    routePath: '/ad-campaign-7-months-900hours',
+    name: 'NewLandingPage2'
   },
   {
-    Component:NutriGut,
-    path:'/gut-cleanse-detox-workshop',
-    id:'staticNutriGut',
-    routePath:'/gut-cleanse-detox-workshop',
-    name:'Nutrigut'
+    Component: NutriGut,
+    path: '/gut-cleanse-detox-workshop',
+    id: 'staticNutriGut',
+    routePath: '/gut-cleanse-detox-workshop',
+    name: 'Nutrigut'
   }
 ]
 
