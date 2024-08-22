@@ -23,9 +23,9 @@ const EnrolledSuccess = () => {
           {/* <p className="thankyou">₹{courseDetails?.courseFee}/-</p> */}
           <p className="thankyou">Thank You</p>
           <p className="message">
-            Congratulations on taking a step towards leading life the Yogic Way & spreading joy across the world. You have been successfully enrolled for
-            <b>{courseDetails?.courseName}</b>  {/*which begins */} (<b>{courseDetails?.courseStartDate}</b>).
-            For any further queries you can email us on <b>info@theyogainstitute.in</b>  or click the whatsappp Icon below to drop us a whatsapp
+            Congratulations on taking a step towards leading life the Yogic Way & spreading joy across the world. You have been successfully enrolled for 
+            <b> {courseDetails?.courseName}</b>  {/*which begins */} (<b>{courseDetails?.courseStartDate}</b>).
+            For any further queries you can email us on <b>info@theyogainstitute.in</b>  or click the whatsappp Icon below to drop us a whatsapp.
           </p>
         </div>
         {/* <div id="text">
