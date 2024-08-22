@@ -44,14 +44,14 @@
             }
         ],
         "react/no-unknown-property": 0,
-        "object-curly-spacing": [
-            "error",
-            "always",
-            {
-                "arraysInObjects": true,
-                "objectsInObjects": true
-            }
-        ],
+        // "object-curly-spacing": [
+        //     "error",
+        //     "always",
+        //     {
+        //         "arraysInObjects": true,
+        //         "objectsInObjects": true
+        //     }
+        // ],
         "max-len": [
             "error",
             {

@@ -60,7 +60,7 @@ const Personal = ({
 
   const handleResidential = (value) => {
     setIsResidential(value);
-    localStorage.setItem('isResidential',value)
+    localStorage.setItem('isResidential', value)
   }
   const navigate = useNavigate()
 
@@ -223,7 +223,7 @@ const Personal = ({
     label: date,
     value: date
   })) || [];
-
+  const durationList = [{ label: '1 Month', value: 1 }, { label: '2 Months', value: 2 }, { label: '3 Months', value: 3 }, { label: '4 Months', value: 4 }, { label: '5 Months', value: 5 }, { label: '6 Months', value: 6 }, { label: '7 Months', value: 7 }, { label: '8 Months', value: 8 }, { label: '9 Months', value: 9 }, { label: '9 Months', value: 9 }, { label: '10 Months', value: 10 }, { label: '11 Months', value: 11 }, { label: '12 Months', value: 12 }]
 
   useEffect(() => {
     if (validationErrors?.length > 0) {
@@ -756,10 +756,68 @@ const Personal = ({
                 }}
               />
               {empty === 18 && <small id="fill_err"> Please select course date</small>}
-
-
             </div>
 
+            <div className="form_error course_date">
+              <Select
+                styles={customStyles}
+                id="sdate"
+                name="sdate"
+                placeholder="Select Start Date*"
+                form={formData}
+                setField={setFormData}
+                keyName="sdate"
+                errorCheck={setEmpty}
+                options={formattedDates}
+                value={values.selectDate}
+                onChange={(value) => {
+                  setValues(
+                    { country: values.country, state: values.state, city: values.city, sdate: value },
+                    false
+                  )
+                  setFormData((prev) => {
+                    return {
+                      ...prev, sdate: value.value, courseDetails: {
+                        ...prev.courseDetails,
+                        date: value.value
+                      }
+                    }
+                  })
+                }}
+              />
+              {empty === 18 && <small id="fill_err"> Please select course date</small>}
+            </div>
+
+            <div className="form_error course_date">
+              <Select
+                styles={customStyles}
+                id="sdate"
+                name="sdate"
+                placeholder="Select Duration*"
+                form={formData}
+                setField={setFormData}
+                keyName="sdate"
+                errorCheck={setEmpty}
+                options={durationList}
+                value={values.selectDate}
+                onChange={(value) => {
+                  setValues(
+                    { country: values.country, state: values.state, city: values.city, sdate: value },
+                    false
+                  )
+                  setFormData((prev) => {
+                    return {
+                      ...prev, sdate: value.value, courseDetails: {
+                        ...prev.courseDetails,
+                        date: value.value
+                      }
+                    }
+                  })
+                }}
+              />
+              {empty === 18 && <small id="fill_err"> Please select course date</small>}
+            </div>
+            <div style={{padding:'6px 0 0 26px',color:'#C9705F',fontWeight:'600'}}>&#8377;1100 off for 12 months</div>
 
 
             {/* <div className="personal_gender">
