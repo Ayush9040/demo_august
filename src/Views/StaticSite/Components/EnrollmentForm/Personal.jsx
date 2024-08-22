@@ -56,6 +56,7 @@ const Personal = ({
 
   const [disData, setDisData] = useState('yes')
   const [isResidential, setIsResidential] = useState(false)
+  const [isRegular, setIsRegular] = useState(false)
 
 
   const handleResidential = (value) => {
@@ -147,7 +148,19 @@ const Personal = ({
   };
 
   useEffect(() => {
-
+    const array = ["Advanced Yoga Asana Regular Class - Online (Only for TYI Teachers)",
+      "Asana Regular Classes for Women - On Campus", "Asana Regular Classes (Men & Women) - Online",
+      "Weekend Asana Classes (Men & Women) - On Campus", "Weekend Asana Classes (Men & Women) - Online",
+      "Children's Regular Classes - On Campus", "Children'&apos;'s Weekend Classes - On Campus",
+      "Advanced Asana Regular Class - Online (Only for TYI Teachers)", "Yog Prayas - Online",
+      "Online Meditation Course (Foundation Course)", "Regular Online Meditation Classes",
+      "Healing Movement and Rhythm Classes", "Couples' Classes - Online",
+      "IBY Class (Only for TYI TTC Teachers)", "Regular Pregnancy Yoga Class - Online & On Campus"
+    ];
+    const isMatch = array.includes(currentCourse?.title);
+    alert(currentCourse?.title)
+    setIsRegular(isMatch)
+    console.log(currentCourse);
 
     // setSetselectDate(Params.get('date'))
 
@@ -758,7 +771,7 @@ const Personal = ({
               {empty === 18 && <small id="fill_err"> Please select course date</small>}
             </div>
 
-            <div className="form_error course_date">
+            {isRegular && <div className="form_error course_date">
               <Select
                 styles={customStyles}
                 id="sdate"
@@ -786,39 +799,40 @@ const Personal = ({
                 }}
               />
               {empty === 18 && <small id="fill_err"> Please select course date</small>}
-            </div>
+            </div>}
 
-            <div className="form_error course_date">
-              <Select
-                styles={customStyles}
-                id="sdate"
-                name="sdate"
-                placeholder="Select Duration*"
-                form={formData}
-                setField={setFormData}
-                keyName="sdate"
-                errorCheck={setEmpty}
-                options={durationList}
-                value={values.selectDate}
-                onChange={(value) => {
-                  setValues(
-                    { country: values.country, state: values.state, city: values.city, sdate: value },
-                    false
-                  )
-                  setFormData((prev) => {
-                    return {
-                      ...prev, sdate: value.value, courseDetails: {
-                        ...prev.courseDetails,
-                        date: value.value
+            {isRegular && <>
+              <div className="form_error course_date">
+                <Select
+                  styles={customStyles}
+                  id="sdate"
+                  name="sdate"
+                  placeholder="Select Duration*"
+                  form={formData}
+                  setField={setFormData}
+                  keyName="sdate"
+                  errorCheck={setEmpty}
+                  options={durationList}
+                  value={values.selectDate}
+                  onChange={(value) => {
+                    setValues(
+                      { country: values.country, state: values.state, city: values.city, sdate: value },
+                      false
+                    )
+                    setFormData((prev) => {
+                      return {
+                        ...prev, sdate: value.value, courseDetails: {
+                          ...prev.courseDetails,
+                          date: value.value
+                        }
                       }
-                    }
-                  })
-                }}
-              />
-              {empty === 18 && <small id="fill_err"> Please select course date</small>}
-            </div>
-            <div style={{padding:'6px 0 0 26px',color:'#C9705F',fontWeight:'600'}}>&#8377;1100 off for 12 months</div>
-
+                    })
+                  }}
+                />
+                {empty === 18 && <small id="fill_err"> Please select course date</small>}
+              </div>
+              <div style={{ padding: '10px 0 0 26px', color: '#C9705F', fontWeight: '600' }}>&#8377;1100 off for 12 months</div>
+            </>}
 
             {/* <div className="personal_gender">
               <span className="gender-text">Gender*</span>
