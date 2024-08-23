@@ -166,6 +166,11 @@ const BrowseCourses = () => {
                 dates={item.dates}
                 fees={item?.fees}
                 timing={item?.timing}
+                category={item?.category}
+                batch={item?.batch}
+                nonResidential={item?.nonResidential}
+                    residential={item?.residential}
+                    online={item?.online}
               />
             ))}
           </div>

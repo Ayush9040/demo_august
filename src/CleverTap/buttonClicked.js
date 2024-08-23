@@ -4,7 +4,10 @@ export const handleCTCourseClick = ({
   description,
   key,
   fees,
-  timing
+  timing,
+  category,
+  batch,
+  coursesList
 }) => {
     // Trigger CleverTap event on button click
     if (window?.clevertap) {
@@ -20,20 +23,215 @@ export const handleCTCourseClick = ({
         "Timings": timing,
         "Page_Url": window.location.href,
         "Tenure": "1/2/3 Month",
-        "Course Category": "Self Learning/Educational",
+        "Course Category": category,
         "Course-SubType": "Workshop",
         "Course Mode": "Online/Offline",
         "Course Location": "Residential/ Non- Residential/NA",
         "Course Type": "7 Day/21 Day/TTC/Camps & Workshops",
         "Language": "English/Hindi",
         "Day_Type": "Weekend/Weekday",
-        "Batch_No": "1,2,3",
-        "date_time_timestamp": "28.06.24"
+        "Batch_No": batch,
+        "date_time_timestamp": new Date().toISOString()
       });
 
       console.log("Course_Clicked event tracked", window.clevertap);
       console.log("Course_Clicked event tracked timing", timing);
+      console.log("Course_Clicked event tracked coursesList", coursesList);
     } else {
       console.error("CleverTap is not initialized.");
     }
   };
+
+  export const handleCTEnrollNowClick = ({
+    courseTitle,
+    fees,
+    timing,
+    category,
+    batch,
+    nonResidential,
+    residential,
+    online
+  }) => {
+
+    const currentPath = window.location.pathname;
+
+    // Extract the portion after the last '/' and remove the leading '/'
+    const extractedKey = currentPath.split('/').pop().replace(/-/g, ' ');
+       // Trigger the course_viewed event when the component mounts
+  
+       // Determine the course mode
+    let courseMode = "";
+    if (online) {
+      courseMode = "Online";
+      if (nonResidential || residential) {
+        courseMode += ", Offline";
+      }
+    } else {
+      courseMode = "Offline";
+    }
+  
+    // Determine the course location
+    let courseLocation = "NA";
+    if (residential && nonResidential) {
+      courseLocation = "Residential, Non-Residential";
+    } else if (residential) {
+      courseLocation = "Residential";
+    } else if (nonResidential) {
+      courseLocation = "Non-Residential";
+    }
+    // Trigger CleverTap event on button click
+    if (window?.clevertap) {
+      window.clevertap.event.push("Enroll_Now_Clicked", {
+        "Course_name": courseTitle,
+        // "Enrollmentdate": "15 July - 7 Sept",
+        // "Start_Date": "15 July",
+        // "End_date": "7 Sept",
+        "Page_name": extractedKey,
+        "Fees_Residential_OnCampus": fees.offlineFee.residentialFee,
+        "Fees_Non_Residential_OnCampus": fees.offlineFee.nonResidentialFee,
+        "Fees_Online": fees.onlineFee,
+        "Timings": timing,
+        "Page_Url": window.location.href,
+        // "Tenure": "1/2/3 Month",
+        "Course Category": category,
+        // "Course-SubType": "Workshop",
+        "Course Mode": courseMode,
+        "Course Location": courseLocation,
+        // "Course Type": "7 Day/21 Day/TTC/Camps & Workshops",
+        // "Language": "English/Hindi",
+        // "Day_Type": "Weekend/Weekday",
+        "Batch_No": batch,
+        "date_time_timestamp": new Date().toISOString()
+      });
+
+      console.log("Course_Clicked event tracked", window.clevertap);
+      console.log("Course_Clicked event tracked timing", timing);
+      
+    } else {
+      console.error("CleverTap is not initialized.");
+    }
+  }
+
+
+  export const handleCTProccedToPayment = ({
+    courseTitle,
+    fees,
+    timing,
+    category,
+    batch,
+    nonResidential,
+    residential,
+    online,
+    date
+  }) => {
+
+    const currentPath = window.location.pathname;
+
+    // Extract the portion after the last '/' and remove the leading '/'
+    const extractedKey = currentPath.split('/').pop().replace(/-/g, ' ');
+       // Trigger the course_viewed event when the component mounts
+
+
+  let startDate = "";
+  let endDate = "";
+  if (date) {
+    const dateParts = date.split(' to ');
+    startDate = dateParts[0].trim();  // e.g., "3rd Jun"
+    endDate = dateParts[1].trim();    // e.g., "28th Jun 2024"
+  }
+  
+       // Determine the course mode
+    let courseMode = "";
+    if (online) {
+      courseMode = "Online";
+      if (nonResidential || residential) {
+        courseMode += ", Offline";
+      }
+    } else {
+      courseMode = "Offline";
+    }
+  
+    // Determine the course location
+    let courseLocation = "NA";
+    if (residential && nonResidential) {
+      courseLocation = "Residential, Non-Residential";
+    } else if (residential) {
+      courseLocation = "Residential";
+    } else if (nonResidential) {
+      courseLocation = "Non-Residential";
+    }
+    // Trigger CleverTap event on button click
+    if (window?.clevertap) {
+      window.clevertap.event.push("Procced_To_Payment_Clicked", {
+        "Course_name": courseTitle,
+        // "Enrollmentdate": "15 July - 7 Sept",
+        "Start_Date": startDate,
+        "End_date": endDate,
+        "Page_name": extractedKey,
+        "Fees_Residential_OnCampus": fees.offlineFee.residentialFee,
+        "Fees_Non_Residential_OnCampus": fees.offlineFee.nonResidentialFee,
+        "Fees_Online": fees.onlineFee,
+        "Timings": timing,
+        "Page_Url": window.location.href,
+        // "Tenure": "1/2/3 Month",
+        "Course Category": category,
+        // "Course-SubType": "Workshop",
+        "Course Mode": courseMode,
+        "Course Location": courseLocation,
+        // "Course Type": "7 Day/21 Day/TTC/Camps & Workshops",
+        // "Language": "English/Hindi",
+        // "Day_Type": "Weekend/Weekday",
+        "Batch_No": batch,
+        "date_time_timestamp": new Date().toISOString()
+      });
+
+      console.log("Course_Clicked event tracked", window.clevertap);
+      console.log("Course_Clicked event tracked timing", timing);
+      
+    } else {
+      console.error("CleverTap is not initialized.");
+    }
+  }
+
+  export const handleCTSignUp = ({
+    firstName,
+    email
+  }) => {
+
+    // Trigger CleverTap event on button click
+    if (window?.clevertap) {
+      window.clevertap.event.push("Sign_UP_Clicked", {
+        "Name":firstName,
+        "Email ID": email,
+        "IsLoggedIn": "False"
+        // "date_time_timestamp": new Date().toISOString()
+      });
+
+     
+      
+    } else {
+      console.error("CleverTap is not initialized.");
+    }
+  }
+
+  export const handleCTSignIn = ({
+    // firstName,
+    email,
+    IsLoggedIn
+  }) => {
+
+    // Trigger CleverTap event on button click
+    if (window?.clevertap) {
+      window.clevertap.event.push("Sign_In_Clicked", {
+        // "Name":firstName,
+        "Email ID": email,
+        "IsLoggedIn": IsLoggedIn
+        // "date_time_timestamp": new Date().toISOString()
+      });
+
+     
+      
+    } else {
+      console.error("CleverTap is not initialized.");
+    }
+  }

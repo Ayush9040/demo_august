@@ -19,6 +19,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { authServerClientId, razorPayKey } from '../../../../../../Constants/appSettings'
 import { useNavigate } from 'react-router-dom'
 import { updateCartData } from '../../Shop.action'
+import { handleCTCheckoutCompleted } from '../../../../../../CleverTap/shopEvents'
 
 const ShippingAdd = () => {
   const { user } = useSelector((state) => state.auth)
@@ -250,6 +251,25 @@ const ShippingAdd = () => {
       if (formData.country === '') return setEmpty(5)
       if (formData.pincode === '') return setEmpty(6)
     }
+    handleCTCheckoutCompleted({
+      checkoutUrl: window.location.href,
+      // paymentStatus,
+      productName: cart,
+      // productId,
+      // productUrl,
+      // category,
+      // productPrice,
+      // quantity,
+      // stockAvailability,
+      // gender,
+      // color,
+      // discount,
+      // discountedPrice,
+      // productSize,
+      // language,
+      // material,
+      // printed
+    })
     await makePayment()
   }
 
@@ -259,6 +279,9 @@ const ShippingAdd = () => {
     postCart()
     dispatch(updateCartData(JSON.parse(cartItems)))
   }, [user?.data, activCartId ])
+
+  console.log('dp ', cart);
+  
 
   return (
     <>

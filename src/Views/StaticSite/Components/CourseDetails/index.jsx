@@ -13,6 +13,8 @@ import SelectDropDown from '../Select Dropdown'
 import { useSelector } from 'react-redux'
 import CourseOList from '../CourseComponents/CourseOLList'
 //import { useParams } from 'react-router-dom'
+import { handleCTEnrollNowClick } from '../../../../CleverTap/buttonClicked'
+import { trackPageView } from '../../../../CleverTap/pageViewEvents'
 
 
 const CourseDetails = ({ pageDate }) => {
@@ -28,6 +30,9 @@ const CourseDetails = ({ pageDate }) => {
   const { isLoggedIn } = useSelector((state) => state.auth)
   const [selectDate, setSetselectDate] = useState('null')
   const [showFixedDiv, setShowFixedDiv] = useState(false);
+  const [sessionId, setSessionId] = useState('');
+  const [startTime, setStartTime] = useState(0);
+
 
 
   const handleScroll = () => {
@@ -75,6 +80,101 @@ const CourseDetails = ({ pageDate }) => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  const clevertap = window.clevertap;
+
+  useEffect(()=> {
+
+    // Get the current URL path
+  const currentPath = window.location.pathname;
+
+  // Extract the portion after the last '/' and remove the leading '/'
+  const extractedKey = currentPath.split('/').pop().replace(/-/g, ' ');
+     // Trigger the course_viewed event when the component mounts
+
+     // Determine the course mode
+  let courseMode = "";
+  if (pageDate.online) {
+    courseMode = "Online";
+    if (pageDate.nonResidential || pageDate.residential) {
+      courseMode += ", Offline";
+    }
+  } else {
+    courseMode = "Offline";
+  }
+
+  // Determine the course location
+  let courseLocation = "NA";
+  if (pageDate.residential && pageDate.nonResidential) {
+    courseLocation = "Residential, Non-Residential";
+  } else if (pageDate.residential) {
+    courseLocation = "Residential";
+  } else if (pageDate.nonResidential) {
+    courseLocation = "Non-Residential";
+  }
+     
+     if (pageDate) {
+      clevertap.event.push("course_viewed", {
+          "course_name": pageDate.title,
+          "Page_name": extractedKey,
+          "Fees_Residential": pageDate?.fees?.offlineFee?.residentialFee,
+          "Fees_Non_Residential": pageDate?.fees?.offlineFee?.nonResidentialFee,
+          "Fees_Online": pageDate?.fees?.onlineFee,
+          "timing": pageDate?.timing,
+          "Page_Url": window.location.href,
+          "Course Category ": pageDate.category,
+          "Course Mode": courseMode,
+          "Course Location": courseLocation,
+          "Batch_No": pageDate?.batch,
+          "date_time_timestamp": new Date().toISOString()
+      });
+  }
+  console.log('Course Viewed Event', pageDate, extractedKey);
+ 
+  }, [pageDate])
+
+  
+
+  console.log('Course Viewed Event', pageDate);
+
+
+  useEffect(() => {
+    // Start time when the component mounts
+    setStartTime(Date.now());
+
+    // Retrieve or generate the session ID
+    let session = localStorage.getItem('sessionId');
+    if (!session) {
+        session = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
+        localStorage.setItem('sessionId', session);
+    }
+    setSessionId(session);
+
+    return () => {
+        // End time when the component unmounts
+        const endTime = Date.now();
+
+        // Calculate the session duration in seconds
+        const sessionDuration = ((endTime - startTime) / 1000).toFixed(2);
+
+        const pageName = pageDate?.title;
+        const lastPageUrl = document.referrer || 'N/A';
+        const pageUrl = window.location.href;
+        //const loggedIn = localStorage.getItem('isLoggedIn') === 'true' ? 'Yes' : 'No'; // Adjust based on your auth logic
+        const uniqueViewId = Math.floor(Math.random() * 1000); // Replace with actual logic
+
+        trackPageView({
+            pageName,
+            lastPageUrl,
+            pageUrl,
+            sessionDuration,
+            isLoggedIn,
+            sessionId: session,
+            uniqueViewId,
+        });
+    };
+}, [sessionId, startTime]);
+
 
   let options = [
     {
@@ -189,7 +289,9 @@ const CourseDetails = ({ pageDate }) => {
           <div className="course-info">
             <h1>
               {pageDate?.title ? (
-                <span>{pageDate?.title}</span>
+                <span>
+                  {pageDate?.title}
+                </span>
               ) : (
                 <span>
                   <p>500 Hour</p>
@@ -293,7 +395,16 @@ const CourseDetails = ({ pageDate }) => {
                             : `/user/sign-in/?location=${pageDate.key}`//&date=${selectDate}
                         }
                       >
-                        <CommonBtn text={'Enroll Now'} />
+                        <CommonBtn text={'Enroll Now'} buttonAction={() => handleCTEnrollNowClick({
+              courseTitle : pageDate.title,
+              fees: pageDate?.fees,
+              timing: pageDate?.timing,
+              category: pageDate?.category,
+              batch: pageDate?.batch,
+              nonResidential: pageDate?.nonResidential,
+              residential: pageDate?.residential,
+              online:pageDate?.online
+            })} />
                       </Link>
                     ) : (
                       // scroll()
@@ -304,7 +415,16 @@ const CourseDetails = ({ pageDate }) => {
                             : `/user/sign-in/?location=${pageDate.key}`//&date=${selectDate}
                         }
                       >
-                        <CommonBtn text={'Enroll Now'} />
+                        <CommonBtn text={'Enroll Now'} buttonAction={() => handleCTEnrollNowClick({
+              courseTitle : pageDate.title,
+              fees: pageDate?.fees,
+              timing: pageDate?.timing,
+              category: pageDate?.category,
+              batch: pageDate?.batch,
+              nonResidential: pageDate?.nonResidential ,
+              residential: pageDate?.residential,
+              online:pageDate?.online
+            })} />
                       </Link>
                     )
                   ) :
@@ -315,11 +435,29 @@ const CourseDetails = ({ pageDate }) => {
                         : `/user/sign-in/?location=${pageDate.key}`//&date=${selectDate}
                     }
                   >
-                    <CommonBtn text={'Enroll Now'} />
+                    <CommonBtn text={'Enroll Now'} buttonAction={() => handleCTEnrollNowClick({
+              courseTitle : pageDate.title,
+              fees: pageDate?.fees,
+              timing: pageDate?.timing,
+              category: pageDate?.category,
+              batch: pageDate?.batch,
+              nonResidential: pageDate?.nonResidential ,
+              residential: pageDate?.residential,
+              online:pageDate?.online
+            })} />
                   </Link> :
                     (<div >
                       <div style={{ opacity: '0.4' }}>
-                        <CommonBtn text={'Enroll Now'} />
+                        <CommonBtn text={'Enroll Now'} buttonAction={() => handleCTEnrollNowClick({
+              courseTitle : pageDate.title,
+              fees: pageDate?.fees,
+              timing: pageDate?.timing,
+              category: pageDate?.category,
+              batch: pageDate?.batch,
+              nonResidential: pageDate?.nonResidential ,
+              residential: pageDate?.residential,
+              online:pageDate?.online
+            })} />
                       </div>
                       <div style={{ fontSize: '1.5rem', padding: '1.5rem' }}>No dates available for this course</div>
                     </div>)
@@ -456,7 +594,16 @@ const CourseDetails = ({ pageDate }) => {
                             : `/user/sign-in/?location=${pageDate.key}`//&date=${selectDate}
                         }
                       >
-                        <CommonBtn text={'Enroll Now'} />
+                        <CommonBtn text={'Enroll Now'} buttonAction={() => handleCTEnrollNowClick({
+              courseTitle : pageDate.title,
+              fees: pageDate?.fees,
+              timing: pageDate?.timing,
+              category: pageDate?.category,
+              batch: pageDate?.batch,
+              nonResidential: pageDate?.nonResidential ,
+              residential: pageDate?.residential,
+              online:pageDate?.online
+            })}/>
                       </Link>
                     ) : (
                       // scroll()
@@ -467,7 +614,16 @@ const CourseDetails = ({ pageDate }) => {
                             : `/user/sign-in/?location=${pageDate.key}`//&date=${selectDate}
                         }
                       >
-                        <CommonBtn text={'Enroll Now'} />
+                        <CommonBtn text={'Enroll Now'} buttonAction={() => handleCTEnrollNowClick({
+              courseTitle : pageDate.title,
+              fees: pageDate?.fees,
+              timing: pageDate?.timing,
+              category: pageDate?.category,
+              batch: pageDate?.batch,
+              nonResidential: pageDate?.nonResidential ,
+              residential: pageDate?.residential,
+              online:pageDate?.online
+            })} />
                       </Link>
                     )
                   ) :
@@ -478,11 +634,29 @@ const CourseDetails = ({ pageDate }) => {
                         : `/user/sign-in/?location=${pageDate.key}`//&date=${selectDate}
                     }
                   >
-                    <CommonBtn text={'Enroll Now'} />
+                    <CommonBtn text={'Enroll Now'} buttonAction={() => handleCTEnrollNowClick({
+              courseTitle : pageDate.title,
+              fees: pageDate?.fees,
+              timing: pageDate?.timing,
+              category: pageDate?.category,
+              batch: pageDate?.batch,
+              nonResidential: pageDate?.nonResidential ,
+              residential: pageDate?.residential,
+              online:pageDate?.online
+            })} />
                   </Link> :
                     (<div >
                       <div style={{ opacity: '0.4' }}>
-                        <CommonBtn text={'Enroll Now'} />
+                        <CommonBtn text={'Enroll Now'} buttonAction={() => handleCTEnrollNowClick({
+              courseTitle : pageDate.title,
+              fees: pageDate?.fees,
+              timing: pageDate?.timing,
+              category: pageDate?.category,
+              batch: pageDate?.batch,
+              nonResidential: pageDate?.nonResidential ,
+              residential: pageDate?.residential,
+              online:pageDate?.online
+            })} />
                       </div>
                       <div style={{ fontSize: '1.5rem', padding: '1.5rem' }}>No dates available for this course</div>
                     </div>)

@@ -13,6 +13,7 @@ import './style.scss'
 import InnerNavComponent from '../../../../Components/InnerNavComponent'
 import { validateEmail } from '../../../../../../helpers'
 import MessageModal from '../../../../Components/MessageModal'
+import { handleCTSignIn } from '../../../../../../CleverTap/buttonClicked'
 
 const SignIn = () => {
   const [modal, setModal] = useState(false)
@@ -61,8 +62,18 @@ const SignIn = () => {
 
   const handleSignIn = async() => {
     if (!validateEmail(formData.email)) {
+      handleCTSignIn({
+        // firstName,
+        email: formData.email,
+        IsLoggedIn: false
+      })
       return setValidate(1)
     } else if (formData.password === '') {
+      handleCTSignIn({
+        // firstName,
+        email: formData.email,
+        IsLoggedIn: false
+      })
       return setValidate(2)
     }else{
       await dispatch(
@@ -78,16 +89,23 @@ const SignIn = () => {
       if(error.isError !== false){  setModal(true);setErrMsg( error.isError ) }else{ setModal(false)}
 
       
-    clevertap.onUserLogin.push({
-      "Site": {
-        "Email": formData.email,         // Email address of the user
-     // optional fields. controls whether the user will be sent email, push etc.
-        "MSG-email": false,                // Disable email notifications
-        "MSG-push": false,                  // Enable push notifications
-        "MSG-sms": false,                   // Enable sms notifications
-        "MSG-whatsapp": false,              // Enable WhatsApp notifications
-      }
-     })
+    // clevertap.onUserLogin.push({
+    //   "Site": {
+    //     "Email": formData.email,         // Email address of the user
+    //  // optional fields. controls whether the user will be sent email, push etc.
+    //     "MSG-email": false,                // Disable email notifications
+    //     "MSG-push": false,                  // Enable push notifications
+    //     "MSG-sms": false,                   // Enable sms notifications
+    //     "MSG-whatsapp": false,              // Enable WhatsApp notifications
+    //   }
+    //  })
+
+      handleCTSignIn({
+        // firstName,
+        email: formData.email,
+        IsLoggedIn: true
+
+      })
 
      console.log('New User From Clever Tap', clevertap);
 

@@ -10,6 +10,7 @@ import {
   authBaseDomain,
 } from '../../../../../../Constants/appSettings'
 import MessageModal from '../../../../Components/MessageModal'
+import { handleCTSignUp } from '../../../../../../CleverTap/buttonClicked'
 
 const SignUp = () => {
   const [modal, setModal] = useState(false)
@@ -157,7 +158,10 @@ const SignUp = () => {
             )}
           </div>
           <label className="signin-btn" id="sign-up" onClick={handleSubmit}>
-            <CommonBtn text={'Submit'} />
+            <CommonBtn text={'Submit'} buttonAction={() => handleCTSignUp({
+              firstName,
+              email
+            })} />
           </label>
         </form>
       </div>

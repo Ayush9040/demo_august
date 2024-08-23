@@ -11,6 +11,8 @@ import Personal from './Personal'
 import { legacy2 } from '../../assets/icons/icon'
 import { authBaseDomain, cmsBaseDomain, razorPayKey } from '../../../../Constants/appSettings'
 import axios from 'axios'
+import { handleCTProccedToPayment } from '../../../../CleverTap/buttonClicked'
+import { trackPageView } from '../../../../CleverTap/pageViewEvents'
 
 const Enrollment = () => {
   const { user } = useSelector((state) => state.auth)
@@ -23,7 +25,7 @@ const Enrollment = () => {
   useEffect(() => {
     setCurrentCourse(AllCourses.find((item) => item.key === courseId))
     setCourseDate(Params.get('date'))
-    console.log(currentCourse)
+    console.log('now p2p ',currentCourse)
     // setDate(
     //   today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate()
     // )
@@ -37,6 +39,9 @@ const Enrollment = () => {
   const [courseAsset1, setCourseAsset1] = useState(null)
   const [courseAsset2, setCourseAsset2] = useState(null)
   const [uploadCheck, setUploadCheck] = useState(true)
+  const [sessionId, setSessionId] = useState('');
+  const [startTime, setStartTime] = useState(0);
+  const { isLoggedIn } = useSelector((state) => state.auth)
   const [formData, setFormData] = useState({
     name: user?.data?.firstName,
     phone: '',
@@ -386,6 +391,17 @@ const Enrollment = () => {
     else {
       // setBold(5)
       handleSubmit1();
+      handleCTProccedToPayment({
+        courseTitle: currentCourse?.title,
+        date: formData.sdate,
+    fees: currentCourse?.fees,
+    timing: currentCourse?.timing,
+    category: currentCourse?.category,
+    batch: currentCourse?.batch,
+    nonResidential: currentCourse?.nonResidential,
+    residential: currentCourse?.residental,
+    online: currentCourse?.online
+      })
     }
 
 
@@ -397,6 +413,44 @@ const Enrollment = () => {
 
 
   }
+
+  
+  useEffect(() => {
+    // Start time when the component mounts
+    setStartTime(Date.now());
+
+    // Retrieve or generate the session ID
+    let session = localStorage.getItem('sessionId');
+    if (!session) {
+        session = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
+        localStorage.setItem('sessionId', session);
+    }
+    setSessionId(session);
+
+    return () => {
+        // End time when the component unmounts
+        const endTime = Date.now();
+
+        // Calculate the session duration in seconds
+        const sessionDuration = ((endTime - startTime) / 1000).toFixed(2);
+
+        const pageName = currentCourse?.title + " Enrollment Form";
+        const lastPageUrl = document.referrer || 'N/A';
+        const pageUrl = window.location.href;
+        //const loggedIn = localStorage.getItem('isLoggedIn') === 'true' ? 'Yes' : 'No'; // Adjust based on your auth logic
+        const uniqueViewId = Math.floor(Math.random() * 1000); // Replace with actual logic
+
+        trackPageView({
+            pageName,
+            lastPageUrl,
+            pageUrl,
+            sessionDuration,
+            isLoggedIn,
+            sessionId: session,
+            uniqueViewId,
+        });
+    };
+}, [sessionId, startTime]);
 
   return (
     <>
