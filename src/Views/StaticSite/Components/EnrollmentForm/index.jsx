@@ -21,9 +21,9 @@ const Enrollment = () => {
   const navigate = useNavigate()
 
   useEffect(() => {
-    setCurrentCourse(AllCourses.find((item) => item.key === courseId))
+    let currentCrs = AllCourses.find((item) => item.key === courseId)
+    setCurrentCourse(currentCrs)
     setCourseDate(Params.get('date'))
-    console.log(currentCourse)
     // setDate(
     //   today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate()
     // )
@@ -37,6 +37,8 @@ const Enrollment = () => {
   const [courseAsset1, setCourseAsset1] = useState(null)
   const [courseAsset2, setCourseAsset2] = useState(null)
   const [uploadCheck, setUploadCheck] = useState(true)
+
+
   const [formData, setFormData] = useState({
     name: user?.data?.firstName,
     phone: '',
@@ -66,7 +68,10 @@ const Enrollment = () => {
     mode: '',
     residental: '',
     sdate: '',
-    terms: ''
+    terms: '',
+    startDate: '',
+    endDate: '',
+    months: ''
   })
 
   const handleEmpty1 = (e) => {
@@ -101,6 +106,62 @@ const Enrollment = () => {
     //   setEmpty(0)
     //   setBold(4)
     // }
+  }
+  function parseDate(dateStr) {
+    const [day, month, year] = dateStr.split('/').map(Number); // Split the date string and convert parts to numbers
+    // Create a new Date object (months are 0-based, so subtract 1 from month)
+    return new Date(year, month - 1, day);
+  }
+
+  function dateDurationChange(months) {
+    let originalFee = AllCourses.find((item) => item.key === courseId)
+    let newAmnt = originalFee?.fees?.onlineFee * months
+    if (months == 12) {
+      newAmnt = newAmnt - 1100
+    }
+
+    setCurrentCourse(prevData => ({
+      ...prevData,
+      fees: {
+        ...prevData.fees,
+        onlineFee: newAmnt
+      }
+    }));
+    setCourseFee(newAmnt)
+  }
+
+  const setEndDate = (months, startDate) => {
+    let endDate = formatDate(addMonths(parseDate(startDate), months))
+    // setFormData({ ...formData, endDate: endDate })
+    let originalFee = AllCourses.find((item) => item.key === courseId)
+    let newAmnt = originalFee?.fees?.onlineFee * months
+    if (months == 12) {
+      newAmnt = newAmnt - 1100
+    }
+
+    setCurrentCourse(prevData => ({
+      ...prevData,
+      fees: {
+        ...prevData.fees,
+        onlineFee: newAmnt
+      }
+    }));
+    setFormData((prev) => {
+      return { ...prev, endDate: endDate }
+    })
+    setCourseFee(newAmnt)
+  }
+  // Function to add months to a given date
+  function addMonths(startDate, months) {
+    const date = startDate; // Create a Date object from the start date
+    date.setMonth(date.getMonth() + months); // Add the number of months
+    return date;
+  }
+  function formatDate(date) {
+    const day = date.getDate().toString().padStart(2, '0'); // Day with leading zero
+    const month = (date.getMonth() + 1).toString().padStart(2, '0'); // Month with leading zero
+    const year = date.getFullYear();
+    return `${day}/${month}/${year}`;
   }
 
   useEffect(() => {
@@ -175,7 +236,7 @@ const Enrollment = () => {
           date: formData.sdate,
           timing: currentCourse.timing
         },
-        userId: localStorage.getItem('userAppId')?localStorage.getItem('userAppId'):null
+        userId: localStorage.getItem('userAppId') ? localStorage.getItem('userAppId') : null
       }
       let body1 = {
         personalDetails: {
@@ -209,7 +270,7 @@ const Enrollment = () => {
           date: formData.sdate,
           timing: currentCourse.timing
         },
-        userId: localStorage.getItem('userAppId')?localStorage.getItem('userAppId'):null
+        userId: localStorage.getItem('userAppId') ? localStorage.getItem('userAppId') : null
       }
       // if(currentCourse.key==='batch-1-200hr'){
       //   if(formData?.residental==='RESIDENTIAL'){
@@ -337,12 +398,20 @@ const Enrollment = () => {
 
 
   const handleSubmit = (e) => {
-
+    const array = ["Yoga Classes for Men (Regular Asana) - On Campus",
+      "Yoga Classes for Women (Regular Asana) - On Campus", "Yoga Asana Regular Classes - (Men & Women) - Online Yoga Classes",
+      "Weekend Yoga Asana Classes - (Men & Women) - On Campus", "Weekend Yoga Asana Classes - (Men & Women) - Online",
+      "Children's Yoga Classes (Regular) - On Campus", "Children's Weekend Yoga Class - On Campus",
+      "Advanced Yoga Asana Regular Class - Online (Only for TYI Teachers)", "Regular Pregnancy Yoga Classes - Online & On Campus",
+      "Advanced Yoga Asana Regular Class - Online (Only for TYI Teachers)", "Healing Yoga Movement & Rhythm - Online", "Yog Prayas - Online",
+      "Online Meditation Course  (Foundation Course)", "Regular Online Meditation Classes", "Couples’ Yoga Classes  - Online"
+    ]
+    const isMatch = array.includes(currentCourse?.title);
     if (e && e.preventDefault) {
       e.preventDefault();
     }
 
-
+    // setEndDate(formData.endDate?.value, formData.startDate)
     if (
       formData.name === '' ||
       formData.name === undefined ||
@@ -351,7 +420,6 @@ const Enrollment = () => {
       setEmpty(1)
     } else if (formData.email === '' || !validateEmail(formData.email) || formData.email === undefined ||
       formData.email === null) {
-      console.log('mail : ', empty);
       setEmpty(2)
     } else if (
       formData.phone === '' ||
@@ -381,8 +449,14 @@ const Enrollment = () => {
     } else if (formData.mode === '') {
       setEmpty('mode')
     }
+    else if (isMatch && formData.startDate === '') {
+      setEmpty(21)
+    }
+    else if (isMatch && formData.endDate === '') {
+      setEmpty(20)
+    }
     else {
-      // setBold(5)
+      setEndDate(formData.endDate?.value, formData.startDate)
       handleSubmit1();
     }
 
@@ -472,6 +546,7 @@ const Enrollment = () => {
               setCourseFee={setCourseFee}
               uploadCheck={uploadCheck}
               setUploadCheck={setUploadCheck}
+              dateDurationChange={dateDurationChange}
             />
           </>
         ) : null}

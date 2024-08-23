@@ -13,6 +13,9 @@ import { parsePhoneNumberFromString, isValidPhoneNumber } from 'libphonenumber-j
 import { authBaseDomain, cmsBaseDomain, razorPayKey } from '../../../../Constants/appSettings'
 import axios from 'axios'
 import { validateEmail } from '../../../../helpers'
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
+
 
 const Personal = ({
   empty,
@@ -33,7 +36,8 @@ const Personal = ({
   setCourseFee,
   uploadCheck,
   setUploadCheck,
-  isLoad
+  isLoad,
+  dateDurationChange
 }) => {
   // {console.log(handleSubmit)}
   //const today = new Date().toISOString().split('T')[0]
@@ -64,6 +68,51 @@ const Personal = ({
     localStorage.setItem('isResidential', value)
   }
   const navigate = useNavigate()
+
+  const handleStartDate = (value) => {
+    const day = value.getDate().toString().padStart(2, '0'); // Pad single digits with leading zero
+    const month = (value.getMonth() + 1).toString().padStart(2, '0'); // Months are zero-based
+    const year = value.getFullYear();
+
+    setValues((prev) => {
+      return {
+        ...prev, startDate: `${day}/${month}/${year}`
+      }
+    })
+    setFormData({ ...formData, startDate: `${day}/${month}/${year}` })
+    if (values.endDate) { createEndDate(`${day}/${month}/${year}`, values.endDate) }
+  }
+
+  const createEndDate = (startDate, value) => {
+    console.log(startDate, value);
+
+    let endDate = formatDate(addMonths(parseDate(startDate ? startDate : values?.startDate), value?.value))
+    setValues((prev) => {
+      return {
+        ...prev, endDate: value, endDateFormat: endDate
+      }
+    })
+    setFormData({ ...formData, endDate: value, duration: value?.value })
+    dateDurationChange(value?.value)
+  }
+
+  // Function to add months to a given date
+  function addMonths(startDate, months) {
+    const date = startDate; // Create a Date object from the start date
+    date.setMonth(date.getMonth() + months); // Add the number of months
+    return date;
+  }
+  function formatDate(date) {
+    const day = date.getDate().toString().padStart(2, '0'); // Day with leading zero
+    const month = (date.getMonth() + 1).toString().padStart(2, '0'); // Month with leading zero
+    const year = date.getFullYear();
+    return `${day}/${month}/${year}`;
+  }
+  function parseDate(dateStr) {
+    const [day, month, year] = dateStr.split('/').map(Number); // Split the date string and convert parts to numbers
+    // Create a new Date object (months are 0-based, so subtract 1 from month)
+    return new Date(year, month - 1, day);
+  }
 
   const validatePhoneNumber = (phoneNumber) => {
     const errors = [];
@@ -146,28 +195,44 @@ const Personal = ({
       return newChecked;
     });
   };
-
+  const [minDate, setMinDate] = useState('');
   useEffect(() => {
-    const array = ["Advanced Yoga Asana Regular Class - Online (Only for TYI Teachers)",
-      "Asana Regular Classes for Women - On Campus", "Asana Regular Classes (Men & Women) - Online",
-      "Weekend Asana Classes (Men & Women) - On Campus", "Weekend Asana Classes (Men & Women) - Online",
-      "Children's Regular Classes - On Campus", "Children'&apos;'s Weekend Classes - On Campus",
-      "Advanced Asana Regular Class - Online (Only for TYI Teachers)", "Yog Prayas - Online",
-      "Online Meditation Course (Foundation Course)", "Regular Online Meditation Classes",
-      "Healing Movement and Rhythm Classes", "Couples' Classes - Online",
-      "IBY Class (Only for TYI TTC Teachers)", "Regular Pregnancy Yoga Class - Online & On Campus"
-    ];
+    const array = ["Yoga Classes for Men (Regular Asana) - On Campus",
+      "Yoga Classes for Women (Regular Asana) - On Campus", "Yoga Asana Regular Classes - (Men & Women) - Online Yoga Classes",
+      "Weekend Yoga Asana Classes - (Men & Women) - On Campus", "Weekend Yoga Asana Classes - (Men & Women) - Online",
+      "Children's Yoga Classes (Regular) - On Campus", "Children's Weekend Yoga Class - On Campus",
+      "Advanced Yoga Asana Regular Class - Online (Only for TYI Teachers)", "Regular Pregnancy Yoga Classes - Online & On Campus",
+      "Advanced Yoga Asana Regular Class - Online (Only for TYI Teachers)", "Healing Yoga Movement & Rhythm - Online", "Yog Prayas - Online",
+      "Online Meditation Course  (Foundation Course)", "Regular Online Meditation Classes", "Couples’ Yoga Classes  - Online"
+    ]
     const isMatch = array.includes(currentCourse?.title);
-    alert(currentCourse?.title)
-    setIsRegular(isMatch)
-    console.log(currentCourse);
+    setIsRegular(isMatch);
 
-    // setSetselectDate(Params.get('date'))
+    const tomorrow = new Date();
+    tomorrow.setDate(tomorrow.getDate() + 1);
+    setMinDate(tomorrow);
+  }, [currentCourse])
+  // useEffect(() => {
 
-    // window.scrollTo(0, 0)
-    // console.log(pageDate?.key,'heoo')
-    // {Params.get('date')===null? window.scrollTo(0, 0): document.getElementById('date-select').scrollIntoView()}
-  }, [isChecked])
+  //   // const array = ["Advanced Yoga Asana Regular Class - Online (Only for TYI Teachers)",
+  //   //   "Asana Regular Classes for Women - On Campus", "Asana Regular Classes (Men & Women) - Online",
+  //   //   "Weekend Asana Classes (Men & Women) - On Campus", "Weekend Asana Classes (Men & Women) - Online",
+  //   //   "Children's Regular Classes - On Campus", "Children'&apos;'s Weekend Classes - On Campus",
+  //   //   "Advanced Asana Regular Class - Online (Only for TYI Teachers)", "Yog Prayas - Online",
+  //   //   "Online Meditation Course (Foundation Course)", "Regular Online Meditation Classes",
+  //   //   "Healing Movement and Rhythm Classes", "Couples' Classes - Online",
+  //   //   "IBY Class (Only for TYI TTC Teachers)", "Regular Pregnancy Yoga Class - Online & On Campus"
+  //   // ];
+  //   // const isMatch = array.includes(currentCourse?.title);
+  //   // setIsRegular(isMatch)
+  //   // console.log(currentCourse);
+
+  //   // setSetselectDate(Params.get('date'))
+
+  //   // window.scrollTo(0, 0)
+  //   // console.log(pageDate?.key,'heoo')
+  //   // {Params.get('date')===null? window.scrollTo(0, 0): document.getElementById('date-select').scrollIntoView()}
+  // }, [isChecked])
 
   const updatedStates = (countryId) => {
     return State.getStatesOfCountry(countryId).map((state) => ({
@@ -770,66 +835,43 @@ const Personal = ({
               />
               {empty === 18 && <small id="fill_err"> Please select course date</small>}
             </div>
-
-            {isRegular && <div className="form_error course_date">
-              <Select
-                styles={customStyles}
-                id="sdate"
-                name="sdate"
-                placeholder="Select Start Date*"
+            {isRegular && <div className="form_error course_date date-input-wrapper">
+              <DatePicker
+                minDate={minDate}
+                visiblity={'hidden'}
+                placeholderText="Select start date*" // Custom placeholder text
+                dateFormat="dd/MM/YYYY"
+                value={values.startDate}
                 form={formData}
                 setField={setFormData}
-                keyName="sdate"
-                errorCheck={setEmpty}
-                options={formattedDates}
-                value={values.selectDate}
                 onChange={(value) => {
-                  setValues(
-                    { country: values.country, state: values.state, city: values.city, sdate: value },
-                    false
-                  )
-                  setFormData((prev) => {
-                    return {
-                      ...prev, sdate: value.value, courseDetails: {
-                        ...prev.courseDetails,
-                        date: value.value
-                      }
-                    }
-                  })
+                  handleStartDate(value)
                 }}
+                onKeyDown={(e) => e.preventDefault()} //
+              // readOnly
               />
-              {empty === 18 && <small id="fill_err"> Please select course date</small>}
+              {empty === 21 && <small id="fill_err"> Please select start date</small>
+              }
             </div>}
 
             {isRegular && <>
               <div className="form_error course_date">
                 <Select
                   styles={customStyles}
-                  id="sdate"
-                  name="sdate"
+                  id="endDate"
+                  name="endDate"
                   placeholder="Select Duration*"
-                  form={formData}
-                  setField={setFormData}
-                  keyName="sdate"
-                  errorCheck={setEmpty}
+                  // form={formData}
+                  // setField={setFormData}
+                  // keyName="endDate"
+                  // // errorCheck={setEmpty}
                   options={durationList}
-                  value={values.selectDate}
+                  value={values.endDate}
                   onChange={(value) => {
-                    setValues(
-                      { country: values.country, state: values.state, city: values.city, sdate: value },
-                      false
-                    )
-                    setFormData((prev) => {
-                      return {
-                        ...prev, sdate: value.value, courseDetails: {
-                          ...prev.courseDetails,
-                          date: value.value
-                        }
-                      }
-                    })
+                    createEndDate('', value)
                   }}
                 />
-                {empty === 18 && <small id="fill_err"> Please select course date</small>}
+                {empty === 20 && <small id="fill_err"> Please select duration</small>}
               </div>
               <div style={{ padding: '10px 0 0 26px', color: '#C9705F', fontWeight: '600' }}>&#8377;1100 off for 12 months</div>
             </>}
@@ -950,8 +992,11 @@ const Personal = ({
               setUploadCheck={setUploadCheck}
               handleResidential={handleResidential}
             />
-
           </form>
+
+          {(formData.startDate && values?.endDateFormat) &&
+            <div className='terms' style={{ fontSize: '2rem' }}>Start date: <b>{values.startDate}</b> <br />
+              Valid till: <b>{values?.endDateFormat}</b></div>}
 
           <div className='terms'>
             <label>
@@ -959,8 +1004,6 @@ const Personal = ({
                 type="checkbox"
                 checked={isChecked}
                 onChange={handleCheckboxChange}
-
-
               />
               I agree to
               <a href="https://theyogainstitute.org/terms-and-conditions"
