@@ -1,4 +1,4 @@
-import React, { useState,lazy, useEffect } from 'react'
+import React, { useState, lazy, useEffect } from 'react'
 import './styles.scss'
 import { Hamburger, Cart, User, Search } from '../../assets/icons/icon'
 import { Link } from 'react-router-dom'
@@ -10,36 +10,36 @@ import {
   CartWhite,
 } from '../../assets/icons/icon'
 
-const MegaMenu = lazy(()=>import('../MegaMenu'))
+const MegaMenu = lazy(() => import('../MegaMenu'))
 
 const Navbar = ({ isUserLoggedIn, abc }) => {
   const navigate = useNavigate()
   const [nav, setNav] = useState(false)
-  const [dropdown,setDropdown]=useState(false)
-  const [scrollClass,setScrollClass] = useState(false)
-  const [scrollImg,setScrollClImg] = useState(false)
+  const [dropdown, setDropdown] = useState(false)
+  const [scrollClass, setScrollClass] = useState(false)
+  const [scrollImg, setScrollClImg] = useState(false)
   const dispatch = useDispatch()
-  const [bold, setBold] = useState(0) 
-  const [ cartItems,setCartItems ] = useState(0)
+  const [bold, setBold] = useState(0)
+  const [cartItems, setCartItems] = useState(0)
 
-  const { cart } = useSelector((state)=>state.shop)
+  const { cart } = useSelector((state) => state.shop)
 
-  const getTotal = ()=>{
-    if(cart?.length===0) return
+  const getTotal = () => {
+    if (cart?.length === 0) return
     let sum = 0
-    cart?.forEach(item=>{
-      sum+= item.quantity  
+    cart?.forEach(item => {
+      sum += item.quantity
     })
-    console.log(sum,'sum')
+    console.log(sum, 'sum')
     return sum
   }
 
   useEffect(() => {
-    window.addEventListener('scroll',()=>{
-      if(window.pageYOffset >= 150) {
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset >= 150) {
         setScrollClass(true)
         setScrollClImg(true)
-      }else {
+      } else {
         setScrollClass(false)
         setScrollClImg(false)
       }
@@ -55,31 +55,29 @@ const Navbar = ({ isUserLoggedIn, abc }) => {
     } else {
       setBold(0)
     }
-  }, [ cart ] )
+  }, [cart])
 
- 
+
   console.log('hasItems', hasItems);
   console.log('cartItems from Nav', cartItems);
-
-  
 
 
   return (
     <>
       <div id='hero-overlay' >
-        <div className={`navbar-container ${scrollClass? 'navigation-color' : '' }`}>
+        <div className={`navbar-container ${scrollClass ? 'navigation-color' : ''}`}>
           <div
             className="hamburger"
             onClick={() => {
               setNav(true)
             }}
           >
-          
+
             {Hamburger}
           </div>
           <div className="title-logo" >
-            <span className='mobile-search' onClick={ ()=>{navigate('/')} } >{ Search }</span>
-            <div className={`header-logo ${scrollImg? 'navigation-img' : ''}`}>
+            <span className='mobile-search' onClick={() => { navigate('/') }} >{Search}</span>
+            <div className={`header-logo ${scrollImg ? 'navigation-img' : ''}`}>
               <img
                 style={{ transition: 'none !important' }}
                 placeholder="none"
@@ -92,28 +90,27 @@ const Navbar = ({ isUserLoggedIn, abc }) => {
           <div className="quick-actions">
             <ul>
               <Link to='/search'>
-                <li onClick={ ()=>{navigate('/')} } >{Search}</li></Link>
+                <li onClick={() => { navigate('/') }} >{Search}</li></Link>
               {/* <Link to="/shop">
                 <li>{Cart}</li>
               </Link> */}
 
-{hasItems && (
-                <Link to='/shop/cart'>   
+              {hasItems && (
+                <Link to='/shop/cart'>
+                  <li>{abc.color === 'white' ? Cart : abc.color === 'orange' ? CartWhite : CartBlack}  <span style={{ color: '#CA4625' }} className='cart-count' >{cartItems}</span></li></Link>
+              )}
 
-                <li>{ abc.color === 'white' ? Cart : abc.color === 'orange' ? CartWhite : CartBlack }  <span style={{ color:'#CA4625' }} className='cart-count' >{ cartItems }</span></li></Link>
-            )}
-              
 
-            
+
               {/* <Link className='comingSoon' to="/">
                 <li>{Gift}</li>
               </Link> */}
-              <Link onMouseOver={()=>{setDropdown(true)}} onMouseOut={()=>{setDropdown(false)}} to={isUserLoggedIn ? '/user/profile' : '/user/sign-in'}>
+              <Link onMouseOver={() => { setDropdown(true) }} onMouseOut={() => { setDropdown(false) }} to={isUserLoggedIn ? '/user/profile' : '/user/sign-in'}>
                 <li>{User}
-                  <div style={dropdown===true && isUserLoggedIn ?{ display:'block' }:{}} className='user-dropdown'>
+                  <div style={dropdown === true && isUserLoggedIn ? { display: 'block' } : {}} className='user-dropdown'>
                     <ul>
-                      <li onClick={()=>navigate('/user/profile')} >User Profile</li>
-                      <li onClick={async()=>{await dispatch(logoutUserAction());navigate('/user/sign-in')}} >Logout</li>
+                      <li onClick={() => navigate('/user/profile')} >User Profile</li>
+                      <li onClick={async () => { await dispatch(logoutUserAction()); navigate('/user/sign-in') }} >Logout</li>
                     </ul>
                   </div>
                 </li>
