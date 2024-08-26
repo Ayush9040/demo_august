@@ -31,17 +31,33 @@ const CourseDetails = ({ pageDate }) => {
   const [showFixedDiv, setShowFixedDiv] = useState(false);
 
 
-  const handleScroll = () => {
-    const enrollButton = document.getElementById("enrollButton");
-    const enrollButtonPosition = enrollButton.getBoundingClientRect().bottom;
+  // const handleScroll = () => {
+  //   const enrollButton = document.getElementById("enrollButton");
+  //   const enrollButtonPosition = enrollButton.getBoundingClientRect().bottom;
 
-    // Show fixed div when the enrollButton crosses a certain point
-    if (enrollButtonPosition < 0) {
-      setShowFixedDiv(true);
-    } else {
-      setShowFixedDiv(false);
-    }
-  };
+  //   // Show fixed div when the enrollButton crosses a certain point
+  //   if (enrollButtonPosition < 0) {
+  //     setShowFixedDiv(true);
+  //   } else {
+  //     setShowFixedDiv(false);
+  //   }
+  // };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const enrollButton = document.getElementById("enrollButton");
+      if (enrollButton) {
+        const enrollButtonPosition = enrollButton.getBoundingClientRect().bottom;
+        setShowFixedDiv(enrollButtonPosition < 0);
+      }
+    };
+  
+    window.addEventListener('scroll', handleScroll);
+  
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   const checkHandler = () => {
     if (pageDate.dates.length !== 0) {
@@ -67,15 +83,15 @@ const CourseDetails = ({ pageDate }) => {
     return <CommonBtn text={'Enroll Now'} />
   }
 
-  useEffect(() => {
-    if (window.innerWidth <= 768) {
-      window.addEventListener("scroll", handleScroll);
-    }
+  // useEffect(() => {
+  //   if (window.innerWidth <= 768) {
+  //     window.addEventListener("scroll", handleScroll);
+  //   }
 
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  //   return () => {
+  //     window.removeEventListener("scroll", handleScroll);
+  //   };
+  // }, []);
 
   let options = [
     {

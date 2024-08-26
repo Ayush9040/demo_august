@@ -161,6 +161,7 @@
     border-radius: 50%;
     border: 1px solid var(--brick-red);
     // transform: rotate(180deg);
+   
   }
   .rangeslider-vertical .rangeslider__labels {
     width: 25px;
@@ -170,6 +171,7 @@
     display: flex;
     justify-content: flex-end;
     gap: 2rem;
+    
     .course-card {
       width: 100%;
     }

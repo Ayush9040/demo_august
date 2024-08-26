@@ -389,13 +389,13 @@ section {
 
 
 /* Only show the fixed div on mobile view */
-// @media (min-width: 769px) {
-//   .fixed-div {
-//     display: flex;
-//     z-index: 999;
-//   }
+@media (min-width: 769px) {
+  .fixed-div {
+    display: flex;
+    z-index: 999;
+  }
   
-// }
+}
 
 .common-btn-footer .global-common-btn {
   border: 3px solid #fff;
