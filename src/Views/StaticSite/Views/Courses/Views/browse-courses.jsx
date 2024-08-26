@@ -153,7 +153,7 @@ const BrowseCourses = () => {
             </Accordion>
           </div>
           <div className="course-grid">
-            {category?.slice(0, 5).map((item, i) => (
+            {category?.slice(0, 50).map((item, i) => (
               <CourseCard
                 key={i}
                 color={item.colorCode}

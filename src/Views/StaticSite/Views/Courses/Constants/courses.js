@@ -13230,7 +13230,7 @@ const certificate = {
     image: `${baseDomain}${courseAssets.courseAsset72}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset72}`,
     metaDescription: 'Knowledge of nadi system and energy channels',
-    mostPopular: false,
+    mostPopular: true,
     rating: 5,
     colorCode: '#B77E7E',
     timing: ' ',
@@ -13504,7 +13504,7 @@ const certificate = {
     cardImage: `${baseDomain}${courseAssets.courseAsset74}`,
     metaDescription:
       'We offer a supportive and compassionate support group to understand and discuss Cancer confidently and intelligently.',
-    mostPopular: false,
+    mostPopular: true,
     rating: 5,
     colorCode: '#C48E8C',
     timing: 'Fridays & Saturdays: 3:00 pm - 5:00 pm (IST)',
@@ -13707,7 +13707,7 @@ const certificate = {
     },
     image: `${baseDomain}${courseAssets.courseAsset75}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset75}`,
-    mostPopular: false,
+    mostPopular: true,
     metaDescription:
       'Become a certified Yoga therapist through The Yoga Institute.',
     rating: 5,
