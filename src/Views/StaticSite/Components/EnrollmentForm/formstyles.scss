@@ -157,7 +157,7 @@
 
 .item-name {
   margin-inline-end: 0.5em;
-  font-size: 15px;
+  font-size: 13px;
   font-weight: 600;
 }
 
@@ -685,6 +685,7 @@
       .gender {
         // padding-left: 1rem;
         display: flex;
+        width: 50%;
 
         input[type='radio'] {
           appearance: none;
@@ -1318,7 +1319,7 @@ input[type='radio']:checked::before {
     flex-direction: column;
     height: 50%;
     margin: 0 auto;
-    text-align: center;
+    text-align: left;
     width: fit-content;
 
     .details_box {

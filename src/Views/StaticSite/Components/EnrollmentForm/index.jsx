@@ -51,7 +51,7 @@ const Enrollment = () => {
     pincode: '',
     AGE: '',
     nationality: '',
-    // gender: '',
+    gender: '',
     school: '',
     course: '',
     completion: '',
@@ -214,7 +214,7 @@ const Enrollment = () => {
           state: formData.state,
           city: formData.city,
           pincode: formData.pincode,
-          // gender: formData.gender,
+          gender: formData.gender,
           age: formData.AGE,
           nationality: formData.nationality,
         },
@@ -249,7 +249,7 @@ const Enrollment = () => {
           state: formData.state,
           city: formData.city,
           pincode: formData.pincode,
-          // gender: formData.gender,
+          gender: formData.gender,
           age: formData.AGE,
           nationality: formData.nationality,
         },
@@ -436,6 +436,8 @@ const Enrollment = () => {
     }
     else if (formData.pincode === '') {
       setEmpty(8)
+    } else if (formData.gender === '') {
+      setEmpty(11)
     } else if (formData.sdate === '') {
       setEmpty(18)
     }
@@ -444,9 +446,7 @@ const Enrollment = () => {
     // } else if (formData.nationality === '') {
     //   setEmpty(10)
     // }
-    else if (formData.gender === '') {
-      setEmpty(11)
-    } else if (formData.mode === '') {
+     else if (formData.mode === '') {
       setEmpty('mode')
     }
     else if (isMatch && formData.startDate === '') {

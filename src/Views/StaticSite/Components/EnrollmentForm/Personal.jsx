@@ -820,6 +820,48 @@ const Personal = ({
           </div> */}
 
 
+<div className="personal_gender">
+              <span className="gender-text">Gender*</span>
+              <div className="gender form_error">
+                <label className="gender_radio">
+                  Male&nbsp;
+                  <input
+                    type="radio"
+                    value="MALE"
+                    name="gender"
+                    checked={formData.gender === 'MALE'}
+                    onChange={(e) => {
+                      if (e.target.checked) {
+                        setFormData({ ...formData, gender: e.target.value })
+                        setEmpty(0)
+                      }
+                    }}
+                  />
+                </label>
+                <label className="gender_radio">
+                  Female&nbsp;
+                  <input
+                    className="radio"
+                    type="radio"
+                    value="FEMALE"
+                    name="gender"
+                    checked={formData.gender === 'FEMALE'}
+                    onChange={(e) => {
+                      if (e.target.checked) {
+                        setFormData(
+                          { ...formData, gender: e.target.value },
+                          setEmpty(0)
+                        )
+                      }
+                    }}
+                  />
+                </label>
+               
+              </div>
+              {empty === 11 && <small style={{ width: '100%', fontSize: '11px', textAlign: 'right' }}> Please select one option</small>}
+            </div>
+
+
             <div className="form_error course_date">
               <Select
                 styles={customStyles}
@@ -830,6 +872,7 @@ const Personal = ({
                 setField={setFormData}
                 keyName="sdate"
                 errorCheck={setEmpty}
+                isSearchable={false}
                 options={formattedDates}
                 value={values.selectDate}
                 onChange={(value) => {
@@ -890,45 +933,7 @@ const Personal = ({
               <div style={{ padding: '10px 0 0 26px', color: '#C9705F', fontWeight: '600' }}>&#8377;1100 off for 12 months</div>
             </>}
 
-            {/* <div className="personal_gender">
-              <span className="gender-text">Gender*</span>
-              <div className="gender form_error">
-                <label className="gender_radio">
-                  Male&nbsp;
-                  <input
-                    type="radio"
-                    value="MALE"
-                    name="gender"
-                    checked={formData.gender === 'MALE'}
-                    onChange={(e) => {
-                      if (e.target.checked) {
-                        setFormData({ ...formData, gender: e.target.value })
-                        setEmpty(0)
-                      }
-                    }}
-                  />
-                </label>
-                <label className="gender_radio">
-                  Female&nbsp;
-                  <input
-                    className="radio"
-                    type="radio"
-                    value="FEMALE"
-                    name="gender"
-                    checked={formData.gender === 'FEMALE'}
-                    onChange={(e) => {
-                      if (e.target.checked) {
-                        setFormData(
-                          { ...formData, gender: e.target.value },
-                          setEmpty(0)
-                        )
-                      }
-                    }}
-                  />
-                </label>
-                {empty === 11 && <small> Please select one option</small>}
-              </div>
-            </div> */}
+            
 
 
             {/* <div className="DOB_box form_error">
@@ -1055,7 +1060,7 @@ const Personal = ({
             Proceed to payment
             </button> */}
 
-            {!isResidential && <button type="button" onClick={handleSubmit} className={!isLoad ? 'next_button button register-primary-btn' : 'next_button button register-primary-btn no-event'} disabled={isLoad}>
+            {<button type="button" onClick={handleSubmit} className={!isLoad ? 'next_button button register-primary-btn' : 'next_button button register-primary-btn no-event'} disabled={isLoad}>
               {!isLoad ? <><span id="txt">Proceed To Payment&nbsp; </span> </> : <><span className="loader">
                 <span className="dot"></span>
                 <span className="dot"></span>
@@ -1063,13 +1068,13 @@ const Personal = ({
               </span></>}
             </button>}
 
-            {isResidential && <button type="button" onClick={handleSubmit} className={!isLoad ? 'next_button button register-primary-btn' : 'next_button button register-primary-btn no-event'} disabled={isLoad}>
+            {/* {isResidential && <button type="button" onClick={handleSubmit} className={!isLoad ? 'next_button button register-primary-btn' : 'next_button button register-primary-btn no-event'} disabled={isLoad}>
               {!isLoad ? <><span id="txt">Submit&nbsp; </span> </> : <><span className="loader">
                 <span className="dot"></span>
                 <span className="dot"></span>
                 <span className="dot"></span>
               </span></>}
-            </button>}
+            </button>} */}
 
           </div>
         </div>

@@ -451,7 +451,82 @@ const CourseDetails = ({
               <small className="mode-err">Please select 1 mode</small>
             )}
             <div className="last_radio_button-cols">
-              {shouldShowResidentialOption() && (
+              
+              {shouldShowNonResidentialOption() && (
+                //   <label htmlFor="" className="course_details_text">
+                //   <input
+                //     type="radio"
+                //     name="resident"
+                //     value="NONRESIDENTIAL"
+                //     checked={
+                //       formData.mode === 'OFFLINE' &&
+                //       formData.residental === 'NONRESIDENTIAL'
+                //     }
+                //     disabled={
+                //       currentCourse.nonResidential === false ||
+                //       formData.mode === 'ONLINE'
+                //     }
+                //     style={
+                //       currentCourse.nonResidential === false
+                //         ? {
+                //           background:
+                //               'url(https://ecom-static-site-prod.s3.ap-south-1.amazonaws.com/icons/icons8-multiply-24.png)',
+                //         }
+                //         : {}
+                //     }
+                //     onChange={(e) => {
+                //       if (e.target.checked) {
+                //         setFormData({
+                //           ...formData,
+                //           residental: e.target.value,
+                //         })
+                //         setEmpty(0)
+                //         setCourseFee(
+                //           currentCourse?.fees?.offlineFee?.nonResidentialFee
+                //         )
+                //         // setCourseFee(updatedFees( currentCourse?.key,'NONRESIDENTIAL' ))
+                //       }
+                //     }}
+                //   />{' '}
+                //   &nbsp; Non-Residential - {currentCourse?.fees?.offlineFee?.nonResidentialFee}
+                // </label>
+
+
+                <label class="item-label">
+                  <input class="item-input" type="radio" name="resident" value="NONRESIDENTIAL" aria-labelledby="delivery-0-name" aria-describedby="delivery-0-shipping delivery-0-price"
+                    checked={selectedOption === 'NONRESIDENTIAL'}
+                    onChange={(e) => {
+                      handleResidential(false);
+                      setSelectedOption('NONRESIDENTIAL')
+                      if (e.target.checked) {
+                        setFormData({
+                          ...formData,
+                          residental: e.target.value,
+                          mode: 'OFFLINE'
+                        })
+                        setEmpty(0)
+                        setCourseFee(
+                          currentCourse?.fees?.offlineFee?.nonResidentialFee
+                        )
+                        // setCourseFee(updatedFees( currentCourse?.key,'NONRESIDENTIAL' ))
+                      }
+                    }}
+                  />
+                  <span class="item-info">
+                    <span id="delivery-0-name" class="item-name">Oncampus(Without Residence)</span>
+                    <br />
+                    {/* <small id="delivery-0-shipping" class="item-shipping">5–10 business days</small> */}
+                  </span>
+                  <strong id="delivery-0-price" class="item-price"> &#8377;{currentCourse?.fees?.offlineFee?.nonResidentialFee}</strong>
+                </label>
+              )}
+
+
+              {empty === 'subMode' && (
+                <small className="mode-err">Please select submode</small>
+              )}
+
+{shouldShowResidentialOption() && (
                 //   <label htmlFor="" className="course_details_text">
                 //   <input
                 //     type="radio"
@@ -520,93 +595,33 @@ const CourseDetails = ({
                     }}
                   />
                   <span class="item-info">
-                    <span id="delivery-0-name" class="item-name">OnCampus(Residential)</span>
+                    <span id="delivery-0-name" class="item-name">Oncampus-(Residential)-Triple Sharing Basis</span>
                     <br />
                     {/* <small id="delivery-0-shipping" class="item-shipping">5–10 business days</small> */}
                   </span>
                   <strong id="delivery-0-price" class="item-price">&#8377;{currentCourse?.fees?.offlineFee?.residentialFee}</strong>
+                  
                 </label>
+                
               )}
-              {shouldShowNonResidentialOption() && (
-                //   <label htmlFor="" className="course_details_text">
-                //   <input
-                //     type="radio"
-                //     name="resident"
-                //     value="NONRESIDENTIAL"
-                //     checked={
-                //       formData.mode === 'OFFLINE' &&
-                //       formData.residental === 'NONRESIDENTIAL'
-                //     }
-                //     disabled={
-                //       currentCourse.nonResidential === false ||
-                //       formData.mode === 'ONLINE'
-                //     }
-                //     style={
-                //       currentCourse.nonResidential === false
-                //         ? {
-                //           background:
-                //               'url(https://ecom-static-site-prod.s3.ap-south-1.amazonaws.com/icons/icons8-multiply-24.png)',
-                //         }
-                //         : {}
-                //     }
-                //     onChange={(e) => {
-                //       if (e.target.checked) {
-                //         setFormData({
-                //           ...formData,
-                //           residental: e.target.value,
-                //         })
-                //         setEmpty(0)
-                //         setCourseFee(
-                //           currentCourse?.fees?.offlineFee?.nonResidentialFee
-                //         )
-                //         // setCourseFee(updatedFees( currentCourse?.key,'NONRESIDENTIAL' ))
-                //       }
-                //     }}
-                //   />{' '}
-                //   &nbsp; Non-Residential - {currentCourse?.fees?.offlineFee?.nonResidentialFee}
-                // </label>
-
-
-                <label class="item-label">
-                  <input class="item-input" type="radio" name="resident" value="NONRESIDENTIAL" aria-labelledby="delivery-0-name" aria-describedby="delivery-0-shipping delivery-0-price"
-                    checked={selectedOption === 'NONRESIDENTIAL'}
-                    onChange={(e) => {
-                      handleResidential(false);
-                      setSelectedOption('NONRESIDENTIAL')
-                      if (e.target.checked) {
-                        setFormData({
-                          ...formData,
-                          residental: e.target.value,
-                          mode: 'OFFLINE'
-                        })
-                        setEmpty(0)
-                        setCourseFee(
-                          currentCourse?.fees?.offlineFee?.nonResidentialFee
-                        )
-                        // setCourseFee(updatedFees( currentCourse?.key,'NONRESIDENTIAL' ))
-                      }
-                    }}
-                  />
-                  <span class="item-info">
-                    <span id="delivery-0-name" class="item-name">OnCampus(Non-Residential)</span>
-                    <br />
-                    {/* <small id="delivery-0-shipping" class="item-shipping">5–10 business days</small> */}
-                  </span>
-                  <strong id="delivery-0-price" class="item-price"> &#8377;{currentCourse?.fees?.offlineFee?.nonResidentialFee}</strong>
-                </label>
-              )}
-              {empty === 'subMode' && (
-                <small className="mode-err">Please select submode</small>
-              )}
+              {shouldShowResidentialOption() && (
+                  <div style={{ fontSize: '14px', textAlign: 'center' }}>For Single sharing and Two sharing rooms, please contact us</div>
+                )}
+              
             </div>
 
-
+            
 
           </form>
+
+          
 
 
 
           <form class="check_course" onsubmit="return false">
+
+
+          
 
 
             {/* <div class="grid grid-2"> */}

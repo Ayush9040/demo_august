@@ -369,6 +369,7 @@ section {
   background-color: rgb(201, 112, 95);
   padding: 10px 17px;
   box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+  z-index: 999;
 }
 
 .fixed-div span {
@@ -388,12 +389,13 @@ section {
 
 
 /* Only show the fixed div on mobile view */
-@media (min-width: 769px) {
-  .fixed-div {
-    display: none;
-  }
+// @media (min-width: 769px) {
+//   .fixed-div {
+//     display: flex;
+//     z-index: 999;
+//   }
   
-}
+// }
 
 .common-btn-footer .global-common-btn {
   border: 3px solid #fff;
