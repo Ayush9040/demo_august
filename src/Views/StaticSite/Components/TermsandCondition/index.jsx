@@ -27,7 +27,7 @@ const TermsCondition = () => {
   return (
     <>
       <div className='terms-container'>
-        <InnerNavComponent abc={tnc} />
+        {/* <InnerNavComponent abc={tnc} /> */}
         <div className='banner-heading'>
                 Terms & Conditions
           <div className='bottom-line'></div>

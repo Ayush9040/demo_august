@@ -13,6 +13,10 @@ import { parsePhoneNumberFromString, isValidPhoneNumber } from 'libphonenumber-j
 import { authBaseDomain, cmsBaseDomain, razorPayKey } from '../../../../Constants/appSettings'
 import axios from 'axios'
 import { validateEmail } from '../../../../helpers'
+import MessageModal from '../MessageModal'
+import TermsCondition from '../TermsandCondition'
+// import TermsAndConditionsModal from '../TermsandCondition/t&Cpopup'
+import CustomModal from '../TermsandCondition/t&Cpopup'
 
 const Personal = ({
   empty,
@@ -45,6 +49,7 @@ const Personal = ({
   const [validationErrors, setValidationErrors] = useState([]);
   const [phoneValue, setPhoneValue] = useState(formData.phone);
   const [bold, setBold] = useState(0)
+  const [open, setOpen] = useState(false);
 
   // const [empty, setEmpty] = useState(0)
   // const [isLoad, setIsLoad] = useState(false)
@@ -515,6 +520,15 @@ const Personal = ({
 
   // }
 
+  const handleOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
+
 
 
   return (
@@ -879,7 +893,7 @@ const Personal = ({
               handleResidential={handleResidential}
             />
 
-          </form>
+          </form> 
 
           <div className='terms'>
             <label>
@@ -891,12 +905,28 @@ const Personal = ({
 
               />
               I agree to
-              <a href="https://theyogainstitute.org/terms-and-conditions"
-                target="_blank"
+              
+            </label>
+
+            <a 
+                // href="https://theyogainstitute.org/terms-and-conditions"
+                // target="_blank"
+                onClick={handleOpen}
+                style={{ color: "blue", marginLeft: "2px", textDecoration: "underline", cursor: "pointer" }}
                 rel="noopener noreferrer">
                 Terms & Conditions
               </a>
-            </label>
+
+            {open && (
+        // <MessageModal 
+        //   message={<TermsCondition />} 
+        //   closePopup={handleClose} 
+        //   type="Terms and Conditions" // You can pass any other props as needed
+        // />
+        // <TermsAndConditionsModal />
+        <CustomModal isShippingModalOpen={handleOpen} setIsShipppingModalOpen={handleClose} />
+      )}
+
             {isChecked === false ? empty === 19 && (
               <div style={{ color: 'red', marginLeft: '0', marginTop: '1rem' }} className='mar_top'>
                 *Please agree to the condition!
