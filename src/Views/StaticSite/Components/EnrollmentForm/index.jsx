@@ -309,7 +309,8 @@ const Enrollment = () => {
         }
 
         if (response?.data?.success) {
-          if (currentCourse.key !== 'satsang' && currentCourse.key !== 'samattvam' && localStorage.getItem('isResidential') == 'false') { //for residential no payment required
+          if (currentCourse.key !== 'satsang' && currentCourse.key !== 'samattvam') { //for residential no payment required
+            //  && localStorage.getItem('isResidential') == 'false'
             const paymentOrderResponse = await axios.post(`${cmsBaseDomain}/payment/order?enrollmentFormId=${response.data.data['_id']}`, {
               amount: courseFee,
               notes: currentCourse.metaDescription,
