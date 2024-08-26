@@ -7,7 +7,7 @@
   // margin: auto;
   // padding: 1.5em 0;
   // width: calc(100% - 3em);
-  width: 14em;
+  width: 17em;
   margin-top: 15px;
 }
 
@@ -157,6 +157,8 @@
 
 .item-name {
   margin-inline-end: 0.5em;
+  font-size: 15px;
+  font-weight: 600;
 }
 
 .item-price {
@@ -319,7 +321,7 @@
 
 .check_course .item-label:hover {
   // background-color: hsl(233,10%,95%);
-  background-color: rgba(202, 70, 37, 0.1);
+  background-color: #dfebdf;
 }
 
 .check_course .item-label .icon {
@@ -332,11 +334,15 @@
 
 
 
-.check_course .item-input:checked~.icon,
-.check_course .item-input:checked~.item-info .item-name,
-.check_course .item-input:checked~.item-info .item-shipping,
-.check_course .item-input:checked~.item-price {
-  color: hsl(233, 90%, 50%);
+.check_course .item-input:checked ~ .icon,
+.check_course .item-input:checked ~ .item-info .item-name,
+.check_course .item-input:checked ~ .item-info .item-shipping,
+.check_course .item-input:checked ~ .item-price {
+  color: hsl(233,90%,50%);
+}
+.check_course .item-label:has(.item-input:checked) {
+  background-color: #afb4af;
+  box-shadow: 0 0 0 2px hsl(233,90%,50%) inset;
 }
 
 .check_course .item-label:has(.item-input:checked) {
@@ -378,17 +384,17 @@
 }
 
 .check_course .item-label:has(.item-input:checked) {
-  background-color: rgba(202, 70, 37, 0.1);
-  box-shadow: 0 0 0 2px rgba(202, 70, 37, 1) inset;
-
+  background-color: #b8cbb8;
+  box-shadow: 0 0 0 2px green inset;
+  
 }
 
-.check_course .item-input:checked~.item-info .item-name {
-  color: rgba(202, 70, 37, 1);
+.check_course .item-input:checked ~ .item-info .item-name {
+  color: green; 
 }
 
-.check_course .item-input:checked~.item-price {
-  color: rgba(202, 70, 37, 1);
+.check_course .item-input:checked ~ .item-price {
+  color: green;
 }
 
 

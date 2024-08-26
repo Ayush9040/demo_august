@@ -1,0 +1,74 @@
+.modal-container {
+  padding: 1rem;
+}
+
+.shipping-modal-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.shipping-modal-tabs {
+  display: flex;
+}
+
+.modal-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 5rem;
+}
+
+.modal-input {
+  border-radius: 5rem;
+  border: 1px solid grey;
+  width: 80%;
+  height: 4rem;
+  padding-left: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.flex-end {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.mt-2 {
+  margin-top: 2rem;
+}
+
+.discount-input {
+  height: 4rem;
+  padding-left: 2rem;
+  border-radius: 3rem;
+  border: 1px solid grey;
+  margin: 1rem 0;
+}
+
+.address-checkbox {
+  margin-right: 1rem;
+}
+
+.address-label {
+  font-size: 2rem;
+  color: gray;
+}
+
+.next-button {
+  padding: 1.5rem;
+  border-radius: 3rem;
+  width: 15rem;
+  background-color: white;
+  border: 1px solid black;
+  font-size: 1.5rem;
+}
+
+.justify-center {
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (max-width: 780px) {
+  .modal-content {
+    grid-template-columns: 1fr;
+  }
+}

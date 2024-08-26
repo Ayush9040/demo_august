@@ -520,7 +520,7 @@ const CourseDetails = ({
                     }}
                   />
                   <span class="item-info">
-                    <span id="delivery-0-name" class="item-name">Residential</span>
+                    <span id="delivery-0-name" class="item-name">OnCampus(Residential)</span>
                     <br />
                     {/* <small id="delivery-0-shipping" class="item-shipping">5–10 business days</small> */}
                   </span>
@@ -588,7 +588,7 @@ const CourseDetails = ({
                     }}
                   />
                   <span class="item-info">
-                    <span id="delivery-0-name" class="item-name">Non-Residential</span>
+                    <span id="delivery-0-name" class="item-name">OnCampus(Non-Residential)</span>
                     <br />
                     {/* <small id="delivery-0-shipping" class="item-shipping">5–10 business days</small> */}
                   </span>
