@@ -27,7 +27,7 @@ const Hours200 = () => {
     const phaseOneRef = useRef(null);
     const [courseFee, setCourseFee] = useState(0)
     const [joinedCount, setJoinedCount] = useState(0)
-    const navigagte = useNavigate();
+    const navigate = useNavigate();
 
     const benefitsRef = useRef();
     const curriculumRef = useRef();
@@ -362,7 +362,6 @@ const Hours200 = () => {
                                         courses.map((batch, index) => (
                                             <div
                                                 onMouseEnter={() => setBatchHover(index)}
-                                                onClick={!isMobile ? () => { navigagte(batch?.navigate); } : undefined}
                                                 // className={` ${(courses?.length - 1 == index && courses?.length % 2 != 0) === courses.length - 1 ? 'odd-last' : 'batch'}`}
                                                 className={` ${!isMobile && courses?.length - 1 === index && courses?.length % 2 !== 0 ? 'odd-last' : 'even-batch'}`}
                                                 key={index}
@@ -430,7 +429,7 @@ const Hours200 = () => {
                                                         </p>
                                                     </div>
 
-                                                    <div className="batch-reg-now-btn">
+                                                    <div className="batch-reg-now-btn" onClick={() => { navigate(batch?.navigate) }}>
                                                         Register Now
                                                     </div>
 
@@ -469,7 +468,7 @@ const Hours200 = () => {
                                                                         selectedCourseMode: null
                                                                     }));
                                                                     // navigateRegister()
-                                                                    navigagte(batch?.navigate)
+                                                                    navigate(batch?.navigate)
                                                                 }
                                                                 }>View Details</div>
 
