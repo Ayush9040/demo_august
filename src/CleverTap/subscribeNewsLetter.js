@@ -8,7 +8,7 @@ export const handleCTSubscribeNewsletterClicked = ({
     if (window.clevertap) {
         window.clevertap.event.push("Subscribe_Newsletter_Clicked", {
            "Email_ID": email,
-            "Date_Time":date
+            "Date_Time": new Date().toISOString(),
         });
         console.log("SubscribeNewsletterClicked event pushed to CleverTap");
     } else {

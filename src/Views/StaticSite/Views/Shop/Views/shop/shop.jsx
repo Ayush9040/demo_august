@@ -21,7 +21,7 @@ import { Link, useNavigate,useSearchParams } from 'react-router-dom'
 // import { banner } from '../../../../assets/images/imageAsset'
 import { updateLocalCart } from '../../helpers/helper'
 import Footer from '../../../../Components/Footer'
-import { handleCTAddToCart } from '../../../../../../CleverTap/shopEvents'
+import { handleCTAddToCart, handleCTBuyNowStep1 } from '../../../../../../CleverTap/shopEvents'
 
 const Shop = () => {
   const dispatch = useDispatch()
@@ -184,6 +184,51 @@ if (product) {
     dispatch(updateCartData(JSON.parse(localStorage.getItem('cart'))))
     isLoggedIn ? activeCartId ?  await updateCart(activeCartId,{ items:JSON.parse(localStorage.getItem('cart')) }) : await createCart({ items:JSON.parse(localStorage.getItem('cart')) }):null
     dispatch(getActiveCartData())
+
+
+    const details = localStorage.getItem('cart');
+    console.log('one prod ', JSON.parse(details));
+    console.log('one iddx ', idx, e);
+    console.log('All Products', products)
+
+
+    const product = products.find(product => product._id === idx);
+    // console.log('categories finding ', categories);
+    const findCategory = categories.find(category => product.categoryId === category._id)
+    // console.log('findCategory ', findCategory);
+    const qty = JSON.parse(details).find(item => item.productId === idx);
+    console.log('qty ', qty)
+    
+
+if (product) {
+    console.log('Product details of the clicked item:', product);
+    // Now you can use the `product` object to pass its details to your `addToCart` function
+    // addCart(idx, event, product);
+    handleCTBuyNowStep1({
+      productName: product?.name,
+      productId: product?._id,
+      category: findCategory?.name,
+      productPrice: product?.price,
+      quantity: qty?.quantity,
+      stockAvailability: product?.stockCount,
+      // checkoutUrl,
+      pageName: window.location.href,
+      productUrl: 'product/'+product?._id,
+      // gender,
+      // color,
+      // discount,
+      // discountedPrice,
+      // productSize,
+      // language,
+      // material,
+      // printed
+    })
+} else {
+    console.error('Product not found for the given ID:', idx);
+}
+    
+
+
     navigate('/shop/cart')
   }
 

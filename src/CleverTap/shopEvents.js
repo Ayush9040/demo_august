@@ -128,7 +128,7 @@ export const handleCTCheckoutCompleted = ({
         window.clevertap.event.push("Checkout_Completed", {
             "Checkout_URL": checkoutUrl,
             "Payment_Status": paymentStatus,
-            "Product_Name": productName,
+            "Product_Name": productName.join(", "),
             "Product_ID": productId,
             "Product_URL": productUrl,
             "Category": category,
@@ -149,3 +149,99 @@ export const handleCTCheckoutCompleted = ({
         console.error('CleverTap is not initialized.');
     }
 };
+
+
+export const handleCTCheckoutFailed = ({
+    checkoutUrl,
+    paymentStatus,
+    productName,
+    productId,
+    productUrl,
+    category,
+    productPrice,
+    quantity,
+    stockAvailability,
+    gender,
+    color,
+    discount,
+    discountedPrice,
+    productSize,
+    language,
+    material,
+    printed
+}) => {
+    if (window?.clevertap) {
+        window.clevertap.event.push("Checkout_Failed", {
+            "Checkout_URL": checkoutUrl,
+            "Payment_Status": paymentStatus,
+            "Product_Name": productName,
+            "Product_ID": productId,
+            "Product_URL": productUrl,
+            "Category": category,
+            "Product_Price": productPrice,
+            "Quantity": quantity,
+            "Stock_Availability": stockAvailability,
+            "Gender": gender,
+            "Color": color,
+            "Discount": discount,
+            "Discounted_Price": discountedPrice,
+            "Product_Size": productSize,
+            "Language": language,
+            "Material": material,
+            "Printed": printed
+        });
+        console.log('Checkout_Failed event tracked:');
+    } else {
+        console.error('CleverTap is not initialized.');
+    }
+};
+
+
+export const handleCTBuyNowStep1 = ({
+    productName,
+    productId,
+    category,
+    productPrice,
+    quantity,
+    stockAvailability,
+    checkoutUrl,
+    pageName,
+    productUrl,
+    gender,
+    color,
+    discount,
+    discountedPrice,
+    productSize,
+    language,
+    material,
+    printed
+  }) => {
+    // Trigger CleverTap event when the user proceeds with Book Now Step 2
+    if (window?.clevertap) {
+      window.clevertap.event.push("Buy_Now_Clicked", {
+        "Product Name": productName,
+        "Product ID": productId,
+        "Category": category,
+        "Product Price": productPrice,
+        "Quantity": quantity,
+        "Stock Availability": stockAvailability,
+        "Checkout_URL": checkoutUrl,
+        "Page_Name": pageName,
+        "Product URL": productUrl,
+        "Gender": gender,
+        "Color": color,
+        "Discount": discount ? discount : "N/A",
+        "Discounted Price": discountedPrice ? discountedPrice : "N/A",
+        "Product Size": productSize,
+        "Language": language,
+        "Material": material,
+        "Printed": printed,
+        "date_time_timestamp": new Date().toISOString(),
+      });
+  
+      console.log("Book_Now_Step2 event tracked", window.clevertap);
+    } else {
+      console.error("CleverTap is not initialized.");
+    }
+  };
+  

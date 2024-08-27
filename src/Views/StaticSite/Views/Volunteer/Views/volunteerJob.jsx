@@ -15,6 +15,7 @@ import { fetchProgramsData, postApplicationData } from '../Volunteer.action'
 import InnerNavComponent from '../../../Components/InnerNavComponent'
 import Loader from '../../../Components/Loader'
 import './style.scss'
+import { handleCTSubmitVolunteerDetails } from '../../../../../CleverTap/volunteerPageEvents'
 
 const VolunteerJob = () => {
   const dispatch = useDispatch()
@@ -93,6 +94,14 @@ const VolunteerJob = () => {
         profileId: program['_id'],
       }
       await dispatch(postApplicationData(volunteerPost))
+
+      handleCTSubmitVolunteerDetails({
+        name: formData.firstName, 
+        email: formData.email, 
+        imageURL: imageAssest, 
+        resumeURL: certificateAssest, 
+        volunteerCategory: volunteerPrograms.title
+      })
 
       // await axios.post('https://www.authserver-staging-be.theyogainstituteonline.org/v1/ali/mail', {
       //   type: null,

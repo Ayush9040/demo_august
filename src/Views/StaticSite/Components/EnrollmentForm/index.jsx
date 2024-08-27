@@ -13,6 +13,7 @@ import { authBaseDomain, cmsBaseDomain, razorPayKey } from '../../../../Constant
 import axios from 'axios'
 import { handleCTProccedToPayment } from '../../../../CleverTap/buttonClicked'
 import { trackPageView } from '../../../../CleverTap/pageViewEvents'
+import { handleCTCoursePaymentPageVisit, handleCTPaymentCompletedCourse, handleCTPaymentFailed } from '../../../../CleverTap/buttonClicked'
 
 const Enrollment = () => {
   const { user } = useSelector((state) => state.auth)
@@ -274,7 +275,86 @@ const Enrollment = () => {
                 // Navigare to Success if razorpay_payment_id, razorpay_order_id, razorpay_signature is there
                 if(res.razorpay_payment_id && res.razorpay_order_id && res.razorpay_signature) {
                   await axios.post(`${ authBaseDomain }/ali/mail`, mailTemplate)
+
+                  handleCTPaymentCompletedCourse({
+                    // cost,
+                    // centre,
+                    // modeOfPayment,
+                    paymentStatus: "Success",
+                    courseName: formData.courseName,
+                    courseCategory: formData.category,
+                    startDate: formData.sdate,
+                    endDate: formData.sdate,
+                    pageName: window.location.href,
+                    checkoutUrl: window.location.href,
+                    pageUrl: window.location.href,
+                    // feesResidential,
+                    // feesNonResidential,
+                    // feesOnline,
+                    timings: currentCourse.timing ,
+                    // tenure,
+                    // courseMode,
+                    // courseType,
+                    // courseSubType,
+                    // language,
+                    // dayType,
+                    batchNo: currentCourse.batch,
+                    // dateTimeTimestamp,
+                    // preRequisite,
+                    status: "Success",
+                    name: formData.name,
+                    emailId: formData.email,
+                    phoneNumber: formData.phone,
+                    state: formData.state,
+                    city: formData.city,
+                    pinCode: formData.pincode,
+                    gender: formData.gender,
+                    // age,
+                    // nationality,
+                    // medicalIssues,
+                    // residentialStatus,
+                  })
+
                   navigate(`/enrollment_thankyou/${currentCourse.key}`)
+                } else {
+                  handleCTPaymentFailed({
+                    // cost,
+                    // centre,
+                    // modeOfPayment,
+                    paymentStatus: "Success",
+                    courseName: formData.courseName,
+                    courseCategory: formData.category,
+                    startDate: formData.sdate,
+                    endDate: formData.sdate,
+                    pageName: window.location.href,
+                    checkoutUrl: window.location.href,
+                    pageUrl: window.location.href,
+                    // feesResidential,
+                    // feesNonResidential,
+                    // feesOnline,
+                    timings: currentCourse.timing ,
+                    // tenure,
+                    // courseMode,
+                    // courseType,
+                    // courseSubType,
+                    // language,
+                    // dayType,
+                    batchNo: currentCourse.batch,
+                    // dateTimeTimestamp,
+                    // preRequisite,
+                    status: "Success",
+                    name: formData.name,
+                    emailId: formData.email,
+                    phoneNumber: formData.phone,
+                    state: formData.state,
+                    city: formData.city,
+                    pinCode: formData.pincode,
+                    gender: formData.gender,
+                    // age,
+                    // nationality,
+                    // medicalIssues,
+                    // residentialStatus,
+                  })
                 }
               },
               prefill: {
@@ -451,6 +531,12 @@ const Enrollment = () => {
         });
     };
 }, [sessionId, startTime]);
+
+
+useEffect(() => {
+  const currentPageUrl = window.location.href;
+  handleCTCoursePaymentPageVisit(currentPageUrl);
+}, []);
 
   return (
     <>

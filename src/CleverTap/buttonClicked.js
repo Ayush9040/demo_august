@@ -235,3 +235,210 @@ export const handleCTCourseClick = ({
       console.error("CleverTap is not initialized.");
     }
   }
+
+
+  export const handleCTCoursePaymentPageVisit = (pageUrl) => {
+    if (window?.clevertap) {
+        window.clevertap.event.push("Course_Payment_Page_Visit", {
+            "Page_URL": pageUrl,
+        });
+
+        console.log("Course_Payment_Page_Visit event tracked", window.clevertap);
+    } else {
+        console.error("CleverTap is not initialized.");
+    }
+};
+
+
+export const handleCTLocateUsDetails = ({
+  instituteName,
+  address,
+  phoneNumber,
+  websiteLink,
+  emailAddress
+}) => {
+  if (window?.clevertap) {
+      window.clevertap.event.push("LocateUs_Details", {
+          "Institute_Name": instituteName,
+          "Address": address,
+          "Phone_Number": phoneNumber,
+          "Website_Link": websiteLink,
+          "Email_Address": emailAddress,
+      });
+
+      console.log("LocateUs_Details event tracked", window.clevertap);
+  } else {
+      console.error("CleverTap is not initialized.");
+  }
+};
+
+
+export const handleCTPaymentCompletedCourse = ({
+  cost,
+  centre,
+  modeOfPayment,
+  paymentStatus,
+  courseName,
+  courseCategory,
+  startDate,
+  endDate,
+  pageName,
+  checkoutUrl,
+  pageUrl,
+  feesResidential,
+  feesNonResidential,
+  feesOnline,
+  timings,
+  tenure,
+  courseMode,
+  courseType,
+  courseSubType,
+  language,
+  dayType,
+  batchNo,
+  dateTimeTimestamp,
+  preRequisite,
+  status,
+  name,
+  emailId,
+  phoneNumber,
+  state,
+  city,
+  pinCode,
+  gender,
+  age,
+  nationality,
+  medicalIssues,
+  residentialStatus,
+}) => {
+  if (window?.clevertap) {
+    window.clevertap.event.push("Payment_Completed_Course", {
+      "Cost": cost,
+      "Date of Payment":  new Date().toISOString(),
+      "Centre": centre,
+      "Mode of Payment": modeOfPayment,
+      "Payment status": paymentStatus,
+      "Course_name": courseName,
+      "Course Category": courseCategory,
+      "Start_Date": startDate,
+      "End_date": endDate,
+      "Page_name": pageName,
+      "checkout_url": checkoutUrl,
+      "Page_Url": pageUrl,
+      "Fees_Residential": feesResidential,
+      "Fees_Non_Residential": feesNonResidential,
+      "Fees_Online": feesOnline,
+      "Timings": timings,
+      "Tenure": tenure,
+      "Course Mode": courseMode,
+      "Course Type": courseType,
+      "Course-SubType": courseSubType,
+      "Language": language,
+      "Day_Type": dayType,
+      "Batch_No": batchNo,
+      "date_time_timestamp": dateTimeTimestamp,
+      "Pre-requisite": preRequisite,
+      "status": status,
+      "Name": name,
+      "Email_ID": emailId,
+      "Phone_Number": phoneNumber,
+      "State": state,
+      "City": city,
+      "Pin Code": pinCode,
+      "Gender": gender,
+      "Age": age,
+      "Nationality": nationality,
+      "Medical Issues": medicalIssues,
+      "Residential/Non-Residential": residentialStatus,
+    });
+    console.log("Payment_Completed_Course event tracked", window.clevertap);
+  } else {
+    console.error("CleverTap is not initialized.");
+  }
+};
+
+
+export const handleCTPaymentFailed = ({
+  cost,
+  centre,
+  modeOfPayment,
+  paymentStatus,
+  courseName,
+  courseCategory,
+  startDate,
+  endDate,
+  pageName,
+  checkoutUrl,
+  pageUrl,
+  feesResidential,
+  feesNonResidential,
+  feesOnline,
+  timings,
+  tenure,
+  courseMode,
+  courseType,
+  courseSubType,
+  language,
+  dayType,
+  batchNo,
+  dateTimeTimestamp,
+  preRequisite,
+  status,
+  name,
+  emailId,
+  phoneNumber,
+  state,
+  city,
+  pinCode,
+  gender,
+  age,
+  nationality,
+  medicalIssues,
+  residentialStatus,
+}) => {
+  if (window?.clevertap) {
+    window.clevertap.event.push("Payment_Failed", {
+      "Cost": cost,
+      "Date of Payment":  new Date().toISOString(),
+      "Centre": centre,
+      "Mode of Payment": modeOfPayment,
+      "Payment status": paymentStatus,
+      "Course_name": courseName,
+      "Course Category": courseCategory,
+      "Start_Date": startDate,
+      "End_date": endDate,
+      "Page_name": pageName,
+      "checkout_url": checkoutUrl,
+      "Page_Url": pageUrl,
+      "Fees_Residential": feesResidential,
+      "Fees_Non_Residential": feesNonResidential,
+      "Fees_Online": feesOnline,
+      "Timings": timings,
+      "Tenure": tenure,
+      "Course Mode": courseMode,
+      "Course Type": courseType,
+      "Course-SubType": courseSubType,
+      "Language": language,
+      "Day_Type": dayType,
+      "Batch_No": batchNo,
+      "date_time_timestamp": dateTimeTimestamp,
+      "Pre-requisite": preRequisite,
+      "status": status,
+      "Name": name,
+      "Email_ID": emailId,
+      "Phone_Number": phoneNumber,
+      "State": state,
+      "City": city,
+      "Pin Code": pinCode,
+      "Gender": gender,
+      "Age": age,
+      "Nationality": nationality,
+      "Medical Issues": medicalIssues,
+      "Residential/Non-Residential": residentialStatus,
+    });
+    console.log("Payment_Failed event tracked", window.clevertap);
+  } else {
+    console.error("CleverTap is not initialized.");
+  }
+};
+
