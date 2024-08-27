@@ -40,7 +40,21 @@ $primary-hover-color: #47126B;
     .phase-1 {
         width: 100vw;
 
-        @include media-breakpoint("lt-sm") {}
+        @include media-breakpoint("lt-sm") {
+            display: grid;
+            justify-content: center;
+        }
+
+        .nav-mobile {
+            display: none;
+
+            @include media-breakpoint("lt-sm") {
+                display: block;
+                margin-top: 30px;
+                margin-inline: auto;
+            }
+
+        }
 
         .registration-header {
             padding: 0px 7.986vw 3.472vw 7.986vw;
@@ -55,6 +69,8 @@ $primary-hover-color: #47126B;
                 padding: 0px;
                 display: flex;
                 flex-direction: column;
+                margin-top: 0px;
+
             }
 
             .p1-content-wrap {
@@ -66,6 +82,7 @@ $primary-hover-color: #47126B;
                     width: 100vw;
                     font-size: 10px;
                     align-items: center;
+                    margin-top: 20px;
                 }
 
                 .certification-heading {
@@ -915,7 +932,7 @@ $primary-hover-color: #47126B;
                             padding: 0px 20px 0px 20px;
                             gap: 4px;
                             border-radius: 34px;
-                            border: 1px solid #8063A0;
+                            border: 1px solid #CA4625;
                             margin-right: 5px;
                             cursor: pointer;
 
@@ -954,9 +971,10 @@ $primary-hover-color: #47126B;
                             position: relative;
 
                             @include media-breakpoint("lt-sm") {
-                                width: 80%;
+                                width: 90%;
                                 margin-inline: auto;
                                 margin-bottom: 10px;
+                                padding-bottom: 15px;
                             }
 
                             .batch-top-wrap {
@@ -1051,6 +1069,28 @@ $primary-hover-color: #47126B;
 
                             }
 
+                            .batch-reg-now-btn {
+                                display: none;
+
+                                @include media-breakpoint("lt-sm") {
+                                    width: 95%;
+                                    height: 40px;
+                                    border-radius: 8px;
+                                    background: #CA4625;
+
+                                    font-size: 16px;
+                                    font-weight: 500;
+                                    line-height: 21.79px;
+                                    text-align: left;
+                                    color: #FFFFFF;
+
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    margin-inline: auto;
+                                }
+                            }
+
                             .batch-over {
                                 width: 100%;
                                 height: 100%;
@@ -1074,13 +1114,27 @@ $primary-hover-color: #47126B;
                                     width: 20.92328vw;
                                     border-radius: 1.111vw;
                                     padding: 1.111vw 1.111vw 25px 1.111vw;
-                                    height: 220px;
+                                    // height: 0px;
+                                    overflow: hidden;
+                                    animation: batch-over 0.4s linear forwards;
+
+                                    @keyframes batch-over {
+                                        0% {
+                                            max-height: 0;
+                                            /* Start from height 0 */
+                                        }
+
+                                        100% {
+                                            max-height: 220px;
+                                            /* End at the max height, adjust as needed */
+                                        }
+                                    }
 
                                     .batch-indication {
                                         width: fit-content;
                                         padding: 6px 16px 6px 16px;
                                         border-radius: 40px;
-                                        background: #ECE2F7;
+                                        background: #F6D3CC;
                                         margin-inline: auto;
                                     }
 
@@ -1165,7 +1219,6 @@ $primary-hover-color: #47126B;
 
                                 }
                             }
-
 
                         }
 
@@ -1474,8 +1527,10 @@ $primary-hover-color: #47126B;
                                 display: flex;
                                 gap: 20px;
                                 align-items: center;
-                                height: fit-content;
-                                width: 83vw;
+                                min-height: 80px;
+                                width: 87vw;
+                                min-height: 70px;
+                                padding: 14px;
                             }
 
                             .asatanga-circle {
@@ -1513,6 +1568,8 @@ $primary-hover-color: #47126B;
                 @include media-breakpoint("lt-sm") {
                     padding: 0px 0px 0px 0px;
                     margin-top: 30px;
+                    width: 100vw;
+                    overflow: hidden;
                 }
 
                 .l3-header {
@@ -1679,14 +1736,27 @@ $primary-hover-color: #47126B;
                 padding: 0px 7.986vw 0px 7.986vw;
                 margin-top: 70px;
 
+                @include media-breakpoint("lt-sm") {
+                    padding: 0px;
+                    margin-top: 25px;
+                    width: 100vw;
+                    overflow: hidden;
+                }
+
                 .p16-heading {
                     font-size: 32px;
-                    font-style: italic;
                     font-weight: 700;
                     line-height: 24px;
                     text-align: left;
                     color: #CA4625;
-                    margin-bottom: 40px
+                    margin-bottom: 40px;
+
+                    @include media-breakpoint("lt-sm") {
+                        font-size: 18px;
+                        line-height: 24px;
+                        margin-bottom: 20px;
+                        margin-left: 20px;
+                    }
                 }
 
                 .course-caters {
@@ -1698,6 +1768,7 @@ $primary-hover-color: #47126B;
                         grid-template-columns: repeat(1, 1fr);
                         width: 89.822vw;
                         gap: 3.562vw 0;
+                        margin-inline: auto;
                     }
 
                     .cater-card {
@@ -2016,6 +2087,8 @@ $primary-hover-color: #47126B;
 
                 @include media-breakpoint("lt-sm") {
                     padding: 30px 0pc 0px 0px;
+                    width: 100vw;
+                    overflow: hidden;
                 }
 
                 .p6-header {
@@ -2169,6 +2242,7 @@ $primary-hover-color: #47126B;
                 @include media-breakpoint("lt-sm") {
                     padding: 30px 0px 40px 0px;
                     width: 100vw;
+                    overflow: hidden;
                 }
 
                 .p7-header {
@@ -2236,6 +2310,9 @@ $primary-hover-color: #47126B;
 
                 @include media-breakpoint("lt-sm") {
                     padding: 30px 0px 15px 0px;
+                    width: 100vw;
+                    overflow: hidden;
+
                 }
 
                 .p8-header {
@@ -2457,6 +2534,7 @@ $primary-hover-color: #47126B;
 
                         @include media-breakpoint("lt-sm") {
                             width: 42vw;
+                            height: auto;
                         }
                     }
 
@@ -2930,6 +3008,8 @@ $primary-hover-color: #47126B;
 
                 @include media-breakpoint ("lt-sm") {
                     padding: 0px 0px 0px 0px;
+                    width: 100vw;
+                    overflow: hidden;
                 }
 
                 .p11-header {
@@ -2969,6 +3049,7 @@ $primary-hover-color: #47126B;
                         @include media-breakpoint("lt-sm") {
                             width: 43.257vw;
                             margin-right: 1rem;
+                            height: 181px;
 
                         }
 
@@ -3045,6 +3126,8 @@ $primary-hover-color: #47126B;
 
                 @include media-breakpoint ("lt-sm") {
                     padding: 20px 0px 0px 0px;
+                    width: 100vw;
+                    overflow: hidden;
                 }
 
 
@@ -3177,6 +3260,7 @@ $primary-hover-color: #47126B;
                 @include media-breakpoint ("lt-sm") {
                     padding: 20px 0px 300px 0px;
                     width: 100vw;
+                    overflow: hidden;
                 }
 
                 .p13-header {
@@ -3217,6 +3301,7 @@ $primary-hover-color: #47126B;
                         margin-top: 10px;
                         margin-bottom: -76px;
                         margin-inline: auto;
+                        overflow: visible;
                     }
 
                     .review-slider-mobile {
@@ -3617,29 +3702,37 @@ $primary-hover-color: #47126B;
 
             .container {
                 padding: 1em;
-                background: linear-gradient(0deg, #F3E9FB 0%, #E7CBFF 100%);
+                background: linear-gradient(360deg, #FFF3F0 0%, #FFDCD3 100%);
                 border-radius: 14px !important;
                 box-shadow: 0px 0px 20px 0px #0000003e;
+
+                .space-between {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                }
 
                 .brand-logo {
                     position: absolute;
                     z-index: 1;
-                    left: 42%;
-                    top: 11.45vw;
+                    left: 40%;
+                    top: 12.45vw;
                 }
 
                 .challenge {
                     font-weight: 600;
-                    font-size: 1em;
+                    font-size: 14px;
                     color: $black;
+                    text-align: center;
+                    margin-inline: auto;
+                    margin-block: 10px;
                 }
 
                 .page-base-reg-btm {
-                    width: 60%;
+                    width: 50%;
                     height: 10.178vw;
                     border-radius: 8px;
-                    background: linear-gradient(179.6deg, #ffffff1a 0.35%, #c9705f40 141.19%, #c9705f99 291.34%);
-
+                    background: #CA4625;
 
                     display: flex;
                     align-items: center;
@@ -3660,13 +3753,15 @@ $primary-hover-color: #47126B;
                 }
 
                 .ftr {
-                    margin-top: 1em;
+                    margin-block: 5px;
                     font-size: 3.562vw;
                     font-weight: 500;
+                    display: flex;
+                    align-items: center;
 
                     img {
                         position: relative;
-                        top: 2.25px;
+                        top: 5px;
                         margin-right: 6px;
                     }
                 }

@@ -189,6 +189,10 @@ const Hours200 = () => {
 
             <div className='phase-1'>
 
+                <div className="nav-mobile">
+                    <img src="/icons/200-hours/mobile-title.svg" alt="" />
+                </div>
+
                 <div className='registration-header'>
 
                     <div className='p1-content-wrap'>
@@ -356,7 +360,7 @@ const Hours200 = () => {
                                             >
                                                 <div className='batch-top-wrap'>
                                                     <div className="batch-num-btn">Batch - {index + 1}</div>
-                                                    {/* <div className="online-batch-price">₹{batch?.onlinePrice} </div> */}
+                                                    <div className="online-batch-price">₹00 </div>
                                                 </div>
 
                                                 <div className="batch-name">{batch?.batchType}</div>
@@ -415,6 +419,10 @@ const Hours200 = () => {
                                                             Days:
                                                             <span className='batch-info-label-span'>{batch?.days}</span>
                                                         </p>
+                                                    </div>
+
+                                                    <div className="batch-reg-now-btn">
+                                                        Register Now
                                                     </div>
 
                                                 </div>
@@ -547,13 +555,14 @@ const Hours200 = () => {
 
                         <div className='space-between'>
                             <div className='challenge'>200 Hour Basic Teacher Training Course</div>
-                            <div className='page-base-reg-btm' onClick={navigateRegister}>Register Now</div>
+                            {/* <div className='page-base-reg-btm' onClick={navigateRegister}>Register Now</div> */}
                         </div>
 
-                        <img className='brand-logo' src="/icons/21-days/brand-logo.svg" alt="" />
+                        <img className='brand-logo' src="/icons/200-hours/brand-logo.svg" alt="" />
 
                         <div className='space-between ftr'>
-                            <div><img src="/icons/200-hours/yoga4 1.png" alt="contribution" />Attended: 200,000+</div>
+                            <div><img src="/icons/200-hours/attended-mob.svg" alt="contribution" />Contribution: ₹999</div>
+                            <div><img src="/icons/200-hours/attended-mob.svg" alt="contribution" />Attended: 200,000+</div>
                         </div>
                     </div>
 
