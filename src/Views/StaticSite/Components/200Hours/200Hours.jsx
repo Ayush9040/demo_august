@@ -58,7 +58,7 @@ const Hours200 = () => {
             days: "Monday - Friday"
         },
         {
-            batchType: "",
+            batchType: "2 Year Advanced Teacher Training Course",
             duration: "24 Months",
             mode: "On Campus",
             language: "English",
@@ -67,7 +67,7 @@ const Hours200 = () => {
             days: "Saturday - Sunday"
         },
         {
-            batchType: "",
+            batchType: "4 Month Advanced Teacher Training Course",
             duration: "04 Months",
             mode: "Online & On Campus",
             language: "English",
@@ -76,7 +76,7 @@ const Hours200 = () => {
             days: "Monday - Saturday"
         },
         {
-            batchType: "",
+            batchType: "3 Month Advanced Teacher Training Course",
             duration: "07 Months",
             mode: "Online & On Campus",
             language: "English",
@@ -85,7 +85,7 @@ const Hours200 = () => {
             days: "Saturday - Sunday"
         },
         {
-            batchType: "",
+            batchType: "2 Month Advanced Teacher Training Course ",
             duration: "07 Months",
             mode: "Online & On Campus",
             language: "English",
