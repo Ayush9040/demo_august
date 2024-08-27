@@ -1,4 +1,6 @@
 .course-detail-page {
+  margin-bottom: 16vh;
+
   .main-section {
     display: flex;
     padding: 3rem 5rem;
@@ -216,6 +218,7 @@
 }
 @media (max-width: 1600px) {
   .course-detail-page {
+    margin-bottom: 7vh;
     .main-section {
       .course-info {
         h1 {
@@ -271,6 +274,7 @@
 
 @media (max-width: 786px) {
   .course-detail-page {
+    margin-bottom: 16vh;
     .main-section {
       flex-direction: column;
       & > div {
@@ -401,4 +405,3 @@ section {
   border: 3px solid #fff;
   color: #fff;
 }
-

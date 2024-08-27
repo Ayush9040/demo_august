@@ -51,9 +51,9 @@ const CourseDetails = ({ pageDate }) => {
         setShowFixedDiv(enrollButtonPosition < 0);
       }
     };
-  
+
     window.addEventListener('scroll', handleScroll);
-  
+
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
@@ -124,6 +124,11 @@ const CourseDetails = ({ pageDate }) => {
       title: 'FAQ',
       key: 6,
     },
+    {
+      id: 'refund-policy',
+      title: 'Refund Policy',
+      key: 7,
+    },
   ]
 
   const selectStyles = {
@@ -174,6 +179,9 @@ const CourseDetails = ({ pageDate }) => {
         break
       case 'FAQ':
         setDetail(6)
+        break
+      case 'Refund Policy':
+        setDetail(7)
         break
       default:
         setDetail(1)
@@ -303,7 +311,7 @@ const CourseDetails = ({ pageDate }) => {
                   (
                     selectDate ? (
                       <Link
-                      
+
                         to={
                           isLoggedIn
                             ? `/enrollment/${pageDate.key}`///?date=${selectDate}
@@ -311,7 +319,7 @@ const CourseDetails = ({ pageDate }) => {
                         }
                       >
                         {/* <CommonBtn text={'Enroll Now'} /> */}
-                        <EnrollBtn text={'Enroll Now'} /> 
+                        <EnrollBtn text={'Enroll Now'} />
                       </Link>
                     ) : (
                       // scroll()
@@ -323,7 +331,7 @@ const CourseDetails = ({ pageDate }) => {
                         }
                       >
                         {/* <CommonBtn text={'Enroll Now'} /> */}
-                        <EnrollBtn text={'Enroll Now'} /> 
+                        <EnrollBtn text={'Enroll Now'} />
                       </Link>
                     )
                   ) :
@@ -335,12 +343,12 @@ const CourseDetails = ({ pageDate }) => {
                     }
                   >
                     {/* <CommonBtn text={'Enroll Now'} /> */}
-                    <EnrollBtn text={'Enroll Now'} /> 
+                    <EnrollBtn text={'Enroll Now'} />
                   </Link> :
                     (<div >
                       <div style={{ opacity: '0.4' }}>
                         {/* <CommonBtn text={'Enroll Now'} /> */}
-                        <EnrollBtn text={'Enroll Now'} /> 
+                        <EnrollBtn text={'Enroll Now'} />
                       </div>
                       <div style={{ fontSize: '1.5rem', padding: '1.5rem' }}>No dates available for this course</div>
                     </div>)
@@ -459,6 +467,14 @@ const CourseDetails = ({ pageDate }) => {
             })}
           </div>
         )}
+        <div className="details-section " id="refund-policy">
+          <h1>Refund Policy</h1>
+          {selectComponent('u-list', {title: '', points: [{listItem:"The Yoga Institute has no refund policy for all its programmes. The only exception to this policy is in the event of a programme cancelled by the institute. In such cases, the student/participant will be offered a credit that can be used for any other programme or a refund of the event fee.",subItems:[]}]})}
+          {/* {pageDate?.offerings?.map(({ type, content }) => {
+            return selectComponent(type, content)
+          })} */}
+         
+        </div>
       </div>
 
       {showFixedDiv && (
@@ -466,35 +482,11 @@ const CourseDetails = ({ pageDate }) => {
           <span>{pageDate?.title}</span>
           {/* <button className="enroll-now-button">Enroll Now</button> */}
           <div onClick={checkHandler} className='common-btn-footer'>
-                {pageDate?.dates?.length !== 0 ?
-                  (
-                    selectDate ? (
-                      <Link
-                      
-                        to={
-                          isLoggedIn
-                            ? `/enrollment/${pageDate.key}`///?date=${selectDate}
-                            : `/user/sign-in/?location=${pageDate.key}`//&date=${selectDate}
-                        }
-                      >
-                        {/* <CommonBtn text={'Enroll Now'} /> */}
-                        <EnrollBtn text={'Enroll Now'} /> 
-                      </Link>
-                    ) : (
-                      // scroll()
-                      <Link
-                        to={
-                          isLoggedIn
-                            ? `/enrollment/${pageDate.key}`///?date=${selectDate}
-                            : `/user/sign-in/?location=${pageDate.key}`//&date=${selectDate}
-                        }
-                      >
-                        {/* <CommonBtn text={'Enroll Now'} /> */}
-                        <EnrollBtn text={'Enroll Now'} /> 
-                      </Link>
-                    )
-                  ) :
-                  (pageDate?.key === 'samattvam' || pageDate?.key === 'satsang' || pageDate?.key === 'ma-yoga-shastra' ? <Link
+            {pageDate?.dates?.length !== 0 ?
+              (
+                selectDate ? (
+                  <Link
+
                     to={
                       isLoggedIn
                         ? `/enrollment/${pageDate.key}`///?date=${selectDate}
@@ -502,20 +494,44 @@ const CourseDetails = ({ pageDate }) => {
                     }
                   >
                     {/* <CommonBtn text={'Enroll Now'} /> */}
-                    <EnrollBtn text={'Enroll Now'} /> 
-                  </Link> :
-                    (<div >
-                      <div style={{ opacity: '0.4' }}>
-                        {/* <CommonBtn text={'Enroll Now'} /> */}
-                        <EnrollBtn text={'Enroll Now'} /> 
-                      </div>
-                      <div style={{ fontSize: '1.5rem', padding: '1.5rem' }}>No dates available for this course</div>
-                    </div>)
-
-                  )
+                    <EnrollBtn text={'Enroll Now'} />
+                  </Link>
+                ) : (
+                  // scroll()
+                  <Link
+                    to={
+                      isLoggedIn
+                        ? `/enrollment/${pageDate.key}`///?date=${selectDate}
+                        : `/user/sign-in/?location=${pageDate.key}`//&date=${selectDate}
+                    }
+                  >
+                    {/* <CommonBtn text={'Enroll Now'} /> */}
+                    <EnrollBtn text={'Enroll Now'} />
+                  </Link>
+                )
+              ) :
+              (pageDate?.key === 'samattvam' || pageDate?.key === 'satsang' || pageDate?.key === 'ma-yoga-shastra' ? <Link
+                to={
+                  isLoggedIn
+                    ? `/enrollment/${pageDate.key}`///?date=${selectDate}
+                    : `/user/sign-in/?location=${pageDate.key}`//&date=${selectDate}
                 }
+              >
+                {/* <CommonBtn text={'Enroll Now'} /> */}
+                <EnrollBtn text={'Enroll Now'} />
+              </Link> :
+                (<div >
+                  <div style={{ opacity: '0.4' }}>
+                    {/* <CommonBtn text={'Enroll Now'} /> */}
+                    <EnrollBtn text={'Enroll Now'} />
+                  </div>
+                  <div style={{ fontSize: '1.5rem', padding: '1.5rem' }}>No dates available for this course</div>
+                </div>)
 
-                {/* {error === 1 && (
+              )
+            }
+
+            {/* {error === 1 && (
                   <small
                     style={{
                       color: 'white',
@@ -529,7 +545,7 @@ const CourseDetails = ({ pageDate }) => {
                   *Please Select Date/Time!
                   </small>
                 )} */}
-              </div>
+          </div>
         </div>
       )}
     </>

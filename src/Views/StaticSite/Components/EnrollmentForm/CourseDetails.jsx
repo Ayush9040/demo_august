@@ -513,7 +513,7 @@ const CourseDetails = ({
                     }}
                   />
                   <span class="item-info">
-                    <span id="delivery-0-name" class="item-name">Oncampus(Without Residence)</span>
+                    <span id="delivery-0-name" class="item-name">Oncampus (Without Residence)</span>
                     <br />
                     {/* <small id="delivery-0-shipping" class="item-shipping">5–10 business days</small> */}
                   </span>
@@ -595,7 +595,7 @@ const CourseDetails = ({
                     }}
                   />
                   <span class="item-info">
-                    <span id="delivery-0-name" class="item-name">Oncampus-(Residential)-Triple Sharing Basis</span>
+                    <span id="delivery-0-name" class="item-name">Oncampus - (Residential)<br></br>Triple Sharing Basis</span>
                     <br />
                     {/* <small id="delivery-0-shipping" class="item-shipping">5–10 business days</small> */}
                   </span>
@@ -605,7 +605,7 @@ const CourseDetails = ({
                 
               )}
               {shouldShowResidentialOption() && (
-                  <div style={{ fontSize: '14px', textAlign: 'center' }}>For Single sharing and Two sharing rooms, please contact us</div>
+                  <div style={{ fontSize: '12px', textAlign: 'center', marginTop: '-5px', color: '#000' }}>For Single sharing and Two sharing rooms, please contact us</div>
                 )}
               
             </div>

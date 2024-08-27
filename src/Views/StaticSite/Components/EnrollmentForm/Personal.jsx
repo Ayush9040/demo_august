@@ -212,7 +212,7 @@ const Personal = ({
     ]
     const isMatch = array.includes(currentCourse?.title);
     setIsRegular(isMatch);
-
+    localStorage.setItem('isRegular', isMatch)
     const tomorrow = new Date();
     tomorrow.setDate(tomorrow.getDate() + 1);
     setMinDate(tomorrow);
@@ -820,7 +820,7 @@ const Personal = ({
           </div> */}
 
 
-<div className="personal_gender">
+            <div className="personal_gender">
               <span className="gender-text">Gender*</span>
               <div className="gender form_error">
                 <label className="gender_radio">
@@ -856,7 +856,7 @@ const Personal = ({
                     }}
                   />
                 </label>
-               
+
               </div>
               {empty === 11 && <small style={{ width: '100%', fontSize: '11px', textAlign: 'right' }}> Please select one option</small>}
             </div>
@@ -933,7 +933,7 @@ const Personal = ({
               <div style={{ padding: '10px 0 0 26px', color: '#C9705F', fontWeight: '600' }}>&#8377;1100 off for 12 months</div>
             </>}
 
-            
+
 
 
             {/* <div className="DOB_box form_error">
@@ -1012,7 +1012,7 @@ const Personal = ({
               handleResidential={handleResidential}
             />
 
-          </form> 
+          </form>
 
           {(formData.startDate && values?.endDateFormat) &&
             <div className='terms' style={{ fontSize: '2rem' }}>Start date: <b>{values.startDate}</b> <br />
@@ -1026,27 +1026,27 @@ const Personal = ({
                 onChange={handleCheckboxChange}
               />
               I agree to
-              
+
             </label>
 
-            <a 
-                // href="https://theyogainstitute.org/terms-and-conditions"
-                // target="_blank"
-                onClick={handleOpen}
-                style={{ color: "blue", marginLeft: "2px", textDecoration: "underline", cursor: "pointer" }}
-                rel="noopener noreferrer">
-                Terms & Conditions
-              </a>
+            <a
+              // href="https://theyogainstitute.org/terms-and-conditions"
+              // target="_blank"
+              onClick={handleOpen}
+              style={{ color: "blue", marginLeft: "2px", textDecoration: "underline", cursor: "pointer" }}
+              rel="noopener noreferrer">
+              Terms & Conditions
+            </a>
 
             {open && (
-        // <MessageModal 
-        //   message={<TermsCondition />} 
-        //   closePopup={handleClose} 
-        //   type="Terms and Conditions" // You can pass any other props as needed
-        // />
-        // <TermsAndConditionsModal />
-        <CustomModal isShippingModalOpen={handleOpen} setIsShipppingModalOpen={handleClose} />
-      )}
+              // <MessageModal 
+              //   message={<TermsCondition />} 
+              //   closePopup={handleClose} 
+              //   type="Terms and Conditions" // You can pass any other props as needed
+              // />
+              // <TermsAndConditionsModal />
+              <CustomModal isShippingModalOpen={handleOpen} setIsShipppingModalOpen={handleClose} />
+            )}
 
             {isChecked === false ? empty === 19 && (
               <div style={{ color: 'red', marginLeft: '0', marginTop: '1rem' }} className='mar_top'>

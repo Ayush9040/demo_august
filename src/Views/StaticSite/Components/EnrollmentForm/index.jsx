@@ -71,7 +71,8 @@ const Enrollment = () => {
     terms: '',
     startDate: '',
     endDate: '',
-    months: ''
+    months: '',
+    endDateFormat: ''
   })
 
   const handleEmpty1 = (e) => {
@@ -132,6 +133,8 @@ const Enrollment = () => {
 
   const setEndDate = (months, startDate) => {
     let endDate = formatDate(addMonths(parseDate(startDate), months))
+    console.log(endDate);
+
     // setFormData({ ...formData, endDate: endDate })
     let originalFee = AllCourses.find((item) => item.key === courseId)
     let newAmnt = originalFee?.fees?.onlineFee * months
@@ -147,7 +150,7 @@ const Enrollment = () => {
       }
     }));
     setFormData((prev) => {
-      return { ...prev, endDate: endDate }
+      return { ...prev, endDateFormat: endDate }
     })
     setCourseFee(newAmnt)
   }
@@ -155,6 +158,8 @@ const Enrollment = () => {
   function addMonths(startDate, months) {
     const date = startDate; // Create a Date object from the start date
     date.setMonth(date.getMonth() + months); // Add the number of months
+    console.log(date);
+
     return date;
   }
   function formatDate(date) {
@@ -218,6 +223,8 @@ const Enrollment = () => {
           age: formData.AGE,
           nationality: formData.nationality,
         },
+        startDate: formData.startDate,
+        endDate: formData.endDateFormat,
         academicQualification: qualificationData,
         workExperience: listData,
         others: {
@@ -253,6 +260,8 @@ const Enrollment = () => {
           age: formData.AGE,
           nationality: formData.nationality,
         },
+        startDate: formData.startDate,
+        endDate: formData.endDateFormat,
         academicQualification: qualificationData,
         workExperience: listData,
         others: {
@@ -447,7 +456,7 @@ const Enrollment = () => {
     // } else if (formData.nationality === '') {
     //   setEmpty(10)
     // }
-     else if (formData.mode === '') {
+    else if (formData.mode === '') {
       setEmpty('mode')
     }
     else if (isMatch && formData.startDate === '') {
@@ -457,7 +466,9 @@ const Enrollment = () => {
       setEmpty(20)
     }
     else {
-      setEndDate(formData.endDate?.value, formData.startDate)
+      if (localStorage.getItem('isRegular') == 'true') {//end date caculate for Regular courses 
+        setEndDate(formData.endDate?.value, formData.startDate)
+      }
       handleSubmit1();
     }
 
