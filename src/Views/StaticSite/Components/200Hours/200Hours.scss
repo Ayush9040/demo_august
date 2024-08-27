@@ -2497,10 +2497,13 @@ $primary-hover-color: #47126B;
 
             .phase-9 {
                 padding: 0px 7.986vw 70px 7.986vw;
+                background: linear-gradient(179.6deg, rgba(255, 255, 255, 0) 0.35%, rgba(201, 112, 95, 0.12) 141.19%, rgba(201, 112, 95, 0.1) 291.34%);
+                width: 100vw;
 
                 @include media-breakpoint("lt-sm") {
                     width: 100vw;
                     padding: 0px 0px 20px 0px;
+                    overflow-x: hidden;
                 }
 
                 .p9-header {
