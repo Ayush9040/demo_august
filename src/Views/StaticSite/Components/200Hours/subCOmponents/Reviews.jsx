@@ -60,15 +60,13 @@ const Reviews = () => {
     };
 
     const nextSlide = () => {
-        if (sliderRef.current) {
-            sliderRef.current.slickNext();
-        }
+
+        sliderRef?.current?.slickNext();
     };
 
     const prevSlide = () => {
-        if (sliderRef.current) {
-            sliderRef.current.slickPrev();
-        }
+
+        sliderRef?.current?.slickPrev();
     };
 
     return (
@@ -82,12 +80,12 @@ const Reviews = () => {
                 {
                     !isMobile ?
                         <div className="review-container">
-                            <Slider {...settingsReviews} >
+                            <Slider {...settingsReviews} arrows={false} ref={sliderRef} >
                                 {
                                     slides.map((ele, index) => (
                                         <div className='review-slider' key={index}>
 
-                                            <img className='rev-img pointer' src="/icons/200-hours/Expand_left.svg" alt="al" onClick={() => prevSlide()} />
+                                            <img className='rev-img pointer' src="/icons/200-hours/Expand_left.svg" alt="al" onClick={() => { prevSlide(); }} />
 
                                             <div className='slide-block'>
                                                 <img src={ele.image} alt="" />
@@ -97,7 +95,7 @@ const Reviews = () => {
                                                 </div>
                                             </div>
 
-                                            <img src="/icons/200-hours/chevron_right.svg" alt="" className='pointer' onClick={() => nextSlide()} />
+                                            <img src="/icons/200-hours/chevron_right.svg" alt="" className='pointer' onClick={() => { nextSlide(); }} />
                                         </div>
                                     ))
                                 }

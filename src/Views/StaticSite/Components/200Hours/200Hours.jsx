@@ -221,7 +221,7 @@ const Hours200 = () => {
                             <div className="p2-heading text-gradient">Batch Comparison</div>
 
                             <div className="compare-btn text-gradient" onClick={() => setIsBatchComparison(true)}>
-                                <img src="/icons/200-hours/west.png" /> Available Batches
+                                <img src="/icons/200-hours/astangaBtn.svg" />  Available Batches
                             </div>
                         </div>
 
@@ -231,7 +231,7 @@ const Hours200 = () => {
                         </div>
 
                         <div className="compare-btn-mob text-gradient" onClick={() => setIsBatchComparison(true)}>
-                            <img src="/icons/200-hours/west.png" /> Available Batches
+                            <img src="/icons/200-hours/astangaBtn.svg" />  Available Batches
                         </div>
 
                         <div className='table-layout-wrap'>
@@ -247,7 +247,7 @@ const Hours200 = () => {
                                         courses.map((batch, index) => (
 
                                             <div className="batch" key={index}>
-                                                <span className='batch-item'>{batch?.batch}</span>
+                                                <span className='batch-item'>Batch - {index + 1}</span>
                                             </div>
 
                                         ))
@@ -259,7 +259,7 @@ const Hours200 = () => {
 
                                     <div className="empty-row-1">
                                         <div className='asatanga-cell'>
-                                            <img className='asatanga-img-lg' src="/icons/200-hours/asatanga 1.svg" alt="" />
+                                            <img className='asatanga-img-lg' src="/icons/200-hours/astangaBtn.svg" alt="" />
                                         </div>
 
                                         <div className="tr-sec tr-sec1-2 sec-grey">Duration</div>
@@ -334,7 +334,7 @@ const Hours200 = () => {
                                 <div className="p3-top-bar">
                                     <div className="p3-title text-gradient">Available Batches</div>
 
-                                    <div className="compare-btn text-gradient" onClick={() => setIsBatchComparison(true)}>
+                                    <div className="compare-btn text-gradient" onClick={() => setIsBatchComparison(false)}>
                                         <img src="/icons/200-hours/astangaBtn.svg" /> Compare Batches
                                     </div>
 
@@ -345,7 +345,7 @@ const Hours200 = () => {
                                     schedule. Choose from our flexible batch options
                                 </div>
 
-                                <div className="compare-btn-mob text-gradient" onClick={() => setIsBatchComparison(true)}>
+                                <div className="compare-btn-mob text-gradient" onClick={() => setIsBatchComparison(false)}>
                                     <img src="/icons/200-hours/astangaBtn.svg" /> Compare Batches
                                 </div>
 
@@ -461,7 +461,7 @@ const Hours200 = () => {
                                                                     }));
                                                                     navigateRegister()
                                                                 }
-                                                                }>Register Now</div>
+                                                                }>View Details</div>
 
                                                         </div>
                                                     </div>
@@ -547,7 +547,7 @@ const Hours200 = () => {
 
             </div>
 
-            {
+            {/* {
                 isView &&
                 <div className='mobile-register-block'>
 
@@ -555,7 +555,7 @@ const Hours200 = () => {
 
                         <div className='space-between'>
                             <div className='challenge'>200 Hour Basic Teacher Training Course</div>
-                            {/* <div className='page-base-reg-btm' onClick={navigateRegister}>Register Now</div> */}
+                            <div className='page-base-reg-btm' onClick={navigateRegister}>Register Now</div>
                         </div>
 
                         <img className='brand-logo' src="/icons/200-hours/brand-logo.svg" alt="" />
@@ -568,7 +568,7 @@ const Hours200 = () => {
 
                 </div>
 
-            }
+            } */}
 
 
 

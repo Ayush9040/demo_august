@@ -39,10 +39,16 @@ $primary-hover-color: #47126B;
 
     .phase-1 {
         width: 100vw;
+        background-image: url('../../../../../public/images/200-hours/BGpattern.png');
+        background-repeat: no-repeat;
+        background-size: cover;
 
         @include media-breakpoint("lt-sm") {
             display: grid;
             justify-content: center;
+            padding: 0px;
+            width: 100vw;
+            overflow-x: hidden;
         }
 
         .nav-mobile {
@@ -364,6 +370,8 @@ $primary-hover-color: #47126B;
 
         @include media-breakpoint("lt-sm") {
             padding: 0px;
+            width: 100vw;
+            overflow-x: hidden;
         }
 
         .p2-header-wrap {
@@ -400,12 +408,12 @@ $primary-hover-color: #47126B;
                 padding: 0px 20px 0px 20px;
                 gap: 4px;
                 border-radius: 34px;
-                border: 1px solid #8063A0;
+                border: 1px solid #CA4625;
                 margin-right: 5px;
                 cursor: pointer;
 
                 &:hover {
-                    box-shadow: 0px 0px 15px 0px #9a9a9a47;
+                    box-shadow: 0px 0px 18px 0px #58464129;
                 }
 
                 @include media-breakpoint("lt-sm") {
@@ -454,7 +462,7 @@ $primary-hover-color: #47126B;
                 padding: 0px 20px 0px 20px;
                 gap: 4px;
                 border-radius: 34px;
-                border: 1px solid #8063A0;
+                border: 1px solid #CA4625;
                 margin-right: 5px;
                 cursor: pointer;
 
@@ -468,11 +476,11 @@ $primary-hover-color: #47126B;
         .table-layout-wrap {
             width: 92vw;
             overflow-x: auto;
-            overflow-y: visible;
+            overflow-y: hidden;
             padding-bottom: 20px;
 
             @include media-breakpoint("lt-sm") {
-                overflow-y: visible;
+                overflow-y: hidden;
                 height: fit-content;
                 width: 99vw;
                 margin-left: 10px;
@@ -489,6 +497,7 @@ $primary-hover-color: #47126B;
                 @include media-breakpoint("lt-sm") {
                     overflow: visible;
                     height: 505px;
+                    overflow-y: hidden;
                 }
 
                 .t-row-1 {
@@ -517,7 +526,7 @@ $primary-hover-color: #47126B;
                         .batch-item {
                             padding: 6px 16px 6px 16px;
                             border-radius: 40px;
-                            background: #ECE2F7;
+                            background: #ffdbd2bd;
 
                             @include media-breakpoint ("lt-sm") {
                                 font-size: 3.571vw;
@@ -545,7 +554,6 @@ $primary-hover-color: #47126B;
                     border-right: 1px solid #DADADA;
                     border-radius: 12px 12px 12px 12px;
 
-
                     @include media-breakpoint("lt-sm") {
                         overflow: hidden;
                     }
@@ -557,6 +565,7 @@ $primary-hover-color: #47126B;
                         }
                     }
 
+                    // SHADOW BETWEEN CELLS
                     .shadow-space-wrap {
 
                         .sw-title-shadow {
@@ -572,7 +581,7 @@ $primary-hover-color: #47126B;
                         .with-shadow {
                             height: 65px;
                             width: 42px;
-                            background: #E7E7E7;
+                            background: #c9715f20;
 
                             @include media-breakpoint("lt-sm") {
                                 width: 20px;
@@ -588,9 +597,6 @@ $primary-hover-color: #47126B;
                             }
 
                         }
-
-
-
 
                     }
 
@@ -652,6 +658,7 @@ $primary-hover-color: #47126B;
                                 width: 87.45px;
                                 height: 90.63px;
                                 margin-top: -5px;
+                                opacity: 25%;
 
                                 @include media-breakpoint("lt-sm") {
                                     width: 80.45px;
@@ -661,7 +668,7 @@ $primary-hover-color: #47126B;
                         }
 
                         .sec-grey {
-                            background: #E7E7E7;
+                            background: #c9715f20;
                         }
 
                         .tr-sec1-2 {
@@ -703,38 +710,38 @@ $primary-hover-color: #47126B;
                         }
 
                         .sec-grey-tr2 {
-                            background: #F3ECFE;
+                            background: #c9715f20;
                         }
 
                         .sec-grey-tr3 {
-                            background: #EBDFFF;
+                            background: #c9715f20;
                         }
 
                         .sec-grey-tr4 {
-                            background: #E3D2FF;
+                            background: #c9715f20;
                         }
 
                         .sec-grey-tr5 {
-                            background: #D7BEFF;
+                            background: #c9715f20;
                         }
 
                         .sec-grey-tr6 {
-                            background: #C7A3FF;
+                            background: #c9715f20;
                         }
 
                         .title {
-                            height: 80px;
+                            height: 90px;
                             padding-top: 10px;
                             position: relative;
 
-                            background-size: 105%;
-                            background-repeat: no-repeat;
-                            background-position: center;
-                            background-position-y: -13px;
+                            // background-size: 105%;
+                            // background-repeat: no-repeat;
+                            // background-position: center;
+                            // background-position-y: -13px;
 
                             @include media-breakpoint("lt-sm") {
                                 padding-top: 10px;
-                                height: 60px;
+                                height: 70px;
                                 padding-bottom: 0px;
                                 line-height: 4.58vw;
                                 background-size: 105%;
@@ -816,7 +823,8 @@ $primary-hover-color: #47126B;
         }
 
         .table-layout-wrap::-webkit-scrollbar-thumb {
-            background-color: #d1a2f0;
+            background-color: #ffc7b9bd;
+            border-radius: 5px;
         }
 
     }
@@ -1852,6 +1860,7 @@ $primary-hover-color: #47126B;
                 @include media-breakpoint("lt-sm") {
                     padding: 0px 0px 30px 0px;
                     width: 100vw;
+                    overflow-x: hidden;
                 }
 
                 .p5-title2 {
@@ -2014,8 +2023,6 @@ $primary-hover-color: #47126B;
                 }
 
                 .button-see-all-wrap {
-                    // width: 48.611vw;
-                    // width: 100%;
                     width: 700px;
                     display: flex;
                     align-items: center;
@@ -2025,7 +2032,6 @@ $primary-hover-color: #47126B;
                     @include media-breakpoint("lt-sm") {
                         width: 100%;
                         margin-top: 20px;
-                        // margin-bottom: 30px;
                         display: flex;
                         align-items: center;
                         justify-content: center;
@@ -2051,7 +2057,6 @@ $primary-hover-color: #47126B;
                         cursor: pointer;
 
                         @include media-breakpoint("lt-sm") {
-                            display: none;
                             width: 130px;
                             height: 40px;
                             margin: 0px;
@@ -2631,6 +2636,7 @@ $primary-hover-color: #47126B;
                 @include media-breakpoint("lt-sm") {
                     width: 100vw;
                     padding: 20px 0px 40px 0px;
+                    overflow-x: hidden;
                 }
 
                 .form {
@@ -3259,7 +3265,7 @@ $primary-hover-color: #47126B;
                 width: 100vw;
 
                 @include media-breakpoint ("lt-sm") {
-                    padding: 20px 0px 300px 0px;
+                    padding: 20px 0px 180px 0px;
                     width: 100vw;
                     overflow: hidden;
                 }
@@ -3540,7 +3546,7 @@ $primary-hover-color: #47126B;
                             width: 32px;
                             height: 32px;
                             border-radius: 32px;
-                            background: #F5F0FB;
+                            background: #FFF0ED;
                             margin-right: 10px;
                             margin-bottom: 10px;
 
@@ -3631,8 +3637,8 @@ $primary-hover-color: #47126B;
             align-items: center;
 
             @include media-breakpoint("lt-sm") {
-                bottom: 110px;
-                height: 85px;
+                bottom: 0px;
+                height: 95px;
             }
 
 

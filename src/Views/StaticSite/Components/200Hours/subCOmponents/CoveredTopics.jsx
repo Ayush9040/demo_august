@@ -33,7 +33,8 @@ const CoveredTopics = () => {
                         <div className="chapter" key={index}>
                             <img className='asatanga-circle' src="/icons/200-hours/topicAstanga.svg" alt="" />
                             <div className="chapter-title">
-                                <Paragraph count="30" text={item?.chapterName}/>
+                                {item?.chapterName}
+                                {/* <Paragraph count="30" text={item?.chapterName}/> */}
                             </div>
                         </div>
                     ))
