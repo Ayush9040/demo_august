@@ -658,7 +658,7 @@ $primary-hover-color: #47126B;
                                 width: 87.45px;
                                 height: 90.63px;
                                 margin-top: -5px;
-                                opacity: 25%;
+                                opacity: 5%;
 
                                 @include media-breakpoint("lt-sm") {
                                     width: 80.45px;
@@ -710,7 +710,7 @@ $primary-hover-color: #47126B;
                         }
 
                         .sec-grey-tr2 {
-                            background: #F29D88;
+                            background: #CA4625;
                         }
 
                         // .sec-grey-tr3 {
@@ -792,27 +792,83 @@ $primary-hover-color: #47126B;
                         }
 
                         .bgImg-r2 {
-                            background-image: url('../../../../../public/images/200-hours/Rectangle\ 5168.svg');
+                            background-image: url('../../../../../public/images/200-hours/Rectangle5.svg');
                         }
 
-                        .bgImg-r3 {
-                            // background-image: url('/images/200-hours/2 year.png');
+                        // .bgImg-r3 {
+                        //     background-image: url('../../../../../public/images/200-hours/Rectangle2.svg');
+                        // }
 
-                        }
+                        // .bgImg-r4 {
+                        //     background-image: url('../../../../../public/images/200-hours/Rectangle3.svg');
+                        // }
 
-                        .bgImg-r4 {
-                            // background-image: url('/images/200-hours/Rectangle 5168 2.png');
-                        }
+                        // .bgImg-r5 {
+                        //     background-image: url('../../../../../public/images/200-hours/Rectangle4.svg');
+                        // }
 
-                        .bgImg-r5 {
-                            // background-image: url('/images/200-hours/Rectangle 5168 3.png');
-                        }
-
-                        .bgImg-r6 {
-                            // background-image: url('/images/200-hours/Rectangle 5168 4 (1).png');
-                        }
+                        // .bgImg-r6 {
+                        //     background-image: url('../../../../../public/images/200-hours/Rectangle5.svg');
+                        // }
 
                     }
+
+
+                    .empty-row-2:nth-child(2) {
+
+                        .sec-grey-tr2 {
+                            background: #F29D88;
+                        }
+
+                        .bgImg-r2 {
+                            background-image: url('../../../../../public/images/200-hours/Rectangle1.svg');
+                        }
+                    }
+
+                    .empty-row-2:nth-child(4) {
+                        
+                        .bgImg-r2 {
+                            background-image: url('../../../../../public/images/200-hours/Rectangle2.svg');
+                        }
+
+                        .sec-grey-tr2 {
+                            background: #F18267;
+                        }
+                    }
+
+                    .empty-row-2:nth-child(6) {
+
+                        .bgImg-r2 {
+                            background-image: url('../../../../../public/images/200-hours/Rectangle3.svg');
+                        }
+
+                        .sec-grey-tr2 {
+                            background: #EB7254;
+                        }
+                    }
+
+                    .empty-row-2:nth-child(8) {
+                        
+                        .bgImg-r2 {
+                            background-image: url('../../../../../public/images/200-hours/Rectangle4.svg');
+                        }
+
+                        .sec-grey-tr2 {
+                            background: #D8593A;
+                        }
+                    }
+
+                    .empty-row-2:nth-child(10) {
+
+                        .bgImg-r2 {
+                            background-image: url('../../../../../public/images/200-hours/Rectangle5.svg');
+                        }
+
+                        .sec-grey-tr2 {
+                            background: #CA4625;
+                        }
+                    }
+
                 }
 
             }
