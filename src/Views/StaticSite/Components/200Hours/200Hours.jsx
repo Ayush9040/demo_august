@@ -13,6 +13,7 @@ import Reviews from './subCOmponents/Reviews'
 import CoveredTopics from './subCOmponents/CoveredTopics'
 import ModalRight from './subCOmponents/ModalRight'
 import CourseCaters from './subCOmponents/courseCaters'
+import { useNavigate } from 'react-router-dom'
 
 // import { collection, getDocs, query, where } from 'firebase/firestore';
 // import { db } from '../../../firebaseConfig';
@@ -26,6 +27,7 @@ const Hours200 = () => {
     const phaseOneRef = useRef(null);
     const [courseFee, setCourseFee] = useState(0)
     const [joinedCount, setJoinedCount] = useState(0)
+    const navigagte = useNavigate();
 
     const benefitsRef = useRef();
     const curriculumRef = useRef();
@@ -40,13 +42,14 @@ const Hours200 = () => {
 
     const [courses, setCourses] = useState([
         {
-            batchType: "7 Months Advanced Teacher Training Course",
-            duration: "07 Months",
+            batchType: "1 Month Advanced Teacher Training Course",
+            duration: "01 Month",
             mode: "Online & On Campus",
             language: "English",
             startDate: "14th Oct 2024",
             timing: "Evening: 5:00pm - 8:00pm",
-            days: "Monday - Saturday"
+            days: "Monday - Saturday",
+            navigate: "/one-month-ttc",
         },
         {
             batchType: "1 Year Advanced Teacher Training Course",
@@ -55,7 +58,8 @@ const Hours200 = () => {
             language: "English",
             startDate: "14th Oct 2024",
             timing: "Afternoon: 1.30pm - 4pm",
-            days: "Monday - Friday"
+            days: "Monday - Friday",
+            navigate: "/200-hrs-part-time-ttc-on-campus-english",
         },
         {
             batchType: "2 Year Advanced Teacher Training Course",
@@ -64,7 +68,8 @@ const Hours200 = () => {
             language: "English",
             startDate: "14th Oct 2024",
             timing: "Morning: 7am - 9am & Evening: 4.30pm - 8.00 pm",
-            days: "Saturday - Sunday"
+            days: "Saturday - Sunday",
+            navigate: "/200-hrs-part-time-ttc-online-english",
         },
         {
             batchType: "4 Month Advanced Teacher Training Course",
@@ -73,7 +78,8 @@ const Hours200 = () => {
             language: "English",
             startDate: "14th Oct 2024",
             timing: "Weekends: Sat: 4.30pm -7.30pm Sun : 9:30 am - 1.30 pm",
-            days: "Monday - Saturday"
+            days: "Monday - Saturday",
+            navigate: "/200-hrs-part-time-ttc-online",
         },
         {
             batchType: "3 Month Advanced Teacher Training Course",
@@ -82,7 +88,8 @@ const Hours200 = () => {
             language: "English",
             startDate: "14th Oct 2024",
             timing: "Afternoon: 1.30pm - 4pm",
-            days: "Saturday - Sunday"
+            days: "Saturday - Sunday",
+            navigate: "/weekend-teacher-training-course",
         },
         {
             batchType: "2 Month Advanced Teacher Training Course ",
@@ -91,7 +98,8 @@ const Hours200 = () => {
             language: "English",
             startDate: "14th Oct 2024",
             timing: "Afternoon: 1.30pm - 4pm",
-            days: "Monday - Saturday"
+            days: "Monday - Saturday",
+            navigate: "/200-hrs-part-time-ttc-online-english-batch-6",
         },
     ])
 
@@ -354,6 +362,7 @@ const Hours200 = () => {
                                         courses.map((batch, index) => (
                                             <div
                                                 onMouseEnter={() => setBatchHover(index)}
+                                                onClick={!isMobile ? () => { navigagte(batch?.navigate); } : undefined}
                                                 // className={` ${(courses?.length - 1 == index && courses?.length % 2 != 0) === courses.length - 1 ? 'odd-last' : 'batch'}`}
                                                 className={` ${!isMobile && courses?.length - 1 === index && courses?.length % 2 !== 0 ? 'odd-last' : 'even-batch'}`}
                                                 key={index}
@@ -459,7 +468,8 @@ const Hours200 = () => {
                                                                         selectedTimingIndex: batch,
                                                                         selectedCourseMode: null
                                                                     }));
-                                                                    navigateRegister()
+                                                                    // navigateRegister()
+                                                                    navigagte(batch?.navigate)
                                                                 }
                                                                 }>View Details</div>
 
