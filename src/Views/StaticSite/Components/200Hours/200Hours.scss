@@ -526,7 +526,7 @@ $primary-hover-color: #47126B;
                         .batch-item {
                             padding: 6px 16px 6px 16px;
                             border-radius: 40px;
-                            background: #ffdbd2bd;
+                            background: #F6D3CC;
 
                             @include media-breakpoint ("lt-sm") {
                                 font-size: 3.571vw;
@@ -581,7 +581,7 @@ $primary-hover-color: #47126B;
                         .with-shadow {
                             height: 65px;
                             width: 42px;
-                            background: #c9715f20;
+                            background: #E7E7E7;
 
                             @include media-breakpoint("lt-sm") {
                                 width: 20px;
@@ -668,7 +668,7 @@ $primary-hover-color: #47126B;
                         }
 
                         .sec-grey {
-                            background: #c9715f20;
+                            background: #E7E7E7;
                         }
 
                         .tr-sec1-2 {
@@ -710,34 +710,34 @@ $primary-hover-color: #47126B;
                         }
 
                         .sec-grey-tr2 {
-                            background: #c9715f20;
+                            background: #F29D88;
                         }
 
-                        .sec-grey-tr3 {
-                            background: #c9715f20;
-                        }
+                        // .sec-grey-tr3 {
+                        //     background: #E7E7E7;
+                        // }
 
-                        .sec-grey-tr4 {
-                            background: #c9715f20;
-                        }
+                        // .sec-grey-tr4 {
+                        //     background: #E7E7E7;
+                        // }
 
-                        .sec-grey-tr5 {
-                            background: #c9715f20;
-                        }
+                        // .sec-grey-tr5 {
+                        //     background: #E7E7E7;
+                        // }
 
-                        .sec-grey-tr6 {
-                            background: #c9715f20;
-                        }
+                        // .sec-grey-tr6 {
+                        //     background: #E7E7E7;
+                        // }
 
                         .title {
                             height: 90px;
                             padding-top: 10px;
                             position: relative;
 
-                            // background-size: 105%;
-                            // background-repeat: no-repeat;
-                            // background-position: center;
-                            // background-position-y: -13px;
+                            background-size: 105%;
+                            background-repeat: no-repeat;
+                            background-position: center;
+                            background-position-y: -13px;
 
                             @include media-breakpoint("lt-sm") {
                                 padding-top: 10px;
@@ -792,7 +792,7 @@ $primary-hover-color: #47126B;
                         }
 
                         .bgImg-r2 {
-                            // background-image: url('/images/200-hours/cone-1.png');
+                            background-image: url('../../../../../public/images/200-hours/Rectangle\ 5168.svg');
                         }
 
                         .bgImg-r3 {
