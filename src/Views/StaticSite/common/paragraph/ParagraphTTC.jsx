@@ -34,7 +34,7 @@ const ParagraphTTC = ({ text, count, fontSizeProp, activeIndex }) => {
               {
                 isExpanded && (
                   <span className='read-more-21' onClick={toggleExpanded} style={{ cursor: 'pointer', color: '#CA4625' }}>
-                    Show Less
+                    {" "} Show Less
                   </span>
                 )
               }

@@ -11,19 +11,19 @@ const Benefits = () => {
 
     const slides = [
         {
-            image: 'https://s3-alpha-sig.figma.com/img/8926/794c/05283fc85d78f6c30f7f31d4a2190034?Expires=1725840000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=QUb~uzK9xO~Cd9DrakvV1l8IAzd2SW5L8MQ~1nGHZd72AamTxa3uwQ-mXIcTawtBVvTufYv7Ga9K5V7rCPdrV4c90HDm0sHQIVu67ngGUhAN~Un3BUaYN2J9VWtw20TxRtjPS7E~XBaZzLNc9WKE-h6Y-a9YtjwpTuEEKNrACYOHcDkIgYpqBfU0ZD5w0ekgL~YpG5cAHHuKiKEQuCgVN~8Nnc4cbWbdaBXSExF~SBDtGQlO8o1yOdYMSA7JU-JPfcmT3xiwXxd70kfK1s34L2hqo5GeAzmcFaAY62a5ydkTmohOdvkkPRnfmAbMrDJg49SV5EMDfP7rGrJ92OTuLw__',
+            image: "https://oss-lms-prod.s3.ap-south-1.amazonaws.com/200ttc-master/benfit1.jpg",
             text: 'Tailored for those beginning a Yoga career or seeking profound personal growth.'
         },
         {
-            image: 'https://s3-alpha-sig.figma.com/img/82c0/d2f8/269ce71b60b996ec027304562626d2a1?Expires=1725840000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=UyhQ8XmHW~HJVaFTkGIbMU88XUbUZ3rEkMYNwlIWEhDnN2xRfq2kSiVkFao60vTXkUPUVkRlHAWY~CKmQn68a0NdkXWKIZ4OLHE~kXXuzqR0XwSOrVXtFj6OHnalfKDjR8QlAXBvI1jPyX2slZR81KziofLDOB7pwHi1O~Kw0ttu4sCdJ7HBoFG7RrJpx1YpTu5eS6NUafKltQbC~bqFro5dLg4-Wkw3clRT9kzbDWq5D6bnAd8AMLCbzGjmJvNJDLMMMEcdr1-9NFB54dEhTE3wErJNc5-EqYWcvaur3Ldl~-voZGobtca7d08Sr0M8MZugVFsU8WEYWSJ1rb8wSw__',
+            image: "https://oss-lms-prod.s3.ap-south-1.amazonaws.com/200ttc-master/benefit2.jpg",
             text: 'Master the art of integrating yogic principles for effective lifestyle management.'
         },
         {
-            image: 'https://s3-alpha-sig.figma.com/img/8926/794c/05283fc85d78f6c30f7f31d4a2190034?Expires=1725840000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=QUb~uzK9xO~Cd9DrakvV1l8IAzd2SW5L8MQ~1nGHZd72AamTxa3uwQ-mXIcTawtBVvTufYv7Ga9K5V7rCPdrV4c90HDm0sHQIVu67ngGUhAN~Un3BUaYN2J9VWtw20TxRtjPS7E~XBaZzLNc9WKE-h6Y-a9YtjwpTuEEKNrACYOHcDkIgYpqBfU0ZD5w0ekgL~YpG5cAHHuKiKEQuCgVN~8Nnc4cbWbdaBXSExF~SBDtGQlO8o1yOdYMSA7JU-JPfcmT3xiwXxd70kfK1s34L2hqo5GeAzmcFaAY62a5ydkTmohOdvkkPRnfmAbMrDJg49SV5EMDfP7rGrJ92OTuLw__',
+            image: "https://oss-lms-prod.s3.ap-south-1.amazonaws.com/200ttc-master/benfit1.jpg",
             text: 'Tailored for those beginning a Yoga career or seeking profound personal growth.'
         },
         {
-            image: 'https://s3-alpha-sig.figma.com/img/82c0/d2f8/269ce71b60b996ec027304562626d2a1?Expires=1725840000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=UyhQ8XmHW~HJVaFTkGIbMU88XUbUZ3rEkMYNwlIWEhDnN2xRfq2kSiVkFao60vTXkUPUVkRlHAWY~CKmQn68a0NdkXWKIZ4OLHE~kXXuzqR0XwSOrVXtFj6OHnalfKDjR8QlAXBvI1jPyX2slZR81KziofLDOB7pwHi1O~Kw0ttu4sCdJ7HBoFG7RrJpx1YpTu5eS6NUafKltQbC~bqFro5dLg4-Wkw3clRT9kzbDWq5D6bnAd8AMLCbzGjmJvNJDLMMMEcdr1-9NFB54dEhTE3wErJNc5-EqYWcvaur3Ldl~-voZGobtca7d08Sr0M8MZugVFsU8WEYWSJ1rb8wSw__',
+            image: "https://oss-lms-prod.s3.ap-south-1.amazonaws.com/200ttc-master/benefit2.jpg",
             text: 'Master the art of integrating yogic principles for effective lifestyle management.'
         },
     ];

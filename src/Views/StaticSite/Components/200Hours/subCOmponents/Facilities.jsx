@@ -10,23 +10,21 @@ const Facilities = () => {
 
     const slides = [
         {
-            image: 'https://s3-alpha-sig.figma.com/img/20f4/18f9/42fa68bdc68a4a108f14d10fac68394f?Expires=1725840000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=p60q9w0~YaX9YXn3WQ-uDRToHzgXnr~LFsEWmuBGOgQJitMgFyXGW4Pv38O4Derj7YFCWC7tPMMWb6KwnCYyavv-2rAF~Yf4kwNAUnT4TLmMbYDLsX~Ej~MUtWCEexdPHBHgirLI-XNGiPrxOOz-VaGbEA21K4bfFqvudE4GzIdU0s7NfbmkxJf2zsRzIjZqb2Ip2Qh9XK81bm~W76MqLcLTaaNqXD63UONitCOahXcHVvCQ7tnRTfBkX~7em4ZDAF-4V6DHQkRC7GsAcI~bd9gJ5FXNBsY2aTbR3qud21vcmWVCfxv75P2tPYKyElqvevCbuSBfHPKmNL9dXvJPUQ__',
+            image: "https://oss-lms-prod.s3.ap-south-1.amazonaws.com/200ttc-master/facility1.jpeg",
             title: 'Counselling Rooms',
             description: 'Personalized sessions with Smt. Hansaji focused on self-reliance and personal growth.',
         },
         {
-            image: 'https://s3-alpha-sig.figma.com/img/8dfb/a45e/15de912fdb46ea85327f8d2592cda7cb?Expires=1725840000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=pFouZa5~jn4DlWKPDVMkwiYuQKRLW~~wpSZzz8HENxtpI9~n72NFJsHty6ZgGNggbKfD6WGVp6K-4VglxMxp8d~CU6y6bTP9efCCyXeedCQrkr5tg6h40GMfyM8IsMnx4ZtdlAB7~cNFMqRmnAPD~-FadLKTQ2AWn3MAzkGG2F3W8pw15U1Trb6LGXnb6o6x1ChdYP9ldRNyT8KSJ8j8Ng5AvptvGhxxEXMrkaDarR1wtD7JwSQVtooVddT8MJoEFB4y-9fB0dVY~oJWudkNlhEZQSA2C0cdmkDzoeVPpHjJ5x-KoI27w2BiYAO9FQKfnBCSiLWeGlFhCc3oIrRHmQ__',
-            title: 'Central Lawn',
+            image: "https://oss-lms-prod.s3.ap-south-1.amazonaws.com/200ttc-master/facility2.jpeg", title: 'Central Lawn',
             description: 'A tranquil, sacred space with the Kailashpati tree, ideal for meditation, and group study.',
         },
         {
-            image: 'https://s3-alpha-sig.figma.com/img/20f4/18f9/42fa68bdc68a4a108f14d10fac68394f?Expires=1725840000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=p60q9w0~YaX9YXn3WQ-uDRToHzgXnr~LFsEWmuBGOgQJitMgFyXGW4Pv38O4Derj7YFCWC7tPMMWb6KwnCYyavv-2rAF~Yf4kwNAUnT4TLmMbYDLsX~Ej~MUtWCEexdPHBHgirLI-XNGiPrxOOz-VaGbEA21K4bfFqvudE4GzIdU0s7NfbmkxJf2zsRzIjZqb2Ip2Qh9XK81bm~W76MqLcLTaaNqXD63UONitCOahXcHVvCQ7tnRTfBkX~7em4ZDAF-4V6DHQkRC7GsAcI~bd9gJ5FXNBsY2aTbR3qud21vcmWVCfxv75P2tPYKyElqvevCbuSBfHPKmNL9dXvJPUQ__',
+            image: "https://oss-lms-prod.s3.ap-south-1.amazonaws.com/200ttc-master/facility1.jpeg",
             title: 'Counselling Rooms',
             description: 'Personalized sessions with Smt. Hansaji focused on self-reliance and personal growth.',
         },
         {
-            image: 'https://s3-alpha-sig.figma.com/img/8dfb/a45e/15de912fdb46ea85327f8d2592cda7cb?Expires=1725840000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=pFouZa5~jn4DlWKPDVMkwiYuQKRLW~~wpSZzz8HENxtpI9~n72NFJsHty6ZgGNggbKfD6WGVp6K-4VglxMxp8d~CU6y6bTP9efCCyXeedCQrkr5tg6h40GMfyM8IsMnx4ZtdlAB7~cNFMqRmnAPD~-FadLKTQ2AWn3MAzkGG2F3W8pw15U1Trb6LGXnb6o6x1ChdYP9ldRNyT8KSJ8j8Ng5AvptvGhxxEXMrkaDarR1wtD7JwSQVtooVddT8MJoEFB4y-9fB0dVY~oJWudkNlhEZQSA2C0cdmkDzoeVPpHjJ5x-KoI27w2BiYAO9FQKfnBCSiLWeGlFhCc3oIrRHmQ__',
-            title: 'Central Lawn',
+            image: "https://oss-lms-prod.s3.ap-south-1.amazonaws.com/200ttc-master/facility2.jpeg", title: 'Central Lawn',
             description: 'A tranquil, sacred space with the Kailashpati tree, ideal for meditation, and group study.',
         },
     ];

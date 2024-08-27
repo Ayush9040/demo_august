@@ -1,4 +1,5 @@
 import React from 'react'
+import Paragraph from '../../../common/paragraph/ParagraphTTC'
 
 const CoveredTopics = () => {
 
@@ -32,17 +33,7 @@ const CoveredTopics = () => {
                         <div className="chapter" key={index}>
                             <img className='asatanga-circle' src="/icons/200-hours/topicAstanga.svg" alt="" />
                             <div className="chapter-title">
-                                {
-                                    item?.chapterName.length > 45 ?
-                                        <>
-                                            {item.chapterName.slice(0, 35)}...
-                                            <span className="text-gradient" style={{ cursor: 'pointer' }}>
-                                                {" "}Read more
-                                            </span>
-                                        </>
-                                        :
-                                        item?.chapterName
-                                }
+                                <Paragraph count="30" text={item?.chapterName}/>
                             </div>
                         </div>
                     ))

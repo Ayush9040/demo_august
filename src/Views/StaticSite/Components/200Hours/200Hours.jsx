@@ -192,13 +192,13 @@ const Hours200 = () => {
                 <div className='registration-header'>
 
                     <div className='p1-content-wrap'>
-                        <div className='certification-heading'>Became an International <span className='text-gradient'>Certified</span> Yoga Teacher </div>
+                        <div className='certification-heading'>Became an International <span className='text-gradient days'>Certified</span> Yoga Teacher </div>
                         <div className='header-label'>From the world’s oldest organized yoga centre!</div>
                     </div>
 
                     <div className='p1-video-wrap'>
                         <img className='p1r-img'
-                            src="https://s3-alpha-sig.figma.com/img/d29a/2b3d/442fefd4ebcba171063dad81b60353f9?Expires=1725840000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=F7Dst1J4Ppv9jjYDAkj~CTWNnVEpzaoynTdfDiGJhKsZXY0AzFBpQhzmgW15iyc6vq-kyMe3Bfz7B8MK07QZe~tpgeqJUESHVDlWsGtEtsQ6gGOlovDrcAOr8M2G1jhmDnPkZ4qAe-FNZhnHbShGrobdxPr~Ai6JoHO4kxgVytkFxARN1nT8zlDlpN2m3IDVtr1v8VgYejZzwOpGIP6yjn7jA7QUFFJh8yRBzLSNvcdqmhXHWbmpCB-nU5y-5BEzAWM~RBE0OgU2QesdgjZvmkm5NZcMjF9R7GrtfhXNkiAW7pmi0p4StJ9uaK9uQ7BKHwJyKFTC-UxeF~vfjkdYKQ__"
+                            src='https://oss-lms-prod.s3.ap-south-1.amazonaws.com/200ttc-master/herosection.jpeg'
                             alt=""
                         />
                     </div>
@@ -349,7 +349,7 @@ const Hours200 = () => {
                                     {
                                         courses.map((batch, index) => (
                                             <div
-                                                onMouseEnter={() => setBatchHover(!index)}
+                                                onMouseEnter={() => setBatchHover(index)}
                                                 // className={` ${(courses?.length - 1 == index && courses?.length % 2 != 0) === courses.length - 1 ? 'odd-last' : 'batch'}`}
                                                 className={` ${!isMobile && courses?.length - 1 === index && courses?.length % 2 !== 0 ? 'odd-last' : 'even-batch'}`}
                                                 key={index}
@@ -527,13 +527,13 @@ const Hours200 = () => {
 
 
                 <div className='footer-200'>
-                    <img src="images/21-days/brand-logo-footer.svg" alt="" className='brn-logo' />
+                    <img src="/icons/200-hours/social1.svg" alt="" className='brn-logo' />
                     <div className='privacy-policy'> &copy; 2024 The Yoga Institute | <a target="_blank" rel="noreferrer" href='https://www.theyogainstitute.org/privacy-policy'>Privacy Policy</a>  </div>
                     <div className="icons">
-                        <img onClick={() => openLink('https://www.facebook.com/share/feyc4ub1tcBAFZsc/?mibextid=LQQJ4d')} src="icons/21-days/fb.svg" alt="fb" />
-                        <img onClick={() => openLink('https://www.instagram.com/theyogainstituteofficial?igsh=b3Nsb3F4ODZkNjJj&utm_source=qr')} src="icons/21-days/insta.svg" alt="insta" />
-                        <img onClick={() => openLink('https://x.com/tyi_official?s=21&t=T2LMGtqIP3HmAomXLos8YA')} src="icons/21-days/x.svg" alt="x" />
-                        <img onClick={() => openLink('https://www.linkedin.com/company/theyogainstituteofficial/')} src="icons/21-days/linkedIn.svg" alt="linkedIn" />
+                        <img onClick={() => openLink('https://www.facebook.com/share/feyc4ub1tcBAFZsc/?mibextid=LQQJ4d')} src="/icons/200-hours/social5.svg" alt="fb" />
+                        <img onClick={() => openLink('https://www.instagram.com/theyogainstituteofficial?igsh=b3Nsb3F4ODZkNjJj&utm_source=qr')} src="/icons/200-hours/social4.svg" alt="insta" />
+                        <img onClick={() => openLink('https://x.com/tyi_official?s=21&t=T2LMGtqIP3HmAomXLos8YA')} src="/icons/200-hours/social3.svg" alt="x" />
+                        <img onClick={() => openLink('https://www.linkedin.com/company/theyogainstituteofficial/')} src="/icons/200-hours/social2.svg" alt="linkedIn" />
                     </div>
                 </div>
 

@@ -13,7 +13,7 @@ const ModalRight = ({ joinedCount }) => {
 
     return (
         <div className="modal-sticky">
-            <img src="/images/200-hours/modalRightImg.png" />
+            <img src="https://oss-lms-prod.s3.ap-south-1.amazonaws.com/200ttc-master/rightPanel.png" />
 
             <div className="title-wrap">
                 <div className="Certified-header">Certified Yoga Teacher</div>

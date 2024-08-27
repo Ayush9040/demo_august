@@ -11,14 +11,14 @@ const Legacy = () => {
     const sliderRef = useRef(null);
     const [slides, setSlides] = useState([
         {
-            image: 'https://s3-alpha-sig.figma.com/img/523f/ec5f/0ef442ec4d1150ddd0cd6b24e41e6ae6?Expires=1725840000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=MH0~bPp~llRHMfy1m-bENudbN~bczx6eDfs2XLMZWBZqlUnYNsmSn6iZ5MCnQymeQAuRBzQDvZqom57GkJIcIrCqwWdivVzNqr97lWH57SJhwrloEYVij9K3aXlbjmJqy0LAEM9-H9j58Hv~ACgHJg6DPy3ts6IVXqz8TICmGQsUI-JU7cOSpIux0fzpboHeOyvcJYIuFOcBSer5gAU2VNTx8BHa9mRmYg7rG6JMx9NvbHJPPIAgOGGmzWkNU-7e2MzJ77gBfZvHsebwNWMCLz3vqyfblHIaFrmir5zOJGw67D4s4s2zRsMQv~vnh0M3h2EN~Ij14PLWRu1YAB3A1g__',
+            image: 'https://oss-lms-prod.s3.ap-south-1.amazonaws.com/200ttc-master/yogendraji.png',
             name: 'Shri Yogendra ji (1897-1989)',
             designation: 'Founder',
             year: '1897 - 1989',
             about: 'Shri Yogendraji, guided by Paramhamsa Madhavadasji, democratized Yoga, making it accessible worldwide. Renowned as the Father of the Modern Yoga Renaissance, he introduced Dynamic Asanas and the Yogendra Rhythm, simplifying traditional techniques for everyday practitioners, including householders, and reviving ancient Upanishadic principles.'
         },
         {
-            image: 'https://s3-alpha-sig.figma.com/img/86ae/74b7/739f7b9fcaba5cdb052c9f4b75c4ea99?Expires=1725840000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=R5v9SzRIBn7bRHNcS8uw3Bb0r690N9UFk4B-MTyVuZYyxlT55D63QklPTxDlSR7Im0KPRPbNQWX8WxePgP~-vePH9fMX6hiB2~3AzBuNoGXjvyotwR7oLq~wWkjCLQ65FFmWfiH3xZAYpV-CumH97rp14It8AWAGO-jLjJYDOPKGyZRpSfc1p2xic9woKx5S4ppBUY4OV0gs930FIRXv50vk1hRqfODNEAW0KiV6aZBj9Nm0lMfC8R8TcDQJvuh627Ak8mitS7kafN6iOwFCILwukxFtYa3pv3078QuYsk7wnpWCDfVgfJiGKICWx0uGxD6O~gCrAembQd0OSZfAkA__',
+            image: 'https://oss-lms-prod.s3.ap-south-1.amazonaws.com/200ttc-master/hansaji.jpeg',
             name: 'Dr. Hansaji Yogendra (1947-Present)',
             designation: 'Mother',
             year: '1912 - 2008',

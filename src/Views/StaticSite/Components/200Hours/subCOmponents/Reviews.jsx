@@ -87,17 +87,17 @@ const Reviews = () => {
                                     slides.map((ele, index) => (
                                         <div className='review-slider' key={index}>
 
-                                            <img className='rev-img pointer' src="/icons/200-hours/Expand_left.svg" alt="al" onClick={prevSlide} />
+                                            <img className='rev-img pointer' src="/icons/200-hours/Expand_left.svg" alt="al" onClick={() => prevSlide()} />
 
                                             <div className='slide-block'>
                                                 <img src={ele.image} alt="" />
                                                 <div className='name'>{ele.name}</div>
                                                 <div className='desc'>
-                                                    <ParagraphTTC count='250' fontSizeProp='14px' text={ele.review} />
+                                                    <ParagraphTTC count='150' fontSizeProp='14px' text={ele.review} />
                                                 </div>
                                             </div>
 
-                                            <img src="/icons/200-hours/chevron_right.svg" alt="" className='pointer' onClick={nextSlide} />
+                                            <img src="/icons/200-hours/chevron_right.svg" alt="" className='pointer' onClick={() => nextSlide()} />
                                         </div>
                                     ))
                                 }

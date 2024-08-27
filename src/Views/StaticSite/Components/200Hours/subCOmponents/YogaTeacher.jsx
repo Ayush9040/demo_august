@@ -12,7 +12,7 @@ const YogaTeacher = () => {
 
     const slides = [
         {
-            image: 'https://s3-alpha-sig.figma.com/img/3186/7942/84fe9d8211b06b726c1adf0792072985?Expires=1725840000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Qx57XKEGnJjvR9-96r-Ce~-pZXp721GoPXJiAZ2FclAvOscxQzhiZEM0d3kforPwnHT~RSKIDv7I6mCt~xWqlytVXsbtOxtwClnIqKXm5oY63uPuups5n2evTp1UGsW4figEbkVoAwrF7fs7M042yocawF32uLB40ccJ5a9ARl3uVtM8yFCzDF1bfljUT9WYsFIOKTcosqybJVf7v2oIxnb3mVQloZkqtIR8Ad6bpBW7NsaywIGjSuwdGZ1xchxhjiSUc-aAwRmzRgQB1WjWeHjRn7umMCswR4uIAGCIRKYAfxCULtpsYuvHznpyEdCmkuzoUn~3AIXF86nWqfR~Tw__',
+            image: 'https://oss-lms-prod.s3.ap-south-1.amazonaws.com/200ttc-master/yogaTeacher.jpeg',
             text: 'You can pursue advanced certifications or workshops to deepen their expertise.'
         },
         {
