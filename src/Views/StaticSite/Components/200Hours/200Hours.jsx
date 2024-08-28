@@ -15,8 +15,7 @@ import ModalRight from './subCOmponents/ModalRight'
 import CourseCaters from './subCOmponents/courseCaters'
 import { useNavigate } from 'react-router-dom'
 import { c200hr } from '../../Views/Courses/Constants/courses'
-import Navbar from '../Navbar'
-import { useSelector } from 'react-redux'
+import InnerNavComponent from '../InnerNavComponent'
 
 // import { collection, getDocs, query, where } from 'firebase/firestore';
 // import { db } from '../../../firebaseConfig';
@@ -32,15 +31,12 @@ const Hours200 = () => {
     const [joinedCount, setJoinedCount] = useState(0)
     const navigate = useNavigate();
 
-    // REDUX
-    const { isLoggedIn } = useSelector((state) => state.auth)
-
-    const abc = {
-        title: 'affiliations',
-        color: 'white',
-        menuColor: 'white',
+    const CoursesBan = {
+        title: 'Career',
+        color: 'orange',
+        menuColor: 'orange',
         menuItems: [],
-    }
+      }
 
     const benefitsRef = useRef();
     const curriculumRef = useRef();
@@ -63,68 +59,6 @@ const Hours200 = () => {
 
     ])
 
-    // const [courses, setCourses] = useState([
-    //     {
-    //         batchType: "1 Month Advanced Teacher Training Course",
-    //         duration: "01 Month",
-    //         mode: "Online & On Campus",
-    //         language: "English",
-    //         startDate: "14th Oct 2024",
-    //         timing: "Evening: 5:00pm - 8:00pm",
-    //         days: "Monday - Saturday",
-    //         navigate: "/one-month-ttc",
-    //     },
-    //     {
-    //         batchType: "1 Year Advanced Teacher Training Course",
-    //         duration: "12 Months",
-    //         mode: "Online",
-    //         language: "English",
-    //         startDate: "14th Oct 2024",
-    //         timing: "Afternoon: 1.30pm - 4pm",
-    //         days: "Monday - Friday",
-    //         navigate: "/200-hrs-part-time-ttc-on-campus-english",
-    //     },
-    //     {
-    //         batchType: "2 Year Advanced Teacher Training Course",
-    //         duration: "24 Months",
-    //         mode: "On Campus",
-    //         language: "English",
-    //         startDate: "14th Oct 2024",
-    //         timing: "Morning: 7am - 9am & Evening: 4.30pm - 8.00 pm",
-    //         days: "Saturday - Sunday",
-    //         navigate: "/200-hrs-part-time-ttc-online-english",
-    //     },
-    //     {
-    //         batchType: "4 Month Advanced Teacher Training Course",
-    //         duration: "04 Months",
-    //         mode: "Online & On Campus",
-    //         language: "English",
-    //         startDate: "14th Oct 2024",
-    //         timing: "Weekends: Sat: 4.30pm -7.30pm Sun : 9:30 am - 1.30 pm",
-    //         days: "Monday - Saturday",
-    //         navigate: "/200-hrs-part-time-ttc-online",
-    //     },
-    //     {
-    //         batchType: "3 Month Advanced Teacher Training Course",
-    //         duration: "07 Months",
-    //         mode: "Online & On Campus",
-    //         language: "English",
-    //         startDate: "14th Oct 2024",
-    //         timing: "Afternoon: 1.30pm - 4pm",
-    //         days: "Saturday - Sunday",
-    //         navigate: "/weekend-teacher-training-course",
-    //     },
-    //     {
-    //         batchType: "2 Month Advanced Teacher Training Course ",
-    //         duration: "07 Months",
-    //         mode: "Online & On Campus",
-    //         language: "English",
-    //         startDate: "14th Oct 2024",
-    //         timing: "Afternoon: 1.30pm - 4pm",
-    //         days: "Monday - Saturday",
-    //         navigate: "/200-hrs-part-time-ttc-online-english-batch-6",
-    //     },
-    // ])
 
     const [commonStates, setCommonStates] = useState({
         formIndex: 1,
@@ -220,7 +154,7 @@ const Hours200 = () => {
     return (
         <div className='layout-view Hours-200' ref={containerRef}>
 
-            <Navbar isUserLoggedIn={isLoggedIn} abc={abc} />
+            <InnerNavComponent abc={CoursesBan} />
 
 
             <div className='phase-1'>
