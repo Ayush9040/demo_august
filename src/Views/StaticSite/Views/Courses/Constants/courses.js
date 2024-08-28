@@ -44,7 +44,7 @@ const ttc200hr = {
     category: 'ttc',
     title: '200-Hour Yoga Teacher Training Course - 1 Month Yoga TTC Online & On Campus - English - Batch 1',
     dates: [
-      
+
       // '1st Jan to 31st Jan 2024',
       // '1st Feb to 29th Feb 2024',
       // '1st Mar to 31st Mar 2024',
@@ -512,6 +512,14 @@ const ttc200hr = {
     ],
     regsitraion: [],
     faq: [],
+    moreInfo: {
+      duration: "01 Month",
+      mode: "Online & On Campus",
+      language: "English",
+      timing: "10:00 am - 6:00 pm (IST)",
+      days: "Monday - Saturday",
+      navigate: "/one-month-ttc",
+    },
   },
   2: {
     id: '',
@@ -527,7 +535,6 @@ const ttc200hr = {
     textdescription5: '',
     key: '200-hrs-part-time-ttc-on-campus-english',
     join: true,
-
     // templateId: 'COURSE200_1M_TTC2',
     templateId: {
       templateOnline: 'COURSE_200_HRS_ONLINE_CONFIRMATION_MAIL',
@@ -537,8 +544,7 @@ const ttc200hr = {
       },
     },
     batch: 2,
-    metaDescription:
-      'You will learn the tools to master your physical, mental and spiritual well-being. You will see a marked improvement in your life, relationships and work.',
+    metaDescription: 'You will learn the tools to master your physical, mental and spiritual well-being. You will see a marked improvement in your life, relationships and work.',
     image: `${baseDomain}${courseAssets.courseAsset38}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset101}`,
     mostPopular: false,
@@ -627,7 +633,7 @@ const ttc200hr = {
           text: [
             '2024 : Online:Rs. 27,500 /-', 'Non-Residential: Rs. 33,000/- (Inclusive of course fee, study material.)', ' Residential: Rs. 90,000/- (Inclusive of course fee, study material, accommodation on triple occupancy basis and 4 meals a day)',
           ],
-       
+
         },
       },
       {
@@ -900,7 +906,6 @@ const ttc200hr = {
         }
       }
     ],
-
     offerings: [
       {
         type: 'u-list',
@@ -942,6 +947,14 @@ const ttc200hr = {
     ],
     regsitraion: [],
     faq: [],
+    moreInfo: {
+      duration: "02 Months",
+      mode: "Online & On Campus",
+      language: "English",
+      timing: "12:00 noon - 4:00 pm (IST)",
+      days: "Monday - Friday",
+      navigate: "/200-hrs-part-time-ttc-on-campus-english",
+    },
   },
   3: {
     id: '',
@@ -1440,6 +1453,14 @@ const ttc200hr = {
     ],
     regsitraion: [],
     faq: [],
+    moreInfo: {
+      duration: "02 Months",
+      mode: "Online",
+      language: "English",
+      timing: "Morning: 7:00am - 8:30am and Evening : 6:30pm - 8:30pm (IST)",
+      days: "Monday - Saturday",
+      navigate: "/200-hrs-part-time-ttc-online-english",
+    },
   },
   4: {
     id: '',
@@ -1464,8 +1485,7 @@ const ttc200hr = {
       },
     },
     batch: 4,
-    metaDescription:
-      'You will learn the tools to master your physical, mental, and spiritual well-being. You will see a marked improvement in your life, relationships, and work.',
+    metaDescription: 'You will learn the tools to master your physical, mental, and spiritual well-being. You will see a marked improvement in your life, relationships, and work.',
     image: `${baseDomain}${courseAssets.courseAsset38}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset101}`,
     mostPopular: false,
@@ -1912,7 +1932,15 @@ const ttc200hr = {
     ],
     regsitraion: [],
     faq: [],
-  },  
+    moreInfo: {
+      duration: "02 Month",
+      mode: "Online ",
+      language: "Hindi",
+      timing: "1:00 pm - 4:30 pm (IST)",
+      days: "Monday - Saturday",
+      navigate: "/200-hrs-part-time-ttc-online",
+    },
+  },
   5: {
     id: '',
     textdescription6: '',
@@ -2404,6 +2432,14 @@ const ttc200hr = {
     ],
     regsitraion: [],
     faq: [],
+    moreInfo: {
+      duration: "03 Months",
+      mode: "Online",
+      language: "English",
+      timing: "Saturday: 10:00 am – 8:30 pm (IST) and Sunday: 10:00 am – 1:30 pm (IST)",
+      days: "Saturday & Sunday",
+      navigate: "/weekend-teacher-training-course",
+    },
   },
   6: {
     id: '',
@@ -2888,6 +2924,14 @@ const ttc200hr = {
     ],
     regsitraion: [],
     faq: [],
+    moreInfo: {
+      duration: "02 Months",
+      mode: "Online",
+      language: "English",
+      timing: "4:30pm – 8:00pm (IST)",
+      days: "Monday - Saturday",
+      navigate: "/200-hrs-part-time-ttc-online-english-batch-6",
+    },
   },
 }
 
@@ -3824,8 +3868,8 @@ const ttc900hr = {
       offlineFee: { residentialFee: 60000, nonResidentialFee: 60000 },
     },
     category: 'ttc',
-    dates: [ 
-      
+    dates: [
+
       // '1st Jan 2024',
       // '1st Feb 2024',
       // '1st Mar 2024',
@@ -5221,7 +5265,7 @@ const ttc900hr = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'ttc',
-    dates: ['17th Jun - 5th Oct 2024','14th Oct 2024 - 1st Feb 2025'],
+    dates: ['17th Jun - 5th Oct 2024', '14th Oct 2024 - 1st Feb 2025'],
     online: true,
     onCampus: false,
     nonResidential: false,
@@ -6674,7 +6718,7 @@ const camps = {
       'Asanas, pranayamas, and relaxation techniques for treating heart conditions',
     image: `${baseDomain}${courseAssets.courseAsset111}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset6}`,
-    dates: ['7th Jul 2024','1st Sep 2024','3rd Nov 2024'],
+    dates: ['7th Jul 2024', '1st Sep 2024', '3rd Nov 2024'],
     online: false,
     onCampus: true,
     nonResidential: false,
@@ -6803,7 +6847,7 @@ const camps = {
         templateNonResidential: '',
       },
     },
-    dates: ['2nd Jun 2024','4th Aug 2024','6th Oct 2024','1st Dec 2024'],
+    dates: ['2nd Jun 2024', '4th Aug 2024', '6th Oct 2024', '1st Dec 2024'],
     mostPopular: false,
     rating: 5,
     colorCode: '#CE9B51',
@@ -7409,7 +7453,7 @@ const camps = {
       'Enhance state of mind with pranayama, yoga asana and relaxation techniques',
     image: `${baseDomain}${courseAssets.courseAsset8}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset112}`,
-    dates: ['21st Jul 2024','15th Sep 2024','17th Nov 2024'],
+    dates: ['21st Jul 2024', '15th Sep 2024', '17th Nov 2024'],
     online: false,
     onCampus: true,
     nonResidential: false,
@@ -7690,7 +7734,7 @@ const camps = {
         templateNonResidential: '',
       },
     },
-    dates: ['14th Jul 2024','8th Sep 2024','10th Nov 2024',],
+    dates: ['14th Jul 2024', '8th Sep 2024', '10th Nov 2024',],
     mostPopular: false,
     rating: 5,
     colorCode: '#CE9B51',
@@ -7839,7 +7883,7 @@ const camps = {
       },
     },
     dates: [
-    
+
       // '18th Mar & 19th Mar 2024',
       // '20th Apr & 21st Apr 2024',
       // '20th May & 21st May 2024',
@@ -8002,7 +8046,7 @@ const camps = {
         templateNonResidential: '',
       },
     }, text: ['INR 2,000'],
-    dates: ['8th Jun 2024','10th Aug 2024','12th Oct 2024','14th Dec 2024'],
+    dates: ['8th Jun 2024', '10th Aug 2024', '12th Oct 2024', '14th Dec 2024'],
     mostPopular: false,
     rating: 5,
     colorCode: '#DDAB58',
@@ -8147,7 +8191,7 @@ const camps = {
         templateNonResidential: '',
       },
     },
-    dates: ['28th Jul 2024','27th Oct 2024'],
+    dates: ['28th Jul 2024', '27th Oct 2024'],
     mostPopular: false,
     rating: 5,
     colorCode: '#CE9B51',
@@ -8294,7 +8338,7 @@ const camps = {
         templateNonResidential: '',
       },
     },
-    dates: ['9th Jun 2024','14th Jul 2024','11th Aug 2024','15th Sep 2024','13th Oct 2024','10th Nov 2024','8th Dec 2024'],
+    dates: ['9th Jun 2024', '14th Jul 2024', '11th Aug 2024', '15th Sep 2024', '13th Oct 2024', '10th Nov 2024', '8th Dec 2024'],
     mostPopular: false,
     rating: 5,
     colorCode: '#EDBE66',
@@ -8440,7 +8484,7 @@ const camps = {
         templateNonResidential: '',
       },
     },
-    dates: ['1st Jun 2024','6th Jul 2024','3rd Aug 2024','7th Sep 2024','5th Oct 2024','2nd Nov 2024','7th Dec 2024'],
+    dates: ['1st Jun 2024', '6th Jul 2024', '3rd Aug 2024', '7th Sep 2024', '5th Oct 2024', '2nd Nov 2024', '7th Dec 2024'],
     mostPopular: false,
     rating: 5,
     colorCode: '#DDAB58',
@@ -8590,7 +8634,7 @@ const camps = {
         templateNonResidential: '',
       },
     },
-    dates: ['11th May 2024','13th Jul 2024','14th Sep 2024','9th Nov 2024'],
+    dates: ['11th May 2024', '13th Jul 2024', '14th Sep 2024', '9th Nov 2024'],
     mostPopular: false,
     rating: 5,
     colorCode: '#CE9B51',
@@ -8741,7 +8785,7 @@ const camps = {
         templateNonResidential: '',
       },
     },
-    dates: ['23rd Jun 2024','28th Jul 2024','25th Aug 2024','22nd Sep 2024','27th oct 2024','24th Nov 2024','22nd Dec 2024'],
+    dates: ['23rd Jun 2024', '28th Jul 2024', '25th Aug 2024', '22nd Sep 2024', '27th oct 2024', '24th Nov 2024', '22nd Dec 2024'],
     mostPopular: false,
     rating: 5,
     colorCode: '#EDBE66',
@@ -8886,7 +8930,7 @@ const camps = {
         templateNonResidential: 'CAMP_FOR_7_DAYS_HEALTH',
       },
     },
-    dates: ['13rd Jul to 19th Jul 2024','14th Sep to 20th Sep 2024','9th Nov to 15th Nov 2024',''],
+    dates: ['13rd Jul to 19th Jul 2024', '14th Sep to 20th Sep 2024', '9th Nov to 15th Nov 2024', ''],
     online: false,
     onCampus: true,
     nonResidential: true,
@@ -9081,7 +9125,7 @@ const camps = {
         content: {
           title: 'FEES',
           text: [
-            
+
             '2024: Non-Residential: 10,000/- (inclusive of course fees and 4 Meals)',
           ],
         },
@@ -9091,7 +9135,7 @@ const camps = {
         content: {
           title: 'Residential',
           text: [
-            
+
             '2024:',
             'Rs. 16,500/- Triple Sharing per person (Inclusive of course fee and 4 meals a day)',
             // 'Rs. 23,000/- Dual Sharing per person (Inclusive of course fee and 4 meals a day)',
@@ -9216,7 +9260,7 @@ const camps = {
       },
     },
     dates: [
-      
+
       // '23rd Mar to 29th Mar 2024',
       // '27th Apr to 3rd May 2024',
       // '25th May to 31st May 2024',
@@ -9432,7 +9476,7 @@ const camps = {
         content: {
           title: 'Residential',
           text: [
-         
+
             '2024:',
             'Rs. 16,500/- Triple Sharing per person (Inclusive of course fee and 4 meals a day)',
             // 'Rs. 23,000/- Dual Sharing per person (Inclusive of course fee and 4 meals a day)',
@@ -9556,7 +9600,7 @@ const camps = {
     },
     batch: 1,
     dates: [
-      
+
       // '3rd Mar to 23rd Mar 2024',
       // '7th Apr to 27th Apr 2024',
       // '5th May to 25th May 2024',
@@ -9730,7 +9774,7 @@ const camps = {
         content: {
           title: 'FEES',
           text: [
-            
+
             '2024: Rs. 2500/-'
           ],
         },
@@ -10092,7 +10136,7 @@ const camps = {
         content: {
           title: 'FEES',
           text: [
-            
+
             '2024: Rs. 2500/-'
           ],
         },
@@ -10279,7 +10323,7 @@ const camps = {
       },
     },
     dates: [
-      
+
       // '10th Mar to 30th Mar 2024',
       // '14th Jul to 3rd Aug 2024',
       '11th Aug to 31st Aug 2024',
@@ -10451,7 +10495,7 @@ const camps = {
         content: {
           title: 'FEES',
           text: [
-            
+
             '2024: Rs. 2500/-'
           ],
         },
@@ -11892,7 +11936,7 @@ const classes = {
         content: {
           title: 'Fees',
           text: [
-            
+
             '2024: Rs. 1100/-'
           ],
         },
@@ -12445,7 +12489,7 @@ const classes = {
               listItem:
                 'Rest is the same as the morning batch, a mix of philosophy and regular online yogaasanas session.',
               subItems: [],
-              
+
             },
           ],
         },
@@ -12551,7 +12595,7 @@ const classes = {
         type: 'paragraph',
         content: {
           title: 'Duration',
-          text: ['Every Saturday: 2.00 p.m. - 5.00 p.m. (IST)','1.30 p.m. - 2.00 p.m. : Registration (Outside C1 Hall)', '2.00 p.m. - 2.30 p.m. : Physical Parameter Assessments', '2.30 p.m. - 3.00 p.m. : Institute Overview & Asana Introduction', '3.00 p.m. - 3.30 p.m. : Lifestyle Management Video by  Dr. Hansaji Yogendra', '3.30 p.m. - 3.45 p.m. : Sattvik Snack', '3.45 p.m. - 4.10 p.m. :  Special Talk by Doctor/Counsellor', '4:10 p.m. : Personalized one-on-one consultations with:-', 'Doctor', 'Yoga Counsellor', 'Asana Teacher (if required) '],
+          text: ['Every Saturday: 2.00 p.m. - 5.00 p.m. (IST)', '1.30 p.m. - 2.00 p.m. : Registration (Outside C1 Hall)', '2.00 p.m. - 2.30 p.m. : Physical Parameter Assessments', '2.30 p.m. - 3.00 p.m. : Institute Overview & Asana Introduction', '3.00 p.m. - 3.30 p.m. : Lifestyle Management Video by  Dr. Hansaji Yogendra', '3.30 p.m. - 3.45 p.m. : Sattvik Snack', '3.45 p.m. - 4.10 p.m. :  Special Talk by Doctor/Counsellor', '4:10 p.m. : Personalized one-on-one consultations with:-', 'Doctor', 'Yoga Counsellor', 'Asana Teacher (if required) '],
         },
       },
       {
@@ -12615,7 +12659,7 @@ const classes = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'classes',
-    dates: [ '21st Jan 2024'],
+    dates: ['21st Jan 2024'],
     online: true,
     onCampus: false,
     nonResidential: false,
@@ -13040,7 +13084,7 @@ const classes = {
     fees: {
       // onlineFee: 1500,
       offlineFee: { residentialFee: 0, nonResidentialFee: 40000 },
-      internationalFee : { residentialFee: 0, nonResidentialFee: 329837 },
+      internationalFee: { residentialFee: 0, nonResidentialFee: 329837 },
     },
     category: 'classes',
     dates: [],
@@ -13074,7 +13118,7 @@ const classes = {
           points: [
             {
               listItem: 'Semester - I',
-              subItems: [ 'Fundamentals of Indian Philosophy', 'Human Anatomy and Physiology', 'Yoga Tradition and Classical Texts', 'Practical and Yoga Teaching'],
+              subItems: ['Fundamentals of Indian Philosophy', 'Human Anatomy and Physiology', 'Yoga Tradition and Classical Texts', 'Practical and Yoga Teaching'],
             },
             {
               listItem: 'Semester - II',
@@ -13102,7 +13146,7 @@ const classes = {
         type: 'paragraph',
         content: {
           title: 'Admission Process',
-          text: ['Application Deadline: 10th August','Course Commencement Date: 16th August 2024', 'Selection Criteria: Based on merit and timely registration.'],
+          text: ['Application Deadline: 10th August', 'Course Commencement Date: 16th August 2024', 'Selection Criteria: Based on merit and timely registration.'],
         },
       },
       {
@@ -13239,8 +13283,8 @@ const certificate = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'certificate-course',
-    dates: [ '5th Aug to 26th Sep 2024· Morning', '7th Aug to 28th Sep 2024· Evening','6th November 2024 to 28th December 2024· Evening','11th Nov to 2nd Jan 2025· Morning'],
-    
+    dates: ['5th Aug to 26th Sep 2024· Morning', '7th Aug to 28th Sep 2024· Evening', '6th November 2024 to 28th December 2024· Evening', '11th Nov to 2nd Jan 2025· Morning'],
+
     online: true,
     onCampus: false,
     nonResidential: false,
@@ -13300,9 +13344,9 @@ const certificate = {
           title: 'Online Yoga Sessions',
           text: [
             'Morning batch : Mondays, Tuesdays & Thursdays: 11:30 am - 12:30 pm (IST)',
-            
+
             'Evening batch: Wednesday, Friday & Saturday: 6:00 pm - 7:00 pm (IST)',
-            
+
             '24 sessions of one hour each',
           ],
         },
@@ -13312,7 +13356,7 @@ const certificate = {
         content: {
           title: 'Fees',
           text: [
-            
+
             '2024 : Rs. 24,000/-'
           ],
         },
@@ -13513,7 +13557,7 @@ const certificate = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'certificate-course',
-    dates: ['2nd Aug to 7th Sep 2024','15th Nov - 21st Dec 2024'],
+    dates: ['2nd Aug to 7th Sep 2024', '15th Nov - 21st Dec 2024'],
     online: true,
     onCampus: true,
     nonResidential: false,
@@ -13718,7 +13762,7 @@ const certificate = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'certificate-course',
-    dates: [ '28th Aug  to 20th Dec 2024'],
+    dates: ['28th Aug  to 20th Dec 2024'],
     online: true,
     onCampus: true,
     nonResidential: false,

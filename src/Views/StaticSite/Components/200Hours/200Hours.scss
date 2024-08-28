@@ -125,9 +125,9 @@ $primary-hover-color: #47126B;
                         left: 0;
 
 
-                    @include media-breakpoint("lt-sm") {
-                        height: 15px;
-                    }
+                        @include media-breakpoint("lt-sm") {
+                            height: 15px;
+                        }
                     }
                 }
 
@@ -832,7 +832,7 @@ $primary-hover-color: #47126B;
                     }
 
                     .empty-row-2:nth-child(4) {
-                        
+
                         .bgImg-r2 {
                             background-image: url('../../../../../public/images/200-hours/Rectangle2.svg');
                         }
@@ -854,7 +854,7 @@ $primary-hover-color: #47126B;
                     }
 
                     .empty-row-2:nth-child(8) {
-                        
+
                         .bgImg-r2 {
                             background-image: url('../../../../../public/images/200-hours/Rectangle4.svg');
                         }
@@ -1032,7 +1032,7 @@ $primary-hover-color: #47126B;
 
                         .even-batch {
                             width: 20.833vw;
-                            height: fit-content;
+                            // height: fit-content;
                             padding: 16px 16px 0px 16px;
                             border-radius: 16px;
                             border: 1px;
@@ -1089,6 +1089,12 @@ $primary-hover-color: #47126B;
                                 margin-top: 15px;
                                 margin-bottom: 20px;
 
+                                // display: -webkit-box;
+                                // -webkit-box-orient: vertical;
+                                // overflow: hidden;
+                                // text-overflow: ellipsis;
+                                // -webkit-line-clamp: 2;
+
                                 @include media-breakpoint("lt-sm") {
                                     font-size: 3.571vw;
                                     line-height: 20px;
@@ -1112,8 +1118,14 @@ $primary-hover-color: #47126B;
                                 .batch-info-label {
                                     font-size: 0.972vw;
                                     font-weight: 600;
-                                    line-height: 20px;
+                                    // line-height: 20px;
                                     text-align: left;
+
+                                    display: -webkit-box;
+                                    -webkit-box-orient: vertical;
+                                    overflow: hidden;
+                                    text-overflow: ellipsis;
+                                    -webkit-line-clamp: 2;
 
                                     @include media-breakpoint("lt-sm") {
                                         font-size: 3.571vw;
@@ -1124,9 +1136,11 @@ $primary-hover-color: #47126B;
                                     .batch-info-label-span {
                                         font-size: 0.972vw;
                                         font-weight: 500;
-                                        line-height: 20px;
+                                        // line-height: 20px;
                                         text-align: left;
                                         margin-left: 5px;
+
+                                       
 
                                         @include media-breakpoint("lt-sm") {
                                             font-size: 3.571vw;
@@ -1219,8 +1233,15 @@ $primary-hover-color: #47126B;
                                             font-weight: 600;
                                             line-height: 19.07px;
                                             text-align: left;
-                                            width: 70%;
+                                            width: 65%;
                                             color: #000000;
+
+                                            display: -webkit-box;
+                                            -webkit-box-orient: vertical;
+                                            overflow: hidden;
+                                            text-overflow: ellipsis;
+                                            -webkit-line-clamp: 2;
+
                                         }
 
                                         .batch-over-price {
@@ -1247,7 +1268,7 @@ $primary-hover-color: #47126B;
                                         .batch-info-label {
                                             font-size: 0.972vw;
                                             font-weight: 600;
-                                            line-height: 20px;
+                                            // line-height: 20px;
                                             text-align: left;
 
                                             @include media-breakpoint("lt-sm") {
@@ -1259,7 +1280,7 @@ $primary-hover-color: #47126B;
                                             .batch-info-label-span {
                                                 font-size: 0.972vw;
                                                 font-weight: 500;
-                                                line-height: 20px;
+                                                // line-height: 20px;
                                                 text-align: left;
                                                 margin-left: 5px;
 
@@ -1405,14 +1426,14 @@ $primary-hover-color: #47126B;
                                     .batch-info-label {
                                         font-size: 0.972vw;
                                         font-weight: 600;
-                                        line-height: 1.389vw;
+                                        // line-height: 1.389vw;
                                         text-align: left;
                                         // width: 70%;
 
                                         .batch-info-label-span {
                                             font-size: 0.972vw;
                                             font-weight: 500;
-                                            line-height: 1.389vw;
+                                            // line-height: 1.389vw;
                                             text-align: left;
                                             margin-left: 5px;
                                         }
@@ -1489,7 +1510,7 @@ $primary-hover-color: #47126B;
                                         .batch-info-label {
                                             font-size: 0.972vw;
                                             font-weight: 600;
-                                            line-height: 20px;
+                                            // line-height: 20px;
                                             text-align: left;
 
                                             @include media-breakpoint("lt-sm") {
@@ -1501,7 +1522,7 @@ $primary-hover-color: #47126B;
                                             .batch-info-label-span {
                                                 font-size: 0.972vw;
                                                 font-weight: 500;
-                                                line-height: 20px;
+                                                // line-height: 20px;
                                                 text-align: left;
                                                 margin-left: 5px;
 

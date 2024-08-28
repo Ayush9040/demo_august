@@ -14,7 +14,7 @@ import CoveredTopics from './subCOmponents/CoveredTopics'
 import ModalRight from './subCOmponents/ModalRight'
 import CourseCaters from './subCOmponents/courseCaters'
 import { useNavigate } from 'react-router-dom'
-
+import { c200hr } from '../../Views/Courses/Constants/courses'
 // import { collection, getDocs, query, where } from 'firebase/firestore';
 // import { db } from '../../../firebaseConfig';
 
@@ -41,67 +41,77 @@ const Hours200 = () => {
     const [batchHover, setBatchHover] = useState(null);
 
     const [courses, setCourses] = useState([
-        {
-            batchType: "1 Month Advanced Teacher Training Course",
-            duration: "01 Month",
-            mode: "Online & On Campus",
-            language: "English",
-            startDate: "14th Oct 2024",
-            timing: "Evening: 5:00pm - 8:00pm",
-            days: "Monday - Saturday",
-            navigate: "/one-month-ttc",
-        },
-        {
-            batchType: "1 Year Advanced Teacher Training Course",
-            duration: "12 Months",
-            mode: "Online",
-            language: "English",
-            startDate: "14th Oct 2024",
-            timing: "Afternoon: 1.30pm - 4pm",
-            days: "Monday - Friday",
-            navigate: "/200-hrs-part-time-ttc-on-campus-english",
-        },
-        {
-            batchType: "2 Year Advanced Teacher Training Course",
-            duration: "24 Months",
-            mode: "On Campus",
-            language: "English",
-            startDate: "14th Oct 2024",
-            timing: "Morning: 7am - 9am & Evening: 4.30pm - 8.00 pm",
-            days: "Saturday - Sunday",
-            navigate: "/200-hrs-part-time-ttc-online-english",
-        },
-        {
-            batchType: "4 Month Advanced Teacher Training Course",
-            duration: "04 Months",
-            mode: "Online & On Campus",
-            language: "English",
-            startDate: "14th Oct 2024",
-            timing: "Weekends: Sat: 4.30pm -7.30pm Sun : 9:30 am - 1.30 pm",
-            days: "Monday - Saturday",
-            navigate: "/200-hrs-part-time-ttc-online",
-        },
-        {
-            batchType: "3 Month Advanced Teacher Training Course",
-            duration: "07 Months",
-            mode: "Online & On Campus",
-            language: "English",
-            startDate: "14th Oct 2024",
-            timing: "Afternoon: 1.30pm - 4pm",
-            days: "Saturday - Sunday",
-            navigate: "/weekend-teacher-training-course",
-        },
-        {
-            batchType: "2 Month Advanced Teacher Training Course ",
-            duration: "07 Months",
-            mode: "Online & On Campus",
-            language: "English",
-            startDate: "14th Oct 2024",
-            timing: "Afternoon: 1.30pm - 4pm",
-            days: "Monday - Saturday",
-            navigate: "/200-hrs-part-time-ttc-online-english-batch-6",
-        },
+        c200hr?.["0"],
+        c200hr?.["1"],
+        c200hr?.["2"],
+        c200hr?.["3"],
+        c200hr?.["4"],
+        c200hr?.["5"],
+
     ])
+
+    // const [courses, setCourses] = useState([
+    //     {
+    //         batchType: "1 Month Advanced Teacher Training Course",
+    //         duration: "01 Month",
+    //         mode: "Online & On Campus",
+    //         language: "English",
+    //         startDate: "14th Oct 2024",
+    //         timing: "Evening: 5:00pm - 8:00pm",
+    //         days: "Monday - Saturday",
+    //         navigate: "/one-month-ttc",
+    //     },
+    //     {
+    //         batchType: "1 Year Advanced Teacher Training Course",
+    //         duration: "12 Months",
+    //         mode: "Online",
+    //         language: "English",
+    //         startDate: "14th Oct 2024",
+    //         timing: "Afternoon: 1.30pm - 4pm",
+    //         days: "Monday - Friday",
+    //         navigate: "/200-hrs-part-time-ttc-on-campus-english",
+    //     },
+    //     {
+    //         batchType: "2 Year Advanced Teacher Training Course",
+    //         duration: "24 Months",
+    //         mode: "On Campus",
+    //         language: "English",
+    //         startDate: "14th Oct 2024",
+    //         timing: "Morning: 7am - 9am & Evening: 4.30pm - 8.00 pm",
+    //         days: "Saturday - Sunday",
+    //         navigate: "/200-hrs-part-time-ttc-online-english",
+    //     },
+    //     {
+    //         batchType: "4 Month Advanced Teacher Training Course",
+    //         duration: "04 Months",
+    //         mode: "Online & On Campus",
+    //         language: "English",
+    //         startDate: "14th Oct 2024",
+    //         timing: "Weekends: Sat: 4.30pm -7.30pm Sun : 9:30 am - 1.30 pm",
+    //         days: "Monday - Saturday",
+    //         navigate: "/200-hrs-part-time-ttc-online",
+    //     },
+    //     {
+    //         batchType: "3 Month Advanced Teacher Training Course",
+    //         duration: "07 Months",
+    //         mode: "Online & On Campus",
+    //         language: "English",
+    //         startDate: "14th Oct 2024",
+    //         timing: "Afternoon: 1.30pm - 4pm",
+    //         days: "Saturday - Sunday",
+    //         navigate: "/weekend-teacher-training-course",
+    //     },
+    //     {
+    //         batchType: "2 Month Advanced Teacher Training Course ",
+    //         duration: "07 Months",
+    //         mode: "Online & On Campus",
+    //         language: "English",
+    //         startDate: "14th Oct 2024",
+    //         timing: "Afternoon: 1.30pm - 4pm",
+    //         days: "Monday - Saturday",
+    //         navigate: "/200-hrs-part-time-ttc-online-english-batch-6",
+    //     },
+    // ])
 
     const [commonStates, setCommonStates] = useState({
         formIndex: 1,
@@ -133,6 +143,8 @@ const Hours200 = () => {
 
 
     useEffect(() => {
+
+        console.log('courses courses', courses);
 
         getRandomNumber();
 
@@ -367,11 +379,11 @@ const Hours200 = () => {
                                                 key={index}
                                             >
                                                 <div className='batch-top-wrap'>
-                                                    <div className="batch-num-btn">Batch - {index + 1}</div>
-                                                    <div className="online-batch-price">₹00 </div>
+                                                    <div className="batch-num-btn">Batch - {batch?.batch}</div>
+                                                    <div className="online-batch-price">₹{batch?.fees?.onlineFee} </div>
                                                 </div>
 
-                                                <div className="batch-name">{batch?.batchType}</div>
+                                                <div className="batch-name">{batch?.title}</div>
 
                                                 <div className='batch-infos-wrap'>
 
@@ -381,7 +393,7 @@ const Hours200 = () => {
                                                             <img className='asatanga-img' src="/icons/200-hours/batchIndexIcon.svg" alt="" />
                                                             <p className='batch-info-label'>
                                                                 Duration:
-                                                                <span className='batch-info-label-span'>{batch?.duration}</span>
+                                                                <span className='batch-info-label-span'>{batch?.moreInfo?.duration}</span>
                                                             </p>
                                                         </div>
 
@@ -389,7 +401,7 @@ const Hours200 = () => {
                                                             <img className='asatanga-img' src="/icons/200-hours/batchIndexIcon.svg" alt="" />
                                                             <p className='batch-info-label'>
                                                                 Mode:
-                                                                <span className='batch-info-label-span'>{batch?.mode}</span>
+                                                                <span className='batch-info-label-span'>{batch?.moreInfo?.mode}</span>
                                                             </p>
                                                         </div>
 
@@ -397,26 +409,26 @@ const Hours200 = () => {
                                                             <img className='asatanga-img' src="/icons/200-hours/batchIndexIcon.svg" alt="" />
                                                             <p className='batch-info-label'>
                                                                 Language:
-                                                                <span className='batch-info-label-span'>{batch?.language}</span>
+                                                                <span className='batch-info-label-span'>{batch?.moreInfo?.language}</span>
                                                             </p>
                                                         </div>
 
                                                     </div>
 
                                                     <div className='batch-info-mid'>
-                                                        <div className="batch-info Start">
+                                                        {/* <div className="batch-info Start">
                                                             <img className='asatanga-img' src="/icons/200-hours/batchIndexIcon.svg" alt="" />
                                                             <p className='batch-info-label'>
                                                                 Start Date:
                                                                 <span className='batch-info-label-span'>{batch?.startDate}</span>
                                                             </p>
-                                                        </div>
+                                                        </div> */}
 
                                                         <div className="batch-info">
                                                             <img className='asatanga-img' src="/icons/200-hours/batchIndexIcon.svg" alt="" />
                                                             <p className='batch-info-label'>
                                                                 Timings:
-                                                                <span className='batch-info-label-span'>{batch?.timing}</span>
+                                                                <span className='batch-info-label-span'>{batch?.moreInfo?.timing}</span>
                                                             </p>
                                                         </div>
                                                     </div>
@@ -425,11 +437,11 @@ const Hours200 = () => {
                                                         <img className='asatanga-img' src="/icons/200-hours/batchIndexIcon.svg" alt="" />
                                                         <p className='batch-info-label'>
                                                             Days:
-                                                            <span className='batch-info-label-span'>{batch?.days}</span>
+                                                            <span className='batch-info-label-span'>{batch?.moreInfo?.days}</span>
                                                         </p>
                                                     </div>
 
-                                                    <div className="batch-reg-now-btn" onClick={() => { navigate(batch?.navigate) }}>
+                                                    <div className="batch-reg-now-btn" onClick={() => { navigate(batch?.moreInfo?.navigate) }}>
                                                         Register Now
                                                     </div>
 
@@ -439,20 +451,20 @@ const Hours200 = () => {
                                                     batchHover == index &&
                                                     <div className="batch-over" onMouseLeave={() => setBatchHover(null)}>
                                                         <div className='batch-over-content'>
-                                                            <div className="batch-indication">Batch -{index + 1}  </div>
+                                                            <div className="batch-indication">Batch - {batch?.batch}  </div>
 
                                                             <div className="batch-over-top">
-                                                                <div className="batch-over-title">{batch?.batchType}</div>
-                                                                <div className='batch-over-price'>₹{batch?.onlinePrice ? batch?.onlinePrice : "00"}</div>
+                                                                <div className="batch-over-title">{batch?.title}</div>
+                                                                <div className='batch-over-price'>₹{batch?.fees?.onlineFee}</div>
                                                             </div>
 
-                                                            <div className="batch-over-last-option">
+                                                            {/* <div className="batch-over-last-option">
                                                                 <img className='asatanga-img' src="/icons/200-hours/batchIndexIcon.svg" alt="" />
                                                                 <p className='batch-info-label'>
                                                                     Days:
                                                                     <span className='batch-info-label-span'>{batch?.days}</span>
                                                                 </p>
-                                                            </div>
+                                                            </div> */}
 
                                                             <div
                                                                 className="batch-over-reg-btn"
