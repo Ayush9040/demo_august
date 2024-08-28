@@ -27,6 +27,7 @@ const Enrollment = () => {
     let currentCrs = AllCourses.find((item) => item.key === courseId)
     setCurrentCourse(currentCrs)
     setCourseDate(Params.get('date'))
+    console.log('now p2p ',currentCourse)
     // setDate(
     //   today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate()
     // )
@@ -42,6 +43,9 @@ const Enrollment = () => {
   const [uploadCheck, setUploadCheck] = useState(true)
 
 
+  const [sessionId, setSessionId] = useState('');
+  const [startTime, setStartTime] = useState(0);
+  const { isLoggedIn } = useSelector((state) => state.auth)
   const [formData, setFormData] = useState({
     name: user?.data?.firstName,
     phone: '',
@@ -342,8 +346,48 @@ const Enrollment = () => {
               order_id: paymentOrderResponse.data.id, // eslint-disable-line
               handler: async (res) => {
                 // Navigare to Success if razorpay_payment_id, razorpay_order_id, razorpay_signature is there
-                if (res.razorpay_payment_id && res.razorpay_order_id && res.razorpay_signature) {
-                  await axios.post(`${authBaseDomain}/ali/mail`, mailTemplate)
+                if(res.razorpay_payment_id && res.razorpay_order_id && res.razorpay_signature) {
+                  await axios.post(`${ authBaseDomain }/ali/mail`, mailTemplate)
+
+                  handleCTPaymentCompletedCourse({
+                    // cost,
+                    // centre,
+                    // modeOfPayment,
+                    paymentStatus: "Success",
+                    courseName: formData.courseName,
+                    courseCategory: formData.category,
+                    startDate: formData.sdate,
+                    endDate: formData.sdate,
+                    pageName: window.location.href,
+                    checkoutUrl: window.location.href,
+                    pageUrl: window.location.href,
+                    // feesResidential,
+                    // feesNonResidential,
+                    // feesOnline,
+                    timings: currentCourse.timing ,
+                    // tenure,
+                    // courseMode,
+                    // courseType,
+                    // courseSubType,
+                    // language,
+                    // dayType,
+                    batchNo: currentCourse.batch,
+                    // dateTimeTimestamp,
+                    // preRequisite,
+                    status: "Success",
+                    name: formData.name,
+                    emailId: formData.email,
+                    phoneNumber: formData.phone,
+                    state: formData.state,
+                    city: formData.city,
+                    pinCode: formData.pincode,
+                    gender: formData.gender,
+                    // age,
+                    // nationality,
+                    // medicalIssues,
+                    // residentialStatus,
+                  })
+
                   navigate(`/enrollment_thankyou/${currentCourse.key}`)
                 } else {
                   handleCTPaymentFailed({

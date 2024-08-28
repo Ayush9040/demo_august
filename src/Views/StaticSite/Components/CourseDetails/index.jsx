@@ -420,16 +420,8 @@ const CourseDetails = ({ pageDate }) => {
                             : `/user/sign-in/?location=${pageDate.key}`//&date=${selectDate}
                         }
                       >
-                        <CommonBtn text={'Enroll Now'} buttonAction={() => handleCTEnrollNowClick({
-              courseTitle : pageDate.title,
-              fees: pageDate?.fees,
-              timing: pageDate?.timing,
-              category: pageDate?.category,
-              batch: pageDate?.batch,
-              nonResidential: pageDate?.nonResidential,
-              residential: pageDate?.residential,
-              online:pageDate?.online
-            })} />
+                        {/* <CommonBtn text={'Enroll Now'} /> */}
+                        <EnrollBtn text={'Enroll Now'} />
                       </Link>
                     ) : (
                       // scroll()
@@ -440,16 +432,8 @@ const CourseDetails = ({ pageDate }) => {
                             : `/user/sign-in/?location=${pageDate.key}`//&date=${selectDate}
                         }
                       >
-                        <CommonBtn text={'Enroll Now'} buttonAction={() => handleCTEnrollNowClick({
-              courseTitle : pageDate.title,
-              fees: pageDate?.fees,
-              timing: pageDate?.timing,
-              category: pageDate?.category,
-              batch: pageDate?.batch,
-              nonResidential: pageDate?.nonResidential ,
-              residential: pageDate?.residential,
-              online:pageDate?.online
-            })} />
+                        {/* <CommonBtn text={'Enroll Now'} /> */}
+                        <EnrollBtn text={'Enroll Now'} />
                       </Link>
                     )
                   ) :
@@ -460,29 +444,13 @@ const CourseDetails = ({ pageDate }) => {
                         : `/user/sign-in/?location=${pageDate.key}`//&date=${selectDate}
                     }
                   >
-                    <CommonBtn text={'Enroll Now'} buttonAction={() => handleCTEnrollNowClick({
-              courseTitle : pageDate.title,
-              fees: pageDate?.fees,
-              timing: pageDate?.timing,
-              category: pageDate?.category,
-              batch: pageDate?.batch,
-              nonResidential: pageDate?.nonResidential ,
-              residential: pageDate?.residential,
-              online:pageDate?.online
-            })} />
+                    {/* <CommonBtn text={'Enroll Now'} /> */}
+                    <EnrollBtn text={'Enroll Now'} />
                   </Link> :
                     (<div >
                       <div style={{ opacity: '0.4' }}>
-                        <CommonBtn text={'Enroll Now'} buttonAction={() => handleCTEnrollNowClick({
-              courseTitle : pageDate.title,
-              fees: pageDate?.fees,
-              timing: pageDate?.timing,
-              category: pageDate?.category,
-              batch: pageDate?.batch,
-              nonResidential: pageDate?.nonResidential ,
-              residential: pageDate?.residential,
-              online:pageDate?.online
-            })} />
+                        {/* <CommonBtn text={'Enroll Now'} /> */}
+                        <EnrollBtn text={'Enroll Now'} />
                       </div>
                       <div style={{ fontSize: '1.5rem', padding: '1.5rem' }}>No dates available for this course</div>
                     </div>)
@@ -616,85 +584,39 @@ const CourseDetails = ({ pageDate }) => {
           <span>{pageDate?.title}</span>
           {/* <button className="enroll-now-button">Enroll Now</button> */}
           <div onClick={checkHandler} className='common-btn-footer'>
-                {pageDate?.dates?.length !== 0 ?
-                  (
-                    selectDate ? (
-                      <Link
-                      
-                        to={
-                          isLoggedIn
-                            ? `/enrollment/${pageDate.key}`///?date=${selectDate}
-                            : `/user/sign-in/?location=${pageDate.key}`//&date=${selectDate}
-                        }
-                      >
-                        <CommonBtn text={'Enroll Now'} buttonAction={() => handleCTEnrollNowClick({
-              courseTitle : pageDate.title,
-              fees: pageDate?.fees,
-              timing: pageDate?.timing,
-              category: pageDate?.category,
-              batch: pageDate?.batch,
-              nonResidential: pageDate?.nonResidential ,
-              residential: pageDate?.residential,
-              online:pageDate?.online
-            })}/>
-                      </Link>
-                    ) : (
-                      // scroll()
-                      <Link
-                        to={
-                          isLoggedIn
-                            ? `/enrollment/${pageDate.key}`///?date=${selectDate}
-                            : `/user/sign-in/?location=${pageDate.key}`//&date=${selectDate}
-                        }
-                      >
-                        <CommonBtn text={'Enroll Now'} buttonAction={() => handleCTEnrollNowClick({
-              courseTitle : pageDate.title,
-              fees: pageDate?.fees,
-              timing: pageDate?.timing,
-              category: pageDate?.category,
-              batch: pageDate?.batch,
-              nonResidential: pageDate?.nonResidential ,
-              residential: pageDate?.residential,
-              online:pageDate?.online
-            })} />
-                      </Link>
-                    )
-                  ) :
-                  (pageDate?.key === 'samattvam' || pageDate?.key === 'satsang' || pageDate?.key === 'ma-yoga-shastra' ? <Link
+            {pageDate?.dates?.length !== 0 ?
+              (
+                selectDate ? (
+                  <Link
+
                     to={
                       isLoggedIn
                         ? `/enrollment/${pageDate.key}`///?date=${selectDate}
                         : `/user/sign-in/?location=${pageDate.key}`//&date=${selectDate}
                     }
                   >
-                    <CommonBtn text={'Enroll Now'} buttonAction={() => handleCTEnrollNowClick({
-              courseTitle : pageDate.title,
-              fees: pageDate?.fees,
-              timing: pageDate?.timing,
-              category: pageDate?.category,
-              batch: pageDate?.batch,
-              nonResidential: pageDate?.nonResidential ,
-              residential: pageDate?.residential,
-              online:pageDate?.online
-            })} />
-                  </Link> :
-                    (<div >
-                      <div style={{ opacity: '0.4' }}>
-                        <CommonBtn text={'Enroll Now'} buttonAction={() => handleCTEnrollNowClick({
-              courseTitle : pageDate.title,
-              fees: pageDate?.fees,
-              timing: pageDate?.timing,
-              category: pageDate?.category,
-              batch: pageDate?.batch,
-              nonResidential: pageDate?.nonResidential ,
-              residential: pageDate?.residential,
-              online:pageDate?.online
-            })} />
-                      </div>
-                      <div style={{ fontSize: '1.5rem', padding: '1.5rem' }}>No dates available for this course</div>
-                    </div>)
-
-                  )
+                    {/* <CommonBtn text={'Enroll Now'} /> */}
+                    <EnrollBtn text={'Enroll Now'} />
+                  </Link>
+                ) : (
+                  // scroll()
+                  <Link
+                    to={
+                      isLoggedIn
+                        ? `/enrollment/${pageDate.key}`///?date=${selectDate}
+                        : `/user/sign-in/?location=${pageDate.key}`//&date=${selectDate}
+                    }
+                  >
+                    {/* <CommonBtn text={'Enroll Now'} /> */}
+                    <EnrollBtn text={'Enroll Now'} />
+                  </Link>
+                )
+              ) :
+              (pageDate?.key === 'samattvam' || pageDate?.key === 'satsang' || pageDate?.key === 'ma-yoga-shastra' ? <Link
+                to={
+                  isLoggedIn
+                    ? `/enrollment/${pageDate.key}`///?date=${selectDate}
+                    : `/user/sign-in/?location=${pageDate.key}`//&date=${selectDate}
                 }
               >
                 {/* <CommonBtn text={'Enroll Now'} /> */}
