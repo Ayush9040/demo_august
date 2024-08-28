@@ -24,6 +24,7 @@ const Enrollment = () => {
     let currentCrs = AllCourses.find((item) => item.key === courseId)
     setCurrentCourse(currentCrs)
     setCourseDate(Params.get('date'))
+    localStorage.removeItem('courseEndDate')
     // setDate(
     //   today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate()
     // )
@@ -133,7 +134,7 @@ const Enrollment = () => {
 
   const setEndDate = (months, startDate) => {
     let endDate = formatDate(addMonths(parseDate(startDate), months))
-    console.log(endDate);
+    // console.log(endDate);
 
     // setFormData({ ...formData, endDate: endDate })
     let originalFee = AllCourses.find((item) => item.key === courseId)
@@ -158,7 +159,7 @@ const Enrollment = () => {
   function addMonths(startDate, months) {
     const date = startDate; // Create a Date object from the start date
     date.setMonth(date.getMonth() + months); // Add the number of months
-    console.log(date);
+    // console.log(date);
 
     return date;
   }
@@ -261,7 +262,7 @@ const Enrollment = () => {
           nationality: formData.nationality,
         },
         startDate: formData.startDate,
-        endDate: formData.endDateFormat,
+        endDate: localStorage.getItem('courseEndDate') ? localStorage.getItem('courseEndDate') : null,
         academicQualification: qualificationData,
         workExperience: listData,
         others: {

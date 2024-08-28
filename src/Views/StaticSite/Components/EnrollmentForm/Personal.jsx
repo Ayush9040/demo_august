@@ -97,6 +97,7 @@ const Personal = ({
         ...prev, endDate: value, endDateFormat: endDate
       }
     })
+    localStorage.setItem('courseEndDate',endDate)
     setFormData({ ...formData, endDate: value, duration: value?.value })
     dateDurationChange(value?.value)
   }
