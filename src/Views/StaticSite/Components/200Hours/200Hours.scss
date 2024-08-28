@@ -27,6 +27,14 @@ $primary-hover-color: #47126B;
 
 }
 
+// #hero-overlay{
+//     z-index: 99;
+//     position: fixed;
+//     width: 100%;
+//     top: 0px;
+//     background: linear-gradient(#000000e6 ,#000000d4 ,#00000080,#00000000);
+// }
+
 .Hours-200 {
     position: relative;
 
@@ -38,6 +46,7 @@ $primary-hover-color: #47126B;
     }
 
     .phase-1 {
+        margin-top: -30px;
         width: 100vw;
         background-image: url('../../../../../public/images/200-hours/BGpattern.png');
         background-repeat: no-repeat;

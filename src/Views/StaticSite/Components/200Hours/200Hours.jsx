@@ -15,6 +15,9 @@ import ModalRight from './subCOmponents/ModalRight'
 import CourseCaters from './subCOmponents/courseCaters'
 import { useNavigate } from 'react-router-dom'
 import { c200hr } from '../../Views/Courses/Constants/courses'
+import Navbar from '../Navbar'
+import { useSelector } from 'react-redux'
+
 // import { collection, getDocs, query, where } from 'firebase/firestore';
 // import { db } from '../../../firebaseConfig';
 
@@ -28,6 +31,16 @@ const Hours200 = () => {
     const [courseFee, setCourseFee] = useState(0)
     const [joinedCount, setJoinedCount] = useState(0)
     const navigate = useNavigate();
+
+    // REDUX
+    const { isLoggedIn } = useSelector((state) => state.auth)
+
+    const abc = {
+        title: 'affiliations',
+        color: 'white',
+        menuColor: 'white',
+        menuItems: [],
+    }
 
     const benefitsRef = useRef();
     const curriculumRef = useRef();
@@ -184,14 +197,14 @@ const Hours200 = () => {
     }, [width]);
 
 
-    const navigateRegister = () => {
-        const section = document.getElementById('registerLink');
-        if (section) {
-            section.scrollIntoView({
-                behavior: 'smooth'
-            });
-        }
-    }
+    // const navigateRegister = () => {
+    //     const section = document.getElementById('registerLink');
+    //     if (section) {
+    //         section.scrollIntoView({
+    //             behavior: 'smooth'
+    //         });
+    //     }
+    // }
 
     const getRandomNumber = () => {
         setJoinedCount(Math.floor(Math.random() * (100 - 20 + 1)) + 20)
@@ -206,6 +219,10 @@ const Hours200 = () => {
 
     return (
         <div className='layout-view Hours-200' ref={containerRef}>
+
+            <div id='hero-overlay' >
+                <Navbar isUserLoggedIn={isLoggedIn} abc={abc} />
+            </div>
 
             <div className='phase-1'>
 
