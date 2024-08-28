@@ -571,7 +571,7 @@ const CourseDetails = ({ pageDate }) => {
         )}
         <div className="details-section " id="refund-policy">
           <h1>Refund Policy</h1>
-          {selectComponent('u-list', {title: '', points: [{listItem:"The Yoga Institute has no refund policy for all its programmes. The only exception to this policy is in the event of a programme cancelled by the institute. In such cases, the student/participant will be offered a credit that can be used for any other programme or a refund of the event fee.",subItems:[]}]})}
+          {selectComponent('u-list', { title: '', points: [{ listItem:"The Yoga Institute has no refund policy for all its programmes. The only exception to this policy is in the event of a programme cancelled by the institute. In such cases, the student/participant will be offered a credit that can be used for any other programme or a refund of the event fee.",subItems:[] }] }) }
           {/* {pageDate?.offerings?.map(({ type, content }) => {
             return selectComponent(type, content)
           })} */}

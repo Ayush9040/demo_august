@@ -1,5 +1,5 @@
 
-export const handleCTCorporateYogaInitiated = ({emailId, dateTime, contact, designation, companyName, message}) => {
+export const handleCTCorporateYogaInitiated = ({ emailId, dateTime, contact, designation, companyName, message }) => {
     window.clevertap.event.push("CorporateYoga_Initiated", {
         "Email_ID": emailId,
         "Date_Time": new Date().toISOString(),
@@ -10,7 +10,7 @@ export const handleCTCorporateYogaInitiated = ({emailId, dateTime, contact, desi
     });
 };
 
-export const handleCTCorporateYogaSubmitEvent = ({email, dateTime, contact, designation, companyName, message, status}) => {
+export const handleCTCorporateYogaSubmitEvent = ({ email, dateTime, contact, designation, companyName, message, status }) => {
     if (window.clevertap) {
         window.clevertap.event.push("CorporateYoga_Submit", {
             "Email_ID": email,

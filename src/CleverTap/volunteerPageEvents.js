@@ -15,7 +15,7 @@ export const handleCTVolunteerClicked = (programNames) => {
 };
 
 
-export const handleCTSubmitVolunteerDetails = ({name, email, imageURL, resumeURL, volunteerCategory}) => {
+export const handleCTSubmitVolunteerDetails = ({ name, email, imageURL, resumeURL, volunteerCategory }) => {
     clevertap.event.push('Submit_Volunteer_Details', {
       "Name": name,
       "Email_ID": email,
