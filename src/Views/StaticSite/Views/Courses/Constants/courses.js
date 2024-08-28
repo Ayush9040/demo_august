@@ -2462,7 +2462,7 @@ const ttc200hr = {
         templateNonResidential: '',
       },
     },
-    batch: 5,
+    batch: 6,
     metaDescription:
       'You will learn the tools to master your physical, mental and spiritual well-being. You will see a marked improvement in your life, relationships and work.',
     image: `${baseDomain}${courseAssets.courseAsset38}`,
