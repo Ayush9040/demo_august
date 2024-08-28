@@ -106,7 +106,9 @@ const AddToCart = () => {
   }
 
   const checkout = async()=>{
+    
     if(!isLoggedIn) return navigate('/user/sign-in/?location=cart')
+
     navigate('/shop/checkout')
   }
 

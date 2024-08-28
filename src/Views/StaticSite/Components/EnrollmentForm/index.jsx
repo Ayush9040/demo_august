@@ -11,6 +11,9 @@ import Personal from './Personal'
 import { legacy2 } from '../../assets/icons/icon'
 import { authBaseDomain, cmsBaseDomain, razorPayKey } from '../../../../Constants/appSettings'
 import axios from 'axios'
+import { handleCTProccedToPayment } from '../../../../CleverTap/buttonClicked'
+import { trackPageView } from '../../../../CleverTap/pageViewEvents'
+import { handleCTCoursePaymentPageVisit, handleCTPaymentCompletedCourse, handleCTPaymentFailed } from '../../../../CleverTap/buttonClicked'
 
 const Enrollment = () => {
   const { user } = useSelector((state) => state.auth)
@@ -342,6 +345,45 @@ const Enrollment = () => {
                 if (res.razorpay_payment_id && res.razorpay_order_id && res.razorpay_signature) {
                   await axios.post(`${authBaseDomain}/ali/mail`, mailTemplate)
                   navigate(`/enrollment_thankyou/${currentCourse.key}`)
+                } else {
+                  handleCTPaymentFailed({
+                    // cost,
+                    // centre,
+                    // modeOfPayment,
+                    paymentStatus: "Success",
+                    courseName: formData.courseName,
+                    courseCategory: formData.category,
+                    startDate: formData.sdate,
+                    endDate: formData.sdate,
+                    pageName: window.location.href,
+                    checkoutUrl: window.location.href,
+                    pageUrl: window.location.href,
+                    // feesResidential,
+                    // feesNonResidential,
+                    // feesOnline,
+                    timings: currentCourse.timing ,
+                    // tenure,
+                    // courseMode,
+                    // courseType,
+                    // courseSubType,
+                    // language,
+                    // dayType,
+                    batchNo: currentCourse.batch,
+                    // dateTimeTimestamp,
+                    // preRequisite,
+                    status: "Success",
+                    name: formData.name,
+                    emailId: formData.email,
+                    phoneNumber: formData.phone,
+                    state: formData.state,
+                    city: formData.city,
+                    pinCode: formData.pincode,
+                    gender: formData.gender,
+                    // age,
+                    // nationality,
+                    // medicalIssues,
+                    // residentialStatus,
+                  })
                 }
               },
               prefill: {
@@ -470,9 +512,64 @@ const Enrollment = () => {
         setEndDate(formData.endDate?.value, formData.startDate)
       }
       handleSubmit1();
+      handleCTProccedToPayment({
+        courseTitle: currentCourse?.title,
+        date: formData.sdate,
+    fees: currentCourse?.fees,
+    timing: currentCourse?.timing,
+    category: currentCourse?.category,
+    batch: currentCourse?.batch,
+    nonResidential: currentCourse?.nonResidential,
+    residential: currentCourse?.residental,
+    online: currentCourse?.online
+      })
     }
 
   }
+
+  
+  useEffect(() => {
+    // Start time when the component mounts
+    setStartTime(Date.now());
+
+    // Retrieve or generate the session ID
+    let session = localStorage.getItem('sessionId');
+    if (!session) {
+        session = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
+        localStorage.setItem('sessionId', session);
+    }
+    setSessionId(session);
+
+    return () => {
+        // End time when the component unmounts
+        const endTime = Date.now();
+
+        // Calculate the session duration in seconds
+        const sessionDuration = ((endTime - startTime) / 1000).toFixed(2);
+
+        const pageName = currentCourse?.title + " Enrollment Form";
+        const lastPageUrl = document.referrer || 'N/A';
+        const pageUrl = window.location.href;
+        //const loggedIn = localStorage.getItem('isLoggedIn') === 'true' ? 'Yes' : 'No'; // Adjust based on your auth logic
+        const uniqueViewId = Math.floor(Math.random() * 1000); // Replace with actual logic
+
+        trackPageView({
+            pageName,
+            lastPageUrl,
+            pageUrl,
+            sessionDuration,
+            isLoggedIn,
+            sessionId: session,
+            uniqueViewId,
+        });
+    };
+}, [sessionId, startTime]);
+
+
+useEffect(() => {
+  const currentPageUrl = window.location.href;
+  handleCTCoursePaymentPageVisit(currentPageUrl);
+}, []);
 
   return (
     <>

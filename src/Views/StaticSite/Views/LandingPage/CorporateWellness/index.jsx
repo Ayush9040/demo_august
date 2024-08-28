@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import CommonBanner from '../../../Components/Common-banner'
 import baseDomain, {
   CorporateWellnessLogos,
@@ -15,6 +15,8 @@ import 'slick-carousel/slick/slick-theme.css'
 import InputComponent from '../../../Components/InputComponent'
 import { CreateForm, successMail } from './Api'
 import '../../../../StaticSite/Components/TermsandCondition/style.scss'
+import { handleCTCorporateYogaInitiated, handleCTCorporateYogaSubmitEvent } from '../../../../../CleverTap/corporateYogaEvents'
+
 
 const corporateWellness = () => {
   const [formData, setFormData] = useState({
@@ -61,9 +63,26 @@ const corporateWellness = () => {
         receivers: [formData.email],
       })
 
+      handleCTCorporateYogaSubmitEvent({
+        email: formData.email, 
+        contact: formData.contact, 
+        designation: formData.designation, 
+        companyName: formData.company, 
+        message: formData.message, 
+        status: "Success"
+      })
+
       setModal(true)
     } catch (error) {
       console.log(error)
+      handleCTCorporateYogaSubmitEvent({
+        email: formData.email, 
+        contact: formData.contact, 
+        designation: formData.designation, 
+        companyName: formData.company, 
+        message: formData.message, 
+        status: "Fail"
+      })
     }
   }
 
@@ -86,6 +105,19 @@ const corporateWellness = () => {
     menuColor: 'white',
     menuItems: [],
   }
+
+
+  useEffect(() => {
+    // Trigger the CleverTap event when the component loads
+    handleCTCorporateYogaInitiated({
+      emailId: '', 
+      dateTime: '', 
+      contact: '',
+      designation: '', 
+      companyName: '', 
+      message: ''
+    })
+}, []);
 
   return (
     <>

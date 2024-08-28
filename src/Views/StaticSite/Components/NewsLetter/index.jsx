@@ -8,6 +8,7 @@ import { validateEmail } from '../../../../helpers'
 import axios from 'axios'
 import { authBaseDomain } from '../../../../Constants/appSettings'
 import { getByYearYogsattva } from '../../Views/Publication/Views/Api'
+import { handleCTSubscribeNewsletterClicked } from '../../../../CleverTap/subscribeNewsLetter'
 const NewsLetter = () => {
   const [mail, setMail] = useState('')
   const [err, setErr] = useState(false)
@@ -31,10 +32,14 @@ const NewsLetter = () => {
     } else {
       const response = await axios.post(`${authBaseDomain}/ali/newslettermail`, { email: mail })
       if (response.data.success === true) {
+        handleCTSubscribeNewsletterClicked({
+          email: mail,
+      })
         setSuccess(true)
       }
     }
   }
+
   return (
     <div className="newsletter-container global-padding" id='Newsletter'>
       <div className="magezines">
