@@ -895,7 +895,8 @@ const Personal = ({
               />
               {empty === 18 && <small id="fill_err"> Please select course date</small>}
             </div>
-            {isRegular && <div className="form_error course_date date-input-wrapper">
+           
+            {isRegular && <><br /><div className="form_error course_date date-input-wrapper">
               <DatePicker
                 minDate={minDate}
                 visiblity={'hidden'}
@@ -912,7 +913,7 @@ const Personal = ({
               />
               {empty === 21 && <small id="fill_err"> Please select start date</small>
               }
-            </div>}
+            </div></>}
 
             {isRegular && <>
               <div className="form_error course_date">

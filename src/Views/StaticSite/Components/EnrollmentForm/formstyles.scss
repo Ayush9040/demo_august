@@ -1899,15 +1899,49 @@ input[type='radio']:checked::before {
 }
 
 .react-datepicker__input-container input {
-  width: calc(38.8vw) !important;
-  margin: 26px 0 0 20px;
-  font-size: 1.8rem;
-  padding: 1rem 2rem;
+  width: calc(38.2vw) !important;
+  margin: 0 0 0 20px;
+  font-size: 1.8rem !important;
+  padding: 1rem 3rem;
   border: 1px solid rgba(96, 96, 96, 0.5019607843);
   border-radius: 50px;
   color: rgba(96, 96, 96, 0.8);
   @media screen and (max-width: 599px) {
-    margin: 6px 0 0 20px;
+    margin: -20px 0 0 20px;
     width: calc(72vw) !important;
   }
+}
+/* Custom CSS for react-datepicker */
+
+.react-datepicker__day {
+  font-size: 1.8rem !important;
+  width: 40px !important; /* Adjust the width as needed */
+  height: 40px !important; /* Adjust the height as needed */
+  line-height: 40px !important; /* Center text vertically */
+  text-align: center !important; /* Center text horizontally */
+}
+
+.react-datepicker__day--keyboard-selected,
+.react-datepicker__day--selected {
+  /* Optional: Add some styling for selected days if needed */
+  background-color: #007bff;
+  color: white;
+}
+/* Custom CSS for react-datepicker */
+
+/* Adjust the font size of the day names (Sun, Mon, etc.) */
+.react-datepicker__day-name {
+  width:40px !important;
+  margin-top: 14px !important;
+  font-size: 1.8rem !important;/* Adjust the font size as needed */
+}
+
+/* Adjust the font size of the month name */
+.react-datepicker__current-month {
+  font-size: 1.8rem !important; /* Adjust the font size as needed */
+}
+
+/* Optional: Adjust the font size of the year */
+.react-datepicker__current-year {
+  font-size: 1.8rem !important; /* Adjust the font size as needed */
 }
