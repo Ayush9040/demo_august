@@ -13,30 +13,18 @@ const PrivacyPolicy = lazy(() => import('../Components/PrivacyPolicy'))
 const Affiliations = lazy(() => import('../Components/Affiliations'))
 const Enrollment = lazy(() => import('../Components/EnrollmentForm'))
 const wellness = lazy(() => import('../Components/Wellness'))
-const CorporateSocialResponsibilty = lazy(() =>
-  import('../Components/CorporateSocialResponsibility')
-)
+const CorporateSocialResponsibilty = lazy(() => import('../Components/CorporateSocialResponsibility'))
 const Course = lazy(() => import('../Views/Courses/Views/course-page'))
-const SingleCsr = lazy(() =>
-  import('../Components/CorporateSocialResponsibility/SingleCsr')
-)
-const BrowseCourses = lazy(() =>
-  import('../Views/Courses/Views/browse-courses')
-)
+const SingleCsr = lazy(() =>  import('../Components/CorporateSocialResponsibility/SingleCsr'))
+const BrowseCourses = lazy(() =>  import('../Views/Courses/Views/browse-courses'))
 const Experiences = lazy(() => import('../Views/Experience'))
 const Museum = lazy(() => import('../Views/Museum'))
 const Thankyou = lazy(() => import('../Components/EnrollmentForm/ThankYou'))
 const EnrolledSuccess = lazy(() => import('../Components/EnrollmentForm/EnrolledSuccess'))
-const SattvikCooking = lazy(() =>
-  import('../Components/Highlights/SattvikCooking')
-)
+const SattvikCooking = lazy(() =>  import('../Components/Highlights/SattvikCooking'))
 const YogaByTheBay = lazy(() => import('../Components/Highlights/YogaByTheBay'))
-const FullmoonMeditation = lazy(() =>
-  import('../Components/Highlights/FullmoonMeditation')
-)
-// const CorporateWorkshop = lazy(() =>
-//   import('../Components/Highlights/CorporateWorkshop')
-// )
+const FullmoonMeditation = lazy(() =>  import('../Components/Highlights/FullmoonMeditation'))
+// const CorporateWorkshop = lazy(() => import('../Components/Highlights/CorporateWorkshop'))
 const OnlineTution = lazy(() => import('../Views/HomeTuitions/Tutions'))
 const AboutUs = lazy(() => import('../Views/About/Views/overview'))
 const OurLegacy = lazy(() => import('../Views/About/Views/our-legacy'))
@@ -45,16 +33,12 @@ const Facilities = lazy(() => import('../Views/Facilities/Views/facilities'))
 const DonationPage = lazy(() => import('../Views/Donation/Views/donation-page'))
 const MediaGallery = lazy(() => import('../Views/Media/Views/media-gallery'))
 const GalleryVideo = lazy(() => import('../Views/Media/Views/media-video'))
-const YogaTotalHealth = lazy(() =>
-  import('../Views/Publication/Views/yoga-health')
-)
+const YogaTotalHealth = lazy(() =>  import('../Views/Publication/Views/yoga-health'))
 const Yogasattva = lazy(() => import('../Views/Publication/Views/yogasattva'))
 const library = lazy(() => import('../Views/Publication/Views/library'))
 const BlogPage = lazy(() => import('../Views/Blogs/Views/blog-page'))
 const OurLegacyModal = lazy(() => import('../Components/OurLegacyModal'))
-const SocialResponsibility = lazy(() =>
-  import('../Views/SocialPage/Views/social-responsibility')
-)
+const SocialResponsibility = lazy(() =>  import('../Views/SocialPage/Views/social-responsibility'))
 const VolunteerPage = lazy(() => import('../Views/Volunteer/Views/volunteer'))
 const Values = lazy(() => import('../Views/Volunteer/Views/values'))
 const AlumniGallery = lazy(() => import('../Views/Alumni/Views/alumni-gallery'))
@@ -62,7 +46,6 @@ const Support = lazy(() => import('../Views/Alumni/Views/support'))
 const Facts = lazy(() => import('../Views/Facts/Views/our-facts'))
 const Shop = lazy(() => import('../Views/Shop/Views/shop/shop'))
 const SingleProduct = lazy(() => import('../Views/Shop/Views/single-product'))
-
 const Authentication = lazy(() => import('../Views/Authentication'))
 const OrderHistroy = lazy(() => import('../Views/Shop/Views/order-history'))
 const SearchModal = lazy(() => import('../Views/SearchModal'))
@@ -72,25 +55,14 @@ const BlogsByTag = lazy(() => import('../Views/BlogByTag'))
 const AddToCart = lazy(() => import('../Views/Shop/Views/cart'))
 const ShippingAdd = lazy(() => import('../Views/Shop/Views/address'))
 const ShopThankyou = lazy(() => import('../Views/Shop/Views/thankyoupage'))
-
 const SingleJob = lazy(() => import('../Views/Careers/Views/single-job'))
 const VolunteerJob = lazy(() => import('../Views/Volunteer/Views/volunteerJob'))
-const PrintMedia = lazy(() =>
-  import('../Views/Media/Views/Print-Digital/print-media')
-)
-const DigitalMedia = lazy(() =>
-  import('../Views/Media/Views/Print-Digital/digital-media')
-)
-const SatsangThankyou = lazy(() =>
-  import('../Components/EnrollmentForm/SatsangThankYou')
-)
-
+const PrintMedia = lazy(() => import('../Views/Media/Views/Print-Digital/print-media'))
+const DigitalMedia = lazy(() => import('../Views/Media/Views/Print-Digital/digital-media'))
+const SatsangThankyou = lazy(() => import('../Components/EnrollmentForm/SatsangThankYou'))
 const SamatvamThankyou = lazy(() => import('../Components/EnrollmentForm/SamattvamThankYou'))
-const SingleDonation = lazy(() =>
-  import('../Views/Donation/Views/single-donation')
-)
+const SingleDonation = lazy(() => import('../Views/Donation/Views/single-donation'))
 const News = lazy(() => import('../Views/Media/Views/news'))
-
 const Careers = lazy(() => import('../Views/Careers/Views/careers'))
 const Gifting = lazy(() => import('../Views/Gifting/Views/gifting'))
 const DescisionComp = lazy(() => import('../Views/DecisionComponent'))
@@ -104,6 +76,8 @@ const SevenDays = lazy(() => import('../Views/LandingPage/SevenDays/AboutCamp/in
 const TyiLandingPage = lazy(() => import('../Views/LandingPage/NewLandingPage/index'))
 const TyiLandingPage7Months = lazy(() => import('../Views/LandingPage/NewLandingPage2/index'))
 const NutriGut = lazy(() => import('../Views/LandingPage/Nutrigut/index'))
+const Hours200 = lazy(() => import('../Components/200Hours/200Hours'))
+
 const staticSiteRoutes = [
   //Home
   {
@@ -889,6 +863,13 @@ const staticSiteRoutes = [
     id: 'staticNutriGut',
     routePath: '/gut-cleanse-detox-workshop',
     name: 'Nutrigut'
+  },
+  {
+    Component: Hours200,
+    path: '/200-Hours',
+    id: 'Hours200',
+    routePath: '/200-Hours',
+    name: '200-Hours'
   }
 ]
 

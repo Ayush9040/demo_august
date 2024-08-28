@@ -24,10 +24,8 @@ const customStyles = {
 
 // Modal.setAppElement('#___gatsby')
 
-const CustomModal = ({
-  isShippingModalOpen,
-  setIsShipppingModalOpen,
-}) => {
+const CustomModal = ({ isShippingModalOpen, setIsShipppingModalOpen, }) => {
+  
   function closeModal() {
     setIsShipppingModalOpen(false)
   }
@@ -51,12 +49,12 @@ const CustomModal = ({
             <div>
               <span className="change-cross-svg-width" onClick={closeModal}>
                 {cross}
-                
+
               </span>
             </div>
           </div>
           <div className="modal-content" style={{ gridTemplateColumns: '1fr', marginTop: '0rem' }}>
-          {<TermsCondition />}
+            {<TermsCondition />}
             {/* <div>
               <input
                 className="modal-input"

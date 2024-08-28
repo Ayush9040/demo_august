@@ -23,6 +23,7 @@ const Home = () => {
 
   const route = useLocation()
   const { isLoggedIn } = useSelector((state) => state.auth)
+
   useEffect(() => {
     if (route.hash) {
       document
@@ -30,13 +31,14 @@ const Home = () => {
         .scrollIntoView()
     }
   })
+  
   return (
     <>
-      { metaDataObj[route.pathname] && 
-    <Helmet
-      title={metaDataObj[route.pathname || '']?.title || ''}
-    /> }
-      <HeroSection   isUserLoggedIn={isLoggedIn} />
+      {metaDataObj[route.pathname] &&
+        <Helmet title={metaDataObj[route.pathname || '']?.title || ''} />
+      }
+
+      <HeroSection isUserLoggedIn={isLoggedIn} />
       <Legacy />
       <OurOfferings />
       <Activity />
@@ -48,7 +50,7 @@ const Home = () => {
       <VideosSection />
       <NewsLetter />
       <Footer />
-     
+
     </>
   )
 }

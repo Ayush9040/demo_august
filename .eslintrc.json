@@ -60,9 +60,6 @@
             }
         ],
         "camelcase": "warn",
-        "linebreak-style": [
-            "error",
-            "windows"
-        ]
+        "linebreak-style": "off"
     }
 }

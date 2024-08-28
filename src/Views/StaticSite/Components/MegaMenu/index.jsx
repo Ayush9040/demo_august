@@ -1,18 +1,14 @@
 import React, { useState } from 'react'
 import { legacy2, cross, filler } from '../../assets/icons/icon'
 import './style.scss'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 const MegaMenu = ({ setNav }) => {
   const [menuItem, setMenuItem] = useState()
+  const navigate = useNavigate();
 
   const navItems = [
-    {
-      name: 'ABOUT',
-      link: '/know-us-better',
-      id: 1,
-      key: 'ABOUT',
-    },
+    { name: 'ABOUT', link: '/know-us-better', id: 1, key: 'ABOUT', },
     { name: 'COURSES', link: '/courses', id: 2, key: 'COURSES' },
     { name: 'FACILITIES', link: '/facilities', id: 3, key: 'FACILITIES' },
     { name: 'MUSEUM', link: '/museum-of-classical-yoga', id: 4, key: 'MUSEUM' },
@@ -21,19 +17,9 @@ const MegaMenu = ({ setNav }) => {
     // { name: 'GIFTING', link: '', id: 6, key: 'GIFTING' },
     { name: 'NISPAND', link: 'https://nispand.com/', id: 7, key: 'NISPAND' },
     // { name: 'TYI ONLINE', link: '', id: 8, key: 'ONLINE' },
-    {
-      name: 'PUBLICATIONS',
-      link: '/yoga-and-total-health',
-      id: 9,
-      key: 'PUBLICATIONS',
-    },
+    { name: 'PUBLICATIONS', link: '/yoga-and-total-health', id: 9, key: 'PUBLICATIONS', },
     { name: 'SHOP', link: '/shop', id: 10, key: 'SHOP' },
-    {
-      name: 'NEWS, EVENTS & MEDIA',
-      link: '/image-gallery',
-      id: 11,
-      key: 'NEWS',
-    },
+    { name: 'NEWS, EVENTS & MEDIA', link: '/image-gallery', id: 11, key: 'NEWS', },
     { name: 'ALUMNI', link: '/alumni-gallery', id: 12, key: 'ALUMNI' },
     { name: 'VOLUNTEER', link: '/volunteer', id: 13, key: 'VOLUNTEER' },
     { name: 'LOCATE US', link: '/our-branches', id: 14, key: 'LOCATE' },
@@ -195,7 +181,7 @@ const MegaMenu = ({ setNav }) => {
                     }}
                     to={`${item.link}`}
                     key={i}
-                    // className={ (item.key==='DONATION'||item.key==='GIFTING'||item.key==='ONLINE'||item.key==='SHOP') ? 'coming-soon':'' }
+                  // className={ (item.key==='DONATION'||item.key==='GIFTING'||item.key==='ONLINE'||item.key==='SHOP') ? 'coming-soon':'' }
 
                   >
                     <li >
@@ -251,7 +237,7 @@ const MegaMenu = ({ setNav }) => {
             <div className="single-menu">
               <h3>TEACHERS TRAINING COURSES</h3>
               <ul>
-                <li className="text-bold">Basic TTC (200 Hour Courses)</li>
+                <li className="text-bold" style={{ cursor: 'pointer' }} onClick={() => navigate('/200-Hours')}>Basic TTC (200 Hour Courses)</li>
                 <Link onClick={() => { setNav(false) }} to="/one-month-ttc">
                   <li>Batch 1 - 1 Month TTC-Online & On Campus-English</li>
                 </Link>
