@@ -11207,7 +11207,7 @@ const classes = {
     },
     image: `${baseDomain}${courseAssets.courseAsset81}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset81}`,
-    mostPopular: false,
+    mostPopular: true,
     metaDescription:
       'Explore the world of Yoga asanas, practices from the comfort of your own home',
     rating: 5,
@@ -11442,7 +11442,7 @@ const classes = {
     },
     image: `${baseDomain}${courseAssets.courseAsset70}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset70}`,
-    mostPopular: false,
+    mostPopular: true,
     metaDescription:
       'This is a special men-only regular asana class conducted by The Yoga Institute',
     rating: 5,
@@ -11562,7 +11562,7 @@ const classes = {
     },
     image: `${baseDomain}${courseAssets.courseAsset71}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset71}`,
-    mostPopular: false,
+    mostPopular: true,
     metaDescription:
       'This is a special women-only regular asana class conducted by The Yoga Institute',
     rating: 5,
@@ -11863,7 +11863,7 @@ const classes = {
     },
     image: `${baseDomain}${courseAssets.courseAsset28}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset28}`,
-    mostPopular: false,
+    mostPopular: true,
     metaDescription: 'The science behind meditation',
     rating: 5,
     colorCode: '#D3A29D',
@@ -11977,7 +11977,7 @@ const classes = {
     },
     image: `${baseDomain}${courseAssets.courseAsset28}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset28}`,
-    mostPopular: false,
+    mostPopular: true,
     metaDescription:
       'Click now if you want to make bliss and calm a part of your life daily.',
     rating: 5,
@@ -12219,7 +12219,7 @@ const classes = {
     },
     image: `${baseDomain}${courseAssets.courseAsset77}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset110}`,
-    mostPopular: false,
+    mostPopular: true,
     metaDescription:
       'Towards the end, there is an enlightening question and answer session.',
     rating: 5,
@@ -12822,7 +12822,7 @@ const classes = {
     },
     image: `${baseDomain}${homeAssets.homeAsset13}`,
     cardImage: `${baseDomain}${homeAssets.homeAsset13}`,
-    mostPopular: false,
+    mostPopular: true,
     metaDescription:
       'Weekend Yoga Regular Class is an excellent course for daily yoga practice.',
     rating: 5,

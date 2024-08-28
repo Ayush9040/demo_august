@@ -89,7 +89,7 @@ const Personal = ({
   }
 
   const createEndDate = (startDate, value) => {
-    console.log(startDate, value);
+    // console.log(startDate, value);
 
     let endDate = formatDate(addMonths(parseDate(startDate ? startDate : values?.startDate), value?.value))
     setValues((prev) => {
@@ -97,6 +97,7 @@ const Personal = ({
         ...prev, endDate: value, endDateFormat: endDate
       }
     })
+    localStorage.setItem('courseEndDate',endDate)
     setFormData({ ...formData, endDate: value, duration: value?.value })
     dateDurationChange(value?.value)
   }
@@ -104,9 +105,12 @@ const Personal = ({
   // Function to add months to a given date
   function addMonths(startDate, months) {
     const date = startDate; // Create a Date object from the start date
-    date.setMonth(date.getMonth() + months); // Add the number of months
+    // date.setMonth(date.getMonth() + months); // Add the number of months
+    let totalDays=months*30
+    date.setDate(date.getDate() + (totalDays-1));
     return date;
   }
+
   function formatDate(date) {
     const day = date.getDate().toString().padStart(2, '0'); // Day with leading zero
     const month = (date.getMonth() + 1).toString().padStart(2, '0'); // Month with leading zero
@@ -892,7 +896,8 @@ const Personal = ({
               />
               {empty === 18 && <small id="fill_err"> Please select course date</small>}
             </div>
-            {isRegular && <div className="form_error course_date date-input-wrapper">
+           
+            {isRegular && <><br /><div className="form_error course_date date-input-wrapper">
               <DatePicker
                 minDate={minDate}
                 visiblity={'hidden'}
@@ -909,7 +914,7 @@ const Personal = ({
               />
               {empty === 21 && <small id="fill_err"> Please select start date</small>
               }
-            </div>}
+            </div></>}
 
             {isRegular && <>
               <div className="form_error course_date">
@@ -930,7 +935,7 @@ const Personal = ({
                 />
                 {empty === 20 && <small id="fill_err"> Please select duration</small>}
               </div>
-              <div style={{ padding: '10px 0 0 26px', color: '#C9705F', fontWeight: '600' }}>&#8377;1100 off for 12 months</div>
+              <div style={{ padding: '10px 0 0 26px', color: '#C9705F', fontWeight: '600' }}>&#8377;2200 off for 12 months</div>
             </>}
 
 

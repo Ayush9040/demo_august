@@ -24,6 +24,7 @@ const Enrollment = () => {
     let currentCrs = AllCourses.find((item) => item.key === courseId)
     setCurrentCourse(currentCrs)
     setCourseDate(Params.get('date'))
+    localStorage.removeItem('courseEndDate')
     // setDate(
     //   today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate()
     // )
@@ -118,7 +119,7 @@ const Enrollment = () => {
     let originalFee = AllCourses.find((item) => item.key === courseId)
     let newAmnt = originalFee?.fees?.onlineFee * months
     if (months == 12) {
-      newAmnt = newAmnt - 1100
+      newAmnt = newAmnt - 2200
     }
 
     setCurrentCourse(prevData => ({
@@ -133,13 +134,13 @@ const Enrollment = () => {
 
   const setEndDate = (months, startDate) => {
     let endDate = formatDate(addMonths(parseDate(startDate), months))
-    console.log(endDate);
+    // console.log(endDate);
 
     // setFormData({ ...formData, endDate: endDate })
     let originalFee = AllCourses.find((item) => item.key === courseId)
     let newAmnt = originalFee?.fees?.onlineFee * months
     if (months == 12) {
-      newAmnt = newAmnt - 1100
+      newAmnt = newAmnt - 2200
     }
 
     setCurrentCourse(prevData => ({
@@ -157,9 +158,10 @@ const Enrollment = () => {
   // Function to add months to a given date
   function addMonths(startDate, months) {
     const date = startDate; // Create a Date object from the start date
-    date.setMonth(date.getMonth() + months); // Add the number of months
-    console.log(date);
-
+    // date.setMonth(date.getMonth() + months); // Add the number of months
+    // console.log(date);
+    let totalDays = months * 30
+    date.setDate(date.getDate() + (totalDays - 1));
     return date;
   }
   function formatDate(date) {
@@ -261,7 +263,7 @@ const Enrollment = () => {
           nationality: formData.nationality,
         },
         startDate: formData.startDate,
-        endDate: formData.endDateFormat,
+        endDate: localStorage.getItem('courseEndDate') ? localStorage.getItem('courseEndDate') : null,
         academicQualification: qualificationData,
         workExperience: listData,
         others: {

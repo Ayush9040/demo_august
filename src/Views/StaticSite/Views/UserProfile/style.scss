@@ -1,91 +1,109 @@
-.user-profile{
+.user-profile {
   width: 100vw;
   height: 100vh;
 }
-.profile-grid{
+
+.profile-grid {
   display: flex;
   padding: 5rem 20rem;
   height: 90%;
   gap: 3rem;
-  .profile-nav{
+
+  .profile-nav {
     width: fit-content;
     height: 100%;
-  .profile-nav-container{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    padding: 2rem 3rem;
-    height: 100%;
-    border: 1px solid #606060;
-    border-radius: 24px;
-    position: relative;
-    .bottom-line {
-      visibility: hidden;
-      margin-bottom: 1rem;
-    }
-    // &:hover {
-    //   border-bottom: 2px solid var(--brick-red);
-    //  font-weight: 700;
-    //   .bottom-line {
-    //     visibility: visible;
-    //   }
-    // }
-    .coming-soon{
+
+    .profile-nav-container {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      padding: 2rem 3rem;
+      height: 100%;
+      border: 1px solid #606060;
+      border-radius: 24px;
       position: relative;
-      &:hover{
-        &::after{
-          position: absolute;
-          top: 6px;
-          left: 110%;
-          //background: #00000080;
-          content: 'Coming Soon';
-          color: #ca4625;
-          font-size: 12px;
-          font-weight: 500;
-        }
+
+      .bottom-line {
+        visibility: hidden;
+        margin-bottom: 1rem;
       }
-  
-    }
-    #profile-picture{
-      width: 150px;
-      height: 150px;
-      background-color: #aaa;
-      border-radius: 50%;
-      margin-bottom: 2rem;
-    }
-    ul{
-      list-style: none;
-      padding-left: 0;
-      li{
-        font-size: 2rem;
-        // font-weight: 700;
-        margin:  0 0 2rem;
-        cursor: pointer;
-        width: fit-content;
-        .bottom-line{
-            visibility: hidden
-        };
-        &:hover{
-            font-weight: 700;
-            .bottom-line{
-                visibility: visible;
-            }
+
+      // &:hover {
+      //   border-bottom: 2px solid var(--brick-red);
+      //  font-weight: 700;
+      //   .bottom-line {
+      //     visibility: visible;
+      //   }
+      // }
+      .coming-soon {
+        position: relative;
+
+        &:hover {
+          &::after {
+            position: absolute;
+            top: 6px;
+            left: 110%;
+            //background: #00000080;
+            content: 'Coming Soon';
+            color: #ca4625;
+            font-size: 12px;
+            font-weight: 500;
+          }
         }
 
-    }
-    }
-    #edit-account{
-      position: absolute;
-      bottom: 20px;
+      }
+
+      #profile-picture {
+        width: 150px;
+        height: 150px;
+        background-color: #aaa;
+        border-radius: 50%;
+        margin-bottom: 2rem;
+      }
+
+      ul {
+        list-style: none;
+        padding-left: 0;
+
+        li {
+          font-size: 2rem;
+          // font-weight: 700;
+          margin: 0 0 2rem;
+          cursor: pointer;
+          width: fit-content;
+
+          .bottom-line {
+            visibility: hidden
+          }
+
+          ;
+
+          &:hover {
+            font-weight: 700;
+
+            .bottom-line {
+              visibility: visible;
+            }
+          }
+
+        }
+      }
+
+      #edit-account {
+        position: absolute;
+        bottom: 20px;
+      }
     }
   }
-}
-  .profile-data{
+
+  .profile-data {
     width: 70%;
     height: 100%;
-    .profile-overview{
+
+    .profile-overview {
       height: 100%;
-      #order-list{
+
+      #order-list {
         display: flex;
         gap: 2rem;
         height: 100%;
@@ -94,30 +112,30 @@
   }
 }
 
-.testimony{
+.testimony {
   width: 100%;
   height: 100vh;
 }
 
-.Alumini-heading{
+.Alumini-heading {
   font-size: 22px;
   font-weight: bold;
   margin-bottom: 8px;
 }
 
-.Alumini-paragraph{
+.Alumini-paragraph {
   font-size: 14px;
   color: rgb(119, 118, 118);
   margin-bottom: 5px;
 }
 
-.Alumini-text{
+.Alumini-text {
   border-radius: 10px;
   padding: 5px 5px;
-  outline:  none;
+  outline: none;
 }
 
-.Alumini-button{
+.Alumini-button {
   font-size: 14px;
   font-weight: 600;
   padding: 6px 20px;
@@ -131,68 +149,88 @@
   right: 85px;
 }
 
-@media (max-width:1200px){
-  .user-profile{
+@media (max-width:1200px) {
+  .user-profile {
     height: auto;
   }
-  .profile-grid{
+
+  .profile-grid {
     flex-wrap: wrap;
     padding: 5rem;
-    .profile-nav{
+
+    .profile-nav {
       width: 100%;
       display: flex;
       justify-content: space-around;
-      .profile-nav-container{
+
+      .profile-nav-container {
         flex-direction: row;
         justify-content: center;
-        ul{
+
+        ul {
           display: flex;
-          li{
+
+          li {
             margin: 0 1rem;
           }
         }
       }
 
     }
-    .profile-data{
+
+    .profile-data {
       width: 100%;
     }
   }
 }
 
-@media(max-width:640px){
-.profile-grid{
-  .profile-nav{
-    .profile-nav-container{
-      flex-wrap: wrap;
-      ul{
-        margin-bottom: 20px;
+@media(max-width:640px) {
+  .profile-grid {
+    .profile-nav {
+      .profile-nav-container {
+        flex-wrap: wrap;
+
+        ul {
+          margin-bottom: 20px;
+        }
       }
     }
   }
 }
-}
 
-@media(max-width:500px){
-  .user-profile{
+@media(max-width:500px) {
+  .user-profile {
     padding: 2rem;
   }
-  .profile-grid{
-    .profile-nav{
-      .profile-nav-container{
+
+  .profile-grid {
+    .profile-nav {
+      .profile-nav-container {
         justify-content: center;
-        ul{
+
+        ul {
           justify-content: center;
           flex-wrap: wrap;
         }
       }
     }
-    .profile-data{
-      .profile-overview{
-        #order-list{
+
+    .profile-data {
+      .profile-overview {
+        #order-list {
           flex-wrap: wrap;
         }
       }
     }
   }
+}
+
+.course-card-de {
+  padding: 12px;
+  border-radius: 12px;
+  background-color: #FFFFFF;
+  margin-top: 12px;
+  color: #181818;
+  font-weight: 500;
+  font-size: 14px;
 }
