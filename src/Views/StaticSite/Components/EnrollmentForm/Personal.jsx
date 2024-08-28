@@ -935,7 +935,7 @@ const Personal = ({
                 />
                 {empty === 20 && <small id="fill_err"> Please select duration</small>}
               </div>
-              <div style={{ padding: '10px 0 0 26px', color: '#C9705F', fontWeight: '600' }}>&#8377;1100 off for 12 months</div>
+              <div style={{ padding: '10px 0 0 26px', color: '#C9705F', fontWeight: '600' }}>&#8377;2200 off for 12 months</div>
             </>}
 
 

@@ -119,7 +119,7 @@ const Enrollment = () => {
     let originalFee = AllCourses.find((item) => item.key === courseId)
     let newAmnt = originalFee?.fees?.onlineFee * months
     if (months == 12) {
-      newAmnt = newAmnt - 1100
+      newAmnt = newAmnt - 2200
     }
 
     setCurrentCourse(prevData => ({
@@ -140,7 +140,7 @@ const Enrollment = () => {
     let originalFee = AllCourses.find((item) => item.key === courseId)
     let newAmnt = originalFee?.fees?.onlineFee * months
     if (months == 12) {
-      newAmnt = newAmnt - 1100
+      newAmnt = newAmnt - 2200
     }
 
     setCurrentCourse(prevData => ({
@@ -158,9 +158,10 @@ const Enrollment = () => {
   // Function to add months to a given date
   function addMonths(startDate, months) {
     const date = startDate; // Create a Date object from the start date
-    date.setMonth(date.getMonth() + months); // Add the number of months
+    // date.setMonth(date.getMonth() + months); // Add the number of months
     // console.log(date);
-
+    let totalDays = months * 30
+    date.setDate(date.getDate() + (totalDays - 1));
     return date;
   }
   function formatDate(date) {
