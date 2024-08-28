@@ -220,9 +220,8 @@ const Hours200 = () => {
     return (
         <div className='layout-view Hours-200' ref={containerRef}>
 
-            <div id='hero-overlay' >
-                <Navbar isUserLoggedIn={isLoggedIn} abc={abc} />
-            </div>
+            <Navbar isUserLoggedIn={isLoggedIn} abc={abc} />
+
 
             <div className='phase-1'>
 
@@ -257,9 +256,9 @@ const Hours200 = () => {
                         <div className="p2-header-wrap">
                             <div className="p2-heading text-gradient">Batch Comparison</div>
 
-                            <div className="compare-btn text-gradient" onClick={() => setIsBatchComparison(true)}>
+                            {/* <div className="compare-btn text-gradient" onClick={() => setIsBatchComparison(true)}>
                                 <img src="/icons/200-hours/astangaBtn.svg" />  Available Batches
-                            </div>
+                            </div> */}
                         </div>
 
                         <div className="p2-description">
@@ -267,9 +266,9 @@ const Hours200 = () => {
                             Choose from our flexible batch options.
                         </div>
 
-                        <div className="compare-btn-mob text-gradient" onClick={() => setIsBatchComparison(true)}>
+                        {/* <div className="compare-btn-mob text-gradient" onClick={() => setIsBatchComparison(true)}>
                             <img src="/icons/200-hours/astangaBtn.svg" />  Available Batches
-                        </div>
+                        </div> */}
 
                         <div className='table-layout-wrap'>
 
@@ -371,9 +370,9 @@ const Hours200 = () => {
                                 <div className="p3-top-bar">
                                     <div className="p3-title text-gradient">Available Batches</div>
 
-                                    <div className="compare-btn text-gradient" onClick={() => setIsBatchComparison(false)}>
+                                    {/* <div className="compare-btn text-gradient" onClick={() => setIsBatchComparison(false)}>
                                         <img src="/icons/200-hours/astangaBtn.svg" /> Compare Batches
-                                    </div>
+                                    </div> */}
 
                                 </div>
 
@@ -382,9 +381,9 @@ const Hours200 = () => {
                                     schedule. Choose from our flexible batch options
                                 </div>
 
-                                <div className="compare-btn-mob text-gradient" onClick={() => setIsBatchComparison(false)}>
+                                {/* <div className="compare-btn-mob text-gradient" onClick={() => setIsBatchComparison(false)}>
                                     <img src="/icons/200-hours/astangaBtn.svg" /> Compare Batches
-                                </div>
+                                </div> */}
 
                                 <div className="batch-list-wrap">
                                     {
@@ -497,7 +496,7 @@ const Hours200 = () => {
                                                                         selectedCourseMode: null
                                                                     }));
                                                                     // navigateRegister()
-                                                                    navigate(batch?.navigate)
+                                                                    navigate(batch?.moreInfo?.navigate)
                                                                 }
                                                                 }>View Details</div>
 
