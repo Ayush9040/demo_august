@@ -39,6 +39,7 @@ const OurOfferings = () => {
       redirect: '/7-days-camp',
       timeline: '7 days',
       price: '10000',
+      imgSrc: baseDomain + homeAssets.homeAsset7,
     },
     {
       name: '21-Day Better Living Course',
@@ -47,6 +48,7 @@ const OurOfferings = () => {
       redirect: '/21-days-better-living-course',
       timeline: '21 days',
       price: '2500',
+      imgSrc: baseDomain + homeAssets.homeAsset7,
     },
     {
       name: 'Regular Asana Classes',
@@ -55,6 +57,7 @@ const OurOfferings = () => {
       redirect: '/asana-regular-classes-online',
       timeline: 'Any Day',
       price: '1100',
+      imgSrc: baseDomain + homeAssets.homeAsset7,
     },
     {
       name: 'Children’s Regular Classes',
@@ -63,6 +66,7 @@ const OurOfferings = () => {
       redirect: '/childrens-regular-classes',
       timeline: 'Any Day',
       price: '1100',
+      imgSrc: baseDomain + homeAssets.homeAsset7,
     },
     {
       name: '7-month TTC',
@@ -71,9 +75,10 @@ const OurOfferings = () => {
       redirect: '/seven-month-ttc',
       timeline: '7-month',
       price: '60,000',
+      imgSrc: baseDomain + homeAssets.homeAsset7,
     },
   ]
-  
+
   const [smallDescription, setSmallDescription] = useState(
     carouselData[0].description.substring(0, 120) + '...'
   )
@@ -134,10 +139,30 @@ const OurOfferings = () => {
         </div>
 
         <div className="our-offerings-carousel" ref={offerinRef}>
-          
+
           <Slider {...settings} ref={(slider) => { sliderRef.current = slider }}>
 
-            <div className="course-offered" dataSettings={JSON.stringify(settings)}>
+            {
+              carouselData?.map((data, index) => (
+                <div className="course-offered" key={index} dataSettings={JSON.stringify(settings)}>
+                  <Link to="/7-days-camp">
+                    <img src={data?.imgSrc} placeholder="none" alt="7-days-camp" />
+                  </Link>
+                  <p className='h4'>7-day Yoga Health Camp</p>
+
+                  <div className="base-info-wrap">
+                    <div className="base-text-wrap">
+                      <div className="base-content">7-day Yoga Health Camp</div>
+                      <div className="base-price">(7 days - ₹10000)</div>
+                    </div>
+                    <div className="base-btn-explore" onClick={() => navigate('/7-days-camp')}> Explore <img className='Chevrons-right' src="/icons/200-hours/Chevrons right.svg" alt="" /> </div>
+                  </div>
+
+                </div>
+              ))
+            }
+
+            {/* <div className="course-offered" dataSettings={JSON.stringify(settings)}>
               <Link to="/7-days-camp">
                 <img src={`${baseDomain}${homeAssets.homeAsset7}`} placeholder="none" alt="7-days-camp" />
               </Link>
@@ -228,7 +253,7 @@ const OurOfferings = () => {
                 </div>
                 <div className="base-btn-explore" onClick={() => navigate('/seven-month-ttc')}> Explore <img className='Chevrons-right' src="/icons/200-hours/Chevrons right.svg" alt="" /> </div>
               </div>
-            </div>
+            </div> */}
 
           </Slider>
 
