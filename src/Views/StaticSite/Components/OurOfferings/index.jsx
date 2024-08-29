@@ -21,6 +21,7 @@ const OurOfferings = () => {
   const isInteracting = useOnScreen(offerinRef, { threshold: 0.5 })
   const navigate = useNavigate();
   const isMobile = window.innerWidth <= 499;
+  const [activeSlide, setActiveSlide] = useState(0);
 
   useEffect(() => {
     if (!sliderRef.current) return
@@ -48,7 +49,7 @@ const OurOfferings = () => {
       redirect: '/21-days-better-living-course',
       timeline: '21 days',
       price: '2500',
-      imgSrc: baseDomain + homeAssets.homeAsset7,
+      imgSrc: baseDomain + homeAssets.homeAsset8,
     },
     {
       name: 'Regular Asana Classes',
@@ -57,7 +58,7 @@ const OurOfferings = () => {
       redirect: '/asana-regular-classes-online',
       timeline: 'Any Day',
       price: '1100',
-      imgSrc: baseDomain + homeAssets.homeAsset7,
+      imgSrc: baseDomain + courseAssets.courseAsset115,
     },
     {
       name: 'Children’s Regular Classes',
@@ -66,7 +67,7 @@ const OurOfferings = () => {
       redirect: '/childrens-regular-classes',
       timeline: 'Any Day',
       price: '1100',
-      imgSrc: baseDomain + homeAssets.homeAsset7,
+      imgSrc: baseDomain + homeAssets.homeAsset10,
     },
     {
       name: '7-month TTC',
@@ -75,7 +76,7 @@ const OurOfferings = () => {
       redirect: '/seven-month-ttc',
       timeline: '7-month',
       price: '60,000',
-      imgSrc: baseDomain + homeAssets.homeAsset7,
+      imgSrc: baseDomain + homeAssets.homeAsset11,
     },
   ]
 
@@ -88,7 +89,7 @@ const OurOfferings = () => {
   const [price, setPrice] = useState(carouselData[0].price)
 
   let settings = {
-    dots: true,
+    dots: window?.innerWidth > 500,
     arrows: false,
     infinite: true,
     speed: 500,
@@ -114,8 +115,13 @@ const OurOfferings = () => {
       setTimeline(carouselData[index].timeline)
       setPrice(carouselData[index].price)
     },
+    beforeChange: (current, next) => setActiveSlide(next)
   }
 
+  const handleDotClick = (index) => {
+    setActiveSlide(index);
+    sliderRef.current.slickGoTo(index);
+  };
 
 
   return (
@@ -145,17 +151,18 @@ const OurOfferings = () => {
             {
               carouselData?.map((data, index) => (
                 <div className="course-offered" key={index} dataSettings={JSON.stringify(settings)}>
-                  <Link to="/7-days-camp">
+                  <Link to={data?.redirect}>
                     <img src={data?.imgSrc} placeholder="none" alt="7-days-camp" />
+                    <div className='image-overlay'>ctfgvh</div>
                   </Link>
-                  <p className='h4'>7-day Yoga Health Camp</p>
+                  <p className='h4'>{data?.name}</p>
 
                   <div className="base-info-wrap">
                     <div className="base-text-wrap">
-                      <div className="base-content">7-day Yoga Health Camp</div>
-                      <div className="base-price">(7 days - ₹10000)</div>
+                      <div className="base-content">{data?.name}</div>
+                      <div className="base-price">({data?.timeline} - ₹{data?.price})</div>
                     </div>
-                    <div className="base-btn-explore" onClick={() => navigate('/7-days-camp')}> Explore <img className='Chevrons-right' src="/icons/200-hours/Chevrons right.svg" alt="" /> </div>
+                    <div className="base-btn-explore" onClick={() => navigate(data?.redirect)}> Explore <img className='Chevrons-right' src="/icons/200-hours/Chevrons right.svg" alt="" /> </div>
                   </div>
 
                 </div>
@@ -257,13 +264,21 @@ const OurOfferings = () => {
 
           </Slider>
 
-          {/* <div className='slider-dots mg-20-mob'>
-            {
-              Array[4].map((ele, index) => (
-                <div key={index} className={index == activeIndex ? 'active-dot' : 'inactive-dot'}></div>
-              ))
-            }
-          </div> */}
+          <div>
+            <div className="slider-dots">
+              {
+                carouselData.map((content, index) => (
+                  <div
+                    className={`slider-dot ${activeSlide === index ? 'slider-dot-active' : ''}`}
+                    key={index}
+                    onClick={() => handleDotClick(index)}
+                  ></div>
+                ))
+              }
+            </div>
+
+          </div>
+
 
           <div className="course-details">
             <div className="course-content-container">

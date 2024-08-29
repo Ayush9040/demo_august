@@ -60,6 +60,23 @@
         }
       }
 
+      .image-overlay {
+        width: 85%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50px;
+        position: absolute;
+        top: 0px;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 70%, #000000 100%);
+        // background-color: #000000;
+
+        @media screen and (max-width: 500px) {
+          width: 100%;
+          border-radius: 10px;
+          background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+        }
+      }
+
       .h4 {
         position: absolute;
         color: white;
@@ -473,5 +490,44 @@
 
   .our-offerings-container .offering-overview .offering-text p {
     text-align: justify;
+  }
+}
+
+
+.slider-dots {
+  display: none;
+
+  @media (max-width: 500px) {
+    width: 100vw;
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-left: 42%;
+  }
+
+  .slider-dot {
+    width: 16px;
+    height: 16px;
+    border-radius: 16px;
+    background: #BEBEBE;
+    cursor: pointer;
+
+    @media (max-width: 500px) {
+      width: 8px;
+      height: 8px;
+    }
+  }
+
+  .slider-dot-active {
+    width: 16px;
+    height: 16px;
+    border-radius: 16px;
+    background: #404040;
+
+    @media (max-width: 500px) {
+      width: 8px;
+      height: 8px;
+    }
   }
 }
