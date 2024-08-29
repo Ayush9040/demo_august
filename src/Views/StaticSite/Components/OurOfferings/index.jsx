@@ -153,7 +153,7 @@ const OurOfferings = () => {
                 <div className="course-offered" key={index} dataSettings={JSON.stringify(settings)}>
                   <Link to={data?.redirect}>
                     <img src={data?.imgSrc} placeholder="none" alt="7-days-camp" />
-                    <div className='image-overlay'>ctfgvh</div>
+                    <div className='image-overlay'></div>
                   </Link>
                   <p className='h4'>{data?.name}</p>
 
