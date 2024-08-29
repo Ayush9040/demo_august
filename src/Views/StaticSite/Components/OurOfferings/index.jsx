@@ -10,14 +10,17 @@ import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import Slider from 'react-slick'
 import CommonBtn from '../commonbtn'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import useOnScreen from '../../../../helpers/InterSection'
 import { useEffect } from 'react'
 
 const OurOfferings = () => {
+
   const offerinRef = useRef(null)
   const sliderRef = useRef(null)
   const isInteracting = useOnScreen(offerinRef, { threshold: 0.5 })
+  const navigate = useNavigate();
+  const isMobile = window.innerWidth <= 499;
 
   useEffect(() => {
     if (!sliderRef.current) return
@@ -70,6 +73,7 @@ const OurOfferings = () => {
       price: '60,000',
     },
   ]
+  
   const [smallDescription, setSmallDescription] = useState(
     carouselData[0].description.substring(0, 120) + '...'
   )
@@ -107,94 +111,140 @@ const OurOfferings = () => {
     },
   }
 
+
+
   return (
     <div className="our-offerings-section">
       <div className="our-offerings-container offering-padding">
+
         <div className="offering-overview">
-          <Heading
-            logo={courses}
-            smallText="Our Signature"
-            largeText="Offerings"
-          />
+          <Heading logo={courses} smallText="Our Signature" largeText="Offerings" />
+
           <div className="offering-text">
             <p>
-              The unique offerings of The Yoga Institute have impacted and
-              inspired millions of lives across the globe. Scroll through some
-              of our signature offerings.
+              The unique offerings of The Yoga Institute have impacted and inspired
+              millions of lives across the globe. Scroll through some of our
+              signature offerings.
             </p>
           </div>
+
           <Link to="/courses">
-            <CommonBtn text={'Explore More'} />
+            <CommonBtn text="Explore More" />
           </Link>
         </div>
+
         <div className="our-offerings-carousel" ref={offerinRef}>
-          <Slider
-            {...settings}
-            ref={(slider) => {
-              sliderRef.current = slider
-            }}
-          >
-            <div
-              className="course-offered"
-              dataSettings={JSON.stringify(settings)}
-            >
-              <Link to={'/7-days-camp'}>
-                <img
-                  src={`${baseDomain}${homeAssets.homeAsset7}`}
-                  placeholder="none"
-                  alt="7days-camp"
-                />
+          
+          <Slider {...settings} ref={(slider) => { sliderRef.current = slider }}>
+
+            <div className="course-offered" dataSettings={JSON.stringify(settings)}>
+              <Link to="/7-days-camp">
+                <img src={`${baseDomain}${homeAssets.homeAsset7}`} placeholder="none" alt="7-days-camp" />
               </Link>
-              <h4>7-day Yoga Health Camp</h4>
+              <p className='h4'>7-day Yoga Health Camp</p>
+
+              <div className="base-info-wrap">
+                <div className="base-text-wrap">
+                  <div className="base-content">7-day Yoga Health Camp</div>
+                  <div className="base-price">(7 days - ₹10000)</div>
+                </div>
+                <div className="base-btn-explore" onClick={() => navigate('/7-days-camp')}> Explore <img className='Chevrons-right' src="/icons/200-hours/Chevrons right.svg" alt="" /> </div>
+              </div>
+
             </div>
+
             <div className="course-offered">
-              <Link to={'/21-days-better-living-course'}>
+              <Link to="/21-days-better-living-course">
                 <img
                   src={`${baseDomain}${homeAssets.homeAsset8}`}
                   placeholder="none"
-                  alt="21days"
+                  alt="21-days"
                 />
               </Link>
-              <h4>21-Day Better Living Course</h4>
+              <p className='h4'>21-Day Better Living Course</p>
+
+              <div className="base-info-wrap">
+                <div className="base-text-wrap">
+                  <div className="base-content">21-Day Better Living Course</div>
+                  <div className="base-price">(21 days - ₹2500)</div>
+                </div>
+                <div className="base-btn-explore" onClick={() => navigate('/21-days-better-living-course')}> Explore <img className='Chevrons-right' src="/icons/200-hours/Chevrons right.svg" alt="" /> </div>
+              </div>
+
             </div>
+
             <div className="course-offered">
-              <Link to={'/asana-regular-classes-online'}>
+              <Link to="/asana-regular-classes-online">
                 <img
                   src={`${baseDomain}${courseAssets.courseAsset115}`}
                   placeholder="none"
-                  alt="200hrsTTC"
+                  alt="Regular-Asana-Classes"
                 />
               </Link>
-              <h4>Regular Asana Classes</h4>
+              <p className='h4'>Regular Asana Classes</p>
+
+              <div className="base-info-wrap">
+                <div className="base-text-wrap">
+                  <div className="base-content">Regular Asana Classes</div>
+                  <div className="base-price">(Regular Asana - ₹1100)</div>
+                </div>
+                <div className="base-btn-explore" onClick={() => navigate('/asana-regular-classes-online')}> Explore <img className='Chevrons-right' src="/icons/200-hours/Chevrons right.svg" alt="" /> </div>
+              </div>
             </div>
+
             <div className="course-offered">
-              <Link to={'/childrens-regular-classes'}>
+              <Link to="/childrens-regular-classes">
                 <img
                   src={`${baseDomain}${homeAssets.homeAsset10}`}
                   placeholder="none"
-                  alt="Children-camp"
+                  alt="Children-Classes"
                 />
               </Link>
-              <h4>Children’s Regular Classes</h4>
+              <p className='h4'>Children’s Regular Classes</p>
+
+              <div className="base-info-wrap">
+                <div className="base-text-wrap">
+                  <div className="base-content">Children’s Regular Classes</div>
+                  <div className="base-price">(Children’s - ₹1100)</div>
+                </div>
+                <div className="base-btn-explore" onClick={() => navigate('/childrens-regular-classes')}> Explore <img className='Chevrons-right' src="/icons/200-hours/Chevrons right.svg" alt="" /> </div>
+              </div>
             </div>
+
             <div className="course-offered">
-              <Link to={'/seven-month-ttc'}>
+              <Link to="/seven-month-ttc">
                 <img
                   src={`${baseDomain}${homeAssets.homeAsset11}`}
                   placeholder="none"
-                  alt="900hrs"
+                  alt="7-month-TTC"
                 />
               </Link>
-              <h4>7-month TTC</h4>
+              <p className='h4'>7-month TTC</p>
+
+              <div className="base-info-wrap">
+                <div className="base-text-wrap">
+                  <div className="base-content">7-month TTC</div>
+                  <div className="base-price">(7 months - ₹60000)</div>
+                </div>
+                <div className="base-btn-explore" onClick={() => navigate('/seven-month-ttc')}> Explore <img className='Chevrons-right' src="/icons/200-hours/Chevrons right.svg" alt="" /> </div>
+              </div>
             </div>
+
           </Slider>
+
+          {/* <div className='slider-dots mg-20-mob'>
+            {
+              Array[4].map((ele, index) => (
+                <div key={index} className={index == activeIndex ? 'active-dot' : 'inactive-dot'}></div>
+              ))
+            }
+          </div> */}
+
           <div className="course-details">
             <div className="course-content-container">
               <p>{smallDescription}</p>
               <div className="actions">
-                <h3>
-                  {timeline}|₹{price}
-                </h3>
+                <h3>{timeline} | ₹{price}</h3>
                 <h3>
                   <Link to={redirect}>Explore &#62;&#62;</Link>
                 </h3>
@@ -202,9 +252,12 @@ const OurOfferings = () => {
             </div>
           </div>
         </div>
+
       </div>
+
       <div className="filler-logo">{filler}</div>
     </div>
+
   )
 }
 
