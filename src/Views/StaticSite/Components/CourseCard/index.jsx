@@ -263,7 +263,16 @@ const CourseCard = ({
             })} />
                 </Link>
               ) : (
-                <CommonBtn text={'Enroll Now'} />
+                <CommonBtn text={'Enroll Now'} buttonAction={() => handleCTEnrollNowClick({
+                  courseTitle,
+                  fees,
+                  timing,
+                  category,
+                  batch,
+                  nonResidential,
+                  residential,
+                  online
+                })} />
               )) : (path !== 'nutri-diet' ? <Link
                 to={
                   isLoggedIn

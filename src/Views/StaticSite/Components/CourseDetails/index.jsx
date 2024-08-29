@@ -421,7 +421,16 @@ const CourseDetails = ({ pageDate }) => {
                         }
                       >
                         {/* <CommonBtn text={'Enroll Now'} /> */}
-                        <EnrollBtn text={'Enroll Now'} />
+                        <EnrollBtn text={'Enroll Now'} buttonAction={ () => handleCTEnrollNowClick({
+              courseTitle: pageDate?.title,
+              fees: pageDate?.fees,
+              timing: pageDate?.timing,
+              category: pageDate?.category,
+              batch: pageDate?.Batch_No,
+              nonResidential: pageDate?.nonResidential,
+              residential: pageDate?.residential,
+              online: pageDate?.online
+            }) } />
                       </Link>
                     ) : (
                       // scroll()
@@ -433,7 +442,16 @@ const CourseDetails = ({ pageDate }) => {
                         }
                       >
                         {/* <CommonBtn text={'Enroll Now'} /> */}
-                        <EnrollBtn text={'Enroll Now'} />
+                        <EnrollBtn text={'Enroll Now'} buttonAction={() => handleCTEnrollNowClick({
+              courseTitle: pageDate?.title,
+              fees: pageDate?.fees,
+              timing: pageDate?.timing,
+              category: pageDate?.category,
+              batch: pageDate?.Batch_No,
+              nonResidential: pageDate?.nonResidential,
+              residential: pageDate?.residential,
+              online: pageDate?.online
+            }) } />
                       </Link>
                     )
                   ) :
@@ -596,7 +614,16 @@ const CourseDetails = ({ pageDate }) => {
                     }
                   >
                     {/* <CommonBtn text={'Enroll Now'} /> */}
-                    <EnrollBtn text={'Enroll Now'} />
+                    <EnrollBtn text={'Enroll Now'} buttonAction={() => handleCTEnrollNowClick({
+              courseTitle: pageDate?.title,
+              fees: pageDate?.fees,
+              timing: pageDate?.timing,
+              category: pageDate?.category,
+              batch: pageDate?.Batch_No,
+              nonResidential: pageDate?.nonResidential,
+              residential: pageDate?.residential,
+              online: pageDate?.online
+            }) } />
                   </Link>
                 ) : (
                   // scroll()
@@ -608,7 +635,16 @@ const CourseDetails = ({ pageDate }) => {
                     }
                   >
                     {/* <CommonBtn text={'Enroll Now'} /> */}
-                    <EnrollBtn text={'Enroll Now'} />
+                    <EnrollBtn text={'Enroll Now'} buttonAction={() => handleCTEnrollNowClick({
+              courseTitle: pageDate?.title,
+              fees: pageDate?.fees,
+              timing: pageDate?.timing,
+              category: pageDate?.category,
+              batch: pageDate?.Batch_No,
+              nonResidential: pageDate?.nonResidential,
+              residential: pageDate?.residential,
+              online: pageDate?.online
+            }) }  />
                   </Link>
                 )
               ) :
@@ -620,12 +656,30 @@ const CourseDetails = ({ pageDate }) => {
                 }
               >
                 {/* <CommonBtn text={'Enroll Now'} /> */}
-                <EnrollBtn text={'Enroll Now'} />
+                <EnrollBtn text={'Enroll Now'} buttonAction={() => handleCTEnrollNowClick({
+              courseTitle: pageDate?.title,
+              fees: pageDate?.fees,
+              timing: pageDate?.timing,
+              category: pageDate?.category,
+              batch: pageDate?.Batch_No,
+              nonResidential: pageDate?.nonResidential,
+              residential: pageDate?.residential,
+              online: pageDate?.online
+            }) } />
               </Link> :
                 (<div >
                   <div style={{ opacity: '0.4' }}>
                     {/* <CommonBtn text={'Enroll Now'} /> */}
-                    <EnrollBtn text={'Enroll Now'} />
+                    <EnrollBtn text={'Enroll Now'} buttonAction={() => handleCTEnrollNowClick({
+              courseTitle: pageDate?.title,
+              fees: pageDate?.fees,
+              timing: pageDate?.timing,
+              category: pageDate?.category,
+              batch: pageDate?.Batch_No,
+              nonResidential: pageDate?.nonResidential,
+              residential: pageDate?.residential,
+              online: pageDate?.online
+            }) } />
                   </div>
                   <div style={{ fontSize: '1.5rem', padding: '1.5rem' }}>No dates available for this course</div>
                 </div>)

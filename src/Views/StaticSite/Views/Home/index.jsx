@@ -109,121 +109,121 @@ const Home = () => {
   // }, []);
 
 
-  const [sessionStartTime, setSessionStartTime] = useState(null);
-  const [sessionId, setSessionId] = useState(null);
-  const [uniqueViewId, setUniqueViewId] = useState(null);
+  // const [sessionStartTime, setSessionStartTime] = useState(null);
+  // const [sessionId, setSessionId] = useState(null);
+  // const [uniqueViewId, setUniqueViewId] = useState(null);
 
 
-  const [isIdle, setIsIdle] = useState(false);
-  const [idleStartTime, setIdleStartTime] = useState(null);
-  const idleTimeLimit = 120000; // 2 minutes in milliseconds
-  const idlelocation = useLocation();
+  // const [isIdle, setIsIdle] = useState(false);
+  // const [idleStartTime, setIdleStartTime] = useState(null);
+  // const idleTimeLimit = 120000; // 2 minutes in milliseconds
+  // const idlelocation = useLocation();
 
-  useEffect(() => {
-    // Set the session start time when the component mounts
-    setSessionStartTime(Date.now());
+  // useEffect(() => {
+  //   // Set the session start time when the component mounts
+  //   setSessionStartTime(Date.now());
 
-    //Generate or retrieve session ID
-    const existingSessionId = sessionStorage.getItem('sessionId');
-    if (existingSessionId) {
-      setSessionId(existingSessionId);
-    } else {
-      // const newSessionId = uuidv4(); // Generate a unique session ID
-      // sessionStorage.setItem('sessionId', newSessionId);
-      // setSessionId(newSessionId);
-    }
+  //   //Generate or retrieve session ID
+  //   const existingSessionId = sessionStorage.getItem('sessionId');
+  //   if (existingSessionId) {
+  //     setSessionId(existingSessionId);
+  //   } else {
+  //     // const newSessionId = uuidv4(); // Generate a unique session ID
+  //     // sessionStorage.setItem('sessionId', newSessionId);
+  //     // setSessionId(newSessionId);
+  //   }
 
-   // Generate a unique view ID for this page view
-    // const newUniqueViewId = uuidv4();
-    // setUniqueViewId(newUniqueViewId);
+  //  // Generate a unique view ID for this page view
+  //   // const newUniqueViewId = uuidv4();
+  //   // setUniqueViewId(newUniqueViewId);
 
-  }, []);
+  // }, []);
 
-  useEffect(() => {
-    // Calculate session duration when the component unmounts
-    const calculateSessionDuration = () => {
-      if (sessionStartTime) {
-        const sessionEndTime = Date.now();
-        const sessionDurationInSeconds = (sessionEndTime - sessionStartTime) / 1000; // Convert milliseconds to seconds
+  // useEffect(() => {
+  //   // Calculate session duration when the component unmounts
+  //   const calculateSessionDuration = () => {
+  //     if (sessionStartTime) {
+  //       const sessionEndTime = Date.now();
+  //       const sessionDurationInSeconds = (sessionEndTime - sessionStartTime) / 1000; // Convert milliseconds to seconds
         
-        // Ensure CleverTap is loaded and initialized
-        if (window?.clevertap) {
-          // Track the Page View event with dynamic data
-          window.clevertap.event.push("Home Page", {
-            "Page_Name": "Home_test",
-            "Last_page_url": document.referrer || "Direct Visit",
-            "Page_Url": window.location.href,
-             "Session Duration": sessionDurationInSeconds,
-            "Logged In": isLoggedIn ? "Yes" : "No",
-            // "Session ID": sessionId,
-            // "unique_view_id": uniqueViewId
-          });
+  //       // Ensure CleverTap is loaded and initialized
+  //       if (window?.clevertap) {
+  //         // Track the Page View event with dynamic data
+  //         window.clevertap.event.push("Home Page", {
+  //           "Page_Name": "Home_test",
+  //           "Last_page_url": document.referrer || "Direct Visit",
+  //           "Page_Url": window.location.href,
+  //            "Session Duration": sessionDurationInSeconds,
+  //           "Logged In": isLoggedIn ? "Yes" : "No",
+  //           // "Session ID": sessionId,
+  //           // "unique_view_id": uniqueViewId
+  //         });
 
-          console.log('Page view event tracked with dynamic data.', window?.clevertap.event);
-        } else {
-          console.error('CleverTap is not initialized.');
-        }
-      }
-    };
+  //         console.log('Page view event tracked with dynamic data.', window?.clevertap.event);
+  //       } else {
+  //         console.error('CleverTap is not initialized.');
+  //       }
+  //     }
+  //   };
 
-    // Call the function when the component unmounts
-    return calculateSessionDuration;
-  }, [sessionStartTime, sessionId, uniqueViewId]);
+  //   // Call the function when the component unmounts
+  //   return calculateSessionDuration;
+  // }, [sessionStartTime, sessionId, uniqueViewId]);
 
 
-  useEffect(() => {
-    let idleTimer;
+  // useEffect(() => {
+  //   let idleTimer;
 
-    const resetIdleTimer = () => {
-      setIsIdle(false);
-      clearTimeout(idleTimer);
-      idleTimer = setTimeout(() => {
-        setIsIdle(true);
-        setIdleStartTime(Date.now());
-      }, idleTimeLimit);
-    };
+  //   const resetIdleTimer = () => {
+  //     setIsIdle(false);
+  //     clearTimeout(idleTimer);
+  //     idleTimer = setTimeout(() => {
+  //       setIsIdle(true);
+  //       setIdleStartTime(Date.now());
+  //     }, idleTimeLimit);
+  //   };
 
-    // Start the idle timer
-    resetIdleTimer();
+  //   // Start the idle timer
+  //   resetIdleTimer();
 
-    // Event listeners to reset the idle timer on user interaction
-    window.addEventListener('mousemove', resetIdleTimer);
-    window.addEventListener('keydown', resetIdleTimer);
-    window.addEventListener('scroll', resetIdleTimer);
-    window.addEventListener('click', resetIdleTimer);
+  //   // Event listeners to reset the idle timer on user interaction
+  //   window.addEventListener('mousemove', resetIdleTimer);
+  //   window.addEventListener('keydown', resetIdleTimer);
+  //   window.addEventListener('scroll', resetIdleTimer);
+  //   window.addEventListener('click', resetIdleTimer);
 
-    // Cleanup event listeners on component unmount
-    return () => {
-      clearTimeout(idleTimer);
-      window.removeEventListener('mousemove', resetIdleTimer);
-      window.removeEventListener('keydown', resetIdleTimer);
-      window.removeEventListener('scroll', resetIdleTimer);
-      window.removeEventListener('click', resetIdleTimer);
-    };
-  }, [idlelocation]);
+  //   // Cleanup event listeners on component unmount
+  //   return () => {
+  //     clearTimeout(idleTimer);
+  //     window.removeEventListener('mousemove', resetIdleTimer);
+  //     window.removeEventListener('keydown', resetIdleTimer);
+  //     window.removeEventListener('scroll', resetIdleTimer);
+  //     window.removeEventListener('click', resetIdleTimer);
+  //   };
+  // }, [idlelocation]);
 
-  useEffect(() => {
-    if (isIdle && idleStartTime && window?.clevertap) {
-      const timeDuration = (Date.now() - idleStartTime) / 1000; // Convert to seconds
+  // useEffect(() => {
+  //   if (isIdle && idleStartTime && window?.clevertap) {
+  //     const timeDuration = (Date.now() - idleStartTime) / 1000; // Convert to seconds
 
-      // Trigger the CleverTap event for Idle Mode
-      window.clevertap.event.push("Idle Mode", {
-        "Page_Name": document.title || "Unknown Page", // Page name from title or default
-        "Page_URL": window.location.href,  // Current page URL
-        "Target Time Duration": idleTimeLimit / 1000,  // Target idle time in seconds
-        "Time Duration": timeDuration,  // Actual idle time in seconds
-        "Logged In": isLoggedIn ? "Yes" : "No"  // User login status
-      });
+  //     // Trigger the CleverTap event for Idle Mode
+  //     window.clevertap.event.push("Idle Mode", {
+  //       "Page_Name": document.title || "Unknown Page", // Page name from title or default
+  //       "Page_URL": window.location.href,  // Current page URL
+  //       "Target Time Duration": idleTimeLimit / 1000,  // Target idle time in seconds
+  //       "Time Duration": timeDuration,  // Actual idle time in seconds
+  //       "Logged In": isLoggedIn ? "Yes" : "No"  // User login status
+  //     });
 
-      console.log("Idle Mode event tracked:", {
-        "Page_Name": document.title || "Unknown Page",
-        "Page_URL": window.location.href,
-        "Target Time Duration": idleTimeLimit / 1000,
-        "Time Duration": timeDuration,
-        "Logged In": isLoggedIn ? "Yes" : "No"
-      });
-    }
-  }, [isIdle, idleStartTime, isLoggedIn]);
+  //     console.log("Idle Mode event tracked:", {
+  //       "Page_Name": document.title || "Unknown Page",
+  //       "Page_URL": window.location.href,
+  //       "Target Time Duration": idleTimeLimit / 1000,
+  //       "Time Duration": timeDuration,
+  //       "Logged In": isLoggedIn ? "Yes" : "No"
+  //     });
+  //   }
+  // }, [isIdle, idleStartTime, isLoggedIn]);
 
   
 

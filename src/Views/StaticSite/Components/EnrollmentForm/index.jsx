@@ -13,7 +13,7 @@ import { authBaseDomain, cmsBaseDomain, razorPayKey } from '../../../../Constant
 import axios from 'axios'
 import { handleCTProccedToPayment } from '../../../../CleverTap/buttonClicked'
 import { trackPageView } from '../../../../CleverTap/pageViewEvents'
-import { handleCTCoursePaymentPageVisit, handleCTPaymentCompletedCourse, handleCTPaymentFailed } from '../../../../CleverTap/buttonClicked'
+import { handleCTCoursePaymentPageVisit, handleCTPaymentCompletedCourse, handleCTPaymentFailed, setupUserProfile } from '../../../../CleverTap/buttonClicked'
 
 const Enrollment = () => {
   const { user } = useSelector((state) => state.auth)
@@ -568,6 +568,8 @@ const Enrollment = () => {
     residential: currentCourse?.residental,
     online: currentCourse?.online
       })
+
+      setupUserProfile(formData);
     }
 
   }

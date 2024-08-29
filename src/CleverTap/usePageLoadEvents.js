@@ -7,6 +7,7 @@ import {
   trackSessionStartEvent,
   trackSessionEndEvent,
 } from './overallWebsiteEvents'; // Update this path based on your file structure
+import { useSelector } from 'react-redux'
 
 const usePageLoadEvents = () => {
   const location = useLocation();
@@ -16,20 +17,26 @@ const usePageLoadEvents = () => {
   const [idleStartTime, setIdleStartTime] = useState(null);
   const [sessionStartTime, setSessionStartTime] = useState(Date.now());
   const idleTimeLimit = 120000; // Idle time limit in milliseconds (e.g., 2 minutes)
-  const isLoggedIn = true; // Replace with your actual login status check
+  const { isLoggedIn } = useSelector((state) => state.auth); // Replace with your actual login status check
 
   // Function to generate a unique session ID
   const generateSessionId = () => `session_${Math.floor(Math.random() * 1000000).toString()}`;
 
   // Function to track the Page View event
   const trackPageViewEvent = (sessionDurationInSeconds) => {
+
+    const urlPath = window.location.pathname; // Get the pathname from the URL
+    const pageName = urlPath.split('/').filter(Boolean).pop() || 'Home'; // Extract the last segment or default to 'Home'
+
     if (window?.clevertap) {
       window.clevertap.event.push("Page View", {
-        "Page_Name": document.title || "Unknown Page",
+        "Page_Name": pageName.charAt(0).toUpperCase() + pageName.slice(1),
         "Last_page_url": document.referrer || "Direct Visit",
         "Page_Url": window.location.href,
         "Session Duration": sessionDurationInSeconds,
         "Logged In": isLoggedIn ? "Yes" : "No",
+        "Session ID": sessionIdRef,
+        "unique_view_id": sessionStorage.getItem('unique_view_id')
       });
       console.log('Page view event tracked with dynamic data.', window?.clevertap.event);
     } else {
@@ -39,9 +46,12 @@ const usePageLoadEvents = () => {
 
   // Function to track the Idle Mode event
   const trackIdleModeEvent = (timeDuration) => {
+    const urlPath = window.location.pathname; // Get the pathname from the URL
+    const pageName = urlPath.split('/').filter(Boolean).pop() || 'Home'; // Extract the last segment or default to 'Home'
+
     if (window?.clevertap) {
       window.clevertap.event.push("Idle Mode", {
-        "Page_Name": document.title || "Unknown Page",
+        "Page_Name": pageName.charAt(0).toUpperCase() + pageName.slice(1),
         "Page_URL": window.location.href,
         "Target Time Duration": idleTimeLimit / 1000,  // Target idle time in seconds
         "Time Duration": timeDuration,  // Actual idle time in seconds
@@ -85,10 +95,12 @@ const usePageLoadEvents = () => {
   const handlePageExit = () => {
     const endTime = new Date();
     const timeSpent = Math.floor((endTime - startTimeRef.current) / 1000); // Calculate time spent in seconds
+    const urlPath = window.location.pathname; // Get the pathname from the URL
+    const pageName = urlPath.split('/').filter(Boolean).pop() || 'Home'; // Extract the last segment or default to 'Home'
 
     // Track page time spent with the actual time
     trackPageTimeSpentEvent(
-      document.title,
+      pageName.charAt(0).toUpperCase() + pageName.slice(1),
       timeSpent + ' seconds',
       sessionStorage.getItem('unique_view_id'),
       endTime.toISOString(),
@@ -97,7 +109,7 @@ const usePageLoadEvents = () => {
 
     // Track page exit event
     trackPageExitEvent({
-      pageName: document.title,
+      pageName: pageName.charAt(0).toUpperCase() + pageName.slice(1),
       lastPageUrl: document.referrer || 'Direct Visit',
       pageUrl: window.location.href,
     });

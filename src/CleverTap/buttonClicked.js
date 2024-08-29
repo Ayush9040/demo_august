@@ -7,29 +7,57 @@ export const handleCTCourseClick = ({
   timing,
   category,
   batch,
-  coursesList
+  coursesList,
+  nonResidential,
+  residential,
+  online
 }) => {
     // Trigger CleverTap event on button click
+    const urlPath = window.location.pathname; // Get the pathname from the URL
+    const pageName = urlPath.split('/').filter(Boolean).pop() || 'Home'; // Extract the last segment or default to 'Home'
+
+      // Determine the course mode
+      let courseMode = "";
+      if (online) {
+        courseMode = "Online";
+        if (nonResidential || residential) {
+          courseMode += ", Offline";
+        }
+      } else {
+        courseMode = "Offline";
+      }
+
+
+      // Determine the course location
+    let courseLocation = "NA";
+    if (residential && nonResidential) {
+      courseLocation = "Residential, Non-Residential";
+    } else if (residential) {
+      courseLocation = "Residential";
+    } else if (nonResidential) {
+      courseLocation = "Non-Residential";
+    }
+
     if (window?.clevertap) {
       window.clevertap.event.push("Course_Clicked", {
         "Course_name": courseTitle,
         // "Enrollmentdate": "15 July - 7 Sept",
         // "Start_Date": "15 July",
         // "End_date": "7 Sept",
-        "Page_name": "TTC -200 HRS - 1 MONTH",
+        "Page_name": pageName.charAt(0).toUpperCase() + pageName.slice(1),
         "Fees_Residential_OnCampus": fees.offlineFee.residentialFee,
         "Fees_Non_Residential_OnCampus": fees.offlineFee.nonResidentialFee,
         "Fees_Online": fees.onlineFee,
         "Timings": timing,
         "Page_Url": window.location.href,
-        "Tenure": "1/2/3 Month",
+        // "Tenure": "1/2/3 Month",
         "Course Category": category,
-        "Course-SubType": "Workshop",
-        "Course Mode": "Online/Offline",
-        "Course Location": "Residential/ Non- Residential/NA",
-        "Course Type": "7 Day/21 Day/TTC/Camps & Workshops",
-        "Language": "English/Hindi",
-        "Day_Type": "Weekend/Weekday",
+        // "Course-SubType": "Workshop",
+        "Course Mode": courseMode,
+        "Course Location": courseLocation,
+        // "Course Type": "7 Day/21 Day/TTC/Camps & Workshops",
+        // "Language": "English/Hindi",
+        // "Day_Type": "Weekend/Weekday",
         "Batch_No": batch,
         "date_time_timestamp": new Date().toISOString()
       });
@@ -54,6 +82,9 @@ export const handleCTCourseClick = ({
   }) => {
 
     const currentPath = window.location.pathname;
+
+    const urlPath = window.location.pathname; // Get the pathname from the URL
+    const pageName = urlPath.split('/').filter(Boolean).pop() || 'Home'; // Extract the last segment or default to 'Home'
 
     // Extract the portion after the last '/' and remove the leading '/'
     const extractedKey = currentPath.split('/').pop().replace(/-/g, ' ');
@@ -442,3 +473,39 @@ export const handleCTPaymentFailed = ({
   }
 };
 
+export const setupUserProfile = (user) => {
+  if (window.clevertap) {
+    // User profile data
+    const userProfile = {
+      "Site": {
+        "Name": user.name || "",                    // User's name
+        "Identity": user.email || "",                  // Unique identity (User ID)
+        "Email": user.email || "",                  // Email address
+        "Phone": user.phone || "",                  // Phone number in international format
+        "Gender": user.gender || "",                // Gender ("M", "F", "O")
+        // "DOB": user.dob || "",                      // Date of birth in "YYYY-MM-DD" format
+        "City": user.city || "",     
+        "Age": '25',               // City
+        "Country": user.country || "",              // Country
+        // "Photo": user.photoUrl || "",               // URL to the user's profile photo
+        // "Custom_Property1": user.property1 || "",   // Additional custom properties
+        // "Custom_Property2": user.property2 || "",
+        // Add more properties as required
+        "MSG-email": true,                // Disable email notifications
+        "MSG-push": true,                  // Enable push notifications
+        "MSG-sms": true,                   // Enable sms notifications
+        "MSG-whatsapp": true,   
+      }
+    };
+
+    // Check if `onUserLogin` method is correctly set up
+    if (typeof window.clevertap.onUserLogin === "object") {
+      window.clevertap.onUserLogin.push(userProfile);
+      console.log("User profile sent to CleverTap:", userProfile);
+    } else {
+      console.error("CleverTap onUserLogin is not set up correctly.");
+    }
+  } else {
+    console.error("CleverTap is not initialized.");
+  }
+};
