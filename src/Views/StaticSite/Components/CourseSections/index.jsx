@@ -41,10 +41,10 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, }
             url: '/200-hrs-part-time-ttc-online-english-batch-6',
             text: '2 Months TTC Online – English - Batch 6',
           },
-          {
-            url: '/200-Hours',
-            text: 'View more about 200 hours TTC (Basic)',
-          },
+          // {
+          //   url: '/200-Hours',
+          //   text: 'View more about 200 hours TTC (Basic)',
+          // },
           // /200-hrs-part-time-ttc-online-english-batch-5
         ],
       },

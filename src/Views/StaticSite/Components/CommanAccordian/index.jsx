@@ -50,7 +50,8 @@ const Accordian = ({ data, sliderVal = 0, setSliderVal }) => {
                       {
                         item.ans.map((points, i) => (
                           <div className='accordian_ul' key={i}
-                            style={points.text === "View more about 200 hours TTC (Basic)" ? { textDecoration: 'underLine', color: 'darkblue', cursor:'pointer' } : null}>
+                          // style={points.text === "View more about 200 hours TTC (Basic)" ? { textDecoration: 'underLine', color: 'darkblue', cursor:'pointer' } : null}
+                          >
                             <p onClick={() => navigate(points.url)} >{points.text}</p>
                           </div>
                         ))

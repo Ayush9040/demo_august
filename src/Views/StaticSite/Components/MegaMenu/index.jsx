@@ -1,11 +1,10 @@
 import React, { useState } from 'react'
 import { legacy2, cross, filler } from '../../assets/icons/icon'
 import './style.scss'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 const MegaMenu = ({ setNav }) => {
   const [menuItem, setMenuItem] = useState()
-  const navigate = useNavigate();
 
   const navItems = [
     { name: 'ABOUT', link: '/know-us-better', id: 1, key: 'ABOUT', },
@@ -237,7 +236,7 @@ const MegaMenu = ({ setNav }) => {
             <div className="single-menu">
               <h3>TEACHERS TRAINING COURSES</h3>
               <ul>
-                <li className="text-bold" style={{ cursor: 'pointer' }} onClick={() => navigate('/200-Hours')}>Basic TTC (200 Hour Courses)</li>
+                <li className="text-bold">Basic TTC (200 Hour Courses)</li>
                 <Link onClick={() => { setNav(false) }} to="/one-month-ttc">
                   <li>Batch 1 - 1 Month TTC-Online & On Campus-English</li>
                 </Link>
