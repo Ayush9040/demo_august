@@ -13091,7 +13091,7 @@ const classes = {
     online: false,
     onCampus: true,
     nonResidential: true,
-    residential: true,
+    residential: false,
     certficate: false,
     details: [
       // {
