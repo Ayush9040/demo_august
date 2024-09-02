@@ -97,7 +97,7 @@ const Personal = ({
         ...prev, endDate: value, endDateFormat: endDate
       }
     })
-    localStorage.setItem('courseEndDate',endDate)
+    localStorage.setItem('courseEndDate', endDate)
     setFormData({ ...formData, endDate: value, duration: value?.value })
     dateDurationChange(value?.value)
   }
@@ -106,8 +106,8 @@ const Personal = ({
   function addMonths(startDate, months) {
     const date = startDate; // Create a Date object from the start date
     // date.setMonth(date.getMonth() + months); // Add the number of months
-    let totalDays=months*30
-    date.setDate(date.getDate() + (totalDays-1));
+    let totalDays = months * 30
+    date.setDate(date.getDate() + (totalDays - 1));
     return date;
   }
 
@@ -207,12 +207,20 @@ const Personal = ({
   const [minDate, setMinDate] = useState('');
   useEffect(() => {
     const array = ["Yoga Classes for Men (Regular Asana) - On Campus",
-      "Yoga Classes for Women (Regular Asana) - On Campus", "Yoga Asana Regular Classes - (Men & Women) - Online Yoga Classes",
-      "Weekend Yoga Asana Classes - (Men & Women) - On Campus", "Weekend Yoga Asana Classes - (Men & Women) - Online",
-      "Children's Yoga Classes (Regular) - On Campus", "Children's Weekend Yoga Class - On Campus",
-      "Advanced Yoga Asana Regular Class - Online (Only for TYI Teachers)", "Regular Pregnancy Yoga Classes - Online & On Campus",
-      "Advanced Yoga Asana Regular Class - Online (Only for TYI Teachers)", "Healing Yoga Movement & Rhythm - Online", "Yog Prayas - Online",
-      "Online Meditation Course  (Foundation Course)", "Regular Online Meditation Classes", "Couples’ Yoga Classes  - Online"
+      "Yoga Classes for Women (Regular Asana) - On Campus",
+      "Yoga Asana Regular Classes - (Men & Women) - Online Yoga Classes",
+      "Weekend Yoga Asana Classes - (Men & Women) - On Campus",
+      "Weekend Yoga Asana Classes - (Men & Women) - Online",
+      "Children's Yoga Classes (Regular) - On Campus",
+      "Children's Weekend Yoga Class - On Campus",
+      // "Advanced Yoga Asana Regular Class - Online (Only for TYI Teachers)",
+      // "Regular Pregnancy Yoga Classes - Online & On Campus",
+      // "Advanced Yoga Asana Regular Class - Online (Only for TYI Teachers)",
+      // "Healing Yoga Movement & Rhythm - Online",
+      //  "Yog Prayas - Online",
+      // "Online Meditation Course  (Foundation Course)", 
+      // "Regular Online Meditation Classes", 
+      // "Couples’ Yoga Classes  - Online"
     ]
     const isMatch = array.includes(currentCourse?.title);
     setIsRegular(isMatch);
@@ -896,7 +904,7 @@ const Personal = ({
               />
               {empty === 18 && <small id="fill_err"> Please select course date</small>}
             </div>
-           
+
             {isRegular && <><br /><div className="form_error course_date date-input-wrapper">
               <DatePicker
                 minDate={minDate}

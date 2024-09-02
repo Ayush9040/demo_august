@@ -604,9 +604,9 @@ const CourseDetails = ({
                 </label>
                 
               )}
-              {shouldShowResidentialOption() && (
+              {/* {shouldShowResidentialOption() && (
                   <div style={{ fontSize: '12px', textAlign: 'center', marginTop: '-5px', color: '#000' }}>For Single sharing and Two sharing rooms, please contact us</div>
-                )}
+                )} */}
               
             </div>
 
