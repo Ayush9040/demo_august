@@ -10,14 +10,18 @@ import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import Slider from 'react-slick'
 import CommonBtn from '../commonbtn'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import useOnScreen from '../../../../helpers/InterSection'
 import { useEffect } from 'react'
 
 const OurOfferings = () => {
+
   const offerinRef = useRef(null)
   const sliderRef = useRef(null)
   const isInteracting = useOnScreen(offerinRef, { threshold: 0.5 })
+  const navigate = useNavigate();
+  const isMobile = window.innerWidth <= 499;
+  const [activeSlide, setActiveSlide] = useState(0);
 
   useEffect(() => {
     if (!sliderRef.current) return
@@ -36,6 +40,7 @@ const OurOfferings = () => {
       redirect: '/7-days-camp',
       timeline: '7 days',
       price: '10000',
+      imgSrc: baseDomain + homeAssets.homeAsset7,
     },
     {
       name: '21-Day Better Living Course',
@@ -44,6 +49,7 @@ const OurOfferings = () => {
       redirect: '/21-days-better-living-course',
       timeline: '21 days',
       price: '2500',
+      imgSrc: baseDomain + homeAssets.homeAsset8,
     },
     {
       name: 'Regular Asana Classes',
@@ -52,6 +58,7 @@ const OurOfferings = () => {
       redirect: '/asana-regular-classes-online',
       timeline: 'Any Day',
       price: '1100',
+      imgSrc: baseDomain + courseAssets.courseAsset115,
     },
     {
       name: 'Children’s Regular Classes',
@@ -60,6 +67,7 @@ const OurOfferings = () => {
       redirect: '/childrens-regular-classes',
       timeline: 'Any Day',
       price: '1100',
+      imgSrc: baseDomain + homeAssets.homeAsset10,
     },
     {
       name: '7-month TTC',
@@ -68,8 +76,10 @@ const OurOfferings = () => {
       redirect: '/seven-month-ttc',
       timeline: '7-month',
       price: '60,000',
+      imgSrc: baseDomain + homeAssets.homeAsset11,
     },
   ]
+
   const [smallDescription, setSmallDescription] = useState(
     carouselData[0].description.substring(0, 120) + '...'
   )
@@ -79,7 +89,7 @@ const OurOfferings = () => {
   const [price, setPrice] = useState(carouselData[0].price)
 
   let settings = {
-    dots: true,
+    dots: window?.innerWidth > 500,
     arrows: false,
     infinite: true,
     speed: 500,
@@ -105,96 +115,176 @@ const OurOfferings = () => {
       setTimeline(carouselData[index].timeline)
       setPrice(carouselData[index].price)
     },
+    beforeChange: (current, next) => setActiveSlide(next)
   }
+
+  const handleDotClick = (index) => {
+    setActiveSlide(index);
+    sliderRef.current.slickGoTo(index);
+  };
+
 
   return (
     <div className="our-offerings-section">
       <div className="our-offerings-container offering-padding">
+
         <div className="offering-overview">
-          <Heading
-            logo={courses}
-            smallText="Our Signature"
-            largeText="Offerings"
-          />
+          <Heading logo={courses} smallText="Our Signature" largeText="Offerings" />
+
           <div className="offering-text">
             <p>
-              The unique offerings of The Yoga Institute have impacted and
-              inspired millions of lives across the globe. Scroll through some
-              of our signature offerings.
+              The unique offerings of The Yoga Institute have impacted and inspired
+              millions of lives across the globe. Scroll through some of our
+              signature offerings.
             </p>
           </div>
+
           <Link to="/courses">
-            <CommonBtn text={'Explore More'} />
+            <CommonBtn text="Explore More" />
           </Link>
         </div>
+
         <div className="our-offerings-carousel" ref={offerinRef}>
-          <Slider
-            {...settings}
-            ref={(slider) => {
-              sliderRef.current = slider
-            }}
-          >
-            <div
-              className="course-offered"
-              dataSettings={JSON.stringify(settings)}
-            >
-              <Link to={'/7-days-camp'}>
-                <img
-                  src={`${baseDomain}${homeAssets.homeAsset7}`}
-                  placeholder="none"
-                  alt="7days-camp"
-                />
+
+          <Slider {...settings} ref={(slider) => { sliderRef.current = slider }}>
+
+            {
+              carouselData?.map((data, index) => (
+                <div className="course-offered" key={index} dataSettings={JSON.stringify(settings)}>
+                  <Link to={data?.redirect}>
+                    <img src={data?.imgSrc} placeholder="none" alt="7-days-camp" />
+                    <div className='image-overlay'></div>
+                  </Link>
+                  <p className='h4'>{data?.name}</p>
+
+                  <div className="base-info-wrap">
+                    <div className="base-text-wrap">
+                      <div className="base-content">{data?.name}</div>
+                      <div className="base-price">({data?.timeline} - ₹{data?.price})</div>
+                    </div>
+                    <div className="base-btn-explore" onClick={() => navigate(data?.redirect)}> Explore <img className='Chevrons-right' src="/icons/200-hours/Chevrons right.svg" alt="" /> </div>
+                  </div>
+
+                </div>
+              ))
+            }
+
+            {/* <div className="course-offered" dataSettings={JSON.stringify(settings)}>
+              <Link to="/7-days-camp">
+                <img src={`${baseDomain}${homeAssets.homeAsset7}`} placeholder="none" alt="7-days-camp" />
               </Link>
-              <h4>7-day Yoga Health Camp</h4>
+              <p className='h4'>7-day Yoga Health Camp</p>
+
+              <div className="base-info-wrap">
+                <div className="base-text-wrap">
+                  <div className="base-content">7-day Yoga Health Camp</div>
+                  <div className="base-price">(7 days - ₹10000)</div>
+                </div>
+                <div className="base-btn-explore" onClick={() => navigate('/7-days-camp')}> Explore <img className='Chevrons-right' src="/icons/200-hours/Chevrons right.svg" alt="" /> </div>
+              </div>
+
             </div>
+
             <div className="course-offered">
-              <Link to={'/21-days-better-living-course'}>
+              <Link to="/21-days-better-living-course">
                 <img
                   src={`${baseDomain}${homeAssets.homeAsset8}`}
                   placeholder="none"
-                  alt="21days"
+                  alt="21-days"
                 />
               </Link>
-              <h4>21-Day Better Living Course</h4>
+              <p className='h4'>21-Day Better Living Course</p>
+
+              <div className="base-info-wrap">
+                <div className="base-text-wrap">
+                  <div className="base-content">21-Day Better Living Course</div>
+                  <div className="base-price">(21 days - ₹2500)</div>
+                </div>
+                <div className="base-btn-explore" onClick={() => navigate('/21-days-better-living-course')}> Explore <img className='Chevrons-right' src="/icons/200-hours/Chevrons right.svg" alt="" /> </div>
+              </div>
+
             </div>
+
             <div className="course-offered">
-              <Link to={'/asana-regular-classes-online'}>
+              <Link to="/asana-regular-classes-online">
                 <img
                   src={`${baseDomain}${courseAssets.courseAsset115}`}
                   placeholder="none"
-                  alt="200hrsTTC"
+                  alt="Regular-Asana-Classes"
                 />
               </Link>
-              <h4>Regular Asana Classes</h4>
+              <p className='h4'>Regular Asana Classes</p>
+
+              <div className="base-info-wrap">
+                <div className="base-text-wrap">
+                  <div className="base-content">Regular Asana Classes</div>
+                  <div className="base-price">(Regular Asana - ₹1100)</div>
+                </div>
+                <div className="base-btn-explore" onClick={() => navigate('/asana-regular-classes-online')}> Explore <img className='Chevrons-right' src="/icons/200-hours/Chevrons right.svg" alt="" /> </div>
+              </div>
             </div>
+
             <div className="course-offered">
-              <Link to={'/childrens-regular-classes'}>
+              <Link to="/childrens-regular-classes">
                 <img
                   src={`${baseDomain}${homeAssets.homeAsset10}`}
                   placeholder="none"
-                  alt="Children-camp"
+                  alt="Children-Classes"
                 />
               </Link>
-              <h4>Children’s Regular Classes</h4>
+              <p className='h4'>Children’s Regular Classes</p>
+
+              <div className="base-info-wrap">
+                <div className="base-text-wrap">
+                  <div className="base-content">Children’s Regular Classes</div>
+                  <div className="base-price">(Children’s - ₹1100)</div>
+                </div>
+                <div className="base-btn-explore" onClick={() => navigate('/childrens-regular-classes')}> Explore <img className='Chevrons-right' src="/icons/200-hours/Chevrons right.svg" alt="" /> </div>
+              </div>
             </div>
+
             <div className="course-offered">
-              <Link to={'/seven-month-ttc'}>
+              <Link to="/seven-month-ttc">
                 <img
                   src={`${baseDomain}${homeAssets.homeAsset11}`}
                   placeholder="none"
-                  alt="900hrs"
+                  alt="7-month-TTC"
                 />
               </Link>
-              <h4>7-month TTC</h4>
-            </div>
+              <p className='h4'>7-month TTC</p>
+
+              <div className="base-info-wrap">
+                <div className="base-text-wrap">
+                  <div className="base-content">7-month TTC</div>
+                  <div className="base-price">(7 months - ₹60000)</div>
+                </div>
+                <div className="base-btn-explore" onClick={() => navigate('/seven-month-ttc')}> Explore <img className='Chevrons-right' src="/icons/200-hours/Chevrons right.svg" alt="" /> </div>
+              </div>
+            </div> */}
+
           </Slider>
+
+          <div>
+            <div className="slider-dots">
+              {
+                carouselData.map((content, index) => (
+                  <div
+                    className={`slider-dot ${activeSlide === index ? 'slider-dot-active' : ''}`}
+                    key={index}
+                    onClick={() => handleDotClick(index)}
+                  ></div>
+                ))
+              }
+            </div>
+
+          </div>
+
+
           <div className="course-details">
             <div className="course-content-container">
               <p>{smallDescription}</p>
               <div className="actions">
-                <h3>
-                  {timeline}|₹{price}
-                </h3>
+                <h3>{timeline} | ₹{price}</h3>
                 <h3>
                   <Link to={redirect}>Explore &#62;&#62;</Link>
                 </h3>
@@ -202,9 +292,12 @@ const OurOfferings = () => {
             </div>
           </div>
         </div>
+
       </div>
+
       <div className="filler-logo">{filler}</div>
     </div>
+
   )
 }
 

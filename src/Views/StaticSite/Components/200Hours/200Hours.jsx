@@ -166,7 +166,7 @@ const Hours200 = () => {
                 <div className='registration-header'>
 
                     <div className='p1-content-wrap'>
-                        <div className='certification-heading'>Became an International <span className='text-gradient days'>Certified</span> Yoga Teacher </div>
+                        <div className='certification-heading'>Become an International <span className='text-gradient days'>Certified</span> Yoga Teacher </div>
                         <div className='header-label'>From the world’s oldest organized yoga centre!</div>
                     </div>
 

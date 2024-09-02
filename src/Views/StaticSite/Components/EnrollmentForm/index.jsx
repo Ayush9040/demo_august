@@ -411,12 +411,20 @@ const Enrollment = () => {
 
   const handleSubmit = (e) => {
     const array = ["Yoga Classes for Men (Regular Asana) - On Campus",
-      "Yoga Classes for Women (Regular Asana) - On Campus", "Yoga Asana Regular Classes - (Men & Women) - Online Yoga Classes",
-      "Weekend Yoga Asana Classes - (Men & Women) - On Campus", "Weekend Yoga Asana Classes - (Men & Women) - Online",
-      "Children's Yoga Classes (Regular) - On Campus", "Children's Weekend Yoga Class - On Campus",
-      "Advanced Yoga Asana Regular Class - Online (Only for TYI Teachers)", "Regular Pregnancy Yoga Classes - Online & On Campus",
-      "Advanced Yoga Asana Regular Class - Online (Only for TYI Teachers)", "Healing Yoga Movement & Rhythm - Online", "Yog Prayas - Online",
-      "Online Meditation Course  (Foundation Course)", "Regular Online Meditation Classes", "Couples’ Yoga Classes  - Online"
+      "Yoga Classes for Women (Regular Asana) - On Campus",
+      "Yoga Asana Regular Classes - (Men & Women) - Online Yoga Classes",
+      "Weekend Yoga Asana Classes - (Men & Women) - On Campus",
+      "Weekend Yoga Asana Classes - (Men & Women) - Online",
+      "Children's Yoga Classes (Regular) - On Campus",
+      "Children's Weekend Yoga Class - On Campus",
+      // "Advanced Yoga Asana Regular Class - Online (Only for TYI Teachers)",
+      // "Regular Pregnancy Yoga Classes - Online & On Campus",
+      // "Advanced Yoga Asana Regular Class - Online (Only for TYI Teachers)",
+      // "Healing Yoga Movement & Rhythm - Online",
+      //  "Yog Prayas - Online",
+      // "Online Meditation Course  (Foundation Course)", 
+      // "Regular Online Meditation Classes", 
+      // "Couples’ Yoga Classes  - Online"
     ]
     const isMatch = array.includes(currentCourse?.title);
     if (e && e.preventDefault) {

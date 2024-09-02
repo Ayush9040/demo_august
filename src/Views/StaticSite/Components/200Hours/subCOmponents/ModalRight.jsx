@@ -58,11 +58,11 @@ const ModalRight = ({ joinedCount }) => {
                 </div>
             </div>
 
-            <div className="sticky-btn-container">
+            {/* <div className="sticky-btn-container">
 
                 <div className="joined-peoples">🎉<span className='joined-peoples-span'>{joinedCount} Peoples</span> have joined in last 1 hour</div>
-                {/* <div className="sticky-base-btn" onClick={navigateRegister}>Register Now</div> */}
-            </div>
+                <div className="sticky-base-btn" onClick={navigateRegister}>Register Now</div>
+            </div> */}
 
         </div>
     )
