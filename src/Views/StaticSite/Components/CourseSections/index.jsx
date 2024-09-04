@@ -10,6 +10,8 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, }
 
   const [customVal, setCustomVal] = useState(1)
 
+  console.log('Course Clicked Data ', data)
+
   const content = () => {
 
     const coursesList = [
@@ -370,6 +372,13 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, }
                     img={item.cardImage}
                     rating={item.rating}
                     dates={item.dates}
+                    fees={item?.fees}
+                    timing={item?.timing}
+                    category={item?.category}
+                    batch={item?.batch}
+                    nonResidential={item?.nonResidential}
+                    residential={item?.residential}
+                    online={item?.online}
                   />
                 )
               }

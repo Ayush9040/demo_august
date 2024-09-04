@@ -11,6 +11,7 @@ import { fetchProgramsData } from '../Volunteer.action'
 import { Helmet } from 'react-helmet'
 import metaDataObj from '../../../../../Constants/metaData.json'
 import { useLocation } from 'react-router-dom'
+import { handleCTVolunteerClicked } from '../../../../../CleverTap/volunteerPageEvents'
 
 
 const Volunteer = () => {
@@ -43,6 +44,16 @@ const Volunteer = () => {
   const { volunteerPrograms } = useSelector(state=>state.volunteer)
 
   console.log(volunteerPrograms)
+
+  useEffect(() => {
+    if (volunteerPrograms && volunteerPrograms.length > 0) {
+      // Extract the names (titles) of all programs
+      const programNames = volunteerPrograms.map((program) => program.title);
+      
+      // Call the event function with the list of program names
+      handleCTVolunteerClicked(programNames);
+    }
+  }, [volunteerPrograms]);
 
 
 

@@ -14,6 +14,7 @@ import RelatedCourse from '../Courses/Views/Component'
 import axios from 'axios'
 import { cmsBaseDomain } from '../../../../Constants/appSettings'
 import { AllCourses } from '../Courses/Constants/courses'
+import { handleCTEnquireNutriDietInitiated } from '../../../../CleverTap/nutriDietEvent'
 
 
 const NutriDiet = () => {
@@ -99,12 +100,48 @@ const NutriDiet = () => {
       switch (plan) {
       case '1 month':
         setPrice(3999);setErr(false);setOpenForm(true) 
+        // handleCTEnquireNutriDietInitiated({
+        //   Name: '',
+        // Email_ID: '',
+        // Phone_No: '',
+        // Country: '',
+        // City: '',
+        // Payment_Mode: '',
+        // Month: '1 Month',
+        // Program_Type: program,
+        // Status: '',
+        // Amount: '',
+        // })
         break
       case '3 months':
         setPrice(8999);setErr(false);setOpenForm(true)
+        // handleCTEnquireNutriDietInitiated({
+        //   Name: '',
+        // Email_ID: '',
+        // Phone_No: '',
+        // Country: '',
+        // City: '',
+        // Payment_Mode: '',
+        // Month: '3 Month',
+        // Program_Type: program,
+        // Status: '',
+        // Amount: '',
+        // })
         break
       case '6 months':
         setPrice(13999);setErr(false);setOpenForm(true)
+        // handleCTEnquireNutriDietInitiated({
+        //   Name: '',
+        // Email_ID: '',
+        // Phone_No: '',
+        // Country: '',
+        // City: '',
+        // Payment_Mode: '',
+        // Month: '6 Month',
+        // Program_Type: program,
+        // Status: '',
+        // Amount: '',
+        // })
         break
         // case 'Single Visit':
         //   setPrice(1000);setErr(false);setOpenForm(true)

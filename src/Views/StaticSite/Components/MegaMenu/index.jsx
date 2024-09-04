@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import { legacy2, cross, filler } from '../../assets/icons/icon'
 import './style.scss'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
+import { handleCTSectionClick } from '../../../../CleverTap/buttonClicked'
 
 const MegaMenu = ({ setNav }) => {
   const [menuItem, setMenuItem] = useState()
@@ -154,6 +155,13 @@ const MegaMenu = ({ setNav }) => {
                     onMouseOver={() => {
                       setMenuItem(item.key)
                     }}
+
+                    onClick={() => {
+                      handleCTSectionClick({ 
+                        sectionName: item?.name, 
+                        pageUrl: item?.link
+                      }); // Call the event function when clicked
+                    }}
                     // onClick={() => {
                     //   setNav(false)
                     // }}
@@ -176,6 +184,10 @@ const MegaMenu = ({ setNav }) => {
                       setMenuItem(item.key)
                     }}
                     onClick={() => {
+                      handleCTSectionClick({ 
+                        sectionName: item?.name, 
+                        pageUrl: item?.link
+                      });
                       setNav(false)
                     }}
                     to={`${item.link}`}
@@ -205,6 +217,12 @@ const MegaMenu = ({ setNav }) => {
                     rel="noreferrer"
                     onMouseOver={() => {
                       setMenuItem(item.key)
+                    }}
+                    onClick={() => {
+                      handleCTSectionClick({ 
+                        sectionName: item?.name, 
+                        pageUrl: item?.link
+                      }); // Call the event function when clicked
                     }}
                     key={i}
                   >

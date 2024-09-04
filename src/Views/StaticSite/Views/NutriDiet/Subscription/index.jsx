@@ -7,6 +7,7 @@ import CommonBtn from '../../../Components/commonbtn'
 import { createNutriOrder, enrollPlan, successMail } from '../Api'
 import { useNavigate } from 'react-router-dom'
 import { razorPayKey } from '../../../../../Constants/appSettings'
+import { handleCTEnquireNutriDietInitiated, handleCTEnquireNutriDietCompleted } from '../../../../../CleverTap/nutriDietEvent'
 
 const SubcriptionForm = ({ packageName, packagePrice, closeForm }) => {
   useEffect(() => {
@@ -71,6 +72,18 @@ const SubcriptionForm = ({ packageName, packagePrice, closeForm }) => {
             },
             receivers: [formData.emailId,'info@theyogainstitute.org'],
           })
+          handleCTEnquireNutriDietCompleted({
+            name: formData.name,
+            emailId: formData.emailId,
+            phoneNo: formData.phone,
+            country: formData.country,
+            city: formData.city,
+            // paymentMode,
+            month: packageName,
+            // programType,
+            status: 'Completed',
+            amount: packagePrice,
+          })
           navigate('/enrollment_thankyou')
         }
       },
@@ -106,6 +119,18 @@ const SubcriptionForm = ({ packageName, packagePrice, closeForm }) => {
       setEmpty(6)
     } else {
       submitForm()
+      handleCTEnquireNutriDietInitiated({
+        Name: formData.name,
+      Email_ID: formData.emailId,
+      Phone_No: formData.phone,
+      Country: formData.country,
+      City: formData.city,
+      // Payment_Mode,
+      Month: packageName,
+      // Program_Type,
+      // Status,
+      Amount: packagePrice,
+      }) 
     }
   }
 

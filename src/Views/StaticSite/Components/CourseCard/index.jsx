@@ -9,6 +9,7 @@ import SelectDropDown from '../Select Dropdown'
 //import StarIcon from './star-icon'
 import { useState } from 'react'
 import { useSelector } from 'react-redux'
+import { handleCTCourseClick, handleCTEnrollNowClick } from '../../../../CleverTap/buttonClicked';
 // import { faHelicopterSymbol } from '@fortawesome/free-solid-svg-icons'
 
 // const Error = () => {
@@ -21,13 +22,126 @@ import { useSelector } from 'react-redux'
 
 const CourseCard = ({
   color,
+  key,
   courseTitle,
   description,
   path,
   img = 'https://ecom-static-site-prod.s3.ap-south-1.amazonaws.com/Courses/course%20%281%29.png',
   //rating = 5,
   dates = [],
+  fees,
+  timing,
+  category,
+  batch,
+  nonResidential,
+  residential,
+  online
 }) => {
+
+  const coursesList = [
+    {
+      id: 1,
+      ques: '200 hours TTC (Basic)',
+      ans: [
+        {
+          url: '/one-month-ttc',
+          text: ' 1 Month TTC Online & On Campus - English - Batch 1 ',
+        },
+        {
+          url: '/200-hrs-part-time-ttc-on-campus-english',
+          text: '2 Months TTC Online & On Campus – English - Batch 2',
+        },
+        {
+          url: '/200-hrs-part-time-ttc-online-english',
+          text: '2 Months TTC Online – English - Batch 3 ',
+        },
+        {
+          url: '/200-hrs-part-time-ttc-online',
+          text: '2 Months TTC Online – Hindi - Batch 4 ',
+        },
+        {
+          url: '/weekend-teacher-training-course',
+          text: '3 Months Weekend TTC Online – English - Batch 5',
+        },
+        {
+          url: '/200-hrs-part-time-ttc-online-english-batch-6',
+          text: '2 Months TTC Online – English - Batch 6',
+        },
+        // /200-hrs-part-time-ttc-online-english-batch-5
+      ],
+    },
+    {
+      id: 2,
+      ques: '500 Hours TTC (Intermediate)',
+      ans: [
+        {
+          url: '/500-hrs-online-yoga-teacher-training-course-intermediate-level',
+          text: ' 3 Months TTC - Online - English',
+        },
+      ],
+    },
+    {
+      id: 3,
+      ques: '900 Hour Courses',
+      ans: [
+        {
+          url: '/3-months-advanced-teacher-training-course',
+          text: '3 Months TTC-On Campus-English',
+        },
+        {
+          url: '/900-hours-advanced-teacher-training-course',
+          text: '4 Months TTC-Online-English',
+        },
+        {
+          url: '/seven-month-ttc',
+          text: '7 Months TTC-Online & On Campus-English',
+        },
+        { url: '/one-year-ttc', text: '1 Year TTC-Online & On Campus-Hindi' },
+        {
+          url: '/two-year-ttc',
+          text: '2 Years TTC-Online & On Campus-English',
+        },
+      ],
+    },
+  ]
+  const campsAccordian = [
+    {
+      id: 1,
+      ques: '21 Days Better Living Course',
+      ans: [
+        {
+          url: '/21-days-better-living-course',
+          text: 'Morning On Campus – English - Batch 1',
+        },
+        {
+          url: '/21-days-better-living-course-batch-2',
+          text: 'Evening - Online & On Campus – English - Batch 2',
+        },
+        {
+          url: '/21-days-better-living-course-batch-3',
+          text: 'Evening - Online & On Campus – Hindi - Batch 3',
+        },
+        // {
+        //   url: '/21-days-better-living-course-batch-4',
+        //   text: 'Morning - Online – English - Batch 4',
+        // },
+      ],
+    },
+    {
+      id: 2,
+      ques: '7 Days Health Camp',
+      ans: [
+        {
+          url: '/7-days-camp',
+          text: '7 Days Health Camp - On Campus - Hindi',
+        },
+        {
+          url: '/7-days-camp-english',
+          text: '7 Days Health Camp - On Campus - English',
+        },
+      ],
+    },
+  ]
 
 
 
@@ -113,7 +227,19 @@ const CourseCard = ({
                 : `/${path}`///?date=${selectDate}
             }
           >
-            <CommonBtn text={'View Details'} />
+            <CommonBtn text={'View Details'} buttonAction={() => handleCTCourseClick({
+              courseTitle,
+              description,
+              key,
+              fees,
+              timing,
+              category,
+              batch,
+              coursesList,
+              nonResidential,
+              residential,
+              online
+            })}/>
           </Link>
           <div onClick={checkEmpty}>
             {dates.length !== 0 ?
@@ -125,10 +251,28 @@ const CourseCard = ({
                       : `/user/sign-in/?location=${path}`//&date=${selectDate}
                   }
                 >
-                  <CommonBtn text={'Enroll Now'} />
+                  <CommonBtn text={'Enroll Now'} buttonAction={() => handleCTEnrollNowClick({
+              courseTitle,
+              fees,
+              timing,
+              category,
+              batch,
+              nonResidential,
+              residential,
+              online
+            })} />
                 </Link>
               ) : (
-                <CommonBtn text={'Enroll Now'} />
+                <CommonBtn text={'Enroll Now'} buttonAction={() => handleCTEnrollNowClick({
+                  courseTitle,
+                  fees,
+                  timing,
+                  category,
+                  batch,
+                  nonResidential,
+                  residential,
+                  online
+                })} />
               )) : (path !== 'nutri-diet' ? <Link
                 to={
                   isLoggedIn

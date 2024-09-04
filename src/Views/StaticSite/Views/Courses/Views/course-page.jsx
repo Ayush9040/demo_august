@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 //import CommonBannerNavPrimary from '../../Components/CommonBannerNavPrimary'
 //import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 //import { faSearch } from '@fortawesome/free-solid-svg-icons'
@@ -27,10 +27,15 @@ import {
 import AlumniCarousel from '../../../Components/AluminiCarousel'
 import InnerNavComponent from '../../../Components/InnerNavComponent'
 import { useLocation } from 'react-router-dom'
+import { useSelector } from 'react-redux'
+import { trackCourseView } from '../../../../../CleverTap/pageViewEvents'
 
 const Courses = () => {
 
   const location = useLocation()
+  const [sessionId, setSessionId] = useState('');
+  const [startTime, setStartTime] = useState(0);
+  const { isLoggedIn } = useSelector((state) => state.auth)
 
   useEffect(() => {
     window.scrollTo(0, 0)
@@ -64,6 +69,44 @@ const Courses = () => {
     }
   }
 
+
+  
+  useEffect(() => {
+    // Start time when the component mounts
+    setStartTime(Date.now());
+
+    // Retrieve or generate the session ID
+    let session = localStorage.getItem('sessionId');
+    if (!session) {
+        session = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
+        localStorage.setItem('sessionId', session);
+    }
+    setSessionId(session);
+
+    return () => {
+        // End time when the component unmounts
+        const endTime = Date.now();
+
+        // Calculate the session duration in seconds
+        const sessionDuration = ((endTime - startTime) / 1000).toFixed(2);
+
+        const pageName = 'Course_Intro';
+        const lastPageUrl = document.referrer || 'N/A';
+        const pageUrl = window.location.href;
+        //const loggedIn = localStorage.getItem('isLoggedIn') === 'true' ? 'Yes' : 'No'; // Adjust based on your auth logic
+        const uniqueViewId = Math.floor(Math.random() * 1000); // Replace with actual logic
+
+        trackCourseView({
+            pageName,
+            lastPageUrl,
+            pageUrl,
+            sessionDuration,
+            isLoggedIn,
+            sessionId: session,
+            uniqueViewId,
+        });
+    };
+}, []);
 
   return (
     <>
