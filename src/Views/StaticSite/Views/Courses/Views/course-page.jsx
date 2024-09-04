@@ -28,7 +28,7 @@ import AlumniCarousel from '../../../Components/AluminiCarousel'
 import InnerNavComponent from '../../../Components/InnerNavComponent'
 import { useLocation } from 'react-router-dom'
 import { useSelector } from 'react-redux'
-import { trackPageView } from '../../../../../CleverTap/pageViewEvents'
+import { trackCourseView } from '../../../../../CleverTap/pageViewEvents'
 
 const Courses = () => {
 
@@ -84,13 +84,13 @@ const Courses = () => {
         // Calculate the session duration in seconds
         const sessionDuration = ((endTime - startTime) / 1000).toFixed(2);
 
-        const pageName = 'Course';
+        const pageName = 'Course_Intro';
         const lastPageUrl = document.referrer || 'N/A';
         const pageUrl = window.location.href;
         //const loggedIn = localStorage.getItem('isLoggedIn') === 'true' ? 'Yes' : 'No'; // Adjust based on your auth logic
         const uniqueViewId = Math.floor(Math.random() * 1000); // Replace with actual logic
 
-        trackPageView({
+        trackCourseView({
             pageName,
             lastPageUrl,
             pageUrl,
@@ -100,7 +100,7 @@ const Courses = () => {
             uniqueViewId,
         });
     };
-}, [sessionId, startTime]);
+}, []);
 
   return (
     <>

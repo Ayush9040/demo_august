@@ -165,10 +165,12 @@ export const handleCTCourseClick = ({
 
   let startDate = "";
   let endDate = "";
-  if (date) {
+  if (date && typeof date === 'string') {
     const dateParts = date.split(' to ');
-    startDate = dateParts[0].trim();  // e.g., "3rd Jun"
-    endDate = dateParts[1].trim();    // e.g., "28th Jun 2024"
+    if (dateParts.length === 2) {
+      startDate = dateParts[0]?.trim() || "";  // e.g., "3rd Jun"
+      endDate = dateParts[1]?.trim() || "";    // e.g., "28th Jun 2024"
+    }
   }
   
        // Determine the course mode
@@ -248,8 +250,52 @@ export const handleCTCourseClick = ({
   export const handleCTSignIn = ({
     // firstName,
     email,
-    IsLoggedIn
+    IsLoggedIn,
+    phone
   }) => {
+
+    const res = (email) => {
+      const ans = `"${email}"`;
+      console.log(ans);
+      
+      return ans;
+    }
+
+    if (window.clevertap) {
+      // User profile data
+      const userProfile = {
+        "Site": {
+          // "Name": user.name || "",                    // User's name
+          // "Identity": window.clevertap.getCleverTapID(), 
+          "Identity": res(email),                  // Unique identity (User ID)
+          "Email": email || "",                  // Email address
+          "Phone": phone || "",                  // Phone number in international format
+          // "Gender": user.gender || "",                // Gender ("M", "F", "O")
+          // "DOB": user.dob || "",                      // Date of birth in "YYYY-MM-DD" format
+          // "City": user.city || "",     
+          // "Age": '25',               // City
+          // "Country": user.country || "",              // Country
+          // "Photo": user.photoUrl || "",               // URL to the user's profile photo
+          // "Custom_Property1": user.property1 || "",   // Additional custom properties
+          // "Custom_Property2": user.property2 || "",
+          // Add more properties as required
+          "MSG-email": true,                // Disable email notifications
+          "MSG-push": true,                  // Enable push notifications
+          "MSG-sms": true,                   // Enable sms notifications
+          "MSG-whatsapp": true,   
+        }
+      };
+  
+      // Check if `onUserLogin` method is correctly set up
+      if (typeof window.clevertap.onUserLogin === "object") {
+        window.clevertap.profile.push(userProfile);
+        console.log("User profile sent to CleverTap:", userProfile);
+      } else {
+        console.error("CleverTap onUserLogin is not set up correctly.");
+      }
+    } else {
+      console.error("CleverTap is not initialized.");
+    }
 
     // Trigger CleverTap event on button click
     if (window?.clevertap) {
@@ -265,6 +311,8 @@ export const handleCTCourseClick = ({
     } else {
       console.error("CleverTap is not initialized.");
     }
+
+   
   }
 
 
@@ -500,7 +548,7 @@ export const setupUserProfile = (user) => {
 
     // Check if `onUserLogin` method is correctly set up
     if (typeof window.clevertap.onUserLogin === "object") {
-      window.clevertap.onUserLogin.push(userProfile);
+      window.clevertap.profile.push(userProfile);
       console.log("User profile sent to CleverTap:", userProfile);
     } else {
       console.error("CleverTap onUserLogin is not set up correctly.");
@@ -509,3 +557,47 @@ export const setupUserProfile = (user) => {
     console.error("CleverTap is not initialized.");
   }
 };
+
+
+export const createGuestUserProfileEvent = (guest) => {
+  // Check if CleverTap is available
+  if (window.clevertap) {
+    // Define the event properties with the provided details
+    const eventProperties = {
+      "Name": guest.name,                 // Guest User's Name
+      "Email_ID": guest.email,            // Email Address
+      "Phone_Number": guest.phone,        // Phone Number
+      "Address 1": guest.address1,        // Address Line 1
+      "Address 2": guest.address2,        // Address Line 2
+      "State": guest.state,               // State
+      "City": guest.city,                 // City
+      "Pin Code": guest.pinCode,          // Pin Code
+      "Gender": guest.gender,             // Gender
+      "Age": guest.age,                   // Age
+      "Nationality": guest.nationality,   // Nationality
+      "Medical Issues": guest.medicalIssues, // Medical Issues
+      "IsRegistered": guest.isRegistered  // Registration Status (Yes/No)
+      // Add more custom fields if needed
+    };
+
+    // Push the custom event to CleverTap
+    window.clevertap.event.push("Guest_User_Profile", eventProperties);
+  } else {
+    console.error("CleverTap is not initialized.");
+  }
+};
+
+
+export const handleCTSectionClick = ({ sectionName, pageUrl }) => {
+  if (window?.clevertap) {
+    window.clevertap.event.push("Section_Click", {
+      "Section Name": sectionName,
+      "Page_Url": pageUrl,
+    });
+    console.log("Section_Click event tracked successfully", window.clevertap);
+  } else {
+    console.error("CleverTap is not initialized.");
+  }
+};
+
+

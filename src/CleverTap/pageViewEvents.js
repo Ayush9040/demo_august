@@ -1,4 +1,4 @@
-export const trackPageView = ({
+export const trackCourseView = ({
     pageName,
     lastPageUrl,
     pageUrl,

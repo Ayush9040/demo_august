@@ -7,7 +7,7 @@ import {
   trackSessionStartEvent,
   trackSessionEndEvent,
 } from './overallWebsiteEvents'; // Update this path based on your file structure
-import { useSelector } from 'react-redux'
+import { useSelector } from 'react-redux';
 
 const usePageLoadEvents = () => {
   const location = useLocation();
@@ -24,28 +24,28 @@ const usePageLoadEvents = () => {
 
   // Function to track the Page View event
   const trackPageViewEvent = (sessionDurationInSeconds) => {
-
     const urlPath = window.location.pathname; // Get the pathname from the URL
     const pageName = urlPath.split('/').filter(Boolean).pop() || 'Home'; // Extract the last segment or default to 'Home'
 
     if (window?.clevertap) {
-      window.clevertap.event.push("Page View", {
-        "Page_Name": pageName.charAt(0).toUpperCase() + pageName.slice(1),
-        "Last_page_url": document.referrer || "Direct Visit",
-        "Page_Url": window.location.href,
-        "Session Duration": sessionDurationInSeconds,
-        "Logged In": isLoggedIn ? "Yes" : "No",
-        "Session ID": sessionIdRef,
-        "unique_view_id": sessionStorage.getItem('unique_view_id')
+      window.clevertap.event.push('Page_View_Common', {
+        Page_Name: pageName.charAt(0).toUpperCase() + pageName.slice(1),
+        Last_page_url: document.referrer || 'Direct Visit',
+        Page_Url: window.location.href,
+        Session_Duration: sessionDurationInSeconds,
+        Logged_In: isLoggedIn ? 'Yes' : 'No',
+        Session_ID: sessionIdRef.current,
+        unique_view_id: sessionStorage.getItem('unique_view_id'),
       });
-      console.log('Page view event tracked with dynamic data.', window?.clevertap.event);
+      console.log('Page view event tracked with dynamic data.');
     } else {
       console.error('CleverTap is not initialized.');
     }
   };
 
-  // Function to track the Idle Mode event
-  const trackIdleModeEvent = (timeDuration) => {
+
+   // Function to track the Idle Mode event
+   const trackIdleModeEvent = (timeDuration) => {
     const urlPath = window.location.pathname; // Get the pathname from the URL
     const pageName = urlPath.split('/').filter(Boolean).pop() || 'Home'; // Extract the last segment or default to 'Home'
 
@@ -70,69 +70,67 @@ const usePageLoadEvents = () => {
     }
   };
 
-  // Function to handle CleverTap events when the route changes
-  const handleRouteChange = () => {
-    const pageName = document.title;
-    const lastPageUrl = document.referrer || 'Direct Visit';
-    const pageUrl = window.location.href;
 
-    // Generate a session ID if not already created
+  // Function to handle route change
+  const handleRouteChange = () => {
+    // Set session ID if not already set
     if (!sessionIdRef.current) {
       sessionIdRef.current = generateSessionId();
     }
 
-    // Record the start time when the route changes
+    // Set start time for the current page
     startTimeRef.current = new Date();
+    setSessionStartTime(Date.now());
 
-    // Track session start with dynamic session ID and actual start time
+    // Track session start event
     trackSessionStartEvent(sessionIdRef.current, startTimeRef.current.toISOString());
 
-    // Call page view event on route change
-    trackPageViewEvent(0); // Initially, duration is 0 as the user just loaded the page
+    // Track the page view event immediately after setting the session and start time
+    trackPageViewEvent(0); // Initially track with 0 duration
   };
 
-  // Function to handle exit and calculate actual time spent
+  // Function to handle page exit
   const handlePageExit = () => {
     const endTime = new Date();
-    const timeSpent = Math.floor((endTime - startTimeRef.current) / 1000); // Calculate time spent in seconds
-    const urlPath = window.location.pathname; // Get the pathname from the URL
-    const pageName = urlPath.split('/').filter(Boolean).pop() || 'Home'; // Extract the last segment or default to 'Home'
+    const timeSpent = Math.floor((endTime - startTimeRef.current) / 1000); // Time spent in seconds
+    const urlPath = window.location.pathname;
+    const pageName = urlPath.split('/').filter(Boolean).pop() || 'Home';
 
-    // Track page time spent with the actual time
+    // Track page time spent and page exit events
     trackPageTimeSpentEvent(
       pageName.charAt(0).toUpperCase() + pageName.slice(1),
-      timeSpent + ' seconds',
+      `${timeSpent} seconds`,
       sessionStorage.getItem('unique_view_id'),
       endTime.toISOString(),
       window.location.href
     );
 
-    // Track page exit event
     trackPageExitEvent({
       pageName: pageName.charAt(0).toUpperCase() + pageName.slice(1),
       lastPageUrl: document.referrer || 'Direct Visit',
       pageUrl: window.location.href,
     });
 
-    // Track session end with dynamic session ID and actual end time
+    // Track session end
     trackSessionEndEvent(sessionIdRef.current, endTime.toISOString());
 
-    // Track page view event with session duration
+    // Track the page view event with actual session duration
     const sessionDurationInSeconds = (endTime - sessionStartTime) / 1000;
     trackPageViewEvent(sessionDurationInSeconds);
   };
 
-  // Effect to handle route change events
+  // Effect to handle route changes
   useEffect(() => {
     handleRouteChange();
     window.addEventListener('beforeunload', handlePageExit);
+
     return () => {
       handlePageExit();
       window.removeEventListener('beforeunload', handlePageExit);
     };
-  }, [location]);
+  }, [location]); // Re-run effect when location changes
 
-  // Effect to handle idle mode detection and event tracking
+  // Effect to handle idle mode detection
   useEffect(() => {
     let idleTimer;
 
@@ -145,16 +143,13 @@ const usePageLoadEvents = () => {
       }, idleTimeLimit);
     };
 
-    // Start the idle timer
     resetIdleTimer();
 
-    // Event listeners to reset the idle timer on user interaction
     window.addEventListener('mousemove', resetIdleTimer);
     window.addEventListener('keydown', resetIdleTimer);
     window.addEventListener('scroll', resetIdleTimer);
     window.addEventListener('click', resetIdleTimer);
 
-    // Cleanup event listeners on component unmount
     return () => {
       clearTimeout(idleTimer);
       window.removeEventListener('mousemove', resetIdleTimer);
@@ -164,7 +159,7 @@ const usePageLoadEvents = () => {
     };
   }, [location]);
 
-  // Effect to track idle mode when the user is idle
+  // Effect to track idle mode events
   useEffect(() => {
     if (isIdle && idleStartTime) {
       const timeDuration = (Date.now() - idleStartTime) / 1000; // Convert to seconds
