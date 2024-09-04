@@ -52,7 +52,7 @@ const Home = () => {
       }
       <Suspense fallback={<div className='global-loader' >Loading...</div>} >
         <HeroSection isUserLoggedIn={isLoggedIn} />
-      </Suspense>
+      
       <Legacy />
       <OurOfferings />
       <Activity />
@@ -64,7 +64,7 @@ const Home = () => {
       <VideosSection />
       <NewsLetter />
       <Footer />
-
+      </Suspense>
     </>
   )
 }
