@@ -28,7 +28,7 @@ const usePageLoadEvents = () => {
     const pageName = urlPath.split('/').filter(Boolean).pop() || 'Home'; // Extract the last segment or default to 'Home'
 
     if (window?.clevertap) {
-      window.clevertap.event.push('Page_View_Common', {
+      window.clevertap.event.push('Page_View', {
         Page_Name: pageName.charAt(0).toUpperCase() + pageName.slice(1),
         Last_page_url: document.referrer || 'Direct Visit',
         Page_Url: window.location.href,

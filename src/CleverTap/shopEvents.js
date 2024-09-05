@@ -105,98 +105,6 @@ export const trackProductClicked = ({
 
 
 
-export const handleCTCheckoutCompleted = ({
-    checkoutUrl,
-    paymentStatus,
-    productName,
-    productId,
-    productUrl,
-    category,
-    productPrice,
-    quantity,
-    stockAvailability,
-    gender,
-    color,
-    discount,
-    discountedPrice,
-    productSize,
-    language,
-    material,
-    printed
-}) => {
-    if (window?.clevertap) {
-        window.clevertap.event.push("Checkout_Completed", {
-            "Checkout_URL": checkoutUrl,
-            "Payment_Status": paymentStatus,
-            "Product_Name": productName.join(", "),
-            "Product_ID": productId,
-            "Product_URL": productUrl,
-            "Category": category,
-            "Product_Price": productPrice,
-            "Quantity": quantity,
-            "Stock_Availability": stockAvailability,
-            "Gender": gender,
-            "Color": color,
-            "Discount": discount,
-            "Discounted_Price": discountedPrice,
-            "Product_Size": productSize,
-            "Language": language,
-            "Material": material,
-            "Printed": printed
-        });
-        console.log('Checkout_Completed event tracked:');
-    } else {
-        console.error('CleverTap is not initialized.');
-    }
-};
-
-
-export const handleCTCheckoutFailed = ({
-    checkoutUrl,
-    paymentStatus,
-    productName,
-    productId,
-    productUrl,
-    category,
-    productPrice,
-    quantity,
-    stockAvailability,
-    gender,
-    color,
-    discount,
-    discountedPrice,
-    productSize,
-    language,
-    material,
-    printed
-}) => {
-    if (window?.clevertap) {
-        window.clevertap.event.push("Checkout_Failed", {
-            "Checkout_URL": checkoutUrl,
-            "Payment_Status": paymentStatus,
-            "Product_Name": productName,
-            "Product_ID": productId,
-            "Product_URL": productUrl,
-            "Category": category,
-            "Product_Price": productPrice,
-            "Quantity": quantity,
-            "Stock_Availability": stockAvailability,
-            "Gender": gender,
-            "Color": color,
-            "Discount": discount,
-            "Discounted_Price": discountedPrice,
-            "Product_Size": productSize,
-            "Language": language,
-            "Material": material,
-            "Printed": printed
-        });
-        console.log('Checkout_Failed event tracked:');
-    } else {
-        console.error('CleverTap is not initialized.');
-    }
-};
-
-
 export const handleCTBuyNowStep1 = ({
     productName,
     productId,
@@ -245,3 +153,161 @@ export const handleCTBuyNowStep1 = ({
     }
   };
   
+
+
+// Function to trigger the CleverTap Charged event
+export const handleCTCheckoutCompleted = (cartItems) => {
+  if (!cartItems || cartItems.length === 0) {
+    console.error("Cart is empty");
+    return;
+  }
+
+  // Prepare the array of items to be sent in the Charged event
+  const items = cartItems.map(item => ({
+    "Product Name": item.name || 'N/A',
+    "Product ID": item._id,
+    "Category": item.categoryId.name || 'N/A',
+    "Product Price": item.price,
+    "Quantity": item.quantity || 1,
+    // "Stock Availability": ,
+    // "Price": item.price || 0,
+    // Add other product details if needed
+  }));
+
+  // Calculate the total cart value
+  const totalAmount = cartItems.reduce((total, item) => total + (item.price * item.quantity), 0);
+
+  // Trigger the Charged event
+  window.clevertap.event.push("Charged", {
+    "event_name": "Checkout_Completed",
+    "Amount": totalAmount, // Total transaction amount
+    // "Payment mode": "Credit Card", // Change if needed
+    "Charged ID": new Date().getTime(), // Example unique ID, you can replace with an actual order ID
+    "Items": items, // Array of items in the cart
+  });
+
+  console.log("Charged event triggered with cart details");
+};
+
+export const handleCTCheckoutCompleted1 = (cartItems) => {
+    if (!cartItems || cartItems.length === 0) {
+      console.error("Cart is empty");
+      return;
+    }
+  
+    // Prepare the array of items to be sent in the Charged event
+    const items = cartItems.map(item => ({
+      "Product Name": item.name || 'N/A',
+      "Product ID": item._id,
+      "Category": item.categoryId.name || 'N/A',
+      "Product Price": item.price,
+      "Quantity": item.quantity || 1,
+      // "Stock Availability": ,
+      // "Price": item.price || 0,
+      // Add other product details if needed
+    }));
+  
+    // Calculate the total cart value
+    const totalAmount = cartItems.reduce((total, item) => total + (item.price * item.quantity), 0);
+  
+    // Trigger the Charged event
+    window.clevertap.event.push("Charged", {
+      "event_name": "Checkout_Completed_1",
+      "Amount": totalAmount, // Total transaction amount
+      // "Payment mode": "Credit Card", // Change if needed
+      'checkout_url': window.location.href,
+      "Charged ID": new Date().getTime(), // Example unique ID, you can replace with an actual order ID
+      "Items": items, // Array of items in the cart
+    });
+  
+    console.log("Charged event triggered with cart details");
+  };
+
+
+  export const handleCTProductPaymentCompleted = ({
+    Name,
+    Address,
+    Country,
+    State,
+    City,
+    Pincode,
+    cartItems
+}) => {
+    if (!cartItems || cartItems.length === 0) {
+      console.error("Cart is empty");
+      return;
+    }
+  
+    // Prepare the array of items to be sent in the Charged event
+    const items = cartItems.map(item => ({
+      "Product Name": item.name || 'N/A',
+      "Product ID": item._id,
+      "Category": item.categoryId.name || 'N/A',
+      "Product Price": item.price,
+      "Quantity": item.quantity || 1,
+      // "Stock Availability": ,
+      // "Price": item.price || 0,
+      // Add other product details if needed
+    }));
+  
+    // Calculate the total cart value
+    const totalAmount = cartItems.reduce((total, item) => total + (item.price * item.quantity), 0);
+  
+    // Trigger the Charged event
+    window.clevertap.event.push("Charged", {
+      "event_name": "Product_Payment_Completed",
+      "Amount": totalAmount, // Total transaction amount
+      // "Payment mode": "Credit Card", // Change if needed
+      'checkout_url': window.location.href,
+      "Name": Name,
+    "Address": Address,
+    "Country": Country,
+    "State": State,
+    "City": City,
+    "Pincode": Pincode,
+    "Payment_Status": "Success",
+      "Charged ID": new Date().getTime(), // Example unique ID, you can replace with an actual order ID
+      "Items": items, // Array of items in the cart
+    });
+  
+    console.log("Charged event triggered with cart details");
+  };
+
+
+  export const handleCTCheckoutFailed = ({
+    cartItems
+}) => {
+    if (!cartItems || cartItems.length === 0) {
+      console.error("Cart is empty");
+      return;
+    }
+  
+    // Prepare the array of items to be sent in the Charged event
+    const items = cartItems.map(item => ({
+      "Product Name": item.name || 'N/A',
+      "Product ID": item._id,
+      "Category": item.categoryId.name || 'N/A',
+      "Product Price": item.price,
+      "Quantity": item.quantity || 1,
+      // "Stock Availability": ,
+      // "Price": item.price || 0,
+      // Add other product details if needed
+    }));
+  
+    // Calculate the total cart value
+    const totalAmount = cartItems.reduce((total, item) => total + (item.price * item.quantity), 0);
+  
+    // Trigger the Charged event
+    window.clevertap.event.push("Charged", {
+      "event_name": "Checkout_Failed",
+      "Amount": totalAmount, // Total transaction amount
+      // "Payment mode": "Credit Card", // Change if needed
+      'checkout_url': window.location.href,
+    "Payment_Status": "Failed",
+      "Charged ID": new Date().getTime(), // Example unique ID, you can replace with an actual order ID
+      "Items": items, // Array of items in the cart
+    });
+  
+    console.log("Charged event triggered with cart details");
+  };
+

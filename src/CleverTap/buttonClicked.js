@@ -263,10 +263,11 @@ export const handleCTCourseClick = ({
 
     if (window.clevertap) {
       // User profile data
+
+
       const userProfile = {
         "Site": {
           // "Name": user.name || "",                    // User's name
-          // "Identity": window.clevertap.getCleverTapID(), 
           "Identity": res(email),                  // Unique identity (User ID)
           "Email": email || "",                  // Email address
           "Phone": phone || "",                  // Phone number in international format
@@ -285,11 +286,34 @@ export const handleCTCourseClick = ({
           "MSG-whatsapp": true,   
         }
       };
+
+
+     
+
+       const userProfile19 = {
+        "Site": {
+          // "Course Name": "200 Hours",
+          // "id_name": "Jack Montana",
+          "id_email": res(email),
+          // "id_phone": "+14155551234",
+          // "Lead_Type": "SALES",
+          // "Nationality": "Indian",
+          // "MSG-email": true,                // Disable email notifications
+          // "MSG-push": true,                  // Enable push notifications
+          // "MSG-sms": true,                   // Enable sms notifications
+          // "MSG-whatsapp": true,  
+        },
+        "Identity": res(email),  // This is the unique identifier for the user
+        // "ObjectID": "25b08803c1af4e00839f530264dac6f8", // Optional
+        "Type": "profile"
+      };
   
       // Check if `onUserLogin` method is correctly set up
       if (typeof window.clevertap.onUserLogin === "object") {
-        window.clevertap.profile.push(userProfile);
+        window.clevertap.onUserLogin.push(userProfile);
+        window.clevertap.profile.push(userProfile19)
         console.log("User profile sent to CleverTap:", userProfile);
+        console.log("profile sent to CleverTap:", userProfile19);
       } else {
         console.error("CleverTap onUserLogin is not set up correctly.");
       }
@@ -546,6 +570,22 @@ export const setupUserProfile = (user) => {
       }
     };
 
+    const userProfile2 = {
+      "Site": {
+        "Name": "Jack Montana",            // String
+        "Identity": "AAA",              // String or number
+        "Email": "jack@gmail.com",         // Email address of the user
+        "Phone": "+14155551234",           // Phone (with the country code)
+        "Gender": "M",                     // Can be either M or F
+        "DOB": new Date(),                 // Date of Birth. Date object
+     // optional fields. controls whether the user will be sent email, push etc.
+        "MSG-email": false,                // Disable email notifications
+        "MSG-push": true,                  // Enable push notifications
+        "MSG-sms": true,                   // Enable sms notifications
+        "MSG-whatsapp": true,              // Enable WhatsApp notifications
+      }
+     };
+
     // Check if `onUserLogin` method is correctly set up
     if (typeof window.clevertap.onUserLogin === "object") {
       window.clevertap.profile.push(userProfile);
@@ -564,11 +604,11 @@ export const createGuestUserProfileEvent = (guest) => {
   if (window.clevertap) {
     // Define the event properties with the provided details
     const eventProperties = {
-      "Name": guest.name,                 // Guest User's Name
-      "Email_ID": guest.email,            // Email Address
-      "Phone_Number": guest.phone,        // Phone Number
-      "Address 1": guest.address1,        // Address Line 1
-      "Address 2": guest.address2,        // Address Line 2
+      "Name": guest.name || '',                 // Guest User's Name
+      "Email_ID": guest.email || '',            // Email Address
+      "Phone_Number": guest.phone  || '',        // Phone Number
+      "Address 1": guest.address1 || '',        // Address Line 1
+      "Address 2": guest.address2 || '',        // Address Line 2
       "State": guest.state,               // State
       "City": guest.city,                 // City
       "Pin Code": guest.pinCode,          // Pin Code

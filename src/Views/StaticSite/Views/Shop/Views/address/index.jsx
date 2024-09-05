@@ -19,7 +19,9 @@ import { useDispatch, useSelector } from 'react-redux'
 import { authServerClientId, razorPayKey } from '../../../../../../Constants/appSettings'
 import { useNavigate } from 'react-router-dom'
 import { updateCartData } from '../../Shop.action'
-import { handleCTCheckoutCompleted, handleCTCheckoutFailed } from '../../../../../../CleverTap/shopEvents'
+import { handleCTCheckoutCompleted, handleCTCheckoutFailed, handleCTCheckoutCompleted1 } from '../../../../../../CleverTap/shopEvents'
+import { handleCTProductPaymentCompleted } from '../../../../../../CleverTap/shopEvents'
+
 
 const ShippingAdd = () => {
   const { user } = useSelector((state) => state.auth)
@@ -228,24 +230,14 @@ const ShippingAdd = () => {
 
           const programNames = cart.map((item) => item.title);
 
-          handleCTCheckoutCompleted({
-            checkoutUrl: window.location.href,
-            paymentStatus: "Success",
-            productName: programNames,
-            // productId,
-            // productUrl,
-            // category,
-            // productPrice,
-            // quantity,
-            // stockAvailability,
-            // gender,
-            // color,
-            // discount,
-            // discountedPrice,
-            // productSize,
-            // language,
-            // material,
-            // printed
+          handleCTProductPaymentCompleted({
+            Name: formData.name,
+            Address: formData.add1,
+            Country: formData.country,
+            State: formData.state,
+            City: formData.city,
+            Pincode: formData.pincode,
+            cartItems: cart
           })
 
           localStorage.removeItem('cart')
@@ -254,23 +246,7 @@ const ShippingAdd = () => {
           const programNames = cart.map((item) => item.title);
 
           handleCTCheckoutFailed({
-            checkoutUrl: window.location.href,
-            paymentStatus: "Failure",
-            productName: programNames,
-            // productId,
-            // productUrl,
-            // category,
-            // productPrice,
-            // quantity,
-            // stockAvailability,
-            // gender,
-            // color,
-            // discount,
-            // discountedPrice,
-            // productSize,
-            // language,
-            // material,
-            // printed
+            cartItems: cart
           })
         }
       },
@@ -287,6 +263,9 @@ const ShippingAdd = () => {
     rzp.open()
   }
 
+  // console.log('cart details for ct_1 ', cart);
+  
+
   const checkout = async() => {
     if (!usePrevAddress) {
       if (formData.name === '') return setEmpty(1)
@@ -297,6 +276,8 @@ const ShippingAdd = () => {
       if (formData.country === '') return setEmpty(5)
       if (formData.pincode === '') return setEmpty(6)
     }
+
+    handleCTCheckoutCompleted1(cart);
     
     await makePayment()
   }
