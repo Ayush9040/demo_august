@@ -3886,7 +3886,7 @@ const ttc900hr = {
     online: true,
     onCampus: true,
     nonResidential: true,
-    residential: true,
+    residential: false,
     certficate: false,
     details: [
       {
