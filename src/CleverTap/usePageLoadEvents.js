@@ -83,7 +83,7 @@ const usePageLoadEvents = () => {
     setSessionStartTime(Date.now());
 
     // Track session start event
-    trackSessionStartEvent(sessionIdRef.current, startTimeRef.current.toISOString());
+    // trackSessionStartEvent(sessionIdRef.current, startTimeRef.current.toISOString());
 
     // Track the page view event immediately after setting the session and start time
     trackPageViewEvent(0); // Initially track with 0 duration
@@ -112,7 +112,7 @@ const usePageLoadEvents = () => {
     });
 
     // Track session end
-    trackSessionEndEvent(sessionIdRef.current, endTime.toISOString());
+    // trackSessionEndEvent(sessionIdRef.current, endTime.toISOString());
 
     // Track the page view event with actual session duration
     const sessionDurationInSeconds = (endTime - sessionStartTime) / 1000;
