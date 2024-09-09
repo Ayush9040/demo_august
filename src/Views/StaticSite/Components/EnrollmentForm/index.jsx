@@ -546,11 +546,11 @@ const Enrollment = () => {
     } else if (formData.sdate === '') {
       setEmpty(18)
     }
-    //  else if (formData.AGE === null || formData.AGE < 4 || formData.AGE > 99) {
-    //   setEmpty(9)
-    // } else if (formData.nationality === '') {
-    //   setEmpty(10)
-    // }
+    else if (formData.AGE === null || formData.AGE < 4 || formData.AGE > 99) {
+       setEmpty(9)
+    } else if (formData.nationality === '') {
+       setEmpty(10)
+     }
     else if (formData.mode === '') {
       setEmpty('mode')
     }

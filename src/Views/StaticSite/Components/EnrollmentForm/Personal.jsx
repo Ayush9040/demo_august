@@ -870,7 +870,7 @@ const Personal = ({
                 </label>
 
               </div>
-              {empty === 11 && <small style={{ width: '100%', fontSize: '11px', textAlign: 'right' }}> Please select one option</small>}
+              {empty === 11 && <div style={{ marginTop: '-11rem', fontSize: '12px', float: 'right', display: 'inline-block', color: 'red' }}> Please select one option</div>}
             </div>
 
 
@@ -949,7 +949,7 @@ const Personal = ({
 
 
 
-            {/* <div className="DOB_box form_error">
+           <div className="DOB_box form_error">
               <InputComponent
                 type="number"
                 placeholder="Age"
@@ -960,9 +960,9 @@ const Personal = ({
                 keyName="AGE"
                 errorCheck={setEmpty}
               />
-              {empty === 9 && <small> Please enter age between 4 & 100</small>}
-            </div> */}
-            {/* <div className="form_error">
+              {empty === 9 && <div style={{ marginTop: '-8.2rem', display: 'inline-block', float: 'right', fontSize: '12px', color: 'red'}}> Please enter age between 4 & 100</div>}
+            </div> 
+             <div className="form_error">
               <InputComponent
                 type="text"
                 placeholder="Nationality"
@@ -971,8 +971,8 @@ const Personal = ({
                 keyName="nationality"
                 errorCheck={setEmpty}
               />
-              {empty === 10 && <small> Please enter your nationality</small>}
-            </div> */}
+              {empty === 10 && <div style={{ marginTop: '-8rem', display: 'inline-block', float: 'right', fontSize: '12px', color: 'red'}}> Please enter your nationality</div>}
+            </div> 
             <Other
               // setBold={setBold}
               empty={empty}
