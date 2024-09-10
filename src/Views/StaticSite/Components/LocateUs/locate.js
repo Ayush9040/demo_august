@@ -78,7 +78,7 @@ export const locateData = [
       {
         state: 'Juhu Center 1, Mumbai',
         notstate:
-          'Sangit Mahabharati Vidhyalaya, N.S. Road No. 10, JVPD Scheme, Juhu, Mumbai 400049',
+          '401, Creative Stepz, A-13, Loyalka House, Cross Road No. 8, Model Town Society, Gulmohar Road, Juhu, Mumbai 400049',
         email: 'juhuandheri@theyogainstitute.in',
         url: 'https://jal.theyogainstitute.org/',
         phone: ['+91-9833864964'],
@@ -105,7 +105,7 @@ export const locateData = [
       {
         state: 'Vile Parle, Mumbai',
         notstate:
-          'Sanyas Ashram Temple, Bajaj Road, Vile Parle West, Near Vile Parle Railway Station, Mumbai- 400056',
+          'Barbhaya Kalpavruksh, Shree Barbhaya orphanage for Hindu girls, 78, SV Road, Between Kotak Mahindra Bank and Adenwala Jewellers, Irla, Vile Parle (W), Mumbai 400056.',
         email: 'juhuandheri@theyogainstitute.in',
         url: 'https://jal.theyogainstitute.org/',
         phone: ['+91-9833864964'],
@@ -122,7 +122,7 @@ export const locateData = [
       {
         state: 'Lokhandwala, Mumbai',
         notstate:
-          'A/209, Royal Sands, Shastri Nagar Road, Lokhandwala, Andheri (W), Mumbai - 400053',
+          'The Classique Club, New Link Road, behind Infiniti Mall, Phase D, Shastri Nagar, Andheri (W), Mumbai 400053.',
         email: 'juhuandheri@theyogainstitute.in',
         url: 'https://jal.theyogainstitute.org/',
         phone: ['+91-9833864964'],
