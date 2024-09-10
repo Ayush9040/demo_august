@@ -15,6 +15,7 @@ import axios from 'axios'
 import { validateEmail } from '../../../../helpers'
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
+import { LoadScript, Autocomplete } from '@react-google-maps/api';
 
 import MessageModal from '../MessageModal'
 import TermsCondition from '../TermsandCondition'
