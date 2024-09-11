@@ -83,6 +83,7 @@ if (productDetail) {
     // Now you can use the `product` object to pass its details to your `addToCart` function
     // addCart(idx, event, product);
     handleCTAddToCart({
+      eventName: "Add_To_Cart_Step2",
       productName: productDetail?.name,
       productId: productDetail?._id,
       productUrl: window.location.href,
@@ -137,6 +138,7 @@ if (productDetail) {
     // Now you can use the `product` object to pass its details to your `addToCart` function
     // addCart(idx, event, product);
     handleCTBuyNowStep1({
+      eventName: "Book_Now_Step2",
       productName: productDetail?.name,
       productId: productDetail?._id,
       productUrl: window.location.href,

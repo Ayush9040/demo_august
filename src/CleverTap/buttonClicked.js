@@ -112,7 +112,7 @@ export const handleCTCourseClick = ({
     }
     // Trigger CleverTap event on button click
     if (window?.clevertap) {
-      window.clevertap.event.push("Enroll_Now_Clicked", {
+      window.clevertap.event.push("Course_Enroll_Click", {
         "Course_name": courseTitle,
         // "Enrollmentdate": "15 July - 7 Sept",
         // "Start_Date": "15 July",
@@ -195,7 +195,7 @@ export const handleCTCourseClick = ({
     }
     // Trigger CleverTap event on button click
     if (window?.clevertap) {
-      window.clevertap.event.push("Procced_To_Payment_Clicked", {
+      window.clevertap.event.push("Course_Enrollment_Submit", {
         "Course_name": courseTitle,
         // "Enrollmentdate": "15 July - 7 Sept",
         "Start_Date": startDate,
@@ -233,7 +233,7 @@ export const handleCTCourseClick = ({
 
     // Trigger CleverTap event on button click
     if (window?.clevertap) {
-      window.clevertap.event.push("Sign_UP_Clicked", {
+      window.clevertap.event.push("SignUp", {
         "Name":firstName,
         "Email ID": email,
         "IsLoggedIn": "False"
@@ -323,7 +323,7 @@ export const handleCTCourseClick = ({
 
     // Trigger CleverTap event on button click
     if (window?.clevertap) {
-      window.clevertap.event.push("Sign_In_Clicked", {
+      window.clevertap.event.push("SignIn", {
         // "Name":firstName,
         "Email ID": email,
         "IsLoggedIn": IsLoggedIn
@@ -500,7 +500,7 @@ export const handleCTPaymentFailed = ({
   residentialStatus,
 }) => {
   if (window?.clevertap) {
-    window.clevertap.event.push("Payment_Failed", {
+    window.clevertap.event.push("Payment_Failed_Course", {
       "Cost": cost,
       "Date of Payment":  new Date().toISOString(),
       "Centre": centre,

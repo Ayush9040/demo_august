@@ -1,6 +1,6 @@
 export const handleCTPublicationSubscribeEvent = (magazineName) => {
     if (window?.clevertap) {
-        window.clevertap.event.push("Publication_Subscribe", {
+        window.clevertap.event.push("Subscibe(Now)", {
             "Magazine_Name": magazineName
         });
         console.log('Subscribe event tracked:', magazineName);

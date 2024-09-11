@@ -96,15 +96,15 @@ const Courses = () => {
         //const loggedIn = localStorage.getItem('isLoggedIn') === 'true' ? 'Yes' : 'No'; // Adjust based on your auth logic
         const uniqueViewId = Math.floor(Math.random() * 1000); // Replace with actual logic
 
-        trackCourseView({
-            pageName,
-            lastPageUrl,
-            pageUrl,
-            sessionDuration,
-            isLoggedIn,
-            sessionId: session,
-            uniqueViewId,
-        });
+        // trackCourseView({
+        //     pageName,
+        //     lastPageUrl,
+        //     pageUrl,
+        //     sessionDuration,
+        //     isLoggedIn,
+        //     sessionId: session,
+        //     uniqueViewId,
+        // });
     };
 }, []);
 

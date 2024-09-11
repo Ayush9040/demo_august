@@ -1,5 +1,6 @@
 // addToCart.js
 export const handleCTAddToCart = ({
+  eventName,
     productName,
     productId,
     productUrl,
@@ -31,7 +32,7 @@ export const handleCTAddToCart = ({
 
     if (window?.clevertap) {
         // Track the Add to Cart event with dynamic data
-        window.clevertap.event.push("add_to_cart", {
+        window.clevertap.event.push(eventName, {
             "Product Name": productName,
             "Product ID": productId,
             "Product URL": productUrl,
@@ -106,6 +107,7 @@ export const trackProductClicked = ({
 
 
 export const handleCTBuyNowStep1 = ({
+  eventName,
     productName,
     productId,
     category,
@@ -126,7 +128,7 @@ export const handleCTBuyNowStep1 = ({
   }) => {
     // Trigger CleverTap event when the user proceeds with Book Now Step 2
     if (window?.clevertap) {
-      window.clevertap.event.push("Buy_Now_Clicked", {
+      window.clevertap.event.push(eventName, {
         "Product Name": productName,
         "Product ID": productId,
         "Category": category,
@@ -190,6 +192,41 @@ export const handleCTCheckoutCompleted = (cartItems) => {
 };
 
 export const handleCTCheckoutCompleted1 = (cartItems) => {
+    if (!cartItems || cartItems.length === 0) {
+      console.error("Cart is empty");
+      return;
+    }
+  
+    // Prepare the array of items to be sent in the Charged event
+    const items = cartItems.map(item => ({
+      "Product Name": item.name || 'N/A',
+      "Product ID": item._id,
+      "Category": item.categoryId.name || 'N/A',
+      "Product Price": item.price,
+      "Quantity": item.quantity || 1,
+      // "Stock Availability": ,
+      // "Price": item.price || 0,
+      // Add other product details if needed
+    }));
+  
+    // Calculate the total cart value
+    const totalAmount = cartItems.reduce((total, item) => total + (item.price * item.quantity), 0);
+  
+    // Trigger the Charged event
+    window.clevertap.event.push("Charged", {
+      "event_name": "Checkout_Completed",
+      "Amount": totalAmount, // Total transaction amount
+      // "Payment mode": "Credit Card", // Change if needed
+      'checkout_url': window.location.href,
+      "Charged ID": new Date().getTime(), // Example unique ID, you can replace with an actual order ID
+      "Items": items, // Array of items in the cart
+    });
+  
+    console.log("Charged event triggered with cart details");
+  };
+
+
+  export const handleCTCheckoutCompleted2 = (cartItems) => {
     if (!cartItems || cartItems.length === 0) {
       console.error("Cart is empty");
       return;

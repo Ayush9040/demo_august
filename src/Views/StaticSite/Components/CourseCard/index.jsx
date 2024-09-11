@@ -280,8 +280,26 @@ const CourseCard = ({
                     : `/user/sign-in/?location=${path}`//&date=${selectDate}
                 }
               >
-                <CommonBtn text={'Enroll Now'} />
-              </Link> : <Link to='/nutri-diet' ><CommonBtn text={'Enroll Now'} /></Link>)}
+                <CommonBtn text={'Enroll Now'} buttonAction={() => handleCTEnrollNowClick({
+                  courseTitle,
+                  fees,
+                  timing,
+                  category,
+                  batch,
+                  nonResidential,
+                  residential,
+                  online
+                })} />
+              </Link> : <Link to='/nutri-diet' ><CommonBtn text={'Enroll Now'} buttonAction={() => handleCTEnrollNowClick({
+                  courseTitle,
+                  fees,
+                  timing,
+                  category,
+                  batch,
+                  nonResidential,
+                  residential,
+                  online
+                })} /></Link>)}
           </div>
         </div>
       </div>

@@ -28,7 +28,7 @@ const usePageLoadEvents = () => {
     const pageName = urlPath.split('/').filter(Boolean).pop() || 'Home'; // Extract the last segment or default to 'Home'
 
     if (window?.clevertap) {
-      window.clevertap.event.push('Page_View', {
+      window.clevertap.event.push('Page View', {
         Page_Name: pageName.charAt(0).toUpperCase() + pageName.slice(1),
         Last_page_url: document.referrer || 'Direct Visit',
         Page_Url: window.location.href,
@@ -50,7 +50,7 @@ const usePageLoadEvents = () => {
     const pageName = urlPath.split('/').filter(Boolean).pop() || 'Home'; // Extract the last segment or default to 'Home'
 
     if (window?.clevertap) {
-      window.clevertap.event.push("Idle Mode", {
+      window.clevertap.event.push("Idle_Mode", {
         "Page_Name": pageName.charAt(0).toUpperCase() + pageName.slice(1),
         "Page_URL": window.location.href,
         "Target Time Duration": idleTimeLimit / 1000,  // Target idle time in seconds
