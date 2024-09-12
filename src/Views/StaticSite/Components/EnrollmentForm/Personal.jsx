@@ -165,10 +165,19 @@ const Personal = ({
       const state = stateComponent ? stateComponent.long_name : '';
       const city = cityComponent ? cityComponent.long_name : '';
       const pincode = postalCodeComponent ? postalCodeComponent.long_name : '';
+      const formattedAddress = place.formatted_address || '';
+
+      // Split the formatted address into lines for Address 1 and Address 2
+    const addressParts = formattedAddress.split(', ');
+
+    // Set Address Line 1 and Address Line 2 based on your criteria
+    const address1 = addressParts.slice(0, 5).join(', '); // Address till required part
+    const address2 = addressParts.slice(5, 7).join(', '); 
 
       setFormData((prev) => ({
         ...prev,
-        address1: address,
+        address1: address1,
+        address2:address2,
         country,
         state,
         city,
