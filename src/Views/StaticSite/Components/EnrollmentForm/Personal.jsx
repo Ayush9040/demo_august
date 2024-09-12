@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useMemo } from 'react'
 import './formstyles.scss'
 import InputComponent from '../InputComponent'
 import 'react-phone-number-input/style.css'
@@ -16,11 +16,16 @@ import { validateEmail } from '../../../../helpers'
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import { LoadScript, Autocomplete } from '@react-google-maps/api';
+import countryList from 'react-select-country-list';
 
 import MessageModal from '../MessageModal'
 import TermsCondition from '../TermsandCondition'
 // import TermsAndConditionsModal from '../TermsandCondition/t&Cpopup'
 import CustomModal from '../TermsandCondition/t&Cpopup'
+
+
+const libraries = ['places'];
+const mapKey = 'AIzaSyCArozsi_1fWJgSwDFDAoA_6Q5zLZ7NYyA'; 
 
 const Personal = ({
   empty,
@@ -67,6 +72,7 @@ const Personal = ({
   const [disData, setDisData] = useState('yes')
   const [isResidential, setIsResidential] = useState(false)
   const [isRegular, setIsRegular] = useState(false)
+  const [autocomplete, setAutocomplete] = useState(null);
 
 
   const handleResidential = (value) => {
@@ -74,6 +80,126 @@ const Personal = ({
     localStorage.setItem('isResidential', value)
   }
   const navigate = useNavigate()
+
+  const getUpdatedCountries = useMemo(() => {
+    return Country.getAllCountries().map((country) => ({
+      value: country.isoCode,
+      label: country.name,
+    }));
+  }, []);
+
+  // Function to handle when Autocomplete is loaded
+  const onLoadAutocomplete = (autocompleteInstance) => {
+    setAutocomplete(autocompleteInstance);
+  };
+
+    // Function to handle when a place is selected
+  // const onPlaceChanged = () => {
+  //   if (autocomplete) {
+  //     const place = autocomplete.getPlace();
+  //     console.log('Selected Place Object:', place); // Log the selected place object
+
+  //     // Extract address components
+  //     const address = place.formatted_address || '';
+  //     console.log('Selected address Object:', address);
+  //     const countryComponent = place.address_components?.find((component) =>
+  //       component.types.includes('country')
+  //     );
+  //     const stateComponent = place.address_components?.find((component) =>
+  //       component.types.includes('administrative_area_level_1')
+  //     );
+  //     const cityComponent = place.address_components?.find((component) =>
+  //       component.types.includes('locality') || component.types.includes('sublocality')
+  //     );
+  //     const postalCodeComponent = place.address_components?.find((component) =>
+  //       component.types.includes('postal_code')
+  //     );
+
+  //     // Extract values
+  //     const country = countryComponent ? countryComponent.long_name : '';
+  //     const state = stateComponent ? stateComponent.long_name : '';
+  //     console.log("State select ", state);
+  //     const city = cityComponent ? cityComponent.long_name : '';
+  //     console.log("city select ", city);
+  //     const pincode = postalCodeComponent ? postalCodeComponent.long_name : '';
+  //     console.log("pincode select ", pincode);
+
+  //     // Update formData with extracted values
+  //     setFormData((prev) => ({ ...prev, address1: address, country, state, city, pincode }));
+  //     setEmpty(address ? 0 : 4); // Set error if no address is found
+
+  //     // Find and set the selected country in Select component
+  //     const selectedCountry = getAllCountries.find((option) => option.label === country);
+  //     setValues((prev) => ({ ...prev, country: selectedCountry }));
+      
+
+  //     console.log('Selected Country from Address:', selectedCountry); // Log the selected country
+  //     console.log('State:', state, 'City:', city, 'Pincode:', pincode); // Log the state, city, and pincode
+  //   }
+  // };
+
+  const onPlaceChanged = () => {
+    if (autocomplete) {
+      const place = autocomplete.getPlace();
+      console.log(
+        'place ',place
+      )
+      const address = place.formatted_address || '';
+      console.log(
+        'Address ',address
+      )
+      const countryComponent = place.address_components?.find((component) =>
+        component.types.includes('country')
+      );
+      const stateComponent = place.address_components?.find((component) =>
+        component.types.includes('administrative_area_level_1')
+      );
+      const cityComponent = place.address_components?.find((component) =>
+        component.types.includes('locality')
+      );
+      const postalCodeComponent = place.address_components?.find((component) =>
+        component.types.includes('postal_code')
+      );
+
+      const country = countryComponent ? countryComponent.long_name : '';
+      const state = stateComponent ? stateComponent.long_name : '';
+      const city = cityComponent ? cityComponent.long_name : '';
+      const pincode = postalCodeComponent ? postalCodeComponent.long_name : '';
+
+      setFormData((prev) => ({
+        ...prev,
+        address1: address,
+        country,
+        state,
+        city,
+        pincode,
+      }));
+      setEmpty(address ? 0 : 4);
+
+      const selectedCountry = getUpdatedCountries.find((option) => option.label === country);
+      setValues({ country: selectedCountry, state: { label: state, value: state }, city: { label: city, value: city } });
+    }
+  };
+
+  // Function to generate state options based on selected country
+  const getUpdatedStates = (countryIsoCode) => {
+    if (!countryIsoCode) return [];
+    return State.getStatesOfCountry(countryIsoCode).map((state) => ({
+      value: state.isoCode,
+      label: state.name,
+    }));
+  };
+
+  // Function to generate city options based on selected state
+  const getUpdatedCities = (countryIsoCode, stateIsoCode) => {
+    if (!countryIsoCode || !stateIsoCode) return [];
+    return City.getCitiesOfState(countryIsoCode, stateIsoCode).map((city) => ({
+      value: city.name,
+      label: city.name,
+    }));
+  };
+
+
 
   const handleStartDate = (value) => {
     const day = value.getDate().toString().padStart(2, '0'); // Pad single digits with leading zero
@@ -689,7 +815,203 @@ const Personal = ({
               {console.log('ve', validationErrors)}
 
             </div>
-            <div className="form_error">
+
+              {/* Adding start google API */}
+
+
+               {/* <LoadScript googleMapsApiKey={mapKey} libraries={libraries}>
+      <Autocomplete onLoad={onLoadAutocomplete} onPlaceChanged={onPlaceChanged}>
+        <div className="form_error">
+          <InputComponent
+            type="text"
+            placeholder="Address Line 1*"
+            form={formData}
+            setField={setFormData}
+            keyName="address1"
+            errorCheck={setEmpty}
+            inputProps={{
+              style: {
+                boxSizing: 'border-box',
+                border: '1px solid transparent',
+                width: '100%',
+                height: '32px',
+                padding: '0 12px',
+                borderRadius: '3px',
+                boxShadow: '0 2px 6px rgba(0, 0, 0, 0.3)',
+                fontSize: '14px',
+                outline: 'none',
+                textOverflow: 'ellipsis',
+                marginBottom: '12px',
+              },
+            }}
+          />
+          {empty === 4 && <p>Please enter your address</p>}
+        </div>
+      </Autocomplete>
+
+      <div className="form_error countries_list">
+        <Select
+          styles={customStyles}
+          id="country"
+          name="country"
+          placeholder="Country"
+          options={updatedCountries}
+          value={values.country}
+          onChange={(value) => {
+            setValues({ country: value, state: null, city: null }, false);
+            setFormData((prev) => ({ ...prev, country: value.label }));
+            console.log('Selected Country from Dropdown:', value); // Log the selected country object
+          }}
+        />
+        {empty === 5 && <p>Please enter your country</p>}
+      </div>
+
+      <div className="form_error">
+        <Select
+          styles={customStyles}
+          id="state"
+          name="state"
+          placeholder="State"
+          options={updatedStates(values.country?.isoCode)}
+          value={values.state}
+          onChange={(value) => {
+            setValues({ country: values.country, state: value, city: null }, false);
+            setFormData((prev) => ({ ...prev, state: value.name }));
+            console.log('Selected State:', value); // Log the selected state
+          }}
+        />
+      </div>
+
+      <div className="form_error">
+        <Select
+          styles={customStyles}
+          id="city"
+          name="city"
+          placeholder="City"
+          options={updatedCities(values?.country?.isoCode, values?.state?.isoCode)}
+          value={values.city}
+          onChange={(value) => {
+            setValues({ country: values.country, state: values.state, city: value }, false);
+            setFormData((prev) => ({ ...prev, city: value.name }));
+            console.log('Selected City:', value); // Log the selected city
+          }}
+        />
+      </div>
+
+      <div className="form_error pincode_err">
+        <InputComponent
+          type="text"
+          placeholder="Pincode*"
+          form={formData}
+          setField={setFormData}
+          keyName="pincode"
+          errorCheck={setEmpty}
+          inputProps={{
+            value: formData.pincode,
+            onChange: (e) => setFormData((prev) => ({ ...prev, pincode: e.target.value })),
+          }}
+        />
+        {empty === 8 && <small> Please enter your pincode</small>}
+      </div>
+    </LoadScript> */}
+
+
+
+              {/* End google API */}
+
+
+              {/* Adding start google API 2 */}
+
+
+              <LoadScript googleMapsApiKey={mapKey} libraries={libraries}>
+      <Autocomplete onLoad={onLoadAutocomplete} onPlaceChanged={onPlaceChanged}>
+        <div className="form_error">
+          <InputComponent
+            type="text"
+            placeholder="Address Line 1*"
+            form={formData}
+            setField={setFormData}
+            keyName="address1"
+            errorCheck={setEmpty}
+          />
+          {empty === 4 && <p>Please enter your address</p>}
+        </div>
+      </Autocomplete>
+
+      <div className="form_error">
+        <InputComponent
+          type="text"
+          placeholder="Address Line 2"
+          form={formData}
+          setField={setFormData}
+          keyName="address2"
+          errorCheck={setEmpty}
+        />
+      </div>
+
+      <div className="form_error countries_list">
+        <Select
+          styles={customStyles}
+          id="country"
+          name="country"
+          placeholder="Country"
+          options={getUpdatedCountries}
+          value={values.country}
+          onChange={(value) => {
+            setValues({ country: value, state: null, city: null });
+            setFormData((prev) => ({ ...prev, country: value.label }));
+          }}
+        />
+        {empty === 5 && <p>Please enter your country</p>}
+      </div>
+
+      <div className="form_error">
+        <Select
+          styles={customStyles}
+          id="state"
+          name="state"
+          placeholder="State"
+          options={getUpdatedStates(values.country?.value)}
+          value={values.state}
+          onChange={(value) => {
+            setValues({ ...values, state: value, city: null });
+            setFormData((prev) => ({ ...prev, state: value.label }));
+          }}
+        />
+      </div>
+
+      <div className="form_error">
+        <Select
+          styles={customStyles}
+          id="city"
+          name="city"
+          placeholder="City"
+          options={getUpdatedCities(values?.country?.value, values?.state?.value)}
+          value={values.city}
+          onChange={(value) => {
+            setValues({ ...values, city: value });
+            setFormData((prev) => ({ ...prev, city: value.label }));
+          }}
+        />
+      </div>
+
+      <div className="form_error pincode_err">
+        <InputComponent
+          type="text"
+          placeholder="Pincode*"
+          form={formData}
+          setField={setFormData}
+          keyName="pincode"
+          errorCheck={setEmpty}
+        />
+        {empty === 8 && <small>Please enter your pincode</small>}
+      </div>
+    </LoadScript>
+
+
+              {/* End google API 2 */}
+             
+            {/* <div className="form_error">
               <InputComponent
                 type="text"
                 placeholder="Address Line 1*"
@@ -699,8 +1021,8 @@ const Personal = ({
                 errorCheck={setEmpty}
               />
               {empty === 4 && <p> Please enter your address</p>}
-            </div>
-            <div className="form_error">
+            </div> */}
+            {/* <div className="form_error">
               <InputComponent
                 type="text"
                 placeholder="Address Line 2"
@@ -709,8 +1031,8 @@ const Personal = ({
                 keyName="address2"
                 errorCheck={setEmpty}
               />
-            </div>
-            <div className="form_error countries_list">
+            </div> */}
+            {/* <div className="form_error countries_list">
               <Select
                 styles={customStyles}
                 id="country"
@@ -732,8 +1054,8 @@ const Personal = ({
                 }}
               />
               {empty === 5 && <p>Please enter your country</p>}
-            </div>
-            <div className="form_error">
+            </div> */}
+            {/* <div className="form_error">
               <Select
                 styles={customStyles}
                 id="state"
@@ -756,8 +1078,8 @@ const Personal = ({
                 }}
               />
 
-            </div>
-            <div className="form_error">
+            </div> */}
+            {/* <div className="form_error">
               <Select
                 styles={customStyles}
                 id="city"
@@ -786,14 +1108,14 @@ const Personal = ({
                   })
                 }}
               />
-              {/* {empty === 7 && (
+              {empty === 7 && (
                 <small >
                   {' '}
                   Please enter your city
                 </small>
-              )} */}
-            </div>
-            <div className="form_error pincode_err">
+              )}
+            </div> */}
+            {/* <div className="form_error pincode_err">
               <InputComponent
                 type="text"
                 placeholder="Pincode*"
@@ -803,7 +1125,7 @@ const Personal = ({
                 errorCheck={setEmpty}
               />
               {empty === 8 && <small> Please enter your pincode</small>}
-            </div>
+            </div> */}
 
             {/* <div className="form_error">
             <div className="course-card-dropdown">
