@@ -201,6 +201,94 @@ const corporateWellness = () => {
             <div className="company-corosuel">Financial Wellness</div>
           </div>
         </div>
+
+        <div className="corporate-wellness-form-container" id="#hoverOverthis">
+          <div className="corporate-wellness-form-heading">
+            <h1>
+              Have Questions?<div className="custom-border global-top-margin-6"></div>
+            </h1>
+            <p>Get in Touch with Us!</p>
+          </div>
+          <div className="corporate-wellness-form-input-container">
+            <div className="corporate-wellness-form-input">
+              <InputComponent
+                css={{ boxShadow: '0px 0px 3px #000000BF', color: '#919191;' }}
+                placeholder="Name"
+                type="text"
+                value={name}
+                form={formData}
+                setField={setFormData}
+                keyName="name"
+              />
+            </div>
+            <div className="corporate-wellness-form-input">
+              <InputComponent
+                className="input"
+                css={{ boxShadow: '0px 0px 3px #000000BF', color: '#919191;' }}
+                placeholder="Contact"
+                type="number"
+                form={formData}
+                setField={setFormData}
+                keyName="contact"
+              />
+            </div>
+          </div>
+          <div className="corporate-wellness-form-input-container">
+            <div className="corporate-wellness-form-input">
+              <InputComponent
+                css={{ boxShadow: '0px 0px 3px #000000BF', color: '#919191;' }}
+                placeholder="Email Address"
+                type="email"
+                form={formData}
+                setField={setFormData}
+                keyName="email"
+              />
+            </div>
+            <div className="corporate-wellness-form-input">
+              <InputComponent
+                css={{ boxShadow: '0px 0px 3px #000000BF', color: '#919191;' }}
+                placeholder="Company Name"
+                type="text"
+                form={formData}
+                setField={setFormData}
+                keyName="company"
+              />
+            </div>
+          </div>
+          <div className="corporate-wellness-form-input-container">
+            <div className="corporate-wellness-form-input">
+              <InputComponent
+                css={{ boxShadow: '0px 0px 3px #000000BF', color: '#919191;' }}
+                placeholder="Designation"
+                type="text"
+                form={formData}
+                setField={setFormData}
+                keyName="designation"
+              />
+            </div>
+          </div>
+          <div className="corporate-wellness-form-textArea">
+            <textarea
+              value={formData.message}
+              className="responsive-textarea"
+              placeholder="Message"
+              onChange={handleMessageChange}
+            />
+          </div>
+          <div className="form-btn-container">
+            <button className="form-btn" onClick={handleSubmit}>
+              Submit
+            </button>
+          </div>
+          {modal && (
+            <CampaignThankYou
+              name={name}
+              setModal={setModal}
+              setFormData={setFormData}
+            />
+          )}
+        </div>
+        
         <div className="wellness-support-features">
           <h1 className="wellness1">What Makes Our </h1>
           <h1 className="wellness2">Corporate Wellness Programs Unique?</h1>
@@ -764,7 +852,7 @@ const corporateWellness = () => {
             </button>
           </div>
         </div>
-        <div className="corporate-wellness-form-container" id="#hoverOverthis">
+        {/* <div className="corporate-wellness-form-container" id="#hoverOverthis">
           <div className="corporate-wellness-form-heading">
             <h1>
               Have Questions?<div className="custom-border global-top-margin-6"></div>
@@ -849,7 +937,7 @@ const corporateWellness = () => {
               setFormData={setFormData}
             />
           )}
-        </div>
+        </div> */}
         {videoPlayerData && (
           <div className="video-overlay">
             <div className="video-player-container">

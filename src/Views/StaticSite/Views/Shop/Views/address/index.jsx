@@ -18,7 +18,7 @@ import 'react-toastify/dist/ReactToastify.css'
 import { useDispatch, useSelector } from 'react-redux'
 import { authServerClientId, razorPayKey } from '../../../../../../Constants/appSettings'
 import { useNavigate } from 'react-router-dom'
-import { updateCartData } from '../../Shop.action'
+import { updateCartData, clearCart } from '../../Shop.action'
 
 const ShippingAdd = () => {
   const { user } = useSelector((state) => state.auth)
@@ -224,6 +224,9 @@ const ShippingAdd = () => {
             addressId:finalAddId
           })
           localStorage.removeItem('cart')
+
+          dispatch(clearCart());
+          
           navigate('/shop/thank-you')
         }
       },

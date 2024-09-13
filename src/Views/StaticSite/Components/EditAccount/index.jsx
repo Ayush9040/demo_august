@@ -12,6 +12,7 @@ import { fetchUserData } from '../../Views/Authentication/Auth.actions'
 const EditAccount = () => {
 
   const { user } = useSelector(state=>state.auth)
+  const [showAlumniFields, setShowAlumniFields] = useState(false);
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -24,6 +25,12 @@ const EditAccount = () => {
     course: '',
     studentId:'',
     alumni: '',
+    company: '',
+    profession: '',
+    passport: '',
+    dateOfBirth: '',
+    nationality: '',
+    pan: '',
   })
 
   useEffect(()=>{
@@ -43,8 +50,15 @@ const EditAccount = () => {
       year: user.data?.year || '',
       course: user.data?.course || '',
       studentId: user.data?.studentId || '',
-      alumni: user.data?.alumni || '',
+      alumni: user.data?.alumni || false ,
+      company: user.data?.company || '',
+      profession: user.data?.profession || '',
+      passport: user.data?.passport || '',
+      dateOfBirth: user.data?.dateOfBirth || '',
+      nationality: user.data?.nationality || '',
+      pan: user.data?.pan || '', 
     })
+    setShowAlumniFields(user.data?.alumni);
   },[user])
 
   const [empty, setEmpty] = useState(0)
@@ -62,21 +76,25 @@ const EditAccount = () => {
 
 
   const submitForm = async() => {
-    if (formData.firstName === '') {
-      return setEmpty(1)
-    } else if (formData.lastName === '') {
-      return setEmpty(2)
-    } else if (formData.gender === '') {
-      return setEmpty(4)
-    } else if (formData.phoneNumber === '') {
+
+    if (formData.phoneNumber === '') {
       return setEmpty(5)
-    } else if (formData.country === '') {
-      return setEmpty(6)
-    } else if (formData.state === '') {
-      return setEmpty(7)
-    } else if (formData.city === '') {
-      return setEmpty(8)
     }
+    // if (formData.firstName === '') {
+    //   return setEmpty(1)
+    // } else if (formData.lastName === '') {
+    //   return setEmpty(2)
+    // } else if (formData.gender === '') {
+    //   return setEmpty(4)
+    // } else if (formData.phoneNumber === '') {
+    //   return setEmpty(5)
+    // } else if (formData.country === '') {
+    //   return setEmpty(6)
+    // } else if (formData.state === '') {
+    //   return setEmpty(7)
+    // } else if (formData.city === '') {
+    //   return setEmpty(8)
+    // }
     // } else if (formData.year === '') {
     //   return setEmpty(9)
     // } else if (formData.course === '') {
@@ -233,6 +251,109 @@ const EditAccount = () => {
           </>
         </div>
 
+
+
+        {/* New Fields Added */}
+
+        <hr />
+
+
+        <div className="account-input">
+          <>
+            <InputComponent
+              type="text"
+              placeholder="Company"
+              form={formData}
+              setField={setFormData}
+              keyName="company"
+              errorCheck={setEmpty}
+            />
+            {empty === 1 && (
+              <small style={{ color: 'red', marginLeft: '0' }}>
+                *Please Enter Company
+              </small>
+            )}
+          </>
+          <>
+            <InputComponent
+              type="text"
+              placeholder="Profession"
+              form={formData}
+              setField={setFormData}
+              keyName="profession"
+              errorCheck={setEmpty}
+            />
+            {empty === 2 && (
+              <small style={{ color: 'red', marginLeft: '0' }}>
+                *Please Enter Profession!
+              </small>
+            )}
+          </>
+
+
+          <>
+            <InputComponent
+              type="text"
+              placeholder="Passport"
+              form={formData}
+              setField={setFormData}
+              keyName="passport"
+            />
+            {empty === 15 && (
+              <small style={{ color: 'red', marginLeft: '0' }}>
+                *Please Enter Passport!
+              </small>
+            )}
+          </>
+
+          <>
+            <InputComponent
+              type="text"
+              placeholder="DOB"
+              form={formData}
+              setField={setFormData}
+              keyName="dateOfBirth"
+            />
+
+            {empty === 6 && (
+              <small style={{ color: 'red', marginLeft: '0' }}>
+                *Please Enter DOB!
+              </small>
+            )}
+          </>
+
+          <>
+            <InputComponent
+              type="text"
+              placeholder="Nationality"
+              form={formData}
+              setField={setFormData}
+              keyName="nationality"
+            />
+
+            {empty === 7 && (
+              <small style={{ color: 'red', marginLeft: '0' }}>
+                *Please Enter Nationality!
+              </small>
+            )}
+          </>
+          <>
+            <InputComponent
+              type="text"
+              placeholder="PAN"
+              form={formData}
+              setField={setFormData}
+              keyName="pan"
+            />
+            {empty === 8 && (
+              <small style={{ color: 'red', marginLeft: '0' }}>
+                *Please Enter The PAN!
+              </small>
+            )}
+          </>
+        </div>
+
+       
         <hr />
         <div className="former-input">
           <div className="former-l1">
@@ -241,19 +362,30 @@ const EditAccount = () => {
               <p>Yes</p>
               {/* <nbsp /> */}
               <input
-                onChange={() => setFormData({ ...formData, alumni: 'yes' })}
+              checked={formData.alumni === true}
+                onChange={() => {
+                  setFormData({ ...formData, alumni: true })
+                  setShowAlumniFields(true);
+                }}
                 type="radio"
                 name="option"
+                
               />
               <p>No</p>
               <input
-                onChange={() => setFormData({ ...formData, alumni: 'no' })}
+              checked={formData.alumni === false}
+                onChange={() => {
+                  setFormData({ ...formData, alumni: false })
+                  setShowAlumniFields(false);
+                }}
                 type="radio"
                 name="option"
+                
               />
             </div>
           </div>
-          <div className="year-course">
+          {showAlumniFields && (
+            <div className="year-course">
             <div className="year-student">
               <>
                 <InputComponent
@@ -265,7 +397,7 @@ const EditAccount = () => {
                 />
                 {empty === 9 && (
                   <small style={{ color: 'red', marginLeft: '0' }}>
-                    *Please Enter The City!
+                    *Please Enter The Year!
                   </small>
                 )}
               </>
@@ -299,6 +431,8 @@ const EditAccount = () => {
               )}
             </>
           </div>
+          )}
+          
         </div>
       </div>
       <div className="save-button" onClick={submitForm} >
