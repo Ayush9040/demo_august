@@ -241,6 +241,9 @@ const ShippingAdd = () => {
           })
 
           localStorage.removeItem('cart')
+
+          dispatch(clearCart());
+          
           navigate('/shop/thank-you')
         } else {
           const programNames = cart.map((item) => item.title);

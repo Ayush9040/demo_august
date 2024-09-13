@@ -26,6 +26,13 @@ export const shopReducer = (state = initialState, action) => {
       activeCartId:action.payload.activeCartId,
       error: noError,
     }
+  case shopActions.CLEAR_CART:
+      return {
+        ...state,
+        isLoading: true,
+        cart: [],
+        error: noError,
+      }
   case shopActions.GET_ACTIVE_CART_ERROR:
     return {
       ...state,

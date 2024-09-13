@@ -17,6 +17,7 @@ const UserProfile = () => {
     { option: 'Courses', key: 1 },
     { option: 'Orders', key: 2 },
     { option: 'Alumni', key: 3 },
+    { option: 'Edit Account', key: 4 },
   ]
 
   const UserNav = {
@@ -74,6 +75,9 @@ const UserProfile = () => {
                     <li
                       onClick={() => {
                         setModule(item.key)
+                        if (item.key === 4) {
+                          navigate('/user/edit-account'); // Step 3: Navigate if key is 4
+                        }
                       }}
 
                       style={
@@ -96,7 +100,7 @@ const UserProfile = () => {
               })}
             </ul>
             <div id="edit-account">
-              <Link to={'/user/edit-account'}>Edit Account</Link>|
+              {/* <Link to={'/user/edit-account'}>Edit Account</Link>| */}
               <Link to={'/faqs'}>FAQs</Link>
             </div>
           </div>
@@ -188,6 +192,7 @@ const UserProfile = () => {
               </div>
             </div>
           )}
+
         </div>
       </div>
     </div>
