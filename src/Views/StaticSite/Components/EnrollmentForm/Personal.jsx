@@ -160,6 +160,22 @@ const Personal = ({
       const postalCodeComponent = place.address_components?.find((component) =>
         component.types.includes('postal_code')
       );
+      const address2CodeComponent1 = place.address_components?.find((component) =>
+        component.types.includes('sublocality_level_2')
+      );
+      const address2CodeComponent2 = place.address_components?.find((component) =>
+        component.types.includes('sublocality_level_1')
+      );
+      const address1CodeComponent1 = place.address_components?.find((component) =>
+        component.types.includes('street_number')
+      );
+      const address1CodeComponent2 = place.address_components?.find((component) =>
+        component.types.includes('route')
+      );
+      const address1CodeComponent3 = place.address_components?.find((component) =>
+        component.types.includes('sublocality_level_3')
+      );
+      
 
       const country = countryComponent ? countryComponent.long_name : '';
       const state = stateComponent ? stateComponent.long_name : '';
@@ -171,8 +187,26 @@ const Personal = ({
     const addressParts = formattedAddress.split(', ');
 
     // Set Address Line 1 and Address Line 2 based on your criteria
-    const address1 = addressParts.slice(0, 5).join(', '); // Address till required part
-    const address2 = addressParts.slice(5, 7).join(', '); 
+    let address1 = [
+      address1CodeComponent1?.long_name || '',
+      address1CodeComponent2?.long_name || '',
+      address1CodeComponent3?.long_name || '',
+    ]
+      .filter(Boolean) // Filter out any empty strings
+      .join(', '); // Join the components with a comma/ Address till required part
+
+    let address2 = [
+      address2CodeComponent1?.long_name || '',
+      address2CodeComponent2?.long_name || '',
+    ]
+      .filter(Boolean) // Filter out any empty strings
+      .join(', '); // Join the components with a comma
+      
+
+      if (!address1) {
+        address1 = address2;
+        address2 = ''; // Clear Address Line 2
+      }
 
       setFormData((prev) => ({
         ...prev,
