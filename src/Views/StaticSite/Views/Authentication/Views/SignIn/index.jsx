@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useMemo, useRef, useState } from 'react'
 import {
   Link,
   useNavigate,
@@ -14,6 +14,10 @@ import InnerNavComponent from '../../../../Components/InnerNavComponent'
 import { validateEmail } from '../../../../../../helpers'
 import MessageModal from '../../../../Components/MessageModal'
 import PhoneInput from 'react-phone-number-input'
+import { Country, State, City } from 'country-state-city'
+import Select from 'react-select'
+import { parsePhoneNumberFromString, isValidPhoneNumber } from 'libphonenumber-js'
+
 
 const SignIn = () => {
   const [modal, setModal] = useState(false)
@@ -23,11 +27,20 @@ const SignIn = () => {
   const { isLoggedIn, error } = useSelector((state) => state.auth)
   const [page, setPage] = useState()
   const [errMsg, setErrMsg] = useState('')
-  const [pageIndex, setPageIndex] = useState('2')
+  const [pageIndex, setPageIndex] = useState('1')
   // const [course, setCourse] = useState()
   const [formData, setFormData] = useState({
+    phoneNumber: '',
+    countryCode: '91',
+    otp: '',
     email: '',
-    password: '',
+    firstName: '',
+    lastName: '',
+    gender: '',
+    country: '',
+    city: '',
+    errorIndex: '0'
+    // password: '',
   })
   // const location = useLocation()
 
@@ -36,9 +49,132 @@ const SignIn = () => {
   // }, [location])
 
   const [Params] = useSearchParams()
+  const inputRefs = useRef([]);
 
   const [selectDate, setSetselectDate] = useState()
   const [otp, setOtp] = useState(new Array(4).fill(""));
+  const customStyles = (isInvalid) => ({
+    control: (base, state) => ({
+      ...base,
+      background: 'transparent',
+      borderRadius: '8px',
+      padding: '0 !important', // Ensure no padding is applied
+
+      // height: 10, // Adjust the height of the select input
+      // minHeight: 10, // Ensure the minimum height is applied
+      // width: 'fitContent',
+      // padding: '0.25rem 0.25rem',
+      // marginTop: '2rem',
+      // marginLeft: '2rem',
+      // Overwrittes the different states of border
+      // borderColor: state.isFocused
+      //   ? 'rgba(96, 96, 96, 0.5019607843)'
+      //   : 'rgba(96, 96, 96, 0.5019607843)',
+      // Removes weird border around container
+      boxShadow: state.isFocused ? null : null,
+      '&:hover': {
+        // Overwrittes the different states of border
+        borderColor: state.isFocused
+          ? 'rgba(96, 96, 96, 0.5019607843)'
+          : 'rgba(96, 96, 96, 0.5019607843)',
+      },
+      borderColor: isInvalid ? 'red' : 'rgba(96, 96, 96, 0.5019607843)',
+
+    }),
+  })
+
+
+  // Function to generate city options based on selected state
+  const getUpdatedCities = (countryIsoCode) => {
+    if (!countryIsoCode) return [];
+    return City.getCitiesOfCountry(countryIsoCode.value).map((city) => ({
+      value: city.name,
+      label: city.name,
+    }));
+  };
+
+  const verifyOTP = (userDetails) => {
+    if (userDetails.otp.length == 4) {
+      //API calls
+      console.log(userDetails.otp);
+      setFormData({ ...formData, errorIndex: 0 });
+      setPageIndex(3)
+    }
+    else {
+      setFormData({ ...formData, errorIndex: 2 });
+    }
+
+  }
+
+  const sendOTP = (userDetails) => {
+
+    if (userDetails.phoneNumber) {//validate mobile number
+      const errors = validatePhoneNumber(userDetails.phoneNumber);
+      if (errors.length) {
+        setFormData({ ...formData, errorIndex: 1 });
+      }
+      else {//mobile num is valid
+        setFormData({ ...formData, errorIndex: 0 });
+        setPageIndex(2)
+        startTimer()
+      }
+    } else {
+      setFormData({ ...formData, errorIndex: 1 });
+    }
+
+  }
+
+  const handlePhoneChange = (value) => {
+    // setPhoneValue(value);
+    setFormData({ ...formData, phoneNumber: value });
+  };
+
+  const validatePhoneNumber = (phoneNumber) => {
+    const errors = [];
+    const parsedNumber = parsePhoneNumberFromString(phoneNumber);
+
+    if (!parsedNumber) {
+      errors.push('Invalid phone number format.');
+      return errors;
+    }
+
+    // Format Validation
+    const formatted = parsedNumber.formatInternational();
+    const actualFormat = formatted.replace(/\s+/g, '');
+    if (phoneNumber !== actualFormat) {
+      errors.push(`Incorrect format. Should be ${formatted}`);
+    }
+
+    // Country Code Validation
+    if (!parsedNumber.country) {
+      errors.push('Invalid or missing country code.');
+    }
+
+    // Length Validation
+    if (!isValidPhoneNumber(phoneNumber)) {
+      errors.push('Phone number is not valid for the selected country.');
+    }
+
+    // National and International Numbering Validation
+    if (!parsedNumber.isPossible()) {
+      errors.push('Phone number is not possible.');
+    }
+
+    // Region-Specific Checks
+    const areaCode = parsedNumber.nationalNumber.slice(0, 3); // Correctly access the national number
+    // console.log('ac',areaCode);
+
+    if (parsedNumber.country === 'US' && !['202', '212', '213'].includes(areaCode)) {
+      errors.push('Invalid area code for the region.');
+    }
+
+    // Invalid Number Patterns
+    if (/(\d)\1{6,}/.test(parsedNumber.nationalNumber)) {  // Use nationalNumber property directly
+      errors.push('Phone number contains invalid patterns (e.g., too many repeated digits).');
+    }
+
+    return errors;
+  };
 
   useEffect(() => {
     localStorage.removeItem('userAppId')
@@ -57,9 +193,83 @@ const SignIn = () => {
     if (page !== 'cart') navigate(`/enrollment/${page}/?date=${selectDate}`)
     setErrMsg('Please login to continue purchase!')
     setModal(true)
+  }
+  const [seconds, setSeconds] = useState(59);
+  let intervalId; // variable fro timer
+  let timer = 59; // variable to handle seconds not updated in dom
 
+  const startTimer = () => {
+    timer = 59;// resets timer
+    intervalId = setInterval(() => {
+      timer = timer - 1; //using state its not possible to get current time so using a new variable
+      setSeconds(timer)
+      if (timer === 0) {
+        clearInterval(intervalId);
+      }
+    }, 1000)
   }
 
+  const signUp = (details) => {
+    const nameRegex = /^[A-Za-z][A-Za-z '-]*[A-Za-z]$/;
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+    if (!details.firstName || !nameRegex.test(details.firstName)) {
+      setFormData({ ...formData, errorIndex: 3 });
+    }
+    else if (!details.lastName || !nameRegex.test(details.lastName)) {
+      setFormData({ ...formData, errorIndex: 4 });
+    }
+    else if (!details.email || !emailRegex.test(details.email)) {
+      setFormData({ ...formData, errorIndex: 5 });
+    }
+    else if (!details.gender?.value) {
+      setFormData({ ...formData, errorIndex: 6 });
+    }
+    else if (!details.country?.value) {
+      setFormData({ ...formData, errorIndex: 7 });
+    }
+    else if (!details.city?.value) {
+      setFormData({ ...formData, errorIndex: 8 });
+    }
+    else {//form is valid 
+      setFormData({ ...formData, errorIndex: 0 });
+      let payload = { ...details }
+      payload['gender'] = details?.gender.value;
+      payload['country'] = details?.country.label;
+      payload['city'] = details?.city.label;
+      payload['phoneNumber'] = details.phoneNumber.slice(3)
+      payload['countryCode'] = details.phoneNumber.slice(1, 3)
+      console.log(payload);
+
+    }
+  }
+
+  const handleOTPChange = (element, index) => {
+    if (isNaN(element.value)) return; // Ensure only numbers are entered
+    let otpArry = [...otp]
+    otpArry[index] = element.value
+    setOtp(otpArry);
+    // Move focus to the next input
+    if (element.value !== "" && index < 3) {
+      inputRefs.current[index + 1].focus();
+    }
+    setFormData({ ...formData, otp: otpArry.join('') })
+  };
+
+  // Handle backspace and move focus to previous input
+  const handleBackspace = (element, index) => {
+    if (element.value === "" && index > 0) {
+      inputRefs.current[index - 1].focus();
+    }
+  };
+  const countries = Country.getAllCountries()
+
+  const getUpdatedCountries = useMemo(() => {
+    return Country.getAllCountries().map((country) => ({
+      value: country.isoCode,
+      label: country.name,
+    }));
+  }, []);
 
   const handleSignIn = async () => {
     if (!validateEmail(formData.email)) {
@@ -88,6 +298,8 @@ const SignIn = () => {
     menuItems: [],
   }
 
+
+
   return (
     <div className="signin-form">
       <div className='signin-container'>
@@ -108,7 +320,7 @@ const SignIn = () => {
               <div className='header'>Log in or Sign up</div>
               <div className='sub-header'>Log in/sign up with google account or mobile number</div>
               <div className='google-badge'>
-                <svg width="1.25rem" height="1.35rem" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg width="16px" height="16px" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M18.8 10.2083C18.8 9.55834 18.7417 8.93334 18.6333 8.33334H10V11.8792H14.9333C14.7208 13.025 14.075 13.9958 13.1042 14.6458V16.9458H16.0667C17.8 15.35 18.8 13 18.8 10.2083Z" fill="#4285F4" />
                   <path d="M10 19.1667C12.475 19.1667 14.55 18.3458 16.0667 16.9458L13.1042 14.6458C12.2833 15.1958 11.2333 15.5208 10 15.5208C7.61252 15.5208 5.59168 13.9083 4.87085 11.7417H1.80835V14.1167C3.31668 17.1125 6.41668 19.1667 10 19.1667Z" fill="#34A853" />
                   <path d="M4.87075 11.7417C4.68742 11.1917 4.58325 10.6042 4.58325 10C4.58325 9.39583 4.68742 8.80833 4.87075 8.25833V5.88333H1.80825C1.16659 7.16071 0.832686 8.57051 0.833253 10C0.833253 11.4792 1.18742 12.8792 1.80825 14.1167L4.87075 11.7417Z" fill="#FBBC05" />
@@ -119,14 +331,20 @@ const SignIn = () => {
                 <span>Or</span>
               </div>
               <div className='inp-label'>Mobile Number <span>*</span></div>
-              <div className="form-inp">
+              <div className={formData?.errorIndex == 1 ? "form-inp err-inp" : "form-inp"}>
+                {/*  err-inp */}
                 <PhoneInput
+                  value={formData.phoneNumber}
                   placeholder="Enter your Mobile number"
                   defaultCountry="IN"
                   className="custom-phone-input"
+                  onChange={handlePhoneChange}
                 />
               </div>
-              <button type='click' className='primary-btn'>Continue</button>
+              {formData?.errorIndex == 1 &&
+                <div style={{ color: '#FF3B30' }}>Enter a valid Mobile number to proceed next</div>}
+
+              <button type='click' className='primary-btn' onClick={() => sendOTP(formData)}>Continue</button>
               <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
                 <div className='tc-text'>By Clicking “Continue with google  / mobile” you agree to
                   our <span>Terms & Conditions</span> and <span>Privacy Policy</span></div>
@@ -135,37 +353,146 @@ const SignIn = () => {
 
             {/* Login page with OTP */}
             {pageIndex == '2' && <>
-              <div className='sub-header' style={{ fontWeight: '600',padding:'12px 0 4px 0' }}>Verify your Mobile Number</div>
+              <div className='sub-header' style={{ fontWeight: '600', padding: '12px 0 4px 0' }}>Verify your Mobile Number</div>
               <div className='sub-header'>enter the OTP we sent to +91 7895623325</div>
               <div className="otp-inputs">
-                        {otp.map((data, index) => {
-                          return (
-                            <input
-                              key={index}
-                              type="text"
-                              maxLength="1"
-                              className="otp-input"
-                              // value={data}
-                              // onChange={(e) => handleChange(e.target, index)}
-                              // onKeyDown={(e) =>
-                              //   e.key === "Backspace" ? handleBackspace(e.target, index) : null
-                              // }
-                              // ref={(el) => (inputRefs.current[index] = el)}
-                            />
-                          );
-                        })}
-                      </div>
-              <button type='click' className='primary-btn'>Verify & Continue</button>
+                {otp.map((data, index) => {
+                  return (
+                    <input
+                      key={index}
+                      type="text"
+                      maxLength="1"
+                      className={formData?.errorIndex == 2 ? "otp-input otp-err" : "otp-input"}
+                      // value={data}
+                      onChange={(e) => handleOTPChange(e.target, index)}
+                      onKeyDown={(e) =>
+                        e.key === "Backspace" ? handleBackspace(e.target, index) : null
+                      }
+                      ref={(el) => (inputRefs.current[index] = el)}
+                    />
+                  );
+                })}
+              </div>
+              {formData?.errorIndex == 2 &&
+                <div style={{ color: '#FF3B30', margin: '1rem 0' }}>OTP is Invalid!</div>}
+              <button type='click' className='primary-btn' onClick={() => verifyOTP(formData)}>Verify & Continue</button>
               <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
-                <div className='tc-text'>Didn’t received the OTP? <br />You can request another in 00:55</div>
+                <div className='tc-text'>Didn’t received the OTP? <br />
+                  {seconds != '0' && <>You can request another in {seconds} {seconds > 9 ? 'seconds' : 'second'}</>}
+                  {seconds == '0' && <div style={{ fontWeight: '600', fontSize: '1rem', cursor: 'pointer', color: '#CA4625', paddingTop: '0.7rem' }}>Resend</div>}</div>
               </div>
             </>}
 
+            {/* Signup page */}
+            {pageIndex == '3' && <>
+              <div className='header'>Welcome to TYI</div>
+              <div className='sub-header'>Setup your TYI Account</div>
+              <div className='inp-label mg-t-20'>First Name <span>*</span></div>
+              <div className={formData?.errorIndex == 3 ? "form-inp err-inp" : "form-inp"}>
+                <input
+                  value={formData.firstName}
+                  onChange={(e) => { setFormData({ ...formData, firstName: e.target.value }) }}
+                  type="text"
+                  placeholder="First Name"
+                  className="custom-input"
+                />
+              </div>
+              {formData?.errorIndex == 3 &&
+                <div style={{ color: '#FF3B30' }}>Enter a valid First name</div>}
+
+
+              <div className='inp-label  mg-t-20'>Last Name <span>*</span></div>
+              <div className={formData?.errorIndex == 4 ? "form-inp err-inp" : "form-inp"}>
+                <input
+                  type="text"
+                  placeholder="Last Name"
+                  value={formData.lastName}
+                  onChange={(e) => { setFormData({ ...formData, lastName: e.target.value }) }}
+                  className="custom-input"
+                />
+              </div>
+              {formData?.errorIndex == 4 &&
+                <div style={{ color: '#FF3B30' }}>Enter a valid Last name</div>}
+
+              <div className='inp-label  mg-t-20'>Email <span>*</span></div>
+              <div className={formData?.errorIndex == 5 ? "form-inp err-inp" : "form-inp"}>
+                <input
+                  type="email"
+                  placeholder="Email"
+                  className="custom-input"
+                  value={formData.email}
+                  onChange={(e) => { setFormData({ ...formData, email: e.target.value }) }} />
+              </div>
+              {formData?.errorIndex == 5 &&
+                <div style={{ color: '#FF3B30' }}>Enter a valid Email</div>}
+
+              {/* <div className='inp-label  mg-t-20'>Mobile Number <span>*</span></div>
+              <div className="form-inp">
+                <PhoneInput
+                  placeholder="Enter your Mobile number"
+                  defaultCountry="IN"
+                  className="custom-phone-input"
+                />
+              </div> */}
+              <div className='inp-group'>
+                <div>
+                  <div className='inp-label  mg-t-20'>Gender <span>*</span></div>
+                  {/* <div className="form-inp"> */}
+                  <Select
+                    styles={customStyles(formData?.errorIndex == 6 ? true : false)}
+                    id="country"
+                    name="Gender"
+                    placeholder="Select Gender"
+                    options={[
+                      { value: '1', label: 'Male' },
+                      { value: '2', label: 'Female' },
+                      { value: '3', label: 'Others' },
+                    ]}
+                    value={formData.gender}
+                    onChange={(value) => { setFormData({ ...formData, gender: value }) }}
+                  />
+                  {formData?.errorIndex == 6 &&
+                    <div style={{ color: '#FF3B30' }}>Select gender</div>}
+                </div>
+                <div>
+                  <div className='inp-label  mg-t-20'>Country <span>*</span></div>
+                  {/* <div className="form-inp"> */}
+                  <Select
+                    styles={customStyles(formData?.errorIndex == 7 ? true : false)}
+                    id="country"
+                    name="country"
+                    placeholder="Select Country"
+                    options={getUpdatedCountries}
+                    value={formData.country}
+                    onChange={(value) => { setFormData({ ...formData, city: '', country: value }) }}
+                  />
+                  {formData?.errorIndex == 7 &&
+                    <div style={{ color: '#FF3B30' }}>Select Country</div>}
+                </div>
+                <div>
+                  <div className='inp-label  mg-t-20'>City <span>*</span></div>
+                  <Select
+                    styles={customStyles(formData?.errorIndex == 8 ? true : false)}
+                    id="country"
+                    name="City"
+                    placeholder=" Select City"
+                    options={getUpdatedCities(formData.country)}//values?.country?.value
+                    value={formData.city}
+                    onChange={(value) => { setFormData({ ...formData, city: value }) }}
+                  />
+                  {formData?.errorIndex == 8 &&
+                    <div style={{ color: '#FF3B30' }}>Select City</div>}
+                </div>
+              </div>
+
+              <button type='click' className='primary-btn' onClick={() => signUp(formData)}>Continue</button>
+
+            </>}
 
           </div>
         </div>
       </div>
-      <div className="signin-banner">
+      <div className={pageIndex <= 2 ? "signin-banner img-1" : "signin-banner img-2"}>
       </div>
 
     </div>
