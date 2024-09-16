@@ -18,7 +18,7 @@ import 'react-toastify/dist/ReactToastify.css'
 import { useDispatch, useSelector } from 'react-redux'
 import { authServerClientId, razorPayKey } from '../../../../../../Constants/appSettings'
 import { useNavigate } from 'react-router-dom'
-import { updateCartData } from '../../Shop.action'
+import { updateCartData, clearCart } from '../../Shop.action'
 import { handleCTCheckoutCompleted, handleCTCheckoutFailed, handleCTCheckoutCompleted1 } from '../../../../../../CleverTap/shopEvents'
 import { handleCTProductPaymentCompleted } from '../../../../../../CleverTap/shopEvents'
 
