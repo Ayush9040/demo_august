@@ -166,6 +166,17 @@ const BrowseCourses = () => {
                 dates={item.dates}
                 fees={item?.fees}
                 timing={item?.timing}
+                tenure={item?.tenure}
+                pageName={item?.key}
+                courseCategory={item?.courseCategory} 
+                      courseSubType={item?.courseSubType}
+                      onlineMode= {item?.onlineInfo?.courseMode}
+                      residentialMode= {item?.residentialInfo?.courseMode}
+                      nonResidentialMode={item?.nonResidentialInfo?.courseMode}
+                      residentialLocation={item?.residentialInfo?.residentialMode}
+                      nonResidentialLocation={item?.nonResidentialInfo?.nonResidentialMode}
+                      courseType={item?.courseType}
+                      language={item?.language}
                 category={item?.category}
                 batch={item?.batch}
                 nonResidential={item?.nonResidential}

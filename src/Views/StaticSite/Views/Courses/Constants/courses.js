@@ -63,6 +63,27 @@ const ttc200hr = {
     onCampus: true,
     nonResidential: true,
     residential: true,
+
+    tenure: '1 month',
+    courseType: '(RYT 200- Basic)',
+    language: 'English',
+    preRequisite: 'None',
+    courseCategory: 'Educational', 
+    courseSubType: '200 Hour Yoga Teacher Training',
+    
+    courseCertificate: 'TTC/Certificate',
+    onlineInfo: {
+      courseMode: true,
+    },
+    residentialInfo: {
+      courseMode: true,
+      residentialMode: true
+    },
+    nonResidentialInfo: {
+      courseMode: true,
+      nonResidentialMode: true
+    },
+
     certficate: false,
     details: [
       {
@@ -570,6 +591,27 @@ const ttc200hr = {
     nonResidential: true,
     residential: true,
     certficate: false,
+
+    tenure: '2 month',
+    courseType: '(RYT 200- Basic)',
+    language: 'English',
+    preRequisite: 'None',
+    courseCategory: 'Educational', 
+    courseSubType: '200 Hour Yoga Teacher Training',
+    
+    courseCertificate: 'TTC/Certificate',
+    onlineInfo: {
+      courseMode: true,
+    },
+    residentialInfo: {
+      courseMode: true,
+      residentialMode: true
+    },
+    nonResidentialInfo: {
+      courseMode: true,
+      nonResidentialMode: true
+    },
+
     details: [
       {
         type: 'paragraph',
@@ -1010,6 +1052,27 @@ const ttc200hr = {
     nonResidential: false,
     residential: false,
     certficate: false,
+
+    tenure: '2 month',
+    courseType: '(RYT 200- Basic)',
+    language: 'English',
+    preRequisite: 'None',
+    courseCategory: 'Educational', 
+    courseSubType: '200 Hour Yoga Teacher Training',
+    
+    courseCertificate: 'TTC/Certificate',
+    onlineInfo: {
+      courseMode: true,
+    },
+    residentialInfo: {
+      courseMode: false,
+      residentialMode: false
+    },
+    nonResidentialInfo: {
+      courseMode: false,
+      nonResidentialMode: false
+    },
+
     details: [
       {
         type: 'paragraph',
@@ -1511,6 +1574,27 @@ const ttc200hr = {
     nonResidential: false,
     residential: false,
     certficate: false,
+
+    tenure: '2 month',
+    courseType: '(RYT 200- Basic)',
+    language: 'English',
+    preRequisite: 'None',
+    courseCategory: 'Educational', 
+    courseSubType: '200 Hour Yoga Teacher Training',
+    
+    courseCertificate: 'TTC/Certificate',
+    onlineInfo: {
+      courseMode: true,
+    },
+    residentialInfo: {
+      courseMode: false,
+      residentialMode: false
+    },
+    nonResidentialInfo: {
+      courseMode: false,
+      nonResidentialMode: false
+    },
+
     details: [
       {
         type: 'paragraph',
@@ -1990,6 +2074,27 @@ const ttc200hr = {
     nonResidential: false,
     residential: false,
     certficate: false,
+
+    tenure: '3 month',
+    courseType: '(RYT 200- Basic)',
+    language: 'English',
+    preRequisite: 'None',
+    courseCategory: 'Educational', 
+    courseSubType: '200 Hour Yoga Teacher Training',
+    
+    courseCertificate: 'TTC/Certificate',
+    onlineInfo: {
+      courseMode: true,
+    },
+    residentialInfo: {
+      courseMode: false,
+      residentialMode: false
+    },
+    nonResidentialInfo: {
+      courseMode: false,
+      nonResidentialMode: false
+    },
+
     details: [
       {
         type: 'paragraph',
@@ -2483,6 +2588,28 @@ const ttc200hr = {
     nonResidential: false,
     residential: false,
     certficate: false,
+
+    tenure: '2 month',
+    courseType: '(RYT 200- Basic)',
+    language: 'English',
+    preRequisite: 'None',
+    courseCategory: 'Educational', 
+    courseSubType: '200 Hour Yoga Teacher Training',
+    
+    courseCertificate: 'TTC/Certificate',
+    onlineInfo: {
+      courseMode: true,
+    },
+    residentialInfo: {
+      courseMode: false,
+      residentialMode: false
+    },
+    nonResidentialInfo: {
+      courseMode: false,
+      nonResidentialMode: false
+    },
+
+
     details: [
       {
         type: 'paragraph',
@@ -2984,6 +3111,27 @@ const ttc500hr = {
     nonResidential: false,
     residential: false,
     certficate: false,
+
+    tenure: '3 month',
+    courseType: 'Intermediate TTC (500 Hour Courses)',
+    language: 'English',
+    preRequisite: 'None',
+    courseCategory: 'Educational', 
+    courseSubType: '500 Hour Yoga Teacher Training',
+    
+    courseCertificate: 'TTC/Certificate',
+    onlineInfo: {
+      courseMode: true,
+    },
+    residentialInfo: {
+      courseMode: false,
+      residentialMode: false
+    },
+    nonResidentialInfo: {
+      courseMode: false,
+      nonResidentialMode: false
+    },
+
     details: [
       {
         type: 'paragraph',
@@ -3345,6 +3493,27 @@ const ttc900hr = {
     nonResidential: true,
     residential: true,
     certficate: false,
+
+    tenure: '3 month',
+    courseType: 'Advance TTC (900 Hour Courses)',
+    language: 'English',
+    preRequisite: '7 Days Health Camp, 21 Days Better Living Course, 200 Hours Teacher Training Course',
+    courseCategory: 'Educational', 
+    courseSubType: '900 Hour Yoga Teacher Training',
+    
+    courseCertificate: 'TTC/Certificate',
+    onlineInfo: {
+      courseMode: false,
+    },
+    residentialInfo: {
+      courseMode: true,
+      residentialMode: true
+    },
+    nonResidentialInfo: {
+      courseMode: true,
+      nonResidentialMode: true
+    },
+
     details: [
       {
         type: 'paragraph',
@@ -3888,6 +4057,26 @@ const ttc900hr = {
     nonResidential: true,
     residential: false,
     certficate: false,
+
+    tenure: '1 year',
+    courseType: 'Advance TTC (900 Hour Courses)',
+    language: 'Hindi',
+    preRequisite: '7 Days Health Camp, 21 Days Better Living Course, 200 Hours Teacher Training Course',
+    courseCategory: 'Educational', 
+    courseSubType: '900 Hour Yoga Teacher Training',
+    
+    courseCertificate: 'TTC/Certificate',
+    onlineInfo: {
+      courseMode: true,
+    },
+    residentialInfo: {
+      courseMode: false,
+      residentialMode: false
+    },
+    nonResidentialInfo: {
+      courseMode: true,
+      nonResidentialMode: true
+    },
     details: [
       {
         type: 'paragraph',
@@ -4587,6 +4776,27 @@ const ttc900hr = {
     nonResidential: true,
     residential: true,
     certficate: false,
+
+    tenure: '2 year',
+    courseType: 'Advance TTC (900 Hour Courses)',
+    language: 'English',
+    preRequisite: '7 Days Health Camp, 21 Days Better Living Course, 200 Hours Teacher Training Course',
+    courseCategory: 'Educational', 
+    courseSubType: '900 Hour Yoga Teacher Training',
+    
+    courseCertificate: 'TTC/Certificate',
+    onlineInfo: {
+      courseMode: true,
+    },
+    residentialInfo: {
+      courseMode: false,
+      residentialMode: false
+    },
+    nonResidentialInfo: {
+      courseMode: true,
+      nonResidentialMode: true
+    },
+
     details: [
       {
         type: 'paragraph',
@@ -5272,6 +5482,26 @@ const ttc900hr = {
     residential: false,
     certficate: false,
 
+    tenure: '4 month',
+    courseType: 'Advance TTC (900 Hour Courses)',
+    language: 'English',
+    preRequisite: '7 Days Health Camp, 21 Days Better Living Course, 200 Hours Teacher Training Course',
+    courseCategory: 'Educational', 
+    courseSubType: '900 Hour Yoga Teacher Training',
+    
+    courseCertificate: 'TTC/Certificate',
+    onlineInfo: {
+      courseMode: true,
+    },
+    residentialInfo: {
+      courseMode: false,
+      residentialMode: false
+    },
+    nonResidentialInfo: {
+      courseMode: false,
+      nonResidentialMode: false
+    },
+
     details: [
       {
         type: 'paragraph',
@@ -5913,6 +6143,27 @@ const ttc900hr = {
     nonResidential: true,
     residential: true,
     certficate: false,
+
+    tenure: '7 month',
+    courseType: 'Advance TTC (900 Hour Courses)',
+    language: 'English',
+    preRequisite: '7 Days Health Camp, 21 Days Better Living Course, 200 Hours Teacher Training Course',
+    courseCategory: 'Educational', 
+    courseSubType: '900 Hour Yoga Teacher Training',
+    
+    courseCertificate: 'TTC/Certificate',
+    onlineInfo: {
+      courseMode: true,
+    },
+    residentialInfo: {
+      courseMode: false,
+      residentialMode: false
+    },
+    nonResidentialInfo: {
+      courseMode: true,
+      nonResidentialMode: true
+    },
+
     details: [
       {
         type: 'paragraph',
@@ -6724,6 +6975,27 @@ const camps = {
     nonResidential: false,
     residential: false,
     certficate: false,
+
+    tenure: '',
+    courseType: 'Camps & Workshop',
+    language: 'English',
+    preRequisite: 'None',
+    courseCategory: 'Self Help', 
+    courseSubType: 'Camps & Workshops',
+    
+    courseCertificate: 'NO',
+    onlineInfo: {
+      courseMode: false,
+    },
+    residentialInfo: {
+      courseMode: false,
+      residentialMode: false
+    },
+    nonResidentialInfo: {
+      courseMode: true,
+      nonResidentialMode: true
+    },
+
     details: [
       {
         type: 'paragraph',
@@ -6866,6 +7138,27 @@ const camps = {
     nonResidential: false,
     residential: false,
     certficate: false,
+
+    tenure: '',
+    courseType: 'Camps & Workshop',
+    language: 'English',
+    preRequisite: 'None',
+    courseCategory: 'Self Help', 
+    courseSubType: 'Camps & Workshops',
+    
+    courseCertificate: 'NO',
+    onlineInfo: {
+      courseMode: false,
+    },
+    residentialInfo: {
+      courseMode: false,
+      residentialMode: false
+    },
+    nonResidentialInfo: {
+      courseMode: true,
+      nonResidentialMode: true
+    },
+
     details: [
       {
         type: 'paragraph',
@@ -7459,6 +7752,26 @@ const camps = {
     nonResidential: false,
     residential: false,
     certficate: false,
+
+    tenure: '',
+    courseType: 'Camps & Workshop',
+    language: 'English',
+    preRequisite: 'None',
+    courseCategory: 'Self Help', 
+    courseSubType: 'Camps & Workshops',
+    
+    courseCertificate: 'NO',
+    onlineInfo: {
+      courseMode: false,
+    },
+    residentialInfo: {
+      courseMode: false,
+      residentialMode: false
+    },
+    nonResidentialInfo: {
+      courseMode: true,
+      nonResidentialMode: true
+    },
     details: [
       {
         type: 'paragraph',
@@ -7753,6 +8066,27 @@ const camps = {
     nonResidential: false,
     residential: false,
     certficate: false,
+
+    tenure: '',
+    courseType: 'Camps & Workshop',
+    language: 'English',
+    preRequisite: 'None',
+    courseCategory: 'Self Help', 
+    courseSubType: 'Camps & Workshops',
+    
+    courseCertificate: 'NO',
+    onlineInfo: {
+      courseMode: false,
+    },
+    residentialInfo: {
+      courseMode: false,
+      residentialMode: false
+    },
+    nonResidentialInfo: {
+      courseMode: true,
+      nonResidentialMode: true
+    },
+
     details: [
       {
         type: 'paragraph',
@@ -7912,6 +8246,27 @@ const camps = {
     nonResidential: false,
     residential: false,
     certficate: false,
+    
+    tenure: '',
+    courseType: 'Camps & Workshop',
+    language: 'English',
+    preRequisite: 'None',
+    courseCategory: 'Self Help', 
+    courseSubType: 'Camps & Workshops',
+    
+    courseCertificate: 'NO',
+    onlineInfo: {
+      courseMode: false,
+    },
+    residentialInfo: {
+      courseMode: false,
+      residentialMode: false
+    },
+    nonResidentialInfo: {
+      courseMode: true,
+      nonResidentialMode: true
+    },
+
     details: [
       {
         type: 'paragraph',
@@ -8064,6 +8419,27 @@ const camps = {
     nonResidential: false,
     residential: false,
     certficate: false,
+
+    tenure: '',
+    courseType: 'Camps & Workshop',
+    language: 'English',
+    preRequisite: 'None',
+    courseCategory: 'Self Help', 
+    courseSubType: 'Camps & Workshops',
+    
+    courseCertificate: 'NO',
+    onlineInfo: {
+      courseMode: false,
+    },
+    residentialInfo: {
+      courseMode: false,
+      residentialMode: false
+    },
+    nonResidentialInfo: {
+      courseMode: true,
+      nonResidentialMode: true
+    },
+
     details: [
       {
         type: 'paragraph',
@@ -8210,6 +8586,28 @@ const camps = {
     nonResidential: false,
     residential: false,
     certficate: false,
+
+    tenure: '',
+    courseType: 'Camps & Workshop',
+    language: 'English',
+    preRequisite: 'None',
+    courseCategory: 'Self Help', 
+    courseSubType: 'Camps & Workshops',
+    
+    courseCertificate: 'NO',
+    onlineInfo: {
+      courseMode: false,
+    },
+    residentialInfo: {
+      courseMode: false,
+      residentialMode: false
+    },
+    nonResidentialInfo: {
+      courseMode: true,
+      nonResidentialMode: true
+    },
+
+
     details: [
       {
         type: 'paragraph',
@@ -8357,6 +8755,27 @@ const camps = {
     nonResidential: false,
     residential: false,
     certficate: false,
+
+    tenure: '',
+    courseType: 'Camps & Workshop',
+    language: 'English',
+    preRequisite: 'None',
+    courseCategory: 'Self Help', 
+    courseSubType: 'Camps & Workshops',
+    
+    courseCertificate: 'NO',
+    onlineInfo: {
+      courseMode: false,
+    },
+    residentialInfo: {
+      courseMode: false,
+      residentialMode: false
+    },
+    nonResidentialInfo: {
+      courseMode: true,
+      nonResidentialMode: true
+    },
+
     details: [
       {
         type: 'paragraph',
@@ -8502,6 +8921,27 @@ const camps = {
     nonResidential: false,
     residential: false,
     certficate: false,
+
+    tenure: '',
+    courseType: 'Camps & Workshop',
+    language: 'English',
+    preRequisite: 'None',
+    courseCategory: 'Self Help', 
+    courseSubType: 'Camps & Workshops',
+    
+    courseCertificate: 'NO',
+    onlineInfo: {
+      courseMode: false,
+    },
+    residentialInfo: {
+      courseMode: false,
+      residentialMode: false
+    },
+    nonResidentialInfo: {
+      courseMode: true,
+      nonResidentialMode: true
+    },
+
     details: [
       {
         type: 'paragraph',
@@ -8653,6 +9093,27 @@ const camps = {
     nonResidential: false,
     residential: false,
     certficate: false,
+
+    tenure: '',
+    courseType: 'Camps & Workshop',
+    language: 'English',
+    preRequisite: 'None',
+    courseCategory: 'Self Help', 
+    courseSubType: 'Camps & Workshops',
+    
+    courseCertificate: 'NO',
+    onlineInfo: {
+      courseMode: false,
+    },
+    residentialInfo: {
+      courseMode: false,
+      residentialMode: false
+    },
+    nonResidentialInfo: {
+      courseMode: true,
+      nonResidentialMode: true
+    },
+
     details: [
       {
         type: 'paragraph',
@@ -8803,6 +9264,27 @@ const camps = {
     nonResidential: false,
     residential: false,
     certficate: false,
+
+    tenure: '',
+    courseType: 'Camps & Workshop',
+    language: 'English',
+    preRequisite: 'None',
+    courseCategory: 'Self Help', 
+    courseSubType: 'Camps & Workshops',
+    
+    courseCertificate: 'NO',
+    onlineInfo: {
+      courseMode: false,
+    },
+    residentialInfo: {
+      courseMode: false,
+      residentialMode: false
+    },
+    nonResidentialInfo: {
+      courseMode: true,
+      nonResidentialMode: true
+    },
+
     details: [
       {
         type: 'paragraph',
@@ -8936,6 +9418,27 @@ const camps = {
     nonResidential: true,
     residential: true,
     certficate: false,
+
+    tenure: '7 days',
+    courseType: '7 DAYS HEALTH CAMP',
+    language: 'Hindi',
+    preRequisite: 'None',
+    courseCategory: 'Self Help', 
+    courseSubType: '7 Days Health Camp',
+    
+    courseCertificate: 'NO',
+    onlineInfo: {
+      courseMode: false,
+    },
+    residentialInfo: {
+      courseMode: true,
+      residentialMode: true
+    },
+    nonResidentialInfo: {
+      courseMode: true,
+      nonResidentialMode: true
+    },
+
     mostPopular: true,
     rating: 5,
     colorCode: '#EDBE66',
@@ -9277,6 +9780,28 @@ const camps = {
     nonResidential: true,
     residential: true,
     certficate: false,
+
+    tenure: '7 days',
+    courseType: '7 DAYS HEALTH CAMP',
+    language: 'English',
+    preRequisite: 'None',
+    courseCategory: 'Self Help', 
+    courseSubType: '7 Days Health Camp',
+    
+    courseCertificate: 'NO',
+    onlineInfo: {
+      courseMode: false,
+    },
+    residentialInfo: {
+      courseMode: true,
+      residentialMode: true
+    },
+    nonResidentialInfo: {
+      courseMode: true,
+      nonResidentialMode: true
+    },
+
+
     mostPopular: true,
     rating: 5,
     colorCode: '#EDBE66',
@@ -9617,6 +10142,27 @@ const camps = {
     nonResidential: false,
     residential: false,
     certficate: false,
+
+    // tenure: '',
+    // courseType: '21-Days Better living Course',
+    // language: 'English',
+    // preRequisite: 'None',
+    // courseCategory: 'Self Help', 
+    // courseSubType: 'Yoga Course',
+    
+    // courseCertificate: 'certificate Of Participation',
+    // onlineInfo: {
+    //   courseMode: false,
+    // },
+    // residentialInfo: {
+    //   courseMode: false,
+    //   residentialMode: false
+    // },
+    // nonResidentialInfo: {
+    //   courseMode: true,
+    //   nonResidentialMode: true
+    // },
+
     mostPopular: true,
     rating: 5,
     colorCode: '#EDBE66',
@@ -9977,7 +10523,29 @@ const camps = {
     nonResidential: false,
     residential: false,
     certficate: false,
+
+    tenure: '',
+    courseType: '21-Days Better living Course',
+    language: 'English',
+    preRequisite: 'None',
+    courseCategory: 'Self Help', 
+    courseSubType: '21 Days Better Living',
+    
+    courseCertificate: 'certificate Of Participation',
+    onlineInfo: {
+      courseMode: true,
+    },
+    residentialInfo: {
+      courseMode: false,
+      residentialMode: false
+    },
+    nonResidentialInfo: {
+      courseMode: true,
+      nonResidentialMode: true
+    },
+
     mostPopular: true,
+
     rating: 5,
     colorCode: '#EDBE66',
     timing: 'Evening 6:30 pm – 8:00 pm (IST)',
@@ -10338,6 +10906,27 @@ const camps = {
     nonResidential: false,
     residential: false,
     certficate: false,
+
+    tenure: '',
+    courseType: '21-Days Better living Course',
+    language: 'Hindi',
+    preRequisite: 'None',
+    courseCategory: 'Self Help', 
+    courseSubType: '21 Days Better Living',
+    
+    courseCertificate: 'certificate Of Participation',
+    onlineInfo: {
+      courseMode: true,
+    },
+    residentialInfo: {
+      courseMode: false,
+      residentialMode: false
+    },
+    nonResidentialInfo: {
+      courseMode: true,
+      nonResidentialMode: true
+    },
+
     mostPopular: true,
     rating: 5,
     colorCode: '#EDBE66',
@@ -11045,6 +11634,26 @@ const classes = {
     nonResidential: false,
     residential: false,
     certficate: true,
+
+    tenure: '',
+    courseType: '',
+    language: 'English',
+    preRequisite: 'None',
+    courseCategory: 'Self Help', 
+    courseSubType: 'Regular Asana Classes',
+    
+    courseCertificate: 'NO',
+    onlineInfo: {
+      courseMode: true,
+    },
+    residentialInfo: {
+      courseMode: false,
+      residentialMode: false
+    },
+    nonResidentialInfo: {
+      courseMode: false,
+      nonResidentialMode: false
+    },
     details: [
       {
         type: 'paragraph',
@@ -11127,6 +11736,28 @@ const classes = {
     nonResidential: false,
     residential: false,
     certficate: false,
+
+    tenure: '',
+    courseType: "HEALING YOGA MOVEMENT",
+    language: 'English',
+    preRequisite: 'None',
+    courseCategory: 'Self Help', 
+    courseSubType: 'Regular Asana Classes',
+    
+    courseCertificate: 'NO',
+    onlineInfo: {
+      courseMode: true,
+    },
+    residentialInfo: {
+      courseMode: false,
+      residentialMode: false
+    },
+    nonResidentialInfo: {
+      courseMode: false,
+      nonResidentialMode: false
+    },
+
+
     details: [
       {
         type: 'paragraph',
@@ -11234,6 +11865,27 @@ const classes = {
     nonResidential: false,
     residential: false,
     certficate: false,
+
+    tenure: '',
+    courseType: 'Regular Asana Classes 1/ Online',
+    language: 'English',
+    preRequisite: 'None',
+    courseCategory: 'Self Help', 
+    courseSubType: 'Regular Asana Classes',
+    
+    courseCertificate: 'NO',
+    onlineInfo: {
+      courseMode: true,
+    },
+    residentialInfo: {
+      courseMode: false,
+      residentialMode: false
+    },
+    nonResidentialInfo: {
+      courseMode: false,
+      nonResidentialMode: false
+    },
+
     details: [
       {
         type: 'paragraph',
@@ -11467,6 +12119,27 @@ const classes = {
     nonResidential: false,
     residential: false,
     certficate: false,
+
+    tenure: '',
+    courseType: 'Regular Asana Classes 1/ on campus',
+    language: 'English',
+    preRequisite: 'None',
+    courseCategory: 'Self Help', 
+    courseSubType: 'Regular Asana Classes',
+    
+    courseCertificate: 'NO',
+    onlineInfo: {
+      courseMode: false,
+    },
+    residentialInfo: {
+      courseMode: false,
+      residentialMode: false
+    },
+    nonResidentialInfo: {
+      courseMode: true,
+      nonResidentialMode: true
+    },
+
     details: [
       {
         type: 'paragraph',
@@ -11595,6 +12268,26 @@ const classes = {
     nonResidential: false,
     residential: false,
     certficate: false,
+
+    tenure: '',
+    courseType: 'Regular Asana Classes 1/ on campus',
+    language: 'English',
+    preRequisite: 'None',
+    courseCategory: 'Self Help', 
+    courseSubType: 'Regular Asana Classes',
+    
+    courseCertificate: 'NO',
+    onlineInfo: {
+      courseMode: false,
+    },
+    residentialInfo: {
+      courseMode: false,
+      residentialMode: false
+    },
+    nonResidentialInfo: {
+      courseMode: true,
+      nonResidentialMode: true
+    },
     details: [
       {
         type: 'paragraph',
@@ -11890,6 +12583,27 @@ const classes = {
     nonResidential: false,
     residential: false,
     certficate: false,
+
+    tenure: '',
+    courseType: 'Regular Meditation Foundation Course',
+    language: 'English',
+    preRequisite: 'None',
+    courseCategory: 'Self Help', 
+    courseSubType: 'Regular Asana Classes',
+    
+    courseCertificate: 'NO',
+    onlineInfo: {
+      courseMode: true,
+    },
+    residentialInfo: {
+      courseMode: false,
+      residentialMode: false
+    },
+    nonResidentialInfo: {
+      courseMode: false,
+      nonResidentialMode: false
+    },
+
     details: [
       {
         type: 'paragraph',
@@ -11996,6 +12710,27 @@ const classes = {
     nonResidential: false,
     residential: false,
     certficate: false,
+
+    tenure: '',
+    courseType: 'Regular Class - 2 Regular Meditation Class',
+    language: 'English',
+    preRequisite: 'None',
+    courseCategory: 'Self Help', 
+    courseSubType: 'Regular Asana Classes',
+    
+    courseCertificate: 'NO',
+    onlineInfo: {
+      courseMode: true,
+    },
+    residentialInfo: {
+      courseMode: false,
+      residentialMode: false
+    },
+    nonResidentialInfo: {
+      courseMode: false,
+      nonResidentialMode: false
+    },
+
     details: [
       {
         type: 'paragraph',
@@ -12376,6 +13111,25 @@ const classes = {
     nonResidential: false,
     residential: false,
     certficate: false,
+    tenure: '',
+    courseType: 'Regular Class - 2',
+    language: 'English',
+    preRequisite: 'None',
+    courseCategory: 'Self Help', 
+    courseSubType: 'Regular Asana Classes',
+    
+    courseCertificate: 'NO',
+    onlineInfo: {
+      courseMode: true,
+    },
+    residentialInfo: {
+      courseMode: false,
+      residentialMode: false
+    },
+    nonResidentialInfo: {
+      courseMode: false,
+      nonResidentialMode: false
+    },
     details: [
       {
         type: 'paragraph',
@@ -12554,6 +13308,27 @@ const classes = {
     nonResidential: true,
     residential: false,
     certficate: false,
+
+    tenure: '',
+    courseType: "samatwam health checkup",
+    language: 'English',
+    preRequisite: 'None',
+    courseCategory: 'Self Help', 
+    courseSubType: 'Camps & Workshops',
+    
+    courseCertificate: 'NO',
+    onlineInfo: {
+      courseMode: false,
+    },
+    residentialInfo: {
+      courseMode: false,
+      residentialMode: false
+    },
+    nonResidentialInfo: {
+      courseMode: true,
+      nonResidentialMode: true
+    },
+
     details: [
       {
         type: 'paragraph',
@@ -12665,6 +13440,27 @@ const classes = {
     nonResidential: false,
     residential: false,
     certficate: false,
+
+    tenure: '',
+    courseType: "Couple's Classes Online",
+    language: 'English',
+    preRequisite: 'None',
+    courseCategory: 'Self Help', 
+    courseSubType: 'Regular Asana Classes',
+    
+    courseCertificate: 'NO',
+    onlineInfo: {
+      courseMode: true,
+    },
+    residentialInfo: {
+      courseMode: false,
+      residentialMode: false
+    },
+    nonResidentialInfo: {
+      courseMode: false,
+      nonResidentialMode: false
+    },
+
     details: [
       {
         type: 'paragraph',
@@ -12963,6 +13759,27 @@ const classes = {
     nonResidential: false,
     residential: false,
     certficate: false,
+
+    tenure: '',
+    courseType: 'Regular Meditation Foundation Course',
+    language: 'English',
+    preRequisite: 'None',
+    courseCategory: 'Self Help', 
+    courseSubType: 'Regular Asana Classes',
+    
+    courseCertificate: 'NO',
+    onlineInfo: {
+      courseMode: true,
+    },
+    residentialInfo: {
+      courseMode: false,
+      residentialMode: false
+    },
+    nonResidentialInfo: {
+      courseMode: true,
+      nonResidentialMode: true
+    },
+
     details: [
       {
         type: 'paragraph',
@@ -13290,6 +14107,27 @@ const certificate = {
     nonResidential: false,
     residential: false,
     certficate: false,
+
+    tenure: '',
+    courseType: 'Certificate Yoga Therapy Course - Online',
+    language: 'English',
+    preRequisite: 'None',
+    courseCategory: 'Educational', 
+    courseSubType: 'Special Course - Pranayama',
+    
+    courseCertificate: 'Certificate',
+    onlineInfo: {
+      courseMode: true,
+    },
+    residentialInfo: {
+      courseMode: false,
+      residentialMode: false
+    },
+    nonResidentialInfo: {
+      courseMode: false,
+      nonResidentialMode: false
+    },
+
     details: [
       {
         type: 'paragraph',
@@ -13563,6 +14401,27 @@ const certificate = {
     nonResidential: false,
     residential: false,
     certficate: true,
+
+    tenure: '',
+    courseType: 'Certificate Yoga Therapy Course - Online',
+    language: 'English',
+    preRequisite: '200 Hour Teacher Training Course',
+    courseCategory: 'Educational', 
+    courseSubType: 'Special Course - Cancer',
+    
+    courseCertificate: 'Certificate',
+    onlineInfo: {
+      courseMode: true,
+    },
+    residentialInfo: {
+      courseMode: false,
+      residentialMode: false
+    },
+    nonResidentialInfo: {
+      courseMode: false,
+      nonResidentialMode: false
+    },
+
     details: [
       {
         type: 'paragraph',
@@ -13684,6 +14543,27 @@ const certificate = {
     nonResidential: false,
     residential: false,
     certficate: false,
+
+    tenure: '',
+    courseType: 'Certificate Yoga Therapy Course - Online',
+    language: 'English',
+    preRequisite: '500 Hour Teacher Training Course, 900 Hour Teacher Training Course ',
+    courseCategory: 'Educational', 
+    courseSubType: 'Special Course - Cancer',
+    
+    courseCertificate: 'Certificate',
+    onlineInfo: {
+      courseMode: true,
+    },
+    residentialInfo: {
+      courseMode: false,
+      residentialMode: false
+    },
+    nonResidentialInfo: {
+      courseMode: false,
+      nonResidentialMode: false
+    },
+
     details: [
       {
         type: 'paragraph',
@@ -13768,6 +14648,27 @@ const certificate = {
     nonResidential: false,
     residential: false,
     certficate: true,
+
+    tenure: '',
+    courseType: 'Certificate Yoga Therapy Course - Online & On Campus',
+    language: 'English',
+    preRequisite: '500 Hour Teacher Training Course, 900 Hour Teacher Training Course ',
+    courseCategory: 'Educational', 
+    courseSubType: 'Special Course - Therapy',
+    
+    courseCertificate: 'Certificate',
+    onlineInfo: {
+      courseMode: true,
+    },
+    residentialInfo: {
+      courseMode: false,
+      residentialMode: false
+    },
+    nonResidentialInfo: {
+      courseMode: false,
+      nonResidentialMode: false
+    },
+
     details: [
       {
         type: 'paragraph',

@@ -5,7 +5,18 @@ export const handleCTCourseClick = ({
   key,
   fees,
   timing,
+  tenure,
   category,
+  pageName,
+  courseCategory,
+  courseSubType,
+  onlineMode,
+  residentialMode,
+  nonResidentialMode,
+  residentialLocation,
+  nonResidentialLocation,
+  courseType,
+  language,
   batch,
   coursesList,
   nonResidential,
@@ -14,29 +25,37 @@ export const handleCTCourseClick = ({
 }) => {
     // Trigger CleverTap event on button click
     const urlPath = window.location.pathname; // Get the pathname from the URL
-    const pageName = urlPath.split('/').filter(Boolean).pop() || 'Home'; // Extract the last segment or default to 'Home'
+    // const pageName = urlPath.split('/').filter(Boolean).pop() || 'Home'; // Extract the last segment or default to 'Home'
 
       // Determine the course mode
       let courseMode = "";
-      if (online) {
+      if (onlineMode) {
         courseMode = "Online";
-        if (nonResidential || residential) {
-          courseMode += ", Offline";
+        if (residentialMode || nonResidentialMode) {
+          courseMode += ", OnCampus";
         }
       } else {
-        courseMode = "Offline";
+        courseMode = "OnCampus";
       }
 
 
       // Determine the course location
     let courseLocation = "NA";
-    if (residential && nonResidential) {
+    if (residentialLocation && nonResidentialLocation) {
       courseLocation = "Residential, Non-Residential";
-    } else if (residential) {
+    } else if (residentialLocation) {
       courseLocation = "Residential";
-    } else if (nonResidential) {
+    } else if (nonResidentialLocation) {
       courseLocation = "Non-Residential";
     }
+
+    // tenure
+    if(tenure === '') {
+      tenure = 'NA'
+    }
+
+    const baseUrl = window.location.origin;
+    const fullUrl = `${baseUrl}/${pageName}`;
 
     if (window?.clevertap) {
       window.clevertap.event.push("Course_Clicked", {
@@ -44,19 +63,19 @@ export const handleCTCourseClick = ({
         // "Enrollmentdate": "15 July - 7 Sept",
         // "Start_Date": "15 July",
         // "End_date": "7 Sept",
-        "Page_name": pageName.charAt(0).toUpperCase() + pageName.slice(1),
+        "Page_name": pageName,
         "Fees_Residential_OnCampus": fees.offlineFee.residentialFee,
         "Fees_Non_Residential_OnCampus": fees.offlineFee.nonResidentialFee,
         "Fees_Online": fees.onlineFee,
         "Timings": timing,
-        "Page_Url": window.location.href,
-        // "Tenure": "1/2/3 Month",
-        "Course Category": category,
-        // "Course-SubType": "Workshop",
+        "Page_Url": fullUrl,
+        "Tenure": tenure,
+        "Course Category": courseCategory,
+        "Course-SubType": courseSubType,
         "Course Mode": courseMode,
         "Course Location": courseLocation,
-        // "Course Type": "7 Day/21 Day/TTC/Camps & Workshops",
-        // "Language": "English/Hindi",
+        "Course Type": courseType,
+        "Language": language,
         // "Day_Type": "Weekend/Weekday",
         "Batch_No": batch,
         "date_time_timestamp": new Date().toISOString()
@@ -74,6 +93,16 @@ export const handleCTCourseClick = ({
     courseTitle,
     fees,
     timing,
+    tenure,
+    courseCategory,
+    courseSubType,
+    onlineMode,
+    residentialMode,
+    nonResidentialMode,
+    residentialLocation,
+    nonResidentialLocation,
+    courseType,
+    language,
     category,
     batch,
     nonResidential,
@@ -89,27 +118,34 @@ export const handleCTCourseClick = ({
     // Extract the portion after the last '/' and remove the leading '/'
     const extractedKey = currentPath.split('/').pop().replace(/-/g, ' ');
        // Trigger the course_viewed event when the component mounts
-  
-       // Determine the course mode
-    let courseMode = "";
-    if (online) {
-      courseMode = "Online";
-      if (nonResidential || residential) {
-        courseMode += ", Offline";
-      }
-    } else {
-      courseMode = "Offline";
-    }
-  
-    // Determine the course location
-    let courseLocation = "NA";
-    if (residential && nonResidential) {
-      courseLocation = "Residential, Non-Residential";
-    } else if (residential) {
-      courseLocation = "Residential";
-    } else if (nonResidential) {
-      courseLocation = "Non-Residential";
-    }
+   // Determine the course mode
+   let courseMode = "";
+   if (onlineMode) {
+     courseMode = "Online";
+     if (residentialMode || nonResidentialMode) {
+       courseMode += ", OnCampus";
+     }
+   } else {
+     courseMode = "OnCampus";
+   }
+
+
+   // Determine the course location
+ let courseLocation = "NA";
+ if (residentialLocation && nonResidentialLocation) {
+   courseLocation = "Residential, Non-Residential";
+ } else if (residentialLocation) {
+   courseLocation = "Residential";
+ } else if (nonResidentialLocation) {
+   courseLocation = "Non-Residential";
+ }
+
+ // tenure
+ if(tenure === '') {
+   tenure = 'NA'
+ }
+
+
     // Trigger CleverTap event on button click
     if (window?.clevertap) {
       window.clevertap.event.push("Course_Enroll_Click", {
@@ -123,13 +159,13 @@ export const handleCTCourseClick = ({
         "Fees_Online": fees.onlineFee,
         "Timings": timing,
         "Page_Url": window.location.href,
-        // "Tenure": "1/2/3 Month",
-        "Course Category": category,
-        // "Course-SubType": "Workshop",
+        "Tenure": tenure,
+        "Course Category": courseCategory,
+        "Course-SubType": courseSubType,
         "Course Mode": courseMode,
         "Course Location": courseLocation,
-        // "Course Type": "7 Day/21 Day/TTC/Camps & Workshops",
-        // "Language": "English/Hindi",
+        "Course Type": courseType,
+        "Language": language,
         // "Day_Type": "Weekend/Weekday",
         "Batch_No": batch,
         "date_time_timestamp": new Date().toISOString()
@@ -148,6 +184,17 @@ export const handleCTCourseClick = ({
     courseTitle,
     fees,
     timing,
+    tenure,
+    courseCategory,
+    courseSubType,
+    onlineMode,
+    residentialMode,
+    nonResidentialMode,
+    residentialLocation,
+    nonResidentialLocation,
+    courseType,
+    language,
+    PreRequisite,
     category,
     batch,
     nonResidential,
@@ -173,31 +220,38 @@ export const handleCTCourseClick = ({
     }
   }
   
-       // Determine the course mode
-    let courseMode = "";
-    if (online) {
-      courseMode = "Online";
-      if (nonResidential || residential) {
-        courseMode += ", Offline";
-      }
-    } else {
-      courseMode = "Offline";
+  let courseMode = "";
+  if (onlineMode) {
+    courseMode = "Online";
+    if (residentialMode || nonResidentialMode) {
+      courseMode += ", OnCampus";
     }
-  
-    // Determine the course location
-    let courseLocation = "NA";
-    if (residential && nonResidential) {
-      courseLocation = "Residential, Non-Residential";
-    } else if (residential) {
-      courseLocation = "Residential";
-    } else if (nonResidential) {
-      courseLocation = "Non-Residential";
-    }
+  } else {
+    courseMode = "OnCampus";
+  }
+
+
+  // Determine the course location
+let courseLocation = "NA";
+if (residentialLocation && nonResidentialLocation) {
+  courseLocation = "Residential, Non-Residential";
+} else if (residentialLocation) {
+  courseLocation = "Residential";
+} else if (nonResidentialLocation) {
+  courseLocation = "Non-Residential";
+}
+
+// tenure
+if(tenure === '') {
+  tenure = 'NA'
+}
+
+
     // Trigger CleverTap event on button click
     if (window?.clevertap) {
       window.clevertap.event.push("Course_Enrollment_Submit", {
         "Course_name": courseTitle,
-        // "Enrollmentdate": "15 July - 7 Sept",
+        "Enrollmentdate": date,
         "Start_Date": startDate,
         "End_date": endDate,
         "Page_name": extractedKey,
@@ -206,13 +260,14 @@ export const handleCTCourseClick = ({
         "Fees_Online": fees.onlineFee,
         "Timings": timing,
         "Page_Url": window.location.href,
-        // "Tenure": "1/2/3 Month",
-        "Course Category": category,
-        // "Course-SubType": "Workshop",
+        "Tenure": tenure,
+        "Course Category": courseCategory,
+        "Course-SubType": courseSubType,
         "Course Mode": courseMode,
         "Course Location": courseLocation,
-        // "Course Type": "7 Day/21 Day/TTC/Camps & Workshops",
-        // "Language": "English/Hindi",
+        "Course Type": courseType,
+        "Language": language,
+        "PreRequisite": PreRequisite,
         // "Day_Type": "Weekend/Weekday",
         "Batch_No": batch,
         "date_time_timestamp": new Date().toISOString()
@@ -393,7 +448,11 @@ export const handleCTPaymentCompletedCourse = ({
   feesOnline,
   timings,
   tenure,
-  courseMode,
+  onlineMode,
+    residentialMode,
+    nonResidentialMode,
+    residentialLocation,
+    nonResidentialLocation,
   courseType,
   courseSubType,
   language,
@@ -414,6 +473,33 @@ export const handleCTPaymentCompletedCourse = ({
   medicalIssues,
   residentialStatus,
 }) => {
+
+  let courseMode = "";
+  if (onlineMode) {
+    courseMode = "Online";
+    if (residentialMode || nonResidentialMode) {
+      courseMode += ", OnCampus";
+    }
+  } else {
+    courseMode = "OnCampus";
+  }
+
+
+  // Determine the course location
+let courseLocation = "NA";
+if (residentialLocation && nonResidentialLocation) {
+  courseLocation = "Residential, Non-Residential";
+} else if (residentialLocation) {
+  courseLocation = "Residential";
+} else if (nonResidentialLocation) {
+  courseLocation = "Non-Residential";
+}
+
+// tenure
+if(tenure === '') {
+  tenure = 'NA'
+}
+
   if (window?.clevertap) {
     window.clevertap.event.push("Payment_Completed_Course", {
       "Cost": cost,

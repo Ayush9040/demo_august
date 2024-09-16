@@ -111,23 +111,29 @@ const CourseDetails = ({ pageDate }) => {
 
      // Determine the course mode
   let courseMode = "";
-  if (pageDate.online) {
+  if (pageDate?.onlineInfo?.courseMode) {
     courseMode = "Online";
-    if (pageDate.nonResidential || pageDate.residential) {
-      courseMode += ", Offline";
+    if (pageDate?.nonResidentialInfo?.courseMode || pageDate?.residentialInfo?.courseMode ) {
+      courseMode += ", OnCampus";
     }
   } else {
-    courseMode = "Offline";
+    courseMode = "OnCampus";
   }
 
   // Determine the course location
   let courseLocation = "NA";
-  if (pageDate.residential && pageDate.nonResidential) {
+  if (pageDate?.residentialInfo?.residentialMode && pageDate?.nonResidentialInfo?.nonResidentialMode) {
     courseLocation = "Residential, Non-Residential";
-  } else if (pageDate.residential) {
+  } else if (pageDate?.residentialInfo?.residentialMode) {
     courseLocation = "Residential";
-  } else if (pageDate.nonResidential) {
+  } else if (pageDate?.nonResidentialInfo?.nonResidentialMode) {
     courseLocation = "Non-Residential";
+  }
+
+  let tenure = pageDate?.tenure;
+
+  if(pageDate?.tenure === '') {
+    tenure = 'NA'
   }
      
      if (pageDate) {
@@ -139,9 +145,13 @@ const CourseDetails = ({ pageDate }) => {
           "Fees_Online": pageDate?.fees?.onlineFee,
           "timing": pageDate?.timing,
           "Page_Url": window.location.href,
-          "Course Category ": pageDate.category,
+          "Tenure": tenure,
+          "Course Category ": pageDate?.courseCategory,
+          "Course-SubType": pageDate?.courseSubType,
+          "Course Type": pageDate?.courseType,
           "Course Mode": courseMode,
           "Course Location": courseLocation,
+          "Language": pageDate?.language,
           "Batch_No": pageDate?.batch,
           "date_time_timestamp": new Date().toISOString()
       });
@@ -150,9 +160,14 @@ const CourseDetails = ({ pageDate }) => {
  
   }, [pageDate])
 
+
   
 
-  console.log('Course Viewed Event', pageDate);
+
+
+  
+
+  // console.log('Course Viewed Event', pageDate);
 
 
   useEffect(() => {
@@ -425,6 +440,16 @@ const CourseDetails = ({ pageDate }) => {
               courseTitle: pageDate?.title,
               fees: pageDate?.fees,
               timing: pageDate?.timing,
+              tenure: pageDate?.tenure,
+              courseCategory: pageDate?.courseCategory,
+              courseSubType: pageDate?.courseSubType,
+              courseType: pageDate?.courseType,
+              onlineMode: pageDate?.onlineInfo?.courseMode,
+              residentialMode: pageDate?.residentialInfo?.courseMode,
+              nonResidentialMode: pageDate?.nonResidentialInfo?.courseMode,
+              residentialLocation: pageDate?.residentialInfo?.residentialMode,
+              nonResidentialLocation: pageDate?.nonResidentialInfo?.nonResidentialMode,
+              language: pageDate?.language,
               category: pageDate?.category,
               batch: pageDate?.Batch_No,
               nonResidential: pageDate?.nonResidential,
@@ -446,6 +471,16 @@ const CourseDetails = ({ pageDate }) => {
               courseTitle: pageDate?.title,
               fees: pageDate?.fees,
               timing: pageDate?.timing,
+              tenure: pageDate?.tenure,
+              courseCategory: pageDate?.courseCategory,
+              courseSubType: pageDate?.courseSubType,
+              courseType: pageDate?.courseType,
+              onlineMode: pageDate?.onlineInfo?.courseMode,
+              residentialMode: pageDate?.residentialInfo?.courseMode,
+              nonResidentialMode: pageDate?.nonResidentialInfo?.courseMode,
+              residentialLocation: pageDate?.residentialInfo?.residentialMode,
+              nonResidentialLocation: pageDate?.nonResidentialInfo?.nonResidentialMode,
+              language: pageDate?.language,
               category: pageDate?.category,
               batch: pageDate?.Batch_No,
               nonResidential: pageDate?.nonResidential,
@@ -618,6 +653,16 @@ const CourseDetails = ({ pageDate }) => {
               courseTitle: pageDate?.title,
               fees: pageDate?.fees,
               timing: pageDate?.timing,
+              tenure: pageDate?.tenure,
+              courseCategory: pageDate?.courseCategory,
+              courseSubType: pageDate?.courseSubType,
+              courseType: pageDate?.courseType,
+              onlineMode: pageDate?.onlineInfo?.courseMode,
+              residentialMode: pageDate?.residentialInfo?.courseMode,
+              nonResidentialMode: pageDate?.nonResidentialInfo?.courseMode,
+              residentialLocation: pageDate?.residentialInfo?.residentialMode,
+              nonResidentialLocation: pageDate?.nonResidentialInfo?.nonResidentialMode,
+              language: pageDate?.language,
               category: pageDate?.category,
               batch: pageDate?.Batch_No,
               nonResidential: pageDate?.nonResidential,
@@ -639,6 +684,16 @@ const CourseDetails = ({ pageDate }) => {
               courseTitle: pageDate?.title,
               fees: pageDate?.fees,
               timing: pageDate?.timing,
+              tenure: pageDate?.tenure,
+              courseCategory: pageDate?.courseCategory,
+              courseSubType: pageDate?.courseSubType,
+              courseType: pageDate?.courseType,
+              onlineMode: pageDate?.onlineInfo?.courseMode,
+              residentialMode: pageDate?.residentialInfo?.courseMode,
+              nonResidentialMode: pageDate?.nonResidentialInfo?.courseMode,
+              residentialLocation: pageDate?.residentialInfo?.residentialMode,
+              nonResidentialLocation: pageDate?.nonResidentialInfo?.nonResidentialMode,
+              language: pageDate?.language,
               category: pageDate?.category,
               batch: pageDate?.Batch_No,
               nonResidential: pageDate?.nonResidential,
@@ -660,6 +715,16 @@ const CourseDetails = ({ pageDate }) => {
               courseTitle: pageDate?.title,
               fees: pageDate?.fees,
               timing: pageDate?.timing,
+              tenure: pageDate?.tenure,
+              courseCategory: pageDate?.courseCategory,
+              courseSubType: pageDate?.courseSubType,
+              courseType: pageDate?.courseType,
+              onlineMode: pageDate?.onlineInfo?.courseMode,
+              residentialMode: pageDate?.residentialInfo?.courseMode,
+              nonResidentialMode: pageDate?.nonResidentialInfo?.courseMode,
+              residentialLocation: pageDate?.residentialInfo?.residentialMode,
+              nonResidentialLocation: pageDate?.nonResidentialInfo?.nonResidentialMode,
+              language: pageDate?.language,
               category: pageDate?.category,
               batch: pageDate?.Batch_No,
               nonResidential: pageDate?.nonResidential,
@@ -674,6 +739,16 @@ const CourseDetails = ({ pageDate }) => {
               courseTitle: pageDate?.title,
               fees: pageDate?.fees,
               timing: pageDate?.timing,
+              tenure: pageDate?.tenure,
+              courseCategory: pageDate?.courseCategory,
+              courseSubType: pageDate?.courseSubType,
+              courseType: pageDate?.courseType,
+              onlineMode: pageDate?.onlineInfo?.courseMode,
+              residentialMode: pageDate?.residentialInfo?.courseMode,
+              nonResidentialMode: pageDate?.nonResidentialInfo?.courseMode,
+              residentialLocation: pageDate?.residentialInfo?.residentialMode,
+              nonResidentialLocation: pageDate?.nonResidentialInfo?.nonResidentialMode,
+              language: pageDate?.language,
               category: pageDate?.category,
               batch: pageDate?.Batch_No,
               nonResidential: pageDate?.nonResidential,
