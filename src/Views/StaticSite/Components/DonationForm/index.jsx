@@ -10,6 +10,7 @@ import './style.scss'
 import { AnonymousDonation, donationPaymentOrder, successMail } from './api'
 import Loader from '../Loader'
 import { razorPayKey } from '../../../../Constants/appSettings'
+import { useSelector } from 'react-redux'
 
 
 const DonationForm = ( { csrId } ) => {
@@ -52,6 +53,47 @@ const DonationForm = ( { csrId } ) => {
   const [tax, setTax] = useState(false)
   const [loading, setLoading] = useState(false)
   const countries = Country.getAllCountries()
+
+  const nameFromRedux = useSelector((state) => state.auth.user.data?.firstName);
+  const phoneNumberFromRedux = useSelector((state) => state.auth.user.data?.phoneNumber);
+  const emailFromRedux = useSelector((state) => state.auth.user.data?.email);
+  const countryNameFromRedux = useSelector((state) => state.auth.user.data?.country);
+  const panNameFromRedux = useSelector((state) => state.auth.user.data?.pan);
+  const lnameNameFromRedux = useSelector((state) => state.auth.user.data?.lastName);
+  const dobNameFromRedux = useSelector((state) => state.auth.user.data?.dateOfBirth);
+
+  console.log('countryNameFromRedux ', countryNameFromRedux);
+  console.log('dobNameFromRedux ', dobNameFromRedux);
+
+  useEffect(() => {
+    if (countryNameFromRedux) {
+      setFormData((prev) => ({ ...prev, country: countryNameFromRedux }));
+      setValues((prev) => ({ ...prev, country: { label: countryNameFromRedux, value: countryNameFromRedux } }));
+    }
+    
+  }, [countryNameFromRedux, setFormData, setValues]);
+  
+
+  useEffect(() => {
+    if (nameFromRedux) {
+      setFormData((prev) => ({ ...prev, fName: nameFromRedux }));
+    }
+    if (phoneNumberFromRedux) {
+      setFormData((prev) => ({ ...prev, phone: phoneNumberFromRedux }));
+    }
+    if (emailFromRedux) {
+      setFormData((prev) => ({ ...prev, email: emailFromRedux }));
+    }
+    if (panNameFromRedux) {
+      setFormData((prev) => ({ ...prev, panNum: panNameFromRedux }));
+    }
+    if (lnameNameFromRedux) {
+      setFormData((prev) => ({ ...prev, lName: lnameNameFromRedux }));
+    }
+    if (dobNameFromRedux) {
+      setFormData((prev) => ({ ...prev, dob: dobNameFromRedux }));
+    }
+  }, [nameFromRedux, phoneNumberFromRedux, emailFromRedux, panNameFromRedux, lnameNameFromRedux, dobNameFromRedux, setFormData]);
 
   const updatedCountries = countries.map((country) => ({
     label: country.name,
