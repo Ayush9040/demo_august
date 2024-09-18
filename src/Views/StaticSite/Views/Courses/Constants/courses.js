@@ -12669,7 +12669,9 @@ const classes = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'classes',
-    dates: ['21st Jan 2024'],
+    dates: [
+      // '21st Jan 2024'
+    ],
     online: true,
     onCampus: false,
     nonResidential: false,
@@ -13570,7 +13572,9 @@ const certificate = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'certificate-course',
-    dates: ['2nd Aug to 7th Sep 2024', '15th Nov - 21st Dec 2024'],
+    dates: [
+      // '2nd Aug to 7th Sep 2024',
+       '15th Nov - 21st Dec 2024'],
     online: true,
     onCampus: true,
     nonResidential: false,
@@ -13691,7 +13695,9 @@ const certificate = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'certificate-course',
-    dates: ['2nd July to 6th July 2024',],
+    dates: [
+      // '2nd July to 6th July 2024',
+    ],
     online: true,
     onCampus: false,
     nonResidential: false,
@@ -13776,7 +13782,7 @@ const certificate = {
     },
     category: 'certificate-course',
     dates: [
-      '28th Aug  to 20th Dec 2024'
+      // '28th Aug  to 20th Dec 2024'
     ],
     online: true,
     onCampus: true,
