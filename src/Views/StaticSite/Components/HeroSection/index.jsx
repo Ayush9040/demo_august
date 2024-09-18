@@ -1,7 +1,9 @@
-import React from 'react'
+import React,{lazy, Suspense} from 'react'
 import './style.scss'
-import Navbar from '../Navbar'
-import MainVideo from '../MainVideo'
+// import Navbar from '../Navbar'
+// import MainVideo from '../MainVideo'
+const Navbar = lazy(() => import('../Navbar'))
+const MainVideo = lazy(() => import('../MainVideo'))
 
 const HeroSection = ({ isUserLoggedIn }) => {
 
