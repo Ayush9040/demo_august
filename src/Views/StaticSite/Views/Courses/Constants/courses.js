@@ -6026,7 +6026,7 @@ const ttc900hr = {
             [
               'Details',
 
-              'All yoga classes will be online except the last 15 days which are to be done mandatorily on-campus at the end of the course',
+              'All yoga classes will be online except the 15 days which are to be done mandatorily on campus towards the end of the course.',
 
               'All classes to be attended on campus',
             ],
