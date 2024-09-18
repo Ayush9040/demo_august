@@ -90,10 +90,19 @@ const DonationForm = ( { csrId } ) => {
     if (lnameNameFromRedux) {
       setFormData((prev) => ({ ...prev, lName: lnameNameFromRedux }));
     }
+  
+  }, [nameFromRedux, phoneNumberFromRedux, emailFromRedux, panNameFromRedux, lnameNameFromRedux, setFormData]);
+
+  useEffect(() => {
     if (dobNameFromRedux) {
+      // Convert ISO string to Date object
+      const parsedDate = new Date(dobNameFromRedux);
+      
+      // Set both formData and selectedDate states
       setFormData((prev) => ({ ...prev, dob: dobNameFromRedux }));
+      setSelectedDate(parsedDate);
     }
-  }, [nameFromRedux, phoneNumberFromRedux, emailFromRedux, panNameFromRedux, lnameNameFromRedux, dobNameFromRedux, setFormData]);
+  }, [dobNameFromRedux]);
 
   const updatedCountries = countries.map((country) => ({
     label: country.name,

@@ -11,6 +11,8 @@ import { createHomeTution } from '../Api'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import { authBaseDomain } from '../../../../../Constants/appSettings'
+import { useSelector } from 'react-redux'
+import { MultiSelect } from 'react-multi-select-component'
 
 const HomeTutions = () => {
   const [formData, setFormData] = useState({
@@ -28,10 +30,114 @@ const HomeTutions = () => {
     noOfPersons: '',
     PreferedDayAndTime: '',
     anyOtherComments: '',
+    days: [],
+    course: '',
     mode: '',
   })
   const [values, setValues] = useState([])
+  const [selectedDays, setSelectedDays] = useState([]);
+  const [selectedTime, setSelectedTime] = useState(''); 
   const [empty, setEmpty] = useState(0)
+
+  const nameFromRedux = useSelector((state) => state.auth.user.data?.firstName);
+  const phoneNumberFromRedux = useSelector((state) => state.auth.user.data?.phoneNumber);
+  const emailFromRedux = useSelector((state) => state.auth.user.data?.email);
+  const countryNameFromRedux = useSelector((state) => state.auth.user.data?.country);
+  const stateNameFromRedux = useSelector((state) => state.auth.user.data?.state);
+  const cityNameFromRedux = useSelector((state) => state.auth.user.data?.city);
+  const panNameFromRedux = useSelector((state) => state.auth.user.data?.pan);
+  const lnameNameFromRedux = useSelector((state) => state.auth.user.data?.lastName);
+  const dobNameFromRedux = useSelector((state) => state.auth.user.data?.dateOfBirth);
+  const genderFromRedux = useSelector((state) => state.auth.user.data?.gender);
+
+  console.log('countryNameFromRedux ', countryNameFromRedux);
+  console.log('dobNameFromRedux ', dobNameFromRedux);
+
+  useEffect(() => {
+    if (countryNameFromRedux) {
+      setFormData((prev) => ({ ...prev, country: countryNameFromRedux }));
+      setValues((prev) => ({ ...prev, country: { label: countryNameFromRedux, value: countryNameFromRedux } }));
+    }
+    if (stateNameFromRedux) {
+      setFormData((prev) => ({ ...prev, state: stateNameFromRedux }));
+      setValues((prev) => ({ ...prev, state: { label: stateNameFromRedux, value: stateNameFromRedux } }));
+    }
+    if (cityNameFromRedux) {
+      setFormData((prev) => ({ ...prev, city: cityNameFromRedux }));
+      setValues((prev) => ({ ...prev, city: { label: cityNameFromRedux, value: cityNameFromRedux } }));
+    }
+    
+  }, [countryNameFromRedux, cityNameFromRedux, stateNameFromRedux, setFormData, setValues]);
+  
+
+  useEffect(() => {
+    if (nameFromRedux) {
+      setFormData((prev) => ({ ...prev, name: nameFromRedux }));
+    }
+    if (phoneNumberFromRedux) {
+      setFormData((prev) => ({ ...prev, contact: phoneNumberFromRedux }));
+    }
+    if (emailFromRedux) {
+      setFormData((prev) => ({ ...prev, email: emailFromRedux }));
+    }
+    if (panNameFromRedux) {
+      setFormData((prev) => ({ ...prev, panNum: panNameFromRedux }));
+    }
+    
+  
+  }, [nameFromRedux, phoneNumberFromRedux, emailFromRedux, panNameFromRedux, setFormData]);
+
+
+
+  // Extract the date in 'YYYY-MM-DD' format
+  useEffect(() => {
+    if (dobNameFromRedux) {
+      const formattedDOB = dobNameFromRedux.split('T')[0]; // Extract 'YYYY-MM-DD' part
+      setFormData((prev) => ({ ...prev, dob: formattedDOB }));
+    }
+  }, [dobNameFromRedux]);
+
+  useEffect(() => {
+    if (genderFromRedux) {
+      const upperCaseGender = genderFromRedux.toUpperCase(); 
+      setFormData((prev) => ({ ...prev, gender: upperCaseGender }));
+    }
+    
+  }, [genderFromRedux, setFormData]);
+
+
+  // Options for the Days multi-select dropdown
+  const daysOptions = [
+    { label: "Sunday", value: "Sunday" },
+    { label: "Monday", value: "Monday" },
+    { label: "Tuesday", value: "Tuesday" },
+    { label: "Wednesday", value: "Wednesday" },
+    { label: "Thursday", value: "Thursday" },
+    { label: "Friday", value: "Friday" },
+    { label: "Saturday", value: "Saturday" },
+  ];
+
+
+   // Generate time options from 12:00 AM to 11:00 PM in 1-hour intervals
+   const generateTimeOptions = () => {
+    const times = [];
+    const formatTime = (hour) => {
+      const period = hour >= 12 ? 'PM' : 'AM';
+      const formattedHour = hour % 12 === 0 ? 12 : hour % 12;
+      return `${formattedHour}:00 ${period}`;
+    };
+
+    for (let hour = 0; hour < 24; hour++) {
+      times.push({ label: formatTime(hour), value: formatTime(hour) });
+    }
+
+    return times;
+  };
+
+  const timeOptions = generateTimeOptions();
+
+  
+
 
   useEffect(() => {
     window.scrollTo(0, 0)
@@ -87,6 +193,13 @@ const HomeTutions = () => {
     })
   }
 
+  // Prevent more than 3 selections
+  const handleDayChange = (selected) => {
+    if (selected.length <= 3) {
+      setSelectedDays(selected);
+    }
+  };
+
   const {
     name,
     address,
@@ -101,6 +214,7 @@ const HomeTutions = () => {
   } = formData
 
   const handleEmpty = () => {
+    let hasError = false;
     if (
       formData.name === '' ||
       formData.name === undefined ||
@@ -135,6 +249,12 @@ const HomeTutions = () => {
       return setEmpty(11)
     } else if (formData.noOfPersons === '') {
       return setEmpty(12)
+    } else if (selectedDays.length !== 3) {
+      hasError = true;
+      return setEmpty(15)
+    } else if (!selectedTime) {
+      hasError = true;
+      return setEmpty(17)
     } else if (formData.dayTime === '') {
       return setEmpty(13)
     } else if (formData.mode === '') {
@@ -142,6 +262,18 @@ const HomeTutions = () => {
     } else {
       setEmpty(0)
     }
+
+     // If no errors, submit the form data
+     if (!hasError) {
+      setFormData((prevFormData) => ({
+        ...prevFormData,
+        days: selectedDays.map((day) => day.value),
+        PreferedDayAndTime: selectedTime,
+      }));
+
+    }
+
+      console.log("Form Data:", formData);
   }
 
   const nagivate = useNavigate()
@@ -386,7 +518,7 @@ const HomeTutions = () => {
             />
             {empty === 12 && <small> Please enter number of persons</small>}
           </div>
-          <div className="form-field">
+          {/* <div className="form-field">
             <InputComponent
               type="text"
               placeholder="Enter day and time*"
@@ -397,7 +529,53 @@ const HomeTutions = () => {
               errorCheck={setEmpty}
             />
             {empty === 13 && <small> Please tell day and time</small>}
-          </div>
+          </div> */}
+
+          {/* Added a new fields */}
+
+          <div className="form-field">
+        {/* <label>Select Preferred Days*</label> */}
+        <MultiSelect
+          options={daysOptions}
+          value={selectedDays}
+          onChange={handleDayChange}
+          labelledBy="Select Days"
+          disableSearch={true}  // Optional: to disable search feature if not needed
+          hasSelectAll={false}  // Disable "Select All" option
+        />
+        {empty === 15 && (
+                <small style={{ color: 'red', marginLeft: '0' }}>
+                  *Please Select atleast 3 days!
+                </small>
+              )}
+      </div>
+
+
+      <div className="form-field">
+        {/* <label>Select Preferred Time*</label> */}
+        <select
+          value={selectedTime}
+          onChange={(e) => setSelectedTime(e.target.value)}
+        >
+          <option value="" disabled>Select Time</option>
+          {timeOptions.map((time) => (
+            <option key={time.value} value={time.value}>
+              {time.label}
+            </option>
+          ))}
+        </select>
+        {empty === 17 && (
+                <small style={{ color: 'red', marginLeft: '0' }}>
+                  *Please Select the Time!
+                </small>
+              )}
+      </div>
+
+
+
+          {/* Added a new fields */}
+
+          
           <div className="form-field">
             <InputComponent
               type="text"

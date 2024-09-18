@@ -10445,6 +10445,11 @@ react-modal@^3.16.1:
     react-lifecycles-compat "^3.0.0"
     warning "^4.0.3"
 
+react-multi-select-component@^4.3.4:
+  version "4.3.4"
+  resolved "https://registry.npmjs.org/react-multi-select-component/-/react-multi-select-component-4.3.4.tgz"
+  integrity sha512-Ui/bzCbROF4WfKq3OKWyQJHmy/bd1mW7CQM+L83TfiltuVvHElhKEyPM3JzO9urIcWplBUKv+kyxqmEnd9jPcA==
+
 react-onclickoutside@^6.13.0:
   version "6.13.0"
   resolved "https://registry.npmjs.org/react-onclickoutside/-/react-onclickoutside-6.13.0.tgz"

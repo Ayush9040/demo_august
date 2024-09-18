@@ -12,6 +12,7 @@ import { upload } from '../../../assets/icons/icon'
 import Loader from '../../../Components/Loader'
 import InnerNavComponent from '../../../Components/InnerNavComponent'
 import { razorPayKey } from '../../../../../Constants/appSettings'
+import { useSelector } from 'react-redux'
 
 const IBYform = ({ setOpenForm, price, selectBatch }) => {
 
@@ -43,6 +44,28 @@ const IBYform = ({ setOpenForm, price, selectBatch }) => {
   const [certificateName, setcertificateName] = useState('')
   const [loading, setLoading] = useState(false)
   const [agree, setAgree] = useState(false)
+
+  const nameFromRedux = useSelector((state) => state.auth.user.data?.firstName);
+  const phoneNumberFromRedux = useSelector((state) => state.auth.user.data?.phoneNumber);
+  const emailFromRedux = useSelector((state) => state.auth.user.data?.email);
+  const countryNameFromRedux = useSelector((state) => state.auth.user.data?.country);
+
+  useEffect(() => {
+    if (nameFromRedux) {
+      setFormData((prev) => ({ ...prev, name: nameFromRedux }));
+    }
+    if (phoneNumberFromRedux) {
+      setFormData((prev) => ({ ...prev, phoneNumber: phoneNumberFromRedux }));
+    }
+    if (emailFromRedux) {
+      setFormData((prev) => ({ ...prev, email: emailFromRedux }));
+    }
+    if (countryNameFromRedux) {
+      setFormData((prev) => ({ ...prev, country: countryNameFromRedux }));
+    }
+    
+  
+  }, [nameFromRedux, phoneNumberFromRedux, emailFromRedux, countryNameFromRedux, setFormData]);
 
   const submitForm = async() => {
     const { data } = await IYBenroll(
