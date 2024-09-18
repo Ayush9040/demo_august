@@ -40,7 +40,7 @@
                 }
             }
 
-           
+
         }
 
         .err-inp {
@@ -67,6 +67,16 @@
                     color: #181818;
                     font-weight: 400;
                     cursor: pointer;
+
+                    .mobile {
+                        display: none;
+                    }
+
+                    .web {
+                        display: inline-block;
+                        position: relative;
+                        top: 2px
+                    }
                 }
 
                 .header {
@@ -191,6 +201,13 @@
                     }
                 }
 
+                .resend-btn {
+                    font-weight: 600;
+                    font-size: 1rem;
+                    cursor: pointer;
+                    color: #CA4625;
+                    padding-top: 0.7rem
+                }
             }
         }
     }
@@ -212,7 +229,120 @@
 }
 
 
+@media(max-width:768px) {
+    .signin-form {
+        flex-direction: column-reverse;
 
+        height: 100vh;
+        overflow-y: auto;
+
+        .signin-container {
+            width: 100%;
+            height: 74vh;
+            overflow-y: auto;
+
+            // height: 100%;
+            .signin-details {
+                margin: 2rem 0 10em 0;
+                // overflow-y: auto;
+
+                .container {
+                    width: 100%;
+                    padding: 0 1.25rem;
+
+                    .header {
+                        font-size: 16px;
+                    }
+
+                    .sub-header {
+                        font-size: 12px;
+                    }
+
+                    .google-badge {
+                        font-size: 14px;
+                    }
+
+                    .divider-container span {
+                        font-size: 12px;
+                    }
+
+                    .inp-label {
+                        font-size: 16px;
+                    }
+
+                    .custom-phone-input input {
+                        font-size: 14px;
+                        padding: 6px;
+                    }
+
+                    .custom-input {
+                        font-size: 14px;
+                        padding: 6px;
+                    }
+
+                    .inp-group {
+                        // display: flex;
+                        // gap: 1rem;
+                        // justify-content: space-between;
+                        flex-direction: column;
+
+
+                        #country {
+                            width: 100%;
+                            font-size: 14px;
+                        }
+                    }
+
+                    .primary-btn {
+                        font-size: 18px;
+                        font-weight: 500;
+                    }
+
+                    .tc-text {
+                        font-size: 12px;
+                    }
+
+                    .back-nav {
+                        position: absolute;
+                        top: 10px;
+                        left: 10px;
+                        color: #FFFFFF;
+                        font-size: 14px;
+
+                        .mobile {
+                            display: inline-block;
+                            position: relative;
+                            top: 2px
+                        }
+
+                        .web {
+                            display: none;
+                        }
+                    }
+
+                    .otp-input {
+                        width: 46px;
+                        height: 46px;
+                        font-size: 16px;
+                    }
+
+                    .resend-btn {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+
+    .signin-banner {
+        width: 100% !important;
+        height: 26vh !important;
+    }
+
+    .img-2 {
+        background-image: url('../../../../../../../public/images/signin-two-mob.svg') !important;
+    }
+}
 
 
 

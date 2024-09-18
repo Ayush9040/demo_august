@@ -63,7 +63,6 @@ const SignIn = () => {
       background: 'transparent',
       borderRadius: '8px',
       padding: '0 !important', // Ensure no padding is applied
-
       // height: 10, // Adjust the height of the select input
       // minHeight: 10, // Ensure the minimum height is applied
       // width: 'fitContent',
@@ -535,9 +534,17 @@ const SignIn = () => {
         <div className="signin-details">
           <div className="container">
             <div className='back-nav' onClick={() => navigateBack()}>
-              <svg width="1rem" height="1rem" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M3.825 9L9.425 14.6L8 16L0 8L8 0L9.425 1.4L3.825 7H16V9H3.825Z" fill="#181818" />
-              </svg>
+              <span className="web">
+                <svg width="1rem" height="1rem" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M3.825 9L9.425 14.6L8 16L0 8L8 0L9.425 1.4L3.825 7H16V9H3.825Z" fill="#181818" />
+                </svg></span>
+
+              <span className="mobile">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M3.521 7.8335L8.18766 12.5002L7.00016 13.6668L0.333496 7.00016L7.00016 0.333496L8.18766 1.50016L3.521 6.16683H13.6668V7.8335H3.521Z" fill="white" />
+                </svg>
+
+              </span>
               &nbsp;Back
             </div>
 
@@ -605,7 +612,7 @@ const SignIn = () => {
               <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
                 <div className='tc-text'>Didn’t received the OTP? <br />
                   {seconds != '0' && <>You can request another in {seconds} {seconds > 9 ? 'seconds' : 'second'}</>}
-                  {seconds == '0' && <div onClick={() => sendOTP(formData)} style={{ fontWeight: '600', fontSize: '1rem', cursor: 'pointer', color: '#CA4625', paddingTop: '0.7rem' }}>Resend</div>}</div>
+                  {seconds == '0' && <div onClick={() => sendOTP(formData)} className="resend-btn">Resend</div>}</div>
               </div>
             </>}
 
@@ -748,7 +755,7 @@ const SignIn = () => {
               <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
                 <div className='tc-text'>Didn’t received the OTP? <br />
                   {seconds != '0' && <>You can request another in {seconds} {seconds > 9 ? 'seconds' : 'second'}</>}
-                  {seconds == '0' && <div onClick={() => sendSignupOTP(formData, signUpType)} style={{ fontWeight: '600', fontSize: '1rem', cursor: 'pointer', color: '#CA4625', paddingTop: '0.7rem' }}>Resend</div>}</div>
+                  {seconds == '0' && <div onClick={() => sendSignupOTP(formData, signUpType)} className="resend-btn">Resend</div>}</div>
               </div>
             </>}
 
