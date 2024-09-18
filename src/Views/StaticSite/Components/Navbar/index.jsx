@@ -128,6 +128,7 @@ const Navbar = ({ isUserLoggedIn, abc }) => {
             width: '100vw',
             height: '100vh',
             zIndex: '200',
+            overflow: 'auto'
           }}
         >
           <MegaMenu setNav={setNav} />

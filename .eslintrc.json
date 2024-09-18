@@ -52,13 +52,13 @@
         //         "objectsInObjects": true
         //     }
         // ],
-        "max-len": [
-            "error",
-            {
-                "code": 13000,
-                "tabWidth": 2
-            }
-        ],
+        // "max-len": [
+        //     "error",
+        //     {
+        //         "code": 13000,
+        //         "tabWidth": 2
+        //     }
+        // ],
         "camelcase": "warn",
         "linebreak-style": "off"
     }
