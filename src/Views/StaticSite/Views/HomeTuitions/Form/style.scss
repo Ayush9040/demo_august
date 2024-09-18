@@ -339,3 +339,19 @@
 .main_div .check_course small {
   margin-top: -8rem !important;
 }
+
+.rmsc .dropdown-container {
+  border-radius: 19px !important;
+  border-color: black !important;
+}
+
+@media (max-width: 820px) {
+
+  .multi_day {
+    margin-left: 0px !important;
+  }
+}
+
+.multi_day {
+  margin-left: 2rem;
+}

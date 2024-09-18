@@ -14,6 +14,7 @@ import { AllCourses } from '../../Courses/Constants/courses'
 import { cmsBaseDomain } from '../../../../../Constants/appSettings'
 import RelatedBlogs from '../../Courses/Views/RelatedBlogs'
 import RelatedCourse from '../../Courses/Views/Component'
+import SelectDropDown from '../../../Components/Select Dropdown'
 
 const OnlineTution = () => {
   useEffect(() => {
@@ -30,6 +31,8 @@ const OnlineTution = () => {
   const [blogData, setBlogData] = useState([])
   const [cardData, setCardData] = useState([])
   const [metaData, setMetaData] = useState([])
+  const [ err,setErr ] = useState(false)
+  const [ plan,setPlan ] = useState('')
 
   const getBlogsData = async(posts) => {
     const arr = []
@@ -42,6 +45,21 @@ const OnlineTution = () => {
       }
     }
     return arr
+  }
+
+  const selectStyles1 = {
+    cursor: 'pointer',
+    background: '#E18C71',
+    borderColor: 'white',
+    color: 'white',
+    fontSize: '1.5rem',
+    fontWeight: '900',
+    borderWidth: '0.25rem',
+    borderRadius: '24px',
+    borderStyle: 'solid',
+    maxWidth: 'fit-content',
+    marginTop: '2rem',
+    marginRight:'3rem'
   }
 
 
@@ -104,6 +122,8 @@ const OnlineTution = () => {
   }, [])
   console.log(metaData) //eslint-disable-line
 
+  const options = ['Home Yoga Tuitions','Yoga Therapy Sessions']
+
 
   return (
     <>
@@ -115,8 +135,30 @@ const OnlineTution = () => {
         <div className="main-container">
           <div className="highlight-info">
             <h1>Online Home Tuition (Yoga Tuition)</h1>
-            <CommonBtn text={'Enroll Now'} buttonAction={() => setOpenForm(true)} />
+            <div
+              id="date-select-mobile"
+              style={ { display: 'flex' } }
+            >
+              <SelectDropDown
+                currentValue={plan}
+                changeCurrentValue={setPlan}
+                text={'Select Plan'}
+                isStyles={selectStyles1}
+                dates={options}
+              />{' '}
+            </div>
+            { err && <small style={{ marginLeft: '2rem', fontSize: '8px'}}> Please select Plan* </small>}
+            <CommonBtn text={'Enroll Now'} buttonAction={() => {
+              if(plan === '') {
+                return setErr(true)
+              }
+              setOpenForm(true) 
+            }
+              } />
           </div>
+
+          
+            
           <div className="highlight-cover">
             <img
               src={`${baseDomain}${homeAssets.homeAsset15}`}
@@ -292,7 +334,7 @@ const OnlineTution = () => {
           </p>
         </div>
       </div>
-      {openForm && <HomeTutions />}
+      {openForm && <HomeTutions courseMode={plan} />}
       {cardData && cardData.length > 0 && <RelatedCourse
         title={'Related Courses'}
         description={' lorem ipsum '}

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import CommonBanner from '../../../Components/Common-banner'
 import baseDomain, {
   CorporateWellnessLogos,
@@ -15,6 +15,7 @@ import 'slick-carousel/slick/slick-theme.css'
 import InputComponent from '../../../Components/InputComponent'
 import { CreateForm, successMail } from './Api'
 import '../../../../StaticSite/Components/TermsandCondition/style.scss'
+import { useSelector } from 'react-redux';
 
 const corporateWellness = () => {
   const [formData, setFormData] = useState({
@@ -27,6 +28,25 @@ const corporateWellness = () => {
   })
   const [videoPlayerData, setVideoPlayerData] = useState(null)
   const [modal, setModal] = useState(false)
+  const nameFromRedux = useSelector((state) => state.auth.user.data?.firstName);
+  const phoneNumberFromRedux = useSelector((state) => state.auth.user.data?.phoneNumber);
+  const emailFromRedux = useSelector((state) => state.auth.user.data?.email);
+  const companyNameFromRedux = useSelector((state) => state.auth.user.data?.company);
+
+  useEffect(() => {
+    if (nameFromRedux) {
+      setFormData((prev) => ({ ...prev, name: nameFromRedux }));
+    }
+    if (phoneNumberFromRedux) {
+      setFormData((prev) => ({ ...prev, contact: phoneNumberFromRedux }));
+    }
+    if (emailFromRedux) {
+      setFormData((prev) => ({ ...prev, email: emailFromRedux }));
+    }
+    if (companyNameFromRedux) {
+      setFormData((prev) => ({ ...prev, company: companyNameFromRedux }));
+    }
+  }, [nameFromRedux, phoneNumberFromRedux, emailFromRedux, companyNameFromRedux, setFormData]);
 
   const handleMessageChange = (e) => {
     setFormData({ ...formData, message: e.target.value })

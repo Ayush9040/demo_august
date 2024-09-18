@@ -60,6 +60,33 @@ const ShippingAdd = () => {
   const [totalAmount,setTotalAmount] = useState()
   const [shippingAmt,setShippingAmt] = useState()
 
+  const nameFromRedux = useSelector((state) => state.auth.user.data?.firstName);
+  const countryNameFromRedux = useSelector((state) => state.auth.user.data?.country);
+  const stateNameFromRedux = useSelector((state) => state.auth.user.data?.state);
+  const cityNameFromRedux = useSelector((state) => state.auth.user.data?.city);
+  
+
+  
+
+  useEffect(() => {
+    if (nameFromRedux) {
+      setFormData((prev) => ({ ...prev, name: nameFromRedux }));
+    }
+    if (countryNameFromRedux) {
+      setFormData((prev) => ({ ...prev, country: countryNameFromRedux }));
+    }
+    if (stateNameFromRedux) {
+      setFormData((prev) => ({ ...prev, state: stateNameFromRedux }));
+    }
+    if (cityNameFromRedux) {
+      setFormData((prev) => ({ ...prev, city: cityNameFromRedux }));
+    }
+    
+    
+  
+  }, [nameFromRedux, countryNameFromRedux, stateNameFromRedux, cityNameFromRedux, setFormData]);
+
+
 
   const { location } = useSelector(state=>state.location)
   const { activCartId } = useSelector(state=>state.shop)

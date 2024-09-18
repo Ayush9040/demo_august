@@ -7,6 +7,7 @@ import CommonBtn from '../../../Components/commonbtn'
 import { createNutriOrder, enrollPlan, successMail } from '../Api'
 import { useNavigate } from 'react-router-dom'
 import { razorPayKey } from '../../../../../Constants/appSettings'
+import { useSelector } from 'react-redux';
 
 const SubcriptionForm = ({ packageName, packagePrice, closeForm }) => {
   useEffect(() => {
@@ -27,6 +28,29 @@ const SubcriptionForm = ({ packageName, packagePrice, closeForm }) => {
   })
   const [agree, setAgree] = useState(false)
   const [empty, setEmpty] = useState()
+  const nameFromRedux = useSelector((state) => state.auth.user.data?.firstName);
+  const phoneNumberFromRedux = useSelector((state) => state.auth.user.data?.phoneNumber);
+  const emailFromRedux = useSelector((state) => state.auth.user.data?.email);
+  const countryNameFromRedux = useSelector((state) => state.auth.user.data?.country);
+  const cityNameFromRedux = useSelector((state) => state.auth.user.data?.city);
+
+  useEffect(() => {
+    if (nameFromRedux) {
+      setFormData((prev) => ({ ...prev, name: nameFromRedux }));
+    }
+    if (phoneNumberFromRedux) {
+      setFormData((prev) => ({ ...prev, phone: phoneNumberFromRedux }));
+    }
+    if (emailFromRedux) {
+      setFormData((prev) => ({ ...prev, emailId: emailFromRedux }));
+    }
+    if (countryNameFromRedux) {
+      setFormData((prev) => ({ ...prev, country: countryNameFromRedux }));
+    }
+    if (cityNameFromRedux) {
+      setFormData((prev) => ({ ...prev, city: cityNameFromRedux }));
+    }
+  }, [nameFromRedux, phoneNumberFromRedux, emailFromRedux, countryNameFromRedux, cityNameFromRedux, setFormData]);
 
   const submitForm = async() => {
     const { data } = await enrollPlan({

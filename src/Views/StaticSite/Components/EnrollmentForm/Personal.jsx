@@ -17,6 +17,7 @@ import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import { LoadScript, Autocomplete } from '@react-google-maps/api';
 import countryList from 'react-select-country-list';
+import { useSelector } from 'react-redux'; 
 
 import MessageModal from '../MessageModal'
 import TermsCondition from '../TermsandCondition'
@@ -57,6 +58,17 @@ const Personal = ({
   const [Params] = useSearchParams()
   const [fixDate, setFixDate] = useState([]);
   const [validationErrors, setValidationErrors] = useState([]);
+  const phoneNumberFromRedux = useSelector((state) => state.auth.user?.data?.phoneNumber);
+  const countryFromRedux = useSelector((state) => state.auth.user.data?.country);
+  const stateFromRedux = useSelector((state) => state.auth.user.data?.state);
+  const cityFromRedux = useSelector((state) => state.auth.user.data?.city);
+  const genderFromRedux = useSelector((state) => state.auth.user.data?.gender);
+  const nationalityFromRedux = useSelector((state) => state.auth.user.data?.nationality);
+  console.log('phoneNumberFromRedux ', phoneNumberFromRedux);
+  console.log('countryFromRedux ', countryFromRedux);
+  console.log('stateFromRedux ', stateFromRedux);
+  console.log('cityFromRedux ', cityFromRedux);
+  console.log('genderFromRedux ', genderFromRedux);
   const [phoneValue, setPhoneValue] = useState(formData.phone);
   const [bold, setBold] = useState(0)
   const [open, setOpen] = useState(false);
@@ -73,6 +85,40 @@ const Personal = ({
   const [isResidential, setIsResidential] = useState(false)
   const [isRegular, setIsRegular] = useState(false)
   const [autocomplete, setAutocomplete] = useState(null);
+
+  
+  useEffect(() => {
+    if (phoneNumberFromRedux) {
+      setPhoneValue(phoneNumberFromRedux);
+    }
+  }, [phoneNumberFromRedux]);
+
+  useEffect(() => {
+    if (countryFromRedux) {
+      setFormData((prev) => ({ ...prev, country: countryFromRedux }));
+      setValues((prev) => ({ ...prev, country: { label: countryFromRedux, value: countryFromRedux } }));
+    }
+    if (stateFromRedux) {
+      setFormData((prev) => ({ ...prev, state: stateFromRedux }));
+      setValues((prev) => ({ ...prev, state: { label: stateFromRedux, value: stateFromRedux } }));
+    }
+    if (cityFromRedux) {
+      setFormData((prev) => ({ ...prev, city: cityFromRedux }));
+      setValues((prev) => ({ ...prev, city: { label: cityFromRedux, value: cityFromRedux } }));
+    }
+    
+  }, [countryFromRedux, stateFromRedux, cityFromRedux, setFormData, setValues]);
+
+  useEffect(() => {
+    if (genderFromRedux) {
+      const upperCaseGender = genderFromRedux.toUpperCase(); 
+      setFormData((prev) => ({ ...prev, gender: upperCaseGender }));
+    }
+    if (nationalityFromRedux) {
+      setFormData((prev) => ({ ...prev, nationality: nationalityFromRedux }));
+    }
+  }, [genderFromRedux, nationalityFromRedux, setFormData]);
+
 
 
   const handleResidential = (value) => {
@@ -811,7 +857,7 @@ const Personal = ({
 
             <div className="form_error">
               <InputComponent
-                type="email"
+                // type="email"
                 id="text"
                 placeholder="Email ID*"
                 form={formData}
@@ -835,6 +881,7 @@ const Personal = ({
                 //   setFormData({ ...formData, phone: e })
                 // }}
                 onChange={handlePhoneChange}
+              
               />
               {/* {empty === 3 && <small> Please enter a valid phone number</small>}  */}
               {/* {phoneError && <small>{phoneError}</small>} */}

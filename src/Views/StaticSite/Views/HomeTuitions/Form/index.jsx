@@ -11,8 +11,10 @@ import { createHomeTution } from '../Api'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import { authBaseDomain } from '../../../../../Constants/appSettings'
+import { useSelector } from 'react-redux'
+import { MultiSelect } from 'react-multi-select-component'
 
-const HomeTutions = () => {
+const HomeTutions = ({ courseMode }) => {
   const [formData, setFormData] = useState({
     name: '',
     address: '',
@@ -28,10 +30,117 @@ const HomeTutions = () => {
     noOfPersons: '',
     PreferedDayAndTime: '',
     anyOtherComments: '',
+    days: [],
+    course: courseMode,
     mode: '',
   })
   const [values, setValues] = useState([])
+  const [selectedDays, setSelectedDays] = useState([]);
+  const [selectedTime, setSelectedTime] = useState(''); 
   const [empty, setEmpty] = useState(0)
+
+  const nameFromRedux = useSelector((state) => state.auth.user.data?.firstName);
+  const phoneNumberFromRedux = useSelector((state) => state.auth.user.data?.phoneNumber);
+  const emailFromRedux = useSelector((state) => state.auth.user.data?.email);
+  const countryNameFromRedux = useSelector((state) => state.auth.user.data?.country);
+  const stateNameFromRedux = useSelector((state) => state.auth.user.data?.state);
+  const cityNameFromRedux = useSelector((state) => state.auth.user.data?.city);
+  const panNameFromRedux = useSelector((state) => state.auth.user.data?.pan);
+  const lnameNameFromRedux = useSelector((state) => state.auth.user.data?.lastName);
+  const dobNameFromRedux = useSelector((state) => state.auth.user.data?.dateOfBirth);
+  const genderFromRedux = useSelector((state) => state.auth.user.data?.gender);
+
+  console.log('countryNameFromRedux ', countryNameFromRedux);
+  console.log('dobNameFromRedux ', dobNameFromRedux);
+  console.log('courseMode ', courseMode);
+
+  useEffect(() => {
+    if (countryNameFromRedux) {
+      setFormData((prev) => ({ ...prev, country: countryNameFromRedux }));
+      setValues((prev) => ({ ...prev, country: { label: countryNameFromRedux, value: countryNameFromRedux } }));
+    }
+    if (stateNameFromRedux) {
+      setFormData((prev) => ({ ...prev, state: stateNameFromRedux }));
+      setValues((prev) => ({ ...prev, state: { label: stateNameFromRedux, value: stateNameFromRedux } }));
+    }
+    if (cityNameFromRedux) {
+      setFormData((prev) => ({ ...prev, city: cityNameFromRedux }));
+      setValues((prev) => ({ ...prev, city: { label: cityNameFromRedux, value: cityNameFromRedux } }));
+    }
+    
+  }, [countryNameFromRedux, cityNameFromRedux, stateNameFromRedux, setFormData, setValues]);
+  
+
+  useEffect(() => {
+    if (nameFromRedux) {
+      setFormData((prev) => ({ ...prev, name: nameFromRedux }));
+    }
+    if (phoneNumberFromRedux) {
+      setFormData((prev) => ({ ...prev, contact: phoneNumberFromRedux }));
+    }
+    if (emailFromRedux) {
+      setFormData((prev) => ({ ...prev, email: emailFromRedux }));
+    }
+    if (panNameFromRedux) {
+      setFormData((prev) => ({ ...prev, panNum: panNameFromRedux }));
+    }
+    
+  
+  }, [nameFromRedux, phoneNumberFromRedux, emailFromRedux, panNameFromRedux, setFormData]);
+
+
+
+  // Extract the date in 'YYYY-MM-DD' format
+  useEffect(() => {
+    if (dobNameFromRedux) {
+      const formattedDOB = dobNameFromRedux.split('T')[0]; // Extract 'YYYY-MM-DD' part
+      setFormData((prev) => ({ ...prev, dob: formattedDOB }));
+    }
+  }, [dobNameFromRedux]);
+
+  useEffect(() => {
+    if (genderFromRedux) {
+      const upperCaseGender = genderFromRedux.toUpperCase(); 
+      setFormData((prev) => ({ ...prev, gender: upperCaseGender }));
+    }
+    
+  }, [genderFromRedux, setFormData]);
+
+
+  // Options for the Days multi-select dropdown
+  const daysOptions = [
+    { label: "Sunday", value: "Sunday" },
+    { label: "Monday", value: "Monday" },
+    { label: "Tuesday", value: "Tuesday" },
+    { label: "Wednesday", value: "Wednesday" },
+    { label: "Thursday", value: "Thursday" },
+    { label: "Friday", value: "Friday" },
+    { label: "Saturday", value: "Saturday" },
+  ];
+
+
+   // Generate time options from 12:00 AM to 11:00 PM in 1-hour intervals
+   const generateTimeOptions = () => {
+    const times = [];
+    
+    const formatTime = (hour) => {
+      const period = hour >= 12 ? 'PM' : 'AM';
+      const formattedHour = hour % 12 === 0 ? 12 : hour % 12;
+      return `${formattedHour}:00 ${period}`;
+    };
+  
+    // Start from hour 5 (5 AM) and go until hour 20 (8 PM)
+    for (let hour = 5; hour <= 20; hour++) {
+      times.push({ label: formatTime(hour), value: formatTime(hour) });
+    }
+  
+    return times;
+  };
+  
+  const timeOptions = generateTimeOptions();
+
+  
+
 
   useEffect(() => {
     window.scrollTo(0, 0)
@@ -87,6 +196,19 @@ const HomeTutions = () => {
     })
   }
 
+  // Prevent more than 3 selections
+  const handleDayChange = (selected) => {
+    if (selected.length <= 3) {
+      setSelectedDays(selected);
+    }
+    console.log('selectedDays ', selectedDays)
+    setFormData((prevFormData) => ({
+      ...prevFormData,
+      days: selectedDays.map((day) => day.value),
+      // PreferedDayAndTime: selectedTime,
+    }));
+  };
+
   const {
     name,
     address,
@@ -95,60 +217,102 @@ const HomeTutions = () => {
     email,
     noOfSessionsRequired,
     preferedLanguage,
+    days,
     noOfPersons,
     PreferedDayAndTime,
     constraints,
   } = formData
 
   const handleEmpty = () => {
+    let hasError = false;
+    
     if (
       formData.name === '' ||
       formData.name === undefined ||
       formData.name === null
     ) {
-      return setEmpty(1)
+       setEmpty(1)
+       hasError = true;
     } else if (!validateEmail(formData.email)) {
-      return setEmpty(2)
+       setEmpty(2)
+       hasError = true;
     } else if (
       formData.contact === '' ||
       formData.contact.length < 6 ||
       formData.contact.length > 15
     ) {
-      return setEmpty(3)
+       setEmpty(3)
+       hasError = true;
     } else if (formData.address === '') {
-      return setEmpty(4)
+       setEmpty(4)
+       hasError = true;
     } else if (formData.country === '') {
-      return setEmpty(5)
+       setEmpty(5)
+       hasError = true;
     }
     //  else if (formData.city === ' ') {
     //   return setEmpty(6)
     // }
     else if (formData.dob === '') {
-      return setEmpty(7)
+       setEmpty(7)
+       hasError = true;
     } else if (formData.genHealthCondition === '') {
-      return setEmpty(8)
+       setEmpty(8)
+       hasError = true;
     } else if (formData.gender === '') {
-      return setEmpty(9)
+      setEmpty(9)
+      hasError = true;
     } else if (formData.preferedLanguage === '') {
-      return setEmpty(10)
+      setEmpty(10)
+      hasError = true;
     } else if (formData.noOfSessionsRequired === '') {
-      return setEmpty(11)
+      setEmpty(11)
+      hasError = true;
     } else if (formData.noOfPersons === '') {
-      return setEmpty(12)
+      setEmpty(12)
+      hasError = true;
+    } else if (selectedDays.length !== 3) {
+      console.log('see ', formData.days)
+      hasError = true;
+      setEmpty(15)
+    } else if (formData.PreferedDayAndTime === '') {
+      console.log('run from !!!')
+      hasError = true;
+      setEmpty(17)
     } else if (formData.dayTime === '') {
-      return setEmpty(13)
+      setEmpty(13)
+      hasError = true;
     } else if (formData.mode === '') {
-      return setEmpty(14)
+      setEmpty(14)
+      hasError = true;
     } else {
       setEmpty(0)
+      setFormData((prevFormData) => ({
+        ...prevFormData,
+        days: selectedDays.map((day) => day.value),
+      }));
+      handleSubmit()
     }
+
+   
+
+     // If no errors, submit the form data
+     
+
+      // console.log("Form Data:", formData);
   }
+
 
   const nagivate = useNavigate()
   const handleSubmit = async() => {
-    await handleEmpty()
-    if (empty !== 0) return
+    // await handleEmpty()
+    console.log('empty ', empty)
+    // if (empty !== 0) return
     try {
+      // if (!hasError) {
+        
+  
+      // }
       await createHomeTution(formData)
       await axios.post(`${authBaseDomain}/ali/mail`, {
         type: 'INFO_TYI',
@@ -370,9 +534,39 @@ const HomeTutions = () => {
               keyName="noOfSessionsRequired"
               errorCheck={setEmpty}
             />
-            {empty === 11 && <small> Please enter how many are required</small>}
+            {empty === 11 && <small> Please enter how many sessions are required</small>}
           </div>
-          <div className="form-field">
+          <div div className="form-field">
+              <select
+                name="noOfPersons"
+                onChange={(e) =>
+                  setFormData({ ...formData, noOfPersons: e.target.value })
+                }
+              >
+                <option disabled selected className="edit-account-gender">
+                  Number of Persons*
+                </option>
+                <option selected={formData.noOfPersons === '1'} value="1">
+                  1
+                </option>
+                <option selected={formData.noOfPersons === '2'} value="2">
+                  2
+                </option>
+                <option selected={formData.noOfPersons === '3'} value="3">
+                  3
+                </option>
+                <option selected={formData.noOfPersons === '4'} value="4">
+                  4
+                </option>
+              </select>
+
+              {empty === 12 && (
+                <small style={{ color: 'red', marginLeft: '0', margin: '0px' }}>
+                  *Please enter number of persons
+                </small>
+              )}
+            </div>
+          {/* <div className="form-field">
             <InputComponent
               type="number"
               minnum="1"
@@ -385,8 +579,8 @@ const HomeTutions = () => {
               keyName="noOfPersons"
             />
             {empty === 12 && <small> Please enter number of persons</small>}
-          </div>
-          <div className="form-field">
+          </div> */}
+          {/* <div className="form-field">
             <InputComponent
               type="text"
               placeholder="Enter day and time*"
@@ -397,7 +591,122 @@ const HomeTutions = () => {
               errorCheck={setEmpty}
             />
             {empty === 13 && <small> Please tell day and time</small>}
-          </div>
+          </div> */}
+
+          {/* Added a new fields */}
+
+          <div className="form-field multi_day" style={{ width: '100%'}}>
+        {/* <label>Select Preferred Days*</label> */}
+        <MultiSelect
+          styles={customStyles}
+          options={daysOptions}
+          value={selectedDays}
+          onChange={handleDayChange}
+          labelledBy="Select Days"
+          disableSearch={true}  // Optional: to disable search feature if not needed
+          hasSelectAll={false}  // Disable "Select All" option
+        />
+        {empty === 15 && (
+                <small style={{ color: 'red', marginLeft: '0', margin: '0px' }}>
+                  *Please Select atleast 3 days!
+                </small>
+              )}
+      </div>
+
+
+      <div div className="form-field">
+              <select
+                name="noOfPersons"
+                onChange={(e) =>
+                  setFormData({ ...formData, PreferedDayAndTime: e.target.value })
+                }
+              >
+                <option disabled selected className="edit-account-gender">
+                Select Time*
+                </option>
+                <option selected={formData.PreferedDayAndTime === '5:00 AM'} value="5:00 AM">
+                  5:00 AM
+                </option>
+                <option selected={formData.PreferedDayAndTime === '6:00 AM'} value="6:00 AM">
+                  6:00 AM
+                </option>
+                <option selected={formData.PreferedDayAndTime === '7:00 AM'} value="7:00 AM">
+                  7:00 AM
+                </option>
+                <option selected={formData.PreferedDayAndTime === '8:00 AM'} value="8:00 AM">
+                  8:00 AM
+                </option>
+                <option selected={formData.PreferedDayAndTime === '9:00 AM'} value="9:00 AM">
+                  9:00 AM
+                </option>
+                <option selected={formData.PreferedDayAndTime === '10:00 AM'} value="10:00 AM">
+                  10:00 AM
+                </option>
+                <option selected={formData.PreferedDayAndTime === '11:00 AM'} value="11:00 AM">
+                  11:00 AM
+                </option>
+                <option selected={formData.PreferedDayAndTime === '12:00 PM'} value="12:00 PM">
+                  12:00 PM
+                </option>
+                <option selected={formData.PreferedDayAndTime === '13:00 PM'} value="13:00 PM">
+                  13:00 PM
+                </option>
+                <option selected={formData.PreferedDayAndTime === '14:00 PM'} value="14:00 PM">
+                  14:00 PM
+                </option>
+                <option selected={formData.PreferedDayAndTime === '15:00 PM'} value="15:00 PM">
+                  15:00 PM
+                </option>
+                <option selected={formData.PreferedDayAndTime === '16:00 PM'} value="16:00 PM">
+                  16:00 PM
+                </option>
+                <option selected={formData.PreferedDayAndTime === '17:00 PM'} value="17:00 PM">
+                  17:00 PM
+                </option>
+                <option selected={formData.PreferedDayAndTime === '18:00 PM'} value="18:00 PM">
+                  18:00 PM
+                </option>
+                <option selected={formData.PreferedDayAndTime === '19:00 PM'} value="19:00 PM">
+                  19:00 PM
+                </option>
+                <option selected={formData.PreferedDayAndTime === '20:00 PM'} value="20:00 PM">
+                  20:00 PM
+                </option>
+              </select>
+
+              {empty === 17 && (
+                <small style={{ color: 'red', marginLeft: '0', margin: '0px' }}>
+                  *Please Select the Time!
+                </small>
+              )}
+            </div>
+
+
+      {/* <div className="form-field"> */}
+        {/* <label>Select Preferred Time*</label> */}
+        {/* <select
+          value={selectedTime}
+          onChange={(e) => setSelectedTime(e.target.value)}
+        >
+          <option value="" disabled>Select Time</option>
+          {timeOptions.map((time) => (
+            <option key={time.value} value={time.value}>
+              {time.label}
+            </option>
+          ))}
+        </select>
+        {empty === 17 && (
+                <small style={{ color: 'red', marginLeft: '0', margin: '0px' }}>
+                  *Please Select the Time!
+                </small>
+              )}
+      </div> */}
+
+
+
+          {/* Added a new fields */}
+
+          
           <div className="form-field">
             <InputComponent
               type="text"
@@ -427,7 +736,7 @@ const HomeTutions = () => {
               </select>
 
               {empty === 14 && (
-                <small style={{ color: 'red', marginLeft: '0' }}>
+                <small style={{ color: 'red', marginLeft: '0', margin: '0px' }}>
                   *Please Select the mode of classes!
                 </small>
               )}
@@ -475,7 +784,7 @@ const HomeTutions = () => {
       <div className="tutions_btn">
         <CommonBtn
           text={'Submit'}
-          buttonAction={handleSubmit}
+          buttonAction={handleEmpty}
           isColor={'#CF5335'}
         />
       </div>
