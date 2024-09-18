@@ -15,13 +15,13 @@
         .form-inp {
             border: 1px solid #AEAEAE;
             border-radius: 8px;
-            padding: 0.75rem;
+            padding: 12px;
 
             .custom-phone-input input {
                 background-color: transparent;
                 /* Change background color */
                 border: none;
-                font-size: 1rem;
+                font-size: 16px;
 
                 &:focus {
                     outline: none;
@@ -32,7 +32,7 @@
                 background-color: transparent;
                 /* Change background color */
                 border: none;
-                font-size: 1rem;
+                font-size: 16px;
                 width: 100%;
 
                 &:focus {
@@ -63,7 +63,7 @@
                 padding: 0 12rem;
 
                 .back-nav {
-                    font-size: 1rem;
+                    font-size: 16px;
                     color: #181818;
                     font-weight: 400;
                     cursor: pointer;
@@ -80,23 +80,23 @@
                 }
 
                 .header {
-                    font-size: 2rem;
+                    font-size: 32px;
                     color: #181818;
                     font-weight: 600;
                     margin: 0.75rem 0 0.25rem 0;
                 }
 
                 .sub-header {
-                    font-size: 1rem;
+                    font-size: 16px;
                     color: #181818;
                     font-weight: 500;
                 }
 
                 .google-badge {
-                    font-size: 0.85rem;
+                    font-size: 14px;
                     color: #181818;
                     font-weight: 500;
-                    padding: 0.85rem;
+                    padding: 14px;
                     background-color: #E9EEFE;
                     border-radius: 12px;
                     display: flex;
@@ -107,7 +107,7 @@
                 }
 
                 .inp-label {
-                    font-size: 1rem;
+                    font-size: 16px;
                     color: #181818;
                     font-weight: 600;
                     padding-bottom: 0.75rem;
@@ -118,24 +118,24 @@
                 }
 
                 .primary-btn {
-                    font-size: 1.125rem;
+                    font-size: 18px;
                     font-weight: 500;
                     color: #FFFFFF;
                     background-color: #CA4625;
                     width: 100%;
-                    padding: 0.85rem 0;
-                    margin-top: 1.5rem;
+                    padding: 12px 0;
+                    margin-top: 24px;
                     border: none;
-                    border-radius: 6px;
+                    border-radius: 12px;
                     cursor: pointer;
                 }
 
                 .tc-text {
-                    font-size: 0.85rem;
+                    font-size: 14px;
                     color: #666666;
                     font-weight: 400;
                     text-align: center;
-                    max-width: 230px;
+                    max-width: 372px;
                     padding-top: 1.25rem;
 
                     span {
@@ -163,7 +163,7 @@
 
                 .divider-container span {
                     color: #AEAEAE;
-                    font-size: 0.75rem;
+                    font-size: 12px;
                     font-weight: 400;
                     margin: 0 8px;
                 }
@@ -177,7 +177,7 @@
                 .otp-input {
                     width: 2.875rem;
                     height: 2.875rem;
-                    font-size: 1rem;
+                    font-size: 16px;
                     text-align: center;
                     border: 1px solid #AEAEAE;
                     border-radius: 0.5rem;
@@ -203,7 +203,7 @@
 
                 .resend-btn {
                     font-weight: 600;
-                    font-size: 1rem;
+                    font-size: 16px;
                     cursor: pointer;
                     color: #CA4625;
                     padding-top: 0.7rem
@@ -241,6 +241,10 @@
             height: 74vh;
             overflow-y: auto;
 
+            .form-inp {
+                padding: 0.75rem !important;
+            }
+
             // height: 100%;
             .signin-details {
                 margin: 2rem 0 10em 0;
@@ -260,6 +264,7 @@
 
                     .google-badge {
                         font-size: 14px;
+                        padding: 0.85rem !important;
                     }
 
                     .divider-container span {
@@ -296,10 +301,12 @@
                     .primary-btn {
                         font-size: 18px;
                         font-weight: 500;
+                        padding: 0.85rem 0 !important;
                     }
 
                     .tc-text {
                         font-size: 12px;
+                        max-width: 230px !important;
                     }
 
                     .back-nav {
@@ -341,6 +348,73 @@
 
     .img-2 {
         background-image: url('../../../../../../../public/images/signin-two-mob.svg') !important;
+    }
+}
+
+@media (max-width:1280px) {
+
+    //for small web
+    .signin-form {
+        .signin-container {
+            .form-inp {
+                padding: 0.75rem !important;
+
+                .custom-phone-input input {
+                    font-size: 1rem !important;
+                }
+
+                .custom-input {
+                    font-size: 1rem !important;
+                }
+            }
+
+            .signin-details {
+                .container {
+                    // .back-nav {
+                    //     // font-size: 1rem !important;
+                    // }
+
+                    .header {
+                        font-size: 2rem !important;
+                    }
+
+                    .sub-header {
+                        font-size: 1rem !important;
+                    }
+
+                    .google-badge {
+                        font-size: 0.85rem !important;
+                        padding: 0.85rem !important;
+                    }
+
+                    .inp-label {
+                        font-size: 1rem !important;
+                    }
+
+                    .primary-btn {
+                        font-size: 1.125rem !important;
+                        padding: 0.85rem 0 !important;
+                    }
+
+                    .tc-text {
+                        font-size: 0.85rem !important;
+                        max-width: 230px !important;
+                    }
+
+                    .divider-container span {
+                        font-size: 0.75rem !important;
+                    }
+
+                    .otp-input {
+                        font-size: 1rem !important;
+                    }
+
+                    .resend-btn {
+                        font-size: 1rem !important;
+                    }
+                }
+            }
+        }
     }
 }
 

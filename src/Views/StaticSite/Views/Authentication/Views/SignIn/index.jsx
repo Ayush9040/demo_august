@@ -35,7 +35,7 @@ const SignIn = () => {
   const [signUpType, setSignUpType] = useState('')
   const [formData, setFormData] = useState({
     phoneNumber: '',
-    countryCode: '91',
+    dialCode: '91',
     otp: '',
     email: '',
     firstName: '',
@@ -121,7 +121,7 @@ const SignIn = () => {
       try {
         let response = await axios.post(//send OTP for mobile
           `${authBaseDomain}/authdoor/mobile/verify-otp`,
-          { contactNo: userDetails.phoneNumber.slice(3), otp: userDetails.otp }
+          { contactNo: userDetails.phoneNumber.slice(3), otp: userDetails.otp,dialCode:userDetails.phoneNumber.slice(1, 3) }
         )
         setToken(response?.data?.token)
         if (response?.data?.isSignupRequired) { setPageIndex(3); setSignUpType('mobile') }
@@ -152,7 +152,7 @@ const SignIn = () => {
         payload['country'] = userDetails?.country.label;
         payload['city'] = userDetails?.city.label;
         payload['phoneNumber'] = userDetails.phoneNumber.slice(3);
-        payload['countryCode'] = userDetails.phoneNumber.slice(1, 3);
+        payload['dialCode'] = userDetails.phoneNumber.slice(1, 3);
 
         if (type == 'mobile') {
           let response = await axios.post(//send OTP for mobile
@@ -219,7 +219,7 @@ const SignIn = () => {
         setFormData({ ...formData, errorIndex: 0 });
         await axios.post(//send OTP for mobile
           `${authBaseDomain}/authdoor/mobile/generate-otp`,
-          { contactNo: userDetails.phoneNumber.slice(3) }
+          { contactNo: userDetails.phoneNumber.slice(3),dialCode:userDetails.phoneNumber.slice(1, 3) }
         )
         setPageIndex(2)
         startTimer()
@@ -329,7 +329,7 @@ const SignIn = () => {
     else {//resend OTP for mobile
       await axios.post(//send OTP for mobile
         `${authBaseDomain}/authdoor/mobile/generate-otp`,
-        { contactNo: details.phoneNumber.slice(3) }
+        { contactNo: details.phoneNumber.slice(3),dialCode:details.phoneNumber.slice(1, 3) }
       )
       startTimer()
       setPageIndex('4')
@@ -338,7 +338,7 @@ const SignIn = () => {
 
   // validates the form and trigger OTP for the final step
   const signUpOTP = async (details, type) => {
-    const nameRegex = /^[A-Za-z][A-Za-z '-]*[A-Za-z]$/;
+    const nameRegex = /^[A-Za-z]+( [A-Za-z]+)*$/;
     const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
     if (!details.firstName || !nameRegex.test(details.firstName)) {
@@ -387,7 +387,7 @@ const SignIn = () => {
         try {
           await axios.post(//send OTP for mobile
             `${authBaseDomain}/authdoor/mobile/otp/generate`,
-            { contactNo: details.phoneNumber.slice(3) },
+            { contactNo: details.phoneNumber.slice(3),dialCode:details.phoneNumber.slice(1, 3) },
             {
               headers: {
                 'Authorization': `Bearer ${token}`
@@ -535,7 +535,7 @@ const SignIn = () => {
           <div className="container">
             <div className='back-nav' onClick={() => navigateBack()}>
               <span className="web">
-                <svg width="1rem" height="1rem" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3.825 9L9.425 14.6L8 16L0 8L8 0L9.425 1.4L3.825 7H16V9H3.825Z" fill="#181818" />
                 </svg></span>
 
