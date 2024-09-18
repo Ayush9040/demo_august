@@ -27,20 +27,33 @@ const UserProfile = () => {
     menuItems: [],
   }
   useEffect(() => {
-    getPurchasedCourses();
+
+    if (user?.data?._id) {
+      getPurchasedCourses();
+    }
     if (isLoggedIn) return
     navigate('/user/sign-in')
 
   }, [])
 
   const getPurchasedCourses = async () => {
-    const { data } = await fetchUserCourses(user?.data?._id)
-    setCourses(data.data)
+    try {
+      const { data } = await fetchUserCourses(user?.data?._id)
+      setCourses(data.data)
+    }
+    catch (err) {
+      console.log(err);
+    }
   }
 
   const getOrderData = async () => {
-    const { data } = await fetchUserOrders(user?.data?._id)
-    setOrders(data.data)
+    try {
+      const { data } = await fetchUserOrders(user?.data?._id)
+      setOrders(data.data)
+    }
+    catch (err) {
+      console.log(err);
+    }
   }
 
   useEffect(() => {
