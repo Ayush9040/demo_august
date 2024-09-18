@@ -368,6 +368,7 @@ const SignIn = () => {
       //trigger EMAIL OTP 
       if (type == 'mobile') {//send OTP for mobile
         try {
+          startTimer()
           await axios.post(//send OTP for mobile
             `${authBaseDomain}/authdoor/email/generate-otp`,
             { email: details?.email },
