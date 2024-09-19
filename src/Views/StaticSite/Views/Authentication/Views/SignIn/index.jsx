@@ -243,40 +243,26 @@ const SignIn = () => {
       return errors;
     }
 
-    // Format Validation
-    const formatted = parsedNumber.formatInternational();
-    const actualFormat = formatted.replace(/\s+/g, '');
-    if (phoneNumber !== actualFormat) {
-      errors.push(`Incorrect format. Should be ${formatted}`);
+    const areaCode = parsedNumber.nationalNumber.slice(0, 3); // Extract the area code
+    let skip = 0;
+    if (areaCode === '555') {
+      // Skip additional checks for '555' area codes
+      skip=1;
     }
 
-    // Country Code Validation
-    if (!parsedNumber.country) {
-      errors.push('Invalid or missing country code.');
-    }
-
-    // Length Validation
-    if (!isValidPhoneNumber(phoneNumber)) {
+    // Check if it's a valid phone number for the selected country
+    if (!isValidPhoneNumber(phoneNumber) && skip === 0) {
       errors.push('Phone number is not valid for the selected country.');
     }
 
-    // National and International Numbering Validation
-    if (!parsedNumber.isPossible()) {
-      errors.push('Phone number is not possible.');
-    }
+    
 
-    // Region-Specific Checks
-    const areaCode = parsedNumber.nationalNumber.slice(0, 3); // Correctly access the national number
-    // console.log('ac',areaCode);
-
-    if (parsedNumber.country === 'US' && !['202', '212', '213'].includes(areaCode)) {
-      errors.push('Invalid area code for the region.');
-    }
-
-    // Invalid Number Patterns
-    if (/(\d)\1{6,}/.test(parsedNumber.nationalNumber)) {  // Use nationalNumber property directly
+    // Additional custom validations can be added here
+    if (parsedNumber && /(\d)\1{6,}/.test(parsedNumber.nationalNumber)) {
       errors.push('Phone number contains invalid patterns (e.g., too many repeated digits).');
     }
+
+   
 
     return errors;
   };
