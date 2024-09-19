@@ -159,6 +159,7 @@ const CourseDetails = ({ pageDate }) => {
   console.log('Course Viewed Event', pageDate, extractedKey);
  
   }, [pageDate])
+  
 
 
   

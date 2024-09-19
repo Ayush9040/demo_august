@@ -10,11 +10,20 @@ import { useLocation } from 'react-router-dom'
 import { getTotalHealthData } from './Api'
 import { handleCTPublicationSubscribeEvent } from '../../../../../CleverTap/publicationEvent'
 import { handleCTHardCopyIndiaInitiated, handleCTHardCopyInternationalInitiated } from '../../../../../CleverTap/publicationEvent'
+import { useSelector } from 'react-redux'
 
 const YogaTotalHealth = () => {
 
   const location = useLocation()
   const [totalHealthData, setTotalHealthData] = useState([])
+
+  const nameFromRedux = useSelector((state) => state.auth.user.data?.firstName);
+  const phoneNumberFromRedux = useSelector((state) => state.auth.user.data?.phoneNumber);
+  const emailFromRedux = useSelector((state) => state.auth.user.data?.email);
+  const countryNameFromRedux = useSelector((state) => state.auth.user.data?.country);
+  const panNameFromRedux = useSelector((state) => state.auth.user.data?.pan);
+  const lnameNameFromRedux = useSelector((state) => state.auth.user.data?.lastName);
+  const dobNameFromRedux = useSelector((state) => state.auth.user.data?.dateOfBirth);
 
   const yogaHealth = {
     title: 'yoga-health',
@@ -65,28 +74,28 @@ const YogaTotalHealth = () => {
 
   const handleHardCopyIndia = () => {
     handleCTHardCopyIndiaInitiated({
-      name: '',
-      emailId: '',
-      phoneNumber: '',
-      postalAddress: '',
-      amount: '',
-      paymentMode: '',
-      status: '',
-      productName: '',
-      productUrl: ''
+      name: nameFromRedux,
+      emailId: emailFromRedux,
+      phoneNumber: phoneNumberFromRedux,
+      // postalAddress: '',
+      // amount: '',
+      // paymentMode: '',
+      // status: '',
+      // productName: '',
+      // productUrl: ''
   })
   }
 
   const handleHardCopyInternational = () => {
     handleCTHardCopyInternationalInitiated({
-      name: '',
-      emailId: '',
-      phoneNumber: '',
-      postalAddress: '',
-      amount: '',
-      paymentMode: '',
-      status: '',
-      productName: '',
+      name: nameFromRedux,
+      emailId: emailFromRedux,
+      phoneNumber: phoneNumberFromRedux,
+      // postalAddress: '',
+      // amount: '',
+      // paymentMode: '',
+      // status: '',
+      // productName: '',
   })
   }
   

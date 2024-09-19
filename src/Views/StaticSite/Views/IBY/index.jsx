@@ -153,11 +153,45 @@ const IBYcourse = () => {
     }
   }
 
+  const clevertap = window?.clevertap;
+
   const batchOptions = [
     // 'JUN - AUG 2024',
     'SEP - NOV 2024',
     'DEC 2024 - FEB 2025', 
     'MAR 2024 - FEB 2025']
+
+    useEffect(()=> {
+
+      // Get the current URL path
+    const currentPath = window.location.pathname;
+  
+    // Extract the portion after the last '/' and remove the leading '/'
+    const extractedKey = currentPath.split('/').pop().replace(/-/g, ' ');
+       // Trigger the course_viewed event when the component mounts
+  
+       
+      //  if (true) {
+        clevertap.event.push("course_viewed", {
+            "course_name": "IBY CLASS",
+            "Page_name": extractedKey,
+            
+            "Page_Url": window.location.href,
+            "Tenure": 'N/A',
+            "Course Category ": "IBY CLASS",
+            "Course-SubType": "Teachers Practice",
+            "Course Type": "IBY CLASS",
+            "Course Mode": "OnCampus/Online",
+            "Course Location": "Non-Residential",
+            "Language": "English",
+            "PreRequisite": "200 Hour Teacher Training Course, 500 Hour, 900 Hour",
+            // "Batch_No": pageDate?.batch,
+            "date_time_timestamp": new Date().toISOString()
+        });
+    // }
+    // console.log('Course Viewed Event', pageDate, extractedKey);
+   
+    }, [])
 
 
   return (

@@ -10153,6 +10153,27 @@ const camps = {
     residential: false,
     certficate: false,
 
+    tenure: '21 days',
+    courseType: '21-Days Better living Course',
+    language: 'English',
+    preRequisite: 'None',
+    courseCategory: 'Self Help', 
+    courseSubType: '21 Days Better Living',
+    
+    courseCertificate: 'certificate Of Participation',
+    onlineInfo: {
+      courseMode: true,
+    },
+    residentialInfo: {
+      courseMode: false,
+      residentialMode: false
+    },
+    nonResidentialInfo: {
+      courseMode: true,
+      nonResidentialMode: true
+    },
+
+
     // tenure: '',
     // courseType: '21-Days Better living Course',
     // language: 'English',
@@ -10534,7 +10555,7 @@ const camps = {
     residential: false,
     certficate: false,
 
-    tenure: '',
+    tenure: '21 Days',
     courseType: '21-Days Better living Course',
     language: 'English',
     preRequisite: 'None',

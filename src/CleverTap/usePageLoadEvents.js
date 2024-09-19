@@ -25,12 +25,18 @@ const usePageLoadEvents = () => {
   // Function to track the Page View event
   const trackPageViewEvent = (sessionDurationInSeconds) => {
     const urlPath = window.location.pathname; // Get the pathname from the URL
-    const pageName = urlPath.split('/').filter(Boolean).pop() || 'Home'; // Extract the last segment or default to 'Home'
+  const pageName = urlPath.split('/').filter(Boolean).pop() || 'Home'; // Extract the last segment or default to 'Home'
+
+  // Get the last visited page from sessionStorage or fall back to 'Direct Visit'
+  const lastPageUrl = sessionStorage.getItem('last_page_url') || 'Direct Visit';
+
+  // Store the current page URL in sessionStorage for the next page view
+  sessionStorage.setItem('last_page_url', window.location.href);
 
     if (window?.clevertap) {
       window.clevertap.event.push('Page View', {
         Page_Name: pageName.charAt(0).toUpperCase() + pageName.slice(1),
-        Last_page_url: document.referrer || 'Direct Visit',
+        Last_page_url: lastPageUrl,
         Page_Url: window.location.href,
         Session_Duration: sessionDurationInSeconds,
         Logged_In: isLoggedIn ? 'Yes' : 'No',
@@ -105,9 +111,12 @@ const usePageLoadEvents = () => {
       window.location.href
     );
 
+    // Get the last visited page from sessionStorage or fall back to 'Direct Visit'
+  const lastPageUrl = sessionStorage.getItem('last_page_url') || 'Direct Visit';
+
     trackPageExitEvent({
       pageName: pageName.charAt(0).toUpperCase() + pageName.slice(1),
-      lastPageUrl: document.referrer || 'Direct Visit',
+      lastPageUrl: lastPageUrl || 'Direct Visit',
       pageUrl: window.location.href,
     });
 

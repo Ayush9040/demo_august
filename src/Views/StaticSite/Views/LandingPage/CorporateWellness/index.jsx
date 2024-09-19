@@ -129,11 +129,11 @@ const corporateWellness = () => {
   useEffect(() => {
     // Trigger the CleverTap event when the component loads
     handleCTCorporateYogaInitiated({
-      emailId: '', 
+      emailId: emailFromRedux, 
       dateTime: '', 
-      contact: '',
+      contact: phoneNumberFromRedux,
       designation: '', 
-      companyName: '', 
+      companyName: companyNameFromRedux, 
       message: ''
     })
 }, []);

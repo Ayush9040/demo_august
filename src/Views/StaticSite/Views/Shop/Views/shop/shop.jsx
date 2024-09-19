@@ -218,7 +218,7 @@ if (product) {
       productUrl: 'product/'+product?._id,
       // gender,
       // color,
-      // discount,
+      discount: product?.discount,
       // discountedPrice,
       // productSize,
       // language,

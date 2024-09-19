@@ -21,6 +21,7 @@ import { auth, googleAuthProvider } from './firebaseConfig'; // Adjust the path 
 import { signInWithPopup, signOut, GoogleAuthProvider } from 'firebase/auth';
 import axios from 'axios'
 import { authBaseDomain, cmsBaseDomain } from '../../../../../../Constants/appSettings'
+import { handleCTSignIn } from '../../../../../../CleverTap/buttonClicked'
 
 
 const SignIn = () => {
@@ -146,6 +147,8 @@ const SignIn = () => {
   const verifySignupOTP = async (userDetails, type, token) => {
     if (userDetails.otp.length == 4) {//valid OTP
       setFormData({ ...formData, errorIndex: 0 });
+      
+
       try {
         let payload = { ...userDetails }
         payload['gender'] = userDetails?.gender.value;
@@ -153,6 +156,7 @@ const SignIn = () => {
         payload['city'] = userDetails?.city.label;
         payload['phoneNumber'] = userDetails.phoneNumber.slice(3);
         payload['dialCode'] = userDetails.phoneNumber.slice(1, 3);
+        
 
         if (type == 'mobile') {
           let response = await axios.post(//send OTP for mobile
@@ -170,11 +174,17 @@ const SignIn = () => {
             localStorage.setItem('refreshToken', response?.data?.refreshToken)
             dispatch(loginUserSuccess({}))
             getUserDetails(response?.data?.accessToken)
+            callCTEvent(payload)
+
+            console.log('user details 1 ', userDetails);
+            
             page ? page !== 'cart' ? navigate(`/enrollment/${page}`) : navigate('/shop/checkout') : navigate('/')
           }
           else {
             alert('failed')
           }
+
+          
         }
         else {//google user
           let response = await axios.post(//send OTP for mobile
@@ -192,11 +202,14 @@ const SignIn = () => {
             localStorage.setItem('refreshToken', response?.data?.refreshToken)
             dispatch(loginUserSuccess({}))
             getUserDetails(response?.data?.accessToken)
+            callCTEvent(payload)
+
+            console.log('user details 2 ', userDetails);
             page ? page !== 'cart' ? navigate(`/enrollment/${page}`) : navigate('/shop/checkout') : navigate('/')
           }
           else {
             alert('failed')
-          }
+          }          
         }
       }
       catch (err) {
@@ -208,6 +221,7 @@ const SignIn = () => {
     }
   }
 
+ 
   // Send OTP for mobile
   const sendOTP = async (userDetails) => {
     if (userDetails.phoneNumber) {//validate mobile number
@@ -352,6 +366,7 @@ const SignIn = () => {
     }
     else {//form is valid 
       setFormData({ ...formData, errorIndex: 0 });
+      
       //trigger EMAIL OTP 
       if (type == 'mobile') {//send OTP for mobile
         try {
@@ -365,6 +380,9 @@ const SignIn = () => {
               }
             }
           )
+
+          
+         
           setPageIndex('4')
         }
         catch (err) {
@@ -382,6 +400,7 @@ const SignIn = () => {
               }
             }
           )
+          
           startTimer()
           setPageIndex('4')
         }
@@ -391,6 +410,21 @@ const SignIn = () => {
       }
     }
   }
+
+  const callCTEvent = (userDetails) => {
+    console.log('callCTEvent function called ', userDetails)
+    handleCTSignIn({
+      firstName: userDetails?.firstName,
+      email: userDetails?.email,
+      IsLoggedIn: 'Yes',
+      phone: userDetails.phoneNumber,
+      city: userDetails?.city,
+      country:userDetails?.country,
+      gender: userDetails?.gender,
+      dialCode: userDetails?.dialCode
+    })
+  }
+
 
   const openLink = (url) => {
     window.open(url, '_blank')

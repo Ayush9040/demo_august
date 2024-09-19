@@ -39,7 +39,11 @@ const EditAccount = () => {
 
   const dateStr = user.data?.dateOfBirth;
 const dateObj = new Date(dateStr);
-const formattedDate = `${String(dateObj.getDate()).padStart(2, '0')}/${String(dateObj.getMonth() + 1).padStart(2, '0')}/${dateObj.getFullYear()}`;
+let formattedDate = `${String(dateObj.getDate()).padStart(2, '0')}/${String(dateObj.getMonth() + 1).padStart(2, '0')}/${dateObj.getFullYear()}`;
+
+if (isNaN(new Date(formattedDate).getTime())) {
+  formattedDate = '';
+}
 
   useEffect(()=>{
     setFormData({

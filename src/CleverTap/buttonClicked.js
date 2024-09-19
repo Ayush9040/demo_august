@@ -303,10 +303,14 @@ if(tenure === '') {
   }
 
   export const handleCTSignIn = ({
-    // firstName,
+    firstName,
     email,
     IsLoggedIn,
-    phone
+    phone,
+    city,
+    country,
+    gender,
+    dialCode
   }) => {
 
     const res = (email) => {
@@ -316,17 +320,41 @@ if(tenure === '') {
       return ans;
     }
 
+    const convertToInternationalFormat = (phoneNumber, dialCode) => {
+      // Ensure that phoneNumber is cleaned of any non-digit characters (if needed)
+      const cleanedPhoneNumber = phoneNumber.replace(/\D/g, '');
+    
+      // Combine the dialCode with the phoneNumber
+      return `+${dialCode}${cleanedPhoneNumber}`;
+    };
+
+    let num = convertToInternationalFormat(phone,dialCode);
+
+    let Gender;
+
+    if(gender === "Male") {
+      Gender = "M";
+    }
+
+    if(gender === "Female") {
+      Gender = "F";
+    }
+
+    if(gender === "Others") {
+      Gender = "O";
+    }
+
     if (window.clevertap) {
       // User profile data
 
 
       const userProfile = {
         "Site": {
-          // "Name": user.name || "",                    // User's name
-          "Identity": res(email),                  // Unique identity (User ID)
+           "Name": firstName || "",                    // User's name
+          "Identity": num,                  // Unique identity (User ID)
           "Email": email || "",                  // Email address
-          "Phone": phone || "",                  // Phone number in international format
-          // "Gender": user.gender || "",                // Gender ("M", "F", "O")
+          "Phone": num || "",                  // Phone number in international format
+          "Gender": Gender || "",                // Gender ("M", "F", "O")
           // "DOB": user.dob || "",                      // Date of birth in "YYYY-MM-DD" format
           // "City": user.city || "",     
           // "Age": '25',               // City
@@ -348,17 +376,19 @@ if(tenure === '') {
        const userProfile19 = {
         "Site": {
           // "Course Name": "200 Hours",
-          // "id_name": "Jack Montana",
+          "id_name": firstName,
           "id_email": res(email),
-          // "id_phone": "+14155551234",
+          "id_phone": phone,
+          "City": city,
+          "Country": country,
           // "Lead_Type": "SALES",
           // "Nationality": "Indian",
-          // "MSG-email": true,                // Disable email notifications
-          // "MSG-push": true,                  // Enable push notifications
-          // "MSG-sms": true,                   // Enable sms notifications
-          // "MSG-whatsapp": true,  
+          //  "MSG-email": true,                // Disable email notifications
+          //  "MSG-push": true,                  // Enable push notifications
+          //  "MSG-sms": true,                   // Enable sms notifications
+          //  "MSG-whatsapp": true,  
         },
-        "Identity": res(email),  // This is the unique identifier for the user
+        "Identity": num,  // This is the unique identifier for the user
         // "ObjectID": "25b08803c1af4e00839f530264dac6f8", // Optional
         "Type": "profile"
       };
@@ -379,10 +409,10 @@ if(tenure === '') {
     // Trigger CleverTap event on button click
     if (window?.clevertap) {
       window.clevertap.event.push("SignIn", {
-        // "Name":firstName,
+        "Name":firstName,
         "Email ID": email,
-        "IsLoggedIn": IsLoggedIn
-        // "date_time_timestamp": new Date().toISOString()
+        "IsLoggedIn": IsLoggedIn,
+        "date_time_timestamp": new Date().toISOString()
       });
 
      
