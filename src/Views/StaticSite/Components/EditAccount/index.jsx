@@ -37,6 +37,10 @@ const EditAccount = () => {
     fetchUserData()
   },[])
 
+  const dateStr = user.data?.dateOfBirth;
+const dateObj = new Date(dateStr);
+const formattedDate = `${String(dateObj.getDate()).padStart(2, '0')}/${String(dateObj.getMonth() + 1).padStart(2, '0')}/${dateObj.getFullYear()}`;
+
   useEffect(()=>{
     setFormData({
       ...formData,
@@ -54,7 +58,7 @@ const EditAccount = () => {
       company: user.data?.company || '',
       profession: user.data?.profession || '',
       passport: user.data?.passport || '',
-      dateOfBirth: user.data?.dateOfBirth || '',
+      dateOfBirth: formattedDate  || '',
       nationality: user.data?.nationality || '',
       pan: user.data?.pan || '', 
     })
@@ -107,7 +111,12 @@ const EditAccount = () => {
     else{
       setEmpty(0)
       try{
-        await axios.put(`${ authBaseDomain }/user/update`,formData)
+        let token = localStorage.getItem('authToken')
+        await axios.put(`${ authBaseDomain }/user/update`,formData,  {
+          headers: {
+            // 'Authorization': `Bearer ${token}`
+          }
+        })
         setModal('success')
       }catch(err){
         setModal('error')
@@ -177,7 +186,7 @@ const EditAccount = () => {
               <option disabled selected className='edit-account-gender'>
                 Gender
               </option>
-              <option selected={ formData.gender==='male' } value="male">Male</option>
+              <option selected={ formData.gender==='Male' } value="Male">Male</option>
               <option selected={ formData.gender === 'female' } value="female">Female</option>
               <option selected={ formData.gender === 'other' } value="other">other</option>
             </select>
