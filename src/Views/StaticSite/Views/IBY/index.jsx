@@ -153,7 +153,11 @@ const IBYcourse = () => {
     }
   }
 
-  const batchOptions = ['JUN - AUG 2024','SEP - NOV 2024','DEC 2024 - FEB 2025', 'MAR 2024 - FEB 2025']
+  const batchOptions = [
+    // 'JUN - AUG 2024',
+    'SEP - NOV 2024',
+    'DEC 2024 - FEB 2025', 
+    'MAR 2024 - FEB 2025']
 
 
   return (
