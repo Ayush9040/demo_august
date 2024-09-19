@@ -19,6 +19,9 @@ import { useDispatch, useSelector } from 'react-redux'
 import { authServerClientId, razorPayKey } from '../../../../../../Constants/appSettings'
 import { useNavigate } from 'react-router-dom'
 import { updateCartData, clearCart } from '../../Shop.action'
+import { handleCTCheckoutCompleted, handleCTCheckoutFailed, handleCTCheckoutCompleted1 } from '../../../../../../CleverTap/shopEvents'
+import { handleCTProductPaymentCompleted } from '../../../../../../CleverTap/shopEvents'
+
 
 const ShippingAdd = () => {
   const { user } = useSelector((state) => state.auth)
@@ -214,6 +217,7 @@ const ShippingAdd = () => {
     }
   }
 
+
   const makePayment = async() => {
     const finalAddId = addresId ? addresId : await postNewAddress()
     if( !finalAddId ) return
@@ -250,11 +254,30 @@ const ShippingAdd = () => {
             cartId:cartId,
             addressId:finalAddId
           })
+
+          const programNames = cart.map((item) => item.title);
+
+          handleCTProductPaymentCompleted({
+            Name: formData.name,
+            Address: formData.add1,
+            Country: formData.country,
+            State: formData.state,
+            City: formData.city,
+            Pincode: formData.pincode,
+            cartItems: cart
+          })
+
           localStorage.removeItem('cart')
 
           dispatch(clearCart());
           
           navigate('/shop/thank-you')
+        } else {
+          const programNames = cart.map((item) => item.title);
+
+          handleCTCheckoutFailed({
+            cartItems: cart
+          })
         }
       },
       prefill: {
@@ -270,6 +293,9 @@ const ShippingAdd = () => {
     rzp.open()
   }
 
+  // console.log('cart details for ct_1 ', cart);
+  
+
   const checkout = async() => {
     if (!usePrevAddress) {
       if (formData.name === '') return setEmpty(1)
@@ -280,6 +306,9 @@ const ShippingAdd = () => {
       if (formData.country === '') return setEmpty(5)
       if (formData.pincode === '') return setEmpty(6)
     }
+
+    handleCTCheckoutCompleted1(cart);
+    
     await makePayment()
   }
 
@@ -289,6 +318,9 @@ const ShippingAdd = () => {
     postCart()
     dispatch(updateCartData(JSON.parse(cartItems)))
   }, [user?.data, activCartId ])
+
+  console.log('dp ', cart);
+  
 
   return (
     <>

@@ -10,6 +10,7 @@ import { locateAsset } from '../../assets/images/imageAsset'
 import { useNavigate, useLocation } from 'react-router-dom'
 import { Helmet } from 'react-helmet'
 import metaDataObj from '../../../../Constants/metaData.json'
+import { handleCTLocateUsDetails } from '../../../../CleverTap/buttonClicked'
 
 
 const LocateUs = () => {
@@ -175,6 +176,7 @@ const LocateUs = () => {
           <div className="locate_sub_address_container">
             <div className="locate_container">
               {country?.branches?.map((items, index) => {
+                console.log('items details : ',items);
                 return (
                   <div className="sub_state" key={index}>
                     <div className="bold_state">{items?.state}</div>
@@ -221,14 +223,30 @@ const LocateUs = () => {
                               target="_blank"
                               rel="noreferrer"
                             >
-                              <button className="country-details-btn">
+                              <button className="country-details-btn" onClick={() => handleCTLocateUsDetails({
+                                instituteName: items?.state,
+                                address: items?.notstate,
+                                phoneNumber: items?.phone[0],
+                                websiteLink: items?.url,
+                                emailAddress: items?.email
+                              })}>
                                 Details
                               </button>
                             </a>
                           ) : (
                             <button
                               className="country-details-btn"
-                              onClick={() => navigate(`/${items?.url}`)}
+                              onClick={() => {
+                                
+                                handleCTLocateUsDetails({
+                                  instituteName: items?.state,
+                                  address: items?.notstate,
+                                  phoneNumber: items?.phone[0],
+                                  websiteLink: items?.url,
+                                  emailAddress: items?.email
+                                })
+                                
+                                navigate(`/${items?.url}`)}}
                             >
                               Details
                             </button>

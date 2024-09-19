@@ -2,6 +2,7 @@ import React from 'react'
 import './styles.scss'
 import { CartButton } from '../../assets/icons/icon'
 import { useNavigate } from 'react-router-dom'
+import { trackProductClicked } from '../../../../CleverTap/shopEvents'
 const ShopCard = ({
   title = 'Yoga chakra Mat Balance your mind',
   price = '395',
@@ -9,7 +10,9 @@ const ShopCard = ({
   productId,
   addCart,
   buyProduct,
-  currency
+  currency,
+  discount,
+  stockCount
 }) => {
   let colorA = '#CE7780'
   let colorB = '#9A565B'
@@ -17,8 +20,33 @@ const ShopCard = ({
   const navigate = useNavigate()
 
 
+  const viewDetailsProduct = () => {
+    trackProductClicked({
+      productName: title,
+      productId: productId,
+      // category: product.category,
+      productPrice: price,
+      // quantity: product.quantity,
+      stockAvailability: stockCount,
+      // nextPageUrl: '/next-page-url', 
+      productUrl: window.location.href,
+      // checkoutUrl: '/checkout-url', 
+      // color: product.color,
+      discount: discount,
+      discountedPrice: price - discount,
+      // gender: product.gender,
+      // productSize: product.size,
+      // language: product.language,
+      // material: product.material,
+      // printed: product.printed,
+  });
+ 
+    navigate(`product/${productId}`)
+  }
+
+
   return (
-    <div className="card" onClick={()=>navigate(`product/${productId}`)}>
+    <div className="card" onClick={viewDetailsProduct}>
       <div className="card-img-container">
         <img
           className="card-img"

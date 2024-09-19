@@ -10,6 +10,8 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, }
 
   const [customVal, setCustomVal] = useState(1)
 
+  console.log('Course Clicked Data ', data)
+
   const content = () => {
 
     const coursesList = [
@@ -346,6 +348,17 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, }
                       color={selectColor(i)}
                       index={i}
                       courseTitle={item.title}
+                      pageName={item.key}
+                      tenure={item.tenure}
+                      courseCategory={item.courseCategory} 
+                      courseSubType={item.courseSubType}
+                      onlineMode= {item?.onlineInfo?.courseMode}
+                      residentialMode= {item?.residentialInfo?.courseMode}
+                      nonResidentialMode={item?.nonResidentialInfo?.courseMode}
+                      residentialLocation={item?.residentialInfo?.residentialMode}
+                      nonResidentialLocation={item?.nonResidentialInfo?.nonResidentialMode}
+                      courseType={item?.courseType}
+                      language={item?.language}
                       description={item.metaDescription}
                       path={item.key}
                       img={item.cardImage}
@@ -370,6 +383,24 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, }
                     img={item.cardImage}
                     rating={item.rating}
                     dates={item.dates}
+                    fees={item?.fees}
+                    timing={item?.timing}
+                    tenure={item?.tenure}
+                    pageName={item?.key}
+                    courseCategory={item?.courseCategory} 
+                      courseSubType={item?.courseSubType}
+                      onlineMode= {item?.onlineInfo?.courseMode}
+                      residentialMode= {item?.residentialInfo?.courseMode}
+                      nonResidentialMode={item?.nonResidentialInfo?.courseMode}
+                      residentialLocation={item?.residentialInfo?.residentialMode}
+                      nonResidentialLocation={item?.nonResidentialInfo?.nonResidentialMode}
+                      courseType={item?.courseType}
+                      language={item?.language}
+                    category={item?.category}
+                    batch={item?.batch}
+                    nonResidential={item?.nonResidential}
+                    residential={item?.residential}
+                    online={item?.online}
                   />
                 )
               }

@@ -13,6 +13,7 @@ import App from './App'
 
 import './Utils/interceptors'
 import { isAuthorized } from './Utils/localStorage'
+import { CleverTapProvider } from './CleverTap/CleverTapProvider'
 // import ReactGA from 'react-ga'
 
 export const store = configureStore({})
@@ -39,7 +40,9 @@ root.render(
   <Provider store={store}>
     <StrictMode>
       <Router>
+      <CleverTapProvider>
         <App />
+        </CleverTapProvider>
       </Router>
     </StrictMode>
   </Provider>

@@ -8,6 +8,8 @@ import { Helmet } from 'react-helmet'
 import metaDataObj from '../../../../../Constants/metaData.json'
 import { useLocation } from 'react-router-dom'
 import { getTotalHealthData } from './Api'
+import { handleCTPublicationSubscribeEvent } from '../../../../../CleverTap/publicationEvent'
+import { handleCTHardCopyIndiaInitiated, handleCTHardCopyInternationalInitiated } from '../../../../../CleverTap/publicationEvent'
 
 const YogaTotalHealth = () => {
 
@@ -56,6 +58,37 @@ const YogaTotalHealth = () => {
     getAllTotalHealthData()
     window.scrollTo(0, 0)
   }, [])
+
+  const handleSubscribe = () => {
+    handleCTPublicationSubscribeEvent('Emagizine');
+  }
+
+  const handleHardCopyIndia = () => {
+    handleCTHardCopyIndiaInitiated({
+      name: '',
+      emailId: '',
+      phoneNumber: '',
+      postalAddress: '',
+      amount: '',
+      paymentMode: '',
+      status: '',
+      productName: '',
+      productUrl: ''
+  })
+  }
+
+  const handleHardCopyInternational = () => {
+    handleCTHardCopyInternationalInitiated({
+      name: '',
+      emailId: '',
+      phoneNumber: '',
+      postalAddress: '',
+      amount: '',
+      paymentMode: '',
+      status: '',
+      productName: '',
+  })
+  }
   
   
   return (
@@ -101,14 +134,14 @@ const YogaTotalHealth = () => {
             {'To subscribe to ‘Yoga & Total Health Monthly Magazine’ click here.'}
           </p>
           <a href='https://www.magzter.com/IN/The_Yoga_Institute/Yoga_and_Total_Health/Health/' rel='noreferrer' target="_blank" >
-            <CommonBtn text={'Subscribe Now (E-Mag)'} />
+            <CommonBtn text={'Subscribe Now (E-Mag)'} buttonAction={handleSubscribe}/>
           </a>
           <div className='hard-copy' >
             <a href="https://rzp.io/l/zMFTO9F0l3" rel='noreferrer' target="_blank">
-              <CommonBtn text={'Hard Copy (India)'} />
+              <CommonBtn text={'Hard Copy (India)'} buttonAction={handleHardCopyIndia} />
             </a>
             <a href="https://rzp.io/l/MMLnvukYe" rel='noreferrer' target="_blank">
-              <CommonBtn text={'Hard Copy (International)'} />
+              <CommonBtn text={'Hard Copy (International)'} buttonAction={handleHardCopyInternational} />
             </a>
           </div>
           <p>

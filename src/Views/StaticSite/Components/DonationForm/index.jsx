@@ -11,6 +11,7 @@ import { AnonymousDonation, donationPaymentOrder, successMail } from './api'
 import Loader from '../Loader'
 import { razorPayKey } from '../../../../Constants/appSettings'
 import { useSelector } from 'react-redux'
+import { handleCTDonateInitiated, handleCTDonateCompleted } from '../../../../CleverTap/donateEvents'
 
 
 const DonationForm = ( { csrId } ) => {
@@ -182,8 +183,36 @@ const DonationForm = ( { csrId } ) => {
                 },
                 receivers: [formData.email,'info@theyogainstitute.org'],
               })
+
+              handleCTDonateCompleted({
+                amount: formData.amount,
+                firstName: formData.fName,
+                lastName: formData.lName,
+                emailId: formData.email,
+                dob: formData.dob,
+                phone: formData.phone,
+                country: formData.country,
+                paymentMode: 'Card',
+                taxExemption: tax,
+                acceptTerms: agree,
+                status: 'Completed'
+              })
               navigate('/donation')
 
+            } else {
+              handleCTDonateCompleted({
+                amount: formData.amount,
+                firstName: formData.fName,
+                lastName: formData.lName,
+                emailId: formData.email,
+                dob: formData.dob,
+                phone: formData.phone,
+                country: formData.country,
+                paymentMode: 'Card',
+                taxExemption: tax,
+                acceptTerms: agree,
+                status: 'failed'
+              })
             }
           },
           prefill: {
@@ -254,8 +283,21 @@ const DonationForm = ( { csrId } ) => {
             if (          res.razorpay_payment_id &&
               res.razorpay_order_id &&
               res.razorpay_signature){
+                handleCTDonateCompleted({
+                  amount: formData.amount,
+                  firstName: formData.fName,
+                  lastName: formData.lName,
+                  emailId: formData.email,
+                  dob: formData.dob,
+                  phone: formData.phone,
+                  country: formData.country,
+                  paymentMode: 'Card',
+                  taxExemption: tax,
+                  acceptTerms: agree,
+                  status: 'Completed'
+                })
               navigate('/donation')
-            }
+            } 
   
           },
           theme: {
@@ -305,6 +347,18 @@ const DonationForm = ( { csrId } ) => {
     } else if (agree !== true) {
       return setValidate(9)
     } else {
+      handleCTDonateInitiated({
+        amount: formData.amount,
+        firstName: formData.fName,
+        lastName: formData.lName,
+        emailId: formData.email,
+        dob: formData.dob,
+        phone: formData.phone,
+        country: formData.country,
+        // paymentMode: 'Card',
+        taxExemption: tax, 
+        acceptTerms: agree,
+    });
       submitForm()
       setLoading(true)
     }

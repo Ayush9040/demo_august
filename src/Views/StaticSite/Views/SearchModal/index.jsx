@@ -6,6 +6,7 @@ import Pagination from 'react-js-pagination'
 import './style.scss'
 import { useEffect } from 'react'
 import { cmsBaseDomain } from '../../../../Constants/appSettings'
+import { trackSearchEvent } from '../../../../CleverTap/overallWebsiteEvents'
 
 const SearchModal = () => {
   const [search, setSearch] = useState('')
@@ -46,9 +47,11 @@ const SearchModal = () => {
     if (search === '') {
       setSearch('')
       setContent([])
+      trackSearchEvent(search, limit);
       navigate('/search')
       return
     }
+    
     navigate(`/search/?search=${search}`)
     try {
       setIsLoading(true)
@@ -59,6 +62,8 @@ const SearchModal = () => {
         .then((res) => {
           setContent(res.data)
           setCount(res.data.count)
+          // console.log('search data', res.data, 'count : ', res.data.count)
+          trackSearchEvent(search,  res.data.count);
         })
         .then(() => {
           setIsLoading(false)

@@ -267,6 +267,8 @@ const SignIn = () => {
     return errors;
   };
 
+  const clevertap = window.clevertap;
+
   useEffect(() => {
     localStorage.removeItem('userAppId')
     setSetselectDate(Params.get('date'))

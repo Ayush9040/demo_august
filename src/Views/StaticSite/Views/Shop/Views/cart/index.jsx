@@ -11,6 +11,7 @@ import { fetchSingleProduct,updateCart } from '../../Shop.api'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import { updateCartData, getActiveCartData } from '../../Shop.action'
+import { handleCTCheckoutCompleted } from '../../../../../../CleverTap/shopEvents'
 
 const AddToCart = () => {
 
@@ -105,8 +106,15 @@ const AddToCart = () => {
     return sum
   }
 
+  console.log('add cart for charged ', addCart);
+  
+
   const checkout = async()=>{
+    
     if(!isLoggedIn) return navigate('/user/sign-in/?location=cart')
+
+      handleCTCheckoutCompleted(addCart);
+
     navigate('/shop/checkout')
   }
 
