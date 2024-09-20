@@ -50,6 +50,17 @@ const HomeTutions = ({ courseMode }) => {
   const dobNameFromRedux = useSelector((state) => state.auth.user.data?.dateOfBirth);
   const genderFromRedux = useSelector((state) => state.auth.user.data?.gender);
 
+
+  useEffect(() => {
+    // JS to modify span after component mounts
+    const spanElement = document.querySelector('.atleast_3_days .dropdown-container .dropdown-heading .dropdown-heading-value span');
+    
+    if (spanElement) {
+      spanElement.textContent = 'Select 3 days*';
+      spanElement.className = 'atleast_3days_options_container';
+    }
+  }, []);
+
   console.log('countryNameFromRedux ', countryNameFromRedux);
   console.log('dobNameFromRedux ', dobNameFromRedux);
   console.log('courseMode ', courseMode);
@@ -595,14 +606,14 @@ const HomeTutions = ({ courseMode }) => {
 
           {/* Added a new fields */}
 
-          <div className="form-field multi_day" style={{ width: '100%'}}>
+          <div className="form-field multi_day atleast_3_days" style={{ width: '100%'}}>
         {/* <label>Select Preferred Days*</label> */}
         <MultiSelect
           styles={customStyles}
           options={daysOptions}
           value={selectedDays}
           onChange={handleDayChange}
-          labelledBy="Select Days"
+          labelledBy="Select 3 Days"
           disableSearch={true}  // Optional: to disable search feature if not needed
           hasSelectAll={false}  // Disable "Select All" option
         />
