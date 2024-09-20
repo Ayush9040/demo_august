@@ -49,13 +49,14 @@ const IBYform = ({ setOpenForm, price, selectBatch }) => {
   const phoneNumberFromRedux = useSelector((state) => state.auth.user.data?.phoneNumber);
   const emailFromRedux = useSelector((state) => state.auth.user.data?.email);
   const countryNameFromRedux = useSelector((state) => state.auth.user.data?.country);
+  const dailCode = useSelector((state) => state.auth.user.data?.dialCode);
 
   useEffect(() => {
     if (nameFromRedux) {
       setFormData((prev) => ({ ...prev, name: nameFromRedux }));
     }
     if (phoneNumberFromRedux) {
-      setFormData((prev) => ({ ...prev, phoneNumber: phoneNumberFromRedux }));
+      setFormData((prev) => ({ ...prev, phoneNumber: `+${dailCode}${phoneNumberFromRedux}` }));
     }
     if (emailFromRedux) {
       setFormData((prev) => ({ ...prev, email: emailFromRedux }));
