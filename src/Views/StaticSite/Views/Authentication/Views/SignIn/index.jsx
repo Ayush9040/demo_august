@@ -122,7 +122,7 @@ const SignIn = () => {
       try {
         let response = await axios.post(//send OTP for mobile
           `${authBaseDomain}/authdoor/mobile/verify-otp`,
-          { contactNo: userDetails.phoneNumber.slice(3), otp: userDetails.otp,dialCode:userDetails.phoneNumber.slice(1, 3) }
+          { contactNo: userDetails.phoneNumber.slice(3), otp: userDetails.otp, dialCode: userDetails.phoneNumber.slice(1, 3) }
         )
         setToken(response?.data?.token)
         if (response?.data?.isSignupRequired) { setPageIndex(3); setSignUpType('mobile') }
@@ -135,7 +135,8 @@ const SignIn = () => {
         }
       }
       catch (err) {
-        alert('Invalid OTP')
+        // alert('Invalid OTP')
+        setFormData({ ...formData, errorIndex: 2 });
       }
     }
     else {
@@ -147,7 +148,7 @@ const SignIn = () => {
   const verifySignupOTP = async (userDetails, type, token) => {
     if (userDetails.otp.length == 4) {//valid OTP
       setFormData({ ...formData, errorIndex: 0 });
-      
+
 
       try {
         let payload = { ...userDetails }
@@ -156,7 +157,7 @@ const SignIn = () => {
         payload['city'] = userDetails?.city.label;
         payload['phoneNumber'] = userDetails.phoneNumber.slice(3);
         payload['dialCode'] = userDetails.phoneNumber.slice(1, 3);
-        
+
 
         if (type == 'mobile') {
           let response = await axios.post(//send OTP for mobile
@@ -175,16 +176,13 @@ const SignIn = () => {
             dispatch(loginUserSuccess({}))
             getUserDetails(response?.data?.accessToken)
             callCTEvent(payload)
-
-            console.log('user details 1 ', userDetails);
-            
             page ? page !== 'cart' ? navigate(`/enrollment/${page}`) : navigate('/shop/checkout') : navigate('/')
           }
           else {
-            alert('failed')
+            // alert('failed')
           }
 
-          
+
         }
         else {//google user
           let response = await axios.post(//send OTP for mobile
@@ -208,12 +206,13 @@ const SignIn = () => {
             page ? page !== 'cart' ? navigate(`/enrollment/${page}`) : navigate('/shop/checkout') : navigate('/')
           }
           else {
-            alert('failed')
-          }          
+            // alert('failed')
+          }
         }
       }
       catch (err) {
-        alert('Invalid OTP')
+        // alert('Invalid OTP')
+        setFormData({ ...formData, errorIndex: 2 });
       }
     }
     else {
@@ -221,7 +220,7 @@ const SignIn = () => {
     }
   }
 
- 
+
   // Send OTP for mobile
   const sendOTP = async (userDetails) => {
     if (userDetails.phoneNumber) {//validate mobile number
@@ -233,7 +232,7 @@ const SignIn = () => {
         setFormData({ ...formData, errorIndex: 0 });
         await axios.post(//send OTP for mobile
           `${authBaseDomain}/authdoor/mobile/generate-otp`,
-          { contactNo: userDetails.phoneNumber.slice(3),dialCode:userDetails.phoneNumber.slice(1, 3) }
+          { contactNo: userDetails.phoneNumber.slice(3), dialCode: userDetails.phoneNumber.slice(1, 3) }
         )
         setPageIndex(2)
         startTimer()
@@ -247,7 +246,7 @@ const SignIn = () => {
     // setPhoneValue(value);
     setFormData({ ...formData, phoneNumber: value });
   };
-
+  const [isAlreadyRegistered, SetIsAlreadyRegistered] = useState(false)
   const validatePhoneNumber = (phoneNumber) => {
     const errors = [];
     const parsedNumber = parsePhoneNumberFromString(phoneNumber);
@@ -261,7 +260,7 @@ const SignIn = () => {
     let skip = 0;
     if (areaCode === '555') {
       // Skip additional checks for '555' area codes
-      skip=1;
+      skip = 1;
     }
 
     // Check if it's a valid phone number for the selected country
@@ -269,14 +268,14 @@ const SignIn = () => {
       errors.push('Phone number is not valid for the selected country.');
     }
 
-    
+
 
     // Additional custom validations can be added here
     if (parsedNumber && /(\d)\1{6,}/.test(parsedNumber.nationalNumber)) {
       errors.push('Phone number contains invalid patterns (e.g., too many repeated digits).');
     }
 
-   
+
 
     return errors;
   };
@@ -318,6 +317,22 @@ const SignIn = () => {
     }, 1000)
   }
 
+  const [secondsF, setSecondsF] = useState(59);
+  let intervalIdF; // variable fro timer
+  let timerF = 59; // variable to handle seconds not updated in dom
+
+  const startTimerF = () => {
+    clearInterval(intervalIdF);
+    timerF = 59;// resets timer
+    intervalIdF = setInterval(() => {
+      timerF = timerF - 1; //using state its not possible to get current time so using a new variable
+      setSecondsF(timerF)
+      if (timer === 0) {
+        clearInterval(intervalIdF);
+      }
+    }, 1000)
+  }
+
   // Used to resend OTP in the final step
   const sendSignupOTP = async (details, type) => {
     if (type == 'mobile') {//send OTP for mobile
@@ -325,15 +340,15 @@ const SignIn = () => {
         `${authBaseDomain}/authdoor/email/generate-otp`,
         { email: details?.email }
       )
-      startTimer()
+      startTimerF()
       setPageIndex('4')
     }
     else {//resend OTP for mobile
       await axios.post(//send OTP for mobile
         `${authBaseDomain}/authdoor/mobile/generate-otp`,
-        { contactNo: details.phoneNumber.slice(3),dialCode:details.phoneNumber.slice(1, 3) }
+        { contactNo: details.phoneNumber.slice(3), dialCode: details.phoneNumber.slice(1, 3) }
       )
-      startTimer()
+      startTimerF()
       setPageIndex('4')
     }
   }
@@ -366,11 +381,10 @@ const SignIn = () => {
     }
     else {//form is valid 
       setFormData({ ...formData, errorIndex: 0 });
-      
+
       //trigger EMAIL OTP 
       if (type == 'mobile') {//send OTP for mobile
         try {
-          startTimer()
           await axios.post(//send OTP for mobile
             `${authBaseDomain}/authdoor/email/generate-otp`,
             { email: details?.email },
@@ -380,32 +394,33 @@ const SignIn = () => {
               }
             }
           )
-
-          
-         
+          startTimerF()
+          SetIsAlreadyRegistered(false)
           setPageIndex('4')
         }
         catch (err) {
-          alert('Unexpected error, please try again')
+          SetIsAlreadyRegistered(true)
+          // alert('Unexpected error, please try again')
         }
       }
       else {//gmail signup
         try {
           await axios.post(//send OTP for mobile
             `${authBaseDomain}/authdoor/mobile/otp/generate`,
-            { contactNo: details.phoneNumber.slice(3),dialCode:details.phoneNumber.slice(1, 3) },
+            { contactNo: details.phoneNumber.slice(3), dialCode: details.phoneNumber.slice(1, 3) },
             {
               headers: {
                 'Authorization': `Bearer ${token}`
               }
             }
           )
-          
-          startTimer()
+          SetIsAlreadyRegistered(false)
+          startTimerF()
           setPageIndex('4')
         }
         catch (err) {
-          alert('Unexpected error, please try again')
+          SetIsAlreadyRegistered(true)
+          // alert('Unexpected error, please try again')
         }
       }
     }
@@ -419,7 +434,7 @@ const SignIn = () => {
       IsLoggedIn: 'Yes',
       phone: userDetails.phoneNumber,
       city: userDetails?.city,
-      country:userDetails?.country,
+      country: userDetails?.country,
       gender: userDetails?.gender,
       dialCode: userDetails?.dialCode
     })
@@ -682,6 +697,11 @@ const SignIn = () => {
                   </div>
                   {formData?.errorIndex == 5 &&
                     <div style={{ color: '#FF3B30' }}>Enter a valid Email</div>}
+
+                  {isAlreadyRegistered &&
+                    <div style={{ color: '#FF3B30' }}>Email already registered</div>
+                  }
+
                 </>}
               {signUpType != 'mobile' &&
                 <>
@@ -694,13 +714,22 @@ const SignIn = () => {
                       onChange={handlePhoneChange}
                       value={formData.phoneNumber}
                     />
-                  </div> {formData?.errorIndex == 9 &&
-                    <div style={{ color: '#FF3B30' }}>Enter a valid Mobile number</div>}</>}
+                  </div>
+                  {formData?.errorIndex == 9 &&
+                    <div style={{ color: '#FF3B30' }}>Enter a valid Mobile number</div>}
+
+                  {isAlreadyRegistered &&
+                    <div style={{ color: '#FF3B30' }}>Mobile number already registered</div>
+                  }
+
+                </>}
+
               <div className='inp-group'>
                 <div>
                   <div className='inp-label  mg-t-20'>Gender <span>*</span></div>
                   {/* <div className="form-inp"> */}
                   <Select
+                    menuPlacement="top"
                     styles={customStyles(formData?.errorIndex == 6 ? true : false)}
                     id="country"
                     name="Gender"
@@ -720,6 +749,7 @@ const SignIn = () => {
                   <div className='inp-label  mg-t-20'>Country <span>*</span></div>
                   {/* <div className="form-inp"> */}
                   <Select
+                    menuPlacement="top"
                     styles={customStyles(formData?.errorIndex == 7 ? true : false)}
                     id="country"
                     name="country"
@@ -734,6 +764,7 @@ const SignIn = () => {
                 <div>
                   <div className='inp-label  mg-t-20'>City <span>*</span></div>
                   <Select
+                    menuPlacement="top"
                     styles={customStyles(formData?.errorIndex == 8 ? true : false)}
                     id="country"
                     name="City"
@@ -776,8 +807,8 @@ const SignIn = () => {
               <button type='click' className='primary-btn' onClick={() => verifySignupOTP(formData, signUpType, token)}>Verify & Continue</button>
               <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
                 <div className='tc-text'>Didn’t received the OTP? <br />
-                  {seconds != '0' && <>You can request another in {seconds} {seconds > 9 ? 'seconds' : 'second'}</>}
-                  {seconds == '0' && <div onClick={() => sendSignupOTP(formData, signUpType)} className="resend-btn">Resend</div>}</div>
+                  {secondsF != '0' && <>You can request another in {secondsF} {secondsF > 9 ? 'seconds' : 'second'}</>}
+                  {secondsF == '0' && <div onClick={() => sendSignupOTP(formData, signUpType)} className="resend-btn">Resend</div>}</div>
               </div>
             </>}
 
