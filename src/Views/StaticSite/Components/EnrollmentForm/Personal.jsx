@@ -58,6 +58,7 @@ const Personal = ({
   const [Params] = useSearchParams()
   const [fixDate, setFixDate] = useState([]);
   const [validationErrors, setValidationErrors] = useState([]);
+  const [isoCode, setIsoCode] = useState('');
   const phoneNumberFromRedux = useSelector((state) => state.auth.user?.data?.phoneNumber);
   const countryFromRedux = useSelector((state) => state.auth.user.data?.country);
   const stateFromRedux = useSelector((state) => state.auth.user.data?.state);
@@ -97,6 +98,9 @@ const Personal = ({
     if (countryFromRedux) {
       setFormData((prev) => ({ ...prev, country: countryFromRedux }));
       setValues((prev) => ({ ...prev, country: { label: countryFromRedux, value: countryFromRedux } }));
+      const countryData = Country.getAllCountries().find(country => country.name === countryFromRedux)
+      console.log(countryData)
+      setIsoCode(countryData.isoCode)
     }
     if (stateFromRedux) {
       setFormData((prev) => ({ ...prev, state: stateFromRedux }));
@@ -1111,7 +1115,8 @@ const Personal = ({
           id="state"
           name="state"
           placeholder="State"
-          options={getUpdatedStates(values.country?.value)}
+          options={getUpdatedStates( values?.country?.isoCode?values?.country?.isoCode:
+            isoCode)}
           value={values.state}
           onChange={(value) => {
             setValues({ ...values, state: value, city: null });

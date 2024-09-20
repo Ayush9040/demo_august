@@ -13,6 +13,7 @@ import axios from 'axios'
 import { authBaseDomain } from '../../../../../Constants/appSettings'
 import { useSelector } from 'react-redux'
 import { MultiSelect } from 'react-multi-select-component'
+import { parsePhoneNumberFromString } from 'libphonenumber-js';
 
 const HomeTutions = ({ courseMode }) => {
   const [formData, setFormData] = useState({
@@ -38,6 +39,13 @@ const HomeTutions = ({ courseMode }) => {
   const [selectedDays, setSelectedDays] = useState([]);
   const [selectedTime, setSelectedTime] = useState(''); 
   const [empty, setEmpty] = useState(0)
+  const [stateOptions, setStateOptions] = useState([]);
+  const [isoCode, setIsoCode] = useState('');
+  const [countryFlag, setCountryFlag] = useState('IN');
+
+ 
+
+
 
   const nameFromRedux = useSelector((state) => state.auth.user.data?.firstName);
   const phoneNumberFromRedux = useSelector((state) => state.auth.user.data?.phoneNumber);
@@ -49,7 +57,16 @@ const HomeTutions = ({ courseMode }) => {
   const lnameNameFromRedux = useSelector((state) => state.auth.user.data?.lastName);
   const dobNameFromRedux = useSelector((state) => state.auth.user.data?.dateOfBirth);
   const genderFromRedux = useSelector((state) => state.auth.user.data?.gender);
+  const codeFromRedux = useSelector((state) => state.auth.user.data?.countryCode);
 
+  console.log('codeFromRedux ', codeFromRedux)
+
+  useEffect(() => {
+    if(codeFromRedux) {
+      setCountryFlag(codeFromRedux)
+    }
+  }, [codeFromRedux])
+  
 
   useEffect(() => {
     // JS to modify span after component mounts
@@ -65,10 +82,17 @@ const HomeTutions = ({ courseMode }) => {
   console.log('dobNameFromRedux ', dobNameFromRedux);
   console.log('courseMode ', courseMode);
 
+  
+  
+
   useEffect(() => {
     if (countryNameFromRedux) {
       setFormData((prev) => ({ ...prev, country: countryNameFromRedux }));
       setValues((prev) => ({ ...prev, country: { label: countryNameFromRedux, value: countryNameFromRedux } }));
+      const countryData = Country.getAllCountries().find(country => country.name === countryNameFromRedux)
+      console.log(countryData)
+      setIsoCode(countryData.isoCode)
+
     }
     if (stateNameFromRedux) {
       setFormData((prev) => ({ ...prev, state: stateNameFromRedux }));
@@ -170,6 +194,7 @@ const HomeTutions = ({ courseMode }) => {
       ...base,
       background: 'white',
       borderRadius: '50px',
+      fontSize: '18px',
       width: '100%',
       padding: '0.25rem 2rem',
       display: 'flex',
@@ -189,6 +214,7 @@ const HomeTutions = ({ courseMode }) => {
     }),
   }
   const updatedStates = (countryId) => {
+    console.log(countryId)
     return State.getStatesOfCountry(countryId).map((state) => ({
       label: state.name,
       value: state.id,
@@ -198,7 +224,7 @@ const HomeTutions = ({ courseMode }) => {
 
   const updatedCities = (countryId, stateId) => {
     return City.getCitiesOfCountry(countryId, stateId).map((city) => {
-      console.log(city, 'city')
+      // console.log(city, 'city')
       return {
         label: city.name,
         value: city.id,
@@ -341,7 +367,7 @@ const HomeTutions = ({ courseMode }) => {
   }
   return (
     <div className="signin_container">
-      <h1>Home Tutions</h1>
+      <h1>Home Tuitions</h1>
       <div className="signin_form">
         <div className="left_grid">
           <div className="form-field">
@@ -376,8 +402,8 @@ const HomeTutions = ({ courseMode }) => {
               form={formData}
               setField={setFormData}
               keyName="contact"
-              errorCheck={setEmpty}
-              defaultCountry='IN'
+              errorCheck={setEmpty} 
+              defaultCountry={countryFlag?countryFlag:'IN'}
               onChange={(e) => {
                 setFormData({ ...formData, phone: e })
               }}
@@ -425,8 +451,8 @@ const HomeTutions = ({ courseMode }) => {
               className="select"
               errorCheck={setEmpty}
               options={updatedStates(
-                values?.country?.isoCode,
-                values?.state?.isoCode
+                values?.country?.isoCode?values?.country?.isoCode:
+                isoCode
               )}
               value={values.state}
               onChange={(value) => {
@@ -547,7 +573,8 @@ const HomeTutions = ({ courseMode }) => {
             />
             {empty === 11 && <small> Please enter how many sessions are required</small>}
           </div>
-          <div div className="form-field">
+          <div className="form-field">
+            
               <select
                 name="noOfPersons"
                 onChange={(e) =>

@@ -378,3 +378,29 @@
   padding-bottom: 0px;
   font-size: 19px;
 }
+
+.signin_container .PhoneInput .PhoneInputInput {
+  width: 800px;
+  text-align: left;
+  font-size: 1.8rem;
+  border: none;
+  margin-left: 5px;
+}
+
+.signin_container .signin_form .left_grid .form-field #react-select-5-placeholder {
+  font-size: 19px;
+  padding-left: 8px;
+  color: #606060;
+}
+
+.css-qbdosj-Input {
+  font-size: 19px;
+}
+
+.css-qbdosj-Input:after {
+  font-size: 19px !important; /* Use !important as a last resort */
+}
+
+select option:disabled {
+  color: rgb(141, 56, 56);
+}
