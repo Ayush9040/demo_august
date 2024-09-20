@@ -210,7 +210,7 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, }
         return (
           <div className="camp_course-list-content">
             <br />
-            <Accordian data={campsAccordian} />
+            <Accordian sliderVal={customVal} setSliderVal={setCustomVal} data={campsAccordian} />
             <div>
               <h4>
                 <ul id='camps-workshop' >
