@@ -13,7 +13,7 @@ import './style.scss'
 // import InnerNavComponent from '../../../../Components/InnerNavComponent'
 // import { validateEmail } from '../../../../../../helpers'
 // import MessageModal from '../../../../Components/MessageModal'
-import PhoneInput from 'react-phone-number-input'
+import PhoneInput, { parsePhoneNumber } from 'react-phone-number-input'
 import { Country, State, City } from 'country-state-city'
 import Select from 'react-select'
 import { parsePhoneNumberFromString, isValidPhoneNumber } from 'libphonenumber-js'
@@ -122,7 +122,7 @@ const SignIn = () => {
       try {
         let response = await axios.post(//send OTP for mobile
           `${authBaseDomain}/authdoor/mobile/verify-otp`,
-          { contactNo: userDetails.phoneNumber.slice(3), otp: userDetails.otp, dialCode: userDetails.phoneNumber.slice(1, 3) }
+          { contactNo: phoneNumber.mobile, otp: userDetails.otp, dialCode: phoneNumber.dialCode }
         )
         setToken(response?.data?.token)
         if (response?.data?.isSignupRequired) { setPageIndex(3); setSignUpType('mobile') }
@@ -148,16 +148,17 @@ const SignIn = () => {
   const verifySignupOTP = async (userDetails, type, token) => {
     if (userDetails.otp.length == 4) {//valid OTP
       setFormData({ ...formData, errorIndex: 0 });
-
+      const number = parsePhoneNumber(userDetails.phoneNumber);
+      const countryCode = number.country; // This will give you the country code
 
       try {
         let payload = { ...userDetails }
         payload['gender'] = userDetails?.gender.value;
         payload['country'] = userDetails?.country.label;
         payload['city'] = userDetails?.city.label;
-        payload['phoneNumber'] = userDetails.phoneNumber.slice(3);
-        payload['dialCode'] = userDetails.phoneNumber.slice(1, 3);
-
+        payload['phoneNumber'] = phoneNumber.mobile;
+        payload['dialCode'] = phoneNumber.dialCode;
+        payload['countryCode'] = countryCode
 
         if (type == 'mobile') {
           let response = await axios.post(//send OTP for mobile
@@ -232,7 +233,7 @@ const SignIn = () => {
         setFormData({ ...formData, errorIndex: 0 });
         await axios.post(//send OTP for mobile
           `${authBaseDomain}/authdoor/mobile/generate-otp`,
-          { contactNo: userDetails.phoneNumber.slice(3), dialCode: userDetails.phoneNumber.slice(1, 3) }
+          { contactNo: phoneNumber.mobile, dialCode: phoneNumber.dialCode }
         )
         setPageIndex(2)
         startTimer()
@@ -241,10 +242,17 @@ const SignIn = () => {
       setFormData({ ...formData, errorIndex: 1 });
     }
   }
+  const [phoneNumber, setPhoneNumber] = useState({ dialCode: '', mobile: '' })
 
   const handlePhoneChange = (value) => {
     // setPhoneValue(value);
     setFormData({ ...formData, phoneNumber: value });
+    if (value) {
+      const phoneNumber = parsePhoneNumber(value);
+      console.log(phoneNumber);
+      setPhoneNumber({ dialCode: phoneNumber?.countryCallingCode, mobile: phoneNumber?.nationalNumber })
+
+    }
   };
   const [isAlreadyRegistered, SetIsAlreadyRegistered] = useState(false)
   const validatePhoneNumber = (phoneNumber) => {
@@ -327,7 +335,7 @@ const SignIn = () => {
     intervalIdF = setInterval(() => {
       timerF = timerF - 1; //using state its not possible to get current time so using a new variable
       setSecondsF(timerF)
-      if (timer === 0) {
+      if (timerF === 0) {
         clearInterval(intervalIdF);
       }
     }, 1000)
@@ -346,7 +354,7 @@ const SignIn = () => {
     else {//resend OTP for mobile
       await axios.post(//send OTP for mobile
         `${authBaseDomain}/authdoor/mobile/generate-otp`,
-        { contactNo: details.phoneNumber.slice(3), dialCode: details.phoneNumber.slice(1, 3) }
+        { contactNo: phoneNumber.mobile, dialCode: phoneNumber.dialCode }
       )
       startTimerF()
       setPageIndex('4')
@@ -407,7 +415,7 @@ const SignIn = () => {
         try {
           await axios.post(//send OTP for mobile
             `${authBaseDomain}/authdoor/mobile/otp/generate`,
-            { contactNo: details.phoneNumber.slice(3), dialCode: details.phoneNumber.slice(1, 3) },
+            { contactNo: phoneNumber.mobile, dialCode: phoneNumber.dialCode },
             {
               headers: {
                 'Authorization': `Bearer ${token}`
