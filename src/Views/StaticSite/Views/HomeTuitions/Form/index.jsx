@@ -58,6 +58,7 @@ const HomeTutions = ({ courseMode }) => {
   const dobNameFromRedux = useSelector((state) => state.auth.user.data?.dateOfBirth);
   const genderFromRedux = useSelector((state) => state.auth.user.data?.gender);
   const codeFromRedux = useSelector((state) => state.auth.user.data?.countryCode);
+  const dailCode = useSelector((state) => state.auth.user.data?.dialCode);
 
   console.log('codeFromRedux ', codeFromRedux)
 
@@ -111,7 +112,7 @@ const HomeTutions = ({ courseMode }) => {
       setFormData((prev) => ({ ...prev, name: nameFromRedux }));
     }
     if (phoneNumberFromRedux) {
-      setFormData((prev) => ({ ...prev, contact: phoneNumberFromRedux }));
+      setFormData((prev) => ({ ...prev, contact: `+${dailCode}${phoneNumberFromRedux}` }));
     }
     if (emailFromRedux) {
       setFormData((prev) => ({ ...prev, email: emailFromRedux }));

@@ -12,6 +12,7 @@ const InputComponent = ({
   minnum,
   maxnum,
   errorCheck,
+  readOnly,
   blocked=false
 }) => {
   return (
@@ -34,6 +35,7 @@ const InputComponent = ({
               return false
             }}}
             disabled={blocked}
+            readOnly={readOnly}
             autocomplete="off"
           />
         </label>

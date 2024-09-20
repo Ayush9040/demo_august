@@ -65,6 +65,7 @@ const Personal = ({
   const cityFromRedux = useSelector((state) => state.auth.user.data?.city);
   const genderFromRedux = useSelector((state) => state.auth.user.data?.gender);
   const nationalityFromRedux = useSelector((state) => state.auth.user.data?.nationality);
+  const dailCode = useSelector((state) => state.auth.user.data?.dialCode);
   console.log('phoneNumberFromRedux ', phoneNumberFromRedux);
   console.log('countryFromRedux ', countryFromRedux);
   console.log('stateFromRedux ', stateFromRedux);
@@ -90,7 +91,7 @@ const Personal = ({
   
   useEffect(() => {
     if (phoneNumberFromRedux) {
-      setPhoneValue(phoneNumberFromRedux);
+      setPhoneValue(`+${dailCode}${phoneNumberFromRedux}`);
     }
   }, [phoneNumberFromRedux]);
 

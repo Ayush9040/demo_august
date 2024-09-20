@@ -33,13 +33,14 @@ const SubcriptionForm = ({ packageName, packagePrice, closeForm }) => {
   const emailFromRedux = useSelector((state) => state.auth.user.data?.email);
   const countryNameFromRedux = useSelector((state) => state.auth.user.data?.country);
   const cityNameFromRedux = useSelector((state) => state.auth.user.data?.city);
+  const dailCode = useSelector((state) => state.auth.user.data?.dialCode);
 
   useEffect(() => {
     if (nameFromRedux) {
       setFormData((prev) => ({ ...prev, name: nameFromRedux }));
     }
     if (phoneNumberFromRedux) {
-      setFormData((prev) => ({ ...prev, phone: phoneNumberFromRedux }));
+      setFormData((prev) => ({ ...prev, phone: `+${dailCode}${phoneNumberFromRedux}` }));
     }
     if (emailFromRedux) {
       setFormData((prev) => ({ ...prev, emailId: emailFromRedux }));

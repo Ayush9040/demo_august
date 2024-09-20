@@ -172,6 +172,7 @@ if (isNaN(new Date(formattedDate).getTime())) {
               placeholder="Email"
               value={user.data?.email}
               className='email-field'
+              disabled
             />
             {empty === 3 && (
               <small style={{ color: 'red', marginLeft: '0' }}>
@@ -209,6 +210,7 @@ if (isNaN(new Date(formattedDate).getTime())) {
               form={formData}
               setField={setFormData}
               keyName="phoneNumber"
+              readOnly
             />
             {empty === 5 && (
               <small style={{ color: 'red', marginLeft: '0' }}>
