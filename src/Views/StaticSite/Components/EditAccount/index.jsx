@@ -118,7 +118,7 @@ if (isNaN(new Date(formattedDate).getTime())) {
         let token = localStorage.getItem('authToken')
         await axios.put(`${ authBaseDomain }/user/update`,formData,  {
           headers: {
-            // 'Authorization': `Bearer ${token}`
+            'Authorization': `Bearer ${token}`
           }
         })
         setModal('success')
