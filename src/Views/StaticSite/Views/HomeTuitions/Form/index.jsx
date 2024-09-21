@@ -279,6 +279,7 @@ const HomeTutions = ({ courseMode }) => {
       formData.contact.length < 6 ||
       formData.contact.length > 15
     ) {
+      console.log("phone number td ", formData.contact);
        setEmpty(3)
        hasError = true;
     } else if (formData.address === '') {
@@ -361,7 +362,7 @@ const HomeTutions = ({ courseMode }) => {
         },
         receivers: [formData.email, 'info@theyogainstitute.org'],
       })
-      nagivate('/enrollment_thankyou')
+      nagivate(`/enrollment_thankyou/${'Home Tuition course'}`)
     } catch {
       console.log('error')
     }
@@ -399,14 +400,15 @@ const HomeTutions = ({ courseMode }) => {
             <PhoneInput
               // type="number"
               placeholder="Enter mobile number*"
-              value={contact}
+              value={formData.contact}
               form={formData}
               setField={setFormData}
               keyName="contact"
               errorCheck={setEmpty} 
               defaultCountry={countryFlag?countryFlag:'IN'}
               onChange={(e) => {
-                setFormData({ ...formData, phone: e })
+                console.log('Phone input value: ', e);
+                setFormData({ ...formData, contact: e })
               }}
             />
             {empty === 3 && <small> Please enter your phone number</small>}
@@ -687,29 +689,29 @@ const HomeTutions = ({ courseMode }) => {
                 <option selected={formData.PreferedDayAndTime === '12:00 PM'} value="12:00 PM">
                   12:00 PM
                 </option>
-                <option selected={formData.PreferedDayAndTime === '13:00 PM'} value="13:00 PM">
-                  13:00 PM
+                <option selected={formData.PreferedDayAndTime === '1:00 PM'} value="1:00 PM">
+                  1:00 PM
                 </option>
-                <option selected={formData.PreferedDayAndTime === '14:00 PM'} value="14:00 PM">
-                  14:00 PM
+                <option selected={formData.PreferedDayAndTime === '2:00 PM'} value="2:00 PM">
+                  2:00 PM
                 </option>
-                <option selected={formData.PreferedDayAndTime === '15:00 PM'} value="15:00 PM">
-                  15:00 PM
+                <option selected={formData.PreferedDayAndTime === '3:00 PM'} value="3:00 PM">
+                  3:00 PM
                 </option>
-                <option selected={formData.PreferedDayAndTime === '16:00 PM'} value="16:00 PM">
-                  16:00 PM
+                <option selected={formData.PreferedDayAndTime === '4:00 PM'} value="4:00 PM">
+                  4:00 PM
                 </option>
-                <option selected={formData.PreferedDayAndTime === '17:00 PM'} value="17:00 PM">
-                  17:00 PM
+                <option selected={formData.PreferedDayAndTime === '5:00 PM'} value="5:00 PM">
+                  5:00 PM
                 </option>
-                <option selected={formData.PreferedDayAndTime === '18:00 PM'} value="18:00 PM">
-                  18:00 PM
+                <option selected={formData.PreferedDayAndTime === '6:00 PM'} value="6:00 PM">
+                  6:00 PM
                 </option>
-                <option selected={formData.PreferedDayAndTime === '19:00 PM'} value="19:00 PM">
-                  19:00 PM
+                <option selected={formData.PreferedDayAndTime === '7:00 PM'} value="7:00 PM">
+                  7:00 PM
                 </option>
-                <option selected={formData.PreferedDayAndTime === '20:00 PM'} value="20:00 PM">
-                  20:00 PM
+                <option selected={formData.PreferedDayAndTime === '8:00 PM'} value="8:00 PM">
+                  8:00 PM
                 </option>
               </select>
 
