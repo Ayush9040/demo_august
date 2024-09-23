@@ -118,6 +118,8 @@ const SignIn = () => {
 
   // verify mobile OTP and navigates to login or Signup
   const verifyOTP = async (userDetails) => {
+    // console.log(userDetails.otp);
+
     if (userDetails.otp.length == 4) {//valid OTP
       setFormData({ ...formData, errorIndex: 0 });
       try {
@@ -207,7 +209,7 @@ const SignIn = () => {
             getUserDetails(response?.data?.accessToken)
             callCTEvent(payload)
 
-            console.log('user details 2 ', userDetails);
+            // console.log('user details 2 ', userDetails);
             page ? page !== 'cart' ? navigate(`/enrollment/${page}`) : navigate('/shop/checkout') : navigate('/')
           }
           else {
@@ -241,6 +243,7 @@ const SignIn = () => {
         )
         setPageIndex(2)
         startTimer()
+        focusFirstInput()
       }
     } else {
       setFormData({ ...formData, errorIndex: 1 });
@@ -253,7 +256,7 @@ const SignIn = () => {
     setFormData({ ...formData, phoneNumber: value });
     if (value) {
       const phoneNumber = parsePhoneNumber(value);
-      console.log(phoneNumber);
+      // console.log(phoneNumber);
       setPhoneNumber({ dialCode: phoneNumber?.countryCallingCode, mobile: phoneNumber?.nationalNumber })
 
     }
@@ -409,6 +412,7 @@ const SignIn = () => {
           startTimerF()
           SetIsAlreadyRegistered(false)
           setPageIndex('4')
+          focusFirstInput()
         }
         catch (err) {
           SetIsAlreadyRegistered(true)
@@ -429,6 +433,7 @@ const SignIn = () => {
           SetIsAlreadyRegistered(false)
           startTimerF()
           setPageIndex('4')
+          focusFirstInput()
         }
         catch (err) {
           SetIsAlreadyRegistered(true)
@@ -466,7 +471,22 @@ const SignIn = () => {
     if (element.value !== "" && index < 3) {
       inputRefs.current[index + 1].focus();
     }
+    // console.log(inputRefs.current);
+
     setFormData({ ...formData, otp: otpArry.join('') })
+
+    // auto submit data
+    let payload = formData
+    payload['otp'] = otpArry.join('')
+
+    if (otpArry.join('').length == 4) {//auto submit form
+      if (pageIndex == '2') {//for login
+        verifyOTP(payload)
+      }
+      else {//for signup
+        verifySignupOTP(payload, signUpType, token)
+      }
+    }
   };
 
   // Handle backspace and move focus to previous input
@@ -576,6 +596,14 @@ const SignIn = () => {
     menuItems: [],
   }
 
+  const focusFirstInput = () => {
+    setTimeout(() => {//auto focus the OTP
+      if (inputRefs.current[0]) {
+        inputRefs.current[0].focus();
+      }
+    }, 200)
+
+  };
 
 
   return (
