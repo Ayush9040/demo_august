@@ -97,10 +97,12 @@ const usePageLoadEvents = () => {
 
   // Function to handle page exit
   const handlePageExit = () => {
+    // Get the last visited page from sessionStorage or fall back to 'Direct Visit'
+  const lastPageUrl = sessionStorage.getItem('last_page_url') || 'Direct Visit';
     const endTime = new Date();
     const timeSpent = Math.floor((endTime - startTimeRef.current) / 1000); // Time spent in seconds
     const urlPath = window.location.pathname;
-    const pageName = urlPath.split('/').filter(Boolean).pop() || 'Home';
+    const pageName = lastPageUrl.split('/').filter(Boolean).pop() || 'Home';
 
     // Track page time spent and page exit events
     trackPageTimeSpentEvent(
@@ -111,8 +113,7 @@ const usePageLoadEvents = () => {
       window.location.href
     );
 
-    // Get the last visited page from sessionStorage or fall back to 'Direct Visit'
-  const lastPageUrl = sessionStorage.getItem('last_page_url') || 'Direct Visit';
+    
 
     trackPageExitEvent({
       pageName: pageName.charAt(0).toUpperCase() + pageName.slice(1),
@@ -125,7 +126,7 @@ const usePageLoadEvents = () => {
 
     // Track the page view event with actual session duration
     const sessionDurationInSeconds = (endTime - sessionStartTime) / 1000;
-    trackPageViewEvent(sessionDurationInSeconds);
+    // trackPageViewEvent(sessionDurationInSeconds);
   };
 
   // Effect to handle route changes

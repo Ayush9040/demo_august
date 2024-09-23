@@ -83,6 +83,28 @@ const HomeTutions = ({ courseMode }) => {
   console.log('dobNameFromRedux ', dobNameFromRedux);
   console.log('courseMode ', courseMode);
 
+
+  // Function to find state and country from city using an API or dataset
+const findCityState = async (city) => {
+  try {
+    const response = await fetch(`https://example-location-api.com/getState?city=${city}`);
+    const data = await response.json();
+    
+    if (data && data.state && data.country) {
+      return {
+        state: data.state,
+        country: data.country,
+      };
+    } else {
+      throw new Error('City not found');
+    }
+  } catch (error) {
+    console.error('Error fetching city data:', error);
+    return null;
+  }
+};
+
+
   
   
 
@@ -141,6 +163,32 @@ const HomeTutions = ({ courseMode }) => {
     }
     
   }, [genderFromRedux, setFormData]);
+
+  useEffect(() => {
+    if (cityNameFromRedux) {
+      // Get all cities and find the one that matches the city in Redux
+      console.log('cityFromRedux inside State ', cityNameFromRedux);
+      const cities = City.getAllCities();
+      const matchedCity = cities.find(city => city.name.toLowerCase() === cityNameFromRedux.toLowerCase());
+      console.log('matched city ', matchedCity);
+
+      if (matchedCity) {
+        // Get state using stateCode and countryCode from matched city
+        const matchedState = State.getStateByCodeAndCountry(matchedCity.stateCode, matchedCity.countryCode);
+        console.log('matched State ', matchedState.name);
+        
+        if (matchedState) {
+          console.log('matched State ', matchedState.name); // Set the state name
+          setFormData((prev) => ({ ...prev, state: matchedState.name }));
+      setValues((prev) => ({ ...prev, state: { label: matchedState.name, value: matchedState.name } }));
+        } else {
+          // setError('State not found for the given city');
+        }
+      } else {
+        // setError('City not found');
+      }
+    }
+  }, [cityNameFromRedux, setFormData, setValues]);
 
 
   // Options for the Days multi-select dropdown
@@ -223,15 +271,12 @@ const HomeTutions = ({ courseMode }) => {
     }))
   }
 
-  const updatedCities = (countryId, stateId) => {
-    return City.getCitiesOfCountry(countryId, stateId).map((city) => {
-      // console.log(city, 'city')
-      return {
-        label: city.name,
-        value: city.id,
-        ...city,
-      }
-    })
+  const updatedCities = (countryIsoCode, stateIsoCode) => {
+    if (!countryIsoCode || !stateIsoCode) return [];
+    return City.getCitiesOfState(countryIsoCode, stateIsoCode).map((city) => ({
+      value: city.name,
+      label: city.name,
+    }));
   }
 
   // Prevent more than 3 selections
@@ -394,7 +439,7 @@ const HomeTutions = ({ courseMode }) => {
               keyName="email"
               errorCheck={setEmpty}
             />
-            {empty === 2 && <small> Please enter an valid E-mail</small>}
+            {empty === 2 && <small style={{ marginBottom: '0rem'}}> Please enter an valid E-mail</small>}
           </div>
           <div className="form-field">
             <PhoneInput
@@ -411,7 +456,7 @@ const HomeTutions = ({ courseMode }) => {
                 setFormData({ ...formData, contact: e })
               }}
             />
-            {empty === 3 && <small> Please enter your phone number</small>}
+            {empty === 3 && <small style={{ margin: '0.25rem 0 0rem 0'}}> Please enter your phone number</small>}
           </div>
           <div className="form-field">
             <InputComponent
@@ -443,7 +488,7 @@ const HomeTutions = ({ courseMode }) => {
                 })
               }}
             />
-            {empty === 5 && <small> Please select your country</small>}
+            {empty === 5 && <small style={{ margin: '0'}}> Please select your country</small>}
           </div>
           <div className="form-field">
             <Select
@@ -479,7 +524,8 @@ const HomeTutions = ({ courseMode }) => {
               className="select"
               errorCheck={setEmpty}
               options={updatedCities(
-                values?.country?.isoCode,
+                values?.country?.isoCode?values?.country?.isoCode:
+                isoCode,
                 values?.state?.isoCode
               )}
               value={values.city}

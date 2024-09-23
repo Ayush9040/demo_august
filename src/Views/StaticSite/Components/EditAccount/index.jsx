@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useReducer, useState } from 'react'
 import { useSelector } from 'react-redux'
 //import { validateEmail } from '../../../../helpers'
 import InnerNavComponent from '../InnerNavComponent'
@@ -9,10 +9,15 @@ import MessageModal from '../MessageModal'
 import { authBaseDomain } from '../../../../Constants/appSettings'
 import { useEffect } from 'react'
 import { fetchUserData } from '../../Views/Authentication/Auth.actions'
+import { useDispatch } from 'react-redux';
+
 const EditAccount = () => {
 
   const { user } = useSelector(state=>state.auth)
   const [showAlumniFields, setShowAlumniFields] = useState(false);
+  // const [ callFetch, setCallFetch ] = useState(false);
+  const dispatch = useDispatch();
+
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -33,17 +38,31 @@ const EditAccount = () => {
     pan: '',
   })
 
+
+
   useEffect(()=>{
     fetchUserData()
+    console.log('fetchUserData called');
   },[])
 
-  const dateStr = user.data?.dateOfBirth;
-const dateObj = new Date(dateStr);
-let formattedDate = `${String(dateObj.getDate()).padStart(2, '0')}/${String(dateObj.getMonth() + 1).padStart(2, '0')}/${dateObj.getFullYear()}`;
+  let formattedDate;
 
-if (isNaN(new Date(formattedDate).getTime())) {
-  formattedDate = '';
+  const dateStr = user.data?.dateOfBirth;
+
+if (dateStr) {
+  const dateObj = new Date(dateStr);
+
+  // Check if the date is valid and not the default date (01/01/1970)
+  if (!isNaN(dateObj.getTime()) && dateObj.getFullYear() > 1970) {
+    formattedDate = `${String(dateObj.getDate()).padStart(2, '0')}/${String(dateObj.getMonth() + 1).padStart(2, '0')}/${dateObj.getFullYear()}`;
+  } else {
+    formattedDate = ''; // Invalid date, return empty string
+  }
 }
+
+
+
+console.log("formattedDate ",formattedDate)
 
   useEffect(()=>{
     setFormData({
@@ -114,14 +133,21 @@ if (isNaN(new Date(formattedDate).getTime())) {
     // }
     else{
       setEmpty(0)
+      // setCallFetch(true);
+      
       try{
         let token = localStorage.getItem('authToken')
         await axios.put(`${ authBaseDomain }/user/update`,formData,  {
           headers: {
-            'Authorization': `Bearer ${token}`
+               'Authorization': `Bearer ${token}`
           }
         })
+        console.log("PUT response:", formData);
         setModal('success')
+        // Dispatch fetchUserData to refresh user data from the server
+        dispatch(fetchUserData());
+    
+         console.log("fetchUserData called after PUT");
       }catch(err){
         setModal('error')
       }

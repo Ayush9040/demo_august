@@ -66,11 +66,11 @@ const Personal = ({
   const genderFromRedux = useSelector((state) => state.auth.user.data?.gender);
   const nationalityFromRedux = useSelector((state) => state.auth.user.data?.nationality);
   const dailCode = useSelector((state) => state.auth.user.data?.dialCode);
-  console.log('phoneNumberFromRedux ', phoneNumberFromRedux);
-  console.log('countryFromRedux ', countryFromRedux);
-  console.log('stateFromRedux ', stateFromRedux);
-  console.log('cityFromRedux ', cityFromRedux);
-  console.log('genderFromRedux ', genderFromRedux);
+  // console.log('phoneNumberFromRedux ', phoneNumberFromRedux);
+  // console.log('countryFromRedux ', countryFromRedux);
+  // console.log('stateFromRedux ', stateFromRedux);
+  // console.log('cityFromRedux ', cityFromRedux);
+  // console.log('genderFromRedux ', genderFromRedux);
   const [phoneValue, setPhoneValue] = useState(formData.phone);
   const [bold, setBold] = useState(0)
   const [open, setOpen] = useState(false);
@@ -100,7 +100,7 @@ const Personal = ({
       setFormData((prev) => ({ ...prev, country: countryFromRedux }));
       setValues((prev) => ({ ...prev, country: { label: countryFromRedux, value: countryFromRedux } }));
       const countryData = Country.getAllCountries().find(country => country.name === countryFromRedux)
-      console.log(countryData)
+      // console.log(countryData)
       setIsoCode(countryData.isoCode)
     }
     if (stateFromRedux) {
@@ -108,6 +108,7 @@ const Personal = ({
       setValues((prev) => ({ ...prev, state: { label: stateFromRedux, value: stateFromRedux } }));
     }
     if (cityFromRedux) {
+      // console.log('cityFromRedux inside State ', cityFromRedux);
       setFormData((prev) => ({ ...prev, city: cityFromRedux }));
       setValues((prev) => ({ ...prev, city: { label: cityFromRedux, value: cityFromRedux } }));
     }
@@ -123,6 +124,32 @@ const Personal = ({
       setFormData((prev) => ({ ...prev, nationality: nationalityFromRedux }));
     }
   }, [genderFromRedux, nationalityFromRedux, setFormData]);
+
+  useEffect(() => {
+    if (cityFromRedux) {
+      // Get all cities and find the one that matches the city in Redux
+      console.log('cityFromRedux inside State ', cityFromRedux);
+      const cities = City.getAllCities();
+      const matchedCity = cities.find(city => city.name.toLowerCase() === cityFromRedux.toLowerCase());
+      console.log('matched city ', matchedCity);
+
+      if (matchedCity) {
+        // Get state using stateCode and countryCode from matched city
+        const matchedState = State.getStateByCodeAndCountry(matchedCity.stateCode, matchedCity.countryCode);
+        console.log('matched State ', matchedState.name);
+        
+        if (matchedState) {
+          console.log('matched State ', matchedState.name); // Set the state name
+          setFormData((prev) => ({ ...prev, state: matchedState.name }));
+      setValues((prev) => ({ ...prev, state: { label: matchedState.name, value: matchedState.name } }));
+        } else {
+          // setError('State not found for the given city');
+        }
+      } else {
+        // setError('City not found');
+      }
+    }
+  }, [cityFromRedux, setValues]);
 
 
 
@@ -1132,7 +1159,8 @@ const Personal = ({
           id="city"
           name="city"
           placeholder="City"
-          options={getUpdatedCities(values?.country?.value, values?.state?.value)}
+          options={getUpdatedCities(values?.country?.isoCode?values?.country?.isoCode:
+            isoCode, values?.state?.value)}
           value={values.city}
           onChange={(value) => {
             setValues({ ...values, city: value });
@@ -1140,6 +1168,8 @@ const Personal = ({
           }}
         />
       </div>
+
+      
 
       <div className="form_error pincode_err">
         <InputComponent

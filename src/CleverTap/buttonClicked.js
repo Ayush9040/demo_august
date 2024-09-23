@@ -1,3 +1,4 @@
+import { phone } from "../Views/StaticSite/assets/icons/icon";
 
 export const handleCTCourseClick = ({
   courseTitle,
@@ -756,4 +757,45 @@ export const handleCTSectionClick = ({ sectionName, pageUrl }) => {
   }
 };
 
+
+export const handleAlreadySignedUpUser = ({
+  phone
+}) => {
+  if (window.clevertap) {
+    // User profile data
+    const userProfile = {
+      "Site": {
+        // "Name": user.name || "",                    // User's name
+        "Identity": phone || "",                  // Unique identity (User ID)
+        // "Email": user.email || "",                // Email address
+        // "Phone": phone || "",                  // Phone number in international format
+        // "Gender": user.gender || "",                // Gender ("M", "F", "O")
+        // "DOB": user.dob || "",                      // Date of birth in "YYYY-MM-DD" format
+        // "City": user.city || "",     
+        // "Age": '25',               // City
+        // "Country": user.country || "",              // Country
+        // "Photo": user.photoUrl || "",               // URL to the user's profile photo
+        // "Custom_Property1": user.property1 || "",   // Additional custom properties
+        // "Custom_Property2": user.property2 || "",
+        // Add more properties as required
+        // "MSG-email": true,                // Disable email notifications
+        // "MSG-push": true,                  // Enable push notifications
+        // "MSG-sms": true,                   // Enable sms notifications
+        // "MSG-whatsapp": true,   
+      }
+    };
+
+    
+
+    // Check if `onUserLogin` method is correctly set up
+    if (typeof window.clevertap.onUserLogin === "object") {
+      window.clevertap.profile.push(userProfile);
+      console.log("User profile sent to CleverTap:", userProfile);
+    } else {
+      console.error("CleverTap onUserLogin is not set up correctly.");
+    }
+  } else {
+    console.error("CleverTap is not initialized.");
+  }
+}
 

@@ -21,7 +21,7 @@ import { auth, googleAuthProvider } from './firebaseConfig'; // Adjust the path 
 import { signInWithPopup, signOut, GoogleAuthProvider } from 'firebase/auth';
 import axios from 'axios'
 import { authBaseDomain, cmsBaseDomain } from '../../../../../../Constants/appSettings'
-import { handleCTSignIn } from '../../../../../../CleverTap/buttonClicked'
+import { handleCTSignIn, handleAlreadySignedUpUser } from '../../../../../../CleverTap/buttonClicked'
 
 
 const SignIn = () => {
@@ -130,6 +130,9 @@ const SignIn = () => {
           localStorage.setItem('authToken', response?.data?.accessToken)
           localStorage.setItem('refreshToken', response?.data?.refreshToken)
           dispatch(loginUserSuccess({}))
+          handleAlreadySignedUpUser({
+            phone: userDetails?.phoneNumber
+          })
           getUserDetails(response?.data?.accessToken)
           page ? page !== 'cart' ? navigate(`/enrollment/${page}`) : navigate('/shop/checkout') : navigate('/')
         }
