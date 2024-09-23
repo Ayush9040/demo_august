@@ -359,12 +359,14 @@ const Enrollment = () => {
                     courseCategory: currentCourse?.courseCategory,
                     startDate: formData.sdate,
                     endDate: formData.sdate,
+                    date: formData.sdate,
                     pageName: window.location.href,
                     checkoutUrl: window.location.href,
                     pageUrl: window.location.href,
-                    feesResidential: currentCourse?.fees?.offlineFee.residentialFee,
-                    feesNonResidential: currentCourse?.fees?.offlineFee.nonResidentialFee,
-                    feesOnline: currentCourse?.fees?.onlineFee,
+                    // feesResidential: currentCourse?.fees?.offlineFee.residentialFee,
+                    // feesNonResidential: currentCourse?.fees?.offlineFee.nonResidentialFee,
+                    // feesOnline: currentCourse?.fees?.onlineFee,
+                    fee: courseFee,
                     timings: currentCourse.timing ,
                     tenure: currentCourse?.tenure,
                     onlineMode: currentCourse?.onlineInfo?.courseMode,
@@ -375,6 +377,7 @@ const Enrollment = () => {
                     courseType: currentCourse?.courseType,
                     courseSubType: currentCourse?.courseSubType,
                     language: currentCourse?.language,
+                    mode: formData.mode,
                     // dayType,
                     batchNo: currentCourse.batch,
                     // dateTimeTimestamp,
@@ -404,12 +407,15 @@ const Enrollment = () => {
                     courseCategory: formData.category,
                     startDate: formData.sdate,
                     endDate: formData.sdate,
+                    date: formData.sdate,
                     pageName: window.location.href,
                     checkoutUrl: window.location.href,
                     pageUrl: window.location.href,
                     // feesResidential,
                     // feesNonResidential,
                     // feesOnline,
+                    fee: courseFee,
+                    mode: formData.mode,
                     timings: currentCourse.timing ,
                     // tenure,
                     // courseMode,
@@ -428,8 +434,8 @@ const Enrollment = () => {
                     city: formData.city,
                     pinCode: formData.pincode,
                     gender: formData.gender,
-                    // age,
-                    // nationality,
+                     age: formData.AGE,
+                    nationality: formData.nationality,
                     // medicalIssues,
                     // residentialStatus,
                   })
@@ -573,6 +579,8 @@ const Enrollment = () => {
         courseTitle: currentCourse?.title,
         date: formData.sdate,
         fees: currentCourse?.fees,
+        courseFee: courseFee,
+        mode: formData.mode,
         timing: currentCourse?.timing,
         tenure: currentCourse?.tenure,
         courseCategory: currentCourse?.courseCategory,
@@ -589,7 +597,9 @@ const Enrollment = () => {
         batch: currentCourse?.batch,
         nonResidential: currentCourse?.nonResidential,
         residential: currentCourse?.residental,
-        online: currentCourse?.online
+        online: currentCourse?.online,
+        age: formData.AGE,
+        nationality: formData.nationality
       })
 
       setupUserProfile(formData);
@@ -640,6 +650,9 @@ useEffect(() => {
   const currentPageUrl = window.location.href;
   handleCTCoursePaymentPageVisit(currentPageUrl);
 }, []);
+
+
+
 
   return (
     <>

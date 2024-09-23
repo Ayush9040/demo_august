@@ -97,6 +97,7 @@ const SubcriptionForm = ({ packageName, packagePrice, closeForm }) => {
             receivers: [formData.emailId,'info@theyogainstitute.org'],
           })
           handleCTEnquireNutriDietCompleted({
+            event_name: "Enquire_Nutri_Diet_Payment_Completed",
             name: formData.name,
             emailId: formData.emailId,
             phoneNo: formData.phone,
@@ -109,6 +110,20 @@ const SubcriptionForm = ({ packageName, packagePrice, closeForm }) => {
             amount: packagePrice,
           })
           navigate('/enrollment_thankyou')
+        } else {
+          handleCTEnquireNutriDietCompleted({
+            event_name: "Enquire_Nutri_Diet_Payment_Failed",
+            name: formData.name,
+            emailId: formData.emailId,
+            phoneNo: formData.phone,
+            country: formData.country,
+            city: formData.city,
+            // paymentMode,
+            month: packageName,
+            // programType,
+            status: 'Failed',
+            amount: packagePrice,
+          })
         }
       },
       prefill: {

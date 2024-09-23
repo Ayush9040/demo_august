@@ -3,7 +3,7 @@ const clevertap = window?.clevertap;
 
 
 
-export const trackPageExitEvent = ({ pageName, lastPageUrl, pageUrl, sessionDuration, exitTime, uniqueViewId, timestamp }) => {
+export const trackPageExitEvent = ({ pageName, lastPageUrl, pageUrl, End_Session_Duration, sessionDuration, exitTime, uniqueViewId, timestamp }) => {
 
     const formatTime = (date) => {
         const hours = date.getHours().toString().padStart(2, '0');
@@ -28,7 +28,8 @@ sessionStorage.setItem('unique_view_id', ViewId);
       Page_Name: pageName,
       Last_page_url: lastPageUrl,
       Page_Url: pageUrl,
-      Session_Duration: calculateSessionDuration(sessionStartTime),
+      End_Session_Duration: End_Session_Duration,
+      // Session_Duration: calculateSessionDuration(sessionStartTime),
       exit_time: formatTime(new Date()),
       unique_view_id: ViewId,
       timestamp: new Date().toLocaleDateString(),

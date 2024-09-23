@@ -184,7 +184,9 @@ const DonationForm = ( { csrId } ) => {
                 receivers: [formData.email,'info@theyogainstitute.org'],
               })
 
+              
               handleCTDonateCompleted({
+                event_name: "Donate_Payment_completed_Successfully",
                 amount: formData.amount,
                 firstName: formData.fName,
                 lastName: formData.lName,
@@ -201,6 +203,7 @@ const DonationForm = ( { csrId } ) => {
 
             } else {
               handleCTDonateCompleted({
+                event_name: "Donate_Payment_Failed",
                 amount: formData.amount,
                 firstName: formData.fName,
                 lastName: formData.lName,
@@ -284,6 +287,7 @@ const DonationForm = ( { csrId } ) => {
               res.razorpay_order_id &&
               res.razorpay_signature){
                 handleCTDonateCompleted({
+                  event_name: "Donate_Payment_completed_Successfully",
                   amount: formData.amount,
                   firstName: formData.fName,
                   lastName: formData.lName,

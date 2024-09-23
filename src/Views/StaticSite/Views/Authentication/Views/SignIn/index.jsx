@@ -58,6 +58,7 @@ const SignIn = () => {
   const [token, setToken] = useState()
   const [selectDate, setSetselectDate] = useState()
   const [otp, setOtp] = useState(new Array(4).fill(""));
+  const phoneNumberFromRedux = useSelector((state) => state.auth.user.data?.phoneNumber);
   const customStyles = (isInvalid) => ({
     control: (base, state) => ({
       ...base,
@@ -530,6 +531,10 @@ const SignIn = () => {
           localStorage.setItem('refreshToken', response?.data?.refreshToken)
           dispatch(loginUserSuccess({}))
           getUserDetails(response?.data?.accessToken)
+          console.log(response?.data)
+          handleAlreadySignedUpUser({
+            phone: phoneNumberFromRedux
+          })
           page ? page !== 'cart' ? navigate(`/enrollment/${page}`) : navigate('/shop/checkout') : navigate('/')
         }
       } else {

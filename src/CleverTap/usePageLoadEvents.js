@@ -38,7 +38,7 @@ const usePageLoadEvents = () => {
         Page_Name: pageName.charAt(0).toUpperCase() + pageName.slice(1),
         Last_page_url: lastPageUrl,
         Page_Url: window.location.href,
-        Session_Duration: sessionDurationInSeconds,
+        Start_Session_Duration: sessionDurationInSeconds,
         Logged_In: isLoggedIn ? 'Yes' : 'No',
         Session_ID: sessionIdRef.current,
         unique_view_id: sessionStorage.getItem('unique_view_id'),
@@ -60,7 +60,7 @@ const usePageLoadEvents = () => {
         "Page_Name": pageName.charAt(0).toUpperCase() + pageName.slice(1),
         "Page_URL": window.location.href,
         "Target Time Duration": idleTimeLimit / 1000,  // Target idle time in seconds
-        "Time Duration": timeDuration,  // Actual idle time in seconds
+        "Total Time Duration": timeDuration + 'seconds',  // Actual idle time in seconds
         "Logged In": isLoggedIn ? "Yes" : "No",
       });
 
@@ -116,9 +116,10 @@ const usePageLoadEvents = () => {
     
 
     trackPageExitEvent({
-      pageName: pageName.charAt(0).toUpperCase() + pageName.slice(1),
+      pageName: pageName.charAt(0).toUpperCase() + pageName.slice(1), 
       lastPageUrl: lastPageUrl || 'Direct Visit',
       pageUrl: window.location.href,
+      End_Session_Duration: `${timeSpent} seconds`,
     });
 
     // Track session end
@@ -173,7 +174,9 @@ const usePageLoadEvents = () => {
   useEffect(() => {
     if (isIdle && idleStartTime) {
       const timeDuration = (Date.now() - idleStartTime) / 1000; // Convert to seconds
-      trackIdleModeEvent(timeDuration);
+      const endTime = new Date();
+    const timeSpent = Math.floor((endTime - startTimeRef.current) / 1000);
+      trackIdleModeEvent(timeSpent);
     }
   }, [isIdle, idleStartTime]);
 

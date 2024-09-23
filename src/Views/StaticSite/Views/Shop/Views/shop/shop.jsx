@@ -165,7 +165,7 @@ if (product) {
       quantity: qty?.quantity,
       stockAvailability: product?.stockCount,
       checkoutUrl: '/shop/cart',
-      pageName: window.location.href,
+      pageName: "Shop Page",
       // gender: findCategory.name, 
       // productSize: findCategory.name,
       // language,
@@ -206,7 +206,7 @@ if (product) {
     // Now you can use the `product` object to pass its details to your `addToCart` function
     // addCart(idx, event, product);
     handleCTBuyNowStep1({
-      eventName: "Book_Now_Step1",
+      eventName: "Buy Now 1",
       productName: product?.name,
       productId: product?._id,
       category: findCategory?.name,
@@ -214,7 +214,7 @@ if (product) {
       quantity: qty?.quantity,
       stockAvailability: product?.stockCount,
       // checkoutUrl,
-      pageName: window.location.href,
+      pageName: "Shop Page",
       productUrl: 'product/'+product?._id,
       // gender,
       // color,

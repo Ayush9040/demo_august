@@ -10,10 +10,12 @@ import MetaTags from './Components/MetaTags'
 import { MainRoutes } from './Constants/routes'
 import Pagenotfound from './Views/StaticSite/Components/404 Error'
 import ReactGA from 'react-ga'
+import { useLocation } from 'react-router-dom';
 
 
 const App = () => {
   const [isVisible, setIsVisible] = useState(true);
+  const location = useLocation();
   useEffect(() => {
     const hasAcceptedCookies = localStorage.getItem('cookiesAccepted');
     if (hasAcceptedCookies) {
@@ -33,6 +35,31 @@ const App = () => {
   const handleClose = () => {
     setIsVisible(false);
   };
+
+  const clevertap = window?.clevertap;
+
+  useEffect(() => {
+    // Function to handle website exit event
+    const handleWebsiteExit = () => {
+      const currentPageUrl = window.location.href;
+
+      // Trigger the CleverTap event for website exit
+      clevertap.event.push("website_exit", {
+        "Page_Url": currentPageUrl,
+        "exit_timestamp": new Date().toISOString()
+      });
+
+      console.log("Website Exit Event Triggered");
+    };
+
+    // Add event listener for the 'beforeunload' event
+    window.addEventListener('beforeunload', handleWebsiteExit);
+
+    // Clean up when the component unmounts
+    return () => {
+      window.removeEventListener('beforeunload', handleWebsiteExit);
+    };
+  }, [location]);  // Run effect when location changes (navigation)
 
   return (
     <Suspense fallback={<div className='global-loader' >Loading...</div>} >

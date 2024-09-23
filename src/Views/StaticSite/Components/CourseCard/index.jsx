@@ -9,7 +9,7 @@ import SelectDropDown from '../Select Dropdown'
 //import StarIcon from './star-icon'
 import { useState } from 'react'
 import { useSelector } from 'react-redux'
-import { handleCTCourseClick, handleCTEnrollNowClick } from '../../../../CleverTap/buttonClicked';
+import { handleCTEnrollNowClick } from '../../../../CleverTap/buttonClicked';
 // import { faHelicopterSymbol } from '@fortawesome/free-solid-svg-icons'
 
 // const Error = () => {
@@ -238,30 +238,7 @@ const CourseCard = ({
                 : `/${path}`///?date=${selectDate}
             }
           >
-            <CommonBtn text={'View Details'} buttonAction={() => handleCTCourseClick({
-              courseTitle,
-              description,
-              key,
-              fees,
-              timing,
-              tenure,
-              pageName,
-              courseCategory,
-              courseSubType,
-              onlineMode,
-              residentialMode,
-              nonResidentialMode,
-              residentialLocation,
-              nonResidentialLocation,
-              courseType,
-              language,
-              category,
-              batch,
-              coursesList,
-              nonResidential,
-              residential,
-              online
-            })}/>
+            <CommonBtn text={'View Details'} />
           </Link>
           <div onClick={checkEmpty}>
             {dates.length !== 0 ?

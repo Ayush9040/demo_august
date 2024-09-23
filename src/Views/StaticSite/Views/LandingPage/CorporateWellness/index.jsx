@@ -126,17 +126,17 @@ const corporateWellness = () => {
   }
 
 
-  useEffect(() => {
-    // Trigger the CleverTap event when the component loads
-    handleCTCorporateYogaInitiated({
-      emailId: emailFromRedux, 
-      dateTime: '', 
-      contact: phoneNumberFromRedux,
-      designation: '', 
-      companyName: companyNameFromRedux, 
-      message: ''
-    })
-}, []);
+//   useEffect(() => {
+//     // Trigger the CleverTap event when the component loads
+//     handleCTCorporateYogaInitiated({
+//       emailId: emailFromRedux, 
+//       dateTime: '', 
+//       contact: phoneNumberFromRedux,
+//       designation: '', 
+//       companyName: companyNameFromRedux, 
+//       message: ''
+//     })
+// }, []);
 
   return (
     <>

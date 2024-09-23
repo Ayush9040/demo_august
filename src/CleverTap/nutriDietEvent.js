@@ -27,6 +27,7 @@ Amount,
   };
 
   export const handleCTEnquireNutriDietCompleted = ({
+    event_name,
     name,
     emailId,
     phoneNo,
@@ -39,7 +40,7 @@ Amount,
     amount,
   }) => {
     if (window?.clevertap) {
-      window.clevertap.event.push("Enquire_Nutri_Diet_Completed", {
+      window.clevertap.event.push(event_name, {
         "Name": name,
         "Email_ID": emailId,
         "Phone_No": phoneNo,

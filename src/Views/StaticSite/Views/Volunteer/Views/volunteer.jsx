@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useRef } from 'react'
 import CommonBanner from '../../../Components/Common-banner'
 import benefits from '../../../assets/images/benifits.png'
 import './style.scss'
@@ -45,13 +45,29 @@ const Volunteer = () => {
 
   console.log(volunteerPrograms)
 
+  // useEffect(() => {
+  //   if (volunteerPrograms && volunteerPrograms.length > 0) {
+  //     // Extract the names (titles) of all programs
+  //     const programNames = volunteerPrograms.map((program) => program.title);
+      
+  //     // Call the event function with the list of program names
+  //     handleCTVolunteerClicked(programNames);
+  //   }
+  // }, [volunteerPrograms]);
+
+
+  const hasEventFired = useRef(false); // Tracks if event has been fired
+
   useEffect(() => {
-    if (volunteerPrograms && volunteerPrograms.length > 0) {
+    if (!hasEventFired.current && volunteerPrograms && volunteerPrograms.length > 0) {
       // Extract the names (titles) of all programs
       const programNames = volunteerPrograms.map((program) => program.title);
       
       // Call the event function with the list of program names
       handleCTVolunteerClicked(programNames);
+      
+      // Mark that the event has been fired
+      hasEventFired.current = true;
     }
   }, [volunteerPrograms]);
 

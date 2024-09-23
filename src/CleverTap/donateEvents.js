@@ -37,6 +37,7 @@ export const handleCTDonateInitiated = ({
 // trackDonateCompleted.js
 
 export const handleCTDonateCompleted = ({
+    event_name,
     amount,
     firstName,
     lastName,
@@ -52,7 +53,7 @@ export const handleCTDonateCompleted = ({
 
     if (window?.clevertap) {
         // Track the Donate Completed event with dynamic data
-        window.clevertap.event.push('Donate_Completed', {
+        window.clevertap.event.push( event_name, {
             "Amount": amount,
             "First_Name": firstName,
             "Last_Name": lastName,
@@ -64,6 +65,7 @@ export const handleCTDonateCompleted = ({
             "80G tax exemption": taxExemption,
             "Accept Terms": acceptTerms,
             "Status": status,
+            "Donation Date": new Date().toISOString()
         });
 
         console.log('Donate Completed event tracked with dynamic data.', window?.clevertap.event);

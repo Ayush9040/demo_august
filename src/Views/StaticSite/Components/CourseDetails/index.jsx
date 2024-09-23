@@ -33,6 +33,7 @@ const CourseDetails = ({ pageDate }) => {
   const [showFixedDiv, setShowFixedDiv] = useState(false);
   const [sessionId, setSessionId] = useState('');
   const [startTime, setStartTime] = useState(0);
+  const [eventTriggered, setEventTriggered] = useState(false);
 
 
 
@@ -100,65 +101,131 @@ const CourseDetails = ({ pageDate }) => {
 
   const clevertap = window.clevertap;
 
-  useEffect(()=> {
+  // useEffect(()=> {
 
-    // Get the current URL path
-  const currentPath = window.location.pathname;
+  //   // Get the current URL path
+  // const currentPath = window.location.pathname;
 
-  // Extract the portion after the last '/' and remove the leading '/'
-  const extractedKey = currentPath.split('/').pop().replace(/-/g, ' ');
-     // Trigger the course_viewed event when the component mounts
+  // // Extract the portion after the last '/' and remove the leading '/'
+  // const extractedKey = currentPath.split('/').pop().replace(/-/g, ' ');
+  //    // Trigger the course_viewed event when the component mounts
 
-     // Determine the course mode
-  let courseMode = "";
-  if (pageDate?.onlineInfo?.courseMode) {
-    courseMode = "Online";
-    if (pageDate?.nonResidentialInfo?.courseMode || pageDate?.residentialInfo?.courseMode ) {
-      courseMode += ", OnCampus";
-    }
-  } else {
-    courseMode = "OnCampus";
-  }
+  //    // Determine the course mode
+  // let courseMode = "";
+  // if (pageDate?.onlineInfo?.courseMode) {
+  //   courseMode = "Online";
+  //   if (pageDate?.nonResidentialInfo?.courseMode || pageDate?.residentialInfo?.courseMode ) {
+  //     courseMode += ", OnCampus";
+  //   }
+  // } else {
+  //   courseMode = "OnCampus";
+  // }
 
-  // Determine the course location
-  let courseLocation = "NA";
-  if (pageDate?.residentialInfo?.residentialMode && pageDate?.nonResidentialInfo?.nonResidentialMode) {
-    courseLocation = "Residential, Non-Residential";
-  } else if (pageDate?.residentialInfo?.residentialMode) {
-    courseLocation = "Residential";
-  } else if (pageDate?.nonResidentialInfo?.nonResidentialMode) {
-    courseLocation = "Non-Residential";
-  }
+  // // Determine the course location
+  // let courseLocation = "NA";
+  // if (pageDate?.residentialInfo?.residentialMode && pageDate?.nonResidentialInfo?.nonResidentialMode) {
+  //   courseLocation = "Residential, Non-Residential";
+  // } else if (pageDate?.residentialInfo?.residentialMode) {
+  //   courseLocation = "Residential";
+  // } else if (pageDate?.nonResidentialInfo?.nonResidentialMode) {
+  //   courseLocation = "Non-Residential";
+  // }
 
-  let tenure = pageDate?.tenure;
+  // let tenure = pageDate?.tenure;
 
-  if(pageDate?.tenure === '') {
-    tenure = 'NA'
-  }
+  // if(pageDate?.tenure === '') {
+  //   tenure = 'NA'
+  // }
      
-     if (pageDate) {
-      clevertap.event.push("course_viewed", {
-          "course_name": pageDate.title,
-          "Page_name": extractedKey,
-          "Fees_Residential": pageDate?.fees?.offlineFee?.residentialFee,
-          "Fees_Non_Residential": pageDate?.fees?.offlineFee?.nonResidentialFee,
-          "Fees_Online": pageDate?.fees?.onlineFee,
-          "timing": pageDate?.timing,
-          "Page_Url": window.location.href,
-          "Tenure": tenure,
-          "Course Category ": pageDate?.courseCategory,
-          "Course-SubType": pageDate?.courseSubType,
-          "Course Type": pageDate?.courseType,
-          "Course Mode": courseMode,
-          "Course Location": courseLocation,
-          "Language": pageDate?.language,
-          "Batch_No": pageDate?.batch,
-          "date_time_timestamp": new Date().toISOString()
-      });
-  }
-  console.log('Course Viewed Event', pageDate, extractedKey);
+  //    if (pageDate) {
+  //     clevertap.event.push("course_viewed", {
+  //         "course_name": pageDate.title,
+  //         "Page_name": extractedKey,
+  //         "Fees_Residential": pageDate?.fees?.offlineFee?.residentialFee,
+  //         "Fees_Non_Residential": pageDate?.fees?.offlineFee?.nonResidentialFee,
+  //         "Fees_Online": pageDate?.fees?.onlineFee,
+  //         "timing": pageDate?.timing,
+  //         "Page_Url": window.location.href,
+  //         "Tenure": tenure,
+  //         "Course Category ": pageDate?.courseCategory,
+  //         "Course-SubType": pageDate?.courseSubType,
+  //         "Course Type": pageDate?.courseType,
+  //         "Course Mode": courseMode,
+  //         "Course Location": courseLocation,
+  //         "Language": pageDate?.language,
+  //         "Batch_No": pageDate?.batch,
+  //         "date_time_timestamp": new Date().toISOString()
+  //     });
+  // }
+  // console.log('Course Viewed Event', pageDate, extractedKey);
  
-  }, [pageDate])
+  // }, [pageDate])
+
+
+  useEffect(() => {
+    // Ensure pageDate is fully populated and the event hasn't been triggered yet
+    if (pageDate && !eventTriggered && pageDate.title && pageDate.fees && pageDate.timing && pageDate.language) {
+      
+      // Get the current URL path
+      const currentPath = window.location.pathname;
+
+      // Extract the portion after the last '/' and remove the leading '/'
+      const extractedKey = currentPath.split('/').pop().replace(/-/g, ' ');
+
+      // Determine the course mode
+      let courseMode = "";
+      if (pageDate?.onlineInfo?.courseMode) {
+        courseMode = "Online";
+        if (pageDate?.nonResidentialInfo?.courseMode || pageDate?.residentialInfo?.courseMode) {
+          courseMode += ", OnCampus";
+        }
+      } else {
+        courseMode = "OnCampus";
+      }
+
+      // Determine the course location
+      let courseLocation = "NA";
+      if (pageDate?.residentialInfo?.residentialMode && pageDate?.nonResidentialInfo?.nonResidentialMode) {
+        courseLocation = "Residential, Non-Residential";
+      } else if (pageDate?.residentialInfo?.residentialMode) {
+        courseLocation = "Residential";
+      } else if (pageDate?.nonResidentialInfo?.nonResidentialMode) {
+        courseLocation = "Non-Residential";
+      }
+
+      let tenure = pageDate?.tenure;
+      if (pageDate?.tenure === '') {
+        tenure = 'NA';
+      }
+
+      // Trigger the CleverTap event
+      clevertap.event.push("course_viewed", {
+        "course_name": pageDate.title,
+        "Page_name": extractedKey,
+        "Fees_Residential": pageDate?.fees?.offlineFee?.residentialFee,
+        "Fees_Non_Residential": pageDate?.fees?.offlineFee?.nonResidentialFee,
+        "Fees_Online": pageDate?.fees?.onlineFee,
+        "timing": pageDate?.timing,
+        "Page_Url": window.location.href,
+        "Tenure": tenure,
+        "Course Category": pageDate?.courseCategory,
+        "Course-SubType": pageDate?.courseSubType,
+        "Course Type": pageDate?.courseType,
+        "Course Mode": courseMode,
+        "Course Location": courseLocation,
+        "Language": pageDate?.language,
+        "Batch_No": pageDate?.batch,
+        "date_time_timestamp": new Date().toISOString()
+      });
+
+      console.log('Course Viewed Event', pageDate, extractedKey);
+
+      // Set flag to prevent re-triggering
+      setEventTriggered(true);
+    }
+  }, [pageDate, eventTriggered]);
+
+  
   
 
 

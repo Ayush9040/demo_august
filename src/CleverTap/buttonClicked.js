@@ -184,6 +184,8 @@ export const handleCTCourseClick = ({
   export const handleCTProccedToPayment = ({
     courseTitle,
     fees,
+    courseFee,
+    mode,
     timing,
     tenure,
     courseCategory,
@@ -201,6 +203,8 @@ export const handleCTCourseClick = ({
     nonResidential,
     residential,
     online,
+    age,
+    nationality,
     date
   }) => {
 
@@ -250,27 +254,31 @@ if(tenure === '') {
 
     // Trigger CleverTap event on button click
     if (window?.clevertap) {
-      window.clevertap.event.push("Course_Enrollment_Submit", {
+      window.clevertap.event.push("Proceed_to_Payment", {
         "Course_name": courseTitle,
         "Enrollmentdate": date,
         "Start_Date": startDate,
         "End_date": endDate,
         "Page_name": extractedKey,
-        "Fees_Residential_OnCampus": fees.offlineFee.residentialFee,
-        "Fees_Non_Residential_OnCampus": fees.offlineFee.nonResidentialFee,
-        "Fees_Online": fees.onlineFee,
+        // "Fees_Residential_OnCampus": fees.offlineFee.residentialFee,
+        // "Fees_Non_Residential_OnCampus": fees.offlineFee.nonResidentialFee,
+        // "Fees_Online": fees.onlineFee,
+        "Fees": courseFee,
         "Timings": timing,
         "Page_Url": window.location.href,
         "Tenure": tenure,
         "Course Category": courseCategory,
         "Course-SubType": courseSubType,
-        "Course Mode": courseMode,
+        "Course Mode": mode,
         "Course Location": courseLocation,
         "Course Type": courseType,
         "Language": language,
         "PreRequisite": PreRequisite,
         // "Day_Type": "Weekend/Weekday",
         "Batch_No": batch,
+        "Residential/Non-Residential": mode,
+        "Age": age,
+        "Nationality": nationality,
         "date_time_timestamp": new Date().toISOString()
       });
 
@@ -474,6 +482,7 @@ export const handleCTPaymentCompletedCourse = ({
   pageName,
   checkoutUrl,
   pageUrl,
+  fee,
   feesResidential,
   feesNonResidential,
   feesOnline,
@@ -503,6 +512,7 @@ export const handleCTPaymentCompletedCourse = ({
   nationality,
   medicalIssues,
   residentialStatus,
+  date
 }) => {
 
   let courseMode = "";
@@ -513,6 +523,16 @@ export const handleCTPaymentCompletedCourse = ({
     }
   } else {
     courseMode = "OnCampus";
+  }
+
+  let startDate1 = "";
+  let endDate1 = "";
+  if (date && typeof date === 'string') {
+    const dateParts = date.split(' to ');
+    if (dateParts.length === 2) {
+      startDate1 = dateParts[0]?.trim() || "";  // e.g., "3rd Jun"
+      endDate1 = dateParts[1]?.trim() || "";    // e.g., "28th Jun 2024"
+    }
   }
 
 
@@ -540,14 +560,15 @@ if(tenure === '') {
       "Payment status": paymentStatus,
       "Course_name": courseName,
       "Course Category": courseCategory,
-      "Start_Date": startDate,
-      "End_date": endDate,
+      "Start_Date": startDate1,
+      "End_date": endDate1,
       "Page_name": pageName,
       "checkout_url": checkoutUrl,
       "Page_Url": pageUrl,
-      "Fees_Residential": feesResidential,
-      "Fees_Non_Residential": feesNonResidential,
-      "Fees_Online": feesOnline,
+      // "Fees_Residential": feesResidential,
+      // "Fees_Non_Residential": feesNonResidential,
+      // "Fees_Online": feesOnline,
+      "Fees": fee,
       "Timings": timings,
       "Tenure": tenure,
       "Course Mode": courseMode,
@@ -593,6 +614,8 @@ export const handleCTPaymentFailed = ({
   feesResidential,
   feesNonResidential,
   feesOnline,
+  fee,
+  mode,
   timings,
   tenure,
   courseMode,
@@ -615,7 +638,19 @@ export const handleCTPaymentFailed = ({
   nationality,
   medicalIssues,
   residentialStatus,
+  date
 }) => {
+
+  let startDate1 = "";
+  let endDate1 = "";
+  if (date && typeof date === 'string') {
+    const dateParts = date.split(' to ');
+    if (dateParts.length === 2) {
+      startDate1 = dateParts[0]?.trim() || "";  // e.g., "3rd Jun"
+      endDate1 = dateParts[1]?.trim() || "";    // e.g., "28th Jun 2024"
+    }
+  }
+
   if (window?.clevertap) {
     window.clevertap.event.push("Payment_Failed_Course", {
       "Cost": cost,
@@ -625,17 +660,18 @@ export const handleCTPaymentFailed = ({
       "Payment status": paymentStatus,
       "Course_name": courseName,
       "Course Category": courseCategory,
-      "Start_Date": startDate,
-      "End_date": endDate,
+      "Start_Date": startDate1,
+      "End_date": endDate1,
       "Page_name": pageName,
       "checkout_url": checkoutUrl,
       "Page_Url": pageUrl,
-      "Fees_Residential": feesResidential,
-      "Fees_Non_Residential": feesNonResidential,
-      "Fees_Online": feesOnline,
+      // "Fees_Residential": feesResidential,
+      // "Fees_Non_Residential": feesNonResidential,
+      // "Fees_Online": feesOnline,
+      "Fee": fee,
       "Timings": timings,
       "Tenure": tenure,
-      "Course Mode": courseMode,
+      "Course Mode": mode,
       "Course Type": courseType,
       "Course-SubType": courseSubType,
       "Language": language,
@@ -654,7 +690,7 @@ export const handleCTPaymentFailed = ({
       "Age": age,
       "Nationality": nationality,
       "Medical Issues": medicalIssues,
-      "Residential/Non-Residential": residentialStatus,
+      "Residential/Non-Residential": mode,
     });
     console.log("Payment_Failed event tracked", window.clevertap);
   } else {
@@ -794,6 +830,22 @@ export const handleAlreadySignedUpUser = ({
     } else {
       console.error("CleverTap onUserLogin is not set up correctly.");
     }
+  } else {
+    console.error("CleverTap is not initialized.");
+  }
+
+   // Trigger CleverTap event on button click
+   if (window?.clevertap) {
+    window.clevertap.event.push("SignIn_by_already_existing_user", {
+      // "Name":firstName,
+      // "Email ID": email,
+      "phone": phone,
+      // "IsLoggedIn": IsLoggedIn,
+      "date_time_timestamp": new Date().toISOString()
+    });
+
+   
+    
   } else {
     console.error("CleverTap is not initialized.");
   }
