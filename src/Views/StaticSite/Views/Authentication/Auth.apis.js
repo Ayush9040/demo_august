@@ -6,5 +6,11 @@ export const loginUserAPI = (data) => {
 }
 
 export const fetchUserDataAPI = () => {
-  return axios.get(`${ authBaseDomain }/user/me`)
+  let token = localStorage.getItem('authToken');
+  return axios.get(`${ authBaseDomain }/user/me`, {
+    headers: {
+         'Authorization': `Bearer ${token}`
+    }
+  })
+
 }
