@@ -117,7 +117,7 @@ const SignIn = () => {
 
   // verify mobile OTP and navigates to login or Signup
   const verifyOTP = async (userDetails) => {
-    console.log(userDetails.otp);
+    // console.log(userDetails.otp);
 
     if (userDetails.otp.length == 4) {//valid OTP
       setFormData({ ...formData, errorIndex: 0 });
@@ -208,7 +208,7 @@ const SignIn = () => {
             getUserDetails(response?.data?.accessToken)
             callCTEvent(payload)
 
-            console.log('user details 2 ', userDetails);
+            // console.log('user details 2 ', userDetails);
             page ? page !== 'cart' ? navigate(`/enrollment/${page}`) : navigate('/shop/checkout') : navigate('/')
           }
           else {
