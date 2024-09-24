@@ -333,17 +333,18 @@ const SignIn = () => {
   }
 
   const [secondsF, setSecondsF] = useState(59);
-  let intervalIdF; // variable fro timer
+  let intervalIdF = useRef(null); // variable fro timer
   let timerF = 59; // variable to handle seconds not updated in dom
 
   const startTimerF = () => {
-    clearInterval(intervalIdF);
     timerF = 59;// resets timer
-    intervalIdF = setInterval(() => {
+    setSecondsF(timerF)
+    clearInterval(intervalIdF.current);
+    intervalIdF.current = setInterval(() => {
       timerF = timerF - 1; //using state its not possible to get current time so using a new variable
       setSecondsF(timerF)
       if (timerF === 0) {
-        clearInterval(intervalIdF);
+        clearInterval(intervalIdF.current);
       }
     }, 1000)
   }
@@ -571,7 +572,12 @@ const SignIn = () => {
 
   const navigateBack = () => {
     if (pageIndex > 1) {
-      setPageIndex(pageIndex - 1)
+      if (pageIndex == '4') {
+        setPageIndex('2')
+      }
+      else {
+        setPageIndex(pageIndex - 1)
+      }
     }
     else {
       page ? page !== 'cart' ? navigate(`/enrollment/${page}`) : navigate('/shop/checkout') : navigate('/')
@@ -698,12 +704,13 @@ const SignIn = () => {
             </>}
 
             {/* Signup page */}
-            {pageIndex == '3' && <>
+            {(pageIndex == '3' || pageIndex == '4') && <>
               <div className='header'>Welcome to TYI</div>
               <div className='sub-header'>Setup your TYI Account</div>
               <div className='inp-label mg-t-20'>First Name <span>*</span></div>
               <div className={formData?.errorIndex == 3 ? "form-inp err-inp" : "form-inp"}>
                 <input
+                  disabled={pageIndex == '4' ? true : false}
                   value={formData.firstName}
                   onChange={(e) => { setFormData({ ...formData, firstName: e.target.value }) }}
                   type="text"
@@ -718,6 +725,7 @@ const SignIn = () => {
               <div className='inp-label  mg-t-20'>Last Name <span>*</span></div>
               <div className={formData?.errorIndex == 4 ? "form-inp err-inp" : "form-inp"}>
                 <input
+                  disabled={pageIndex == '4' ? true : false}
                   type="text"
                   placeholder="Last Name"
                   value={formData.lastName}
@@ -728,51 +736,12 @@ const SignIn = () => {
               {formData?.errorIndex == 4 &&
                 <div style={{ color: '#FF3B30' }}>Enter a valid Last name</div>}
 
-              {signUpType == 'mobile' &&
-                <>
-                  <div className='inp-label  mg-t-20'>Email <span>*</span></div>
-                  <div className={formData?.errorIndex == 5 ? "form-inp err-inp" : "form-inp"}>
-                    <input
-                      type="email"
-                      placeholder="Email"
-                      className="custom-input"
-                      value={formData.email}
-                      onChange={(e) => { setFormData({ ...formData, email: e.target.value }) }} />
-                  </div>
-                  {formData?.errorIndex == 5 &&
-                    <div style={{ color: '#FF3B30' }}>Enter a valid Email</div>}
-
-                  {isAlreadyRegistered &&
-                    <div style={{ color: '#FF3B30' }}>Email already registered</div>
-                  }
-
-                </>}
-              {signUpType != 'mobile' &&
-                <>
-                  <div className='inp-label  mg-t-20'>Mobile Number <span>*</span></div>
-                  <div className="form-inp">
-                    <PhoneInput
-                      placeholder="Enter your Mobile number"
-                      defaultCountry="IN"
-                      className="custom-phone-input"
-                      onChange={handlePhoneChange}
-                      value={formData.phoneNumber}
-                    />
-                  </div>
-                  {formData?.errorIndex == 9 &&
-                    <div style={{ color: '#FF3B30' }}>Enter a valid Mobile number</div>}
-
-                  {isAlreadyRegistered &&
-                    <div style={{ color: '#FF3B30' }}>Mobile number already registered</div>
-                  }
-
-                </>}
-
               <div className='inp-group'>
                 <div>
-                  <div className='inp-label  mg-t-20'>Gender <span>*</span></div>
+                  <div className='inp-label mg-t-20'>Gender <span>*</span></div>
                   {/* <div className="form-inp"> */}
                   <Select
+                    isDisabled={pageIndex == '4' ? true : false}
                     menuPlacement="top"
                     styles={customStyles(formData?.errorIndex == 6 ? true : false)}
                     id="country"
@@ -793,6 +762,7 @@ const SignIn = () => {
                   <div className='inp-label  mg-t-20'>Country <span>*</span></div>
                   {/* <div className="form-inp"> */}
                   <Select
+                    isDisabled={pageIndex == '4' ? true : false}
                     menuPlacement="top"
                     styles={customStyles(formData?.errorIndex == 7 ? true : false)}
                     id="country"
@@ -808,6 +778,7 @@ const SignIn = () => {
                 <div>
                   <div className='inp-label  mg-t-20'>City <span>*</span></div>
                   <Select
+                    isDisabled={pageIndex == '4' ? true : false}
                     menuPlacement="top"
                     styles={customStyles(formData?.errorIndex == 8 ? true : false)}
                     id="country"
@@ -821,40 +792,98 @@ const SignIn = () => {
                     <div style={{ color: '#FF3B30' }}>Select City</div>}
                 </div>
               </div>
-              <button type='click' className='primary-btn' onClick={() => signUpOTP(formData, signUpType)}>Continue</button>
+
+              {signUpType == 'mobile' &&
+                <>
+                  <div className='inp-label  mg-t-20'>Email <span>*</span></div>
+                  <div className={formData?.errorIndex == 5 ? "form-inp err-inp" : "form-inp"}>
+                    <input
+                      disabled={pageIndex == '4' ? true : false}
+                      type="email"
+                      placeholder="Email"
+                      className="custom-input"
+                      value={formData.email}
+                      onChange={(e) => { setFormData({ ...formData, email: e.target.value }) }} />
+                  </div>
+                  {formData?.errorIndex == 5 &&
+                    <div style={{ color: '#FF3B30' }}>Enter a valid Email</div>}
+
+                  {isAlreadyRegistered &&
+                    <div style={{ color: '#FF3B30' }}>Email already registered</div>
+                  }
+
+                </>}
+              {signUpType != 'mobile' &&
+                <>
+                  <div className='inp-label  mg-t-20'>Mobile Number <span>*</span></div>
+                  <div className="form-inp">
+                    <PhoneInput
+                      disabled={pageIndex == '4' ? true : false}
+                      placeholder="Enter your Mobile number"
+                      defaultCountry="IN"
+                      className="custom-phone-input"
+                      onChange={handlePhoneChange}
+                      value={formData.phoneNumber}
+                    />
+                  </div>
+                  {formData?.errorIndex == 9 &&
+                    <div style={{ color: '#FF3B30' }}>Enter a valid Mobile number</div>}
+
+                  {isAlreadyRegistered &&
+                    <div style={{ color: '#FF3B30' }}>Mobile number already registered</div>
+                  }
+
+                </>}
+
+              {pageIndex == '3' && <button type='click' className='primary-btn' onClick={() => signUpOTP(formData, signUpType)}>Get OTP</button>}
+              {pageIndex == '4' && <>
+                <div className='inp-label' style={{ fontWeight: '600', padding: '14px 0 4px 0' }}>Verify your {signUpType == 'mobile' ? 'Email address' : 'Mobile Number'}</div>
+                <div className='sub-header' style={{ fontSize: '12px' }}>enter the OTP we sent to <span style={{ fontWeight: '600' }}> {signUpType == 'mobile' ? formData.email : formData.phoneNumber}</span>
+
+                  &nbsp;  <span style={{ color: '#CA4625', fontWeight: 600, cursor: 'pointer', borderBottom: '2px solid #CA4625' }} onClick={() => { setPageIndex('3') }}>
+                    <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M0.249512 6.18805V7.75055H1.81201L6.42035 3.14222L4.85785 1.57972L0.249512 6.18805ZM7.62868 1.93389C7.79118 1.77139 7.79118 1.50889 7.62868 1.34639L6.65368 0.371387C6.49118 0.208887 6.22868 0.208887 6.06618 0.371387L5.30368 1.13389L6.86618 2.69639L7.62868 1.93389Z" fill="#CA4625" />
+                    </svg>
+                    &nbsp;
+                    Edit
+                  </span>
+                </div>
+                <div className="otp-inputs">
+                  {otp.map((data, index) => {
+                    return (
+                      <input
+                        key={index}
+                        type="text"
+                        maxLength="1"
+                        className={formData?.errorIndex == 2 ? "otp-input otp-err" : "otp-input"}
+                        // value={data}
+                        onChange={(e) => handleOTPChange(e.target, index)}
+                        onKeyDown={(e) =>
+                          e.key === "Backspace" ? handleBackspace(e.target, index) : null
+                        }
+                        ref={(el) => (inputRefs.current[index] = el)}
+                      />
+                    );
+                  })}
+                </div>
+                {formData?.errorIndex == 2 &&
+                  <div style={{ color: '#FF3B30', margin: '1rem 0' }}>OTP is Invalid!</div>}
+                <div style={{ width: '100%', display: 'flex', justifyContent: 'start' }}>
+                  <div className='tc-text'>Didn’t received the OTP? &nbsp;
+                    {secondsF != '0' && <> Resend in {secondsF} {secondsF > 9 ? 'seconds' : 'second'}</>}
+                    {secondsF == '0' && <span onClick={() => sendSignupOTP(formData, signUpType)} className="resend-btn">Resend</span>}</div>
+                </div>
+                <button type='click' className='primary-btn' onClick={() => verifySignupOTP(formData, signUpType, token)}>Submit</button>
+                {/* <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
+                  <div className='tc-text'>Didn’t received the OTP? <br />
+                    {secondsF != '0' && <>You can request another in {secondsF} {secondsF > 9 ? 'seconds' : 'second'}</>}
+                    {secondsF == '0' && <div onClick={() => sendSignupOTP(formData, signUpType)} className="resend-btn">Resend</div>}</div>
+                </div> */}
+              </>}
             </>}
 
             {/* Signup OTP page */}
-            {pageIndex == '4' && <>
-              <div className='sub-header' style={{ fontWeight: '600', padding: '12px 0 4px 0' }}>Verify your {signUpType == 'mobile' ? 'Email address' : 'Mobile Number'}</div>
-              <div className='sub-header'>enter the OTP we sent to {signUpType == 'mobile' ? formData.email : formData.phoneNumber}</div>
-              <div className="otp-inputs">
-                {otp.map((data, index) => {
-                  return (
-                    <input
-                      key={index}
-                      type="text"
-                      maxLength="1"
-                      className={formData?.errorIndex == 2 ? "otp-input otp-err" : "otp-input"}
-                      // value={data}
-                      onChange={(e) => handleOTPChange(e.target, index)}
-                      onKeyDown={(e) =>
-                        e.key === "Backspace" ? handleBackspace(e.target, index) : null
-                      }
-                      ref={(el) => (inputRefs.current[index] = el)}
-                    />
-                  );
-                })}
-              </div>
-              {formData?.errorIndex == 2 &&
-                <div style={{ color: '#FF3B30', margin: '1rem 0' }}>OTP is Invalid!</div>}
-              <button type='click' className='primary-btn' onClick={() => verifySignupOTP(formData, signUpType, token)}>Verify & Continue</button>
-              <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
-                <div className='tc-text'>Didn’t received the OTP? <br />
-                  {secondsF != '0' && <>You can request another in {secondsF} {secondsF > 9 ? 'seconds' : 'second'}</>}
-                  {secondsF == '0' && <div onClick={() => sendSignupOTP(formData, signUpType)} className="resend-btn">Resend</div>}</div>
-              </div>
-            </>}
+
 
           </div>
         </div>
