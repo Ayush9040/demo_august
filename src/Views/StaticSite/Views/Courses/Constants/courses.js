@@ -1566,7 +1566,8 @@ const ttc200hr = {
       // '18th Mar to 11th May 2024',
       // '20th May to 13th Jul 2024',
       // '22nd Jul to 14th Sep 2024',
-      '23rd Sep to 16th Nov 2024',
+      // '23rd Sep to 16th Nov 2024',
+      '14th Oct to 7th Dec 2024',
       '25th Nov to 18th Jan 2025'
     ],
     online: true,
@@ -2066,7 +2067,8 @@ const ttc200hr = {
       // '20th Jan to 7th Apr 2024',
       // '13th Apr to 30th Jun 2024',
       // '6th Jul to 22nd Sep 2024',
-      '28th Sep to 15th Dec 2024 ',
+      // '28th Sep to 15th Dec 2024 ',
+      '5th Oct to 22nd Dec 2024 ',
       '21st Dec to 9th Mar 2025',
     ],
     online: true,
@@ -9421,7 +9423,7 @@ const camps = {
     },
     dates: [
       // '13rd Jul to 19th Jul 2024', 
-      '14th Sep to 20th Sep 2024', 
+      '14th Sep to 20th Sep 2024',
       '9th Nov to 15th Nov 2024', ''],
     online: false,
     onCampus: true,
@@ -14136,7 +14138,7 @@ const certificate = {
     dates: [
       // '5th Aug to 26th Sep 2024· Morning', 
       // '7th Aug to 28th Sep 2024· Evening',
-       '6th November 2024 to 28th December 2024· Evening', '11th Nov to 2nd Jan 2025· Morning'],
+      '6th November 2024 to 28th December 2024· Evening', '11th Nov to 2nd Jan 2025· Morning'],
 
     online: true,
     onCampus: false,
@@ -14433,7 +14435,7 @@ const certificate = {
     category: 'certificate-course',
     dates: [
       // '2nd Aug to 7th Sep 2024',
-       '15th Nov - 21st Dec 2024'],
+      '15th Nov - 21st Dec 2024'],
     online: true,
     onCampus: true,
     nonResidential: false,
@@ -14684,6 +14686,9 @@ const certificate = {
     category: 'certificate-course',
     dates: [
       // '28th Aug  to 20th Dec 2024'
+      '3rd Jan to 28th Apr 2025',
+      '14th May to 3rd Sep 2025',
+      '5th Sep to 29th Dec 2025'
     ],
     online: true,
     onCampus: true,
