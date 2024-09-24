@@ -52,7 +52,7 @@ const SignIn = () => {
   // useEffect(() => {
   //   setCourse(location?.pathname?.split('/')?.[3])
   // }, [location])
-
+  const OtpInpRef = useRef();
   const [Params] = useSearchParams()
   const inputRefs = useRef([]);
   const [token, setToken] = useState()
@@ -441,6 +441,12 @@ const SignIn = () => {
           // alert('Unexpected error, please try again')
         }
       }
+      setTimeout(() => {
+        if (OtpInpRef.current) {
+          OtpInpRef.current.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 200);
+
     }
   }
 
@@ -815,7 +821,7 @@ const SignIn = () => {
                 </>}
               {signUpType != 'mobile' &&
                 <>
-                  <div className='inp-label  mg-t-20'>Mobile Number <span>*</span></div>
+                  <div className='inp-label  mg-t-20' onClick={() => { OtpInpRef.current.scrollIntoView({ behavior: 'smooth' }) }}>Mobile Number <span>*</span></div>
                   <div className="form-inp">
                     <PhoneInput
                       disabled={pageIndex == '4' ? true : false}
@@ -873,7 +879,7 @@ const SignIn = () => {
                     {secondsF != '0' && <> Resend in {secondsF} {secondsF > 9 ? 'seconds' : 'second'}</>}
                     {secondsF == '0' && <span onClick={() => sendSignupOTP(formData, signUpType)} className="resend-btn">Resend</span>}</div>
                 </div>
-                <button type='click' className='primary-btn' onClick={() => verifySignupOTP(formData, signUpType, token)}>Submit</button>
+                <button type='click' className='primary-btn' ref={OtpInpRef} onClick={() => verifySignupOTP(formData, signUpType, token)}>Submit</button>
                 {/* <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
                   <div className='tc-text'>Didn’t received the OTP? <br />
                     {secondsF != '0' && <>You can request another in {secondsF} {secondsF > 9 ? 'seconds' : 'second'}</>}
