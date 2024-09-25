@@ -328,7 +328,7 @@
     .contact_us_popup .modal-body {
         background: #fff !important;
         width: 90% !important;
-        padding: 2rem !important;
+        padding: 28px !important;
     }
 
     .contact_us_popup .modal-body h1 {
@@ -340,7 +340,14 @@
         font-size: 17px;
         text-align: center;
     }
+
+    .contact_us_popup .messsage-modal .modal-body {
+        height: auto;
+    }
 }
 
+.contact_us_popup .btn_action:hover {
+    cursor: pointer;
+}
 
 
