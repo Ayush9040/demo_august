@@ -2,7 +2,7 @@ import React from 'react'
 import './style.scss'
 import { useNavigate } from 'react-router-dom'
 
-const MessageModal = ({ message, type, nav, closePopup }) => {
+const MessageModal = ({ message, type, nav, closePopup, button, buttonAction }) => {
   const navigate = useNavigate()
 
   return (
@@ -18,6 +18,7 @@ const MessageModal = ({ message, type, nav, closePopup }) => {
         </div>
         <h1>{type}</h1>
         <h2 className='message' >{message}</h2>
+        <div className="btn_action" onClick={buttonAction}>{button}</div>
       </div>
     </div>
   )

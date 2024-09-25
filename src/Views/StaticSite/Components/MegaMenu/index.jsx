@@ -26,6 +26,7 @@ const MegaMenu = ({ setNav }) => {
     { name: 'ALUMNI', link: '/alumni-gallery', id: 13, key: 'ALUMNI' },
     { name: 'VOLUNTEER', link: '/volunteer', id: 14, key: 'VOLUNTEER' },
     { name: 'LOCATE US', link: '/our-branches', id: 15, key: 'LOCATE' },
+    { name: 'CONTACT US', link: '/contact', id: 16, key: 'CONTACT' },
   ]
 
   const subMenu = {

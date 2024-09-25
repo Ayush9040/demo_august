@@ -9,6 +9,7 @@ const DonationForm = lazy(() => import('../Components/DonationForm'))
 const DonationThankYou = lazy(() => import('../Components/Thank'))
 const Home = lazy(() => import('../Views/Home'))
 const TermsCondition = lazy(() => import('../Components/TermsandCondition'))
+const Contact = lazy(() => import('../Components/Contact'))
 const PrivacyPolicy = lazy(() => import('../Components/PrivacyPolicy'))
 const Affiliations = lazy(() => import('../Components/Affiliations'))
 const Enrollment = lazy(() => import('../Components/EnrollmentForm'))
@@ -627,6 +628,14 @@ const staticSiteRoutes = [
     id: 'statisSiteJob',
     routePath: '/careers/:jobId',
     name: 'Job',
+  },
+  {
+    Component: Contact,
+    path: '/contact',
+    exact: true,
+    id: 'statisContactUs',
+    routePath: '/contact',
+    name: 'Contact',
   },
   {
     Component: LocateUs,

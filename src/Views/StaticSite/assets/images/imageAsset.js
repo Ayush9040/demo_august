@@ -16,6 +16,7 @@ export const background = {
   benefits: '/backgrounds/benifits.png',
   wellness: '/wellness/wellness.jpg',
   affiliations: '/backgrounds/affiliations.jpeg',
+  contact: '/backgrounds/contact_us_bg.png',
 }
 
 export const certificates = {
