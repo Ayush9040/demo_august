@@ -163,7 +163,18 @@
   }
   @media (max-width: "768px") {
     .inner-nav-container{
-        overflow-x: hidden;
+        overflow-x: visible;
+
+        .user-dropdown {
+            position: absolute;
+            flex-direction: column;
+            margin: 2.5rem 0;
+        width: 180px;
+        right: -15px;
+        bottom: -75px;
+        z-index: 9999;
+            align-items: center;
+        }
     }
           .main-logo {
             display: none !important;

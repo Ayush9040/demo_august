@@ -8,6 +8,7 @@ import { validateEmail } from '../../../../helpers'
 import InnerNavComponent from '../InnerNavComponent'
 import CommonBtn from '../../Components/commonbtn'
 import { parsePhoneNumberFromString } from 'libphonenumber-js';
+import { parsePhoneNumber, isValidPhoneNumber } from 'libphonenumber-js';
 import { cmsBaseDomain } from '../../../../Constants/appSettings'
 import { useSelector } from 'react-redux'
 import MessageModal from '../MessageModal'
@@ -17,6 +18,7 @@ import baseDomain, {
     certificates,
     background,
   } from '../../assets/images/imageAsset'
+import { mobile } from '../../assets/icons/icon'
 
 
 const Contact = () => {
@@ -45,8 +47,44 @@ const Contact = () => {
       const [selectedTime, setSelectedTime] = useState(''); 
       const [empty, setEmpty] = useState(0)
       const [countryFlag, setCountryFlag] = useState('IN');
-      const [dialCode, setDialCode] = useState('');
+      // const [dialCode, setDialCode] = useState('');
       const [ modal,setModal ]=useState(false)
+      const [phoneNumber, setPhoneNumber] = useState({ dialCode: '', mobile: '' })
+  
+  
+  //     const handlePhoneChange = (value) => {
+  //   // setPhoneValue(value);
+  //   if (value) {
+  //     const phoneNumber = parsePhoneNumber(value);
+  //     setPhoneNumber({ dialCode: phoneNumber?.countryCallingCode, mobile: phoneNumber?.nationalNumber })
+
+  //   }
+  // };
+
+
+  const handlePhoneChange = (value) => {
+    if (value) {
+      try {
+        // Validate the phone number before parsing
+        if (isValidPhoneNumber(value)) {
+          const phoneNumber = parsePhoneNumber(value);
+          setPhoneNumber({ dialCode: phoneNumber?.countryCallingCode, mobile: phoneNumber?.nationalNumber });
+        } else {
+          console.error("Invalid phone number format");
+          setPhoneNumber({ dialCode: '', mobile: '' });
+        }
+      } catch (error) {
+        if (error.message === 'TOO_SHORT') {
+          console.error("Phone number is too short");
+        } else {
+          console.error("Error parsing phone number: ", error);
+        }
+        setPhoneNumber({ dialCode: '', mobile: '' });
+      }
+    } else {
+      setPhoneNumber({ dialCode: '', mobile: '' });  // Reset if value is empty
+    }
+  };
 
 
     const Locate = {
@@ -108,11 +146,11 @@ const Contact = () => {
            setEmpty(2)
            hasError = true;
         } else if (
-          formData.contact === '' ||
-          formData.contact.length < 6 ||
-          formData.contact.length > 15
+          phoneNumber.mobile === '' ||
+          phoneNumber.mobile.length < 6 ||
+          phoneNumber.mobile.length > 15
         ) {
-          console.log("phone number td ", formData.contact);
+          console.log("phone number td ", phoneNumber.mobile);
            setEmpty(3)
            hasError = true;
         } else if (formData.getMessage === '') {
@@ -148,8 +186,8 @@ const Contact = () => {
             fullName: formData.name,
             comment: formData.getMessage,
             email: formData.email,
-            dialCode: dialCode,
-            contactNo: formData.contact
+            dialCode: phoneNumber.dialCode,
+            contactNo: phoneNumber.mobile
           })
           setModal('success')
         //   nagivate(`/enrollment_thankyou/${'Home Tuition course'}`)
@@ -178,7 +216,7 @@ const Contact = () => {
                 {/* <div className='bottom-line'></div> */}
               </div>
               <p className='banner_desc'>Our team is happy to answer any questions you have.
-                Fill out the form below, and we’ll be in touch as soon as possible.</p>
+                <p className='contact_line_fixed'>Fill out the form below, and we’ll be in touch as soon as possible.</p></p>
 
               
             </div>
@@ -224,21 +262,25 @@ const Contact = () => {
               errorCheck={setEmpty} 
               defaultCountry={countryFlag?countryFlag:'IN'}
               onChange={(e) => {
-                console.log('Phone input value: ', e);
-                
                 setFormData({ ...formData, contact: e })
+                handlePhoneChange(e)
+              }}
+              // onChange={(e) => {
+              //   console.log('Phone input value: ', e);
+                
+              //   setFormData({ ...formData, contact: e })
 
                 
-                if (typeof e === 'string' && e.trim() !== '') {
-                    const phoneNumber = parsePhoneNumberFromString(e);
-                    if (phoneNumber) {
-                        console.log('Dial code: ', phoneNumber.countryCallingCode); // Extract dial code
+              //   if (typeof e === 'string' && e.trim() !== '') {
+              //       const phoneNumber = parsePhoneNumberFromString(e);
+              //       if (phoneNumber) {
+              //           console.log('Dial code: ', phoneNumber.countryCallingCode); // Extract dial code
 
-                        setDialCode(phoneNumber.countryCallingCode); 
+              //           // setDialCode(phoneNumber.countryCallingCode); 
                         
-                    } 
-                }
-              }}
+              //       } 
+              //   }
+              // }}
              
             />
             
@@ -277,11 +319,11 @@ const Contact = () => {
             <div className="right_contact_container">
 
                 <div className="logo_container">
-                    <img src="/images/logo_contact.png" alt="" />
+                    <img src="/images/lotus_logo_svg.svg" alt="" />
                 </div>
 
                 <div className="contact_right_desc">
-                    <img src="/images/quotes.png" alt="" />
+                    <img src="/images/quotes_svg.svg" alt="" />
                     <div className=''>Established in 1918 by Shri Yogendraji, The Yoga Institute is the world&apos;s oldest government recognised Yoga Centre. The founder&apos;s vision and mission was to make Yoga accessible to each and everyone across the globe.</div>
                 </div>
 
@@ -289,7 +331,7 @@ const Contact = () => {
                     <h3>Contact Information</h3>
                     <div className="email_container">
                         <div className="email_contact_img">
-                            <img src="/images/email_contact.png" alt="" />
+                            <img src="/images/mail_svg.svg" alt="" />
                         </div>
                         <div className="email_info">
                          info@theyogainstitute.org
@@ -298,7 +340,7 @@ const Contact = () => {
 
                     <div className="email_container">
                         <div className="email_contact_img">
-                            <img src="/images/phone_contact.png" alt="" />
+                            <img src="/images/phone_svg.svg" alt="" />
                         </div>
                         <div className="email_info">
                         +91-7738155500, +91-22-26110506, <br />+91-22-26103568
@@ -307,7 +349,7 @@ const Contact = () => {
 
                     <div className="email_container">
                         <div className="email_contact_img">
-                            <img src="/images/phone_location.png" alt="" />
+                            <img src="/images/location_svg.svg" alt="" />
                         </div>
                         <div className="email_info">
                         Shri Yogendra Marg, Prabhat Colony, <br />

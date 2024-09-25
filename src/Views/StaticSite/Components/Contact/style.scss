@@ -143,14 +143,7 @@
     background: #EFF3FA;
 }
 
-.contact_text_box {
-    padding: 10px;
-    background: #EFF3FA;
-    border: none;
-    border-radius: 4px;
-    color: #AEAEAE;
-    font-size: 15px;
-}
+
 
 .PhoneInput input:focus {
     outline-width: 0;
@@ -158,6 +151,17 @@
 
 .contact_text_box2 {
     margin: 1rem;
+    width: 100%;
+}
+
+.contact_text_box {
+    padding: 10px;
+    background: #EFF3FA;
+    border: none;
+    border-radius: 4px;
+    color: #AEAEAE;
+    font-size: 15px;
+    width: 100%;
 }
 
 
@@ -187,7 +191,53 @@
     padding: 10px;
 }
 
+.contact_line_fixed {
+    font-size: 16px;
+}
+
+.contact_us_popup .modal-body {
+    background: #fff !important;
+}
+
+.contact_us_popup .modal-body h1 {
+    font-size: 24px;
+    text-align: center;
+}
+
+
+.contact_us_popup .modal-body h2 {
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: 29px;
+    text-align: center;
+}
+
+.contact_us_popup .btn_action {
+    margin-top: 29px;
+    width: 100%;
+    background: #CA4625;
+    padding: 14px 60px;
+    text-align: center;
+    color: white;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+.contact_us_popup .modal-body .close-popup {
+    display: none;
+}
+
 @media (max-width: 768px) {
+
+    .contact_header {
+        width: 100%;
+        height: 49vh;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url('../../../../../public/images/mobile_contact_bg.png');
+    }
+
     .contact_container {
         display: flex;
         align-items: center;
@@ -200,7 +250,8 @@
     .contact_text_box2{
         textarea {
             // width: 100%; /* Adjust the width as needed */
-        max-width: 294px;
+        // max-width: 294px;
+        width: 100%;
         }
     } 
 
@@ -268,35 +319,28 @@
         width: 100%;
         height: 100%;
     }
+
+    .contact_line_fixed {
+        font-size: 12px;
+        display: inline;
+    }
+
+    .contact_us_popup .modal-body {
+        background: #fff !important;
+        width: 90% !important;
+        padding: 2rem !important;
+    }
+
+    .contact_us_popup .modal-body h1 {
+        font-size: 21px;
+        text-align: center;
+    }
+
+    .contact_us_popup .modal-body h2 {
+        font-size: 17px;
+        text-align: center;
+    }
 }
 
-.contact_us_popup .modal-body {
-    background: #fff !important;
-}
-
-.contact_us_popup .modal-body h1 {
-    font-size: 24px;
-    text-align: center;
-}
 
 
-.contact_us_popup .modal-body h2 {
-    font-size: 20px;
-    font-weight: 400;
-    margin-top: 29px;
-}
-
-.contact_us_popup .btn_action {
-    margin-top: 29px;
-    width: 100%;
-    background: #CA4625;
-    padding: 14px 60px;
-    text-align: center;
-    color: white;
-    border-radius: 10px;
-    font-size: 16px;
-}
-
-.contact_us_popup .modal-body .close-popup {
-    display: none;
-}
