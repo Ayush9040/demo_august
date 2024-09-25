@@ -474,6 +474,7 @@ const SignIn = () => {
     let otpArry = [...otp]
     otpArry[index] = element.value
     setOtp(otpArry);
+
     // Move focus to the next input
     if (element.value !== "" && index < 3) {
       inputRefs.current[index + 1].focus();
@@ -617,6 +618,27 @@ const SignIn = () => {
 
   };
 
+  const handlePaste = (e, index) => {
+    const pastedData = e.clipboardData.getData('text');
+    if (pastedData.length == 4 && !isNaN(Number(pastedData))) {
+      setOtp(pastedData.split(''));
+      setFormData({ ...formData, otp: pastedData })
+      // auto submit data
+      let payload = formData
+      payload['otp'] = pastedData
+      if (pageIndex == '2') {//for login
+        verifyOTP(payload)
+      }
+      else {//for signup
+        verifySignupOTP(payload, signUpType, token)
+      }
+      setTimeout(()=>{inputRefs.current[3].focus();},200)
+      
+    }
+
+    e.preventDefault(); // Prevent the default paste behavior
+  };
+
 
   return (
     <div className="signin-form">
@@ -686,6 +708,7 @@ const SignIn = () => {
                   return (
                     <input
                       key={index}
+                      value={data}
                       type="text"
                       maxLength="1"
                       className={formData?.errorIndex == 2 ? "otp-input otp-err" : "otp-input"}
@@ -694,7 +717,10 @@ const SignIn = () => {
                       onKeyDown={(e) =>
                         e.key === "Backspace" ? handleBackspace(e.target, index) : null
                       }
+                      onPaste={(e) => handlePaste(e, index)} // Handle paste
                       ref={(el) => (inputRefs.current[index] = el)}
+                      inputMode="numeric" // Add this line
+                      pattern="[0-9]*" // Optionally, add this for better compatibility
                     />
                   );
                 })}
@@ -868,6 +894,10 @@ const SignIn = () => {
                           e.key === "Backspace" ? handleBackspace(e.target, index) : null
                         }
                         ref={(el) => (inputRefs.current[index] = el)}
+                        onPaste={(e) => handlePaste(e, index)} // Handle paste
+                        inputMode="numeric" // Add this line
+                        pattern="[0-9]*" // Optionally, add this for better compatibility
+                        value={data}
                       />
                     );
                   })}
