@@ -230,6 +230,26 @@
   .edit-main .account-input select {
     width: 70%;
   }
+  .edit-main .former-input .former-l1 {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    gap: 32px;
+    padding: 20px 0;
+}
+.edit-main .former-input .former-l1 .former-p {
+  font-size: 1.8rem;
+  position: relative;
+   right: 0rem;
+  color: grey;
+}
+.edit-main .former-input .former-radio {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
 }
 
 .terms {
