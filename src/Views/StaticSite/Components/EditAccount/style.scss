@@ -220,6 +220,18 @@
   }
 }
 
+@media (max-width: '768px') {
+  .edit-main .account-input label {
+    width: 70%;
+  }
+  .edit-main .account-input .email-field {
+    width: 70%;
+  }
+  .edit-main .account-input select {
+    width: 70%;
+  }
+}
+
 .terms {
   margin-bottom: 15px;
   margin-left: 15px;
