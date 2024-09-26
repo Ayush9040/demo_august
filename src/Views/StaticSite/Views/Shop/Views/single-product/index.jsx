@@ -11,6 +11,7 @@ import { updateCartData, getActiveCartData } from '../../Shop.action'
 import { ToastContainer, toast } from 'react-toastify'
 import { updateLocalCart } from '../../helpers/helper'
 import { handleCTAddToCart, handleCTBuyNowStep1 } from '../../../../../../CleverTap/shopEvents'
+import ReactGA from 'react-ga';
 
 const SingleProduct = () => {
   const { productID } = useParams()
@@ -76,6 +77,21 @@ const SingleProduct = () => {
     // console.log('findCategory ', findCategory);
     const qty = JSON.parse(details).find(item => item.productId === idx);
     console.log('qty ', qty)
+
+    if(productDetail) {
+
+      ReactGA.event({
+        action: 'add_to_cart',
+       currency: location !=='IN'?'USD':'INR',
+        value: productDetail?.price * qty?.quantity,
+        items: [{
+          item_name: productDetail?.name,
+          item_id: productDetail?._id,
+          price: productDetail?.price,
+          quantity: qty?.quantity
+        }]
+      });
+    }
     
 
 if (productDetail) {

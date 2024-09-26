@@ -22,6 +22,7 @@ import { Link, useNavigate,useSearchParams } from 'react-router-dom'
 import { updateLocalCart } from '../../helpers/helper'
 import Footer from '../../../../Components/Footer'
 import { handleCTAddToCart, handleCTBuyNowStep1 } from '../../../../../../CleverTap/shopEvents'
+import ReactGA from 'react-ga';
 
 const Shop = () => {
   const dispatch = useDispatch()
@@ -120,6 +121,8 @@ const Shop = () => {
 
   useEffect(()=>{getAllBanner()},[])
 
+  // const gtag = window.google_tag_manager;
+
   const addCart = async(idx, e) => {
     e.stopPropagation()
     localStorage.setItem('cart',JSON.stringify(updateLocalCart(idx)))
@@ -149,6 +152,24 @@ const Shop = () => {
     // console.log('findCategory ', findCategory);
     const qty = JSON.parse(details).find(item => item.productId === idx);
     console.log('qty ', qty)
+
+   
+
+    if(product) {
+
+      ReactGA.event({
+        action: 'add_to_cart',
+       currency: location !=='IN'?'USD':'INR',
+        value: product?.price * qty?.quantity,
+        items: [{
+          item_name: product?.name,
+          item_id: product?._id,
+          price: product?.price,
+          quantity: qty?.quantity
+        }]
+      });
+    }
+
     
 
 if (product) {
