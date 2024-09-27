@@ -10,6 +10,7 @@ import { authBaseDomain } from '../../../../Constants/appSettings'
 import { useEffect } from 'react'
 import { fetchUserData } from '../../Views/Authentication/Auth.actions'
 import { useDispatch } from 'react-redux';
+import { getAuthTokenFromCookie } from '../../Views/Authentication/Auth.apis'
 
 const EditAccount = () => {
 
@@ -38,11 +39,15 @@ const EditAccount = () => {
     pan: '',
   })
 
+  // const tokenss = getAuthTokenFromCookie();
+  // localStorage.setItem('authToken', tokenss);
+
 
 
   useEffect(()=>{
     fetchUserData()
-    console.log('fetchUserData called');
+    const tokenss = getAuthTokenFromCookie();
+    console.log('fetchUserData called', tokenss);
   },[])
 
   let formattedDate;
@@ -139,7 +144,7 @@ console.log("formattedDate ",formattedDate)
         let token = localStorage.getItem('authToken')
         await axios.put(`${ authBaseDomain }/user/update`,formData,  {
           headers: {
-               'Authorization': `Bearer ${token}`
+              //  'Authorization': `Bearer ${token}`
           }
         })
         console.log("PUT response:", formData);

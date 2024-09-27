@@ -59,6 +59,7 @@ const SignIn = () => {
   const [selectDate, setSetselectDate] = useState()
   const [otp, setOtp] = useState(new Array(4).fill(""));
   const phoneNumberFromRedux = useSelector((state) => state.auth.user.data?.phoneNumber);
+  // const [token, setToken] = useState(null);
   const customStyles = (isInvalid) => ({
     control: (base, state) => ({
       ...base,
@@ -132,6 +133,9 @@ const SignIn = () => {
         else {
           localStorage.setItem('authToken', response?.data?.accessToken)
           localStorage.setItem('refreshToken', response?.data?.refreshToken)
+          // To set a cookie
+          // document.cookie = `authToken=${response?.data?.accessToken}; path=/;`; // Expires in 1 hour
+
           dispatch(loginUserSuccess({}))
           handleAlreadySignedUpUser({
             phone: userDetails?.phoneNumber
@@ -180,7 +184,9 @@ const SignIn = () => {
             // alert('Siggned in');
             localStorage.setItem('authToken', response?.data?.accessToken)
             localStorage.setItem('refreshToken', response?.data?.refreshToken)
+            // document.cookie = `authToken=${response?.data?.accessToken}; path=/;`;
             dispatch(loginUserSuccess({}))
+            
             getUserDetails(response?.data?.accessToken)
             callCTEvent(payload)
             page ? page !== 'cart' ? navigate(`/enrollment/${page}`) : navigate('/shop/checkout') : navigate('/')
@@ -578,6 +584,9 @@ const SignIn = () => {
   }
 
   const navigateBack = () => {
+
+    const isLoggedIn = !!localStorage.getItem('authToken');
+
     if (pageIndex > 1) {
       if (pageIndex == '4') {
         setPageIndex('2')
@@ -587,7 +596,13 @@ const SignIn = () => {
       }
     }
     else {
-      page ? page !== 'cart' ? navigate(`/enrollment/${page}`) : navigate('/shop/checkout') : navigate('/')
+      if (!isLoggedIn) {
+        // If not logged in, navigate to the course page (you can specify the correct course page URL here)
+        navigate(`/courses`); // Replace with the actual course page URL
+      } else {
+        // If logged in, navigate to the intended page
+        page ? page !== 'cart' ? navigate(`/enrollment/${page}`) : navigate('/shop/checkout') : navigate('/');
+      }
     }
   }
 

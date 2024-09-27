@@ -87,6 +87,22 @@ const Personal = ({
   const [isResidential, setIsResidential] = useState(false)
   const [isRegular, setIsRegular] = useState(false)
   const [autocomplete, setAutocomplete] = useState(null);
+  const [loading, setLoading] = useState(true); 
+
+  const navigates = useNavigate();
+
+  useEffect(() => {
+    const token = localStorage.getItem('authToken'); // Check for the auth token
+    if (!token) {
+      // If the token is not found, navigate to the login page
+      navigates('/user/sign-in');
+    } else {
+      setLoading(false); // If token is found, stop the loading state
+    }
+  }, [navigates]);
+
+
+  
 
   
   useEffect(() => {
@@ -915,6 +931,11 @@ const Personal = ({
   const handleClose = () => {
     setOpen(false);
   };
+
+
+  if (loading) {
+    return null; // Render nothing while checking the token
+  }
 
 
 
