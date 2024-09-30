@@ -50,6 +50,15 @@ export const handleCTAddToCart = ({
             "Printed": printed,
         });
 
+        window.clevertap.addMultiValueForKey("stuff", "coat");
+        console.log("Done Done")
+        if (window?.clevertap && typeof window.clevertap.setMultiValuesForKey === 'function') {
+          window.clevertap.setMultiValuesForKey("id_prod", [productId, productName]);
+          console.log("Done Done")
+      } else {
+          console.error('CleverTap is not initialized or setMultiValuesForKey is not available.');
+      }
+
         console.log('Add to Cart event tracked with dynamic data.', window?.clevertap.event);
     } else {
         console.error('CleverTap is not initialized.');

@@ -197,6 +197,8 @@ if (product) {
       // color,
       // printed: findCategory.name,
   })
+
+  
 } else {
     console.error('Product not found for the given ID:', idx);
 }
