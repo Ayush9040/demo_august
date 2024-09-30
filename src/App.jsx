@@ -13,6 +13,7 @@ import ReactGA from 'react-ga'
 import { useLocation } from 'react-router-dom';
 
 
+
 const App = () => {
   const [isVisible, setIsVisible] = useState(true);
   const location = useLocation();
@@ -61,6 +62,23 @@ const App = () => {
       window.removeEventListener('beforeunload', handleWebsiteExit);
     };
   }, [location]);  // Run effect when location changes (navigation)
+
+
+  // App.js or index.js
+
+useEffect(() => {
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker
+      .register('../public/clevertap_sw') // The service worker file hosted in public folder
+      .then(function (registration) {
+        console.log('Service Worker registered with scope:', registration.scope);
+      })
+      .catch(function (error) {
+        console.error('Service Worker registration failed:', error);
+      });
+  }
+}, []);
+
 
   return (
     <Suspense fallback={<div className='global-loader' >Loading...</div>} >
