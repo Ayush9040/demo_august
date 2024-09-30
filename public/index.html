@@ -58,6 +58,33 @@
       s.parentNode.insertBefore(wzrk, s);
    })();
  </script>
+ <script>
+  const requestNotificationPermission = () => {
+  // clevertap.notifications.push({
+  //   "titleText": "Would you like to receive notifications?",
+  //   "bodyText": "We promise to only send you relevant updates.",
+  //   "okButtonText": "Yes, please!",
+  //   "rejectButtonText": "No, thanks",
+  //   "serviceWorkerPath": "./clevertap_sw.js"  // Path to your service worker file
+  // });
+
+  clevertap.notifications.push({
+	"apnsWebPushId": '<apple web push id>',
+	"apnsWebPushServiceUrl": '<safari package service url>', 
+   	"titleText":'Would you like to receive Push Notifications?',
+   	"bodyText":'We promise to only send you relevant content and give you updates on your transactions',
+   	"okButtonText":'Sign me up!',
+   	"rejectButtonText":'No thanks',
+   	"okButtonColor":'#F28046',
+   	"askAgainTimeInSeconds": 5,
+  	"serviceWorkerPath": "./clevertap_sw.js"
+  });
+};
+
+// Call this function when you want to prompt the user
+requestNotificationPermission();
+
+ </script>
   
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
