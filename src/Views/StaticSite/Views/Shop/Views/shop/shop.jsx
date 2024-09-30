@@ -156,7 +156,9 @@ const Shop = () => {
    
 
     if(product) {
-
+      // ReactGA.initialize('374034779', { debug: true })
+      console.log("react GA", ReactGA);
+      ReactGA.pageview(window.location.href);
       ReactGA.event({
         action: 'add_to_cart',
        currency: location !=='IN'?'USD':'INR',
@@ -168,6 +170,7 @@ const Shop = () => {
           quantity: qty?.quantity
         }]
       });
+
     }
 
     

@@ -18,9 +18,10 @@ const App = () => {
   const location = useLocation();
   useEffect(() => {
     const hasAcceptedCookies = localStorage.getItem('cookiesAccepted');
-    if (hasAcceptedCookies) {
+    if (hasAcceptedCookies === "true" || hasAcceptedCookies === true) {
       setIsVisible(false);
-      ReactGA.initialize('374034779')
+      ReactGA.initialize('374034779', { debug: true })
+      console.log("react GA from cookies ", ReactGA);
       ReactGA.pageview('/')
     }
   }, []);
@@ -29,7 +30,7 @@ const App = () => {
     // sessionStorage.setItem('cookiesAccepted', 'true');
     localStorage.setItem('cookiesAccepted', 'true');
     setIsVisible(false);
-    ReactGA.initialize('374034779')
+    ReactGA.initialize('374034779', { debug: true })
     ReactGA.pageview('/')
   };
   const handleClose = () => {
