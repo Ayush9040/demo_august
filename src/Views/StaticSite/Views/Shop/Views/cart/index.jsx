@@ -78,6 +78,7 @@ const AddToCart = () => {
     dispatch(updateCartData(removeProduct.filter((item) => item.productId !== idx)))
     isLoggedIn && activeCartId && await updateCart(activeCartId,{ items:JSON.parse(localStorage.getItem('cart')) })
     dispatch(getActiveCartData())
+    window.clevertap.removeMultiValuesForKey("id_prod", [idx]);
     
     toast.error('Item Removed from cart!', {
       position: 'top-right',

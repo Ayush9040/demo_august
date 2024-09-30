@@ -50,10 +50,9 @@ export const handleCTAddToCart = ({
             "Printed": printed,
         });
 
-        window.clevertap.addMultiValueForKey("stuff", "coat");
-        console.log("Done Done")
-        if (window?.clevertap && typeof window.clevertap.setMultiValuesForKey === 'function') {
-          window.clevertap.setMultiValuesForKey("id_prod", [productId, productName]);
+        
+        if (window?.clevertap && typeof window.clevertap.addMultiValuesForKey === 'function') {
+          window.clevertap.addMultiValuesForKey("id_prod", [productId]);
           console.log("Done Done")
       } else {
           console.error('CleverTap is not initialized or setMultiValuesForKey is not available.');
@@ -222,13 +221,13 @@ export const handleCTCheckoutCompleted1 = (cartItems) => {
     const totalAmount = cartItems.reduce((total, item) => total + (item.price * item.quantity), 0);
   
     // Trigger the Charged event
-    window.clevertap.event.push("Charged", {
-      "event_name": "Checkout_Completed",
+    window.clevertap.event.push("Checkout_Completed_1", {
+      // "event_name": "Checkout_Completed",
       "Amount": totalAmount, // Total transaction amount
       // "Payment mode": "Credit Card", // Change if needed
       'checkout_url': window.location.href,
-      "Charged ID": new Date().getTime(), // Example unique ID, you can replace with an actual order ID
-      "Items": items, // Array of items in the cart
+      "Date_time_stamp": new Date().getTime(), // Example unique ID, you can replace with an actual order ID
+      // "Items": items, // Array of items in the cart
     });
   
     console.log("Charged event triggered with cart details");
@@ -257,13 +256,13 @@ export const handleCTCheckoutCompleted1 = (cartItems) => {
     const totalAmount = cartItems.reduce((total, item) => total + (item.price * item.quantity), 0);
   
     // Trigger the Charged event
-    window.clevertap.event.push("Charged", {
-      "event_name": "Checkout_Completed_1",
+    window.clevertap.event.push("Checkout_Completed_2", {
+      // "event_name": "Checkout_Completed_1",
       "Amount": totalAmount, // Total transaction amount
       // "Payment mode": "Credit Card", // Change if needed
       'checkout_url': window.location.href,
-      "Charged ID": new Date().getTime(), // Example unique ID, you can replace with an actual order ID
-      "Items": items, // Array of items in the cart
+      "Date_Time_Stamp": new Date().getTime(), // Example unique ID, you can replace with an actual order ID
+      // "Items": items, // Array of items in the cart
     });
   
     console.log("Charged event triggered with cart details");
@@ -344,14 +343,14 @@ export const handleCTCheckoutCompleted1 = (cartItems) => {
     const totalAmount = cartItems.reduce((total, item) => total + (item.price * item.quantity), 0);
   
     // Trigger the Charged event
-    window.clevertap.event.push("Charged", {
-      "event_name": "Checkout_Failed",
+    window.clevertap.event.push("Checkout_Failed", {
+      // "event_name": "Checkout_Failed",
       "Amount": totalAmount, // Total transaction amount
       // "Payment mode": "Credit Card", // Change if needed
       'checkout_url': window.location.href,
     "Payment_Status": "Failed",
-      "Charged ID": new Date().getTime(), // Example unique ID, you can replace with an actual order ID
-      "Items": items, // Array of items in the cart
+      "Date_Time_Stamp": new Date().getTime(), // Example unique ID, you can replace with an actual order ID
+      // "Items": items, // Array of items in the cart
     });
   
     console.log("Charged event triggered with cart details");
