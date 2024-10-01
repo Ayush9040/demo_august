@@ -108,6 +108,10 @@ const SignIn = () => {
         }
       });
       localStorage.setItem('userAppId', response?.data.data?._id)//to pass
+      // console.log("response?.data.data?._id :", response?.data?.data?.phoneNumber)
+      handleAlreadySignedUpUser({
+        phone: response?.data?.data?.phoneNumber
+      })
       //update user details to Redux 
       dispatch(loginUserSuccess({ type: 'auth/LOGIN_USER_SUCCESS', data: response?.data?.data }))
     } catch (error) {
@@ -566,9 +570,7 @@ const SignIn = () => {
           dispatch(loginUserSuccess({}))
           getUserDetails(response?.data?.accessToken)
           console.log(response?.data)
-          handleAlreadySignedUpUser({
-            phone: phoneNumberFromRedux
-          })
+          
           page ? page !== 'cart' ? navigate(`/enrollment/${page}`) : navigate('/shop/checkout') : navigate('/')
         }
       } else {
@@ -582,6 +584,7 @@ const SignIn = () => {
       // Handle sign-in errors (e.g., show error message to user)
     }
   }
+  
 
   const navigateBack = () => {
 
@@ -598,7 +601,19 @@ const SignIn = () => {
     else {
       if (!isLoggedIn) {
         // If not logged in, navigate to the course page (you can specify the correct course page URL here)
-        navigate(`/courses`); // Replace with the actual course page URL
+        const lastPageUrl = sessionStorage.getItem('last_page_url') || 'Direct Visit';
+        console.log("lastPageUrl ", lastPageUrl)
+
+        const url2 = "/user/sign-in/?location=cart";
+
+        if (lastPageUrl && lastPageUrl.includes(url2)) {
+          sessionStorage.removeItem('last_page_url_2');
+          navigate(`/shop`); // Redirect to the course page if previous page was a course
+          
+        } else {
+          navigate(`/courses`);
+        }
+        // navigate(`/courses`); // Replace with the actual course page URL
       } else {
         // If logged in, navigate to the intended page
         page ? page !== 'cart' ? navigate(`/enrollment/${page}`) : navigate('/shop/checkout') : navigate('/');

@@ -188,12 +188,13 @@ export const handleCTCheckoutCompleted = (cartItems) => {
   const totalAmount = cartItems.reduce((total, item) => total + (item.price * item.quantity), 0);
 
   // Trigger the Charged event
-  window.clevertap.event.push("Charged", {
-    "event_name": "Checkout_Completed",
+  window.clevertap.event.push("Checkout_Completed_Stage_1", {
+    // "event_name": "Checkout_Completed",
     "Amount": totalAmount, // Total transaction amount
     // "Payment mode": "Credit Card", // Change if needed
-    "Charged ID": new Date().getTime(), // Example unique ID, you can replace with an actual order ID
-    "Items": items, // Array of items in the cart
+    "Page_url": window.location.href,
+    "Date_Time_Stamp": new Date().getTime(), // Example unique ID, you can replace with an actual order ID
+    // "Items": items, // Array of items in the cart
   });
 
   console.log("Charged event triggered with cart details");
@@ -221,7 +222,7 @@ export const handleCTCheckoutCompleted1 = (cartItems) => {
     const totalAmount = cartItems.reduce((total, item) => total + (item.price * item.quantity), 0);
   
     // Trigger the Charged event
-    window.clevertap.event.push("Checkout_Completed_1", {
+    window.clevertap.event.push("Checkout_Completed_Stage_2", {
       // "event_name": "Checkout_Completed",
       "Amount": totalAmount, // Total transaction amount
       // "Payment mode": "Credit Card", // Change if needed
@@ -314,6 +315,8 @@ export const handleCTCheckoutCompleted1 = (cartItems) => {
       "Charged ID": new Date().getTime(), // Example unique ID, you can replace with an actual order ID
       "Items": items, // Array of items in the cart
     });
+
+    window.clevertap.removeValueForKey("id_prod");
   
     console.log("Charged event triggered with cart details");
   };
