@@ -105,6 +105,7 @@ const Contact = () => {
       setFormData((prev) => ({ ...prev, name: nameFromRedux }));
     }
     if (phoneNumberFromRedux) {
+      setPhoneNumber({ dialCode: dailCodes, mobile: phoneNumberFromRedux });
       setFormData((prev) => ({ ...prev, contact: `+${dailCodes}${phoneNumberFromRedux}` }));
     }
     if (emailFromRedux) {
@@ -255,14 +256,14 @@ const Contact = () => {
             <PhoneInput
               // type="number"
               placeholder="Mobile Number"
-              value={formData.contact}
+              value={phoneNumber.mobile}
               form={formData}
               setField={setFormData}
               keyName="contact"
               errorCheck={setEmpty} 
               defaultCountry={countryFlag?countryFlag:'IN'}
               onChange={(e) => {
-                setFormData({ ...formData, contact: e })
+                setFormData({ ...formData, mobile: e })
                 handlePhoneChange(e)
               }}
               // onChange={(e) => {
