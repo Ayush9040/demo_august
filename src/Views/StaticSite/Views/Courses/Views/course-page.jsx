@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, lazy, useState } from 'react'
 //import CommonBannerNavPrimary from '../../Components/CommonBannerNavPrimary'
 //import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 //import { faSearch } from '@fortawesome/free-solid-svg-icons'
 import './style.scss'
-import CourseSection from '../../../Components/CourseSections'
+// import CourseSection from '../../../Components/CourseSections'
 import { courseCardData } from '../../../utils/courseCardData'
 import { c200hr, c500hr, c900hr, campsArr, AllCourses, classesArr } from '../Constants/courses'
 import baseDomain, { certificates } from '../../../assets/images/imageAsset'
@@ -29,6 +29,11 @@ import InnerNavComponent from '../../../Components/InnerNavComponent'
 import { useLocation } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import { trackCourseView } from '../../../../../CleverTap/pageViewEvents'
+
+const CourseSection = lazy(() => import('../../../Components/CourseSections'))
+// const courseCardData = lazy(() =>
+//   import('../../../utils/courseCardData').then(module => ({ default: module.courseCardData }))
+// );
 
 const Courses = () => {
 
