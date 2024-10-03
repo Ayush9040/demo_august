@@ -359,3 +359,64 @@ export const handleCTCheckoutCompleted1 = (cartItems) => {
     console.log("Charged event triggered with cart details");
   };
 
+
+  export const handleCTRemoveFromCart = ({
+    eventName,
+      productName,
+      productId,
+      productUrl,
+      productCategory,
+      productPrice,
+      quantity,
+      stockAvailability,
+      currentUrl,
+      pageName,
+      gender,
+      productSize,
+      language,
+      material,
+      color,
+      printed,
+      idx
+  }) => {
+  
+      // let Gender;
+      //     if (gender.toLowerCase() === 'tshirt') {
+      //         Gender = 'Male';
+      //     } else if (gender.toLowerCase() === 'track pant') {
+      //         Gender = 'Female';
+      //     } else {
+      //         Gender = 'NA';
+      //     }
+  
+          
+  
+  
+      if (window?.clevertap) {
+          // Track the Add to Cart event with dynamic data
+          window.clevertap.event.push(eventName, {
+              // "Product Name": productName,
+              "Product ID": productId,
+              "Current Url": window.location.href,
+              // "Product Category": productCategory,
+              // "Product Price": productPrice,
+              // "Quantity": quantity,
+              // "Stock Availability": stockAvailability,
+              // "Checkout_URL": checkoutUrl,
+              // "Page_Name": pageName,
+              // "Gender": gender,
+              // "Product Size": productSize,
+              // "Language": language,
+              // "Material": material,
+              // "Color": color,
+              // "Printed": printed,
+          });
+  
+          
+          window.clevertap.removeMultiValuesForKey("id_prod", [idx]);
+  
+          console.log('Add to Cart event tracked with dynamic data.', window?.clevertap.event);
+      } else {
+          console.error('CleverTap is not initialized.');
+      }
+  };

@@ -11,7 +11,7 @@ import { fetchSingleProduct,updateCart } from '../../Shop.api'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import { updateCartData, getActiveCartData } from '../../Shop.action'
-import { handleCTCheckoutCompleted } from '../../../../../../CleverTap/shopEvents'
+import { handleCTCheckoutCompleted, handleCTRemoveFromCart } from '../../../../../../CleverTap/shopEvents'
 
 const AddToCart = () => {
 
@@ -78,7 +78,27 @@ const AddToCart = () => {
     dispatch(updateCartData(removeProduct.filter((item) => item.productId !== idx)))
     isLoggedIn && activeCartId && await updateCart(activeCartId,{ items:JSON.parse(localStorage.getItem('cart')) })
     dispatch(getActiveCartData())
-    window.clevertap.removeMultiValuesForKey("id_prod", [idx]);
+
+    handleCTRemoveFromCart({
+      eventName: "Remove from cart",
+        // productName,
+        productId: idx,
+        // productUrl,
+        // productCategory,
+        // productPrice,
+        // quantity,
+        // stockAvailability,
+        // checkoutUrl,
+        // pageName,
+        // gender,
+        // productSize,
+        // language,
+        // material,
+        // color,
+        // printed,
+        idx: idx
+    })
+   
     
     toast.error('Item Removed from cart!', {
       position: 'top-right',
