@@ -147,6 +147,7 @@ const SignIn = () => {
           getUserDetails(response?.data?.accessToken)
           page ? page !== 'cart' ? navigate(`/enrollment/${page}`) : navigate('/shop/checkout') : navigate('/')
         }
+        setOtp(new Array(4).fill(""))//clear OTP
       }
       catch (err) {
         // alert('Invalid OTP')
@@ -190,7 +191,7 @@ const SignIn = () => {
             localStorage.setItem('refreshToken', response?.data?.refreshToken)
             // document.cookie = `authToken=${response?.data?.accessToken}; path=/;`;
             dispatch(loginUserSuccess({}))
-            
+
             getUserDetails(response?.data?.accessToken)
             callCTEvent(payload)
             page ? page !== 'cart' ? navigate(`/enrollment/${page}`) : navigate('/shop/checkout') : navigate('/')
@@ -570,7 +571,7 @@ const SignIn = () => {
           dispatch(loginUserSuccess({}))
           getUserDetails(response?.data?.accessToken)
           console.log(response?.data)
-          
+
           page ? page !== 'cart' ? navigate(`/enrollment/${page}`) : navigate('/shop/checkout') : navigate('/')
         }
       } else {
@@ -584,7 +585,7 @@ const SignIn = () => {
       // Handle sign-in errors (e.g., show error message to user)
     }
   }
-  
+
 
   const navigateBack = () => {
 
@@ -609,7 +610,7 @@ const SignIn = () => {
         if (lastPageUrl && lastPageUrl.includes(url2)) {
           sessionStorage.removeItem('last_page_url_2');
           navigate(`/shop`); // Redirect to the course page if previous page was a course
-          
+
         } else {
           navigate(`/courses`);
         }
@@ -662,8 +663,8 @@ const SignIn = () => {
       else {//for signup
         verifySignupOTP(payload, signUpType, token)
       }
-      setTimeout(()=>{inputRefs.current[3].focus();},200)
-      
+      setTimeout(() => { inputRefs.current[3].focus(); }, 200)
+
     }
 
     e.preventDefault(); // Prevent the default paste behavior
@@ -722,7 +723,7 @@ const SignIn = () => {
               {formData?.errorIndex == 1 &&
                 <div style={{ color: '#FF3B30' }}>Enter a valid Mobile number to proceed next</div>}
 
-              <button type='click' className='primary-btn' onClick={() => sendOTP(formData)}>Continue</button>
+              <button type='click' className='primary-btn' onClick={() => { sendOTP(formData), setOtp(new Array(4).fill("")) }}>Continue</button>
               <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
                 <div className='tc-text'>By Clicking “Continue with google  / mobile” you agree to
                   our <span onClick={() => openLink('https://theyogainstitute.org/terms-and-conditions')}>Terms & Conditions</span> and <span onClick={() => openLink('https://theyogainstitute.org/privacy-policy')}>Privacy Policy</span></div>
