@@ -174,7 +174,7 @@ const AboutUs = () => {
       </div>
       <div className="content-container pd-career">
         <div className="image-content">
-          <img src={`${baseDomain}${aboutAssets.aboutAsset50}`} />
+          <img src={`${baseDomain}${aboutAssets.aboutAsset50}`} loading='lazy' />
         </div>
         <div className="text-content-right tyi-text-container">
           <div className="banner-heading">
