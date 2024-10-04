@@ -600,11 +600,12 @@ const CourseDetails = ({ pageDate }) => {
           </div>
           <div className="course-cover course-cover-2">
             {pageDate?.image ? (
-              <img src={pageDate?.image} alt={pageDate.title} />
+              <img src={pageDate?.image} alt={pageDate.title} loading='lazy' />
             ) : (
               <img
                 src={`${baseDomain}${courseAssets.courseAsset2}`}
                 alt="course-image"
+                 loading='lazy'
               />
             )}
           </div>

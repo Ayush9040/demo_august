@@ -199,7 +199,7 @@ const Courses = () => {
           </div>
           <div className="intro-image">
 
-            <img src="https://ecom-static-site-prod.s3.ap-south-1.amazonaws.com/SEO-New-Images/Courses/yoga-teacher-training-courses-hero.webp" alt='more than just reading' />
+            <img src="https://ecom-static-site-prod.s3.ap-south-1.amazonaws.com/SEO-New-Images/Courses/yoga-teacher-training-courses-hero.webp" alt='more than just reading' loading='lazy' />
           </div>
         </div>
 
@@ -229,7 +229,7 @@ const Courses = () => {
           <div className="certificates">
             <div className="certificate">
               <div className="certificate-logo">
-                <img src={`${baseDomain}${certificates.IYA}`} alt='The Indian Yoga Association' />
+                <img src={`${baseDomain}${certificates.IYA}`} alt='The Indian Yoga Association' loading='lazy' />
               </div>
               <div className="certificate-text">
                 <p>
@@ -241,7 +241,7 @@ const Courses = () => {
             </div>
             <div className="certificate">
               <div className="certificate-logo">
-                <img src={`${baseDomain}${certificates.YCB}`} alt='Yoga Certification Board' />
+                <img src={`${baseDomain}${certificates.YCB}`} alt='Yoga Certification Board' loading='lazy' />
               </div>
               <div className="certificate-text">
                 <p>
@@ -253,7 +253,7 @@ const Courses = () => {
             </div>
             <div className="certificate">
               <div className="certificate-logo">
-                <img src={`${baseDomain}${certificates.YAL}`} alt='Yoga Alliance' />
+                <img src={`${baseDomain}${certificates.YAL}`} alt='Yoga Alliance' loading='lazy' />
               </div>
               <div className="certificate-text">
                 <p>
@@ -265,7 +265,7 @@ const Courses = () => {
             </div>
             <div className="certificate">
               <div className="certificate-logo">
-                <img src={`${baseDomain}${certificates.IAYT}`} alt='International association of yoga therapists' />
+                <img src={`${baseDomain}${certificates.IAYT}`} alt='International association of yoga therapists' loading='lazy' />
               </div>
               <div className="certificate-text">
                 <p>
