@@ -236,6 +236,7 @@ const AlumniGallery = () => {
                         }}
                         src={image}
                         alt="root-image"
+                        loading='lazy'
                       />
                     </div>
                   ))}
@@ -251,6 +252,7 @@ const AlumniGallery = () => {
                         }}
                         src={image}
                         alt="root-image"
+                        loading='lazy'
                       />
                     </div>
                   ))}
@@ -266,6 +268,7 @@ const AlumniGallery = () => {
                         }}
                         src={image}
                         alt="root-image"
+                        loading='lazy'
                       />
                     </div>
                   ))}
@@ -281,6 +284,7 @@ const AlumniGallery = () => {
                         }}
                         src={image}
                         alt="root-image"
+                        loading='lazy'
                       />
                     </div>
                   ))}
@@ -295,6 +299,7 @@ const AlumniGallery = () => {
                         }}
                         src={image}
                         alt="root-image"
+                        loading='lazy'
                       />
                     </div>
                   ))}
@@ -309,6 +314,7 @@ const AlumniGallery = () => {
                         }}
                         src={image}
                         alt="root-image"
+                        loading='lazy'
                       />
                     </div>
                   ))}

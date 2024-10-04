@@ -38,27 +38,27 @@ const CommonGrid = () => {
           <div className="common-gallery">
             <div className="common-gallery-grid">
               <div className="common-grid-1">
-                <img src={`${baseDomain}${museumAssets.meseumAssets5}`} alt="yagna" className="img-main" />
+                <img src={`${baseDomain}${museumAssets.meseumAssets5}`} alt="yagna" className="img-main" loading='lazy' />
               </div>
               <div className="common-grid-2">
                 <div className="sub-grid-1">
                   {' '}
-                  <img src={`${baseDomain}${museumAssets.meseumAssets1}`} alt='russian-scientist'/>
+                  <img src={`${baseDomain}${museumAssets.meseumAssets1}`} alt='russian-scientist' loading='lazy'/>
                 </div>
                 <div className="sub-grid-2">
                   {' '}
-                  <img src={`${baseDomain}${museumAssets.meseumAssets3}`} alt='chappa' />
+                  <img src={`${baseDomain}${museumAssets.meseumAssets3}`} alt='chappa' loading='lazy' />
                 </div>
               </div>
               <div className="common-grid-1">
-                <img src={`${baseDomain}${museumAssets.meseumAssets4}`} alt='pooja-plate' className="img-main" />
+                <img src={`${baseDomain}${museumAssets.meseumAssets4}`} alt='pooja-plate' className="img-main" loading='lazy' />
               </div>
               <div className="common-grid-2">
                 <div className="sub-grid-1">
-                  <img src={`${baseDomain}${museumAssets.meseumAssets2}`} alt='granth' />
+                  <img src={`${baseDomain}${museumAssets.meseumAssets2}`} alt='granth' loading='lazy' />
                 </div>
                 <div className="sub-grid-2">
-                  <img src={`${baseDomain}${museumAssets.meseumAssets6}`} alt='tree-bark'/>
+                  <img src={`${baseDomain}${museumAssets.meseumAssets6}`} alt='tree-bark' loading='lazy' />
                 </div>
               </div>
             </div>
@@ -67,25 +67,25 @@ const CommonGrid = () => {
           <div className="common-gallery">
             <div className="common-gallery-grid">
               <div className="common-grid-1">
-                <img src={`${baseDomain}${museumAssets.meseumAssets7}`} className="img-main" alt='shaleegrama' />
+                <img src={`${baseDomain}${museumAssets.meseumAssets7}`} className="img-main" alt='shaleegrama' loading='lazy' />
               </div>
               <div className="common-grid-2">
                 <div className="sub-grid-1">
-                  <img src={`${baseDomain}${museumAssets.meseumAssets8}`} alt='kartal' />
+                  <img src={`${baseDomain}${museumAssets.meseumAssets8}`} alt='kartal' loading='lazy' />
                 </div>
                 <div className="sub-grid-2">
-                  <img src={`${baseDomain}${museumAssets.meseumAssets9}`}alt='khanjani' />
+                  <img src={`${baseDomain}${museumAssets.meseumAssets9}`}alt='khanjani' loading='lazy' />
                 </div>
               </div>
               <div className="common-grid-1">
-                <img src={`${baseDomain}${museumAssets.meseumAssets10}`} alt='sankha' className="img-main" />
+                <img src={`${baseDomain}${museumAssets.meseumAssets10}`} alt='sankha' className="img-main" loading='lazy' />
               </div>
               <div className="common-grid-2">
                 <div className="sub-grid-1">
-                  <img src={`${baseDomain}${museumAssets.meseumAssets11}`} alt='havan-kund'/>
+                  <img src={`${baseDomain}${museumAssets.meseumAssets11}`} alt='havan-kund' loading='lazy' />
                 </div>
                 <div className="sub-grid-2">
-                  <img src={`${baseDomain}${museumAssets.meseumAssets12}`}  alt='shiva-linga'/>
+                  <img src={`${baseDomain}${museumAssets.meseumAssets12}`}  alt='shiva-linga' loading='lazy' />
                 </div>
               </div>
             </div>
@@ -94,25 +94,25 @@ const CommonGrid = () => {
           <div className="common-gallery">
             <div className="common-gallery-grid">
               <div className="common-grid-1">
-                <img src={`${baseDomain}${museumAssets.meseumAssets13}`} className="img-main" alt='rudraksha' />
+                <img src={`${baseDomain}${museumAssets.meseumAssets13}`} className="img-main" alt='rudraksha' loading='lazy' />
               </div>
               <div className="common-grid-2">
                 <div className="sub-grid-1">
-                  <img src={`${baseDomain}${museumAssets.meseumAssets14}`}  alt='karnal-mala'/>
+                  <img src={`${baseDomain}${museumAssets.meseumAssets14}`}  alt='karnal-mala' loading='lazy' />
                 </div>
                 <div className="sub-grid-2">
-                  <img src={`${baseDomain}${museumAssets.meseumAssets15}`} alt='karnal-mala2' />
+                  <img src={`${baseDomain}${museumAssets.meseumAssets15}`} alt='karnal-mala2' loading='lazy' />
                 </div>
               </div>
               <div className="common-grid-1">
-                <img src={`${baseDomain}${museumAssets.meseumAssets16}`} alt='namavali-jholi' className="img-main" />
+                <img src={`${baseDomain}${museumAssets.meseumAssets16}`} alt='namavali-jholi' className="img-main" loading='lazy' />
               </div>
               <div className="common-grid-2">
                 <div className="sub-grid-1">
-                  <img src={`${baseDomain}${museumAssets.meseumAssets17}`} alt='rudraksha-mala'/>
+                  <img src={`${baseDomain}${museumAssets.meseumAssets17}`} alt='rudraksha-mala' loading='lazy' />
                 </div>
                 <div className="sub-grid-2">
-                  <img src={`${baseDomain}${museumAssets.meseumAssets18}`} alt='yantras' />
+                  <img src={`${baseDomain}${museumAssets.meseumAssets18}`} alt='yantras' loading='lazy' />
                 </div>
               </div>
             </div>

@@ -88,6 +88,7 @@ const BlogPage = () => {
               className="blog-image"
               alt="Upcoming Seminar"
               src={blog?.coverImage}
+              loading='lazy'
             />
           </div>
         </div>

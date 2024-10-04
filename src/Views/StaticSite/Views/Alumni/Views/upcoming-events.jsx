@@ -54,6 +54,7 @@ const Seminar = () => {
             className="seminar-iamge"
             alt="Upcoming Seminar"
             src={`${baseDomain}${alumniAssets.eventsAssetsTitle}`}
+            loading='lazy'
           />
         </div>
       </div>

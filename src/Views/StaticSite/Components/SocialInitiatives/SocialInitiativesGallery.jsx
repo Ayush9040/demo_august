@@ -12,23 +12,23 @@ const SocialInitiativesGallery = ({ notEvent }) => {
         <div className='alumni-event-grid' >
           <div className='grid-element-1' >
             <div className='event-1'>
-              <img src={`${baseDomain}${alumniAssets.supportAssets1}`} alt="children" />
+              <img src={`${baseDomain}${alumniAssets.supportAssets1}`} alt="children" loading='lazy' />
             </div>
             <div className='event-2'>
-              <img src={`${baseDomain}${alumniAssets.supportAssets2}`} alt="police" />
+              <img src={`${baseDomain}${alumniAssets.supportAssets2}`} alt="police" loading='lazy' />
             </div>
           </div>
           <div className='grid-element-2' >
             <div className='event-3' >
-              <img src={`${baseDomain}${alumniAssets.supportAssets3}`} alt="anna brahma" />
+              <img src={`${baseDomain}${alumniAssets.supportAssets3}`} alt="anna brahma" loading='lazy' />
             </div>
           </div>
           <div className='grid-element-3' >
             <div className='event-4' >
-              <img src={`${baseDomain}${alumniAssets.supportAssets4}`} alt="yoga-for-transgender" />
+              <img src={`${baseDomain}${alumniAssets.supportAssets4}`} alt="yoga-for-transgender" loading='lazy' />
             </div>
             <div className='event-5' >
-              <img src={`${baseDomain}${alumniAssets.supportAssets5}`} alt="plants"/>
+              <img src={`${baseDomain}${alumniAssets.supportAssets5}`} alt="plants" loading='lazy' />
             </div>
           </div>
         </div>
