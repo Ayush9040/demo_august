@@ -20,23 +20,23 @@ const AlumniGrid = ({ notEvent, images=[] }) => {
         <div className='alumni-event-grid'>
           <div className='grid-element-1'>
             <div className='event-1'>
-              {images[0] &&<img src={images[0]} />}
+              {images[0] &&<img src={images[0]} loading='lazy' />}
             </div>
             <div className='event-2'>
-              {images[1] && <img src={images[1]} />}
+              {images[1] && <img src={images[1]} loading='lazy' />}
             </div>
           </div>
           <div className='grid-element-2'>
             <div className='event-3'>
-              {images[2] && <img src={images[2]} />}
+              {images[2] && <img src={images[2]} loading='lazy' />}
             </div>
           </div>
           <div className='grid-element-3'>
             <div className='event-4'>
-              {images[3] && <img src={images[3]} />}
+              {images[3] && <img src={images[3]} loading='lazy' />}
             </div>
             <div className='event-5'>
-              {images[4] && <img src={images[4]} />}
+              {images[4] && <img src={images[4]} loading='lazy' />}
             </div>
           </div>
         </div>

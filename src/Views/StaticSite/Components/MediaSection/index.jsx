@@ -53,6 +53,7 @@ const MediaSection = ({
             className={`${title == 'Events' && 'event-img'} 'seminar-iamge'`}
             src={`${baseDomain}${mediaAssets.igCeremony}`}
             alt={title}
+            loading='lazy'
           />
         </div>
       </div>

@@ -86,7 +86,7 @@ const BlogAnother = () => {
         <h2 className='meta-heading'> {text} </h2>
         <br/>
         { blog?.coverImage &&  <div className='blog_img' >
-          <img src={`${blog?.coverImage}`} alt={`${blog?.altTag}`} />
+          <img src={`${blog?.coverImage}`} alt={`${blog?.altTag}`} loading='lazy' />
         </div> }
         <div className='blog-grid' dangerouslySetInnerHTML={{ __html:`${blog?.content}` }} >
          

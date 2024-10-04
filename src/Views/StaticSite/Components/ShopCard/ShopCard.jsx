@@ -52,6 +52,7 @@ const ShopCard = ({
           className="card-img"
           src={thumbnail}
           alt="Avatar"
+          loading='lazy'
         />
       </div>
       <div

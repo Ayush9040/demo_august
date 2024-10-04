@@ -56,7 +56,7 @@ const SeminarCard = ({
   return (
     <div className={'seminar-card'}>
       { bgImage && <div className="seminar-card-image">
-        <img src={bgImage} />
+        <img src={bgImage} loading='lazy' />
       </div>}
       <div className="seminar-card-content">
         <h2>

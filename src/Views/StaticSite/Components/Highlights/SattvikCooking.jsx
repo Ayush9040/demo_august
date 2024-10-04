@@ -30,7 +30,7 @@ const SattvikCooking = () => {
             <h1>Sattvik Cooking</h1>
           </div>
           <div className="highlight-cover">
-            <img src={`${baseDomain}${homeAssets.homeAsset18}`} alt="sattvik-cooking" />
+            <img src={`${baseDomain}${homeAssets.homeAsset18}`} alt="sattvik-cooking" loading='lazy' />
           </div>
         </div>
         <div className="about-section">

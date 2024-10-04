@@ -69,7 +69,7 @@ const MuseumPage = () => {
       <div className="museum-container">
         <div className="museum-card-wrapper">
           <div className="museum-card">
-            <img src={`${baseDomain}${museumAssets.virualAssets}`}alt="virtual gallery" />
+            <img src={`${baseDomain}${museumAssets.virualAssets}`}alt="virtual gallery" loading='lazy' />
           </div>
         </div>
         <p className="vt_text">

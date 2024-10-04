@@ -114,7 +114,7 @@ const YogaTotalHealth = () => {
         {totalHealthData?.map((totalData,index) => {
           return <div className="publication-intro" key={index}>
             <div className="mag-preview">
-              <img src={totalData.imageUrl} alt={totalData.title} />
+              <img src={totalData.imageUrl} alt={totalData.title} loading='lazy' />
             </div>
             <div className="mag-details">
               <div className="journal">
