@@ -675,7 +675,7 @@ const SignIn = () => {
     <div className="signin-form">
       <div className='signin-container'>
         <div className="signin-logo">
-          <img src="/images/primary-logo.svg" alt="primary-logo" />
+          <img src="/images/primary-logo.svg" alt="primary-logo" loading="lazy"/>
         </div>
         <div className="signin-details">
           <div className="container">

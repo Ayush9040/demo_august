@@ -1,10 +1,11 @@
-import EditAccount from '../../../Components/EditAccount'
-import UserProfile from '../../UserProfile'
-import SignIn from '../Views/SignIn'
-import SignUp from '../Views/Signup'
+import { lazy } from 'react'
 
+const UserProfile = lazy(()=>import('../../UserProfile'))
+const EditAccount = lazy(()=>import('../../../Components/EditAccount'))
+// import SignUp from '../Views/Signup'
+const SignIn = lazy(()=>import('../Views/SignIn'))
 const authRoutes = [
-  {
+  { 
     Component: SignIn,
     path: '/sign-in/*',
     exact: true,
@@ -12,14 +13,14 @@ const authRoutes = [
     routePath: '/sign-in/*',
     name: 'SignIn',
   },
-  {
-    Component: SignUp,
-    path: '/sign-up/*',
-    exact: true,
-    id: 'statisSiteUnderSignUp',
-    routePath: '/sign-up',
-    name: 'SignUp',
-  },
+  // {
+  //   Component: SignUp,
+  //   path: '/sign-up/*',
+  //   exact: true,
+  //   id: 'statisSiteUnderSignUp',
+  //   routePath: '/sign-up',
+  //   name: 'SignUp',
+  // },
   {
     Component: UserProfile,
     path: '/profile',

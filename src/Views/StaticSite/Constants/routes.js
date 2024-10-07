@@ -1,13 +1,16 @@
 import { lazy } from 'react'
-import MaladPage from '../Components/LocateUs/malad'
+// import MaladPage from '../Components/LocateUs/malad'
 import IBYcourse from '../Views/IBY'
 // import KidsCamp from '../Views/KidsCamps'
-import NutriDietClinic from '../Views/LandingPage/NutriDietClinic/AboutClinic'
-import corporateWellness from '../Views/LandingPage/CorporateWellness'
+// import NutriDietClinic from '../Views/LandingPage/NutriDietClinic/AboutClinic'
+// import corporateWellness from '../Views/LandingPage/CorporateWellness'
 // import DonationForm from '../Components/DonationForm'
 const DonationForm = lazy(() => import('../Components/DonationForm'))
 const DonationThankYou = lazy(() => import('../Components/Thank'))
 const Home = lazy(() => import('../Views/Home'))
+const MaladPage = lazy(() => import('../Components/LocateUs/malad'))
+const NutriDietClinic = lazy(() => import('../Views/LandingPage/NutriDietClinic/AboutClinic'))
+const corporateWellness = lazy(() => import('../Views/LandingPage/CorporateWellness'))
 const TermsCondition = lazy(() => import('../Components/TermsandCondition'))
 const Contact = lazy(() => import('../Components/Contact'))
 const PrivacyPolicy = lazy(() => import('../Components/PrivacyPolicy'))
