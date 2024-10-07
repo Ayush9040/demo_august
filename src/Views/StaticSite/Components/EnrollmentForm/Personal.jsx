@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo } from 'react'
+import React, { useState, useEffect, useMemo, lazy } from 'react'
 import './formstyles.scss'
 import InputComponent from '../InputComponent'
 import 'react-phone-number-input/style.css'
@@ -6,7 +6,7 @@ import PhoneInput from 'react-phone-number-input';
 import Select from 'react-select'
 import { Country, State, City } from 'country-state-city'
 import Other from './Other'
-import CourseDetails from './CourseDetails'
+// import CourseDetails from './CourseDetails'
 import SelectDropDown from '../Select Dropdown'
 import { Link, useSearchParams, useNavigate } from 'react-router-dom'
 import { parsePhoneNumberFromString, isValidPhoneNumber } from 'libphonenumber-js'
@@ -18,6 +18,8 @@ import 'react-datepicker/dist/react-datepicker.css';
 import { LoadScript, Autocomplete } from '@react-google-maps/api';
 import countryList from 'react-select-country-list';
 import { useSelector } from 'react-redux'; 
+
+const CourseDetails = lazy(() => import('./CourseDetails'));
 
 import MessageModal from '../MessageModal'
 import TermsCondition from '../TermsandCondition'

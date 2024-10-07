@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, lazy } from 'react'
 import axios from 'axios'
 import { useLocation, useParams } from 'react-router-dom' 
-import CourseDetails from '../../../Components/CourseDetails'
+// import CourseDetails from '../../../Components/CourseDetails'
 import InnerNavComponent from '../../../Components/InnerNavComponent'
 //import { c200h } from '../../../Constants/courses/c200hr'
 import { AllCourses } from '../Constants/courses'
@@ -10,6 +10,8 @@ import metaDataObj from '../../../../../Constants/metaData.json'
 import { cmsBaseDomain } from '../../../../../Constants/appSettings'
 import RelatedCourse from './Component'
 import RelatedBlogs from './RelatedBlogs'
+
+const CourseDetails = lazy(() => import('../../../Components/CourseDetails'));
 
 const SingleCourse = () => {
 
