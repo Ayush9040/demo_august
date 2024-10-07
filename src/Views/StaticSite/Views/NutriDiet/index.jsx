@@ -270,7 +270,7 @@ const NutriDiet = () => {
             { err && <small> Please select package/program* </small>}
           </div>
           <div className="highlight-cover">
-            <img src={`${baseDomain}${nutriDiet.nutriDietMain}`} alt="sattvik-cooking" />
+            <img src={`${baseDomain}${nutriDiet.nutriDietMain}`} alt="sattvik-cooking" loading='lazy' />
           </div>
         </div>
         <div className="about-section">

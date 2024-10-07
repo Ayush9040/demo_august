@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, lazy, useState } from 'react'
 //import CommonBannerNavPrimary from '../../Components/CommonBannerNavPrimary'
 //import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 //import { faSearch } from '@fortawesome/free-solid-svg-icons'
 import './style.scss'
-import CourseSection from '../../../Components/CourseSections'
+// import CourseSection from '../../../Components/CourseSections'
 import { courseCardData } from '../../../utils/courseCardData'
 import { c200hr, c500hr, c900hr, campsArr, AllCourses, classesArr } from '../Constants/courses'
 import baseDomain, { certificates } from '../../../assets/images/imageAsset'
@@ -29,6 +29,11 @@ import InnerNavComponent from '../../../Components/InnerNavComponent'
 import { useLocation } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import { trackCourseView } from '../../../../../CleverTap/pageViewEvents'
+
+const CourseSection = lazy(() => import('../../../Components/CourseSections'))
+// const courseCardData = lazy(() =>
+//   import('../../../utils/courseCardData').then(module => ({ default: module.courseCardData }))
+// );
 
 const Courses = () => {
 
@@ -194,7 +199,7 @@ const Courses = () => {
           </div>
           <div className="intro-image">
 
-            <img src="https://ecom-static-site-prod.s3.ap-south-1.amazonaws.com/SEO-New-Images/Courses/yoga-teacher-training-courses-hero.webp" alt='more than just reading' />
+            <img src="https://ecom-static-site-prod.s3.ap-south-1.amazonaws.com/SEO-New-Images/Courses/yoga-teacher-training-courses-hero.webp" alt='more than just reading' loading='lazy' />
           </div>
         </div>
 
@@ -224,7 +229,7 @@ const Courses = () => {
           <div className="certificates">
             <div className="certificate">
               <div className="certificate-logo">
-                <img src={`${baseDomain}${certificates.IYA}`} alt='The Indian Yoga Association' />
+                <img src={`${baseDomain}${certificates.IYA}`} alt='The Indian Yoga Association' loading='lazy' />
               </div>
               <div className="certificate-text">
                 <p>
@@ -236,7 +241,7 @@ const Courses = () => {
             </div>
             <div className="certificate">
               <div className="certificate-logo">
-                <img src={`${baseDomain}${certificates.YCB}`} alt='Yoga Certification Board' />
+                <img src={`${baseDomain}${certificates.YCB}`} alt='Yoga Certification Board' loading='lazy' />
               </div>
               <div className="certificate-text">
                 <p>
@@ -248,7 +253,7 @@ const Courses = () => {
             </div>
             <div className="certificate">
               <div className="certificate-logo">
-                <img src={`${baseDomain}${certificates.YAL}`} alt='Yoga Alliance' />
+                <img src={`${baseDomain}${certificates.YAL}`} alt='Yoga Alliance' loading='lazy' />
               </div>
               <div className="certificate-text">
                 <p>
@@ -260,7 +265,7 @@ const Courses = () => {
             </div>
             <div className="certificate">
               <div className="certificate-logo">
-                <img src={`${baseDomain}${certificates.IAYT}`} alt='International association of yoga therapists' />
+                <img src={`${baseDomain}${certificates.IAYT}`} alt='International association of yoga therapists' loading='lazy' />
               </div>
               <div className="certificate-text">
                 <p>

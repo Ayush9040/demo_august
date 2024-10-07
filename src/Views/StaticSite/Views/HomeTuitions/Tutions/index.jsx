@@ -163,6 +163,7 @@ const OnlineTution = () => {
             <img
               src={`${baseDomain}${homeAssets.homeAsset15}`}
               alt="Online Yoga Tuition the yoga institute"
+              loading='lazy'
             />
           </div>
         </div>

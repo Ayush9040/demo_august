@@ -307,12 +307,12 @@ if (product) {
                     <>
                       {
                         item.type === 'CATEGORY' && <Link to={`/shop/?category=${item.categoryId}`}>
-                          <img key={idx} className='banner-img' src={item.imageLink} />
+                          <img key={idx} className='banner-img' src={item.imageLink} loading='lazy' />
                         </Link>
                       }
                       {
                         item.type === 'PRODUCT' && <Link to={`/shop/product/${item.productId}`}>
-                          <img key={idx} className='banner-img' src={item.imageLink} />
+                          <img key={idx} className='banner-img' src={item.imageLink} loading='lazy' />
                         </Link>
                       }
                       

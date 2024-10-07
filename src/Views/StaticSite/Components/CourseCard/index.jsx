@@ -200,7 +200,7 @@ const CourseCard = ({
   return (
     <div className="course-card">
       <div className="course-card-image">
-        <img src={img} alt={courseTitle} onClick={() => { navigate(`/${path}`) }} />
+        <img src={img} alt={courseTitle} onClick={() => { navigate(`/${path}`) }} loading='lazy' />
         {/* <div className="stars">
           {ratingArr.length !== 0 &&
             ratingArr.map((item, id) => <StarIcon key={id} />)}

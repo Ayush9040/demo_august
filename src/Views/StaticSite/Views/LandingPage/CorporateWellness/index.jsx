@@ -170,26 +170,32 @@ const corporateWellness = () => {
                 <img
                   src={`${baseDomain}${CorporateWellnessLogos.pFizer}`}
                   className="pFizerImg"
+                  loading='lazy'
                 />
                 <img
                   src={`${baseDomain}${CorporateWellnessLogos.unionBank}`}
                   className="unionBankImg"
+                  loading='lazy'
                 />
                 <img
                   src={`${baseDomain}${CorporateWellnessLogos.BankOfBarodaNew}`}
                   className="bankOfBarodaImg"
+                  loading='lazy'
                 />
                 <img
                   src={`${baseDomain}${CorporateWellnessLogos.indianOil}`}
                   className="indianOilImg"
+                  loading='lazy'
                 />
                 <img
                   src={`${baseDomain}${CorporateWellnessLogos.siemens}`}
                   className="siemensImg"
+                  loading='lazy'
                 />
                 <img
                   src={`${baseDomain}${CorporateWellnessLogos.deutscheBank}`}
                   className="deutscheBankImg"
+                  loading='lazy'
                 />
               </span>
             </p>
@@ -198,26 +204,32 @@ const corporateWellness = () => {
                 <img
                   src={`${baseDomain}${CorporateWellnessLogos.pFizer}`}
                   className="pFizerImg"
+                  loading='lazy'
                 />
                 <img
                   src={`${baseDomain}${CorporateWellnessLogos.unionBank}`}
                   className="unionBankImg"
+                  loading='lazy'
                 />
                 <img
                   src={`${baseDomain}${CorporateWellnessLogos.BankOfBarodaNew}`}
                   className="bankOfBarodaImg"
+                  loading='lazy'
                 />
                 <img
                   src={`${baseDomain}${CorporateWellnessLogos.indianOil}`}
                   className="indianOilImg"
+                  loading='lazy'
                 />
                 <img
                   src={`${baseDomain}${CorporateWellnessLogos.siemens}`}
                   className="siemensImg"
+                  loading='lazy'
                 />
                 <img
                   src={`${baseDomain}${CorporateWellnessLogos.deutscheBank}`}
                   className="deutscheBankImg"
+                  loading='lazy'
                 />
               </span>
             </p>
@@ -368,7 +380,7 @@ const corporateWellness = () => {
           <div className="custom-border global-top-margin-second"></div>
           <div className="workplace-challenges-div">
             <div className="Workplace-challenges-img">
-              <img src={`${baseDomain}${CorporateWellnessLogos.workspace}`} />
+              <img src={`${baseDomain}${CorporateWellnessLogos.workspace}`} loading='lazy' />
             </div>
             <div className="workplace-challenges-reasons">
               <h2>Workplace Challenges</h2>
@@ -407,6 +419,7 @@ const corporateWellness = () => {
                 >
                   <img
                     src={`${baseDomain}${CorporateWellnessLogos.holisticFourth}`}
+                    loading='lazy'
                   />
                   <div className="icon-container">
                     <FontAwesomeIcon icon={faPlay} className="icon" />
@@ -443,6 +456,7 @@ const corporateWellness = () => {
                 >
                   <img
                     src={`${baseDomain}${CorporateWellnessLogos.holisticFirst}`}
+                    loading='lazy'
                   />
                   <div className="icon-container">
                     <FontAwesomeIcon icon={faPlay} className="icon" />
@@ -473,6 +487,7 @@ const corporateWellness = () => {
                 >
                   <img
                     src={`${baseDomain}${CorporateWellnessLogos.holisticSecond}`}
+                    loading='lazy'
                   />
                   <div className="icon-container">
                     <FontAwesomeIcon icon={faPlay} className="icon" />
@@ -502,6 +517,7 @@ const corporateWellness = () => {
                 >
                   <img
                     src={`${baseDomain}${CorporateWellnessLogos.holisticThird}`}
+                    loading='lazy'
                   />
                   <div className="icon-container">
                     <FontAwesomeIcon icon={faPlay} className="icon" />
@@ -733,6 +749,7 @@ const corporateWellness = () => {
             <img
               src={`${baseDomain}${CorporateWellnessLogos.corporateWheel}`}
               alt="corporate wheel"
+              loading='lazy'
             />
             <div className="list-data">
               <ul>
@@ -855,6 +872,7 @@ const corporateWellness = () => {
               <img
                 src="https://ecom-static-site-prod.s3.ap-south-1.amazonaws.com/uploads/2020/01/Blog-Thumbnail_01.jpg"
                 alt=""
+                loading='lazy'
               />
               <p>
                 Ease Neck and Back Pain at Work with these Simple Techniques{' '}
@@ -870,6 +888,7 @@ const corporateWellness = () => {
               <img
                 src="https://ecom-static-site-prod.s3.ap-south-1.amazonaws.com/uploads/2021/07/Do-this-to-Protect-your-Eyes-from-the-Screen.jpg"
                 alt=""
+                loading='lazy'
               />
               <p>
                 Do this to Protect your Eyes from the Screen{' '}
@@ -885,6 +904,7 @@ const corporateWellness = () => {
               <img
                 src="https://ecom-static-site-prod.s3.ap-south-1.amazonaws.com/uploads/2017/10/work-blog.jpg"
                 alt=""
+                loading='lazy'
               />
               <p>
                 Resolve Work Conflict the Yogic Way{' '}

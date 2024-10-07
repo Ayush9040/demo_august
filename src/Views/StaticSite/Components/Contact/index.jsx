@@ -320,11 +320,11 @@ const Contact = () => {
             <div className="right_contact_container">
 
                 <div className="logo_container">
-                    <img src="/images/lotus_logo_svg.svg" alt="" />
+                    <img src="/images/lotus_logo_svg.svg" alt="" loading='lazy' />
                 </div>
 
                 <div className="contact_right_desc">
-                    <img src="/images/quotes_svg.svg" alt="" />
+                    <img src="/images/quotes_svg.svg" alt="" loading='lazy' />
                     <div className=''>Established in 1918 by Shri Yogendraji, The Yoga Institute is the world&apos;s oldest government recognised Yoga Centre. The founder&apos;s vision and mission was to make Yoga accessible to each and everyone across the globe.</div>
                 </div>
 
@@ -332,7 +332,7 @@ const Contact = () => {
                     <h3>Contact Information</h3>
                     <div className="email_container">
                         <div className="email_contact_img">
-                            <img src="/images/mail_svg.svg" alt="" />
+                            <img src="/images/mail_svg.svg" alt="" loading='lazy' />
                         </div>
                         <div className="email_info">
                          info@theyogainstitute.org
@@ -341,7 +341,7 @@ const Contact = () => {
 
                     <div className="email_container">
                         <div className="email_contact_img">
-                            <img src="/images/phone_svg.svg" alt="" />
+                            <img src="/images/phone_svg.svg" alt="" loading='lazy' />
                         </div>
                         <div className="email_info">
                         +91-7738155500, +91-22-26110506, <br />+91-22-26103568
@@ -350,7 +350,7 @@ const Contact = () => {
 
                     <div className="email_container">
                         <div className="email_contact_img">
-                            <img src="/images/location_svg.svg" alt="" />
+                            <img src="/images/location_svg.svg" alt="" loading='lazy' />
                         </div>
                         <div className="email_info">
                         Shri Yogendra Marg, Prabhat Colony, <br />
