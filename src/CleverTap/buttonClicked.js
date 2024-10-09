@@ -417,7 +417,7 @@ if(tenure === '') {
 
     // Trigger CleverTap event on button click
     if (window?.clevertap) {
-      window.clevertap.event.push("SignIn", {
+      window.clevertap.event.push("SignUp", {
         "Name":firstName,
         "Email ID": email,
         "IsLoggedIn": IsLoggedIn,
@@ -836,7 +836,7 @@ export const handleAlreadySignedUpUser = ({
 
    // Trigger CleverTap event on button click
    if (window?.clevertap) {
-    window.clevertap.event.push("SignIn_by_already_existing_user", {
+    window.clevertap.event.push("SignIn", {
       // "Name":firstName,
       // "Email ID": email,
       "phone": phone,
