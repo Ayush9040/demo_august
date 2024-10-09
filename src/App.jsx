@@ -18,13 +18,15 @@ const App = () => {
   const [isVisible, setIsVisible] = useState(true);
   const location = useLocation();
   useEffect(() => {
-    const hasAcceptedCookies = localStorage.getItem('cookiesAccepted');
-    if (hasAcceptedCookies === "true" || hasAcceptedCookies === true) {
-      setIsVisible(false);
-      ReactGA.initialize('374034779', { debug: true })
-      console.log("react GA from cookies ", ReactGA);
-      ReactGA.pageview('/')
-    }
+    // const hasAcceptedCookies = localStorage.getItem('cookiesAccepted');
+    // if (hasAcceptedCookies === "true" || hasAcceptedCookies === true) {
+    //   setIsVisible(false);
+    //   ReactGA.initialize('374034779', { debug: true })
+    //   console.log("react GA from cookies ", ReactGA);
+    //   ReactGA.pageview('/')
+    // }
+    ReactGA.initialize('374034779', { debug: true })
+    ReactGA.pageview('/')
   }, []);
 
   const handleAccept = () => {
@@ -66,18 +68,18 @@ const App = () => {
 
   // App.js or index.js
 
-useEffect(() => {
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker
-      .register('../public/clevertap_sw') // The service worker file hosted in public folder
-      .then(function (registration) {
-        console.log('Service Worker registered with scope:', registration.scope);
-      })
-      .catch(function (error) {
-        console.error('Service Worker registration failed:', error);
-      });
-  }
-}, []);
+  useEffect(() => {
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker
+        .register('../public/clevertap_sw') // The service worker file hosted in public folder
+        .then(function (registration) {
+          console.log('Service Worker registered with scope:', registration.scope);
+        })
+        .catch(function (error) {
+          console.error('Service Worker registration failed:', error);
+        });
+    }
+  }, []);
 
 
   return (
@@ -91,7 +93,7 @@ useEffect(() => {
       </Routes>
 
       {/* badge to accept cookies */}
-      {isVisible && <div className="cookie-banner">
+      {/* {isVisible && <div className="cookie-banner">
         <p>
           We use cookies to enhance your experience. By continuing to visit this site, you agree to our use of cookies.
         </p>
@@ -102,7 +104,7 @@ useEffect(() => {
           <button onClick={handleAccept} className="cookie-button">
             Accept
           </button></div>
-      </div>}
+      </div>} */}
 
     </Suspense>
   )
