@@ -9868,7 +9868,7 @@ const camps = {
       '23rd Nov to 29th Nov 2024',
       '28th Dec to 3rd Jan 2025',
       '25th Jan to 31st Jan 2025',
-      '22nd Feb to 28th Febru 2025',
+      '22nd Feb to 28th Feb 2025',
       '22nd Mar to 28th Mar 2025',
       '26th Apr to 2nd May 2025',
       '24th May to 30th May 2025',
@@ -14579,7 +14579,12 @@ const certificate = {
     category: 'certificate-course',
     dates: [
       // '2nd Aug to 7th Sep 2024',
-      '15th Nov - 21st Dec 2024'],
+      '15th Nov - 21st Dec 2024',
+      '7th Feb to 15th Mar 2025',
+      '2nd May to 7th Jun 2025',
+      '1st Aug to 6th Sep 2025',
+      '7th Nov  to 13th Dec 2025'
+    ],
     online: true,
     onCampus: true,
     nonResidential: false,
@@ -14831,9 +14836,9 @@ const certificate = {
     category: 'certificate-course',
     dates: [
       // '28th Aug  to 20th Dec 2024'
-      '3rd Jan to 28th Apr 2025',
-      '14th May to 3rd Sep 2025',
-      '5th Sep to 29th Dec 2025',
+      // '3rd Jan to 28th Apr 2025',
+      // '14th May to 3rd Sep 2025',
+      // '5th Sep to 29th Dec 2025',
       '3rd Jan to 28th Apr 2025',
       '14th May to 3rd Sep 2025',
       '5th Sep to 29th Dec 2025'
