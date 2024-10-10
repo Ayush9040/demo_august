@@ -379,11 +379,20 @@ const SignIn = () => {
       setPageIndex('4')
     }
   }
-
+  const getTrimmedName = (name) => {
+    let result = name.trim().replace(/\s+/g, ' ')
+    return result;
+  }
   // validates the form and trigger OTP for the final step
-  const signUpOTP = async (details, type) => {
+  const signUpOTP = async (det, type) => {
     const nameRegex = /^[A-Za-z]+( [A-Za-z]+)*$/;
     const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    //split empty space
+    let details = { ...formData }
+    setFormData({ ...formData, firstName: getTrimmedName(details.firstName), lastName: getTrimmedName(details.lastName) });
+
+    details['firstName'] = getTrimmedName(details['firstName'])
+    details['lastName'] = getTrimmedName(details['lastName'])
 
     if (!details.firstName || !nameRegex.test(details.firstName)) {
       setFormData({ ...formData, errorIndex: 3 });
@@ -392,19 +401,19 @@ const SignIn = () => {
       setFormData({ ...formData, errorIndex: 4 });
     }
     else if ((!details.email || !emailRegex.test(details.email)) && signUpType == 'mobile') {
-      setFormData({ ...formData, errorIndex: 5 });
+      setFormData({ ...details, errorIndex: 5 });
     }
     else if (!details.gender?.value) {
-      setFormData({ ...formData, errorIndex: 6 });
+      setFormData({ ...details, errorIndex: 6 });
     }
     else if (!details.country?.value) {
-      setFormData({ ...formData, errorIndex: 7 });
+      setFormData({ ...details, errorIndex: 7 });
     }
     else if (!details.city?.value) {
-      setFormData({ ...formData, errorIndex: 8 });
+      setFormData({ ...details, errorIndex: 8 });
     }
     else if ((validatePhoneNumber(details.phoneNumber).length > 0) && signUpType != 'mobile') {
-      setFormData({ ...formData, errorIndex: 9 });
+      setFormData({ ...details, errorIndex: 9 });
     }
     else {//form is valid 
       setFormData({ ...formData, errorIndex: 0 });
