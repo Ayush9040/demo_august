@@ -20,6 +20,15 @@ const UserProfile = () => {
     { option: 'Edit Account', key: 4 },
   ]
 
+  useEffect(() => {
+    const token = localStorage.getItem('authToken');
+
+    if (!token) {
+      // If no token, navigate to login
+      navigate('/user/sign-in');
+    }
+  }, [navigate])
+
   const UserNav = {
     title: 'alumni-events',
     color: 'orange',
