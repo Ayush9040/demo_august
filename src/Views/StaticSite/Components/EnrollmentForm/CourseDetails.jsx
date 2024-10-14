@@ -2,6 +2,8 @@ import React, { useEffect } from 'react'
 import { useState } from 'react'
 import { upload } from '../../assets/icons/icon'
 import { uploadFile } from '../../../../helpers/OssHelper'
+import { useLocation } from 'react-router-dom';
+
 const CourseDetails = ({
   currentCourse,
   courseDate,
@@ -19,6 +21,49 @@ const CourseDetails = ({
 }) => {
 
   const [optionsCount, setOptionsCount] = useState(0);
+  const location = useLocation();
+  const isSatsangPage = location.pathname === '/enrollment/satsang';
+  const [setDate, setSetDate ] = useState(false);
+
+  useEffect(() => {
+    if (isSatsangPage) {
+      setSetDate(true);
+      // setSelectDateValue({ label: 'No date Selected', value: 'No date Selected' });
+
+      // Set formData with 'No date Selected' only once when the path is /enrollment/satsang
+      // setFormData((prev) => ({
+      //   ...prev,
+      //   sdate: 'No date Selected',
+      //   courseDetails: {
+      //     ...prev.courseDetails,
+      //     date: 'No date Selected',
+      //   },
+      // }));
+
+      console.log('form Data mode ', formData)
+
+      // setFormData({
+      //   ...formData,
+      //   mode: 'No mode Selected',
+      // })
+
+      handleResidential(false);
+      setSelectedOption('OFFLINE')
+      // if (e.target.checked) {
+         // Set formData with mode and subMode nested inside courseDetails
+    setFormData((prevFormData) => ({
+      ...prevFormData,
+      mode: 'OFFLINE', // This can be at the top-level if needed
+      residental: 'NONRESIDENTIAL'
+    }));
+        setEmpty(0)
+        setCourseFee(0)
+        // setCourseFee(updatedFees( currentCourse?.key,'ONLINE' ))
+      // }
+
+      console.log('form Data mode2 ', formData)
+    }
+  }, [isSatsangPage]);
 
   useEffect(() => {
     if (formData.mode === 'ONLINE') {
@@ -39,6 +84,8 @@ const CourseDetails = ({
   const [certificateName, setcertificateName] = useState('')
   const [selectedMode, setSelectedMode] = useState('');
   const [selectedOption, setSelectedOption] = useState('');
+
+  
 
 
   const handleModeSelection = (mode) => {
@@ -313,7 +360,10 @@ const CourseDetails = ({
               </div>
             </div>
           </div>
-          <div className="course-details-text">
+          { !isSatsangPage && (
+            <>
+
+<div className="course-details-text">
             Please select one of these options*
           </div>
           {console.log('CC', currentCourse)}
@@ -613,6 +663,9 @@ const CourseDetails = ({
             
 
           </form>
+            
+            </>
+          )}
 
           
 
