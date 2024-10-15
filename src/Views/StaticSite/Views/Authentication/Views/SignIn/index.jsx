@@ -571,7 +571,14 @@ const SignIn = () => {
           setPageIndex('3')
           setSignUpType('email')
           setToken(response?.data?.token)
-          setFormData({ ...formData, email: user.email, firstName: user?.displayName })
+
+          setFormData({ ...formData, email: user.email })
+          if (user?.displayName) {
+            const parts = user?.displayName.split(" ");
+            const lastWord = parts.length > 1 ? parts.pop() : ""; // Get the last word or set it to empty
+            const remainingString = parts.join(" ") || user?.displayName; // Join the remaining parts or keep the original name
+            setFormData({...formData, firstName: remainingString, lastName: lastWord })
+          }
         }
         else {//existing user
           // alert('Siggned in');
@@ -684,7 +691,7 @@ const SignIn = () => {
     <div className="signin-form">
       <div className='signin-container'>
         <div className="signin-logo">
-          <img src="/images/primary-logo.svg" alt="primary-logo" loading="lazy"/>
+          <img src="/images/primary-logo.svg" alt="primary-logo" loading="lazy" />
         </div>
         <div className="signin-details">
           <div className="container">
