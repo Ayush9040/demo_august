@@ -10,9 +10,9 @@ export const clearLocal = () => {
 }
 
 export const isAuthorized = () => {
-  const authToken =  getLocal('authToken')
-  if (authToken){
-    setDefaultHeaders('authorization', `Bearer ${authToken}`)
+  const authorizationToken =  getLocal('authorizationToken')
+  if (authorizationToken){
+    setDefaultHeaders('authorization', `Bearer ${authorizationToken}`)
     return true
   }
   return false 

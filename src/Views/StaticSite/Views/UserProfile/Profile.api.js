@@ -5,7 +5,7 @@ export const fetchUserOrders = (userID) => {
   return axios.get(`${ecomBaseDomain}/order/user/${userID}`)
 }
 export const fetchUserCourses = (userID) => {
-  let token = localStorage.getItem('authToken')
+  let token = localStorage.getItem('authorizationToken')
   return axios.post(`${cmsBaseDomain}/forms/course/purchase/list`, {}, {
     headers: {
       // 'Authorization': `Bearer ${token}`

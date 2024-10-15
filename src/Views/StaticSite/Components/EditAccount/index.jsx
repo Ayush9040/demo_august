@@ -40,7 +40,7 @@ const EditAccount = () => {
   })
 
   // const tokenss = getAuthTokenFromCookie();
-  // localStorage.setItem('authToken', tokenss);
+  // localStorage.setItem('authorizationToken', tokenss);
 
 
 
@@ -141,7 +141,7 @@ console.log("formattedDate ",formattedDate)
       // setCallFetch(true);
       
       try{
-        let token = localStorage.getItem('authToken')
+        let token = localStorage.getItem('authorizationToken')
         await axios.put(`${ authBaseDomain }/user/update`,formData,  {
           headers: {
               //  'Authorization': `Bearer ${token}`

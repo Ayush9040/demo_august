@@ -135,10 +135,10 @@ const SignIn = () => {
         setToken(response?.data?.token)
         if (response?.data?.isSignupRequired) { setPageIndex(3); setSignUpType('mobile') }
         else {
-          localStorage.setItem('authToken', response?.data?.accessToken)
+          localStorage.setItem('authorizationToken', response?.data?.accessToken)
           localStorage.setItem('refreshToken', response?.data?.refreshToken)
           // To set a cookie
-          // document.cookie = `authToken=${response?.data?.accessToken}; path=/;`; // Expires in 1 hour
+          // document.cookie = `authorizationToken=${response?.data?.accessToken}; path=/;`; // Expires in 1 hour
 
           dispatch(loginUserSuccess({}))
           handleAlreadySignedUpUser({
@@ -187,9 +187,9 @@ const SignIn = () => {
           )
           if (response) {
             // alert('Siggned in');
-            localStorage.setItem('authToken', response?.data?.accessToken)
+            localStorage.setItem('authorizationToken', response?.data?.accessToken)
             localStorage.setItem('refreshToken', response?.data?.refreshToken)
-            // document.cookie = `authToken=${response?.data?.accessToken}; path=/;`;
+            // document.cookie = `authorizationToken=${response?.data?.accessToken}; path=/;`;
             dispatch(loginUserSuccess({}))
 
             getUserDetails(response?.data?.accessToken)
@@ -214,7 +214,7 @@ const SignIn = () => {
           )
           if (response) {
             // alert('Siggned in');
-            localStorage.setItem('authToken', response?.data?.accessToken)
+            localStorage.setItem('authorizationToken', response?.data?.accessToken)
             localStorage.setItem('refreshToken', response?.data?.refreshToken)
             dispatch(loginUserSuccess({}))
             getUserDetails(response?.data?.accessToken)
@@ -582,7 +582,7 @@ const SignIn = () => {
         }
         else {//existing user
           // alert('Siggned in');
-          localStorage.setItem('authToken', response?.data?.accessToken)
+          localStorage.setItem('authorizationToken', response?.data?.accessToken)
           localStorage.setItem('refreshToken', response?.data?.refreshToken)
           dispatch(loginUserSuccess({}))
           getUserDetails(response?.data?.accessToken)
@@ -605,7 +605,7 @@ const SignIn = () => {
 
   const navigateBack = () => {
 
-    const isLoggedIn = !!localStorage.getItem('authToken');
+    const isLoggedIn = !!localStorage.getItem('authorizationToken');
 
     if (pageIndex > 1) {
       if (pageIndex == '4') {

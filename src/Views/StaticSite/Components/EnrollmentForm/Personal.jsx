@@ -119,7 +119,7 @@ const Personal = ({
   }, [isSatsangPage]); 
 
   useEffect(() => {
-    const token = localStorage.getItem('authToken'); // Check for the auth token
+    const token = localStorage.getItem('authorizationToken'); // Check for the auth token
     if (!token) {
       // If the token is not found, navigate to the login page
       navigates('/user/sign-in');
