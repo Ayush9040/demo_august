@@ -8,7 +8,7 @@ export const fetchUserCourses = (userID) => {
   let token = localStorage.getItem('authToken')
   return axios.post(`${cmsBaseDomain}/forms/course/purchase/list`, {}, {
     headers: {
-      'Authorization': `Bearer ${token}`
+      // 'Authorization': `Bearer ${token}`
     }
   })
 }
