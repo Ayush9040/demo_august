@@ -667,7 +667,7 @@ const CourseDetails = ({ pageDate }) => {
             })}
           </div>
         }
-        {
+        {/* {
           <div className="details-section" id="program-details">
           {<h1>Batches</h1>}
           
@@ -677,7 +677,7 @@ const CourseDetails = ({ pageDate }) => {
         })}
       </ul>
         </div>
-        }
+        } */}
         {pageDate?.category === 'ttc' && pageDate?.curriculum?.length !== 0 && (
           <div className="details-section" id="curriculum">
             <h1>Curriculum</h1>

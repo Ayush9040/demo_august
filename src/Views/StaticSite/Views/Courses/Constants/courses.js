@@ -2099,6 +2099,10 @@ const ttc200hr = {
       // '28th Sep to 15th Dec 2024 ',
       '5th Oct to 22nd Dec 2024 ',
       '21st Dec to 9th Mar 2025',
+      '15th Mar to 1st Jun 2025',
+      '7th Jun to 24th Aug 2025',
+      '30th Aug to 16th Nov 2025',
+      '22nd Nov to 8th Feb 2026'
     ],
     online: true,
     onCampus: false,
@@ -5545,7 +5549,12 @@ const ttc900hr = {
     category: 'ttc',
     dates: [
       // '17th Jun - 5th Oct 2024', 
-      '14th Oct 2024 - 1st Feb 2025'],
+      '14th Oct 2024 - 1st Feb 2025',
+      '10th Feb - 31st May 2025',
+      '9th Jun - 27th Sep 2025',
+      '6th Oct - 24th Jan 2026'
+    ]
+      ,
     online: true,
     onCampus: false,
     nonResidential: false,
