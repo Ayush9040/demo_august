@@ -21,7 +21,7 @@ const UserProfile = () => {
   ]
 
   useEffect(() => {
-    const token = localStorage.getItem('authToken');
+    const token = localStorage.getItem('authorizationToken');
 
     if (!token) {
       // If no token, navigate to login

@@ -44,7 +44,7 @@ export const refreshSessionAndGetData = async(errorResponse) => {
       return failResponse
     }
       
-    setLocal('authToken', refreshTokenResponse.accessToken)
+    setLocal('authorizationToken', refreshTokenResponse.accessToken)
     setDefaultHeaders('authorization', `Bearer ${refreshTokenResponse.accessToken}`)
 
     try {

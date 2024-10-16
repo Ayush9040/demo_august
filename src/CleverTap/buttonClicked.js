@@ -851,3 +851,128 @@ export const handleAlreadySignedUpUser = ({
   }
 }
 
+
+export const handleCTOnUserLoginCalled = ({
+  firstName,
+  email,
+  IsLoggedIn,
+  phone,
+  city,
+  country,
+  gender,
+  dialCode
+}) => {
+
+  const res = (email) => {
+    const ans = `"${email}"`;
+    console.log(ans);
+    
+    return ans;
+  }
+// console.log("firstName from handle ", firstName);
+  function convertToInternationalFormat(phoneNumber, dialCode) {
+    // Add a check to ensure phoneNumber and dialCode are not undefined
+    if (phoneNumber && dialCode) {
+      return phoneNumber.replace(dialCode, `+${dialCode}`);
+    } else {
+      console.error("Phone number or dial code is missing.");
+      return phoneNumber; // Or handle it in another way
+    }
+  }
+
+  let num = convertToInternationalFormat(phone,dialCode);
+
+  let Gender;
+
+  if(gender === "Male") {
+    Gender = "M";
+  }
+
+  if(gender === "Female") {
+    Gender = "F";
+  }
+
+  if(gender === "Others") {
+    Gender = "O";
+  }
+
+  if (window.clevertap) {
+    // User profile data
+
+
+    const userProfile = {
+      "Site": {
+         "Name": firstName || "",                    // User's name
+        "Identity": num,                  // Unique identity (User ID)
+        "Email": email || "",                  // Email address
+        "Phone": num || "",                  // Phone number in international format
+        "Gender": Gender || "",                // Gender ("M", "F", "O")
+        // "DOB": user.dob || "",                      // Date of birth in "YYYY-MM-DD" format
+        // "City": user.city || "",     
+        // "Age": '25',               // City
+        // "Country": user.country || "",              // Country
+        // "Photo": user.photoUrl || "",               // URL to the user's profile photo
+        // "Custom_Property1": user.property1 || "",   // Additional custom properties
+        // "Custom_Property2": user.property2 || "",
+        // Add more properties as required
+        "MSG-email": true,                // Disable email notifications
+        "MSG-push": true,                  // Enable push notifications
+        "MSG-sms": true,                   // Enable sms notifications
+        "MSG-whatsapp": true,   
+      }
+    };
+
+
+   
+
+     const userProfile19 = {
+      "Site": {
+        // "Course Name": "200 Hours",
+        "id_name": firstName,
+        "id_email": res(email),
+        "id_phone": phone,
+        "City": city,
+        "Country": country,
+        // "Lead_Type": "SALES",
+        // "Nationality": "Indian",
+        //  "MSG-email": true,                // Disable email notifications
+        //  "MSG-push": true,                  // Enable push notifications
+        //  "MSG-sms": true,                   // Enable sms notifications
+        //  "MSG-whatsapp": true,  
+      },
+      "Identity": num,  // This is the unique identifier for the user
+      // "ObjectID": "25b08803c1af4e00839f530264dac6f8", // Optional
+      "Type": "profile"
+    };
+
+    // Check if `onUserLogin` method is correctly set up
+    if (typeof window.clevertap.onUserLogin === "object") {
+      window.clevertap.onUserLogin.push(userProfile);
+      window.clevertap.profile.push(userProfile19)
+      console.log("User profile sent to CleverTap:", userProfile);
+      console.log("profile sent to CleverTap:", userProfile19);
+    } else {
+      console.error("CleverTap onUserLogin is not set up correctly.");
+    }
+  } else {
+    console.error("CleverTap is not initialized.");
+  }
+
+  // Trigger CleverTap event on button click
+  // if (window?.clevertap) {
+  //   window.clevertap.event.push("on User login called", {
+  //     "Name":firstName,
+  //     "Email ID": email,
+  //     "IsLoggedIn": IsLoggedIn,
+  //     "date_time_timestamp": new Date().toISOString()
+  //   });
+
+   
+    
+  // } else {
+  //   console.error("CleverTap is not initialized.");
+  // }
+
+ 
+}
+

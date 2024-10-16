@@ -667,6 +667,17 @@ const CourseDetails = ({ pageDate }) => {
             })}
           </div>
         }
+        {/* {
+          <div className="details-section" id="program-details">
+          {<h1>Batches</h1>}
+          
+          <ul type="disc" style={{ marginLeft: '40px', marginTop: '20px'}}>
+        {pageDate?.dates?.map((item, i) => {
+          return <li key={i} style={{marginBottom: '5px'}}>{item}</li>
+        })}
+      </ul>
+        </div>
+        } */}
         {pageDate?.category === 'ttc' && pageDate?.curriculum?.length !== 0 && (
           <div className="details-section" id="curriculum">
             <h1>Curriculum</h1>

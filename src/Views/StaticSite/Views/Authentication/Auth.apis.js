@@ -7,7 +7,7 @@ export const loginUserAPI = (data) => {
 
 
 export const getAuthTokenFromCookie = () => {
-  const name = 'authToken=';
+  const name = 'authorizationToken=';
   const decodedCookie = decodeURIComponent(document.cookie);
   const cookies = decodedCookie.split(';');
   for (let i = 0; i < cookies.length; i++) {
@@ -22,19 +22,21 @@ export const getAuthTokenFromCookie = () => {
 
 
 export const fetchUserDataAPI = () => {
-  let token = localStorage.getItem('authToken');
+  let token = localStorage.getItem('authorizationToken');
   
   // If the token is not found in local storage, get it from cookies
   // if (!token) {
   //   const tokenss = getAuthTokenFromCookie();
   //   // Only set the token in local storage if it's not empty
   //   if (tokenss) {
-  //     localStorage.setItem('authToken', tokenss);
+  //     localStorage.setItem('authorizationToken', tokenss);
   //     token = tokenss; // Update the token variable
   //   }
   // }
 
   console.log("auth token", token);
+
+  
   
   return axios.get(`${ authBaseDomain }/user/me`, {
     headers: {

@@ -80,9 +80,11 @@ const Navbar = ({ isUserLoggedIn, abc }) => {
             <div className={`header-logo ${scrollImg ? 'navigation-img' : ''}`}>
               <img
                 style={{ transition: 'none !important' }}
-                placeholder="none"
                 alt='The Yoga Institute'
                 src="https://ecom-static-site-prod.s3.ap-south-1.amazonaws.com/Home/tyi.png"
+                width={'100px'}
+                height={'100px'}
+                loading='lazy'
               />
             </div>
             <div className="header-title"></div>

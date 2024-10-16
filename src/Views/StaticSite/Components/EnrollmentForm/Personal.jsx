@@ -18,6 +18,7 @@ import 'react-datepicker/dist/react-datepicker.css';
 import { LoadScript, Autocomplete } from '@react-google-maps/api';
 import countryList from 'react-select-country-list';
 import { useSelector } from 'react-redux'; 
+import { useLocation } from 'react-router-dom';
 
 const CourseDetails = lazy(() => import('./CourseDetails'));
 
@@ -92,9 +93,33 @@ const Personal = ({
   const [loading, setLoading] = useState(true); 
 
   const navigates = useNavigate();
+  const location = useLocation();
+
+  
+
+  const [selectDateValue, setSelectDateValue] = useState(values.selectDate);
+  const [setDate, setSetDate ] = useState(false)
+  const isSatsangPage = location.pathname === '/enrollment/satsang';
 
   useEffect(() => {
-    const token = localStorage.getItem('authToken'); // Check for the auth token
+    if (isSatsangPage) {
+      setSetDate(true);
+      setSelectDateValue({ label: 'No date Selected', value: 'No date Selected' });
+
+      // Set formData with 'No date Selected' only once when the path is /enrollment/satsang
+      setFormData((prev) => ({
+        ...prev,
+        sdate: 'No date Selected',
+        courseDetails: {
+          ...prev.courseDetails,
+          date: 'No date Selected',
+        },
+      }));
+    }
+  }, [isSatsangPage]); 
+
+  useEffect(() => {
+    const token = localStorage.getItem('authorizationToken'); // Check for the auth token
     if (!token) {
       // If the token is not found, navigate to the login page
       navigates('/user/sign-in');
@@ -244,6 +269,7 @@ const Personal = ({
       console.log(
         'Address ',address
       )
+      const nameComponent = place?.name;
       const countryComponent = place.address_components?.find((component) =>
         component.types.includes('country')
       );
@@ -278,12 +304,14 @@ const Personal = ({
       const city = cityComponent ? cityComponent.long_name : '';
       const pincode = postalCodeComponent ? postalCodeComponent.long_name : '';
       const formattedAddress = place.formatted_address || '';
+      const name = nameComponent ? nameComponent : '';
 
       // Split the formatted address into lines for Address 1 and Address 2
     const addressParts = formattedAddress.split(', ');
 
     // Set Address Line 1 and Address Line 2 based on your criteria
     let address1 = [
+      name,
       address1CodeComponent1?.long_name || '',
       address1CodeComponent2?.long_name || '',
       address1CodeComponent3?.long_name || '',
@@ -1396,7 +1424,8 @@ const Personal = ({
             </div>
 
 
-            <div className="form_error course_date">
+            { !isSatsangPage && (
+              <div className="form_error course_date">
               <Select
                 styles={customStyles}
                 id="sdate"
@@ -1408,7 +1437,7 @@ const Personal = ({
                 errorCheck={setEmpty}
                 isSearchable={false}
                 options={formattedDates}
-                value={values.selectDate}
+                value={setDate ? selectDateValue : values.selectDate}
                 onChange={(value) => {
                   setValues(
                     { country: values.country, state: values.state, city: values.city, sdate: value },
@@ -1426,6 +1455,7 @@ const Personal = ({
               />
               {empty === 18 && <small id="fill_err"> Please select course date</small>}
             </div>
+            )}
 
             {isRegular && <><br /><div className="form_error course_date date-input-wrapper">
               <DatePicker
@@ -1596,7 +1626,7 @@ const Personal = ({
             </button> */}
 
             {<button type="button" onClick={handleSubmit} className={!isLoad ? 'next_button button register-primary-btn' : 'next_button button register-primary-btn no-event'} disabled={isLoad}>
-              {!isLoad ? <><span id="txt">Proceed To Payment&nbsp; </span> </> : <><span className="loader">
+              {setDate ? <><span id="txt">Register&nbsp; </span> </> : !isLoad ? <><span id="txt">Proceed To Payment&nbsp; </span> </> : <><span className="loader">
                 <span className="dot"></span>
                 <span className="dot"></span>
                 <span className="dot"></span>

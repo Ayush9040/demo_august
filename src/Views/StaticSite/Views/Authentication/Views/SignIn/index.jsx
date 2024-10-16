@@ -135,10 +135,10 @@ const SignIn = () => {
         setToken(response?.data?.token)
         if (response?.data?.isSignupRequired) { setPageIndex(3); setSignUpType('mobile') }
         else {
-          localStorage.setItem('authToken', response?.data?.accessToken)
+          localStorage.setItem('authorizationToken', response?.data?.accessToken)
           localStorage.setItem('refreshToken', response?.data?.refreshToken)
           // To set a cookie
-          // document.cookie = `authToken=${response?.data?.accessToken}; path=/;`; // Expires in 1 hour
+          // document.cookie = `authorizationToken=${response?.data?.accessToken}; path=/;`; // Expires in 1 hour
 
           dispatch(loginUserSuccess({}))
           handleAlreadySignedUpUser({
@@ -187,9 +187,9 @@ const SignIn = () => {
           )
           if (response) {
             // alert('Siggned in');
-            localStorage.setItem('authToken', response?.data?.accessToken)
+            localStorage.setItem('authorizationToken', response?.data?.accessToken)
             localStorage.setItem('refreshToken', response?.data?.refreshToken)
-            // document.cookie = `authToken=${response?.data?.accessToken}; path=/;`;
+            // document.cookie = `authorizationToken=${response?.data?.accessToken}; path=/;`;
             dispatch(loginUserSuccess({}))
 
             getUserDetails(response?.data?.accessToken)
@@ -214,7 +214,7 @@ const SignIn = () => {
           )
           if (response) {
             // alert('Siggned in');
-            localStorage.setItem('authToken', response?.data?.accessToken)
+            localStorage.setItem('authorizationToken', response?.data?.accessToken)
             localStorage.setItem('refreshToken', response?.data?.refreshToken)
             dispatch(loginUserSuccess({}))
             getUserDetails(response?.data?.accessToken)
@@ -571,11 +571,18 @@ const SignIn = () => {
           setPageIndex('3')
           setSignUpType('email')
           setToken(response?.data?.token)
-          setFormData({ ...formData, email: user.email, firstName: user?.displayName })
+
+          setFormData({ ...formData, email: user.email })
+          if (user?.displayName) {
+            const parts = user?.displayName.split(" ");
+            const lastWord = parts.length > 1 ? parts.pop() : ""; // Get the last word or set it to empty
+            const remainingString = parts.join(" ") || user?.displayName; // Join the remaining parts or keep the original name
+            setFormData({...formData, firstName: remainingString, lastName: lastWord })
+          }
         }
         else {//existing user
           // alert('Siggned in');
-          localStorage.setItem('authToken', response?.data?.accessToken)
+          localStorage.setItem('authorizationToken', response?.data?.accessToken)
           localStorage.setItem('refreshToken', response?.data?.refreshToken)
           dispatch(loginUserSuccess({}))
           getUserDetails(response?.data?.accessToken)
@@ -598,7 +605,7 @@ const SignIn = () => {
 
   const navigateBack = () => {
 
-    const isLoggedIn = !!localStorage.getItem('authToken');
+    const isLoggedIn = !!localStorage.getItem('authorizationToken');
 
     if (pageIndex > 1) {
       if (pageIndex == '4') {
@@ -684,7 +691,7 @@ const SignIn = () => {
     <div className="signin-form">
       <div className='signin-container'>
         <div className="signin-logo">
-          <img src="/images/primary-logo.svg" alt="primary-logo" loading="lazy"/>
+          <img src="/images/primary-logo.svg" alt="primary-logo" loading="lazy" />
         </div>
         <div className="signin-details">
           <div className="container">
