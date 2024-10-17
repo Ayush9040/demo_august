@@ -20,7 +20,12 @@ export const getAllCategories = ()=>{
 }
 
 export const getActiveCart = ()=>{
-  return axios.get(`${ ecomBaseDomain }/cart/activeCart`)
+  const token = localStorage.getItem("authorizationToken");
+  return axios.get(`${ ecomBaseDomain }/cart/activeCart`,{
+    headers: {
+      'Authorization': `Bearer ${token}`
+    }
+  })
 }
 
 export const createCart = (payload)=>{
