@@ -84,7 +84,6 @@ const Navbar = ({ isUserLoggedIn, abc }) => {
                 src="https://ecom-static-site-prod.s3.ap-south-1.amazonaws.com/Home/tyi.png"
                 width={'100px'}
                 height={'100px'}
-                loading='lazy'
               />
             </div>
             <div className="header-title"></div>
