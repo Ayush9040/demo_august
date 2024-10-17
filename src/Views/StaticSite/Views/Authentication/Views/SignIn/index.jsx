@@ -172,26 +172,28 @@ const SignIn = () => {
         payload['dialCode'] = phoneNumber.dialCode;
         payload['countryCode'] = countryCode
 
-    let response = await axios.post(//send OTP for mobile
-      `${authBaseDomain}/authdoor/google/signup`,
-      payload,
-      {
-        headers: {
-          'Authorization': `Bearer ${token}`
-        }
-      }
-    )
-    if (response) {
-      // alert('Siggned in');
-      localStorage.setItem('authorizationToken', response?.data?.accessToken)
-      localStorage.setItem('refreshToken', response?.data?.refreshToken)
-      dispatch(loginUserSuccess({}))
-      getUserDetails(response?.data?.accessToken)
-      callCTEvent(payload)
+        console.log("User details from Email ", userDetails)
 
-      // console.log('user details 2 ', userDetails);
-      page ? page !== 'cart' ? navigate(`/enrollment/${page}`) : navigate('/shop/checkout') : navigate('/')
-    }
+    // let response = await axios.post(//send OTP for mobile
+    //   `${authBaseDomain}/authdoor/google/signup`,
+    //   payload,
+    //   {
+    //     headers: {
+    //       'Authorization': `Bearer ${token}`
+    //     }
+    //   }
+    // )
+    // if (response) {
+    //   // alert('Siggned in');
+    //   localStorage.setItem('authorizationToken', response?.data?.accessToken)
+    //   localStorage.setItem('refreshToken', response?.data?.refreshToken)
+    //   dispatch(loginUserSuccess({}))
+    //   getUserDetails(response?.data?.accessToken)
+    //   callCTEvent(payload)
+
+    //   // console.log('user details 2 ', userDetails);
+    //   page ? page !== 'cart' ? navigate(`/enrollment/${page}`) : navigate('/shop/checkout') : navigate('/')
+    // }
   }
 
   // create user after the final step validation
@@ -949,9 +951,9 @@ const SignIn = () => {
 
                 </>}
 
-                {signUpType != 'mobile' && <button type='click' className='primary-btn' ref={OtpInpRef} onClick={() => SignupUsingEmail(formData)}>Submit</button>}
+                {signUpType == 'mobile' && <button type='click' className='primary-btn' ref={OtpInpRef} onClick={() => SignupUsingEmail(formData)}>Submit</button>}
 
-              {pageIndex == '3' && signUpType == 'mobile' && <button type='click' className='primary-btn' onClick={() => signUpOTP(formData, signUpType)}>Get OTP</button>}
+              {pageIndex == '3' && signUpType != 'mobile' && <button type='click' className='primary-btn' onClick={() => signUpOTP(formData, signUpType)}>Get OTP</button>}
 
               {pageIndex == '4' && signUpType != 'mobile' && <>
                 <div className='inp-label' style={{ fontWeight: '600', padding: '14px 0 4px 0' }}>Verify your {signUpType == 'mobile' ? 'Email address' : 'Mobile Number'}</div>
