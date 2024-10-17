@@ -53,7 +53,7 @@ const ShippingAdd = () => {
     discount: '',
   })
 
-  const [isLoading, setIsLoading] = useState(null)
+  const [isLoading, setIsLoading] = useState(true)
   const [cart, setCart] = useState([])
   const [prevAdd, setPrevAdd] = useState([])
   const [cartId, setCartId] = useState()
