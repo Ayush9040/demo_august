@@ -159,6 +159,41 @@ const SignIn = () => {
     }
   }
 
+  const SignupUsingEmail = async (userDetails) => {
+
+    const number = parsePhoneNumber(userDetails.phoneNumber);
+      const countryCode = number.country; // This will give you the country code
+
+    let payload = { ...userDetails }
+        payload['gender'] = userDetails?.gender.value;
+        payload['country'] = userDetails?.country.label;
+        payload['city'] = userDetails?.city.label;
+        payload['phoneNumber'] = phoneNumber.mobile;
+        payload['dialCode'] = phoneNumber.dialCode;
+        payload['countryCode'] = countryCode
+
+    let response = await axios.post(//send OTP for mobile
+      `${authBaseDomain}/authdoor/google/signup`,
+      payload,
+      {
+        headers: {
+          'Authorization': `Bearer ${token}`
+        }
+      }
+    )
+    if (response) {
+      // alert('Siggned in');
+      localStorage.setItem('authorizationToken', response?.data?.accessToken)
+      localStorage.setItem('refreshToken', response?.data?.refreshToken)
+      dispatch(loginUserSuccess({}))
+      getUserDetails(response?.data?.accessToken)
+      callCTEvent(payload)
+
+      // console.log('user details 2 ', userDetails);
+      page ? page !== 'cart' ? navigate(`/enrollment/${page}`) : navigate('/shop/checkout') : navigate('/')
+    }
+  }
+
   // create user after the final step validation
   const verifySignupOTP = async (userDetails, type, token) => {
     if (userDetails.otp.length == 4) {//valid OTP
@@ -914,8 +949,11 @@ const SignIn = () => {
 
                 </>}
 
-              {pageIndex == '3' && <button type='click' className='primary-btn' onClick={() => signUpOTP(formData, signUpType)}>Get OTP</button>}
-              {pageIndex == '4' && <>
+                {signUpType != 'mobile' && <button type='click' className='primary-btn' ref={OtpInpRef} onClick={() => SignupUsingEmail(formData)}>Submit</button>}
+
+              {pageIndex == '3' && signUpType == 'mobile' && <button type='click' className='primary-btn' onClick={() => signUpOTP(formData, signUpType)}>Get OTP</button>}
+
+              {pageIndex == '4' && signUpType != 'mobile' && <>
                 <div className='inp-label' style={{ fontWeight: '600', padding: '14px 0 4px 0' }}>Verify your {signUpType == 'mobile' ? 'Email address' : 'Mobile Number'}</div>
                 <div className='sub-header' style={{ fontSize: '12px' }}>enter the OTP we sent to <span style={{ fontWeight: '600' }}> {signUpType == 'mobile' ? formData.email : formData.phoneNumber}</span>
 
