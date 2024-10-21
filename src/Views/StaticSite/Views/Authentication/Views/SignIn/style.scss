@@ -445,7 +445,192 @@
 }
 
 
+.custom_style_input_add .form-content form label input {
+    padding-left: 0px;
+    font-size: 16px;
+    border: none;
+    background: no-repeat;
+    width: auto;
+    text-align: left;
+}
 
+.custom_style_input_add .form-content form label {
+    display: flex;
+    align-items: center;
+    padding: 0rem;
+    border: 0px;
+    border-radius: 0px;
+    width: 194px;
+    margin: 0 auto;
+}
+
+.country_signup {
+    width: 45%;
+}
+
+.state_signup {
+    width: 45%;
+}
+
+.signin-form .signin-container .signin-details .container .inp-group #country {
+    width: 100%;
+    font-size: 14px;
+    color: #000000;
+}
+
+.signin-form .signin-container .signin-details .container .inp-group #state {
+    width: 100%;
+    font-size: 14px;
+    color: #000000;
+}
+
+.signin-form .signin-container .signin-details .container .inp-group #city {
+    width: 100%;
+    font-size: 14px;
+    color: #000;
+}
+
+.css-1dimb5e-singleValue {
+    color: #000 !important;
+    font-weight: 500;
+}
+
+.custom_style_input_pincode .form-content form label {
+    display: flex;
+    align-items: center;
+    padding: 0rem;
+    border: 0px;
+    border-radius: 0px;
+    width: auto;
+    margin: 0 auto;
+}
+
+.city_style {
+    width: 32%;
+}
+
+.pincode_style {
+    width: 32%;
+}
+
+.custom_style_input_pincode .form-content form label input {
+    padding-left: 0px;
+    font-size: 14px;
+    border: none;
+    width: 100%;
+    text-align: left;
+    background: no-repeat;
+}
+
+.custom_style_input_pincode {
+    padding: 10px 12px !important;
+}
+
+.style_verify {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.verify_text {
+    color: red;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.gender_desk {
+    width: 32%;
+}
+
+
+@media(max-width: 768px) {
+    .custom_style_input_add .form-content form label {
+        display: flex;
+        align-items: center;
+        padding: 5px;
+        border: 0px;
+        border-radius: 0px;
+        width: auto;
+        margin: 0px;
+    }
+
+    .custom_style_input_add .form-content form label input {
+        padding-left: 0px;
+        font-size: 14px;
+        border: none;
+        background: no-repeat;
+        width: 100%;
+        text-align: left;
+    }
+
+    .country_signup {
+        width: 100%;
+    }
+
+    .state_signup {
+        width: 100%;
+    }
+
+    .city_style {
+        width: 100%;
+    }
+
+    .pincode_style {
+        width: 100%;
+    }
+
+    .signin-form .signin-container .signin-details .container .inp-group #country {
+        // width: 100%;
+        // font-size: 14px;
+        // padding: 7px !important;
+    }
+    
+    .signin-form .signin-container .signin-details .container .inp-group #state {
+        // width: 100%;
+        // font-size: 14px;
+        // padding: 7px !important;
+    }
+    
+    .signin-form .signin-container .signin-details .container .inp-group #city {
+        // width: 100%;
+        // font-size: 14px;
+        // padding: 7px !important;
+    }
+
+    .country_signup .css-b62m3t-container .css-1oox8fc-control .css-1fdsijx-ValueContainer {
+        padding: 8px !important;
+    }
+
+    .state_signup .css-b62m3t-container .css-1oox8fc-control .css-1fdsijx-ValueContainer {
+        padding: 8px !important;
+    }
+
+    .city_style .css-b62m3t-container .css-1oox8fc-control .css-1fdsijx-ValueContainer {
+        padding: 8px !important;
+    }
+
+    .custom_style_input_pincode {
+        padding: 12px !important;
+    }
+
+    .signin-form .signin-container .custom_style_input_pincode {
+        padding: 12px !important;
+    }
+
+    .gender_desk {
+        width: 100%;
+    }
+}
+
+@media(min-width: 1359px) {
+    .country_signup {
+        width: 41%;
+    }
+    
+    .state_signup {
+        width: 41%;
+    }
+}
 
 
 

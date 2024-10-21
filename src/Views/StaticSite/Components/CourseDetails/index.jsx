@@ -16,6 +16,7 @@ import EnrollBtn from '../enrollBtn'
 //import { useParams } from 'react-router-dom'
 import { handleCTEnrollNowClick } from '../../../../CleverTap/buttonClicked'
 import { trackPageView } from '../../../../CleverTap/pageViewEvents'
+import { useLocation } from 'react-router-dom';
 
 
 const CourseDetails = ({ pageDate }) => {
@@ -34,7 +35,18 @@ const CourseDetails = ({ pageDate }) => {
   const [sessionId, setSessionId] = useState('');
   const [startTime, setStartTime] = useState(0);
   const [eventTriggered, setEventTriggered] = useState(false);
+  const location = useLocation();
+  const [showDiv, setShowDiv] = useState(false);
 
+
+  useEffect(() => {
+    // Check if the current location matches the required URL
+    if (location.pathname === '/regular-meditation-classes-online') {
+      setShowDiv(true);
+    } else {
+      setShowDiv(false);
+    }
+  }, [location]);
 
 
   // const handleScroll = () => {
@@ -704,12 +716,23 @@ const CourseDetails = ({ pageDate }) => {
         )}
         <div className="details-section " id="refund-policy">
           <h1>Refund Policy</h1>
-          {selectComponent('u-list', { title: '', points: [{ listItem:"The Yoga Institute has no refund policy for all its programmes. The only exception to this policy is in the event of a programme cancelled by the institute. In such cases, the student/participant will be offered a credit that can be used for any other programme or a refund of the event fee.",subItems:[] }] }) }
+          {selectComponent('u-list', { title: '', points: [{ listItem:"The Yoga Institute has a strict no-refund policy for all its programmes. The only exception is if a programme is canceled by the institute, in which case the student will be offered a credit for any other programme or a refund of the event fee.",subItems:[] }] }) }
+          {showDiv && selectComponent('u-list', { title: '', points: [{ listItem:"Enroll today in our online meditation classes and start your journey toward a peaceful and balanced life. Our online meditation courses are designed to make it easier for you to practice regularly. Learn meditation online with the support of our expert instructors and fellow meditators.",subItems:[] }] }) }
           {/* {pageDate?.offerings?.map(({ type, content }) => {
             return selectComponent(type, content)
           })} */}
          
         </div>
+
+        {showDiv && (
+          <div className="details-section " id="refund-policy">
+          <h1>Enroll Now!</h1>
+          <p style={{marginTop:'20px'}}>Feel free to let me know if you&apos;d like further adjustments!</p>
+         
+        </div>
+        ) }
+
+        
       </div>
 
       {showFixedDiv && (
