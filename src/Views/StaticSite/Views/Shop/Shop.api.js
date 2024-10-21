@@ -21,6 +21,14 @@ export const getAllCategories = ()=>{
 
 export const getActiveCart = ()=>{
   const token = localStorage.getItem("authorizationToken");
+
+  if (token && !axios.defaults.headers?.Authorization) {
+    console.log('Current Request Headers: 2', axios.defaults.headers);
+    axios.defaults.headers['Authorization'] = `Bearer ${token}`;
+    delete axios.defaults.headers.common['authorization'];
+  }
+
+  
   return axios.get(`${ ecomBaseDomain }/cart/activeCart`,{
     headers: {
       'Authorization': `Bearer ${token}`

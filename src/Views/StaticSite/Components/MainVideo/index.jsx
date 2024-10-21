@@ -1,6 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react'; // Combined imports
 import './style.scss'
 import { pause, play, unmute, mute } from '../../assets/icons/icon'
+import { useSelector } from 'react-redux'
+
 
 
 const MainVideo = () => {
@@ -15,6 +17,10 @@ const MainVideo = () => {
       "https://ecom-static-site-prod.s3.ap-south-1.amazonaws.com/Home/PlayVideo/tyi-home-bg-mobile.mp4"
       : "https://ecom-static-site-prod.s3.ap-south-1.amazonaws.com/Home/PlayVideo/tyi-home-bs.mp4";
 
+
+      const nameFromRedux = useSelector((state) => state.auth.user.data?.firstName);
+
+  // console.log("nameFromRedux from video ", nameFromRedux);
 
   // Preload video assets
   useEffect(() => {
