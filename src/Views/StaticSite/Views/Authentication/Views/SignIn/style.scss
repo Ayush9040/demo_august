@@ -14,7 +14,7 @@
 
         .form-inp {
             border: 1px solid #AEAEAE;
-            border-radius: 8px;
+            border-radius: 30px;
             padding: 12px;
 
             .custom-phone-input input {
@@ -105,7 +105,7 @@
                 }
 
                 .sub-header {
-                    font-size: 16px;
+                    font-size: 18px;
                     color: #181818;
                     font-weight: 500;
                 }
@@ -122,6 +122,7 @@
                     align-items: center;
                     margin-top: 1.25rem;
                     cursor: pointer;
+                    border-radius: 30px;
                 }
 
                 .inp-label {
@@ -144,13 +145,13 @@
                     padding: 12px 0;
                     margin-top: 24px;
                     border: none;
-                    border-radius: 12px;
+                    border-radius: 40px;
                     cursor: pointer;
                 }
 
                 .tc-text {
                     font-size: 14px;
-                    color: #666666;
+                    color: #000;
                     font-weight: 400;
                     text-align: center;
                     max-width: 372px;
@@ -210,12 +211,12 @@
 
                 .inp-group {
                     display: flex;
-                    gap: 1rem;
+                    gap: 2rem;
                     justify-content: space-between;
                     width: 100%;
 
                     #country {
-                        width: 11.4vw;
+                        width: 100% !important;
                         font-size: 14px;
                     }
                 }
@@ -538,8 +539,28 @@
     cursor: pointer;
 }
 
+.signin-form .signin-container .margin-top {
+    margin-top: 20px !important;
+}
+
+.signin-form .signin-container .signin-details .container .inp-group {
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 5px;
+}
+
 .gender_desk {
     width: 32%;
+}
+
+.width-100 {
+    width: 100%;
+}
+
+.signin-form .css-1oox8fc-control {
+    border-radius: 30px !important;
 }
 
 
@@ -620,6 +641,16 @@
     .gender_desk {
         width: 100%;
     }
+
+    .signin-form .signin-container .signin-details .container .header-3 {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .signin-form .signin-container .signin-details .container .sub-header-3 {
+        font-size: 12px !important;
+        text-align: center;
+    }
 }
 
 @media(min-width: 1359px) {
@@ -630,6 +661,26 @@
     .state_signup {
         width: 41%;
     }
+}
+
+.signin-form .signin-container .signin-details .container .header {
+    font-size: 28px;
+    color: #181818;
+    font-weight: 700;
+    margin: 0.75rem 0 0.25rem 0;
+}
+
+.signin-form .signin-container .signin-details .container .header-3 {
+    font-size: 26px;
+    color: #181818;
+    font-weight: 700;
+    margin: 0.75rem 0 0.25rem 0;
+}
+
+.signin-form .signin-container .signin-details .container .sub-header-3 {
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 20px;
 }
 
 

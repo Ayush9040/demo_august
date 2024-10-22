@@ -37,7 +37,7 @@ const SignIn = () => {
   const { isLoggedIn, error } = useSelector((state) => state.auth)
   const [page, setPage] = useState()
   // const [errMsg, setErrMsg] = useState('')
-  const [pageIndex, setPageIndex] = useState('1')
+  const [pageIndex, setPageIndex] = useState('3')
   const [signUpType, setSignUpType] = useState('')
   const [values, setValues] = useState([])
   const [autocomplete, setAutocomplete] = useState(null);
@@ -1038,7 +1038,7 @@ const SignIn = () => {
     <div className="signin-form">
       <div className='signin-container'>
         <div className="signin-logo">
-          <img src="/images/primary-logo.svg" alt="primary-logo" loading="lazy" />
+          <img src="/images/main-logo-signup.svg" alt="primary-logo" loading="lazy" />
         </div>
         <div className="signin-details">
           <div className="container">
@@ -1059,8 +1059,8 @@ const SignIn = () => {
 
             {/* login page with mobile number */}
             {pageIndex == '1' && <>
-              <div className='header'>Log in or Sign up</div>
-              <div className='sub-header'>Log in/sign up with google account or mobile number</div>
+              <div className='header'>Log In Or Sign up to TYI Account</div>
+              <div className='sub-header'>Welcome to The Yoga Institute </div>
               <div className='google-badge' onClick={() => googleSignup()}>
                 <svg width="16px" height="16px" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M18.8 10.2083C18.8 9.55834 18.7417 8.93334 18.6333 8.33334H10V11.8792H14.9333C14.7208 13.025 14.075 13.9958 13.1042 14.6458V16.9458H16.0667C17.8 15.35 18.8 13 18.8 10.2083Z" fill="#4285F4" />
@@ -1095,8 +1095,8 @@ const SignIn = () => {
 
             {/* Login page with OTP */}
             {pageIndex == '2' && <>
-              <div className='sub-header' style={{ fontWeight: '600', padding: '12px 0 4px 0' }}>Verify your Mobile Number</div>
-              <div className='sub-header'>enter the OTP we sent to {formData.phoneNumber}</div>
+              <div className='sub-header' style={{ fontWeight: '700', padding: '12px 0 4px 0' }}>Namaste  🙏 Please verify your mobile number </div>
+              <div className='sub-header' style={{ fontWeight: '400', fontSize: '16px'}}>Enter the OTP</div>
               <div className="otp-inputs">
                 {otp.map((data, index) => {
                   return (
@@ -1119,11 +1119,13 @@ const SignIn = () => {
                   );
                 })}
               </div>
+              <div className='sub-header' style={{ fontWeight: '400', fontSize: '16px', marginTop: '12px'}}>OTP Sent on {formData.phoneNumber}</div>
               {formData?.errorIndex == 2 &&
                 <div style={{ color: '#FF3B30', margin: '1rem 0' }}>OTP is Invalid!</div>}
               <button type='click' className='primary-btn' onClick={() => verifyOTP(formData)}>Verify & Continue</button>
               <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
-                <div className='tc-text'>Didn’t received the OTP? <br />
+                <div className='tc-text'>We regret if you haven&apos;t received the OTP, <br />
+                Resend OTP in 00:55 <br />
                   {seconds != '0' && <>You can request another in {seconds} {seconds > 9 ? 'seconds' : 'second'}</>}
                   {seconds == '0' && <div onClick={() => sendOTP(formData)} className="resend-btn">Resend</div>}</div>
               </div>
@@ -1131,14 +1133,14 @@ const SignIn = () => {
 
             {/* Signup page */}
             {(pageIndex == '3' || pageIndex == '4') && <>
-              <div className='header'>Welcome to TYI</div>
-              <div className='sub-header'>Setup your TYI Account</div>
+              <div className='header header-3'>Namaste 🙏 Please Fill Your Details</div>
+              <div className='sub-header sub-header-3'>Become a Part of The Yoga Institute Family & Sign-up for <br />you’re preferred course</div>
               
 
               <div className='inp-group'>
 
 
-              <div>
+              <div className='width-100'>
 
               <div className='inp-label mg-t-20'>First Name <span>*</span></div>
               <div className={formData?.errorIndex == 3 ? "form-inp err-inp" : "form-inp"}>
@@ -1147,7 +1149,7 @@ const SignIn = () => {
                   value={formData.firstName}
                   onChange={(e) => { setFormData({ ...formData, firstName: e.target.value }) }}
                   type="text"
-                  placeholder="First Name"
+                  placeholder="Enter your first name"
                   className="custom-input"
                 />
               </div>
@@ -1157,13 +1159,13 @@ const SignIn = () => {
                 </div>
 
 
-              <div>
+              <div className='width-100'>
               <div className='inp-label  mg-t-20'>Last Name <span>*</span></div>
               <div className={formData?.errorIndex == 4 ? "form-inp err-inp" : "form-inp"}>
                 <input
                   disabled={pageIndex == '4' ? true : false}
                   type="text"
-                  placeholder="Last Name"
+                  placeholder="Enter your Last name"
                   value={formData.lastName}
                   onChange={(e) => { setFormData({ ...formData, lastName: e.target.value }) }}
                   className="custom-input"
@@ -1183,7 +1185,7 @@ const SignIn = () => {
      
       <div className='inp-group'>
 
-      <div>
+      <div className='width-100'>
       <Autocomplete onLoad={onLoadAutocomplete} onPlaceChanged={onPlaceChanged}>
       
       <div className="form_error">
@@ -1191,7 +1193,7 @@ const SignIn = () => {
         <div className={formData?.errorIndex == 5 ? "form-inp err-inp custom_style_input_add" : "form-inp custom_style_input_add"}>
         <InputComponent
           type="text"
-          placeholder="Address Line 1*"
+          placeholder="Enter address line 1"
           form={formData}
           setField={setFormData}
           keyName="address1"
@@ -1205,14 +1207,14 @@ const SignIn = () => {
     </Autocomplete>
       </div>
 
-      <div>
+      <div className='width-100'>
         
       <div className="form_error">
       <div className='inp-label mg-t-20'>Address 2 <span>*</span></div>
       <div className="form-inp custom_style_input_add">
         <InputComponent
           type="text"
-          placeholder="Address Line 2"
+          placeholder="Enter address line 2"
           form={formData}
           setField={setFormData}
           keyName="address2"
@@ -1227,7 +1229,7 @@ const SignIn = () => {
 
       <div className='inp-group'>
 
-      <div className="form_error countries_list country_signup" >
+      <div className="form_error countries_list width-100" >
       <div className='inp-label mg-t-20'>Country <span>*</span></div>
         <Select
           styles={customStyles(formData?.errorIndex == 6 ? true : false)}
@@ -1251,7 +1253,7 @@ const SignIn = () => {
       </div>
       
 
-      <div className="form_error state_signup">
+      <div className="form_error width-100">
       <div className='inp-label mg-t-20'>State <span>*</span></div>
         <Select
           styles={customStyles(formData?.errorIndex == 7 ? true : false)}
@@ -1423,7 +1425,7 @@ const SignIn = () => {
 
               {signUpType == 'mobile' &&
                 <>
-                  <div className='inp-label  mg-t-20'>Email <span>*</span></div>
+                  <div className='inp-label  mg-t-20 margin-top'>Email <span>*</span></div>
                   <div className={formData?.errorIndex == 12 ? "form-inp err-inp" : "form-inp"}>
                     <input
                       disabled={pageIndex == '4' ? true : false}
@@ -1446,7 +1448,7 @@ const SignIn = () => {
                 </>}
               {signUpType != 'mobile' &&
                 <>
-                  <div className='inp-label  mg-t-20' onClick={() => { OtpInpRef.current.scrollIntoView({ behavior: 'smooth' }) }}>Mobile Number <span>*</span></div>
+                  <div className='inp-label  mg-t-20 margin-top' onClick={() => { OtpInpRef.current.scrollIntoView({ behavior: 'smooth' }) }}>Mobile Number <span>*</span></div>
                   <div className="form-inp style_verify">
                     <PhoneInput
                       disabled={pageIndex == '4' ? true : false}
