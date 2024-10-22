@@ -21,6 +21,7 @@ import { useNavigate } from 'react-router-dom'
 import { updateCartData, clearCart } from '../../Shop.action'
 import { handleCTCheckoutCompleted, handleCTCheckoutFailed, handleCTCheckoutCompleted1 } from '../../../../../../CleverTap/shopEvents'
 import { handleCTProductPaymentCompleted } from '../../../../../../CleverTap/shopEvents'
+import { logoutUserAction } from '../../../Authentication/Auth.actions'
 
 
 const ShippingAdd = () => {
@@ -53,7 +54,7 @@ const ShippingAdd = () => {
     discount: '',
   })
 
-  const [isLoading, setIsLoading] = useState(null)
+  const [isLoading, setIsLoading] = useState(true)
   const [cart, setCart] = useState([])
   const [prevAdd, setPrevAdd] = useState([])
   const [cartId, setCartId] = useState()
@@ -67,8 +68,12 @@ const ShippingAdd = () => {
   const countryNameFromRedux = useSelector((state) => state.auth.user.data?.country);
   const stateNameFromRedux = useSelector((state) => state.auth.user.data?.state);
   const cityNameFromRedux = useSelector((state) => state.auth.user.data?.city);
-  
 
+  if(nameFromRedux === undefined) {
+    dispatch(logoutUserAction());
+    localStorage.removeItem("authorizationToken");
+    navigate('/user/sign-in');
+  }
   
 
   useEffect(() => {

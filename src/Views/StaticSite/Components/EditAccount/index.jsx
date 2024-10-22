@@ -142,9 +142,18 @@ console.log("formattedDate ",formattedDate)
       
       try{
         let token = localStorage.getItem('authorizationToken')
+
+        if (token && !axios.defaults.headers?.Authorization) {
+          // console.log('Current Request Headers: 2', axios.defaults.headers);
+          axios.defaults.headers['Authorization'] = `Bearer ${token}`;
+          delete axios.defaults.headers.common['authorization'];
+        }
+
+        console.log('Current Request Headers: 2', axios.defaults.headers);
+
         await axios.put(`${ authBaseDomain }/user/update`,formData,  {
           headers: {
-              //  'Authorization': `Bearer ${token}`
+               'Authorization': `Bearer ${token}`
           }
         })
         console.log("PUT response:", formData);
