@@ -24,6 +24,7 @@ import { authBaseDomain, cmsBaseDomain } from '../../../../../../Constants/appSe
 import { handleCTSignIn, handleAlreadySignedUpUser } from '../../../../../../CleverTap/buttonClicked'
 import InputComponent from '../../../../Components/InputComponent'
 import { LoadScript, Autocomplete } from '@react-google-maps/api';
+import { useLocation } from 'react-router-dom';
 
 
 const libraries = ['places'];
@@ -37,7 +38,7 @@ const SignIn = () => {
   const { isLoggedIn, error } = useSelector((state) => state.auth)
   const [page, setPage] = useState()
   // const [errMsg, setErrMsg] = useState('')
-  const [pageIndex, setPageIndex] = useState('3')
+  const [pageIndex, setPageIndex] = useState('1')
   const [signUpType, setSignUpType] = useState('')
   const [values, setValues] = useState([])
   const [autocomplete, setAutocomplete] = useState(null);
@@ -69,8 +70,39 @@ const SignIn = () => {
   const [empty, setEmpty] = useState(0)
   const [selectDate, setSetselectDate] = useState()
   const [otp, setOtp] = useState(new Array(4).fill(""));
+  const [ stateOpt, setStateOpt] = useState("")
+  const [ cityOpt, setCityOpt ] = useState("")
   const phoneNumberFromRedux = useSelector((state) => state.auth.user.data?.phoneNumber);
   // const [token, setToken] = useState(null);
+  const [isLocationCart, setIsLocationCart] = useState(false);
+
+  // Function to get query parameters from URL
+  const checkLocationInURL = () => {
+    const queryParams = new URLSearchParams(window.location.search); // Get the query params from URL
+    const locationParam = queryParams.get('location'); // Get the 'location' parameter
+    const currentPath = window.location.pathname; // Get the current path
+
+    // Check if current path is 'sign-in'
+    const isSignInPath = currentPath.includes('sign-in');
+
+    // If we are on the sign-in path
+    if (isSignInPath) {
+      // If locationParam is null or empty, set isLocationCart to true
+      if (locationParam == 'cart' || !locationParam) {
+        setIsLocationCart(true); // No location provided
+      } else {
+        // If location is provided, we set it to false
+        setIsLocationCart(false); // Any value after 'location=' means not the default case
+      }
+    } else {
+      setIsLocationCart(false); // Not on the sign-in path
+    }
+  };
+
+  useEffect(() => {
+    checkLocationInURL(); // Run this function when the component mounts
+  }, []);
+
   const customStyles = (isInvalid) => ({
     control: (base, state) => ({
       ...base,
@@ -148,6 +180,19 @@ const SignIn = () => {
       const formattedAddress = place.formatted_address || '';
       const name = nameComponent ? nameComponent : '';
 
+      console.log(" country ", country?.isoCode ? country?.isoCode : isoCode);
+
+      const countryComponent2 = place.address_components?.find((component) =>
+        component.types.includes('country')
+      );
+      
+      const countryISOCode = countryComponent2 ? countryComponent2.short_name : '';
+      setStateOpt(countryISOCode);
+
+      const stateIsoCode = stateComponent ? stateComponent.short_name : '';
+      setCityOpt(stateIsoCode)
+      
+
       // Split the formatted address into lines for Address 1 and Address 2
     const addressParts = formattedAddress.split(', ');
 
@@ -187,6 +232,9 @@ const SignIn = () => {
 
       const selectedCountry = getUpdatedCountries.find((option) => option.label === country);
       setValues({ country: selectedCountry, state: { label: state, value: state }, city: { label: city, value: city } });
+
+      console.log("form updation ", formData);
+      console.log("VAlues updation ", values);
     }
   };
 
@@ -215,13 +263,40 @@ const SignIn = () => {
   };
 
   const updatedStates = (countryId) => {
-    console.log(countryId)
+    console.log('countryId ', countryId)
+    console.log("Printing all ", State.getStatesOfCountry(countryId).map((state) => ({
+      label: state.name,
+      value: state.id,
+      ...state,
+    })))
     return State.getStatesOfCountry(countryId).map((state) => ({
       label: state.name,
       value: state.id,
       ...state,
     }))
   }
+
+  // const defaultStates = (stateOp) => {
+  //   return State.getStatesOfCountry(stateOp).map((state) => ({
+  //     label: state.name,
+  //     value: state.id,
+  //     ...state,
+  //   }))
+  // }
+  
+  // const updatedStates2 = (countryId) => {
+  //   console.log("state ", countryId)
+  //   if (!countryId) return defaultStates(stateOpt); // Return default options if no countryId is provided
+  
+  //   const states = State.getStatesOfCountry(countryId);
+  //   if (!Array.isArray(states)) return []; // Ensure the function returns an array
+  
+  //   return states.map((state) => ({
+  //     label: state.name,
+  //     value: state.id,
+  //     ...state,
+  //   }));
+  // };
 
   const updatedCities = (countryIsoCode, stateIsoCode) => {
     console.log("countryIsoCode, stateIsoCode", countryIsoCode, stateIsoCode)
@@ -761,12 +836,14 @@ const SignIn = () => {
         }
         catch (err) {
           SetIsAlreadyRegistered(true)
+          setHideVerify(false);
           // alert('Unexpected error, please try again')
         }
       }
       else {//gmail signup
         // alert("Hello")
         try {
+          // alert("Called from here")
           await axios.post(//send OTP for mobile
             `${authBaseDomain}/authdoor/mobile/otp/generate`,
             { contactNo: phoneNumber.mobile, dialCode: phoneNumber.dialCode },
@@ -776,6 +853,7 @@ const SignIn = () => {
               }
             }
           )
+          // alert("again now")
           SetIsAlreadyRegistered(false)
           startTimerF()
           setPageIndex('4')
@@ -783,6 +861,7 @@ const SignIn = () => {
         }
         catch (err) {
           SetIsAlreadyRegistered(true)
+          setHideVerify(false)
           // alert('Unexpected error, please try again')
         }
       }
@@ -1231,6 +1310,7 @@ const SignIn = () => {
 
       <div className="form_error countries_list width-100" >
       <div className='inp-label mg-t-20'>Country <span>*</span></div>
+   
         <Select
           styles={customStyles(formData?.errorIndex == 6 ? true : false)}
           // isDisabled={pageIndex == '4' ? true : false}
@@ -1261,8 +1341,7 @@ const SignIn = () => {
           name="state"
           placeholder="State"
           className='custom-input'
-          options={updatedStates( values?.country?.isoCode?values?.country?.isoCode:
-            isoCode)}
+          options={updatedStates(values?.country?.isoCode || stateOpt)}
           value={values.state}
           onChange={(value) => {
             setValues(
@@ -1294,9 +1373,10 @@ const SignIn = () => {
           id="city"
           name="city"
           placeholder="City"
-          options={updatedCities(values?.country?.isoCode?values?.country?.isoCode:
-            isoCode,
-            values?.state?.isoCode)}
+          options={updatedCities(
+            values?.country?.isoCode ? values?.country?.isoCode : stateOpt, // Pass country ISO
+            values?.state?.isoCode || cityOpt // Pass state ISO
+          )}
           value={values.city}
           onChange={(value) => {
             setValues(
@@ -1320,7 +1400,7 @@ const SignIn = () => {
       <div className={formData?.errorIndex == 9 ? "form-inp err-inp custom_style_input_pincode" : "form-inp custom_style_input_pincode"}>
         <InputComponent
           type="text"
-          placeholder="Pincode*"
+          placeholder="Pin code*"
           form={formData}
           setField={setFormData}
           keyName="pincode"
@@ -1342,7 +1422,7 @@ const SignIn = () => {
                     styles={customStyles(formData?.errorIndex == 10 ? true : false)}
                     id="country"
                     name="Gender"
-                    placeholder="Select Gender"
+                    placeholder="Gender"
                     options={[
                       { value: 'Male', label: 'Male' },
                       { value: 'Female', label: 'Female' },
@@ -1527,7 +1607,7 @@ const SignIn = () => {
                 </div> */}
               </>}
 
-              <button type='click' className='primary-btn' ref={OtpInpRef} onClick={() => verifySignupOTP(formData, signUpType, token)}>Create My Account</button>
+              <button type='click' className='primary-btn' ref={OtpInpRef} onClick={() => verifySignupOTP(formData, signUpType, token)}>{isLocationCart ? 'Create My Account' : 'Create My Account & Enroll'}</button>
             </>}
 
             {/* Signup OTP page */}

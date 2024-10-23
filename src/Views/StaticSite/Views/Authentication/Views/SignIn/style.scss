@@ -377,7 +377,9 @@
                         font-size: 14px !important;
                         padding: 6px !important;
                     }
-
+                    .custom_style_input_add .form-content form label input {
+                        font-size: 14px !important;
+                    }
                     .inp-group {
                         // display: flex;
                         // gap: 1rem;
@@ -390,6 +392,21 @@
                             font-size: 14px !important;
 
                         }
+                        #state {
+                            width: 100% !important;
+                            font-size: 14px !important;
+
+                        }
+                        #city {
+                            width: 100% !important;
+                            font-size: 14px !important;
+
+                        }
+
+                        .custom_style_input_pincode .form-content form label input {
+                            font-size: 14px !important;
+                        }
+
                     }
 
                     .primary-btn {
@@ -462,7 +479,7 @@
     border: 0px;
     border-radius: 0px;
     width: 194px;
-    margin: 0 auto;
+    margin: 0px;
 }
 
 .country_signup {
@@ -475,19 +492,19 @@
 
 .signin-form .signin-container .signin-details .container .inp-group #country {
     width: 100%;
-    font-size: 14px;
+    font-size: 16px;
     color: #000000;
 }
 
 .signin-form .signin-container .signin-details .container .inp-group #state {
     width: 100%;
-    font-size: 14px;
+    font-size: 16px;
     color: #000000;
 }
 
 .signin-form .signin-container .signin-details .container .inp-group #city {
     width: 100%;
-    font-size: 14px;
+    font-size: 16px;
     color: #000;
 }
 
@@ -516,7 +533,7 @@
 
 .custom_style_input_pincode .form-content form label input {
     padding-left: 0px;
-    font-size: 14px;
+    font-size: 16px;
     border: none;
     width: 100%;
     text-align: left;
@@ -682,6 +699,47 @@
     font-weight: 400;
     margin-bottom: 20px;
 }
+
+.css-85pnul-control{
+    border-radius: 30px !important;
+}
+
+@media(max-width: 768px) {
+    .custom_style_input_add .form-content form label input {
+        font-size: 14px;
+    }
+
+    .custom_style_input_pincode .form-content form label input {
+        font-size: 14px;
+    }
+}
+
+@media(max-width: 1280px) {
+    .custom_style_input_add .form-content form label input {
+        font-size: 1rem;
+        opacity: 0.9;
+    }
+
+    .custom_style_input_pincode .form-content form label input {
+        font-size: 1rem;
+    }
+
+    .signin-form .signin-container .form-inp .custom-phone-input input{
+        font-size: 1rem;
+    }
+
+    .signin-form #state {
+        font-size: 1rem !important;
+    }
+
+    .signin-form #city {
+        font-size: 1rem !important;
+    }
+}
+
+
+
+
 
 
 

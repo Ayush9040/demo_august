@@ -518,7 +518,7 @@ const ShippingAdd = () => {
                   <br />
                   { ( shippingAmt || discountAmt ) && <div>Total: { location==='IN' ? `₹ ${ getTotal() }`:`$ ${ getTotal() }` }</div>}
                   {discountAmt && <div>Discount: - { location==='IN' ? `₹ ${ calcDiscount() }`:`$ ${ calcDiscount() }` }</div>}
-                  { shippingAmt && <div>Shipping: +{ location==='IN' ? `₹ ${ shippingAmt }`:`$ ${ shippingAmt }` } </div> }
+                  { (shippingAmt != 0) && <div>Shipping: +{ location==='IN' ? `₹ ${ shippingAmt }`:`$ ${ shippingAmt }` } </div> }
                   <div className='check_out_price'>
                     { location==='IN' ? `₹ ${ totalAmount - calcDiscount() }`:`$ ${ totalAmount - calcDiscount() }` }
                   </div>

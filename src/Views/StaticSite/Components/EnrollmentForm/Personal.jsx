@@ -1217,6 +1217,7 @@ const Personal = ({
       </div>
 
       <div className="form_error">
+        
         <Select
           styles={customStyles}
           id="city"

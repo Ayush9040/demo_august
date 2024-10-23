@@ -38,6 +38,8 @@ const InnerNavComponent = ({ abc }) => {
  
   const { cart } = useSelector((state)=>state.shop)
 
+  const nameFromRedux = useSelector((state) => state.auth.user.data?.firstName);
+
   const getTotal = ()=>{
     if(cart?.length===0) return
     let sum = 0
@@ -120,16 +122,29 @@ const InnerNavComponent = ({ abc }) => {
            
             <div className='profile-container' onMouseOver={()=>{setDropdown(true)}} onMouseOut={()=>{setDropdown(false)}}  >
               <Link to={isLoggedIn ? '/user/profile':'/user/sign-in'} >
-                {abc.color === 'orange'
+                {isLoggedIn ? (
+                  <div className='wrapper_logo'>
+                    <div>
+                    <img src="/images/user_login.svg" alt="primary-logo" loading="lazy" />
+                    </div>
+                    <div>
+                      <p style={{fontSize: '10px', fontWeight: '400', color: '#CA4625'}}>Namaste</p>
+                      <p style={{ fontSize: '14px', fontWeight: '700', color: '#CA4625'}}>{nameFromRedux}</p>
+                    </div>
+                    <div className='icon-rotate'>
+                      <img src='/images/Chevron down.svg' alt='' loading='lazy' />
+                    </div>
+                  </div>
+                ) : abc.color === 'orange'
                   ? User
                   : abc.color === 'white'
                     ? CommonUser
                     : CommonUser1}
               </Link>
               <div style={dropdown===true && isLoggedIn ?{ display:'block' }:{}} className='user-dropdown'>
-                <ul>
-                  <li onClick={()=>navigate('/user/profile')} >User Profile</li>
-                  <li onClick={async()=>{await dispatch(logoutUserAction());navigate('/user/sign-in')}} >Logout</li>
+                <ul style={{ borderRadius: '8px', boxShadow: '0px -2px 2px 0px rgba(0, 0, 0, 0.1)'}} >
+                  <li style={{ borderRadius: '8px 8px 0px 0px'}} onClick={()=>navigate('/user/profile')} >User Profile</li>
+                  <li style={{ borderRadius: '0px 0px 8px 8px'}} onClick={async()=>{await dispatch(logoutUserAction());navigate('/user/sign-in')}} >Logout</li>
                 </ul>
               </div>
             </div>

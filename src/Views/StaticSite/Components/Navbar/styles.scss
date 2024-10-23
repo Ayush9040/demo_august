@@ -61,6 +61,7 @@ html:not([data-scroll='0']) .header-logo {
             display: flex;
             justify-content: flex-end;
             padding-left: 0;
+            align-items: center;
             li{
                 margin: 0 1rem;
                 cursor: pointer;position: relative;
@@ -68,25 +69,28 @@ html:not([data-scroll='0']) .header-logo {
                     position: absolute;
                     display: none;
                     flex-direction: column;
-                    margin: 2.5rem 0;
-                    width: 100px;
+                    margin: 3.5rem 0;
+                    width: 140px;
                     align-items: center;
-                    right: -20px;
-                    top:0;
+                    right: 7px;
+                    top:8px;
+                    border-radius: 8px;
                     ul {
                         display: flex;
                         flex-direction: column;
-                        color: #fff;
+                        color: #CA4625;
                         margin-top: 10px;
                         li {
                             width: 100%;
                             padding: 0.5rem;
                             transition: 0.3s;
                             text-align: center;
-                            background-color: rgb(202, 70, 37);
+                            // background-color: rgb(202, 70, 37);
+                            background-color: #fff;
+                            font-size: 14px;
                             &:hover{
-                                color: rgb(202, 70, 37);
-                                background-color: #fff;
+                                color: #fff;
+                                background-color: rgb(202, 70, 37);
                             }
                         }
                     }
@@ -164,8 +168,22 @@ html:not([data-scroll='0']) .header-logo {
     }
 }
 
+.wrapper_logo {
+    display: flex;
+    background-color: #fff;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 5px 9px;
+    border-radius: 30px;
+}
+
 @media (max-width: 768px) {
     .navbar-container .title-logo .mobile-search {
         display: none;
     }
+}
+
+.cover:hover .down-arrow {
+    transform: rotate(180deg);
 }
