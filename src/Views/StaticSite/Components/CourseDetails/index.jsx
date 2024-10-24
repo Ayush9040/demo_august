@@ -17,6 +17,7 @@ import EnrollBtn from '../enrollBtn'
 import { handleCTEnrollNowClick } from '../../../../CleverTap/buttonClicked'
 import { trackPageView } from '../../../../CleverTap/pageViewEvents'
 import { useLocation } from 'react-router-dom';
+import DatesPopUp from '../TermsandCondition/DatesPopUp'
 
 
 const CourseDetails = ({ pageDate }) => {
@@ -37,6 +38,8 @@ const CourseDetails = ({ pageDate }) => {
   const [eventTriggered, setEventTriggered] = useState(false);
   const location = useLocation();
   const [showDiv, setShowDiv] = useState(false);
+  const [startDate, setStartDate] = useState('');
+  const [open, setOpen] = useState(false);
 
 
   useEffect(() => {
@@ -400,6 +403,56 @@ const CourseDetails = ({ pageDate }) => {
     }
   }
 
+  useEffect(() => {
+    // Assuming `pageDate?.dates` is your array of dates
+    const datesArray = pageDate?.dates;
+
+    if (datesArray && datesArray.length > 0) {
+      // Extract the first date range
+      const firstDateRange = datesArray[0];
+
+      // Split to extract start date
+      const startDateString = firstDateRange.split(' to ')[0]; // "30th September"
+      
+      // Remove ordinal suffix (like "th") and split the date
+      const cleanedDateArray = startDateString.replace(/\d+(st|nd|rd|th)/, match => match.slice(0, -2)).split(' ');
+
+      const day = cleanedDateArray[0]; // e.g. "30"
+      const fullMonth = cleanedDateArray[1]; // e.g. "September"
+      
+      // Create a mapping of full month names to their short forms
+      const monthShortForm = {
+        January: 'Jan',
+        February: 'Feb',
+        March: 'Mar',
+        April: 'Apr',
+        May: 'May',
+        June: 'Jun',
+        July: 'Jul',
+        August: 'Aug',
+        September: 'Sep',
+        October: 'Oct',
+        November: 'Nov',
+        December: 'Dec'
+      };
+
+      // Get the short form of the month
+      const shortMonth = monthShortForm[fullMonth] || fullMonth;
+
+      // Update the state with day and short month
+      setStartDate(`${day} ${shortMonth}`);
+    }
+  }, [pageDate]);
+
+  const handleOpen = () => {
+    setOpen(true);
+  }
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
+
 
 
   return (
@@ -607,8 +660,30 @@ const CourseDetails = ({ pageDate }) => {
                 )} */}
               </div>
 
+              <div className='wrapper_dates'>
+                <span className='date-label-new'>Upcoming Dates:</span> <span className='start-date-glimse'> &nbsp;{startDate} | </span>  &nbsp;
+                <div className='view_wrapper'>
+                <a 
+                onClick={handleOpen}
+                style={{  marginLeft: "0.5px", textDecoration: "underline", cursor: "pointer", display: 'flex', alignItems: 'center' }} >
+                <span className='view_all_dates'>View all </span>
+                <div><img src="/images/Arrow right.svg" alt="" /></div>
+                </a>
+                </div>
+              </div>
+
               {/* <CommonBtn text={'Gift Course'} /> */}
             </div>
+
+            {open && (
+              // <MessageModal 
+              //   message={<TermsCondition />} 
+              //   closePopup={handleClose} 
+              //   type="Terms and Conditions" // You can pass any other props as needed
+              // />
+              // <TermsAndConditionsModal />
+              <DatesPopUp isShippingModalOpen={handleOpen} setIsShipppingModalOpen={handleClose} pageDate={pageDate} />
+            )}
           </div>
           <div className="course-cover course-cover-2">
             {pageDate?.image ? (
