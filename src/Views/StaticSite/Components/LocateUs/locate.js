@@ -36,7 +36,7 @@ export const locateData = [
           'The Yoga Institute Rishikesh, BHAVYAM, House No. 4, Gali No. 4, Ward No. 1, Shri Badri Kedar Colony, Lakkad ghat, Khadri khadakmaaf, Yoga Nagri Rishikesh, Uttarakhand - 249204',
         email: 'theyogainstitute.rishikesh@gmail.com',
         url: 'https://theyogainstituterishikesh.com/',
-        phone: ['+91-7236022022'],
+        phone: ['+91-9193831152'],
         toRedirect: true,
       },
       {

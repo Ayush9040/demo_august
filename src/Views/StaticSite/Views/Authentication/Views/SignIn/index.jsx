@@ -28,7 +28,7 @@ import { useLocation } from 'react-router-dom';
 
 
 const libraries = ['places'];
-const mapKey = 'AIzaSyCArozsi_1fWJgSwDFDAoA_6Q5zLZ7NYyA'; 
+const mapKey = 'AIzaSyCArozsi_1fWJgSwDFDAoA_6Q5zLZ7NYyA';
 
 const SignIn = () => {
   // const [modal, setModal] = useState(false)
@@ -71,8 +71,8 @@ const SignIn = () => {
   const [empty, setEmpty] = useState(0)
   const [selectDate, setSetselectDate] = useState()
   const [otp, setOtp] = useState(new Array(4).fill(""));
-  const [ stateOpt, setStateOpt] = useState("")
-  const [ cityOpt, setCityOpt ] = useState("")
+  const [stateOpt, setStateOpt] = useState("")
+  const [cityOpt, setCityOpt] = useState("")
   const phoneNumberFromRedux = useSelector((state) => state.auth.user.data?.phoneNumber);
   // const [token, setToken] = useState(null);
   const [isLocationCart, setIsLocationCart] = useState(false);
@@ -108,10 +108,10 @@ const SignIn = () => {
     control: (base, state) => ({
       ...base,
       background: 'transparent',
-      borderRadius: '8px',
+      borderRadius: '30px !important',
       padding: '0 !important', // Ensure no padding is applied
-      // height: 10, // Adjust the height of the select input
-      // minHeight: 10, // Ensure the minimum height is applied
+      // height: 1/0, // Adjust the height of the select input
+      minHeight: '24px !important', // Ensure the minimum height is applied
       // width: 'fitContent',
       // padding: '0.25rem 0.25rem',
       // marginTop: '2rem',
@@ -138,11 +138,11 @@ const SignIn = () => {
     if (autocomplete) {
       const place = autocomplete.getPlace();
       console.log(
-        'place ',place
+        'place ', place
       )
       const address = place.formatted_address || '';
       console.log(
-        'Address ',address
+        'Address ', address
       )
       const nameComponent = place?.name;
       const countryComponent = place.address_components?.find((component) =>
@@ -172,7 +172,7 @@ const SignIn = () => {
       const address1CodeComponent3 = place.address_components?.find((component) =>
         component.types.includes('sublocality_level_3')
       );
-      
+
 
       const country = countryComponent ? countryComponent.long_name : '';
       const state = stateComponent ? stateComponent.long_name : '';
@@ -186,34 +186,34 @@ const SignIn = () => {
       const countryComponent2 = place.address_components?.find((component) =>
         component.types.includes('country')
       );
-      
+
       const countryISOCode = countryComponent2 ? countryComponent2.short_name : '';
       setStateOpt(countryISOCode);
 
       const stateIsoCode = stateComponent ? stateComponent.short_name : '';
       setCityOpt(stateIsoCode)
-      
+
 
       // Split the formatted address into lines for Address 1 and Address 2
-    const addressParts = formattedAddress.split(', ');
+      const addressParts = formattedAddress.split(', ');
 
-    // Set Address Line 1 and Address Line 2 based on your criteria
-    let address1 = [
-      name,
-      address1CodeComponent1?.long_name || '',
-      address1CodeComponent2?.long_name || '',
-      address1CodeComponent3?.long_name || '',
-    ]
-      .filter(Boolean) // Filter out any empty strings
-      .join(', '); // Join the components with a comma/ Address till required part
+      // Set Address Line 1 and Address Line 2 based on your criteria
+      let address1 = [
+        name,
+        address1CodeComponent1?.long_name || '',
+        address1CodeComponent2?.long_name || '',
+        address1CodeComponent3?.long_name || '',
+      ]
+        .filter(Boolean) // Filter out any empty strings
+        .join(', '); // Join the components with a comma/ Address till required part
 
-    let address2 = [
-      address2CodeComponent1?.long_name || '',
-      address2CodeComponent2?.long_name || '',
-    ]
-      .filter(Boolean) // Filter out any empty strings
-      .join(', '); // Join the components with a comma
-      
+      let address2 = [
+        address2CodeComponent1?.long_name || '',
+        address2CodeComponent2?.long_name || '',
+      ]
+        .filter(Boolean) // Filter out any empty strings
+        .join(', '); // Join the components with a comma
+
 
       if (!address1) {
         address1 = address2;
@@ -223,7 +223,7 @@ const SignIn = () => {
       setFormData((prev) => ({
         ...prev,
         address1: address1,
-        address2:address2,
+        address2: address2,
         country,
         state,
         city,
@@ -284,14 +284,14 @@ const SignIn = () => {
   //     ...state,
   //   }))
   // }
-  
+
   // const updatedStates2 = (countryId) => {
   //   console.log("state ", countryId)
   //   if (!countryId) return defaultStates(stateOpt); // Return default options if no countryId is provided
-  
+
   //   const states = State.getStatesOfCountry(countryId);
   //   if (!Array.isArray(states)) return []; // Ensure the function returns an array
-  
+
   //   return states.map((state) => ({
   //     label: state.name,
   //     value: state.id,
@@ -309,18 +309,23 @@ const SignIn = () => {
   }
 
   // After login get the user details and update redux
-  const getUserDetails = async (token) => {
+  const getUserDetails = async (token, ctEventValue) => {
     try {
       const response = await axios.get(`${authBaseDomain}/user/me`, {
         headers: {
           'Authorization': `Bearer ${token}`
         }
       });
+      if (ctEventValue === 'alreadySignedUp') {
+        handleAlreadySignedUpUser({
+          phone: response?.data?.data?.phoneNumber
+        })
+      }
       localStorage.setItem('userAppId', response?.data.data?._id)//to pass
       // console.log("response?.data.data?._id :", response?.data?.data?.phoneNumber)
-      handleAlreadySignedUpUser({
-        phone: response?.data?.data?.phoneNumber
-      })
+      // handleAlreadySignedUpUser({
+      //   phone: response?.data?.data?.phoneNumber
+      // })
       //update user details to Redux 
       dispatch(loginUserSuccess({ type: 'auth/LOGIN_USER_SUCCESS', data: response?.data?.data }))
     } catch (error) {
@@ -350,10 +355,10 @@ const SignIn = () => {
           // document.cookie = `authorizationToken=${response?.data?.accessToken}; path=/;`; // Expires in 1 hour
 
           dispatch(loginUserSuccess({}))
-          handleAlreadySignedUpUser({
-            phone: userDetails?.phoneNumber
-          })
-          getUserDetails(response?.data?.accessToken)
+          // handleAlreadySignedUpUser({
+          //   phone: userDetails?.phoneNumber
+          // })
+          // getUserDetails(response?.data?.accessToken)
           page ? page !== 'cart' ? navigate(`/enrollment/${page}`) : navigate('/shop/checkout') : navigate('/')
         }
         setOtp(new Array(4).fill(""))//clear OTP
@@ -371,17 +376,17 @@ const SignIn = () => {
   const SignupUsingEmail = async (userDetails) => {
 
     const number = parsePhoneNumber(userDetails.phoneNumber);
-      const countryCode = number.country; // This will give you the country code
+    const countryCode = number.country; // This will give you the country code
 
     let payload = { ...userDetails }
-        payload['gender'] = userDetails?.gender.value;
-        payload['country'] = userDetails?.country?.label;
-        payload['city'] = userDetails?.city?.label;
-        payload['phoneNumber'] = phoneNumber.mobile;
-        payload['dialCode'] = phoneNumber.dialCode;
-        payload['countryCode'] = countryCode
+    payload['gender'] = userDetails?.gender.value;
+    payload['country'] = userDetails?.country?.label;
+    payload['city'] = userDetails?.city?.label;
+    payload['phoneNumber'] = phoneNumber.mobile;
+    payload['dialCode'] = phoneNumber.dialCode;
+    payload['countryCode'] = countryCode
 
-        console.log("User details from Email ", userDetails)
+    console.log("User details from Email ", userDetails)
 
     // let response = await axios.post(//send OTP for mobile
     //   `${authBaseDomain}/authdoor/google/signup`,
@@ -461,129 +466,130 @@ const SignIn = () => {
     else if ((validatePhoneNumber(details.phoneNumber).length > 0) && signUpType != 'mobile') {
       console.log("Deails phoneNumber Name ", details.gender?.value);
       setFormData({ ...details, errorIndex: 11 });
-    }
-    else{
-    
-    if (userDetails.otp.length == 4 && type != 'mobile') {//valid OTP
-      // alert("From otp ")
-      setFormData({ ...formData, errorIndex: 0 });
-      const number = parsePhoneNumber(userDetails.phoneNumber);
-      const countryCode = number?.country; // This will give you the country code
-
-      try {
-        
-        let payload = { ...userDetails }
-        delete payload.email;
-        delete payload.address1;
-        delete payload.address2;
-        payload['gender'] = userDetails?.gender.value;
-        payload['addressLine1'] = userDetails?.address1;
-        payload['addressLine2'] = userDetails?.address2;
-        payload['country'] = values?.country?.label;
-        payload['city'] = values?.city?.label;
-        payload['state'] = values?.state?.label;
-        payload['email'] = getemail;
-        payload['pincode'] = userDetails?.pincode;
-        payload['phoneNumber'] = phoneNumber.mobile;
-        payload['dialCode'] = phoneNumber.dialCode;
-        payload['countryCode'] = countryCode
-
-        if (type != 'mobile') {
-          // alert("Called mobile ")
-          let response = await axios.post(//send OTP for mobile
-            `${authBaseDomain}/authdoor/google/signup`,
-            payload,
-            {
-              headers: {
-                'Authorization': `Bearer ${token}`
-              }
-            }
-          )
-
-          // const response = true;
-          // console.log("Response ", userDetails);
-
-          if (response) {
-            // alert('Siggned in');
-            localStorage.setItem('authorizationToken', response?.data?.accessToken)
-            localStorage.setItem('refreshToken', response?.data?.refreshToken)
-            // document.cookie = `authorizationToken=${response?.data?.accessToken}; path=/;`;
-            dispatch(loginUserSuccess({}))
-
-            getUserDetails(response?.data?.accessToken)
-            callCTEvent(payload)
-            page ? page !== 'cart' ? navigate(`/enrollment/${page}`) : navigate('/shop/checkout') : navigate('/')
-          }
-          else {
-            // alert('failed')
-          }
-
-
-        }
-        else {//google user
-          let response = await axios.post(//send OTP for mobile
-            `${authBaseDomain}/authdoor/google/signup`,
-            payload,
-            {
-              headers: {
-                'Authorization': `Bearer ${token}`
-              }
-            }
-          )
-          if (response) {
-            // alert('Siggned in');
-            localStorage.setItem('authorizationToken', response?.data?.accessToken)
-            localStorage.setItem('refreshToken', response?.data?.refreshToken)
-            dispatch(loginUserSuccess({}))
-            getUserDetails(response?.data?.accessToken)
-            callCTEvent(payload)
-
-            // console.log('user details 2 ', userDetails);
-            page ? page !== 'cart' ? navigate(`/enrollment/${page}`) : navigate('/shop/checkout') : navigate('/')
-          }
-          else {
-            // alert('failed')
-          }
-        }
-      }
-      catch (err) {
-        // alert('Invalid OTP')
-        setFormData({ ...formData, errorIndex: 2 });
-        if (err.data.error == 'Your session has expired. Please Sign Up again to continue.') {
-          setPageIndex(1)
-          setOtp(new Array(4).fill(""));
-          setSignUpType('')
-          setFormData({
-            phoneNumber: '',
-            dialCode: '91',
-            otp: '',
-            email: '',
-            firstName: '',
-            lastName: '',
-            gender: '',
-            country: '',
-            city: '',
-            errorIndex: '0'
-          })
-        }
-        else {
-          setErrorMessage(err.data.error)
-        }
-      }
+      setIsToast(true)
     }
     else {
-      // alert("Email called");
 
-      
+      if (userDetails.otp.length == 4 && type != 'mobile') {//valid OTP
+        // alert("From otp ")
+        setFormData({ ...formData, errorIndex: 0 });
+        const number = parsePhoneNumber(userDetails.phoneNumber);
+        const countryCode = number?.country; // This will give you the country code
 
-      console.log("User details from Email ", userDetails)
+        try {
 
-      const number = parsePhoneNumber(userDetails.phoneNumber);
-      const countryCode = number?.country;
-      let payload = { ...userDetails }
-      delete payload.otp;
-      delete payload.address1;
-      delete payload.address2;
+          let payload = { ...userDetails }
+          delete payload.email;
+          delete payload.address1;
+          delete payload.address2;
+          payload['gender'] = userDetails?.gender.value;
+          payload['addressLine1'] = userDetails?.address1;
+          payload['addressLine2'] = userDetails?.address2;
+          payload['country'] = values?.country?.label;
+          payload['city'] = values?.city?.label;
+          payload['state'] = values?.state?.label;
+          payload['email'] = getemail;
+          payload['pincode'] = userDetails?.pincode;
+          payload['phoneNumber'] = phoneNumber.mobile;
+          payload['dialCode'] = phoneNumber.dialCode;
+          payload['countryCode'] = countryCode
+
+          if (type != 'mobile') {
+            // alert("Called mobile ")
+            let response = await axios.post(//send OTP for mobile
+              `${authBaseDomain}/authdoor/google/signup`,
+              payload,
+              {
+                headers: {
+                  'Authorization': `Bearer ${token}`
+                }
+              }
+            )
+
+            // const response = true;
+            // console.log("Response ", userDetails);
+
+            if (response) {
+              // alert('Siggned in');
+              localStorage.setItem('authorizationToken', response?.data?.accessToken)
+              localStorage.setItem('refreshToken', response?.data?.refreshToken)
+              // document.cookie = `authorizationToken=${response?.data?.accessToken}; path=/;`;
+              dispatch(loginUserSuccess({}))
+
+              getUserDetails(response?.data?.accessToken, 'notalreadySignedUp')
+              callCTEvent(payload)
+              page ? page !== 'cart' ? navigate(`/enrollment/${page}`) : navigate('/shop/checkout') : navigate('/')
+            }
+            else {
+              // alert('failed')
+            }
+
+
+          }
+          else {//google user
+            let response = await axios.post(//send OTP for mobile
+              `${authBaseDomain}/authdoor/google/signup`,
+              payload,
+              {
+                headers: {
+                  'Authorization': `Bearer ${token}`
+                }
+              }
+            )
+            if (response) {
+              // alert('Siggned in');
+              localStorage.setItem('authorizationToken', response?.data?.accessToken)
+              localStorage.setItem('refreshToken', response?.data?.refreshToken)
+              dispatch(loginUserSuccess({}))
+              getUserDetails(response?.data?.accessToken, 'notalreadySignedUp')
+              callCTEvent(payload)
+
+              // console.log('user details 2 ', userDetails);
+              page ? page !== 'cart' ? navigate(`/enrollment/${page}`) : navigate('/shop/checkout') : navigate('/')
+            }
+            else {
+              // alert('failed')
+            }
+          }
+        }
+        catch (err) {
+          // alert('Invalid OTP')
+          setFormData({ ...formData, errorIndex: 2 });
+          if (err.data.error == 'Your session has expired. Please Sign Up again to continue.') {
+            setPageIndex(1)
+            setOtp(new Array(4).fill(""));
+            setSignUpType('')
+            setFormData({
+              phoneNumber: '',
+              dialCode: '91',
+              otp: '',
+              email: '',
+              firstName: '',
+              lastName: '',
+              gender: '',
+              country: '',
+              city: '',
+              errorIndex: '0'
+            })
+          }
+          else {
+            setErrorMessage(err.data.error)
+          }
+        }
+      }
+      else {
+        // alert("Email called");
+
+
+
+        console.log("User details from Email ", userDetails)
+
+        const number = parsePhoneNumber(userDetails.phoneNumber);
+        const countryCode = number?.country;
+        let payload = { ...userDetails }
+        delete payload.otp;
+        delete payload.address1;
+        delete payload.address2;
         payload['gender'] = userDetails?.gender.value;
         payload['addressLine1'] = userDetails?.address1;
         payload['addressLine2'] = userDetails?.address2;
@@ -595,33 +601,33 @@ const SignIn = () => {
         payload['dialCode'] = phoneNumber.dialCode;
         payload['countryCode'] = countryCode;
 
-        
 
-      let response = await axios.post(//send OTP for mobile
-        `${authBaseDomain}/authdoor/email/verify-otp`,
-        payload,
-        {
-          headers: {
-            'Authorization': `Bearer ${token}`
+
+        let response = await axios.post(//send OTP for mobile
+          `${authBaseDomain}/authdoor/email/verify-otp`,
+          payload,
+          {
+            headers: {
+              'Authorization': `Bearer ${token}`
+            }
           }
+        )
+        if (response) {
+          // alert('Siggned in');
+          localStorage.setItem('authorizationToken', response?.data?.accessToken)
+          localStorage.setItem('refreshToken', response?.data?.refreshToken)
+          dispatch(loginUserSuccess({}))
+          getUserDetails(response?.data?.accessToken, 'notalreadySignedUp')
+          callCTEvent(payload)
+
+          // console.log('user details 2 ', userDetails);
+          page ? page !== 'cart' ? navigate(`/enrollment/${page}`) : navigate('/shop/checkout') : navigate('/')
         }
-      )
-      if (response) {
-        // alert('Siggned in');
-        localStorage.setItem('authorizationToken', response?.data?.accessToken)
-        localStorage.setItem('refreshToken', response?.data?.refreshToken)
-        dispatch(loginUserSuccess({}))
-        getUserDetails(response?.data?.accessToken)
-        callCTEvent(payload)
 
-        // console.log('user details 2 ', userDetails);
-        page ? page !== 'cart' ? navigate(`/enrollment/${page}`) : navigate('/shop/checkout') : navigate('/')
+        setFormData({ ...formData, errorIndex: 2 });
       }
-      
-      setFormData({ ...formData, errorIndex: 2 });
-    }
 
-  }
+    }
   }
 
 
@@ -714,6 +720,7 @@ const SignIn = () => {
   // }
 
   const [seconds, setSeconds] = useState(59);
+  const [isToast, setIsToast] = useState(false);
   let intervalId; // variable fro timer
   let timer = 59; // variable to handle seconds not updated in dom
 
@@ -774,7 +781,7 @@ const SignIn = () => {
     // type = 'mobile';
 
     console.log(" det from Sign up otp ", det, type)
-    
+
     // console.log(" details from Sign up otp ", details, type)
     const nameRegex = /^[A-Za-z]+( [A-Za-z]+)*$/;
     const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
@@ -827,6 +834,7 @@ const SignIn = () => {
     else if ((validatePhoneNumber(details.phoneNumber).length > 0) && signUpType != 'mobile') {
       console.log("Deails phoneNumber Name ", details.gender?.value);
       setFormData({ ...details, errorIndex: 11 });
+      setIsToast(true)
     }
     else {//form is valid 
       setFormData({ ...formData, errorIndex: 0 });
@@ -917,6 +925,7 @@ const SignIn = () => {
   }
 
   const handleOTPChange = (element, index) => {
+    setIsMobileVerified(false)
     if (isNaN(element.value)) return; // Ensure only numbers are entered
     let otpArry = [...otp]
     otpArry[index] = element.value
@@ -939,10 +948,33 @@ const SignIn = () => {
         verifyOTP(payload)
       }
       else {//for signup
-        verifySignupOTP(payload, signUpType, token)
+        validateSignupOTP(payload, signUpType, token)
+        // verifySignupOTP(payload, signUpType, token)
       }
     }
   };
+  const [isMobileVerified, setIsMobileVerified] = useState(false)
+  const validateSignupOTP = async (payload, signUpType, token) => {
+    let request = { phoneNumber: phoneNumber.mobile, otp: payload.otp, dialCode: phoneNumber.dialCode, email: payload.email }
+    try {
+      let { data } = await axios.post(
+        `${authBaseDomain}/authdoor/google/mobile-verify`,
+        request,
+        {
+          headers: {
+            'Authorization': `Bearer ${token}`
+          }
+        }
+      )
+      setIsMobileVerified(true)
+    }
+    catch (err) {
+      setFormData({ ...formData, errorIndex: 2 });
+      setErrorMessage(err.data.error)
+      setIsMobileVerified(false)
+    }
+
+  }
 
   // Handle backspace and move focus to previous input
   const handleBackspace = (element, index) => {
@@ -994,59 +1026,59 @@ const SignIn = () => {
     // console.log("Function called ")
     // alert("Me ")
     // try {
-      const result = await signInWithPopup(auth, googleAuthProvider);
-      const user = result.user;
-      // alert("Me ")
-      console.log("User from Google Sign up ", user)
+    const result = await signInWithPopup(auth, googleAuthProvider);
+    const user = result.user;
+    // alert("Me ")
+    console.log("User from Google Sign up ", user)
+    setFormData({ ...formData, email: user.email })
+    setGetEmail(user.email);
+
+    console.log("FormData ", formData)
+    // Get the OAuth ID token from the credential
+    const credential = GoogleAuthProvider.credentialFromResult(result);
+    console.log("Credentials ", credential)
+    if (credential) {
+      // alert("Fine")
+      const idToken = credential.idToken; // OAuth ID token
+      let response = await axios.post(//send OTP for mobile
+        `${authBaseDomain}/authdoor/google/login`,
+        { tokenId: idToken, emailId: user.email }
+      )
       setFormData({ ...formData, email: user.email })
-      setGetEmail(user.email);
-
-      console.log("FormData ", formData)
-      // Get the OAuth ID token from the credential
-      const credential = GoogleAuthProvider.credentialFromResult(result);
-      console.log("Credentials ", credential) 
-      if (credential) {
-        // alert("Fine")
-        const idToken = credential.idToken; // OAuth ID token
-        let response = await axios.post(//send OTP for mobile
-          `${authBaseDomain}/authdoor/google/login`,
-          { tokenId: idToken, emailId: user.email }
-        )
-        setFormData({ ...formData, email: user.email })
-        console.log("Response ", response);
-        if (response?.data?.isSignupRequired) {//gmail signup
-          setPageIndex('3')
-          setSignUpType('email')
-          setToken(response?.data?.token)
-          if (user?.displayName) {
-            const parts = user?.displayName.split(" ");
-            const lastWord = parts.length > 1 ? parts.pop() : ""; // Get the last word or set it to empty
-            const remainingString = parts.join(" ") || user?.displayName; // Join the remaining parts or keep the original name
-            setFormData({ ...formData, firstName: remainingString, lastName: lastWord, email: user.email })
-          }
-          else {
-            setFormData({ ...formData, email: user.email })
-          }
+      console.log("Response ", response);
+      if (response?.data?.isSignupRequired) {//gmail signup
+        setPageIndex('3')
+        setSignUpType('email')
+        setToken(response?.data?.token)
+        if (user?.displayName) {
+          const parts = user?.displayName.split(" ");
+          const lastWord = parts.length > 1 ? parts.pop() : ""; // Get the last word or set it to empty
+          const remainingString = parts.join(" ") || user?.displayName; // Join the remaining parts or keep the original name
+          setFormData({ ...formData, firstName: remainingString, lastName: lastWord, email: user.email })
         }
-        else {//existing user
-          // alert('Siggned in');
-          localStorage.setItem('authorizationToken', response?.data?.accessToken)
-          localStorage.setItem('refreshToken', response?.data?.refreshToken)
-          dispatch(loginUserSuccess({}))
-          getUserDetails(response?.data?.accessToken)
-          console.log(response?.data)
-
-          page ? page !== 'cart' ? navigate(`/enrollment/${page}`) : navigate('/shop/checkout') : navigate('/')
+        else {
+          setFormData({ ...formData, email: user.email })
         }
-      } else {
-        console.error('No credential found');
       }
+      else {//existing user
+        // alert('Siggned in');
+        localStorage.setItem('authorizationToken', response?.data?.accessToken)
+        localStorage.setItem('refreshToken', response?.data?.refreshToken)
+        dispatch(loginUserSuccess({}))
+        getUserDetails(response?.data?.accessToken, 'alreadySignedUp')
+        console.log(response?.data)
+
+        page ? page !== 'cart' ? navigate(`/enrollment/${page}`) : navigate('/shop/checkout') : navigate('/')
+      }
+    } else {
+      console.error('No credential found');
+    }
 
 
-      // Handle successful sign-in (e.g., update state, redirect user)
+    // Handle successful sign-in (e.g., update state, redirect user)
     // } catch (error) {
-      // console.error('Sign In Error:', error.message);
-      // Handle sign-in errors (e.g., show error message to user)
+    // console.error('Sign In Error:', error.message);
+    // Handle sign-in errors (e.g., show error message to user)
     // }
   }
 
@@ -1146,9 +1178,37 @@ const SignIn = () => {
         <div className="signin-logo">
           <img src="/images/main-logo-signup.svg" alt="primary-logo" loading="lazy" />
         </div>
-        <div className="signin-details">
+        {(formData?.errorIndex == 11 && pageIndex == '3' && isToast) &&
+          <div className='error-alert'>
+            <div>
+              <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="22" cy="22" r="22" fill="#DC3545" fill-opacity="0.1" />
+                <g clip-path="url(#clip0_4487_19089)">
+                  <path d="M22 10C15.3676 10 10 15.367 10 22C10 28.6325 15.367 34 22 34C28.6324 34 34 28.633 34 22C34 15.3675 28.633 10 22 10ZM22 32.125C16.4039 32.125 11.875 27.5965 11.875 22C11.875 16.4038 16.4035 11.875 22 11.875C27.5961 11.875 32.125 16.4035 32.125 22C32.125 27.5962 27.5965 32.125 22 32.125Z" fill="#DC3545" />
+                  <path d="M26.1057 24.7801L23.3259 22.0003L26.1057 19.2205C26.4718 18.8544 26.4718 18.2609 26.1057 17.8947C25.7395 17.5286 25.146 17.5286 24.7799 17.8947L22.0001 20.6745L19.2203 17.8947C18.8542 17.5286 18.2605 17.5286 17.8945 17.8947C17.5284 18.2609 17.5284 18.8544 17.8945 19.2205L20.6743 22.0003L17.8945 24.7801C17.5284 25.1462 17.5283 25.7398 17.8945 26.1059C18.2607 26.4721 18.8543 26.472 19.2203 26.1059L22.0001 23.3261L24.7799 26.1059C25.1459 26.472 25.7396 26.4721 26.1057 26.1059C26.4719 25.7398 26.4718 25.1462 26.1057 24.7801Z" fill="#DC3545" />
+                </g>
+                <defs>
+                  <clipPath id="clip0_4487_19089">
+                    <rect width="24" height="24" fill="white" transform="translate(10 10)" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </div>
+            <div>
+              <span style={{ fontSize: '18px', color: '#DC3545', fontWeight: '800' }}>Verify the Mobile number</span><br />
+              <span style={{ color: '#7A7A7C', fontSize: '12px', fontWeight: '400' }}>verify the number to proceed further</span>
+            </div>
+            <div onClick={() => { setIsToast(false) }} style={{ cursor: 'pointer', marginTop: '8px' }}>
+              <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11.8334 1.84199L10.6584 0.666992L6.00008 5.32533L1.34175 0.666992L0.166748 1.84199L4.82508 6.50033L0.166748 11.1587L1.34175 12.3337L6.00008 7.67533L10.6584 12.3337L11.8334 11.1587L7.17508 6.50033L11.8334 1.84199Z" fill="#C0C1C2" />
+              </svg>
+            </div>
+          </div>}
+
+        <div className={pageIndex <= 2 ? 'signin-details' : 'signin-details f-height'}>
+
           <div className="container">
-            <div className='back-nav' onClick={() => navigateBack()}>
+            {pageIndex <= 2 && <div className='back-nav' onClick={() => navigateBack()}>
               <span className="web">
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3.825 9L9.425 14.6L8 16L0 8L8 0L9.425 1.4L3.825 7H16V9H3.825Z" fill="#181818" />
@@ -1161,7 +1221,7 @@ const SignIn = () => {
 
               </span>
               &nbsp;Back
-            </div>
+            </div>}
 
             {/* login page with mobile number */}
             {pageIndex == '1' && <>
@@ -1191,18 +1251,18 @@ const SignIn = () => {
               </div>
               {formData?.errorIndex == 1 &&
                 <div style={{ color: '#FF3B30' }}>Enter a valid Mobile number to proceed next</div>}
-
-              <button type='click' className='primary-btn' onClick={() => { sendOTP(formData), setOtp(new Array(4).fill("")) }}>Continue</button>
-              <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
-                <div className='tc-text'>By Clicking “Continue with google  / mobile” you agree to
-                  our <span onClick={() => openLink('https://theyogainstitute.org/terms-and-conditions')}>Terms & Conditions</span> and <span onClick={() => openLink('https://theyogainstitute.org/privacy-policy')}>Privacy Policy</span></div>
-              </div>
+              <div className="ftr-btn">
+                <button type='click' className='primary-btn' onClick={() => { sendOTP(formData), setOtp(new Array(4).fill("")) }}>Continue</button>
+                <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
+                  <div className='tc-text'>By Clicking “Continue with google  / mobile” you agree to
+                    our <span onClick={() => openLink('https://theyogainstitute.org/terms-and-conditions')}>Terms & Conditions</span> and <span onClick={() => openLink('https://theyogainstitute.org/privacy-policy')}>Privacy Policy</span></div>
+                </div></div>
             </>}
 
             {/* Login page with OTP */}
             {pageIndex == '2' && <>
-              <div className='sub-header' style={{ fontWeight: '700', padding: '12px 0 4px 0' }}>Namaste  🙏 Please verify your mobile number </div>
-              <div className='sub-header' style={{ fontWeight: '400', fontSize: '16px'}}>Enter the OTP</div>
+              <div className='sub-header wish' style={{ fontWeight: '700', padding: '12px 0 4px 0' }}>Namaste  🙏 Please verify your mobile number </div>
+              {/* <div className='sub-header' style={{ fontWeight: '400', fontSize: '16px'}}>Enter the OTP</div> */}
               <div className="otp-inputs">
                 {otp.map((data, index) => {
                   return (
@@ -1225,61 +1285,73 @@ const SignIn = () => {
                   );
                 })}
               </div>
-              <div className='sub-header' style={{ fontWeight: '400', fontSize: '16px', marginTop: '12px'}}>OTP Sent on {formData.phoneNumber}</div>
+              <div className='sub-header' style={{ fontWeight: '400', fontSize: '16px', marginTop: '12px' }}>Enter OTP sent to {formData.phoneNumber}
+                <span style={{ color: '#CA4625', fontSize: '12px', fontWeight: 600, cursor: 'pointer', borderBottom: '2px solid #CA4625', marginLeft: '1rem' }} onClick={() => {
+                  setPageIndex('1');
+                }}>
+                  <svg width="12" height="12" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0.249512 6.18805V7.75055H1.81201L6.42035 3.14222L4.85785 1.57972L0.249512 6.18805ZM7.62868 1.93389C7.79118 1.77139 7.79118 1.50889 7.62868 1.34639L6.65368 0.371387C6.49118 0.208887 6.22868 0.208887 6.06618 0.371387L5.30368 1.13389L6.86618 2.69639L7.62868 1.93389Z" fill="#CA4625" />
+                  </svg>
+                  Change mobile number
+                </span>
+              </div>
               {formData?.errorIndex == 2 &&
                 <div style={{ color: '#FF3B30', margin: '1rem 0' }}>OTP is Invalid!</div>}
-              <button type='click' className='primary-btn' onClick={() => verifyOTP(formData)}>Verify & Continue</button>
-              <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
-                <div className='tc-text'>We regret if you haven&apos;t received the OTP, <br />
-                Resend OTP in 00:55 <br />
-                  {seconds != '0' && <>You can request another in {seconds} {seconds > 9 ? 'seconds' : 'second'}</>}
-                  {seconds == '0' && <div onClick={() => sendOTP(formData)} className="resend-btn">Resend</div>}</div>
+              <div className="ftr-btn">
+                <button type='click' className='primary-btn' onClick={() => verifyOTP(formData)}>Verify & Continue</button>
+                <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
+                  <div className='tc-text'>
+                    {seconds != '0' && <>We regret if you haven&apos;t received the OTP, <br />
+                      resend OTP in<span style={{ fontWeight: 'bold', textDecoration: 'none', cursor: 'none' }}> 00:{seconds} </span></>}
+                    {/* {seconds != '0' && <>You can request another in {seconds} {seconds > 9 ? 'seconds' : 'second'}</>} */}
+                    {seconds == '0' && <div onClick={() => sendOTP(formData)} className="resend-btn">Resend</div>}</div>
+                </div>
               </div>
             </>}
 
             {/* Signup page */}
             {(pageIndex == '3' || pageIndex == '4') && <>
               <div className='header header-3'>Namaste 🙏 Please Fill Your Details</div>
-              <div className='sub-header sub-header-3'>Become a Part of The Yoga Institute Family & Sign-up for <br />you’re preferred course</div>
-              
+              <div className='sub-header sub-header-3 wish-text'>Become a Part of The Yoga Institute Family & Sign-up for <br />you’re preferred course</div>
+              <div className='sub-header sub-header-3 wish-text-mob'>Join The Yoga Institute Family </div>
 
               <div className='inp-group'>
 
 
-              <div className='width-100'>
+                <div className='width-100'>
 
-              <div className='inp-label mg-t-20'>First Name <span>*</span></div>
-              <div className={formData?.errorIndex == 3 ? "form-inp err-inp" : "form-inp"}>
-                <input
-                  disabled={pageIndex == '4' ? true : false}
-                  value={formData.firstName}
-                  onChange={(e) => { setFormData({ ...formData, firstName: e.target.value }) }}
-                  type="text"
-                  placeholder="Enter your first name"
-                  className="custom-input"
-                />
-              </div>
-              {formData?.errorIndex == 3 &&
-                <div style={{ color: '#FF3B30' }}>Enter a valid First name</div>}
+                  <div className='inp-label mg-t-20'>First Name <span>*</span></div>
+                  <div className={formData?.errorIndex == 3 ? "form-inp err-inp" : "form-inp"}>
+                    <input
+                      disabled={pageIndex == '4' ? true : false}
+                      value={formData.firstName}
+                      onChange={(e) => { setFormData({ ...formData, firstName: e.target.value }) }}
+                      type="text"
+                      placeholder="Enter your first name"
+                      className="custom-input"
+                    />
+                  </div>
+                  {formData?.errorIndex == 3 &&
+                    <div style={{ color: '#FF3B30' }}>Enter a valid First name</div>}
 
                 </div>
 
 
-              <div className='width-100'>
-              <div className='inp-label  mg-t-20'>Last Name <span>*</span></div>
-              <div className={formData?.errorIndex == 4 ? "form-inp err-inp" : "form-inp"}>
-                <input
-                  disabled={pageIndex == '4' ? true : false}
-                  type="text"
-                  placeholder="Enter your Last name"
-                  value={formData.lastName}
-                  onChange={(e) => { setFormData({ ...formData, lastName: e.target.value }) }}
-                  className="custom-input"
-                />
-              </div>
-              {formData?.errorIndex == 4 &&
-                <div style={{ color: '#FF3B30' }}>Enter a valid Last name</div>}
-              </div>
+                <div className='width-100'>
+                  <div className='inp-label  mg-t-20'>Last Name <span>*</span></div>
+                  <div className={formData?.errorIndex == 4 ? "form-inp err-inp" : "form-inp"}>
+                    <input
+                      disabled={pageIndex == '4' ? true : false}
+                      type="text"
+                      placeholder="Enter your Last name"
+                      value={formData.lastName}
+                      onChange={(e) => { setFormData({ ...formData, lastName: e.target.value }) }}
+                      className="custom-input"
+                    />
+                  </div>
+                  {formData?.errorIndex == 4 &&
+                    <div style={{ color: '#FF3B30' }}>Enter a valid Last name</div>}
+                </div>
 
               </div>
 
@@ -1287,184 +1359,206 @@ const SignIn = () => {
               {/* Adding New Fields */}
 
               <LoadScript googleMapsApiKey={mapKey} libraries={libraries}>
-     
-     
-      <div className='inp-group'>
+                <div className='inp-group'>
+                  <div className='width-100'>
+                    <Autocomplete onLoad={onLoadAutocomplete} onPlaceChanged={onPlaceChanged}>
 
-      <div className='width-100'>
-      <Autocomplete onLoad={onLoadAutocomplete} onPlaceChanged={onPlaceChanged}>
-      
-      <div className="form_error">
-      <div className='inp-label mg-t-20'>Address 1 <span>*</span></div>
-        <div className={formData?.errorIndex == 5 ? "form-inp err-inp custom_style_input_add" : "form-inp custom_style_input_add"}>
-        <InputComponent
-          type="text"
-          placeholder="Enter address line 1"
-          form={formData}
-          setField={setFormData}
-          keyName="address1"
-          errorCheck={setEmpty}
-          className="custom-input"
-        />
-        </div>
-        {formData?.errorIndex == 5 &&
-                <div style={{ color: '#FF3B30' }}>Enter Address 1</div>}
-      </div>
-    </Autocomplete>
-      </div>
+                      <div className="form_error1">
+                        <div className='inp-label mg-t-20'>Address <span>*</span></div>
+                        <div className={formData?.errorIndex == 5 ? "form-inp err-inp custom_style_input_add" : "form-inp custom_style_input_add"}>
+                          <InputComponent
+                            type="text"
+                            placeholder="Enter address line 1"
+                            form={formData}
+                            setField={setFormData}
+                            keyName="address1"
+                            errorCheck={setEmpty}
+                            className="custom-input"
 
-      <div className='width-100'>
-        
-      <div className="form_error">
-      <div className='inp-label mg-t-20'>Address 2 <span>*</span></div>
-      <div className="form-inp custom_style_input_add">
-        <InputComponent
-          type="text"
-          placeholder="Enter address line 2"
-          form={formData}
-          setField={setFormData}
-          keyName="address2"
-          errorCheck={setEmpty}
-        />
-      </div>
-      </div>
+                          />
+                        </div>
+                        {formData?.errorIndex == 5 &&
+                          <div style={{ color: '#FF3B30' }}>Type your address </div>}
+                      </div>
+                    </Autocomplete>
+                  </div>
 
-      </div>
+                  {/* <div className='width-100'>
 
-      </div>
+                    <div className="form_error">
+                      <div className='inp-label mg-t-20'>Address 2 <span>*</span></div>
+                      <div className="form-inp custom_style_input_add">
+                        <InputComponent
+                          type="text"
+                          placeholder="Enter address line 2"
+                          form={formData}
+                          setField={setFormData}
+                          keyName="address2"
+                          errorCheck={setEmpty}
+                        />
+                      </div>
+                    </div>
 
-      <div className='inp-group'>
+                  </div> */}
 
-      <div className="form_error countries_list width-100" >
-      <div className='inp-label mg-t-20'>Country <span>*</span></div>
-   
-        <Select
-          styles={customStyles(formData?.errorIndex == 6 ? true : false)}
-          // isDisabled={pageIndex == '4' ? true : false}
-          // menuPlacement="top"
-          id="country"
-          name="country"
-          placeholder="Country"
-          options={updatedCountries}
-          value={values.country}
-          onChange={(value) => {
-            setValues({ country: value, state: null, city: null }, false);
-            setFormData((prev) => ({ ...prev, country: value.label }));
-            setFormData({ ...formData, country: value });
-          }}
-
-          
-        />
-        {formData?.errorIndex == 6 &&
-                <div style={{ color: '#FF3B30' }}>Enter Country</div>}
-      </div>
-      
-
-      <div className="form_error width-100">
-      <div className='inp-label mg-t-20'>State <span>*</span></div>
-        <Select
-          styles={customStyles(formData?.errorIndex == 7 ? true : false)}
-          id="state"
-          name="state"
-          placeholder="State"
-          className='custom-input'
-          options={updatedStates(values?.country?.isoCode || stateOpt)}
-          value={values.state}
-          onChange={(value) => {
-            setValues(
-              { country: values.country, state: value, city: null },
-              false
-            )
-            setFormData((prev) => ({ ...prev, state: value.label }));
-          }}
-        />
-
-{formData?.errorIndex == 7 &&
-                <div style={{ color: '#FF3B30' }}>Enter State</div>}
-
-      </div>
-      
-
-
-      </div>
-
-      
-
-      <div className='inp-group'>
-
-
-      <div className="form_error city_style">
-      <div className='inp-label mg-t-20'>City <span>*</span></div>
-        <Select
-          styles={customStyles(formData?.errorIndex == 8 ? true : false)}
-          id="city"
-          name="city"
-          placeholder="City"
-          options={updatedCities(
-            values?.country?.isoCode ? values?.country?.isoCode : stateOpt, // Pass country ISO
-            values?.state?.isoCode || cityOpt // Pass state ISO
-          )}
-          value={values.city}
-          onChange={(value) => {
-            setValues(
-              { country: values.country, state: values.state, city: value },
-              false
-            )
-            setFormData((prev) => ({ ...prev, city: value.label }));
-          }}
-        />
-
-{formData?.errorIndex == 8 &&
-                <div style={{ color: '#FF3B30' }}>Enter City</div>}
-        
-      </div>
-      
-
-      
-
-      <div className="form_error pincode_err pincode_style">
-      <div className='inp-label mg-t-20'>Pincode <span>*</span></div>
-      <div className={formData?.errorIndex == 9 ? "form-inp err-inp custom_style_input_pincode" : "form-inp custom_style_input_pincode"}>
-        <InputComponent
-          type="text"
-          placeholder="Pin code*"
-          form={formData}
-          setField={setFormData}
-          keyName="pincode"
-          errorCheck={setEmpty}
-        />
-      
-      </div>
-      {formData?.errorIndex == 9 &&
-                <div style={{ color: '#FF3B30' }}>Enter Pincode</div>}
-      </div>
-    
-
-    <div className='gender_desk'>
-                  <div className='inp-label mg-t-20'>Gender <span>*</span></div>
-                  {/* <div className="form-inp"> */}
-                  <Select
-                    isDisabled={pageIndex == '4' ? true : false}
-                    menuPlacement="top"
-                    styles={customStyles(formData?.errorIndex == 10 ? true : false)}
-                    id="country"
-                    name="Gender"
-                    placeholder="Gender"
-                    options={[
-                      { value: 'Male', label: 'Male' },
-                      { value: 'Female', label: 'Female' },
-                      { value: 'Others', label: 'Others' },
-                    ]}
-                    value={formData.gender}
-                    onChange={(value) => { setFormData({ ...formData, gender: value }) }}
-                  />
-                  {formData?.errorIndex == 10 &&
-                    <div style={{ color: '#FF3B30' }}>Select gender</div>}
                 </div>
-                
-      </div>
 
-                </LoadScript>
+                <div className='inp-group'>
+                  <div className='width-100'>
+
+                    <div className="form_error">
+                      <div className='inp-label mg-t-20'>House No. / Street name <span>*</span></div>
+                      <div className="form-inp custom_style_input_add">
+                        <InputComponent
+                          type="text"
+                          placeholder="Enter address line 2"
+                          form={formData}
+                          setField={setFormData}
+                          keyName="address2"
+                          errorCheck={setEmpty}
+                        />
+                      </div>
+                    </div>
+
+                  </div>
+                  {/* <div className="form_error countries_list width-100" >
+                    <div className='inp-label mg-t-20'>Country <span>*</span></div>
+
+                    <Select
+                      styles={customStyles(formData?.errorIndex == 6 ? true : false)}
+                      // isDisabled={pageIndex == '4' ? true : false}
+                      // menuPlacement="top"
+                      id="country"
+                      name="country"
+                      placeholder="Country"
+                      options={updatedCountries}
+                      value={values.country}
+                      onChange={(value) => {
+                        setValues({ country: value, state: null, city: null }, false);
+                        setFormData((prev) => ({ ...prev, country: value.label }));
+                        setFormData({ ...formData, country: value });
+                      }}
+
+
+                    />
+                    {formData?.errorIndex == 6 &&
+                      <div style={{ color: '#FF3B30' }}>Enter Country</div>}
+                  </div> */}
+
+
+                  {/* <div className="form_error width-100">
+                    <div className='inp-label mg-t-20'>State <span>*</span></div>
+                    <Select
+                      styles={customStyles(formData?.errorIndex == 7 ? true : false)}
+                      id="state"
+                      name="state"
+                      placeholder="State"
+                      className='custom-input'
+                      options={updatedStates(values?.country?.isoCode || stateOpt)}
+                      value={values.state}
+                      onChange={(value) => {
+                        setValues(
+                          { country: values.country, state: value, city: null },
+                          false
+                        )
+                        setFormData((prev) => ({ ...prev, state: value.label }));
+                      }}
+                    />
+
+                    {formData?.errorIndex == 7 &&
+                      <div style={{ color: '#FF3B30' }}>Enter State</div>}
+
+                  </div> */}
+                  <div className='form_error width-100'>
+                    <div className='inp-label mg-t-20'>Gender <span>*</span></div>
+                    <Select
+                      isDisabled={pageIndex == '4' ? true : false}
+                      menuPlacement="top"
+                      styles={customStyles(formData?.errorIndex == 10 ? true : false)}
+                      id="country"
+                      name="Gender"
+                      placeholder="Gender"
+                      options={[
+                        { value: 'Male', label: 'Male' },
+                        { value: 'Female', label: 'Female' },
+                        { value: 'Others', label: 'Others' },
+                      ]}
+                      value={formData.gender}
+                      onChange={(value) => { setFormData({ ...formData, gender: value }) }}
+                    />
+                    {formData?.errorIndex == 10 &&
+                      <div style={{ color: '#FF3B30' }}>Select gender</div>}
+                  </div>
+                </div>
+                {/* <div className='inp-group'>
+
+                  <div className="form_error city_style">
+                    <div className='inp-label mg-t-20'>City <span>*</span></div>
+                    <Select
+                      styles={customStyles(formData?.errorIndex == 8 ? true : false)}
+                      id="city"
+                      name="city"
+                      placeholder="City"
+                      options={updatedCities(
+                        values?.country?.isoCode ? values?.country?.isoCode : stateOpt, // Pass country ISO
+                        values?.state?.isoCode || cityOpt // Pass state ISO
+                      )}
+                      value={values.city}
+                      onChange={(value) => {
+                        setValues(
+                          { country: values.country, state: values.state, city: value },
+                          false
+                        )
+                        setFormData((prev) => ({ ...prev, city: value.label }));
+                      }}
+                    />
+
+                    {formData?.errorIndex == 8 &&
+                      <div style={{ color: '#FF3B30' }}>Enter City</div>}
+
+                  </div>
+
+                  <div className="form_error pincode_err pincode_style">
+                    <div className='inp-label mg-t-20'>Pincode <span>*</span></div>
+                    <div className={formData?.errorIndex == 9 ? "form-inp err-inp custom_style_input_pincode" : "form-inp custom_style_input_pincode"}>
+                      <InputComponent
+                        type="text"
+                        placeholder="Pin code*"
+                        form={formData}
+                        setField={setFormData}
+                        keyName="pincode"
+                        errorCheck={setEmpty}
+                      />
+
+                    </div>
+                    {formData?.errorIndex == 9 &&
+                      <div style={{ color: '#FF3B30' }}>Enter Pincode</div>}
+                  </div>
+
+                  <div className='gender_desk'>
+                    <div className='inp-label mg-t-20'>Gender <span>*</span></div>
+                    <Select
+                      isDisabled={pageIndex == '4' ? true : false}
+                      menuPlacement="top"
+                      styles={customStyles(formData?.errorIndex == 10 ? true : false)}
+                      id="country"
+                      name="Gender"
+                      placeholder="Gender"
+                      options={[
+                        { value: 'Male', label: 'Male' },
+                        { value: 'Female', label: 'Female' },
+                        { value: 'Others', label: 'Others' },
+                      ]}
+                      value={formData.gender}
+                      onChange={(value) => { setFormData({ ...formData, gender: value }) }}
+                    />
+                    {formData?.errorIndex == 10 &&
+                      <div style={{ color: '#FF3B30' }}>Select gender</div>}
+                  </div>
+
+                </div> */}
+
+              </LoadScript>
 
 
 
@@ -1540,10 +1634,10 @@ const SignIn = () => {
                       placeholder="Email"
                       className="custom-input"
                       value={formData.email}
-                      onChange={(e) => { 
+                      onChange={(e) => {
                         setGetEmail(e.target.value);
                         setFormData({ ...formData, email: e.target.value })
-                         }} />
+                      }} />
                   </div>
                   {formData?.errorIndex == 12 &&
                     <div style={{ color: '#FF3B30' }}>Enter a valid Email</div>}
@@ -1565,7 +1659,8 @@ const SignIn = () => {
                       onChange={handlePhoneChange}
                       value={formData.phoneNumber}
                     />
-                    {!hideVerify && <span type='click' className='verify_text' onClick={() => signUpOTP(formData, signUpType)}>Verify</span>}
+                    {(!hideVerify && !isMobileVerified) && <span type='click' className='verify_text' onClick={() => signUpOTP(formData, signUpType)}>Verify</span>}
+                    {isMobileVerified && <span span type='click' className='verify_text' style={{ color: '#34C759' }}>Verified</span>}
                   </div>
                   {formData?.errorIndex == 11 &&
                     <div style={{ color: '#FF3B30' }}>Enter a valid Mobile number</div>}
@@ -1574,29 +1669,30 @@ const SignIn = () => {
                     <div style={{ color: '#FF3B30' }}>Mobile number already registered</div>
                   }
 
-                   
+
 
                 </>}
 
-                
 
-              
 
-              {(pageIndex == '4' && signUpType != 'mobile'  )&& <>
-                <div className='inp-label' style={{ fontWeight: '600', padding: '14px 0 4px 0' }}>Verify your {signUpType == 'mobile' ? 'Email address' : 'Mobile Number'}</div>
-                <div className='sub-header' style={{ fontSize: '12px' }}>enter the OTP we sent to <span style={{ fontWeight: '600' }}> {signUpType == 'mobile' ? formData.email : formData.phoneNumber}</span>
 
-                  &nbsp;  <span style={{ color: '#CA4625', fontWeight: 600, cursor: 'pointer', borderBottom: '2px solid #CA4625' }} onClick={() => { 
-                    setPageIndex('3') ;
+
+              {(pageIndex == '4' && signUpType != 'mobile' && !isMobileVerified) && <>
+                {/* <div className='inp-label' style={{ fontWeight: '600', padding: '14px 0 4px 0' }}>Verify your {signUpType == 'mobile' ? 'Email address' : 'Mobile Number'}</div> */}
+                {/* <div className='sub-header' style={{ fontSize: '12px' }}>
+                  enter the OTP we sent to <span style={{ fontWeight: '600' }}> {signUpType == 'mobile' ? formData.email : formData.phoneNumber}</span>
+
+                  &nbsp;  <span style={{ color: '#CA4625', fontWeight: 600, cursor: 'pointer', borderBottom: '2px solid #CA4625' }} onClick={() => {
+                    setPageIndex('3');
                     setHideVerify(false);
-                    }}>
+                  }}>
                     <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M0.249512 6.18805V7.75055H1.81201L6.42035 3.14222L4.85785 1.57972L0.249512 6.18805ZM7.62868 1.93389C7.79118 1.77139 7.79118 1.50889 7.62868 1.34639L6.65368 0.371387C6.49118 0.208887 6.22868 0.208887 6.06618 0.371387L5.30368 1.13389L6.86618 2.69639L7.62868 1.93389Z" fill="#CA4625" />
                     </svg>
                     &nbsp;
                     Edit
                   </span>
-                </div>
+                </div> */}
                 <div className="otp-inputs">
                   {otp.map((data, index) => {
                     return (
@@ -1619,13 +1715,22 @@ const SignIn = () => {
                     );
                   })}
                 </div>
+                <div className='sub-header' style={{ fontSize: '12px', marginTop: '12px' }}>
+                  Enter OTP sent to <span style={{ fontWeight: '600' }}> {signUpType == 'mobile' ? formData.email : formData.phoneNumber}</span>
+                  &nbsp;  <span style={{ color: '#CA4625', fontWeight: 600, cursor: 'pointer', borderBottom: '2px solid #CA4625' }} onClick={() => {
+                    setPageIndex('3');
+                    setHideVerify(false);
+                  }}>
+                    <svg width="12" height="12" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M0.249512 6.18805V7.75055H1.81201L6.42035 3.14222L4.85785 1.57972L0.249512 6.18805ZM7.62868 1.93389C7.79118 1.77139 7.79118 1.50889 7.62868 1.34639L6.65368 0.371387C6.49118 0.208887 6.22868 0.208887 6.06618 0.371387L5.30368 1.13389L6.86618 2.69639L7.62868 1.93389Z" fill="#CA4625" />
+                    </svg>
+                    &nbsp;
+                    Change mobile number
+                  </span>
+                </div>
                 {formData?.errorIndex == 2 &&
                   <div style={{ color: '#FF3B30', margin: '1rem 0' }}>{errorMessage}</div>}
-                <div style={{ width: '100%', display: 'flex', justifyContent: 'start' }}>
-                  <div className='tc-text'>Didn’t received the OTP? &nbsp;
-                    {secondsF != '0' && <> Resend in {secondsF} {secondsF > 9 ? 'seconds' : 'second'}</>}
-                    {secondsF == '0' && <span onClick={() => sendSignupOTP(formData, signUpType)} className="resend-btn">Resend</span>}</div>
-                </div>
+
                 {/* <button type='click' className='primary-btn' ref={OtpInpRef} onClick={() => verifySignupOTP(formData, signUpType, token)}>Submit</button> */}
                 {/* <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
                   <div className='tc-text'>Didn’t received the OTP? <br />
@@ -1635,6 +1740,13 @@ const SignIn = () => {
               </>}
 
               <button type='click' className='primary-btn' ref={OtpInpRef} onClick={() => verifySignupOTP(formData, signUpType, token)}>{isLocationCart ? 'Create My Account' : 'Create My Account & Enroll'}</button>
+              {(pageIndex == '4' && signUpType != 'mobile' && !isMobileVerified) &&
+                <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
+                  <div className='tc-text'>We regret if you haven&#39;t received the OTP, <br />  &nbsp;
+                    {secondsF != '0' && <> resend OTP in <span style={{ fontWeight: 'bold', textDecoration: 'none' }}> 00:{secondsF}</span> </>}
+                    {/* {secondsF > 9 ? 'seconds' : 'second'} */}
+                    {secondsF == '0' && <span onClick={() => sendSignupOTP(formData, signUpType)} className="resend-btn">Resend</span>}</div>
+                </div>}
             </>}
 
             {/* Signup OTP page */}
@@ -1646,7 +1758,7 @@ const SignIn = () => {
       <div className={pageIndex <= 2 ? "signin-banner img-1" : "signin-banner img-2"}>
       </div>
 
-    </div>
+    </div >
     // <div className='signin-container'>
     //   <InnerNavComponent abc={UserNav} />
     //   <div className='signin-form'>

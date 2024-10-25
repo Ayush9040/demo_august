@@ -1,15 +1,47 @@
 .signin-form {
     display: flex;
-    height: calc(100vh);
+    margin: 18px;
+    border-radius: 20px;
+    height: calc(100vh - 36px);
+    justify-content: center;
     overflow-y: hidden;
 
     .signin-container {
         width: 53.75%;
-        background: linear-gradient(180deg, #FFFFFF 0%, #FFECE7 100%);
+        max-width: 892px;
+        border: 2px solid #F0B2A2;
+        border-right: none;
+        border-radius: 20px 0 0 20px;
+        background:
+            linear-gradient(180deg, #FFFFFF 0%, #FFECE7 100%);
+        /* Linear gradient only */
+        position: relative;
+        /* Position for pseudo-element */
 
         .signin-logo {
             text-align: center;
             padding-top: 1.85rem;
+        }
+
+        .error-alert {
+            box-shadow: 0px 2px 15px 0px #0000001A;
+            border: 1px solid #DC354533;
+            width: max-content;
+            padding: 14px;
+            width: 364px;
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+            position: absolute;
+            margin: 0 0 0 12vw;
+        }
+
+        .wish-text-mob {
+            display: none;
+        }
+
+        .wish-text {
+            display: inline-block;
         }
 
         .form-inp {
@@ -55,9 +87,10 @@
             display: flex;
             // align-items: center;
             justify-content: center;
-            height: 74% !important;
-            margin-top: 10vh;
+            height: 78% !important;
+            margin-top: 8vh;
             overflow-y: auto !important;
+            // max-width: 400px;
 
             // Include scrollbar styles here to apply only to this container
             &::-webkit-scrollbar {
@@ -79,12 +112,14 @@
             .container {
                 width: 100%;
                 padding: 0 12rem;
+                max-width: 600px;
 
                 .back-nav {
                     font-size: 16px;
                     color: #181818;
                     font-weight: 400;
                     cursor: pointer;
+                    margin-bottom: 6vh !important;
 
                     .mobile {
                         display: none;
@@ -115,7 +150,7 @@
                     color: #181818;
                     font-weight: 500;
                     padding: 14px;
-                    background-color: #E9EEFE;
+                    background-color: #F6F2F2;
                     border-radius: 12px;
                     display: flex;
                     justify-content: center;
@@ -147,6 +182,7 @@
                     border: none;
                     border-radius: 40px;
                     cursor: pointer;
+                    // max-width: 400px;
                 }
 
                 .tc-text {
@@ -232,8 +268,34 @@
         }
     }
 
+    .signin-container::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        /* Position it at the bottom */
+        left: 50%;
+        /* Center it horizontally */
+        transform: translateX(-50%);
+        /* Adjust for centering */
+        background-image: url('../../../../../../../public/bg-img-sigin.png');
+        /* Background image */
+        background-size: 303px 126px;
+        /* Set the size of the image */
+        background-repeat: no-repeat;
+        /* Prevent the image from repeating */
+        width: 303px;
+        /* Width of the image */
+        height: 126px;
+        /* Height of the image */
+        opacity: 0.1;
+        /* Set opacity if needed */
+        z-index: 0;
+        /* Ensure it's behind other content */
+    }
+
     .signin-banner {
         width: 46.25%;
+        max-width: 848px;
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -275,10 +337,11 @@
                     padding: 2px 8px !important;
                 }
             }
+
             .signin-form .signin-container .style_verify {
                 padding: 2px 8px !important;
             }
-            
+
             .css-1oox8fc-control {
                 min-height: auto;
             }
@@ -288,6 +351,8 @@
             }
 
             .signin-details {
+                // height: 74% !important;
+                margin-top: 4vh !important;
                 .container {
                     // .back-nav {
                     //     // font-size: 1rem !important;
@@ -298,7 +363,7 @@
                     }
 
                     .sub-header {
-                        font-size: 1rem !important;
+                        font-size: 1.2rem !important;
                     }
 
                     .google-badge {
@@ -313,6 +378,7 @@
                     .primary-btn {
                         font-size: 1.125rem !important;
                         padding: 0.85rem 0 !important;
+                        // max-width: 300px;
                     }
 
                     .tc-text {
@@ -330,32 +396,72 @@
 
                     .resend-btn {
                         font-size: 1rem !important;
+                        margin-left: -130px !important;
                     }
                 }
             }
         }
     }
 }
+
+@media(max-width:1028px) {
+    .resend-btn {
+        font-size: 1rem !important;
+        margin-left: -90px !important;
+    }
+
+}
+
+@media(max-width:1440px) {
+    .container {
+        max-width: 700px !important;
+    }
+
+    .resend-btn {
+        margin-left: -80px !important;
+    }
+}
+
 @media(max-width:768px) {
     .signin-form {
         flex-direction: column-reverse;
         height: max-content;
         overflow-y: auto;
+        margin: 0 !important;
+        border-radius: 0 !important;
+
+        .wish-text-mob {
+            display: block !important;
+        }
+
+        .wish-text {
+            display: none !important;
+        }
 
         .signin-container {
             width: 100%;
             // height: fit-content !important;
             min-height: 74vh;
             // overflow-y: auto;
+            border: none;
+            border-radius: 0;
 
             .form-inp {
                 padding: 0.75rem !important;
             }
 
+
+
+            .ftr-btn {
+                position: absolute;
+                bottom: 28px;
+                margin-right: 20px;
+            }
+
             // height: 100%;
             .signin-details {
                 height: max-content !important;
-                margin: 2rem 0 2em 0;
+                margin: 2rem 1em 2em 1em;
                 // overflow-y: auto;
 
                 .container {
@@ -367,12 +473,16 @@
                     }
 
                     .sub-header {
-                        font-size: 12px;
+                        font-size: 14px !important;
+                    }
+
+                    .wish {
+                        font-size: 20px !important;
                     }
 
                     .google-badge {
                         font-size: 14px !important;
-                        padding: 0.85rem !important;
+                        padding: 12px !important;
                     }
 
                     .divider-container span {
@@ -392,9 +502,11 @@
                         font-size: 14px !important;
                         padding: 6px !important;
                     }
+
                     .custom_style_input_add .form-content form label input {
                         font-size: 14px !important;
                     }
+
                     .inp-group {
                         // display: flex;
                         // gap: 1rem;
@@ -407,11 +519,13 @@
                             font-size: 14px !important;
 
                         }
+
                         #state {
                             width: 100% !important;
                             font-size: 14px !important;
 
                         }
+
                         #city {
                             width: 100% !important;
                             font-size: 14px !important;
@@ -427,7 +541,8 @@
                     .primary-btn {
                         font-size: 18px !important;
                         font-weight: 500;
-                        padding: 0.85rem 0 !important;
+                        padding: 12px 0 !important;
+                        width: 90vw !important;
                     }
 
                     .tc-text {
@@ -464,6 +579,10 @@
                     }
                 }
             }
+
+            .f-height {
+                min-height: calc(87.2vh) !important;
+            }
         }
     }
 
@@ -473,8 +592,18 @@
     }
 
     .img-2 {
-        background-image: url('../../../../../../../public/images/signin-two-mob.svg') !important;
+        // background-image: url('../../../../../../../public/images/signin-two-mob.svg') !important;
+        display: none;
     }
+
+    .verify_text {
+        font-size: 13px !important;
+    }
+
+    .error-alert {
+        display: none !important;
+    }
+
 }
 
 
@@ -483,7 +612,7 @@
     font-size: 16px;
     border: none;
     background: no-repeat;
-    width: auto;
+    width: 100%;
     text-align: left;
 }
 
@@ -509,6 +638,7 @@
     width: 100%;
     font-size: 16px;
     color: #000000;
+
 }
 
 .signin-form .signin-container .signin-details .container .inp-group #state {
@@ -566,9 +696,10 @@
 }
 
 .verify_text {
-    color: red;
+    color: #FF3B30;
     font-size: 16px;
     cursor: pointer;
+    padding-right: 6px;
 }
 
 .signin-form .signin-container .margin-top {
@@ -637,13 +768,13 @@
         // font-size: 14px;
         // padding: 7px !important;
     }
-    
+
     .signin-form .signin-container .signin-details .container .inp-group #state {
         // width: 100%;
         // font-size: 14px;
         // padding: 7px !important;
     }
-    
+
     .signin-form .signin-container .signin-details .container .inp-group #city {
         // width: 100%;
         // font-size: 14px;
@@ -689,7 +820,7 @@
     .country_signup {
         width: 41%;
     }
-    
+
     .state_signup {
         width: 41%;
     }
@@ -715,7 +846,7 @@
     margin-bottom: 20px;
 }
 
-.css-85pnul-control{
+.css-85pnul-control {
     border-radius: 30px !important;
 }
 
@@ -739,7 +870,7 @@
         font-size: 1rem;
     }
 
-    .signin-form .signin-container .form-inp .custom-phone-input input{
+    .signin-form .signin-container .form-inp .custom-phone-input input {
         font-size: 1rem;
     }
 

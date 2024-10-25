@@ -1,27 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=UA-76029695-1"
-    ></script>
-    <script async>
-      ;(function (w, d, s, l, i) {
-        w[l] = w[l] || []
-        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' })
-        var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s),
-          dl = l != 'dataLayer' ? '&l=' + l : ''
-        j.async = true
-        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl
-        f.parentNode.insertBefore(j, f)
-        console.log(w, d, s, l, i)
-      })(window, document, 'script', 'dataLayer', 'GTM-MCV83ML')
-    </script>
-    <script src="https://cdn.jsdelivr.net/gh/Joe12387/detectIncognito@main/dist/es5/detectIncognito.min.js"></script>
-     <!-- <script type="text/javascript">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-76029695-1"></script>
+  <script async>
+    ; (function (w, d, s, l, i) {
+      w[l] = w[l] || []
+      w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' })
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != 'dataLayer' ? '&l=' + l : ''
+      j.async = true
+      j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl
+      f.parentNode.insertBefore(j, f)
+      console.log(w, d, s, l, i)
+    })(window, document, 'script', 'dataLayer', 'GTM-MCV83ML')
+  </script>
+  <script src="https://cdn.jsdelivr.net/gh/Joe12387/detectIncognito@main/dist/es5/detectIncognito.min.js"></script>
+  <!-- <script type="text/javascript">
       var clevertap = {event:[], profile:[], account:[], onUserLogin:[], notifications:[], privacy:[]};
       clevertap.account.push({"id": "TEST-96Z-ZZ9-9Z7Z"}); // Replace with your account ID
       clevertap.privacy.push({optOut: false});
@@ -43,159 +41,157 @@
       })();
     </script> -->
 
-    <script type="text/javascript">
-      var clevertap = {event:[], profile:[], account:[], onUserLogin:[], notifications:[], privacy:[]};
-  // replace with the CLEVERTAP_ACCOUNT_ID with the actual ACCOUNT ID value from your Dashboard -> Settings page
- clevertap.account.push({ "id": "TEST-96Z-ZZ9-9Z7Z" }, "eu1");
- clevertap.privacy.push({optOut: false}); //set the flag to true, if the user of the device opts out of sharing their data
- clevertap.privacy.push({useIP: true}); //set the flag to true, if the user agrees to share their IP data
-  (function () {
+  <script type="text/javascript">
+    var clevertap = { event: [], profile: [], account: [], onUserLogin: [], notifications: [], privacy: [] };
+    // replace with the CLEVERTAP_ACCOUNT_ID with the actual ACCOUNT ID value from your Dashboard -> Settings page
+    clevertap.account.push({ "id": "TEST-96Z-ZZ9-9Z7Z" }, "eu1");
+    clevertap.privacy.push({ optOut: false }); //set the flag to true, if the user of the device opts out of sharing their data
+    clevertap.privacy.push({ useIP: true }); //set the flag to true, if the user agrees to share their IP data
+    (function () {
       var wzrk = document.createElement('script');
       wzrk.type = 'text/javascript';
       wzrk.async = true;
       wzrk.src = ('https:' == document.location.protocol ? 'https://d2r1yp2w7bby2u.cloudfront.net' : 'http://static.clevertap.com') + '/js/clevertap.min.js';
       var s = document.getElementsByTagName('script')[0];
       s.parentNode.insertBefore(wzrk, s);
-   })();
- </script>
+    })();
+  </script>
 
-<script>
-  const requestNotificationPermission = (data) => {
-  
-  clevertap.notifications.push({
-	"apnsWebPushId": '<apple web push id>',
-	"apnsWebPushServiceUrl": '<safari package service url>', 
-   	"titleText":(data && data.data && data.data.titleText) ? data.data.titleText : 'Would you like to receive Push Notifications?',
-   	"bodyText": (data && data.data && data.data.bodyText) ? data.data.bodyText : 'We promise to only send you relevant content and give you updates',
-   	"okButtonText":(data && data.data && data.data.okButtonText) ? data.data.okButtonText : 'Sign me up!',
-   	"rejectButtonText":(data && data.data && data.data.rejectButtonText) ? data.data.rejectButtonText : 'No thanks',
-   	"okButtonColor":'#F28046',
-   	"askAgainTimeInSeconds": 5,
-  	"serviceWorkerPath": "./clevertap_sw.js"
-  });
-};
+  <script>
+    const requestNotificationPermission = (data) => {
 
-// Call this function when you want to prompt the user
-// requestNotificationPermission();
+      clevertap.notifications.push({
+        "apnsWebPushId": '<apple web push id>',
+        "apnsWebPushServiceUrl": '<safari package service url>',
+        "titleText": (data && data.data && data.data.titleText) ? data.data.titleText : 'Would you like to receive Push Notifications?',
+        "bodyText": (data && data.data && data.data.bodyText) ? data.data.bodyText : 'We promise to only send you relevant content and give you updates',
+        "okButtonText": (data && data.data && data.data.okButtonText) ? data.data.okButtonText : 'Sign me up!',
+        "rejectButtonText": (data && data.data && data.data.rejectButtonText) ? data.data.rejectButtonText : 'No thanks',
+        "okButtonColor": '#F28046',
+        "askAgainTimeInSeconds": 5,
+        "serviceWorkerPath": "./clevertap_sw.js"
+      });
+    };
 
-
-  // Function to check if the devic is mobile
-  const isMobileDevice = () => {
-    return /Mobi|Android|iPhone|iPad|iPod/.test(navigator.userAgent) || window.matchMedia("(max-width: 768px)").matches;
-  };
+    // Call this function when you want to prompt the user
+    // requestNotificationPermission();
 
 
- // Function to check is_enabled froms admin panel API
- const checkPushNotificationStatus = async () => {
-    try {
-      const response = await fetch('https://tyi-test.theyogainstitute.org/auth-api/v2/system-config/clevertap-webpush');
+    // Function to check if the devic is mobile
+    const isMobileDevice = () => {
+      return /Mobi|Android|iPhone|iPad|iPod/.test(navigator.userAgent) || window.matchMedia("(max-width: 768px)").matches;
+    };
 
-      
 
-     
-    
-    // Log if response is received
-    console.log('API response received');
-    
-    if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
+    // Function to check is_enabled froms admin panel API
+    const checkPushNotificationStatus = async () => {
+      try {
+        const response = await fetch('https://tyi-test.theyogainstitute.org/auth-api/v2/system-config/clevertap-webpush');
+
+
+
+
+
+        // Log if response is received
+        console.log('API response received');
+
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
+        const data = await response.json(); // Parse the JSON response
+        // console.log('API Data:', data.data.isEnabled); // Log API response data
+        const ifEnable = data.data.isEnabled;
+
+        // Now, detect incognito mode and proceed accordingly
+        const incognitoResult = await detectIncognito(); // Wait for the result of incognito detection
+        const isPrivate = incognitoResult.isPrivate;
+
+        // Log to see if incognito detection works
+        console.log(`Browser: ${incognitoResult.browserName}, IsPrivate: ${isPrivate}`);
+
+        // Check if `is_enabled` is true and show the notification
+        if (ifEnable && !isMobileDevice() && !isPrivate) {
+          console.log('Push notifications are enabled, waiting 30 seconds...');
+          setTimeout(() => {
+            requestNotificationPermission(data); // Show push notification after 30 seconds
+          }, 30000);
+        } else {
+          console.log('Push notifications are disabled by admin.');
+        }
+      } catch (error) {
+        console.error('Error fetching push notification status from API:', error);
+      }
+    };
+
+    // Call the function to check notification status
+    checkPushNotificationStatus();
+
+  </script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta http-equiv="ScreenOrientation" content="autoRotate:disabled" />
+  <!-- <script src="https://checkout.razorpay.com/v1/checkout.js"></script> -->
+</head>
+
+<body>
+  <style>
+    .meta-heading {
+      clip: rect(1px, 1px, 1px, 1px);
+      height: 1px;
+      overflow: hidden;
+      position: absolute;
+      white-space: nowrap;
+      width: 1px;
     }
-
-    const data = await response.json(); // Parse the JSON response
-    // console.log('API Data:', data.data.isEnabled); // Log API response data
-      const ifEnable =  data.data.isEnabled;
-
-      // Now, detect incognito mode and proceed accordingly
-    const incognitoResult = await detectIncognito(); // Wait for the result of incognito detection
-    const isPrivate = incognitoResult.isPrivate;
-
-    // Log to see if incognito detection works
-    console.log(`Browser: ${incognitoResult.browserName}, IsPrivate: ${isPrivate}`);
-      
-      // Check if `is_enabled` is true and show the notification
-      if (ifEnable && !isMobileDevice() && !isPrivate) {
-        console.log('Push notifications are enabled, waiting 30 seconds...');
-        setTimeout(() => {
-          requestNotificationPermission(data); // Show push notification after 30 seconds
-        }, 30000);
-      } else {
-        console.log('Push notifications are disabled by admin.');
-      }
-    } catch (error) {
-      console.error('Error fetching push notification status from API:', error);
+  </style>
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MCV83ML" height="0" width="0"
+      style="display: none; visibility: hidden">
+    </iframe>
+  </noscript>
+  <div id="root"></div>
+  <script async>
+    var url =
+      'https://wati-integration-service.clare.ai/ShopifyWidget/shopifyWidget.js?25511'
+    var s = document.createElement('script')
+    s.type = 'text/javascript'
+    s.async = true
+    s.src = url
+    var options = {
+      enabled: true,
+      chatButtonSetting: {
+        backgroundColor: '#4dc247',
+        ctaText: '',
+        borderRadius: '25',
+        marginLeft: '0',
+        marginBottom: '85',
+        marginRight: '15',
+        position: 'right',
+      },
+      brandSetting: {
+        brandName: 'The Yoga Institute',
+        brandSubTitle: 'Typically replies within a day',
+        brandImg:
+          'https://ecom-static-site-prod.s3.ap-south-1.amazonaws.com/mainLogo.jpg',
+        welcomeText: 'Namaste!\nHow can we help you?',
+        messageText: 'Hello, I have a question about {{page_link}}',
+        backgroundColor: '#0a5f54',
+        ctaText: 'Start Chat',
+        borderRadius: '25',
+        autoShow: false,
+        phoneNumber: '917738155500',
+      },
     }
-  };
+    s.onload = function () {
+      CreateWhatsappChatWidget(options)
+    }
+    var x = document.getElementsByTagName('script')[0]
+    setTimeout(() => {
+      x.parentNode.insertBefore(s, x)
+    }, 10000)
+  </script>
+</body>
 
-  // Call the function to check notification status
-  checkPushNotificationStatus();
-
- </script> 
-  
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta http-equiv="ScreenOrientation" content="autoRotate:disabled" />
-    <!-- <script src="https://checkout.razorpay.com/v1/checkout.js"></script> -->
-  </head>
-  <body>
-    <style>
-      .meta-heading {
-        clip: rect(1px, 1px, 1px, 1px);
-        height: 1px;
-        overflow: hidden;
-        position: absolute;
-        white-space: nowrap;
-        width: 1px;
-      }
-    </style>
-    <noscript>
-      <iframe
-        src="https://www.googletagmanager.com/ns.html?id=GTM-MCV83ML"
-        height="0"
-        width="0"
-        style="display: none; visibility: hidden"
-      >
-      </iframe>
-    </noscript>
-    <div id="root"></div>
-    <script async>
-      var url =
-        'https://wati-integration-service.clare.ai/ShopifyWidget/shopifyWidget.js?25511'
-      var s = document.createElement('script')
-      s.type = 'text/javascript'
-      s.async = true
-      s.src = url
-      var options = {
-        enabled: true,
-        chatButtonSetting: {
-          backgroundColor: '#4dc247',
-          ctaText: '',
-          borderRadius: '25',
-          marginLeft: '0',
-          marginBottom: '85',
-          marginRight: '15',
-          position: 'right',
-        },
-        brandSetting: {
-          brandName: 'The Yoga Institute',
-          brandSubTitle: 'Typically replies within a day',
-          brandImg:
-            'https://ecom-static-site-prod.s3.ap-south-1.amazonaws.com/mainLogo.jpg',
-          welcomeText: 'Namaste!\nHow can we help you?',
-          messageText: 'Hello, I have a question about {{page_link}}',
-          backgroundColor: '#0a5f54',
-          ctaText: 'Start Chat',
-          borderRadius: '25',
-          autoShow: false,
-          phoneNumber: '917738155500',
-        },
-      }
-      s.onload = function () {
-        CreateWhatsappChatWidget(options)
-      }
-      var x = document.getElementsByTagName('script')[0]
-      setTimeout(() => {
-        x.parentNode.insertBefore(s, x)
-      }, 10000)
-    </script>
-  </body>
 </html>
