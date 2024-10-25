@@ -46,7 +46,7 @@
     <script type="text/javascript">
       var clevertap = {event:[], profile:[], account:[], onUserLogin:[], notifications:[], privacy:[]};
   // replace with the CLEVERTAP_ACCOUNT_ID with the actual ACCOUNT ID value from your Dashboard -> Settings page
- clevertap.account.push({ "id": "TEST-96Z-ZZ9-9Z7Z" }, "eu1");
+ clevertap.account.push({ "id": "86Z-ZZ9-9Z7Z" }, "eu1");
  clevertap.privacy.push({optOut: false}); //set the flag to true, if the user of the device opts out of sharing their data
  clevertap.privacy.push({useIP: true}); //set the flag to true, if the user agrees to share their IP data
   (function () {
@@ -88,7 +88,7 @@
  // Function to check is_enabled froms admin panel API
  const checkPushNotificationStatus = async () => {
     try {
-      const response = await fetch('https://tyi-test.theyogainstitute.org/auth-api/v2/system-config/clevertap-webpush');
+      const response = await fetch('https://authserver-prod-be.theyogainstitute.org/v2/system-config/clevertap-webpush');
 
       
 

@@ -101,18 +101,20 @@ const SignIn = () => {
   };
 
   // After login get the user details and update redux
-  const getUserDetails = async (token) => {
+  const getUserDetails = async (token, ctEventValue) => {
     try {
       const response = await axios.get(`${authBaseDomain}/user/me`, {
         headers: {
           'Authorization': `Bearer ${token}`
         }
       });
+      if(ctEventValue === 'alreadySignedUp') {
+        handleAlreadySignedUpUser({
+          phone: response?.data?.data?.phoneNumber
+        })
+      }
       localStorage.setItem('userAppId', response?.data.data?._id)//to pass
       // console.log("response?.data.data?._id :", response?.data?.data?.phoneNumber)
-      handleAlreadySignedUpUser({
-        phone: response?.data?.data?.phoneNumber
-      })
       //update user details to Redux 
       dispatch(loginUserSuccess({ type: 'auth/LOGIN_USER_SUCCESS', data: response?.data?.data }))
     } catch (error) {
@@ -142,10 +144,10 @@ const SignIn = () => {
           // document.cookie = `authorizationToken=${response?.data?.accessToken}; path=/;`; // Expires in 1 hour
 
           dispatch(loginUserSuccess({}))
-          handleAlreadySignedUpUser({
-            phone: userDetails?.phoneNumber
-          })
-          getUserDetails(response?.data?.accessToken)
+          // handleAlreadySignedUpUser({
+          //   phone: userDetails?.phoneNumber
+          // })
+          getUserDetails(response?.data?.accessToken, 'alreadySignedUp')
           page ? page !== 'cart' ? navigate(`/enrollment/${page}`) : navigate('/shop/checkout') : navigate('/')
         }
         setOtp(new Array(4).fill(""))//clear OTP
@@ -195,7 +197,7 @@ const SignIn = () => {
             // document.cookie = `authorizationToken=${response?.data?.accessToken}; path=/;`;
             dispatch(loginUserSuccess({}))
 
-            getUserDetails(response?.data?.accessToken)
+            getUserDetails(response?.data?.accessToken, 'notalreadySignedUp')
             callCTEvent(payload)
             page ? page !== 'cart' ? navigate(`/enrollment/${page}`) : navigate('/shop/checkout') : navigate('/')
           }
@@ -220,7 +222,7 @@ const SignIn = () => {
             localStorage.setItem('authorizationToken', response?.data?.accessToken)
             localStorage.setItem('refreshToken', response?.data?.refreshToken)
             dispatch(loginUserSuccess({}))
-            getUserDetails(response?.data?.accessToken)
+            getUserDetails(response?.data?.accessToken, 'notalreadySignedUp')
             callCTEvent(payload)
 
             // console.log('user details 2 ', userDetails);
@@ -610,7 +612,7 @@ const SignIn = () => {
           localStorage.setItem('authorizationToken', response?.data?.accessToken)
           localStorage.setItem('refreshToken', response?.data?.refreshToken)
           dispatch(loginUserSuccess({}))
-          getUserDetails(response?.data?.accessToken)
+          getUserDetails(response?.data?.accessToken, 'alreadySignedUp')
           console.log(response?.data)
 
           page ? page !== 'cart' ? navigate(`/enrollment/${page}`) : navigate('/shop/checkout') : navigate('/')
