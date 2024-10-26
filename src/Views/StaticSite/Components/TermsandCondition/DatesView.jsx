@@ -71,7 +71,7 @@ const DatesView = ({ pageDate }) => {
           {/* <div className='bottom-line'></div> */}
         </div>
       </div>
-      <form className="residential-form check_course" style={{ width: '100%'}}>
+      <form className="residential-form check_course check_date" style={{ width: '100%'}}>
             <div className="last_radio_button " style={{ display: 'flex', gap: '2rem', flexWrap: 'wrap' }}>
 
                 {
@@ -93,7 +93,7 @@ const DatesView = ({ pageDate }) => {
                               <br />    
                               {/* <small id="delivery-0-shipping" class="item-shipping">5–10 business days</small> */}
                             </span>
-                            <span class="item-info item_desc">
+                            <span class="item-info item_desc item_padding">
                               <span id="delivery-0-name" class="item-name date_info"><img src='/images/courseMode.svg' /><span className='style_dates'>{courseMode}</span></span>
                               <br />    
                               {/* <small id="delivery-0-shipping" class="item-shipping">5–10 business days</small> */}
@@ -117,7 +117,7 @@ const DatesView = ({ pageDate }) => {
           </form>
 
           <div className='date_enroll_btn'>
-            <button className='date_enroll_btn_txt' onClick={handleEnrollClick} style={{ fontSize: '14px', fontWeight: '500', color: '#fff'}}>Enroll Course <img style={{marginLeft: '8px'}} src='/images/enroll_btn_icon.svg' /></button>
+            <button className={!selectedDate ? 'date_enroll_btn_txt before_date_select' : 'date_enroll_btn_txt after_date_select'} onClick={handleEnrollClick} disabled={!selectedDate}>Enroll Course <img style={{marginLeft: '8px'}} src='/images/enroll_btn_icon.svg' /></button>
           </div>
       {/* <div className='terms-and-conditions'>
         {data.map((value) => {
