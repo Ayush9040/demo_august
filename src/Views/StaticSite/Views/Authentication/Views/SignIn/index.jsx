@@ -25,7 +25,189 @@ import { handleCTSignIn, handleAlreadySignedUpUser } from '../../../../../../Cle
 import InputComponent from '../../../../Components/InputComponent'
 import { LoadScript, Autocomplete } from '@react-google-maps/api';
 import { useLocation } from 'react-router-dom';
-
+const countriesMap = [
+  { label: 'Afghanistan', value: '+93', flag: '🇦🇫' },
+  { label: 'Albania', value: '+355', flag: '🇦🇱' },
+  { label: 'Algeria', value: '+213', flag: '🇩🇿' },
+  { label: 'Andorra', value: '+376', flag: '🇦🇩' },
+  { label: 'Angola', value: '+244', flag: '🇦🇴' },
+  { label: 'Antigua and Barbuda', value: '+1-268', flag: '🇦🇬' },
+  { label: 'Argentina', value: '+54', flag: '🇦🇷' },
+  { label: 'Armenia', value: '+374', flag: '🇦🇲' },
+  { label: 'Australia', value: '+61', flag: '🇦🇺' },
+  { label: 'Austria', value: '+43', flag: '🇦🇹' },
+  { label: 'Azerbaijan', value: '+994', flag: '🇦🇿' },
+  { label: 'Bahamas', value: '+1-242', flag: '🇧🇸' },
+  { label: 'Bahrain', value: '+973', flag: '🇧🇭' },
+  { label: 'Bangladesh', value: '+880', flag: '🇧🇩' },
+  { label: 'Barbados', value: '+1-246', flag: '🇧🇧' },
+  { label: 'Belarus', value: '+375', flag: '🇧🇾' },
+  { label: 'Belgium', value: '+32', flag: '🇧🇪' },
+  { label: 'Belize', value: '+501', flag: '🇧🇿' },
+  { label: 'Benin', value: '+229', flag: '🇧🇯' },
+  { label: 'Bhutan', value: '+975', flag: '🇧🇹' },
+  { label: 'Bolivia', value: '+591', flag: '🇧🇴' },
+  { label: 'Bosnia and Herzegovina', value: '+387', flag: '🇧🇦' },
+  { label: 'Botswana', value: '+267', flag: '🇧🇼' },
+  { label: 'Brazil', value: '+55', flag: '🇧🇷' },
+  { label: 'Brunei', value: '+673', flag: '🇧🇳' },
+  { label: 'Bulgaria', value: '+359', flag: '🇧🇬' },
+  { label: 'Burkina Faso', value: '+226', flag: '🇧🇫' },
+  { label: 'Burundi', value: '+257', flag: '🇧🇮' },
+  { label: 'Cabo Verde', value: '+238', flag: '🇨🇻' },
+  { label: 'Cambodia', value: '+855', flag: '🇰🇭' },
+  { label: 'Cameroon', value: '+237', flag: '🇨🇲' },
+  { label: 'Canada', value: '+1', flag: '🇨🇦' },
+  { label: 'Central African Republic', value: '+236', flag: '🇨🇫' },
+  { label: 'Chad', value: '+235', flag: '🇹🇩' },
+  { label: 'Chile', value: '+56', flag: '🇨🇱' },
+  { label: 'China', value: '+86', flag: '🇨🇳' },
+  { label: 'Colombia', value: '+57', flag: '🇨🇴' },
+  { label: 'Comoros', value: '+269', flag: '🇰🇲' },
+  { label: 'Congo (Congo-Brazzaville)', value: '+242', flag: '🇨🇬' },
+  { label: 'Congo (DRC)', value: '+243', flag: '🇨🇩' },
+  { label: 'Costa Rica', value: '+506', flag: '🇨🇷' },
+  { label: 'Croatia', value: '+385', flag: '🇭🇷' },
+  { label: 'Cuba', value: '+53', flag: '🇨🇺' },
+  { label: 'Cyprus', value: '+357', flag: '🇨🇾' },
+  { label: 'Czechia (Czech Republic)', value: '+420', flag: '🇨🇿' },
+  { label: 'Denmark', value: '+45', flag: '🇩🇰' },
+  { label: 'Djibouti', value: '+253', flag: '🇩🇯' },
+  { label: 'Dominica', value: '+1-767', flag: '🇩🇲' },
+  { label: 'Dominican Republic', value: '+1-809', flag: '🇩🇴' },
+  { label: 'Ecuador', value: '+593', flag: '🇪🇨' },
+  { label: 'Egypt', value: '+20', flag: '🇪🇬' },
+  { label: 'El Salvador', value: '+503', flag: '🇸🇻' },
+  { label: 'Equatorial Guinea', value: '+240', flag: '🇬🇶' },
+  { label: 'Eritrea', value: '+291', flag: '🇪🇷' },
+  { label: 'Estonia', value: '+372', flag: '🇪🇪' },
+  { label: 'Eswatini', value: '+268', flag: '🇸🇿' },
+  { label: 'Ethiopia', value: '+251', flag: '🇪🇹' },
+  { label: 'Fiji', value: '+679', flag: '🇫🇯' },
+  { label: 'Finland', value: '+358', flag: '🇫🇮' },
+  { label: 'France', value: '+33', flag: '🇫🇷' },
+  { label: 'Gabon', value: '+241', flag: '🇬🇦' },
+  { label: 'Gambia', value: '+220', flag: '🇬🇲' },
+  { label: 'Georgia', value: '+995', flag: '🇬🇪' },
+  { label: 'Germany', value: '+49', flag: '🇩🇪' },
+  { label: 'Ghana', value: '+233', flag: '🇬🇭' },
+  { label: 'Greece', value: '+30', flag: '🇬🇷' },
+  { label: 'Grenada', value: '+1-473', flag: '🇬🇩' },
+  { label: 'Guatemala', value: '+502', flag: '🇬🇹' },
+  { label: 'Guinea', value: '+224', flag: '🇬🇳' },
+  { label: 'Guinea-Bissau', value: '+245', flag: '🇬🇼' },
+  { label: 'Guyana', value: '+592', flag: '🇬🇾' },
+  { label: 'Haiti', value: '+509', flag: '🇭🇹' },
+  { label: 'Honduras', value: '+504', flag: '🇭🇳' },
+  { label: 'Hungary', value: '+36', flag: '🇭🇺' },
+  { label: 'Iceland', value: '+354', flag: '🇮🇸' },
+  { label: 'India', value: '+91', flag: '🇮🇳' },
+  { label: 'Indonesia', value: '+62', flag: '🇮🇩' },
+  { label: 'Iran', value: '+98', flag: '🇮🇷' },
+  { label: 'Iraq', value: '+964', flag: '🇮🇶' },
+  { label: 'Ireland', value: '+353', flag: '🇮🇪' },
+  { label: 'Israel', value: '+972', flag: '🇮🇱' },
+  { label: 'Italy', value: '+39', flag: '🇮🇹' },
+  { label: 'Ivory Coast', value: '+225', flag: '🇨🇮' },
+  { label: 'Jamaica', value: '+1-876', flag: '🇯🇲' },
+  { label: 'Japan', value: '+81', flag: '🇯🇵' },
+  { label: 'Jordan', value: '+962', flag: '🇯🇴' },
+  { label: 'Kazakhstan', value: '+7', flag: '🇰🇿' },
+  { label: 'Kenya', value: '+254', flag: '🇰🇪' },
+  { label: 'Kiribati', value: '+686', flag: '🇰🇮' },
+  { label: 'Kuwait', value: '+965', flag: '🇰🇼' },
+  { label: 'Kyrgyzstan', value: '+996', flag: '🇰🇬' },
+  { label: 'Laos', value: '+856', flag: '🇱🇦' },
+  { label: 'Latvia', value: '+371', flag: '🇱🇻' },
+  { label: 'Lebanon', value: '+961', flag: '🇱🇧' },
+  { label: 'Lesotho', value: '+266', flag: '🇱🇸' },
+  { label: 'Liberia', value: '+231', flag: '🇱🇷' },
+  { label: 'Libya', value: '+218', flag: '🇱🇾' },
+  { label: 'Liechtenstein', value: '+423', flag: '🇱🇮' },
+  { label: 'Lithuania', value: '+370', flag: '🇱🇹' },
+  { label: 'Luxembourg', value: '+352', flag: '🇱🇺' },
+  { label: 'Madagascar', value: '+261', flag: '🇲🇬' },
+  { label: 'Malawi', value: '+265', flag: '🇲🇼' },
+  { label: 'Malaysia', value: '+60', flag: '🇲🇾' },
+  { label: 'Maldives', value: '+960', flag: '🇲🇻' },
+  { label: 'Mali', value: '+223', flag: '🇲🇱' },
+  { label: 'Malta', value: '+356', flag: '🇲🇹' },
+  { label: 'Marshall Islands', value: '+692', flag: '🇲🇭' },
+  { label: 'Mauritania', value: '+222', flag: '🇲🇷' },
+  { label: 'Mauritius', value: '+230', flag: '🇲🇺' },
+  { label: 'Mexico', value: '+52', flag: '🇲🇽' },
+  { label: 'Micronesia', value: '+691', flag: '🇫🇲' },
+  { label: 'Moldova', value: '+373', flag: '🇲🇩' },
+  { label: 'Monaco', value: '+377', flag: '🇲🇨' },
+  { label: 'Mongolia', value: '+976', flag: '🇲🇳' },
+  { label: 'Montenegro', value: '+382', flag: '🇲🇪' },
+  { label: 'Morocco', value: '+212', flag: '🇲🇦' },
+  { label: 'Mozambique', value: '+258', flag: '🇲🇿' },
+  { label: 'Myanmar', value: '+95', flag: '🇲🇲' },
+  { label: 'Namibia', value: '+264', flag: '🇳🇦' },
+  { label: 'Nauru', value: '+674', flag: '🇳🇷' },
+  { label: 'Nepal', value: '+977', flag: '🇳🇵' },
+  { label: 'Netherlands', value: '+31', flag: '🇳🇱' },
+  { label: 'New Zealand', value: '+64', flag: '🇳🇿' },
+  { label: 'Nicaragua', value: '+505', flag: '🇳🇮' },
+  { label: 'Niger', value: '+227', flag: '🇳🇪' },
+  { label: 'Nigeria', value: '+234', flag: '🇳🇬' },
+  { label: 'North Macedonia', value: '+389', flag: '🇲🇰' },
+  { label: 'Norway', value: '+47', flag: '🇳🇴' },
+  { label: 'Oman', value: '+968', flag: '🇴🇲' },
+  { label: 'Pakistan', value: '+92', flag: '🇵🇰' },
+  { label: 'Palau', value: '+680', flag: '🇵🇼' },
+  { label: 'Panama', value: '+507', flag: '🇵🇦' },
+  { label: 'Papua New Guinea', value: '+675', flag: '🇵🇬' },
+  { label: 'Paraguay', value: '+595', flag: '🇵🇾' },
+  { label: 'Peru', value: '+51', flag: '🇵🇪' },
+  { label: 'Philippines', value: '+63', flag: '🇵🇭' },
+  { label: 'Poland', value: '+48', flag: '🇵🇱' },
+  { label: 'Portugal', value: '+351', flag: '🇵🇹' },
+  { label: 'Qatar', value: '+974', flag: '🇶🇦' },
+  { label: 'Romania', value: '+40', flag: '🇷🇴' },
+  { label: 'Russia', value: '+7', flag: '🇷🇺' },
+  { label: 'Rwanda', value: '+250', flag: '🇷🇼' },
+  { label: 'Saint Kitts and Nevis', value: '+1-869', flag: '🇰🇳' },
+  { label: 'Saint Lucia', value: '+1-758', flag: '🇱🇨' },
+  { label: 'Saint Vincent and the Grenadines', value: '+1-784', flag: '🇻🇨' },
+  { label: 'Samoa', value: '+685', flag: '🇼🇸' },
+  { label: 'San Marino', value: '+378', flag: '🇸🇲' },
+  { label: 'Sao Tome and Principe', value: '+239', flag: '🇸🇹' },
+  { label: 'Saudi Arabia', value: '+966', flag: '🇸🇦' },
+  { label: 'Senegal', value: '+221', flag: '🇸🇳' },
+  { label: 'Serbia', value: '+381', flag: '🇷🇸' },
+  { label: 'Seychelles', value: '+248', flag: '🇸🇨' },
+  { label: 'Sierra Leone', value: '+232', flag: '🇸🇱' },
+  { label: 'Singapore', value: '+65', flag: '🇸🇬' },
+  { label: 'Slovakia', value: '+421', flag: '🇸🇰' },
+  { label: 'Slovenia', value: '+386', flag: '🇸🇮' },
+  { label: 'Solomon Islands', value: '+677', flag: '🇸🇧' },
+  { label: 'Somalia', value: '+252', flag: '🇸🇴' },
+  { label: 'South Africa', value: '+27', flag: '🇿🇦' },
+  { label: 'South Korea', value: '+82', flag: '🇰🇷' },
+  { label: 'South Sudan', value: '+211', flag: '🇸🇸' },
+  { label: 'Spain', value: '+34', flag: '🇪🇸' },
+  { label: 'Sri Lanka', value: '+94', flag: '🇱🇰' },
+  { label: 'Sudan', value: '+249', flag: '🇸🇩' },
+  { label: 'Suriname', value: '+597', flag: '🇸🇷' },
+  { label: 'Sweden', value: '+46', flag: '🇸🇪' },
+  { label: 'Switzerland', value: '+41', flag: '🇨🇭' },
+  { label: 'Syria', value: '+963', flag: '🇸🇾' },
+  { label: 'Taiwan', value: '+886', flag: '🇹🇼' },
+  { label: 'Tajikistan', value: '+992', flag: '🇹🇯' },
+  { label: 'Tanzania', value: '+255', flag: '🇹🇿' },
+  { label: 'Thailand', value: '+66', flag: '🇹🇭' },
+  { label: 'Timor-Leste', value: '+670', flag: '🇹🇱' },
+  { label: 'Togo', value: '+228', flag: '🇹🇬' },
+  { label: 'Tonga', value: '+676', flag: '🇹🇴' },
+  { label: 'Trinidad and Tobago', value: '+1-868', flag: '🇹🇹' },
+  { label: 'Tunisia', value: '+216', flag: '🇹🇳' },
+  { label: 'Turkey', value: '+90', flag: '🇹🇷' },
+  { label: 'Turkmenistan', value: '+993', flag: '🇹🇲' },
+  { label: 'Tuvalu', value: '+688', flag: '🇹🇻' },
+  { label: 'Uganda', value: '+256', flag: '🇺🇬' },
+]
 
 const libraries = ['places'];
 const mapKey = 'AIzaSyCArozsi_1fWJgSwDFDAoA_6Q5zLZ7NYyA';
@@ -672,12 +854,11 @@ const SignIn = () => {
   const handlePhoneChange = (value) => {
     // setPhoneValue(value);
     setFormData({ ...formData, phoneNumber: value });
-    if (value) {
-      const phoneNumber = parsePhoneNumber(value);
-      // console.log(phoneNumber);
-      setPhoneNumber({ dialCode: phoneNumber?.countryCallingCode, mobile: phoneNumber?.nationalNumber })
-
-    }
+    // if (value) {
+    //   const phoneNumber = parsePhoneNumber(value);
+    //   // console.log(phoneNumber);
+    //   setPhoneNumber({ dialCode: phoneNumber?.countryCallingCode, mobile: phoneNumber?.nationalNumber })
+    // }
   };
   const [isAlreadyRegistered, SetIsAlreadyRegistered] = useState(false)
   const validatePhoneNumber = (phoneNumber) => {
@@ -1259,8 +1440,7 @@ const SignIn = () => {
                 <span>Or</span>
               </div>
               <div className='inp-label'>Mobile Number <span>*</span></div>
-              <div className={formData?.errorIndex == 1 ? "form-inp err-inp" : "form-inp"}>
-                {/*  err-inp */}
+              {/* <div className={formData?.errorIndex == 1 ? "form-inp err-inp" : "form-inp"}>
                 <PhoneInput
                   value={formData.phoneNumber}
                   placeholder="Enter your Mobile number"
@@ -1268,6 +1448,52 @@ const SignIn = () => {
                   className="custom-phone-input"
                   onChange={handlePhoneChange}
                 />
+              </div> */}
+
+              {/* <PhoneInput
+                country={'us'} // Default country
+                value={formData.phoneNumber}
+                onChange={handlePhoneChange}
+                enableAreaCodes={true}         // Enable area codes if needed
+                disableCountryCode={false}     // Display country code
+                disableDropdown={false}        // Enable the country dropdown
+                countryCodeEditable={false}    // Prevent editing of the code
+                inputStyle={{
+                  width: "100%",
+                  height: "30px",
+                  fontSize: "1rem",
+                  paddingLeft: "48px", // Adds space for flag and code
+                  borderRadius: '30px'
+                }}
+                buttonStyle={{
+                  borderRight: "none",
+                  background: "transparent",
+                  paddingLeft: "10px", borderRadius: '30px 0 0 30px'
+                }}
+                dropdownStyle={{
+                  fontSize: "14px"
+                }}
+                inputProps={{
+                  name: 'phone',
+                  required: true,
+                  placeholder: 'Enter your mobile number'
+                }} 
+              />*/}
+
+              <div class="input-container">
+                <div class="prefix-dropdown">ABC T</div>
+                {/* <select class="prefix-dropdown">
+                  <option value="+1">+1</option>
+                  <option value="+44">+44</option>
+                  <option value="+91">+91</option>
+                  <option value="+81">+81</option>
+                </select> */}
+                <input type="text" class="input-box" placeholder="Enter your phone number" />
+              </div>
+              <div className='ctry-dpdwn'>
+                {countriesMap.map(country => (
+                  <div key={country.label} className='ctr-option'>{country.label} <span style={{ color: 'rgba(0, 0, 0, 0.5)', paddingLeft: '6px' }}>{country.value}</span></div>
+                ))}
               </div>
               {formData?.errorIndex == 1 &&
                 <div style={{ color: '#FF3B30' }}>Enter a valid Mobile number</div>}

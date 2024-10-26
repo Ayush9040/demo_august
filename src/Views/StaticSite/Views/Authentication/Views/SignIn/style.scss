@@ -891,11 +891,66 @@
 }
 
 
+.react-tel-input .selected-flag .selected-dial-code {
+    display: inline;
+    /* Ensures dial code is displayed */
+    font-weight: bold;
+}
 
+.custom-input {
+    width: 100%;
+    padding: 8px 40px;
+    font-size: 16px;
+}
 
+//custom
+.input-container {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 30px;
+    border: 1px solid #60606080;
+    position: relative;
+}
 
+.prefix-dropdown {
+    border: none;
+    padding: 10px 0 10px 10px;
+    background: transparent;
+    cursor: pointer;
+    outline: none !important;
+    width: 60px;
+}
 
+.input-box {
+    border: none;
+    padding: 10px;
+    outline: none;
+    width: 100%; /* Adjust width as needed */
+    background: transparent;
+}
 
+.input-box::placeholder {
+    color: #aaa;
+}
+.ctry-dpdwn{
+    width: 100%;
+    max-width: 400px;
+    background-color: white;
+    position: absolute;
+    margin-top: 10px;
+    border-radius: 12px;
+    overflow-y: auto;
+    max-height: 150px;
+    font-size: 1rem;
+    .ctr-option{
+        cursor: pointer;
+        padding: 6px 20px;
+        &:hover{
+            background-color: #FFF3F0;
+        }
+    }
+}
 
 //     width: 60%;
 //     margin: 5rem auto 0;
