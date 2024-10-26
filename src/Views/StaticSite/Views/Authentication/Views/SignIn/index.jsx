@@ -26,193 +26,210 @@ import InputComponent from '../../../../Components/InputComponent'
 import { LoadScript, Autocomplete } from '@react-google-maps/api';
 import { useLocation } from 'react-router-dom';
 const countriesMap = [
-  { label: 'Afghanistan', value: '+93', flag: '🇦🇫' },
-  { label: 'Albania', value: '+355', flag: '🇦🇱' },
-  { label: 'Algeria', value: '+213', flag: '🇩🇿' },
-  { label: 'Andorra', value: '+376', flag: '🇦🇩' },
-  { label: 'Angola', value: '+244', flag: '🇦🇴' },
-  { label: 'Antigua and Barbuda', value: '+1-268', flag: '🇦🇬' },
-  { label: 'Argentina', value: '+54', flag: '🇦🇷' },
-  { label: 'Armenia', value: '+374', flag: '🇦🇲' },
-  { label: 'Australia', value: '+61', flag: '🇦🇺' },
-  { label: 'Austria', value: '+43', flag: '🇦🇹' },
-  { label: 'Azerbaijan', value: '+994', flag: '🇦🇿' },
-  { label: 'Bahamas', value: '+1-242', flag: '🇧🇸' },
-  { label: 'Bahrain', value: '+973', flag: '🇧🇭' },
-  { label: 'Bangladesh', value: '+880', flag: '🇧🇩' },
-  { label: 'Barbados', value: '+1-246', flag: '🇧🇧' },
-  { label: 'Belarus', value: '+375', flag: '🇧🇾' },
-  { label: 'Belgium', value: '+32', flag: '🇧🇪' },
-  { label: 'Belize', value: '+501', flag: '🇧🇿' },
-  { label: 'Benin', value: '+229', flag: '🇧🇯' },
-  { label: 'Bhutan', value: '+975', flag: '🇧🇹' },
-  { label: 'Bolivia', value: '+591', flag: '🇧🇴' },
-  { label: 'Bosnia and Herzegovina', value: '+387', flag: '🇧🇦' },
-  { label: 'Botswana', value: '+267', flag: '🇧🇼' },
-  { label: 'Brazil', value: '+55', flag: '🇧🇷' },
-  { label: 'Brunei', value: '+673', flag: '🇧🇳' },
-  { label: 'Bulgaria', value: '+359', flag: '🇧🇬' },
-  { label: 'Burkina Faso', value: '+226', flag: '🇧🇫' },
-  { label: 'Burundi', value: '+257', flag: '🇧🇮' },
-  { label: 'Cabo Verde', value: '+238', flag: '🇨🇻' },
-  { label: 'Cambodia', value: '+855', flag: '🇰🇭' },
-  { label: 'Cameroon', value: '+237', flag: '🇨🇲' },
-  { label: 'Canada', value: '+1', flag: '🇨🇦' },
-  { label: 'Central African Republic', value: '+236', flag: '🇨🇫' },
-  { label: 'Chad', value: '+235', flag: '🇹🇩' },
-  { label: 'Chile', value: '+56', flag: '🇨🇱' },
-  { label: 'China', value: '+86', flag: '🇨🇳' },
-  { label: 'Colombia', value: '+57', flag: '🇨🇴' },
-  { label: 'Comoros', value: '+269', flag: '🇰🇲' },
-  { label: 'Congo (Congo-Brazzaville)', value: '+242', flag: '🇨🇬' },
-  { label: 'Congo (DRC)', value: '+243', flag: '🇨🇩' },
-  { label: 'Costa Rica', value: '+506', flag: '🇨🇷' },
-  { label: 'Croatia', value: '+385', flag: '🇭🇷' },
-  { label: 'Cuba', value: '+53', flag: '🇨🇺' },
-  { label: 'Cyprus', value: '+357', flag: '🇨🇾' },
-  { label: 'Czechia (Czech Republic)', value: '+420', flag: '🇨🇿' },
-  { label: 'Denmark', value: '+45', flag: '🇩🇰' },
-  { label: 'Djibouti', value: '+253', flag: '🇩🇯' },
-  { label: 'Dominica', value: '+1-767', flag: '🇩🇲' },
-  { label: 'Dominican Republic', value: '+1-809', flag: '🇩🇴' },
-  { label: 'Ecuador', value: '+593', flag: '🇪🇨' },
-  { label: 'Egypt', value: '+20', flag: '🇪🇬' },
-  { label: 'El Salvador', value: '+503', flag: '🇸🇻' },
-  { label: 'Equatorial Guinea', value: '+240', flag: '🇬🇶' },
-  { label: 'Eritrea', value: '+291', flag: '🇪🇷' },
-  { label: 'Estonia', value: '+372', flag: '🇪🇪' },
-  { label: 'Eswatini', value: '+268', flag: '🇸🇿' },
-  { label: 'Ethiopia', value: '+251', flag: '🇪🇹' },
-  { label: 'Fiji', value: '+679', flag: '🇫🇯' },
-  { label: 'Finland', value: '+358', flag: '🇫🇮' },
-  { label: 'France', value: '+33', flag: '🇫🇷' },
-  { label: 'Gabon', value: '+241', flag: '🇬🇦' },
-  { label: 'Gambia', value: '+220', flag: '🇬🇲' },
-  { label: 'Georgia', value: '+995', flag: '🇬🇪' },
-  { label: 'Germany', value: '+49', flag: '🇩🇪' },
-  { label: 'Ghana', value: '+233', flag: '🇬🇭' },
-  { label: 'Greece', value: '+30', flag: '🇬🇷' },
-  { label: 'Grenada', value: '+1-473', flag: '🇬🇩' },
-  { label: 'Guatemala', value: '+502', flag: '🇬🇹' },
-  { label: 'Guinea', value: '+224', flag: '🇬🇳' },
-  { label: 'Guinea-Bissau', value: '+245', flag: '🇬🇼' },
-  { label: 'Guyana', value: '+592', flag: '🇬🇾' },
-  { label: 'Haiti', value: '+509', flag: '🇭🇹' },
-  { label: 'Honduras', value: '+504', flag: '🇭🇳' },
-  { label: 'Hungary', value: '+36', flag: '🇭🇺' },
-  { label: 'Iceland', value: '+354', flag: '🇮🇸' },
-  { label: 'India', value: '+91', flag: '🇮🇳' },
-  { label: 'Indonesia', value: '+62', flag: '🇮🇩' },
-  { label: 'Iran', value: '+98', flag: '🇮🇷' },
-  { label: 'Iraq', value: '+964', flag: '🇮🇶' },
-  { label: 'Ireland', value: '+353', flag: '🇮🇪' },
-  { label: 'Israel', value: '+972', flag: '🇮🇱' },
-  { label: 'Italy', value: '+39', flag: '🇮🇹' },
-  { label: 'Ivory Coast', value: '+225', flag: '🇨🇮' },
-  { label: 'Jamaica', value: '+1-876', flag: '🇯🇲' },
-  { label: 'Japan', value: '+81', flag: '🇯🇵' },
-  { label: 'Jordan', value: '+962', flag: '🇯🇴' },
-  { label: 'Kazakhstan', value: '+7', flag: '🇰🇿' },
-  { label: 'Kenya', value: '+254', flag: '🇰🇪' },
-  { label: 'Kiribati', value: '+686', flag: '🇰🇮' },
-  { label: 'Kuwait', value: '+965', flag: '🇰🇼' },
-  { label: 'Kyrgyzstan', value: '+996', flag: '🇰🇬' },
-  { label: 'Laos', value: '+856', flag: '🇱🇦' },
-  { label: 'Latvia', value: '+371', flag: '🇱🇻' },
-  { label: 'Lebanon', value: '+961', flag: '🇱🇧' },
-  { label: 'Lesotho', value: '+266', flag: '🇱🇸' },
-  { label: 'Liberia', value: '+231', flag: '🇱🇷' },
-  { label: 'Libya', value: '+218', flag: '🇱🇾' },
-  { label: 'Liechtenstein', value: '+423', flag: '🇱🇮' },
-  { label: 'Lithuania', value: '+370', flag: '🇱🇹' },
-  { label: 'Luxembourg', value: '+352', flag: '🇱🇺' },
-  { label: 'Madagascar', value: '+261', flag: '🇲🇬' },
-  { label: 'Malawi', value: '+265', flag: '🇲🇼' },
-  { label: 'Malaysia', value: '+60', flag: '🇲🇾' },
-  { label: 'Maldives', value: '+960', flag: '🇲🇻' },
-  { label: 'Mali', value: '+223', flag: '🇲🇱' },
-  { label: 'Malta', value: '+356', flag: '🇲🇹' },
-  { label: 'Marshall Islands', value: '+692', flag: '🇲🇭' },
-  { label: 'Mauritania', value: '+222', flag: '🇲🇷' },
-  { label: 'Mauritius', value: '+230', flag: '🇲🇺' },
-  { label: 'Mexico', value: '+52', flag: '🇲🇽' },
-  { label: 'Micronesia', value: '+691', flag: '🇫🇲' },
-  { label: 'Moldova', value: '+373', flag: '🇲🇩' },
-  { label: 'Monaco', value: '+377', flag: '🇲🇨' },
-  { label: 'Mongolia', value: '+976', flag: '🇲🇳' },
-  { label: 'Montenegro', value: '+382', flag: '🇲🇪' },
-  { label: 'Morocco', value: '+212', flag: '🇲🇦' },
-  { label: 'Mozambique', value: '+258', flag: '🇲🇿' },
-  { label: 'Myanmar', value: '+95', flag: '🇲🇲' },
-  { label: 'Namibia', value: '+264', flag: '🇳🇦' },
-  { label: 'Nauru', value: '+674', flag: '🇳🇷' },
-  { label: 'Nepal', value: '+977', flag: '🇳🇵' },
-  { label: 'Netherlands', value: '+31', flag: '🇳🇱' },
-  { label: 'New Zealand', value: '+64', flag: '🇳🇿' },
-  { label: 'Nicaragua', value: '+505', flag: '🇳🇮' },
-  { label: 'Niger', value: '+227', flag: '🇳🇪' },
-  { label: 'Nigeria', value: '+234', flag: '🇳🇬' },
-  { label: 'North Macedonia', value: '+389', flag: '🇲🇰' },
-  { label: 'Norway', value: '+47', flag: '🇳🇴' },
-  { label: 'Oman', value: '+968', flag: '🇴🇲' },
-  { label: 'Pakistan', value: '+92', flag: '🇵🇰' },
-  { label: 'Palau', value: '+680', flag: '🇵🇼' },
-  { label: 'Panama', value: '+507', flag: '🇵🇦' },
-  { label: 'Papua New Guinea', value: '+675', flag: '🇵🇬' },
-  { label: 'Paraguay', value: '+595', flag: '🇵🇾' },
-  { label: 'Peru', value: '+51', flag: '🇵🇪' },
-  { label: 'Philippines', value: '+63', flag: '🇵🇭' },
-  { label: 'Poland', value: '+48', flag: '🇵🇱' },
-  { label: 'Portugal', value: '+351', flag: '🇵🇹' },
-  { label: 'Qatar', value: '+974', flag: '🇶🇦' },
-  { label: 'Romania', value: '+40', flag: '🇷🇴' },
-  { label: 'Russia', value: '+7', flag: '🇷🇺' },
-  { label: 'Rwanda', value: '+250', flag: '🇷🇼' },
-  { label: 'Saint Kitts and Nevis', value: '+1-869', flag: '🇰🇳' },
-  { label: 'Saint Lucia', value: '+1-758', flag: '🇱🇨' },
-  { label: 'Saint Vincent and the Grenadines', value: '+1-784', flag: '🇻🇨' },
-  { label: 'Samoa', value: '+685', flag: '🇼🇸' },
-  { label: 'San Marino', value: '+378', flag: '🇸🇲' },
-  { label: 'Sao Tome and Principe', value: '+239', flag: '🇸🇹' },
-  { label: 'Saudi Arabia', value: '+966', flag: '🇸🇦' },
-  { label: 'Senegal', value: '+221', flag: '🇸🇳' },
-  { label: 'Serbia', value: '+381', flag: '🇷🇸' },
-  { label: 'Seychelles', value: '+248', flag: '🇸🇨' },
-  { label: 'Sierra Leone', value: '+232', flag: '🇸🇱' },
-  { label: 'Singapore', value: '+65', flag: '🇸🇬' },
-  { label: 'Slovakia', value: '+421', flag: '🇸🇰' },
-  { label: 'Slovenia', value: '+386', flag: '🇸🇮' },
-  { label: 'Solomon Islands', value: '+677', flag: '🇸🇧' },
-  { label: 'Somalia', value: '+252', flag: '🇸🇴' },
-  { label: 'South Africa', value: '+27', flag: '🇿🇦' },
-  { label: 'South Korea', value: '+82', flag: '🇰🇷' },
-  { label: 'South Sudan', value: '+211', flag: '🇸🇸' },
-  { label: 'Spain', value: '+34', flag: '🇪🇸' },
-  { label: 'Sri Lanka', value: '+94', flag: '🇱🇰' },
-  { label: 'Sudan', value: '+249', flag: '🇸🇩' },
-  { label: 'Suriname', value: '+597', flag: '🇸🇷' },
-  { label: 'Sweden', value: '+46', flag: '🇸🇪' },
-  { label: 'Switzerland', value: '+41', flag: '🇨🇭' },
-  { label: 'Syria', value: '+963', flag: '🇸🇾' },
-  { label: 'Taiwan', value: '+886', flag: '🇹🇼' },
-  { label: 'Tajikistan', value: '+992', flag: '🇹🇯' },
-  { label: 'Tanzania', value: '+255', flag: '🇹🇿' },
-  { label: 'Thailand', value: '+66', flag: '🇹🇭' },
-  { label: 'Timor-Leste', value: '+670', flag: '🇹🇱' },
-  { label: 'Togo', value: '+228', flag: '🇹🇬' },
-  { label: 'Tonga', value: '+676', flag: '🇹🇴' },
-  { label: 'Trinidad and Tobago', value: '+1-868', flag: '🇹🇹' },
-  { label: 'Tunisia', value: '+216', flag: '🇹🇳' },
-  { label: 'Turkey', value: '+90', flag: '🇹🇷' },
-  { label: 'Turkmenistan', value: '+993', flag: '🇹🇲' },
-  { label: 'Tuvalu', value: '+688', flag: '🇹🇻' },
-  { label: 'Uganda', value: '+256', flag: '🇺🇬' },
-]
+  { label: 'Afghanistan', value: '+93', flag: 'AF' },
+  { label: 'Albania', value: '+355', flag: 'AL' },
+  { label: 'Algeria', value: '+213', flag: 'DZ' },
+  { label: 'Andorra', value: '+376', flag: 'AD' },
+  { label: 'Angola', value: '+244', flag: 'AO' },
+  { label: 'Antigua and Barbuda', value: '+1-268', flag: 'AG' },
+  { label: 'Argentina', value: '+54', flag: 'AR' },
+  { label: 'Armenia', value: '+374', flag: 'AM' },
+  { label: 'Australia', value: '+61', flag: 'AU' },
+  { label: 'Austria', value: '+43', flag: 'AT' },
+  { label: 'Azerbaijan', value: '+994', flag: 'AZ' },
+  { label: 'Bahamas', value: '+1-242', flag: 'BS' },
+  { label: 'Bahrain', value: '+973', flag: 'BH' },
+  { label: 'Bangladesh', value: '+880', flag: 'BD' },
+  { label: 'Barbados', value: '+1-246', flag: 'BB' },
+  { label: 'Belarus', value: '+375', flag: 'BY' },
+  { label: 'Belgium', value: '+32', flag: 'BE' },
+  { label: 'Belize', value: '+501', flag: 'BZ' },
+  { label: 'Benin', value: '+229', flag: 'BJ' },
+  { label: 'Bhutan', value: '+975', flag: 'BT' },
+  { label: 'Bolivia', value: '+591', flag: 'BO' },
+  { label: 'Bosnia and Herzegovina', value: '+387', flag: 'BA' },
+  { label: 'Botswana', value: '+267', flag: 'BW' },
+  { label: 'Brazil', value: '+55', flag: 'BR' },
+  { label: 'Brunei', value: '+673', flag: 'BN' },
+  { label: 'Bulgaria', value: '+359', flag: 'BG' },
+  { label: 'Burkina Faso', value: '+226', flag: 'BF' },
+  { label: 'Burundi', value: '+257', flag: 'BI' },
+  { label: 'Cabo Verde', value: '+238', flag: 'CV' },
+  { label: 'Cambodia', value: '+855', flag: 'KH' },
+  { label: 'Cameroon', value: '+237', flag: 'CM' },
+  { label: 'Canada', value: '+1', flag: 'CA' },
+  { label: 'Central African Republic', value: '+236', flag: 'CF' },
+  { label: 'Chad', value: '+235', flag: 'TD' },
+  { label: 'Chile', value: '+56', flag: 'CL' },
+  { label: 'China', value: '+86', flag: 'CN' },
+  { label: 'Colombia', value: '+57', flag: 'CO' },
+  { label: 'Comoros', value: '+269', flag: 'KM' },
+  { label: 'Congo, Democratic Republic of the', value: '+243', flag: 'CD' },
+  { label: 'Congo, Republic of the', value: '+242', flag: 'CG' },
+  { label: 'Costa Rica', value: '+506', flag: 'CR' },
+  { label: 'Croatia', value: '+385', flag: 'HR' },
+  { label: 'Cuba', value: '+53', flag: 'CU' },
+  { label: 'Cyprus', value: '+357', flag: 'CY' },
+  { label: 'Czech Republic', value: '+420', flag: 'CZ' },
+  { label: 'Denmark', value: '+45', flag: 'DK' },
+  { label: 'Djibouti', value: '+253', flag: 'DJ' },
+  { label: 'Dominica', value: '+1-767', flag: 'DM' },
+  { label: 'Dominican Republic', value: '+1-809', flag: 'DO' },
+  { label: 'Ecuador', value: '+593', flag: 'EC' },
+  { label: 'Egypt', value: '+20', flag: 'EG' },
+  { label: 'El Salvador', value: '+503', flag: 'SV' },
+  { label: 'Equatorial Guinea', value: '+240', flag: 'GQ' },
+  { label: 'Eritrea', value: '+291', flag: 'ER' },
+  { label: 'Estonia', value: '+372', flag: 'EE' },
+  { label: 'Eswatini', value: '+268', flag: 'SZ' },
+  { label: 'Ethiopia', value: '+251', flag: 'ET' },
+  { label: 'Fiji', value: '+679', flag: 'FJ' },
+  { label: 'Finland', value: '+358', flag: 'FI' },
+  { label: 'France', value: '+33', flag: 'FR' },
+  { label: 'Gabon', value: '+241', flag: 'GA' },
+  { label: 'Gambia', value: '+220', flag: 'GM' },
+  { label: 'Georgia', value: '+995', flag: 'GE' },
+  { label: 'Germany', value: '+49', flag: 'DE' },
+  { label: 'Ghana', value: '+233', flag: 'GH' },
+  { label: 'Greece', value: '+30', flag: 'GR' },
+  { label: 'Grenada', value: '+1-473', flag: 'GD' },
+  { label: 'Guatemala', value: '+502', flag: 'GT' },
+  { label: 'Guinea', value: '+224', flag: 'GN' },
+  { label: 'Guinea-Bissau', value: '+245', flag: 'GW' },
+  { label: 'Guyana', value: '+592', flag: 'GY' },
+  { label: 'Haiti', value: '+509', flag: 'HT' },
+  { label: 'Honduras', value: '+504', flag: 'HN' },
+  { label: 'Hungary', value: '+36', flag: 'HU' },
+  { label: 'Iceland', value: '+354', flag: 'IS' },
+  { label: 'India', value: '+91', flag: 'IN' },
+  { label: 'Indonesia', value: '+62', flag: 'ID' },
+  { label: 'Iran', value: '+98', flag: 'IR' },
+  { label: 'Iraq', value: '+964', flag: 'IQ' },
+  { label: 'Ireland', value: '+353', flag: 'IE' },
+  { label: 'Israel', value: '+972', flag: 'IL' },
+  { label: 'Italy', value: '+39', flag: 'IT' },
+  { label: 'Jamaica', value: '+1-876', flag: 'JM' },
+  { label: 'Japan', value: '+81', flag: 'JP' },
+  { label: 'Jordan', value: '+962', flag: 'JO' },
+  { label: 'Kazakhstan', value: '+7', flag: 'KZ' },
+  { label: 'Kenya', value: '+254', flag: 'KE' },
+  { label: 'Kiribati', value: '+686', flag: 'KI' },
+  { label: 'Kuwait', value: '+965', flag: 'KW' },
+  { label: 'Kyrgyzstan', value: '+996', flag: 'KG' },
+  { label: 'Laos', value: '+856', flag: 'LA' },
+  { label: 'Latvia', value: '+371', flag: 'LV' },
+  { label: 'Lebanon', value: '+961', flag: 'LB' },
+  { label: 'Lesotho', value: '+266', flag: 'LS' },
+  { label: 'Liberia', value: '+231', flag: 'LR' },
+  { label: 'Libya', value: '+218', flag: 'LY' },
+  { label: 'Liechtenstein', value: '+423', flag: 'LI' },
+  { label: 'Lithuania', value: '+370', flag: 'LT' },
+  { label: 'Luxembourg', value: '+352', flag: 'LU' },
+  { label: 'Madagascar', value: '+261', flag: 'MG' },
+  { label: 'Malawi', value: '+265', flag: 'MW' },
+  { label: 'Malaysia', value: '+60', flag: 'MY' },
+  { label: 'Maldives', value: '+960', flag: 'MV' },
+  { label: 'Mali', value: '+223', flag: 'ML' },
+  { label: 'Malta', value: '+356', flag: 'MT' },
+  { label: 'Marshall Islands', value: '+692', flag: 'MH' },
+  { label: 'Mauritania', value: '+222', flag: 'MR' },
+  { label: 'Mauritius', value: '+230', flag: 'MU' },
+  { label: 'Mexico', value: '+52', flag: 'MX' },
+  { label: 'Micronesia', value: '+691', flag: 'FM' },
+  { label: 'Moldova', value: '+373', flag: 'MD' },
+  { label: 'Monaco', value: '+377', flag: 'MC' },
+  { label: 'Mongolia', value: '+976', flag: 'MN' },
+  { label: 'Montenegro', value: '+382', flag: 'ME' },
+  { label: 'Morocco', value: '+212', flag: 'MA' },
+  { label: 'Mozambique', value: '+258', flag: 'MZ' },
+  { label: 'Myanmar', value: '+95', flag: 'MM' },
+  { label: 'Namibia', value: '+264', flag: 'NA' },
+  { label: 'Nauru', value: '+674', flag: 'NR' },
+  { label: 'Nepal', value: '+977', flag: 'NP' },
+  { label: 'Netherlands', value: '+31', flag: 'NL' },
+  { label: 'New Zealand', value: '+64', flag: 'NZ' },
+  { label: 'Nicaragua', value: '+505', flag: 'NI' },
+  { label: 'Niger', value: '+227', flag: 'NE' },
+  { label: 'Nigeria', value: '+234', flag: 'NG' },
+  { label: 'North Macedonia', value: '+389', flag: 'MK' },
+  { label: 'Norway', value: '+47', flag: 'NO' },
+  { label: 'Oman', value: '+968', flag: 'OM' },
+  { label: 'Pakistan', value: '+92', flag: 'PK' },
+  { label: 'Palau', value: '+680', flag: 'PW' },
+  { label: 'Palestine', value: '+970', flag: 'PS' },
+  { label: 'Panama', value: '+507', flag: 'PA' },
+  { label: 'Papua New Guinea', value: '+675', flag: 'PG' },
+  { label: 'Paraguay', value: '+595', flag: 'PY' },
+  { label: 'Peru', value: '+51', flag: 'PE' },
+  { label: 'Philippines', value: '+63', flag: 'PH' },
+  { label: 'Poland', value: '+48', flag: 'PL' },
+  { label: 'Portugal', value: '+351', flag: 'PT' },
+  { label: 'Qatar', value: '+974', flag: 'QA' },
+  { label: 'Romania', value: '+40', flag: 'RO' },
+  { label: 'Russia', value: '+7', flag: 'RU' },
+  { label: 'Rwanda', value: '+250', flag: 'RW' },
+  { label: 'Saint Kitts and Nevis', value: '+1-869', flag: 'KN' },
+  { label: 'Saint Lucia', value: '+1-758', flag: 'LC' },
+  { label: 'Saint Vincent and the Grenadines', value: '+1-784', flag: 'VC' },
+  { label: 'Samoa', value: '+685', flag: 'WS' },
+  { label: 'San Marino', value: '+378', flag: 'SM' },
+  { label: 'Sao Tome and Principe', value: '+239', flag: 'ST' },
+  { label: 'Saudi Arabia', value: '+966', flag: 'SA' },
+  { label: 'Senegal', value: '+221', flag: 'SN' },
+  { label: 'Serbia', value: '+381', flag: 'RS' },
+  { label: 'Seychelles', value: '+248', flag: 'SC' },
+  { label: 'Sierra Leone', value: '+232', flag: 'SL' },
+  { label: 'Singapore', value: '+65', flag: 'SG' },
+  { label: 'Slovakia', value: '+421', flag: 'SK' },
+  { label: 'Slovenia', value: '+386', flag: 'SI' },
+  { label: 'Solomon Islands', value: '+677', flag: 'SB' },
+  { label: 'Somalia', value: '+252', flag: 'SO' },
+  { label: 'South Africa', value: '+27', flag: 'ZA' },
+  { label: 'South Korea', value: '+82', flag: 'KR' },
+  { label: 'South Sudan', value: '+211', flag: 'SS' },
+  { label: 'Spain', value: '+34', flag: 'ES' },
+  { label: 'Sri Lanka', value: '+94', flag: 'LK' },
+  { label: 'Sudan', value: '+249', flag: 'SD' },
+  { label: 'Suriname', value: '+597', flag: 'SR' },
+  { label: 'Sweden', value: '+46', flag: 'SE' },
+  { label: 'Switzerland', value: '+41', flag: 'CH' },
+  { label: 'Syria', value: '+963', flag: 'SY' },
+  { label: 'Taiwan', value: '+886', flag: 'TW' },
+  { label: 'Tajikistan', value: '+992', flag: 'TJ' },
+  { label: 'Tanzania', value: '+255', flag: 'TZ' },
+  { label: 'Thailand', value: '+66', flag: 'TH' },
+  { label: 'Timor-Leste', value: '+670', flag: 'TL' },
+  { label: 'Togo', value: '+228', flag: 'TG' },
+  { label: 'Tonga', value: '+676', flag: 'TO' },
+  { label: 'Trinidad and Tobago', value: '+1-868', flag: 'TT' },
+  { label: 'Tunisia', value: '+216', flag: 'TN' },
+  { label: 'Turkey', value: '+90', flag: 'TR' },
+  { label: 'Turkmenistan', value: '+993', flag: 'TM' },
+  { label: 'Tuvalu', value: '+688', flag: 'TV' },
+  { label: 'Uganda', value: '+256', flag: 'UG' },
+  { label: 'Ukraine', value: '+380', flag: 'UA' },
+  { label: 'United Arab Emirates', value: '+971', flag: 'AE' },
+  { label: 'United Kingdom', value: '+44', flag: 'GB' },
+  { label: 'United States', value: '+1', flag: 'US' },
+  { label: 'Uruguay', value: '+598', flag: 'UY' },
+  { label: 'Uzbekistan', value: '+998', flag: 'UZ' },
+  { label: 'Vanuatu', value: '+678', flag: 'VU' },
+  { label: 'Vatican City', value: '+39', flag: 'VA' },
+  { label: 'Venezuela', value: '+58', flag: 'VE' },
+  { label: 'Vietnam', value: '+84', flag: 'VN' },
+  { label: 'Yemen', value: '+967', flag: 'YE' },
+  { label: 'Zambia', value: '+260', flag: 'ZM' },
+  { label: 'Zimbabwe', value: '+263', flag: 'ZW' }
+];
+
+
 
 const libraries = ['places'];
 const mapKey = 'AIzaSyCArozsi_1fWJgSwDFDAoA_6Q5zLZ7NYyA';
 
 const SignIn = () => {
+  const listRef = useRef(null);
+
   // const [modal, setModal] = useState(false)
   // const [validate, setValidate] = useState()
   const dispatch = useDispatch()
@@ -226,6 +243,7 @@ const SignIn = () => {
   const [autocomplete, setAutocomplete] = useState(null);
   const [getemail, setGetEmail] = useState('')
   const [hideVerify, setHideVerify] = useState(false);
+  const [isCountryContainer, SetIsCountryContainer] = useState(false);
   const [errorMessage, setErrorMessage] = useState()
   const [formData, setFormData] = useState({
     phoneNumber: '',
@@ -285,6 +303,19 @@ const SignIn = () => {
 
   useEffect(() => {
     checkLocationInURL(); // Run this function when the component mounts
+  }, []);
+  useEffect(() => {
+    const handleKeyDown = (event) => {
+      if (event?.key) {
+        scrollToLetter(event.key.toUpperCase());
+      }
+    };
+    // Attach the event listener
+    window.addEventListener('keydown', handleKeyDown);
+    // Clean up the event listener on component unmount
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+    };
   }, []);
 
   const customStyles = (isInvalid) => ({
@@ -653,7 +684,7 @@ const SignIn = () => {
       // console.log("Deails email Name ", getemail);
       setFormData({ ...details, errorIndex: 12 });
     }
-    else if ((validatePhoneNumber(details.phoneNumber).length > 0) && signUpType != 'mobile') {
+    else if ((validatePhoneNumber(`${phoneNumber.dialCode}${details.phoneNumber}`).length > 0) && signUpType != 'mobile') {
       // console.log("Deails phoneNumber Name ", details.gender?.value);
       setFormData({ ...details, errorIndex: 11 });
       setIsToast(true)
@@ -831,7 +862,7 @@ const SignIn = () => {
   const sendOTP = async (userDetails) => {
     setOtp(new Array(4).fill(""))//reset OTP
     if (userDetails.phoneNumber) {//validate mobile number
-      const errors = validatePhoneNumber(userDetails.phoneNumber);
+      const errors = validatePhoneNumber(`${phoneNumber.dialCode}${userDetails.phoneNumber}`);
       if (errors.length) {
         setFormData({ ...formData, errorIndex: 1 });
       }
@@ -852,13 +883,14 @@ const SignIn = () => {
   const [phoneNumber, setPhoneNumber] = useState({ dialCode: '', mobile: '' })
 
   const handlePhoneChange = (value) => {
+
     // setPhoneValue(value);
-    setFormData({ ...formData, phoneNumber: value });
-    // if (value) {
-    //   const phoneNumber = parsePhoneNumber(value);
-    //   // console.log(phoneNumber);
-    //   setPhoneNumber({ dialCode: phoneNumber?.countryCallingCode, mobile: phoneNumber?.nationalNumber })
-    // }
+    setFormData({ ...formData, phoneNumber: value.target.value });
+    if (value) {
+      // const phoneNumber = parsePhoneNumber(value);
+      // console.log(phoneNumber);
+      setPhoneNumber({ dialCode: selectedCountryList.value, mobile: value.target.value })
+    }
   };
   const [isAlreadyRegistered, SetIsAlreadyRegistered] = useState(false)
   const validatePhoneNumber = (phoneNumber) => {
@@ -910,7 +942,7 @@ const SignIn = () => {
 
   // const handleContinueAsGuest = () => {
   //   if (!page) return navigate('/')
-  //   if (page !== 'cart') navigate(`/enrollment/${page}/?date=${selectDate}`)
+  //   if (page !== 'cart') navigate(`/ enrollment/${ page } /? date = ${ selectDate }`)
   //   setErrMsg('Please login to continue purchase!')
   //   setModal(true)
   // }
@@ -933,6 +965,7 @@ const SignIn = () => {
     }, 1000)
   }
 
+  const [selectedCountryList, SetSelectedCountryList] = useState({ label: 'India', value: '+91', flag: 'IN' })
   const [secondsF, setSecondsF] = useState(59);
   let intervalIdF = useRef(null); // variable fro timer
   let timerF = 59; // variable to handle seconds not updated in dom
@@ -978,7 +1011,7 @@ const SignIn = () => {
   const signUpOTP = async (det, type) => {
     // type = 'mobile';
 
-    console.log(" det from Sign up otp ", det, type)
+    // console.log(" det from Sign up otp ", det, type)
 
     // console.log(" details from Sign up otp ", details, type)
     const nameRegex = /^[A-Za-z]+( [A-Za-z]+)*$/;
@@ -1029,7 +1062,7 @@ const SignIn = () => {
       console.log("Deails email Name ", getemail);
       setFormData({ ...details, errorIndex: 12 });
     }
-    else if ((validatePhoneNumber(details.phoneNumber).length > 0) && signUpType != 'mobile') {
+    else if ((validatePhoneNumber(`${selectedCountryList.value}${details.phoneNumber}`).length > 0) && signUpType != 'mobile') {
       console.log("Deails phoneNumber Name ", details.gender?.value);
       setFormData({ ...details, errorIndex: 11 });
       setIsToast(true)
@@ -1211,7 +1244,7 @@ const SignIn = () => {
   //           password: formData.password,
   //         },
   //         navigate,
-  //         page ? page !== 'cart' ? `/enrollment/${page}/?date=${selectDate}` : '/shop/checkout' : '/',
+  //         page ? page !== 'cart' ? `/ enrollment/${ page } /? date = ${ selectDate }` : '/shop/checkout' : '/',
   //       )
   //     )
   //     if (error.isError !== false) { setModal(true); setErrMsg(error.isError) } else { setModal(false) }
@@ -1268,7 +1301,7 @@ const SignIn = () => {
         getUserDetails(response?.data?.accessToken, 'alreadySignedUp')
         console.log(response?.data)
 
-        page ? page !== 'cart' ? navigate(`/enrollment/${page}`) : navigate('/shop/checkout') : navigate('/')
+        page ? page !== 'cart' ? navigate(`/ enrollment/${page}`) : navigate('/shop/checkout') : navigate('/')
       }
     } else {
       console.error('No credential found');
@@ -1310,15 +1343,15 @@ const SignIn = () => {
 
         if (lastPageUrl && lastPageUrl.includes(url2)) {
           sessionStorage.removeItem('last_page_url_2');
-          navigate(`/shop`); // Redirect to the course page if previous page was a course
+          navigate(`/ shop`); // Redirect to the course page if previous page was a course
 
         } else {
-          navigate(`/courses`);
+          navigate(`/ courses`);
         }
-        // navigate(`/courses`); // Replace with the actual course page URL
+        // navigate(`/ courses`); // Replace with the actual course page URL
       } else {
         // If logged in, navigate to the intended page
-        page ? page !== 'cart' ? navigate(`/enrollment/${page}`) : navigate('/shop/checkout') : navigate('/');
+        page ? page !== 'cart' ? navigate(`/ enrollment/${page}`) : navigate('/shop/checkout') : navigate('/');
       }
     }
   }
@@ -1371,9 +1404,19 @@ const SignIn = () => {
     e.preventDefault(); // Prevent the default paste behavior
   };
 
+  const scrollToLetter = (letter) => {
+    const index = countriesMap.findIndex(country => country.label.startsWith(letter));
+    if (index !== -1 && listRef.current) {
+      console.log(listRef)
+      const element = listRef.current.children[index];
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  };
 
   return (
-    <div className="signin-form">
+    <div className="signin-form" onClick={() => SetIsCountryContainer(false)}>
       <div className='signin-container'>
         <div className="signin-logo">
           <img src="/images/main-logo-signup.svg" alt="primary-logo" loading="lazy" />
@@ -1449,187 +1492,169 @@ const SignIn = () => {
                   onChange={handlePhoneChange}
                 />
               </div> */}
-
-              {/* <PhoneInput
-                country={'us'} // Default country
-                value={formData.phoneNumber}
-                onChange={handlePhoneChange}
-                enableAreaCodes={true}         // Enable area codes if needed
-                disableCountryCode={false}     // Display country code
-                disableDropdown={false}        // Enable the country dropdown
-                countryCodeEditable={false}    // Prevent editing of the code
-                inputStyle={{
-                  width: "100%",
-                  height: "30px",
-                  fontSize: "1rem",
-                  paddingLeft: "48px", // Adds space for flag and code
-                  borderRadius: '30px'
-                }}
-                buttonStyle={{
-                  borderRight: "none",
-                  background: "transparent",
-                  paddingLeft: "10px", borderRadius: '30px 0 0 30px'
-                }}
-                dropdownStyle={{
-                  fontSize: "14px"
-                }}
-                inputProps={{
-                  name: 'phone',
-                  required: true,
-                  placeholder: 'Enter your mobile number'
-                }} 
-              />*/}
-
               <div class="input-container">
-                <div class="prefix-dropdown">ABC T</div>
-                {/* <select class="prefix-dropdown">
-                  <option value="+1">+1</option>
-                  <option value="+44">+44</option>
-                  <option value="+91">+91</option>
-                  <option value="+81">+81</option>
-                </select> */}
-                <input type="text" class="input-box" placeholder="Enter your phone number" />
-              </div>
-              <div className='ctry-dpdwn'>
-                {countriesMap.map(country => (
-                  <div key={country.label} className='ctr-option'>{country.label} <span style={{ color: 'rgba(0, 0, 0, 0.5)', paddingLeft: '6px' }}>{country.value}</span></div>
-                ))}
-              </div>
-              {formData?.errorIndex == 1 &&
-                <div style={{ color: '#FF3B30' }}>Enter a valid Mobile number</div>}
+                <div class="prefix-dropdown" onClick={(event) => { event.stopPropagation(); SetIsCountryContainer(true); }}><span>
+                  <img width='20px' style={{ borderRadius: '2px', marginRight: '6px' }} src={`https://purecatamphetamine.github.io/country-flag-icons/3x2/${selectedCountryList.flag.toUpperCase()}.svg`} alt="" /></span>
+                  {selectedCountryList.value}
+                  < span style={{ marginLeft: '4px' }}>
+                    <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M7.06 0.726562L4 3.7799L0.94 0.726562L0 1.66656L4 5.66656L8 1.66656L7.06 0.726562Z" fill="black" />
+                    </svg>
+                  </span >
+                </div >
+                <input type="tel" class="input-box" placeholder="Enter your phone number" value={formData.phoneNumber}
+                  onChange={handlePhoneChange} />
+              </div >
+              {isCountryContainer &&
+                <div className='ctry-dpdwn' ref={listRef}>
+                  {countriesMap.map(country => (
+                    <div key={country.label} className='ctr-option' onClick={() => { SetSelectedCountryList(country), SetIsCountryContainer(false) }}>
+                      <span><img width='20px' style={{ borderRadius: '2px' }} src={`https://purecatamphetamine.github.io/country-flag-icons/3x2/${country.flag.toUpperCase()}.svg`} alt="" /></span>
+                      <span style={{ padding: '0 6px 0 6px' }}>
+                        {country.label}</span> <span style={{ color: 'rgba(0, 0, 0, 0.5)' }}>{country.value}</span></div>
+                  ))}
+                </div>}
+
+              {
+                formData?.errorIndex == 1 &&
+                <div style={{ color: '#FF3B30' }}>Enter a valid Mobile number</div>
+              }
               <div className="ftr-btn">
                 <button type='click' className='primary-btn' onClick={() => { sendOTP(formData), setOtp(new Array(4).fill("")) }}>Continue</button>
                 <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
-                  <div className='tc-text'>By Clicking “Continue with google  / mobile” you agree to
+                  <div className='tc-text'>By Clicking “Continue with google /mobile” you agree to
                     our <span onClick={() => openLink('https://theyogainstitute.org/terms-and-conditions')}>Terms & Conditions</span> and <span onClick={() => openLink('https://theyogainstitute.org/privacy-policy')}>Privacy Policy</span></div>
                 </div></div>
             </>}
 
             {/* Login page with OTP */}
-            {pageIndex == '2' && <>
-              <div className='sub-header wish' style={{ fontWeight: '700', padding: '12px 0 4px 0' }}>Namaste  🙏 Please verify your mobile number </div>
-              {/* <div className='sub-header' style={{ fontWeight: '400', fontSize: '16px'}}>Enter the OTP</div> */}
-              <div className="otp-inputs">
-                {otp.map((data, index) => {
-                  return (
-                    <input
-                      key={index}
-                      value={data}
-                      type="text"
-                      maxLength="1"
-                      className={formData?.errorIndex == 2 ? "otp-input otp-err" : "otp-input"}
-                      // value={data}
-                      onChange={(e) => handleOTPChange(e.target, index)}
-                      onKeyDown={(e) =>
-                        e.key === "Backspace" ? handleBackspace(e.target, index) : null
-                      }
-                      onPaste={(e) => handlePaste(e, index)} // Handle paste
-                      ref={(el) => (inputRefs.current[index] = el)}
-                      inputMode="numeric" // Add this line
-                      pattern="[0-9]*" // Optionally, add this for better compatibility
-                    />
-                  );
-                })}
-              </div>
-              <div className='sub-header' style={{ fontWeight: '400', fontSize: '16px', marginTop: '12px' }}>Enter OTP sent to {formData.phoneNumber}
-                <span style={{ color: '#CA4625', fontSize: '12px', fontWeight: 600, cursor: 'pointer', borderBottom: '2px solid #CA4625', marginLeft: '1rem' }} onClick={() => {
-                  setPageIndex('1');
-                }}>
-                  <svg width="12" height="12" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0.249512 6.18805V7.75055H1.81201L6.42035 3.14222L4.85785 1.57972L0.249512 6.18805ZM7.62868 1.93389C7.79118 1.77139 7.79118 1.50889 7.62868 1.34639L6.65368 0.371387C6.49118 0.208887 6.22868 0.208887 6.06618 0.371387L5.30368 1.13389L6.86618 2.69639L7.62868 1.93389Z" fill="#CA4625" />
-                  </svg>
-                  Change mobile number
-                </span>
-              </div>
-              {formData?.errorIndex == 2 &&
-                <div style={{ color: '#FF3B30', margin: '1rem 0' }}>OTP is Invalid!</div>}
-              <div className="ftr-btn">
-                <button type='click' className='primary-btn' onClick={() => verifyOTP(formData)}>Verify & Continue</button>
-                <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
-                  <div className='tc-text'>
-                    {seconds != '0' && <>We regret if you haven&apos;t received the OTP, <br />
-                      resend OTP in<span style={{ fontWeight: 'bold', textDecoration: 'none', cursor: 'none' }}> 00:{seconds} </span></>}
-                    {/* {seconds != '0' && <>You can request another in {seconds} {seconds > 9 ? 'seconds' : 'second'}</>} */}
-                    {seconds == '0' && <div onClick={() => sendOTP(formData)} className="resend-btn">Resend</div>}</div>
+            {
+              pageIndex == '2' && <>
+                <div className='sub-header wish' style={{ fontWeight: '700', padding: '12px 0 4px 0' }}>Namaste  🙏 Please verify your mobile number </div>
+                {/* <div className='sub-header' style={{ fontWeight: '400', fontSize: '16px'}}>Enter the OTP</div> */}
+                <div className="otp-inputs">
+                  {otp.map((data, index) => {
+                    return (
+                      <input
+                        key={index}
+                        value={data}
+                        type="text"
+                        maxLength="1"
+                        className={formData?.errorIndex == 2 ? "otp-input otp-err" : "otp-input"}
+                        // value={data}
+                        onChange={(e) => handleOTPChange(e.target, index)}
+                        onKeyDown={(e) =>
+                          e.key === "Backspace" ? handleBackspace(e.target, index) : null
+                        }
+                        onPaste={(e) => handlePaste(e, index)} // Handle paste
+                        ref={(el) => (inputRefs.current[index] = el)}
+                        inputMode="numeric" // Add this line
+                        pattern="[0-9]*" // Optionally, add this for better compatibility
+                      />
+                    );
+                  })}
                 </div>
-              </div>
-            </>}
+                <div className='sub-header' style={{ fontWeight: '400', fontSize: '16px', marginTop: '12px' }}>Enter OTP sent to {phoneNumber.dialCode}{formData.phoneNumber}
+                  <span style={{ color: '#CA4625', fontSize: '12px', fontWeight: 600, cursor: 'pointer', borderBottom: '2px solid #CA4625', marginLeft: '1rem' }} onClick={() => {
+                    setPageIndex('1');
+                  }}>
+                    <svg width="12" height="12" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M0.249512 6.18805V7.75055H1.81201L6.42035 3.14222L4.85785 1.57972L0.249512 6.18805ZM7.62868 1.93389C7.79118 1.77139 7.79118 1.50889 7.62868 1.34639L6.65368 0.371387C6.49118 0.208887 6.22868 0.208887 6.06618 0.371387L5.30368 1.13389L6.86618 2.69639L7.62868 1.93389Z" fill="#CA4625" />
+                    </svg>
+                    Change mobile number
+                  </span>
+                </div>
+                {formData?.errorIndex == 2 &&
+                  <div style={{ color: '#FF3B30', margin: '1rem 0' }}>OTP is Invalid!</div>}
+                <div className="ftr-btn">
+                  <button type='click' className='primary-btn' onClick={() => verifyOTP(formData)}>Verify & Continue</button>
+                  <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
+                    <div className='tc-text'>
+                      {seconds != '0' && <>We regret if you haven&apos;t received the OTP, <br />
+                        resend OTP in<span style={{ fontWeight: 'bold', textDecoration: 'none', cursor: 'none' }}> 00:{seconds} </span></>}
+                      {/* {seconds != '0' && <>You can request another in {seconds} {seconds > 9 ? 'seconds' : 'second'}</>} */}
+                      {seconds == '0' && <div onClick={() => sendOTP(formData)} className="resend-btn">Resend</div>}</div>
+                  </div>
+                </div>
+              </>
+            }
 
             {/* Signup page */}
-            {(pageIndex == '3' || pageIndex == '4') && <>
-              <div className='header header-3'>Namaste 🙏 Please Fill Your Details</div>
-              <div className='sub-header sub-header-3 wish-text'>Become a Part of The Yoga Institute Family & Sign-up for <br />you’re preferred course</div>
-              <div className='sub-header sub-header-3 wish-text-mob'>Join The Yoga Institute Family </div>
+            {
+              (pageIndex == '3' || pageIndex == '4') && <>
+                <div className='header header-3'>Namaste 🙏 Please Fill Your Details</div>
+                <div className='sub-header sub-header-3 wish-text' style={{maxWidth:'430px'}}>Become a Part of The Yoga Institute Family & Sign-up for you’re preferred course</div>
+                <div className='sub-header sub-header-3 wish-text-mob'>Join The Yoga Institute Family </div>
 
-              <div className='inp-group'>
-
-
-                <div className='width-100'>
-
-                  <div className='inp-label mg-t-20'>First Name <span>*</span></div>
-                  <div className={formData?.errorIndex == 3 ? "form-inp err-inp" : "form-inp"}>
-                    <input
-                      disabled={pageIndex == '4' ? true : false}
-                      value={formData.firstName}
-                      onChange={(e) => { setFormData({ ...formData, firstName: e.target.value }) }}
-                      type="text"
-                      placeholder="Enter your first name"
-                      className="custom-input"
-                    />
-                  </div>
-                  {formData?.errorIndex == 3 &&
-                    <div style={{ color: '#FF3B30' }}>Enter a valid First name</div>}
-
-                </div>
-
-
-                <div className='width-100'>
-                  <div className='inp-label  mg-t-20'>Last Name <span>*</span></div>
-                  <div className={formData?.errorIndex == 4 ? "form-inp err-inp" : "form-inp"}>
-                    <input
-                      disabled={pageIndex == '4' ? true : false}
-                      type="text"
-                      placeholder="Enter your Last name"
-                      value={formData.lastName}
-                      onChange={(e) => { setFormData({ ...formData, lastName: e.target.value }) }}
-                      className="custom-input"
-                    />
-                  </div>
-                  {formData?.errorIndex == 4 &&
-                    <div style={{ color: '#FF3B30' }}>Enter a valid Last name</div>}
-                </div>
-
-              </div>
-
-
-              {/* Adding New Fields */}
-
-              <LoadScript googleMapsApiKey={mapKey} libraries={libraries}>
                 <div className='inp-group'>
+
+
                   <div className='width-100'>
-                    <Autocomplete onLoad={onLoadAutocomplete} onPlaceChanged={onPlaceChanged}>
 
-                      <div className="form_error1">
-                        <div className='inp-label mg-t-20'>Address <span>*</span></div>
-                        <div className={formData?.errorIndex == 5 ? "form-inp err-inp custom_style_input_add" : "form-inp custom_style_input_add"}>
-                          <InputComponent
-                            type="text"
-                            placeholder="Enter address line 1"
-                            form={formData}
-                            setField={setFormData}
-                            keyName="address1"
-                            errorCheck={setEmpty}
-                            className="custom-input"
+                    <div className='inp-label mg-t-20'>First Name <span>*</span></div>
+                    <div className={formData?.errorIndex == 3 ? "form-inp err-inp" : "form-inp"}>
+                      <input
+                        disabled={pageIndex == '4' ? true : false}
+                        value={formData.firstName}
+                        onChange={(e) => { setFormData({ ...formData, firstName: e.target.value }) }}
+                        type="text"
+                        placeholder="Enter your first name"
+                        className="custom-input"
+                      />
+                    </div>
+                    {formData?.errorIndex == 3 &&
+                      <div style={{ color: '#FF3B30' }}>Enter a valid First name</div>}
 
-                          />
-                        </div>
-                        {formData?.errorIndex == 5 &&
-                          <div style={{ color: '#FF3B30' }}>Select a valid address </div>}
-                      </div>
-                    </Autocomplete>
                   </div>
 
-                  {/* <div className='width-100'>
+
+                  <div className='width-100'>
+                    <div className='inp-label  mg-t-20'>Last Name <span>*</span></div>
+                    <div className={formData?.errorIndex == 4 ? "form-inp err-inp" : "form-inp"}>
+                      <input
+                        disabled={pageIndex == '4' ? true : false}
+                        type="text"
+                        placeholder="Enter your Last name"
+                        value={formData.lastName}
+                        onChange={(e) => { setFormData({ ...formData, lastName: e.target.value }) }}
+                        className="custom-input"
+                      />
+                    </div>
+                    {formData?.errorIndex == 4 &&
+                      <div style={{ color: '#FF3B30' }}>Enter a valid Last name</div>}
+                  </div>
+
+                </div>
+
+
+                {/* Adding New Fields */}
+
+                <LoadScript googleMapsApiKey={mapKey} libraries={libraries}>
+                  <div className='inp-group'>
+                    <div className='width-100'>
+                      <Autocomplete onLoad={onLoadAutocomplete} onPlaceChanged={onPlaceChanged}>
+
+                        <div className="form_error1">
+                          <div className='inp-label mg-t-20'>Address <span>*</span></div>
+                          <div className={formData?.errorIndex == 5 ? "form-inp err-inp custom_style_input_add" : "form-inp custom_style_input_add"}>
+                            <InputComponent
+                              type="text"
+                              placeholder="Enter address line 1"
+                              form={formData}
+                              setField={setFormData}
+                              keyName="address1"
+                              errorCheck={setEmpty}
+                              className="custom-input"
+
+                            />
+                          </div>
+                          {formData?.errorIndex == 5 &&
+                            <div style={{ color: '#FF3B30' }}>Select a valid address </div>}
+                        </div>
+                      </Autocomplete>
+                    </div>
+
+                    {/* <div className='width-100'>
 
                     <div className="form_error">
                       <div className='inp-label mg-t-20'>Address 2 <span>*</span></div>
@@ -1647,27 +1672,27 @@ const SignIn = () => {
 
                   </div> */}
 
-                </div>
-
-                <div className='inp-group'>
-                  <div className='width-100'>
-
-                    <div className="form_error">
-                      <div className='inp-label mg-t-20'>House No. / Street name <span>*</span></div>
-                      <div className="form-inp custom_style_input_add">
-                        <InputComponent
-                          type="text"
-                          placeholder="Enter address line 2"
-                          form={formData}
-                          setField={setFormData}
-                          keyName="address2"
-                          errorCheck={setEmpty}
-                        />
-                      </div>
-                    </div>
-
                   </div>
-                  {/* <div className="form_error countries_list width-100" >
+
+                  <div className='inp-group'>
+                    <div className='width-100'>
+
+                      <div className="form_error">
+                        <div className='inp-label mg-t-20'>House No./Street name <span>*</span></div>
+                        <div className="form-inp custom_style_input_add">
+                          <InputComponent
+                            type="text"
+                            placeholder="Enter address line 2"
+                            form={formData}
+                            setField={setFormData}
+                            keyName="address2"
+                            errorCheck={setEmpty}
+                          />
+                        </div>
+                      </div>
+
+                    </div>
+                    {/* <div className="form_error countries_list width-100" >
                     <div className='inp-label mg-t-20'>Country <span>*</span></div>
 
                     <Select
@@ -1692,7 +1717,7 @@ const SignIn = () => {
                   </div> */}
 
 
-                  {/* <div className="form_error width-100">
+                    {/* <div className="form_error width-100">
                     <div className='inp-label mg-t-20'>State <span>*</span></div>
                     <Select
                       styles={customStyles(formData?.errorIndex == 7 ? true : false)}
@@ -1715,28 +1740,28 @@ const SignIn = () => {
                       <div style={{ color: '#FF3B30' }}>Enter State</div>}
 
                   </div> */}
-                  <div className='form_error width-100'>
-                    <div className='inp-label mg-t-20'>Gender <span>*</span></div>
-                    <Select
-                      isDisabled={pageIndex == '4' ? true : false}
-                      menuPlacement="top"
-                      styles={customStyles(formData?.errorIndex == 10 ? true : false)}
-                      id="country"
-                      name="Gender"
-                      placeholder="Gender"
-                      options={[
-                        { value: 'Male', label: 'Male' },
-                        { value: 'Female', label: 'Female' },
-                        { value: 'Others', label: 'Others' },
-                      ]}
-                      value={formData.gender}
-                      onChange={(value) => { setFormData({ ...formData, gender: value }) }}
-                    />
-                    {formData?.errorIndex == 10 &&
-                      <div style={{ color: '#FF3B30' }}>Select gender</div>}
+                    <div className='form_error width-100'>
+                      <div className='inp-label mg-t-20'>Gender <span>*</span></div>
+                      <Select
+                        isDisabled={pageIndex == '4' ? true : false}
+                        menuPlacement="top"
+                        styles={customStyles(formData?.errorIndex == 10 ? true : false)}
+                        id="country"
+                        name="Gender"
+                        placeholder="Gender"
+                        options={[
+                          { value: 'Male', label: 'Male' },
+                          { value: 'Female', label: 'Female' },
+                          { value: 'Others', label: 'Others' },
+                        ]}
+                        value={formData.gender}
+                        onChange={(value) => { setFormData({ ...formData, gender: value }) }}
+                      />
+                      {formData?.errorIndex == 10 &&
+                        <div style={{ color: '#FF3B30' }}>Select gender</div>}
+                    </div>
                   </div>
-                </div>
-                {/* <div className='inp-group'>
+                  {/* <div className='inp-group'>
 
                   <div className="form_error city_style">
                     <div className='inp-label mg-t-20'>City <span>*</span></div>
@@ -1804,14 +1829,14 @@ const SignIn = () => {
 
                 </div> */}
 
-              </LoadScript>
+                </LoadScript>
 
 
 
 
-              {/* Adding New Fields */}
+                {/* Adding New Fields */}
 
-              {/* <div className='inp-group'>
+                {/* <div className='inp-group'>
                 <div>
                   <div className='inp-label mg-t-20'>Gender <span>*</span></div>
                 
@@ -1870,62 +1895,85 @@ const SignIn = () => {
 
 
 
-              {signUpType == 'mobile' &&
-                <>
-                  <div className='inp-label  mg-t-20 margin-top'>Email <span>*</span></div>
-                  <div className={formData?.errorIndex == 12 ? "form-inp err-inp" : "form-inp"}>
-                    <input
-                      disabled={pageIndex == '4' ? true : false}
-                      type="email"
-                      placeholder="Email"
-                      className="custom-input"
-                      value={formData.email}
-                      onChange={(e) => {
-                        setGetEmail(e.target.value);
-                        setFormData({ ...formData, email: e.target.value })
-                      }} />
-                  </div>
-                  {formData?.errorIndex == 12 &&
-                    <div style={{ color: '#FF3B30' }}>Enter a valid Email</div>}
+                {signUpType == 'mobile' &&
+                  <>
+                    <div className='inp-label  mg-t-20 margin-top'>Email <span>*</span></div>
+                    <div className={formData?.errorIndex == 12 ? "form-inp err-inp" : "form-inp"}>
+                      <input
+                        disabled={pageIndex == '4' ? true : false}
+                        type="email"
+                        placeholder="Email"
+                        className="custom-input"
+                        value={formData.email}
+                        onChange={(e) => {
+                          setGetEmail(e.target.value);
+                          setFormData({ ...formData, email: e.target.value })
+                        }} />
+                    </div>
+                    {formData?.errorIndex == 12 &&
+                      <div style={{ color: '#FF3B30' }}>Enter a valid Email</div>}
 
-                  {isAlreadyRegistered &&
-                    <div style={{ color: '#FF3B30' }}>Email already registered</div>
-                  }
+                    {isAlreadyRegistered &&
+                      <div style={{ color: '#FF3B30' }}>Email already registered</div>
+                    }
 
-                </>}
-              {signUpType != 'mobile' &&
-                <>
-                  <div className='inp-label  mg-t-20 margin-top' onClick={() => { OtpInpRef.current.scrollIntoView({ behavior: 'smooth' }) }}>Mobile Number <span>*</span></div>
-                  <div className="form-inp style_verify">
-                    <PhoneInput
-                      disabled={pageIndex == '4' ? true : false}
-                      placeholder="Enter your Mobile number"
-                      defaultCountry="IN"
-                      className="custom-phone-input"
-                      onChange={handlePhoneChange}
-                      value={formData.phoneNumber}
-                    />
-                    {(!hideVerify && !isMobileVerified) && <span type='click' className='verify_text' onClick={() => signUpOTP(formData, signUpType)}>Verify</span>}
-                    {isMobileVerified && <span span type='click' className='verify_text' style={{ color: '#34C759' }}>Verified</span>}
-                  </div>
-                  {formData?.errorIndex == 11 &&
-                    <div style={{ color: '#FF3B30' }}>Enter a valid Mobile number</div>}
+                  </>}
+                {signUpType != 'mobile' &&
+                  <>
+                    <div className='inp-label  mg-t-20 margin-top' onClick={() => { OtpInpRef.current.scrollIntoView({ behavior: 'smooth' }) }}>Mobile Number <span>*</span></div>
+                    {/* <div className="form-inp style_verify"> */}
+                    {/* <PhoneInput
+                        disabled={pageIndex == '4' ? true : false}
+                        placeholder="Enter your Mobile number"
+                        defaultCountry="IN"
+                        className="custom-phone-input"
+                        onChange={handlePhoneChange}
+                        value={formData.phoneNumber}
+                      /> */}
+                    <div class="input-container">
+                      <div class="prefix-dropdown" onClick={(event) => { event.stopPropagation(); SetIsCountryContainer(true); }}><span>
+                        <img width='20px' style={{ borderRadius: '2px', marginRight: '6px' }} src={`https://purecatamphetamine.github.io/country-flag-icons/3x2/${selectedCountryList.flag.toUpperCase()}.svg`} alt="" /></span>
+                        {selectedCountryList.value}
+                        < span style={{ marginLeft: '4px' }}>
+                          <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.06 0.726562L4 3.7799L0.94 0.726562L0 1.66656L4 5.66656L8 1.66656L7.06 0.726562Z" fill="black" />
+                          </svg>
+                        </span >
+                      </div >
+                      <input type="tel" class="input-box" placeholder="Enter your phone number" value={formData.phoneNumber}
+                        onChange={handlePhoneChange} />
+                      {(!hideVerify && !isMobileVerified) && <span type='click' className='verify_text' onClick={() => signUpOTP(formData, signUpType)}>Verify</span>}
+                      {isMobileVerified && <span span type='click' className='verify_text' style={{ color: '#34C759' }}>Verified</span>}
+                    </div >
+                    {isCountryContainer &&
+                      <div className='ctry-dpdwn' ref={listRef}>
+                        {countriesMap.map(country => (
+                          <div key={country.label} className='ctr-option' onClick={() => { SetSelectedCountryList(country), SetIsCountryContainer(false) }}>
+                            <span><img width='20px' style={{ borderRadius: '2px' }} src={`https://purecatamphetamine.github.io/country-flag-icons/3x2/${country.flag.toUpperCase()}.svg`} alt="" /></span>
+                            <span style={{ padding: '0 6px 0 6px' }}>
+                              {country.label}</span> <span style={{ color: 'rgba(0, 0, 0, 0.5)' }}>{country.value}</span></div>
+                        ))}
+                      </div>}
 
-                  {isAlreadyRegistered &&
-                    <div style={{ color: '#FF3B30' }}>Mobile number already registered</div>
-                  }
+                    {/* </div> */}
+                    {formData?.errorIndex == 11 &&
+                      <div style={{ color: '#FF3B30' }}>Enter a valid Mobile number</div>}
+
+                    {isAlreadyRegistered &&
+                      <div style={{ color: '#FF3B30' }}>Mobile number already registered</div>
+                    }
 
 
 
-                </>}
+                  </>}
 
 
 
 
 
-              {(pageIndex == '4' && signUpType != 'mobile' && !isMobileVerified) && <>
-                {/* <div className='inp-label' style={{ fontWeight: '600', padding: '14px 0 4px 0' }}>Verify your {signUpType == 'mobile' ? 'Email address' : 'Mobile Number'}</div> */}
-                {/* <div className='sub-header' style={{ fontSize: '12px' }}>
+                {(pageIndex == '4' && signUpType != 'mobile' && !isMobileVerified) && <>
+                  {/* <div className='inp-label' style={{ fontWeight: '600', padding: '14px 0 4px 0' }}>Verify your {signUpType == 'mobile' ? 'Email address' : 'Mobile Number'}</div> */}
+                  {/* <div className='sub-header' style={{ fontSize: '12px' }}>
                   enter the OTP we sent to <span style={{ fontWeight: '600' }}> {signUpType == 'mobile' ? formData.email : formData.phoneNumber}</span>
 
                   &nbsp;  <span style={{ color: '#CA4625', fontWeight: 600, cursor: 'pointer', borderBottom: '2px solid #CA4625' }} onClick={() => {
@@ -1939,69 +1987,70 @@ const SignIn = () => {
                     Edit
                   </span>
                 </div> */}
-                <div className="otp-inputs">
-                  {otp.map((data, index) => {
-                    return (
-                      <input
-                        key={index}
-                        type="text"
-                        maxLength="1"
-                        className={formData?.errorIndex == 2 ? "otp-input otp-err" : "otp-input"}
-                        // value={data}
-                        onChange={(e) => handleOTPChange(e.target, index)}
-                        onKeyDown={(e) =>
-                          e.key === "Backspace" ? handleBackspace(e.target, index) : null
-                        }
-                        ref={(el) => (inputRefs.current[index] = el)}
-                        onPaste={(e) => handlePaste(e, index)} // Handle paste
-                        inputMode="numeric" // Add this line
-                        pattern="[0-9]*" // Optionally, add this for better compatibility
-                        value={data}
-                      />
-                    );
-                  })}
-                </div>
-                <div className='sub-header' style={{ fontSize: '12px', marginTop: '12px' }}>
-                  Enter OTP sent to <span style={{ fontWeight: '600' }}> {signUpType == 'mobile' ? formData.email : formData.phoneNumber}</span>
-                  &nbsp;  <span style={{ color: '#CA4625', fontWeight: 600, cursor: 'pointer', borderBottom: '2px solid #CA4625' }} onClick={() => {
-                    setPageIndex('3');
-                    setIsBtnLoad(false)
-                    setHideVerify(false);
-                  }}>
-                    <svg width="12" height="12" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M0.249512 6.18805V7.75055H1.81201L6.42035 3.14222L4.85785 1.57972L0.249512 6.18805ZM7.62868 1.93389C7.79118 1.77139 7.79118 1.50889 7.62868 1.34639L6.65368 0.371387C6.49118 0.208887 6.22868 0.208887 6.06618 0.371387L5.30368 1.13389L6.86618 2.69639L7.62868 1.93389Z" fill="#CA4625" />
-                    </svg>
-                    &nbsp;
-                    Change mobile number
-                  </span>
-                </div>
-                {formData?.errorIndex == 2 &&
-                  <div style={{ color: '#FF3B30', margin: '1rem 0' }}>{errorMessage}</div>}
+                  <div className="otp-inputs">
+                    {otp.map((data, index) => {
+                      return (
+                        <input
+                          key={index}
+                          type="text"
+                          maxLength="1"
+                          className={formData?.errorIndex == 2 ? "otp-input otp-err" : "otp-input"}
+                          // value={data}
+                          onChange={(e) => handleOTPChange(e.target, index)}
+                          onKeyDown={(e) =>
+                            e.key === "Backspace" ? handleBackspace(e.target, index) : null
+                          }
+                          ref={(el) => (inputRefs.current[index] = el)}
+                          onPaste={(e) => handlePaste(e, index)} // Handle paste
+                          inputMode="numeric" // Add this line
+                          pattern="[0-9]*" // Optionally, add this for better compatibility
+                          value={data}
+                        />
+                      );
+                    })}
+                  </div>
+                  <div className='sub-header' style={{ fontSize: '12px', marginTop: '12px' }}>
+                    Enter OTP sent to <span style={{ fontWeight: '600' }}> {signUpType == 'mobile' ? formData.email : `${phoneNumber.dialCode}${formData.phoneNumber}`}</span>
+                    &nbsp;  <span style={{ color: '#CA4625', fontWeight: 600, cursor: 'pointer', borderBottom: '2px solid #CA4625' }} onClick={() => {
+                      setPageIndex('3');
+                      setIsBtnLoad(false)
+                      setHideVerify(false);
+                    }}>
+                      <svg width="12" height="12" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.249512 6.18805V7.75055H1.81201L6.42035 3.14222L4.85785 1.57972L0.249512 6.18805ZM7.62868 1.93389C7.79118 1.77139 7.79118 1.50889 7.62868 1.34639L6.65368 0.371387C6.49118 0.208887 6.22868 0.208887 6.06618 0.371387L5.30368 1.13389L6.86618 2.69639L7.62868 1.93389Z" fill="#CA4625" />
+                      </svg>
+                      &nbsp;
+                      Change mobile number
+                    </span>
+                  </div>
+                  {formData?.errorIndex == 2 &&
+                    <div style={{ color: '#FF3B30', margin: '1rem 0' }}>{errorMessage}</div>}
 
-                {/* <button type='click' className='primary-btn' ref={OtpInpRef} onClick={() => verifySignupOTP(formData, signUpType, token)}>Submit</button> */}
-                {/* <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
+                  {/* <button type='click' className='primary-btn' ref={OtpInpRef} onClick={() => verifySignupOTP(formData, signUpType, token)}>Submit</button> */}
+                  {/* <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
                   <div className='tc-text'>Didn’t received the OTP? <br />
                     {secondsF != '0' && <>You can request another in {secondsF} {secondsF > 9 ? 'seconds' : 'second'}</>}
                     {secondsF == '0' && <div onClick={() => sendSignupOTP(formData, signUpType)} className="resend-btn">Resend</div>}</div>
                 </div> */}
-              </>}
+                </>}
 
-              <button type='click' className={isBtnLoad ? 'primary-btn disb-btn' : 'primary-btn'} ref={OtpInpRef} onClick={() => verifySignupOTP(formData, signUpType, token)}>{isLocationCart ? 'Create My Account' : 'Create My Account & Enroll'}</button>
-              {(pageIndex == '4' && signUpType != 'mobile' && !isMobileVerified) &&
-                <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
-                  <div className='tc-text'>We regret if you haven&#39;t received the OTP, <br />  &nbsp;
-                    {secondsF != '0' && <> resend OTP in <span style={{ fontWeight: 'bold', textDecoration: 'none' }}> 00:{secondsF}</span> </>}
-                    {/* {secondsF > 9 ? 'seconds' : 'second'} */}
-                    {secondsF == '0' && <span onClick={() => sendSignupOTP(formData, signUpType)} className="resend-btn">Resend</span>}</div>
-                </div>}
-            </>}
+                <button type='click' className={isBtnLoad ? 'primary-btn disb-btn' : 'primary-btn'} ref={OtpInpRef} onClick={() => verifySignupOTP(formData, signUpType, token)}>{isLocationCart ? 'Create My Account' : 'Create My Account & Enroll'}</button>
+                {(pageIndex == '4' && signUpType != 'mobile' && !isMobileVerified) &&
+                  <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
+                    <div className='tc-text'>We regret if you haven&#39;t received the OTP, <br />  &nbsp;
+                      {secondsF != '0' && <> resend OTP in <span style={{ fontWeight: 'bold', textDecoration: 'none' }}> 00:{secondsF}</span> </>}
+                      {/* {secondsF > 9 ? 'seconds' : 'second'} */}
+                      {secondsF == '0' && <span onClick={() => sendSignupOTP(formData, signUpType)} className="resend-btn">Resend</span>}</div>
+                  </div>}
+              </>
+            }
 
             {/* Signup OTP page */}
 
 
-          </div>
-        </div>
-      </div>
+          </div >
+        </div >
+      </div >
       <div className={pageIndex <= 2 ? "signin-banner img-1" : "signin-banner img-2"}>
       </div>
 

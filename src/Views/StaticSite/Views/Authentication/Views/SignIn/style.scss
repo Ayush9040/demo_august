@@ -274,25 +274,16 @@
         content: "";
         position: absolute;
         bottom: 0;
-        /* Position it at the bottom */
         left: 50%;
-        /* Center it horizontally */
         transform: translateX(-50%);
-        /* Adjust for centering */
         background-image: url('../../../../../../../public/bg-img-sigin.png');
-        /* Background image */
         background-size: 303px 126px;
-        /* Set the size of the image */
         background-repeat: no-repeat;
-        /* Prevent the image from repeating */
         width: 303px;
-        /* Width of the image */
         height: 126px;
-        /* Height of the image */
         opacity: 0.1;
-        /* Set opacity if needed */
-        z-index: 0;
-        /* Ensure it's behind other content */
+        pointer-events: none; /* Allow clicks to pass through */
+        z-index: 0; /* Optional: Ensure it’s behind other content */
     }
 
     .signin-banner {
@@ -706,7 +697,7 @@
     color: #FF3B30;
     font-size: 16px;
     cursor: pointer;
-    padding-right: 6px;
+    padding-right: 10px;
 }
 
 .signin-form .signin-container .margin-top {
@@ -865,6 +856,9 @@
     .custom_style_input_pincode .form-content form label input {
         font-size: 14px;
     }
+    .prefix-dropdown {
+        font-size: 14px !important;
+    }
 }
 
 @media(max-width: 1280px) {
@@ -897,11 +891,11 @@
     font-weight: bold;
 }
 
-.custom-input {
-    width: 100%;
-    padding: 8px 40px;
-    font-size: 16px;
-}
+// .custom-input {
+//     width: 100%;
+//     padding: 8px 40px;
+//     font-size: 16px;
+// }
 
 //custom
 .input-container {
@@ -911,6 +905,8 @@
     border-radius: 30px;
     border: 1px solid #60606080;
     position: relative;
+    padding-left: 4px;
+    margin-top: 4px;
 }
 
 .prefix-dropdown {
@@ -919,38 +915,49 @@
     background: transparent;
     cursor: pointer;
     outline: none !important;
-    width: 60px;
+    width: max-content;
+    // max-width: 120px;
+    display: flex;
+    font-size: 12px;
 }
 
 .input-box {
     border: none;
     padding: 10px;
     outline: none;
-    width: 100%; /* Adjust width as needed */
+    width: 100%;
+    /* Adjust width as needed */
     background: transparent;
 }
 
 .input-box::placeholder {
     color: #aaa;
 }
-.ctry-dpdwn{
-    width: 100%;
-    max-width: 400px;
+
+.ctry-dpdwn {
+    width: max-content;
+    // max-width: 400px;
     background-color: white;
     position: absolute;
     margin-top: 10px;
     border-radius: 12px;
     overflow-y: auto;
     max-height: 150px;
-    font-size: 1rem;
-    .ctr-option{
+    font-size: 16px;
+    
+
+    .ctr-option {
         cursor: pointer;
         padding: 6px 20px;
-        &:hover{
+        display: flex;
+        &:hover {
             background-color: #FFF3F0;
         }
     }
 }
+
+
+
 
 //     width: 60%;
 //     margin: 5rem auto 0;
