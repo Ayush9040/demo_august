@@ -48,7 +48,7 @@ const DatesPopUp = ({ isShippingModalOpen, setIsShipppingModalOpen, pageDate}) =
               {/* <h2 className="heading-2">Payment</h2> */}
             </div>
             <div>
-              <span className="change-cross-svg-width" onClick={closeModal}>
+              <span className="change-cross-svg-width" style={{cursor: 'pointer'}} onClick={closeModal}>
                 {cross}
 
               </span>

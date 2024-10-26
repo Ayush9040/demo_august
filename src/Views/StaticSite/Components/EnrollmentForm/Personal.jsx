@@ -99,7 +99,7 @@ const Personal = ({
 
   
 
-  const [selectDateValue, setSelectDateValue] = useState(values.selectDate);
+  const [selectDateValue, setSelectDateValue] = useState(values.sdate);
   const [setDate, setSetDate ] = useState(false)
   const isSatsangPage = location.pathname === '/enrollment/satsang';
 
@@ -167,8 +167,31 @@ const Personal = ({
       setFormData((prev) => ({ ...prev, city: cityFromRedux }));
       setValues((prev) => ({ ...prev, city: { label: cityFromRedux, value: cityFromRedux } }));
     }
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const urlDate = urlParams.get('date');
+
+  if(urlDate != null && urlDate != undefined) {
+    // alert("Hello")
+    setValues((prevValues) => ({
+      ...prevValues,
+      sdate: { label: urlDate, value: urlDate },
+    }));
+
+    console.log("Values from per ", values)
+
+    // Set the form data with the matched date
+    setFormData((prev) => ({
+      ...prev,
+      sdate: urlDate,
+      courseDetails: {
+        ...prev.courseDetails,
+        date: urlDate,
+      },
+    }));
+  }
     
-  }, [countryFromRedux, stateFromRedux, cityFromRedux, setFormData, setValues]);
+  }, [countryFromRedux, stateFromRedux, cityFromRedux, setFormData]);
 
   useEffect(() => {
     if (genderFromRedux) {
@@ -974,6 +997,8 @@ const Personal = ({
     setOpen(false);
   };
 
+  
+
 
   if (loading) {
     return null; // Render nothing while checking the token
@@ -1439,6 +1464,7 @@ const Personal = ({
 
             { !isSatsangPage && (
               <div className="form_error course_date">
+                {/* {values.sdate} */}
               <Select
                 styles={customStyles}
                 id="sdate"
@@ -1450,7 +1476,7 @@ const Personal = ({
                 errorCheck={setEmpty}
                 isSearchable={false}
                 options={formattedDates}
-                value={setDate ? selectDateValue : values.selectDate}
+                value={values.sdate}
                 onChange={(value) => {
                   setValues(
                     { country: values.country, state: values.state, city: values.city, sdate: value },

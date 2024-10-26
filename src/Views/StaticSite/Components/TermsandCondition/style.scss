@@ -56,4 +56,37 @@
 
 .ReactModalPortal .ReactModal__Overlay {
   background-color: rgba(0, 0, 0, 0.5) !important;
+  
+}
+
+.check_date .item-label:has(.item-input:checked) {
+  background-color: #FFF8F6 !important;
+  box-shadow: 0 0 0 2px #CA4625 inset !important;
+}
+
+.check_date .item-label:hover {
+  background-color: #FFF8F6 !important;
+}
+
+.before_date_select {
+  background-color: rgba(202, 70, 37, 0.5) !important;
+  cursor: pointer;
+  color: #fff !important;
+}
+
+.after_date_select {
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+  background-color: rgba(202, 70, 37, 1);
+  cursor: pointer;
+}
+
+.check_date .item-label {
+  display: flex;
+  justify-content: center !important;
+}
+
+.item_padding {
+  padding-top: 5px;
 }
