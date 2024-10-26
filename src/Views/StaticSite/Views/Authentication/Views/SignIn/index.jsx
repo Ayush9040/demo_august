@@ -423,48 +423,54 @@ const SignIn = () => {
 
     details['firstName'] = getTrimmedName(details['firstName'])
     details['lastName'] = getTrimmedName(details['lastName'])
+console.log(values);
+console.log(userDetails);
 
     if (!details.firstName || !nameRegex.test(details.firstName)) {
-      console.log("Deails First Name ", details.firstName);
+      // console.log("Deails First Name ", details.firstName);
       setFormData({ ...formData, errorIndex: 3 });
     }
     else if (!details.lastName || !nameRegex.test(details.lastName)) {
-      console.log("Deails lastName Name ", details.lastName);
+      // console.log("Deails lastName Name ", details.lastName);
       setFormData({ ...formData, errorIndex: 4 });
     }
     else if ((!userDetails?.address1)) {
-      console.log("Deails email Name ", details.email);
+      // console.log("Deails email Name ", details.email);
       setFormData({ ...details, errorIndex: 5 });
     }
     else if (!values?.country?.label) {
       // alert("Hello from country ")
-      console.log("values ", values.country?.label)
-      console.log("Deails country Name ", details.country?.value);
-      setFormData({ ...details, errorIndex: 6 });
+      // console.log("values ", values.country?.label)
+      // console.log("Deails country Name ", details.country?.value);
+      // setFormData({ ...details, errorIndex: 6 });
+      setFormData({ ...details, errorIndex: 5 });
     }
     else if (!values?.state?.label) {
-      console.log("values ", values.country?.label)
-      console.log("Deails country Name ", details.country?.value);
-      setFormData({ ...details, errorIndex: 7 });
+      // console.log("values ", values.country?.label)
+      // console.log("Deails country Name ", details.country?.value);
+      // setFormData({ ...details, errorIndex: 7 });
+      setFormData({ ...details, errorIndex: 5 });
     }
     else if (!values?.city?.label) {
-      console.log("Deails city Name ", values.city?.label);
-      setFormData({ ...details, errorIndex: 8 });
+      // console.log("Deails city Name ", values.city?.label);
+      // setFormData({ ...details, errorIndex: 8 });
+      setFormData({ ...details, errorIndex: 5 });
     }
     else if (!userDetails?.pincode) {
-      console.log("Deails city Name ", values.city?.label);
-      setFormData({ ...details, errorIndex: 9 });
+      // console.log("Deails city Name ", values.city?.label);
+      // setFormData({ ...details, errorIndex: 9 });
+      setFormData({ ...details, errorIndex: 5 });
     }
     else if (!details.gender?.value) {
-      console.log("Deails gender Name ", details.gender?.value);
+      // console.log("Deails gender Name ", details.gender?.value);
       setFormData({ ...details, errorIndex: 10 });
     }
     else if ((!getemail || !emailRegex.test(getemail)) && signUpType == 'mobile') {
-      console.log("Deails email Name ", getemail);
+      // console.log("Deails email Name ", getemail);
       setFormData({ ...details, errorIndex: 12 });
     }
     else if ((validatePhoneNumber(details.phoneNumber).length > 0) && signUpType != 'mobile') {
-      console.log("Deails phoneNumber Name ", details.gender?.value);
+      // console.log("Deails phoneNumber Name ", details.gender?.value);
       setFormData({ ...details, errorIndex: 11 });
       setIsToast(true)
     }
@@ -1378,7 +1384,7 @@ const SignIn = () => {
                           />
                         </div>
                         {formData?.errorIndex == 5 &&
-                          <div style={{ color: '#FF3B30' }}>Type your address </div>}
+                          <div style={{ color: '#FF3B30' }}>Select a valid address </div>}
                       </div>
                     </Autocomplete>
                   </div>
