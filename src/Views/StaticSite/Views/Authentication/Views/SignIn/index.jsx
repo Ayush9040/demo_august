@@ -360,7 +360,7 @@ const SignIn = () => {
           // handleAlreadySignedUpUser({
           //   phone: userDetails?.phoneNumber
           // })
-          // getUserDetails(response?.data?.accessToken)
+          getUserDetails(response?.data?.accessToken, 'alreadySignedUp')
           page ? page !== 'cart' ? navigate(`/enrollment/${page}`) : navigate('/shop/checkout') : navigate('/')
         }
         setOtp(new Array(4).fill(""))//clear OTP
