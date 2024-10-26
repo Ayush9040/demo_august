@@ -12,8 +12,10 @@
         border: 2px solid #F0B2A2;
         border-right: none;
         border-radius: 20px 0 0 20px;
-        background:
-            linear-gradient(180deg, #FFFFFF 0%, #FFECE7 100%);
+        // background:
+        //     linear-gradient(180deg, #FFFFFF 0%, #FFECE7 100%);
+        background: linear-gradient(180deg, #FFFFFF 0%, #FFF5F3 100%);
+
         /* Linear gradient only */
         position: relative;
         /* Position for pseudo-element */
@@ -308,6 +310,10 @@
     .img-2 {
         background-image: url('../../../../../../../public/images/signin-two.svg');
     }
+
+    .disb-btn {
+        cursor: none;
+    }
 }
 
 
@@ -353,6 +359,7 @@
             .signin-details {
                 // height: 74% !important;
                 margin-top: 4vh !important;
+
                 .container {
                     // .back-nav {
                     //     // font-size: 1rem !important;
@@ -834,7 +841,7 @@
 }
 
 .signin-form .signin-container .signin-details .container .header-3 {
-    font-size: 26px;
+    font-size: 25px;
     color: #181818;
     font-weight: 700;
     margin: 0.75rem 0 0.25rem 0;
