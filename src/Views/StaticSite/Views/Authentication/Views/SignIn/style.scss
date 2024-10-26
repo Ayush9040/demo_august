@@ -8,7 +8,7 @@
 
     .signin-container {
         width: 53.75%;
-        max-width: 892px;
+        max-width: 792px;
         border: 2px solid #F0B2A2;
         border-right: none;
         border-radius: 20px 0 0 20px;
@@ -93,6 +93,7 @@
             margin-top: 8vh;
             overflow-y: auto !important;
             // max-width: 400px;
+
 
             // Include scrollbar styles here to apply only to this container
             &::-webkit-scrollbar {
@@ -282,16 +283,19 @@
         width: 303px;
         height: 126px;
         opacity: 0.1;
-        pointer-events: none; /* Allow clicks to pass through */
-        z-index: 0; /* Optional: Ensure it’s behind other content */
+        pointer-events: none;
+        /* Allow clicks to pass through */
+        z-index: 0;
+        /* Optional: Ensure it’s behind other content */
     }
 
     .signin-banner {
         width: 46.25%;
-        max-width: 848px;
+        max-width: 648px;
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
+        border-radius: 0 20px 20px 0;
     }
 
     .img-1 {
@@ -408,6 +412,13 @@
         margin-left: -90px !important;
     }
 
+}
+
+@media (min-width: 1540px) {
+    .container {
+        padding: 0 4vw!important;
+        // max-width: 1000px;
+    }
 }
 
 @media(max-width:1440px) {
@@ -584,9 +595,12 @@
         }
     }
 
+
     .signin-banner {
-        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 100% !important;
         height: 26vh !important;
+        border-radius: 0 !important;
     }
 
     .img-2 {
@@ -856,6 +870,7 @@
     .custom_style_input_pincode .form-content form label input {
         font-size: 14px;
     }
+
     .prefix-dropdown {
         font-size: 14px !important;
     }
@@ -944,12 +959,13 @@
     overflow-y: auto;
     max-height: 150px;
     font-size: 16px;
-    
+
 
     .ctr-option {
         cursor: pointer;
         padding: 6px 20px;
         display: flex;
+
         &:hover {
             background-color: #FFF3F0;
         }
