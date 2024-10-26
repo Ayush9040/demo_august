@@ -67,6 +67,7 @@ const SignIn = () => {
   const [Params] = useSearchParams()
   const inputRefs = useRef([]);
   const [token, setToken] = useState()
+  const [isBtnLoad, setIsBtnLoad] = useState(false)
   const [isoCode, setIsoCode] = useState('');
   const [empty, setEmpty] = useState(0)
   const [selectDate, setSetselectDate] = useState()
@@ -347,6 +348,7 @@ const SignIn = () => {
           { contactNo: phoneNumber.mobile, otp: userDetails.otp, dialCode: phoneNumber.dialCode }
         )
         setToken(response?.data?.token)
+        setIsBtnLoad(false)
         if (response?.data?.isSignupRequired) { setPageIndex(3); setSignUpType('mobile') }
         else {
           localStorage.setItem('authorizationToken', response?.data?.accessToken)
@@ -358,7 +360,7 @@ const SignIn = () => {
           // handleAlreadySignedUpUser({
           //   phone: userDetails?.phoneNumber
           // })
-          // getUserDetails(response?.data?.accessToken)
+          getUserDetails(response?.data?.accessToken, 'alreadySignedUp')
           page ? page !== 'cart' ? navigate(`/enrollment/${page}`) : navigate('/shop/checkout') : navigate('/')
         }
         setOtp(new Array(4).fill(""))//clear OTP
@@ -423,8 +425,8 @@ const SignIn = () => {
 
     details['firstName'] = getTrimmedName(details['firstName'])
     details['lastName'] = getTrimmedName(details['lastName'])
-console.log(values);
-console.log(userDetails);
+    console.log(values);
+    console.log(userDetails);
 
     if (!details.firstName || !nameRegex.test(details.firstName)) {
       // console.log("Deails First Name ", details.firstName);
@@ -474,10 +476,15 @@ console.log(userDetails);
       setFormData({ ...details, errorIndex: 11 });
       setIsToast(true)
     }
+    else if (signUpType != 'mobile' && !isMobileVerified) {
+      // setFormData({ ...details, errorIndex: 11 });
+      setIsToast(true)
+    }
     else {
 
       if (userDetails.otp.length == 4 && type != 'mobile') {//valid OTP
         // alert("From otp ")
+        setIsBtnLoad(true)
         setFormData({ ...formData, errorIndex: 0 });
         const number = parsePhoneNumber(userDetails.phoneNumber);
         const countryCode = number?.country; // This will give you the country code
@@ -532,6 +539,7 @@ console.log(userDetails);
 
 
           }
+
           else {//google user
             let response = await axios.post(//send OTP for mobile
               `${authBaseDomain}/authdoor/google/signup`,
@@ -581,56 +589,56 @@ console.log(userDetails);
           else {
             setErrorMessage(err.data.error)
           }
+          setIsBtnLoad(false)
         }
       }
       else {
-        // alert("Email called");
-
-
-
+        setIsBtnLoad(true)
         console.log("User details from Email ", userDetails)
+        if (isMobileVerified) {
+          const number = parsePhoneNumber(userDetails.phoneNumber);
+          const countryCode = number?.country;
+          let payload = { ...userDetails }
+          delete payload.otp;
+          delete payload.address1;
+          delete payload.address2;
+          payload['gender'] = userDetails?.gender.value;
+          payload['addressLine1'] = userDetails?.address1;
+          payload['addressLine2'] = userDetails?.address2;
+          payload['country'] = values?.country?.label;
+          payload['city'] = values?.city?.label;
+          payload['state'] = values?.state?.label;
+          payload['pincode'] = userDetails?.pincode;
+          payload['phoneNumber'] = phoneNumber.mobile;
+          payload['dialCode'] = phoneNumber.dialCode;
+          payload['countryCode'] = countryCode;
 
-        const number = parsePhoneNumber(userDetails.phoneNumber);
-        const countryCode = number?.country;
-        let payload = { ...userDetails }
-        delete payload.otp;
-        delete payload.address1;
-        delete payload.address2;
-        payload['gender'] = userDetails?.gender.value;
-        payload['addressLine1'] = userDetails?.address1;
-        payload['addressLine2'] = userDetails?.address2;
-        payload['country'] = values?.country?.label;
-        payload['city'] = values?.city?.label;
-        payload['state'] = values?.state?.label;
-        payload['pincode'] = userDetails?.pincode;
-        payload['phoneNumber'] = phoneNumber.mobile;
-        payload['dialCode'] = phoneNumber.dialCode;
-        payload['countryCode'] = countryCode;
 
 
-
-        let response = await axios.post(//send OTP for mobile
-          `${authBaseDomain}/authdoor/email/verify-otp`,
-          payload,
-          {
-            headers: {
-              'Authorization': `Bearer ${token}`
+          let response = await axios.post(//send OTP for mobile
+            `${authBaseDomain}/authdoor/email/verify-otp`,
+            payload,
+            {
+              headers: {
+                'Authorization': `Bearer ${token}`
+              }
             }
+          )
+          if (response) {
+            // alert('Siggned in');
+            localStorage.setItem('authorizationToken', response?.data?.accessToken)
+            localStorage.setItem('refreshToken', response?.data?.refreshToken)
+            dispatch(loginUserSuccess({}))
+            getUserDetails(response?.data?.accessToken, 'notalreadySignedUp')
+            callCTEvent(payload)
+
+            // console.log('user details 2 ', userDetails);
+            page ? page !== 'cart' ? navigate(`/enrollment/${page}`) : navigate('/shop/checkout') : navigate('/')
           }
-        )
-        if (response) {
-          // alert('Siggned in');
-          localStorage.setItem('authorizationToken', response?.data?.accessToken)
-          localStorage.setItem('refreshToken', response?.data?.refreshToken)
-          dispatch(loginUserSuccess({}))
-          getUserDetails(response?.data?.accessToken, 'notalreadySignedUp')
-          callCTEvent(payload)
 
-          // console.log('user details 2 ', userDetails);
-          page ? page !== 'cart' ? navigate(`/enrollment/${page}`) : navigate('/shop/checkout') : navigate('/')
+          setFormData({ ...formData, errorIndex: 2 });
+          setIsBtnLoad(false)
         }
-
-        setFormData({ ...formData, errorIndex: 2 });
       }
 
     }
@@ -639,6 +647,7 @@ console.log(userDetails);
 
   // Send OTP for mobile
   const sendOTP = async (userDetails) => {
+    setOtp(new Array(4).fill(""))//reset OTP
     if (userDetails.phoneNumber) {//validate mobile number
       const errors = validatePhoneNumber(userDetails.phoneNumber);
       if (errors.length) {
@@ -727,17 +736,18 @@ console.log(userDetails);
 
   const [seconds, setSeconds] = useState(59);
   const [isToast, setIsToast] = useState(false);
-  let intervalId; // variable fro timer
+  let intervalId = useRef(null); // variable fro timer
   let timer = 59; // variable to handle seconds not updated in dom
 
   const startTimer = () => {
-    clearInterval(intervalId);
+    setSeconds(59)
+    clearInterval(intervalId.current);
     timer = 59;// resets timer
-    intervalId = setInterval(() => {
+    intervalId.current = setInterval(() => {
       timer = timer - 1; //using state its not possible to get current time so using a new variable
       setSeconds(timer)
       if (timer === 0) {
-        clearInterval(intervalId);
+        clearInterval(intervalId.current);
       }
     }, 1000)
   }
@@ -761,6 +771,7 @@ console.log(userDetails);
 
   // Used to resend OTP in the final step
   const sendSignupOTP = async (details, type) => {
+    setOtp(new Array(4).fill(""))
     if (type == 'mobile') {//send OTP for mobile
       await axios.post(//send OTP for mobile
         `${authBaseDomain}/authdoor/email/generate-otp`,
@@ -1032,13 +1043,14 @@ console.log(userDetails);
     // console.log("Function called ")
     // alert("Me ")
     // try {
+
     const result = await signInWithPopup(auth, googleAuthProvider);
     const user = result.user;
     // alert("Me ")
-    console.log("User from Google Sign up ", user)
-    setFormData({ ...formData, email: user.email })
+    // console.log("User from Google Sign up ", user)
+    setFormData({ ...formData, email: user.email, phoneNumber: '' })
     setGetEmail(user.email);
-
+    // alert(formData.phoneNumber)
     console.log("FormData ", formData)
     // Get the OAuth ID token from the credential
     const credential = GoogleAuthProvider.credentialFromResult(result);
@@ -1050,20 +1062,21 @@ console.log(userDetails);
         `${authBaseDomain}/authdoor/google/login`,
         { tokenId: idToken, emailId: user.email }
       )
-      setFormData({ ...formData, email: user.email })
+      setFormData({ ...formData, email: user.email, phoneNumber: '' })
       console.log("Response ", response);
       if (response?.data?.isSignupRequired) {//gmail signup
         setPageIndex('3')
+        setIsBtnLoad(false)
         setSignUpType('email')
         setToken(response?.data?.token)
         if (user?.displayName) {
           const parts = user?.displayName.split(" ");
           const lastWord = parts.length > 1 ? parts.pop() : ""; // Get the last word or set it to empty
           const remainingString = parts.join(" ") || user?.displayName; // Join the remaining parts or keep the original name
-          setFormData({ ...formData, firstName: remainingString, lastName: lastWord, email: user.email })
+          setFormData({ ...formData, firstName: remainingString, lastName: lastWord, email: user.email, phoneNumber: '' })
         }
         else {
-          setFormData({ ...formData, email: user.email })
+          setFormData({ ...formData, email: user.email, phoneNumber: '' })
         }
       }
       else {//existing user
@@ -1184,7 +1197,8 @@ console.log(userDetails);
         <div className="signin-logo">
           <img src="/images/main-logo-signup.svg" alt="primary-logo" loading="lazy" />
         </div>
-        {(formData?.errorIndex == 11 && pageIndex == '3' && isToast) &&
+        {(pageIndex == '3' && isToast) &&
+          // formData?.errorIndex == 11 &&
           <div className='error-alert'>
             <div>
               <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1256,7 +1270,7 @@ console.log(userDetails);
                 />
               </div>
               {formData?.errorIndex == 1 &&
-                <div style={{ color: '#FF3B30' }}>Enter a valid Mobile number to proceed next</div>}
+                <div style={{ color: '#FF3B30' }}>Enter a valid Mobile number</div>}
               <div className="ftr-btn">
                 <button type='click' className='primary-btn' onClick={() => { sendOTP(formData), setOtp(new Array(4).fill("")) }}>Continue</button>
                 <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
@@ -1725,6 +1739,7 @@ console.log(userDetails);
                   Enter OTP sent to <span style={{ fontWeight: '600' }}> {signUpType == 'mobile' ? formData.email : formData.phoneNumber}</span>
                   &nbsp;  <span style={{ color: '#CA4625', fontWeight: 600, cursor: 'pointer', borderBottom: '2px solid #CA4625' }} onClick={() => {
                     setPageIndex('3');
+                    setIsBtnLoad(false)
                     setHideVerify(false);
                   }}>
                     <svg width="12" height="12" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1745,7 +1760,7 @@ console.log(userDetails);
                 </div> */}
               </>}
 
-              <button type='click' className='primary-btn' ref={OtpInpRef} onClick={() => verifySignupOTP(formData, signUpType, token)}>{isLocationCart ? 'Create My Account' : 'Create My Account & Enroll'}</button>
+              <button type='click' className={isBtnLoad ? 'primary-btn disb-btn' : 'primary-btn'} ref={OtpInpRef} onClick={() => verifySignupOTP(formData, signUpType, token)}>{isLocationCart ? 'Create My Account' : 'Create My Account & Enroll'}</button>
               {(pageIndex == '4' && signUpType != 'mobile' && !isMobileVerified) &&
                 <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
                   <div className='tc-text'>We regret if you haven&#39;t received the OTP, <br />  &nbsp;
