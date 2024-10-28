@@ -17,8 +17,9 @@ import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import { LoadScript, Autocomplete } from '@react-google-maps/api';
 import countryList from 'react-select-country-list';
-import { useSelector } from 'react-redux'; 
+import { useSelector, useDispatch } from 'react-redux'; 
 import { useLocation } from 'react-router-dom';
+import { logoutUserAction } from '../../Views/Authentication/Auth.actions';
 
 const CourseDetails = lazy(() => import('./CourseDetails'));
 
@@ -94,12 +95,23 @@ const Personal = ({
 
   const navigates = useNavigate();
   const location = useLocation();
+  const dispatch = useDispatch();
 
   
 
   const [selectDateValue, setSelectDateValue] = useState(values.selectDate);
   const [setDate, setSetDate ] = useState(false)
   const isSatsangPage = location.pathname === '/enrollment/satsang';
+
+  const nameFromRedux = useSelector((state) => state.auth.user.data?.firstName);
+
+  console.log("nameFromRedux from profile ", nameFromRedux);
+
+  if(nameFromRedux === undefined) {
+    dispatch(logoutUserAction());
+    localStorage.removeItem("authorizationToken");
+    navigates('/user/sign-in');
+  }
 
   useEffect(() => {
     if (isSatsangPage) {

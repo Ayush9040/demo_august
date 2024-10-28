@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react'
-import { useSelector } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
 import { Link, useNavigate } from 'react-router-dom'
 import HistoryList from './HistoryList'
 import InnerNavComponent from '../../Components/InnerNavComponent'
 import { fetchUserCourses, fetchUserOrders } from './Profile.api'
 import './style.scss'
+import { logoutUserAction } from '../Authentication/Auth.actions'
 
 const UserProfile = () => {
   let navigate = useNavigate()
@@ -19,6 +20,19 @@ const UserProfile = () => {
     { option: 'Alumni', key: 3 },
     { option: 'Edit Account', key: 4 },
   ]
+
+  const nameFromRedux = useSelector((state) => state.auth.user.data?.firstName);
+
+  console.log("nameFromRedux from profile ", nameFromRedux);
+
+  const dispatch = useDispatch();
+
+  if(nameFromRedux === undefined) {
+    console.log("Name from redux")
+    dispatch(logoutUserAction());
+    localStorage.removeItem("authorizationToken");
+    navigate('/user/sign-in');
+  }
 
   useEffect(() => {
     const token = localStorage.getItem('authorizationToken');

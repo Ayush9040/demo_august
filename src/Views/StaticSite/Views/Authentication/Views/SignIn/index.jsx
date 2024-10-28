@@ -57,6 +57,7 @@ const SignIn = () => {
   const inputRefs = useRef([]);
   const [token, setToken] = useState()
   const [selectDate, setSetselectDate] = useState()
+  const [errorMessage, setErrorMessage] = useState()
   const [otp, setOtp] = useState(new Array(4).fill(""));
   const phoneNumberFromRedux = useSelector((state) => state.auth.user.data?.phoneNumber);
   // const [token, setToken] = useState(null);
@@ -100,18 +101,20 @@ const SignIn = () => {
   };
 
   // After login get the user details and update redux
-  const getUserDetails = async (token) => {
+  const getUserDetails = async (token, ctEventValue) => {
     try {
       const response = await axios.get(`${authBaseDomain}/user/me`, {
         headers: {
           'Authorization': `Bearer ${token}`
         }
       });
+      if(ctEventValue === 'alreadySignedUp') {
+        handleAlreadySignedUpUser({
+          phone: response?.data?.data?.phoneNumber
+        })
+      }
       localStorage.setItem('userAppId', response?.data.data?._id)//to pass
       // console.log("response?.data.data?._id :", response?.data?.data?.phoneNumber)
-      handleAlreadySignedUpUser({
-        phone: response?.data?.data?.phoneNumber
-      })
       //update user details to Redux 
       dispatch(loginUserSuccess({ type: 'auth/LOGIN_USER_SUCCESS', data: response?.data?.data }))
     } catch (error) {
@@ -141,10 +144,10 @@ const SignIn = () => {
           // document.cookie = `authorizationToken=${response?.data?.accessToken}; path=/;`; // Expires in 1 hour
 
           dispatch(loginUserSuccess({}))
-          handleAlreadySignedUpUser({
-            phone: userDetails?.phoneNumber
-          })
-          getUserDetails(response?.data?.accessToken)
+          // handleAlreadySignedUpUser({
+          //   phone: userDetails?.phoneNumber
+          // })
+          getUserDetails(response?.data?.accessToken, 'alreadySignedUp')
           page ? page !== 'cart' ? navigate(`/enrollment/${page}`) : navigate('/shop/checkout') : navigate('/')
         }
         setOtp(new Array(4).fill(""))//clear OTP
@@ -168,6 +171,8 @@ const SignIn = () => {
 
       try {
         let payload = { ...userDetails }
+        console.log(payload);
+
         payload['gender'] = userDetails?.gender.value;
         payload['country'] = userDetails?.country.label;
         payload['city'] = userDetails?.city.label;
@@ -192,7 +197,7 @@ const SignIn = () => {
             // document.cookie = `authorizationToken=${response?.data?.accessToken}; path=/;`;
             dispatch(loginUserSuccess({}))
 
-            getUserDetails(response?.data?.accessToken)
+            getUserDetails(response?.data?.accessToken, 'notalreadySignedUp')
             callCTEvent(payload)
             page ? page !== 'cart' ? navigate(`/enrollment/${page}`) : navigate('/shop/checkout') : navigate('/')
           }
@@ -217,7 +222,7 @@ const SignIn = () => {
             localStorage.setItem('authorizationToken', response?.data?.accessToken)
             localStorage.setItem('refreshToken', response?.data?.refreshToken)
             dispatch(loginUserSuccess({}))
-            getUserDetails(response?.data?.accessToken)
+            getUserDetails(response?.data?.accessToken, 'notalreadySignedUp')
             callCTEvent(payload)
 
             // console.log('user details 2 ', userDetails);
@@ -231,6 +236,26 @@ const SignIn = () => {
       catch (err) {
         // alert('Invalid OTP')
         setFormData({ ...formData, errorIndex: 2 });
+        if (err.data.error == 'Your session has expired. Please Sign Up again to continue.') {
+          setPageIndex(1)
+          setOtp(new Array(4).fill(""));
+          setSignUpType('')
+          setFormData({
+            phoneNumber: '',
+            dialCode: '91',
+            otp: '',
+            email: '',
+            firstName: '',
+            lastName: '',
+            gender: '',
+            country: '',
+            city: '',
+            errorIndex: '0'
+          })
+        }
+        else {
+          setErrorMessage(err.data.error)
+        }
       }
     }
     else {
@@ -572,12 +597,14 @@ const SignIn = () => {
           setSignUpType('email')
           setToken(response?.data?.token)
 
-          setFormData({ ...formData, email: user.email })
           if (user?.displayName) {
             const parts = user?.displayName.split(" ");
             const lastWord = parts.length > 1 ? parts.pop() : ""; // Get the last word or set it to empty
             const remainingString = parts.join(" ") || user?.displayName; // Join the remaining parts or keep the original name
-            setFormData({...formData, firstName: remainingString, lastName: lastWord })
+            setFormData({ ...formData, firstName: remainingString, lastName: lastWord, email: user.email })
+          }
+          else {
+            setFormData({ ...formData, email: user.email })
           }
         }
         else {//existing user
@@ -585,7 +612,7 @@ const SignIn = () => {
           localStorage.setItem('authorizationToken', response?.data?.accessToken)
           localStorage.setItem('refreshToken', response?.data?.refreshToken)
           dispatch(loginUserSuccess({}))
-          getUserDetails(response?.data?.accessToken)
+          getUserDetails(response?.data?.accessToken, 'alreadySignedUp')
           console.log(response?.data)
 
           page ? page !== 'cart' ? navigate(`/enrollment/${page}`) : navigate('/shop/checkout') : navigate('/')
@@ -608,8 +635,13 @@ const SignIn = () => {
     const isLoggedIn = !!localStorage.getItem('authorizationToken');
 
     if (pageIndex > 1) {
-      if (pageIndex == '4') {
-        setPageIndex('2')
+      if (pageIndex == '3' || pageIndex == '4') {
+        if (signUpType == 'mobile') {
+          setPageIndex('2')
+        }
+        else {
+          setPageIndex('1')
+        }
       }
       else {
         setPageIndex(pageIndex - 1)
@@ -950,7 +982,7 @@ const SignIn = () => {
                   })}
                 </div>
                 {formData?.errorIndex == 2 &&
-                  <div style={{ color: '#FF3B30', margin: '1rem 0' }}>OTP is Invalid!</div>}
+                  <div style={{ color: '#FF3B30', margin: '1rem 0' }}>{errorMessage}</div>}
                 <div style={{ width: '100%', display: 'flex', justifyContent: 'start' }}>
                   <div className='tc-text'>Didn’t received the OTP? &nbsp;
                     {secondsF != '0' && <> Resend in {secondsF} {secondsF > 9 ? 'seconds' : 'second'}</>}

@@ -964,6 +964,8 @@ export const handleCTOnUserLoginCalled = ({
   //     "Name":firstName,
   //     "Email ID": email,
   //     "IsLoggedIn": IsLoggedIn,
+  //     "phone": phone,
+  //     "page_url": window.location.href,
   //     "date_time_timestamp": new Date().toISOString()
   //   });
 

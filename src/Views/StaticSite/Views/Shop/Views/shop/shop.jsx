@@ -156,7 +156,7 @@ const Shop = () => {
    
 
     if(product) {
-      // ReactGA.initialize('374034779', { debug: true })
+      // ReactGA.initialize('5158237522', { debug: true })
       console.log("react GA", ReactGA);
       ReactGA.pageview(window.location.href);
       ReactGA.event({
