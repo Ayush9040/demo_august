@@ -92,6 +92,7 @@ const EnrollmentForm = ({
   const [isRegular, setIsRegular] = useState(false)
   const [autocomplete, setAutocomplete] = useState(null);
   const [loading, setLoading] = useState(true); 
+  const [ showForm, setShowForm] = useState(false)
 
   const navigates = useNavigate();
   const location = useLocation();
@@ -1095,9 +1096,48 @@ const EnrollmentForm = ({
           </div>
         </div>
         <div className="left_grid">
-          <form>
+        <div className="details_box details_personal_box">
+            <div className="details_course_box ">
+              <div className="detail_image_box">
+                {/* <img src={currentCourse?.image} alt={currentCourse?.title} /> */}
+              </div>
+              <div className="current_duration">
+                <div>
+                  <span className='details_newName'>
+                  Student details
+                  </span>
+                  {/* {courseDate !== 'null' ? courseDate : ''} */}
+                </div>
+                <div className='details_desc_info'>
+                  <div><span className='details_duration_info'>Name:</span> <span className='tenure_course'>{formData?.name}</span></div>
+                  
+                </div>
+                <div className='details_desc_days details_desc_days_2'>
+                  <div><span className='details_duration_info'>Email Address:</span> <span className='tenure_course'>{formData?.email}</span></div>
+                  
+                </div>
+                <div className='details_desc_days'> 
+                  <div><span className='details_duration_info'>Mobile Number:</span> <span className='tenure_course'>{formData?.phone}</span></div>
+                  
+                </div>
+                <div className='details_desc_days'> 
+                  <div><span className='details_duration_info'>Gender:</span> <span className='tenure_course'>{formData?.gender}</span></div>
+                  
+                </div>
+                <div className='details_desc_days'> 
+                  <div><span className='details_duration_info'>Address</span> <span className='tenure_course'>{formData?.address1}</span></div>
+                  
+                </div>
+                {/* {courseFee && <p className="current_fees"> {currentCourse.key === 'ma-yoga-shastra' && formData.country !== 'India' ? '$ 3950' : `₹ ${courseFee}`}</p>} */}
+                {/* {courseFee && <p className="current_fees"> ₹ {courseFee}</p>} */}
+              </div>
+            </div>
+          </div>
+          {
+            showForm && (
+                <form>
             <div className="form_error">
-                adsadads
+               
               <InputComponent
                 type="text"
                 placeholder="Name*"
@@ -1656,6 +1696,8 @@ const EnrollmentForm = ({
             />
 
           </form>
+            )
+          }
         </div>
       </div>
 

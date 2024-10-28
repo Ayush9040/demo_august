@@ -3,6 +3,8 @@ import { useState } from 'react'
 import { upload } from '../../assets/icons/icon'
 import { uploadFile } from '../../../../helpers/OssHelper'
 import { useLocation } from 'react-router-dom';
+import './formstyles.scss'
+
 
 const CourseDetails = ({
   currentCourse,
@@ -352,8 +354,22 @@ const CourseDetails = ({
               </div>
               <div className="current_duration">
                 <div>
+                  <span className='details_newName'>
                   {currentCourse?.newName}&nbsp;
-                  {courseDate !== 'null' ? courseDate : ''}
+                  </span>
+                  {/* {courseDate !== 'null' ? courseDate : ''} */}
+                </div>
+                <div className='details_desc_info'>
+                  <div><span className='details_duration_info'>Duration:</span> <span className='tenure_course'>{currentCourse?.tenure}</span></div>
+                  <div><span className='details_lang_info'>Language:</span> <span className='lang_course'>{currentCourse?.language}</span></div>
+                </div>
+                <div className='details_desc_days details_desc_days_2'>
+                  <div><span className='details_duration_info'>Days:</span> <span className='tenure_course'>{currentCourse?.days[0]}</span></div>
+                  
+                </div>
+                <div className='details_desc_days'> 
+                  <div><span className='details_duration_info'>Time:</span> <span className='tenure_course'>{currentCourse?.time[0]}</span></div>
+                  
                 </div>
                 {/* {courseFee && <p className="current_fees"> {currentCourse.key === 'ma-yoga-shastra' && formData.country !== 'India' ? '$ 3950' : `₹ ${courseFee}`}</p>} */}
                 {/* {courseFee && <p className="current_fees"> ₹ {courseFee}</p>} */}

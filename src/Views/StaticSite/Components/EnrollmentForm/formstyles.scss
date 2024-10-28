@@ -456,6 +456,8 @@
   border-radius: 94px;
   margin: 2%;
   justify-content: center;
+  // background-image: url('../../../../../public/images/bg_enroll.png');
+  background-color: rgba(202, 70, 37, 0.02);
 
   input::-webkit-outer-spin-button,
   input::-webkit-inner-spin-button {
@@ -1348,7 +1350,7 @@ input[type='radio']:checked::before {
     width: fit-content;
 
     .details_box {
-      border: 1px solid #60606080 !important;
+      // border: 1px solid #60606080 !important;
       border-radius: 20px;
       // width: 600px;
       height: 200px;
@@ -1361,7 +1363,10 @@ input[type='radio']:checked::before {
         position: relative;
 
         .current_duration {
-          margin-top: 50px;
+          // margin-top: 50px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
           font-weight: bold;
           font-size: 1.5rem;
           text-align: left;
@@ -2007,4 +2012,56 @@ input[type='radio']:checked::before {
 .enroll_subtitle {
   font-size: 16px;
   font-weight: 500;
+}
+
+.details_newName {
+  font-size: 22px;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 1);
+}
+
+.details_desc_info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+  padding-right: 60px;
+}
+
+.details_duration_info {
+  font-size: 16px;
+  font-weight: 400;
+  color: rgba(129, 129, 132, 1);
+}
+
+.details_lang_info {
+  font-size: 16px;
+  font-weight: 400;
+  color: rgba(129, 129, 132, 1);
+}
+
+.tenure_course {
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 1);
+}
+
+.lang_course {
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 1);
+}
+
+.details_desc_days_2 {
+  padding: 8px 0px;
+}
+
+.details_personal_box {
+  border-radius: 20px;
+  // height: 200px;
+  background-color: #fff;
+  border: none;
+  box-shadow: 0px 11.58px 23px 0px rgba(0, 0, 0, 0.04);
+  display: flex;
+  // align-items: center;
+  padding: 20px;
 }
