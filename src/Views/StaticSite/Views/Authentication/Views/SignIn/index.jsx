@@ -25,6 +25,9 @@ import { handleCTSignIn, handleAlreadySignedUpUser } from '../../../../../../Cle
 import InputComponent from '../../../../Components/InputComponent'
 import { LoadScript, Autocomplete } from '@react-google-maps/api';
 import { useLocation } from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
+
 const countriesMap = [
   { label: 'Afghanistan', value: '+93', flag: 'AF' },
   { label: 'Albania', value: '+355', flag: 'AL' },
@@ -237,7 +240,7 @@ const SignIn = () => {
   const { isLoggedIn, error } = useSelector((state) => state.auth)
   const [page, setPage] = useState()
   // const [errMsg, setErrMsg] = useState('')
-  const [pageIndex, setPageIndex] = useState('1')
+  const [pageIndex, setPageIndex] = useState('3')
   const [signUpType, setSignUpType] = useState('')
   const [values, setValues] = useState([])
   const [autocomplete, setAutocomplete] = useState(null);
@@ -325,7 +328,9 @@ const SignIn = () => {
       borderRadius: '30px !important',
       padding: '0 !important', // Ensure no padding is applied
       // height: 1/0, // Adjust the height of the select input
-      minHeight: '24px !important', // Ensure the minimum height is applied
+      // minHeight: '24px !important', // Ensure the minimum height is applied
+      // height: '40px', // Set your desired height here
+      minHeight: 'calc(2.25vw)', // Ensure minimum height
       // width: 'fitContent',
       // padding: '0.25rem 0.25rem',
       // marginTop: '2rem',
@@ -798,6 +803,16 @@ const SignIn = () => {
               city: '',
               errorIndex: '0'
             })
+            toast.error(err?.data?.error, {
+              position: 'top-right',
+              autoClose: 3000,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: false,
+              draggable: true,
+              progress: undefined,
+              theme: 'light',
+            })
           }
           else {
             setErrorMessage(err.data.error)
@@ -806,7 +821,6 @@ const SignIn = () => {
         }
       }
       else {
-        setIsBtnLoad(true)
         console.log("User details from Email ", userDetails)
         console.log(isMobileVerified);
 
@@ -854,6 +868,8 @@ const SignIn = () => {
         //   setFormData({ ...formData, errorIndex: 2 });
         //   setIsBtnLoad(false)
         // }
+        setIsBtnLoad(true)
+
         const number = parsePhoneNumber(userDetails.phoneNumber);
         const countryCode = number?.country;
         let payload = { ...userDetails }
@@ -888,13 +904,15 @@ const SignIn = () => {
             dispatch(loginUserSuccess({}))
             getUserDetails(response?.data?.accessToken, 'notalreadySignedUp')
             callCTEvent(payload)
-
+            setIsBtnLoad(false)
             // console.log('user details 2 ', userDetails);
             page ? page !== 'cart' ? navigate(`/enrollment/${page}`) : navigate('/shop/checkout') : navigate('/')
           }
           else {
             // alert('failed')
           }
+
+
         }
         catch (err) {
           console.log(err?.data?.error);
@@ -914,6 +932,16 @@ const SignIn = () => {
               country: '',
               city: '',
               errorIndex: '0'
+            })
+            toast.error(err?.data?.error, {
+              position: 'top-right',
+              autoClose: 3000,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: false,
+              draggable: true,
+              progress: undefined,
+              theme: 'light',
             })
           }
           else {
@@ -1490,6 +1518,7 @@ const SignIn = () => {
 
   return (
     <div className="signin-form" onClick={() => SetIsCountryContainer(false)}>
+      <ToastContainer />
       <div className='signin-container'>
         <div className="signin-logo">
           <img src="/images/main-logo-signup.svg" alt="primary-logo" loading="lazy" />
@@ -1701,33 +1730,29 @@ const SignIn = () => {
 
 
                 {/* Adding New Fields */}
-
                 <LoadScript googleMapsApiKey={mapKey} libraries={libraries}>
-                  <div className='inp-group'>
-                    <div className='width-100'>
-                      <Autocomplete onLoad={onLoadAutocomplete} onPlaceChanged={onPlaceChanged}>
 
-                        <div className="form_error1">
-                          <div className='inp-label mg-t-20'>Address <span>*</span></div>
-                          <div className={formData?.errorIndex == 5 ? "form-inp err-inp custom_style_input_add" : "form-inp custom_style_input_add"}>
-                            <InputComponent
-                              type="text"
-                              placeholder="Enter address line 1"
-                              form={formData}
-                              setField={setFormData}
-                              keyName="address1"
-                              errorCheck={setEmpty}
-                              className="custom-input"
+                  <Autocomplete onLoad={onLoadAutocomplete} onPlaceChanged={onPlaceChanged} >
 
-                            />
-                          </div>
-                          {formData?.errorIndex == 5 &&
-                            <div style={{ color: '#FF3B30' }}>Select a valid address </div>}
-                        </div>
-                      </Autocomplete>
+                    <div className="form_error1">
+                      <div className='inp-label mg-t-20'>Address <span>*</span></div>
+                      <div className={formData?.errorIndex == 5 ? "form-inp err-inp custom_style_input_add" : "form-inp custom_style_input_add"}>
+                        <InputComponent
+
+                          type="text"
+                          placeholder="Enter address line 1"
+                          form={formData}
+                          setField={setFormData}
+                          keyName="address1"
+                          errorCheck={setEmpty}
+                        />
+                      </div>
+                      {formData?.errorIndex == 5 &&
+                        <div style={{ color: '#FF3B30' }}>Select a valid address </div>}
                     </div>
-
-                    {/* <div className='width-100'>
+                  </Autocomplete>
+                </LoadScript>
+                {/* <div className='width-100'>
 
                     <div className="form_error">
                       <div className='inp-label mg-t-20'>Address 2 <span>*</span></div>
@@ -1745,96 +1770,49 @@ const SignIn = () => {
 
                   </div> */}
 
-                  </div>
 
-                  <div className='inp-group'>
-                    <div className='width-100'>
 
-                      <div className="form_error">
-                        <div className='inp-label mg-t-20'>House No./Street name <span>*</span></div>
-                        <div className="form-inp custom_style_input_add">
-                          <InputComponent
-                            type="text"
-                            placeholder="Enter address line 2"
-                            form={formData}
-                            setField={setFormData}
-                            keyName="address2"
-                            errorCheck={setEmpty}
-                          />
-                        </div>
+                <div className='inp-group'>
+                  <div className='width-100 ad2-inp' >
+
+                    <div className="form_error">
+                      <div className='inp-label mg-t-20'>House No./Street name <span>*</span></div>
+                      <div className="form-inp custom_style_input_add ad2-text">
+                        <InputComponent
+                          type="text"
+                          placeholder="Enter address line 2"
+                          form={formData}
+                          setField={setFormData}
+                          keyName="address2"
+                          errorCheck={setEmpty}
+                        />
                       </div>
-
                     </div>
-                    {/* <div className="form_error countries_list width-100" >
-                    <div className='inp-label mg-t-20'>Country <span>*</span></div>
 
-                    <Select
-                      styles={customStyles(formData?.errorIndex == 6 ? true : false)}
-                      // isDisabled={pageIndex == '4' ? true : false}
-                      // menuPlacement="top"
-                      id="country"
-                      name="country"
-                      placeholder="Country"
-                      options={updatedCountries}
-                      value={values.country}
-                      onChange={(value) => {
-                        setValues({ country: value, state: null, city: null }, false);
-                        setFormData((prev) => ({ ...prev, country: value.label }));
-                        setFormData({ ...formData, country: value });
-                      }}
-
-
-                    />
-                    {formData?.errorIndex == 6 &&
-                      <div style={{ color: '#FF3B30' }}>Enter Country</div>}
-                  </div> */}
-
-
-                    {/* <div className="form_error width-100">
-                    <div className='inp-label mg-t-20'>State <span>*</span></div>
-                    <Select
-                      styles={customStyles(formData?.errorIndex == 7 ? true : false)}
-                      id="state"
-                      name="state"
-                      placeholder="State"
-                      className='custom-input'
-                      options={updatedStates(values?.country?.isoCode || stateOpt)}
-                      value={values.state}
-                      onChange={(value) => {
-                        setValues(
-                          { country: values.country, state: value, city: null },
-                          false
-                        )
-                        setFormData((prev) => ({ ...prev, state: value.label }));
-                      }}
-                    />
-
-                    {formData?.errorIndex == 7 &&
-                      <div style={{ color: '#FF3B30' }}>Enter State</div>}
-
-                  </div> */}
-                    <div className='form_error width-100'>
-                      <div className='inp-label mg-t-20'>Gender <span>*</span></div>
-                      <Select
-                        isDisabled={pageIndex == '4' ? true : false}
-                        menuPlacement="top"
-                        styles={customStyles(formData?.errorIndex == 10 ? true : false)}
-                        id="country"
-                        name="Gender"
-                        placeholder="Gender"
-                        options={[
-                          { value: 'Male', label: 'Male' },
-                          { value: 'Female', label: 'Female' },
-                          { value: 'Others', label: 'Others' },
-                        ]}
-                        value={formData.gender}
-                        onChange={(value) => { setFormData({ ...formData, gender: value }) }}
-                      />
-                      {formData?.errorIndex == 10 &&
-                        <div style={{ color: '#FF3B30' }}>Select gender</div>}
-                    </div>
                   </div>
-                  {/* <div className='inp-group'>
+                  <div className='form_error width-100'>
+                    <div className='inp-label mg-t-20'>Gender <span>*</span></div>
+                    <Select
+                    
+                      isDisabled={pageIndex == '4' ? true : false}
+                      menuPlacement="top"
+                      styles={customStyles(formData?.errorIndex == 10 ? true : false)}
+                      id="country"
+                      name="Gender"
+                      placeholder="Gender"
+                      options={[
+                        { value: 'Male', label: 'Male' },
+                        { value: 'Female', label: 'Female' },
+                        { value: 'Others', label: 'Others' },
+                      ]}
+                      value={formData.gender}
+                      onChange={(value) => { setFormData({ ...formData, gender: value }) }}
+                    />
+                    {formData?.errorIndex == 10 &&
+                      <div style={{ color: '#FF3B30' }}>Select gender</div>}
+                  </div>
+                </div>
+                {/* <div className='inp-group'>
 
                   <div className="form_error city_style">
                     <div className='inp-label mg-t-20'>City <span>*</span></div>
@@ -1902,7 +1880,7 @@ const SignIn = () => {
 
                 </div> */}
 
-                </LoadScript>
+
 
 
 
@@ -1993,7 +1971,7 @@ const SignIn = () => {
                   </>}
                 {signUpType != 'mobile' &&
                   <>
-                    <div className='inp-label  mg-t-20 margin-top' onClick={() => { OtpInpRef.current.scrollIntoView({ behavior: 'smooth' }) }}>Mobile Number <span>*</span></div>
+                    <div className='mg-t-20 margin-top inp-label' onClick={() => { OtpInpRef.current.scrollIntoView({ behavior: 'smooth' }) }}>Mobile Number <span>*</span></div>
                     {/* <div className="form-inp style_verify"> */}
                     {/* <PhoneInput
                         disabled={pageIndex == '4' ? true : false}
@@ -2004,7 +1982,7 @@ const SignIn = () => {
                         value={formData.phoneNumber}
                       /> */}
                     <div class="input-container">
-                      <div class="prefix-dropdown" onClick={(event) => { event.stopPropagation(); SetIsCountryContainer(true); }}><span>
+                      <div class={pageIndex == '4' ? "prefix-dropdown disb-btn" : "prefix-dropdown"} onClick={(event) => { event.stopPropagation(); SetIsCountryContainer(true); }}><span>
                         <img width='20px' style={{ borderRadius: '2px', marginRight: '6px' }} src={`https://purecatamphetamine.github.io/country-flag-icons/3x2/${selectedCountryList.flag.toUpperCase()}.svg`} alt="" /></span>
                         {selectedCountryList.value}
                         < span style={{ marginLeft: '4px' }}>
@@ -2014,12 +1992,13 @@ const SignIn = () => {
                         </span >
                       </div >
                       <input type="number" class="input-box" placeholder="Enter your phone number" value={formData.phoneNumber}
+                        disabled={pageIndex == '4' ? true : false}
                         onChange={handlePhoneChange} />
                       {(!hideVerify && !isMobileVerified) && <span type='click' className='verify_text' onClick={() => signUpOTP(formData, signUpType)}>Verify</span>}
                       {isMobileVerified && <span span type='click' className='verify_text' style={{ color: '#34C759' }}>Verified</span>}
                     </div >
                     {isCountryContainer &&
-                      <div className='ctry-dpdwn' ref={listRef}>
+                      <div className={pageIndex == '3' ? 'ctry-dpdwn top-aligned' : 'ctry-dpdwn'} ref={listRef}>
                         {countriesMap.map(country => (
                           <div key={country.label} className='ctr-option' onClick={() => { SetSelectedCountryList(country), SetIsCountryContainer(false), handleCountryChange(formData.phoneNumber, country) }}>
                             <span><img width='20px' style={{ borderRadius: '2px' }} src={`https://purecatamphetamine.github.io/country-flag-icons/3x2/${country.flag.toUpperCase()}.svg`} alt="" /></span>
