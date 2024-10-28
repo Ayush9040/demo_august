@@ -782,7 +782,7 @@ const SignIn = () => {
         catch (err) {
           // alert('Invalid OTP')
           setFormData({ ...formData, errorIndex: 2 });
-          if (err.data.error == 'Your session has expired. Please Sign Up again to continue.') {
+          if (err.data.error == 'Your session has expired. Please Sign Up again to continue.' || err.data.error == "Your session has expired. Please click 'Sign Up with Google' again to continue.") {
             setPageIndex(1)
             setOtp(new Array(4).fill(""));
             setSignUpType('')
@@ -899,7 +899,7 @@ const SignIn = () => {
         catch (err) {
           console.log(err?.data?.error);
 
-          if (err?.data?.error == "Your session has expired. Please click 'Sign Up with Google' again to continue.") {
+          if (err.data.error == 'Your session has expired. Please Sign Up again to continue.' || err.data.error == "Your session has expired. Please click 'Sign Up with Google' again to continue.") {
             setPageIndex(1)
             setOtp(new Array(4).fill(""));
             setSignUpType('')
@@ -1015,7 +1015,7 @@ const SignIn = () => {
 
   // const handleContinueAsGuest = () => {
   //   if (!page) return navigate('/')
-  //   if (page !== 'cart') navigate(`/ enrollment/${ page } /? date = ${ selectDate }`)
+  //   if (page !== 'cart') navigate(`/enrollment/${ page } /? date = ${ selectDate }`)
   //   setErrMsg('Please login to continue purchase!')
   //   setModal(true)
   // }
@@ -1317,7 +1317,7 @@ const SignIn = () => {
   //           password: formData.password,
   //         },
   //         navigate,
-  //         page ? page !== 'cart' ? `/ enrollment/${ page } /? date = ${ selectDate }` : '/shop/checkout' : '/',
+  //         page ? page !== 'cart' ? `/enrollment/${ page } /? date = ${ selectDate }` : '/shop/checkout' : '/',
   //       )
   //     )
   //     if (error.isError !== false) { setModal(true); setErrMsg(error.isError) } else { setModal(false) }
@@ -1374,7 +1374,7 @@ const SignIn = () => {
         getUserDetails(response?.data?.accessToken, 'alreadySignedUp')
         console.log(response?.data)
 
-        page ? page !== 'cart' ? navigate(`/ enrollment/${page}`) : navigate('/shop/checkout') : navigate('/')
+        page ? page !== 'cart' ? navigate(`/enrollment/${page}`) : navigate('/shop/checkout') : navigate('/')
       }
     } else {
       console.error('No credential found');
@@ -1416,15 +1416,15 @@ const SignIn = () => {
 
         if (lastPageUrl && lastPageUrl.includes(url2)) {
           sessionStorage.removeItem('last_page_url_2');
-          navigate(`/ shop`); // Redirect to the course page if previous page was a course
+          navigate(`/shop`); // Redirect to the course page if previous page was a course
 
         } else {
-          navigate(`/ courses`);
+          navigate(`/courses`);
         }
-        // navigate(`/ courses`); // Replace with the actual course page URL
+        // navigate(`/courses`); // Replace with the actual course page URL
       } else {
         // If logged in, navigate to the intended page
-        page ? page !== 'cart' ? navigate(`/ enrollment/${page}`) : navigate('/shop/checkout') : navigate('/');
+        page ? page !== 'cart' ? navigate(`/enrollment/${page}`) : navigate('/shop/checkout') : navigate('/');
       }
     }
   }
