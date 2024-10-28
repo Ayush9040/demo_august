@@ -240,7 +240,7 @@ const SignIn = () => {
   const { isLoggedIn, error } = useSelector((state) => state.auth)
   const [page, setPage] = useState()
   // const [errMsg, setErrMsg] = useState('')
-  const [pageIndex, setPageIndex] = useState('3')
+  const [pageIndex, setPageIndex] = useState('1')
   const [signUpType, setSignUpType] = useState('')
   const [values, setValues] = useState([])
   const [autocomplete, setAutocomplete] = useState(null);
@@ -1660,11 +1660,12 @@ const SignIn = () => {
                   <span style={{ color: '#CA4625', fontSize: '12px', fontWeight: 600, cursor: 'pointer', borderBottom: '2px solid #CA4625', marginLeft: '1rem' }} onClick={() => {
                     setPageIndex('1');
                   }}>
-                    <svg width="12" height="12" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M0.249512 6.18805V7.75055H1.81201L6.42035 3.14222L4.85785 1.57972L0.249512 6.18805ZM7.62868 1.93389C7.79118 1.77139 7.79118 1.50889 7.62868 1.34639L6.65368 0.371387C6.49118 0.208887 6.22868 0.208887 6.06618 0.371387L5.30368 1.13389L6.86618 2.69639L7.62868 1.93389Z" fill="#CA4625" />
-                    </svg>
-                    Change mobile number
-                  </span>
+                    <span style={{whiteSpace: 'nowrap'}}>
+                      <svg width="12" height="12" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.249512 6.18805V7.75055H1.81201L6.42035 3.14222L4.85785 1.57972L0.249512 6.18805ZM7.62868 1.93389C7.79118 1.77139 7.79118 1.50889 7.62868 1.34639L6.65368 0.371387C6.49118 0.208887 6.22868 0.208887 6.06618 0.371387L5.30368 1.13389L6.86618 2.69639L7.62868 1.93389Z" fill="#CA4625" />
+                      </svg>
+                      Change mobile number
+                    </span></span>
                 </div>
                 {formData?.errorIndex == 2 &&
                   <div style={{ color: '#FF3B30', margin: '1rem 0' }}>OTP is Invalid!</div>}
@@ -1793,7 +1794,7 @@ const SignIn = () => {
                   <div className='form_error width-100'>
                     <div className='inp-label mg-t-20'>Gender <span>*</span></div>
                     <Select
-                    
+
                       isDisabled={pageIndex == '4' ? true : false}
                       menuPlacement="top"
                       styles={customStyles(formData?.errorIndex == 10 ? true : false)}
@@ -2068,11 +2069,13 @@ const SignIn = () => {
                       setIsBtnLoad(false)
                       setHideVerify(false);
                     }}>
-                      <svg width="12" height="12" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M0.249512 6.18805V7.75055H1.81201L6.42035 3.14222L4.85785 1.57972L0.249512 6.18805ZM7.62868 1.93389C7.79118 1.77139 7.79118 1.50889 7.62868 1.34639L6.65368 0.371387C6.49118 0.208887 6.22868 0.208887 6.06618 0.371387L5.30368 1.13389L6.86618 2.69639L7.62868 1.93389Z" fill="#CA4625" />
-                      </svg>
-                      &nbsp;
-                      Change mobile number
+                      <span style={{ whiteSpace: 'nowrap' }}>
+                        <svg width="12" height="12" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M0.249512 6.18805V7.75055H1.81201L6.42035 3.14222L4.85785 1.57972L0.249512 6.18805ZM7.62868 1.93389C7.79118 1.77139 7.79118 1.50889 7.62868 1.34639L6.65368 0.371387C6.49118 0.208887 6.22868 0.208887 6.06618 0.371387L5.30368 1.13389L6.86618 2.69639L7.62868 1.93389Z" fill="#CA4625" />
+                        </svg>
+                        &nbsp;
+                        Change mobile number
+                      </span>
                     </span>
                   </div>
                   {formData?.errorIndex == 2 &&
