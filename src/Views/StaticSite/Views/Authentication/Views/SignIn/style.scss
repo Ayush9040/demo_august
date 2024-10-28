@@ -307,9 +307,9 @@
     }
 
     .disb-btn {
-     pointer-events: none;
+        pointer-events: none;
     }
-  
+
 }
 
 
@@ -321,27 +321,40 @@
         font-size: 1rem !important;
         margin-left: -90px !important;
     }
-    .ad2-inp{
+
+    .ad2-inp {
         width: 80% !important;
         overflow-x: hidden;
-        .ad2-text{
+
+        .ad2-text {
             width: 130px !important;
             overflow-x: hidden;
         }
     }
 
 }
+// @media (min-width: 1441px) {
+// .ad2-inp {
+//     width: 100% !important;
+//     overflow-x: hidden;
 
-@media (min-width: 1540px) {
+//     .ad2-text {
+//         width: 210px !important;
+//         overflow-x: hidden;
+//     }
+// }}
+@media (min-width: 1441px) {
     .container {
-        padding: 0 4vw!important;
+        padding: 0 4vw !important;
         // max-width: 1000px;
     }
-    .ad2-inp{
-        width: 110% !important;
+
+    .ad2-inp {
+        width: 100% !important;
         overflow-x: hidden;
-        .ad2-text{
-            width: 190px !important;
+
+        .ad2-text {
+            // width: 190px !important;
             overflow-x: hidden;
         }
     }
@@ -355,10 +368,12 @@
     .resend-btn {
         margin-left: -80px !important;
     }
-    .ad2-inp{
+
+    .ad2-inp {
         width: 100% !important;
         overflow-x: hidden;
-        .ad2-text{
+
+        .ad2-text {
             width: 210px !important;
             overflow-x: hidden;
         }
@@ -549,10 +564,12 @@
     .error-alert {
         display: none !important;
     }
-    .ad2-inp{
+
+    .ad2-inp {
         width: 100% !important;
         overflow-x: hidden;
-        .ad2-text{
+
+        .ad2-text {
             width: 100% !important;
             overflow-x: hidden;
         }
@@ -913,7 +930,8 @@
         }
     }
 }
-.top-aligned{
+
+.top-aligned {
     margin-top: -194px !important;
 }
 
@@ -1008,15 +1026,18 @@
             }
         }
     }
-    .ad2-inp{
+
+    .ad2-inp {
         width: 100% !important;
         overflow-x: hidden;
-        .ad2-text{
+
+        .ad2-text {
             width: 200px !important;
             overflow-x: hidden;
         }
     }
 }
+
 @media(max-width:768px) {
     .signin-form {
         flex-direction: column-reverse;
@@ -1201,10 +1222,12 @@
     .error-alert {
         display: none !important;
     }
-    .ad2-inp{
+
+    .ad2-inp {
         width: 100% !important;
         overflow-x: hidden;
-        .ad2-text{
+
+        .ad2-text {
             width: 100% !important;
             overflow-x: hidden;
         }
