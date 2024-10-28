@@ -240,7 +240,7 @@ const SignIn = () => {
   const { isLoggedIn, error } = useSelector((state) => state.auth)
   const [page, setPage] = useState()
   // const [errMsg, setErrMsg] = useState('')
-  const [pageIndex, setPageIndex] = useState('1')
+  const [pageIndex, setPageIndex] = useState('3')
   const [signUpType, setSignUpType] = useState('')
   const [values, setValues] = useState([])
   const [autocomplete, setAutocomplete] = useState(null);
@@ -328,7 +328,9 @@ const SignIn = () => {
       borderRadius: '30px !important',
       padding: '0 !important', // Ensure no padding is applied
       // height: 1/0, // Adjust the height of the select input
-      minHeight: '24px !important', // Ensure the minimum height is applied
+      // minHeight: '24px !important', // Ensure the minimum height is applied
+      // height: '40px', // Set your desired height here
+      minHeight: 'calc(2.25vw)', // Ensure minimum height
       // width: 'fitContent',
       // padding: '0.25rem 0.25rem',
       // marginTop: '2rem',
@@ -1791,6 +1793,7 @@ const SignIn = () => {
                   <div className='form_error width-100'>
                     <div className='inp-label mg-t-20'>Gender <span>*</span></div>
                     <Select
+                    
                       isDisabled={pageIndex == '4' ? true : false}
                       menuPlacement="top"
                       styles={customStyles(formData?.errorIndex == 10 ? true : false)}
