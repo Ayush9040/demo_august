@@ -1017,7 +1017,200 @@
         }
     }
 }
+@media(max-width:768px) {
+    .signin-form {
+        flex-direction: column-reverse;
+        height: max-content;
+        overflow-y: auto;
+        margin: 0 !important;
+        border-radius: 0 !important;
 
+        .wish-text-mob {
+            display: block !important;
+        }
+
+        .wish-text {
+            display: none !important;
+        }
+
+        .signin-container {
+            width: 100%;
+            // height: fit-content !important;
+            min-height: 74vh;
+            // overflow-y: auto;
+            border: none;
+            border-radius: 0;
+
+            .form-inp {
+                padding: 0.75rem !important;
+            }
+
+
+
+            .ftr-btn {
+                position: absolute;
+                bottom: 28px;
+                margin-right: 20px;
+            }
+
+            // height: 100%;
+            .signin-details {
+                height: max-content !important;
+                margin: 2rem 1em 2em 1em;
+                // overflow-y: auto;
+
+                .container {
+                    width: 100%;
+                    padding: 0 1.25rem;
+
+                    .header {
+                        font-size: 16px;
+                    }
+
+                    .sub-header {
+                        font-size: 14px !important;
+                    }
+
+                    .wish {
+                        font-size: 20px !important;
+                    }
+
+                    .google-badge {
+                        font-size: 14px !important;
+                        padding: 12px !important;
+                    }
+
+                    .divider-container span {
+                        font-size: 12px;
+                    }
+
+                    .inp-label {
+                        font-size: 16px !important;
+                    }
+
+                    .custom-phone-input input {
+                        font-size: 14px !important;
+                        padding: 6px !important;
+                    }
+
+                    .custom-input {
+                        font-size: 14px !important;
+                        padding: 6px !important;
+                    }
+
+                    .custom_style_input_add .form-content form label input {
+                        font-size: 14px !important;
+                    }
+
+                    .inp-group {
+                        // display: flex;
+                        // gap: 1rem;
+                        // justify-content: space-between;
+                        flex-direction: column;
+
+
+                        #country {
+                            width: 100% !important;
+                            font-size: 14px !important;
+
+                        }
+
+                        #state {
+                            width: 100% !important;
+                            font-size: 14px !important;
+
+                        }
+
+                        #city {
+                            width: 100% !important;
+                            font-size: 14px !important;
+
+                        }
+
+                        .custom_style_input_pincode .form-content form label input {
+                            font-size: 14px !important;
+                        }
+
+                    }
+
+                    .primary-btn {
+                        font-size: 18px !important;
+                        font-weight: 500;
+                        padding: 12px 0 !important;
+                        width: 90vw !important;
+                    }
+
+                    .tc-text {
+                        font-size: 12px !important;
+                        max-width: 100% !important;
+                    }
+
+                    .back-nav {
+                        position: absolute;
+                        top: 10px;
+                        left: 10px;
+                        color: #FFFFFF;
+                        font-size: 14px;
+
+                        .mobile {
+                            display: inline-block;
+                            position: relative;
+                            top: 2px
+                        }
+
+                        .web {
+                            display: none;
+                        }
+                    }
+
+                    .otp-input {
+                        width: 40px !important;
+                        height: 40px !important;
+                        font-size: 16px !important;
+                    }
+
+                    .resend-btn {
+                        font-size: 16px;
+                    }
+                }
+            }
+
+            .f-height {
+                min-height: calc(87.2vh) !important;
+            }
+        }
+    }
+
+
+    .signin-banner {
+        max-width: 100% !important;
+        min-width: 100% !important;
+        height: 26vh !important;
+        border-radius: 0 !important;
+    }
+
+    .img-2 {
+        // background-image: url('../../../../../../../public/images/signin-two-mob.svg') !important;
+        display: none;
+    }
+
+    .verify_text {
+        font-size: 13px !important;
+    }
+
+    .error-alert {
+        display: none !important;
+    }
+    .ad2-inp{
+        width: 100% !important;
+        overflow-x: hidden;
+        .ad2-text{
+            width: 100% !important;
+            overflow-x: hidden;
+        }
+    }
+
+}
 
 //     width: 60%;
 //     margin: 5rem auto 0;
