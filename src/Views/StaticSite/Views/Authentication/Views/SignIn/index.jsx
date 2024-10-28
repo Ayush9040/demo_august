@@ -898,7 +898,7 @@ const SignIn = () => {
         }
         catch (err) {
           console.log(err?.data?.error);
-          
+
           if (err?.data?.error == "Your session has expired. Please click 'Sign Up with Google' again to continue.") {
             setPageIndex(1)
             setOtp(new Array(4).fill(""));
@@ -960,6 +960,10 @@ const SignIn = () => {
       // console.log(phoneNumber);
       setPhoneNumber({ dialCode: selectedCountryList.value, mobile: value.target.value })
     }
+  };
+  const handleCountryChange = (mobile, country) => {
+    setPhoneNumber({ dialCode: country.value, mobile: mobile })
+
   };
   const [isAlreadyRegistered, SetIsAlreadyRegistered] = useState(false)
   const validatePhoneNumber = (phoneNumber) => {
@@ -1571,13 +1575,13 @@ const SignIn = () => {
                     </svg>
                   </span >
                 </div >
-                <input type="tel" class="input-box" placeholder="Enter your phone number" value={formData.phoneNumber}
+                <input type="number" class="input-box" placeholder="Enter your phone number" value={formData.phoneNumber}
                   onChange={handlePhoneChange} />
               </div >
               {isCountryContainer &&
                 <div className='ctry-dpdwn' ref={listRef}>
                   {countriesMap.map(country => (
-                    <div key={country.label} className='ctr-option' onClick={() => { SetSelectedCountryList(country), SetIsCountryContainer(false) }}>
+                    <div key={country.label} className='ctr-option' onClick={() => { SetSelectedCountryList(country), SetIsCountryContainer(false), handleCountryChange(formData.phoneNumber, country) }}>
                       <span><img width='20px' style={{ borderRadius: '2px' }} src={`https://purecatamphetamine.github.io/country-flag-icons/3x2/${country.flag.toUpperCase()}.svg`} alt="" /></span>
                       <span style={{ padding: '0 6px 0 6px' }}>
                         {country.label}</span> <span style={{ color: 'rgba(0, 0, 0, 0.5)' }}>{country.value}</span></div>
@@ -2009,7 +2013,7 @@ const SignIn = () => {
                           </svg>
                         </span >
                       </div >
-                      <input type="tel" class="input-box" placeholder="Enter your phone number" value={formData.phoneNumber}
+                      <input type="number" class="input-box" placeholder="Enter your phone number" value={formData.phoneNumber}
                         onChange={handlePhoneChange} />
                       {(!hideVerify && !isMobileVerified) && <span type='click' className='verify_text' onClick={() => signUpOTP(formData, signUpType)}>Verify</span>}
                       {isMobileVerified && <span span type='click' className='verify_text' style={{ color: '#34C759' }}>Verified</span>}
@@ -2017,7 +2021,7 @@ const SignIn = () => {
                     {isCountryContainer &&
                       <div className='ctry-dpdwn' ref={listRef}>
                         {countriesMap.map(country => (
-                          <div key={country.label} className='ctr-option' onClick={() => { SetSelectedCountryList(country), SetIsCountryContainer(false) }}>
+                          <div key={country.label} className='ctr-option' onClick={() => { SetSelectedCountryList(country), SetIsCountryContainer(false), handleCountryChange(formData.phoneNumber, country) }}>
                             <span><img width='20px' style={{ borderRadius: '2px' }} src={`https://purecatamphetamine.github.io/country-flag-icons/3x2/${country.flag.toUpperCase()}.svg`} alt="" /></span>
                             <span style={{ padding: '0 6px 0 6px' }}>
                               {country.label}</span> <span style={{ color: 'rgba(0, 0, 0, 0.5)' }}>{country.value}</span></div>
