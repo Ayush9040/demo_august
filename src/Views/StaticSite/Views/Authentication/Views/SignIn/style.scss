@@ -309,107 +309,25 @@
     .disb-btn {
      pointer-events: none;
     }
+  
 }
 
 
 
-@media (max-width:1280px) {
 
-    //for small web
-    .signin-form {
-        #country {
-            width: 10.4vw !important;
-            font-size: 1rem !important;
-        }
 
-        .signin-container {
-            .form-inp {
-                padding: 0.75rem !important;
-
-                .custom-phone-input input {
-                    font-size: 1rem !important;
-                }
-
-                .custom-input {
-                    font-size: 1rem !important;
-                }
-
-                .style_verify {
-                    padding: 2px 8px !important;
-                }
-            }
-
-            .signin-form .signin-container .style_verify {
-                padding: 2px 8px !important;
-            }
-
-            .css-1oox8fc-control {
-                min-height: auto;
-            }
-
-            .css-1xc3v61-indicatorContainer {
-                padding: 2px 8px;
-            }
-
-            .signin-details {
-                // height: 74% !important;
-                margin-top: 4vh !important;
-
-                .container {
-                    // .back-nav {
-                    //     // font-size: 1rem !important;
-                    // }
-
-                    .header {
-                        font-size: 2rem !important;
-                    }
-
-                    .sub-header {
-                        font-size: 1.2rem !important;
-                    }
-
-                    .google-badge {
-                        font-size: 0.85rem !important;
-                        padding: 0.85rem !important;
-                    }
-
-                    .inp-label {
-                        font-size: 1rem !important;
-                    }
-
-                    .primary-btn {
-                        font-size: 1.125rem !important;
-                        padding: 0.85rem 0 !important;
-                        // max-width: 300px;
-                    }
-
-                    .tc-text {
-                        font-size: 0.85rem !important;
-                        max-width: 230px !important;
-                    }
-
-                    .divider-container span {
-                        font-size: 0.75rem !important;
-                    }
-
-                    .otp-input {
-                        font-size: 1rem !important;
-                    }
-
-                    .resend-btn {
-                        font-size: 1rem !important;
-                        margin-left: -130px !important;
-                    }
-                }
-            }
-        }
-    }
-}
-
-@media(max-width:1028px) {
+@media(max-width:1024px) {
     .resend-btn {
         font-size: 1rem !important;
         margin-left: -90px !important;
+    }
+    .ad2-inp{
+        width: 80% !important;
+        overflow-x: hidden;
+        .ad2-text{
+            width: 130px !important;
+            overflow-x: hidden;
+        }
     }
 
 }
@@ -418,6 +336,14 @@
     .container {
         padding: 0 4vw!important;
         // max-width: 1000px;
+    }
+    .ad2-inp{
+        width: 110% !important;
+        overflow-x: hidden;
+        .ad2-text{
+            width: 190px !important;
+            overflow-x: hidden;
+        }
     }
 }
 
@@ -428,6 +354,14 @@
 
     .resend-btn {
         margin-left: -80px !important;
+    }
+    .ad2-inp{
+        width: 100% !important;
+        overflow-x: hidden;
+        .ad2-text{
+            width: 210px !important;
+            overflow-x: hidden;
+        }
     }
 }
 
@@ -615,6 +549,14 @@
     .error-alert {
         display: none !important;
     }
+    .ad2-inp{
+        width: 100% !important;
+        overflow-x: hidden;
+        .ad2-text{
+            width: 100% !important;
+            overflow-x: hidden;
+        }
+    }
 
 }
 
@@ -634,7 +576,7 @@
     padding: 0rem;
     border: 0px;
     border-radius: 0px;
-    width: 194px;
+    // max-width: fit-content;
     margin: 0px;
 }
 
@@ -971,8 +913,110 @@
         }
     }
 }
+.top-aligned{
+    margin-top: -194px !important;
+}
 
+@media (max-width:1280px) {
 
+    //for small web
+    .signin-form {
+        #country {
+            width: 10.4vw !important;
+            font-size: 1rem !important;
+        }
+
+        .signin-container {
+            .form-inp {
+                padding: 0.75rem !important;
+
+                .custom-phone-input input {
+                    font-size: 1rem !important;
+                }
+
+                .custom-input {
+                    font-size: 1rem !important;
+                }
+
+                .style_verify {
+                    padding: 2px 8px !important;
+                }
+            }
+
+            .signin-form .signin-container .style_verify {
+                padding: 2px 8px !important;
+            }
+
+            .css-1oox8fc-control {
+                min-height: auto;
+            }
+
+            .css-1xc3v61-indicatorContainer {
+                padding: 2px 8px;
+            }
+
+            .signin-details {
+                // height: 74% !important;
+                margin-top: 4vh !important;
+
+                .container {
+                    // .back-nav {
+                    //     // font-size: 1rem !important;
+                    // }
+
+                    .header {
+                        font-size: 2rem !important;
+                    }
+
+                    .sub-header {
+                        font-size: 1.2rem !important;
+                    }
+
+                    .google-badge {
+                        font-size: 0.85rem !important;
+                        padding: 0.85rem !important;
+                    }
+
+                    .inp-label {
+                        font-size: 1rem !important;
+                    }
+
+                    .primary-btn {
+                        font-size: 1.125rem !important;
+                        padding: 0.85rem 0 !important;
+                        // max-width: 300px;
+                    }
+
+                    .tc-text {
+                        font-size: 0.85rem !important;
+                        max-width: 230px !important;
+                    }
+
+                    .divider-container span {
+                        font-size: 0.75rem !important;
+                    }
+
+                    .otp-input {
+                        font-size: 1rem !important;
+                    }
+
+                    .resend-btn {
+                        font-size: 1rem !important;
+                        margin-left: -130px !important;
+                    }
+                }
+            }
+        }
+    }
+    .ad2-inp{
+        width: 100% !important;
+        overflow-x: hidden;
+        .ad2-text{
+            width: 200px !important;
+            overflow-x: hidden;
+        }
+    }
+}
 
 
 //     width: 60%;
