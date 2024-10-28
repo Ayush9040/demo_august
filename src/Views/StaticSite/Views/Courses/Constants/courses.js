@@ -80,9 +80,9 @@ const ttc200hr = {
     courseType: '(RYT 200- Basic)',
     language: 'English',
     preRequisite: 'None',
-    courseCategory: 'Educational', 
+    courseCategory: 'Educational',
     courseSubType: '200 Hour Yoga Teacher Training',
-    
+
     courseCertificate: 'TTC/Certificate',
     onlineInfo: {
       courseMode: true,
@@ -614,9 +614,9 @@ const ttc200hr = {
     courseType: '(RYT 200- Basic)',
     language: 'English',
     preRequisite: 'None',
-    courseCategory: 'Educational', 
+    courseCategory: 'Educational',
     courseSubType: '200 Hour Yoga Teacher Training',
-    
+
     courseCertificate: 'TTC/Certificate',
     onlineInfo: {
       courseMode: true,
@@ -1081,9 +1081,9 @@ const ttc200hr = {
     courseType: '(RYT 200- Basic)',
     language: 'English',
     preRequisite: 'None',
-    courseCategory: 'Educational', 
+    courseCategory: 'Educational',
     courseSubType: '200 Hour Yoga Teacher Training',
-    
+
     courseCertificate: 'TTC/Certificate',
     onlineInfo: {
       courseMode: true,
@@ -1609,9 +1609,9 @@ const ttc200hr = {
     courseType: '(RYT 200- Basic)',
     language: 'English',
     preRequisite: 'None',
-    courseCategory: 'Educational', 
+    courseCategory: 'Educational',
     courseSubType: '200 Hour Yoga Teacher Training',
-    
+
     courseCertificate: 'TTC/Certificate',
     onlineInfo: {
       courseMode: true,
@@ -2114,9 +2114,9 @@ const ttc200hr = {
     courseType: '(RYT 200- Basic)',
     language: 'English',
     preRequisite: 'None',
-    courseCategory: 'Educational', 
+    courseCategory: 'Educational',
     courseSubType: '200 Hour Yoga Teacher Training',
-    
+
     courseCertificate: 'TTC/Certificate',
     onlineInfo: {
       courseMode: true,
@@ -2637,9 +2637,9 @@ const ttc200hr = {
     courseType: '(RYT 200- Basic)',
     language: 'English',
     preRequisite: 'None',
-    courseCategory: 'Educational', 
+    courseCategory: 'Educational',
     courseSubType: '200 Hour Yoga Teacher Training',
-    
+
     courseCertificate: 'TTC/Certificate',
     onlineInfo: {
       courseMode: true,
@@ -3165,9 +3165,9 @@ const ttc500hr = {
     courseType: 'Intermediate TTC (500 Hour Courses)',
     language: 'English',
     preRequisite: 'None',
-    courseCategory: 'Educational', 
+    courseCategory: 'Educational',
     courseSubType: '500 Hour Yoga Teacher Training',
-    
+
     courseCertificate: 'TTC/Certificate',
     onlineInfo: {
       courseMode: true,
@@ -3552,9 +3552,9 @@ const ttc900hr = {
     courseType: 'Advance TTC (900 Hour Courses)',
     language: 'English',
     preRequisite: '7 Days Health Camp, 21 Days Better Living Course, 200 Hours Teacher Training Course',
-    courseCategory: 'Educational', 
+    courseCategory: 'Educational',
     courseSubType: '900 Hour Yoga Teacher Training',
-    
+
     courseCertificate: 'TTC/Certificate',
     onlineInfo: {
       courseMode: false,
@@ -4128,9 +4128,9 @@ const ttc900hr = {
     courseType: 'Advance TTC (900 Hour Courses)',
     language: 'Hindi',
     preRequisite: '7 Days Health Camp, 21 Days Better Living Course, 200 Hours Teacher Training Course',
-    courseCategory: 'Educational', 
+    courseCategory: 'Educational',
     courseSubType: '900 Hour Yoga Teacher Training',
-    
+
     courseCertificate: 'TTC/Certificate',
     onlineInfo: {
       courseMode: true,
@@ -4853,9 +4853,9 @@ const ttc900hr = {
     courseType: 'Advance TTC (900 Hour Courses)',
     language: 'English',
     preRequisite: '7 Days Health Camp, 21 Days Better Living Course, 200 Hours Teacher Training Course',
-    courseCategory: 'Educational', 
+    courseCategory: 'Educational',
     courseSubType: '900 Hour Yoga Teacher Training',
-    
+
     courseCertificate: 'TTC/Certificate',
     onlineInfo: {
       courseMode: true,
@@ -5554,7 +5554,7 @@ const ttc900hr = {
       '9th Jun - 27th Sep 2025',
       '6th Oct - 24th Jan 2026'
     ]
-      ,
+    ,
     online: true,
     onCampus: false,
     nonResidential: false,
@@ -5565,9 +5565,9 @@ const ttc900hr = {
     courseType: 'Advance TTC (900 Hour Courses)',
     language: 'English',
     preRequisite: '7 Days Health Camp, 21 Days Better Living Course, 200 Hours Teacher Training Course',
-    courseCategory: 'Educational', 
+    courseCategory: 'Educational',
     courseSubType: '900 Hour Yoga Teacher Training',
-    
+
     courseCertificate: 'TTC/Certificate',
     onlineInfo: {
       courseMode: true,
@@ -6239,9 +6239,9 @@ const ttc900hr = {
     courseType: 'Advance TTC (900 Hour Courses)',
     language: 'English',
     preRequisite: '7 Days Health Camp, 21 Days Better Living Course, 200 Hours Teacher Training Course',
-    courseCategory: 'Educational', 
+    courseCategory: 'Educational',
     courseSubType: '900 Hour Yoga Teacher Training',
-    
+
     courseCertificate: 'TTC/Certificate',
     onlineInfo: {
       courseMode: true,
@@ -7071,9 +7071,9 @@ const camps = {
     courseType: 'Camps & Workshop',
     language: 'English',
     preRequisite: 'None',
-    courseCategory: 'Self Help', 
+    courseCategory: 'Self Help',
     courseSubType: 'Camps & Workshops',
-    
+
     courseCertificate: 'NO',
     onlineInfo: {
       courseMode: false,
@@ -7234,9 +7234,9 @@ const camps = {
     courseType: 'Camps & Workshop',
     language: 'English',
     preRequisite: 'None',
-    courseCategory: 'Self Help', 
+    courseCategory: 'Self Help',
     courseSubType: 'Camps & Workshops',
-    
+
     courseCertificate: 'NO',
     onlineInfo: {
       courseMode: false,
@@ -7848,9 +7848,9 @@ const camps = {
     courseType: 'Camps & Workshop',
     language: 'English',
     preRequisite: 'None',
-    courseCategory: 'Self Help', 
+    courseCategory: 'Self Help',
     courseSubType: 'Camps & Workshops',
-    
+
     courseCertificate: 'NO',
     onlineInfo: {
       courseMode: false,
@@ -8162,9 +8162,9 @@ const camps = {
     courseType: 'Camps & Workshop',
     language: 'English',
     preRequisite: 'None',
-    courseCategory: 'Self Help', 
+    courseCategory: 'Self Help',
     courseSubType: 'Camps & Workshops',
-    
+
     courseCertificate: 'NO',
     onlineInfo: {
       courseMode: false,
@@ -8337,14 +8337,14 @@ const camps = {
     nonResidential: false,
     residential: false,
     certficate: false,
-    
+
     tenure: '',
     courseType: 'Camps & Workshop',
     language: 'English',
     preRequisite: 'None',
-    courseCategory: 'Self Help', 
+    courseCategory: 'Self Help',
     courseSubType: 'Camps & Workshops',
-    
+
     courseCertificate: 'NO',
     onlineInfo: {
       courseMode: false,
@@ -8515,9 +8515,9 @@ const camps = {
     courseType: 'Camps & Workshop',
     language: 'English',
     preRequisite: 'None',
-    courseCategory: 'Self Help', 
+    courseCategory: 'Self Help',
     courseSubType: 'Camps & Workshops',
-    
+
     courseCertificate: 'NO',
     onlineInfo: {
       courseMode: false,
@@ -8682,9 +8682,9 @@ const camps = {
     courseType: 'Camps & Workshop',
     language: 'English',
     preRequisite: 'None',
-    courseCategory: 'Self Help', 
+    courseCategory: 'Self Help',
     courseSubType: 'Camps & Workshops',
-    
+
     courseCertificate: 'NO',
     onlineInfo: {
       courseMode: false,
@@ -8851,9 +8851,9 @@ const camps = {
     courseType: 'Camps & Workshop',
     language: 'English',
     preRequisite: 'None',
-    courseCategory: 'Self Help', 
+    courseCategory: 'Self Help',
     courseSubType: 'Camps & Workshops',
-    
+
     courseCertificate: 'NO',
     onlineInfo: {
       courseMode: false,
@@ -9017,9 +9017,9 @@ const camps = {
     courseType: 'Camps & Workshop',
     language: 'English',
     preRequisite: 'None',
-    courseCategory: 'Self Help', 
+    courseCategory: 'Self Help',
     courseSubType: 'Camps & Workshops',
-    
+
     courseCertificate: 'NO',
     onlineInfo: {
       courseMode: false,
@@ -9189,9 +9189,9 @@ const camps = {
     courseType: 'Camps & Workshop',
     language: 'English',
     preRequisite: 'None',
-    courseCategory: 'Self Help', 
+    courseCategory: 'Self Help',
     courseSubType: 'Camps & Workshops',
-    
+
     courseCertificate: 'NO',
     onlineInfo: {
       courseMode: false,
@@ -9360,9 +9360,9 @@ const camps = {
     courseType: 'Camps & Workshop',
     language: 'English',
     preRequisite: 'None',
-    courseCategory: 'Self Help', 
+    courseCategory: 'Self Help',
     courseSubType: 'Camps & Workshops',
-    
+
     courseCertificate: 'NO',
     onlineInfo: {
       courseMode: false,
@@ -9506,7 +9506,7 @@ const camps = {
     dates: [
       // '13rd Jul to 19th Jul 2024', 
       '14th Sep to 20th Sep 2024',
-      '9th Nov to 15th Nov 2024', 
+      '9th Nov to 15th Nov 2024',
       '11th Jan to 17th Jan 2025',
       '8th Mar to 14th Mar 2025',
       '10th May to 16th May 2025',
@@ -9525,9 +9525,9 @@ const camps = {
     courseType: '7 DAYS HEALTH CAMP',
     language: 'Hindi',
     preRequisite: 'None',
-    courseCategory: 'Self Help', 
+    courseCategory: 'Self Help',
     courseSubType: '7 Days Health Camp',
-    
+
     courseCertificate: 'NO',
     onlineInfo: {
       courseMode: false,
@@ -9899,9 +9899,9 @@ const camps = {
     courseType: '7 DAYS HEALTH CAMP',
     language: 'English',
     preRequisite: 'None',
-    courseCategory: 'Self Help', 
+    courseCategory: 'Self Help',
     courseSubType: '7 Days Health Camp',
-    
+
     courseCertificate: 'NO',
     onlineInfo: {
       courseMode: false,
@@ -10273,9 +10273,9 @@ const camps = {
     courseType: '21-Days Better living Course',
     language: 'English',
     preRequisite: 'None',
-    courseCategory: 'Self Help', 
+    courseCategory: 'Self Help',
     courseSubType: '21 Days Better Living',
-    
+
     courseCertificate: 'certificate Of Participation',
     onlineInfo: {
       courseMode: true,
@@ -10296,7 +10296,7 @@ const camps = {
     // preRequisite: 'None',
     // courseCategory: 'Self Help', 
     // courseSubType: 'Yoga Course',
-    
+
     // courseCertificate: 'certificate Of Participation',
     // onlineInfo: {
     //   courseMode: false,
@@ -10687,9 +10687,9 @@ const camps = {
     courseType: '21-Days Better living Course',
     language: 'English',
     preRequisite: 'None',
-    courseCategory: 'Self Help', 
+    courseCategory: 'Self Help',
     courseSubType: '21 Days Better Living',
-    
+
     courseCertificate: 'certificate Of Participation',
     onlineInfo: {
       courseMode: true,
@@ -11076,9 +11076,9 @@ const camps = {
     courseType: '21-Days Better living Course',
     language: 'Hindi',
     preRequisite: 'None',
-    courseCategory: 'Self Help', 
+    courseCategory: 'Self Help',
     courseSubType: '21 Days Better Living',
-    
+
     courseCertificate: 'certificate Of Participation',
     onlineInfo: {
       courseMode: true,
@@ -11804,9 +11804,9 @@ const classes = {
     courseType: '',
     language: 'English',
     preRequisite: 'None',
-    courseCategory: 'Self Help', 
+    courseCategory: 'Self Help',
     courseSubType: 'Regular Asana Classes',
-    
+
     courseCertificate: 'NO',
     onlineInfo: {
       courseMode: true,
@@ -11906,9 +11906,9 @@ const classes = {
     courseType: "HEALING YOGA MOVEMENT",
     language: 'English',
     preRequisite: 'None',
-    courseCategory: 'Self Help', 
+    courseCategory: 'Self Help',
     courseSubType: 'Regular Asana Classes',
-    
+
     courseCertificate: 'NO',
     onlineInfo: {
       courseMode: true,
@@ -12035,9 +12035,9 @@ const classes = {
     courseType: 'Regular Asana Classes 1/ Online',
     language: 'English',
     preRequisite: 'None',
-    courseCategory: 'Self Help', 
+    courseCategory: 'Self Help',
     courseSubType: 'Regular Asana Classes',
-    
+
     courseCertificate: 'NO',
     onlineInfo: {
       courseMode: true,
@@ -12289,9 +12289,9 @@ const classes = {
     courseType: 'Regular Asana Classes 1/ on campus',
     language: 'English',
     preRequisite: 'None',
-    courseCategory: 'Self Help', 
+    courseCategory: 'Self Help',
     courseSubType: 'Regular Asana Classes',
-    
+
     courseCertificate: 'NO',
     onlineInfo: {
       courseMode: false,
@@ -12438,9 +12438,9 @@ const classes = {
     courseType: 'Regular Asana Classes 1/ on campus',
     language: 'English',
     preRequisite: 'None',
-    courseCategory: 'Self Help', 
+    courseCategory: 'Self Help',
     courseSubType: 'Regular Asana Classes',
-    
+
     courseCertificate: 'NO',
     onlineInfo: {
       courseMode: false,
@@ -12765,9 +12765,9 @@ const classes = {
     courseType: 'Regular Meditation Foundation Course',
     language: 'English',
     preRequisite: 'None',
-    courseCategory: 'Self Help', 
+    courseCategory: 'Self Help',
     courseSubType: 'Regular Asana Classes',
-    
+
     courseCertificate: 'NO',
     onlineInfo: {
       courseMode: true,
@@ -12892,9 +12892,9 @@ const classes = {
     courseType: 'Regular Class - 2 Regular Meditation Class',
     language: 'English',
     preRequisite: 'None',
-    courseCategory: 'Self Help', 
+    courseCategory: 'Self Help',
     courseSubType: 'Regular Asana Classes',
-    
+
     courseCertificate: 'NO',
     onlineInfo: {
       courseMode: true,
@@ -13292,9 +13292,9 @@ const classes = {
     courseType: 'Regular Class - 2',
     language: 'English',
     preRequisite: 'None',
-    courseCategory: 'Self Help', 
+    courseCategory: 'Self Help',
     courseSubType: 'Regular Asana Classes',
-    
+
     courseCertificate: 'NO',
     onlineInfo: {
       courseMode: true,
@@ -13490,9 +13490,9 @@ const classes = {
     courseType: "samatwam health checkup",
     language: 'English',
     preRequisite: 'None',
-    courseCategory: 'Self Help', 
+    courseCategory: 'Self Help',
     courseSubType: 'Camps & Workshops',
-    
+
     courseCertificate: 'NO',
     onlineInfo: {
       courseMode: false,
@@ -13626,9 +13626,9 @@ const classes = {
     courseType: "Couple's Classes Online",
     language: 'English',
     preRequisite: 'None',
-    courseCategory: 'Self Help', 
+    courseCategory: 'Self Help',
     courseSubType: 'Regular Asana Classes',
-    
+
     courseCertificate: 'NO',
     onlineInfo: {
       courseMode: true,
@@ -13945,9 +13945,9 @@ const classes = {
     courseType: 'Regular Meditation Foundation Course',
     language: 'English',
     preRequisite: 'None',
-    courseCategory: 'Self Help', 
+    courseCategory: 'Self Help',
     courseSubType: 'Regular Asana Classes',
-    
+
     courseCertificate: 'NO',
     onlineInfo: {
       courseMode: true,
@@ -14284,9 +14284,9 @@ const certificate = {
     dates: [
       // '5th Aug to 26th Sep 2024· Morning', 
       // '7th Aug to 28th Sep 2024· Evening',
-      '6th November 2024 to 28th December 2024· Evening', 
-      '7th May to 28th June 2025· Evening', 
-      '11th Nov to 2nd Jan 2025· Morning',
+      '6th November 2024 to 28th December 2024· Evening',
+      '11th Nov 2024 to 2nd Jan 2025· Morning',
+      '7th May to 28th June 2025· Evening',
       '3rd February to 27th March 2025· Morning',
       '5th May to 26th June 2025· Morning',
       '4th August to 25th September 2025· Morning',
@@ -14303,9 +14303,9 @@ const certificate = {
     courseType: 'Certificate Yoga Therapy Course - Online',
     language: 'English',
     preRequisite: 'None',
-    courseCategory: 'Educational', 
+    courseCategory: 'Educational',
     courseSubType: 'Special Course - Pranayama',
-    
+
     courseCertificate: 'Certificate',
     onlineInfo: {
       courseMode: true,
@@ -14604,9 +14604,9 @@ const certificate = {
     courseType: 'Certificate Yoga Therapy Course - Online',
     language: 'English',
     preRequisite: '200 Hour Teacher Training Course',
-    courseCategory: 'Educational', 
+    courseCategory: 'Educational',
     courseSubType: 'Special Course - Cancer',
-    
+
     courseCertificate: 'Certificate',
     onlineInfo: {
       courseMode: true,
@@ -14749,9 +14749,9 @@ const certificate = {
     courseType: 'Certificate Yoga Therapy Course - Online',
     language: 'English',
     preRequisite: '500 Hour Teacher Training Course, 900 Hour Teacher Training Course ',
-    courseCategory: 'Educational', 
+    courseCategory: 'Educational',
     courseSubType: 'Special Course - Cancer',
-    
+
     courseCertificate: 'Certificate',
     onlineInfo: {
       courseMode: true,
@@ -14862,9 +14862,9 @@ const certificate = {
     courseType: 'Certificate Yoga Therapy Course - Online & On Campus',
     language: 'English',
     preRequisite: '500 Hour Teacher Training Course, 900 Hour Teacher Training Course ',
-    courseCategory: 'Educational', 
+    courseCategory: 'Educational',
     courseSubType: 'Special Course - Therapy',
-    
+
     courseCertificate: 'Certificate',
     onlineInfo: {
       courseMode: true,
