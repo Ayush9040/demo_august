@@ -787,7 +787,7 @@ const SignIn = () => {
         catch (err) {
           // alert('Invalid OTP')
           setFormData({ ...formData, errorIndex: 2 });
-          if (err.data.error == 'Your session has expired. Please Sign Up again to continue.' || err.data.error == "Your session has expired. Please click 'Sign Up with Google' again to continue.") {
+          if (err.data.error == 'Your session has expired.Please Sign Up again to continue.' || err.data.error == "Your session has expired. Please click 'Sign Up with Google' again to continue.") {
             setPageIndex(1)
             setOtp(new Array(4).fill(""));
             setSignUpType('')
@@ -917,7 +917,7 @@ const SignIn = () => {
         catch (err) {
           console.log(err?.data?.error);
 
-          if (err.data.error == 'Your session has expired. Please Sign Up again to continue.' || err.data.error == "Your session has expired. Please click 'Sign Up with Google' again to continue.") {
+          if (err.data.error == 'Your session has expired.Please Sign Up again to continue.' || err.data.error == "Your session has expired. Please click 'Sign Up with Google' again to continue.") {
             setPageIndex(1)
             setOtp(new Array(4).fill(""));
             setSignUpType('')
