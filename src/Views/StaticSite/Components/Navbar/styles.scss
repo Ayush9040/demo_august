@@ -187,3 +187,13 @@ html:not([data-scroll='0']) .header-logo {
 .cover:hover .down-arrow {
     transform: rotate(180deg);
 }
+
+.namastetext {
+    display: block;
+}
+
+@media(max-width: 768px) {
+    .namastetext {
+        display: none;
+    }
+}

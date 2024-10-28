@@ -142,7 +142,7 @@ const Navbar = ({ isUserLoggedIn, abc }) => {
     <div>
       <img src="/images/user_login.svg" alt="primary-logo" loading="lazy" />
     </div>
-    <div>
+    <div className='namastetext'>
       <p style={{ fontSize: '10px', fontWeight: '400', color: '#CA4625' }}>Namaste</p>
       <p style={{ fontSize: '14px', fontWeight: '700', color: '#CA4625' }}>{truncatedName}</p>
     </div>

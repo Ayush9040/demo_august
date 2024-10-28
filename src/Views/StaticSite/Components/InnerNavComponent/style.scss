@@ -170,6 +170,7 @@
             position: absolute;
             flex-direction: column;
             margin: 2.5rem 0;
+            top: 18px;
         width: 180px;
         right: -15px;
         bottom: -75px;
@@ -282,4 +283,14 @@
 .profile-container:hover .icon-rotate {
     transform: rotate(180deg);
     padding-right: 5px;
+}
+
+.namastetext {
+    display: block;
+}
+
+@media(max-width: 769px) {
+    .namastetext {
+        display: none;
+    }
 }
