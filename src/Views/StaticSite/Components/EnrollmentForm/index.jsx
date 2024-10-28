@@ -14,6 +14,7 @@ import axios from 'axios'
 import { handleCTProccedToPayment } from '../../../../CleverTap/buttonClicked'
 import { trackPageView } from '../../../../CleverTap/pageViewEvents'
 import { handleCTCoursePaymentPageVisit, handleCTPaymentCompletedCourse, handleCTPaymentFailed, setupUserProfile } from '../../../../CleverTap/buttonClicked'
+import EnrollmentForm from './EnrollmentForm'
 
 const Enrollment = () => {
   const { user } = useSelector((state) => state.auth)
@@ -664,7 +665,7 @@ useEffect(() => {
             </Link>
             <span className="flower">{legacy2}</span>
 
-            <div className="student">Student Enrollment</div>
+            <div className="student">Your Selected Yoga Course Details<br/> <span className='enroll_subtitle'>A step Towards inner transformation🧘‍✨</span> </div>
 
             {/* <ul className="header_ul">
             <li
@@ -716,7 +717,7 @@ useEffect(() => {
 
         {bold === 0 ? (
           <>
-            <Personal
+            {/* <Personal
               setBold={setBold}
               empty={empty}
               formData={formData}
@@ -739,7 +740,34 @@ useEffect(() => {
               uploadCheck={uploadCheck}
               setUploadCheck={setUploadCheck}
               dateDurationChange={dateDurationChange}
+            /> */}
+
+            <EnrollmentForm 
+            
+            setBold={setBold}
+            empty={empty}
+            formData={formData}
+            setFormData={setFormData}
+            handleEmpty1={handleEmpty1}
+            setEmpty={setEmpty}
+            isLoad={isLoad}
+            courseDate={courseDate}
+            templateKey={currentCourse?.templateId}
+            qualificationData={qualificationData}
+            listData={listData}
+            currentCourse={currentCourse}
+            courseAsset1={courseAsset1}
+            setCourseAsset1={setCourseAsset1}
+            courseAsset2={courseAsset2}
+            setCourseAsset2={setCourseAsset2}
+            handleSubmit={handleSubmit}
+            courseFee={courseFee}
+            setCourseFee={setCourseFee}
+            uploadCheck={uploadCheck}
+            setUploadCheck={setUploadCheck}
+            dateDurationChange={dateDurationChange}
             />
+
           </>
         ) : null}
 

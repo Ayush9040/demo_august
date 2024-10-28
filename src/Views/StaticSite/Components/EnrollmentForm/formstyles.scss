@@ -452,7 +452,7 @@
 .enrollment_container {
   height: 95%;
   width: 95%;
-  border: 1px solid black;
+  border: 1px solid #CA4625;
   border-radius: 94px;
   margin: 2%;
   justify-content: center;
@@ -520,8 +520,8 @@
   }
 
   .student {
-    font-weight: 600;
-    font-size: 25px;
+    font-weight: 700;
+    font-size: 24px;
     margin-bottom: 15px;
   }
 
@@ -646,7 +646,7 @@
 
   .grid_box {
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 60% 40%;
     margin: 3rem;
 
     form {
@@ -748,7 +748,7 @@
     }
 
     .right_grid {
-      width: 85%;
+      width: 100%;
 
 
       .DOB_box {
@@ -1348,12 +1348,13 @@ input[type='radio']:checked::before {
     width: fit-content;
 
     .details_box {
-      border: 1px solid #60606080;
-      border-radius: 10px;
+      border: 1px solid #60606080 !important;
+      border-radius: 20px;
       // width: 600px;
       height: 200px;
-      background-color: #edeef0;
+      background-color: #fff;
       border: none;
+      box-shadow: 0px 11.58px 23px 0px rgba(0, 0, 0, 0.04);
 
       .details_course_box {
         display: flex;
@@ -1525,12 +1526,12 @@ input[type='radio']:checked::before {
     .course-secondary-container {
       .details_box {
         border: 1px solid rgba(96, 96, 96, 0.5019607843);
-        border-radius: 10px;
+        border-radius: 20px;
         width: 520px;
         /* height: 200px; */
         height: auto;
         text-align: center;
-        background-color: #edeef0;
+        background-color: #fff;
         border: none;
         margin: 0 auto;
 
@@ -1576,13 +1577,13 @@ input[type='radio']:checked::before {
     .course-secondary-container {
       .details_box {
         border: 1px solid rgba(96, 96, 96, 0.5019607843);
-        border-radius: 10px;
+        border-radius: 20px;
         width: 390px;
         /* height: 200px; */
         margin-left: 14px;
         height: auto;
         text-align: center;
-        background-color: #edeef0;
+        background-color: #fff;
         border: none;
 
         // margin: 0 auto;
@@ -1639,13 +1640,13 @@ input[type='radio']:checked::before {
       .course-secondary-container {
         .details_box {
           border: 1px solid rgba(96, 96, 96, 0.5019607843);
-          border-radius: 10px;
+          border-radius: 20px;
           width: 312px;
           /* height: 200px; */
           height: auto;
           margin-left: 10px;
           text-align: center;
-          background-color: #edeef0;
+          background-color: #fff;
           border: none;
 
           .details_course_box {
@@ -2001,4 +2002,9 @@ input[type='radio']:checked::before {
   flex-direction: column !important;
   padding: 10px 16px !important;
   gap: 4px !important;
+}
+
+.enroll_subtitle {
+  font-size: 16px;
+  font-weight: 500;
 }
