@@ -808,26 +808,70 @@ const SignIn = () => {
       else {
         setIsBtnLoad(true)
         console.log("User details from Email ", userDetails)
-        if (isMobileVerified) {
-          const number = parsePhoneNumber(userDetails.phoneNumber);
-          const countryCode = number?.country;
-          let payload = { ...userDetails }
-          delete payload.otp;
-          delete payload.address1;
-          delete payload.address2;
-          payload['gender'] = userDetails?.gender.value;
-          payload['addressLine1'] = userDetails?.address1;
-          payload['addressLine2'] = userDetails?.address2;
-          payload['country'] = values?.country?.label;
-          payload['city'] = values?.city?.label;
-          payload['state'] = values?.state?.label;
-          payload['pincode'] = userDetails?.pincode;
-          payload['phoneNumber'] = phoneNumber.mobile;
-          payload['dialCode'] = phoneNumber.dialCode;
-          payload['countryCode'] = countryCode;
+        console.log(isMobileVerified);
+
+        // if (isMobileVerified) {
+        //   const number = parsePhoneNumber(userDetails.phoneNumber);
+        //   const countryCode = number?.country;
+        //   let payload = { ...userDetails }
+        //   delete payload.otp;
+        //   delete payload.address1;
+        //   delete payload.address2;
+        //   payload['gender'] = userDetails?.gender.value;
+        //   payload['addressLine1'] = userDetails?.address1;
+        //   payload['addressLine2'] = userDetails?.address2;
+        //   payload['country'] = values?.country?.label;
+        //   payload['city'] = values?.city?.label;
+        //   payload['state'] = values?.state?.label;
+        //   payload['pincode'] = userDetails?.pincode;
+        //   payload['phoneNumber'] = phoneNumber.mobile;
+        //   payload['dialCode'] = phoneNumber.dialCode;
+        //   payload['countryCode'] = countryCode;
 
 
 
+        //   let response = await axios.post(//send OTP for mobile
+        //     `${authBaseDomain}/authdoor/email/verify-otp`,
+        //     payload,
+        //     {
+        //       headers: {
+        //         'Authorization': `Bearer ${token}`
+        //       }
+        //     }
+        //   )
+        //   if (response) {
+        //     // alert('Siggned in');
+        //     localStorage.setItem('authorizationToken', response?.data?.accessToken)
+        //     localStorage.setItem('refreshToken', response?.data?.refreshToken)
+        //     dispatch(loginUserSuccess({}))
+        //     getUserDetails(response?.data?.accessToken, 'notalreadySignedUp')
+        //     callCTEvent(payload)
+
+        //     // console.log('user details 2 ', userDetails);
+        //     page ? page !== 'cart' ? navigate(`/enrollment/${page}`) : navigate('/shop/checkout') : navigate('/')
+        //   }
+
+        //   setFormData({ ...formData, errorIndex: 2 });
+        //   setIsBtnLoad(false)
+        // }
+        const number = parsePhoneNumber(userDetails.phoneNumber);
+        const countryCode = number?.country;
+        let payload = { ...userDetails }
+        delete payload.otp;
+        delete payload.address1;
+        delete payload.address2;
+        payload['gender'] = userDetails?.gender.value;
+        payload['addressLine1'] = userDetails?.address1;
+        payload['addressLine2'] = userDetails?.address2;
+        payload['country'] = values?.country?.label;
+        payload['city'] = values?.city?.label;
+        payload['state'] = values?.state?.label;
+        payload['pincode'] = userDetails?.pincode;
+        payload['phoneNumber'] = phoneNumber.mobile;
+        payload['dialCode'] = phoneNumber.dialCode;
+        payload['countryCode'] = countryCode;
+
+        try {
           let response = await axios.post(//send OTP for mobile
             `${authBaseDomain}/authdoor/email/verify-otp`,
             payload,
@@ -848,8 +892,33 @@ const SignIn = () => {
             // console.log('user details 2 ', userDetails);
             page ? page !== 'cart' ? navigate(`/enrollment/${page}`) : navigate('/shop/checkout') : navigate('/')
           }
-
-          setFormData({ ...formData, errorIndex: 2 });
+          else {
+            // alert('failed')
+          }
+        }
+        catch (err) {
+          console.log(err?.data?.error);
+          
+          if (err?.data?.error == "Your session has expired. Please click 'Sign Up with Google' again to continue.") {
+            setPageIndex(1)
+            setOtp(new Array(4).fill(""));
+            setSignUpType('')
+            setFormData({
+              phoneNumber: '',
+              dialCode: '91',
+              otp: '',
+              email: '',
+              firstName: '',
+              lastName: '',
+              gender: '',
+              country: '',
+              city: '',
+              errorIndex: '0'
+            })
+          }
+          else {
+            setErrorMessage(err.data.error)
+          }
           setIsBtnLoad(false)
         }
       }
@@ -1583,7 +1652,7 @@ const SignIn = () => {
             {
               (pageIndex == '3' || pageIndex == '4') && <>
                 <div className='header header-3'>Namaste 🙏 Please Fill Your Details</div>
-                <div className='sub-header sub-header-3 wish-text' style={{maxWidth:'430px'}}>Become a Part of The Yoga Institute Family & Sign-up for you’re preferred course</div>
+                <div className='sub-header sub-header-3 wish-text' style={{ maxWidth: '430px' }}>Become a Part of The Yoga Institute Family & Sign-up for you’re preferred course</div>
                 <div className='sub-header sub-header-3 wish-text-mob'>Join The Yoga Institute Family </div>
 
                 <div className='inp-group'>
