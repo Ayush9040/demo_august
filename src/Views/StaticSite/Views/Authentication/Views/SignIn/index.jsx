@@ -819,7 +819,6 @@ const SignIn = () => {
         }
       }
       else {
-        setIsBtnLoad(true)
         console.log("User details from Email ", userDetails)
         console.log(isMobileVerified);
 
@@ -867,6 +866,8 @@ const SignIn = () => {
         //   setFormData({ ...formData, errorIndex: 2 });
         //   setIsBtnLoad(false)
         // }
+        setIsBtnLoad(true)
+
         const number = parsePhoneNumber(userDetails.phoneNumber);
         const countryCode = number?.country;
         let payload = { ...userDetails }
@@ -901,13 +902,15 @@ const SignIn = () => {
             dispatch(loginUserSuccess({}))
             getUserDetails(response?.data?.accessToken, 'notalreadySignedUp')
             callCTEvent(payload)
-
+            setIsBtnLoad(false)
             // console.log('user details 2 ', userDetails);
             page ? page !== 'cart' ? navigate(`/enrollment/${page}`) : navigate('/shop/checkout') : navigate('/')
           }
           else {
             // alert('failed')
           }
+          
+
         }
         catch (err) {
           console.log(err?.data?.error);
@@ -1513,7 +1516,7 @@ const SignIn = () => {
 
   return (
     <div className="signin-form" onClick={() => SetIsCountryContainer(false)}>
-      <ToastContainer/>
+      <ToastContainer />
       <div className='signin-container'>
         <div className="signin-logo">
           <img src="/images/main-logo-signup.svg" alt="primary-logo" loading="lazy" />
