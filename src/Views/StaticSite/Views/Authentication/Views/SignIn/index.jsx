@@ -1656,6 +1656,8 @@ const SignIn = () => {
                     );
                   })}
                 </div>
+                {formData?.errorIndex == 2 &&
+                  <div style={{ color: '#FF3B30', margin: '1rem 0' }}>OTP is Invalid!</div>}
                 <div className='sub-header' style={{ fontWeight: '400', fontSize: '16px', marginTop: '12px' }}>Enter OTP sent to {phoneNumber.dialCode}{formData.phoneNumber}
                   <span style={{ color: '#CA4625', fontSize: '12px', fontWeight: 600, cursor: 'pointer', borderBottom: '2px solid #CA4625', marginLeft: '1rem' }} onClick={() => {
                     setPageIndex('1');
@@ -1667,8 +1669,7 @@ const SignIn = () => {
                       Change mobile number
                     </span></span>
                 </div>
-                {formData?.errorIndex == 2 &&
-                  <div style={{ color: '#FF3B30', margin: '1rem 0' }}>OTP is Invalid!</div>}
+               
                 <div className="ftr-btn">
                   <button type='click' className='primary-btn' onClick={() => verifyOTP(formData)}>Verify & Continue</button>
                   <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
