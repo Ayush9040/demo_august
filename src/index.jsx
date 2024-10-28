@@ -34,7 +34,7 @@ store.dispatch({
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
-// ReactGA.initialize('374034779')
+// ReactGA.initialize('5158237522')
 // ReactGA.pageview('/')
 root.render(
   <Provider store={store}>
