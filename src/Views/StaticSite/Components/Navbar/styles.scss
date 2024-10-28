@@ -63,7 +63,7 @@ html:not([data-scroll='0']) .header-logo {
             padding-left: 0;
             align-items: center;
             li{
-                margin: 0 1rem;
+                margin: 0 0.7rem;
                 cursor: pointer;position: relative;
                 .user-dropdown {
                     position: absolute;
@@ -173,8 +173,8 @@ html:not([data-scroll='0']) .header-logo {
     background-color: #fff;
     align-items: center;
     justify-content: center;
-    gap: 20px;
-    padding: 5px 9px;
+    gap: 6px;
+    padding: 4px;
     border-radius: 30px;
 }
 

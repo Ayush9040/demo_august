@@ -24,6 +24,9 @@ const Navbar = ({ isUserLoggedIn, abc }) => {
 
   const { cart } = useSelector((state) => state.shop)
   const nameFromRedux = useSelector((state) => state.auth.user.data?.firstName);
+  const truncatedName = nameFromRedux && nameFromRedux.length > 10 
+  ? `${nameFromRedux.slice(0, 12)}...` 
+  : nameFromRedux;
  
   const getTotal = () => {
     if (cart?.length === 0) return
@@ -92,7 +95,7 @@ const Navbar = ({ isUserLoggedIn, abc }) => {
           <div className="quick-actions">
             <ul>
               <Link to='/search'>
-                <li onClick={() => { navigate('/') }} >{Search}</li></Link>
+                <li onClick={() => { navigate('/') }} >{<img src='/images/search.svg' alt='' className='down-arrow' loading='lazy' />}</li></Link>
               {/* <Link to="/shop">
                 <li>{Cart}</li>
               </Link> */}
@@ -107,7 +110,7 @@ const Navbar = ({ isUserLoggedIn, abc }) => {
               {/* <Link className='comingSoon' to="/">
                 <li>{Gift}</li>
               </Link> */}
-              <Link onMouseOver={() => { setDropdown(true) }} onMouseOut={() => { setDropdown(false) }} to={isUserLoggedIn ? '/user/profile' : '/user/sign-in'}>
+              {/* <Link onMouseOver={() => { setDropdown(true) }} onMouseOut={() => { setDropdown(false) }} to={isUserLoggedIn ? '/user/profile' : '/user/sign-in'}>
                 <li className='cover'>{isUserLoggedIn ? (
                   <div className='wrapper_logo'>
                     <div>
@@ -115,7 +118,7 @@ const Navbar = ({ isUserLoggedIn, abc }) => {
                     </div>
                     <div>
                       <p style={{fontSize: '10px', fontWeight: '400', color: '#CA4625'}}>Namaste</p>
-                      <p style={{ fontSize: '14px', fontWeight: '700', color: '#CA4625'}}>{nameFromRedux}</p>
+                      <p style={{ fontSize: '14px', fontWeight: '700', color: '#CA4625'}}>{truncatedName}</p>
                     </div>
                     <div>
                       <img src='/images/Chevron down.svg' alt='' className='down-arrow' loading='lazy' />
@@ -129,7 +132,48 @@ const Navbar = ({ isUserLoggedIn, abc }) => {
                     </ul>
                   </div>
                 </li>
-              </Link>
+              </Link> */}
+              <li
+  className='cover'
+  onMouseOver={() => setDropdown(true)}
+  onMouseOut={() => setDropdown(false)}
+>
+  <div className='wrapper_logo'>
+    <div>
+      <img src="/images/user_login.svg" alt="primary-logo" loading="lazy" />
+    </div>
+    <div>
+      <p style={{ fontSize: '10px', fontWeight: '400', color: '#CA4625' }}>Namaste</p>
+      <p style={{ fontSize: '14px', fontWeight: '700', color: '#CA4625' }}>{truncatedName}</p>
+    </div>
+    <div style={{ paddingRight: '5px' }}>
+      <img src='/images/Chevron down.svg' alt='' className='down-arrow' loading='lazy' />
+    </div>
+  </div>
+  
+  {dropdown && isUserLoggedIn && (
+    <div className='user-dropdown' style={{ display: 'block' }}>
+      <ul style={{ borderRadius: '8px', boxShadow: '0px -2px 2px 0px rgba(0, 0, 0, 0.1)' }}>
+        <li
+          style={{ borderRadius: '8px 8px 0px 0px' }}
+          onClick={() => navigate('/user/profile')}
+        >
+          User Profile
+        </li>
+        <li
+          style={{ borderRadius: '0px 0px 8px 8px' }}
+          onClick={async () => {
+            await dispatch(logoutUserAction());
+            navigate('/user/sign-in');
+          }}
+        >
+          Logout
+        </li>
+      </ul>
+    </div>
+  )}
+</li>
+
             </ul>
           </div>
         </div>

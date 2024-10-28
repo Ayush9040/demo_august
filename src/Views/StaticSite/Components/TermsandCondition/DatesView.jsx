@@ -8,8 +8,9 @@ import InnerNavComponent from '../InnerNavComponent'
 import '../EnrollmentForm/formstyles.scss';
 import { useNavigate  } from 'react-router-dom'; 
 import { useSelector } from 'react-redux';
+import { cross } from '../../assets/icons/icon'
 
-const DatesView = ({ pageDate }) => {
+const DatesView = ({ pageDate, setIsShipppingModalOpen }) => {
 
     const [selectedDate, setSelectedDate] = useState(null);
     const { isLoggedIn } = useSelector((state) => state.auth)
@@ -21,6 +22,10 @@ const DatesView = ({ pageDate }) => {
     color: 'orange',
     menuColor: 'black',
     menuItems:[]
+  }
+
+  function closeModal() {
+    setIsShipppingModalOpen(false)
   }
 
 
@@ -66,8 +71,12 @@ const DatesView = ({ pageDate }) => {
     <>
       <div className='terms-container'>
         {/* <InnerNavComponent abc={tnc} /> */}
-        <div className='banner-heading' style={{ textAlign: 'left', margin: '0px' }}>
-            Upcoming Dates
+        <div className='banner-heading' style={{ width: '100%', margin: '0px', display: 'flex', justifyContent: 'space-between', fontSize: '18px', fontWeight: '600' }}>
+            <div>Upcoming Dates</div>
+            <div style={{ width: '14px', height: '14px', marginRight: '9px'}}><span className="change-cross-svg-width" style={{cursor: 'pointer', fontSize: '18px', paddingRight: '8px'}} onClick={closeModal}>
+                {cross}
+
+              </span></div>
           {/* <div className='bottom-line'></div> */}
         </div>
       </div>
@@ -77,7 +86,7 @@ const DatesView = ({ pageDate }) => {
                 {
                     pageDate?.dates.map((item, index) => {
                         return (
-                            <div key={index} style={{ width: '48%' }}>
+                            <div key={index} className='cards_new_popup_dates'>
                                 <div className='wrapper_center'>
                                 <label class="item-label item_date" style={{ width: '100%', height: '100%', borderRadius: '12px' }}>
                             <input class="item-input"

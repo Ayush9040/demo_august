@@ -47,16 +47,16 @@ const DatesPopUp = ({ isShippingModalOpen, setIsShipppingModalOpen, pageDate}) =
               </h2> */}
               {/* <h2 className="heading-2">Payment</h2> */}
             </div>
-            <div>
+            {/* <div>
               <span className="change-cross-svg-width" style={{cursor: 'pointer'}} onClick={closeModal}>
                 {cross}
 
               </span>
-            </div>
+            </div> */}
           
           </div>
           <div className="modal-content" style={{ gridTemplateColumns: '1fr', marginTop: '0rem' }}>
-            {<DatesView pageDate={pageDate} />}
+            {<DatesView pageDate={pageDate} setIsShipppingModalOpen={setIsShipppingModalOpen} />}
             {/* <div>
               <input
                 className="modal-input"

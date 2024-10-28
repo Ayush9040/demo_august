@@ -95,7 +95,7 @@
   .user-container{
       position: relative;
       display: flex;      
-      gap:10px;
+      gap:14px;
       .user-dropdown {
         //position: absolute;
         display: none;
@@ -272,8 +272,8 @@
     background-color: #fff;
     align-items: center;
     justify-content: center;
-    gap: 20px;
-    padding: 5px 9px;
+    gap: 6px;
+    padding: 4px;
     border-radius: 30px;
     border: 1px solid;
     border-color: #CA4625;
@@ -281,4 +281,5 @@
 
 .profile-container:hover .icon-rotate {
     transform: rotate(180deg);
+    padding-right: 5px;
 }

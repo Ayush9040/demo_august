@@ -39,6 +39,9 @@ const InnerNavComponent = ({ abc }) => {
   const { cart } = useSelector((state)=>state.shop)
 
   const nameFromRedux = useSelector((state) => state.auth.user.data?.firstName);
+  const truncatedName = nameFromRedux && nameFromRedux.length > 10 
+  ? `${nameFromRedux.slice(0, 12)}...` 
+  : nameFromRedux;
 
   const getTotal = ()=>{
     if(cart?.length===0) return
@@ -110,8 +113,9 @@ const InnerNavComponent = ({ abc }) => {
             </ul>
           </div>
           <div className="user-container">
-            <div onClick={ ()=>{navigate('/search')} } >{ abc.color === 'orange' ? Search:abc.color === 'black' ? SearchBlack : SearchWhite }</div>
+            {/* <div onClick={ ()=>{navigate('/search')} } >{ abc.color === 'orange' ? Search:abc.color === 'black' ? SearchBlack : SearchWhite }</div> */}
             
+            <div onClick={ ()=>{navigate('/search')} } ><img src='/images/search.svg' alt='' loading='lazy' /></div>
 
 
               {hasItems && (
@@ -120,7 +124,7 @@ const InnerNavComponent = ({ abc }) => {
                 { abc.color === 'orange' ? Cart : abc.color === 'white' ? CartWhite : CartBlack }  <span style={{ color:'#CA4625' }} className='cart-count' >{ cartItems }</span></Link>
             )}
            
-            <div className='profile-container' onMouseOver={()=>{setDropdown(true)}} onMouseOut={()=>{setDropdown(false)}}  >
+            {/* <div className='profile-container' onMouseOver={()=>{setDropdown(true)}} onMouseOut={()=>{setDropdown(false)}}  >
               <Link to={isLoggedIn ? '/user/profile':'/user/sign-in'} >
                 {isLoggedIn ? (
                   <div className='wrapper_logo'>
@@ -129,7 +133,7 @@ const InnerNavComponent = ({ abc }) => {
                     </div>
                     <div>
                       <p style={{fontSize: '10px', fontWeight: '400', color: '#CA4625'}}>Namaste</p>
-                      <p style={{ fontSize: '14px', fontWeight: '700', color: '#CA4625'}}>{nameFromRedux}</p>
+                      <p style={{ fontSize: '14px', fontWeight: '700', color: '#CA4625'}}>{truncatedName}</p>
                     </div>
                     <div className='icon-rotate'>
                       <img src='/images/Chevron down.svg' alt='' loading='lazy' />
@@ -147,7 +151,47 @@ const InnerNavComponent = ({ abc }) => {
                   <li style={{ borderRadius: '0px 0px 8px 8px'}} onClick={async()=>{await dispatch(logoutUserAction());navigate('/user/sign-in')}} >Logout</li>
                 </ul>
               </div>
-            </div>
+            </div> */}
+
+<div
+  className='profile-container'
+  onMouseOver={() => setDropdown(true)}
+  onMouseOut={() => setDropdown(false)}
+>
+  <div className='wrapper_logo'>
+    <div>
+      <img src="/images/user_login.svg" alt="primary-logo" loading="lazy" />
+    </div>
+    <div>
+      <p style={{ fontSize: '10px', fontWeight: '400', color: '#CA4625' }}>Namaste</p>
+      <p style={{ fontSize: '14px', fontWeight: '700', color: '#CA4625' }}>{truncatedName}</p>
+    </div>
+    <div className='icon-rotate' style={{ width: '22px'}}>
+      <img src='/images/Chevron down.svg' alt='' loading='lazy' />
+    </div>
+  </div>
+
+  <div style={dropdown && isLoggedIn ? { display: 'block' } : {}} className='user-dropdown'>
+    <ul style={{ borderRadius: '8px', boxShadow: '0px -2px 2px 0px rgba(0, 0, 0, 0.1)' }}>
+      <li
+        style={{ borderRadius: '8px 8px 0px 0px' }}
+        onClick={() => navigate('/user/profile')}
+      >
+        User Profile
+      </li>
+      <li
+        style={{ borderRadius: '0px 0px 8px 8px' }}
+        onClick={async () => {
+          await dispatch(logoutUserAction());
+          navigate('/user/sign-in');
+        }}
+      >
+        Logout
+      </li>
+    </ul>
+  </div>
+</div>
+
           </div>
         </div>
 
