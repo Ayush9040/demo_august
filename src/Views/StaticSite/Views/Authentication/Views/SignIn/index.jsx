@@ -25,6 +25,9 @@ import { handleCTSignIn, handleAlreadySignedUpUser } from '../../../../../../Cle
 import InputComponent from '../../../../Components/InputComponent'
 import { LoadScript, Autocomplete } from '@react-google-maps/api';
 import { useLocation } from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
+
 const countriesMap = [
   { label: 'Afghanistan', value: '+93', flag: 'AF' },
   { label: 'Albania', value: '+355', flag: 'AL' },
@@ -798,6 +801,16 @@ const SignIn = () => {
               city: '',
               errorIndex: '0'
             })
+            toast.error(err?.data?.error, {
+              position: 'top-right',
+              autoClose: 3000,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: false,
+              draggable: true,
+              progress: undefined,
+              theme: 'light',
+            })
           }
           else {
             setErrorMessage(err.data.error)
@@ -914,6 +927,16 @@ const SignIn = () => {
               country: '',
               city: '',
               errorIndex: '0'
+            })
+            toast.error(err?.data?.error, {
+              position: 'top-right',
+              autoClose: 3000,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: false,
+              draggable: true,
+              progress: undefined,
+              theme: 'light',
             })
           }
           else {
@@ -1490,6 +1513,7 @@ const SignIn = () => {
 
   return (
     <div className="signin-form" onClick={() => SetIsCountryContainer(false)}>
+      <ToastContainer/>
       <div className='signin-container'>
         <div className="signin-logo">
           <img src="/images/main-logo-signup.svg" alt="primary-logo" loading="lazy" />
