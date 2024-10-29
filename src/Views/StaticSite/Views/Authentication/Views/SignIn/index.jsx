@@ -1605,7 +1605,7 @@ const SignIn = () => {
                   </span >
                 </div >
                 <input type="number" class="input-box" placeholder="Enter your phone number" value={formData.phoneNumber}
-                  onChange={handlePhoneChange} />
+                  onChange={handlePhoneChange} onKeyUp={() => { setFormData({ ...formData, errorIndex: 0 }) }} />
               </div >
               {isCountryContainer &&
                 <div className='ctry-dpdwn' ref={listRef}>
@@ -1662,14 +1662,14 @@ const SignIn = () => {
                   <span style={{ color: '#CA4625', fontSize: '12px', fontWeight: 600, cursor: 'pointer', borderBottom: '2px solid #CA4625', marginLeft: '1rem' }} onClick={() => {
                     setPageIndex('1');
                   }}>
-                    <span style={{whiteSpace: 'nowrap'}}>
+                    <span style={{ whiteSpace: 'nowrap' }}>
                       <svg width="12" height="12" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M0.249512 6.18805V7.75055H1.81201L6.42035 3.14222L4.85785 1.57972L0.249512 6.18805ZM7.62868 1.93389C7.79118 1.77139 7.79118 1.50889 7.62868 1.34639L6.65368 0.371387C6.49118 0.208887 6.22868 0.208887 6.06618 0.371387L5.30368 1.13389L6.86618 2.69639L7.62868 1.93389Z" fill="#CA4625" />
                       </svg>
                       Change mobile number
                     </span></span>
                 </div>
-               
+
                 <div className="ftr-btn">
                   <button type='click' className='primary-btn' onClick={() => verifyOTP(formData)}>Verify & Continue</button>
                   <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
