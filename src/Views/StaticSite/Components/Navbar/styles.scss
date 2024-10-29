@@ -3,13 +3,15 @@
 // }
 
 html:not([data-scroll='0']) .header-logo {
-    transition: 0.5s ;
+    transition: 0.5s;
     transition-timing-function: ease-in-out;
     margin: 0 auto;
-    &img{ 
-    width: 50%;
-    margin: 0 auto;
-    object-fit: contain !important;}
+
+    &img {
+        width: 50%;
+        margin: 0 auto;
+        object-fit: contain !important;
+    }
 }
 
 .navigation-color {
@@ -21,7 +23,7 @@ html:not([data-scroll='0']) .header-logo {
     width: 70% !important;
     margin: 0 auto;
     object-fit: contain !important;
-    transition: 0.5s ;
+    transition: 0.5s;
     transition-timing-function: ease-in-out;
 }
 
@@ -32,39 +34,47 @@ html:not([data-scroll='0']) .header-logo {
     width: 100%;
     padding: 2rem 6rem;
     box-sizing: border-box;
-    div{
+
+    div {
         width: 100%;
     }
-    .hamburger svg{
+
+    .hamburger svg {
         cursor: pointer;
         width: 35px;
         height: 35px;
     }
 
-    .title-logo{
-  
-        .mobile-search{
+    .title-logo {
+
+        .mobile-search {
             display: none;
         }
-        .header-logo{
+
+        .header-logo {
             text-align: center;
         }
-        img{
+
+        img {
             width: 50%;
             margin: 0 auto;
-            object-fit: contain!important;
+            object-fit: contain !important;
         }
     }
-    .quick-actions{
-        ul{
+
+    .quick-actions {
+        ul {
             list-style: none;
             display: flex;
             justify-content: flex-end;
             padding-left: 0;
             align-items: center;
-            li{
+
+            li {
                 margin: 0 0.7rem;
-                cursor: pointer;position: relative;
+                cursor: pointer;
+                position: relative;
+
                 .user-dropdown {
                     position: absolute;
                     display: none;
@@ -73,13 +83,15 @@ html:not([data-scroll='0']) .header-logo {
                     width: 140px;
                     align-items: center;
                     right: 7px;
-                    top:8px;
+                    top: 8px;
                     border-radius: 8px;
+
                     ul {
                         display: flex;
                         flex-direction: column;
                         color: #CA4625;
                         margin-top: 10px;
+
                         li {
                             width: 100%;
                             padding: 0.5rem;
@@ -88,83 +100,96 @@ html:not([data-scroll='0']) .header-logo {
                             // background-color: rgb(202, 70, 37);
                             background-color: #fff;
                             font-size: 14px;
-                            &:hover{
+
+                            &:hover {
                                 color: #fff;
                                 background-color: rgb(202, 70, 37);
                             }
                         }
                     }
-                  }
+                }
             }
         }
     }
 }
-.comingSoon{
+
+.comingSoon {
     position: relative;
-  &:hover{
-    &::after{
-        position: absolute;
-        padding: 1rem;
-        width: fit-content;
-        content: 'Coming Soon';
-        // background: #00000080;
-        color: #fff;
+
+    &:hover {
+        &::after {
+            position: absolute;
+            padding: 1rem;
+            width: fit-content;
+            content: 'Coming Soon';
+            // background: #00000080;
+            color: #fff;
+        }
     }
-  }
 }
 
 
-@media (max-width:768px){
+@media (max-width:768px) {
 
-    .navbar-container{
-   .title-logo{
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    .header-title{display: none;}
-    .mobile-search{
-        display: block  ;
-        svg{
-            width: 25px!important;
-            height: 25px!important;
+    .navbar-container {
+        .title-logo {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+
+            .header-title {
+                display: none;
+            }
+
+            .mobile-search {
+                display: block;
+
+                svg {
+                    width: 25px !important;
+                    height: 25px !important;
+                }
+            }
+
+            .header-logo {
+                margin-left: 0;
+
+                img {
+                    display: block;
+                    width: 150px;
+                    margin-left: auto;
+                    margin-right: 0;
+                }
+            }
         }
     }
-    .header-logo{
-        margin-left: 0;
-        img{
-            display: block;
-            width: 150px;
-            margin-left: auto;
-            margin-right: 0;
-        }
-    }
-   }
-    }
-    .quick-actions{
+
+    .quick-actions {
         display: block;
     }
 }
 
 // mobile responsive
-@media (max-width:500px){
-    .navbar-container{
+@media (max-width:500px) {
+    .navbar-container {
         padding: 2rem;
-        .hamburger{
-            svg{
+
+        .hamburger {
+            svg {
                 cursor: pointer;
                 width: 30px;
                 height: 30px;
             }
         }
-        .title-logo{
-    
-            .header-logo{
-                img{
+
+        .title-logo {
+
+            .header-logo {
+                img {
                     width: 150px;
                 }
             }
-            }
-           
+        }
+
     }
 }
 
@@ -174,7 +199,7 @@ html:not([data-scroll='0']) .header-logo {
     align-items: center;
     justify-content: center;
     gap: 6px;
-    padding: 4px;
+    padding: 3px 8px 0 4px;
     border-radius: 30px;
 }
 
@@ -186,14 +211,25 @@ html:not([data-scroll='0']) .header-logo {
 
 .cover:hover .down-arrow {
     transform: rotate(180deg);
+    margin-top: -6px;
 }
 
 .namastetext {
     display: block;
+    line-height: 14px;
+    margin-top: -4px;
 }
 
 @media(max-width: 768px) {
     .namastetext {
         display: none;
+    }
+    
+    .chevr-bd {
+        display: none;
+    }
+    .wrapper_logo {
+        padding: 3px 3px 0px 3px;
+        border-radius: 50%;
     }
 }
