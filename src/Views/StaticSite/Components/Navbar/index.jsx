@@ -133,7 +133,9 @@ const Navbar = ({ isUserLoggedIn, abc }) => {
                   </div>
                 </li>
               </Link> */}
-              <li
+              {
+                isUserLoggedIn ? (
+                  <li
   className='cover'
   onMouseOver={() => setDropdown(true)}
   onMouseOut={() => setDropdown(false)}
@@ -151,7 +153,7 @@ const Navbar = ({ isUserLoggedIn, abc }) => {
     </div>
   </div>
   
-  {dropdown && isUserLoggedIn && (
+  {dropdown ? (
     <div className='user-dropdown' style={{ display: 'block' }}>
       <ul style={{ borderRadius: '8px', boxShadow: '0px -2px 2px 0px rgba(0, 0, 0, 0.1)' }}>
         <li
@@ -171,8 +173,10 @@ const Navbar = ({ isUserLoggedIn, abc }) => {
         </li>
       </ul>
     </div>
-  )}
+  ) : ''}
 </li>
+                ) : <li><Link to={'/user/sign-in'}>{User}</Link></li>
+              }
 
             </ul>
           </div>

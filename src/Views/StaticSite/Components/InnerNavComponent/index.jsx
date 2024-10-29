@@ -153,7 +153,9 @@ const InnerNavComponent = ({ abc }) => {
               </div>
             </div> */}
 
-<div
+            {
+              isLoggedIn ? (
+                <div
   className='profile-container'
   onMouseOver={() => setDropdown(true)}
   onMouseOut={() => setDropdown(false)}
@@ -191,9 +193,13 @@ const InnerNavComponent = ({ abc }) => {
     </ul>
   </div>
 </div>
+              ) : <Link to={'/user/sign-in'}>{User}</Link>
+            }
+
 
           </div>
         </div>
+
 
         {abc.menuItems.length!==0 && <div
           className={'career-navigation-lg'}
