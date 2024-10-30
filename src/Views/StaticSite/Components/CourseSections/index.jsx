@@ -17,31 +17,31 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, }
     const coursesList = [
       {
         id: 1,
-        ques: '200 hours TTC (Basic)',
+        ques: '200 hours YTTC (Basic)',
         ans: [
           {
             url: '/one-month-ttc',
-            text: ' 1 Month TTC Online & On Campus - English - Batch 1 ',
+            text: ' 1 Month YTTC Online & On Campus - English - Batch 1 ',
           },
           {
             url: '/200-hrs-part-time-ttc-on-campus-english',
-            text: '2 Months TTC Online & On Campus – English - Batch 2',
+            text: '2 Months YTTC Online & On Campus – English - Batch 2',
           },
           {
             url: '/200-hrs-part-time-ttc-online-english',
-            text: '2 Months TTC Online – English - Batch 3 ',
+            text: '2 Months YTTC Online – English - Batch 3 ',
           },
           {
             url: '/200-hrs-part-time-ttc-online',
-            text: '2 Months TTC Online – Hindi - Batch 4 ',
+            text: '2 Months YTTC Online – Hindi - Batch 4 ',
           },
           {
             url: '/weekend-teacher-training-course',
-            text: '3 Months Weekend TTC Online – English - Batch 5',
+            text: '3 Months Weekend YTTC Online – English - Batch 5',
           },
           {
             url: '/200-hrs-part-time-ttc-online-english-batch-6',
-            text: '2 Months TTC Online – English - Batch 6',
+            text: '2 Months YTTC Online – English - Batch 6',
           },
           // {
           //   url: '/200-Hours',
@@ -52,34 +52,34 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, }
       },
       {
         id: 2,
-        ques: '500 Hours TTC (Intermediate)',
+        ques: '500 Hours YTTC (Intermediate)',
         ans: [
           {
             url: '/500-hrs-online-yoga-teacher-training-course-intermediate-level',
-            text: ' 3 Months TTC - Online - English',
+            text: ' 3 Months YTTC - Online - English',
           },
         ],
       },
       {
         id: 3,
-        ques: '900 Hour Courses',
+        ques: '900 Hours YTTC (Advanced)',
         ans: [
           {
             url: '/3-months-advanced-teacher-training-course',
-            text: '3 Months TTC-On Campus-English',
+            text: '3 Months YTTC-On Campus-English',
           },
           {
             url: '/900-hours-advanced-teacher-training-course',
-            text: '4 Months TTC-Online-English',
+            text: '4 Months YTTC-Online-English',
           },
           {
             url: '/seven-month-ttc',
-            text: '7 Months TTC-Online & On Campus-English',
+            text: '7 Months YTTC-Online & On Campus-English',
           },
-          { url: '/one-year-ttc', text: '1 Year TTC-Online & On Campus-Hindi' },
+          { url: '/one-year-ttc', text: '1 Year YTTC-Online & On Campus-Hindi' },
           {
             url: '/two-year-ttc',
-            text: '2 Years TTC-Online & On Campus-English',
+            text: '2 Years YTTC-Online & On Campus-English',
           },
         ],
       },
@@ -125,7 +125,7 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, }
     ]
 
     switch (title) {
-      case 'Teacher Training Courses':
+      case 'Yoga Teacher Training Courses (YTTC)':
         return (
           <>
             <Accordian sliderVal={customVal} setSliderVal={setCustomVal} data={coursesList} />

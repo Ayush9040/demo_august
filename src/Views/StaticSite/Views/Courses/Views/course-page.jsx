@@ -75,7 +75,7 @@ const Courses = () => {
   }
 
 
-  
+
   useEffect(() => {
     // Start time when the component mounts
     setStartTime(Date.now());
@@ -83,35 +83,35 @@ const Courses = () => {
     // Retrieve or generate the session ID
     let session = localStorage.getItem('sessionId');
     if (!session) {
-        session = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
-        localStorage.setItem('sessionId', session);
+      session = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
+      localStorage.setItem('sessionId', session);
     }
     setSessionId(session);
 
     return () => {
-        // End time when the component unmounts
-        const endTime = Date.now();
+      // End time when the component unmounts
+      const endTime = Date.now();
 
-        // Calculate the session duration in seconds
-        const sessionDuration = ((endTime - startTime) / 1000).toFixed(2);
+      // Calculate the session duration in seconds
+      const sessionDuration = ((endTime - startTime) / 1000).toFixed(2);
 
-        const pageName = 'Course_Intro';
-        const lastPageUrl = document.referrer || 'N/A';
-        const pageUrl = window.location.href;
-        //const loggedIn = localStorage.getItem('isLoggedIn') === 'true' ? 'Yes' : 'No'; // Adjust based on your auth logic
-        const uniqueViewId = Math.floor(Math.random() * 1000); // Replace with actual logic
+      const pageName = 'Course_Intro';
+      const lastPageUrl = document.referrer || 'N/A';
+      const pageUrl = window.location.href;
+      //const loggedIn = localStorage.getItem('isLoggedIn') === 'true' ? 'Yes' : 'No'; // Adjust based on your auth logic
+      const uniqueViewId = Math.floor(Math.random() * 1000); // Replace with actual logic
 
-        // trackCourseView({
-        //     pageName,
-        //     lastPageUrl,
-        //     pageUrl,
-        //     sessionDuration,
-        //     isLoggedIn,
-        //     sessionId: session,
-        //     uniqueViewId,
-        // });
+      // trackCourseView({
+      //     pageName,
+      //     lastPageUrl,
+      //     pageUrl,
+      //     sessionDuration,
+      //     isLoggedIn,
+      //     sessionId: session,
+      //     uniqueViewId,
+      // });
     };
-}, []);
+  }, []);
 
   return (
     <>
@@ -124,6 +124,18 @@ const Courses = () => {
         <InnerNavComponent abc={CoursesBan} />
         <div className="search">
           <h1>Courses</h1>
+          <div className='filter-btn'>
+            <span>
+              <img src="icons/filter-icon.png" alt="filter-icon" />
+            </span>
+            <span style={{padding:'0 20px 0 4px'}}>
+              Filters</span>
+            <span>
+              <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L5 5L9 1" stroke="#CA4625" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </span>
+          </div>
           {/* <div className="search-bar">
           <label>
             <input type={'text'} placeholder="Search Courses" />
@@ -205,20 +217,20 @@ const Courses = () => {
 
         {courseCardData && courseCardData.map((item, i) => {
 
-            setPathParam(item.title)
-            return (
-              <CourseSection
-                key={i}
-                title={item.title}
-                // color={item.color}
-                data={data[i]}
-                showRangeSlider={(item?.title === 'Teacher Training Courses') ? true : false}
-                pathParam={setPathParam(item.title).path}
-                cardData={item.cardData}
-                sliderRange={setPathParam(item.title).sliderVal}
-              />
-            )
-          })
+          setPathParam(item.title)
+          return (
+            <CourseSection
+              key={i}
+              title={item.title}
+              // color={item.color}
+              data={data[i]}
+              showRangeSlider={(item?.title === 'Yoga Teacher Training Courses (YTTC)') ? true : false}
+              pathParam={setPathParam(item.title).path}
+              cardData={item.cardData}
+              sliderRange={setPathParam(item.title).sliderVal}
+            />
+          )
+        })
         }
 
         <div className="certifications">

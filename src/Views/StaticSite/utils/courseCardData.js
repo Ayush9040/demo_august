@@ -1,7 +1,7 @@
 export const courseCardData = [
 
   {
-    title: 'Teacher Training Courses',
+    title: 'Yoga Teacher Training Courses (YTTC)',
     color: '#C9705F',
     cardData: [{ title: '200 hour 3 Months Online Weekend - 18th Dec 2021' },
       { title: '500 Hour 6 Months Online Weekend - 18th Dec 2021' },
