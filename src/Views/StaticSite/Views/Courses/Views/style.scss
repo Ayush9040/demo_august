@@ -61,15 +61,69 @@
             }
         }
 
-        .filter-btn {
-            border: 1px solid rgba(202, 70, 37, 1);
-            border-radius: 8px;
-            display: flex;
-            padding: 10px;
-            color: rgba(202, 70, 37, 1);
-            font-size: 16px;
-            font-weight: 500;
-            cursor: pointer;
+        .filter-section {
+            position: relative;
+
+            .filter-btn {
+                border: 1px solid rgba(202, 70, 37, 1);
+                border-radius: 8px;
+                display: flex;
+                padding: 10px;
+                color: rgba(202, 70, 37, 1);
+                font-size: 16px;
+                font-weight: 500;
+                cursor: pointer;
+
+            }
+
+            .filter-values {
+                position: absolute;
+                left: 0;
+                top: 60px;
+                box-shadow:
+                    0px -6px 3px rgba(0, 0, 0, 0.05);
+                background-color: rgba(255, 255, 255, 1);
+                border-radius: 8px;
+                padding: 18px;
+                height: max-content;
+                width: max-content;
+
+                .filter-data {
+                    color: #818184;
+                    font-size: 14px;
+                    font-weight: 400;
+                    margin: 10px 0 20px 0;
+                }
+
+                .filter-head {
+                    color: #000000;
+                    font-size: 16px;
+                    font-weight: 400;
+                }
+
+                .filter-footer {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    .clear {
+                        color: #000000;
+                        font-size: 12px;
+                        font-weight: 400;
+                        cursor: pointer;
+                    }
+
+                    .apply {
+                        color: #FFFFFF;
+                        font-size: 14px;
+                        font-weight: 500;
+                        background-color: #CA4625;
+                        padding: 8px 16px;
+                        border-radius: 8px;
+                        cursor: pointer;
+                    }
+                }
+            }
         }
     }
 

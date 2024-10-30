@@ -124,17 +124,37 @@ const Courses = () => {
         <InnerNavComponent abc={CoursesBan} />
         <div className="search">
           <h1>Courses</h1>
-          <div className='filter-btn'>
-            <span>
-              <img src="icons/filter-icon.png" alt="filter-icon" />
-            </span>
-            <span style={{padding:'0 20px 0 4px'}}>
-              Filters</span>
-            <span>
-              <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1 1L5 5L9 1" stroke="#CA4625" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-              </svg>
-            </span>
+          <div className='filter-section'>
+            <div className='filter-btn'>
+              <span>
+                <img src="icons/filter-icon.png" alt="filter-icon" />
+              </span>
+              <span style={{ padding: '0 20px 0 4px' }}>
+                Filters</span>
+              <span>
+                <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1 1L5 5L9 1" stroke="#CA4625" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </span>
+            </div>
+            <div className="filter-values">
+              <div className='filter-head'>Course Format</div>
+              <div className='filter-data'><span><input type="checkbox" name="" id="" /></span>&nbsp;Online &nbsp;&nbsp;
+                <span><input type="checkbox" name="" id="" /></span>&nbsp;On-Campus</div>
+
+              <div className='filter-head'>Duration</div>
+              <div className='filter-data'><span><input type="checkbox" name="" id="" /></span>&nbsp;1 month &nbsp;&nbsp;
+                <span><input type="checkbox" name="" id="" /></span>&nbsp;2 months&nbsp;&nbsp;
+                <span><input type="checkbox" name="" id="" /></span>&nbsp;3 months</div>
+
+              <div className='filter-head'>Schedule</div>
+              <div className='filter-data'><span><input type="checkbox" name="" id="" /></span>&nbsp;Weekdays &nbsp;&nbsp;
+                <span><input type="checkbox" name="" id="" /></span>&nbsp;Weekends</div>
+              <div className='filter-footer'>
+                <div className='clear'>Clear Filters</div>
+                <div className='apply'>Apply Filters</div>
+              </div>
+            </div>
           </div>
           {/* <div className="search-bar">
           <label>
