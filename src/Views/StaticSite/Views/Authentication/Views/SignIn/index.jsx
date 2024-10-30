@@ -441,8 +441,8 @@ const SignIn = () => {
 
       setFormData((prev) => ({
         ...prev,
-        address1: address1,
-        address2: address2,
+        address1: address1 + (address2 ? `, ${address2}` : ''),
+        // address2: address2,
         country,
         state,
         city,
@@ -657,6 +657,10 @@ const SignIn = () => {
     else if ((!userDetails?.address1)) {
       // console.log("Deails email Name ", details.email);
       setFormData({ ...details, errorIndex: 5 });
+    }
+    else if ((!userDetails?.address2)) {
+      // console.log("Deails email Name ", details.email);
+      setFormData({ ...details, errorIndex: 6 });
     }
     else if (!values?.country?.label) {
       // alert("Hello from country ")
@@ -1790,7 +1794,8 @@ const SignIn = () => {
                         />
                       </div>
                     </div>
-
+                    {formData?.errorIndex == 6 &&
+                        <div style={{ color: '#FF3B30' }}>Enter address line 2 </div>}
                   </div>
                   <div className='form_error width-100'>
                     <div className='inp-label mg-t-20'>Gender <span>*</span></div>

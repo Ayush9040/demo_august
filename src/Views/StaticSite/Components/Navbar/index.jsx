@@ -13,6 +13,8 @@ import {
 const MegaMenu = lazy(() => import('../MegaMenu'))
 
 const Navbar = ({ isUserLoggedIn, abc }) => {
+  const { isLoggedIn } = useSelector((state) => state.auth)
+
   const navigate = useNavigate()
   const [nav, setNav] = useState(false)
   const [dropdown, setDropdown] = useState(false)
@@ -159,7 +161,7 @@ const Navbar = ({ isUserLoggedIn, abc }) => {
                     </div>
 
                     {dropdown ? (
-                      <div className='user-dropdown' style={{ display: 'block' }}>
+                      <div style={dropdown && isLoggedIn ? { display: 'block' } : {}} className='user-dropdown'>
                         <ul style={{ borderRadius: '8px', boxShadow: '0px -2px 2px 0px rgba(0, 0, 0, 0.1)' }}>
                           <li
                             style={{ borderRadius: '8px 8px 0px 0px' }}

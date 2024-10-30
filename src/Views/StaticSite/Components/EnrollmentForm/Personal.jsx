@@ -17,7 +17,7 @@ import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import { LoadScript, Autocomplete } from '@react-google-maps/api';
 import countryList from 'react-select-country-list';
-import { useSelector, useDispatch } from 'react-redux'; 
+import { useSelector, useDispatch } from 'react-redux';
 import { useLocation } from 'react-router-dom';
 import { logoutUserAction } from '../../Views/Authentication/Auth.actions';
 
@@ -30,7 +30,7 @@ import CustomModal from '../TermsandCondition/t&Cpopup'
 
 
 const libraries = ['places'];
-const mapKey = 'AIzaSyCArozsi_1fWJgSwDFDAoA_6Q5zLZ7NYyA'; 
+const mapKey = 'AIzaSyCArozsi_1fWJgSwDFDAoA_6Q5zLZ7NYyA';
 
 const Personal = ({
   empty,
@@ -70,6 +70,9 @@ const Personal = ({
   const genderFromRedux = useSelector((state) => state.auth.user.data?.gender);
   const nationalityFromRedux = useSelector((state) => state.auth.user.data?.nationality);
   const dailCode = useSelector((state) => state.auth.user.data?.dialCode);
+  const pinCode = useSelector((state) => state.auth.user.data?.pincode);
+  const address1Redux = useSelector((state) => state.auth.user.data?.addressLine1);
+  const address2Redux = useSelector((state) => state.auth.user.data?.addressLine2);
   // console.log('phoneNumberFromRedux ', phoneNumberFromRedux);
   // console.log('countryFromRedux ', countryFromRedux);
   // console.log('stateFromRedux ', stateFromRedux);
@@ -91,23 +94,23 @@ const Personal = ({
   const [isResidential, setIsResidential] = useState(false)
   const [isRegular, setIsRegular] = useState(false)
   const [autocomplete, setAutocomplete] = useState(null);
-  const [loading, setLoading] = useState(true); 
+  const [loading, setLoading] = useState(true);
 
   const navigates = useNavigate();
   const location = useLocation();
   const dispatch = useDispatch();
 
-  
+
 
   const [selectDateValue, setSelectDateValue] = useState(values.sdate);
-  const [setDate, setSetDate ] = useState(false)
+  const [setDate, setSetDate] = useState(false)
   const isSatsangPage = location.pathname === '/enrollment/satsang';
 
   const nameFromRedux = useSelector((state) => state.auth.user.data?.firstName);
 
   console.log("nameFromRedux from profile ", nameFromRedux);
 
-  if(nameFromRedux === undefined) {
+  if (nameFromRedux === undefined) {
     dispatch(logoutUserAction());
     localStorage.removeItem("authorizationToken");
     navigates('/user/sign-in');
@@ -128,7 +131,7 @@ const Personal = ({
         },
       }));
     }
-  }, [isSatsangPage]); 
+  }, [isSatsangPage]);
 
   useEffect(() => {
     const token = localStorage.getItem('authorizationToken'); // Check for the auth token
@@ -141,12 +144,12 @@ const Personal = ({
   }, [navigates]);
 
 
-  
 
-  
+
+
   useEffect(() => {
     if (phoneNumberFromRedux) {
-      setPhoneValue(`+${dailCode}${phoneNumberFromRedux}`);
+      setPhoneValue(dailCode.startsWith("+") ? `${dailCode}${phoneNumberFromRedux}` : `+${dailCode}${phoneNumberFromRedux}`);
     }
   }, [phoneNumberFromRedux]);
 
@@ -164,39 +167,39 @@ const Personal = ({
     }
     if (cityFromRedux) {
       // console.log('cityFromRedux inside State ', cityFromRedux);
-      setFormData((prev) => ({ ...prev, city: cityFromRedux }));
+      setFormData((prev) => ({ ...prev, city: cityFromRedux,address2:address2Redux,address1:address1Redux }));
       setValues((prev) => ({ ...prev, city: { label: cityFromRedux, value: cityFromRedux } }));
     }
 
     const urlParams = new URLSearchParams(window.location.search);
     const urlDate = urlParams.get('date');
 
-  if(urlDate != null && urlDate != undefined) {
-    // alert("Hello")
-    setValues((prevValues) => ({
-      ...prevValues,
-      sdate: { label: urlDate, value: urlDate },
-    }));
+    if (urlDate != null && urlDate != undefined) {
+      // alert("Hello")
+      setValues((prevValues) => ({
+        ...prevValues,
+        sdate: { label: urlDate, value: urlDate },
+      }));
 
-    console.log("Values from per ", values)
+      console.log("Values from per ", values)
 
-    // Set the form data with the matched date
-    setFormData((prev) => ({
-      ...prev,
-      sdate: urlDate,
-      courseDetails: {
-        ...prev.courseDetails,
-        date: urlDate,
-      },
-    }));
-  }
-    
+      // Set the form data with the matched date
+      setFormData((prev) => ({
+        ...prev,
+        sdate: urlDate,
+        courseDetails: {
+          ...prev.courseDetails,
+          date: urlDate,
+        },
+      }));
+    }
+
   }, [countryFromRedux, stateFromRedux, cityFromRedux, setFormData]);
 
   useEffect(() => {
     if (genderFromRedux) {
-      const upperCaseGender = genderFromRedux.toUpperCase(); 
-      setFormData((prev) => ({ ...prev, gender: upperCaseGender }));
+      const upperCaseGender = genderFromRedux.toUpperCase();
+      setFormData((prev) => ({ ...prev, gender: upperCaseGender, pincode: pinCode }));
     }
     if (nationalityFromRedux) {
       setFormData((prev) => ({ ...prev, nationality: nationalityFromRedux }));
@@ -215,11 +218,11 @@ const Personal = ({
         // Get state using stateCode and countryCode from matched city
         const matchedState = State.getStateByCodeAndCountry(matchedCity.stateCode, matchedCity.countryCode);
         console.log('matched State ', matchedState.name);
-        
+
         if (matchedState) {
           console.log('matched State ', matchedState.name); // Set the state name
           setFormData((prev) => ({ ...prev, state: matchedState.name }));
-      setValues((prev) => ({ ...prev, state: { label: matchedState.name, value: matchedState.name } }));
+          setValues((prev) => ({ ...prev, state: { label: matchedState.name, value: matchedState.name } }));
         } else {
           // setError('State not found for the given city');
         }
@@ -249,7 +252,7 @@ const Personal = ({
     setAutocomplete(autocompleteInstance);
   };
 
-    // Function to handle when a place is selected
+  // Function to handle when a place is selected
   // const onPlaceChanged = () => {
   //   if (autocomplete) {
   //     const place = autocomplete.getPlace();
@@ -287,7 +290,7 @@ const Personal = ({
   //     // Find and set the selected country in Select component
   //     const selectedCountry = getAllCountries.find((option) => option.label === country);
   //     setValues((prev) => ({ ...prev, country: selectedCountry }));
-      
+
 
   //     console.log('Selected Country from Address:', selectedCountry); // Log the selected country
   //     console.log('State:', state, 'City:', city, 'Pincode:', pincode); // Log the state, city, and pincode
@@ -298,11 +301,11 @@ const Personal = ({
     if (autocomplete) {
       const place = autocomplete.getPlace();
       console.log(
-        'place ',place
+        'place ', place
       )
       const address = place.formatted_address || '';
       console.log(
-        'Address ',address
+        'Address ', address
       )
       const nameComponent = place?.name;
       const countryComponent = place.address_components?.find((component) =>
@@ -332,7 +335,7 @@ const Personal = ({
       const address1CodeComponent3 = place.address_components?.find((component) =>
         component.types.includes('sublocality_level_3')
       );
-      
+
 
       const country = countryComponent ? countryComponent.long_name : '';
       const state = stateComponent ? stateComponent.long_name : '';
@@ -342,25 +345,25 @@ const Personal = ({
       const name = nameComponent ? nameComponent : '';
 
       // Split the formatted address into lines for Address 1 and Address 2
-    const addressParts = formattedAddress.split(', ');
+      const addressParts = formattedAddress.split(', ');
 
-    // Set Address Line 1 and Address Line 2 based on your criteria
-    let address1 = [
-      name,
-      address1CodeComponent1?.long_name || '',
-      address1CodeComponent2?.long_name || '',
-      address1CodeComponent3?.long_name || '',
-    ]
-      .filter(Boolean) // Filter out any empty strings
-      .join(', '); // Join the components with a comma/ Address till required part
+      // Set Address Line 1 and Address Line 2 based on your criteria
+      let address1 = [
+        name,
+        address1CodeComponent1?.long_name || '',
+        address1CodeComponent2?.long_name || '',
+        address1CodeComponent3?.long_name || '',
+      ]
+        .filter(Boolean) // Filter out any empty strings
+        .join(', '); // Join the components with a comma/ Address till required part
 
-    let address2 = [
-      address2CodeComponent1?.long_name || '',
-      address2CodeComponent2?.long_name || '',
-    ]
-      .filter(Boolean) // Filter out any empty strings
-      .join(', '); // Join the components with a comma
-      
+      let address2 = [
+        address2CodeComponent1?.long_name || '',
+        address2CodeComponent2?.long_name || '',
+      ]
+        .filter(Boolean) // Filter out any empty strings
+        .join(', '); // Join the components with a comma
+
 
       if (!address1) {
         address1 = address2;
@@ -370,7 +373,7 @@ const Personal = ({
       setFormData((prev) => ({
         ...prev,
         address1: address1,
-        address2:address2,
+        address2: address2,
         country,
         state,
         city,
@@ -552,7 +555,7 @@ const Personal = ({
     let skip = 0;
     if (areaCode === '555') {
       // Skip additional checks for '555' area codes
-      skip=1;
+      skip = 1;
     }
 
     // Check if it's a valid phone number for the selected country
@@ -560,14 +563,14 @@ const Personal = ({
       errors.push('Phone number is not valid for the selected country.');
     }
 
-    
+
 
     // Additional custom validations can be added here
     if (parsedNumber && /(\d)\1{6,}/.test(parsedNumber.nationalNumber)) {
       errors.push('Phone number contains invalid patterns (e.g., too many repeated digits).');
     }
 
-   
+
 
     return errors;
   };
@@ -997,7 +1000,7 @@ const Personal = ({
     setOpen(false);
   };
 
-  
+
 
 
   if (loading) {
@@ -1051,7 +1054,7 @@ const Personal = ({
                 //   setFormData({ ...formData, phone: e })
                 // }}
                 onChange={handlePhoneChange}
-              
+
               />
               {/* {empty === 3 && <small> Please enter a valid phone number</small>}  */}
               {/* {phoneError && <small>{phoneError}</small>} */}
@@ -1076,10 +1079,10 @@ const Personal = ({
 
             </div>
 
-              {/* Adding start google API */}
+            {/* Adding start google API */}
 
 
-               {/* <LoadScript googleMapsApiKey={mapKey} libraries={libraries}>
+            {/* <LoadScript googleMapsApiKey={mapKey} libraries={libraries}>
       <Autocomplete onLoad={onLoadAutocomplete} onPlaceChanged={onPlaceChanged}>
         <div className="form_error">
           <InputComponent
@@ -1177,105 +1180,105 @@ const Personal = ({
 
 
 
-              {/* End google API */}
+            {/* End google API */}
 
 
-              {/* Adding start google API 2 */}
+            {/* Adding start google API 2 */}
 
 
-              <LoadScript googleMapsApiKey={mapKey} libraries={libraries}>
-      <Autocomplete onLoad={onLoadAutocomplete} onPlaceChanged={onPlaceChanged}>
-        <div className="form_error">
-          <InputComponent
-            type="text"
-            placeholder="Address Line 1*"
-            form={formData}
-            setField={setFormData}
-            keyName="address1"
-            errorCheck={setEmpty}
-          />
-          {empty === 4 && <p>Please enter your address</p>}
-        </div>
-      </Autocomplete>
+            <LoadScript googleMapsApiKey={mapKey} libraries={libraries}>
+              <Autocomplete onLoad={onLoadAutocomplete} onPlaceChanged={onPlaceChanged}>
+                <div className="form_error">
+                  <InputComponent
+                    type="text"
+                    placeholder="Address Line 1*"
+                    form={formData}
+                    setField={setFormData}
+                    keyName="address1"
+                    errorCheck={setEmpty}
+                  />
+                  {empty === 4 && <p>Please enter your address</p>}
+                </div>
+              </Autocomplete>
 
-      <div className="form_error">
-        <InputComponent
-          type="text"
-          placeholder="Address Line 2"
-          form={formData}
-          setField={setFormData}
-          keyName="address2"
-          errorCheck={setEmpty}
-        />
-      </div>
+              <div className="form_error">
+                <InputComponent
+                  type="text"
+                  placeholder="Address Line 2"
+                  form={formData}
+                  setField={setFormData}
+                  keyName="address2"
+                  errorCheck={setEmpty}
+                />
+              </div>
 
-      <div className="form_error countries_list">
-        <Select
-          styles={customStyles}
-          id="country"
-          name="country"
-          placeholder="Country"
-          options={getUpdatedCountries}
-          value={values.country}
-          onChange={(value) => {
-            setValues({ country: value, state: null, city: null });
-            setFormData((prev) => ({ ...prev, country: value.label }));
-          }}
-        />
-        {empty === 5 && <p>Please enter your country</p>}
-      </div>
+              <div className="form_error countries_list">
+                <Select
+                  styles={customStyles}
+                  id="country"
+                  name="country"
+                  placeholder="Country"
+                  options={getUpdatedCountries}
+                  value={values.country}
+                  onChange={(value) => {
+                    setValues({ country: value, state: null, city: null });
+                    setFormData((prev) => ({ ...prev, country: value.label }));
+                  }}
+                />
+                {empty === 5 && <p>Please enter your country</p>}
+              </div>
 
-      <div className="form_error">
-        <Select
-          styles={customStyles}
-          id="state"
-          name="state"
-          placeholder="State"
-          options={getUpdatedStates( values?.country?.isoCode?values?.country?.isoCode:
-            isoCode)}
-          value={values.state}
-          onChange={(value) => {
-            setValues({ ...values, state: value, city: null });
-            setFormData((prev) => ({ ...prev, state: value.label }));
-          }}
-        />
-      </div>
+              <div className="form_error">
+                <Select
+                  styles={customStyles}
+                  id="state"
+                  name="state"
+                  placeholder="State"
+                  options={getUpdatedStates(values?.country?.isoCode ? values?.country?.isoCode :
+                    isoCode)}
+                  value={values.state}
+                  onChange={(value) => {
+                    setValues({ ...values, state: value, city: null });
+                    setFormData((prev) => ({ ...prev, state: value.label }));
+                  }}
+                />
+              </div>
 
-      <div className="form_error">
-        
-        <Select
-          styles={customStyles}
-          id="city"
-          name="city"
-          placeholder="City"
-          options={getUpdatedCities(values?.country?.isoCode?values?.country?.isoCode:
-            isoCode, values?.state?.value)}
-          value={values.city}
-          onChange={(value) => {
-            setValues({ ...values, city: value });
-            setFormData((prev) => ({ ...prev, city: value.label }));
-          }}
-        />
-      </div>
+              <div className="form_error">
 
-      
-
-      <div className="form_error pincode_err">
-        <InputComponent
-          type="text"
-          placeholder="Pincode*"
-          form={formData}
-          setField={setFormData}
-          keyName="pincode"
-          errorCheck={setEmpty}
-        />
-        {empty === 8 && <small>Please enter your pincode</small>}
-      </div>
-    </LoadScript>
+                <Select
+                  styles={customStyles}
+                  id="city"
+                  name="city"
+                  placeholder="City"
+                  options={getUpdatedCities(values?.country?.isoCode ? values?.country?.isoCode :
+                    isoCode, values?.state?.value)}
+                  value={values.city}
+                  onChange={(value) => {
+                    setValues({ ...values, city: value });
+                    setFormData((prev) => ({ ...prev, city: value.label }));
+                  }}
+                />
+              </div>
 
 
-              {/* End google API 2 */}
-             
+
+              <div className="form_error pincode_err">
+                <InputComponent
+                  type="text"
+                  placeholder="Pincode*"
+                  form={formData}
+                  setField={setFormData}
+                  keyName="pincode"
+                  errorCheck={setEmpty}
+                />
+                {empty === 8 && <small>Please enter your pincode</small>}
+              </div>
+            </LoadScript>
+
+
+            {/* End google API 2 */}
+
             {/* <div className="form_error">
               <InputComponent
                 type="text"
@@ -1462,38 +1465,38 @@ const Personal = ({
             </div>
 
 
-            { !isSatsangPage && (
+            {!isSatsangPage && (
               <div className="form_error course_date">
                 {/* {values.sdate} */}
-              <Select
-                styles={customStyles}
-                id="sdate"
-                name="sdate"
-                placeholder="Select Date/Time*"
-                form={formData}
-                setField={setFormData}
-                keyName="sdate"
-                errorCheck={setEmpty}
-                isSearchable={false}
-                options={formattedDates}
-                value={values.sdate}
-                onChange={(value) => {
-                  setValues(
-                    { country: values.country, state: values.state, city: values.city, sdate: value },
-                    false
-                  )
-                  setFormData((prev) => {
-                    return {
-                      ...prev, sdate: value.value, courseDetails: {
-                        ...prev.courseDetails,
-                        date: value.value
+                <Select
+                  styles={customStyles}
+                  id="sdate"
+                  name="sdate"
+                  placeholder="Select Date/Time*"
+                  form={formData}
+                  setField={setFormData}
+                  keyName="sdate"
+                  errorCheck={setEmpty}
+                  isSearchable={false}
+                  options={formattedDates}
+                  value={values.sdate}
+                  onChange={(value) => {
+                    setValues(
+                      { country: values.country, state: values.state, city: values.city, sdate: value },
+                      false
+                    )
+                    setFormData((prev) => {
+                      return {
+                        ...prev, sdate: value.value, courseDetails: {
+                          ...prev.courseDetails,
+                          date: value.value
+                        }
                       }
-                    }
-                  })
-                }}
-              />
-              {empty === 18 && <small id="fill_err"> Please select course date</small>}
-            </div>
+                    })
+                  }}
+                />
+                {empty === 18 && <small id="fill_err"> Please select course date</small>}
+              </div>
             )}
 
             {isRegular && <><br /><div className="form_error course_date date-input-wrapper">
@@ -1540,7 +1543,7 @@ const Personal = ({
 
 
 
-           <div className="DOB_box form_error">
+            <div className="DOB_box form_error">
               <InputComponent
                 type="number"
                 placeholder="Age"
@@ -1551,9 +1554,9 @@ const Personal = ({
                 keyName="AGE"
                 errorCheck={setEmpty}
               />
-              {empty === 9 && <div style={{ marginTop: '-8.2rem', display: 'inline-block', float: 'right', fontSize: '12px', color: 'red'}}> Please enter age between 4 & 100</div>}
-            </div> 
-             <div className="form_error">
+              {empty === 9 && <div style={{ marginTop: '-8.2rem', display: 'inline-block', float: 'right', fontSize: '12px', color: 'red' }}> Please enter age between 4 & 100</div>}
+            </div>
+            <div className="form_error">
               <InputComponent
                 type="text"
                 placeholder="Nationality"
@@ -1562,8 +1565,8 @@ const Personal = ({
                 keyName="nationality"
                 errorCheck={setEmpty}
               />
-              {empty === 10 && <div style={{ marginTop: '-8rem', display: 'inline-block', float: 'right', fontSize: '12px', color: 'red'}}> Please enter your nationality</div>}
-            </div> 
+              {empty === 10 && <div style={{ marginTop: '-8rem', display: 'inline-block', float: 'right', fontSize: '12px', color: 'red' }}> Please enter your nationality</div>}
+            </div>
             <Other
               // setBold={setBold}
               empty={empty}
