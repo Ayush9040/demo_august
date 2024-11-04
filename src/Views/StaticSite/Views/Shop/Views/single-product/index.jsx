@@ -32,8 +32,8 @@ const SingleProduct = () => {
   const [thumbnail, setThumbnail] = useState()
   const [productImages, setProductImages] = useState([])
   const navigate = useNavigate()
-  const { location } = useSelector(state=>state.location)
-  const getSingleProducts = async() => {
+  const { location } = useSelector(state => state.location)
+  const getSingleProducts = async () => {
     const { data } = await fetchSingleProduct(productID)
     setProductDetail(data.data)
     setThumbnail(data?.data?.productThumbnail)
@@ -52,7 +52,7 @@ const SingleProduct = () => {
       ? updateCart(activeCartId, {
         items: JSON.parse(localStorage.getItem('cart')),
       })
-      : createCart({ items: JSON.parse(localStorage.getItem('cart')) }):null
+      : createCart({ items: JSON.parse(localStorage.getItem('cart')) }) : null
     dispatch(getActiveCartData())
     toast.success('Item Added to Cart Successfully!', {
       position: 'top-right',
@@ -78,11 +78,10 @@ const SingleProduct = () => {
     const qty = JSON.parse(details).find(item => item.productId === idx);
     console.log('qty ', qty)
 
-    if(productDetail) {
+    if (productDetail) {
 
-      ReactGA.event({
-        action: 'add_to_cart',
-       currency: location !=='IN'?'USD':'INR',
+      ReactGA.event('add_to_cart', {
+        currency: location !== 'IN' ? 'USD' : 'INR',
         value: productDetail?.price * qty?.quantity,
         items: [{
           item_name: productDetail?.name,
@@ -92,34 +91,34 @@ const SingleProduct = () => {
         }]
       });
     }
-    
 
-if (productDetail) {
-    console.log('Product details of the clicked item:', productDetail);
-    // Now you can use the `product` object to pass its details to your `addToCart` function
-    // addCart(idx, event, product);
-    handleCTAddToCart({
-      eventName: "Add_To_Cart_Step2",
-      productName: productDetail?.name,
-      productId: productDetail?._id,
-      productUrl: window.location.href,
-      productCategory: productDetail?.categoryId?.name,
-      productPrice: productDetail?.price,
-      quantity: qty?.quantity,
-      stockAvailability: productDetail?.stockCount,
-      // checkoutUrl: '/shop/cart',
-      pageName: window.location.href,
-      // gender: findCategory.name, 
-      // productSize: findCategory.name,
-      // language,
-      // material: findCategory.name,
-      // color,
-      // printed: findCategory.name,
-  })
-} else {
-    console.error('Product not found for the given ID:', idx);
-}
-   
+
+    if (productDetail) {
+      console.log('Product details of the clicked item:', productDetail);
+      // Now you can use the `product` object to pass its details to your `addToCart` function
+      // addCart(idx, event, product);
+      handleCTAddToCart({
+        eventName: "Add_To_Cart_Step2",
+        productName: productDetail?.name,
+        productId: productDetail?._id,
+        productUrl: window.location.href,
+        productCategory: productDetail?.categoryId?.name,
+        productPrice: productDetail?.price,
+        quantity: qty?.quantity,
+        stockAvailability: productDetail?.stockCount,
+        // checkoutUrl: '/shop/cart',
+        pageName: window.location.href,
+        // gender: findCategory.name, 
+        // productSize: findCategory.name,
+        // language,
+        // material: findCategory.name,
+        // color,
+        // printed: findCategory.name,
+      })
+    } else {
+      console.error('Product not found for the given ID:', idx);
+    }
+
   }
 
   const buyProduct = () => {
@@ -132,7 +131,7 @@ if (productDetail) {
       ? updateCart(activeCartId, {
         items: JSON.parse(localStorage.getItem('cart')),
       })
-      : createCart({ items: JSON.parse(localStorage.getItem('cart')) }):null
+      : createCart({ items: JSON.parse(localStorage.getItem('cart')) }) : null
     dispatch(getActiveCartData())
 
     const details = localStorage.getItem('cart');
@@ -147,33 +146,33 @@ if (productDetail) {
     // console.log('findCategory ', findCategory);
     const qty = JSON.parse(details).find(item => item.productId === productDetail._id);
     console.log('qty ', qty)
-    
 
-if (productDetail) {
-    console.log('Product details of the clicked item:', productDetail);
-    // Now you can use the `product` object to pass its details to your `addToCart` function
-    // addCart(idx, event, product);
-    handleCTBuyNowStep1({
-      eventName: "Buy Now 2",
-      productName: productDetail?.name,
-      productId: productDetail?._id,
-      productUrl: window.location.href,
-      productCategory: productDetail?.categoryId?.name,
-      productPrice: productDetail?.price,
-      quantity: qty?.quantity,
-      stockAvailability: productDetail?.stockCount,
-      // checkoutUrl: '/shop/cart',
-      pageName: window.location.href,
-      // gender: findCategory.name, 
-      // productSize: findCategory.name,
-      // language,
-      // material: findCategory.name,
-      // color,
-      // printed: findCategory.name,
-  })
-} else {
-    console.error('Product not found for the given ID:');
-}
+
+    if (productDetail) {
+      console.log('Product details of the clicked item:', productDetail);
+      // Now you can use the `product` object to pass its details to your `addToCart` function
+      // addCart(idx, event, product);
+      handleCTBuyNowStep1({
+        eventName: "Buy Now 2",
+        productName: productDetail?.name,
+        productId: productDetail?._id,
+        productUrl: window.location.href,
+        productCategory: productDetail?.categoryId?.name,
+        productPrice: productDetail?.price,
+        quantity: qty?.quantity,
+        stockAvailability: productDetail?.stockCount,
+        // checkoutUrl: '/shop/cart',
+        pageName: window.location.href,
+        // gender: findCategory.name, 
+        // productSize: findCategory.name,
+        // language,
+        // material: findCategory.name,
+        // color,
+        // printed: findCategory.name,
+      })
+    } else {
+      console.error('Product not found for the given ID:');
+    }
 
     navigate('/shop/cart')
   }
@@ -187,7 +186,7 @@ if (productDetail) {
             <div className="price_prod_div">
               <div className="price_div">
                 <div className="product_details">{productDetail?.name}</div>
-                <div className="product_details">{ location==='IN' ? `₹${productDetail?.price}` : `$${ productDetail?.priceInternational }`}</div>
+                <div className="product_details">{location === 'IN' ? `₹${productDetail?.price}` : `$${productDetail?.priceInternational}`}</div>
                 <div className="prod_desc">{productDetail?.description}</div>
               </div>
 
