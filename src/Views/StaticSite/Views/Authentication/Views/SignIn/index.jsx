@@ -563,7 +563,7 @@ const SignIn = () => {
       try {
         let response = await axios.post(//send OTP for mobile
           `${authBaseDomain}/authdoor/mobile/verify-otp`,
-          { contactNo: phoneNumber.mobile, otp: userDetails.otp, dialCode: phoneNumber.dialCode }
+          { contactNo: phoneNumber.mobile, otp: userDetails.otp, dialCode: phoneNumber.dialCode.startsWith("+") ? phoneNumber.dialCode.slice(1) : phoneNumber.dialCode }
         )
         setToken(response?.data?.token)
         setIsBtnLoad(false)
@@ -603,7 +603,7 @@ const SignIn = () => {
     payload['country'] = userDetails?.country?.label;
     payload['city'] = userDetails?.city?.label;
     payload['phoneNumber'] = phoneNumber.mobile;
-    payload['dialCode'] = phoneNumber.dialCode;
+    payload['dialCode'] = phoneNumber.dialCode.startsWith("+") ? phoneNumber.dialCode.slice(1) : phoneNumber.dialCode;
     payload['countryCode'] = countryCode
 
     console.log("User details from Email ", userDetails)
@@ -726,7 +726,7 @@ const SignIn = () => {
           payload['email'] = getemail;
           payload['pincode'] = userDetails?.pincode;
           payload['phoneNumber'] = phoneNumber.mobile;
-          payload['dialCode'] = phoneNumber.dialCode;
+          payload['dialCode'] = phoneNumber.dialCode.startsWith("+") ? phoneNumber.dialCode.slice(1) : phoneNumber.dialCode;
           payload['countryCode'] = countryCode
 
           if (type != 'mobile') {
@@ -888,7 +888,7 @@ const SignIn = () => {
         payload['state'] = values?.state?.label;
         payload['pincode'] = userDetails?.pincode;
         payload['phoneNumber'] = phoneNumber.mobile;
-        payload['dialCode'] = phoneNumber.dialCode;
+        payload['dialCode'] = phoneNumber.dialCode.startsWith("+") ? phoneNumber.dialCode.slice(1) : phoneNumber.dialCode;
         payload['countryCode'] = countryCode;
 
         try {
@@ -971,7 +971,7 @@ const SignIn = () => {
         setFormData({ ...formData, errorIndex: 0 });
         await axios.post(//send OTP for mobile
           `${authBaseDomain}/authdoor/mobile/generate-otp`,
-          { contactNo: phoneNumber.mobile, dialCode: phoneNumber.dialCode }
+          { contactNo: phoneNumber.mobile, dialCode: phoneNumber.dialCode.startsWith("+") ? phoneNumber.dialCode.slice(1) : phoneNumber.dialCode }
         )
         setPageIndex(2)
         startTimer()
@@ -1102,7 +1102,7 @@ const SignIn = () => {
     else {//resend OTP for mobile
       await axios.post(//send OTP for mobile
         `${authBaseDomain}/authdoor/mobile/generate-otp`,
-        { contactNo: phoneNumber.mobile, dialCode: phoneNumber.dialCode }
+        { contactNo: phoneNumber.mobile, dialCode: phoneNumber.dialCode.startsWith("+") ? phoneNumber.dialCode.slice(1) : phoneNumber.dialCode }
       )
       startTimerF()
       setPageIndex('4')
@@ -1211,7 +1211,7 @@ const SignIn = () => {
           // alert("Called from here")
           await axios.post(//send OTP for mobile
             `${authBaseDomain}/authdoor/mobile/otp/generate`,
-            { contactNo: phoneNumber.mobile, dialCode: phoneNumber.dialCode },
+            { contactNo: phoneNumber.mobile, dialCode: phoneNumber.dialCode.startsWith("+") ? phoneNumber.dialCode.slice(1) : phoneNumber.dialCode },
             {
               headers: {
                 'Authorization': `Bearer ${token}`
@@ -1251,7 +1251,7 @@ const SignIn = () => {
       city: userDetails?.city,
       country: userDetails?.country,
       gender: userDetails?.gender,
-      dialCode: userDetails?.dialCode
+      dialCode: userDetails?.dialCode.startsWith("+") ? userDetails.dialCode.slice(1) : userDetails.dialCode
     })
   }
 
@@ -1291,7 +1291,7 @@ const SignIn = () => {
   };
   const [isMobileVerified, setIsMobileVerified] = useState(false)
   const validateSignupOTP = async (payload, signUpType, token) => {
-    let request = { phoneNumber: phoneNumber.mobile, otp: payload.otp, dialCode: phoneNumber.dialCode, email: payload.email }
+    let request = { phoneNumber: phoneNumber.mobile, otp: payload.otp, dialCode: phoneNumber.dialCode.startsWith("+") ? phoneNumber.dialCode.slice(1) : phoneNumber.dialCode, email: payload.email }
     try {
       let { data } = await axios.post(
         `${authBaseDomain}/authdoor/google/mobile-verify`,
