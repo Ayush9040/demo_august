@@ -274,7 +274,6 @@ const SignIn = () => {
   const [isoCode, setIsoCode] = useState('');
   const [empty, setEmpty] = useState(0)
   const [selectDate, setSetselectDate] = useState()
-  const [errorMessage, setErrorMessage] = useState()
   const [otp, setOtp] = useState(new Array(4).fill(""));
   const [stateOpt, setStateOpt] = useState("")
   const [cityOpt, setCityOpt] = useState("")
