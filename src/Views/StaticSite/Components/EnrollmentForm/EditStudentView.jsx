@@ -1,13 +1,15 @@
-import React, { useState, useEffect, useMemo, lazy } from 'react'
-import './formstyles.scss'
-import InputComponent from '../InputComponent'
-import 'react-phone-number-input/style.css'
-import PhoneInput from 'react-phone-number-input';
-import Select from 'react-select'
+import React,{ useEffect, useState, useMemo } from 'react'
 import { Country, State, City } from 'country-state-city'
-import Other from './Other'
-// import CourseDetails from './CourseDetails'
-import SelectDropDown from '../Select Dropdown'
+//import baseDomain, { background } from '../../assets/images/imageAsset'
+import './popup.scss'
+//import CommonBanner from '../Common-banner'
+//import baseDomain, { background } from '../../assets/images/imageAsset'
+import InnerNavComponent from '../InnerNavComponent'
+import '../EnrollmentForm/formstyles.scss';
+import { useSelector } from 'react-redux';
+import InputComponent from '../InputComponent';
+import Other from './Other';
+import Select from 'react-select'
 import { Link, useSearchParams, useNavigate } from 'react-router-dom'
 import { parsePhoneNumberFromString, isValidPhoneNumber } from 'libphonenumber-js'
 import { authBaseDomain, cmsBaseDomain, razorPayKey } from '../../../../Constants/appSettings'
@@ -16,48 +18,38 @@ import { validateEmail } from '../../../../helpers'
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import { LoadScript, Autocomplete } from '@react-google-maps/api';
-import countryList from 'react-select-country-list';
-import { useSelector, useDispatch } from 'react-redux'; 
+import {useDispatch } from 'react-redux'; 
 import { useLocation } from 'react-router-dom';
 import { logoutUserAction } from '../../Views/Authentication/Auth.actions';
-import EditStudent from './EditStudent';
-
-const CourseDetails = lazy(() => import('./CourseDetails'));
-
-import MessageModal from '../MessageModal'
-import TermsCondition from '../TermsandCondition'
-// import TermsAndConditionsModal from '../TermsandCondition/t&Cpopup'
-import CustomModal from '../TermsandCondition/t&Cpopup'
-
+import 'react-phone-number-input/style.css'
+import PhoneInput from 'react-phone-number-input';
 
 const libraries = ['places'];
 const mapKey = 'AIzaSyCArozsi_1fWJgSwDFDAoA_6Q5zLZ7NYyA'; 
 
-const EnrollmentForm = ({
-  empty,
-  setFormData,
-  formData,
-  setEmpty,
-  templateKey,
-  qualificationData,
-  listData,
-  courseDate,
-  currentCourse,
-  courseAsset1,
-  setCourseAsset1,
-  courseAsset2,
-  setCourseAsset2,
-  handleSubmit,
-  courseFee,
-  setCourseFee,
-  uploadCheck,
-  setUploadCheck,
-  isLoad,
-  dateDurationChange
-}) => {
-  // {console.log(handleSubmit)}
-  //const today = new Date().toISOString().split('T')[0]
-  const [values, setValues] = useState([])
+const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse, dateDurationChange }) => {
+
+    const [selectedDate, setSelectedDate] = useState(null);
+    const { isLoggedIn } = useSelector((state) => state.auth)
+    const [courseMode, setCourseMode] = useState('');
+    const navigate = useNavigate();
+
+    const [formData2, setFormData2] = useState({
+        name: '',
+        lname: '',
+        phone: '',
+        email: '',
+        address1: '',
+        address2: '',
+        country: '',
+        state: '',
+        city: '',
+        pincode: '',
+        gender: '',
+      })
+    
+
+    const [values, setValues] = useState([])
   const countries = Country.getAllCountries()
   const [selectDate, setSetselectDate] = useState(null)
   const [Params] = useSearchParams()
@@ -69,6 +61,7 @@ const EnrollmentForm = ({
   const stateFromRedux = useSelector((state) => state.auth.user.data?.state);
   const cityFromRedux = useSelector((state) => state.auth.user.data?.city);
   const genderFromRedux = useSelector((state) => state.auth.user.data?.gender);
+  const emailFromRedux = useSelector((state) => state.auth.user.data?.email);
   const nationalityFromRedux = useSelector((state) => state.auth.user.data?.nationality);
   const dailCode = useSelector((state) => state.auth.user.data?.dialCode);
   // console.log('phoneNumberFromRedux ', phoneNumberFromRedux);
@@ -76,7 +69,7 @@ const EnrollmentForm = ({
   // console.log('stateFromRedux ', stateFromRedux);
   // console.log('cityFromRedux ', cityFromRedux);
   // console.log('genderFromRedux ', genderFromRedux);
-  const [phoneValue, setPhoneValue] = useState(formData.phone);
+  const [phoneValue, setPhoneValue] = useState(formData2.phone);
   const [bold, setBold] = useState(0)
   const [open, setOpen] = useState(false);
 
@@ -85,6 +78,7 @@ const EnrollmentForm = ({
   const [disable, setDisable] = useState(false)
 
   const [isChecked, setIsChecked] = useState(true); // Checkbox is checked by default
+  const [enableBtn, setEnableBtn] = useState(true)
 
 
 
@@ -108,7 +102,8 @@ const EnrollmentForm = ({
 
   const nameFromRedux = useSelector((state) => state.auth.user.data?.firstName);
 
-  console.log("nameFromRedux from profile ", nameFromRedux);
+//   console.log("nameFromRedux from profile ", nameFromRedux);
+//   console.log("emailFromRedux from profile 22222 ", emailFromRedux);
 
   if(nameFromRedux === undefined) {
     dispatch(logoutUserAction());
@@ -155,50 +150,61 @@ const EnrollmentForm = ({
 
   useEffect(() => {
     if (countryFromRedux) {
-      setFormData((prev) => ({ ...prev, country: countryFromRedux }));
+        setFormData2((prev) => ({ ...prev, country: countryFromRedux }));
       setValues((prev) => ({ ...prev, country: { label: countryFromRedux, value: countryFromRedux } }));
       const countryData = Country.getAllCountries().find(country => country.name === countryFromRedux)
       // console.log(countryData)
       setIsoCode(countryData.isoCode)
     }
     if (stateFromRedux) {
-      setFormData((prev) => ({ ...prev, state: stateFromRedux }));
+        setFormData2((prev) => ({ ...prev, state: stateFromRedux }));
       setValues((prev) => ({ ...prev, state: { label: stateFromRedux, value: stateFromRedux } }));
     }
     if (cityFromRedux) {
       // console.log('cityFromRedux inside State ', cityFromRedux);
-      setFormData((prev) => ({ ...prev, city: cityFromRedux }));
+      setFormData2((prev) => ({ ...prev, city: cityFromRedux }));
       setValues((prev) => ({ ...prev, city: { label: cityFromRedux, value: cityFromRedux } }));
     }
     
-  }, [countryFromRedux, stateFromRedux, cityFromRedux, setFormData, setValues]);
+    
+  }, [countryFromRedux, stateFromRedux, cityFromRedux, setFormData2, setValues]);
 
   useEffect(() => {
     if (genderFromRedux) {
       const upperCaseGender = genderFromRedux.toUpperCase(); 
-      setFormData((prev) => ({ ...prev, gender: upperCaseGender }));
+      setFormData2((prev) => ({ ...prev, gender: upperCaseGender }));
     }
     if (nationalityFromRedux) {
-      setFormData((prev) => ({ ...prev, nationality: nationalityFromRedux }));
+        setFormData2((prev) => ({ ...prev, nationality: nationalityFromRedux }));
     }
-  }, [genderFromRedux, nationalityFromRedux, setFormData]);
+    if (nameFromRedux) {
+        // console.log('cityFromRedux inside State ', cityFromRedux);
+        setFormData2((prev) => ({ ...prev, name: nameFromRedux }));
+        
+      }
+      if (emailFromRedux) {
+        // console.log('cityFromRedux inside State ', cityFromRedux);
+        setFormData2((prev) => ({ ...prev, email: emailFromRedux }));
+        
+      }
+  }, [genderFromRedux, nationalityFromRedux, nameFromRedux, emailFromRedux, setFormData2]);
 
   useEffect(() => {
     if (cityFromRedux) {
       // Get all cities and find the one that matches the city in Redux
-      console.log('cityFromRedux inside State ', cityFromRedux);
+    //   console.log('cityFromRedux inside State ', cityFromRedux);
       const cities = City.getAllCities();
       const matchedCity = cities.find(city => city.name.toLowerCase() === cityFromRedux.toLowerCase());
-      console.log('matched city ', matchedCity);
+    //   console.log('matched city ', matchedCity);
 
       if (matchedCity) {
         // Get state using stateCode and countryCode from matched city
         const matchedState = State.getStateByCodeAndCountry(matchedCity.stateCode, matchedCity.countryCode);
-        console.log('matched State ', matchedState.name);
+        // console.log('matched State ', matchedState.name);
         
         if (matchedState) {
-          console.log('matched State ', matchedState.name); // Set the state name
-          setFormData((prev) => ({ ...prev, state: matchedState.name }));
+        //   console.log('matched State ', matchedState.name); // Set the state name
+          setFormData2((prev) => ({ ...prev, state: matchedState.name }));
       setValues((prev) => ({ ...prev, state: { label: matchedState.name, value: matchedState.name } }));
         } else {
           // setError('State not found for the given city');
@@ -215,7 +221,7 @@ const EnrollmentForm = ({
     setIsResidential(value);
     localStorage.setItem('isResidential', value)
   }
-  const navigate = useNavigate()
+//   const navigate = useNavigate()
 
   const getUpdatedCountries = useMemo(() => {
     return Country.getAllCountries().map((country) => ({
@@ -347,7 +353,10 @@ const EnrollmentForm = ({
         address2 = ''; // Clear Address Line 2
       }
 
-      setFormData((prev) => ({
+      
+      console.log("Address 1 no tcoming ", address1)
+      console.log("Address 2 no tcoming ", address2)
+      setFormData2((prev) => ({
         ...prev,
         address1: address1,
         address2:address2,
@@ -393,7 +402,7 @@ const EnrollmentForm = ({
         ...prev, startDate: `${day}/${month}/${year}`
       }
     })
-    setFormData({ ...formData, startDate: `${day}/${month}/${year}` })
+    setFormData2({ ...formData2, startDate: `${day}/${month}/${year}` })
     if (values.endDate) { createEndDate(`${day}/${month}/${year}`, values.endDate) }
   }
 
@@ -407,7 +416,7 @@ const EnrollmentForm = ({
       }
     })
     localStorage.setItem('courseEndDate', endDate)
-    setFormData({ ...formData, endDate: value, duration: value?.value })
+    setFormData2({ ...formData2, endDate: value, duration: value?.value })
     dateDurationChange(value?.value)
   }
 
@@ -420,12 +429,12 @@ const EnrollmentForm = ({
     return date;
   }
 
-  function formatDate(date) {
-    const day = date.getDate().toString().padStart(2, '0'); // Day with leading zero
-    const month = (date.getMonth() + 1).toString().padStart(2, '0'); // Month with leading zero
-    const year = date.getFullYear();
-    return `${day}/${month}/${year}`;
-  }
+//   function formatDate(date) {
+//     const day = date.getDate().toString().padStart(2, '0'); // Day with leading zero
+//     const month = (date.getMonth() + 1).toString().padStart(2, '0'); // Month with leading zero
+//     const year = date.getFullYear();
+//     return `${day}/${month}/${year}`;
+//   }
   function parseDate(dateStr) {
     const [day, month, year] = dateStr.split('/').map(Number); // Split the date string and convert parts to numbers
     // Create a new Date object (months are 0-based, so subtract 1 from month)
@@ -509,7 +518,7 @@ const EnrollmentForm = ({
 
   const handlePhoneChange = (value) => {
     setPhoneValue(value);
-    setFormData({ ...formData, phone: value });
+    setFormData2({ ...formData2, phone: value });
 
     if (value) {
       const errors = validatePhoneNumber(value);
@@ -559,7 +568,7 @@ const EnrollmentForm = ({
     setIsChecked(prevChecked => {
       const newChecked = !prevChecked;
       setDisData('no');
-      setFormData({ ...formData, terms: newChecked });
+      setFormData2({ ...formData2, terms: newChecked });
       return newChecked;
     });
   };
@@ -629,29 +638,7 @@ const EnrollmentForm = ({
       }
     })
   }
-  const customStyles = {
-    control: (base, state) => ({
-      ...base,
-      background: 'white',
-      borderRadius: '50px',
-      width: '100%',
-      padding: '0.25rem 2rem',
-      marginTop: '2rem',
-      marginLeft: '2rem',
-      // Overwrittes the different states of border
-      borderColor: state.isFocused
-        ? 'rgba(96, 96, 96, 0.5019607843)'
-        : 'rgba(96, 96, 96, 0.5019607843)',
-      // Removes weird border around container
-      boxShadow: state.isFocused ? null : null,
-      '&:hover': {
-        // Overwrittes the different states of border
-        borderColor: state.isFocused
-          ? 'rgba(96, 96, 96, 0.5019607843)'
-          : 'rgba(96, 96, 96, 0.5019607843)',
-      },
-    }),
-  }
+  
 
   const selectStyles = {
     cursor: 'pointer',
@@ -681,515 +668,127 @@ const EnrollmentForm = ({
 
   useEffect(() => {
     if (validationErrors?.length > 0) {
-      setFormData(prevState => ({ ...prevState, phone: '' })); // Clear phone value if errors are present
+        setFormData2(prevState => ({ ...prevState, phone: '' })); // Clear phone value if errors are present
     } else {
-      setFormData(prevState => ({ ...prevState, phone: phoneValue })); // Update phone value if no errors
+        setFormData2(prevState => ({ ...prevState, phone: phoneValue })); // Update phone value if no errors
     }
   }, [validationErrors, phoneValue]);
 
-
-  const [mail, setmail] = useState(null)
-
-
-  const pickMail = () => {
-    if (formData.mode === 'ONLINE') {
-      setmail(templateKey?.templateOnline)
-      return templateKey?.templateOnline
-    } else if (formData.mode === 'OFFLINE' && formData.residental === '') {
-      setmail(templateKey?.templateOnline)
-      return templateKey?.templateOnline
-    } else {
-      if (formData.residental === 'RESIDENTIAL') {
-        console.log(templateKey?.templateOffline?.templateResidential)
-        setmail(templateKey?.templateOffline?.templateResidential)
-        return templateKey?.templateOffline?.templateResidential
-      } else {
-        setmail(templateKey?.templateOffline?.templateNonResidential)
-        return templateKey?.templateOffline?.templateNonResidential
-      }
-    }
+  let tnc = {
+    title: 'alumni-gallery',
+    color: 'orange',
+    menuColor: 'black',
+    menuItems:[]
   }
 
+  const customStyles = {
+    control: (base, state) => ({
+      ...base,
+      background: 'white',
+      borderRadius: '50px',
+      width: '100%',
+      padding: '0.25rem 2rem',
+      marginTop: '2rem',
+      marginLeft: '2rem',
+      // Overwrittes the different states of border
+      borderColor: state.isFocused
+        ? 'rgba(96, 96, 96, 0.5019607843)'
+        : 'rgba(96, 96, 96, 0.5019607843)',
+      // Removes weird border around container
+      boxShadow: state.isFocused ? null : null,
+      '&:hover': {
+        // Overwrittes the different states of border
+        borderColor: state.isFocused
+          ? 'rgba(96, 96, 96, 0.5019607843)'
+          : 'rgba(96, 96, 96, 0.5019607843)',
+      },
+    }),
+  }
 
-  // const handleSubmit1 = async() => {
-  //   if (
-  //     formData.name === '' ||
-  //     formData.name === undefined ||
-  //     formData.name === null
-  //   ) {
-  //     setEmpty(1)
-  //   } else if (
-  //     formData.phone === '' ||
-  //     formData.phone?.length < 6 ||
-  //     formData.phone?.length > 15
-  //   ) {
-  //     setEmpty(3)
-  //   } else if (!validateEmail(formData.email)) {
-  //     setEmpty(2)
-  //   } else if (formData.address1 === '') {
-  //     setEmpty(4)
-  //   } else if (formData.country === '' ) {
-  //     setEmpty(5)
-  //   } else if (formData.pincode === '') {
-  //     setEmpty(8)
-  //   }else if (formData.sdate === '') {
-  //     setEmpty(18)
-  //   }
-  //   //  else if (formData.AGE === null || formData.AGE < 4 || formData.AGE > 99) {
-  //   //   setEmpty(9)
-  //   // } else if (formData.nationality === '') {
-  //   //   setEmpty(10)
-  //   // }
-  //   else if (formData.gender === '') {
-  //     setEmpty(11)
-  //   } else if (formData.mode === '') {
-  //     setEmpty('mode')
-  //   }
-  //   else if (
-  //     formData.mode === 'OFFLINE' &&
-  //     (currentCourse.residential === true ||
-  //       currentCourse.nonResidential === true)
-  //   ) {
-  //     if (formData.residental === '') {
-  //       setEmpty('subMode')
-  //     } else {
-  //       setBold(5)
-  //     }
-  //   } else if (
-  //     currentCourse.certficate === true &&
-  //     (courseAsset2 === '' || courseAsset2 === null)
-  //   ) {
-  //     setEmpty('certificate')
-  //   } else {
-  //     setBold(5)
-  //   }
+  useEffect(()=>{
+    scrollTo(0,0)
+  },[])
 
-
-  //   // setIsLoad(true);
-  //   if (disData.terms === 'no') {
-  //     return setEmpty(1)
-  //   }else {
-  //     setEmpty(0)
-  //     let body = {
-  //       personalDetails: {
-  //         name: formData.name,
-  //         emailId: formData.email,
-  //         phone: formData.phone,
-  //         addressLane1: formData.address1,
-  //         addressLane2: formData.address2,
-  //         country: formData.country,
-  //         state: formData.state,
-  //         city: formData.city,
-  //         pincode: formData.pincode,
-  //         // gender: formData.gender,
-  //         age: formData.AGE,
-  //         nationality: formData.nationality,
-  //       },
-  //       academicQualification: qualificationData,
-  //       workExperience: listData,
-  //       others: {
-  //         medicalHistory: formData.medicalstatus,
-  //         howDoYouHearAboutUs: formData.source || formData.sourceinfo,
-  //       },
-  //       courseDetails: {
-  //         courseId: currentCourse.key,
-  //         courseName:currentCourse.title,
-  //         mode: formData.mode,
-  //         subMode:formData.residental,
-  //         batch:currentCourse.batch,
-  //         imageAsset: courseAsset1,
-  //         certificateImgAsset: courseAsset2,
-  //         // date:courseDate,
-  //         date: formData.sdate,
-  //         timing:currentCourse.timing
-  //       },
-  //     }
-  //     let body1 = {
-  //       personalDetails: {
-  //         name: formData.name,
-  //         emailId: formData.email,
-  //         phone: formData.phone,
-  //         addressLane1: formData.address1,
-  //         addressLane2: formData.address2,
-  //         country: formData.country,
-  //         state: formData.state,
-  //         city: formData.city,
-  //         pincode: formData.pincode,
-  //         // gender: formData.gender,
-  //         age: formData.AGE,
-  //         nationality: formData.nationality,
-  //       },
-  //       academicQualification: qualificationData,
-  //       workExperience: listData,
-  //       others: {
-  //         medicalHistory: formData.medicalstatus,
-  //         howDoYouHearAboutUs: formData.source || formData.sourceinfo,
-  //       },
-  //       courseDetails: {
-  //         courseId: currentCourse.key,
-  //         courseName:currentCourse.title,
-  //         mode: formData.mode,
-  //         batch:currentCourse.batch,
-  //         imageAsset: courseAsset1,
-  //         certificateImgAsset: courseAsset2,
-  //         // date:courseDate,
-  //         date: formData.sdate,
-  //         timing:currentCourse.timing
-  //       },
-  //     }
-  //     // if(currentCourse.key==='batch-1-200hr'){
-  //     //   if(formData?.residental==='RESIDENTIAL'){
-  //     //     setmail(templateKey)
-  //     //   }else{
-  //     //     setmail(templateKey)
-  //     //   }
-  //     // }
-  //     console.log(mail)
-  //     console.log('body ', body)
-  //     console.log('body 1 ', body1)
-  //     let mailTemplate = {
-  //       type: 'INFO_TYI',
-  //       HTMLTemplate: pickMail(),
-  //       subject: 'Enrollment Confirmation',
-  //       data:{
-  //         name: formData.name
-  //       },
-  //       receivers: [formData.email,'info@theyogainstitute.org']
-  //     }
-
-  //     try{
-  //       let response
-  //       if(formData.mode==='ONLINE' || (currentCourse.residential===false && currentCourse.nonResidential===false)){
-  //         response = await axios.post(
-  //           `${ cmsBaseDomain }/forms`,
-  //           body1
-  //         )
-  //       }else{
-  //         response = await axios.post(
-  //           `${ cmsBaseDomain }/forms`,
-  //           body
-  //         )
-  //       }
-
-  //       if(response?.data?.success){
-  //         if(currentCourse.key!=='satsang' && currentCourse.key!=='samattvam' ){
-  //           const paymentOrderResponse =  await axios.post(`${ cmsBaseDomain }/payment/order?enrollmentFormId=${response.data.data['_id']}`, {
-  //             amount: courseFee,
-  //             notes: currentCourse.metaDescription,
-  //             objectType:'ENROLLMENT'
-  //           })
-  //           console.log('Hello From 1 step')
-  //           if(!paymentOrderResponse?.data?.amount && !paymentOrderResponse?.data?.id) return 0
-  //           console.log('Hello From 2 step')
-  //           console.log('amount : ',paymentOrderResponse.data.amount,)
-  //           console.log('amount : ',paymentOrderResponse.data.id,)
-  //           console.log('razorPayKey : ',razorPayKey)
-  //           console.log('handler : ', );
-
-  //           const options = {
-  //             // key: 'rzp_test_hWMewRlYQKgJIk', 
-  //             // Enter the Key ID generated from the Dashboard
-  //             key: razorPayKey,
-  //             amount: paymentOrderResponse.data.amount, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
-  //             currency: 'INR',
-  //             name: 'The Yoga Institute',
-  //             description: 'Course Transaction',
-  //             // image: 'https://example.com/your_logo', // un comment and add TYI logo
-  //             order_id: paymentOrderResponse.data.id, // eslint-disable-line
-  //             handler: async(res) => {
-
-  //               // setIsLoad(false);
-  //               console.log('Hello From rzr', res)
-  //               // Navigare to Success if razorpay_payment_id, razorpay_order_id, razorpay_signature is there
-  //               if(res.razorpay_payment_id && res.razorpay_order_id && res.razorpay_signature) {
-  //                 await axios.post(`${ authBaseDomain }/ali/mail`, mailTemplate)
-  //                 navigate(`/enrollment_thankyou/${currentCourse.key}`)
-  //               }
-  //             },
-  //             prefill: {
-  //               name: formData.name,
-  //               email: formData.email,
-  //               contact: formData.phone
-  //             },
-  //             notes:{
-  //               courseName: currentCourse.title,
-  //               name: formData.name,
-  //               email: formData.email,
-  //               contact: formData.phone,
-  //               // date: courseDate,
-  //               date: formData.sdate,
-  //               time : currentCourse.timing,
-  //               mode : formData.mode,
-  //             },
-  //             theme: {
-  //               color: '#3399cc' // enter theme color for our website
-  //             },
-  //             modal: {
-  //               ondismiss: function () {
-  //                 // The user closed the payment modal
-  //                 setIsLoad(false);
-  //                 console.log("Payment modal closed by user.");
-  //                 // alert("Payment process was canceled.");
-  //                 // Perform any necessary cleanup or UI updates
-  //               },
-  //             },
-
-
-
-
-  //           }
-
-  //           console.log('Befor razorpay', options)
-  //           console.log('Befor razorpay', options.handler())
-  //           const rzp = new window.Razorpay(options)
-
-  //           rzp.open()  
-  //           console.log('Can See !!!!!!!!')
-  //         }else{
-  //           await axios.post(`${ authBaseDomain }/ali/mail`, mailTemplate)
-
-  //           if(currentCourse.key==='satsang'){
-  //             navigate('/satsang_thankyou')
-  //           }else if(currentCourse.key ==='samattvam'){
-  //             navigate('/samattvam_thankyou')
-  //           }else{
-
-  //             navigate(`/enrollment_thankyou/${currentCourse.key}`)
-
-  //           }
-  //         }
-  //       }
-  //     } 
-  //     catch(err){
-  //       setIsLoad(false);
-  //       console.error(err)
-  //     } 
-  //   }
-
-
-  // }
-
-  const handleOpen = () => {
-    setOpen(true);
+   // Function to remove ordinal suffixes and format the date
+   const formatDate = (date) => {
+    return date.replace(/\b(\d+)(th|nd|rd|st)\b/, '$1'); // Removes 'th', 'nd', 'rd', 'st'
   };
 
-  const handleClose = () => {
-    setOpen(false);
+  // Handle the date selection
+  const handleDateSelect = (date) => {
+    setSelectedDate(date);
   };
+
+  const handleEditSave = () => {
+    console.log("formData 2 ", formData2)
+    console.log('formData from Save ', formData)
+
+     // Update formData with the values from formData2, keeping the existing values
+     setFormData(prevFormData => ({
+        ...prevFormData,
+        ...formData2
+    }));
+
+    console.log('formData from Save after updating ', formData)
+
+  }
+
   
-  const handleEditOpen = () => {
-    setEditOpen(true);
-  }
-
-  const handleEditClose = () => {
-    setEditOpen(false);
-  };
-
-
-  if (loading) {
-    return null; // Render nothing while checking the token
-  }
+   // Handle enrollment button click
+//    const handleEnrollClick = () => {
+//     const dateToPass = selectedDate ? selectedDate : 'null';
+//     isLoggedIn ? navigate(`/enrollment/${pageDate.key}/?date=${encodeURIComponent(dateToPass)}`) : navigate(`/user/sign-in/?location=${pageDate.key}/?date=${encodeURIComponent(dateToPass)}`);
+//   };
 
 
 
-
+  // let termsAndCondition =
+  //   'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only ve centuries, but also the leap into elec- tronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.'
   return (
-    <div className="main_div">
-
-      <div className="grid_box">
-      <div className="right_grid">
-          <form>
-            {/* <div className="medical-section">
-              <p className="medical-label">
-                Medical History & Current Health Issues :
-              </p>
-              <textarea
-                className="text_box"
-                type="text"
-                rows="5"
-                cols="40"
-                onChange={(e) => {
-                  setFormData({
-                    ...formData,
-                    medicalstatus: e.target.value,
-                  })
-                }}
-              />
-            </div> */}
-
-
-
-            <CourseDetails
-              courseDate={courseDate}
-              currentCourse={currentCourse}
-              formData={formData}
-              setFormData={setFormData}
-              courseAsset1={courseAsset1}
-              setCourseAsset1={setCourseAsset1}
-              courseAsset2={courseAsset2}
-              setCourseAsset2={setCourseAsset2}
-              // setBold={setBold}
-              handleSubmit={handleSubmit}
-              empty={empty}
-              setEmpty={setEmpty}
-              formattedDates={formattedDates}
-              courseFee={courseFee}
-              setCourseFee={setCourseFee}
-              uploadCheck={uploadCheck}
-              setUploadCheck={setUploadCheck}
-              handleResidential={handleResidential}
-            />
-
-          </form>
-
-          {(formData.startDate && values?.endDateFormat) &&
-            <div className='terms' style={{ fontSize: '2rem' }}>Start date: <b>{values.startDate}</b> <br />
-              Valid till: <b>{values?.endDateFormat}</b></div>}
-
-          <div className="bottom_container_btn">
-          <div className='terms'>
-            <label>
-              <input
-                type="checkbox"
-                checked={isChecked}
-                onChange={handleCheckboxChange}
-              />
-              I agree and accept the 
-
-            </label>
-
-            <a
-              // href="https://theyogainstitute.org/terms-and-conditions"
-              // target="_blank"
-              onClick={handleOpen}
-              style={{ color: "rgba(0, 0, 0, 1)", marginLeft: "3px", fontSize: '14px', fontWeight: '600', cursor: "pointer" }}
-              rel="noopener noreferrer">
-              terms and conditions
-            </a>
-
-            {open && (
-              // <MessageModal 
-              //   message={<TermsCondition />} 
-              //   closePopup={handleClose} 
-              //   type="Terms and Conditions" // You can pass any other props as needed
-              // />
-              // <TermsAndConditionsModal />
-              <CustomModal isShippingModalOpen={handleOpen} setIsShipppingModalOpen={handleClose} />
-            )}
-
-            {isChecked === false ? empty === 19 && (
-              <div style={{ color: 'red', marginLeft: '0', marginTop: '1rem' }} className='mar_top'>
-                *Please agree to the condition!
-              </div>
-            ) : ''}
-            {console.log(isChecked)}
-          </div>
-          <div className="button_box">
-            {/* <button className="next_button" onClick={handleSubmit}>
-            Proceed to payment
-            </button> */}
-
-            {<button type="button" onClick={handleSubmit} className={!isLoad ? 'next_button button register-primary-btn' : 'next_button button register-primary-btn no-event'} disabled={isLoad}>
-              {setDate ? <><span id="txt">Register&nbsp; </span> </> : !isLoad ? <><span id="txt" style={{ fontSize: '14px', fontWeight: '500' }}>Pay & confirm enrollment </span> </> : <><span className="loader">
-                <span className="dot"></span>
-                <span className="dot"></span>
-                <span className="dot"></span>
-              </span></>}
-            </button>}
-
-            {/* {isResidential && <button type="button" onClick={handleSubmit} className={!isLoad ? 'next_button button register-primary-btn' : 'next_button button register-primary-btn no-event'} disabled={isLoad}>
-              {!isLoad ? <><span id="txt">Submit&nbsp; </span> </> : <><span className="loader">
-                <span className="dot"></span>
-                <span className="dot"></span>
-                <span className="dot"></span>
-              </span></>}
-            </button>} */}
-
-          </div>
-          </div>
-        </div>
-        <div className="left_grid">
-        <div className="details_box details_personal_box">
-            <div className="details_course_box ">
-              <div className="detail_image_box">
-                {/* <img src={currentCourse?.image} alt={currentCourse?.title} /> */}
-              </div>
-              <div className="current_duration">
-                <div className='personal_info_wrapper'>
-                  <span className='details_newName'>
-                  Student details
-                  </span>
-                  {/* {courseDate !== 'null' ? courseDate : ''} */}
-                  <div onClick={handleEditOpen}>
-                  <img src='/images/edit_icon.svg' style={{cursor: 'pointer'}} alt='' loading='lazy' />
-                  </div>
-                </div>
-                {editOpen && (
-              // <MessageModal 
-              //   message={<TermsCondition />} 
-              //   closePopup={handleClose} 
-              //   type="Terms and Conditions" // You can pass any other props as needed
-              // />
-              // <TermsAndConditionsModal />
-              <EditStudent isShippingModalOpen={handleEditOpen} setIsShipppingModalOpen={handleEditClose}  formData={formData} setFormData={setFormData} setEmpty={setEmpty} empty={empty} currentCourse={currentCourse} dateDurationChange={dateDurationChange} />
-            )}
-                <div className='fields_alignment fields_alignment_bottom'>
-                  <div className='details_desc_name_info'><span className='details_duration_info'>Name</span> <span className='tenure_course'>{formData?.name}</span></div>
-                  
-                </div>
-                <div className='details_desc_days fields_alignment_bottom'>
-                  <div className='details_desc_name_info'><span className='details_duration_info'>Email Address</span> <span className='tenure_course'>{formData?.email}</span></div>
-                  
-                </div>
-                <div className='details_desc_days fields_alignment_bottom'> 
-                  <div className='details_desc_name_info'><span className='details_duration_info'>Mobile Number</span> <span className='tenure_course'>{formData?.phone}</span></div>
-                  
-                </div>
-                <div className='details_desc_days fields_alignment_bottom'> 
-                  <div className='details_desc_name_info'><span className='details_duration_info'>Gender</span> <span className='tenure_course'>{formData?.gender}</span></div>
-                  
-                </div>
-                <div className='details_desc_days'> 
-                  <div className='details_desc_name_info'><span className='details_duration_info'>Address</span> <span className='tenure_course'>{`${formData?.address1}, ${formData?.address2}`}</span></div>
-                  
-                </div>
-                {/* {courseFee && <p className="current_fees"> {currentCourse.key === 'ma-yoga-shastra' && formData.country !== 'India' ? '$ 3950' : `₹ ${courseFee}`}</p>} */}
-                {/* {courseFee && <p className="current_fees"> ₹ {courseFee}</p>} */}
-              </div>
-            </div>
-          </div>
-          {
-            showForm && (
-                <form>
+    <>
+      <div className='terms-container'>
+        {/* <InnerNavComponent abc={tnc} /> */}
+        {/* <div className='banner-heading' style={{ textAlign: 'left', margin: '0px' }}>
+            Upcoming Dates
+     
+        </div> */}
+      </div>
+      
+      <form className='edit_popup'>
+      <div className='inp-group'>
+      <div className='inp-label'>First Name <span>*</span></div>
             <div className="form_error">
                
               <InputComponent
                 type="text"
-                placeholder="Name*"
-                form={formData}
-                setField={setFormData}
+                placeholder="First Name*"
+                form={formData2}
+                setField={setFormData2}
                 keyName="name"
                 errorCheck={setEmpty}
               />
               {empty === 1 && <small class="name_err"> Please enter your name</small>}
             </div>
+      </div>
 
+      <div className='inp-group'>
+      <div className='inp-label'>Last Name <span>*</span></div>
             <div className="form_error">
+               
               <InputComponent
-                // type="email"
-                id="text"
-                placeholder="Email ID*"
-                form={formData}
-                setField={setFormData}
-                keyName="email"
+                type="text"
+                placeholder="Last Name*"
+                form={formData2}
+                setField={setFormData2}
+                keyName="name"
                 errorCheck={setEmpty}
               />
-              {empty === 2 && <small class="name_err"> Please enter a valid email</small>}
-
-
-
-
+              {empty === 1 && <small class="name_err"> Please enter your name</small>}
             </div>
+      </div>
+
+      <div className='inp-group'>
+            <div className='inp-label'>Mobile Number <span>*</span></div>
             <div className="form_error">
               <PhoneInput
                 placeholder="Enter phone number*"
@@ -1218,146 +817,80 @@ const EnrollmentForm = ({
 
               {validationErrors?.length > 0 ? (
                 <div className="created_phone_err">Invalid Number</div>
-              ) : (empty === 3 && (!formData.phone || (formData.phone === '')) ? (
+              ) : (empty === 3 && (!formData2.phone || (formData2.phone === '')) ? (
                 <small className="phone_error">Please enter a valid phone number</small>
               ) : " ")}
-              {console.log('ve', validationErrors)}
+              {/* {console.log('ve', validationErrors)} */}
 
             </div>
+            </div>
 
-              {/* Adding start google API */}
-
-
-               {/* <LoadScript googleMapsApiKey={mapKey} libraries={libraries}>
-      <Autocomplete onLoad={onLoadAutocomplete} onPlaceChanged={onPlaceChanged}>
-        <div className="form_error">
-          <InputComponent
-            type="text"
-            placeholder="Address Line 1*"
-            form={formData}
-            setField={setFormData}
-            keyName="address1"
-            errorCheck={setEmpty}
-            inputProps={{
-              style: {
-                boxSizing: 'border-box',
-                border: '1px solid transparent',
-                width: '100%',
-                height: '32px',
-                padding: '0 12px',
-                borderRadius: '3px',
-                boxShadow: '0 2px 6px rgba(0, 0, 0, 0.3)',
-                fontSize: '14px',
-                outline: 'none',
-                textOverflow: 'ellipsis',
-                marginBottom: '12px',
-              },
-            }}
-          />
-          {empty === 4 && <p>Please enter your address</p>}
-        </div>
-      </Autocomplete>
-
-      <div className="form_error countries_list">
-        <Select
-          styles={customStyles}
-          id="country"
-          name="country"
-          placeholder="Country"
-          options={updatedCountries}
-          value={values.country}
-          onChange={(value) => {
-            setValues({ country: value, state: null, city: null }, false);
-            setFormData((prev) => ({ ...prev, country: value.label }));
-            console.log('Selected Country from Dropdown:', value); // Log the selected country object
-          }}
-        />
-        {empty === 5 && <p>Please enter your country</p>}
-      </div>
-
-      <div className="form_error">
-        <Select
-          styles={customStyles}
-          id="state"
-          name="state"
-          placeholder="State"
-          options={updatedStates(values.country?.isoCode)}
-          value={values.state}
-          onChange={(value) => {
-            setValues({ country: values.country, state: value, city: null }, false);
-            setFormData((prev) => ({ ...prev, state: value.name }));
-            console.log('Selected State:', value); // Log the selected state
-          }}
-        />
-      </div>
-
-      <div className="form_error">
-        <Select
-          styles={customStyles}
-          id="city"
-          name="city"
-          placeholder="City"
-          options={updatedCities(values?.country?.isoCode, values?.state?.isoCode)}
-          value={values.city}
-          onChange={(value) => {
-            setValues({ country: values.country, state: values.state, city: value }, false);
-            setFormData((prev) => ({ ...prev, city: value.name }));
-            console.log('Selected City:', value); // Log the selected city
-          }}
-        />
-      </div>
-
-      <div className="form_error pincode_err">
-        <InputComponent
-          type="text"
-          placeholder="Pincode*"
-          form={formData}
-          setField={setFormData}
-          keyName="pincode"
-          errorCheck={setEmpty}
-          inputProps={{
-            value: formData.pincode,
-            onChange: (e) => setFormData((prev) => ({ ...prev, pincode: e.target.value })),
-          }}
-        />
-        {empty === 8 && <small> Please enter your pincode</small>}
-      </div>
-    </LoadScript> */}
+      <div className='inp-group'>
+      <div className='inp-label'>Email Address <span>*</span></div>
+            <div className="form_error">
+              <InputComponent
+                // type="email"
+                id="text"
+                placeholder="Email ID*"
+                form={formData2}
+                setField={setFormData2}
+                keyName="email"
+                errorCheck={setEmpty}
+              />
+              {empty === 2 && <small class="name_err"> Please enter a valid email</small>}
 
 
 
-              {/* End google API */}
 
+            </div>
+            </div>
 
+           
+
+              
               {/* Adding start google API 2 */}
 
-
+              <div className='karo'></div>
               <LoadScript googleMapsApiKey={mapKey} libraries={libraries}>
+              <div className='inp-group address_1_fixes'>
       <Autocomplete onLoad={onLoadAutocomplete} onPlaceChanged={onPlaceChanged}>
+      
+      <>
+      <div className='inp-label'>Address Line 1*</div>
         <div className="form_error">
           <InputComponent
             type="text"
             placeholder="Address Line 1*"
-            form={formData}
-            setField={setFormData}
+            form={formData2}
+            setField={setFormData2}
             keyName="address1"
             errorCheck={setEmpty}
           />
           {empty === 4 && <p>Please enter your address</p>}
         </div>
+      </>
+        
       </Autocomplete>
+      </div>
 
+
+      <div className='inp-group'>
+      <div className='inp-label'>Address Line 2<span>*</span></div>
       <div className="form_error">
+      
         <InputComponent
           type="text"
           placeholder="Address Line 2"
-          form={formData}
-          setField={setFormData}
+          form={formData2}
+          setField={setFormData2}
           keyName="address2"
           errorCheck={setEmpty}
         />
       </div>
+      </div>
 
+      <div className='inp-group'>
+      <div className='inp-label'>Country<span>*</span></div>
       <div className="form_error countries_list">
         <Select
           styles={customStyles}
@@ -1368,12 +901,15 @@ const EnrollmentForm = ({
           value={values.country}
           onChange={(value) => {
             setValues({ country: value, state: null, city: null });
-            setFormData((prev) => ({ ...prev, country: value.label }));
+            setFormData2((prev) => ({ ...prev, country: value.label }));
           }}
         />
         {empty === 5 && <p>Please enter your country</p>}
       </div>
+      </div>
 
+      <div className='inp-group'>
+      <div className='inp-label'>State<span>*</span></div>
       <div className="form_error">
         <Select
           styles={customStyles}
@@ -1385,11 +921,15 @@ const EnrollmentForm = ({
           value={values.state}
           onChange={(value) => {
             setValues({ ...values, state: value, city: null });
-            setFormData((prev) => ({ ...prev, state: value.label }));
+            setFormData2((prev) => ({ ...prev, state: value.label }));
           }}
         />
       </div>
+      </div>
 
+
+      <div className='inp-group'>
+      <div className='inp-label'>City<span>*</span></div>
       <div className="form_error">
         
         <Select
@@ -1402,23 +942,26 @@ const EnrollmentForm = ({
           value={values.city}
           onChange={(value) => {
             setValues({ ...values, city: value });
-            setFormData((prev) => ({ ...prev, city: value.label }));
+            setFormData2((prev) => ({ ...prev, city: value.label }));
           }}
         />
       </div>
-
+      </div>
       
 
+      <div className='inp-group'>
+      <div className='inp-label'>Pincode<span>*</span></div>
       <div className="form_error pincode_err">
         <InputComponent
           type="text"
           placeholder="Pincode*"
-          form={formData}
-          setField={setFormData}
+          form={formData2}
+          setField={setFormData2}
           keyName="pincode"
           errorCheck={setEmpty}
         />
         {empty === 8 && <small>Please enter your pincode</small>}
+      </div>
       </div>
     </LoadScript>
 
@@ -1578,10 +1121,10 @@ const EnrollmentForm = ({
                     type="radio"
                     value="MALE"
                     name="gender"
-                    checked={formData.gender === 'MALE'}
+                    checked={formData2.gender === 'MALE'}
                     onChange={(e) => {
                       if (e.target.checked) {
-                        setFormData({ ...formData, gender: e.target.value })
+                        setFormData2({ ...formData2, gender: e.target.value })
                         setEmpty(0)
                       }
                     }}
@@ -1594,11 +1137,11 @@ const EnrollmentForm = ({
                     type="radio"
                     value="FEMALE"
                     name="gender"
-                    checked={formData.gender === 'FEMALE'}
+                    checked={formData2.gender === 'FEMALE'}
                     onChange={(e) => {
                       if (e.target.checked) {
-                        setFormData(
-                          { ...formData, gender: e.target.value },
+                        setFormData2(
+                          { ...formData2, gender: e.target.value },
                           setEmpty(0)
                         )
                       }
@@ -1610,7 +1153,7 @@ const EnrollmentForm = ({
               {empty === 11 && <div style={{ marginTop: '-11rem', fontSize: '12px', float: 'right', display: 'inline-block', color: 'red' }}> Please select one option</div>}
             </div>
 
-
+{/* 
             { !isSatsangPage && (
               <div className="form_error course_date">
               <Select
@@ -1711,23 +1254,22 @@ const EnrollmentForm = ({
                 errorCheck={setEmpty}
               />
               {empty === 10 && <div style={{ marginTop: '-8rem', display: 'inline-block', float: 'right', fontSize: '12px', color: 'red'}}> Please enter your nationality</div>}
-            </div> 
+            </div>  */}
             <Other
               // setBold={setBold}
               empty={empty}
-              formData={formData}
-              setFormData={setFormData}
+              formData={formData2}
+              setFormData={setFormData2}
             // handleEmpty4={handleEmpty4}
             />
 
           </form>
-            )
-          }
-        </div>
-      </div>
 
-    </div>
+          <div className='date_enroll_btn'>
+            <button className={!enableBtn ? 'date_enroll_btn_txt before_date_select' : 'date_enroll_btn_txt after_date_select'} disabled={!enableBtn} onClick={handleEditSave}>Save Changes</button>
+          </div>
+    </>
   )
 }
 
-export default EnrollmentForm
+export default EditStudentView
