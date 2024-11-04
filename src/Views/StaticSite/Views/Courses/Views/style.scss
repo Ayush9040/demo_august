@@ -122,12 +122,20 @@
                         border-radius: 8px;
                         cursor: pointer;
                     }
+
+                    .opacity-btn {
+                        opacity: 0.5;
+                    }
                 }
             }
 
             .label-head {
                 position: relative;
                 top: -2px;
+            }
+
+            .active-label-head {
+                color: #CA4625;
             }
         }
     }
