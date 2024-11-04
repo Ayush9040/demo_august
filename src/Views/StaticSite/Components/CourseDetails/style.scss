@@ -405,3 +405,53 @@ section {
   border: 3px solid #fff;
   color: #fff;
 }
+
+.course-options #enrollButton {
+  margin-top: 0px;
+}
+
+.course-detail-page .main-section .course-info .course-options {
+  display: flex;
+  align-items: center;
+  // flex-direction: column;
+  gap: 10px;
+  margin-top: 2.3rem;
+}
+
+.wrapper_dates {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.date-label-new {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.start-date-glimse {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.view_all_dates {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.view_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+@media(max-width: 768px) {
+  .course-detail-page .main-section .course-info .course-options {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 2.3rem;
+  }
+}

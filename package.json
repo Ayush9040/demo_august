@@ -25,6 +25,7 @@
     "react-datepicker": "^4.25.0",
     "react-dom": "^18.0.0",
     "react-ga": "^3.3.1",
+    "react-ga4": "^2.1.0",
     "react-gallery-carousel": "^0.2.9",
     "react-helmet": "^6.1.0",
     "react-js-pagination": "^3.0.3",

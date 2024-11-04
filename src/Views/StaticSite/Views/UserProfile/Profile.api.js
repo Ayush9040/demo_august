@@ -18,7 +18,7 @@ export const fetchUserCourses = (userID) => {
   // console.log('Current Request Headers: 3', axios.defaults.headers);
   return axios.post(`${cmsBaseDomain}/forms/course/purchase/list`, {}, {
     headers: {
-         'Authorization': `Bearer ${token}`
+      'Authorization': `Bearer ${token}`
     }
   });
 }

@@ -8154,7 +8154,7 @@ const camps = {
     cardImage: `${baseDomain}${courseAssets.courseAsset37}`,
     online: true,
     onCampus: true,
-    nonResidential: false,
+    nonResidential: true,
     residential: false,
     certficate: false,
 

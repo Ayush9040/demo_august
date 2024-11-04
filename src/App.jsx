@@ -9,7 +9,9 @@ import MetaTags from './Components/MetaTags'
 
 import { MainRoutes } from './Constants/routes'
 import Pagenotfound from './Views/StaticSite/Components/404 Error'
-import ReactGA from 'react-ga'
+// import ReactGA from 'react-ga'
+import ReactGA from 'react-ga4';
+
 import { useLocation } from 'react-router-dom';
 
 
@@ -21,20 +23,20 @@ const App = () => {
     // const hasAcceptedCookies = localStorage.getItem('cookiesAccepted');
     // if (hasAcceptedCookies === "true" || hasAcceptedCookies === true) {
     //   setIsVisible(false);
-    //   ReactGA.initialize('5158237522', { debug: true })
+    //   ReactGA.initialize('G-KZMLSTPLP1', { debug: true })
     //   console.log("react GA from cookies ", ReactGA);
     //   ReactGA.pageview('/')
     // }
-    ReactGA.initialize('5158237522', { debug: true })
-    ReactGA.pageview('/')
+    ReactGA.initialize('G-KZMLSTPLP1')
+    ReactGA.send('/')
   }, []);
 
   const handleAccept = () => {
     // sessionStorage.setItem('cookiesAccepted', 'true');
     localStorage.setItem('cookiesAccepted', 'true');
     setIsVisible(false);
-    ReactGA.initialize('5158237522', { debug: true })
-    ReactGA.pageview('/')
+    ReactGA.initialize('G-KZMLSTPLP1')
+    ReactGA.send('/')
   };
   const handleClose = () => {
     setIsVisible(false);

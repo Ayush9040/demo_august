@@ -22,7 +22,7 @@ import { Link, useNavigate,useSearchParams } from 'react-router-dom'
 import { updateLocalCart } from '../../helpers/helper'
 import Footer from '../../../../Components/Footer'
 import { handleCTAddToCart, handleCTBuyNowStep1 } from '../../../../../../CleverTap/shopEvents'
-import ReactGA from 'react-ga';
+import ReactGA from 'react-ga4';
 
 const Shop = () => {
   const dispatch = useDispatch()
@@ -158,7 +158,7 @@ const Shop = () => {
     if(product) {
       // ReactGA.initialize('5158237522', { debug: true })
       console.log("react GA", ReactGA);
-      ReactGA.pageview(window.location.href);
+      ReactGA.send(window.location.href);
       ReactGA.event({
         action: 'add_to_cart',
        currency: location !=='IN'?'USD':'INR',

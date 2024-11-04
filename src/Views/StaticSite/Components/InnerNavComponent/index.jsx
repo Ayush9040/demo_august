@@ -1,4 +1,4 @@
-import React, { useState, useEffect,lazy } from 'react'
+import React, { useState, useEffect, lazy } from 'react'
 import { useLocation } from 'react-router-dom'
 import './style.scss'
 import { useNavigate } from 'react-router-dom'
@@ -23,28 +23,33 @@ import {
   CartWhite,
 } from '../../assets/icons/icon'
 import { Link } from 'react-router-dom'
-const MegaMenu = lazy(()=>import('../MegaMenu'))
+const MegaMenu = lazy(() => import('../MegaMenu'))
 import { logoutUserAction } from '../../Views/Authentication/Auth.actions'
 
 const InnerNavComponent = ({ abc }) => {
   const navigate = useNavigate()
   const { isLoggedIn } = useSelector((state) => state.auth)
   const [nav, setNav] = useState(false)
-  const [dropdown,setDropdown]=useState(false)
+  const [dropdown, setDropdown] = useState(false)
   const [bold, setBold] = useState(0)  // eslint-disable-line
-  const [ cartItems,setCartItems ] = useState(0)
+  const [cartItems, setCartItems] = useState(0)
   const location = useLocation()
   const dispatch = useDispatch()
- 
-  const { cart } = useSelector((state)=>state.shop)
 
-  const getTotal = ()=>{
-    if(cart?.length===0) return
+  const { cart } = useSelector((state) => state.shop)
+
+  const nameFromRedux = useSelector((state) => state.auth.user.data?.firstName);
+  const truncatedName = nameFromRedux && nameFromRedux.length > 10
+    ? `${nameFromRedux.slice(0, 12)}...`
+    : nameFromRedux;
+
+  const getTotal = () => {
+    if (cart?.length === 0) return
     let sum = 0
-    cart?.forEach(item=>{
-      sum+= item.quantity  
+    cart?.forEach(item => {
+      sum += item.quantity
     })
-    console.log(sum,'sum')
+    console.log(sum, 'sum')
     return sum
   }
 
@@ -58,7 +63,7 @@ const InnerNavComponent = ({ abc }) => {
     } else {
       setBold(0)
     }
-  }, [ cart ] )
+  }, [cart])
 
   // console.log(bold,'bold')
   return (
@@ -72,17 +77,17 @@ const InnerNavComponent = ({ abc }) => {
                 ? CommonHamburger
                 : Hamburger}
           </div>
-          <div className="main-logo" id={`${ abc.color }`} >
-            <span className='mobile-search' onClick={ ()=>{navigate('/')} } >{ abc.color === 'orange' ? Search:abc.color === 'black' ? SearchBlack : SearchWhite }</span>
-            <Link className='mobile-search mobile-cart' style={{ marginLeft:'15px' }} to='/shop/cart'>        
-              { abc.color === 'orange' ? Cart : abc.color === 'white' ? CartWhite : CartBlack }  <span  style={{ color:'#CA4625' }} className='cart-count' >{ cartItems }</span></Link>
-              
+          <div className="main-logo" id={`${abc.color}`} >
+            <span className='mobile-search' onClick={() => { navigate('/') }} >{abc.color === 'orange' ? Search : abc.color === 'black' ? SearchBlack : SearchWhite}</span>
+            <Link className='mobile-search mobile-cart' style={{ marginLeft: '15px' }} to='/shop/cart'>
+              {abc.color === 'orange' ? Cart : abc.color === 'white' ? CartWhite : CartBlack}  <span style={{ color: '#CA4625' }} className='cart-count' >{cartItems}</span></Link>
+
             <Link to="/">
               {abc.color === 'orange'
                 ? legacy1
                 : abc.color === 'black'
                   ? MainLogo1
-                  : MainLogo}  
+                  : MainLogo}
             </Link>
           </div>
           <div className="career-navigation-sm">
@@ -108,35 +113,100 @@ const InnerNavComponent = ({ abc }) => {
             </ul>
           </div>
           <div className="user-container">
-            <div onClick={ ()=>{navigate('/search')} } >{ abc.color === 'orange' ? Search:abc.color === 'black' ? SearchBlack : SearchWhite }</div>
-            
+            {/* <div onClick={ ()=>{navigate('/search')} } >{ abc.color === 'orange' ? Search:abc.color === 'black' ? SearchBlack : SearchWhite }</div> */}
+
+            <div onClick={() => { navigate('/search') }} ><img src='/images/search.svg' alt='' loading='lazy' /></div>
 
 
-              {hasItems && (
-                <Link to='/shop/cart'>   
+            {hasItems && (
+              <Link to='/shop/cart'>
 
-                { abc.color === 'orange' ? Cart : abc.color === 'white' ? CartWhite : CartBlack }  <span style={{ color:'#CA4625' }} className='cart-count' >{ cartItems }</span></Link>
+                {abc.color === 'orange' ? Cart : abc.color === 'white' ? CartWhite : CartBlack}  <span style={{ color: '#CA4625' }} className='cart-count' >{cartItems}</span></Link>
             )}
-           
-            <div className='profile-container' onMouseOver={()=>{setDropdown(true)}} onMouseOut={()=>{setDropdown(false)}}  >
+
+            {/* <div className='profile-container' onMouseOver={()=>{setDropdown(true)}} onMouseOut={()=>{setDropdown(false)}}  >
               <Link to={isLoggedIn ? '/user/profile':'/user/sign-in'} >
-                {abc.color === 'orange'
+                {isLoggedIn ? (
+                  <div className='wrapper_logo'>
+                    <div>
+                    <img src="/images/user_login.svg" alt="primary-logo" loading="lazy" />
+                    </div>
+                    <div>
+                      <p style={{fontSize: '10px', fontWeight: '400', color: '#CA4625'}}>Namaste</p>
+                      <p style={{ fontSize: '14px', fontWeight: '700', color: '#CA4625'}}>{truncatedName}</p>
+                    </div>
+                    <div className='icon-rotate'>
+                      <img src='/images/Chevron down.svg' alt='' loading='lazy' />
+                    </div>
+                  </div>
+                ) : abc.color === 'orange'
                   ? User
                   : abc.color === 'white'
                     ? CommonUser
                     : CommonUser1}
               </Link>
               <div style={dropdown===true && isLoggedIn ?{ display:'block' }:{}} className='user-dropdown'>
-                <ul>
-                  <li onClick={()=>navigate('/user/profile')} >User Profile</li>
-                  <li onClick={async()=>{await dispatch(logoutUserAction());navigate('/user/sign-in')}} >Logout</li>
+                <ul style={{ borderRadius: '8px', boxShadow: '0px -2px 2px 0px rgba(0, 0, 0, 0.1)'}} >
+                  <li style={{ borderRadius: '8px 8px 0px 0px'}} onClick={()=>navigate('/user/profile')} >User Profile</li>
+                  <li style={{ borderRadius: '0px 0px 8px 8px'}} onClick={async()=>{await dispatch(logoutUserAction());navigate('/user/sign-in')}} >Logout</li>
                 </ul>
               </div>
-            </div>
+            </div> */}
+
+            {
+              isLoggedIn ? (
+                <div
+                  className='profile-container'
+                  onMouseOver={() => setDropdown(true)}
+                  onMouseOut={() => setDropdown(false)}
+                >
+                  <div className='wrapper_logo'>
+                    <div>
+                      <img src="/images/user_login.svg" alt="primary-logo" loading="lazy" />
+                    </div>
+                    <div className='namastetext'>
+                      <p style={{ fontSize: '10px', fontWeight: '400', color: '#CA4625' }}>Namaste</p>
+                      <p style={{
+                        fontSize: '14px', fontWeight: '700', color: '#CA4625', whiteSpace: 'nowrap',
+                        overflow: 'hidden',
+                        textOverflow: 'ellipsis',
+                        maxWidth: '110px'
+                      }}>{truncatedName}</p>
+                    </div>
+                    <div className='icon-rotate chevr-bd' style={{ width: '22px' }} >
+                      <img src='/images/Chevron down.svg' alt='' loading='lazy' />
+                    </div>
+                  </div>
+
+                  <div style={dropdown && isLoggedIn ? { display: 'block' } : {}} className='user-dropdown'>
+                    <ul style={{ borderRadius: '8px', boxShadow: '0px -2px 2px 0px rgba(0, 0, 0, 0.1)' }}>
+                      <li
+                        style={{ borderRadius: '8px 8px 0px 0px' }}
+                        onClick={() => navigate('/user/profile')}
+                      >
+                        User Profile
+                      </li>
+                      <li
+                        style={{ borderRadius: '0px 0px 8px 8px' }}
+                        onClick={async () => {
+                          await dispatch(logoutUserAction());
+                          navigate('/user/sign-in');
+                        }}
+                      >
+                        Logout
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              ) : <Link to={'/user/sign-in'}>{User}</Link>
+            }
+
+
           </div>
         </div>
 
-        {abc.menuItems.length!==0 && <div
+
+        {abc.menuItems.length !== 0 && <div
           className={'career-navigation-lg'}
           id={abc?.title === 'gallery' ? 'toggles' : ''}
         >
@@ -194,7 +264,7 @@ const InnerNavComponent = ({ abc }) => {
           <MegaMenu setNav={setNav} />
         </div>
       )}
-      
+
     </>
   )
 }

@@ -11,7 +11,7 @@ import { updateCartData, getActiveCartData } from '../../Shop.action'
 import { ToastContainer, toast } from 'react-toastify'
 import { updateLocalCart } from '../../helpers/helper'
 import { handleCTAddToCart, handleCTBuyNowStep1 } from '../../../../../../CleverTap/shopEvents'
-import ReactGA from 'react-ga';
+import ReactGA from 'react-ga4';
 
 const SingleProduct = () => {
   const { productID } = useParams()
