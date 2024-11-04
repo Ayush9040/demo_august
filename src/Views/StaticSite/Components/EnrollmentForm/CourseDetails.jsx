@@ -352,7 +352,7 @@ const CourseDetails = ({
               </div>
               <div className="current_duration">
                 <div>
-                  {currentCourse?.title}&nbsp;
+                  {currentCourse?.newName}&nbsp;
                   {courseDate !== 'null' ? courseDate : ''}
                 </div>
                 {/* {courseFee && <p className="current_fees"> {currentCourse.key === 'ma-yoga-shastra' && formData.country !== 'India' ? '$ 3950' : `₹ ${courseFee}`}</p>} */}
