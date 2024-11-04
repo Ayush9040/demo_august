@@ -139,17 +139,52 @@ const Courses = () => {
             </div>
             <div className="filter-values">
               <div className='filter-head'>Course Format</div>
-              <div className='filter-data'><span><input type="checkbox" name="" id="" /></span>&nbsp;Online &nbsp;&nbsp;
-                <span><input type="checkbox" name="" id="" /></span>&nbsp;On-Campus</div>
+              <div className='filter-data'>
+                <span style={{ cursor: 'pointer' }}>
+                  {/* <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.75 13.75C1.3375 13.75 0.984375 13.6031 0.690625 13.3094C0.396875 13.0156 0.25 12.6625 0.25 12.25V1.75C0.25 1.3375 0.396875 0.984375 0.690625 0.690625C0.984375 0.396875 1.3375 0.25 1.75 0.25H12.25C12.6625 0.25 13.0156 0.396875 13.3094 0.690625C13.6031 0.984375 13.75 1.3375 13.75 1.75V12.25C13.75 12.6625 13.6031 13.0156 13.3094 13.3094C13.0156 13.6031 12.6625 13.75 12.25 13.75H1.75ZM1.75 12.25H12.25V1.75H1.75V12.25Z" fill="#818184" />
+                  </svg> */}
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.95 10.15L11.2375 4.8625L10.1875 3.8125L5.95 8.05L3.8125 5.9125L2.7625 6.9625L5.95 10.15ZM1.75 13.75C1.3375 13.75 0.984375 13.6031 0.690625 13.3094C0.396875 13.0156 0.25 12.6625 0.25 12.25V1.75C0.25 1.3375 0.396875 0.984375 0.690625 0.690625C0.984375 0.396875 1.3375 0.25 1.75 0.25H12.25C12.6625 0.25 13.0156 0.396875 13.3094 0.690625C13.6031 0.984375 13.75 1.3375 13.75 1.75V12.25C13.75 12.6625 13.6031 13.0156 13.3094 13.3094C13.0156 13.6031 12.6625 13.75 12.25 13.75H1.75ZM1.75 12.25H12.25V1.75H1.75V12.25Z" fill="#CA4625" />
+                  </svg>
+
+                </span>&nbsp;<span className="label-head">Online </span>&nbsp;&nbsp;
+                <span style={{ cursor: 'pointer' }}>
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.75 13.75C1.3375 13.75 0.984375 13.6031 0.690625 13.3094C0.396875 13.0156 0.25 12.6625 0.25 12.25V1.75C0.25 1.3375 0.396875 0.984375 0.690625 0.690625C0.984375 0.396875 1.3375 0.25 1.75 0.25H12.25C12.6625 0.25 13.0156 0.396875 13.3094 0.690625C13.6031 0.984375 13.75 1.3375 13.75 1.75V12.25C13.75 12.6625 13.6031 13.0156 13.3094 13.3094C13.0156 13.6031 12.6625 13.75 12.25 13.75H1.75ZM1.75 12.25H12.25V1.75H1.75V12.25Z" fill="#818184" />
+                  </svg>
+                </span>&nbsp;<span className="label-head">On-Campus</span></div>
 
               <div className='filter-head'>Duration</div>
-              <div className='filter-data'><span><input type="checkbox" name="" id="" /></span>&nbsp;1 month &nbsp;&nbsp;
-                <span><input type="checkbox" name="" id="" /></span>&nbsp;2 months&nbsp;&nbsp;
-                <span><input type="checkbox" name="" id="" /></span>&nbsp;3 months</div>
+              <div className='filter-data'>
+                <span style={{ cursor: 'pointer' }}>
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.75 13.75C1.3375 13.75 0.984375 13.6031 0.690625 13.3094C0.396875 13.0156 0.25 12.6625 0.25 12.25V1.75C0.25 1.3375 0.396875 0.984375 0.690625 0.690625C0.984375 0.396875 1.3375 0.25 1.75 0.25H12.25C12.6625 0.25 13.0156 0.396875 13.3094 0.690625C13.6031 0.984375 13.75 1.3375 13.75 1.75V12.25C13.75 12.6625 13.6031 13.0156 13.3094 13.3094C13.0156 13.6031 12.6625 13.75 12.25 13.75H1.75ZM1.75 12.25H12.25V1.75H1.75V12.25Z" fill="#818184" />
+                  </svg>
+                </span>&nbsp;<span className="label-head">1 month</span> &nbsp;&nbsp;
+                <span style={{ cursor: 'pointer' }}>
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.75 13.75C1.3375 13.75 0.984375 13.6031 0.690625 13.3094C0.396875 13.0156 0.25 12.6625 0.25 12.25V1.75C0.25 1.3375 0.396875 0.984375 0.690625 0.690625C0.984375 0.396875 1.3375 0.25 1.75 0.25H12.25C12.6625 0.25 13.0156 0.396875 13.3094 0.690625C13.6031 0.984375 13.75 1.3375 13.75 1.75V12.25C13.75 12.6625 13.6031 13.0156 13.3094 13.3094C13.0156 13.6031 12.6625 13.75 12.25 13.75H1.75ZM1.75 12.25H12.25V1.75H1.75V12.25Z" fill="#818184" />
+                  </svg>
+                </span>&nbsp;<span className="label-head">2 months</span>&nbsp;&nbsp;
+                <span style={{ cursor: 'pointer' }}>
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.75 13.75C1.3375 13.75 0.984375 13.6031 0.690625 13.3094C0.396875 13.0156 0.25 12.6625 0.25 12.25V1.75C0.25 1.3375 0.396875 0.984375 0.690625 0.690625C0.984375 0.396875 1.3375 0.25 1.75 0.25H12.25C12.6625 0.25 13.0156 0.396875 13.3094 0.690625C13.6031 0.984375 13.75 1.3375 13.75 1.75V12.25C13.75 12.6625 13.6031 13.0156 13.3094 13.3094C13.0156 13.6031 12.6625 13.75 12.25 13.75H1.75ZM1.75 12.25H12.25V1.75H1.75V12.25Z" fill="#818184" />
+                  </svg>
+                </span>&nbsp;<span className="label-head">3 months</span></div>
 
               <div className='filter-head'>Schedule</div>
-              <div className='filter-data'><span><input type="checkbox" name="" id="" /></span>&nbsp;Weekdays &nbsp;&nbsp;
-                <span><input type="checkbox" name="" id="" /></span>&nbsp;Weekends</div>
+              <div className='filter-data'>
+                <span style={{ cursor: 'pointer' }}>
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.75 13.75C1.3375 13.75 0.984375 13.6031 0.690625 13.3094C0.396875 13.0156 0.25 12.6625 0.25 12.25V1.75C0.25 1.3375 0.396875 0.984375 0.690625 0.690625C0.984375 0.396875 1.3375 0.25 1.75 0.25H12.25C12.6625 0.25 13.0156 0.396875 13.3094 0.690625C13.6031 0.984375 13.75 1.3375 13.75 1.75V12.25C13.75 12.6625 13.6031 13.0156 13.3094 13.3094C13.0156 13.6031 12.6625 13.75 12.25 13.75H1.75ZM1.75 12.25H12.25V1.75H1.75V12.25Z" fill="#818184" />
+                  </svg>
+                </span>&nbsp;<span className="label-head">Weekdays</span> &nbsp;&nbsp;
+                <span style={{ cursor: 'pointer' }}>
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.75 13.75C1.3375 13.75 0.984375 13.6031 0.690625 13.3094C0.396875 13.0156 0.25 12.6625 0.25 12.25V1.75C0.25 1.3375 0.396875 0.984375 0.690625 0.690625C0.984375 0.396875 1.3375 0.25 1.75 0.25H12.25C12.6625 0.25 13.0156 0.396875 13.3094 0.690625C13.6031 0.984375 13.75 1.3375 13.75 1.75V12.25C13.75 12.6625 13.6031 13.0156 13.3094 13.3094C13.0156 13.6031 12.6625 13.75 12.25 13.75H1.75ZM1.75 12.25H12.25V1.75H1.75V12.25Z" fill="#818184" />
+                  </svg>
+                </span>&nbsp;<span className="label-head">Weekends</span></div>
               <div className='filter-footer'>
                 <div className='clear'>Clear Filters</div>
                 <div className='apply'>Apply Filters</div>
