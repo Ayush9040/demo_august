@@ -6,7 +6,7 @@ import 'react-rangeslider/lib/index.css'
 import Accordian from '../CommanAccordian'
 import { Link } from 'react-router-dom'
 
-const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, }) => {
+const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, selectedFilters }) => {
 
   const [customVal, setCustomVal] = useState(1)
 
@@ -22,26 +22,32 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, }
           {
             url: '/one-month-ttc',
             text: ' 1 Month YTTC Online & On Campus - English - Batch 1 ',
+            online: true, onCampus: true, month1: true, weekDays: true,
           },
           {
             url: '/200-hrs-part-time-ttc-on-campus-english',
             text: '2 Months YTTC Online & On Campus – English - Batch 2',
+            online: true, onCampus: true, month2: true, weekDays: true,
           },
           {
             url: '/200-hrs-part-time-ttc-online-english',
             text: '2 Months YTTC Online – English - Batch 3 ',
+            online: true, month2: true, weekDays: true,
           },
           {
             url: '/200-hrs-part-time-ttc-online',
             text: '2 Months YTTC Online – Hindi - Batch 4 ',
+            online: true, month2: true, weekDays: true,
           },
           {
             url: '/weekend-teacher-training-course',
             text: '3 Months Weekend YTTC Online – English - Batch 5',
+            online: true, month3: true, weekends: true,
           },
           {
             url: '/200-hrs-part-time-ttc-online-english-batch-6',
             text: '2 Months YTTC Online – English - Batch 6',
+            online: true, month2: true, weekDays: true,
           },
           // {
           //   url: '/200-Hours',
@@ -57,6 +63,7 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, }
           {
             url: '/500-hrs-online-yoga-teacher-training-course-intermediate-level',
             text: ' 3 Months YTTC - Online - English',
+            online: true, month3: true, weekDays: true,
           },
         ],
       },
@@ -67,19 +74,23 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, }
           {
             url: '/3-months-advanced-teacher-training-course',
             text: '3 Months YTTC-On Campus-English',
+            onCampus: true, month3: true, weekDays: true,
           },
           {
             url: '/900-hours-advanced-teacher-training-course',
             text: '4 Months YTTC-Online-English',
+            online: true, weekDays: true,
           },
           {
             url: '/seven-month-ttc',
             text: '7 Months YTTC-Online & On Campus-English',
+            onCampus: true, online: true, weekDays: true,
           },
-          { url: '/one-year-ttc', text: '1 Year YTTC-Online & On Campus-Hindi' },
+          { url: '/one-year-ttc', text: '1 Year YTTC-Online & On Campus-Hindi', onCampus: true, online: true, weekDays: true, },
           {
             url: '/two-year-ttc',
             text: '2 Years YTTC-Online & On Campus-English',
+            onCampus: true, online: true, weekDays: true,
           },
         ],
       },
@@ -93,14 +104,17 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, }
           {
             url: '/21-days-better-living-course',
             text: 'Morning On Campus – English - Batch 1',
+            onCampus: true ,weekDays: true
           },
           {
             url: '/21-days-better-living-course-batch-2',
             text: 'Evening - Online & On Campus – English - Batch 2',
+            onCampus: true, online: true,weekDays: true
           },
           {
             url: '/21-days-better-living-course-batch-3',
             text: 'Evening - Online & On Campus – Hindi - Batch 3',
+            onCampus: true, online: true,weekDays: true
           },
           // {
           //   url: '/21-days-better-living-course-batch-4',
@@ -115,10 +129,12 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, }
           {
             url: '/7-days-camp',
             text: '7 Days Health Camp - On Campus - Hindi',
+            onCampus: true,weekDays: true
           },
           {
             url: '/7-days-camp-english',
             text: '7 Days Health Camp - On Campus - English',
+            onCampus: true,weekDays: true
           },
         ],
       },
@@ -128,8 +144,8 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, }
       case 'Yoga Teacher Training Courses (YTTC)':
         return (
           <>
-            <Accordian sliderVal={customVal} setSliderVal={setCustomVal} data={coursesList} />
-            
+            <Accordian sliderVal={customVal} setSliderVal={setCustomVal} data={coursesList} selectedFilters={selectedFilters} />
+
             <ul id='therapy-course' >
               <Link to="/certificate-yoga-therapy-course-online">
                 <li className="text-bold" >
@@ -210,7 +226,7 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, }
         return (
           <div className="camp_course-list-content">
             <br />
-            <Accordian sliderVal={customVal} setSliderVal={setCustomVal} data={campsAccordian} />
+            <Accordian sliderVal={customVal} setSliderVal={setCustomVal} data={campsAccordian} selectedFilters={selectedFilters} />
             <div>
               <h4>
                 <ul id='camps-workshop' >
@@ -311,7 +327,7 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, }
       <div className="course-list">
         <div className="course-title">
           <Link to={`/courses/browse/${pathParam}`}>
-            <h1 style={{fontSize:'2.6rem'}}>{title} </h1>
+            <h1 style={{ fontSize: '2.6rem' }}>{title} </h1>
           </Link>
         </div>
         {content()}
@@ -334,7 +350,7 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, }
 
         {
           title === 'Most Popular' ?
-          
+
             data
               .filter((item) => item.mostPopular === true).map((item, i) => {
                 if (
@@ -350,10 +366,10 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, }
                       courseTitle={item.title}
                       pageName={item.key}
                       tenure={item.tenure}
-                      courseCategory={item.courseCategory} 
+                      courseCategory={item.courseCategory}
                       courseSubType={item.courseSubType}
-                      onlineMode= {item?.onlineInfo?.courseMode}
-                      residentialMode= {item?.residentialInfo?.courseMode}
+                      onlineMode={item?.onlineInfo?.courseMode}
+                      residentialMode={item?.residentialInfo?.courseMode}
                       nonResidentialMode={item?.nonResidentialInfo?.courseMode}
                       residentialLocation={item?.residentialInfo?.residentialMode}
                       nonResidentialLocation={item?.nonResidentialInfo?.nonResidentialMode}
@@ -387,15 +403,15 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, }
                     timing={item?.timing}
                     tenure={item?.tenure}
                     pageName={item?.key}
-                    courseCategory={item?.courseCategory} 
-                      courseSubType={item?.courseSubType}
-                      onlineMode= {item?.onlineInfo?.courseMode}
-                      residentialMode= {item?.residentialInfo?.courseMode}
-                      nonResidentialMode={item?.nonResidentialInfo?.courseMode}
-                      residentialLocation={item?.residentialInfo?.residentialMode}
-                      nonResidentialLocation={item?.nonResidentialInfo?.nonResidentialMode}
-                      courseType={item?.courseType}
-                      language={item?.language}
+                    courseCategory={item?.courseCategory}
+                    courseSubType={item?.courseSubType}
+                    onlineMode={item?.onlineInfo?.courseMode}
+                    residentialMode={item?.residentialInfo?.courseMode}
+                    nonResidentialMode={item?.nonResidentialInfo?.courseMode}
+                    residentialLocation={item?.residentialInfo?.residentialMode}
+                    nonResidentialLocation={item?.nonResidentialInfo?.nonResidentialMode}
+                    courseType={item?.courseType}
+                    language={item?.language}
                     category={item?.category}
                     batch={item?.batch}
                     nonResidential={item?.nonResidential}

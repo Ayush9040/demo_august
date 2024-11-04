@@ -44,7 +44,9 @@ const Courses = () => {
   const [isFilterOpened, setIsFilterOpened] = useState(false);
   const [filters, setFilters] = useState({ online: false, onCampus: false, month1: false, month2: false, month3: false, weekDays: false, weekends: false });
   const [selectedFilters, setSelectedFilters] = useState({ online: false, onCampus: false, month1: false, month2: false, month3: false, weekDays: false, weekends: false });
-
+  const filtersToloop = [{ label: 'Online', value: 'online' }, { label: 'On-Campus', value: 'onCampus' }, { label: '1 Month', value: 'month1' },
+  { label: '2 Months', value: 'month2' }, { label: '3 Months', value: 'month3' }, { label: 'Weekdays', value: 'weekDays' }, { label: 'Weekends', value: 'weekends' }
+  ]
   const clearFilters = () => {
     setIsFilterOpened(false)
     setFilters({ online: false, onCampus: false, month1: false, month2: false, month3: false, weekDays: false, weekends: false });
@@ -57,6 +59,7 @@ const Courses = () => {
     setIsFilterOpened(false)
     setSelectedFilters(selectedValues)
   }
+  const countTrueFilters = Object.values(selectedFilters).filter(value => value === true).length;
 
   useEffect(() => {
     window.scrollTo(0, 0)
@@ -146,18 +149,19 @@ const Courses = () => {
                 <img src="icons/filter-icon.png" alt="filter-icon" />
               </span>
               <span style={{ padding: '0 20px 0 4px' }}>
-                Filters</span>
-              <span>
+                Filters
+                {countTrueFilters > 0 && <span className='count-badge'>{countTrueFilters}</span>}</span>
+              <span style={{ position: 'relative', top: '-2px' }}>
                 <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M1 1L5 5L9 1" stroke="#CA4625" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
               </span>
             </div>
             {isFilterOpened &&
-              <div className="filter-values">
+              <div className="filter-values" onClick={(event) => event.stopPropagation()}>
                 <div className='filter-head'>Course Format</div>
                 <div className='filter-data'>
-                  <span style={{ cursor: 'pointer' }} onClick={(event) => { event.stopPropagation(); setFilters({ ...filters, online: !filters.online }) }}>
+                  <span style={{ cursor: 'pointer' }} onClick={() => { setFilters({ ...filters, online: !filters.online }) }}>
                     {filters.online ?
                       <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M5.95 10.15L11.2375 4.8625L10.1875 3.8125L5.95 8.05L3.8125 5.9125L2.7625 6.9625L5.95 10.15ZM1.75 13.75C1.3375 13.75 0.984375 13.6031 0.690625 13.3094C0.396875 13.0156 0.25 12.6625 0.25 12.25V1.75C0.25 1.3375 0.396875 0.984375 0.690625 0.690625C0.984375 0.396875 1.3375 0.25 1.75 0.25H12.25C12.6625 0.25 13.0156 0.396875 13.3094 0.690625C13.6031 0.984375 13.75 1.3375 13.75 1.75V12.25C13.75 12.6625 13.6031 13.0156 13.3094 13.3094C13.0156 13.6031 12.6625 13.75 12.25 13.75H1.75ZM1.75 12.25H12.25V1.75H1.75V12.25Z" fill="#CA4625" />
@@ -166,7 +170,7 @@ const Courses = () => {
                         <path d="M1.75 13.75C1.3375 13.75 0.984375 13.6031 0.690625 13.3094C0.396875 13.0156 0.25 12.6625 0.25 12.25V1.75C0.25 1.3375 0.396875 0.984375 0.690625 0.690625C0.984375 0.396875 1.3375 0.25 1.75 0.25H12.25C12.6625 0.25 13.0156 0.396875 13.3094 0.690625C13.6031 0.984375 13.75 1.3375 13.75 1.75V12.25C13.75 12.6625 13.6031 13.0156 13.3094 13.3094C13.0156 13.6031 12.6625 13.75 12.25 13.75H1.75ZM1.75 12.25H12.25V1.75H1.75V12.25Z" fill="#818184" />
                       </svg>}
                   </span>&nbsp;<span className={filters.online ? "label-head active-label-head" : "label-head"}>Online </span>&nbsp;&nbsp;
-                  <span style={{ cursor: 'pointer' }} onClick={(event) => { event.stopPropagation(); setFilters({ ...filters, onCampus: !filters.onCampus }) }}>
+                  <span style={{ cursor: 'pointer' }} onClick={() => { setFilters({ ...filters, onCampus: !filters.onCampus }) }}>
                     {filters.onCampus ?
                       <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M5.95 10.15L11.2375 4.8625L10.1875 3.8125L5.95 8.05L3.8125 5.9125L2.7625 6.9625L5.95 10.15ZM1.75 13.75C1.3375 13.75 0.984375 13.6031 0.690625 13.3094C0.396875 13.0156 0.25 12.6625 0.25 12.25V1.75C0.25 1.3375 0.396875 0.984375 0.690625 0.690625C0.984375 0.396875 1.3375 0.25 1.75 0.25H12.25C12.6625 0.25 13.0156 0.396875 13.3094 0.690625C13.6031 0.984375 13.75 1.3375 13.75 1.75V12.25C13.75 12.6625 13.6031 13.0156 13.3094 13.3094C13.0156 13.6031 12.6625 13.75 12.25 13.75H1.75ZM1.75 12.25H12.25V1.75H1.75V12.25Z" fill="#CA4625" />
@@ -178,7 +182,7 @@ const Courses = () => {
 
                 <div className='filter-head'>Duration</div>
                 <div className='filter-data'>
-                  <span style={{ cursor: 'pointer' }} onClick={(event) => { event.stopPropagation(); setFilters({ ...filters, month1: !filters.month1 }) }}>
+                  <span style={{ cursor: 'pointer' }} onClick={() => { setFilters({ ...filters, month1: !filters.month1 }) }}>
                     {filters.month1 ?
                       <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M5.95 10.15L11.2375 4.8625L10.1875 3.8125L5.95 8.05L3.8125 5.9125L2.7625 6.9625L5.95 10.15ZM1.75 13.75C1.3375 13.75 0.984375 13.6031 0.690625 13.3094C0.396875 13.0156 0.25 12.6625 0.25 12.25V1.75C0.25 1.3375 0.396875 0.984375 0.690625 0.690625C0.984375 0.396875 1.3375 0.25 1.75 0.25H12.25C12.6625 0.25 13.0156 0.396875 13.3094 0.690625C13.6031 0.984375 13.75 1.3375 13.75 1.75V12.25C13.75 12.6625 13.6031 13.0156 13.3094 13.3094C13.0156 13.6031 12.6625 13.75 12.25 13.75H1.75ZM1.75 12.25H12.25V1.75H1.75V12.25Z" fill="#CA4625" />
@@ -187,7 +191,7 @@ const Courses = () => {
                         <path d="M1.75 13.75C1.3375 13.75 0.984375 13.6031 0.690625 13.3094C0.396875 13.0156 0.25 12.6625 0.25 12.25V1.75C0.25 1.3375 0.396875 0.984375 0.690625 0.690625C0.984375 0.396875 1.3375 0.25 1.75 0.25H12.25C12.6625 0.25 13.0156 0.396875 13.3094 0.690625C13.6031 0.984375 13.75 1.3375 13.75 1.75V12.25C13.75 12.6625 13.6031 13.0156 13.3094 13.3094C13.0156 13.6031 12.6625 13.75 12.25 13.75H1.75ZM1.75 12.25H12.25V1.75H1.75V12.25Z" fill="#818184" />
                       </svg>}
                   </span>&nbsp;<span className={filters.month1 ? "label-head active-label-head" : "label-head"}>1 month</span> &nbsp;&nbsp;
-                  <span style={{ cursor: 'pointer' }} onClick={(event) => { event.stopPropagation(); setFilters({ ...filters, month2: !filters.month2 }) }}>
+                  <span style={{ cursor: 'pointer' }} onClick={() => { setFilters({ ...filters, month2: !filters.month2 }) }}>
                     {filters.month2 ?
                       <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M5.95 10.15L11.2375 4.8625L10.1875 3.8125L5.95 8.05L3.8125 5.9125L2.7625 6.9625L5.95 10.15ZM1.75 13.75C1.3375 13.75 0.984375 13.6031 0.690625 13.3094C0.396875 13.0156 0.25 12.6625 0.25 12.25V1.75C0.25 1.3375 0.396875 0.984375 0.690625 0.690625C0.984375 0.396875 1.3375 0.25 1.75 0.25H12.25C12.6625 0.25 13.0156 0.396875 13.3094 0.690625C13.6031 0.984375 13.75 1.3375 13.75 1.75V12.25C13.75 12.6625 13.6031 13.0156 13.3094 13.3094C13.0156 13.6031 12.6625 13.75 12.25 13.75H1.75ZM1.75 12.25H12.25V1.75H1.75V12.25Z" fill="#CA4625" />
@@ -196,7 +200,7 @@ const Courses = () => {
                         <path d="M1.75 13.75C1.3375 13.75 0.984375 13.6031 0.690625 13.3094C0.396875 13.0156 0.25 12.6625 0.25 12.25V1.75C0.25 1.3375 0.396875 0.984375 0.690625 0.690625C0.984375 0.396875 1.3375 0.25 1.75 0.25H12.25C12.6625 0.25 13.0156 0.396875 13.3094 0.690625C13.6031 0.984375 13.75 1.3375 13.75 1.75V12.25C13.75 12.6625 13.6031 13.0156 13.3094 13.3094C13.0156 13.6031 12.6625 13.75 12.25 13.75H1.75ZM1.75 12.25H12.25V1.75H1.75V12.25Z" fill="#818184" />
                       </svg>}
                   </span>&nbsp;<span className={filters.month2 ? "label-head active-label-head" : "label-head"}>2 months</span>&nbsp;&nbsp;
-                  <span style={{ cursor: 'pointer' }} onClick={(event) => { event.stopPropagation(); setFilters({ ...filters, month3: !filters.month3 }) }}>
+                  <span style={{ cursor: 'pointer' }} onClick={() => { setFilters({ ...filters, month3: !filters.month3 }) }}>
                     {filters.month3 ?
                       <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M5.95 10.15L11.2375 4.8625L10.1875 3.8125L5.95 8.05L3.8125 5.9125L2.7625 6.9625L5.95 10.15ZM1.75 13.75C1.3375 13.75 0.984375 13.6031 0.690625 13.3094C0.396875 13.0156 0.25 12.6625 0.25 12.25V1.75C0.25 1.3375 0.396875 0.984375 0.690625 0.690625C0.984375 0.396875 1.3375 0.25 1.75 0.25H12.25C12.6625 0.25 13.0156 0.396875 13.3094 0.690625C13.6031 0.984375 13.75 1.3375 13.75 1.75V12.25C13.75 12.6625 13.6031 13.0156 13.3094 13.3094C13.0156 13.6031 12.6625 13.75 12.25 13.75H1.75ZM1.75 12.25H12.25V1.75H1.75V12.25Z" fill="#CA4625" />
@@ -208,7 +212,7 @@ const Courses = () => {
 
                 <div className='filter-head'>Schedule</div>
                 <div className='filter-data'>
-                  <span style={{ cursor: 'pointer' }} onClick={(event) => { event.stopPropagation(); setFilters({ ...filters, weekDays: !filters.weekDays }) }}>
+                  <span style={{ cursor: 'pointer' }} onClick={() => { setFilters({ ...filters, weekDays: !filters.weekDays }) }}>
                     {filters.weekDays ?
                       <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M5.95 10.15L11.2375 4.8625L10.1875 3.8125L5.95 8.05L3.8125 5.9125L2.7625 6.9625L5.95 10.15ZM1.75 13.75C1.3375 13.75 0.984375 13.6031 0.690625 13.3094C0.396875 13.0156 0.25 12.6625 0.25 12.25V1.75C0.25 1.3375 0.396875 0.984375 0.690625 0.690625C0.984375 0.396875 1.3375 0.25 1.75 0.25H12.25C12.6625 0.25 13.0156 0.396875 13.3094 0.690625C13.6031 0.984375 13.75 1.3375 13.75 1.75V12.25C13.75 12.6625 13.6031 13.0156 13.3094 13.3094C13.0156 13.6031 12.6625 13.75 12.25 13.75H1.75ZM1.75 12.25H12.25V1.75H1.75V12.25Z" fill="#CA4625" />
@@ -217,7 +221,7 @@ const Courses = () => {
                         <path d="M1.75 13.75C1.3375 13.75 0.984375 13.6031 0.690625 13.3094C0.396875 13.0156 0.25 12.6625 0.25 12.25V1.75C0.25 1.3375 0.396875 0.984375 0.690625 0.690625C0.984375 0.396875 1.3375 0.25 1.75 0.25H12.25C12.6625 0.25 13.0156 0.396875 13.3094 0.690625C13.6031 0.984375 13.75 1.3375 13.75 1.75V12.25C13.75 12.6625 13.6031 13.0156 13.3094 13.3094C13.0156 13.6031 12.6625 13.75 12.25 13.75H1.75ZM1.75 12.25H12.25V1.75H1.75V12.25Z" fill="#818184" />
                       </svg>}
                   </span>&nbsp;<span className={filters.weekDays ? "label-head active-label-head" : "label-head"}>Weekdays</span> &nbsp;&nbsp;
-                  <span style={{ cursor: 'pointer' }} onClick={(event) => { event.stopPropagation(); setFilters({ ...filters, weekends: !filters.weekends }) }}>
+                  <span style={{ cursor: 'pointer' }} onClick={() => { setFilters({ ...filters, weekends: !filters.weekends }) }}>
                     {filters.weekends ?
                       <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M5.95 10.15L11.2375 4.8625L10.1875 3.8125L5.95 8.05L3.8125 5.9125L2.7625 6.9625L5.95 10.15ZM1.75 13.75C1.3375 13.75 0.984375 13.6031 0.690625 13.3094C0.396875 13.0156 0.25 12.6625 0.25 12.25V1.75C0.25 1.3375 0.396875 0.984375 0.690625 0.690625C0.984375 0.396875 1.3375 0.25 1.75 0.25H12.25C12.6625 0.25 13.0156 0.396875 13.3094 0.690625C13.6031 0.984375 13.75 1.3375 13.75 1.75V12.25C13.75 12.6625 13.6031 13.0156 13.3094 13.3094C13.0156 13.6031 12.6625 13.75 12.25 13.75H1.75ZM1.75 12.25H12.25V1.75H1.75V12.25Z" fill="#CA4625" />
@@ -233,6 +237,17 @@ const Courses = () => {
               </div>}
 
           </div>
+          <div className='list-sele-filters'> {filtersToloop.map(fil => (
+            <>
+              {selectedFilters[fil.value] && <div key={fil.label}>{fil.label}
+                <span style={{ cursor: 'pointer' }} onClick={() => { setSelectedFilters({ ...selectedFilters, [fil.value]: false }); setFilters({ ...filters, [fil.value]: false }) }}>&nbsp;
+                  <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9.08341 1.73913L8.26091 0.916626L5.00008 4.17746L1.73925 0.916626L0.916748 1.73913L4.17758 4.99996L0.916748 8.26079L1.73925 9.08329L5.00008 5.82246L8.26091 9.08329L9.08341 8.26079L5.82258 4.99996L9.08341 1.73913Z" fill="#CA4625" />
+                  </svg>
+                </span></div>}
+            </>
+          ))}</div>
+
           {/* <div className="search-bar">
           <label>
             <input type={'text'} placeholder="Search Courses" />
@@ -325,6 +340,7 @@ const Courses = () => {
               pathParam={setPathParam(item.title).path}
               cardData={item.cardData}
               sliderRange={setPathParam(item.title).sliderVal}
+              selectedFilters={selectedFilters}
             />
           )
         })
