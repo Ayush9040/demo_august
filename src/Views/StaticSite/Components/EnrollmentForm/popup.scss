@@ -1,0 +1,178 @@
+.terms-container{
+    .banner-heading{
+     margin: 2rem auto 0;
+     font-size: 30px;
+     font-weight: bold;
+     width: fit-content;
+     // position: relative;
+     // top: 1rem;
+     // left: 7.5rem;
+    }
+    .bottom-line{
+     height: 4px;
+     border-radius: 50%;
+     background: linear-gradient(90deg, rgba(235, 179, 138, 0.5294117647), rgba(202, 70, 37, 0.9803921569), var(--brick-red), rgba(202, 70, 37, 0.9803921569), rgba(235, 179, 138, 0.5294117647));
+   }
+   }
+   .terms-and-conditions{
+     width: 90%;
+     margin: 2rem auto;
+     padding-bottom: 3rem;
+     h2{
+       font-size: 22px;
+       font-weight: bolder;
+       margin-top: 0.5rem;
+       margin-bottom: 1rem;
+     }
+     p{
+       font-size: 18px;
+       font-weight: 500;
+       margin-bottom: 2rem;
+     }
+     .t-c-notes{
+       margin-top: 5rem;
+     }
+   }
+   .dining-hall{
+     padding-left: 3rem;
+   }
+   @media (max-width:900px){
+     .terms-container {
+       .banner-heading {
+         font-size: 22px;
+       }
+     }
+     .terms-and-conditions{
+       
+         h2{
+           font-size: 18px;
+         }
+         p{
+           font-size: 14px;
+         }
+       
+     }
+   }
+   
+   .ReactModalPortal .ReactModal__Overlay {
+     background-color: rgba(0, 0, 0, 0.5) !important;
+     
+   }
+   
+   .check_date .item-label:has(.item-input:checked) {
+     background-color: #FFF8F6 !important;
+     box-shadow: 0 0 0 2px #CA4625 inset !important;
+   }
+   
+   .check_date .item-label:hover {
+     background-color: #FFF8F6 !important;
+   }
+   
+   .before_date_select {
+     background-color: rgba(202, 70, 37, 0.5) !important;
+     cursor: pointer;
+     color: #fff !important;
+   }
+   
+   .after_date_select {
+     font-size: 14px;
+     font-weight: 500;
+     color: #fff;
+     background-color: rgba(202, 70, 37, 1);
+     cursor: pointer;
+   }
+   
+   .check_date .item-label {
+     display: flex;
+     justify-content: center !important;
+   }
+   
+   .item_padding {
+     padding-top: 5px;
+   }
+
+   .upcoming_dates_heading {
+    font-size: 18px;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.5);
+   }
+
+   .upcoming_sub_heading {
+    font-size: 14px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.5);
+   }
+
+   .edit_stu_heading {
+    font-size: 20px;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 1);
+   }
+
+   .inp-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    justify-content: space-between;
+    width: 47%;
+   }
+
+   .edit_popup {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 28px;
+   }
+
+   .edit_popup .form-content form label {
+    display: flex;
+    // align-items: center;
+    padding: 8px 16px;
+    border: 1px solid rgba(157, 157, 157, 1);
+    border-radius: 30px;
+    width: 100%;
+    margin: 0px; 
+    height: 40px;
+}
+
+.inp-label {
+    color: rgba(0, 0, 0, 1);
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.karo {
+    display: none;
+}
+
+.karo + div {
+    display: none;
+}
+
+.edit_popup .css-1072muf-control {
+    height: 40px;
+    margin-top: 0;
+    margin-left: 0;
+    padding: 0px !important;
+}
+
+.edit_popup .form-content form label input {
+        padding-left: 0px; 
+        font-size: 14px;
+        font-weight: 400;
+        border: none;
+        width: 100%;
+         text-align: left;
+}
+
+.address_1_fixes div {
+    display: flex;
+    gap: 8px;
+    flex-direction: column;
+}
+
+.edit_popup .css-1dimb5e-singleValue {
+    font-size: 14px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 1);
+}

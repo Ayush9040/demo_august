@@ -3,6 +3,8 @@ import { useState } from 'react'
 import { upload } from '../../assets/icons/icon'
 import { uploadFile } from '../../../../helpers/OssHelper'
 import { useLocation } from 'react-router-dom';
+// import DatesPopUp from '../TermsandCondition/DatesPopUp';
+import UpcomingDates from './UpcomingDates';
 import './formstyles.scss'
 
 
@@ -19,13 +21,15 @@ const CourseDetails = ({
   setEmpty,
   courseFee,
   setCourseFee,
-  handleResidential
+  handleResidential,
+  formattedDates
 }) => {
 
   const [optionsCount, setOptionsCount] = useState(0);
   const location = useLocation();
   const isSatsangPage = location.pathname === '/enrollment/satsang';
   const [setDate, setSetDate ] = useState(false);
+  const [priceSelect, setPriceSelect] = useState(0);
 
   useEffect(() => {
     if (isSatsangPage) {
@@ -86,6 +90,7 @@ const CourseDetails = ({
   const [certificateName, setcertificateName] = useState('')
   const [selectedMode, setSelectedMode] = useState('');
   const [selectedOption, setSelectedOption] = useState('');
+  const [openDates, setOpenDates] = useState(false)
 
   
 
@@ -121,6 +126,14 @@ const CourseDetails = ({
       setEmpty(0)
     } else if (changeValue === 'IMAGE') setCourseAsset1(url)
   }
+
+  const handleOpen = () => {
+    setOpenDates(true);
+  }
+
+  const handleClose = () => {
+    setOpenDates(false);
+  };
 
 
   // const updatedFees = (course, mode) => {
@@ -340,7 +353,7 @@ const CourseDetails = ({
   };
 
 
-
+console.log("CD from formatted Addrss ", formattedDates)
 
 
   return (
@@ -376,48 +389,24 @@ const CourseDetails = ({
               </div>
             </div>
           </div>
-          { !isSatsangPage && (
-            <>
 
-<div className="course-details-text">
-            Please select one of these options*
+
+          { !isSatsangPage && (
+            <div className='wrapper_date_and_course'>
+
+            <div className='course_format_wrapper'>
+
+
+            <div className='details_format_date'>
+
+
+            <div className="label_format_course">
+            Select Course Format
           </div>
           {console.log('CC', currentCourse)}
           <form className="residential-form check_course">
             <div className="last_radio_button ">
               {shouldShowOfflineOption() &&
-                //  (
-                //   <label htmlFor="" className="course_details_text" >
-                //   <input
-                //     type="radio"
-                //     name="mode"
-                //     value="OFFLINE"
-                //     disabled={currentCourse.onCampus === false}
-                //     checked={formData.mode === 'OFFLINE'}
-                //     style={
-                //       currentCourse.onCampus === false
-                //         ? {
-                //           background:
-                //               'url(https://ecom-static-site-prod.s3.ap-south-1.amazonaws.com/icons/icons8-multiply-24.png)',
-                //         }
-                //         : {}
-                //     }
-                //     onChange={(e) => {
-                //       if (e.target.checked) {
-                //         setFormData({
-                //           ...formData,
-                //           mode: e.target.value,
-                //         })
-                //         setEmpty(0)
-                //         setCourseFee(currentCourse?.fees?.onlineFee)
-                //         // setCourseFee(updatedFees( currentCourse?.key,'OFFLINE' ))
-                //       }
-                //     }}
-                //   />
-                //   &nbsp;Offline 
-                // </label>
-
-                // )
                 (
                   <label class="item-label">
                     <input class="item-input"
@@ -430,6 +419,7 @@ const CourseDetails = ({
                       onChange={(e) => {
                         handleResidential(false);
                         setSelectedOption('OFFLINE')
+                        setPriceSelect(currentCourse?.fees?.onlineFee)
                         if (e.target.checked) {
                           setFormData({
                             ...formData,
@@ -441,11 +431,11 @@ const CourseDetails = ({
                         }
                       }} />
                     <span class="item-info">
-                      <span id="delivery-0-name" class="item-name">OFFLINE</span>
+                      <span id="delivery-0-name" class="item-name">OFFLINE - </span>
                       <br />
                       {/* <small id="delivery-0-shipping" class="item-shipping">5–10 business days</small> */}
                     </span>
-                    <strong id="delivery-0-price" class="item-price">&#8377;{currentCourse?.fees?.onlineFee}</strong>
+                    <strong id="delivery-0-price" class="item-price">INR {currentCourse?.fees?.onlineFee}</strong>
                   </label>
 
                 )
@@ -494,6 +484,7 @@ const CourseDetails = ({
                     onChange={(e) => {
                       handleResidential(false);
                       setSelectedOption('ONLINE')
+                      setPriceSelect(currentCourse?.fees?.onlineFee)
                       if (e.target.checked) {
                         setFormData({
                           ...formData,
@@ -505,11 +496,11 @@ const CourseDetails = ({
                       }
                     }} />
                   <span class="item-info">
-                    <span id="delivery-0-name" class="item-name">Online</span>
+                    <span id="delivery-0-name" class="item-name">Online - </span>
                     <br />
                     {/* <small id="delivery-0-shipping" class="item-shipping">5–10 business days</small> */}
                   </span>
-                  <strong id="delivery-0-price" class="item-price">&#8377;{currentCourse?.fees?.onlineFee}</strong>
+                  <strong id="delivery-0-price" class="item-price"> INR {currentCourse?.fees?.onlineFee}</strong>
                 </label>
               )}
             </div>
@@ -564,6 +555,7 @@ const CourseDetails = ({
                     onChange={(e) => {
                       handleResidential(false);
                       setSelectedOption('NONRESIDENTIAL')
+                      setPriceSelect(currentCourse?.fees?.offlineFee?.nonResidentialFee)
                       if (e.target.checked) {
                         setFormData({
                           ...formData,
@@ -579,11 +571,11 @@ const CourseDetails = ({
                     }}
                   />
                   <span class="item-info">
-                    <span id="delivery-0-name" class="item-name">Oncampus (Without Residence)</span>
+                    <span id="delivery-0-name" class="item-name">On-Campus (without residence)  - </span>
                     <br />
                     {/* <small id="delivery-0-shipping" class="item-shipping">5–10 business days</small> */}
                   </span>
-                  <strong id="delivery-0-price" class="item-price"> &#8377;{currentCourse?.fees?.offlineFee?.nonResidentialFee}</strong>
+                  <strong id="delivery-0-price" class="item-price"> INR {currentCourse?.fees?.offlineFee?.nonResidentialFee}</strong>
                 </label>
               )}
 
@@ -644,6 +636,7 @@ const CourseDetails = ({
                     onChange={(e) => {
                       setSelectedOption('RESIDENTIAL');
                       handleResidential(true);
+                      setPriceSelect(currentCourse?.fees?.offlineFee?.residentialFee)
                       if (e.target.checked) {
                         setFormData({
                           ...formData,
@@ -661,11 +654,11 @@ const CourseDetails = ({
                     }}
                   />
                   <span class="item-info">
-                    <span id="delivery-0-name" class="item-name">Oncampus - (Residential)<br></br>Triple Sharing Basis</span>
+                    <span id="delivery-0-name" class="item-name">On-Campus (residence - triple sharing) - </span>
                     <br />
                     {/* <small id="delivery-0-shipping" class="item-shipping">5–10 business days</small> */}
                   </span>
-                  <strong id="delivery-0-price" class="item-price">&#8377;{currentCourse?.fees?.offlineFee?.residentialFee}</strong>
+                  <strong id="delivery-0-price" class="item-price">INR {currentCourse?.fees?.offlineFee?.residentialFee}</strong>
                   
                 </label>
                 
@@ -679,8 +672,99 @@ const CourseDetails = ({
             
 
           </form>
+
+
+          <div className='dates_enroll_wrapper'>
+
+          <div className="label_format_course">
+            Select Course Start Date 
+          </div>
+
+          <form className="residential-form check_course check_date_2" style={{ width: '100%'}}>
+            <div className="last_radio_button " style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
+
+                {
+                    formattedDates?.slice(0, 3).map((item, index) => {
+                        return (
+                            <div key={index} style={{ width: '48.9%' }}>
+                                <div className='wrapper_center container_date_enroll'>
+                                <label class="item-label item_date" style={{ width: '100%', height: '100%', borderRadius: '25px' }}>
+                            <input class="item-input"
+                              type="radio" name="mode"
+                              value={item.label}
+                              aria-labelledby="delivery-0-name"
+                              aria-describedby="delivery-0-shipping delivery-0-price"
+                              // onChange={() => handleDateSelect(item)}
+                        
+                              />
+                            <span class="item-info item_desc">
+                              <span id="delivery-0-name" class="item-name date_info">
+                                <span className='style_dates'>{item.label}</span></span>
+                              <br />    
+                            </span>
+                            
+                            <strong id="delivery-0-price" class="item-price"></strong>
+                          </label>
+                                </div>
+                            </div>
+                        )
+                    })
+                }
+
+                <div className='upcoming_dates'>
+                  <span onClick={handleOpen}>See all upcoming dates
+                     
+                     </span>
+                     <img src='/images/upcoming_dates_arrow.svg' alt='' loading='lazy' />
+                </div>
+
+                {openDates && (
+              // <MessageModal 
+              //   message={<TermsCondition />} 
+              //   closePopup={handleClose} 
+              //   type="Terms and Conditions" // You can pass any other props as needed
+              // />
+              // <TermsAndConditionsModal />
+              <UpcomingDates isShippingModalOpen={handleOpen} setIsShipppingModalOpen={handleClose} pageDate={formattedDates} />
+            )}
+              
+                
+                 
+
+              
+            </div>
+
             
-            </>
+
+          </form>
+
+          </div>
+
+
+            </div>
+
+            <div className='img_wrapper_date_format'>
+            <img src='/images/yoga_img.png' alt='' loading='lazy' />
+            </div>
+
+            </div>
+
+            <div className='fees_wrapper'>
+              <div className='fees_show'>
+                <div className='fees_left_wrapper'>
+                <img src='/images/fees_left.png' alt='' loading='lazy' />
+                </div>
+                <div className=''>
+                  <span className='fees_label'>Fees : </span>
+                  <span className='price_select'>{priceSelect}</span>
+                </div>
+                <div className='fees_left_wrapper'>
+                <img src='/images/fees_right.png' alt='' loading='lazy' />
+                </div>
+              </div>
+            </div>
+            
+            </div>
           )}
 
           

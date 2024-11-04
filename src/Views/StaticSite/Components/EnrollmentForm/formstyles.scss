@@ -648,8 +648,13 @@
 
   .grid_box {
     display: grid;
-    grid-template-columns: 60% 40%;
+    grid-template-columns: 65% 35%;
     margin: 3rem;
+    background-size: cover;
+        background-position: 72% 72%;
+        background-repeat: no-repeat;
+        background-size: 490px;
+        background-image: url('../../../../../public/images/bg_lotus_enrollment.png');
 
     form {
       label {
@@ -799,10 +804,10 @@
       }
 
       .terms {
-        margin-left: 15px;
-        margin-bottom: 15px;
-        text-align: center;
-        font-size: 12px;
+        // margin-left: 15px;
+        // margin-bottom: 15px;
+        // text-align: center;
+        // font-size: 12px;
 
         label {
           input {
@@ -2061,7 +2066,211 @@ input[type='radio']:checked::before {
   background-color: #fff;
   border: none;
   box-shadow: 0px 11.58px 23px 0px rgba(0, 0, 0, 0.04);
-  display: flex;
+  // display: flex;
   // align-items: center;
   padding: 20px;
+  background-color: rgba(251, 249, 249, 1);
+}
+
+.personal_info_wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.personal_info_wrapper .details_newName {
+  font-size: 16px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 1);
+}
+
+.details_desc_name_info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.fields_alignment {
+  margin-top: 16px;
+}
+
+.fields_alignment_bottom {
+  margin-bottom: 8px;
+}
+
+.wrapper_date_and_course {
+  width: 100%;
+  background-color: #fff;
+  margin-top: 28px;
+  border-radius: 20px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+.course_format_wrapper {
+  display: flex;
+  padding: 22px 24px;
+  gap: 40px;
+}
+
+.details_format_date {
+  width: 70%;
+}
+
+.img_wrapper_date_format {
+  width: 30%;
+}
+
+.img_wrapper_date_format img {
+  width: 100%;
+  height: 100%;
+  padding-top: 53%;
+}
+
+.label_format_course {
+  color: rgba(0, 0, 0, 1);
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.details_format_date .check_course {
+  width: 100%;
+}
+
+.details_format_date .check_course .item-label {
+  border-radius: 25px;
+  justify-content: center;
+}
+
+.dates_enroll_wrapper {
+  margin-top: 32px;
+}
+
+.container_date_enroll .item_date {
+  flex-direction: column !important;
+  padding: 2px 16px !important;
+  gap: 4px !important;
+}
+
+.item-name {
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(96, 96, 96, 0.5);
+}
+
+.item-price {
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(96, 96, 96, 0.5);
+}
+
+.check_course .item-label {
+  padding: 8px 0.5em;
+}
+
+.check_course .item-input:checked ~ .item-info .item-name {
+  color: #fff;
+}
+
+.check_course .item-input:checked ~ .item-price {
+  color: #fff;
+}
+
+.check_course .item-label:has(.item-input:checked) {
+  background-color: rgba(202, 70, 37, 1);
+  box-shadow: 0 0 0 2px rgba(202, 70, 37, 1) inset;
+}
+
+.check_date_2 .item-label:has(.item-input:checked) {
+  background-color: rgba(202, 70, 37, 1) !important;
+  box-shadow: 0 0 0 2px #CA4625 inset !important;
+}
+
+.check_date_2 .item-input:checked ~ .item-info .item-name .style_dates {
+  color: #fff !important;
+}
+
+.fees_wrapper {
+  // margin-top: 32px;
+  width: 100%;
+  // background-color: rgba(255, 243, 240, 1);
+  // height: 71px;
+  // padding: 22px 24px;
+}
+
+.fees_show {
+  margin: 22px 24px;
+  background-color: rgba(255, 243, 240, 1);
+  height: 71px;
+  border-radius: 16px;
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0px;
+  align-items: center;
+}
+
+.fees_left_wrapper {
+  width: 105px;
+  height: 45px;
+}
+
+.fees_left_wrapper img {
+  width: 100%;
+  height: 100%;
+}
+
+.fees_label {
+  color: rgba(0, 0, 0, 1);
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.price_select {
+  font-size: 24px;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 1);
+}
+
+.bottom_container_btn {
+  background-color: #fff;
+  margin-top: -47px;
+  padding: 22px;
+  margin-left: 15px;
+  margin-right: 25px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.terms label {
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 1);
+}
+
+.button_box .next_button {
+  cursor: pointer;
+  border: 1px solid rgba(202, 70, 37, 1);
+  height: 4.5rem;
+  width: 24rem;
+  color: #fff;
+  border-radius: 8px;
+  font-size: 1.8rem;
+  font-weight: 900;
+  margin-left: 3%;
+  background-color: rgba(202, 70, 37, 1);
+}
+
+.upcoming_dates {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.upcoming_dates span {
+  color: rgba(202, 70, 37, 1);
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: underline;
 }
