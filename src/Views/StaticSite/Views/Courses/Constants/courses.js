@@ -14284,7 +14284,7 @@ const certificate = {
     dates: [
       // '5th Aug to 26th Sep 2024· Morning', 
       // '7th Aug to 28th Sep 2024· Evening',
-      '6th November 2024 to 28th December 2024· Evening',
+      // '6th November 2024 to 28th December 2024· Evening',
       '11th Nov 2024 to 2nd Jan 2025· Morning',
       '7th May to 28th June 2025· Evening',
       '3rd February to 27th March 2025· Morning',
