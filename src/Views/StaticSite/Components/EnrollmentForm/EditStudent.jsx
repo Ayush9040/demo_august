@@ -16,7 +16,7 @@ const customStyles = {
     transform: 'translate(-50%, -50%)',
     height: '75%',
     width: '40%',
-    borderRadius: '4rem',
+    borderRadius: '20px',
     border: '1px solid black',
     overflowY: 'auto',
     scrollbarWidth: 'none',
@@ -62,7 +62,7 @@ const EditStudent = ({ isShippingModalOpen, setIsShipppingModalOpen, formData, s
           
           </div>
           <div className="modal-content" style={{ gridTemplateColumns: '1fr', marginTop: '0rem' }}>
-            {<EditStudentView formData={formData} setFormData={setFormData} setEmpty={setEmpty} empty={empty} currentCourse={currentCourse} dateDurationChange={dateDurationChange} />}
+            {<EditStudentView formData={formData} setFormData={setFormData} setEmpty={setEmpty} empty={empty} currentCourse={currentCourse} dateDurationChange={dateDurationChange} closeModal={closeModal} />}
             {/* <div>
               <input
                 className="modal-input"

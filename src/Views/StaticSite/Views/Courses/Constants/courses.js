@@ -12658,6 +12658,11 @@ const classes = {
     courseCategory: 'Self Help',
     courseSubType: 'Regular Asana Classes',
     newName: 'Asana Regular Classes for Women',
+    timings:[
+      {
+        day: 'Monday, Tuesday, Thursday, Friday',
+      }
+    ],
     days: [
       'Monday',
       'Tuesday',

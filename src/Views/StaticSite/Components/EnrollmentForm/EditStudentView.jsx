@@ -27,11 +27,12 @@ import PhoneInput from 'react-phone-number-input';
 const libraries = ['places'];
 const mapKey = 'AIzaSyCArozsi_1fWJgSwDFDAoA_6Q5zLZ7NYyA'; 
 
-const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse, dateDurationChange }) => {
+const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse, dateDurationChange, closeModal }) => {
 
     const [selectedDate, setSelectedDate] = useState(null);
     const { isLoggedIn } = useSelector((state) => state.auth)
     const [courseMode, setCourseMode] = useState('');
+    const [activeSave, setActive] = useState(false)
     const navigate = useNavigate();
 
     const [formData2, setFormData2] = useState({
@@ -64,6 +65,12 @@ const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse
   const emailFromRedux = useSelector((state) => state.auth.user.data?.email);
   const nationalityFromRedux = useSelector((state) => state.auth.user.data?.nationality);
   const dailCode = useSelector((state) => state.auth.user.data?.dialCode);
+  const lastnameFromRedux = useSelector((state) => state.auth.user.data?.lastName);
+  const addressLine1 = useSelector((state) => state.auth.user.data?.addressLine1);
+  const addressLine2 = useSelector((state) => state.auth.user.data?.addressLine2);
+  const pincodeFromRedux = useSelector((state) => state.auth.user.data?.pincode);
+  const everything = useSelector((state) => state.auth.user.data);
+  console.log('everything ', everything);
   // console.log('phoneNumberFromRedux ', phoneNumberFromRedux);
   // console.log('countryFromRedux ', countryFromRedux);
   // console.log('stateFromRedux ', stateFromRedux);
@@ -169,6 +176,11 @@ const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse
     
   }, [countryFromRedux, stateFromRedux, cityFromRedux, setFormData2, setValues]);
 
+  const genderOptions = [
+    { value: 'MALE', label: 'Male' },
+    { value: 'FEMALE', label: 'Female' }
+  ];
+
   useEffect(() => {
     if (genderFromRedux) {
       const upperCaseGender = genderFromRedux.toUpperCase(); 
@@ -187,7 +199,21 @@ const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse
         setFormData2((prev) => ({ ...prev, email: emailFromRedux }));
         
       }
-  }, [genderFromRedux, nationalityFromRedux, nameFromRedux, emailFromRedux, setFormData2]);
+      if (lastnameFromRedux) {
+        // console.log('cityFromRedux inside State ', cityFromRedux);
+        setFormData2((prev) => ({ ...prev, lname: lastnameFromRedux }));
+        
+      }
+      if (addressLine1) {
+        setFormData2((prev) => ({ ...prev, address1: addressLine1 }));
+      }
+      if (addressLine2) {
+        setFormData2((prev) => ({ ...prev, address2: addressLine2 }));
+      }
+      if (pincodeFromRedux) {
+        setFormData2((prev) => ({ ...prev, pincode: pincodeFromRedux }));
+      }
+  }, [genderFromRedux, nationalityFromRedux, nameFromRedux, emailFromRedux, lastnameFromRedux, addressLine1, addressLine2, pincodeFromRedux, setFormData2]);
 
   useEffect(() => {
     if (cityFromRedux) {
@@ -723,11 +749,55 @@ const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse
     console.log("formData 2 ", formData2)
     console.log('formData from Save ', formData)
 
-     // Update formData with the values from formData2, keeping the existing values
-     setFormData(prevFormData => ({
+    if (
+      formData2.name === '' ||
+      formData2.name === undefined ||
+      formData2.name === null
+    ) {
+      // alert("1")
+      setEmpty(1)
+    } else if (formData2.lname === '' ||
+      formData2.lname === undefined ||
+      formData2.lname === null){
+        setEmpty(7);
+    } else if (formData2.email === '' || !validateEmail(formData2.email) || formData2.email === undefined ||
+      formData2.email === null) {
+        // alert("2")
+      setEmpty(2)
+    } else if (
+      formData2.phone === '' ||
+      formData2.phone?.length < 6 ||
+      formData2.phone?.length > 15 ||
+      formData2.phone === undefined
+    ) {
+      // alert("3")
+      setEmpty(3)
+    } else if (formData2.address1 === '') {
+      // alert("4")
+      setEmpty(4)
+    }
+    else if (formData2.country === '') {
+      // alert("5")
+      setEmpty(5)
+    }
+    else if (formData2.pincode === '') {
+      // alert("6")
+      setEmpty(8)
+    } else if (formData2.gender === '') {
+      // alert("7")
+      setEmpty(11)
+    }
+    else {
+      
+      setFormData(prevFormData => ({
         ...prevFormData,
         ...formData2
     }));
+    closeModal();
+    }
+
+     // Update formData with the values from formData2, keeping the existing values
+     
 
     console.log('formData from Save after updating ', formData)
 
@@ -764,10 +834,13 @@ const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse
                 placeholder="First Name*"
                 form={formData2}
                 setField={setFormData2}
+                onChange= {(e) => {
+                  setEnableBtn(false)
+                }}
                 keyName="name"
                 errorCheck={setEmpty}
               />
-              {empty === 1 && <small class="name_err"> Please enter your name</small>}
+              {empty === 1 && <small class="name_err" style={{position: 'absolute', right: '0', color: 'red'}}> Please enter your name</small>}
             </div>
       </div>
 
@@ -780,16 +853,16 @@ const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse
                 placeholder="Last Name*"
                 form={formData2}
                 setField={setFormData2}
-                keyName="name"
+                keyName="lname"
                 errorCheck={setEmpty}
               />
-              {empty === 1 && <small class="name_err"> Please enter your name</small>}
+              {empty === 7 && <small class="name_err" style={{position: 'absolute', right: '0', color: 'red'}}> Please enter your last name</small>}
             </div>
       </div>
 
       <div className='inp-group'>
             <div className='inp-label'>Mobile Number <span>*</span></div>
-            <div className="form_error">
+            <div className="form_error phone_inp_fixes">
               <PhoneInput
                 placeholder="Enter phone number*"
                 defaultCountry="IN"
@@ -816,9 +889,9 @@ const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse
       ) : ((empty === 3) ? <small class="phone_error"> Please enter a valid phone number</small> : " ") } */}
 
               {validationErrors?.length > 0 ? (
-                <div className="created_phone_err">Invalid Number</div>
+                <div className="created_phone_err" style={{position: 'absolute', right: '0', bottom: '-8px'}}>Invalid Number</div>
               ) : (empty === 3 && (!formData2.phone || (formData2.phone === '')) ? (
-                <small className="phone_error">Please enter a valid phone number</small>
+                <small className="phone_error" style={{position: 'absolute', right: '0', bottom: '-12px', color: 'red'}}>Please enter a valid phone number</small>
               ) : " ")}
               {/* {console.log('ve', validationErrors)} */}
 
@@ -837,7 +910,7 @@ const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse
                 keyName="email"
                 errorCheck={setEmpty}
               />
-              {empty === 2 && <small class="name_err"> Please enter a valid email</small>}
+              {empty === 2 && <small class="name_err" style={{position: 'absolute', right: '0', color: 'red'}}> Please enter a valid email</small>}
 
 
 
@@ -866,7 +939,7 @@ const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse
             keyName="address1"
             errorCheck={setEmpty}
           />
-          {empty === 4 && <p>Please enter your address</p>}
+          {empty === 4 && <p style={{position: 'absolute', right: '0', color: 'red', fontSize: '10px', bottom: '-15px'}}>Please enter your address</p>}
         </div>
       </>
         
@@ -960,7 +1033,7 @@ const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse
           keyName="pincode"
           errorCheck={setEmpty}
         />
-        {empty === 8 && <small>Please enter your pincode</small>}
+        {empty === 8 && <small style={{position: 'absolute', right: '0', bottom: '-18px', color: 'red'}}>Please enter your pincode</small>}
       </div>
       </div>
     </LoadScript>
@@ -1111,8 +1184,57 @@ const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse
           </div>
           </div> */}
 
+<div className="personal_gender inp-group">
+  <span className="gender-text inp-label">Gender*</span>
+  <div className="gender form_error">
+    <Select
+      styles={customStyles}  // Define any custom styles if needed
+      id="gender"
+      name="gender"
+      placeholder="Select Gender"
+      options={genderOptions}
+      value={genderOptions.find(option => option.value === formData2.gender)}
+      onChange={(selectedOption) => {
+        setFormData2(prev => ({ ...prev, gender: selectedOption.value }));
+        setEmpty(0);
+      }}
+    />
+  </div>
+  {empty === 11 && (
+    <div style={{ marginTop: '0.5rem', fontSize: '12px', color: 'red' }}>
+      Please select one option
+    </div>
+  )}
+</div>
 
-            <div className="personal_gender">
+{/* <div className="personal_gender inp-group">
+  <span className="gender-text inp-label">Gender*</span>
+  <div className="gender form_error">
+    <select
+      className="gender_select"
+      value={formData2.gender}
+      onChange={(e) => {
+        setFormData2({ ...formData2, gender: e.target.value });
+        setEmpty(0);
+      }}
+    >
+      <option value="" disabled>
+        Select Gender
+      </option>
+      <option value="MALE">Male</option>
+      <option value="FEMALE">Female</option>
+    </select>
+  </div>
+  {empty === 11 && (
+    <div style={{ marginTop: '0.5rem', fontSize: '12px', color: 'red' }}>
+      Please select one option
+    </div>
+  )}
+</div> */}
+
+
+
+{/* <div className="personal_gender">
               <span className="gender-text">Gender*</span>
               <div className="gender form_error">
                 <label className="gender_radio">
@@ -1151,7 +1273,7 @@ const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse
 
               </div>
               {empty === 11 && <div style={{ marginTop: '-11rem', fontSize: '12px', float: 'right', display: 'inline-block', color: 'red' }}> Please select one option</div>}
-            </div>
+            </div> */}
 
 {/* 
             { !isSatsangPage && (

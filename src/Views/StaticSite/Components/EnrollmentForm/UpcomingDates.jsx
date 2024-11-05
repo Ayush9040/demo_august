@@ -15,17 +15,18 @@ const customStyles = {
     marginRight: '-50%',
     transform: 'translate(-50%, -50%)',
     height: '60%',
-    width: '40%',
-    borderRadius: '4rem',
-    border: '1px solid black',
+    width: '38%',
+    borderRadius: '20px',
+    // border: '1px solid black',
     overflowY: 'auto',
     scrollbarWidth: 'none',
+    padding: '15px'
   },
 }
 
 // Modal.setAppElement('#___gatsby')
 
-const UpcomingDates = ({ isShippingModalOpen, setIsShipppingModalOpen, pageDate}) => {
+const UpcomingDates = ({ isShippingModalOpen, setIsShipppingModalOpen, pageDate, setCourseDateInfo, setCourseDateSelected, setShowDefaultDate, setNotShowDate, formData, setFormData}) => {
   
   function closeModal() {
     setIsShipppingModalOpen(false)
@@ -52,7 +53,7 @@ const UpcomingDates = ({ isShippingModalOpen, setIsShipppingModalOpen, pageDate}
             </div>
 
             </div>
-            <div>
+            <div style={{width: '12px', height: '12px'}}>
             
               <span className="change-cross-svg-width" style={{cursor: 'pointer'}} onClick={closeModal}>
                 {cross}
@@ -62,7 +63,7 @@ const UpcomingDates = ({ isShippingModalOpen, setIsShipppingModalOpen, pageDate}
           
           </div>
           <div className="modal-content" style={{ gridTemplateColumns: '1fr', marginTop: '0rem' }}>
-            {<UpcomingDatesView pageDate={pageDate} />}
+            {<UpcomingDatesView pageDate={pageDate} setCourseDateInfo={setCourseDateInfo} setCourseDateSelected={setCourseDateSelected} closeModal={closeModal} setShowDefaultDate={setShowDefaultDate} setNotShowDate={setNotShowDate} formData={formData} setFormData={setFormData} />}
             {/* <div>
               <input
                 className="modal-input"

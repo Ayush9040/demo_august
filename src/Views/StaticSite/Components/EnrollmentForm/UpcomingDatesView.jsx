@@ -8,7 +8,7 @@ import '../EnrollmentForm/formstyles.scss';
 import { useNavigate  } from 'react-router-dom'; 
 import { useSelector } from 'react-redux';
 
-const UpcomingDatesView = ({ pageDate }) => {
+const UpcomingDatesView = ({ pageDate, setCourseDateInfo, setCourseDateSelected, closeModal, setShowDefaultDate, setNotShowDate, formData, setFormData }) => {
 
     const [selectedDate, setSelectedDate] = useState(null);
     const { isLoggedIn } = useSelector((state) => state.auth)
@@ -47,7 +47,10 @@ const UpcomingDatesView = ({ pageDate }) => {
 
   // Handle the date selection
   const handleDateSelect = (date) => {
+    console.log('date Nowwwwwww', date)
     setSelectedDate(date);
+    // setCourseDateInfo(date);
+    
   };
 
   
@@ -70,7 +73,7 @@ const UpcomingDatesView = ({ pageDate }) => {
      
         </div> */}
       </div>
-      <form className="residential-form check_course check_date" style={{ width: '100%'}}>
+      <form className="residential-form check_course check_date popup_enroll_date" style={{ width: '100%'}}>
             <div className="last_radio_button " style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
 
                 {
@@ -84,7 +87,22 @@ const UpcomingDatesView = ({ pageDate }) => {
                               value={item}
                               aria-labelledby="delivery-0-name"
                               aria-describedby="delivery-0-shipping delivery-0-price"
-                              onChange={() => handleDateSelect(item)}
+                              onChange={(e) => {
+                                console.log('date Nowwwwwww', e.target.value)
+                                setCourseDateInfo(item.label)
+                                setCourseDateSelected(true)
+                                console.log('date Nowwwwwww', item.label)
+                                if (e.target.checked) {
+                                  setFormData({
+                                    ...formData,
+                                    sdate: item.label
+                                  })
+                                }
+                                setShowDefaultDate(false)
+                                setNotShowDate(false)
+                                handleDateSelect(item)
+                                closeModal()
+                              }}
                         
                               />
                             <span class="item-info item_desc">

@@ -71,6 +71,9 @@ const EnrollmentForm = ({
   const genderFromRedux = useSelector((state) => state.auth.user.data?.gender);
   const nationalityFromRedux = useSelector((state) => state.auth.user.data?.nationality);
   const dailCode = useSelector((state) => state.auth.user.data?.dialCode);
+  const addressLine1 = useSelector((state) => state.auth.user.data?.addressLine1);
+  const pincodeFromRedux = useSelector((state) => state.auth.user.data?.pincode);
+  console.log('pincodeFromRedux ', pincodeFromRedux)
   // console.log('phoneNumberFromRedux ', phoneNumberFromRedux);
   // console.log('countryFromRedux ', countryFromRedux);
   // console.log('stateFromRedux ', stateFromRedux);
@@ -107,6 +110,7 @@ const EnrollmentForm = ({
   const isSatsangPage = location.pathname === '/enrollment/satsang';
 
   const nameFromRedux = useSelector((state) => state.auth.user.data?.firstName);
+  const lastnameFromRedux = useSelector((state) => state.auth.user.data?.lastName);
 
   console.log("nameFromRedux from profile ", nameFromRedux);
 
@@ -181,7 +185,16 @@ const EnrollmentForm = ({
     if (nationalityFromRedux) {
       setFormData((prev) => ({ ...prev, nationality: nationalityFromRedux }));
     }
-  }, [genderFromRedux, nationalityFromRedux, setFormData]);
+    if (addressLine1) {
+      setFormData((prev) => ({ ...prev, address1: addressLine1 }));
+    }
+    if (pincodeFromRedux) {
+      setFormData((prev) => ({ ...prev, pincode: pincodeFromRedux }));
+    }
+    if (lastnameFromRedux) {
+      setFormData((prev) => ({ ...prev, lname: lastnameFromRedux }));
+    }
+  }, [genderFromRedux, nationalityFromRedux, addressLine1, pincodeFromRedux, lastnameFromRedux, setFormData]);
 
   useEffect(() => {
     if (cityFromRedux) {
@@ -1053,6 +1066,7 @@ const EnrollmentForm = ({
                 type="checkbox"
                 checked={isChecked}
                 onChange={handleCheckboxChange}
+                id='myCheckbox'
               />
               I agree and accept the 
 
@@ -1134,7 +1148,7 @@ const EnrollmentForm = ({
               <EditStudent isShippingModalOpen={handleEditOpen} setIsShipppingModalOpen={handleEditClose}  formData={formData} setFormData={setFormData} setEmpty={setEmpty} empty={empty} currentCourse={currentCourse} dateDurationChange={dateDurationChange} />
             )}
                 <div className='fields_alignment fields_alignment_bottom'>
-                  <div className='details_desc_name_info'><span className='details_duration_info'>Name</span> <span className='tenure_course'>{formData?.name}</span></div>
+                  <div className='details_desc_name_info'><span className='details_duration_info'>Name</span> <span className='tenure_course'>{`${formData?.name} ${formData?.lname}`}</span></div>
                   
                 </div>
                 <div className='details_desc_days fields_alignment_bottom'>
@@ -1150,7 +1164,7 @@ const EnrollmentForm = ({
                   
                 </div>
                 <div className='details_desc_days'> 
-                  <div className='details_desc_name_info'><span className='details_duration_info'>Address</span> <span className='tenure_course'>{`${formData?.address1}, ${formData?.address2}`}</span></div>
+                  <div className='details_desc_name_info'><span className='details_duration_info'>Address</span> <span className='tenure_course'>{`${formData?.address1}, ${formData?.state}, ${formData?.country} - ${formData?.pincode}`}</span></div>
                   
                 </div>
                 {/* {courseFee && <p className="current_fees"> {currentCourse.key === 'ma-yoga-shastra' && formData.country !== 'India' ? '$ 3950' : `₹ ${courseFee}`}</p>} */}
