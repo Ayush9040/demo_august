@@ -18,7 +18,85 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
       setAnyFilterActive(activeCoun)
     }
   }, [selectedFilters])
+  const shouldDisplayLink = (points) => {// used to display the link in UI
+    if (selectedFilters) {
+      const { online, onCampus, month1, month2, month3, weekends, weekDays } = selectedFilters;
 
+      if (!anyFilterActive) {
+        return true; // Show link if no filters are active
+      }
+
+      // Create an array to store conditions for filtering
+      const conditions = [];
+
+      if (online) {
+        conditions.push(points.online);
+      }
+      if (onCampus) {
+        conditions.push(points.onCampus);
+      }
+      if (month1) {
+        conditions.push(points.month1);
+      }
+      if (month2) {
+        conditions.push(points.month2);
+      }
+      if (month3) {
+        conditions.push(points.month3);
+      }
+      if (weekends) {
+        conditions.push(points.weekends);
+      }
+      if (weekDays) {
+        conditions.push(points.weekDays);
+      }
+
+      // Check if all active conditions are met
+      return conditions.length > 0 && conditions.every(Boolean);
+    }
+
+    return false; // In case selectedFilters is undefined
+  };
+
+  const shouldDisplayCard = (points) => {// used to display the card in UI
+    if (selectedFilters) {
+      const { online, onCampus, month1, month2, month3, weekends, weekDays } = selectedFilters;
+
+      if (!anyFilterActive) {
+        return true; // Show link if no filters are active
+      }
+
+      // Create an array to store conditions for filtering
+      const conditions = [];
+
+      if (online) {
+        conditions.push(points.online);
+      }
+      if (onCampus) {
+        conditions.push(points.onCampus);
+      }
+      if (month1) {
+        conditions.push(points?.tenure == '1 month');
+      }
+      if (month2) {
+        conditions.push(points?.tenure == '2 month');
+      }
+      if (month3) {
+        conditions.push(points?.tenure == '3 month');
+      }
+      if (weekends) {
+        conditions.push(points.weekends);
+      }
+      if (weekDays) {
+        conditions.push(points.weekDays);
+      }
+
+      // Check if all active conditions are met
+      return conditions.length > 0 && conditions.every(Boolean);
+    }
+
+    return false; // In case selectedFilters is undefined
+  };
   const content = () => {
 
     const coursesList = [
@@ -302,45 +380,6 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
       onCampus: true
     }]
 
-    const shouldDisplayLink = (points) => {// used to display the link in UI
-      if (selectedFilters) {
-        const { online, onCampus, month1, month2, month3, weekends, weekDays } = selectedFilters;
-
-        if (!anyFilterActive) {
-          return true; // Show link if no filters are active
-        }
-
-        // Create an array to store conditions for filtering
-        const conditions = [];
-
-        if (online) {
-          conditions.push(points.online);
-        }
-        if (onCampus) {
-          conditions.push(points.onCampus);
-        }
-        if (month1) {
-          conditions.push(points.month1);
-        }
-        if (month2) {
-          conditions.push(points.month2);
-        }
-        if (month3) {
-          conditions.push(points.month3);
-        }
-        if (weekends) {
-          conditions.push(points.weekends);
-        }
-        if (weekDays) {
-          conditions.push(points.weekDays);
-        }
-
-        // Check if all active conditions are met
-        return conditions.length > 0 && conditions.every(Boolean);
-      }
-
-      return false; // In case selectedFilters is undefined
-    };
 
     switch (title) {
       case 'Yoga Teacher Training Courses (YTTC)':
@@ -599,28 +638,29 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
                   item.key === 'nutri-diet'
                 ) {
                   return (
-                    <CourseCard
-                      key={i}
-                      color={selectColor(i)}
-                      index={i}
-                      courseTitle={item.title}
-                      pageName={item.key}
-                      tenure={item.tenure}
-                      courseCategory={item.courseCategory}
-                      courseSubType={item.courseSubType}
-                      onlineMode={item?.onlineInfo?.courseMode}
-                      residentialMode={item?.residentialInfo?.courseMode}
-                      nonResidentialMode={item?.nonResidentialInfo?.courseMode}
-                      residentialLocation={item?.residentialInfo?.residentialMode}
-                      nonResidentialLocation={item?.nonResidentialInfo?.nonResidentialMode}
-                      courseType={item?.courseType}
-                      language={item?.language}
-                      description={item.metaDescription}
-                      path={item.key}
-                      img={item.cardImage}
-                      rating={item.rating}
-                      dates={item.dates}
-                    />
+                    shouldDisplayCard(item) && (
+                      <CourseCard
+                        key={i}
+                        color={selectColor(i)}
+                        index={i}
+                        courseTitle={item.title}
+                        pageName={item.key}
+                        tenure={item.tenure}
+                        courseCategory={item.courseCategory}
+                        courseSubType={item.courseSubType}
+                        onlineMode={item?.onlineInfo?.courseMode}
+                        residentialMode={item?.residentialInfo?.courseMode}
+                        nonResidentialMode={item?.nonResidentialInfo?.courseMode}
+                        residentialLocation={item?.residentialInfo?.residentialMode}
+                        nonResidentialLocation={item?.nonResidentialInfo?.nonResidentialMode}
+                        courseType={item?.courseType}
+                        language={item?.language}
+                        description={item.metaDescription}
+                        path={item.key}
+                        img={item.cardImage}
+                        rating={item.rating}
+                        dates={item.dates}
+                      />)
                   )
                 }
                 return
@@ -629,35 +669,36 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
             data.map((item, i) => {
               if (i < 3) {
                 return (
-                  <CourseCard
-                    key={i}
-                    color={item.colorCode}
-                    index={i}
-                    courseTitle={item.title}
-                    description={item.metaDescription}
-                    path={item.key}
-                    img={item.cardImage}
-                    rating={item.rating}
-                    dates={item.dates}
-                    fees={item?.fees}
-                    timing={item?.timing}
-                    tenure={item?.tenure}
-                    pageName={item?.key}
-                    courseCategory={item?.courseCategory}
-                    courseSubType={item?.courseSubType}
-                    onlineMode={item?.onlineInfo?.courseMode}
-                    residentialMode={item?.residentialInfo?.courseMode}
-                    nonResidentialMode={item?.nonResidentialInfo?.courseMode}
-                    residentialLocation={item?.residentialInfo?.residentialMode}
-                    nonResidentialLocation={item?.nonResidentialInfo?.nonResidentialMode}
-                    courseType={item?.courseType}
-                    language={item?.language}
-                    category={item?.category}
-                    batch={item?.batch}
-                    nonResidential={item?.nonResidential}
-                    residential={item?.residential}
-                    online={item?.online}
-                  />
+                  shouldDisplayCard(item) && (
+                    <CourseCard
+                      key={i}
+                      color={item.colorCode}
+                      index={i}
+                      courseTitle={item.title}
+                      description={item.metaDescription}
+                      path={item.key}
+                      img={item.cardImage}
+                      rating={item.rating}
+                      dates={item.dates}
+                      fees={item?.fees}
+                      timing={item?.timing}
+                      tenure={item?.tenure}
+                      pageName={item?.key}
+                      courseCategory={item?.courseCategory}
+                      courseSubType={item?.courseSubType}
+                      onlineMode={item?.onlineInfo?.courseMode}
+                      residentialMode={item?.residentialInfo?.courseMode}
+                      nonResidentialMode={item?.nonResidentialInfo?.courseMode}
+                      residentialLocation={item?.residentialInfo?.residentialMode}
+                      nonResidentialLocation={item?.nonResidentialInfo?.nonResidentialMode}
+                      courseType={item?.courseType}
+                      language={item?.language}
+                      category={item?.category}
+                      batch={item?.batch}
+                      nonResidential={item?.nonResidential}
+                      residential={item?.residential}
+                      online={item?.online}
+                    />)
                 )
               }
               return
