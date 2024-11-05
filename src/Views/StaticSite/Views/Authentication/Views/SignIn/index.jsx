@@ -248,6 +248,7 @@ const SignIn = () => {
   const [hideVerify, setHideVerify] = useState(false);
   const [isCountryContainer, SetIsCountryContainer] = useState(false);
   const [errorMessage, setErrorMessage] = useState()
+  const [rawAddress1, setRawAddress1] = useState()
   const [formData, setFormData] = useState({
     phoneNumber: '',
     dialCode: '91',
@@ -394,8 +395,9 @@ const SignIn = () => {
 
 
       const country = countryComponent ? countryComponent.long_name : '';
-      const state = stateComponent ? stateComponent.long_name : '';
+      
       const city = cityComponent ? cityComponent.long_name : '';
+      const state = stateComponent ? stateComponent.long_name : city;//if state not there then take locality
       const pincode = postalCodeComponent ? postalCodeComponent.long_name : '';
       const formattedAddress = place.formatted_address || '';
       const name = nameComponent ? nameComponent : '';
@@ -441,13 +443,14 @@ const SignIn = () => {
 
       setFormData((prev) => ({
         ...prev,
-        address1: address1 + (address2 ? `, ${address2}` : ''),
+        address1: address1 + (address2 ? `, ${address2}` : '') + (city ? `, ${city}` : '') + (state ? `, ${state}` : '') + (country ? `, ${country}` : '') + (pincode ? `, ${pincode}` : ''),
         // address2: address2,
         country,
         state,
         city,
         pincode,
       }));
+      setRawAddress1(address1 + (address2 ? `, ${address2}` : ''))//to pass to the API
       setEmpty(address ? 0 : 4);
 
       const selectedCountry = getUpdatedCountries.find((option) => option.label === country);
@@ -718,7 +721,7 @@ const SignIn = () => {
           delete payload.address1;
           delete payload.address2;
           payload['gender'] = userDetails?.gender.value;
-          payload['addressLine1'] = userDetails?.address1;
+          payload['addressLine1'] = rawAddress1;//userDetails?.address1;
           payload['addressLine2'] = userDetails?.address2;
           payload['country'] = values?.country?.label;
           payload['city'] = values?.city?.label;
@@ -881,7 +884,7 @@ const SignIn = () => {
         delete payload.address1;
         delete payload.address2;
         payload['gender'] = userDetails?.gender.value;
-        payload['addressLine1'] = userDetails?.address1;
+        payload['addressLine1'] = rawAddress1; userDetails?.address1;
         payload['addressLine2'] = userDetails?.address2;
         payload['country'] = values?.country?.label;
         payload['city'] = values?.city?.label;
@@ -1691,7 +1694,7 @@ const SignIn = () => {
             {
               (pageIndex == '3' || pageIndex == '4') && <>
                 <div className='header header-3'>Namaste 🙏 Please Fill Your Details</div>
-                <div className='sub-header sub-header-3 wish-text' style={{ maxWidth: '430px' }}>Become a Part of The Yoga Institute Family & Sign-up for you’re preferred course</div>
+                <div className='sub-header sub-header-3 wish-text' style={{ maxWidth: '430px' }}>Become a Part of The Yoga Institute Family & Sign-up for your preferred course</div>
                 <div className='sub-header sub-header-3 wish-text-mob'>Join The Yoga Institute Family </div>
 
                 <div className='inp-group'>
@@ -1795,7 +1798,7 @@ const SignIn = () => {
                       </div>
                     </div>
                     {formData?.errorIndex == 6 &&
-                        <div style={{ color: '#FF3B30' }}>Enter address line 2 </div>}
+                      <div style={{ color: '#FF3B30' }}>Enter address line 2 </div>}
                   </div>
                   <div className='form_error width-100'>
                     <div className='inp-label mg-t-20'>Gender <span>*</span></div>

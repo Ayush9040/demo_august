@@ -167,7 +167,7 @@ const Personal = ({
     }
     if (cityFromRedux) {
       // console.log('cityFromRedux inside State ', cityFromRedux);
-      setFormData((prev) => ({ ...prev, city: cityFromRedux,address2:address2Redux,address1:address1Redux }));
+      setFormData((prev) => ({ ...prev, city: cityFromRedux, address2: address2Redux, address1: address1Redux }));
       setValues((prev) => ({ ...prev, city: { label: cityFromRedux, value: cityFromRedux } }));
     }
 
@@ -397,8 +397,12 @@ const Personal = ({
 
   // Function to generate city options based on selected state
   const getUpdatedCities = (countryIsoCode, stateIsoCode) => {
-    if (!countryIsoCode || !stateIsoCode) return [];
-    return City.getCitiesOfState(countryIsoCode, stateIsoCode).map((city) => ({
+    const formattedStateIsoCode = stateIsoCode.length > 2
+      ? stateIsoCode.slice(0, 2).toUpperCase()  // Get first 2 chars and convert to uppercase
+      : stateIsoCode.toUpperCase();  // If already 2 chars or less, just make it uppercase
+
+    if (!countryIsoCode || !formattedStateIsoCode) return [];
+    return City.getCitiesOfState(countryIsoCode, formattedStateIsoCode).map((city) => ({
       value: city.name,
       label: city.name,
     }));
