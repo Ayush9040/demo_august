@@ -12,7 +12,7 @@ const Accordian = ({ data, sliderVal, setSliderVal, selectedFilters }) => {
   //   setHidden(sliderVal)
   // }, [sliderVal])
 
-  const [anyFilterActive, setAnyFilterActive] = useState(sliderVal)
+  const [anyFilterActive, setAnyFilterActive] = useState()
   useEffect(() => {
     if (selectedFilters) {
       const activeCoun = Object.values(selectedFilters).some(value => value === true);

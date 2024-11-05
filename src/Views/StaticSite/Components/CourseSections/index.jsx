@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import CourseCard from '../CourseCard'
 import './style.scss'
 import Slider from 'react-rangeslider'
@@ -11,6 +11,13 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
   const [customVal, setCustomVal] = useState(1)
 
   console.log('Course Clicked Data ', data)
+  const [anyFilterActive, setAnyFilterActive] = useState()
+  useEffect(() => {
+    if (selectedFilters) {
+      const activeCoun = Object.values(selectedFilters).some(value => value === true);
+      setAnyFilterActive(activeCoun)
+    }
+  }, [selectedFilters])
 
   const content = () => {
 
@@ -104,17 +111,17 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
           {
             url: '/21-days-better-living-course',
             text: 'Morning On Campus – English - Batch 1',
-            onCampus: true ,weekDays: true
+            onCampus: true, weekDays: true
           },
           {
             url: '/21-days-better-living-course-batch-2',
             text: 'Evening - Online & On Campus – English - Batch 2',
-            onCampus: true, online: true,weekDays: true
+            onCampus: true, online: true, weekDays: true
           },
           {
             url: '/21-days-better-living-course-batch-3',
             text: 'Evening - Online & On Campus – Hindi - Batch 3',
-            onCampus: true, online: true,weekDays: true
+            onCampus: true, online: true, weekDays: true
           },
           // {
           //   url: '/21-days-better-living-course-batch-4',
@@ -129,16 +136,211 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
           {
             url: '/7-days-camp',
             text: '7 Days Health Camp - On Campus - Hindi',
-            onCampus: true,weekDays: true
+            onCampus: true, weekDays: true
           },
           {
             url: '/7-days-camp-english',
             text: '7 Days Health Camp - On Campus - English',
-            onCampus: true,weekDays: true
+            onCampus: true, weekDays: true
           },
         ],
       },
     ]
+    const yttcStatic = [
+      {
+        url: '/certificate-yoga-therapy-course-online',
+        text: 'Certificate Yoga Therapy Course - Online & On Campus',
+        onCampus: true, online: true
+      },
+      {
+        url: '/certificate-program-on-yoga-for-cancer',
+        text: 'Certificate Program on Yoga for Cancer – Online & On Campus',
+        onCampus: true, online: true
+      },
+      {
+        url: '/certification-program-on-yoga-for-lung-cancer-online',
+        text: 'Certificate Program on Yoga for Lung Cancer - Online',
+        online: true
+      },
+      {
+        url: '/certificate-course-on-advanced-pranayama-techniques',
+        text: 'Certificate Course on Advanced Pranayama Techniques - Online',
+        online: true
+      }
+    ]
+
+    const regularCourseStatic = [{
+      url: '/asana-regular-classes-on-campus',
+      text: 'Asana Regular Classes for Men On Campus',
+      onCampus: true, weekDays: true
+    },
+    {
+      url: '/asana-regular-classes-on-campus-women',
+      text: 'Asana Regular Classes for Women On Campus',
+      onCampus: true, weekDays: true
+    },
+    {
+      url: '/asana-regular-classes-online',
+      text: 'Asana Regular Classes (Men & Women) - Online',
+      online: true, weekDays: true
+    },
+    {
+      url: '/weekend-classes',
+      text: 'Weekend Asana Classes - (Men & Women) On Campus',
+      onCampus: true, weekends: true
+    },
+    {
+      url: '/weekend-classes-online',
+      text: 'Weekend Asana Classes - (Men & Women) Online',
+      online: true, weekends: true
+    },
+    {
+      url: '/childrens-regular-classes',
+      text: "Children's Regular Class - On Campus",
+      onCampus: true, weekDays: true
+    },
+    {
+      url: '/childrens-weekend-classes-on-campus',
+      text: "Children's Weekend Class - On Campus",
+      onCampus: true, weekends: true
+    },
+    {
+      url: '/advanced-regular-yoga-classes',
+      text: ' Advance Asana Regular Class - Online (Only for TYI Teachers) ',
+      online: true
+    },
+    {
+      url: '/regular-pregnacy-classes',
+      text: 'Regular Pregnancy Class',
+      onCampus: true, online: true, weekDays: true
+    },
+    {
+      url: '/IBY-course',
+      text: 'IBY classes - On Campus & Online',
+      onCampus: true, online: true
+    }]
+
+    const campsWroskshopStatic = [{
+      url: '/corporate-workshops',
+      text: 'Corporate Workshop - On Campus',
+      onCampus: true
+    },
+    {
+      url: '/satsang',
+      text: 'Satsang - On Campus',
+      onCampus: true
+    },
+    {
+      url: '/samattvam',
+      text: 'Samattvam(Health Checkup) - On Campus',
+      onCampus: true
+    },
+    {
+      url: '/couples-classes',
+      text: "Couple's classes - Online",
+      online: true
+    },
+    {
+      url: '/home-tuitions',
+      text: 'Home Tuitions',
+      online: true
+    },
+    {
+      url: '/stress-management-camp',
+      text: 'Stress Management Camp - On Campus',
+      onCampus: true
+    },
+    {
+      url: '/weight-management-workshop',
+      text: 'Weight Management Workshop - On Campus',
+      onCampus: true
+    },
+    {
+      url: '/pregnancy-camp-for-ante-post-natal',
+      text: 'Pregnancy Camp for Ante & Post Natal - On Campus',
+      onCampus: true
+    },
+    {
+      url: '/cardiac-hypertension-workshop',
+      text: 'Cardiac & Hypertension Workshop - On Campus',
+      onCampus: true
+    },
+    {
+      url: '/back-joint-disorder-workshop',
+      text: 'Back & Joint Disorder Workshop - On Campus',
+      onCampus: true
+    },
+    {
+      url: '/pranayama-workshop',
+      text: 'Pranayama Workshop',
+      onCampus: true, online: true
+    }]
+
+    const mostPopularStatic = [{
+      url: '/7-days-camp-english',
+      text: '7 Days Health Camp',
+      onCampus: true
+    },
+    {
+      url: '/21-days-better-living-course',
+      text: '21 Days Better Living Course',
+      onCampus: true
+    },
+    {
+      url: '/one-month-ttc',
+      text: '200 Hour 1 Month BTTC Course',
+      onCampus: true, online: true, month1: true
+    },
+    {
+      url: '/seven-month-ttc',
+      text: "900 Hour 3 Month ATTC Course",
+      onCampus: true, online: true, month3: true
+    },
+    {
+      url: '/pregnancy-camp-for-ante-post-natal',
+      text: 'Pregnancy Camp',
+      onCampus: true
+    }]
+
+    const shouldDisplayLink = (points) => {// used to display the link in UI
+      if (selectedFilters) {
+        const { online, onCampus, month1, month2, month3, weekends, weekDays } = selectedFilters;
+
+        if (!anyFilterActive) {
+          return true; // Show link if no filters are active
+        }
+
+        // Create an array to store conditions for filtering
+        const conditions = [];
+
+        if (online) {
+          conditions.push(points.online);
+        }
+        if (onCampus) {
+          conditions.push(points.onCampus);
+        }
+        if (month1) {
+          conditions.push(points.month1);
+        }
+        if (month2) {
+          conditions.push(points.month2);
+        }
+        if (month3) {
+          conditions.push(points.month3);
+        }
+        if (weekends) {
+          conditions.push(points.weekends);
+        }
+        if (weekDays) {
+          conditions.push(points.weekDays);
+        }
+
+        // Check if all active conditions are met
+        return conditions.length > 0 && conditions.every(Boolean);
+      }
+
+      return false; // In case selectedFilters is undefined
+    };
 
     switch (title) {
       case 'Yoga Teacher Training Courses (YTTC)':
@@ -147,7 +349,16 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
             <Accordian sliderVal={customVal} setSliderVal={setCustomVal} data={coursesList} selectedFilters={selectedFilters} />
 
             <ul id='therapy-course' >
-              <Link to="/certificate-yoga-therapy-course-online">
+              {yttcStatic.map((item, i) => (
+                shouldDisplayLink(item) && (
+                  <div key={i}>
+                    <Link to={item.url}>
+                      <li className="text-bold">
+                        {item.text}
+                      </li>
+                    </Link></div>))
+              )}
+              {/* <Link to="/certificate-yoga-therapy-course-online">
                 <li className="text-bold" >
                   Certificate Yoga Therapy Course - Online & On Campus
                 </li>
@@ -169,7 +380,7 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
                 <li className="text-bold" >
                   Certificate Course on Advanced Pranayama Techniques - Online
                 </li>
-              </Link>
+              </Link> */}
 
             </ul>
 
@@ -181,7 +392,16 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
             <div>
               <h4>
                 <ul>
-                  <Link to="/asana-regular-classes-on-campus">
+                  {regularCourseStatic.map((item, i) => (
+                    shouldDisplayLink(item) && (
+                      <div key={i}>
+                        <Link to={item.url}>
+                          <li className="text-bold">
+                            {item.text}
+                          </li>
+                        </Link></div>))
+                  )}
+                  {/* <Link to="/asana-regular-classes-on-campus">
                     <li>Asana Regular Classes for Men On Campus</li>
                   </Link>
                   <Link to="/asana-regular-classes-on-campus-women">
@@ -213,7 +433,7 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
                   </Link>
                   <Link to="/IBY-course">
                     <li>IBY classes - On Campus & Online</li>
-                  </Link>
+                  </Link> */}
                 </ul>
               </h4>
             </div>
@@ -230,7 +450,16 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
             <div>
               <h4>
                 <ul id='camps-workshop' >
-                  <Link to="/corporate-workshops">
+                  {campsWroskshopStatic.map((item, i) => (
+                    shouldDisplayLink(item) && (
+                      <div key={i}>
+                        <Link to={item.url}>
+                          <li className="text-bold">
+                            {item.text}
+                          </li>
+                        </Link></div>))
+                  )}
+                  {/* <Link to="/corporate-workshops">
                     <li>Corporate Workshop - On Campus</li>
                   </Link>
                   <Link to="/satsang">
@@ -245,9 +474,6 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
                   <Link to="/home-tuitions">
                     <li>Home Tuitions</li>
                   </Link>
-                  {/* <Link to="/kids-camp">
-                  <li>Kids Yoga Summer Camp (On-Campus)</li>
-                </Link> */}
                   <Link to="/stress-management-camp">
                     <li>Stress Management Camp - On Campus</li>
                   </Link>
@@ -265,7 +491,12 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
                   </Link>
                   <Link to="/pranayama-workshop">
                     <li>Pranayama Workshop</li>
-                  </Link>
+                  </Link> */}
+
+
+                  {/* <Link to="/kids-camp">
+                  <li>Kids Yoga Summer Camp (On-Campus)</li>
+                </Link> */}
                 </ul>
               </h4>
             </div>
@@ -288,7 +519,16 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
             <div>
               <h4>
                 <ul>
-                  <Link to="/7-days-camp-english">
+                  {mostPopularStatic.map((item, i) => (
+                    shouldDisplayLink(item) && (
+                      <div key={i}>
+                        <Link to={item.url}>
+                          <li className="text-bold">
+                            {item.text}
+                          </li>
+                        </Link></div>))
+                  )}
+                  {/* <Link to="/7-days-camp-english">
                     <li>7 Days Health Camp</li>
                   </Link>
                   <Link to="/21-days-better-living-course">
@@ -302,7 +542,7 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
                   </Link>
                   <Link to="/pregnancy-camp-for-ante-post-natal">
                     <li> Pregnancy Camp</li>
-                  </Link>
+                  </Link> */}
                 </ul>
               </h4>
             </div>
