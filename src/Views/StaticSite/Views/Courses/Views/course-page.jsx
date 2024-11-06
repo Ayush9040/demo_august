@@ -5,7 +5,7 @@ import React, { useEffect, lazy, useState } from 'react'
 import './style.scss'
 // import CourseSection from '../../../Components/CourseSections'
 import { courseCardData } from '../../../utils/courseCardData'
-import { c200hr, c500hr, c900hr, campsArr, AllCourses, classesArr } from '../Constants/courses'
+import { c200hr, c500hr, c900hr, campsArr, AllCourses, classesArr, certificateArr } from '../Constants/courses'
 import baseDomain, { certificates } from '../../../assets/images/imageAsset'
 import { Helmet } from 'react-helmet'
 import metaDataObj from '../../../../../Constants/metaData.json'
@@ -71,7 +71,7 @@ const Courses = () => {
     menuItems: [],
   }
 
-  let data = [[c200hr[0], c500hr[0], c900hr[0]], campsArr, classesArr, AllCourses]
+  let data = [[c200hr[0], c500hr[0], c900hr[0]], [campsArr[13], campsArr[14], campsArr[11]], classesArr, AllCourses, campsArr, [certificateArr[3], certificateArr[1], certificateArr[0]]]
 
   const setPathParam = (title) => {
 
@@ -152,9 +152,13 @@ const Courses = () => {
                 Filters
                 {countTrueFilters > 0 && <span className='count-badge'>{countTrueFilters}</span>}</span>
               <span style={{ position: 'relative', top: '-2px' }}>
-                <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M1 1L5 5L9 1" stroke="#CA4625" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                {isFilterOpened ? <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8.5 4.75L5 1.25L1.5 4.75" stroke="#CA4625" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
+                  :
+                  <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 1L5 5L9 1" stroke="#CA4625" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>}
               </span>
             </div>
             {isFilterOpened &&
@@ -261,26 +265,18 @@ const Courses = () => {
               <AccordionItem>
                 <AccordionItemHeading>
                   <AccordionItemButton>
-                    <Link to="/courses/browse/most-popular">
-                      <p> Most Popular</p>
-                    </Link>
-                  </AccordionItemButton>
-                </AccordionItemHeading>
-              </AccordionItem>
-              <AccordionItem>
-                <AccordionItemHeading>
-                  <AccordionItemButton>
                     <Link to="/courses/browse/ttc">
-                      <p>Teachers Training</p>
+                      <p>Yoga Teacher Training Courses (YTTC)</p>
                     </Link>
                   </AccordionItemButton>
                 </AccordionItemHeading>
               </AccordionItem>
+
               <AccordionItem>
                 <AccordionItemHeading>
                   <AccordionItemButton>
-                    <Link to="/courses/browse/camps-workshops">
-                      <p>Camps & Workshop</p>
+                    <Link to="/courses/browse/certificate-courses">
+                      <p>Certified Yoga Courses</p>
                     </Link>
                   </AccordionItemButton>
                 </AccordionItemHeading>
@@ -294,11 +290,32 @@ const Courses = () => {
                   </AccordionItemButton>
                 </AccordionItemHeading>
               </AccordionItem>
+
               <AccordionItem>
                 <AccordionItemHeading>
                   <AccordionItemButton>
-                    <Link to="/courses/browse/certificate-courses">
-                      <p>Certificate Courses</p>
+                    <Link to="/courses/browse/most-popular">
+                      <p> Most Popular</p>
+                    </Link>
+                  </AccordionItemButton>
+                </AccordionItemHeading>
+              </AccordionItem>
+
+              <AccordionItem>
+                <AccordionItemHeading>
+                  <AccordionItemButton>
+                    <Link to="/courses/browse/camps-workshops">
+                      <p>Camps & Workshop</p>
+                    </Link>
+                  </AccordionItemButton>
+                </AccordionItemHeading>
+              </AccordionItem>
+
+              <AccordionItem>
+                <AccordionItemHeading>
+                  <AccordionItemButton>
+                    <Link to="/courses/browse/special-certificate-courses">
+                      <p>Special Certificate Courses (For Yoga Teachers)</p>
                     </Link>
                   </AccordionItemButton>
                 </AccordionItemHeading>

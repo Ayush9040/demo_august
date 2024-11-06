@@ -386,44 +386,13 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
         return (
           <>
             <Accordian sliderVal={customVal} setSliderVal={setCustomVal} data={coursesList} selectedFilters={selectedFilters} />
-
-            <ul id='therapy-course' >
-              {yttcStatic.map((item, i) => (
-                shouldDisplayLink(item) && (
-                  <div key={i}>
-                    <Link to={item.url}>
-                      <li className="text-bold">
-                        {item.text}
-                      </li>
-                    </Link></div>))
-              )}
-              {/* <Link to="/certificate-yoga-therapy-course-online">
-                <li className="text-bold" >
-                  Certificate Yoga Therapy Course - Online & On Campus
-                </li>
-              </Link>
-
-              <Link to="/certificate-program-on-yoga-for-cancer">
-                <li className="text-bold" >
-                  Certificate Program on Yoga for Cancer – Online & On Campus
-                </li>
-              </Link>
-
-              <Link to="/certification-program-on-yoga-for-lung-cancer-online">
-                <li className="text-bold" >
-                  Certificate Program on Yoga for Lung Cancer - Online
-                </li>
-              </Link>
-
-              <Link to="/certificate-course-on-advanced-pranayama-techniques">
-                <li className="text-bold" >
-                  Certificate Course on Advanced Pranayama Techniques - Online
-                </li>
-              </Link> */}
-
-            </ul>
-
           </>
+        )
+      case 'Certified Yoga Courses':
+        return (
+          <div className="camp_course-list-content">
+            <br />
+            <Accordian sliderVal={customVal} setSliderVal={setCustomVal} data={campsAccordian} selectedFilters={selectedFilters} /></div>
         )
       case 'Regular Classes':
         return (
@@ -485,7 +454,7 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
         return (
           <div className="camp_course-list-content">
             <br />
-            <Accordian sliderVal={customVal} setSliderVal={setCustomVal} data={campsAccordian} selectedFilters={selectedFilters} />
+            {/* <Accordian sliderVal={customVal} setSliderVal={setCustomVal} data={campsAccordian} selectedFilters={selectedFilters} /> */}
             <div>
               <h4>
                 <ul id='camps-workshop' >
@@ -589,6 +558,26 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
             <CommonBtn text={'Explore all'} />
           </Link> */}
           </div>
+        )
+      case 'Special Certificate Courses (For Yoga Teachers)':
+        return (
+          <>
+          <div style={{marginTop:'40px'}}>
+            
+            <ul id='therapy-course' >
+              {yttcStatic.map((item, i) => (
+                shouldDisplayLink(item) && (
+                  <div key={i}>
+                    <Link to={item.url}>
+                      <li className="text-bold">
+                        {item.text}
+                      </li>
+                    </Link></div>))
+              )}
+
+            </ul></div>
+
+          </>
         )
     }
 

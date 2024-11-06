@@ -36,16 +36,20 @@ const BrowseCourses = () => {
   const [category, setCategory] = useState()
   const [breadcrumbs, setBreadcrumbs] = useState()
   const ChangeContent = () => {
+    console.log(type);
+
     if (type === 'ttc') {
-      setBreadcrumbs('Teacher Training Course')
+      setBreadcrumbs('Yoga Teacher Training Courses (YTTC)')
     } else if (type === 'most-popular') {
       setBreadcrumbs('Most Popular')
     } else if (type === 'camps-workshops') {
       setBreadcrumbs('Camps & Workshops')
     } else if (type === 'classes') {
       setBreadcrumbs('Classes')
-    } else if (type === 'certificate-course') {
-      setBreadcrumbs('Certificate Courses')
+    } else if (type === 'certificate-courses') {
+      setBreadcrumbs('Certified Yoga Courses')
+    } else if (type === 'special-certificate-courses') {
+      setBreadcrumbs('Special Certificate Courses (For Yoga Teachers) ')
     }
     return breadcrumbs
   }
@@ -154,6 +158,8 @@ const BrowseCourses = () => {
           </div>
           <div className="course-grid">
             {category?.slice(0, 50).map((item, i) => (
+
+              item.title &&
               <CourseCard
                 key={i}
                 color={item.colorCode}
@@ -168,21 +174,22 @@ const BrowseCourses = () => {
                 timing={item?.timing}
                 tenure={item?.tenure}
                 pageName={item?.key}
-                courseCategory={item?.courseCategory} 
-                      courseSubType={item?.courseSubType}
-                      onlineMode= {item?.onlineInfo?.courseMode}
-                      residentialMode= {item?.residentialInfo?.courseMode}
-                      nonResidentialMode={item?.nonResidentialInfo?.courseMode}
-                      residentialLocation={item?.residentialInfo?.residentialMode}
-                      nonResidentialLocation={item?.nonResidentialInfo?.nonResidentialMode}
-                      courseType={item?.courseType}
-                      language={item?.language}
+                courseCategory={item?.courseCategory}
+                courseSubType={item?.courseSubType}
+                onlineMode={item?.onlineInfo?.courseMode}
+                residentialMode={item?.residentialInfo?.courseMode}
+                nonResidentialMode={item?.nonResidentialInfo?.courseMode}
+                residentialLocation={item?.residentialInfo?.residentialMode}
+                nonResidentialLocation={item?.nonResidentialInfo?.nonResidentialMode}
+                courseType={item?.courseType}
+                language={item?.language}
                 category={item?.category}
                 batch={item?.batch}
                 nonResidential={item?.nonResidential}
-                    residential={item?.residential}
-                    online={item?.online}
+                residential={item?.residential}
+                online={item?.online}
               />
+
             ))}
           </div>
         </div>

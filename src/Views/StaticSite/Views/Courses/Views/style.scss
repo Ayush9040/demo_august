@@ -154,7 +154,8 @@
             font-size: 16px;
             font-weight: 500;
             gap: 8px;
-            margin:10px 0 0 -20px;
+            margin: 10px 0 0 -20px;
+
             div {
                 background-color: rgba(202, 70, 37, 0.1);
                 padding: 4px 10px;
@@ -493,16 +494,28 @@
 @media(max-width:620px) {
     .courses-container {
         .search {
-            flex-wrap: wrap;
+            margin: 0 auto -20px auto !important;
+        }
+    }
 
-            .search-bar {
-                width: 100%;
-                min-width: 100%;
+    .filter-values {
+        position: absolute;
+        left: -110px !important;
+        top: 60px;
 
-                label {
-                    padding: 1rem;
-                }
-            }
+    }
+
+    .list-sele-filters {
+        margin: -10px 0 0 0 !important;
+        width: 90%;
+        overflow-x: auto;
+        scrollbar-width: none;
+        /* Firefox */
+        -ms-overflow-style: none;
+        /* Internet Explorer 10+ */
+
+        div {
+            white-space: nowrap !important;
         }
     }
 }
