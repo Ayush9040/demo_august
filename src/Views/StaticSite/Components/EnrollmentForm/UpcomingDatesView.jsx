@@ -5,6 +5,7 @@ import './popup.scss'
 //import baseDomain, { background } from '../../assets/images/imageAsset'
 import InnerNavComponent from '../InnerNavComponent'
 import '../EnrollmentForm/formstyles.scss';
+import './formstyles.scss'
 import { useNavigate  } from 'react-router-dom'; 
 import { useSelector } from 'react-redux';
 
@@ -79,7 +80,7 @@ const UpcomingDatesView = ({ pageDate, setCourseDateInfo, setCourseDateSelected,
                 {
                     pageDate?.map((item, index) => {
                         return (
-                            <div key={index} style={{ width: '48.9%' }}>
+                            <div key={index} className='date_btn'>
                                 <div className='wrapper_center'>
                                 <label class="item-label item_date" style={{ width: '100%', height: '100%', borderRadius: '50px' }}>
                             <input class="item-input"

@@ -52,7 +52,7 @@ const EditStudent = ({ isShippingModalOpen, setIsShipppingModalOpen, formData, s
             </div>
 
             </div>
-            <div>
+            <div style={{width: '12px', height: '12px'}}>
             
               <span className="change-cross-svg-width" style={{cursor: 'pointer'}} onClick={closeModal}>
                 {cross}

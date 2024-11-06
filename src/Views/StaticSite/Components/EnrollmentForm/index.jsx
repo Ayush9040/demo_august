@@ -539,11 +539,11 @@ const Enrollment = () => {
       formData.name === undefined ||
       formData.name === null
     ) {
-      alert("1")
+      // alert("1")
       setEmpty(1)
     } else if (formData.email === '' || !validateEmail(formData.email) || formData.email === undefined ||
       formData.email === null) {
-        alert("2")
+        // alert("2")
       setEmpty(2)
     } else if (
       formData.phone === '' ||
@@ -551,24 +551,27 @@ const Enrollment = () => {
       formData.phone?.length > 15 ||
       formData.phone === undefined
     ) {
-      alert("3")
+      // alert("3")
       setEmpty(3)
     } else if (formData.address1 === '') {
-      alert("4")
+      // alert("4")
       setEmpty(4)
     }
     else if (formData.country === '') {
-      alert("5")
+      // alert("5")
       setEmpty(5)
     }
     else if (formData.pincode === '') {
-      alert("6")
+      // alert("6")
       setEmpty(8)
     } else if (formData.gender === '') {
-      alert("7")
+      // alert("7")
       setEmpty(11)
+    } else if (formData.mode === '') {
+      // alert("11")
+      setEmpty('mode')
     } else if (formData.sdate === '') {
-      alert("8")
+      // alert("8")
       setEmpty(18)
     }
     // else if (formData.AGE === null || formData.AGE < 4 || formData.AGE > 99) {
@@ -579,10 +582,10 @@ const Enrollment = () => {
     //   alert("10")
     //    setEmpty(10)
     //  }
-    else if (formData.mode === '') {
-      alert("11")
-      setEmpty('mode')
-    }
+    // else if (formData.mode === '') {
+    //   alert("11")
+    //   setEmpty('mode')
+    // }
     else if (isMatch && formData.startDate === '') {
       alert("13")
       setEmpty(21)

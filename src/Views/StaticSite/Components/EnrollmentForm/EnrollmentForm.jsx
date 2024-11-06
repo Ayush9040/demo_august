@@ -1051,6 +1051,7 @@ const EnrollmentForm = ({
               uploadCheck={uploadCheck}
               setUploadCheck={setUploadCheck}
               handleResidential={handleResidential}
+              dateDurationChange={dateDurationChange}
             />
 
           </form>
@@ -1076,7 +1077,8 @@ const EnrollmentForm = ({
               // href="https://theyogainstitute.org/terms-and-conditions"
               // target="_blank"
               onClick={handleOpen}
-              style={{ color: "rgba(0, 0, 0, 1)", marginLeft: "3px", fontSize: '14px', fontWeight: '600', cursor: "pointer" }}
+              className='terms_text'
+              style={{ color: "rgba(0, 0, 0, 1)", marginLeft: "3px", cursor: "pointer" }}
               rel="noopener noreferrer">
               terms and conditions
             </a>

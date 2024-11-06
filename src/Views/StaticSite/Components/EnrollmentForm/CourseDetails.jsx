@@ -1,10 +1,11 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useRef } from 'react'
 import { useState } from 'react'
 import { upload } from '../../assets/icons/icon'
 import { uploadFile } from '../../../../helpers/OssHelper'
 import { useLocation } from 'react-router-dom';
 // import DatesPopUp from '../TermsandCondition/DatesPopUp';
 import UpcomingDates from './UpcomingDates';
+import EditStudent from './EditStudent';
 import './formstyles.scss'
 
 
@@ -22,7 +23,8 @@ const CourseDetails = ({
   courseFee,
   setCourseFee,
   handleResidential,
-  formattedDates
+  formattedDates,
+  dateDurationChange
 }) => {
 
   const [optionsCount, setOptionsCount] = useState(0);
@@ -36,6 +38,21 @@ const CourseDetails = ({
   const [ courseDateSelected, setCourseDateSelected] = useState(false)
   const [ showDefaultDate, setShowDefaultDate ] = useState(true)
   const [ notShowDate, setNotShowDate] = useState(true)
+  const [ openEdit, setOpenEdit] = useState(false)
+  const [ showEdit, setShowEdit] = useState(false)
+
+  const toggleAccordion = () => {
+    setOpenEdit(!openEdit);
+  };
+
+  const accordionRef = useRef(null);
+
+  useEffect(() => {
+    if (openEdit && accordionRef.current) {
+      // Scroll to the accordion content when it opens
+      accordionRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }, [openEdit]);
 
   useEffect(() => {
     if (isSatsangPage) {
@@ -139,6 +156,14 @@ const CourseDetails = ({
 
   const handleClose = () => {
     setOpenDates(false);
+  };
+
+  const handleShowEdit = () => {
+    setShowEdit(true);
+  }
+
+  const handleCloseEdit = () => {
+    setShowEdit(false);
   };
 
 
@@ -431,7 +456,7 @@ console.log("CD from formatted Addrss ", formattedDates)
             <div className="last_radio_button ">
               {shouldShowOfflineOption() &&
                 (
-                  <label class="item-label">
+                  <label class="item-label item_format">
                     <input class="item-input"
                       type="radio" name="mode"
                       value="OFFLINE"
@@ -498,7 +523,7 @@ console.log("CD from formatted Addrss ", formattedDates)
                 //  </label>
 
 
-                <label class="item-label">
+                <label class="item-label item_format">
                   <input class="item-input"
                     type="radio" name="mode"
                     value="ONLINE"
@@ -576,7 +601,7 @@ console.log("CD from formatted Addrss ", formattedDates)
                 // </label>
 
 
-                <label class="item-label">
+                <label class="item-label item_format">
                   <input class="item-input" type="radio" name="resident" value="NONRESIDENTIAL" aria-labelledby="delivery-0-name" aria-describedby="delivery-0-shipping delivery-0-price"
                     checked={selectedOption === 'NONRESIDENTIAL'}
                     onChange={(e) => {
@@ -659,7 +684,7 @@ console.log("CD from formatted Addrss ", formattedDates)
                 // </label>
 
 
-                <label class="item-label">
+                <label class="item-label item_format">
                   <input class="item-input" type="radio" name="resident" value="RESIDENTIAL" aria-labelledby="delivery-0-name" aria-describedby="delivery-0-shipping delivery-0-price"
                     checked={selectedOption === 'RESIDENTIAL'}
                     onChange={(e) => {
@@ -709,6 +734,8 @@ console.log("CD from formatted Addrss ", formattedDates)
 
           <div className="label_format_course">
             Select Course Start Date 
+
+            {empty === 18 && <div id="fill_err" style={{ float: 'right', fontSize: '10px', marginTop: '10px', color: 'red'}}> Please select course date</div>}
           </div>
 
           <form className="residential-form check_course check_date_2" style={{ width: '100%'}}>
@@ -717,7 +744,7 @@ console.log("CD from formatted Addrss ", formattedDates)
                 {
                     formattedDates?.slice(0, 2).map((item, index) => {
                         return (
-                            <div key={index} style={{ width: '48.9%' }}>
+                            <div key={index} className='date_btn'>
                                 <div className='wrapper_center container_date_enroll'>
                                 <label class="item-label item_date" style={{ width: '100%', height: '100%', borderRadius: '25px' }}>
                             <input class="item-input"
@@ -764,7 +791,7 @@ console.log("CD from formatted Addrss ", formattedDates)
 
                 {
                   showDefaultDate === true ? (
-                    <div style={{ width: '48.9%' }}>
+                    <div className='date_btn'>
                                 <div className='wrapper_center container_date_enroll'>
                                 <label class="item-label item_date" style={{ width: '100%', height: '100%', borderRadius: '25px' }}>
                             <input class="item-input"
@@ -805,7 +832,7 @@ console.log("CD from formatted Addrss ", formattedDates)
                                 </div>
                             </div>
                   ) : (!notShowDate) ? (
-                    <div style={{ width: '48.9%' }}>
+                    <div className='date_btn'>
                                 <div className='wrapper_center container_date_enroll'>
                                 <label class="item-label item_date selected_date_popup" style={{ width: '100%', height: '100%', borderRadius: '25px' }}>
                             <input class="item-input"
@@ -846,7 +873,7 @@ console.log("CD from formatted Addrss ", formattedDates)
                                 </div>
                             </div>
                   ) : (
-                    <div style={{ width: '48.9%' }}>
+                    <div className='date_btn'>
                                 <div className='wrapper_center container_date_enroll'>
                                 <label class="item-label item_date" style={{ width: '100%', height: '100%', borderRadius: '25px' }}>
                             <input class="item-input"
@@ -932,7 +959,7 @@ console.log("CD from formatted Addrss ", formattedDates)
                 <div className='fees_left_wrapper'>
                 <img src='/images/fees_left.png' alt='' loading='lazy' />
                 </div>
-                <div className=''>
+                <div className='fees_price_wrapper'>
                   <span className='fees_label'>Fees : </span>
                   <span className='price_select'>{priceSelect}</span>
                 </div>
@@ -942,8 +969,71 @@ console.log("CD from formatted Addrss ", formattedDates)
               </div>
             </div>
             
+
+            
+
             </div>
           )}
+
+<div className="accordian_holder">
+      
+      <div onClick={toggleAccordion} className="accordion-header">
+        <div>
+        <div className='accordian_title'>Student details</div>
+        <div className='accordian_sub-title'>Click here to edit your profile</div>
+        </div>
+        <div className={`${openEdit ? "rotate_icon_arrow" : ""}`}>
+          <img src="/images/edit_mob_dropdown.svg" alt="" />
+        </div>
+      </div>
+      {/* Show content if the accordion is open */}
+      <div ref={accordionRef} className={`desc ${openEdit ? "show" : ""}`}>
+          <div className='hidden'>
+          <div className='fields_alignment fields_alignment_bottom'>
+            <div className='details_desc_name_info'><span className='details_duration_info'>Name</span> <span className='tenure_course'>{`${formData?.name} ${formData?.lname}`}</span></div>
+            
+          </div>
+          <div className='details_desc_days fields_alignment_bottom'>
+            <div className='details_desc_name_info'><span className='details_duration_info'>Email Address</span> <span className='tenure_course'>{formData?.email}</span></div>
+            
+          </div>
+          <div className='details_desc_days fields_alignment_bottom'> 
+            <div className='details_desc_name_info'><span className='details_duration_info'>Mobile Number</span> <span className='tenure_course'>{formData?.phone}</span></div>
+            
+          </div>
+          <div className='details_desc_days fields_alignment_bottom'> 
+            <div className='details_desc_name_info'><span className='details_duration_info'>Gender</span> <span className='tenure_course'>{formData?.gender}</span></div>
+            
+          </div>
+          <div className='details_desc_days'> 
+            <div className='details_desc_name_info'><span className='details_duration_info'>Address</span> <span className='tenure_course'>{`${formData?.address1}, ${formData?.state}, ${formData?.country} - ${formData?.pincode}`}</span></div>
+            
+          </div>
+
+          <div className='edit_show'>
+            <div onClick={handleShowEdit}>
+              <span>Edit</span>
+              <div>
+              <img src="/images/edit_icon.svg" alt="" />
+              </div>
+            </div>
+            
+          </div>
+
+          {showEdit && (
+              // <MessageModal 
+              //   message={<TermsCondition />} 
+              //   closePopup={handleClose} 
+              //   type="Terms and Conditions" // You can pass any other props as needed
+              // />
+              // <TermsAndConditionsModal />
+              <EditStudent isShippingModalOpen={handleShowEdit} setIsShipppingModalOpen={handleCloseEdit}  formData={formData} setFormData={setFormData} setEmpty={setEmpty} empty={empty} currentCourse={currentCourse} dateDurationChange={dateDurationChange} />)}
+          </div>
+      </div>
+ 
+    </div>
+
+          
 
           
 
