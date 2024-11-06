@@ -228,22 +228,22 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
       {
         url: '/certificate-yoga-therapy-course-online',
         text: 'Certificate Yoga Therapy Course - Online & On Campus',
-        onCampus: true, online: true
+        onCampus: true, online: true, weekDays: true
       },
       {
         url: '/certificate-program-on-yoga-for-cancer',
         text: 'Certificate Program on Yoga for Cancer – Online & On Campus',
-        onCampus: true, online: true
+        onCampus: true, online: true, weekDays: true
       },
       {
         url: '/certification-program-on-yoga-for-lung-cancer-online',
         text: 'Certificate Program on Yoga for Lung Cancer - Online',
-        online: true
+        online: true, weekDays: true
       },
       {
         url: '/certificate-course-on-advanced-pranayama-techniques',
         text: 'Certificate Course on Advanced Pranayama Techniques - Online',
-        online: true
+        online: true, weekDays: true
       }
     ]
 
@@ -285,7 +285,7 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
     {
       url: '/advanced-regular-yoga-classes',
       text: ' Advance Asana Regular Class - Online (Only for TYI Teachers) ',
-      online: true
+      online: true, weekDays: true
     },
     {
       url: '/regular-pregnacy-classes',
@@ -295,7 +295,7 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
     {
       url: '/IBY-course',
       text: 'IBY classes - On Campus & Online',
-      onCampus: true, online: true
+      onCampus: true, online: true, weekDays: true
     }]
 
     const campsWroskshopStatic = [{
@@ -306,78 +306,78 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
     {
       url: '/satsang',
       text: 'Satsang - On Campus',
-      onCampus: true
+      onCampus: true, weekends: true
     },
     {
       url: '/samattvam',
       text: 'Samattvam(Health Checkup) - On Campus',
-      onCampus: true
+      onCampus: true, weekends: true
     },
     {
       url: '/couples-classes',
       text: "Couple's classes - Online",
-      online: true
+      online: true, weekends: true
     },
     {
       url: '/home-tuitions',
       text: 'Home Tuitions',
-      online: true
+      online: true, weekDays: true
     },
     {
       url: '/stress-management-camp',
       text: 'Stress Management Camp - On Campus',
-      onCampus: true
+      onCampus: true, weekDays: true
     },
     {
       url: '/weight-management-workshop',
       text: 'Weight Management Workshop - On Campus',
-      onCampus: true
+      onCampus: true, weekDays: true
     },
     {
       url: '/pregnancy-camp-for-ante-post-natal',
       text: 'Pregnancy Camp for Ante & Post Natal - On Campus',
-      onCampus: true
+      onCampus: true, weekDays: true
     },
     {
       url: '/cardiac-hypertension-workshop',
       text: 'Cardiac & Hypertension Workshop - On Campus',
-      onCampus: true
+      onCampus: true, weekDays: true
     },
     {
       url: '/back-joint-disorder-workshop',
       text: 'Back & Joint Disorder Workshop - On Campus',
-      onCampus: true
+      onCampus: true, weekDays: true
     },
     {
       url: '/pranayama-workshop',
       text: 'Pranayama Workshop',
-      onCampus: true, online: true
+      onCampus: true, online: true, weekDays: true
     }]
 
     const mostPopularStatic = [{
       url: '/7-days-camp-english',
       text: '7 Days Health Camp',
-      onCampus: true
+      onCampus: true, weekDays: true
     },
     {
       url: '/21-days-better-living-course',
       text: '21 Days Better Living Course',
-      onCampus: true
+      onCampus: true, weekDays: true
     },
     {
       url: '/one-month-ttc',
       text: '200 Hour 1 Month BTTC Course',
-      onCampus: true, online: true, month1: true
+      onCampus: true, online: true, month1: true, weekDays: true
     },
     {
       url: '/seven-month-ttc',
       text: "900 Hour 3 Month ATTC Course",
-      onCampus: true, online: true, month3: true
+      onCampus: true, online: true, month3: true, weekDays: true
     },
     {
       url: '/pregnancy-camp-for-ante-post-natal',
       text: 'Pregnancy Camp',
-      onCampus: true
+      onCampus: true, weekDays: true
     }]
 
 
