@@ -14,6 +14,7 @@ import axios from 'axios'
 import { handleCTProccedToPayment } from '../../../../CleverTap/buttonClicked'
 import { trackPageView } from '../../../../CleverTap/pageViewEvents'
 import { handleCTCoursePaymentPageVisit, handleCTPaymentCompletedCourse, handleCTPaymentFailed, setupUserProfile } from '../../../../CleverTap/buttonClicked'
+import EnrollmentForm from './EnrollmentForm'
 
 const Enrollment = () => {
   const { user } = useSelector((state) => state.auth)
@@ -48,6 +49,7 @@ const Enrollment = () => {
   const { isLoggedIn } = useSelector((state) => state.auth)
   const [formData, setFormData] = useState({
     name: user?.data?.firstName,
+    lname: '',
     phone: '',
     email: user?.data?.email,
     address1: '',
@@ -212,7 +214,9 @@ const Enrollment = () => {
     localStorage.setItem('courseName', currentCourse.title)
     localStorage.setItem('courseFee', courseFee)
     localStorage.setItem('courseStartDate', formData.sdate)
+    console.log("From Razor ", formData)
     if (formData.terms === false) {
+      alert("20")
       setEmpty(19);
     } else {
       setIsLoad(true);
@@ -505,6 +509,7 @@ const Enrollment = () => {
 
 
   const handleSubmit = (e) => {
+    // alert("I am in")
     const array = ["Yoga Classes for Men (Regular Asana) - On Campus",
       "Yoga Classes for Women (Regular Asana) - On Campus",
       "Yoga Asana Regular Classes - (Men & Women) - Online Yoga Classes",
@@ -521,7 +526,9 @@ const Enrollment = () => {
       // "Regular Online Meditation Classes", 
       // "Couples’ Yoga Classes  - Online"
     ]
+    console.log("form data from sdate ", formData.sdate)
     const isMatch = array.includes(currentCourse?.title);
+    console.log("isMatchhhhhh ", isMatch)
     if (e && e.preventDefault) {
       e.preventDefault();
     }
@@ -532,9 +539,11 @@ const Enrollment = () => {
       formData.name === undefined ||
       formData.name === null
     ) {
+      // alert("1")
       setEmpty(1)
     } else if (formData.email === '' || !validateEmail(formData.email) || formData.email === undefined ||
       formData.email === null) {
+        // alert("2")
       setEmpty(2)
     } else if (
       formData.phone === '' ||
@@ -542,35 +551,51 @@ const Enrollment = () => {
       formData.phone?.length > 15 ||
       formData.phone === undefined
     ) {
+      // alert("3")
       setEmpty(3)
     } else if (formData.address1 === '') {
+      // alert("4")
       setEmpty(4)
     }
     else if (formData.country === '') {
+      // alert("5")
       setEmpty(5)
     }
     else if (formData.pincode === '') {
+      // alert("6")
       setEmpty(8)
     } else if (formData.gender === '') {
+      // alert("7")
       setEmpty(11)
+    } else if (formData.mode === '') {
+      // alert("11")
+      setEmpty('mode')
     } else if (formData.sdate === '') {
+      // alert("8")
       setEmpty(18)
     }
-    else if (formData.AGE === null || formData.AGE < 4 || formData.AGE > 99) {
-       setEmpty(9)
-    } else if (formData.nationality === '') {
-       setEmpty(10)
-     }
-    else if (formData.mode === '') {
-      setEmpty('mode')
-    }
+    // else if (formData.AGE === null || formData.AGE < 4 || formData.AGE > 99) {
+    //   alert("9")
+    //    setEmpty(9)
+    // } 
+    // else if (formData.nationality === '') {
+    //   alert("10")
+    //    setEmpty(10)
+    //  }
+    // else if (formData.mode === '') {
+    //   alert("11")
+    //   setEmpty('mode')
+    // }
     else if (isMatch && formData.startDate === '') {
+      alert("13")
       setEmpty(21)
     }
     else if (isMatch && formData.endDate === '') {
+      alert("12")
       setEmpty(20)
     }
     else {
+      // alert("13")
       if (localStorage.getItem('isRegular') == 'true') {//end date caculate for Regular courses 
         setEndDate(formData.endDate?.value, formData.startDate)
       }
@@ -660,11 +685,14 @@ useEffect(() => {
         {bold < 5 && (
           <div className="header">
             <Link to="/courses">
-              <button className="x">x</button>
+              <button className="x">
+              <img src='/images/close.svg' style={{cursor: 'pointer'}} alt='' loading='lazy' />
+              <span className='close_label'>Close</span>
+              </button>
             </Link>
             <span className="flower">{legacy2}</span>
 
-            <div className="student">Student Enrollment</div>
+            <div className="student">Your Selected Yoga Course Details<br/> <span className='enroll_subtitle'>A step Towards inner transformation🧘‍✨</span> </div>
 
             {/* <ul className="header_ul">
             <li
@@ -716,7 +744,7 @@ useEffect(() => {
 
         {bold === 0 ? (
           <>
-            <Personal
+            {/* <Personal
               setBold={setBold}
               empty={empty}
               formData={formData}
@@ -739,7 +767,34 @@ useEffect(() => {
               uploadCheck={uploadCheck}
               setUploadCheck={setUploadCheck}
               dateDurationChange={dateDurationChange}
+            /> */}
+
+            <EnrollmentForm 
+            
+            setBold={setBold}
+            empty={empty}
+            formData={formData}
+            setFormData={setFormData}
+            handleEmpty1={handleEmpty1}
+            setEmpty={setEmpty}
+            isLoad={isLoad}
+            courseDate={courseDate}
+            templateKey={currentCourse?.templateId}
+            qualificationData={qualificationData}
+            listData={listData}
+            currentCourse={currentCourse}
+            courseAsset1={courseAsset1}
+            setCourseAsset1={setCourseAsset1}
+            courseAsset2={courseAsset2}
+            setCourseAsset2={setCourseAsset2}
+            handleSubmit={handleSubmit}
+            courseFee={courseFee}
+            setCourseFee={setCourseFee}
+            uploadCheck={uploadCheck}
+            setUploadCheck={setUploadCheck}
+            dateDurationChange={dateDurationChange}
             />
+
           </>
         ) : null}
 

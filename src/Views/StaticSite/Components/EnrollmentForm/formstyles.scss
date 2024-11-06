@@ -8,7 +8,7 @@
   // padding: 1.5em 0;
   // width: calc(100% - 3em);
   width: 17em;
-  margin-top: 15px;
+  margin-top: 22px;
 }
 
 .check_course .btn {
@@ -452,15 +452,24 @@
 .enrollment_container {
   height: 95%;
   width: 95%;
-  border: 1px solid black;
-  border-radius: 94px;
+  border: 2px solid rgba(202, 70, 37, 1);
+  border-radius: 40px;
   margin: 2%;
   justify-content: center;
+  // background-image: url('../../../../../public/images/bg_enroll.png');
+  background-color: rgba(202, 70, 37, 0.02);
 
   input::-webkit-outer-spin-button,
   input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
+  }
+
+  .close_label {
+    color: rgba(0, 0, 0, 1);
+    font-size: 16px;
+    font-weight: 400;
+    margin-left: 9px;
   }
 
   .PhoneInput {
@@ -507,21 +516,26 @@
     }
 
     .x {
+      display: flex;
       float: right;
-      height: 2.5rem;
-      width: 2.5rem;
+      // height: 2.5rem;
+      // width: 2.5rem;
       color: black;
       background: transparent;
       font-weight: 900;
       font-size: 2rem;
-      margin-right: 3rem;
-      border: none;
+      margin-right: 6rem;
+      border: 1px solid rgba(0, 0, 0, 1);
+      border-radius: 20px;
+      padding: 9px 12px;
+      margin-top: 23px;
+      cursor: pointer;
     }
   }
 
   .student {
-    font-weight: 600;
-    font-size: 25px;
+    font-weight: 700;
+    font-size: 24px;
     margin-bottom: 15px;
   }
 
@@ -646,8 +660,13 @@
 
   .grid_box {
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 65% 35%;
     margin: 3rem;
+    background-size: cover;
+        background-position: 72% 72%;
+        background-repeat: no-repeat;
+        background-size: 490px;
+        background-image: url('../../../../../public/images/bg_lotus_enrollment.png');
 
     form {
       label {
@@ -661,7 +680,8 @@
     }
 
     .left_grid {
-      width: 85%;
+      width: 95%;
+      padding-top: 15px;
 
       .work_flex_box {
         display: flex;
@@ -748,7 +768,7 @@
     }
 
     .right_grid {
-      width: 85%;
+      width: 100%;
 
 
       .DOB_box {
@@ -797,10 +817,10 @@
       }
 
       .terms {
-        margin-left: 15px;
-        margin-bottom: 15px;
-        text-align: center;
-        font-size: 12px;
+        // margin-left: 15px;
+        // margin-bottom: 15px;
+        // text-align: center;
+        // font-size: 12px;
 
         label {
           input {
@@ -1348,22 +1368,27 @@ input[type='radio']:checked::before {
     width: fit-content;
 
     .details_box {
-      border: 1px solid #60606080;
-      border-radius: 10px;
+      // border: 1px solid #60606080 !important;
+      border-radius: 20px;
       // width: 600px;
-      height: 200px;
-      background-color: #edeef0;
+      height: 313px;
+      background-color: #fff;
       border: none;
+      box-shadow: 0px 11.58px 23px 0px rgba(0, 0, 0, 0.04);
 
       .details_course_box {
         display: flex;
         position: relative;
 
         .current_duration {
-          margin-top: 50px;
+          // margin-top: 50px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
           font-weight: bold;
           font-size: 1.5rem;
           text-align: left;
+          margin-right: 10px;
         }
 
         .current_fees {
@@ -1375,8 +1400,8 @@ input[type='radio']:checked::before {
         }
 
         .detail_image_box {
-          width: 250px;
-          height: 195px;
+          width: 400px;
+          height: 240px;
           min-width: 250px;
 
           img {
@@ -1525,12 +1550,12 @@ input[type='radio']:checked::before {
     .course-secondary-container {
       .details_box {
         border: 1px solid rgba(96, 96, 96, 0.5019607843);
-        border-radius: 10px;
+        border-radius: 20px;
         width: 520px;
         /* height: 200px; */
         height: auto;
         text-align: center;
-        background-color: #edeef0;
+        background-color: #fff;
         border: none;
         margin: 0 auto;
 
@@ -1576,13 +1601,13 @@ input[type='radio']:checked::before {
     .course-secondary-container {
       .details_box {
         border: 1px solid rgba(96, 96, 96, 0.5019607843);
-        border-radius: 10px;
+        border-radius: 20px;
         width: 390px;
         /* height: 200px; */
         margin-left: 14px;
         height: auto;
         text-align: center;
-        background-color: #edeef0;
+        background-color: #fff;
         border: none;
 
         // margin: 0 auto;
@@ -1639,13 +1664,13 @@ input[type='radio']:checked::before {
       .course-secondary-container {
         .details_box {
           border: 1px solid rgba(96, 96, 96, 0.5019607843);
-          border-radius: 10px;
+          border-radius: 20px;
           width: 312px;
           /* height: 200px; */
           height: auto;
           margin-left: 10px;
           text-align: center;
-          background-color: #edeef0;
+          background-color: #fff;
           border: none;
 
           .details_course_box {
@@ -1980,6 +2005,7 @@ input[type='radio']:checked::before {
   font-weight: 500;
   color: rgba(0, 0, 0, 0.5);
   margin-left: 8px;
+  color: rgba(96, 96, 96, 0.5);
 }
 
 .wrapper_center {
@@ -1991,7 +2017,7 @@ input[type='radio']:checked::before {
 }
 
 .item_desc {
-  width: 100%;
+  width: auto;
   display: flex;
   align-items: center;
   // justify-content: center;
@@ -2000,5 +2026,736 @@ input[type='radio']:checked::before {
 .item_date {
   flex-direction: column !important;
   padding: 10px 16px !important;
-  gap: 4px !important;
+  gap: 0px !important;
+}
+
+.enroll_subtitle {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.details_newName {
+  font-size: 22px;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 1);
+}
+
+.details_desc_info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+  padding-right: 10px;
+}
+
+.details_duration_info {
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(129, 129, 132, 1);
+}
+
+.details_lang_info {
+  font-size: 16px;
+  font-weight: 400;
+  color: rgba(129, 129, 132, 1);
+}
+
+.tenure_course {
+  font-size: 12px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 1);
+  text-align: end;
+}
+
+.lang_course {
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 1);
+}
+
+.details_desc_days_2 {
+  // padding: 8px 0px;
+  margin-bottom: 10px;
+}
+
+.details_personal_box {
+  border-radius: 20px;
+  // height: 200px;
+  background-color: #fff;
+  border: none;
+  box-shadow: 0px 11.58px 23px 0px rgba(0, 0, 0, 0.04);
+  // display: flex;
+  // align-items: center;
+  padding: 20px;
+  background-color: rgba(251, 249, 249, 1);
+}
+
+.personal_info_wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.personal_info_wrapper .details_newName {
+  font-size: 16px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 1);
+}
+
+.details_desc_name_info {
+  display: flex;
+  justify-content: space-between;
+  gap: 45px;
+}
+
+.fields_alignment {
+  margin-top: 16px;
+}
+
+.fields_alignment_bottom {
+  margin-bottom: 8px;
+}
+
+.wrapper_date_and_course {
+  width: 100%;
+  background-color: #fff;
+  margin-top: 28px;
+  border-radius: 20px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+.course_format_wrapper {
+  display: flex;
+  padding: 22px 24px;
+  gap: 40px;
+}
+
+.details_format_date {
+  width: 70%;
+}
+
+.img_wrapper_date_format {
+  width: 30%;
+}
+
+.img_wrapper_date_format img {
+  width: 100%;
+  height: 100%;
+  padding-top: 53%;
+}
+
+.label_format_course {
+  color: rgba(0, 0, 0, 1);
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.details_format_date .check_course {
+  width: 100%;
+}
+
+.details_format_date .check_course .item-label {
+  border-radius: 25px;
+  justify-content: center;
+}
+
+.dates_enroll_wrapper {
+  margin-top: 32px;
+}
+
+.container_date_enroll .item_date {
+  flex-direction: column !important;
+  padding: 2px 16px !important;
+  gap: 0px !important;
+}
+
+.item-name {
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(96, 96, 96, 0.5);
+}
+
+.item-price {
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(96, 96, 96, 0.5);
+}
+
+.check_course .item-label {
+  padding: 8px 0.5em;
+}
+
+.check_course .item-input:checked ~ .item-info .item-name {
+  color: #fff;
+}
+
+.check_course .item-input:checked ~ .item-price {
+  color: #fff;
+}
+
+.check_course .item-label:has(.item-input:checked) {
+  background-color: rgba(202, 70, 37, 1);
+  box-shadow: 0 0 0 2px rgba(202, 70, 37, 1) inset;
+}
+
+.check_date_2 .item-label:has(.item-input:checked) {
+  background-color: rgba(202, 70, 37, 1) !important;
+  box-shadow: 0 0 0 2px #CA4625 inset !important;
+}
+
+.check_date_2 .item-input:checked ~ .item-info .item-name .style_dates {
+  color: #fff !important;
+}
+
+.fees_wrapper {
+  // margin-top: 32px;
+  width: 100%;
+  // background-color: rgba(255, 243, 240, 1);
+  // height: 71px;
+  // padding: 22px 24px;
+}
+
+.fees_show {
+  margin: 22px 24px;
+  background-color: rgba(255, 243, 240, 1);
+  height: 71px;
+  border-radius: 16px;
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0px;
+  align-items: center;
+}
+
+.fees_left_wrapper {
+  width: 105px;
+  height: 45px;
+}
+
+.fees_left_wrapper img {
+  width: 100%;
+  height: 100%;
+}
+
+.fees_label {
+  color: rgba(0, 0, 0, 1);
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.price_select {
+  font-size: 24px;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 1);
+}
+
+.bottom_container_btn {
+  background-color: #fff;
+  margin-top: -47px;
+  padding: 22px;
+  margin-left: 15px;
+  margin-right: 25px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.terms label {
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 1);
+}
+
+.button_box .next_button {
+  cursor: pointer;
+  border: 1px solid rgba(202, 70, 37, 1);
+  height: 4.5rem;
+  width: 24rem;
+  color: #fff;
+  border-radius: 8px;
+  font-size: 1.8rem;
+  font-weight: 900;
+  margin-left: 3%;
+  background-color: rgba(202, 70, 37, 1);
+}
+
+.upcoming_dates {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.upcoming_dates span {
+  color: rgba(202, 70, 37, 1);
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+.item-info {
+  display: flex;
+}
+
+.details_format_date .check_course .item-label:hover {
+  background-color: #FFF8F6;
+  color: rgba(96, 96, 96, 0.5);
+}
+
+.check_course .item-label:has(.item-input:checked):hover {
+  background-color: rgb(202, 70, 37);
+  box-shadow: 0 0 0 2px rgb(202, 70, 37) inset;
+}
+
+input[type=checkbox]:checked {
+  background-color: #FA9E57;
+}
+
+#myCheckbox {
+  /* setting the checkbox input HTML element accent color to `green` */
+  accent-color: rgb(202, 70, 37);;
+  background-color: white;
+}
+
+input[type=checkbox]:checked + label:active:before {
+  transform: scale(0);
+}
+
+input[type=checkbox]:checked + label:before {
+  background-color: #ED820A;
+  border-color: #ED820A;
+  color: #fff;
+}
+
+.details_wrapper_duration {
+  border-radius: 8px;
+  border: 1px solid rgba(96, 96, 96, 0.3);
+  width: 49%;
+  padding: 8px 25px;
+  text-align: center;
+}
+
+.time_days_wrapper {
+  display: none;
+  border-radius: 8px;
+  border: 1px solid rgba(96, 96, 96, 0.3);
+  width: 98%;
+  text-align: center;
+  margin-top: 12px;
+  // margin-right: 10px;
+  padding: 12px 50px;
+}
+
+.details_wrapper_duration_2 {
+  border-radius: 8px;
+  border: 1px solid rgba(96, 96, 96, 0.3);
+  // width: 40%;
+  padding: 8px 12px;
+  // text-align: center;
+  color: rgba(0, 0, 0, 1);
+}
+
+.btn_mode_date_wrapper {
+  margin: 0px 21px 17px 18px;
+  border-top: 1px solid rgba(96, 96, 96, 0.3);
+  padding: 15px 0px;
+  display: flex;
+  gap: 10px;
+}
+
+.details_wrapper_duration_3 {
+  border-radius: 8px;
+  border: 1px solid rgba(52, 199, 89, 1);
+  // width: 40%;
+  padding: 8px 12px;
+  // text-align: center;
+  color: rgba(0, 0, 0, 1);
+  background-color: rgba(52, 199, 89, 0.03);
+}
+
+.selected_date_popup {
+  background-color: rgb(202, 70, 37);
+  box-shadow: 0 0 0 2px rgb(202, 70, 37) inset !important;
+  color: #fff !important;
+}
+
+.selected_date_popup .style_dates {
+  color: #fff !important;
+}
+
+.date_btn {
+  width: 48.9%;
+}
+
+.accordian_holder {
+  display: none;
+}
+
+.terms_text {
+font-size: 14px; 
+  font-weight: 600;
+}
+
+@media(max-width: 768px) {
+  .enrollment_container .header {
+    grid-column: 1 / 7;
+    margin-left: 15px;
+    margin-top: 0px;
+    font-size: 2.6rem;
+    cursor: pointer;
+  }
+
+  .close_label {
+    display: none;
+  }
+
+  .enrollment_container .header .x {
+    display: flex;
+    float: right;
+    color: black;
+    background: transparent;
+    font-weight: 900;
+    font-size: 2rem;
+    margin-right: 1rem;
+    border: 0px solid rgb(0, 0, 0);
+    border-radius: 20px;
+    padding: 0px;
+    margin-top: 35px;
+    cursor: pointer;
+}
+
+.enrollment_container .student {
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.enroll_subtitle {
+  font-size: 12px;
+  font-weight: 500;
+  margin-top: 6px; 
+}
+
+.course-main-container .course-secondary-container .details_box .details_course_box .detail_image_box {
+   width: auto; 
+   height: auto; 
+   min-width: auto; 
+}
+
+.main-container .course-main-container .course-secondary-container .details_box {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.main_div .grid_box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0.5rem;
+}
+
+.main-container .course-main-container .course-secondary-container .details_box {
+  border: 1px solid rgba(96, 96, 96, 0.5019607843);
+  border-radius: 20px;
+  width: 330px;
+  /* height: 200px; */
+  height: auto;
+  margin-left: 0px;
+  text-align: center;
+  background-color: #fff;
+  border: none;
+}
+
+.course-main-container .course-secondary-container .details_box .details_course_box .detail_image_box {
+  width: 100%;
+  height: 185px;
+  min-width: auto;
+}
+
+
+.course-main-container .course-secondary-container .details_box .details_course_box .current_duration {
+  margin-right: 0px;
+}
+
+.main-container .course-main-container .course-secondary-container .details_box .details_course_box .current_duration {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-top: 0;
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-align: left;
+  /* flex-wrap: wrap; */
+  padding: 0px 20px 20px 20px;
+}
+
+.details_wrapper_duration {
+  border-radius: 8px;
+  border: 1px solid rgba(96, 96, 96, 0.3);
+  width: 49%;
+  display: flex;
+  padding: 2px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.details_newName {
+  font-size: 16px;
+  font-weight: 600;
+  color: rgb(0, 0, 0);
+}
+
+.details_duration_info {
+  font-size: 12px;
+  font-weight: 400;
+  color: rgb(129, 129, 132);
+}
+
+.details_lang_info {
+  font-size: 12px;
+  font-weight: 400;
+  color: rgb(129, 129, 132);
+}
+
+.details_desc_info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+  padding-right: 6px;
+}
+
+.btn_mode_date_wrapper {
+  margin: 0px 21px 17px 18px;
+  border-top: 1px solid rgba(96, 96, 96, 0.3);
+  padding: 15px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.img_wrapper_date_format {
+  display: none;
+}
+
+.details_format_date {
+  width: 100%;
+}
+
+.item-name {
+  font-size: 11px;
+  font-weight: 500;
+  color: rgba(96, 96, 96, 0.5);
+}
+
+.item-price {
+  font-size: 11px;
+  font-weight: 500;
+  color: rgba(96, 96, 96, 0.5);
+}
+
+.date_btn {
+  width: 100%;
+}
+
+.style_dates {
+  font-size: 11px;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.5);
+  margin-left: 8px;
+  color: rgba(96, 96, 96, 0.5);
+  text-align: left;
+}
+
+.fees_label {
+  color: rgb(0, 0, 0);
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.price_select {
+  font-size: 18px;
+  font-weight: 500;
+  color: rgb(0, 0, 0);
+}
+
+.fees_price_wrapper {
+  width: 50%;
+  text-align: center;
+}
+
+.bottom_container_btn {
+  display: none;
+}
+
+.main_div .grid_box .left_grid {
+  display: none;
+}
+
+.check_course .item-label {
+  align-items: flex-start;
+}
+
+.container_date_enroll .item_date {
+  flex-direction: column !important;
+  padding: 2px 2px !important;
+  gap: 0px !important;
+}
+
+.details_format_date .check_course .item_format {
+  border-radius: 25px;
+  justify-content: flex-start;
+}
+
+.details_wrapper_duration_2 {
+  border-radius: 8px;
+  border: 1px solid rgba(96, 96, 96, 0.3);
+  padding: 8px 9px;
+  color: rgb(0, 0, 0);
+  text-align: left;
+}
+
+.details_wrapper_duration_3 {
+  border-radius: 8px;
+  border: 1px solid rgb(52, 199, 89);
+  padding: 8px 9px;
+  color: rgb(0, 0, 0);
+  background-color: rgba(52, 199, 89, 0.03);
+  text-align: left;
+}
+
+.time_days_wrapper {
+  border-radius: 8px;
+  border: 1px solid rgba(96, 96, 96, 0.3);
+  width: 98%;
+  text-align: left;
+  margin-top: 12px;
+  padding: 12px 9px;
+}
+
+.accordian_holder {
+  display: block;
+}
+
+.accordian_holder {
+  background-color: rgba(251, 249, 249, 1);
+  padding: 20px;
+  // margin: 5px;
+  border-radius: 20px;
+  margin-top: 28px;
+}
+
+.accordion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.accordian_holder .desc {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.5s;
+}
+
+.accordian_holder .show {
+  margin-top: 15px;
+  grid-template-rows: 1fr;
+}
+
+.accordian_holder .desc .hidden {
+  overflow: hidden;
+}
+
+.accordian_title {
+  font-size: 16px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 1);
+}
+
+.accordian_sub-title {
+  font-size: 10px;
+  color: rgba(0, 0, 0, 0.5);
+  font-weight: 500;
+  margin-top: 4px;
+}
+
+.main_div .grid_box {
+  background-image: none;
+}
+
+.edit_show {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.edit_show div {
+  display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 2px;
+        border-bottom: 2px solid rgba(0, 0, 0, 1);
+}
+
+.edit_show div span {
+  font-size: 16px;
+  color: rgba(0, 0, 0, 1);
+}
+
+.edit_show div div {
+  margin-left: 4px;
+}
+
+.inp-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  justify-content: space-between;
+  position: relative;
+  width: 100% !important;
+}
+
+.rotate_icon_arrow {
+  transform: rotate(180deg);
+}
+
+.wrapper_date_and_course {
+  width: 100%;
+  background-color: #fff;
+  margin-top: 28px;
+  border-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.bottom_container_btn {
+  display: flex;
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  background: rgb(255, 243, 240);
+  margin-left: 0px;
+  left: 0;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  flex-direction: column-reverse;
+  gap: 10px;
+}
+
+.enrollment_container {
+  margin-bottom: 38%;
+}
+
+.terms label {
+  font-size: 12px !important;
+}
+
+.terms_text {
+  font-size: 12px; 
+    font-weight: 600;
+    color: rgba(0, 0, 0, 1);
+  }
 }
