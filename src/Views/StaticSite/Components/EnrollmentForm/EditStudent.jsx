@@ -17,7 +17,7 @@ const customStyles = {
     height: '75%',
     width: '40%',
     borderRadius: '20px',
-    border: '1px solid black',
+    // border: '1px solid black',
     overflowY: 'auto',
     scrollbarWidth: 'none',
   },
