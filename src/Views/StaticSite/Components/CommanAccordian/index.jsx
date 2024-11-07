@@ -22,7 +22,7 @@ const Accordian = ({ data, sliderVal, setSliderVal, selectedFilters }) => {
 
   const shouldDisplayLink = (points) => {
     if (selectedFilters) {
-      const { online, onCampus, month1, month2, month3, weekends, weekDays } = selectedFilters;
+      const { online, onCampus, days7, days21, month1, month2, month3, weekends, weekDays } = selectedFilters;
 
       if (!anyFilterActive) {
         return true; // Show link if no filters are active
@@ -36,6 +36,12 @@ const Accordian = ({ data, sliderVal, setSliderVal, selectedFilters }) => {
       }
       if (onCampus) {
         conditions.push(points.onCampus);
+      }
+      if (days7) {
+        conditions.push(points.days7);
+      }
+      if (days21) {
+        conditions.push(points.days21);
       }
       if (month1) {
         conditions.push(points.month1);
@@ -54,7 +60,7 @@ const Accordian = ({ data, sliderVal, setSliderVal, selectedFilters }) => {
       }
 
       // Check if all active conditions are met
-      return conditions.length > 0 && conditions.every(Boolean);
+      return conditions.length > 0 && conditions.some(Boolean);
     }
 
     return false; // In case selectedFilters is undefined
@@ -62,7 +68,7 @@ const Accordian = ({ data, sliderVal, setSliderVal, selectedFilters }) => {
 
   const shouldDisplayBlock = (obj) => {
     if (selectedFilters) {
-      const { online, onCampus, month1, month2, month3, weekends, weekDays } = selectedFilters;
+      const { online, onCampus, days7,days21,month1, month2, month3, weekends, weekDays } = selectedFilters;
 
       if (!anyFilterActive) {
         return true; // Show block if no filters are active
@@ -83,6 +89,14 @@ const Accordian = ({ data, sliderVal, setSliderVal, selectedFilters }) => {
         }
         if (onCampus) {
           const bool = points.some(obj => obj.onCampus === true);
+          conditions.push(!!bool);
+        }
+        if (days7) {
+          const bool = points.some(obj => obj.days7 === true);
+          conditions.push(!!bool);
+        }
+        if (days21) {
+          const bool = points.some(obj => obj.days21 === true);
           conditions.push(!!bool);
         }
         if (month1) {
@@ -108,7 +122,7 @@ const Accordian = ({ data, sliderVal, setSliderVal, selectedFilters }) => {
       }
 
       // Check if all active conditions are met and not empty
-      return conditions.length > 0 && conditions.every(Boolean);
+      return conditions.length > 0 && conditions.some(Boolean);
     }
 
     return false; // In case selectedFilters is undefined
