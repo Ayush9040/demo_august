@@ -4,7 +4,7 @@
   justify-content: center;
   gap: 5rem;
 
-  &:nth-child(even) {
+  &:nth-child(odd) {
     flex-direction: row-reverse;
   }
 

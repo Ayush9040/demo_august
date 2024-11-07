@@ -142,6 +142,7 @@ const Courses = () => {
 
       // Extract the points from obj
       var points = []
+      //Here kept staic data based on each section to hide the complete section if there is no matched data
       if (index == 0) {
         points = [
           {
