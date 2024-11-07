@@ -18,6 +18,11 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
       setAnyFilterActive(activeCoun)
     }
   }, [selectedFilters])
+
+  useEffect(() => {
+    console.log('loaded2');
+
+  }, [data])
   const shouldDisplayLink = (points) => {// used to display the link in UI
     if (selectedFilters) {
       const { online, onCampus, days7, days21, month1, month2, month3, weekends, weekDays } = selectedFilters;
@@ -394,7 +399,7 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
       text: 'Pregnancy Camp',
       onCampus: true, weekDays: true
     }]
-  
+
     switch (title) {
       case 'Yoga Teacher Training Courses (YTTC)':
         return (
@@ -635,60 +640,24 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
 
             data
               .filter((item) => item.mostPopular === true).map((item, i) => {
+                {console.log(item);
+                }
                 if (
                   item.key === '500-hrs-online-yoga-teacher-training-course-intermediate-level' ||
                   item.key === 'weekend-teacher-training-course' ||
                   item.key === 'nutri-diet'
                 ) {
                   return (
-                    shouldDisplayCard(item) && (
-                      <CourseCard
-                        key={i}
-                        color={selectColor(i)}
-                        index={i}
-                        courseTitle={item.title}
-                        pageName={item.key}
-                        tenure={item.tenure}
-                        courseCategory={item.courseCategory}
-                        courseSubType={item.courseSubType}
-                        onlineMode={item?.onlineInfo?.courseMode}
-                        residentialMode={item?.residentialInfo?.courseMode}
-                        nonResidentialMode={item?.nonResidentialInfo?.courseMode}
-                        residentialLocation={item?.residentialInfo?.residentialMode}
-                        nonResidentialLocation={item?.nonResidentialInfo?.nonResidentialMode}
-                        courseType={item?.courseType}
-                        language={item?.language}
-                        description={item.metaDescription}
-                        path={item.key}
-                        img={item.cardImage}
-                        rating={item.rating}
-                        dates={item.dates}
-                      />)
-                  )
-                }
-                return
-              })
-            :
-            data.map((item, i) => {
-              if (i < 3) {
-                return (
-                  shouldDisplayCard(item) && (
+                    // shouldDisplayCard(item) && (
                     <CourseCard
                       key={i}
-                      color={item.colorCode}
+                      color={selectColor(i)}
                       index={i}
                       courseTitle={item.title}
-                      description={item.metaDescription}
-                      path={item.key}
-                      img={item.cardImage}
-                      rating={item.rating}
-                      dates={item.dates}
-                      fees={item?.fees}
-                      timing={item?.timing}
-                      tenure={item?.tenure}
-                      pageName={item?.key}
-                      courseCategory={item?.courseCategory}
-                      courseSubType={item?.courseSubType}
+                      pageName={item.key}
+                      tenure={item.tenure}
+                      courseCategory={item.courseCategory}
+                      courseSubType={item.courseSubType}
                       onlineMode={item?.onlineInfo?.courseMode}
                       residentialMode={item?.residentialInfo?.courseMode}
                       nonResidentialMode={item?.nonResidentialInfo?.courseMode}
@@ -696,15 +665,53 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
                       nonResidentialLocation={item?.nonResidentialInfo?.nonResidentialMode}
                       courseType={item?.courseType}
                       language={item?.language}
-                      category={item?.category}
-                      batch={item?.batch}
-                      nonResidential={item?.nonResidential}
-                      residential={item?.residential}
-                      online={item?.online}
+                      description={item.metaDescription}
+                      path={item.key}
+                      img={item.cardImage}
+                      rating={item.rating}
+                      dates={item.dates}
                     />)
-                )
-              }
-              return
+                  // )
+                }
+                return
+              })
+            :
+            data.map((item, i) => {
+              // if (i < 3) {
+              return (
+                shouldDisplayCard(item) && (
+                <CourseCard
+                  key={i}
+                  color={item.colorCode}
+                  index={i}
+                  courseTitle={item.title}
+                  description={item.metaDescription}
+                  path={item.key}
+                  img={item.cardImage}
+                  rating={item.rating}
+                  dates={item.dates}
+                  fees={item?.fees}
+                  timing={item?.timing}
+                  tenure={item?.tenure}
+                  pageName={item?.key}
+                  courseCategory={item?.courseCategory}
+                  courseSubType={item?.courseSubType}
+                  onlineMode={item?.onlineInfo?.courseMode}
+                  residentialMode={item?.residentialInfo?.courseMode}
+                  nonResidentialMode={item?.nonResidentialInfo?.courseMode}
+                  residentialLocation={item?.residentialInfo?.residentialMode}
+                  nonResidentialLocation={item?.nonResidentialInfo?.nonResidentialMode}
+                  courseType={item?.courseType}
+                  language={item?.language}
+                  category={item?.category}
+                  batch={item?.batch}
+                  nonResidential={item?.nonResidential}
+                  residential={item?.residential}
+                  online={item?.online}
+                />)
+              )
+              // }
+              // return
             })
         }
       </div>
