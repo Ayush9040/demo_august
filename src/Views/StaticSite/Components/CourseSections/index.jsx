@@ -670,7 +670,7 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
               })
             :
             data.map((item, i) => {
-              // if (i < 3) {
+              if (i < 3) {
                 return (
                   shouldDisplayCard(item) && (
                     <CourseCard
@@ -703,8 +703,8 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
                       online={item?.online}
                     />)
                 )
-              // }
-              // return
+              }
+              return
             })
         }
       </div>
