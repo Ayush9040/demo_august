@@ -72,8 +72,8 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
       if (online) {
         conditions.push(points.online);
       }
-      if (onCampus) {
-        conditions.push(points.onCampus);
+      if (onCampus && (points?.residential || points?.nonResidential)) {
+        conditions.push(true);
       }
       if (month1) {
         conditions.push(points?.tenure == '1 month');
@@ -562,20 +562,20 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
       case 'Special Certificate Courses (For Yoga Teachers)':
         return (
           <>
-          <div style={{marginTop:'40px'}}>
-            
-            <ul id='therapy-course' >
-              {yttcStatic.map((item, i) => (
-                shouldDisplayLink(item) && (
-                  <div key={i}>
-                    <Link to={item.url}>
-                      <li className="text-bold">
-                        {item.text}
-                      </li>
-                    </Link></div>))
-              )}
+            <div style={{ marginTop: '40px' }}>
 
-            </ul></div>
+              <ul id='therapy-course' >
+                {yttcStatic.map((item, i) => (
+                  shouldDisplayLink(item) && (
+                    <div key={i}>
+                      <Link to={item.url}>
+                        <li className="text-bold">
+                          {item.text}
+                        </li>
+                      </Link></div>))
+                )}
+
+              </ul></div>
 
           </>
         )
