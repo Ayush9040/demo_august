@@ -2098,7 +2098,7 @@ const ttc200hr = {
       // '6th Jul to 22nd Sep 2024',
       // '28th Sep to 15th Dec 2024 ',
       '5th Oct to 22nd Dec 2024 ',
-      '21st Dec to 9th Mar 2025',
+      '28th Dec to 16th March 2025',
       '15th Mar to 1st Jun 2025',
       '7th Jun to 24th Aug 2025',
       '30th Aug to 16th Nov 2025',
@@ -2619,7 +2619,7 @@ const ttc200hr = {
     title: '200 Hours Yoga TTC - 2 Months Online Yoga Teacher Training Course - English - Batch 6 ',
     dates: [
       // '29th July to 21st September 2024',
-      '30th September to 23rd November 2024',
+      '2nd December 2024 to 25th January 2025',
       '3rd February to 29th March 2025',
       '7th April to 31st May 2025',
       '9th June to 2nd Augsut 2025',
