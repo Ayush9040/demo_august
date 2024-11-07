@@ -27,6 +27,7 @@ const ttc200hr = {
         templateNonResidential: 'COURSE200_NONRES_TTC',
       },
     },
+    weekDays: true,
     batch: 1,
     metaDescription:
       'Master your physical, mental, and spiritual well-being by learning the skills',
@@ -89,7 +90,7 @@ const ttc200hr = {
     time: [
       '10:00 am - 6:00 pm (IST)'
     ],
-    
+
     courseCertificate: 'TTC/Certificate',
     onlineInfo: {
       courseMode: true,
@@ -630,7 +631,7 @@ const ttc200hr = {
     time: [
       '12:00 noon - 4:00 pm (IST)'
     ],
-    
+
     courseCertificate: 'TTC/Certificate',
     onlineInfo: {
       courseMode: true,
@@ -1101,12 +1102,12 @@ const ttc200hr = {
     days: [
       'Monday to Saturday'
     ],
-    time: 
-    [
-      'Morning: 7:00 am - 8:30 am (IST)',
-      'Evening : 6:30 pm - 8:30 pm (IST)'
-    ],
-    
+    time:
+      [
+        'Morning: 7:00 am - 8:30 am (IST)',
+        'Evening : 6:30 pm - 8:30 pm (IST)'
+      ],
+
     courseCertificate: 'TTC/Certificate',
     onlineInfo: {
       courseMode: true,
@@ -1641,7 +1642,7 @@ const ttc200hr = {
     time: [
       '1:00 pm - 4:30 pm (IST)'
     ],
-    
+
     courseCertificate: 'TTC/Certificate',
     onlineInfo: {
       courseMode: true,
@@ -2098,6 +2099,7 @@ const ttc200hr = {
     textdescription4: '',
     textdescription5: '',
     key: 'weekend-teacher-training-course',
+    weekDays: true,
     // templateId: 'COURSE200_3M_TTC',
     templateId: {
       templateOnline: 'COURSE200_WEEKEND_TTC',
@@ -2154,7 +2156,7 @@ const ttc200hr = {
       'Saturday Sessions: 10:00 am – 8:30 pm (IST)',
       'Sunday Sessions 10:00 am – 1:30 pm (IST)'
     ],
-    
+
     courseCertificate: 'TTC/Certificate',
     onlineInfo: {
       courseMode: true,
@@ -2684,7 +2686,7 @@ const ttc200hr = {
     time: [
       '4:30 pm – 8:00 pm (IST)'
     ],
-    
+
     courseCertificate: 'TTC/Certificate',
     onlineInfo: {
       courseMode: true,
@@ -3164,6 +3166,7 @@ const ttc500hr = {
     textdescription3: '',
     textdescription4: '',
     textdescription5: '',
+    weekDays: true,
     key: '500-hrs-online-yoga-teacher-training-course-intermediate-level',
     // templateId: 'COURSE500_3M_TTC',
     templateId: {
@@ -3555,6 +3558,7 @@ const ttc900hr = {
     textdescription3: '',
     textdescription4: '',
     textdescription5: '',
+    weekDays: true,
     key: '3-months-advanced-teacher-training-course',
     // templateId: 'GENERAL_AUTO_EMAIL',
     templateId: {
@@ -3613,7 +3617,7 @@ const ttc900hr = {
     time: [
       '6:30 am to 8:00 pm Holiday on all Sundays'
     ],
-    
+
     courseCertificate: 'TTC/Certificate',
     onlineInfo: {
       courseMode: false,
@@ -4189,8 +4193,8 @@ const ttc900hr = {
     preRequisite: '7 Days Health Camp, 21 Days Better Living Course, 200 Hours Teacher Training Course',
     courseCategory: 'Educational',
     courseSubType: '900 Hour Yoga Teacher Training',
-    
-    
+
+
     courseCertificate: 'TTC/Certificate',
     onlineInfo: {
       courseMode: true,
@@ -4930,7 +4934,7 @@ const ttc900hr = {
       'Saturday: 4:30 pm – 7.30 pm (IST)',
       'Sunday: 9:30 am – 1:30 pm (IST)'
     ],
-    
+
     courseCertificate: 'TTC/Certificate',
     onlineInfo: {
       courseMode: true,
@@ -5650,7 +5654,7 @@ const ttc900hr = {
       'Morning: 7:00 am to 9:00 am (IST)',
       'Evening: 4:30 pm to 8:00 pm (IST)'
     ],
-    
+
     courseCertificate: 'TTC/Certificate',
     onlineInfo: {
       courseMode: true,
@@ -6331,7 +6335,7 @@ const ttc900hr = {
     time: [
       '5:00 p.m. - 8:00 p.m. (IST)'
     ],
-    
+
     courseCertificate: 'TTC/Certificate',
     onlineInfo: {
       courseMode: true,
@@ -7127,6 +7131,7 @@ const camps = {
     textdescription4: '',
     textdescription5: '',
     title: 'Cardiac & Hypertension Yoga Workshop - On Campus',
+    weekDays: true,
     key: 'cardiac-hypertension-workshop',
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
@@ -7168,7 +7173,7 @@ const camps = {
     time: [
       '9:30 am – 5:30 pm (IST)'
     ],
-    
+
     courseCertificate: 'NO',
     onlineInfo: {
       courseMode: false,
@@ -7296,6 +7301,7 @@ const camps = {
     textdescription5: '',
     title: 'Diabetes Yoga Camp - On Campus',
     key: 'diabetes-camp',
+    weekDays: true,
     // batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
     templateId: {
@@ -7336,7 +7342,7 @@ const camps = {
     time: [
       '9:30 am – 5:30 pm (IST)'
     ],
-    
+
     courseCertificate: 'NO',
     onlineInfo: {
       courseMode: false,
@@ -7914,6 +7920,7 @@ const camps = {
     textdescription4: '',
     textdescription5: '',
     title: 'Life Management Yoga Camp - On Campus',
+    weekDays: true,
     key: 'life-management-camp',
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
@@ -7955,7 +7962,7 @@ const camps = {
     time: [
       '9:30 am – 5:30 pm (IST)'
     ],
-    
+
     courseCertificate: 'NO',
     onlineInfo: {
       courseMode: false,
@@ -8274,7 +8281,7 @@ const camps = {
     time: [
       '8:00 am – 11:00 am (IST)'
     ],
-    
+
     courseCertificate: 'NO',
     onlineInfo: {
       courseMode: false,
@@ -8459,7 +8466,7 @@ const camps = {
     time: [
       '9:30 am – 5:30 pm (IST)'
     ],
-    
+
     courseCertificate: 'NO',
     onlineInfo: {
       courseMode: false,
@@ -8637,7 +8644,7 @@ const camps = {
     time: [
       '9:30 am – 5:30 pm (IST)'
     ],
-    
+
     courseCertificate: 'NO',
     onlineInfo: {
       courseMode: false,
@@ -8809,7 +8816,7 @@ const camps = {
     time: [
       '10.00 am to 1:00 pm (IST)'
     ],
-    
+
     courseCertificate: 'NO',
     onlineInfo: {
       courseMode: false,
@@ -8983,7 +8990,7 @@ const camps = {
     time: [
       '9:30 am – 5:30 pm (IST)'
     ],
-    
+
     courseCertificate: 'NO',
     onlineInfo: {
       courseMode: false,
@@ -9154,7 +9161,7 @@ const camps = {
     time: [
       '9:30 am – 5:30 pm (IST)'
     ],
-    
+
     courseCertificate: 'NO',
     onlineInfo: {
       courseMode: false,
@@ -9331,7 +9338,7 @@ const camps = {
     time: [
       '9:30 am – 5:30 pm (IST)'
     ],
-    
+
     courseCertificate: 'NO',
     onlineInfo: {
       courseMode: false,
@@ -9507,7 +9514,7 @@ const camps = {
     time: [
       '9:30 am – 5:30 pm (IST)'
     ],
-    
+
     courseCertificate: 'NO',
     onlineInfo: {
       courseMode: false,
@@ -9638,6 +9645,7 @@ const camps = {
     textdescription5: '',
     title: '7 Days Health Camp - On Campus - Yoga Camp - Hindi',
     key: '7-days-camp',
+    weekDays: true,
     join: true,
     batch: 1,
     // templateId: 'CAMP_FOR_7_DAYS_HEALTH',
@@ -9679,7 +9687,7 @@ const camps = {
     time: [
       '7:00 am - 7:00 pm (IST)'
     ],
-    
+
     courseCertificate: 'NO',
     onlineInfo: {
       courseMode: false,
@@ -10060,7 +10068,7 @@ const camps = {
     time: [
       '7:00 am - 7:00 pm (IST)'
     ],
-    
+
     courseCertificate: 'NO',
     onlineInfo: {
       courseMode: false,
@@ -10386,6 +10394,7 @@ const camps = {
     textdescription4: '',
     textdescription5: '',
     textdescription10: '',
+    weekDays: true,
     title: '21-Days Better Living Yoga Course - Morning Online and On Campus – English - Batch 1',
     key: '21-days-better-living-course',
     // templateId: 'GENERAL_AUTO_EMAIL',
@@ -10439,7 +10448,7 @@ const camps = {
     time: [
       'Morning: 7:00 am – 8:30 am (IST)'
     ],
-    
+
     courseCertificate: 'certificate Of Participation',
     onlineInfo: {
       courseMode: true,
@@ -10806,6 +10815,7 @@ const camps = {
     textdescription3: '',
     textdescription4: '',
     textdescription5: '',
+    weekDays: true,
     title: '21-Days Better Living Yoga Course - Evening - Online & On Campus – English - Batch 2',
     key: '21-days-better-living-course-batch-2',
     batch: 2,
@@ -10856,7 +10866,7 @@ const camps = {
     newName: '21 Days Better Living Course',
     days: [''],
     time: ['Evening 6:30 pm – 8:00 pm (IST)'],
-    
+
     courseCertificate: 'certificate Of Participation',
     onlineInfo: {
       courseMode: true,
@@ -11250,7 +11260,7 @@ const camps = {
     time: [
       'Evening 6:30 pm – 8:00 pm (IST)'
     ],
-    
+
     courseCertificate: 'certificate Of Participation',
     onlineInfo: {
       courseMode: true,
@@ -11940,6 +11950,7 @@ const classes = {
     textdescription3: '',
     textdescription4: '',
     textdescription5: '',
+    weekDays: true,
     title: 'Advanced Yoga Asana Regular Class - Online (Only for TYI Teachers)',
     key: 'advanced-regular-yoga-classes',
     batch: 1,
@@ -12051,6 +12062,7 @@ const classes = {
     textdescription3: '',
     textdescription4: '',
     textdescription5: '',
+    weekDays: true,
     title: 'Healing Yoga Movement & Rhythm - Online',
     key: 'healing-movement-and-rhythm',
     batch: 1,
@@ -12098,7 +12110,7 @@ const classes = {
     time: [
       '8pm - 9pm (IST)'
     ],
-    
+
     courseCertificate: 'NO',
     onlineInfo: {
       courseMode: true,
@@ -12179,7 +12191,7 @@ const classes = {
     textdescription3: 'Evening Batch (IST): 4pm to 5pm, 5pm to 6pm, 6pm to 7pm, 7pm to 8pm',
     textdescription4: 'We also have Weekend batches and the details are:',
     textdescription5: 'Weekend Schedule(Sat-Sun): 7:30 am to 9 am',
-
+    weekDays: true,
     title: 'Yoga Asana Regular Classes - (Men & Women) - Online Yoga Classes',
     key: 'asana-regular-classes-online',
     batch: 1,
@@ -12240,7 +12252,7 @@ const classes = {
       'Evening Batch (IST): 4pm to 5pm, 5pm to 6pm, 6pm to 7pm, 7pm to 8pm',
       'Weekend Schedule(Sat-Sun): 7:30 am to 9 am'
     ],
-    
+
     courseCertificate: 'NO',
     onlineInfo: {
       courseMode: true,
@@ -12508,7 +12520,7 @@ const classes = {
       '6:00 pm to 7:00 pm',
       '7:00 pm to 8:00 pm'
     ],
-    
+
     courseCertificate: 'NO',
     onlineInfo: {
       courseMode: false,
@@ -12658,7 +12670,7 @@ const classes = {
     courseCategory: 'Self Help',
     courseSubType: 'Regular Asana Classes',
     newName: 'Asana Regular Classes for Women',
-    timings:[
+    timings: [
       {
         day: 'Monday, Tuesday, Thursday, Friday',
       }
@@ -12684,7 +12696,7 @@ const classes = {
       '6:00 pm to 7:00 pm',
       '7:00 pm to 8:00 pm'
     ],
-    
+
     courseCertificate: 'NO',
     onlineInfo: {
       courseMode: false,
@@ -13036,7 +13048,7 @@ const classes = {
       'Friday'
     ],
     time: ['7:00 am - 8:00 am (IST)'],
-    
+
     courseCertificate: 'NO',
     onlineInfo: {
       courseMode: true,
@@ -13172,7 +13184,7 @@ const classes = {
     time: [
       '7:00 am - 7:45 am (IST)'
     ],
-    
+
     courseCertificate: 'NO',
     onlineInfo: {
       courseMode: true,
@@ -13927,7 +13939,7 @@ const classes = {
     time: [
       '5.00 p.m. to 7.00 p.m.'
     ],
-    
+
     courseCertificate: 'NO',
     onlineInfo: {
       courseMode: true,
@@ -14262,7 +14274,7 @@ const classes = {
     time: [
       '8:30 am to 9:30 am'
     ],
-    
+
     courseCertificate: 'NO',
     onlineInfo: {
       courseMode: true,
@@ -14550,6 +14562,7 @@ const extra = {
     textdescription3: '',
     textdescription4: '',
     textdescription5: '',
+    weekDays: true,
     key: 'nutri-diet',
     title: 'Nutri Diet Clinic',
     cardImage: `${baseDomain}${nutriDiet.nutriDietCard}`,
@@ -14575,6 +14588,7 @@ const certificate = {
     textdescription5: '',
     title: 'Certificate Course on Advanced Pranayama Techniques ( Pranayama Online Course)',
     key: 'certificate-course-on-advanced-pranayama-techniques',
+    weekDays:true,
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
     templateId: {
@@ -14634,7 +14648,7 @@ const certificate = {
       '6:00 pm - 7:00 pm (IST)',
       '11:30 am - 12:30 pm (IST)'
     ],
-    
+
     courseCertificate: 'Certificate',
     onlineInfo: {
       courseMode: true,
@@ -14893,6 +14907,7 @@ const certificate = {
     textdescription5: '',
     title: 'Certificate Program on Yoga for Cancer - Online & On Campus',
     key: 'certificate-program-on-yoga-for-cancer',
+    weekDays:true,
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
     templateId: {
@@ -14943,7 +14958,7 @@ const certificate = {
     time: [
       '3:00 pm - 5:00 pm (IST)'
     ],
-    
+
     courseCertificate: 'Certificate',
     onlineInfo: {
       courseMode: true,
@@ -15096,7 +15111,7 @@ const certificate = {
     time: [
       '5:00 p.m. - 7:00 p.m. (IST)'
     ],
-    
+
     courseCertificate: 'Certificate',
     onlineInfo: {
       courseMode: true,
@@ -15165,6 +15180,7 @@ const certificate = {
     textdescription4: '',
     textdescription5: '',
     title: 'Certificate Yoga Therapy Course - Online & On Campus',
+    weekDays:true,
     key: 'certificate-yoga-therapy-course-online',
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
@@ -15218,7 +15234,7 @@ const certificate = {
     time: [
       '5:30 pm - 7:30 pm (IST)'
     ],
-    
+
     courseCertificate: 'Certificate',
     onlineInfo: {
       courseMode: true,
