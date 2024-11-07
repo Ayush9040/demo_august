@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import {
   Accordion,
   AccordionItem,
@@ -36,26 +36,48 @@ const BrowseCourses = () => {
   const [category, setCategory] = useState()
   const [breadcrumbs, setBreadcrumbs] = useState()
   const ChangeContent = () => {
-    console.log(type);
-
     if (type === 'ttc') {
-      setBreadcrumbs('Yoga Teacher Training Courses (YTTC)')
+      if (location.search == '?type=200') {
+        setBreadcrumbs('200 hours YTTC (Basic)')
+      }
+      else if (location.search == '?type=500') {
+        setBreadcrumbs('500 hours YTTC (Intermediate)')
+      }
+      else if (location.search == '?type=900') {
+        setBreadcrumbs('900 hours YTTC (Advanced)')
+      }
+      else {
+        setBreadcrumbs('Yoga Teacher Training Courses (YTTC)')
+      }
     } else if (type === 'most-popular') {
       setBreadcrumbs('Most Popular')
     } else if (type === 'camps-workshops') {
       setBreadcrumbs('Camps & Workshops')
     } else if (type === 'classes') {
-      setBreadcrumbs('Classes')
+      setBreadcrumbs('Regular Classes')
     } else if (type === 'certificate-courses') {
       setBreadcrumbs('Certified Yoga Courses')
     } else if (type === 'special-certificate-courses') {
-      setBreadcrumbs('Special Certificate Courses (For Yoga Teachers) ')
+      setBreadcrumbs('Special Certificate Courses (For Yoga Teachers)')
     }
     return breadcrumbs
   }
+  const location = useLocation();
   useEffect(() => {
     if (type === 'ttc') {
-      setCategory([...c200hr, ...c500hr, ...c900hr])
+      //to set data
+      if (location.search == '?type=200') {
+        setCategory([...c200hr])
+      }
+      else if (location.search == '?type=500') {
+        setCategory([...c500hr])
+      }
+      else if (location.search == '?type=900') {
+        setCategory([...c900hr])
+      }
+      else {
+        setCategory([...c200hr, ...c500hr, ...c900hr])
+      }
     } else if (type === 'most-popular') {
       setCategory(AllCourses.filter((item) => item.mostPopular === true))
     } else if (type === 'camps-workshops') {
@@ -80,7 +102,7 @@ const BrowseCourses = () => {
         </div>
         <div className="popular-courses">
           <div className="course-accordian">
-            <Accordion allowZeroExpanded>
+            {/* <Accordion allowZeroExpanded>
               <AccordionItem>
                 <AccordionItemHeading>
                   <AccordionItemButton>
@@ -150,6 +172,119 @@ const BrowseCourses = () => {
                   <AccordionItemButton>
                     <Link to="/courses/browse/certificate-courses">
                       <p>Certificate Courses</p>
+                    </Link>
+                  </AccordionItemButton>
+                </AccordionItemHeading>
+              </AccordionItem>
+            </Accordion> */}
+            <Accordion allowZeroExpanded>
+              <AccordionItem style={{
+                border: breadcrumbs == 'Most Popular' && '2px solid #CA4625',
+                borderRadius: breadcrumbs == 'Most Popular' && '8px'
+              }}>
+                <AccordionItemHeading>
+                  <AccordionItemButton>
+                    <Link to="/courses/browse/most-popular">
+                      <p> Most Popular</p>
+                    </Link>
+                  </AccordionItemButton>
+                </AccordionItemHeading>
+              </AccordionItem>
+
+
+              <AccordionItem style={{
+                border: breadcrumbs == '200 hours YTTC (Basic)' && '2px solid #CA4625',
+                borderRadius: breadcrumbs == '200 hours YTTC (Basic)' && '8px'
+              }}>
+                <AccordionItemHeading>
+                  <AccordionItemButton>
+                    <Link to="/courses/browse/ttc">
+                      <p onClick={() => {
+                        setBreadcrumbs('200 hours YTTC (Basic)'), setCategory([...c200hr])
+                      }}>200 Hours YTTC (Basic)</p>
+                    </Link>
+                  </AccordionItemButton>
+                </AccordionItemHeading>
+              </AccordionItem>
+              <AccordionItem style={{
+                border: breadcrumbs == '500 hours YTTC (Intermediate)' && '2px solid #CA4625',
+                borderRadius: breadcrumbs == '500 hours YTTC (Intermediate)' && '8px'
+              }}>
+                <AccordionItemHeading>
+                  <AccordionItemButton>
+                    <Link to="/courses/browse/ttc">
+                      <p onClick={() => {
+                        setBreadcrumbs('500 hours YTTC (Intermediate)'), setCategory([...c500hr])
+                      }}>500 Hours YTTC (Intermediate)</p>
+                    </Link>
+                  </AccordionItemButton>
+                </AccordionItemHeading>
+              </AccordionItem>
+              <AccordionItem style={{
+                border: breadcrumbs == '900 hours YTTC (Advanced)' && '2px solid #CA4625',
+                borderRadius: breadcrumbs == '900 hours YTTC (Advanced)' && '8px'
+              }}>
+                <AccordionItemHeading>
+                  <AccordionItemButton>
+                    <Link to="/courses/browse/ttc">
+                      <p onClick={() => {
+                        setBreadcrumbs('900 hours YTTC (Advanced)'), setCategory([...c900hr])
+                      }}>900 Hours YTTC (Advanced)</p>
+                    </Link>
+                  </AccordionItemButton>
+                </AccordionItemHeading>
+              </AccordionItem>
+
+              <AccordionItem style={{
+                border: breadcrumbs == 'Certified Yoga Courses' && '2px solid #CA4625',
+                borderRadius: breadcrumbs == 'Certified Yoga Courses' && '8px'
+              }}>
+                <AccordionItemHeading>
+                  <AccordionItemButton>
+                    <Link to="/courses/browse/certificate-courses">
+                      <p>Certified Yoga Courses</p>
+                    </Link>
+                  </AccordionItemButton>
+                </AccordionItemHeading>
+              </AccordionItem>
+              <AccordionItem style={{
+                border: breadcrumbs == 'Regular Classes' && '2px solid #CA4625',
+                borderRadius: breadcrumbs == 'Regular Classes' && '8px'
+              }}>
+                <AccordionItemHeading>
+                  <AccordionItemButton>
+                    <Link to="/courses/browse/classes">
+                      <p>Regular Classes</p>
+                    </Link>
+                  </AccordionItemButton>
+                </AccordionItemHeading>
+              </AccordionItem>
+
+
+
+              <AccordionItem style={{
+                border: breadcrumbs == 'Camps & Workshops' && '2px solid #CA4625',
+                borderRadius: breadcrumbs == 'Camps & Workshops' && '8px'
+              }}>
+                <AccordionItemHeading>
+                  <AccordionItemButton>
+                    <Link to="/courses/browse/camps-workshops">
+                      <p>Camps & Workshop</p>
+                    </Link>
+                  </AccordionItemButton>
+                </AccordionItemHeading>
+              </AccordionItem>
+
+              <AccordionItem
+                style={{
+                  border: breadcrumbs == 'Special Certificate Courses (For Yoga Teachers)' && '2px solid #CA4625',
+                  borderRadius: breadcrumbs == 'Special Certificate Courses (For Yoga Teachers)' && '8px'
+                }}
+              >
+                <AccordionItemHeading>
+                  <AccordionItemButton>
+                    <Link to="/courses/browse/special-certificate-courses">
+                      <p>Special Certificate Courses (For Yoga Teachers)</p>
                     </Link>
                   </AccordionItemButton>
                 </AccordionItemHeading>

@@ -366,12 +366,12 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
     },
     {
       url: '/one-month-ttc',
-      text: '200 Hour 1 Month BTTC Course',
+      text: '200 Hours 1 Month YTTC Basic Course',
       onCampus: true, online: true, month1: true, weekDays: true
     },
     {
       url: '/seven-month-ttc',
-      text: "900 Hour 3 Month ATTC Course",
+      text: "900 Hours 3 Months YTTC Advanced Course",
       onCampus: true, online: true, month3: true, weekDays: true
     },
     {
