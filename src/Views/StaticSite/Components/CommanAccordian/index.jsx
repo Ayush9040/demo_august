@@ -60,13 +60,14 @@ const Accordian = ({ data, sliderVal, setSliderVal, selectedFilters }) => {
       }
 
       // Check if all active conditions are met
-      return conditions.length > 0 && conditions.some(Boolean);
+      return conditions.length > 0 && conditions.every(Boolean);
     }
 
     return false; // In case selectedFilters is undefined
   };
 
   const shouldDisplayBlock = (obj) => {
+    
     if (selectedFilters) {
       const { online, onCampus, days7,days21,month1, month2, month3, weekends, weekDays } = selectedFilters;
 
@@ -122,7 +123,7 @@ const Accordian = ({ data, sliderVal, setSliderVal, selectedFilters }) => {
       }
 
       // Check if all active conditions are met and not empty
-      return conditions.length > 0 && conditions.some(Boolean);
+      return conditions.length > 0 && conditions.every(Boolean);
     }
 
     return false; // In case selectedFilters is undefined

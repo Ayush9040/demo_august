@@ -58,7 +58,7 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
       }
 
       // Check if all active conditions are met
-      return conditions.length > 0 && conditions.some(Boolean);
+      return conditions.length > 0 && conditions.every(Boolean);
     }
 
     return false; // In case selectedFilters is undefined
@@ -107,7 +107,7 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
       }
 
       // Check if all active conditions are met
-      return conditions.length > 0 && conditions.some(Boolean);
+      return conditions.length > 0 && conditions.every(Boolean);
     }
 
     return false; // In case selectedFilters is undefined
@@ -670,7 +670,7 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
               })
             :
             data.map((item, i) => {
-              if (i < 3) {
+              // if (i < 3) {
                 return (
                   shouldDisplayCard(item) && (
                     <CourseCard
@@ -703,8 +703,8 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
                       online={item?.online}
                     />)
                 )
-              }
-              return
+              // }
+              // return
             })
         }
       </div>

@@ -438,7 +438,7 @@ const Courses = () => {
       }
 
       // Check if all active conditions are met and not empty
-      return conditions.length > 0 && conditions.some(Boolean);
+      return conditions.length > 0 && conditions.every(Boolean);
     }
 
     return true; // In case selectedFilters is undefined
