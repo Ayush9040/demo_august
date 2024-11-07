@@ -23,6 +23,7 @@ const Enrollment = () => {
   const [courseDate, setCourseDate] = useState(null)
   const [Params] = useSearchParams()
   const navigate = useNavigate()
+  const [isEditStudentOpen, setEditStudentOpen] = useState(false);
 
   useEffect(() => {
     let currentCrs = AllCourses.find((item) => item.key === courseId)
@@ -556,6 +557,8 @@ const Enrollment = () => {
     } else if (formData.address1 === '') {
       // alert("4")
       setEmpty(4)
+      
+      setEditStudentOpen(true);
     }
     else if (formData.country === '') {
       // alert("5")
@@ -591,6 +594,7 @@ const Enrollment = () => {
       setEmpty(21)
     }
     else if (isMatch && formData.endDate === '') {
+      console.log("Form Data Start Date ", formData.startDate)
       alert("12")
       setEmpty(20)
     }
@@ -780,6 +784,8 @@ useEffect(() => {
             isLoad={isLoad}
             courseDate={courseDate}
             templateKey={currentCourse?.templateId}
+            isEditStudentOpen={isEditStudentOpen}
+            setEditStudentOpen={setEditStudentOpen}
             qualificationData={qualificationData}
             listData={listData}
             currentCourse={currentCourse}

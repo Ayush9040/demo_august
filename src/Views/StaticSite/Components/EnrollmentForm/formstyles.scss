@@ -8,7 +8,7 @@
   // padding: 1.5em 0;
   // width: calc(100% - 3em);
   width: 17em;
-  margin-top: 22px;
+  margin-top: 16px;
 }
 
 .check_course .btn {
@@ -1414,6 +1414,15 @@ input[type='radio']:checked::before {
       }
     }
 
+    .details_box_regular {
+      border-radius: 20px;
+      // width: 600px;
+      height: 365px;
+      background-color: #fff;
+      border: none;
+      box-shadow: 0px 11.58px 23px 0px rgba(0, 0, 0, 0.04);
+    }
+
     .course-details-text {
       color: rgba(96, 96, 96, 0.502);
       font-size: 20px;
@@ -2054,7 +2063,7 @@ input[type='radio']:checked::before {
 }
 
 .details_lang_info {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
   color: rgba(129, 129, 132, 1);
 }
@@ -2067,7 +2076,7 @@ input[type='radio']:checked::before {
 }
 
 .lang_course {
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 400;
   color: rgba(0, 0, 0, 1);
 }
@@ -2331,7 +2340,7 @@ input[type=checkbox]:checked + label:before {
   border-radius: 8px;
   border: 1px solid rgba(96, 96, 96, 0.3);
   width: 49%;
-  padding: 8px 25px;
+  padding: 8px 12px;
   text-align: center;
 }
 
@@ -2361,6 +2370,25 @@ input[type=checkbox]:checked + label:before {
   padding: 15px 0px;
   display: flex;
   gap: 10px;
+}
+
+.btn_mode_date_regular {
+  margin: 0px 21px 17px 18px;
+    border-top: 1px solid rgba(96, 96, 96, 0.3);
+    padding: 15px 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.first_wrapper_regular_btn {
+  display: flex;
+  gap: 20px;
+}
+
+.second_wrapper_regular_btn {
+  display: flex;
+  gap: 20px;
 }
 
 .details_wrapper_duration_3 {
@@ -2394,6 +2422,44 @@ input[type=checkbox]:checked + label:before {
 .terms_text {
 font-size: 14px; 
   font-weight: 600;
+}
+
+.react-datepicker-wrapper {
+  width: 100%;
+}
+
+.react-datepicker__input-container input {
+  width: 100% !important; 
+  margin: 0 0 0 0px; 
+  font-size: 15px !important;
+  padding: 8px 30px;
+  // border: 1px solid rgba(96, 96, 96, 0.5);
+  box-shadow: 0 0 0 1px hsl(233, 10%, 80%) inset;
+  border-radius: 50px;
+  font-weight: 500;
+  color: rgba(96, 96, 96, 0.5);
+}
+
+.date-input-wrapper {
+  margin-top: 16px;
+}
+
+.label_duration {
+  display: flex;
+  align-items: center;
+}
+
+.msg_duration {
+  display: flex;
+    margin-left: 8px;
+    font-size: 12px;
+    font-weight: 500;
+    align-items: center;
+    padding: 4px 6px;
+    border-radius: 4px;
+    justify-content: center;
+    background: linear-gradient(to right, #F7F7F7, #FFF7E2);
+    color: #EFCA6C;
 }
 
 @media(max-width: 768px) {

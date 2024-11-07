@@ -40,6 +40,7 @@ const CourseDetails = ({ pageDate }) => {
   const [showDiv, setShowDiv] = useState(false);
   const [startDate, setStartDate] = useState('');
   const [open, setOpen] = useState(false);
+  const [ isRegular, setIsRegular] = useState(false)
 
 
   useEffect(() => {
@@ -251,6 +252,31 @@ const CourseDetails = ({ pageDate }) => {
   
 
   // console.log('Course Viewed Event', pageDate);
+
+  useEffect(() => {
+    const array = ["Yoga Classes for Men (Regular Asana) - On Campus",
+      "Yoga Classes for Women (Regular Asana) - On Campus",
+      "Yoga Asana Regular Classes - (Men & Women) - Online Yoga Classes",
+      "Weekend Yoga Asana Classes - (Men & Women) - On Campus",
+      "Weekend Yoga Asana Classes - (Men & Women) - Online",
+      "Children's Yoga Classes (Regular) - On Campus",
+      "Children's Weekend Yoga Class - On Campus",
+       "Advanced Yoga Asana Regular Class - Online (Only for TYI Teachers)",
+       "Regular Pregnancy Yoga Classes - Online & On Campus",
+       "Advanced Yoga Asana Regular Class - Online (Only for TYI Teachers)",
+       "Healing Yoga Movement & Rhythm - Online",
+        "Yog Prayas - Online",
+       "Online Meditation Course  (Foundation Course)", 
+       "Regular Online Meditation Classes", 
+       "Couples’ Yoga Classes  - Online"
+    ]
+    const isMatch = array.includes(pageDate?.title);
+    setIsRegular(isMatch);
+    // localStorage.setItem('isRegular', isMatch)
+    // const tomorrow = new Date();
+    // tomorrow.setDate(tomorrow.getDate() + 1);
+    // setMinDate(tomorrow);
+  }, [pageDate])
 
 
   useEffect(() => {
@@ -660,7 +686,9 @@ const CourseDetails = ({ pageDate }) => {
                 )} */}
               </div>
 
-              <div className='wrapper_dates'>
+              {
+                !isRegular ? (
+                  <div className='wrapper_dates'>
                 <span className='date-label-new'>Upcoming Dates:</span> <span className='start-date-glimse'> &nbsp;{startDate} | </span>  &nbsp;
                 <div className='view_wrapper'>
                 <a 
@@ -671,6 +699,8 @@ const CourseDetails = ({ pageDate }) => {
                 </a>
                 </div>
               </div>
+                ) : ""
+              }
 
               {/* <CommonBtn text={'Gift Course'} /> */}
             </div>

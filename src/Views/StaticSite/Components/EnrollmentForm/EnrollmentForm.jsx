@@ -47,6 +47,8 @@ const EnrollmentForm = ({
   setCourseAsset1,
   courseAsset2,
   setCourseAsset2,
+  isEditStudentOpen,
+  setEditStudentOpen,
   handleSubmit,
   courseFee,
   setCourseFee,
@@ -996,6 +998,7 @@ const EnrollmentForm = ({
 
   const handleEditClose = () => {
     setEditOpen(false);
+    setEditStudentOpen(false);
   };
 
 
@@ -1140,7 +1143,7 @@ const EnrollmentForm = ({
                   <img src='/images/edit_icon.svg' style={{cursor: 'pointer'}} alt='' loading='lazy' />
                   </div>
                 </div>
-                {editOpen && (
+                {(editOpen || isEditStudentOpen) && (
               // <MessageModal 
               //   message={<TermsCondition />} 
               //   closePopup={handleClose} 

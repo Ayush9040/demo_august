@@ -1,4 +1,4 @@
-import React,{ useEffect, useState, useMemo } from 'react'
+import React,{ useEffect, useState, useMemo, useRef } from 'react'
 import { Country, State, City } from 'country-state-city'
 //import baseDomain, { background } from '../../assets/images/imageAsset'
 import './popup.scss'
@@ -48,6 +48,16 @@ const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse
         pincode: '',
         gender: '',
       })
+
+      const inputRefs = {
+        name: useRef(null),
+        lname: useRef(null),
+        phone: useRef(null),
+        email: useRef(null),
+        address1: useRef(null),
+        pincode: useRef(null),
+        gender: useRef(null),
+      };
     
 
     const [values, setValues] = useState([])
@@ -755,15 +765,36 @@ const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse
       formData2.name === null
     ) {
       // alert("1")
+     
       setEmpty(1)
+
+      const nameField = document.querySelector('[data-key="name"]');
+      console.log(" nameField ", nameField);
+    if (nameField) {
+      nameField.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      nameField.focus();
+    }
+      
     } else if (formData2.lname === '' ||
       formData2.lname === undefined ||
       formData2.lname === null){
         setEmpty(7);
+        const nameField = document.querySelector('[data-key="lname"]');
+      console.log(" nameField ", nameField);
+    if (nameField) {
+      nameField.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      nameField.focus();
+    }
     } else if (formData2.email === '' || !validateEmail(formData2.email) || formData2.email === undefined ||
       formData2.email === null) {
         // alert("2")
       setEmpty(2)
+      const nameField = document.querySelector('[data-key="email"]');
+      console.log(" nameField ", nameField);
+    if (nameField) {
+      nameField.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      nameField.focus();
+    }
     } else if (
       formData2.phone === '' ||
       formData2.phone?.length < 6 ||
@@ -772,23 +803,52 @@ const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse
     ) {
       // alert("3")
       setEmpty(3)
+      const nameField = document.querySelector('[data-key="phone"]');
+      console.log(" nameField ", nameField);
+    if (nameField) {
+      nameField.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      nameField.focus();
+    }
     } else if (formData2.address1 === '') {
       // alert("4")
       setEmpty(4)
+      const nameField = document.querySelector('[data-key="address1"]');
+      console.log(" nameField ", nameField);
+    if (nameField) {
+      nameField.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      nameField.focus();
+    }
     }
     else if (formData2.country === '') {
       // alert("5")
       setEmpty(5)
+      const nameField = document.querySelector('[data-key="country"]');
+      console.log(" nameField ", nameField);
+    if (nameField) {
+      nameField.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      nameField.focus();
+    }
     }
     else if (formData2.pincode === '') {
       // alert("6")
       setEmpty(8)
+      const nameField = document.querySelector('[data-key="pincode"]');
+      console.log(" nameField ", nameField);
+    if (nameField) {
+      nameField.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      nameField.focus();
+    }
     } else if (formData2.gender === '') {
       // alert("7")
       setEmpty(11)
+      const nameField = document.querySelector('[data-key="gender"]');
+      console.log(" nameField ", nameField);
+    if (nameField) {
+      nameField.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      nameField.focus();
+    }
     }
     else {
-      
       setFormData(prevFormData => ({
         ...prevFormData,
         ...formData2
@@ -838,6 +898,7 @@ const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse
                   setEnableBtn(false)
                 }}
                 keyName="name"
+                dataKey="name"
                 errorCheck={setEmpty}
               />
               {empty === 1 && <small class="name_err" style={{position: 'absolute', right: '0', color: 'red'}}> Please enter your name</small>}
@@ -854,6 +915,7 @@ const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse
                 form={formData2}
                 setField={setFormData2}
                 keyName="lname"
+                dataKey="lname"
                 errorCheck={setEmpty}
               />
               {empty === 7 && <small class="name_err" style={{position: 'absolute', right: '0', color: 'red'}}> Please enter your last name</small>}
@@ -871,6 +933,7 @@ const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse
                 // onChange={(e) => {
                 //   setFormData({ ...formData, phone: e })
                 // }}
+                dataKey="phone"
                 onChange={handlePhoneChange}
               
               />
@@ -908,6 +971,7 @@ const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse
                 form={formData2}
                 setField={setFormData2}
                 keyName="email"
+                dataKey="email"
                 errorCheck={setEmpty}
               />
               {empty === 2 && <small class="name_err" style={{position: 'absolute', right: '0', color: 'red'}}> Please enter a valid email</small>}
@@ -937,6 +1001,7 @@ const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse
             form={formData2}
             setField={setFormData2}
             keyName="address1"
+            dataKey="address1"
             errorCheck={setEmpty}
           />
           {empty === 4 && <p style={{position: 'absolute', right: '0', color: 'red', fontSize: '10px', bottom: '-15px'}}>Please enter your address</p>}
@@ -972,6 +1037,7 @@ const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse
           placeholder="Country"
           options={getUpdatedCountries}
           value={values.country}
+          dataKey="country"
           onChange={(value) => {
             setValues({ country: value, state: null, city: null });
             setFormData2((prev) => ({ ...prev, country: value.label }));
@@ -1030,6 +1096,7 @@ const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse
           placeholder="Pincode*"
           form={formData2}
           setField={setFormData2}
+          dataKey="pincode"
           keyName="pincode"
           errorCheck={setEmpty}
         />
@@ -1191,6 +1258,7 @@ const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse
       styles={customStyles}  // Define any custom styles if needed
       id="gender"
       name="gender"
+      dataKey="gender"
       placeholder="Select Gender"
       options={genderOptions}
       value={genderOptions.find(option => option.value === formData2.gender)}
