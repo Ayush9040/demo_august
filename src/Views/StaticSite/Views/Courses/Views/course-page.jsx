@@ -265,8 +265,45 @@ const Courses = () => {
               <AccordionItem>
                 <AccordionItemHeading>
                   <AccordionItemButton>
+                    <Link to="/courses/browse/most-popular">
+                      <p> Most Popular</p>
+                    </Link>
+                  </AccordionItemButton>
+                </AccordionItemHeading>
+              </AccordionItem>
+
+              {/* <AccordionItem>
+                <AccordionItemHeading>
+                  <AccordionItemButton>
                     <Link to="/courses/browse/ttc">
                       <p>Yoga Teacher Training Courses (YTTC)</p>
+                    </Link>
+                  </AccordionItemButton>
+                </AccordionItemHeading>
+              </AccordionItem> */}
+              <AccordionItem>
+                <AccordionItemHeading>
+                  <AccordionItemButton>
+                    <Link to="/courses/browse/ttc?type=200">
+                      <p>200 hours YTTC (Basic)</p>
+                    </Link>
+                  </AccordionItemButton>
+                </AccordionItemHeading>
+              </AccordionItem>
+              <AccordionItem>
+                <AccordionItemHeading>
+                  <AccordionItemButton>
+                    <Link to="/courses/browse/ttc?type=500">
+                      <p>500 Hours YTTC (Intermediate)</p>
+                    </Link>
+                  </AccordionItemButton>
+                </AccordionItemHeading>
+              </AccordionItem>
+              <AccordionItem>
+                <AccordionItemHeading>
+                  <AccordionItemButton>
+                    <Link to="/courses/browse/ttc?type=900">
+                      <p>900 Hours YTTC (Advanced)</p>
                     </Link>
                   </AccordionItemButton>
                 </AccordionItemHeading>
@@ -291,15 +328,7 @@ const Courses = () => {
                 </AccordionItemHeading>
               </AccordionItem>
 
-              <AccordionItem>
-                <AccordionItemHeading>
-                  <AccordionItemButton>
-                    <Link to="/courses/browse/most-popular">
-                      <p> Most Popular</p>
-                    </Link>
-                  </AccordionItemButton>
-                </AccordionItemHeading>
-              </AccordionItem>
+
 
               <AccordionItem>
                 <AccordionItemHeading>
