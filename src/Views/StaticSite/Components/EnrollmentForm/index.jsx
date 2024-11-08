@@ -574,6 +574,9 @@ const Enrollment = () => {
     } else if (formData.mode === '') {
       // alert("11")
       setEmpty('mode')
+    } else if (isMatch && formData.startDate === '') {
+      // alert("13")
+      setEmpty(21)
     } else if (formData.sdate === '') {
       // alert("8")
       setEmpty(18)
@@ -590,13 +593,10 @@ const Enrollment = () => {
     //   alert("11")
     //   setEmpty('mode')
     // }
-    else if (isMatch && formData.startDate === '') {
-      alert("13")
-      setEmpty(21)
-    }
+    
     else if (isMatch && formData.endDate === '') {
       console.log("Form Data Start Date ", formData.startDate)
-      alert("12")
+      // alert("12")
       setEmpty(20)
     }
     else {

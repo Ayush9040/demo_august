@@ -889,7 +889,7 @@ const CourseDetails = ({
 
                           Select Course Start Date
 
-                          {empty === 18 && <div id="fill_err" style={{ float: 'right', fontSize: '10px', marginTop: '10px', color: 'red' }}> {isRegular ? "Please select course Time" : "Please select course date"} </div>}
+                          {empty === 21 && <div id="fill_err" style={{ float: 'right', fontSize: '11px', marginTop: '10px', color: 'red' }}>Please select course start date</div>}
 
                         </div>
 
@@ -909,8 +909,8 @@ const CourseDetails = ({
                             onKeyDown={(e) => e.preventDefault()} //
                           // readOnly
                           />
-                          {empty === 21 && <small id="fill_err"> Please select start date</small>
-                          }
+                          {/* {empty === 18 && <small id="fill_err"> Please select start date</small>
+                          } */}
                         </div>
                       </div>
                     </>
@@ -923,7 +923,7 @@ const CourseDetails = ({
                     <div className="label_format_course">
                       {isRegular ? "Select Course Time" : "Select Course Start Date"}
 
-                      {empty === 18 && <div id="fill_err" style={{ float: 'right', fontSize: '10px', marginTop: '10px', color: 'red' }}> {isRegular ? "Please select course Time" : "Please select course date"} </div>}
+                      {empty === 18 && <div id="fill_err" style={{ float: 'right', fontSize: '11px', marginTop: '10px', color: 'red' }}> {isRegular ? "Please select course Time" : "Please select course date"} </div>}
                     </div>
 
                     <form className="residential-form check_course check_date_2" style={{ width: '100%' }}>
@@ -931,6 +931,7 @@ const CourseDetails = ({
 
                         {
                           formattedDates?.slice(0, 2).map((item, index) => {
+                            if (!item?.label) return null;
                             return (
                               <div key={index} className='date_btn'>
                                 <div className='wrapper_center container_date_enroll'>
@@ -978,7 +979,7 @@ const CourseDetails = ({
                         }
 
                         {
-                          showDefaultDate === true ? (
+                          showDefaultDate === true && formattedDates[2]?.label ? (
                             <div className='date_btn'>
                               <div className='wrapper_center container_date_enroll'>
                                 <label class="item-label item_date" style={{ width: '100%', height: '100%', borderRadius: '25px' }}>
@@ -1060,7 +1061,7 @@ const CourseDetails = ({
                                 </label>
                               </div>
                             </div>
-                          ) : (
+                          ) : formattedDates[2]?.label ? (
                             <div className='date_btn'>
                               <div className='wrapper_center container_date_enroll'>
                                 <label class="item-label item_date" style={{ width: '100%', height: '100%', borderRadius: '25px' }}>
@@ -1101,15 +1102,19 @@ const CourseDetails = ({
                                 </label>
                               </div>
                             </div>
-                          )
+                          ) : null
                         }
 
-                        <div className='upcoming_dates'>
+                        {
+                          formattedDates.length > 3 && (
+                            <div className='upcoming_dates'>
                           <span onClick={handleOpen}>{isRegular ? "See all timings" : "See all upcoming dates"}
 
                           </span>
                           <img src='/images/upcoming_dates_arrow.svg' alt='' loading='lazy' />
                         </div>
+                          )
+                        }
 
                         {openDates && (
                           // <MessageModal 
@@ -1149,7 +1154,7 @@ const CourseDetails = ({
                           </div>
                         </div>
 
-                        {empty === 18 && <div id="fill_err" style={{ float: 'right', fontSize: '10px', marginTop: '10px', color: 'red' }}> {isRegular ? "Please select course Time" : "Please select course date"} </div>}
+                        {empty === 20 && <div id="fill_err" style={{ float: 'right', fontSize: '11px', marginTop: '10px', color: 'red' }}> Please select Duration </div>}
                       </div>
 
                       <form className="residential-form check_course check_date_2" style={{ width: '100%' }}>
