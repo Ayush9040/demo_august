@@ -55,12 +55,15 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
       // if (month3 && points.month3) {
       //   conditions.push(points.month3);
       // }
-      if ((days7 && points.days7) || (days21 && points.days21) ||
-        (month1 && points.month1) || (month2 && points.month2) || (month3 && points.month3)) {
-        conditions.push(true);
-      }
-      else {
-        // conditions.push(false)
+
+      if (days7 || days21 || month1 || month2 || month3) {
+        if ((days7 && points.days7) || (days21 && points.days21) ||
+          (month1 && points.month1) || (month2 && points.month2) || (month3 && points.month3)) {
+          conditions.push(true);
+        }
+        else {
+          conditions.push(false)
+        }
       }
       if (weekends) {
         conditions.push(points.weekends);

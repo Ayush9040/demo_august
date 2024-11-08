@@ -151,10 +151,16 @@ const Courses = () => {
         if (onCampus) {
           conditions.push(points?.residential || points?.nonResidential);
         }
-        if ((days7 && points?.tenure?.toLowerCase() === '7 days') || (days21 && points?.tenure?.toLowerCase() === '21 days') ||
-          (month1 && points?.tenure === '1 month') || (month2 && points?.tenure === '2 month') ||
-          (month3 && points?.tenure === '3 month')) {
-          conditions.push(true);
+
+        if (days7 || days21 || month1 || month2 || month3) {
+          if ((days7 && points?.tenure?.toLowerCase() === '7 days') || (days21 && points?.tenure?.toLowerCase() === '21 days') ||
+            (month1 && points?.tenure === '1 month') || (month2 && points?.tenure === '2 month') ||
+            (month3 && points?.tenure === '3 month')) {
+            conditions.push(true);
+          }
+          else {
+            conditions.push(false)
+          }
         }
         // else {
         //   conditions.push(false)
@@ -175,7 +181,7 @@ const Courses = () => {
         //   conditions.push(points?.tenure === '3 month');
         // }
         if (weekends) {
-          conditions.push(points?.weekends?true:false);
+          conditions.push(points?.weekends ? true : false);
         }
         if (weekDays) {
           if (!points?.weekends) {
@@ -650,52 +656,60 @@ const Courses = () => {
 
       // Check if points exist and are not empty
       if (points) {
-        console.log(points);
+        // console.log(points);
 
-        if (online) {
-          const bool = points.some(obj => obj.online === true);
-          conditions.push(!!bool);
-        }
-        if (onCampus) {
-          const bool = points.some(obj => obj.onCampus === true);
-          conditions.push(!!bool);
-        }
-        if ((days7 && points.some(obj => obj.days7 === true)) || days21 && points.some(obj => obj.days21 === true) ||
-          (month1 && points.some(obj => obj.month1 === true)) || (month2 && points.some(obj => obj.month2 === true)) ||
-          (month3 && points.some(obj => obj.month3 === true))) {
-          conditions.push(true);
-        }
-        else {
-          // conditions.push(false);
-        }
-        // if (days21 && points.some(obj => obj.days21 === true)) {
-        //   const bool = points.some(obj => obj.days21 === true);
+        // if (online) {
+        //   const bool = points.some(obj => obj.online === true);
         //   conditions.push(!!bool);
         // }
-        // if (month1 && points.some(obj => obj.month1 === true)) {
-        //   const bool = points.some(obj => obj.month1 === true);
+        // if (onCampus) {
+        //   const bool = points.some(obj => obj.onCampus === true);
         //   conditions.push(!!bool);
         // }
-        // if (month2 && points.some(obj => obj.month2 === true)) {
-        //   const bool = points.some(obj => obj.month2 === true);
+
+        // if (days7 || days21 || month1 || month2 || month3) {
+        //   if ((days7 && points.some(obj => obj.days7 === true)) || days21 && points.some(obj => obj.days21 === true) ||
+        //     (month1 && points.some(obj => obj.month1 === true)) || (month2 && points.some(obj => obj.month2 === true)) ||
+        //     (month3 && points.some(obj => obj.month3 === true))) {
+        //     conditions.push(true);
+        //   }
+        //   else {
+        //     conditions.push(false)
+        //   }
+        // }
+
+        // if (weekends) {
+        //   const bool = points.some(obj => obj.weekends === true);
         //   conditions.push(!!bool);
         // }
-        // if (month3 && points.some(obj => obj.month3 === true)) {
-        //   const bool = points.some(obj => obj.month3 === true);
+        // if (weekDays) {
+        //   const bool = points.some(obj => obj.weekDays === true);
         //   conditions.push(!!bool);
         // }
-        if (weekends) {
-          const bool = points.some(obj => obj.weekends === true);
-          conditions.push(!!bool);
-        }
-        if (weekDays) {
-          const bool = points.some(obj => obj.weekDays === true);
-          conditions.push(!!bool);
-        }
+        // Function to filter the array
+        var filteredData = points.filter(item => {
+          // Check if the "days" group (days7, days21, month1, month2, month3) has any `true`
+          let daysGroupMatches = ['days7', 'days21', 'month1', 'month2', 'month3'].some(key => selectedFilters[key] && item[key]);
+        
+          // If all "days" fields are false in `a`, we ignore this check and consider it a match
+          if (['days7', 'days21', 'month1', 'month2', 'month3'].every(key => !selectedFilters[key])) {
+            daysGroupMatches = true;
+          }
+        
+          // Check that other properties match the values in `a`
+          let otherPropsMatch = Object.keys(selectedFilters).every(key => {
+            if (['days7', 'days21', 'month1', 'month2', 'month3'].includes(key)) {
+              return true;  // Skip the "days" group properties because they're handled separately
+            }
+            return !selectedFilters[key] || selectedFilters[key] === item[key];  // Ensure it matches `true` values or ignore if `a[key]` is false
+          });
+        
+          // Return true if both conditions are satisfied
+          return daysGroupMatches && otherPropsMatch;
+        });
       }
-
       // Check if all active conditions are met and not empty
-      return conditions.length > 0 && conditions.every(Boolean);
+      return filteredData.length > 0//conditions.length > 0 && conditions.every(Boolean);
     }
 
     return true; // In case selectedFilters is undefined
