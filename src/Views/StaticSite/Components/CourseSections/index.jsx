@@ -20,7 +20,7 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
   }, [selectedFilters])
 
   useEffect(() => {
-    console.log('loaded2');
+    console.log('loaded2',data);
 
   }, [data])
   const shouldDisplayLink = (points) => {// used to display the link in UI
@@ -637,16 +637,15 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
 
         {
           title === 'Most Popular' ?
-
             data
               .filter((item) => item.mostPopular === true).map((item, i) => {
                 {console.log(item);
                 }
-                if (
-                  item.key === '500-hrs-online-yoga-teacher-training-course-intermediate-level' ||
-                  item.key === 'weekend-teacher-training-course' ||
-                  item.key === 'nutri-diet'
-                ) {
+                // if (
+                //   item.key === '500-hrs-online-yoga-teacher-training-course-intermediate-level' ||
+                //   item.key === 'weekend-teacher-training-course' ||
+                //   item.key === 'nutri-diet'
+                // ) {
                   return (
                     // shouldDisplayCard(item) && (
                     <CourseCard
@@ -672,14 +671,14 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
                       dates={item.dates}
                     />)
                   // )
-                }
-                return
+                // }
+                // return
               })
             :
             data.map((item, i) => {
               // if (i < 3) {
               return (
-                shouldDisplayCard(item) && (
+                // shouldDisplayCard(item) && (
                 <CourseCard
                   key={i}
                   color={item.colorCode}
@@ -709,7 +708,7 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
                   residential={item?.residential}
                   online={item?.online}
                 />)
-              )
+              // )
               // }
               // return
             })

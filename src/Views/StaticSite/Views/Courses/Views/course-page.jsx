@@ -5,7 +5,7 @@ import React, { useEffect, lazy, useState, useRef } from 'react'
 import './style.scss'
 // import CourseSection from '../../../Components/CourseSections'
 import { courseCardData } from '../../../utils/courseCardData'
-import { c200hr, c500hr, c900hr, campsArr, AllCourses, classesArr, certificateArr } from '../Constants/courses'
+import { c200hr, c500hr, c900hr, campsArr, AllCourses, classesArr, certificateArr, mostPopular } from '../Constants/courses'
 import baseDomain, { certificates } from '../../../assets/images/imageAsset'
 import { Helmet } from 'react-helmet'
 import metaDataObj from '../../../../../Constants/metaData.json'
@@ -58,9 +58,12 @@ const Courses = () => {
   const anyFilterActive = Object.values(filters).some(value => value === true);
 
   const applyFilters = (selectedValues) => {
+    console.log(selectedValues);
+
     setIsFilterOpened(false)
     setSelectedFilters(selectedValues)
-    updateJsonData()
+    let val = JSON.parse(JSON.stringify((selectedValues)))
+    updateJsonData(val)
   }
   const countTrueFilters = Object.values(selectedFilters).filter(value => value === true).length;
   const shouldDisplayCard = (points) => {// used to display the card in UI
@@ -117,167 +120,180 @@ const Courses = () => {
 
 
   let dataMaster = [[c200hr[0], c500hr[0], c900hr[0], c200hr[1], c900hr[1], c200hr[2], c900hr[2], c200hr[3], c900hr[3], c200hr[4], c900hr[4], c200hr[5], c900hr[5]],
-  [campsArr[13], campsArr[14], campsArr[11], campsArr[15], campsArr[16]],
-    classesArr, AllCourses, campsArr,
+  [campsArr[13], campsArr[11], campsArr[14], campsArr[12], campsArr[15]],
+    classesArr, mostPopular, campsArr,
   [certificateArr[3], certificateArr[1], certificateArr[0]]]
+
   const [data, setData] = useState([dataMaster[0].slice(0, 3), dataMaster[1].slice(0, 3),
-  dataMaster[2].slice(0, 3), dataMaster[3],
+  dataMaster[2].slice(0, 3), dataMaster[3].slice(0, 3),
   dataMaster[4].slice(0, 3), dataMaster[5].slice(0, 3)])
   // Convert shouldDisplayCard to async for handling any async logic
 
-  function shouldDisplayCardNew(points) {
+  function shouldDisplayCardNew(points, filters) {
     return new Promise((resolve, reject) => {
-      if (Object.values(selectedFilters).some(value => value === true)) {
-        setTimeout(() => {
-          const { online, onCampus, days7, days21, month1, month2, month3, weekends, weekDays } = selectedFilters;
+      console.log(filters);
 
-          if (!anyFilterActive) {
-            resolve('true') // Show link if no filters are active
-          }
+      if (Object.values(filters).some(value => value === true)) {
+        // setTimeout(() => {
+        const { online, onCampus, days7, days21, month1, month2, month3, weekends, weekDays } = filters;
 
-          // Create an array to store conditions for filtering
-          const conditions = [];
+        if (!anyFilterActive) {
+          resolve('true') // Show link if no filters are active
+        }
 
-          if (online) {
-            conditions.push(points.online);
-          }
-          if (onCampus && (points?.residential || points?.nonResidential)) {
-            conditions.push(true);
-          }
-          if (days7) {
-            conditions.push(points?.tenure === '7 days');
-          }
-          if (days21) {
-            conditions.push(points?.tenure === '21 days');
-          }
-          if (month1) {
-            conditions.push(points?.tenure === '1 month');
-          }
-          if (month2) {
-            conditions.push(points?.tenure === '2 month');
-          }
-          if (month3) {
-            conditions.push(points?.tenure === '3 month');
-          }
-          if (weekends) {
-            conditions.push(points.weekends);
-          }
-          if (weekDays) {
-            conditions.push(points.weekDays);
-          }
+        // Create an array to store conditions for filtering
+        const conditions = [];
+        console.log(points);
 
-          if (conditions.length > 0 && conditions.every(Boolean)) {
-            resolve('true')
-          }
-          else {
-            resolve('false')
-          }
+        if (online) {
+          conditions.push(points?.online);
+        }
+        if (onCampus && (points?.residential || points?.nonResidential)) {
+          conditions.push(true);
+        }
+        if (days7 && points?.tenure?.toLowerCase() === '7 days') {
+          conditions.push(points?.tenure?.toLowerCase() === '7 days');
+        }
+        if (days21 && points?.tenure?.toLowerCase() === '21 days') {
+          conditions.push(points?.tenure?.toLowerCase() === '21 days');
+        }
+        if (month1 && points?.tenure === '1 month') {
+          conditions.push(points?.tenure === '1 month');
+        }
+        if (month2 && points?.tenure === '2 month') {
+          conditions.push(points?.tenure === '2 month');
+        }
+        if (month3 && points?.tenure === '3 month') {
+          conditions.push(points?.tenure === '3 month');
+        }
+        // if (month3) {
+        //   conditions.push(points?.tenure === '3 month');
+        // }
+        if (weekends) {
+          conditions.push(points.weekends);
+        }
+        if (weekDays) {
+          conditions.push(points.weekDays);
+        }
+        console.log(conditions);
 
-          // Check if all active conditions are met
+        if (conditions.length > 0 && conditions.every(Boolean)) {
+          resolve('true')
+        }
+        else {
+          resolve('false')
+        }
 
-        }, 100);
+        // Check if all active conditions are met
+
+        // }, 100);
       }
       else {
+        console.log('else');
+
         resolve('true') // In case selectedFilters is undefined
       }
     })
   }
 
   // Refactor updateJsonData to handle async operations correctly
-  const updateJsonData = async () => {
-    let rawArr1 = dataMaster[0]
-    let rawArr2 = dataMaster[1]
-    let rawArr3 = dataMaster[2]
-    let rawArr4 = dataMaster[3]
-    let rawArr5 = dataMaster[4]
-    let rawArr6 = dataMaster[5]
-    let arr1 = []
-    let arr2 = []
-    let arr3 = []
-    let arr4 = []
-    let arr5 = []
-    let arr6 = []
-    let count1 = 0
-    for (let j1 = 0; j1 < rawArr1.length; j1++) {
-      const shouldDisplay = await shouldDisplayCardNew(rawArr1[j1]);
-      console.log(shouldDisplay);
+  const updateJsonData = async (selectedValues) => {
+    if (Object.values(selectedValues).some(value => value === true)) {
+      let rawArr1 = dataMaster[0]
+      let rawArr2 = dataMaster[1]
+      let rawArr3 = dataMaster[2]
+      let rawArr4 = dataMaster[3]
+      let rawArr5 = dataMaster[4]
+      let rawArr6 = dataMaster[5]
+      let arr1 = []
+      let arr2 = []
+      let arr3 = []
+      let arr4 = []
+      let arr5 = []
+      let arr6 = []
+      let count1 = 0
+      for (let j1 = 0; j1 < rawArr1.length; j1++) {
+        const shouldDisplay = await shouldDisplayCardNew(rawArr1[j1], selectedValues);
+        console.log(shouldDisplay, rawArr1[j1]);
 
+        if (shouldDisplay == 'true') {
+          arr1.push(rawArr1[j1]);
+          count1 += 1
+        }
+        if (count1 > 3) {
+          break;
+        }
+      }
 
-      if (shouldDisplay == 'true') {
-        console.log(rawArr1[j1]);
+      let count2 = 0
+      for (let j2 = 0; j2 < rawArr2.length; j2++) {
+        const shouldDisplay = await shouldDisplayCardNew(rawArr2[j2], selectedValues);
+        if (shouldDisplay == 'true') {
+          arr2.push(rawArr2[j2]);
+          count2 += 1
+        }
+        if (count2 > 3) {
+          break;
+        }
+      }
 
-        arr1.push(rawArr1[j1]);
-        count1 += 1
+      let count3 = 0
+      for (let j3 = 0; j3 < rawArr3.length; j3++) {
+        const shouldDisplay = await shouldDisplayCardNew(rawArr3[j3], selectedValues);
+        if (shouldDisplay == 'true') {
+          arr3.push(rawArr3[j3]);
+          count3 += 1
+        }
+        if (count3 > 3) {
+          break;
+        }
       }
-      if (count1 > 3) {
-        break;
-      }
-    }
-    let count2 = 0
-    for (let j2 = 0; j2 < rawArr2.length; j2++) {
-      const shouldDisplay = await shouldDisplayCardNew(rawArr2[j2]);
-      if (shouldDisplay == 'true') {
-        arr2.push(rawArr2[j2]);
-        count2 += 1
-      }
-      if (count2 > 3) {
-        break;
-      }
-    }
-    let count3 = 0
-    for (let j3 = 0; j3 < rawArr3.length; j3++) {
-      const shouldDisplay = await shouldDisplayCardNew(rawArr3[j3]);
-      if (shouldDisplay == 'true') {
-        arr3.push(rawArr3[j3]);
-        count3 += 1
-      }
-      if (count3 > 3) {
-        break;
-      }
-    }
-    let count4 = 0
-    for (let j4 = 0; j4 < rawArr4.length; j4++) {
-      const shouldDisplay = await shouldDisplayCardNew(rawArr4[j4]);
-      if (shouldDisplay == 'true') {
-        arr4.push(rawArr4[j4]);
-        count4 += 1
-      }
-      if (count4 > 3) {
-        break;
-      }
-    }
-    let count5 = 0
-    for (let j5 = 0; j5 < rawArr5.length; j5++) {
-      const shouldDisplay = await shouldDisplayCardNew(rawArr5[j5]);
-      if (shouldDisplay == 'true') {
-        arr5.push(rawArr5[j5])
-        count5 += 1
-      }
-      if (count5 > 3) {
-        break;
-      }
-    }
 
-    let count6 = 0
-    for (let j6 = 0; j6 < rawArr6.length; j6++) {
-      const shouldDisplay = await shouldDisplayCardNew(rawArr6[j6]);
-      if (shouldDisplay == 'true') {
-        arr6.push(rawArr6[j6]);
-        count6 += 1
+      let count4 = 0
+      for (let j4 = 0; j4 < rawArr4.length; j4++) {
+        const shouldDisplay = await shouldDisplayCardNew(rawArr4[j4],selectedValues);
+        if (shouldDisplay == 'true') {
+          arr4.push(rawArr4[j4]);
+          count4 += 1
+        }
+        if (count4 > 3) {
+          break;
+        }
       }
-      if (count6 > 3) {
-        break;
-      }
-    }
-    let finalArr = [arr1?.length > 0 ? arr1.slice(0, 3) : [], arr2?.length > 0 ? arr2.slice(0, 3) : [],
-    arr3?.length > 0 ? arr3.slice(0, 3) : [], arr4?.length > 0 ? arr4.slice(0, 3) : [],
-    arr5?.length > 0 ? arr5.slice(0, 3) : [], arr6?.length > 0 ? arr6.slice(0, 3) : []]
-    console.log(finalArr);
 
-    setData(finalArr)
-    // setTimeout(() => {
-    //   setData(finalArr)
-    // }, 3000)
+      let count5 = 0
+      for (let j5 = 0; j5 < rawArr5.length; j5++) {
+        const shouldDisplay = await shouldDisplayCardNew(rawArr5[j5], selectedValues);
+        if (shouldDisplay == 'true') {
+          arr5.push(rawArr5[j5])
+          count5 += 1
+        }
+        if (count5 > 3) {
+          break;
+        }
+      }
+
+      let count6 = 0
+      for (let j6 = 0; j6 < rawArr6.length; j6++) {
+        const shouldDisplay = await shouldDisplayCardNew(rawArr6[j6], selectedValues);
+        if (shouldDisplay == 'true') {
+          arr6.push(rawArr6[j6]);
+          count6 += 1
+        }
+        if (count6 > 3) {
+          break;
+        }
+      }
+      let finalArr = [arr1?.length > 0 ? arr1.slice(0, 3) : [], arr2?.length > 0 ? arr2.slice(0, 3) : [],
+      arr3?.length > 0 ? arr3.slice(0, 3) : [],arr4?.length > 0 ? arr4.slice(0, 3) : [],
+      arr5?.length > 0 ? arr5.slice(0, 3) : [], arr6?.length > 0 ? arr6.slice(0, 3) : []]
+      console.log(finalArr);
+
+      setData(finalArr)
+    }
+    else {
+      clearFilters()
+    }
 
   };
 
@@ -816,7 +832,7 @@ const Courses = () => {
             <div className='list-sele-filters'> {filtersToloop.map(fil => (
               <>
                 {selectedFilters[fil.value] && <div key={fil.label}>{fil.label}
-                  <span style={{ cursor: 'pointer' }} onClick={() => { setSelectedFilters({ ...selectedFilters, [fil.value]: false }); setFilters({ ...filters, [fil.value]: false }) }}>&nbsp;
+                  <span style={{ cursor: 'pointer' }} onClick={() => { setSelectedFilters({ ...selectedFilters, [fil.value]: false }); setFilters({ ...filters, [fil.value]: false }); applyFilters(filters) }}>&nbsp;
                     <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M9.08341 1.73913L8.26091 0.916626L5.00008 4.17746L1.73925 0.916626L0.916748 1.73913L4.17758 4.99996L0.916748 8.26079L1.73925 9.08329L5.00008 5.82246L8.26091 9.08329L9.08341 8.26079L5.82258 4.99996L9.08341 1.73913Z" fill="#CA4625" />
                     </svg>
