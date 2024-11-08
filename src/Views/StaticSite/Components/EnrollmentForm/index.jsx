@@ -23,6 +23,7 @@ const Enrollment = () => {
   const [courseDate, setCourseDate] = useState(null)
   const [Params] = useSearchParams()
   const navigate = useNavigate()
+  const [isEditStudentOpen, setEditStudentOpen] = useState(false);
 
   useEffect(() => {
     let currentCrs = AllCourses.find((item) => item.key === courseId)
@@ -124,6 +125,7 @@ const Enrollment = () => {
   }
 
   function dateDurationChange(months) {
+    console.log("Months ", months);
     let originalFee = AllCourses.find((item) => item.key === courseId)
     let newAmnt = originalFee?.fees?.onlineFee * months
     if (months == 12) {
@@ -216,7 +218,7 @@ const Enrollment = () => {
     localStorage.setItem('courseStartDate', formData.sdate)
     console.log("From Razor ", formData)
     if (formData.terms === false) {
-      alert("20")
+      // alert("20")
       setEmpty(19);
     } else {
       setIsLoad(true);
@@ -351,8 +353,8 @@ const Enrollment = () => {
               order_id: paymentOrderResponse.data.id, // eslint-disable-line
               handler: async (res) => {
                 // Navigare to Success if razorpay_payment_id, razorpay_order_id, razorpay_signature is there
-                if(res.razorpay_payment_id && res.razorpay_order_id && res.razorpay_signature) {
-                  await axios.post(`${ authBaseDomain }/ali/mail`, mailTemplate)
+                if (res.razorpay_payment_id && res.razorpay_order_id && res.razorpay_signature) {
+                  await axios.post(`${authBaseDomain}/ali/mail`, mailTemplate)
 
                   handleCTPaymentCompletedCourse({
                     // cost,
@@ -371,7 +373,7 @@ const Enrollment = () => {
                     // feesNonResidential: currentCourse?.fees?.offlineFee.nonResidentialFee,
                     // feesOnline: currentCourse?.fees?.onlineFee,
                     fee: courseFee,
-                    timings: currentCourse.timing ,
+                    timings: currentCourse.timing,
                     tenure: currentCourse?.tenure,
                     onlineMode: currentCourse?.onlineInfo?.courseMode,
                     residentialMode: currentCourse?.residentialInfo?.courseMode,
@@ -420,7 +422,7 @@ const Enrollment = () => {
                     // feesOnline,
                     fee: courseFee,
                     mode: formData.mode,
-                    timings: currentCourse.timing ,
+                    timings: currentCourse.timing,
                     // tenure,
                     // courseMode,
                     // courseType,
@@ -438,7 +440,7 @@ const Enrollment = () => {
                     city: formData.city,
                     pinCode: formData.pincode,
                     gender: formData.gender,
-                     age: formData.AGE,
+                    age: formData.AGE,
                     nationality: formData.nationality,
                     // medicalIssues,
                     // residentialStatus,
@@ -543,7 +545,7 @@ const Enrollment = () => {
       setEmpty(1)
     } else if (formData.email === '' || !validateEmail(formData.email) || formData.email === undefined ||
       formData.email === null) {
-        // alert("2")
+      // alert("2")
       setEmpty(2)
     } else if (
       formData.phone === '' ||
@@ -556,6 +558,8 @@ const Enrollment = () => {
     } else if (formData.address1 === '') {
       // alert("4")
       setEmpty(4)
+
+      setEditStudentOpen(true);
     }
     else if (formData.country === '') {
       // alert("5")
@@ -570,6 +574,9 @@ const Enrollment = () => {
     } else if (formData.mode === '') {
       // alert("11")
       setEmpty('mode')
+    } else if (isMatch && formData.startDate === '') {
+      // alert("13")
+      setEmpty(21)
     } else if (formData.sdate === '') {
       // alert("8")
       setEmpty(18)
@@ -586,12 +593,10 @@ const Enrollment = () => {
     //   alert("11")
     //   setEmpty('mode')
     // }
-    else if (isMatch && formData.startDate === '') {
-      alert("13")
-      setEmpty(21)
-    }
+    
     else if (isMatch && formData.endDate === '') {
-      alert("12")
+      console.log("Form Data Start Date ", formData.startDate)
+      // alert("12")
       setEmpty(20)
     }
     else {
@@ -632,7 +637,7 @@ const Enrollment = () => {
 
   }
 
-  
+
   useEffect(() => {
     // Start time when the component mounts
     setStartTime(Date.now());
@@ -640,41 +645,41 @@ const Enrollment = () => {
     // Retrieve or generate the session ID
     let session = localStorage.getItem('sessionId');
     if (!session) {
-        session = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
-        localStorage.setItem('sessionId', session);
+      session = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
+      localStorage.setItem('sessionId', session);
     }
     setSessionId(session);
 
     return () => {
-        // End time when the component unmounts
-        const endTime = Date.now();
+      // End time when the component unmounts
+      const endTime = Date.now();
 
-        // Calculate the session duration in seconds
-        const sessionDuration = ((endTime - startTime) / 1000).toFixed(2);
+      // Calculate the session duration in seconds
+      const sessionDuration = ((endTime - startTime) / 1000).toFixed(2);
 
-        const pageName = currentCourse?.title + " Enrollment Form";
-        const lastPageUrl = document.referrer || 'N/A';
-        const pageUrl = window.location.href;
-        //const loggedIn = localStorage.getItem('isLoggedIn') === 'true' ? 'Yes' : 'No'; // Adjust based on your auth logic
-        const uniqueViewId = Math.floor(Math.random() * 1000); // Replace with actual logic
+      const pageName = currentCourse?.title + " Enrollment Form";
+      const lastPageUrl = document.referrer || 'N/A';
+      const pageUrl = window.location.href;
+      //const loggedIn = localStorage.getItem('isLoggedIn') === 'true' ? 'Yes' : 'No'; // Adjust based on your auth logic
+      const uniqueViewId = Math.floor(Math.random() * 1000); // Replace with actual logic
 
-        // trackPageView({
-        //     pageName,
-        //     lastPageUrl,
-        //     pageUrl,
-        //     sessionDuration,
-        //     isLoggedIn,
-        //     sessionId: session,
-        //     uniqueViewId,
-        // });
+      // trackPageView({
+      //     pageName,
+      //     lastPageUrl,
+      //     pageUrl,
+      //     sessionDuration,
+      //     isLoggedIn,
+      //     sessionId: session,
+      //     uniqueViewId,
+      // });
     };
-}, [sessionId, startTime]);
+  }, [sessionId, startTime]);
 
 
-useEffect(() => {
-  const currentPageUrl = window.location.href;
-  handleCTCoursePaymentPageVisit(currentPageUrl);
-}, []);
+  useEffect(() => {
+    const currentPageUrl = window.location.href;
+    handleCTCoursePaymentPageVisit(currentPageUrl);
+  }, []);
 
 
 
@@ -686,13 +691,13 @@ useEffect(() => {
           <div className="header">
             <Link to="/courses">
               <button className="x">
-              <img src='/images/close.svg' style={{cursor: 'pointer'}} alt='' loading='lazy' />
-              <span className='close_label'>Close</span>
+                <img src='/images/close.svg' style={{ position:'relative',top:'2px' }} alt='' loading='lazy' />
+                <span className='close_label'>Close</span>
               </button>
             </Link>
             <span className="flower">{legacy2}</span>
 
-            <div className="student">Your Selected Yoga Course Details<br/> <span className='enroll_subtitle'>A step Towards inner transformation🧘‍✨</span> </div>
+            <div className="student">Your Selected Yoga Course Details<br /> <span className='enroll_subtitle'>A step Towards inner transformation🧘‍✨</span> </div>
 
             {/* <ul className="header_ul">
             <li
@@ -769,30 +774,32 @@ useEffect(() => {
               dateDurationChange={dateDurationChange}
             /> */}
 
-            <EnrollmentForm 
-            
-            setBold={setBold}
-            empty={empty}
-            formData={formData}
-            setFormData={setFormData}
-            handleEmpty1={handleEmpty1}
-            setEmpty={setEmpty}
-            isLoad={isLoad}
-            courseDate={courseDate}
-            templateKey={currentCourse?.templateId}
-            qualificationData={qualificationData}
-            listData={listData}
-            currentCourse={currentCourse}
-            courseAsset1={courseAsset1}
-            setCourseAsset1={setCourseAsset1}
-            courseAsset2={courseAsset2}
-            setCourseAsset2={setCourseAsset2}
-            handleSubmit={handleSubmit}
-            courseFee={courseFee}
-            setCourseFee={setCourseFee}
-            uploadCheck={uploadCheck}
-            setUploadCheck={setUploadCheck}
-            dateDurationChange={dateDurationChange}
+            <EnrollmentForm
+
+              setBold={setBold}
+              empty={empty}
+              formData={formData}
+              setFormData={setFormData}
+              handleEmpty1={handleEmpty1}
+              setEmpty={setEmpty}
+              isLoad={isLoad}
+              courseDate={courseDate}
+              templateKey={currentCourse?.templateId}
+              isEditStudentOpen={isEditStudentOpen}
+              setEditStudentOpen={setEditStudentOpen}
+              qualificationData={qualificationData}
+              listData={listData}
+              currentCourse={currentCourse}
+              courseAsset1={courseAsset1}
+              setCourseAsset1={setCourseAsset1}
+              courseAsset2={courseAsset2}
+              setCourseAsset2={setCourseAsset2}
+              handleSubmit={handleSubmit}
+              courseFee={courseFee}
+              setCourseFee={setCourseFee}
+              uploadCheck={uploadCheck}
+              setUploadCheck={setUploadCheck}
+              dateDurationChange={dateDurationChange}
             />
 
           </>

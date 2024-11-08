@@ -17,7 +17,7 @@ import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import { LoadScript, Autocomplete } from '@react-google-maps/api';
 import countryList from 'react-select-country-list';
-import { useSelector, useDispatch } from 'react-redux'; 
+import { useSelector, useDispatch } from 'react-redux';
 import { useLocation } from 'react-router-dom';
 import { logoutUserAction } from '../../Views/Authentication/Auth.actions';
 import EditStudent from './EditStudent';
@@ -31,7 +31,7 @@ import CustomModal from '../TermsandCondition/t&Cpopup'
 
 
 const libraries = ['places'];
-const mapKey = 'AIzaSyCArozsi_1fWJgSwDFDAoA_6Q5zLZ7NYyA'; 
+const mapKey = 'AIzaSyCArozsi_1fWJgSwDFDAoA_6Q5zLZ7NYyA';
 
 const EnrollmentForm = ({
   empty,
@@ -47,6 +47,8 @@ const EnrollmentForm = ({
   setCourseAsset1,
   courseAsset2,
   setCourseAsset2,
+  isEditStudentOpen,
+  setEditStudentOpen,
   handleSubmit,
   courseFee,
   setCourseFee,
@@ -95,18 +97,18 @@ const EnrollmentForm = ({
   const [isResidential, setIsResidential] = useState(false)
   const [isRegular, setIsRegular] = useState(false)
   const [autocomplete, setAutocomplete] = useState(null);
-  const [loading, setLoading] = useState(true); 
-  const [ showForm, setShowForm] = useState(false)
+  const [loading, setLoading] = useState(true);
+  const [showForm, setShowForm] = useState(false)
   const [editOpen, setEditOpen] = useState(false)
 
   const navigates = useNavigate();
   const location = useLocation();
   const dispatch = useDispatch();
 
-  
+
 
   const [selectDateValue, setSelectDateValue] = useState(values.selectDate);
-  const [setDate, setSetDate ] = useState(false)
+  const [setDate, setSetDate] = useState(false)
   const isSatsangPage = location.pathname === '/enrollment/satsang';
 
   const nameFromRedux = useSelector((state) => state.auth.user.data?.firstName);
@@ -114,7 +116,7 @@ const EnrollmentForm = ({
 
   console.log("nameFromRedux from profile ", nameFromRedux);
 
-  if(nameFromRedux === undefined) {
+  if (nameFromRedux === undefined) {
     dispatch(logoutUserAction());
     localStorage.removeItem("authorizationToken");
     navigates('/user/sign-in');
@@ -135,7 +137,7 @@ const EnrollmentForm = ({
         },
       }));
     }
-  }, [isSatsangPage]); 
+  }, [isSatsangPage]);
 
   useEffect(() => {
     const token = localStorage.getItem('authorizationToken'); // Check for the auth token
@@ -148,9 +150,9 @@ const EnrollmentForm = ({
   }, [navigates]);
 
 
-  
 
-  
+
+
   useEffect(() => {
     if (phoneNumberFromRedux) {
       setPhoneValue(`+${dailCode}${phoneNumberFromRedux}`);
@@ -174,12 +176,12 @@ const EnrollmentForm = ({
       setFormData((prev) => ({ ...prev, city: cityFromRedux }));
       setValues((prev) => ({ ...prev, city: { label: cityFromRedux, value: cityFromRedux } }));
     }
-    
+
   }, [countryFromRedux, stateFromRedux, cityFromRedux, setFormData, setValues]);
 
   useEffect(() => {
     if (genderFromRedux) {
-      const upperCaseGender = genderFromRedux.toUpperCase(); 
+      const upperCaseGender = genderFromRedux.toUpperCase();
       setFormData((prev) => ({ ...prev, gender: upperCaseGender }));
     }
     if (nationalityFromRedux) {
@@ -208,11 +210,11 @@ const EnrollmentForm = ({
         // Get state using stateCode and countryCode from matched city
         const matchedState = State.getStateByCodeAndCountry(matchedCity.stateCode, matchedCity.countryCode);
         console.log('matched State ', matchedState.name);
-        
+
         if (matchedState) {
           console.log('matched State ', matchedState.name); // Set the state name
           setFormData((prev) => ({ ...prev, state: matchedState.name }));
-      setValues((prev) => ({ ...prev, state: { label: matchedState.name, value: matchedState.name } }));
+          setValues((prev) => ({ ...prev, state: { label: matchedState.name, value: matchedState.name } }));
         } else {
           // setError('State not found for the given city');
         }
@@ -242,7 +244,7 @@ const EnrollmentForm = ({
     setAutocomplete(autocompleteInstance);
   };
 
-    // Function to handle when a place is selected
+  // Function to handle when a place is selected
   // const onPlaceChanged = () => {
   //   if (autocomplete) {
   //     const place = autocomplete.getPlace();
@@ -280,7 +282,7 @@ const EnrollmentForm = ({
   //     // Find and set the selected country in Select component
   //     const selectedCountry = getAllCountries.find((option) => option.label === country);
   //     setValues((prev) => ({ ...prev, country: selectedCountry }));
-      
+
 
   //     console.log('Selected Country from Address:', selectedCountry); // Log the selected country
   //     console.log('State:', state, 'City:', city, 'Pincode:', pincode); // Log the state, city, and pincode
@@ -291,11 +293,11 @@ const EnrollmentForm = ({
     if (autocomplete) {
       const place = autocomplete.getPlace();
       console.log(
-        'place ',place
+        'place ', place
       )
       const address = place.formatted_address || '';
       console.log(
-        'Address ',address
+        'Address ', address
       )
       const nameComponent = place?.name;
       const countryComponent = place.address_components?.find((component) =>
@@ -325,7 +327,7 @@ const EnrollmentForm = ({
       const address1CodeComponent3 = place.address_components?.find((component) =>
         component.types.includes('sublocality_level_3')
       );
-      
+
 
       const country = countryComponent ? countryComponent.long_name : '';
       const state = stateComponent ? stateComponent.long_name : '';
@@ -335,25 +337,25 @@ const EnrollmentForm = ({
       const name = nameComponent ? nameComponent : '';
 
       // Split the formatted address into lines for Address 1 and Address 2
-    const addressParts = formattedAddress.split(', ');
+      const addressParts = formattedAddress.split(', ');
 
-    // Set Address Line 1 and Address Line 2 based on your criteria
-    let address1 = [
-      name,
-      address1CodeComponent1?.long_name || '',
-      address1CodeComponent2?.long_name || '',
-      address1CodeComponent3?.long_name || '',
-    ]
-      .filter(Boolean) // Filter out any empty strings
-      .join(', '); // Join the components with a comma/ Address till required part
+      // Set Address Line 1 and Address Line 2 based on your criteria
+      let address1 = [
+        name,
+        address1CodeComponent1?.long_name || '',
+        address1CodeComponent2?.long_name || '',
+        address1CodeComponent3?.long_name || '',
+      ]
+        .filter(Boolean) // Filter out any empty strings
+        .join(', '); // Join the components with a comma/ Address till required part
 
-    let address2 = [
-      address2CodeComponent1?.long_name || '',
-      address2CodeComponent2?.long_name || '',
-    ]
-      .filter(Boolean) // Filter out any empty strings
-      .join(', '); // Join the components with a comma
-      
+      let address2 = [
+        address2CodeComponent1?.long_name || '',
+        address2CodeComponent2?.long_name || '',
+      ]
+        .filter(Boolean) // Filter out any empty strings
+        .join(', '); // Join the components with a comma
+
 
       if (!address1) {
         address1 = address2;
@@ -363,7 +365,7 @@ const EnrollmentForm = ({
       setFormData((prev) => ({
         ...prev,
         address1: address1,
-        address2:address2,
+        address2: address2,
         country,
         state,
         city,
@@ -421,7 +423,7 @@ const EnrollmentForm = ({
     })
     localStorage.setItem('courseEndDate', endDate)
     setFormData({ ...formData, endDate: value, duration: value?.value })
-    dateDurationChange(value?.value)
+    dateDurationChange(value)
   }
 
   // Function to add months to a given date
@@ -545,7 +547,7 @@ const EnrollmentForm = ({
     let skip = 0;
     if (areaCode === '555') {
       // Skip additional checks for '555' area codes
-      skip=1;
+      skip = 1;
     }
 
     // Check if it's a valid phone number for the selected country
@@ -553,14 +555,14 @@ const EnrollmentForm = ({
       errors.push('Phone number is not valid for the selected country.');
     }
 
-    
+
 
     // Additional custom validations can be added here
     if (parsedNumber && /(\d)\1{6,}/.test(parsedNumber.nationalNumber)) {
       errors.push('Phone number contains invalid patterns (e.g., too many repeated digits).');
     }
 
-   
+
 
     return errors;
   };
@@ -989,13 +991,14 @@ const EnrollmentForm = ({
   const handleClose = () => {
     setOpen(false);
   };
-  
+
   const handleEditOpen = () => {
     setEditOpen(true);
   }
 
   const handleEditClose = () => {
     setEditOpen(false);
+    setEditStudentOpen(false);
   };
 
 
@@ -1010,7 +1013,7 @@ const EnrollmentForm = ({
     <div className="main_div">
 
       <div className="grid_box">
-      <div className="right_grid">
+        <div className="right_grid">
           <form>
             {/* <div className="medical-section">
               <p className="medical-label">
@@ -1061,59 +1064,59 @@ const EnrollmentForm = ({
               Valid till: <b>{values?.endDateFormat}</b></div>}
 
           <div className="bottom_container_btn">
-          <div className='terms'>
-            <label>
-              <input
-                type="checkbox"
-                checked={isChecked}
-                onChange={handleCheckboxChange}
-                id='myCheckbox'
-              />
-              I agree and accept the 
+            <div className='terms'>
+              <label>
+                <input
+                  type="checkbox"
+                  checked={isChecked}
+                  onChange={handleCheckboxChange}
+                  id='myCheckbox'
+                />
+                I agree and accept the
 
-            </label>
+              </label>
 
-            <a
-              // href="https://theyogainstitute.org/terms-and-conditions"
-              // target="_blank"
-              onClick={handleOpen}
-              className='terms_text'
-              style={{ color: "rgba(0, 0, 0, 1)", marginLeft: "3px", cursor: "pointer" }}
-              rel="noopener noreferrer">
-              terms and conditions
-            </a>
+              <a
+                // href="https://theyogainstitute.org/terms-and-conditions"
+                // target="_blank"
+                onClick={handleOpen}
+                className='terms_text'
+                style={{ color: "rgba(0, 0, 0, 1)", marginLeft: "3px", cursor: "pointer" }}
+                rel="noopener noreferrer">
+                terms and conditions
+              </a>
 
-            {open && (
-              // <MessageModal 
-              //   message={<TermsCondition />} 
-              //   closePopup={handleClose} 
-              //   type="Terms and Conditions" // You can pass any other props as needed
-              // />
-              // <TermsAndConditionsModal />
-              <CustomModal isShippingModalOpen={handleOpen} setIsShipppingModalOpen={handleClose} />
-            )}
+              {open && (
+                // <MessageModal 
+                //   message={<TermsCondition />} 
+                //   closePopup={handleClose} 
+                //   type="Terms and Conditions" // You can pass any other props as needed
+                // />
+                // <TermsAndConditionsModal />
+                <CustomModal isShippingModalOpen={handleOpen} setIsShipppingModalOpen={handleClose} />
+              )}
 
-            {isChecked === false ? empty === 19 && (
-              <div style={{ color: 'red', marginLeft: '0', marginTop: '1rem' }} className='mar_top'>
-                *Please agree to the condition!
-              </div>
-            ) : ''}
-            {console.log(isChecked)}
-          </div>
-          <div className="button_box">
-            {/* <button className="next_button" onClick={handleSubmit}>
+              {isChecked === false ? empty === 19 && (
+                <div style={{ color: 'red', marginLeft: '0', marginTop: '1rem' }} className='mar_top'>
+                  *Please agree to the condition!
+                </div>
+              ) : ''}
+              {console.log(isChecked)}
+            </div>
+            <div className="button_box">
+              {/* <button className="next_button" onClick={handleSubmit}>
             Proceed to payment
             </button> */}
 
-            {<button type="button" onClick={handleSubmit} className={!isLoad ? 'next_button button register-primary-btn' : 'next_button button register-primary-btn no-event'} disabled={isLoad}>
-              {setDate ? <><span id="txt">Register&nbsp; </span> </> : !isLoad ? <><span id="txt" style={{ fontSize: '14px', fontWeight: '500' }}>Pay & confirm enrollment </span> </> : <><span className="loader">
-                <span className="dot"></span>
-                <span className="dot"></span>
-                <span className="dot"></span>
-              </span></>}
-            </button>}
+              {<button type="button" onClick={handleSubmit} className={!isLoad ? 'next_button button register-primary-btn' : 'next_button button register-primary-btn no-event'} disabled={isLoad}>
+                {setDate ? <><span id="txt">Register&nbsp; </span> </> : !isLoad ? <><span id="txt" style={{ fontSize: '14px', fontWeight: '500' }}>Pay & confirm enrollment </span> </> : <><span className="loader">
+                  <span className="dot"></span>
+                  <span className="dot"></span>
+                  <span className="dot"></span>
+                </span></>}
+              </button>}
 
-            {/* {isResidential && <button type="button" onClick={handleSubmit} className={!isLoad ? 'next_button button register-primary-btn' : 'next_button button register-primary-btn no-event'} disabled={isLoad}>
+              {/* {isResidential && <button type="button" onClick={handleSubmit} className={!isLoad ? 'next_button button register-primary-btn' : 'next_button button register-primary-btn no-event'} disabled={isLoad}>
               {!isLoad ? <><span id="txt">Submit&nbsp; </span> </> : <><span className="loader">
                 <span className="dot"></span>
                 <span className="dot"></span>
@@ -1121,11 +1124,11 @@ const EnrollmentForm = ({
               </span></>}
             </button>} */}
 
-          </div>
+            </div>
           </div>
         </div>
         <div className="left_grid">
-        <div className="details_box details_personal_box">
+          <div className="details_box details_personal_box">
             <div className="details_course_box ">
               <div className="detail_image_box">
                 {/* <img src={currentCourse?.image} alt={currentCourse?.title} /> */}
@@ -1133,41 +1136,41 @@ const EnrollmentForm = ({
               <div className="current_duration">
                 <div className='personal_info_wrapper'>
                   <span className='details_newName'>
-                  Student details
+                    Student details
                   </span>
                   {/* {courseDate !== 'null' ? courseDate : ''} */}
                   <div onClick={handleEditOpen}>
-                  <img src='/images/edit_icon.svg' style={{cursor: 'pointer'}} alt='' loading='lazy' />
+                    <img src='/images/edit_icon.svg' style={{ cursor: 'pointer' }} alt='' loading='lazy' />
                   </div>
                 </div>
-                {editOpen && (
-              // <MessageModal 
-              //   message={<TermsCondition />} 
-              //   closePopup={handleClose} 
-              //   type="Terms and Conditions" // You can pass any other props as needed
-              // />
-              // <TermsAndConditionsModal />
-              <EditStudent isShippingModalOpen={handleEditOpen} setIsShipppingModalOpen={handleEditClose}  formData={formData} setFormData={setFormData} setEmpty={setEmpty} empty={empty} currentCourse={currentCourse} dateDurationChange={dateDurationChange} />
-            )}
+                {(editOpen || isEditStudentOpen) && (
+                  // <MessageModal 
+                  //   message={<TermsCondition />} 
+                  //   closePopup={handleClose} 
+                  //   type="Terms and Conditions" // You can pass any other props as needed
+                  // />
+                  // <TermsAndConditionsModal />
+                  <EditStudent isShippingModalOpen={handleEditOpen} setIsShipppingModalOpen={handleEditClose} formData={formData} setFormData={setFormData} setEmpty={setEmpty} empty={empty} currentCourse={currentCourse} dateDurationChange={dateDurationChange} />
+                )}
                 <div className='fields_alignment fields_alignment_bottom'>
                   <div className='details_desc_name_info'><span className='details_duration_info'>Name</span> <span className='tenure_course'>{`${formData?.name} ${formData?.lname}`}</span></div>
-                  
+
                 </div>
                 <div className='details_desc_days fields_alignment_bottom'>
                   <div className='details_desc_name_info'><span className='details_duration_info'>Email Address</span> <span className='tenure_course'>{formData?.email}</span></div>
-                  
+
                 </div>
-                <div className='details_desc_days fields_alignment_bottom'> 
+                <div className='details_desc_days fields_alignment_bottom'>
                   <div className='details_desc_name_info'><span className='details_duration_info'>Mobile Number</span> <span className='tenure_course'>{formData?.phone}</span></div>
-                  
+
                 </div>
-                <div className='details_desc_days fields_alignment_bottom'> 
+                <div className='details_desc_days fields_alignment_bottom'>
                   <div className='details_desc_name_info'><span className='details_duration_info'>Gender</span> <span className='tenure_course'>{formData?.gender}</span></div>
-                  
+
                 </div>
-                <div className='details_desc_days'> 
+                <div className='details_desc_days'>
                   <div className='details_desc_name_info'><span className='details_duration_info'>Address</span> <span className='tenure_course'>{`${formData?.address1}, ${formData?.state}, ${formData?.country} - ${formData?.pincode}`}</span></div>
-                  
+
                 </div>
                 {/* {courseFee && <p className="current_fees"> {currentCourse.key === 'ma-yoga-shastra' && formData.country !== 'India' ? '$ 3950' : `₹ ${courseFee}`}</p>} */}
                 {/* {courseFee && <p className="current_fees"> ₹ {courseFee}</p>} */}
@@ -1176,52 +1179,52 @@ const EnrollmentForm = ({
           </div>
           {
             showForm && (
-                <form>
-            <div className="form_error">
-               
-              <InputComponent
-                type="text"
-                placeholder="Name*"
-                form={formData}
-                setField={setFormData}
-                keyName="name"
-                errorCheck={setEmpty}
-              />
-              {empty === 1 && <small class="name_err"> Please enter your name</small>}
-            </div>
+              <form>
+                <div className="form_error">
 
-            <div className="form_error">
-              <InputComponent
-                // type="email"
-                id="text"
-                placeholder="Email ID*"
-                form={formData}
-                setField={setFormData}
-                keyName="email"
-                errorCheck={setEmpty}
-              />
-              {empty === 2 && <small class="name_err"> Please enter a valid email</small>}
+                  <InputComponent
+                    type="text"
+                    placeholder="Name*"
+                    form={formData}
+                    setField={setFormData}
+                    keyName="name"
+                    errorCheck={setEmpty}
+                  />
+                  {empty === 1 && <small class="name_err"> Please enter your name</small>}
+                </div>
 
-
+                <div className="form_error">
+                  <InputComponent
+                    // type="email"
+                    id="text"
+                    placeholder="Email ID*"
+                    form={formData}
+                    setField={setFormData}
+                    keyName="email"
+                    errorCheck={setEmpty}
+                  />
+                  {empty === 2 && <small class="name_err"> Please enter a valid email</small>}
 
 
-            </div>
-            <div className="form_error">
-              <PhoneInput
-                placeholder="Enter phone number*"
-                defaultCountry="IN"
-                // country="IN"
-                value={phoneValue}
-                // onChange={(e) => {
-                //   setFormData({ ...formData, phone: e })
-                // }}
-                onChange={handlePhoneChange}
-              
-              />
-              {/* {empty === 3 && <small> Please enter a valid phone number</small>}  */}
-              {/* {phoneError && <small>{phoneError}</small>} */}
 
-              {/* {validationErrors?.length > 0 ? (
+
+                </div>
+                <div className="form_error">
+                  <PhoneInput
+                    placeholder="Enter phone number*"
+                    defaultCountry="IN"
+                    // country="IN"
+                    value={phoneValue}
+                    // onChange={(e) => {
+                    //   setFormData({ ...formData, phone: e })
+                    // }}
+                    onChange={handlePhoneChange}
+
+                  />
+                  {/* {empty === 3 && <small> Please enter a valid phone number</small>}  */}
+                  {/* {phoneError && <small>{phoneError}</small>} */}
+
+                  {/* {validationErrors?.length > 0 ? (
         // <ul>
         //   {validationErrors.map((error, index) => (
         //     <li key={index}><small class="phone_err">{error}</small></li>
@@ -1232,19 +1235,19 @@ const EnrollmentForm = ({
         
       ) : ((empty === 3) ? <small class="phone_error"> Please enter a valid phone number</small> : " ") } */}
 
-              {validationErrors?.length > 0 ? (
-                <div className="created_phone_err">Invalid Number</div>
-              ) : (empty === 3 && (!formData.phone || (formData.phone === '')) ? (
-                <small className="phone_error">Please enter a valid phone number</small>
-              ) : " ")}
-              {console.log('ve', validationErrors)}
+                  {validationErrors?.length > 0 ? (
+                    <div className="created_phone_err">Invalid Number</div>
+                  ) : (empty === 3 && (!formData.phone || (formData.phone === '')) ? (
+                    <small className="phone_error">Please enter a valid phone number</small>
+                  ) : " ")}
+                  {console.log('ve', validationErrors)}
 
-            </div>
+                </div>
 
-              {/* Adding start google API */}
+                {/* Adding start google API */}
 
 
-               {/* <LoadScript googleMapsApiKey={mapKey} libraries={libraries}>
+                {/* <LoadScript googleMapsApiKey={mapKey} libraries={libraries}>
       <Autocomplete onLoad={onLoadAutocomplete} onPlaceChanged={onPlaceChanged}>
         <div className="form_error">
           <InputComponent
@@ -1342,106 +1345,106 @@ const EnrollmentForm = ({
 
 
 
-              {/* End google API */}
+                {/* End google API */}
 
 
-              {/* Adding start google API 2 */}
+                {/* Adding start google API 2 */}
 
 
-              <LoadScript googleMapsApiKey={mapKey} libraries={libraries}>
-      <Autocomplete onLoad={onLoadAutocomplete} onPlaceChanged={onPlaceChanged}>
-        <div className="form_error">
-          <InputComponent
-            type="text"
-            placeholder="Address Line 1*"
-            form={formData}
-            setField={setFormData}
-            keyName="address1"
-            errorCheck={setEmpty}
-          />
-          {empty === 4 && <p>Please enter your address</p>}
-        </div>
-      </Autocomplete>
+                <LoadScript googleMapsApiKey={mapKey} libraries={libraries}>
+                  <Autocomplete onLoad={onLoadAutocomplete} onPlaceChanged={onPlaceChanged}>
+                    <div className="form_error">
+                      <InputComponent
+                        type="text"
+                        placeholder="Address Line 1*"
+                        form={formData}
+                        setField={setFormData}
+                        keyName="address1"
+                        errorCheck={setEmpty}
+                      />
+                      {empty === 4 && <p>Please enter your address</p>}
+                    </div>
+                  </Autocomplete>
 
-      <div className="form_error">
-        <InputComponent
-          type="text"
-          placeholder="Address Line 2"
-          form={formData}
-          setField={setFormData}
-          keyName="address2"
-          errorCheck={setEmpty}
-        />
-      </div>
+                  <div className="form_error">
+                    <InputComponent
+                      type="text"
+                      placeholder="Address Line 2"
+                      form={formData}
+                      setField={setFormData}
+                      keyName="address2"
+                      errorCheck={setEmpty}
+                    />
+                  </div>
 
-      <div className="form_error countries_list">
-        <Select
-          styles={customStyles}
-          id="country"
-          name="country"
-          placeholder="Country"
-          options={getUpdatedCountries}
-          value={values.country}
-          onChange={(value) => {
-            setValues({ country: value, state: null, city: null });
-            setFormData((prev) => ({ ...prev, country: value.label }));
-          }}
-        />
-        {empty === 5 && <p>Please enter your country</p>}
-      </div>
+                  <div className="form_error countries_list">
+                    <Select
+                      styles={customStyles}
+                      id="country"
+                      name="country"
+                      placeholder="Country"
+                      options={getUpdatedCountries}
+                      value={values.country}
+                      onChange={(value) => {
+                        setValues({ country: value, state: null, city: null });
+                        setFormData((prev) => ({ ...prev, country: value.label }));
+                      }}
+                    />
+                    {empty === 5 && <p>Please enter your country</p>}
+                  </div>
 
-      <div className="form_error">
-        <Select
-          styles={customStyles}
-          id="state"
-          name="state"
-          placeholder="State"
-          options={getUpdatedStates( values?.country?.isoCode?values?.country?.isoCode:
-            isoCode)}
-          value={values.state}
-          onChange={(value) => {
-            setValues({ ...values, state: value, city: null });
-            setFormData((prev) => ({ ...prev, state: value.label }));
-          }}
-        />
-      </div>
+                  <div className="form_error">
+                    <Select
+                      styles={customStyles}
+                      id="state"
+                      name="state"
+                      placeholder="State"
+                      options={getUpdatedStates(values?.country?.isoCode ? values?.country?.isoCode :
+                        isoCode)}
+                      value={values.state}
+                      onChange={(value) => {
+                        setValues({ ...values, state: value, city: null });
+                        setFormData((prev) => ({ ...prev, state: value.label }));
+                      }}
+                    />
+                  </div>
 
-      <div className="form_error">
-        
-        <Select
-          styles={customStyles}
-          id="city"
-          name="city"
-          placeholder="City"
-          options={getUpdatedCities(values?.country?.isoCode?values?.country?.isoCode:
-            isoCode, values?.state?.value)}
-          value={values.city}
-          onChange={(value) => {
-            setValues({ ...values, city: value });
-            setFormData((prev) => ({ ...prev, city: value.label }));
-          }}
-        />
-      </div>
+                  <div className="form_error">
 
-      
-
-      <div className="form_error pincode_err">
-        <InputComponent
-          type="text"
-          placeholder="Pincode*"
-          form={formData}
-          setField={setFormData}
-          keyName="pincode"
-          errorCheck={setEmpty}
-        />
-        {empty === 8 && <small>Please enter your pincode</small>}
-      </div>
-    </LoadScript>
+                    <Select
+                      styles={customStyles}
+                      id="city"
+                      name="city"
+                      placeholder="City"
+                      options={getUpdatedCities(values?.country?.isoCode ? values?.country?.isoCode :
+                        isoCode, values?.state?.value)}
+                      value={values.city}
+                      onChange={(value) => {
+                        setValues({ ...values, city: value });
+                        setFormData((prev) => ({ ...prev, city: value.label }));
+                      }}
+                    />
+                  </div>
 
 
-              {/* End google API 2 */}
-             
-            {/* <div className="form_error">
+
+                  <div className="form_error pincode_err">
+                    <InputComponent
+                      type="text"
+                      placeholder="Pincode*"
+                      form={formData}
+                      setField={setFormData}
+                      keyName="pincode"
+                      errorCheck={setEmpty}
+                    />
+                    {empty === 8 && <small>Please enter your pincode</small>}
+                  </div>
+                </LoadScript>
+
+
+                {/* End google API 2 */}
+
+                {/* <div className="form_error">
               <InputComponent
                 type="text"
                 placeholder="Address Line 1*"
@@ -1452,7 +1455,7 @@ const EnrollmentForm = ({
               />
               {empty === 4 && <p> Please enter your address</p>}
             </div> */}
-            {/* <div className="form_error">
+                {/* <div className="form_error">
               <InputComponent
                 type="text"
                 placeholder="Address Line 2"
@@ -1462,7 +1465,7 @@ const EnrollmentForm = ({
                 errorCheck={setEmpty}
               />
             </div> */}
-            {/* <div className="form_error countries_list">
+                {/* <div className="form_error countries_list">
               <Select
                 styles={customStyles}
                 id="country"
@@ -1485,7 +1488,7 @@ const EnrollmentForm = ({
               />
               {empty === 5 && <p>Please enter your country</p>}
             </div> */}
-            {/* <div className="form_error">
+                {/* <div className="form_error">
               <Select
                 styles={customStyles}
                 id="state"
@@ -1509,7 +1512,7 @@ const EnrollmentForm = ({
               />
 
             </div> */}
-            {/* <div className="form_error">
+                {/* <div className="form_error">
               <Select
                 styles={customStyles}
                 id="city"
@@ -1545,7 +1548,7 @@ const EnrollmentForm = ({
                 </small>
               )}
             </div> */}
-            {/* <div className="form_error pincode_err">
+                {/* <div className="form_error pincode_err">
               <InputComponent
                 type="text"
                 placeholder="Pincode*"
@@ -1557,7 +1560,7 @@ const EnrollmentForm = ({
               {empty === 8 && <small> Please enter your pincode</small>}
             </div> */}
 
-            {/* <div className="form_error">
+                {/* <div className="form_error">
             <div className="course-card-dropdown">
           <div >
            
@@ -1585,158 +1588,158 @@ const EnrollmentForm = ({
           </div> */}
 
 
-            <div className="personal_gender">
-              <span className="gender-text">Gender*</span>
-              <div className="gender form_error">
-                <label className="gender_radio">
-                  Male&nbsp;
-                  <input
-                    type="radio"
-                    value="MALE"
-                    name="gender"
-                    checked={formData.gender === 'MALE'}
-                    onChange={(e) => {
-                      if (e.target.checked) {
-                        setFormData({ ...formData, gender: e.target.value })
-                        setEmpty(0)
-                      }
-                    }}
-                  />
-                </label>
-                <label className="gender_radio">
-                  Female&nbsp;
-                  <input
-                    className="radio"
-                    type="radio"
-                    value="FEMALE"
-                    name="gender"
-                    checked={formData.gender === 'FEMALE'}
-                    onChange={(e) => {
-                      if (e.target.checked) {
-                        setFormData(
-                          { ...formData, gender: e.target.value },
-                          setEmpty(0)
+                <div className="personal_gender">
+                  <span className="gender-text">Gender*</span>
+                  <div className="gender form_error">
+                    <label className="gender_radio">
+                      Male&nbsp;
+                      <input
+                        type="radio"
+                        value="MALE"
+                        name="gender"
+                        checked={formData.gender === 'MALE'}
+                        onChange={(e) => {
+                          if (e.target.checked) {
+                            setFormData({ ...formData, gender: e.target.value })
+                            setEmpty(0)
+                          }
+                        }}
+                      />
+                    </label>
+                    <label className="gender_radio">
+                      Female&nbsp;
+                      <input
+                        className="radio"
+                        type="radio"
+                        value="FEMALE"
+                        name="gender"
+                        checked={formData.gender === 'FEMALE'}
+                        onChange={(e) => {
+                          if (e.target.checked) {
+                            setFormData(
+                              { ...formData, gender: e.target.value },
+                              setEmpty(0)
+                            )
+                          }
+                        }}
+                      />
+                    </label>
+
+                  </div>
+                  {empty === 11 && <div style={{ marginTop: '-11rem', fontSize: '12px', float: 'right', display: 'inline-block', color: 'red' }}> Please select one option</div>}
+                </div>
+
+
+                {!isSatsangPage && (
+                  <div className="form_error course_date">
+                    <Select
+                      styles={customStyles}
+                      id="sdate"
+                      name="sdate"
+                      placeholder="Select Date/Time*"
+                      form={formData}
+                      setField={setFormData}
+                      keyName="sdate"
+                      errorCheck={setEmpty}
+                      isSearchable={false}
+                      options={formattedDates}
+                      value={setDate ? selectDateValue : values.selectDate}
+                      onChange={(value) => {
+                        setValues(
+                          { country: values.country, state: values.state, city: values.city, sdate: value },
+                          false
                         )
-                      }
+                        setFormData((prev) => {
+                          return {
+                            ...prev, sdate: value.value, courseDetails: {
+                              ...prev.courseDetails,
+                              date: value.value
+                            }
+                          }
+                        })
+                      }}
+                    />
+                    {empty === 18 && <small id="fill_err"> Please select course date</small>}
+                  </div>
+                )}
+
+                {isRegular && <><br /><div className="form_error course_date date-input-wrapper">
+                  <DatePicker
+                    minDate={minDate}
+                    visiblity={'hidden'}
+                    placeholderText="Select start date*" // Custom placeholder text
+                    dateFormat="dd/MM/YYYY"
+                    value={values.startDate}
+                    form={formData}
+                    setField={setFormData}
+                    onChange={(value) => {
+                      handleStartDate(value)
                     }}
+                    onKeyDown={(e) => e.preventDefault()} //
+                  // readOnly
                   />
-                </label>
+                  {empty === 21 && <small id="fill_err"> Please select start date</small>
+                  }
+                </div></>}
 
-              </div>
-              {empty === 11 && <div style={{ marginTop: '-11rem', fontSize: '12px', float: 'right', display: 'inline-block', color: 'red' }}> Please select one option</div>}
-            </div>
+                {isRegular && <>
+                  <div className="form_error course_date">
+                    <Select
+                      styles={customStyles}
+                      id="endDate"
+                      name="endDate"
+                      placeholder="Select Duration*"
+                      // form={formData}
+                      // setField={setFormData}
+                      // keyName="endDate"
+                      // // errorCheck={setEmpty}
+                      options={durationList}
+                      value={values.endDate}
+                      onChange={(value) => {
+                        createEndDate('', value)
+                      }}
+                    />
+                    {empty === 20 && <small id="fill_err"> Please select duration</small>}
+                  </div>
+                  <div style={{ padding: '10px 0 0 26px', color: '#C9705F', fontWeight: '600' }}>&#8377;2200 off for 12 months</div>
+                </>}
 
 
-            { !isSatsangPage && (
-              <div className="form_error course_date">
-              <Select
-                styles={customStyles}
-                id="sdate"
-                name="sdate"
-                placeholder="Select Date/Time*"
-                form={formData}
-                setField={setFormData}
-                keyName="sdate"
-                errorCheck={setEmpty}
-                isSearchable={false}
-                options={formattedDates}
-                value={setDate ? selectDateValue : values.selectDate}
-                onChange={(value) => {
-                  setValues(
-                    { country: values.country, state: values.state, city: values.city, sdate: value },
-                    false
-                  )
-                  setFormData((prev) => {
-                    return {
-                      ...prev, sdate: value.value, courseDetails: {
-                        ...prev.courseDetails,
-                        date: value.value
-                      }
-                    }
-                  })
-                }}
-              />
-              {empty === 18 && <small id="fill_err"> Please select course date</small>}
-            </div>
-            )}
 
-            {isRegular && <><br /><div className="form_error course_date date-input-wrapper">
-              <DatePicker
-                minDate={minDate}
-                visiblity={'hidden'}
-                placeholderText="Select start date*" // Custom placeholder text
-                dateFormat="dd/MM/YYYY"
-                value={values.startDate}
-                form={formData}
-                setField={setFormData}
-                onChange={(value) => {
-                  handleStartDate(value)
-                }}
-                onKeyDown={(e) => e.preventDefault()} //
-              // readOnly
-              />
-              {empty === 21 && <small id="fill_err"> Please select start date</small>
-              }
-            </div></>}
 
-            {isRegular && <>
-              <div className="form_error course_date">
-                <Select
-                  styles={customStyles}
-                  id="endDate"
-                  name="endDate"
-                  placeholder="Select Duration*"
-                  // form={formData}
-                  // setField={setFormData}
-                  // keyName="endDate"
-                  // // errorCheck={setEmpty}
-                  options={durationList}
-                  value={values.endDate}
-                  onChange={(value) => {
-                    createEndDate('', value)
-                  }}
+                <div className="DOB_box form_error">
+                  <InputComponent
+                    type="number"
+                    placeholder="Age"
+                    minnum="4"
+                    maxnum="99"
+                    form={formData}
+                    setField={setFormData}
+                    keyName="AGE"
+                    errorCheck={setEmpty}
+                  />
+                  {empty === 9 && <div style={{ marginTop: '-8.2rem', display: 'inline-block', float: 'right', fontSize: '12px', color: 'red' }}> Please enter age between 4 & 100</div>}
+                </div>
+                <div className="form_error">
+                  <InputComponent
+                    type="text"
+                    placeholder="Nationality"
+                    form={formData}
+                    setField={setFormData}
+                    keyName="nationality"
+                    errorCheck={setEmpty}
+                  />
+                  {empty === 10 && <div style={{ marginTop: '-8rem', display: 'inline-block', float: 'right', fontSize: '12px', color: 'red' }}> Please enter your nationality</div>}
+                </div>
+                <Other
+                  // setBold={setBold}
+                  empty={empty}
+                  formData={formData}
+                  setFormData={setFormData}
+                // handleEmpty4={handleEmpty4}
                 />
-                {empty === 20 && <small id="fill_err"> Please select duration</small>}
-              </div>
-              <div style={{ padding: '10px 0 0 26px', color: '#C9705F', fontWeight: '600' }}>&#8377;2200 off for 12 months</div>
-            </>}
 
-
-
-
-           <div className="DOB_box form_error">
-              <InputComponent
-                type="number"
-                placeholder="Age"
-                minnum="4"
-                maxnum="99"
-                form={formData}
-                setField={setFormData}
-                keyName="AGE"
-                errorCheck={setEmpty}
-              />
-              {empty === 9 && <div style={{ marginTop: '-8.2rem', display: 'inline-block', float: 'right', fontSize: '12px', color: 'red'}}> Please enter age between 4 & 100</div>}
-            </div> 
-             <div className="form_error">
-              <InputComponent
-                type="text"
-                placeholder="Nationality"
-                form={formData}
-                setField={setFormData}
-                keyName="nationality"
-                errorCheck={setEmpty}
-              />
-              {empty === 10 && <div style={{ marginTop: '-8rem', display: 'inline-block', float: 'right', fontSize: '12px', color: 'red'}}> Please enter your nationality</div>}
-            </div> 
-            <Other
-              // setBold={setBold}
-              empty={empty}
-              formData={formData}
-              setFormData={setFormData}
-            // handleEmpty4={handleEmpty4}
-            />
-
-          </form>
+              </form>
             )
           }
         </div>

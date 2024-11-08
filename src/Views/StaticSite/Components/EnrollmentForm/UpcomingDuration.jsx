@@ -4,7 +4,7 @@ import CheckoutCard from '../CheckoutCard'
 import Modal from "react-modal"
 import TermsCondition from './index'
 import './popup.scss'
-import UpcomingDatesView from './UpcomingDatesView'
+import UpcomingDurationView from './UpcomingDurationView'
 
 const customStyles = {
   content: {
@@ -26,7 +26,7 @@ const customStyles = {
 
 // Modal.setAppElement('#___gatsby')
 
-const UpcomingDates = ({ isShippingModalOpen, setIsShipppingModalOpen, pageDate, setCourseDateInfo, setCourseDateSelected, setShowDefaultDate, setNotShowDate, formData, setFormData, isRegular}) => {
+const UpcomingDuration = ({ isShippingModalOpen, setIsShipppingModalOpen, pageDate, setCourseDuration, setCourseDurationSelected, setShowDefaultDuration, setNotShowDuration, formData, setFormData, isRegular, durationList, createEndDate}) => {
   
   function closeModal() {
     setIsShipppingModalOpen(false)
@@ -48,8 +48,8 @@ const UpcomingDates = ({ isShippingModalOpen, setIsShipppingModalOpen, pageDate,
               </h2> */}
               {/* <h2 className="heading-2">Payment</h2> */}
               <div className='banner-heading upcoming_dates_heading' style={{ textAlign: 'left', margin: '0px' }}>
-           {isRegular ? "Course Timings" : "Course Upcoming Dates"}
-            <p className='upcoming_sub_heading'>{isRegular ? "Choose your preferred course time from the list below" : "Choose your preferred course start date from the list below"}</p>
+           Course Duration
+            <p className='upcoming_sub_heading'>Choose your preferred course duration from the list below</p>
             </div>
 
             </div>
@@ -63,7 +63,7 @@ const UpcomingDates = ({ isShippingModalOpen, setIsShipppingModalOpen, pageDate,
           
           </div>
           <div className="modal-content" style={{ gridTemplateColumns: '1fr', marginTop: '0rem' }}>
-            {<UpcomingDatesView pageDate={pageDate} setCourseDateInfo={setCourseDateInfo} setCourseDateSelected={setCourseDateSelected} closeModal={closeModal} setShowDefaultDate={setShowDefaultDate} setNotShowDate={setNotShowDate} formData={formData} setFormData={setFormData} />}
+            {<UpcomingDurationView pageDate={pageDate} setCourseDuration={setCourseDuration} setCourseDurationSelected={setCourseDurationSelected} closeModal={closeModal} setShowDefaultDuration={setShowDefaultDuration} setNotShowDuration={setNotShowDuration} formData={formData} setFormData={setFormData} durationList={durationList} createEndDate={createEndDate} />}
             {/* <div>
               <input
                 className="modal-input"
@@ -162,4 +162,4 @@ const UpcomingDates = ({ isShippingModalOpen, setIsShipppingModalOpen, pageDate,
   )
 }
 
-export default UpcomingDates
+export default UpcomingDuration

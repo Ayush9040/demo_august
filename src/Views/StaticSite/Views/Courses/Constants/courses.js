@@ -91,6 +91,16 @@ const ttc200hr = {
       '10:00 am - 6:00 pm (IST)'
     ],
 
+    enrollInfo: {
+      duration: "1 month",
+      timings: [
+        {
+          day: "Monday to Saturday",
+          time: "10:00 am - 6:00 pm (IST)"
+        }
+      ]
+    },
+
     courseCertificate: 'TTC/Certificate',
     onlineInfo: {
       courseMode: true,
@@ -632,6 +642,16 @@ const ttc200hr = {
       '12:00 noon - 4:00 pm (IST)'
     ],
 
+    enrollInfo: {
+      duration: "2 months",
+      timings: [
+        {
+          day: "Monday to Friday",
+          time: "12:00 noon - 4:00 pm (IST)"
+        }
+      ]
+    },
+
     courseCertificate: 'TTC/Certificate',
     onlineInfo: {
       courseMode: true,
@@ -1107,6 +1127,21 @@ const ttc200hr = {
         'Morning: 7:00 am - 8:30 am (IST)',
         'Evening : 6:30 pm - 8:30 pm (IST)'
       ],
+
+      enrollInfo: {
+        duration: "2 months",
+        timings: [
+          {
+            day: "Monday to Saturday",
+            time: "Morning: 7:00 am - 8:30 am (IST)"
+          },
+          {
+            day: "Monday to Saturday",
+            time: "Evening : 6:30 pm - 8:30 pm (IST) "
+          }
+        ],
+        message: "(Both the time slots are mandatory)",
+      },
 
     courseCertificate: 'TTC/Certificate',
     onlineInfo: {
@@ -1643,6 +1678,16 @@ const ttc200hr = {
       '1:00 pm - 4:30 pm (IST)'
     ],
 
+    enrollInfo: {
+      duration: "2 months",
+      timings: [
+        {
+          day: "Monday to Saturday",
+          time: "1:00 pm - 4:30 pm (IST)"
+        },
+      ],
+    },
+
     courseCertificate: 'TTC/Certificate',
     onlineInfo: {
       courseMode: true,
@@ -2157,6 +2202,20 @@ const ttc200hr = {
       'Saturday Sessions: 10:00 am – 8:30 pm (IST)',
       'Sunday Sessions 10:00 am – 1:30 pm (IST)'
     ],
+
+    enrollInfo: {
+      duration: "3 months",
+      timings: [
+        {
+          day: "Saturday & Sunday",
+          time: "Saturday Sessions: 10:00 am – 8:30 pm (IST)"
+        },
+        {
+          day: "Saturday & Sunday",
+          time: "Sunday Sessions 10:00 am – 1:30 pm (IST)"
+        }
+      ]
+    },
 
     courseCertificate: 'TTC/Certificate',
     onlineInfo: {
@@ -2687,6 +2746,16 @@ const ttc200hr = {
     time: [
       '4:30 pm – 8:00 pm (IST)'
     ],
+
+    enrollInfo: {
+      duration: "2 months",
+      timings: [
+        {
+          day: "Monday to Saturday",
+          time: "4:30 pm – 8:00 pm (IST)"
+        }
+      ]
+    },
 
     courseCertificate: 'TTC/Certificate',
     onlineInfo: {
@@ -3224,6 +3293,20 @@ const ttc500hr = {
       'Morning: 7:00 am - 8:30 am (IST)',
       'Evening: 4:30 pm - 8:30 pm (IST)'
     ],
+    enrollInfo: {
+      duration: "3 months",
+      timings: [
+        {
+          day: "Monday to Saturday",
+          time: "Morning: 7:00 am - 8:30 am (IST)"
+        },
+        {
+          day: "Monday to Saturday",
+          time: "Evening: 4:30 pm - 8:30 pm (IST)"
+        },
+      ],
+      message: "(Both time slots are mandatory)"
+    },
     courseCertificate: 'TTC/Certificate',
     onlineInfo: {
       courseMode: true,
@@ -3618,6 +3701,16 @@ const ttc900hr = {
     time: [
       '6:30 am to 8:00 pm Holiday on all Sundays'
     ],
+    enrollInfo: {
+      duration: "3 months",
+      timings: [
+        {
+          day: "Monday to Saturday",
+          time: "6:30 am to 8:00 pm"
+        }
+      ],
+      message: "Holiday on all Sundays"
+    },
 
     courseCertificate: 'TTC/Certificate',
     onlineInfo: {
@@ -4215,6 +4308,15 @@ const ttc900hr = {
     time: [
       '1:30 pm - 4:00 pm (IST)'
     ],
+    enrollInfo: {
+      duration: "1 year",
+      timings: [
+        {
+          day: "Monday to Friday",
+          time: "1:30 pm - 4:00 pm (IST)"
+        }
+      ]
+    },
     details: [
       {
         type: 'paragraph',
@@ -4935,6 +5037,20 @@ const ttc900hr = {
       'Saturday: 4:30 pm – 7.30 pm (IST)',
       'Sunday: 9:30 am – 1:30 pm (IST)'
     ],
+    enrollInfo: {
+      duration: "2 years",
+      timings: [
+        {
+          day: "Saturday & Sunday",
+          time: "Saturday: 4:30 pm – 7.30 pm (IST)"
+        },
+        {
+          day: "Saturday & Sunday",
+          time: "Sunday: 9:30 am – 1:30 pm (IST)"
+        }
+      ],
+      message: "(Both time slots are mandatory)"
+    },
 
     courseCertificate: 'TTC/Certificate',
     onlineInfo: {
@@ -5655,6 +5771,20 @@ const ttc900hr = {
       'Morning: 7:00 am to 9:00 am (IST)',
       'Evening: 4:30 pm to 8:00 pm (IST)'
     ],
+    enrollInfo: {
+      duration: "4 months",
+      timings: [
+        {
+          day: "Monday to Saturday",
+          time: "Morning: 7:00 am to 9:00 am (IST)"
+        },
+        {
+          day: "Monday to Saturday",
+          time: "Evening: 4:30 pm to 8:00 pm (IST)"
+        }
+      ],
+      message: "(Both the time slots are mandatory)"
+    },
 
     courseCertificate: 'TTC/Certificate',
     onlineInfo: {
@@ -6336,6 +6466,15 @@ const ttc900hr = {
     time: [
       '5:00 p.m. - 8:00 p.m. (IST)'
     ],
+    enrollInfo: {
+      duration: "7 months",
+      timings: [
+        {
+          day: "Monday to Saturday",
+          time: "5:00 p.m. - 8:00 p.m. (IST)"
+        }
+      ]
+    },
 
     courseCertificate: 'TTC/Certificate',
     onlineInfo: {
@@ -7174,6 +7313,16 @@ const camps = {
     time: [
       '9:30 am – 5:30 pm (IST)'
     ],
+    enrollInfo: {
+      duration: "1 Day",
+      timings: [
+        {
+          day: "Time",
+          time: "9:30 am – 5:30 pm (IST)"
+        }
+      ]
+    }
+,    
 
     courseCertificate: 'NO',
     onlineInfo: {
@@ -7343,6 +7492,17 @@ const camps = {
     time: [
       '9:30 am – 5:30 pm (IST)'
     ],
+
+    enrollInfo: {
+      duration: "1 Day",
+      timings: [
+        {
+          day: "Time",
+          time: "9:30 am – 5:30 pm (IST)"
+        }
+      ]
+    }
+,   
 
     courseCertificate: 'NO',
     onlineInfo: {
@@ -7964,6 +8124,19 @@ const camps = {
       '9:30 am – 5:30 pm (IST)'
     ],
 
+    
+
+enrollInfo: {
+  duration: "1 Day",
+  timings: [
+    {
+      day: "Time",
+      time: "9:30 am – 5:30 pm (IST)"
+    }
+  ]
+}
+,   
+
     courseCertificate: 'NO',
     onlineInfo: {
       courseMode: false,
@@ -8282,6 +8455,18 @@ const camps = {
     time: [
       '8:00 am – 11:00 am (IST)'
     ],
+    
+
+enrollInfo: {
+  duration: "Half day (4 hours)",
+  timings: [
+    {
+      day: "Time",
+      time: "8:00 am – 11:00 am (IST)"
+    }
+  ]
+}
+,   
 
     courseCertificate: 'NO',
     onlineInfo: {
@@ -8467,6 +8652,16 @@ const camps = {
     time: [
       '9:30 am – 5:30 pm (IST)'
     ],
+    enrollInfo: {
+      duration: "2 days",
+      timings: [
+        {
+          day: "Time",
+          time: "9:30 am – 5:30 pm (IST)"
+        }
+      ]
+    }
+,    
 
     courseCertificate: 'NO',
     onlineInfo: {
@@ -8645,6 +8840,16 @@ const camps = {
     time: [
       '9:30 am – 5:30 pm (IST)'
     ],
+    enrollInfo: {
+      duration: "1 Day",
+      timings: [
+        {
+          day: "Time",
+          time: "9:30 am – 5:30 pm (IST)"
+        }
+      ]
+    }
+,   
 
     courseCertificate: 'NO',
     onlineInfo: {
@@ -8817,6 +9022,18 @@ const camps = {
     time: [
       '10.00 am to 1:00 pm (IST)'
     ],
+
+    
+enrollInfo: {
+  duration: "Half Day",
+  timings: [
+    {
+      day: "Time",
+      time: "10.00 am to 1:00 pm (IST)"
+    }
+  ]
+}
+,   
 
     courseCertificate: 'NO',
     onlineInfo: {
@@ -8991,6 +9208,16 @@ const camps = {
     time: [
       '9:30 am – 5:30 pm (IST)'
     ],
+    enrollInfo: {
+      duration: "1 day",
+      timings: [
+        {
+          day: "Time",
+          time: "9:30 am – 5:30 pm (IST)"
+        }
+      ]
+    }
+,    
 
     courseCertificate: 'NO',
     onlineInfo: {
@@ -9162,6 +9389,16 @@ const camps = {
     time: [
       '9:30 am – 5:30 pm (IST)'
     ],
+    enrollInfo: {
+      duration: "1 day",
+      timings: [
+        {
+          day: "Time",
+          time: "9:30 am – 5:30 pm (IST)"
+        }
+      ]
+    }
+,    
 
     courseCertificate: 'NO',
     onlineInfo: {
@@ -9339,6 +9576,16 @@ const camps = {
     time: [
       '9:30 am – 5:30 pm (IST)'
     ],
+    enrollInfo: {
+      duration: "1 Day",
+      timings: [
+        {
+          day: "Time",
+          time: "9:30 am – 5:30 pm (IST)"
+        }
+      ]
+    }
+,   
 
     courseCertificate: 'NO',
     onlineInfo: {
@@ -9515,6 +9762,16 @@ const camps = {
     time: [
       '9:30 am – 5:30 pm (IST)'
     ],
+    enrollInfo: {
+      duration: "1 Day",
+      timings: [
+        {
+          day: "Time",
+          time: "9:30 am – 5:30 pm (IST)"
+        }
+      ]
+    }
+,   
 
     courseCertificate: 'NO',
     onlineInfo: {
@@ -9688,6 +9945,16 @@ const camps = {
     time: [
       '7:00 am - 7:00 pm (IST)'
     ],
+    enrollInfo: {
+      duration: "7 days",
+      timings: [
+        {
+          day: "Saturday to Friday",
+          time: "7:00 am - 7:00 pm (IST)"
+        }
+      ]
+    }
+,    
 
     courseCertificate: 'NO',
     onlineInfo: {
@@ -10069,6 +10336,16 @@ const camps = {
     time: [
       '7:00 am - 7:00 pm (IST)'
     ],
+    enrollInfo: {
+      duration: "7 days",
+      timings: [
+        {
+          day: "Saturday to Friday",
+          time: "7:00 am - 7:00 pm (IST)"
+        }
+      ]
+    }
+,    
 
     courseCertificate: 'NO',
     onlineInfo: {
@@ -10449,6 +10726,16 @@ const camps = {
     time: [
       'Morning: 7:00 am – 8:30 am (IST)'
     ],
+    enrollInfo: {
+      duration: "21 days",
+      timings: [
+        {
+          day: "",
+          time: "Morning: 7:00 am – 8:30 am (IST)"
+        }
+      ]
+    }
+,    
 
     courseCertificate: 'certificate Of Participation',
     onlineInfo: {
@@ -10867,6 +11154,15 @@ const camps = {
     newName: '21 Days Better Living Course',
     days: [''],
     time: ['Evening 6:30 pm – 8:00 pm (IST)'],
+    enrollInfo: {
+      duration: "21 Days",
+      timings: [
+        {
+          day: "",
+          time: "Evening 6:30 pm – 8:00 pm (IST)"
+        }
+      ]
+    },
 
     courseCertificate: 'certificate Of Participation',
     onlineInfo: {
@@ -11261,6 +11557,16 @@ const camps = {
     time: [
       'Evening 6:30 pm – 8:00 pm (IST)'
     ],
+    enrollInfo: {
+      duration: "21 days",
+      timings: [
+        {
+          day: "",
+          time: "Evening 6:30 pm – 8:00 pm (IST)"
+        }
+      ]
+    }
+,    
 
     courseCertificate: 'certificate Of Participation',
     onlineInfo: {
@@ -12000,6 +12306,20 @@ const classes = {
     preRequisite: 'None',
     courseCategory: 'Self Help',
     courseSubType: 'Regular Asana Classes',
+    enrollInfo: {
+      duration: "Upto 12 months",
+      timings: [
+        {
+          day: "Monday, Wednesday, Friday",
+          time: "Morning: 6:30 am - 8:00 am (IST)"
+        },
+        {
+          day: "Tuesday, Thursday & Saturday",
+          time: "Evening: 5:30 pm - 7:00 pm (IST) *"
+        }
+      ]
+    }
+,    
 
     courseCertificate: 'NO',
     onlineInfo: {
@@ -12111,6 +12431,16 @@ const classes = {
     time: [
       '8pm - 9pm (IST)'
     ],
+    enrollInfo: {
+      duration: "Upto 12 months",
+      timings: [
+        {
+          day: "Tuesday & Thursday",
+          time: "8pm - 9pm (IST) (Online)"
+        }
+      ]
+    }
+,    
 
     courseCertificate: 'NO',
     onlineInfo: {
@@ -12253,6 +12583,24 @@ const classes = {
       'Evening Batch (IST): 4pm to 5pm, 5pm to 6pm, 6pm to 7pm, 7pm to 8pm',
       'Weekend Schedule(Sat-Sun): 7:30 am to 9 am'
     ],
+    enrollInfo: {
+      duration: "Upto 12 months",
+      timings: [
+        {
+          day: "Monday , Tuesday , Thursday and Friday",
+          time: "Morning Batch (IST): 6:30 am to 7:30 am, 7:30 am to 8:30 am, 8:30 am to 9:30 am"
+        },
+        {
+          day: "Monday , Tuesday , Thursday and Friday",
+          time: "Evening Batch (IST): 4pm to 5pm, 5pm to 6pm, 6pm to 7pm, 7pm to 8pm"
+        },
+        {
+          day: "Weekend batches",
+          time: "(Sat-Sun): 7:30 am to 9 am"
+        }
+      ]
+    }
+,    
 
     courseCertificate: 'NO',
     onlineInfo: {
@@ -12522,6 +12870,17 @@ const classes = {
       '7:00 pm to 8:00 pm'
     ],
 
+    enrollInfo: {
+      duration: "Upto 12 months",
+      timings: [
+        {
+          day: "Monday,Tuesday,Thursday,Friday*",
+          time: "6:30 am to 7:30 am, 7:30 am to 8:30 am, 1:00 pm to 2:00 pm, 6:00 pm to 7:00 pm, 7:00 pm to 8:00 pm"
+        }
+      ]
+    }
+,    
+
     courseCertificate: 'NO',
     onlineInfo: {
       courseMode: false,
@@ -12697,6 +13056,16 @@ const classes = {
       '6:00 pm to 7:00 pm',
       '7:00 pm to 8:00 pm'
     ],
+    enrollInfo: {
+      duration: "Upto 12 months",
+      timings: [
+        {
+          day: "Monday,Tuesday,Thursday,Friday *",
+          time: "6:30 am to 7:30 am, 7:30 am to 8:30 am,8:30 am to 9:30 am, 9:30 am to 10:30 am, 10:30 am to 11:30 am, 11:30 am to 12:30 pm, 1:00 pm to 2:00 pm, 2:00 pm to 3:00 pm, 3:00 pm to 4:00 pm, 4:00 pm to 5:00 pm, 5:00 pm to 6:00 pm, 6:00 pm to 7:00 pm, 7:00 pm to 8:00 pm"
+        }
+      ]
+    }
+,    
 
     courseCertificate: 'NO',
     onlineInfo: {
@@ -12841,6 +13210,16 @@ const classes = {
     time: [
       '4:00 pm -5:00 pm'
     ],
+    enrollInfo: {
+      duration: "Upto 12 months",
+      timings: [
+        {
+          day: "Mon, Tues, Thurs, Fri",
+          time: "4:00 pm -5:00 pm"
+        }
+      ]
+    }
+,    
 
     details: [
       {
@@ -12916,6 +13295,16 @@ const classes = {
     time: [
       '8:00 am - 9:30 am (IST)'
     ],
+    enrollInfo: {
+      duration: "Upto 12 months",
+      timings: [
+        {
+          day: "Saturday & Sunday",
+          time: "8:00 am - 9:30 am (IST) *"
+        }
+      ]
+    }
+,    
     image: `${baseDomain}${courseAssets.courseAsset76}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset76}`,
     mostPopular: false,
@@ -13050,6 +13439,16 @@ const classes = {
       'Friday'
     ],
     time: ['7:00 am - 8:00 am (IST)'],
+    enrollInfo: {
+      duration: "Upto 12 months",
+      timings: [
+        {
+          day: "Monday, Wednesday & Friday",
+          time: "7:00 am - 8:00 am (IST)"
+        }
+      ]
+    }
+,    
 
     courseCertificate: 'NO',
     onlineInfo: {
@@ -13186,6 +13585,16 @@ const classes = {
     time: [
       '7:00 am - 7:45 am (IST)'
     ],
+    enrollInfo: {
+      duration: "Upto 12 months",
+      timings: [
+        {
+          day: "Tuesday, Thursday & Saturday",
+          time: "7:00 am - 7:45 am (IST) *"
+        }
+      ]
+    }
+,    
 
     courseCertificate: 'NO',
     onlineInfo: {
@@ -13331,6 +13740,15 @@ const classes = {
     nonResidential: true,
     residential: false,
     certficate: false,
+    enrollInfo: {
+      duration: "Every Sunday",
+      timings: [
+        {
+          day: "Every Sunday",
+          time: "9.30 am and 10.30am"
+        }
+      ]
+    },
     details: [
       {
         type: 'paragraph',
@@ -13447,6 +13865,20 @@ const classes = {
     },
     category: 'classes',
     dates: ['Saturday', 'Sunday'],
+    enrollInfo: {
+      duration: "Upto 12 months",
+      timings: [
+        {
+          day: "Saturday & Sunday",
+          time: "Saturday: 8:00 am - 9:30 am (IST)"
+        },
+        {
+          day: "Saturday & Sunday",
+          time: "Sunday: 8:00 am - 9:30 am (IST) or 10:30 am - 12:00 pm (IST)"
+        },
+      ]
+    }
+,    
     online: false,
     onCampus: true,
     nonResidential: false,
@@ -13602,6 +14034,20 @@ const classes = {
     preRequisite: 'None',
     courseCategory: 'Self Help',
     courseSubType: 'Regular Asana Classes',
+    enrollInfo: {
+      duration: "Upto 12 months",
+      timings: [
+        {
+          day: "Monday, Wednesday & Friday",
+          time: "Morning: 5:30 am - 6:30 am (IST)"
+        },
+        {
+          day: "Monday, Wednesday & Friday",
+          time: "Evening: 6:00 pm - 7:00 pm (IST) *"
+        }
+      ]
+    }
+,    
 
     courseCertificate: 'NO',
     onlineInfo: {
@@ -13801,6 +14247,15 @@ const classes = {
     preRequisite: 'None',
     courseCategory: 'Self Help',
     courseSubType: 'Camps & Workshops',
+    enrollInfo: {
+      duration: "Only on Saturday’s",
+      timings: [
+        {
+          day: "Every Saturday",
+          time: "2.00 p.m. - 5.00 p.m. (IST)"
+        }
+      ]
+    },
 
     courseCertificate: 'NO',
     onlineInfo: {
@@ -13945,6 +14400,16 @@ const classes = {
     time: [
       '5.00 p.m. to 7.00 p.m.'
     ],
+    enrollInfo: {
+      duration: "Upto 12 months",
+      timings: [
+        {
+          day: "Third Sunday of every month",
+          time: "5.00 p.m. to 7.00 p.m."
+        }
+      ]
+    }
+,    
 
     courseCertificate: 'NO',
     onlineInfo: {
@@ -14114,6 +14579,16 @@ const classes = {
     time: [
       '7:30 am - 9:00 am (IST)'
     ],
+    enrollInfo: {
+      duration: "Upto 12 months",
+      timings: [
+        {
+          day: "Saturday & Sunday",
+          time: "7:30 am - 9:00 am (IST)"
+        }
+      ]
+    }
+,    
     // templateId: 'GENERAL_AUTO_EMAIL',
     templateId: {
       templateOnline: 'GENERAL_AUTO_EMAIL',
@@ -14281,6 +14756,16 @@ const classes = {
     time: [
       '8:30 am to 9:30 am'
     ],
+    enrollInfo: {
+      duration: "Upto 12 months",
+      timings: [
+        {
+          day: "Monday, Wednesday, Friday",
+          time: "8:30 am to 9:30 am"
+        }
+      ]
+    }
+,    
 
     courseCertificate: 'NO',
     onlineInfo: {
@@ -14595,7 +15080,6 @@ const certificate = {
     textdescription5: '',
     title: 'Certificate Course on Advanced Pranayama Techniques ( Pranayama Online Course)',
     key: 'certificate-course-on-advanced-pranayama-techniques',
-    weekDays: true,
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
     templateId: {
@@ -14655,6 +15139,20 @@ const certificate = {
       '6:00 pm - 7:00 pm (IST)',
       '11:30 am - 12:30 pm (IST)'
     ],
+    enrollInfo: {
+      duration: "24 sessions",
+      timings: [
+        {
+          day: "Wednesday, Friday & Saturday",
+          time: "6:00 pm - 7:00 pm (IST)"
+        },
+        {
+          day: "Mondays, Tuesdays & Thursdays",
+          time: "11:30 am - 12:30 pm (IST)"
+        }
+      ]
+    }
+,    
 
     courseCertificate: 'Certificate',
     onlineInfo: {
@@ -14914,7 +15412,6 @@ const certificate = {
     textdescription5: '',
     title: 'Certificate Program on Yoga for Cancer - Online & On Campus',
     key: 'certificate-program-on-yoga-for-cancer',
-    weekDays: true,
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
     templateId: {
@@ -14965,6 +15462,16 @@ const certificate = {
     time: [
       '3:00 pm - 5:00 pm (IST)'
     ],
+
+    enrollInfo: {
+      duration: "12 session",
+      timings: [
+        {
+          day: "Fridays & Saturdays",
+          time: "3:00 pm - 5:00 pm (IST)"
+        }
+      ]
+    },
 
     courseCertificate: 'Certificate',
     onlineInfo: {
@@ -15118,6 +15625,15 @@ const certificate = {
     time: [
       '5:00 p.m. - 7:00 p.m. (IST)'
     ],
+    enrollInfo: {
+      duration: "5 days",
+      timings: [
+        {
+          day: "Tuesdays to Saturday",
+          time: "5:00 p.m. - 7:00 p.m. (IST)"
+        }
+      ]
+    },
 
     courseCertificate: 'Certificate',
     onlineInfo: {
@@ -15187,7 +15703,6 @@ const certificate = {
     textdescription4: '',
     textdescription5: '',
     title: 'Certificate Yoga Therapy Course - Online & On Campus',
-    weekDays: true,
     key: 'certificate-yoga-therapy-course-online',
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
@@ -15241,6 +15756,15 @@ const certificate = {
     time: [
       '5:30 pm - 7:30 pm (IST)'
     ],
+    enrollInfo: {
+      duration: "4 months",
+      timings: [
+        {
+          day: "Monday, Wednesday & Friday",
+          time: "5:30 pm - 7:30 pm (IST)"
+        }
+      ]
+    },
 
     courseCertificate: 'Certificate',
     onlineInfo: {

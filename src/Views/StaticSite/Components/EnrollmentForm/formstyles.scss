@@ -8,7 +8,7 @@
   // padding: 1.5em 0;
   // width: calc(100% - 3em);
   width: 17em;
-  margin-top: 22px;
+  margin-top: 16px;
 }
 
 .check_course .btn {
@@ -334,15 +334,16 @@
 
 
 
-.check_course .item-input:checked ~ .icon,
-.check_course .item-input:checked ~ .item-info .item-name,
-.check_course .item-input:checked ~ .item-info .item-shipping,
-.check_course .item-input:checked ~ .item-price {
-  color: hsl(233,90%,50%);
+.check_course .item-input:checked~.icon,
+.check_course .item-input:checked~.item-info .item-name,
+.check_course .item-input:checked~.item-info .item-shipping,
+.check_course .item-input:checked~.item-price {
+  color: hsl(233, 90%, 50%);
 }
+
 .check_course .item-label:has(.item-input:checked) {
   background-color: #afb4af;
-  box-shadow: 0 0 0 2px hsl(233,90%,50%) inset;
+  box-shadow: 0 0 0 2px hsl(233, 90%, 50%) inset;
 }
 
 .check_course .item-label:has(.item-input:checked) {
@@ -386,14 +387,14 @@
 .check_course .item-label:has(.item-input:checked) {
   background-color: #b8cbb8;
   box-shadow: 0 0 0 2px green inset;
-  
+
 }
 
-.check_course .item-input:checked ~ .item-info .item-name {
-  color: green; 
+.check_course .item-input:checked~.item-info .item-name {
+  color: green;
 }
 
-.check_course .item-input:checked ~ .item-price {
+.check_course .item-input:checked~.item-price {
   color: green;
 }
 
@@ -501,7 +502,7 @@
   .header {
     grid-column: 1/7;
     margin-left: 60px;
-    margin-top: 40px;
+    margin-top: 18px;
     font-size: 2.6rem;
     cursor: pointer;
 
@@ -517,17 +518,18 @@
 
     .x {
       display: flex;
+      justify-content: center;
       float: right;
       // height: 2.5rem;
       // width: 2.5rem;
       color: black;
       background: transparent;
-      font-weight: 900;
+      font-weight: 400;
       font-size: 2rem;
       margin-right: 6rem;
       border: 1px solid rgba(0, 0, 0, 1);
       border-radius: 20px;
-      padding: 9px 12px;
+      padding: 7px 12px 5px 17px;
       margin-top: 23px;
       cursor: pointer;
     }
@@ -661,12 +663,12 @@
   .grid_box {
     display: grid;
     grid-template-columns: 65% 35%;
-    margin: 3rem;
+    margin: 1rem 3rem 3rem 3rem;
     background-size: cover;
-        background-position: 72% 72%;
-        background-repeat: no-repeat;
-        background-size: 490px;
-        background-image: url('../../../../../public/images/bg_lotus_enrollment.png');
+    background-position: 72% 72%;
+    background-repeat: no-repeat;
+    background-size: 490px;
+    background-image: url('../../../../../public/images/bg_lotus_enrollment.png');
 
     form {
       label {
@@ -1414,6 +1416,15 @@ input[type='radio']:checked::before {
       }
     }
 
+    .details_box_regular {
+      border-radius: 20px;
+      // width: 600px;
+      height: 365px;
+      background-color: #fff;
+      border: none;
+      box-shadow: 0px 11.58px 23px 0px rgba(0, 0, 0, 0.04);
+    }
+
     .course-details-text {
       color: rgba(96, 96, 96, 0.502);
       font-size: 20px;
@@ -1931,19 +1942,25 @@ input[type='radio']:checked::before {
   border: 1px solid rgba(96, 96, 96, 0.5019607843);
   border-radius: 50px;
   color: rgba(96, 96, 96, 0.8);
+
   @media screen and (max-width: 599px) {
     margin: -20px 0 0 20px;
     width: calc(72vw) !important;
   }
 }
+
 /* Custom CSS for react-datepicker */
 
 .react-datepicker__day {
   font-size: 1.8rem !important;
-  width: 40px !important; /* Adjust the width as needed */
-  height: 40px !important; /* Adjust the height as needed */
-  line-height: 40px !important; /* Center text vertically */
-  text-align: center !important; /* Center text horizontally */
+  width: 40px !important;
+  /* Adjust the width as needed */
+  height: 40px !important;
+  /* Adjust the height as needed */
+  line-height: 40px !important;
+  /* Center text vertically */
+  text-align: center !important;
+  /* Center text horizontally */
 }
 
 .react-datepicker__day--keyboard-selected,
@@ -1952,23 +1969,27 @@ input[type='radio']:checked::before {
   background-color: #007bff;
   color: white;
 }
+
 /* Custom CSS for react-datepicker */
 
 /* Adjust the font size of the day names (Sun, Mon, etc.) */
 .react-datepicker__day-name {
-  width:40px !important;
+  width: 40px !important;
   margin-top: 14px !important;
-  font-size: 1.8rem !important;/* Adjust the font size as needed */
+  font-size: 1.8rem !important;
+  /* Adjust the font size as needed */
 }
 
 /* Adjust the font size of the month name */
 .react-datepicker__current-month {
-  font-size: 1.8rem !important; /* Adjust the font size as needed */
+  font-size: 1.8rem !important;
+  /* Adjust the font size as needed */
 }
 
 /* Optional: Adjust the font size of the year */
 .react-datepicker__current-year {
-  font-size: 1.8rem !important; /* Adjust the font size as needed */
+  font-size: 1.8rem !important;
+  /* Adjust the font size as needed */
 }
 
 .check_course_new {
@@ -2054,7 +2075,7 @@ input[type='radio']:checked::before {
 }
 
 .details_lang_info {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
   color: rgba(129, 129, 132, 1);
 }
@@ -2067,7 +2088,7 @@ input[type='radio']:checked::before {
 }
 
 .lang_course {
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 400;
   color: rgba(0, 0, 0, 1);
 }
@@ -2082,7 +2103,7 @@ input[type='radio']:checked::before {
   // height: 200px;
   background-color: #fff;
   border: none;
-  box-shadow: 0px 11.58px 23px 0px rgba(0, 0, 0, 0.04);
+  box-shadow: 0px 0px 13px 0px rgba(0, 0, 0, 0.04);
   // display: flex;
   // align-items: center;
   padding: 20px;
@@ -2111,7 +2132,7 @@ input[type='radio']:checked::before {
 }
 
 .fields_alignment_bottom {
-  margin-bottom: 8px;
+  margin-bottom: 14px;
 }
 
 .wrapper_date_and_course {
@@ -2121,6 +2142,10 @@ input[type='radio']:checked::before {
   border-radius: 20px;
   border-bottom-left-radius: 0px;
   border-bottom-right-radius: 0px;
+  box-shadow: 0px 0px 13px 0px #0000000A;
+
+box-shadow: 0px 11.58px 23px 0px #0000000A;
+
 }
 
 .course_format_wrapper {
@@ -2184,11 +2209,11 @@ input[type='radio']:checked::before {
   padding: 8px 0.5em;
 }
 
-.check_course .item-input:checked ~ .item-info .item-name {
+.check_course .item-input:checked~.item-info .item-name {
   color: #fff;
 }
 
-.check_course .item-input:checked ~ .item-price {
+.check_course .item-input:checked~.item-price {
   color: #fff;
 }
 
@@ -2202,7 +2227,7 @@ input[type='radio']:checked::before {
   box-shadow: 0 0 0 2px #CA4625 inset !important;
 }
 
-.check_date_2 .item-input:checked ~ .item-info .item-name .style_dates {
+.check_date_2 .item-input:checked~.item-info .item-name .style_dates {
   color: #fff !important;
 }
 
@@ -2313,15 +2338,16 @@ input[type=checkbox]:checked {
 
 #myCheckbox {
   /* setting the checkbox input HTML element accent color to `green` */
-  accent-color: rgb(202, 70, 37);;
+  accent-color: rgb(202, 70, 37);
+  ;
   background-color: white;
 }
 
-input[type=checkbox]:checked + label:active:before {
+input[type=checkbox]:checked+label:active:before {
   transform: scale(0);
 }
 
-input[type=checkbox]:checked + label:before {
+input[type=checkbox]:checked+label:before {
   background-color: #ED820A;
   border-color: #ED820A;
   color: #fff;
@@ -2331,12 +2357,18 @@ input[type=checkbox]:checked + label:before {
   border-radius: 8px;
   border: 1px solid rgba(96, 96, 96, 0.3);
   width: 49%;
-  padding: 8px 25px;
+  padding: 4px 12px 8px 12px;
   text-align: center;
 }
 
+.time_header {
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(96, 96, 96, 0.6);
+}
+
 .time_days_wrapper {
-  display: none;
+  // display: none;
   border-radius: 8px;
   border: 1px solid rgba(96, 96, 96, 0.3);
   width: 98%;
@@ -2346,11 +2378,18 @@ input[type=checkbox]:checked + label:before {
   padding: 12px 50px;
 }
 
+.times_fixed {
+  font-size: 14px;
+  font-weight: 400;
+  color: #000;
+  margin-top: 8px;
+}
+
 .details_wrapper_duration_2 {
   border-radius: 8px;
   border: 1px solid rgba(96, 96, 96, 0.3);
   // width: 40%;
-  padding: 8px 12px;
+  padding: 4px 12px 8px 12px;
   // text-align: center;
   color: rgba(0, 0, 0, 1);
 }
@@ -2363,11 +2402,30 @@ input[type=checkbox]:checked + label:before {
   gap: 10px;
 }
 
+.btn_mode_date_regular {
+  margin: 0px 21px 17px 18px;
+  border-top: 1px solid rgba(96, 96, 96, 0.3);
+  padding: 15px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.first_wrapper_regular_btn {
+  display: flex;
+  gap: 15px;
+}
+
+.second_wrapper_regular_btn {
+  display: flex;
+  gap: 20px;
+}
+
 .details_wrapper_duration_3 {
   border-radius: 8px;
   border: 1px solid rgba(52, 199, 89, 1);
   // width: 40%;
-  padding: 8px 12px;
+  padding: 4px 12px 8px 12px;
   // text-align: center;
   color: rgba(0, 0, 0, 1);
   background-color: rgba(52, 199, 89, 0.03);
@@ -2392,8 +2450,46 @@ input[type=checkbox]:checked + label:before {
 }
 
 .terms_text {
-font-size: 14px; 
+  font-size: 14px;
   font-weight: 600;
+}
+
+.react-datepicker-wrapper {
+  width: 100%;
+}
+
+.react-datepicker__input-container input {
+  width: 100% !important;
+  margin: 0 0 0 0px;
+  font-size: 15px !important;
+  padding: 8px 30px;
+  // border: 1px solid rgba(96, 96, 96, 0.5);
+  box-shadow: 0 0 0 1px hsl(233, 10%, 80%) inset;
+  border-radius: 50px;
+  font-weight: 500;
+  color: rgba(96, 96, 96, 0.5);
+}
+
+.date-input-wrapper {
+  margin-top: 16px;
+}
+
+.label_duration {
+  display: flex;
+  align-items: center;
+}
+
+.msg_duration {
+  display: flex;
+  margin-left: 8px;
+  font-size: 12px;
+  font-weight: 500;
+  align-items: center;
+  padding: 4px 6px;
+  border-radius: 4px;
+  justify-content: center;
+  background: linear-gradient(to right, #F7F7F7, #FFF7E2);
+  color: #EFCA6C;
 }
 
 @media(max-width: 768px) {
@@ -2422,339 +2518,340 @@ font-size: 14px;
     padding: 0px;
     margin-top: 35px;
     cursor: pointer;
-}
+  }
 
-.enrollment_container .student {
-  font-weight: 600;
-  font-size: 16px;
-  margin-bottom: 15px;
-}
+  .enrollment_container .student {
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
 
-.enroll_subtitle {
-  font-size: 12px;
-  font-weight: 500;
-  margin-top: 6px; 
-}
+  .enroll_subtitle {
+    font-size: 12px;
+    font-weight: 500;
+    margin-top: 6px;
+  }
 
-.course-main-container .course-secondary-container .details_box .details_course_box .detail_image_box {
-   width: auto; 
-   height: auto; 
-   min-width: auto; 
-}
+  .course-main-container .course-secondary-container .details_box .details_course_box .detail_image_box {
+    width: auto;
+    height: auto;
+    min-width: auto;
+  }
 
-.main-container .course-main-container .course-secondary-container .details_box {
-  margin-left: 0px;
-  margin-right: 0px;
-}
+  .main-container .course-main-container .course-secondary-container .details_box {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
 
-.main_div .grid_box {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 0.5rem;
-}
+  .main_div .grid_box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0.5rem;
+  }
 
-.main-container .course-main-container .course-secondary-container .details_box {
-  border: 1px solid rgba(96, 96, 96, 0.5019607843);
-  border-radius: 20px;
-  width: 330px;
-  /* height: 200px; */
-  height: auto;
-  margin-left: 0px;
-  text-align: center;
-  background-color: #fff;
-  border: none;
-}
+  .main-container .course-main-container .course-secondary-container .details_box {
+    border: 1px solid rgba(96, 96, 96, 0.5019607843);
+    border-radius: 20px;
+    width: 330px;
+    /* height: 200px; */
+    height: auto;
+    margin-left: 0px;
+    text-align: center;
+    background-color: #fff;
+    border: none;
+  }
 
-.course-main-container .course-secondary-container .details_box .details_course_box .detail_image_box {
-  width: 100%;
-  height: 185px;
-  min-width: auto;
-}
+  .course-main-container .course-secondary-container .details_box .details_course_box .detail_image_box {
+    width: 100%;
+    height: 185px;
+    min-width: auto;
+  }
 
 
-.course-main-container .course-secondary-container .details_box .details_course_box .current_duration {
-  margin-right: 0px;
-}
+  .course-main-container .course-secondary-container .details_box .details_course_box .current_duration {
+    margin-right: 0px;
+  }
 
-.main-container .course-main-container .course-secondary-container .details_box .details_course_box .current_duration {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  margin-top: 0;
-  font-weight: bold;
-  font-size: 1.5rem;
-  text-align: left;
-  /* flex-wrap: wrap; */
-  padding: 0px 20px 20px 20px;
-}
+  .main-container .course-main-container .course-secondary-container .details_box .details_course_box .current_duration {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-top: 0;
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-align: left;
+    /* flex-wrap: wrap; */
+    padding: 0px 20px 20px 20px;
+  }
 
-.details_wrapper_duration {
-  border-radius: 8px;
-  border: 1px solid rgba(96, 96, 96, 0.3);
-  width: 49%;
-  display: flex;
-  padding: 2px;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-}
+  .details_wrapper_duration {
+    border-radius: 8px;
+    border: 1px solid rgba(96, 96, 96, 0.3);
+    width: 49%;
+    display: flex;
+    padding: 2px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
 
-.details_newName {
-  font-size: 16px;
-  font-weight: 600;
-  color: rgb(0, 0, 0);
-}
+  .details_newName {
+    font-size: 16px;
+    font-weight: 600;
+    color: rgb(0, 0, 0);
+  }
 
-.details_duration_info {
-  font-size: 12px;
-  font-weight: 400;
-  color: rgb(129, 129, 132);
-}
+  .details_duration_info {
+    font-size: 12px;
+    font-weight: 400;
+    color: rgb(129, 129, 132);
+  }
 
-.details_lang_info {
-  font-size: 12px;
-  font-weight: 400;
-  color: rgb(129, 129, 132);
-}
+  .details_lang_info {
+    font-size: 12px;
+    font-weight: 400;
+    color: rgb(129, 129, 132);
+  }
 
-.details_desc_info {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 16px;
-  padding-right: 6px;
-}
+  .details_desc_info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+    padding-right: 6px;
+  }
 
-.btn_mode_date_wrapper {
-  margin: 0px 21px 17px 18px;
-  border-top: 1px solid rgba(96, 96, 96, 0.3);
-  padding: 15px 0px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
+  .btn_mode_date_wrapper {
+    margin: 0px 21px 17px 18px;
+    border-top: 1px solid rgba(96, 96, 96, 0.3);
+    padding: 15px 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
 
-.img_wrapper_date_format {
-  display: none;
-}
+  .img_wrapper_date_format {
+    display: none;
+  }
 
-.details_format_date {
-  width: 100%;
-}
+  .details_format_date {
+    width: 100%;
+  }
 
-.item-name {
-  font-size: 11px;
-  font-weight: 500;
-  color: rgba(96, 96, 96, 0.5);
-}
+  .item-name {
+    font-size: 11px;
+    font-weight: 500;
+    color: rgba(96, 96, 96, 0.5);
+  }
 
-.item-price {
-  font-size: 11px;
-  font-weight: 500;
-  color: rgba(96, 96, 96, 0.5);
-}
+  .item-price {
+    font-size: 11px;
+    font-weight: 500;
+    color: rgba(96, 96, 96, 0.5);
+  }
 
-.date_btn {
-  width: 100%;
-}
+  .date_btn {
+    width: 100%;
+  }
 
-.style_dates {
-  font-size: 11px;
-  font-weight: 500;
-  color: rgba(0, 0, 0, 0.5);
-  margin-left: 8px;
-  color: rgba(96, 96, 96, 0.5);
-  text-align: left;
-}
+  .style_dates {
+    font-size: 11px;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.5);
+    margin-left: 8px;
+    color: rgba(96, 96, 96, 0.5);
+    text-align: left;
+  }
 
-.fees_label {
-  color: rgb(0, 0, 0);
-  font-size: 14px;
-  font-weight: 400;
-}
+  .fees_label {
+    color: rgb(0, 0, 0);
+    font-size: 14px;
+    font-weight: 400;
+  }
 
-.price_select {
-  font-size: 18px;
-  font-weight: 500;
-  color: rgb(0, 0, 0);
-}
+  .price_select {
+    font-size: 18px;
+    font-weight: 500;
+    color: rgb(0, 0, 0);
+  }
 
-.fees_price_wrapper {
-  width: 50%;
-  text-align: center;
-}
+  .fees_price_wrapper {
+    width: 50%;
+    text-align: center;
+  }
 
-.bottom_container_btn {
-  display: none;
-}
+  .bottom_container_btn {
+    display: none;
+  }
 
-.main_div .grid_box .left_grid {
-  display: none;
-}
+  .main_div .grid_box .left_grid {
+    display: none;
+  }
 
-.check_course .item-label {
-  align-items: flex-start;
-}
+  .check_course .item-label {
+    align-items: flex-start;
+  }
 
-.container_date_enroll .item_date {
-  flex-direction: column !important;
-  padding: 2px 2px !important;
-  gap: 0px !important;
-}
+  .container_date_enroll .item_date {
+    flex-direction: column !important;
+    padding: 2px 2px !important;
+    gap: 0px !important;
+  }
 
-.details_format_date .check_course .item_format {
-  border-radius: 25px;
-  justify-content: flex-start;
-}
+  .details_format_date .check_course .item_format {
+    border-radius: 25px;
+    justify-content: flex-start;
+  }
 
-.details_wrapper_duration_2 {
-  border-radius: 8px;
-  border: 1px solid rgba(96, 96, 96, 0.3);
-  padding: 8px 9px;
-  color: rgb(0, 0, 0);
-  text-align: left;
-}
+  .details_wrapper_duration_2 {
+    border-radius: 8px;
+    border: 1px solid rgba(96, 96, 96, 0.3);
+    padding: 8px 9px;
+    color: rgb(0, 0, 0);
+    text-align: left;
+  }
 
-.details_wrapper_duration_3 {
-  border-radius: 8px;
-  border: 1px solid rgb(52, 199, 89);
-  padding: 8px 9px;
-  color: rgb(0, 0, 0);
-  background-color: rgba(52, 199, 89, 0.03);
-  text-align: left;
-}
+  .details_wrapper_duration_3 {
+    border-radius: 8px;
+    border: 1px solid rgb(52, 199, 89);
+    padding: 8px 9px;
+    color: rgb(0, 0, 0);
+    background-color: rgba(52, 199, 89, 0.03);
+    text-align: left;
+  }
 
-.time_days_wrapper {
-  border-radius: 8px;
-  border: 1px solid rgba(96, 96, 96, 0.3);
-  width: 98%;
-  text-align: left;
-  margin-top: 12px;
-  padding: 12px 9px;
-}
+  .time_days_wrapper {
+    border-radius: 8px;
+    border: 1px solid rgba(96, 96, 96, 0.3);
+    width: 98%;
+    text-align: left;
+    margin-top: 12px;
+    padding: 12px 9px;
+  }
 
-.accordian_holder {
-  display: block;
-}
+  .accordian_holder {
+    display: block;
+  }
 
-.accordian_holder {
-  background-color: rgba(251, 249, 249, 1);
-  padding: 20px;
-  // margin: 5px;
-  border-radius: 20px;
-  margin-top: 28px;
-}
+  .accordian_holder {
+    background-color: rgba(251, 249, 249, 1);
+    padding: 20px;
+    // margin: 5px;
+    border-radius: 20px;
+    margin-top: 28px;
+    
+  }
 
-.accordion-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-}
+  .accordion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
 
-.accordian_holder .desc {
-  display: grid;
-  grid-template-rows: 0fr;
-  transition: grid-template-rows 0.5s;
-}
+  .accordian_holder .desc {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.5s;
+  }
 
-.accordian_holder .show {
-  margin-top: 15px;
-  grid-template-rows: 1fr;
-}
+  .accordian_holder .show {
+    margin-top: 15px;
+    grid-template-rows: 1fr;
+  }
 
-.accordian_holder .desc .hidden {
-  overflow: hidden;
-}
+  .accordian_holder .desc .hidden {
+    overflow: hidden;
+  }
 
-.accordian_title {
-  font-size: 16px;
-  font-weight: 600;
-  color: rgba(0, 0, 0, 1);
-}
+  .accordian_title {
+    font-size: 16px;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 1);
+  }
 
-.accordian_sub-title {
-  font-size: 10px;
-  color: rgba(0, 0, 0, 0.5);
-  font-weight: 500;
-  margin-top: 4px;
-}
+  .accordian_sub-title {
+    font-size: 10px;
+    color: rgba(0, 0, 0, 0.5);
+    font-weight: 500;
+    margin-top: 4px;
+  }
 
-.main_div .grid_box {
-  background-image: none;
-}
+  .main_div .grid_box {
+    background-image: none;
+  }
 
-.edit_show {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 15px;
-}
+  .edit_show {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+  }
 
-.edit_show div {
-  display: flex;
-        align-items: center;
-        justify-content: center;
-        padding-bottom: 2px;
-        border-bottom: 2px solid rgba(0, 0, 0, 1);
-}
+  .edit_show div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 2px;
+    border-bottom: 2px solid rgba(0, 0, 0, 1);
+  }
 
-.edit_show div span {
-  font-size: 16px;
-  color: rgba(0, 0, 0, 1);
-}
+  .edit_show div span {
+    font-size: 16px;
+    color: rgba(0, 0, 0, 1);
+  }
 
-.edit_show div div {
-  margin-left: 4px;
-}
+  .edit_show div div {
+    margin-left: 4px;
+  }
 
-.inp-group {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  justify-content: space-between;
-  position: relative;
-  width: 100% !important;
-}
+  .inp-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    justify-content: space-between;
+    position: relative;
+    width: 100% !important;
+  }
 
-.rotate_icon_arrow {
-  transform: rotate(180deg);
-}
+  .rotate_icon_arrow {
+    transform: rotate(180deg);
+  }
 
-.wrapper_date_and_course {
-  width: 100%;
-  background-color: #fff;
-  margin-top: 28px;
-  border-radius: 20px;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
-}
+  .wrapper_date_and_course {
+    width: 100%;
+    background-color: #fff;
+    margin-top: 28px;
+    border-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
 
-.bottom_container_btn {
-  display: flex;
-  position: fixed;
-  bottom: 0px;
-  width: 100%;
-  background: rgb(255, 243, 240);
-  margin-left: 0px;
-  left: 0;
-  border-bottom-left-radius: 0px;
-  border-bottom-right-radius: 0px;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  flex-direction: column-reverse;
-  gap: 10px;
-}
+  .bottom_container_btn {
+    display: flex;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    background: rgb(255, 243, 240);
+    margin-left: 0px;
+    left: 0;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    flex-direction: column-reverse;
+    gap: 10px;
+  }
 
-.enrollment_container {
-  margin-bottom: 38%;
-}
+  .enrollment_container {
+    margin-bottom: 38%;
+  }
 
-.terms label {
-  font-size: 12px !important;
-}
+  .terms label {
+    font-size: 12px !important;
+  }
 
-.terms_text {
-  font-size: 12px; 
+  .terms_text {
+    font-size: 12px;
     font-weight: 600;
     color: rgba(0, 0, 0, 1);
   }
