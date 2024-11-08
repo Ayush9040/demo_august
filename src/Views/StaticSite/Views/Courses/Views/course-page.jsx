@@ -121,7 +121,7 @@ const Courses = () => {
 
   let dataMaster = [[c200hr[0], c500hr[0], c900hr[0], c200hr[1], c900hr[1], c200hr[2], c900hr[2], c200hr[3], c900hr[3], c200hr[4], c900hr[4], c200hr[5], c900hr[5]],
   [campsArr[13], campsArr[11], campsArr[14], campsArr[12], campsArr[15]],
-    classesArr, mostPopular, [...campsArr,...classesArr],
+    classesArr, mostPopular, [...campsArr, ...classesArr],
   [certificateArr[3], certificateArr[1], certificateArr[0]]]
 
   const [data, setData] = useState([dataMaster[0].slice(0, 3), dataMaster[1].slice(0, 3),
@@ -148,29 +148,34 @@ const Courses = () => {
         if (online) {
           conditions.push(points?.online);
         }
-        if (onCampus && (points?.residential || points?.nonResidential)) {
+        if (onCampus) {
+          conditions.push(points?.residential || points?.nonResidential);
+        }
+        if ((days7 && points?.tenure?.toLowerCase() === '7 days') || (days21 && points?.tenure?.toLowerCase() === '21 days') ||
+          (month1 && points?.tenure === '1 month') || (month2 && points?.tenure === '2 month') ||
+          (month3 && points?.tenure === '3 month')) {
           conditions.push(true);
         }
-        if (days7 && points?.tenure?.toLowerCase() === '7 days') {
-          conditions.push(points?.tenure?.toLowerCase() === '7 days');
-        }
-        if (days21 && points?.tenure?.toLowerCase() === '21 days') {
-          conditions.push(points?.tenure?.toLowerCase() === '21 days');
-        }
-        if (month1 && points?.tenure === '1 month') {
-          conditions.push(points?.tenure === '1 month');
-        }
-        if (month2 && points?.tenure === '2 month') {
-          conditions.push(points?.tenure === '2 month');
-        }
-        if (month3 && points?.tenure === '3 month') {
-          conditions.push(points?.tenure === '3 month');
-        }
+        // else {
+        //   conditions.push(false)
+        // }
+        // if (days21 && points?.tenure?.toLowerCase() === '21 days') {
+        //   conditions.push(points?.tenure?.toLowerCase() === '21 days');
+        // }
+        // if (month1 && points?.tenure === '1 month') {
+        //   conditions.push(points?.tenure === '1 month');
+        // }
+        // if (month2 && points?.tenure === '2 month') {
+        //   conditions.push(points?.tenure === '2 month');
+        // }
+        // if (month3 && points?.tenure === '3 month') {
+        //   conditions.push(points?.tenure === '3 month');
+        // }
         // if (month3) {
         //   conditions.push(points?.tenure === '3 month');
         // }
-        if (weekends && points?.weekends) {
-          conditions.push(points?.weekends);
+        if (weekends) {
+          conditions.push(points?.weekends?true:false);
         }
         if (weekDays) {
           if (!points?.weekends) {
@@ -269,7 +274,7 @@ const Courses = () => {
       let count5 = 0
       for (let j5 = 0; j5 < rawArr5.length; j5++) {
         console.log(rawArr5);
-        
+
         const shouldDisplay = await shouldDisplayCardNew(rawArr5[j5], selectedValues);
         if (shouldDisplay == 'true') {
           arr5.push(rawArr5[j5])
@@ -655,26 +660,30 @@ const Courses = () => {
           const bool = points.some(obj => obj.onCampus === true);
           conditions.push(!!bool);
         }
-        if (days7 && points.some(obj => obj.days7 === true)) {
-          const bool = points.some(obj => obj.days7 === true);
-          conditions.push(!!bool);
+        if ((days7 && points.some(obj => obj.days7 === true)) || days21 && points.some(obj => obj.days21 === true) ||
+          (month1 && points.some(obj => obj.month1 === true)) || (month2 && points.some(obj => obj.month2 === true)) ||
+          (month3 && points.some(obj => obj.month3 === true))) {
+          conditions.push(true);
         }
-        if (days21 && points.some(obj => obj.days21 === true)) {
-          const bool = points.some(obj => obj.days21 === true);
-          conditions.push(!!bool);
+        else {
+          // conditions.push(false);
         }
-        if (month1 && points.some(obj => obj.month1 === true)) {
-          const bool = points.some(obj => obj.month1 === true);
-          conditions.push(!!bool);
-        }
-        if (month2 && points.some(obj => obj.month2 === true)) {
-          const bool = points.some(obj => obj.month2 === true);
-          conditions.push(!!bool);
-        }
-        if (month3 && points.some(obj => obj.month3 === true)) {
-          const bool = points.some(obj => obj.month3 === true);
-          conditions.push(!!bool);
-        }
+        // if (days21 && points.some(obj => obj.days21 === true)) {
+        //   const bool = points.some(obj => obj.days21 === true);
+        //   conditions.push(!!bool);
+        // }
+        // if (month1 && points.some(obj => obj.month1 === true)) {
+        //   const bool = points.some(obj => obj.month1 === true);
+        //   conditions.push(!!bool);
+        // }
+        // if (month2 && points.some(obj => obj.month2 === true)) {
+        //   const bool = points.some(obj => obj.month2 === true);
+        //   conditions.push(!!bool);
+        // }
+        // if (month3 && points.some(obj => obj.month3 === true)) {
+        //   const bool = points.some(obj => obj.month3 === true);
+        //   conditions.push(!!bool);
+        // }
         if (weekends) {
           const bool = points.some(obj => obj.weekends === true);
           conditions.push(!!bool);

@@ -37,21 +37,25 @@ const Accordian = ({ data, sliderVal, setSliderVal, selectedFilters }) => {
       if (onCampus) {
         conditions.push(points.onCampus);
       }
-      if (days7 && points.days7) {
-        conditions.push(points.days7);
+      if ((days7 && points.days7) || (days21 && points.days21) ||
+        (month1 && points.month1) || (month2 && points.month2) || (month3 && points.month3)) {
+        conditions.push(true);
       }
-      if (days21 && points.days21) {
-        conditions.push(points.days21);
+      else {
+        // conditions.push(false)
       }
-      if (month1 && points.month1) {
-        conditions.push(points.month1);
-      }
-      if (month2 && points.month2) {
-        conditions.push(points.month2);
-      }
-      if (month3 && points.month3) {
-        conditions.push(points.month3);
-      }
+      // if (days21 && points.days21) {
+      //   conditions.push(points.days21);
+      // }
+      // if (month1 && points.month1) {
+      //   conditions.push(points.month1);
+      // }
+      // if (month2 && points.month2) {
+      //   conditions.push(points.month2);
+      // }
+      // if (month3 && points.month3) {
+      //   conditions.push(points.month3);
+      // }
       if (weekends) {
         conditions.push(points.weekends);
       }
@@ -67,9 +71,9 @@ const Accordian = ({ data, sliderVal, setSliderVal, selectedFilters }) => {
   };
 
   const shouldDisplayBlock = (obj) => {
-    
+
     if (selectedFilters) {
-      const { online, onCampus, days7,days21,month1, month2, month3, weekends, weekDays } = selectedFilters;
+      const { online, onCampus, days7, days21, month1, month2, month3, weekends, weekDays } = selectedFilters;
 
       if (!anyFilterActive) {
         return true; // Show block if no filters are active
@@ -92,26 +96,30 @@ const Accordian = ({ data, sliderVal, setSliderVal, selectedFilters }) => {
           const bool = points.some(obj => obj.onCampus === true);
           conditions.push(!!bool);
         }
-        if (days7 && points.some(obj => obj.days7 === true)) {
-          const bool = points.some(obj => obj.days7 === true);
-          conditions.push(!!bool);
+        if ((days7 && points.some(obj => obj.days7 === true)) || (days21 && points.some(obj => obj.days21 === true)) ||
+          (month1 && points.some(obj => obj.month1 === true)) || (month2 && points.some(obj => obj.month2 === true)) ||
+          (month3 && points.some(obj => obj.month3 === true))) {
+          conditions.push(true);
         }
-        if (days21 && points.some(obj => obj.days21 === true)) {
-          const bool = points.some(obj => obj.days21 === true);
-          conditions.push(!!bool);
-        }
-        if (month1 && points.some(obj => obj.month1 === true)) {
-          const bool = points.some(obj => obj.month1 === true);
-          conditions.push(!!bool);
-        }
-        if (month2 && points.some(obj => obj.month2 === true)) {
-          const bool = points.some(obj => obj.month2 === true);
-          conditions.push(!!bool);
-        }
-        if (month3 && points.some(obj => obj.month3 === true)) {
-          const bool = points.some(obj => obj.month3 === true);
-          conditions.push(!!bool);
-        }
+        // else {
+        //   conditions.push(false)
+        // }
+        // if (days21 && points.some(obj => obj.days21 === true)) {
+        //   const bool = points.some(obj => obj.days21 === true);
+        //   conditions.push(!!bool);
+        // }
+        // if (month1 && points.some(obj => obj.month1 === true)) {
+        //   const bool = points.some(obj => obj.month1 === true);
+        //   conditions.push(!!bool);
+        // }
+        // if (month2 && points.some(obj => obj.month2 === true)) {
+        //   const bool = points.some(obj => obj.month2 === true);
+        //   conditions.push(!!bool);
+        // }
+        // if (month3 && points.some(obj => obj.month3 === true)) {
+        //   const bool = points.some(obj => obj.month3 === true);
+        //   conditions.push(!!bool);
+        // }
         if (weekends) {
           const bool = points.some(obj => obj.weekends === true);
           conditions.push(!!bool);
