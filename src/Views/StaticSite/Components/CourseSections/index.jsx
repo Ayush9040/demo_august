@@ -18,9 +18,14 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
       setAnyFilterActive(activeCoun)
     }
   }, [selectedFilters])
+
+  useEffect(() => {
+    console.log('loaded2', data);
+
+  }, [data])
   const shouldDisplayLink = (points) => {// used to display the link in UI
     if (selectedFilters) {
-      const { online, onCampus, month1, month2, month3, weekends, weekDays } = selectedFilters;
+      const { online, onCampus, days7, days21, month1, month2, month3, weekends, weekDays } = selectedFilters;
 
       if (!anyFilterActive) {
         return true; // Show link if no filters are active
@@ -35,14 +40,30 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
       if (onCampus) {
         conditions.push(points.onCampus);
       }
-      if (month1) {
-        conditions.push(points.month1);
-      }
-      if (month2) {
-        conditions.push(points.month2);
-      }
-      if (month3) {
-        conditions.push(points.month3);
+      // if (days7 && points.days7) {
+      //   conditions.push(points.days7);
+      // }
+      // if (days21 && points.days21) {
+      //   conditions.push(points.days21);
+      // }
+      // if (month1 && points.month1) {
+      //   conditions.push(points.month1);
+      // }
+      // if (month2 && points.month2) {
+      //   conditions.push(points.month2);
+      // }
+      // if (month3 && points.month3) {
+      //   conditions.push(points.month3);
+      // }
+
+      if (days7 || days21 || month1 || month2 || month3) {
+        if ((days7 && points.days7) || (days21 && points.days21) ||
+          (month1 && points.month1) || (month2 && points.month2) || (month3 && points.month3)) {
+          conditions.push(true);
+        }
+        else {
+          conditions.push(false)
+        }
       }
       if (weekends) {
         conditions.push(points.weekends);
@@ -50,6 +71,7 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
       if (weekDays) {
         conditions.push(points.weekDays);
       }
+      console.log(conditions);
 
       // Check if all active conditions are met
       return conditions.length > 0 && conditions.every(Boolean);
@@ -60,7 +82,7 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
 
   const shouldDisplayCard = (points) => {// used to display the card in UI
     if (selectedFilters) {
-      const { online, onCampus, month1, month2, month3, weekends, weekDays } = selectedFilters;
+      const { online, onCampus, days7, days21, month1, month2, month3, weekends, weekDays } = selectedFilters;
 
       if (!anyFilterActive) {
         return true; // Show link if no filters are active
@@ -74,6 +96,15 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
       }
       if (onCampus && (points?.residential || points?.nonResidential)) {
         conditions.push(true);
+      }
+      // if ((month1 && points?.tenure == '1 month') || month2 && points?.tenure == '2 month' || month3 && points?.tenure == '3 month') {
+      //   conditions.push(true);
+      // }
+      if (days7) {
+        conditions.push(points?.tenure == '7 days');
+      }
+      if (days21) {
+        conditions.push(points?.tenure == '21 days');
       }
       if (month1) {
         conditions.push(points?.tenure == '1 month');
@@ -189,17 +220,17 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
           {
             url: '/21-days-better-living-course',
             text: 'Morning On Campus – English - Batch 1',
-            onCampus: true, weekDays: true
+            onCampus: true, weekDays: true, days21: true
           },
           {
             url: '/21-days-better-living-course-batch-2',
             text: 'Evening - Online & On Campus – English - Batch 2',
-            onCampus: true, online: true, weekDays: true
+            onCampus: true, online: true, weekDays: true, days21: true
           },
           {
             url: '/21-days-better-living-course-batch-3',
             text: 'Evening - Online & On Campus – Hindi - Batch 3',
-            onCampus: true, online: true, weekDays: true
+            onCampus: true, online: true, weekDays: true, days21: true
           },
           // {
           //   url: '/21-days-better-living-course-batch-4',
@@ -214,12 +245,12 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
           {
             url: '/7-days-camp',
             text: '7 Days Health Camp - On Campus - Hindi',
-            onCampus: true, weekDays: true
+            onCampus: true, weekDays: true, days7: true
           },
           {
             url: '/7-days-camp-english',
             text: '7 Days Health Camp - On Campus - English',
-            onCampus: true, weekDays: true
+            onCampus: true, weekDays: true, days7: true
           },
         ],
       },
@@ -357,12 +388,12 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
     const mostPopularStatic = [{
       url: '/7-days-camp-english',
       text: '7 Days Health Camp',
-      onCampus: true, weekDays: true
+      onCampus: true, weekDays: true, days7: true
     },
     {
       url: '/21-days-better-living-course',
       text: '21 Days Better Living Course',
-      onCampus: true, weekDays: true
+      onCampus: true, weekDays: true, days21: true
     },
     {
       url: '/one-month-ttc',
@@ -380,7 +411,6 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
       onCampus: true, weekDays: true
     }]
 
-
     switch (title) {
       case 'Yoga Teacher Training Courses (YTTC)':
         return (
@@ -394,7 +424,7 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
             <br />
             <Accordian sliderVal={customVal} setSliderVal={setCustomVal} data={campsAccordian} selectedFilters={selectedFilters} /></div>
         )
-      case 'Regular Classes':
+      case 'Regular Yoga Classes':
         return (
           <div className="course-list-content">
             <div>
@@ -521,7 +551,7 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
           </div>
         )
 
-      case 'Most Popular':
+      case 'Most Popular Yoga Courses':
         return (
           <div className="course-list-content">
             <div>
@@ -618,79 +648,86 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
 
         {
           title === 'Most Popular' ?
-
             data
               .filter((item) => item.mostPopular === true).map((item, i) => {
-                if (
-                  item.key === '500-hrs-online-yoga-teacher-training-course-intermediate-level' ||
-                  item.key === 'weekend-teacher-training-course' ||
-                  item.key === 'nutri-diet'
-                ) {
-                  return (
-                    shouldDisplayCard(item) && (
-                      <CourseCard
-                        key={i}
-                        color={selectColor(i)}
-                        index={i}
-                        courseTitle={item.title}
-                        pageName={item.key}
-                        tenure={item.tenure}
-                        courseCategory={item.courseCategory}
-                        courseSubType={item.courseSubType}
-                        onlineMode={item?.onlineInfo?.courseMode}
-                        residentialMode={item?.residentialInfo?.courseMode}
-                        nonResidentialMode={item?.nonResidentialInfo?.courseMode}
-                        residentialLocation={item?.residentialInfo?.residentialMode}
-                        nonResidentialLocation={item?.nonResidentialInfo?.nonResidentialMode}
-                        courseType={item?.courseType}
-                        language={item?.language}
-                        description={item.metaDescription}
-                        path={item.key}
-                        img={item.cardImage}
-                        rating={item.rating}
-                        dates={item.dates}
-                      />)
-                  )
+                {
+                  console.log(item);
                 }
-                return
+                // if (
+                //   item.key === '500-hrs-online-yoga-teacher-training-course-intermediate-level' ||
+                //   item.key === 'weekend-teacher-training-course' ||
+                //   item.key === 'nutri-diet'
+                // ) {
+                return (
+                  // shouldDisplayCard(item) && (
+                  <CourseCard
+                    key={i}
+                    color={selectColor(i)}
+                    index={i}
+                    courseTitle={item.title}
+                    pageName={item.key}
+                    tenure={item.tenure}
+                    courseCategory={item.courseCategory}
+                    courseSubType={item.courseSubType}
+                    onlineMode={item?.onlineInfo?.courseMode}
+                    residentialMode={item?.residentialInfo?.courseMode}
+                    nonResidentialMode={item?.nonResidentialInfo?.courseMode}
+                    residentialLocation={item?.residentialInfo?.residentialMode}
+                    nonResidentialLocation={item?.nonResidentialInfo?.nonResidentialMode}
+                    courseType={item?.courseType}
+                    language={item?.language}
+                    description={item.metaDescription}
+                    path={item.key}
+                    img={item.cardImage}
+                    rating={item.rating}
+                    dates={item.dates}
+                    online={item.online}
+                    residential={item.residential}
+                    nonResidential={item.nonResidential}
+                    weekends={item?.weekends}
+                  />)
+                // )
+                // }
+                // return
               })
             :
             data.map((item, i) => {
-              if (i < 3) {
-                return (
-                  shouldDisplayCard(item) && (
-                    <CourseCard
-                      key={i}
-                      color={item.colorCode}
-                      index={i}
-                      courseTitle={item.title}
-                      description={item.metaDescription}
-                      path={item.key}
-                      img={item.cardImage}
-                      rating={item.rating}
-                      dates={item.dates}
-                      fees={item?.fees}
-                      timing={item?.timing}
-                      tenure={item?.tenure}
-                      pageName={item?.key}
-                      courseCategory={item?.courseCategory}
-                      courseSubType={item?.courseSubType}
-                      onlineMode={item?.onlineInfo?.courseMode}
-                      residentialMode={item?.residentialInfo?.courseMode}
-                      nonResidentialMode={item?.nonResidentialInfo?.courseMode}
-                      residentialLocation={item?.residentialInfo?.residentialMode}
-                      nonResidentialLocation={item?.nonResidentialInfo?.nonResidentialMode}
-                      courseType={item?.courseType}
-                      language={item?.language}
-                      category={item?.category}
-                      batch={item?.batch}
-                      nonResidential={item?.nonResidential}
-                      residential={item?.residential}
-                      online={item?.online}
-                    />)
-                )
-              }
-              return
+              // if (i < 3) {
+              return (
+                // shouldDisplayCard(item) && (
+                <CourseCard
+                  key={i}
+                  color={item.colorCode}
+                  index={i}
+                  courseTitle={item.title}
+                  description={item.metaDescription}
+                  path={item.key}
+                  img={item.cardImage}
+                  rating={item.rating}
+                  dates={item.dates}
+                  fees={item?.fees}
+                  timing={item?.timing}
+                  tenure={item?.tenure}
+                  pageName={item?.key}
+                  courseCategory={item?.courseCategory}
+                  courseSubType={item?.courseSubType}
+                  onlineMode={item?.onlineInfo?.courseMode}
+                  residentialMode={item?.residentialInfo?.courseMode}
+                  nonResidentialMode={item?.nonResidentialInfo?.courseMode}
+                  residentialLocation={item?.residentialInfo?.residentialMode}
+                  nonResidentialLocation={item?.nonResidentialInfo?.nonResidentialMode}
+                  courseType={item?.courseType}
+                  language={item?.language}
+                  category={item?.category}
+                  batch={item?.batch}
+                  nonResidential={item?.nonResidential}
+                  residential={item?.residential}
+                  online={item?.online}
+                  weekends={item?.weekends}
+                />)
+              // )
+              // }
+              // return
             })
         }
       </div>

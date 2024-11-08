@@ -15,14 +15,14 @@ export const courseCardData = [
     { title: 'Weekend Yoga Regular Clases' }]
   },
   {
-    title: 'Regular Classes',
+    title: 'Regular Yoga Classes',
     color: '#B77E7E',
     cardData: [{ title: 'Asana Regular Classess for Men' },
     { title: 'Asana Regular Classess for Women' },
     { title: 'Weekend Yoga Regular Clases' }]
   },
   {
-    title: 'Most Popular',
+    title: 'Most Popular Yoga Courses',
     color: '#6E9596',
     cardData: [{ title: 'Weight Management Workshop' },
     { title: 'Cardiac Hypertension Health Workshop' },

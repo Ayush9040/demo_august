@@ -10,7 +10,7 @@
         flex-wrap: wrap;
         gap: 5rem;
         width: 90%;
-        margin: 0 auto 22px auto;
+        margin: 0 auto 11px auto;
 
         h1::after {
             display: inline-block;
@@ -172,7 +172,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 10vw;
+        padding: 5vw 10vw;
         gap: 10rem;
         background: #F6F6F6;
 
@@ -517,6 +517,9 @@
         /* Firefox */
         -ms-overflow-style: none;
         /* Internet Explorer 10+ */
+        position: relative;
+
+        top: -20px;
 
         div {
             white-space: nowrap !important;
