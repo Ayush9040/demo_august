@@ -54,7 +54,7 @@ const BrowseCourses = () => {
     } else if (type === 'camps-workshops') {
       setBreadcrumbs('Camps & Workshops')
     } else if (type === 'classes') {
-      setBreadcrumbs('Regular Classes')
+      setBreadcrumbs('Regular Yoga Classes')
     } else if (type === 'certificate-courses') {
       setBreadcrumbs('Certified Yoga Courses')
     } else if (type === 'special-certificate-courses') {

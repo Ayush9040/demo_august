@@ -20,7 +20,7 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
   }, [selectedFilters])
 
   useEffect(() => {
-    console.log('loaded2',data);
+    console.log('loaded2', data);
 
   }, [data])
   const shouldDisplayLink = (points) => {// used to display the link in UI
@@ -413,7 +413,7 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
             <br />
             <Accordian sliderVal={customVal} setSliderVal={setCustomVal} data={campsAccordian} selectedFilters={selectedFilters} /></div>
         )
-      case 'Regular Classes':
+      case 'Regular Yoga Classes':
         return (
           <div className="course-list-content">
             <div>
@@ -540,7 +540,7 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
           </div>
         )
 
-      case 'Most Popular':
+      case 'Most Popular Yoga Courses':
         return (
           <div className="course-list-content">
             <div>
@@ -639,41 +639,43 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
           title === 'Most Popular' ?
             data
               .filter((item) => item.mostPopular === true).map((item, i) => {
-                {console.log(item);
+                {
+                  console.log(item);
                 }
                 // if (
                 //   item.key === '500-hrs-online-yoga-teacher-training-course-intermediate-level' ||
                 //   item.key === 'weekend-teacher-training-course' ||
                 //   item.key === 'nutri-diet'
                 // ) {
-                  return (
-                    // shouldDisplayCard(item) && (
-                    <CourseCard
-                      key={i}
-                      color={selectColor(i)}
-                      index={i}
-                      courseTitle={item.title}
-                      pageName={item.key}
-                      tenure={item.tenure}
-                      courseCategory={item.courseCategory}
-                      courseSubType={item.courseSubType}
-                      onlineMode={item?.onlineInfo?.courseMode}
-                      residentialMode={item?.residentialInfo?.courseMode}
-                      nonResidentialMode={item?.nonResidentialInfo?.courseMode}
-                      residentialLocation={item?.residentialInfo?.residentialMode}
-                      nonResidentialLocation={item?.nonResidentialInfo?.nonResidentialMode}
-                      courseType={item?.courseType}
-                      language={item?.language}
-                      description={item.metaDescription}
-                      path={item.key}
-                      img={item.cardImage}
-                      rating={item.rating}
-                      dates={item.dates}
-                      online={item.online}
-                      residential={item.residential}
-                      nonResidential={item.nonResidential}
-                    />)
-                  // )
+                return (
+                  // shouldDisplayCard(item) && (
+                  <CourseCard
+                    key={i}
+                    color={selectColor(i)}
+                    index={i}
+                    courseTitle={item.title}
+                    pageName={item.key}
+                    tenure={item.tenure}
+                    courseCategory={item.courseCategory}
+                    courseSubType={item.courseSubType}
+                    onlineMode={item?.onlineInfo?.courseMode}
+                    residentialMode={item?.residentialInfo?.courseMode}
+                    nonResidentialMode={item?.nonResidentialInfo?.courseMode}
+                    residentialLocation={item?.residentialInfo?.residentialMode}
+                    nonResidentialLocation={item?.nonResidentialInfo?.nonResidentialMode}
+                    courseType={item?.courseType}
+                    language={item?.language}
+                    description={item.metaDescription}
+                    path={item.key}
+                    img={item.cardImage}
+                    rating={item.rating}
+                    dates={item.dates}
+                    online={item.online}
+                    residential={item.residential}
+                    nonResidential={item.nonResidential}
+                    weekends={item?.weekends}
+                  />)
+                // )
                 // }
                 // return
               })
@@ -710,6 +712,7 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
                   nonResidential={item?.nonResidential}
                   residential={item?.residential}
                   online={item?.online}
+                  weekends={item?.weekends}
                 />)
               // )
               // }

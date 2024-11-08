@@ -121,7 +121,7 @@ const Courses = () => {
 
   let dataMaster = [[c200hr[0], c500hr[0], c900hr[0], c200hr[1], c900hr[1], c200hr[2], c900hr[2], c200hr[3], c900hr[3], c200hr[4], c900hr[4], c200hr[5], c900hr[5]],
   [campsArr[13], campsArr[11], campsArr[14], campsArr[12], campsArr[15]],
-    classesArr, mostPopular, campsArr,
+    classesArr, mostPopular, [...campsArr,...classesArr],
   [certificateArr[3], certificateArr[1], certificateArr[0]]]
 
   const [data, setData] = useState([dataMaster[0].slice(0, 3), dataMaster[1].slice(0, 3),
@@ -160,7 +160,7 @@ const Courses = () => {
         if (month1) {
           conditions.push(points?.tenure === '1 month');
         }
-        if (month2 ) {
+        if (month2) {
           conditions.push(points?.tenure === '2 month');
         }
         if (month3) {
@@ -172,8 +172,13 @@ const Courses = () => {
         if (weekends && points?.weekends) {
           conditions.push(points?.weekends);
         }
-        if (weekDays && points?.weekDays) {
-          conditions.push(points?.weekDays);
+        if (weekDays) {
+          if (!points?.weekends) {
+            conditions.push(true)
+          }
+          else {
+            conditions.push(false)
+          }
         }
         console.log(conditions);
 
@@ -263,6 +268,8 @@ const Courses = () => {
 
       let count5 = 0
       for (let j5 = 0; j5 < rawArr5.length; j5++) {
+        console.log(rawArr5);
+        
         const shouldDisplay = await shouldDisplayCardNew(rawArr5[j5], selectedValues);
         if (shouldDisplay == 'true') {
           arr5.push(rawArr5[j5])
@@ -694,8 +701,9 @@ const Courses = () => {
   }
 
   const updatePannelFilters = () => {//to clear filters if the dropdown is opened
-    if (!isFilterOpened) { 
-      setFilters(selectedFilters) }
+    if (!isFilterOpened) {
+      setFilters(selectedFilters)
+    }
   }
 
   return (
@@ -866,7 +874,7 @@ const Courses = () => {
                 <AccordionItemHeading>
                   <AccordionItemButton>
                     <Link to="/courses/browse/most-popular">
-                      <p> Most Popular</p>
+                      <p> Most Popular Yoga Courses</p>
                     </Link>
                   </AccordionItemButton>
                 </AccordionItemHeading>
@@ -922,7 +930,7 @@ const Courses = () => {
                 <AccordionItemHeading>
                   <AccordionItemButton>
                     <Link to="/courses/browse/classes">
-                      <p>Regular Classes</p>
+                      <p>Regular Yoga Classes</p>
                     </Link>
                   </AccordionItemButton>
                 </AccordionItemHeading>
