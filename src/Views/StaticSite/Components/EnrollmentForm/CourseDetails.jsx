@@ -887,13 +887,6 @@ const CourseDetails = ({
 
                         <div className="label_format_course">
 
-<<<<<<< HEAD
-                {
-                    formattedDates?.slice(0, 2).map((item, index) => {
-                      if (!item?.label) return null;
-                        return (
-                            <div key={index} className='date_btn'>
-=======
                           Select Course Start Date
 
                           {empty === 18 && <div id="fill_err" style={{ float: 'right', fontSize: '10px', marginTop: '10px', color: 'red' }}> {isRegular ? "Please select course Time" : "Please select course date"} </div>}
@@ -940,7 +933,6 @@ const CourseDetails = ({
                           formattedDates?.slice(0, 2).map((item, index) => {
                             return (
                               <div key={index} className='date_btn'>
->>>>>>> 14284540de925c794f481e9235fc71401ddd9f42
                                 <div className='wrapper_center container_date_enroll'>
                                   <label class="item-label item_date" style={{ width: '100%', height: '100%', borderRadius: '25px' }}>
                                     <input class="item-input"
@@ -985,17 +977,10 @@ const CourseDetails = ({
                           })
                         }
 
-<<<<<<< HEAD
-                {
-                  showDefaultDate === true && formattedDates[2]?.label ? (
-                    <div className='date_btn'>
-                                <div className='wrapper_center container_date_enroll'>
-=======
                         {
                           showDefaultDate === true ? (
                             <div className='date_btn'>
                               <div className='wrapper_center container_date_enroll'>
->>>>>>> 14284540de925c794f481e9235fc71401ddd9f42
                                 <label class="item-label item_date" style={{ width: '100%', height: '100%', borderRadius: '25px' }}>
                                   <input class="item-input"
                                     type="radio" name="mode"
@@ -1038,88 +1023,6 @@ const CourseDetails = ({
                             <div className='date_btn'>
                               <div className='wrapper_center container_date_enroll'>
                                 <label class="item-label item_date selected_date_popup" style={{ width: '100%', height: '100%', borderRadius: '25px' }}>
-<<<<<<< HEAD
-                            <input class="item-input"
-                              type="radio" name="mode"
-                              value={courseDateInfo}
-                              aria-labelledby="delivery-0-name"
-                              aria-describedby="delivery-0-shipping delivery-0-price"
-                              // onChange={() => handleDateSelect(item)}
-                              onChange={(e) => {
-                                // setSelectedOption('RESIDENTIAL');
-                                // handleResidential(true);
-                                // setPriceSelect(currentCourse?.fees?.offlineFee?.residentialFee)
-                                setCourseDateInfo(e.target.value)
-                                setCourseDateSelected(true)
-                                if (e.target.checked) {
-                                  setFormData({
-                                    ...formData,
-                                    sdate: e.target.value
-                                  })
-                                  setEmpty(0)
-                                  // if (currentCourse?.key === 'ma-yoga-shastra' && currentCourse.country !== 'India') {
-                                  //   setCourseFee(currentCourse?.fees?.internationalFee?.residentialFee)
-                                  // } else {
-                                  //   setCourseFee(currentCourse?.fees?.offlineFee?.residentialFee)
-                                  // }
-                                  // setCourseFee(updatedFees( currentCourse?.key,'RESIDENTIAL' ))
-                                }
-                              }}
-                        
-                              />
-                            <span class="item-info item_desc">
-                              <span id="delivery-0-name" class="item-name date_info">
-                                <span className='style_dates'>{courseDateInfo}</span></span>    
-                            </span>
-                            
-                            <strong id="delivery-0-price" class="item-price"></strong>
-                          </label>
-                                </div>
-                            </div>
-                  ) : (formattedDates[2]?.label) ? (
-                    <div className='date_btn'>
-                                <div className='wrapper_center container_date_enroll'>
-                                <label class="item-label item_date" style={{ width: '100%', height: '100%', borderRadius: '25px' }}>
-                            <input class="item-input"
-                              type="radio" name="mode"
-                              value={formattedDates[2]?.label}
-                              aria-labelledby="delivery-0-name"
-                              aria-describedby="delivery-0-shipping delivery-0-price"
-                              // onChange={() => handleDateSelect(item)}
-                              onChange={(e) => {
-                                // setSelectedOption('RESIDENTIAL');
-                                // handleResidential(true);
-                                // setPriceSelect(currentCourse?.fees?.offlineFee?.residentialFee)
-                                setCourseDateInfo(e.target.value)
-                                setCourseDateSelected(true)
-                                if (e.target.checked) {
-                                  setFormData({
-                                    ...formData,
-                                    sdate: e.target.value
-                                  })
-                                  setEmpty(0)
-                                  // if (currentCourse?.key === 'ma-yoga-shastra' && currentCourse.country !== 'India') {
-                                  //   setCourseFee(currentCourse?.fees?.internationalFee?.residentialFee)
-                                  // } else {
-                                  //   setCourseFee(currentCourse?.fees?.offlineFee?.residentialFee)
-                                  // }
-                                  // setCourseFee(updatedFees( currentCourse?.key,'RESIDENTIAL' ))
-                                }
-                              }}
-                        
-                              />
-                            <span class="item-info item_desc">
-                              <span id="delivery-0-name" class="item-name date_info">
-                                <span className='style_dates'>{formattedDates[2]?.label}</span></span>    
-                            </span>
-                            
-                            <strong id="delivery-0-price" class="item-price"></strong>
-                          </label>
-                                </div>
-                            </div>
-                  ) : null
-                }
-=======
                                   <input class="item-input"
                                     type="radio" name="mode"
                                     value={courseDateInfo}
@@ -1467,7 +1370,6 @@ const CourseDetails = ({
                     </div>
                   )}
 
->>>>>>> 14284540de925c794f481e9235fc71401ddd9f42
 
                 </div>
 
