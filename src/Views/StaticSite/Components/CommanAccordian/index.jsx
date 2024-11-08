@@ -37,19 +37,19 @@ const Accordian = ({ data, sliderVal, setSliderVal, selectedFilters }) => {
       if (onCampus) {
         conditions.push(points.onCampus);
       }
-      if (days7) {
+      if (days7 && points.days7) {
         conditions.push(points.days7);
       }
-      if (days21) {
+      if (days21 && points.days21) {
         conditions.push(points.days21);
       }
-      if (month1) {
+      if (month1 && points.month1) {
         conditions.push(points.month1);
       }
-      if (month2) {
+      if (month2 && points.month2) {
         conditions.push(points.month2);
       }
-      if (month3) {
+      if (month3 && points.month3) {
         conditions.push(points.month3);
       }
       if (weekends) {
@@ -92,23 +92,23 @@ const Accordian = ({ data, sliderVal, setSliderVal, selectedFilters }) => {
           const bool = points.some(obj => obj.onCampus === true);
           conditions.push(!!bool);
         }
-        if (days7) {
+        if (days7 && points.some(obj => obj.days7 === true)) {
           const bool = points.some(obj => obj.days7 === true);
           conditions.push(!!bool);
         }
-        if (days21) {
+        if (days21 && points.some(obj => obj.days21 === true)) {
           const bool = points.some(obj => obj.days21 === true);
           conditions.push(!!bool);
         }
-        if (month1) {
+        if (month1 && points.some(obj => obj.month1 === true)) {
           const bool = points.some(obj => obj.month1 === true);
           conditions.push(!!bool);
         }
-        if (month2) {
+        if (month2 && points.some(obj => obj.month2 === true)) {
           const bool = points.some(obj => obj.month2 === true);
           conditions.push(!!bool);
         }
-        if (month3) {
+        if (month3 && points.some(obj => obj.month3 === true)) {
           const bool = points.some(obj => obj.month3 === true);
           conditions.push(!!bool);
         }

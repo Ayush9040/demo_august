@@ -40,19 +40,19 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
       if (onCampus) {
         conditions.push(points.onCampus);
       }
-      if (days7) {
+      if (days7 && points.days7) {
         conditions.push(points.days7);
       }
-      if (days21) {
+      if (days21 && points.days21) {
         conditions.push(points.days21);
       }
-      if (month1) {
+      if (month1 && points.month1) {
         conditions.push(points.month1);
       }
-      if (month2) {
+      if (month2 && points.month2) {
         conditions.push(points.month2);
       }
-      if (month3) {
+      if (month3 && points.month3) {
         conditions.push(points.month3);
       }
       if (weekends) {
@@ -61,6 +61,7 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
       if (weekDays) {
         conditions.push(points.weekDays);
       }
+      console.log(conditions);
 
       // Check if all active conditions are met
       return conditions.length > 0 && conditions.every(Boolean);

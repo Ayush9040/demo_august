@@ -151,19 +151,19 @@ const Courses = () => {
         if (onCampus && (points?.residential || points?.nonResidential)) {
           conditions.push(true);
         }
-        if (days7) {
+        if (days7 && points?.tenure?.toLowerCase() === '7 days') {
           conditions.push(points?.tenure?.toLowerCase() === '7 days');
         }
-        if (days21) {
+        if (days21 && points?.tenure?.toLowerCase() === '21 days') {
           conditions.push(points?.tenure?.toLowerCase() === '21 days');
         }
-        if (month1) {
+        if (month1 && points?.tenure === '1 month') {
           conditions.push(points?.tenure === '1 month');
         }
-        if (month2) {
+        if (month2 && points?.tenure === '2 month') {
           conditions.push(points?.tenure === '2 month');
         }
-        if (month3) {
+        if (month3 && points?.tenure === '3 month') {
           conditions.push(points?.tenure === '3 month');
         }
         // if (month3) {
@@ -655,23 +655,23 @@ const Courses = () => {
           const bool = points.some(obj => obj.onCampus === true);
           conditions.push(!!bool);
         }
-        if (days7) {
+        if (days7 && points.some(obj => obj.days7 === true)) {
           const bool = points.some(obj => obj.days7 === true);
           conditions.push(!!bool);
         }
-        if (days21) {
+        if (days21 && points.some(obj => obj.days21 === true)) {
           const bool = points.some(obj => obj.days21 === true);
           conditions.push(!!bool);
         }
-        if (month1) {
+        if (month1 && points.some(obj => obj.month1 === true)) {
           const bool = points.some(obj => obj.month1 === true);
           conditions.push(!!bool);
         }
-        if (month2) {
+        if (month2 && points.some(obj => obj.month2 === true)) {
           const bool = points.some(obj => obj.month2 === true);
           conditions.push(!!bool);
         }
-        if (month3) {
+        if (month3 && points.some(obj => obj.month3 === true)) {
           const bool = points.some(obj => obj.month3 === true);
           conditions.push(!!bool);
         }
