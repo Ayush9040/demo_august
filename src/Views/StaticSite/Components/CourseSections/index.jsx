@@ -669,6 +669,9 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
                       img={item.cardImage}
                       rating={item.rating}
                       dates={item.dates}
+                      online={item.online}
+                      residential={item.residential}
+                      nonResidential={item.nonResidential}
                     />)
                   // )
                 // }

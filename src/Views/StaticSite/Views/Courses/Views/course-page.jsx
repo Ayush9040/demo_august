@@ -66,57 +66,57 @@ const Courses = () => {
     updateJsonData(val)
   }
   const countTrueFilters = Object.values(selectedFilters).filter(value => value === true).length;
-  const shouldDisplayCard = (points) => {// used to display the card in UI
-    console.log(points);
+  // const shouldDisplayCard = (points) => {// used to display the card in UI
+  //   console.log(points);
 
-    if (selectedFilters) {
-      const { online, onCampus, days7, days21, month1, month2, month3, weekends, weekDays } = selectedFilters;
+  //   if (selectedFilters) {
+  //     const { online, onCampus, days7, days21, month1, month2, month3, weekends, weekDays } = selectedFilters;
 
-      if (!anyFilterActive) {
-        return true; // Show link if no filters are active
-      }
-      console.log(points);
+  //     if (!anyFilterActive) {
+  //       return true; // Show link if no filters are active
+  //     }
+  //     console.log(points);
 
-      // Create an array to store conditions for filtering
-      const conditions = [];
+  //     // Create an array to store conditions for filtering
+  //     const conditions = [];
 
-      if (online) {
-        conditions.push(points.online);
-      }
-      if (onCampus && (points?.residential || points?.nonResidential)) {
-        conditions.push(true);
-      }
-      // if ((month1 && points?.tenure == '1 month') || month2 && points?.tenure == '2 month' || month3 && points?.tenure == '3 month') {
-      //   conditions.push(true);
-      // }
-      if (days7) {
-        conditions.push(points?.tenure == '7 days');
-      }
-      if (days21) {
-        conditions.push(points?.tenure == '21 days');
-      }
-      if (month1) {
-        conditions.push(points?.tenure == '1 month');
-      }
-      if (month2) {
-        conditions.push(points?.tenure == '2 month');
-      }
-      if (month3) {
-        conditions.push(points?.tenure == '3 month');
-      }
-      if (weekends) {
-        conditions.push(points.weekends);
-      }
-      if (weekDays) {
-        conditions.push(points.weekDays);
-      }
+  //     if (online) {
+  //       conditions.push(points.online);
+  //     }
+  //     if (onCampus && (points?.residential || points?.nonResidential)) {
+  //       conditions.push(true);
+  //     }
+  //     // if ((month1 && points?.tenure == '1 month') || month2 && points?.tenure == '2 month' || month3 && points?.tenure == '3 month') {
+  //     //   conditions.push(true);
+  //     // }
+  //     if (days7) {
+  //       conditions.push(points?.tenure == '7 days');
+  //     }
+  //     if (days21) {
+  //       conditions.push(points?.tenure == '21 days');
+  //     }
+  //     if (month1) {
+  //       conditions.push(points?.tenure == '1 month');
+  //     }
+  //     if (month2) {
+  //       conditions.push(points?.tenure == '2 month');
+  //     }
+  //     if (month3) {
+  //       conditions.push(points?.tenure == '3 month');
+  //     }
+  //     if (weekends) {
+  //       conditions.push(points.weekends);
+  //     }
+  //     if (weekDays) {
+  //       conditions.push(points.weekDays);
+  //     }
 
-      // Check if all active conditions are met
-      return conditions.length > 0 && conditions.every(Boolean);
-    }
+  //     // Check if all active conditions are met
+  //     return conditions.length > 0 && conditions.every(Boolean);
+  //   }
 
-    return true; // In case selectedFilters is undefined
-  };
+  //   return true; // In case selectedFilters is undefined
+  // };
 
 
   let dataMaster = [[c200hr[0], c500hr[0], c900hr[0], c200hr[1], c900hr[1], c200hr[2], c900hr[2], c200hr[3], c900hr[3], c200hr[4], c900hr[4], c200hr[5], c900hr[5]],
@@ -151,28 +151,28 @@ const Courses = () => {
         if (onCampus && (points?.residential || points?.nonResidential)) {
           conditions.push(true);
         }
-        if (days7 && points?.tenure?.toLowerCase() === '7 days') {
+        if (days7) {
           conditions.push(points?.tenure?.toLowerCase() === '7 days');
         }
-        if (days21 && points?.tenure?.toLowerCase() === '21 days') {
+        if (days21) {
           conditions.push(points?.tenure?.toLowerCase() === '21 days');
         }
-        if (month1 && points?.tenure === '1 month') {
+        if (month1) {
           conditions.push(points?.tenure === '1 month');
         }
-        if (month2 && points?.tenure === '2 month') {
+        if (month2 ) {
           conditions.push(points?.tenure === '2 month');
         }
-        if (month3 && points?.tenure === '3 month') {
+        if (month3) {
           conditions.push(points?.tenure === '3 month');
         }
         // if (month3) {
         //   conditions.push(points?.tenure === '3 month');
         // }
-        if (weekends) {
+        if (weekends && points?.weekends) {
           conditions.push(points?.weekends);
         }
-        if (weekDays) {
+        if (weekDays && points?.weekDays) {
           conditions.push(points?.weekDays);
         }
         console.log(conditions);
@@ -251,7 +251,7 @@ const Courses = () => {
 
       let count4 = 0
       for (let j4 = 0; j4 < rawArr4.length; j4++) {
-        const shouldDisplay = await shouldDisplayCardNew(rawArr4[j4],selectedValues);
+        const shouldDisplay = await shouldDisplayCardNew(rawArr4[j4], selectedValues);
         if (shouldDisplay == 'true') {
           arr4.push(rawArr4[j4]);
           count4 += 1
@@ -285,7 +285,7 @@ const Courses = () => {
         }
       }
       let finalArr = [arr1?.length > 0 ? arr1.slice(0, 3) : [], arr2?.length > 0 ? arr2.slice(0, 3) : [],
-      arr3?.length > 0 ? arr3.slice(0, 3) : [],arr4?.length > 0 ? arr4.slice(0, 3) : [],
+      arr3?.length > 0 ? arr3.slice(0, 3) : [], arr4?.length > 0 ? arr4.slice(0, 3) : [],
       arr5?.length > 0 ? arr5.slice(0, 3) : [], arr6?.length > 0 ? arr6.slice(0, 3) : []]
       console.log(finalArr);
 
@@ -685,6 +685,18 @@ const Courses = () => {
     return true; // In case selectedFilters is undefined
   }
 
+  const removeFilters = (values, key) => {
+    let selectedFilters = values
+    selectedFilters[key] = false
+    setSelectedFilters(selectedFilters);
+    setFilters(selectedFilters);
+    applyFilters(selectedFilters)
+  }
+
+  const updatePannelFilters = () => {//to clear filters if the dropdown is opened
+    if (!isFilterOpened) { 
+      setFilters(selectedFilters) }
+  }
 
   return (
     <>
@@ -706,7 +718,7 @@ const Courses = () => {
           <div className="search">
             <h1>Courses</h1>
             <div className='filter-section'>
-              <div className='filter-btn' onClick={(event) => { event.stopPropagation(); setIsFilterOpened(isFilterOpened ? false : true) }}>
+              <div className='filter-btn' onClick={(event) => { event.stopPropagation(); setIsFilterOpened(isFilterOpened ? false : true); updatePannelFilters() }}>
                 <span>
                   <img src="icons/filter-icon.png" alt="filter-icon" />
                 </span>
@@ -832,7 +844,7 @@ const Courses = () => {
             <div className='list-sele-filters'> {filtersToloop.map(fil => (
               <>
                 {selectedFilters[fil.value] && <div key={fil.label}>{fil.label}
-                  <span style={{ cursor: 'pointer' }} onClick={() => { setSelectedFilters({ ...selectedFilters, [fil.value]: false }); setFilters({ ...filters, [fil.value]: false }); applyFilters(filters) }}>&nbsp;
+                  <span style={{ cursor: 'pointer' }} onClick={() => { removeFilters(filters, fil.value) }}>&nbsp;
                     <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M9.08341 1.73913L8.26091 0.916626L5.00008 4.17746L1.73925 0.916626L0.916748 1.73913L4.17758 4.99996L0.916748 8.26079L1.73925 9.08329L5.00008 5.82246L8.26091 9.08329L9.08341 8.26079L5.82258 4.99996L9.08341 1.73913Z" fill="#CA4625" />
                     </svg>
