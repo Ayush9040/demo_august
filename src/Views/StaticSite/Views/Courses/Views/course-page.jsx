@@ -170,10 +170,10 @@ const Courses = () => {
         //   conditions.push(points?.tenure === '3 month');
         // }
         if (weekends) {
-          conditions.push(points.weekends);
+          conditions.push(points?.weekends);
         }
         if (weekDays) {
-          conditions.push(points.weekDays);
+          conditions.push(points?.weekDays);
         }
         console.log(conditions);
 
@@ -957,7 +957,7 @@ const Courses = () => {
           </div>
           <div className="intro-image">
 
-            <img src="https://ecom-static-site-prod.s3.ap-south-1.amazonaws.com/SEO-New-Images/Courses/yoga-teacher-training-courses-hero.webp" alt='more than just reading' loading='lazy' />
+            <img src="https://ecom-static-site-prod.s3.ap-south-1.amazonaws.com/SEO-New-Images/course/21-days+-better-living-course.webp" alt='more than just reading' loading='lazy' />
           </div>
         </div>
 
