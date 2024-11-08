@@ -423,7 +423,7 @@ const EnrollmentForm = ({
     })
     localStorage.setItem('courseEndDate', endDate)
     setFormData({ ...formData, endDate: value, duration: value?.value })
-    dateDurationChange(value?.value)
+    dateDurationChange(value)
   }
 
   // Function to add months to a given date

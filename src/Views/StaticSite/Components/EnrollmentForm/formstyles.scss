@@ -2344,8 +2344,14 @@ input[type=checkbox]:checked + label:before {
   text-align: center;
 }
 
+.time_header {
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(96, 96, 96, 0.6);
+}
+
 .time_days_wrapper {
-  display: none;
+  // display: none;
   border-radius: 8px;
   border: 1px solid rgba(96, 96, 96, 0.3);
   width: 98%;
@@ -2353,6 +2359,13 @@ input[type=checkbox]:checked + label:before {
   margin-top: 12px;
   // margin-right: 10px;
   padding: 12px 50px;
+}
+
+.times_fixed {
+  font-size: 14px;
+  font-weight: 400;
+  color: #000;
+  margin-top: 8px;
 }
 
 .details_wrapper_duration_2 {
@@ -2383,7 +2396,7 @@ input[type=checkbox]:checked + label:before {
 
 .first_wrapper_regular_btn {
   display: flex;
-  gap: 20px;
+  gap: 15px;
 }
 
 .second_wrapper_regular_btn {

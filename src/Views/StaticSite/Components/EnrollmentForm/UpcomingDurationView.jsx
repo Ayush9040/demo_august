@@ -9,7 +9,7 @@ import './formstyles.scss'
 import { useNavigate  } from 'react-router-dom'; 
 import { useSelector } from 'react-redux';
 
-const UpcomingDurationView = ({ pageDate, setCourseDuration, setCourseDurationSelected, closeModal, setShowDefaultDuration, setNotShowDuration, formData, setFormData, durationList }) => {
+const UpcomingDurationView = ({ pageDate, setCourseDuration, setCourseDurationSelected, closeModal, setShowDefaultDuration, setNotShowDuration, formData, setFormData, durationList, createEndDate }) => {
 
     const [selectedDate, setSelectedDate] = useState(null);
     const { isLoggedIn } = useSelector((state) => state.auth)
@@ -85,7 +85,7 @@ const UpcomingDurationView = ({ pageDate, setCourseDuration, setCourseDurationSe
                                 <label class="item-label item_date" style={{ width: '100%', height: '100%', borderRadius: '50px' }}>
                             <input class="item-input"
                               type="radio" name="mode"
-                              value={item}
+                              value={item?.value}
                               aria-labelledby="delivery-0-name"
                               aria-describedby="delivery-0-shipping delivery-0-price"
                               onChange={(e) => {
@@ -94,10 +94,11 @@ const UpcomingDurationView = ({ pageDate, setCourseDuration, setCourseDurationSe
                                 setCourseDurationSelected(true)
                                 console.log('date Nowwwwwww', item.label)
                                 if (e.target.checked) {
-                                  setFormData({
-                                    ...formData,
-                                    sdate: item.label
-                                  })
+                                  createEndDate('', item?.value)
+                                  // setFormData({
+                                  //   ...formData,
+                                  //   sdate: item.label
+                                  // })
                                 }
                                 setShowDefaultDuration(false)
                                 setNotShowDuration(false)

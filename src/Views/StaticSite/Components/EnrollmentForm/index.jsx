@@ -125,6 +125,7 @@ const Enrollment = () => {
   }
 
   function dateDurationChange(months) {
+    console.log("Months ", months);
     let originalFee = AllCourses.find((item) => item.key === courseId)
     let newAmnt = originalFee?.fees?.onlineFee * months
     if (months == 12) {
@@ -217,7 +218,7 @@ const Enrollment = () => {
     localStorage.setItem('courseStartDate', formData.sdate)
     console.log("From Razor ", formData)
     if (formData.terms === false) {
-      alert("20")
+      // alert("20")
       setEmpty(19);
     } else {
       setIsLoad(true);

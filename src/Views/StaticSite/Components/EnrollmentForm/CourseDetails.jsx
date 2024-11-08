@@ -173,9 +173,11 @@ const CourseDetails = ({
   }
 
   const createEndDate = (startDate, value) => {
-    // console.log(startDate, value);
-
-    let endDate = formatDate(addMonths(parseDate(startDate ? startDate : values?.startDate), value?.value))
+    // alert("Hello", value)
+    console.log("Calling from create End Date ",startDate, value);
+    console.log("startDate ? startDate : values?.startDate ", startDate ? startDate : values?.startDate)
+    let endDate = formatDate(addMonths(parseDate(startDate ? startDate : values?.startDate), value))
+    console.log("Calling from End Date ",endDate);
     setValues((prev) => {
       return {
         ...prev, endDate: value, endDateFormat: endDate
@@ -183,29 +185,34 @@ const CourseDetails = ({
     })
     localStorage.setItem('courseEndDate', endDate)
     setFormData({ ...formData, endDate: value, duration: value?.value })
-    dateDurationChange(value?.value)
+    dateDurationChange(value)
   }
 
   // Function to remove ordinal suffixes and format the date
-  const formatDate = (date) => {
-    const dateString = String(date);
-    return dateString.replace(/\b(\d+)(th|nd|rd|st)\b/, '$1'); // Removes 'th', 'nd', 'rd', 'st'
-  };
+  function formatDate(date) {
+    const day = date.getDate().toString().padStart(2, '0'); // Day with leading zero
+    const month = (date.getMonth() + 1).toString().padStart(2, '0'); // Month with leading zero
+    const year = date.getFullYear();
+    return `${day}/${month}/${year}`;
+  }
 
    // Function to add months to a given date
    function addMonths(startDate, months) {
     const date = startDate; // Create a Date object from the start date
     // date.setMonth(date.getMonth() + months); // Add the number of months
     let totalDays = months * 30
+    console.log("totalDays ", totalDays, months)
     date.setDate(date.getDate() + (totalDays - 1));
     return date;
   }
 
   function parseDate(dateStr) {
+    console.log("Parse date ", dateStr)
     const [day, month, year] = dateStr.split('/').map(Number); // Split the date string and convert parts to numbers
     // Create a new Date object (months are 0-based, so subtract 1 from month)
+    console.log("new Date(year, month - 1, day) ", new Date(year, month - 1, day))
     return new Date(year, month - 1, day);
-  }
+  } 
 
   const durationList = [{ label: '1 Month', value: 1 }, { label: '2 Months', value: 2 }, { label: '3 Months', value: 3 }, { label: '4 Months', value: 4 }, { label: '5 Months', value: 5 }, { label: '6 Months', value: 6 }, { label: '7 Months', value: 7 }, { label: '8 Months', value: 8 }, { label: '9 Months', value: 9 }, { label: '9 Months', value: 9 }, { label: '10 Months', value: 10 }, { label: '11 Months', value: 11 }, { label: '12 Months', value: 12 }]
 
@@ -486,7 +493,33 @@ const CourseDetails = ({
   };
 
 
-console.log("CD from formatted Addrss ", formattedDates)
+// Group timings by unique days
+const groupTimings = (timings) => {
+  const grouped = {};
+  timings.forEach(({ day, time }) => {
+    if (!grouped[day]) {
+      grouped[day] = [];
+    }
+    grouped[day].push(time);
+  });
+  return grouped;
+};
+
+// Render grouped timings
+const renderTimings = (groupedTimings) => {
+  return Object.entries(groupedTimings).map(([day, times], index) => (
+    <div key={index}>
+      <strong className='time_header'>{day}</strong>
+      {/* <ul> */}
+        {times.map((time, i) => (
+          <div className='times_fixed' key={i}>{time}</div>
+        ))}
+      {/* </ul>  */}
+    </div>
+  ));
+};
+
+const groupedTimings = groupTimings(currentCourse?.enrollInfo?.timings);
 
 
   return (
@@ -506,16 +539,18 @@ console.log("CD from formatted Addrss ", formattedDates)
                   {/* {courseDate !== 'null' ? courseDate : ''} */}
                 </div>
                 <div className='details_desc_info'>
-                  <div className='details_wrapper_duration'><span className='details_duration_info'>Duration:</span> <span className='tenure_course'>{currentCourse?.tenure}</span></div>
+                  <div className='details_wrapper_duration'><span className='details_duration_info'>Duration:</span> <span className='tenure_course'>{currentCourse?.enrollInfo?.duration}</span></div>
                   <div className='details_wrapper_duration'><span className='details_lang_info'>Language:</span> <span className='lang_course'>{currentCourse?.language}</span></div>
                 </div>
+                
                 <div className='time_days_wrapper'>
+                  {renderTimings(groupedTimings)}
                 <div className='details_desc_days details_desc_days_2'>
-                  <div><span className='details_duration_info'>Days:</span> <span className='tenure_course'>{currentCourse?.days[0]}</span></div>
+                  {/* <div><span className='details_duration_info'>Days:</span> <span className='tenure_course'>{currentCourse?.days[0]}</span></div> */}
                   
                 </div>
                 <div className='details_desc_days'> 
-                  <div><span className='details_duration_info'>Time:</span> <span className='tenure_course'>{currentCourse?.time[0]}</span></div>
+                  {/* <div><span className='details_duration_info'>Time:</span> <span className='tenure_course'>{currentCourse?.time[0]}</span></div> */}
                   
                 </div>
                 </div>
@@ -843,6 +878,7 @@ console.log("CD from formatted Addrss ", formattedDates)
             
 
           </form>
+          {/* {values.startDate}{values.endDate} */}
 
 
           {isRegular && (
@@ -1127,7 +1163,7 @@ console.log("CD from formatted Addrss ", formattedDates)
                                 <label class="item-label item_date" style={{ width: '100%', height: '100%', borderRadius: '25px' }}>
                             <input class="item-input"
                               type="radio" name="mode"
-                              value={item?.label}
+                              value={item?.value}
                               // value={values.endDate}
                               aria-labelledby="delivery-0-name"
                               aria-describedby="delivery-0-shipping delivery-0-price"
@@ -1136,16 +1172,16 @@ console.log("CD from formatted Addrss ", formattedDates)
                                 // setSelectedOption('RESIDENTIAL');
                                 // handleResidential(true);
                                 // setPriceSelect(currentCourse?.fees?.offlineFee?.residentialFee)
-                                setCourseDuration(e.target.value)
+                                setCourseDuration(item?.label)
                                 setCourseDurationSelected(true)
                                 setNotShowDuration(true)
                                 if (e.target.checked) {
                                   console.log("Duration selected ", e.target.value)
-                                  // createEndDate('', e.target.value)
-                                  setFormData({
-                                    ...formData,
-                                    endDate: e.target.value
-                                  })
+                                  createEndDate(values.startDate, item?.value)
+                                  // setFormData({
+                                  //   ...formData,
+                                  //   endDate: e.target.value
+                                  // })
                                   setEmpty(0)
                                   // if (currentCourse?.key === 'ma-yoga-shastra' && currentCourse.country !== 'India') {
                                   //   setCourseFee(currentCourse?.fees?.internationalFee?.residentialFee)
@@ -1178,7 +1214,7 @@ console.log("CD from formatted Addrss ", formattedDates)
                             <input class="item-input"
                               type="radio" name="mode"
                               // value={durationList[2]?.label}
-                              value={values.endDate}
+                              value={durationList[2]?.value}
                               // onChange={(value) => {
                               //   createEndDate('', value)
                               // }}
@@ -1189,10 +1225,10 @@ console.log("CD from formatted Addrss ", formattedDates)
                                 // setSelectedOption('RESIDENTIAL');
                                 // handleResidential(true);
                                 // setPriceSelect(currentCourse?.fees?.offlineFee?.residentialFee)
-                                setCourseDuration(e.target.value)
+                                setCourseDuration(durationList[2]?.label)
                                 setCourseDurationSelected(true)
                                 if (e.target.checked) {
-                                  createEndDate('', e.target.value)
+                                  createEndDate(values.startDate, durationList[2]?.value)
                                   // setFormData({
                                   //   ...formData,
                                   //   sdate: e.target.value
@@ -1234,10 +1270,11 @@ console.log("CD from formatted Addrss ", formattedDates)
                                 setCourseDuration(e.target.value)
                                 setCourseDurationSelected(true)
                                 if (e.target.checked) {
-                                  setFormData({
-                                    ...formData,
-                                    sdate: e.target.value
-                                  })
+                                  createEndDate(values.startDate, courseDuration)
+                                  // setFormData({
+                                  //   ...formData,
+                                  //   sdate: e.target.value
+                                  // })
                                   setEmpty(0)
                                   // if (currentCourse?.key === 'ma-yoga-shastra' && currentCourse.country !== 'India') {
                                   //   setCourseFee(currentCourse?.fees?.internationalFee?.residentialFee)
@@ -1264,7 +1301,7 @@ console.log("CD from formatted Addrss ", formattedDates)
                                 <label class="item-label item_date" style={{ width: '100%', height: '100%', borderRadius: '25px' }}>
                             <input class="item-input"
                               type="radio" name="mode"
-                              value={durationList[2]?.label}
+                              value={durationList[2]?.value}
                               aria-labelledby="delivery-0-name"
                               aria-describedby="delivery-0-shipping delivery-0-price"
                               // onChange={() => handleDateSelect(item)}
@@ -1275,10 +1312,11 @@ console.log("CD from formatted Addrss ", formattedDates)
                                 setCourseDuration(e.target.value)
                                 setCourseDurationSelected(true)
                                 if (e.target.checked) {
-                                  setFormData({
-                                    ...formData,
-                                    sdate: e.target.value
-                                  })
+                                  createEndDate(values.startDate, durationList[2]?.value)
+                                  // setFormData({
+                                  //   ...formData,
+                                  //   sdate: e.target.value
+                                  // })
                                   setEmpty(0)
                                   // if (currentCourse?.key === 'ma-yoga-shastra' && currentCourse.country !== 'India') {
                                   //   setCourseFee(currentCourse?.fees?.internationalFee?.residentialFee)
@@ -1316,7 +1354,7 @@ console.log("CD from formatted Addrss ", formattedDates)
               //   type="Terms and Conditions" // You can pass any other props as needed
               // />
               // <TermsAndConditionsModal />
-              <UpcomingDuration isShippingModalOpen={handleOpenDuration} setIsShipppingModalOpen={handleCloseDuration} pageDate={formattedDates} setCourseDuration={setCourseDuration} setCourseDurationSelected={setCourseDurationSelected} setShowDefaultDuration={setShowDefaultDuration} setNotShowDuration={setNotShowDuration} formData={formData} setFormData={setFormData} isRegular={isRegular} durationList={durationList} />
+              <UpcomingDuration isShippingModalOpen={handleOpenDuration} setIsShipppingModalOpen={handleCloseDuration} pageDate={formattedDates} setCourseDuration={setCourseDuration} setCourseDurationSelected={setCourseDurationSelected} setShowDefaultDuration={setShowDefaultDuration} setNotShowDuration={setNotShowDuration} formData={formData} setFormData={setFormData} isRegular={isRegular} durationList={durationList} createEndDate={createEndDate} />
             )}
               
                 
