@@ -931,6 +931,7 @@ const groupedTimings = groupTimings(currentCourse?.enrollInfo?.timings);
 
                 {
                     formattedDates?.slice(0, 2).map((item, index) => {
+                      if (!item?.label) return null;
                         return (
                             <div key={index} className='date_btn'>
                                 <div className='wrapper_center container_date_enroll'>
@@ -978,7 +979,7 @@ const groupedTimings = groupTimings(currentCourse?.enrollInfo?.timings);
                 }
 
                 {
-                  showDefaultDate === true ? (
+                  showDefaultDate === true && formattedDates[2]?.label ? (
                     <div className='date_btn'>
                                 <div className='wrapper_center container_date_enroll'>
                                 <label class="item-label item_date" style={{ width: '100%', height: '100%', borderRadius: '25px' }}>
@@ -1060,7 +1061,7 @@ const groupedTimings = groupTimings(currentCourse?.enrollInfo?.timings);
                           </label>
                                 </div>
                             </div>
-                  ) : (
+                  ) : (formattedDates[2]?.label) ? (
                     <div className='date_btn'>
                                 <div className='wrapper_center container_date_enroll'>
                                 <label class="item-label item_date" style={{ width: '100%', height: '100%', borderRadius: '25px' }}>
@@ -1101,7 +1102,7 @@ const groupedTimings = groupTimings(currentCourse?.enrollInfo?.timings);
                           </label>
                                 </div>
                             </div>
-                  )
+                  ) : null
                 }
 
                 <div className='upcoming_dates'>
