@@ -47,7 +47,7 @@ const CourseCard = ({
   batch,
   nonResidential,
   residential,
-  online,onCampus
+  online, onCampus
 }) => {
 
   const coursesList = [
@@ -280,7 +280,8 @@ const CourseCard = ({
             </span>
             <span className='det-label'>Start {isRegular(courseTitle) ? 'Time:' : 'Dates:'} </span>
             <span className='det-val'>{getStartDate(dates[0])}</span>
-            <span className='det-label' style={{ fontSize: '11px' }}>+{dates[0].length - 1} More </span>
+            {dates.length - 1 > 0 &&
+              <span className='det-label' style={{ fontSize: '11px' }}>+{dates.length - 1} More </span>}
           </div>}
 
         {language &&
