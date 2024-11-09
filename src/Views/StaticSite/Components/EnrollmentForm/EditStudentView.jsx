@@ -86,9 +86,9 @@ const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse
   // console.log('stateFromRedux ', stateFromRedux);
   // console.log('cityFromRedux ', cityFromRedux);
   // console.log('genderFromRedux ', genderFromRedux);
-  const [phoneValue, setPhoneValue] = useState(formData2.phone);
+  const [phoneValue, setPhoneValue] = useState(formData.phone);
   const [bold, setBold] = useState(0)
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(false); 
 
   // const [empty, setEmpty] = useState(0)
   // const [isLoad, setIsLoad] = useState(false)
@@ -161,25 +161,25 @@ const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse
   
   useEffect(() => {
     if (phoneNumberFromRedux) {
-      setPhoneValue(`+${dailCode}${phoneNumberFromRedux}`);
+      setPhoneValue(formData.phone);
     }
   }, [phoneNumberFromRedux]);
 
   useEffect(() => {
     if (countryFromRedux) {
-        setFormData2((prev) => ({ ...prev, country: countryFromRedux }));
+        setFormData2((prev) => ({ ...prev, country: formData.country }));
       setValues((prev) => ({ ...prev, country: { label: countryFromRedux, value: countryFromRedux } }));
       const countryData = Country.getAllCountries().find(country => country.name === countryFromRedux)
       // console.log(countryData)
       setIsoCode(countryData.isoCode)
     }
     if (stateFromRedux) {
-        setFormData2((prev) => ({ ...prev, state: stateFromRedux }));
+        setFormData2((prev) => ({ ...prev, state: formData.state }));
       setValues((prev) => ({ ...prev, state: { label: stateFromRedux, value: stateFromRedux } }));
     }
     if (cityFromRedux) {
       // console.log('cityFromRedux inside State ', cityFromRedux);
-      setFormData2((prev) => ({ ...prev, city: cityFromRedux }));
+      setFormData2((prev) => ({ ...prev, city: formData.city }));
       setValues((prev) => ({ ...prev, city: { label: cityFromRedux, value: cityFromRedux } }));
     }
     
@@ -194,34 +194,34 @@ const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse
   useEffect(() => {
     if (genderFromRedux) {
       const upperCaseGender = genderFromRedux.toUpperCase(); 
-      setFormData2((prev) => ({ ...prev, gender: upperCaseGender }));
+      setFormData2((prev) => ({ ...prev, gender: formData.gender }));
     }
     if (nationalityFromRedux) {
         setFormData2((prev) => ({ ...prev, nationality: nationalityFromRedux }));
     }
     if (nameFromRedux) {
         // console.log('cityFromRedux inside State ', cityFromRedux);
-        setFormData2((prev) => ({ ...prev, name: nameFromRedux }));
+        setFormData2((prev) => ({ ...prev, name: formData.name }));
         
       }
       if (emailFromRedux) {
         // console.log('cityFromRedux inside State ', cityFromRedux);
-        setFormData2((prev) => ({ ...prev, email: emailFromRedux }));
+        setFormData2((prev) => ({ ...prev, email: formData.email }));
         
       }
       if (lastnameFromRedux) {
         // console.log('cityFromRedux inside State ', cityFromRedux);
-        setFormData2((prev) => ({ ...prev, lname: lastnameFromRedux }));
+        setFormData2((prev) => ({ ...prev, lname: formData.lname }));
         
       }
       if (addressLine1) {
-        setFormData2((prev) => ({ ...prev, address1: addressLine1 }));
+        setFormData2((prev) => ({ ...prev, address1: formData.address1 }));
       }
       if (addressLine2) {
-        setFormData2((prev) => ({ ...prev, address2: addressLine2 }));
+        setFormData2((prev) => ({ ...prev, address2: formData.address2 }));
       }
       if (pincodeFromRedux) {
-        setFormData2((prev) => ({ ...prev, pincode: pincodeFromRedux }));
+        setFormData2((prev) => ({ ...prev, pincode: formData.pincode }));
       }
   }, [genderFromRedux, nationalityFromRedux, nameFromRedux, emailFromRedux, lastnameFromRedux, addressLine1, addressLine2, pincodeFromRedux, setFormData2]);
 
@@ -849,6 +849,12 @@ const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse
     }
     }
     else {
+      // Update formData2 and formData with the same values
+      setFormData2((prev) => ({
+        ...prev,
+        ...formData2, // Already contains the updated values
+      }));
+
       setFormData(prevFormData => ({
         ...prevFormData,
         ...formData2
