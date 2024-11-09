@@ -682,6 +682,7 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
                     rating={item.rating}
                     dates={item.dates}
                     online={item.online}
+                    onCampus={item.onCampus}
                     residential={item.residential}
                     nonResidential={item.nonResidential}
                     weekends={item?.weekends}
@@ -724,6 +725,7 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
                   residential={item?.residential}
                   online={item?.online}
                   weekends={item?.weekends}
+                  onCampus={item?.onCampus}
                 />)
               // )
               // }
