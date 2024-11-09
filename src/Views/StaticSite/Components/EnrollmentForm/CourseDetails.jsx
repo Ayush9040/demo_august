@@ -27,7 +27,8 @@ const CourseDetails = ({
   setCourseFee,
   handleResidential,
   formattedDates,
-  dateDurationChange
+  dateDurationChange,
+  highlightDetailBox
 }) => {
 
   const [optionsCount, setOptionsCount] = useState(0);
@@ -51,6 +52,17 @@ const CourseDetails = ({
   const [openEdit, setOpenEdit] = useState(false)
   const [showEdit, setShowEdit] = useState(false)
   const [values, setValues] = useState([])
+  // const location = useLocation();
+  const [selectedUrlDate, setSelectedUrlDate] = useState('');
+
+  useEffect(() => {
+    // Parse the URL to extract the `date` query parameter
+    const queryParams = new URLSearchParams(location.search);
+    const date = queryParams.get('date'); // Extract the 'date' parameter
+    if (date) {
+      setSelectedUrlDate(date); // Set the extracted date as the default value
+    }
+  }, [location.search]);
 
   const toggleAccordion = () => {
     setOpenEdit(!openEdit);
@@ -916,7 +928,7 @@ const CourseDetails = ({
                     </>
                   )}
 
-
+                  {/* {selectedUrlDate} */}
 
                   <div className='dates_enroll_wrapper'>
 
