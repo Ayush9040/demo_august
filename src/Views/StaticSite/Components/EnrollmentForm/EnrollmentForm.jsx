@@ -1097,7 +1097,7 @@ const EnrollmentForm = ({
               )}
 
               {isChecked === false ? empty === 19 && (
-                <div style={{ color: 'red', marginLeft: '0', marginTop: '1rem' }} className='mar_top'>
+                <div style={{ color: 'red', marginLeft: '0', marginTop: '1rem',fontSize:'1.2rem' }} className='mar_top'>
                   *Please agree to the condition!
                 </div>
               ) : ''}

@@ -552,6 +552,7 @@ const CourseDetails = ({
                 </div>
                 <div className='details_desc_info'>
                   <div className='details_wrapper_duration'><span className='details_duration_info'>Duration:</span> <span className='tenure_course'>{currentCourse?.enrollInfo?.duration}</span></div>
+                  <div>&nbsp;&nbsp;</div>
                   <div className='details_wrapper_duration'><span className='details_lang_info'>Language:</span> <span className='lang_course'>{currentCourse?.language}</span></div>
                 </div>
 

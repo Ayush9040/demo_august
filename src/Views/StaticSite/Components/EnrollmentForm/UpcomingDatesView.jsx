@@ -1,4 +1,4 @@
-import React,{ useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 //import baseDomain, { background } from '../../assets/images/imageAsset'
 import './popup.scss'
 //import CommonBanner from '../Common-banner'
@@ -6,27 +6,27 @@ import './popup.scss'
 import InnerNavComponent from '../InnerNavComponent'
 import '../EnrollmentForm/formstyles.scss';
 import './formstyles.scss'
-import { useNavigate  } from 'react-router-dom'; 
+import { useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
 const UpcomingDatesView = ({ pageDate, setCourseDateInfo, setCourseDateSelected, closeModal, setShowDefaultDate, setNotShowDate, formData, setFormData }) => {
 
-    const [selectedDate, setSelectedDate] = useState(null);
-    const { isLoggedIn } = useSelector((state) => state.auth)
-    const [courseMode, setCourseMode] = useState('');
-    const navigate = useNavigate();
+  const [selectedDate, setSelectedDate] = useState(null);
+  const { isLoggedIn } = useSelector((state) => state.auth)
+  const [courseMode, setCourseMode] = useState('');
+  const navigate = useNavigate();
 
   let tnc = {
     title: 'alumni-gallery',
     color: 'orange',
     menuColor: 'black',
-    menuItems:[]
+    menuItems: []
   }
 
 
-  useEffect(()=>{
-    scrollTo(0,0)
-  },[])
+  useEffect(() => {
+    scrollTo(0, 0)
+  }, [])
 
   useEffect(() => {
     // Check the conditions for online and onCampus
@@ -37,12 +37,12 @@ const UpcomingDatesView = ({ pageDate, setCourseDateInfo, setCourseDateSelected,
     } else if (pageDate?.onCampus) {
       setCourseMode('OnCampus');
     } else {
-    //   setCourseMode('Unknown Mode');  // Default if none are true
+      //   setCourseMode('Unknown Mode');  // Default if none are true
     }
   }, [pageDate]);
 
-   // Function to remove ordinal suffixes and format the date
-   const formatDate = (date) => {
+  // Function to remove ordinal suffixes and format the date
+  const formatDate = (date) => {
     return date.replace(/\b(\d+)(th|nd|rd|st)\b/, '$1'); // Removes 'th', 'nd', 'rd', 'st'
   };
 
@@ -51,12 +51,12 @@ const UpcomingDatesView = ({ pageDate, setCourseDateInfo, setCourseDateSelected,
     console.log('date Nowwwwwww', date)
     setSelectedDate(date);
     // setCourseDateInfo(date);
-    
+
   };
 
-  
-   // Handle enrollment button click
-   const handleEnrollClick = () => {
+
+  // Handle enrollment button click
+  const handleEnrollClick = () => {
     const dateToPass = selectedDate ? selectedDate : 'null';
     isLoggedIn ? navigate(`/enrollment/${pageDate.key}/?date=${encodeURIComponent(dateToPass)}`) : navigate(`/user/sign-in/?location=${pageDate.key}/?date=${encodeURIComponent(dateToPass)}`);
   };
@@ -74,63 +74,63 @@ const UpcomingDatesView = ({ pageDate, setCourseDateInfo, setCourseDateSelected,
      
         </div> */}
       </div>
-      <form className="residential-form check_course check_date popup_enroll_date" style={{ width: '100%'}}>
-            <div className="last_radio_button " style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+      <form className="residential-form check_course check_date popup_enroll_date" style={{ width: '100%' }}>
+        <div className="last_radio_button " style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
 
-                {
-                    pageDate?.map((item, index) => {
-                        return (
-                            <div key={index} className='date_btn'>
-                                <div className='wrapper_center'>
-                                <label class="item-label item_date" style={{ width: '100%', height: '100%', borderRadius: '50px' }}>
-                            <input class="item-input"
-                              type="radio" name="mode"
-                              value={item}
-                              aria-labelledby="delivery-0-name"
-                              aria-describedby="delivery-0-shipping delivery-0-price"
-                              onChange={(e) => {
-                                console.log('date Nowwwwwww', e.target.value)
-                                setCourseDateInfo(item.label)
-                                setCourseDateSelected(true)
-                                console.log('date Nowwwwwww', item.label)
-                                if (e.target.checked) {
-                                  setFormData({
-                                    ...formData,
-                                    sdate: item.label
-                                  })
-                                }
-                                setShowDefaultDate(false)
-                                setNotShowDate(false)
-                                handleDateSelect(item)
-                                closeModal()
-                              }}
-                        
-                              />
-                            <span class="item-info item_desc">
-                              <span id="delivery-0-name" class="item-name date_info"><span className='style_dates'>{item.label}</span></span>
-                              <br />    
-                              {/* <small id="delivery-0-shipping" class="item-shipping">5–10 business days</small> */}
-                            </span>
-                            
-                            <strong id="delivery-0-price" class="item-price"></strong>
-                          </label>
-                                </div>
-                            </div>
-                        )
-                    })
-                }
-              
-                
-                 
+          {
+            pageDate?.map((item, index) => {
+              return (
+                <div key={index} className='date_btn'>
+                  <div className='wrapper_center'>
+                    <label class="item-label item_date" style={{ width: '100%', height: '100%', borderRadius: '50px' }}>
+                      <input class="item-input"
+                        type="radio" name="mode"
+                        value={item}
+                        aria-labelledby="delivery-0-name"
+                        aria-describedby="delivery-0-shipping delivery-0-price"
+                        onChange={(e) => {
+                          console.log('date Nowwwwwww', e.target.value)
+                          setCourseDateInfo(item.label)
+                          setCourseDateSelected(true)
+                          console.log('date Nowwwwwww', item.label)
+                          if (e.target.checked) {
+                            setFormData({
+                              ...formData,
+                              sdate: item.label
+                            })
+                          }
+                          setShowDefaultDate(false)
+                          setNotShowDate(false)
+                          handleDateSelect(item)
+                          closeModal()
+                        }}
 
-              
-            </div>
+                      />
+                      <span class="item-info item_desc">
+                        <span id="delivery-0-name" class="item-name date_info"><span className='style_dates'>{item.label}</span></span>
+                        <br />
+                        {/* <small id="delivery-0-shipping" class="item-shipping">5–10 business days</small> */}
+                      </span>
 
-            
+                      <strong id="delivery-0-price" class="item-price"></strong>
+                    </label>
+                  </div>
+                </div>
+              )
+            })
+          }
 
-          </form>
 
-          {/* <div className='date_enroll_btn'>
+
+
+
+        </div>
+
+
+
+      </form>
+
+      {/* <div className='date_enroll_btn'>
             <button className={!selectedDate ? 'date_enroll_btn_txt before_date_select' : 'date_enroll_btn_txt after_date_select'} onClick={handleEnrollClick} disabled={!selectedDate}>Enroll Course <img style={{marginLeft: '8px'}} src='/images/enroll_btn_icon.svg' /></button>
           </div> */}
       {/* <div className='terms-and-conditions'>
