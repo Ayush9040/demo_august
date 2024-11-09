@@ -665,29 +665,29 @@ const SignIn = () => {
       // console.log("Deails email Name ", details.email);
       setFormData({ ...details, errorIndex: 6 });
     }
-    else if (!values?.country?.label) {
-      // alert("Hello from country ")
-      // console.log("values ", values.country?.label)
-      // console.log("Deails country Name ", details.country?.value);
-      // setFormData({ ...details, errorIndex: 6 });
-      setFormData({ ...details, errorIndex: 5 });
-    }
-    else if (!values?.state?.label) {
-      // console.log("values ", values.country?.label)
-      // console.log("Deails country Name ", details.country?.value);
-      // setFormData({ ...details, errorIndex: 7 });
-      setFormData({ ...details, errorIndex: 5 });
-    }
-    else if (!values?.city?.label) {
-      // console.log("Deails city Name ", values.city?.label);
-      // setFormData({ ...details, errorIndex: 8 });
-      setFormData({ ...details, errorIndex: 5 });
-    }
-    else if (!userDetails?.pincode) {
-      // console.log("Deails city Name ", values.city?.label);
-      // setFormData({ ...details, errorIndex: 9 });
-      setFormData({ ...details, errorIndex: 5 });
-    }
+    // else if (!values?.country?.label) {
+    //   // alert("Hello from country ")
+    //   // console.log("values ", values.country?.label)
+    //   // console.log("Deails country Name ", details.country?.value);
+    //   // setFormData({ ...details, errorIndex: 6 });
+    //   setFormData({ ...details, errorIndex: 5 });
+    // }
+    // else if (!values?.state?.label) {
+    //   // console.log("values ", values.country?.label)
+    //   // console.log("Deails country Name ", details.country?.value);
+    //   // setFormData({ ...details, errorIndex: 7 });
+    //   setFormData({ ...details, errorIndex: 5 });
+    // }
+    // else if (!values?.city?.label) {
+    //   // console.log("Deails city Name ", values.city?.label);
+    //   // setFormData({ ...details, errorIndex: 8 });
+    //   setFormData({ ...details, errorIndex: 5 });
+    // }
+    // else if (!userDetails?.pincode) {
+    //   // console.log("Deails city Name ", values.city?.label);
+    //   // setFormData({ ...details, errorIndex: 9 });
+    //   setFormData({ ...details, errorIndex: 5 });
+    // }
     else if (!details.gender?.value) {
       // console.log("Deails gender Name ", details.gender?.value);
       setFormData({ ...details, errorIndex: 10 });
@@ -721,7 +721,7 @@ const SignIn = () => {
           delete payload.address1;
           delete payload.address2;
           payload['gender'] = userDetails?.gender.value;
-          payload['addressLine1'] = rawAddress1;//userDetails?.address1;
+          payload['addressLine1'] = rawAddress1?rawAddress1:userDetails?.address1;//userDetails?.address1;
           payload['addressLine2'] = userDetails?.address2;
           payload['country'] = values?.country?.label;
           payload['city'] = values?.city?.label;
@@ -884,7 +884,7 @@ const SignIn = () => {
         delete payload.address1;
         delete payload.address2;
         payload['gender'] = userDetails?.gender.value;
-        payload['addressLine1'] = rawAddress1; userDetails?.address1;
+        payload['addressLine1'] = rawAddress1?rawAddress1:userDetails?.address1;
         payload['addressLine2'] = userDetails?.address2;
         payload['country'] = values?.country?.label;
         payload['city'] = values?.city?.label;
