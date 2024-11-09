@@ -3,6 +3,7 @@
   width: 380px;
   position: relative;
   flex: 1;
+  
 
 
   img {
@@ -35,10 +36,10 @@
     box-sizing: border-box;
     color: #fff;
     padding: 1rem;
-    min-height: fit-content;
+    // min-height: fit-content;
     border-radius: 0 0 12px 12px;
-
-    // height: 220px;
+    height: 300px;
+    overflow-y: hidden;
     h4 {
       // font-weight: 700;
       height: 30px;
@@ -126,6 +127,7 @@
     width: 100%;
 
     .course-card-content {
+      height: auto;
       .Button-class {
         left: 0rem;
         gap: 1rem;
