@@ -46,9 +46,9 @@ const BrowseCourses = () => {
       else if (location.search == '?type=900') {
         setBreadcrumbs('900 hours YTTC (Advanced)')
       }
-      else {
-        setBreadcrumbs('Yoga Teacher Training Courses (YTTC)')
-      }
+      // else {
+      //   setBreadcrumbs('Yoga Teacher Training Courses (YTTC)')
+      // }
     } else if (type === 'most-popular') {
       setBreadcrumbs('Most Popular')
     } else if (type === 'camps-workshops') {
@@ -248,13 +248,13 @@ const BrowseCourses = () => {
                 </AccordionItemHeading>
               </AccordionItem>
               <AccordionItem style={{
-                border: breadcrumbs == 'Regular Classes' && '2px solid #CA4625',
-                borderRadius: breadcrumbs == 'Regular Classes' && '8px'
+                border: breadcrumbs == 'Regular Yoga Classes' && '2px solid #CA4625',
+                borderRadius: breadcrumbs == 'Regular Yoga Classes' && '8px'
               }}>
                 <AccordionItemHeading>
                   <AccordionItemButton>
                     <Link to="/courses/browse/classes">
-                      <p>Regular Classes</p>
+                      <p>Regular Yoga Classes</p>
                     </Link>
                   </AccordionItemButton>
                 </AccordionItemHeading>

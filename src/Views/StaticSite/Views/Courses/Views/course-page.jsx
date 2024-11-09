@@ -690,12 +690,12 @@ const Courses = () => {
         var filteredData = points.filter(item => {
           // Check if the "days" group (days7, days21, month1, month2, month3) has any `true`
           let daysGroupMatches = ['days7', 'days21', 'month1', 'month2', 'month3'].some(key => selectedFilters[key] && item[key]);
-        
+
           // If all "days" fields are false in `a`, we ignore this check and consider it a match
           if (['days7', 'days21', 'month1', 'month2', 'month3'].every(key => !selectedFilters[key])) {
             daysGroupMatches = true;
           }
-        
+
           // Check that other properties match the values in `a`
           let otherPropsMatch = Object.keys(selectedFilters).every(key => {
             if (['days7', 'days21', 'month1', 'month2', 'month3'].includes(key)) {
@@ -703,7 +703,7 @@ const Courses = () => {
             }
             return !selectedFilters[key] || selectedFilters[key] === item[key];  // Ensure it matches `true` values or ignore if `a[key]` is false
           });
-        
+
           // Return true if both conditions are satisfied
           return daysGroupMatches && otherPropsMatch;
         });
@@ -768,27 +768,25 @@ const Courses = () => {
               </div>
               {isFilterOpened &&
                 <div className="filter-values" onClick={(event) => event.stopPropagation()}>
-                  <div className='filter-head'>Course Format</div>
+                  <div className='filter-head'></div>
                   <div className='filter-data'>
-                    <span style={{ cursor: 'pointer' }} onClick={() => { setFilters({ ...filters, onCampus: false, online: true }) }}>
+                    <span style={{ cursor: 'pointer' }} onClick={() => { setFilters({ ...filters, onCampus: false, online: filters.online ? false : true }) }}>
                       {filters.online ?
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M8 4.25C5.93 4.25 4.25 5.93 4.25 8C4.25 10.07 5.93 11.75 8 11.75C10.07 11.75 11.75 10.07 11.75 8C11.75 5.93 10.07 4.25 8 4.25ZM8 0.5C3.86 0.5 0.5 3.86 0.5 8C0.5 12.14 3.86 15.5 8 15.5C12.14 15.5 15.5 12.14 15.5 8C15.5 3.86 12.14 0.5 8 0.5ZM8 14C4.685 14 2 11.315 2 8C2 4.685 4.685 2 8 2C11.315 2 14 4.685 14 8C14 11.315 11.315 14 8 14Z" fill="#CA4625" />
-                        </svg>
-                        :
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M8 0.5C3.86 0.5 0.5 3.86 0.5 8C0.5 12.14 3.86 15.5 8 15.5C12.14 15.5 15.5 12.14 15.5 8C15.5 3.86 12.14 0.5 8 0.5ZM8 14C4.685 14 2 11.315 2 8C2 4.685 4.685 2 8 2C11.315 2 14 4.685 14 8C14 11.315 11.315 14 8 14Z" fill="#818184" />
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M5.95 10.15L11.2375 4.8625L10.1875 3.8125L5.95 8.05L3.8125 5.9125L2.7625 6.9625L5.95 10.15ZM1.75 13.75C1.3375 13.75 0.984375 13.6031 0.690625 13.3094C0.396875 13.0156 0.25 12.6625 0.25 12.25V1.75C0.25 1.3375 0.396875 0.984375 0.690625 0.690625C0.984375 0.396875 1.3375 0.25 1.75 0.25H12.25C12.6625 0.25 13.0156 0.396875 13.3094 0.690625C13.6031 0.984375 13.75 1.3375 13.75 1.75V12.25C13.75 12.6625 13.6031 13.0156 13.3094 13.3094C13.0156 13.6031 12.6625 13.75 12.25 13.75H1.75ZM1.75 12.25H12.25V1.75H1.75V12.25Z" fill="#CA4625" />
+                        </svg> :
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M1.75 13.75C1.3375 13.75 0.984375 13.6031 0.690625 13.3094C0.396875 13.0156 0.25 12.6625 0.25 12.25V1.75C0.25 1.3375 0.396875 0.984375 0.690625 0.690625C0.984375 0.396875 1.3375 0.25 1.75 0.25H12.25C12.6625 0.25 13.0156 0.396875 13.3094 0.690625C13.6031 0.984375 13.75 1.3375 13.75 1.75V12.25C13.75 12.6625 13.6031 13.0156 13.3094 13.3094C13.0156 13.6031 12.6625 13.75 12.25 13.75H1.75ZM1.75 12.25H12.25V1.75H1.75V12.25Z" fill="#818184" />
                         </svg>
                       }
                     </span>&nbsp;<span className={filters.online ? "label-head active-label-head" : "label-head"}>Online </span>&nbsp;&nbsp;
-                    <span style={{ cursor: 'pointer' }} onClick={() => { setFilters({ ...filters, onCampus: true, online: false }) }}>
+                    <span style={{ cursor: 'pointer' }} onClick={() => { setFilters({ ...filters, onCampus: filters.onCampus ? false : true, online: false }) }}>
                       {filters.onCampus ?
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M8 4.25C5.93 4.25 4.25 5.93 4.25 8C4.25 10.07 5.93 11.75 8 11.75C10.07 11.75 11.75 10.07 11.75 8C11.75 5.93 10.07 4.25 8 4.25ZM8 0.5C3.86 0.5 0.5 3.86 0.5 8C0.5 12.14 3.86 15.5 8 15.5C12.14 15.5 15.5 12.14 15.5 8C15.5 3.86 12.14 0.5 8 0.5ZM8 14C4.685 14 2 11.315 2 8C2 4.685 4.685 2 8 2C11.315 2 14 4.685 14 8C14 11.315 11.315 14 8 14Z" fill="#CA4625" />
-                        </svg>
-                        :
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M8 0.5C3.86 0.5 0.5 3.86 0.5 8C0.5 12.14 3.86 15.5 8 15.5C12.14 15.5 15.5 12.14 15.5 8C15.5 3.86 12.14 0.5 8 0.5ZM8 14C4.685 14 2 11.315 2 8C2 4.685 4.685 2 8 2C11.315 2 14 4.685 14 8C14 11.315 11.315 14 8 14Z" fill="#818184" />
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M5.95 10.15L11.2375 4.8625L10.1875 3.8125L5.95 8.05L3.8125 5.9125L2.7625 6.9625L5.95 10.15ZM1.75 13.75C1.3375 13.75 0.984375 13.6031 0.690625 13.3094C0.396875 13.0156 0.25 12.6625 0.25 12.25V1.75C0.25 1.3375 0.396875 0.984375 0.690625 0.690625C0.984375 0.396875 1.3375 0.25 1.75 0.25H12.25C12.6625 0.25 13.0156 0.396875 13.3094 0.690625C13.6031 0.984375 13.75 1.3375 13.75 1.75V12.25C13.75 12.6625 13.6031 13.0156 13.3094 13.3094C13.0156 13.6031 12.6625 13.75 12.25 13.75H1.75ZM1.75 12.25H12.25V1.75H1.75V12.25Z" fill="#CA4625" />
+                        </svg> :
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M1.75 13.75C1.3375 13.75 0.984375 13.6031 0.690625 13.3094C0.396875 13.0156 0.25 12.6625 0.25 12.25V1.75C0.25 1.3375 0.396875 0.984375 0.690625 0.690625C0.984375 0.396875 1.3375 0.25 1.75 0.25H12.25C12.6625 0.25 13.0156 0.396875 13.3094 0.690625C13.6031 0.984375 13.75 1.3375 13.75 1.75V12.25C13.75 12.6625 13.6031 13.0156 13.3094 13.3094C13.0156 13.6031 12.6625 13.75 12.25 13.75H1.75ZM1.75 12.25H12.25V1.75H1.75V12.25Z" fill="#818184" />
                         </svg>}
                     </span>&nbsp;<span className={filters.onCampus ? "label-head active-label-head" : "label-head"}>On-Campus</span></div>
 
@@ -845,24 +843,30 @@ const Courses = () => {
                   </div>
                   <div className='filter-head'>Schedule</div>
                   <div className='filter-data'>
-                    <span style={{ cursor: 'pointer' }} onClick={() => { setFilters({ ...filters, weekDays: true, weekends: false }) }}>
+                    <span style={{ cursor: 'pointer' }} onClick={() => { setFilters({ ...filters, weekDays: filters.weekDays ? false : true, weekends: false }) }}>
                       {filters.weekDays ?
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M8 4.25C5.93 4.25 4.25 5.93 4.25 8C4.25 10.07 5.93 11.75 8 11.75C10.07 11.75 11.75 10.07 11.75 8C11.75 5.93 10.07 4.25 8 4.25ZM8 0.5C3.86 0.5 0.5 3.86 0.5 8C0.5 12.14 3.86 15.5 8 15.5C12.14 15.5 15.5 12.14 15.5 8C15.5 3.86 12.14 0.5 8 0.5ZM8 14C4.685 14 2 11.315 2 8C2 4.685 4.685 2 8 2C11.315 2 14 4.685 14 8C14 11.315 11.315 14 8 14Z" fill="#CA4625" />
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M5.95 10.15L11.2375 4.8625L10.1875 3.8125L5.95 8.05L3.8125 5.9125L2.7625 6.9625L5.95 10.15ZM1.75 13.75C1.3375 13.75 0.984375 13.6031 0.690625 13.3094C0.396875 13.0156 0.25 12.6625 0.25 12.25V1.75C0.25 1.3375 0.396875 0.984375 0.690625 0.690625C0.984375 0.396875 1.3375 0.25 1.75 0.25H12.25C12.6625 0.25 13.0156 0.396875 13.3094 0.690625C13.6031 0.984375 13.75 1.3375 13.75 1.75V12.25C13.75 12.6625 13.6031 13.0156 13.3094 13.3094C13.0156 13.6031 12.6625 13.75 12.25 13.75H1.75ZM1.75 12.25H12.25V1.75H1.75V12.25Z" fill="#CA4625" />
+                        </svg> :
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M1.75 13.75C1.3375 13.75 0.984375 13.6031 0.690625 13.3094C0.396875 13.0156 0.25 12.6625 0.25 12.25V1.75C0.25 1.3375 0.396875 0.984375 0.690625 0.690625C0.984375 0.396875 1.3375 0.25 1.75 0.25H12.25C12.6625 0.25 13.0156 0.396875 13.3094 0.690625C13.6031 0.984375 13.75 1.3375 13.75 1.75V12.25C13.75 12.6625 13.6031 13.0156 13.3094 13.3094C13.0156 13.6031 12.6625 13.75 12.25 13.75H1.75ZM1.75 12.25H12.25V1.75H1.75V12.25Z" fill="#818184" />
                         </svg>
-                        :
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M8 0.5C3.86 0.5 0.5 3.86 0.5 8C0.5 12.14 3.86 15.5 8 15.5C12.14 15.5 15.5 12.14 15.5 8C15.5 3.86 12.14 0.5 8 0.5ZM8 14C4.685 14 2 11.315 2 8C2 4.685 4.685 2 8 2C11.315 2 14 4.685 14 8C14 11.315 11.315 14 8 14Z" fill="#818184" />
-                        </svg>}
+                        // <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        //   <path d="M8 4.25C5.93 4.25 4.25 5.93 4.25 8C4.25 10.07 5.93 11.75 8 11.75C10.07 11.75 11.75 10.07 11.75 8C11.75 5.93 10.07 4.25 8 4.25ZM8 0.5C3.86 0.5 0.5 3.86 0.5 8C0.5 12.14 3.86 15.5 8 15.5C12.14 15.5 15.5 12.14 15.5 8C15.5 3.86 12.14 0.5 8 0.5ZM8 14C4.685 14 2 11.315 2 8C2 4.685 4.685 2 8 2C11.315 2 14 4.685 14 8C14 11.315 11.315 14 8 14Z" fill="#CA4625" />
+                        // </svg>
+                        // :
+                        // <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        //   <path d="M8 0.5C3.86 0.5 0.5 3.86 0.5 8C0.5 12.14 3.86 15.5 8 15.5C12.14 15.5 15.5 12.14 15.5 8C15.5 3.86 12.14 0.5 8 0.5ZM8 14C4.685 14 2 11.315 2 8C2 4.685 4.685 2 8 2C11.315 2 14 4.685 14 8C14 11.315 11.315 14 8 14Z" fill="#818184" />
+                        // </svg>
+                      }
                     </span>&nbsp;<span className={filters.weekDays ? "label-head active-label-head" : "label-head"}>Weekdays</span> &nbsp;&nbsp;
-                    <span style={{ cursor: 'pointer' }} onClick={() => { setFilters({ ...filters, weekDays: false, weekends: true }) }}>
+                    <span style={{ cursor: 'pointer' }} onClick={() => { setFilters({ ...filters, weekDays: false, weekends: filters.weekends ? false : true }) }}>
                       {filters.weekends ?
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M8 4.25C5.93 4.25 4.25 5.93 4.25 8C4.25 10.07 5.93 11.75 8 11.75C10.07 11.75 11.75 10.07 11.75 8C11.75 5.93 10.07 4.25 8 4.25ZM8 0.5C3.86 0.5 0.5 3.86 0.5 8C0.5 12.14 3.86 15.5 8 15.5C12.14 15.5 15.5 12.14 15.5 8C15.5 3.86 12.14 0.5 8 0.5ZM8 14C4.685 14 2 11.315 2 8C2 4.685 4.685 2 8 2C11.315 2 14 4.685 14 8C14 11.315 11.315 14 8 14Z" fill="#CA4625" />
-                        </svg>
-                        :
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M8 0.5C3.86 0.5 0.5 3.86 0.5 8C0.5 12.14 3.86 15.5 8 15.5C12.14 15.5 15.5 12.14 15.5 8C15.5 3.86 12.14 0.5 8 0.5ZM8 14C4.685 14 2 11.315 2 8C2 4.685 4.685 2 8 2C11.315 2 14 4.685 14 8C14 11.315 11.315 14 8 14Z" fill="#818184" />
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M5.95 10.15L11.2375 4.8625L10.1875 3.8125L5.95 8.05L3.8125 5.9125L2.7625 6.9625L5.95 10.15ZM1.75 13.75C1.3375 13.75 0.984375 13.6031 0.690625 13.3094C0.396875 13.0156 0.25 12.6625 0.25 12.25V1.75C0.25 1.3375 0.396875 0.984375 0.690625 0.690625C0.984375 0.396875 1.3375 0.25 1.75 0.25H12.25C12.6625 0.25 13.0156 0.396875 13.3094 0.690625C13.6031 0.984375 13.75 1.3375 13.75 1.75V12.25C13.75 12.6625 13.6031 13.0156 13.3094 13.3094C13.0156 13.6031 12.6625 13.75 12.25 13.75H1.75ZM1.75 12.25H12.25V1.75H1.75V12.25Z" fill="#CA4625" />
+                        </svg> :
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M1.75 13.75C1.3375 13.75 0.984375 13.6031 0.690625 13.3094C0.396875 13.0156 0.25 12.6625 0.25 12.25V1.75C0.25 1.3375 0.396875 0.984375 0.690625 0.690625C0.984375 0.396875 1.3375 0.25 1.75 0.25H12.25C12.6625 0.25 13.0156 0.396875 13.3094 0.690625C13.6031 0.984375 13.75 1.3375 13.75 1.75V12.25C13.75 12.6625 13.6031 13.0156 13.3094 13.3094C13.0156 13.6031 12.6625 13.75 12.25 13.75H1.75ZM1.75 12.25H12.25V1.75H1.75V12.25Z" fill="#818184" />
                         </svg>}
                     </span>&nbsp;<span className={filters.weekends ? "label-head active-label-head" : "label-head"}>Weekends</span></div>
                   <div className='filter-footer'>
