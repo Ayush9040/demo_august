@@ -42,15 +42,17 @@ const Courses = () => {
   const [startTime, setStartTime] = useState(0);
   const { isLoggedIn } = useSelector((state) => state.auth)
   const [isFilterOpened, setIsFilterOpened] = useState(false);
-  const [filters, setFilters] = useState({ online: false, onCampus: false, days7: false, days21: false, month1: false, month2: false, month3: false, weekDays: false, weekends: false });
-  const [selectedFilters, setSelectedFilters] = useState({ online: false, onCampus: false, days7: false, days21: false, month1: false, month2: false, month3: false, weekDays: false, weekends: false });
-  const filtersToloop = [{ label: 'Online', value: 'online' }, { label: 'On-Campus', value: 'onCampus' }, { label: '1 Month', value: 'month1' }, { label: '21 days', value: 'days21' }, { label: '7 days', value: 'days7' },
-  { label: '2 Months', value: 'month2' }, { label: '3 Months', value: 'month3' }, { label: 'Weekdays', value: 'weekDays' }, { label: 'Weekends', value: 'weekends' }
+  const [filters, setFilters] = useState({ online: false, onCampus: false, days7: false, days21: false, month1: false, month2: false, month3: false, weekDays: false, weekends: false, year1: false, year2: false, month7: false, month4: false, days1: false, days2: false });
+  const [selectedFilters, setSelectedFilters] = useState({ online: false, onCampus: false, days7: false, days21: false, month1: false, month2: false, month3: false, weekDays: false, weekends: false, year1: false, year2: false, month7: false, month4: false, days1: false, days2: false });
+  const filtersToloop = [{ label: 'Online', value: 'online' }, { label: 'On-Campus', value: 'onCampus' }, { label: '1 Month', value: 'month1' }, { label: '21 days', value: 'days21' }, { label: '7 days', value: 'days7' }, { label: '1 day', value: 'days1' }, { label: '2 days', value: 'days2' },
+  { label: '2 Months', value: 'month2' }, { label: '3 Months', value: 'month3' }, { label: 'Weekdays', value: 'weekDays' }, { label: 'Weekends', value: 'weekends' }, { label: '1 Year', value: 'year1' }, { label: '2 Years', value: 'year2' }
+    , { label: '4 Months', value: 'month4' }
+    , { label: '7 Months', value: 'month7' }
   ]
   const clearFilters = () => {
     setIsFilterOpened(false)
-    setFilters({ online: false, onCampus: false, days7: false, days21: false, month1: false, month2: false, month3: false, weekDays: false, weekends: false });
-    setSelectedFilters({ online: false, onCampus: false, days7: false, days21: false, month1: false, month2: false, month3: false, weekDays: false, weekends: false });
+    setFilters({ online: false, onCampus: false, days7: false, days21: false, month1: false, month2: false, month3: false, weekDays: false, weekends: false, year1: false, year2: false, month7: false, month4: false, days1: false, days2: false });
+    setSelectedFilters({ online: false, onCampus: false, days7: false, days21: false, month1: false, month2: false, month3: false, weekDays: false, weekends: false, year1: false, year2: false, month7: false, month4: false, days1: false, days2: false });
     setData([dataMaster[0].slice(0, 3), dataMaster[1].slice(0, 3), dataMaster[2].slice(0, 3), dataMaster[3].slice(0, 3), dataMaster[4].slice(0, 3), dataMaster[5].slice(0, 3)])
 
   }
@@ -58,7 +60,7 @@ const Courses = () => {
   const anyFilterActive = Object.values(filters).some(value => value === true);
 
   const applyFilters = (selectedValues) => {
-    console.log(selectedValues);
+    // console.log(selectedValues);
 
     setIsFilterOpened(false)
     setSelectedFilters(selectedValues)
@@ -66,57 +68,6 @@ const Courses = () => {
     updateJsonData(val)
   }
   const countTrueFilters = Object.values(selectedFilters).filter(value => value === true).length;
-  // const shouldDisplayCard = (points) => {// used to display the card in UI
-  //   console.log(points);
-
-  //   if (selectedFilters) {
-  //     const { online, onCampus, days7, days21, month1, month2, month3, weekends, weekDays } = selectedFilters;
-
-  //     if (!anyFilterActive) {
-  //       return true; // Show link if no filters are active
-  //     }
-  //     console.log(points);
-
-  //     // Create an array to store conditions for filtering
-  //     const conditions = [];
-
-  //     if (online) {
-  //       conditions.push(points.online);
-  //     }
-  //     if (onCampus && (points?.residential || points?.nonResidential)) {
-  //       conditions.push(true);
-  //     }
-  //     // if ((month1 && points?.tenure == '1 month') || month2 && points?.tenure == '2 month' || month3 && points?.tenure == '3 month') {
-  //     //   conditions.push(true);
-  //     // }
-  //     if (days7) {
-  //       conditions.push(points?.tenure == '7 days');
-  //     }
-  //     if (days21) {
-  //       conditions.push(points?.tenure == '21 days');
-  //     }
-  //     if (month1) {
-  //       conditions.push(points?.tenure == '1 month');
-  //     }
-  //     if (month2) {
-  //       conditions.push(points?.tenure == '2 month');
-  //     }
-  //     if (month3) {
-  //       conditions.push(points?.tenure == '3 month');
-  //     }
-  //     if (weekends) {
-  //       conditions.push(points.weekends);
-  //     }
-  //     if (weekDays) {
-  //       conditions.push(points.weekDays);
-  //     }
-
-  //     // Check if all active conditions are met
-  //     return conditions.length > 0 && conditions.every(Boolean);
-  //   }
-
-  //   return true; // In case selectedFilters is undefined
-  // };
 
 
   let dataMaster = [[c200hr[0], c500hr[0], c900hr[0], c200hr[1], c900hr[1], c200hr[2], c900hr[2], c200hr[3], c900hr[3], c200hr[4], c900hr[4], c200hr[5], c900hr[5]],
@@ -135,7 +86,7 @@ const Courses = () => {
 
       if (Object.values(filters).some(value => value === true)) {
         // setTimeout(() => {
-        const { online, onCampus, days7, days21, month1, month2, month3, weekends, weekDays } = filters;
+        const { online, onCampus, days7, days21, month1, month2, month3, weekends, weekDays, year1, year2, month7, month4, days1, days2 } = filters;
 
         if (!anyFilterActive) {
           resolve('true') // Show link if no filters are active
@@ -152,34 +103,20 @@ const Courses = () => {
           conditions.push(points?.residential || points?.nonResidential);
         }
 
-        if (days7 || days21 || month1 || month2 || month3) {
+        if (days7 || days21 || month1 || month2 || month3 || year1 || year2 || month7 || month4 || days1 || days2) {
           if ((days7 && points?.tenure?.toLowerCase() === '7 days') || (days21 && points?.tenure?.toLowerCase() === '21 days') ||
             (month1 && points?.tenure === '1 month') || (month2 && points?.tenure === '2 month') ||
-            (month3 && points?.tenure === '3 month')) {
+            (month3 && points?.tenure === '3 month') || (year1 && points?.tenure === '1 year')
+            || (year2 && points?.tenure === '2 year') || (month7 && points?.tenure === '7 month')
+            || (month4 && points?.tenure === '4 month') || (days1 && points?.tenure?.toLowerCase() === '1 day')
+            || (days2 && points?.tenure?.toLowerCase() === '2 days') || points?.isRegular) {
             conditions.push(true);
           }
           else {
             conditions.push(false)
           }
         }
-        // else {
-        //   conditions.push(false)
-        // }
-        // if (days21 && points?.tenure?.toLowerCase() === '21 days') {
-        //   conditions.push(points?.tenure?.toLowerCase() === '21 days');
-        // }
-        // if (month1 && points?.tenure === '1 month') {
-        //   conditions.push(points?.tenure === '1 month');
-        // }
-        // if (month2 && points?.tenure === '2 month') {
-        //   conditions.push(points?.tenure === '2 month');
-        // }
-        // if (month3 && points?.tenure === '3 month') {
-        //   conditions.push(points?.tenure === '3 month');
-        // }
-        // if (month3) {
-        //   conditions.push(points?.tenure === '3 month');
-        // }
+
         if (weekends) {
           conditions.push(points?.weekends ? true : false);
         }
@@ -447,18 +384,18 @@ const Courses = () => {
           {
             url: '/900-hours-advanced-teacher-training-course',
             text: '4 Months YTTC-Online-English',
-            online: true, weekDays: true,
+            online: true, weekDays: true, month4: true
           },
           {
             url: '/seven-month-ttc',
             text: '7 Months YTTC-Online & On Campus-English',
-            onCampus: true, online: true, weekDays: true,
+            onCampus: true, online: true, weekDays: true, month7: true
           },
-          { url: '/one-year-ttc', text: '1 Year YTTC-Online & On Campus-Hindi', onCampus: true, online: true, weekDays: true, },
+          { url: '/one-year-ttc', text: '1 Year YTTC-Online & On Campus-Hindi', onCampus: true, online: true, weekDays: true, year1: true },
           {
             url: '/two-year-ttc',
             text: '2 Years YTTC-Online & On Campus-English',
-            onCampus: true, online: true, weekDays: true,
+            onCampus: true, online: true, weekDays: true, year2: true
           }
         ]
       }
@@ -494,52 +431,52 @@ const Courses = () => {
         points = [{
           url: '/asana-regular-classes-on-campus',
           text: 'Asana Regular Classes for Men On Campus',
-          onCampus: true, weekDays: true
+          onCampus: true, weekDays: true,isRegular:true
         },
         {
           url: '/asana-regular-classes-on-campus-women',
           text: 'Asana Regular Classes for Women On Campus',
-          onCampus: true, weekDays: true
+          onCampus: true, weekDays: true,isRegular:true
         },
         {
           url: '/asana-regular-classes-online',
           text: 'Asana Regular Classes (Men & Women) - Online',
-          online: true, weekDays: true
+          online: true, weekDays: true,isRegular:true
         },
         {
           url: '/weekend-classes',
           text: 'Weekend Asana Classes - (Men & Women) On Campus',
-          onCampus: true, weekends: true
+          onCampus: true, weekends: true,isRegular:true
         },
         {
           url: '/weekend-classes-online',
           text: 'Weekend Asana Classes - (Men & Women) Online',
-          online: true, weekends: true
+          online: true, weekends: true,isRegular:true
         },
         {
           url: '/childrens-regular-classes',
           text: "Children's Regular Class - On Campus",
-          onCampus: true, weekDays: true
+          onCampus: true, weekDays: true,isRegular:true
         },
         {
           url: '/childrens-weekend-classes-on-campus',
           text: "Children's Weekend Class - On Campus",
-          onCampus: true, weekends: true
+          onCampus: true, weekends: true,isRegular:true
         },
         {
           url: '/advanced-regular-yoga-classes',
           text: ' Advance Asana Regular Class - Online (Only for TYI Teachers) ',
-          online: true, weekDays: true
+          online: true, weekDays: true,isRegular:true
         },
         {
           url: '/regular-pregnacy-classes',
           text: 'Regular Pregnancy Class',
-          onCampus: true, online: true, weekDays: true
+          onCampus: true, online: true, weekDays: true,isRegular:true
         },
         {
           url: '/IBY-course',
           text: 'IBY classes - On Campus & Online',
-          onCampus: true, online: true, weekDays: true
+          onCampus: true, online: true, weekDays: true,isRegular:true
         }]
       }
       else if (index == 3) {
@@ -580,17 +517,17 @@ const Courses = () => {
         {
           url: '/satsang',
           text: 'Satsang - On Campus',
-          onCampus: true, weekends: true
+          onCampus: true, weekends: true, days1: true
         },
         {
           url: '/samattvam',
           text: 'Samattvam(Health Checkup) - On Campus',
-          onCampus: true, weekends: true
+          onCampus: true, weekends: true, days1: true
         },
         {
           url: '/couples-classes',
           text: "Couple's classes - Online",
-          online: true, weekends: true
+          online: true, weekends: true, days1: true
         },
         {
           url: '/home-tuitions',
@@ -600,32 +537,32 @@ const Courses = () => {
         {
           url: '/stress-management-camp',
           text: 'Stress Management Camp - On Campus',
-          onCampus: true, weekDays: true
+          onCampus: true, weekDays: true, days1: true
         },
         {
           url: '/weight-management-workshop',
           text: 'Weight Management Workshop - On Campus',
-          onCampus: true, weekDays: true
+          onCampus: true, weekDays: true, days1: true
         },
         {
           url: '/pregnancy-camp-for-ante-post-natal',
           text: 'Pregnancy Camp for Ante & Post Natal - On Campus',
-          onCampus: true, weekDays: true
+          onCampus: true, weekDays: true, days2: true
         },
         {
           url: '/cardiac-hypertension-workshop',
           text: 'Cardiac & Hypertension Workshop - On Campus',
-          onCampus: true, weekDays: true
+          onCampus: true, weekDays: true, days1: true
         },
         {
           url: '/back-joint-disorder-workshop',
           text: 'Back & Joint Disorder Workshop - On Campus',
-          onCampus: true, weekDays: true
+          onCampus: true, weekDays: true, days1: true
         },
         {
           url: '/pranayama-workshop',
           text: 'Pranayama Workshop',
-          onCampus: true, online: true, weekDays: true
+          onCampus: true, online: true, weekDays: true, days1: true
         }]
       }
       else if (index == 5) {
@@ -652,62 +589,76 @@ const Courses = () => {
       }
 
       // Create an array to store conditions for filtering
-      const conditions = [];
 
       // Check if points exist and are not empty
+      // if (points) {
+        
+      //   // Function to filter the array
+      //   console.log(points);
+        
+      //   var filteredData = points.filter(item => {
+      //     // Check if the "days" group (days7, days21, month1, month2, month3) has any `true`
+      //     let daysGroupMatches = ['days7', 'days21', 'month1', 'month2', 'month3', 'year1', 'year2', 'month7', 'month4', 'days1', 'days2'].some(key => selectedFilters[key] && item[key]);
+
+      //     // If all "days" fields are false in `a`, we ignore this check and consider it a match
+      //     if (['days7', 'days21', 'month1', 'month2', 'month3', 'year1', 'year2', 'month7', 'month4', 'days1', 'days2'].every(key => !selectedFilters[key])) {
+      //       daysGroupMatches = true;
+      //     }
+
+      //     // Check that other properties match the values in `a`
+      //     let otherPropsMatch = Object.keys(selectedFilters).every(key => {
+      //       if (['days7', 'days21', 'month1', 'month2', 'month3', 'year1', 'year2', 'month7', 'month4', 'days1', 'days2'].includes(key)) {
+      //         return true;  // Skip the "days" group properties because they're handled separately
+      //       }
+      //       return !selectedFilters[key] || selectedFilters[key] === item[key];  // Ensure it matches `true` values or ignore if `a[key]` is false
+      //     });
+
+      //     // Return true if both conditions are satisfied
+      //     return daysGroupMatches && otherPropsMatch;
+      //   });
+      // }
       if (points) {
-        // console.log(points);
-
-        // if (online) {
-        //   const bool = points.some(obj => obj.online === true);
-        //   conditions.push(!!bool);
-        // }
-        // if (onCampus) {
-        //   const bool = points.some(obj => obj.onCampus === true);
-        //   conditions.push(!!bool);
-        // }
-
-        // if (days7 || days21 || month1 || month2 || month3) {
-        //   if ((days7 && points.some(obj => obj.days7 === true)) || days21 && points.some(obj => obj.days21 === true) ||
-        //     (month1 && points.some(obj => obj.month1 === true)) || (month2 && points.some(obj => obj.month2 === true)) ||
-        //     (month3 && points.some(obj => obj.month3 === true))) {
-        //     conditions.push(true);
-        //   }
-        //   else {
-        //     conditions.push(false)
-        //   }
-        // }
-
-        // if (weekends) {
-        //   const bool = points.some(obj => obj.weekends === true);
-        //   conditions.push(!!bool);
-        // }
-        // if (weekDays) {
-        //   const bool = points.some(obj => obj.weekDays === true);
-        //   conditions.push(!!bool);
-        // }
         // Function to filter the array
+        console.log(points);
+      
         var filteredData = points.filter(item => {
-          // Check if the "days" group (days7, days21, month1, month2, month3) has any `true`
-          let daysGroupMatches = ['days7', 'days21', 'month1', 'month2', 'month3'].some(key => selectedFilters[key] && item[key]);
-
-          // If all "days" fields are false in `a`, we ignore this check and consider it a match
-          if (['days7', 'days21', 'month1', 'month2', 'month3'].every(key => !selectedFilters[key])) {
+          // If the item is regular, skip the daysGroupMatches check
+          if (item.isRegular) {
+            // Only check the other properties if the item is regular
+            let otherPropsMatch = Object.keys(selectedFilters).every(key => {
+              if (['days7', 'days21', 'month1', 'month2', 'month3', 'year1', 'year2', 'month7', 'month4', 'days1', 'days2'].includes(key)) {
+                return true;  // Skip the "days" group properties because they're handled separately
+              }
+              return !selectedFilters[key] || selectedFilters[key] === item[key];  // Ensure it matches `true` values or ignore if `selectedFilters[key]` is false
+            });
+      
+            return otherPropsMatch;  // Only check otherPropsMatch for regular items
+          }
+      
+          // If item is not regular, proceed with daysGroupMatches validation
+          let daysGroupMatches = ['days7', 'days21', 'month1', 'month2', 'month3', 'year1', 'year2', 'month7', 'month4', 'days1', 'days2']
+            .some(key => selectedFilters[key] && item[key]);
+      
+          // If all "days" fields are false in `selectedFilters`, consider it a match
+          if (['days7', 'days21', 'month1', 'month2', 'month3', 'year1', 'year2', 'month7', 'month4', 'days1', 'days2']
+            .every(key => !selectedFilters[key])) {
             daysGroupMatches = true;
           }
-
-          // Check that other properties match the values in `a`
+      
+          // Check that other properties match the values in `selectedFilters`
           let otherPropsMatch = Object.keys(selectedFilters).every(key => {
-            if (['days7', 'days21', 'month1', 'month2', 'month3'].includes(key)) {
+            if (['days7', 'days21', 'month1', 'month2', 'month3', 'year1', 'year2', 'month7', 'month4', 'days1', 'days2'].includes(key)) {
               return true;  // Skip the "days" group properties because they're handled separately
             }
-            return !selectedFilters[key] || selectedFilters[key] === item[key];  // Ensure it matches `true` values or ignore if `a[key]` is false
+            return !selectedFilters[key] || selectedFilters[key] === item[key];  // Ensure it matches `true` values or ignore if `selectedFilters[key]` is false
           });
-
-          // Return true if both conditions are satisfied
+      
+          // Return true if both conditions are satisfied (daysGroupMatches and otherPropsMatch)
           return daysGroupMatches && otherPropsMatch;
         });
+        console.log(filteredData);
       }
+      
       // Check if all active conditions are met and not empty
       return filteredData.length > 0//conditions.length > 0 && conditions.every(Boolean);
     }
@@ -792,24 +743,24 @@ const Courses = () => {
 
                   <div className='filter-head'>Duration</div>
                   <div className='filter-data'>
-                    <span style={{ cursor: 'pointer' }} onClick={() => { setFilters({ ...filters, days7: !filters.days7 }) }}>
-                      {filters.days7 ?
+                    <span style={{ cursor: 'pointer' }} onClick={() => { setFilters({ ...filters, days1: !filters.days1 }) }}>
+                      {filters.days1 ?
                         <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path d="M5.95 10.15L11.2375 4.8625L10.1875 3.8125L5.95 8.05L3.8125 5.9125L2.7625 6.9625L5.95 10.15ZM1.75 13.75C1.3375 13.75 0.984375 13.6031 0.690625 13.3094C0.396875 13.0156 0.25 12.6625 0.25 12.25V1.75C0.25 1.3375 0.396875 0.984375 0.690625 0.690625C0.984375 0.396875 1.3375 0.25 1.75 0.25H12.25C12.6625 0.25 13.0156 0.396875 13.3094 0.690625C13.6031 0.984375 13.75 1.3375 13.75 1.75V12.25C13.75 12.6625 13.6031 13.0156 13.3094 13.3094C13.0156 13.6031 12.6625 13.75 12.25 13.75H1.75ZM1.75 12.25H12.25V1.75H1.75V12.25Z" fill="#CA4625" />
                         </svg> :
                         <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path d="M1.75 13.75C1.3375 13.75 0.984375 13.6031 0.690625 13.3094C0.396875 13.0156 0.25 12.6625 0.25 12.25V1.75C0.25 1.3375 0.396875 0.984375 0.690625 0.690625C0.984375 0.396875 1.3375 0.25 1.75 0.25H12.25C12.6625 0.25 13.0156 0.396875 13.3094 0.690625C13.6031 0.984375 13.75 1.3375 13.75 1.75V12.25C13.75 12.6625 13.6031 13.0156 13.3094 13.3094C13.0156 13.6031 12.6625 13.75 12.25 13.75H1.75ZM1.75 12.25H12.25V1.75H1.75V12.25Z" fill="#818184" />
                         </svg>}
-                    </span>&nbsp;<span className={filters.days7 ? "label-head active-label-head" : "label-head"}>1 day</span> &nbsp;&nbsp;
-                    <span style={{ cursor: 'pointer' }} onClick={() => { setFilters({ ...filters, days21: !filters.days21 }) }}>
-                      {filters.days21 ?
+                    </span>&nbsp;<span className={filters.days1 ? "label-head active-label-head" : "label-head"}>1 day</span> &nbsp;&nbsp;
+                    <span style={{ cursor: 'pointer' }} onClick={() => { setFilters({ ...filters, days2: !filters.days2 }) }}>
+                      {filters.days2 ?
                         <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path d="M5.95 10.15L11.2375 4.8625L10.1875 3.8125L5.95 8.05L3.8125 5.9125L2.7625 6.9625L5.95 10.15ZM1.75 13.75C1.3375 13.75 0.984375 13.6031 0.690625 13.3094C0.396875 13.0156 0.25 12.6625 0.25 12.25V1.75C0.25 1.3375 0.396875 0.984375 0.690625 0.690625C0.984375 0.396875 1.3375 0.25 1.75 0.25H12.25C12.6625 0.25 13.0156 0.396875 13.3094 0.690625C13.6031 0.984375 13.75 1.3375 13.75 1.75V12.25C13.75 12.6625 13.6031 13.0156 13.3094 13.3094C13.0156 13.6031 12.6625 13.75 12.25 13.75H1.75ZM1.75 12.25H12.25V1.75H1.75V12.25Z" fill="#CA4625" />
                         </svg> :
                         <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path d="M1.75 13.75C1.3375 13.75 0.984375 13.6031 0.690625 13.3094C0.396875 13.0156 0.25 12.6625 0.25 12.25V1.75C0.25 1.3375 0.396875 0.984375 0.690625 0.690625C0.984375 0.396875 1.3375 0.25 1.75 0.25H12.25C12.6625 0.25 13.0156 0.396875 13.3094 0.690625C13.6031 0.984375 13.75 1.3375 13.75 1.75V12.25C13.75 12.6625 13.6031 13.0156 13.3094 13.3094C13.0156 13.6031 12.6625 13.75 12.25 13.75H1.75ZM1.75 12.25H12.25V1.75H1.75V12.25Z" fill="#818184" />
                         </svg>}
-                    </span>&nbsp;<span className={filters.days21 ? "label-head active-label-head" : "label-head"}>2 days</span>&nbsp;&nbsp;
+                    </span>&nbsp;<span className={filters.days2 ? "label-head active-label-head" : "label-head"}>2 days</span>&nbsp;&nbsp;
 
                     <span style={{ cursor: 'pointer' }} onClick={() => { setFilters({ ...filters, days7: !filters.days7 }) }}>
                       {filters.days7 ?
@@ -853,27 +804,17 @@ const Courses = () => {
                       </span>&nbsp;<span className={filters.month2 ? "label-head active-label-head" : "label-head"}>2 months</span>&nbsp;&nbsp;
                     </div>
                     <div style={{ marginTop: '10px' }}>
-                      <span style={{ cursor: 'pointer' }} onClick={() => { setFilters({ ...filters, month2: !filters.month2 }) }}>
-                        {filters.month2 ?
+                      <span style={{ cursor: 'pointer' }} onClick={() => { setFilters({ ...filters, month4: !filters.month4 }) }}>
+                        {filters.month4 ?
                           <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M5.95 10.15L11.2375 4.8625L10.1875 3.8125L5.95 8.05L3.8125 5.9125L2.7625 6.9625L5.95 10.15ZM1.75 13.75C1.3375 13.75 0.984375 13.6031 0.690625 13.3094C0.396875 13.0156 0.25 12.6625 0.25 12.25V1.75C0.25 1.3375 0.396875 0.984375 0.690625 0.690625C0.984375 0.396875 1.3375 0.25 1.75 0.25H12.25C12.6625 0.25 13.0156 0.396875 13.3094 0.690625C13.6031 0.984375 13.75 1.3375 13.75 1.75V12.25C13.75 12.6625 13.6031 13.0156 13.3094 13.3094C13.0156 13.6031 12.6625 13.75 12.25 13.75H1.75ZM1.75 12.25H12.25V1.75H1.75V12.25Z" fill="#CA4625" />
                           </svg> :
                           <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M1.75 13.75C1.3375 13.75 0.984375 13.6031 0.690625 13.3094C0.396875 13.0156 0.25 12.6625 0.25 12.25V1.75C0.25 1.3375 0.396875 0.984375 0.690625 0.690625C0.984375 0.396875 1.3375 0.25 1.75 0.25H12.25C12.6625 0.25 13.0156 0.396875 13.3094 0.690625C13.6031 0.984375 13.75 1.3375 13.75 1.75V12.25C13.75 12.6625 13.6031 13.0156 13.3094 13.3094C13.0156 13.6031 12.6625 13.75 12.25 13.75H1.75ZM1.75 12.25H12.25V1.75H1.75V12.25Z" fill="#818184" />
                           </svg>}
-                      </span>&nbsp;<span className={filters.month2 ? "label-head active-label-head" : "label-head"}>4 months</span>&nbsp;&nbsp;
-                      <span style={{ cursor: 'pointer' }} onClick={() => { setFilters({ ...filters, month3: !filters.month3 }) }}>
-                        {filters.month3 ?
-                          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M5.95 10.15L11.2375 4.8625L10.1875 3.8125L5.95 8.05L3.8125 5.9125L2.7625 6.9625L5.95 10.15ZM1.75 13.75C1.3375 13.75 0.984375 13.6031 0.690625 13.3094C0.396875 13.0156 0.25 12.6625 0.25 12.25V1.75C0.25 1.3375 0.396875 0.984375 0.690625 0.690625C0.984375 0.396875 1.3375 0.25 1.75 0.25H12.25C12.6625 0.25 13.0156 0.396875 13.3094 0.690625C13.6031 0.984375 13.75 1.3375 13.75 1.75V12.25C13.75 12.6625 13.6031 13.0156 13.3094 13.3094C13.0156 13.6031 12.6625 13.75 12.25 13.75H1.75ZM1.75 12.25H12.25V1.75H1.75V12.25Z" fill="#CA4625" />
-                          </svg> :
-                          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.75 13.75C1.3375 13.75 0.984375 13.6031 0.690625 13.3094C0.396875 13.0156 0.25 12.6625 0.25 12.25V1.75C0.25 1.3375 0.396875 0.984375 0.690625 0.690625C0.984375 0.396875 1.3375 0.25 1.75 0.25H12.25C12.6625 0.25 13.0156 0.396875 13.3094 0.690625C13.6031 0.984375 13.75 1.3375 13.75 1.75V12.25C13.75 12.6625 13.6031 13.0156 13.3094 13.3094C13.0156 13.6031 12.6625 13.75 12.25 13.75H1.75ZM1.75 12.25H12.25V1.75H1.75V12.25Z" fill="#818184" />
-                          </svg>}
-                      </span>&nbsp;
-                      <span className={filters.month3 ? "label-head active-label-head" : "label-head"}>7 months</span>
-                      &nbsp; <span style={{ cursor: 'pointer' }} onClick={() => { setFilters({ ...filters, month3: !filters.month3 }) }}>
-                        {filters.month3 ?
+                      </span>&nbsp;<span className={filters.month4 ? "label-head active-label-head" : "label-head"}>4 months</span>&nbsp;&nbsp;
+                      <span style={{ cursor: 'pointer' }} onClick={() => { setFilters({ ...filters, month7: !filters.month7 }) }}>
+                        {filters.month7 ?
                           <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M5.95 10.15L11.2375 4.8625L10.1875 3.8125L5.95 8.05L3.8125 5.9125L2.7625 6.9625L5.95 10.15ZM1.75 13.75C1.3375 13.75 0.984375 13.6031 0.690625 13.3094C0.396875 13.0156 0.25 12.6625 0.25 12.25V1.75C0.25 1.3375 0.396875 0.984375 0.690625 0.690625C0.984375 0.396875 1.3375 0.25 1.75 0.25H12.25C12.6625 0.25 13.0156 0.396875 13.3094 0.690625C13.6031 0.984375 13.75 1.3375 13.75 1.75V12.25C13.75 12.6625 13.6031 13.0156 13.3094 13.3094C13.0156 13.6031 12.6625 13.75 12.25 13.75H1.75ZM1.75 12.25H12.25V1.75H1.75V12.25Z" fill="#CA4625" />
                           </svg> :
@@ -881,18 +822,28 @@ const Courses = () => {
                             <path d="M1.75 13.75C1.3375 13.75 0.984375 13.6031 0.690625 13.3094C0.396875 13.0156 0.25 12.6625 0.25 12.25V1.75C0.25 1.3375 0.396875 0.984375 0.690625 0.690625C0.984375 0.396875 1.3375 0.25 1.75 0.25H12.25C12.6625 0.25 13.0156 0.396875 13.3094 0.690625C13.6031 0.984375 13.75 1.3375 13.75 1.75V12.25C13.75 12.6625 13.6031 13.0156 13.3094 13.3094C13.0156 13.6031 12.6625 13.75 12.25 13.75H1.75ZM1.75 12.25H12.25V1.75H1.75V12.25Z" fill="#818184" />
                           </svg>}
                       </span>&nbsp;
-                      <span className={filters.month3 ? "label-head active-label-head" : "label-head"}>1 year</span>
+                      <span className={filters.month7 ? "label-head active-label-head" : "label-head"}>7 months</span>
+                      &nbsp; <span style={{ cursor: 'pointer' }} onClick={() => { setFilters({ ...filters, year1: !filters.year1 }) }}>
+                        {filters.year1 ?
+                          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5.95 10.15L11.2375 4.8625L10.1875 3.8125L5.95 8.05L3.8125 5.9125L2.7625 6.9625L5.95 10.15ZM1.75 13.75C1.3375 13.75 0.984375 13.6031 0.690625 13.3094C0.396875 13.0156 0.25 12.6625 0.25 12.25V1.75C0.25 1.3375 0.396875 0.984375 0.690625 0.690625C0.984375 0.396875 1.3375 0.25 1.75 0.25H12.25C12.6625 0.25 13.0156 0.396875 13.3094 0.690625C13.6031 0.984375 13.75 1.3375 13.75 1.75V12.25C13.75 12.6625 13.6031 13.0156 13.3094 13.3094C13.0156 13.6031 12.6625 13.75 12.25 13.75H1.75ZM1.75 12.25H12.25V1.75H1.75V12.25Z" fill="#CA4625" />
+                          </svg> :
+                          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.75 13.75C1.3375 13.75 0.984375 13.6031 0.690625 13.3094C0.396875 13.0156 0.25 12.6625 0.25 12.25V1.75C0.25 1.3375 0.396875 0.984375 0.690625 0.690625C0.984375 0.396875 1.3375 0.25 1.75 0.25H12.25C12.6625 0.25 13.0156 0.396875 13.3094 0.690625C13.6031 0.984375 13.75 1.3375 13.75 1.75V12.25C13.75 12.6625 13.6031 13.0156 13.3094 13.3094C13.0156 13.6031 12.6625 13.75 12.25 13.75H1.75ZM1.75 12.25H12.25V1.75H1.75V12.25Z" fill="#818184" />
+                          </svg>}
+                      </span>&nbsp;
+                      <span className={filters.year1 ? "label-head active-label-head" : "label-head"}>1 year</span>
                     </div>
                     <div style={{ marginTop: '10px' }}>
-                      <span style={{ cursor: 'pointer' }} onClick={() => { setFilters({ ...filters, month2: !filters.month2 }) }}>
-                        {filters.month2 ?
+                      <span style={{ cursor: 'pointer' }} onClick={() => { setFilters({ ...filters, year2: !filters.year2 }) }}>
+                        {filters.year2 ?
                           <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M5.95 10.15L11.2375 4.8625L10.1875 3.8125L5.95 8.05L3.8125 5.9125L2.7625 6.9625L5.95 10.15ZM1.75 13.75C1.3375 13.75 0.984375 13.6031 0.690625 13.3094C0.396875 13.0156 0.25 12.6625 0.25 12.25V1.75C0.25 1.3375 0.396875 0.984375 0.690625 0.690625C0.984375 0.396875 1.3375 0.25 1.75 0.25H12.25C12.6625 0.25 13.0156 0.396875 13.3094 0.690625C13.6031 0.984375 13.75 1.3375 13.75 1.75V12.25C13.75 12.6625 13.6031 13.0156 13.3094 13.3094C13.0156 13.6031 12.6625 13.75 12.25 13.75H1.75ZM1.75 12.25H12.25V1.75H1.75V12.25Z" fill="#CA4625" />
                           </svg> :
                           <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M1.75 13.75C1.3375 13.75 0.984375 13.6031 0.690625 13.3094C0.396875 13.0156 0.25 12.6625 0.25 12.25V1.75C0.25 1.3375 0.396875 0.984375 0.690625 0.690625C0.984375 0.396875 1.3375 0.25 1.75 0.25H12.25C12.6625 0.25 13.0156 0.396875 13.3094 0.690625C13.6031 0.984375 13.75 1.3375 13.75 1.75V12.25C13.75 12.6625 13.6031 13.0156 13.3094 13.3094C13.0156 13.6031 12.6625 13.75 12.25 13.75H1.75ZM1.75 12.25H12.25V1.75H1.75V12.25Z" fill="#818184" />
                           </svg>}
-                      </span>&nbsp;<span className={filters.month2 ? "label-head active-label-head" : "label-head"}>2 years</span>&nbsp;&nbsp;
+                      </span>&nbsp;<span className={filters.year2 ? "label-head active-label-head" : "label-head"}>2 years</span>&nbsp;&nbsp;
 
                     </div>
                   </div>

@@ -22,7 +22,7 @@ const Accordian = ({ data, sliderVal, setSliderVal, selectedFilters }) => {
 
   const shouldDisplayLink = (points) => {
     if (selectedFilters) {
-      const { online, onCampus, days7, days21, month1, month2, month3, weekends, weekDays } = selectedFilters;
+      const { online, onCampus, days7, days21, month1, month2, month3, weekends, weekDays, year1, year2, month7, month4, days1, days2 } = selectedFilters;
 
       if (!anyFilterActive) {
         return true; // Show link if no filters are active
@@ -37,9 +37,11 @@ const Accordian = ({ data, sliderVal, setSliderVal, selectedFilters }) => {
       if (onCampus) {
         conditions.push(points.onCampus);
       }
-      if (days7 || days21 || month1 || month2 || month3) {
+      if (days7 || days21 || month1 || month2 || month3 || year1 || year2 || month7 || month4 || days1 || days2) {
         if ((days7 && points.days7) || (days21 && points.days21) ||
-          (month1 && points.month1) || (month2 && points.month2) || (month3 && points.month3)) {
+          (month1 && points.month1) || (month2 && points.month2) || (month3 && points.month3)
+          || (year1 && points.year1) || (year2 && points.year2) || (month7 && points.month7)
+          || (month4 && points.month4) || (days1 && points.days1) || (days2 && points.days2) || points?.isRegular) {
           conditions.push(true);
         }
         else {
@@ -73,84 +75,55 @@ const Accordian = ({ data, sliderVal, setSliderVal, selectedFilters }) => {
     return false; // In case selectedFilters is undefined
   };
 
-  const shouldDisplayBlock = (obj) => {
+  // const shouldDisplayBlock = (obj) => {
 
-    if (selectedFilters) {
-      // const { online, onCampus, days7, days21, month1, month2, month3, weekends, weekDays } = selectedFilters;
+  //   if (selectedFilters) {
+  //     // const { online, onCampus, days7, days21, month1, month2, month3, weekends, weekDays } = selectedFilters;
 
-      if (!anyFilterActive) {
-        return true; // Show block if no filters are active
-      }
+  //     if (!anyFilterActive) {
+  //       return true; // Show block if no filters are active
+  //     }
 
-      // Extract the points from obj
-      const points = obj.ans;
-      // Create an array to store conditions for filtering
-      // const conditions = [];
+  //     // Extract the points from obj
+  //     const points = obj.ans;
+  //     // Create an array to store conditions for filtering
+  //     // const conditions = [];
 
-      // Check if points exist and are not empty
-      if (points) {
-        //   // console.log(points);
-        //   if (online) {
-        //     const bool = points.some(obj => obj.online === true);
-        //     conditions.push(!!bool);
-        //   }
+  //     // Check if points exist and are not empty
+  //     if (points) {
 
-        //   if (onCampus) {
-        //     const bool = points.some(obj => obj.onCampus === true);
-        //     conditions.push(!!bool);
-        //   }
+  //       // Function to filter the array
+  //       var filteredData = points.filter(item => {
+  //         console.log(item);
+          
+  //         // Check if the "days" group (days7, days21, month1, month2, month3) has any `true`
+  //         let daysGroupMatches = ['days7', 'days21', 'month1', 'month2', 'month3', 'year1', 'year2', 'month7', 'month4', 'days1', 'days2'].some(key => selectedFilters[key] && item[key]);
 
-        //   if (weekends) {
-        //     const bool = points.some(obj => obj.weekends === true);
-        //     conditions.push(!!bool);
-        //   }
+  //         // If all "days" fields are false in `a`, we ignore this check and consider it a match
+  //         if (['days7', 'days21', 'month1', 'month2', 'month3', 'year1', 'year2', 'month7', 'month4', 'days1', 'days2'].every(key => !selectedFilters[key])) {
+  //           daysGroupMatches = true;
+  //         }
 
-        //   if (weekDays) {
-        //     const bool = points.some(obj => obj.weekDays === true);
-        //     conditions.push(!!bool);
-        //   }
+  //         // Check that other properties match the values in `a`
+  //         let otherPropsMatch = Object.keys(selectedFilters).every(key => {
+  //           if (['days7', 'days21', 'month1', 'month2', 'month3', 'year1', 'year2', 'month7', 'month4', 'days1', 'days2'].includes(key)) {
+  //             return true;  // Skip the "days" group properties because they're handled separately
+  //           }
+  //           return !selectedFilters[key] || selectedFilters[key] === item[key];  // Ensure it matches `true` values or ignore if `a[key]` is false
+  //         });
 
-        //   if (days7 || days21 || month1 || month2 || month3) {
-        //     if ((days7 && points.some(obj => obj.days7 === true)) || (days21 && points.some(obj => obj.days21 === true)) ||
-        //       (month1 && points.some(obj => obj.month1 === true)) || (month2 && points.some(obj => obj.month2 === true)) ||
-        //       (month3 && points.some(obj => obj.month3 === true))) {
-        //       conditions.push(true);
-        //     }
-        //     else {
-        //       conditions.push(false)
-        //     }
-        //   }
-        // }
-        // Function to filter the array
-        var filteredData = points.filter(item => {
-          // Check if the "days" group (days7, days21, month1, month2, month3) has any `true`
-          let daysGroupMatches = ['days7', 'days21', 'month1', 'month2', 'month3'].some(key => selectedFilters[key] && item[key]);
-        
-          // If all "days" fields are false in `a`, we ignore this check and consider it a match
-          if (['days7', 'days21', 'month1', 'month2', 'month3'].every(key => !selectedFilters[key])) {
-            daysGroupMatches = true;
-          }
-        
-          // Check that other properties match the values in `a`
-          let otherPropsMatch = Object.keys(selectedFilters).every(key => {
-            if (['days7', 'days21', 'month1', 'month2', 'month3'].includes(key)) {
-              return true;  // Skip the "days" group properties because they're handled separately
-            }
-            return !selectedFilters[key] || selectedFilters[key] === item[key];  // Ensure it matches `true` values or ignore if `a[key]` is false
-          });
-        
-          // Return true if both conditions are satisfied
-          return daysGroupMatches && otherPropsMatch;
-        });
-      }
-      console.log(filteredData);
+  //         // Return true if both conditions are satisfied
+  //         return daysGroupMatches && otherPropsMatch;
+  //       });
+  //     }
+  //     console.log(filteredData);
 
-      // Check if all active conditions are met and not empty
-      return filteredData.length > 0//conditions.length > 0 && conditions.every(Boolean);
-    }
+  //     // Check if all active conditions are met and not empty
+  //     return filteredData.length > 0//conditions.length > 0 && conditions.every(Boolean);
+  //   }
 
-    return false; // In case selectedFilters is undefined
-  };
+  //   return false; // In case selectedFilters is undefined
+  // };
 
   // function filterObjectsByCriteria(criteria, dataArray) {
   //   // Extract only the keys that have true values from the criteria object
@@ -161,7 +134,60 @@ const Accordian = ({ data, sliderVal, setSliderVal, selectedFilters }) => {
   //     return trueCriteria.every(key => obj[key] === true);
   //   });
   // }
-
+  const shouldDisplayBlock = (obj) => {
+    if (selectedFilters) {
+      if (!anyFilterActive) {
+        return true; // Show block if no filters are active
+      }
+  
+      const points = obj.ans; // Extract points from the object
+  
+      if (points) {
+        var filteredData = points.filter(item => {
+          console.log(item);
+          
+          // Check if the item is regular; if it is, skip the daysGroupMatches check
+          if (item.isRegular) {
+            // If it's regular, we don't need to validate daysGroupMatches, just check other properties
+            return Object.keys(selectedFilters).every(key => {
+              // Skip the "days" group properties and check the others
+              if (['days7', 'days21', 'month1', 'month2', 'month3', 'year1', 'year2', 'month7', 'month4', 'days1', 'days2'].includes(key)) {
+                return true;  // Skip the "days" group properties because they're handled separately
+              }
+              return !selectedFilters[key] || selectedFilters[key] === item[key];  // Ensure it matches `true` values or ignore if `selectedFilters[key]` is false
+            });
+          }
+  
+          // If it's not regular, perform the `daysGroupMatches` check
+  
+          // Check if the "days" group (days7, days21, month1, month2, month3) has any `true`
+          let daysGroupMatches = ['days7', 'days21', 'month1', 'month2', 'month3', 'year1', 'year2', 'month7', 'month4', 'days1', 'days2'].some(key => selectedFilters[key] && item[key]);
+  
+          // If all "days" fields are false in `selectedFilters`, we ignore this check and consider it a match
+          if (['days7', 'days21', 'month1', 'month2', 'month3', 'year1', 'year2', 'month7', 'month4', 'days1', 'days2'].every(key => !selectedFilters[key])) {
+            daysGroupMatches = true;
+          }
+  
+          // Check that other properties match the values in `selectedFilters`
+          let otherPropsMatch = Object.keys(selectedFilters).every(key => {
+            if (['days7', 'days21', 'month1', 'month2', 'month3', 'year1', 'year2', 'month7', 'month4', 'days1', 'days2'].includes(key)) {
+              return true;  // Skip the "days" group properties because they're handled separately
+            }
+            return !selectedFilters[key] || selectedFilters[key] === item[key];  // Ensure it matches `true` values or ignore if `selectedFilters[key]` is false
+          });
+  
+          // Return true if both conditions are satisfied
+          return daysGroupMatches && otherPropsMatch;
+        });
+      }
+  
+      console.log(filteredData);
+      return filteredData.length > 0;
+    }
+  
+    return false; // In case selectedFilters is undefined
+  };
+  
 
   return (
     <div className="accordian_contanier">

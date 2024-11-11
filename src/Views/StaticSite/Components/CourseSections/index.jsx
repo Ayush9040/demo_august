@@ -25,7 +25,7 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
   }, [data])
   const shouldDisplayLink = (points) => {// used to display the link in UI
     if (selectedFilters) {
-      const { online, onCampus, days7, days21, month1, month2, month3, weekends, weekDays } = selectedFilters;
+      const { online, onCampus, days7, days21, month1, month2, month3, weekends, weekDays, year1, year2, month7, month4, days1, days2 } = selectedFilters;
 
       if (!anyFilterActive) {
         return true; // Show link if no filters are active
@@ -56,9 +56,10 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
       //   conditions.push(points.month3);
       // }
 
-      if (days7 || days21 || month1 || month2 || month3) {
+      if (days7 || days21 || month1 || month2 || month3 || year1 || year2 || month7 || month4 || days1 || days2) {
         if ((days7 && points.days7) || (days21 && points.days21) ||
-          (month1 && points.month1) || (month2 && points.month2) || (month3 && points.month3)) {
+          (month1 && points.month1) || (month2 && points.month2) || (month3 && points.month3) || (year1 && points.year1)
+          || (year2 && points.year2) || (month7 && points.month7) || (month4 && points.month4) || (days1 && points.days1) || (days2 && points.days2) || points?.isRegular) {
           conditions.push(true);
         }
         else {
@@ -80,54 +81,7 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
     return false; // In case selectedFilters is undefined
   };
 
-  const shouldDisplayCard = (points) => {// used to display the card in UI
-    if (selectedFilters) {
-      const { online, onCampus, days7, days21, month1, month2, month3, weekends, weekDays } = selectedFilters;
 
-      if (!anyFilterActive) {
-        return true; // Show link if no filters are active
-      }
-
-      // Create an array to store conditions for filtering
-      const conditions = [];
-
-      if (online) {
-        conditions.push(points.online);
-      }
-      if (onCampus && (points?.residential || points?.nonResidential)) {
-        conditions.push(true);
-      }
-      // if ((month1 && points?.tenure == '1 month') || month2 && points?.tenure == '2 month' || month3 && points?.tenure == '3 month') {
-      //   conditions.push(true);
-      // }
-      if (days7) {
-        conditions.push(points?.tenure == '7 days');
-      }
-      if (days21) {
-        conditions.push(points?.tenure == '21 days');
-      }
-      if (month1) {
-        conditions.push(points?.tenure == '1 month');
-      }
-      if (month2) {
-        conditions.push(points?.tenure == '2 month');
-      }
-      if (month3) {
-        conditions.push(points?.tenure == '3 month');
-      }
-      if (weekends) {
-        conditions.push(points.weekends);
-      }
-      if (weekDays) {
-        conditions.push(points.weekDays);
-      }
-
-      // Check if all active conditions are met
-      return conditions.length > 0 && conditions.every(Boolean);
-    }
-
-    return false; // In case selectedFilters is undefined
-  };
   const content = () => {
 
     const coursesList = [
@@ -195,18 +149,18 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
           {
             url: '/900-hours-advanced-teacher-training-course',
             text: '4 Months YTTC-Online-English',
-            online: true, weekDays: true,
+            online: true, weekDays: true, month4: true
           },
           {
             url: '/seven-month-ttc',
             text: '7 Months YTTC-Online & On Campus-English',
-            onCampus: true, online: true, weekDays: true,
+            onCampus: true, online: true, weekDays: true, month7: true
           },
-          { url: '/one-year-ttc', text: '1 Year YTTC-Online & On Campus-Hindi', onCampus: true, online: true, weekDays: true, },
+          { url: '/one-year-ttc', text: '1 Year YTTC-Online & On Campus-Hindi', onCampus: true, online: true, weekDays: true, year1: true },
           {
             url: '/two-year-ttc',
             text: '2 Years YTTC-Online & On Campus-English',
-            onCampus: true, online: true, weekDays: true,
+            onCampus: true, online: true, weekDays: true, year2: true
           },
         ],
       },
@@ -281,52 +235,52 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
     const regularCourseStatic = [{
       url: '/asana-regular-classes-on-campus',
       text: 'Asana Regular Classes for Men On Campus',
-      onCampus: true, weekDays: true
+      onCampus: true, weekDays: true, isRegular: true
     },
     {
       url: '/asana-regular-classes-on-campus-women',
       text: 'Asana Regular Classes for Women On Campus',
-      onCampus: true, weekDays: true
+      onCampus: true, weekDays: true, isRegular: true
     },
     {
       url: '/asana-regular-classes-online',
       text: 'Asana Regular Classes (Men & Women) - Online',
-      online: true, weekDays: true
+      online: true, weekDays: true, isRegular: true
     },
     {
       url: '/weekend-classes',
       text: 'Weekend Asana Classes - (Men & Women) On Campus',
-      onCampus: true, weekends: true
+      onCampus: true, weekends: true, isRegular: true
     },
     {
       url: '/weekend-classes-online',
       text: 'Weekend Asana Classes - (Men & Women) Online',
-      online: true, weekends: true
+      online: true, weekends: true, isRegular: true
     },
     {
       url: '/childrens-regular-classes',
       text: "Children's Regular Class - On Campus",
-      onCampus: true, weekDays: true
+      onCampus: true, weekDays: true, isRegular: true
     },
     {
       url: '/childrens-weekend-classes-on-campus',
       text: "Children's Weekend Class - On Campus",
-      onCampus: true, weekends: true
+      onCampus: true, weekends: true, isRegular: true
     },
     {
       url: '/advanced-regular-yoga-classes',
       text: ' Advance Asana Regular Class - Online (Only for TYI Teachers) ',
-      online: true, weekDays: true
+      online: true, weekDays: true, isRegular: true
     },
     {
       url: '/regular-pregnacy-classes',
       text: 'Regular Pregnancy Class',
-      onCampus: true, online: true, weekDays: true
+      onCampus: true, online: true, weekDays: true, isRegular: true
     },
     {
       url: '/IBY-course',
       text: 'IBY classes - On Campus & Online',
-      onCampus: true, online: true, weekDays: true
+      onCampus: true, online: true, weekDays: true, isRegular: true
     }]
 
     const campsWroskshopStatic = [{
@@ -337,17 +291,17 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
     {
       url: '/satsang',
       text: 'Satsang - On Campus',
-      onCampus: true, weekends: true
+      onCampus: true, weekends: true, days1: true
     },
     {
       url: '/samattvam',
       text: 'Samattvam(Health Checkup) - On Campus',
-      onCampus: true, weekends: true
+      onCampus: true, weekends: true, days1: true
     },
     {
       url: '/couples-classes',
       text: "Couple's classes - Online",
-      online: true, weekends: true
+      online: true, weekends: true, days1: true
     },
     {
       url: '/home-tuitions',
@@ -357,32 +311,32 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
     {
       url: '/stress-management-camp',
       text: 'Stress Management Camp - On Campus',
-      onCampus: true, weekDays: true
+      onCampus: true, weekDays: true, days1: true
     },
     {
       url: '/weight-management-workshop',
       text: 'Weight Management Workshop - On Campus',
-      onCampus: true, weekDays: true
+      onCampus: true, weekDays: true, days1: true
     },
     {
       url: '/pregnancy-camp-for-ante-post-natal',
       text: 'Pregnancy Camp for Ante & Post Natal - On Campus',
-      onCampus: true, weekDays: true
+      onCampus: true, weekDays: true, days2: true
     },
     {
       url: '/cardiac-hypertension-workshop',
       text: 'Cardiac & Hypertension Workshop - On Campus',
-      onCampus: true, weekDays: true
+      onCampus: true, weekDays: true, days1: true
     },
     {
       url: '/back-joint-disorder-workshop',
       text: 'Back & Joint Disorder Workshop - On Campus',
-      onCampus: true, weekDays: true
+      onCampus: true, weekDays: true, days1: true
     },
     {
       url: '/pranayama-workshop',
       text: 'Pranayama Workshop',
-      onCampus: true, online: true, weekDays: true
+      onCampus: true, online: true, weekDays: true, days1: true
     }]
 
     const mostPopularStatic = [{
@@ -408,7 +362,7 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
     {
       url: '/pregnancy-camp-for-ante-post-natal',
       text: 'Pregnancy Camp',
-      onCampus: true, weekDays: true
+      onCampus: true, weekDays: true, days2: true
     }]
 
     switch (title) {

@@ -2098,7 +2098,7 @@ const ttc200hr = {
     textdescription3: '',
     textdescription4: '',
     textdescription5: '',
-    weekends:true,
+    weekends: true,
     key: 'weekend-teacher-training-course',
     weekDays: true,
     // templateId: 'COURSE200_3M_TTC',
@@ -7134,6 +7134,7 @@ const camps = {
     title: 'Cardiac & Hypertension Yoga Workshop - On Campus',
     weekDays: true,
     key: 'cardiac-hypertension-workshop',
+    tenure: '1 day',
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
     templateId: {
@@ -7163,7 +7164,6 @@ const camps = {
     residential: false,
     certficate: false,
 
-    tenure: '',
     courseType: 'Camps & Workshop',
     language: 'English',
     preRequisite: 'None',
@@ -8242,6 +8242,7 @@ const camps = {
     textdescription5: '',
     title: 'Pranayama Workshop - On Campus & Online',
     key: 'pranayama-workshop',
+    tenure: '1 day',
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
     templateId: {
@@ -8271,7 +8272,6 @@ const camps = {
     residential: false,
     certficate: false,
 
-    tenure: '',
     courseType: 'Camps & Workshop',
     language: 'English',
     preRequisite: 'None',
@@ -8415,6 +8415,7 @@ const camps = {
     textdescription5: '',
     title: 'Pregnancy Yoga Camp For Ante & Post Natal - On Campus',
     key: 'pregnancy-camp-for-ante-post-natal',
+    tenure: '2 days',
     batch: 1,
     join: true,
     // templateId: 'GENERAL_AUTO_EMAIL',
@@ -8456,7 +8457,6 @@ const camps = {
     residential: false,
     certficate: false,
 
-    tenure: '',
     courseType: 'Camps & Workshop',
     language: 'English',
     preRequisite: 'None',
@@ -8951,6 +8951,7 @@ const camps = {
     textdescription5: '',
     title: 'Stress Management Yoga Camp - On Campus',
     key: 'stress-management-camp',
+    tenure: '1 day',
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
     templateId: {
@@ -8980,7 +8981,6 @@ const camps = {
     residential: false,
     certficate: false,
 
-    tenure: '',
     courseType: 'Camps & Workshop',
     language: 'English',
     preRequisite: 'None',
@@ -9123,6 +9123,7 @@ const camps = {
     textdescription5: '',
     title: 'Weight Management Yoga Workshop',
     key: 'weight-management-workshop',
+    tenure: '1 day',
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
     templateId: {
@@ -9151,7 +9152,6 @@ const camps = {
     residential: false,
     certficate: false,
 
-    tenure: '',
     courseType: 'Camps & Workshop',
     language: 'English',
     preRequisite: 'None',
@@ -9476,6 +9476,7 @@ const camps = {
     textdescription5: '',
     title: 'Back & Joint Disorder Yoga Workshop',
     key: 'back-joint-disorder-workshop',
+    tenure: '1 day',
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
     templateId: {
@@ -9504,7 +9505,6 @@ const camps = {
     residential: false,
     certficate: false,
 
-    tenure: '',
     courseType: 'Camps & Workshop',
     language: 'English',
     preRequisite: 'None',
@@ -11953,6 +11953,7 @@ const classes = {
     textdescription5: '',
     weekDays: true,
     title: 'Advanced Yoga Asana Regular Class - Online (Only for TYI Teachers)',
+    isRegular:true,
     key: 'advanced-regular-yoga-classes',
     batch: 1,
     newName: 'Advanced Asana Regular Class (Only for TYI Teachers)',
@@ -12066,6 +12067,7 @@ const classes = {
     weekDays: true,
     title: 'Healing Yoga Movement & Rhythm - Online',
     key: 'healing-movement-and-rhythm',
+    isRegular:true,
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
     templateId: {
@@ -12195,6 +12197,7 @@ const classes = {
     weekDays: true,
     title: 'Yoga Asana Regular Classes - (Men & Women) - Online Yoga Classes',
     key: 'asana-regular-classes-online',
+    isRegular:true,
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
     templateId: {
@@ -12464,6 +12467,7 @@ const classes = {
     textdescription5: '',
     title: 'Yoga Classes for Men (Regular Asana) - On Campus',
     key: 'asana-regular-classes-on-campus',
+    isRegular:true,
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
     templateId: {
@@ -12619,6 +12623,7 @@ const classes = {
     textdescription5: '',
     title: 'Yoga Classes for Women (Regular Asana) - On Campus',
     key: 'asana-regular-classes-on-campus-women',
+    isRegular:true,
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
     templateId: {
@@ -12803,6 +12808,7 @@ const classes = {
     textdescription5: '',
     title: 'Children\'s Yoga Classes (Regular) - On Campus',
     key: 'childrens-regular-classes',
+    isRegular:true,
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
     templateId: {
@@ -12897,9 +12903,10 @@ const classes = {
     textdescription3: '',
     textdescription4: '',
     textdescription5: '',
-    weekends:true,
+    weekends: true,
     title: 'Children\'s Weekend Yoga Class - On Campus',
     key: 'childrens-weekend-classes-on-campus',
+    isRegular:true,
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
     templateId: {
@@ -12986,6 +12993,7 @@ const classes = {
     textdescription5: '',
     title: 'Online Meditation Course  (Foundation Course)',
     key: 'meditation-foundation-course-online',
+    isRegular:true,
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
     templateId: {
@@ -13140,6 +13148,7 @@ const classes = {
     textdescription5: '',
     title: 'Regular Online Meditation Classes',
     key: 'regular-meditation-classes-online',
+    isRegular:true,
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
     templateId: {
@@ -13302,7 +13311,9 @@ const classes = {
     textdescription5: '',
     title: ' Satsang ',
     key: 'satsang',
-    weekends:true,
+    isRegular:true,
+    tenure: '1 day',
+    weekends: true,
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
     templateId: {
@@ -13411,9 +13422,10 @@ const classes = {
     textdescription3: '',
     textdescription4: '',
     textdescription5: '',
-    weekends:true,
+    weekends: true,
     title: 'Weekend Yoga Asana Classes - (Men & Women) - On Campus',
     key: 'weekend-classes',
+    isRegular:true,
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
     templateId: {
@@ -13560,6 +13572,7 @@ const classes = {
     textdescription5: '',
     title: 'Yog Prayas - Online',
     key: 'yog-prayas-online',
+    isRegular:true,
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
     templateId: {
@@ -13758,7 +13771,9 @@ const classes = {
     textdescription5: '',
     title: 'Samattvam (Health Checkup) - On Campus',
     key: 'samattvam',
-    weekends:true,
+    isRegular:true,
+    tenure: '1 day',
+    weekends: true,
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
     // templateId: {
@@ -13795,7 +13810,6 @@ const classes = {
     residential: false,
     certficate: false,
 
-    tenure: '',
     courseType: "samatwam health checkup",
     language: 'English',
     preRequisite: 'None',
@@ -13898,7 +13912,9 @@ const classes = {
     textdescription5: '',
     title: 'Couples’ Yoga Classes  - Online',
     key: 'couples-classes',
-    weekends:true,
+    isRegular:true,
+    tenure: '1 day',
+    weekends: true,
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
     templateId: {
@@ -13932,7 +13948,6 @@ const classes = {
     residential: false,
     certficate: false,
 
-    tenure: '',
     courseType: "Couple's Classes Online",
     language: 'English',
     preRequisite: 'None',
@@ -14103,9 +14118,10 @@ const classes = {
     textdescription3: '',
     textdescription4: '',
     textdescription5: '',
-    weekends:true,
+    weekends: true,
     title: 'Weekend Yoga Asana Classes - (Men & Women) - Online',
     key: 'weekend-classes-online',
+    isRegular:true,
     batch: 1,
     newName: 'Weekend Asana Classes (Men & Women)',
     days: [
@@ -14237,6 +14253,7 @@ const classes = {
     textdescription5: '',
     title: 'Regular Pregnancy Yoga Classes - Online & On Campus',
     key: 'regular-pregnacy-classes',
+    isRegular:true,
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
     templateId: {
@@ -14394,6 +14411,7 @@ const classes = {
     textdescription5: '',
     title: 'MA Yoga Shastra',
     key: 'ma-yoga-shastra',
+    isRegular:true,
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
     templateId: {
