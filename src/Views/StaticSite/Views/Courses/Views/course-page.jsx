@@ -768,7 +768,7 @@ const Courses = () => {
               </div>
               {isFilterOpened &&
                 <div className="filter-values" onClick={(event) => event.stopPropagation()}>
-                  <div className='filter-head'></div>
+                  <div className='filter-head'>Course Format</div>
                   <div className='filter-data'>
                     <span style={{ cursor: 'pointer' }} onClick={() => { setFilters({ ...filters, onCampus: false, online: filters.online ? false : true }) }}>
                       {filters.online ?
