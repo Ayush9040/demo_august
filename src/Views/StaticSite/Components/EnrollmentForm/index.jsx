@@ -350,6 +350,7 @@ const Enrollment = () => {
                 // Navigare to Success if razorpay_payment_id, razorpay_order_id, razorpay_signature is there
                 if (res.razorpay_payment_id && res.razorpay_order_id && res.razorpay_signature) {
                   await axios.post(`${authBaseDomain}/ali/mail`, mailTemplate)
+                  console.log(courseFee);
 
                   handleCTPaymentCompletedCourse({
                     // cost,
@@ -396,17 +397,28 @@ const Enrollment = () => {
                     // medicalIssues,
                     // residentialStatus,
                   })
+
                   ReactGA.event('purchase', {
                     currency: 'INR',
                     value: courseFee,
                     items: [{
-                      item_name: formData.courseName,
+                      item_name: currentCourse?.title,
                       item_id: currentCourse?.courseCategory,
                       price: courseFee,
                       quantity: 1
                     }]
                   });
-            
+                  console.log({
+                    currency: 'INR',
+                    value: courseFee,
+                    items: [{
+                      item_name: currentCourse?.title,
+                      item_id: currentCourse?.courseCategory,
+                      price: courseFee,
+                      quantity: 1
+                    }]
+                  });
+
 
                   navigate(`/enrollment_thankyou/${currentCourse.key}`)
                 } else {
