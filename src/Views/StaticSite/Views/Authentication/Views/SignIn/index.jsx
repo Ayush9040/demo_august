@@ -395,7 +395,7 @@ const SignIn = () => {
 
 
       const country = countryComponent ? countryComponent.long_name : '';
-      
+
       const city = cityComponent ? cityComponent.long_name : '';
       const state = stateComponent ? stateComponent.long_name : city;//if state not there then take locality
       const pincode = postalCodeComponent ? postalCodeComponent.long_name : '';
@@ -581,7 +581,7 @@ const SignIn = () => {
           // handleAlreadySignedUpUser({
           //   phone: userDetails?.phoneNumber
           // })
-          getUserDetails(response?.data?.accessToken, 'alreadySignedUp')
+          await getUserDetails(response?.data?.accessToken, 'alreadySignedUp')
           page ? page !== 'cart' ? navigate(`/enrollment/${page}`) : navigate('/shop/checkout') : navigate('/')
         }
         setOtp(new Array(4).fill(""))//clear OTP
@@ -721,7 +721,7 @@ const SignIn = () => {
           delete payload.address1;
           delete payload.address2;
           payload['gender'] = userDetails?.gender.value;
-          payload['addressLine1'] = rawAddress1?rawAddress1:userDetails?.address1;//userDetails?.address1;
+          payload['addressLine1'] = rawAddress1 ? rawAddress1 : userDetails?.address1;//userDetails?.address1;
           payload['addressLine2'] = userDetails?.address2;
           payload['country'] = values?.country?.label;
           payload['city'] = values?.city?.label;
@@ -754,7 +754,7 @@ const SignIn = () => {
               // document.cookie = `authorizationToken=${response?.data?.accessToken}; path=/;`;
               dispatch(loginUserSuccess({}))
 
-              getUserDetails(response?.data?.accessToken, 'notalreadySignedUp')
+              await getUserDetails(response?.data?.accessToken, 'notalreadySignedUp')
               callCTEvent(payload)
               page ? page !== 'cart' ? navigate(`/enrollment/${page}`) : navigate('/shop/checkout') : navigate('/')
             }
@@ -780,7 +780,7 @@ const SignIn = () => {
               localStorage.setItem('authorizationToken', response?.data?.accessToken)
               localStorage.setItem('refreshToken', response?.data?.refreshToken)
               dispatch(loginUserSuccess({}))
-              getUserDetails(response?.data?.accessToken, 'notalreadySignedUp')
+              await getUserDetails(response?.data?.accessToken, 'notalreadySignedUp')
               callCTEvent(payload)
 
               // console.log('user details 2 ', userDetails);
@@ -884,7 +884,7 @@ const SignIn = () => {
         delete payload.address1;
         delete payload.address2;
         payload['gender'] = userDetails?.gender.value;
-        payload['addressLine1'] = rawAddress1?rawAddress1:userDetails?.address1;
+        payload['addressLine1'] = rawAddress1 ? rawAddress1 : userDetails?.address1;
         payload['addressLine2'] = userDetails?.address2;
         payload['country'] = values?.country?.label;
         payload['city'] = values?.city?.label;
@@ -909,7 +909,7 @@ const SignIn = () => {
             localStorage.setItem('authorizationToken', response?.data?.accessToken)
             localStorage.setItem('refreshToken', response?.data?.refreshToken)
             dispatch(loginUserSuccess({}))
-            getUserDetails(response?.data?.accessToken, 'notalreadySignedUp')
+            await getUserDetails(response?.data?.accessToken, 'notalreadySignedUp')
             callCTEvent(payload)
             setIsBtnLoad(false)
             // console.log('user details 2 ', userDetails);
@@ -1406,7 +1406,7 @@ const SignIn = () => {
         localStorage.setItem('authorizationToken', response?.data?.accessToken)
         localStorage.setItem('refreshToken', response?.data?.refreshToken)
         dispatch(loginUserSuccess({}))
-        getUserDetails(response?.data?.accessToken, 'alreadySignedUp')
+        await getUserDetails(response?.data?.accessToken, 'alreadySignedUp')
         console.log(response?.data)
 
         page ? page !== 'cart' ? navigate(`/enrollment/${page}`) : navigate('/shop/checkout') : navigate('/')
