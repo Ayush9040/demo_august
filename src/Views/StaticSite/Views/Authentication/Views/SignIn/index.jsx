@@ -1128,13 +1128,13 @@ const SignIn = () => {
     const nameRegex = /^[A-Za-z]+( [A-Za-z]+)*$/;
     const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     //split empty space
-    let det = { ...formData }
-    const trimmedAddress1 = det?.address1?.replace(/\s{2,}/g, ' ').trim();
-    const trimmedAddress2 = det?.address2?.replace(/\s{2,}/g, ' ').trim();
+    let det1 = { ...formData }
+    const trimmedAddress1 = det1?.address1?.replace(/\s{2,}/g, ' ').trim();
+    const trimmedAddress2 = det1?.address2?.replace(/\s{2,}/g, ' ').trim();
 
-    det['address1'] = trimmedAddress1;
-    det['address2'] = trimmedAddress2
-    let details = { ...det }
+    det1['address1'] = trimmedAddress1;
+    det1['address2'] = trimmedAddress2
+    let details = { ...det1 }
     setFormData({ ...details, firstName: getTrimmedName(details.firstName), lastName: getTrimmedName(details.lastName) });
 
     details['firstName'] = getTrimmedName(details['firstName'])
