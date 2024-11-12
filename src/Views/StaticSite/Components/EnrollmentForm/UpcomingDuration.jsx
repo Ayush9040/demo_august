@@ -26,7 +26,7 @@ const customStyles = {
 
 // Modal.setAppElement('#___gatsby')
 
-const UpcomingDuration = ({ isShippingModalOpen, setIsShipppingModalOpen, pageDate, setCourseDuration, setCourseDurationSelected, setShowDefaultDuration, setNotShowDuration, formData, setFormData, isRegular, durationList, createEndDate}) => {
+const UpcomingDuration = ({ isShippingModalOpen, setIsShipppingModalOpen, pageDate, setCourseDuration, setCourseDurationSelected, setShowDefaultDuration, setNotShowDuration, formData, setFormData, isRegular, durationList, createEndDate, setCaptureEndDate}) => {
   
   function closeModal() {
     setIsShipppingModalOpen(false)
@@ -63,7 +63,7 @@ const UpcomingDuration = ({ isShippingModalOpen, setIsShipppingModalOpen, pageDa
           
           </div>
           <div className="modal-content" style={{ gridTemplateColumns: '1fr', marginTop: '0rem' }}>
-            {<UpcomingDurationView pageDate={pageDate} setCourseDuration={setCourseDuration} setCourseDurationSelected={setCourseDurationSelected} closeModal={closeModal} setShowDefaultDuration={setShowDefaultDuration} setNotShowDuration={setNotShowDuration} formData={formData} setFormData={setFormData} durationList={durationList} createEndDate={createEndDate} />}
+            {<UpcomingDurationView pageDate={pageDate} setCourseDuration={setCourseDuration} setCourseDurationSelected={setCourseDurationSelected} closeModal={closeModal} setShowDefaultDuration={setShowDefaultDuration} setNotShowDuration={setNotShowDuration} formData={formData} setFormData={setFormData} durationList={durationList} createEndDate={createEndDate} setCaptureEndDate={setCaptureEndDate} />}
             {/* <div>
               <input
                 className="modal-input"

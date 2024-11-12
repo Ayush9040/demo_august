@@ -41,6 +41,7 @@ const CourseDetails = ({
   const [courseStartDateSelected, setCourseStartDateSelected] = useState(false)
   const [courseDuration, setCourseDuration] = useState('Select one below')
   const [courseDurationSelected, setCourseDurationSelected] = useState(false)
+  const [ captureEndDate, setCaptureEndDate] = useState(null);
 
   const [courseFormatSelected, setCourseFormatSelected] = useState(false)
   const [courseDateInfo, setCourseDateInfo] = useState('Select one below')
@@ -178,37 +179,115 @@ const CourseDetails = ({
     setMinDate(tomorrow);
   }, [currentCourse])
 
+  // const handleStartDate = (value) => {
+  //   console.log(value);
+  //   const day = value.getDate().toString().padStart(2, '0'); // Pad single digits with leading zero
+  //   console.log(day);
+  //   const month = (value.getMonth() + 1).toString().padStart(2, '0'); // Months are zero-based
+  //   console.log(month);
+  //   const year = value.getFullYear();
+    
+
+  //   setCourseStartDate(`${day}/${month}/${year}`)
+
+  //   setValues((prev) => {
+  //     return {
+  //       ...prev, startDate: `${day}/${month}/${year}`
+  //     }
+  //   })
+  //   console.log(`${day}/${month}/${year}`);
+  //   setFormData({ ...formData, startDate: `${day}/${month}/${year}` })
+  //   console.log("Form dateeeee ", values)
+    
+  //   if (values.endDate) { createEndDate(`${day}/${month}/${year}`, values.endDate) }
+  //   return `${day}/${month}/${year}`;
+  // }
+
+  // const createEndDate = (startDate, value) => {
+  //   // alert("Hello", value)
+  //   console.log("Start Date", startDate, " aaaaaaaaaaaaa Value ", value);
+  //   if(startDate === undefined || startDate === null){
+  //     return ;
+  //   }
+
+  //   if(value === undefined || value === null) {
+  //     return ;
+  //   }
+  //   // alert("OK")
+
+  //   // handleStartDate(startDate)
+
+  //   // setFormData({ ...formData, startDate: handleStartDate(startDate) })
+
+  //   console.log("Calling from create End Date ", startDate, value);
+  //   console.log("startDate ? startDate : values?.startDate ", startDate ? startDate : values?.startDate)
+  //   let endDate = formatDate(addMonths(parseDate(startDate ? startDate : values?.startDate), value))
+  //   console.log("Calling from End Date ", endDate);
+  //   setValues((prev) => {
+  //     return {
+  //       ...prev, endDate: value, endDateFormat: endDate
+  //     }
+  //   })
+  //   localStorage.setItem('courseEndDate', endDate)
+  //   setFormData({ ...formData, endDate: value, duration: value?.value })
+  //   dateDurationChange(value)
+  // }
+
   const handleStartDate = (value) => {
+    console.log(value);
     const day = value.getDate().toString().padStart(2, '0'); // Pad single digits with leading zero
     const month = (value.getMonth() + 1).toString().padStart(2, '0'); // Months are zero-based
     const year = value.getFullYear();
 
-    setCourseStartDate(`${day}/${month}/${year}`)
+    const formattedDate = `${day}/${month}/${year}`;
+    console.log(formattedDate);
 
-    setValues((prev) => {
-      return {
-        ...prev, startDate: `${day}/${month}/${year}`
-      }
-    })
-    setFormData({ ...formData, startDate: `${day}/${month}/${year}` })
-    if (values.endDate) { createEndDate(`${day}/${month}/${year}`, values.endDate) }
-  }
+    // Update `values` and `formData` states
+    setValues((prev) => ({
+        ...prev,
+        startDate: formattedDate,
+    }));
 
-  const createEndDate = (startDate, value) => {
-    // alert("Hello", value)
-    console.log("Calling from create End Date ", startDate, value);
-    console.log("startDate ? startDate : values?.startDate ", startDate ? startDate : values?.startDate)
-    let endDate = formatDate(addMonths(parseDate(startDate ? startDate : values?.startDate), value))
-    console.log("Calling from End Date ", endDate);
-    setValues((prev) => {
-      return {
-        ...prev, endDate: value, endDateFormat: endDate
-      }
-    })
-    localStorage.setItem('courseEndDate', endDate)
-    setFormData({ ...formData, endDate: value, duration: value?.value })
-    dateDurationChange(value)
-  }
+    setFormData((prev) => ({
+        ...prev,
+        startDate: formattedDate,
+    }));
+
+    setCourseStartDate(formattedDate);
+
+    // If endDate exists, create it based on the new startDate
+    if (values.endDate) {
+        createEndDate(formattedDate, values.endDate);
+    }
+
+    return formattedDate;
+};
+
+const createEndDate = (startDate, value) => {
+    console.log("Start Date:", startDate, "Value:", value);
+
+    if (!startDate || !value) return;
+
+    // Calculate the formatted end date
+    const endDate = formatDate(addMonths(parseDate(startDate), value));
+    console.log("Calculated End Date:", endDate);
+
+    // Update `values` and `formData` states with the new end date
+    setValues((prev) => ({
+        ...prev,
+        endDate: value,
+        endDateFormat: endDate,
+    }));
+
+    setFormData((prev) => ({
+        ...prev,
+        endDate: value,
+        duration: value.value,
+    }));
+
+    localStorage.setItem('courseEndDate', endDate);
+    dateDurationChange(value);
+};
 
   // Function to remove ordinal suffixes and format the date
   function formatDate(date) {
@@ -942,8 +1021,18 @@ const CourseDetails = ({
                             form={formData}
                             setField={setFormData}
                             onChange={(value) => {
+                              console.log('val on change ',value)
                               setCourseStartDateSelected(true)
-                              handleStartDate(value)
+                              // handleStartDate(value)
+                              // createEndDate(value, captureEndDate)
+
+                              // Handle start date and chain the creation of end date
+                                const formattedStartDate = handleStartDate(value);
+
+                                // Use the updated start date for creating end date
+                                if (captureEndDate) {
+                                    createEndDate(formattedStartDate, captureEndDate);
+                                }
                             }}
                             onKeyDown={(e) => e.preventDefault()} //
                           // readOnly
@@ -954,6 +1043,7 @@ const CourseDetails = ({
                       </div>
                     </>
                   )}
+                 
 
                   {/* {selectedUrlDate} */}
 
@@ -1290,6 +1380,7 @@ const CourseDetails = ({
                                           setNotShowDuration(true)
                                           if (e.target.checked) {
                                             console.log("Duration selected ", e.target.value)
+                                            setCaptureEndDate(item?.value)
                                             createEndDate(values.startDate, item?.value)
                                             // setFormData({
                                             //   ...formData,
@@ -1341,6 +1432,7 @@ const CourseDetails = ({
                                         setCourseDuration(durationList[2]?.label)
                                         setCourseDurationSelected(true)
                                         if (e.target.checked) {
+                                          setCaptureEndDate(durationList[2]?.value)
                                           createEndDate(values.startDate, durationList[2]?.value)
                                           // setFormData({
                                           //   ...formData,
@@ -1383,6 +1475,7 @@ const CourseDetails = ({
                                         setCourseDuration(e.target.value)
                                         setCourseDurationSelected(true)
                                         if (e.target.checked) {
+                                          setCaptureEndDate(courseDuration)
                                           createEndDate(values.startDate, courseDuration)
                                           // setFormData({
                                           //   ...formData,
@@ -1425,6 +1518,7 @@ const CourseDetails = ({
                                         setCourseDuration(e.target.value)
                                         setCourseDurationSelected(true)
                                         if (e.target.checked) {
+                                          setCaptureEndDate(durationList[2]?.value)
                                           createEndDate(values.startDate, durationList[2]?.value)
                                           // setFormData({
                                           //   ...formData,
@@ -1467,7 +1561,7 @@ const CourseDetails = ({
                             //   type="Terms and Conditions" // You can pass any other props as needed
                             // />
                             // <TermsAndConditionsModal />
-                            <UpcomingDuration isShippingModalOpen={handleOpenDuration} setIsShipppingModalOpen={handleCloseDuration} pageDate={formattedDates} setCourseDuration={setCourseDuration} setCourseDurationSelected={setCourseDurationSelected} setShowDefaultDuration={setShowDefaultDuration} setNotShowDuration={setNotShowDuration} formData={formData} setFormData={setFormData} isRegular={isRegular} durationList={durationList} createEndDate={createEndDate} />
+                            <UpcomingDuration isShippingModalOpen={handleOpenDuration} setIsShipppingModalOpen={handleCloseDuration} pageDate={formattedDates} setCourseDuration={setCourseDuration} setCourseDurationSelected={setCourseDurationSelected} setShowDefaultDuration={setShowDefaultDuration} setNotShowDuration={setNotShowDuration} formData={formData} setFormData={setFormData} isRegular={isRegular} durationList={durationList} createEndDate={createEndDate} setCaptureEndDate={setCaptureEndDate} />
                           )}
 
 
@@ -1499,7 +1593,7 @@ const CourseDetails = ({
                   </div>
                   <div className='fees_price_wrapper'>
                     <span className='fees_label'>Fees : </span>
-                    <span className='price_select'>INR {priceSelect}</span>
+                    <span className='price_select'>INR {isRegular ? currentCourse?.fees?.onlineFee : priceSelect}</span>
                   </div>
                   <div className='fees_left_wrapper'>
                     <img src='/images/fees_right.png' alt='' loading='lazy' />
