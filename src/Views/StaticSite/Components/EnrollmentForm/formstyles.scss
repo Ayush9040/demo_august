@@ -1412,6 +1412,7 @@ input[type='radio']:checked::before {
         background-color: white;
       }
     }
+
   }
 }
 
@@ -2332,7 +2333,7 @@ input[type='radio']:checked::before {
   font-size: 16px;
   font-weight: 400;
   position: relative;
-  top:-3px !important
+  top: -3px !important
 }
 
 .price_select {
@@ -2795,7 +2796,6 @@ input[type=checkbox]:checked+label:before {
     border-radius: 8px;
     border: 1px solid rgba(96, 96, 96, 0.3);
     width: 98%;
-    text-align: left;
     margin-top: 12px;
     padding: 12px 9px;
   }
@@ -2927,5 +2927,15 @@ input[type=checkbox]:checked+label:before {
     font-size: 12px;
     font-weight: 600;
     color: rgba(0, 0, 0, 1);
+  }
+}
+
+@media (max-width: '480px') {
+  .details_desc_info {
+    flex-direction: column;
+    .details_wrapper_duration {
+      padding: 9px 0;
+      width: 100%;
+    }
   }
 }
