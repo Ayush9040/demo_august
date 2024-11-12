@@ -380,9 +380,10 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
         )
       case 'Regular Yoga Classes':
         return (
-          <div className="course-list-content">
+          <div className="course-list-content" >
+            <br />
             <div>
-              <h4>
+              {/* <h4> */}
                 <ul>
                   {regularCourseStatic.map((item, i) => (
                     shouldDisplayLink(item) && (
@@ -427,7 +428,7 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
                     <li>IBY classes - On Campus & Online</li>
                   </Link> */}
                 </ul>
-              </h4>
+              {/* </h4> */}
             </div>
             {/* <Link to="/courses/browse/classes">
             <CommonBtn text={'Explore all'} />
@@ -509,7 +510,7 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
         return (
           <div className="course-list-content">
             <div>
-              <h4>
+              {/* <h4> */}
                 <ul>
                   {mostPopularStatic.map((item, i) => (
                     shouldDisplayLink(item) && (
@@ -536,7 +537,7 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
                     <li> Pregnancy Camp</li>
                   </Link> */}
                 </ul>
-              </h4>
+              {/* </h4> */}
             </div>
             {/* <Link to="/courses/browse/most-popular">
             <CommonBtn text={'Explore all'} />
@@ -578,9 +579,13 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
 
       <div className="course-list">
         <div className="course-title">
-          <Link to={`/courses/browse/${pathParam}`}>
-            <h1 style={{ fontSize: '2.6rem' }}>{title} </h1>
+          {pathParam ? <Link to={`/courses/browse/${pathParam}`}>
+            <h1 style={{ fontSize: '2.6rem' }}>{title}</h1>
           </Link>
+            :
+            <h1 style={{ fontSize: '2.6rem' }}>{title}</h1>
+          }
+
         </div>
         {content()}
       </div>
@@ -601,7 +606,7 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
       <div className="course-cards">
 
         {
-          title === 'Most Popular' ?
+          title === 'Most Popular Yoga Courses' ?
             data
               .filter((item) => item.mostPopular === true).map((item, i) => {
                 {

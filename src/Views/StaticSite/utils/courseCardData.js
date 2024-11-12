@@ -23,7 +23,7 @@ export const courseCardData = [
   },
   {
     title: 'Most Popular Yoga Courses',
-    color: '#6E9596',
+    color: '#B77E7E',
     cardData: [{ title: 'Weight Management Workshop' },
     { title: 'Cardiac Hypertension Health Workshop' },
     { title: 'Food and Nutrition Workshop' }]
