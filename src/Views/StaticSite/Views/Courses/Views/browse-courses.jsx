@@ -38,26 +38,31 @@ const BrowseCourses = () => {
   const ChangeContent = () => {
     if (type === 'ttc') {
       if (location.search == '?type=200') {
+        setCategory([...c200hr])
         setBreadcrumbs('200 hours YTTC (Basic)')
       }
       else if (location.search == '?type=500') {
+        setCategory([...c500hr])
         setBreadcrumbs('500 hours YTTC (Intermediate)')
       }
       else if (location.search == '?type=900') {
+        setCategory([...c900hr])
         setBreadcrumbs('900 hours YTTC (Advanced)')
       }
-      // else {
-      //   setBreadcrumbs('Yoga Teacher Training Courses (YTTC)')
-      // }
     } else if (type === 'most-popular') {
+      setCategory(AllCourses.filter((item) => item.mostPopular === true))
       setBreadcrumbs('Most Popular')
     } else if (type === 'camps-workshops') {
+      setCategory([...campsArr])
       setBreadcrumbs('Camps & Workshops')
     } else if (type === 'classes') {
+      setCategory([...classesArr])
       setBreadcrumbs('Regular Yoga Classes')
     } else if (type === 'certificate-courses') {
+      setCategory([...certificateArr])
       setBreadcrumbs('Certified Yoga Courses')
     } else if (type === 'special-certificate-courses') {
+      setCategory([certificateArr[3], certificateArr[1], certificateArr[0]])
       setBreadcrumbs('Special Certificate Courses (For Yoga Teachers)')
     }
     return breadcrumbs
@@ -76,7 +81,8 @@ const BrowseCourses = () => {
         setCategory([...c900hr])
       }
       else {
-        setCategory([...c200hr, ...c500hr, ...c900hr])
+        setCategory([...c200hr])
+        // setCategory([...c200hr, ...c500hr, ...c900hr])
       }
     } else if (type === 'most-popular') {
       setCategory(AllCourses.filter((item) => item.mostPopular === true))
@@ -85,7 +91,7 @@ const BrowseCourses = () => {
     } else if (type === 'classes') {
       setCategory([...classesArr])
     } else {
-      setCategory([...certificateArr])
+      setCategory([certificateArr[3], certificateArr[1], certificateArr[0]])
     }
     ChangeContent()
   }, [type])

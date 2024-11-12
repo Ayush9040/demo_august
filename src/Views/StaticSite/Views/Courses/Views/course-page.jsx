@@ -271,17 +271,25 @@ const Courses = () => {
 
   const setPathParam = (title) => {
 
-    if (title === 'Teacher Training Courses') {
+    if (title == 'Yoga Teacher Training Courses (YTTC)') {
 
       return { path: 'ttc', sliderVal: 3 }
+    }
+    else if (title === 'Certified Yoga Courses') {
+
+      return { path: 'certificate-courses', sliderVal: 3 }
     }
     else if (title === 'Camps & Workshops') {
 
       return { path: 'camps-workshops', sliderVal: 9 }
     }
-    else if (title === 'Most Popular') {
+    else if (title === 'Most Popular Yoga Courses') {
 
       return { path: 'most-popular', sliderVal: 3 }
+    }
+    else if (title === 'Special Certificate Courses (For Yoga Teachers)') {
+
+      return { path: 'special-certificate-courses', sliderVal: 3 }
     }
     else {
 
@@ -431,52 +439,52 @@ const Courses = () => {
         points = [{
           url: '/asana-regular-classes-on-campus',
           text: 'Asana Regular Classes for Men On Campus',
-          onCampus: true, weekDays: true,isRegular:true
+          onCampus: true, weekDays: true, isRegular: true
         },
         {
           url: '/asana-regular-classes-on-campus-women',
           text: 'Asana Regular Classes for Women On Campus',
-          onCampus: true, weekDays: true,isRegular:true
+          onCampus: true, weekDays: true, isRegular: true
         },
         {
           url: '/asana-regular-classes-online',
           text: 'Asana Regular Classes (Men & Women) - Online',
-          online: true, weekDays: true,isRegular:true
+          online: true, weekDays: true, isRegular: true
         },
         {
           url: '/weekend-classes',
           text: 'Weekend Asana Classes - (Men & Women) On Campus',
-          onCampus: true, weekends: true,isRegular:true
+          onCampus: true, weekends: true, isRegular: true
         },
         {
           url: '/weekend-classes-online',
           text: 'Weekend Asana Classes - (Men & Women) Online',
-          online: true, weekends: true,isRegular:true
+          online: true, weekends: true, isRegular: true
         },
         {
           url: '/childrens-regular-classes',
           text: "Children's Regular Class - On Campus",
-          onCampus: true, weekDays: true,isRegular:true
+          onCampus: true, weekDays: true, isRegular: true
         },
         {
           url: '/childrens-weekend-classes-on-campus',
           text: "Children's Weekend Class - On Campus",
-          onCampus: true, weekends: true,isRegular:true
+          onCampus: true, weekends: true, isRegular: true
         },
         {
           url: '/advanced-regular-yoga-classes',
           text: ' Advance Asana Regular Class - Online (Only for TYI Teachers) ',
-          online: true, weekDays: true,isRegular:true
+          online: true, weekDays: true, isRegular: true
         },
         {
           url: '/regular-pregnacy-classes',
           text: 'Regular Pregnancy Class',
-          onCampus: true, online: true, weekDays: true,isRegular:true
+          onCampus: true, online: true, weekDays: true, isRegular: true
         },
         {
           url: '/IBY-course',
           text: 'IBY classes - On Campus & Online',
-          onCampus: true, online: true, weekDays: true,isRegular:true
+          onCampus: true, online: true, weekDays: true, isRegular: true
         }]
       }
       else if (index == 3) {
@@ -592,10 +600,10 @@ const Courses = () => {
 
       // Check if points exist and are not empty
       // if (points) {
-        
+
       //   // Function to filter the array
       //   console.log(points);
-        
+
       //   var filteredData = points.filter(item => {
       //     // Check if the "days" group (days7, days21, month1, month2, month3) has any `true`
       //     let daysGroupMatches = ['days7', 'days21', 'month1', 'month2', 'month3', 'year1', 'year2', 'month7', 'month4', 'days1', 'days2'].some(key => selectedFilters[key] && item[key]);
@@ -620,7 +628,7 @@ const Courses = () => {
       if (points) {
         // Function to filter the array
         console.log(points);
-      
+
         var filteredData = points.filter(item => {
           // If the item is regular, skip the daysGroupMatches check
           if (item.isRegular) {
@@ -631,20 +639,20 @@ const Courses = () => {
               }
               return !selectedFilters[key] || selectedFilters[key] === item[key];  // Ensure it matches `true` values or ignore if `selectedFilters[key]` is false
             });
-      
+
             return otherPropsMatch;  // Only check otherPropsMatch for regular items
           }
-      
+
           // If item is not regular, proceed with daysGroupMatches validation
           let daysGroupMatches = ['days7', 'days21', 'month1', 'month2', 'month3', 'year1', 'year2', 'month7', 'month4', 'days1', 'days2']
             .some(key => selectedFilters[key] && item[key]);
-      
+
           // If all "days" fields are false in `selectedFilters`, consider it a match
           if (['days7', 'days21', 'month1', 'month2', 'month3', 'year1', 'year2', 'month7', 'month4', 'days1', 'days2']
             .every(key => !selectedFilters[key])) {
             daysGroupMatches = true;
           }
-      
+
           // Check that other properties match the values in `selectedFilters`
           let otherPropsMatch = Object.keys(selectedFilters).every(key => {
             if (['days7', 'days21', 'month1', 'month2', 'month3', 'year1', 'year2', 'month7', 'month4', 'days1', 'days2'].includes(key)) {
@@ -652,13 +660,13 @@ const Courses = () => {
             }
             return !selectedFilters[key] || selectedFilters[key] === item[key];  // Ensure it matches `true` values or ignore if `selectedFilters[key]` is false
           });
-      
+
           // Return true if both conditions are satisfied (daysGroupMatches and otherPropsMatch)
           return daysGroupMatches && otherPropsMatch;
         });
         console.log(filteredData);
       }
-      
+
       // Check if all active conditions are met and not empty
       return filteredData.length > 0//conditions.length > 0 && conditions.every(Boolean);
     }
