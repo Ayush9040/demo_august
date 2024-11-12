@@ -76,7 +76,17 @@ const CourseDetails = ({
       accordionRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   }, [openEdit]);
+  const targetDivRef = useRef(null);
 
+  // Function to scroll to the div when button is clicked
+  const scrollToDiv = () => {
+    if (targetDivRef.current) {
+      targetDivRef.current.scrollIntoView({
+        behavior: 'smooth', // Smooth scrolling
+        block: 'start', // Scroll the element to the top of the viewport
+      });
+    }
+  };
   useEffect(() => {
     if (isSatsangPage) {
       setSetDate(true);
@@ -280,6 +290,7 @@ const CourseDetails = ({
 
   const handleOpen = () => {
     setOpenDates(true);
+    setTimeout(() => { scrollToDiv() }, 100)
   }
 
   const handleOpenDuration = () => {
@@ -946,7 +957,7 @@ const CourseDetails = ({
 
                   {/* {selectedUrlDate} */}
 
-                  <div className='dates_enroll_wrapper'>
+                  <div className='dates_enroll_wrapper' ref={targetDivRef}>
 
                     <div className="label_format_course">
                       {isRegular ? "Select Course Time" : "Select Course Start Date"}
@@ -969,11 +980,7 @@ const CourseDetails = ({
                                       value={item?.label}
                                       aria-labelledby="delivery-0-name"
                                       aria-describedby="delivery-0-shipping delivery-0-price"
-                                      // onChange={() => handleDateSelect(item)}
                                       onChange={(e) => {
-                                        // setSelectedOption('RESIDENTIAL');
-                                        // handleResidential(true);
-                                        // setPriceSelect(currentCourse?.fees?.offlineFee?.residentialFee)
                                         setCourseDateInfo(e.target.value)
                                         setCourseDateSelected(true)
                                         setNotShowDate(true)
@@ -991,6 +998,7 @@ const CourseDetails = ({
                                           // setCourseFee(updatedFees( currentCourse?.key,'RESIDENTIAL' ))
                                         }
                                       }}
+                                      checked={courseDateInfo == item?.label}
 
                                     />
                                     <span class="item-info item_desc">
@@ -1005,8 +1013,80 @@ const CourseDetails = ({
                             )
                           })
                         }
-
                         {
+                          ((courseDateInfo == 'Select one below') && formattedDates[2]?.label || (courseDateInfo == formattedDates[0]?.label || courseDateInfo == formattedDates[1]?.label)) ? (
+                            <div className='date_btn'>
+                              <div className='wrapper_center container_date_enroll'>
+                                <label class="item-label item_date" style={{ width: '100%', height: '100%', borderRadius: '25px' }}>
+                                  <input class="item-input"
+                                    type="radio" name="mode"
+                                    value={formattedDates[2]?.label}
+                                    aria-labelledby="delivery-0-name"
+                                    aria-describedby="delivery-0-shipping delivery-0-price"
+                                    // onChange={() => handleDateSelect(item)}
+                                    onChange={(e) => {
+                                      // setSelectedOption('RESIDENTIAL');
+                                      // handleResidential(true);
+                                      // setPriceSelect(currentCourse?.fees?.offlineFee?.residentialFee)
+                                      setCourseDateInfo(e.target.value)
+                                      setCourseDateSelected(true)
+                                      if (e.target.checked) {
+                                        setFormData({
+                                          ...formData,
+                                          sdate: e.target.value
+                                        })
+                                        setEmpty(0)
+                                        // if (currentCourse?.key === 'ma-yoga-shastra' && currentCourse.country !== 'India') {
+                                        //   setCourseFee(currentCourse?.fees?.internationalFee?.residentialFee)
+                                        // } else {
+                                        //   setCourseFee(currentCourse?.fees?.offlineFee?.residentialFee)
+                                        // }
+                                        // setCourseFee(updatedFees( currentCourse?.key,'RESIDENTIAL' ))
+                                      }
+                                    }}
+
+                                  />
+                                  <span class="item-info item_desc">
+                                    <span id="delivery-0-name" class="item-name date_info">
+                                      <span className='style_dates'>{formattedDates[2]?.label}</span></span>
+                                  </span>
+
+                                  <strong id="delivery-0-price" class="item-price"></strong>
+                                </label>
+                              </div>
+                            </div>) : (
+
+                            <div className='date_btn'>
+                              <div className='wrapper_center container_date_enroll'>
+                                <label class="item-label item_date selected_date_popup" style={{ width: '100%', height: '100%', borderRadius: '25px' }}>
+                                  <input class="item-input"
+                                    type="radio" name="mode"
+                                    value={courseDateInfo}
+                                    aria-labelledby="delivery-0-name"
+                                    aria-describedby="delivery-0-shipping delivery-0-price"
+                                    onChange={(e) => {
+                                      setCourseDateInfo(e.target.value)
+                                      setCourseDateSelected(true)
+                                      if (e.target.checked) {
+                                        setFormData({
+                                          ...formData,
+                                          sdate: e.target.value
+                                        })
+                                        setEmpty(0)
+                                      }
+                                    }}
+                                  />
+                                  <span class="item-info item_desc">
+                                    <span id="delivery-0-name" class="item-name date_info">
+                                      <span className='style_dates'>{courseDateInfo}</span></span>
+                                  </span>
+
+                                  <strong id="delivery-0-price" class="item-price"></strong>
+                                </label>
+                              </div>
+                            </div>)}
+
+                        {/* {
                           showDefaultDate === true && formattedDates[2]?.label ? (
                             <div className='date_btn'>
                               <div className='wrapper_center container_date_enroll'>
@@ -1131,7 +1211,7 @@ const CourseDetails = ({
                               </div>
                             </div>
                           ) : null
-                        }
+                        } */}
 
                         {
                           formattedDates.length > 3 && (
@@ -1149,7 +1229,7 @@ const CourseDetails = ({
                           //   message={<TermsCondition />} 
                           //   closePopup={handleClose} 
                           //   type="Terms and Conditions" // You can pass any other props as needed
-                          // />
+                          // /> 
                           // <TermsAndConditionsModal />
                           <UpcomingDates isShippingModalOpen={handleOpen} setIsShipppingModalOpen={handleClose} pageDate={formattedDates} setCourseDateInfo={setCourseDateInfo} setCourseDateSelected={setCourseDateSelected} setShowDefaultDate={setShowDefaultDate} setNotShowDate={setNotShowDate} formData={formData} setFormData={setFormData} isRegular={isRegular} />
                         )}
