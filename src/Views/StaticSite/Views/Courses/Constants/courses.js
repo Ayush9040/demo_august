@@ -10721,7 +10721,7 @@ enrollInfo: {
     preRequisite: 'None',
     courseCategory: 'Self Help',
     courseSubType: '21 Days Better Living',
-    newName: '21 Days Better Living Course',
+    newName: '21 Days Better Living Course Batch 1',
     days: [''],
     time: [
       'Morning: 7:00 am – 8:30 am (IST)'
@@ -11151,7 +11151,7 @@ enrollInfo: {
     preRequisite: 'None',
     courseCategory: 'Self Help',
     courseSubType: '21 Days Better Living',
-    newName: '21 Days Better Living Course',
+    newName: '21 Days Better Living Course Batch 2',
     days: [''],
     time: ['Evening 6:30 pm – 8:00 pm (IST)'],
     enrollInfo: {
@@ -11552,7 +11552,7 @@ enrollInfo: {
     preRequisite: 'None',
     courseCategory: 'Self Help',
     courseSubType: '21 Days Better Living',
-    newName: '21 Days Better Living Course',
+    newName: '21 Days Better Living Course Batch 3',
     days: [''],
     time: [
       'Evening 6:30 pm – 8:00 pm (IST)'

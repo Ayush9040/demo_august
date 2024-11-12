@@ -14,19 +14,23 @@ const customStyles = {
     bottom: 'auto',
     marginRight: '-50%',
     transform: 'translate(-50%, -50%)',
-    height: '75%',
+    maxHeight: '75%',
     width: '40%',
     borderRadius: '20px',
     // border: '1px solid black',
     overflowY: 'auto',
     scrollbarWidth: 'none',
+    backgroundImage: 'url(/images/bg_lotus_enrollment.png)',  // Set your logo path here
+    backgroundSize: 'auto 160px',  // Ensures the logo is resized to fit within the modal
+    backgroundPosition: 'center',  // Centers the logo within the modal
+    backgroundRepeat: 'no-repeat',
   },
 }
 
 // Modal.setAppElement('#___gatsby')
 
-const EditStudent = ({ isShippingModalOpen, setIsShipppingModalOpen, formData, setFormData, setEmpty, empty, currentCourse,dateDurationChange }) => {
-  
+const EditStudent = ({ isShippingModalOpen, setIsShipppingModalOpen, formData, setFormData, setEmpty, empty, currentCourse, dateDurationChange }) => {
+
   function closeModal() {
     setIsShipppingModalOpen(false)
   }
@@ -37,29 +41,30 @@ const EditStudent = ({ isShippingModalOpen, setIsShipppingModalOpen, formData, s
         isOpen={isShippingModalOpen}
         onRequestClose={closeModal}
         style={customStyles}
+        shouldCloseOnOverlayClick={false}  // Prevent closing when clicking outside the modal
         contentLabel="Example Modal"
       >
-        <div className="modal-container">
-          <div className="shipping-modal-header">
+        <div className="modal-container" >
+          <div className="shipping-modal-header" >
             <div className="shipping-modal-tabs">
               {/* <h2 className="heading-1">
 
               </h2> */}
               {/* <h2 className="heading-2">Payment</h2> */}
               <div className='banner-heading edit_stu_heading' style={{ textAlign: 'left', margin: '0px' }}>
-              Edit Student details
-            {/* <p className='upcoming_sub_heading'>Choose your preferred course start date from the list below</p> */}
-            </div>
+                Edit Student details
+                {/* <p className='upcoming_sub_heading'>Choose your preferred course start date from the list below</p> */}
+              </div>
 
             </div>
-            <div style={{width: '12px', height: '12px'}}>
-            
-              <span className="change-cross-svg-width" style={{cursor: 'pointer'}} onClick={closeModal}>
+            <div style={{ width: '12px', height: '12px' }}>
+
+              <span className="change-cross-svg-width" style={{ cursor: 'pointer' }} onClick={closeModal}>
                 {cross}
 
               </span>
             </div>
-          
+
           </div>
           <div className="modal-content" style={{ gridTemplateColumns: '1fr', marginTop: '0rem' }}>
             {<EditStudentView formData={formData} setFormData={setFormData} setEmpty={setEmpty} empty={empty} currentCourse={currentCourse} dateDurationChange={dateDurationChange} closeModal={closeModal} />}

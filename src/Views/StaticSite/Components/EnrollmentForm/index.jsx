@@ -315,7 +315,7 @@ const Enrollment = () => {
         },
         receivers: [formData.email, 'info@theyogainstitute.org']
       }
-
+      
       try {
         let response
         if (formData.mode === 'ONLINE' || (currentCourse.residential === false && currentCourse.nonResidential === false)) {
@@ -567,10 +567,12 @@ const Enrollment = () => {
     ) {
       // alert("1")
       setEmpty(1)
+      setEditStudentOpen(true);
     } else if (formData.email === '' || !validateEmail(formData.email) || formData.email === undefined ||
       formData.email === null) {
       // alert("2")
       setEmpty(2)
+      setEditStudentOpen(true);
     } else if (
       formData.phone === '' ||
       formData.phone?.length < 6 ||
@@ -579,6 +581,7 @@ const Enrollment = () => {
     ) {
       // alert("3")
       setEmpty(3)
+      
     } else if (formData.address1 === '') {
       // alert("4")
       setEmpty(4)
@@ -588,13 +591,16 @@ const Enrollment = () => {
     else if (formData.country === '') {
       // alert("5")
       setEmpty(5)
+      setEditStudentOpen(true);
     }
     else if (formData.pincode === '') {
       // alert("6")
       setEmpty(8)
+      setEditStudentOpen(true);
     } else if (formData.gender === '') {
       // alert("7")
       setEmpty(11)
+      setEditStudentOpen(true);
     } else if (formData.mode === '') {
       // alert("11")
       setEmpty('mode')
@@ -605,17 +611,18 @@ const Enrollment = () => {
       // alert("8")
       setEmpty(18)
     }
-    else if (formData.AGE === null || formData.AGE < 4 || formData.AGE > 99) {
-      setEmpty(9)
-    } else if (formData.nationality === '') {
-      setEmpty(10)
-    }
-    else if (formData.mode === '') {
-      setEmpty('mode')
-    }
-    else if (isMatch && formData.startDate === '') {
-      setEmpty(21)
-    }
+    // else if (formData.AGE === null || formData.AGE < 4 || formData.AGE > 99) {
+    //   setEmpty(9)
+    // }
+    // else if (formData.nationality === '') {
+    //   setEmpty(10)
+    // }
+    // else if (formData.mode === '') {
+    //   setEmpty('mode')
+    // }
+    // else if (isMatch && formData.startDate === '') {
+    //   setEmpty(21)
+    // }
     else if (isMatch && formData.endDate === '') {
       console.log("Form Data Start Date ", formData.startDate)
       // alert("12")
@@ -722,7 +729,7 @@ const Enrollment = () => {
           <div className="header">
             <Link to="/courses">
               <button className="x">
-                <img src='/images/close.svg' style={{ position:'relative',top:'2px' }} alt='' loading='lazy' />
+                <img src='/images/close.svg' style={{ position: 'relative', top: '2px' }} alt='' loading='lazy' />
                 <span className='close_label'>Close</span>
               </button>
             </Link>

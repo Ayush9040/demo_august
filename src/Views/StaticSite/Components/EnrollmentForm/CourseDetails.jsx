@@ -202,28 +202,43 @@ const CourseDetails = ({
 
   // Function to remove ordinal suffixes and format the date
   function formatDate(date) {
-    const day = date.getDate().toString().padStart(2, '0'); // Day with leading zero
-    const month = (date.getMonth() + 1).toString().padStart(2, '0'); // Month with leading zero
-    const year = date.getFullYear();
-    return `${day}/${month}/${year}`;
+    try {
+      const day = date?.getDate().toString().padStart(2, '0'); // Day with leading zero
+      const month = (date?.getMonth() + 1).toString().padStart(2, '0'); // Month with leading zero
+      const year = date?.getFullYear();
+      return `${day}/${month}/${year}`;
+    }
+    catch (err) {
+      return ''
+    }
   }
 
   // Function to add months to a given date
   function addMonths(startDate, months) {
     const date = startDate; // Create a Date object from the start date
     // date.setMonth(date.getMonth() + months); // Add the number of months
-    let totalDays = months * 30
-    console.log("totalDays ", totalDays, months)
-    date.setDate(date.getDate() + (totalDays - 1));
-    return date;
+    try {
+      let totalDays = months * 30
+      console.log("totalDays ", totalDays, months)
+      date.setDate(date.getDate() + (totalDays - 1));
+      return date;
+    }
+    catch (err) {
+      return '';
+    }
   }
 
   function parseDate(dateStr) {
     console.log("Parse date ", dateStr)
-    const [day, month, year] = dateStr.split('/').map(Number); // Split the date string and convert parts to numbers
-    // Create a new Date object (months are 0-based, so subtract 1 from month)
-    console.log("new Date(year, month - 1, day) ", new Date(year, month - 1, day))
-    return new Date(year, month - 1, day);
+    try {
+      const [day, month, year] = dateStr.split('/').map(Number); // Split the date string and convert parts to numbers
+      // Create a new Date object (months are 0-based, so subtract 1 from month)
+      console.log("new Date(year, month - 1, day) ", new Date(year, month - 1, day))
+      return new Date(year, month - 1, day);
+    }
+    catch (err) {
+      return ''
+    }
   }
 
   const durationList = [{ label: '1 Month', value: 1 }, { label: '2 Months', value: 2 }, { label: '3 Months', value: 3 }, { label: '4 Months', value: 4 }, { label: '5 Months', value: 5 }, { label: '6 Months', value: 6 }, { label: '7 Months', value: 7 }, { label: '8 Months', value: 8 }, { label: '9 Months', value: 9 }, { label: '9 Months', value: 9 }, { label: '10 Months', value: 10 }, { label: '11 Months', value: 11 }, { label: '12 Months', value: 12 }]
@@ -579,7 +594,7 @@ const CourseDetails = ({
               <div className='first_wrapper_regular_btn'>
                 <div className={courseFormatSelected === true ? 'details_wrapper_duration_3' : 'details_wrapper_duration_2'}><span className='details_duration_info' style={{ color: 'rgba(0, 0, 0, 1)' }}>Course format - {courseFormatInfo}</span></div>
 
-                <div className={courseDateSelected === true ? 'details_wrapper_duration_3' : 'details_wrapper_duration_2'}><span className='details_duration_info' style={{ color: 'rgba(0, 0, 0, 1)' }}>{isRegular ? "Course Time" : "Course Date"}- {courseDateInfo}</span></div>
+                <div className={courseDateSelected === true ? 'details_wrapper_duration_3' : 'details_wrapper_duration_2'}><span className='details_duration_info' style={{ color: 'rgba(0, 0, 0, 1)' }}>{isRegular ? "Course Time" : "Course Date"} - {courseDateInfo}</span></div>
               </div>
 
               {
@@ -1121,11 +1136,11 @@ const CourseDetails = ({
                         {
                           formattedDates.length > 3 && (
                             <div className='upcoming_dates'>
-                          <span onClick={handleOpen}>{isRegular ? "See all timings" : "See all upcoming dates"}
+                              <span onClick={handleOpen}>{isRegular ? "See all timings" : "See all upcoming dates"}
 
-                          </span>
-                          <img src='/images/upcoming_dates_arrow.svg' alt='' loading='lazy' />
-                        </div>
+                              </span>
+                              <img src='/images/upcoming_dates_arrow.svg' alt='' loading='lazy' />
+                            </div>
                           )
                         }
 
@@ -1404,7 +1419,7 @@ const CourseDetails = ({
                   </div>
                   <div className='fees_price_wrapper'>
                     <span className='fees_label'>Fees : </span>
-                    <span className='price_select'>{priceSelect}</span>
+                    <span className='price_select'>INR {priceSelect}</span>
                   </div>
                   <div className='fees_left_wrapper'>
                     <img src='/images/fees_right.png' alt='' loading='lazy' />
