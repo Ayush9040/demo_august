@@ -2761,7 +2761,7 @@ input[type=checkbox]:checked+label:before {
   }
 
   .check_course .item-label {
-    align-items: flex-start;
+    align-items: center;
   }
 
   .container_date_enroll .item_date {
@@ -2772,7 +2772,7 @@ input[type=checkbox]:checked+label:before {
 
   .details_format_date .check_course .item_format {
     border-radius: 25px;
-    justify-content: flex-start;
+    justify-content: center;
   }
 
   .details_wrapper_duration_2 {
@@ -2927,6 +2927,18 @@ input[type=checkbox]:checked+label:before {
     font-size: 12px;
     font-weight: 600;
     color: rgba(0, 0, 0, 1);
+  }
+
+  .first_wrapper_regular_btn {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .second_wrapper_regular_btn {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
   }
 }
 
