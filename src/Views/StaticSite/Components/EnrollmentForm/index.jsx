@@ -15,6 +15,7 @@ import { handleCTProccedToPayment } from '../../../../CleverTap/buttonClicked'
 import { trackPageView } from '../../../../CleverTap/pageViewEvents'
 import { handleCTCoursePaymentPageVisit, handleCTPaymentCompletedCourse, handleCTPaymentFailed, setupUserProfile } from '../../../../CleverTap/buttonClicked'
 import EnrollmentForm from './EnrollmentForm'
+import ReactGA from 'react-ga4';
 
 const Enrollment = () => {
   const { user } = useSelector((state) => state.auth)
@@ -355,6 +356,7 @@ const Enrollment = () => {
                 // Navigare to Success if razorpay_payment_id, razorpay_order_id, razorpay_signature is there
                 if (res.razorpay_payment_id && res.razorpay_order_id && res.razorpay_signature) {
                   await axios.post(`${authBaseDomain}/ali/mail`, mailTemplate)
+                  console.log(courseFee);
 
                   handleCTPaymentCompletedCourse({
                     // cost,
@@ -401,6 +403,28 @@ const Enrollment = () => {
                     // medicalIssues,
                     // residentialStatus,
                   })
+
+                  ReactGA.event('purchase', {
+                    currency: 'INR',
+                    value: courseFee,
+                    items: [{
+                      item_name: currentCourse?.title,
+                      item_id: currentCourse?.courseCategory,
+                      price: courseFee,
+                      quantity: 1
+                    }]
+                  });
+                  console.log({
+                    currency: 'INR',
+                    value: courseFee,
+                    items: [{
+                      item_name: currentCourse?.title,
+                      item_id: currentCourse?.courseCategory,
+                      price: courseFee,
+                      quantity: 1
+                    }]
+                  });
+
 
                   navigate(`/enrollment_thankyou/${currentCourse.key}`)
                 } else {
@@ -581,19 +605,17 @@ const Enrollment = () => {
       // alert("8")
       setEmpty(18)
     }
-    // else if (formData.AGE === null || formData.AGE < 4 || formData.AGE > 99) {
-    //   alert("9")
-    //    setEmpty(9)
-    // } 
-    // else if (formData.nationality === '') {
-    //   alert("10")
-    //    setEmpty(10)
-    //  }
-    // else if (formData.mode === '') {
-    //   alert("11")
-    //   setEmpty('mode')
-    // }
-    
+    else if (formData.AGE === null || formData.AGE < 4 || formData.AGE > 99) {
+      setEmpty(9)
+    } else if (formData.nationality === '') {
+      setEmpty(10)
+    }
+    else if (formData.mode === '') {
+      setEmpty('mode')
+    }
+    else if (isMatch && formData.startDate === '') {
+      setEmpty(21)
+    }
     else if (isMatch && formData.endDate === '') {
       console.log("Form Data Start Date ", formData.startDate)
       // alert("12")
@@ -631,10 +653,19 @@ const Enrollment = () => {
         age: formData.AGE,
         nationality: formData.nationality
       })
+      ReactGA.event('begin_checkout', {
+        currency: 'INR',
+        value: courseFee,
+        items: [{
+          item_name: currentCourse?.title,
+          item_id: currentCourse?.courseCategory,
+          price: courseFee,
+          quantity: 1
+        }]
+      });
 
       setupUserProfile(formData);
     }
-
   }
 
 

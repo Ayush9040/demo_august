@@ -395,7 +395,7 @@ const SignIn = () => {
 
 
       const country = countryComponent ? countryComponent.long_name : '';
-      
+
       const city = cityComponent ? cityComponent.long_name : '';
       const state = stateComponent ? stateComponent.long_name : city;//if state not there then take locality
       const pincode = postalCodeComponent ? postalCodeComponent.long_name : '';
@@ -581,7 +581,7 @@ const SignIn = () => {
           // handleAlreadySignedUpUser({
           //   phone: userDetails?.phoneNumber
           // })
-          getUserDetails(response?.data?.accessToken, 'alreadySignedUp')
+          await getUserDetails(response?.data?.accessToken, 'alreadySignedUp')
           page ? page !== 'cart' ? navigate(`/enrollment/${page}`) : navigate('/shop/checkout') : navigate('/')
         }
         setOtp(new Array(4).fill(""))//clear OTP
@@ -641,14 +641,17 @@ const SignIn = () => {
     const nameRegex = /^[A-Za-z]+( [A-Za-z]+)*$/;
     const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
-    let details = { ...formData }
-    setFormData({ ...formData, firstName: getTrimmedName(details.firstName), lastName: getTrimmedName(details.lastName) });
+    let det = { ...formData }
+    const trimmedAddress1 = det?.address1?.replace(/\s{2,}/g, ' ').trim();
+    const trimmedAddress2 = det?.address2?.replace(/\s{2,}/g, ' ').trim();
+
+    det['address1'] = trimmedAddress1;
+    det['address2'] = trimmedAddress2
+    let details = { ...det }
+    setFormData({ ...details, firstName: getTrimmedName(details.firstName), lastName: getTrimmedName(details.lastName) });
 
     details['firstName'] = getTrimmedName(details['firstName'])
     details['lastName'] = getTrimmedName(details['lastName'])
-    console.log(values);
-    console.log(userDetails);
-
     if (!details.firstName || !nameRegex.test(details.firstName)) {
       // console.log("Deails First Name ", details.firstName);
       setFormData({ ...formData, errorIndex: 3 });
@@ -657,37 +660,37 @@ const SignIn = () => {
       // console.log("Deails lastName Name ", details.lastName);
       setFormData({ ...formData, errorIndex: 4 });
     }
-    else if ((!userDetails?.address1)) {
+    else if ((!details?.address1)) {
       // console.log("Deails email Name ", details.email);
       setFormData({ ...details, errorIndex: 5 });
     }
-    else if ((!userDetails?.address2)) {
+    else if ((!details?.address2)) {
       // console.log("Deails email Name ", details.email);
       setFormData({ ...details, errorIndex: 6 });
     }
-    else if (!values?.country?.label) {
-      // alert("Hello from country ")
-      // console.log("values ", values.country?.label)
-      // console.log("Deails country Name ", details.country?.value);
-      // setFormData({ ...details, errorIndex: 6 });
-      setFormData({ ...details, errorIndex: 5 });
-    }
-    else if (!values?.state?.label) {
-      // console.log("values ", values.country?.label)
-      // console.log("Deails country Name ", details.country?.value);
-      // setFormData({ ...details, errorIndex: 7 });
-      setFormData({ ...details, errorIndex: 5 });
-    }
-    else if (!values?.city?.label) {
-      // console.log("Deails city Name ", values.city?.label);
-      // setFormData({ ...details, errorIndex: 8 });
-      setFormData({ ...details, errorIndex: 5 });
-    }
-    else if (!userDetails?.pincode) {
-      // console.log("Deails city Name ", values.city?.label);
-      // setFormData({ ...details, errorIndex: 9 });
-      setFormData({ ...details, errorIndex: 5 });
-    }
+    // else if (!values?.country?.label) {
+    //   // alert("Hello from country ")
+    //   // console.log("values ", values.country?.label)
+    //   // console.log("Deails country Name ", details.country?.value);
+    //   // setFormData({ ...details, errorIndex: 6 });
+    //   setFormData({ ...details, errorIndex: 5 });
+    // }
+    // else if (!values?.state?.label) {
+    //   // console.log("values ", values.country?.label)
+    //   // console.log("Deails country Name ", details.country?.value);
+    //   // setFormData({ ...details, errorIndex: 7 });
+    //   setFormData({ ...details, errorIndex: 5 });
+    // }
+    // else if (!values?.city?.label) {
+    //   // console.log("Deails city Name ", values.city?.label);
+    //   // setFormData({ ...details, errorIndex: 8 });
+    //   setFormData({ ...details, errorIndex: 5 });
+    // }
+    // else if (!userDetails?.pincode) {
+    //   // console.log("Deails city Name ", values.city?.label);
+    //   // setFormData({ ...details, errorIndex: 9 });
+    //   setFormData({ ...details, errorIndex: 5 });
+    // }
     else if (!details.gender?.value) {
       // console.log("Deails gender Name ", details.gender?.value);
       setFormData({ ...details, errorIndex: 10 });
@@ -721,7 +724,7 @@ const SignIn = () => {
           delete payload.address1;
           delete payload.address2;
           payload['gender'] = userDetails?.gender.value;
-          payload['addressLine1'] = rawAddress1;//userDetails?.address1;
+          payload['addressLine1'] = rawAddress1 ? rawAddress1 : userDetails?.address1;//userDetails?.address1;
           payload['addressLine2'] = userDetails?.address2;
           payload['country'] = values?.country?.label;
           payload['city'] = values?.city?.label;
@@ -754,7 +757,7 @@ const SignIn = () => {
               // document.cookie = `authorizationToken=${response?.data?.accessToken}; path=/;`;
               dispatch(loginUserSuccess({}))
 
-              getUserDetails(response?.data?.accessToken, 'notalreadySignedUp')
+              await getUserDetails(response?.data?.accessToken, 'notalreadySignedUp')
               callCTEvent(payload)
               page ? page !== 'cart' ? navigate(`/enrollment/${page}`) : navigate('/shop/checkout') : navigate('/')
             }
@@ -780,7 +783,7 @@ const SignIn = () => {
               localStorage.setItem('authorizationToken', response?.data?.accessToken)
               localStorage.setItem('refreshToken', response?.data?.refreshToken)
               dispatch(loginUserSuccess({}))
-              getUserDetails(response?.data?.accessToken, 'notalreadySignedUp')
+              await getUserDetails(response?.data?.accessToken, 'notalreadySignedUp')
               callCTEvent(payload)
 
               // console.log('user details 2 ', userDetails);
@@ -884,7 +887,7 @@ const SignIn = () => {
         delete payload.address1;
         delete payload.address2;
         payload['gender'] = userDetails?.gender.value;
-        payload['addressLine1'] = rawAddress1; userDetails?.address1;
+        payload['addressLine1'] = rawAddress1 ? rawAddress1 : userDetails?.address1;
         payload['addressLine2'] = userDetails?.address2;
         payload['country'] = values?.country?.label;
         payload['city'] = values?.city?.label;
@@ -909,7 +912,7 @@ const SignIn = () => {
             localStorage.setItem('authorizationToken', response?.data?.accessToken)
             localStorage.setItem('refreshToken', response?.data?.refreshToken)
             dispatch(loginUserSuccess({}))
-            getUserDetails(response?.data?.accessToken, 'notalreadySignedUp')
+            await getUserDetails(response?.data?.accessToken, 'notalreadySignedUp')
             callCTEvent(payload)
             setIsBtnLoad(false)
             // console.log('user details 2 ', userDetails);
@@ -1125,8 +1128,14 @@ const SignIn = () => {
     const nameRegex = /^[A-Za-z]+( [A-Za-z]+)*$/;
     const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     //split empty space
-    let details = { ...formData }
-    setFormData({ ...formData, firstName: getTrimmedName(details.firstName), lastName: getTrimmedName(details.lastName) });
+    let det1 = { ...formData }
+    const trimmedAddress1 = det1?.address1?.replace(/\s{2,}/g, ' ').trim();
+    const trimmedAddress2 = det1?.address2?.replace(/\s{2,}/g, ' ').trim();
+
+    det1['address1'] = trimmedAddress1;
+    det1['address2'] = trimmedAddress2
+    let details = { ...det1 }
+    setFormData({ ...details, firstName: getTrimmedName(details.firstName), lastName: getTrimmedName(details.lastName) });
 
     details['firstName'] = getTrimmedName(details['firstName'])
     details['lastName'] = getTrimmedName(details['lastName'])
@@ -1143,25 +1152,28 @@ const SignIn = () => {
       console.log("Deails email Name ", details.email);
       setFormData({ ...details, errorIndex: 5 });
     }
-    else if (!values?.country?.label) {
-      // alert("Hello from country ")
-      console.log("values ", values.country?.label)
-      console.log("Deails country Name ", details.country?.value);
-      setFormData({ ...details, errorIndex: 6 });
+    else if ((!details?.address2)) {
+      setFormData({ ...details, errorIndex: 5 });
     }
-    else if (!values?.state?.label) {
-      console.log("values ", values.country?.label)
-      console.log("Deails country Name ", details.country?.value);
-      setFormData({ ...details, errorIndex: 7 });
-    }
-    else if (!values?.city?.label) {
-      console.log("Deails city Name ", values.city?.label);
-      setFormData({ ...details, errorIndex: 8 });
-    }
-    else if (!details?.pincode) {
-      console.log("Deails city Name ", values.city?.label);
-      setFormData({ ...details, errorIndex: 9 });
-    }
+    // else if (!values?.country?.label) {
+    //   // alert("Hello from country ")
+    //   console.log("values ", values.country?.label)
+    //   console.log("Deails country Name ", details.country?.value);
+    //   setFormData({ ...details, errorIndex: 6 });
+    // }
+    // else if (!values?.state?.label) {
+    //   console.log("values ", values.country?.label)
+    //   console.log("Deails country Name ", details.country?.value);
+    //   setFormData({ ...details, errorIndex: 7 });
+    // }
+    // else if (!values?.city?.label) {
+    //   console.log("Deails city Name ", values.city?.label);
+    //   setFormData({ ...details, errorIndex: 8 });
+    // }
+    // else if (!details?.pincode) {
+    //   console.log("Deails city Name ", values.city?.label);
+    //   setFormData({ ...details, errorIndex: 9 });
+    // }
     else if (!details.gender?.value) {
       console.log("Deails gender Name ", details.gender?.value);
       setFormData({ ...details, errorIndex: 10 });
@@ -1406,7 +1418,7 @@ const SignIn = () => {
         localStorage.setItem('authorizationToken', response?.data?.accessToken)
         localStorage.setItem('refreshToken', response?.data?.refreshToken)
         dispatch(loginUserSuccess({}))
-        getUserDetails(response?.data?.accessToken, 'alreadySignedUp')
+        await getUserDetails(response?.data?.accessToken, 'alreadySignedUp')
         console.log(response?.data)
 
         page ? page !== 'cart' ? navigate(`/enrollment/${page}`) : navigate('/shop/checkout') : navigate('/')

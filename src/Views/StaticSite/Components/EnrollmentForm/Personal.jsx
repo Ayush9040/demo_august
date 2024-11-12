@@ -167,9 +167,10 @@ const Personal = ({
     }
     if (cityFromRedux) {
       // console.log('cityFromRedux inside State ', cityFromRedux);
-      setFormData((prev) => ({ ...prev, city: cityFromRedux,address2:address2Redux,address1:address1Redux }));
+      setFormData((prev) => ({ ...prev, city: cityFromRedux }));
       setValues((prev) => ({ ...prev, city: { label: cityFromRedux, value: cityFromRedux } }));
     }
+
 
     const urlParams = new URLSearchParams(window.location.search);
     const urlDate = urlParams.get('date');
@@ -203,6 +204,9 @@ const Personal = ({
     }
     if (nationalityFromRedux) {
       setFormData((prev) => ({ ...prev, nationality: nationalityFromRedux }));
+    }
+    if (address2Redux || address1Redux) {
+      setFormData((prev) => ({ ...prev, address2: address2Redux, address1: address1Redux }))
     }
   }, [genderFromRedux, nationalityFromRedux, setFormData]);
 
@@ -388,6 +392,8 @@ const Personal = ({
 
   // Function to generate state options based on selected country
   const getUpdatedStates = (countryIsoCode) => {
+    console.log(countryIsoCode);
+
     if (!countryIsoCode) return [];
     return State.getStatesOfCountry(countryIsoCode).map((state) => ({
       value: state.isoCode,
@@ -1227,7 +1233,6 @@ const Personal = ({
                 />
                 {empty === 5 && <p>Please enter your country</p>}
               </div>
-
               <div className="form_error">
                 <Select
                   styles={customStyles}
@@ -1235,7 +1240,7 @@ const Personal = ({
                   name="state"
                   placeholder="State"
                   options={getUpdatedStates(values?.country?.isoCode ? values?.country?.isoCode :
-                    isoCode)}
+                    values?.country?.value)}
                   value={values.state}
                   onChange={(value) => {
                     setValues({ ...values, state: value, city: null });
@@ -1252,7 +1257,7 @@ const Personal = ({
                   name="city"
                   placeholder="City"
                   options={getUpdatedCities(values?.country?.isoCode ? values?.country?.isoCode :
-                    isoCode, values?.state?.value)}
+                    values?.country?.value, values?.state?.value)}
                   value={values.city}
                   onChange={(value) => {
                     setValues({ ...values, city: value });
