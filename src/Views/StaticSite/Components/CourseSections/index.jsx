@@ -579,11 +579,11 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
 
       <div className="course-list">
         <div className="course-title">
-          {pathParam ? <Link to={`/courses/browse/${pathParam}`}>
+          {pathParam!='ttc' ? <Link to={`/courses/browse/${pathParam}`}>
             <h1 style={{ fontSize: '2.6rem' }}>{title}</h1>
           </Link>
             :
-            <h1 style={{ fontSize: '2.6rem' }}>{title}</h1>
+            <div style={{ fontSize: '2.6rem',fontWeight:'700' }}>{title}</div>
           }
 
         </div>
