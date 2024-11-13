@@ -9,7 +9,7 @@ import './formstyles.scss'
 import { useNavigate  } from 'react-router-dom'; 
 import { useSelector } from 'react-redux';
 
-const UpcomingDurationView = ({ pageDate, setCourseDuration, setCourseDurationSelected, closeModal, setShowDefaultDuration, setNotShowDuration, formData, setFormData, durationList, createEndDate,  setCaptureEndDate}) => {
+const UpcomingDurationView = ({ pageDate, setCourseDuration, setCourseDurationSelected, closeModal, setShowDefaultDuration, setNotShowDuration, formData, setFormData, durationList, createEndDate,  setCaptureEndDate, values}) => {
 
     const [selectedDate, setSelectedDate] = useState(null);
     const { isLoggedIn } = useSelector((state) => state.auth)
@@ -95,7 +95,7 @@ const UpcomingDurationView = ({ pageDate, setCourseDuration, setCourseDurationSe
                                 console.log('date Nowwwwwww', item.label)
                                 if (e.target.checked) {
                                   setCaptureEndDate(item?.value)
-                                  createEndDate('', item?.value)
+                                  createEndDate(values.startDate, item?.value)
                                   // setFormData({
                                   //   ...formData,
                                   //   sdate: item.label
