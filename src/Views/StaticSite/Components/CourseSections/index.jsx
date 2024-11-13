@@ -441,7 +441,7 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
             <br />
             {/* <Accordian sliderVal={customVal} setSliderVal={setCustomVal} data={campsAccordian} selectedFilters={selectedFilters} /> */}
             <div>
-              <h4>
+              {/* <h4> */}
                 <ul id='camps-workshop' >
                   {campsWroskshopStatic.map((item, i) => (
                     shouldDisplayLink(item) && (
@@ -491,7 +491,7 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
                   <li>Kids Yoga Summer Camp (On-Campus)</li>
                 </Link> */}
                 </ul>
-              </h4>
+              {/* </h4> */}
             </div>
             <div className="vertical-scrollbar" style={{ paddingLeft: '5rem' }}>
               {/* <Slider

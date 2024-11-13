@@ -51,7 +51,7 @@ const BrowseCourses = () => {
       }
     } else if (type === 'most-popular') {
       setCategory(AllCourses.filter((item) => item.mostPopular === true))
-      setBreadcrumbs('Most Popular')
+      setBreadcrumbs('Most Popular Yoga Courses')
     } else if (type === 'camps-workshops') {
       setCategory([...campsArr])
       setBreadcrumbs('Camps & Workshops')
@@ -80,10 +80,10 @@ const BrowseCourses = () => {
       else if (location.search == '?type=900') {
         setCategory([...c900hr])
       }
-      else {
-        setCategory([...c200hr])
-        // setCategory([...c200hr, ...c500hr, ...c900hr])
-      }
+      // else {
+      //   setCategory([...c200hr])
+      //   // setCategory([...c200hr, ...c500hr, ...c900hr])
+      // }
     } else if (type === 'most-popular') {
       setCategory(AllCourses.filter((item) => item.mostPopular === true))
     } else if (type === 'camps-workshops') {
@@ -185,13 +185,13 @@ const BrowseCourses = () => {
             </Accordion> */}
             <Accordion allowZeroExpanded>
               <AccordionItem style={{
-                border: breadcrumbs == 'Most Popular' && '2px solid #CA4625',
-                borderRadius: breadcrumbs == 'Most Popular' && '8px'
+                border: breadcrumbs == 'Most Popular Yoga Courses' && '2px solid #CA4625',
+                borderRadius: breadcrumbs == 'Most Popular Yoga Courses' && '8px'
               }}>
                 <AccordionItemHeading>
                   <AccordionItemButton>
                     <Link to="/courses/browse/most-popular">
-                      <p> Most Popular</p>
+                      <p> Most Popular Yoga Courses</p>
                     </Link>
                   </AccordionItemButton>
                 </AccordionItemHeading>
