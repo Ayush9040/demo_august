@@ -1151,7 +1151,7 @@ const CourseDetails = ({
                                 </label>
                               </div>
                             </div>) : (
-
+                            courseDateInfo != 'Select one below' &&
                             <div className='date_btn'>
                               <div className='wrapper_center container_date_enroll'>
                                 <label class="item-label item_date selected_date_popup" style={{ width: '100%', height: '100%', borderRadius: '25px' }}>
@@ -1180,7 +1180,9 @@ const CourseDetails = ({
                                   <strong id="delivery-0-price" class="item-price"></strong>
                                 </label>
                               </div>
-                            </div>)}
+                            </div>)
+
+                        }
 
                         {/* {
                           showDefaultDate === true && formattedDates[2]?.label ? (
