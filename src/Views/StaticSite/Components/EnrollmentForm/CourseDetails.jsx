@@ -41,7 +41,7 @@ const CourseDetails = ({
   const [courseStartDateSelected, setCourseStartDateSelected] = useState(false)
   const [courseDuration, setCourseDuration] = useState('Select one below')
   const [courseDurationSelected, setCourseDurationSelected] = useState(false)
-  const [ captureEndDate, setCaptureEndDate] = useState(null);
+  const [captureEndDate, setCaptureEndDate] = useState(null);
 
   const [courseFormatSelected, setCourseFormatSelected] = useState(false)
   const [courseDateInfo, setCourseDateInfo] = useState('Select one below')
@@ -186,7 +186,7 @@ const CourseDetails = ({
   //   const month = (value.getMonth() + 1).toString().padStart(2, '0'); // Months are zero-based
   //   console.log(month);
   //   const year = value.getFullYear();
-    
+
 
   //   setCourseStartDate(`${day}/${month}/${year}`)
 
@@ -198,7 +198,7 @@ const CourseDetails = ({
   //   console.log(`${day}/${month}/${year}`);
   //   setFormData({ ...formData, startDate: `${day}/${month}/${year}` })
   //   console.log("Form dateeeee ", values)
-    
+
   //   if (values.endDate) { createEndDate(`${day}/${month}/${year}`, values.endDate) }
   //   return `${day}/${month}/${year}`;
   // }
@@ -244,26 +244,26 @@ const CourseDetails = ({
 
     // Update `values` and `formData` states
     setValues((prev) => ({
-        ...prev,
-        startDate: formattedDate,
+      ...prev,
+      startDate: formattedDate,
     }));
 
     setFormData((prev) => ({
-        ...prev,
-        startDate: formattedDate,
+      ...prev,
+      startDate: formattedDate,
     }));
 
     setCourseStartDate(formattedDate);
 
     // If endDate exists, create it based on the new startDate
     if (values.endDate) {
-        createEndDate(formattedDate, values.endDate);
+      createEndDate(formattedDate, values.endDate);
     }
 
     return formattedDate;
-};
+  };
 
-const createEndDate = (startDate, value) => {
+  const createEndDate = (startDate, value) => {
     console.log("Start Date:", startDate, "Value:", value);
 
     if (!startDate || !value) return;
@@ -274,20 +274,20 @@ const createEndDate = (startDate, value) => {
 
     // Update `values` and `formData` states with the new end date
     setValues((prev) => ({
-        ...prev,
-        endDate: value,
-        endDateFormat: endDate,
+      ...prev,
+      endDate: value,
+      endDateFormat: endDate,
     }));
 
     setFormData((prev) => ({
-        ...prev,
-        endDate: value,
-        duration: value.value,
+      ...prev,
+      endDate: value,
+      duration: value.value,
     }));
 
     localStorage.setItem('courseEndDate', endDate);
     dateDurationChange(value);
-};
+  };
 
   // Function to remove ordinal suffixes and format the date
   function formatDate(date) {
@@ -1027,18 +1027,18 @@ const createEndDate = (startDate, value) => {
                             form={formData}
                             setField={setFormData}
                             onChange={(value) => {
-                              console.log('val on change ',value)
+                              console.log('val on change ', value)
                               setCourseStartDateSelected(true)
                               // handleStartDate(value)
                               // createEndDate(value, captureEndDate)
 
                               // Handle start date and chain the creation of end date
-                                const formattedStartDate = handleStartDate(value);
+                              const formattedStartDate = handleStartDate(value);
 
-                                // Use the updated start date for creating end date
-                                if (captureEndDate) {
-                                    createEndDate(formattedStartDate, captureEndDate);
-                                }
+                              // Use the updated start date for creating end date
+                              if (captureEndDate) {
+                                createEndDate(formattedStartDate, captureEndDate);
+                              }
                             }}
                             onKeyDown={(e) => e.preventDefault()} //
                           // readOnly
@@ -1049,7 +1049,7 @@ const createEndDate = (startDate, value) => {
                       </div>
                     </>
                   )}
-                 
+
 
                   {/* {selectedUrlDate} */}
 
@@ -1417,81 +1417,81 @@ const createEndDate = (startDate, value) => {
                           }
 
                           {
-                          ((courseDuration == 'Select one below') && durationList[2]?.label || (courseDuration == durationList[0]?.label || courseDuration == durationList[1]?.label)) ? (
-                            <div className='date_btn'>
-                              <div className='wrapper_center container_date_enroll'>
-                                <label class="item-label item_date" style={{ width: '100%', height: '100%', borderRadius: '25px' }}>
-                                  <input class="item-input"
-                                    type="radio" name="mode"
-                                    value={durationList[2]?.label}
-                                    aria-labelledby="delivery-0-name"
-                                    aria-describedby="delivery-0-shipping delivery-0-price"
-                                    // onChange={() => handleDateSelect(item)}
-                                    onChange={(e) => {
-                                      // setSelectedOption('RESIDENTIAL');
-                                      // handleResidential(true);
-                                      // setPriceSelect(currentCourse?.fees?.offlineFee?.residentialFee)
-                                      setCourseDuration(durationList[2]?.label)
+                            ((courseDuration == 'Select one below') && durationList[2]?.label || (courseDuration == durationList[0]?.label || courseDuration == durationList[1]?.label)) ? (
+                              <div className='date_btn'>
+                                <div className='wrapper_center container_date_enroll'>
+                                  <label class="item-label item_date" style={{ width: '100%', height: '100%', borderRadius: '25px' }}>
+                                    <input class="item-input"
+                                      type="radio" name="mode"
+                                      value={durationList[2]?.label}
+                                      aria-labelledby="delivery-0-name"
+                                      aria-describedby="delivery-0-shipping delivery-0-price"
+                                      // onChange={() => handleDateSelect(item)}
+                                      onChange={(e) => {
+                                        // setSelectedOption('RESIDENTIAL');
+                                        // handleResidential(true);
+                                        // setPriceSelect(currentCourse?.fees?.offlineFee?.residentialFee)
+                                        setCourseDuration(durationList[2]?.label)
                                         setCourseDurationSelected(true)
-                                      if (e.target.checked) {
-                                        setCaptureEndDate(durationList[2]?.value)
-                                            createEndDate(values.startDate, durationList[2]?.value)
-                                        // setFormData({
-                                        //   ...formData,
-                                        //   sdate: e.target.value
-                                        // })
-                                        setEmpty(0)
-                                        // if (currentCourse?.key === 'ma-yoga-shastra' && currentCourse.country !== 'India') {
-                                        //   setCourseFee(currentCourse?.fees?.internationalFee?.residentialFee)
-                                        // } else {
-                                        //   setCourseFee(currentCourse?.fees?.offlineFee?.residentialFee)
-                                        // }
-                                        // setCourseFee(updatedFees( currentCourse?.key,'RESIDENTIAL' ))
-                                      }
-                                    }}
+                                        if (e.target.checked) {
+                                          setCaptureEndDate(durationList[2]?.value)
+                                          createEndDate(values.startDate, durationList[2]?.value)
+                                          // setFormData({
+                                          //   ...formData,
+                                          //   sdate: e.target.value
+                                          // })
+                                          setEmpty(0)
+                                          // if (currentCourse?.key === 'ma-yoga-shastra' && currentCourse.country !== 'India') {
+                                          //   setCourseFee(currentCourse?.fees?.internationalFee?.residentialFee)
+                                          // } else {
+                                          //   setCourseFee(currentCourse?.fees?.offlineFee?.residentialFee)
+                                          // }
+                                          // setCourseFee(updatedFees( currentCourse?.key,'RESIDENTIAL' ))
+                                        }
+                                      }}
 
-                                  />
-                                  <span class="item-info item_desc">
-                                    <span id="delivery-0-name" class="item-name date_info">
-                                      <span className='style_dates'>{durationList[2]?.label}</span></span>
-                                  </span>
+                                    />
+                                    <span class="item-info item_desc">
+                                      <span id="delivery-0-name" class="item-name date_info">
+                                        <span className='style_dates'>{durationList[2]?.label}</span></span>
+                                    </span>
 
-                                  <strong id="delivery-0-price" class="item-price"></strong>
-                                </label>
-                              </div>
-                            </div>) : (
+                                    <strong id="delivery-0-price" class="item-price"></strong>
+                                  </label>
+                                </div>
+                              </div>) : (
 
-                            <div className='date_btn'>
-                              <div className='wrapper_center container_date_enroll'>
-                                <label class="item-label item_date selected_date_popup" style={{ width: '100%', height: '100%', borderRadius: '25px' }}>
-                                  <input class="item-input"
-                                    type="radio" name="mode"
-                                    value={courseDuration}
-                                    aria-labelledby="delivery-0-name"
-                                    aria-describedby="delivery-0-shipping delivery-0-price"
-                                    onChange={(e) => {
-                                      setCourseDuration(courseDuration)
+                              <div className='date_btn'>
+                                <div className='wrapper_center container_date_enroll'>
+                                  <label class="item-label item_date selected_date_popup" style={{ width: '100%', height: '100%', borderRadius: '25px' }}>
+                                    <input class="item-input"
+                                      type="radio" name="mode"
+                                      value={courseDuration}
+                                      aria-labelledby="delivery-0-name"
+                                      aria-describedby="delivery-0-shipping delivery-0-price"
+                                      onChange={(e) => {
+                                        setCourseDuration(courseDuration)
                                         setCourseDurationSelected(true)
-                                      if (e.target.checked) {
-                                        setCaptureEndDate(courseDuration)
-                                            createEndDate(values.startDate, courseDuration)
-                                        // setFormData({
-                                        //   ...formData,
-                                        //   sdate: e.target.value
-                                        // })
-                                        setEmpty(0)
-                                      }
-                                    }}
-                                  />
-                                  <span class="item-info item_desc">
-                                    <span id="delivery-0-name" class="item-name date_info">
-                                      <span className='style_dates'>{courseDuration}</span></span>
-                                  </span>
+                                        if (e.target.checked) {
+                                          setCaptureEndDate(courseDuration)
+                                          createEndDate(values.startDate, courseDuration)
+                                          // setFormData({
+                                          //   ...formData,
+                                          //   sdate: e.target.value
+                                          // })
+                                          setEmpty(0)
+                                        }
+                                      }}
+                                    />
+                                    <span class="item-info item_desc">
+                                      <span id="delivery-0-name" class="item-name date_info">
+                                        <span className='style_dates'>{courseDuration}</span></span>
+                                    </span>
 
-                                  <strong id="delivery-0-price" class="item-price"></strong>
-                                </label>
-                              </div>
-                            </div>)}
+                                    <strong id="delivery-0-price" class="item-price"></strong>
+                                  </label>
+                                </div>
+                              </div>)}
 
                           {/* {
                             showDefaultDuration === true ? (
@@ -1721,16 +1721,32 @@ const createEndDate = (startDate, value) => {
 
                 </div>
                 <div className='details_desc_days'>
-                  <div className='details_desc_name_info'><span className='details_duration_info'>Address</span> <span className='tenure_course'>{`${formData?.address1}, ${formData?.state}, ${formData?.country} - ${formData?.pincode}`}</span></div>
+                  <div className='details_desc_name_info'><span className='details_duration_info'>Address</span> <span className='tenure_course'>
+                    {formData?.address1}
+                    {formData?.address1 && <>, </>}
+                    {formData?.state}
+                    {formData?.country && <>, </>}
+                    {formData?.country}
+                    {formData?.pincode && <> - </>}
+                    {formData?.pincode}
+
+                    {/* {`${formData?.address1} ${formData?.state}, ${formData?.country} - ${formData?.pincode}`} */}
+                  </span></div>
 
                 </div>
 
                 <div className='edit_show'>
                   <div onClick={handleShowEdit}>
                     <span>Edit</span>
-                    <div>
-                      <img src="/images/edit_icon.svg" alt="" />
-                    </div>
+                    &nbsp;&nbsp;
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12.9215 8.75992C12.7288 8.75992 12.5728 8.91598 12.5728 9.10859V12.2044C12.5721 12.7819 12.1042 13.2499 11.5268 13.2504H1.74336C1.16586 13.2499 0.698042 12.7819 0.697345 12.2044V3.11836C0.698042 2.541 1.16589 2.07304 1.74336 2.07234H4.83922C5.0318 2.07234 5.1879 1.91624 5.1879 1.72367C5.1879 1.53121 5.0318 1.375 4.83922 1.375H1.74336C0.780957 1.37608 0.00108088 2.15596 0 3.11836V12.2046C0.00108088 13.1669 0.780957 13.9468 1.74336 13.9479H11.5268C12.4891 13.9468 13.269 13.1669 13.2701 12.2046V9.10859C13.2701 8.91598 13.114 8.75992 12.9215 8.75992Z" fill="black" />
+                      <path d="M13.1332 0.478122C12.5204 -0.134635 11.527 -0.134635 10.9142 0.478122L4.69363 6.69868C4.65105 6.74126 4.62023 6.79414 4.60416 6.85217L3.78614 9.80542C3.76963 9.86489 3.76921 9.92766 3.7849 9.98734C3.8006 10.047 3.83186 10.1015 3.87549 10.1451C3.91912 10.1888 3.97355 10.22 4.03323 10.2358C4.0929 10.2515 4.15568 10.2511 4.21515 10.2346L7.16841 9.41641C7.22644 9.40034 7.27932 9.36952 7.32189 9.32694L13.5423 3.10628C14.1541 2.49307 14.1541 1.50046 13.5423 0.887289L13.1332 0.478122ZM5.45336 6.92532L10.5444 1.83414L12.1863 3.47604L7.09515 8.56722L5.45336 6.92532ZM5.12539 7.58344L6.4371 8.89532L4.62268 9.39803L5.12539 7.58344ZM13.0493 2.61322L12.6795 2.98295L11.0374 1.34091L11.4074 0.971145C11.7478 0.630771 12.2996 0.630771 12.64 0.971145L13.0493 1.38028C13.3891 1.72107 13.3891 2.27257 13.0493 2.61322Z" fill="black" />
+                    </svg>
+
+                    {/* <div> */}
+                    {/* <img src="/images/edit_icon.svg" alt="" /> */}
+                    {/* </div> */}
                   </div>
 
                 </div>

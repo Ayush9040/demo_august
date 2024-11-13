@@ -1737,19 +1737,21 @@ input[type='radio']:checked::before {
 
 @media (max-width: 480px) {
   .main-container {
-    margin: 0;
 
     .course-main-container {
       .course-secondary-container {
         .details_box {
+
           border: 1px solid rgba(96, 96, 96, 0.5019607843);
           border-radius: 20px;
-          width: 312px;
+          width: 100% !important;
           /* height: 200px; */
           height: auto;
-          margin-left: 10px;
+          margin-left: 0 !important;
           text-align: center;
           background-color: #fff;
+
+
           border: none;
 
           .details_course_box {
@@ -1783,6 +1785,7 @@ input[type='radio']:checked::before {
         }
 
         .residential-form {
+
           .last_radio_button {
             .course_details_text {
               min-width: 120px;
@@ -2584,12 +2587,14 @@ input[type=checkbox]:checked+label:before {
     background: transparent;
     font-weight: 900;
     font-size: 2rem;
-    margin-right: 1rem;
+    margin-right: 3rem;
     border: 0px solid rgb(0, 0, 0);
     border-radius: 20px;
     padding: 0px;
-    margin-top: 35px;
+    margin-top: 32px;
+    // margin-right: 100px;
     cursor: pointer;
+
   }
 
   .enrollment_container .student {
@@ -2761,7 +2766,7 @@ input[type=checkbox]:checked+label:before {
   }
 
   .check_course .item-label {
-    align-items: center;
+    align-items: start !important;
   }
 
   .container_date_enroll .item_date {
@@ -2771,8 +2776,9 @@ input[type=checkbox]:checked+label:before {
   }
 
   .details_format_date .check_course .item_format {
-    border-radius: 25px;
-    justify-content: center;
+    border-radius: 20px;
+    justify-content: left;
+    padding-left: 10px !important;
   }
 
   .details_wrapper_duration_2 {
@@ -2897,6 +2903,12 @@ input[type=checkbox]:checked+label:before {
     border-radius: 20px;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
+
+  }
+
+  .label_format_course {
+    font-size: 14px;
+    font-weight: 600;
   }
 
   .bottom_container_btn {
@@ -2916,7 +2928,9 @@ input[type=checkbox]:checked+label:before {
   }
 
   .enrollment_container {
-    margin-bottom: 38%;
+    margin: 23px 20px 36% 20px;
+    border-radius: 20px;
+    width: 90%;
   }
 
   .terms label {
@@ -2945,6 +2959,7 @@ input[type=checkbox]:checked+label:before {
 @media (max-width: '480px') {
   .details_desc_info {
     flex-direction: column;
+
     .details_wrapper_duration {
       padding: 9px 0;
       width: 100%;
