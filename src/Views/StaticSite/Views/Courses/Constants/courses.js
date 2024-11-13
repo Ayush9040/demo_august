@@ -13751,6 +13751,7 @@ const classes = {
     nonResidential: true,
     residential: false,
     certficate: false,
+    newName: '',
     enrollInfo: {
       duration: "Every Sunday",
       timings: [
@@ -14261,6 +14262,7 @@ const classes = {
     preRequisite: 'None',
     courseCategory: 'Self Help',
     courseSubType: 'Camps & Workshops',
+    newName: '',
     enrollInfo: {
       duration: "Only on Saturday’s",
       timings: [

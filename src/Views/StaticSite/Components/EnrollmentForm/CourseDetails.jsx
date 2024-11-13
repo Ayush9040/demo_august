@@ -651,7 +651,7 @@ const createEndDate = (startDate, value) => {
               <div className="current_duration">
                 <div>
                   <span className='details_newName'>
-                    {currentCourse?.newName}&nbsp;
+                    {currentCourse?.newName === '' ? currentCourse?.title : currentCourse?.newName}&nbsp;
                   </span>
                   {/* {courseDate !== 'null' ? courseDate : ''} */}
                 </div>
@@ -678,14 +678,20 @@ const createEndDate = (startDate, value) => {
               </div>
             </div>
 
-
-            <div className={isRegular ? 'btn_mode_date_regular' : 'btn_mode_date_wrapper'}>
+            {/* <div className={isRegular ? 'btn_mode_date_regular' : 'btn_mode_date_wrapper'} style={{
+              borderTop: isSatsangPage ? "none" : "1px solid rgba(96, 96, 96, 0.3)"
+            }}>
+            {!isSatsangPage && (
+             <>
 
               <div className='first_wrapper_regular_btn'>
                 <div className={courseFormatSelected === true ? 'details_wrapper_duration_3' : 'details_wrapper_duration_2'}><span className='details_duration_info' style={{ color: 'rgba(0, 0, 0, 1)' }}>Course format - {courseFormatInfo}</span></div>
 
                 <div className={courseDateSelected === true ? 'details_wrapper_duration_3' : 'details_wrapper_duration_2'}><span className='details_duration_info' style={{ color: 'rgba(0, 0, 0, 1)' }}>{isRegular ? "Course Time" : "Course Date"} - {courseDateInfo}</span></div>
               </div>
+             
+             </>
+            )}
 
               {
                 isRegular && (
@@ -698,7 +704,7 @@ const createEndDate = (startDate, value) => {
               }
 
 
-            </div>
+            </div> */}
 
 
 
