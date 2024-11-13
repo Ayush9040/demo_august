@@ -613,7 +613,10 @@ const CourseDetails = ({
     // Prevent opening the keyboard on mobile devices
     e.preventDefault();
   };
-
+  const preventKeyboard = (e) => {
+    e.preventDefault(); // Prevent focus behavior (keyboard)
+    e.stopPropagation(); // Prevent other events from triggering
+  };
   const handleTouchStart = (e) => {
     // Prevent the keyboard from appearing on touch (mobile behavior)
     e.preventDefault();
@@ -1029,7 +1032,7 @@ const CourseDetails = ({
                         <div className="form_error course_date date-input-wrapper">
                           <DatePicker
                             minDate={minDate}
-                            visiblity={'hidden'}
+                            // visiblity={'hidden'}
                             placeholderText="Choose date" // Custom placeholder text
                             dateFormat="dd/MM/YYYY"
                             value={values.startDate}
@@ -1050,9 +1053,12 @@ const CourseDetails = ({
                               }
                             }}
                             // onKeyDown={(e) => e.preventDefault()} //
-                            onFocus={handleFocus}
-                            readonly
-                            onTouchStart={handleTouchStart} />
+                            customInput={
+                              <input readOnly
+                                tabIndex="-1" // Prevents focusing and the keyboard from showing
+                                onClick={preventKeyboard} // Stops the keyboard from opening on mobile
+                              />
+                            }/>
                           {/* {empty === 18 && <small id="fill_err"> Please select start date</small>
                           } */}
                         </div>
