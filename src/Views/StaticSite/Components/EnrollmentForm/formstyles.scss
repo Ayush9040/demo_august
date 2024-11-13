@@ -2429,7 +2429,7 @@ input[type=checkbox]:checked+label:before {
 .details_wrapper_duration {
   border-radius: 8px;
   border: 1px solid rgba(96, 96, 96, 0.3);
-  min-width: 180px;
+  // min-width: 180px;
   width: 49%;
   padding: 4px 12px 8px 12px;
   text-align: center;
@@ -2665,7 +2665,7 @@ input[type=checkbox]:checked+label:before {
   .details_wrapper_duration {
     border-radius: 8px;
     border: 1px solid rgba(96, 96, 96, 0.3);
-    width: 49%;
+    width: 46%;
     display: flex;
     padding: 2px;
     text-align: center;
@@ -2958,11 +2958,12 @@ input[type=checkbox]:checked+label:before {
 
 @media (max-width: '480px') {
   .details_desc_info {
-    flex-direction: column;
+    // flex-direction: column;
+
 
     .details_wrapper_duration {
-      padding: 9px 0;
-      width: 100%;
+      padding: 4px 0;
+      min-width: none !important;
     }
   }
 }
