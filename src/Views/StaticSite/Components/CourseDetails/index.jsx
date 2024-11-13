@@ -43,6 +43,15 @@ const CourseDetails = ({ pageDate }) => {
   const [open, setOpen] = useState(false);
   const [ isRegular, setIsRegular] = useState(false)
 
+  const [isSpecialPage, setIsSpecialPage] = useState(false);
+  useEffect(() => {
+    // Check if the URL matches either "/satsang" or "/samattvam"
+    if (location.pathname === '/satsang' || location.pathname === '/samattvam') {
+      setIsSpecialPage(true);
+    } else {
+      setIsSpecialPage(false);
+    }
+  }, [location.pathname]);
 
   useEffect(() => {
     // Check if the current location matches the required URL
@@ -697,23 +706,19 @@ const CourseDetails = ({ pageDate }) => {
                   </small>
                 )} */}
               </div>
-
-              {
-                !isRegular ? (
-                  <div className='wrapper_dates'>
-                <span className='date-label-new'>Upcoming Dates:</span> <span className='start-date-glimse'> &nbsp;{startDate} | </span>  &nbsp;
-                <div className='view_wrapper'>
-                  <a
-                    onClick={handleOpen}
-                    style={{ marginLeft: "0.5px", textDecoration: "underline", cursor: "pointer", display: 'flex', alignItems: 'center' }} >
-                    <span className='view_all_dates'>View all </span>
-                    <div><img src="/images/Arrow right.svg" alt="" /></div>
-                  </a>
+              {!isSpecialPage && (
+                <div className='wrapper_dates'>
+                  <span className='date-label-new'>Upcoming Dates:</span> <span className='start-date-glimse'> &nbsp;{startDate} | </span>  &nbsp;
+                  <div className='view_wrapper'>
+                    <a
+                      onClick={handleOpen}
+                      style={{ marginLeft: "0.5px", textDecoration: "underline", cursor: "pointer", display: 'flex', alignItems: 'center' }} >
+                      <span className='view_all_dates'>View all </span>
+                      <div><img src="/images/Arrow right.svg" alt="" /></div>
+                    </a>
+                  </div>
                 </div>
-              </div>
-                ) : ""
-              }
-
+              )}
               {/* <CommonBtn text={'Gift Course'} /> */}
             </div>
 
