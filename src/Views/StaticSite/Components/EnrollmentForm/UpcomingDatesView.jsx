@@ -9,7 +9,7 @@ import './formstyles.scss'
 import { useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
-const UpcomingDatesView = ({ pageDate, setCourseDateInfo, setCourseDateSelected, closeModal, setShowDefaultDate, setNotShowDate, formData, setFormData }) => {
+const UpcomingDatesView = ({ pageDate, setCourseDateInfo, setCourseDateSelected, closeModal, setShowDefaultDate, setNotShowDate, formData, setFormData, courseDateInfo }) => {
 
   const [selectedDate, setSelectedDate] = useState(null);
   const { isLoggedIn } = useSelector((state) => state.auth)
@@ -104,6 +104,7 @@ const UpcomingDatesView = ({ pageDate, setCourseDateInfo, setCourseDateSelected,
                           handleDateSelect(item)
                           closeModal()
                         }}
+                        checked={courseDateInfo == item?.label}
 
                       />
                       <span class="item-info item_desc">

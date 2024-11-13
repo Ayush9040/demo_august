@@ -26,8 +26,8 @@ const customStyles = {
 
 // Modal.setAppElement('#___gatsby')
 
-const UpcomingDates = ({ isShippingModalOpen, setIsShipppingModalOpen, pageDate, setCourseDateInfo, setCourseDateSelected, setShowDefaultDate, setNotShowDate, formData, setFormData, isRegular}) => {
-  
+const UpcomingDates = ({ isShippingModalOpen, setIsShipppingModalOpen, pageDate, setCourseDateInfo, setCourseDateSelected, setShowDefaultDate, setNotShowDate, formData, setFormData, isRegular, courseDateInfo }) => {
+
   function closeModal() {
     setIsShipppingModalOpen(false)
   }
@@ -48,22 +48,22 @@ const UpcomingDates = ({ isShippingModalOpen, setIsShipppingModalOpen, pageDate,
               </h2> */}
               {/* <h2 className="heading-2">Payment</h2> */}
               <div className='banner-heading upcoming_dates_heading' style={{ textAlign: 'left', margin: '0px' }}>
-           {isRegular ? "Course Timings" : "Course Upcoming Dates"}
-            <p className='upcoming_sub_heading'>{isRegular ? "Choose your preferred course time from the list below" : "Choose your preferred course start date from the list below"}</p>
-            </div>
+                {isRegular ? "Course Timings" : "Course Upcoming Dates"}
+                <p className='upcoming_sub_heading'>{isRegular ? "Choose your preferred course time from the list below" : "Choose your preferred course start date from the list below"}</p>
+              </div>
 
             </div>
-            <div style={{width: '12px', height: '12px'}}>
-            
-              <span className="change-cross-svg-width" style={{cursor: 'pointer'}} onClick={closeModal}>
+            <div style={{ width: '12px', height: '12px' }}>
+
+              <span className="change-cross-svg-width" style={{ cursor: 'pointer' }} onClick={closeModal}>
                 {cross}
 
               </span>
             </div>
-          
           </div>
+          
           <div className="modal-content" style={{ gridTemplateColumns: '1fr', marginTop: '0rem' }}>
-            {<UpcomingDatesView pageDate={pageDate} setCourseDateInfo={setCourseDateInfo} setCourseDateSelected={setCourseDateSelected} closeModal={closeModal} setShowDefaultDate={setShowDefaultDate} setNotShowDate={setNotShowDate} formData={formData} setFormData={setFormData} />}
+            {<UpcomingDatesView pageDate={pageDate} setCourseDateInfo={setCourseDateInfo} setCourseDateSelected={setCourseDateSelected} closeModal={closeModal} setShowDefaultDate={setShowDefaultDate} setNotShowDate={setNotShowDate} formData={formData} setFormData={setFormData} courseDateInfo={courseDateInfo}/>}
             {/* <div>
               <input
                 className="modal-input"

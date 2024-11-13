@@ -374,6 +374,7 @@ const CourseDetails = ({
 
   const handleOpenDuration = () => {
     setOpenDuration(true);
+    setTimeout(() => { scrollToDiv() }, 100)
   }
 
   const handleCloseDuration = () => {
@@ -608,7 +609,15 @@ const CourseDetails = ({
     const result = (currentCourse.online === false && currentCourse.residential === false && currentCourse.nonResidential === false) ? true : false;
     return result;
   };
+  const handleFocus = (e) => {
+    // Prevent opening the keyboard on mobile devices
+    e.preventDefault();
+  };
 
+  const handleTouchStart = (e) => {
+    // Prevent the keyboard from appearing on touch (mobile behavior)
+    e.preventDefault();
+  };
 
   // Group timings by unique days
   const groupTimings = (timings) => {
@@ -1040,9 +1049,10 @@ const CourseDetails = ({
                                 createEndDate(formattedStartDate, captureEndDate);
                               }
                             }}
-                            onKeyDown={(e) => e.preventDefault()} //
-                          // readOnly
-                          />
+                            // onKeyDown={(e) => e.preventDefault()} //
+                            onFocus={handleFocus}
+                            readonly
+                            onTouchStart={handleTouchStart} />
                           {/* {empty === 18 && <small id="fill_err"> Please select start date</small>
                           } */}
                         </div>
@@ -1329,7 +1339,7 @@ const CourseDetails = ({
                           //   type="Terms and Conditions" // You can pass any other props as needed
                           // /> 
                           // <TermsAndConditionsModal />
-                          <UpcomingDates isShippingModalOpen={handleOpen} setIsShipppingModalOpen={handleClose} pageDate={formattedDates} setCourseDateInfo={setCourseDateInfo} setCourseDateSelected={setCourseDateSelected} setShowDefaultDate={setShowDefaultDate} setNotShowDate={setNotShowDate} formData={formData} setFormData={setFormData} isRegular={isRegular} />
+                          <UpcomingDates isShippingModalOpen={handleOpen} setIsShipppingModalOpen={handleClose} pageDate={formattedDates} setCourseDateInfo={setCourseDateInfo} setCourseDateSelected={setCourseDateSelected} setShowDefaultDate={setShowDefaultDate} setNotShowDate={setNotShowDate} formData={formData} setFormData={setFormData} isRegular={isRegular} courseDateInfo={courseDateInfo}/>
                         )}
 
 
@@ -1646,7 +1656,7 @@ const CourseDetails = ({
                             //   type="Terms and Conditions" // You can pass any other props as needed
                             // />
                             // <TermsAndConditionsModal />
-                            <UpcomingDuration isShippingModalOpen={handleOpenDuration} setIsShipppingModalOpen={handleCloseDuration} pageDate={formattedDates} setCourseDuration={setCourseDuration} setCourseDurationSelected={setCourseDurationSelected} setShowDefaultDuration={setShowDefaultDuration} setNotShowDuration={setNotShowDuration} formData={formData} setFormData={setFormData} isRegular={isRegular} durationList={durationList} createEndDate={createEndDate} setCaptureEndDate={setCaptureEndDate} values={values} />
+                            <UpcomingDuration isShippingModalOpen={handleOpenDuration} setIsShipppingModalOpen={handleCloseDuration} pageDate={formattedDates} setCourseDuration={setCourseDuration} setCourseDurationSelected={setCourseDurationSelected} setShowDefaultDuration={setShowDefaultDuration} setNotShowDuration={setNotShowDuration} formData={formData} setFormData={setFormData} isRegular={isRegular} durationList={durationList} createEndDate={createEndDate} setCaptureEndDate={setCaptureEndDate} values={values} courseDuration={courseDuration}/>
                           )}
 
 
