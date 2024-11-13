@@ -1395,7 +1395,7 @@ const createEndDate = (startDate, value) => {
                                             // setCourseFee(updatedFees( currentCourse?.key,'RESIDENTIAL' ))
                                           }
                                         }}
-
+                                        checked={courseDuration == item?.label}
                                       />
                                       <span class="item-info item_desc">
                                         <span id="delivery-0-name" class="item-name date_info">
@@ -1411,6 +1411,83 @@ const createEndDate = (startDate, value) => {
                           }
 
                           {
+                          ((courseDuration == 'Select one below') && durationList[2]?.label || (courseDuration == durationList[0]?.label || courseDuration == durationList[1]?.label)) ? (
+                            <div className='date_btn'>
+                              <div className='wrapper_center container_date_enroll'>
+                                <label class="item-label item_date" style={{ width: '100%', height: '100%', borderRadius: '25px' }}>
+                                  <input class="item-input"
+                                    type="radio" name="mode"
+                                    value={durationList[2]?.label}
+                                    aria-labelledby="delivery-0-name"
+                                    aria-describedby="delivery-0-shipping delivery-0-price"
+                                    // onChange={() => handleDateSelect(item)}
+                                    onChange={(e) => {
+                                      // setSelectedOption('RESIDENTIAL');
+                                      // handleResidential(true);
+                                      // setPriceSelect(currentCourse?.fees?.offlineFee?.residentialFee)
+                                      setCourseDuration(durationList[2]?.label)
+                                        setCourseDurationSelected(true)
+                                      if (e.target.checked) {
+                                        setCaptureEndDate(durationList[2]?.value)
+                                            createEndDate(values.startDate, durationList[2]?.value)
+                                        // setFormData({
+                                        //   ...formData,
+                                        //   sdate: e.target.value
+                                        // })
+                                        setEmpty(0)
+                                        // if (currentCourse?.key === 'ma-yoga-shastra' && currentCourse.country !== 'India') {
+                                        //   setCourseFee(currentCourse?.fees?.internationalFee?.residentialFee)
+                                        // } else {
+                                        //   setCourseFee(currentCourse?.fees?.offlineFee?.residentialFee)
+                                        // }
+                                        // setCourseFee(updatedFees( currentCourse?.key,'RESIDENTIAL' ))
+                                      }
+                                    }}
+
+                                  />
+                                  <span class="item-info item_desc">
+                                    <span id="delivery-0-name" class="item-name date_info">
+                                      <span className='style_dates'>{durationList[2]?.label}</span></span>
+                                  </span>
+
+                                  <strong id="delivery-0-price" class="item-price"></strong>
+                                </label>
+                              </div>
+                            </div>) : (
+
+                            <div className='date_btn'>
+                              <div className='wrapper_center container_date_enroll'>
+                                <label class="item-label item_date selected_date_popup" style={{ width: '100%', height: '100%', borderRadius: '25px' }}>
+                                  <input class="item-input"
+                                    type="radio" name="mode"
+                                    value={courseDuration}
+                                    aria-labelledby="delivery-0-name"
+                                    aria-describedby="delivery-0-shipping delivery-0-price"
+                                    onChange={(e) => {
+                                      setCourseDuration(courseDuration)
+                                        setCourseDurationSelected(true)
+                                      if (e.target.checked) {
+                                        setCaptureEndDate(courseDuration)
+                                            createEndDate(values.startDate, courseDuration)
+                                        // setFormData({
+                                        //   ...formData,
+                                        //   sdate: e.target.value
+                                        // })
+                                        setEmpty(0)
+                                      }
+                                    }}
+                                  />
+                                  <span class="item-info item_desc">
+                                    <span id="delivery-0-name" class="item-name date_info">
+                                      <span className='style_dates'>{courseDuration}</span></span>
+                                  </span>
+
+                                  <strong id="delivery-0-price" class="item-price"></strong>
+                                </label>
+                              </div>
+                            </div>)}
+
+                          {/* {
                             showDefaultDuration === true ? (
                               <div className='date_btn'>
                                 <div className='wrapper_center container_date_enroll'>
@@ -1545,7 +1622,7 @@ const createEndDate = (startDate, value) => {
                                 </div>
                               </div>
                             )
-                          }
+                          } */}
 
                           <div className='upcoming_dates'>
                             <span onClick={handleOpenDuration}>See all available Duration
@@ -1561,7 +1638,7 @@ const createEndDate = (startDate, value) => {
                             //   type="Terms and Conditions" // You can pass any other props as needed
                             // />
                             // <TermsAndConditionsModal />
-                            <UpcomingDuration isShippingModalOpen={handleOpenDuration} setIsShipppingModalOpen={handleCloseDuration} pageDate={formattedDates} setCourseDuration={setCourseDuration} setCourseDurationSelected={setCourseDurationSelected} setShowDefaultDuration={setShowDefaultDuration} setNotShowDuration={setNotShowDuration} formData={formData} setFormData={setFormData} isRegular={isRegular} durationList={durationList} createEndDate={createEndDate} setCaptureEndDate={setCaptureEndDate} />
+                            <UpcomingDuration isShippingModalOpen={handleOpenDuration} setIsShipppingModalOpen={handleCloseDuration} pageDate={formattedDates} setCourseDuration={setCourseDuration} setCourseDurationSelected={setCourseDurationSelected} setShowDefaultDuration={setShowDefaultDuration} setNotShowDuration={setNotShowDuration} formData={formData} setFormData={setFormData} isRegular={isRegular} durationList={durationList} createEndDate={createEndDate} setCaptureEndDate={setCaptureEndDate} values={values} />
                           )}
 
 
