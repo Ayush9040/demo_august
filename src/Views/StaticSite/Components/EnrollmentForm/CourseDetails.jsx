@@ -61,6 +61,11 @@ const CourseDetails = ({
     const queryParams = new URLSearchParams(location.search);
     const date = queryParams.get('date'); // Extract the 'date' parameter
     if (date) {
+      setCourseDateInfo(date);
+      setFormData((prev) => ({
+        ...prev,
+        sdate: date,
+      }));
       setSelectedUrlDate(date); // Set the extracted date as the default value
     }
   }, [location.search]);
