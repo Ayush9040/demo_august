@@ -414,16 +414,7 @@ const Enrollment = () => {
                       quantity: 1
                     }]
                   });
-                  console.log({
-                    currency: 'INR',
-                    value: courseFee,
-                    items: [{
-                      item_name: currentCourse?.title,
-                      item_id: currentCourse?.courseCategory,
-                      price: courseFee,
-                      quantity: 1
-                    }]
-                  });
+               
 
 
                   navigate(`/enrollment_thankyou/${currentCourse.key}`)
@@ -670,7 +661,6 @@ const Enrollment = () => {
           quantity: 1
         }]
       });
-
       setupUserProfile(formData);
     }
   }

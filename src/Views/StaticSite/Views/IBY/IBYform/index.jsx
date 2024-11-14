@@ -1,5 +1,5 @@
 import React from 'react'
-import { useState , useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import InputComponent from '../../../Components/InputComponent'
 import './style.scss'
 import PhoneInput from 'react-phone-number-input'
@@ -13,6 +13,7 @@ import Loader from '../../../Components/Loader'
 import InnerNavComponent from '../../../Components/InnerNavComponent'
 import { razorPayKey } from '../../../../../Constants/appSettings'
 import { useSelector } from 'react-redux'
+import ReactGA from 'react-ga4';
 
 const IBYform = ({ setOpenForm, price, selectBatch }) => {
 
@@ -28,9 +29,9 @@ const IBYform = ({ setOpenForm, price, selectBatch }) => {
     phoneNumber: '',
     email: '',
     country: '',
-    paymentInfo:'',
-    certificationDocs:'',
-    courseInfo:'IBY class',
+    paymentInfo: '',
+    certificationDocs: '',
+    courseInfo: 'IBY class',
   })
   const highlight = {
     title: 'Career',
@@ -64,27 +65,49 @@ const IBYform = ({ setOpenForm, price, selectBatch }) => {
     if (countryNameFromRedux) {
       setFormData((prev) => ({ ...prev, country: countryNameFromRedux }));
     }
-    
-  
+
+
   }, [nameFromRedux, phoneNumberFromRedux, emailFromRedux, countryNameFromRedux, setFormData]);
 
-  const submitForm = async() => {
+  const submitForm = async () => {
     const { data } = await IYBenroll(
-      { name: formData.name,
+      {
+        name: formData.name,
         phoneNumber: formData.phoneNumber,
         email: formData.email,
         country: formData.country,
-        paymentInfo:formData.paymentInfo,
-        certificationDocs:` ${courseAsset}` ,
-        courseInfo:'IBY class', 
-        
+        paymentInfo: formData.paymentInfo,
+        certificationDocs: ` ${courseAsset}`,
+        courseInfo: 'IBY class',
+
       }
     )
-   
+    
+    ReactGA.event('begin_checkout', {
+      currency: 'INR',
+      value: price,
+      items: [{
+        item_name: 'IBY class',
+        item_id: 'IBY',
+        price: price,
+        quantity: 1
+      }]
+    });
+    console.log({
+      currency: 'INR',
+      value: price,
+      items: [{
+        item_name: 'IBY class',
+        item_id: 'IBY',
+        price: price,
+        quantity: 1
+      }]
+    });
+
     const paymentOrderResponse = await createIYBorder(data.data._id, {
       amount: price,
       notes: 'IYB course',
-      objectType : 'IBY',
+      objectType: 'IBY',
     })
     if (!paymentOrderResponse?.data?.amount && !paymentOrderResponse?.data?.id)
       return 0
@@ -99,7 +122,7 @@ const IBYform = ({ setOpenForm, price, selectBatch }) => {
       description: 'IYB course Transaction',
       // image: 'https://example.com/your_logo', // un comment and add TYI logo
       order_id: paymentOrderResponse.data.id, // eslint-disable-line
-      handler: async(res) => {
+      handler: async (res) => {
         // Navigare to Success if razorpay_payment_id, razorpay_order_id, razorpay_signature is there
         if (
           res.razorpay_payment_id &&
@@ -113,8 +136,29 @@ const IBYform = ({ setOpenForm, price, selectBatch }) => {
             data: {
               name: formData.name,
             },
-            receivers: [formData.email,'info@theyogainstitute.org'],
+            receivers: [formData.email, 'info@theyogainstitute.org'],
           })
+          ReactGA.event('purchase', {
+            currency: 'INR',
+            value: price,
+            items: [{
+              item_name: 'IBY class',
+              item_id: 'IBY',
+              price: price,
+              quantity: 1
+            }]
+          });
+          console.log({
+            currency: 'INR',
+            value: price,
+            items: [{
+              item_name: 'IBY class',
+              item_id: 'IBY',
+              price: price,
+              quantity: 1
+            }]
+          });
+
           navigate(`/enrollment_thankyou/${'IBY-course'}`)
         }
       },
@@ -129,18 +173,18 @@ const IBYform = ({ setOpenForm, price, selectBatch }) => {
         name: formData.name,
         email: formData.email,
         contact: formData.phoneNumber,
-        paymentInfo:  formData.paymentInfo,
+        paymentInfo: formData.paymentInfo,
       },
       theme: {
         color: '#3399cc', // enter theme color for our website
       },
     }
-    console.log(paymentOrderResponse,'helotjiogery]iug')
+    console.log(paymentOrderResponse, 'helotjiogery]iug')
     const rzp = new window.Razorpay(options)
     rzp.open()
   }
 
-  const uploadDoc = async(file, type) => {
+  const uploadDoc = async (file, type) => {
     const url = await uploadFile(file, type)
     setCourseAsset(url)
     setEmpty(0)
@@ -156,19 +200,19 @@ const IBYform = ({ setOpenForm, price, selectBatch }) => {
       setEmpty(3)
     } else if (formData.country === '') {
       setEmpty(4)
-    }  else if (formData.paymentInfo === '') {
+    } else if (formData.paymentInfo === '') {
       setEmpty(5)
-    }  else if (agree === false) {
+    } else if (agree === false) {
       setEmpty(6)
-    } 
+    }
     else {
       submitForm()
     }
   }
-  
+
   return (
     <>
-      <InnerNavComponent abc={highlight}/>
+      <InnerNavComponent abc={highlight} />
       <div className='IBY-subscription-form'>
         <div
           style={{
@@ -181,7 +225,7 @@ const IBYform = ({ setOpenForm, price, selectBatch }) => {
             setOpenForm(false)
           }}
         >
-      &#10005;
+          &#10005;
         </div>
         <h2>IBY Class (Only for TYI TTC Teachers)</h2>
         <form>
@@ -195,7 +239,7 @@ const IBYform = ({ setOpenForm, price, selectBatch }) => {
             />
             {empty === 1 && (
               <small style={{ color: 'red', marginLeft: '0' }}>
-            *Please Enter Name!
+                *Please Enter Name!
               </small>
             )}
           </div>
@@ -209,7 +253,7 @@ const IBYform = ({ setOpenForm, price, selectBatch }) => {
             />
             {empty === 2 && (
               <small style={{ color: 'red', marginLeft: '0' }}>
-            *Please Enter Valid Email!
+                *Please Enter Valid Email!
               </small>
             )}
           </div>
@@ -240,9 +284,9 @@ const IBYform = ({ setOpenForm, price, selectBatch }) => {
             <div className='batch_price'>  Amount Payable : {price}</div>
           </div>
           <div className='form-field' style={{ textAlign: 'left' }} id='t-n-c'>
-         
+
           </div>
-          <div className="residential-form"> 
+          <div className="residential-form">
             <div className="last_radio_button">
               <label htmlFor="" className="course_details_text">
                 <input
@@ -260,9 +304,9 @@ const IBYform = ({ setOpenForm, price, selectBatch }) => {
                     }
                   }}
                 />
-              &nbsp;Offline
+                &nbsp;Offline
               </label>
-              
+
             </div>
             <div className="last_radio_button" ><label htmlFor="" className="course_details_text">
               <input
@@ -286,13 +330,13 @@ const IBYform = ({ setOpenForm, price, selectBatch }) => {
             </div>
             {empty === 5 && (
               <small style={{ color: 'red', marginLeft: '0' }}>
-              *Please select one of the options
+                *Please select one of the options
               </small>
             )}
           </div>
           <div className='uploads'>
-            {loading ?  <Loader/> : 
-          
+            {loading ? <Loader /> :
+
               <fieldset>
                 <label htmlFor="resume">
                   {courseAsset
@@ -313,12 +357,12 @@ const IBYform = ({ setOpenForm, price, selectBatch }) => {
                     accept=".pdf"
                     placeholder="Upload Cerificate"
                   />
-            &ensp;
+                  &ensp;
                   {upload}
                 </label>
               </fieldset>}
           </div>
-         
+
           <div className='terms-conditions'>
             <input
               type='checkbox'
@@ -328,7 +372,7 @@ const IBYform = ({ setOpenForm, price, selectBatch }) => {
             <p>I have read and agree to the above terms and conditions.</p>
             {empty === 6 && (
               <small style={{ color: 'red', marginLeft: '0' }}>
-              *Please agree to the condition!
+                *Please agree to the condition!
               </small>
             )}
           </div>
@@ -340,7 +384,7 @@ const IBYform = ({ setOpenForm, price, selectBatch }) => {
         />
       </div>
     </>
-   
+
   )
 }
 

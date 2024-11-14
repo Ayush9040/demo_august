@@ -9,6 +9,8 @@ import { useNavigate } from 'react-router-dom'
 import { razorPayKey } from '../../../../../Constants/appSettings'
 import { handleCTEnquireNutriDietInitiated, handleCTEnquireNutriDietCompleted } from '../../../../../CleverTap/nutriDietEvent'
 import { useSelector } from 'react-redux'
+import ReactGA from 'react-ga4';
+
 const SubcriptionForm = ({ packageName, packagePrice, closeForm }) => {
   useEffect(() => {
     const script = document.createElement('script')
@@ -109,6 +111,16 @@ const SubcriptionForm = ({ packageName, packagePrice, closeForm }) => {
             status: 'Completed',
             amount: packagePrice,
           })
+          ReactGA.event('purchase', {
+            currency: 'INR',
+            value: packagePrice,
+            items: [{
+              item_name: 'Nutri Diet Clinic',
+              item_id: 'NUTRI',
+              price: packagePrice,
+              quantity: 1
+            }]
+          });
           navigate('/enrollment_thankyou')
         } else {
           handleCTEnquireNutriDietCompleted({
@@ -170,6 +182,16 @@ const SubcriptionForm = ({ packageName, packagePrice, closeForm }) => {
       // Status,
       Amount: packagePrice,
       }) 
+      ReactGA.event('begin_checkout', {
+        currency: 'INR',
+        value: packagePrice,
+        items: [{
+          item_name: 'Nutri Diet Clinic',
+          item_id: 'NUTRI',
+          price: packagePrice,
+          quantity: 1
+        }]
+      });
     }
   }
 
