@@ -2231,12 +2231,14 @@ input[type='radio']:checked::before {
 
 .img_wrapper_date_format {
   width: 30%;
+  display: flex;
+  align-items: end;
 }
 
 .img_wrapper_date_format img {
   width: 100%;
-  height: 100%;
-  padding-top: 53%;
+  height: 65%;
+  // padding-top: 53%;
 }
 
 .label_format_course {
@@ -2564,6 +2566,10 @@ input[type=checkbox]:checked+label:before {
   justify-content: center;
   background: linear-gradient(to right, #F7F7F7, #FFF7E2);
   color: #EFCA6C;
+}
+
+.remove_mb {
+  margin-bottom: 0px !important;
 }
 
 
@@ -2954,6 +2960,10 @@ input[type=checkbox]:checked+label:before {
     flex-direction: column;
     gap: 12px;
   }
+
+  .dates_enroll_wrapper {
+    margin-top: 24px;
+}
 }
 
 @media (max-width: '480px') {
@@ -2966,4 +2976,48 @@ input[type=checkbox]:checked+label:before {
       // min-width: 160px !important;
     }
   }
+}
+
+@media(max-width: 376px) {
+  .course_format_wrapper {
+    display: flex;
+    padding: 22px 9px 0px 9px;
+    gap: 40px;
+}
+
+.fees_show {
+  margin: 22px 9px;
+  background-color: rgb(255, 243, 240);
+  height: 71px;
+  border-radius: 16px;
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0px;
+  align-items: center;
+}
+
+.main-container .course-main-container .course-secondary-container .details_box .details_course_box .current_duration {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-top: 0;
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-align: left;
+  /* flex-wrap: wrap; */
+  padding: 0px 9px 20px 9px;
+}
+
+.course-main-container .course-secondary-container .details_box .details_course_box .detail_image_box img {
+  border-radius: 30px;
+  height: 100%;
+  width: 320px;
+  padding: 17px 17px 17px 9px;
+  aspect-ratio: 16 / 13.2;
+  object-fit: cover;
+}
+
+.dates_enroll_wrapper {
+  margin-top: 22px;
+}
 }

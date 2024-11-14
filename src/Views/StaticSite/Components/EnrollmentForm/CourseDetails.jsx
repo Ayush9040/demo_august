@@ -55,6 +55,11 @@ const CourseDetails = ({
   const [values, setValues] = useState([])
   // const location = useLocation();
   const [selectedUrlDate, setSelectedUrlDate] = useState('');
+  const [ removeMb, setRemoveMb ] = useState('');
+  const divRef = useRef(null);
+  const residentialCurrent = useRef(null);
+  const nonresidentialCurrent = useRef(null);
+  const offlineCurrent = useRef(null);
 
   useEffect(() => {
     // Parse the URL to extract the `date` query parameter
@@ -627,6 +632,70 @@ const CourseDetails = ({
     e.preventDefault();
   };
 
+  const getLastTrueOption = () => {
+    const options = [
+      { name: "Online", value: shouldShowOnlineOption() },
+      { name: "Residential", value: shouldShowResidentialOption() },
+      { name: "Non-Residential", value: shouldShowNonResidentialOption() },
+      { name: "Offline", value: shouldShowOfflineOption() },
+    ];
+
+    // Reverse the array and find the last `true` option
+    const lastTrueOption = options.reverse().find((option) => option.value);
+    return lastTrueOption ? lastTrueOption.name : null;
+  };
+
+  // UseEffect to update `removeMb` and apply styles dynamically
+  useEffect(() => {
+    const lastOption = getLastTrueOption();
+    setRemoveMb(lastOption);
+
+    // Apply dynamic styles with `!important`
+    if (divRef.current) {
+      if (lastOption === "Online") {
+        divRef.current.style.setProperty("margin-bottom", "0px", "important");
+      } 
+    }
+  }, [currentCourse]);
+
+
+  useEffect(() => {
+    const lastOption = getLastTrueOption();
+    setRemoveMb(lastOption);
+
+    // Apply dynamic styles with `!important`
+    if (residentialCurrent.current) {
+      if (lastOption === "Residential") {
+        residentialCurrent.current.style.setProperty("margin-bottom", "0px", "important");
+      } 
+    }
+  }, [currentCourse]);
+
+  useEffect(() => {
+    const lastOption = getLastTrueOption();
+    setRemoveMb(lastOption);
+
+    // Apply dynamic styles with `!important`
+    if (nonresidentialCurrent.current) {
+      if (lastOption === "Non-Residential") {
+        nonresidentialCurrent.current.style.setProperty("margin-bottom", "0px", "important");
+      } 
+    }
+  }, [currentCourse]);
+
+  useEffect(() => {
+    const lastOption = getLastTrueOption();
+    setRemoveMb(lastOption);
+
+    // Apply dynamic styles with `!important`
+    if (offlineCurrent.current) {
+      if (lastOption === "Offline") {
+        offlineCurrent.current.style.setProperty("margin-bottom", "0px", "important");
+      } 
+    }
+  }, [currentCourse]);
+
+
   // Group timings by unique days
   const groupTimings = (timings) => {
     const grouped = {};
@@ -729,7 +798,7 @@ const CourseDetails = ({
           </div>
 
 
-
+              {/* {removeMb} */}
           {!isSatsangPage && (
             <div className='wrapper_date_and_course'>
 
@@ -743,11 +812,11 @@ const CourseDetails = ({
                     Select Course Format
                   </div>
                   {console.log('CC', currentCourse)}
-                  <form className="residential-form check_course">
+                  <form className="residential-form check_course" >
                     <div className="last_radio_button ">
                       {shouldShowOfflineOption() &&
                         (
-                          <label class="item-label item_format">
+                          <label class="item-label item_format" ref={offlineCurrent}>
                             <input class="item-input"
                               type="radio" name="mode"
                               value="OFFLINE"
@@ -814,7 +883,7 @@ const CourseDetails = ({
                         //  </label>
 
 
-                        <label class="item-label item_format">
+                        <label class="item-label item_format" ref={divRef}>
                           <input class="item-input"
                             type="radio" name="mode"
                             value="ONLINE"
@@ -892,7 +961,7 @@ const CourseDetails = ({
                         // </label>
 
 
-                        <label class="item-label item_format">
+                        <label class="item-label item_format" ref={residentialCurrent}>
                           <input class="item-input" type="radio" name="resident" value="NONRESIDENTIAL" aria-labelledby="delivery-0-name" aria-describedby="delivery-0-shipping delivery-0-price"
                             checked={selectedOption === 'NONRESIDENTIAL'}
                             onChange={(e) => {
@@ -975,7 +1044,7 @@ const CourseDetails = ({
                         // </label>
 
 
-                        <label class="item-label item_format">
+                        <label class="item-label item_format" ref={nonresidentialCurrent}>
                           <input class="item-input" type="radio" name="resident" value="RESIDENTIAL" aria-labelledby="delivery-0-name" aria-describedby="delivery-0-shipping delivery-0-price"
                             checked={selectedOption === 'RESIDENTIAL'}
                             onChange={(e) => {

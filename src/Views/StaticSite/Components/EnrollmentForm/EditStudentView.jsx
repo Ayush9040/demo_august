@@ -1241,31 +1241,18 @@ const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse
 
         {/* Adding start google API 2 */}
 
-        <div className='inp-group'>
-          <div className='inp-label'>House No. / Street name<span>*</span></div>
-          <div className="form_error">
-
-            <InputComponent
-              type="text"
-              placeholder="House No. / Street name"
-              form={formData2}
-              setField={setFormData2}
-              keyName="address2"
-              errorCheck={setEmpty}
-            />
-          </div>
-        </div>
+        
         <div className='karo'></div>
         <LoadScript googleMapsApiKey={mapKey} libraries={libraries}>
           <div className='inp-group address_1_fixes'>
             <Autocomplete onLoad={onLoadAutocomplete} onPlaceChanged={onPlaceChanged}>
 
               <>
-                <div className='inp-label'>Address 1*</div>
+                <div className='inp-label'>Address Line 1*</div>
                 <div className="form_error">
                   <InputComponent
                     type="text"
-                    placeholder="Address 1*"
+                    placeholder="Address Line 1*"
                     form={formData2}
                     setField={setFormData2}
                     keyName="address1"
@@ -1278,6 +1265,21 @@ const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse
 
             </Autocomplete>
           </div>
+
+          <div className='inp-group'>
+          <div className='inp-label'>House No. & Street name<span>*</span></div>
+          <div className="form_error">
+
+            <InputComponent
+              type="text"
+              placeholder="House No. & Street name"
+              form={formData2}
+              setField={setFormData2}
+              keyName="address2"
+              errorCheck={setEmpty}
+            />
+          </div>
+        </div>
 
 
 
