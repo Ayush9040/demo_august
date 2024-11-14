@@ -223,7 +223,7 @@ const countriesMap = [
   { label: 'Zimbabwe', value: '+263', flag: 'ZW' }
 ];
 
-const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse, dateDurationChange, closeModal }) => {
+const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse, dateDurationChange, closeModal, saveAndASubmit }) => {
 
   const [selectedDate, setSelectedDate] = useState(null);
   const { isLoggedIn } = useSelector((state) => state.auth)
@@ -1711,7 +1711,7 @@ const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse
       </form>
 
       <div className='date_enroll_btn'>
-        <button className={!enableBtn ? 'date_enroll_btn_txt before_date_select' : 'date_enroll_btn_txt after_date_select'} disabled={!enableBtn} onClick={handleEditSave}>Save Changes</button>
+        <button className={!enableBtn ? 'date_enroll_btn_txt before_date_select' : 'date_enroll_btn_txt after_date_select'} disabled={!enableBtn} onClick={() => { handleEditSave(), saveAndASubmit() }}>Save Changes</button>
       </div>
     </>
   )

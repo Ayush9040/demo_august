@@ -1150,7 +1150,7 @@ const EnrollmentForm = ({
                   //   type="Terms and Conditions" // You can pass any other props as needed
                   // />
                   // <TermsAndConditionsModal />
-                  <EditStudent isShippingModalOpen={handleEditOpen} setIsShipppingModalOpen={handleEditClose} formData={formData} setFormData={setFormData} setEmpty={setEmpty} empty={empty} currentCourse={currentCourse} dateDurationChange={dateDurationChange} />
+                  <EditStudent isShippingModalOpen={handleEditOpen} setIsShipppingModalOpen={handleEditClose} formData={formData} setFormData={setFormData} setEmpty={setEmpty} empty={empty} currentCourse={currentCourse} dateDurationChange={dateDurationChange} handleSubmit={handleSubmit}/>
                 )}
                 <div className='fields_alignment fields_alignment_bottom'>
                   <div className='details_desc_name_info'><span className='details_duration_info'>Name</span> <span className='tenure_course'>{`${formData?.name} ${formData?.lname}`}</span></div>
@@ -1169,7 +1169,16 @@ const EnrollmentForm = ({
 
                 </div>
                 <div className='details_desc_days'>
-                  <div className='details_desc_name_info'><span className='details_duration_info'>Address</span> <span className='tenure_course'>{`${formData?.address1}, ${formData?.state}, ${formData?.country} - ${formData?.pincode}`}</span></div>
+                  <div className='details_desc_name_info'><span className='details_duration_info'>Address</span> <span className='tenure_course'>
+                  {formData?.address1}
+                    {formData?.address1 && <>, </>}
+                    {formData?.state}
+                    {formData?.country && <>, </>}
+                    {formData?.country}
+                    {formData?.pincode && <> - </>}
+                    {formData?.pincode}
+                    {/* {`${formData?.address1}, ${formData?.state}, ${formData?.country} - ${formData?.pincode}`} */}
+                    </span></div>
 
                 </div>
                 {/* {courseFee && <p className="current_fees"> {currentCourse.key === 'ma-yoga-shastra' && formData.country !== 'India' ? '$ 3950' : `₹ ${courseFee}`}</p>} */}
