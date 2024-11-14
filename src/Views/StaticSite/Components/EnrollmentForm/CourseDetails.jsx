@@ -33,6 +33,8 @@ const CourseDetails = ({
 
   const [optionsCount, setOptionsCount] = useState(0);
   const location = useLocation();
+  const isSevenDayHindi = location.pathname === '/enrollment/7-days-camp';
+  const isSevenDayEnglish = location.pathname === '/enrollment/7-days-camp-english';
   const isSatsangPage = location.pathname === '/enrollment/satsang';
   const [setDate, setSetDate] = useState(false);
   const [priceSelect, setPriceSelect] = useState(0);
@@ -737,7 +739,8 @@ const CourseDetails = ({
               <div className="current_duration">
                 <div>
                   <span className='details_newName'>
-                    {currentCourse?.newName === '' ? currentCourse?.title : currentCourse?.newName}&nbsp;
+                    {currentCourse?.newName === '' ? currentCourse?.title : currentCourse?.newName}&nbsp;{isSevenDayHindi && <span className='to_fix_width'>Created to fix width</span> }
+                    {isSevenDayEnglish && <span className='to_fix_width'>Created to fix width</span> }
                   </span>
                   {/* {courseDate !== 'null' ? courseDate : ''} */}
                 </div>
