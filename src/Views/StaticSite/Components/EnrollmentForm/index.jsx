@@ -651,7 +651,7 @@ const Enrollment = () => {
         age: formData.AGE,
         nationality: formData.nationality
       })
-      ReactGA.event('purchase', {
+      ReactGA.event('begin_checkout', {
         currency: 'INR',
         value: courseFee,
         items: [{
