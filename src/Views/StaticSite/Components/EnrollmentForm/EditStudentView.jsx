@@ -1241,7 +1241,7 @@ const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse
 
         {/* Adding start google API 2 */}
 
-        
+
         <div className='karo'></div>
         <LoadScript googleMapsApiKey={mapKey} libraries={libraries}>
           <div className='inp-group address_1_fixes'>
@@ -1265,8 +1265,8 @@ const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse
 
             </Autocomplete>
           </div>
-
-          <div className='inp-group'>
+        </LoadScript>
+        <div className='inp-group'>
           <div className='inp-label'>House No. & Street name<span>*</span></div>
           <div className="form_error">
 
@@ -1284,83 +1284,83 @@ const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse
 
 
 
-          <div className='inp-group'>
-            <div className='inp-label'>Country<span>*</span></div>
-            <div className="form_error countries_list">
-              <Select
-                styles={customStyles}
-                id="country"
-                name="country"
-                placeholder="Country"
-                options={getUpdatedCountries}
-                value={values.country}
-                dataKey="country"
-                onChange={(value) => {
-                  setValues({ country: value, state: null, city: null });
-                  setFormData2((prev) => ({ ...prev, country: value.label }));
-                }}
-              />
-              {empty === 5 && <p>Please enter your country</p>}
-            </div>
+        <div className='inp-group'>
+          <div className='inp-label'>Country<span>*</span></div>
+          <div className="form_error countries_list">
+            <Select
+              styles={customStyles}
+              id="country"
+              name="country"
+              placeholder="Country"
+              options={getUpdatedCountries}
+              value={values.country}
+              dataKey="country"
+              onChange={(value) => {
+                setValues({ country: value, state: null, city: null });
+                setFormData2((prev) => ({ ...prev, country: value.label }));
+              }}
+            />
+            {empty === 5 && <p>Please enter your country</p>}
           </div>
+        </div>
 
-          <div className='inp-group'>
-            <div className='inp-label'>State<span>*</span></div>
-            <div className="form_error">
-              <Select
-                styles={customStyles}
-                id="state"
-                name="state"
-                placeholder="State"
-                options={getUpdatedStates(values?.country?.isoCode ? values?.country?.isoCode :
-                  values?.country?.value)}
-                value={values.state}
-                onChange={(value) => {
-                  setValues({ ...values, state: value, city: null });
-                  setFormData2((prev) => ({ ...prev, state: value.label }));
-                }}
-              />
-            </div>
+        <div className='inp-group'>
+          <div className='inp-label'>State<span>*</span></div>
+          <div className="form_error">
+            <Select
+              styles={customStyles}
+              id="state"
+              name="state"
+              placeholder="State"
+              options={getUpdatedStates(values?.country?.isoCode ? values?.country?.isoCode :
+                values?.country?.value)}
+              value={values.state}
+              onChange={(value) => {
+                setValues({ ...values, state: value, city: null });
+                setFormData2((prev) => ({ ...prev, state: value.label }));
+              }}
+            />
           </div>
+        </div>
 
 
-          <div className='inp-group'>
-            <div className='inp-label'>City<span>*</span></div>
-            <div className="form_error">
+        <div className='inp-group'>
+          <div className='inp-label'>City<span>*</span></div>
+          <div className="form_error">
 
-              <Select
-                styles={customStyles}
-                id="city"
-                name="city"
-                placeholder="City"
-                options={getUpdatedCities(values?.country?.isoCode ? values?.country?.isoCode :
-                  isoCode, values?.state?.value)}
-                value={values.city}
-                onChange={(value) => {
-                  setValues({ ...values, city: value });
-                  setFormData2((prev) => ({ ...prev, city: value.label }));
-                }}
-              />
-            </div>
+            <Select
+              styles={customStyles}
+              id="city"
+              name="city"
+              placeholder="City"
+              options={getUpdatedCities(values?.country?.isoCode ? values?.country?.isoCode :
+                isoCode, values?.state?.value)}
+              value={values.city}
+              onChange={(value) => {
+                setValues({ ...values, city: value });
+                setFormData2((prev) => ({ ...prev, city: value.label }));
+              }}
+            />
           </div>
+        </div>
 
 
-          <div className='inp-group'>
-            <div className='inp-label'>Pincode<span>*</span></div>
-            <div className="form_error pincode_err">
-              <InputComponent
-                type="text"
-                placeholder="Pincode*"
-                form={formData2}
-                setField={setFormData2}
-                dataKey="pincode"
-                keyName="pincode"
-                errorCheck={setEmpty}
-              />
-              {empty === 8 && <small style={{ position: 'absolute', right: '0', bottom: '-18px', color: 'red' }}>Please enter your pincode</small>}
-            </div>
+        <div className='inp-group'>
+          <div className='inp-label'>Pincode<span>*</span></div>
+          <div className="form_error pincode_err">
+            <InputComponent
+              type="text"
+              placeholder="Pincode*"
+              form={formData2}
+              setField={setFormData2}
+              dataKey="pincode"
+              keyName="pincode"
+              errorCheck={setEmpty}
+            />
+            {empty === 8 && <small style={{ position: 'absolute', right: '0', bottom: '-18px', color: 'red' }}>Please enter your pincode</small>}
           </div>
-        </LoadScript>
+        </div>
+
 
 
         {/* End google API 2 */}
