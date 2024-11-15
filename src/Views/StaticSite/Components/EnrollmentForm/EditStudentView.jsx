@@ -598,6 +598,15 @@ const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse
         city,
         pincode,
       }));
+      setFormData((prev) => ({
+        ...prev,
+        address1: address1,
+        address2: address2,
+        country,
+        state,
+        city,
+        pincode,
+      }));
       setEmpty(address ? 0 : 4);
 
       const selectedCountry = getUpdatedCountries.find((option) => option.label === country);
@@ -616,7 +625,9 @@ const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse
 
   // Function to generate city options based on selected state
   const getUpdatedCities = (countryIsoCode, stateIsoCode) => {
-    if (!countryIsoCode || !stateIsoCode) return [];
+    console.log(countryIsoCode, stateIsoCode);
+    
+    if (!countryIsoCode && !stateIsoCode) return [];
     return City.getCitiesOfState(countryIsoCode, stateIsoCode).map((city) => ({
       value: city.name,
       label: city.name,
@@ -1067,6 +1078,7 @@ const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse
         ...prevFormData,
         ...formData2
       }));
+      saveAndASubmit()
       closeModal();
     }
 
@@ -1334,7 +1346,7 @@ const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse
               name="city"
               placeholder="City"
               options={getUpdatedCities(values?.country?.isoCode ? values?.country?.isoCode :
-                isoCode, values?.state?.value)}
+                values?.country?.value, values?.state?.value)}
               value={values.city}
               onChange={(value) => {
                 setValues({ ...values, city: value });
@@ -1713,7 +1725,7 @@ const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse
       </form>
 
       <div className='date_enroll_btn'>
-        <button className={!enableBtn ? 'date_enroll_btn_txt before_date_select' : 'date_enroll_btn_txt after_date_select'} disabled={!enableBtn} onClick={() => { handleEditSave(), saveAndASubmit() }}>Save Changes</button>
+        <button className={!enableBtn ? 'date_enroll_btn_txt before_date_select' : 'date_enroll_btn_txt after_date_select'} disabled={!enableBtn} onClick={() => { handleEditSave() }}>Save Changes</button>
       </div>
     </>
   )
