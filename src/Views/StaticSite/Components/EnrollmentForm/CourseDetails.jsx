@@ -52,6 +52,7 @@ const CourseDetails = ({
   const [courseDuration, setCourseDuration] = useState('Select one below')
   const [courseDurationSelected, setCourseDurationSelected] = useState(false)
   const [captureEndDate, setCaptureEndDate] = useState(null);
+  const [ isRegularPrice, setIsRegularPrice] = useState(0);
 
   const [courseFormatSelected, setCourseFormatSelected] = useState(false)
   const [courseDateInfo, setCourseDateInfo] = useState('Select one below')
@@ -62,6 +63,8 @@ const CourseDetails = ({
   const [notShowDuration, setNotShowDuration] = useState(true)
   const [openEdit, setOpenEdit] = useState(false)
   const [showEdit, setShowEdit] = useState(false)
+  const [endDateCreated, setEndDateCreated] = useState(false);
+  const [onSelectFormat, setOnSelectFormat] = useState(false);
   const [values, setValues] = useState([])
   // const location = useLocation();
   const [selectedUrlDate, setSelectedUrlDate] = useState('');
@@ -170,6 +173,7 @@ const CourseDetails = ({
   const [openDates, setOpenDates] = useState(false)
   const [isRegular, setIsRegular] = useState(false)
   const [minDate, setMinDate] = useState('');
+  const [onClickFormatRegular, setOnClickFormatRegular] = useState(false);
   const [openDuration, setOpenDuration] = useState(false)
 
 
@@ -307,6 +311,9 @@ const CourseDetails = ({
 
     localStorage.setItem('courseEndDate', endDate);
     dateDurationChange(value);
+    setEndDateCreated(true);
+    // setIsRegularPrice(currentCourse?.fees?.onlineFee);
+    // setOnClickFormatRegular(true)
   };
 
   // Function to remove ordinal suffixes and format the date
@@ -412,6 +419,11 @@ const CourseDetails = ({
   const handleCloseEdit = () => {
     setShowEdit(false);
   };
+
+  useEffect(() => {
+    setIsRegularPrice(currentCourse?.fees?.onlineFee);
+    setEndDateCreated(false);
+  }, [endDateCreated])
 
 
   // const updatedFees = (course, mode) => {
@@ -850,6 +862,9 @@ const CourseDetails = ({
                                 setPriceSelect(currentCourse?.fees?.onlineFee)
                                 setCourseFormatInfo('OFFLINE')
                                 setCourseFormatSelected(true)
+                                setIsRegularPrice(currentCourse?.fees?.onlineFee);
+                                setOnSelectFormat(true);
+                                setOnClickFormatRegular(true)
                                 if (e.target.checked) {
                                   setFormData({
                                     ...formData,
@@ -1794,7 +1809,7 @@ const CourseDetails = ({
                   </div>
                   <div className='fees_price_wrapper'>
                     <span className='fees_label'>Fees : </span>
-                    <span className='price_select'>INR {isRegular ? currentCourse?.fees?.onlineFee : priceSelect}</span>
+                    <span className='price_select'>INR {isRegular ? onSelectFormat ? isRegularPrice : 0 : priceSelect}</span>
                   </div>
                   <div className='fees_left_wrapper'>
                     <img src='/images/fees_right.png' alt='' loading='lazy' />
