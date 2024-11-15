@@ -512,6 +512,12 @@
   visibility: hidden;
 }
 
+@media (max-width: 768px) {
+  .to_fix_width {
+    display: none;
+  }
+}
+
 
 
 // ********************************* CSS Check ****************************************

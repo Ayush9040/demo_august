@@ -35,7 +35,15 @@ const CourseDetails = ({
   const location = useLocation();
   const isSevenDayHindi = location.pathname === '/enrollment/7-days-camp';
   const isSevenDayEnglish = location.pathname === '/enrollment/7-days-camp-english';
+  const isYogaTherapy = location.pathname === '/enrollment/certificate-yoga-therapy-course-online';
+  const isTwentyOneBatchOne = location.pathname === '/enrollment/21-days-better-living-course';
+  const isTwentyOneBatchTwo = location.pathname === '/enrollment/21-days-better-living-course-batch-2';
+  const isTwentyOneBatchThree = location.pathname === '/enrollment/21-days-better-living-course-batch-3';
+  const isChildrenRegularClass = location.pathname === '/enrollment/childrens-regular-classes';
+  const isChildrenWeekendClass = location.pathname === '/enrollment/childrens-weekend-classes-on-campus';
+  const isYogaPrayas = location.pathname === '/enrollment/yog-prayas-online';
   const isSatsangPage = location.pathname === '/enrollment/satsang';
+  const isRegularMeditation  = '/enrollment/regular-meditation-classes-online';
   const [setDate, setSetDate] = useState(false);
   const [priceSelect, setPriceSelect] = useState(0);
   const [courseFormatInfo, setCourseFormatInfo] = useState('Select one below')
@@ -740,7 +748,16 @@ const CourseDetails = ({
                 <div>
                   <span className='details_newName'>
                     {currentCourse?.newName === '' ? currentCourse?.title : currentCourse?.newName}&nbsp;{isSevenDayHindi && <span className='to_fix_width'>Created to fix width</span> }
-                    {isSevenDayEnglish && <span className='to_fix_width'>Created to fix width</span> }
+                    {isSevenDayEnglish && <span className='to_fix_width'>Created to fix</span> }
+                    {isSatsangPage && <span className='to_fix_width'>Created to fix width too muchh</span> }
+                    {isYogaTherapy && <span className='to_fix_width'>Created to fixs</span> }
+                    {isTwentyOneBatchOne && <span className='to_fix_width'>Fix</span> }
+                    {isTwentyOneBatchTwo && <span className='to_fix_width'>Fix</span> }
+                    {isTwentyOneBatchThree && <span className='to_fix_width'>Fix</span> }
+                    {isChildrenRegularClass && <span className='to_fix_width'>Created to Fix</span> }
+                    {isChildrenWeekendClass && <span className='to_fix_width'>Created to F</span> }
+                    {isYogaPrayas && <span className='to_fix_width'>Created to Fixs width mores </span> }
+                    {isRegularMeditation && <span className='to_fix_width'>Created to Fixs width mores </span> }
                   </span>
                   {/* {courseDate !== 'null' ? courseDate : ''} */}
                 </div>
