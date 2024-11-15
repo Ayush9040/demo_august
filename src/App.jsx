@@ -27,8 +27,8 @@ const App = () => {
     //   console.log("react GA from cookies ", ReactGA);
     //   ReactGA.pageview('/')
     // }
-    ReactGA.initialize('G-KZMLSTPLP1')
-    ReactGA.send('/')
+    // ReactGA.initialize('G-KZMLSTPLP1')
+    // ReactGA.send('/')
   }, []);
 
   const handleAccept = () => {
