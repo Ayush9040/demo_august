@@ -625,7 +625,9 @@ const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse
 
   // Function to generate city options based on selected state
   const getUpdatedCities = (countryIsoCode, stateIsoCode) => {
-    if (!countryIsoCode || !stateIsoCode) return [];
+    console.log(countryIsoCode, stateIsoCode);
+    
+    if (!countryIsoCode && !stateIsoCode) return [];
     return City.getCitiesOfState(countryIsoCode, stateIsoCode).map((city) => ({
       value: city.name,
       label: city.name,
@@ -1344,7 +1346,7 @@ const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse
               name="city"
               placeholder="City"
               options={getUpdatedCities(values?.country?.isoCode ? values?.country?.isoCode :
-                isoCode, values?.state?.value)}
+                values?.country?.value, values?.state?.value)}
               value={values.city}
               onChange={(value) => {
                 setValues({ ...values, city: value });
