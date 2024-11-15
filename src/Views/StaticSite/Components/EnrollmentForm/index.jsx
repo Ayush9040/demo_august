@@ -526,7 +526,7 @@ const Enrollment = () => {
 
 
   const handleSubmit = (e) => {
-    // alert("I am in")
+// alert(JSON.stringify(formData))
     const array = ["Yoga Classes for Men (Regular Asana) - On Campus",
       "Yoga Classes for Women (Regular Asana) - On Campus",
       "Yoga Asana Regular Classes - (Men & Women) - Online Yoga Classes",

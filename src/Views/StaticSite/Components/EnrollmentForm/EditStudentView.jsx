@@ -598,6 +598,15 @@ const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse
         city,
         pincode,
       }));
+      setFormData((prev) => ({
+        ...prev,
+        address1: address1,
+        address2: address2,
+        country,
+        state,
+        city,
+        pincode,
+      }));
       setEmpty(address ? 0 : 4);
 
       const selectedCountry = getUpdatedCountries.find((option) => option.label === country);
@@ -1067,6 +1076,7 @@ const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse
         ...prevFormData,
         ...formData2
       }));
+      saveAndASubmit()
       closeModal();
     }
 
@@ -1713,7 +1723,7 @@ const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse
       </form>
 
       <div className='date_enroll_btn'>
-        <button className={!enableBtn ? 'date_enroll_btn_txt before_date_select' : 'date_enroll_btn_txt after_date_select'} disabled={!enableBtn} onClick={() => { handleEditSave(), saveAndASubmit() }}>Save Changes</button>
+        <button className={!enableBtn ? 'date_enroll_btn_txt before_date_select' : 'date_enroll_btn_txt after_date_select'} disabled={!enableBtn} onClick={() => { handleEditSave() }}>Save Changes</button>
       </div>
     </>
   )
