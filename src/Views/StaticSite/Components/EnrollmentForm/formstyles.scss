@@ -2412,6 +2412,8 @@ input[type='radio']:checked::before {
   color: rgba(96, 96, 96, 0.5);
 }
 
+
+
 .check_course .item-label:has(.item-input:checked):hover {
   background-color: rgb(202, 70, 37);
   box-shadow: 0 0 0 2px rgb(202, 70, 37) inset;
@@ -3030,4 +3032,10 @@ input[type=checkbox]:checked+label:before {
 .dates_enroll_wrapper {
   margin-top: 22px;
 }
+}
+
+.selected_date_popup:hover {
+  background-color: rgb(202, 70, 37) !important;
+  box-shadow: 0 0 0 2px rgb(202, 70, 37) inset !important;
+  color: #fff !important;
 }
