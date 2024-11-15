@@ -1175,6 +1175,12 @@ const CourseDetails = ({
                       <div className="last_radio_button " style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
 
                         {
+                          formattedDates.length === 0 && (
+                            <div id="fill_err" style={{ fontSize: '11px', marginTop: '0px', color: 'red' }}> No Dates Available </div>
+                          ) 
+                        }
+
+                        {
                           formattedDates?.slice(0, 2).map((item, index) => {
                             if (!item?.label) return null;
                             return (
