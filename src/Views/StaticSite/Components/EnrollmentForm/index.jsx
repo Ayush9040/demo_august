@@ -323,7 +323,7 @@ const Enrollment = () => {
         },
         receivers: [formData.email, 'info@theyogainstitute.org']
       }
-      
+
       try {
         let response
         if (formData.mode === 'ONLINE' || (currentCourse.residential === false && currentCourse.nonResidential === false)) {
@@ -422,7 +422,7 @@ const Enrollment = () => {
                       quantity: 1
                     }]
                   });
-               
+
 
 
                   navigate(`/enrollment_thankyou/${currentCourse.key}`)
@@ -534,7 +534,7 @@ const Enrollment = () => {
 
 
   const handleSubmit = (e) => {
-// alert(JSON.stringify(formData))
+    // alert(JSON.stringify(formData))
     const array = ["Yoga Classes for Men (Regular Asana) - On Campus",
       "Yoga Classes for Women (Regular Asana) - On Campus",
       "Yoga Asana Regular Classes - (Men & Women) - Online Yoga Classes",
@@ -580,7 +580,7 @@ const Enrollment = () => {
     ) {
       // alert("3")
       setEmpty(3)
-      
+
     } else if (formData.address1 === '') {
       // alert("4")
       setEmpty(4)
@@ -661,11 +661,11 @@ const Enrollment = () => {
       })
       ReactGA.event('begin_checkout', {
         currency: 'INR',
-        value: courseFee,
+        value: courseFee ? courseFee : 0,
         items: [{
           item_name: currentCourse?.title,
           item_id: currentCourse?.courseCategory,
-          price: courseFee,
+          price: courseFee ? courseFee : 0,
           quantity: 1
         }]
       });

@@ -616,38 +616,7 @@ const CourseDetails = ({ pageDate }) => {
                         }
                       >
                         {/* <CommonBtn text={'Enroll Now'} /> */}
-                        <EnrollBtn text={'Enroll Now'} buttonAction={() => handleCTEnrollNowClick({
-                          courseTitle: pageDate?.title,
-                          fees: pageDate?.fees,
-                          timing: pageDate?.timing,
-                          tenure: pageDate?.tenure,
-                          courseCategory: pageDate?.courseCategory,
-                          courseSubType: pageDate?.courseSubType,
-                          courseType: pageDate?.courseType,
-                          onlineMode: pageDate?.onlineInfo?.courseMode,
-                          residentialMode: pageDate?.residentialInfo?.courseMode,
-                          nonResidentialMode: pageDate?.nonResidentialInfo?.courseMode,
-                          residentialLocation: pageDate?.residentialInfo?.residentialMode,
-                          nonResidentialLocation: pageDate?.nonResidentialInfo?.nonResidentialMode,
-                          language: pageDate?.language,
-                          category: pageDate?.category,
-                          batch: pageDate?.Batch_No,
-                          nonResidential: pageDate?.nonResidential,
-                          residential: pageDate?.residential,
-                          online: pageDate?.online
-                        })} />
-                      </Link>
-                    ) : (
-                      // scroll()
-                      <Link
-                        to={
-                          isLoggedIn
-                            ? `/enrollment/${pageDate.key}`///?date=${selectDate}
-                            : `/user/sign-in/?location=${pageDate.key}`//&date=${selectDate}
-                        }
-                      >
-                        {/* <CommonBtn text={'Enroll Now'} /> */}
-                        <EnrollBtn text={'Enroll Now'} buttonAction={() =>
+                        <EnrollBtn text={'Enroll Now'} buttonAction={() => {
                           handleCTEnrollNowClick({
                             courseTitle: pageDate?.title,
                             fees: pageDate?.fees,
@@ -667,7 +636,63 @@ const CourseDetails = ({ pageDate }) => {
                             nonResidential: pageDate?.nonResidential,
                             residential: pageDate?.residential,
                             online: pageDate?.online
-                          })} />
+                          });
+                          ReactGA.event('add_to_cart', {
+                            currency: 'INR',
+                            value: pageDate?.fees?.onlineFee ? pageDate?.fees?.onlineFee : (pageDate?.fees?.offlineFee?.nonResidentialFee ? pageDate?.fees?.offlineFee?.nonResidentialFee : pageDate?.fees?.offlineFee?.residentialFee),
+                            items: [{
+                              item_name: pageDate.title,
+                              item_id: pageDate?.courseCategory,
+                              price: pageDate?.fees?.onlineFee ? pageDate?.fees?.onlineFee : (pageDate?.fees?.offlineFee?.nonResidentialFee ? pageDate?.fees?.offlineFee?.nonResidentialFee : pageDate?.fees?.offlineFee?.residentialFee),
+                              quantity: 1
+                            }]
+                          });
+                        }
+
+                        } />
+                      </Link>
+                    ) : (
+                      // scroll()
+                      <Link
+                        to={
+                          isLoggedIn
+                            ? `/enrollment/${pageDate.key}`///?date=${selectDate}
+                            : `/user/sign-in/?location=${pageDate.key}`//&date=${selectDate}
+                        }
+                      >
+                        {/* <CommonBtn text={'Enroll Now'} /> */}
+                        <EnrollBtn text={'Enroll Now'} buttonAction={() => {
+                          handleCTEnrollNowClick({
+                            courseTitle: pageDate?.title,
+                            fees: pageDate?.fees,
+                            timing: pageDate?.timing,
+                            tenure: pageDate?.tenure,
+                            courseCategory: pageDate?.courseCategory,
+                            courseSubType: pageDate?.courseSubType,
+                            courseType: pageDate?.courseType,
+                            onlineMode: pageDate?.onlineInfo?.courseMode,
+                            residentialMode: pageDate?.residentialInfo?.courseMode,
+                            nonResidentialMode: pageDate?.nonResidentialInfo?.courseMode,
+                            residentialLocation: pageDate?.residentialInfo?.residentialMode,
+                            nonResidentialLocation: pageDate?.nonResidentialInfo?.nonResidentialMode,
+                            language: pageDate?.language,
+                            category: pageDate?.category,
+                            batch: pageDate?.Batch_No,
+                            nonResidential: pageDate?.nonResidential,
+                            residential: pageDate?.residential,
+                            online: pageDate?.online
+                          });
+                          ReactGA.event('add_to_cart', {
+                            currency: 'INR',
+                            value: pageDate?.fees?.onlineFee ? pageDate?.fees?.onlineFee : (pageDate?.fees?.offlineFee?.nonResidentialFee ? pageDate?.fees?.offlineFee?.nonResidentialFee : pageDate?.fees?.offlineFee?.residentialFee),
+                            items: [{
+                              item_name: pageDate.title,
+                              item_id: pageDate?.courseCategory,
+                              price: pageDate?.fees?.onlineFee ? pageDate?.fees?.onlineFee : (pageDate?.fees?.offlineFee?.nonResidentialFee ? pageDate?.fees?.offlineFee?.nonResidentialFee : pageDate?.fees?.offlineFee?.residentialFee),
+                              quantity: 1
+                            }]
+                          });
+                        }} />
                       </Link>
                     )
                   ) :
@@ -888,26 +913,38 @@ const CourseDetails = ({ pageDate }) => {
                     }
                   >
                     {/* <CommonBtn text={'Enroll Now'} /> */}
-                    <EnrollBtn text={'Enroll Now'} buttonAction={() => handleCTEnrollNowClick({
-                      courseTitle: pageDate?.title,
-                      fees: pageDate?.fees,
-                      timing: pageDate?.timing,
-                      tenure: pageDate?.tenure,
-                      courseCategory: pageDate?.courseCategory,
-                      courseSubType: pageDate?.courseSubType,
-                      courseType: pageDate?.courseType,
-                      onlineMode: pageDate?.onlineInfo?.courseMode,
-                      residentialMode: pageDate?.residentialInfo?.courseMode,
-                      nonResidentialMode: pageDate?.nonResidentialInfo?.courseMode,
-                      residentialLocation: pageDate?.residentialInfo?.residentialMode,
-                      nonResidentialLocation: pageDate?.nonResidentialInfo?.nonResidentialMode,
-                      language: pageDate?.language,
-                      category: pageDate?.category,
-                      batch: pageDate?.Batch_No,
-                      nonResidential: pageDate?.nonResidential,
-                      residential: pageDate?.residential,
-                      online: pageDate?.online
-                    })} />
+                    <EnrollBtn text={'Enroll Now'} buttonAction={() => {
+                      handleCTEnrollNowClick({
+                        courseTitle: pageDate?.title,
+                        fees: pageDate?.fees,
+                        timing: pageDate?.timing,
+                        tenure: pageDate?.tenure,
+                        courseCategory: pageDate?.courseCategory,
+                        courseSubType: pageDate?.courseSubType,
+                        courseType: pageDate?.courseType,
+                        onlineMode: pageDate?.onlineInfo?.courseMode,
+                        residentialMode: pageDate?.residentialInfo?.courseMode,
+                        nonResidentialMode: pageDate?.nonResidentialInfo?.courseMode,
+                        residentialLocation: pageDate?.residentialInfo?.residentialMode,
+                        nonResidentialLocation: pageDate?.nonResidentialInfo?.nonResidentialMode,
+                        language: pageDate?.language,
+                        category: pageDate?.category,
+                        batch: pageDate?.Batch_No,
+                        nonResidential: pageDate?.nonResidential,
+                        residential: pageDate?.residential,
+                        online: pageDate?.online
+                      });
+                      ReactGA.event('add_to_cart', {
+                        currency: 'INR',
+                        value: pageDate?.fees?.onlineFee ? pageDate?.fees?.onlineFee : (pageDate?.fees?.offlineFee?.nonResidentialFee ? pageDate?.fees?.offlineFee?.nonResidentialFee : pageDate?.fees?.offlineFee?.residentialFee),
+                        items: [{
+                          item_name: pageDate.title,
+                          item_id: pageDate?.courseCategory,
+                          price: pageDate?.fees?.onlineFee ? pageDate?.fees?.onlineFee : (pageDate?.fees?.offlineFee?.nonResidentialFee ? pageDate?.fees?.offlineFee?.nonResidentialFee : pageDate?.fees?.offlineFee?.residentialFee),
+                          quantity: 1
+                        }]
+                      });
+                    }} />
                   </Link>
                 ) : (
                   // scroll()
@@ -919,26 +956,39 @@ const CourseDetails = ({ pageDate }) => {
                     }
                   >
                     {/* <CommonBtn text={'Enroll Now'} /> */}
-                    <EnrollBtn text={'Enroll Now'} buttonAction={() => handleCTEnrollNowClick({
-                      courseTitle: pageDate?.title,
-                      fees: pageDate?.fees,
-                      timing: pageDate?.timing,
-                      tenure: pageDate?.tenure,
-                      courseCategory: pageDate?.courseCategory,
-                      courseSubType: pageDate?.courseSubType,
-                      courseType: pageDate?.courseType,
-                      onlineMode: pageDate?.onlineInfo?.courseMode,
-                      residentialMode: pageDate?.residentialInfo?.courseMode,
-                      nonResidentialMode: pageDate?.nonResidentialInfo?.courseMode,
-                      residentialLocation: pageDate?.residentialInfo?.residentialMode,
-                      nonResidentialLocation: pageDate?.nonResidentialInfo?.nonResidentialMode,
-                      language: pageDate?.language,
-                      category: pageDate?.category,
-                      batch: pageDate?.Batch_No,
-                      nonResidential: pageDate?.nonResidential,
-                      residential: pageDate?.residential,
-                      online: pageDate?.online
-                    })} />
+                    <EnrollBtn text={'Enroll Now'} buttonAction={() => {
+                      handleCTEnrollNowClick({
+                        courseTitle: pageDate?.title,
+                        fees: pageDate?.fees,
+                        timing: pageDate?.timing,
+                        tenure: pageDate?.tenure,
+                        courseCategory: pageDate?.courseCategory,
+                        courseSubType: pageDate?.courseSubType,
+                        courseType: pageDate?.courseType,
+                        onlineMode: pageDate?.onlineInfo?.courseMode,
+                        residentialMode: pageDate?.residentialInfo?.courseMode,
+                        nonResidentialMode: pageDate?.nonResidentialInfo?.courseMode,
+                        residentialLocation: pageDate?.residentialInfo?.residentialMode,
+                        nonResidentialLocation: pageDate?.nonResidentialInfo?.nonResidentialMode,
+                        language: pageDate?.language,
+                        category: pageDate?.category,
+                        batch: pageDate?.Batch_No,
+                        nonResidential: pageDate?.nonResidential,
+                        residential: pageDate?.residential,
+                        online: pageDate?.online
+                      });
+                      ReactGA.event('add_to_cart', {
+                        currency: 'INR',
+                        value: pageDate?.fees?.onlineFee ? pageDate?.fees?.onlineFee : (pageDate?.fees?.offlineFee?.nonResidentialFee ? pageDate?.fees?.offlineFee?.nonResidentialFee : pageDate?.fees?.offlineFee?.residentialFee),
+                        items: [{
+                          item_name: pageDate.title,
+                          item_id: pageDate?.courseCategory,
+                          price: pageDate?.fees?.onlineFee ? pageDate?.fees?.onlineFee : (pageDate?.fees?.offlineFee?.nonResidentialFee ? pageDate?.fees?.offlineFee?.nonResidentialFee : pageDate?.fees?.offlineFee?.residentialFee),
+                          quantity: 1
+                        }]
+                      });
+                    }
+                    } />
                   </Link>
                 )
               ) :
@@ -950,50 +1000,76 @@ const CourseDetails = ({ pageDate }) => {
                 }
               >
                 {/* <CommonBtn text={'Enroll Now'} /> */}
-                <EnrollBtn text={'Enroll Now'} buttonAction={() => handleCTEnrollNowClick({
-                  courseTitle: pageDate?.title,
-                  fees: pageDate?.fees,
-                  timing: pageDate?.timing,
-                  tenure: pageDate?.tenure,
-                  courseCategory: pageDate?.courseCategory,
-                  courseSubType: pageDate?.courseSubType,
-                  courseType: pageDate?.courseType,
-                  onlineMode: pageDate?.onlineInfo?.courseMode,
-                  residentialMode: pageDate?.residentialInfo?.courseMode,
-                  nonResidentialMode: pageDate?.nonResidentialInfo?.courseMode,
-                  residentialLocation: pageDate?.residentialInfo?.residentialMode,
-                  nonResidentialLocation: pageDate?.nonResidentialInfo?.nonResidentialMode,
-                  language: pageDate?.language,
-                  category: pageDate?.category,
-                  batch: pageDate?.Batch_No,
-                  nonResidential: pageDate?.nonResidential,
-                  residential: pageDate?.residential,
-                  online: pageDate?.online
-                })} />
+                <EnrollBtn text={'Enroll Now'} buttonAction={() => {
+                  handleCTEnrollNowClick({
+                    courseTitle: pageDate?.title,
+                    fees: pageDate?.fees,
+                    timing: pageDate?.timing,
+                    tenure: pageDate?.tenure,
+                    courseCategory: pageDate?.courseCategory,
+                    courseSubType: pageDate?.courseSubType,
+                    courseType: pageDate?.courseType,
+                    onlineMode: pageDate?.onlineInfo?.courseMode,
+                    residentialMode: pageDate?.residentialInfo?.courseMode,
+                    nonResidentialMode: pageDate?.nonResidentialInfo?.courseMode,
+                    residentialLocation: pageDate?.residentialInfo?.residentialMode,
+                    nonResidentialLocation: pageDate?.nonResidentialInfo?.nonResidentialMode,
+                    language: pageDate?.language,
+                    category: pageDate?.category,
+                    batch: pageDate?.Batch_No,
+                    nonResidential: pageDate?.nonResidential,
+                    residential: pageDate?.residential,
+                    online: pageDate?.online
+                  });
+                  ReactGA.event('add_to_cart', {
+                    currency: 'INR',
+                    value: pageDate?.fees?.onlineFee ? pageDate?.fees?.onlineFee : (pageDate?.fees?.offlineFee?.nonResidentialFee ? pageDate?.fees?.offlineFee?.nonResidentialFee : pageDate?.fees?.offlineFee?.residentialFee),
+                    items: [{
+                      item_name: pageDate.title,
+                      item_id: pageDate?.courseCategory,
+                      price: pageDate?.fees?.onlineFee ? pageDate?.fees?.onlineFee : (pageDate?.fees?.offlineFee?.nonResidentialFee ? pageDate?.fees?.offlineFee?.nonResidentialFee : pageDate?.fees?.offlineFee?.residentialFee),
+                      quantity: 1
+                    }]
+                  });
+
+                }} />
               </Link> :
                 (<div >
                   <div style={{ opacity: '0.4' }}>
                     {/* <CommonBtn text={'Enroll Now'} /> */}
-                    <EnrollBtn text={'Enroll Now'} buttonAction={() => handleCTEnrollNowClick({
-                      courseTitle: pageDate?.title,
-                      fees: pageDate?.fees,
-                      timing: pageDate?.timing,
-                      tenure: pageDate?.tenure,
-                      courseCategory: pageDate?.courseCategory,
-                      courseSubType: pageDate?.courseSubType,
-                      courseType: pageDate?.courseType,
-                      onlineMode: pageDate?.onlineInfo?.courseMode,
-                      residentialMode: pageDate?.residentialInfo?.courseMode,
-                      nonResidentialMode: pageDate?.nonResidentialInfo?.courseMode,
-                      residentialLocation: pageDate?.residentialInfo?.residentialMode,
-                      nonResidentialLocation: pageDate?.nonResidentialInfo?.nonResidentialMode,
-                      language: pageDate?.language,
-                      category: pageDate?.category,
-                      batch: pageDate?.Batch_No,
-                      nonResidential: pageDate?.nonResidential,
-                      residential: pageDate?.residential,
-                      online: pageDate?.online
-                    })} />
+                    <EnrollBtn text={'Enroll Now'}
+                      buttonAction={() => {
+                        handleCTEnrollNowClick({
+                          courseTitle: pageDate?.title,
+                          fees: pageDate?.fees,
+                          timing: pageDate?.timing,
+                          tenure: pageDate?.tenure,
+                          courseCategory: pageDate?.courseCategory,
+                          courseSubType: pageDate?.courseSubType,
+                          courseType: pageDate?.courseType,
+                          onlineMode: pageDate?.onlineInfo?.courseMode,
+                          residentialMode: pageDate?.residentialInfo?.courseMode,
+                          nonResidentialMode: pageDate?.nonResidentialInfo?.courseMode,
+                          residentialLocation: pageDate?.residentialInfo?.residentialMode,
+                          nonResidentialLocation: pageDate?.nonResidentialInfo?.nonResidentialMode,
+                          language: pageDate?.language,
+                          category: pageDate?.category,
+                          batch: pageDate?.Batch_No,
+                          nonResidential: pageDate?.nonResidential,
+                          residential: pageDate?.residential,
+                          online: pageDate?.online
+                        });
+                        ReactGA.event('add_to_cart', {
+                          currency: 'INR',
+                          value: pageDate?.fees?.onlineFee ? pageDate?.fees?.onlineFee : (pageDate?.fees?.offlineFee?.nonResidentialFee ? pageDate?.fees?.offlineFee?.nonResidentialFee : pageDate?.fees?.offlineFee?.residentialFee),
+                          items: [{
+                            item_name: pageDate.title,
+                            item_id: pageDate?.courseCategory,
+                            price: pageDate?.fees?.onlineFee ? pageDate?.fees?.onlineFee : (pageDate?.fees?.offlineFee?.nonResidentialFee ? pageDate?.fees?.offlineFee?.nonResidentialFee : pageDate?.fees?.offlineFee?.residentialFee),
+                            quantity: 1
+                          }]
+                        });
+                      }} />
                   </div>
                   <div style={{ fontSize: '1.5rem', padding: '1.5rem' }}>No dates available for this course</div>
                 </div>)
