@@ -1093,7 +1093,8 @@ const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse
         ...formData2
       }));
       localStorage.setItem('addressDataNew', JSON.stringify({
-        address1: formData2?.address1
+        address1: formData2?.address1,
+        pincode: formData2?.pincode
   
       }));
 

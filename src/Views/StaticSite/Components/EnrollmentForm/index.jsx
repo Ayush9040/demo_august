@@ -25,6 +25,8 @@ const Enrollment = () => {
   const [Params] = useSearchParams()
   const navigate = useNavigate()
   const [isEditStudentOpen, setEditStudentOpen] = useState(false);
+  const addressLine1 = useSelector((state) => state.auth.user.data?.addressLine1);
+  const pincodeFromRedux = useSelector((state) => state.auth.user.data?.pincode);
 
   useEffect(() => {
     let currentCrs = AllCourses.find((item) => item.key === courseId)
@@ -189,8 +191,8 @@ const Enrollment = () => {
     document.body.appendChild(script)
 
     localStorage.setItem('addressDataNew', JSON.stringify({
-      address1: formData?.address1,
-      pincode: formData?.pincode
+      address1: addressLine1 || '',
+      pincode: pincodeFromRedux || ''
 
     }));
   }, [])
