@@ -51,6 +51,7 @@ const CourseDetails = ({
   const [courseStartDateSelected, setCourseStartDateSelected] = useState(false)
   const [courseDuration, setCourseDuration] = useState('Select one below')
   const [courseDurationSelected, setCourseDurationSelected] = useState(false)
+  const [aboveTwoDates, setAboveTwoDates] = useState(false);
   const [captureEndDate, setCaptureEndDate] = useState(null);
   const [ isRegularPrice, setIsRegularPrice] = useState(0);
 
@@ -932,6 +933,9 @@ const CourseDetails = ({
                               setCourseFormatInfo('ONLINE')
                               setCourseFormatSelected(true)
                               setPriceSelect(currentCourse?.fees?.onlineFee)
+                              setIsRegularPrice(currentCourse?.fees?.onlineFee)
+                              setOnSelectFormat(true);
+                                setOnClickFormatRegular(true)
                               if (e.target.checked) {
                                 setFormData({
                                   ...formData,
@@ -1241,7 +1245,7 @@ const CourseDetails = ({
                           })
                         }
                         {
-                          ((courseDateInfo == 'Select one below') && formattedDates[2]?.label || (courseDateInfo == formattedDates[0]?.label || courseDateInfo == formattedDates[1]?.label)) ? (
+                          ((formattedDates.length > 2 && (courseDateInfo == 'Select one below')) && (formattedDates[2]?.label || (courseDateInfo == formattedDates[0]?.label || courseDateInfo == formattedDates[1]?.label))) ? (
                             <div className='date_btn'>
                               <div className='wrapper_center container_date_enroll'>
                                 <label class="item-label item_date" style={{ width: '100%', height: '100%', borderRadius: '25px' }}>
@@ -1281,9 +1285,10 @@ const CourseDetails = ({
                                   <strong id="delivery-0-price" class="item-price"></strong>
                                 </label>
                               </div>
-                            </div>) : (
-                            courseDateInfo != 'Select one below' &&
-                            <div className='date_btn'>
+                            </div>
+                            ) : (
+                              formattedDates.length > 2 && courseDateInfo != 'Select one below' && !formattedDates.slice(0, 2).some(item => item?.label === courseDateInfo) ?
+                            (<div className='date_btn'>
                               <div className='wrapper_center container_date_enroll'>
                                 <label class="item-label item_date selected_date_popup" style={{ width: '100%', height: '100%', borderRadius: '25px' }}>
                                   <input class="item-input"
@@ -1311,7 +1316,50 @@ const CourseDetails = ({
                                   <strong id="delivery-0-price" class="item-price"></strong>
                                 </label>
                               </div>
+                            </div>) : (
+                              formattedDates.length > 2 &&
+                            (  <div className='date_btn'>
+                              <div className='wrapper_center container_date_enroll'>
+                                <label class="item-label item_date" style={{ width: '100%', height: '100%', borderRadius: '25px' }}>
+                                  <input class="item-input"
+                                    type="radio" name="mode"
+                                    value={formattedDates[2]?.label}
+                                    aria-labelledby="delivery-0-name"
+                                    aria-describedby="delivery-0-shipping delivery-0-price"
+                                    // onChange={() => handleDateSelect(item)}
+                                    onChange={(e) => {
+                                      // setSelectedOption('RESIDENTIAL');
+                                      // handleResidential(true);
+                                      // setPriceSelect(currentCourse?.fees?.offlineFee?.residentialFee)
+                                      setCourseDateInfo(e.target.value)
+                                      setCourseDateSelected(true)
+                                      if (e.target.checked) {
+                                        setFormData({
+                                          ...formData,
+                                          sdate: e.target.value
+                                        })
+                                        setEmpty(0)
+                                        // if (currentCourse?.key === 'ma-yoga-shastra' && currentCourse.country !== 'India') {
+                                        //   setCourseFee(currentCourse?.fees?.internationalFee?.residentialFee)
+                                        // } else {
+                                        //   setCourseFee(currentCourse?.fees?.offlineFee?.residentialFee)
+                                        // }
+                                        // setCourseFee(updatedFees( currentCourse?.key,'RESIDENTIAL' ))
+                                      }
+                                    }}
+
+                                  />
+                                  <span class="item-info item_desc">
+                                    <span id="delivery-0-name" class="item-name date_info">
+                                      <span className='style_dates'>{formattedDates[2]?.label}</span></span>
+                                  </span>
+
+                                  <strong id="delivery-0-price" class="item-price"></strong>
+                                </label>
+                              </div>
                             </div>)
+                            )
+                            )
 
                         }
 
