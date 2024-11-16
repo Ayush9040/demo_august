@@ -128,11 +128,11 @@ const OnlineTution = () => {
   const updateGA4 = (program) => {
     ReactGA.event('add_to_cart', {
       currency: 'INR',
-      value: '',
+      value: 0,
       items: [{
         item_name: 'Online Home Tuition (Yoga Tuition)',
         item_id: program,
-        price: '',
+        price: 0,
         quantity: 1
       }]
     });
