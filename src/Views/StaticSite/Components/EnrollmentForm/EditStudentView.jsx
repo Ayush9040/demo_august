@@ -223,7 +223,7 @@ const countriesMap = [
   { label: 'Zimbabwe', value: '+263', flag: 'ZW' }
 ];
 
-const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse, dateDurationChange, closeModal, saveAndASubmit }) => {
+const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse, dateDurationChange, closeModal, saveAndASubmit, setUpdateAddress, setDefaultAddress }) => {
 
   const [selectedDate, setSelectedDate] = useState(null);
   const { isLoggedIn } = useSelector((state) => state.auth)
@@ -589,6 +589,20 @@ const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse
 
       console.log("Address 1 no tcoming ", address1)
       console.log("Address 2 no tcoming ", address2)
+
+      // const addressData = {
+      //   address1,
+      //   address2,
+      //   country,
+      //   state,
+      //   city,
+      //   pincode,
+      // };
+  
+      // localStorage.setItem('addressData', JSON.stringify(addressData));
+
+      // setUpdateAddress(addressData);
+
       setFormData2((prev) => ({
         ...prev,
         address1: address1,
@@ -1078,6 +1092,12 @@ const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse
         ...prevFormData,
         ...formData2
       }));
+      localStorage.setItem('addressDataNew', JSON.stringify({
+        address1: formData2?.address1
+  
+      }));
+
+      setDefaultAddress(true);
       saveAndASubmit()
       closeModal();
     }

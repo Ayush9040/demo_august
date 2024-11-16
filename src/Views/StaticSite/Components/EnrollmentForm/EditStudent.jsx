@@ -29,7 +29,7 @@ const customStyles = {
 
 // Modal.setAppElement('#___gatsby')
 
-const EditStudent = ({ isShippingModalOpen, setIsShipppingModalOpen, formData, setFormData, setEmpty, empty, currentCourse, dateDurationChange,handleSubmit }) => {
+const EditStudent = ({ isShippingModalOpen, setIsShipppingModalOpen, formData, setFormData, setEmpty, empty, currentCourse, dateDurationChange,handleSubmit, setUpdateAddress, setDefaultAddress }) => {
 
   function closeModal() {
     setIsShipppingModalOpen(false)
@@ -70,7 +70,7 @@ const EditStudent = ({ isShippingModalOpen, setIsShipppingModalOpen, formData, s
 
           </div>
           <div className="modal-content" style={{ gridTemplateColumns: '1fr', marginTop: '0rem' }}>
-            {<EditStudentView formData={formData} setFormData={setFormData} setEmpty={setEmpty} empty={empty} currentCourse={currentCourse} dateDurationChange={dateDurationChange} closeModal={closeModal} saveAndASubmit={saveAndASubmit}/>}
+            {<EditStudentView formData={formData} setFormData={setFormData} setEmpty={setEmpty} empty={empty} currentCourse={currentCourse} dateDurationChange={dateDurationChange} closeModal={closeModal} saveAndASubmit={saveAndASubmit} setUpdateAddress={setUpdateAddress} setDefaultAddress={setDefaultAddress} />}
             {/* <div>
               <input
                 className="modal-input"

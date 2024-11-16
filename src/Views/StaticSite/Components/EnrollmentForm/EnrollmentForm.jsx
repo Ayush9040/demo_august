@@ -60,7 +60,14 @@ const EnrollmentForm = ({
   // {console.log(handleSubmit)}
   //const today = new Date().toISOString().split('T')[0]
   const [values, setValues] = useState([])
+  const [updateAddress, setUpdateAddress] = useState({
+    address1: formData?.address1,
+    state: formData?.state,
+    country: formData?.country,
+    pincode: formData?.pincode,
+  });
   const countries = Country.getAllCountries()
+  const [ updateAddress1, setUpdateAddress1] = useState('')
   const [selectDate, setSetselectDate] = useState(null)
   const [Params] = useSearchParams()
   const [fixDate, setFixDate] = useState([]);
@@ -76,6 +83,7 @@ const EnrollmentForm = ({
   const addressLine1 = useSelector((state) => state.auth.user.data?.addressLine1);
   const pincodeFromRedux = useSelector((state) => state.auth.user.data?.pincode);
   console.log('pincodeFromRedux ', pincodeFromRedux)
+
   // console.log('phoneNumberFromRedux ', phoneNumberFromRedux);
   // console.log('countryFromRedux ', countryFromRedux);
   // console.log('stateFromRedux ', stateFromRedux);
@@ -100,6 +108,7 @@ const EnrollmentForm = ({
   const [loading, setLoading] = useState(true);
   const [showForm, setShowForm] = useState(false)
   const [editOpen, setEditOpen] = useState(false)
+  const [ defaultAddress, setDefaultAddress] = useState(true);
 
   const navigates = useNavigate();
   const location = useLocation();
@@ -519,6 +528,18 @@ const EnrollmentForm = ({
 
   // };
 
+  const getAddress = () => {
+    let address = JSON.parse(localStorage.getItem('addressDataNew'))
+    // setUpdateAddress1(address?.address1);
+    return address?.address1;
+  }
+
+  const getPincode = () => {
+    let address = JSON.parse(localStorage.getItem('addressDataNew'))
+    // setUpdateAddress1(address?.address1);
+    return address?.pincode;
+  }
+
 
 
 
@@ -579,6 +600,17 @@ const EnrollmentForm = ({
     });
   };
   const [minDate, setMinDate] = useState('');
+
+
+  useEffect(() => {
+    // Retrieve address data from localStorage when the component mounts
+    const storedAddressData = localStorage.getItem('addressData');
+    if (storedAddressData) {
+      setUpdateAddress(JSON.parse(storedAddressData));
+    }
+  }, []);
+
+
   useEffect(() => {
     const array = ["Yoga Classes for Men (Regular Asana) - On Campus",
       "Yoga Classes for Women (Regular Asana) - On Campus",
@@ -1150,7 +1182,7 @@ const EnrollmentForm = ({
                   //   type="Terms and Conditions" // You can pass any other props as needed
                   // />
                   // <TermsAndConditionsModal />
-                  <EditStudent isShippingModalOpen={handleEditOpen} setIsShipppingModalOpen={handleEditClose} formData={formData} setFormData={setFormData} setEmpty={setEmpty} empty={empty} currentCourse={currentCourse} dateDurationChange={dateDurationChange} handleSubmit={handleSubmit}/>
+                  <EditStudent isShippingModalOpen={handleEditOpen} setIsShipppingModalOpen={handleEditClose} formData={formData} setFormData={setFormData} setEmpty={setEmpty} empty={empty} currentCourse={currentCourse} dateDurationChange={dateDurationChange} handleSubmit={handleSubmit} setUpdateAddress={setUpdateAddress} setDefaultAddress={setDefaultAddress}/>
                 )}
                 <div className='fields_alignment fields_alignment_bottom'>
                   <div className='details_desc_name_info'><span className='details_duration_info'>Name</span> <span className='tenure_course'>{`${formData?.name} ${formData?.lname}`}</span></div>
@@ -1170,13 +1202,14 @@ const EnrollmentForm = ({
                 </div>
                 <div className='details_desc_days'>
                   <div className='details_desc_name_info'><span className='details_duration_info'>Address</span> <span className='tenure_course'>
-                  {formData?.address1}
-                    {formData?.address1 && <>, </>}
+                    {/* {getAddress()} */}
+                  {getAddress()}
+                    {getAddress() && <>, </>}
                     {formData?.state}
                     {formData?.country && <>, </>}
                     {formData?.country}
-                    {formData?.pincode && <> - </>}
-                    {formData?.pincode}
+                    {getPincode() && <> - </>}
+                    {getPincode()}
                     {/* {`${formData?.address1}, ${formData?.state}, ${formData?.country} - ${formData?.pincode}`} */}
                     </span></div>
 

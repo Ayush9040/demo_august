@@ -187,6 +187,12 @@ const Enrollment = () => {
     script.src = 'https://checkout.razorpay.com/v1/checkout.js'
     script.async = true
     document.body.appendChild(script)
+
+    localStorage.setItem('addressDataNew', JSON.stringify({
+      address1: formData?.address1,
+      pincode: formData?.pincode
+
+    }));
   }, [])
 
   const [mail, setmail] = useState(null)
