@@ -130,6 +130,8 @@ const Enrollment = () => {
   function dateDurationChange(months) {
     console.log("Months ", months);
     let originalFee = AllCourses.find((item) => item.key === courseId)
+    // alert(originalFee?.fees?.onlineFee,months )
+    if(originalFee?.fees?.onlineFee && months){
     let newAmnt = originalFee?.fees?.onlineFee * months
     if (months == 12) {
       newAmnt = newAmnt - 2200
@@ -143,6 +145,7 @@ const Enrollment = () => {
       }
     }));
     setCourseFee(newAmnt)
+  }
   }
 
   const setEndDate = (months, startDate) => {
@@ -222,8 +225,12 @@ const Enrollment = () => {
 
 
   const handleSubmit1 = async () => {
+    // alert('RAzor')
     localStorage.setItem('courseName', currentCourse.title)
-    localStorage.setItem('courseFee', courseFee)
+    if(!isNaN(courseFee)){
+      localStorage.setItem('courseFee', courseFee)
+    }
+    
     localStorage.setItem('courseStartDate', formData.sdate)
     console.log("From Razor ", formData)
     if (formData.terms === false) {
@@ -344,7 +351,7 @@ const Enrollment = () => {
           if (currentCourse.key !== 'satsang' && currentCourse.key !== 'samattvam') { //for residential no payment required
             //  && localStorage.getItem('isResidential') == 'false'
             const paymentOrderResponse = await axios.post(`${cmsBaseDomain}/payment/order?enrollmentFormId=${response.data.data['_id']}`, {
-              amount: courseFee,
+              amount: localStorage.getItem('courseFee'),
               notes: currentCourse.metaDescription,
               objectType: 'ENROLLMENT'
             })
@@ -604,7 +611,8 @@ const Enrollment = () => {
       // alert("11")
       setEmpty('mode')
     } else if (isMatch && formData.startDate === '') {
-      // alert("13")
+      // alert(formData.startDate)
+      
       setEmpty(21)
     } else if (formData.sdate === '') {
       // alert("8")

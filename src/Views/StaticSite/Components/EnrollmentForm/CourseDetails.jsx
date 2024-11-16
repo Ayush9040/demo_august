@@ -881,7 +881,7 @@ const CourseDetails = ({
 
                               {/* <small id="delivery-0-shipping" class="item-shipping">5–10 business days</small> */}
                             </span>
-                            <strong id="delivery-0-price" class="item-price">INR {currentCourse?.fees?.onlineFee}</strong>
+                            <strong id="delivery-0-price" class="item-price">INR {isNaN(currentCourse?.fees?.onlineFee) ? localStorage.getItem('courseFee') : currentCourse?.fees?.onlineFee }</strong>
                           </label>
 
                         )
@@ -933,9 +933,10 @@ const CourseDetails = ({
                               setCourseFormatInfo('ONLINE')
                               setCourseFormatSelected(true)
                               setPriceSelect(currentCourse?.fees?.onlineFee)
-                              setIsRegularPrice(currentCourse?.fees?.onlineFee)
-                              setOnSelectFormat(true);
+                              setIsRegularPrice(currentCourse?.fees?.onlineFee);
+                                setOnSelectFormat(true);
                                 setOnClickFormatRegular(true)
+                              
                               if (e.target.checked) {
                                 setFormData({
                                   ...formData,
@@ -951,7 +952,7 @@ const CourseDetails = ({
 
                             {/* <small id="delivery-0-shipping" class="item-shipping">5–10 business days</small> */}
                           </span>
-                          <strong id="delivery-0-price" class="item-price"> INR {currentCourse?.fees?.onlineFee}</strong>
+                          <strong id="delivery-0-price" class="item-price"> INR {isNaN(currentCourse?.fees?.onlineFee) ? localStorage.getItem('courseFee') : currentCourse?.fees?.onlineFee }</strong>
                         </label>
                       )}
                     </div>
@@ -1164,6 +1165,7 @@ const CourseDetails = ({
                               if (captureEndDate) {
                                 createEndDate(formattedStartDate, captureEndDate);
                               }
+                              setEmpty(0)
                             }}
                             // onKeyDown={(e) => e.preventDefault()} //
                             customInput={
