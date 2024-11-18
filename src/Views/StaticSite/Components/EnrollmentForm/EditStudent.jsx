@@ -38,6 +38,10 @@ const EditStudent = ({ isShippingModalOpen, setIsShipppingModalOpen, formData, s
     handleSubmit()
   }
 
+  const resetSetEmpty = () => {
+    setEmpty(0);
+  };
+
   return (
     <div className='bg_date'>
       <Modal
@@ -70,7 +74,7 @@ const EditStudent = ({ isShippingModalOpen, setIsShipppingModalOpen, formData, s
 
           </div>
           <div className="modal-content" style={{ gridTemplateColumns: '1fr', marginTop: '0rem' }}>
-            {<EditStudentView formData={formData} setFormData={setFormData} setEmpty={setEmpty} empty={empty} currentCourse={currentCourse} dateDurationChange={dateDurationChange} closeModal={closeModal} saveAndASubmit={saveAndASubmit} setUpdateAddress={setUpdateAddress} setDefaultAddress={setDefaultAddress} />}
+            {<EditStudentView formData={formData} setFormData={setFormData} setEmpty={setEmpty} empty={empty} currentCourse={currentCourse} dateDurationChange={dateDurationChange} closeModal={closeModal} saveAndASubmit={saveAndASubmit} setUpdateAddress={setUpdateAddress} setDefaultAddress={setDefaultAddress} onOpen={resetSetEmpty} />}
             {/* <div>
               <input
                 className="modal-input"

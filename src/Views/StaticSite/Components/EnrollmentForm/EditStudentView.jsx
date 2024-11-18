@@ -223,7 +223,7 @@ const countriesMap = [
   { label: 'Zimbabwe', value: '+263', flag: 'ZW' }
 ];
 
-const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse, dateDurationChange, closeModal, saveAndASubmit, setUpdateAddress, setDefaultAddress }) => {
+const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse, dateDurationChange, closeModal, saveAndASubmit, setUpdateAddress, setDefaultAddress, onOpen }) => {
 
   const [selectedDate, setSelectedDate] = useState(null);
   const { isLoggedIn } = useSelector((state) => state.auth)
@@ -315,6 +315,8 @@ const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse
 
   const nameFromRedux = useSelector((state) => state.auth.user.data?.firstName);
 
+
+
   //   console.log("nameFromRedux from profile ", nameFromRedux);
   //   console.log("emailFromRedux from profile 22222 ", emailFromRedux);
 
@@ -323,6 +325,11 @@ const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse
     localStorage.removeItem("authorizationToken");
     navigates('/user/sign-in');
   }
+
+  useEffect(() => {
+    // Trigger the function to set `setEmpty` to 0
+    onOpen();
+  }, []);
 
   useEffect(() => {
     if (isSatsangPage) {
