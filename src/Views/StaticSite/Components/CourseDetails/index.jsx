@@ -43,7 +43,7 @@ const CourseDetails = ({ pageDate }) => {
         value: pageDate?.fees?.onlineFee ? pageDate?.fees?.onlineFee : (pageDate?.fees?.offlineFee?.nonResidentialFee ? pageDate?.fees?.offlineFee?.nonResidentialFee : pageDate?.fees?.offlineFee?.residentialFee),
         items: [{
           item_name: pageDate.title,
-          item_id: pageDate?.courseCategory?pageDate?.courseCategory:pageDate.title,
+          item_id: pageDate?.courseCategory ? pageDate?.courseCategory : pageDate.title,
           price: pageDate?.fees?.onlineFee ? pageDate?.fees?.onlineFee : (pageDate?.fees?.offlineFee?.nonResidentialFee ? pageDate?.fees?.offlineFee?.nonResidentialFee : pageDate?.fees?.offlineFee?.residentialFee),
           quantity: 1
         }]
@@ -53,7 +53,7 @@ const CourseDetails = ({ pageDate }) => {
         value: pageDate?.fees?.onlineFee ? pageDate?.fees?.onlineFee : (pageDate?.fees?.offlineFee?.nonResidentialFee ? pageDate?.fees?.offlineFee?.nonResidentialFee : pageDate?.fees?.offlineFee?.residentialFee),
         items: [{
           item_name: pageDate.title,
-          item_id: pageDate?.courseCategory?pageDate?.courseCategory:pageDate.title,
+          item_id: pageDate?.courseCategory ? pageDate?.courseCategory : pageDate.title,
           price: pageDate?.fees?.onlineFee ? pageDate?.fees?.onlineFee : (pageDate?.fees?.offlineFee?.nonResidentialFee ? pageDate?.fees?.offlineFee?.nonResidentialFee : pageDate?.fees?.offlineFee?.residentialFee),
           quantity: 1
         }]
@@ -744,7 +744,19 @@ const CourseDetails = ({ pageDate }) => {
                     (<div >
                       <div style={{ opacity: '0.4' }}>
                         {/* <CommonBtn text={'Enroll Now'} /> */}
-                        <EnrollBtn text={'Enroll Now'} />
+                        <EnrollBtn text={'Enroll Now'} buttonAction={() => {
+                          ReactGA.event('add_to_cart', {
+                            currency: 'INR',
+                            value: '',
+                            items: [{
+                              item_name: pageDate?.title,
+                              item_id: pageDate?.courseCategory,
+                              price: '',
+                              quantity: 1
+                            }]
+                          })
+
+                        }} />
                       </div>
                       <div style={{ fontSize: '1.5rem', padding: '1.5rem' }}>No dates available for this course</div>
                     </div>)

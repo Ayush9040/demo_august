@@ -6432,7 +6432,7 @@ const ttc900hr = {
       // '1st Sep 2024',
       // '1st Oct 2024',
       // '1st Nov 2024',
-      '1st Dec 2024',
+      '2nd Dec 2024',
       '1st Jan 2025',
       '1st Feb 2025',
       '1st Mar 2025',

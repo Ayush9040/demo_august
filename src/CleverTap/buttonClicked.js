@@ -179,26 +179,26 @@ export const handleCTEnrollNowClick = ({
   } else {
     console.error("CleverTap is not initialized.");
   }
-  ReactGA.event('add_to_cart', {
-    currency: 'INR',
-    value: fees.onlineFee ? fees.onlineFee : ((fees?.offlineFee?.residentialFee) ? (fees?.offlineFee?.residentialFee) : (fees?.offlineFee?.nonResidentialFee)),
-    items: [{
-      item_name: courseTitle,
-      item_id: courseCategory,
-      price: fees.onlineFee ? fees.onlineFee : 0,
-      quantity: 1
-    }]
-  });
-  console.log({
-    currency: 'INR',
-    value: fees.onlineFee ? fees.onlineFee : 0,
-    items: [{
-      item_name: courseTitle,
-      item_id: courseCategory,
-      price: fees.onlineFee ? fees.onlineFee : 0,
-      quantity: 1
-    }]
-  });
+  // ReactGA.event('add_to_cart', {
+  //   currency: 'INR',
+  //   value: fees.onlineFee ? fees.onlineFee : ((fees?.offlineFee?.residentialFee) ? (fees?.offlineFee?.residentialFee) : (fees?.offlineFee?.nonResidentialFee)),
+  //   items: [{
+  //     item_name: courseTitle,
+  //     item_id: courseCategory,
+  //     price: fees.onlineFee ? fees.onlineFee : 0,
+  //     quantity: 1
+  //   }]
+  // });
+  // console.log({
+  //   currency: 'INR',
+  //   value: fees.onlineFee ? fees.onlineFee : 0,
+  //   items: [{
+  //     item_name: courseTitle,
+  //     item_id: courseCategory,
+  //     price: fees.onlineFee ? fees.onlineFee : 0,
+  //     quantity: 1
+  //   }]
+  // });
 
 }
 
