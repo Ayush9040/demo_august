@@ -141,11 +141,11 @@ const Other = ({ empty, formData, setFormData }) => {
           }}
         />
       </div> */}
-      {empty === 2 && (
+      {/* {empty === 2 && (
         <small style={{ color: 'red', marginLeft: '45px', fontSize: '15px' }}>
           *Please Choose a source
         </small>
-      )}
+      )} */}
       {/* <div className="radio_heading">
               <div className="label">Purpose of joining this program</div>
 
