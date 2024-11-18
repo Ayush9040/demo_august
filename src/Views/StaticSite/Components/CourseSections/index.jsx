@@ -173,8 +173,8 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
         ans: [
           {
             url: '/21-days-better-living-course',
-            text: 'Morning On Campus – English - Batch 1',
-            onCampus: true, weekDays: true, days21: true
+            text: 'Morning Online & On Campus – English - Batch 1',
+            onCampus: true, weekDays: true, days21: true, online: true,
           },
           {
             url: '/21-days-better-living-course-batch-2',
@@ -384,17 +384,17 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
             <br />
             <div>
               {/* <h4> */}
-                <ul>
-                  {regularCourseStatic.map((item, i) => (
-                    shouldDisplayLink(item) && (
-                      <div key={i}>
-                        <Link to={item.url}>
-                          <li className="text-bold">
-                            {item.text}
-                          </li>
-                        </Link></div>))
-                  )}
-                  {/* <Link to="/asana-regular-classes-on-campus">
+              <ul>
+                {regularCourseStatic.map((item, i) => (
+                  shouldDisplayLink(item) && (
+                    <div key={i}>
+                      <Link to={item.url}>
+                        <li className="text-bold">
+                          {item.text}
+                        </li>
+                      </Link></div>))
+                )}
+                {/* <Link to="/asana-regular-classes-on-campus">
                     <li>Asana Regular Classes for Men On Campus</li>
                   </Link>
                   <Link to="/asana-regular-classes-on-campus-women">
@@ -427,7 +427,7 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
                   <Link to="/IBY-course">
                     <li>IBY classes - On Campus & Online</li>
                   </Link> */}
-                </ul>
+              </ul>
               {/* </h4> */}
             </div>
             {/* <Link to="/courses/browse/classes">
@@ -442,17 +442,17 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
             {/* <Accordian sliderVal={customVal} setSliderVal={setCustomVal} data={campsAccordian} selectedFilters={selectedFilters} /> */}
             <div>
               {/* <h4> */}
-                <ul id='camps-workshop' >
-                  {campsWroskshopStatic.map((item, i) => (
-                    shouldDisplayLink(item) && (
-                      <div key={i}>
-                        <Link to={item.url}>
-                          <li className="text-bold">
-                            {item.text}
-                          </li>
-                        </Link></div>))
-                  )}
-                  {/* <Link to="/corporate-workshops">
+              <ul id='camps-workshop' >
+                {campsWroskshopStatic.map((item, i) => (
+                  shouldDisplayLink(item) && (
+                    <div key={i}>
+                      <Link to={item.url}>
+                        <li className="text-bold">
+                          {item.text}
+                        </li>
+                      </Link></div>))
+                )}
+                {/* <Link to="/corporate-workshops">
                     <li>Corporate Workshop - On Campus</li>
                   </Link>
                   <Link to="/satsang">
@@ -487,10 +487,10 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
                   </Link> */}
 
 
-                  {/* <Link to="/kids-camp">
+                {/* <Link to="/kids-camp">
                   <li>Kids Yoga Summer Camp (On-Campus)</li>
                 </Link> */}
-                </ul>
+              </ul>
               {/* </h4> */}
             </div>
             <div className="vertical-scrollbar" style={{ paddingLeft: '5rem' }}>
@@ -511,17 +511,17 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
           <div className="course-list-content">
             <div>
               {/* <h4> */}
-                <ul>
-                  {mostPopularStatic.map((item, i) => (
-                    shouldDisplayLink(item) && (
-                      <div key={i}>
-                        <Link to={item.url}>
-                          <li className="text-bold">
-                            {item.text}
-                          </li>
-                        </Link></div>))
-                  )}
-                  {/* <Link to="/7-days-camp-english">
+              <ul>
+                {mostPopularStatic.map((item, i) => (
+                  shouldDisplayLink(item) && (
+                    <div key={i}>
+                      <Link to={item.url}>
+                        <li className="text-bold">
+                          {item.text}
+                        </li>
+                      </Link></div>))
+                )}
+                {/* <Link to="/7-days-camp-english">
                     <li>7 Days Health Camp</li>
                   </Link>
                   <Link to="/21-days-better-living-course">
@@ -536,7 +536,7 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
                   <Link to="/pregnancy-camp-for-ante-post-natal">
                     <li> Pregnancy Camp</li>
                   </Link> */}
-                </ul>
+              </ul>
               {/* </h4> */}
             </div>
             {/* <Link to="/courses/browse/most-popular">
@@ -579,11 +579,11 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
 
       <div className="course-list">
         <div className="course-title">
-          {pathParam!='ttc' ? <Link to={`/courses/browse/${pathParam}`}>
+          {pathParam != 'ttc' ? <Link to={`/courses/browse/${pathParam}`}>
             <h1 style={{ fontSize: '2.6rem' }}>{title}</h1>
           </Link>
             :
-            <div style={{ fontSize: '2.6rem',fontWeight:'700' }}>{title}</div>
+            <div style={{ fontSize: '2.6rem', fontWeight: '700' }}>{title}</div>
           }
 
         </div>

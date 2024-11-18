@@ -10680,7 +10680,7 @@ enrollInfo: {
       templateOnline: 'GENERAL_AUTO_EMAIL',
       templateOffline: {
         templateResidential: '',
-        templateNonResidential: '',
+        templateNonResidential: 'GENERAL_AUTO_EMAIL',
       },
     },
     batch: 1,
@@ -10711,7 +10711,7 @@ enrollInfo: {
     ],
     online: true,
     onCampus: true,
-    nonResidential: false,
+    nonResidential: true,
     residential: false,
     certficate: false,
 
@@ -10777,7 +10777,7 @@ enrollInfo: {
     timing: 'Morning: 7:00 am – 8:30 am (IST)',
     fees: {
       onlineFee: 2500,
-      offlineFee: { residentialFee: 0, nonResidentialFee: 2100 },
+      offlineFee: { residentialFee: 0, nonResidentialFee: 2500 },
     },
     category: 'camps',
     metaDescription: 'Become successful, healthy, stress-free, and more mindful in your relationships by learning the yogic way of living. Join The Yoga Institute’s 21-Days Better Living Course. ',
@@ -11112,7 +11112,7 @@ enrollInfo: {
       templateOnline: 'GENERAL_AUTO_EMAIL',
       templateOffline: {
         templateResidential: '',
-        templateNonResidential: '',
+        templateNonResidential: 'GENERAL_AUTO_EMAIL',
       },
     },
     dates: [
@@ -11141,7 +11141,7 @@ enrollInfo: {
     ],
     online: true,
     onCampus: true,
-    nonResidential: false,
+    nonResidential: true,
     residential: false,
     certficate: false,
 
@@ -11184,7 +11184,7 @@ enrollInfo: {
     timing: 'Evening 6:30 pm – 8:00 pm (IST)',
     fees: {
       onlineFee: 2500,
-      offlineFee: { residentialFee: 0, nonResidentialFee: 2100 },
+      offlineFee: { residentialFee: 0, nonResidentialFee: 2500 },
     },
     category: 'camps',
     metaDescription:
@@ -11520,7 +11520,7 @@ enrollInfo: {
       templateOnline: 'GENERAL_AUTO_EMAIL',
       templateOffline: {
         templateResidential: '',
-        templateNonResidential: '',
+        templateNonResidential: 'GENERAL_AUTO_EMAIL',
       },
     },
     dates: [
@@ -11542,7 +11542,7 @@ enrollInfo: {
     ],
     online: true,
     onCampus: true,
-    nonResidential: false,
+    nonResidential: true,
     residential: false,
     certficate: false,
 
@@ -11587,7 +11587,7 @@ enrollInfo: {
     timing: 'Evening 6:30 pm – 8:00 pm (IST)',
     fees: {
       onlineFee: 2500,
-      offlineFee: { residentialFee: 0, nonResidentialFee: 2100 },
+      offlineFee: { residentialFee: 0, nonResidentialFee: 2500 },
     },
     category: 'camps',
     metaDescription: 'Become successful, healthy, stress-free, and more mindful in your relationships by learning the yogic way of living. Join The Yoga Institute"s 21-Days Better Living Course. ',

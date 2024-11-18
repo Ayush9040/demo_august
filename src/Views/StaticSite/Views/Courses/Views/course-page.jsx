@@ -410,8 +410,8 @@ const Courses = () => {
       else if (index == 1) {
         points = [{
           url: '/21-days-better-living-course',
-          text: 'Morning On Campus – English - Batch 1',
-          onCampus: true, weekDays: true, days21: true
+          text: 'Morning Online & On Campus – English - Batch 1',
+          onCampus: true, weekDays: true, days21: true, online: true
         },
         {
           url: '/21-days-better-living-course-batch-2',
