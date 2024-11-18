@@ -2,7 +2,7 @@ import axios from 'axios'
 import { authBaseDomain, cmsBaseDomain } from '../../../../Constants/appSettings'
 
 export const IYBenroll = ( payload ) =>{
-  return axios.post(`${cmsBaseDomain}/iby`, payload)
+  return axios.post(`${cmsBaseDomain}/ib`, payload)
 }
 
 export const createIYBorder = (id, payload) =>{

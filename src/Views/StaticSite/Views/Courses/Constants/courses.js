@@ -27,6 +27,7 @@ const ttc200hr = {
         templateNonResidential: 'COURSE200_NONRES_TTC',
       },
     },
+    weekDays: true,
     batch: 1,
     metaDescription:
       'Master your physical, mental, and spiritual well-being by learning the skills',
@@ -82,6 +83,23 @@ const ttc200hr = {
     preRequisite: 'None',
     courseCategory: 'Educational',
     courseSubType: '200 Hour Yoga Teacher Training',
+    newName: '200 Hours - Basic Yoga Teacher Training Course (YTTC)',
+    days: [
+      'Monday to Saturday'
+    ],
+    time: [
+      '10:00 am - 6:00 pm (IST)'
+    ],
+
+    enrollInfo: {
+      duration: "1 month",
+      timings: [
+        {
+          day: "Monday to Saturday",
+          time: "10:00 am - 6:00 pm (IST)"
+        }
+      ]
+    },
 
     courseCertificate: 'TTC/Certificate',
     onlineInfo: {
@@ -616,6 +634,23 @@ const ttc200hr = {
     preRequisite: 'None',
     courseCategory: 'Educational',
     courseSubType: '200 Hour Yoga Teacher Training',
+    newName: '200 Hours - Basic Yoga Teacher Training Course (YTTC)',
+    days: [
+      'Monday to Friday'
+    ],
+    time: [
+      '12:00 noon - 4:00 pm (IST)'
+    ],
+
+    enrollInfo: {
+      duration: "2 months",
+      timings: [
+        {
+          day: "Monday to Friday",
+          time: "12:00 noon - 4:00 pm (IST)"
+        }
+      ]
+    },
 
     courseCertificate: 'TTC/Certificate',
     onlineInfo: {
@@ -1083,6 +1118,30 @@ const ttc200hr = {
     preRequisite: 'None',
     courseCategory: 'Educational',
     courseSubType: '200 Hour Yoga Teacher Training',
+    newName: '200 Hours - Basic Yoga Teacher Training Course (YTTC)',
+    days: [
+      'Monday to Saturday'
+    ],
+    time:
+      [
+        'Morning: 7:00 am - 8:30 am (IST)',
+        'Evening : 6:30 pm - 8:30 pm (IST)'
+      ],
+
+      enrollInfo: {
+        duration: "2 months",
+        timings: [
+          {
+            day: "Monday to Saturday",
+            time: "Morning: 7:00 am - 8:30 am (IST)"
+          },
+          {
+            day: "Monday to Saturday",
+            time: "Evening : 6:30 pm - 8:30 pm (IST) "
+          }
+        ],
+        message: "(Both the time slots are mandatory)",
+      },
 
     courseCertificate: 'TTC/Certificate',
     onlineInfo: {
@@ -1611,6 +1670,23 @@ const ttc200hr = {
     preRequisite: 'None',
     courseCategory: 'Educational',
     courseSubType: '200 Hour Yoga Teacher Training',
+    newName: '200 Hours - Basic Yoga Teacher Training Course (YTTC)',
+    days: [
+      'Monday to Saturday'
+    ],
+    time: [
+      '1:00 pm - 4:30 pm (IST)'
+    ],
+
+    enrollInfo: {
+      duration: "2 months",
+      timings: [
+        {
+          day: "Monday to Saturday",
+          time: "1:00 pm - 4:30 pm (IST)"
+        },
+      ],
+    },
 
     courseCertificate: 'TTC/Certificate',
     onlineInfo: {
@@ -2067,7 +2143,9 @@ const ttc200hr = {
     textdescription3: '',
     textdescription4: '',
     textdescription5: '',
+    weekends: true,
     key: 'weekend-teacher-training-course',
+    weekDays: true,
     // templateId: 'COURSE200_3M_TTC',
     templateId: {
       templateOnline: 'COURSE200_WEEKEND_TTC',
@@ -2098,7 +2176,7 @@ const ttc200hr = {
       // '6th Jul to 22nd Sep 2024',
       // '28th Sep to 15th Dec 2024 ',
       // '5th Oct to 22nd Dec 2024 ',
-      '28th Dec to 16th March 2025',
+      '28th Dec to 16th Mar 2025',
       '15th Mar to 1st Jun 2025',
       '7th Jun to 24th Aug 2025',
       '30th Aug to 16th Nov 2025',
@@ -2116,6 +2194,28 @@ const ttc200hr = {
     preRequisite: 'None',
     courseCategory: 'Educational',
     courseSubType: '200 Hour Yoga Teacher Training',
+    newName: '200 Hours - Basic Yoga Teacher Training Course (YTTC)',
+    days: [
+      'Saturday & Sunday'
+    ],
+    time: [
+      'Saturday Sessions: 10:00 am – 8:30 pm (IST)',
+      'Sunday Sessions 10:00 am – 1:30 pm (IST)'
+    ],
+
+    enrollInfo: {
+      duration: "3 months",
+      timings: [
+        {
+          day: "Saturday & Sunday",
+          time: "Saturday Sessions: 10:00 am – 8:30 pm (IST)"
+        },
+        {
+          day: "Saturday & Sunday",
+          time: "Sunday Sessions 10:00 am – 1:30 pm (IST)"
+        }
+      ]
+    },
 
     courseCertificate: 'TTC/Certificate',
     onlineInfo: {
@@ -2619,13 +2719,13 @@ const ttc200hr = {
     title: '200 Hours Yoga TTC - 2 Months Online Yoga Teacher Training Course - English - Batch 6 ',
     dates: [
       // '29th July to 21st September 2024',
-      '2nd December 2024 to 25th January 2025',
-      '3rd February to 29th March 2025',
-      '7th April to 31st May 2025',
-      '9th June to 2nd Augsut 2025',
-      '11th August to 4th October 2025',
-      '13th October to 6th December 2025',
-      '15th December to 7th February 2026',
+      '2nd Dec to 25th Jan 2025',
+      '3rd Feb to 29th Mar 2025',
+      '7th Apr to 31st May 2025',
+      '9th Jun to 2nd Aug 2025',
+      '11th Aug to 4th Oct 2025',
+      '13th Oct to 6th Dec 2025',
+      '15th Dec to 7th Feb 2026',
     ],
     online: true,
     onCampus: false,
@@ -2639,6 +2739,23 @@ const ttc200hr = {
     preRequisite: 'None',
     courseCategory: 'Educational',
     courseSubType: '200 Hour Yoga Teacher Training',
+    newName: '200 Hours - Basic Yoga Teacher Training Course (YTTC)',
+    days: [
+      'Monday to Saturday'
+    ],
+    time: [
+      '4:30 pm – 8:00 pm (IST)'
+    ],
+
+    enrollInfo: {
+      duration: "2 months",
+      timings: [
+        {
+          day: "Monday to Saturday",
+          time: "4:30 pm – 8:00 pm (IST)"
+        }
+      ]
+    },
 
     courseCertificate: 'TTC/Certificate',
     onlineInfo: {
@@ -3119,6 +3236,7 @@ const ttc500hr = {
     textdescription3: '',
     textdescription4: '',
     textdescription5: '',
+    weekDays: true,
     key: '500-hrs-online-yoga-teacher-training-course-intermediate-level',
     // templateId: 'COURSE500_3M_TTC',
     templateId: {
@@ -3167,7 +3285,28 @@ const ttc500hr = {
     preRequisite: 'None',
     courseCategory: 'Educational',
     courseSubType: '500 Hour Yoga Teacher Training',
-
+    newName: '500 Hours - Intemediate Yoga Teacher Training Course (YTTC)',
+    days: [
+      'Monday to Saturday'
+    ],
+    time: [
+      'Morning: 7:00 am - 8:30 am (IST)',
+      'Evening: 4:30 pm - 8:30 pm (IST)'
+    ],
+    enrollInfo: {
+      duration: "3 months",
+      timings: [
+        {
+          day: "Monday to Saturday",
+          time: "Morning: 7:00 am - 8:30 am (IST)"
+        },
+        {
+          day: "Monday to Saturday",
+          time: "Evening: 4:30 pm - 8:30 pm (IST)"
+        },
+      ],
+      message: "(Both time slots are mandatory)"
+    },
     courseCertificate: 'TTC/Certificate',
     onlineInfo: {
       courseMode: true,
@@ -3503,6 +3642,7 @@ const ttc900hr = {
     textdescription3: '',
     textdescription4: '',
     textdescription5: '',
+    weekDays: true,
     key: '3-months-advanced-teacher-training-course',
     // templateId: 'GENERAL_AUTO_EMAIL',
     templateId: {
@@ -3554,6 +3694,23 @@ const ttc900hr = {
     preRequisite: '7 Days Health Camp, 21 Days Better Living Course, 200 Hours Teacher Training Course',
     courseCategory: 'Educational',
     courseSubType: '900 Hour Yoga Teacher Training',
+    newName: '900 Hours - Advanced Yoga Teacher Training Course (YTTC)',
+    days: [
+      'Monday to Saturday'
+    ],
+    time: [
+      '6:30 am to 8:00 pm Holiday on all Sundays'
+    ],
+    enrollInfo: {
+      duration: "3 months",
+      timings: [
+        {
+          day: "Monday to Saturday",
+          time: "6:30 am to 8:00 pm"
+        }
+      ],
+      message: "Holiday on all Sundays"
+    },
 
     courseCertificate: 'TTC/Certificate',
     onlineInfo: {
@@ -4131,6 +4288,7 @@ const ttc900hr = {
     courseCategory: 'Educational',
     courseSubType: '900 Hour Yoga Teacher Training',
 
+
     courseCertificate: 'TTC/Certificate',
     onlineInfo: {
       courseMode: true,
@@ -4142,6 +4300,22 @@ const ttc900hr = {
     nonResidentialInfo: {
       courseMode: true,
       nonResidentialMode: true
+    },
+    newName: '900 Hours - Advanced Yoga Teacher Training Course (YTTC)',
+    days: [
+      'Monday to Friday',
+    ],
+    time: [
+      '1:30 pm - 4:00 pm (IST)'
+    ],
+    enrollInfo: {
+      duration: "1 year",
+      timings: [
+        {
+          day: "Monday to Friday",
+          time: "1:30 pm - 4:00 pm (IST)"
+        }
+      ]
     },
     details: [
       {
@@ -4855,6 +5029,28 @@ const ttc900hr = {
     preRequisite: '7 Days Health Camp, 21 Days Better Living Course, 200 Hours Teacher Training Course',
     courseCategory: 'Educational',
     courseSubType: '900 Hour Yoga Teacher Training',
+    newName: '900 Hours - Advanced Yoga Teacher Training Course (YTTC)',
+    days: [
+      'Saturday & Sunday'
+    ],
+    time: [
+      'Saturday: 4:30 pm – 7.30 pm (IST)',
+      'Sunday: 9:30 am – 1:30 pm (IST)'
+    ],
+    enrollInfo: {
+      duration: "2 years",
+      timings: [
+        {
+          day: "Saturday & Sunday",
+          time: "Saturday: 4:30 pm – 7.30 pm (IST)"
+        },
+        {
+          day: "Saturday & Sunday",
+          time: "Sunday: 9:30 am – 1:30 pm (IST)"
+        }
+      ],
+      message: "(Both time slots are mandatory)"
+    },
 
     courseCertificate: 'TTC/Certificate',
     onlineInfo: {
@@ -5567,6 +5763,28 @@ const ttc900hr = {
     preRequisite: '7 Days Health Camp, 21 Days Better Living Course, 200 Hours Teacher Training Course',
     courseCategory: 'Educational',
     courseSubType: '900 Hour Yoga Teacher Training',
+    newName: '900 Hours - Advanced Yoga Teacher Training Course (YTTC)',
+    days: [
+      'Monday to Saturday'
+    ],
+    time: [
+      'Morning: 7:00 am to 9:00 am (IST)',
+      'Evening: 4:30 pm to 8:00 pm (IST)'
+    ],
+    enrollInfo: {
+      duration: "4 months",
+      timings: [
+        {
+          day: "Monday to Saturday",
+          time: "Morning: 7:00 am to 9:00 am (IST)"
+        },
+        {
+          day: "Monday to Saturday",
+          time: "Evening: 4:30 pm to 8:00 pm (IST)"
+        }
+      ],
+      message: "(Both the time slots are mandatory)"
+    },
 
     courseCertificate: 'TTC/Certificate',
     onlineInfo: {
@@ -6241,6 +6459,22 @@ const ttc900hr = {
     preRequisite: '7 Days Health Camp, 21 Days Better Living Course, 200 Hours Teacher Training Course',
     courseCategory: 'Educational',
     courseSubType: '900 Hour Yoga Teacher Training',
+    newName: '900 Hours - Advanced Yoga Teacher Training Course (YTTC)',
+    days: [
+      'Monday to Saturday'
+    ],
+    time: [
+      '5:00 p.m. - 8:00 p.m. (IST)'
+    ],
+    enrollInfo: {
+      duration: "7 months",
+      timings: [
+        {
+          day: "Monday to Saturday",
+          time: "5:00 p.m. - 8:00 p.m. (IST)"
+        }
+      ]
+    },
 
     courseCertificate: 'TTC/Certificate',
     onlineInfo: {
@@ -7037,7 +7271,9 @@ const camps = {
     textdescription4: '',
     textdescription5: '',
     title: 'Cardiac & Hypertension Yoga Workshop - On Campus',
+    weekDays: true,
     key: 'cardiac-hypertension-workshop',
+    tenure: '1 day',
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
     templateId: {
@@ -7067,12 +7303,26 @@ const camps = {
     residential: false,
     certficate: false,
 
-    tenure: '',
     courseType: 'Camps & Workshop',
     language: 'English',
     preRequisite: 'None',
     courseCategory: 'Self Help',
     courseSubType: 'Camps & Workshops',
+    newName: 'Cardiac & Hypertension Yoga Workshop',
+    days: [''],
+    time: [
+      '9:30 am – 5:30 pm (IST)'
+    ],
+    enrollInfo: {
+      duration: "1 Day",
+      timings: [
+        {
+          day: "Time",
+          time: "9:30 am – 5:30 pm (IST)"
+        }
+      ]
+    }
+,    
 
     courseCertificate: 'NO',
     onlineInfo: {
@@ -7201,6 +7451,7 @@ const camps = {
     textdescription5: '',
     title: 'Diabetes Yoga Camp - On Campus',
     key: 'diabetes-camp',
+    weekDays: true,
     // batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
     templateId: {
@@ -7236,6 +7487,22 @@ const camps = {
     preRequisite: 'None',
     courseCategory: 'Self Help',
     courseSubType: 'Camps & Workshops',
+    newName: 'Diabetes Yoga Camp',
+    days: [''],
+    time: [
+      '9:30 am – 5:30 pm (IST)'
+    ],
+
+    enrollInfo: {
+      duration: "1 Day",
+      timings: [
+        {
+          day: "Time",
+          time: "9:30 am – 5:30 pm (IST)"
+        }
+      ]
+    }
+,   
 
     courseCertificate: 'NO',
     onlineInfo: {
@@ -7814,6 +8081,7 @@ const camps = {
     textdescription4: '',
     textdescription5: '',
     title: 'Life Management Yoga Camp - On Campus',
+    weekDays: true,
     key: 'life-management-camp',
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
@@ -7850,6 +8118,24 @@ const camps = {
     preRequisite: 'None',
     courseCategory: 'Self Help',
     courseSubType: 'Camps & Workshops',
+    newName: 'Life Management Yoga Camp',
+    days: [''],
+    time: [
+      '9:30 am – 5:30 pm (IST)'
+    ],
+
+    
+
+enrollInfo: {
+  duration: "1 Day",
+  timings: [
+    {
+      day: "Time",
+      time: "9:30 am – 5:30 pm (IST)"
+    }
+  ]
+}
+,   
 
     courseCertificate: 'NO',
     onlineInfo: {
@@ -8129,6 +8415,7 @@ const camps = {
     textdescription5: '',
     title: 'Pranayama Workshop - On Campus & Online',
     key: 'pranayama-workshop',
+    tenure: '1 day',
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
     templateId: {
@@ -8158,12 +8445,28 @@ const camps = {
     residential: false,
     certficate: false,
 
-    tenure: '',
     courseType: 'Camps & Workshop',
     language: 'English',
     preRequisite: 'None',
     courseCategory: 'Self Help',
     courseSubType: 'Camps & Workshops',
+    newName: 'Prayanama Workshop',
+    days: [''],
+    time: [
+      '8:00 am – 11:00 am (IST)'
+    ],
+    
+
+enrollInfo: {
+  duration: "Half day (4 hours)",
+  timings: [
+    {
+      day: "Time",
+      time: "8:00 am – 11:00 am (IST)"
+    }
+  ]
+}
+,   
 
     courseCertificate: 'NO',
     onlineInfo: {
@@ -8297,6 +8600,7 @@ const camps = {
     textdescription5: '',
     title: 'Pregnancy Yoga Camp For Ante & Post Natal - On Campus',
     key: 'pregnancy-camp-for-ante-post-natal',
+    tenure: '2 days',
     batch: 1,
     join: true,
     // templateId: 'GENERAL_AUTO_EMAIL',
@@ -8338,12 +8642,26 @@ const camps = {
     residential: false,
     certficate: false,
 
-    tenure: '',
     courseType: 'Camps & Workshop',
     language: 'English',
     preRequisite: 'None',
     courseCategory: 'Self Help',
     courseSubType: 'Camps & Workshops',
+    newName: 'Pregnancy Yoga Camp For Ante & Post Natal',
+    days: [''],
+    time: [
+      '9:30 am – 5:30 pm (IST)'
+    ],
+    enrollInfo: {
+      duration: "2 days",
+      timings: [
+        {
+          day: "Time",
+          time: "9:30 am – 5:30 pm (IST)"
+        }
+      ]
+    }
+,    
 
     courseCertificate: 'NO',
     onlineInfo: {
@@ -8517,6 +8835,21 @@ const camps = {
     preRequisite: 'None',
     courseCategory: 'Self Help',
     courseSubType: 'Camps & Workshops',
+    newName: 'Respiratory Yoga Workshop',
+    days: [''],
+    time: [
+      '9:30 am – 5:30 pm (IST)'
+    ],
+    enrollInfo: {
+      duration: "1 Day",
+      timings: [
+        {
+          day: "Time",
+          time: "9:30 am – 5:30 pm (IST)"
+        }
+      ]
+    }
+,   
 
     courseCertificate: 'NO',
     onlineInfo: {
@@ -8684,6 +9017,23 @@ const camps = {
     preRequisite: 'None',
     courseCategory: 'Self Help',
     courseSubType: 'Camps & Workshops',
+    newName: 'Senior Citizen Yoga Workshop',
+    days: [''],
+    time: [
+      '10.00 am to 1:00 pm (IST)'
+    ],
+
+    
+enrollInfo: {
+  duration: "Half Day",
+  timings: [
+    {
+      day: "Time",
+      time: "10.00 am to 1:00 pm (IST)"
+    }
+  ]
+}
+,   
 
     courseCertificate: 'NO',
     onlineInfo: {
@@ -8818,6 +9168,7 @@ const camps = {
     textdescription5: '',
     title: 'Stress Management Yoga Camp - On Campus',
     key: 'stress-management-camp',
+    tenure: '1 day',
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
     templateId: {
@@ -8847,12 +9198,26 @@ const camps = {
     residential: false,
     certficate: false,
 
-    tenure: '',
     courseType: 'Camps & Workshop',
     language: 'English',
     preRequisite: 'None',
     courseCategory: 'Self Help',
     courseSubType: 'Camps & Workshops',
+    newName: 'Stress Management Yoga Camp',
+    days: [''],
+    time: [
+      '9:30 am – 5:30 pm (IST)'
+    ],
+    enrollInfo: {
+      duration: "1 day",
+      timings: [
+        {
+          day: "Time",
+          time: "9:30 am – 5:30 pm (IST)"
+        }
+      ]
+    }
+,    
 
     courseCertificate: 'NO',
     onlineInfo: {
@@ -8985,6 +9350,7 @@ const camps = {
     textdescription5: '',
     title: 'Weight Management Yoga Workshop',
     key: 'weight-management-workshop',
+    tenure: '1 day',
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
     templateId: {
@@ -9013,12 +9379,26 @@ const camps = {
     residential: false,
     certficate: false,
 
-    tenure: '',
     courseType: 'Camps & Workshop',
     language: 'English',
     preRequisite: 'None',
     courseCategory: 'Self Help',
     courseSubType: 'Camps & Workshops',
+    newName: 'Weight Management Yoga Workshop',
+    days: [''],
+    time: [
+      '9:30 am – 5:30 pm (IST)'
+    ],
+    enrollInfo: {
+      duration: "1 day",
+      timings: [
+        {
+          day: "Time",
+          time: "9:30 am – 5:30 pm (IST)"
+        }
+      ]
+    }
+,    
 
     courseCertificate: 'NO',
     onlineInfo: {
@@ -9191,6 +9571,21 @@ const camps = {
     preRequisite: 'None',
     courseCategory: 'Self Help',
     courseSubType: 'Camps & Workshops',
+    newName: 'Womens Yoga Camp',
+    days: [''],
+    time: [
+      '9:30 am – 5:30 pm (IST)'
+    ],
+    enrollInfo: {
+      duration: "1 Day",
+      timings: [
+        {
+          day: "Time",
+          time: "9:30 am – 5:30 pm (IST)"
+        }
+      ]
+    }
+,   
 
     courseCertificate: 'NO',
     onlineInfo: {
@@ -9328,6 +9723,7 @@ const camps = {
     textdescription5: '',
     title: 'Back & Joint Disorder Yoga Workshop',
     key: 'back-joint-disorder-workshop',
+    tenure: '1 day',
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
     templateId: {
@@ -9356,12 +9752,26 @@ const camps = {
     residential: false,
     certficate: false,
 
-    tenure: '',
     courseType: 'Camps & Workshop',
     language: 'English',
     preRequisite: 'None',
     courseCategory: 'Self Help',
     courseSubType: 'Camps & Workshops',
+    newName: 'Back & Joint Disorder Yoga Workshop',
+    days: [''],
+    time: [
+      '9:30 am – 5:30 pm (IST)'
+    ],
+    enrollInfo: {
+      duration: "1 Day",
+      timings: [
+        {
+          day: "Time",
+          time: "9:30 am – 5:30 pm (IST)"
+        }
+      ]
+    }
+,   
 
     courseCertificate: 'NO',
     onlineInfo: {
@@ -9493,6 +9903,7 @@ const camps = {
     textdescription5: '',
     title: '7 Days Health Camp - On Campus - Yoga Camp - Hindi',
     key: '7-days-camp',
+    weekDays: true,
     join: true,
     batch: 1,
     // templateId: 'CAMP_FOR_7_DAYS_HEALTH',
@@ -9527,6 +9938,23 @@ const camps = {
     preRequisite: 'None',
     courseCategory: 'Self Help',
     courseSubType: '7 Days Health Camp',
+    newName: '7 Days Health Camp',
+    days: [
+      'Saturday to Friday'
+    ],
+    time: [
+      '7:00 am - 7:00 pm (IST)'
+    ],
+    enrollInfo: {
+      duration: "7 days",
+      timings: [
+        {
+          day: "Saturday to Friday",
+          time: "7:00 am - 7:00 pm (IST)"
+        }
+      ]
+    }
+,    
 
     courseCertificate: 'NO',
     onlineInfo: {
@@ -9901,6 +10329,23 @@ const camps = {
     preRequisite: 'None',
     courseCategory: 'Self Help',
     courseSubType: '7 Days Health Camp',
+    newName: '7 Days Health Camp',
+    days: [
+      'Saturday to Friday'
+    ],
+    time: [
+      '7:00 am - 7:00 pm (IST)'
+    ],
+    enrollInfo: {
+      duration: "7 days",
+      timings: [
+        {
+          day: "Saturday to Friday",
+          time: "7:00 am - 7:00 pm (IST)"
+        }
+      ]
+    }
+,    
 
     courseCertificate: 'NO',
     onlineInfo: {
@@ -10227,6 +10672,7 @@ const camps = {
     textdescription4: '',
     textdescription5: '',
     textdescription10: '',
+    weekDays: true,
     title: '21-Days Better Living Yoga Course - Morning Online and On Campus – English - Batch 1',
     key: '21-days-better-living-course',
     // templateId: 'GENERAL_AUTO_EMAIL',
@@ -10275,6 +10721,21 @@ const camps = {
     preRequisite: 'None',
     courseCategory: 'Self Help',
     courseSubType: '21 Days Better Living',
+    newName: '21 Days Better Living Course Batch 1',
+    days: [''],
+    time: [
+      'Morning: 7:00 am – 8:30 am (IST)'
+    ],
+    enrollInfo: {
+      duration: "21 days",
+      timings: [
+        {
+          day: "",
+          time: "Morning: 7:00 am – 8:30 am (IST)"
+        }
+      ]
+    }
+,    
 
     courseCertificate: 'certificate Of Participation',
     onlineInfo: {
@@ -10642,6 +11103,7 @@ const camps = {
     textdescription3: '',
     textdescription4: '',
     textdescription5: '',
+    weekDays: true,
     title: '21-Days Better Living Yoga Course - Evening - Online & On Campus – English - Batch 2',
     key: '21-days-better-living-course-batch-2',
     batch: 2,
@@ -10689,6 +11151,18 @@ const camps = {
     preRequisite: 'None',
     courseCategory: 'Self Help',
     courseSubType: '21 Days Better Living',
+    newName: '21 Days Better Living Course Batch 2',
+    days: [''],
+    time: ['Evening 6:30 pm – 8:00 pm (IST)'],
+    enrollInfo: {
+      duration: "21 Days",
+      timings: [
+        {
+          day: "",
+          time: "Evening 6:30 pm – 8:00 pm (IST)"
+        }
+      ]
+    },
 
     courseCertificate: 'certificate Of Participation',
     onlineInfo: {
@@ -11072,12 +11546,27 @@ const camps = {
     residential: false,
     certficate: false,
 
-    tenure: '',
+    tenure: '21 days',
     courseType: '21-Days Better living Course',
     language: 'Hindi',
     preRequisite: 'None',
     courseCategory: 'Self Help',
     courseSubType: '21 Days Better Living',
+    newName: '21 Days Better Living Course Batch 3',
+    days: [''],
+    time: [
+      'Evening 6:30 pm – 8:00 pm (IST)'
+    ],
+    enrollInfo: {
+      duration: "21 days",
+      timings: [
+        {
+          day: "",
+          time: "Evening 6:30 pm – 8:00 pm (IST)"
+        }
+      ]
+    }
+,    
 
     courseCertificate: 'certificate Of Participation',
     onlineInfo: {
@@ -11768,9 +12257,21 @@ const classes = {
     textdescription3: '',
     textdescription4: '',
     textdescription5: '',
+    weekDays: true,
     title: 'Advanced Yoga Asana Regular Class - Online (Only for TYI Teachers)',
+    isRegular:true,
     key: 'advanced-regular-yoga-classes',
     batch: 1,
+    newName: 'Advanced Asana Regular Class (Only for TYI Teachers)',
+    days: [
+      'Monday, Wednesday, Friday',
+      ' Tuesday, Thursday & Saturday'
+    ],
+    time: [
+      'Morning: 6:30 am - 8:00 am (IST)',
+      '5:30 pm - 7:00 pm (IST)'
+
+    ],
     // templateId: 'GENERAL_AUTO_EMAIL',
     templateId: {
       templateOnline: 'GENERAL_AUTO_EMAIL',
@@ -11806,6 +12307,20 @@ const classes = {
     preRequisite: 'None',
     courseCategory: 'Self Help',
     courseSubType: 'Regular Asana Classes',
+    enrollInfo: {
+      duration: "Upto 12 months",
+      timings: [
+        {
+          day: "Monday, Wednesday, Friday",
+          time: "Morning: 6:30 am - 8:00 am (IST)"
+        },
+        {
+          day: "Tuesday, Thursday & Saturday",
+          time: "Evening: 5:30 pm - 7:00 pm (IST) *"
+        }
+      ]
+    }
+,    
 
     courseCertificate: 'NO',
     onlineInfo: {
@@ -11869,8 +12384,10 @@ const classes = {
     textdescription3: '',
     textdescription4: '',
     textdescription5: '',
+    weekDays: true,
     title: 'Healing Yoga Movement & Rhythm - Online',
     key: 'healing-movement-and-rhythm',
+    isRegular:true,
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
     templateId: {
@@ -11908,6 +12425,24 @@ const classes = {
     preRequisite: 'None',
     courseCategory: 'Self Help',
     courseSubType: 'Regular Asana Classes',
+    newName: 'Healing Movement and Rhythm Classes',
+    days: [
+      'Tuesday',
+      'Thursday'
+    ],
+    time: [
+      '8pm - 9pm (IST)'
+    ],
+    enrollInfo: {
+      duration: "Upto 12 months",
+      timings: [
+        {
+          day: "Tuesday & Thursday",
+          time: "8pm - 9pm (IST) (Online)"
+        }
+      ]
+    }
+,    
 
     courseCertificate: 'NO',
     onlineInfo: {
@@ -11989,9 +12524,10 @@ const classes = {
     textdescription3: 'Evening Batch (IST): 4pm to 5pm, 5pm to 6pm, 6pm to 7pm, 7pm to 8pm',
     textdescription4: 'We also have Weekend batches and the details are:',
     textdescription5: 'Weekend Schedule(Sat-Sun): 7:30 am to 9 am',
-
+    weekDays: true,
     title: 'Yoga Asana Regular Classes - (Men & Women) - Online Yoga Classes',
     key: 'asana-regular-classes-online',
+    isRegular:true,
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
     templateId: {
@@ -12037,6 +12573,37 @@ const classes = {
     preRequisite: 'None',
     courseCategory: 'Self Help',
     courseSubType: 'Regular Asana Classes',
+    newName: 'Asana Regular Classes (Men & Women)',
+    days: [
+      'Monday',
+      'Tuesday',
+      'Thursday',
+      'Friday',
+      'Weekend batches'
+    ],
+    time: [
+      'Morning Batch (IST): 6:30 am to 7:30 am, 7:30 am to 8:30 am, 8:30 am to 9:30 am',
+      'Evening Batch (IST): 4pm to 5pm, 5pm to 6pm, 6pm to 7pm, 7pm to 8pm',
+      'Weekend Schedule(Sat-Sun): 7:30 am to 9 am'
+    ],
+    enrollInfo: {
+      duration: "Upto 12 months",
+      timings: [
+        {
+          day: "Monday , Tuesday , Thursday and Friday",
+          time: "Morning Batch (IST): 6:30 am to 7:30 am, 7:30 am to 8:30 am, 8:30 am to 9:30 am"
+        },
+        {
+          day: "Monday , Tuesday , Thursday and Friday",
+          time: "Evening Batch (IST): 4pm to 5pm, 5pm to 6pm, 6pm to 7pm, 7pm to 8pm"
+        },
+        {
+          day: "Weekend batches",
+          time: "(Sat-Sun): 7:30 am to 9 am"
+        }
+      ]
+    }
+,    
 
     courseCertificate: 'NO',
     onlineInfo: {
@@ -12248,6 +12815,7 @@ const classes = {
     textdescription5: '',
     title: 'Yoga Classes for Men (Regular Asana) - On Campus',
     key: 'asana-regular-classes-on-campus',
+    isRegular:true,
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
     templateId: {
@@ -12291,6 +12859,31 @@ const classes = {
     preRequisite: 'None',
     courseCategory: 'Self Help',
     courseSubType: 'Regular Asana Classes',
+    newName: 'Asana Regular Classes for Men',
+    days: [
+      'Monday',
+      'Tuesday',
+      'Thursday',
+      'Friday'
+    ],
+    time: [
+      '6:30 am to 7:30 am',
+      '7:30 am to 8:30 am',
+      '1:00 pm to 2:00 pm',
+      '6:00 pm to 7:00 pm',
+      '7:00 pm to 8:00 pm'
+    ],
+
+    enrollInfo: {
+      duration: "Upto 12 months",
+      timings: [
+        {
+          day: "Monday,Tuesday,Thursday,Friday*",
+          time: "6:30 am to 7:30 am, 7:30 am to 8:30 am, 1:00 pm to 2:00 pm, 6:00 pm to 7:00 pm, 7:00 pm to 8:00 pm"
+        }
+      ]
+    }
+,    
 
     courseCertificate: 'NO',
     onlineInfo: {
@@ -12389,6 +12982,7 @@ const classes = {
     textdescription5: '',
     title: 'Yoga Classes for Women (Regular Asana) - On Campus',
     key: 'asana-regular-classes-on-campus-women',
+    isRegular:true,
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
     templateId: {
@@ -12440,6 +13034,43 @@ const classes = {
     preRequisite: 'None',
     courseCategory: 'Self Help',
     courseSubType: 'Regular Asana Classes',
+    newName: 'Asana Regular Classes for Women',
+    timings: [
+      {
+        day: 'Monday, Tuesday, Thursday, Friday',
+      }
+    ],
+    days: [
+      'Monday',
+      'Tuesday',
+      'Thursday',
+      'Friday'
+    ],
+    time: [
+      '6:30 am to 7:30 am',
+      '7:30 am to 8:30 am',
+      '8:30 am to 9:30 am',
+      '9:30 am to 10:30 am',
+      '10:30 am to 11:30 am',
+      '11:30 am to 12:30 pm',
+      '1:00 pm to 2:00 pm',
+      '2:00 pm to 3:00 pm',
+      '3:00 pm to 4:00 pm',
+      '4:00 pm to 5:00 pm',
+      '5:00 pm to 6:00 pm',
+      '6:00 pm to 7:00 pm',
+      '7:00 pm to 8:00 pm'
+    ],
+    enrollInfo: {
+      duration: "Upto 12 months",
+      timings: [
+        {
+          day: "Monday,Tuesday,Thursday,Friday *",
+          time: "6:30 am to 7:30 am, 7:30 am to 8:30 am,8:30 am to 9:30 am, 9:30 am to 10:30 am, 10:30 am to 11:30 am, 11:30 am to 12:30 pm, 1:00 pm to 2:00 pm, 2:00 pm to 3:00 pm, 3:00 pm to 4:00 pm, 4:00 pm to 5:00 pm, 5:00 pm to 6:00 pm, 6:00 pm to 7:00 pm, 7:00 pm to 8:00 pm"
+        }
+      ]
+    }
+,    
 
     courseCertificate: 'NO',
     onlineInfo: {
@@ -12546,6 +13177,7 @@ const classes = {
     textdescription5: '',
     title: 'Children\'s Yoga Classes (Regular) - On Campus',
     key: 'childrens-regular-classes',
+    isRegular:true,
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
     templateId: {
@@ -12574,6 +13206,27 @@ const classes = {
     nonResidential: false,
     residential: false,
     certficate: false,
+    newName: 'Childrens Regular Classes',
+    days: [
+      'Mon',
+      'Tues',
+      'Thurs',
+      'Fri'
+    ],
+    time: [
+      '4:00 pm -5:00 pm'
+    ],
+    enrollInfo: {
+      duration: "Upto 12 months",
+      timings: [
+        {
+          day: "Mon, Tues, Thurs, Fri",
+          time: "4:00 pm -5:00 pm"
+        }
+      ]
+    }
+,    
+
     details: [
       {
         type: 'paragraph',
@@ -12629,8 +13282,10 @@ const classes = {
     textdescription3: '',
     textdescription4: '',
     textdescription5: '',
+    weekends: true,
     title: 'Children\'s Weekend Yoga Class - On Campus',
     key: 'childrens-weekend-classes-on-campus',
+    isRegular:true,
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
     templateId: {
@@ -12640,6 +13295,23 @@ const classes = {
         templateNonResidential: '',
       },
     },
+    newName: 'Childrens Weekend Classes',
+    days: [
+      'Saturday & Sunday'
+    ],
+    time: [
+      '8:00 am - 9:30 am (IST)'
+    ],
+    enrollInfo: {
+      duration: "Upto 12 months",
+      timings: [
+        {
+          day: "Saturday & Sunday",
+          time: "8:00 am - 9:30 am (IST) *"
+        }
+      ]
+    }
+,    
     image: `${baseDomain}${courseAssets.courseAsset76}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset76}`,
     mostPopular: false,
@@ -12710,6 +13382,7 @@ const classes = {
     textdescription5: '',
     title: 'Online Meditation Course  (Foundation Course)',
     key: 'meditation-foundation-course-online',
+    isRegular:true,
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
     templateId: {
@@ -12767,6 +13440,23 @@ const classes = {
     preRequisite: 'None',
     courseCategory: 'Self Help',
     courseSubType: 'Regular Asana Classes',
+    newName: 'Online Meditation Course (Foundation)',
+    days: [
+      'Monday',
+      'Wednesday',
+      'Friday'
+    ],
+    time: ['7:00 am - 8:00 am (IST)'],
+    enrollInfo: {
+      duration: "Upto 12 months",
+      timings: [
+        {
+          day: "Monday, Wednesday & Friday",
+          time: "7:00 am - 8:00 am (IST)"
+        }
+      ]
+    }
+,    
 
     courseCertificate: 'NO',
     onlineInfo: {
@@ -12857,6 +13547,7 @@ const classes = {
     textdescription5: '',
     title: 'Regular Online Meditation Classes',
     key: 'regular-meditation-classes-online',
+    isRegular:true,
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
     templateId: {
@@ -12894,6 +13585,25 @@ const classes = {
     preRequisite: 'None',
     courseCategory: 'Self Help',
     courseSubType: 'Regular Asana Classes',
+    newName: 'Regular Online Meditation Classes',
+    days: [
+      'Tuesday',
+      'Thursday',
+      'Saturday'
+    ],
+    time: [
+      '7:00 am - 7:45 am (IST)'
+    ],
+    enrollInfo: {
+      duration: "Upto 12 months",
+      timings: [
+        {
+          day: "Tuesday, Thursday & Saturday",
+          time: "7:00 am - 7:45 am (IST) *"
+        }
+      ]
+    }
+,    
 
     courseCertificate: 'NO',
     onlineInfo: {
@@ -13010,6 +13720,9 @@ const classes = {
     textdescription5: '',
     title: ' Satsang ',
     key: 'satsang',
+    isRegular:true,
+    tenure: '1 day',
+    weekends: true,
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
     templateId: {
@@ -13038,6 +13751,16 @@ const classes = {
     nonResidential: true,
     residential: false,
     certficate: false,
+    newName: '',
+    enrollInfo: {
+      duration: "Every Sunday",
+      timings: [
+        {
+          day: "Every Sunday",
+          time: "9.30 am and 10.30am"
+        }
+      ]
+    },
     details: [
       {
         type: 'paragraph',
@@ -13118,8 +13841,10 @@ const classes = {
     textdescription3: '',
     textdescription4: '',
     textdescription5: '',
+    weekends: true,
     title: 'Weekend Yoga Asana Classes - (Men & Women) - On Campus',
     key: 'weekend-classes',
+    isRegular:true,
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
     templateId: {
@@ -13129,6 +13854,14 @@ const classes = {
         templateNonResidential: '',
       },
     },
+    newName: 'Weekend Asana Classes (Men & Women)',
+    days: [
+      'Saturday & Sunday'
+    ],
+    time: [
+      'Saturday: 8:00 am - 9:30 am (IST)',
+      'Sunday: 8:00 am - 9:30 am (IST) or 10:30 am - 12:00 pm (IST)'
+    ],
     image: `${baseDomain}${courseAssets.courseAsset77}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset110}`,
     mostPopular: true,
@@ -13145,6 +13878,20 @@ const classes = {
     },
     category: 'classes',
     dates: ['Saturday', 'Sunday'],
+    enrollInfo: {
+      duration: "Upto 12 months",
+      timings: [
+        {
+          day: "Saturday & Sunday",
+          time: "Saturday: 8:00 am - 9:30 am (IST)"
+        },
+        {
+          day: "Saturday & Sunday",
+          time: "Sunday: 8:00 am - 9:30 am (IST) or 10:30 am - 12:00 pm (IST)"
+        },
+      ]
+    }
+,    
     online: false,
     onCampus: true,
     nonResidential: false,
@@ -13258,6 +14005,7 @@ const classes = {
     textdescription5: '',
     title: 'Yog Prayas - Online',
     key: 'yog-prayas-online',
+    isRegular:true,
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
     templateId: {
@@ -13267,6 +14015,12 @@ const classes = {
         templateNonResidential: '',
       },
     },
+    newName: 'Yog Prayas',
+    days: ['Monday', 'Wednesday', 'Friday'],
+    time: [
+      'Morning: 5:30 am - 6:30 am (IST) ',
+      'Evening: 6:00 pm - 7:00 pm (IST)'
+    ],
     image: `${baseDomain}${courseAssets.courseAsset82}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset82}`,
     mostPopular: false,
@@ -13294,6 +14048,20 @@ const classes = {
     preRequisite: 'None',
     courseCategory: 'Self Help',
     courseSubType: 'Regular Asana Classes',
+    enrollInfo: {
+      duration: "Upto 12 months",
+      timings: [
+        {
+          day: "Monday, Wednesday & Friday",
+          time: "Morning: 5:30 am - 6:30 am (IST)"
+        },
+        {
+          day: "Monday, Wednesday & Friday",
+          time: "Evening: 6:00 pm - 7:00 pm (IST) *"
+        }
+      ]
+    }
+,    
 
     courseCertificate: 'NO',
     onlineInfo: {
@@ -13450,6 +14218,9 @@ const classes = {
     textdescription5: '',
     title: 'Samattvam (Health Checkup) - On Campus',
     key: 'samattvam',
+    isRegular:true,
+    tenure: '1 day',
+    weekends: true,
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
     // templateId: {
@@ -13486,12 +14257,21 @@ const classes = {
     residential: false,
     certficate: false,
 
-    tenure: '',
     courseType: "samatwam health checkup",
     language: 'English',
     preRequisite: 'None',
     courseCategory: 'Self Help',
     courseSubType: 'Camps & Workshops',
+    newName: '',
+    enrollInfo: {
+      duration: "Only on Saturday’s",
+      timings: [
+        {
+          day: "Every Saturday",
+          time: "2.00 p.m. - 5.00 p.m. (IST)"
+        }
+      ]
+    },
 
     courseCertificate: 'NO',
     onlineInfo: {
@@ -13589,6 +14369,9 @@ const classes = {
     textdescription5: '',
     title: 'Couples’ Yoga Classes  - Online',
     key: 'couples-classes',
+    isRegular:true,
+    tenure: '1 day',
+    weekends: true,
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
     templateId: {
@@ -13622,12 +14405,28 @@ const classes = {
     residential: false,
     certficate: false,
 
-    tenure: '',
     courseType: "Couple's Classes Online",
     language: 'English',
     preRequisite: 'None',
     courseCategory: 'Self Help',
     courseSubType: 'Regular Asana Classes',
+    newName: 'Couples Classes',
+    days: [
+      'Third Sunday of every month'
+    ],
+    time: [
+      '5.00 p.m. to 7.00 p.m.'
+    ],
+    enrollInfo: {
+      duration: "Upto 12 months",
+      timings: [
+        {
+          day: "Third Sunday of every month",
+          time: "5.00 p.m. to 7.00 p.m."
+        }
+      ]
+    }
+,    
 
     courseCertificate: 'NO',
     onlineInfo: {
@@ -13786,9 +14585,28 @@ const classes = {
     textdescription3: '',
     textdescription4: '',
     textdescription5: '',
+    weekends: true,
     title: 'Weekend Yoga Asana Classes - (Men & Women) - Online',
     key: 'weekend-classes-online',
+    isRegular:true,
     batch: 1,
+    newName: 'Weekend Asana Classes (Men & Women)',
+    days: [
+      'Saturday & Sunday'
+    ],
+    time: [
+      '7:30 am - 9:00 am (IST)'
+    ],
+    enrollInfo: {
+      duration: "Upto 12 months",
+      timings: [
+        {
+          day: "Saturday & Sunday",
+          time: "7:30 am - 9:00 am (IST)"
+        }
+      ]
+    }
+,    
     // templateId: 'GENERAL_AUTO_EMAIL',
     templateId: {
       templateOnline: 'GENERAL_AUTO_EMAIL',
@@ -13912,6 +14730,7 @@ const classes = {
     textdescription5: '',
     title: 'Regular Pregnancy Yoga Classes - Online & On Campus',
     key: 'regular-pregnacy-classes',
+    isRegular:true,
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
     templateId: {
@@ -13947,6 +14766,25 @@ const classes = {
     preRequisite: 'None',
     courseCategory: 'Self Help',
     courseSubType: 'Regular Asana Classes',
+    newName: 'Regular Pregnancy Yoga Class',
+    days: [
+      'Monday',
+      'Wednesday',
+      'Friday'
+    ],
+    time: [
+      '8:30 am to 9:30 am'
+    ],
+    enrollInfo: {
+      duration: "Upto 12 months",
+      timings: [
+        {
+          day: "Monday, Wednesday, Friday",
+          time: "8:30 am to 9:30 am"
+        }
+      ]
+    }
+,    
 
     courseCertificate: 'NO',
     onlineInfo: {
@@ -14060,6 +14898,7 @@ const classes = {
     textdescription5: '',
     title: 'MA Yoga Shastra',
     key: 'ma-yoga-shastra',
+    isRegular:true,
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
     templateId: {
@@ -14235,6 +15074,7 @@ const extra = {
     textdescription3: '',
     textdescription4: '',
     textdescription5: '',
+    weekDays: true,
     key: 'nutri-diet',
     title: 'Nutri Diet Clinic',
     cardImage: `${baseDomain}${nutriDiet.nutriDietCard}`,
@@ -14305,6 +15145,34 @@ const certificate = {
     preRequisite: 'None',
     courseCategory: 'Educational',
     courseSubType: 'Special Course - Pranayama',
+    newName: 'Certificate Course on Advanced Pranayama Techniques',
+    days: [
+      'Wednesday',
+      'Friday',
+      'Saturday',
+      'Mondays',
+      'Tuesdays',
+      'Thursdays'
+    ],
+
+    time: [
+      '6:00 pm - 7:00 pm (IST)',
+      '11:30 am - 12:30 pm (IST)'
+    ],
+    enrollInfo: {
+      duration: "24 sessions",
+      timings: [
+        {
+          day: "Wednesday, Friday & Saturday",
+          time: "6:00 pm - 7:00 pm (IST)"
+        },
+        {
+          day: "Mondays, Tuesdays & Thursdays",
+          time: "11:30 am - 12:30 pm (IST)"
+        }
+      ]
+    }
+,    
 
     courseCertificate: 'Certificate',
     onlineInfo: {
@@ -14606,6 +15474,24 @@ const certificate = {
     preRequisite: '200 Hour Teacher Training Course',
     courseCategory: 'Educational',
     courseSubType: 'Special Course - Cancer',
+    newName: 'Certificate Program on Yoga for Cancer',
+    days: [
+      'Fridays',
+      'Saturdays'
+    ],
+    time: [
+      '3:00 pm - 5:00 pm (IST)'
+    ],
+
+    enrollInfo: {
+      duration: "12 session",
+      timings: [
+        {
+          day: "Fridays & Saturdays",
+          time: "3:00 pm - 5:00 pm (IST)"
+        }
+      ]
+    },
 
     courseCertificate: 'Certificate',
     onlineInfo: {
@@ -14751,6 +15637,23 @@ const certificate = {
     preRequisite: '500 Hour Teacher Training Course, 900 Hour Teacher Training Course ',
     courseCategory: 'Educational',
     courseSubType: 'Special Course - Cancer',
+    newName: 'Certificate Program on Yoga for Lung Cancer',
+    days: [
+      'Tuesdays',
+      'Saturday'
+    ],
+    time: [
+      '5:00 p.m. - 7:00 p.m. (IST)'
+    ],
+    enrollInfo: {
+      duration: "5 days",
+      timings: [
+        {
+          day: "Tuesdays to Saturday",
+          time: "5:00 p.m. - 7:00 p.m. (IST)"
+        }
+      ]
+    },
 
     courseCertificate: 'Certificate',
     onlineInfo: {
@@ -14864,6 +15767,24 @@ const certificate = {
     preRequisite: '500 Hour Teacher Training Course, 900 Hour Teacher Training Course ',
     courseCategory: 'Educational',
     courseSubType: 'Special Course - Therapy',
+    newName: 'Certificate Yoga Therapy',
+    days: [
+      'Monday',
+      'Wednesday',
+      'Friday'
+    ],
+    time: [
+      '5:30 pm - 7:30 pm (IST)'
+    ],
+    enrollInfo: {
+      duration: "4 months",
+      timings: [
+        {
+          day: "Monday, Wednesday & Friday",
+          time: "5:30 pm - 7:30 pm (IST)"
+        }
+      ]
+    },
 
     courseCertificate: 'Certificate',
     onlineInfo: {
@@ -15425,6 +16346,17 @@ export const AllCourses = [
   ...extraArr,
   ...c200hr,
   ...c500hr,
+  ...c900hr,
+  ...campsArr,
+  ...classesArr,
+]
+export const mostPopular = [
+  extraArr[0], c200hr[4], c500hr[0],
+  ...certificateArr,
+  extraArr.shift(),
+  ...c200hr,
+  c200hr.slice(0, 4),  // Get elements before index 4
+  c200hr.slice(5),
   ...c900hr,
   ...campsArr,
   ...classesArr,

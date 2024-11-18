@@ -14,6 +14,8 @@ import axios from 'axios'
 import { handleCTProccedToPayment } from '../../../../CleverTap/buttonClicked'
 import { trackPageView } from '../../../../CleverTap/pageViewEvents'
 import { handleCTCoursePaymentPageVisit, handleCTPaymentCompletedCourse, handleCTPaymentFailed, setupUserProfile } from '../../../../CleverTap/buttonClicked'
+import EnrollmentForm from './EnrollmentForm'
+import ReactGA from 'react-ga4';
 
 const Enrollment = () => {
   const { user } = useSelector((state) => state.auth)
@@ -22,6 +24,9 @@ const Enrollment = () => {
   const [courseDate, setCourseDate] = useState(null)
   const [Params] = useSearchParams()
   const navigate = useNavigate()
+  const [isEditStudentOpen, setEditStudentOpen] = useState(false);
+  const addressLine1 = useSelector((state) => state.auth.user.data?.addressLine1);
+  const pincodeFromRedux = useSelector((state) => state.auth.user.data?.pincode);
 
   useEffect(() => {
     let currentCrs = AllCourses.find((item) => item.key === courseId)
@@ -48,6 +53,7 @@ const Enrollment = () => {
   const { isLoggedIn } = useSelector((state) => state.auth)
   const [formData, setFormData] = useState({
     name: user?.data?.firstName,
+    lname: '',
     phone: '',
     email: user?.data?.email,
     address1: '',
@@ -122,7 +128,10 @@ const Enrollment = () => {
   }
 
   function dateDurationChange(months) {
+    console.log("Months ", months);
     let originalFee = AllCourses.find((item) => item.key === courseId)
+    // alert(originalFee?.fees?.onlineFee,months )
+    if(originalFee?.fees?.onlineFee && months){
     let newAmnt = originalFee?.fees?.onlineFee * months
     if (months == 12) {
       newAmnt = newAmnt - 2200
@@ -136,6 +145,7 @@ const Enrollment = () => {
       }
     }));
     setCourseFee(newAmnt)
+  }
   }
 
   const setEndDate = (months, startDate) => {
@@ -182,6 +192,12 @@ const Enrollment = () => {
     script.src = 'https://checkout.razorpay.com/v1/checkout.js'
     script.async = true
     document.body.appendChild(script)
+
+    localStorage.setItem('addressDataNew', JSON.stringify({
+      address1: addressLine1 || '',
+      pincode: pincodeFromRedux || ''
+
+    }));
   }, [])
 
   const [mail, setmail] = useState(null)
@@ -209,10 +225,16 @@ const Enrollment = () => {
 
 
   const handleSubmit1 = async () => {
+    // alert('RAzor')
     localStorage.setItem('courseName', currentCourse.title)
-    localStorage.setItem('courseFee', courseFee)
+    if(!isNaN(courseFee)){
+      localStorage.setItem('courseFee', courseFee)
+    }
+    
     localStorage.setItem('courseStartDate', formData.sdate)
+    console.log("From Razor ", formData)
     if (formData.terms === false) {
+      // alert("20")
       setEmpty(19);
     } else {
       setIsLoad(true);
@@ -329,7 +351,7 @@ const Enrollment = () => {
           if (currentCourse.key !== 'satsang' && currentCourse.key !== 'samattvam') { //for residential no payment required
             //  && localStorage.getItem('isResidential') == 'false'
             const paymentOrderResponse = await axios.post(`${cmsBaseDomain}/payment/order?enrollmentFormId=${response.data.data['_id']}`, {
-              amount: courseFee,
+              amount: localStorage.getItem('courseFee'),
               notes: currentCourse.metaDescription,
               objectType: 'ENROLLMENT'
             })
@@ -347,8 +369,9 @@ const Enrollment = () => {
               order_id: paymentOrderResponse.data.id, // eslint-disable-line
               handler: async (res) => {
                 // Navigare to Success if razorpay_payment_id, razorpay_order_id, razorpay_signature is there
-                if(res.razorpay_payment_id && res.razorpay_order_id && res.razorpay_signature) {
-                  await axios.post(`${ authBaseDomain }/ali/mail`, mailTemplate)
+                if (res.razorpay_payment_id && res.razorpay_order_id && res.razorpay_signature) {
+                  await axios.post(`${authBaseDomain}/ali/mail`, mailTemplate)
+                  console.log(courseFee);
 
                   handleCTPaymentCompletedCourse({
                     // cost,
@@ -367,7 +390,7 @@ const Enrollment = () => {
                     // feesNonResidential: currentCourse?.fees?.offlineFee.nonResidentialFee,
                     // feesOnline: currentCourse?.fees?.onlineFee,
                     fee: courseFee,
-                    timings: currentCourse.timing ,
+                    timings: currentCourse.timing,
                     tenure: currentCourse?.tenure,
                     onlineMode: currentCourse?.onlineInfo?.courseMode,
                     residentialMode: currentCourse?.residentialInfo?.courseMode,
@@ -396,6 +419,19 @@ const Enrollment = () => {
                     // residentialStatus,
                   })
 
+                  ReactGA.event('purchase', {
+                    currency: 'INR',
+                    value: courseFee,
+                    items: [{
+                      item_name: currentCourse?.title,
+                      item_id: currentCourse?.courseCategory,
+                      price: courseFee,
+                      quantity: 1
+                    }]
+                  });
+
+
+
                   navigate(`/enrollment_thankyou/${currentCourse.key}`)
                 } else {
                   handleCTPaymentFailed({
@@ -416,7 +452,7 @@ const Enrollment = () => {
                     // feesOnline,
                     fee: courseFee,
                     mode: formData.mode,
-                    timings: currentCourse.timing ,
+                    timings: currentCourse.timing,
                     // tenure,
                     // courseMode,
                     // courseType,
@@ -434,7 +470,7 @@ const Enrollment = () => {
                     city: formData.city,
                     pinCode: formData.pincode,
                     gender: formData.gender,
-                     age: formData.AGE,
+                    age: formData.AGE,
                     nationality: formData.nationality,
                     // medicalIssues,
                     // residentialStatus,
@@ -505,6 +541,7 @@ const Enrollment = () => {
 
 
   const handleSubmit = (e) => {
+    // alert(JSON.stringify(formData))
     const array = ["Yoga Classes for Men (Regular Asana) - On Campus",
       "Yoga Classes for Women (Regular Asana) - On Campus",
       "Yoga Asana Regular Classes - (Men & Women) - Online Yoga Classes",
@@ -521,7 +558,9 @@ const Enrollment = () => {
       // "Regular Online Meditation Classes", 
       // "Couples’ Yoga Classes  - Online"
     ]
+    console.log("form data from sdate ", formData.sdate)
     const isMatch = array.includes(currentCourse?.title);
+    console.log("isMatchhhhhh ", isMatch)
     if (e && e.preventDefault) {
       e.preventDefault();
     }
@@ -532,45 +571,72 @@ const Enrollment = () => {
       formData.name === undefined ||
       formData.name === null
     ) {
+      // alert("1")
       setEmpty(1)
+      setEditStudentOpen(true);
     } else if (formData.email === '' || !validateEmail(formData.email) || formData.email === undefined ||
       formData.email === null) {
+      // alert("2")
       setEmpty(2)
+      setEditStudentOpen(true);
     } else if (
       formData.phone === '' ||
       formData.phone?.length < 6 ||
       formData.phone?.length > 15 ||
       formData.phone === undefined
     ) {
+      // alert("3")
       setEmpty(3)
+
     } else if (formData.address1 === '') {
+      // alert("4")
       setEmpty(4)
+
+      setEditStudentOpen(true);
     }
     else if (formData.country === '') {
+      // alert("5")
       setEmpty(5)
+      setEditStudentOpen(true);
     }
     else if (formData.pincode === '') {
+      // alert("6")
       setEmpty(8)
+      setEditStudentOpen(true);
     } else if (formData.gender === '') {
+      // alert("7")
       setEmpty(11)
+      setEditStudentOpen(true);
+    } else if (formData.mode === '') {
+      // alert("11")
+      setEmpty('mode')
+    } else if (isMatch && formData.startDate === '') {
+      // alert(formData.startDate)
+      
+      setEmpty(21)
     } else if (formData.sdate === '') {
+      // alert("8")
       setEmpty(18)
     }
-    else if (formData.AGE === null || formData.AGE < 4 || formData.AGE > 99) {
-       setEmpty(9)
-    } else if (formData.nationality === '') {
-       setEmpty(10)
-     }
-    else if (formData.mode === '') {
-      setEmpty('mode')
-    }
-    else if (isMatch && formData.startDate === '') {
-      setEmpty(21)
-    }
+    // else if (formData.AGE === null || formData.AGE < 4 || formData.AGE > 99) {
+    //   setEmpty(9)
+    // }
+    // else if (formData.nationality === '') {
+    //   setEmpty(10)
+    // }
+    // else if (formData.mode === '') {
+    //   setEmpty('mode')
+    // }
+    // else if (isMatch && formData.startDate === '') {
+    //   setEmpty(21)
+    // }
     else if (isMatch && formData.endDate === '') {
+      console.log("Form Data Start Date ", formData.startDate)
+      // alert("12")
       setEmpty(20)
     }
     else {
+      // alert("13")
       if (localStorage.getItem('isRegular') == 'true') {//end date caculate for Regular courses 
         setEndDate(formData.endDate?.value, formData.startDate)
       }
@@ -601,13 +667,21 @@ const Enrollment = () => {
         age: formData.AGE,
         nationality: formData.nationality
       })
-
+      ReactGA.event('begin_checkout', {
+        currency: 'INR',
+        value: courseFee ? courseFee : 0,
+        items: [{
+          item_name: currentCourse?.title,
+          item_id: currentCourse?.courseCategory,
+          price: courseFee ? courseFee : 0,
+          quantity: 1
+        }]
+      });
       setupUserProfile(formData);
     }
-
   }
 
-  
+
   useEffect(() => {
     // Start time when the component mounts
     setStartTime(Date.now());
@@ -615,41 +689,41 @@ const Enrollment = () => {
     // Retrieve or generate the session ID
     let session = localStorage.getItem('sessionId');
     if (!session) {
-        session = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
-        localStorage.setItem('sessionId', session);
+      session = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
+      localStorage.setItem('sessionId', session);
     }
     setSessionId(session);
 
     return () => {
-        // End time when the component unmounts
-        const endTime = Date.now();
+      // End time when the component unmounts
+      const endTime = Date.now();
 
-        // Calculate the session duration in seconds
-        const sessionDuration = ((endTime - startTime) / 1000).toFixed(2);
+      // Calculate the session duration in seconds
+      const sessionDuration = ((endTime - startTime) / 1000).toFixed(2);
 
-        const pageName = currentCourse?.title + " Enrollment Form";
-        const lastPageUrl = document.referrer || 'N/A';
-        const pageUrl = window.location.href;
-        //const loggedIn = localStorage.getItem('isLoggedIn') === 'true' ? 'Yes' : 'No'; // Adjust based on your auth logic
-        const uniqueViewId = Math.floor(Math.random() * 1000); // Replace with actual logic
+      const pageName = currentCourse?.title + " Enrollment Form";
+      const lastPageUrl = document.referrer || 'N/A';
+      const pageUrl = window.location.href;
+      //const loggedIn = localStorage.getItem('isLoggedIn') === 'true' ? 'Yes' : 'No'; // Adjust based on your auth logic
+      const uniqueViewId = Math.floor(Math.random() * 1000); // Replace with actual logic
 
-        // trackPageView({
-        //     pageName,
-        //     lastPageUrl,
-        //     pageUrl,
-        //     sessionDuration,
-        //     isLoggedIn,
-        //     sessionId: session,
-        //     uniqueViewId,
-        // });
+      // trackPageView({
+      //     pageName,
+      //     lastPageUrl,
+      //     pageUrl,
+      //     sessionDuration,
+      //     isLoggedIn,
+      //     sessionId: session,
+      //     uniqueViewId,
+      // });
     };
-}, [sessionId, startTime]);
+  }, [sessionId, startTime]);
 
 
-useEffect(() => {
-  const currentPageUrl = window.location.href;
-  handleCTCoursePaymentPageVisit(currentPageUrl);
-}, []);
+  useEffect(() => {
+    const currentPageUrl = window.location.href;
+    handleCTCoursePaymentPageVisit(currentPageUrl);
+  }, []);
 
 
 
@@ -660,11 +734,14 @@ useEffect(() => {
         {bold < 5 && (
           <div className="header">
             <Link to="/courses">
-              <button className="x">x</button>
+              <button className="x">
+                <img src='/images/close.svg' style={{ position: 'relative', top: '2px' }} alt='' loading='lazy' />
+                <span className='close_label'>Close</span>
+              </button>
             </Link>
             <span className="flower">{legacy2}</span>
 
-            <div className="student">Student Enrollment</div>
+            <div className="student">Your Selected Yoga Course Details<br /> <span className='enroll_subtitle'>A step towards inner transformation🧘‍✨</span> </div>
 
             {/* <ul className="header_ul">
             <li
@@ -716,7 +793,7 @@ useEffect(() => {
 
         {bold === 0 ? (
           <>
-            <Personal
+            {/* <Personal
               setBold={setBold}
               empty={empty}
               formData={formData}
@@ -739,7 +816,36 @@ useEffect(() => {
               uploadCheck={uploadCheck}
               setUploadCheck={setUploadCheck}
               dateDurationChange={dateDurationChange}
+            /> */}
+
+            <EnrollmentForm
+
+              setBold={setBold}
+              empty={empty}
+              formData={formData}
+              setFormData={setFormData}
+              handleEmpty1={handleEmpty1}
+              setEmpty={setEmpty}
+              isLoad={isLoad}
+              courseDate={courseDate}
+              templateKey={currentCourse?.templateId}
+              isEditStudentOpen={isEditStudentOpen}
+              setEditStudentOpen={setEditStudentOpen}
+              qualificationData={qualificationData}
+              listData={listData}
+              currentCourse={currentCourse}
+              courseAsset1={courseAsset1}
+              setCourseAsset1={setCourseAsset1}
+              courseAsset2={courseAsset2}
+              setCourseAsset2={setCourseAsset2}
+              handleSubmit={handleSubmit}
+              courseFee={courseFee}
+              setCourseFee={setCourseFee}
+              uploadCheck={uploadCheck}
+              setUploadCheck={setUploadCheck}
+              dateDurationChange={dateDurationChange}
             />
+
           </>
         ) : null}
 

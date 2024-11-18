@@ -17,6 +17,7 @@ import { CreateForm, successMail } from './Api'
 import '../../../../StaticSite/Components/TermsandCondition/style.scss'
 import { handleCTCorporateYogaInitiated, handleCTCorporateYogaSubmitEvent } from '../../../../../CleverTap/corporateYogaEvents'
 import { useSelector } from 'react-redux'
+import ReactGA from 'react-ga4';
 
 const corporateWellness = () => {
   const [formData, setFormData] = useState({
@@ -90,7 +91,26 @@ const corporateWellness = () => {
         message: formData.message, 
         status: "Success"
       })
-
+      ReactGA.event('add_to_cart', {
+        currency: 'INR',
+        value: 0,
+        items: [{
+          item_name: 'Corporate Workshops',
+          item_id: formData.company,
+          price: 0,
+          quantity: 1
+        }]
+      });
+      ReactGA.event('begin_checkout', {
+        currency: 'INR',
+        value: 0,
+        items: [{
+          item_name: 'Corporate Workshops',
+          item_id: formData.company,
+          price: 0,
+          quantity: 1
+        }]
+      });
       setModal(true)
     } catch (error) {
       console.log(error)

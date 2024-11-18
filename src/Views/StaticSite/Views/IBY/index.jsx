@@ -15,22 +15,23 @@ import RelatedBlogs from '../Courses/Views/RelatedBlogs'
 import RelatedCourse from '../Courses/Views/Component'
 import { AllCourses } from '../Courses/Constants/courses'
 import SelectDropDown from '../../Components/Select Dropdown'
+import ReactGA from 'react-ga4';
 
 const IBYcourse = () => {
 
-  useEffect(()=>{
-    scrollTo(0,0)
-  },[])
+  useEffect(() => {
+    scrollTo(0, 0)
+  }, [])
 
-  const [ openForm,setOpenForm ] = useState(false)
+  const [openForm, setOpenForm] = useState(false)
   const [blogData, setBlogData] = useState([])
   const [cardData, setCardData] = useState([])
   const [metaData, setMetaData] = useState([])
   const [selectBatch, setSelectBatch] = useState('')
-  const [ price, setPrice] = useState('')
-  const [error, setError] =  useState(false)
+  const [price, setPrice] = useState('')
+  const [error, setError] = useState(false)
 
-  const getBlogsData = async(posts) => {
+  const getBlogsData = async (posts) => {
     const arr = []
     for await (let item of posts) {
       try {
@@ -44,7 +45,7 @@ const IBYcourse = () => {
   }
 
 
-  const parsingAlgo = async() => {
+  const parsingAlgo = async () => {
     try {
       const res = await axios.get(
         `${cmsBaseDomain}/seometatags/?pagePath=${'IBY-course'}`
@@ -79,10 +80,10 @@ const IBYcourse = () => {
           if (el.includes('<meta')) headers.metaData.push(obj)
           if (el.includes('<link')) headers.links.push(obj)
         } else if (el.includes('<title'))
-          if(headers) {
+          if (headers) {
             headers.title = el.replace('<title>', '').replace('</title>', '')
           }
-        else if (el.includes('<script')) headers.script = el
+          else if (el.includes('<script')) headers.script = el
       })
 
       // setTitleTag(headers.title.trim())
@@ -123,32 +124,44 @@ const IBYcourse = () => {
     borderStyle: 'solid',
     maxWidth: 'fit-content',
     marginTop: '2rem',
-    marginLeft:'14.5rem'
+    marginLeft: '14.5rem'
   }
 
-
+  const updateGA4 = (amnt, program) => {
+    ReactGA.event('add_to_cart', {
+      currency: 'INR',
+      value: amnt,
+      items: [{
+        item_name: 'IBY Class (Only for TYI Yoga TTC Teachers) - Online & On Campus',
+        item_id: program,
+        price: amnt,
+        quantity: 1
+      }]
+    });
+   
+  }
   const date = () => {
     if (selectBatch === '') {
       setError(true); setOpenForm(false)
     } else {
       switch (selectBatch) {
-      case 'MAR - MAY 2024':
-        setPrice(2500); setError(false)
-        break
-      case 'JUN - AUG 2024':
-        setPrice(1875); setError(false)
-        break
-      case 'SEP - NOV 2024':
-        setPrice(1250); setError(false)
-        break
-      case 'DEC 2024 - FEB 2025':
-        setPrice(625); setError(false)
-        break
-      case 'MAR 2024 - FEB 2025':
-        setPrice(2500); setError(false)
-        break
-      default:
-        break
+        case 'MAR - MAY 2024':
+          setPrice(2500); setError(false); updateGA4(2500, 'MAR - MAY 2024')
+          break
+        case 'JUN - AUG 2024':
+          setPrice(1875); setError(false); updateGA4(1875, 'JUN - AUG 2024')
+          break
+        case 'SEP - NOV 2024':
+          setPrice(1250); setError(false); updateGA4(1250, 'SEP - NOV 2024')
+          break
+        case 'DEC 2024 - FEB 2025':
+          setPrice(625); setError(false); updateGA4(625, 'DEC 2024 - FEB 2025')
+          break
+        case 'MAR 2024 - FEB 2025':
+          setPrice(2500); setError(false); updateGA4(2500, 'MAR 2024 - FEB 2025')
+          break
+        default:
+          break
       }
     }
   }
@@ -158,52 +171,52 @@ const IBYcourse = () => {
   const batchOptions = [
     // 'JUN - AUG 2024',
     'SEP - NOV 2024',
-    'DEC 2024 - FEB 2025', 
+    'DEC 2024 - FEB 2025',
     'MAR 2024 - FEB 2025']
 
-    useEffect(()=> {
+  useEffect(() => {
 
-      // Get the current URL path
+    // Get the current URL path
     const currentPath = window.location.pathname;
-  
+
     // Extract the portion after the last '/' and remove the leading '/'
     const extractedKey = currentPath.split('/').pop().replace(/-/g, ' ');
-       // Trigger the course_viewed event when the component mounts
-  
-       
-      //  if (true) {
-        clevertap.event.push("course_viewed", {
-            "course_name": "IBY CLASS",
-            "Page_name": extractedKey,
-            
-            "Page_Url": window.location.href,
-            "Tenure": 'N/A',
-            "Course Category ": "IBY CLASS",
-            "Course-SubType": "Teachers Practice",
-            "Course Type": "IBY CLASS",
-            "Course Mode": "OnCampus/Online",
-            "Course Location": "Non-Residential",
-            "Language": "English",
-            "PreRequisite": "200 Hour Teacher Training Course, 500 Hour, 900 Hour",
-            // "Batch_No": pageDate?.batch,
-            "date_time_timestamp": new Date().toISOString()
-        });
+    // Trigger the course_viewed event when the component mounts
+
+
+    //  if (true) {
+    clevertap.event.push("course_viewed", {
+      "course_name": "IBY CLASS",
+      "Page_name": extractedKey,
+
+      "Page_Url": window.location.href,
+      "Tenure": 'N/A',
+      "Course Category ": "IBY CLASS",
+      "Course-SubType": "Teachers Practice",
+      "Course Type": "IBY CLASS",
+      "Course Mode": "OnCampus/Online",
+      "Course Location": "Non-Residential",
+      "Language": "English",
+      "PreRequisite": "200 Hour Teacher Training Course, 500 Hour, 900 Hour",
+      // "Batch_No": pageDate?.batch,
+      "date_time_timestamp": new Date().toISOString()
+    });
     // }
     // console.log('Course Viewed Event', pageDate, extractedKey);
-   
-    }, [])
+
+  }, [])
 
 
   return (
     <div>
-      { metaDataObj[location.pathname] && <Helmet  title={metaDataObj[location.pathname]?.title || ''}/> }
+      {metaDataObj[location.pathname] && <Helmet title={metaDataObj[location.pathname]?.title || ''} />}
       <div className="IBY-sections">
-        <InnerNavComponent abc={highlight}/>
+        <InnerNavComponent abc={highlight} />
         <div className="main-container">
           <div className="highlight-info">
             <h1>IBY Class (Only for TYI Yoga TTC Teachers) - Online & On Campus</h1>
             <p>One of the most-awaited and popular classes of The Yoga Institute, IBY Class is back. The classes has been running for more than two decades. </p>
-            <CommonBtn text='Enroll Now' buttonAction={ ()=>(setOpenForm(true), date() )}   />
+            <CommonBtn text='Enroll Now' buttonAction={() => (setOpenForm(true), date())} />
             {error && <small> Please select batch* </small>}
           </div>
           <div className="highlight-cover">
@@ -217,7 +230,7 @@ const IBYcourse = () => {
             text={'Select Batch'}
             isStyles={selectStyles1}
             dates={batchOptions}
-          /> 
+          />
         </div>
         <div className="about-section">
           <p style={{ fontWeight: '700' }}>One of the most-awaited and popular classes of The Yoga Institute, IBY Class is back. The classes has been running for more than two decades.</p>
@@ -241,18 +254,18 @@ const IBYcourse = () => {
                   <li><span  > Q3 (Quarter3: September- October- November 2024) - </span> Rs. 1250/-</li>
                   <li><span> Q4 (Quarter4: December-January-February 2025) - </span> Rs. 625/-</li>
                   <li><span> Annually- Rs 2500/- (March 2024 - February 2025) </span></li>
-                  
+
                 </ul>
               </li>
-              
+
 
             </ul>
             <p className='nutri-page-bold'>Open to all the teachers who have completed Basic Yoga TTC, Intermediate Yoga TTC and Advanced Yoga TTC from the institute</p>
           </div>
         </div>
-        
-       
-        {openForm && <IBYform  setOpenForm={setOpenForm} price={price} selectBatch={selectBatch} />}
+
+
+        {openForm && <IBYform setOpenForm={setOpenForm} price={price} selectBatch={selectBatch} />}
       </div>
       {cardData && cardData.length > 0 && <RelatedCourse
         title={'Related Courses'}
@@ -267,7 +280,7 @@ const IBYcourse = () => {
         cardData={blogData}
         url={'/blogs'}
       />}
-       
+
     </div>
   )
 }

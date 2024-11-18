@@ -181,7 +181,7 @@ export const handleCTEnrollNowClick = ({
   }
   ReactGA.event('add_to_cart', {
     currency: 'INR',
-    value: fees.onlineFee ? fees.onlineFee : 0,
+    value: fees.onlineFee ? fees.onlineFee : ((fees?.offlineFee?.residentialFee) ? (fees?.offlineFee?.residentialFee) : (fees?.offlineFee?.nonResidentialFee)),
     items: [{
       item_name: courseTitle,
       item_id: courseCategory,
@@ -199,7 +199,7 @@ export const handleCTEnrollNowClick = ({
       quantity: 1
     }]
   });
-  
+
 }
 
 

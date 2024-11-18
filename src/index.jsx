@@ -15,6 +15,7 @@ import './Utils/interceptors'
 import { isAuthorized } from './Utils/localStorage'
 import { CleverTapProvider } from './CleverTap/CleverTapProvider'
 // import ReactGA from 'react-ga'
+import ReactGA from 'react-ga4';
 
 export const store = configureStore({})
 
@@ -23,7 +24,7 @@ if (isAuthorized()) {
     type: 'auth/FETCH_USER_DATA'
   })
   store.dispatch({
-    type:'shop/GET_ACTIVE_CART'
+    type: 'shop/GET_ACTIVE_CART'
   })
 }
 
@@ -34,14 +35,16 @@ store.dispatch({
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
+ReactGA.initialize('G-KZMLSTPLP1')
+ReactGA.send('/')
 // ReactGA.initialize('5158237522')
 // ReactGA.pageview('/')
 root.render(
   <Provider store={store}>
     <StrictMode>
       <Router>
-      <CleverTapProvider>
-        <App />
+        <CleverTapProvider>
+          <App />
         </CleverTapProvider>
       </Router>
     </StrictMode>

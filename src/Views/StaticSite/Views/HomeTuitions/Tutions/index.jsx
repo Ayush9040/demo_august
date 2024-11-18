@@ -15,6 +15,7 @@ import { cmsBaseDomain } from '../../../../../Constants/appSettings'
 import RelatedBlogs from '../../Courses/Views/RelatedBlogs'
 import RelatedCourse from '../../Courses/Views/Component'
 import SelectDropDown from '../../../Components/Select Dropdown'
+import ReactGA from 'react-ga4';
 
 const OnlineTution = () => {
   useEffect(() => {
@@ -31,10 +32,10 @@ const OnlineTution = () => {
   const [blogData, setBlogData] = useState([])
   const [cardData, setCardData] = useState([])
   const [metaData, setMetaData] = useState([])
-  const [ err,setErr ] = useState(false)
-  const [ plan,setPlan ] = useState('')
+  const [err, setErr] = useState(false)
+  const [plan, setPlan] = useState('')
 
-  const getBlogsData = async(posts) => {
+  const getBlogsData = async (posts) => {
     const arr = []
     for await (let item of posts) {
       try {
@@ -59,11 +60,11 @@ const OnlineTution = () => {
     borderStyle: 'solid',
     maxWidth: 'fit-content',
     marginTop: '2rem',
-    marginRight:'3rem'
+    marginRight: '3rem'
   }
 
 
-  const parsingAlgo = async() => {
+  const parsingAlgo = async () => {
     try {
       const res = await axios.get(
         `${cmsBaseDomain}/seometatags/?pagePath=${'home-tuitions'}`
@@ -98,10 +99,10 @@ const OnlineTution = () => {
           if (el.includes('<meta')) headers.metaData.push(obj)
           if (el.includes('<link')) headers.links.push(obj)
         } else if (el.includes('<title'))
-          if(headers) {
+          if (headers) {
             headers.title = el.replace('<title>', '').replace('</title>', '')
           }
-        else if (el.includes('<script')) headers.script = el
+          else if (el.includes('<script')) headers.script = el
       })
 
       // setTitleTag(headers.title.trim())
@@ -122,9 +123,20 @@ const OnlineTution = () => {
   }, [])
   console.log(metaData) //eslint-disable-line
 
-  const options = ['Home Yoga Tuitions','Yoga Therapy Sessions']
+  const options = ['Home Yoga Tuitions', 'Yoga Therapy Sessions']
 
-
+  const updateGA4 = (program) => {
+    ReactGA.event('add_to_cart', {
+      currency: 'INR',
+      value: 0,
+      items: [{
+        item_name: 'Online Home Tuition (Yoga Tuition)',
+        item_id: program,
+        price: 0,
+        quantity: 1
+      }]
+    });
+  }
   return (
     <>
       {metaDataObj[location.pathname] && (
@@ -137,7 +149,7 @@ const OnlineTution = () => {
             <h1>Online Home Tuition (Yoga Tuition)</h1>
             <div
               id="date-select-mobile"
-              style={ { display: 'flex' } }
+              style={{ display: 'flex' }}
             >
               <SelectDropDown
                 currentValue={plan}
@@ -147,18 +159,19 @@ const OnlineTution = () => {
                 dates={options}
               />{' '}
             </div>
-            { err && <small style={{ marginLeft: '2rem', fontSize: '8px'}}> Please select Plan* </small>}
+            {err && <small style={{ marginLeft: '2rem', fontSize: '8px' }}> Please select Plan* </small>}
             <CommonBtn text={'Enroll Now'} buttonAction={() => {
-              if(plan === '') {
+              if (plan === '') {
                 return setErr(true)
               }
-              setOpenForm(true) 
+              updateGA4(plan)
+              setOpenForm(true)
             }
-              } />
+            } />
           </div>
 
-          
-            
+
+
           <div className="highlight-cover">
             <img
               src={`${baseDomain}${homeAssets.homeAsset15}`}

@@ -13,6 +13,7 @@ const InputComponent = ({
   maxnum,
   errorCheck,
   readOnly,
+  dataKey,
   blocked=false
 }) => {
   return (
@@ -27,6 +28,7 @@ const InputComponent = ({
             name={keyName}
             max={maxnum}
             min={minnum}
+            data-key={dataKey}
             // onFocus={keyName==='DOB' ?()=>{setChangeType('date')}:()=>{setChangeType(type)}}
             // onBlur={()=>{setChangeType(type)}}
             onChange={(e) =>{e.preventDefault();setField({ ...form, [keyName]: e.target.value });if(errorCheck){errorCheck(0)}}}

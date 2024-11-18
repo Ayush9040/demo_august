@@ -14,6 +14,7 @@ import { authBaseDomain } from '../../../../../Constants/appSettings'
 import { useSelector } from 'react-redux'
 import { MultiSelect } from 'react-multi-select-component'
 import { parsePhoneNumberFromString } from 'libphonenumber-js';
+import ReactGA from 'react-ga4';
 
 const HomeTutions = ({ courseMode }) => {
   const [formData, setFormData] = useState({
@@ -37,13 +38,13 @@ const HomeTutions = ({ courseMode }) => {
   })
   const [values, setValues] = useState([])
   const [selectedDays, setSelectedDays] = useState([]);
-  const [selectedTime, setSelectedTime] = useState(''); 
+  const [selectedTime, setSelectedTime] = useState('');
   const [empty, setEmpty] = useState(0)
   const [stateOptions, setStateOptions] = useState([]);
   const [isoCode, setIsoCode] = useState('');
   const [countryFlag, setCountryFlag] = useState('IN');
 
- 
+
 
 
 
@@ -63,16 +64,16 @@ const HomeTutions = ({ courseMode }) => {
   console.log('codeFromRedux ', codeFromRedux)
 
   useEffect(() => {
-    if(codeFromRedux) {
+    if (codeFromRedux) {
       setCountryFlag(codeFromRedux)
     }
   }, [codeFromRedux])
-  
+
 
   useEffect(() => {
     // JS to modify span after component mounts
     const spanElement = document.querySelector('.atleast_3_days .dropdown-container .dropdown-heading .dropdown-heading-value span');
-    
+
     if (spanElement) {
       spanElement.textContent = 'Select 3 days*';
       spanElement.className = 'atleast_3days_options_container';
@@ -85,28 +86,28 @@ const HomeTutions = ({ courseMode }) => {
 
 
   // Function to find state and country from city using an API or dataset
-const findCityState = async (city) => {
-  try {
-    const response = await fetch(`https://example-location-api.com/getState?city=${city}`);
-    const data = await response.json();
-    
-    if (data && data.state && data.country) {
-      return {
-        state: data.state,
-        country: data.country,
-      };
-    } else {
-      throw new Error('City not found');
+  const findCityState = async (city) => {
+    try {
+      const response = await fetch(`https://example-location-api.com/getState?city=${city}`);
+      const data = await response.json();
+
+      if (data && data.state && data.country) {
+        return {
+          state: data.state,
+          country: data.country,
+        };
+      } else {
+        throw new Error('City not found');
+      }
+    } catch (error) {
+      console.error('Error fetching city data:', error);
+      return null;
     }
-  } catch (error) {
-    console.error('Error fetching city data:', error);
-    return null;
-  }
-};
+  };
 
 
-  
-  
+
+
 
   useEffect(() => {
     if (countryNameFromRedux) {
@@ -125,9 +126,9 @@ const findCityState = async (city) => {
       setFormData((prev) => ({ ...prev, city: cityNameFromRedux }));
       setValues((prev) => ({ ...prev, city: { label: cityNameFromRedux, value: cityNameFromRedux } }));
     }
-    
+
   }, [countryNameFromRedux, cityNameFromRedux, stateNameFromRedux, setFormData, setValues]);
-  
+
 
   useEffect(() => {
     if (nameFromRedux) {
@@ -142,8 +143,8 @@ const findCityState = async (city) => {
     if (panNameFromRedux) {
       setFormData((prev) => ({ ...prev, panNum: panNameFromRedux }));
     }
-    
-  
+
+
   }, [nameFromRedux, phoneNumberFromRedux, emailFromRedux, panNameFromRedux, setFormData]);
 
 
@@ -158,10 +159,10 @@ const findCityState = async (city) => {
 
   useEffect(() => {
     if (genderFromRedux) {
-      const upperCaseGender = genderFromRedux.toUpperCase(); 
+      const upperCaseGender = genderFromRedux.toUpperCase();
       setFormData((prev) => ({ ...prev, gender: upperCaseGender }));
     }
-    
+
   }, [genderFromRedux, setFormData]);
 
   useEffect(() => {
@@ -176,11 +177,11 @@ const findCityState = async (city) => {
         // Get state using stateCode and countryCode from matched city
         const matchedState = State.getStateByCodeAndCountry(matchedCity.stateCode, matchedCity.countryCode);
         console.log('matched State ', matchedState.name);
-        
+
         if (matchedState) {
           console.log('matched State ', matchedState.name); // Set the state name
           setFormData((prev) => ({ ...prev, state: matchedState.name }));
-      setValues((prev) => ({ ...prev, state: { label: matchedState.name, value: matchedState.name } }));
+          setValues((prev) => ({ ...prev, state: { label: matchedState.name, value: matchedState.name } }));
         } else {
           // setError('State not found for the given city');
         }
@@ -203,27 +204,27 @@ const findCityState = async (city) => {
   ];
 
 
-   // Generate time options from 12:00 AM to 11:00 PM in 1-hour intervals
-   const generateTimeOptions = () => {
+  // Generate time options from 12:00 AM to 11:00 PM in 1-hour intervals
+  const generateTimeOptions = () => {
     const times = [];
-    
+
     const formatTime = (hour) => {
       const period = hour >= 12 ? 'PM' : 'AM';
       const formattedHour = hour % 12 === 0 ? 12 : hour % 12;
       return `${formattedHour}:00 ${period}`;
     };
-  
+
     // Start from hour 5 (5 AM) and go until hour 20 (8 PM)
     for (let hour = 5; hour <= 20; hour++) {
       times.push({ label: formatTime(hour), value: formatTime(hour) });
     }
-  
+
     return times;
   };
-  
+
   const timeOptions = generateTimeOptions();
 
-  
+
 
 
   useEffect(() => {
@@ -308,41 +309,41 @@ const findCityState = async (city) => {
 
   const handleEmpty = () => {
     let hasError = false;
-    
+
     if (
       formData.name === '' ||
       formData.name === undefined ||
       formData.name === null
     ) {
-       setEmpty(1)
-       hasError = true;
+      setEmpty(1)
+      hasError = true;
     } else if (!validateEmail(formData.email)) {
-       setEmpty(2)
-       hasError = true;
+      setEmpty(2)
+      hasError = true;
     } else if (
       formData.contact === '' ||
       formData.contact.length < 6 ||
       formData.contact.length > 15
     ) {
       console.log("phone number td ", formData.contact);
-       setEmpty(3)
-       hasError = true;
+      setEmpty(3)
+      hasError = true;
     } else if (formData.address === '') {
-       setEmpty(4)
-       hasError = true;
+      setEmpty(4)
+      hasError = true;
     } else if (formData.country === '') {
-       setEmpty(5)
-       hasError = true;
+      setEmpty(5)
+      hasError = true;
     }
     //  else if (formData.city === ' ') {
     //   return setEmpty(6)
     // }
     else if (formData.dob === '') {
-       setEmpty(7)
-       hasError = true;
+      setEmpty(7)
+      hasError = true;
     } else if (formData.genHealthCondition === '') {
-       setEmpty(8)
-       hasError = true;
+      setEmpty(8)
+      hasError = true;
     } else if (formData.gender === '') {
       setEmpty(9)
       hasError = true;
@@ -378,24 +379,24 @@ const findCityState = async (city) => {
       handleSubmit()
     }
 
-   
 
-     // If no errors, submit the form data
-     
 
-      // console.log("Form Data:", formData);
+    // If no errors, submit the form data
+
+
+    // console.log("Form Data:", formData);
   }
 
 
   const nagivate = useNavigate()
-  const handleSubmit = async() => {
+  const handleSubmit = async () => {
     // await handleEmpty()
     console.log('empty ', empty)
     // if (empty !== 0) return
     try {
       // if (!hasError) {
-        
-  
+
+
       // }
       await createHomeTution(formData)
       await axios.post(`${authBaseDomain}/ali/mail`, {
@@ -407,6 +408,18 @@ const findCityState = async (city) => {
         },
         receivers: [formData.email, 'info@theyogainstitute.org'],
       })
+      console.log(formData);
+
+      ReactGA.event('begin_checkout', {
+        currency: 'INR',
+        value: '',
+        items: [{
+          item_name: 'Home Tuitions',
+          item_id: 'Home Tuitions',
+          price: '',
+          quantity: 1
+        }]
+      });
       nagivate(`/enrollment_thankyou/${'Home Tuition course'}`)
     } catch {
       console.log('error')
@@ -439,7 +452,7 @@ const findCityState = async (city) => {
               keyName="email"
               errorCheck={setEmpty}
             />
-            {empty === 2 && <small style={{ marginBottom: '0rem'}}> Please enter an valid E-mail</small>}
+            {empty === 2 && <small style={{ marginBottom: '0rem' }}> Please enter an valid E-mail</small>}
           </div>
           <div className="form-field">
             <PhoneInput
@@ -449,14 +462,14 @@ const findCityState = async (city) => {
               form={formData}
               setField={setFormData}
               keyName="contact"
-              errorCheck={setEmpty} 
-              defaultCountry={countryFlag?countryFlag:'IN'}
+              errorCheck={setEmpty}
+              defaultCountry={countryFlag ? countryFlag : 'IN'}
               onChange={(e) => {
                 console.log('Phone input value: ', e);
                 setFormData({ ...formData, contact: e })
               }}
             />
-            {empty === 3 && <small style={{ margin: '0.25rem 0 0rem 0'}}> Please enter your phone number</small>}
+            {empty === 3 && <small style={{ margin: '0.25rem 0 0rem 0' }}> Please enter your phone number</small>}
           </div>
           <div className="form-field">
             <InputComponent
@@ -488,7 +501,7 @@ const findCityState = async (city) => {
                 })
               }}
             />
-            {empty === 5 && <small style={{ margin: '0'}}> Please select your country</small>}
+            {empty === 5 && <small style={{ margin: '0' }}> Please select your country</small>}
           </div>
           <div className="form-field">
             <Select
@@ -499,8 +512,8 @@ const findCityState = async (city) => {
               className="select"
               errorCheck={setEmpty}
               options={updatedStates(
-                values?.country?.isoCode?values?.country?.isoCode:
-                isoCode
+                values?.country?.isoCode ? values?.country?.isoCode :
+                  isoCode
               )}
               value={values.state}
               onChange={(value) => {
@@ -524,8 +537,8 @@ const findCityState = async (city) => {
               className="select"
               errorCheck={setEmpty}
               options={updatedCities(
-                values?.country?.isoCode?values?.country?.isoCode:
-                isoCode,
+                values?.country?.isoCode ? values?.country?.isoCode :
+                  isoCode,
                 values?.state?.isoCode
               )}
               value={values.city}
@@ -623,36 +636,36 @@ const findCityState = async (city) => {
             {empty === 11 && <small> Please enter how many sessions are required</small>}
           </div>
           <div className="form-field">
-            
-              <select
-                name="noOfPersons"
-                onChange={(e) =>
-                  setFormData({ ...formData, noOfPersons: e.target.value })
-                }
-              >
-                <option disabled selected className="edit-account-gender">
-                  Number of Persons*
-                </option>
-                <option selected={formData.noOfPersons === '1'} value="1">
-                  1
-                </option>
-                <option selected={formData.noOfPersons === '2'} value="2">
-                  2
-                </option>
-                <option selected={formData.noOfPersons === '3'} value="3">
-                  3
-                </option>
-                <option selected={formData.noOfPersons === '4'} value="4">
-                  4
-                </option>
-              </select>
 
-              {empty === 12 && (
-                <small style={{ color: 'red', marginLeft: '0', margin: '0px' }}>
-                  *Please enter number of persons
-                </small>
-              )}
-            </div>
+            <select
+              name="noOfPersons"
+              onChange={(e) =>
+                setFormData({ ...formData, noOfPersons: e.target.value })
+              }
+            >
+              <option disabled selected className="edit-account-gender">
+                Number of Persons*
+              </option>
+              <option selected={formData.noOfPersons === '1'} value="1">
+                1
+              </option>
+              <option selected={formData.noOfPersons === '2'} value="2">
+                2
+              </option>
+              <option selected={formData.noOfPersons === '3'} value="3">
+                3
+              </option>
+              <option selected={formData.noOfPersons === '4'} value="4">
+                4
+              </option>
+            </select>
+
+            {empty === 12 && (
+              <small style={{ color: 'red', marginLeft: '0', margin: '0px' }}>
+                *Please enter number of persons
+              </small>
+            )}
+          </div>
           {/* <div className="form-field">
             <InputComponent
               type="number"
@@ -682,96 +695,96 @@ const findCityState = async (city) => {
 
           {/* Added a new fields */}
 
-          <div className="form-field multi_day atleast_3_days" style={{ width: '100%'}}>
-        {/* <label>Select Preferred Days*</label> */}
-        <MultiSelect
-          styles={customStyles}
-          options={daysOptions}
-          value={selectedDays}
-          onChange={handleDayChange}
-          labelledBy="Select 3 Days"
-          disableSearch={true}  // Optional: to disable search feature if not needed
-          hasSelectAll={false}  // Disable "Select All" option
-        />
-        {empty === 15 && (
-                <small style={{ color: 'red', marginLeft: '0', margin: '0px' }}>
-                  *Please Select atleast 3 days!
-                </small>
-              )}
-      </div>
+          <div className="form-field multi_day atleast_3_days" style={{ width: '100%' }}>
+            {/* <label>Select Preferred Days*</label> */}
+            <MultiSelect
+              styles={customStyles}
+              options={daysOptions}
+              value={selectedDays}
+              onChange={handleDayChange}
+              labelledBy="Select 3 Days"
+              disableSearch={true}  // Optional: to disable search feature if not needed
+              hasSelectAll={false}  // Disable "Select All" option
+            />
+            {empty === 15 && (
+              <small style={{ color: 'red', marginLeft: '0', margin: '0px' }}>
+                *Please Select atleast 3 days!
+              </small>
+            )}
+          </div>
 
 
-      <div div className="form-field">
-              <select
-                name="noOfPersons"
-                onChange={(e) =>
-                  setFormData({ ...formData, PreferedDayAndTime: e.target.value })
-                }
-              >
-                <option disabled selected className="edit-account-gender">
+          <div div className="form-field">
+            <select
+              name="noOfPersons"
+              onChange={(e) =>
+                setFormData({ ...formData, PreferedDayAndTime: e.target.value })
+              }
+            >
+              <option disabled selected className="edit-account-gender">
                 Select Time*
-                </option>
-                <option selected={formData.PreferedDayAndTime === '5:00 AM'} value="5:00 AM">
-                  5:00 AM
-                </option>
-                <option selected={formData.PreferedDayAndTime === '6:00 AM'} value="6:00 AM">
-                  6:00 AM
-                </option>
-                <option selected={formData.PreferedDayAndTime === '7:00 AM'} value="7:00 AM">
-                  7:00 AM
-                </option>
-                <option selected={formData.PreferedDayAndTime === '8:00 AM'} value="8:00 AM">
-                  8:00 AM
-                </option>
-                <option selected={formData.PreferedDayAndTime === '9:00 AM'} value="9:00 AM">
-                  9:00 AM
-                </option>
-                <option selected={formData.PreferedDayAndTime === '10:00 AM'} value="10:00 AM">
-                  10:00 AM
-                </option>
-                <option selected={formData.PreferedDayAndTime === '11:00 AM'} value="11:00 AM">
-                  11:00 AM
-                </option>
-                <option selected={formData.PreferedDayAndTime === '12:00 PM'} value="12:00 PM">
-                  12:00 PM
-                </option>
-                <option selected={formData.PreferedDayAndTime === '1:00 PM'} value="1:00 PM">
-                  1:00 PM
-                </option>
-                <option selected={formData.PreferedDayAndTime === '2:00 PM'} value="2:00 PM">
-                  2:00 PM
-                </option>
-                <option selected={formData.PreferedDayAndTime === '3:00 PM'} value="3:00 PM">
-                  3:00 PM
-                </option>
-                <option selected={formData.PreferedDayAndTime === '4:00 PM'} value="4:00 PM">
-                  4:00 PM
-                </option>
-                <option selected={formData.PreferedDayAndTime === '5:00 PM'} value="5:00 PM">
-                  5:00 PM
-                </option>
-                <option selected={formData.PreferedDayAndTime === '6:00 PM'} value="6:00 PM">
-                  6:00 PM
-                </option>
-                <option selected={formData.PreferedDayAndTime === '7:00 PM'} value="7:00 PM">
-                  7:00 PM
-                </option>
-                <option selected={formData.PreferedDayAndTime === '8:00 PM'} value="8:00 PM">
-                  8:00 PM
-                </option>
-              </select>
+              </option>
+              <option selected={formData.PreferedDayAndTime === '5:00 AM'} value="5:00 AM">
+                5:00 AM
+              </option>
+              <option selected={formData.PreferedDayAndTime === '6:00 AM'} value="6:00 AM">
+                6:00 AM
+              </option>
+              <option selected={formData.PreferedDayAndTime === '7:00 AM'} value="7:00 AM">
+                7:00 AM
+              </option>
+              <option selected={formData.PreferedDayAndTime === '8:00 AM'} value="8:00 AM">
+                8:00 AM
+              </option>
+              <option selected={formData.PreferedDayAndTime === '9:00 AM'} value="9:00 AM">
+                9:00 AM
+              </option>
+              <option selected={formData.PreferedDayAndTime === '10:00 AM'} value="10:00 AM">
+                10:00 AM
+              </option>
+              <option selected={formData.PreferedDayAndTime === '11:00 AM'} value="11:00 AM">
+                11:00 AM
+              </option>
+              <option selected={formData.PreferedDayAndTime === '12:00 PM'} value="12:00 PM">
+                12:00 PM
+              </option>
+              <option selected={formData.PreferedDayAndTime === '1:00 PM'} value="1:00 PM">
+                1:00 PM
+              </option>
+              <option selected={formData.PreferedDayAndTime === '2:00 PM'} value="2:00 PM">
+                2:00 PM
+              </option>
+              <option selected={formData.PreferedDayAndTime === '3:00 PM'} value="3:00 PM">
+                3:00 PM
+              </option>
+              <option selected={formData.PreferedDayAndTime === '4:00 PM'} value="4:00 PM">
+                4:00 PM
+              </option>
+              <option selected={formData.PreferedDayAndTime === '5:00 PM'} value="5:00 PM">
+                5:00 PM
+              </option>
+              <option selected={formData.PreferedDayAndTime === '6:00 PM'} value="6:00 PM">
+                6:00 PM
+              </option>
+              <option selected={formData.PreferedDayAndTime === '7:00 PM'} value="7:00 PM">
+                7:00 PM
+              </option>
+              <option selected={formData.PreferedDayAndTime === '8:00 PM'} value="8:00 PM">
+                8:00 PM
+              </option>
+            </select>
 
-              {empty === 17 && (
-                <small style={{ color: 'red', marginLeft: '0', margin: '0px' }}>
-                  *Please Select the Time!
-                </small>
-              )}
-            </div>
+            {empty === 17 && (
+              <small style={{ color: 'red', marginLeft: '0', margin: '0px' }}>
+                *Please Select the Time!
+              </small>
+            )}
+          </div>
 
 
-      {/* <div className="form-field"> */}
-        {/* <label>Select Preferred Time*</label> */}
-        {/* <select
+          {/* <div className="form-field"> */}
+          {/* <label>Select Preferred Time*</label> */}
+          {/* <select
           value={selectedTime}
           onChange={(e) => setSelectedTime(e.target.value)}
         >
@@ -793,7 +806,7 @@ const findCityState = async (city) => {
 
           {/* Added a new fields */}
 
-          
+
           <div className="form-field">
             <InputComponent
               type="text"

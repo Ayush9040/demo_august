@@ -18,6 +18,7 @@ import { handleCTEnrollNowClick } from '../../../../CleverTap/buttonClicked'
 import { trackPageView } from '../../../../CleverTap/pageViewEvents'
 import { useLocation } from 'react-router-dom';
 import DatesPopUp from '../TermsandCondition/DatesPopUp'
+import ReactGA from 'react-ga4';
 
 
 const CourseDetails = ({ pageDate }) => {
@@ -40,7 +41,17 @@ const CourseDetails = ({ pageDate }) => {
   const [showDiv, setShowDiv] = useState(false);
   const [startDate, setStartDate] = useState('');
   const [open, setOpen] = useState(false);
+  const [isRegular, setIsRegular] = useState(false)
 
+  const [isSpecialPage, setIsSpecialPage] = useState(false);
+  useEffect(() => {
+    // Check if the URL matches either "/satsang" or "/samattvam"
+    if (location.pathname === '/satsang' || location.pathname === '/samattvam') {
+      setIsSpecialPage(true);
+    } else {
+      setIsSpecialPage(false);
+    }
+  }, [location.pathname]);
 
   useEffect(() => {
     // Check if the current location matches the required URL
@@ -151,7 +162,7 @@ const CourseDetails = ({ pageDate }) => {
   // if(pageDate?.tenure === '') {
   //   tenure = 'NA'
   // }
-     
+
   //    if (pageDate) {
   //     clevertap.event.push("course_viewed", {
   //         "course_name": pageDate.title,
@@ -173,14 +184,14 @@ const CourseDetails = ({ pageDate }) => {
   //     });
   // }
   // console.log('Course Viewed Event', pageDate, extractedKey);
- 
+
   // }, [pageDate])
 
 
   useEffect(() => {
     // Ensure pageDate is fully populated and the event hasn't been triggered yet
     if (pageDate && !eventTriggered && pageDate.title && pageDate.fees && pageDate.timing && pageDate.language) {
-      
+
       // Get the current URL path
       const currentPath = window.location.pathname;
 
@@ -233,6 +244,17 @@ const CourseDetails = ({ pageDate }) => {
         "date_time_timestamp": new Date().toISOString()
       });
 
+      ReactGA.event('view_item', {
+        currency: 'INR',
+        value: pageDate?.fees?.onlineFee ? pageDate?.fees?.onlineFee : (pageDate?.fees?.offlineFee?.nonResidentialFee ? pageDate?.fees?.offlineFee?.nonResidentialFee : pageDate?.fees?.offlineFee?.residentialFee),
+        items: [{
+          item_name: pageDate.title,
+          item_id: pageDate?.courseCategory,
+          price: pageDate?.fees?.onlineFee ? pageDate?.fees?.onlineFee : (pageDate?.fees?.offlineFee?.nonResidentialFee ? pageDate?.fees?.offlineFee?.nonResidentialFee : pageDate?.fees?.offlineFee?.residentialFee),
+          quantity: 1
+        }]
+      });
+
       console.log('Course Viewed Event', pageDate, extractedKey);
 
       // Set flag to prevent re-triggering
@@ -240,17 +262,42 @@ const CourseDetails = ({ pageDate }) => {
     }
   }, [pageDate, eventTriggered]);
 
-  
-  
-
-
-  
 
 
 
-  
+
+
+
+
+
+
 
   // console.log('Course Viewed Event', pageDate);
+
+  useEffect(() => {
+    const array = ["Yoga Classes for Men (Regular Asana) - On Campus",
+      "Yoga Classes for Women (Regular Asana) - On Campus",
+      "Yoga Asana Regular Classes - (Men & Women) - Online Yoga Classes",
+      "Weekend Yoga Asana Classes - (Men & Women) - On Campus",
+      "Weekend Yoga Asana Classes - (Men & Women) - Online",
+      "Children's Yoga Classes (Regular) - On Campus",
+      "Children's Weekend Yoga Class - On Campus",
+      "Advanced Yoga Asana Regular Class - Online (Only for TYI Teachers)",
+      "Regular Pregnancy Yoga Classes - Online & On Campus",
+      "Advanced Yoga Asana Regular Class - Online (Only for TYI Teachers)",
+      "Healing Yoga Movement & Rhythm - Online",
+      "Yog Prayas - Online",
+      "Online Meditation Course  (Foundation Course)",
+      "Regular Online Meditation Classes",
+      "Couples’ Yoga Classes  - Online"
+    ]
+    const isMatch = array.includes(pageDate?.title);
+    setIsRegular(isMatch);
+    // localStorage.setItem('isRegular', isMatch)
+    // const tomorrow = new Date();
+    // tomorrow.setDate(tomorrow.getDate() + 1);
+    // setMinDate(tomorrow);
+  }, [pageDate])
 
 
   useEffect(() => {
@@ -260,35 +307,35 @@ const CourseDetails = ({ pageDate }) => {
     // Retrieve or generate the session ID
     let session = localStorage.getItem('sessionId');
     if (!session) {
-        session = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
-        localStorage.setItem('sessionId', session);
+      session = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
+      localStorage.setItem('sessionId', session);
     }
     setSessionId(session);
 
     return () => {
-        // End time when the component unmounts
-        const endTime = Date.now();
+      // End time when the component unmounts
+      const endTime = Date.now();
 
-        // Calculate the session duration in seconds
-        const sessionDuration = ((endTime - startTime) / 1000).toFixed(2);
+      // Calculate the session duration in seconds
+      const sessionDuration = ((endTime - startTime) / 1000).toFixed(2);
 
-        const pageName = pageDate?.title;
-        const lastPageUrl = document.referrer || 'N/A';
-        const pageUrl = window.location.href;
-        //const loggedIn = localStorage.getItem('isLoggedIn') === 'true' ? 'Yes' : 'No'; // Adjust based on your auth logic
-        const uniqueViewId = Math.floor(Math.random() * 1000); // Replace with actual logic
+      const pageName = pageDate?.title;
+      const lastPageUrl = document.referrer || 'N/A';
+      const pageUrl = window.location.href;
+      //const loggedIn = localStorage.getItem('isLoggedIn') === 'true' ? 'Yes' : 'No'; // Adjust based on your auth logic
+      const uniqueViewId = Math.floor(Math.random() * 1000); // Replace with actual logic
 
-        // trackPageView({
-        //     pageName,
-        //     lastPageUrl,
-        //     pageUrl,
-        //     sessionDuration,
-        //     isLoggedIn,
-        //     sessionId: session,
-        //     uniqueViewId,
-        // });
+      // trackPageView({
+      //     pageName,
+      //     lastPageUrl,
+      //     pageUrl,
+      //     sessionDuration,
+      //     isLoggedIn,
+      //     sessionId: session,
+      //     uniqueViewId,
+      // });
     };
-}, [sessionId, startTime]);
+  }, [sessionId, startTime]);
 
 
   let options = [
@@ -413,13 +460,13 @@ const CourseDetails = ({ pageDate }) => {
 
       // Split to extract start date
       const startDateString = firstDateRange.split(' to ')[0]; // "30th September"
-      
+
       // Remove ordinal suffix (like "th") and split the date
       const cleanedDateArray = startDateString.replace(/\d+(st|nd|rd|th)/, match => match.slice(0, -2)).split(' ');
 
       const day = cleanedDateArray[0]; // e.g. "30"
       const fullMonth = cleanedDateArray[1]; // e.g. "September"
-      
+
       // Create a mapping of full month names to their short forms
       const monthShortForm = {
         January: 'Jan',
@@ -569,26 +616,40 @@ const CourseDetails = ({ pageDate }) => {
                         }
                       >
                         {/* <CommonBtn text={'Enroll Now'} /> */}
-                        <EnrollBtn text={'Enroll Now'} buttonAction={ () => handleCTEnrollNowClick({
-              courseTitle: pageDate?.title,
-              fees: pageDate?.fees,
-              timing: pageDate?.timing,
-              tenure: pageDate?.tenure,
-              courseCategory: pageDate?.courseCategory,
-              courseSubType: pageDate?.courseSubType,
-              courseType: pageDate?.courseType,
-              onlineMode: pageDate?.onlineInfo?.courseMode,
-              residentialMode: pageDate?.residentialInfo?.courseMode,
-              nonResidentialMode: pageDate?.nonResidentialInfo?.courseMode,
-              residentialLocation: pageDate?.residentialInfo?.residentialMode,
-              nonResidentialLocation: pageDate?.nonResidentialInfo?.nonResidentialMode,
-              language: pageDate?.language,
-              category: pageDate?.category,
-              batch: pageDate?.Batch_No,
-              nonResidential: pageDate?.nonResidential,
-              residential: pageDate?.residential,
-              online: pageDate?.online
-            }) } />
+                        <EnrollBtn text={'Enroll Now'} buttonAction={() => {
+                          handleCTEnrollNowClick({
+                            courseTitle: pageDate?.title,
+                            fees: pageDate?.fees,
+                            timing: pageDate?.timing,
+                            tenure: pageDate?.tenure,
+                            courseCategory: pageDate?.courseCategory,
+                            courseSubType: pageDate?.courseSubType,
+                            courseType: pageDate?.courseType,
+                            onlineMode: pageDate?.onlineInfo?.courseMode,
+                            residentialMode: pageDate?.residentialInfo?.courseMode,
+                            nonResidentialMode: pageDate?.nonResidentialInfo?.courseMode,
+                            residentialLocation: pageDate?.residentialInfo?.residentialMode,
+                            nonResidentialLocation: pageDate?.nonResidentialInfo?.nonResidentialMode,
+                            language: pageDate?.language,
+                            category: pageDate?.category,
+                            batch: pageDate?.Batch_No,
+                            nonResidential: pageDate?.nonResidential,
+                            residential: pageDate?.residential,
+                            online: pageDate?.online
+                          });
+                          ReactGA.event('add_to_cart', {
+                            currency: 'INR',
+                            value: pageDate?.fees?.onlineFee ? pageDate?.fees?.onlineFee : (pageDate?.fees?.offlineFee?.nonResidentialFee ? pageDate?.fees?.offlineFee?.nonResidentialFee : pageDate?.fees?.offlineFee?.residentialFee),
+                            items: [{
+                              item_name: pageDate.title,
+                              item_id: pageDate?.courseCategory,
+                              price: pageDate?.fees?.onlineFee ? pageDate?.fees?.onlineFee : (pageDate?.fees?.offlineFee?.nonResidentialFee ? pageDate?.fees?.offlineFee?.nonResidentialFee : pageDate?.fees?.offlineFee?.residentialFee),
+                              quantity: 1
+                            }]
+                          });
+                        }
+
+                        } />
                       </Link>
                     ) : (
                       // scroll()
@@ -600,26 +661,38 @@ const CourseDetails = ({ pageDate }) => {
                         }
                       >
                         {/* <CommonBtn text={'Enroll Now'} /> */}
-                        <EnrollBtn text={'Enroll Now'} buttonAction={() => handleCTEnrollNowClick({
-              courseTitle: pageDate?.title,
-              fees: pageDate?.fees,
-              timing: pageDate?.timing,
-              tenure: pageDate?.tenure,
-              courseCategory: pageDate?.courseCategory,
-              courseSubType: pageDate?.courseSubType,
-              courseType: pageDate?.courseType,
-              onlineMode: pageDate?.onlineInfo?.courseMode,
-              residentialMode: pageDate?.residentialInfo?.courseMode,
-              nonResidentialMode: pageDate?.nonResidentialInfo?.courseMode,
-              residentialLocation: pageDate?.residentialInfo?.residentialMode,
-              nonResidentialLocation: pageDate?.nonResidentialInfo?.nonResidentialMode,
-              language: pageDate?.language,
-              category: pageDate?.category,
-              batch: pageDate?.Batch_No,
-              nonResidential: pageDate?.nonResidential,
-              residential: pageDate?.residential,
-              online: pageDate?.online
-            }) } />
+                        <EnrollBtn text={'Enroll Now'} buttonAction={() => {
+                          handleCTEnrollNowClick({
+                            courseTitle: pageDate?.title,
+                            fees: pageDate?.fees,
+                            timing: pageDate?.timing,
+                            tenure: pageDate?.tenure,
+                            courseCategory: pageDate?.courseCategory,
+                            courseSubType: pageDate?.courseSubType,
+                            courseType: pageDate?.courseType,
+                            onlineMode: pageDate?.onlineInfo?.courseMode,
+                            residentialMode: pageDate?.residentialInfo?.courseMode,
+                            nonResidentialMode: pageDate?.nonResidentialInfo?.courseMode,
+                            residentialLocation: pageDate?.residentialInfo?.residentialMode,
+                            nonResidentialLocation: pageDate?.nonResidentialInfo?.nonResidentialMode,
+                            language: pageDate?.language,
+                            category: pageDate?.category,
+                            batch: pageDate?.Batch_No,
+                            nonResidential: pageDate?.nonResidential,
+                            residential: pageDate?.residential,
+                            online: pageDate?.online
+                          });
+                          ReactGA.event('add_to_cart', {
+                            currency: 'INR',
+                            value: pageDate?.fees?.onlineFee ? pageDate?.fees?.onlineFee : (pageDate?.fees?.offlineFee?.nonResidentialFee ? pageDate?.fees?.offlineFee?.nonResidentialFee : pageDate?.fees?.offlineFee?.residentialFee),
+                            items: [{
+                              item_name: pageDate.title,
+                              item_id: pageDate?.courseCategory,
+                              price: pageDate?.fees?.onlineFee ? pageDate?.fees?.onlineFee : (pageDate?.fees?.offlineFee?.nonResidentialFee ? pageDate?.fees?.offlineFee?.nonResidentialFee : pageDate?.fees?.offlineFee?.residentialFee),
+                              quantity: 1
+                            }]
+                          });
+                        }} />
                       </Link>
                     )
                   ) :
@@ -631,7 +704,20 @@ const CourseDetails = ({ pageDate }) => {
                     }
                   >
                     {/* <CommonBtn text={'Enroll Now'} /> */}
-                    <EnrollBtn text={'Enroll Now'} />
+                    <EnrollBtn text={'Enroll Now'}
+                      buttonAction={() => {
+                        ReactGA.event('add_to_cart', {
+                          currency: 'INR',
+                          value: '',
+                          items: [{
+                            item_name: pageDate?.title,
+                            item_id: pageDate?.courseCategory,
+                            price: '',
+                            quantity: 1
+                          }]
+                        })
+
+                      }} />
                   </Link> :
                     (<div >
                       <div style={{ opacity: '0.4' }}>
@@ -659,19 +745,19 @@ const CourseDetails = ({ pageDate }) => {
                   </small>
                 )} */}
               </div>
-
-              <div className='wrapper_dates'>
-                <span className='date-label-new'>Upcoming Dates:</span> <span className='start-date-glimse'> &nbsp;{startDate} | </span>  &nbsp;
-                <div className='view_wrapper'>
-                <a 
-                onClick={handleOpen}
-                style={{  marginLeft: "0.5px", textDecoration: "underline", cursor: "pointer", display: 'flex', alignItems: 'center' }} >
-                <span className='view_all_dates'>View all </span>
-                <div><img src="/images/Arrow right.svg" alt="" /></div>
-                </a>
+              {(!isRegular && !isSpecialPage) && (
+                <div className='wrapper_dates'>
+                  <span className='date-label-new'>Upcoming Dates:</span> <span className='start-date-glimse'> &nbsp;{startDate} | </span>  &nbsp;
+                  <div className='view_wrapper'>
+                    <a
+                      onClick={handleOpen}
+                      style={{ marginLeft: "0.5px", textDecoration: "underline", cursor: "pointer", display: 'flex', alignItems: 'center' }} >
+                      <span className='view_all_dates'>View all </span>
+                      <div><img src="/images/Arrow right.svg" alt="" /></div>
+                    </a>
+                  </div>
                 </div>
-              </div>
-
+              )}
               {/* <CommonBtn text={'Gift Course'} /> */}
             </div>
 
@@ -692,7 +778,7 @@ const CourseDetails = ({ pageDate }) => {
               <img
                 src={`${baseDomain}${courseAssets.courseAsset2}`}
                 alt="course-image"
-                 loading='lazy'
+                loading='lazy'
               />
             )}
           </div>
@@ -791,23 +877,23 @@ const CourseDetails = ({ pageDate }) => {
         )}
         <div className="details-section " id="refund-policy">
           <h1>Refund Policy</h1>
-          {selectComponent('u-list', { title: '', points: [{ listItem:"The Yoga Institute has a strict no-refund policy for all its programmes. The only exception is if a programme is canceled by the institute, in which case the student will be offered a credit for any other programme or a refund of the event fee.",subItems:[] }] }) }
-          {showDiv && selectComponent('u-list', { title: '', points: [{ listItem:"Enroll today in our online meditation classes and start your journey toward a peaceful and balanced life. Our online meditation courses are designed to make it easier for you to practice regularly. Learn meditation online with the support of our expert instructors and fellow meditators.",subItems:[] }] }) }
+          {selectComponent('u-list', { title: '', points: [{ listItem: "The Yoga Institute has a strict no-refund policy for all its programmes. The only exception is if a programme is canceled by the institute, in which case the student will be offered a credit for any other programme or a refund of the event fee.", subItems: [] }] })}
+          {showDiv && selectComponent('u-list', { title: '', points: [{ listItem: "Enroll today in our online meditation classes and start your journey toward a peaceful and balanced life. Our online meditation courses are designed to make it easier for you to practice regularly. Learn meditation online with the support of our expert instructors and fellow meditators.", subItems: [] }] })}
           {/* {pageDate?.offerings?.map(({ type, content }) => {
             return selectComponent(type, content)
           })} */}
-         
+
         </div>
 
         {showDiv && (
           <div className="details-section " id="refund-policy">
-          <h1>Enroll Now!</h1>
-          <p style={{marginTop:'20px'}}>Feel free to let me know if you&apos;d like further adjustments!</p>
-         
-        </div>
-        ) }
+            <h1>Enroll Now!</h1>
+            <p style={{ marginTop: '20px' }}>Feel free to let me know if you&apos;d like further adjustments!</p>
 
-        
+          </div>
+        )}
+
+
       </div>
 
       {showFixedDiv && (
@@ -827,26 +913,38 @@ const CourseDetails = ({ pageDate }) => {
                     }
                   >
                     {/* <CommonBtn text={'Enroll Now'} /> */}
-                    <EnrollBtn text={'Enroll Now'} buttonAction={() => handleCTEnrollNowClick({
-              courseTitle: pageDate?.title,
-              fees: pageDate?.fees,
-              timing: pageDate?.timing,
-              tenure: pageDate?.tenure,
-              courseCategory: pageDate?.courseCategory,
-              courseSubType: pageDate?.courseSubType,
-              courseType: pageDate?.courseType,
-              onlineMode: pageDate?.onlineInfo?.courseMode,
-              residentialMode: pageDate?.residentialInfo?.courseMode,
-              nonResidentialMode: pageDate?.nonResidentialInfo?.courseMode,
-              residentialLocation: pageDate?.residentialInfo?.residentialMode,
-              nonResidentialLocation: pageDate?.nonResidentialInfo?.nonResidentialMode,
-              language: pageDate?.language,
-              category: pageDate?.category,
-              batch: pageDate?.Batch_No,
-              nonResidential: pageDate?.nonResidential,
-              residential: pageDate?.residential,
-              online: pageDate?.online
-            }) } />
+                    <EnrollBtn text={'Enroll Now'} buttonAction={() => {
+                      handleCTEnrollNowClick({
+                        courseTitle: pageDate?.title,
+                        fees: pageDate?.fees,
+                        timing: pageDate?.timing,
+                        tenure: pageDate?.tenure,
+                        courseCategory: pageDate?.courseCategory,
+                        courseSubType: pageDate?.courseSubType,
+                        courseType: pageDate?.courseType,
+                        onlineMode: pageDate?.onlineInfo?.courseMode,
+                        residentialMode: pageDate?.residentialInfo?.courseMode,
+                        nonResidentialMode: pageDate?.nonResidentialInfo?.courseMode,
+                        residentialLocation: pageDate?.residentialInfo?.residentialMode,
+                        nonResidentialLocation: pageDate?.nonResidentialInfo?.nonResidentialMode,
+                        language: pageDate?.language,
+                        category: pageDate?.category,
+                        batch: pageDate?.Batch_No,
+                        nonResidential: pageDate?.nonResidential,
+                        residential: pageDate?.residential,
+                        online: pageDate?.online
+                      });
+                      ReactGA.event('add_to_cart', {
+                        currency: 'INR',
+                        value: pageDate?.fees?.onlineFee ? pageDate?.fees?.onlineFee : (pageDate?.fees?.offlineFee?.nonResidentialFee ? pageDate?.fees?.offlineFee?.nonResidentialFee : pageDate?.fees?.offlineFee?.residentialFee),
+                        items: [{
+                          item_name: pageDate.title,
+                          item_id: pageDate?.courseCategory,
+                          price: pageDate?.fees?.onlineFee ? pageDate?.fees?.onlineFee : (pageDate?.fees?.offlineFee?.nonResidentialFee ? pageDate?.fees?.offlineFee?.nonResidentialFee : pageDate?.fees?.offlineFee?.residentialFee),
+                          quantity: 1
+                        }]
+                      });
+                    }} />
                   </Link>
                 ) : (
                   // scroll()
@@ -858,26 +956,39 @@ const CourseDetails = ({ pageDate }) => {
                     }
                   >
                     {/* <CommonBtn text={'Enroll Now'} /> */}
-                    <EnrollBtn text={'Enroll Now'} buttonAction={() => handleCTEnrollNowClick({
-              courseTitle: pageDate?.title,
-              fees: pageDate?.fees,
-              timing: pageDate?.timing,
-              tenure: pageDate?.tenure,
-              courseCategory: pageDate?.courseCategory,
-              courseSubType: pageDate?.courseSubType,
-              courseType: pageDate?.courseType,
-              onlineMode: pageDate?.onlineInfo?.courseMode,
-              residentialMode: pageDate?.residentialInfo?.courseMode,
-              nonResidentialMode: pageDate?.nonResidentialInfo?.courseMode,
-              residentialLocation: pageDate?.residentialInfo?.residentialMode,
-              nonResidentialLocation: pageDate?.nonResidentialInfo?.nonResidentialMode,
-              language: pageDate?.language,
-              category: pageDate?.category,
-              batch: pageDate?.Batch_No,
-              nonResidential: pageDate?.nonResidential,
-              residential: pageDate?.residential,
-              online: pageDate?.online
-            }) }  />
+                    <EnrollBtn text={'Enroll Now'} buttonAction={() => {
+                      handleCTEnrollNowClick({
+                        courseTitle: pageDate?.title,
+                        fees: pageDate?.fees,
+                        timing: pageDate?.timing,
+                        tenure: pageDate?.tenure,
+                        courseCategory: pageDate?.courseCategory,
+                        courseSubType: pageDate?.courseSubType,
+                        courseType: pageDate?.courseType,
+                        onlineMode: pageDate?.onlineInfo?.courseMode,
+                        residentialMode: pageDate?.residentialInfo?.courseMode,
+                        nonResidentialMode: pageDate?.nonResidentialInfo?.courseMode,
+                        residentialLocation: pageDate?.residentialInfo?.residentialMode,
+                        nonResidentialLocation: pageDate?.nonResidentialInfo?.nonResidentialMode,
+                        language: pageDate?.language,
+                        category: pageDate?.category,
+                        batch: pageDate?.Batch_No,
+                        nonResidential: pageDate?.nonResidential,
+                        residential: pageDate?.residential,
+                        online: pageDate?.online
+                      });
+                      ReactGA.event('add_to_cart', {
+                        currency: 'INR',
+                        value: pageDate?.fees?.onlineFee ? pageDate?.fees?.onlineFee : (pageDate?.fees?.offlineFee?.nonResidentialFee ? pageDate?.fees?.offlineFee?.nonResidentialFee : pageDate?.fees?.offlineFee?.residentialFee),
+                        items: [{
+                          item_name: pageDate.title,
+                          item_id: pageDate?.courseCategory,
+                          price: pageDate?.fees?.onlineFee ? pageDate?.fees?.onlineFee : (pageDate?.fees?.offlineFee?.nonResidentialFee ? pageDate?.fees?.offlineFee?.nonResidentialFee : pageDate?.fees?.offlineFee?.residentialFee),
+                          quantity: 1
+                        }]
+                      });
+                    }
+                    } />
                   </Link>
                 )
               ) :
@@ -889,50 +1000,76 @@ const CourseDetails = ({ pageDate }) => {
                 }
               >
                 {/* <CommonBtn text={'Enroll Now'} /> */}
-                <EnrollBtn text={'Enroll Now'} buttonAction={() => handleCTEnrollNowClick({
-              courseTitle: pageDate?.title,
-              fees: pageDate?.fees,
-              timing: pageDate?.timing,
-              tenure: pageDate?.tenure,
-              courseCategory: pageDate?.courseCategory,
-              courseSubType: pageDate?.courseSubType,
-              courseType: pageDate?.courseType,
-              onlineMode: pageDate?.onlineInfo?.courseMode,
-              residentialMode: pageDate?.residentialInfo?.courseMode,
-              nonResidentialMode: pageDate?.nonResidentialInfo?.courseMode,
-              residentialLocation: pageDate?.residentialInfo?.residentialMode,
-              nonResidentialLocation: pageDate?.nonResidentialInfo?.nonResidentialMode,
-              language: pageDate?.language,
-              category: pageDate?.category,
-              batch: pageDate?.Batch_No,
-              nonResidential: pageDate?.nonResidential,
-              residential: pageDate?.residential,
-              online: pageDate?.online
-            }) } />
+                <EnrollBtn text={'Enroll Now'} buttonAction={() => {
+                  handleCTEnrollNowClick({
+                    courseTitle: pageDate?.title,
+                    fees: pageDate?.fees,
+                    timing: pageDate?.timing,
+                    tenure: pageDate?.tenure,
+                    courseCategory: pageDate?.courseCategory,
+                    courseSubType: pageDate?.courseSubType,
+                    courseType: pageDate?.courseType,
+                    onlineMode: pageDate?.onlineInfo?.courseMode,
+                    residentialMode: pageDate?.residentialInfo?.courseMode,
+                    nonResidentialMode: pageDate?.nonResidentialInfo?.courseMode,
+                    residentialLocation: pageDate?.residentialInfo?.residentialMode,
+                    nonResidentialLocation: pageDate?.nonResidentialInfo?.nonResidentialMode,
+                    language: pageDate?.language,
+                    category: pageDate?.category,
+                    batch: pageDate?.Batch_No,
+                    nonResidential: pageDate?.nonResidential,
+                    residential: pageDate?.residential,
+                    online: pageDate?.online
+                  });
+                  ReactGA.event('add_to_cart', {
+                    currency: 'INR',
+                    value: pageDate?.fees?.onlineFee ? pageDate?.fees?.onlineFee : (pageDate?.fees?.offlineFee?.nonResidentialFee ? pageDate?.fees?.offlineFee?.nonResidentialFee : pageDate?.fees?.offlineFee?.residentialFee),
+                    items: [{
+                      item_name: pageDate.title,
+                      item_id: pageDate?.courseCategory,
+                      price: pageDate?.fees?.onlineFee ? pageDate?.fees?.onlineFee : (pageDate?.fees?.offlineFee?.nonResidentialFee ? pageDate?.fees?.offlineFee?.nonResidentialFee : pageDate?.fees?.offlineFee?.residentialFee),
+                      quantity: 1
+                    }]
+                  });
+
+                }} />
               </Link> :
                 (<div >
                   <div style={{ opacity: '0.4' }}>
                     {/* <CommonBtn text={'Enroll Now'} /> */}
-                    <EnrollBtn text={'Enroll Now'} buttonAction={() => handleCTEnrollNowClick({
-              courseTitle: pageDate?.title,
-              fees: pageDate?.fees,
-              timing: pageDate?.timing,
-              tenure: pageDate?.tenure,
-              courseCategory: pageDate?.courseCategory,
-              courseSubType: pageDate?.courseSubType,
-              courseType: pageDate?.courseType,
-              onlineMode: pageDate?.onlineInfo?.courseMode,
-              residentialMode: pageDate?.residentialInfo?.courseMode,
-              nonResidentialMode: pageDate?.nonResidentialInfo?.courseMode,
-              residentialLocation: pageDate?.residentialInfo?.residentialMode,
-              nonResidentialLocation: pageDate?.nonResidentialInfo?.nonResidentialMode,
-              language: pageDate?.language,
-              category: pageDate?.category,
-              batch: pageDate?.Batch_No,
-              nonResidential: pageDate?.nonResidential,
-              residential: pageDate?.residential,
-              online: pageDate?.online
-            }) } />
+                    <EnrollBtn text={'Enroll Now'}
+                      buttonAction={() => {
+                        handleCTEnrollNowClick({
+                          courseTitle: pageDate?.title,
+                          fees: pageDate?.fees,
+                          timing: pageDate?.timing,
+                          tenure: pageDate?.tenure,
+                          courseCategory: pageDate?.courseCategory,
+                          courseSubType: pageDate?.courseSubType,
+                          courseType: pageDate?.courseType,
+                          onlineMode: pageDate?.onlineInfo?.courseMode,
+                          residentialMode: pageDate?.residentialInfo?.courseMode,
+                          nonResidentialMode: pageDate?.nonResidentialInfo?.courseMode,
+                          residentialLocation: pageDate?.residentialInfo?.residentialMode,
+                          nonResidentialLocation: pageDate?.nonResidentialInfo?.nonResidentialMode,
+                          language: pageDate?.language,
+                          category: pageDate?.category,
+                          batch: pageDate?.Batch_No,
+                          nonResidential: pageDate?.nonResidential,
+                          residential: pageDate?.residential,
+                          online: pageDate?.online
+                        });
+                        ReactGA.event('add_to_cart', {
+                          currency: 'INR',
+                          value: pageDate?.fees?.onlineFee ? pageDate?.fees?.onlineFee : (pageDate?.fees?.offlineFee?.nonResidentialFee ? pageDate?.fees?.offlineFee?.nonResidentialFee : pageDate?.fees?.offlineFee?.residentialFee),
+                          items: [{
+                            item_name: pageDate.title,
+                            item_id: pageDate?.courseCategory,
+                            price: pageDate?.fees?.onlineFee ? pageDate?.fees?.onlineFee : (pageDate?.fees?.offlineFee?.nonResidentialFee ? pageDate?.fees?.offlineFee?.nonResidentialFee : pageDate?.fees?.offlineFee?.residentialFee),
+                            quantity: 1
+                          }]
+                        });
+                      }} />
                   </div>
                   <div style={{ fontSize: '1.5rem', padding: '1.5rem' }}>No dates available for this course</div>
                 </div>)
