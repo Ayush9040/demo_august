@@ -116,10 +116,39 @@ const OnlineTution = () => {
     console.log(blogData, 'blog')
     console.log(AllCourses, 'all')
   }
+  const [isPageReady, setIsPageReady] = useState(false);
+
+
+  useEffect(() => {
+    if (isPageReady) {
+      ReactGA.event('view_item', {
+        currency: 'INR',
+        value: 0,
+        items: [{
+          item_name: 'Online Home Tuition (Yoga Tuition)',
+          item_id: 'Online Home Tuition (Yoga Tuition)',
+          price: 0,
+          quantity: 1
+        }]
+      });
+      console.log({
+        currency: 'INR',
+        value: 0,
+        items: [{
+          item_name: 'Online Home Tuition (Yoga Tuition)',
+          item_id: 'Online Home Tuition (Yoga Tuition)',
+          price: 0,
+          quantity: 1
+        }]
+      })
+    }
+  }, [isPageReady]);
 
   useEffect(() => {
     parsingAlgo()
     scrollTo(0, 0)
+    setIsPageReady(true);
+
   }, [])
   console.log(metaData) //eslint-disable-line
 

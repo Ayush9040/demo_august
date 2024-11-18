@@ -28,9 +28,38 @@ const CourseDetails = ({ pageDate }) => {
 
   // const [courseDate, setCourseDate] = useState()
 
-  // useEffect(() => {
-  //   setCourseDate(localStorage.getItem('selectedDate'))
-  // }, [])
+  const [isPageReady, setIsPageReady] = useState(false);
+
+  useEffect(() => {
+    if (pageDate?.title) {
+      setIsPageReady(true);
+    }
+  }, [pageDate?.title]);
+
+  useEffect(() => {
+    if (isPageReady) {
+      ReactGA.event('view_item', {
+        currency: 'INR',
+        value: pageDate?.fees?.onlineFee ? pageDate?.fees?.onlineFee : (pageDate?.fees?.offlineFee?.nonResidentialFee ? pageDate?.fees?.offlineFee?.nonResidentialFee : pageDate?.fees?.offlineFee?.residentialFee),
+        items: [{
+          item_name: pageDate.title,
+          item_id: pageDate?.courseCategory?pageDate?.courseCategory:pageDate.title,
+          price: pageDate?.fees?.onlineFee ? pageDate?.fees?.onlineFee : (pageDate?.fees?.offlineFee?.nonResidentialFee ? pageDate?.fees?.offlineFee?.nonResidentialFee : pageDate?.fees?.offlineFee?.residentialFee),
+          quantity: 1
+        }]
+      });
+      console.log({
+        currency: 'INR',
+        value: pageDate?.fees?.onlineFee ? pageDate?.fees?.onlineFee : (pageDate?.fees?.offlineFee?.nonResidentialFee ? pageDate?.fees?.offlineFee?.nonResidentialFee : pageDate?.fees?.offlineFee?.residentialFee),
+        items: [{
+          item_name: pageDate.title,
+          item_id: pageDate?.courseCategory?pageDate?.courseCategory:pageDate.title,
+          price: pageDate?.fees?.onlineFee ? pageDate?.fees?.onlineFee : (pageDate?.fees?.offlineFee?.nonResidentialFee ? pageDate?.fees?.offlineFee?.nonResidentialFee : pageDate?.fees?.offlineFee?.residentialFee),
+          quantity: 1
+        }]
+      })
+    }
+  }, [isPageReady]);
   const { isLoggedIn } = useSelector((state) => state.auth)
   const [selectDate, setSetselectDate] = useState('null')
   const [showFixedDiv, setShowFixedDiv] = useState(false);
@@ -106,6 +135,7 @@ const CourseDetails = ({ pageDate }) => {
     setSetselectDate(Params.get('date'))
 
     window.scrollTo(0, 0)
+
     console.log(pageDate?.key, 'heoo')
     // {Params.get('date')===null? window.scrollTo(0, 0): document.getElementById('date-select').scrollIntoView()}
   }, [])
@@ -244,16 +274,6 @@ const CourseDetails = ({ pageDate }) => {
         "date_time_timestamp": new Date().toISOString()
       });
 
-      ReactGA.event('view_item', {
-        currency: 'INR',
-        value: pageDate?.fees?.onlineFee ? pageDate?.fees?.onlineFee : (pageDate?.fees?.offlineFee?.nonResidentialFee ? pageDate?.fees?.offlineFee?.nonResidentialFee : pageDate?.fees?.offlineFee?.residentialFee),
-        items: [{
-          item_name: pageDate.title,
-          item_id: pageDate?.courseCategory,
-          price: pageDate?.fees?.onlineFee ? pageDate?.fees?.onlineFee : (pageDate?.fees?.offlineFee?.nonResidentialFee ? pageDate?.fees?.offlineFee?.nonResidentialFee : pageDate?.fees?.offlineFee?.residentialFee),
-          quantity: 1
-        }]
-      });
 
       console.log('Course Viewed Event', pageDate, extractedKey);
 
@@ -293,6 +313,7 @@ const CourseDetails = ({ pageDate }) => {
     ]
     const isMatch = array.includes(pageDate?.title);
     setIsRegular(isMatch);
+
     // localStorage.setItem('isRegular', isMatch)
     // const tomorrow = new Date();
     // tomorrow.setDate(tomorrow.getDate() + 1);
@@ -488,6 +509,7 @@ const CourseDetails = ({ pageDate }) => {
 
       // Update the state with day and short month
       setStartDate(`${day} ${shortMonth}`);
+
     }
   }, [pageDate]);
 

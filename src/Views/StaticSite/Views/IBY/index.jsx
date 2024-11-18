@@ -18,9 +18,36 @@ import SelectDropDown from '../../Components/Select Dropdown'
 import ReactGA from 'react-ga4';
 
 const IBYcourse = () => {
+  const [isPageReady, setIsPageReady] = useState(false);
+
+  useEffect(() => {
+    if (isPageReady) {
+      ReactGA.event('view_item', {
+        currency: 'INR',
+        value: 625,
+        items: [{
+          item_name: 'IBY CLASS',
+          item_id: 'Teachers Practice',
+          price: 625,
+          quantity: 1
+        }]
+      });
+      console.log({
+        currency: 'INR',
+        value: 625,
+        items: [{
+          item_name: 'IBY CLASS',
+          item_id: 'Teachers Practice',
+          price: 625,
+          quantity: 1
+        }]
+      })
+    }
+  }, [isPageReady]);
 
   useEffect(() => {
     scrollTo(0, 0)
+      setIsPageReady(true);
   }, [])
 
   const [openForm, setOpenForm] = useState(false)
@@ -138,7 +165,7 @@ const IBYcourse = () => {
         quantity: 1
       }]
     });
-   
+
   }
   const date = () => {
     if (selectBatch === '') {
@@ -201,6 +228,7 @@ const IBYcourse = () => {
       // "Batch_No": pageDate?.batch,
       "date_time_timestamp": new Date().toISOString()
     });
+
     // }
     // console.log('Course Viewed Event', pageDate, extractedKey);
 
