@@ -32,15 +32,12 @@ const customStyles = {
 const EditStudent = ({ isShippingModalOpen, setIsShipppingModalOpen, formData, setFormData, setEmpty, empty, currentCourse, dateDurationChange,handleSubmit, setUpdateAddress, setDefaultAddress }) => {
 
   function closeModal() {
+    setEmpty(0);
     setIsShipppingModalOpen(false)
   }
   function saveAndASubmit(){
     handleSubmit()
   }
-
-  const resetSetEmpty = () => {
-    setEmpty(0);
-  };
 
   return (
     <div className='bg_date'>
@@ -74,7 +71,7 @@ const EditStudent = ({ isShippingModalOpen, setIsShipppingModalOpen, formData, s
 
           </div>
           <div className="modal-content" style={{ gridTemplateColumns: '1fr', marginTop: '0rem' }}>
-            {<EditStudentView formData={formData} setFormData={setFormData} setEmpty={setEmpty} empty={empty} currentCourse={currentCourse} dateDurationChange={dateDurationChange} closeModal={closeModal} saveAndASubmit={saveAndASubmit} setUpdateAddress={setUpdateAddress} setDefaultAddress={setDefaultAddress} onOpen={resetSetEmpty} />}
+            {<EditStudentView formData={formData} setFormData={setFormData} setEmpty={setEmpty} empty={empty} currentCourse={currentCourse} dateDurationChange={dateDurationChange} closeModal={closeModal} saveAndASubmit={saveAndASubmit} setUpdateAddress={setUpdateAddress} setDefaultAddress={setDefaultAddress} />}
             {/* <div>
               <input
                 className="modal-input"
