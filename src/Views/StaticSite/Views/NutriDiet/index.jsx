@@ -93,7 +93,7 @@ const NutriDiet = () => {
       }
     }
   }
-  const updateGA4 = (amnt,program) => {
+  const updateGA4 = (amnt, program) => {
     ReactGA.event('add_to_cart', {
       currency: 'INR',
       value: amnt,
@@ -104,7 +104,7 @@ const NutriDiet = () => {
         quantity: 1
       }]
     });
-    
+
   }
   const enrollFrom = () => {
     if (plan === '' || program === '') {
@@ -113,7 +113,7 @@ const NutriDiet = () => {
       switch (plan) {
         case '1 month':
           setPrice(3999); setErr(false); setOpenForm(true)
-          updateGA4(3999,program)
+          updateGA4(3999, program)
           // handleCTEnquireNutriDietInitiated({
           //   Name: '',
           // Email_ID: '',
@@ -129,7 +129,7 @@ const NutriDiet = () => {
           break
         case '3 months':
           setPrice(8999); setErr(false); setOpenForm(true)
-          updateGA4(8999,program)
+          updateGA4(8999, program)
           // handleCTEnquireNutriDietInitiated({
           //   Name: '',
           // Email_ID: '',
@@ -145,7 +145,7 @@ const NutriDiet = () => {
           break
         case '6 months':
           setPrice(13999); setErr(false); setOpenForm(true)
-          updateGA4(13999,program)
+          updateGA4(13999, program)
           // handleCTEnquireNutriDietInitiated({
           //   Name: '',
           // Email_ID: '',
@@ -239,10 +239,13 @@ const NutriDiet = () => {
     console.log(blogData, 'blog')
     console.log(AllCourses, 'all')
   }
+  const [isPageReady, setIsPageReady] = useState(false);
 
   useEffect(() => {
     parsingAlgo()
     scrollTo(0, 0)
+    setIsPageReady(true);
+
   }, [])
   useEffect(() => {
     if (openForm) {
@@ -252,6 +255,32 @@ const NutriDiet = () => {
       document.body.style.overflow = 'auto'
     }
   }, [openForm])
+
+  useEffect(() => {
+    if (isPageReady) {
+      ReactGA.event('view_item', {
+        currency: 'INR',
+        value: 0,
+        items: [{
+          item_name: 'Nutri Diet Clinic',
+          item_id: 'Nutri Diet Clinic',
+          price: 0,
+          quantity: 1
+        }]
+      });
+      console.log({
+        currency: 'INR',
+        value: 0,
+        items: [{
+          item_name: 'Nutri Diet Clinic',
+          item_id: 'Nutri Diet Clinic',
+          price: 0,
+          quantity: 1
+        }]
+      })
+    }
+  }, [isPageReady]);
+
   const options = ['1 month', '3 months', '6 months']
   const options1 = ['Shape up', 'Hormonal imbalance diet', 'Gut Health', 'Metabolic disorder', 'Pregnancy/lactation', 'Therapeutic', 'Other types', 'Nutrition for kids', 'Clinical Plans']
 

@@ -118,7 +118,7 @@ const EnrollmentForm = ({
 
   const [selectDateValue, setSelectDateValue] = useState(values.selectDate);
   const [setDate, setSetDate] = useState(false)
-  const isSatsangPage = location.pathname === '/enrollment/satsang';
+  const isSatsangPage = location.pathname === '/enrollment/satsang' || location.pathname === '/enrollment/samattvam';
 
   const nameFromRedux = useSelector((state) => state.auth.user.data?.firstName);
   const lastnameFromRedux = useSelector((state) => state.auth.user.data?.lastName);

@@ -513,7 +513,7 @@ const Enrollment = () => {
               await axios.post(`${authBaseDomain}/ali/mail`, mailTemplate);
               navigate('/satsang_thankyou')
             } else if (currentCourse.key === 'samattvam') {
-              await axios.post(`${authBaseDomain}/ali/mail`, mailTemplate)
+              // await axios.post(`${authBaseDomain}/ali/mail`, mailTemplate)
               navigate('/samattvam_thankyou')
             } else if (localStorage.getItem('isResidential') == 'true') {//only for residential course without payment navigate to success screen
               navigate(`/enrollment_submitted/${currentCourse.key}`)
@@ -560,6 +560,7 @@ const Enrollment = () => {
     ]
     console.log("form data from sdate ", formData.sdate)
     const isMatch = array.includes(currentCourse?.title);
+    
     console.log("isMatchhhhhh ", isMatch)
     if (e && e.preventDefault) {
       e.preventDefault();
@@ -614,7 +615,7 @@ const Enrollment = () => {
       // alert(formData.startDate)
       
       setEmpty(21)
-    } else if (formData.sdate === '') {
+    } else if (formData.sdate === '' || formData.sdate === 'No date Selected') {
       // alert("8")
       setEmpty(18)
     }

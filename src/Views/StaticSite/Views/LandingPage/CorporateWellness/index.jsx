@@ -34,6 +34,32 @@ const corporateWellness = () => {
   const phoneNumberFromRedux = useSelector((state) => state.auth.user.data?.phoneNumber);
   const emailFromRedux = useSelector((state) => state.auth.user.data?.email);
   const companyNameFromRedux = useSelector((state) => state.auth.user.data?.company);
+  const [isPageReady, setIsPageReady] = useState(false);
+
+  useEffect(() => {
+    if (isPageReady) {
+      ReactGA.event('view_item', {
+        currency: 'INR',
+        value: 0,
+        items: [{
+          item_name: 'Corporate Workshops',
+          item_id: 'Corporate Workshops',
+          price: 0,
+          quantity: 1
+        }]
+      });
+      console.log({
+        currency: 'INR',
+        value: 0,
+        items: [{
+          item_name: 'Corporate Workshops',
+          item_id: 'Corporate Workshops',
+          price: 0,
+          quantity: 1
+        }]
+      })
+    }
+  }, [isPageReady]);
 
   useEffect(() => {
     if (nameFromRedux) {
@@ -48,13 +74,15 @@ const corporateWellness = () => {
     if (companyNameFromRedux) {
       setFormData((prev) => ({ ...prev, company: companyNameFromRedux }));
     }
+    setIsPageReady(true);
+
   }, [nameFromRedux, phoneNumberFromRedux, emailFromRedux, companyNameFromRedux, setFormData]);
 
   const handleMessageChange = (e) => {
     setFormData({ ...formData, message: e.target.value })
   }
 
-  const handleSubmit = async(e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
     try {
       await CreateForm({
@@ -84,11 +112,11 @@ const corporateWellness = () => {
       })
 
       handleCTCorporateYogaSubmitEvent({
-        email: formData.email, 
-        contact: formData.contact, 
-        designation: formData.designation, 
-        companyName: formData.company, 
-        message: formData.message, 
+        email: formData.email,
+        contact: formData.contact,
+        designation: formData.designation,
+        companyName: formData.company,
+        message: formData.message,
         status: "Success"
       })
       ReactGA.event('add_to_cart', {
@@ -115,11 +143,11 @@ const corporateWellness = () => {
     } catch (error) {
       console.log(error)
       handleCTCorporateYogaSubmitEvent({
-        email: formData.email, 
-        contact: formData.contact, 
-        designation: formData.designation, 
-        companyName: formData.company, 
-        message: formData.message, 
+        email: formData.email,
+        contact: formData.contact,
+        designation: formData.designation,
+        companyName: formData.company,
+        message: formData.message,
         status: "Fail"
       })
     }
@@ -136,7 +164,7 @@ const corporateWellness = () => {
   }
 
   let description =
-  'Revolutionize Your Corporate Wellness Culture. Focused on building a healthier, happier and more productive workforce !'
+    'Revolutionize Your Corporate Wellness Culture. Focused on building a healthier, happier and more productive workforce !'
 
   const CorporateWellessProgram = {
     title: 'Holistic Workplace Wellness Program',
@@ -146,17 +174,17 @@ const corporateWellness = () => {
   }
 
 
-//   useEffect(() => {
-//     // Trigger the CleverTap event when the component loads
-//     handleCTCorporateYogaInitiated({
-//       emailId: emailFromRedux, 
-//       dateTime: '', 
-//       contact: phoneNumberFromRedux,
-//       designation: '', 
-//       companyName: companyNameFromRedux, 
-//       message: ''
-//     })
-// }, []);
+  //   useEffect(() => {
+  //     // Trigger the CleverTap event when the component loads
+  //     handleCTCorporateYogaInitiated({
+  //       emailId: emailFromRedux, 
+  //       dateTime: '', 
+  //       contact: phoneNumberFromRedux,
+  //       designation: '', 
+  //       companyName: companyNameFromRedux, 
+  //       message: ''
+  //     })
+  // }, []);
 
   return (
     <>
@@ -371,7 +399,7 @@ const corporateWellness = () => {
             />
           )}
         </div>
-        
+
         <div className="wellness-support-features">
           <h1 className="wellness1">What Makes Our </h1>
           <h1 className="wellness2">Corporate Wellness Programs Unique?</h1>
