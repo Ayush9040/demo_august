@@ -848,14 +848,14 @@ const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse
       "Weekend Yoga Asana Classes - (Men & Women) - Online",
       "Children's Yoga Classes (Regular) - On Campus",
       "Children's Weekend Yoga Class - On Campus",
-      // "Advanced Yoga Asana Regular Class - Online (Only for TYI Teachers)",
-      // "Regular Pregnancy Yoga Classes - Online & On Campus",
-      // "Advanced Yoga Asana Regular Class - Online (Only for TYI Teachers)",
-      // "Healing Yoga Movement & Rhythm - Online",
-      //  "Yog Prayas - Online",
-      // "Online Meditation Course  (Foundation Course)", 
-      // "Regular Online Meditation Classes", 
-      // "Couples’ Yoga Classes  - Online"
+      "Advanced Yoga Asana Regular Class - Online (Only for TYI Teachers)",
+      "Regular Pregnancy Yoga Classes - Online & On Campus",
+      "Advanced Yoga Asana Regular Class - Online (Only for TYI Teachers)",
+      "Healing Yoga Movement & Rhythm - Online",
+       "Yog Prayas - Online",
+      "Online Meditation Course  (Foundation Course)", 
+      "Regular Online Meditation Classes", 
+      "Couples’ Yoga Classes  - Online"
     ]
     const isMatch = array.includes(currentCourse?.title);
     setIsRegular(isMatch);

@@ -143,7 +143,8 @@ const Enrollment = () => {
       ...prevData,
       fees: {
         ...prevData.fees,
-        onlineFee: newAmnt
+        onlineFee: newAmnt,
+        nonResidentialFee: newAmnt,
       }
     }));
     setCourseFee(newAmnt)
@@ -153,6 +154,7 @@ const Enrollment = () => {
   const setEndDate = (months, startDate) => {
     let endDate = formatDate(addMonths(parseDate(startDate), months))
     // console.log(endDate);
+    // alert(endDate)
 
     // setFormData({ ...formData, endDate: endDate })
     let originalFee = AllCourses.find((item) => item.key === courseId)
@@ -165,12 +167,14 @@ const Enrollment = () => {
       ...prevData,
       fees: {
         ...prevData.fees,
-        onlineFee: newAmnt
+        onlineFee: newAmnt,
+        nonResidentialFee: newAmnt,
       }
     }));
     setFormData((prev) => {
       return { ...prev, endDateFormat: endDate }
     })
+    // alert(endDate)
     setCourseFee(newAmnt)
   }
   // Function to add months to a given date
@@ -258,7 +262,8 @@ const Enrollment = () => {
           nationality: formData.nationality,
         },
         startDate: formData.startDate,
-        endDate: formData.endDateFormat,
+        // endDate: formData.endDateFormat,
+        endDate: localStorage.getItem('courseEndDate') ? localStorage.getItem('courseEndDate') : null,
         academicQualification: qualificationData,
         workExperience: listData,
         others: {
@@ -641,9 +646,9 @@ const Enrollment = () => {
       setEmpty(20)
     }
     else {
-      // alert("13")
+      // alert(formData.endDate)
       if (localStorage.getItem('isRegular') == 'true') {//end date caculate for Regular courses 
-        setEndDate(formData.endDate?.value, formData.startDate)
+        setEndDate(formData.endDate, formData.startDate)
       }
       handleSubmit1();
       handleCTProccedToPayment({
