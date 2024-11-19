@@ -27,6 +27,8 @@ const Enrollment = () => {
   const [isEditStudentOpen, setEditStudentOpen] = useState(false);
   const addressLine1 = useSelector((state) => state.auth.user.data?.addressLine1);
   const pincodeFromRedux = useSelector((state) => state.auth.user.data?.pincode);
+  const countryFromRedux = useSelector((state) => state.auth.user.data?.country);
+  const stateFromRedux = useSelector((state) => state.auth.user.data?.state);
 
   useEffect(() => {
     let currentCrs = AllCourses.find((item) => item.key === courseId)
@@ -195,6 +197,8 @@ const Enrollment = () => {
 
     localStorage.setItem('addressDataNew', JSON.stringify({
       address1: addressLine1 || '',
+      country: countryFromRedux || '',
+      state: stateFromRedux || '',
       pincode: pincodeFromRedux || ''
 
     }));

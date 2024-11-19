@@ -540,6 +540,18 @@ const EnrollmentForm = ({
     return address?.pincode;
   }
 
+  const getCountry = () => {
+    let address = JSON.parse(localStorage.getItem('addressDataNew'))
+    // setUpdateAddress1(address?.address1);
+    return address?.country;
+  }
+
+  const getState = () => {
+    let address = JSON.parse(localStorage.getItem('addressDataNew'))
+    // setUpdateAddress1(address?.address1);
+    return address?.state;
+  }
+
 
 
 
@@ -1205,9 +1217,9 @@ const EnrollmentForm = ({
                     {/* {getAddress()} */}
                   {getAddress()}
                     {getAddress() && <>, </>}
-                    {formData?.state}
-                    {formData?.country && <>, </>}
-                    {formData?.country}
+                    {getState()}
+                    {getCountry() && <>, </>}
+                    {getCountry()}
                     {getPincode() && <> - </>}
                     {getPincode()}
                     {/* {`${formData?.address1}, ${formData?.state}, ${formData?.country} - ${formData?.pincode}`} */}

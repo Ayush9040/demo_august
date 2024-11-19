@@ -365,21 +365,23 @@ const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse
   }, [phoneNumberFromRedux]);
 
   useEffect(() => {
+    // alert(formData.country)
     if (countryFromRedux) {
       setFormData2((prev) => ({ ...prev, country: formData.country }));
-      setValues((prev) => ({ ...prev, country: { label: countryFromRedux, value: countryFromRedux } }));
-      const countryData = Country.getAllCountries().find(country => country.name === countryFromRedux)
+      setValues((prev) => ({ ...prev, country: { label: formData.country, value: formData.country } }));
+      const countryData = Country.getAllCountries().find(country => country.name === formData.country)
       // console.log(countryData)
       setIsoCode(countryData.isoCode)
     }
+    // alert(formData.state)
     if (stateFromRedux) {
       setFormData2((prev) => ({ ...prev, state: formData.state }));
-      setValues((prev) => ({ ...prev, state: { label: stateFromRedux, value: stateFromRedux } }));
+      setValues((prev) => ({ ...prev, state: { label: formData.state, value: formData.state } }));
     }
     if (cityFromRedux) {
       // console.log('cityFromRedux inside State ', cityFromRedux);
       setFormData2((prev) => ({ ...prev, city: formData.city }));
-      setValues((prev) => ({ ...prev, city: { label: cityFromRedux, value: cityFromRedux } }));
+      setValues((prev) => ({ ...prev, city: { label: formData.city, value: formData.city } }));
     }
 
 
@@ -429,7 +431,7 @@ const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse
       // Get all cities and find the one that matches the city in Redux
       //   console.log('cityFromRedux inside State ', cityFromRedux);
       const cities = City.getAllCities();
-      const matchedCity = cities.find(city => city.name.toLowerCase() === cityFromRedux.toLowerCase());
+      const matchedCity = cities.find(city => city.name.toLowerCase() === formData.city.toLowerCase());
       //   console.log('matched city ', matchedCity);
 
       if (matchedCity) {
@@ -1096,6 +1098,8 @@ const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse
       }));
       localStorage.setItem('addressDataNew', JSON.stringify({
         address1: formData2?.address1,
+        country: formData2?.country,
+        state: formData2?.state,
         pincode: formData2?.pincode
   
       }));
