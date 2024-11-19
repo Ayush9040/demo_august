@@ -315,6 +315,8 @@ const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse
 
   const nameFromRedux = useSelector((state) => state.auth.user.data?.firstName);
 
+
+
   //   console.log("nameFromRedux from profile ", nameFromRedux);
   //   console.log("emailFromRedux from profile 22222 ", emailFromRedux);
 
@@ -363,21 +365,23 @@ const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse
   }, [phoneNumberFromRedux]);
 
   useEffect(() => {
+    // alert(formData.country)
     if (countryFromRedux) {
       setFormData2((prev) => ({ ...prev, country: formData.country }));
-      setValues((prev) => ({ ...prev, country: { label: countryFromRedux, value: countryFromRedux } }));
-      const countryData = Country.getAllCountries().find(country => country.name === countryFromRedux)
+      setValues((prev) => ({ ...prev, country: { label: formData.country, value: formData.country } }));
+      const countryData = Country.getAllCountries().find(country => country.name === formData.country)
       // console.log(countryData)
       setIsoCode(countryData.isoCode)
     }
+    // alert(formData.state)
     if (stateFromRedux) {
       setFormData2((prev) => ({ ...prev, state: formData.state }));
-      setValues((prev) => ({ ...prev, state: { label: stateFromRedux, value: stateFromRedux } }));
+      setValues((prev) => ({ ...prev, state: { label: formData.state, value: formData.state } }));
     }
     if (cityFromRedux) {
       // console.log('cityFromRedux inside State ', cityFromRedux);
       setFormData2((prev) => ({ ...prev, city: formData.city }));
-      setValues((prev) => ({ ...prev, city: { label: cityFromRedux, value: cityFromRedux } }));
+      setValues((prev) => ({ ...prev, city: { label: formData.city, value: formData.city } }));
     }
 
 
@@ -427,7 +431,7 @@ const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse
       // Get all cities and find the one that matches the city in Redux
       //   console.log('cityFromRedux inside State ', cityFromRedux);
       const cities = City.getAllCities();
-      const matchedCity = cities.find(city => city.name.toLowerCase() === cityFromRedux.toLowerCase());
+      const matchedCity = cities.find(city => city.name.toLowerCase() === formData.city.toLowerCase());
       //   console.log('matched city ', matchedCity);
 
       if (matchedCity) {
@@ -992,9 +996,9 @@ const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse
     console.log('formData from Save ', formData)
 
     if (
-      formData2.name === '' ||
-      formData2.name === undefined ||
-      formData2.name === null
+      formData2.name.trim() === '' ||
+      formData2.name.trim() === undefined ||
+      formData2.name.trim() === null
     ) {
       // alert("1")
 
@@ -1094,6 +1098,8 @@ const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse
       }));
       localStorage.setItem('addressDataNew', JSON.stringify({
         address1: formData2?.address1,
+        country: formData2?.country,
+        state: formData2?.state,
         pincode: formData2?.pincode
   
       }));
@@ -1173,7 +1179,13 @@ const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse
               type="text"
               placeholder="First Name*"
               form={formData2}
-              setField={setFormData2}
+              setField={(newForm) => {
+                const keyName = "name"; // Specify the key
+                const newValue = newForm[keyName]
+                  .replace(/^\s+/, "") // Remove leading spaces
+                  .replace(/\s{2,}/g, " ").slice(0, 30); // Allow only one space between words
+                setFormData2({ ...newForm, [keyName]: newValue }); // Update state with cleaned value
+              }}
               onChange={(e) => {
                 setEnableBtn(false)
               }}
@@ -1193,7 +1205,14 @@ const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse
               type="text"
               placeholder="Last Name*"
               form={formData2}
-              setField={setFormData2}
+              // setField={setFormData2}
+              setField={(newForm) => {
+                const keyName = "lname"; // Specify the key
+                const newValue = newForm[keyName]
+                  .replace(/^\s+/, "") // Remove leading spaces
+                  .replace(/\s{2,}/g, " ").slice(0, 30); // Allow only one space between words
+                setFormData2({ ...newForm, [keyName]: newValue }); // Update state with cleaned value
+              }}
               keyName="lname"
               dataKey="lname"
               errorCheck={setEmpty}
@@ -1256,7 +1275,14 @@ const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse
               id="text"
               placeholder="Email ID*"
               form={formData2}
-              setField={setFormData2}
+              // setField={setFormData2}
+              setField={(newForm) => {
+                const keyName = "email"; // Specify the key
+                const newValue = newForm[keyName]
+                  .replace(/^\s+/, "") // Remove leading spaces
+                  // .replace(/\s{2,}/g, " "); // Allow only one space between words
+                setFormData2({ ...newForm, [keyName]: newValue }); // Update state with cleaned value
+              }}
               keyName="email"
               dataKey="email"
               errorCheck={setEmpty}
@@ -1287,7 +1313,13 @@ const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse
                     type="text"
                     placeholder="Address Line 1*"
                     form={formData2}
-                    setField={setFormData2}
+                    setField={(newForm) => {
+                      const keyName = "address1"; // Specify the key
+                      const newValue = newForm[keyName]
+                        .replace(/^\s+/, "") // Remove leading spaces
+                        .replace(/\s{2,}/g, " "); // Allow only one space between words
+                      setFormData2({ ...newForm, [keyName]: newValue }); // Update state with cleaned value
+                    }}
                     keyName="address1"
                     dataKey="address1"
                     errorCheck={setEmpty}
@@ -1307,7 +1339,14 @@ const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse
               type="text"
               placeholder="House No. & Street name"
               form={formData2}
-              setField={setFormData2}
+              // setField={setFormData2}
+              setField={(newForm) => {
+                const keyName = "address2"; // Specify the key
+                const newValue = newForm[keyName]
+                  .replace(/^\s+/, "") // Remove leading spaces
+                  // .replace(/\s{2,}/g, " "); // Allow only one space between words
+                setFormData2({ ...newForm, [keyName]: newValue }); // Update state with cleaned value
+              }}
               keyName="address2"
               errorCheck={setEmpty}
             />
@@ -1385,7 +1424,14 @@ const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse
               type="text"
               placeholder="Pincode*"
               form={formData2}
-              setField={setFormData2}
+              // setField={setFormData2}
+              setField={(newForm) => {
+                const keyName = "pincode"; // Specify the key
+                const newValue = newForm[keyName]
+                  .replace(/^\s+/, "") // Remove leading spaces
+                  // .replace(/\s{2,}/g, " "); // Allow only one space between words
+                setFormData2({ ...newForm, [keyName]: newValue }); // Update state with cleaned value
+              }}
               dataKey="pincode"
               keyName="pincode"
               errorCheck={setEmpty}

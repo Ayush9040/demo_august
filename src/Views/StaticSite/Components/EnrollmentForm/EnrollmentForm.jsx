@@ -540,6 +540,18 @@ const EnrollmentForm = ({
     return address?.pincode;
   }
 
+  const getCountry = () => {
+    let address = JSON.parse(localStorage.getItem('addressDataNew'))
+    // setUpdateAddress1(address?.address1);
+    return address?.country;
+  }
+
+  const getState = () => {
+    let address = JSON.parse(localStorage.getItem('addressDataNew'))
+    // setUpdateAddress1(address?.address1);
+    return address?.state;
+  }
+
 
 
 
@@ -1185,7 +1197,7 @@ const EnrollmentForm = ({
                   <EditStudent isShippingModalOpen={handleEditOpen} setIsShipppingModalOpen={handleEditClose} formData={formData} setFormData={setFormData} setEmpty={setEmpty} empty={empty} currentCourse={currentCourse} dateDurationChange={dateDurationChange} handleSubmit={handleSubmit} setUpdateAddress={setUpdateAddress} setDefaultAddress={setDefaultAddress}/>
                 )}
                 <div className='fields_alignment fields_alignment_bottom'>
-                  <div className='details_desc_name_info'><span className='details_duration_info'>Name</span> <span className='tenure_course'>{`${formData?.name} ${formData?.lname}`}</span></div>
+                  <div className='details_desc_name_info'><span className='details_duration_info'>Name</span> <span className='tenure_course truncated-text'> {`${formData?.name} ${formData?.lname}`}</span></div>
 
                 </div>
                 <div className='details_desc_days fields_alignment_bottom'>
@@ -1205,9 +1217,9 @@ const EnrollmentForm = ({
                     {/* {getAddress()} */}
                   {getAddress()}
                     {getAddress() && <>, </>}
-                    {formData?.state}
-                    {formData?.country && <>, </>}
-                    {formData?.country}
+                    {getState()}
+                    {getCountry() && <>, </>}
+                    {getCountry()}
                     {getPincode() && <> - </>}
                     {getPincode()}
                     {/* {`${formData?.address1}, ${formData?.state}, ${formData?.country} - ${formData?.pincode}`} */}

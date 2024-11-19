@@ -27,6 +27,8 @@ const Enrollment = () => {
   const [isEditStudentOpen, setEditStudentOpen] = useState(false);
   const addressLine1 = useSelector((state) => state.auth.user.data?.addressLine1);
   const pincodeFromRedux = useSelector((state) => state.auth.user.data?.pincode);
+  const countryFromRedux = useSelector((state) => state.auth.user.data?.country);
+  const stateFromRedux = useSelector((state) => state.auth.user.data?.state);
 
   useEffect(() => {
     let currentCrs = AllCourses.find((item) => item.key === courseId)
@@ -195,6 +197,8 @@ const Enrollment = () => {
 
     localStorage.setItem('addressDataNew', JSON.stringify({
       address1: addressLine1 || '',
+      country: countryFromRedux || '',
+      state: stateFromRedux || '',
       pincode: pincodeFromRedux || ''
 
     }));
@@ -549,14 +553,14 @@ const Enrollment = () => {
       "Weekend Yoga Asana Classes - (Men & Women) - Online",
       "Children's Yoga Classes (Regular) - On Campus",
       "Children's Weekend Yoga Class - On Campus",
-      // "Advanced Yoga Asana Regular Class - Online (Only for TYI Teachers)",
-      // "Regular Pregnancy Yoga Classes - Online & On Campus",
-      // "Advanced Yoga Asana Regular Class - Online (Only for TYI Teachers)",
-      // "Healing Yoga Movement & Rhythm - Online",
-      //  "Yog Prayas - Online",
-      // "Online Meditation Course  (Foundation Course)", 
-      // "Regular Online Meditation Classes", 
-      // "Couples’ Yoga Classes  - Online"
+      "Advanced Yoga Asana Regular Class - Online (Only for TYI Teachers)",
+      "Regular Pregnancy Yoga Classes - Online & On Campus",
+      "Advanced Yoga Asana Regular Class - Online (Only for TYI Teachers)",
+      "Healing Yoga Movement & Rhythm - Online",
+       "Yog Prayas - Online",
+      "Online Meditation Course  (Foundation Course)", 
+      "Regular Online Meditation Classes", 
+      "Couples’ Yoga Classes  - Online"
     ]
     console.log("form data from sdate ", formData.sdate)
     const isMatch = array.includes(currentCourse?.title);

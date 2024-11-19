@@ -32,6 +32,7 @@ const customStyles = {
 const EditStudent = ({ isShippingModalOpen, setIsShipppingModalOpen, formData, setFormData, setEmpty, empty, currentCourse, dateDurationChange,handleSubmit, setUpdateAddress, setDefaultAddress }) => {
 
   function closeModal() {
+    setEmpty(0);
     setIsShipppingModalOpen(false)
   }
   function saveAndASubmit(){
