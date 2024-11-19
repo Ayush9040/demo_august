@@ -994,9 +994,9 @@ const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse
     console.log('formData from Save ', formData)
 
     if (
-      formData2.name === '' ||
-      formData2.name === undefined ||
-      formData2.name === null
+      formData2.name.trim() === '' ||
+      formData2.name.trim() === undefined ||
+      formData2.name.trim() === null
     ) {
       // alert("1")
 
@@ -1175,7 +1175,13 @@ const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse
               type="text"
               placeholder="First Name*"
               form={formData2}
-              setField={setFormData2}
+              setField={(newForm) => {
+                const keyName = "name"; // Specify the key
+                const newValue = newForm[keyName]
+                  .replace(/^\s+/, "") // Remove leading spaces
+                  .replace(/\s{2,}/g, " "); // Allow only one space between words
+                setFormData2({ ...newForm, [keyName]: newValue }); // Update state with cleaned value
+              }}
               onChange={(e) => {
                 setEnableBtn(false)
               }}
@@ -1195,7 +1201,14 @@ const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse
               type="text"
               placeholder="Last Name*"
               form={formData2}
-              setField={setFormData2}
+              // setField={setFormData2}
+              setField={(newForm) => {
+                const keyName = "lname"; // Specify the key
+                const newValue = newForm[keyName]
+                  .replace(/^\s+/, "") // Remove leading spaces
+                  .replace(/\s{2,}/g, " "); // Allow only one space between words
+                setFormData2({ ...newForm, [keyName]: newValue }); // Update state with cleaned value
+              }}
               keyName="lname"
               dataKey="lname"
               errorCheck={setEmpty}
@@ -1258,7 +1271,14 @@ const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse
               id="text"
               placeholder="Email ID*"
               form={formData2}
-              setField={setFormData2}
+              // setField={setFormData2}
+              setField={(newForm) => {
+                const keyName = "email"; // Specify the key
+                const newValue = newForm[keyName]
+                  .replace(/^\s+/, "") // Remove leading spaces
+                  // .replace(/\s{2,}/g, " "); // Allow only one space between words
+                setFormData2({ ...newForm, [keyName]: newValue }); // Update state with cleaned value
+              }}
               keyName="email"
               dataKey="email"
               errorCheck={setEmpty}
@@ -1289,7 +1309,13 @@ const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse
                     type="text"
                     placeholder="Address Line 1*"
                     form={formData2}
-                    setField={setFormData2}
+                    setField={(newForm) => {
+                      const keyName = "address1"; // Specify the key
+                      const newValue = newForm[keyName]
+                        .replace(/^\s+/, "") // Remove leading spaces
+                        .replace(/\s{2,}/g, " "); // Allow only one space between words
+                      setFormData2({ ...newForm, [keyName]: newValue }); // Update state with cleaned value
+                    }}
                     keyName="address1"
                     dataKey="address1"
                     errorCheck={setEmpty}
@@ -1309,7 +1335,14 @@ const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse
               type="text"
               placeholder="House No. & Street name"
               form={formData2}
-              setField={setFormData2}
+              // setField={setFormData2}
+              setField={(newForm) => {
+                const keyName = "address2"; // Specify the key
+                const newValue = newForm[keyName]
+                  .replace(/^\s+/, "") // Remove leading spaces
+                  // .replace(/\s{2,}/g, " "); // Allow only one space between words
+                setFormData2({ ...newForm, [keyName]: newValue }); // Update state with cleaned value
+              }}
               keyName="address2"
               errorCheck={setEmpty}
             />
@@ -1387,7 +1420,14 @@ const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse
               type="text"
               placeholder="Pincode*"
               form={formData2}
-              setField={setFormData2}
+              // setField={setFormData2}
+              setField={(newForm) => {
+                const keyName = "pincode"; // Specify the key
+                const newValue = newForm[keyName]
+                  .replace(/^\s+/, "") // Remove leading spaces
+                  // .replace(/\s{2,}/g, " "); // Allow only one space between words
+                setFormData2({ ...newForm, [keyName]: newValue }); // Update state with cleaned value
+              }}
               dataKey="pincode"
               keyName="pincode"
               errorCheck={setEmpty}
