@@ -13749,9 +13749,9 @@ const classes = {
       , '5th Jan 2025', '12th Jan 2025', '19th Jan 2025', '26th Jan 2025'
       , '2nd Feb 2025', '9th Feb 2025', '16th Feb 2025', '23rd Feb 2025'
     ],
-    online: false,//true,
-    onCampus: false,//true,
-    nonResidential: false,//true,
+    online: true,
+    onCampus: true,
+    nonResidential: true,
     residential: false,
     certficate: false,
     newName: '',
