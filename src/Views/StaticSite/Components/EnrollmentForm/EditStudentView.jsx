@@ -1179,7 +1179,7 @@ const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse
                 const keyName = "name"; // Specify the key
                 const newValue = newForm[keyName]
                   .replace(/^\s+/, "") // Remove leading spaces
-                  .replace(/\s{2,}/g, " "); // Allow only one space between words
+                  .replace(/\s{2,}/g, " ").slice(0, 30); // Allow only one space between words
                 setFormData2({ ...newForm, [keyName]: newValue }); // Update state with cleaned value
               }}
               onChange={(e) => {
@@ -1206,7 +1206,7 @@ const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse
                 const keyName = "lname"; // Specify the key
                 const newValue = newForm[keyName]
                   .replace(/^\s+/, "") // Remove leading spaces
-                  .replace(/\s{2,}/g, " "); // Allow only one space between words
+                  .replace(/\s{2,}/g, " ").slice(0, 30); // Allow only one space between words
                 setFormData2({ ...newForm, [keyName]: newValue }); // Update state with cleaned value
               }}
               keyName="lname"

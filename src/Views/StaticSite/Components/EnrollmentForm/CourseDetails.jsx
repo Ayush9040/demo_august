@@ -1888,7 +1888,7 @@ const CourseDetails = ({
             <div ref={accordionRef} className={`desc ${openEdit ? "show" : ""}`}>
               <div className='hidden'>
                 <div className='fields_alignment fields_alignment_bottom'>
-                  <div className='details_desc_name_info'><span className='details_duration_info'>Name</span> <span className='tenure_course'>{`${formData?.name} ${formData?.lname}`}</span></div>
+                  <div className='details_desc_name_info'><span className='details_duration_info'>Name</span> <span className='tenure_course truncated-text'>{`${formData?.name} ${formData?.lname}`}</span></div>
 
                 </div>
                 <div className='details_desc_days fields_alignment_bottom'>
