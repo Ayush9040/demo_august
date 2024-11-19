@@ -832,7 +832,7 @@ const CourseDetails = ({
 
 
               {/* {removeMb} */}
-          {!isSatsangPage && (
+          {/* {!isSatsangPage && ( */}
             <div className='wrapper_date_and_course'>
 
               <div className='course_format_wrapper'>
@@ -1871,7 +1871,7 @@ const CourseDetails = ({
 
 
             </div>
-          )}
+          {/* )} */}
 
           <div className="accordian_holder">
 

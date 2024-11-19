@@ -1128,20 +1128,20 @@ const ttc200hr = {
         'Evening : 6:30 pm - 8:30 pm (IST)'
       ],
 
-      enrollInfo: {
-        duration: "2 months",
-        timings: [
-          {
-            day: "Monday to Saturday",
-            time: "Morning: 7:00 am - 8:30 am (IST)"
-          },
-          {
-            day: "Monday to Saturday",
-            time: "Evening : 6:30 pm - 8:30 pm (IST) "
-          }
-        ],
-        message: "(Both the time slots are mandatory)",
-      },
+    enrollInfo: {
+      duration: "2 months",
+      timings: [
+        {
+          day: "Monday to Saturday",
+          time: "Morning: 7:00 am - 8:30 am (IST)"
+        },
+        {
+          day: "Monday to Saturday",
+          time: "Evening : 6:30 pm - 8:30 pm (IST) "
+        }
+      ],
+      message: "(Both the time slots are mandatory)",
+    },
 
     courseCertificate: 'TTC/Certificate',
     onlineInfo: {
@@ -7322,7 +7322,7 @@ const camps = {
         }
       ]
     }
-,    
+    ,
 
     courseCertificate: 'NO',
     onlineInfo: {
@@ -7502,7 +7502,7 @@ const camps = {
         }
       ]
     }
-,   
+    ,
 
     courseCertificate: 'NO',
     onlineInfo: {
@@ -8124,18 +8124,18 @@ const camps = {
       '9:30 am – 5:30 pm (IST)'
     ],
 
-    
 
-enrollInfo: {
-  duration: "1 Day",
-  timings: [
-    {
-      day: "Time",
-      time: "9:30 am – 5:30 pm (IST)"
+
+    enrollInfo: {
+      duration: "1 Day",
+      timings: [
+        {
+          day: "Time",
+          time: "9:30 am – 5:30 pm (IST)"
+        }
+      ]
     }
-  ]
-}
-,   
+    ,
 
     courseCertificate: 'NO',
     onlineInfo: {
@@ -8455,18 +8455,18 @@ enrollInfo: {
     time: [
       '8:00 am – 11:00 am (IST)'
     ],
-    
 
-enrollInfo: {
-  duration: "Half day (4 hours)",
-  timings: [
-    {
-      day: "Time",
-      time: "8:00 am – 11:00 am (IST)"
+
+    enrollInfo: {
+      duration: "Half day (4 hours)",
+      timings: [
+        {
+          day: "Time",
+          time: "8:00 am – 11:00 am (IST)"
+        }
+      ]
     }
-  ]
-}
-,   
+    ,
 
     courseCertificate: 'NO',
     onlineInfo: {
@@ -8661,7 +8661,7 @@ enrollInfo: {
         }
       ]
     }
-,    
+    ,
 
     courseCertificate: 'NO',
     onlineInfo: {
@@ -8849,7 +8849,7 @@ enrollInfo: {
         }
       ]
     }
-,   
+    ,
 
     courseCertificate: 'NO',
     onlineInfo: {
@@ -9023,17 +9023,17 @@ enrollInfo: {
       '10.00 am to 1:00 pm (IST)'
     ],
 
-    
-enrollInfo: {
-  duration: "Half Day",
-  timings: [
-    {
-      day: "Time",
-      time: "10.00 am to 1:00 pm (IST)"
+
+    enrollInfo: {
+      duration: "Half Day",
+      timings: [
+        {
+          day: "Time",
+          time: "10.00 am to 1:00 pm (IST)"
+        }
+      ]
     }
-  ]
-}
-,   
+    ,
 
     courseCertificate: 'NO',
     onlineInfo: {
@@ -9217,7 +9217,7 @@ enrollInfo: {
         }
       ]
     }
-,    
+    ,
 
     courseCertificate: 'NO',
     onlineInfo: {
@@ -9398,7 +9398,7 @@ enrollInfo: {
         }
       ]
     }
-,    
+    ,
 
     courseCertificate: 'NO',
     onlineInfo: {
@@ -9585,7 +9585,7 @@ enrollInfo: {
         }
       ]
     }
-,   
+    ,
 
     courseCertificate: 'NO',
     onlineInfo: {
@@ -9771,7 +9771,7 @@ enrollInfo: {
         }
       ]
     }
-,   
+    ,
 
     courseCertificate: 'NO',
     onlineInfo: {
@@ -9954,7 +9954,7 @@ enrollInfo: {
         }
       ]
     }
-,    
+    ,
 
     courseCertificate: 'NO',
     onlineInfo: {
@@ -10345,7 +10345,7 @@ enrollInfo: {
         }
       ]
     }
-,    
+    ,
 
     courseCertificate: 'NO',
     onlineInfo: {
@@ -10735,7 +10735,7 @@ enrollInfo: {
         }
       ]
     }
-,    
+    ,
 
     courseCertificate: 'certificate Of Participation',
     onlineInfo: {
@@ -11566,7 +11566,7 @@ enrollInfo: {
         }
       ]
     }
-,    
+    ,
 
     courseCertificate: 'certificate Of Participation',
     onlineInfo: {
@@ -12259,7 +12259,7 @@ const classes = {
     textdescription5: '',
     weekDays: true,
     title: 'Advanced Yoga Asana Regular Class - Online (Only for TYI Teachers)',
-    isRegular:true,
+    isRegular: true,
     key: 'advanced-regular-yoga-classes',
     batch: 1,
     newName: 'Advanced Asana Regular Class (Only for TYI Teachers)',
@@ -12320,7 +12320,7 @@ const classes = {
         }
       ]
     }
-,    
+    ,
 
     courseCertificate: 'NO',
     onlineInfo: {
@@ -12387,7 +12387,7 @@ const classes = {
     weekDays: true,
     title: 'Healing Yoga Movement & Rhythm - Online',
     key: 'healing-movement-and-rhythm',
-    isRegular:true,
+    isRegular: true,
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
     templateId: {
@@ -12442,7 +12442,7 @@ const classes = {
         }
       ]
     }
-,    
+    ,
 
     courseCertificate: 'NO',
     onlineInfo: {
@@ -12527,7 +12527,7 @@ const classes = {
     weekDays: true,
     title: 'Yoga Asana Regular Classes - (Men & Women) - Online Yoga Classes',
     key: 'asana-regular-classes-online',
-    isRegular:true,
+    isRegular: true,
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
     templateId: {
@@ -12603,7 +12603,7 @@ const classes = {
         }
       ]
     }
-,    
+    ,
 
     courseCertificate: 'NO',
     onlineInfo: {
@@ -12815,7 +12815,7 @@ const classes = {
     textdescription5: '',
     title: 'Yoga Classes for Men (Regular Asana) - On Campus',
     key: 'asana-regular-classes-on-campus',
-    isRegular:true,
+    isRegular: true,
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
     templateId: {
@@ -12883,7 +12883,7 @@ const classes = {
         }
       ]
     }
-,    
+    ,
 
     courseCertificate: 'NO',
     onlineInfo: {
@@ -12982,7 +12982,7 @@ const classes = {
     textdescription5: '',
     title: 'Yoga Classes for Women (Regular Asana) - On Campus',
     key: 'asana-regular-classes-on-campus-women',
-    isRegular:true,
+    isRegular: true,
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
     templateId: {
@@ -13070,7 +13070,7 @@ const classes = {
         }
       ]
     }
-,    
+    ,
 
     courseCertificate: 'NO',
     onlineInfo: {
@@ -13177,7 +13177,7 @@ const classes = {
     textdescription5: '',
     title: 'Children\'s Yoga Classes (Regular) - On Campus',
     key: 'childrens-regular-classes',
-    isRegular:true,
+    isRegular: true,
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
     templateId: {
@@ -13225,7 +13225,7 @@ const classes = {
         }
       ]
     }
-,    
+    ,
 
     details: [
       {
@@ -13285,7 +13285,7 @@ const classes = {
     weekends: true,
     title: 'Children\'s Weekend Yoga Class - On Campus',
     key: 'childrens-weekend-classes-on-campus',
-    isRegular:true,
+    isRegular: true,
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
     templateId: {
@@ -13311,7 +13311,7 @@ const classes = {
         }
       ]
     }
-,    
+    ,
     image: `${baseDomain}${courseAssets.courseAsset76}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset76}`,
     mostPopular: false,
@@ -13382,7 +13382,7 @@ const classes = {
     textdescription5: '',
     title: 'Online Meditation Course  (Foundation Course)',
     key: 'meditation-foundation-course-online',
-    isRegular:true,
+    isRegular: true,
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
     templateId: {
@@ -13456,7 +13456,7 @@ const classes = {
         }
       ]
     }
-,    
+    ,
 
     courseCertificate: 'NO',
     onlineInfo: {
@@ -13547,7 +13547,7 @@ const classes = {
     textdescription5: '',
     title: 'Regular Online Meditation Classes',
     key: 'regular-meditation-classes-online',
-    isRegular:true,
+    isRegular: true,
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
     templateId: {
@@ -13603,7 +13603,7 @@ const classes = {
         }
       ]
     }
-,    
+    ,
 
     courseCertificate: 'NO',
     onlineInfo: {
@@ -13720,7 +13720,7 @@ const classes = {
     textdescription5: '',
     title: ' Satsang ',
     key: 'satsang',
-    isRegular:true,
+    isRegular: true,
     tenure: '1 day',
     weekends: true,
     batch: 1,
@@ -13745,10 +13745,13 @@ const classes = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'classes',
-    dates: [],
-    online: false,
-    onCampus: true,
-    nonResidential: true,
+    dates: ['24th Nov 2024', '1st Dec 2024', '8th Dec 2024', '15th Dec 2024', '22nd Dec 2024', '29th Dec 2024'
+      , '5th Jan 2025', '12th Jan 2025', '19th Jan 2025', '26th Jan 2025'
+      , '2nd Feb 2025', '9th Feb 2025', '16th Feb 2025', '23rd Feb 2025'
+    ],
+    online: false,//true,
+    onCampus: false,//true,
+    nonResidential: false,//true,
     residential: false,
     certficate: false,
     newName: '',
@@ -13844,7 +13847,7 @@ const classes = {
     weekends: true,
     title: 'Weekend Yoga Asana Classes - (Men & Women) - On Campus',
     key: 'weekend-classes',
-    isRegular:true,
+    isRegular: true,
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
     templateId: {
@@ -13891,7 +13894,7 @@ const classes = {
         },
       ]
     }
-,    
+    ,
     online: false,
     onCampus: true,
     nonResidential: false,
@@ -14005,7 +14008,7 @@ const classes = {
     textdescription5: '',
     title: 'Yog Prayas - Online',
     key: 'yog-prayas-online',
-    isRegular:true,
+    isRegular: true,
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
     templateId: {
@@ -14061,7 +14064,7 @@ const classes = {
         }
       ]
     }
-,    
+    ,
 
     courseCertificate: 'NO',
     onlineInfo: {
@@ -14218,7 +14221,7 @@ const classes = {
     textdescription5: '',
     title: 'Samattvam (Health Checkup) - On Campus',
     key: 'samattvam',
-    isRegular:true,
+    isRegular: true,
     tenure: '1 day',
     weekends: true,
     batch: 1,
@@ -14249,11 +14252,12 @@ const classes = {
       onlineFee: 0,
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
+    dates: ['23rd Nov 2024', '30th Nov 2024', '7th Dec 2024', '14th Dec 2024', '21st Dec 2024', '28th Dec 2024'],
     category: 'classes',
-    dates: [],
+
     online: false,
-    onCampus: true,
-    nonResidential: true,
+    onCampus: false,//true
+    nonResidential: false,//true
     residential: false,
     certficate: false,
 
@@ -14369,7 +14373,7 @@ const classes = {
     textdescription5: '',
     title: 'Couples’ Yoga Classes  - Online',
     key: 'couples-classes',
-    isRegular:true,
+    isRegular: true,
     tenure: '1 day',
     weekends: true,
     batch: 1,
@@ -14426,7 +14430,7 @@ const classes = {
         }
       ]
     }
-,    
+    ,
 
     courseCertificate: 'NO',
     onlineInfo: {
@@ -14588,7 +14592,7 @@ const classes = {
     weekends: true,
     title: 'Weekend Yoga Asana Classes - (Men & Women) - Online',
     key: 'weekend-classes-online',
-    isRegular:true,
+    isRegular: true,
     batch: 1,
     newName: 'Weekend Asana Classes (Men & Women)',
     days: [
@@ -14606,7 +14610,7 @@ const classes = {
         }
       ]
     }
-,    
+    ,
     // templateId: 'GENERAL_AUTO_EMAIL',
     templateId: {
       templateOnline: 'GENERAL_AUTO_EMAIL',
@@ -14730,7 +14734,7 @@ const classes = {
     textdescription5: '',
     title: 'Regular Pregnancy Yoga Classes - Online & On Campus',
     key: 'regular-pregnacy-classes',
-    isRegular:true,
+    isRegular: true,
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
     templateId: {
@@ -14756,7 +14760,7 @@ const classes = {
     dates: ['8:30 am to 9:30 am'],
     online: true,
     onCampus: true,
-    nonResidential: false,
+    nonResidential: true,
     residential: false,
     certficate: false,
 
@@ -14784,7 +14788,7 @@ const classes = {
         }
       ]
     }
-,    
+    ,
 
     courseCertificate: 'NO',
     onlineInfo: {
@@ -14898,7 +14902,7 @@ const classes = {
     textdescription5: '',
     title: 'MA Yoga Shastra',
     key: 'ma-yoga-shastra',
-    isRegular:true,
+    isRegular: true,
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
     templateId: {
@@ -15172,7 +15176,7 @@ const certificate = {
         }
       ]
     }
-,    
+    ,
 
     courseCertificate: 'Certificate',
     onlineInfo: {

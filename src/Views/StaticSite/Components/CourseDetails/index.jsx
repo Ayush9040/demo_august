@@ -75,11 +75,11 @@ const CourseDetails = ({ pageDate }) => {
   const [isSpecialPage, setIsSpecialPage] = useState(false);
   useEffect(() => {
     // Check if the URL matches either "/satsang" or "/samattvam"
-    if (location.pathname === '/satsang' || location.pathname === '/samattvam') {
-      setIsSpecialPage(true);
-    } else {
-      setIsSpecialPage(false);
-    }
+    // if (location.pathname === '/satsang' ) {//|| location.pathname === '/samattvam'
+    //   setIsSpecialPage(true);
+    // } else {
+    //   setIsSpecialPage(false);
+    // }
   }, [location.pathname]);
 
   useEffect(() => {

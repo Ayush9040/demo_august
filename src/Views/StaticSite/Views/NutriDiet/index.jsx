@@ -260,11 +260,11 @@ const NutriDiet = () => {
     if (isPageReady) {
       ReactGA.event('view_item', {
         currency: 'INR',
-        value: 625,
+        value: 0,
         items: [{
-          item_name: 'IBY CLASS',
-          item_id: 'Teachers Practice',
-          price: 625,
+          item_name: 'Nutri Diet Clinic',
+          item_id: 'Nutri Diet Clinic',
+          price: 0,
           quantity: 1
         }]
       });

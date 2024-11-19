@@ -1,4 +1,4 @@
-import React,{ useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 //import baseDomain, { background } from '../../assets/images/imageAsset'
 import data from './data'
 import './style.scss'
@@ -6,22 +6,22 @@ import './style.scss'
 //import baseDomain, { background } from '../../assets/images/imageAsset'
 import InnerNavComponent from '../InnerNavComponent'
 import '../EnrollmentForm/formstyles.scss';
-import { useNavigate  } from 'react-router-dom'; 
+import { useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { cross } from '../../assets/icons/icon'
 
 const DatesView = ({ pageDate, setIsShipppingModalOpen }) => {
 
-    const [selectedDate, setSelectedDate] = useState(null);
-    const { isLoggedIn } = useSelector((state) => state.auth)
-    const [courseMode, setCourseMode] = useState('');
-    const navigate = useNavigate();
+  const [selectedDate, setSelectedDate] = useState(null);
+  const { isLoggedIn } = useSelector((state) => state.auth)
+  const [courseMode, setCourseMode] = useState('');
+  const navigate = useNavigate();
 
   let tnc = {
     title: 'alumni-gallery',
     color: 'orange',
     menuColor: 'black',
-    menuItems:[]
+    menuItems: []
   }
 
   function closeModal() {
@@ -29,9 +29,9 @@ const DatesView = ({ pageDate, setIsShipppingModalOpen }) => {
   }
 
 
-  useEffect(()=>{
-    scrollTo(0,0)
-  },[])
+  useEffect(() => {
+    scrollTo(0, 0)
+  }, [])
 
   useEffect(() => {
     // Check the conditions for online and onCampus
@@ -42,12 +42,12 @@ const DatesView = ({ pageDate, setIsShipppingModalOpen }) => {
     } else if (pageDate?.onCampus) {
       setCourseMode('OnCampus');
     } else {
-    //   setCourseMode('Unknown Mode');  // Default if none are true
+      //   setCourseMode('Unknown Mode');  // Default if none are true
     }
   }, [pageDate]);
 
-   // Function to remove ordinal suffixes and format the date
-   const formatDate = (date) => {
+  // Function to remove ordinal suffixes and format the date
+  const formatDate = (date) => {
     return date.replace(/\b(\d+)(th|nd|rd|st)\b/, '$1'); // Removes 'th', 'nd', 'rd', 'st'
   };
 
@@ -56,9 +56,9 @@ const DatesView = ({ pageDate, setIsShipppingModalOpen }) => {
     setSelectedDate(date);
   };
 
-  
-   // Handle enrollment button click
-   const handleEnrollClick = () => {
+
+  // Handle enrollment button click
+  const handleEnrollClick = () => {
     const dateToPass = selectedDate ? selectedDate : 'null';
     isLoggedIn ? navigate(`/enrollment/${pageDate.key}/?date=${encodeURIComponent(dateToPass)}`) : navigate(`/user/sign-in/?location=${pageDate.key}/?date=${encodeURIComponent(dateToPass)}`);
   };
@@ -72,62 +72,63 @@ const DatesView = ({ pageDate, setIsShipppingModalOpen }) => {
       <div className='terms-container'>
         {/* <InnerNavComponent abc={tnc} /> */}
         <div className='banner-heading' style={{ width: '100%', margin: '0px', display: 'flex', justifyContent: 'space-between', fontSize: '18px', fontWeight: '600' }}>
-            <div>Upcoming Dates</div>
-            <div style={{ width: '14px', height: '14px', marginRight: '9px'}}><span className="change-cross-svg-width" style={{cursor: 'pointer', fontSize: '18px', paddingRight: '8px'}} onClick={closeModal}>
-                {cross}
+          <div>Upcoming Dates</div>
+          <div style={{ width: '14px', height: '14px', marginRight: '9px' }}><span className="change-cross-svg-width" style={{ cursor: 'pointer', fontSize: '18px', paddingRight: '8px' }} onClick={closeModal}>
+            {cross}
 
-              </span></div>
+          </span></div>
           {/* <div className='bottom-line'></div> */}
         </div>
       </div>
-      <form className="residential-form check_course check_date" style={{ width: '100%'}}>
-            <div className="last_radio_button " style={{ display: 'flex', gap: '2rem', flexWrap: 'wrap' }}>
+      <form className="residential-form check_course check_date" style={{ width: '100%' }}>
+        <div className="last_radio_button " style={{ display: 'flex', gap: '2rem', flexWrap: 'wrap' }}>
 
-                {
-                    pageDate?.dates.map((item, index) => {
-                        return (
-                            <div key={index} className='cards_new_popup_dates'>
-                                <div className='wrapper_center'>
-                                <label class="item-label item_date" style={{ width: '100%', height: '100%', borderRadius: '12px' }}>
-                            <input class="item-input"
-                              type="radio" name="mode"
-                              value={item}
-                              aria-labelledby="delivery-0-name"
-                              aria-describedby="delivery-0-shipping delivery-0-price"
-                              onChange={() => handleDateSelect(item)}
-                        
-                              />
-                            <span class="item-info item_desc">
-                              <span id="delivery-0-name" class="item-name date_info"><img src='/images/dates.svg' /><span className='style_dates'>{item}</span></span>
-                              <br />    
-                              {/* <small id="delivery-0-shipping" class="item-shipping">5–10 business days</small> */}
-                            </span>
-                            <span class="item-info item_desc item_padding">
-                              <span id="delivery-0-name" class="item-name date_info"><img src='/images/courseMode.svg' /><span className='style_dates'>{courseMode}</span></span>
-                              <br />    
-                              {/* <small id="delivery-0-shipping" class="item-shipping">5–10 business days</small> */}
-                            </span>
-                            <strong id="delivery-0-price" class="item-price"></strong>
-                          </label>
-                                </div>
-                            </div>
-                        )
-                    })
-                }
-              
-                
-                 
+          {
+            pageDate?.dates.map((item, index) => {
+              return (
+                <div key={index} className='cards_new_popup_dates'>
+                  <div className='wrapper_center'>
+                    <label class="item-label item_date" style={{ width: '100%', height: '100%', borderRadius: '12px' }}>
+                      <input class="item-input"
+                        type="radio" name="mode"
+                        value={item}
+                        aria-labelledby="delivery-0-name"
+                        aria-describedby="delivery-0-shipping delivery-0-price"
+                        onChange={() => handleDateSelect(item)}
 
-              
-            </div>
+                      />
+                      <span class="item-info item_desc">
+                        <span id="delivery-0-name" class="item-name date_info"><img src='/images/dates.svg' /><span className='style_dates'>{item}</span></span>
+                        <br />
+                        {/* <small id="delivery-0-shipping" class="item-shipping">5–10 business days</small> */}
+                      </span>
+                      {courseMode &&
+                        <span class="item-info item_desc item_padding">
+                          <span id="delivery-0-name" class="item-name date_info"><img src='/images/courseMode.svg' /><span className='style_dates'>{courseMode}</span></span>
+                          <br />
+                          {/* <small id="delivery-0-shipping" class="item-shipping">5–10 business days</small> */}
+                        </span>}
+                      <strong id="delivery-0-price" class="item-price"></strong>
+                    </label>
+                  </div>
+                </div>
+              )
+            })
+          }
 
-            
 
-          </form>
 
-          <div className='date_enroll_btn'>
-            <button className={!selectedDate ? 'date_enroll_btn_txt before_date_select' : 'date_enroll_btn_txt after_date_select'} onClick={handleEnrollClick} disabled={!selectedDate}>Enroll Course <img style={{marginLeft: '8px'}} src='/images/enroll_btn_icon.svg' /></button>
-          </div>
+
+
+        </div>
+
+
+
+      </form>
+
+      <div className='date_enroll_btn'>
+        <button className={!selectedDate ? 'date_enroll_btn_txt before_date_select' : 'date_enroll_btn_txt after_date_select'} onClick={handleEnrollClick} disabled={!selectedDate}>Enroll Course <img style={{ marginLeft: '8px' }} src='/images/enroll_btn_icon.svg' /></button>
+      </div>
       {/* <div className='terms-and-conditions'>
         {data.map((value) => {
           return (
