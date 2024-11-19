@@ -43,6 +43,7 @@ const CourseDetails = ({
   const isChildrenWeekendClass = location.pathname === '/enrollment/childrens-weekend-classes-on-campus';
   const isYogaPrayas = location.pathname === '/enrollment/yog-prayas-online';
   const isSatsangPage = location.pathname === '/enrollment/satsang';
+  const isRegularPregnancy = location.pathname.includes('/enrollment/regular-pregnacy-classes');
   const isRegularMeditation  = '/enrollment/regular-meditation-classes-online';
   const [setDate, setSetDate] = useState(false);
   const [priceSelect, setPriceSelect] = useState(0);
@@ -194,8 +195,9 @@ const CourseDetails = ({
       "Yog Prayas - Online",
       "Online Meditation Course  (Foundation Course)",
       "Regular Online Meditation Classes",
-      "Couples’ Yoga Classes  - Online"
+      "Couples’ Yoga Classes  - Online",
     ]
+    // alert(currentCourse?.title)
     const isMatch = array.includes(currentCourse?.title);
     setIsRegular(isMatch);
     localStorage.setItem('isRegular', isMatch)
@@ -289,6 +291,7 @@ const CourseDetails = ({
   };
 
   const createEndDate = (startDate, value) => {
+
     console.log("Start Date:", startDate, "Value:", value);
 
     if (!startDate || !value) return;
@@ -358,7 +361,7 @@ const CourseDetails = ({
     }
   }
 
-  const durationList = [{ label: '1 Month', value: 1 }, { label: '2 Months', value: 2 }, { label: '3 Months', value: 3 }, { label: '4 Months', value: 4 }, { label: '5 Months', value: 5 }, { label: '6 Months', value: 6 }, { label: '7 Months', value: 7 }, { label: '8 Months', value: 8 }, { label: '9 Months', value: 9 }, { label: '9 Months', value: 9 }, { label: '10 Months', value: 10 }, { label: '11 Months', value: 11 }, { label: '12 Months', value: 12 }]
+  const durationList = [{ label: '1 Month', value: 1 }, { label: '2 Months', value: 2 }, { label: '3 Months', value: 3 }, { label: '4 Months', value: 4 }, { label: '5 Months', value: 5 }, { label: '6 Months', value: 6 }, { label: '7 Months', value: 7 }, { label: '8 Months', value: 8 }, { label: '9 Months', value: 9 }, { label: '10 Months', value: 10 }, { label: '11 Months', value: 11 }, { label: '12 Months', value: 12 }]
 
 
 
@@ -1010,6 +1013,9 @@ const CourseDetails = ({
                               setCourseFormatSelected(true)
                               setCourseFormatInfo('On-Campus (without residence)')
                               setPriceSelect(currentCourse?.fees?.offlineFee?.nonResidentialFee)
+                              setIsRegularPrice(isRegularPregnancy ? currentCourse?.fees?.onlineFee : currentCourse?.fees?.offlineFee?.nonResidentialFee);
+                                setOnSelectFormat(true);
+                                setOnClickFormatRegular(true)
                               if (e.target.checked) {
                                 setFormData({
                                   ...formData,
@@ -1018,7 +1024,7 @@ const CourseDetails = ({
                                 })
                                 setEmpty(0)
                                 setCourseFee(
-                                  currentCourse?.fees?.offlineFee?.nonResidentialFee
+                                 isRegularPregnancy ? currentCourse?.fees?.onlineFee : currentCourse?.fees?.offlineFee?.nonResidentialFee
                                 )
                                 // setCourseFee(updatedFees( currentCourse?.key,'NONRESIDENTIAL' ))
                               }
@@ -1029,7 +1035,10 @@ const CourseDetails = ({
 
                             {/* <small id="delivery-0-shipping" class="item-shipping">5–10 business days</small> */}
                           </span>
-                          <strong id="delivery-0-price" class="item-price"> INR {currentCourse?.fees?.offlineFee?.nonResidentialFee}</strong>
+                          <strong id="delivery-0-price" class="item-price"> 
+                            INR {localStorage.getItem('isRegular') == 'true' ? (isNaN(currentCourse?.fees?.onlineFee) ? localStorage.getItem('courseFee') : currentCourse?.fees?.onlineFee) : currentCourse?.fees?.offlineFee?.nonResidentialFee}
+                             {/* {currentCourse?.fees?.offlineFee?.nonResidentialFee} */}
+                             </strong>
                         </label>
                       )}
 
