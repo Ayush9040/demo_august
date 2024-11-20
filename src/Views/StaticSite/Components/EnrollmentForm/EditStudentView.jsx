@@ -602,7 +602,7 @@ const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse
       //   city,
       //   pincode,
       // };
-  
+
       // localStorage.setItem('addressData', JSON.stringify(addressData));
 
       // setUpdateAddress(addressData);
@@ -644,7 +644,7 @@ const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse
   // Function to generate city options based on selected state
   const getUpdatedCities = (countryIsoCode, stateIsoCode) => {
     console.log(countryIsoCode, stateIsoCode);
-    
+
     if (!countryIsoCode && !stateIsoCode) return [];
     return City.getCitiesOfState(countryIsoCode, stateIsoCode).map((city) => ({
       value: city.name,
@@ -780,12 +780,12 @@ const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse
 
   const handlePhoneChange = (value) => {
     console.log(value);
+    const numericValue = value.replace(/[^\d]/g, '');
+    setPhoneValue(numericValue);
+    setFormData2({ ...formData2, phone: numericValue });
 
-    setPhoneValue(value);
-    setFormData2({ ...formData2, phone: value });
-
-    if (value) {
-      const errors = validatePhoneNumber(value);
+    if (numericValue) {
+      const errors = validatePhoneNumber(numericValue);
       setValidationErrors(errors);
     } else {
       setValidationErrors([]);
@@ -1101,7 +1101,7 @@ const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse
         country: formData2?.country,
         state: formData2?.state,
         pincode: formData2?.pincode
-  
+
       }));
 
       setDefaultAddress(true);
@@ -1244,7 +1244,7 @@ const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse
                   </svg>
                 </span >
               </div >
-              <input type="number" class="input-box" placeholder="Enter phone number" value={phoneValue}
+              <input type="tel" class="input-box" placeholder="Enter phone number" value={phoneValue}
                 onChange={(e) => { handlePhoneChange(e.target.value) }}
               />
             </div >
@@ -1280,7 +1280,7 @@ const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse
                 const keyName = "email"; // Specify the key
                 const newValue = newForm[keyName]
                   .replace(/^\s+/, "") // Remove leading spaces
-                  // .replace(/\s{2,}/g, " "); // Allow only one space between words
+                // .replace(/\s{2,}/g, " "); // Allow only one space between words
                 setFormData2({ ...newForm, [keyName]: newValue }); // Update state with cleaned value
               }}
               keyName="email"
@@ -1344,7 +1344,7 @@ const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse
                 const keyName = "address2"; // Specify the key
                 const newValue = newForm[keyName]
                   .replace(/^\s+/, "") // Remove leading spaces
-                  // .replace(/\s{2,}/g, " "); // Allow only one space between words
+                // .replace(/\s{2,}/g, " "); // Allow only one space between words
                 setFormData2({ ...newForm, [keyName]: newValue }); // Update state with cleaned value
               }}
               keyName="address2"
@@ -1429,7 +1429,7 @@ const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse
                 const keyName = "pincode"; // Specify the key
                 const newValue = newForm[keyName]
                   .replace(/^\s+/, "") // Remove leading spaces
-                  // .replace(/\s{2,}/g, " "); // Allow only one space between words
+                // .replace(/\s{2,}/g, " "); // Allow only one space between words
                 setFormData2({ ...newForm, [keyName]: newValue }); // Update state with cleaned value
               }}
               dataKey="pincode"
