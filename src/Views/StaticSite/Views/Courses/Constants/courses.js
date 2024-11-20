@@ -13624,9 +13624,19 @@ const classes = {
         content: {
           title: '',
           text: [
-            'Developing your meditation practice is easier than ever before with our regular meditation practice classes. Connect with our renowned community of meditators and gurus and explore your meditation journey. You can join the Regular Online Meditation Classes as a beginner or as an experienced meditator. The programme helps you develop a daily habit of meditation and mindfulness. If you just can’t keep up with your meditation goals, we’ll make sure you never miss them again. You can join us any day of the week!',
-            'Click now to meditate daily!',
-            'Click now if you want to make bliss and calm a part of your life daily.',
+            'Developing your meditation practice is easier than ever before with our regular online meditation classes. Whether you are new to meditation or an experienced meditator, our program is designed to guide you through every step. Connect with our renowned community of meditators and gurus to explore your personal meditation journey. These online meditation courses help you develop a daily habit of mindfulness, ensuring that you never miss your meditation goals again. You can conveniently join any day of the week, allowing you to learn meditation online with flexibility.',
+
+            "Join our online yoga and meditation classes to start your journey towards inner peace and balance. If you're looking for structured classes for meditation, this program offers the perfect opportunity to integrate meditation into your routine.",
+            // 'Click now to meditate daily!',
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Click now to meditate daily!',
+          text: [
+            // 'Join on any date. Payments stay valid for a month from the date of joining.',
           ],
         },
       },
@@ -13650,7 +13660,7 @@ const classes = {
         type: 'paragraph',
         content: {
           title: 'Time',
-          text: ['7:00 am - 7:45 am (IST) (Join on any date)'],
+          text: ['7:00 am - 7:45 am (IST)'],
         },
       },
       {
