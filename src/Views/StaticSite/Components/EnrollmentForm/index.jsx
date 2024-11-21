@@ -29,6 +29,7 @@ const Enrollment = () => {
   const pincodeFromRedux = useSelector((state) => state.auth.user.data?.pincode);
   const countryFromRedux = useSelector((state) => state.auth.user.data?.country);
   const stateFromRedux = useSelector((state) => state.auth.user.data?.state);
+  const genderFromRedux = useSelector((state) => state.auth.user.data?.gender);
 
   useEffect(() => {
     let currentCrs = AllCourses.find((item) => item.key === courseId)
@@ -203,8 +204,8 @@ const Enrollment = () => {
       address1: addressLine1 || '',
       country: countryFromRedux || '',
       state: stateFromRedux || '',
-      pincode: pincodeFromRedux || ''
-
+      pincode: pincodeFromRedux || '',
+      gender: genderFromRedux || ''
     }));
   }, [])
 
@@ -575,9 +576,16 @@ const Enrollment = () => {
       "Regular Online Meditation Classes",
       "Couples’ Yoga Classes  - Online"
     ]
+    let updatedData = JSON.parse(localStorage.getItem('addressDataNew'))
+    let formDataConst = formData;
+    formDataConst['gender'] = updatedData?.gender
+    // setFormData(prevFormData => ({
+    //   ...prevFormData,
+    //   gender: updatedData?.gender
+
+    // }));
     console.log("form data from sdate ", formData.sdate)
     const isMatch = array.includes(currentCourse?.title);
-
     console.log("isMatchhhhhh ", isMatch)
     if (e && e.preventDefault) {
       e.preventDefault();
@@ -623,6 +631,8 @@ const Enrollment = () => {
       setEditStudentOpen(true);
     } else if (formData.gender === '') {
       // alert("7")
+      console.log(formData);
+      
       setEmpty(11)
       setEditStudentOpen(true);
     } else if (formData.mode === '') {

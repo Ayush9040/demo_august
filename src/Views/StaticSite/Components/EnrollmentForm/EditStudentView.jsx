@@ -852,9 +852,9 @@ const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse
       "Regular Pregnancy Yoga Classes - Online & On Campus",
       "Advanced Yoga Asana Regular Class - Online (Only for TYI Teachers)",
       "Healing Yoga Movement & Rhythm - Online",
-       "Yog Prayas - Online",
-      "Online Meditation Course  (Foundation Course)", 
-      "Regular Online Meditation Classes", 
+      "Yog Prayas - Online",
+      "Online Meditation Course  (Foundation Course)",
+      "Regular Online Meditation Classes",
       "Couples’ Yoga Classes  - Online"
     ]
     const isMatch = array.includes(currentCourse?.title);
@@ -1094,14 +1094,15 @@ const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse
 
       setFormData(prevFormData => ({
         ...prevFormData,
-        ...formData2
+        ...formData2,
+
       }));
       localStorage.setItem('addressDataNew', JSON.stringify({
         address1: formData2?.address1,
         country: formData2?.country,
         state: formData2?.state,
-        pincode: formData2?.pincode
-
+        pincode: formData2?.pincode,
+        gender: formData2?.gender
       }));
 
       setDefaultAddress(true);
