@@ -47,7 +47,7 @@ const IBYcourse = () => {
 
   useEffect(() => {
     scrollTo(0, 0)
-      setIsPageReady(true);
+    setIsPageReady(true);
   }, [])
 
   const [openForm, setOpenForm] = useState(false)
@@ -156,6 +156,16 @@ const IBYcourse = () => {
 
   const updateGA4 = (amnt, program) => {
     ReactGA.event('add_to_cart', {
+      currency: 'INR',
+      value: amnt,
+      items: [{
+        item_name: 'IBY Class (Only for TYI Yoga TTC Teachers) - Online & On Campus',
+        item_id: program,
+        price: amnt,
+        quantity: 1
+      }]
+    });
+    console.log('add_to_cart', {
       currency: 'INR',
       value: amnt,
       items: [{

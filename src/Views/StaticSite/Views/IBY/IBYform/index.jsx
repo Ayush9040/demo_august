@@ -93,7 +93,7 @@ const IBYform = ({ setOpenForm, price, selectBatch }) => {
         quantity: 1
       }]
     });
-    console.log({
+    console.log('begin_checkout', {
       currency: 'INR',
       value: price,
       items: [{
@@ -148,7 +148,7 @@ const IBYform = ({ setOpenForm, price, selectBatch }) => {
               quantity: 1
             }]
           });
-          console.log({
+          console.log('purchase', {
             currency: 'INR',
             value: price,
             items: [{

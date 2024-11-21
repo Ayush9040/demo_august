@@ -420,6 +420,17 @@ const HomeTutions = ({ courseMode }) => {
           quantity: 1
         }]
       });
+      console.log('begin_checkout', {
+        currency: 'INR',
+        value: '',
+        items: [{
+          item_name: 'Home Tuitions',
+          item_id: 'Home Tuitions',
+          price: '',
+          quantity: 1
+        }]
+      });
+      
       nagivate(`/enrollment_thankyou/${'Home Tuition course'}`)
     } catch {
       console.log('error')

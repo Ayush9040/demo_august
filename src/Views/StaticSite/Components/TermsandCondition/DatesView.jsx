@@ -9,6 +9,7 @@ import '../EnrollmentForm/formstyles.scss';
 import { useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { cross } from '../../assets/icons/icon'
+import ReactGA from 'react-ga4';
 
 const DatesView = ({ pageDate, setIsShipppingModalOpen }) => {
 
@@ -59,6 +60,27 @@ const DatesView = ({ pageDate, setIsShipppingModalOpen }) => {
 
   // Handle enrollment button click
   const handleEnrollClick = () => {
+    ReactGA.event('add_to_cart', {
+      currency: 'INR',
+      value: pageDate?.fees?.onlineFee ?  pageDate?.fees.onlineFee : (( pageDate?.fees?.offlineFee?.residentialFee) ? ( pageDate?.fees?.offlineFee?.residentialFee) : ( pageDate?.fees?.offlineFee?.nonResidentialFee)),
+      items: [{
+        item_name: pageDate?.title,
+        item_id: pageDate?.courseSubType ? pageDate?.courseCategory : pageDate?.title,
+        price:  pageDate?.fees?.onlineFee ?  pageDate?.fees.onlineFee : (( pageDate?.fees?.offlineFee?.residentialFee) ? ( pageDate?.fees?.offlineFee?.residentialFee) : ( pageDate?.fees?.offlineFee?.nonResidentialFee)),
+        quantity: 1
+      }]
+    });
+    console.log('add_to_cart', {
+      currency: 'INR',
+      value: pageDate?.fees?.onlineFee ?  pageDate?.fees.onlineFee : (( pageDate?.fees?.offlineFee?.residentialFee) ? ( pageDate?.fees?.offlineFee?.residentialFee) : ( pageDate?.fees?.offlineFee?.nonResidentialFee)),
+      items: [{
+        item_name: pageDate?.title,
+        item_id: pageDate?.courseSubType ? pageDate?.courseCategory : pageDate?.title,
+        price:  pageDate?.fees?.onlineFee ?  pageDate?.fees.onlineFee : (( pageDate?.fees?.offlineFee?.residentialFee) ? ( pageDate?.fees?.offlineFee?.residentialFee) : ( pageDate?.fees?.offlineFee?.nonResidentialFee)),
+        quantity: 1
+      }]
+    });
+
     const dateToPass = selectedDate ? selectedDate : 'null';
     isLoggedIn ? navigate(`/enrollment/${pageDate.key}/?date=${encodeURIComponent(dateToPass)}`) : navigate(`/user/sign-in/?location=${pageDate.key}/?date=${encodeURIComponent(dateToPass)}`);
   };

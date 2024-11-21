@@ -133,22 +133,22 @@ const Enrollment = () => {
     console.log("Months ", months);
     let originalFee = AllCourses.find((item) => item.key === courseId)
     // alert(originalFee?.fees?.onlineFee,months )
-    if(originalFee?.fees?.onlineFee && months){
-    let newAmnt = originalFee?.fees?.onlineFee * months
-    if (months == 12) {
-      newAmnt = newAmnt - 2200
-    }
-
-    setCurrentCourse(prevData => ({
-      ...prevData,
-      fees: {
-        ...prevData.fees,
-        onlineFee: newAmnt,
-        nonResidentialFee: newAmnt,
+    if (originalFee?.fees?.onlineFee && months) {
+      let newAmnt = originalFee?.fees?.onlineFee * months
+      if (months == 12) {
+        newAmnt = newAmnt - 2200
       }
-    }));
-    setCourseFee(newAmnt)
-  }
+
+      setCurrentCourse(prevData => ({
+        ...prevData,
+        fees: {
+          ...prevData.fees,
+          onlineFee: newAmnt,
+          nonResidentialFee: newAmnt,
+        }
+      }));
+      setCourseFee(newAmnt)
+    }
   }
 
   const setEndDate = (months, startDate) => {
@@ -235,10 +235,10 @@ const Enrollment = () => {
   const handleSubmit1 = async () => {
     // alert('RAzor')
     localStorage.setItem('courseName', currentCourse.title)
-    if(!isNaN(courseFee)){
+    if (!isNaN(courseFee)) {
       localStorage.setItem('courseFee', courseFee)
     }
-    
+
     localStorage.setItem('courseStartDate', formData.sdate)
     console.log("From Razor ", formData)
     if (formData.terms === false) {
@@ -438,8 +438,16 @@ const Enrollment = () => {
                       quantity: 1
                     }]
                   });
-
-
+                  console.log('purchase', {
+                    currency: 'INR',
+                    value: courseFee,
+                    items: [{
+                      item_name: currentCourse?.title,
+                      item_id: currentCourse?.courseCategory,
+                      price: courseFee,
+                      quantity: 1
+                    }]
+                  });
 
                   navigate(`/enrollment_thankyou/${currentCourse.key}`)
                 } else {
@@ -562,14 +570,14 @@ const Enrollment = () => {
       "Regular Pregnancy Yoga Classes - Online & On Campus",
       "Advanced Yoga Asana Regular Class - Online (Only for TYI Teachers)",
       "Healing Yoga Movement & Rhythm - Online",
-       "Yog Prayas - Online",
-      "Online Meditation Course  (Foundation Course)", 
-      "Regular Online Meditation Classes", 
+      "Yog Prayas - Online",
+      "Online Meditation Course  (Foundation Course)",
+      "Regular Online Meditation Classes",
       "Couples’ Yoga Classes  - Online"
     ]
     console.log("form data from sdate ", formData.sdate)
     const isMatch = array.includes(currentCourse?.title);
-    
+
     console.log("isMatchhhhhh ", isMatch)
     if (e && e.preventDefault) {
       e.preventDefault();
@@ -622,7 +630,7 @@ const Enrollment = () => {
       setEmpty('mode')
     } else if (isMatch && formData.startDate === '') {
       // alert(formData.startDate)
-      
+
       setEmpty(21)
     } else if (formData.sdate === '' || formData.sdate === 'No date Selected') {
       // alert("8")
@@ -687,6 +695,18 @@ const Enrollment = () => {
           quantity: 1
         }]
       });
+      console.log('begin_checkout', {
+        currency: 'INR',
+        value: courseFee ? courseFee : 0,
+        items: [{
+          item_name: currentCourse?.title,
+          item_id: currentCourse?.courseCategory,
+          price: courseFee ? courseFee : 0,
+          quantity: 1
+        }]
+      });
+
+
       setupUserProfile(formData);
     }
   }

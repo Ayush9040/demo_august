@@ -55,7 +55,7 @@ const SubcriptionForm = ({ packageName, packagePrice, closeForm }) => {
     }
   }, [nameFromRedux, phoneNumberFromRedux, emailFromRedux, countryNameFromRedux, cityNameFromRedux, setFormData]);
 
-  const submitForm = async() => {
+  const submitForm = async () => {
     const { data } = await enrollPlan({
       personalDetails: formData,
       courseDetails: {
@@ -66,8 +66,8 @@ const SubcriptionForm = ({ packageName, packagePrice, closeForm }) => {
     })
     const paymentOrderResponse = await createNutriOrder(data.data._id, {
       amount: packagePrice,
-      notes:'Nutri Diet Clinic',
-      objectType:'NUTRI'
+      notes: 'Nutri Diet Clinic',
+      objectType: 'NUTRI'
     })
     if (!paymentOrderResponse?.data?.amount && !paymentOrderResponse?.data?.id)
       return 0
@@ -82,7 +82,7 @@ const SubcriptionForm = ({ packageName, packagePrice, closeForm }) => {
       description: 'Nutri Diet Clinic Transaction',
       // image: 'https://example.com/your_logo', // un comment and add TYI logo
       order_id: paymentOrderResponse.data.id, // eslint-disable-line
-      handler: async(res) => {
+      handler: async (res) => {
         // Navigare to Success if razorpay_payment_id, razorpay_order_id, razorpay_signature is there
         if (
           res.razorpay_payment_id &&
@@ -96,7 +96,7 @@ const SubcriptionForm = ({ packageName, packagePrice, closeForm }) => {
             data: {
               name: formData.name,
             },
-            receivers: [formData.emailId,'info@theyogainstitute.org'],
+            receivers: [formData.emailId, 'info@theyogainstitute.org'],
           })
           handleCTEnquireNutriDietCompleted({
             event_name: "Enquire_Nutri_Diet_Payment_Completed",
@@ -121,6 +121,17 @@ const SubcriptionForm = ({ packageName, packagePrice, closeForm }) => {
               quantity: 1
             }]
           });
+          console.log('purchase', {
+            currency: 'INR',
+            value: packagePrice,
+            items: [{
+              item_name: 'Nutri Diet Clinic',
+              item_id: 'NUTRI',
+              price: packagePrice,
+              quantity: 1
+            }]
+          });
+
           navigate('/enrollment_thankyou')
         } else {
           handleCTEnquireNutriDietCompleted({
@@ -172,16 +183,16 @@ const SubcriptionForm = ({ packageName, packagePrice, closeForm }) => {
       submitForm()
       handleCTEnquireNutriDietInitiated({
         Name: formData.name,
-      Email_ID: formData.emailId,
-      Phone_No: formData.phone,
-      Country: formData.country,
-      City: formData.city,
-      // Payment_Mode,
-      Month: packageName,
-      // Program_Type,
-      // Status,
-      Amount: packagePrice,
-      }) 
+        Email_ID: formData.emailId,
+        Phone_No: formData.phone,
+        Country: formData.country,
+        City: formData.city,
+        // Payment_Mode,
+        Month: packageName,
+        // Program_Type,
+        // Status,
+        Amount: packagePrice,
+      })
       ReactGA.event('begin_checkout', {
         currency: 'INR',
         value: packagePrice,
@@ -192,6 +203,17 @@ const SubcriptionForm = ({ packageName, packagePrice, closeForm }) => {
           quantity: 1
         }]
       });
+      console.log('begin_checkout', {
+        currency: 'INR',
+        value: packagePrice,
+        items: [{
+          item_name: 'Nutri Diet Clinic',
+          item_id: 'NUTRI',
+          price: packagePrice,
+          quantity: 1
+        }]
+      });
+      
     }
   }
 

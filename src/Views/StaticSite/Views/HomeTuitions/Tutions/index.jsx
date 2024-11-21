@@ -165,6 +165,17 @@ const OnlineTution = () => {
         quantity: 1
       }]
     });
+    console.log('add_to_cart', {
+      currency: 'INR',
+      value: 0,
+      items: [{
+        item_name: 'Online Home Tuition (Yoga Tuition)',
+        item_id: program,
+        price: 0,
+        quantity: 1
+      }]
+    });
+    
   }
   return (
     <>

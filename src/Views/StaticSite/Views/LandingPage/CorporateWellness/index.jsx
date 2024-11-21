@@ -139,6 +139,17 @@ const corporateWellness = () => {
           quantity: 1
         }]
       });
+      console.log('begin_checkout', {
+        currency: 'INR',
+        value: 0,
+        items: [{
+          item_name: 'Corporate Workshops',
+          item_id: formData.company,
+          price: 0,
+          quantity: 1
+        }]
+      });
+
       setModal(true)
     } catch (error) {
       console.log(error)

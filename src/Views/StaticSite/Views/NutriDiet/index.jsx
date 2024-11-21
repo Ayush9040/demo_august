@@ -104,6 +104,17 @@ const NutriDiet = () => {
         quantity: 1
       }]
     });
+    console.log('add_to_cart', {
+      currency: 'INR',
+      value: amnt,
+      items: [{
+        item_name: 'Nutri Diet Clinic',
+        item_id: program,
+        price: amnt,
+        quantity: 1
+      }]
+    });
+    
 
   }
   const enrollFrom = () => {
