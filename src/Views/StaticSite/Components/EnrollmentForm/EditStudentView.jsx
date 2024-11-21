@@ -357,12 +357,29 @@ const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse
 
 
 
+  // useEffect(() => {
+  //   if (phoneNumberFromRedux) {
+  //     // alert(formData.phone)
+  //     const lastTenDigits = formData.phone.slice(-10);
+  //   setPhoneValue(lastTenDigits);
+  //     // setPhoneValue(formData.phone);
+  //     // setPhoneValue(phoneNumberFromRedux);
+  //   }
+  // }, [phoneNumberFromRedux]);
+
   useEffect(() => {
-    if (phoneNumberFromRedux) {
-      setPhoneValue(formData.phone);
-      setPhoneValue(phoneNumberFromRedux);
+    if (formData.phone) {
+      // Parse the phone number using the library
+      const phoneNumber = parsePhoneNumberFromString(formData.phone);
+  
+      if (phoneNumber) {
+        // Extract the local (national) number dynamically
+        setPhoneValue(phoneNumber.nationalNumber);
+      } else {
+        console.error("Invalid phone number format");
+      }
     }
-  }, [phoneNumberFromRedux]);
+  }, [formData.phone]);
 
   useEffect(() => {
     // alert(formData.country)
@@ -1065,6 +1082,26 @@ const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse
         nameField.focus();
       }
     }
+    else if (formData2.state === '' || formData2.state === null) {
+      // alert("6")
+      setEmpty(22)
+      // const nameField = document.querySelector('[data-key="pincode"]');
+      // console.log(" nameField ", nameField);
+      // if (nameField) {
+      //   nameField.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      //   nameField.focus();
+      // }
+    }
+    else if (formData2.city === '' || formData2.city === null) {
+      // alert("6")
+      setEmpty(44)
+      // const nameField = document.querySelector('[data-key="pincode"]');
+      // console.log(" nameField ", nameField);
+      // if (nameField) {
+      //   nameField.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      //   nameField.focus();
+      // }
+    }
     else if (formData2.pincode === '') {
       // alert("6")
       setEmpty(8)
@@ -1097,6 +1134,8 @@ const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse
         ...formData2,
 
       }));
+      // alert(JSON.stringify(formData2));
+      // alert(JSON.stringify(formData));
       localStorage.setItem('addressDataNew', JSON.stringify({
         address1: formData2?.address1,
         country: formData2?.country,
@@ -1370,10 +1409,10 @@ const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse
               dataKey="country"
               onChange={(value) => {
                 setValues({ country: value, state: null, city: null });
-                setFormData2((prev) => ({ ...prev, country: value.label }));
+                setFormData2((prev) => ({ ...prev, country: value.label, state: null, city: null }));
               }}
             />
-            {empty === 5 && <p>Please enter your country</p>}
+            {empty === 5 && <p>Please select your country</p>}
           </div>
         </div>
 
@@ -1390,9 +1429,10 @@ const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse
               value={values.state}
               onChange={(value) => {
                 setValues({ ...values, state: value, city: null });
-                setFormData2((prev) => ({ ...prev, state: value.label }));
+                setFormData2((prev) => ({ ...prev, state: value.label, city: null }));
               }}
             />
+            {empty === 22 && <small style={{ position: 'absolute', right: '0', bottom: '-18px', color: 'red' }}>Please select your State</small>}
           </div>
         </div>
 
@@ -1414,6 +1454,7 @@ const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse
                 setFormData2((prev) => ({ ...prev, city: value.label }));
               }}
             />
+            {empty === 44 && <small style={{ position: 'absolute', right: '0', bottom: '-18px', color: 'red' }}>Please select your city</small>}
           </div>
         </div>
 
