@@ -14,7 +14,8 @@ const InputComponent = ({
   errorCheck,
   readOnly,
   dataKey,
-  blocked=false
+  blocked=false,
+  onFocus, onBlur
 }) => {
   return (
     <div className="form-content">
@@ -44,6 +45,8 @@ const InputComponent = ({
             disabled={blocked}
             readOnly={readOnly}
             autocomplete="off"
+            onFocus={onFocus}
+            onBlur={onBlur}
           />
         </label>
       </form>

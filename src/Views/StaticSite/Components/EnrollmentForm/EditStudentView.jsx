@@ -371,7 +371,7 @@ const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse
     if (formData.phone) {
       // Parse the phone number using the library
       const phoneNumber = parsePhoneNumberFromString(formData.phone);
-  
+
       if (phoneNumber) {
         // Extract the local (national) number dynamically
         setPhoneValue(phoneNumber.nationalNumber);
@@ -1169,6 +1169,43 @@ const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse
       }
     }
   };
+  const [isMapDropdown, setIsMapDropdown] = useState(false)
+  useEffect(() => {
+    // Function to block scrolling (wheel and touchmove)
+    const preventScroll = (e) => {
+      e.preventDefault(); // Block scroll
+    };
+
+    // Function to block mousedown events (scrollbar drag only)
+    const blockMouseScroll = (e) => {
+      // Only prevent default if it's the scrollbar drag event (not clicks)
+      if (e.target === document.documentElement || e.target === document.body) {
+        e.preventDefault();
+      }
+    };
+
+    // If isMapDropdown is true, block scrolling events
+    if (isMapDropdown) {
+      // Block mouse wheel scroll
+      window.addEventListener('wheel', preventScroll, { passive: false });
+      // Block touch move scroll
+      window.addEventListener('touchmove', preventScroll, { passive: false });
+      // Block mousedown on the scrollbar (dragging)
+      document.addEventListener('mousedown', blockMouseScroll, { passive: false });
+    } else {
+      // Remove event listeners when isMapDropdown is false
+      window.removeEventListener('wheel', preventScroll);
+      window.removeEventListener('touchmove', preventScroll);
+      document.removeEventListener('mousedown', blockMouseScroll);
+    }
+
+    // Cleanup event listeners on component unmount or when isMapDropdown changes
+    return () => {
+      window.removeEventListener('wheel', preventScroll);
+      window.removeEventListener('touchmove', preventScroll);
+      document.removeEventListener('mousedown', blockMouseScroll);
+    };
+  }, [isMapDropdown]);
   useEffect(() => {
     const handleKeyDown = (event) => {
       if (event?.key) {
@@ -1363,6 +1400,8 @@ const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse
                     keyName="address1"
                     dataKey="address1"
                     errorCheck={setEmpty}
+                    onFocus={()=>setIsMapDropdown(true)}
+                    onBlur={()=>setIsMapDropdown(false)}
                   />
                   {empty === 4 && <p style={{ position: 'absolute', right: '0', color: 'red', fontSize: '10px', bottom: '-15px' }}>Please enter your address</p>}
                 </div>
