@@ -15,7 +15,7 @@ const app = express()
 const options = {
   dotfiles: 'ignore',
   etag: false,
-  extensions: ['htm','html','js','css','json','ico','png','jpg','txt','svg','woff','woff2','webp','map'],
+  extensions: ['htm', 'html', 'js', 'css', 'json', 'ico', 'png', 'jpg', 'txt', 'svg', 'woff', 'woff2', 'webp', 'map'],
   index: false,
   maxAge: '0',
   redirect: 'false',
@@ -28,7 +28,7 @@ const options = {
 
 //metaDataObj[correctPath] || await getBlogsMeta(correctPath)
 
-const getMetaData = async( path )=>{
+const getMetaData = async (path) => {
   let pathName = path.slice(1)
   try {
     const res = await axios.get(
@@ -41,7 +41,7 @@ const getMetaData = async( path )=>{
       metaData: [],
       script: '',
     }
-    
+
     data = data.replace(/\\n/g, '')
     data = data.split('\n')
     data.forEach((el) => {
@@ -57,73 +57,73 @@ const getMetaData = async( path )=>{
 
         if (el.includes('<meta')) headers.metaData.push(obj)
         if (el.includes('<link')) headers.links.push(obj)
-      } else if (el.includes('<title'))
-      {
-        headers.title = el.replace('<title>','').replace('</title>','')
+      } else if (el.includes('<title')) {
+        headers.title = el.replace('<title>', '').replace('</title>', '')
       }
       else if (el.includes('<script')) headers.script = el
     })
-    return { ...headers, h1Tag: metaDataObj?.[path]?.h1Tag, h2Tags: metaDataObj?.[path?.h2Tags] }
+    return { ...headers, h1Tag: metaDataObj?.[path]?.h1Tag, h2Tags: metaDataObj?.[path?.h2Tags], pTag: res.data.data?.pTag }
   } catch (err) {
-    if(metaDataObj[path]) return metaDataObj[path]
-    try{
-      const res = await axios.get(`${cmsBaseDomain}/post${ path }`)
-      let data =  res.data.data.meta
+    if (metaDataObj[path]) return metaDataObj[path]
+    try {
+      const res = await axios.get(`${cmsBaseDomain}/post${path}`)
+      let data = res.data.data.meta
       let headers = {
         title: '',
         links: [],
         metaData: [],
         script: '',
-        h1Tag:'',
+        h1Tag: '',
       }
       headers.h1Tag = res.data.data.title
       data = data.replace(/\\n/g, '')
       data = data.split('\n')
-      data.forEach((el) =>{
-        if(el.includes('<meta') || el.includes('<link')){
+      data.forEach((el) => {
+        if (el.includes('<meta') || el.includes('<link')) {
           let obj = {}
           let regExp = /(\S+)="[^"]*/g
           let regexMatches = el.match(regExp)
-                      
-          regexMatches.map(el=>{
+
+          regexMatches.map(el => {
             let partition = el.split('="')
-            obj[partition[0]] = partition[1].replace(/"/g,'')
+            obj[partition[0]] = partition[1].replace(/"/g, '')
           })
-                      
-          if(el.includes('<meta'))
+
+          if (el.includes('<meta'))
             headers.metaData.push(obj)
-          if(el.includes('<link'))
+          if (el.includes('<link'))
             headers.links.push(obj)
         }
-        else if(el.includes('<title'))
-        {
-          headers.title = el.replace('<title>','').replace('</title>','')
+        else if (el.includes('<title')) {
+          headers.title = el.replace('<title>', '').replace('</title>', '')
         }
-        else if(el.includes('<script'))
+        else if (el.includes('<script'))
           headers.script = el
-                  
+
       })
       return headers
-    }catch(err){
+    } catch (err) {
       console.log(err)
     }
   }
 }
-const getBogLinks = async()=>{
+const getBogLinks = async () => {
   const { data } = await axios.get(`${cmsBaseDomain}/misc/urlsarray`)
   return data.data
 }
 
 app.use(express.static('build', options))
 
-app.get('*', async(req, res) => {
+app.get('*', async (req, res) => {
   const { path: reqPath } = req
   let correctPath = reqPath
   const indexHtmlPath = path.resolve(__dirname, './build/index.html')
   const indexHtml = fs.readFileSync(indexHtmlPath)
   const $ = cheerio.load(indexHtml)
   if (reqPath.endsWith('/') && !(reqPath.length === 1 && reqPath === '/')) correctPath = reqPath.slice(0, -1)
-  const metaData = await getMetaData( correctPath )
+  const metaData = await getMetaData(correctPath)
+console.log(metaData);
+
   let titleTag = null
   let metaArray = []
   let linkArray = []
@@ -132,12 +132,13 @@ app.get('*', async(req, res) => {
   let h1Tag = null
   let h2Tags = []
   let aTags = []
-  let blogATags =[]
+  let blogATags = []
+  let pTag = ''
 
   if (metaData && metaData.title) titleTag = `<title>${metaData.title}</title>`
-  if(metaData && metaData.links){
-    linkArray = metaData.links.map((link)=>{
-      if(link.rel) return `<link rel=${ link.rel || '' } href=${ link.href || '' }  />`
+  if (metaData && metaData.links) {
+    linkArray = metaData.links.map((link) => {
+      if (link.rel) return `<link rel=${link.rel || ''} href=${link.href || ''}  />`
     })
   }
   if (metaData && metaData.metaData) {
@@ -147,20 +148,23 @@ app.get('*', async(req, res) => {
       return null
     })
   }
-  if( metaData && metaData.script ) script = metaData.script
-  
-  if(metaData && metaData.h1Tag) h1Tag = `<h1 class="meta-heading">${metaData.h1Tag}</h1>` 
-  if(metaData && metaData.h2Tags) {
+  if (metaData && metaData.script) script = metaData.script
+
+  if (metaData && metaData.h1Tag) h1Tag = `<h1 class="meta-heading">${metaData.h1Tag}</h1>`
+  if (metaData && metaData.h2Tags) {
     h2Tags = metaData.h2Tags.map((string) => `<h2 class="meta-heading">${string}</h2>`)
   }
-  if(metaData && metaData.aTags) {
-    aTags = metaData.aTags.map((url)=>`<a class="meta-heading" href=${ url } >${ url }</a>`)
-    blogATags = linkArryBlogs.map((url)=>`<a class="meta-heading" href=${ url } >${ url }</a>`)
+  if (metaData && metaData.aTags) {
+    aTags = metaData.aTags.map((url) => `<a class="meta-heading" href=${url} >${url}</a>`)
+    blogATags = linkArryBlogs.map((url) => `<a class="meta-heading" href=${url} >${url}</a>`)
   }
-  
+  if (metaData && metaData.pTag) {
+    pTag = `<p>${metaData.pTag}</p>`
+  }
+
 
   $('head').append([titleTag, script, ...metaArray, ...linkArray])
-  $('body').append([h1Tag, ...h2Tags,...aTags,...blogATags])
+  $('body').append([h1Tag, ...h2Tags, ...aTags, ...blogATags, pTag])
   res.status(200).send($.html())
 })
 
