@@ -122,7 +122,7 @@ app.get('*', async (req, res) => {
   const $ = cheerio.load(indexHtml)
   if (reqPath.endsWith('/') && !(reqPath.length === 1 && reqPath === '/')) correctPath = reqPath.slice(0, -1)
   const metaData = await getMetaData(correctPath)
-console.log(metaData);
+  console.log(metaData);
 
   let titleTag = null
   let metaArray = []
@@ -159,7 +159,7 @@ console.log(metaData);
     blogATags = linkArryBlogs.map((url) => `<a class="meta-heading" href=${url} >${url}</a>`)
   }
   if (metaData && metaData.pTag) {
-    pTag = `<p>${metaData.pTag}</p>`
+    pTag = `<p class="meta-heading">${metaData.pTag}</p>`
   }
 
 
