@@ -62,7 +62,7 @@ const getMetaData = async (path) => {
       }
       else if (el.includes('<script')) headers.script = el
     })
-    return { ...headers, h1Tag: metaDataObj?.[path]?.h1Tag, h2Tags: metaDataObj?.[path?.h2Tags], pTag: res.data.data?.pTag }
+    return { ...headers, h1Tag: metaDataObj?.[path]?.h1Tag, h2Tags: metaDataObj?.[path?.h2Tags], pTag: res.data.data?.pTag, aTag: res.data.data?.relatedCourses }
   } catch (err) {
     if (metaDataObj[path]) return metaDataObj[path]
     try {
@@ -103,7 +103,7 @@ const getMetaData = async (path) => {
       })
       return headers
     } catch (err) {
-      console.log(err)
+      // console.log(err)
     }
   }
 }
@@ -122,7 +122,7 @@ app.get('*', async (req, res) => {
   const $ = cheerio.load(indexHtml)
   if (reqPath.endsWith('/') && !(reqPath.length === 1 && reqPath === '/')) correctPath = reqPath.slice(0, -1)
   const metaData = await getMetaData(correctPath)
-  console.log(metaData);
+  // console.log(metaData);
 
   let titleTag = null
   let metaArray = []
@@ -132,6 +132,7 @@ app.get('*', async (req, res) => {
   let h1Tag = null
   let h2Tags = []
   let aTags = []
+  let courseaTags = []
   let blogATags = []
   let pTag = ''
 
@@ -161,10 +162,13 @@ app.get('*', async (req, res) => {
   if (metaData && metaData.pTag) {
     pTag = `<p class="meta-heading">${metaData.pTag}</p>`
   }
+  if (metaData && metaData.aTag) {//added to test related courses as anchor tags
+    courseaTags = metaData.aTag.map((url) => `<a class="meta-heading" href=https://tyi-test.theyogainstitute.org/${url} >https://tyi-test.theyogainstitute.org/${url}</a>`)
+  }
 
 
   $('head').append([titleTag, script, ...metaArray, ...linkArray])
-  $('body').append([h1Tag, ...h2Tags, ...aTags, ...blogATags, pTag])
+  $('body').append([h1Tag, ...h2Tags, ...aTags, ...blogATags, pTag, ...courseaTags])
   res.status(200).send($.html())
 })
 

@@ -302,7 +302,7 @@ const NutriDiet = () => {
         <InnerNavComponent abc={highlight} />
         <div className="main-container">
           <div className="highlight-info">
-            <h1>Nutri Diet Clinic – Get Your Custom Diet Plans.</h1>
+            <h1>Nutri Diet Clinic – Customized Diets that Balance Body, Mind, and Lifestyle.</h1>
             <p>Take a step for your well-being and enroll in our custom diet plans to get a holistic change in your lifestyle.</p>
             <div
               id="date-select-mobile"
