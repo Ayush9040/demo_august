@@ -163,7 +163,7 @@ app.get('*', async (req, res) => {
     pTag = `<p class="meta-heading">${metaData.pTag}</p>`
   }
   if (metaData && metaData.aTag) {//added to test related courses as anchor tags
-    courseaTags = metaData.aTag.map((url) => `<a class="meta-heading" href=https://tyi-test.theyogainstitute.org/${url} >https://tyi-test.theyogainstitute.org/${url}</a>`)
+    courseaTags = metaData.aTag.map((url) => `<a class="internal-link" href=https://dev2.theyogainstitute.org/${url} >https://dev2.theyogainstitute.org/${url}</a>`)
   }
 
 
