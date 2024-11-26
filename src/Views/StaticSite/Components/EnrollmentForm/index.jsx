@@ -432,6 +432,7 @@ const Enrollment = () => {
                   ReactGA.event('purchase', {
                     currency: 'INR',
                     value: courseFee,
+                    transaction_id:res.razorpay_payment_id,
                     items: [{
                       item_name: currentCourse?.title,
                       item_id: currentCourse?.courseCategory,
@@ -442,6 +443,7 @@ const Enrollment = () => {
                   console.log('purchase', {
                     currency: 'INR',
                     value: courseFee,
+                    transaction_id:res.razorpay_payment_id,
                     items: [{
                       item_name: currentCourse?.title,
                       item_id: currentCourse?.courseCategory,

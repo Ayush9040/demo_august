@@ -22,6 +22,7 @@ import { updateCartData, clearCart } from '../../Shop.action'
 import { handleCTCheckoutCompleted, handleCTCheckoutFailed, handleCTCheckoutCompleted1 } from '../../../../../../CleverTap/shopEvents'
 import { handleCTProductPaymentCompleted } from '../../../../../../CleverTap/shopEvents'
 import { logoutUserAction } from '../../../Authentication/Auth.actions'
+import ReactGA from 'react-ga4';
 
 
 const ShippingAdd = () => {
@@ -61,20 +62,20 @@ const ShippingAdd = () => {
   const [addresId, setAddressId] = useState(null)
   const [discountAmt, setDiscountAmt] = useState()
   const [isCouponAdded, setIsCouponAdded] = useState()
-  const [totalAmount,setTotalAmount] = useState()
-  const [shippingAmt,setShippingAmt] = useState()
+  const [totalAmount, setTotalAmount] = useState()
+  const [shippingAmt, setShippingAmt] = useState()
 
   const nameFromRedux = useSelector((state) => state.auth.user.data?.firstName);
   const countryNameFromRedux = useSelector((state) => state.auth.user.data?.country);
   const stateNameFromRedux = useSelector((state) => state.auth.user.data?.state);
   const cityNameFromRedux = useSelector((state) => state.auth.user.data?.city);
 
-  if(nameFromRedux === undefined) {
+  if (nameFromRedux === undefined) {
     dispatch(logoutUserAction());
     localStorage.removeItem("authorizationToken");
     navigate('/user/sign-in');
   }
-  
+
 
   useEffect(() => {
     if (nameFromRedux) {
@@ -89,24 +90,24 @@ const ShippingAdd = () => {
     if (cityNameFromRedux) {
       setFormData((prev) => ({ ...prev, city: cityNameFromRedux }));
     }
-    
-    
-  
+
+
+
   }, [nameFromRedux, countryNameFromRedux, stateNameFromRedux, cityNameFromRedux, setFormData]);
 
 
 
-  const { location } = useSelector(state=>state.location)
-  const { activCartId } = useSelector(state=>state.shop)
+  const { location } = useSelector(state => state.location)
+  const { activCartId } = useSelector(state => state.shop)
 
-  const fetchAddress = async() => {
+  const fetchAddress = async () => {
     const { data } = await getAddress(user?.data?._id)
     setPrevAdd(data.data)
   }
 
 
 
-  const displayCart = async(products) => {
+  const displayCart = async (products) => {
     setIsLoading(true)
     const arr = []
     for await (let item of products) {
@@ -125,9 +126,9 @@ const ShippingAdd = () => {
     if (cart.length === 0) return
     let sum = 0
     cart.forEach((item) => {
-      if(location==='IN'){
+      if (location === 'IN') {
         sum += item.price * item.quantity
-      }else{
+      } else {
         sum += item.priceInternational * item.quantity
       }
     })
@@ -142,7 +143,7 @@ const ShippingAdd = () => {
     return discount
   }
 
-  const postCart = async() => {
+  const postCart = async () => {
 
     try {
       const { data } = await createCart({
@@ -172,7 +173,7 @@ const ShippingAdd = () => {
     setAddressId(addData?._id)
   }
 
-  const postNewAddress = async() => {
+  const postNewAddress = async () => {
     try {
       const { data } = await addAddress({
         userId: user?.data?._id,
@@ -203,8 +204,8 @@ const ShippingAdd = () => {
     }
   }
 
-  const applyCoupon = async() => {
-    try{
+  const applyCoupon = async () => {
+    try {
       const { data } = await getCoupon(formData.discount)
       setDiscountAmt({
         type: data?.data?.[0]?.discountType,
@@ -217,47 +218,47 @@ const ShippingAdd = () => {
         value: data?.data?.couponDiscount,
         id: data?.data?._id,
       }
-    }catch(err){
+    } catch (err) {
       console.log(err)
     }
   }
 
 
-  const makePayment = async() => {
+  const makePayment = async () => {
     const finalAddId = addresId ? addresId : await postNewAddress()
-    if( !finalAddId ) return
+    if (!finalAddId) return
     const { data } = await createOrder({
-      cartId:cartId,
-      couponCode:isCouponAdded && formData.discount,
+      cartId: cartId,
+      couponCode: isCouponAdded && formData.discount,
       notes: {
-        description: `order_${ cartId }`,
-        addressId:finalAddId
+        description: `order_${cartId}`,
+        addressId: finalAddId
       },
     })
     const options = {
       // key: 'rzp_test_hWMewRlYQKgJIk',
-       // Enter the Key ID generated from the Dashboard
-       key: razorPayKey,
+      // Enter the Key ID generated from the Dashboard
+      key: razorPayKey,
       amount: data.amount, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
       currency: 'INR',
       name: 'The Yoga Institute',
       description: 'Order Placed',
       // image: 'https://example.com/your_logo', // un comment and add TYI logo
       order_id: data.id, // eslint-disable-line
-      handler: async(res) => {
+      handler: async (res) => {
         // Navigare to Success if razorpay_payment_id, razorpay_order_id, razorpay_signature is there
         if (
           res.razorpay_payment_id &&
           res.razorpay_order_id &&
           res.razorpay_signature
         ) {
-          orderCallback({   
-            razorpay_payment_id:res.razorpay_payment_id,// eslint-disable-line
-            razorpay_order_id:res.razorpay_order_id,// eslint-disable-line
-            razorpay_signature:res.razorpay_signature,// eslint-disable-line
-            userId:user?.data?.userId,
-            cartId:cartId,
-            addressId:finalAddId
+          orderCallback({
+            razorpay_payment_id: res.razorpay_payment_id,// eslint-disable-line
+            razorpay_order_id: res.razorpay_order_id,// eslint-disable-line
+            razorpay_signature: res.razorpay_signature,// eslint-disable-line
+            userId: user?.data?.userId,
+            cartId: cartId,
+            addressId: finalAddId
           })
 
           const programNames = cart.map((item) => item.title);
@@ -271,11 +272,11 @@ const ShippingAdd = () => {
             Pincode: formData.pincode,
             cartItems: cart
           })
-
+          await updateGa4(res.razorpay_payment_id)
           localStorage.removeItem('cart')
 
           dispatch(clearCart());
-          
+
           navigate('/shop/thank-you')
         } else {
           const programNames = cart.map((item) => item.title);
@@ -299,9 +300,44 @@ const ShippingAdd = () => {
   }
 
   // console.log('cart details for ct_1 ', cart);
-  
 
-  const checkout = async() => {
+
+  const updateGa4 = async (id) => {//for Purchase
+    let items = [];
+    let totalAmountt = totalAmount - calcDiscount()
+    // cart.reduce((sum, item) => {
+    //   if (location === 'IN') {
+    //     return sum + item.price; // Sum the 'price' if location is IN
+    //   } else {
+    //     return sum + item.priceInternational; // Sum the 'priceInternational' otherwise
+    //   }
+    // }, 0);
+
+    cart.forEach(book => {
+      items.push(
+        {
+          item_name: book?.name,
+          item_id: book?._id,
+          price: location === 'IN' ? book?.price : book?.priceInternational,
+          quantity: book?.quantity
+        }
+      )
+    })
+
+    ReactGA.event('purchase', {
+      currency: location === 'IN' ? 'INR' : 'USD',
+      value: totalAmountt ? totalAmountt : 0,
+      transaction_id: id,
+      items: items
+    });
+    console.log('purchase', {
+      currency: location === 'IN' ? 'INR' : 'USD',
+      value: totalAmountt ? totalAmountt : 0,
+      transaction_id: id,
+      items: items
+    });
+  }
+  const checkout = async () => {
     if (!usePrevAddress) {
       if (formData.name === '') return setEmpty(1)
       if (formData.add1 === '') return setEmpty(2)
@@ -313,7 +349,7 @@ const ShippingAdd = () => {
     }
 
     handleCTCheckoutCompleted1(cart);
-    
+
     await makePayment()
   }
 
@@ -322,10 +358,10 @@ const ShippingAdd = () => {
     const cartItems = localStorage.getItem('cart')
     postCart()
     dispatch(updateCartData(JSON.parse(cartItems)))
-  }, [user?.data, activCartId ])
+  }, [user?.data, activCartId])
 
   console.log('dp ', cart);
-  
+
 
   return (
     <>
@@ -479,14 +515,14 @@ const ShippingAdd = () => {
                       <div className='ship_order_sum'>
                         <div className='ship_price'>Order summary</div>
                         <div className='price'>Price</div>
-                        <div className='ship_price'>{ location ==='IN' ? `₹ ${item?.price}`:`$ ${item?.priceInternational}`}</div>
+                        <div className='ship_price'>{location === 'IN' ? `₹ ${item?.price}` : `$ ${item?.priceInternational}`}</div>
                         <div className='price'>Qunatity</div>
                         <div className='ship_price'>{item.quantity}</div>
                       </div>
                     </div>
                   </div>
                 ))}
-              <div  style={{ display:'none' }}  className='discount'>
+              <div style={{ display: 'none' }} className='discount'>
                 <form>
                   <div className='form_error'>
                     <InputComponent
@@ -495,7 +531,7 @@ const ShippingAdd = () => {
                       form={formData}
                       setField={setFormData}
                       keyName='discount'
-                      blocked={ isCouponAdded ? true:false }
+                      blocked={isCouponAdded ? true : false}
                     />
                   </div>
                   {isCouponAdded && (
@@ -508,7 +544,7 @@ const ShippingAdd = () => {
                     </small>
                   )}
                 </form>
-                <div className='apply_discount' style={ formData.discount!=='' ? { color:'#121212' }:{} }  onClick={applyCoupon}>
+                <div className='apply_discount' style={formData.discount !== '' ? { color: '#121212' } : {}} onClick={applyCoupon}>
                   Apply
                 </div>
               </div>
@@ -516,11 +552,11 @@ const ShippingAdd = () => {
                 <div className='check_out'>
                   <div>Subtotal ({cart.length} item(s))</div>
                   <br />
-                  { ( shippingAmt || discountAmt ) && <div>Total: { location==='IN' ? `₹ ${ getTotal() }`:`$ ${ getTotal() }` }</div>}
-                  {discountAmt && <div>Discount: - { location==='IN' ? `₹ ${ calcDiscount() }`:`$ ${ calcDiscount() }` }</div>}
-                  { (shippingAmt != 0) && <div>Shipping: +{ location==='IN' ? `₹ ${ shippingAmt }`:`$ ${ shippingAmt }` } </div> }
+                  {(shippingAmt || discountAmt) && <div>Total: {location === 'IN' ? `₹ ${getTotal()}` : `$ ${getTotal()}`}</div>}
+                  {discountAmt && <div>Discount: - {location === 'IN' ? `₹ ${calcDiscount()}` : `$ ${calcDiscount()}`}</div>}
+                  {(shippingAmt != 0) && <div>Shipping: +{location === 'IN' ? `₹ ${shippingAmt}` : `$ ${shippingAmt}`} </div>}
                   <div className='check_out_price'>
-                    { location==='IN' ? `₹ ${ totalAmount - calcDiscount() }`:`$ ${ totalAmount - calcDiscount() }` }
+                    {location === 'IN' ? `₹ ${totalAmount - calcDiscount()}` : `$ ${totalAmount - calcDiscount()}`}
                   </div>
                   <div>Inclusive of all taxes</div>
                 </div>

@@ -141,6 +141,7 @@ const IBYform = ({ setOpenForm, price, selectBatch }) => {
           ReactGA.event('purchase', {
             currency: 'INR',
             value: price,
+            transaction_id:res.razorpay_payment_id,
             items: [{
               item_name: 'IBY class',
               item_id: 'IBY',
@@ -151,6 +152,7 @@ const IBYform = ({ setOpenForm, price, selectBatch }) => {
           console.log('purchase', {
             currency: 'INR',
             value: price,
+            transaction_id:res.razorpay_payment_id,
             items: [{
               item_name: 'IBY class',
               item_id: 'IBY',

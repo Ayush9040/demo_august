@@ -16,6 +16,7 @@ import { isAuthorized } from './Utils/localStorage'
 import { CleverTapProvider } from './CleverTap/CleverTapProvider'
 // import ReactGA from 'react-ga'
 import ReactGA from 'react-ga4';
+import { ga4Id } from './Constants/appSettings'
 
 export const store = configureStore({})
 
@@ -35,7 +36,7 @@ store.dispatch({
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
-ReactGA.initialize('G-KZMLSTPLP1')
+ReactGA.initialize(ga4Id)
 ReactGA.send('/')
 // ReactGA.initialize('5158237522')
 // ReactGA.pageview('/')

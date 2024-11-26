@@ -44,6 +44,38 @@ const SingleProduct = () => {
     getSingleProducts()
     dispatch(updateCartData(JSON.parse(localStorage.getItem('cart'))))
   }, [])
+  const [isPageReady, setIsPageReady] = useState(false);
+
+  useEffect(() => {
+    if (productDetail?.name) {
+      setIsPageReady(true);
+    }
+  }, [productDetail?.name]);
+
+  useEffect(() => {
+    if (isPageReady) {
+      ReactGA.event('view_item', {
+        currency: location !== 'IN' ? 'USD' : 'INR',
+        value: productDetail?.price,
+        items: [{
+          item_name: productDetail?.name,
+          item_id: productDetail?._id,
+          price: productDetail?.price,
+          quantity: 1
+        }]
+      });
+      console.log('view_item', {
+        currency: location !== 'IN' ? 'USD' : 'INR',
+        value: productDetail?.price,
+        items: [{
+          item_name: productDetail?.name,
+          item_id: productDetail?._id,
+          price: productDetail?.price,
+          quantity: 1
+        }]
+      })
+    }
+  }, [isPageReady]);
 
   const addCart = (idx) => {
     localStorage.setItem('cart', JSON.stringify(updateLocalCart(idx)))
@@ -82,12 +114,12 @@ const SingleProduct = () => {
 
       ReactGA.event('add_to_cart', {
         currency: location !== 'IN' ? 'USD' : 'INR',
-        value: productDetail?.price * qty?.quantity,
+        value: productDetail?.price,
         items: [{
           item_name: productDetail?.name,
           item_id: productDetail?._id,
           price: productDetail?.price,
-          quantity: qty?.quantity
+          quantity: 1
         }]
       });
     }
