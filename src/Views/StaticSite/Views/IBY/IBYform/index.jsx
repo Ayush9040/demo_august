@@ -14,6 +14,7 @@ import InnerNavComponent from '../../../Components/InnerNavComponent'
 import { razorPayKey } from '../../../../../Constants/appSettings'
 import { useSelector } from 'react-redux'
 import ReactGA from 'react-ga4';
+import { handleCTPaymentCompletedCourse } from '../../../../../CleverTap/buttonClicked'
 
 const IBYform = ({ setOpenForm, price, selectBatch }) => {
 
@@ -77,12 +78,12 @@ const IBYform = ({ setOpenForm, price, selectBatch }) => {
         email: formData.email,
         country: formData.country,
         paymentInfo: formData.paymentInfo,
-        certificationDocs: ` ${courseAsset}`,
+        certificationDocs: courseAsset?`${courseAsset}`:'',
         courseInfo: 'IBY class',
 
       }
     )
-    
+
     ReactGA.event('begin_checkout', {
       currency: 'INR',
       value: price,
@@ -138,6 +139,42 @@ const IBYform = ({ setOpenForm, price, selectBatch }) => {
             },
             receivers: [formData.email, 'info@theyogainstitute.org'],
           })
+          handleCTPaymentCompletedCourse({
+            paymentStatus: "Success",
+            courseName: 'IBY class',
+            courseCategory: 'IBY class',
+            startDate: '',
+            endDate: '',
+            date: '',
+            pageName: window.location.href,
+            checkoutUrl: window.location.href,
+            pageUrl: window.location.href,
+            fee: price,
+            timings: '',
+            tenure: '',
+            onlineMode: '',
+            residentialMode: '',
+            nonResidentialMode: '',
+            residentialLocation: '',
+            nonResidentialLocation: '',
+            courseType: 'IBY class',
+            courseSubType: '',
+            language: '',
+            mode: formData.paymentInfo,
+            batchNo: '',
+            preRequisite: '',
+            status: "Success",
+            name: formData.name,
+            emailId: formData.email,
+            phoneNumber: formData.phone,
+            state: '',
+            city: '',
+            pinCode: '',
+            gender: '',
+            age: '',
+            nationality: formData.country,
+          })
+        
           ReactGA.event('purchase', {
             currency: 'INR',
             value: price,

@@ -119,10 +119,10 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
             text: '2 Months YTTC Online – English - Batch 6',
             online: true, month2: true, weekDays: true,
           },
-          // {
-          //   url: '/200-Hours',
-          //   text: 'View more about 200 hours TTC (Basic)',
-          // },
+          {
+            url: '/200-Hours',
+            text: 'View more about 200 hours YTTC (Basic)',
+          },
           // /200-hrs-part-time-ttc-online-english-batch-5
         ],
       },

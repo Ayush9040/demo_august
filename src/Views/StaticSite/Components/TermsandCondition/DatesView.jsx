@@ -60,23 +60,54 @@ const DatesView = ({ pageDate, setIsShipppingModalOpen }) => {
 
   // Handle enrollment button click
   const handleEnrollClick = () => {
+    if (window?.clevertap) {
+      const currentPath = window.location.pathname;
+
+      // Extract the portion after the last '/' and remove the leading '/'
+      const extractedKey = currentPath.split('/').pop().replace(/-/g, ' ');
+
+      window.clevertap.event.push("Course_Enroll_Click", {
+        "Course_name": pageDate?.title,
+        "Page_name": extractedKey,
+        "Fees_Residential_OnCampus": pageDate?.fees.offlineFee.residentialFee,
+        "Fees_Non_Residential_OnCampus": pageDate?.fees.offlineFee.nonResidentialFee,
+        "Fees_Online": pageDate?.fees.onlineFee,
+        "Timings": pageDate?.timing,
+        "Page_Url": window.location.href,
+        "Tenure": '',
+        "Course Category": pageDate?.courseCategory,
+        "Course-SubType": pageDate?.courseSubType,
+        "Course Mode": courseMode,
+        "Course Location": pageDate?.courseLocation,
+        "Course Type": pageDate?.courseType,
+        "Language": pageDate?.language,
+        "Batch_No": pageDate?.batch,
+        "date_time_timestamp": new Date().toISOString()
+      });
+
+      console.log("Course_Clicked event tracked", window.clevertap);
+
+    } else {
+      console.error("CleverTap is not initialized.");
+    }
+
     ReactGA.event('add_to_cart', {
       currency: 'INR',
-      value: pageDate?.fees?.onlineFee ?  pageDate?.fees.onlineFee : (( pageDate?.fees?.offlineFee?.residentialFee) ? ( pageDate?.fees?.offlineFee?.residentialFee) : ( pageDate?.fees?.offlineFee?.nonResidentialFee)),
+      value: pageDate?.fees?.onlineFee ? pageDate?.fees.onlineFee : ((pageDate?.fees?.offlineFee?.residentialFee) ? (pageDate?.fees?.offlineFee?.residentialFee) : (pageDate?.fees?.offlineFee?.nonResidentialFee)),
       items: [{
         item_name: pageDate?.title,
         item_id: pageDate?.courseSubType ? pageDate?.courseCategory : pageDate?.title,
-        price:  pageDate?.fees?.onlineFee ?  pageDate?.fees.onlineFee : (( pageDate?.fees?.offlineFee?.residentialFee) ? ( pageDate?.fees?.offlineFee?.residentialFee) : ( pageDate?.fees?.offlineFee?.nonResidentialFee)),
+        price: pageDate?.fees?.onlineFee ? pageDate?.fees.onlineFee : ((pageDate?.fees?.offlineFee?.residentialFee) ? (pageDate?.fees?.offlineFee?.residentialFee) : (pageDate?.fees?.offlineFee?.nonResidentialFee)),
         quantity: 1
       }]
     });
     console.log('add_to_cart', {
       currency: 'INR',
-      value: pageDate?.fees?.onlineFee ?  pageDate?.fees.onlineFee : (( pageDate?.fees?.offlineFee?.residentialFee) ? ( pageDate?.fees?.offlineFee?.residentialFee) : ( pageDate?.fees?.offlineFee?.nonResidentialFee)),
+      value: pageDate?.fees?.onlineFee ? pageDate?.fees.onlineFee : ((pageDate?.fees?.offlineFee?.residentialFee) ? (pageDate?.fees?.offlineFee?.residentialFee) : (pageDate?.fees?.offlineFee?.nonResidentialFee)),
       items: [{
         item_name: pageDate?.title,
         item_id: pageDate?.courseSubType ? pageDate?.courseCategory : pageDate?.title,
-        price:  pageDate?.fees?.onlineFee ?  pageDate?.fees.onlineFee : (( pageDate?.fees?.offlineFee?.residentialFee) ? ( pageDate?.fees?.offlineFee?.residentialFee) : ( pageDate?.fees?.offlineFee?.nonResidentialFee)),
+        price: pageDate?.fees?.onlineFee ? pageDate?.fees.onlineFee : ((pageDate?.fees?.offlineFee?.residentialFee) ? (pageDate?.fees?.offlineFee?.residentialFee) : (pageDate?.fees?.offlineFee?.nonResidentialFee)),
         quantity: 1
       }]
     });

@@ -114,7 +114,20 @@ const NutriDiet = () => {
         quantity: 1
       }]
     });
-    
+    if (window?.clevertap) {
+      window.clevertap.event.push("Course_Enroll_Click", {
+        "Course_name": 'Nutri Diet Clinic',
+        "Page_name": 'nutri-diet',
+        "Page_Url": window.location.href,
+        "Tenure": plan,
+        "date_time_timestamp": new Date().toISOString()
+      });
+     
+      console.log("Course_Clicked event tracked", window.clevertap);
+    } else {
+      console.error("CleverTap is not initialized.");
+    }
+
 
   }
   const enrollFrom = () => {
