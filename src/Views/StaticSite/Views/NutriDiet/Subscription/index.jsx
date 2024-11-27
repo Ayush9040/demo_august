@@ -114,6 +114,7 @@ const SubcriptionForm = ({ packageName, packagePrice, closeForm }) => {
           ReactGA.event('purchase', {
             currency: 'INR',
             value: packagePrice,
+            transaction_id:res.razorpay_payment_id,
             items: [{
               item_name: 'Nutri Diet Clinic',
               item_id: 'NUTRI',
@@ -124,6 +125,7 @@ const SubcriptionForm = ({ packageName, packagePrice, closeForm }) => {
           console.log('purchase', {
             currency: 'INR',
             value: packagePrice,
+            transaction_id:res.razorpay_payment_id,
             items: [{
               item_name: 'Nutri Diet Clinic',
               item_id: 'NUTRI',

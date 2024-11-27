@@ -3,7 +3,8 @@ import Slider from 'react-slick'
 import './LocationDetails.scss'
 import baseDomain from '../../assets/images/imageAsset.js'
 import { santaCruz } from '../../assets/images/imageAsset.js'
-
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css'
 const Carousel = () => {
   const settings = {
     dots: false,
