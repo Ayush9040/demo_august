@@ -121,7 +121,7 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
           },
           {
             url: '/courses/browse/ttc?type=200',//200-Hours
-            text: 'View more about 200 hours YTTC (Basic)',
+            text: 'View all 200 hours YTTC (Basic)',
           },
           // /200-hrs-part-time-ttc-online-english-batch-5
         ],
@@ -137,7 +137,7 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
           },
           {
             url: '/courses/browse/ttc?type=500',
-            text: 'View more about 500 Hours YTTC (Intermediate)',
+            text: 'View all 500 Hours YTTC (Intermediate)',
           },
         ],
       },
@@ -168,7 +168,7 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
           },
           {
             url: '/courses/browse/ttc?type=900',
-            text: 'View more about 900 Hours YTTC (Advanced)',
+            text: 'View all 900 Hours YTTC (Advanced)',
           },
         ],
       },
