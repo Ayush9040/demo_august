@@ -120,7 +120,7 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
             online: true, month2: true, weekDays: true,
           },
           {
-            url: '/200-Hours',
+            url: '/courses/browse/ttc?type=200',//200-Hours
             text: 'View more about 200 hours YTTC (Basic)',
           },
           // /200-hrs-part-time-ttc-online-english-batch-5
@@ -134,6 +134,10 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
             url: '/500-hrs-online-yoga-teacher-training-course-intermediate-level',
             text: ' 3 Months YTTC - Online - English',
             online: true, month3: true, weekDays: true,
+          },
+          {
+            url: '/courses/browse/ttc?type=500',
+            text: 'View more about 500 Hours YTTC (Intermediate)',
           },
         ],
       },
@@ -161,6 +165,10 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
             url: '/two-year-ttc',
             text: '2 Years YTTC-Online & On Campus-English',
             onCampus: true, online: true, weekDays: true, year2: true
+          },
+          {
+            url: '/courses/browse/ttc?type=900',
+            text: 'View more about 900 Hours YTTC (Advanced)',
           },
         ],
       },
@@ -583,7 +591,8 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
             <h1 style={{ fontSize: '2.6rem' }}>{title}</h1>
           </Link>
             :
-            <div style={{ fontSize: '2.6rem', fontWeight: '700' }}>{title}</div>
+            <Link to={`/courses/browse/ttc?type=200`}>
+              <div style={{ fontSize: '2.6rem', fontWeight: '700' }}>{title}</div></Link>
           }
 
         </div>
