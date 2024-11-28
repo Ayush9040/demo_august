@@ -2177,10 +2177,14 @@ const ttc200hr = {
       // '28th Sep to 15th Dec 2024 ',
       // '5th Oct to 22nd Dec 2024 ',
       '28th Dec to 16th Mar 2025',
-      '15th Mar to 1st Jun 2025',
-      '7th Jun to 24th Aug 2025',
-      '30th Aug to 16th Nov 2025',
-      '22nd Nov to 8th Feb 2026'
+      "22nd Mar to 8th Jun 2025",
+      "14th Jun to 31st Aug 2025",
+      "6th Sep to 23rd Nov 2025",
+      "29th Nov to 15th Feb 2026",
+      // '15th Mar to 1st Jun 2025',
+      // '7th Jun to 24th Aug 2025',
+      // '30th Aug to 16th Nov 2025',
+      // '22nd Nov to 8th Feb 2026'
     ],
     online: true,
     onCampus: false,
