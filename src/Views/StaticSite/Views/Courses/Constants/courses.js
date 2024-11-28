@@ -1666,7 +1666,7 @@ const ttc200hr = {
 
     tenure: '2 month',
     courseType: '(RYT 200- Basic)',
-    language: 'English',
+    language: 'Hindi',
     preRequisite: 'None',
     courseCategory: 'Educational',
     courseSubType: '200 Hour Yoga Teacher Training',
