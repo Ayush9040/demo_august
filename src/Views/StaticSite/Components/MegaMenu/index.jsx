@@ -27,6 +27,7 @@ const MegaMenu = ({ setNav }) => {
     { name: 'VOLUNTEER', link: '/volunteer', id: 14, key: 'VOLUNTEER' },
     { name: 'LOCATE US', link: '/our-branches', id: 15, key: 'LOCATE' },
     { name: 'CONTACT US', link: '/contact', id: 16, key: 'CONTACT' },
+    { name: 'YOGA RETREAT', link: '/alibaug', id: 17, key: 'RETREAT' },
   ]
 
   const subMenu = {

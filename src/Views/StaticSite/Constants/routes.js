@@ -19,15 +19,15 @@ const Enrollment = lazy(() => import('../Components/EnrollmentForm'))
 const wellness = lazy(() => import('../Components/Wellness'))
 const CorporateSocialResponsibilty = lazy(() => import('../Components/CorporateSocialResponsibility'))
 const Course = lazy(() => import('../Views/Courses/Views/course-page'))
-const SingleCsr = lazy(() =>  import('../Components/CorporateSocialResponsibility/SingleCsr'))
-const BrowseCourses = lazy(() =>  import('../Views/Courses/Views/browse-courses'))
+const SingleCsr = lazy(() => import('../Components/CorporateSocialResponsibility/SingleCsr'))
+const BrowseCourses = lazy(() => import('../Views/Courses/Views/browse-courses'))
 const Experiences = lazy(() => import('../Views/Experience'))
 const Museum = lazy(() => import('../Views/Museum'))
 const Thankyou = lazy(() => import('../Components/EnrollmentForm/ThankYou'))
 const EnrolledSuccess = lazy(() => import('../Components/EnrollmentForm/EnrolledSuccess'))
-const SattvikCooking = lazy(() =>  import('../Components/Highlights/SattvikCooking'))
+const SattvikCooking = lazy(() => import('../Components/Highlights/SattvikCooking'))
 const YogaByTheBay = lazy(() => import('../Components/Highlights/YogaByTheBay'))
-const FullmoonMeditation = lazy(() =>  import('../Components/Highlights/FullmoonMeditation'))
+const FullmoonMeditation = lazy(() => import('../Components/Highlights/FullmoonMeditation'))
 // const CorporateWorkshop = lazy(() => import('../Components/Highlights/CorporateWorkshop'))
 const OnlineTution = lazy(() => import('../Views/HomeTuitions/Tutions'))
 const AboutUs = lazy(() => import('../Views/About/Views/overview'))
@@ -37,12 +37,12 @@ const Facilities = lazy(() => import('../Views/Facilities/Views/facilities'))
 const DonationPage = lazy(() => import('../Views/Donation/Views/donation-page'))
 const MediaGallery = lazy(() => import('../Views/Media/Views/media-gallery'))
 const GalleryVideo = lazy(() => import('../Views/Media/Views/media-video'))
-const YogaTotalHealth = lazy(() =>  import('../Views/Publication/Views/yoga-health'))
+const YogaTotalHealth = lazy(() => import('../Views/Publication/Views/yoga-health'))
 const Yogasattva = lazy(() => import('../Views/Publication/Views/yogasattva'))
 const library = lazy(() => import('../Views/Publication/Views/library'))
 const BlogPage = lazy(() => import('../Views/Blogs/Views/blog-page'))
 const OurLegacyModal = lazy(() => import('../Components/OurLegacyModal'))
-const SocialResponsibility = lazy(() =>  import('../Views/SocialPage/Views/social-responsibility'))
+const SocialResponsibility = lazy(() => import('../Views/SocialPage/Views/social-responsibility'))
 const VolunteerPage = lazy(() => import('../Views/Volunteer/Views/volunteer'))
 const Values = lazy(() => import('../Views/Volunteer/Views/values'))
 const AlumniGallery = lazy(() => import('../Views/Alumni/Views/alumni-gallery'))
@@ -73,6 +73,7 @@ const DescisionComp = lazy(() => import('../Views/DecisionComponent'))
 const JuhuVileLoc = lazy(() => import('../Components/LocateUs/JuhuVileLoc'))
 const LocateUs = lazy(() => import('../Components/LocateUs'))
 const LocateDetails = lazy(() => import('../Components/LocateUs/LocationDetails'))
+const AlibaugDetails = lazy(() => import('../Components/LocateUs/AlibaugDetails'))
 const NutriDiet = lazy(() => import('../Views/NutriDiet'))
 const LandingPage = lazy(() => import('../Views/LandingPage'))
 const LandingPageNew = lazy(() => import('../Views/LandingPage/21Days/index'))
@@ -701,6 +702,14 @@ const staticSiteRoutes = [
     id: 'statisMatunga',
     routePath: '/matunga',
     name: 'Matunga',
+  },
+  {
+    Component: AlibaugDetails,
+    path: '/alibaug',
+    exact: true,
+    id: 'statisMatunga',
+    routePath: '/alibaug',
+    name: 'Alibaug',
   },
   {
     Component: MaladPage,
