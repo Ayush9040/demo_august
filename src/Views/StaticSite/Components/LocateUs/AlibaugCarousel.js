@@ -8,7 +8,11 @@ import 'slick-carousel/slick/slick-theme.css'
 import EnrlNowBtn from '../enrollNowBtn/index.jsx'
 import CommonBtn from '../commonbtn/index.jsx'
 import EnrollBtn from '../enrollBtn/index.jsx'
+import { useSelector } from 'react-redux'
+import { Link } from 'react-router-dom'
 const AlibaugCarousel = () => {
+  const { isLoggedIn } = useSelector((state) => state.auth)
+
   const settings = {
     dots: false,
     infinite: true,
@@ -70,7 +74,14 @@ const AlibaugCarousel = () => {
             <h5>Time:  <span style={{ fontWeight: '400' }}>8:00 AM (28th) to 7:00 PM (29th)</span></h5>
             <h5>Call us at <a href='tel: + 91 7738155500'>+ 91 7738155500</a>  or email us at <a href='mailto:info@theyogainstitute.org'>info@theyogainstitute.org</a></h5>
           </div>
-          <EnrollBtn text={'Book Now'}/>
+          <Link
+            to={
+              isLoggedIn
+                ? `/enrollment/alibaug`///?date=${selectDate}
+                : `/user/sign-in/?location=alibaug`//&date=${selectDate}
+            }
+          >
+            <EnrollBtn text={'Book Now'} /></Link>
         </div>
       </div>
 
@@ -91,7 +102,14 @@ const AlibaugCarousel = () => {
             <h5>Time: <span style={{ fontWeight: '400' }}>8:00 AM (28th) to 7:00 PM (29th)</span></h5>
             <h5>Call us at <a href='tel: + 91 7738155500'>+ 91 7738155500</a>  or email us at <a href='mailto:info@theyogainstitute.org'>info@theyogainstitute.org</a></h5>
           </div>
-          <EnrollBtn text={'Book Now'}/>
+          <Link
+            to={
+              isLoggedIn
+                ? `/enrollment/alibaug`///?date=${selectDate}
+                : `/user/sign-in/?location=alibaug`//&date=${selectDate}
+            }
+          >
+            <EnrollBtn text={'Book Now'} /></Link>
         </div>
         <div className="alibaug-column alibaug-column-1">
           <img src="images/DeepOneYoga.webp" />
@@ -118,7 +136,14 @@ const AlibaugCarousel = () => {
             <h5>Time: <span style={{ fontWeight: '400' }}>8:00 AM (28th) to 7:00 PM (29th)</span></h5>
             <h5>Call us at <a href='tel: + 91 7738155500'>+ 91 7738155500</a>  or email us at <a href='mailto:info@theyogainstitute.org'>info@theyogainstitute.org</a></h5>
           </div>
-          <EnrollBtn text={'Book Now'}/>
+          <Link
+            to={
+              isLoggedIn
+                ? `/enrollment/alibaug`///?date=${selectDate}
+                : `/user/sign-in/?location=alibaug`//&date=${selectDate}
+            }
+          >
+            <EnrollBtn text={'Book Now'} /></Link>
         </div>
 
       </div>
@@ -193,7 +218,7 @@ const AlibaugCarousel = () => {
           </div>
         </div>
 
-        <h2 style={{ marginTop: '3rem', textAlign: 'left',paddingBottom:'1.2rem' }}>Frequently Asked Questions (FAQs)</h2>
+        <h2 style={{ marginTop: '3rem', textAlign: 'left', paddingBottom: '1.2rem' }}>Frequently Asked Questions (FAQs)</h2>
         <div className="apply-address">
 
           <div style={{ fontSize: '2rem', marginLeft: '3rem' }}>
@@ -237,15 +262,15 @@ const AlibaugCarousel = () => {
           </div>
         </div>
         <h2 style={{ marginTop: '3rem', textAlign: 'left' }}>Contact Information</h2>
-        <div style={{ fontSize: '2rem', marginLeft: '3rem',marginTop:'1rem' }}>
-            <ul>
-              <li><b>Phone:</b> +91-7738155500</li>
-              <li><b>Email:</b> info@theyogainstitute.org</li>
-              <li><b>Address:</b> The Yoga Institute - Alibaug, Plot No. Eight/9, Kihim Beach, Navedar Navgaon, Alibaug - 402208</li>
-            </ul>
-          </div>
+        <div style={{ fontSize: '2rem', marginLeft: '3rem', marginTop: '1rem' }}>
+          <ul>
+            <li><b>Phone:</b> +91-7738155500</li>
+            <li><b>Email:</b> info@theyogainstitute.org</li>
+            <li><b>Address:</b> The Yoga Institute - Alibaug, Plot No. Eight/9, Kihim Beach, Navedar Navgaon, Alibaug - 402208</li>
+          </ul>
+        </div>
       </div>
-      <br/>
+      <br />
       {/* 
       <div className="apply-main">
         <div className="apply-right">
