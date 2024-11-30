@@ -10,6 +10,8 @@ import CommonBtn from '../commonbtn/index.jsx'
 import EnrollBtn from '../enrollBtn/index.jsx'
 import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
+import ReactGA from 'react-ga4';
+
 const AlibaugCarousel = () => {
   const { isLoggedIn } = useSelector((state) => state.auth)
 
@@ -39,6 +41,43 @@ const AlibaugCarousel = () => {
       },
     ],
   }
+  const addToCart = (title,extractedKey,timing) => {
+    // Trigger CleverTap event on button click
+    if (window?.clevertap) {
+      window.clevertap.event.push("Course_Enroll_Click", {
+        "Course_name": title,
+        "Page_name": extractedKey,
+        "Fees_Residential_OnCampus": 0,
+        "Fees_Non_Residential_OnCampus": 10000,
+        "Fees_Online": 0,
+        "Timings": timing,
+        "Page_Url": window.location.href,
+        "Tenure": '2 day',
+        "Course Category": 'Regular',
+        "Course Mode": 'OFFLINE',
+        "date_time_timestamp": new Date().toISOString()
+      });
+    } else {
+      console.error("CleverTap is not initialized.");
+    }
+
+    ReactGA.event('add_to_cart', {
+      currency: 'INR',
+      value: 10000,
+      items: [{
+        item_name: title,
+        item_id: title,
+        price: 10000,
+        quantity: 1
+      }]
+    });
+    console.log('add_to_cart', {
+      item_name: title,
+      item_id: title,
+      price: 10000,
+      quantity: 1
+    });
+  }
   return (
     <>
       <div className="carosoul-main">
@@ -53,7 +92,7 @@ const AlibaugCarousel = () => {
             <img src={`${baseDomain}${santaCruz.slide3}`} />
           </div>
         </Slider>
-        <h2>Regular Classes</h2>
+        <h2>Our Rejuvenating Retreats</h2>
       </div>
       <div className="alibaug-container">
         <div className="alibaug-column alibaug-column-1">
@@ -71,17 +110,17 @@ const AlibaugCarousel = () => {
             <h5>
               Cost:  <span style={{ fontWeight: '400' }}>Rs. 10,000/- (Per Person – Inclusive of 8 Meals)</span>
             </h5>
-            <h5>Time:  <span style={{ fontWeight: '400' }}>8:00 AM (28th) to 7:00 PM (29th)</span></h5>
+            <h5>Time:  <span style={{ fontWeight: '400' }}>8:00 AM (14th) to 7:00 PM (15th)</span></h5>
             <h5>Call us at <a href='tel: + 91 7738155500'>+ 91 7738155500</a>  or email us at <a href='mailto:info@theyogainstitute.org'>info@theyogainstitute.org</a></h5>
           </div>
           <Link
             to={
               isLoggedIn
-                ? `/enrollment/alibaug`///?date=${selectDate}
-                : `/user/sign-in/?location=alibaug`//&date=${selectDate}
+                ? `/enrollment/detox-cleanse-yoga-retreat`///?date=${selectDate}
+                : `/user/sign-in/?location=detox-cleanse-yoga-retreat`//&date=${selectDate}
             }
           >
-            <EnrollBtn text={'Book Now'} /></Link>
+            <EnrollBtn text={'Book Now'} buttonAction={() => { addToCart('Detox and Cleanse Yoga Retreat','/detox-cleanse-yoga-retreat','8:00 AM (14th) to 7:00 PM (15th)') }} /></Link>
         </div>
       </div>
 
@@ -99,17 +138,17 @@ const AlibaugCarousel = () => {
             <h5>
               Cost: <span style={{ fontWeight: '400' }}>Rs. 10,000/- (Per Person – Inclusive of 8 Meals)</span>
             </h5>
-            <h5>Time: <span style={{ fontWeight: '400' }}>8:00 AM (28th) to 7:00 PM (29th)</span></h5>
+            <h5>Time: <span style={{ fontWeight: '400' }}>8:00 AM (21st) to 7:00 PM (22nd)</span></h5>
             <h5>Call us at <a href='tel: + 91 7738155500'>+ 91 7738155500</a>  or email us at <a href='mailto:info@theyogainstitute.org'>info@theyogainstitute.org</a></h5>
           </div>
           <Link
             to={
               isLoggedIn
-                ? `/enrollment/alibaug`///?date=${selectDate}
-                : `/user/sign-in/?location=alibaug`//&date=${selectDate}
+                ? `/enrollment/deep-dive-yoga-meditation-retreat`///?date=${selectDate}
+                : `/user/sign-in/?location=deep-dive-yoga-meditation-retreat`//&date=${selectDate}
             }
           >
-            <EnrollBtn text={'Book Now'} /></Link>
+            <EnrollBtn text={'Book Now'} buttonAction={() => { addToCart('Deep Dive Yoga and Meditation Retreat','/deep-dive-yoga-meditation-retreat','8:00 AM (21st) to 7:00 PM (22nd)') }} /></Link>
         </div>
         <div className="alibaug-column alibaug-column-1">
           <img src="images/DeepOneYoga.webp" />
@@ -139,11 +178,11 @@ const AlibaugCarousel = () => {
           <Link
             to={
               isLoggedIn
-                ? `/enrollment/alibaug`///?date=${selectDate}
-                : `/user/sign-in/?location=alibaug`//&date=${selectDate}
+                ? `/enrollment/forest-yoga-retreat`///?date=${selectDate}
+                : `/user/sign-in/?location=forest-yoga-retreat`//&date=${selectDate}
             }
           >
-            <EnrollBtn text={'Book Now'} /></Link>
+            <EnrollBtn text={'Book Now'} buttonAction={() => { addToCart('Forest Yoga Retreat','/forest-yoga-retreat','8:00 AM (28th) to 7:00 PM (29th)') }} /></Link>
         </div>
 
       </div>

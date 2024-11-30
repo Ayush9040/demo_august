@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import './formstyles.scss'
 // import { courseArray } from '../../Constants/courses/c200hr'
-import { AllCourses } from '../../Views/Courses/Constants/courses'
+import { AllCourses, alibaugArr } from '../../Views/Courses/Constants/courses'
 import { useParams } from 'react-router-dom'
 import { validateEmail } from '../../../../helpers'
 import { Link, useSearchParams, useNavigate } from 'react-router-dom'
@@ -33,9 +33,17 @@ const Enrollment = () => {
 
   useEffect(() => {
     let currentCrs = AllCourses.find((item) => item.key === courseId)
-    setCurrentCourse(currentCrs)
-    setCourseDate(Params.get('date'))
-    localStorage.removeItem('courseEndDate')
+    if (!currentCrs) {
+      let aliCourse = alibaugArr.find((item) => item.key === courseId)
+      setCurrentCourse(aliCourse)
+      setCourseDate(Params.get('date'))
+      localStorage.removeItem('courseEndDate')
+    }
+    else {
+      setCurrentCourse(currentCrs)
+      setCourseDate(Params.get('date'))
+      localStorage.removeItem('courseEndDate')
+    }
     // setDate(
     //   today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate()
     // )
@@ -380,7 +388,10 @@ const Enrollment = () => {
               handler: async (res) => {
                 // Navigare to Success if razorpay_payment_id, razorpay_order_id, razorpay_signature is there
                 if (res.razorpay_payment_id && res.razorpay_order_id && res.razorpay_signature) {
-                  await axios.post(`${authBaseDomain}/ali/mail`, mailTemplate)
+                  if (currentCourse.key !== 'detox-cleanse-yoga-retreat' && currentCourse.key !== 'deep-dive-yoga-meditation-retreat' && currentCourse.key !== 'forest-yoga-retreat') {//no need to send mail 
+                    await axios.post(`${authBaseDomain}/ali/mail`, mailTemplate)
+
+                  }
                   console.log(courseFee);
 
                   handleCTPaymentCompletedCourse({
@@ -432,7 +443,7 @@ const Enrollment = () => {
                   ReactGA.event('purchase', {
                     currency: 'INR',
                     value: courseFee,
-                    transaction_id:res.razorpay_payment_id,
+                    transaction_id: res.razorpay_payment_id,
                     items: [{
                       item_name: currentCourse?.title,
                       item_id: currentCourse?.courseCategory,
@@ -443,7 +454,7 @@ const Enrollment = () => {
                   console.log('purchase', {
                     currency: 'INR',
                     value: courseFee,
-                    transaction_id:res.razorpay_payment_id,
+                    transaction_id: res.razorpay_payment_id,
                     items: [{
                       item_name: currentCourse?.title,
                       item_id: currentCourse?.courseCategory,
@@ -451,7 +462,6 @@ const Enrollment = () => {
                       quantity: 1
                     }]
                   });
-
                   navigate(`/enrollment_thankyou/${currentCourse.key}`)
                 } else {
                   handleCTPaymentFailed({
@@ -634,7 +644,7 @@ const Enrollment = () => {
     } else if (formData.gender === '') {
       // alert("7")
       console.log(formData);
-      
+
       setEmpty(11)
       setEditStudentOpen(true);
     } else if (formData.mode === '') {
@@ -717,8 +727,6 @@ const Enrollment = () => {
           quantity: 1
         }]
       });
-
-
       setupUserProfile(formData);
     }
   }

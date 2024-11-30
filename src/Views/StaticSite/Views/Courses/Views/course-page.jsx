@@ -696,15 +696,16 @@ const Courses = () => {
         />}
       <div className="courses-container" onClick={() => setIsFilterOpened(false)}>
         {/* <CommonBannerNavPrimary innerNav={false} /> */}
+        <InnerNavComponent abc={CoursesBan} />
+
         <div style={{
           position: 'sticky',
           top: 0,
           backgroundColor: '#fff',
           padding: '10px',
-          boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)', // Smoother, softer shadow
+          boxShadow: '0px 10px 15px -4px rgba(0,0,0,0.1)', // Smoother, softer shadow
           zIndex: 10, // Makes sure it stays above the content
         }}>
-          <InnerNavComponent abc={CoursesBan} />
           <div className="search">
             <h1>Courses</h1>
             <div className='filter-section'>

@@ -16351,6 +16351,380 @@ const certificate = {
     ],
   },
 }
+const alibaug = {
+  1: {
+    id: '',
+    textdescription6: '',
+    textdescription7: '',
+    textdescription8: '',
+    textdescription9: '',
+    textdescription10: '',
+    textdescription1: '',
+    textdescription2: '',
+    textdescription3: '',
+    textdescription4: '',
+    textdescription5: '',
+    title: 'Detox and Cleanse Yoga Retreat',
+    key: 'detox-cleanse-yoga-retreat',
+    isRegular: true,
+    tenure: '2 day',
+    weekends: false,
+    batch: 1,
+    // templateId: 'GENERAL_AUTO_EMAIL',
+    templateId: {
+      templateOnline: '',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: '',
+      },
+    },
+    image: `/images/DetoxCleanse.webp`,
+    cardImage: `/images/DetoxCleanse.webp`,
+    mostPopular: false,
+    metaDescription:
+      'Towards the end, there is an enlightening question and answer session. ',
+    rating: 5,
+    colorCode: '#B77E7E',
+    timing: '1 Night, 2 Days',
+    fees: {
+      onlineFee: 10000,
+      offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
+    },
+    category: 'classes',
+    dates: ['14th Dec 2024 to 15th Dec 2024 '
+    ],
+    online: false,
+    onCampus: false,
+    nonResidential: false,
+    residential: false,
+    certficate: false,
+    newName: '',
+    enrollInfo: {
+      duration: "1 Night, 2 Days",
+      timings: [
+        {
+          day: "",
+          time: "8:00 AM (14th) to 7:00 PM (15th)"
+        }
+      ]
+    },
+    details: [
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: [
+            'The Yoga Institute’s Founder, Shri Yogendraji introduced Satsang with an objective for people to come together and find solutions for their worldly problems. It takes place on Sundays and is open to all so that everyone can benefit from the 1-hour session.',
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: [
+            'The highlighted aspect of Satsang is a discourse by the Spiritual Guru and Director of TYI, Dr. Hansaji whoshares her enlightening wisdom on various topics including health &amp; wellness, relationships, career, food,parenting, family and so on. Through her compassionate and personalized approach, Dr. Hansaji has helped countless individuals overcome their challenges and find greater health and well-being.'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: [
+            'You can get your queries resolved by Dr. Hansaji as she is dedicated to helping you find the support and guidance you need to thrive. She helps people solve their problems by focusing on the root cause of their issues, rather than simply addressing symptoms. She understands that many physical and emotional problems are interconnected and that by addressing the underlying causes, individuals can experience long-term relief.',
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: [
+            'Yoga is a powerful tool for managing physical, mental and emotional challenges and helping individuals find greater peace and balance in their lives. Satsang helps bring positivity and awareness into our lives. Dr. Hansaji shares profound wisdom of the ancient scriptures and a Yogic way of living which enhances the lives of all the satsangis and is relevant in the present time and age.',
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: [
+            'Towards the end, there is an enlightening question and answer session.',
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'About the programme',
+          text: [' Every Sunday between 9.30 am and 10.30am'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Prerequisites',
+          text: ['The programme is open to all. No age bar.'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Registration',
+          text: [' free entry - on the spot registration.'],
+        },
+      },
+    ],
+  },
+  2: {
+    id: '',
+    textdescription6: '',
+    textdescription7: '',
+    textdescription8: '',
+    textdescription9: '',
+    textdescription10: '',
+    textdescription1: '',
+    textdescription2: '',
+    textdescription3: '',
+    textdescription4: '',
+    textdescription5: '',
+    title: 'Deep Dive Yoga and Meditation Retreat',
+    key: 'deep-dive-yoga-meditation-retreat',
+    isRegular: true,
+    tenure: '2 day',
+    weekends: false,
+    batch: 1,
+    // templateId: 'GENERAL_AUTO_EMAIL',
+    templateId: {
+      templateOnline: '',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: '',
+      },
+    },
+    image: `/images/DeepOneYoga.webp`,
+    cardImage: `/images/DeepOneYoga.webp`,
+    mostPopular: false,
+    metaDescription:
+      'Towards the end, there is an enlightening question and answer session. ',
+    rating: 5,
+    colorCode: '#B77E7E',
+    timing: '1 Night, 2 Days',
+    fees: {
+      onlineFee: 10000,
+      offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
+    },
+    category: 'classes',
+    dates: ['21st Dec 2024 to 22nd Dec 2024'
+    ],
+    online: false,
+    onCampus: false,
+    nonResidential: false,
+    residential: false,
+    certficate: false,
+    newName: '',
+    enrollInfo: {
+      duration: "1 Night, 2 Days",
+      timings: [
+        {
+          day: "",
+          time: "8:00 AM (21st) to 7:00 PM (22nd)"
+        }
+      ]
+    },
+    details: [
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: [
+            'The Yoga Institute’s Founder, Shri Yogendraji introduced Satsang with an objective for people to come together and find solutions for their worldly problems. It takes place on Sundays and is open to all so that everyone can benefit from the 1-hour session.',
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: [
+            'The highlighted aspect of Satsang is a discourse by the Spiritual Guru and Director of TYI, Dr. Hansaji whoshares her enlightening wisdom on various topics including health &amp; wellness, relationships, career, food,parenting, family and so on. Through her compassionate and personalized approach, Dr. Hansaji has helped countless individuals overcome their challenges and find greater health and well-being.'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: [
+            'You can get your queries resolved by Dr. Hansaji as she is dedicated to helping you find the support and guidance you need to thrive. She helps people solve their problems by focusing on the root cause of their issues, rather than simply addressing symptoms. She understands that many physical and emotional problems are interconnected and that by addressing the underlying causes, individuals can experience long-term relief.',
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: [
+            'Yoga is a powerful tool for managing physical, mental and emotional challenges and helping individuals find greater peace and balance in their lives. Satsang helps bring positivity and awareness into our lives. Dr. Hansaji shares profound wisdom of the ancient scriptures and a Yogic way of living which enhances the lives of all the satsangis and is relevant in the present time and age.',
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: [
+            'Towards the end, there is an enlightening question and answer session.',
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'About the programme',
+          text: [' Every Sunday between 9.30 am and 10.30am'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Prerequisites',
+          text: ['The programme is open to all. No age bar.'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Registration',
+          text: [' free entry - on the spot registration.'],
+        },
+      },
+    ],
+  },
+  3: {
+    id: '',
+    textdescription6: '',
+    textdescription7: '',
+    textdescription8: '',
+    textdescription9: '',
+    textdescription10: '',
+    textdescription1: '',
+    textdescription2: '',
+    textdescription3: '',
+    textdescription4: '',
+    textdescription5: '',
+    title: 'Forest Yoga Retreat',
+    key: 'forest-yoga-retreat',
+    isRegular: true,
+    tenure: '2 day',
+    weekends: false,
+    batch: 1,
+    // templateId: 'GENERAL_AUTO_EMAIL',
+    templateId: {
+      templateOnline: '',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: '',
+      },
+    },
+    image: "/images/ForestYoga.webp",
+    cardImage: "/images/ForestYoga.webp",
+    mostPopular: false,
+    metaDescription:
+      'Towards the end, there is an enlightening question and answer session. ',
+    rating: 5,
+    colorCode: '#B77E7E',
+    timing: '1 Night, 2 Days',
+    fees: {
+      onlineFee: 10000,
+      offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
+    },
+    category: 'classes',
+    dates: [' 28th Dec 2024 to 29th Dec 2024'
+    ],
+    online: false,
+    onCampus: false,
+    nonResidential: false,
+    residential: false,
+    certficate: false,
+    newName: '',
+    enrollInfo: {
+      duration: "1 Night, 2 Days",
+      timings: [
+        {
+          day: "",
+          time: "8:00 AM (28th) to 7:00 PM (29th)"
+        }
+      ]
+    },
+    details: [
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: [
+            'The Yoga Institute’s Founder, Shri Yogendraji introduced Satsang with an objective for people to come together and find solutions for their worldly problems. It takes place on Sundays and is open to all so that everyone can benefit from the 1-hour session.',
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: [
+            'The highlighted aspect of Satsang is a discourse by the Spiritual Guru and Director of TYI, Dr. Hansaji whoshares her enlightening wisdom on various topics including health &amp; wellness, relationships, career, food,parenting, family and so on. Through her compassionate and personalized approach, Dr. Hansaji has helped countless individuals overcome their challenges and find greater health and well-being.'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: [
+            'You can get your queries resolved by Dr. Hansaji as she is dedicated to helping you find the support and guidance you need to thrive. She helps people solve their problems by focusing on the root cause of their issues, rather than simply addressing symptoms. She understands that many physical and emotional problems are interconnected and that by addressing the underlying causes, individuals can experience long-term relief.',
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: [
+            'Yoga is a powerful tool for managing physical, mental and emotional challenges and helping individuals find greater peace and balance in their lives. Satsang helps bring positivity and awareness into our lives. Dr. Hansaji shares profound wisdom of the ancient scriptures and a Yogic way of living which enhances the lives of all the satsangis and is relevant in the present time and age.',
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: [
+            'Towards the end, there is an enlightening question and answer session.',
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'About the programme',
+          text: [' Every Sunday between 9.30 am and 10.30am'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Prerequisites',
+          text: ['The programme is open to all. No age bar.'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Registration',
+          text: [' free entry - on the spot registration.'],
+        },
+      },
+    ],
+  }
+}
 
 export const c200hr = Object.values(ttc200hr)
 export const c500hr = Object.values(ttc500hr)
@@ -16359,6 +16733,7 @@ export const campsArr = Object.values(camps)
 export const classesArr = Object.values(classes)
 export const extraArr = Object.values(extra)
 export const certificateArr = Object.values(certificate)
+export const alibaugArr = Object.values(alibaug)
 export const AllCourses = [
   ...certificateArr,
   ...extraArr,

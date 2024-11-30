@@ -1497,7 +1497,7 @@ input[type='radio']:checked::before {
             width: 320px; //100%;
             padding: 17px;
             aspect-ratio: 16 / 13.2;
-            object-fit: cover;
+            object-fit:fill;
           }
         }
       }
@@ -2453,7 +2453,7 @@ input[type=checkbox]:checked+label:before {
   border-radius: 8px;
   border: 1px solid rgba(96, 96, 96, 0.3);
   // min-width: 180px;
-  width: 49%;
+  width: 100%;
   padding: 4px 12px 8px 12px;
   text-align: center;
 }
