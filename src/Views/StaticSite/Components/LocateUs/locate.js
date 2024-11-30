@@ -21,6 +21,16 @@ export const locateData = [
         toRedirect: true,
       },
       {
+        state: 'Alibaug',
+        notstate:
+          'Plot No. Eight/9, Kihim Beach, Navedar Navgaon, Alibaug – 402208',
+        phone: ['+91-7738155500'],
+        website: 'https://theyogainstitute.org/alibaug',
+        email: 'info@theyogainstitute.org',
+        url: 'https://theyogainstitute.org/alibaug',
+        toRedirect: true,
+      },
+      {
         state: 'Raipur',
         notstate:
           'The Yoga Institute, Raipur Besides Vidya Kidney Hospital,In front of Indian Chilly Restaurant,Shankar Nagar Main Road Raipur, CG 492012',

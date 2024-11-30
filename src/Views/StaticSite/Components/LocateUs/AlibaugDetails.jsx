@@ -23,7 +23,7 @@ const AlibaugDetails = () => {
       <InnerNavComponent abc={viewBlog} />
       <div className='heading-main'>
         <h2 className='heading-1'>Alibaug</h2>
-        <h2 className='heading-2'>Discover Tranquillity in Nature, Revitalize and Reawaken Your Inner Peace</h2>
+        <h2 className='heading-sub'>Discover Tranquillity in Nature, Revitalize and Reawaken Your Inner Peace</h2>
       </div>
       <div className='carosoul-main'>
         <AlibaugCarousel />

@@ -92,9 +92,9 @@ const AlibaugCarousel = () => {
             <img src={`${baseDomain}${santaCruz.slide3}`} />
           </div>
         </Slider>
-        <h2>Our Rejuvenating Retreats</h2>
+        <h2 style={{marginTop:'32px'}}>Our Rejuvenating Retreats</h2>
       </div>
-      <div className="alibaug-container">
+      <div className="alibaug-container" style={{marginTop:'38px'}}>
         <div className="alibaug-column alibaug-column-1">
           <img src="images/DetoxCleanse.webp" />
         </div>
