@@ -74,6 +74,7 @@ const getMetaData = async (path) => {
         metaData: [],
         script: '',
         h1Tag: '',
+        pTagBlog: res.data.data.content
       }
       headers.h1Tag = res.data.data.title
       data = data.replace(/\\n/g, '')
@@ -135,6 +136,7 @@ app.get('*', async (req, res) => {
   let courseaTags = []
   let blogATags = []
   let pTag = ''
+  let pTagBlog = ''
 
   if (metaData && metaData.title) titleTag = `<title>${metaData.title}</title>`
   if (metaData && metaData.links) {
@@ -162,13 +164,16 @@ app.get('*', async (req, res) => {
   if (metaData && metaData.pTag) {
     pTag = `<p class="meta-heading">${metaData.pTag}</p>`
   }
+  if (metaData && metaData.pTagBlog) {
+    pTagBlog = `<div class="meta-heading">${metaData.pTagBlog}</div>`
+  }
   if (metaData && metaData.aTag) {//added to test related courses as anchor tags
-    courseaTags = metaData.aTag.map((url) => `<a class="internal-link" href=https://dev2.theyogainstitute.org/${url} >https://dev2.theyogainstitute.org/${url}</a>`)
+    courseaTags = metaData.aTag.map((url) => `<a class="internal-link" href=https://theyogainstitute.org/${url} >https://theyogainstitute.org/${url}</a>`)
   }
 
 
   $('head').append([titleTag, script, ...metaArray, ...linkArray])
-  $('body').append([h1Tag, ...h2Tags, ...aTags, ...blogATags, pTag, ...courseaTags])
+  $('body').append([h1Tag, ...h2Tags, ...aTags, ...blogATags, pTag, pTagBlog, ...courseaTags])
   res.status(200).send($.html())
 })
 

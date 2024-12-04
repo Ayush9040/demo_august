@@ -1411,7 +1411,7 @@ const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse
           </div>
         </LoadScript>
         <div className='inp-group'>
-          <div className='inp-label'>House No. & Street name<span>*</span></div>
+          <div className='inp-label'>House No. & Street name</div>
           <div className="form_error">
 
             <InputComponent
