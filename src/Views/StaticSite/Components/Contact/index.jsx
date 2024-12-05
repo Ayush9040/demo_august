@@ -344,7 +344,7 @@ const Contact = () => {
                             <img src="/images/phone_svg.svg" alt="" loading='lazy' />
                         </div>
                         <div className="email_info">
-                        +91-7738155500, +91-22-26110506, <br />+91-22-26103568
+                        +91-7738155500, +91-22-26110506, <br />+91-22-26103568, +91-7045558181
                         </div>
                     </div>
 
