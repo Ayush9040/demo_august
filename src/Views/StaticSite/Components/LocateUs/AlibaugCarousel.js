@@ -94,7 +94,7 @@ const AlibaugCarousel = () => {
         </Slider>
         <h2 style={{marginTop:'32px'}}>Our Rejuvenating Retreats</h2>
       </div>
-      <div className="alibaug-container" style={{marginTop:'38px'}}>
+      {/* <div className="alibaug-container" style={{marginTop:'38px'}}>
         <div className="alibaug-column alibaug-column-1">
           <img src="images/DetoxCleanse.webp" />
         </div>
@@ -122,9 +122,9 @@ const AlibaugCarousel = () => {
           >
             <EnrollBtn text={'Book Now'} buttonAction={() => { addToCart('Detox and Cleanse Yoga Retreat','/detox-cleanse-yoga-retreat','8:00 AM (14th) to 7:00 PM (15th)') }} /></Link>
         </div>
-      </div>
+      </div> */}
 
-      <div className="alibaug-container img-rev">
+      <div className="alibaug-container img-rev"  style={{marginTop:'48px'}}>
         <div className="alibaug-column alibaug-column-2">
           <h2> Deep Dive Yoga and Meditation Retreat</h2>
           <p>

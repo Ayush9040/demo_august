@@ -816,16 +816,16 @@ export const handleCTSectionClick = ({ sectionName, pageUrl }) => {
   }
 };
 
-
 export const handleAlreadySignedUpUser = ({
-  phone
+  phone, dialCode
 }) => {
   if (window.clevertap) {
     // User profile data
+    let num = `${dialCode ? dialCode : ''}${phone ? phone : ''}`;
     const userProfile = {
       "Site": {
         // "Name": user.name || "",                    // User's name
-        "Identity": phone || "",                  // Unique identity (User ID)
+        "Identity": num || "",                  // Unique identity (User ID)
         // "Email": user.email || "",                // Email address
         // "Phone": phone || "",                  // Phone number in international format
         // "Gender": user.gender || "",                // Gender ("M", "F", "O")

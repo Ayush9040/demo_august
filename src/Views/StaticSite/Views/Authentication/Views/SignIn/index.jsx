@@ -540,7 +540,8 @@ const SignIn = () => {
       });
       if (ctEventValue === 'alreadySignedUp') {
         handleAlreadySignedUpUser({
-          phone: response?.data?.data?.phoneNumber
+          phone: response?.data?.data?.phoneNumber,
+          dialCode: response?.data?.data?.dialCode
         })
       }
       localStorage.setItem('userAppId', response?.data.data?._id)//to pass

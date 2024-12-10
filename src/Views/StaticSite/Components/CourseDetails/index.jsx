@@ -779,7 +779,7 @@ const CourseDetails = ({ pageDate }) => {
                   </small>
                 )} */}
               </div>
-              {(!isRegular && !isSpecialPage) && (
+              {(!isRegular && !isSpecialPage && pageDate?.dates?.length>0) && (
                 <div className='wrapper_dates'>
                   <span className='date-label-new'>Upcoming Dates:</span> <span className='start-date-glimse'> &nbsp;{startDate} | </span>  &nbsp;
                   <div className='view_wrapper'>
