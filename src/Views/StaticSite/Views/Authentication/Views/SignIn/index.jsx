@@ -20,7 +20,7 @@ import { parsePhoneNumberFromString, isValidPhoneNumber } from 'libphonenumber-j
 import { auth, googleAuthProvider } from './firebaseConfig'; // Adjust the path as needed
 import { signInWithPopup, signOut, GoogleAuthProvider } from 'firebase/auth';
 import axios from 'axios'
-import { authBaseDomain, cmsBaseDomain } from '../../../../../../Constants/appSettings'
+import { authBaseDomain, cmsBaseDomain, mapApiKey } from '../../../../../../Constants/appSettings'
 import { handleCTSignIn, handleAlreadySignedUpUser } from '../../../../../../CleverTap/buttonClicked'
 import InputComponent from '../../../../Components/InputComponent'
 import { LoadScript, Autocomplete } from '@react-google-maps/api';
@@ -228,7 +228,7 @@ const countriesMap = [
 
 
 const libraries = ['places'];
-const mapKey = 'AIzaSyCArozsi_1fWJgSwDFDAoA_6Q5zLZ7NYyA';
+const mapKey = mapApiKey// 'AIzaSyCArozsi_1fWJgSwDFDAoA_6Q5zLZ7NYyA';
 
 const SignIn = () => {
   const listRef = useRef(null);
