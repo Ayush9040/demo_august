@@ -725,13 +725,16 @@ const CourseDetails = ({
   // Group timings by unique days
   const groupTimings = (timings) => {
     const grouped = {};
-    timings.forEach(({ day, time }) => {
-      if (!grouped[day]) {
-        grouped[day] = [];
-      }
-      grouped[day].push(time);
-    });
-    return grouped;
+    if (timings != '') {
+      timings.forEach(({ day, time }) => {
+        if (!grouped[day]) {
+          grouped[day] = [];
+        }
+        grouped[day].push(time);
+      });
+      return grouped;
+    }
+    else { return '' }
   };
 
   // Render grouped timings
@@ -748,7 +751,7 @@ const CourseDetails = ({
     ));
   };
 
-  const groupedTimings = groupTimings(currentCourse?.enrollInfo?.timings);
+  const groupedTimings = groupTimings(currentCourse?.enrollInfo?.timings?.length ? currentCourse?.enrollInfo?.timings : '');
 
 
   return (
@@ -783,18 +786,18 @@ const CourseDetails = ({
                   {currentCourse?.language &&
                     <div className='details_wrapper_duration'><span className='details_lang_info'>Language:</span> <span className='lang_course'>{currentCourse?.language}</span></div>}
                 </div>
+                {groupedTimings &&
+                  <div className='time_days_wrapper'>
+                    {renderTimings(groupedTimings)}
+                    <div className='details_desc_days details_desc_days_2'>
+                      {/* <div><span className='details_duration_info'>Days:</span> <span className='tenure_course'>{currentCourse?.days[0]}</span></div> */}
 
-                <div className='time_days_wrapper'>
-                  {renderTimings(groupedTimings)}
-                  <div className='details_desc_days details_desc_days_2'>
-                    {/* <div><span className='details_duration_info'>Days:</span> <span className='tenure_course'>{currentCourse?.days[0]}</span></div> */}
+                    </div>
+                    <div className='details_desc_days'>
+                      {/* <div><span className='details_duration_info'>Time:</span> <span className='tenure_course'>{currentCourse?.time[0]}</span></div> */}
 
-                  </div>
-                  <div className='details_desc_days'>
-                    {/* <div><span className='details_duration_info'>Time:</span> <span className='tenure_course'>{currentCourse?.time[0]}</span></div> */}
-
-                  </div>
-                </div>
+                    </div>
+                  </div>}
 
                 {/* {courseFee && <p className="current_fees"> {currentCourse.key === 'ma-yoga-shastra' && formData.country !== 'India' ? '$ 3950' : `₹ ${courseFee}`}</p>} */}
                 {/* {courseFee && <p className="current_fees"> ₹ {courseFee}</p>} */}

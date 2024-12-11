@@ -366,7 +366,7 @@ const Enrollment = () => {
         }
 
         if (response?.data?.success) {
-          if (currentCourse.key !== 'satsang' && currentCourse.key !== 'samattvam') { //for residential no payment required
+          if (currentCourse.key !== 'satsang' && currentCourse.key !== 'samattvam' && currentCourse.key !== 'fullmoon-meditation' && currentCourse.key !== 'yoga-by-the-bay') { //for residential no payment required
             //  && localStorage.getItem('isResidential') == 'false'
             const paymentOrderResponse = await axios.post(`${cmsBaseDomain}/payment/order?enrollmentFormId=${response.data.data['_id']}`, {
               amount: localStorage.getItem('courseFee'),

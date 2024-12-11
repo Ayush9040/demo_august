@@ -16730,6 +16730,185 @@ const alibaug = {
   }
 }
 
+const specialEvents = {
+  1: {
+    id: '',
+    textdescription6: '',
+    textdescription7: '',
+    textdescription8: '',
+    textdescription9: '',
+    textdescription10: '',
+    textdescription1: '',
+    textdescription2: '',
+    textdescription3: '',
+    textdescription4: '',
+    textdescription5: '',
+    title: 'Full moon meditation',
+    key: 'fullmoon-meditation',
+    isRegular: false,
+    tenure: '1 day',
+    weekends: false,
+    batch: 1,
+    // templateId: 'GENERAL_AUTO_EMAIL',
+    templateId: {
+      templateOnline: '',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: '',
+      },
+    },
+    image: `${baseDomain}${homeAssets.homeAsset14}`,
+    cardImage: `${baseDomain}${homeAssets.homeAsset14}`,
+    mostPopular: false,
+    metaDescription:
+      '',
+    rating: 5,
+    colorCode: '#B77E7E',
+    timing: '',
+    fees: {
+      onlineFee: 0,
+      offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
+    },
+    category: 'classes',
+    dates: ['15th Dec 2024', '14th Jan 2025', '12th Feb 2025', '14th Mar 2025', '13th Apr 2025'
+      , '11th Jun 2025'
+    ],
+    online: true,
+    onCampus: true,
+    nonResidential: true,
+    residential: false,
+    certficate: false,
+    newName: '',
+    enrollInfo: {
+      duration: "1 Day",
+      timings: [
+      ]
+    },
+    details: [
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: [
+            'Looking to reign in your rampant thoughts and mood swings and train your mental faculties to be more efficient and peaceful? Then, join us every full moon day to sit under the celestial glow and do meditation.',
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: [
+            'Since the beginning of civilization humans have been fascinated with our nearest celestial neighbour – Moon. It has found its place in children’s stories, lovers’ stories, mystical arts, and much more. And it is not without reason. Moon has the power to influence our thoughts and our rhythms. Under its soothing and calming light ancient gurus sat down to meditate and mull over the intricacies of life and gave us philosophies that we follow even to this day.'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: [
+            'However, in the hustle-bustle of today’s life and because of rising city skylines, we seldom get exposed to this enriching source of energy. On every full moon day, we at the Yoga Institute sit under this divine light to meditate and find balance and alignment under the heaven’s celestial glow! Unburden yourself by joining us for practicing meditation on full moon nights and feel your stress and worries melting away under the soft cool night breeze. Let the moon help you relax and rejuvenate your mind and body.',
+          ],
+        },
+      },
+
+    ],
+  },
+  2: {
+    id: '',
+    textdescription6: '',
+    textdescription7: '',
+    textdescription8: '',
+    textdescription9: '',
+    textdescription10: '',
+    textdescription1: '',
+    textdescription2: '',
+    textdescription3: '',
+    textdescription4: '',
+    textdescription5: '',
+    title: 'Yoga By The Bay',
+    key: 'yoga-by-the-bay',
+    isRegular: false,
+    tenure: '1 day',
+    weekends: false,
+    batch: 1,
+    // templateId: 'GENERAL_AUTO_EMAIL',
+    templateId: {
+      templateOnline: '',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: '',
+      },
+    },
+    image: `${baseDomain}${homeAssets.homeAsset12}`,
+    cardImage: `${baseDomain}${homeAssets.homeAsset12}`,
+    mostPopular: false,
+    metaDescription:
+      '',
+    rating: 5,
+    colorCode: '#B77E7E',
+    timing: '',
+    fees: {
+      onlineFee: 0,
+      offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
+    },
+    category: 'classes',
+    dates: ['29th Dec 2024', '26th Jan 2025', '23rd Feb 2025', '30th Mar 2025', '27th Apr 2025'
+      , '25th May 2025', '29th Jun 2025', '27th Jul 2025', '31st Aug 2025', '28th Sep 2025', '26th Oct 2025'
+      , '30th Nov 2025', '28th Dec 2025'
+    ],
+    online: true,
+    onCampus: true,
+    nonResidential: true,
+    residential: false,
+    certficate: false,
+    newName: '',
+    enrollInfo: {
+      duration: "1 Day",
+      timings: [
+      ]
+    },
+    details: [
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: [
+            'Meditating alone is beneficial but meditating and practicing yoga as part of a group can impress upon the psyche in ways unimaginable. Join us to be part of this profound experience called Yoga by the Bay.',
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: [
+            'Yoga and the sea are two things that bring immense joy, calm, and relaxation to the human body. Imagine the effect and the impact two of them will have when they come together. Yoga by the Bay is one such initiative where we practice the yogic way of life immersed in the mesmerising symphony of the crashing sea waves, chirping birds, and whistling winds.'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: [
+            'Come out with us and give your practice a new dimension. Let your being become one with the vastness of the divine. Experience true peace in the throbbing heart of Mumbai along with hundreds of seekers.',
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: [
+            'Meet us opposite the ‘Pizza by the Bay – Marine Lines’ restaurant and be part of this profound experience.',
+          ],
+        },
+      },
+
+    ],
+  }
+}
+
 export const c200hr = Object.values(ttc200hr)
 export const c500hr = Object.values(ttc500hr)
 export const c900hr = Object.values(ttc900hr)
@@ -16738,6 +16917,7 @@ export const classesArr = Object.values(classes)
 export const extraArr = Object.values(extra)
 export const certificateArr = Object.values(certificate)
 export const alibaugArr = Object.values(alibaug)
+export const sepecialEventArr = Object.values(specialEvents)
 export const AllCourses = [
   ...certificateArr,
   ...extraArr,
@@ -16746,6 +16926,7 @@ export const AllCourses = [
   ...c900hr,
   ...campsArr,
   ...classesArr,
+  ...sepecialEventArr
 ]
 export const mostPopular = [
   extraArr[0], c200hr[4], c500hr[0],
