@@ -10,6 +10,7 @@ const MegaMenu = ({ setNav }) => {
   const navItems = [
     { name: 'ABOUT', link: '/know-us-better', id: 1, key: 'ABOUT', },
     { name: 'COURSES', link: '/courses', id: 2, key: 'COURSES' },
+    { name: 'SPECIAL EVENTS', link: '/courses', id: 18, key: 'SPECIAL-EVENTS' },
     { name: 'NUTRI DIET CLINIC', link: '/nutri-diet', id: 3, key: 'COURSES-NUTRI' },
     { name: 'CORPORATE WORKSHOP', link: '/corporate-workshops', id: 4, key: 'COURSES-WORKSHOPS' },
     { name: 'ONLINE HOME YOGA TUITIONS', link: '/home-tuitions', id: 5, key: 'COURSES-YOGATUTIONS' },
@@ -57,6 +58,12 @@ const MegaMenu = ({ setNav }) => {
       { menu: 'Virtual Tour', link: '/museum-of-classical-yoga/#virtual_tour' },
       { menu: 'Gallery', link: '/museum-of-classical-yoga/#gallery' },
       { menu: 'Location', link: '/museum-of-classical-yoga/#location' },
+    ],
+    'SPECIAL-EVENTS': [
+      { menu: 'Satsang', link: '/satsang' },
+      { menu: 'Samattvam', link: '/samattvam' },
+      { menu: 'Fullmoon meditation', link: '/fullmoon-meditation' },
+      { menu: 'Yoga by the bay', link: '/yoga-by-the-bay' },
     ],
     FACILITIES: [
       { menu: 'Overview', link: '/facilities' },
@@ -145,8 +152,21 @@ const MegaMenu = ({ setNav }) => {
         <ul className="navigation-ul">
           {navItems &&
             navItems.map((item, i) => {
-
-              if ((item.key === 'GIFTING' || item.key === 'ONLINE')) {
+              if (item.key == 'SPECIAL-EVENTS') {
+                return (
+                  <div key={i} onMouseOver={() => {
+                    setMenuItem(item.key)
+                  }}>
+                    <li>
+                      {item.name}
+                      <div
+                        className="bottom-line"
+                      ></div>
+                    </li>
+                  </div>
+                )
+              }
+              else if ((item.key === 'GIFTING' || item.key === 'ONLINE')) {
                 return (
 
                   <div
@@ -162,8 +182,8 @@ const MegaMenu = ({ setNav }) => {
                     }}
 
                     onClick={() => {
-                      handleCTSectionClick({ 
-                        sectionName: item?.name, 
+                      handleCTSectionClick({
+                        sectionName: item?.name,
                         pageUrl: item?.link
                       }); // Call the event function when clicked
                     }}
@@ -189,8 +209,8 @@ const MegaMenu = ({ setNav }) => {
                       setMenuItem(item.key)
                     }}
                     onClick={() => {
-                      handleCTSectionClick({ 
-                        sectionName: item?.name, 
+                      handleCTSectionClick({
+                        sectionName: item?.name,
                         pageUrl: item?.link
                       });
                       setNav(false)
@@ -224,8 +244,8 @@ const MegaMenu = ({ setNav }) => {
                       setMenuItem(item.key)
                     }}
                     onClick={() => {
-                      handleCTSectionClick({ 
-                        sectionName: item?.name, 
+                      handleCTSectionClick({
+                        sectionName: item?.name,
                         pageUrl: item?.link
                       }); // Call the event function when clicked
                     }}

@@ -178,7 +178,7 @@ const InnerNavComponent = ({ abc }) => {
                     </div>
                   </div>
 
-                  <div style={dropdown && isLoggedIn ? { display: 'block' } : {}} className='user-dropdown'>
+                  <div style={dropdown && isLoggedIn ? { display: 'block',zIndex:11 } : {zIndex:11}} className='user-dropdown' >
                     <ul style={{ borderRadius: '8px', boxShadow: '0px -2px 2px 0px rgba(0, 0, 0, 0.1)' }}>
                       <li
                         style={{ borderRadius: '8px 8px 0px 0px' }}

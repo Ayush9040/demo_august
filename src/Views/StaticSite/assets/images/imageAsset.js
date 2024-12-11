@@ -1,8 +1,9 @@
 const baseDomain = 'https://ecom-static-site-prod.s3.ap-south-1.amazonaws.com'
 import mayoga from '../images/mayoga.jpg'
+import fullmoonCard from '../images/fullmoon.webp'
 
 export const extraImage = {
-  mayogaImg: `${mayoga}`
+  mayogaImg: `${mayoga}`,
 }
 
 export const background = {
@@ -47,6 +48,7 @@ export const homeAssets = {
   homeAsset12: '/SEO-New-Images/course/certificate-program-on-yoga-for-cancer-online.webp',
   homeAsset13: '/home_page/couple_copy.webp',
   homeAsset14: '/home_page/fullmoon.webp',
+  fullmoonCard: fullmoonCard,
   homeAsset15: '/Home/Highlights/homeSession.jpg',
   homeAsset16: '/home_page/satvam.webp',
   homeAsset17: '/home_page/corporate_copy.webp',

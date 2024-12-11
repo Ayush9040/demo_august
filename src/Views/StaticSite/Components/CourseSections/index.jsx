@@ -296,16 +296,7 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
       text: 'Corporate Workshop - On Campus',
       onCampus: true
     },
-    {
-      url: '/satsang',
-      text: 'Satsang - On Campus',
-      onCampus: true, weekends: true, days1: true
-    },
-    {
-      url: '/samattvam',
-      text: 'Samattvam(Health Checkup) - On Campus',
-      onCampus: true, weekends: true, days1: true
-    },
+
     {
       url: '/couples-classes',
       text: "Couple's classes - Online",
@@ -372,6 +363,29 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
       text: 'Pregnancy Camp',
       onCampus: true, weekDays: true, days2: true
     }]
+    const specialEventsStatic = [
+      {
+        url: '/satsang',
+        text: 'Satsang - On Campus',
+        onCampus: true, weekends: true, days1: true
+      },
+      {
+        url: '/samattvam',
+        text: 'Samattvam(Health Checkup) - On Campus',
+        onCampus: true, weekends: true, days1: true
+      },
+      {
+        url: '/yoga-by-the-bay',
+        text: 'Yoga by the bay',
+        online: true, onCampus: true, days1: true
+      },
+      {
+        url: '/fullmoon-meditation',
+        text: 'Full moon meditation',
+        online: true, onCampus: true, days1: true
+      }
+    ]
+
 
     switch (title) {
       case 'Yoga Teacher Training Courses (YTTC)':
@@ -450,7 +464,8 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
             {/* <Accordian sliderVal={customVal} setSliderVal={setCustomVal} data={campsAccordian} selectedFilters={selectedFilters} /> */}
             <div>
               {/* <h4> */}
-              <ul id='camps-workshop' >
+              <ul  >
+                {/* id='camps-workshop' */}
                 {campsWroskshopStatic.map((item, i) => (
                   shouldDisplayLink(item) && (
                     <div key={i}>
@@ -557,7 +572,7 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
           <>
             <div style={{ marginTop: '40px' }}>
 
-              <ul id='therapy-course' >
+              <ul>
                 {yttcStatic.map((item, i) => (
                   shouldDisplayLink(item) && (
                     <div key={i}>
@@ -570,6 +585,24 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
 
               </ul></div>
 
+          </>
+        )
+      case 'Special Events':
+        return (
+          <>
+            <div style={{ marginTop: '40px' }}>
+              <ul>
+                {/*  id='therapy-course'  */}
+                {specialEventsStatic.map((item, i) => (
+                  shouldDisplayLink(item) && (
+                    <div key={i}>
+                      <Link to={item.url}>
+                        <li className="text-bold">
+                          {item.text}
+                        </li>
+                      </Link></div>))
+                )}
+              </ul></div>
           </>
         )
     }
@@ -587,12 +620,15 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
 
       <div className="course-list">
         <div className="course-title">
-          {pathParam != 'ttc' ? <Link to={`/courses/browse/${pathParam}`}>
-            <h1 style={{ fontSize: '2.6rem' }}>{title}</h1>
-          </Link>
+          {pathParam != 'ttc' ?
+
+            (title != 'Special Events' ? <Link to={`/courses/browse/${pathParam}`}>
+              <h1 style={{ fontSize: '2.6rem' }}>{title}</h1>
+              {/* // for special evens no nee of link */}
+            </Link> : <h1 style={{ fontSize: '2.6rem',pointerEvents:'none' }}>{title}</h1>)
             :
             <Link to={`/courses/browse/ttc?type=200`}>
-              <div style={{ fontSize: '2.6rem', fontWeight: '700' }}>{title}</div></Link>
+              <h1 style={{ fontSize: '2.6rem', fontWeight: '700' }}>{title}</h1></Link>
           }
 
         </div>
@@ -661,6 +697,10 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
               })
             :
             data.map((item, i) => {
+              if (item.key == 'samattvam') {
+                console.log(item);
+              }
+
               // if (i < 3) {
               return (
                 // shouldDisplayCard(item) && (

@@ -13756,7 +13756,7 @@ const classes = {
     metaDescription:
       'Towards the end, there is an enlightening question and answer session. ',
     rating: 5,
-    colorCode: '#B77E7E',
+    colorCode: '#DDAB58',
     timing: 'Every Sunday between 9.30 am and 10.30am',
     fees: {
       onlineFee: 0,
@@ -14264,7 +14264,7 @@ const classes = {
     metaDescription:
       'Samatvam is one-of-a-kind personalised wellbeing program launched by The Yoga Institute under the guidance of Dr. Hansaji Yogendra. The program focuses on providing individual guidance for life management.',
     rating: 5,
-    colorCode: '#C48E8C',
+    colorCode: '#DDAB58',
     timing: 'Every Saturday: 2.00 p.m. - 5.00 p.m. (IST)',
     fees: {
       onlineFee: 0,
@@ -16758,12 +16758,12 @@ const specialEvents = {
       },
     },
     image: `${baseDomain}${homeAssets.homeAsset14}`,
-    cardImage: `${baseDomain}${homeAssets.homeAsset14}`,
+    cardImage: `${homeAssets.fullmoonCard}`,//${baseDomain}
     mostPopular: false,
     metaDescription:
       '',
     rating: 5,
-    colorCode: '#B77E7E',
+    colorCode: '#DDAB58',
     timing: '',
     fees: {
       onlineFee: 0,
@@ -16846,7 +16846,7 @@ const specialEvents = {
     metaDescription:
       '',
     rating: 5,
-    colorCode: '#B77E7E',
+    colorCode: '#DDAB58',
     timing: '',
     fees: {
       onlineFee: 0,
