@@ -10,7 +10,7 @@ import Other from './Other'
 import SelectDropDown from '../Select Dropdown'
 import { Link, useSearchParams, useNavigate } from 'react-router-dom'
 import { parsePhoneNumberFromString, isValidPhoneNumber } from 'libphonenumber-js'
-import { authBaseDomain, cmsBaseDomain, razorPayKey } from '../../../../Constants/appSettings'
+import { authBaseDomain, cmsBaseDomain, mapApiKey, razorPayKey } from '../../../../Constants/appSettings'
 import axios from 'axios'
 import { validateEmail } from '../../../../helpers'
 import DatePicker from 'react-datepicker';
@@ -31,7 +31,7 @@ import CustomModal from '../TermsandCondition/t&Cpopup'
 
 
 const libraries = ['places'];
-const mapKey = 'AIzaSyCArozsi_1fWJgSwDFDAoA_6Q5zLZ7NYyA';
+const mapKey = mapApiKey//'AIzaSyCArozsi_1fWJgSwDFDAoA_6Q5zLZ7NYyA';
 
 const EnrollmentForm = ({
   empty,
