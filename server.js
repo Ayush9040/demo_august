@@ -112,6 +112,15 @@ const getBogLinks = async () => {
   const { data } = await axios.get(`${cmsBaseDomain}/misc/urlsarray`)
   return data.data
 }
+const RemoveTrailingSlash = (url) => {
+
+  if (url.endsWith("/") && url !== "/") {
+    const newPath = url.slice(0, -1);
+    return newPath;
+  }
+
+  return url;
+};
 
 app.use(express.static('build', options))
 
@@ -141,7 +150,7 @@ app.get('*', async (req, res) => {
   if (metaData && metaData.title) titleTag = `<title>${metaData.title}</title>`
   if (metaData && metaData.links) {
     linkArray = metaData.links.map((link) => {
-      if (link.rel) return `<link rel=${link.rel || ''} href=${link.href || ''}  />`
+      if (link.rel) return `<link rel=${link.rel || ''} href=${RemoveTrailingSlash(link.href) || ''}  />`
     })
   }
   if (metaData && metaData.metaData) {
