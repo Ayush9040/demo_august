@@ -19,7 +19,7 @@ export const authServerClientId = 'cmsProd_qt9up36idOpBAcrrd'
 // export const razorPayKey = 'rzp_live_KyhtrIyJ546bd2'
 // export const ga4Id = 'G-KZMLSTPLP1'
 
-
+export const mapApiKey='AIzaSyDcj3dpy8wmOixiFD4YVE7_kD34Gs1uudw'
 export const cmsBaseDomain = 'https://tyi-test.theyogainstitute.org/cms-api/v1'
 export const authBaseDomain = 'https://tyi-test.theyogainstitute.org/auth-api/v2'
 export const ecomBaseDomain = 'https://tyi-test.theyogainstitute.org/ecom-api/v1'

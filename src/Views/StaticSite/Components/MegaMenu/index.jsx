@@ -10,7 +10,7 @@ const MegaMenu = ({ setNav }) => {
   const navItems = [
     { name: 'ABOUT', link: '/know-us-better', id: 1, key: 'ABOUT', },
     { name: 'COURSES', link: '/courses', id: 2, key: 'COURSES' },
-    { name: 'SPECIAL EVENTS', link: '/courses', id: 18, key: 'SPECIAL-EVENTS' },
+    { name: 'SPECIAL EVENTS', link: '/courses#specialEvents', id: 18, key: 'SPECIAL-EVENTS' },
     { name: 'NUTRI DIET CLINIC', link: '/nutri-diet', id: 3, key: 'COURSES-NUTRI' },
     { name: 'CORPORATE WORKSHOP', link: '/corporate-workshops', id: 4, key: 'COURSES-WORKSHOPS' },
     { name: 'ONLINE HOME YOGA TUITIONS', link: '/home-tuitions', id: 5, key: 'COURSES-YOGATUTIONS' },
@@ -152,21 +152,7 @@ const MegaMenu = ({ setNav }) => {
         <ul className="navigation-ul">
           {navItems &&
             navItems.map((item, i) => {
-              if (item.key == 'SPECIAL-EVENTS') {
-                return (
-                  <div key={i} onMouseOver={() => {
-                    setMenuItem(item.key)
-                  }}>
-                    <li>
-                      {item.name}
-                      <div
-                        className="bottom-line"
-                      ></div>
-                    </li>
-                  </div>
-                )
-              }
-              else if ((item.key === 'GIFTING' || item.key === 'ONLINE')) {
+             if ((item.key === 'GIFTING' || item.key === 'ONLINE')) {
                 return (
 
                   <div

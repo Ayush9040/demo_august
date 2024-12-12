@@ -23,6 +23,36 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
     console.log('loaded2', data);
 
   }, [data])
+  useEffect(() => {
+    // Check if there is a hash in the URL
+    const hash = window.location.hash;
+
+    // If there's a hash and it matches a section, scroll to it
+    if (hash) {
+      setTimeout(() => {
+        const element = document.querySelector(hash);
+
+        // Check if the screen width is smaller than or equal to 768px (considered mobile)
+        const isMobile = window.innerWidth <= 768;
+
+        // Depending on the screen size, scroll to different divs
+        if (isMobile) {
+          // Scroll to mobile-specific div
+          const mobileDiv = document.querySelector('#mobileDiv'); // Replace with actual mobile div ID
+          if (mobileDiv) {
+            mobileDiv.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        } else {
+          // Scroll to desktop-specific div
+          const desktopDiv = document.querySelector('#desktopDiv'); // Replace with actual desktop div ID
+          if (desktopDiv) {
+            desktopDiv.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        }
+      }, 100);
+
+    }
+  }, []);
   const shouldDisplayLink = (points) => {// used to display the link in UI
     if (selectedFilters) {
       const { online, onCampus, days7, days21, month1, month2, month3, weekends, weekDays, year1, year2, month7, month4, days1, days2 } = selectedFilters;
@@ -584,13 +614,13 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
                 )}
 
               </ul></div>
-
+            <div id="desktopDiv"></div>
           </>
         )
       case 'Special Events':
         return (
           <>
-            <div style={{ marginTop: '40px' }}>
+            <div style={{ marginTop: '40px' }} id="mobileDiv">
               <ul>
                 {/*  id='therapy-course'  */}
                 {specialEventsStatic.map((item, i) => (
@@ -625,7 +655,7 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
             (title != 'Special Events' ? <Link to={`/courses/browse/${pathParam}`}>
               <h1 style={{ fontSize: '2.6rem' }}>{title}</h1>
               {/* // for special evens no nee of link */}
-            </Link> : <h1 style={{ fontSize: '2.6rem',pointerEvents:'none' }}>{title}</h1>)
+            </Link> : <h1 style={{ fontSize: '2.6rem', pointerEvents: 'none' }}>{title}</h1>)
             :
             <Link to={`/courses/browse/ttc?type=200`}>
               <h1 style={{ fontSize: '2.6rem', fontWeight: '700' }}>{title}</h1></Link>
