@@ -241,6 +241,8 @@ const SignIn = () => {
   const [page, setPage] = useState()
   // const [errMsg, setErrMsg] = useState('')
   const [pageIndex, setPageIndex] = useState('1')
+  const [pageIndexEmail, setPageIndexEmail] = useState('1')
+  const [isEmailLogin, setEmailLogin] = useState(false)
   const [signUpType, setSignUpType] = useState('')
   const [values, setValues] = useState([])
   const [autocomplete, setAutocomplete] = useState(null);
@@ -582,6 +584,41 @@ const SignIn = () => {
           // handleAlreadySignedUpUser({
           //   phone: userDetails?.phoneNumber
           // })
+          await getUserDetails(response?.data?.accessToken, 'alreadySignedUp')
+          page ? page !== 'cart' ? navigate(`/enrollment/${page}`) : navigate('/shop/checkout') : navigate('/')
+        }
+        setOtp(new Array(4).fill(""))//clear OTP
+      }
+      catch (err) {
+        // alert('Invalid OTP')
+        setFormData({ ...formData, errorIndex: 2 });
+      }
+    }
+    else {
+      setFormData({ ...formData, errorIndex: 2 });
+    }
+  }
+
+  //to verify using email flow
+  const verifyEmailOTP = async (userDetails) => {
+    // console.log(userDetails.otp);
+
+    if (userDetails.otp.length == 4) {//valid OTP
+      setFormData({ ...formData, errorIndex: 0 });
+      try {
+        let response = await axios.post(//send OTP for mobile
+          `${authBaseDomain}/authdoor/email/confirm-otp`,
+          { email: userDetails.email, otp: userDetails.otp }
+        )
+        setToken(response?.data?.token)
+        setIsBtnLoad(false)
+        if (response?.data?.isSignupRequired) {
+          setPageIndexEmail('3');
+        }
+        else {
+          localStorage.setItem('authorizationToken', response?.data?.accessToken)
+          localStorage.setItem('refreshToken', response?.data?.refreshToken)
+          dispatch(loginUserSuccess({}))
           await getUserDetails(response?.data?.accessToken, 'alreadySignedUp')
           page ? page !== 'cart' ? navigate(`/enrollment/${page}`) : navigate('/shop/checkout') : navigate('/')
         }
@@ -965,6 +1002,166 @@ const SignIn = () => {
     }
   }
 
+  // create user after the final step validation
+
+  // create user after the final step validation
+  const signupEmailOTP = async (userDetails, type, token) => {
+
+    console.log("User Details from verifySign ", userDetails, type, token, getemail)
+
+    const nameRegex = /^[A-Za-z]+( [A-Za-z]+)*$/;
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+    let det = { ...formData }
+    const trimmedAddress1 = det?.address1?.replace(/\s{2,}/g, ' ').trim();
+    const trimmedAddress2 = det?.address2?.replace(/\s{2,}/g, ' ').trim();
+
+    det['address1'] = trimmedAddress1;
+    det['address2'] = trimmedAddress2
+    let details = { ...det }
+    setFormData({ ...details, firstName: getTrimmedName(details.firstName), lastName: getTrimmedName(details.lastName) });
+
+    details['firstName'] = getTrimmedName(details['firstName'])
+    details['lastName'] = getTrimmedName(details['lastName'])
+    if (!details.firstName || !nameRegex.test(details.firstName)) {
+      setFormData({ ...formData, errorIndex: 3 });
+    }
+    else if (!details.lastName || !nameRegex.test(details.lastName)) {
+      setFormData({ ...formData, errorIndex: 4 });
+    }
+    else if ((!details?.address1)) {
+      setFormData({ ...details, errorIndex: 5 });
+    }
+    else if ((!details?.address2)) {
+      setFormData({ ...details, errorIndex: 6 });
+    }
+
+    else if (!details.gender?.value) {
+      setFormData({ ...details, errorIndex: 10 });
+    }
+    else if ((!getemail || !emailRegex.test(getemail))) {
+      setFormData({ ...details, errorIndex: 12 });
+    }
+    else if ((validatePhoneNumber(`${phoneNumber.dialCode}${details.phoneNumber}`).length > 0)) {
+      setFormData({ ...details, errorIndex: 11 });
+      setIsToast(true)
+    }
+    else if (!details.phoneNumber) {
+      setFormData({ ...details, errorIndex: 11 });
+      setIsToast(true)
+    }
+
+
+    else {
+      if (userDetails.otp.length == 4) {//valid OTP
+        setIsBtnLoad(true)
+        setFormData({ ...formData, errorIndex: 0 });
+        const number = parsePhoneNumber(userDetails.phoneNumber);
+        const countryCode = number?.country; // This will give you the country code
+        try {
+          let payload = { ...userDetails }
+          delete payload.email;
+          delete payload.address1;
+          delete payload.address2;
+          payload['gender'] = userDetails?.gender.value;
+          payload['addressLine1'] = rawAddress1 ? rawAddress1 : userDetails?.address1;//userDetails?.address1;
+          payload['addressLine2'] = userDetails?.address2;
+          payload['country'] = values?.country?.label;
+          payload['city'] = values?.city?.label;
+          payload['state'] = values?.state?.label;
+          payload['email'] = getemail;
+          payload['pincode'] = userDetails?.pincode;
+          payload['phoneNumber'] = phoneNumber.mobile;
+          payload['dialCode'] = phoneNumber.dialCode.startsWith("+") ? phoneNumber.dialCode.slice(1) : phoneNumber.dialCode;
+          payload['countryCode'] = countryCode
+
+          let response = await axios.post(
+            `${authBaseDomain}/authdoor/google/signup`,
+            payload,
+            {
+              headers: {
+                'Authorization': `Bearer ${token}`
+              }
+            }
+          )
+          if (response) {
+            // alert('Siggned in');
+            localStorage.setItem('authorizationToken', response?.data?.accessToken)
+            localStorage.setItem('refreshToken', response?.data?.refreshToken)
+            dispatch(loginUserSuccess({}))
+            await getUserDetails(response?.data?.accessToken, 'notalreadySignedUp')
+            callCTEvent(payload)
+
+            // console.log('user details 2 ', userDetails);
+            page ? page !== 'cart' ? navigate(`/enrollment/${page}`) : navigate('/shop/checkout') : navigate('/')
+          }
+          else {
+            // alert('failed')
+          }
+
+        }
+        catch (err) {
+          // alert('Invalid OTP')
+          setFormData({ ...formData, errorIndex: 2 });
+          if (err.data.error == 'Your session has expired.Please Sign Up again to continue.' || err.data.error == "Your session has expired. Please click 'Sign Up with Google' again to continue.") {
+            setPageIndex(1)
+            setOtp(new Array(4).fill(""));
+            setSignUpType('')
+            setFormData({
+              phoneNumber: '',
+              dialCode: '91',
+              otp: '',
+              email: '',
+              firstName: '',
+              lastName: '',
+              gender: '',
+              country: '',
+              city: '',
+              errorIndex: '0'
+            })
+            toast.error(err?.data?.error, {
+              position: 'top-right',
+              autoClose: 3000,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: false,
+              draggable: true,
+              progress: undefined,
+              theme: 'light',
+            })
+          }
+          else {
+            setErrorMessage(err.data.error)
+          }
+          setIsBtnLoad(false)
+        }
+      }
+    }
+  }
+
+  const sendEmailOtp = async (details) => {
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+    if ((!details.email || !emailRegex.test(details.email))) {
+      setFormData({ ...details, errorIndex: 13 });
+    }
+    else {//send OTP to email
+      setFormData({ ...details, errorIndex: 0 });
+      try {
+        await axios.post(//send OTP for mobile
+          `${authBaseDomain}/authdoor/email/send-otp`,
+          { email: details.email }
+        )
+        startTimer()
+        focusFirstInput()
+        setPageIndexEmail('2')
+      }
+      catch (err) {
+        console.log(err);
+
+      }
+    }
+  }
 
   // Send OTP for mobile
   const sendOTP = async (userDetails) => {
@@ -1300,11 +1497,37 @@ const SignIn = () => {
         verifyOTP(payload)
       }
       else {//for signup
-        validateSignupOTP(payload, signUpType, token)
+        if (!isEmailLogin) {
+          validateSignupOTP(payload, signUpType, token)
+        }
+        else {
+          verifyEmailOTP(payload)
+        }
         // verifySignupOTP(payload, signUpType, token)
       }
     }
   };
+
+  const handleOTPChangeEmail = (element, index, formData, signUpType, token) => {//only for email signup flow
+    setIsMobileVerified(false)
+    if (isNaN(element.value)) return; // Ensure only numbers are entered
+    let otpArry = [...otp]
+    otpArry[index] = element.value
+    setOtp(otpArry);
+
+    // Move focus to the next input
+    if (element.value !== "" && index < 3) {
+      inputRefs.current[index + 1].focus();
+    }
+    setFormData({ ...formData, otp: otpArry.join('') })
+    let payload = formData
+    payload['otp'] = otpArry.join('')
+
+    if (otpArry.join('').length == 4) {//auto submit form
+      signupEmailOTP(formData, signUpType, token)
+    }
+  };
+
   const [isMobileVerified, setIsMobileVerified] = useState(false)
   const validateSignupOTP = async (payload, signUpType, token) => {
     let request = { phoneNumber: phoneNumber.mobile, otp: payload.otp, dialCode: phoneNumber.dialCode.startsWith("+") ? phoneNumber.dialCode.slice(1) : phoneNumber.dialCode, email: payload.email }
@@ -1455,7 +1678,25 @@ const SignIn = () => {
       }
     }
     else {
-      if (!isLoggedIn) {
+      if (isEmailLogin) {
+        if (pageIndexEmail > 1) {
+          if (pageIndexEmail == '3' || pageIndexEmail == '4') {
+            if (signUpType == 'mobile') {
+              setPageIndexEmail('2')
+            }
+            else {
+              setPageIndexEmail('1')
+            }
+          }
+          else {
+            setPageIndexEmail(pageIndexEmail - 1)
+          }
+        }
+        else {
+          setEmailLogin(false)
+        }
+      }
+      else if (!isLoggedIn) {
         // If not logged in, navigate to the course page (you can specify the correct course page URL here)
         const lastPageUrl = sessionStorage.getItem('last_page_url') || 'Direct Visit';
         console.log("lastPageUrl ", lastPageUrl)
@@ -1516,7 +1757,12 @@ const SignIn = () => {
         verifyOTP(payload)
       }
       else {//for signup
-        verifySignupOTP(payload, signUpType, token)
+        if (!isEmailLogin) {
+          validateSignupOTP(payload, signUpType, token)
+        }
+        else {
+          verifyEmailOTP(payload)
+        }
       }
       setTimeout(() => { inputRefs.current[3].focus(); }, 200)
 
@@ -1589,192 +1835,191 @@ const SignIn = () => {
               &nbsp;Back
             </div>}
 
-            {/* login page with mobile number */}
-            {pageIndex == '1' && <>
-              <div className='header'>Log In Or Sign up to TYI Account</div>
-              <div className='sub-header'>Welcome to The Yoga Institute </div>
-              <div className='google-badge' onClick={() => googleSignup()}>
-                <svg width="16px" height="16px" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M18.8 10.2083C18.8 9.55834 18.7417 8.93334 18.6333 8.33334H10V11.8792H14.9333C14.7208 13.025 14.075 13.9958 13.1042 14.6458V16.9458H16.0667C17.8 15.35 18.8 13 18.8 10.2083Z" fill="#4285F4" />
-                  <path d="M10 19.1667C12.475 19.1667 14.55 18.3458 16.0667 16.9458L13.1042 14.6458C12.2833 15.1958 11.2333 15.5208 10 15.5208C7.61252 15.5208 5.59168 13.9083 4.87085 11.7417H1.80835V14.1167C3.31668 17.1125 6.41668 19.1667 10 19.1667Z" fill="#34A853" />
-                  <path d="M4.87075 11.7417C4.68742 11.1917 4.58325 10.6042 4.58325 10C4.58325 9.39583 4.68742 8.80833 4.87075 8.25833V5.88333H1.80825C1.16659 7.16071 0.832686 8.57051 0.833253 10C0.833253 11.4792 1.18742 12.8792 1.80825 14.1167L4.87075 11.7417Z" fill="#FBBC05" />
-                  <path d="M10 4.47918C11.3458 4.47918 12.5542 4.94168 13.5042 5.85001L16.1334 3.22084C14.5459 1.74168 12.4708 0.833344 10 0.833344C6.41668 0.833344 3.31668 2.88751 1.80835 5.88334L4.87085 8.25834C5.59168 6.09168 7.61252 4.47918 10 4.47918Z" fill="#EA4335" />
-                </svg>
-                &nbsp;Continue with Google</div>
-              <div class="divider-container">
-                <span>Or</span>
-              </div>
-              <div className='inp-label'>Mobile Number <span>*</span></div>
-              {/* <div className={formData?.errorIndex == 1 ? "form-inp err-inp" : "form-inp"}>
-                <PhoneInput
-                  value={formData.phoneNumber}
-                  placeholder="Enter your Mobile number"
-                  defaultCountry="IN"
-                  className="custom-phone-input"
-                  onChange={handlePhoneChange}
-                />
-              </div> */}
-              <div class="input-container">
-                <div class="prefix-dropdown" onClick={(event) => { event.stopPropagation(); SetIsCountryContainer(true); }}><span>
-                  <img width='20px' style={{ borderRadius: '2px', marginRight: '6px' }} src={`https://purecatamphetamine.github.io/country-flag-icons/3x2/${selectedCountryList.flag.toUpperCase()}.svg`} alt="" /></span>
-                  {selectedCountryList.value}
-                  < span style={{ marginLeft: '4px' }}>
-                    <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M7.06 0.726562L4 3.7799L0.94 0.726562L0 1.66656L4 5.66656L8 1.66656L7.06 0.726562Z" fill="black" />
-                    </svg>
-                  </span >
-                </div >
-                <input type="number" class="input-box" placeholder="Enter your phone number" value={formData.phoneNumber}
-                  onChange={handlePhoneChange} onKeyUp={() => { setFormData({ ...formData, errorIndex: 0 }) }} />
-              </div >
-              {isCountryContainer &&
-                <div className='ctry-dpdwn' ref={listRef}>
-                  {countriesMap.map(country => (
-                    <div key={country.label} className='ctr-option' onClick={() => { SetSelectedCountryList(country), SetIsCountryContainer(false), handleCountryChange(formData.phoneNumber, country) }}>
-                      <span><img width='20px' style={{ borderRadius: '2px' }} src={`https://purecatamphetamine.github.io/country-flag-icons/3x2/${country.flag.toUpperCase()}.svg`} alt="" /></span>
-                      <span style={{ padding: '0 6px 0 6px' }}>
-                        {country.label}</span> <span style={{ color: 'rgba(0, 0, 0, 0.5)' }}>{country.value}</span></div>
-                  ))}
-                </div>}
+            {!isEmailLogin ? <>
+              {/* Handled email login in a seperate block to avoid conflicts in exiting functionality */}
+              {/* login page with mobile number */}
+              {pageIndex == '1' && <>
+                <div className='header'>Log In Or Sign up to TYI Account</div>
+                <div className='sub-header'>Welcome to The Yoga Institute </div>
+                <div className='google-badge' onClick={() => googleSignup()}>
+                  <svg width="16px" height="16px" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18.8 10.2083C18.8 9.55834 18.7417 8.93334 18.6333 8.33334H10V11.8792H14.9333C14.7208 13.025 14.075 13.9958 13.1042 14.6458V16.9458H16.0667C17.8 15.35 18.8 13 18.8 10.2083Z" fill="#4285F4" />
+                    <path d="M10 19.1667C12.475 19.1667 14.55 18.3458 16.0667 16.9458L13.1042 14.6458C12.2833 15.1958 11.2333 15.5208 10 15.5208C7.61252 15.5208 5.59168 13.9083 4.87085 11.7417H1.80835V14.1167C3.31668 17.1125 6.41668 19.1667 10 19.1667Z" fill="#34A853" />
+                    <path d="M4.87075 11.7417C4.68742 11.1917 4.58325 10.6042 4.58325 10C4.58325 9.39583 4.68742 8.80833 4.87075 8.25833V5.88333H1.80825C1.16659 7.16071 0.832686 8.57051 0.833253 10C0.833253 11.4792 1.18742 12.8792 1.80825 14.1167L4.87075 11.7417Z" fill="#FBBC05" />
+                    <path d="M10 4.47918C11.3458 4.47918 12.5542 4.94168 13.5042 5.85001L16.1334 3.22084C14.5459 1.74168 12.4708 0.833344 10 0.833344C6.41668 0.833344 3.31668 2.88751 1.80835 5.88334L4.87085 8.25834C5.59168 6.09168 7.61252 4.47918 10 4.47918Z" fill="#EA4335" />
+                  </svg>
+                  &nbsp;Continue with Google</div>
 
-              {
-                formData?.errorIndex == 1 &&
-                <div style={{ color: '#FF3B30' }}>Enter a valid Mobile number</div>
-              }
-              <div className="ftr-btn">
-                <button type='click' className='primary-btn' onClick={() => { sendOTP(formData), setOtp(new Array(4).fill("")) }}>Continue</button>
-                <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
-                  <div className='tc-text'>By Clicking “Continue with google /mobile” you agree to
-                    our <span onClick={() => openLink('https://theyogainstitute.org/terms-and-conditions')}>Terms & Conditions</span> and <span onClick={() => openLink('https://theyogainstitute.org/privacy-policy')}>Privacy Policy</span></div>
-                </div></div>
-            </>}
-
-            {/* Login page with OTP */}
-            {
-              pageIndex == '2' && <>
-                <div className='sub-header wish' style={{ fontWeight: '700', padding: '12px 0 4px 0' }}>Namaste  🙏 Please verify your mobile number </div>
-                {/* <div className='sub-header' style={{ fontWeight: '400', fontSize: '16px'}}>Enter the OTP</div> */}
-                <div className="otp-inputs">
-                  {otp.map((data, index) => {
-                    return (
-                      <input
-                        key={index}
-                        value={data}
-                        type="text"
-                        maxLength="1"
-                        className={formData?.errorIndex == 2 ? "otp-input otp-err" : "otp-input"}
-                        // value={data}
-                        onChange={(e) => handleOTPChange(e.target, index)}
-                        onKeyDown={(e) =>
-                          e.key === "Backspace" ? handleBackspace(e.target, index) : null
-                        }
-                        onPaste={(e) => handlePaste(e, index)} // Handle paste
-                        ref={(el) => (inputRefs.current[index] = el)}
-                        inputMode="numeric" // Add this line
-                        pattern="[0-9]*" // Optionally, add this for better compatibility
-                      />
-                    );
-                  })}
+                <div className='google-badge' onClick={() => setEmailLogin(true)}>
+                  <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18.2422 0.96875H1.75781C0.786602 0.96875 0 1.76023 0 2.72656V13.2734C0 14.2455 0.792383 15.0312 1.75781 15.0312H18.2422C19.2053 15.0312 20 14.2488 20 13.2734V2.72656C20 1.76195 19.2165 0.96875 18.2422 0.96875ZM17.996 2.14062L11.243 8.85809C10.9109 9.19012 10.4695 9.37293 10 9.37293C9.53047 9.37293 9.08906 9.19008 8.75594 8.85699L2.00398 2.14062H17.996ZM1.17188 13.0349V2.96582L6.23586 8.00312L1.17188 13.0349ZM2.00473 13.8594L7.06672 8.82957L7.9284 9.68672C8.48176 10.2401 9.21746 10.5448 10 10.5448C10.7825 10.5448 11.5182 10.2401 12.0705 9.68781L12.9333 8.82957L17.9953 13.8594H2.00473ZM18.8281 13.0349L13.7641 8.00312L18.8281 2.96582V13.0349Z" fill="black" />
+                  </svg>
+                  &nbsp;Continue with Email</div>
+                <div class="divider-container">
+                  <span>Or</span>
                 </div>
-                {formData?.errorIndex == 2 &&
-                  <div style={{ color: '#FF3B30', margin: '1rem 0' }}>OTP is Invalid!</div>}
-                <div className='sub-header' style={{ fontWeight: '400', fontSize: '16px', marginTop: '12px' }}>Enter OTP sent to {phoneNumber.dialCode}{formData.phoneNumber}
-                  <span style={{ color: '#CA4625', fontSize: '12px', fontWeight: 600, cursor: 'pointer', borderBottom: '2px solid #CA4625', marginLeft: '1rem' }} onClick={() => {
-                    setPageIndex('1');
-                  }}>
-                    <span style={{ whiteSpace: 'nowrap' }}>
-                      <svg width="12" height="12" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M0.249512 6.18805V7.75055H1.81201L6.42035 3.14222L4.85785 1.57972L0.249512 6.18805ZM7.62868 1.93389C7.79118 1.77139 7.79118 1.50889 7.62868 1.34639L6.65368 0.371387C6.49118 0.208887 6.22868 0.208887 6.06618 0.371387L5.30368 1.13389L6.86618 2.69639L7.62868 1.93389Z" fill="#CA4625" />
+                <div className='inp-label'>Mobile Number <span>*</span></div>
+                <div class="input-container">
+                  <div class="prefix-dropdown" onClick={(event) => { event.stopPropagation(); SetIsCountryContainer(true); }}><span>
+                    <img width='20px' style={{ borderRadius: '2px', marginRight: '6px' }} src={`https://purecatamphetamine.github.io/country-flag-icons/3x2/${selectedCountryList.flag.toUpperCase()}.svg`} alt="" /></span>
+                    {selectedCountryList.value}
+                    < span style={{ marginLeft: '4px' }}>
+                      <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7.06 0.726562L4 3.7799L0.94 0.726562L0 1.66656L4 5.66656L8 1.66656L7.06 0.726562Z" fill="black" />
                       </svg>
-                      Change mobile number
-                    </span></span>
-                </div>
+                    </span >
+                  </div >
+                  <input type="number" class="input-box" placeholder="Enter your phone number" value={formData.phoneNumber}
+                    onChange={handlePhoneChange} onKeyUp={() => { setFormData({ ...formData, errorIndex: 0 }) }} />
+                </div >
+                {isCountryContainer &&
+                  <div className='ctry-dpdwn' ref={listRef}>
+                    {countriesMap.map(country => (
+                      <div key={country.label} className='ctr-option' onClick={() => { SetSelectedCountryList(country), SetIsCountryContainer(false), handleCountryChange(formData.phoneNumber, country) }}>
+                        <span><img width='20px' style={{ borderRadius: '2px' }} src={`https://purecatamphetamine.github.io/country-flag-icons/3x2/${country.flag.toUpperCase()}.svg`} alt="" /></span>
+                        <span style={{ padding: '0 6px 0 6px' }}>
+                          {country.label}</span> <span style={{ color: 'rgba(0, 0, 0, 0.5)' }}>{country.value}</span></div>
+                    ))}
+                  </div>}
 
+                {
+                  formData?.errorIndex == 1 &&
+                  <div style={{ color: '#FF3B30' }}>Enter a valid Mobile number</div>
+                }
                 <div className="ftr-btn">
-                  <button type='click' className='primary-btn' onClick={() => verifyOTP(formData)}>Verify & Continue</button>
+                  <button type='click' className='primary-btn' onClick={() => { sendOTP(formData), setOtp(new Array(4).fill("")) }}>Continue</button>
                   <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
-                    <div className='tc-text'>
-                      {seconds != '0' && <>We regret if you haven&apos;t received the OTP, <br />
-                        resend OTP in<span style={{ fontWeight: 'bold', textDecoration: 'none', cursor: 'none' }}> 00:{seconds} </span></>}
-                      {/* {seconds != '0' && <>You can request another in {seconds} {seconds > 9 ? 'seconds' : 'second'}</>} */}
-                      {seconds == '0' && <div onClick={() => sendOTP(formData)} className="resend-btn">Resend</div>}</div>
-                  </div>
-                </div>
-              </>
-            }
+                    <div className='tc-text'>By Clicking “Continue with google /mobile” you agree to
+                      our <span onClick={() => openLink('https://theyogainstitute.org/terms-and-conditions')}>Terms & Conditions</span> and <span onClick={() => openLink('https://theyogainstitute.org/privacy-policy')}>Privacy Policy</span></div>
+                  </div></div>
+              </>}
 
-            {/* Signup page */}
-            {
-              (pageIndex == '3' || pageIndex == '4') && <>
-                <div className='header header-3'>Namaste 🙏 Please Fill Your Details</div>
-                <div className='sub-header sub-header-3 wish-text' style={{ maxWidth: '430px' }}>Become a Part of The Yoga Institute Family & Sign-up for your preferred course</div>
-                <div className='sub-header sub-header-3 wish-text-mob'>Join The Yoga Institute Family </div>
-
-                <div className='inp-group'>
-
-
-                  <div className='width-100'>
-
-                    <div className='inp-label mg-t-20'>First Name <span>*</span></div>
-                    <div className={formData?.errorIndex == 3 ? "form-inp err-inp" : "form-inp"}>
-                      <input
-                        disabled={pageIndex == '4' ? true : false}
-                        value={formData.firstName}
-                        onChange={(e) => { setFormData({ ...formData, firstName: e.target.value }) }}
-                        type="text"
-                        placeholder="Enter your first name"
-                        className="custom-input"
-                      />
-                    </div>
-                    {formData?.errorIndex == 3 &&
-                      <div style={{ color: '#FF3B30' }}>Enter a valid First name</div>}
-
-                  </div>
-
-
-                  <div className='width-100'>
-                    <div className='inp-label  mg-t-20'>Last Name <span>*</span></div>
-                    <div className={formData?.errorIndex == 4 ? "form-inp err-inp" : "form-inp"}>
-                      <input
-                        disabled={pageIndex == '4' ? true : false}
-                        type="text"
-                        placeholder="Enter your Last name"
-                        value={formData.lastName}
-                        onChange={(e) => { setFormData({ ...formData, lastName: e.target.value }) }}
-                        className="custom-input"
-                      />
-                    </div>
-                    {formData?.errorIndex == 4 &&
-                      <div style={{ color: '#FF3B30' }}>Enter a valid Last name</div>}
-                  </div>
-
-                </div>
-
-
-                {/* Adding New Fields */}
-                <LoadScript googleMapsApiKey={mapKey} libraries={libraries}>
-
-                  <Autocomplete onLoad={onLoadAutocomplete} onPlaceChanged={onPlaceChanged} >
-
-                    <div className="form_error1">
-                      <div className='inp-label mg-t-20'>Address <span>*</span></div>
-                      <div className={formData?.errorIndex == 5 ? "form-inp err-inp custom_style_input_add" : "form-inp custom_style_input_add"}>
-                        <InputComponent
-
+              {/* Login page with OTP */}
+              {
+                pageIndex == '2' && <>
+                  <div className='sub-header wish' style={{ fontWeight: '700', padding: '12px 0 4px 0' }}>Namaste  🙏 Please verify your mobile number </div>
+                  {/* <div className='sub-header' style={{ fontWeight: '400', fontSize: '16px'}}>Enter the OTP</div> */}
+                  <div className="otp-inputs">
+                    {otp.map((data, index) => {
+                      return (
+                        <input
+                          key={index}
+                          value={data}
                           type="text"
-                          placeholder="Enter address line 1"
-                          form={formData}
-                          setField={setFormData}
-                          keyName="address1"
-                          errorCheck={setEmpty}
+                          maxLength="1"
+                          className={formData?.errorIndex == 2 ? "otp-input otp-err" : "otp-input"}
+                          // value={data}
+                          onChange={(e) => handleOTPChange(e.target, index)}
+                          onKeyDown={(e) =>
+                            e.key === "Backspace" ? handleBackspace(e.target, index) : null
+                          }
+                          onPaste={(e) => handlePaste(e, index)} // Handle paste
+                          ref={(el) => (inputRefs.current[index] = el)}
+                          inputMode="numeric" // Add this line
+                          pattern="[0-9]*" // Optionally, add this for better compatibility
+                        />
+                      );
+                    })}
+                  </div>
+                  {formData?.errorIndex == 2 &&
+                    <div style={{ color: '#FF3B30', margin: '1rem 0' }}>OTP is Invalid!</div>}
+                  <div className='sub-header' style={{ fontWeight: '400', fontSize: '16px', marginTop: '12px' }}>Enter OTP sent to {phoneNumber.dialCode}{formData.phoneNumber}
+                    <span style={{ color: '#CA4625', fontSize: '12px', fontWeight: 600, cursor: 'pointer', borderBottom: '2px solid #CA4625', marginLeft: '1rem' }} onClick={() => {
+                      setPageIndex('1');
+                    }}>
+                      <span style={{ whiteSpace: 'nowrap' }}>
+                        <svg width="12" height="12" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M0.249512 6.18805V7.75055H1.81201L6.42035 3.14222L4.85785 1.57972L0.249512 6.18805ZM7.62868 1.93389C7.79118 1.77139 7.79118 1.50889 7.62868 1.34639L6.65368 0.371387C6.49118 0.208887 6.22868 0.208887 6.06618 0.371387L5.30368 1.13389L6.86618 2.69639L7.62868 1.93389Z" fill="#CA4625" />
+                        </svg>
+                        Change mobile number
+                      </span></span>
+                  </div>
+
+                  <div className="ftr-btn">
+                    <button type='click' className='primary-btn' onClick={() => verifyOTP(formData)}>Verify & Continue</button>
+                    <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
+                      <div className='tc-text'>
+                        {seconds != '0' && <>We regret if you haven&apos;t received the OTP, <br />
+                          resend OTP in<span style={{ fontWeight: 'bold', textDecoration: 'none', cursor: 'none' }}> 00:{seconds} </span></>}
+                        {/* {seconds != '0' && <>You can request another in {seconds} {seconds > 9 ? 'seconds' : 'second'}</>} */}
+                        {seconds == '0' && <div onClick={() => sendOTP(formData)} className="resend-btn">Resend</div>}</div>
+                    </div>
+                  </div>
+                </>
+              }
+
+              {/* Signup page */}
+              {
+                (pageIndex == '3' || pageIndex == '4') && <>
+                  <div className='header header-3'>Namaste 🙏 Please Fill Your Details</div>
+                  <div className='sub-header sub-header-3 wish-text' style={{ maxWidth: '430px' }}>Become a Part of The Yoga Institute Family & Sign-up for your preferred course</div>
+                  <div className='sub-header sub-header-3 wish-text-mob'>Join The Yoga Institute Family </div>
+
+                  <div className='inp-group'>
+
+
+                    <div className='width-100'>
+
+                      <div className='inp-label mg-t-20'>First Name <span>*</span></div>
+                      <div className={formData?.errorIndex == 3 ? "form-inp err-inp" : "form-inp"}>
+                        <input
+                          disabled={pageIndex == '4' ? true : false}
+                          value={formData.firstName}
+                          onChange={(e) => { setFormData({ ...formData, firstName: e.target.value }) }}
+                          type="text"
+                          placeholder="Enter your first name"
+                          className="custom-input"
                         />
                       </div>
-                      {formData?.errorIndex == 5 &&
-                        <div style={{ color: '#FF3B30' }}>Select a valid address </div>}
+                      {formData?.errorIndex == 3 &&
+                        <div style={{ color: '#FF3B30' }}>Enter a valid First name</div>}
+
                     </div>
-                  </Autocomplete>
-                </LoadScript>
-                {/* <div className='width-100'>
+
+
+                    <div className='width-100'>
+                      <div className='inp-label  mg-t-20'>Last Name <span>*</span></div>
+                      <div className={formData?.errorIndex == 4 ? "form-inp err-inp" : "form-inp"}>
+                        <input
+                          disabled={pageIndex == '4' ? true : false}
+                          type="text"
+                          placeholder="Enter your Last name"
+                          value={formData.lastName}
+                          onChange={(e) => { setFormData({ ...formData, lastName: e.target.value }) }}
+                          className="custom-input"
+                        />
+                      </div>
+                      {formData?.errorIndex == 4 &&
+                        <div style={{ color: '#FF3B30' }}>Enter a valid Last name</div>}
+                    </div>
+
+                  </div>
+
+
+                  {/* Adding New Fields */}
+                  <LoadScript googleMapsApiKey={mapKey} libraries={libraries}>
+
+                    <Autocomplete onLoad={onLoadAutocomplete} onPlaceChanged={onPlaceChanged} >
+
+                      <div className="form_error1">
+                        <div className='inp-label mg-t-20'>Address <span>*</span></div>
+                        <div className={formData?.errorIndex == 5 ? "form-inp err-inp custom_style_input_add" : "form-inp custom_style_input_add"}>
+                          <InputComponent
+
+                            type="text"
+                            placeholder="Enter address line 1"
+                            form={formData}
+                            setField={setFormData}
+                            keyName="address1"
+                            errorCheck={setEmpty}
+                          />
+                        </div>
+                        {formData?.errorIndex == 5 &&
+                          <div style={{ color: '#FF3B30' }}>Select a valid address </div>}
+                      </div>
+                    </Autocomplete>
+                  </LoadScript>
+                  {/* <div className='width-100'>
 
                     <div className="form_error">
                       <div className='inp-label mg-t-20'>Address 2 <span>*</span></div>
@@ -1794,48 +2039,48 @@ const SignIn = () => {
 
 
 
-                <div className='inp-group'>
-                  <div className='width-100 ad2-inp' >
+                  <div className='inp-group'>
+                    <div className='width-100 ad2-inp' >
 
-                    <div className="form_error">
-                      <div className='inp-label mg-t-20'>House No./Street name <span>*</span></div>
-                      <div className="form-inp custom_style_input_add ad2-text">
-                        <InputComponent
-                          type="text"
-                          placeholder="Enter address line 2"
-                          form={formData}
-                          setField={setFormData}
-                          keyName="address2"
-                          errorCheck={setEmpty}
-                        />
+                      <div className="form_error">
+                        <div className='inp-label mg-t-20'>House No./Street name <span>*</span></div>
+                        <div className="form-inp custom_style_input_add ad2-text">
+                          <InputComponent
+                            type="text"
+                            placeholder="Enter address line 2"
+                            form={formData}
+                            setField={setFormData}
+                            keyName="address2"
+                            errorCheck={setEmpty}
+                          />
+                        </div>
                       </div>
+                      {formData?.errorIndex == 6 &&
+                        <div style={{ color: '#FF3B30' }}>Enter address line 2 </div>}
                     </div>
-                    {formData?.errorIndex == 6 &&
-                      <div style={{ color: '#FF3B30' }}>Enter address line 2 </div>}
-                  </div>
-                  <div className='form_error width-100'>
-                    <div className='inp-label mg-t-20'>Gender <span>*</span></div>
-                    <Select
+                    <div className='form_error width-100'>
+                      <div className='inp-label mg-t-20'>Gender <span>*</span></div>
+                      <Select
 
-                      isDisabled={pageIndex == '4' ? true : false}
-                      menuPlacement="top"
-                      styles={customStyles(formData?.errorIndex == 10 ? true : false)}
-                      id="country"
-                      name="Gender"
-                      placeholder="Gender"
-                      options={[
-                        { value: 'Male', label: 'Male' },
-                        { value: 'Female', label: 'Female' },
-                        { value: 'Others', label: 'Others' },
-                      ]}
-                      value={formData.gender}
-                      onChange={(value) => { setFormData({ ...formData, gender: value }) }}
-                    />
-                    {formData?.errorIndex == 10 &&
-                      <div style={{ color: '#FF3B30' }}>Select gender</div>}
+                        isDisabled={pageIndex == '4' ? true : false}
+                        menuPlacement="top"
+                        styles={customStyles(formData?.errorIndex == 10 ? true : false)}
+                        id="country"
+                        name="Gender"
+                        placeholder="Gender"
+                        options={[
+                          { value: 'Male', label: 'Male' },
+                          { value: 'Female', label: 'Female' },
+                          { value: 'Others', label: 'Others' },
+                        ]}
+                        value={formData.gender}
+                        onChange={(value) => { setFormData({ ...formData, gender: value }) }}
+                      />
+                      {formData?.errorIndex == 10 &&
+                        <div style={{ color: '#FF3B30' }}>Select gender</div>}
+                    </div>
                   </div>
-                </div>
-                {/* <div className='inp-group'>
+                  {/* <div className='inp-group'>
 
                   <div className="form_error city_style">
                     <div className='inp-label mg-t-20'>City <span>*</span></div>
@@ -1908,9 +2153,9 @@ const SignIn = () => {
 
 
 
-                {/* Adding New Fields */}
+                  {/* Adding New Fields */}
 
-                {/* <div className='inp-group'>
+                  {/* <div className='inp-group'>
                 <div>
                   <div className='inp-label mg-t-20'>Gender <span>*</span></div>
                 
@@ -1969,34 +2214,34 @@ const SignIn = () => {
 
 
 
-                {signUpType == 'mobile' &&
-                  <>
-                    <div className='inp-label  mg-t-20 margin-top'>Email <span>*</span></div>
-                    <div className={formData?.errorIndex == 12 ? "form-inp err-inp" : "form-inp"}>
-                      <input
-                        disabled={pageIndex == '4' ? true : false}
-                        type="email"
-                        placeholder="Email"
-                        className="custom-input"
-                        value={formData.email}
-                        onChange={(e) => {
-                          setGetEmail(e.target.value);
-                          setFormData({ ...formData, email: e.target.value })
-                        }} />
-                    </div>
-                    {formData?.errorIndex == 12 &&
-                      <div style={{ color: '#FF3B30' }}>Enter a valid Email</div>}
+                  {signUpType == 'mobile' &&
+                    <>
+                      <div className='inp-label  mg-t-20 margin-top'>Email <span>*</span></div>
+                      <div className={formData?.errorIndex == 12 ? "form-inp err-inp" : "form-inp"}>
+                        <input
+                          disabled={pageIndex == '4' ? true : false}
+                          type="email"
+                          placeholder="Email"
+                          className="custom-input"
+                          value={formData.email}
+                          onChange={(e) => {
+                            setGetEmail(e.target.value);
+                            setFormData({ ...formData, email: e.target.value })
+                          }} />
+                      </div>
+                      {formData?.errorIndex == 12 &&
+                        <div style={{ color: '#FF3B30' }}>Enter a valid Email</div>}
 
-                    {isAlreadyRegistered &&
-                      <div style={{ color: '#FF3B30' }}>Email already registered</div>
-                    }
+                      {isAlreadyRegistered &&
+                        <div style={{ color: '#FF3B30' }}>Email already registered</div>
+                      }
 
-                  </>}
-                {signUpType != 'mobile' &&
-                  <>
-                    <div className='mg-t-20 margin-top inp-label' onClick={() => { OtpInpRef.current.scrollIntoView({ behavior: 'smooth' }) }}>Mobile Number <span>*</span></div>
-                    {/* <div className="form-inp style_verify"> */}
-                    {/* <PhoneInput
+                    </>}
+                  {signUpType != 'mobile' &&
+                    <>
+                      <div className='mg-t-20 margin-top inp-label' onClick={() => { OtpInpRef.current.scrollIntoView({ behavior: 'smooth' }) }}>Mobile Number <span>*</span></div>
+                      {/* <div className="form-inp style_verify"> */}
+                      {/* <PhoneInput
                         disabled={pageIndex == '4' ? true : false}
                         placeholder="Enter your Mobile number"
                         defaultCountry="IN"
@@ -2004,6 +2249,307 @@ const SignIn = () => {
                         onChange={handlePhoneChange}
                         value={formData.phoneNumber}
                       /> */}
+                      <div class="input-container">
+                        <div class={pageIndex == '4' ? "prefix-dropdown disb-btn" : "prefix-dropdown"} onClick={(event) => { event.stopPropagation(); SetIsCountryContainer(true); }}><span>
+                          <img width='20px' style={{ borderRadius: '2px', marginRight: '6px' }} src={`https://purecatamphetamine.github.io/country-flag-icons/3x2/${selectedCountryList.flag.toUpperCase()}.svg`} alt="" /></span>
+                          {selectedCountryList.value}
+                          < span style={{ marginLeft: '4px' }}>
+                            <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M7.06 0.726562L4 3.7799L0.94 0.726562L0 1.66656L4 5.66656L8 1.66656L7.06 0.726562Z" fill="black" />
+                            </svg>
+                          </span >
+                        </div >
+                        <input type="number" class="input-box" placeholder="Enter your phone number" value={formData.phoneNumber}
+                          disabled={pageIndex == '4' ? true : false}
+                          onChange={handlePhoneChange} />
+                        {(!hideVerify && !isMobileVerified) && <span type='click' className='verify_text' onClick={() => signUpOTP(formData, signUpType)}>Verify</span>}
+                        {isMobileVerified && <span span type='click' className='verify_text' style={{ color: '#34C759' }}>Verified</span>}
+                      </div >
+                      {isCountryContainer &&
+                        <div className={pageIndex == '3' ? 'ctry-dpdwn top-aligned' : 'ctry-dpdwn'} ref={listRef}>
+                          {countriesMap.map(country => (
+                            <div key={country.label} className='ctr-option' onClick={() => { SetSelectedCountryList(country), SetIsCountryContainer(false), handleCountryChange(formData.phoneNumber, country) }}>
+                              <span><img width='20px' style={{ borderRadius: '2px' }} src={`https://purecatamphetamine.github.io/country-flag-icons/3x2/${country.flag.toUpperCase()}.svg`} alt="" /></span>
+                              <span style={{ padding: '0 6px 0 6px' }}>
+                                {country.label}</span> <span style={{ color: 'rgba(0, 0, 0, 0.5)' }}>{country.value}</span></div>
+                          ))}
+                        </div>}
+
+                      {/* </div> */}
+                      {formData?.errorIndex == 11 &&
+                        <div style={{ color: '#FF3B30' }}>Enter a valid Mobile number</div>}
+
+                      {isAlreadyRegistered &&
+                        <div style={{ color: '#FF3B30' }}>Mobile number already registered</div>
+                      }
+
+
+
+                    </>}
+
+
+
+
+
+                  {(pageIndex == '4' && signUpType != 'mobile' && !isMobileVerified) && <>
+                    {/* <div className='inp-label' style={{ fontWeight: '600', padding: '14px 0 4px 0' }}>Verify your {signUpType == 'mobile' ? 'Email address' : 'Mobile Number'}</div> */}
+                    {/* <div className='sub-header' style={{ fontSize: '12px' }}>
+                  enter the OTP we sent to <span style={{ fontWeight: '600' }}> {signUpType == 'mobile' ? formData.email : formData.phoneNumber}</span>
+
+                  &nbsp;  <span style={{ color: '#CA4625', fontWeight: 600, cursor: 'pointer', borderBottom: '2px solid #CA4625' }} onClick={() => {
+                    setPageIndex('3');
+                    setHideVerify(false);
+                  }}>
+                    <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M0.249512 6.18805V7.75055H1.81201L6.42035 3.14222L4.85785 1.57972L0.249512 6.18805ZM7.62868 1.93389C7.79118 1.77139 7.79118 1.50889 7.62868 1.34639L6.65368 0.371387C6.49118 0.208887 6.22868 0.208887 6.06618 0.371387L5.30368 1.13389L6.86618 2.69639L7.62868 1.93389Z" fill="#CA4625" />
+                    </svg>
+                    &nbsp;
+                    Edit
+                  </span>
+                </div> */}
+                    <div className="otp-inputs">
+                      {otp.map((data, index) => {
+                        return (
+                          <input
+                            key={index}
+                            type="text"
+                            maxLength="1"
+                            className={formData?.errorIndex == 2 ? "otp-input otp-err" : "otp-input"}
+                            // value={data}
+                            onChange={(e) => handleOTPChange(e.target, index)}
+                            onKeyDown={(e) =>
+                              e.key === "Backspace" ? handleBackspace(e.target, index) : null
+                            }
+                            ref={(el) => (inputRefs.current[index] = el)}
+                            onPaste={(e) => handlePaste(e, index)} // Handle paste
+                            inputMode="numeric" // Add this line
+                            pattern="[0-9]*" // Optionally, add this for better compatibility
+                            value={data}
+                          />
+                        );
+                      })}
+                    </div>
+                    <div className='sub-header' style={{ fontSize: '12px', marginTop: '12px' }}>
+                      Enter OTP sent to <span style={{ fontWeight: '600' }}> {signUpType == 'mobile' ? formData.email : `${phoneNumber.dialCode}${formData.phoneNumber}`}</span>
+                      &nbsp;  <span style={{ color: '#CA4625', fontWeight: 600, cursor: 'pointer', borderBottom: '2px solid #CA4625' }} onClick={() => {
+                        setPageIndex('3');
+                        setIsBtnLoad(false)
+                        setHideVerify(false);
+                      }}>
+                        <span style={{ whiteSpace: 'nowrap' }}>
+                          <svg width="12" height="12" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.249512 6.18805V7.75055H1.81201L6.42035 3.14222L4.85785 1.57972L0.249512 6.18805ZM7.62868 1.93389C7.79118 1.77139 7.79118 1.50889 7.62868 1.34639L6.65368 0.371387C6.49118 0.208887 6.22868 0.208887 6.06618 0.371387L5.30368 1.13389L6.86618 2.69639L7.62868 1.93389Z" fill="#CA4625" />
+                          </svg>
+                          &nbsp;
+                          Change mobile number
+                        </span>
+                      </span>
+                    </div>
+                    {formData?.errorIndex == 2 &&
+                      <div style={{ color: '#FF3B30', margin: '1rem 0' }}>{errorMessage}</div>}
+
+                    {/* <button type='click' className='primary-btn' ref={OtpInpRef} onClick={() => verifySignupOTP(formData, signUpType, token)}>Submit</button> */}
+                    {/* <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
+                  <div className='tc-text'>Didn’t received the OTP? <br />
+                    {secondsF != '0' && <>You can request another in {secondsF} {secondsF > 9 ? 'seconds' : 'second'}</>}
+                    {secondsF == '0' && <div onClick={() => sendSignupOTP(formData, signUpType)} className="resend-btn">Resend</div>}</div>
+                </div> */}
+                  </>}
+
+                  <button type='click' className={isBtnLoad ? 'primary-btn disb-btn' : 'primary-btn'} ref={OtpInpRef} onClick={() => verifySignupOTP(formData, signUpType, token)}>{isLocationCart ? 'Create My Account' : 'Create My Account & Enroll'}</button>
+                  {(pageIndex == '4' && signUpType != 'mobile' && !isMobileVerified) &&
+                    <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
+                      <div className='tc-text'>We regret if you haven&#39;t received the OTP, <br />  &nbsp;
+                        {secondsF != '0' && <> resend OTP in <span style={{ fontWeight: 'bold', textDecoration: 'none' }}> 00:{secondsF}</span> </>}
+                        {/* {secondsF > 9 ? 'seconds' : 'second'} */}
+                        {secondsF == '0' && <span onClick={() => sendSignupOTP(formData, signUpType)} className="resend-btn">Resend</span>}</div>
+                    </div>}
+                </>
+              }
+            </> :
+              <>
+                {pageIndexEmail == '1' && <>
+                  <div className='header'>Log In Or Sign up to TYI Account</div>
+                  <div className='sub-header'>Welcome to The Yoga Institute </div>
+                  <br /> <br />
+                  <div className='inp-label'>Email Address <span>*</span></div>
+                  <div className={formData?.errorIndex == 13 ? "form-inp err-inp" : "form-inp"}>
+                    <input
+                      disabled={pageIndex == '4' ? true : false}
+                      type="email"
+                      placeholder="Enter your email"
+                      className="custom-input"
+                      value={formData.email}
+                      onChange={(e) => {
+                        setGetEmail(e.target.value);
+                        setFormData({ ...formData, email: e.target.value })
+                      }} />
+                  </div>
+                  {formData?.errorIndex == 13 &&
+                    <div style={{ color: '#FF3B30' }}>Enter a valid Email</div>}
+
+                  <div className="ftr-btn">
+                    <button type='click' className='primary-btn' onClick={() => { sendEmailOtp(formData), setOtp(new Array(4).fill("")) }}>Get OTP</button>
+                    {/* <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
+                      <div className='tc-text'>By Clicking “Continue with google /mobile” you agree to
+                        our <span onClick={() => openLink('https://theyogainstitute.org/terms-and-conditions')}>Terms & Conditions</span> and <span onClick={() => openLink('https://theyogainstitute.org/privacy-policy')}>Privacy Policy</span></div>
+                    </div> */}
+                  </div>
+                </>}
+                {/* Login page with OTP */}
+                {
+                  pageIndexEmail == '2' && <>
+                    <div className='sub-header wish' style={{ fontWeight: '700', padding: '12px 0 4px 0' }}>Namaste  🙏 Please verify your email address</div>
+                    {/* <div className='sub-header' style={{ fontWeight: '400', fontSize: '16px'}}>Enter the OTP</div> */}
+                    <div className="otp-inputs">
+                      {otp.map((data, index) => {
+                        return (
+                          <input
+                            key={index}
+                            value={data}
+                            type="text"
+                            maxLength="1"
+                            className={formData?.errorIndex == 2 ? "otp-input otp-err" : "otp-input"}
+                            // value={data}
+                            onChange={(e) => handleOTPChange(e.target, index)}
+                            onKeyDown={(e) =>
+                              e.key === "Backspace" ? handleBackspace(e.target, index) : null
+                            }
+                            onPaste={(e) => handlePaste(e, index)} // Handle paste
+                            ref={(el) => (inputRefs.current[index] = el)}
+                            inputMode="numeric" // Add this line
+                            pattern="[0-9]*" // Optionally, add this for better compatibility
+                          />
+                        );
+                      })}
+                    </div>
+                    {formData?.errorIndex == 2 &&
+                      <div style={{ color: '#FF3B30', margin: '1rem 0' }}>OTP is Invalid!</div>}
+                    <div className='sub-header' style={{ fontWeight: '400', fontSize: '16px', marginTop: '12px' }}>Enter OTP sent to {formData.email}
+                      <span style={{ color: '#CA4625', fontSize: '12px', fontWeight: 600, cursor: 'pointer', borderBottom: '2px solid #CA4625', marginLeft: '1rem' }} onClick={() => {
+                        setPageIndexEmail('1');
+                      }}>
+                        <span style={{ whiteSpace: 'nowrap' }}>
+                          <svg width="12" height="12" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.249512 6.18805V7.75055H1.81201L6.42035 3.14222L4.85785 1.57972L0.249512 6.18805ZM7.62868 1.93389C7.79118 1.77139 7.79118 1.50889 7.62868 1.34639L6.65368 0.371387C6.49118 0.208887 6.22868 0.208887 6.06618 0.371387L5.30368 1.13389L6.86618 2.69639L7.62868 1.93389Z" fill="#CA4625" />
+                          </svg>
+                          Change email address
+                        </span></span>
+                    </div>
+
+                    <div className="ftr-btn">
+                      <button type='click' className='primary-btn' onClick={() => verifyEmailOTP(formData)}>Verify & Continue</button>
+                      <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
+                        <div className='tc-text'>
+                          {seconds != '0' && <>We regret if you haven&apos;t received the OTP, <br />
+                            resend OTP in<span style={{ fontWeight: 'bold', textDecoration: 'none', cursor: 'none' }}> 00:{seconds} </span></>}
+                          {/* {seconds != '0' && <>You can request another in {seconds} {seconds > 9 ? 'seconds' : 'second'}</>} */}
+                          {seconds == '0' && <div onClick={() => sendEmailOtp(formData)} className="resend-btn">Resend</div>}</div>
+                      </div>
+                    </div>
+                  </>
+                }
+
+                {/* Signup page */}
+                {
+                  (pageIndexEmail == '3') && <>
+                    <div className='header header-3'>Namaste 🙏 Please Fill Your Details</div>
+                    <div className='sub-header sub-header-3 wish-text' style={{ maxWidth: '430px' }}>Become a Part of The Yoga Institute Family & Sign-up for your preferred course</div>
+                    <div className='sub-header sub-header-3 wish-text-mob'>Join The Yoga Institute Family </div>
+                    <div className='inp-group'>
+                      <div className='width-100'>
+                        <div className='inp-label mg-t-20'>First Name <span>*</span></div>
+                        <div className={formData?.errorIndex == 3 ? "form-inp err-inp" : "form-inp"}>
+                          <input
+                            disabled={pageIndex == '4' ? true : false}
+                            value={formData.firstName}
+                            onChange={(e) => { setFormData({ ...formData, firstName: e.target.value }) }}
+                            type="text"
+                            placeholder="Enter your first name"
+                            className="custom-input"
+                          />
+                        </div>
+                        {formData?.errorIndex == 3 &&
+                          <div style={{ color: '#FF3B30' }}>Enter a valid First name</div>}
+                      </div>
+                      <div className='width-100'>
+                        <div className='inp-label  mg-t-20'>Last Name <span>*</span></div>
+                        <div className={formData?.errorIndex == 4 ? "form-inp err-inp" : "form-inp"}>
+                          <input
+                            disabled={pageIndex == '4' ? true : false}
+                            type="text"
+                            placeholder="Enter your Last name"
+                            value={formData.lastName}
+                            onChange={(e) => { setFormData({ ...formData, lastName: e.target.value }) }}
+                            className="custom-input"
+                          />
+                        </div>
+                        {formData?.errorIndex == 4 &&
+                          <div style={{ color: '#FF3B30' }}>Enter a valid Last name</div>}
+                      </div>
+                    </div>
+
+                    <LoadScript googleMapsApiKey={mapKey} libraries={libraries}>
+                      <Autocomplete onLoad={onLoadAutocomplete} onPlaceChanged={onPlaceChanged} >
+                        <div className="form_error1">
+                          <div className='inp-label mg-t-20'>Address <span>*</span></div>
+                          <div className={formData?.errorIndex == 5 ? "form-inp err-inp custom_style_input_add" : "form-inp custom_style_input_add"}>
+                            <InputComponent
+                              type="text"
+                              placeholder="Enter address line 1"
+                              form={formData}
+                              setField={setFormData}
+                              keyName="address1"
+                              errorCheck={setEmpty}
+                            />
+                          </div>
+                          {formData?.errorIndex == 5 &&
+                            <div style={{ color: '#FF3B30' }}>Select a valid address </div>}
+                        </div>
+                      </Autocomplete>
+                    </LoadScript>
+                    <div className='inp-group'>
+                      <div className='width-100 ad2-inp' >
+                        <div className="form_error">
+                          <div className='inp-label mg-t-20'>House No./Street name <span>*</span></div>
+                          <div className="form-inp custom_style_input_add ad2-text">
+                            <InputComponent
+                              type="text"
+                              placeholder="Enter address line 2"
+                              form={formData}
+                              setField={setFormData}
+                              keyName="address2"
+                              errorCheck={setEmpty}
+                            />
+                          </div>
+                        </div>
+                        {formData?.errorIndex == 6 &&
+                          <div style={{ color: '#FF3B30' }}>Enter address line 2 </div>}
+                      </div>
+                      <div className='form_error width-100'>
+                        <div className='inp-label mg-t-20'>Gender <span>*</span></div>
+                        <Select
+                          isDisabled={pageIndex == '4' ? true : false}
+                          menuPlacement="top"
+                          styles={customStyles(formData?.errorIndex == 10 ? true : false)}
+                          id="country"
+                          name="Gender"
+                          placeholder="Gender"
+                          options={[
+                            { value: 'Male', label: 'Male' },
+                            { value: 'Female', label: 'Female' },
+                            { value: 'Others', label: 'Others' },
+                          ]}
+                          value={formData.gender}
+                          onChange={(value) => { setFormData({ ...formData, gender: value }) }}
+                        />
+                        {formData?.errorIndex == 10 &&
+                          <div style={{ color: '#FF3B30' }}>Select gender</div>}
+                      </div>
+                    </div>
+
+
+                    <div className='mg-t-20 margin-top inp-label' onClick={() => { OtpInpRef.current.scrollIntoView({ behavior: 'smooth' }) }}>Mobile Number <span>*</span></div>
                     <div class="input-container">
                       <div class={pageIndex == '4' ? "prefix-dropdown disb-btn" : "prefix-dropdown"} onClick={(event) => { event.stopPropagation(); SetIsCountryContainer(true); }}><span>
                         <img width='20px' style={{ borderRadius: '2px', marginRight: '6px' }} src={`https://purecatamphetamine.github.io/country-flag-icons/3x2/${selectedCountryList.flag.toUpperCase()}.svg`} alt="" /></span>
@@ -2030,7 +2576,6 @@ const SignIn = () => {
                         ))}
                       </div>}
 
-                    {/* </div> */}
                     {formData?.errorIndex == 11 &&
                       <div style={{ color: '#FF3B30' }}>Enter a valid Mobile number</div>}
 
@@ -2038,167 +2583,65 @@ const SignIn = () => {
                       <div style={{ color: '#FF3B30' }}>Mobile number already registered</div>
                     }
 
-
-
-                  </>}
-
-
-
-
-
-                {(pageIndex == '4' && signUpType != 'mobile' && !isMobileVerified) && <>
-                  {/* <div className='inp-label' style={{ fontWeight: '600', padding: '14px 0 4px 0' }}>Verify your {signUpType == 'mobile' ? 'Email address' : 'Mobile Number'}</div> */}
-                  {/* <div className='sub-header' style={{ fontSize: '12px' }}>
-                  enter the OTP we sent to <span style={{ fontWeight: '600' }}> {signUpType == 'mobile' ? formData.email : formData.phoneNumber}</span>
-
-                  &nbsp;  <span style={{ color: '#CA4625', fontWeight: 600, cursor: 'pointer', borderBottom: '2px solid #CA4625' }} onClick={() => {
-                    setPageIndex('3');
-                    setHideVerify(false);
-                  }}>
-                    <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M0.249512 6.18805V7.75055H1.81201L6.42035 3.14222L4.85785 1.57972L0.249512 6.18805ZM7.62868 1.93389C7.79118 1.77139 7.79118 1.50889 7.62868 1.34639L6.65368 0.371387C6.49118 0.208887 6.22868 0.208887 6.06618 0.371387L5.30368 1.13389L6.86618 2.69639L7.62868 1.93389Z" fill="#CA4625" />
-                    </svg>
-                    &nbsp;
-                    Edit
-                  </span>
-                </div> */}
-                  <div className="otp-inputs">
-                    {otp.map((data, index) => {
-                      return (
-                        <input
-                          key={index}
-                          type="text"
-                          maxLength="1"
-                          className={formData?.errorIndex == 2 ? "otp-input otp-err" : "otp-input"}
-                          // value={data}
-                          onChange={(e) => handleOTPChange(e.target, index)}
-                          onKeyDown={(e) =>
-                            e.key === "Backspace" ? handleBackspace(e.target, index) : null
-                          }
-                          ref={(el) => (inputRefs.current[index] = el)}
-                          onPaste={(e) => handlePaste(e, index)} // Handle paste
-                          inputMode="numeric" // Add this line
-                          pattern="[0-9]*" // Optionally, add this for better compatibility
-                          value={data}
-                        />
-                      );
-                    })}
-                  </div>
-                  <div className='sub-header' style={{ fontSize: '12px', marginTop: '12px' }}>
-                    Enter OTP sent to <span style={{ fontWeight: '600' }}> {signUpType == 'mobile' ? formData.email : `${phoneNumber.dialCode}${formData.phoneNumber}`}</span>
-                    &nbsp;  <span style={{ color: '#CA4625', fontWeight: 600, cursor: 'pointer', borderBottom: '2px solid #CA4625' }} onClick={() => {
-                      setPageIndex('3');
-                      setIsBtnLoad(false)
-                      setHideVerify(false);
-                    }}>
-                      <span style={{ whiteSpace: 'nowrap' }}>
-                        <svg width="12" height="12" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M0.249512 6.18805V7.75055H1.81201L6.42035 3.14222L4.85785 1.57972L0.249512 6.18805ZM7.62868 1.93389C7.79118 1.77139 7.79118 1.50889 7.62868 1.34639L6.65368 0.371387C6.49118 0.208887 6.22868 0.208887 6.06618 0.371387L5.30368 1.13389L6.86618 2.69639L7.62868 1.93389Z" fill="#CA4625" />
-                        </svg>
-                        &nbsp;
-                        Change mobile number
-                      </span>
-                    </span>
-                  </div>
-                  {formData?.errorIndex == 2 &&
-                    <div style={{ color: '#FF3B30', margin: '1rem 0' }}>{errorMessage}</div>}
-
-                  {/* <button type='click' className='primary-btn' ref={OtpInpRef} onClick={() => verifySignupOTP(formData, signUpType, token)}>Submit</button> */}
-                  {/* <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
-                  <div className='tc-text'>Didn’t received the OTP? <br />
-                    {secondsF != '0' && <>You can request another in {secondsF} {secondsF > 9 ? 'seconds' : 'second'}</>}
-                    {secondsF == '0' && <div onClick={() => sendSignupOTP(formData, signUpType)} className="resend-btn">Resend</div>}</div>
-                </div> */}
-                </>}
-
-                <button type='click' className={isBtnLoad ? 'primary-btn disb-btn' : 'primary-btn'} ref={OtpInpRef} onClick={() => verifySignupOTP(formData, signUpType, token)}>{isLocationCart ? 'Create My Account' : 'Create My Account & Enroll'}</button>
-                {(pageIndex == '4' && signUpType != 'mobile' && !isMobileVerified) &&
-                  <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
-                    <div className='tc-text'>We regret if you haven&#39;t received the OTP, <br />  &nbsp;
-                      {secondsF != '0' && <> resend OTP in <span style={{ fontWeight: 'bold', textDecoration: 'none' }}> 00:{secondsF}</span> </>}
-                      {/* {secondsF > 9 ? 'seconds' : 'second'} */}
-                      {secondsF == '0' && <span onClick={() => sendSignupOTP(formData, signUpType)} className="resend-btn">Resend</span>}</div>
-                  </div>}
-              </>
-            }
-
-            {/* Signup OTP page */}
-
-
+                    {(pageIndex == '4' && signUpType != 'mobile' && !isMobileVerified) && <>
+                      <div className="otp-inputs">
+                        {otp.map((data, index) => {
+                          return (
+                            <input
+                              key={index}
+                              type="text"
+                              maxLength="1"
+                              className={formData?.errorIndex == 2 ? "otp-input otp-err" : "otp-input"}
+                              // value={data}
+                              onChange={(e) => handleOTPChangeEmail(e.target, index, formData, signUpType, token)}
+                              onKeyDown={(e) =>
+                                e.key === "Backspace" ? handleBackspace(e.target, index) : null
+                              }
+                              ref={(el) => (inputRefs.current[index] = el)}
+                              onPaste={(e) => handlePaste(e, index)} // Handle paste
+                              inputMode="numeric" // Add this line
+                              pattern="[0-9]*" // Optionally, add this for better compatibility
+                              value={data}
+                            />
+                          );
+                        })}
+                      </div>
+                      <div className='sub-header' style={{ fontSize: '12px', marginTop: '12px' }}>
+                        Enter OTP sent to <span style={{ fontWeight: '600' }}> {signUpType == 'mobile' ? formData.email : `${phoneNumber.dialCode}${formData.phoneNumber}`}</span>
+                        &nbsp;  <span style={{ color: '#CA4625', fontWeight: 600, cursor: 'pointer', borderBottom: '2px solid #CA4625' }} onClick={() => {
+                          setPageIndex('3');
+                          setIsBtnLoad(false)
+                          setHideVerify(false);
+                        }}>
+                          <span style={{ whiteSpace: 'nowrap' }}>
+                            <svg width="12" height="12" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M0.249512 6.18805V7.75055H1.81201L6.42035 3.14222L4.85785 1.57972L0.249512 6.18805ZM7.62868 1.93389C7.79118 1.77139 7.79118 1.50889 7.62868 1.34639L6.65368 0.371387C6.49118 0.208887 6.22868 0.208887 6.06618 0.371387L5.30368 1.13389L6.86618 2.69639L7.62868 1.93389Z" fill="#CA4625" />
+                            </svg>
+                            &nbsp;
+                            Change mobile number
+                          </span>
+                        </span>
+                      </div>
+                      {formData?.errorIndex == 2 &&
+                        <div style={{ color: '#FF3B30', margin: '1rem 0' }}>{errorMessage}</div>}
+                    </>}
+                    <button type='click' className={isBtnLoad ? 'primary-btn disb-btn' : 'primary-btn'} ref={OtpInpRef} onClick={() => signupEmailOTP(formData, signUpType, token)}>{isLocationCart ? 'Create My Account' : 'Create My Account & Enroll'}</button>
+                    {(pageIndex == '4' && signUpType != 'mobile' && !isMobileVerified) &&
+                      <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
+                        <div className='tc-text'>We regret if you haven&#39;t received the OTP, <br />  &nbsp;
+                          {secondsF != '0' && <> resend OTP in <span style={{ fontWeight: 'bold', textDecoration: 'none' }}> 00:{secondsF}</span> </>}
+                          {secondsF == '0' && <span onClick={() => sendSignupOTP(formData, signUpType)} className="resend-btn">Resend</span>}</div>
+                      </div>}
+                  </>
+                }
+              </>}
           </div >
         </div >
       </div >
-      <div className={pageIndex <= 2 ? "signin-banner img-1" : "signin-banner img-2"}>
+      <div className={(pageIndex <= 2 && pageIndexEmail <= 2) ? "signin-banner img-1" : "signin-banner img-2"}>
       </div>
 
     </div >
-    // <div className='signin-container'>
-    //   <InnerNavComponent abc={UserNav} />
-    //   <div className='signin-form'>
-    //     <form>
-    //       <h1>Sign In</h1>
-    //       <InputComponent
-    //         icon={mail}
-    //         type='text'
-    //         placeholder='Enter Email'
-    //         form={formData}
-    //         setField={setFormData}
-    //         keyName='email'
-    //       />
-    //       {validate === 1 && (
-    //         <small
-    //           style={{
-    //             position: 'relative',
-    //             bottom: '1rem',
-    //             color: 'red',
-    //             fontSize: '1rem',
-    //           }}
-    //         >
-    //           Please enter valid email
-    //         </small>
-    //       )}
-    //       <InputComponent
-    //         icon={lock}
-    //         type='password'
-    //         placeholder='Enter Password'
-    //         form={formData}
-    //         setField={setFormData}
-    //         keyName='password'
-    //       />
-
-    //       {validate === 2 && (
-    //         <small
-    //           style={{
-    //             position: 'relative',
-    //             bottom: '1rem',
-    //             color: 'red',
-    //             fontSize: '1rem',
-    //           }}
-    //         >
-    //           Please enter the password
-    //         </small>
-    //       )}
-
-    //       <label className='signin-btn'>
-    //         <CommonBtn text='Sign In' buttonAction={handleSignIn} />
-    //         <CommonBtn text={'Continue as a guest'} isColor={'#EA4335'} buttonAction={handleContinueAsGuest} />
-    //       </label>
-    //     </form>
-    //     <Link to='/user/sign-up'>
-    //       <div className='social-logins guest'>
-    //         <h3>Sign Up</h3>
-    //       </div>
-    //     </Link>
-
-    //   </div>
-    //   {modal !== false && (
-    //     <MessageModal
-    //       type='ERROR'
-    //       message={errMsg}
-    //       closePopup={setModal}
-    //     />
-    //   )}
-    // </div>
   )
 }
 
