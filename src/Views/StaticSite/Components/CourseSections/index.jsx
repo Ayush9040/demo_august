@@ -639,10 +639,20 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
 
   }
 
-  const selectColor = (i) => {
-    if (i === 0) { return '#94B1B2' }
-    else if (i === 1) { return '#7C999B' }
-    else { return '#6E9596' }
+  const selectColor = (i, title) => {
+    if (title == 'Yoga Teacher Training Courses (YTTC)') {
+      return '#c8705f'
+    }
+    else if (title == 'Certified Yoga Courses') { return '#edbe66' }
+    else if (title == 'Regular Yoga Classes') { return '#b77e7e' }
+    else if (title == 'Most Popular Yoga Courses') { return '#6e9596' }
+    else if (title == 'Camps & Workshops') { return '#ce9b51' }
+    else if (title == 'Special Certificate Courses (For Yoga Teachers)') { return '#ba7e7e' }
+    else if (title == 'Special Events') { return '#c8705f' }
+    else { return '' }
+    // if (i === 0) { return '#94B1B2' }
+    // else if (i === 1) { return '#7C999B' }
+    // else { return '#6E9596' }
   }
 
   return (
@@ -696,7 +706,7 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
                   // shouldDisplayCard(item) && (
                   <CourseCard
                     key={i}
-                    color={selectColor(i)}
+                    color={selectColor(i, title)}
                     index={i}
                     courseTitle={item.title}
                     pageName={item.key}
@@ -736,7 +746,7 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
                 // shouldDisplayCard(item) && (
                 <CourseCard
                   key={i}
-                  color={item.colorCode}
+                  color={selectColor(i, title)}
                   index={i}
                   courseTitle={item.title}
                   description={item.metaDescription}

@@ -411,9 +411,11 @@
 
 
             .ftr-btn {
-                position: absolute;
-                bottom: 28px;
-                margin-right: 20px;
+                // position: absolute;
+                // bottom: 128px;
+                // margin-right: 20px;
+                position: relative !important;
+                margin-top: 20px;
             }
 
             // height: 100%;
