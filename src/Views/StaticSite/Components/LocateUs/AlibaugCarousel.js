@@ -41,7 +41,7 @@ const AlibaugCarousel = () => {
       },
     ],
   }
-  const addToCart = (title,extractedKey,timing) => {
+  const addToCart = (title, extractedKey, timing) => {
     // Trigger CleverTap event on button click
     if (window?.clevertap) {
       window.clevertap.event.push("Course_Enroll_Click", {
@@ -92,7 +92,7 @@ const AlibaugCarousel = () => {
             <img src={`${baseDomain}${santaCruz.slide3}`} />
           </div>
         </Slider>
-        <h2 style={{marginTop:'32px'}}>Our Rejuvenating Retreats</h2>
+        <h2 style={{ marginTop: '32px' }}>Our Rejuvenating Retreats</h2>
       </div>
       {/* <div className="alibaug-container" style={{marginTop:'38px'}}>
         <div className="alibaug-column alibaug-column-1">
@@ -124,7 +124,7 @@ const AlibaugCarousel = () => {
         </div>
       </div> */}
 
-      <div className="alibaug-container img-rev"  style={{marginTop:'48px'}}>
+      <div className="alibaug-container img-rev" style={{ marginTop: '48px' }}>
         <div className="alibaug-column alibaug-column-2">
           <h2> Deep Dive Yoga and Meditation Retreat</h2>
           <p>
@@ -148,7 +148,7 @@ const AlibaugCarousel = () => {
                 : `/user/sign-in/?location=deep-dive-yoga-meditation-retreat`//&date=${selectDate}
             }
           >
-            <EnrollBtn text={'Book Now'} buttonAction={() => { addToCart('Deep Dive Yoga and Meditation Retreat','/deep-dive-yoga-meditation-retreat','8:00 AM (21st) to 7:00 PM (22nd)') }} /></Link>
+            <EnrollBtn text={'Book Now'} buttonAction={() => { addToCart('Deep Dive Yoga and Meditation Retreat', '/deep-dive-yoga-meditation-retreat', '8:00 AM (21st) to 7:00 PM (22nd)') }} /></Link>
         </div>
         <div className="alibaug-column alibaug-column-1">
           <img src="images/DeepOneYoga.webp" />
@@ -182,7 +182,7 @@ const AlibaugCarousel = () => {
                 : `/user/sign-in/?location=forest-yoga-retreat`//&date=${selectDate}
             }
           >
-            <EnrollBtn text={'Book Now'} buttonAction={() => { addToCart('Forest Yoga Retreat','/forest-yoga-retreat','8:00 AM (28th) to 7:00 PM (29th)') }} /></Link>
+            <EnrollBtn text={'Book Now'} buttonAction={() => { addToCart('Forest Yoga Retreat', '/forest-yoga-retreat', '8:00 AM (28th) to 7:00 PM (29th)') }} /></Link>
         </div>
 
       </div>
@@ -198,7 +198,11 @@ const AlibaugCarousel = () => {
                 <li>Comfortable king-sized or dual beds</li>
                 <li>Private lavatories with eco-friendly toiletries</li>
                 <li>Air-conditioning and ceiling fans for added comfort</li>
-                <li>Shared or private room alternatives based totally on guest desire</li>
+                <li>Retreat prices includes accommodation on a double occupancy basis where one room is shared between 2 members
+                </li>
+                <li>
+                  Private Room alternatives can be requested & will be subject to extra charges and availability
+                </li>
               </ul>
             </div>
             <h5 style={{ fontSize: '2.2rem' }}>Dining</h5>

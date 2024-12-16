@@ -1058,7 +1058,7 @@ const Courses = () => {
             <img src="https://ecom-static-site-prod.s3.ap-south-1.amazonaws.com/SEO-New-Images/course/21-days+-better-living-course.webp" alt='more than just reading' loading='lazy' />
           </div>
         </div>
-<div></div>
+        <div></div>
         {courseCardData && courseCardData.map((item, i) => {
           // setPathParam(item.title)
           return (
