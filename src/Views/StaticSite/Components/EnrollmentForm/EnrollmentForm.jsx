@@ -67,7 +67,7 @@ const EnrollmentForm = ({
     pincode: formData?.pincode,
   });
   const countries = Country.getAllCountries()
-  const [ updateAddress1, setUpdateAddress1] = useState('')
+  const [updateAddress1, setUpdateAddress1] = useState('')
   const [selectDate, setSetselectDate] = useState(null)
   const [Params] = useSearchParams()
   const [fixDate, setFixDate] = useState([]);
@@ -108,7 +108,7 @@ const EnrollmentForm = ({
   const [loading, setLoading] = useState(true);
   const [showForm, setShowForm] = useState(false)
   const [editOpen, setEditOpen] = useState(false)
-  const [ defaultAddress, setDefaultAddress] = useState(true);
+  const [defaultAddress, setDefaultAddress] = useState(true);
 
   const navigates = useNavigate();
   const location = useLocation();
@@ -118,7 +118,7 @@ const EnrollmentForm = ({
 
   const [selectDateValue, setSelectDateValue] = useState(values.selectDate);
   const [setDate, setSetDate] = useState(false)
-  const isSatsangPage = location.pathname?.includes("/enrollment/satsang") || location.pathname?.includes("/enrollment/samattvam");
+  const isSatsangPage = location.pathname?.includes("/enrollment/satsang") || location.pathname?.includes("/enrollment/samattvam") || location.pathname?.includes("/enrollment/fullmoon-meditation") || location.pathname?.includes("/enrollment/yoga-by-the-bay");
 
   const nameFromRedux = useSelector((state) => state.auth.user.data?.firstName);
   const lastnameFromRedux = useSelector((state) => state.auth.user.data?.lastName);
@@ -635,9 +635,9 @@ const EnrollmentForm = ({
       "Regular Pregnancy Yoga Classes - Online & On Campus",
       "Advanced Yoga Asana Regular Class - Online (Only for TYI Teachers)",
       "Healing Yoga Movement & Rhythm - Online",
-       "Yog Prayas - Online",
-      "Online Meditation Course  (Foundation Course)", 
-      "Regular Online Meditation Classes", 
+      "Yog Prayas - Online",
+      "Online Meditation Course  (Foundation Course)",
+      "Regular Online Meditation Classes",
       "Couples’ Yoga Classes  - Online"
     ]
     const isMatch = array.includes(currentCourse?.title);
@@ -1141,7 +1141,7 @@ const EnrollmentForm = ({
               )}
 
               {isChecked === false ? empty === 19 && (
-                <div style={{ color: 'red', marginLeft: '0', marginTop: '1rem',fontSize:'1.2rem' }} className='mar_top'>
+                <div style={{ color: 'red', marginLeft: '0', marginTop: '1rem', fontSize: '1.2rem' }} className='mar_top'>
                   *Please agree to the condition!
                 </div>
               ) : ''}
@@ -1194,7 +1194,7 @@ const EnrollmentForm = ({
                   //   type="Terms and Conditions" // You can pass any other props as needed
                   // />
                   // <TermsAndConditionsModal />
-                  <EditStudent isShippingModalOpen={handleEditOpen} setIsShipppingModalOpen={handleEditClose} formData={formData} setFormData={setFormData} setEmpty={setEmpty} empty={empty} currentCourse={currentCourse} dateDurationChange={dateDurationChange} handleSubmit={handleSubmit} setUpdateAddress={setUpdateAddress} setDefaultAddress={setDefaultAddress}/>
+                  <EditStudent isShippingModalOpen={handleEditOpen} setIsShipppingModalOpen={handleEditClose} formData={formData} setFormData={setFormData} setEmpty={setEmpty} empty={empty} currentCourse={currentCourse} dateDurationChange={dateDurationChange} handleSubmit={handleSubmit} setUpdateAddress={setUpdateAddress} setDefaultAddress={setDefaultAddress} />
                 )}
                 <div className='fields_alignment fields_alignment_bottom'>
                   <div className='details_desc_name_info'><span className='details_duration_info'>Name</span> <span className='tenure_course truncated-text'> {`${formData?.name} ${formData?.lname}`}</span></div>
@@ -1215,7 +1215,7 @@ const EnrollmentForm = ({
                 <div className='details_desc_days'>
                   <div className='details_desc_name_info'><span className='details_duration_info'>Address</span> <span className='tenure_course'>
                     {/* {getAddress()} */}
-                  {getAddress()}
+                    {getAddress()}
                     {getAddress() && <>, </>}
                     {getState()}
                     {getCountry() && <>, </>}
@@ -1223,7 +1223,7 @@ const EnrollmentForm = ({
                     {getPincode() && <> - </>}
                     {getPincode()}
                     {/* {`${formData?.address1}, ${formData?.state}, ${formData?.country} - ${formData?.pincode}`} */}
-                    </span></div>
+                  </span></div>
 
                 </div>
                 {/* {courseFee && <p className="current_fees"> {currentCourse.key === 'ma-yoga-shastra' && formData.country !== 'India' ? '$ 3950' : `₹ ${courseFee}`}</p>} */}

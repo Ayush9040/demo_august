@@ -5,7 +5,7 @@ import React, { useEffect, lazy, useState, useRef } from 'react'
 import './style.scss'
 // import CourseSection from '../../../Components/CourseSections'
 import { courseCardData } from '../../../utils/courseCardData'
-import { c200hr, c500hr, c900hr, campsArr, AllCourses, classesArr, certificateArr, mostPopular } from '../Constants/courses'
+import { c200hr, c500hr, c900hr, campsArr, AllCourses, classesArr, certificateArr, mostPopular, sepecialEventArr } from '../Constants/courses'
 import baseDomain, { certificates } from '../../../assets/images/imageAsset'
 import { Helmet } from 'react-helmet'
 import metaDataObj from '../../../../../Constants/metaData.json'
@@ -53,7 +53,7 @@ const Courses = () => {
     setIsFilterOpened(false)
     setFilters({ online: false, onCampus: false, days7: false, days21: false, month1: false, month2: false, month3: false, weekDays: false, weekends: false, year1: false, year2: false, month7: false, month4: false, days1: false, days2: false });
     setSelectedFilters({ online: false, onCampus: false, days7: false, days21: false, month1: false, month2: false, month3: false, weekDays: false, weekends: false, year1: false, year2: false, month7: false, month4: false, days1: false, days2: false });
-    setData([dataMaster[0].slice(0, 3), dataMaster[1].slice(0, 3), dataMaster[2].slice(0, 3), dataMaster[3].slice(0, 3), dataMaster[4].slice(0, 3), dataMaster[5].slice(0, 3)])
+    setData([dataMaster[0].slice(0, 3), dataMaster[1].slice(0, 3), dataMaster[2].slice(0, 3), dataMaster[3].slice(0, 3), dataMaster[4].slice(0, 3), dataMaster[5].slice(0, 3), dataMaster[6].slice(0, 3)])
 
   }
 
@@ -69,15 +69,15 @@ const Courses = () => {
   }
   const countTrueFilters = Object.values(selectedFilters).filter(value => value === true).length;
 
-
+  let convertedClasses = classesArr.filter((_, index) => index !== 9 && index !== 12);//used to remove satsand and samatvam in other blocks
   let dataMaster = [[c200hr[0], c500hr[0], c900hr[0], c200hr[1], c900hr[1], c200hr[2], c900hr[2], c200hr[3], c900hr[3], c200hr[4], c900hr[4], c200hr[5], c900hr[5]],
-  [campsArr[13], campsArr[11], campsArr[14], campsArr[12], campsArr[15]],
-    classesArr, mostPopular, [...campsArr, ...classesArr],
-  [certificateArr[3], certificateArr[1], certificateArr[0]]]
+  [campsArr[10], campsArr[8], campsArr[11], campsArr[9], campsArr[12]],
+  convertedClasses, mostPopular, [...campsArr, ...convertedClasses],
+  [certificateArr[3], certificateArr[1], certificateArr[0]], [classesArr[9], classesArr[12], ...sepecialEventArr]]
 
   const [data, setData] = useState([dataMaster[0].slice(0, 3), dataMaster[1].slice(0, 3),
   dataMaster[2].slice(0, 3), dataMaster[3].slice(0, 3),
-  dataMaster[4].slice(0, 3), dataMaster[5].slice(0, 3)])
+  dataMaster[4].slice(0, 3), dataMaster[5].slice(0, 3), dataMaster[6].slice(0, 3)])
   // Convert shouldDisplayCard to async for handling any async logic
 
   function shouldDisplayCardNew(points, filters) {
@@ -158,12 +158,14 @@ const Courses = () => {
       let rawArr4 = dataMaster[3]
       let rawArr5 = dataMaster[4]
       let rawArr6 = dataMaster[5]
+      let rawArr7 = dataMaster[6]
       let arr1 = []
       let arr2 = []
       let arr3 = []
       let arr4 = []
       let arr5 = []
       let arr6 = []
+      let arr7 = []
       let count1 = 0
       for (let j1 = 0; j1 < rawArr1.length; j1++) {
         const shouldDisplay = await shouldDisplayCardNew(rawArr1[j1], selectedValues);
@@ -239,11 +241,22 @@ const Courses = () => {
           break;
         }
       }
+
+      let count7 = 0
+      for (let j7 = 0; j7 < rawArr7.length; j7++) {
+        const shouldDisplay = await shouldDisplayCardNew(rawArr7[j7], selectedValues);
+        if (shouldDisplay == 'true') {
+          arr7.push(rawArr7[j7]);
+          count7 += 1
+        }
+        if (count7 > 3) {
+          break;
+        }
+      }
       let finalArr = [arr1?.length > 0 ? arr1.slice(0, 3) : [], arr2?.length > 0 ? arr2.slice(0, 3) : [],
       arr3?.length > 0 ? arr3.slice(0, 3) : [], arr4?.length > 0 ? arr4.slice(0, 3) : [],
-      arr5?.length > 0 ? arr5.slice(0, 3) : [], arr6?.length > 0 ? arr6.slice(0, 3) : []]
+      arr5?.length > 0 ? arr5.slice(0, 3) : [], arr6?.length > 0 ? arr6.slice(0, 3) : [], arr7?.length > 0 ? arr7.slice(0, 3) : []]
       console.log(finalArr);
-
       setData(finalArr)
     }
     else {
@@ -595,6 +608,28 @@ const Courses = () => {
           online: true, weekDays: true
         }]
       }
+      else if (index == 6) {
+        points = [{
+          url: '/satsang',
+          text: 'Satsang - On Campus',
+          onCampus: true, weekends: true, days1: true
+        },
+        {
+          url: '/samattvam',
+          text: 'Samattvam(Health Checkup) - On Campus',
+          onCampus: true, weekends: true, days1: true
+        },
+        {
+          url: '/yoga-by-the-bay',
+          text: 'Yoga by the bay',
+          online: true, onCampus: true, days1: true
+        },
+        {
+          url: '/fullmoon-meditation',
+          text: 'Full moon meditation',
+          online: true, onCampus: true, days1: true
+        }]
+      }
 
       // Create an array to store conditions for filtering
 
@@ -696,7 +731,7 @@ const Courses = () => {
         />}
       <div className="courses-container" onClick={() => setIsFilterOpened(false)}>
         {/* <CommonBannerNavPrimary innerNav={false} /> */}
-        <InnerNavComponent abc={CoursesBan} />
+        <InnerNavComponent abc={CoursesBan}/>
 
         <div style={{
           position: 'sticky',
@@ -704,7 +739,7 @@ const Courses = () => {
           backgroundColor: '#fff',
           padding: '10px',
           boxShadow: '0px 10px 15px -4px rgba(0,0,0,0.1)', // Smoother, softer shadow
-          zIndex: 10, // Makes sure it stays above the content
+          zIndex: 1, // Makes sure it stays above the content
         }}>
           <div className="search">
             <h1>Courses</h1>

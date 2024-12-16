@@ -45,6 +45,15 @@ export const courseCardData = [
       , { title: 'Meditation Camp' },
     { title: 'Diabetes Camp' }]
   }
+  ,
 
+  {
+    title: 'Special Events',
+    color: '#CE9B51',
+    cardData: [{ title: 'Satsang' }
+      , { title: 'Samattvam' },
+    { title: 'Full Moon Meditation' },
+    { title: 'Yoga by the bay' }]
+  }
 
 ]

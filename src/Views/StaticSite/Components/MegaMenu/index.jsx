@@ -10,6 +10,7 @@ const MegaMenu = ({ setNav }) => {
   const navItems = [
     { name: 'ABOUT', link: '/know-us-better', id: 1, key: 'ABOUT', },
     { name: 'COURSES', link: '/courses', id: 2, key: 'COURSES' },
+    { name: 'SPECIAL EVENTS', link: '/courses#specialEvents', id: 18, key: 'SPECIAL-EVENTS' },
     { name: 'NUTRI DIET CLINIC', link: '/nutri-diet', id: 3, key: 'COURSES-NUTRI' },
     { name: 'CORPORATE WORKSHOP', link: '/corporate-workshops', id: 4, key: 'COURSES-WORKSHOPS' },
     { name: 'ONLINE HOME YOGA TUITIONS', link: '/home-tuitions', id: 5, key: 'COURSES-YOGATUTIONS' },
@@ -57,6 +58,12 @@ const MegaMenu = ({ setNav }) => {
       { menu: 'Virtual Tour', link: '/museum-of-classical-yoga/#virtual_tour' },
       { menu: 'Gallery', link: '/museum-of-classical-yoga/#gallery' },
       { menu: 'Location', link: '/museum-of-classical-yoga/#location' },
+    ],
+    'SPECIAL-EVENTS': [
+      { menu: 'Satsang', link: '/satsang' },
+      { menu: 'Samattvam', link: '/samattvam' },
+      { menu: 'Fullmoon meditation', link: '/fullmoon-meditation' },
+      { menu: 'Yoga by the bay', link: '/yoga-by-the-bay' },
     ],
     FACILITIES: [
       { menu: 'Overview', link: '/facilities' },
@@ -145,7 +152,6 @@ const MegaMenu = ({ setNav }) => {
         <ul className="navigation-ul">
           {navItems &&
             navItems.map((item, i) => {
-
               if ((item.key === 'GIFTING' || item.key === 'ONLINE')) {
                 return (
 
@@ -162,8 +168,8 @@ const MegaMenu = ({ setNav }) => {
                     }}
 
                     onClick={() => {
-                      handleCTSectionClick({ 
-                        sectionName: item?.name, 
+                      handleCTSectionClick({
+                        sectionName: item?.name,
                         pageUrl: item?.link
                       }); // Call the event function when clicked
                     }}
@@ -189,8 +195,8 @@ const MegaMenu = ({ setNav }) => {
                       setMenuItem(item.key)
                     }}
                     onClick={() => {
-                      handleCTSectionClick({ 
-                        sectionName: item?.name, 
+                      handleCTSectionClick({
+                        sectionName: item?.name,
                         pageUrl: item?.link
                       });
                       setNav(false)
@@ -224,8 +230,8 @@ const MegaMenu = ({ setNav }) => {
                       setMenuItem(item.key)
                     }}
                     onClick={() => {
-                      handleCTSectionClick({ 
-                        sectionName: item?.name, 
+                      handleCTSectionClick({
+                        sectionName: item?.name,
                         pageUrl: item?.link
                       }); // Call the event function when clicked
                     }}
@@ -429,9 +435,17 @@ const MegaMenu = ({ setNav }) => {
                 <Link onClick={() => { setNav(false) }} to='/back-joint-disorder-workshop'><li>Back & Joint Disorder Yoga Workshop</li></Link>
                 <Link onClick={() => { setNav(false) }} to='/pranayama-workshop'><li>Prayanama Workshop</li></Link>
                 <Link onClick={() => { setNav(false) }} to='/womens-camp'><li>Women&apos;s Yoga Camp</li></Link>
-                <Link onClick={() => { setNav(false) }} to='/respiratory-workshop'><li>Respiratory Yoga Workshop - On Campus</li></Link>
-                <Link onClick={() => { setNav(false) }} to='/life-management-camp'><li>Life Management Yoga Camp - On Campus</li></Link>
-                <Link onClick={() => { setNav(false) }} to='/senior-citizen-workshop'><li>Senior Citizen Yoga Workshop - On Campus</li></Link>
+                {/* below 7 are new courses */}
+                <Link onClick={() => { setNav(false) }} to='/deep-sleep-workshop'><li>Deep Sleep Workshop</li></Link>
+                <Link onClick={() => { setNav(false) }} to='/emotional-wellness-workshop'><li>Emotional Wellness Workshop </li></Link>
+                <Link onClick={() => { setNav(false) }} to='/gut-health-workshop'><li>Gut Health Workshop</li></Link>
+                <Link onClick={() => { setNav(false) }} to='/healthy-sattvik-cooking-workshop'><li>Healthy & Sattvik Cooking Workshop</li></Link>
+                <Link onClick={() => { setNav(false) }} to='/menopause-wellness-workshop'><li>Menopause Wellness Workshop</li></Link>
+                <Link onClick={() => { setNav(false) }} to='/pcod-pcos-wellness-workshop'><li>PCOD & PCOS Wellness Workshop</li></Link>
+                <Link onClick={() => { setNav(false) }} to='/total-body-detox-workshop'><li>Total Body Detox Workshop</li></Link>
+                {/* <Link onClick={() => { setNav(false) }} to='/respiratory-workshop'><li>Respiratory Yoga Workshop - On Campus</li></Link> */}
+                {/* <Link onClick={() => { setNav(false) }} to='/life-management-camp'><li>Life Management Yoga Camp - On Campus</li></Link> */}
+                {/* <Link onClick={() => { setNav(false) }} to='/senior-citizen-workshop'><li>Senior Citizen Yoga Workshop - On Campus</li></Link> */}
                 <Link onClick={() => { setNav(false) }} to='/diabetes-camp'><li>Diabetes Yoga Camp - On Campus</li></Link>
               </ul>
               <Link onClick={() => { setNav(false) }} to='/nutri-diet'>

@@ -8072,191 +8072,191 @@ const camps = {
   //   ],
   // },
 
-  7: {
-    id: '',
-    textdescription6: '',
-    textdescription7: '',
-    textdescription8: '',
-    textdescription9: '',
-    textdescription10: '',
-    textdescription1: '',
-    textdescription2: '',
-    textdescription3: '',
-    textdescription4: '',
-    textdescription5: '',
-    title: 'Life Management Yoga Camp - On Campus',
-    weekDays: true,
-    key: 'life-management-camp',
-    batch: 1,
-    // templateId: 'GENERAL_AUTO_EMAIL',
-    templateId: {
-      templateOnline: 'GENERAL_AUTO_EMAIL',
-      templateOffline: {
-        templateResidential: '',
-        templateNonResidential: '',
-      },
-    },
-    mostPopular: false,
-    rating: 5,
-    colorCode: '#EDBE66',
-    timing: '9:30 am – 5:30 pm (IST)',
-    fees: {
-      onlineFee: 1000,
-      offlineFee: { residentialFee: 0, nonResidentialFee: 1000 },
-    },
-    category: 'camps',
-    metaDescription:
-      'Enhance state of mind with pranayama, yoga asana and relaxation techniques',
-    image: `${baseDomain}${courseAssets.courseAsset8}`,
-    cardImage: `${baseDomain}${courseAssets.courseAsset112}`,
-    dates: [],
-    online: false,
-    onCampus: true,
-    nonResidential: false,
-    residential: false,
-    certficate: false,
+  // 7: {
+  //   id: '',
+  //   textdescription6: '',
+  //   textdescription7: '',
+  //   textdescription8: '',
+  //   textdescription9: '',
+  //   textdescription10: '',
+  //   textdescription1: '',
+  //   textdescription2: '',
+  //   textdescription3: '',
+  //   textdescription4: '',
+  //   textdescription5: '',
+  //   title: 'Life Management Yoga Camp - On Campus',
+  //   weekDays: true,
+  //   key: 'life-management-camp',
+  //   batch: 1,
+  //   // templateId: 'GENERAL_AUTO_EMAIL',
+  //   templateId: {
+  //     templateOnline: 'GENERAL_AUTO_EMAIL',
+  //     templateOffline: {
+  //       templateResidential: '',
+  //       templateNonResidential: '',
+  //     },
+  //   },
+  //   mostPopular: false,
+  //   rating: 5,
+  //   colorCode: '#EDBE66',
+  //   timing: '9:30 am – 5:30 pm (IST)',
+  //   fees: {
+  //     onlineFee: 1000,
+  //     offlineFee: { residentialFee: 0, nonResidentialFee: 1000 },
+  //   },
+  //   category: 'camps',
+  //   metaDescription:
+  //     'Enhance state of mind with pranayama, yoga asana and relaxation techniques',
+  //   image: `${baseDomain}${courseAssets.courseAsset8}`,
+  //   cardImage: `${baseDomain}${courseAssets.courseAsset112}`,
+  //   dates: [],
+  //   online: false,
+  //   onCampus: true,
+  //   nonResidential: false,
+  //   residential: false,
+  //   certficate: false,
 
-    tenure: '',
-    courseType: 'Camps & Workshop',
-    language: 'English',
-    preRequisite: 'None',
-    courseCategory: 'Self Help',
-    courseSubType: 'Camps & Workshops',
-    newName: 'Life Management Yoga Camp',
-    days: [''],
-    time: [
-      '9:30 am – 5:30 pm (IST)'
-    ],
+  //   tenure: '',
+  //   courseType: 'Camps & Workshop',
+  //   language: 'English',
+  //   preRequisite: 'None',
+  //   courseCategory: 'Self Help',
+  //   courseSubType: 'Camps & Workshops',
+  //   newName: 'Life Management Yoga Camp',
+  //   days: [''],
+  //   time: [
+  //     '9:30 am – 5:30 pm (IST)'
+  //   ],
 
 
 
-    enrollInfo: {
-      duration: "1 Day",
-      timings: [
-        {
-          day: "Time",
-          time: "9:30 am – 5:30 pm (IST)"
-        }
-      ]
-    }
-    ,
+  //   enrollInfo: {
+  //     duration: "1 Day",
+  //     timings: [
+  //       {
+  //         day: "Time",
+  //         time: "9:30 am – 5:30 pm (IST)"
+  //       }
+  //     ]
+  //   }
+  //   ,
 
-    courseCertificate: 'NO',
-    onlineInfo: {
-      courseMode: false,
-    },
-    residentialInfo: {
-      courseMode: false,
-      residentialMode: false
-    },
-    nonResidentialInfo: {
-      courseMode: true,
-      nonResidentialMode: true
-    },
-    details: [
-      {
-        type: 'paragraph',
-        content: {
-          title: 'Who is this yoga camp for?',
-          text: [
-            'If you think about it, most of the time we are living our life without consciously thinking about what we are doing and why we are doing it. It is only when we face a problem of some kind, that we are forced to stop and take stock of things. This kind of approach does us no good. If you feel that you are stuck in life, or don’t know what to do next, or feel like your life is going nowhere, this is the camp for you! Here is a Life management yoga camp by The Yoga Institute to give you direction and discipline to go through your life happily, joyfully and with balance. Designed with the wisdom of ancient Indian teachings, there’s a whole treasure chest of tools waiting for you at this camp. Hope to see you soon!'
-          ],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'What can you expect?',
-          text: [
-            'Life is a choice between B and D. Birth and Death. We are in control of C. That is the Choices we make, so make the right choices and live a happy life. -Dr. Hansaji Yogendra',
-          ],
-        },
-      },
-      {
-        type: 'u-list',
-        content: {
-          title: ' Program Offerings',
-          points: [
-            {
-              listItem:
-                'Effective tools and techniques to help you manage your life',
-              subItems: [],
-            },
-            {
-              listItem:
-                'Specific pranayama, yoga asana and relaxation techniques to enhance your state of mind',
-              subItems: [],
-            },
-            {
-              listItem: 'Yogic Diet guidelines to manage your health',
-              subItems: [],
-            },
-            {
-              listItem:
-                'Tips to maintain health by our spiritual guru Institute Director, Dr. Hansaji who has decades of experience in the field',
-              subItems: [],
-            },
-            {
-              listItem: 'Fitness tips',
-              subItems: [],
-            },
-          ],
-        },
-      },
-      {
-        type: 'u-list',
-        content: {
-          title: 'Offered with the program',
-          points: [
-            {
-              listItem: 'Booklet with guidelines',
-              subItems: [],
-            },
-            {
-              listItem: 'Wholesome Sattvik lunch',
-              subItems: [],
-            },
-            {
-              listItem: 'Healthy snacks',
-              subItems: [],
-            },
-          ],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'Time',
-          text: ['9:30 am – 5:30 pm (IST)'],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'Fees',
-          text: ['INR 1000 (Inclusive Lunch and Snacks)'],
-        },
-      },
-      {
-        type: 'u-list',
-        content: {
-          title: ' Guidelines',
-          points: [
-            {
-              listItem:
-                'Campers are requested to come attired to comfortable loose fitting clothes. Shorts, capris, tank tops, low cut shirts, short and sleeveless T-shirts are not permitted as per the Institute dress code.',
-              subItems: [],
-            },
-            {
-              listItem:
-                'Campers are requested to have their breakfast and medication (as prescribed by their doctor).',
-              subItems: [],
-            },
-          ],
-        },
-      },
-    ],
-  },
+  //   courseCertificate: 'NO',
+  //   onlineInfo: {
+  //     courseMode: false,
+  //   },
+  //   residentialInfo: {
+  //     courseMode: false,
+  //     residentialMode: false
+  //   },
+  //   nonResidentialInfo: {
+  //     courseMode: true,
+  //     nonResidentialMode: true
+  //   },
+  //   details: [
+  //     {
+  //       type: 'paragraph',
+  //       content: {
+  //         title: 'Who is this yoga camp for?',
+  //         text: [
+  //           'If you think about it, most of the time we are living our life without consciously thinking about what we are doing and why we are doing it. It is only when we face a problem of some kind, that we are forced to stop and take stock of things. This kind of approach does us no good. If you feel that you are stuck in life, or don’t know what to do next, or feel like your life is going nowhere, this is the camp for you! Here is a Life management yoga camp by The Yoga Institute to give you direction and discipline to go through your life happily, joyfully and with balance. Designed with the wisdom of ancient Indian teachings, there’s a whole treasure chest of tools waiting for you at this camp. Hope to see you soon!'
+  //         ],
+  //       },
+  //     },
+  //     {
+  //       type: 'paragraph',
+  //       content: {
+  //         title: 'What can you expect?',
+  //         text: [
+  //           'Life is a choice between B and D. Birth and Death. We are in control of C. That is the Choices we make, so make the right choices and live a happy life. -Dr. Hansaji Yogendra',
+  //         ],
+  //       },
+  //     },
+  //     {
+  //       type: 'u-list',
+  //       content: {
+  //         title: ' Program Offerings',
+  //         points: [
+  //           {
+  //             listItem:
+  //               'Effective tools and techniques to help you manage your life',
+  //             subItems: [],
+  //           },
+  //           {
+  //             listItem:
+  //               'Specific pranayama, yoga asana and relaxation techniques to enhance your state of mind',
+  //             subItems: [],
+  //           },
+  //           {
+  //             listItem: 'Yogic Diet guidelines to manage your health',
+  //             subItems: [],
+  //           },
+  //           {
+  //             listItem:
+  //               'Tips to maintain health by our spiritual guru Institute Director, Dr. Hansaji who has decades of experience in the field',
+  //             subItems: [],
+  //           },
+  //           {
+  //             listItem: 'Fitness tips',
+  //             subItems: [],
+  //           },
+  //         ],
+  //       },
+  //     },
+  //     {
+  //       type: 'u-list',
+  //       content: {
+  //         title: 'Offered with the program',
+  //         points: [
+  //           {
+  //             listItem: 'Booklet with guidelines',
+  //             subItems: [],
+  //           },
+  //           {
+  //             listItem: 'Wholesome Sattvik lunch',
+  //             subItems: [],
+  //           },
+  //           {
+  //             listItem: 'Healthy snacks',
+  //             subItems: [],
+  //           },
+  //         ],
+  //       },
+  //     },
+  //     {
+  //       type: 'paragraph',
+  //       content: {
+  //         title: 'Time',
+  //         text: ['9:30 am – 5:30 pm (IST)'],
+  //       },
+  //     },
+  //     {
+  //       type: 'paragraph',
+  //       content: {
+  //         title: 'Fees',
+  //         text: ['INR 1000 (Inclusive Lunch and Snacks)'],
+  //       },
+  //     },
+  //     {
+  //       type: 'u-list',
+  //       content: {
+  //         title: ' Guidelines',
+  //         points: [
+  //           {
+  //             listItem:
+  //               'Campers are requested to come attired to comfortable loose fitting clothes. Shorts, capris, tank tops, low cut shirts, short and sleeveless T-shirts are not permitted as per the Institute dress code.',
+  //             subItems: [],
+  //           },
+  //           {
+  //             listItem:
+  //               'Campers are requested to have their breakfast and medication (as prescribed by their doctor).',
+  //             subItems: [],
+  //           },
+  //         ],
+  //       },
+  //     },
+  //   ],
+  // },
 
   // 8: {
   //      id: '',
@@ -8793,372 +8793,372 @@ const camps = {
     ],
   },
 
-  11: {
-    id: '',
-    textdescription6: '',
-    textdescription7: '',
-    textdescription8: '',
-    textdescription9: '',
-    textdescription10: '',
-    textdescription1: '',
-    textdescription2: '',
-    textdescription3: '',
-    textdescription4: '',
-    textdescription5: '',
-    title: 'Respiratory Yoga Workshop - On Campus',
-    key: 'respiratory-workshop',
-    batch: 1,
-    // templateId: 'GENERAL_AUTO_EMAIL',
-    templateId: {
-      templateOnline: 'GENERAL_AUTO_EMAIL',
-      templateOffline: {
-        templateResidential: '',
-        templateNonResidential: '',
-      },
-    }, text: ['INR 2,000'],
-    dates: ['14th Dec 2024'],
-    mostPopular: false,
-    rating: 5,
-    colorCode: '#DDAB58',
-    timing: '9:30 am – 5:30 pm (IST)',
-    fees: {
-      onlineFee: 1000,
-      offlineFee: { residentialFee: 0, nonResidentialFee: 1000 },
-    },
-    category: 'camps',
-    metaDescription: 'Insightful yoga session with a specialist',
-    image: `${baseDomain}${courseAssets.courseAsset83}`,
-    cardImage: `${baseDomain}${courseAssets.courseAsset83}`,
-    online: false,
-    onCampus: true,
-    nonResidential: false,
-    residential: false,
-    certficate: false,
+  // 11: {
+  //   id: '',
+  //   textdescription6: '',
+  //   textdescription7: '',
+  //   textdescription8: '',
+  //   textdescription9: '',
+  //   textdescription10: '',
+  //   textdescription1: '',
+  //   textdescription2: '',
+  //   textdescription3: '',
+  //   textdescription4: '',
+  //   textdescription5: '',
+  //   title: 'Respiratory Yoga Workshop - On Campus',
+  //   key: 'respiratory-workshop',
+  //   batch: 1,
+  //   // templateId: 'GENERAL_AUTO_EMAIL',
+  //   templateId: {
+  //     templateOnline: 'GENERAL_AUTO_EMAIL',
+  //     templateOffline: {
+  //       templateResidential: '',
+  //       templateNonResidential: '',
+  //     },
+  //   }, text: ['INR 2,000'],
+  //   dates: ['14th Dec 2024'],
+  //   mostPopular: false,
+  //   rating: 5,
+  //   colorCode: '#DDAB58',
+  //   timing: '9:30 am – 5:30 pm (IST)',
+  //   fees: {
+  //     onlineFee: 1000,
+  //     offlineFee: { residentialFee: 0, nonResidentialFee: 1000 },
+  //   },
+  //   category: 'camps',
+  //   metaDescription: 'Insightful yoga session with a specialist',
+  //   image: `${baseDomain}${courseAssets.courseAsset83}`,
+  //   cardImage: `${baseDomain}${courseAssets.courseAsset83}`,
+  //   online: false,
+  //   onCampus: true,
+  //   nonResidential: false,
+  //   residential: false,
+  //   certficate: false,
 
-    tenure: '',
-    courseType: 'Camps & Workshop',
-    language: 'English',
-    preRequisite: 'None',
-    courseCategory: 'Self Help',
-    courseSubType: 'Camps & Workshops',
-    newName: 'Respiratory Yoga Workshop',
-    days: [''],
-    time: [
-      '9:30 am – 5:30 pm (IST)'
-    ],
-    enrollInfo: {
-      duration: "1 Day",
-      timings: [
-        {
-          day: "Time",
-          time: "9:30 am – 5:30 pm (IST)"
-        }
-      ]
-    }
-    ,
+  //   tenure: '',
+  //   courseType: 'Camps & Workshop',
+  //   language: 'English',
+  //   preRequisite: 'None',
+  //   courseCategory: 'Self Help',
+  //   courseSubType: 'Camps & Workshops',
+  //   newName: 'Respiratory Yoga Workshop',
+  //   days: [''],
+  //   time: [
+  //     '9:30 am – 5:30 pm (IST)'
+  //   ],
+  //   enrollInfo: {
+  //     duration: "1 Day",
+  //     timings: [
+  //       {
+  //         day: "Time",
+  //         time: "9:30 am – 5:30 pm (IST)"
+  //       }
+  //     ]
+  //   }
+  //   ,
 
-    courseCertificate: 'NO',
-    onlineInfo: {
-      courseMode: false,
-    },
-    residentialInfo: {
-      courseMode: false,
-      residentialMode: false
-    },
-    nonResidentialInfo: {
-      courseMode: true,
-      nonResidentialMode: true
-    },
+  //   courseCertificate: 'NO',
+  //   onlineInfo: {
+  //     courseMode: false,
+  //   },
+  //   residentialInfo: {
+  //     courseMode: false,
+  //     residentialMode: false
+  //   },
+  //   nonResidentialInfo: {
+  //     courseMode: true,
+  //     nonResidentialMode: true
+  //   },
 
-    details: [
-      {
-        type: 'paragraph',
-        content: {
-          title: 'Who is this yoga workshop for?',
-          text: [
-            'Prana is the vital energy or life force, which exists in all of us. The fight against respiratory problems begins with a strong will to overcome one’s disability and has to be backed by an implicit faith in oneself. With a strong emphasis on ancient yogic knowledge and techniques, The Yoga Institute has been conducting powerful Respiratory Camps since 1987. In these camps, participants are taught yoga breathing techniques and pranayama techniques for improving lung capacity and function, mind-body balance, increased calmness and healing. Respiratory health has been well-documented in traditional systems of well-being over several millennia. The Yogic life strengthens your will, augments your faith in yourself and opens air passages. How soon you can breathe with ease and on your own, depends on yourself. What are you waiting for? Begin now!'
-          ],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'What can you expect?',
-          text: [
-            '“If you learn to breathe the right way, your life will be longer” - Dr. Hansaji Yogendra',
-          ],
-        },
-      },
-      {
-        type: 'u-list',
-        content: {
-          title: ' Program Offerings',
-          points: [
-            {
-              listItem:
-                'Specific pranayama techniques, and relaxation practices to enhance your health',
-              subItems: [],
-            },
-            {
-              listItem: 'Dietary guidelines for overall health',
-              subItems: [],
-            },
-            {
-              listItem: 'Insightful yoga session with a specialist',
-              subItems: [],
-            },
-            {
-              listItem:
-                'Tips to maintain health by our spiritual guru and Institute’s Director, Dr. Hansaji who has decades of experience in the field',
-              subItems: [],
-            },
-            {
-              listItem: 'Fitness tips',
-              subItems: [],
-            },
-          ],
-        },
-      },
-      {
-        type: 'u-list',
-        content: {
-          title: 'Offered with the program',
-          points: [
-            {
-              listItem: 'Booklet with guidelines',
-              subItems: [],
-            },
-            {
-              listItem: 'Wholesome Sattvik lunch',
-              subItems: [],
-            },
-            {
-              listItem: 'Healthy snacks',
-              subItems: [],
-            },
-          ],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'Time',
-          text: ['9:30 am – 5:30 pm (IST)'],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'Fees',
-          text: ['INR 1000 (Inclusive Lunch and Snacks)'],
-        },
-      },
-      {
-        type: 'u-list',
-        content: {
-          title: ' Guidelines',
-          points: [
-            {
-              listItem:
-                'Campers are requested to come attired to comfortable loose fitting clothes. Shorts, capris, tank tops, low cut shirts, short and sleeveless T-shirts are not permitted as per the Institute’s dress code.',
-              subItems: [],
-            },
-            {
-              listItem:
-                'Campers are requested to have their breakfast and medication (as prescribed by their doctor).',
-              subItems: [],
-            },
-          ],
-        },
-      },
-    ],
-  },
+  //   details: [
+  //     {
+  //       type: 'paragraph',
+  //       content: {
+  //         title: 'Who is this yoga workshop for?',
+  //         text: [
+  //           'Prana is the vital energy or life force, which exists in all of us. The fight against respiratory problems begins with a strong will to overcome one’s disability and has to be backed by an implicit faith in oneself. With a strong emphasis on ancient yogic knowledge and techniques, The Yoga Institute has been conducting powerful Respiratory Camps since 1987. In these camps, participants are taught yoga breathing techniques and pranayama techniques for improving lung capacity and function, mind-body balance, increased calmness and healing. Respiratory health has been well-documented in traditional systems of well-being over several millennia. The Yogic life strengthens your will, augments your faith in yourself and opens air passages. How soon you can breathe with ease and on your own, depends on yourself. What are you waiting for? Begin now!'
+  //         ],
+  //       },
+  //     },
+  //     {
+  //       type: 'paragraph',
+  //       content: {
+  //         title: 'What can you expect?',
+  //         text: [
+  //           '“If you learn to breathe the right way, your life will be longer” - Dr. Hansaji Yogendra',
+  //         ],
+  //       },
+  //     },
+  //     {
+  //       type: 'u-list',
+  //       content: {
+  //         title: ' Program Offerings',
+  //         points: [
+  //           {
+  //             listItem:
+  //               'Specific pranayama techniques, and relaxation practices to enhance your health',
+  //             subItems: [],
+  //           },
+  //           {
+  //             listItem: 'Dietary guidelines for overall health',
+  //             subItems: [],
+  //           },
+  //           {
+  //             listItem: 'Insightful yoga session with a specialist',
+  //             subItems: [],
+  //           },
+  //           {
+  //             listItem:
+  //               'Tips to maintain health by our spiritual guru and Institute’s Director, Dr. Hansaji who has decades of experience in the field',
+  //             subItems: [],
+  //           },
+  //           {
+  //             listItem: 'Fitness tips',
+  //             subItems: [],
+  //           },
+  //         ],
+  //       },
+  //     },
+  //     {
+  //       type: 'u-list',
+  //       content: {
+  //         title: 'Offered with the program',
+  //         points: [
+  //           {
+  //             listItem: 'Booklet with guidelines',
+  //             subItems: [],
+  //           },
+  //           {
+  //             listItem: 'Wholesome Sattvik lunch',
+  //             subItems: [],
+  //           },
+  //           {
+  //             listItem: 'Healthy snacks',
+  //             subItems: [],
+  //           },
+  //         ],
+  //       },
+  //     },
+  //     {
+  //       type: 'paragraph',
+  //       content: {
+  //         title: 'Time',
+  //         text: ['9:30 am – 5:30 pm (IST)'],
+  //       },
+  //     },
+  //     {
+  //       type: 'paragraph',
+  //       content: {
+  //         title: 'Fees',
+  //         text: ['INR 1000 (Inclusive Lunch and Snacks)'],
+  //       },
+  //     },
+  //     {
+  //       type: 'u-list',
+  //       content: {
+  //         title: ' Guidelines',
+  //         points: [
+  //           {
+  //             listItem:
+  //               'Campers are requested to come attired to comfortable loose fitting clothes. Shorts, capris, tank tops, low cut shirts, short and sleeveless T-shirts are not permitted as per the Institute’s dress code.',
+  //             subItems: [],
+  //           },
+  //           {
+  //             listItem:
+  //               'Campers are requested to have their breakfast and medication (as prescribed by their doctor).',
+  //             subItems: [],
+  //           },
+  //         ],
+  //       },
+  //     },
+  //   ],
+  // },
 
-  12: {
-    id: '',
-    textdescription6: '',
-    textdescription7: '',
-    textdescription8: '',
-    textdescription9: '',
-    textdescription10: '',
-    textdescription1: '',
-    textdescription2: '',
-    textdescription3: '',
-    textdescription4: '',
-    textdescription5: '',
-    title: 'Senior Citizen Yoga Workshop - On Campus',
-    key: 'senior-citizen-workshop',
-    batch: 1,
-    // templateId: 'GENERAL_AUTO_EMAIL',
-    templateId: {
-      templateOnline: 'GENERAL_AUTO_EMAIL',
-      templateOffline: {
-        templateResidential: '',
-        templateNonResidential: '',
-      },
-    },
-    dates: [],
-    mostPopular: false,
-    rating: 5,
-    colorCode: '#CE9B51',
-    timing: '10.00 am to 1:00 pm (IST)',
-    fees: {
-      onlineFee: 0,
-      offlineFee: { residentialFee: 0, nonResidentialFee: 1000 },
-    },
-    category: 'camps',
-    metaDescription:
-      'Specific pranayama, yoga asana and relaxation techniques to enhance your state of mind',
-    image: `${baseDomain}${courseAssets.courseAsset12}`,
-    cardImage: `${baseDomain}${courseAssets.courseAsset12}`,
-    online: false,
-    onCampus: true,
-    nonResidential: false,
-    residential: false,
-    certficate: false,
+  // 12: {
+  //   id: '',
+  //   textdescription6: '',
+  //   textdescription7: '',
+  //   textdescription8: '',
+  //   textdescription9: '',
+  //   textdescription10: '',
+  //   textdescription1: '',
+  //   textdescription2: '',
+  //   textdescription3: '',
+  //   textdescription4: '',
+  //   textdescription5: '',
+  //   title: 'Senior Citizen Yoga Workshop - On Campus',
+  //   key: 'senior-citizen-workshop',
+  //   batch: 1,
+  //   // templateId: 'GENERAL_AUTO_EMAIL',
+  //   templateId: {
+  //     templateOnline: 'GENERAL_AUTO_EMAIL',
+  //     templateOffline: {
+  //       templateResidential: '',
+  //       templateNonResidential: '',
+  //     },
+  //   },
+  //   dates: [],
+  //   mostPopular: false,
+  //   rating: 5,
+  //   colorCode: '#CE9B51',
+  //   timing: '10.00 am to 1:00 pm (IST)',
+  //   fees: {
+  //     onlineFee: 0,
+  //     offlineFee: { residentialFee: 0, nonResidentialFee: 1000 },
+  //   },
+  //   category: 'camps',
+  //   metaDescription:
+  //     'Specific pranayama, yoga asana and relaxation techniques to enhance your state of mind',
+  //   image: `${baseDomain}${courseAssets.courseAsset12}`,
+  //   cardImage: `${baseDomain}${courseAssets.courseAsset12}`,
+  //   online: false,
+  //   onCampus: true,
+  //   nonResidential: false,
+  //   residential: false,
+  //   certficate: false,
 
-    tenure: '',
-    courseType: 'Camps & Workshop',
-    language: 'English',
-    preRequisite: 'None',
-    courseCategory: 'Self Help',
-    courseSubType: 'Camps & Workshops',
-    newName: 'Senior Citizen Yoga Workshop',
-    days: [''],
-    time: [
-      '10.00 am to 1:00 pm (IST)'
-    ],
-
-
-    enrollInfo: {
-      duration: "Half Day",
-      timings: [
-        {
-          day: "Time",
-          time: "10.00 am to 1:00 pm (IST)"
-        }
-      ]
-    }
-    ,
-
-    courseCertificate: 'NO',
-    onlineInfo: {
-      courseMode: false,
-    },
-    residentialInfo: {
-      courseMode: false,
-      residentialMode: false
-    },
-    nonResidentialInfo: {
-      courseMode: true,
-      nonResidentialMode: true
-    },
+  //   tenure: '',
+  //   courseType: 'Camps & Workshop',
+  //   language: 'English',
+  //   preRequisite: 'None',
+  //   courseCategory: 'Self Help',
+  //   courseSubType: 'Camps & Workshops',
+  //   newName: 'Senior Citizen Yoga Workshop',
+  //   days: [''],
+  //   time: [
+  //     '10.00 am to 1:00 pm (IST)'
+  //   ],
 
 
-    details: [
-      {
-        type: 'paragraph',
-        content: {
-          title: 'Who is this yoga workshop for?',
-          text: [
-            'Aging is a natural and unavoidable part of life but how you handle yourself at every age can determine the quality of your life. If you are looking to improve your quality of life at a mature age, this yoga for senior citizens camp will have immense value for you. At The Yoga Institute, we teach specially simplified asana that you can do with ease and enhance your wellbeing. These yoga techniques will help you keep your body system strong and help you live a fuller life'
-          ],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'What can you expect?',
-          text: [
-            'Age is just a number! To live a long and healthy life, take care of your mental and physical health. -Dr. Hansaji Yogendra',
-          ],
-        },
-      },
-      {
-        type: 'u-list',
-        content: {
-          title: ' Program Offerings',
-          points: [
-            {
-              listItem:
-                'Effective tools and techniques to help you manage your life',
-              subItems: [],
-            },
-            {
-              listItem:
-                'Specific pranayama, yoga asana and relaxation techniques to enhance your state of mind',
-              subItems: [],
-            },
-            {
-              listItem: 'Yogic Diet guidelines to manage your health',
-              subItems: [],
-            },
-            {
-              listItem:
-                'Tips to maintain health by our spiritual guru Institute Director, Dr. Hansaji who has decades of experience in the field',
-              subItems: [],
-            },
-            {
-              listItem: 'Fitness tips',
-              subItems: [],
-            },
-          ],
-        },
-      },
-      // {
-      //   type: 'u-list',
-      //   content: {
-      //     title: 'Offered with the program',
-      //     points: [
-      //       {
-      //         listItem: 'Booklet with guidelines  ',
-      //         subItems: [],
-      //       },
-      //       {
-      //         listItem: 'Wholesome Sattvik lunch',
-      //         subItems: [],
-      //       },
-      //       {
-      //         listItem: 'Healthy snacks  ',
-      //         subItems: [],
-      //       },
-      //     ],
-      //   },
-      // },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'Time',
-          text: ['10.00 am to 1:00 pm (IST)'],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'Fees',
-          text: ['INR 500 (Inclusive Lunch and Snacks)'],
-        },
-      },
-      {
-        type: 'u-list',
-        content: {
-          title: ' Guidelines',
-          points: [
-            {
-              listItem:
-                'Campers are requested to come attired to comfortable loose fitting clothes. Shorts, capris, tank tops, low cut shirts, short and sleeveless T-shirts are not permitted as per the Institute dress code.',
-              subItems: [],
-            },
-            // {
-            //   listItem:
-            //     'Campers are requested to have their breakfast and medication (as prescribed by their doctor). ',
-            //   subItems: [],
-            // },
-          ],
-        },
-      },
-    ],
-  },
+  //   enrollInfo: {
+  //     duration: "Half Day",
+  //     timings: [
+  //       {
+  //         day: "Time",
+  //         time: "10.00 am to 1:00 pm (IST)"
+  //       }
+  //     ]
+  //   }
+  //   ,
+
+  //   courseCertificate: 'NO',
+  //   onlineInfo: {
+  //     courseMode: false,
+  //   },
+  //   residentialInfo: {
+  //     courseMode: false,
+  //     residentialMode: false
+  //   },
+  //   nonResidentialInfo: {
+  //     courseMode: true,
+  //     nonResidentialMode: true
+  //   },
+
+
+  //   details: [
+  //     {
+  //       type: 'paragraph',
+  //       content: {
+  //         title: 'Who is this yoga workshop for?',
+  //         text: [
+  //           'Aging is a natural and unavoidable part of life but how you handle yourself at every age can determine the quality of your life. If you are looking to improve your quality of life at a mature age, this yoga for senior citizens camp will have immense value for you. At The Yoga Institute, we teach specially simplified asana that you can do with ease and enhance your wellbeing. These yoga techniques will help you keep your body system strong and help you live a fuller life'
+  //         ],
+  //       },
+  //     },
+  //     {
+  //       type: 'paragraph',
+  //       content: {
+  //         title: 'What can you expect?',
+  //         text: [
+  //           'Age is just a number! To live a long and healthy life, take care of your mental and physical health. -Dr. Hansaji Yogendra',
+  //         ],
+  //       },
+  //     },
+  //     {
+  //       type: 'u-list',
+  //       content: {
+  //         title: ' Program Offerings',
+  //         points: [
+  //           {
+  //             listItem:
+  //               'Effective tools and techniques to help you manage your life',
+  //             subItems: [],
+  //           },
+  //           {
+  //             listItem:
+  //               'Specific pranayama, yoga asana and relaxation techniques to enhance your state of mind',
+  //             subItems: [],
+  //           },
+  //           {
+  //             listItem: 'Yogic Diet guidelines to manage your health',
+  //             subItems: [],
+  //           },
+  //           {
+  //             listItem:
+  //               'Tips to maintain health by our spiritual guru Institute Director, Dr. Hansaji who has decades of experience in the field',
+  //             subItems: [],
+  //           },
+  //           {
+  //             listItem: 'Fitness tips',
+  //             subItems: [],
+  //           },
+  //         ],
+  //       },
+  //     },
+  //     // {
+  //     //   type: 'u-list',
+  //     //   content: {
+  //     //     title: 'Offered with the program',
+  //     //     points: [
+  //     //       {
+  //     //         listItem: 'Booklet with guidelines  ',
+  //     //         subItems: [],
+  //     //       },
+  //     //       {
+  //     //         listItem: 'Wholesome Sattvik lunch',
+  //     //         subItems: [],
+  //     //       },
+  //     //       {
+  //     //         listItem: 'Healthy snacks  ',
+  //     //         subItems: [],
+  //     //       },
+  //     //     ],
+  //     //   },
+  //     // },
+  //     {
+  //       type: 'paragraph',
+  //       content: {
+  //         title: 'Time',
+  //         text: ['10.00 am to 1:00 pm (IST)'],
+  //       },
+  //     },
+  //     {
+  //       type: 'paragraph',
+  //       content: {
+  //         title: 'Fees',
+  //         text: ['INR 500 (Inclusive Lunch and Snacks)'],
+  //       },
+  //     },
+  //     {
+  //       type: 'u-list',
+  //       content: {
+  //         title: ' Guidelines',
+  //         points: [
+  //           {
+  //             listItem:
+  //               'Campers are requested to come attired to comfortable loose fitting clothes. Shorts, capris, tank tops, low cut shirts, short and sleeveless T-shirts are not permitted as per the Institute dress code.',
+  //             subItems: [],
+  //           },
+  //           // {
+  //           //   listItem:
+  //           //     'Campers are requested to have their breakfast and medication (as prescribed by their doctor). ',
+  //           //   subItems: [],
+  //           // },
+  //         ],
+  //       },
+  //     },
+  //   ],
+  // },
 
   13: {
     id: '',
@@ -11909,6 +11909,1117 @@ const camps = {
       },
     ],
   },
+
+  // new courses 
+  22: {
+    id: '',
+    textdescription6: '',
+    textdescription7: '',
+    textdescription8: '',
+    textdescription9: '',
+    textdescription10: '',
+    textdescription1: '',
+    textdescription2: '',
+    textdescription3: '',
+    textdescription4: '',
+    textdescription5: '',
+    title: 'Deep Sleep Workshop',
+    key: 'deep-sleep-workshop',
+    batch: 3,
+    // templateId: 'GENERAL_AUTO_EMAIL',
+    templateId: {
+      templateOnline: 'GENERAL_AUTO_EMAIL',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: 'GENERAL_AUTO_EMAIL',
+      },
+    },
+    dates: [
+      '11th Jan 2025', '8th Mar 2025', '10th May 2025', '12th Jul 2025', '13th Sep 2025',
+      '8th Nov 2025'
+
+    ],
+    online: false,
+    onCampus: true,
+    nonResidential: true,
+    residential: false,
+    certficate: false,
+
+    tenure: '1 day',
+    courseType: 'Deep Sleep Workshop',
+    language: 'Hindi',
+    preRequisite: 'None',
+    courseCategory: 'Self Help',
+    courseSubType: 'Deep Sleep Workshop',
+    newName: 'Deep Sleep Workshop',
+    days: [''],
+    time: [
+      '9:30 am – 1:30 pm (IST)'
+    ],
+    enrollInfo: {
+      duration: "1 day",
+      timings: [
+        {
+          day: "",
+          time: "9:30 am – 1:30 pm (IST)"
+        }
+      ]
+    }
+    ,
+
+    courseCertificate: 'certificate Of Participation',
+    onlineInfo: {
+      courseMode: false,
+    },
+    residentialInfo: {
+      courseMode: false,
+      residentialMode: false
+    },
+    nonResidentialInfo: {
+      courseMode: true,
+      nonResidentialMode: true
+    },
+
+    mostPopular: false,
+    rating: 5,
+    colorCode: '#EDBE66',
+    timing: '9:30 am – 1:30 pm (IST)',
+    fees: {
+      onlineFee: 0,
+      offlineFee: { residentialFee: 0, nonResidentialFee: 500 },
+    },
+    category: 'camps',
+    metaDescription: 'Discover the art of deep relaxation and rejuvenation. In this workshop, learn proven techniques to unwind, de-stress, and achieve restorative sleep for a healthier, more peaceful life. Transform your nights and energize your days!',
+    image: `${baseDomain}${courseAssets.courseAsset34}`,
+    cardImage: `${baseDomain}${courseAssets.courseAsset34}`,
+    details: [
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Who is this Yoga Workshop For?',
+          text: [
+            'This workshop is ideal for anyone struggling with restless nights, stress, or fatigue. Whether you’re a busy professional, a parent, or simply looking to enhance your sleep quality, this session offers practical yoga-based techniques to help you relax, rejuvenate, and enjoy truly restorative sleep.',
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'What can you expect?',
+          text: [
+            'Experience deep relaxation as you learn simple yet effective techniques to enhance your sleep quality. This workshop will equip you with tools to unwind, reduce stress, and establish a restful sleep routine, leaving you feeling rejuvenated and energized',
+          ],
+        },
+      },
+      {
+        type: 'u-list',
+        content: {
+          title: 'Program Offerings',
+          points: [
+            {
+              listItem: 'Gentle yoga stretches to relax the body and calm the mind',
+              subItems: [],
+            },
+            {
+              listItem: 'Breathing techniques to reduce stress and promote relaxation',
+              subItems: [],
+            },
+            {
+              listItem: 'Guided meditations for deep mental and emotional rejuvenation',
+              subItems: [],
+            },
+            {
+              listItem: 'Tips and practices for improving sleep quality naturally',
+              subItems: [],
+            },
+            {
+              listItem: 'Expert guidance on creating a bedtime routine for restorative sleep',
+              subItems: [],
+            }
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Time',
+          text: [
+            '9:30 am – 1:30 pm (IST)',
+          ],
+        },
+      },
+
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Fees',
+          text: [
+            'INR 500 (Inclusive Lunch)',
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Guidelines',
+          text: [
+            'Campers are requested to come attired to comfortable loose fitting clothes. Shorts, capris, tank tops, low cut shirts, short and sleeveless T-shirts are not permitted as per the Institute’s dress code.',
+          ],
+        },
+      }
+    ],
+  },
+  23: {
+    id: '',
+    textdescription6: '',
+    textdescription7: '',
+    textdescription8: '',
+    textdescription9: '',
+    textdescription10: '',
+    textdescription1: '',
+    textdescription2: '',
+    textdescription3: '',
+    textdescription4: '',
+    textdescription5: '',
+    title: 'Emotional Wellness Workshop ',
+    key: 'emotional-wellness-workshop',
+    batch: 3,
+    // templateId: 'GENERAL_AUTO_EMAIL',
+    templateId: {
+      templateOnline: 'GENERAL_AUTO_EMAIL',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: 'GENERAL_AUTO_EMAIL',
+      },
+    },
+    dates: [
+      '16th Feb 2025', '29th Jun 2025', '19th Oct 2025'],
+    online: false,
+    onCampus: true,
+    nonResidential: true,
+    residential: false,
+    certficate: false,
+
+    tenure: '1 day',
+    courseType: 'Emotional Wellness Workshop',
+    language: 'Hindi',
+    preRequisite: 'None',
+    courseCategory: 'Self Help',
+    courseSubType: 'Emotional Wellness Workshop',
+    newName: 'Emotional Wellness Workshop',
+    days: [''],
+    time: [
+      '9:30 am – 1:30 pm (IST)'
+    ],
+    enrollInfo: {
+      duration: "1 day",
+      timings: [
+        {
+          day: "",
+          time: "9:30 am – 1:30 pm (IST)"
+        }
+      ]
+    }
+    ,
+
+    courseCertificate: 'certificate Of Participation',
+    onlineInfo: {
+      courseMode: false,
+    },
+    residentialInfo: {
+      courseMode: false,
+      residentialMode: false
+    },
+    nonResidentialInfo: {
+      courseMode: true,
+      nonResidentialMode: true
+    },
+
+    mostPopular: false,
+    rating: 5,
+    colorCode: '#EDBE66',
+    timing: '9:30 am – 1:30 pm (IST)',
+    fees: {
+      onlineFee: 0,
+      offlineFee: { residentialFee: 0, nonResidentialFee: 500 },
+    },
+    category: 'camps',
+    metaDescription: "Unlock the power of emotional well-being with our Emotional Wellness Workshop. This session is designed to help you manage stress, enhance emotional resilience, and cultivate a positive mindset. Through mindful practices, yoga, and self-reflection, you’ll learn techniques to better navigate life's challenges and foster a sense of inner peace and emotional balance. ",
+    image: `${baseDomain}${courseAssets.courseAsset34}`,
+    cardImage: `${baseDomain}${courseAssets.courseAsset34}`,
+    details: [
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Who is this Workshop For?',
+          text: [
+            "This workshop is for anyone looking to improve their emotional health and well-being. Whether you're experiencing stress, anxiety, or simply want to build emotional resilience, this session is perfect for individuals seeking practical tools to enhance their mental and emotional state.",
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'What can you expect?',
+          text: [
+            'In this workshop, you will explore a variety of mindfulness and emotional regulation techniques, including yoga, breathing exercises, and guided meditations. Expect to leave feeling more grounded, with a toolkit of practices to help you manage emotions, reduce stress, and create a deeper connection to yourself.',
+          ],
+        },
+      },
+      {
+        type: 'u-list',
+        content: {
+          title: 'Program Offerings',
+          points: [
+            {
+              listItem: 'Yoga sequences designed to release emotional tension and promote relaxation  ',
+              subItems: [],
+            },
+            {
+              listItem: 'Breathing techniques to calm the nervous system and enhance emotional balance',
+              subItems: [],
+            },
+            {
+              listItem: 'Mindfulness practices to increase self-awareness and emotional clarity  ',
+              subItems: [],
+            },
+            {
+              listItem: 'Guided meditations to foster inner peace and reduce anxiety  ',
+              subItems: [],
+            },
+            {
+              listItem: 'Tools for building emotional resilience and coping with life’s challenges  ',
+              subItems: [],
+            }
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Time',
+          text: [
+            '9:30 am – 1:30 pm (IST)',
+          ],
+        },
+      },
+
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Fees',
+          text: [
+            'INR 500 (Inclusive Lunch)',
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Guidelines',
+          text: [
+            'Campers are requested to come attired to comfortable loose fitting clothes. Shorts, capris, tank tops, low cut shirts, short and sleeveless T-shirts are not permitted as per the Institute’s dress code.',
+          ],
+        },
+      }
+    ],
+  },
+  24: {
+    id: '',
+    textdescription6: '',
+    textdescription7: '',
+    textdescription8: '',
+    textdescription9: '',
+    textdescription10: '',
+    textdescription1: '',
+    textdescription2: '',
+    textdescription3: '',
+    textdescription4: '',
+    textdescription5: '',
+    title: 'Gut Health Workshop',
+    key: 'gut-health-workshop',
+    batch: 3,
+    // templateId: 'GENERAL_AUTO_EMAIL',
+    templateId: {
+      templateOnline: 'GENERAL_AUTO_EMAIL',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: 'GENERAL_AUTO_EMAIL',
+      },
+    },
+    dates: [
+      '22nd Feb 2025', '26th Apr 2025', '15th Jun 2025'
+      , '17th Aug 2025', '19th Oct 2025', '21st Dec 2025'],
+    online: false,
+    onCampus: true,
+    nonResidential: true,
+    residential: false,
+    certficate: false,
+
+    tenure: '1 day',
+    courseType: 'Gut Health Workshop',
+    language: 'Hindi',
+    preRequisite: 'None',
+    courseCategory: 'Self Help',
+    courseSubType: 'Gut Health Workshop',
+    newName: 'Gut Health Workshop',
+    days: [''],
+    time: [
+      '9:30 am – 1:30 pm (IST)'
+    ],
+    enrollInfo: {
+      duration: "1 day",
+      timings: [
+        {
+          day: "",
+          time: "9:30 am – 1:30 pm (IST)"
+        }
+      ]
+    }
+    ,
+
+    courseCertificate: 'certificate Of Participation',
+    onlineInfo: {
+      courseMode: false,
+    },
+    residentialInfo: {
+      courseMode: false,
+      residentialMode: false
+    },
+    nonResidentialInfo: {
+      courseMode: true,
+      nonResidentialMode: true
+    },
+
+    mostPopular: false,
+    rating: 5,
+    colorCode: '#EDBE66',
+    timing: '9:30 am – 1:30 pm (IST)',
+    fees: {
+      onlineFee: 0,
+      offlineFee: { residentialFee: 0, nonResidentialFee: 500 },
+    },
+    category: 'camps',
+    metaDescription: "Transform your digestive health with our Gut Health Workshop. This session focuses on the vital connection between your gut and overall well-being, offering practical tips and holistic practices to support a balanced digestive system. Learn about gut-friendly nutrition, the importance of gut flora, and effective techniques to enhance digestion and boost immunity.",
+    image: `${baseDomain}${courseAssets.courseAsset34}`,
+    cardImage: `${baseDomain}${courseAssets.courseAsset34}`,
+    details: [
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Who is this Yoga Workshop For?',
+          text: [
+            "This workshop is for anyone experiencing digestive discomfort, bloating, or seeking to improve their gut health. Whether you're dealing with chronic gut issues or simply looking to maintain a healthy digestive system, this session provides the tools you need for optimal gut health.",
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'What can you expect?',
+          text: [
+            'You will gain insight into the importance of gut health, learn techniques to improve digestion, and explore the impact of diet and lifestyle on your gut. Expect to leave with practical tips, easy-to-follow nutrition advice, and a renewed understanding of how to nurture your digestive system for better health.',
+          ],
+        },
+      },
+      {
+        type: 'u-list',
+        content: {
+          title: 'Program Offerings',
+          points: [
+            {
+              listItem: 'Nutrition tips for a gut-friendly, anti-inflammatory diet',
+              subItems: [],
+            },
+            {
+              listItem: 'Breathing exercises to aid digestion and reduce stress',
+              subItems: [],
+            },
+            {
+              listItem: 'Yoga sequences to improve gut function and alleviate discomfort',
+              subItems: [],
+            },
+            {
+              listItem: 'Insights into the role of probiotics and gut microbiota in overall health',
+              subItems: [],
+            },
+            {
+              listItem: 'Mindfulness practices to enhance digestion and support emotional well-being',
+              subItems: [],
+            },
+            {
+              listItem: 'Expert guidance on creating a personalized self-care routine for long-term health',
+              subItems: [],
+            }
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Time',
+          text: [
+            '9:30 am – 1:30 pm (IST)',
+          ],
+        },
+      },
+
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Fees',
+          text: [
+            'INR 500 (Inclusive Lunch)',
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Guidelines',
+          text: [
+            'Campers are requested to come attired to comfortable loose fitting clothes. Shorts, capris, tank tops, low cut shirts, short and sleeveless T-shirts are not permitted as per the Institute’s dress code.',
+          ],
+        },
+      }
+    ],
+  },
+  25: {
+    id: '',
+    textdescription6: '',
+    textdescription7: '',
+    textdescription8: '',
+    textdescription9: '',
+    textdescription10: '',
+    textdescription1: '',
+    textdescription2: '',
+    textdescription3: '',
+    textdescription4: '',
+    textdescription5: '',
+    title: 'Healthy & Sattvik Cooking Workshop',
+    key: 'healthy-sattvik-cooking-workshop',
+    batch: 3,
+    // templateId: 'GENERAL_AUTO_EMAIL',
+    templateId: {
+      templateOnline: 'GENERAL_AUTO_EMAIL',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: 'GENERAL_AUTO_EMAIL',
+      },
+    },
+    dates: [
+      '25th Jan 2025', '22nd Mar 2025', '24th May 2025'
+      , '26th Jul 2025', '27th Sep 2025', '22nd Nov 2025'],
+    online: false,
+    onCampus: true,
+    nonResidential: true,
+    residential: false,
+    certficate: false,
+
+    tenure: '1 day',
+    courseType: 'Healthy & Sattvik Cooking Workshop',
+    language: 'Hindi',
+    preRequisite: 'None',
+    courseCategory: 'Self Help',
+    courseSubType: 'Healthy & Sattvik Cooking Workshop',
+    newName: 'Healthy & Sattvik Cooking Workshop',
+    days: [''],
+    time: [
+      '9:30 am – 1:30 pm (IST)'
+    ],
+    enrollInfo: {
+      duration: "1 day",
+      timings: [
+        {
+          day: "",
+          time: "9:30 am – 1:30 pm (IST)"
+        }
+      ]
+    }
+    ,
+
+    courseCertificate: 'certificate Of Participation',
+    onlineInfo: {
+      courseMode: false,
+    },
+    residentialInfo: {
+      courseMode: false,
+      residentialMode: false
+    },
+    nonResidentialInfo: {
+      courseMode: true,
+      nonResidentialMode: true
+    },
+
+    mostPopular: false,
+    rating: 5,
+    colorCode: '#EDBE66',
+    timing: '9:30 am – 1:30 pm (IST)',
+    fees: {
+      onlineFee: 0,
+      offlineFee: { residentialFee: 0, nonResidentialFee: 500 },
+    },
+    category: 'camps',
+    metaDescription: "Nourish your body with wholesome, Sattvik-inspired meals that promote vitality and well-being. In this workshop, you’ll learn how to prepare simple, nutritious, and balanced dishes using fresh, plant-based ingredients. Embrace the principles of Sattvik cooking, which focus on purity, mindfulness, and healing, to support a healthier lifestyle from the inside out.",
+    image: `${baseDomain}${courseAssets.courseAsset34}`,
+    cardImage: `${baseDomain}${courseAssets.courseAsset34}`,
+    details: [
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Who is this Yoga Workshop For?',
+          text: [
+            "This workshop is for anyone looking to improve their eating habits, increase energy levels, and adopt a more mindful approach to cooking and eating. Whether you’re new to sattvik cooking or seeking to deepen your understanding, this workshop will provide valuable tools for a healthier, more balanced lifestyle.",
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'What can you expect?',
+          text: [
+            'You can expect to learn practical cooking techniques for preparing delicious, easy-to-make sattvik meals that support overall health. Gain insight into the importance of food choices, ingredients, and mindful eating practices. Leave with a collection of recipes to incorporate into your daily routine, fostering nourishment and wellness from within.',
+          ],
+        },
+      },
+      {
+        type: 'u-list',
+        content: {
+          title: 'Program Offerings',
+          points: [
+            {
+              listItem: 'Introduction to sattvik cooking principles and their benefits',
+              subItems: [],
+            },
+            {
+              listItem: 'Simple, plant-based recipes for every meal',
+              subItems: [],
+            },
+            {
+              listItem: 'Techniques for cooking with fresh, wholesome ingredients',
+              subItems: [],
+            },
+            {
+              listItem: 'Mindful eating practices to enhance digestion and well-being',
+              subItems: [],
+            },
+            {
+              listItem: 'Tips for creating balanced meals that nourish the body and mind',
+              subItems: [],
+            },
+            {
+              listItem: 'Expert guidance on creating a personalized self-care routine for long-term health',
+              subItems: [],
+            }
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Time',
+          text: [
+            '9:30 am – 1:30 pm (IST)',
+          ],
+        },
+      },
+
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Fees',
+          text: [
+            'INR 500 (Inclusive Lunch)',
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Guidelines',
+          text: [
+            'Campers are requested to come attired to comfortable loose fitting clothes. Shorts, capris, tank tops, low cut shirts, short and sleeveless T-shirts are not permitted as per the Institute’s dress code.',
+          ],
+        },
+      }
+    ],
+  },
+  26: {
+    id: '',
+    textdescription6: '',
+    textdescription7: '',
+    textdescription8: '',
+    textdescription9: '',
+    textdescription10: '',
+    textdescription1: '',
+    textdescription2: '',
+    textdescription3: '',
+    textdescription4: '',
+    textdescription5: '',
+    title: 'Menopause Wellness Workshop',
+    key: 'menopause-wellness-workshop',
+    batch: 3,
+    // templateId: 'GENERAL_AUTO_EMAIL',
+    templateId: {
+      templateOnline: 'GENERAL_AUTO_EMAIL',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: 'GENERAL_AUTO_EMAIL',
+      },
+    },
+    dates: [
+      '15th Feb 2025', '31st May 2025', '31st Aug 2025'
+      , '30th Nov 2025'],
+    online: false,
+    onCampus: true,
+    nonResidential: true,
+    residential: false,
+    certficate: false,
+
+    tenure: '1 day',
+    courseType: 'Menopause Wellness Workshop',
+    language: 'Hindi',
+    preRequisite: 'None',
+    courseCategory: 'Self Help',
+    courseSubType: 'Menopause Wellness Workshop',
+    newName: 'Menopause Wellness Workshop',
+    days: [''],
+    time: [
+      '9:30 am – 1:30 pm (IST)'
+    ],
+    enrollInfo: {
+      duration: "1 day",
+      timings: [
+        {
+          day: "",
+          time: "9:30 am – 1:30 pm (IST)"
+        }
+      ]
+    }
+    ,
+
+    courseCertificate: 'certificate Of Participation',
+    onlineInfo: {
+      courseMode: false,
+    },
+    residentialInfo: {
+      courseMode: false,
+      residentialMode: false
+    },
+    nonResidentialInfo: {
+      courseMode: true,
+      nonResidentialMode: true
+    },
+
+    mostPopular: false,
+    rating: 5,
+    colorCode: '#EDBE66',
+    timing: '9:30 am – 1:30 pm (IST)',
+    fees: {
+      onlineFee: 0,
+      offlineFee: { residentialFee: 0, nonResidentialFee: 500 },
+    },
+    category: 'camps',
+    metaDescription: "Navigate the changes of menopause with confidence and ease in our Menopause Wellness Workshop. This session offers holistic practices and expert guidance to support you through this transformative phase. Learn how to manage symptoms, balance hormones, and improve overall health through yoga, mindful nutrition, and stress-reducing techniques, empowering you to embrace this new chapter of life with vitality.",
+    image: `${baseDomain}${courseAssets.courseAsset34}`,
+    cardImage: `${baseDomain}${courseAssets.courseAsset34}`,
+    details: [
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Who is this Yoga Workshop For?',
+          text: [
+            "This workshop is designed for women who are experiencing peri-menopause, menopause, or post-menopause. Whether you’re seeking to manage symptoms like hot flashes, mood swings, or sleep disturbances, or simply want to feel more balanced and energized, this workshop offers valuable tools for enhancing wellness during this life transition.",
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'What can you expect?',
+          text: [
+            'You will explore yoga sequences, breathing techniques, and lifestyle tips tailored to ease menopause symptoms and improve overall well-being. Expect to gain a deeper understanding of how to support your body during menopause, with practical strategies for physical, emotional, and mental balance.',
+          ],
+        },
+      },
+      {
+        type: 'u-list',
+        content: {
+          title: 'Program Offerings',
+          points: [
+            {
+              listItem: 'Yoga practices designed to ease symptoms like hot flashes and fatigue',
+              subItems: [],
+            },
+            {
+              listItem: 'Breathing exercises to reduce stress and improve sleep quality',
+              subItems: [],
+            },
+            {
+              listItem: 'Nutrition advice for managing hormone levels and boosting energy',
+              subItems: [],
+            },
+            {
+              listItem: 'Mindfulness practices for emotional balance and mental clarity',
+              subItems: [],
+            },
+            {
+              listItem: 'Tools for enhancing bone health, circulation, and overall vitality during menopause',
+              subItems: [],
+            },
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Time',
+          text: [
+            '9:30 am – 1:30 pm (IST)',
+          ],
+        },
+      },
+
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Fees',
+          text: [
+            'INR 500 (Inclusive Lunch)',
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Guidelines',
+          text: [
+            'Campers are requested to come attired to comfortable loose fitting clothes. Shorts, capris, tank tops, low cut shirts, short and sleeveless T-shirts are not permitted as per the Institute’s dress code.',
+          ],
+        },
+      }
+    ],
+  },
+  27: {
+    id: '',
+    textdescription6: '',
+    textdescription7: '',
+    textdescription8: '',
+    textdescription9: '',
+    textdescription10: '',
+    textdescription1: '',
+    textdescription2: '',
+    textdescription3: '',
+    textdescription4: '',
+    textdescription5: '',
+    title: 'PCOD & PCOS Wellness Workshop',
+    key: 'pcod-pcos-wellness-workshop',
+    batch: 3,
+    // templateId: 'GENERAL_AUTO_EMAIL',
+    templateId: {
+      templateOnline: 'GENERAL_AUTO_EMAIL',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: 'GENERAL_AUTO_EMAIL',
+      },
+    },
+    dates: [
+      '19th Jan 2025', '16th Mar 2025', '18th May 2025'
+      , '20th Jul 2025', '21st Sep 2025', '16th Nov 2025'],
+    online: false,
+    onCampus: true,
+    nonResidential: true,
+    residential: false,
+    certficate: false,
+
+    tenure: '1 day',
+    courseType: 'PCOD & PCOS Wellness Workshop',
+    language: 'Hindi',
+    preRequisite: 'None',
+    courseCategory: 'Self Help',
+    courseSubType: 'PCOD & PCOS Wellness Workshop',
+    newName: 'PCOD & PCOS Wellness Workshop',
+    days: [''],
+    time: [
+      '9:30 am – 1:30 pm (IST)'
+    ],
+    enrollInfo: {
+      duration: "1 day",
+      timings: [
+        {
+          day: "",
+          time: "9:30 am – 1:30 pm (IST)"
+        }
+      ]
+    }
+    ,
+
+    courseCertificate: 'certificate Of Participation',
+    onlineInfo: {
+      courseMode: false,
+    },
+    residentialInfo: {
+      courseMode: false,
+      residentialMode: false
+    },
+    nonResidentialInfo: {
+      courseMode: true,
+      nonResidentialMode: true
+    },
+
+    mostPopular: false,
+    rating: 5,
+    colorCode: '#EDBE66',
+    timing: '9:30 am – 1:30 pm (IST)',
+    fees: {
+      onlineFee: 0,
+      offlineFee: { residentialFee: 0, nonResidentialFee: 500 },
+    },
+    category: 'camps',
+    metaDescription: "Take charge of your health with our specialized PCOD & PCOS Wellness Workshop. This session offers natural, holistic practices to help manage symptoms, balance hormones, and improve overall well-being. Learn effective yoga, nutrition tips, and stress-reduction techniques to support your journey toward better health and a more balanced life.",
+    image: `${baseDomain}${courseAssets.courseAsset34}`,
+    cardImage: `${baseDomain}${courseAssets.courseAsset34}`,
+    details: [
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Who is this Yoga Workshop For?',
+          text: [
+            "This workshop is ideal for individuals dealing with PCOD and PCOS or those looking to prevent or manage related symptoms. Whether you’re new to yoga or have been practicing for years, this session is designed for anyone seeking holistic support for hormonal balance, stress management, and overall wellness",
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'What can you expect?',
+          text: [
+            'In this workshop, you will experience a combination of yoga poses, breathing exercises, and mindfulness practices specifically tailored to address the needs of those with PCOD and PCOS. Expect to leave feeling more relaxed, empowered, and equipped with tools to support your hormonal health and overall vitality.',
+          ],
+        },
+      },
+      {
+        type: 'u-list',
+        content: {
+          title: 'Program Offerings',
+          points: [
+            {
+              listItem: 'Yoga sequences to support hormonal balance and menstrual health',
+              subItems: [],
+            },
+            {
+              listItem: 'Breathing techniques to reduce stress and improve circulation',
+              subItems: [],
+            },
+            {
+              listItem: 'Targeted exercises for improving ovarian health and reducing inflammation',
+              subItems: [],
+            },
+            {
+              listItem: 'Nutrition tips to manage weight and enhance overall wellness',
+              subItems: [],
+            },
+            {
+              listItem: 'Mindfulness practices for emotional balance and mental clarity',
+              subItems: [],
+            },
+            {
+              listItem: 'Expert guidance on creating a personalized self-care routine for long-term health',
+              subItems: [],
+            },
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Time',
+          text: [
+            '9:30 am – 1:30 pm (IST)',
+          ],
+        },
+      },
+
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Fees',
+          text: [
+            'INR 500 (Inclusive Lunch)',
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Guidelines',
+          text: [
+            'Campers are requested to come attired to comfortable loose fitting clothes. Shorts, capris, tank tops, low cut shirts, short and sleeveless T-shirts are not permitted as per the Institute’s dress code.',
+          ],
+        },
+      }
+    ],
+  },
+  28: {
+    id: '',
+    textdescription6: '',
+    textdescription7: '',
+    textdescription8: '',
+    textdescription9: '',
+    textdescription10: '',
+    textdescription1: '',
+    textdescription2: '',
+    textdescription3: '',
+    textdescription4: '',
+    textdescription5: '',
+    title: 'Total Body Detox Workshop',
+    key: 'total-body-detox-workshop',
+    batch: 3,
+    // templateId: 'GENERAL_AUTO_EMAIL',
+    templateId: {
+      templateOnline: 'GENERAL_AUTO_EMAIL',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: 'GENERAL_AUTO_EMAIL',
+      },
+    },
+    dates: [
+      '8th Feb 2025', '12th Apr 2025', '14th Jun 2025'
+      , '10th Aug 2025', '11th Oct 2025', '13th Dec 2025'],
+    online: false,
+    onCampus: true,
+    nonResidential: true,
+    residential: false,
+    certficate: false,
+
+    tenure: '1 day',
+    courseType: 'Total Body Detox Workshop',
+    language: 'Hindi',
+    preRequisite: 'None',
+    courseCategory: 'Self Help',
+    courseSubType: 'Total Body Detox Workshop',
+    newName: 'Total Body Detox Workshop',
+    days: [''],
+    time: [
+      '9:30 am – 1:30 pm (IST)'
+    ],
+    enrollInfo: {
+      duration: "1 day",
+      timings: [
+        {
+          day: "",
+          time: "9:30 am – 1:30 pm (IST)"
+        }
+      ]
+    }
+    ,
+
+    courseCertificate: 'certificate Of Participation',
+    onlineInfo: {
+      courseMode: false,
+    },
+    residentialInfo: {
+      courseMode: false,
+      residentialMode: false
+    },
+    nonResidentialInfo: {
+      courseMode: true,
+      nonResidentialMode: true
+    },
+
+    mostPopular: false,
+    rating: 5,
+    colorCode: '#EDBE66',
+    timing: '9:30 am – 1:30 pm (IST)',
+    fees: {
+      onlineFee: 0,
+      offlineFee: { residentialFee: 0, nonResidentialFee: 500 },
+    },
+    category: 'camps',
+    metaDescription: "Refresh, energize, and revitalize your body and mind! This workshop offers powerful techniques, mindful practices, and holistic approaches to cleanse toxins, improve digestion, boost energy levels, and promote overall well-being. Achieve balance and rejuvenation from within for a healthier, more vibrant you. ",
+    image: `${baseDomain}${courseAssets.courseAsset34}`,
+    cardImage: `${baseDomain}${courseAssets.courseAsset34}`,
+    details: [
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Who is this Yoga Workshop For?',
+          text: [
+            "This workshop is designed for anyone looking to rejuvenate their body and mind through natural, holistic practices. Whether you’re feeling sluggish, dealing with stress, or simply want to reset your system, this session is perfect for individuals seeking to improve their health, vitality, and overall well-being.",
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'What can you expect?',
+          text: [
+            'In this workshop, you will learn a variety of cleansing techniques, yoga practices, and mindfulness exercises to detoxify your body and energize your mind. Expect to feel lighter, more focused, and recharged as you explore ways to restore balance and harmony from within.',
+          ],
+        },
+      },
+      {
+        type: 'u-list',
+        content: {
+          title: 'Program Offerings',
+          points: [
+            {
+              listItem: 'Detoxifying yoga sequences to cleanse and revitalize the body',
+              subItems: [],
+            },
+            {
+              listItem: 'Breathing exercises to boost energy and enhance mental clarity',
+              subItems: [],
+            },
+            {
+              listItem: 'Mindful practices for stress relief and emotional balance',
+              subItems: [],
+            },
+            {
+              listItem: 'Holistic tips for improving digestion and boosting metabolism',
+              subItems: [],
+            },
+            {
+              listItem: 'Guided meditations for mental rejuvenation and focus',
+              subItems: [],
+            },
+            {
+              listItem: 'Personalized guidance to help you integrate detox practices into daily life',
+              subItems: [],
+            },
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Time',
+          text: [
+            '9:30 am – 1:30 pm (IST)',
+          ],
+        },
+      },
+
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Fees',
+          text: [
+            'INR 500 (Inclusive Lunch)',
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Guidelines',
+          text: [
+            'Campers are requested to come attired to comfortable loose fitting clothes. Shorts, capris, tank tops, low cut shirts, short and sleeveless T-shirts are not permitted as per the Institute’s dress code.',
+          ],
+        },
+      }
+    ],
+  },
   // 22: {
   //      id: '',
   // textdescription6: '',
@@ -13756,7 +14867,7 @@ const classes = {
     metaDescription:
       'Towards the end, there is an enlightening question and answer session. ',
     rating: 5,
-    colorCode: '#B77E7E',
+    colorCode: '#DDAB58',
     timing: 'Every Sunday between 9.30 am and 10.30am',
     fees: {
       onlineFee: 0,
@@ -14264,7 +15375,7 @@ const classes = {
     metaDescription:
       'Samatvam is one-of-a-kind personalised wellbeing program launched by The Yoga Institute under the guidance of Dr. Hansaji Yogendra. The program focuses on providing individual guidance for life management.',
     rating: 5,
-    colorCode: '#C48E8C',
+    colorCode: '#DDAB58',
     timing: 'Every Saturday: 2.00 p.m. - 5.00 p.m. (IST)',
     fees: {
       onlineFee: 0,
@@ -16730,6 +17841,185 @@ const alibaug = {
   }
 }
 
+const specialEvents = {
+  1: {
+    id: '',
+    textdescription6: '',
+    textdescription7: '',
+    textdescription8: '',
+    textdescription9: '',
+    textdescription10: '',
+    textdescription1: '',
+    textdescription2: '',
+    textdescription3: '',
+    textdescription4: '',
+    textdescription5: '',
+    title: 'Full moon meditation',
+    key: 'fullmoon-meditation',
+    isRegular: false,
+    tenure: '1 day',
+    weekends: false,
+    batch: 1,
+    // templateId: 'GENERAL_AUTO_EMAIL',
+    templateId: {
+      templateOnline: '',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: '',
+      },
+    },
+    image: `${baseDomain}${homeAssets.homeAsset14}`,
+    cardImage: `${homeAssets.fullmoonCard}`,//${baseDomain}
+    mostPopular: false,
+    metaDescription:
+      '',
+    rating: 5,
+    colorCode: '#DDAB58',
+    timing: '',
+    fees: {
+      onlineFee: 0,
+      offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
+    },
+    category: 'classes',
+    dates: ['15th Dec 2024', '14th Jan 2025', '12th Feb 2025', '14th Mar 2025', '13th Apr 2025'
+      , '11th Jun 2025'
+    ],
+    online: true,
+    onCampus: true,
+    nonResidential: true,
+    residential: false,
+    certficate: false,
+    newName: '',
+    enrollInfo: {
+      duration: "1 Day",
+      timings: [
+      ]
+    },
+    details: [
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: [
+            'Looking to reign in your rampant thoughts and mood swings and train your mental faculties to be more efficient and peaceful? Then, join us every full moon day to sit under the celestial glow and do meditation.',
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: [
+            'Since the beginning of civilization humans have been fascinated with our nearest celestial neighbour – Moon. It has found its place in children’s stories, lovers’ stories, mystical arts, and much more. And it is not without reason. Moon has the power to influence our thoughts and our rhythms. Under its soothing and calming light ancient gurus sat down to meditate and mull over the intricacies of life and gave us philosophies that we follow even to this day.'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: [
+            'However, in the hustle-bustle of today’s life and because of rising city skylines, we seldom get exposed to this enriching source of energy. On every full moon day, we at the Yoga Institute sit under this divine light to meditate and find balance and alignment under the heaven’s celestial glow! Unburden yourself by joining us for practicing meditation on full moon nights and feel your stress and worries melting away under the soft cool night breeze. Let the moon help you relax and rejuvenate your mind and body.',
+          ],
+        },
+      },
+
+    ],
+  },
+  2: {
+    id: '',
+    textdescription6: '',
+    textdescription7: '',
+    textdescription8: '',
+    textdescription9: '',
+    textdescription10: '',
+    textdescription1: '',
+    textdescription2: '',
+    textdescription3: '',
+    textdescription4: '',
+    textdescription5: '',
+    title: 'Yoga By The Bay',
+    key: 'yoga-by-the-bay',
+    isRegular: false,
+    tenure: '1 day',
+    weekends: false,
+    batch: 1,
+    // templateId: 'GENERAL_AUTO_EMAIL',
+    templateId: {
+      templateOnline: '',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: '',
+      },
+    },
+    image: `${baseDomain}${homeAssets.homeAsset12}`,
+    cardImage: `${baseDomain}${homeAssets.homeAsset12}`,
+    mostPopular: false,
+    metaDescription:
+      '',
+    rating: 5,
+    colorCode: '#DDAB58',
+    timing: '',
+    fees: {
+      onlineFee: 0,
+      offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
+    },
+    category: 'classes',
+    dates: ['29th Dec 2024', '26th Jan 2025', '23rd Feb 2025', '30th Mar 2025', '27th Apr 2025'
+      , '25th May 2025', '29th Jun 2025', '27th Jul 2025', '31st Aug 2025', '28th Sep 2025', '26th Oct 2025'
+      , '30th Nov 2025', '28th Dec 2025'
+    ],
+    online: true,
+    onCampus: true,
+    nonResidential: true,
+    residential: false,
+    certficate: false,
+    newName: '',
+    enrollInfo: {
+      duration: "1 Day",
+      timings: [
+      ]
+    },
+    details: [
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: [
+            'Meditating alone is beneficial but meditating and practicing yoga as part of a group can impress upon the psyche in ways unimaginable. Join us to be part of this profound experience called Yoga by the Bay.',
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: [
+            'Yoga and the sea are two things that bring immense joy, calm, and relaxation to the human body. Imagine the effect and the impact two of them will have when they come together. Yoga by the Bay is one such initiative where we practice the yogic way of life immersed in the mesmerising symphony of the crashing sea waves, chirping birds, and whistling winds.'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: [
+            'Come out with us and give your practice a new dimension. Let your being become one with the vastness of the divine. Experience true peace in the throbbing heart of Mumbai along with hundreds of seekers.',
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: [
+            'Meet us opposite the ‘Pizza by the Bay – Marine Lines’ restaurant and be part of this profound experience.',
+          ],
+        },
+      },
+
+    ],
+  }
+}
+
 export const c200hr = Object.values(ttc200hr)
 export const c500hr = Object.values(ttc500hr)
 export const c900hr = Object.values(ttc900hr)
@@ -16738,6 +18028,7 @@ export const classesArr = Object.values(classes)
 export const extraArr = Object.values(extra)
 export const certificateArr = Object.values(certificate)
 export const alibaugArr = Object.values(alibaug)
+export const sepecialEventArr = Object.values(specialEvents)
 export const AllCourses = [
   ...certificateArr,
   ...extraArr,
@@ -16746,6 +18037,7 @@ export const AllCourses = [
   ...c900hr,
   ...campsArr,
   ...classesArr,
+  ...sepecialEventArr
 ]
 export const mostPopular = [
   extraArr[0], c200hr[4], c500hr[0],

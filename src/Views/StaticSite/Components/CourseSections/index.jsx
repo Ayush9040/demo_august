@@ -23,6 +23,36 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
     console.log('loaded2', data);
 
   }, [data])
+  useEffect(() => {
+    // Check if there is a hash in the URL
+    const hash = window.location.hash;
+
+    // If there's a hash and it matches a section, scroll to it
+    if (hash) {
+      setTimeout(() => {
+        const element = document.querySelector(hash);
+
+        // Check if the screen width is smaller than or equal to 768px (considered mobile)
+        const isMobile = window.innerWidth <= 768;
+
+        // Depending on the screen size, scroll to different divs
+        if (isMobile) {
+          // Scroll to mobile-specific div
+          const mobileDiv = document.querySelector('#mobileDiv'); // Replace with actual mobile div ID
+          if (mobileDiv) {
+            mobileDiv.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        } else {
+          // Scroll to desktop-specific div
+          const desktopDiv = document.querySelector('#desktopDiv'); // Replace with actual desktop div ID
+          if (desktopDiv) {
+            desktopDiv.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        }
+      }, 100);
+
+    }
+  }, []);
   const shouldDisplayLink = (points) => {// used to display the link in UI
     if (selectedFilters) {
       const { online, onCampus, days7, days21, month1, month2, month3, weekends, weekDays, year1, year2, month7, month4, days1, days2 } = selectedFilters;
@@ -296,16 +326,7 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
       text: 'Corporate Workshop - On Campus',
       onCampus: true
     },
-    {
-      url: '/satsang',
-      text: 'Satsang - On Campus',
-      onCampus: true, weekends: true, days1: true
-    },
-    {
-      url: '/samattvam',
-      text: 'Samattvam(Health Checkup) - On Campus',
-      onCampus: true, weekends: true, days1: true
-    },
+
     {
       url: '/couples-classes',
       text: "Couple's classes - Online",
@@ -372,6 +393,29 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
       text: 'Pregnancy Camp',
       onCampus: true, weekDays: true, days2: true
     }]
+    const specialEventsStatic = [
+      {
+        url: '/satsang',
+        text: 'Satsang - On Campus',
+        onCampus: true, weekends: true, days1: true
+      },
+      {
+        url: '/samattvam',
+        text: 'Samattvam(Health Checkup) - On Campus',
+        onCampus: true, weekends: true, days1: true
+      },
+      {
+        url: '/yoga-by-the-bay',
+        text: 'Yoga by the bay',
+        online: true, onCampus: true, days1: true
+      },
+      {
+        url: '/fullmoon-meditation',
+        text: 'Full moon meditation',
+        online: true, onCampus: true, days1: true
+      }
+    ]
+
 
     switch (title) {
       case 'Yoga Teacher Training Courses (YTTC)':
@@ -450,7 +494,8 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
             {/* <Accordian sliderVal={customVal} setSliderVal={setCustomVal} data={campsAccordian} selectedFilters={selectedFilters} /> */}
             <div>
               {/* <h4> */}
-              <ul id='camps-workshop' >
+              <ul  >
+                {/* id='camps-workshop' */}
                 {campsWroskshopStatic.map((item, i) => (
                   shouldDisplayLink(item) && (
                     <div key={i}>
@@ -557,7 +602,7 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
           <>
             <div style={{ marginTop: '40px' }}>
 
-              <ul id='therapy-course' >
+              <ul>
                 {yttcStatic.map((item, i) => (
                   shouldDisplayLink(item) && (
                     <div key={i}>
@@ -569,17 +614,45 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
                 )}
 
               </ul></div>
-
+            <div id="desktopDiv"></div>
+          </>
+        )
+      case 'Special Events':
+        return (
+          <>
+            <div style={{ marginTop: '40px' }} id="mobileDiv">
+              <ul>
+                {/*  id='therapy-course'  */}
+                {specialEventsStatic.map((item, i) => (
+                  shouldDisplayLink(item) && (
+                    <div key={i}>
+                      <Link to={item.url}>
+                        <li className="text-bold">
+                          {item.text}
+                        </li>
+                      </Link></div>))
+                )}
+              </ul></div>
           </>
         )
     }
 
   }
 
-  const selectColor = (i) => {
-    if (i === 0) { return '#94B1B2' }
-    else if (i === 1) { return '#7C999B' }
-    else { return '#6E9596' }
+  const selectColor = (i, title) => {
+    if (title == 'Yoga Teacher Training Courses (YTTC)') {
+      return '#c8705f'
+    }
+    else if (title == 'Certified Yoga Courses') { return '#edbe66' }
+    else if (title == 'Regular Yoga Classes') { return '#b77e7e' }
+    else if (title == 'Most Popular Yoga Courses') { return '#6e9596' }
+    else if (title == 'Camps & Workshops') { return '#ce9b51' }
+    else if (title == 'Special Certificate Courses (For Yoga Teachers)') { return '#ba7e7e' }
+    else if (title == 'Special Events') { return '#c8705f' }
+    else { return '' }
+    // if (i === 0) { return '#94B1B2' }
+    // else if (i === 1) { return '#7C999B' }
+    // else { return '#6E9596' }
   }
 
   return (
@@ -587,12 +660,15 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
 
       <div className="course-list">
         <div className="course-title">
-          {pathParam != 'ttc' ? <Link to={`/courses/browse/${pathParam}`}>
-            <h1 style={{ fontSize: '2.6rem' }}>{title}</h1>
-          </Link>
+          {pathParam != 'ttc' ?
+
+            (title != 'Special Events' ? <Link to={`/courses/browse/${pathParam}`}>
+              <h1 style={{ fontSize: '2.6rem' }}>{title}</h1>
+              {/* // for special evens no nee of link */}
+            </Link> : <h1 style={{ fontSize: '2.6rem', pointerEvents: 'none' }}>{title}</h1>)
             :
             <Link to={`/courses/browse/ttc?type=200`}>
-              <div style={{ fontSize: '2.6rem', fontWeight: '700' }}>{title}</div></Link>
+              <h1 style={{ fontSize: '2.6rem', fontWeight: '700' }}>{title}</h1></Link>
           }
 
         </div>
@@ -630,7 +706,7 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
                   // shouldDisplayCard(item) && (
                   <CourseCard
                     key={i}
-                    color={selectColor(i)}
+                    color={selectColor(i, title)}
                     index={i}
                     courseTitle={item.title}
                     pageName={item.key}
@@ -661,12 +737,16 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
               })
             :
             data.map((item, i) => {
+              if (item.key == 'samattvam') {
+                console.log(item);
+              }
+
               // if (i < 3) {
               return (
                 // shouldDisplayCard(item) && (
                 <CourseCard
                   key={i}
-                  color={item.colorCode}
+                  color={selectColor(i, title)}
                   index={i}
                   courseTitle={item.title}
                   description={item.metaDescription}
