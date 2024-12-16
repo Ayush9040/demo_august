@@ -75,10 +75,10 @@ const CourseCard = ({
           url: '/weekend-teacher-training-course',
           text: '3 Months Weekend TTC Online – English - Batch 5',
         },
-        {
-          url: '/200-hrs-part-time-ttc-online-english-batch-6',
-          text: '2 Months TTC Online – English - Batch 6',
-        },
+        // {
+        //   url: '/200-hrs-part-time-ttc-online-english-batch-6',
+        //   text: '2 Months TTC Online – English - Batch 6',
+        // },
         // /200-hrs-part-time-ttc-online-english-batch-5
       ],
     },
