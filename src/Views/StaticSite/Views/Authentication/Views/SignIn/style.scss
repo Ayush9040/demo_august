@@ -333,6 +333,7 @@
     }
 
 }
+
 // @media (min-width: 1441px) {
 // .ad2-inp {
 //     width: 100% !important;
@@ -415,7 +416,7 @@
                 // bottom: 128px;
                 // margin-right: 20px;
                 position: relative !important;
-                margin-top: 20px;
+                margin-top: 20px; 
             }
 
             // height: 100%;
@@ -920,7 +921,11 @@
     overflow-y: auto;
     max-height: 150px;
     font-size: 16px;
+    z-index: 9;
 
+    @media(max-width: 768px) {
+        width: 90%;
+    }
 
     .ctr-option {
         cursor: pointer;

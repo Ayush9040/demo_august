@@ -994,6 +994,16 @@ const SignIn = () => {
           }
           else {
             setErrorMessage(err.data.error)
+            toast.error(err?.data?.error, {
+              position: 'top-right',
+              autoClose: 3000,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: false,
+              draggable: true,
+              progress: undefined,
+              theme: 'light',
+            })
           }
           setIsBtnLoad(false)
         }
