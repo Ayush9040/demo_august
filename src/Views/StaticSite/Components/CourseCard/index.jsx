@@ -353,7 +353,7 @@ const CourseCard = ({
                   to={
                     isLoggedIn
                       ? `/enrollment/${path}`///?date=${selectDate}
-                      : `/user/sign-in/?location=${path}`//&date=${selectDate}
+                      : `/user/sign-in?location=${path}`//&date=${selectDate}
                   }
                 >
                   <EnrlNowBtn text={'Enroll Now'} buttonAction={() => handleCTEnrollNowClick({
@@ -404,7 +404,7 @@ const CourseCard = ({
                 to={
                   isLoggedIn
                     ? `/enrollment/${path}` ///?date=${selectDate}
-                    : `/user/sign-in/?location=${path}`//&date=${selectDate}
+                    : `/user/sign-in?location=${path}`//&date=${selectDate}
                 }
               >
                 <EnrlNowBtn text={'Enroll Now'} buttonAction={() => handleCTEnrollNowClick({

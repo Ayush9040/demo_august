@@ -145,7 +145,7 @@ const AlibaugCarousel = () => {
             to={
               isLoggedIn
                 ? `/enrollment/deep-dive-yoga-meditation-retreat`///?date=${selectDate}
-                : `/user/sign-in/?location=deep-dive-yoga-meditation-retreat`//&date=${selectDate}
+                : `/user/sign-in?location=deep-dive-yoga-meditation-retreat`//&date=${selectDate}
             }
           >
             <EnrollBtn text={'Book Now'} buttonAction={() => { addToCart('Deep Dive Yoga and Meditation Retreat', '/deep-dive-yoga-meditation-retreat', '8:00 AM (21st) to 7:00 PM (22nd)') }} /></Link>
@@ -179,7 +179,7 @@ const AlibaugCarousel = () => {
             to={
               isLoggedIn
                 ? `/enrollment/forest-yoga-retreat`///?date=${selectDate}
-                : `/user/sign-in/?location=forest-yoga-retreat`//&date=${selectDate}
+                : `/user/sign-in?location=forest-yoga-retreat`//&date=${selectDate}
             }
           >
             <EnrollBtn text={'Book Now'} buttonAction={() => { addToCart('Forest Yoga Retreat', '/forest-yoga-retreat', '8:00 AM (28th) to 7:00 PM (29th)') }} /></Link>

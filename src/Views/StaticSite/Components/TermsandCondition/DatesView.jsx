@@ -113,7 +113,7 @@ const DatesView = ({ pageDate, setIsShipppingModalOpen }) => {
     });
 
     const dateToPass = selectedDate ? selectedDate : 'null';
-    isLoggedIn ? navigate(`/enrollment/${pageDate.key}/?date=${encodeURIComponent(dateToPass)}`) : navigate(`/user/sign-in/?location=${pageDate.key}/?date=${encodeURIComponent(dateToPass)}`);
+    isLoggedIn ? navigate(`/enrollment/${pageDate.key}/?date=${encodeURIComponent(dateToPass)}`) : navigate(`/user/sign-in?location=${pageDate.key}/?date=${encodeURIComponent(dateToPass)}`);
   };
 
 

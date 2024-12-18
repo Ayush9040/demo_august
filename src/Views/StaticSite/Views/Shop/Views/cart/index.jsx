@@ -133,7 +133,7 @@ const AddToCart = () => {
 
   const checkout = async () => {
 
-    if (!isLoggedIn) return navigate('/user/sign-in/?location=cart')
+    if (!isLoggedIn) return navigate('/user/sign-in?location=cart')
 
     handleCTCheckoutCompleted(addCart);
     updateGa4()

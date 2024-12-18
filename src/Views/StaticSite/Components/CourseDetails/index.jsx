@@ -634,7 +634,7 @@ const CourseDetails = ({ pageDate }) => {
                         to={
                           isLoggedIn
                             ? `/enrollment/${pageDate.key}`///?date=${selectDate}
-                            : `/user/sign-in/?location=${pageDate.key}`//&date=${selectDate}
+                            : `/user/sign-in?location=${pageDate.key}`//&date=${selectDate}
                         }
                       >
                         {/* <CommonBtn text={'Enroll Now'} /> */}
@@ -679,7 +679,7 @@ const CourseDetails = ({ pageDate }) => {
                         to={
                           isLoggedIn
                             ? `/enrollment/${pageDate.key}`///?date=${selectDate}
-                            : `/user/sign-in/?location=${pageDate.key}`//&date=${selectDate}
+                            : `/user/sign-in?location=${pageDate.key}`//&date=${selectDate}
                         }
                       >
                         {/* <CommonBtn text={'Enroll Now'} /> */}
@@ -722,7 +722,7 @@ const CourseDetails = ({ pageDate }) => {
                     to={
                       isLoggedIn
                         ? `/enrollment/${pageDate.key}`///?date=${selectDate}
-                        : `/user/sign-in/?location=${pageDate.key}`//&date=${selectDate}
+                        : `/user/sign-in?location=${pageDate.key}`//&date=${selectDate}
                     }
                   >
                     {/* <CommonBtn text={'Enroll Now'} /> */}
@@ -943,7 +943,7 @@ const CourseDetails = ({ pageDate }) => {
                     to={
                       isLoggedIn
                         ? `/enrollment/${pageDate.key}`///?date=${selectDate}
-                        : `/user/sign-in/?location=${pageDate.key}`//&date=${selectDate}
+                        : `/user/sign-in?location=${pageDate.key}`//&date=${selectDate}
                     }
                   >
                     {/* <CommonBtn text={'Enroll Now'} /> */}
@@ -986,7 +986,7 @@ const CourseDetails = ({ pageDate }) => {
                     to={
                       isLoggedIn
                         ? `/enrollment/${pageDate.key}`///?date=${selectDate}
-                        : `/user/sign-in/?location=${pageDate.key}`//&date=${selectDate}
+                        : `/user/sign-in?location=${pageDate.key}`//&date=${selectDate}
                     }
                   >
                     {/* <CommonBtn text={'Enroll Now'} /> */}
@@ -1030,7 +1030,7 @@ const CourseDetails = ({ pageDate }) => {
                 to={
                   isLoggedIn
                     ? `/enrollment/${pageDate.key}`///?date=${selectDate}
-                    : `/user/sign-in/?location=${pageDate.key}`//&date=${selectDate}
+                    : `/user/sign-in?location=${pageDate.key}`//&date=${selectDate}
                 }
               >
                 {/* <CommonBtn text={'Enroll Now'} /> */}

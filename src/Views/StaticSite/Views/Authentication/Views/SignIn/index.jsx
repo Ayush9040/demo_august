@@ -290,7 +290,6 @@ const SignIn = () => {
 
     // Check if current path is 'sign-in'
     const isSignInPath = currentPath.includes('sign-in');
-
     // If we are on the sign-in path
     if (isSignInPath) {
       // If locationParam is null or empty, set isLocationCart to true
@@ -1460,7 +1459,7 @@ const SignIn = () => {
         const lastPageUrl = sessionStorage.getItem('last_page_url') || 'Direct Visit';
         console.log("lastPageUrl ", lastPageUrl)
 
-        const url2 = "/user/sign-in/?location=cart";
+        const url2 = "/user/sign-in?location=cart";
 
         if (lastPageUrl && lastPageUrl.includes(url2)) {
           sessionStorage.removeItem('last_page_url_2');
