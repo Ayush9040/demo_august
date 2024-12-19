@@ -133,12 +133,13 @@ const AlibaugCarousel = () => {
           </p>
           <div className="apply-address">
             <h5>Book Your Retreat Now</h5>
-            <h5>Date: <span style={{ fontWeight: '400' }}> 11th January 2025 to 12th January 2025 (1 Night, 2 Days)</span>
+            <h5>Dates: <span style={{ fontWeight: '400' }}> Retreat 1 - 21st December 2024 to 22nd December 2024 (1 Night, 2 Days)</span><br />
+              <span style={{ fontWeight: '400',marginLeft:'59.9px',lineHeight:'30px' }}> Retreat 2 - 11th January 2025 to 12th January 2025 (1 Night, 2 Days)</span>
             </h5>
             <h5>
               Cost: <span style={{ fontWeight: '400' }}>Rs. 10,000/- (Per Person – Inclusive of 8 Meals)</span>
             </h5>
-            <h5>Time: <span style={{ fontWeight: '400' }}>8:00 AM (11th) to 7:00 PM (12th)</span></h5>
+            <h5>Time: <span style={{ fontWeight: '400' }}>8:00 AM (1st day) to 7:00 PM (2nd day)</span></h5>
             <h5>Call us at <a href='tel: + 91 7738155500'>+ 91 7738155500</a>  or email us at <a href='mailto:info@theyogainstitute.org'>info@theyogainstitute.org</a></h5>
           </div>
           <Link
