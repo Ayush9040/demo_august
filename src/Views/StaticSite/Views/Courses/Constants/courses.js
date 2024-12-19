@@ -9184,7 +9184,7 @@ const camps = {
         templateNonResidential: '',
       },
     },
-    dates: [ '12th Jan 2025', '9th Feb 2025', '9th Mar 2025', '13th Apr 2025', '11th May 2025', '8th Jun 2025', '13th Jul 2025', '10th Aug 2025', '14th Sep 2025', '12th Oct 2025', '9th Nov 2025', '14t Dec 2025'],
+    dates: ['12th Jan 2025', '9th Feb 2025', '9th Mar 2025', '13th Apr 2025', '11th May 2025', '8th Jun 2025', '13th Jul 2025', '10th Aug 2025', '14th Sep 2025', '12th Oct 2025', '9th Nov 2025', '14t Dec 2025'],
     mostPopular: false,
     rating: 5,
     colorCode: '#EDBE66',
@@ -17506,7 +17506,7 @@ const alibaug = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'classes',
-    dates: ['14th Dec 2024 to 15th Dec 2024 '
+    dates: ['4th Jan 2025 to 5th Jan 2025'
     ],
     online: false,
     onCampus: false,
@@ -17519,7 +17519,7 @@ const alibaug = {
       timings: [
         {
           day: "",
-          time: "8:00 AM (14th) to 7:00 PM (15th)"
+          time: "8:00 AM (4th) to 7:00 PM (5th)"
         }
       ]
     },
@@ -17630,7 +17630,7 @@ const alibaug = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'classes',
-    dates: ['21st Dec 2024 to 22nd Dec 2024'
+    dates: ['11th Jan 2025 to 12th Jan 2025'
     ],
     online: false,
     onCampus: false,
@@ -17643,7 +17643,7 @@ const alibaug = {
       timings: [
         {
           day: "",
-          time: "8:00 AM (21st) to 7:00 PM (22nd)"
+          time: "8:00 AM (11th) to 7:00 PM (12th)"
         }
       ]
     },
@@ -17754,7 +17754,7 @@ const alibaug = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'classes',
-    dates: [' 28th Dec 2024 to 29th Dec 2024'
+    dates: [' 18th Jan 2025 to 19th Jan 2025'
     ],
     online: false,
     onCampus: false,
@@ -17767,7 +17767,7 @@ const alibaug = {
       timings: [
         {
           day: "",
-          time: "8:00 AM (28th) to 7:00 PM (29th)"
+          time: "8:00 AM (18th) to 7:00 PM (19th)"
         }
       ]
     },

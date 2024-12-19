@@ -10,6 +10,7 @@ const MegaMenu = ({ setNav }) => {
   const navItems = [
     { name: 'ABOUT', link: '/know-us-better', id: 1, key: 'ABOUT', },
     { name: 'COURSES', link: '/courses', id: 2, key: 'COURSES' },
+    { name: 'YOGA RETREAT', link: '/alibaug', id: 17, key: 'RETREAT' },
     { name: 'SPECIAL EVENTS', link: '/courses#specialEvents', id: 18, key: 'SPECIAL-EVENTS' },
     { name: 'NUTRI DIET CLINIC', link: '/nutri-diet', id: 3, key: 'COURSES-NUTRI' },
     { name: 'CORPORATE WORKSHOP', link: '/corporate-workshops', id: 4, key: 'COURSES-WORKSHOPS' },
@@ -28,7 +29,7 @@ const MegaMenu = ({ setNav }) => {
     { name: 'VOLUNTEER', link: '/volunteer', id: 14, key: 'VOLUNTEER' },
     { name: 'LOCATE US', link: '/our-branches', id: 15, key: 'LOCATE' },
     { name: 'CONTACT US', link: '/contact', id: 16, key: 'CONTACT' },
-    { name: 'YOGA RETREAT', link: '/alibaug', id: 17, key: 'RETREAT' },
+    
   ]
 
   const subMenu = {

@@ -94,7 +94,7 @@ const AlibaugCarousel = () => {
         </Slider>
         <h2 style={{ marginTop: '32px' }}>Our Rejuvenating Retreats</h2>
       </div>
-      {/* <div className="alibaug-container" style={{marginTop:'38px'}}>
+      <div className="alibaug-container" style={{ marginTop: '38px' }}>
         <div className="alibaug-column alibaug-column-1">
           <img src="images/DetoxCleanse.webp" />
         </div>
@@ -105,12 +105,12 @@ const AlibaugCarousel = () => {
           </p>
           <div className="apply-address">
             <h5>Book Your Retreat Now</h5>
-            <h5>Date: <span style={{ fontWeight: '400' }}>14th December 2024 to 15th December 2024 (1 Night, 2 Days)</span>
+            <h5>Date: <span style={{ fontWeight: '400' }}>4th January 2025 to 5th January 2025 (1 Night, 2 Days)</span>
             </h5>
             <h5>
               Cost:  <span style={{ fontWeight: '400' }}>Rs. 10,000/- (Per Person – Inclusive of 8 Meals)</span>
             </h5>
-            <h5>Time:  <span style={{ fontWeight: '400' }}>8:00 AM (14th) to 7:00 PM (15th)</span></h5>
+            <h5>Time:  <span style={{ fontWeight: '400' }}>8:00 AM (4th) to 7:00 PM (5th)</span></h5>
             <h5>Call us at <a href='tel: + 91 7738155500'>+ 91 7738155500</a>  or email us at <a href='mailto:info@theyogainstitute.org'>info@theyogainstitute.org</a></h5>
           </div>
           <Link
@@ -120,11 +120,11 @@ const AlibaugCarousel = () => {
                 : `/user/sign-in/?location=detox-cleanse-yoga-retreat`//&date=${selectDate}
             }
           >
-            <EnrollBtn text={'Book Now'} buttonAction={() => { addToCart('Detox and Cleanse Yoga Retreat','/detox-cleanse-yoga-retreat','8:00 AM (14th) to 7:00 PM (15th)') }} /></Link>
+            <EnrollBtn text={'Book Now'} buttonAction={() => { addToCart('Detox and Cleanse Yoga Retreat', '/detox-cleanse-yoga-retreat', '8:00 AM (14th) to 7:00 PM (15th)') }} /></Link>
         </div>
-      </div> */}
+      </div>
 
-      <div className="alibaug-container img-rev" style={{ marginTop: '48px' }}>
+      <div className="alibaug-container img-rev">
         <div className="alibaug-column alibaug-column-2">
           <h2> Deep Dive Yoga and Meditation Retreat</h2>
           <p>
@@ -133,12 +133,12 @@ const AlibaugCarousel = () => {
           </p>
           <div className="apply-address">
             <h5>Book Your Retreat Now</h5>
-            <h5>Date: <span style={{ fontWeight: '400' }}> 21st December 2024 to 22nd December 2024 (1 Night, 2 Days)</span>
+            <h5>Date: <span style={{ fontWeight: '400' }}> 11th January 2025 to 12th January 2025 (1 Night, 2 Days)</span>
             </h5>
             <h5>
               Cost: <span style={{ fontWeight: '400' }}>Rs. 10,000/- (Per Person – Inclusive of 8 Meals)</span>
             </h5>
-            <h5>Time: <span style={{ fontWeight: '400' }}>8:00 AM (21st) to 7:00 PM (22nd)</span></h5>
+            <h5>Time: <span style={{ fontWeight: '400' }}>8:00 AM (11th) to 7:00 PM (12th)</span></h5>
             <h5>Call us at <a href='tel: + 91 7738155500'>+ 91 7738155500</a>  or email us at <a href='mailto:info@theyogainstitute.org'>info@theyogainstitute.org</a></h5>
           </div>
           <Link
@@ -167,12 +167,12 @@ const AlibaugCarousel = () => {
           </p>
           <div className="apply-address">
             <h5>Book Your Retreat Now</h5>
-            <h5>Date: <span style={{ fontWeight: '400' }}> 28th December 2024 to 29th December 2024 (1 Night, 2 Days)</span>
+            <h5>Date: <span style={{ fontWeight: '400' }}> 18th January 2025 to 19th January 2025 (1 Night, 2 Days)</span>
             </h5>
             <h5>
               Cost: <span style={{ fontWeight: '400' }}>Rs. 10,000/- (Per Person – Inclusive of 8 Meals)</span>
             </h5>
-            <h5>Time: <span style={{ fontWeight: '400' }}>8:00 AM (28th) to 7:00 PM (29th)</span></h5>
+            <h5>Time: <span style={{ fontWeight: '400' }}>8:00 AM (18th) to 7:00 PM (19th)</span></h5>
             <h5>Call us at <a href='tel: + 91 7738155500'>+ 91 7738155500</a>  or email us at <a href='mailto:info@theyogainstitute.org'>info@theyogainstitute.org</a></h5>
           </div>
           <Link
