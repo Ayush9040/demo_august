@@ -284,13 +284,11 @@ const SignIn = () => {
   // const [token, setToken] = useState(null);
   const [isLocationCart, setIsLocationCart] = useState(false);
   const [isAnyInputFocused, setIsAnyInputFocused] = useState(false); // State to track focus
-
   const handleFocus = () => {
     if (window.innerWidth <= 768) {
       setIsAnyInputFocused(true); // Set to true when any input is focused
     }
   };
-
   const handleBlur = () => {
     if (window.innerWidth <= 768) {
       setIsAnyInputFocused(false);
@@ -304,6 +302,7 @@ const SignIn = () => {
 
     // Check if current path is 'sign-in'
     const isSignInPath = currentPath.includes('sign-in');
+
     // If we are on the sign-in path
     if (isSignInPath) {
       // If locationParam is null or empty, set isLocationCart to true
@@ -1722,7 +1721,7 @@ const SignIn = () => {
         const lastPageUrl = sessionStorage.getItem('last_page_url') || 'Direct Visit';
         console.log("lastPageUrl ", lastPageUrl)
 
-        const url2 = "/user/sign-in?location=cart";
+        const url2 = "/user/sign-in/?location=cart";
 
         if (lastPageUrl && lastPageUrl.includes(url2)) {
           sessionStorage.removeItem('last_page_url_2');
@@ -1938,6 +1937,8 @@ const SignIn = () => {
                           ref={(el) => (inputRefs.current[index] = el)}
                           inputMode="numeric" // Add this line
                           pattern="[0-9]*" // Optionally, add this for better compatibility
+                          onFocus={handleFocus} // Trigger when input is focused
+                          onBlur={handleBlur}
                         />
                       );
                     })}
@@ -1972,11 +1973,11 @@ const SignIn = () => {
               {/* Signup page */}
               {
                 (pageIndex == '3' || pageIndex == '4') && <>
-                  <div className='header header-3'>Namaste 🙏 Please Fill Your Details</div>
+                  <div className='header header-3'><span className='mob-namsthe'>Namaste 🙏 Please Fill Your Details</span></div>
                   <div className='sub-header sub-header-3 wish-text' style={{ maxWidth: '430px' }}>Become a Part of The Yoga Institute Family & Sign-up for your preferred course</div>
                   <div className='sub-header sub-header-3 wish-text-mob'>Join The Yoga Institute Family </div>
 
-                  <div className='inp-group'>
+                  <div className='inp-group mob-row'>
 
 
                     <div className='width-100'>
@@ -1988,7 +1989,7 @@ const SignIn = () => {
                           value={formData.firstName}
                           onChange={(e) => { setFormData({ ...formData, firstName: e.target.value }) }}
                           type="text"
-                          placeholder="Enter your first name"
+                          placeholder="Enter first name"
                           className="custom-input"
                         />
                       </div>
@@ -2004,7 +2005,7 @@ const SignIn = () => {
                         <input
                           disabled={pageIndex == '4' ? true : false}
                           type="text"
-                          placeholder="Enter your Last name"
+                          placeholder="Enter Last name"
                           value={formData.lastName}
                           onChange={(e) => { setFormData({ ...formData, lastName: e.target.value }) }}
                           className="custom-input"
@@ -2079,7 +2080,7 @@ const SignIn = () => {
                       {formData?.errorIndex == 6 &&
                         <div style={{ color: '#FF3B30' }}>Enter address line 2 </div>}
                     </div>
-                    <div className='form_error width-100'>
+                    <div className='form_error width-100  mt-4'>
                       <div className='inp-label mg-t-20'>Gender <span>*</span></div>
                       <Select
 
@@ -2346,6 +2347,8 @@ const SignIn = () => {
                             inputMode="numeric" // Add this line
                             pattern="[0-9]*" // Optionally, add this for better compatibility
                             value={data}
+                            onFocus={handleFocus} // Trigger when input is focused
+                            onBlur={handleBlur}
                           />
                         );
                       })}
@@ -2440,6 +2443,8 @@ const SignIn = () => {
                             ref={(el) => (inputRefs.current[index] = el)}
                             inputMode="numeric" // Add this line
                             pattern="[0-9]*" // Optionally, add this for better compatibility
+                            onFocus={handleFocus} // Trigger when input is focused
+                            onBlur={handleBlur}
                           />
                         );
                       })}
@@ -2475,9 +2480,9 @@ const SignIn = () => {
                 {
                   (pageIndexEmail == '3') && <>
                     <div className='header header-3'>Namaste 🙏 Please Fill Your Details</div>
-                    <div className='sub-header sub-header-3 wish-text' style={{ maxWidth: '430px' }}>Become a Part of The Yoga Institute Family & Sign-up for your preferred course</div>
+                    <div className='sub-header sub-header-3 wish-text' style={{ maxWidth: '430px' }}><span className='mob-namsthe'>Become a Part of The Yoga Institute Family & Sign-up for your preferred course</span></div>
                     <div className='sub-header sub-header-3 wish-text-mob'>Join The Yoga Institute Family </div>
-                    <div className='inp-group'>
+                    <div className='inp-group mob-row'>
                       <div className='width-100'>
                         <div className='inp-label mg-t-20'>First Name <span>*</span></div>
                         <div className={formData?.errorIndex == 3 ? "form-inp err-inp" : "form-inp"}>
@@ -2486,7 +2491,7 @@ const SignIn = () => {
                             value={formData.firstName}
                             onChange={(e) => { setFormData({ ...formData, firstName: e.target.value }) }}
                             type="text"
-                            placeholder="Enter your first name"
+                            placeholder="Enter first name"
                             className="custom-input"
                           />
                         </div>
@@ -2499,7 +2504,7 @@ const SignIn = () => {
                           <input
                             disabled={pageIndex == '4' ? true : false}
                             type="text"
-                            placeholder="Enter your Last name"
+                            placeholder="Enter Last name"
                             value={formData.lastName}
                             onChange={(e) => { setFormData({ ...formData, lastName: e.target.value }) }}
                             className="custom-input"
@@ -2547,7 +2552,7 @@ const SignIn = () => {
                         {formData?.errorIndex == 6 &&
                           <div style={{ color: '#FF3B30' }}>Enter address line 2 </div>}
                       </div>
-                      <div className='form_error width-100'>
+                      <div className='form_error width-100 mt-4'>
                         <div className='inp-label mg-t-20'>Gender <span>*</span></div>
                         <Select
                           isDisabled={pageIndex == '4' ? true : false}
@@ -2659,7 +2664,7 @@ const SignIn = () => {
           </div >
         </div >
       </div >
-      <div className={(pageIndex <= 2 && pageIndexEmail <= 2) ? "signin-banner img-1" : "signin-banner img-2"}>
+      <div className={(pageIndex <= 2 && pageIndexEmail <= 2) ? (!isAnyInputFocused ? "signin-banner img-1" : 'hide-banner') : "signin-banner img-2"}>
       </div>
 
     </div >
