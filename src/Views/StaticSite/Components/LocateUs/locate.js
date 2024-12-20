@@ -109,7 +109,7 @@ export const locateData = [
           'Royal College of Arts, Science & Commerce , Bhaktivedanta Swami Marg, Srishti Complex, Mira Road East, Maharashtra 401107.',
         // email: 'juhuandheri@theyogainstitute.in',
         url: 'https://jal.theyogainstitute.org/',
-        phone: ['+91-7738162699', '+91-9136059464'],
+        phone: ['+91-90043533320', '+91-8655940060'],
         toRedirect: true,
       },
       {

@@ -283,7 +283,19 @@ const SignIn = () => {
   const phoneNumberFromRedux = useSelector((state) => state.auth.user.data?.phoneNumber);
   // const [token, setToken] = useState(null);
   const [isLocationCart, setIsLocationCart] = useState(false);
+  const [isAnyInputFocused, setIsAnyInputFocused] = useState(false); // State to track focus
 
+  const handleFocus = () => {
+    if (window.innerWidth <= 768) {
+      setIsAnyInputFocused(true); // Set to true when any input is focused
+    }
+  };
+
+  const handleBlur = () => {
+    if (window.innerWidth <= 768) {
+      setIsAnyInputFocused(false);
+    }
+  };
   // Function to get query parameters from URL
   const checkLocationInURL = () => {
     const queryParams = new URLSearchParams(window.location.search); // Get the query params from URL
@@ -292,7 +304,6 @@ const SignIn = () => {
 
     // Check if current path is 'sign-in'
     const isSignInPath = currentPath.includes('sign-in');
-
     // If we are on the sign-in path
     if (isSignInPath) {
       // If locationParam is null or empty, set isLocationCart to true
@@ -332,8 +343,8 @@ const SignIn = () => {
       padding: '0 !important', // Ensure no padding is applied
       // height: 1/0, // Adjust the height of the select input
       // minHeight: '24px !important', // Ensure the minimum height is applied
-      // height: '40px', // Set your desired height here
-      minHeight: 'calc(2.25vw)', // Ensure minimum height
+      height: '40px', // Set your desired height here
+      // minHeight: 'calc(2.25vw)', // Ensure minimum height
       // width: 'fitContent',
       // padding: '0.25rem 0.25rem',
       // marginTop: '2rem',
@@ -1711,7 +1722,7 @@ const SignIn = () => {
         const lastPageUrl = sessionStorage.getItem('last_page_url') || 'Direct Visit';
         console.log("lastPageUrl ", lastPageUrl)
 
-        const url2 = "/user/sign-in/?location=cart";
+        const url2 = "/user/sign-in?location=cart";
 
         if (lastPageUrl && lastPageUrl.includes(url2)) {
           sessionStorage.removeItem('last_page_url_2');

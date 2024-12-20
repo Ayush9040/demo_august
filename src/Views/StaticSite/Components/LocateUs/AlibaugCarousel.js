@@ -41,7 +41,7 @@ const AlibaugCarousel = () => {
       },
     ],
   }
-  const addToCart = (title,extractedKey,timing) => {
+  const addToCart = (title, extractedKey, timing) => {
     // Trigger CleverTap event on button click
     if (window?.clevertap) {
       window.clevertap.event.push("Course_Enroll_Click", {
@@ -92,9 +92,9 @@ const AlibaugCarousel = () => {
             <img src={`${baseDomain}${santaCruz.slide3}`} />
           </div>
         </Slider>
-        <h2 style={{marginTop:'32px'}}>Our Rejuvenating Retreats</h2>
+        <h2 style={{ marginTop: '32px' }}>Our Rejuvenating Retreats</h2>
       </div>
-      {/* <div className="alibaug-container" style={{marginTop:'38px'}}>
+      <div className="alibaug-container" style={{ marginTop: '38px' }}>
         <div className="alibaug-column alibaug-column-1">
           <img src="images/DetoxCleanse.webp" />
         </div>
@@ -105,12 +105,14 @@ const AlibaugCarousel = () => {
           </p>
           <div className="apply-address">
             <h5>Book Your Retreat Now</h5>
-            <h5>Date: <span style={{ fontWeight: '400' }}>14th December 2024 to 15th December 2024 (1 Night, 2 Days)</span>
-            </h5>
+            {window.innerWidth <= 768 ?
+              <h5>Date: <br /><span style={{ fontWeight: '400' }}>4th January 2025 to 5th January 2025 (1 Night, 2 Days)</span>
+              </h5> : <h5>Date: <span style={{ fontWeight: '400' }}>4th January 2025 to 5th January 2025 (1 Night, 2 Days)</span>
+              </h5>}
             <h5>
               Cost:  <span style={{ fontWeight: '400' }}>Rs. 10,000/- (Per Person – Inclusive of 8 Meals)</span>
             </h5>
-            <h5>Time:  <span style={{ fontWeight: '400' }}>8:00 AM (14th) to 7:00 PM (15th)</span></h5>
+            <h5>Time:  <span style={{ fontWeight: '400' }}>8:00 AM (4th) to 7:00 PM (5th)</span></h5>
             <h5>Call us at <a href='tel: + 91 7738155500'>+ 91 7738155500</a>  or email us at <a href='mailto:info@theyogainstitute.org'>info@theyogainstitute.org</a></h5>
           </div>
           <Link
@@ -120,11 +122,11 @@ const AlibaugCarousel = () => {
                 : `/user/sign-in/?location=detox-cleanse-yoga-retreat`//&date=${selectDate}
             }
           >
-            <EnrollBtn text={'Book Now'} buttonAction={() => { addToCart('Detox and Cleanse Yoga Retreat','/detox-cleanse-yoga-retreat','8:00 AM (14th) to 7:00 PM (15th)') }} /></Link>
+            <EnrollBtn text={'Book Now'} buttonAction={() => { addToCart('Detox and Cleanse Yoga Retreat', '/detox-cleanse-yoga-retreat', '8:00 AM (14th) to 7:00 PM (15th)') }} /></Link>
         </div>
-      </div> */}
+      </div>
 
-      <div className="alibaug-container img-rev"  style={{marginTop:'48px'}}>
+      <div className="alibaug-container img-rev">
         <div className="alibaug-column alibaug-column-2">
           <h2> Deep Dive Yoga and Meditation Retreat</h2>
           <p>
@@ -133,22 +135,26 @@ const AlibaugCarousel = () => {
           </p>
           <div className="apply-address">
             <h5>Book Your Retreat Now</h5>
-            <h5>Date: <span style={{ fontWeight: '400' }}> 21st December 2024 to 22nd December 2024 (1 Night, 2 Days)</span>
-            </h5>
+            {window.innerWidth <= 768 ? <h5>Dates: <br /> <span style={{ fontWeight: '400' }}> Retreat 1 - 21st December 2024 to 22nd December 2024 (1 Night, 2 Days)</span><br />
+              <span style={{ fontWeight: '400', position: 'relative', top: '10px' }}> Retreat 2 - 11th January 2025 to 12th January 2025 (1 Night, 2 Days)</span>
+            </h5> :
+              <h5>Dates: <span style={{ fontWeight: '400' }}> Retreat 1 - 21st December 2024 to 22nd December 2024 (1 Night, 2 Days)</span><br />
+                <span style={{ fontWeight: '400', marginLeft: '59.9px', lineHeight: '30px' }}> Retreat 2 - 11th January 2025 to 12th January 2025 (1 Night, 2 Days)</span>
+              </h5>}
             <h5>
               Cost: <span style={{ fontWeight: '400' }}>Rs. 10,000/- (Per Person – Inclusive of 8 Meals)</span>
             </h5>
-            <h5>Time: <span style={{ fontWeight: '400' }}>8:00 AM (21st) to 7:00 PM (22nd)</span></h5>
+            <h5>Time: <span style={{ fontWeight: '400' }}>8:00 AM (1st day) to 7:00 PM (2nd day)</span></h5>
             <h5>Call us at <a href='tel: + 91 7738155500'>+ 91 7738155500</a>  or email us at <a href='mailto:info@theyogainstitute.org'>info@theyogainstitute.org</a></h5>
           </div>
           <Link
             to={
               isLoggedIn
                 ? `/enrollment/deep-dive-yoga-meditation-retreat`///?date=${selectDate}
-                : `/user/sign-in/?location=deep-dive-yoga-meditation-retreat`//&date=${selectDate}
+                : `/user/sign-in?location=deep-dive-yoga-meditation-retreat`//&date=${selectDate}
             }
           >
-            <EnrollBtn text={'Book Now'} buttonAction={() => { addToCart('Deep Dive Yoga and Meditation Retreat','/deep-dive-yoga-meditation-retreat','8:00 AM (21st) to 7:00 PM (22nd)') }} /></Link>
+            <EnrollBtn text={'Book Now'} buttonAction={() => { addToCart('Deep Dive Yoga and Meditation Retreat', '/deep-dive-yoga-meditation-retreat', '8:00 AM (21st) to 7:00 PM (22nd)') }} /></Link>
         </div>
         <div className="alibaug-column alibaug-column-1">
           <img src="images/DeepOneYoga.webp" />
@@ -167,22 +173,24 @@ const AlibaugCarousel = () => {
           </p>
           <div className="apply-address">
             <h5>Book Your Retreat Now</h5>
-            <h5>Date: <span style={{ fontWeight: '400' }}> 28th December 2024 to 29th December 2024 (1 Night, 2 Days)</span>
-            </h5>
+            {window.innerWidth <= 768 ?
+              <h5>Date: <br /><span style={{ fontWeight: '400' }}> 18th January 2025 to 19th January 2025 (1 Night, 2 Days)</span>
+              </h5> : <h5>Date: <span style={{ fontWeight: '400' }}> 18th January 2025 to 19th January 2025 (1 Night, 2 Days)</span>
+              </h5>}
             <h5>
               Cost: <span style={{ fontWeight: '400' }}>Rs. 10,000/- (Per Person – Inclusive of 8 Meals)</span>
             </h5>
-            <h5>Time: <span style={{ fontWeight: '400' }}>8:00 AM (28th) to 7:00 PM (29th)</span></h5>
+            <h5>Time: <span style={{ fontWeight: '400' }}>8:00 AM (18th) to 7:00 PM (19th)</span></h5>
             <h5>Call us at <a href='tel: + 91 7738155500'>+ 91 7738155500</a>  or email us at <a href='mailto:info@theyogainstitute.org'>info@theyogainstitute.org</a></h5>
           </div>
           <Link
             to={
               isLoggedIn
                 ? `/enrollment/forest-yoga-retreat`///?date=${selectDate}
-                : `/user/sign-in/?location=forest-yoga-retreat`//&date=${selectDate}
+                : `/user/sign-in?location=forest-yoga-retreat`//&date=${selectDate}
             }
           >
-            <EnrollBtn text={'Book Now'} buttonAction={() => { addToCart('Forest Yoga Retreat','/forest-yoga-retreat','8:00 AM (28th) to 7:00 PM (29th)') }} /></Link>
+            <EnrollBtn text={'Book Now'} buttonAction={() => { addToCart('Forest Yoga Retreat', '/forest-yoga-retreat', '8:00 AM (28th) to 7:00 PM (29th)') }} /></Link>
         </div>
 
       </div>
@@ -198,7 +206,11 @@ const AlibaugCarousel = () => {
                 <li>Comfortable king-sized or dual beds</li>
                 <li>Private lavatories with eco-friendly toiletries</li>
                 <li>Air-conditioning and ceiling fans for added comfort</li>
-                <li>Shared or private room alternatives based totally on guest desire</li>
+                <li>Retreat prices includes accommodation on a double occupancy basis where one room is shared between 2 members
+                </li>
+                <li>
+                  Private Room alternatives can be requested & will be subject to extra charges and availability
+                </li>
               </ul>
             </div>
             <h5 style={{ fontSize: '2.2rem' }}>Dining</h5>

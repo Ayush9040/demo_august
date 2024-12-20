@@ -58,7 +58,7 @@ const UpcomingDurationView = ({ pageDate, setCourseDuration, setCourseDurationSe
    // Handle enrollment button click
    const handleEnrollClick = () => {
     const dateToPass = selectedDate ? selectedDate : 'null';
-    isLoggedIn ? navigate(`/enrollment/${pageDate.key}/?date=${encodeURIComponent(dateToPass)}`) : navigate(`/user/sign-in/?location=${pageDate.key}/?date=${encodeURIComponent(dateToPass)}`);
+    isLoggedIn ? navigate(`/enrollment/${pageDate.key}/?date=${encodeURIComponent(dateToPass)}`) : navigate(`/user/sign-in?location=${pageDate.key}/?date=${encodeURIComponent(dateToPass)}`);
   };
 
 

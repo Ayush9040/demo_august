@@ -72,7 +72,7 @@ const Courses = () => {
   let convertedClasses = classesArr.filter((_, index) => index !== 9 && index !== 12);//used to remove satsand and samatvam in other blocks
   let dataMaster = [[c200hr[0], c500hr[0], c900hr[0], c200hr[1], c900hr[1], c200hr[2], c900hr[2], c200hr[3], c900hr[3], c200hr[4], c900hr[4], c200hr[5], c900hr[5]],
   [campsArr[10], campsArr[8], campsArr[11], campsArr[9], campsArr[12]],
-  convertedClasses, mostPopular, [...campsArr, ...convertedClasses],
+    convertedClasses, mostPopular, [...campsArr, ...convertedClasses],
   [certificateArr[3], certificateArr[1], certificateArr[0]], [classesArr[9], classesArr[12], ...sepecialEventArr]]
 
   const [data, setData] = useState([dataMaster[0].slice(0, 3), dataMaster[1].slice(0, 3),
@@ -387,11 +387,11 @@ const Courses = () => {
             text: '3 Months Weekend YTTC Online – English - Batch 5',
             online: true, month3: true, weekends: true,
           },
-          {
-            url: '/200-hrs-part-time-ttc-online-english-batch-6',
-            text: '2 Months YTTC Online – English - Batch 6',
-            online: true, month2: true, weekDays: true,
-          },
+          // {
+          //   url: '/200-hrs-part-time-ttc-online-english-batch-6',
+          //   text: '2 Months YTTC Online – English - Batch 6',
+          //   online: true, month2: true, weekDays: true,
+          // },
 
           {
             url: '/500-hrs-online-yoga-teacher-training-course-intermediate-level',
@@ -731,7 +731,7 @@ const Courses = () => {
         />}
       <div className="courses-container" onClick={() => setIsFilterOpened(false)}>
         {/* <CommonBannerNavPrimary innerNav={false} /> */}
-        <InnerNavComponent abc={CoursesBan}/>
+        <InnerNavComponent abc={CoursesBan} />
 
         <div style={{
           position: 'sticky',
@@ -943,7 +943,8 @@ const Courses = () => {
             <FontAwesomeIcon icon={faSearch} />
           </label>
         </div> */}
-          </div></div>
+          </div>
+        </div>
         <div className="popular-courses">
           <div className="course-accordian">
             <Accordion allowZeroExpanded>
@@ -1057,11 +1058,8 @@ const Courses = () => {
             <img src="https://ecom-static-site-prod.s3.ap-south-1.amazonaws.com/SEO-New-Images/course/21-days+-better-living-course.webp" alt='more than just reading' loading='lazy' />
           </div>
         </div>
-
+        <div></div>
         {courseCardData && courseCardData.map((item, i) => {
-
-
-
           // setPathParam(item.title)
           return (
             <>

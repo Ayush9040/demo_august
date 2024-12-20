@@ -10,7 +10,7 @@ const authRoutes = [
     path: '/sign-in/*',
     exact: true,
     id: 'statisSiteUnderSignIn',
-    routePath: '/sign-in/*',
+    routePath: '/sign-in',
     name: 'SignIn',
   },
   // {
