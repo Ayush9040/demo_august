@@ -1056,7 +1056,7 @@ const EnrollmentForm = ({
   return (
     <div className="main_div">
 
-      <div className="grid_box">
+      <div className="grid_box1">
         <div className="right_grid">
           <form>
             {/* <div className="medical-section">
@@ -1100,67 +1100,64 @@ const EnrollmentForm = ({
               handleResidential={handleResidential}
               dateDurationChange={dateDurationChange}
             />
+            {(formData.startDate && values?.endDateFormat) &&
+              <div className='terms' style={{ fontSize: '2rem' }}>Start date: <b>{values.startDate}</b> <br />
+                Valid till: <b>{values?.endDateFormat}</b></div>}
 
-          </form>
+            <div className="bottom_container_btn">
+              <div className='terms'>
+                <label>
+                  <input
+                    type="checkbox"
+                    checked={isChecked}
+                    onChange={handleCheckboxChange}
+                    id='myCheckbox'
+                  />
+                  I agree and accept the
 
-          {(formData.startDate && values?.endDateFormat) &&
-            <div className='terms' style={{ fontSize: '2rem' }}>Start date: <b>{values.startDate}</b> <br />
-              Valid till: <b>{values?.endDateFormat}</b></div>}
+                </label>
 
-          <div className="bottom_container_btn">
-            <div className='terms'>
-              <label>
-                <input
-                  type="checkbox"
-                  checked={isChecked}
-                  onChange={handleCheckboxChange}
-                  id='myCheckbox'
-                />
-                I agree and accept the
+                <a
+                  // href="https://theyogainstitute.org/terms-and-conditions"
+                  // target="_blank"
+                  onClick={handleOpen}
+                  className='terms_text'
+                  style={{ color: "rgba(0, 0, 0, 1)", marginLeft: "3px", cursor: "pointer" }}
+                  rel="noopener noreferrer">
+                  terms and conditions
+                </a>
 
-              </label>
+                {open && (
+                  // <MessageModal 
+                  //   message={<TermsCondition />} 
+                  //   closePopup={handleClose} 
+                  //   type="Terms and Conditions" // You can pass any other props as needed
+                  // />
+                  // <TermsAndConditionsModal />
+                  <CustomModal isShippingModalOpen={handleOpen} setIsShipppingModalOpen={handleClose} />
+                )}
 
-              <a
-                // href="https://theyogainstitute.org/terms-and-conditions"
-                // target="_blank"
-                onClick={handleOpen}
-                className='terms_text'
-                style={{ color: "rgba(0, 0, 0, 1)", marginLeft: "3px", cursor: "pointer" }}
-                rel="noopener noreferrer">
-                terms and conditions
-              </a>
-
-              {open && (
-                // <MessageModal 
-                //   message={<TermsCondition />} 
-                //   closePopup={handleClose} 
-                //   type="Terms and Conditions" // You can pass any other props as needed
-                // />
-                // <TermsAndConditionsModal />
-                <CustomModal isShippingModalOpen={handleOpen} setIsShipppingModalOpen={handleClose} />
-              )}
-
-              {isChecked === false ? empty === 19 && (
-                <div style={{ color: 'red', marginLeft: '0', marginTop: '1rem', fontSize: '1.2rem' }} className='mar_top'>
-                  *Please agree to the condition!
-                </div>
-              ) : ''}
-              {console.log(isChecked)}
-            </div>
-            <div className="button_box">
-              {/* <button className="next_button" onClick={handleSubmit}>
+                {isChecked === false ? empty === 19 && (
+                  <div style={{ color: 'red', marginLeft: '0', marginTop: '1rem', fontSize: '1.2rem' }} className='mar_top'>
+                    *Please agree to the condition!
+                  </div>
+                ) : ''}
+                {console.log(isChecked)}
+              </div>
+              <div className="button_box">
+                {/* <button className="next_button" onClick={handleSubmit}>
             Proceed to payment
             </button> */}
 
-              {<button type="button" onClick={handleSubmit} className={!isLoad ? 'next_button button register-primary-btn' : 'next_button button register-primary-btn no-event'} disabled={isLoad}>
-                {setDate ? <><span id="txt">Register&nbsp; </span> </> : !isLoad ? <><span id="txt" style={{ fontSize: '14px', fontWeight: '500' }}>Pay & confirm enrollment </span> </> : <><span className="loader">
-                  <span className="dot"></span>
-                  <span className="dot"></span>
-                  <span className="dot"></span>
-                </span></>}
-              </button>}
+                {<button type="button" onClick={handleSubmit} className={!isLoad ? 'next_button button register-primary-btn' : 'next_button button register-primary-btn no-event'} disabled={isLoad}>
+                  {setDate ? <><span id="txt">Register&nbsp; </span> </> : !isLoad ? <><span id="txt" style={{ fontSize: '14px', fontWeight: '500' }}>Pay & confirm enrollment </span> </> : <><span className="loader">
+                    <span className="dot"></span>
+                    <span className="dot"></span>
+                    <span className="dot"></span>
+                  </span></>}
+                </button>}
 
-              {/* {isResidential && <button type="button" onClick={handleSubmit} className={!isLoad ? 'next_button button register-primary-btn' : 'next_button button register-primary-btn no-event'} disabled={isLoad}>
+                {/* {isResidential && <button type="button" onClick={handleSubmit} className={!isLoad ? 'next_button button register-primary-btn' : 'next_button button register-primary-btn no-event'} disabled={isLoad}>
               {!isLoad ? <><span id="txt">Submit&nbsp; </span> </> : <><span className="loader">
                 <span className="dot"></span>
                 <span className="dot"></span>
@@ -1168,10 +1165,13 @@ const EnrollmentForm = ({
               </span></>}
             </button>} */}
 
+              </div>
             </div>
-          </div>
+          </form>
+
+
         </div>
-        <div className="left_grid">
+        <div className="left_grid" style={{ width:'38%',marginTop:'-340px',marginLeft:'20px' }}>
           <div className="details_box details_personal_box">
             <div className="details_course_box ">
               <div className="detail_image_box">

@@ -523,14 +523,15 @@
 // ********************************* CSS Check ****************************************
 
 .enrollment_container {
-  height: 95%;
-  width: 95%;
+  // height: fit-content;
+  width: 98%;
   border: 2px solid rgba(202, 70, 37, 1);
-  border-radius: 40px;
-  margin: 2%;
+  border-radius: 2rem;
+  margin: 1% 0 1% 1%;
   justify-content: center;
   // background-image: url('../../../../../public/images/bg_enroll.png');
   background-color: rgba(202, 70, 37, 0.02);
+  padding-bottom: 24vh;
 
   input::-webkit-outer-spin-button,
   input::-webkit-inner-spin-button {
@@ -1444,28 +1445,32 @@ input[type='radio']:checked::before {
 // course Details starts
 
 .course-main-container {
-  height: 95%;
+  // height: 95%;
   margin: 2%;
-  width: 95%;
+  width: 100%;
 
   .course-secondary-container {
     display: flex;
-
-    flex-direction: column;
-    height: 50%;
-    margin: 0 auto;
-    text-align: left;
+    gap: 24px;
+    // flex-direction: column;
+    // height: 50%;
+    // margin: 0 auto;
+    // text-align: left;
     // width: fit-content;
+    width: 100%;
+    align-items: start;
 
     .details_box {
       // border: 1px solid #60606080 !important;
       border-radius: 20px;
       // max-width: 780px;
-      min-width: auto;
+      // min-width: auto;
       height: auto;
       background-color: #fff;
       border: none;
       box-shadow: 0px 11.58px 23px 0px rgba(0, 0, 0, 0.04);
+      width: 100% !important;
+      padding-bottom: 2px;
 
       .details_course_box {
         display: flex;
@@ -1492,14 +1497,14 @@ input[type='radio']:checked::before {
         }
 
         .detail_image_box {
-          width: 320px;
-          height: 240px;
+          width: 100px; //320px;
+          height: 100px; //240px;
           // min-width: 250px;
 
           img {
             border-radius: 30px;
-            height: 240px;
-            width: 320px;
+            height: 100px; //240px;
+            width: 100px; //320px;
             padding: 17px;
             aspect-ratio: 16 / 13.2;
             object-fit: cover;
@@ -2151,16 +2156,18 @@ input[type='radio']:checked::before {
 }
 
 .details_newName {
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 500;
+  line-height: 27px;
   color: rgba(0, 0, 0, 1);
 }
 
 .details_desc_info {
   display: flex;
   justify-content: space-between;
-  margin-top: 16px;
+  margin-top: -16px;
   padding-right: 10px;
+  margin-left: 14px;
 }
 
 .details_duration_info {
@@ -2176,7 +2183,7 @@ input[type='radio']:checked::before {
 }
 
 .tenure_course {
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 400;
   color: rgba(0, 0, 0, 1);
   text-align: end;
@@ -2240,6 +2247,7 @@ input[type='radio']:checked::before {
   box-shadow: 0px 0px 13px 0px #0000000A;
 
   box-shadow: 0px 11.58px 23px 0px #0000000A;
+
 
 }
 
@@ -2380,8 +2388,11 @@ input[type='radio']:checked::before {
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   display: flex;
-  justify-content: space-between;
+  // justify-content: space-between;
   align-items: center;
+  width: 52.6%;
+  position: absolute;
+  right: 3vw;
 }
 
 .terms label {
@@ -2455,12 +2466,12 @@ input[type=checkbox]:checked+label:before {
 }
 
 .details_wrapper_duration {
-  border-radius: 8px;
-  border: 1px solid rgba(96, 96, 96, 0.3);
+  // border-radius: 8px;
+  // border: 1px solid rgba(96, 96, 96, 0.3);
   // min-width: 180px;
-  width: 100%;
-  padding: 4px 12px 8px 12px;
-  text-align: center;
+  // width: 100%;
+  // padding: -4px 0 0 12px;
+  // text-align: center;
 }
 
 .time_header {
@@ -2473,10 +2484,10 @@ input[type=checkbox]:checked+label:before {
   // display: none;
   border-radius: 8px;
   border: 1px solid rgba(96, 96, 96, 0.3);
-  width: 98%;
+  width: 96%;
   text-align: center;
   margin-top: 12px;
-  // margin-right: 10px;
+  margin: 8px 10px;
   padding: 10px 50px;
 }
 
@@ -2947,12 +2958,12 @@ input[type=checkbox]:checked+label:before {
 
   .bottom_container_btn {
     display: flex;
-    position: fixed;
-    bottom: 0px;
-    width: 100%;
+    // position: fixed;
+    // bottom: 0px;
+    // width: 100%;
     background: rgb(255, 243, 240);
     margin-left: 0px;
-    left: 0;
+    // left: 0;
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
     border-top-left-radius: 20px;

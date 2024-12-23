@@ -791,7 +791,9 @@ const Enrollment = () => {
             </Link>
             <span className="flower">{legacy2}</span>
 
-            <div className="student">Your Selected Yoga Course Details<br /> <span className='enroll_subtitle'>A step towards inner transformation🧘‍✨</span> </div>
+            <div className="student">Your Selected Yoga Course Details<br />
+              {/* <span className='enroll_subtitle'>A step towards inner transformation🧘‍✨</span>  */}
+            </div>
 
             {/* <ul className="header_ul">
             <li
