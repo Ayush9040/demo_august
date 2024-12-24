@@ -17493,8 +17493,8 @@ const alibaug = {
         templateNonResidential: '',
       },
     },
-    image: `/images/DetoxCleanse.webp`,
-    cardImage: `/images/DetoxCleanse.webp`,
+    image: `/images/DetoxCleanse.jpg`,
+    cardImage: `/images/DetoxCleanse.jpg`,
     mostPopular: false,
     metaDescription:
       'Towards the end, there is an enlightening question and answer session. ',
@@ -17617,8 +17617,8 @@ const alibaug = {
         templateNonResidential: '',
       },
     },
-    image: `/images/DeepOneYoga.webp`,
-    cardImage: `/images/DeepOneYoga.webp`,
+    image: `/images/DeepOneYoga.jpg`,
+    cardImage: `/images/DeepOneYoga.jpg`,
     mostPopular: false,
     metaDescription:
       'Towards the end, there is an enlightening question and answer session. ',
@@ -17630,7 +17630,7 @@ const alibaug = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'classes',
-    dates: ['21st Dec 2024 to 22nd Dec 2024','11th Jan 2025 to 12th Jan 2025'
+    dates: ['11th Jan 2025 to 12th Jan 2025'
     ],
     online: false,
     onCampus: false,
@@ -17741,8 +17741,8 @@ const alibaug = {
         templateNonResidential: '',
       },
     },
-    image: "/images/ForestYoga.webp",
-    cardImage: "/images/ForestYoga.webp",
+    image: "/images/ForestYoga.jpg",
+    cardImage: "/images/ForestYoga.jpg",
     mostPopular: false,
     metaDescription:
       'Towards the end, there is an enlightening question and answer session. ',
