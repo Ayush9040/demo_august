@@ -10,6 +10,7 @@ import DatePicker from 'react-datepicker';
 import UpcomingDuration from './UpcomingDuration';
 import 'react-datepicker/dist/react-datepicker.css';
 import './formstyles.scss'
+import CustomModal from '../TermsandCondition/t&Cpopup';
 
 
 const CourseDetails = ({
@@ -28,8 +29,13 @@ const CourseDetails = ({
   handleResidential,
   formattedDates,
   dateDurationChange,
-  highlightDetailBox
+  highlightDetailBox,
+  isEditStudentOpen,
+  setEditStudentOpen,
+  handleSubmit, isLoad
 }) => {
+  const [isChecked, setIsChecked] = useState(true); // Checkbox is checked by default
+  const [disData, setDisData] = useState('yes')
 
   const [optionsCount, setOptionsCount] = useState(0);
   const location = useLocation();
@@ -116,24 +122,8 @@ const CourseDetails = ({
   useEffect(() => {
     if (isSatsangPage) {
       setSetDate(true);
-      // setSelectDateValue({ label: 'No date Selected', value: 'No date Selected' });
-
-      // Set formData with 'No date Selected' only once when the path is /enrollment/satsang
-      // setFormData((prev) => ({
-      //   ...prev,
-      //   sdate: 'No date Selected',
-      //   courseDetails: {
-      //     ...prev.courseDetails,
-      //     date: 'No date Selected',
-      //   },
-      // }));
-
       console.log('form Data mode ', formData)
 
-      // setFormData({
-      //   ...formData,
-      //   mode: 'No mode Selected',
-      // })
 
       handleResidential(false);
       setSelectedOption('OFFLINE')
@@ -205,60 +195,6 @@ const CourseDetails = ({
     tomorrow.setDate(tomorrow.getDate() + 1);
     setMinDate(tomorrow);
   }, [currentCourse])
-
-  // const handleStartDate = (value) => {
-  //   console.log(value);
-  //   const day = value.getDate().toString().padStart(2, '0'); // Pad single digits with leading zero
-  //   console.log(day);
-  //   const month = (value.getMonth() + 1).toString().padStart(2, '0'); // Months are zero-based
-  //   console.log(month);
-  //   const year = value.getFullYear();
-
-
-  //   setCourseStartDate(`${day}/${month}/${year}`)
-
-  //   setValues((prev) => {
-  //     return {
-  //       ...prev, startDate: `${day}/${month}/${year}`
-  //     }
-  //   })
-  //   console.log(`${day}/${month}/${year}`);
-  //   setFormData({ ...formData, startDate: `${day}/${month}/${year}` })
-  //   console.log("Form dateeeee ", values)
-
-  //   if (values.endDate) { createEndDate(`${day}/${month}/${year}`, values.endDate) }
-  //   return `${day}/${month}/${year}`;
-  // }
-
-  // const createEndDate = (startDate, value) => {
-  //   // alert("Hello", value)
-  //   console.log("Start Date", startDate, " aaaaaaaaaaaaa Value ", value);
-  //   if(startDate === undefined || startDate === null){
-  //     return ;
-  //   }
-
-  //   if(value === undefined || value === null) {
-  //     return ;
-  //   }
-  //   // alert("OK")
-
-  //   // handleStartDate(startDate)
-
-  //   // setFormData({ ...formData, startDate: handleStartDate(startDate) })
-
-  //   console.log("Calling from create End Date ", startDate, value);
-  //   console.log("startDate ? startDate : values?.startDate ", startDate ? startDate : values?.startDate)
-  //   let endDate = formatDate(addMonths(parseDate(startDate ? startDate : values?.startDate), value))
-  //   console.log("Calling from End Date ", endDate);
-  //   setValues((prev) => {
-  //     return {
-  //       ...prev, endDate: value, endDateFormat: endDate
-  //     }
-  //   })
-  //   localStorage.setItem('courseEndDate', endDate)
-  //   setFormData({ ...formData, endDate: value, duration: value?.value })
-  //   dateDurationChange(value)
-  // }
 
   const handleStartDate = (value) => {
     console.log(value);
@@ -375,20 +311,7 @@ const CourseDetails = ({
       selectedMode: mode, // Add the selected mode to the object
     };
 
-    // Update the state with the new course data
-    // setCurrentCourse(updatedCourse);
   };
-  // const [loading, setLoading] = useState(false)
-
-  // const getBase64 = (file, cb)=>{
-  //   let reader = new FileReader()
-  //   reader.readAsDataURL(file)
-  //   reader.onload = function() {
-  //     cb(reader.result)
-  //   }
-  //   reader.onerror = function(error) {
-  //   }
-  // }
 
   const uploadDoc = async (file, type, changeValue) => {
     const url = await uploadFile(file, type)
@@ -428,202 +351,6 @@ const CourseDetails = ({
     setIsRegularPrice(currentCourse?.fees?.onlineFee);
     setEndDateCreated(false);
   }, [endDateCreated])
-
-
-  // const updatedFees = (course, mode) => {
-  //   switch (course) {
-  //   case 'certificate-program-on-yoga-for-cancer':
-  //     if (courseDate === '24th Nov 2023 to 30th Dec 2023') {
-  //       if (mode === 'ONLINE') return 20000
-  //     } else {
-  //       if (mode === 'ONLINE') return currentCourse.fees.onlineFee
-  //     }
-  //     break
-
-  //   case 'two-year-ttc':
-  //     if (courseDate === '2nd Dec 2023') {
-  //       if (mode === 'ONLINE') return 55000
-  //       if (mode === 'RESIDENTIAL') return 55000
-  //       if (mode === 'NONRESIDENTIAL') return 55000
-  //     } else {
-  //       if (mode === 'ONLINE') return currentCourse.fees.onlineFee
-  //       if (mode === 'NONRESIDENTIAL')
-  //         return currentCourse.fees.offlineFee.nonResidentialFee
-  //       if (mode === 'RESIDENTIAL')
-  //         return currentCourse.fees.offlineFee.residentialFee
-  //     }
-  //     break
-
-  //   case '21-days-better-living-course':
-  //     if (
-  //       courseDate === '5th Nov to 25th Nov 2023' || courseDate ===  '3rd Dec to 23rd Dec 2023'
-  //     ) {
-  //       if (mode === 'ONLINE') return 2100
-  //       if (mode === 'NONRESIDENTIAL') return 2100
-  //     } else {
-  //       if (mode === 'ONLINE') return currentCourse.fees.onlineFee
-  //       if (mode === 'NONRESIDENTIAL')
-  //         return currentCourse.fees.offlineFee.nonResidentialFee
-  //     }
-  //     break
-
-  //   case 'stress-management-camp':
-  //     if (
-  //       courseDate === '10th Dec 2023'
-  //     ) {
-  //       if (mode === 'ONLINE') return 500
-  //       if (mode === 'NONRESIDENTIAL') return 500
-  //     } else {
-  //       if (mode === 'ONLINE') return currentCourse.fees.onlineFee
-  //       if (mode === 'NONRESIDENTIAL')
-  //         return currentCourse.fees.offlineFee.nonResidentialFee
-  //     }
-  //     break
-
-  //   case 'seven-month-ttc':
-  //     if (
-  //       courseDate ==='1st Dec 2023'
-  //     ) {
-  //       if (mode === 'ONLINE') return 55000
-  //       if (mode === 'RESIDENTIAL') return 55000
-  //       if (mode === 'NONRESIDENTIAL') return 55000
-  //     } else {
-  //       if (mode === 'ONLINE') return currentCourse.fees.onlineFee
-  //       if (mode === 'RESIDENTIAL')
-  //         return currentCourse.fees.offlineFee.residentialFee
-  //       if (mode === 'NONRESIDENTIAL')
-  //         return currentCourse.fees.offlineFee.nonResidentialFee
-  //     }
-  //     break
-
-  //   case 'one-year-ttc':
-  //     if (
-  //       courseDate ==='1st Dec 2023'
-  //     ) {
-  //       if (mode === 'ONLINE') return 55000
-  //       if (mode === 'RESIDENTIAL') return 55000
-  //       if (mode === 'NONRESIDENTIAL') return 55000
-  //     } else {
-  //       if (mode === 'ONLINE') return currentCourse.fees.onlineFee
-  //       if (mode === 'RESIDENTIAL')
-  //         return currentCourse.fees.offlineFee.residentialFee
-  //       if (mode === 'NONRESIDENTIAL')
-  //         return currentCourse.fees.offlineFee.nonResidentialFee
-  //     }
-  //     break
-
-  //   case '21-days-better-living-course-batch-2':
-  //     if (
-  //       courseDate === '5th Nov to 25th Nov 2023' || courseDate === '3rd Dec to 23rd Dec 2023'
-  //     ) {
-  //       if (mode === 'ONLINE') return 2100
-  //       if (mode === 'NONRESIDENTIAL') return 2100
-  //     } else {
-  //       if (mode === 'ONLINE') return currentCourse.fees.onlineFee
-  //       if (mode === 'NONRESIDENTIAL')
-  //         return currentCourse.fees.offlineFee.nonResidentialFee
-  //     }
-  //     break
-  //   case '21-days-better-living-course-batch-3':
-  //     if (courseDate === '19th Nov to 9th Dec 2023') {
-  //       if (mode === 'ONLINE') return 2100
-  //       if (mode === 'NONRESIDENTIAL') return 2100
-  //     } else {
-  //       if (mode === 'ONLINE') return currentCourse.fees.onlineFee
-  //       if (mode === 'NONRESIDENTIAL')
-  //         return currentCourse.fees.offlineFee.nonResidentialFee
-  //     }
-  //     break
-
-  //   case 'meditation-foundation-course-online':
-  //     if (
-  //       courseDate === '6th Nov to 1st Dec 2023' || courseDate === '4th Dec to 29th Dec 2023'
-  //     ) {
-  //       if (mode === 'ONLINE') return 1000
-  //     } else {
-  //       if (mode === 'ONLINE') return currentCourse.fees.onlineFee
-  //     }
-  //     break
-  //   case 'certificate-course-on-advanced-pranayama-techniques':
-  //     if (
-  //       courseDate === '20th Nov to 11th Jan 2024 · Morning' || courseDate === '1st Dec to 24th Jan 2024 · Evening'
-  //     ) {
-  //       if (mode === 'ONLINE') return 20000
-  //     } else {
-  //       if (mode === 'ONLINE') return currentCourse.fees.onlineFee
-  //     }
-  //     break
-  //   // case 'certificate-course-on-advanced-pranayama-techniques':
-  //   //   if (
-  //   //     (courseDate === ('1st Dec 2023 to 24th Jan 2024'))
-  //   //   ) {
-  //   //     if (mode === 'ONLINE') return 20000
-  //   //   } else {
-  //   //     if (mode === 'ONLINE') return currentCourse.fees.onlineFee
-  //   //   }
-  //   //   break
-  //   case '200-hrs-part-time-ttc-on-campus-english':
-  //     if (courseDate === '4th Dec 2023 to 27th Jan 2024') {
-  //       if (mode === 'ONLINE') return 25000
-  //       if (mode === 'RESIDENTIAL') return 55000
-  //       if (mode === 'NONRESIDENTIAL') return 30000
-  //     } else {
-  //       if (mode === 'ONLINE') return currentCourse.fees.onlineFee
-  //       if (mode === 'RESIDENTIAL') return currentCourse.fees.offlineFee.residentialFee
-  //       if (mode === 'NONRESIDENTIAL') return currentCourse.fees.offlineFee.nonResidentialFee
-  //     }
-  //     break
-
-  //   case '7-days-camp-english':
-  //     if (courseDate === '25th Nov to 1st Dec 2023' || courseDate === '23rd Dec to 29th Dec 2023') {
-  //       // if (mode === 'ONLINE') return 25000
-  //       if (mode === 'RESIDENTIAL') return 13000
-  //       if (mode === 'NONRESIDENTIAL') return 9000
-  //     } else {
-  //       // if (mode === 'ONLINE') return currentCourse.fees.onlineFee
-  //       if (mode === 'RESIDENTIAL') return currentCourse.fees.offlineFee.residentialFee
-  //       if (mode === 'NONRESIDENTIAL') return currentCourse.fees.offlineFee.nonResidentialFee
-  //     }
-  //     break
-
-  //   case '7-days-camp':
-  //     if (courseDate === '19th Nov to 25th Nov 2023') {
-  //       // if (mode === 'ONLINE') return 25000
-  //       if (mode === 'RESIDENTIAL') return 13000
-  //       if (mode === 'NONRESIDENTIAL') return 9000
-  //     } else {
-  //       // if (mode === 'ONLINE') return currentCourse.fees.onlineFee
-  //       if (mode === 'RESIDENTIAL') return currentCourse.fees.offlineFee.residentialFee
-  //       if (mode === 'NONRESIDENTIAL') return currentCourse.fees.offlineFee.nonResidentialFee
-  //     }
-  //     break
-
-  //   case 'one-month-ttc':
-  //     if (courseDate === '1st Dec to 30th Dec 2023') {
-  //       if (mode === 'ONLINE') return 25000
-  //       if (mode === 'RESIDENTIAL') return 55000
-  //       if (mode === 'NONRESIDENTIAL') return 30000
-  //     } else {
-  //       if (mode === 'ONLINE') return currentCourse.fees.onlineFee
-  //       if (mode === 'RESIDENTIAL') return currentCourse.fees.offlineFee.residentialFee
-  //       if (mode === 'NONRESIDENTIAL') return currentCourse.fees.offlineFee.nonResidentialFee
-  //     }
-  //     break
-  //   default:
-  //     return () => {
-  //       if (mode === 'ONLINE') return currentCourse.fees.onlineFee
-  //       if (mode === 'OFFLINE')
-  //         return currentCourse.fees.offlineFee.nonResidentialFee
-  //       if (mode === 'RESIDENTIAL')
-  //         return currentCourse.fees.offlineFee.residentialFee
-  //       if (mode === 'NONRESIDENTIAL')
-  //         return currentCourse.fees.offlineFee.nonResidentialFee
-  //     }
-  //   }
-  // }
-
-
-
 
 
   const shouldShowOnlineOption = () => {
@@ -670,7 +397,12 @@ const CourseDetails = ({
     const lastTrueOption = options.reverse().find((option) => option.value);
     return lastTrueOption ? lastTrueOption.name : null;
   };
-
+  const [updateAddress, setUpdateAddress] = useState({
+    address1: formData?.address1,
+    state: formData?.state,
+    country: formData?.country,
+    pincode: formData?.pincode,
+  });
   // UseEffect to update `removeMb` and apply styles dynamically
   useEffect(() => {
     const lastOption = getLastTrueOption();
@@ -721,7 +453,13 @@ const CourseDetails = ({
     }
   }, [currentCourse]);
 
-
+  useEffect(() => {
+    // Retrieve address data from localStorage when the component mounts
+    const storedAddressData = localStorage.getItem('addressData');
+    if (storedAddressData) {
+      setUpdateAddress(JSON.parse(storedAddressData));
+    }
+  }, []);
   // Group timings by unique days
   const groupTimings = (timings) => {
     const grouped = {};
@@ -736,6 +474,7 @@ const CourseDetails = ({
     }
     else { return '' }
   };
+  const [defaultAddress, setDefaultAddress] = useState(true);
 
   // Render grouped timings
   const renderTimings = (groupedTimings) => {
@@ -750,66 +489,145 @@ const CourseDetails = ({
       </div>
     ));
   };
-
+  const [editOpen, setEditOpen] = useState(false)
   const groupedTimings = groupTimings(currentCourse?.enrollInfo?.timings?.length ? currentCourse?.enrollInfo?.timings : '');
+  const handleEditOpen = () => {
+    setEditOpen(true);
+  }
+  const handleEditClose = () => {
+    setEditOpen(false);
+    setEditStudentOpen(false);
+  };
+  const getAddress = () => {
+    let address = JSON.parse(localStorage.getItem('addressDataNew'))
+    // setUpdateAddress1(address?.address1);
+    return address?.address1;
+  }
 
+  const getPincode = () => {
+    let address = JSON.parse(localStorage.getItem('addressDataNew'))
+    // setUpdateAddress1(address?.address1);
+    return address?.pincode;
+  }
+
+  const getCountry = () => {
+    let address = JSON.parse(localStorage.getItem('addressDataNew'))
+    // setUpdateAddress1(address?.address1);
+    return address?.country;
+  }
+
+  const getState = () => {
+    let address = JSON.parse(localStorage.getItem('addressDataNew'))
+    // setUpdateAddress1(address?.address1);
+    return address?.state;
+  }
+  const [open, setOpen] = useState(false);
+  const handleCheckboxChange = () => {
+    setIsChecked(prevChecked => {
+      const newChecked = !prevChecked;
+      setDisData('no');
+      setFormData({ ...formData, terms: newChecked });
+      return newChecked;
+    });
+  };
 
   return (
     <div className="main-container">
       <div className="course-main-container" style={{ position: 'relative' }}>
-        <div style={{ width: '96%', display: 'flex' }} className="course-secondary-container">
-          <div style={{ width: '40%' }}>
-            <div className={isRegular ? "details_box details_box_regular" : "details_box"}>
-              <div className="details_course_box">
+        <div className="course-secondary-container cr-cntr">
+          <div className='stnd-detls'>
+            <div>
+              <div className={isRegular ? "details_box details_box_regular" : "details_box"}>
+                <div className="details_course_box">
+                  <div className="detail_image_box">
+                    <img src={currentCourse?.image} alt={currentCourse?.title} />
+                  </div>
+                  <div className="current_duration">
+                    <div>
+                      <span className='details_newName'>
+                        {currentCourse?.newName === '' ? currentCourse?.title : currentCourse?.newName}&nbsp;{isSevenDayHindi && <span className='to_fix_width'>Created to fix width</span>}
+                        {isSevenDayEnglish && <span className='to_fix_width'>Created to fix</span>}
+                        {isSatsangPage && <span className='to_fix_width'>Created to fix width too muchh</span>}
+                        {isYogaTherapy && <span className='to_fix_width'>Created to fixs</span>}
+                        {isTwentyOneBatchOne && <span className='to_fix_width'>Fix</span>}
+                        {isTwentyOneBatchTwo && <span className='to_fix_width'>Fix</span>}
+                        {isTwentyOneBatchThree && <span className='to_fix_width'>Fix</span>}
+                        {isChildrenRegularClass && <span className='to_fix_width'>Created to Fix</span>}
+                        {isChildrenWeekendClass && <span className='to_fix_width'>Created to F</span>}
+                        {isYogaPrayas && <span className='to_fix_width'>Created to Fixs width mores </span>}
+                        {isRegularMeditation && <span className='to_fix_width'>Created to Fixs width mores </span>}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div className='details_desc_info'>
+                  <div className='details_wrapper_duration'><span className='details_duration_info'>Duration:</span> <span className='tenure_course'>{currentCourse?.enrollInfo?.duration}</span></div>
+                  <div>&nbsp;&nbsp;</div>
+                  {currentCourse?.language &&
+                    <div className='details_wrapper_duration'><span className='details_lang_info'>Language:</span> <span className='lang_course'>{currentCourse?.language}</span></div>}
+                </div>
+                {groupedTimings &&
+                  <div className='time_days_wrapper'>
+                    {renderTimings(groupedTimings)}
+                    <div className='details_desc_days details_desc_days_2'>
+                    </div>
+                    <div className='details_desc_days'>
+                    </div>
+                  </div>}
+              </div>
+            </div>
+            <div className="card">
+              <div className="details_course_box ">
                 <div className="detail_image_box">
-                  <img src={currentCourse?.image} alt={currentCourse?.title} />
                 </div>
                 <div className="current_duration">
-                  <div>
+                  <div className='personal_info_wrapper'>
                     <span className='details_newName'>
-                      {currentCourse?.newName === '' ? currentCourse?.title : currentCourse?.newName}&nbsp;{isSevenDayHindi && <span className='to_fix_width'>Created to fix width</span>}
-                      {isSevenDayEnglish && <span className='to_fix_width'>Created to fix</span>}
-                      {isSatsangPage && <span className='to_fix_width'>Created to fix width too muchh</span>}
-                      {isYogaTherapy && <span className='to_fix_width'>Created to fixs</span>}
-                      {isTwentyOneBatchOne && <span className='to_fix_width'>Fix</span>}
-                      {isTwentyOneBatchTwo && <span className='to_fix_width'>Fix</span>}
-                      {isTwentyOneBatchThree && <span className='to_fix_width'>Fix</span>}
-                      {isChildrenRegularClass && <span className='to_fix_width'>Created to Fix</span>}
-                      {isChildrenWeekendClass && <span className='to_fix_width'>Created to F</span>}
-                      {isYogaPrayas && <span className='to_fix_width'>Created to Fixs width mores </span>}
-                      {isRegularMeditation && <span className='to_fix_width'>Created to Fixs width mores </span>}
+                      Student details
                     </span>
+                    <div onClick={handleEditOpen}>
+                      <img src='/images/edit_icon.svg' style={{ cursor: 'pointer' }} alt='' loading='lazy' />
+                    </div>
+                  </div>
+                  {(editOpen || isEditStudentOpen) && (
+                    <EditStudent isShippingModalOpen={handleEditOpen} setIsShipppingModalOpen={handleEditClose} formData={formData} setFormData={setFormData} setEmpty={setEmpty} empty={empty} currentCourse={currentCourse} dateDurationChange={dateDurationChange} handleSubmit={handleSubmit} setUpdateAddress={setUpdateAddress} setDefaultAddress={setDefaultAddress} />
+                  )}
+                  <div className='fields_alignment fields_alignment_bottom'>
+                    <div className='details_desc_name_info'><span className='details_duration_info'>Name</span> <span className='tenure_course truncated-text'> {`${formData?.name} ${formData?.lname}`}</span></div>
+
+                  </div>
+                  <div className='details_desc_days fields_alignment_bottom'>
+                    <div className='details_desc_name_info'><span className='details_duration_info'>Email Address</span> <span className='tenure_course'>{formData?.email}</span></div>
+
+                  </div>
+                  <div className='details_desc_days fields_alignment_bottom'>
+                    <div className='details_desc_name_info'><span className='details_duration_info'>Mobile Number</span> <span className='tenure_course'>{formData?.phone}</span></div>
+
+                  </div>
+                  <div className='details_desc_days fields_alignment_bottom'>
+                    <div className='details_desc_name_info'><span className='details_duration_info'>Gender</span> <span className='tenure_course'>{formData?.gender}</span></div>
+
+                  </div>
+                  <div className='details_desc_days'>
+                    <div className='details_desc_name_info'><span className='details_duration_info'>Address</span> <span className='tenure_course'>
+                      {getAddress()}
+                      {getAddress() && <>, </>}
+                      {getState()}
+                      {getCountry() && <>, </>}
+                      {getCountry()}
+                      {getPincode() && <> - </>}
+                      {getPincode()}
+                    </span></div>
                   </div>
                 </div>
               </div>
-              <div className='details_desc_info'>
-                <div className='details_wrapper_duration'><span className='details_duration_info'>Duration:</span> <span className='tenure_course'>{currentCourse?.enrollInfo?.duration}</span></div>
-                <div>&nbsp;&nbsp;</div>
-                {currentCourse?.language &&
-                  <div className='details_wrapper_duration'><span className='details_lang_info'>Language:</span> <span className='lang_course'>{currentCourse?.language}</span></div>}
-              </div>
-              {groupedTimings &&
-                <div className='time_days_wrapper'>
-                  {renderTimings(groupedTimings)}
-                  <div className='details_desc_days details_desc_days_2'>
-                  </div>
-                  <div className='details_desc_days'>
-                  </div>
-                </div>}
             </div>
           </div>
-          <div style={{ width: '60%', marginLeft: '30px !important',marginTop:'-30px' }}>
+          <div className='crs-wrap'>
             <div>
-              {/* {removeMb} */}
-              {/* {!isSatsangPage && ( */}
               <div className='wrapper_date_and_course'>
-
                 <div className='course_format_wrapper'>
-
-
                   <div className='details_format_date'>
-
-
                     <div className="label_format_course">
                       Select Course Format
                     </div>
@@ -857,35 +675,6 @@ const CourseDetails = ({
                         }
 
                         {shouldShowOnlineOption() && (
-                          //    <label htmlFor="" className="course_details_text">
-                          //    <input
-                          //      type="radio"
-                          //      name="mode"
-                          //      value="ONLINE"
-                          //      disabled={currentCourse.online === false}
-                          //      checked={formData.mode === 'ONLINE'}
-                          //      style={
-                          //        currentCourse.online === false
-                          //          ? {
-                          //            background:
-                          //                'url(https://ecom-static-site-prod.s3.ap-south-1.amazonaws.com/icons/icons8-multiply-24.png)',
-                          //          }
-                          //          : {}
-                          //      }
-                          //      onChange={(e) => {
-                          //        if (e.target.checked) {
-                          //          setFormData({
-                          //            ...formData,
-                          //            mode: e.target.value,
-                          //          })
-                          //          setEmpty(0)
-                          //          setCourseFee(currentCourse?.fees?.onlineFee)
-                          //          // setCourseFee(updatedFees( currentCourse?.key,'ONLINE' ))
-                          //        }
-                          //      }}
-                          //    />{' '}
-                          //    &nbsp; Online - {currentCourse?.fees?.onlineFee}
-                          //  </label>
 
 
                           <label class="item-label item_format" ref={divRef}>
@@ -931,43 +720,6 @@ const CourseDetails = ({
                       <div className="last_radio_button-cols">
 
                         {shouldShowNonResidentialOption() && (
-                          //   <label htmlFor="" className="course_details_text">
-                          //   <input
-                          //     type="radio"
-                          //     name="resident"
-                          //     value="NONRESIDENTIAL"
-                          //     checked={
-                          //       formData.mode === 'OFFLINE' &&
-                          //       formData.residental === 'NONRESIDENTIAL'
-                          //     }
-                          //     disabled={
-                          //       currentCourse.nonResidential === false ||
-                          //       formData.mode === 'ONLINE'
-                          //     }
-                          //     style={
-                          //       currentCourse.nonResidential === false
-                          //         ? {
-                          //           background:
-                          //               'url(https://ecom-static-site-prod.s3.ap-south-1.amazonaws.com/icons/icons8-multiply-24.png)',
-                          //         }
-                          //         : {}
-                          //     }
-                          //     onChange={(e) => {
-                          //       if (e.target.checked) {
-                          //         setFormData({
-                          //           ...formData,
-                          //           residental: e.target.value,
-                          //         })
-                          //         setEmpty(0)
-                          //         setCourseFee(
-                          //           currentCourse?.fees?.offlineFee?.nonResidentialFee
-                          //         )
-                          //         // setCourseFee(updatedFees( currentCourse?.key,'NONRESIDENTIAL' ))
-                          //       }
-                          //     }}
-                          //   />{' '}
-                          //   &nbsp; Non-Residential - {currentCourse?.fees?.offlineFee?.nonResidentialFee}
-                          // </label>
 
 
                           <label class="item-label item_format" ref={residentialCurrent}>
@@ -1014,49 +766,6 @@ const CourseDetails = ({
                         )}
 
                         {shouldShowResidentialOption() && (
-                          //   <label htmlFor="" className="course_details_text">
-                          //   <input
-                          //     type="radio"
-                          //     name="resident"
-                          //     value="RESIDENTIAL"
-                          //     checked={
-                          //        //formData.mode === 'OFFLINE' &&
-                          //       formData.residental === 'RESIDENTIAL'
-                          //     }
-                          //     disabled={
-                          //       currentCourse.residential === false ||
-                          //       formData.mode === 'ONLINE' ||
-                          //       (currentCourse.key === '7-days-camp-english' &&
-                          //         courseDate == '24th Sept to 30th Sept 2022')
-                          //     }
-                          //     style={
-                          //       currentCourse.residential === false ||
-                          //       (currentCourse.key === '7-days-camp-english' &&
-                          //         courseDate == '24th Sept to 30th Sept 2022')
-                          //         ? {
-                          //           background:
-                          //               'url(https://ecom-static-site-prod.s3.ap-south-1.amazonaws.com/icons/icons8-multiply-24.png)',
-                          //         }
-                          //         : {}
-                          //     }
-                          //     onChange={(e) => {
-                          //       if (e.target.checked) {
-                          //         setFormData({
-                          //           ...formData,
-                          //           residental: e.target.value,
-                          //         })
-                          //         setEmpty(0)
-                          //         if(currentCourse?.key === 'ma-yoga-shastra' && currentCourse.country !== 'India'){
-                          //           setCourseFee(currentCourse?.fees?.internationalFee?.residentialFee)
-                          //         } else {
-                          //           setCourseFee(currentCourse?.fees?.offlineFee?.residentialFee)
-                          //         }
-                          //         // setCourseFee(updatedFees( currentCourse?.key,'RESIDENTIAL' ))
-                          //       }
-                          //     }}
-                          //   />{' '}
-                          //   &nbsp; Residential - {currentCourse?.fees?.offlineFee?.residentialFee}
-                          // </label>
 
 
                           <label class="item-label item_format" ref={nonresidentialCurrent}>
@@ -1167,8 +876,9 @@ const CourseDetails = ({
                         {empty === 18 && <div id="fill_err" style={{ float: 'right', fontSize: '11px', marginTop: '10px', color: 'red' }}> {isRegular ? "Please select course Time" : "Please select course date"} </div>}
                       </div>
 
-                      <form className="residential-form check_course check_date_2" style={{ width: '100%' }}>
+                      <form className="residential-form check_course check_date_2 ex-width">
                         <div className="last_radio_button " style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
+                          {/* , flexWrap: 'wrap' */}
 
                           {
                             formattedDates.length === 0 && (
@@ -1177,7 +887,7 @@ const CourseDetails = ({
                           }
 
                           {
-                            formattedDates?.slice(0, 2).map((item, index) => {
+                            formattedDates?.slice(0, 1).map((item, index) => {
                               if (!item?.label) return null;
                               return (
                                 <div key={index} className='date_btn'>
@@ -1198,12 +908,6 @@ const CourseDetails = ({
                                               sdate: e.target.value
                                             })
                                             setEmpty(0)
-                                            // if (currentCourse?.key === 'ma-yoga-shastra' && currentCourse.country !== 'India') {
-                                            //   setCourseFee(currentCourse?.fees?.internationalFee?.residentialFee)
-                                            // } else {
-                                            //   setCourseFee(currentCourse?.fees?.offlineFee?.residentialFee)
-                                            // }
-                                            // setCourseFee(updatedFees( currentCourse?.key,'RESIDENTIAL' ))
                                           }
                                         }}
                                         checked={courseDateInfo == item?.label}
@@ -1233,9 +937,6 @@ const CourseDetails = ({
                                       aria-describedby="delivery-0-shipping delivery-0-price"
                                       // onChange={() => handleDateSelect(item)}
                                       onChange={(e) => {
-                                        // setSelectedOption('RESIDENTIAL');
-                                        // handleResidential(true);
-                                        // setPriceSelect(currentCourse?.fees?.offlineFee?.residentialFee)
                                         setCourseDateInfo(e.target.value)
                                         setCourseDateSelected(true)
                                         if (e.target.checked) {
@@ -1244,12 +945,6 @@ const CourseDetails = ({
                                             sdate: e.target.value
                                           })
                                           setEmpty(0)
-                                          // if (currentCourse?.key === 'ma-yoga-shastra' && currentCourse.country !== 'India') {
-                                          //   setCourseFee(currentCourse?.fees?.internationalFee?.residentialFee)
-                                          // } else {
-                                          //   setCourseFee(currentCourse?.fees?.offlineFee?.residentialFee)
-                                          // }
-                                          // setCourseFee(updatedFees( currentCourse?.key,'RESIDENTIAL' ))
                                         }
                                       }}
 
@@ -1303,11 +998,7 @@ const CourseDetails = ({
                                           value={formattedDates[2]?.label}
                                           aria-labelledby="delivery-0-name"
                                           aria-describedby="delivery-0-shipping delivery-0-price"
-                                          // onChange={() => handleDateSelect(item)}
                                           onChange={(e) => {
-                                            // setSelectedOption('RESIDENTIAL');
-                                            // handleResidential(true);
-                                            // setPriceSelect(currentCourse?.fees?.offlineFee?.residentialFee)
                                             setCourseDateInfo(e.target.value)
                                             setCourseDateSelected(true)
                                             if (e.target.checked) {
@@ -1316,12 +1007,6 @@ const CourseDetails = ({
                                                 sdate: e.target.value
                                               })
                                               setEmpty(0)
-                                              // if (currentCourse?.key === 'ma-yoga-shastra' && currentCourse.country !== 'India') {
-                                              //   setCourseFee(currentCourse?.fees?.internationalFee?.residentialFee)
-                                              // } else {
-                                              //   setCourseFee(currentCourse?.fees?.offlineFee?.residentialFee)
-                                              // }
-                                              // setCourseFee(updatedFees( currentCourse?.key,'RESIDENTIAL' ))
                                             }
                                           }}
 
@@ -1337,135 +1022,7 @@ const CourseDetails = ({
                                   </div>)
                                 )
                             )
-
                           }
-
-                          {/* {
-                          showDefaultDate === true && formattedDates[2]?.label ? (
-                            <div className='date_btn'>
-                              <div className='wrapper_center container_date_enroll'>
-                                <label class="item-label item_date" style={{ width: '100%', height: '100%', borderRadius: '25px' }}>
-                                  <input class="item-input"
-                                    type="radio" name="mode"
-                                    value={formattedDates[2]?.label}
-                                    aria-labelledby="delivery-0-name"
-                                    aria-describedby="delivery-0-shipping delivery-0-price"
-                                    // onChange={() => handleDateSelect(item)}
-                                    onChange={(e) => {
-                                      // setSelectedOption('RESIDENTIAL');
-                                      // handleResidential(true);
-                                      // setPriceSelect(currentCourse?.fees?.offlineFee?.residentialFee)
-                                      setCourseDateInfo(e.target.value)
-                                      setCourseDateSelected(true)
-                                      if (e.target.checked) {
-                                        setFormData({
-                                          ...formData,
-                                          sdate: e.target.value
-                                        })
-                                        setEmpty(0)
-                                        // if (currentCourse?.key === 'ma-yoga-shastra' && currentCourse.country !== 'India') {
-                                        //   setCourseFee(currentCourse?.fees?.internationalFee?.residentialFee)
-                                        // } else {
-                                        //   setCourseFee(currentCourse?.fees?.offlineFee?.residentialFee)
-                                        // }
-                                        // setCourseFee(updatedFees( currentCourse?.key,'RESIDENTIAL' ))
-                                      }
-                                    }}
-
-                                  />
-                                  <span class="item-info item_desc">
-                                    <span id="delivery-0-name" class="item-name date_info">
-                                      <span className='style_dates'>{formattedDates[2]?.label}</span></span>
-                                  </span>
-
-                                  <strong id="delivery-0-price" class="item-price"></strong>
-                                </label>
-                              </div>
-                            </div>
-                          ) : (!notShowDate) ? (
-                            <div className='date_btn'>
-                              <div className='wrapper_center container_date_enroll'>
-                                <label class="item-label item_date selected_date_popup" style={{ width: '100%', height: '100%', borderRadius: '25px' }}>
-                                  <input class="item-input"
-                                    type="radio" name="mode"
-                                    value={courseDateInfo}
-                                    aria-labelledby="delivery-0-name"
-                                    aria-describedby="delivery-0-shipping delivery-0-price"
-                                    // onChange={() => handleDateSelect(item)}
-                                    onChange={(e) => {
-                                      // setSelectedOption('RESIDENTIAL');
-                                      // handleResidential(true);
-                                      // setPriceSelect(currentCourse?.fees?.offlineFee?.residentialFee)
-                                      setCourseDateInfo(e.target.value)
-                                      setCourseDateSelected(true)
-                                      if (e.target.checked) {
-                                        setFormData({
-                                          ...formData,
-                                          sdate: e.target.value
-                                        })
-                                        setEmpty(0)
-                                        // if (currentCourse?.key === 'ma-yoga-shastra' && currentCourse.country !== 'India') {
-                                        //   setCourseFee(currentCourse?.fees?.internationalFee?.residentialFee)
-                                        // } else {
-                                        //   setCourseFee(currentCourse?.fees?.offlineFee?.residentialFee)
-                                        // }
-                                        // setCourseFee(updatedFees( currentCourse?.key,'RESIDENTIAL' ))
-                                      }
-                                    }}
-
-                                  />
-                                  <span class="item-info item_desc">
-                                    <span id="delivery-0-name" class="item-name date_info">
-                                      <span className='style_dates'>{courseDateInfo}</span></span>
-                                  </span>
-
-                                  <strong id="delivery-0-price" class="item-price"></strong>
-                                </label>
-                              </div>
-                            </div>
-                          ) : formattedDates[2]?.label ? (
-                            <div className='date_btn'>
-                              <div className='wrapper_center container_date_enroll'>
-                                <label class="item-label item_date" style={{ width: '100%', height: '100%', borderRadius: '25px' }}>
-                                  <input class="item-input"
-                                    type="radio" name="mode"
-                                    value={formattedDates[2]?.label}
-                                    aria-labelledby="delivery-0-name"
-                                    aria-describedby="delivery-0-shipping delivery-0-price"
-                                    // onChange={() => handleDateSelect(item)}
-                                    onChange={(e) => {
-                                      // setSelectedOption('RESIDENTIAL');
-                                      // handleResidential(true);
-                                      // setPriceSelect(currentCourse?.fees?.offlineFee?.residentialFee)
-                                      setCourseDateInfo(e.target.value)
-                                      setCourseDateSelected(true)
-                                      if (e.target.checked) {
-                                        setFormData({
-                                          ...formData,
-                                          sdate: e.target.value
-                                        })
-                                        setEmpty(0)
-                                        // if (currentCourse?.key === 'ma-yoga-shastra' && currentCourse.country !== 'India') {
-                                        //   setCourseFee(currentCourse?.fees?.internationalFee?.residentialFee)
-                                        // } else {
-                                        //   setCourseFee(currentCourse?.fees?.offlineFee?.residentialFee)
-                                        // }
-                                        // setCourseFee(updatedFees( currentCourse?.key,'RESIDENTIAL' ))
-                                      }
-                                    }}
-
-                                  />
-                                  <span class="item-info item_desc">
-                                    <span id="delivery-0-name" class="item-name date_info">
-                                      <span className='style_dates'>{formattedDates[2]?.label}</span></span>
-                                  </span>
-
-                                  <strong id="delivery-0-price" class="item-price"></strong>
-                                </label>
-                              </div>
-                            </div>
-                          ) : null
-                        } */}
 
                           {
                             formattedDates.length > 3 && (
@@ -1479,30 +1036,14 @@ const CourseDetails = ({
                           }
 
                           {openDates && (
-                            // <MessageModal 
-                            //   message={<TermsCondition />} 
-                            //   closePopup={handleClose} 
-                            //   type="Terms and Conditions" // You can pass any other props as needed
-                            // /> 
-                            // <TermsAndConditionsModal />
                             <UpcomingDates isShippingModalOpen={handleOpen} setIsShipppingModalOpen={handleClose} pageDate={formattedDates} setCourseDateInfo={setCourseDateInfo} setCourseDateSelected={setCourseDateSelected} setShowDefaultDate={setShowDefaultDate} setNotShowDate={setNotShowDate} formData={formData} setFormData={setFormData} isRegular={isRegular} courseDateInfo={courseDateInfo} />
                           )}
 
-
-
-
-
                         </div>
-
-
-
                       </form>
-
                     </div>
-
-
                     {isRegular && (
-                      <div className='dates_enroll_wrapper'>
+                      <div className='dates_enroll_wrapper ex-width'>
 
                         <div className="label_format_course label_duration">
                           Select Course Duration
@@ -1551,12 +1092,6 @@ const CourseDetails = ({
                                               //   endDate: e.target.value
                                               // })
                                               setEmpty(0)
-                                              // if (currentCourse?.key === 'ma-yoga-shastra' && currentCourse.country !== 'India') {
-                                              //   setCourseFee(currentCourse?.fees?.internationalFee?.residentialFee)
-                                              // } else {
-                                              //   setCourseFee(currentCourse?.fees?.offlineFee?.residentialFee)
-                                              // }
-                                              // setCourseFee(updatedFees( currentCourse?.key,'RESIDENTIAL' ))
                                             }
                                           }}
                                           checked={courseDuration == item?.label}
@@ -1584,27 +1119,13 @@ const CourseDetails = ({
                                         value={durationList[2]?.label}
                                         aria-labelledby="delivery-0-name"
                                         aria-describedby="delivery-0-shipping delivery-0-price"
-                                        // onChange={() => handleDateSelect(item)}
                                         onChange={(e) => {
-                                          // setSelectedOption('RESIDENTIAL');
-                                          // handleResidential(true);
-                                          // setPriceSelect(currentCourse?.fees?.offlineFee?.residentialFee)
                                           setCourseDuration(durationList[2]?.label)
                                           setCourseDurationSelected(true)
                                           if (e.target.checked) {
                                             setCaptureEndDate(durationList[2]?.value)
                                             createEndDate(values.startDate, durationList[2]?.value)
-                                            // setFormData({
-                                            //   ...formData,
-                                            //   sdate: e.target.value
-                                            // })
                                             setEmpty(0)
-                                            // if (currentCourse?.key === 'ma-yoga-shastra' && currentCourse.country !== 'India') {
-                                            //   setCourseFee(currentCourse?.fees?.internationalFee?.residentialFee)
-                                            // } else {
-                                            //   setCourseFee(currentCourse?.fees?.offlineFee?.residentialFee)
-                                            // }
-                                            // setCourseFee(updatedFees( currentCourse?.key,'RESIDENTIAL' ))
                                           }
                                         }}
 
@@ -1651,143 +1172,6 @@ const CourseDetails = ({
                                   </div>
                                 </div>)}
 
-                            {/* {
-                            showDefaultDuration === true ? (
-                              <div className='date_btn'>
-                                <div className='wrapper_center container_date_enroll'>
-                                  <label class="item-label item_date" style={{ width: '100%', height: '100%', borderRadius: '25px' }}>
-                                    <input class="item-input"
-                                      type="radio" name="mode"
-                                      // value={durationList[2]?.label}
-                                      value={durationList[2]?.value}
-                                      // onChange={(value) => {
-                                      //   createEndDate('', value)
-                                      // }}
-                                      aria-labelledby="delivery-0-name"
-                                      aria-describedby="delivery-0-shipping delivery-0-price"
-                                      // onChange={() => handleDateSelect(item)}
-                                      onChange={(e) => {
-                                        // setSelectedOption('RESIDENTIAL');
-                                        // handleResidential(true);
-                                        // setPriceSelect(currentCourse?.fees?.offlineFee?.residentialFee)
-                                        setCourseDuration(durationList[2]?.label)
-                                        setCourseDurationSelected(true)
-                                        if (e.target.checked) {
-                                          setCaptureEndDate(durationList[2]?.value)
-                                          createEndDate(values.startDate, durationList[2]?.value)
-                                          // setFormData({
-                                          //   ...formData,
-                                          //   sdate: e.target.value
-                                          // })
-                                          setEmpty(0)
-                                          // if (currentCourse?.key === 'ma-yoga-shastra' && currentCourse.country !== 'India') {
-                                          //   setCourseFee(currentCourse?.fees?.internationalFee?.residentialFee)
-                                          // } else {
-                                          //   setCourseFee(currentCourse?.fees?.offlineFee?.residentialFee)
-                                          // }
-                                          // setCourseFee(updatedFees( currentCourse?.key,'RESIDENTIAL' ))
-                                        }
-                                      }}
-
-                                    />
-                                    <span class="item-info item_desc">
-                                      <span id="delivery-0-name" class="item-name date_info">
-                                        <span className='style_dates'>{durationList[2]?.label}</span></span>
-                                    </span>
-
-                                    <strong id="delivery-0-price" class="item-price"></strong>
-                                  </label>
-                                </div>
-                              </div>
-                            ) : (!notShowDuration) ? (
-                              <div className='date_btn'>
-                                <div className='wrapper_center container_date_enroll'>
-                                  <label class="item-label item_date selected_date_popup" style={{ width: '100%', height: '100%', borderRadius: '25px' }}>
-                                    <input class="item-input"
-                                      type="radio" name="mode"
-                                      value={courseDuration}
-                                      aria-labelledby="delivery-0-name"
-                                      aria-describedby="delivery-0-shipping delivery-0-price"
-                                      // onChange={() => handleDateSelect(item)}
-                                      onChange={(e) => {
-                                        // setSelectedOption('RESIDENTIAL');
-                                        // handleResidential(true);
-                                        // setPriceSelect(currentCourse?.fees?.offlineFee?.residentialFee)
-                                        setCourseDuration(e.target.value)
-                                        setCourseDurationSelected(true)
-                                        if (e.target.checked) {
-                                          setCaptureEndDate(courseDuration)
-                                          createEndDate(values.startDate, courseDuration)
-                                          // setFormData({
-                                          //   ...formData,
-                                          //   sdate: e.target.value
-                                          // })
-                                          setEmpty(0)
-                                          // if (currentCourse?.key === 'ma-yoga-shastra' && currentCourse.country !== 'India') {
-                                          //   setCourseFee(currentCourse?.fees?.internationalFee?.residentialFee)
-                                          // } else {
-                                          //   setCourseFee(currentCourse?.fees?.offlineFee?.residentialFee)
-                                          // }
-                                          // setCourseFee(updatedFees( currentCourse?.key,'RESIDENTIAL' ))
-                                        }
-                                      }}
-
-                                    />
-                                    <span class="item-info item_desc">
-                                      <span id="delivery-0-name" class="item-name date_info">
-                                        <span className='style_dates'>{courseDuration}</span></span>
-                                    </span>
-
-                                    <strong id="delivery-0-price" class="item-price"></strong>
-                                  </label>
-                                </div>
-                              </div>
-                            ) : (
-                              <div className='date_btn'>
-                                <div className='wrapper_center container_date_enroll'>
-                                  <label class="item-label item_date" style={{ width: '100%', height: '100%', borderRadius: '25px' }}>
-                                    <input class="item-input"
-                                      type="radio" name="mode"
-                                      value={durationList[2]?.value}
-                                      aria-labelledby="delivery-0-name"
-                                      aria-describedby="delivery-0-shipping delivery-0-price"
-                                      // onChange={() => handleDateSelect(item)}
-                                      onChange={(e) => {
-                                        // setSelectedOption('RESIDENTIAL');
-                                        // handleResidential(true);
-                                        // setPriceSelect(currentCourse?.fees?.offlineFee?.residentialFee)
-                                        setCourseDuration(e.target.value)
-                                        setCourseDurationSelected(true)
-                                        if (e.target.checked) {
-                                          setCaptureEndDate(durationList[2]?.value)
-                                          createEndDate(values.startDate, durationList[2]?.value)
-                                          // setFormData({
-                                          //   ...formData,
-                                          //   sdate: e.target.value
-                                          // })
-                                          setEmpty(0)
-                                          // if (currentCourse?.key === 'ma-yoga-shastra' && currentCourse.country !== 'India') {
-                                          //   setCourseFee(currentCourse?.fees?.internationalFee?.residentialFee)
-                                          // } else {
-                                          //   setCourseFee(currentCourse?.fees?.offlineFee?.residentialFee)
-                                          // }
-                                          // setCourseFee(updatedFees( currentCourse?.key,'RESIDENTIAL' ))
-                                        }
-                                      }}
-
-                                    />
-                                    <span class="item-info item_desc">
-                                      <span id="delivery-0-name" class="item-name date_info">
-                                        <span className='style_dates'>{durationList[2]?.label}</span></span>
-                                    </span>
-
-                                    <strong id="delivery-0-price" class="item-price"></strong>
-                                  </label>
-                                </div>
-                              </div>
-                            )
-                          } */}
-
                             <div className='upcoming_dates'>
                               <span onClick={handleOpenDuration}>See all available Duration
 
@@ -1796,33 +1180,18 @@ const CourseDetails = ({
                             </div>
 
                             {openDuration && (
-                              // <MessageModal 
-                              //   message={<TermsCondition />} 
-                              //   closePopup={handleClose} 
-                              //   type="Terms and Conditions" // You can pass any other props as needed
-                              // />
-                              // <TermsAndConditionsModal />
                               <UpcomingDuration isShippingModalOpen={handleOpenDuration} setIsShipppingModalOpen={handleCloseDuration} pageDate={formattedDates} setCourseDuration={setCourseDuration} setCourseDurationSelected={setCourseDurationSelected} setShowDefaultDuration={setShowDefaultDuration} setNotShowDuration={setNotShowDuration} formData={formData} setFormData={setFormData} isRegular={isRegular} durationList={durationList} createEndDate={createEndDate} setCaptureEndDate={setCaptureEndDate} values={values} courseDuration={courseDuration} />
                             )}
 
-
-
-
-
                           </div>
-
-
-
                         </form>
 
                       </div>
                     )}
-
-
                   </div>
 
                   <div className='img_wrapper_date_format'>
-                    <img src='/images/yoga_img.png' alt='' loading='lazy' />
+                    <img src='/images/yoga_img_n.png' alt='' loading='lazy' />
                   </div>
 
                 </div>
@@ -1840,9 +1209,52 @@ const CourseDetails = ({
                       <img src='/images/fees_right.png' alt='' loading='lazy' />
                     </div>
                   </div>
+                  <div className='dmy-cntr'></div>
                 </div>
 
+                <div className="bottom_container_btn">
+                  <div className='terms'>
+                    <label>
+                      <input
+                        type="checkbox"
+                        checked={isChecked}
+                        onChange={handleCheckboxChange}
+                        id='myCheckbox'
+                      />
+                      &nbsp;
+                      I agree and accept the
 
+                    </label>
+
+                    <a
+                      onClick={handleOpen}
+                      className='terms_text'
+                      style={{ color: "rgba(0, 0, 0, 1)", marginLeft: "3px", cursor: "pointer" }}
+                      rel="noopener noreferrer">
+                      terms and conditions
+                    </a>
+
+                    {open && (
+                      <CustomModal isShippingModalOpen={handleOpen} setIsShipppingModalOpen={handleClose} />
+                    )}
+
+                    {isChecked === false ? empty === 19 && (
+                      <div style={{ color: 'red', marginLeft: '0', marginTop: '1rem', fontSize: '1.2rem' }} className='mar_top'>
+                        *Please agree to the condition!
+                      </div>
+                    ) : ''}
+                    {console.log(isChecked)}
+                  </div>
+                  <div className="button_box">
+                    {<button type="button" onClick={handleSubmit} className={!isLoad ? 'next_button button register-primary-btn' : 'next_button button register-primary-btn no-event'} disabled={isLoad}>
+                      {setDate ? <><span id="txt">Register&nbsp; </span> </> : !isLoad ? <><span id="txt" style={{ fontSize: '14px', fontWeight: '500' }}>Pay & confirm enrollment </span> </> : <><span className="loader">
+                        <span className="dot"></span>
+                        <span className="dot"></span>
+                        <span className="dot"></span>
+                      </span></>}
+                    </button>}
+                  </div>
+                </div>
 
 
               </div>

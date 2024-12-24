@@ -6,17 +6,12 @@ import PhoneInput from 'react-phone-number-input';
 import Select from 'react-select'
 import { Country, State, City } from 'country-state-city'
 import Other from './Other'
-// import CourseDetails from './CourseDetails'
-import SelectDropDown from '../Select Dropdown'
 import { Link, useSearchParams, useNavigate } from 'react-router-dom'
 import { parsePhoneNumberFromString, isValidPhoneNumber } from 'libphonenumber-js'
-import { authBaseDomain, cmsBaseDomain, mapApiKey, razorPayKey } from '../../../../Constants/appSettings'
-import axios from 'axios'
-import { validateEmail } from '../../../../helpers'
+import { mapApiKey } from '../../../../Constants/appSettings'
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import { LoadScript, Autocomplete } from '@react-google-maps/api';
-import countryList from 'react-select-country-list';
 import { useSelector, useDispatch } from 'react-redux';
 import { useLocation } from 'react-router-dom';
 import { logoutUserAction } from '../../Views/Authentication/Auth.actions';
@@ -24,14 +19,11 @@ import EditStudent from './EditStudent';
 
 const CourseDetails = lazy(() => import('./CourseDetails'));
 
-import MessageModal from '../MessageModal'
-import TermsCondition from '../TermsandCondition'
-// import TermsAndConditionsModal from '../TermsandCondition/t&Cpopup'
 import CustomModal from '../TermsandCondition/t&Cpopup'
 
 
 const libraries = ['places'];
-const mapKey = mapApiKey//'AIzaSyCArozsi_1fWJgSwDFDAoA_6Q5zLZ7NYyA';
+const mapKey = mapApiKey
 
 const EnrollmentForm = ({
   empty,
@@ -57,8 +49,6 @@ const EnrollmentForm = ({
   isLoad,
   dateDurationChange
 }) => {
-  // {console.log(handleSubmit)}
-  //const today = new Date().toISOString().split('T')[0]
   const [values, setValues] = useState([])
   const [updateAddress, setUpdateAddress] = useState({
     address1: formData?.address1,
@@ -67,10 +57,7 @@ const EnrollmentForm = ({
     pincode: formData?.pincode,
   });
   const countries = Country.getAllCountries()
-  const [updateAddress1, setUpdateAddress1] = useState('')
-  const [selectDate, setSetselectDate] = useState(null)
   const [Params] = useSearchParams()
-  const [fixDate, setFixDate] = useState([]);
   const [validationErrors, setValidationErrors] = useState([]);
   const [isoCode, setIsoCode] = useState('');
   const phoneNumberFromRedux = useSelector((state) => state.auth.user?.data?.phoneNumber);
@@ -83,24 +70,11 @@ const EnrollmentForm = ({
   const addressLine1 = useSelector((state) => state.auth.user.data?.addressLine1);
   const pincodeFromRedux = useSelector((state) => state.auth.user.data?.pincode);
   console.log('pincodeFromRedux ', pincodeFromRedux)
-
-  // console.log('phoneNumberFromRedux ', phoneNumberFromRedux);
-  // console.log('countryFromRedux ', countryFromRedux);
-  // console.log('stateFromRedux ', stateFromRedux);
-  // console.log('cityFromRedux ', cityFromRedux);
-  // console.log('genderFromRedux ', genderFromRedux);
   const [phoneValue, setPhoneValue] = useState(formData.phone);
   const [bold, setBold] = useState(0)
   const [open, setOpen] = useState(false);
-
-  // const [empty, setEmpty] = useState(0)
-  // const [isLoad, setIsLoad] = useState(false)
   const [disable, setDisable] = useState(false)
-
   const [isChecked, setIsChecked] = useState(true); // Checkbox is checked by default
-
-
-
   const [disData, setDisData] = useState('yes')
   const [isResidential, setIsResidential] = useState(false)
   const [isRegular, setIsRegular] = useState(false)
@@ -109,17 +83,12 @@ const EnrollmentForm = ({
   const [showForm, setShowForm] = useState(false)
   const [editOpen, setEditOpen] = useState(false)
   const [defaultAddress, setDefaultAddress] = useState(true);
-
   const navigates = useNavigate();
   const location = useLocation();
   const dispatch = useDispatch();
-
-
-
   const [selectDateValue, setSelectDateValue] = useState(values.selectDate);
   const [setDate, setSetDate] = useState(false)
   const isSatsangPage = location.pathname?.includes("/enrollment/satsang") || location.pathname?.includes("/enrollment/samattvam") || location.pathname?.includes("/enrollment/fullmoon-meditation") || location.pathname?.includes("/enrollment/yoga-by-the-bay");
-
   const nameFromRedux = useSelector((state) => state.auth.user.data?.firstName);
   const lastnameFromRedux = useSelector((state) => state.auth.user.data?.lastName);
 
@@ -136,7 +105,6 @@ const EnrollmentForm = ({
       setSetDate(true);
       setSelectDateValue({ label: 'No date Selected', value: 'No date Selected' });
 
-      // Set formData with 'No date Selected' only once when the path is /enrollment/satsang
       setFormData((prev) => ({
         ...prev,
         sdate: 'No date Selected',
@@ -157,11 +125,6 @@ const EnrollmentForm = ({
       setLoading(false); // If token is found, stop the loading state
     }
   }, [navigates]);
-
-
-
-
-
   useEffect(() => {
     if (phoneNumberFromRedux) {
       setPhoneValue(`+${dailCode}${phoneNumberFromRedux}`);
@@ -455,79 +418,11 @@ const EnrollmentForm = ({
     // Create a new Date object (months are 0-based, so subtract 1 from month)
     return new Date(year, month - 1, day);
   }
-
-  // const validatePhoneNumber = (phoneNumber) => {
-  //   const errors = [];
-  //   const parsedNumber = parsePhoneNumberFromString(phoneNumber);
-
-  //   if (!parsedNumber) {
-  //     errors.push('Invalid phone number format.');
-  //     return errors;
-  //   }
-
-  //   // Format Validation
-  //   const formatted = parsedNumber.formatInternational();
-  //   const actualFormat = formatted.replace(/\s+/g, '');
-  //   // console.log('format My : ',actualFormat);
-  //   // console.log('phoneNumber My : ',phoneNumber);
-  //   if (phoneNumber !== actualFormat) {
-  //     errors.push(`Incorrect format. Should be ${formatted}`);
-  //   }
-
-  //   // Country Code Validation
-  //   if (!parsedNumber.country) {
-  //     errors.push('Invalid or missing country code.');
-  //   }
-
-  //   // Length Validation
-  //   if (!isValidPhoneNumber(phoneNumber)) {
-  //     errors.push('Phone number is not valid for the selected country.');
-  //   }
-
-  //   // National and International Numbering Validation
-  //   if (!parsedNumber.isPossible()) {
-  //     errors.push('Phone number is not possible.');
-  //   }
-
-  //   // Region-Specific Checks
-  //   const areaCode = parsedNumber.nationalNumber.slice(0, 3); // Correctly access the national number
-  //   // console.log('ac',areaCode);
-
-  //   if (parsedNumber.country === 'US' && !['202', '212', '213'].includes(areaCode)) {
-  //     errors.push('Invalid area code for the region.');
-  //   }
-
-  //   // Invalid Number Patterns
-  //   if (/(\d)\1{6,}/.test(parsedNumber.nationalNumber)) {  // Use nationalNumber property directly
-  //     errors.push('Phone number contains invalid patterns (e.g., too many repeated digits).');
-  //   }
-
-  //   return errors;
-  // };
-
   const updatedCountries = countries.map((country) => ({
     label: country.name,
     value: country.id,
     ...country,
   }))
-
-  // const handlePhoneChange = (value) => {
-  //   setPhoneValue(value);
-  //   setFormData({ ...formData, phone: value });
-
-  //   if (value) {
-  //     const errors = validatePhoneNumber(value);
-
-  //     // console.log('ph', value, '', errors);
-  //     console.log('phone err', validationErrors);
-  //     setValidationErrors(errors);
-  //   } else {
-  //     setValidationErrors([]);
-  //   }
-
-
-  // };
-
   const getAddress = () => {
     let address = JSON.parse(localStorage.getItem('addressDataNew'))
     // setUpdateAddress1(address?.address1);
@@ -551,9 +446,6 @@ const EnrollmentForm = ({
     // setUpdateAddress1(address?.address1);
     return address?.state;
   }
-
-
-
 
   const handlePhoneChange = (value) => {
     setPhoneValue(value);
@@ -582,28 +474,19 @@ const EnrollmentForm = ({
       // Skip additional checks for '555' area codes
       skip = 1;
     }
-
     // Check if it's a valid phone number for the selected country
     if (!isValidPhoneNumber(phoneNumber) && skip === 0) {
       errors.push('Phone number is not valid for the selected country.');
     }
 
-
-
     // Additional custom validations can be added here
     if (parsedNumber && /(\d)\1{6,}/.test(parsedNumber.nationalNumber)) {
       errors.push('Phone number contains invalid patterns (e.g., too many repeated digits).');
     }
-
-
-
     return errors;
   };
 
-
-
   const handleCheckboxChange = () => {
-
     setIsChecked(prevChecked => {
       const newChecked = !prevChecked;
       setDisData('no');
@@ -612,8 +495,6 @@ const EnrollmentForm = ({
     });
   };
   const [minDate, setMinDate] = useState('');
-
-
   useEffect(() => {
     // Retrieve address data from localStorage when the component mounts
     const storedAddressData = localStorage.getItem('addressData');
@@ -647,27 +528,6 @@ const EnrollmentForm = ({
     tomorrow.setDate(tomorrow.getDate() + 1);
     setMinDate(tomorrow);
   }, [currentCourse])
-  // useEffect(() => {
-
-  //   // const array = ["Advanced Yoga Asana Regular Class - Online (Only for TYI Teachers)",
-  //   //   "Asana Regular Classes for Women - On Campus", "Asana Regular Classes (Men & Women) - Online",
-  //   //   "Weekend Asana Classes (Men & Women) - On Campus", "Weekend Asana Classes (Men & Women) - Online",
-  //   //   "Children's Regular Classes - On Campus", "Children'&apos;'s Weekend Classes - On Campus",
-  //   //   "Advanced Asana Regular Class - Online (Only for TYI Teachers)", "Yog Prayas - Online",
-  //   //   "Online Meditation Course (Foundation Course)", "Regular Online Meditation Classes",
-  //   //   "Healing Movement and Rhythm Classes", "Couples' Classes - Online",
-  //   //   "IBY Class (Only for TYI TTC Teachers)", "Regular Pregnancy Yoga Class - Online & On Campus"
-  //   // ];
-  //   // const isMatch = array.includes(currentCourse?.title);
-  //   // setIsRegular(isMatch)
-  //   // console.log(currentCourse);
-
-  //   // setSetselectDate(Params.get('date'))
-
-  //   // window.scrollTo(0, 0)
-  //   // console.log(pageDate?.key,'heoo')
-  //   // {Params.get('date')===null? window.scrollTo(0, 0): document.getElementById('date-select').scrollIntoView()}
-  // }, [isChecked])
 
   const updatedStates = (countryId) => {
     return State.getStatesOfCountry(countryId).map((state) => ({
@@ -768,266 +628,6 @@ const EnrollmentForm = ({
       }
     }
   }
-
-
-  // const handleSubmit1 = async() => {
-  //   if (
-  //     formData.name === '' ||
-  //     formData.name === undefined ||
-  //     formData.name === null
-  //   ) {
-  //     setEmpty(1)
-  //   } else if (
-  //     formData.phone === '' ||
-  //     formData.phone?.length < 6 ||
-  //     formData.phone?.length > 15
-  //   ) {
-  //     setEmpty(3)
-  //   } else if (!validateEmail(formData.email)) {
-  //     setEmpty(2)
-  //   } else if (formData.address1 === '') {
-  //     setEmpty(4)
-  //   } else if (formData.country === '' ) {
-  //     setEmpty(5)
-  //   } else if (formData.pincode === '') {
-  //     setEmpty(8)
-  //   }else if (formData.sdate === '') {
-  //     setEmpty(18)
-  //   }
-  //   //  else if (formData.AGE === null || formData.AGE < 4 || formData.AGE > 99) {
-  //   //   setEmpty(9)
-  //   // } else if (formData.nationality === '') {
-  //   //   setEmpty(10)
-  //   // }
-  //   else if (formData.gender === '') {
-  //     setEmpty(11)
-  //   } else if (formData.mode === '') {
-  //     setEmpty('mode')
-  //   }
-  //   else if (
-  //     formData.mode === 'OFFLINE' &&
-  //     (currentCourse.residential === true ||
-  //       currentCourse.nonResidential === true)
-  //   ) {
-  //     if (formData.residental === '') {
-  //       setEmpty('subMode')
-  //     } else {
-  //       setBold(5)
-  //     }
-  //   } else if (
-  //     currentCourse.certficate === true &&
-  //     (courseAsset2 === '' || courseAsset2 === null)
-  //   ) {
-  //     setEmpty('certificate')
-  //   } else {
-  //     setBold(5)
-  //   }
-
-
-  //   // setIsLoad(true);
-  //   if (disData.terms === 'no') {
-  //     return setEmpty(1)
-  //   }else {
-  //     setEmpty(0)
-  //     let body = {
-  //       personalDetails: {
-  //         name: formData.name,
-  //         emailId: formData.email,
-  //         phone: formData.phone,
-  //         addressLane1: formData.address1,
-  //         addressLane2: formData.address2,
-  //         country: formData.country,
-  //         state: formData.state,
-  //         city: formData.city,
-  //         pincode: formData.pincode,
-  //         // gender: formData.gender,
-  //         age: formData.AGE,
-  //         nationality: formData.nationality,
-  //       },
-  //       academicQualification: qualificationData,
-  //       workExperience: listData,
-  //       others: {
-  //         medicalHistory: formData.medicalstatus,
-  //         howDoYouHearAboutUs: formData.source || formData.sourceinfo,
-  //       },
-  //       courseDetails: {
-  //         courseId: currentCourse.key,
-  //         courseName:currentCourse.title,
-  //         mode: formData.mode,
-  //         subMode:formData.residental,
-  //         batch:currentCourse.batch,
-  //         imageAsset: courseAsset1,
-  //         certificateImgAsset: courseAsset2,
-  //         // date:courseDate,
-  //         date: formData.sdate,
-  //         timing:currentCourse.timing
-  //       },
-  //     }
-  //     let body1 = {
-  //       personalDetails: {
-  //         name: formData.name,
-  //         emailId: formData.email,
-  //         phone: formData.phone,
-  //         addressLane1: formData.address1,
-  //         addressLane2: formData.address2,
-  //         country: formData.country,
-  //         state: formData.state,
-  //         city: formData.city,
-  //         pincode: formData.pincode,
-  //         // gender: formData.gender,
-  //         age: formData.AGE,
-  //         nationality: formData.nationality,
-  //       },
-  //       academicQualification: qualificationData,
-  //       workExperience: listData,
-  //       others: {
-  //         medicalHistory: formData.medicalstatus,
-  //         howDoYouHearAboutUs: formData.source || formData.sourceinfo,
-  //       },
-  //       courseDetails: {
-  //         courseId: currentCourse.key,
-  //         courseName:currentCourse.title,
-  //         mode: formData.mode,
-  //         batch:currentCourse.batch,
-  //         imageAsset: courseAsset1,
-  //         certificateImgAsset: courseAsset2,
-  //         // date:courseDate,
-  //         date: formData.sdate,
-  //         timing:currentCourse.timing
-  //       },
-  //     }
-  //     // if(currentCourse.key==='batch-1-200hr'){
-  //     //   if(formData?.residental==='RESIDENTIAL'){
-  //     //     setmail(templateKey)
-  //     //   }else{
-  //     //     setmail(templateKey)
-  //     //   }
-  //     // }
-  //     console.log(mail)
-  //     console.log('body ', body)
-  //     console.log('body 1 ', body1)
-  //     let mailTemplate = {
-  //       type: 'INFO_TYI',
-  //       HTMLTemplate: pickMail(),
-  //       subject: 'Enrollment Confirmation',
-  //       data:{
-  //         name: formData.name
-  //       },
-  //       receivers: [formData.email,'info@theyogainstitute.org']
-  //     }
-
-  //     try{
-  //       let response
-  //       if(formData.mode==='ONLINE' || (currentCourse.residential===false && currentCourse.nonResidential===false)){
-  //         response = await axios.post(
-  //           `${ cmsBaseDomain }/forms`,
-  //           body1
-  //         )
-  //       }else{
-  //         response = await axios.post(
-  //           `${ cmsBaseDomain }/forms`,
-  //           body
-  //         )
-  //       }
-
-  //       if(response?.data?.success){
-  //         if(currentCourse.key!=='satsang' && currentCourse.key!=='samattvam' ){
-  //           const paymentOrderResponse =  await axios.post(`${ cmsBaseDomain }/payment/order?enrollmentFormId=${response.data.data['_id']}`, {
-  //             amount: courseFee,
-  //             notes: currentCourse.metaDescription,
-  //             objectType:'ENROLLMENT'
-  //           })
-  //           console.log('Hello From 1 step')
-  //           if(!paymentOrderResponse?.data?.amount && !paymentOrderResponse?.data?.id) return 0
-  //           console.log('Hello From 2 step')
-  //           console.log('amount : ',paymentOrderResponse.data.amount,)
-  //           console.log('amount : ',paymentOrderResponse.data.id,)
-  //           console.log('razorPayKey : ',razorPayKey)
-  //           console.log('handler : ', );
-
-  //           const options = {
-  //             // key: 'rzp_test_hWMewRlYQKgJIk', 
-  //             // Enter the Key ID generated from the Dashboard
-  //             key: razorPayKey,
-  //             amount: paymentOrderResponse.data.amount, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
-  //             currency: 'INR',
-  //             name: 'The Yoga Institute',
-  //             description: 'Course Transaction',
-  //             // image: 'https://example.com/your_logo', // un comment and add TYI logo
-  //             order_id: paymentOrderResponse.data.id, // eslint-disable-line
-  //             handler: async(res) => {
-
-  //               // setIsLoad(false);
-  //               console.log('Hello From rzr', res)
-  //               // Navigare to Success if razorpay_payment_id, razorpay_order_id, razorpay_signature is there
-  //               if(res.razorpay_payment_id && res.razorpay_order_id && res.razorpay_signature) {
-  //                 await axios.post(`${ authBaseDomain }/ali/mail`, mailTemplate)
-  //                 navigate(`/enrollment_thankyou/${currentCourse.key}`)
-  //               }
-  //             },
-  //             prefill: {
-  //               name: formData.name,
-  //               email: formData.email,
-  //               contact: formData.phone
-  //             },
-  //             notes:{
-  //               courseName: currentCourse.title,
-  //               name: formData.name,
-  //               email: formData.email,
-  //               contact: formData.phone,
-  //               // date: courseDate,
-  //               date: formData.sdate,
-  //               time : currentCourse.timing,
-  //               mode : formData.mode,
-  //             },
-  //             theme: {
-  //               color: '#3399cc' // enter theme color for our website
-  //             },
-  //             modal: {
-  //               ondismiss: function () {
-  //                 // The user closed the payment modal
-  //                 setIsLoad(false);
-  //                 console.log("Payment modal closed by user.");
-  //                 // alert("Payment process was canceled.");
-  //                 // Perform any necessary cleanup or UI updates
-  //               },
-  //             },
-
-
-
-
-  //           }
-
-  //           console.log('Befor razorpay', options)
-  //           console.log('Befor razorpay', options.handler())
-  //           const rzp = new window.Razorpay(options)
-
-  //           rzp.open()  
-  //           console.log('Can See !!!!!!!!')
-  //         }else{
-  //           await axios.post(`${ authBaseDomain }/ali/mail`, mailTemplate)
-
-  //           if(currentCourse.key==='satsang'){
-  //             navigate('/satsang_thankyou')
-  //           }else if(currentCourse.key ==='samattvam'){
-  //             navigate('/samattvam_thankyou')
-  //           }else{
-
-  //             navigate(`/enrollment_thankyou/${currentCourse.key}`)
-
-  //           }
-  //         }
-  //       }
-  //     } 
-  //     catch(err){
-  //       setIsLoad(false);
-  //       console.error(err)
-  //     } 
-  //   }
-
-
-  // }
-
   const handleOpen = () => {
     setOpen(true);
   };
@@ -1050,35 +650,12 @@ const EnrollmentForm = ({
     return null; // Render nothing while checking the token
   }
 
-
-
-
   return (
     <div className="main_div">
 
       <div className="grid_box1">
         <div className="right_grid">
           <form>
-            {/* <div className="medical-section">
-              <p className="medical-label">
-                Medical History & Current Health Issues :
-              </p>
-              <textarea
-                className="text_box"
-                type="text"
-                rows="5"
-                cols="40"
-                onChange={(e) => {
-                  setFormData({
-                    ...formData,
-                    medicalstatus: e.target.value,
-                  })
-                }}
-              />
-            </div> */}
-
-
-
             <CourseDetails
               courseDate={courseDate}
               currentCourse={currentCourse}
@@ -1088,7 +665,6 @@ const EnrollmentForm = ({
               setCourseAsset1={setCourseAsset1}
               courseAsset2={courseAsset2}
               setCourseAsset2={setCourseAsset2}
-              // setBold={setBold}
               handleSubmit={handleSubmit}
               empty={empty}
               setEmpty={setEmpty}
@@ -1099,101 +675,31 @@ const EnrollmentForm = ({
               setUploadCheck={setUploadCheck}
               handleResidential={handleResidential}
               dateDurationChange={dateDurationChange}
+              isEditStudentOpen={isEditStudentOpen}
+              setEditStudentOpen={setEditStudentOpen}
+              isLoad={isLoad}
             />
             {(formData.startDate && values?.endDateFormat) &&
               <div className='terms' style={{ fontSize: '2rem' }}>Start date: <b>{values.startDate}</b> <br />
                 Valid till: <b>{values?.endDateFormat}</b></div>}
 
-            <div className="bottom_container_btn">
-              <div className='terms'>
-                <label>
-                  <input
-                    type="checkbox"
-                    checked={isChecked}
-                    onChange={handleCheckboxChange}
-                    id='myCheckbox'
-                  />
-                  I agree and accept the
-
-                </label>
-
-                <a
-                  // href="https://theyogainstitute.org/terms-and-conditions"
-                  // target="_blank"
-                  onClick={handleOpen}
-                  className='terms_text'
-                  style={{ color: "rgba(0, 0, 0, 1)", marginLeft: "3px", cursor: "pointer" }}
-                  rel="noopener noreferrer">
-                  terms and conditions
-                </a>
-
-                {open && (
-                  // <MessageModal 
-                  //   message={<TermsCondition />} 
-                  //   closePopup={handleClose} 
-                  //   type="Terms and Conditions" // You can pass any other props as needed
-                  // />
-                  // <TermsAndConditionsModal />
-                  <CustomModal isShippingModalOpen={handleOpen} setIsShipppingModalOpen={handleClose} />
-                )}
-
-                {isChecked === false ? empty === 19 && (
-                  <div style={{ color: 'red', marginLeft: '0', marginTop: '1rem', fontSize: '1.2rem' }} className='mar_top'>
-                    *Please agree to the condition!
-                  </div>
-                ) : ''}
-                {console.log(isChecked)}
-              </div>
-              <div className="button_box">
-                {/* <button className="next_button" onClick={handleSubmit}>
-            Proceed to payment
-            </button> */}
-
-                {<button type="button" onClick={handleSubmit} className={!isLoad ? 'next_button button register-primary-btn' : 'next_button button register-primary-btn no-event'} disabled={isLoad}>
-                  {setDate ? <><span id="txt">Register&nbsp; </span> </> : !isLoad ? <><span id="txt" style={{ fontSize: '14px', fontWeight: '500' }}>Pay & confirm enrollment </span> </> : <><span className="loader">
-                    <span className="dot"></span>
-                    <span className="dot"></span>
-                    <span className="dot"></span>
-                  </span></>}
-                </button>}
-
-                {/* {isResidential && <button type="button" onClick={handleSubmit} className={!isLoad ? 'next_button button register-primary-btn' : 'next_button button register-primary-btn no-event'} disabled={isLoad}>
-              {!isLoad ? <><span id="txt">Submit&nbsp; </span> </> : <><span className="loader">
-                <span className="dot"></span>
-                <span className="dot"></span>
-                <span className="dot"></span>
-              </span></>}
-            </button>} */}
-
-              </div>
-            </div>
           </form>
-
-
         </div>
-        <div className="left_grid" style={{ width:'38%',marginTop:'-340px',marginLeft:'20px' }}>
-          <div className="details_box details_personal_box">
+        {/* <div>
+          <div>
             <div className="details_course_box ">
               <div className="detail_image_box">
-                {/* <img src={currentCourse?.image} alt={currentCourse?.title} /> */}
               </div>
               <div className="current_duration">
                 <div className='personal_info_wrapper'>
                   <span className='details_newName'>
                     Student details
                   </span>
-                  {/* {courseDate !== 'null' ? courseDate : ''} */}
                   <div onClick={handleEditOpen}>
                     <img src='/images/edit_icon.svg' style={{ cursor: 'pointer' }} alt='' loading='lazy' />
                   </div>
                 </div>
                 {(editOpen || isEditStudentOpen) && (
-                  // <MessageModal 
-                  //   message={<TermsCondition />} 
-                  //   closePopup={handleClose} 
-                  //   type="Terms and Conditions" // You can pass any other props as needed
-                  // />
-                  // <TermsAndConditionsModal />
                   <EditStudent isShippingModalOpen={handleEditOpen} setIsShipppingModalOpen={handleEditClose} formData={formData} setFormData={setFormData} setEmpty={setEmpty} empty={empty} currentCourse={currentCourse} dateDurationChange={dateDurationChange} handleSubmit={handleSubmit} setUpdateAddress={setUpdateAddress} setDefaultAddress={setDefaultAddress} />
                 )}
                 <div className='fields_alignment fields_alignment_bottom'>
@@ -1214,7 +720,6 @@ const EnrollmentForm = ({
                 </div>
                 <div className='details_desc_days'>
                   <div className='details_desc_name_info'><span className='details_duration_info'>Address</span> <span className='tenure_course'>
-                    {/* {getAddress()} */}
                     {getAddress()}
                     {getAddress() && <>, </>}
                     {getState()}
@@ -1222,12 +727,8 @@ const EnrollmentForm = ({
                     {getCountry()}
                     {getPincode() && <> - </>}
                     {getPincode()}
-                    {/* {`${formData?.address1}, ${formData?.state}, ${formData?.country} - ${formData?.pincode}`} */}
                   </span></div>
-
                 </div>
-                {/* {courseFee && <p className="current_fees"> {currentCourse.key === 'ma-yoga-shastra' && formData.country !== 'India' ? '$ 3950' : `₹ ${courseFee}`}</p>} */}
-                {/* {courseFee && <p className="current_fees"> ₹ {courseFee}</p>} */}
               </div>
             </div>
           </div>
@@ -1249,7 +750,6 @@ const EnrollmentForm = ({
 
                 <div className="form_error">
                   <InputComponent
-                    // type="email"
                     id="text"
                     placeholder="Email ID*"
                     form={formData}
@@ -1267,27 +767,9 @@ const EnrollmentForm = ({
                   <PhoneInput
                     placeholder="Enter phone number*"
                     defaultCountry="IN"
-                    // country="IN"
                     value={phoneValue}
-                    // onChange={(e) => {
-                    //   setFormData({ ...formData, phone: e })
-                    // }}
                     onChange={handlePhoneChange}
-
                   />
-                  {/* {empty === 3 && <small> Please enter a valid phone number</small>}  */}
-                  {/* {phoneError && <small>{phoneError}</small>} */}
-
-                  {/* {validationErrors?.length > 0 ? (
-        // <ul>
-        //   {validationErrors.map((error, index) => (
-        //     <li key={index}><small class="phone_err">{error}</small></li>
-        //   ))}
-        // </ul>
-        
-        <div class="created_phone_err">Invalid Number</div>
-        
-      ) : ((empty === 3) ? <small class="phone_error"> Please enter a valid phone number</small> : " ") } */}
 
                   {validationErrors?.length > 0 ? (
                     <div className="created_phone_err">Invalid Number</div>
@@ -1297,114 +779,6 @@ const EnrollmentForm = ({
                   {console.log('ve', validationErrors)}
 
                 </div>
-
-                {/* Adding start google API */}
-
-
-                {/* <LoadScript googleMapsApiKey={mapKey} libraries={libraries}>
-      <Autocomplete onLoad={onLoadAutocomplete} onPlaceChanged={onPlaceChanged}>
-        <div className="form_error">
-          <InputComponent
-            type="text"
-            placeholder="Address Line 1*"
-            form={formData}
-            setField={setFormData}
-            keyName="address1"
-            errorCheck={setEmpty}
-            inputProps={{
-              style: {
-                boxSizing: 'border-box',
-                border: '1px solid transparent',
-                width: '100%',
-                height: '32px',
-                padding: '0 12px',
-                borderRadius: '3px',
-                boxShadow: '0 2px 6px rgba(0, 0, 0, 0.3)',
-                fontSize: '14px',
-                outline: 'none',
-                textOverflow: 'ellipsis',
-                marginBottom: '12px',
-              },
-            }}
-          />
-          {empty === 4 && <p>Please enter your address</p>}
-        </div>
-      </Autocomplete>
-
-      <div className="form_error countries_list">
-        <Select
-          styles={customStyles}
-          id="country"
-          name="country"
-          placeholder="Country"
-          options={updatedCountries}
-          value={values.country}
-          onChange={(value) => {
-            setValues({ country: value, state: null, city: null }, false);
-            setFormData((prev) => ({ ...prev, country: value.label }));
-            console.log('Selected Country from Dropdown:', value); // Log the selected country object
-          }}
-        />
-        {empty === 5 && <p>Please enter your country</p>}
-      </div>
-
-      <div className="form_error">
-        <Select
-          styles={customStyles}
-          id="state"
-          name="state"
-          placeholder="State"
-          options={updatedStates(values.country?.isoCode)}
-          value={values.state}
-          onChange={(value) => {
-            setValues({ country: values.country, state: value, city: null }, false);
-            setFormData((prev) => ({ ...prev, state: value.name }));
-            console.log('Selected State:', value); // Log the selected state
-          }}
-        />
-      </div>
-
-      <div className="form_error">
-        <Select
-          styles={customStyles}
-          id="city"
-          name="city"
-          placeholder="City"
-          options={updatedCities(values?.country?.isoCode, values?.state?.isoCode)}
-          value={values.city}
-          onChange={(value) => {
-            setValues({ country: values.country, state: values.state, city: value }, false);
-            setFormData((prev) => ({ ...prev, city: value.name }));
-            console.log('Selected City:', value); // Log the selected city
-          }}
-        />
-      </div>
-
-      <div className="form_error pincode_err">
-        <InputComponent
-          type="text"
-          placeholder="Pincode*"
-          form={formData}
-          setField={setFormData}
-          keyName="pincode"
-          errorCheck={setEmpty}
-          inputProps={{
-            value: formData.pincode,
-            onChange: (e) => setFormData((prev) => ({ ...prev, pincode: e.target.value })),
-          }}
-        />
-        {empty === 8 && <small> Please enter your pincode</small>}
-      </div>
-    </LoadScript> */}
-
-
-
-                {/* End google API */}
-
-
-                {/* Adding start google API 2 */}
-
-
                 <LoadScript googleMapsApiKey={mapKey} libraries={libraries}>
                   <Autocomplete onLoad={onLoadAutocomplete} onPlaceChanged={onPlaceChanged}>
                     <div className="form_error">
@@ -1480,8 +854,6 @@ const EnrollmentForm = ({
                     />
                   </div>
 
-
-
                   <div className="form_error pincode_err">
                     <InputComponent
                       type="text"
@@ -1494,153 +866,6 @@ const EnrollmentForm = ({
                     {empty === 8 && <small>Please enter your pincode</small>}
                   </div>
                 </LoadScript>
-
-
-                {/* End google API 2 */}
-
-                {/* <div className="form_error">
-              <InputComponent
-                type="text"
-                placeholder="Address Line 1*"
-                form={formData}
-                setField={setFormData}
-                keyName="address1"
-                errorCheck={setEmpty}
-              />
-              {empty === 4 && <p> Please enter your address</p>}
-            </div> */}
-                {/* <div className="form_error">
-              <InputComponent
-                type="text"
-                placeholder="Address Line 2"
-                form={formData}
-                setField={setFormData}
-                keyName="address2"
-                errorCheck={setEmpty}
-              />
-            </div> */}
-                {/* <div className="form_error countries_list">
-              <Select
-                styles={customStyles}
-                id="country"
-                name="country"
-                placeholder="Country"
-                label="country"
-                className="select"
-                form={formData}
-                setField={setFormData}
-                keyName="country"
-                errorCheck={setEmpty}
-                options={updatedCountries}
-                value={values.country}
-                onChange={(value) => {
-                  setValues({ country: value, state: null, city: null }, false)
-                  setFormData((prev) => {
-                    return { ...prev, country: value.name }
-                  })
-                }}
-              />
-              {empty === 5 && <p>Please enter your country</p>}
-            </div> */}
-                {/* <div className="form_error">
-              <Select
-                styles={customStyles}
-                id="state"
-                name="state"
-                placeholder="State"
-                form={formData}
-                setField={setFormData}
-                keyName="state"
-                errorCheck={setEmpty}
-                options={updatedStates(values.country?.isoCode)}
-                value={values.state}
-                onChange={(value) => {
-                  setValues(
-                    { country: values.country, state: value, city: null },
-                    false
-                  )
-                  setFormData((prev) => {
-                    return { ...prev, state: value.name }
-                  })
-                }}
-              />
-
-            </div> */}
-                {/* <div className="form_error">
-              <Select
-                styles={customStyles}
-                id="city"
-                name="city"
-                placeholder="City"
-                form={formData}
-                setField={setFormData}
-                keyName="city"
-                errorCheck={setEmpty}
-                options={updatedCities(
-                  values?.country?.isoCode,
-                  values?.state?.isoCode
-                )}
-                value={values.city}
-                onChange={(value) => {
-                  setValues(
-                    {
-                      country: values.country,
-                      state: values.state,
-                      city: value,
-                    },
-                    false
-                  )
-                  setFormData((prev) => {
-                    return { ...prev, city: value.name }
-                  })
-                }}
-              />
-              {empty === 7 && (
-                <small >
-                  {' '}
-                  Please enter your city
-                </small>
-              )}
-            </div> */}
-                {/* <div className="form_error pincode_err">
-              <InputComponent
-                type="text"
-                placeholder="Pincode*"
-                form={formData}
-                setField={setFormData}
-                keyName="pincode"
-                errorCheck={setEmpty}
-              />
-              {empty === 8 && <small> Please enter your pincode</small>}
-            </div> */}
-
-                {/* <div className="form_error">
-            <div className="course-card-dropdown">
-          <div >
-           
-          <SelectDropDown
-                  currentValue={selectDate}
-                  changeCurrentValue={setSetselectDate}
-                  text={'Select Date/Time'}
-                  isStyles={selectStyles}
-                  dates={currentCourse.dates}
-                  keyName="sdate"
-                  form={formData}
-                  setFormData={setFormData}
-                  value={values.selectDate}
-                  onChange={(value) => {
-                    setValues({ ...values, sdate: value })
-                    setFormData((prev) => ({
-                      ...prev,
-                      sdate: value.keyName
-                  }))
-                  }}
-          />
-         
-          </div>
-          </div>
-          </div> */}
-
 
                 <div className="personal_gender">
                   <span className="gender-text">Gender*</span>
@@ -1721,7 +946,7 @@ const EnrollmentForm = ({
                   <DatePicker
                     minDate={minDate}
                     visiblity={'hidden'}
-                    placeholderText="Select start date*" // Custom placeholder text
+                    placeholderText="Select start date*"
                     dateFormat="dd/MM/YYYY"
                     value={values.startDate}
                     form={formData}
@@ -1730,7 +955,6 @@ const EnrollmentForm = ({
                       handleStartDate(value)
                     }}
                     onKeyDown={(e) => e.preventDefault()} //
-                  // readOnly
                   />
                   {empty === 21 && <small id="fill_err"> Please select start date</small>
                   }
@@ -1743,10 +967,6 @@ const EnrollmentForm = ({
                       id="endDate"
                       name="endDate"
                       placeholder="Select Duration*"
-                      // form={formData}
-                      // setField={setFormData}
-                      // keyName="endDate"
-                      // // errorCheck={setEmpty}
                       options={durationList}
                       value={values.endDate}
                       onChange={(value) => {
@@ -1757,9 +977,6 @@ const EnrollmentForm = ({
                   </div>
                   <div style={{ padding: '10px 0 0 26px', color: '#C9705F', fontWeight: '600' }}>&#8377;2200 off for 12 months</div>
                 </>}
-
-
-
 
                 <div className="DOB_box form_error">
                   <InputComponent
@@ -1786,17 +1003,15 @@ const EnrollmentForm = ({
                   {empty === 10 && <div style={{ marginTop: '-8rem', display: 'inline-block', float: 'right', fontSize: '12px', color: 'red' }}> Please enter your nationality</div>}
                 </div>
                 <Other
-                  // setBold={setBold}
                   empty={empty}
                   formData={formData}
                   setFormData={setFormData}
-                // handleEmpty4={handleEmpty4}
                 />
 
               </form>
             )
           }
-        </div>
+        </div> */}
       </div>
 
     </div>

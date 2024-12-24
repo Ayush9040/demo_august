@@ -512,9 +512,19 @@
   visibility: hidden;
 }
 
+.cr-cntr {
+  display: flex !important;
+  width: 96% !important;
+}
+
 @media (max-width: 768px) {
   .to_fix_width {
     display: none;
+  }
+
+  .cr-cntr {
+    flex-direction: column;
+    width: 96%;
   }
 }
 
@@ -531,7 +541,7 @@
   justify-content: center;
   // background-image: url('../../../../../public/images/bg_enroll.png');
   background-color: rgba(202, 70, 37, 0.02);
-  padding-bottom: 24vh;
+  // padding-bottom: 24vh;
 
   input::-webkit-outer-spin-button,
   input::-webkit-inner-spin-button {
@@ -584,8 +594,8 @@
       justify-content: center;
 
       svg {
-        height: 80px;
-        width: 80px;
+        height: 40px;
+        // width: 64px;
       }
     }
 
@@ -603,7 +613,7 @@
       border: 1px solid rgba(0, 0, 0, 1);
       border-radius: 20px;
       padding: 7px 12px 5px 17px;
-      margin-top: 23px;
+      margin-top: 2px;
       cursor: pointer;
     }
   }
@@ -949,6 +959,7 @@
     margin-top: 2%;
     background-color: white;
   }
+
 }
 
 .main-div {
@@ -1448,6 +1459,10 @@ input[type='radio']:checked::before {
   // height: 95%;
   margin: 2%;
   width: 100%;
+  background-image: url('../../../../../public/images/bg_lotus_enrollment.png');
+  background-size: auto 330px;
+  background-position: center;
+  background-repeat: no-repeat;
 
   .course-secondary-container {
     display: flex;
@@ -1770,7 +1785,6 @@ input[type='radio']:checked::before {
     .course-main-container {
       .course-secondary-container {
         .details_box {
-
           border: 1px solid rgba(96, 96, 96, 0.5019607843);
           border-radius: 20px;
           width: 100% !important;
@@ -2242,8 +2256,6 @@ input[type='radio']:checked::before {
   background-color: #fff;
   margin-top: 28px;
   border-radius: 20px;
-  border-bottom-left-radius: 0px;
-  border-bottom-right-radius: 0px;
   box-shadow: 0px 0px 13px 0px #0000000A;
 
   box-shadow: 0px 11.58px 23px 0px #0000000A;
@@ -2264,12 +2276,12 @@ input[type='radio']:checked::before {
 .img_wrapper_date_format {
   width: 30%;
   display: flex;
-  align-items: end;
+  align-items: top;
 }
 
 .img_wrapper_date_format img {
-  width: 100%;
-  height: 65%;
+  width: auto;
+  height: 130px;
   // padding-top: 53%;
 }
 
@@ -2339,9 +2351,11 @@ input[type='radio']:checked::before {
 .fees_wrapper {
   // margin-top: 32px;
   width: 100%;
+
   // background-color: rgba(255, 243, 240, 1);
   // height: 71px;
   // padding: 22px 24px;
+
 }
 
 .fees_show {
@@ -2381,18 +2395,18 @@ input[type='radio']:checked::before {
 
 .bottom_container_btn {
   background-color: #fff;
-  margin-top: -47px;
-  padding: 22px;
-  margin-left: 15px;
-  margin-right: 25px;
+  // margin-top: -47px;
+  padding: 0 22px 22px 22px;
+  // margin-left: 15px;
+  // margin-right: 25px;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   display: flex;
-  // justify-content: space-between;
+  justify-content: space-between;
   align-items: center;
-  width: 52.6%;
-  position: absolute;
-  right: 3vw;
+  // width: 52.6%;
+  // position: absolute;
+  // right: 3vw;
 }
 
 .terms label {
@@ -2555,7 +2569,7 @@ input[type=checkbox]:checked+label:before {
 }
 
 .date_btn {
-  width: 48.9%;
+  // width: 48.9%;
 }
 
 .accordian_holder {
@@ -2683,9 +2697,10 @@ input[type=checkbox]:checked+label:before {
   }
 
   .course-main-container .course-secondary-container .details_box .details_course_box .detail_image_box {
-    width: auto;
-    max-width: 100%;
-    height: 285px;
+    height: auto;
+    width: 100%;
+
+    // height: 285px;
     // min-width: auto;
     // object-fit: fill;
   }
@@ -2709,7 +2724,7 @@ input[type=checkbox]:checked+label:before {
 
   .details_wrapper_duration {
     border-radius: 8px;
-    border: 1px solid rgba(96, 96, 96, 0.3);
+    // border: 1px solid rgba(96, 96, 96, 0.3);
     width: 100%;
     display: flex;
     padding: 2px;
@@ -2846,7 +2861,7 @@ input[type=checkbox]:checked+label:before {
   .time_days_wrapper {
     border-radius: 8px;
     border: 1px solid rgba(96, 96, 96, 0.3);
-    width: 98%;
+    width: 95%;
     margin-top: 12px;
     padding: 12px 9px;
   }
@@ -2874,6 +2889,18 @@ input[type=checkbox]:checked+label:before {
     display: grid;
     grid-template-rows: 0fr;
     transition: grid-template-rows 0.5s;
+  }
+
+  .detail_image_box {
+    width: 100% !important; //320px;
+    height: 100% !important; //240px;
+    // min-width: 250px;
+
+    img {
+      border-radius: 30px;
+      height: 100% !important; //240px;
+      width: 100% !important; //320px;
+    }
   }
 
   .accordian_holder .show {
@@ -2946,8 +2973,6 @@ input[type=checkbox]:checked+label:before {
     background-color: #fff;
     margin-top: 28px;
     border-radius: 20px;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
 
   }
 
@@ -2958,11 +2983,12 @@ input[type=checkbox]:checked+label:before {
 
   .bottom_container_btn {
     display: flex;
-    // position: fixed;
-    // bottom: 0px;
-    // width: 100%;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
     background: rgb(255, 243, 240);
-    margin-left: 0px;
+    margin-left: -28px;
+    padding-top: 18px;
     // left: 0;
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
@@ -3006,12 +3032,17 @@ input[type=checkbox]:checked+label:before {
 }
 
 @media (max-width: '480px') {
+  .dmy-cntr {
+    height: 12px;
+  }
+
   .details_desc_info {
-    // flex-direction: column;
+    justify-content: space-between;
     width: 100%;
+    margin: -10px 0 0 8px;
 
     .details_wrapper_duration {
-      padding: 12px 12px;
+      // padding: 12px 12px;
       // min-width: 160px !important;
     }
   }
@@ -3049,8 +3080,8 @@ input[type=checkbox]:checked+label:before {
 
   .course-main-container .course-secondary-container .details_box .details_course_box .detail_image_box img {
     border-radius: 30px;
-    height: 100%;
-    width: 320px;
+    // height: 100%;
+    // width: 320px;
     padding: 17px 17px 17px 9px;
     aspect-ratio: 16 / 13.2;
     object-fit: cover;
@@ -3069,4 +3100,44 @@ input[type=checkbox]:checked+label:before {
 
 .css-1jqq78o-placeholder {
   font-size: 14px;
+}
+
+.stnd-detls {
+  width: 40%;
+
+  .card {
+    background-color: rgba(251, 249, 249, 1);
+    margin-top: 30px;
+    padding: 1.5rem;
+    border-radius: 20px;
+    box-shadow: 0px 0px 13px 0px rgba(0, 0, 0, 0.04);
+    box-shadow: 0px 11.58px 23px 0px rgba(0, 0, 0, 0.04);
+  }
+
+  @media(max-width: 768px) {
+    width: 102%;
+
+    .card {
+      display: none;
+    }
+  }
+}
+
+.crs-wrap {
+  width: 60%;
+  // margin-left: 30px !important;
+  margin-top: -30px;
+
+  .ex-width {
+    width: 150%;
+  }
+
+  @media(max-width: 768px) {
+    width: 100%;
+    margin-left: 0 !important;
+
+    .ex-width {
+      width: 100%;
+    }
+  }
 }

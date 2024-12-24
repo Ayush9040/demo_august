@@ -101,36 +101,6 @@ const Enrollment = () => {
 
   const handleEmpty1 = (e) => {
     e.preventDefault()
-    // if (
-    //   formData.name === '' ||
-    //   formData.name === undefined ||
-    //   formData.name === null
-    // ) {
-    //   return setEmpty(1)
-    // } else if (
-    //   formData.phone === '' ||
-    //   formData.phone.length < 6 ||
-    //   formData.phone.length > 15
-    // ) {
-    //   return setEmpty(3)
-    // } else if (!validateEmail(formData.email)) {
-    //   return setEmpty(2)
-    // } else if (formData.address1 === '') {
-    //   return setEmpty(4)
-    // } else if (formData.country === '') {
-    //   return setEmpty(5)
-    // } else if (formData.pincode === '') {
-    //   return setEmpty(8)
-    // } else if (formData.AGE === null || formData.AGE < 4 || formData.AGE > 99) {
-    //   return setEmpty(9)
-    // } else if (formData.nationality === '') {
-    //   return setEmpty(10)
-    // } else if (formData.gender === '') {
-    //   return setEmpty(11)
-    // } else {
-    //   setEmpty(0)
-    //   setBold(4)
-    // }
   }
   function parseDate(dateStr) {
     const [day, month, year] = dateStr.split('/').map(Number); // Split the date string and convert parts to numbers
@@ -162,10 +132,6 @@ const Enrollment = () => {
 
   const setEndDate = (months, startDate) => {
     let endDate = formatDate(addMonths(parseDate(startDate), months))
-    // console.log(endDate);
-    // alert(endDate)
-
-    // setFormData({ ...formData, endDate: endDate })
     let originalFee = AllCourses.find((item) => item.key === courseId)
     let newAmnt = originalFee?.fees?.onlineFee * months
     if (months == 12) {
@@ -329,13 +295,7 @@ const Enrollment = () => {
         },
         userId: localStorage.getItem('userAppId') ? localStorage.getItem('userAppId') : null
       }
-      // if(currentCourse.key==='batch-1-200hr'){
-      //   if(formData?.residental==='RESIDENTIAL'){
-      //     setmail(templateKey)
-      //   }else{
-      //     setmail(templateKey)
-      //   }
-      // }
+
       console.log(mail)
 
 
@@ -658,18 +618,7 @@ const Enrollment = () => {
       // alert("8")
       setEmpty(18)
     }
-    // else if (formData.AGE === null || formData.AGE < 4 || formData.AGE > 99) {
-    //   setEmpty(9)
-    // }
-    // else if (formData.nationality === '') {
-    //   setEmpty(10)
-    // }
-    // else if (formData.mode === '') {
-    //   setEmpty('mode')
-    // }
-    // else if (isMatch && formData.startDate === '') {
-    //   setEmpty(21)
-    // }
+  
     else if (isMatch && formData.endDate === '') {
       console.log("Form Data Start Date ", formData.startDate)
       // alert("12")
@@ -757,15 +706,6 @@ const Enrollment = () => {
       //const loggedIn = localStorage.getItem('isLoggedIn') === 'true' ? 'Yes' : 'No'; // Adjust based on your auth logic
       const uniqueViewId = Math.floor(Math.random() * 1000); // Replace with actual logic
 
-      // trackPageView({
-      //     pageName,
-      //     lastPageUrl,
-      //     pageUrl,
-      //     sessionDuration,
-      //     isLoggedIn,
-      //     sessionId: session,
-      //     uniqueViewId,
-      // });
     };
   }, [sessionId, startTime]);
 
@@ -774,9 +714,6 @@ const Enrollment = () => {
     const currentPageUrl = window.location.href;
     handleCTCoursePaymentPageVisit(currentPageUrl);
   }, []);
-
-
-
 
   return (
     <>
@@ -792,84 +729,13 @@ const Enrollment = () => {
             <span className="flower">{legacy2}</span>
 
             <div className="student">Your Selected Yoga Course Details<br />
-              {/* <span className='enroll_subtitle'>A step towards inner transformation🧘‍✨</span>  */}
             </div>
 
-            {/* <ul className="header_ul">
-            <li
-              style={
-                bold === 0 ? { fontWeight: '600', fontSize: '2.5rem' } : {}
-              }
-              onClick={() => setBold(0)}
-            >
-              {' '}
-              Personal Details{' '}
-              {bold === 0 && <div className="bottom-line"></div>}
-            </li>
-            <li
-              style={
-                bold === 1 ? { fontWeight: '600', fontSize: '2.5rem' } : {}
-              }
-              onClick={handleEmpty1}
-            >
-              Academic Qualifications{' '}
-              {bold === 1 && <div className="bottom-line"></div>}
-            </li>
-            <li
-              style={
-                bold === 2 ? { fontWeight: '600', fontSize: '2.5rem' } : {}
-              }
-              onClick={handleEmpty2}
-            >
-              Work Experience{' '}
-              {bold === 2 && <div className="bottom-line"></div>}
-            </li>
-            <li
-              style={
-                bold === 3 ? { fontWeight: '600', fontSize: '2.5rem' } : {}
-              }
-              onClick={() => setBold(3)}
-            >
-              Other{bold === 3 && <div className="bottom-line"></div>}
-            </li>
-            <li
-              style={bold === 4 ? { fontWeight: 600, fontSize: '2.5rem' } : {}}
-              onClick={handleEmpty4}
-            >
-              Course Details
-              {bold === 4 && <div className="bottom-line"></div>}
-            </li>
-          </ul> */}
           </div>
         )}
 
         {bold === 0 ? (
           <>
-            {/* <Personal
-              setBold={setBold}
-              empty={empty}
-              formData={formData}
-              setFormData={setFormData}
-              handleEmpty1={handleEmpty1}
-              setEmpty={setEmpty}
-              isLoad={isLoad}
-              courseDate={courseDate}
-              templateKey={currentCourse?.templateId}
-              qualificationData={qualificationData}
-              listData={listData}
-              currentCourse={currentCourse}
-              courseAsset1={courseAsset1}
-              setCourseAsset1={setCourseAsset1}
-              courseAsset2={courseAsset2}
-              setCourseAsset2={setCourseAsset2}
-              handleSubmit={handleSubmit}
-              courseFee={courseFee}
-              setCourseFee={setCourseFee}
-              uploadCheck={uploadCheck}
-              setUploadCheck={setUploadCheck}
-              dateDurationChange={dateDurationChange}
-            /> */}
-
             <EnrollmentForm
 
               setBold={setBold}
