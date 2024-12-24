@@ -601,6 +601,17 @@ const SignIn = () => {
       catch (err) {
         // alert('Invalid OTP')
         setFormData({ ...formData, errorIndex: 2 });
+        // alert('failed')
+        toast.error(err?.data?.error, {
+          position: 'top-right',
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: false,
+          draggable: true,
+          progress: undefined,
+          theme: 'light',
+        })
       }
     }
     else {
@@ -749,60 +760,85 @@ const SignIn = () => {
 
           if (type != 'mobile') {
             // alert("Called mobile ")
-            let response = await axios.post(//send OTP for mobile
-              `${authBaseDomain}/authdoor/google/signup`,
-              payload,
-              {
-                headers: {
-                  'Authorization': `Bearer ${token}`
+            try {
+              let response = await axios.post(//send OTP for mobile
+                `${authBaseDomain}/authdoor/google/signup`,
+                payload,
+                {
+                  headers: {
+                    'Authorization': `Bearer ${token}`
+                  }
                 }
+              )
+
+              // const response = true;
+              // console.log("Response ", userDetails);
+
+              if (response) {
+                // alert('Siggned in');
+                localStorage.setItem('authorizationToken', response?.data?.accessToken)
+                localStorage.setItem('refreshToken', response?.data?.refreshToken)
+                // document.cookie = `authorizationToken=${response?.data?.accessToken}; path=/;`;
+                dispatch(loginUserSuccess({}))
+
+                await getUserDetails(response?.data?.accessToken, 'notalreadySignedUp')
+                callCTEvent(payload)
+                page ? page !== 'cart' ? navigate(`/enrollment/${page}`) : navigate('/shop/checkout') : navigate('/')
               }
-            )
-
-            // const response = true;
-            // console.log("Response ", userDetails);
-
-            if (response) {
-              // alert('Siggned in');
-              localStorage.setItem('authorizationToken', response?.data?.accessToken)
-              localStorage.setItem('refreshToken', response?.data?.refreshToken)
-              // document.cookie = `authorizationToken=${response?.data?.accessToken}; path=/;`;
-              dispatch(loginUserSuccess({}))
-
-              await getUserDetails(response?.data?.accessToken, 'notalreadySignedUp')
-              callCTEvent(payload)
-              page ? page !== 'cart' ? navigate(`/enrollment/${page}`) : navigate('/shop/checkout') : navigate('/')
+              else {
+                // alert('failed')
+              }
             }
-            else {
+            catch (err) {
               // alert('failed')
+              toast.error(err?.data?.error, {
+                position: 'top-right',
+                autoClose: 3000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: true,
+                progress: undefined,
+                theme: 'light',
+              })
             }
-
 
           }
 
           else {//google user
-            let response = await axios.post(//send OTP for mobile
-              `${authBaseDomain}/authdoor/google/signup`,
-              payload,
-              {
-                headers: {
-                  'Authorization': `Bearer ${token}`
+            try {
+              let response = await axios.post(//send OTP for mobile
+                `${authBaseDomain}/authdoor/google/signup`,
+                payload,
+                {
+                  headers: {
+                    'Authorization': `Bearer ${token}`
+                  }
                 }
+              )
+              if (response) {
+                // alert('Siggned in');
+                localStorage.setItem('authorizationToken', response?.data?.accessToken)
+                localStorage.setItem('refreshToken', response?.data?.refreshToken)
+                dispatch(loginUserSuccess({}))
+                await getUserDetails(response?.data?.accessToken, 'notalreadySignedUp')
+                callCTEvent(payload)
+                // console.log('user details 2 ', userDetails);
+                page ? page !== 'cart' ? navigate(`/enrollment/${page}`) : navigate('/shop/checkout') : navigate('/')
               }
-            )
-            if (response) {
-              // alert('Siggned in');
-              localStorage.setItem('authorizationToken', response?.data?.accessToken)
-              localStorage.setItem('refreshToken', response?.data?.refreshToken)
-              dispatch(loginUserSuccess({}))
-              await getUserDetails(response?.data?.accessToken, 'notalreadySignedUp')
-              callCTEvent(payload)
-
-              // console.log('user details 2 ', userDetails);
-              page ? page !== 'cart' ? navigate(`/enrollment/${page}`) : navigate('/shop/checkout') : navigate('/')
             }
-            else {
+            catch (err) {
               // alert('failed')
+              toast.error(err?.data?.error, {
+                position: 'top-right',
+                autoClose: 3000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: true,
+                progress: undefined,
+                theme: 'light',
+              })
             }
           }
         }
@@ -933,12 +969,8 @@ const SignIn = () => {
           else {
             // alert('failed')
           }
-
-
         }
         catch (err) {
-          console.log(err?.data?.error);
-
           if (err.data.error == 'Your session has expired.Please Sign Up again to continue.' || err.data.error == "Your session has expired. Please click 'Sign Up with Google' again to continue.") {
             setPageIndex(1)
             setOtp(new Array(4).fill(""));

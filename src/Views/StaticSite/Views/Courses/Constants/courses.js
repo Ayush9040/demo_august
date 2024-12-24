@@ -17630,7 +17630,7 @@ const alibaug = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'classes',
-    dates: ['21st Dec 2024 to 22nd Dec 2024','11th Jan 2025 to 12th Jan 2025'
+    dates: ['11th Jan 2025 to 12th Jan 2025'
     ],
     online: false,
     onCampus: false,
