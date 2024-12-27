@@ -821,7 +821,14 @@ export const handleAlreadySignedUpUser = ({
 }) => {
   if (window.clevertap) {
     // User profile data
-    let num = `${dialCode ? dialCode : ''}${phone ? phone : ''}`;
+    const convertToInternationalFormat = (phoneNumber, dialCode) => {
+      // Ensure that phoneNumber is cleaned of any non-digit characters (if needed)
+      const cleanedPhoneNumber = phoneNumber.replace(/\D/g, '');
+
+      // Combine the dialCode with the phoneNumber
+      return `+${dialCode}${cleanedPhoneNumber}`;
+    };
+    let num = convertToInternationalFormat(phone,dialCode);//added +
     const userProfile = {
       "Site": {
         // "Name": user.name || "",                    // User's name
