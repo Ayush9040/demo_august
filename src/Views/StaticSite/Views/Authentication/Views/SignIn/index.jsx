@@ -1391,42 +1391,24 @@ const SignIn = () => {
     details['lastName'] = getTrimmedName(details['lastName'])
 
     if (!details.firstName || !nameRegex.test(details.firstName)) {
-      console.log("Deails First Name ", details.firstName);
       setFormData({ ...formData, errorIndex: 3 });
     }
     else if (!details.lastName || !nameRegex.test(details.lastName)) {
-      console.log("Deails lastName Name ", details.lastName);
       setFormData({ ...formData, errorIndex: 4 });
     }
     else if ((!details?.address1)) {
-      console.log("Deails email Name ", details.email);
       setFormData({ ...details, errorIndex: 5 });
     }
     else if ((!details?.address2)) {
-      setFormData({ ...details, errorIndex: 5 });
+      setFormData({ ...details, errorIndex: 6 });
     }
-    // else if (!values?.country?.label) {
-    //   // alert("Hello from country ")
-    //   console.log("values ", values.country?.label)
-    //   console.log("Deails country Name ", details.country?.value);
-    //   setFormData({ ...details, errorIndex: 6 });
-    // }
-    // else if (!values?.state?.label) {
-    //   console.log("values ", values.country?.label)
-    //   console.log("Deails country Name ", details.country?.value);
-    //   setFormData({ ...details, errorIndex: 7 });
-    // }
-    // else if (!values?.city?.label) {
-    //   console.log("Deails city Name ", values.city?.label);
-    //   setFormData({ ...details, errorIndex: 8 });
-    // }
-    // else if (!details?.pincode) {
-    //   console.log("Deails city Name ", values.city?.label);
-    //   setFormData({ ...details, errorIndex: 9 });
-    // }
+
     else if (!details.gender?.value) {
-      console.log("Deails gender Name ", details.gender?.value);
       setFormData({ ...details, errorIndex: 10 });
+    }
+    else if (!details.phoneNumber) {
+      setFormData({ ...details, errorIndex: 11 });
+      setIsToast(true)
     }
     else if ((!getemail || !emailRegex.test(getemail)) && signUpType == 'mobile') {
       console.log("Deails email Name ", getemail);
