@@ -199,6 +199,40 @@ const AlibaugCarousel = () => {
 
       <div className="alibaug-container img-rev">
         <div className="alibaug-column alibaug-column-2">
+          <h2>Healthy Weight Loss & Wellness Retreat</h2>
+          <p>
+            Embark on a transformative journey towards sustainable weight loss and holistic wellness through a balanced approach that combines guided weight-loss focused Yoga sessions, customized pranayama and relaxation techniques, and nutritional workshops on mindful eating and sustainable weight management. Enjoy nourishing, organic, low-calorie Sattvik meals that support detoxification, while rejuvenating your mind and body with beach walks and ocean-side meditation. This comprehensive experience fosters a refreshed, mindful lifestyle that promotes lasting wellness and vitality.
+          </p>
+          <div className="apply-address">
+            <h5>Book Your Retreat Now</h5>
+            <h5>Date: <span style={{ fontWeight: '400' }}>25th January 2025 to 26th January 2025 (1 Night, 2 Days)</span>
+            </h5>
+            <h5>
+              Cost: <span style={{ fontWeight: '400' }}>Rs. 10,000/- (Per Person – Inclusive of 8 Meals)</span>
+            </h5>
+            <h5>Time: <span style={{ fontWeight: '400' }}>8:00 AM (25th) to 7:00 PM (26th)</span></h5>
+            <h5>Call us at <a href='tel: + 91 7738155500'>+ 91 7738155500</a>  or email us at <a href='mailto:info@theyogainstitute.org'>info@theyogainstitute.org</a></h5>
+          </div>
+          <Link
+            to={
+              isLoggedIn
+                ? `/enrollment/healthy-weightloss-wellness-retreat`///?date=${selectDate}
+                : `/user/sign-in?location=healthy-weightloss-wellness-retreat`//&date=${selectDate}
+            }
+          >
+            <EnrollBtn text={'Book Now'} buttonAction={() => { addToCart('Deep Dive Yoga and Meditation Retreat', '/deep-dive-yoga-meditation-retreat', '8:00 AM (21st) to 7:00 PM (22nd)') }} /></Link>
+        </div>
+        <div className="alibaug-column alibaug-column-1">
+          <img src="images/healthyWeighloss.jpg" />
+        </div>
+
+      </div>
+
+      <div className="alibaug-container">
+        <div className="alibaug-column alibaug-column-1">
+          <img src={`${baseDomain}${santaCruz.apply}`} />
+        </div>
+        <div className="alibaug-column alibaug-column-2">
           <h2>Facilities</h2>
           <div className="apply-address">
             <h5 style={{ fontSize: '2.2rem' }}>Accommodation</h5>
@@ -249,10 +283,10 @@ const AlibaugCarousel = () => {
           </div>
 
         </div>
-        <div className="alibaug-column alibaug-column-1">
-          <img src={`${baseDomain}${santaCruz.apply}`} />
-        </div>
+
       </div>
+
+
 
       <div style={{ padding: '0 7%' }}>
         <h2 style={{ marginTop: '3rem', textAlign: 'left' }}>How to Prepare for The Retreat? </h2>
