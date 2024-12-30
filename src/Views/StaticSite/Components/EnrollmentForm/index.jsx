@@ -348,7 +348,7 @@ const Enrollment = () => {
               handler: async (res) => {
                 // Navigare to Success if razorpay_payment_id, razorpay_order_id, razorpay_signature is there
                 if (res.razorpay_payment_id && res.razorpay_order_id && res.razorpay_signature) {
-                  if (currentCourse.key !== 'detox-cleanse-yoga-retreat' && currentCourse.key !== 'deep-dive-yoga-meditation-retreat' && currentCourse.key !== 'forest-yoga-retreat') {//no need to send mail 
+                  if (currentCourse.key !== 'detox-cleanse-yoga-retreat' && currentCourse.key !== 'deep-dive-yoga-meditation-retreat' && currentCourse.key !== 'forest-yoga-retreat' && currentCourse.key !== 'healthy-weightloss-wellness-retreat') {//no need to send mail 
                     await axios.post(`${authBaseDomain}/ali/mail`, mailTemplate)
 
                   }
