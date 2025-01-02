@@ -150,7 +150,7 @@ app.get('*', async (req, res) => {
   if (metaData && metaData.title) titleTag = `<title>${metaData.title}</title>`
   if (metaData && metaData.links) {
     linkArray = metaData.links.map((link) => {
-      if (link.rel) return `<link rel=${link.rel || ''} href=${RemoveTrailingSlash(link.href) || ''}  />`
+      if (link.rel) return `<link class="meta-heading" rel=${link.rel || ''} href=${RemoveTrailingSlash(link.href) || ''}  />`
     })
   }
   if (metaData && metaData.metaData) {
@@ -177,7 +177,7 @@ app.get('*', async (req, res) => {
     pTagBlog = `<div class="meta-heading">${metaData.pTagBlog}</div>`
   }
   if (metaData && metaData.aTag) {//added to test related courses as anchor tags
-    courseaTags = metaData.aTag.map((url) => `<a class="internal-link" href=https://theyogainstitute.org/${url} >https://theyogainstitute.org/${url}</a>`)
+    courseaTags = metaData.aTag.map((url) => `<a  class="meta-heading" href=https://theyogainstitute.org/${url} >https://theyogainstitute.org/${url}</a>`)
   }
 
 
