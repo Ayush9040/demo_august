@@ -4,7 +4,19 @@ const PublicationDateNav = ({ bold, setBold, handleYearlyData }) => {
   return (
     <>
       <div className="nav-container">
-        <ul> 
+        <ul>
+        <li
+            style={
+              bold === 9 ? { fontWeight: 'bold' } : { fontWeight: 'normal' }
+            }
+            onClick={() => {
+              setBold(9)
+              handleYearlyData && handleYearlyData(2025)
+            }
+            }
+          >
+            2025|
+          </li>
           <li
             style={
               bold === 8 ? { fontWeight: 'bold' } : { fontWeight: 'normal' }

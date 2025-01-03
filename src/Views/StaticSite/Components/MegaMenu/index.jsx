@@ -398,18 +398,18 @@ const MegaMenu = ({ setNav }) => {
                       Teachers)
                     </li>
                   </Link>
-                  <Link onClick={() => { setNav(false) }} to="/yog-prayas-online">
+                  {/* <Link onClick={() => { setNav(false) }} to="/yog-prayas-online">
                     <li>Yog Prayas - Online</li>
-                  </Link>
+                  </Link> */}
                   <Link onClick={() => { setNav(false) }} to="/meditation-foundation-course-online">
                     <li>Online Meditation Course (Foundation Course)</li>
                   </Link>
                   <Link onClick={() => { setNav(false) }} to="/regular-meditation-classes-online">
                     <li>Regular Online Meditation Classes</li>
                   </Link>
-                  <Link onClick={() => { setNav(false) }} to="/healing-movement-and-rhythm">
+                  {/* <Link onClick={() => { setNav(false) }} to="/healing-movement-and-rhythm">
                     <li>Healing Movement and Rhythm Classes</li>
-                  </Link>
+                  </Link> */}
                   <Link onClick={() => { setNav(false) }} to="/couples-classes">
                     <li>Couples&apos; Classes - Online</li>
                   </Link>
