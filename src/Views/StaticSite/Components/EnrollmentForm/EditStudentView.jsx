@@ -1451,7 +1451,7 @@ const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse
                 setFormData2((prev) => ({ ...prev, country: value.label, state: null, city: null }));
               }}
             />
-            {empty === 5 && <p>Please select your country</p>}
+            {empty === 5 && <small style={{ position: 'absolute', right: '0', bottom: '-18px', color: 'red' }}>Please select your country</small>}
           </div>
         </div>
 
