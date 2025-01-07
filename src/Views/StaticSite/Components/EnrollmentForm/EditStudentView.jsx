@@ -662,11 +662,22 @@ const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse
   const getUpdatedCities = (countryIsoCode, stateIsoCode) => {
     console.log(countryIsoCode, stateIsoCode);
 
-    if (!countryIsoCode && !stateIsoCode) return [];
-    return City.getCitiesOfState(countryIsoCode, stateIsoCode).map((city) => ({
-      value: city.name,
-      label: city.name,
-    }));
+    if (!countryIsoCode || !stateIsoCode) return [];
+    else {
+      let cities = City.getCitiesOfState(countryIsoCode, stateIsoCode).map((city) => ({
+        value: city.name,
+        label: city.name,
+      }));
+      if (cities.length > 0) {
+        return cities;
+      }
+      else{
+        return City.getCitiesOfCountry(countryIsoCode).map((city) => ({
+          value: city.name,
+          label: city.name,
+        }));
+      }
+    }
   };
 
 
@@ -1400,8 +1411,8 @@ const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse
                     keyName="address1"
                     dataKey="address1"
                     errorCheck={setEmpty}
-                    onFocus={()=>setIsMapDropdown(true)}
-                    onBlur={()=>setIsMapDropdown(false)}
+                    onFocus={() => setIsMapDropdown(true)}
+                    onBlur={() => setIsMapDropdown(false)}
                   />
                   {empty === 4 && <p style={{ position: 'absolute', right: '0', color: 'red', fontSize: '10px', bottom: '-15px' }}>Please enter your address</p>}
                 </div>

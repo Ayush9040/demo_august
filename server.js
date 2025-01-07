@@ -61,8 +61,8 @@ const getMetaData = async (path) => {
         headers.title = el.replace('<title>', '').replace('</title>', '')
       }
       else if (el.includes('<script')) headers.script = el
-    })
-    return { ...headers, h1Tag: metaDataObj?.[path]?.h1Tag, h2Tags: metaDataObj?.[path?.h2Tags], pTag: res.data.data?.pTag, aTag: res.data.data?.relatedCourses }
+    })    
+    return { ...headers, h1Tag: metaDataObj?.[path]?.h1Tag, h2Tags: metaDataObj?.[path?.h2Tags], pTag: res.data.data?.pTag, aTags: res.data.data?.relatedCourses }
   } catch (err) {
     if (metaDataObj[path]) return metaDataObj[path]
     try {
@@ -168,7 +168,7 @@ app.get('*', async (req, res) => {
   }
   if (metaData && metaData.aTags) {
     aTags = metaData.aTags.map((url) => `<a class="meta-heading" href=${url} >${url}</a>`)
-    blogATags = linkArryBlogs.map((url) => `<a class="meta-heading" href=${url} >${url}</a>`)
+    blogATags = linkArryBlogs.map((url) => `<a class="meta-heading" href=${url} >${url}</a>`)   
   }
   if (metaData && metaData.pTag) {
     pTag = `<p class="meta-heading">${metaData.pTag}</p>`

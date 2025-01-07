@@ -410,7 +410,7 @@ export const handleCTSignIn = ({
         // "Course Name": "200 Hours",
         "id_name": firstName,
         "id_email": res(email),
-        "id_phone": phone,
+        "id_phone": num,//phone,
         "City": city,
         "Country": country,
         // "Lead_Type": "SALES",
@@ -866,10 +866,18 @@ export const handleAlreadySignedUpUser = ({
 
   // Trigger CleverTap event on button click
   if (window?.clevertap) {
+    const convertToInternationalFormat = (phoneNumber, dialCode) => {
+      // Ensure that phoneNumber is cleaned of any non-digit characters (if needed)
+      const cleanedPhoneNumber = phoneNumber.replace(/\D/g, '');
+
+      // Combine the dialCode with the phoneNumber
+      return `+${dialCode}${cleanedPhoneNumber}`;
+    };
+    let num = convertToInternationalFormat(phone,dialCode);//added +
     window.clevertap.event.push("SignIn", {
       // "Name":firstName,
       // "Email ID": email,
-      "phone": phone,
+      "phone": num,//phone,
       // "IsLoggedIn": IsLoggedIn,
       "date_time_timestamp": new Date().toISOString()
     });
@@ -960,7 +968,7 @@ export const handleCTOnUserLoginCalled = ({
         // "Course Name": "200 Hours",
         "id_name": firstName,
         "id_email": res(email),
-        "id_phone": phone,
+        "id_phone": num,//phone,
         "City": city,
         "Country": country,
         // "Lead_Type": "SALES",
