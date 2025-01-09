@@ -49,8 +49,8 @@ axios.interceptors.response.use(
         errorResponse.data = res.data
       }
       else if (errorResponse.status === 401) {
-        localStorage.clear()
-        window.location.href = '/user/sign-in';
+        localStorage.clear();
+        // window.location.reload();
       }
 
     } else if (axios.isCancel(error)) {

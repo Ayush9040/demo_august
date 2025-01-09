@@ -128,7 +128,7 @@ const EnrollmentForm = ({
   if (nameFromRedux === undefined) {
     dispatch(logoutUserAction());
     localStorage.removeItem("authorizationToken");
-    navigates('/user/sign-in');
+    navigates(`/user/sign-in?location=${location.pathname.replace('/enrollment/', '')}`);
   }
 
   useEffect(() => {
