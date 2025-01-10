@@ -13491,146 +13491,146 @@ const classes = {
       },
     ],
   },
-  2: {
-    id: '',
-    textdescription6: '',
-    textdescription7: '',
-    textdescription8: '',
-    textdescription9: '',
-    textdescription10: '',
-    textdescription1: '',
-    textdescription2: '',
-    textdescription3: '',
-    textdescription4: '',
-    textdescription5: '',
-    weekDays: true,
-    title: 'Healing Yoga Movement & Rhythm - Online',
-    key: 'healing-movement-and-rhythm',
-    isRegular: true,
-    batch: 1,
-    // templateId: 'GENERAL_AUTO_EMAIL',
-    templateId: {
-      templateOnline: 'GENERAL_AUTO_EMAIL',
-      templateOffline: {
-        templateResidential: '',
-        templateNonResidential: '',
-      },
-    },
-    image: `${baseDomain}${courseAssets.courseAsset68}`,
-    cardImage: `${baseDomain}${courseAssets.courseAsset109}`,
-    mostPopular: false,
-    rating: 5,
-    colorCode: '#C48E8C',
-    metaDescription:
-      'A movement-based therapy programme for stress management, emotional well-being',
-    join: true,
-    timing:
-      'Tuesday & Thursday - 8pm - 9pm (IST) (Online)',
-    fees: {
-      onlineFee: 1500,
-      offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
-    },
-    category: 'classes',
-    dates: ['8pm - 9pm'],
-    online: true,
-    onCampus: true,
-    nonResidential: false,
-    residential: false,
-    certficate: false,
+  // 2: {
+  //   id: '',
+  //   textdescription6: '',
+  //   textdescription7: '',
+  //   textdescription8: '',
+  //   textdescription9: '',
+  //   textdescription10: '',
+  //   textdescription1: '',
+  //   textdescription2: '',
+  //   textdescription3: '',
+  //   textdescription4: '',
+  //   textdescription5: '',
+  //   weekDays: true,
+  //   title: 'Healing Yoga Movement & Rhythm - Online',
+  //   key: 'healing-movement-and-rhythm',
+  //   isRegular: true,
+  //   batch: 1,
+  //   // templateId: 'GENERAL_AUTO_EMAIL',
+  //   templateId: {
+  //     templateOnline: 'GENERAL_AUTO_EMAIL',
+  //     templateOffline: {
+  //       templateResidential: '',
+  //       templateNonResidential: '',
+  //     },
+  //   },
+  //   image: `${baseDomain}${courseAssets.courseAsset68}`,
+  //   cardImage: `${baseDomain}${courseAssets.courseAsset109}`,
+  //   mostPopular: false,
+  //   rating: 5,
+  //   colorCode: '#C48E8C',
+  //   metaDescription:
+  //     'A movement-based therapy programme for stress management, emotional well-being',
+  //   join: true,
+  //   timing:
+  //     'Tuesday & Thursday - 8pm - 9pm (IST) (Online)',
+  //   fees: {
+  //     onlineFee: 1500,
+  //     offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
+  //   },
+  //   category: 'classes',
+  //   dates: ['8pm - 9pm'],
+  //   online: true,
+  //   onCampus: true,
+  //   nonResidential: false,
+  //   residential: false,
+  //   certficate: false,
 
-    tenure: '',
-    courseType: "HEALING YOGA MOVEMENT",
-    language: 'English',
-    preRequisite: 'None',
-    courseCategory: 'Self Help',
-    courseSubType: 'Regular Asana Classes',
-    newName: 'Healing Movement and Rhythm Classes',
-    days: [
-      'Tuesday',
-      'Thursday'
-    ],
-    time: [
-      '8pm - 9pm (IST)'
-    ],
-    enrollInfo: {
-      duration: "Upto 12 months",
-      timings: [
-        {
-          day: "Tuesday & Thursday",
-          time: "8pm - 9pm (IST) (Online)"
-        }
-      ]
-    }
-    ,
+  //   tenure: '',
+  //   courseType: "HEALING YOGA MOVEMENT",
+  //   language: 'English',
+  //   preRequisite: 'None',
+  //   courseCategory: 'Self Help',
+  //   courseSubType: 'Regular Asana Classes',
+  //   newName: 'Healing Movement and Rhythm Classes',
+  //   days: [
+  //     'Tuesday',
+  //     'Thursday'
+  //   ],
+  //   time: [
+  //     '8pm - 9pm (IST)'
+  //   ],
+  //   enrollInfo: {
+  //     duration: "Upto 12 months",
+  //     timings: [
+  //       {
+  //         day: "Tuesday & Thursday",
+  //         time: "8pm - 9pm (IST) (Online)"
+  //       }
+  //     ]
+  //   }
+  //   ,
 
-    courseCertificate: 'NO',
-    onlineInfo: {
-      courseMode: true,
-    },
-    residentialInfo: {
-      courseMode: false,
-      residentialMode: false
-    },
-    nonResidentialInfo: {
-      courseMode: false,
-      nonResidentialMode: false
-    },
+  //   courseCertificate: 'NO',
+  //   onlineInfo: {
+  //     courseMode: true,
+  //   },
+  //   residentialInfo: {
+  //     courseMode: false,
+  //     residentialMode: false
+  //   },
+  //   nonResidentialInfo: {
+  //     courseMode: false,
+  //     nonResidentialMode: false
+  //   },
 
 
-    details: [
-      {
-        type: 'paragraph',
-        content: {
-          title: '',
-          text: [
-            'Harness the power of movement to unleash the power of positivity and joy in your life. Healing Yoga Movement & Rhythm is The Yoga Institute’s movement based therapy programme for stress management, emotional well-being and trauma healing.',
-            'Join now if you’re looking for an immunity and vitality boost, emotional release, anxiety and anger management, glowing skin, inner radiance and enhanced creativity.',
-            '#hackyourhappyhormones',
-          ],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'Duration',
-          text: ['60 Minutes'],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'Fees',
-          text: ['1500'],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'Classes',
-          text: [
-            'Tuesday & Thursday - 8 pm - 9 pm (IST) (Online)',
-            '(Join on any date)',
-          ],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'Mode',
-          text: ['Online'],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: '',
-          text: [
-            'To Register write to us at info@theyogainstitute.org or call us at +91-22-26110506 or at +91-22-26203568',
-          ],
-        },
-      },
-    ],
-  },
+  //   details: [
+  //     {
+  //       type: 'paragraph',
+  //       content: {
+  //         title: '',
+  //         text: [
+  //           'Harness the power of movement to unleash the power of positivity and joy in your life. Healing Yoga Movement & Rhythm is The Yoga Institute’s movement based therapy programme for stress management, emotional well-being and trauma healing.',
+  //           'Join now if you’re looking for an immunity and vitality boost, emotional release, anxiety and anger management, glowing skin, inner radiance and enhanced creativity.',
+  //           '#hackyourhappyhormones',
+  //         ],
+  //       },
+  //     },
+  //     {
+  //       type: 'paragraph',
+  //       content: {
+  //         title: 'Duration',
+  //         text: ['60 Minutes'],
+  //       },
+  //     },
+  //     {
+  //       type: 'paragraph',
+  //       content: {
+  //         title: 'Fees',
+  //         text: ['1500'],
+  //       },
+  //     },
+  //     {
+  //       type: 'paragraph',
+  //       content: {
+  //         title: 'Classes',
+  //         text: [
+  //           'Tuesday & Thursday - 8 pm - 9 pm (IST) (Online)',
+  //           '(Join on any date)',
+  //         ],
+  //       },
+  //     },
+  //     {
+  //       type: 'paragraph',
+  //       content: {
+  //         title: 'Mode',
+  //         text: ['Online'],
+  //       },
+  //     },
+  //     {
+  //       type: 'paragraph',
+  //       content: {
+  //         title: '',
+  //         text: [
+  //           'To Register write to us at info@theyogainstitute.org or call us at +91-22-26110506 or at +91-22-26203568',
+  //         ],
+  //       },
+  //     },
+  //   ],
+  // },
   3: {
     id: '',
     textdescription6: '',
@@ -15123,219 +15123,219 @@ const classes = {
       },
     ],
   },
-  17: {
-    id: '',
-    textdescription6: '',
-    textdescription7: '',
-    textdescription8: '',
-    textdescription9: '',
-    textdescription10: '',
-    textdescription1: '',
-    textdescription2: '',
-    textdescription3: '',
-    textdescription4: '',
-    textdescription5: '',
-    title: 'Yog Prayas - Online',
-    key: 'yog-prayas-online',
-    isRegular: true,
-    batch: 1,
-    // templateId: 'GENERAL_AUTO_EMAIL',
-    templateId: {
-      templateOnline: 'GENERAL_AUTO_EMAIL',
-      templateOffline: {
-        templateResidential: '',
-        templateNonResidential: '',
-      },
-    },
-    newName: 'Yog Prayas',
-    days: ['Monday', 'Wednesday', 'Friday'],
-    time: [
-      'Morning: 5:30 am - 6:30 am (IST) ',
-      'Evening: 6:00 pm - 7:00 pm (IST)'
-    ],
-    image: `${baseDomain}${courseAssets.courseAsset82}`,
-    cardImage: `${baseDomain}${courseAssets.courseAsset82}`,
-    mostPopular: false,
-    metaDescription:
-      'This is for people who are looking forward to yogic progress after being familiar with basic Yogasanas.',
-    rating: 5,
-    colorCode: '#C48E8C',
-    join: true,
-    timing:
-      'Monday, Wednesday & Friday : Morning: 5:30 am - 6:30 am (IST) or Evening: 6:00 pm - 7:00 pm (IST) *',
-    fees: {
-      onlineFee: 1500,
-      offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
-    },
-    category: 'classes',
-    dates: ['5:30 am to 6:30 am ', '6:00 pm to 7:00 pm '],
-    online: true,
-    onCampus: false,
-    nonResidential: false,
-    residential: false,
-    certficate: false,
-    tenure: '',
-    courseType: 'Regular Class - 2',
-    language: 'English',
-    preRequisite: 'None',
-    courseCategory: 'Self Help',
-    courseSubType: 'Regular Asana Classes',
-    enrollInfo: {
-      duration: "Upto 12 months",
-      timings: [
-        {
-          day: "Monday, Wednesday & Friday",
-          time: "Morning: 5:30 am - 6:30 am (IST)"
-        },
-        {
-          day: "Monday, Wednesday & Friday",
-          time: "Evening: 6:00 pm - 7:00 pm (IST) *"
-        }
-      ]
-    }
-    ,
+  // 17: {
+  //   id: '',
+  //   textdescription6: '',
+  //   textdescription7: '',
+  //   textdescription8: '',
+  //   textdescription9: '',
+  //   textdescription10: '',
+  //   textdescription1: '',
+  //   textdescription2: '',
+  //   textdescription3: '',
+  //   textdescription4: '',
+  //   textdescription5: '',
+  //   title: 'Yog Prayas - Online',
+  //   key: 'yog-prayas-online',
+  //   isRegular: true,
+  //   batch: 1,
+  //   // templateId: 'GENERAL_AUTO_EMAIL',
+  //   templateId: {
+  //     templateOnline: 'GENERAL_AUTO_EMAIL',
+  //     templateOffline: {
+  //       templateResidential: '',
+  //       templateNonResidential: '',
+  //     },
+  //   },
+  //   newName: 'Yog Prayas',
+  //   days: ['Monday', 'Wednesday', 'Friday'],
+  //   time: [
+  //     'Morning: 5:30 am - 6:30 am (IST) ',
+  //     'Evening: 6:00 pm - 7:00 pm (IST)'
+  //   ],
+  //   image: `${baseDomain}${courseAssets.courseAsset82}`,
+  //   cardImage: `${baseDomain}${courseAssets.courseAsset82}`,
+  //   mostPopular: false,
+  //   metaDescription:
+  //     'This is for people who are looking forward to yogic progress after being familiar with basic Yogasanas.',
+  //   rating: 5,
+  //   colorCode: '#C48E8C',
+  //   join: true,
+  //   timing:
+  //     'Monday, Wednesday & Friday : Morning: 5:30 am - 6:30 am (IST) or Evening: 6:00 pm - 7:00 pm (IST) *',
+  //   fees: {
+  //     onlineFee: 1500,
+  //     offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
+  //   },
+  //   category: 'classes',
+  //   dates: ['5:30 am to 6:30 am ', '6:00 pm to 7:00 pm '],
+  //   online: true,
+  //   onCampus: false,
+  //   nonResidential: false,
+  //   residential: false,
+  //   certficate: false,
+  //   tenure: '',
+  //   courseType: 'Regular Class - 2',
+  //   language: 'English',
+  //   preRequisite: 'None',
+  //   courseCategory: 'Self Help',
+  //   courseSubType: 'Regular Asana Classes',
+  //   enrollInfo: {
+  //     duration: "Upto 12 months",
+  //     timings: [
+  //       {
+  //         day: "Monday, Wednesday & Friday",
+  //         time: "Morning: 5:30 am - 6:30 am (IST)"
+  //       },
+  //       {
+  //         day: "Monday, Wednesday & Friday",
+  //         time: "Evening: 6:00 pm - 7:00 pm (IST) *"
+  //       }
+  //     ]
+  //   }
+  //   ,
 
-    courseCertificate: 'NO',
-    onlineInfo: {
-      courseMode: true,
-    },
-    residentialInfo: {
-      courseMode: false,
-      residentialMode: false
-    },
-    nonResidentialInfo: {
-      courseMode: false,
-      nonResidentialMode: false
-    },
-    details: [
-      {
-        type: 'paragraph',
-        content: {
-          title: '',
-          text: [
-            'This is for people who are looking forward to yogic progress after being familiar with basic Yogasanas. The focused Sadhaka’s, who just doesn’t want to become Yoga Professional, but aims for an even bigger goal, SELF DEVELOPMENT.',
-          ],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title:
-            'Few of the basic qualities we look forward to in a Sadhaka for this yoga program are',
-          text: [
-            'Focus for yoga practice',
-            'Curiosity for yogic knowledge',
-            'Application of Yogic Principals in Practical life',
-          ],
-        },
-      },
-      {
-        type: 'u-list',
-        content: {
-          title: 'PROGRAMME DETAILS',
-          points: [
-            {
-              listItem:
-                'The yoga program offers the best time for YOGASANA PRACTICE (early morning) in relation to Sattvik energy of the rising sun.',
-              subItems: [],
-            },
-            {
-              listItem:
-                'Every day consultation time for 15 mins prior and 15 mins after the 1-hours YOG ABHYAS (Yogasana, Pranayama and basic Meditation)',
-              subItems: [],
-            },
-            {
-              listItem:
-                'Personal attention- as seats are limited – 30 seats only each batch',
-              subItems: [],
-            },
-            {
-              listItem:
-                'A balance of Yoga Asanas, Pranayamas, Relaxation techniques and much more.',
-              subItems: [],
-            },
-            {
-              listItem:
-                'The yoga practice class shall be a live session via the Zoom App.',
-              subItems: [],
-            },
-            {
-              listItem:
-                'Once registered and payment is made, we shall be sending you links on your email id or WhatsApp.',
-              subItems: [],
-            },
-            {
-              listItem:
-                'This online yoga program is open to both males and females.',
-              subItems: [],
-            },
-          ],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'Fees',
-          text: [],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: '',
-          text: ['Rs. 1500/-'],
-        },
-      },
-      {
-        type: 'u-list',
-        content: {
-          title: 'RULES AND REGULATIONS',
-          points: [
-            {
-              listItem:
-                'Carry forwarding of missed sessions, recording of the session, and shifting of the batch is not permitted.',
-              subItems: [],
-            },
-            {
-              listItem:
-                'Please note fees once paid will be non-refundable.',
-              subItems: [],
-            },
-            {
-              listItem:
-                'Join on any date. Your payment is valid for one month from the date of joining.',
-              subItems: [],
-            },
-            {
-              listItem:
-                '3 Days a week – Morning Batch – Monday, Wednesday, Friday. – 1 Hour sessions will continue as it is.',
-              subItems: [],
-            },
-            {
-              listItem:
-                '3 Days a week – Evening Batch – Monday, Wednesday, Friday. – 1 Hour sessions',
-              subItems: [],
-            },
-            {
-              listItem:
-                'Rest is the same as the morning batch, a mix of philosophy and regular online yogaasanas session.',
-              subItems: [],
+  //   courseCertificate: 'NO',
+  //   onlineInfo: {
+  //     courseMode: true,
+  //   },
+  //   residentialInfo: {
+  //     courseMode: false,
+  //     residentialMode: false
+  //   },
+  //   nonResidentialInfo: {
+  //     courseMode: false,
+  //     nonResidentialMode: false
+  //   },
+  //   details: [
+  //     {
+  //       type: 'paragraph',
+  //       content: {
+  //         title: '',
+  //         text: [
+  //           'This is for people who are looking forward to yogic progress after being familiar with basic Yogasanas. The focused Sadhaka’s, who just doesn’t want to become Yoga Professional, but aims for an even bigger goal, SELF DEVELOPMENT.',
+  //         ],
+  //       },
+  //     },
+  //     {
+  //       type: 'paragraph',
+  //       content: {
+  //         title:
+  //           'Few of the basic qualities we look forward to in a Sadhaka for this yoga program are',
+  //         text: [
+  //           'Focus for yoga practice',
+  //           'Curiosity for yogic knowledge',
+  //           'Application of Yogic Principals in Practical life',
+  //         ],
+  //       },
+  //     },
+  //     {
+  //       type: 'u-list',
+  //       content: {
+  //         title: 'PROGRAMME DETAILS',
+  //         points: [
+  //           {
+  //             listItem:
+  //               'The yoga program offers the best time for YOGASANA PRACTICE (early morning) in relation to Sattvik energy of the rising sun.',
+  //             subItems: [],
+  //           },
+  //           {
+  //             listItem:
+  //               'Every day consultation time for 15 mins prior and 15 mins after the 1-hours YOG ABHYAS (Yogasana, Pranayama and basic Meditation)',
+  //             subItems: [],
+  //           },
+  //           {
+  //             listItem:
+  //               'Personal attention- as seats are limited – 30 seats only each batch',
+  //             subItems: [],
+  //           },
+  //           {
+  //             listItem:
+  //               'A balance of Yoga Asanas, Pranayamas, Relaxation techniques and much more.',
+  //             subItems: [],
+  //           },
+  //           {
+  //             listItem:
+  //               'The yoga practice class shall be a live session via the Zoom App.',
+  //             subItems: [],
+  //           },
+  //           {
+  //             listItem:
+  //               'Once registered and payment is made, we shall be sending you links on your email id or WhatsApp.',
+  //             subItems: [],
+  //           },
+  //           {
+  //             listItem:
+  //               'This online yoga program is open to both males and females.',
+  //             subItems: [],
+  //           },
+  //         ],
+  //       },
+  //     },
+  //     {
+  //       type: 'paragraph',
+  //       content: {
+  //         title: 'Fees',
+  //         text: [],
+  //       },
+  //     },
+  //     {
+  //       type: 'paragraph',
+  //       content: {
+  //         title: '',
+  //         text: ['Rs. 1500/-'],
+  //       },
+  //     },
+  //     {
+  //       type: 'u-list',
+  //       content: {
+  //         title: 'RULES AND REGULATIONS',
+  //         points: [
+  //           {
+  //             listItem:
+  //               'Carry forwarding of missed sessions, recording of the session, and shifting of the batch is not permitted.',
+  //             subItems: [],
+  //           },
+  //           {
+  //             listItem:
+  //               'Please note fees once paid will be non-refundable.',
+  //             subItems: [],
+  //           },
+  //           {
+  //             listItem:
+  //               'Join on any date. Your payment is valid for one month from the date of joining.',
+  //             subItems: [],
+  //           },
+  //           {
+  //             listItem:
+  //               '3 Days a week – Morning Batch – Monday, Wednesday, Friday. – 1 Hour sessions will continue as it is.',
+  //             subItems: [],
+  //           },
+  //           {
+  //             listItem:
+  //               '3 Days a week – Evening Batch – Monday, Wednesday, Friday. – 1 Hour sessions',
+  //             subItems: [],
+  //           },
+  //           {
+  //             listItem:
+  //               'Rest is the same as the morning batch, a mix of philosophy and regular online yogaasanas session.',
+  //             subItems: [],
 
-            },
-          ],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'WEEKDAYS SCHEDULE',
-          text: [
-            'Monday, Wednesday & Friday : Morning: 5:30 am - 6:30 am (IST) or Evening: 6:00 pm - 7:00 pm (IST) (Join on any date)',
-          ],
-        },
-      },
-    ],
-  },
+  //           },
+  //         ],
+  //       },
+  //     },
+  //     {
+  //       type: 'paragraph',
+  //       content: {
+  //         title: 'WEEKDAYS SCHEDULE',
+  //         text: [
+  //           'Monday, Wednesday & Friday : Morning: 5:30 am - 6:30 am (IST) or Evening: 6:00 pm - 7:00 pm (IST) (Join on any date)',
+  //         ],
+  //       },
+  //     },
+  //   ],
+  // },
   18: {
     id: '',
     textdescription6: '',

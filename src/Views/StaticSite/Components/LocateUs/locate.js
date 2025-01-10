@@ -141,7 +141,7 @@ export const locateData = [
       {
         state: 'Malad, Mumbai',
         notstate:
-          '201 & 202, B Wing, 2nd Floor, Solitaire 2, Opp Infinity Mall, Near Malad West Metro Station, New Link Road, Ekta Nagar, Malad West, Mumbai – 400064.',
+          "The Yoga Institute, Malad Iona Studio, Sumatinath Industrial Estate, 45, 2nd floor, behind Vibgyor Roots & Rise School, Mindspace, Malad West, Mumbai, Maharashtra 400064.",
         email: 'malad@theyogainstitute.in',
         url: 'malad',
         phone: ['+91 9343517490'],

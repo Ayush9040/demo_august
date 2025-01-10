@@ -329,6 +329,8 @@ const corporateWellness = () => {
             <h1>
               Have Questions?<div className="custom-border global-top-margin-6"></div>
             </h1>
+            <p>Contact us at +91 91366 66602</p>
+            <p>or</p>
             <p>Get in Touch with Us!</p>
           </div>
           <div className="corporate-wellness-form-input-container">

@@ -662,11 +662,22 @@ const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse
   const getUpdatedCities = (countryIsoCode, stateIsoCode) => {
     console.log(countryIsoCode, stateIsoCode);
 
-    if (!countryIsoCode && !stateIsoCode) return [];
-    return City.getCitiesOfState(countryIsoCode, stateIsoCode).map((city) => ({
-      value: city.name,
-      label: city.name,
-    }));
+    if (!countryIsoCode || !stateIsoCode) return [];
+    else {
+      let cities = City.getCitiesOfState(countryIsoCode, stateIsoCode).map((city) => ({
+        value: city.name,
+        label: city.name,
+      }));
+      if (cities.length > 0) {
+        return cities;
+      }
+      else{
+        return City.getCitiesOfCountry(countryIsoCode).map((city) => ({
+          value: city.name,
+          label: city.name,
+        }));
+      }
+    }
   };
 
 
@@ -1400,8 +1411,8 @@ const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse
                     keyName="address1"
                     dataKey="address1"
                     errorCheck={setEmpty}
-                    onFocus={()=>setIsMapDropdown(true)}
-                    onBlur={()=>setIsMapDropdown(false)}
+                    onFocus={() => setIsMapDropdown(true)}
+                    onBlur={() => setIsMapDropdown(false)}
                   />
                   {empty === 4 && <p style={{ position: 'absolute', right: '0', color: 'red', fontSize: '10px', bottom: '-15px' }}>Please enter your address</p>}
                 </div>
@@ -1451,7 +1462,7 @@ const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse
                 setFormData2((prev) => ({ ...prev, country: value.label, state: null, city: null }));
               }}
             />
-            {empty === 5 && <p>Please select your country</p>}
+            {empty === 5 && <small style={{ position: 'absolute', right: '0', bottom: '-18px', color: 'red' }}>Please select your country</small>}
           </div>
         </div>
 

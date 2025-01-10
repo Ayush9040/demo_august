@@ -33,8 +33,10 @@ store.dispatch({
 
 const RemoveTrailingSlash = () => {
   const location = useLocation();
-
-  if (location.pathname.endsWith("/") && location.pathname !== "/") {
+  if (location.pathname == "/index.html") {
+    return <Navigate to="/" replace={true} />;
+  }
+  else if (location.pathname.endsWith("/") && location.pathname !== "/") {
     const newPath = location.pathname.slice(0, -1);
     return <Navigate to={newPath} replace={true} />;
   }

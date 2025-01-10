@@ -83,9 +83,8 @@ const MaladPage = () => {
             <h5>Address -</h5>
             <p>The Yoga Institute, Malad </p>
             <p>
-            201 & 202, B Wing, 2nd Floor, Solitaire 2, Opp Infinity Mall, Near Malad West Metro Station, New Link Road, Ekta Nagar, Malad West.
-            </p>
-            <p>Mumbai – 400064</p>
+            Iona Studio, Sumatinath Industrial Estate, 45, 2nd floor, behind Vibgyor Roots & Rise School, Mindspace, Malad West, Mumbai</p>
+            <p>Maharashtra 400064</p>
             <h5>Contact us - <a href='tel: + 91 9343517490'>+ 91 9343517490</a></h5>
           </div>
         </div>
@@ -141,26 +140,26 @@ const MaladPage = () => {
             <p>6 Months – Rs. 7,700/-</p>
             <p>12 Months – Rs. 14,500 /-</p>
           </div>
-          <div className="apply-fees">
+          {/* <div className="apply-fees">
             <h5>Course</h5>
             <p>200 hrs Yoga TTC 2 Month TTC On Campus – English</p>
-          </div>
-          <div className="apply-fees">
+          </div> */}
+          {/* <div className="apply-fees">
             <h5>Date</h5>
             <p>20th November 2023 to 12th January 2024</p>
-          </div>
-          <div className="apply-fees">
+          </div> */}
+          {/* <div className="apply-fees">
             <h5>Timings</h5>
             <p>Monday to Friday : 12:00 pm – 4:00 pm (IST)</p>
-          </div>
-          <div className="apply-fees">
+          </div> */}
+          {/* <div className="apply-fees">
             <h5>Fees</h5>
             <p>On Campus : Rs. 31,000/- (Inclusive of course fee, study material)</p>
-          </div>
-          <div className="apply-fees">
+          </div> */}
+          {/* <div className="apply-fees">
             <h5>Prerequisites</h5>
             <p>None</p>
-          </div>
+          </div> */}
          
           
         </div>
@@ -172,7 +171,7 @@ const MaladPage = () => {
       </div>
      
       <div className='updated-div' style={{ marginBottom: '40px' }}>
-      
+      {/* 
         <h5>About 200 Hours BTTC -</h5>
         <p>200 Hour Yoga Teacher’s Training Certification (TTC) is a basic yoga teacher training course which prepares/certifies students for teaching Yogic Techniques to normal healthy adults and school children.</p>
         <p>With over 1,00,000 successfully certified students, the 200 Hour Yoga Teacher Training Course at The Yoga Institute covers the nuances of Traditional Yoga. This includes an introduction to the study of principal Yoga Asanas, Pranayamas, Meditation, Kriyas, Patanjali’s Yoga Sutra, and Hatha Yoga Pradipika. Further, complete immersion into practical experiences of the concept studies, public speaking, the methodology of teaching, etc. Are covered. Strategically designed by the founder Shri Yogendraji, Smt. Sita Devi Yogendra, Dr. Jayadeva Yogendra, and Dr. Hansaji J Yogendra, the one month yoga course serves as a valuable‘ life school’ to those seeking balance and fulfilment in life.</p>
@@ -180,7 +179,7 @@ const MaladPage = () => {
         <h5>Benefits of 200 Hour Yoga Teacher Training Course</h5>
         <p>You will learn the tools to master your physical, mental and spiritual well-being. You will see a marked improvement in your life, relationships and work.</p>
         <p>A new career avenue opens up for you where you can pass on the knowledge to others and facilitate their wellness journeys. The art of Yoga is something you can teach anywhere, no matter where you are.</p>
-          
+         */}  
         <h5>To Be Updated Soon : </h5>
         <p>21 Days Better Living Course, 200 Hour Teacher Training Course, Workshops and Health Camps.</p>
         <p>The Yoga Institute Malad is an abode to honoring wellness of your mind body and soul.</p>

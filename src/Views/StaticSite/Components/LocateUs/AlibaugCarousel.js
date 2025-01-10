@@ -119,7 +119,7 @@ const AlibaugCarousel = () => {
             to={
               isLoggedIn
                 ? `/enrollment/detox-cleanse-yoga-retreat`///?date=${selectDate}
-                : `/user/sign-in/?location=detox-cleanse-yoga-retreat`//&date=${selectDate}
+                : `/user/sign-in?location=detox-cleanse-yoga-retreat`//&date=${selectDate}
             }
           >
             <EnrollBtn text={'Book Now'} buttonAction={() => { addToCart('Detox and Cleanse Yoga Retreat', '/detox-cleanse-yoga-retreat', '8:00 AM (14th) to 7:00 PM (15th)') }} /></Link>
