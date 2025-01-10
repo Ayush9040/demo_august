@@ -242,6 +242,7 @@ const SignIn = () => {
   // const [errMsg, setErrMsg] = useState('')
   const [pageIndex, setPageIndex] = useState('1')
   const [signUpType, setSignUpType] = useState('')
+  const [displayError, setDisplayError] = useState('')
   const [values, setValues] = useState([])
   const [autocomplete, setAutocomplete] = useState(null);
   const [getemail, setGetEmail] = useState('')
@@ -582,7 +583,7 @@ const SignIn = () => {
         )
         setToken(response?.data?.token)
         setIsBtnLoad(false)
-        if (response?.data?.isSignupRequired) { setPageIndex(3); setSignUpType('mobile') }
+        if (response?.data?.isSignupRequired) { setPageIndex(3); setSignUpType('mobile'); setDisplayError('') }
         else {
           localStorage.setItem('authorizationToken', response?.data?.accessToken)
           localStorage.setItem('refreshToken', response?.data?.refreshToken)
@@ -1009,6 +1010,7 @@ const SignIn = () => {
               progress: undefined,
               theme: 'light',
             })
+            setDisplayError(err?.data?.error)
             // setErrorMessage(err.data.error)
           }
           setIsBtnLoad(false)
@@ -1453,6 +1455,7 @@ const SignIn = () => {
       setFormData({ ...formData, email: user.email, phoneNumber: '' })
       console.log("Response ", response);
       if (response?.data?.isSignupRequired) {//gmail signup
+        setDisplayError('')
         setPageIndex('3')
         setIsBtnLoad(false)
         setSignUpType('email')
@@ -2044,6 +2047,7 @@ const SignIn = () => {
                     {isAlreadyRegistered &&
                       <div style={{ color: '#FF3B30' }}>Email already registered</div>
                     }
+                    {displayError && <div style={{ color: '#FF3B30',paddingTop:'4px' }}>{displayError}</div>}
 
                   </>}
                 {signUpType != 'mobile' &&
