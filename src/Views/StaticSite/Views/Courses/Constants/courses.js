@@ -16341,7 +16341,7 @@ const certificate = {
               subItems: [],
             },
             {
-              listItem: 'Bandha yoga, yoga mudras and mantras in pranayama practice',
+              listItem: 'Bandhas yoga, yoga mudras and mantras in pranayama practice',
               subItems: [],
             },
             {

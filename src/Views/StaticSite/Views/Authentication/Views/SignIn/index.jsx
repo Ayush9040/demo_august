@@ -244,6 +244,7 @@ const SignIn = () => {
   const [pageIndexEmail, setPageIndexEmail] = useState('1')
   const [isEmailLogin, setEmailLogin] = useState(false)
   const [signUpType, setSignUpType] = useState('')
+  const [displayError, setDisplayError] = useState('')
   const [values, setValues] = useState([])
   const [autocomplete, setAutocomplete] = useState(null);
   const [getemail, setGetEmail] = useState('')
@@ -583,7 +584,7 @@ const SignIn = () => {
         )
         setToken(response?.data?.token)
         setIsBtnLoad(false)
-        if (response?.data?.isSignupRequired) { setPageIndex(3); setSignUpType('mobile') }
+        if (response?.data?.isSignupRequired) { setPageIndex(3); setSignUpType('mobile'); setDisplayError('') }
         else {
           localStorage.setItem('authorizationToken', response?.data?.accessToken)
           localStorage.setItem('refreshToken', response?.data?.refreshToken)
@@ -1045,6 +1046,7 @@ const SignIn = () => {
               progress: undefined,
               theme: 'light',
             })
+            setDisplayError(err?.data?.error)
             // setErrorMessage(err.data.error)
           }
           setIsBtnLoad(false)
@@ -1657,6 +1659,7 @@ const SignIn = () => {
       setFormData({ ...formData, email: user.email, phoneNumber: '' })
       console.log("Response ", response);
       if (response?.data?.isSignupRequired) {//gmail signup
+        setDisplayError('')
         setPageIndex('3')
         setIsBtnLoad(false)
         setSignUpType('email')
@@ -2268,9 +2271,10 @@ const SignIn = () => {
                       {formData?.errorIndex == 12 &&
                         <div style={{ color: '#FF3B30' }}>Enter a valid Email</div>}
 
-                      {isAlreadyRegistered &&
-                        <div style={{ color: '#FF3B30' }}>Email already registered</div>
-                      }
+                    {isAlreadyRegistered &&
+                      <div style={{ color: '#FF3B30' }}>Email already registered</div>
+                    }
+                    {displayError && <div style={{ color: '#FF3B30',paddingTop:'4px' }}>{displayError}</div>}
 
                     </>}
                   {signUpType != 'mobile' &&

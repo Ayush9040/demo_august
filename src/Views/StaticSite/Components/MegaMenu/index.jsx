@@ -14,7 +14,7 @@ const MegaMenu = ({ setNav }) => {
     { name: 'SPECIAL EVENTS', link: '/courses#specialEvents', id: 18, key: 'SPECIAL-EVENTS' },
     { name: 'NUTRI DIET CLINIC', link: '/nutri-diet', id: 3, key: 'COURSES-NUTRI' },
     { name: 'CORPORATE WORKSHOP', link: '/corporate-workshops', id: 4, key: 'COURSES-WORKSHOPS' },
-    { name: 'ONLINE HOME YOGA TUITIONS', link: '/home-tuitions', id: 5, key: 'COURSES-YOGATUTIONS' },
+    // { name: 'ONLINE HOME YOGA TUITIONS', link: '/home-tuitions', id: 5, key: 'COURSES-YOGATUTIONS' },
     { name: 'FACILITIES', link: '/facilities', id: 6, key: 'FACILITIES' },
     { name: 'MUSEUM', link: '/museum-of-classical-yoga', id: 7, key: 'MUSEUM' },
     { name: 'BLOGS', link: '/blogs', id: '14', key: 'BLOGS' },
