@@ -328,7 +328,8 @@ const MegaMenu = ({ setNav }) => {
                 </Link> */}
                 <Link onClick={() => { setNav(false) }} to="/certification-program-on-yoga-for-lung-cancer-online">
                   <li className="text-bold" >
-                    Certificate Program on Yoga for Lung Cancer - Online
+                    Certificate Program on Yoga for Lung Cancer
+                     {/* - Online */}
                   </li>
                 </Link>
                 <Link onClick={() => { setNav(false) }} to="/certificate-course-on-advanced-pranayama-techniques">
@@ -417,6 +418,7 @@ const MegaMenu = ({ setNav }) => {
                     <li>IBY Class (Only for TYI TTC Teachers)</li>
                   </Link>
                   <Link onClick={() => { setNav(false) }} to='/regular-pregnacy-classes'><li>Regular Pregnancy Yoga Class - Online & On Campus</li></Link>
+                  <Link onClick={() => { setNav(false) }} to='/alibaug'><li>Yoga Retreat</li></Link>
 
                 </ul>
               </ul>
@@ -435,7 +437,7 @@ const MegaMenu = ({ setNav }) => {
                 <Link onClick={() => { setNav(false) }} to='/cardiac-hypertension-workshop'><li>Cardiac & Hypertension Yoga Workshop - On Campus</li></Link>
                 <Link onClick={() => { setNav(false) }} to='/back-joint-disorder-workshop'><li>Back & Joint Disorder Yoga Workshop</li></Link>
                 <Link onClick={() => { setNav(false) }} to='/pranayama-workshop'><li>Prayanama Workshop</li></Link>
-                <Link onClick={() => { setNav(false) }} to='/womens-camp'><li>Women&apos;s Yoga Camp</li></Link>
+                {/* <Link onClick={() => { setNav(false) }} to='/womens-camp'><li>Women&apos;s Yoga Camp</li></Link> */}
                 {/* below 7 are new courses */}
                 <Link onClick={() => { setNav(false) }} to='/deep-sleep-workshop'><li>Deep Sleep Workshop</li></Link>
                 <Link onClick={() => { setNav(false) }} to='/emotional-wellness-workshop'><li>Emotional Wellness Workshop </li></Link>
