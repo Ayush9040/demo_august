@@ -2297,7 +2297,8 @@ input[type='radio']:checked::before {
 
 .details_format_date .check_course .item-label {
   border-radius: 25px;
-  justify-content: center;
+  justify-content: start;
+  padding-left: 30px;
 }
 
 .dates_enroll_wrapper {
