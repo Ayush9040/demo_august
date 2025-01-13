@@ -2176,7 +2176,6 @@ const ttc200hr = {
       // '6th Jul to 22nd Sep 2024',
       // '28th Sep to 15th Dec 2024 ',
       // '5th Oct to 22nd Dec 2024 ',
-      '28th Dec to 16th Mar 2025',
       "22nd Mar to 8th Jun 2025",
       "14th Jun to 31st Aug 2025",
       "6th Sep to 23rd Nov 2025",
@@ -5016,7 +5015,7 @@ const ttc900hr = {
     category: 'ttc',
     dates: [
       // '3rd Aug 2024',
-      '7th Dec 2024',
+      // '7th Dec 2024',
       '5th Apr 2025',
       '2nd Aug 2025',
       '6th Dec 2025'
@@ -7300,7 +7299,7 @@ const camps = {
       'Asanas, pranayamas, and relaxation techniques for treating heart conditions',
     image: `${baseDomain}${courseAssets.courseAsset111}`,
     cardImage: `${baseDomain}${courseAssets.courseAsset6}`,
-    dates: ['5th Jan 2025', '2nd Mar 2025', '4th May 2025', '6th Jul 2025', '7th Sep 2025', '2nd Nov 2025'],
+    dates: ['2nd Mar 2025', '4th May 2025', '6th Jul 2025', '7th Sep 2025', '2nd Nov 2025'],
     online: false,
     onCampus: true,
     nonResidential: false,
@@ -9366,7 +9365,7 @@ const camps = {
         templateNonResidential: '',
       },
     },
-    dates: ['4th Jan 2025', '1st Feb 2025', '1st Mar 2025', '5th Apr 2025', '3rd May 2025', '7th Jun 2025', '5th Jul 2025', '2nd Aug 2025', '6th Sep 2025', '4th Oct 2025', '1st Nov 2025', '6th Dec 2025'],
+    dates: ['1st Feb 2025', '1st Mar 2025', '5th Apr 2025', '3rd May 2025', '7th Jun 2025', '5th Jul 2025', '2nd Aug 2025', '6th Sep 2025', '4th Oct 2025', '1st Nov 2025', '6th Dec 2025'],
     mostPopular: false,
     rating: 5,
     colorCode: '#DDAB58',
@@ -9715,188 +9714,188 @@ const camps = {
     ],
   },
 
-  16: {
-    id: '',
-    textdescription6: '',
-    textdescription7: '',
-    textdescription8: '',
-    textdescription9: '',
-    textdescription10: '',
-    textdescription1: '',
-    textdescription2: '',
-    textdescription3: '',
-    textdescription4: '',
-    textdescription5: '',
-    title: 'Back & Joint Disorder Yoga Workshop',
-    key: 'back-joint-disorder-workshop',
-    tenure: '1 day',
-    batch: 1,
-    // templateId: 'GENERAL_AUTO_EMAIL',
-    templateId: {
-      templateOnline: 'GENERAL_AUTO_EMAIL',
-      templateOffline: {
-        templateResidential: '',
-        templateNonResidential: '',
-      },
-    },
-    dates: ['22nd Dec 2024', '26th Jan 2025', '23rd Feb 2025', '23rd Mar 2025', '27th Apr 2025', '25th May 2025',
-      '22nd Jun 2025', '27th Jul 2025', '24th Aug 2025', '28th Sep 2025', '26th Oct 2025', '23rd Nov 2025', '28th Dec 2025'
-    ],
-    mostPopular: false,
-    rating: 5,
-    colorCode: '#EDBE66',
-    timing: '9:30 am – 5:30 pm (IST)',
-    fees: {
-      onlineFee: 1000,
-      offlineFee: { residentialFee: 0, nonResidentialFee: 1000 },
-    },
-    category: 'camps',
-    metaDescription: 'Insightful session with an ortho-specialist',
-    image: `${baseDomain}${courseAssets.courseAsset10}`,
-    cardImage: `${baseDomain}${courseAssets.courseAsset10}`,
-    online: false,
-    onCampus: true,
-    nonResidential: false,
-    residential: false,
-    certficate: false,
+  // 16: {
+  //   id: '',
+  //   textdescription6: '',
+  //   textdescription7: '',
+  //   textdescription8: '',
+  //   textdescription9: '',
+  //   textdescription10: '',
+  //   textdescription1: '',
+  //   textdescription2: '',
+  //   textdescription3: '',
+  //   textdescription4: '',
+  //   textdescription5: '',
+  //   title: 'Back & Joint Disorder Yoga Workshop',
+  //   key: 'back-joint-disorder-workshop',
+  //   tenure: '1 day',
+  //   batch: 1,
+  //   // templateId: 'GENERAL_AUTO_EMAIL',
+  //   templateId: {
+  //     templateOnline: 'GENERAL_AUTO_EMAIL',
+  //     templateOffline: {
+  //       templateResidential: '',
+  //       templateNonResidential: '',
+  //     },
+  //   },
+  //   dates: ['26th Jan 2025', '23rd Feb 2025', '23rd Mar 2025', '27th Apr 2025', '25th May 2025',
+  //     '22nd Jun 2025', '27th Jul 2025', '24th Aug 2025', '28th Sep 2025', '26th Oct 2025', '23rd Nov 2025', '28th Dec 2025'
+  //   ],
+  //   mostPopular: false,
+  //   rating: 5,
+  //   colorCode: '#EDBE66',
+  //   timing: '9:30 am – 5:30 pm (IST)',
+  //   fees: {
+  //     onlineFee: 1000,
+  //     offlineFee: { residentialFee: 0, nonResidentialFee: 1000 },
+  //   },
+  //   category: 'camps',
+  //   metaDescription: 'Insightful session with an ortho-specialist',
+  //   image: `${baseDomain}${courseAssets.courseAsset10}`,
+  //   cardImage: `${baseDomain}${courseAssets.courseAsset10}`,
+  //   online: false,
+  //   onCampus: true,
+  //   nonResidential: false,
+  //   residential: false,
+  //   certficate: false,
 
-    courseType: 'Camps & Workshop',
-    language: 'English',
-    preRequisite: 'None',
-    courseCategory: 'Self Help',
-    courseSubType: 'Camps & Workshops',
-    newName: 'Back & Joint Disorder Yoga Workshop',
-    days: [''],
-    time: [
-      '9:30 am – 5:30 pm (IST)'
-    ],
-    enrollInfo: {
-      duration: "1 Day",
-      timings: [
-        {
-          day: "Time",
-          time: "9:30 am – 5:30 pm (IST)"
-        }
-      ]
-    }
-    ,
+  //   courseType: 'Camps & Workshop',
+  //   language: 'English',
+  //   preRequisite: 'None',
+  //   courseCategory: 'Self Help',
+  //   courseSubType: 'Camps & Workshops',
+  //   newName: 'Back & Joint Disorder Yoga Workshop',
+  //   days: [''],
+  //   time: [
+  //     '9:30 am – 5:30 pm (IST)'
+  //   ],
+  //   enrollInfo: {
+  //     duration: "1 Day",
+  //     timings: [
+  //       {
+  //         day: "Time",
+  //         time: "9:30 am – 5:30 pm (IST)"
+  //       }
+  //     ]
+  //   }
+  //   ,
 
-    courseCertificate: 'NO',
-    onlineInfo: {
-      courseMode: false,
-    },
-    residentialInfo: {
-      courseMode: false,
-      residentialMode: false
-    },
-    nonResidentialInfo: {
-      courseMode: true,
-      nonResidentialMode: true
-    },
+  //   courseCertificate: 'NO',
+  //   onlineInfo: {
+  //     courseMode: false,
+  //   },
+  //   residentialInfo: {
+  //     courseMode: false,
+  //     residentialMode: false
+  //   },
+  //   nonResidentialInfo: {
+  //     courseMode: true,
+  //     nonResidentialMode: true
+  //   },
 
-    details: [
-      {
-        type: 'paragraph',
-        content: {
-          title: 'Who is this yoga workshop for?',
-          text: [
-            'Chances are that you have accepted your back and joint pain as part of your life. But it need not be so. There is potential for healing to take place within us if we cooperate with our innate healing powers. At The Yoga Institute, we have been conducting specialized orthopedic camps for over 60 years and more so, our research shows the effectiveness of our methods. We give you potent yogic methods that will have a life-changing effect. Come attend our 1-day yoga camp for back and joint disorders and experience the potential for well-being in your life.'
-          ],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'What can you expect?',
-          text: [
-            'You don’t need a teacher, mentor, or guide to heal yourself if you have an attitude to learn from your mistakes and your pain.. -Dr. Hansaji Yogendra',
-          ],
-        },
-      },
-      {
-        type: 'u-list',
-        content: {
-          title: ' Program Offerings',
-          points: [
-            {
-              listItem: 'Yogic Diet guidelines to manage your condition and health',
-              subItems: [],
-            },
-            {
-              listItem: 'Insightful yoga session with an ortho-specialist',
-              subItems: [],
-            },
-            {
-              listItem:
-                'Specific pranayama, and relaxation techniques to enhance your health',
-              subItems: [],
-            },
-            {
-              listItem:
-                'Lifestyle tips by spiritual guru Dr. Hansaji who has decades of experience in the field',
-              subItems: [],
-            },
-            {
-              listItem: 'Fitness tips',
-              subItems: [],
-            },
-          ],
-        },
-      },
-      // {
-      //   type: 'u-list',
-      //   content: {
-      //     title: 'Offered with the program',
-      //     points: [
-      //       {
-      //         listItem: 'Booklet with guidelines  ',
-      //         subItems: [],
-      //       },
-      //       {
-      //         listItem: 'Wholesome Sattvik lunch',
-      //         subItems: [],
-      //       },
-      //       {
-      //         listItem: 'Healthy snacks  ',
-      //         subItems: [],
-      //       },
-      //     ],
-      //   },
-      // },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'Time',
-          text: ['9:30 am – 5:30 pm (IST)'],
-        },
-      },
-      {
-        type: 'paragraph',
-        content: {
-          title: 'Fees',
-          text: ['INR 1000 (Inclusive Lunch and Snacks)'],
-        },
-      },
-      {
-        type: 'u-list',
-        content: {
-          title: ' Guidelines',
-          points: [
-            {
-              listItem:
-                'Campers are requested to come attired to comfortable loose fitting clothes. Shorts, capris, tank tops, low cut shirts, short and sleeveless T-shirts are not permitted as per the Institute dress code.',
-              subItems: [],
-            },
-            // {
-            //   listItem:
-            //     'Campers are requested to have their breakfast and medication (as prescribed by their doctor). ',
-            //   subItems: [],
-            // },
-          ],
-        },
-      },
-    ],
-  },
+  //   details: [
+  //     {
+  //       type: 'paragraph',
+  //       content: {
+  //         title: 'Who is this yoga workshop for?',
+  //         text: [
+  //           'Chances are that you have accepted your back and joint pain as part of your life. But it need not be so. There is potential for healing to take place within us if we cooperate with our innate healing powers. At The Yoga Institute, we have been conducting specialized orthopedic camps for over 60 years and more so, our research shows the effectiveness of our methods. We give you potent yogic methods that will have a life-changing effect. Come attend our 1-day yoga camp for back and joint disorders and experience the potential for well-being in your life.'
+  //         ],
+  //       },
+  //     },
+  //     {
+  //       type: 'paragraph',
+  //       content: {
+  //         title: 'What can you expect?',
+  //         text: [
+  //           'You don’t need a teacher, mentor, or guide to heal yourself if you have an attitude to learn from your mistakes and your pain.. -Dr. Hansaji Yogendra',
+  //         ],
+  //       },
+  //     },
+  //     {
+  //       type: 'u-list',
+  //       content: {
+  //         title: ' Program Offerings',
+  //         points: [
+  //           {
+  //             listItem: 'Yogic Diet guidelines to manage your condition and health',
+  //             subItems: [],
+  //           },
+  //           {
+  //             listItem: 'Insightful yoga session with an ortho-specialist',
+  //             subItems: [],
+  //           },
+  //           {
+  //             listItem:
+  //               'Specific pranayama, and relaxation techniques to enhance your health',
+  //             subItems: [],
+  //           },
+  //           {
+  //             listItem:
+  //               'Lifestyle tips by spiritual guru Dr. Hansaji who has decades of experience in the field',
+  //             subItems: [],
+  //           },
+  //           {
+  //             listItem: 'Fitness tips',
+  //             subItems: [],
+  //           },
+  //         ],
+  //       },
+  //     },
+  //     // {
+  //     //   type: 'u-list',
+  //     //   content: {
+  //     //     title: 'Offered with the program',
+  //     //     points: [
+  //     //       {
+  //     //         listItem: 'Booklet with guidelines  ',
+  //     //         subItems: [],
+  //     //       },
+  //     //       {
+  //     //         listItem: 'Wholesome Sattvik lunch',
+  //     //         subItems: [],
+  //     //       },
+  //     //       {
+  //     //         listItem: 'Healthy snacks  ',
+  //     //         subItems: [],
+  //     //       },
+  //     //     ],
+  //     //   },
+  //     // },
+  //     {
+  //       type: 'paragraph',
+  //       content: {
+  //         title: 'Time',
+  //         text: ['9:30 am – 5:30 pm (IST)'],
+  //       },
+  //     },
+  //     {
+  //       type: 'paragraph',
+  //       content: {
+  //         title: 'Fees',
+  //         text: ['INR 1000 (Inclusive Lunch and Snacks)'],
+  //       },
+  //     },
+  //     {
+  //       type: 'u-list',
+  //       content: {
+  //         title: ' Guidelines',
+  //         points: [
+  //           {
+  //             listItem:
+  //               'Campers are requested to come attired to comfortable loose fitting clothes. Shorts, capris, tank tops, low cut shirts, short and sleeveless T-shirts are not permitted as per the Institute dress code.',
+  //             subItems: [],
+  //           },
+  //           // {
+  //           //   listItem:
+  //           //     'Campers are requested to have their breakfast and medication (as prescribed by their doctor). ',
+  //           //   subItems: [],
+  //           // },
+  //         ],
+  //       },
+  //     },
+  //   ],
+  // },
   17: {
     id: '',
     textdescription6: '',
@@ -10311,7 +10310,7 @@ const camps = {
       // '28th Sep to 4th Oct 2024',
       // '26th Oct to 1st Nov 2024',
       // '23rd Nov to 29th Nov 2024',
-      '28th Dec to 3rd Jan 2025',
+      // '28th Dec to 3rd Jan 2025',
       '25th Jan to 31st Jan 2025',
       '22nd Feb to 28th Feb 2025',
       '22nd Mar to 28th Mar 2025',
@@ -10704,7 +10703,7 @@ const camps = {
       // '6th Oct to 26th Oct 2024',
       // '3rd Nov to 23rd Nov 2024',
       // '1st Dec to 21st Dec 2024',
-      '5th Jan to 25th Jan 2025',
+      // '5th Jan to 25th Jan 2025',
       '2nd Feb to 22nd Feb 2025',
       '2nd Mar to 22nd Mar 2025',
       '6th Apr to 26th Apr 2025',
@@ -11134,7 +11133,7 @@ const camps = {
       // '6th Oct to 26th Oct 2024',
       // '3rd Nov to 23rd Nov 2024',
       // '1st Dec to 21st Dec 2024',
-      '5th Jan to 25th Jan 2025',
+      // '5th Jan to 25th Jan 2025',
       '2nd Feb to 22nd Feb 2025',
       '2nd Mar to 22nd Mar 2025',
       '6th Apr to 26th Apr 2025',
@@ -14874,8 +14873,7 @@ const classes = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'classes',
-    dates: ['1st Dec 2024', '8th Dec 2024', '15th Dec 2024', '22nd Dec 2024', '29th Dec 2024'
-      , '5th Jan 2025', '12th Jan 2025', '19th Jan 2025', '26th Jan 2025'
+    dates: ['12th Jan 2025', '19th Jan 2025', '26th Jan 2025'
       , '2nd Feb 2025', '9th Feb 2025', '16th Feb 2025', '23rd Feb 2025'
     ],
     online: true,
@@ -15381,7 +15379,7 @@ const classes = {
       onlineFee: 0,
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
-    dates: ['7th Dec 2024', '14th Dec 2024', '21st Dec 2024', '28th Dec 2024'],
+    dates: ['11th Jan 2025', '18th Jan 2025', '25th Jan 2025'],
     category: 'classes',
 
     online: false,
