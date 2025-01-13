@@ -14,7 +14,7 @@ const customStyles = {
     bottom: 'auto',
     marginRight: '-50%',
     transform: 'translate(-50%, -50%)',
-    maxHeight: '75%',
+    maxHeight: '95%',
     width: '40%',
     borderRadius: '20px',
     // border: '1px solid black',
@@ -45,7 +45,7 @@ const EditStudent = ({ isShippingModalOpen, setIsShipppingModalOpen, formData, s
         isOpen={isShippingModalOpen}
         onRequestClose={closeModal}
         style={customStyles}
-        shouldCloseOnOverlayClick={false}  // Prevent closing when clicking outside the modal
+        shouldCloseOnOverlayClick={true}  // Prevent closing when clicking outside the modal
         contentLabel="Example Modal"
       >
         <div className="modal-container" >

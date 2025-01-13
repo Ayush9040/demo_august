@@ -3140,4 +3140,12 @@ input[type=checkbox]:checked+label:before {
       width: 100%;
     }
   }
+
+
+}
+
+@media(min-width:1490px) {
+  .lang_course {
+    margin-right: 4px;
+  }
 }

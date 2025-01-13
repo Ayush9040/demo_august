@@ -392,7 +392,6 @@ const CourseDetails = ({
       { name: "Non-Residential", value: shouldShowNonResidentialOption() },
       { name: "Offline", value: shouldShowOfflineOption() },
     ];
-
     // Reverse the array and find the last `true` option
     const lastTrueOption = options.reverse().find((option) => option.value);
     return lastTrueOption ? lastTrueOption.name : null;
@@ -407,7 +406,6 @@ const CourseDetails = ({
   useEffect(() => {
     const lastOption = getLastTrueOption();
     setRemoveMb(lastOption);
-
     // Apply dynamic styles with `!important`
     if (divRef.current) {
       if (lastOption === "Online") {
@@ -453,12 +451,109 @@ const CourseDetails = ({
     }
   }, [currentCourse]);
 
+  function cleanAndConvertToUpperCase(str) {
+    // Remove all special characters and spaces, then convert to uppercase
+    const cleanedString = str.replace(/[^a-zA-Z0-9]/g, '').toUpperCase();
+    return cleanedString;
+  }
+
   useEffect(() => {
     // Retrieve address data from localStorage when the component mounts
     const storedAddressData = localStorage.getItem('addressData');
     if (storedAddressData) {
       setUpdateAddress(JSON.parse(storedAddressData));
     }
+    const options = [
+      { name: "Online", value: shouldShowOnlineOption() },
+      { name: "Residential", value: shouldShowResidentialOption() },
+      { name: "Non-Residential", value: shouldShowNonResidentialOption() },
+      { name: "Offline", value: shouldShowOfflineOption() },
+    ];
+    // Use filter to get all the true values
+    const trueValues = options.filter(item => item.value === true);
+
+    // Check if there's exactly one true value, then return it
+    const trueObject = trueValues.length === 1 ? trueValues[0] : null;
+    if (trueObject) {//default select one option
+      let crsName = cleanAndConvertToUpperCase(trueObject?.name)
+      //offline
+      if (crsName == 'OFFLINE') {
+        handleResidential(false);
+        setSelectedOption(crsName)
+        setPriceSelect(currentCourse?.fees?.onlineFee)
+        setCourseFormatInfo(crsName)
+        setCourseFormatSelected(true)
+        setIsRegularPrice(currentCourse?.fees?.onlineFee);
+        setOnSelectFormat(true);
+        setOnClickFormatRegular(true)
+        setFormData(prevData => ({
+          ...prevData,
+          mode: crsName,
+        }));
+        setEmpty(0)
+        setCourseFee(currentCourse?.fees?.onlineFee)
+      }
+
+      //online
+      else if (crsName == 'ONLINE') {
+        handleResidential(false);
+        setSelectedOption(crsName)
+        setCourseFormatInfo(crsName)
+        setCourseFormatSelected(true)
+        setPriceSelect(currentCourse?.fees?.onlineFee)
+        setIsRegularPrice(currentCourse?.fees?.onlineFee);
+        setOnSelectFormat(true);
+        setOnClickFormatRegular(true)
+        setFormData(prevData => ({
+          ...prevData,
+          mode: crsName,
+        }));
+        setEmpty(0)
+        setCourseFee(currentCourse?.fees?.onlineFee)
+      }
+
+      //nonresidential
+      else if (crsName == 'NONRESIDENTIAL') {
+        handleResidential(false);
+        setSelectedOption(crsName)
+        setCourseFormatSelected(true)
+        setCourseFormatInfo('On-Campus (without residence)')
+        setPriceSelect(currentCourse?.fees?.offlineFee?.nonResidentialFee)
+        setIsRegularPrice(isRegularPregnancy ? currentCourse?.fees?.onlineFee : currentCourse?.fees?.offlineFee?.nonResidentialFee);
+        setOnSelectFormat(true);
+        setOnClickFormatRegular(true)
+        setFormData(prevData => ({
+          ...prevData,
+          residental: true,
+          mode: crsName,
+        }));
+        setEmpty(0)
+        setCourseFee(
+          isRegularPregnancy ? currentCourse?.fees?.onlineFee : currentCourse?.fees?.offlineFee?.nonResidentialFee
+        )
+      }
+
+      //residential
+      else if (crsName == 'RESIDENTIAL') {
+        setSelectedOption(crsName);
+        handleResidential(true);
+        setPriceSelect(currentCourse?.fees?.offlineFee?.residentialFee)
+        setCourseFormatInfo('On-Campus (residence - triple sharing)')
+        setCourseFormatSelected(true)
+        setFormData({
+          ...formData,
+          residental: true,
+          mode: crsName,
+        })
+        setEmpty(0)
+        if (currentCourse?.key === 'ma-yoga-shastra' && currentCourse.country !== 'India') {
+          setCourseFee(currentCourse?.fees?.internationalFee?.residentialFee)
+        } else {
+          setCourseFee(currentCourse?.fees?.offlineFee?.residentialFee)
+        }
+      }
+    }
+
   }, []);
   // Group timings by unique days
   const groupTimings = (timings) => {

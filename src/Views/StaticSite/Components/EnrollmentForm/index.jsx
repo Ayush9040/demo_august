@@ -6,7 +6,7 @@ import { useParams } from 'react-router-dom'
 import { validateEmail } from '../../../../helpers'
 import { Link, useSearchParams, useNavigate } from 'react-router-dom'
 import DisclaimerPolicy from '../DisclaimerPolicy'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import Personal from './Personal'
 import { legacy2 } from '../../assets/icons/icon'
 import { authBaseDomain, cmsBaseDomain, razorPayKey } from '../../../../Constants/appSettings'
@@ -16,6 +16,7 @@ import { trackPageView } from '../../../../CleverTap/pageViewEvents'
 import { handleCTCoursePaymentPageVisit, handleCTPaymentCompletedCourse, handleCTPaymentFailed, setupUserProfile } from '../../../../CleverTap/buttonClicked'
 import EnrollmentForm from './EnrollmentForm'
 import ReactGA from 'react-ga4';
+import { fetchUserData } from '../../Views/Authentication/Auth.actions'
 
 const Enrollment = () => {
   const { user } = useSelector((state) => state.auth)
@@ -30,6 +31,7 @@ const Enrollment = () => {
   const countryFromRedux = useSelector((state) => state.auth.user.data?.country);
   const stateFromRedux = useSelector((state) => state.auth.user.data?.state);
   const genderFromRedux = useSelector((state) => state.auth.user.data?.gender);
+  const dispatch = useDispatch();
 
   useEffect(() => {
     let currentCrs = AllCourses.find((item) => item.key === courseId)
@@ -530,8 +532,9 @@ const Enrollment = () => {
   }
 
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     // alert(JSON.stringify(formData))
+// alert(formData.name)
     const array = ["Yoga Classes for Men (Regular Asana) - On Campus",
       "Yoga Classes for Women (Regular Asana) - On Campus",
       "Yoga Asana Regular Classes - (Men & Women) - Online Yoga Classes",
@@ -618,7 +621,7 @@ const Enrollment = () => {
       // alert("8")
       setEmpty(18)
     }
-  
+
     else if (isMatch && formData.endDate === '') {
       console.log("Form Data Start Date ", formData.startDate)
       // alert("12")
@@ -677,6 +680,31 @@ const Enrollment = () => {
         }]
       });
       setupUserProfile(formData);
+      try {
+        let token = localStorage.getItem('authorizationToken')
+        if (token && !axios.defaults.headers?.Authorization) {
+          // console.log('Current Request Headers: 2', axios.defaults.headers);
+          axios.defaults.headers['Authorization'] = `Bearer ${token}`;
+          delete axios.defaults.headers.common['authorization'];
+        }
+
+        let payload = {
+          firstName: formData?.name, lastName: formData?.lname,
+          addressLine1: formData?.address1, addressLine2: formData?.address2,
+          country: formData?.country, state: formData?.state,
+          city: formData?.city, pincode: formData?.pincode,
+          gender: formData?.gender
+        }
+        // alert(JSON.stringify(payload))
+        await axios.put(`${authBaseDomain}/user/update`, payload, {
+          headers: {
+            'Authorization': `Bearer ${token}`
+          }
+        })
+        dispatch(fetchUserData());
+      } catch (err) {
+        console.log(err);
+      }
     }
   }
 

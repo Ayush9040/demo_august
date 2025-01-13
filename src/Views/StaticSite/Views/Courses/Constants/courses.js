@@ -10738,7 +10738,7 @@ const camps = {
       duration: "21 days",
       timings: [
         {
-          day: "",
+          day: "Sunday to Saturday",
           time: "Morning: 7:00 am – 8:30 am (IST)"
         }
       ]
@@ -11166,7 +11166,7 @@ const camps = {
       duration: "21 Days",
       timings: [
         {
-          day: "",
+          day: "Sunday to Saturday",
           time: "Evening 6:30 pm – 8:00 pm (IST)"
         }
       ]
@@ -11569,7 +11569,7 @@ const camps = {
       duration: "21 days",
       timings: [
         {
-          day: "",
+          day: "Sunday to Saturday",
           time: "Evening 6:30 pm – 8:00 pm (IST)"
         }
       ]
@@ -16341,7 +16341,7 @@ const certificate = {
               subItems: [],
             },
             {
-              listItem: 'Bandhas yoga, yoga mudras and mantras in pranayama practice',
+              listItem: 'Bandha yoga, yoga mudras and mantras in pranayama practice',
               subItems: [],
             },
             {
