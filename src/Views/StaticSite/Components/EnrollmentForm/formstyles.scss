@@ -549,6 +549,13 @@
     margin: 0;
   }
 
+  @media(max-width: 768px) {
+    border: none;
+    margin: 0 0 0 1% !important;
+    width: 100% !important;
+    overflow-x: hidden;
+  }
+
   .close_label {
     color: rgba(0, 0, 0, 1);
     font-size: 16px;
@@ -1860,6 +1867,7 @@ input[type='radio']:checked::before {
   bottom: 0;
   background-color: rgba(160, 98, 116, 0.8);
   z-index: 2;
+  width: 100% !important;
 
   button {
     float: right;
@@ -2624,8 +2632,56 @@ input[type=checkbox]:checked+label:before {
   margin-bottom: 0px !important;
 }
 
+.mobile_view {
+  display: none;
+}
 
 @media(max-width: 768px) {
+  .web_view {
+    display: none;
+  }
+
+  .flower {
+    svg {
+      height: 64px !important;
+    }
+  }
+
+  .mobile_view {
+    display: block;
+    box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(249, 249, 249, 1);
+    border-radius: 12px;
+    padding: 12px;
+    margin-bottom: -20px;
+    background-color: rgba(249, 249, 249, 1);
+
+    .head_m {
+      display: flex;
+      justify-content: space-between;
+      gap: 2rem;
+      font-size: 16px;
+      font-weight: 600;
+      color: #000000;
+      align-items: start;
+    }
+
+    .detail_m {
+      margin-top: 8px;
+      border: 1px solid rgba(96, 96, 96, 0.3);
+      border-radius: 8px;
+      padding: 8px 10px;
+    }
+  }
+
+  .times_fixed {
+    font-size: 12px;
+  }
+
+  .time_header {
+    font-size: 12px;
+  }
+
   .enrollment_container .header {
     grid-column: 1 / 7;
     margin-left: 15px;
@@ -2644,21 +2700,21 @@ input[type=checkbox]:checked+label:before {
     color: black;
     background: transparent;
     font-weight: 900;
-    font-size: 2rem;
+    font-size: 1rem;
     margin-right: 3rem;
     border: 0px solid rgb(0, 0, 0);
     border-radius: 20px;
     padding: 0px;
-    margin-top: 32px;
+    margin-top: 22px;
     // margin-right: 100px;
     cursor: pointer;
-
   }
 
   .enrollment_container .student {
-    font-weight: 600;
-    font-size: 16px;
-    margin-bottom: 15px;
+    // font-weight: 600;
+    // font-size: 16px;
+    // margin-bottom: 15px;
+    display: none;
   }
 
   .enroll_subtitle {
@@ -2872,7 +2928,8 @@ input[type=checkbox]:checked+label:before {
   }
 
   .accordian_holder {
-    background-color: rgba(251, 249, 249, 1);
+    background-color: rgba(249, 249, 249, 1);
+    box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.1);
     padding: 20px;
     // margin: 5px;
     border-radius: 20px;
@@ -2914,6 +2971,9 @@ input[type=checkbox]:checked+label:before {
   }
 
   .accordian_title {
+    display: flex;
+    gap: 8px;
+    align-items: center;
     font-size: 16px;
     font-weight: 600;
     color: rgba(0, 0, 0, 1);

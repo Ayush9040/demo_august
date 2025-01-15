@@ -70,6 +70,7 @@ const CourseDetails = ({
   const [notShowDate, setNotShowDate] = useState(true)
   const [notShowDuration, setNotShowDuration] = useState(true)
   const [openEdit, setOpenEdit] = useState(false)
+  const [openDetail, setOpenDetail] = useState(false)
   const [showEdit, setShowEdit] = useState(false)
   const [endDateCreated, setEndDateCreated] = useState(false);
   const [onSelectFormat, setOnSelectFormat] = useState(false);
@@ -630,8 +631,21 @@ const CourseDetails = ({
     <div className="main-container">
       <div className="course-main-container" style={{ position: 'relative' }}>
         <div className="course-secondary-container cr-cntr">
+          <div className="mobile_view">
+            <div className="head_m">
+              <div>{currentCourse?.title}</div>
+              <div onClick={() => { setOpenDetail(!openDetail) }} className={`${openDetail ? "rotate_icon_arrow" : ""}`}>
+                <img src="/images/edit_mob_dropdown.svg" alt="" />
+              </div>
+            </div>
+            {openDetail &&
+              <div className='detail_m'>
+                {/* <div>{currentCourse?.enrollInfo?.duration}</div> */}
+                <div> {renderTimings(groupedTimings)}</div>
+              </div>}
+          </div>
           <div className='stnd-detls'>
-            <div>
+            <div className='web_view'>
               <div className={isRegular ? "details_box details_box_regular" : "details_box"}>
                 <div className="details_course_box">
                   <div className="detail_image_box">
@@ -981,7 +995,7 @@ const CourseDetails = ({
                             )
                           }
 
-                          {((courseDateInfo == 'Select one below') || ((courseDateInfo == formattedDates[0]?.label || courseDateInfo == formattedDates[1]?.label ||courseDateInfo == formattedDates[2]?.label || courseDateInfo == formattedDates[3]?.label || courseDateInfo == formattedDates[4]?.label))) ?
+                          {((courseDateInfo == 'Select one below') || ((courseDateInfo == formattedDates[0]?.label || courseDateInfo == formattedDates[1]?.label || courseDateInfo == formattedDates[2]?.label || courseDateInfo == formattedDates[3]?.label || courseDateInfo == formattedDates[4]?.label))) ?
                             <> {
                               formattedDates?.slice(0, 5).map((item, index) => {
                                 if (!item?.label) return null;
@@ -1431,8 +1445,8 @@ const CourseDetails = ({
 
                 <div onClick={toggleAccordion} className="accordion-header">
                   <div>
-                    <div className='accordian_title'>Student details</div>
-                    <div className='accordian_sub-title'>Click here to edit your profile</div>
+                    <div className='accordian_title'>Student details<div className='accordian_sub-title'>Click to view profile</div></div>
+
                   </div>
                   <div className={`${openEdit ? "rotate_icon_arrow" : ""}`}>
                     <img src="/images/edit_mob_dropdown.svg" alt="" />
@@ -1508,7 +1522,7 @@ const CourseDetails = ({
 
 
       </div>
-    </div>
+    </div >
   )
 }
 export default CourseDetails
