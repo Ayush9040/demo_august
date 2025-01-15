@@ -274,6 +274,7 @@ const SignIn = () => {
   const [Params] = useSearchParams()
   const inputRefs = useRef([]);
   const [token, setToken] = useState()
+  const [errorOTP, setErrorOTP] = useState('')
   const [isBtnLoad, setIsBtnLoad] = useState(false)
   const [isoCode, setIsoCode] = useState('');
   const [empty, setEmpty] = useState(0)
@@ -645,6 +646,7 @@ const SignIn = () => {
           page ? page !== 'cart' ? navigate(`/enrollment/${page}`) : navigate('/shop/checkout') : navigate('/')
         }
         setOtp(new Array(4).fill(""))//clear OTP
+        setFormData({ ...formData, otp: '' });
       }
       catch (err) {
         // alert('Invalid OTP')
@@ -1107,7 +1109,7 @@ const SignIn = () => {
 
 
     else {
-      if (userDetails.otp.length == 4) {//valid OTP
+      if (userDetails.otp && userDetails.otp?.length == 4) {//valid OTP
         setIsBtnLoad(true)
         setFormData({ ...formData, errorIndex: 0 });
         const number = parsePhoneNumber(userDetails.phoneNumber);
@@ -1145,11 +1147,12 @@ const SignIn = () => {
             dispatch(loginUserSuccess({}))
             await getUserDetails(response?.data?.accessToken, 'notalreadySignedUp')
             callCTEvent(payload)
-
+            setErrorOTP('')
             // console.log('user details 2 ', userDetails);
             page ? page !== 'cart' ? navigate(`/enrollment/${page}`) : navigate('/shop/checkout') : navigate('/')
           }
           else {
+
             // alert('failed')
           }
 
@@ -1189,6 +1192,9 @@ const SignIn = () => {
           }
           setIsBtnLoad(false)
         }
+      }
+      else {
+        setErrorOTP('Verify the mobile number to continue.')
       }
     }
   }
@@ -1578,6 +1584,8 @@ const SignIn = () => {
         }
       )
       setIsMobileVerified(true)
+      setOtp(new Array(4).fill(""))//clear OTP
+      setFormData({ ...formData, otp: '' });
     }
     catch (err) {
       setFormData({ ...formData, errorIndex: 2 });
@@ -2302,7 +2310,7 @@ const SignIn = () => {
                         <input type="number" class="input-box" placeholder="Enter your phone number" value={formData.phoneNumber}
                           disabled={pageIndex == '4' ? true : false}
                           onChange={handlePhoneChange} />
-                        {(!hideVerify && !isMobileVerified) && <span type='click' className='verify_text' onClick={() => signUpOTP(formData, signUpType)}>Verify</span>}
+                        {(!hideVerify && !isMobileVerified) && <span type='click' className='verify_text' style={{ textDecoration: 'underline' }} onClick={() => signUpOTP(formData, signUpType)}>Verify</span>}
                         {isMobileVerified && <span span type='click' className='verify_text' style={{ color: '#34C759' }}>Verified</span>}
                       </div >
                       {isCountryContainer &&
@@ -2607,7 +2615,7 @@ const SignIn = () => {
                       <input type="number" class="input-box" placeholder="Enter your phone number" value={formData.phoneNumber}
                         disabled={pageIndex == '4' ? true : false}
                         onChange={handlePhoneChange} />
-                      {(!hideVerify && !isMobileVerified) && <span type='click' className='verify_text' onClick={() => signUpOTP(formData, signUpType)}>Verify</span>}
+                      {(!hideVerify && !isMobileVerified) && <span type='click' className='verify_text' style={{ textDecoration: 'underline' }} onClick={() => signUpOTP(formData, signUpType)}>Verify</span>}
                       {isMobileVerified && <span span type='click' className='verify_text' style={{ color: '#34C759' }}>Verified</span>}
                     </div >
                     {isCountryContainer &&
@@ -2625,6 +2633,9 @@ const SignIn = () => {
 
                     {isAlreadyRegistered &&
                       <div style={{ color: '#FF3B30' }}>Mobile number already registered</div>
+                    }
+                    {errorOTP?.length > 0 &&
+                      <div style={{ color: '#FF3B30', paddingTop: '4px' }}>{errorOTP}</div>
                     }
 
                     {(pageIndex == '4' && signUpType != 'mobile' && !isMobileVerified) && <>
