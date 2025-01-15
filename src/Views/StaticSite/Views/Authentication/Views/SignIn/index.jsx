@@ -1379,7 +1379,7 @@ const SignIn = () => {
     // console.log(" details from Sign up otp ", details, type)
     const nameRegex = /^[A-Za-z]+( [A-Za-z]+)*$/;
     const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-    //split empty space
+    // //split empty space
     let det1 = { ...formData }
     const trimmedAddress1 = det1?.address1?.replace(/\s{2,}/g, ' ').trim();
     const trimmedAddress2 = det1?.address2?.replace(/\s{2,}/g, ' ').trim();
@@ -1392,31 +1392,31 @@ const SignIn = () => {
     details['firstName'] = getTrimmedName(details['firstName'])
     details['lastName'] = getTrimmedName(details['lastName'])
 
-    if (!details.firstName || !nameRegex.test(details.firstName)) {
-      setFormData({ ...formData, errorIndex: 3 });
-    }
-    else if (!details.lastName || !nameRegex.test(details.lastName)) {
-      setFormData({ ...formData, errorIndex: 4 });
-    }
-    else if ((!details?.address1)) {
-      setFormData({ ...details, errorIndex: 5 });
-    }
-    else if ((!details?.address2)) {
-      setFormData({ ...details, errorIndex: 6 });
-    }
+    // if (!details.firstName || !nameRegex.test(details.firstName)) {
+    //   setFormData({ ...formData, errorIndex: 3 });
+    // }
+    // else if (!details.lastName || !nameRegex.test(details.lastName)) {
+    //   setFormData({ ...formData, errorIndex: 4 });
+    // }
+    // else if ((!details?.address1)) {
+    //   setFormData({ ...details, errorIndex: 5 });
+    // }
+    // else if ((!details?.address2)) {
+    //   setFormData({ ...details, errorIndex: 6 });
+    // }
 
-    else if (!details.gender?.value) {
-      setFormData({ ...details, errorIndex: 10 });
-    }
-    else if (!details.phoneNumber) {
-      setFormData({ ...details, errorIndex: 11 });
-      setIsToast(true)
-    }
-    else if ((!getemail || !emailRegex.test(getemail)) && signUpType == 'mobile') {
-      console.log("Deails email Name ", getemail);
-      setFormData({ ...details, errorIndex: 12 });
-    }
-    else if ((validatePhoneNumber(`${selectedCountryList.value}${details.phoneNumber}`).length > 0) && signUpType != 'mobile') {
+    // else if (!details.gender?.value) {
+    //   setFormData({ ...details, errorIndex: 10 });
+    // }
+    // else if (!details.phoneNumber) {
+    //   setFormData({ ...details, errorIndex: 11 });
+    //   setIsToast(true)
+    // }
+    // else if ((!getemail || !emailRegex.test(getemail)) && signUpType == 'mobile') {
+    //   console.log("Deails email Name ", getemail);
+    //   setFormData({ ...details, errorIndex: 12 });
+    // }
+    if ((validatePhoneNumber(`${selectedCountryList.value}${details.phoneNumber}`).length > 0) && signUpType != 'mobile') {
       console.log("Deails phoneNumber Name ", details.gender?.value);
       setFormData({ ...details, errorIndex: 11 });
       setIsToast(true)
@@ -2002,7 +2002,7 @@ const SignIn = () => {
                       <div className='inp-label'>First Name <span>*</span></div>
                       <div className={formData?.errorIndex == 3 ? "form-inp err-inp" : "form-inp"}>
                         <input
-                          disabled={pageIndex == '4' ? true : false}
+                          // disabled={pageIndex == '4' ? true : false}
                           value={formData.firstName}
                           onChange={(e) => { setFormData({ ...formData, firstName: e.target.value }) }}
                           type="text"
@@ -2020,7 +2020,7 @@ const SignIn = () => {
                       <div className='inp-label'>Last Name <span>*</span></div>
                       <div className={formData?.errorIndex == 4 ? "form-inp err-inp" : "form-inp"}>
                         <input
-                          disabled={pageIndex == '4' ? true : false}
+                          // disabled={pageIndex == '4' ? true : false}
                           type="text"
                           placeholder="Enter Last name"
                           value={formData.lastName}
@@ -2101,7 +2101,7 @@ const SignIn = () => {
                       <div className='inp-label mg-t-20'>Gender <span>*</span></div>
                       <Select
 
-                        isDisabled={pageIndex == '4' ? true : false}
+                        // isDisabled={pageIndex == '4' ? true : false}
                         menuPlacement="top"
                         styles={customStyles(formData?.errorIndex == 10 ? true : false)}
                         id="country"
@@ -2271,10 +2271,10 @@ const SignIn = () => {
                       {formData?.errorIndex == 12 &&
                         <div style={{ color: '#FF3B30' }}>Enter a valid Email</div>}
 
-                    {isAlreadyRegistered &&
-                      <div style={{ color: '#FF3B30' }}>Email already registered</div>
-                    }
-                    {displayError && <div style={{ color: '#FF3B30',paddingTop:'4px' }}>{displayError}</div>}
+                      {isAlreadyRegistered &&
+                        <div style={{ color: '#FF3B30' }}>Email already registered</div>
+                      }
+                      {displayError && <div style={{ color: '#FF3B30', paddingTop: '4px' }}>{displayError}</div>}
 
                     </>}
                   {signUpType != 'mobile' &&
@@ -2505,7 +2505,7 @@ const SignIn = () => {
                         <div className='inp-label'>First Name <span>*</span></div>
                         <div className={formData?.errorIndex == 3 ? "form-inp err-inp" : "form-inp"}>
                           <input
-                            disabled={pageIndex == '4' ? true : false}
+                            // disabled={pageIndex == '4' ? true : false}
                             value={formData.firstName}
                             onChange={(e) => { setFormData({ ...formData, firstName: e.target.value }) }}
                             type="text"
@@ -2520,7 +2520,7 @@ const SignIn = () => {
                         <div className='inp-label'>Last Name <span>*</span></div>
                         <div className={formData?.errorIndex == 4 ? "form-inp err-inp" : "form-inp"}>
                           <input
-                            disabled={pageIndex == '4' ? true : false}
+                            // disabled={pageIndex == '4' ? true : false}
                             type="text"
                             placeholder="Enter Last name"
                             value={formData.lastName}
@@ -2573,7 +2573,7 @@ const SignIn = () => {
                       <div className='form_error width-100 mt-4'>
                         <div className='inp-label mg-t-20'>Gender <span>*</span></div>
                         <Select
-                          isDisabled={pageIndex == '4' ? true : false}
+                          // isDisabled={pageIndex == '4' ? true : false}
                           menuPlacement="top"
                           styles={customStyles(formData?.errorIndex == 10 ? true : false)}
                           id="country"
