@@ -27,6 +27,7 @@ const Enrollment = () => {
   const navigate = useNavigate()
   const [isEditStudentOpen, setEditStudentOpen] = useState(false);
   const addressLine1 = useSelector((state) => state.auth.user.data?.addressLine1);
+  const addressLine2 = useSelector((state) => state.auth.user.data?.addressLine2);
   const pincodeFromRedux = useSelector((state) => state.auth.user.data?.pincode);
   const countryFromRedux = useSelector((state) => state.auth.user.data?.country);
   const stateFromRedux = useSelector((state) => state.auth.user.data?.state);
@@ -178,6 +179,7 @@ const Enrollment = () => {
 
     localStorage.setItem('addressDataNew', JSON.stringify({
       address1: addressLine1 || '',
+      address2: addressLine2 || '',
       country: countryFromRedux || '',
       state: stateFromRedux || '',
       pincode: pincodeFromRedux || '',

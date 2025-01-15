@@ -1999,7 +1999,7 @@ const SignIn = () => {
 
                     <div className='width-100'>
 
-                      <div className='inp-label mg-t-20'>First Name <span>*</span></div>
+                      <div className='inp-label'>First Name <span>*</span></div>
                       <div className={formData?.errorIndex == 3 ? "form-inp err-inp" : "form-inp"}>
                         <input
                           disabled={pageIndex == '4' ? true : false}
@@ -2017,7 +2017,7 @@ const SignIn = () => {
 
 
                     <div className='width-100'>
-                      <div className='inp-label  mg-t-20'>Last Name <span>*</span></div>
+                      <div className='inp-label'>Last Name <span>*</span></div>
                       <div className={formData?.errorIndex == 4 ? "form-inp err-inp" : "form-inp"}>
                         <input
                           disabled={pageIndex == '4' ? true : false}
@@ -2502,7 +2502,7 @@ const SignIn = () => {
                     <div className='sub-header sub-header-3 wish-text-mob'>Join The Yoga Institute Family </div>
                     <div className='inp-group mob-row'>
                       <div className='width-100'>
-                        <div className='inp-label mg-t-20'>First Name <span>*</span></div>
+                        <div className='inp-label'>First Name <span>*</span></div>
                         <div className={formData?.errorIndex == 3 ? "form-inp err-inp" : "form-inp"}>
                           <input
                             disabled={pageIndex == '4' ? true : false}
@@ -2517,7 +2517,7 @@ const SignIn = () => {
                           <div style={{ color: '#FF3B30' }}>Enter a valid First name</div>}
                       </div>
                       <div className='width-100'>
-                        <div className='inp-label  mg-t-20'>Last Name <span>*</span></div>
+                        <div className='inp-label'>Last Name <span>*</span></div>
                         <div className={formData?.errorIndex == 4 ? "form-inp err-inp" : "form-inp"}>
                           <input
                             disabled={pageIndex == '4' ? true : false}

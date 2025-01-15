@@ -52,6 +52,7 @@ const EnrollmentForm = ({
   const [values, setValues] = useState([])
   const [updateAddress, setUpdateAddress] = useState({
     address1: formData?.address1,
+    address2: formData?.address2,
     state: formData?.state,
     country: formData?.country,
     pincode: formData?.pincode,
@@ -68,6 +69,7 @@ const EnrollmentForm = ({
   const nationalityFromRedux = useSelector((state) => state.auth.user.data?.nationality);
   const dailCode = useSelector((state) => state.auth.user.data?.dialCode);
   const addressLine1 = useSelector((state) => state.auth.user.data?.addressLine1);
+  const addressLine2 = useSelector((state) => state.auth.user.data?.addressLine2);
   const pincodeFromRedux = useSelector((state) => state.auth.user.data?.pincode);
   console.log('pincodeFromRedux ', pincodeFromRedux)
   const [phoneValue, setPhoneValue] = useState(formData.phone);
@@ -161,6 +163,9 @@ const EnrollmentForm = ({
     }
     if (addressLine1) {
       setFormData((prev) => ({ ...prev, address1: addressLine1 }));
+    }
+    if (addressLine2) {
+      setFormData((prev) => ({ ...prev, address2: addressLine2 }));
     }
     if (pincodeFromRedux) {
       setFormData((prev) => ({ ...prev, pincode: pincodeFromRedux }));
