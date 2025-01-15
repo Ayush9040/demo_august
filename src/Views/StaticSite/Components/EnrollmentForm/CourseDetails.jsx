@@ -981,14 +981,14 @@ const CourseDetails = ({
                             )
                           }
 
-                          {((courseDateInfo == 'Select one below') || ((courseDateInfo == formattedDates[0]?.label || courseDateInfo == formattedDates[1]?.label))) ?
+                          {((courseDateInfo == 'Select one below') || ((courseDateInfo == formattedDates[0]?.label || courseDateInfo == formattedDates[1]?.label ||courseDateInfo == formattedDates[2]?.label || courseDateInfo == formattedDates[3]?.label || courseDateInfo == formattedDates[4]?.label))) ?
                             <> {
-                              formattedDates?.slice(0, 2).map((item, index) => {
+                              formattedDates?.slice(0, 5).map((item, index) => {
                                 if (!item?.label) return null;
                                 return (
                                   <div key={index} className='date_btn'>
                                     <div className='wrapper_center container_date_enroll'>
-                                      <label class="item-label item_date" style={{ width: '100%', height: '100%', borderRadius: '25px',justifyContent:'center' }}>
+                                      <label class="item-label item_date" style={{ width: '100%', height: '100%', borderRadius: '25px', justifyContent: 'center' }}>
                                         <input class="item-input"
                                           type="radio" name="mode"
                                           value={item?.label}
@@ -1023,12 +1023,12 @@ const CourseDetails = ({
                             }</> :
                             <>
                               {
-                                formattedDates?.slice(0, 1).map((item, index) => {
-                                  if (!item?.label) return null;
+                                formattedDates?.slice(0, 4).map((item, index) => {
+                                  if (!item?.label || courseDateInfo == item?.label) return null;
                                   return (
                                     <div key={index} className='date_btn'>
                                       <div className='wrapper_center container_date_enroll'>
-                                        <label class="item-label item_date" style={{ width: '100%', height: '100%', borderRadius: '25px',justifyContent:'center' }}>
+                                        <label class="item-label item_date" style={{ width: '100%', height: '100%', borderRadius: '25px', justifyContent: 'center' }}>
                                           <input class="item-input"
                                             type="radio" name="mode"
                                             value={item?.label}
@@ -1063,7 +1063,7 @@ const CourseDetails = ({
                               }
                               <div className='date_btn'>
                                 <div className='wrapper_center container_date_enroll'>
-                                  <label class="item-label item_date selected_date_popup" style={{ width: '100%', height: '100%', borderRadius: '25px',justifyContent:'center' }}>
+                                  <label class="item-label item_date selected_date_popup" style={{ width: '100%', height: '100%', borderRadius: '25px', justifyContent: 'center' }}>
                                     <input class="item-input"
                                       type="radio" name="mode"
                                       value={courseDateInfo}
@@ -1192,7 +1192,7 @@ const CourseDetails = ({
                           } */}
 
                           {
-                            formattedDates.length > 3 && (
+                            formattedDates.length > 5 && (
                               <div className='upcoming_dates'>
                                 <span onClick={handleOpen}>{isRegular ? "See all timings" : "See all upcoming dates"}
 
@@ -1235,7 +1235,7 @@ const CourseDetails = ({
                                 return (
                                   <div key={index} className='date_btn'>
                                     <div className='wrapper_center container_date_enroll'>
-                                      <label class="item-label item_date" style={{ width: '100%', height: '100%', borderRadius: '25px',justifyContent:'center' }}>
+                                      <label class="item-label item_date" style={{ width: '100%', height: '100%', borderRadius: '25px', justifyContent: 'center' }}>
                                         <input class="item-input"
                                           type="radio" name="mode"
                                           value={item?.value}
@@ -1280,7 +1280,7 @@ const CourseDetails = ({
                               ((courseDuration == 'Select one below') && durationList[2]?.label || (courseDuration == durationList[0]?.label || courseDuration == durationList[1]?.label)) ? (
                                 <div className='date_btn'>
                                   <div className='wrapper_center container_date_enroll'>
-                                    <label class="item-label item_date" style={{ width: '100%', height: '100%', borderRadius: '25px',justifyContent:'center' }}>
+                                    <label class="item-label item_date" style={{ width: '100%', height: '100%', borderRadius: '25px', justifyContent: 'center' }}>
                                       <input class="item-input"
                                         type="radio" name="mode"
                                         value={durationList[2]?.label}
@@ -1309,7 +1309,7 @@ const CourseDetails = ({
 
                                 <div className='date_btn'>
                                   <div className='wrapper_center container_date_enroll'>
-                                    <label class="item-label item_date selected_date_popup" style={{ width: '100%', height: '100%', borderRadius: '25px',justifyContent:'center' }}>
+                                    <label class="item-label item_date selected_date_popup" style={{ width: '100%', height: '100%', borderRadius: '25px', justifyContent: 'center' }}>
                                       <input class="item-input"
                                         type="radio" name="mode"
                                         value={courseDuration}
