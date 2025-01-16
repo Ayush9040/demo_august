@@ -1377,7 +1377,7 @@ const CourseDetails = ({
 
                 </div>
 
-                <div className='fees_wrapper'>
+                {/* <div className='fees_wrapper'>
                   <div className='fees_show'>
                     <div className='fees_left_wrapper'>
                       <img src='/images/fees_left.png' alt='' loading='lazy' />
@@ -1391,7 +1391,7 @@ const CourseDetails = ({
                     </div>
                   </div>
                   <div className='dmy-cntr'></div>
-                </div>
+                </div> */}
 
                 <div className="bottom_container_btn">
                   <div className='terms'>
@@ -1428,7 +1428,7 @@ const CourseDetails = ({
                   </div>
                   <div className="button_box">
                     {<button type="button" onClick={handleSubmit} className={!isLoad ? 'next_button button register-primary-btn' : 'next_button button register-primary-btn no-event'} disabled={isLoad}>
-                      {setDate ? <><span id="txt">Register&nbsp; </span> </> : !isLoad ? <><span id="txt" style={{ fontSize: '14px', fontWeight: '500' }}>Pay & confirm enrollment </span> </> : <><span className="loader">
+                      {setDate ? <><span id="txt">Register&nbsp; </span> </> : !isLoad ? <><span id="txt" style={{ fontSize: '14px', fontWeight: '500' }}>Pay & Confirm Enrollment - INR {isRegular ? onSelectFormat ? isRegularPrice : 0 : priceSelect}</span> </> : <><span className="loader">
                         <span className="dot"></span>
                         <span className="dot"></span>
                         <span className="dot"></span>

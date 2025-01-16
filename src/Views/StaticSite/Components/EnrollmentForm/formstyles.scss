@@ -950,7 +950,7 @@
     border-radius: 2.5rem;
     font-size: 14px !important;
     font-weight: 900;
-    margin-left: 3%;
+    // margin-left: 3%;
     background-color: white;
   }
 
@@ -2405,17 +2405,19 @@ input[type='radio']:checked::before {
 .bottom_container_btn {
   background-color: #fff;
   // margin-top: -47px;
-  padding: 0 22px 22px 22px;
+  padding: 2.875rem 22px 22px 22px;
   // margin-left: 15px;
   // margin-right: 25px;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  // justify-content: space-between;
+  align-items: start;
   // width: 52.6%;
   // position: absolute;
   // right: 3vw;
+  gap: 14px;
 }
 
 .terms label {
@@ -2428,12 +2430,12 @@ input[type='radio']:checked::before {
   cursor: pointer;
   border: 1px solid rgba(202, 70, 37, 1);
   height: 4.5rem;
-  width: 24rem;
+  width: 40rem;
   color: #fff;
   border-radius: 8px;
   font-size: 1.8rem;
   font-weight: 900;
-  margin-left: 3%;
+  // margin-left: 3%;
   background-color: rgba(202, 70, 37, 1);
 }
 
@@ -3057,6 +3059,7 @@ input[type=checkbox]:checked+label:before {
     border-top-right-radius: 20px;
     flex-direction: column-reverse;
     gap: 10px;
+    align-items: center;
   }
 
   .enrollment_container {
