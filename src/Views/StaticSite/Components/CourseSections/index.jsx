@@ -344,7 +344,7 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
     },
     {
       url: '/weight-management-workshop',
-      text: 'Weight Management Workshop - On Campus',
+      text: 'Weight Loss Workshop - On Campus',
       onCampus: true, weekDays: true, days1: true
     },
     {

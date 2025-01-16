@@ -432,7 +432,7 @@ const MegaMenu = ({ setNav }) => {
               <h3>CAMPS & WORKSHOPS</h3>
               <ul>
                 <Link onClick={() => { setNav(false) }} to='/stress-management-camp'><li>Stress Management Yoga Camp - On Campus</li></Link>
-                <Link onClick={() => { setNav(false) }} to='/weight-management-workshop'><li>Weight Management Yoga Workshop</li></Link>
+                <Link onClick={() => { setNav(false) }} to='/weight-management-workshop'><li>Weight Loss Yoga Workshop</li></Link>
                 <Link onClick={() => { setNav(false) }} to='/pregnancy-camp-for-ante-post-natal'><li>Pregnancy Yoga Camp For Ante & Post Natal - On Campus</li></Link>
                 <Link onClick={() => { setNav(false) }} to='/cardiac-hypertension-workshop'><li>Cardiac & Hypertension Yoga Workshop - On Campus</li></Link>
                 <Link onClick={() => { setNav(false) }} to='/back-joint-disorder-workshop'><li>Back & Joint Disorder Yoga Workshop</li></Link>

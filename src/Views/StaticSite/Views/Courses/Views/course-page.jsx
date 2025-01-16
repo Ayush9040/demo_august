@@ -562,7 +562,7 @@ const Courses = () => {
         },
         {
           url: '/weight-management-workshop',
-          text: 'Weight Management Workshop - On Campus',
+          text: 'Weight Loss Workshop - On Campus',
           onCampus: true, weekDays: true, days1: true
         },
         {

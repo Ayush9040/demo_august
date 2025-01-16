@@ -9353,7 +9353,7 @@ const camps = {
     textdescription3: '',
     textdescription4: '',
     textdescription5: '',
-    title: 'Weight Management Yoga Workshop',
+    title: 'Weight Loss Yoga Workshop',
     key: 'weight-management-workshop',
     tenure: '1 day',
     batch: 1,
@@ -9389,7 +9389,7 @@ const camps = {
     preRequisite: 'None',
     courseCategory: 'Self Help',
     courseSubType: 'Camps & Workshops',
-    newName: 'Weight Management Yoga Workshop',
+    newName: 'Weight Loss Yoga Workshop',
     days: [''],
     time: [
       '9:30 am – 5:30 pm (IST)'
