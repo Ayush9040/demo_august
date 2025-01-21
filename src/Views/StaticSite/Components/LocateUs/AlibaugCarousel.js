@@ -146,7 +146,7 @@ const AlibaugCarousel = () => {
             <h5>
               Cost: <span style={{ fontWeight: '400' }}>Rs. 10,000/- (Per Person – Inclusive of 8 Meals)</span>
             </h5>
-            <h5>Time: <span style={{ fontWeight: '400' }}>8:00 AM (11th) to 7:00 PM (12th)</span></h5>
+            <h5>Time: <span style={{ fontWeight: '400' }}>8:00 AM (1st) to 7:00 PM (2nd)</span></h5>
             <h5>Call us at <a href='tel: + 91 7738155500'>+ 91 7738155500</a>  or email us at <a href='mailto:info@theyogainstitute.org'>info@theyogainstitute.org</a></h5>
           </div>
           <Link
@@ -186,7 +186,7 @@ const AlibaugCarousel = () => {
             <h5>
               Cost: <span style={{ fontWeight: '400' }}>Rs. 10,000/- (Per Person – Inclusive of 8 Meals)</span>
             </h5>
-            <h5>Time: <span style={{ fontWeight: '400' }}>8:00 AM (18th) to 7:00 PM (19th)</span></h5>
+            <h5>Time: <span style={{ fontWeight: '400' }}>8:00 AM (Day 1) to 7:00 PM (Day 2)</span></h5>
             <h5>Call us at <a href='tel: + 91 7738155500'>+ 91 7738155500</a>  or email us at <a href='mailto:info@theyogainstitute.org'>info@theyogainstitute.org</a></h5>
           </div>
           <Link
@@ -220,7 +220,7 @@ const AlibaugCarousel = () => {
             <h5>
               Cost: <span style={{ fontWeight: '400' }}>Rs. 10,000/- (Per Person – Inclusive of 8 Meals)</span>
             </h5>
-            <h5>Time: <span style={{ fontWeight: '400' }}>8:00 AM (25th) to 7:00 PM (26th)</span></h5>
+            <h5>Time: <span style={{ fontWeight: '400' }}>8:00 AM (Day 1) to 7:00 PM (Day 2)</span></h5>
             <h5>Call us at <a href='tel: + 91 7738155500'>+ 91 7738155500</a>  or email us at <a href='mailto:info@theyogainstitute.org'>info@theyogainstitute.org</a></h5>
           </div>
           <Link
