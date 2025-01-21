@@ -16190,6 +16190,297 @@ const classes = {
       },
     ],
   },
+  23: {
+    id: '',
+    textdescription6: '',
+    textdescription7: '',
+    textdescription8: '',
+    textdescription9: '',
+    textdescription10: '',
+    textdescription1: '',
+    textdescription2: '',
+    textdescription3: '',
+    textdescription4: '',
+    textdescription5: '',
+    title: 'Department of Rehabilitation and Physiotherapy',
+    key: 'department-of-rehabilitation-and-physiotherapy',
+    isRegular: true,
+    tenure: '1 day',
+    weekends: true,
+    batch: 1,
+    // templateId: 'GENERAL_AUTO_EMAIL',
+    templateId: {
+      templateOnline: 'SATSANG_FORM_CONFIRMATION_MAIL',
+      templateOffline: {
+        templateResidential: 'SATSANG_FORM_CONFIRMATION_MAIL',
+        templateNonResidential: 'SATSANG_FORM_CONFIRMATION_MAIL',
+      },
+    },
+    image: `${baseDomain}${courseAssets.courseAsset80}`,
+    cardImage: `${baseDomain}${courseAssets.courseAsset80}`,
+    mostPopular: false,
+    metaDescription:
+      'At The Yoga Institute, we believe in the power of healing through holistic care. Our new Department of Rehabilitation and Physiotherapy is dedicated to helping individuals recover, regain independence, and lead healthier, more fulfilling lives.',
+    rating: 5,
+    colorCode: '#DDAB58',
+    timing: 'Every Sunday between 9.30 am and 10.30am',
+    fees: {
+      onlineFee: 0,
+      offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
+    },
+    category: 'classes',
+    dates: ['19th Jan 2025', '26th Jan 2025'
+      , '2nd Feb 2025', '9th Feb 2025', '16th Feb 2025', '23rd Feb 2025'
+    ],
+    online: true,
+    onCampus: true,
+    nonResidential: true,
+    residential: false,
+    certficate: false,
+    newName: '',
+    enrollInfo: {
+      duration: "Every Sunday",
+      timings: [
+        {
+          day: "Every Sunday",
+          time: "9.30 am and 10.30am"
+        }
+      ]
+    },
+    details: [
+      {
+        type: 'paragraph',
+        content: {
+          title: 'What is Rehabilitation?',
+          text: [
+            'Rehabilitation is a comprehensive process that helps individuals recover, improve, and adapt after an injury, illness, surgery, or disability. Its goal is to restore your strength, abilities, and independence, enabling you to live your life to the fullest.',
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Why is Rehabilitation Important?',
+          text: [
+            'Rehabilitation is a critical part of the recovery journey. Here’s why it matters:'],
+        },
+      },
+      {
+        type: 'o-list',
+        content: {
+          title: '',
+          points: [
+            {
+              listItem: 'Restores Independence: We help you regain vital skills, allowing you to handle daily tasks on your own.',
+              subItems: [],
+            },
+            {
+              listItem: 'Enhances Physical Health: Targeted therapies improve strength, mobility, and overall well-being.',
+              subItems: [],
+            },
+            {
+              listItem: 'Reduces Pain: Our treatments alleviate discomfort, improving your quality of life.',
+              subItems: [],
+            },
+            {
+              listItem: 'Prevents Complications: Early rehab helps avoid issues like muscle weakness and joint stiffness.',
+              subItems: [],
+            },
+            {
+              listItem: 'Boosts Confidence: As you recover, you’ll feel more confident and motivated to return to your normal routine.',
+              subItems: [],
+            },
+          ]
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Treatments We Offer',
+          text: [
+            'We provide specialized treatments for a wide range of conditions, including:'],
+        },
+      },
+      {
+        type: 'u-list',
+        content: {
+          title: '',
+          points: [
+            {
+              listItem: 'Spondylosis, Arthritis, Frozen Shoulder',
+              subItems: [],
+            },
+            {
+              listItem: 'Paralysis, Facial Palsy',
+              subItems: [],
+            },
+            {
+              listItem: 'Spine Problems',
+              subItems: [],
+            },
+            {
+              listItem: 'Post-Joint Replacement & Post-Surgery Rehabilitation',
+              subItems: [],
+            },
+            {
+              listItem: 'Women’s Health – Osteoporosis',
+              subItems: [],
+            },
+            {
+              listItem: 'Sports Injuries',
+              subItems: [],
+            },
+            {
+              listItem: 'Disc Problems',
+              subItems: [],
+            },
+            {
+              listItem: 'Nerve Injuries',
+              subItems: [],
+            },
+            {
+              listItem: 'Antenatal & Postnatal (Pregnancy) Exercises',
+              subItems: [],
+            },
+            {
+              listItem: 'Chest Physiotherapy and More',
+              subItems: [],
+            },
+          ]
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Role of Physiotherapy in Rehabilitation',
+          text: [
+            'Physiotherapy is essential in the rehabilitation process. Our expert physiotherapists help you recover and regain function through:'],
+        },
+      },
+      {
+        type: 'o-list',
+        content: {
+          title: '',
+          points: [
+            {
+              listItem: 'Restoring Mobility: Tailored exercises enhance flexibility, strength, and balance.',
+              subItems: [],
+            },
+            {
+              listItem: 'Pain Management: Techniques like manual therapy and electrotherapy reduce pain and inflammation.',
+              subItems: [],
+            },
+            {
+              listItem: 'Preventing Complications: Early physiotherapy prevents muscle atrophy, joint stiffness, and secondary injuries.',
+              subItems: [],
+            },
+            {
+              listItem: 'Enhancing Recovery: Physiotherapy speeds up healing and restores function.',
+              subItems: [],
+            },
+            {
+              listItem: 'Improving Quality of Life: Addressing physical limitations helps you regain independence and confidence. ',
+              subItems: [],
+            },
+            {
+              listItem: 'Empowering Health: Physiotherapy not only aids recovery but promotes a more active, healthier lifestyle.',
+              subItems: [],
+            }
+          ]
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Who Can Benefit from Physiotherapy?',
+          text: [
+            'Physiotherapy is a versatile field that benefits people of all ages and conditions. Here’s how it can help:'],
+        },
+      },
+
+      {
+        type: 'o-list',
+        content: {
+          title: '',
+          points: [
+            {
+              listItem: 'Musculoskeletal Physiotherapy',
+              subItems: ['Conditions: Back pain, arthritis, sports injuries, post-surgery recovery.', 'Focus: Restoring joint function, strength, and flexibility.'],
+            },
+            {
+              listItem: 'Neurological Physiotherapy',
+              subItems: ['Conditions: Stroke, Parkinson’s disease, multiple sclerosis, spinal cord injuries.', 'Focus: Improving motor function, balance, and coordination.'],
+            },
+            {
+              listItem: 'Cardiopulmonary Physiotherapy',
+              subItems: ['Conditions: COPD, asthma, post-cardiac surgery recovery.', 'Focus: Enhancing respiratory function and cardiovascular fitness.'],
+            },
+            {
+              listItem: 'Geriatric Physiotherapy',
+              subItems: ['Conditions: Osteoporosis, arthritis, balance disorders.', 'Focus: Improving mobility and reducing fall risk.'],
+            },
+            {
+              listItem: 'Sports Physiotherapy',
+              subItems: ['Focus: Preventing, diagnosing, and treating sports-related injuries, enhancing athletic performance, and facilitating a safe return to sport.'],
+            },
+            {
+              listItem: 'Women’s Health Physiotherapy',
+              subItems: ['Conditions: Pregnancy, postpartum recovery, pelvic floor dysfunction.', 'Focus: Improving pelvic health and managing pain.'],
+            },
+            {
+              listItem: 'Orthopedic Physiotherapy',
+              subItems: ['Conditions: Fractures, joint replacements, and other orthopedic issues.', 'Focus: Post-surgery rehabilitation and functional restoration.'],
+            },
+            {
+              listItem: 'Community-Based Rehabilitation',
+              subItems: ['Focus: Providing physiotherapy services in community settings to promote overall health, wellness, and preventive care.'],
+            },
+          ]
+        }
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'How Do Physiotherapists Help?',
+          text: [
+            'Our physiotherapists use a combination of techniques to help you recover, regain function, and prevent future injuries:'],
+        },
+      },
+      {
+        type: 'u-list',
+        content: {
+          title: '',
+          points: [
+            {
+              listItem: 'Exercise Therapy: Targeted exercises to improve strength, flexibility, and endurance',
+              subItems: [],
+            },
+            {
+              listItem: 'Manual Therapy: Hands-on techniques to alleviate pain and improve movement.',
+              subItems: [],
+            },
+            {
+              listItem: 'Electrotherapy: Using advanced machines like ultrasound or TENS to relieve pain and promote healing.',
+              subItems: [],
+            },
+            {
+              listItem: 'Education: Providing guidance on posture, ergonomics, and lifestyle changes to help prevent injury and support long-term health.',
+              subItems: [],
+            },
+          ]
+        }
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: [
+            'For booking your appointment and more information, Call on +91-7738155500, +91-22-26110506, +91-22-26103568'],
+        },
+      },
+
+    ],
+  },
 }
 
 const extra = {
@@ -17752,7 +18043,7 @@ const alibaug = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'classes',
-    dates: ['1st Feb 2025 to 2nd Feb 2025','22nd Feb 2025 to 23rd Feb 2025','8th Mar 2025 to 9th Mar 2025','22nd Mar 2025 to 23rd Mar 2025'
+    dates: ['1st Feb 2025 to 2nd Feb 2025', '22nd Feb 2025 to 23rd Feb 2025', '8th Mar 2025 to 9th Mar 2025', '22nd Mar 2025 to 23rd Mar 2025'
     ],
     online: false,
     onCampus: false,
@@ -17875,7 +18166,7 @@ const alibaug = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'classes',
-    dates: ['25th Jan 2025 to 26th Jan 2025','8th Feb 2025 to 9th Feb 2025','15th Feb 2025 to 16th Feb 2025'
+    dates: ['25th Jan 2025 to 26th Jan 2025', '8th Feb 2025 to 9th Feb 2025', '15th Feb 2025 to 16th Feb 2025'
     ],
     online: false,
     onCampus: false,
