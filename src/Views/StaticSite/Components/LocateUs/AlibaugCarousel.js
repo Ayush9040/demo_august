@@ -176,12 +176,14 @@ const AlibaugCarousel = () => {
           <div className="apply-address">
             <h5>Book Your Retreat Now</h5>
             {window.innerWidth <= 768 ? <h5>Dates: <br /> <span style={{ fontWeight: '400' }}> Retreat 1 - 1st February 2025 to 2nd February 2025 (1 Night, 2 Days)</span><br />
-              <span style={{ fontWeight: '400', position: 'relative', top: '10px' }}> Retreat 2 - 8th March 2025 to 9th March 2025 (1 Night, 2 Days)</span><br />
-              <span style={{ fontWeight: '400', position: 'relative', top: '10px' }}> Retreat 3 - 22nd March 2025 to 23rd March 2025 (1 Night, 2 Days)</span>
+            <span style={{ fontWeight: '400', position: 'relative', top: '10px' }}> Retreat 2 -22nd February 2025 to 23rd February 2025 (1 Night, 2 Days)</span><br />
+              <span style={{ fontWeight: '400', position: 'relative', top: '10px' }}> Retreat 3 - 8th March 2025 to 9th March 2025 (1 Night, 2 Days)</span><br />
+              <span style={{ fontWeight: '400', position: 'relative', top: '10px' }}> Retreat 4 - 22nd March 2025 to 23rd March 2025 (1 Night, 2 Days)</span>
             </h5> :
               <h5>Dates: <span style={{ fontWeight: '400' }}> Retreat 1 - 1st February 2025 to 2nd February 2025 (1 Night, 2 Days)</span><br />
-                <span style={{ fontWeight: '400', marginLeft: '59.9px', lineHeight: '30px' }}> Retreat 2 - 8th March 2025 to 9th March 2025 (1 Night, 2 Days)</span><br />
-                <span style={{ fontWeight: '400', marginLeft: '59.9px', lineHeight: '30px' }}> Retreat 3 - 22nd March 2025 to 23rd March 2025 (1 Night, 2 Days)</span>
+              <span style={{ fontWeight: '400', marginLeft: '59.9px', lineHeight: '30px' }}> Retreat 2 -22nd February 2025 to 23rd February 2025 (1 Night, 2 Days)</span><br />
+                <span style={{ fontWeight: '400', marginLeft: '59.9px', lineHeight: '30px' }}> Retreat 3 - 8th March 2025 to 9th March 2025 (1 Night, 2 Days)</span><br />
+                <span style={{ fontWeight: '400', marginLeft: '59.9px', lineHeight: '30px' }}> Retreat 4 - 22nd March 2025 to 23rd March 2025 (1 Night, 2 Days)</span>
               </h5>}
             <h5>
               Cost: <span style={{ fontWeight: '400' }}>Rs. 10,000/- (Per Person – Inclusive of 8 Meals)</span>
