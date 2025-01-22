@@ -3,6 +3,7 @@ import { Suspense, useEffect, useState } from 'react'
 import {
   Routes,
   Route,
+  useNavigate,
 } from 'react-router-dom'
 
 import MetaTags from './Components/MetaTags'
@@ -13,12 +14,16 @@ import Pagenotfound from './Views/StaticSite/Components/404 Error'
 import ReactGA from 'react-ga4';
 
 import { useLocation } from 'react-router-dom';
+import { useSelector } from 'react-redux'
 
 
 
 const App = () => {
   const [isVisible, setIsVisible] = useState(true);
   const location = useLocation();
+  const nameFromRedux = useSelector((state) => state.auth.user.data?.firstName);
+  const navigate = useNavigate()
+
   useEffect(() => {
     // const hasAcceptedCookies = localStorage.getItem('cookiesAccepted');
     // if (hasAcceptedCookies === "true" || hasAcceptedCookies === true) {
@@ -29,7 +34,10 @@ const App = () => {
     // }
     // ReactGA.initialize('G-KZMLSTPLP1')
     // ReactGA.send('/')
-  }, []);
+    if ((nameFromRedux && location.pathname == "/user/sign-in")) {//if user navigating to sigin and logged in then redirect to home
+      navigate('/')
+    }
+  }, [location]);
 
   const handleAccept = () => {
     // sessionStorage.setItem('cookiesAccepted', 'true');

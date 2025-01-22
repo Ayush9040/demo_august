@@ -512,9 +512,19 @@
   visibility: hidden;
 }
 
+.cr-cntr {
+  display: flex !important;
+  width: 96% !important;
+}
+
 @media (max-width: 768px) {
   .to_fix_width {
     display: none;
+  }
+
+  .cr-cntr {
+    flex-direction: column;
+    width: 96%;
   }
 }
 
@@ -523,19 +533,27 @@
 // ********************************* CSS Check ****************************************
 
 .enrollment_container {
-  height: 95%;
-  width: 95%;
+  // height: fit-content;
+  width: 98%;
   border: 2px solid rgba(202, 70, 37, 1);
-  border-radius: 40px;
-  margin: 2%;
+  border-radius: 2rem;
+  margin: 1% 0 1% 1%;
   justify-content: center;
   // background-image: url('../../../../../public/images/bg_enroll.png');
   background-color: rgba(202, 70, 37, 0.02);
+  // padding-bottom: 24vh;
 
   input::-webkit-outer-spin-button,
   input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
+  }
+
+  @media(max-width: 768px) {
+    border: none;
+    margin: 0 0 0 1% !important;
+    width: 100% !important;
+    overflow-x: hidden;
   }
 
   .close_label {
@@ -583,8 +601,8 @@
       justify-content: center;
 
       svg {
-        height: 80px;
-        width: 80px;
+        height: 40px;
+        // width: 64px;
       }
     }
 
@@ -602,7 +620,7 @@
       border: 1px solid rgba(0, 0, 0, 1);
       border-radius: 20px;
       padding: 7px 12px 5px 17px;
-      margin-top: 23px;
+      margin-top: 2px;
       cursor: pointer;
     }
   }
@@ -932,7 +950,7 @@
     border-radius: 2.5rem;
     font-size: 14px !important;
     font-weight: 900;
-    margin-left: 3%;
+    // margin-left: 3%;
     background-color: white;
   }
 
@@ -948,6 +966,7 @@
     margin-top: 2%;
     background-color: white;
   }
+
 }
 
 .main-div {
@@ -1444,28 +1463,36 @@ input[type='radio']:checked::before {
 // course Details starts
 
 .course-main-container {
-  height: 95%;
+  // height: 95%;
   margin: 2%;
-  width: 95%;
+  width: 100%;
+  background-image: url('../../../../../public/images/bg_lotus_enrollment.png');
+  background-size: auto 330px;
+  background-position: center;
+  background-repeat: no-repeat;
 
   .course-secondary-container {
     display: flex;
-
-    flex-direction: column;
-    height: 50%;
-    margin: 0 auto;
-    text-align: left;
+    gap: 24px;
+    // flex-direction: column;
+    // height: 50%;
+    // margin: 0 auto;
+    // text-align: left;
     // width: fit-content;
+    width: 100%;
+    align-items: start;
 
     .details_box {
       // border: 1px solid #60606080 !important;
       border-radius: 20px;
       // max-width: 780px;
-      min-width: auto;
+      // min-width: auto;
       height: auto;
       background-color: #fff;
       border: none;
       box-shadow: 0px 11.58px 23px 0px rgba(0, 0, 0, 0.04);
+      width: 100% !important;
+      padding-bottom: 2px;
 
       .details_course_box {
         display: flex;
@@ -1492,14 +1519,14 @@ input[type='radio']:checked::before {
         }
 
         .detail_image_box {
-          width: 320px;
-          height: 240px;
+          width: 100px; //320px;
+          height: 100px; //240px;
           // min-width: 250px;
 
           img {
             border-radius: 30px;
-            height: 240px;
-            width: 320px;
+            height: 100px; //240px;
+            width: 100px; //320px;
             padding: 17px;
             aspect-ratio: 16 / 13.2;
             object-fit: cover;
@@ -1765,7 +1792,6 @@ input[type='radio']:checked::before {
     .course-main-container {
       .course-secondary-container {
         .details_box {
-
           border: 1px solid rgba(96, 96, 96, 0.5019607843);
           border-radius: 20px;
           width: 100% !important;
@@ -1841,6 +1867,7 @@ input[type='radio']:checked::before {
   bottom: 0;
   background-color: rgba(160, 98, 116, 0.8);
   z-index: 2;
+  width: 100% !important;
 
   button {
     float: right;
@@ -2151,16 +2178,18 @@ input[type='radio']:checked::before {
 }
 
 .details_newName {
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 500;
+  line-height: 27px;
   color: rgba(0, 0, 0, 1);
 }
 
 .details_desc_info {
   display: flex;
   justify-content: space-between;
-  margin-top: 16px;
+  margin-top: -16px;
   padding-right: 10px;
+  margin-left: 14px;
 }
 
 .details_duration_info {
@@ -2176,7 +2205,7 @@ input[type='radio']:checked::before {
 }
 
 .tenure_course {
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 400;
   color: rgba(0, 0, 0, 1);
   text-align: end;
@@ -2235,11 +2264,10 @@ input[type='radio']:checked::before {
   background-color: #fff;
   margin-top: 28px;
   border-radius: 20px;
-  border-bottom-left-radius: 0px;
-  border-bottom-right-radius: 0px;
   box-shadow: 0px 0px 13px 0px #0000000A;
 
   box-shadow: 0px 11.58px 23px 0px #0000000A;
+
 
 }
 
@@ -2256,12 +2284,12 @@ input[type='radio']:checked::before {
 .img_wrapper_date_format {
   width: 30%;
   display: flex;
-  align-items: end;
+  align-items: top;
 }
 
 .img_wrapper_date_format img {
-  width: 100%;
-  height: 65%;
+  width: auto;
+  height: 130px;
   // padding-top: 53%;
 }
 
@@ -2277,7 +2305,8 @@ input[type='radio']:checked::before {
 
 .details_format_date .check_course .item-label {
   border-radius: 25px;
-  justify-content: center;
+  justify-content: start;
+  padding-left: 30px;
 }
 
 .dates_enroll_wrapper {
@@ -2331,9 +2360,11 @@ input[type='radio']:checked::before {
 .fees_wrapper {
   // margin-top: 32px;
   width: 100%;
+
   // background-color: rgba(255, 243, 240, 1);
   // height: 71px;
   // padding: 22px 24px;
+
 }
 
 .fees_show {
@@ -2373,15 +2404,20 @@ input[type='radio']:checked::before {
 
 .bottom_container_btn {
   background-color: #fff;
-  margin-top: -47px;
-  padding: 22px;
-  margin-left: 15px;
-  margin-right: 25px;
+  // margin-top: -47px;
+  padding: 2.875rem 22px 22px 22px;
+  // margin-left: 15px;
+  // margin-right: 25px;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  // justify-content: space-between;
+  align-items: start;
+  // width: 52.6%;
+  // position: absolute;
+  // right: 3vw;
+  gap: 14px;
 }
 
 .terms label {
@@ -2394,12 +2430,12 @@ input[type='radio']:checked::before {
   cursor: pointer;
   border: 1px solid rgba(202, 70, 37, 1);
   height: 4.5rem;
-  width: 24rem;
+  width: 40rem;
   color: #fff;
   border-radius: 8px;
   font-size: 1.8rem;
   font-weight: 900;
-  margin-left: 3%;
+  // margin-left: 3%;
   background-color: rgba(202, 70, 37, 1);
 }
 
@@ -2455,12 +2491,12 @@ input[type=checkbox]:checked+label:before {
 }
 
 .details_wrapper_duration {
-  border-radius: 8px;
-  border: 1px solid rgba(96, 96, 96, 0.3);
+  // border-radius: 8px;
+  // border: 1px solid rgba(96, 96, 96, 0.3);
   // min-width: 180px;
-  width: 100%;
-  padding: 4px 12px 8px 12px;
-  text-align: center;
+  // width: 100%;
+  // padding: -4px 0 0 12px;
+  // text-align: center;
 }
 
 .time_header {
@@ -2473,10 +2509,10 @@ input[type=checkbox]:checked+label:before {
   // display: none;
   border-radius: 8px;
   border: 1px solid rgba(96, 96, 96, 0.3);
-  width: 98%;
+  width: 96%;
   text-align: center;
   margin-top: 12px;
-  // margin-right: 10px;
+  margin: 8px 10px;
   padding: 10px 50px;
 }
 
@@ -2544,7 +2580,7 @@ input[type=checkbox]:checked+label:before {
 }
 
 .date_btn {
-  width: 48.9%;
+  // width: 48.9%;
 }
 
 .accordian_holder {
@@ -2598,8 +2634,56 @@ input[type=checkbox]:checked+label:before {
   margin-bottom: 0px !important;
 }
 
+.mobile_view {
+  display: none;
+}
 
 @media(max-width: 768px) {
+  .web_view {
+    display: none;
+  }
+
+  .flower {
+    svg {
+      height: 64px !important;
+    }
+  }
+
+  .mobile_view {
+    display: block;
+    box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(249, 249, 249, 1);
+    border-radius: 12px;
+    padding: 12px;
+    margin-bottom: -20px;
+    background-color: rgba(249, 249, 249, 1);
+
+    .head_m {
+      display: flex;
+      justify-content: space-between;
+      gap: 2rem;
+      font-size: 16px;
+      font-weight: 600;
+      color: #000000;
+      align-items: start;
+    }
+
+    .detail_m {
+      margin-top: 8px;
+      border: 1px solid rgba(96, 96, 96, 0.3);
+      border-radius: 8px;
+      padding: 8px 10px;
+    }
+  }
+
+  .times_fixed {
+    font-size: 12px;
+  }
+
+  .time_header {
+    font-size: 12px;
+  }
+
   .enrollment_container .header {
     grid-column: 1 / 7;
     margin-left: 15px;
@@ -2618,21 +2702,21 @@ input[type=checkbox]:checked+label:before {
     color: black;
     background: transparent;
     font-weight: 900;
-    font-size: 2rem;
+    font-size: 1rem;
     margin-right: 3rem;
     border: 0px solid rgb(0, 0, 0);
     border-radius: 20px;
     padding: 0px;
-    margin-top: 32px;
+    margin-top: 22px;
     // margin-right: 100px;
     cursor: pointer;
-
   }
 
   .enrollment_container .student {
-    font-weight: 600;
-    font-size: 16px;
-    margin-bottom: 15px;
+    // font-weight: 600;
+    // font-size: 16px;
+    // margin-bottom: 15px;
+    display: none;
   }
 
   .enroll_subtitle {
@@ -2672,9 +2756,10 @@ input[type=checkbox]:checked+label:before {
   }
 
   .course-main-container .course-secondary-container .details_box .details_course_box .detail_image_box {
-    width: auto;
-    max-width: 100%;
-    height: 285px;
+    height: auto;
+    width: 100%;
+
+    // height: 285px;
     // min-width: auto;
     // object-fit: fill;
   }
@@ -2698,7 +2783,7 @@ input[type=checkbox]:checked+label:before {
 
   .details_wrapper_duration {
     border-radius: 8px;
-    border: 1px solid rgba(96, 96, 96, 0.3);
+    // border: 1px solid rgba(96, 96, 96, 0.3);
     width: 100%;
     display: flex;
     padding: 2px;
@@ -2835,7 +2920,7 @@ input[type=checkbox]:checked+label:before {
   .time_days_wrapper {
     border-radius: 8px;
     border: 1px solid rgba(96, 96, 96, 0.3);
-    width: 98%;
+    width: 95%;
     margin-top: 12px;
     padding: 12px 9px;
   }
@@ -2845,7 +2930,8 @@ input[type=checkbox]:checked+label:before {
   }
 
   .accordian_holder {
-    background-color: rgba(251, 249, 249, 1);
+    background-color: rgba(249, 249, 249, 1);
+    box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.1);
     padding: 20px;
     // margin: 5px;
     border-radius: 20px;
@@ -2865,6 +2951,18 @@ input[type=checkbox]:checked+label:before {
     transition: grid-template-rows 0.5s;
   }
 
+  .detail_image_box {
+    width: 100% !important; //320px;
+    height: 100% !important; //240px;
+    // min-width: 250px;
+
+    img {
+      border-radius: 30px;
+      height: 100% !important; //240px;
+      width: 100% !important; //320px;
+    }
+  }
+
   .accordian_holder .show {
     margin-top: 15px;
     grid-template-rows: 1fr;
@@ -2875,6 +2973,9 @@ input[type=checkbox]:checked+label:before {
   }
 
   .accordian_title {
+    display: flex;
+    gap: 8px;
+    align-items: center;
     font-size: 16px;
     font-weight: 600;
     color: rgba(0, 0, 0, 1);
@@ -2935,8 +3036,6 @@ input[type=checkbox]:checked+label:before {
     background-color: #fff;
     margin-top: 28px;
     border-radius: 20px;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
 
   }
 
@@ -2951,14 +3050,16 @@ input[type=checkbox]:checked+label:before {
     bottom: 0px;
     width: 100%;
     background: rgb(255, 243, 240);
-    margin-left: 0px;
-    left: 0;
+    margin-left: -28px;
+    padding-top: 18px;
+    // left: 0;
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     flex-direction: column-reverse;
     gap: 10px;
+    align-items: center;
   }
 
   .enrollment_container {
@@ -2995,12 +3096,17 @@ input[type=checkbox]:checked+label:before {
 }
 
 @media (max-width: '480px') {
+  .dmy-cntr {
+    height: 12px;
+  }
+
   .details_desc_info {
-    // flex-direction: column;
+    justify-content: space-between;
     width: 100%;
+    margin: -10px 0 0 8px;
 
     .details_wrapper_duration {
-      padding: 12px 12px;
+      // padding: 12px 12px;
       // min-width: 160px !important;
     }
   }
@@ -3038,8 +3144,8 @@ input[type=checkbox]:checked+label:before {
 
   .course-main-container .course-secondary-container .details_box .details_course_box .detail_image_box img {
     border-radius: 30px;
-    height: 100%;
-    width: 320px;
+    // height: 100%;
+    // width: 320px;
     padding: 17px 17px 17px 9px;
     aspect-ratio: 16 / 13.2;
     object-fit: cover;
@@ -3058,4 +3164,52 @@ input[type=checkbox]:checked+label:before {
 
 .css-1jqq78o-placeholder {
   font-size: 14px;
+}
+
+.stnd-detls {
+  width: 40%;
+
+  .card {
+    background-color: rgba(251, 249, 249, 1);
+    margin-top: 30px;
+    padding: 1.5rem;
+    border-radius: 20px;
+    box-shadow: 0px 0px 13px 0px rgba(0, 0, 0, 0.04);
+    box-shadow: 0px 11.58px 23px 0px rgba(0, 0, 0, 0.04);
+  }
+
+  @media(max-width: 768px) {
+    width: 102%;
+
+    .card {
+      display: none;
+    }
+  }
+}
+
+.crs-wrap {
+  width: 60%;
+  // margin-left: 30px !important;
+  margin-top: -30px;
+
+  .ex-width {
+    width: 150%;
+  }
+
+  @media(max-width: 768px) {
+    width: 100%;
+    margin-left: 0 !important;
+
+    .ex-width {
+      width: 100%;
+    }
+  }
+
+
+}
+
+@media(min-width:1490px) {
+  .lang_course {
+    margin-right: 4px;
+  }
 }

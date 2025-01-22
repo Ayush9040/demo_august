@@ -14,7 +14,7 @@ const customStyles = {
     bottom: 'auto',
     marginRight: '-50%',
     transform: 'translate(-50%, -50%)',
-    maxHeight: '75%',
+    maxHeight: '98%',
     width: '40%',
     borderRadius: '20px',
     // border: '1px solid black',
@@ -29,13 +29,13 @@ const customStyles = {
 
 // Modal.setAppElement('#___gatsby')
 
-const EditStudent = ({ isShippingModalOpen, setIsShipppingModalOpen, formData, setFormData, setEmpty, empty, currentCourse, dateDurationChange,handleSubmit, setUpdateAddress, setDefaultAddress }) => {
+const EditStudent = ({ isShippingModalOpen, setIsShipppingModalOpen, formData, setFormData, setEmpty, empty, currentCourse, dateDurationChange, handleSubmit, setUpdateAddress, setDefaultAddress }) => {
 
   function closeModal() {
     setEmpty(0);
     setIsShipppingModalOpen(false)
   }
-  function saveAndASubmit(){
+  function saveAndASubmit() {
     handleSubmit()
   }
 
@@ -45,11 +45,11 @@ const EditStudent = ({ isShippingModalOpen, setIsShipppingModalOpen, formData, s
         isOpen={isShippingModalOpen}
         onRequestClose={closeModal}
         style={customStyles}
-        shouldCloseOnOverlayClick={false}  // Prevent closing when clicking outside the modal
+        shouldCloseOnOverlayClick={true}  // Prevent closing when clicking outside the modal
         contentLabel="Example Modal"
       >
         <div className="modal-container" >
-          <div className="shipping-modal-header" >
+          <div className="shipping-modal-header" style={{ marginTop: '-16px' }}>
             <div className="shipping-modal-tabs">
               {/* <h2 className="heading-1">
 
@@ -61,7 +61,7 @@ const EditStudent = ({ isShippingModalOpen, setIsShipppingModalOpen, formData, s
               </div>
 
             </div>
-            <div style={{ width: '12px', height: '12px' }}>
+            <div style={{ width: '12px', height: '12px',marginTop:'4px' }}>
 
               <span className="change-cross-svg-width" style={{ cursor: 'pointer' }} onClick={closeModal}>
                 {cross}
@@ -70,7 +70,7 @@ const EditStudent = ({ isShippingModalOpen, setIsShipppingModalOpen, formData, s
             </div>
 
           </div>
-          <div className="modal-content" style={{ gridTemplateColumns: '1fr', marginTop: '0rem' }}>
+          <div className="modal-content" style={{ gridTemplateColumns: '1fr', marginTop: '-18px' }}>
             {<EditStudentView formData={formData} setFormData={setFormData} setEmpty={setEmpty} empty={empty} currentCourse={currentCourse} dateDurationChange={dateDurationChange} closeModal={closeModal} saveAndASubmit={saveAndASubmit} setUpdateAddress={setUpdateAddress} setDefaultAddress={setDefaultAddress} />}
             {/* <div>
               <input

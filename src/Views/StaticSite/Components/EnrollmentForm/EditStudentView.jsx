@@ -1149,6 +1149,7 @@ const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse
       // alert(JSON.stringify(formData));
       localStorage.setItem('addressDataNew', JSON.stringify({
         address1: formData2?.address1,
+        address2: formData2?.address2,
         country: formData2?.country,
         state: formData2?.state,
         pincode: formData2?.pincode,
@@ -1438,6 +1439,7 @@ const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse
                 setFormData2({ ...newForm, [keyName]: newValue }); // Update state with cleaned value
               }}
               keyName="address2"
+              dataKey="address2"
               errorCheck={setEmpty}
             />
           </div>
