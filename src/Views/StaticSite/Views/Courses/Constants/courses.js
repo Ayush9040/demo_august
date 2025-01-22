@@ -16206,7 +16206,7 @@ const classes = {
     key: 'department-of-rehabilitation-and-physiotherapy',
     isRegular: true,
     tenure: '1 day',
-    weekends: true,
+    weekends: false,
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
     templateId: {
@@ -16216,21 +16216,20 @@ const classes = {
         templateNonResidential: 'SATSANG_FORM_CONFIRMATION_MAIL',
       },
     },
-    image: `${baseDomain}${courseAssets.courseAsset80}`,
-    cardImage: `${baseDomain}${courseAssets.courseAsset80}`,
+    image: courseAssets.courseAssetPhysio,
+    cardImage: courseAssets.courseAssetPhysio,
     mostPopular: false,
     metaDescription:
       'At The Yoga Institute, we believe in the power of healing through holistic care. Our new Department of Rehabilitation and Physiotherapy is dedicated to helping individuals recover, regain independence, and lead healthier, more fulfilling lives.',
     rating: 5,
     colorCode: '#DDAB58',
-    timing: 'Every Sunday between 9.30 am and 10.30am',
+    timing: 'Every Sunday between 9.30 am and 1.30am',
     fees: {
       onlineFee: 0,
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'classes',
-    dates: ['19th Jan 2025', '26th Jan 2025'
-      , '2nd Feb 2025', '9th Feb 2025', '16th Feb 2025', '23rd Feb 2025'
+    dates: ['2nd January 2025'
     ],
     online: true,
     onCampus: true,
