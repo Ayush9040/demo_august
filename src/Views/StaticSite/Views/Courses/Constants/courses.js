@@ -16238,11 +16238,11 @@ const classes = {
     certficate: false,
     newName: '',
     enrollInfo: {
-      duration: "Every Sunday",
+      duration: "Everyday",
       timings: [
         {
-          day: "Every Sunday",
-          time: "9.30 am and 10.30am"
+          day: "Everyday",
+          time: "9.30 am and 1.30pm"
         }
       ]
     },
