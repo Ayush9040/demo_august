@@ -330,7 +330,7 @@ const Enrollment = () => {
         }
 
         if (response?.data?.success) {
-          if (currentCourse.key !== 'satsang' && currentCourse.key !== 'samattvam' && currentCourse.key !== 'fullmoon-meditation' && currentCourse.key !== 'yoga-by-the-bay') { //for residential no payment required
+          if (currentCourse.key !== 'satsang' && currentCourse.key !== 'samattvam' && currentCourse.key !== 'fullmoon-meditation' && currentCourse.key !== 'yoga-by-the-bay' && currentCourse.key != 'department-of-rehabilitation-and-physiotherapy') { //for residential no payment required
             //  && localStorage.getItem('isResidential') == 'false'
             const paymentOrderResponse = await axios.post(`${cmsBaseDomain}/payment/order?enrollmentFormId=${response.data.data['_id']}`, {
               amount: localStorage.getItem('courseFee'),
@@ -506,6 +506,10 @@ const Enrollment = () => {
             if (currentCourse.key === 'satsang') {
               await axios.post(`${authBaseDomain}/ali/mail`, mailTemplate);
               navigate('/satsang_thankyou')
+            }
+            else if (currentCourse.key == 'department-of-rehabilitation-and-physiotherapy') {
+              await axios.post(`${authBaseDomain}/ali/mail`, mailTemplate);
+              navigate(`/enrollment_submitted/${currentCourse.key}`)
             } else if (currentCourse.key === 'samattvam') {
               // await axios.post(`${authBaseDomain}/ali/mail`, mailTemplate)
               navigate('/samattvam_thankyou')
@@ -536,7 +540,7 @@ const Enrollment = () => {
 
   const handleSubmit = async (e) => {
     // alert(JSON.stringify(formData))
-// alert(formData.name)
+    // alert(formData.name)
     const array = ["Yoga Classes for Men (Regular Asana) - On Campus",
       "Yoga Classes for Women (Regular Asana) - On Campus",
       "Yoga Asana Regular Classes - (Men & Women) - Online Yoga Classes",
@@ -561,6 +565,7 @@ const Enrollment = () => {
     //   gender: updatedData?.gender
 
     // }));
+    const isPhysio = currentCourse?.title == 'Department of Rehabilitation and Physiotherapy'
     console.log("form data from sdate ", formData.sdate)
     const isMatch = array.includes(currentCourse?.title);
     console.log("isMatchhhhhh ", isMatch)
@@ -615,23 +620,23 @@ const Enrollment = () => {
     } else if (formData.mode === '') {
       // alert("11")
       setEmpty('mode')
-    } else if (isMatch && formData.startDate === '') {
+    } else if ((isMatch || isPhysio) && formData.startDate === '') {
       // alert(formData.startDate)
 
       setEmpty(21)
-    } else if (formData.sdate === '' || formData.sdate === 'No date Selected') {
+    } else if ((formData.sdate === '' || formData.sdate === 'No date Selected') && !isPhysio) {
       // alert("8")
       setEmpty(18)
     }
 
-    else if (isMatch && formData.endDate === '') {
+    else if (isMatch && formData.endDate === '' && !isPhysio) {
       console.log("Form Data Start Date ", formData.startDate)
       // alert("12")
       setEmpty(20)
     }
     else {
       // alert(formData.endDate)
-      if (localStorage.getItem('isRegular') == 'true') {//end date caculate for Regular courses 
+      if (localStorage.getItem('isRegular') == 'true' && !isPhysio) {//end date caculate for Regular courses 
         setEndDate(formData.endDate, formData.startDate)
       }
       handleSubmit1();

@@ -418,6 +418,7 @@ const MegaMenu = ({ setNav }) => {
                     <li>IBY Class (Only for TYI TTC Teachers)</li>
                   </Link>
                   <Link onClick={() => { setNav(false) }} to='/regular-pregnacy-classes'><li>Regular Pregnancy Yoga Class - Online & On Campus</li></Link>
+                  <Link onClick={() => { setNav(false) }} to='/department-of-rehabilitation-and-physiotherapy'><li>Department of Rehabilitation and Physiotherapy</li></Link>
                   <Link onClick={() => { setNav(false) }} to='/alibaug'><li>Yoga Retreat</li></Link>
 
                 </ul>

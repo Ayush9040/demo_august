@@ -49,6 +49,7 @@ const CourseDetails = ({
   const isChildrenWeekendClass = location.pathname === '/enrollment/childrens-weekend-classes-on-campus';
   const isYogaPrayas = location.pathname === '/enrollment/yog-prayas-online';
   const isSatsangPage = location.pathname === '/enrollment/satsang';
+  const isPhysioPage = location.pathname === '/enrollment/department-of-rehabilitation-and-physiotherapy';
   const isRegularPregnancy = location.pathname.includes('/enrollment/regular-pregnacy-classes');
   const isRegularMeditation = '/enrollment/regular-meditation-classes-online';
   const [setDate, setSetDate] = useState(false);
@@ -121,7 +122,7 @@ const CourseDetails = ({
     }
   };
   useEffect(() => {
-    if (isSatsangPage) {
+    if (isSatsangPage || isPhysioPage) {
       setSetDate(true);
       console.log('form Data mode ', formData)
 
@@ -187,6 +188,7 @@ const CourseDetails = ({
       "Online Meditation Course  (Foundation Course)",
       "Regular Online Meditation Classes",
       "Couples’ Yoga Classes  - Online",
+      "Department of Rehabilitation and Physiotherapy"
     ]
     // alert(currentCourse?.title)
     const isMatch = array.includes(currentCourse?.title);
@@ -976,69 +978,29 @@ const CourseDetails = ({
 
 
                     {/* {selectedUrlDate} */}
+                    {!isPhysioPage &&
+                      <div className='dates_enroll_wrapper' ref={targetDivRef}>
 
-                    <div className='dates_enroll_wrapper' ref={targetDivRef}>
+                        <div className="label_format_course">
+                          {isRegular ? "Select Course Time" : "Select Course Start Date"}
 
-                      <div className="label_format_course">
-                        {isRegular ? "Select Course Time" : "Select Course Start Date"}
+                          {empty === 18 && <div id="fill_err" style={{ float: 'right', fontSize: '11px', marginTop: '10px', color: 'red' }}> {isRegular ? "Please select course Time" : "Please select course date"} </div>}
+                        </div>
 
-                        {empty === 18 && <div id="fill_err" style={{ float: 'right', fontSize: '11px', marginTop: '10px', color: 'red' }}> {isRegular ? "Please select course Time" : "Please select course date"} </div>}
-                      </div>
+                        <form className="residential-form check_course check_date_2 ex-width">
+                          <div className="last_radio_button " style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
+                            {/* , flexWrap: 'wrap' */}
 
-                      <form className="residential-form check_course check_date_2 ex-width">
-                        <div className="last_radio_button " style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
-                          {/* , flexWrap: 'wrap' */}
+                            {
+                              formattedDates.length === 0 && (
+                                <div id="fill_err" style={{ fontSize: '11px', marginTop: '0px', color: 'red' }}> No Dates Available </div>
+                              )
+                            }
 
-                          {
-                            formattedDates.length === 0 && (
-                              <div id="fill_err" style={{ fontSize: '11px', marginTop: '0px', color: 'red' }}> No Dates Available </div>
-                            )
-                          }
-
-                          {((courseDateInfo == 'Select one below') || ((courseDateInfo == formattedDates[0]?.label || courseDateInfo == formattedDates[1]?.label || courseDateInfo == formattedDates[2]?.label || courseDateInfo == formattedDates[3]?.label || courseDateInfo == formattedDates[4]?.label))) ?
-                            <> {
-                              formattedDates?.slice(0, 5).map((item, index) => {
-                                if (!item?.label) return null;
-                                return (
-                                  <div key={index} className='date_btn'>
-                                    <div className='wrapper_center container_date_enroll'>
-                                      <label class="item-label item_date" style={{ width: '100%', height: '100%', borderRadius: '25px', justifyContent: 'center' }}>
-                                        <input class="item-input"
-                                          type="radio" name="mode"
-                                          value={item?.label}
-                                          aria-labelledby="delivery-0-name"
-                                          aria-describedby="delivery-0-shipping delivery-0-price"
-                                          onChange={(e) => {
-                                            setCourseDateInfo(e.target.value)
-                                            setCourseDateSelected(true)
-                                            setNotShowDate(true)
-                                            if (e.target.checked) {
-                                              setFormData({
-                                                ...formData,
-                                                sdate: e.target.value
-                                              })
-                                              setEmpty(0)
-                                            }
-                                          }}
-                                          checked={courseDateInfo == item?.label}
-
-                                        />
-                                        <span class="item-info item_desc">
-                                          <span id="delivery-0-name" class="item-name date_info">
-                                            <span className='style_dates'>{item?.label}</span></span>
-                                        </span>
-
-                                        <strong id="delivery-0-price" class="item-price"></strong>
-                                      </label>
-                                    </div>
-                                  </div>
-                                )
-                              })
-                            }</> :
-                            <>
-                              {
-                                formattedDates?.slice(0, 4).map((item, index) => {
-                                  if (!item?.label || courseDateInfo == item?.label) return null;
+                            {((courseDateInfo == 'Select one below') || ((courseDateInfo == formattedDates[0]?.label || courseDateInfo == formattedDates[1]?.label || courseDateInfo == formattedDates[2]?.label || courseDateInfo == formattedDates[3]?.label || courseDateInfo == formattedDates[4]?.label))) ?
+                              <> {
+                                formattedDates?.slice(0, 5).map((item, index) => {
+                                  if (!item?.label) return null;
                                   return (
                                     <div key={index} className='date_btn'>
                                       <div className='wrapper_center container_date_enroll'>
@@ -1074,39 +1036,79 @@ const CourseDetails = ({
                                     </div>
                                   )
                                 })
-                              }
-                              <div className='date_btn'>
-                                <div className='wrapper_center container_date_enroll'>
-                                  <label class="item-label item_date selected_date_popup" style={{ width: '100%', height: '100%', borderRadius: '25px', justifyContent: 'center' }}>
-                                    <input class="item-input"
-                                      type="radio" name="mode"
-                                      value={courseDateInfo}
-                                      aria-labelledby="delivery-0-name"
-                                      aria-describedby="delivery-0-shipping delivery-0-price"
-                                      onChange={(e) => {
-                                        setCourseDateInfo(e.target.value)
-                                        setCourseDateSelected(true)
-                                        if (e.target.checked) {
-                                          setFormData({
-                                            ...formData,
-                                            sdate: e.target.value
-                                          })
-                                          setEmpty(0)
-                                        }
-                                      }}
-                                    />
-                                    <span class="item-info item_desc">
-                                      <span id="delivery-0-name" class="item-name date_info">
-                                        <span className='style_dates'>{courseDateInfo}</span></span>
-                                    </span>
+                              }</> :
+                              <>
+                                {
+                                  formattedDates?.slice(0, 4).map((item, index) => {
+                                    if (!item?.label || courseDateInfo == item?.label) return null;
+                                    return (
+                                      <div key={index} className='date_btn'>
+                                        <div className='wrapper_center container_date_enroll'>
+                                          <label class="item-label item_date" style={{ width: '100%', height: '100%', borderRadius: '25px', justifyContent: 'center' }}>
+                                            <input class="item-input"
+                                              type="radio" name="mode"
+                                              value={item?.label}
+                                              aria-labelledby="delivery-0-name"
+                                              aria-describedby="delivery-0-shipping delivery-0-price"
+                                              onChange={(e) => {
+                                                setCourseDateInfo(e.target.value)
+                                                setCourseDateSelected(true)
+                                                setNotShowDate(true)
+                                                if (e.target.checked) {
+                                                  setFormData({
+                                                    ...formData,
+                                                    sdate: e.target.value
+                                                  })
+                                                  setEmpty(0)
+                                                }
+                                              }}
+                                              checked={courseDateInfo == item?.label}
 
-                                    <strong id="delivery-0-price" class="item-price"></strong>
-                                  </label>
+                                            />
+                                            <span class="item-info item_desc">
+                                              <span id="delivery-0-name" class="item-name date_info">
+                                                <span className='style_dates'>{item?.label}</span></span>
+                                            </span>
+
+                                            <strong id="delivery-0-price" class="item-price"></strong>
+                                          </label>
+                                        </div>
+                                      </div>
+                                    )
+                                  })
+                                }
+                                <div className='date_btn'>
+                                  <div className='wrapper_center container_date_enroll'>
+                                    <label class="item-label item_date selected_date_popup" style={{ width: '100%', height: '100%', borderRadius: '25px', justifyContent: 'center' }}>
+                                      <input class="item-input"
+                                        type="radio" name="mode"
+                                        value={courseDateInfo}
+                                        aria-labelledby="delivery-0-name"
+                                        aria-describedby="delivery-0-shipping delivery-0-price"
+                                        onChange={(e) => {
+                                          setCourseDateInfo(e.target.value)
+                                          setCourseDateSelected(true)
+                                          if (e.target.checked) {
+                                            setFormData({
+                                              ...formData,
+                                              sdate: e.target.value
+                                            })
+                                            setEmpty(0)
+                                          }
+                                        }}
+                                      />
+                                      <span class="item-info item_desc">
+                                        <span id="delivery-0-name" class="item-name date_info">
+                                          <span className='style_dates'>{courseDateInfo}</span></span>
+                                      </span>
+
+                                      <strong id="delivery-0-price" class="item-price"></strong>
+                                    </label>
+                                  </div>
                                 </div>
-                              </div>
-                            </>}
+                              </>}
 
-                          {/* {
+                            {/* {
                             ((formattedDates.length > 2 && (courseDateInfo == 'Select one below')) && (formattedDates[2]?.label || (courseDateInfo == formattedDates[0]?.label || courseDateInfo == formattedDates[1]?.label))) ? (
                               <div className='date_btn'>
                                 <div className='wrapper_center container_date_enroll'>
@@ -1205,25 +1207,25 @@ const CourseDetails = ({
                             )
                           } */}
 
-                          {
-                            formattedDates.length > 5 && (
-                              <div className='upcoming_dates'>
-                                <span onClick={handleOpen}>{isRegular ? "See all timings" : "See all upcoming dates"}
+                            {
+                              formattedDates.length > 5 && (
+                                <div className='upcoming_dates'>
+                                  <span onClick={handleOpen}>{isRegular ? "See all timings" : "See all upcoming dates"}
 
-                                </span>
-                                <img src='/images/upcoming_dates_arrow.svg' alt='' loading='lazy' />
-                              </div>
-                            )
-                          }
+                                  </span>
+                                  <img src='/images/upcoming_dates_arrow.svg' alt='' loading='lazy' />
+                                </div>
+                              )
+                            }
 
-                          {openDates && (
-                            <UpcomingDates isShippingModalOpen={handleOpen} setIsShipppingModalOpen={handleClose} pageDate={formattedDates} setCourseDateInfo={setCourseDateInfo} setCourseDateSelected={setCourseDateSelected} setShowDefaultDate={setShowDefaultDate} setNotShowDate={setNotShowDate} formData={formData} setFormData={setFormData} isRegular={isRegular} courseDateInfo={courseDateInfo} />
-                          )}
+                            {openDates && (
+                              <UpcomingDates isShippingModalOpen={handleOpen} setIsShipppingModalOpen={handleClose} pageDate={formattedDates} setCourseDateInfo={setCourseDateInfo} setCourseDateSelected={setCourseDateSelected} setShowDefaultDate={setShowDefaultDate} setNotShowDate={setNotShowDate} formData={formData} setFormData={setFormData} isRegular={isRegular} courseDateInfo={courseDateInfo} />
+                            )}
 
-                        </div>
-                      </form>
-                    </div>
-                    {isRegular && (
+                          </div>
+                        </form>
+                      </div>}
+                    {(isRegular && !isPhysioPage) && (
                       <div className='dates_enroll_wrapper ex-width'>
 
                         <div className="label_format_course label_duration">
