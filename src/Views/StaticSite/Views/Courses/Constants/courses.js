@@ -16223,13 +16223,13 @@ const classes = {
       'At The Yoga Institute, we believe in the power of healing through holistic care. Our new Department of Rehabilitation and Physiotherapy is dedicated to helping individuals recover, regain independence, and lead healthier, more fulfilling lives.',
     rating: 5,
     colorCode: '#DDAB58',
-    timing: 'Starting 2nd January 2025. Everyday between 9:30 am and 1:30pm',
+    timing: 'Starting 2nd January 2025. Monday to Saturday between 9:30 am and 1:30pm',
     fees: {
       onlineFee: 0,
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'classes',
-    dates: ['9:30 am to 10:30 am '
+    dates: ['9:30 am to 1:30 pm '
     ],
     online: true,
     onCampus: true,
@@ -16238,10 +16238,10 @@ const classes = {
     certficate: false,
     newName: '',
     enrollInfo: {
-      duration: "Everyday",
+      duration: "1 Day",
       timings: [
         {
-          day: "Everyday",
+          day: "Monday to Saturday",
           time: "9.30 am and 1.30pm"
         }
       ]
