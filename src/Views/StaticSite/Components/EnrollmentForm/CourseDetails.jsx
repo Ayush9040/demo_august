@@ -821,7 +821,9 @@ const CourseDetails = ({
 
                               {/* <small id="delivery-0-shipping" class="item-shipping">5–10 business days</small> */}
                             </span>
-                            <strong id="delivery-0-price" class="item-price"> INR {isNaN(currentCourse?.fees?.onlineFee) ? localStorage.getItem('courseFee') : currentCourse?.fees?.onlineFee}</strong>
+                            {!isPhysioPage ?
+                              <strong id="delivery-0-price" class="item-price"> INR {isNaN(currentCourse?.fees?.onlineFee) ? localStorage.getItem('courseFee') : currentCourse?.fees?.onlineFee}</strong>
+                              : <strong id="delivery-0-price" class="item-price"> At Affordable pricing</strong>}
                           </label>
                         )}
                       </div>
@@ -864,10 +866,12 @@ const CourseDetails = ({
 
                               {/* <small id="delivery-0-shipping" class="item-shipping">5–10 business days</small> */}
                             </span>
-                            <strong id="delivery-0-price" class="item-price">
-                              INR {localStorage.getItem('isRegular') == 'true' ? (isNaN(currentCourse?.fees?.onlineFee) ? localStorage.getItem('courseFee') : currentCourse?.fees?.onlineFee) : currentCourse?.fees?.offlineFee?.nonResidentialFee}
-                              {/* {currentCourse?.fees?.offlineFee?.nonResidentialFee} */}
-                            </strong>
+                            {!isPhysioPage ?
+                              <strong id="delivery-0-price" class="item-price">
+                                INR {localStorage.getItem('isRegular') == 'true' ? (isNaN(currentCourse?.fees?.onlineFee) ? localStorage.getItem('courseFee') : currentCourse?.fees?.onlineFee) : currentCourse?.fees?.offlineFee?.nonResidentialFee}
+                                {/* {currentCourse?.fees?.offlineFee?.nonResidentialFee} */}
+                              </strong>
+                              : <strong id="delivery-0-price" class="item-price">At Affordable pricing</strong>}
                           </label>
                         )}
 
@@ -932,7 +936,7 @@ const CourseDetails = ({
 
                           <div className="label_format_course">
 
-                            Select Course Start Date
+                            Select Course Date
 
                             {empty === 21 && <div id="fill_err" style={{ float: 'right', fontSize: '11px', marginTop: '10px', color: 'red' }}>Please select course start date</div>}
 
