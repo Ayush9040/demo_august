@@ -329,17 +329,17 @@ const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse
   useEffect(() => {
     if (isSatsangPage) {
       setSetDate(true);
-      setSelectDateValue({ label: 'No date Selected', value: 'No date Selected' });
+      // setSelectDateValue({ label: 'No date Selected', value: 'No date Selected' });
 
-      // Set formData with 'No date Selected' only once when the path is /enrollment/satsang
-      setFormData((prev) => ({
-        ...prev,
-        sdate: 'No date Selected',
-        courseDetails: {
-          ...prev.courseDetails,
-          date: 'No date Selected',
-        },
-      }));
+      // // Set formData with 'No date Selected' only once when the path is /enrollment/satsang
+      // setFormData((prev) => ({
+      //   ...prev,
+      //   sdate: 'No date Selected',
+      //   courseDetails: {
+      //     ...prev.courseDetails,
+      //     date: 'No date Selected',
+      //   },
+      // }));
     }
   }, [isSatsangPage]);
 
@@ -671,7 +671,7 @@ const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse
       if (cities.length > 0) {
         return cities;
       }
-      else{
+      else {
         return City.getCitiesOfCountry(countryIsoCode).map((city) => ({
           value: city.name,
           label: city.name,

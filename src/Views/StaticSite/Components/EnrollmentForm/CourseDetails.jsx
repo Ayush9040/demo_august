@@ -136,14 +136,14 @@ const CourseDetails = ({
       // })
 
       handleResidential(false);
-      setSelectedOption('OFFLINE')
+      // setSelectedOption('OFFLINE')
       // if (e.target.checked) {
       // Set formData with mode and subMode nested inside courseDetails
-      setFormData((prevFormData) => ({
-        ...prevFormData,
-        mode: 'OFFLINE', // This can be at the top-level if needed
-        residental: 'NONRESIDENTIAL'
-      }));
+      // setFormData((prevFormData) => ({
+      //   ...prevFormData,
+      //   mode: 'OFFLINE', // This can be at the top-level if needed
+      //   residental: 'NONRESIDENTIAL'
+      // }));
       setEmpty(0)
       setCourseFee(0)
       // setCourseFee(updatedFees( currentCourse?.key,'ONLINE' ))
