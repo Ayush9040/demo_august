@@ -294,7 +294,7 @@ const Enrollment = () => {
           imageAsset: courseAsset1,
           certificateImgAsset: courseAsset2,
           // date:courseDate,
-          date: formData.sdate,
+          date: formData.sdate != 'No date Selected' ? formData.sdate : formData.startDate,
           timing: currentCourse.timing
         },
         userId: localStorage.getItem('userAppId') ? localStorage.getItem('userAppId') : null

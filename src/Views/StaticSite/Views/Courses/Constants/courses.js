@@ -1099,7 +1099,7 @@ const ttc200hr = {
       // '19th Feb - 8th Jun 2024',
       // '17th Jun - 5th Oct 2024',
       // '14th Oct - 1st Feb 2025',
-      '20th Jan - 15th Mar 2025',
+      // '20th Jan - 15th Mar 2025',
       '24th Mar - 17th May 2025',
       '26th May - 19th Jul 2025',
       '28th Jul - 20th Sep 2025',
@@ -8616,7 +8616,7 @@ const camps = {
     },
     dates: [
       // '14th Dec & 15th Dec 2024',
-      '20th Jan & 21st Jan 2025',
+      // '20th Jan & 21st Jan 2025',
       '15th Feb & 16th Feb 2025',
       '17th Mar & 18th Mar 2025',
       '19th Apr & 20th Apr 2025',
@@ -12723,7 +12723,7 @@ const camps = {
       },
     },
     dates: [
-      '19th Jan 2025', '16th Mar 2025', '18th May 2025'
+      '16th Mar 2025', '18th May 2025'
       , '20th Jul 2025', '21st Sep 2025', '16th Nov 2025'],
     online: false,
     onCampus: true,
@@ -14873,8 +14873,9 @@ const classes = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'classes',
-    dates: ['19th Jan 2025', '26th Jan 2025'
-      , '2nd Feb 2025', '9th Feb 2025', '16th Feb 2025', '23rd Feb 2025'
+    dates: ['26th Jan 2025'
+      , '2nd Feb 2025', '9th Feb 2025', '16th Feb 2025', '23rd Feb 2025',
+      '2nd Mar 2025', '9th Mar 2025', '16th Mar 2025', '23rd Mar 2025', '30th Mar 2025', '6th Apr 2025', '13th Apr 2025', '20th Apr 2025', '27th April 2025'
     ],
     online: true,
     onCampus: true,
@@ -15379,7 +15380,7 @@ const classes = {
       onlineFee: 0,
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
-    dates: ['11th Jan 2025', '18th Jan 2025', '25th Jan 2025'],
+    dates: ['25th Jan 2025', '1st Feb 2025', '8th Feb 2025', '15th Feb 2025', '22nd Feb 2025', '1st Mar 2025', '8th Mar 2025', '15th Mar 2025', '22nd Mar 2025', '29th Mar 2025'],
     category: 'classes',
 
     online: false,
