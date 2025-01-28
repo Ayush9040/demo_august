@@ -628,7 +628,7 @@
   .student {
     font-weight: 700;
     font-size: 24px;
-    margin-bottom: 15px;
+    margin-bottom: -14px;
   }
 
   .header_ul {
@@ -2188,8 +2188,9 @@ input[type='radio']:checked::before {
   display: flex;
   justify-content: space-between;
   margin-top: -16px;
-  padding-right: 10px;
-  margin-left: 14px;
+  // padding-right: 10px;
+  // margin-left: 14px;
+  width: 100%;
 }
 
 .details_duration_info {
@@ -2310,7 +2311,7 @@ input[type='radio']:checked::before {
 }
 
 .dates_enroll_wrapper {
-  margin-top: 32px;
+  margin-top: 2rem;
 }
 
 .container_date_enroll .item_date {
@@ -2512,8 +2513,8 @@ input[type=checkbox]:checked+label:before {
   width: 96%;
   text-align: center;
   margin-top: 12px;
-  margin: 8px 10px;
-  padding: 10px 50px;
+  margin: 0 10px 8px 10px;
+  padding: 10px 10px;
 }
 
 .times_fixed {
@@ -3091,19 +3092,32 @@ input[type=checkbox]:checked+label:before {
   }
 
   .dates_enroll_wrapper {
-    margin-top: 24px;
+    margin-top: 12px;
   }
 }
 
+.row-web {
+  display: flex;
+  gap: 2rem;
+}
+
 @media (max-width: '480px') {
+  .row-web {
+    flex-direction: column;
+
+    .mb-30 {
+      margin-bottom: -32px;
+    }
+  }
+
   .dmy-cntr {
     height: 12px;
   }
 
   .details_desc_info {
     justify-content: space-between;
-    width: 100%;
-    margin: -10px 0 0 8px;
+    margin: 6px 0 0 -26px !important;
+    width: 110% !important;
 
     .details_wrapper_duration {
       // padding: 12px 12px;
@@ -3152,7 +3166,7 @@ input[type=checkbox]:checked+label:before {
   }
 
   .dates_enroll_wrapper {
-    margin-top: 22px;
+    margin-top: 12px;
   }
 }
 

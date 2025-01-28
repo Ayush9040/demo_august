@@ -1712,7 +1712,7 @@ const SignIn = () => {
     if (pageIndex > 1) {
       if (pageIndex == '3' || pageIndex == '4') {
         if (signUpType == 'mobile') {
-          setPageIndex('2')
+          setPageIndex('1')//2
         }
         else {
           setPageIndex('1')
@@ -1727,7 +1727,7 @@ const SignIn = () => {
         if (pageIndexEmail > 1) {
           if (pageIndexEmail == '3' || pageIndexEmail == '4') {
             if (signUpType == 'mobile') {
-              setPageIndexEmail('2')
+              setPageIndexEmail('1')//2
             }
             else {
               setPageIndexEmail('1')
@@ -1865,7 +1865,8 @@ const SignIn = () => {
         <div className={pageIndex <= 2 ? 'signin-details' : 'signin-details f-height'}>
 
           <div className="container">
-            {pageIndex <= 2 && <div className='back-nav' onClick={() => navigateBack()}>
+            {/* {pageIndex <= 2 &&  */}
+            <div className='back-nav' onClick={() => navigateBack()}>
               <span className="web">
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3.825 9L9.425 14.6L8 16L0 8L8 0L9.425 1.4L3.825 7H16V9H3.825Z" fill="#181818" />
@@ -1878,7 +1879,7 @@ const SignIn = () => {
 
               </span>
               &nbsp;Back
-            </div>}
+            </div>
 
             {!isEmailLogin ? <>
               {/* Handled email login in a seperate block to avoid conflicts in exiting functionality */}
@@ -2297,22 +2298,25 @@ const SignIn = () => {
                         onChange={handlePhoneChange}
                         value={formData.phoneNumber}
                       /> */}
-                      <div class="input-container">
-                        <div class={pageIndex == '4' ? "prefix-dropdown disb-btn" : "prefix-dropdown"} onClick={(event) => { event.stopPropagation(); SetIsCountryContainer(true); }}><span>
-                          <img width='20px' style={{ borderRadius: '2px', marginRight: '6px' }} src={`https://purecatamphetamine.github.io/country-flag-icons/3x2/${selectedCountryList.flag.toUpperCase()}.svg`} alt="" /></span>
-                          {selectedCountryList.value}
-                          < span style={{ marginLeft: '4px' }}>
-                            <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M7.06 0.726562L4 3.7799L0.94 0.726562L0 1.66656L4 5.66656L8 1.66656L7.06 0.726562Z" fill="black" />
-                            </svg>
-                          </span >
+                      <div style={{ display: 'flex' }}>
+                        <div class="input-container" style={{ width: '100%' }}>
+                          <div class={pageIndex == '4' ? "prefix-dropdown disb-btn" : "prefix-dropdown"} onClick={(event) => { event.stopPropagation(); SetIsCountryContainer(true); }}><span>
+                            <img width='20px' style={{ borderRadius: '2px', marginRight: '6px' }} src={`https://purecatamphetamine.github.io/country-flag-icons/3x2/${selectedCountryList.flag.toUpperCase()}.svg`} alt="" /></span>
+                            {selectedCountryList.value}
+                            < span style={{ marginLeft: '4px' }}>
+                              <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.06 0.726562L4 3.7799L0.94 0.726562L0 1.66656L4 5.66656L8 1.66656L7.06 0.726562Z" fill="black" />
+                              </svg>
+                            </span >
+                          </div >
+                          <input type="number" class="input-box" placeholder="Enter your phone number" value={formData.phoneNumber}
+                            disabled={pageIndex == '4' ? true : false}
+                            onChange={handlePhoneChange} />
+                          {/* {(!hideVerify && !isMobileVerified) && <span type='click' className='verify_text' style={{ textDecoration: 'underline' }} onClick={() => signUpOTP(formData, signUpType)}>Verify</span>} */}
+                          {isMobileVerified && <span span type='click' className='verify_text' style={{ color: '#34C759' }}>Verified</span>}
                         </div >
-                        <input type="number" class="input-box" placeholder="Enter your phone number" value={formData.phoneNumber}
-                          disabled={pageIndex == '4' ? true : false}
-                          onChange={handlePhoneChange} />
-                        {(!hideVerify && !isMobileVerified) && <span type='click' className='verify_text' style={{ textDecoration: 'underline' }} onClick={() => signUpOTP(formData, signUpType)}>Verify</span>}
-                        {isMobileVerified && <span span type='click' className='verify_text' style={{ color: '#34C759' }}>Verified</span>}
-                      </div >
+                        {(!hideVerify && !isMobileVerified) && <div onClick={() => signUpOTP(formData, signUpType)} className={(validatePhoneNumber((`${selectedCountryList.value}${formData.phoneNumber ? formData.phoneNumber : '0'}`)).length == 0) ? 'verify_btn_n' : 'verify_btn_n op-5'}>Verify</div>}
+                      </div>
                       {isCountryContainer &&
                         <div className={pageIndex == '3' ? 'ctry-dpdwn top-aligned' : 'ctry-dpdwn'} ref={listRef}>
                           {countriesMap.map(country => (
@@ -2602,22 +2606,26 @@ const SignIn = () => {
 
 
                     <div className='mg-t-20 margin-top inp-label' onClick={() => { OtpInpRef.current.scrollIntoView({ behavior: 'smooth' }) }}>Mobile Number <span>*</span></div>
-                    <div class="input-container">
-                      <div class={pageIndex == '4' ? "prefix-dropdown disb-btn" : "prefix-dropdown"} onClick={(event) => { event.stopPropagation(); SetIsCountryContainer(true); }}><span>
-                        <img width='20px' style={{ borderRadius: '2px', marginRight: '6px' }} src={`https://purecatamphetamine.github.io/country-flag-icons/3x2/${selectedCountryList.flag.toUpperCase()}.svg`} alt="" /></span>
-                        {selectedCountryList.value}
-                        < span style={{ marginLeft: '4px' }}>
-                          <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M7.06 0.726562L4 3.7799L0.94 0.726562L0 1.66656L4 5.66656L8 1.66656L7.06 0.726562Z" fill="black" />
-                          </svg>
-                        </span >
+                    <div style={{ display: 'flex' }}>
+                      <div class="input-container" style={{ width: '100%' }}>
+                        <div class={pageIndex == '4' ? "prefix-dropdown disb-btn" : "prefix-dropdown"} onClick={(event) => { event.stopPropagation(); SetIsCountryContainer(true); }}><span>
+                          <img width='20px' style={{ borderRadius: '2px', marginRight: '6px' }} src={`https://purecatamphetamine.github.io/country-flag-icons/3x2/${selectedCountryList.flag.toUpperCase()}.svg`} alt="" /></span>
+                          {selectedCountryList.value}
+                          < span style={{ marginLeft: '4px' }}>
+                            <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M7.06 0.726562L4 3.7799L0.94 0.726562L0 1.66656L4 5.66656L8 1.66656L7.06 0.726562Z" fill="black" />
+                            </svg>
+                          </span >
+                        </div >
+                        <input type="number" class="input-box" placeholder="Enter your phone number" value={formData.phoneNumber}
+                          disabled={pageIndex == '4' ? true : false}
+                          onChange={handlePhoneChange} />
+                        {/* {(!hideVerify && !isMobileVerified) && <span type='click' className='verify_text' style={{ textDecoration: 'underline' }} onClick={() => signUpOTP(formData, signUpType)}>Verify</span>} */}
+                        {isMobileVerified && <span span type='click' className='verify_text' style={{ color: '#34C759' }}>Verified</span>}
                       </div >
-                      <input type="number" class="input-box" placeholder="Enter your phone number" value={formData.phoneNumber}
-                        disabled={pageIndex == '4' ? true : false}
-                        onChange={handlePhoneChange} />
-                      {(!hideVerify && !isMobileVerified) && <span type='click' className='verify_text' style={{ textDecoration: 'underline' }} onClick={() => signUpOTP(formData, signUpType)}>Verify</span>}
-                      {isMobileVerified && <span span type='click' className='verify_text' style={{ color: '#34C759' }}>Verified</span>}
-                    </div >
+                      {(!hideVerify && !isMobileVerified) && <div onClick={() => signUpOTP(formData, signUpType)} className={(validatePhoneNumber((`${selectedCountryList.value}${formData.phoneNumber ? formData.phoneNumber : '0'}`)).length == 0) ? 'verify_btn_n' : 'verify_btn_n op-5'}>Verify</div>}
+                    </div>
+
                     {isCountryContainer &&
                       <div className={pageIndex == '3' ? 'ctry-dpdwn top-aligned' : 'ctry-dpdwn'} ref={listRef}>
                         {countriesMap.map(country => (

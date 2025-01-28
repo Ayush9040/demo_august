@@ -469,7 +469,7 @@ const MegaMenu = ({ setNav }) => {
             </div>
           </>
         )}
-        {menuItem !== 'COURSES' && (
+        {(menuItem !== 'COURSES' && subMenu[menuItem]?.length>0) && (
           <>
             <div className="single-menu">
               <ul className="navigation-ul">

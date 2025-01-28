@@ -642,7 +642,12 @@ const CourseDetails = ({
             </div>
             {openDetail &&
               <div className='detail_m'>
-                {/* <div>{currentCourse?.enrollInfo?.duration}</div> */}
+                <div className='details_desc_info'>
+                  <div className='details_wrapper_duration'><span className='details_duration_info'>Duration:</span> <span className='tenure_course'>{currentCourse?.enrollInfo?.duration}</span></div>
+                  <div>&nbsp;&nbsp;</div>
+                  {currentCourse?.language &&
+                    <div className='details_wrapper_duration'><span className='details_lang_info'>Language:</span> <span className='lang_course'>{currentCourse?.language}</span></div>}
+                </div>
                 <div> {renderTimings(groupedTimings)}</div>
               </div>}
           </div>
@@ -671,14 +676,20 @@ const CourseDetails = ({
                     </div>
                   </div>
                 </div>
-                <div className='details_desc_info'>
+                {/* <div className='details_desc_info'>
                   <div className='details_wrapper_duration'><span className='details_duration_info'>Duration:</span> <span className='tenure_course'>{currentCourse?.enrollInfo?.duration}</span></div>
                   <div>&nbsp;&nbsp;</div>
                   {currentCourse?.language &&
                     <div className='details_wrapper_duration'><span className='details_lang_info'>Language:</span> <span className='lang_course'>{currentCourse?.language}</span></div>}
-                </div>
+                </div> */}
                 {groupedTimings &&
                   <div className='time_days_wrapper'>
+                    <div className='details_desc_info' style={{ marginTop: '0' }}>
+                      <div className='details_wrapper_duration'><span className='details_duration_info'>Duration:</span> <span className='tenure_course'>{currentCourse?.enrollInfo?.duration}</span></div>
+                      <div>&nbsp;&nbsp;</div>
+                      {currentCourse?.language &&
+                        <div className='details_wrapper_duration'><span className='details_lang_info'>Language:</span> <span className='lang_course'>{currentCourse?.language}</span></div>}
+                    </div>
                     {renderTimings(groupedTimings)}
                     <div className='details_desc_days details_desc_days_2'>
                     </div>
@@ -739,247 +750,249 @@ const CourseDetails = ({
               <div className='wrapper_date_and_course'>
                 <div className='course_format_wrapper'>
                   <div className='details_format_date'>
-                    <div className="label_format_course">
-                      Select Course Format
-                    </div>
-                    {console.log('CC', currentCourse)}
-                    <form className="residential-form check_course" >
-                      <div className="last_radio_button-cols ">
-                        {shouldShowOfflineOption() &&
-                          (
-                            <label class="item-label item_format" ref={offlineCurrent}>
-                              <input class="item-input"
-                                type="radio" name="mode"
-                                value="OFFLINE"
-                                aria-labelledby="delivery-0-name"
-                                aria-describedby="delivery-0-shipping delivery-0-price"
-                                checked={selectedOption === 'OFFLINE'}
+                    <div className='row-web'>
+                      <div style={{minWidth:'176px'}}>
+                        <div className="label_format_course">
+                          Select Course Format
+                        </div>
+                        {console.log('CC', currentCourse)}
+                        <form className="residential-form check_course" >
+                          <div className="last_radio_button-cols ">
+                            {shouldShowOfflineOption() &&
+                              (
+                                <label class="item-label item_format" ref={offlineCurrent}>
+                                  <input class="item-input"
+                                    type="radio" name="mode"
+                                    value="OFFLINE"
+                                    aria-labelledby="delivery-0-name"
+                                    aria-describedby="delivery-0-shipping delivery-0-price"
+                                    checked={selectedOption === 'OFFLINE'}
 
-                                onChange={(e) => {
-                                  handleResidential(false);
-                                  setSelectedOption('OFFLINE')
-                                  setPriceSelect(currentCourse?.fees?.onlineFee)
-                                  setCourseFormatInfo('OFFLINE')
-                                  setCourseFormatSelected(true)
-                                  setIsRegularPrice(currentCourse?.fees?.onlineFee);
-                                  setOnSelectFormat(true);
-                                  setOnClickFormatRegular(true)
-                                  if (e.target.checked) {
-                                    setFormData({
-                                      ...formData,
-                                      mode: e.target.value,
-                                    })
-                                    setEmpty(0)
-                                    setCourseFee(currentCourse?.fees?.onlineFee)
-                                    // setCourseFee(updatedFees( currentCourse?.key,'ONLINE' ))
-                                  }
-                                }} />
-                              <span class="item-info">
-                                <span id="delivery-0-name" class="item-name">OFFLINE - </span>
+                                    onChange={(e) => {
+                                      handleResidential(false);
+                                      setSelectedOption('OFFLINE')
+                                      setPriceSelect(currentCourse?.fees?.onlineFee)
+                                      setCourseFormatInfo('OFFLINE')
+                                      setCourseFormatSelected(true)
+                                      setIsRegularPrice(currentCourse?.fees?.onlineFee);
+                                      setOnSelectFormat(true);
+                                      setOnClickFormatRegular(true)
+                                      if (e.target.checked) {
+                                        setFormData({
+                                          ...formData,
+                                          mode: e.target.value,
+                                        })
+                                        setEmpty(0)
+                                        setCourseFee(currentCourse?.fees?.onlineFee)
+                                        // setCourseFee(updatedFees( currentCourse?.key,'ONLINE' ))
+                                      }
+                                    }} />
+                                  <span class="item-info">
+                                    <span id="delivery-0-name" class="item-name">OFFLINE - </span>
 
-                                {/* <small id="delivery-0-shipping" class="item-shipping">5–10 business days</small> */}
-                              </span>
-                              <strong id="delivery-0-price" class="item-price">INR {isNaN(currentCourse?.fees?.onlineFee) ? localStorage.getItem('courseFee') : currentCourse?.fees?.onlineFee}</strong>
-                            </label>
+                                    {/* <small id="delivery-0-shipping" class="item-shipping">5–10 business days</small> */}
+                                  </span>
+                                  <strong id="delivery-0-price" class="item-price">INR {isNaN(currentCourse?.fees?.onlineFee) ? localStorage.getItem('courseFee') : currentCourse?.fees?.onlineFee}</strong>
+                                </label>
 
-                          )
-                        }
+                              )
+                            }
 
-                        {shouldShowOnlineOption() && (
-
-
-                          <label class="item-label item_format" ref={divRef}>
-                            <input class="item-input"
-                              type="radio" name="mode"
-                              value="ONLINE"
-                              aria-labelledby="delivery-0-name"
-                              aria-describedby="delivery-0-shipping delivery-0-price"
-                              checked={selectedOption === 'ONLINE'}
-
-                              onChange={(e) => {
-                                handleResidential(false);
-                                setSelectedOption('ONLINE')
-                                setCourseFormatInfo('ONLINE')
-                                setCourseFormatSelected(true)
-                                setPriceSelect(currentCourse?.fees?.onlineFee)
-                                setIsRegularPrice(currentCourse?.fees?.onlineFee);
-                                setOnSelectFormat(true);
-                                setOnClickFormatRegular(true)
-
-                                if (e.target.checked) {
-                                  setFormData({
-                                    ...formData,
-                                    mode: e.target.value,
-                                  })
-                                  setEmpty(0)
-                                  setCourseFee(currentCourse?.fees?.onlineFee)
-                                  // setCourseFee(updatedFees( currentCourse?.key,'ONLINE' ))
-                                }
-                              }} />
-                            <span class="item-info">
-                              <span id="delivery-0-name" class="item-name">Online - </span>
-
-                              {/* <small id="delivery-0-shipping" class="item-shipping">5–10 business days</small> */}
-                            </span>
-                            {!isPhysioPage ?
-                              <strong id="delivery-0-price" class="item-price"> INR {isNaN(currentCourse?.fees?.onlineFee) ? localStorage.getItem('courseFee') : currentCourse?.fees?.onlineFee}</strong>
-                              : <strong id="delivery-0-price" class="item-price"> At Affordable pricing</strong>}
-                          </label>
-                        )}
-                      </div>
-                      {empty === 'mode' && (
-                        <small className="mode-err">Please select 1 format</small>
-                      )}
-                      <div className="last_radio_button-cols">
-
-                        {shouldShowNonResidentialOption() && (
+                            {shouldShowOnlineOption() && (
 
 
-                          <label class="item-label item_format" ref={residentialCurrent}>
-                            <input class="item-input" type="radio" name="resident" value="NONRESIDENTIAL" aria-labelledby="delivery-0-name" aria-describedby="delivery-0-shipping delivery-0-price"
-                              checked={selectedOption === 'NONRESIDENTIAL'}
-                              onChange={(e) => {
-                                handleResidential(false);
-                                setSelectedOption('NONRESIDENTIAL')
-                                setCourseFormatSelected(true)
-                                setCourseFormatInfo('On-Campus (without residence)')
-                                setPriceSelect(currentCourse?.fees?.offlineFee?.nonResidentialFee)
-                                setIsRegularPrice(isRegularPregnancy ? currentCourse?.fees?.onlineFee : currentCourse?.fees?.offlineFee?.nonResidentialFee);
-                                setOnSelectFormat(true);
-                                setOnClickFormatRegular(true)
-                                if (e.target.checked) {
-                                  setFormData({
-                                    ...formData,
-                                    residental: e.target.value,
-                                    mode: 'OFFLINE'
-                                  })
-                                  setEmpty(0)
-                                  setCourseFee(
-                                    isRegularPregnancy ? currentCourse?.fees?.onlineFee : currentCourse?.fees?.offlineFee?.nonResidentialFee
-                                  )
-                                  // setCourseFee(updatedFees( currentCourse?.key,'NONRESIDENTIAL' ))
-                                }
-                              }}
-                            />
-                            <span class="item-info">
-                              <span id="delivery-0-name" class="item-name">On-Campus (without residence)  - </span>
+                              <label class="item-label item_format" ref={divRef}>
+                                <input class="item-input"
+                                  type="radio" name="mode"
+                                  value="ONLINE"
+                                  aria-labelledby="delivery-0-name"
+                                  aria-describedby="delivery-0-shipping delivery-0-price"
+                                  checked={selectedOption === 'ONLINE'}
 
-                              {/* <small id="delivery-0-shipping" class="item-shipping">5–10 business days</small> */}
-                            </span>
-                            {!isPhysioPage ?
-                              <strong id="delivery-0-price" class="item-price">
-                                INR {localStorage.getItem('isRegular') == 'true' ? (isNaN(currentCourse?.fees?.onlineFee) ? localStorage.getItem('courseFee') : currentCourse?.fees?.onlineFee) : currentCourse?.fees?.offlineFee?.nonResidentialFee}
-                                {/* {currentCourse?.fees?.offlineFee?.nonResidentialFee} */}
-                              </strong>
-                              : <strong id="delivery-0-price" class="item-price">At Affordable pricing</strong>}
-                          </label>
-                        )}
+                                  onChange={(e) => {
+                                    handleResidential(false);
+                                    setSelectedOption('ONLINE')
+                                    setCourseFormatInfo('ONLINE')
+                                    setCourseFormatSelected(true)
+                                    setPriceSelect(currentCourse?.fees?.onlineFee)
+                                    setIsRegularPrice(currentCourse?.fees?.onlineFee);
+                                    setOnSelectFormat(true);
+                                    setOnClickFormatRegular(true)
+
+                                    if (e.target.checked) {
+                                      setFormData({
+                                        ...formData,
+                                        mode: e.target.value,
+                                      })
+                                      setEmpty(0)
+                                      setCourseFee(currentCourse?.fees?.onlineFee)
+                                      // setCourseFee(updatedFees( currentCourse?.key,'ONLINE' ))
+                                    }
+                                  }} />
+                                <span class="item-info">
+                                  <span id="delivery-0-name" class="item-name">Online - </span>
+
+                                  {/* <small id="delivery-0-shipping" class="item-shipping">5–10 business days</small> */}
+                                </span>
+                                {!isPhysioPage ?
+                                  <strong id="delivery-0-price" class="item-price"> INR {isNaN(currentCourse?.fees?.onlineFee) ? localStorage.getItem('courseFee') : currentCourse?.fees?.onlineFee}</strong>
+                                  : <strong id="delivery-0-price" class="item-price"> At Affordable pricing</strong>}
+                              </label>
+                            )}
+                          </div>
+                          {empty === 'mode' && (
+                            <small className="mode-err">Please select 1 format</small>
+                          )}
+                          <div className="last_radio_button-cols">
+
+                            {shouldShowNonResidentialOption() && (
 
 
-                        {empty === 'subMode' && (
-                          <small className="mode-err">Please select submode</small>
-                        )}
+                              <label class="item-label item_format" ref={residentialCurrent}>
+                                <input class="item-input" type="radio" name="resident" value="NONRESIDENTIAL" aria-labelledby="delivery-0-name" aria-describedby="delivery-0-shipping delivery-0-price"
+                                  checked={selectedOption === 'NONRESIDENTIAL'}
+                                  onChange={(e) => {
+                                    handleResidential(false);
+                                    setSelectedOption('NONRESIDENTIAL')
+                                    setCourseFormatSelected(true)
+                                    setCourseFormatInfo('On-Campus (without residence)')
+                                    setPriceSelect(currentCourse?.fees?.offlineFee?.nonResidentialFee)
+                                    setIsRegularPrice(isRegularPregnancy ? currentCourse?.fees?.onlineFee : currentCourse?.fees?.offlineFee?.nonResidentialFee);
+                                    setOnSelectFormat(true);
+                                    setOnClickFormatRegular(true)
+                                    if (e.target.checked) {
+                                      setFormData({
+                                        ...formData,
+                                        residental: e.target.value,
+                                        mode: 'OFFLINE'
+                                      })
+                                      setEmpty(0)
+                                      setCourseFee(
+                                        isRegularPregnancy ? currentCourse?.fees?.onlineFee : currentCourse?.fees?.offlineFee?.nonResidentialFee
+                                      )
+                                      // setCourseFee(updatedFees( currentCourse?.key,'NONRESIDENTIAL' ))
+                                    }
+                                  }}
+                                />
+                                <span class="item-info">
+                                  <span id="delivery-0-name" class="item-name">On-Campus (without residence)  - </span>
 
-                        {shouldShowResidentialOption() && (
+                                  {/* <small id="delivery-0-shipping" class="item-shipping">5–10 business days</small> */}
+                                </span>
+                                {!isPhysioPage ?
+                                  <strong id="delivery-0-price" class="item-price">
+                                    INR {localStorage.getItem('isRegular') == 'true' ? (isNaN(currentCourse?.fees?.onlineFee) ? localStorage.getItem('courseFee') : currentCourse?.fees?.onlineFee) : currentCourse?.fees?.offlineFee?.nonResidentialFee}
+                                    {/* {currentCourse?.fees?.offlineFee?.nonResidentialFee} */}
+                                  </strong>
+                                  : <strong id="delivery-0-price" class="item-price">At Affordable pricing</strong>}
+                              </label>
+                            )}
 
 
-                          <label class="item-label item_format" ref={nonresidentialCurrent}>
-                            <input class="item-input" type="radio" name="resident" value="RESIDENTIAL" aria-labelledby="delivery-0-name" aria-describedby="delivery-0-shipping delivery-0-price"
-                              checked={selectedOption === 'RESIDENTIAL'}
-                              onChange={(e) => {
-                                setSelectedOption('RESIDENTIAL');
-                                handleResidential(true);
-                                setPriceSelect(currentCourse?.fees?.offlineFee?.residentialFee)
-                                setCourseFormatInfo('On-Campus (residence - triple sharing)')
-                                setCourseFormatSelected(true)
-                                if (e.target.checked) {
-                                  setFormData({
-                                    ...formData,
-                                    residental: e.target.value,
-                                    mode: 'OFFLINE'
-                                  })
-                                  setEmpty(0)
-                                  if (currentCourse?.key === 'ma-yoga-shastra' && currentCourse.country !== 'India') {
-                                    setCourseFee(currentCourse?.fees?.internationalFee?.residentialFee)
-                                  } else {
-                                    setCourseFee(currentCourse?.fees?.offlineFee?.residentialFee)
-                                  }
-                                  // setCourseFee(updatedFees( currentCourse?.key,'RESIDENTIAL' ))
-                                }
-                              }}
-                            />
-                            <span class="item-info">
-                              <span id="delivery-0-name" class="item-name">On-Campus (residence - triple sharing) - </span>
+                            {empty === 'subMode' && (
+                              <small className="mode-err">Please select submode</small>
+                            )}
 
-                              {/* <small id="delivery-0-shipping" class="item-shipping">5–10 business days</small> */}
-                            </span>
-                            <strong id="delivery-0-price" class="item-price">INR {currentCourse?.fees?.offlineFee?.residentialFee}</strong>
+                            {shouldShowResidentialOption() && (
 
-                          </label>
 
-                        )}
-                        {/* {shouldShowResidentialOption() && (
+                              <label class="item-label item_format" ref={nonresidentialCurrent}>
+                                <input class="item-input" type="radio" name="resident" value="RESIDENTIAL" aria-labelledby="delivery-0-name" aria-describedby="delivery-0-shipping delivery-0-price"
+                                  checked={selectedOption === 'RESIDENTIAL'}
+                                  onChange={(e) => {
+                                    setSelectedOption('RESIDENTIAL');
+                                    handleResidential(true);
+                                    setPriceSelect(currentCourse?.fees?.offlineFee?.residentialFee)
+                                    setCourseFormatInfo('On-Campus (residence - triple sharing)')
+                                    setCourseFormatSelected(true)
+                                    if (e.target.checked) {
+                                      setFormData({
+                                        ...formData,
+                                        residental: e.target.value,
+                                        mode: 'OFFLINE'
+                                      })
+                                      setEmpty(0)
+                                      if (currentCourse?.key === 'ma-yoga-shastra' && currentCourse.country !== 'India') {
+                                        setCourseFee(currentCourse?.fees?.internationalFee?.residentialFee)
+                                      } else {
+                                        setCourseFee(currentCourse?.fees?.offlineFee?.residentialFee)
+                                      }
+                                      // setCourseFee(updatedFees( currentCourse?.key,'RESIDENTIAL' ))
+                                    }
+                                  }}
+                                />
+                                <span class="item-info">
+                                  <span id="delivery-0-name" class="item-name">On-Campus (residence - triple sharing) - </span>
+
+                                  {/* <small id="delivery-0-shipping" class="item-shipping">5–10 business days</small> */}
+                                </span>
+                                <strong id="delivery-0-price" class="item-price">INR {currentCourse?.fees?.offlineFee?.residentialFee}</strong>
+
+                              </label>
+
+                            )}
+                            {/* {shouldShowResidentialOption() && (
                   <div style={{ fontSize: '12px', textAlign: 'center', marginTop: '-5px', color: '#000' }}>For Single sharing and Two sharing rooms, please contact us</div>
                 )} */}
 
+                          </div>
+
+
+
+                        </form>
+                        {/* {values.startDate}{values.endDate} */}
+
                       </div>
+                      {isRegular && (
+                        <>
+                          <div className='dates_enroll_wrapper mb-30' style={{ marginTop: '0' }}>
 
+                            <div className="label_format_course">
 
+                              Select Course Date
 
-                    </form>
-                    {/* {values.startDate}{values.endDate} */}
+                              {empty === 21 && <div id="fill_err" style={{ float: 'right', fontSize: '11px', marginTop: '10px', color: 'red' }}>Please select course start date</div>}
 
+                            </div>
 
-                    {isRegular && (
-                      <>
-                        <div className='dates_enroll_wrapper'>
+                            <div className="form_error course_date date-input-wrapper">
+                              <DatePicker
+                                minDate={minDate}
+                                // visiblity={'hidden'}
+                                placeholderText="Choose date" // Custom placeholder text
+                                dateFormat="dd/MM/YYYY"
+                                value={values.startDate}
+                                form={formData}
+                                setField={setFormData}
+                                onChange={(value) => {
+                                  console.log('val on change ', value)
+                                  setCourseStartDateSelected(true)
+                                  // handleStartDate(value)
+                                  // createEndDate(value, captureEndDate)
 
-                          <div className="label_format_course">
+                                  // Handle start date and chain the creation of end date
+                                  const formattedStartDate = handleStartDate(value);
 
-                            Select Course Date
-
-                            {empty === 21 && <div id="fill_err" style={{ float: 'right', fontSize: '11px', marginTop: '10px', color: 'red' }}>Please select course start date</div>}
-
-                          </div>
-
-                          <div className="form_error course_date date-input-wrapper">
-                            <DatePicker
-                              minDate={minDate}
-                              // visiblity={'hidden'}
-                              placeholderText="Choose date" // Custom placeholder text
-                              dateFormat="dd/MM/YYYY"
-                              value={values.startDate}
-                              form={formData}
-                              setField={setFormData}
-                              onChange={(value) => {
-                                console.log('val on change ', value)
-                                setCourseStartDateSelected(true)
-                                // handleStartDate(value)
-                                // createEndDate(value, captureEndDate)
-
-                                // Handle start date and chain the creation of end date
-                                const formattedStartDate = handleStartDate(value);
-
-                                // Use the updated start date for creating end date
-                                if (captureEndDate) {
-                                  createEndDate(formattedStartDate, captureEndDate);
-                                }
-                                setEmpty(0)
-                              }}
-                              // onKeyDown={(e) => e.preventDefault()} //
-                              customInput={
-                                <input readOnly
-                                  tabIndex="-1" // Prevents focusing and the keyboard from showing
-                                  onClick={preventKeyboard} // Stops the keyboard from opening on mobile
-                                />
-                              } />
-                            {/* {empty === 18 && <small id="fill_err"> Please select start date</small>
+                                  // Use the updated start date for creating end date
+                                  if (captureEndDate) {
+                                    createEndDate(formattedStartDate, captureEndDate);
+                                  }
+                                  setEmpty(0)
+                                }}
+                                // onKeyDown={(e) => e.preventDefault()} //
+                                customInput={
+                                  <input readOnly
+                                    tabIndex="-1" // Prevents focusing and the keyboard from showing
+                                    onClick={preventKeyboard} // Stops the keyboard from opening on mobile
+                                  />
+                                } />
+                              {/* {empty === 18 && <small id="fill_err"> Please select start date</small>
                           } */}
+                            </div>
                           </div>
-                        </div>
-                      </>
-                    )}
-
+                        </>
+                      )}
+                    </div>
 
                     {/* {selectedUrlDate} */}
                     {!isPhysioPage &&
