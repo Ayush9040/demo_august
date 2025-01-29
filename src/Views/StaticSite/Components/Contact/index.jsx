@@ -15,43 +15,43 @@ import MessageModal from '../MessageModal'
 import { useNavigate } from "react-router-dom"
 import axios from 'axios'
 import baseDomain, {
-    certificates,
-    background,
-  } from '../../assets/images/imageAsset'
+  certificates,
+  background,
+} from '../../assets/images/imageAsset'
 import { mobile } from '../../assets/icons/icon'
 
 
 const Contact = () => {
 
-    const [formData, setFormData] = useState({
-        name: '',
-        address: '',
-        city: '',
-        country: '',
-        dob: '',
-        gender: '',
-        contact: '',
-        email: '',
-        getMessage: '',
-        preferedLanguage: '',
-        noOfSessionsRequired: '',
-        noOfPersons: '',
-        PreferedDayAndTime: '',
-        anyOtherComments: '',
-        days: [],
-        // course: courseMode,
-        mode: '',
-      })
-      const [values, setValues] = useState([])
-      const [selectedDays, setSelectedDays] = useState([]);
-      const [selectedTime, setSelectedTime] = useState(''); 
-      const [empty, setEmpty] = useState(0)
-      const [countryFlag, setCountryFlag] = useState('IN');
-      // const [dialCode, setDialCode] = useState('');
-      const [ modal,setModal ]=useState(false)
-      const [phoneNumber, setPhoneNumber] = useState({ dialCode: '', mobile: '' })
-  
-  
+  const [formData, setFormData] = useState({
+    name: '',
+    address: '',
+    city: '',
+    country: '',
+    dob: '',
+    gender: '',
+    contact: '',
+    email: '',
+    getMessage: '',
+    preferedLanguage: '',
+    noOfSessionsRequired: '',
+    noOfPersons: '',
+    PreferedDayAndTime: '',
+    anyOtherComments: '',
+    days: [],
+    // course: courseMode,
+    mode: '',
+  })
+  const [values, setValues] = useState([])
+  const [selectedDays, setSelectedDays] = useState([]);
+  const [selectedTime, setSelectedTime] = useState('');
+  const [empty, setEmpty] = useState(0)
+  const [countryFlag, setCountryFlag] = useState('IN');
+  // const [dialCode, setDialCode] = useState('');
+  const [modal, setModal] = useState(false)
+  const [phoneNumber, setPhoneNumber] = useState({ dialCode: '', mobile: '' })
+
+
   //     const handlePhoneChange = (value) => {
   //   // setPhoneValue(value);
   //   if (value) {
@@ -87,19 +87,19 @@ const Contact = () => {
   };
 
 
-    const Locate = {
-        title: 'Contact us',
-        color: 'white',
-        menuColor: 'white',
-        menuItems: [],
-      }
+  const Locate = {
+    title: 'Contact us',
+    color: 'white',
+    menuColor: 'white',
+    menuItems: [],
+  }
 
-      const nameFromRedux = useSelector((state) => state.auth.user.data?.firstName);
+  const nameFromRedux = useSelector((state) => state.auth.user.data?.firstName);
   const phoneNumberFromRedux = useSelector((state) => state.auth.user.data?.phoneNumber);
   const emailFromRedux = useSelector((state) => state.auth.user.data?.email);
   const dailCodes = useSelector((state) => state.auth.user.data?.dialCode);
 
-      
+
   useEffect(() => {
     if (nameFromRedux) {
       setFormData((prev) => ({ ...prev, name: nameFromRedux }));
@@ -111,124 +111,124 @@ const Contact = () => {
     if (emailFromRedux) {
       setFormData((prev) => ({ ...prev, email: emailFromRedux }));
     }
-    
-    
-  
+
+
+
   }, [nameFromRedux, phoneNumberFromRedux, emailFromRedux, setFormData]);
 
 
-      const {
-        name,
-        address,
-        dob,
-        contact,
-        email,
-        noOfSessionsRequired,
-        preferedLanguage,
-        days,
-        noOfPersons,
-        PreferedDayAndTime,
-        constraints,
-      } = formData
-
-    
-
-      const handleEmpty = () => {
-        let hasError = false;
-        
-        if (
-          formData.name === '' ||
-          formData.name === undefined ||
-          formData.name === null
-        ) {
-           setEmpty(1)
-           hasError = true;
-        } else if (!validateEmail(formData.email)) {
-           setEmpty(2)
-           hasError = true;
-        } else if (
-          phoneNumber.mobile === '' ||
-          phoneNumber.mobile.length < 6 ||
-          phoneNumber.mobile.length > 15
-        ) {
-          console.log("phone number td ", phoneNumber.mobile);
-           setEmpty(3)
-           hasError = true;
-        } else if (formData.getMessage === '') {
-           setEmpty(8)
-           hasError = true;
-        } else {
-          setEmpty(0)
-          setFormData((prevFormData) => ({
-            ...prevFormData,
-            days: selectedDays.map((day) => day.value),
-          }));
-          handleSubmit()
-        }
-    
-       
-    
-         // If no errors, submit the form data
-         
-    
-          // console.log("Form Data:", formData);
-      }
-    
-    
-       const nagivate = useNavigate()
-      const handleSubmit = async() => {
-        // await handleEmpty()
-        console.log('empty ', empty)
-        if (empty !== 0) return
-        try {
-         
-        //   await createHomeTution(formData)
-          await axios.post(`${cmsBaseDomain}/contactUs`, {
-            fullName: formData.name,
-            comment: formData.getMessage,
-            email: formData.email,
-            dialCode: phoneNumber.dialCode,
-            contactNo: phoneNumber.mobile
-          })
-          setModal('success')
-        //   nagivate(`/enrollment_thankyou/${'Home Tuition course'}`)
-        } catch {
-          console.log('error')
-        }
-      }
+  const {
+    name,
+    address,
+    dob,
+    contact,
+    email,
+    noOfSessionsRequired,
+    preferedLanguage,
+    days,
+    noOfPersons,
+    PreferedDayAndTime,
+    constraints,
+  } = formData
 
 
-      const handleClose = () => {
-        nagivate('/');
-      }
+
+  const handleEmpty = () => {
+    let hasError = false;
+
+    if (
+      formData.name === '' ||
+      formData.name === undefined ||
+      formData.name === null
+    ) {
+      setEmpty(1)
+      hasError = true;
+    } else if (!validateEmail(formData.email)) {
+      setEmpty(2)
+      hasError = true;
+    } else if (
+      phoneNumber.mobile === '' ||
+      phoneNumber.mobile.length < 6 ||
+      phoneNumber.mobile.length > 15
+    ) {
+      console.log("phone number td ", phoneNumber.mobile);
+      setEmpty(3)
+      hasError = true;
+    } else if (formData.getMessage === '') {
+      setEmpty(8)
+      hasError = true;
+    } else {
+      setEmpty(0)
+      setFormData((prevFormData) => ({
+        ...prevFormData,
+        days: selectedDays.map((day) => day.value),
+      }));
+      handleSubmit()
+    }
 
 
-  
- 
+
+    // If no errors, submit the form data
+
+
+    // console.log("Form Data:", formData);
+  }
+
+
+  const nagivate = useNavigate()
+  const handleSubmit = async () => {
+    // await handleEmpty()
+    console.log('empty ', empty)
+    if (empty !== 0) return
+    try {
+
+      //   await createHomeTution(formData)
+      await axios.post(`${cmsBaseDomain}/contactUs`, {
+        fullName: formData.name,
+        comment: formData.getMessage,
+        email: formData.email,
+        dialCode: phoneNumber.dialCode,
+        contactNo: phoneNumber.mobile
+      })
+      setModal('success')
+      //   nagivate(`/enrollment_thankyou/${'Home Tuition course'}`)
+    } catch {
+      console.log('error')
+    }
+  }
+
+
+  const handleClose = () => {
+    nagivate('/');
+  }
+
+
+
+
   return (
     <div className="contact_us_wrapper">
-        <div className='contact_header'>
-            
-          <InnerNavComponent abc={Locate} />
+      <div className='contact_header'>
 
-          <div className='why-text banner-text_contact'>
-              <div className='banner-heading'>
-                Contact Us
-                {/* <div className='bottom-line'></div> */}
-              </div>
-              <p className='banner_desc'>Our team is happy to answer any questions you have.
-                <p className='contact_line_fixed'>Fill out the form below, and we’ll be in touch as soon as possible.</p></p>
+        <InnerNavComponent abc={Locate} />
 
-              
-            </div>
-        
+        <div className='why-text banner-text_contact'>
+          <div className='banner-heading'>
+            Contact Us
+            {/* <div className='bottom-line'></div> */}
+          </div>
+          <p className='banner_desc'>Our team is happy to answer any questions you have.
+            <p className='contact_line_fixed'>Fill out the form below, and we’ll be in touch as soon as possible.</p></p>
+
+
         </div>
-     
-        {/* contact div container */}
 
-        <div className="contact_container">
-            <div className="left_contact_container">
-            <div className="form-field">
+      </div>
+
+      {/* contact div container */}
+
+      <div className="contact_container">
+        <div className="left_contact_container">
+          <div className="form-field">
             <InputComponent
               type="text"
               placeholder="Full Name"
@@ -238,7 +238,7 @@ const Contact = () => {
               keyName="name"
               errorCheck={setEmpty}
             />
-            {empty === 1 && <small style={{ color: 'red', float: 'right'}}> Please enter your name</small>}
+            {empty === 1 && <small style={{ color: 'red', float: 'right', fontSize: '12px' }}> Please enter your name</small>}
           </div>
           <div className="form-field">
             <InputComponent
@@ -250,7 +250,7 @@ const Contact = () => {
               keyName="email"
               errorCheck={setEmpty}
             />
-            {empty === 2 && <small style={{ marginBottom: '0rem', float: 'right', color: 'red'}}> Please enter an valid E-mail</small>}
+            {empty === 2 && <small style={{ marginBottom: '0rem', float: 'right', color: 'red', fontSize: '12px' }}> Please enter an valid E-mail</small>}
           </div>
           <div className="form-field phone_contact_input">
             <PhoneInput
@@ -260,106 +260,106 @@ const Contact = () => {
               form={formData}
               setField={setFormData}
               keyName="contact"
-              errorCheck={setEmpty} 
-              defaultCountry={countryFlag?countryFlag:'IN'}
+              errorCheck={setEmpty}
+              defaultCountry={countryFlag ? countryFlag : 'IN'}
               onChange={(e) => {
                 setFormData({ ...formData, mobile: e })
                 handlePhoneChange(e)
               }}
-              // onChange={(e) => {
-              //   console.log('Phone input value: ', e);
-                
-              //   setFormData({ ...formData, contact: e })
+            // onChange={(e) => {
+            //   console.log('Phone input value: ', e);
 
-                
-              //   if (typeof e === 'string' && e.trim() !== '') {
-              //       const phoneNumber = parsePhoneNumberFromString(e);
-              //       if (phoneNumber) {
-              //           console.log('Dial code: ', phoneNumber.countryCallingCode); // Extract dial code
+            //   setFormData({ ...formData, contact: e })
 
-              //           // setDialCode(phoneNumber.countryCallingCode); 
-                        
-              //       } 
-              //   }
-              // }}
-             
+
+            //   if (typeof e === 'string' && e.trim() !== '') {
+            //       const phoneNumber = parsePhoneNumberFromString(e);
+            //       if (phoneNumber) {
+            //           console.log('Dial code: ', phoneNumber.countryCallingCode); // Extract dial code
+
+            //           // setDialCode(phoneNumber.countryCallingCode); 
+
+            //       } 
+            //   }
+            // }}
+
             />
-            
+
           </div>
-          {empty === 3 && <div style={{ margin: '-0.75rem 0 0rem 0', textAlign: 'right', color: 'red', width: '100%'}}> Please enter your phone number</div>}
+          {empty === 3 && <div style={{ margin: '-0.75rem 0 0rem 0', textAlign: 'right', color: 'red', width: '100%', fontSize: '12px' }}> Please enter your phone number</div>}
           <div className="text_area contact_text_box2">
-        <textarea
-          className="contact_text_box"
-          placeholder="Tell us more about how can we help you...."
-          type="text"
-          rows="12"
-          cols="49"
-          onChange={(e) => {
-            setFormData({
-              ...formData,
-              getMessage: e.target.value,
-            })
-          }}
-        />
-      </div>
-      {empty === 8 && (
-        <div style={{ width: '100%', margin: '-1rem', textAlign: 'end', color: 'red'}}> Please enter your Message</div>
-      )}
-          
+            <textarea
+              className="contact_text_box"
+              placeholder="Tell us more about how can we help you...."
+              type="text"
+              rows="4"
+              cols="49"
+              onChange={(e) => {
+                setFormData({
+                  ...formData,
+                  getMessage: e.target.value,
+                })
+              }}
+            />
+          </div>
+          {empty === 8 && (
+            <div style={{ width: '100%', margin: '-1rem', textAlign: 'end', color: 'red', fontSize: '12px' }}> Please enter your Message</div>
+          )}
+
           <div className="tutions_btn">
-        <CommonBtn
-          text={'Send Message'}
-          buttonAction={handleEmpty}
-          isColor={'#CF5335'}
-        />
-      </div>
-      <div className="contact_us_popup">
-      { modal!==false && (modal === 'success' ? <MessageModal type='Thank you for your submission!'  message='Our team will review your submission and get back to you within the next 24-48 hours. If you have any urgent queries, please feel free to contact us via mobile number or email' closePopup={ false } button={'Close'} buttonAction={handleClose} /> : <MessageModal type='ERROR' message='Sorry! Please contact info@theyogaintitute.org' closePopup={ setModal }/>) }
-      </div>
-            </div>
-            <div className="right_contact_container">
-
-                <div className="logo_container">
-                    <img src="/images/lotus_logo_svg.svg" alt="" loading='lazy' />
-                </div>
-
-                <div className="contact_right_desc">
-                    <img src="/images/quotes_svg.svg" alt="" loading='lazy' />
-                    <div className=''>Established in 1918 by Shri Yogendraji, The Yoga Institute is the world&apos;s oldest government recognised Yoga Centre. The founder&apos;s vision and mission was to make Yoga accessible to each and everyone across the globe.</div>
-                </div>
-
-                <div className="contact_details">
-                    <h3>Contact Information</h3>
-                    <div className="email_container">
-                        <div className="email_contact_img">
-                            <img src="/images/mail_svg.svg" alt="" loading='lazy' />
-                        </div>
-                        <div className="email_info">
-                         info@theyogainstitute.org
-                        </div>
-                    </div>
-
-                    <div className="email_container">
-                        <div className="email_contact_img">
-                            <img src="/images/phone_svg.svg" alt="" loading='lazy' />
-                        </div>
-                        <div className="email_info">
-                        +91-7738155500, +91-22-26110506, <br />+91-22-26103568, +91-7045558181
-                        </div>
-                    </div>
-
-                    <div className="email_container">
-                        <div className="email_contact_img">
-                            <img src="/images/location_svg.svg" alt="" loading='lazy' />
-                        </div>
-                        <div className="email_info">
-                        Shri Yogendra Marg, Prabhat Colony, <br />
-                        Santacruz East, Mumbai - 400055 India
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <CommonBtn
+              text={'Send Message'}
+              buttonAction={handleEmpty}
+              isColor={'#CF5335'}
+            />
+          </div>
+          <div className="contact_us_popup">
+            {modal !== false && (modal === 'success' ? <MessageModal type='Thank you for your submission!' message='Our team will review your submission and get back to you within the next 24-48 hours. If you have any urgent queries, please feel free to contact us via mobile number or email' closePopup={false} button={'Close'} buttonAction={handleClose} /> : <MessageModal type='ERROR' message='Sorry! Please contact info@theyogaintitute.org' closePopup={setModal} />)}
+          </div>
         </div>
+        <div className="right_contact_container">
+
+          <div className="logo_container">
+            <img src="/images/lotus_logo_svg.svg" alt="" loading='lazy' />
+          </div>
+
+          <div className="contact_right_desc">
+            <img src="/images/quotes_svg.svg" alt="" loading='lazy' />
+            <div className=''>Established in 1918 by Shri Yogendraji, The Yoga Institute is the world&apos;s oldest government recognised Yoga Centre. The founder&apos;s vision and mission was to make Yoga accessible to each and everyone across the globe.</div>
+          </div>
+
+          <div className="contact_details">
+            <h3>Contact Information</h3>
+            <div className="email_container">
+              <div className="email_contact_img">
+                <img src="/images/mail_svg.svg" alt="" loading='lazy' />
+              </div>
+              <div className="email_info">
+                info@theyogainstitute.org
+              </div>
+            </div>
+
+            <div className="email_container">
+              <div className="email_contact_img">
+                <img src="/images/phone_svg.svg" alt="" loading='lazy' />
+              </div>
+              <div className="email_info">
+                +91-7738155500, +91-22-26110506, <br />+91-22-26103568, +91-7045558181
+              </div>
+            </div>
+
+            <div className="email_container">
+              <div className="email_contact_img">
+                <img src="/images/location_svg.svg" alt="" loading='lazy' />
+              </div>
+              <div className="email_info">
+                Shri Yogendra Marg, Prabhat Colony, <br />
+                Santacruz East, Mumbai - 400055 India
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   )
 }

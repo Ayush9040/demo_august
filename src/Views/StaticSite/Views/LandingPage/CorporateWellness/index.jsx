@@ -18,6 +18,7 @@ import '../../../../StaticSite/Components/TermsandCondition/style.scss'
 import { handleCTCorporateYogaInitiated, handleCTCorporateYogaSubmitEvent } from '../../../../../CleverTap/corporateYogaEvents'
 import { useSelector } from 'react-redux'
 import ReactGA from 'react-ga4';
+import { validateEmail } from '../../../../../helpers'
 
 const corporateWellness = () => {
   const [formData, setFormData] = useState({
@@ -81,86 +82,129 @@ const corporateWellness = () => {
   const handleMessageChange = (e) => {
     setFormData({ ...formData, message: e.target.value })
   }
+  const [empty, setEmpty] = useState(0)
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    try {
-      await CreateForm({
-        name: formData.name,
-        email: formData.email,
-        contact: formData.contact,
-        companyName: formData.company,
-        designation: formData.designation,
-        message: formData.message,
-      })
-      setFormData({
-        name: '',
-        contact: '',
-        email: '',
-        company: '',
-        designation: '',
-        message: '',
-      })
-      await successMail({
-        type: 'INFO_TYI',
-        HTMLTemplate: 'CORPORATE_ENQUIRY_FORM_COFIRMATION_MAIL',
-        subject: 'Thank you from The Yoga Institute',
-        data: {
+    if (
+      formData.name === '' ||
+      formData.name === undefined ||
+      formData.name === null
+    ) {
+      setEmpty(1)
+    }
+    else if (
+      formData.contact === '' ||
+      formData.contact?.length < 6 ||
+      formData.contact?.length > 15
+    ) {
+      setEmpty(2)
+    }
+    else if (!validateEmail(formData.email)) {
+      setEmpty(3)
+    }
+    else if (
+      formData.company === '' ||
+      formData.company === undefined ||
+      formData.company === null
+    ) {
+      setEmpty(4)
+    }
+    else if (
+      formData.designation === '' ||
+      formData.designation === undefined ||
+      formData.designation === null
+    ) {
+      setEmpty(5)
+    }
+    else if (
+      formData.message === '' ||
+      formData.message === undefined ||
+      formData.message === null
+    ) {
+      setEmpty(6)
+    }
+
+    else {
+      setEmpty(0)
+      try {
+        await CreateForm({
           name: formData.name,
-        },
-        receivers: [formData.email],
-      })
+          email: formData.email,
+          contact: formData.contact,
+          companyName: formData.company,
+          designation: formData.designation,
+          message: formData.message,
+        })
+        setFormData({
+          name: '',
+          contact: '',
+          email: '',
+          company: '',
+          designation: '',
+          message: '',
+        })
+        await successMail({
+          type: 'INFO_TYI',
+          HTMLTemplate: 'CORPORATE_ENQUIRY_FORM_COFIRMATION_MAIL',
+          subject: 'Thank you from The Yoga Institute',
+          data: {
+            name: formData.name,
+          },
+          receivers: [formData.email],
+        })
 
-      handleCTCorporateYogaSubmitEvent({
-        email: formData.email,
-        contact: formData.contact,
-        designation: formData.designation,
-        companyName: formData.company,
-        message: formData.message,
-        status: "Success"
-      })
-      ReactGA.event('add_to_cart', {
-        currency: 'INR',
-        value: 0,
-        items: [{
-          item_name: 'Corporate Workshops',
-          item_id: formData.company,
-          price: 0,
-          quantity: 1
-        }]
-      });
-      ReactGA.event('begin_checkout', {
-        currency: 'INR',
-        value: 0,
-        items: [{
-          item_name: 'Corporate Workshops',
-          item_id: formData.company,
-          price: 0,
-          quantity: 1
-        }]
-      });
-      console.log('begin_checkout', {
-        currency: 'INR',
-        value: 0,
-        items: [{
-          item_name: 'Corporate Workshops',
-          item_id: formData.company,
-          price: 0,
-          quantity: 1
-        }]
-      });
+        handleCTCorporateYogaSubmitEvent({
+          email: formData.email,
+          contact: formData.contact,
+          designation: formData.designation,
+          companyName: formData.company,
+          message: formData.message,
+          status: "Success"
+        })
+        ReactGA.event('add_to_cart', {
+          currency: 'INR',
+          value: 0,
+          items: [{
+            item_name: 'Corporate Workshops',
+            item_id: formData.company,
+            price: 0,
+            quantity: 1
+          }]
+        });
+        ReactGA.event('begin_checkout', {
+          currency: 'INR',
+          value: 0,
+          items: [{
+            item_name: 'Corporate Workshops',
+            item_id: formData.company,
+            price: 0,
+            quantity: 1
+          }]
+        });
+        console.log('begin_checkout', {
+          currency: 'INR',
+          value: 0,
+          items: [{
+            item_name: 'Corporate Workshops',
+            item_id: formData.company,
+            price: 0,
+            quantity: 1
+          }]
+        });
 
-      setModal(true)
-    } catch (error) {
-      console.log(error)
-      handleCTCorporateYogaSubmitEvent({
-        email: formData.email,
-        contact: formData.contact,
-        designation: formData.designation,
-        companyName: formData.company,
-        message: formData.message,
-        status: "Fail"
-      })
+        setModal(true)
+      } catch (error) {
+        console.log(error)
+        handleCTCorporateYogaSubmitEvent({
+          email: formData.email,
+          contact: formData.contact,
+          designation: formData.designation,
+          companyName: formData.company,
+          message: formData.message,
+          status: "Fail"
+        })
+      }
     }
   }
 
@@ -344,6 +388,7 @@ const corporateWellness = () => {
                 setField={setFormData}
                 keyName="name"
               />
+              {empty === 1 && <small style={{ color: 'red', fontSize: '12px', position: 'relative', top: '6px' }}> Please enter your name</small>}
             </div>
             <div className="corporate-wellness-form-input">
               <InputComponent
@@ -355,6 +400,7 @@ const corporateWellness = () => {
                 setField={setFormData}
                 keyName="contact"
               />
+              {empty === 2 && <small style={{ color: 'red', fontSize: '12px', position: 'relative', top: '6px' }}> Please enter valid contact</small>}
             </div>
           </div>
           <div className="corporate-wellness-form-input-container">
@@ -367,6 +413,7 @@ const corporateWellness = () => {
                 setField={setFormData}
                 keyName="email"
               />
+              {empty === 3 && <small style={{ color: 'red', fontSize: '12px', position: 'relative', top: '6px' }}> Please enter valid email address</small>}
             </div>
             <div className="corporate-wellness-form-input">
               <InputComponent
@@ -377,6 +424,7 @@ const corporateWellness = () => {
                 setField={setFormData}
                 keyName="company"
               />
+              {empty === 4 && <small style={{ color: 'red', fontSize: '12px', position: 'relative', top: '6px' }}> Please enter your company name</small>}
             </div>
           </div>
           <div className="corporate-wellness-form-input-container">
@@ -389,15 +437,18 @@ const corporateWellness = () => {
                 setField={setFormData}
                 keyName="designation"
               />
+              {empty === 5 && <small style={{ color: 'red', fontSize: '12px', position: 'relative', top: '6px' }}> Please enter your designation</small>}
             </div>
           </div>
-          <div className="corporate-wellness-form-textArea">
+          <div className="corporate-wellness-form-textArea" style={{display:'flex',flexDirection:'column'}}>
             <textarea
               value={formData.message}
               className="responsive-textarea"
               placeholder="Message"
               onChange={handleMessageChange}
             />
+            <div>
+              {empty === 6 && <small style={{ color: 'red', fontSize: '12px', position: 'relative', top: '6px' }}> Please enter message</small>}</div>
           </div>
           <div className="form-btn-container">
             <button className="form-btn" onClick={handleSubmit}>

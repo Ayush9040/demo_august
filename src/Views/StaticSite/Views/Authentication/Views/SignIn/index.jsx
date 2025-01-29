@@ -1999,8 +1999,8 @@ const SignIn = () => {
               {/* Signup page */}
               {
                 (pageIndex == '3' || pageIndex == '4') && <>
-                  <div className='header header-3'><span className='mob-namsthe'>Namaste 🙏 Please Fill Your Details</span></div>
-                  <div className='sub-header sub-header-3 wish-text' style={{ maxWidth: '430px' }}>Become a Part of The Yoga Institute Family & Sign-up for your preferred course</div>
+                  <div className='header header-3' style={{ fontSize: '18px' }}><span className='mob-namsthe'>Namaste 🙏 Please Fill Your Details</span></div>
+                  <div className='sub-header sub-header-3 wish-text' style={{ maxWidth: '430px', marginBottom: '6px' }}>Become a Part of The Yoga Institute Family & Sign-up for your preferred course</div>
                   <div className='sub-header sub-header-3 wish-text-mob'>Join The Yoga Institute Family </div>
 
                   <div className='inp-group mob-row'>
@@ -2509,8 +2509,8 @@ const SignIn = () => {
                 {/* Signup page */}
                 {
                   (pageIndexEmail == '3') && <>
-                    <div className='header header-3'>Namaste 🙏 Please Fill Your Details</div>
-                    <div className='sub-header sub-header-3 wish-text' style={{ maxWidth: '430px' }}><span className='mob-namsthe'>Become a Part of The Yoga Institute Family & Sign-up for your preferred course</span></div>
+                    <div className='header header-3' style={{ fontSize: '18px' }}>Namaste 🙏 Please Fill Your Details</div>
+                    <div className='sub-header sub-header-3 wish-text' style={{ maxWidth: '430px', marginBottom: '6px' }}><span className='mob-namsthe'>Become a Part of The Yoga Institute Family & Sign-up for your preferred course</span></div>
                     <div className='sub-header sub-header-3 wish-text-mob'>Join The Yoga Institute Family </div>
                     <div className='inp-group mob-row'>
                       <div className='width-100'>
@@ -2627,7 +2627,7 @@ const SignIn = () => {
                     </div>
 
                     {isCountryContainer &&
-                      <div className={pageIndex == '3' ? 'ctry-dpdwn top-aligned' : 'ctry-dpdwn'} ref={listRef}>
+                      <div className={(pageIndex == '3' || pageIndex == '1') ? 'ctry-dpdwn top-aligned' : 'ctry-dpdwn'} ref={listRef}>
                         {countriesMap.map(country => (
                           <div key={country.label} className='ctr-option' onClick={() => { SetSelectedCountryList(country), SetIsCountryContainer(false), handleCountryChange(formData.phoneNumber, country) }}>
                             <span><img width='20px' style={{ borderRadius: '2px' }} src={`https://purecatamphetamine.github.io/country-flag-icons/3x2/${country.flag.toUpperCase()}.svg`} alt="" /></span>

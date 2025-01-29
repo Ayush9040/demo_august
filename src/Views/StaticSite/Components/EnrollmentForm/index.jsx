@@ -33,7 +33,6 @@ const Enrollment = () => {
   const stateFromRedux = useSelector((state) => state.auth.user.data?.state);
   const genderFromRedux = useSelector((state) => state.auth.user.data?.gender);
   const dispatch = useDispatch();
-
   useEffect(() => {
     let currentCrs = AllCourses.find((item) => item.key === courseId)
     if (!currentCrs) {

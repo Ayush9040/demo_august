@@ -2937,6 +2937,7 @@ input[type=checkbox]:checked+label:before {
     // margin: 5px;
     border-radius: 20px;
     margin-top: 28px;
+    margin-bottom: 120px;
 
   }
 
@@ -3037,7 +3038,7 @@ input[type=checkbox]:checked+label:before {
     background-color: #fff;
     margin-top: 28px;
     border-radius: 20px;
-
+    padding-bottom: 20px;
   }
 
   .label_format_course {
@@ -3099,14 +3100,16 @@ input[type=checkbox]:checked+label:before {
 .row-web {
   display: flex;
   gap: 2rem;
+  width: 160%;
 }
 
 @media (max-width: '480px') {
   .row-web {
     flex-direction: column;
+    width: 100%;
 
     .mb-30 {
-      margin-bottom: -32px;
+      margin-bottom: -12px;
     }
   }
 

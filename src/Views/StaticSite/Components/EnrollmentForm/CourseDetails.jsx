@@ -884,7 +884,8 @@ const CourseDetails = ({
                                     INR {localStorage.getItem('isRegular') == 'true' ? (isNaN(currentCourse?.fees?.onlineFee) ? localStorage.getItem('courseFee') : currentCourse?.fees?.onlineFee) : currentCourse?.fees?.offlineFee?.nonResidentialFee}
                                     {/* {currentCourse?.fees?.offlineFee?.nonResidentialFee} */}
                                   </strong>
-                                  : <strong id="delivery-0-price" class="item-price">At Affordable pricing</strong>}
+                                  : <strong id="delivery-0-price" class="item-price">At Affordable pricing &nbsp;</strong>}
+                              &nbsp;
                               </label>
                             )}
 
@@ -955,7 +956,7 @@ const CourseDetails = ({
 
                             </div>
 
-                            <div className="form_error course_date date-input-wrapper">
+                            <div className="form_error course_date date-input-wrapper" style={{width:'180px'}}>
                               <DatePicker
                                 minDate={minDate}
                                 // visiblity={'hidden'}
