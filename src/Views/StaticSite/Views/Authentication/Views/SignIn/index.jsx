@@ -2087,7 +2087,7 @@ const SignIn = () => {
 
 
 
-                  <div className='inp-group'>
+                  <div className='inp-group  mob-row'>
                     <div className='width-100 ad2-inp' >
 
                       <div className="form_error">
@@ -2564,7 +2564,7 @@ const SignIn = () => {
                         </div>
                       </Autocomplete>
                     </LoadScript>
-                    <div className='inp-group'>
+                    <div className='inp-group  mob-row'>
                       <div className='width-100 ad2-inp' >
                         <div className="form_error">
                           <div className='inp-label mg-t-20'>House No./Street name <span>*</span></div>

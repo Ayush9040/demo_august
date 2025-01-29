@@ -20,7 +20,7 @@ import 'react-datepicker/dist/react-datepicker.css';
 import { LoadScript, Autocomplete } from '@react-google-maps/api';
 import { useDispatch } from 'react-redux';
 import { useLocation } from 'react-router-dom';
-import { logoutUserAction } from '../../Views/Authentication/Auth.actions';
+import { fetchUserData, logoutUserAction } from '../../Views/Authentication/Auth.actions';
 import 'react-phone-number-input/style.css'
 import PhoneInput from 'react-phone-number-input';
 
@@ -671,7 +671,7 @@ const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse
       if (cities.length > 0) {
         return cities;
       }
-      else{
+      else {
         return City.getCitiesOfCountry(countryIsoCode).map((city) => ({
           value: city.name,
           label: city.name,
@@ -1019,7 +1019,7 @@ const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse
     setSelectedDate(date);
   };
 
-  const handleEditSave = () => {
+  const handleEditSave = async () => {
     console.log("formData 2 ", formData2)
     console.log('formData from Save ', formData)
 
@@ -1155,7 +1155,31 @@ const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse
         pincode: formData2?.pincode,
         gender: formData2?.gender
       }));
+      try {
+        let token = localStorage.getItem('authorizationToken')
+        if (token && !axios.defaults.headers?.Authorization) {
+          // console.log('Current Request Headers: 2', axios.defaults.headers);
+          axios.defaults.headers['Authorization'] = `Bearer ${token}`;
+          delete axios.defaults.headers.common['authorization'];
+        }
 
+        let payload = {
+          firstName: formData2?.name, lastName: formData2?.lname,
+          addressLine1: formData2?.address1, addressLine2: formData2?.address2,
+          country: formData2?.country, state: formData2?.state,
+          city: formData2?.city, pincode: formData2?.pincode,
+          gender: formData2?.gender
+        }
+        // alert(JSON.stringify(payload))
+        await axios.put(`${authBaseDomain}/user/update`, payload, {
+          headers: {
+            'Authorization': `Bearer ${token}`
+          }
+        })
+        dispatch(fetchUserData());
+      } catch (err) {
+        console.log(err);
+      }
       setDefaultAddress(true);
       saveAndASubmit()
       closeModal();
