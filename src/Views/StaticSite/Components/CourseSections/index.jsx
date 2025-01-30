@@ -316,6 +316,11 @@ const CourseSection = ({ title, showRangeSlider, data, pathParam, sliderRange, s
       onCampus: true, online: true, weekDays: true, isRegular: true
     },
     {
+      url: '/department-of-rehabilitation-and-physiotherapy',
+      text: 'Department of Rehabilitation and Physiotherapy',
+      onCampus: true, online: true, weekDays: true, isRegular: true
+    },
+    {
       url: '/IBY-course',
       text: 'IBY classes - On Campus & Online',
       onCampus: true, online: true, weekDays: true, isRegular: true

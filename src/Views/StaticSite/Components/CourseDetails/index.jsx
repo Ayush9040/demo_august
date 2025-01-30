@@ -309,7 +309,8 @@ const CourseDetails = ({ pageDate }) => {
       "Yog Prayas - Online",
       "Online Meditation Course  (Foundation Course)",
       "Regular Online Meditation Classes",
-      "Couples’ Yoga Classes  - Online"
+      "Couples’ Yoga Classes  - Online",
+      "Department of Rehabilitation and Physiotherapy"
     ]
     const isMatch = array.includes(pageDate?.title);
     setIsRegular(isMatch);
@@ -727,19 +728,19 @@ const CourseDetails = ({ pageDate }) => {
                   >
                     {/* <CommonBtn text={'Enroll Now'} /> */}
                     <EnrollBtn text={'Enroll Now'}
-                      // buttonAction={() => {
-                      //   ReactGA.event('add_to_cart', {
-                      //     currency: 'INR',
-                      //     value: '',
-                      //     items: [{
-                      //       item_name: pageDate?.title,
-                      //       item_id: pageDate?.courseCategory,
-                      //       price: '',
-                      //       quantity: 1
-                      //     }]
-                      //   })
-                      // }} 
-                      />
+                    // buttonAction={() => {
+                    //   ReactGA.event('add_to_cart', {
+                    //     currency: 'INR',
+                    //     value: '',
+                    //     items: [{
+                    //       item_name: pageDate?.title,
+                    //       item_id: pageDate?.courseCategory,
+                    //       price: '',
+                    //       quantity: 1
+                    //     }]
+                    //   })
+                    // }} 
+                    />
                   </Link> :
                     (<div >
                       <div style={{ opacity: '0.4' }}>
@@ -779,7 +780,7 @@ const CourseDetails = ({ pageDate }) => {
                   </small>
                 )} */}
               </div>
-              {(!isRegular && !isSpecialPage && pageDate?.dates?.length>0) && (
+              {(!isRegular && !isSpecialPage && pageDate?.dates?.length > 0) && (
                 <div className='wrapper_dates'>
                   <span className='date-label-new'>Upcoming Dates:</span> <span className='start-date-glimse'> &nbsp;{startDate} | </span>  &nbsp;
                   <div className='view_wrapper'>

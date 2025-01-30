@@ -1,6 +1,7 @@
 const baseDomain = 'https://ecom-static-site-prod.s3.ap-south-1.amazonaws.com'
 import mayoga from '../images/mayoga.jpg'
 import fullmoonCard from '../images/fullmoon.webp'
+import physiotherapy from '../images/physiotherapy.jpg'
 
 export const extraImage = {
   mayogaImg: `${mayoga}`,
@@ -212,6 +213,7 @@ export const courseAssets = {
   courseAsset78: '/Courses/Class/Regular_Meditation_Classes_Online.jpeg',
   courseAsset79: '/Courses/Class/Samattvam_%28Health_Checkup%29.jpeg',
   courseAsset80: '/SEO-New-Images/Courses/Satsang.webp',
+  courseAssetPhysio: physiotherapy,
   courseAsset81:
     '/SEO-New-Images/course/weekend-yoga-Asana-Classes_-Men-Women.webp',
   courseAsset82: '/SEO-New-Images/Courses/yog-prayas-online -yogasana.webp',
