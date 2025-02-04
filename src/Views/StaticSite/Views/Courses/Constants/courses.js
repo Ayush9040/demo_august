@@ -9896,7 +9896,7 @@ const camps = {
       },
     ],
   },
-  
+
   17: {
     id: '',
     textdescription6: '',
@@ -17175,7 +17175,9 @@ const certificate = {
       // '5th Sep to 29th Dec 2025',
       // '3rd Jan to 28th Apr 2025',
       // '14th May to 3rd Sep 2025',
-      '5th Sep to 29th Dec 2025'
+      // '5th Sep to 29th Dec 2025',
+      '30th Apr to 20th Aug 2025', '29th Aug to 22nd Dec 2025'
+
     ],
     online: true,
     onCampus: true,
