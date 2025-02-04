@@ -181,7 +181,7 @@ const ttc200hr = {
           title: 'Fees',
           text: [
 
-            '2024 : Online:Rs. 27,500 /-', 'Non-Residential: Rs. 33,000/- (Inclusive of course fee, study material, lunch, and snacks)', ' Residential: Rs. 60,000/- (Inclusive of course fee, study material, accommodation on triple occupancy basis and 4 meals a day)',
+            'Online:Rs. 27,500 /-', 'Non-Residential: Rs. 33,000/- (Inclusive of course fee, study material, lunch, and snacks)', ' Residential: Rs. 60,000/- (Inclusive of course fee, study material, accommodation on triple occupancy basis and 4 meals a day)',
           ],
         },
       },
@@ -726,7 +726,7 @@ const ttc200hr = {
         content: {
           title: 'Fees',
           text: [
-            '2024 : Online:Rs. 27,500 /-', 'Non-Residential: Rs. 33,000/- (Inclusive of course fee, study material.)', ' Residential: Rs. 90,000/- (Inclusive of course fee, study material, accommodation on triple occupancy basis and 4 meals a day)',
+            'Online:Rs. 27,500 /-', 'Non-Residential: Rs. 33,000/- (Inclusive of course fee, study material.)', ' Residential: Rs. 90,000/- (Inclusive of course fee, study material, accommodation on triple occupancy basis and 4 meals a day)',
           ],
 
         },
@@ -4392,7 +4392,7 @@ const ttc900hr = {
           title: 'Fees:',
 
           text: [
-            ' 2024 : INR. 60,000/- (Inclusive of course fee and study material)'],
+            'INR. 60,000/- (Inclusive of course fee and study material)'],
         },
       },
 
@@ -5145,7 +5145,7 @@ const ttc900hr = {
           title: 'Fees:',
 
           text: [
-            '2024: INR. 60,000/- (Inclusive of course fee and study material)'
+            'INR. 60,000/- (Inclusive of course fee and study material)'
           ],
         },
       },
@@ -6558,7 +6558,7 @@ const ttc900hr = {
           title: 'Fees:',
 
           text: [
-            ' 2024 : INR. 60,000/- (Inclusive of course fee and study material) ',
+            'INR. 60,000/- (Inclusive of course fee and study material) ',
           ],
         },
       },
@@ -10167,7 +10167,7 @@ const camps = {
           title: 'FEES',
           text: [
 
-            '2024: Non-Residential: 10,000/- (inclusive of course fees and 4 Meals)',
+            'Non-Residential: 10,000/- (inclusive of course fees and 4 Meals)',
           ],
         },
       },
@@ -10177,7 +10177,7 @@ const camps = {
           title: 'Residential',
           text: [
 
-            '2024:',
+            '',
             'Rs. 16,500/- Triple Sharing per person (Inclusive of course fee and 4 meals a day)',
             // 'Rs. 23,000/- Dual Sharing per person (Inclusive of course fee and 4 meals a day)',
             // 'Rs. 38,000/- Single Occupancy (Inclusive of course fee and 4 meals a day)',
@@ -10559,7 +10559,7 @@ const camps = {
         content: {
           title: 'FEES',
           text: [
-            '2024: Non-Residential: 10,000/- (inclusive of course fees and 4 Meals)',
+            'Non-Residential: 10,000/- (inclusive of course fees and 4 Meals)',
           ],
         },
       },
@@ -10569,7 +10569,7 @@ const camps = {
           title: 'Residential',
           text: [
 
-            '2024:',
+            '',
             'Rs. 16,500/- Triple Sharing per person (Inclusive of course fee and 4 meals a day)',
             // 'Rs. 23,000/- Dual Sharing per person (Inclusive of course fee and 4 meals a day)',
             // 'Rs. 38,000/- Single Occupancy (Inclusive of course fee and 4 meals a day)',
@@ -10937,7 +10937,7 @@ const camps = {
           title: 'FEES',
           text: [
 
-            '2024: Rs. 2500/-'
+            'Rs. 2500/-'
           ],
         },
       },
@@ -11346,7 +11346,7 @@ const camps = {
           title: 'FEES',
           text: [
 
-            '2024: Rs. 2500/-'
+            'Rs. 2500/-'
           ],
         },
       },
@@ -11747,7 +11747,7 @@ const camps = {
           title: 'FEES',
           text: [
 
-            '2024: Rs. 2500/-'
+            'Rs. 2500/-'
           ],
         },
       },
@@ -14637,7 +14637,7 @@ const classes = {
           title: 'Fees',
           text: [
 
-            '2024: Rs. 1100/-'
+            'Rs. 1100/-'
           ],
         },
       },
@@ -16676,7 +16676,7 @@ const certificate = {
           title: 'Fees',
           text: [
 
-            '2024 : Rs. 24,000/-'
+            'Rs. 24,000/-'
           ],
         },
       },
@@ -16958,7 +16958,7 @@ const certificate = {
         content: {
           title: 'Fees',
           text: [
-            '2024: Rs. 24,000/-'
+            'Rs. 24,000/-'
           ],
         },
       },
