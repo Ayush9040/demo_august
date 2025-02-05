@@ -456,13 +456,13 @@ const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse
         const matchedState = State.getStateByCodeAndCountry(matchedCity.stateCode, matchedCity.countryCode);
         // console.log('matched State ', matchedState.name);
 
-        if (matchedState) {
-          //   console.log('matched State ', matchedState.name); // Set the state name
-          setFormData2((prev) => ({ ...prev, state: matchedState.name }));
-          setValues((prev) => ({ ...prev, state: { label: matchedState.name, value: matchedState.name } }));
-        } else {
-          // setError('State not found for the given city');
-        }
+        // if (matchedState) {
+        //   //   console.log('matched State ', matchedState.name); // Set the state name
+        //   setFormData2((prev) => ({ ...prev, state: matchedState.name }));
+        //   setValues((prev) => ({ ...prev, state: { label: matchedState.name, value: matchedState.name } }));
+        // } else {
+        //   // setError('State not found for the given city');
+        // }
       } else {
         // setError('City not found');
       }

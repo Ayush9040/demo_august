@@ -181,7 +181,7 @@ const ttc200hr = {
           title: 'Fees',
           text: [
 
-            '2024 : Online:Rs. 27,500 /-', 'Non-Residential: Rs. 33,000/- (Inclusive of course fee, study material, lunch, and snacks)', ' Residential: Rs. 60,000/- (Inclusive of course fee, study material, accommodation on triple occupancy basis and 4 meals a day)',
+            'Online:Rs. 27,500 /-', 'Non-Residential: Rs. 33,000/- (Inclusive of course fee, study material, lunch, and snacks)', ' Residential: Rs. 60,000/- (Inclusive of course fee, study material, accommodation on triple occupancy basis and 4 meals a day)',
           ],
         },
       },
@@ -726,7 +726,7 @@ const ttc200hr = {
         content: {
           title: 'Fees',
           text: [
-            '2024 : Online:Rs. 27,500 /-', 'Non-Residential: Rs. 33,000/- (Inclusive of course fee, study material.)', ' Residential: Rs. 90,000/- (Inclusive of course fee, study material, accommodation on triple occupancy basis and 4 meals a day)',
+            'Online:Rs. 27,500 /-', 'Non-Residential: Rs. 33,000/- (Inclusive of course fee, study material.)', ' Residential: Rs. 90,000/- (Inclusive of course fee, study material, accommodation on triple occupancy basis and 4 meals a day)',
           ],
 
         },
@@ -4392,7 +4392,7 @@ const ttc900hr = {
           title: 'Fees:',
 
           text: [
-            ' 2024 : INR. 60,000/- (Inclusive of course fee and study material)'],
+            'INR. 60,000/- (Inclusive of course fee and study material)'],
         },
       },
 
@@ -5145,7 +5145,7 @@ const ttc900hr = {
           title: 'Fees:',
 
           text: [
-            '2024: INR. 60,000/- (Inclusive of course fee and study material)'
+            'INR. 60,000/- (Inclusive of course fee and study material)'
           ],
         },
       },
@@ -6558,7 +6558,7 @@ const ttc900hr = {
           title: 'Fees:',
 
           text: [
-            ' 2024 : INR. 60,000/- (Inclusive of course fee and study material) ',
+            'INR. 60,000/- (Inclusive of course fee and study material) ',
           ],
         },
       },
@@ -9738,7 +9738,7 @@ const camps = {
         templateNonResidential: '',
       },
     },
-    dates: ['26th Jan 2025', '23rd Feb 2025', '23rd Mar 2025', '27th Apr 2025', '25th May 2025',
+    dates: ['23rd Feb 2025', '23rd Mar 2025', '27th Apr 2025', '25th May 2025',
       '22nd Jun 2025', '27th Jul 2025', '24th Aug 2025', '28th Sep 2025', '26th Oct 2025', '23rd Nov 2025', '28th Dec 2025'
     ],
     mostPopular: false,
@@ -9896,7 +9896,7 @@ const camps = {
       },
     ],
   },
-  
+
   17: {
     id: '',
     textdescription6: '',
@@ -10167,7 +10167,7 @@ const camps = {
           title: 'FEES',
           text: [
 
-            '2024: Non-Residential: 10,000/- (inclusive of course fees and 4 Meals)',
+            'Non-Residential: 10,000/- (inclusive of course fees and 4 Meals)',
           ],
         },
       },
@@ -10177,7 +10177,7 @@ const camps = {
           title: 'Residential',
           text: [
 
-            '2024:',
+            '',
             'Rs. 16,500/- Triple Sharing per person (Inclusive of course fee and 4 meals a day)',
             // 'Rs. 23,000/- Dual Sharing per person (Inclusive of course fee and 4 meals a day)',
             // 'Rs. 38,000/- Single Occupancy (Inclusive of course fee and 4 meals a day)',
@@ -10312,7 +10312,7 @@ const camps = {
       // '26th Oct to 1st Nov 2024',
       // '23rd Nov to 29th Nov 2024',
       // '28th Dec to 3rd Jan 2025',
-      '25th Jan to 31st Jan 2025',
+      // '25th Jan to 31st Jan 2025',
       '22nd Feb to 28th Feb 2025',
       '22nd Mar to 28th Mar 2025',
       '26th Apr to 2nd May 2025',
@@ -10559,7 +10559,7 @@ const camps = {
         content: {
           title: 'FEES',
           text: [
-            '2024: Non-Residential: 10,000/- (inclusive of course fees and 4 Meals)',
+            'Non-Residential: 10,000/- (inclusive of course fees and 4 Meals)',
           ],
         },
       },
@@ -10569,7 +10569,7 @@ const camps = {
           title: 'Residential',
           text: [
 
-            '2024:',
+            '',
             'Rs. 16,500/- Triple Sharing per person (Inclusive of course fee and 4 meals a day)',
             // 'Rs. 23,000/- Dual Sharing per person (Inclusive of course fee and 4 meals a day)',
             // 'Rs. 38,000/- Single Occupancy (Inclusive of course fee and 4 meals a day)',
@@ -10937,7 +10937,7 @@ const camps = {
           title: 'FEES',
           text: [
 
-            '2024: Rs. 2500/-'
+            'Rs. 2500/-'
           ],
         },
       },
@@ -11346,7 +11346,7 @@ const camps = {
           title: 'FEES',
           text: [
 
-            '2024: Rs. 2500/-'
+            'Rs. 2500/-'
           ],
         },
       },
@@ -11747,7 +11747,7 @@ const camps = {
           title: 'FEES',
           text: [
 
-            '2024: Rs. 2500/-'
+            'Rs. 2500/-'
           ],
         },
       },
@@ -12408,7 +12408,7 @@ const camps = {
       },
     },
     dates: [
-      '25th Jan 2025', '22nd Mar 2025', '24th May 2025'
+      '22nd Mar 2025', '24th May 2025'
       , '26th Jul 2025', '27th Sep 2025', '22nd Nov 2025'],
     online: false,
     onCampus: true,
@@ -14637,7 +14637,7 @@ const classes = {
           title: 'Fees',
           text: [
 
-            '2024: Rs. 1100/-'
+            'Rs. 1100/-'
           ],
         },
       },
@@ -14874,8 +14874,7 @@ const classes = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'classes',
-    dates: ['26th Jan 2025'
-      , '2nd Feb 2025', '9th Feb 2025', '16th Feb 2025', '23rd Feb 2025',
+    dates: ['2nd Feb 2025', '9th Feb 2025', '16th Feb 2025', '23rd Feb 2025',
       '2nd Mar 2025', '9th Mar 2025', '16th Mar 2025', '23rd Mar 2025', '30th Mar 2025', '6th Apr 2025', '13th Apr 2025', '20th Apr 2025', '27th April 2025'
     ],
     online: true,
@@ -15381,7 +15380,7 @@ const classes = {
       onlineFee: 0,
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
-    dates: ['25th Jan 2025', '1st Feb 2025', '8th Feb 2025', '15th Feb 2025', '22nd Feb 2025', '1st Mar 2025', '8th Mar 2025', '15th Mar 2025', '22nd Mar 2025', '29th Mar 2025'],
+    dates: ['1st Feb 2025', '8th Feb 2025', '15th Feb 2025', '22nd Feb 2025', '1st Mar 2025', '8th Mar 2025', '15th Mar 2025', '22nd Mar 2025', '29th Mar 2025'],
     category: 'classes',
 
     online: false,
@@ -16677,7 +16676,7 @@ const certificate = {
           title: 'Fees',
           text: [
 
-            '2024 : Rs. 24,000/-'
+            'Rs. 24,000/-'
           ],
         },
       },
@@ -16959,7 +16958,7 @@ const certificate = {
         content: {
           title: 'Fees',
           text: [
-            '2024: Rs. 24,000/-'
+            'Rs. 24,000/-'
           ],
         },
       },
@@ -17175,8 +17174,10 @@ const certificate = {
       // '14th May to 3rd Sep 2025',
       // '5th Sep to 29th Dec 2025',
       // '3rd Jan to 28th Apr 2025',
-      '14th May to 3rd Sep 2025',
-      '5th Sep to 29th Dec 2025'
+      // '14th May to 3rd Sep 2025',
+      // '5th Sep to 29th Dec 2025',
+      '30th Apr to 20th Aug 2025', '29th Aug to 22nd Dec 2025'
+
     ],
     online: true,
     onCampus: true,
