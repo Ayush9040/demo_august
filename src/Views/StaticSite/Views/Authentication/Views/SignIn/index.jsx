@@ -646,7 +646,7 @@ const SignIn = () => {
           page ? page !== 'cart' ? navigate(`/enrollment/${page}`) : navigate('/shop/checkout') : navigate('/')
         }
         setOtp(new Array(4).fill(""))//clear OTP
-        setFormData({ ...formData, otp: '' });
+        // setFormData({ ...formData, otp: '' });
       }
       catch (err) {
         // alert('Invalid OTP')
@@ -697,16 +697,13 @@ const SignIn = () => {
 
   // create user after the final step validation
   const verifySignupOTP = async (userDetails, type, token) => {
-
     console.log("User Details from verifySign ", userDetails, type, token, getemail)
-
     const nameRegex = /^[A-Za-z]+( [A-Za-z]+)*$/;
     const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
     let det = { ...formData }
     const trimmedAddress1 = det?.address1?.replace(/\s{2,}/g, ' ').trim();
     const trimmedAddress2 = det?.address2?.replace(/\s{2,}/g, ' ').trim();
-
     det['address1'] = trimmedAddress1;
     det['address2'] = trimmedAddress2
     let details = { ...det }
@@ -771,8 +768,7 @@ const SignIn = () => {
       setIsToast(true)
     }
     else {
-
-      if (userDetails.otp.length == 4 && type != 'mobile') {//valid OTP
+      if (userDetails?.otp?.length == 4 && type != 'mobile') {//valid OTP
         // alert("From otp ")
         setIsBtnLoad(true)
         setFormData({ ...formData, errorIndex: 0 });
@@ -1529,7 +1525,6 @@ const SignIn = () => {
     // console.log(inputRefs.current);
 
     setFormData({ ...formData, otp: otpArry.join('') })
-
     // auto submit data
     let payload = formData
     payload['otp'] = otpArry.join('')
@@ -1585,7 +1580,7 @@ const SignIn = () => {
       )
       setIsMobileVerified(true)
       setOtp(new Array(4).fill(""))//clear OTP
-      setFormData({ ...formData, otp: '' });
+      // setFormData({ ...formData, otp: '' });
     }
     catch (err) {
       setFormData({ ...formData, errorIndex: 2 });
@@ -1887,7 +1882,7 @@ const SignIn = () => {
               {pageIndex == '1' && <>
                 <div className='header'>Log In Or Sign up to TYI Account</div>
                 <div className='sub-header'>Welcome to The Yoga Institute </div>
-                <div className='google-badge' onClick={() => googleSignup()}>
+                <div className='google-badge' onClick={() => { googleSignup(); setIsMobileVerified(false); setFormData({ ...formData, otp: '' }); }}>
                   <svg width="16px" height="16px" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M18.8 10.2083C18.8 9.55834 18.7417 8.93334 18.6333 8.33334H10V11.8792H14.9333C14.7208 13.025 14.075 13.9958 13.1042 14.6458V16.9458H16.0667C17.8 15.35 18.8 13 18.8 10.2083Z" fill="#4285F4" />
                     <path d="M10 19.1667C12.475 19.1667 14.55 18.3458 16.0667 16.9458L13.1042 14.6458C12.2833 15.1958 11.2333 15.5208 10 15.5208C7.61252 15.5208 5.59168 13.9083 4.87085 11.7417H1.80835V14.1167C3.31668 17.1125 6.41668 19.1667 10 19.1667Z" fill="#34A853" />
@@ -1896,7 +1891,7 @@ const SignIn = () => {
                   </svg>
                   &nbsp;Continue with Google</div>
 
-                <div className='google-badge' onClick={() => setEmailLogin(true)}>
+                <div className='google-badge' onClick={() => {setEmailLogin(true);setFormData({ ...formData, otp: '' })}}>
                   <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M18.2422 0.96875H1.75781C0.786602 0.96875 0 1.76023 0 2.72656V13.2734C0 14.2455 0.792383 15.0312 1.75781 15.0312H18.2422C19.2053 15.0312 20 14.2488 20 13.2734V2.72656C20 1.76195 19.2165 0.96875 18.2422 0.96875ZM17.996 2.14062L11.243 8.85809C10.9109 9.19012 10.4695 9.37293 10 9.37293C9.53047 9.37293 9.08906 9.19008 8.75594 8.85699L2.00398 2.14062H17.996ZM1.17188 13.0349V2.96582L6.23586 8.00312L1.17188 13.0349ZM2.00473 13.8594L7.06672 8.82957L7.9284 9.68672C8.48176 10.2401 9.21746 10.5448 10 10.5448C10.7825 10.5448 11.5182 10.2401 12.0705 9.68781L12.9333 8.82957L17.9953 13.8594H2.00473ZM18.8281 13.0349L13.7641 8.00312L18.8281 2.96582V13.0349Z" fill="black" />
                   </svg>
@@ -1933,7 +1928,7 @@ const SignIn = () => {
                   <div style={{ color: '#FF3B30' }}>Enter a valid Mobile number</div>
                 }
                 <div className="ftr-btn">
-                  <button type='click' className='primary-btn' onClick={() => { sendOTP(formData), setOtp(new Array(4).fill("")) }}>Continue</button>
+                  <button type='click' className='primary-btn' onClick={() => { sendOTP(formData); setOtp(new Array(4).fill("")); setFormData({ ...formData, otp: '' }) }}>Continue</button>
                   <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
                     <div className='tc-text'>By Clicking “Continue with google /mobile” you agree to
                       our <span onClick={() => openLink('https://theyogainstitute.org/terms-and-conditions')}>Terms & Conditions</span> and <span onClick={() => openLink('https://theyogainstitute.org/privacy-policy')}>Privacy Policy</span></div>
