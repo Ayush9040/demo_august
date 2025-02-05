@@ -16515,8 +16515,8 @@ const certificate = {
     textdescription8: '',
     textdescription9: '',
     textdescription10: '',
-    textdescription1: 'Wednesday, Friday & Saturday: 6:00 pm - 7:00 pm (IST)',
-    textdescription2: 'Mondays, Tuesdays & Thursdays: 11:30 am - 12:30 pm (IST) ',
+    textdescription1: 'Morning batch : Mondays, Tuesdays & Thursdays: 11:30 am - 12:30 pm (IST)',
+    textdescription2: 'Evening batch (Only May Month) :  Wednesday, Friday & Saturday: 6:00 pm - 7:00 pm (IST)',
     textdescription3: '',
     textdescription4: '',
     textdescription5: '',
@@ -16585,12 +16585,12 @@ const certificate = {
       duration: "24 sessions",
       timings: [
         {
-          day: "Wednesday, Friday & Saturday",
-          time: "6:00 pm - 7:00 pm (IST)"
+          day: "Morning batch : Mondays, Tuesdays & Thursdays",
+          time: "11:30 am - 12:30 pm (IST)"
         },
         {
-          day: "Mondays, Tuesdays & Thursdays",
-          time: "11:30 am - 12:30 pm (IST)"
+          day: "Evening batch (Only May Month) : Wednesday, Friday & Saturday",
+          time: "6:00 pm - 7:00 pm (IST)"
         }
       ]
     }
@@ -16645,8 +16645,8 @@ const certificate = {
         content: {
           title: '',
           text: [
-            'You will receive a printed manual with a detailed list of subjects.',
-            'access the detailed syllabus here',
+            // 'You will receive a printed manual with a detailed list of subjects.',
+            // 'access the detailed syllabus here',
           ],
         },
       },
@@ -16660,13 +16660,15 @@ const certificate = {
       {
         type: 'paragraph',
         content: {
-          title: 'Online Yoga Sessions',
+          title: 'Yoga Course',
           text: [
-            'Morning batch : Mondays, Tuesdays & Thursdays: 11:30 am - 12:30 pm (IST)',
+            'The morning sessions take place on Mondays, Tuesdays, and Thursdays from 11:30am to 12:30pm.',
 
-            'Evening batch: Wednesday, Friday & Saturday: 6:00 pm - 7:00 pm (IST)',
+            'We also have one evening batch which is held only once a year. In 2025 the evening batch will be in the month of May',
 
-            '24 sessions of one hour each',
+            'Evening batch timings : Wednesdays, Fridays, and Saturdays from 6:00pm to 7:00pm',
+
+            // '24 sessions of one hour each',
           ],
         },
       },
@@ -18058,7 +18060,7 @@ const alibaug = {
       timings: [
         {
           day: "",
-          time: "8:00 AM (18th) to 7:00 PM (19th)"
+          time: "8:00 AM (1st day) to 7:00 PM (2nd day)"
         }
       ]
     },
@@ -18129,7 +18131,8 @@ const alibaug = {
         },
       },
     ],
-  }, 4: {
+  },
+  4: {
     id: '',
     textdescription6: '',
     textdescription7: '',
@@ -18181,7 +18184,131 @@ const alibaug = {
       timings: [
         {
           day: "",
-          time: "8:00 AM (25th) to 7:00 PM (26th)"
+          time: "8:00 AM (1st day) to 7:00 PM (2nd day)"
+        }
+      ]
+    },
+    details: [
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: [
+            'The Yoga Institute’s Founder, Shri Yogendraji introduced Satsang with an objective for people to come together and find solutions for their worldly problems. It takes place on Sundays and is open to all so that everyone can benefit from the 1-hour session.',
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: [
+            'The highlighted aspect of Satsang is a discourse by the Spiritual Guru and Director of TYI, Dr. Hansaji whoshares her enlightening wisdom on various topics including health &amp; wellness, relationships, career, food,parenting, family and so on. Through her compassionate and personalized approach, Dr. Hansaji has helped countless individuals overcome their challenges and find greater health and well-being.'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: [
+            'You can get your queries resolved by Dr. Hansaji as she is dedicated to helping you find the support and guidance you need to thrive. She helps people solve their problems by focusing on the root cause of their issues, rather than simply addressing symptoms. She understands that many physical and emotional problems are interconnected and that by addressing the underlying causes, individuals can experience long-term relief.',
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: [
+            'Yoga is a powerful tool for managing physical, mental and emotional challenges and helping individuals find greater peace and balance in their lives. Satsang helps bring positivity and awareness into our lives. Dr. Hansaji shares profound wisdom of the ancient scriptures and a Yogic way of living which enhances the lives of all the satsangis and is relevant in the present time and age.',
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: [
+            'Towards the end, there is an enlightening question and answer session.',
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'About the programme',
+          text: [' Every Sunday between 9.30 am and 10.30am'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Prerequisites',
+          text: ['The programme is open to all. No age bar.'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Registration',
+          text: [' free entry - on the spot registration.'],
+        },
+      },
+    ],
+  },
+  5: {
+    id: '',
+    textdescription6: '',
+    textdescription7: '',
+    textdescription8: '',
+    textdescription9: '',
+    textdescription10: '',
+    textdescription1: '',
+    textdescription2: '',
+    textdescription3: '',
+    textdescription4: '',
+    textdescription5: '',
+    title: '2-Days Relax & Restore Yoga Retreat',
+    key: '2-days-relax-restore-yoga-retreat',
+    isRegular: true,
+    tenure: '2 day',
+    weekends: false,
+    batch: 1,
+    // templateId: 'GENERAL_AUTO_EMAIL',
+    templateId: {
+      templateOnline: '',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: '',
+      },
+    },
+    image: "/images/healthyWeighloss.jpg",
+    cardImage: "/images/healthyWeighloss.jpg",
+    mostPopular: false,
+    metaDescription:
+      'Towards the end, there is an enlightening question and answer session. ',
+    rating: 5,
+    colorCode: '#B77E7E',
+    timing: '1 Night, 2 Days',
+    fees: {
+      onlineFee: 10000,
+      offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
+    },
+    category: 'classes',
+    dates: ['15th Feb 2025 to 16th Feb 2025'
+    ],
+    online: false,
+    onCampus: false,
+    nonResidential: false,
+    residential: false,
+    certficate: false,
+    newName: '',
+    enrollInfo: {
+      duration: "1 Night, 2 Days",
+      timings: [
+        {
+          day: "",
+          time: "8:00 AM (15th) to 7:00 PM (16th)"
         }
       ]
     },
