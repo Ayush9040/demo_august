@@ -551,9 +551,15 @@ const EditStudentView = ({ formData, setFormData, setEmpty, empty, currentCourse
       const stateComponent = place.address_components?.find((component) =>
         component.types.includes('administrative_area_level_1')
       );
-      const cityComponent = place.address_components?.find((component) =>
+      let cityComponent = place.address_components?.find((component) =>
         component.types.includes('locality')
       );
+
+      if (!cityComponent) {//for some address locality wont be there
+        cityComponent = place.address_components?.find((component) =>
+          component.types.includes('administrative_area_level_2')
+        );
+      }
       const postalCodeComponent = place.address_components?.find((component) =>
         component.types.includes('postal_code')
       );

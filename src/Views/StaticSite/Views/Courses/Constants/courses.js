@@ -3488,7 +3488,7 @@ const ttc500hr = {
         content: {
           title: '',
           text: [
-            'On successfully passing the exam, students may avail of the triple certification benefit. The Yoga Institute is recognised by the Government of India (Ministry of AYUSH – QCI) and is the first Yoga school to be accredited after the AYUSH -QCI scheme was launched. The course conforms to the syllabus of Level 2 – Yoga Teacher YCB scheme– mentored by AYUSH (Government of India). Once The Yoga Institute’s exams are successfully cleared by the yoga students/participants they are eligible to appear for AYUSH Level 2 exams. This is an RYT 500-hour yoga teacher training course, fully accredited with the Yoga Alliance USA and the participant is eligible to apply on the Yoga Alliance site as Register Yoga Teacher. After successfully completing the online yoga certification course, ITTC certificate holders will be qualified to conduct Yoga sessions for:'
+            'On successfully passing the exam, students may avail of the triple certification benefit. The Yoga Institute is recognised by the Government of India (Ministry of AYUSH – QCI) and is the first Yoga school to be accredited after the AYUSH -QCI scheme was launched. The course conforms to the syllabus of Level 2 – Yoga Teacher YCB scheme– mentored by AYUSH (Government of India). Once The Yoga Institute’s exams are successfully cleared by the yoga students/participants they are eligible to appear for AYUSH Level 2 exams. This is an RYT 500-hour yoga teacher training course, fully accredited with the Yoga Alliance USA and the participant is eligible to apply on the Yoga Alliance site as Register Yoga Teacher. Upon successfully completing the online yoga certification course, ITTC certificate holders will be qualified to lead yoga sessions for school children, healthy adults in private or group settings, as well as in corporate, institutions, and social group environments. They will also be equipped to conduct sessions for those with minor ailments or disorders.'
           ],
         },
       },
@@ -4048,6 +4048,11 @@ const ttc900hr = {
             {
               listItem:
                 'For people, under the guidance of qualified medical practitioners, undergoing treatment for any physiological, psychological and psychosomatic diseases/conditions.',
+              subItems: [],
+            },
+            {
+              listItem:
+                'The ATTC certificate holders are also qualified to teach in TTC courses after successfully completing their internship',
               subItems: [],
             },
           ],
@@ -16548,7 +16553,7 @@ const certificate = {
       // '7th Aug to 28th Sep 2024· Evening',
       // '6th November 2024 to 28th December 2024· Evening',
       // '11th Nov 2024 to 2nd Jan 2025· Morning',
-      '3rd February to 27th March 2025· Morning',
+      // '3rd February to 27th March 2025· Morning',
       '5th May to 26th June 2025· Morning',
       '7th May to 28th June 2025· Evening',
       '4th August to 25th September 2025· Morning',

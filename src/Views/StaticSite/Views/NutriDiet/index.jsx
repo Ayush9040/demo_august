@@ -122,7 +122,7 @@ const NutriDiet = () => {
         "Tenure": plan,
         "date_time_timestamp": new Date().toISOString()
       });
-     
+
       console.log("Course_Clicked event tracked", window.clevertap);
     } else {
       console.error("CleverTap is not initialized.");
@@ -410,9 +410,13 @@ const NutriDiet = () => {
               Our Services:
             </p>
             <ul>
+              <li>Body Composition Analysis (Understand your muscle mass, body fat, visceral fat, and more).
+              </li>
               <li>Easy homemade recipes according to their culture.</li>
               <li>Daily WhatsApp support (daily diet recall & instant problem solving & affirmations).</li>
               <li>Detailed workout regimen according to duration of selected program.</li>
+              <li>Travel Dietary Guidelines</li>
+              <li>Restaurant Dietary Guidelines.</li>
               <li>Dietary therapeutic guidelines along with food avoid list.</li>
               <li>Nutritional counseling</li>
               <li>Maintenance plan</li>
