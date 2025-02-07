@@ -540,7 +540,7 @@ app.get('*', async (req, res) => {
   }
   let fbMeta = null
   if (reqPath == '/') {
-    fbMeta='<div class="meta-heading"><meta name="facebook-domain-verification" content="2rnujs1l73gzsee6p372eih8c81lik" /></div>'
+    fbMeta='<meta name="facebook-domain-verification" content="2rnujs1l73gzsee6p372eih8c81lik" />'
   }
 
   $('head').append([titleTag, script, ...metaArray, ...linkArray, fbMeta])
