@@ -16859,7 +16859,7 @@ const certificate = {
     textdescription3: '',
     textdescription4: '',
     textdescription5: '',
-    title: 'Certificate Program on Yoga for Cancer - Online & On Campus',
+    title: 'Certificate Program on Yoga for Cancer - Online',
     key: 'certificate-program-on-yoga-for-cancer',
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',

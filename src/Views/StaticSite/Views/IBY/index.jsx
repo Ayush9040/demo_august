@@ -209,7 +209,7 @@ const IBYcourse = () => {
     // 'JUN - AUG 2024',
     // 'SEP - NOV 2024',
     'DEC 2024 - FEB 2025',
-    'MAR 2024 - FEB 2025']
+    'MAR 2025 - FEB 2026']
 
   useEffect(() => {
 
@@ -276,7 +276,7 @@ const IBYcourse = () => {
           <div className="sattvik-section">
             <p className='nutri-page-bold'>USP of the IBY Class:</p>
             <ul>
-              <li>This class will be held by our senior teacher Ramendra Sir.</li>
+              <li>This class will be held by our senior teachers.</li>
               <li>The teachers can imbibe wisdom from Dr. Hansaji’s rich experiences and teachings.</li>
               <li>This interactive session will give participants the opportunity to get their queries resolved and get insights from Hansa Maa on various subjects.</li>
             </ul>
@@ -287,11 +287,11 @@ const IBYcourse = () => {
               {/* <li><span className='nutri-page-semi-bold' > Time: </span> Every Friday, 3:30 pm to 5:00 pm (IST)</li> */}
               <li><span className='nutri-page-semi-bold' > Fees: </span>
                 <ul>
-                  <li><span  > Q1 (Quarter1: March-April-May 2024) - </span> Rs. 2,500/-</li>
-                  <li><span  > Q2 (Quarter2: June- July- August 2024) - </span> Rs. 1875/-</li>
-                  <li><span  > Q3 (Quarter3: September- October- November 2024) - </span> Rs. 1250/-</li>
-                  <li><span> Q4 (Quarter4: December-January-February 2025) - </span> Rs. 625/-</li>
-                  <li><span> Annually- Rs 2500/- (March 2024 - February 2025) </span></li>
+                  <li><span  > Q1 (Quarter1: March-April-May 2025) - </span> Rs. 2,500/-</li>
+                  <li><span  > Q2 (Quarter2: June- July- August 2025) - </span> Rs. 1875/-</li>
+                  <li><span  > Q3 (Quarter3: September- October- November 2025) - </span> Rs. 1250/-</li>
+                  <li><span> Q4 (Quarter4: December-January-February 2026) - </span> Rs. 625/-</li>
+                  <li><span> Annually- Rs 2500/- (March 2025 - February 2026) </span></li>
 
                 </ul>
               </li>

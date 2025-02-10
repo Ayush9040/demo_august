@@ -307,7 +307,7 @@ const CourseDetails = ({ pageDate }) => {
       "Advanced Yoga Asana Regular Class - Online (Only for TYI Teachers)",
       "Healing Yoga Movement & Rhythm - Online",
       "Yog Prayas - Online",
-      "Online Meditation Course  (Foundation Course)",
+      // "Online Meditation Course  (Foundation Course)",
       "Regular Online Meditation Classes",
       "Couples’ Yoga Classes  - Online",
       "Department of Rehabilitation and Physiotherapy"
