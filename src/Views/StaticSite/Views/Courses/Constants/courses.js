@@ -5028,7 +5028,7 @@ const ttc900hr = {
     online: true,
     onCampus: true,
     nonResidential: true,
-    residential: true,
+    residential: false,
     certficate: false,
 
     tenure: '2 year',
@@ -6458,7 +6458,7 @@ const ttc900hr = {
     online: true,
     onCampus: true,
     nonResidential: true,
-    residential: true,
+    residential: false,
     certficate: false,
 
     tenure: '7 month',
