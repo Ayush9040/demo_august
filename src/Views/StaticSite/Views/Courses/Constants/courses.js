@@ -6442,7 +6442,7 @@ const ttc900hr = {
       // '1st Nov 2024',
       // '2nd Dec 2024',
       // '1st Jan 2025',
-      '1st Feb 2025',
+      // '1st Feb 2025',
       '1st Mar 2025',
       '1st Arp 2025',
       '1st May 2025',
@@ -9188,7 +9188,7 @@ const camps = {
         templateNonResidential: '',
       },
     },
-    dates: ['9th Feb 2025', '9th Mar 2025', '13th Apr 2025', '11th May 2025', '8th Jun 2025', '13th Jul 2025', '10th Aug 2025', '14th Sep 2025', '12th Oct 2025', '9th Nov 2025', '14t Dec 2025'],
+    dates: ['9th Mar 2025', '13th Apr 2025', '11th May 2025', '8th Jun 2025', '13th Jul 2025', '10th Aug 2025', '14th Sep 2025', '12th Oct 2025', '9th Nov 2025', '14t Dec 2025'],
     mostPopular: false,
     rating: 5,
     colorCode: '#EDBE66',
@@ -11545,7 +11545,7 @@ const camps = {
       // '13th Oct to 2nd Nov 2024',
       // '10th Nov to 30th Nov 2024',
       // '8th Dec to 28th Dec 2024',
-      '9th Feb to 1st Mar 2025',
+      // '9th Feb to 1st Mar 2025',
       '13th Apr to 3rd May 2025',
       '8th Jun to 28th Jun 2025',
       '10th Aug to 30th Aug 2025',
@@ -12889,7 +12889,7 @@ const camps = {
       },
     },
     dates: [
-      '8th Feb 2025', '12th Apr 2025', '14th Jun 2025'
+      '12th Apr 2025', '14th Jun 2025'
       , '10th Aug 2025', '11th Oct 2025', '13th Dec 2025'],
     online: false,
     onCampus: true,
@@ -14879,7 +14879,7 @@ const classes = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'classes',
-    dates: ['2nd Feb 2025', '9th Feb 2025', '16th Feb 2025', '23rd Feb 2025',
+    dates: ['9th Feb 2025', '16th Feb 2025', '23rd Feb 2025',
       '2nd Mar 2025', '9th Mar 2025', '16th Mar 2025', '23rd Mar 2025', '30th Mar 2025', '6th Apr 2025', '13th Apr 2025', '20th Apr 2025', '27th April 2025'
     ],
     online: true,
@@ -15385,7 +15385,7 @@ const classes = {
       onlineFee: 0,
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
-    dates: ['1st Feb 2025', '8th Feb 2025', '15th Feb 2025', '22nd Feb 2025', '1st Mar 2025', '8th Mar 2025', '15th Mar 2025', '22nd Mar 2025', '29th Mar 2025'],
+    dates: ['8th Feb 2025', '15th Feb 2025', '22nd Feb 2025', '1st Mar 2025', '8th Mar 2025', '15th Mar 2025', '22nd Mar 2025', '29th Mar 2025'],
     category: 'classes',
 
     online: false,
@@ -16886,7 +16886,7 @@ const certificate = {
     dates: [
       // '2nd Aug to 7th Sep 2024',
       // '15th Nov - 21st Dec 2024',
-      '7th Feb to 15th Mar 2025',
+      // '7th Feb to 15th Mar 2025',
       '2nd May to 7th Jun 2025',
       '1st Aug to 6th Sep 2025',
       '7th Nov  to 13th Dec 2025'
@@ -18427,7 +18427,7 @@ const specialEvents = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'classes',
-    dates: ['15th Dec 2024', '14th Jan 2025', '12th Feb 2025', '14th Mar 2025', '13th Apr 2025'
+    dates: ['12th Feb 2025', '14th Mar 2025', '13th Apr 2025'
       , '11th Jun 2025'
     ],
     online: true,
@@ -18510,7 +18510,7 @@ const specialEvents = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'classes',
-    dates: ['29th Dec 2024', '26th Jan 2025', '23rd Feb 2025', '30th Mar 2025', '27th Apr 2025'
+    dates: ['23rd Feb 2025', '30th Mar 2025', '27th Apr 2025'
       , '25th May 2025', '29th Jun 2025', '27th Jul 2025', '31st Aug 2025', '28th Sep 2025', '26th Oct 2025'
       , '30th Nov 2025', '28th Dec 2025'
     ],
