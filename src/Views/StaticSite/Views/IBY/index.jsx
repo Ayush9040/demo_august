@@ -194,8 +194,8 @@ const IBYcourse = () => {
         case 'DEC 2024 - FEB 2025':
           setPrice(625); setError(false); updateGA4(625, 'DEC 2024 - FEB 2025')
           break
-        case 'MAR 2024 - FEB 2025':
-          setPrice(2500); setError(false); updateGA4(2500, 'MAR 2024 - FEB 2025')
+        case 'MAR 2025 - FEB 2026':
+          setPrice(2500); setError(false); updateGA4(2500, 'MAR 2025 - FEB 2026')
           break
         default:
           break

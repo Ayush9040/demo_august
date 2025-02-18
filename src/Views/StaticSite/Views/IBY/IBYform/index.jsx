@@ -15,6 +15,8 @@ import { razorPayKey } from '../../../../../Constants/appSettings'
 import { useSelector } from 'react-redux'
 import ReactGA from 'react-ga4';
 import { handleCTPaymentCompletedCourse } from '../../../../../CleverTap/buttonClicked'
+import { toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 const IBYform = ({ setOpenForm, price, selectBatch }) => {
 
@@ -71,156 +73,173 @@ const IBYform = ({ setOpenForm, price, selectBatch }) => {
   }, [nameFromRedux, phoneNumberFromRedux, emailFromRedux, countryNameFromRedux, setFormData]);
 
   const submitForm = async () => {
-    const { data } = await IYBenroll(
-      {
-        name: formData.name,
-        phoneNumber: formData.phoneNumber,
-        email: formData.email,
-        country: formData.country,
-        paymentInfo: formData.paymentInfo,
-        certificationDocs: courseAsset?`${courseAsset}`:'',
-        courseInfo: 'IBY class',
+    try {
+      var { data } = await IYBenroll(
+        {
+          name: formData.name,
+          phoneNumber: formData.phoneNumber,
+          email: formData.email,
+          country: formData.country,
+          paymentInfo: formData.paymentInfo,
+          certificationDocs: courseAsset ? `${courseAsset}` : '',
+          courseInfo: 'IBY class',
 
-      }
-    )
-
-    ReactGA.event('begin_checkout', {
-      currency: 'INR',
-      value: price,
-      items: [{
-        item_name: 'IBY class',
-        item_id: 'IBY',
-        price: price,
-        quantity: 1
-      }]
-    });
-    console.log('begin_checkout', {
-      currency: 'INR',
-      value: price,
-      items: [{
-        item_name: 'IBY class',
-        item_id: 'IBY',
-        price: price,
-        quantity: 1
-      }]
-    });
-
-    const paymentOrderResponse = await createIYBorder(data.data._id, {
-      amount: price,
-      notes: 'IYB course',
-      objectType: 'IBY',
-    })
-    if (!paymentOrderResponse?.data?.amount && !paymentOrderResponse?.data?.id)
-      return 0
-
-    const options = {
-      // key: 'rzp_test_hWMewRlYQKgJIk', 
-      // Enter the Key ID generated from the Dashboard
-      key: razorPayKey,
-      amount: paymentOrderResponse.data.amount, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
-      currency: 'INR',
-      name: 'The Yoga Institute',
-      description: 'IYB course Transaction',
-      // image: 'https://example.com/your_logo', // un comment and add TYI logo
-      order_id: paymentOrderResponse.data.id, // eslint-disable-line
-      handler: async (res) => {
-        // Navigare to Success if razorpay_payment_id, razorpay_order_id, razorpay_signature is there
-        if (
-          res.razorpay_payment_id &&
-          res.razorpay_order_id &&
-          res.razorpay_signature
-        ) {
-          await successMail({
-            type: 'INFO_TYI',
-            HTMLTemplate: 'IBY_CLASS_FORM_CONFIRMATION_MAIL',
-            subject: 'Enrollment Confirmation',
-            data: {
-              name: formData.name,
-            },
-            receivers: [formData.email, 'info@theyogainstitute.org'],
-          })
-          handleCTPaymentCompletedCourse({
-            paymentStatus: "Success",
-            courseName: 'IBY class',
-            courseCategory: 'IBY class',
-            startDate: '',
-            endDate: '',
-            date: '',
-            pageName: window.location.href,
-            checkoutUrl: window.location.href,
-            pageUrl: window.location.href,
-            fee: price,
-            timings: '',
-            tenure: '',
-            onlineMode: '',
-            residentialMode: '',
-            nonResidentialMode: '',
-            residentialLocation: '',
-            nonResidentialLocation: '',
-            courseType: 'IBY class',
-            courseSubType: '',
-            language: '',
-            mode: formData.paymentInfo,
-            batchNo: '',
-            preRequisite: '',
-            status: "Success",
-            name: formData.name,
-            emailId: formData.email,
-            phoneNumber: formData.phone,
-            state: '',
-            city: '',
-            pinCode: '',
-            gender: '',
-            age: '',
-            nationality: formData.country,
-          })
-        
-          ReactGA.event('purchase', {
-            currency: 'INR',
-            value: price,
-            transaction_id:res.razorpay_payment_id,
-            items: [{
-              item_name: 'IBY class',
-              item_id: 'IBY',
-              price: price,
-              quantity: 1
-            }]
-          });
-          console.log('purchase', {
-            currency: 'INR',
-            value: price,
-            transaction_id:res.razorpay_payment_id,
-            items: [{
-              item_name: 'IBY class',
-              item_id: 'IBY',
-              price: price,
-              quantity: 1
-            }]
-          });
-
-          navigate(`/enrollment_thankyou/${'IBY-course'}`)
         }
-      },
-      prefill: {
-        name: formData.name,
-        email: formData.email,
-        contact: formData.phoneNumber,
-      },
-      notes: {
-        // description: plan,
-        formData: data.data._id,
-        name: formData.name,
-        email: formData.email,
-        contact: formData.phoneNumber,
-        paymentInfo: formData.paymentInfo,
-      },
-      theme: {
-        color: '#3399cc', // enter theme color for our website
-      },
+      )
+
+      ReactGA.event('begin_checkout', {
+        currency: 'INR',
+        value: price,
+        items: [{
+          item_name: 'IBY class',
+          item_id: 'IBY',
+          price: price,
+          quantity: 1
+        }]
+      });
+      console.log('begin_checkout', {
+        currency: 'INR',
+        value: price,
+        items: [{
+          item_name: 'IBY class',
+          item_id: 'IBY',
+          price: price,
+          quantity: 1
+        }]
+      });
+
+      const paymentOrderResponse = await createIYBorder(data.data._id, {
+        amount: price,
+        notes: 'IYB course',
+        objectType: 'IBY',
+      })
+      if (!paymentOrderResponse?.data?.amount && !paymentOrderResponse?.data?.id)
+        return 0
+
+      const options = {
+        // key: 'rzp_test_hWMewRlYQKgJIk', 
+        // Enter the Key ID generated from the Dashboard
+        key: razorPayKey,
+        amount: paymentOrderResponse.data.amount, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+        currency: 'INR',
+        name: 'The Yoga Institute',
+        description: 'IYB course Transaction',
+        // image: 'https://example.com/your_logo', // un comment and add TYI logo
+        order_id: paymentOrderResponse.data.id, // eslint-disable-line
+        handler: async (res) => {
+          // Navigare to Success if razorpay_payment_id, razorpay_order_id, razorpay_signature is there
+          if (
+            res.razorpay_payment_id &&
+            res.razorpay_order_id &&
+            res.razorpay_signature
+          ) {
+            await successMail({
+              type: 'INFO_TYI',
+              HTMLTemplate: 'IBY_CLASS_FORM_CONFIRMATION_MAIL',
+              subject: 'Enrollment Confirmation',
+              data: {
+                name: formData.name,
+              },
+              receivers: [formData.email, 'info@theyogainstitute.org'],
+            })
+            handleCTPaymentCompletedCourse({
+              paymentStatus: "Success",
+              courseName: 'IBY class',
+              courseCategory: 'IBY class',
+              startDate: '',
+              endDate: '',
+              date: '',
+              pageName: window.location.href,
+              checkoutUrl: window.location.href,
+              pageUrl: window.location.href,
+              fee: price,
+              timings: '',
+              tenure: '',
+              onlineMode: '',
+              residentialMode: '',
+              nonResidentialMode: '',
+              residentialLocation: '',
+              nonResidentialLocation: '',
+              courseType: 'IBY class',
+              courseSubType: '',
+              language: '',
+              mode: formData.paymentInfo,
+              batchNo: '',
+              preRequisite: '',
+              status: "Success",
+              name: formData.name,
+              emailId: formData.email,
+              phoneNumber: formData.phone,
+              state: '',
+              city: '',
+              pinCode: '',
+              gender: '',
+              age: '',
+              nationality: formData.country,
+            })
+
+            ReactGA.event('purchase', {
+              currency: 'INR',
+              value: price,
+              transaction_id: res.razorpay_payment_id,
+              items: [{
+                item_name: 'IBY class',
+                item_id: 'IBY',
+                price: price,
+                quantity: 1
+              }]
+            });
+            console.log('purchase', {
+              currency: 'INR',
+              value: price,
+              transaction_id: res.razorpay_payment_id,
+              items: [{
+                item_name: 'IBY class',
+                item_id: 'IBY',
+                price: price,
+                quantity: 1
+              }]
+            });
+
+            navigate(`/enrollment_thankyou/${'IBY-course'}`)
+          }
+        },
+        prefill: {
+          name: formData.name,
+          email: formData.email,
+          contact: formData.phoneNumber,
+        },
+        notes: {
+          // description: plan,
+          formData: data.data._id,
+          name: formData.name,
+          email: formData.email,
+          contact: formData.phoneNumber,
+          paymentInfo: formData.paymentInfo,
+        },
+        theme: {
+          color: '#3399cc', // enter theme color for our website
+        },
+      }
+      console.log(paymentOrderResponse, 'helotjiogery]iug')
+      const rzp = new window.Razorpay(options)
+      rzp.open()
     }
-    console.log(paymentOrderResponse, 'helotjiogery]iug')
-    const rzp = new window.Razorpay(options)
-    rzp.open()
+    catch (err) {
+      console.log(err?.data?.error);
+      toast.error(err?.data?.error, {
+        position: 'top-right',
+        autoClose: 1000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: true,
+        progress: undefined,
+        theme: 'colored',
+        icon: false,
+      })
+    }
+
   }
 
   const uploadDoc = async (file, type) => {
