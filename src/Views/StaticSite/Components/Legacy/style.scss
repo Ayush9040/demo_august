@@ -159,6 +159,8 @@ flex: 0 0 190px;
     }
     .legacy-container{
         .photo-container{
+            display: flex;
+            overflow-x: auto;
             .legacy-card{
                 margin: 0 auto;
             }

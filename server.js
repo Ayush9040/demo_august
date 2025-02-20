@@ -538,9 +538,12 @@ app.get('*', async (req, res) => {
   if (metaData && metaData.aTag) {//added to test related courses as anchor tags
     courseaTags = metaData.aTag.map((url) => `<a  class="meta-heading" href=https://theyogainstitute.org/${url} >https://theyogainstitute.org/${url}</a>`)
   }
+  let fbMeta = null
+  if (reqPath == '/') {
+    fbMeta='<meta name="facebook-domain-verification" content="2rnujs1l73gzsee6p372eih8c81lik" />'
+  }
 
-
-  $('head').append([titleTag, script, ...metaArray, ...linkArray])
+  $('head').append([titleTag, script, ...metaArray, ...linkArray, fbMeta])
   $('body').append([h1Tag, ...h2Tags, ...aTags, ...blogATags, pTag, pTagBlog, ...courseaTags])
   res.status(200).send($.html())
 })

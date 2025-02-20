@@ -156,7 +156,7 @@ const AlibaugCarousel = () => {
                 : `/user/sign-in?location=deep-dive-yoga-meditation-retreat`//&date=${selectDate}
             }
           >
-            <EnrollBtn text={'Book Now'} buttonAction={() => { addToCart('Deep Dive Yoga and Meditation Retreat', '/deep-dive-yoga-meditation-retreat', '8:00 AM (21st) to 7:00 PM (22nd)') }} /></Link>
+            <EnrollBtn text={'Book Now'} buttonAction={() => { addToCart('Deep Dive Yoga and Meditation Retreat', '/deep-dive-yoga-meditation-retreat', '8:00 AM (1st) to 7:00 PM (2nd)') }} /></Link>
         </div>
         <div className="alibaug-column alibaug-column-1">
           <img src="images/DeepOneYoga.jpg" />
@@ -176,12 +176,12 @@ const AlibaugCarousel = () => {
           <div className="apply-address">
             <h5>Book Your Retreat Now</h5>
             {window.innerWidth <= 768 ? <h5>Dates: <br /> <span style={{ fontWeight: '400' }}> Retreat 1 - 1st February 2025 to 2nd February 2025 (1 Night, 2 Days)</span><br />
-            <span style={{ fontWeight: '400', position: 'relative', top: '10px' }}> Retreat 2 -22nd February 2025 to 23rd February 2025 (1 Night, 2 Days)</span><br />
+              <span style={{ fontWeight: '400', position: 'relative', top: '10px' }}> Retreat 2 -22nd February 2025 to 23rd February 2025 (1 Night, 2 Days)</span><br />
               <span style={{ fontWeight: '400', position: 'relative', top: '10px' }}> Retreat 3 - 8th March 2025 to 9th March 2025 (1 Night, 2 Days)</span><br />
               <span style={{ fontWeight: '400', position: 'relative', top: '10px' }}> Retreat 4 - 22nd March 2025 to 23rd March 2025 (1 Night, 2 Days)</span>
             </h5> :
               <h5>Dates: <span style={{ fontWeight: '400' }}> Retreat 1 - 1st February 2025 to 2nd February 2025 (1 Night, 2 Days)</span><br />
-              <span style={{ fontWeight: '400', marginLeft: '59.9px', lineHeight: '30px' }}> Retreat 2 -22nd February 2025 to 23rd February 2025 (1 Night, 2 Days)</span><br />
+                <span style={{ fontWeight: '400', marginLeft: '59.9px', lineHeight: '30px' }}> Retreat 2 -22nd February 2025 to 23rd February 2025 (1 Night, 2 Days)</span><br />
                 <span style={{ fontWeight: '400', marginLeft: '59.9px', lineHeight: '30px' }}> Retreat 3 - 8th March 2025 to 9th March 2025 (1 Night, 2 Days)</span><br />
                 <span style={{ fontWeight: '400', marginLeft: '59.9px', lineHeight: '30px' }}> Retreat 4 - 22nd March 2025 to 23rd March 2025 (1 Night, 2 Days)</span>
               </h5>}
@@ -198,7 +198,7 @@ const AlibaugCarousel = () => {
                 : `/user/sign-in?location=forest-yoga-retreat`//&date=${selectDate}
             }
           >
-            <EnrollBtn text={'Book Now'} buttonAction={() => { addToCart('Forest Yoga Retreat', '/forest-yoga-retreat', '8:00 AM (28th) to 7:00 PM (29th)') }} /></Link>
+            <EnrollBtn text={'Book Now'} buttonAction={() => { addToCart('Forest Yoga Retreat', '/forest-yoga-retreat', '8:00 AM (Day 1) to 7:00 PM (Day 2)') }} /></Link>
         </div>
 
       </div>
@@ -216,7 +216,7 @@ const AlibaugCarousel = () => {
               <span style={{ fontWeight: '400', position: 'relative', top: '10px' }}> Retreat 3 - 15th March 2025 to 16th March 2025 (1 Night, 2 Days)</span>
             </h5> :
               <h5>Dates: <span style={{ fontWeight: '400' }}> Retreat 1 - 25th January 2025 to 26th January 2025 (1 Night, 2 Days)</span><br />
-              <span style={{ fontWeight: '400', marginLeft: '59.9px', lineHeight: '30px' }}> Retreat 2 - 8th February 2025 to 9th February 2025 (1 Night, 2 Days)</span><br />
+                <span style={{ fontWeight: '400', marginLeft: '59.9px', lineHeight: '30px' }}> Retreat 2 - 8th February 2025 to 9th February 2025 (1 Night, 2 Days)</span><br />
                 <span style={{ fontWeight: '400', marginLeft: '59.9px', lineHeight: '30px' }}> Retreat 3 - 15th March 2025 to 16th March 2025 (1 Night, 2 Days)</span>
               </h5>}
             <h5>
@@ -232,10 +232,47 @@ const AlibaugCarousel = () => {
                 : `/user/sign-in?location=healthy-weightloss-wellness-retreat`//&date=${selectDate}
             }
           >
-            <EnrollBtn text={'Book Now'} buttonAction={() => { addToCart('Deep Dive Yoga and Meditation Retreat', '/deep-dive-yoga-meditation-retreat', '8:00 AM (21st) to 7:00 PM (22nd)') }} /></Link>
+            <EnrollBtn text={'Book Now'} buttonAction={() => { addToCart('Deep Dive Yoga and Meditation Retreat', '/deep-dive-yoga-meditation-retreat', '8:00 AM (Day 1) to 7:00 PM (Day 2)') }} /></Link>
         </div>
         <div className="alibaug-column alibaug-column-1">
           <img src="images/healthyWeighloss.jpg" />
+        </div>
+
+      </div>
+
+      <div className="alibaug-container">
+        <div className="alibaug-column alibaug-column-1">
+          <img src="images/2-Day.jpg" />
+        </div>
+        <div className="alibaug-column alibaug-column-2">
+          <h2>2-Days Relax & Restore Yoga Retreat</h2>
+          <p>
+            Our 2-day yoga retreat offers a variety of activities to promote relaxation and mindfulness. Experience sunrise pranayama and meditation at Kihim Beach, followed by gentle asanas to release tension. Enjoy deep relaxation yoga techniques, a digital detox, and a guided nature walk with breath awareness. Savor sattvik meals during mindful eating sessions, and experience silence (Mauna) for self-reflection. Engage in journaling for emotional wellness, mantra chanting for healing, and unwind with bonfire conversations. Practice pranayama to ensure restful sleep, leaving you fully restored.
+          </p>
+          <div className="apply-address">
+            <h5>Book Your Retreat Now</h5>
+            {window.innerWidth <= 768 ? <h5>Dates: <br /> <span style={{ fontWeight: '400' }}> Retreat 1 - 1st February 2025 to 2nd February 2025 (1 Night, 2 Days)</span><br />
+              <span style={{ fontWeight: '400', position: 'relative', top: '10px' }}> Retreat 2 -22nd February 2025 to 23rd February 2025 (1 Night, 2 Days)</span><br />
+              <span style={{ fontWeight: '400', position: 'relative', top: '10px' }}> Retreat 3 - 8th March 2025 to 9th March 2025 (1 Night, 2 Days)</span><br />
+              <span style={{ fontWeight: '400', position: 'relative', top: '10px' }}> Retreat 4 - 22nd March 2025 to 23rd March 2025 (1 Night, 2 Days)</span>
+            </h5> :
+              <h5>Dates:
+                <span style={{ fontWeight: '400' }}> 15th February 2025 to 16th February 2025 (1 Night, 2 Days)</span>
+              </h5>}
+            <h5>
+              Cost: <span style={{ fontWeight: '400' }}>Rs. 10,000/- (Per Person – Inclusive of 8 Meals)</span>
+            </h5>
+            <h5>Time: <span style={{ fontWeight: '400' }}>8:00 AM (Day 1) to 7:00 PM (Day 2)</span></h5>
+            <h5>Call us at <a href='tel: + 91 7738155500'>+ 91 7738155500</a>  or email us at <a href='mailto:info@theyogainstitute.org'>info@theyogainstitute.org</a></h5>
+          </div>
+          <Link
+            to={
+              isLoggedIn
+                ? `/enrollment/2-days-relax-restore-yoga-retreat`///?date=${selectDate}
+                : `/user/sign-in?location=2-days-relax-restore-yoga-retreat`//&date=${selectDate}
+            }
+          >
+            <EnrollBtn text={'Book Now'} buttonAction={() => { addToCart('2-Days Relax & Restore Yoga Retreat', '/2-days-relax-restore-yoga-retreat', '8:00 AM (15th) to 7:00 PM (16th)') }} /></Link>
         </div>
 
       </div>

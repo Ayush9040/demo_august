@@ -59,7 +59,7 @@ const ttc200hr = {
       // '2nd Nov to 30th Nov 2024',
       // '2nd Dec to 31st Dec 2024',
       // '1st Jan to 31st Jan 2025',
-      '1st Feb to 28th Feb 2025',
+      // '1st Feb to 28th Feb 2025',
       '1st Mar to 31st Mar 2025',
       '1st Apr to 30th Apr 2025',
       '1st May to 31st May 2025',
@@ -3488,7 +3488,7 @@ const ttc500hr = {
         content: {
           title: '',
           text: [
-            'On successfully passing the exam, students may avail of the triple certification benefit. The Yoga Institute is recognised by the Government of India (Ministry of AYUSH – QCI) and is the first Yoga school to be accredited after the AYUSH -QCI scheme was launched. The course conforms to the syllabus of Level 2 – Yoga Teacher YCB scheme– mentored by AYUSH (Government of India). Once The Yoga Institute’s exams are successfully cleared by the yoga students/participants they are eligible to appear for AYUSH Level 2 exams. This is an RYT 500-hour yoga teacher training course, fully accredited with the Yoga Alliance USA and the participant is eligible to apply on the Yoga Alliance site as Register Yoga Teacher. After successfully completing the online yoga certification course, ITTC certificate holders will be qualified to conduct Yoga sessions for:'
+            'On successfully passing the exam, students may avail of the triple certification benefit. The Yoga Institute is recognised by the Government of India (Ministry of AYUSH – QCI) and is the first Yoga school to be accredited after the AYUSH -QCI scheme was launched. The course conforms to the syllabus of Level 2 – Yoga Teacher YCB scheme– mentored by AYUSH (Government of India). Once The Yoga Institute’s exams are successfully cleared by the yoga students/participants they are eligible to appear for AYUSH Level 2 exams. This is an RYT 500-hour yoga teacher training course, fully accredited with the Yoga Alliance USA and the participant is eligible to apply on the Yoga Alliance site as Register Yoga Teacher. Upon successfully completing the online yoga certification course, ITTC certificate holders will be qualified to lead yoga sessions for school children, healthy adults in private or group settings, as well as in corporate, institutions, and social group environments. They will also be equipped to conduct sessions for those with minor ailments or disorders.'
           ],
         },
       },
@@ -4048,6 +4048,11 @@ const ttc900hr = {
             {
               listItem:
                 'For people, under the guidance of qualified medical practitioners, undergoing treatment for any physiological, psychological and psychosomatic diseases/conditions.',
+              subItems: [],
+            },
+            {
+              listItem:
+                'The ATTC certificate holders are also qualified to teach in TTC courses after successfully completing their internship',
               subItems: [],
             },
           ],
@@ -5023,7 +5028,7 @@ const ttc900hr = {
     online: true,
     onCampus: true,
     nonResidential: true,
-    residential: true,
+    residential: false,
     certficate: false,
 
     tenure: '2 year',
@@ -6437,7 +6442,7 @@ const ttc900hr = {
       // '1st Nov 2024',
       // '2nd Dec 2024',
       // '1st Jan 2025',
-      '1st Feb 2025',
+      // '1st Feb 2025',
       '1st Mar 2025',
       '1st Arp 2025',
       '1st May 2025',
@@ -6453,7 +6458,7 @@ const ttc900hr = {
     online: true,
     onCampus: true,
     nonResidential: true,
-    residential: true,
+    residential: false,
     certficate: false,
 
     tenure: '7 month',
@@ -7464,7 +7469,7 @@ const camps = {
         templateNonResidential: '',
       },
     },
-    dates: ['2nd Feb 2025', '6th Apr 2025', '1st Jun 2025', '3rd Aug 2025', '5th Oct 2025', '7th Dec 2025'],
+    dates: ['6th Apr 2025', '1st Jun 2025', '3rd Aug 2025', '5th Oct 2025', '7th Dec 2025'],
     mostPopular: false,
     rating: 5,
     colorCode: '#CE9B51',
@@ -9183,7 +9188,7 @@ const camps = {
         templateNonResidential: '',
       },
     },
-    dates: ['9th Feb 2025', '9th Mar 2025', '13th Apr 2025', '11th May 2025', '8th Jun 2025', '13th Jul 2025', '10th Aug 2025', '14th Sep 2025', '12th Oct 2025', '9th Nov 2025', '14t Dec 2025'],
+    dates: ['9th Mar 2025', '13th Apr 2025', '11th May 2025', '8th Jun 2025', '13th Jul 2025', '10th Aug 2025', '14th Sep 2025', '12th Oct 2025', '9th Nov 2025', '14t Dec 2025'],
     mostPopular: false,
     rating: 5,
     colorCode: '#EDBE66',
@@ -9365,7 +9370,7 @@ const camps = {
         templateNonResidential: '',
       },
     },
-    dates: ['1st Feb 2025', '1st Mar 2025', '5th Apr 2025', '3rd May 2025', '7th Jun 2025', '5th Jul 2025', '2nd Aug 2025', '6th Sep 2025', '4th Oct 2025', '1st Nov 2025', '6th Dec 2025'],
+    dates: ['1st Mar 2025', '5th Apr 2025', '3rd May 2025', '7th Jun 2025', '5th Jul 2025', '2nd Aug 2025', '6th Sep 2025', '4th Oct 2025', '1st Nov 2025', '6th Dec 2025'],
     mostPopular: false,
     rating: 5,
     colorCode: '#DDAB58',
@@ -10705,7 +10710,7 @@ const camps = {
       // '3rd Nov to 23rd Nov 2024',
       // '1st Dec to 21st Dec 2024',
       // '5th Jan to 25th Jan 2025',
-      '2nd Feb to 22nd Feb 2025',
+      // '2nd Feb to 22nd Feb 2025',
       '2nd Mar to 22nd Mar 2025',
       '6th Apr to 26th Apr 2025',
       '4th May to 24th May 2025',
@@ -11135,7 +11140,7 @@ const camps = {
       // '3rd Nov to 23rd Nov 2024',
       // '1st Dec to 21st Dec 2024',
       // '5th Jan to 25th Jan 2025',
-      '2nd Feb to 22nd Feb 2025',
+      // '2nd Feb to 22nd Feb 2025',
       '2nd Mar to 22nd Mar 2025',
       '6th Apr to 26th Apr 2025',
       '4th May to 24th May 2025',
@@ -11540,7 +11545,7 @@ const camps = {
       // '13th Oct to 2nd Nov 2024',
       // '10th Nov to 30th Nov 2024',
       // '8th Dec to 28th Dec 2024',
-      '9th Feb to 1st Mar 2025',
+      // '9th Feb to 1st Mar 2025',
       '13th Apr to 3rd May 2025',
       '8th Jun to 28th Jun 2025',
       '10th Aug to 30th Aug 2025',
@@ -12884,7 +12889,7 @@ const camps = {
       },
     },
     dates: [
-      '8th Feb 2025', '12th Apr 2025', '14th Jun 2025'
+      '12th Apr 2025', '14th Jun 2025'
       , '10th Aug 2025', '11th Oct 2025', '13th Dec 2025'],
     online: false,
     onCampus: true,
@@ -14535,7 +14540,7 @@ const classes = {
       // '4th Nov to 29th Nov 2024',
       // '2nd Dec to 27th Dec 2024',
       // '6th Jan to 31st Jan 2025',
-      '3rd Feb to 28th Feb 2025',
+      // '3rd Feb to 28th Feb 2025',
       '3rd Mar to 28th Mar 2025',
       '7th Apr to 2nd May 2025',
       '5th May to 30th May 2025',
@@ -14874,7 +14879,7 @@ const classes = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'classes',
-    dates: ['2nd Feb 2025', '9th Feb 2025', '16th Feb 2025', '23rd Feb 2025',
+    dates: ['9th Feb 2025', '16th Feb 2025', '23rd Feb 2025',
       '2nd Mar 2025', '9th Mar 2025', '16th Mar 2025', '23rd Mar 2025', '30th Mar 2025', '6th Apr 2025', '13th Apr 2025', '20th Apr 2025', '27th April 2025'
     ],
     online: true,
@@ -15380,7 +15385,7 @@ const classes = {
       onlineFee: 0,
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
-    dates: ['1st Feb 2025', '8th Feb 2025', '15th Feb 2025', '22nd Feb 2025', '1st Mar 2025', '8th Mar 2025', '15th Mar 2025', '22nd Mar 2025', '29th Mar 2025'],
+    dates: ['8th Feb 2025', '15th Feb 2025', '22nd Feb 2025', '1st Mar 2025', '8th Mar 2025', '15th Mar 2025', '22nd Mar 2025', '29th Mar 2025'],
     category: 'classes',
 
     online: false,
@@ -16515,8 +16520,8 @@ const certificate = {
     textdescription8: '',
     textdescription9: '',
     textdescription10: '',
-    textdescription1: 'Wednesday, Friday & Saturday: 6:00 pm - 7:00 pm (IST)',
-    textdescription2: 'Mondays, Tuesdays & Thursdays: 11:30 am - 12:30 pm (IST) ',
+    textdescription1: 'Morning batch : Mondays, Tuesdays & Thursdays: 11:30 am - 12:30 pm (IST)',
+    textdescription2: 'Evening batch (Only May Month) :  Wednesday, Friday & Saturday: 6:00 pm - 7:00 pm (IST)',
     textdescription3: '',
     textdescription4: '',
     textdescription5: '',
@@ -16548,7 +16553,7 @@ const certificate = {
       // '7th Aug to 28th Sep 2024· Evening',
       // '6th November 2024 to 28th December 2024· Evening',
       // '11th Nov 2024 to 2nd Jan 2025· Morning',
-      '3rd February to 27th March 2025· Morning',
+      // '3rd February to 27th March 2025· Morning',
       '5th May to 26th June 2025· Morning',
       '7th May to 28th June 2025· Evening',
       '4th August to 25th September 2025· Morning',
@@ -16585,12 +16590,12 @@ const certificate = {
       duration: "24 sessions",
       timings: [
         {
-          day: "Wednesday, Friday & Saturday",
-          time: "6:00 pm - 7:00 pm (IST)"
+          day: "Morning batch : Mondays, Tuesdays & Thursdays",
+          time: "11:30 am - 12:30 pm (IST)"
         },
         {
-          day: "Mondays, Tuesdays & Thursdays",
-          time: "11:30 am - 12:30 pm (IST)"
+          day: "Evening batch (Only May Month) : Wednesday, Friday & Saturday",
+          time: "6:00 pm - 7:00 pm (IST)"
         }
       ]
     }
@@ -16645,8 +16650,8 @@ const certificate = {
         content: {
           title: '',
           text: [
-            'You will receive a printed manual with a detailed list of subjects.',
-            'access the detailed syllabus here',
+            // 'You will receive a printed manual with a detailed list of subjects.',
+            // 'access the detailed syllabus here',
           ],
         },
       },
@@ -16660,13 +16665,15 @@ const certificate = {
       {
         type: 'paragraph',
         content: {
-          title: 'Online Yoga Sessions',
+          title: 'Yoga Course',
           text: [
-            'Morning batch : Mondays, Tuesdays & Thursdays: 11:30 am - 12:30 pm (IST)',
+            'The morning sessions take place on Mondays, Tuesdays, and Thursdays from 11:30am to 12:30pm.',
 
-            'Evening batch: Wednesday, Friday & Saturday: 6:00 pm - 7:00 pm (IST)',
+            'We also have one evening batch which is held only once a year. In 2025 the evening batch will be in the month of May',
 
-            '24 sessions of one hour each',
+            'Evening batch timings : Wednesdays, Fridays, and Saturdays from 6:00pm to 7:00pm',
+
+            // '24 sessions of one hour each',
           ],
         },
       },
@@ -16852,7 +16859,7 @@ const certificate = {
     textdescription3: '',
     textdescription4: '',
     textdescription5: '',
-    title: 'Certificate Program on Yoga for Cancer - Online & On Campus',
+    title: 'Certificate Program on Yoga for Cancer - Online',
     key: 'certificate-program-on-yoga-for-cancer',
     batch: 1,
     // templateId: 'GENERAL_AUTO_EMAIL',
@@ -16879,7 +16886,7 @@ const certificate = {
     dates: [
       // '2nd Aug to 7th Sep 2024',
       // '15th Nov - 21st Dec 2024',
-      '7th Feb to 15th Mar 2025',
+      // '7th Feb to 15th Mar 2025',
       '2nd May to 7th Jun 2025',
       '1st Aug to 6th Sep 2025',
       '7th Nov  to 13th Dec 2025'
@@ -18058,7 +18065,7 @@ const alibaug = {
       timings: [
         {
           day: "",
-          time: "8:00 AM (18th) to 7:00 PM (19th)"
+          time: "8:00 AM (1st day) to 7:00 PM (2nd day)"
         }
       ]
     },
@@ -18129,7 +18136,8 @@ const alibaug = {
         },
       },
     ],
-  }, 4: {
+  },
+  4: {
     id: '',
     textdescription6: '',
     textdescription7: '',
@@ -18181,7 +18189,131 @@ const alibaug = {
       timings: [
         {
           day: "",
-          time: "8:00 AM (25th) to 7:00 PM (26th)"
+          time: "8:00 AM (1st day) to 7:00 PM (2nd day)"
+        }
+      ]
+    },
+    details: [
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: [
+            'The Yoga Institute’s Founder, Shri Yogendraji introduced Satsang with an objective for people to come together and find solutions for their worldly problems. It takes place on Sundays and is open to all so that everyone can benefit from the 1-hour session.',
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: [
+            'The highlighted aspect of Satsang is a discourse by the Spiritual Guru and Director of TYI, Dr. Hansaji whoshares her enlightening wisdom on various topics including health &amp; wellness, relationships, career, food,parenting, family and so on. Through her compassionate and personalized approach, Dr. Hansaji has helped countless individuals overcome their challenges and find greater health and well-being.'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: [
+            'You can get your queries resolved by Dr. Hansaji as she is dedicated to helping you find the support and guidance you need to thrive. She helps people solve their problems by focusing on the root cause of their issues, rather than simply addressing symptoms. She understands that many physical and emotional problems are interconnected and that by addressing the underlying causes, individuals can experience long-term relief.',
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: [
+            'Yoga is a powerful tool for managing physical, mental and emotional challenges and helping individuals find greater peace and balance in their lives. Satsang helps bring positivity and awareness into our lives. Dr. Hansaji shares profound wisdom of the ancient scriptures and a Yogic way of living which enhances the lives of all the satsangis and is relevant in the present time and age.',
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: '',
+          text: [
+            'Towards the end, there is an enlightening question and answer session.',
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'About the programme',
+          text: [' Every Sunday between 9.30 am and 10.30am'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Prerequisites',
+          text: ['The programme is open to all. No age bar.'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Registration',
+          text: [' free entry - on the spot registration.'],
+        },
+      },
+    ],
+  },
+  5: {
+    id: '',
+    textdescription6: '',
+    textdescription7: '',
+    textdescription8: '',
+    textdescription9: '',
+    textdescription10: '',
+    textdescription1: '',
+    textdescription2: '',
+    textdescription3: '',
+    textdescription4: '',
+    textdescription5: '',
+    title: '2-Days Relax & Restore Yoga Retreat',
+    key: '2-days-relax-restore-yoga-retreat',
+    isRegular: true,
+    tenure: '2 day',
+    weekends: false,
+    batch: 1,
+    // templateId: 'GENERAL_AUTO_EMAIL',
+    templateId: {
+      templateOnline: '',
+      templateOffline: {
+        templateResidential: '',
+        templateNonResidential: '',
+      },
+    },
+    image: "/images/healthyWeighloss.jpg",
+    cardImage: "/images/healthyWeighloss.jpg",
+    mostPopular: false,
+    metaDescription:
+      'Towards the end, there is an enlightening question and answer session. ',
+    rating: 5,
+    colorCode: '#B77E7E',
+    timing: '1 Night, 2 Days',
+    fees: {
+      onlineFee: 10000,
+      offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
+    },
+    category: 'classes',
+    dates: ['15th Feb 2025 to 16th Feb 2025'
+    ],
+    online: false,
+    onCampus: false,
+    nonResidential: false,
+    residential: false,
+    certficate: false,
+    newName: '',
+    enrollInfo: {
+      duration: "1 Night, 2 Days",
+      timings: [
+        {
+          day: "",
+          time: "8:00 AM (15th) to 7:00 PM (16th)"
         }
       ]
     },
@@ -18295,7 +18427,7 @@ const specialEvents = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'classes',
-    dates: ['15th Dec 2024', '14th Jan 2025', '12th Feb 2025', '14th Mar 2025', '13th Apr 2025'
+    dates: ['12th Feb 2025', '14th Mar 2025', '13th Apr 2025'
       , '11th Jun 2025'
     ],
     online: true,
@@ -18378,7 +18510,7 @@ const specialEvents = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'classes',
-    dates: ['29th Dec 2024', '26th Jan 2025', '23rd Feb 2025', '30th Mar 2025', '27th Apr 2025'
+    dates: ['23rd Feb 2025', '30th Mar 2025', '27th Apr 2025'
       , '25th May 2025', '29th Jun 2025', '27th Jul 2025', '31st Aug 2025', '28th Sep 2025', '26th Oct 2025'
       , '30th Nov 2025', '28th Dec 2025'
     ],
