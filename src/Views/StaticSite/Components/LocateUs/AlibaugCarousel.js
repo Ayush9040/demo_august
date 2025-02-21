@@ -159,14 +159,14 @@ const AlibaugCarousel = () => {
             <EnrollBtn text={'Book Now'} buttonAction={() => { addToCart('Deep Dive Yoga and Meditation Retreat', '/deep-dive-yoga-meditation-retreat', '8:00 AM (1st) to 7:00 PM (2nd)') }} /></Link>
         </div>
         <div className="alibaug-column alibaug-column-1">
-          <img src="images/DeepOneYoga.jpg" />
+          <img src="images/Meditate_1.jpg" />
         </div>
 
       </div>
 
       <div className="alibaug-container">
         <div className="alibaug-column alibaug-column-1">
-          <img src="images/ForestYoga.jpg" />
+          <img src="images/Forest_2.jpg" />
         </div>
         <div className="alibaug-column alibaug-column-2">
           <h2>Forest Yoga Retreat</h2>
@@ -235,7 +235,7 @@ const AlibaugCarousel = () => {
             <EnrollBtn text={'Book Now'} buttonAction={() => { addToCart('Deep Dive Yoga and Meditation Retreat', '/deep-dive-yoga-meditation-retreat', '8:00 AM (Day 1) to 7:00 PM (Day 2)') }} /></Link>
         </div>
         <div className="alibaug-column alibaug-column-1">
-          <img src="images/healthyWeighloss.jpg" />
+          <img src="images/Health_3.jpg" />
         </div>
 
       </div>
