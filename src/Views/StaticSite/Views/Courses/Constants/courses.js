@@ -16150,7 +16150,7 @@ const classes = {
         type: 'paragraph',
         content: {
           title: 'Admission Process',
-          text: ['Application Deadline: 10th August', 'Course Commencement Date: 16th August 2024', 'Selection Criteria: Based on merit and timely registration.'],
+          text: ['Application Deadline: 31st May 2025', 'Course Commencement Date: 16th June 2025', 'Selection Criteria: Based on merit and timely registration.'],
         },
       },
       {
