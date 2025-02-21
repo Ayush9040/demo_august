@@ -615,7 +615,7 @@ const ttc200hr = {
       // '5th Aug – 28th Sep 2024',
       // '7th Oct – 30th Nov 2024',
       // '9th Dec – 1st Feb 2025',
-      '10th Feb - 5th Apr 2025',
+      // '10th Feb - 5th Apr 2025',
       '14th Apr - 7th Jun 2025',
       '16th Jun - 9th Aug 2025',
       '18th Aug - 11th Oct 2025',
@@ -3679,7 +3679,7 @@ const ttc900hr = {
       // '27th Apr to 21st Jul 2024',
       // '27th Jul to 20th Oct 2024',
       // '26th Oct to 20th Jan 2025',
-      '25th Jan to 20th Apr 2025',
+      // '25th Jan to 20th Apr 2025',
       '26th Apr to 20th Jul 2025',
       '26th Jul to 19th Oct 2025',
       '25th Oct to 18th Jan 2026',
@@ -4271,7 +4271,7 @@ const ttc900hr = {
       // '1st Nov 2024',
       // '1st Dec 2024',
       // '1st Jan 2025',
-      '3rd Feb 2025',
+      // '3rd Feb 2025',
       '3rd Mar 2025',
       '1st Arp 2025',
       '1st May 2025',
@@ -8622,7 +8622,7 @@ const camps = {
     dates: [
       // '14th Dec & 15th Dec 2024',
       // '20th Jan & 21st Jan 2025',
-      '15th Feb & 16th Feb 2025',
+      // '15th Feb & 16th Feb 2025',
       '17th Mar & 18th Mar 2025',
       '19th Apr & 20th Apr 2025',
       '19th May & 20th May 2025',
@@ -12098,7 +12098,8 @@ const camps = {
       },
     },
     dates: [
-      '16th Feb 2025', '29th Jun 2025', '19th Oct 2025'],
+      // '16th Feb 2025', 
+      '29th Jun 2025', '19th Oct 2025'],
     online: false,
     onCampus: true,
     nonResidential: true,
@@ -12573,7 +12574,8 @@ const camps = {
       },
     },
     dates: [
-      '15th Feb 2025', '31st May 2025', '31st Aug 2025'
+      // '15th Feb 2025', 
+      '31st May 2025', '31st Aug 2025'
       , '30th Nov 2025'],
     online: false,
     onCampus: true,
@@ -14879,7 +14881,9 @@ const classes = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'classes',
-    dates: ['9th Feb 2025', '16th Feb 2025', '23rd Feb 2025',
+    dates: [
+      // '9th Feb 2025', '16th Feb 2025', 
+      '23rd Feb 2025',
       '2nd Mar 2025', '9th Mar 2025', '16th Mar 2025', '23rd Mar 2025', '30th Mar 2025', '6th Apr 2025', '13th Apr 2025', '20th Apr 2025', '27th April 2025'
     ],
     online: true,
@@ -15385,7 +15389,9 @@ const classes = {
       onlineFee: 0,
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
-    dates: ['8th Feb 2025', '15th Feb 2025', '22nd Feb 2025', '1st Mar 2025', '8th Mar 2025', '15th Mar 2025', '22nd Mar 2025', '29th Mar 2025'],
+    dates: [
+      // '8th Feb 2025', '15th Feb 2025', 
+      '22nd Feb 2025', '1st Mar 2025', '8th Mar 2025', '15th Mar 2025', '22nd Mar 2025', '29th Mar 2025'],
     category: 'classes',
 
     online: false,
@@ -16092,19 +16098,43 @@ const classes = {
           points: [
             {
               listItem: 'Semester - I',
-              subItems: ['Fundamentals of Indian Philosophy', 'Human Anatomy and Physiology', 'Yoga Tradition and Classical Texts', 'Practical and Yoga Teaching'],
+              subItems: [
+                'Fundamentals Of Indian Philosophy - 1', 
+                'Yoga Tradition', 
+                'Research Methodology', 
+                'Yoga Practical I',
+                'Hathayoga Texts'
+              ],
             },
             {
               listItem: 'Semester - II',
-              subItems: ['Principles of Indian Philosophy', 'Patanjali Yoga Sutras', 'Yoga Upanishad and modern philosophers', 'Applied Yoga', 'Practical and Yoga Teaching'],
+              subItems: [
+                'Indian Philosophy & Yogasutra', 
+                'Yoga-Upanishad and Modern Yoga', 
+                'Internship', 
+                'Yoga Practical II', 
+                'Dietetics, Nutrition and Yogic Diet'
+              ],
             },
             {
               listItem: 'Semester - III',
-              subItems: ['Traditional Yoga Texts – I', 'Yoga and allied sciences', 'Research Methodology', 'Yoga applications', 'Practical and Yoga Teaching'],
+              subItems: [
+                'Classical Yoga Texts', 
+                'Yoga & Allied Sciences', 
+                'Research Project', 
+                'Yoga Practical III', 
+                'Yoga Application'
+              ],
             },
             {
               listItem: 'Semester - IV',
-              subItems: ['Traditional Yoga Texts – II', 'Western Psychology', 'Yoga Upanishad', 'Nature cure therapy', 'Practical and Yoga Teaching'],
+              subItems: [
+                'Traditional Yoga Texts', 
+                'Western Psychology', 
+                'Dissertation', 
+                'Yoga Practical IV', 
+                'Yoga Therapy and Other Therapies'
+              ],
             },
           ],
         },
@@ -16130,6 +16160,35 @@ const classes = {
           text: ['For National Students : ₹40,000 per year', 'For International Students : $3950 per year'],
         },
       },
+      {
+        type: 'u-list',
+        content: {
+          title: 'Documents Required:',
+          points: [
+            {
+              listItem: 'Graduation Marksheet (Last Semester)',
+              subItems: [],
+            },
+            {
+              listItem: 'Leaving Certificate (From the last college attended)',
+              subItems: [],
+            },
+            {
+              listItem: 'Migration Certificate (From the last university attended)',
+              subItems: [],
+            },
+            {
+              listItem: 'Marriage Certificate/ Proof of Name Change (in case of name change)',
+              subItems: [],
+            },
+            {
+              listItem: 'Aadhaar Card',
+              subItems: [],
+            },
+          ],
+        },
+      },
+      
       {
         type: 'u-list',
         content: {
@@ -18427,7 +18486,9 @@ const specialEvents = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'classes',
-    dates: ['12th Feb 2025', '14th Mar 2025', '13th Apr 2025'
+    dates: [
+      // '12th Feb 2025',
+       '14th Mar 2025', '13th Apr 2025'
       , '11th Jun 2025'
     ],
     online: true,

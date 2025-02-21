@@ -1,10 +1,11 @@
 const baseDomain = 'https://ecom-static-site-prod.s3.ap-south-1.amazonaws.com'
-import mayoga from '../images/mayoga.jpg'
+// import mayoga from '../images/mayoga.jpg'
 import fullmoonCard from '../images/fullmoon.webp'
 import physiotherapy from '../images/physiotherapy.jpg'
+import MA_YOGA_2025 from '../images/MA_YOGA_2025.jpeg'
 
 export const extraImage = {
-  mayogaImg: `${mayoga}`,
+  mayogaImg: `${MA_YOGA_2025}`,
 }
 
 export const background = {
