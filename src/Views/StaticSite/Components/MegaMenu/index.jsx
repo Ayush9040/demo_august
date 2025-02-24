@@ -11,7 +11,7 @@ const MegaMenu = ({ setNav }) => {
     { name: 'ABOUT', link: '/know-us-better', id: 1, key: 'ABOUT', },
     { name: 'COURSES', link: '/courses', id: 2, key: 'COURSES' },
     { name: 'YOGA RETREAT', link: '/alibaug', id: 17, key: 'RETREAT' },
-    { name: 'SPECIAL EVENTS', link: '/courses#specialEvents', id: 18, key: 'SPECIAL-EVENTS' },
+    // { name: 'SPECIAL EVENTS', link: '/courses#specialEvents', id: 18, key: 'SPECIAL-EVENTS' },
     { name: 'NUTRI DIET CLINIC', link: '/nutri-diet', id: 3, key: 'COURSES-NUTRI' },
     { name: 'CORPORATE WORKSHOP', link: '/corporate-workshops', id: 4, key: 'COURSES-WORKSHOPS' },
     // { name: 'ONLINE HOME YOGA TUITIONS', link: '/home-tuitions', id: 5, key: 'COURSES-YOGATUTIONS' },
@@ -24,10 +24,10 @@ const MegaMenu = ({ setNav }) => {
     // { name: 'TYI ONLINE', link: '', id: 8, key: 'ONLINE' },
     { name: 'PUBLICATIONS', link: '/yoga-and-total-health', id: 10, key: 'PUBLICATIONS', },
     { name: 'SHOP', link: '/shop', id: 11, key: 'SHOP' },
-    { name: 'NEWS, EVENTS & MEDIA', link: '/image-gallery', id: 12, key: 'NEWS', },
-    { name: 'ALUMNI', link: '/alumni-gallery', id: 13, key: 'ALUMNI' },
+    // { name: 'NEWS, EVENTS & MEDIA', link: '/image-gallery', id: 12, key: 'NEWS', },
+    // { name: 'ALUMNI', link: '/alumni-gallery', id: 13, key: 'ALUMNI' },
     { name: 'VOLUNTEER', link: '/volunteer', id: 14, key: 'VOLUNTEER' },
-    { name: 'LOCATE US', link: '/our-branches', id: 15, key: 'LOCATE' },
+    // { name: 'LOCATE US', link: '/our-branches', id: 15, key: 'LOCATE' },
     { name: 'CONTACT US', link: '/contact', id: 16, key: 'CONTACT' },
     
   ]

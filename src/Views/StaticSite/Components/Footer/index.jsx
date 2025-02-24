@@ -149,6 +149,9 @@ const Footer = () => {
           </ul>
           <div className="carrier-list">
             <ul>
+            <Link to="/image-gallery">
+                <li>News & Media</li>
+              </Link>
               <Link to="/terms-and-conditions">
                 <li>Terms & Conditions</li>
               </Link>

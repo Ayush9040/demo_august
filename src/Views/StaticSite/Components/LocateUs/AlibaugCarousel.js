@@ -175,15 +175,21 @@ const AlibaugCarousel = () => {
           </p>
           <div className="apply-address">
             <h5>Book Your Retreat Now</h5>
-            {window.innerWidth <= 768 ? <h5>Dates: <br /> <span style={{ fontWeight: '400' }}> Retreat 1 - 1st February 2025 to 2nd February 2025 (1 Night, 2 Days)</span><br />
-              <span style={{ fontWeight: '400', position: 'relative', top: '10px' }}> Retreat 2 -22nd February 2025 to 23rd February 2025 (1 Night, 2 Days)</span><br />
-              <span style={{ fontWeight: '400', position: 'relative', top: '10px' }}> Retreat 3 - 8th March 2025 to 9th March 2025 (1 Night, 2 Days)</span><br />
-              <span style={{ fontWeight: '400', position: 'relative', top: '10px' }}> Retreat 4 - 22nd March 2025 to 23rd March 2025 (1 Night, 2 Days)</span>
+            {window.innerWidth <= 768 ? <h5>Dates: <br /> 
+            {/* <span style={{ fontWeight: '400' }}> Retreat 1 - 1st February 2025 to 2nd February 2025 (1 Night, 2 Days)</span><br />
+              <span style={{ fontWeight: '400', position: 'relative', top: '10px' }}> Retreat 2 -22nd February 2025 to 23rd February 2025 (1 Night, 2 Days)</span><br /> */}
+              <span style={{ fontWeight: '400' }}> Retreat 1 - 8th March 2025 to 9th March 2025 (1 Night, 2 Days)</span><br />
+              <span style={{ fontWeight: '400', position: 'relative', top: '10px' }}> Retreat 2 - 22nd March 2025 to 23rd March 2025 (1 Night, 2 Days)</span><br />
+              <span style={{ fontWeight: '400', position: 'relative', top: '10px' }}> Retreat 3 - 5th April 2025 to 6th April 2025 (1 Night, 2 Days)</span><br />
+              <span style={{ fontWeight: '400', position: 'relative', top: '10px' }}> Retreat 4 - 19th April 2025 to 20th April 2025 (1 Night, 2 Days)</span>
             </h5> :
-              <h5>Dates: <span style={{ fontWeight: '400' }}> Retreat 1 - 1st February 2025 to 2nd February 2025 (1 Night, 2 Days)</span><br />
-                <span style={{ fontWeight: '400', marginLeft: '59.9px', lineHeight: '30px' }}> Retreat 2 -22nd February 2025 to 23rd February 2025 (1 Night, 2 Days)</span><br />
-                <span style={{ fontWeight: '400', marginLeft: '59.9px', lineHeight: '30px' }}> Retreat 3 - 8th March 2025 to 9th March 2025 (1 Night, 2 Days)</span><br />
-                <span style={{ fontWeight: '400', marginLeft: '59.9px', lineHeight: '30px' }}> Retreat 4 - 22nd March 2025 to 23rd March 2025 (1 Night, 2 Days)</span>
+              <h5>Dates: 
+                {/* <span style={{ fontWeight: '400' }}> Retreat 1 - 1st February 2025 to 2nd February 2025 (1 Night, 2 Days)</span><br />
+                <span style={{ fontWeight: '400', marginLeft: '59.9px', lineHeight: '30px' }}> Retreat 2 -22nd February 2025 to 23rd February 2025 (1 Night, 2 Days)</span><br /> */}
+                <span style={{ fontWeight: '400' }}> Retreat 1 - 8th March 2025 to 9th March 2025 (1 Night, 2 Days)</span><br />
+                <span style={{ fontWeight: '400', marginLeft: '59.9px', lineHeight: '30px' }}> Retreat 2 - 22nd March 2025 to 23rd March 2025 (1 Night, 2 Days)</span><br />
+                <span style={{ fontWeight: '400', marginLeft: '59.9px', lineHeight: '30px' }}> Retreat 3 - 5th April 2025 to 6th April 2025 (1 Night, 2 Days)</span><br />
+                <span style={{ fontWeight: '400', marginLeft: '59.9px', lineHeight: '30px' }}> Retreat 4 - 19th April 2025 to 20th April 2025 (1 Night, 2 Days)</span>
               </h5>}
             <h5>
               Cost: <span style={{ fontWeight: '400' }}>Rs. 10,000/- (Per Person – Inclusive of 8 Meals)</span>
@@ -211,13 +217,17 @@ const AlibaugCarousel = () => {
           </p>
           <div className="apply-address">
             <h5>Book Your Retreat Now</h5>
-            {window.innerWidth <= 768 ? <h5>Dates: <br /> <span style={{ fontWeight: '400' }}> Retreat 1 - 25th January 2025 to 26th January 2025 (1 Night, 2 Days)</span><br />
-              <span style={{ fontWeight: '400', position: 'relative', top: '10px' }}> Retreat 2 - 8th February 2025 to 9th February 2025 (1 Night, 2 Days)</span><br />
-              <span style={{ fontWeight: '400', position: 'relative', top: '10px' }}> Retreat 3 - 15th March 2025 to 16th March 2025 (1 Night, 2 Days)</span>
+            {window.innerWidth <= 768 ? <h5>Dates: <br /> 
+            <span style={{ fontWeight: '400' }}> Retreat 1 - 15th March 2025 to 16th March 2025 (1 Night, 2 Days)</span><br />
+              <span style={{ fontWeight: '400', position: 'relative', top: '10px' }}> Retreat 2 - 29th March 2025 to 30th March 2025 (1 Night, 2 Days)</span><br />
+              <span style={{ fontWeight: '400', position: 'relative', top: '10px' }}> Retreat 3 - 12th April 2025 to 13th April 2025 (1 Night, 2 Days)</span><br />
+              <span style={{ fontWeight: '400', position: 'relative', top: '10px' }}> Retreat 4  - 26th April 2025 to 27th April 2025 (1 Night, 2 Days)</span>
             </h5> :
-              <h5>Dates: <span style={{ fontWeight: '400' }}> Retreat 1 - 25th January 2025 to 26th January 2025 (1 Night, 2 Days)</span><br />
-                <span style={{ fontWeight: '400', marginLeft: '59.9px', lineHeight: '30px' }}> Retreat 2 - 8th February 2025 to 9th February 2025 (1 Night, 2 Days)</span><br />
-                <span style={{ fontWeight: '400', marginLeft: '59.9px', lineHeight: '30px' }}> Retreat 3 - 15th March 2025 to 16th March 2025 (1 Night, 2 Days)</span>
+              <h5>Dates: 
+                <span style={{ fontWeight: '400' }}> Retreat 1 - 15th March 2025 to 16th March 2025 (1 Night, 2 Days)</span><br />
+                <span style={{ fontWeight: '400', marginLeft: '59.9px', lineHeight: '30px' }}>Retreat 2 - 29th March 2025 to 30th March 2025 (1 Night, 2 Days)</span><br />
+                <span style={{ fontWeight: '400', marginLeft: '59.9px', lineHeight: '30px' }}> Retreat 3 - 12th April 2025 to 13th April 2025 (1 Night, 2 Days)</span><br />
+                <span style={{ fontWeight: '400', marginLeft: '59.9px', lineHeight: '30px' }}>Retreat 4  - 26th April 2025 to 27th April 2025 (1 Night, 2 Days)</span>
               </h5>}
             <h5>
               Cost: <span style={{ fontWeight: '400' }}>Rs. 10,000/- (Per Person – Inclusive of 8 Meals)</span>
@@ -240,7 +250,7 @@ const AlibaugCarousel = () => {
 
       </div>
 
-      <div className="alibaug-container">
+      {/* <div className="alibaug-container">
         <div className="alibaug-column alibaug-column-1">
           <img src="images/2-Day.jpg" />
         </div>
@@ -275,7 +285,7 @@ const AlibaugCarousel = () => {
             <EnrollBtn text={'Book Now'} buttonAction={() => { addToCart('2-Days Relax & Restore Yoga Retreat', '/2-days-relax-restore-yoga-retreat', '8:00 AM (15th) to 7:00 PM (16th)') }} /></Link>
         </div>
 
-      </div>
+      </div> */}
 
       <div className="alibaug-container">
         <div className="alibaug-column alibaug-column-1">
