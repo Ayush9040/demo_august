@@ -1,4 +1,5 @@
 import baseDomain, { extraImage, homeAssets,nutriDiet } from '../assets/images/imageAsset'
+import BA_yoga_1 from './images/BA_yoga_1.jpeg'
 
 export const activityData = [
 
@@ -9,6 +10,14 @@ export const activityData = [
         'A comprehensive two-year program designed to deepen your understanding and practice of yoga.',
     image:`${extraImage.mayogaImg}`,
     url: '/ma-yoga-shastra'
+  },
+  {
+    id: 11,
+    title: 'BA Yoga Shastra',
+    description:
+        'A comprehensive four-year undergraduate program designed to build a strong foundation in the philosophy, science, and practice of yoga.',
+    image:`${BA_yoga_1}`,
+    url: '/ba-yoga-shastra'
   },
   {
     id: 10,

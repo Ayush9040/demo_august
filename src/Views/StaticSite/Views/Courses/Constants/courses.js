@@ -4,6 +4,8 @@ import baseDomain, {
   homeAssets,
   nutriDiet,
 } from '../../../assets/images/imageAsset'
+import BA_yoga_1 from '../../../../StaticSite/utils/images/BA_yoga_1.jpeg'
+
 
 const ttc200hr = {
   1: {
@@ -16067,7 +16069,7 @@ const classes = {
       internationalFee: { residentialFee: 0, nonResidentialFee: 329837 },
     },
     category: 'classes',
-    dates: [],
+    dates: ['MA - 16th June 2025'],
     online: false,
     onCampus: true,
     nonResidential: true,
@@ -16543,6 +16545,249 @@ const classes = {
         },
       },
 
+    ],
+  },
+  24: {
+    id: '',
+    textdescription6: '',
+    textdescription7: '',
+    textdescription8: '',
+    textdescription9: '',
+    textdescription10: '',
+    textdescription1: '',
+    textdescription2: '',
+    textdescription3: '',
+    textdescription4: '',
+    textdescription5: '',
+    title: 'BA Yogashastra',
+    key: 'ba-yoga-shastra',
+    isRegular: true,
+    batch: 1,
+    // templateId: 'GENERAL_AUTO_EMAIL',
+    templateId: {
+      templateOnline: 'BA_YOGA_SHASTRA',
+      templateOffline: {
+        templateResidential: 'BA_YOGA_SHASTRA',
+        templateNonResidential: 'BA_YOGA_SHASTRA',
+      },
+    },
+    // image: `${baseDomain}${courseAssets.courseAssets115}`,
+    // cardImage: `${baseDomain}${courseAssets.courseAssets115}`,
+    image: `${BA_yoga_1}`,
+    cardImage: `${BA_yoga_1}`,
+    mostPopular: false,
+    metaDescription:
+      'The Bachelor of Arts (BA) in Yogashastra at The Yoga Institute, Santacruz East, is a comprehensive four-year undergraduate program designed to build a strong foundation in the philosophy, science, and practice of yoga.',
+    rating: 5,
+    colorCode: '#C48E8C',
+    timing: '',
+    fees: {
+      // onlineFee: 1500,
+      offlineFee: { residentialFee: 0, nonResidentialFee: 33000  },
+      // internationalFee: { residentialFee: 0, nonResidentialFee: 329837 },
+    },
+    category: 'classes',
+    dates: [
+      'BA- 16th June 2025'
+    ],
+    online: false,
+    onCampus: true,
+    nonResidential: true,
+    residential: false,
+    certficate: false,
+    details: [
+      // {
+      //   type: 'paragraph',
+      //   content: {
+      //     title: 'About The Class:',
+      //     text: [
+      //     ],
+      //   },
+      // },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Overview',
+          text: [
+            'The BA in Yogashastra is a four-year, full-time course aimed at offering an in-depth study of Yoga philosophy, techniques, and its practical applications. The curriculum is structured to provide a balanced education in both the theoretical and practical aspects of Yoga.'
+          ],
+        },
+      },
+      // {
+      //   type: 'u-list',
+      //   content: {
+      //     title: 'The MA Yoga Shastra program includes a blend of theoretical and practical components, covering a wide range of topics such as:',
+      //     points: [
+      //       {
+      //         listItem: 'Semester - I',
+      //         subItems: [
+      //           'Fundamentals Of Indian Philosophy - 1', 
+      //           'Yoga Tradition', 
+      //           'Research Methodology', 
+      //           'Yoga Practical I',
+      //           'Hathayoga Texts'
+      //         ],
+      //       },
+      //       {
+      //         listItem: 'Semester - II',
+      //         subItems: [
+      //           'Indian Philosophy & Yogasutra', 
+      //           'Yoga-Upanishad and Modern Yoga', 
+      //           'Internship', 
+      //           'Yoga Practical II', 
+      //           'Dietetics, Nutrition and Yogic Diet'
+      //         ],
+      //       },
+      //       {
+      //         listItem: 'Semester - III',
+      //         subItems: [
+      //           'Classical Yoga Texts', 
+      //           'Yoga & Allied Sciences', 
+      //           'Research Project', 
+      //           'Yoga Practical III', 
+      //           'Yoga Application'
+      //         ],
+      //       },
+      //       {
+      //         listItem: 'Semester - IV',
+      //         subItems: [
+      //           'Traditional Yoga Texts', 
+      //           'Western Psychology', 
+      //           'Dissertation', 
+      //           'Yoga Practical IV', 
+      //           'Yoga Therapy and Other Therapies'
+      //         ],
+      //       },
+      //     ],
+      //   },
+      // },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Syllabus',
+          text: ['The syllabus covers various essential topics, including the history and evolution of Yoga, human anatomy and physiology, Indian philosophy, Patanjali’s Yogasutras, Hatha Yoga traditions, applied yoga therapy, and modern research methodologies. Students also gain hands-on experience through practical sessions, internships, and field projects, ensuring a well-rounded understanding of Yogic science and its contemporary applications.'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Course Duration: 4 Years (8 Semesters)',
+          text: [''],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Eligibility Criteria',
+          text: ['Applicants must have completed their Higher Secondary Certificate (HSC) or 10+2 or an equivalent examination from a recognized education board.'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Admission Process',
+          text: ['Application Deadline: 31st May 2025', 'Course Commencement Date: 16th June 2025', 'Selection Criteria: Based on merit and timely registration.'],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Pricing',
+          text: ['For Indian National Students: Rs. 33,000 per year'],
+        },
+      },
+      // {
+      //   type: 'u-list',
+      //   content: {
+      //     title: 'Documents Required:',
+      //     points: [
+      //       {
+      //         listItem: 'Graduation Marksheet (Last Semester)',
+      //         subItems: [],
+      //       },
+      //       {
+      //         listItem: 'Leaving Certificate (From the last college attended)',
+      //         subItems: [],
+      //       },
+      //       {
+      //         listItem: 'Migration Certificate (From the last university attended)',
+      //         subItems: [],
+      //       },
+      //       {
+      //         listItem: 'Marriage Certificate/ Proof of Name Change (in case of name change)',
+      //         subItems: [],
+      //       },
+      //       {
+      //         listItem: 'Aadhaar Card',
+      //         subItems: [],
+      //       },
+      //     ],
+      //   },
+      // },
+      
+      // {
+      //   type: 'u-list',
+      //   content: {
+      //     title: 'Career Opportunities',
+      //     points: [
+      //       {
+      //         listItem: 'Graduates of the MA Yoga Shastra program can pursue careers as:',
+      //         subItems: ['Yoga Instructors', 'Yoga Advisors', 'Academic Professors in Yoga Studies', 'Yoga Researchers',],
+      //       },
+      //     ],
+      //   },
+      // },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'How to Apply',
+          text: [
+            'Interested candidates can apply through our website or contact our admissions office at Shri Yogendra Marg, Prabhat Colony, Santacruz East, Mumbai - 400055 India For more information, please visit our website or reach out to us at info@theyogainstitute.org or +91-22-26110506 / +91-22-26103568'
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Why Study BA Yogashastra at The Yoga Institute?',
+          text: [
+            '●	Rich Legacy: The Yoga Institute, established in 1918, is the world`s oldest organized yoga center.',
+            '●	Experienced Faculty: Learn from highly qualified and experienced yoga practitioners and scholars.',
+            '●	Holistic Approach: Our program emphasizes a holistic approach to yoga, integrating physical, mental, emotional, and spiritual aspects.',
+            '●	Personalized Attention: We maintain a low student-to-teacher ratio, ensuring personalized attention and guidance',
+            '●	State-of-the-Art Facilities: Enjoy access to advanced yoga studios, libraries, and research centers.',
+            '●	Innovative Teaching Methods: Our faculty uses innovative teaching methods that blend traditional knowledge with modern pedagogical techniques.',
+            '●	Research Opportunities: Engage in research in yoga and its applications, contributing to the growing body of scientific literature.',
+            '●	Global Recognition: Our graduates are recognized globally and are in demand for their expertise and knowledge.',
+            '●	Lifelong Learning: We offer lifelong learning opportunities through workshops, seminars, and advanced courses.',
+            'Join us to embark on a transformative journey in the world of Yogashastra!'
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Contact Us',
+          text: [
+            'The Yoga Institute',
+            'Santacruz East',
+            'Mumbai, Maharashtra 400055',
+            'Email id - info@theyogainstitute.org',
+            'Phone - +91-22-26110506 / +91-22-26103568'
+          ],
+        },
+      },
+      {
+        type: 'paragraph',
+        content: {
+          title: 'Apply Now',
+          text: [
+            ' ',
+            '',
+            // '* Affiliation: This course is affiliated with Kavikulaguru Kalidas Sanskrit University (KKSU) Ramtek, Nagpur, awarded with "A+" grade by the National Assessment and Accreditation Council (NAAC).'
+          ],
+        },
+      },
     ],
   },
 }
@@ -18111,7 +18356,13 @@ const alibaug = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'classes',
-    dates: ['1st Feb 2025 to 2nd Feb 2025', '22nd Feb 2025 to 23rd Feb 2025', '8th Mar 2025 to 9th Mar 2025', '22nd Mar 2025 to 23rd Mar 2025'
+    dates: [
+    // '1st Feb 2025 to 2nd Feb 2025', 
+    // '22nd Feb 2025 to 23rd Feb 2025', 
+    '8th Mar 2025 to 9th Mar 2025', 
+    '22nd Mar 2025 to 23rd Mar 2025',
+    '5th April 2025 to 6th April 2025',
+    '19th April 2025 to 20th April 2025'
     ],
     online: false,
     onCampus: false,
@@ -18235,7 +18486,13 @@ const alibaug = {
       offlineFee: { residentialFee: 0, nonResidentialFee: 0 },
     },
     category: 'classes',
-    dates: ['25th Jan 2025 to 26th Jan 2025', '8th Feb 2025 to 9th Feb 2025', '15th Feb 2025 to 16th Feb 2025'
+    dates: [
+      // '25th Jan 2025 to 26th Jan 2025', 
+      // '8th Feb 2025 to 9th Feb 2025', 
+      '15th Mar 2025 to 16th Mar 2025',
+      '29th Mar 2025 to 30th Mar 2025',
+      '12th Apr 2025 to 13th Apr 2025',
+      '26th Apr 2025 to 27th Apr 2025'
     ],
     online: false,
     onCampus: false,

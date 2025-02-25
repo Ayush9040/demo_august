@@ -918,6 +918,12 @@ const CourseDetails = ({ pageDate }) => {
             return selectComponent(type, content)
           })} */}
 
+{location.pathname === "/ba-yoga-shastra" && (
+        <p>
+          <span style={{color: 'black', fontWeight: 'bold'}}>Note:</span> Affiliation to KKSU, Ramtek for this course is under process for the academic year 2024-25.
+        </p>
+      )}
+
         </div>
 
         {showDiv && (
