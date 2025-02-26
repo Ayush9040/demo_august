@@ -458,6 +458,10 @@ const MegaMenu = ({ setNav }) => {
                 <h3 style={{ marginTop: '0.75rem' }} >CORPORATE WORKSHOP</h3></Link>
               <Link onClick={() => { setNav(false) }} to='/home-tuitions'>
                 <h3 style={{ marginTop: '0.75rem' }} >ONLINE HOME TUITIONS (YOGA TUITIONS)</h3></Link>
+                <Link onClick={() => { setNav(false) }} to='/ma-yoga-shastra'>
+                <h3 style={{ marginTop: '0.75rem' }} >MA Yoga Shastra</h3></Link>
+                <Link onClick={() => { setNav(false) }} to='/ba-yoga-shastra'>
+                <h3 style={{ marginTop: '0.75rem' }} >BA Yoga Shastra</h3></Link>
               {/* <Link onClick={() => { setNav(false) }} to='/kids-camp'>
                 <h3 style={{ marginTop: '0.75rem' }} >KIDS YOGA SUMMER CAMP (ON-CAMPUS)</h3></Link> */}
               <div
