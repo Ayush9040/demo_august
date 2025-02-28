@@ -21,7 +21,7 @@ import { auth, googleAuthProvider } from './firebaseConfig'; // Adjust the path 
 import { signInWithPopup, signOut, GoogleAuthProvider } from 'firebase/auth';
 import axios from 'axios'
 import { authBaseDomain, cmsBaseDomain, mapApiKey } from '../../../../../../Constants/appSettings'
-import { handleCTSignIn, handleAlreadySignedUpUser } from '../../../../../../CleverTap/buttonClicked'
+import { handleCTSignIn, handleAlreadySignedUpUser, handleAlreadySignedUpUserEmail } from '../../../../../../CleverTap/buttonClicked'
 import InputComponent from '../../../../Components/InputComponent'
 import { LoadScript, Autocomplete } from '@react-google-maps/api';
 import { useLocation } from 'react-router-dom';
@@ -559,10 +559,15 @@ const SignIn = () => {
         }
       });
       if (ctEventValue === 'alreadySignedUp') {
-        handleAlreadySignedUpUser({
-          phone: response?.data?.data?.phoneNumber,
-          dialCode: response?.data?.data?.dialCode
-        })
+        if (response?.data?.data?.phoneNumber) {
+          handleAlreadySignedUpUser({
+            phone: response?.data?.data?.phoneNumber,
+            dialCode: response?.data?.data?.dialCode
+          })
+        }
+        else {//keep email as identifier
+          handleAlreadySignedUpUserEmail(response?.data?.data?.email)
+        }
       }
       localStorage.setItem('userAppId', response?.data.data?._id)//to pass
       // console.log("response?.data.data?._id :", response?.data?.data?.phoneNumber)
@@ -2412,8 +2417,8 @@ const SignIn = () => {
                   </>}
                   {(pageIndex == '4' && signUpType != 'mobile' && !isMobileVerified) &&
                     <div >
-                      <div className='tc-text'  style={{display:'flex',width: '180% !important',whiteSpace: 'nowrap'}}>We regret if you haven&#39;t received the OTP, &nbsp;
-                        {secondsF != '0' && <> resend OTP in <span style={{ fontWeight: 'bold', textDecoration: 'none',marginLeft:'4px' }}> 00:{secondsF}</span> </>}
+                      <div className='tc-text' style={{ display: 'flex', width: '180% !important', whiteSpace: 'nowrap' }}>We regret if you haven&#39;t received the OTP, &nbsp;
+                        {secondsF != '0' && <> resend OTP in <span style={{ fontWeight: 'bold', textDecoration: 'none', marginLeft: '4px' }}> 00:{secondsF}</span> </>}
                         {secondsF == '0' && <span onClick={() => sendSignupOTP(formData, signUpType)} className="resend-btn">Resend</span>}</div>
                     </div>}
 
@@ -2697,7 +2702,7 @@ const SignIn = () => {
                     {(pageIndex == '4' && signUpType != 'mobile' && !isMobileVerified) &&
                       <div>
                         <div className='tc-text' style={{ display: 'flex', width: '180% !important', whiteSpace: 'nowrap' }}>We regret if you haven&#39;t received the OTP,  &nbsp;
-                          {secondsF != '0' && <> resend OTP in <span style={{ fontWeight: 'bold', textDecoration: 'none',marginLeft:'4px' }}> 00:{secondsF}</span> </>}
+                          {secondsF != '0' && <> resend OTP in <span style={{ fontWeight: 'bold', textDecoration: 'none', marginLeft: '4px' }}> 00:{secondsF}</span> </>}
                           {secondsF == '0' && <span onClick={() => sendSignupOTP(formData, signUpType)} className="resend-btn-line">Resend</span>}</div>
                       </div>}
                     <button type='click' className={isBtnLoad ? 'primary-btn disb-btn' : 'primary-btn'} ref={OtpInpRef} onClick={() => signupEmailOTP(formData, signUpType, token)}>{isLocationCart ? 'Create My Account' : 'Create My Account & Enroll'}</button>

@@ -828,7 +828,7 @@ export const handleAlreadySignedUpUser = ({
       // Combine the dialCode with the phoneNumber
       return `+${dialCode}${cleanedPhoneNumber}`;
     };
-    let num = convertToInternationalFormat(phone,dialCode);//added +
+    let num = convertToInternationalFormat(phone, dialCode);//added +
     const userProfile = {
       "Site": {
         // "Name": user.name || "",                    // User's name
@@ -873,7 +873,7 @@ export const handleAlreadySignedUpUser = ({
       // Combine the dialCode with the phoneNumber
       return `+${dialCode}${cleanedPhoneNumber}`;
     };
-    let num = convertToInternationalFormat(phone,dialCode);//added +
+    let num = convertToInternationalFormat(phone, dialCode);//added +
     window.clevertap.event.push("SignIn", {
       // "Name":firstName,
       // "Email ID": email,
@@ -889,6 +889,24 @@ export const handleAlreadySignedUpUser = ({
   }
 }
 
+export const handleAlreadySignedUpUserEmail = (email) => {
+  if (window.clevertap) {
+    const userProfile = {
+      "Site": {
+        "Identity": email || "",                  // Unique identity (User ID)
+      }
+    };
+    // Check if `onUserLogin` method is correctly set up
+    if (typeof window.clevertap.onUserLogin === "object") {
+      window.clevertap.profile.push(userProfile);
+      console.log("User profile sent to CleverTap:", userProfile);
+    } else {
+      console.error("CleverTap onUserLogin is not set up correctly.");
+    }
+  } else {
+    console.error("CleverTap is not initialized.");
+  }
+}
 
 export const handleCTOnUserLoginCalled = ({
   firstName,
