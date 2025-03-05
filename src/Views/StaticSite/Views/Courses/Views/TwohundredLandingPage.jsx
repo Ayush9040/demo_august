@@ -1421,32 +1421,50 @@ const faqData = [
         </p>
         <div className="benefits-grid">
           <div className="benefit-item">
-            <span className="icon">📜</span>
+            <span className="icon">
+              <img src="/images/benefits.svg" alt="Benefits Icon" />
+            </span>
+            <img src="/images/yogabenefit.svg" alt="Benefits Icon" className="icon1" />
             <h3>Hands-on Asana Sessions</h3>
             <p>Practice and learn under expert supervision.</p>
           </div>
           <div className="benefit-item">
-            <span className="icon">👨‍🏫</span>
+          <span className="icon">
+              <img src="/images/benefits.svg" alt="Benefits Icon" />
+            </span>
+            <img src="/images/yogabenefit.svg" alt="Benefits Icon" className="icon1" />
             <h3>Personalized Mentorship</h3>
             <p>Practice and learn under expert supervision.</p>
           </div>
           <div className="benefit-item">
-            <span className="icon">🎓</span>
+          <span className="icon">
+              <img src="/images/benefits.svg" alt="Benefits Icon" />
+            </span>
+            <img src="/images/yogabenefit.svg" alt="Benefits Icon" className="icon1" />
             <h3>Certification</h3>
             <p>Practice and learn under expert supervision.</p>
           </div>
           <div className="benefit-item">
-            <span className="icon">📂</span>
+          <span className="icon">
+              <img src="/images/benefits.svg" alt="Benefits Icon" />
+            </span>
+            <img src="/images/yogabenefit.svg" alt="Benefits Icon" className="icon1" />
             <h3>Downloadable Material</h3>
             <p>Practice and learn under expert supervision.</p>
           </div>
           <div className="benefit-item">
-            <span className="icon">🏆</span>
+          <span className="icon">
+              <img src="/images/benefits.svg" alt="Benefits Icon" />
+            </span>
+            <img src="/images/yogabenefit.svg" alt="Benefits Icon" className="icon1" />
             <h3>Expert Faculty</h3>
             <p>Practice and learn under expert supervision.</p>
           </div>
           <div className="benefit-item">
-            <span className="icon">🧘‍♀️</span>
+          <span className="icon">
+              <img src="/images/benefits.svg" alt="Benefits Icon" />
+            </span>
+            <img src="/images/yogabenefit.svg" alt="Benefits Icon" className="icon1" />
             <h3>Hands-on Asana Sessions</h3>
             <p>Practice and learn under expert supervision.</p>
           </div>
@@ -1466,32 +1484,50 @@ const faqData = [
         </p>
         <div className="teach-grid">
           <div className="teach-item">
-          <span className="icon">📂</span>
+          <span className="icon">
+          <img src="/images/teach.svg" alt="Teach Icon" />
+          </span>
+          <img src="/images/yogateach.svg" alt="Teach Icon" className="icon1" />
             <h3>Certification</h3>
             <p>Practice and learn under expert supervision.</p>
           </div>
           <div className="teach-item">
-          <span className="icon">📂</span>
+          <span className="icon">
+          <img src="/images/teach.svg" alt="Teach Icon" />
+          </span>
+          <img src="/images/yogateach.svg" alt="Teach Icon" className="icon1" />
             <h3>Certification</h3>
             <p>Practice and learn under expert supervision.</p>
           </div>
           <div className="teach-item">
-          <span className="icon">📂</span>
+          <span className="icon">
+          <img src="/images/teach.svg" alt="Teach Icon" />
+          </span>
+          <img src="/images/yogateach.svg" alt="Teach Icon" className="icon1" />
             <h3>Certification</h3>
             <p>Practice and learn under expert supervision.</p>
           </div>
           <div className="teach-item">
-          <span className="icon">📂</span>
+          <span className="icon">
+          <img src="/images/teach.svg" alt="Teach Icon" />
+          </span>
+          <img src="/images/yogateach.svg" alt="Teach Icon" className="icon1" />
             <h3>Certification</h3>
             <p>Practice and learn under expert supervision.</p>
           </div>
           <div className="teach-item">
-          <span className="icon">📂</span>
+          <span className="icon">
+          <img src="/images/teach.svg" alt="Teach Icon" />
+          </span>
+          <img src="/images/yogateach.svg" alt="Teach Icon" className="icon1" />
             <h3>Certification</h3>
             <p>Practice and learn under expert supervision.</p>
           </div>
           <div className="teach-item">
-          <span className="icon">📂</span>
+          <span className="icon">
+          <img src="/images/teach.svg" alt="Teach Icon" />
+          </span>
+          <img src="/images/yogateach.svg" alt="Teach Icon" className="icon1" />
             <h3>Certification</h3>
             <p>Practice and learn under expert supervision.</p>
           </div>
@@ -1514,7 +1550,7 @@ const faqData = [
         <div className="batch-grid">
           <div className="batch-row header-row">
             <div className="batch-cell logo-cell">
-              <img src="/api/placeholder/40/40" alt="Yoga icon" className="yoga-icon" />
+              <img src="/images/asatanga1.svg" alt="Yoga icon" className="yoga-icon" />
             </div>
             {batches.map((batch) => (
               <div key={batch.id} className="batch-cell header-cell">
@@ -1615,12 +1651,12 @@ const faqData = [
                   {upcomingDates.map((date, index) => (
                     <div key={index} className="date-item">
                       <div className="date-line">
-                        <span className="calendar-icon">📅</span>
-                        <span>{date.date}</span>
+                        <span className="calendar-icon"><img src="/images/calender.svg" alt="Calender Icon" /></span>
+                        <span className="date">{date.date}</span>
                       </div>
                       <div className="mode-line">
-                        <span className="computer-icon">🖥</span>
-                        <span>{date.mode}</span>
+                        <span className="computer-icon"><img src="/images/computer.svg" alt="Computer Icon"/></span>
+                        <span className="mode">{date.mode}</span>
                       </div>
                     </div>
                   ))}
@@ -1792,7 +1828,14 @@ const faqData = [
           >
             <div className="faq-question">
               {item.question}
-              <span className="faq-icon">{openIndex === index ? "▲" : "▼"}</span>
+              <span className="faq-icon">
+  {openIndex === index ? (
+    <img src="/images/arrowup.svg" alt="" />
+  ) : (
+    <img src="/images/arrowdown.svg" alt="" />
+  )}
+</span>
+
             </div>
             {openIndex === index && <p className="faq-answer">{item.answer}</p>}
           </div>
@@ -1800,6 +1843,8 @@ const faqData = [
       </div>
 
       <div className="refund-policy">
+        
+      <img src="/images/yogalogorefund.svg" alt="The Yoga Institute" className="logorefund" />
         <h3>Refund Policy</h3>
         <p>
           The Yoga Institute has a strict no-refund policy for all its programs. The only exception is if a program is canceled by the institute, in which case the student will be offered a credit for any other program or a refund of the event fee.
