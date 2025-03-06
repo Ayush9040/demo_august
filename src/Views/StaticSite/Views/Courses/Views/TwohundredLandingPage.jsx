@@ -1256,12 +1256,24 @@
 
 
 import React, { useState }  from "react";
+// import InnerNavComponent from '../InnerNavComponent'
+import InnerNavComponent from "../../../Components/InnerNavComponent";
 import "./TwohundredLandingPage.scss";
+import follower_m from './images/follower_m.svg'
+import lotus_200_card from './images/lotus_200_card.png'
 // import post1 from "/images/post1.svg"
+import Footer from "../../../Components/Footer";
 
 const TwoHundredLandingPage = () => {
   const [showModal, setShowModal] = useState(false);
   const [activeTab, setActiveTab] = useState(null);
+
+  const Locate = {
+    title: 'Contact us',
+    color: 'white',
+    menuColor: 'white',
+    menuItems: [],
+  }
 
   const batches = [
     {
@@ -1382,24 +1394,27 @@ const faqData = [
 
   return (
     <div className="landing-page">
+      
       {/* Hero Section */}
      <section className="hero">
+     
   <div className="hero-overlay">
+  <InnerNavComponent abc={Locate} />
     <div className="hero-content">
       <h1>
-        Become a Certified Yoga Teacher in <span>200 Hours</span>
+        Become a Certified Yoga<br /> Teacher in <span className="hero_content-span">200 Hours</span>
       </h1>
-      <p>
-        Join our immersive teacher training program. Learn, practice, and teach with confidence.
+      <p className="hero_content-para">
+        Join our immersive teacher training program.<br /> Learn, practice, and teach with confidence.
       </p>
 
       <div className="hero-info">
-        <div className="info-item">
-          <img src="/images/community-icon.svg" alt="Community" />
-          <span>100K+ Yoga Member Community</span>
+        <div className="info-item_community ">
+          <img src={follower_m} alt="Community" />
+          <span className="follower_desc">100K + Yoga <br /> Member Community</span>
         </div>
-        <div className="info-item">21 Days Duration</div>
-        <div className="info-item">English, Regional Languages</div>
+        {/* <div className="info-item">21 Days Duration</div>
+        <div className="info-item">English, Regional Languages</div> */}
       </div>
 
       <button className="cta-button">See Available Batches</button>
@@ -1416,7 +1431,7 @@ const faqData = [
           <span className="title2">What will you get from this Training?</span>
         </h2>
         <p className="section-description">
-          Our Yoga Teacher Training Program is designed to empower you with the knowledge,
+          Our Yoga Teacher Training Program is designed to empower you with the knowledge,<br />
           skills, and confidence to teach yoga effectively. Here’s what you’ll get:
         </p>
         <div className="benefits-grid">
@@ -1479,7 +1494,7 @@ const faqData = [
           <span className="title2">Whom can you teach</span>
         </h2>
         <p className="section-description">
-          Our Yoga Teacher Training Program is designed to empower you with the knowledge,
+          Our Yoga Teacher Training Program is designed to empower you with the knowledge,<br />
           skills, and confidence to teach yoga effectively. Here’s what you’ll get:
         </p>
         <div className="teach-grid">
@@ -1487,7 +1502,7 @@ const faqData = [
           <span className="icon">
           <img src="/images/teach.svg" alt="Teach Icon" />
           </span>
-          <img src="/images/yogateach.svg" alt="Teach Icon" className="icon1" />
+          <img src={lotus_200_card} alt="Teach Icon" className="icon1" />
             <h3>Certification</h3>
             <p>Practice and learn under expert supervision.</p>
           </div>
@@ -1495,7 +1510,7 @@ const faqData = [
           <span className="icon">
           <img src="/images/teach.svg" alt="Teach Icon" />
           </span>
-          <img src="/images/yogateach.svg" alt="Teach Icon" className="icon1" />
+          <img src={lotus_200_card}  alt="Teach Icon" className="icon1" />
             <h3>Certification</h3>
             <p>Practice and learn under expert supervision.</p>
           </div>
@@ -1503,7 +1518,7 @@ const faqData = [
           <span className="icon">
           <img src="/images/teach.svg" alt="Teach Icon" />
           </span>
-          <img src="/images/yogateach.svg" alt="Teach Icon" className="icon1" />
+          <img src={lotus_200_card}  alt="Teach Icon" className="icon1" />
             <h3>Certification</h3>
             <p>Practice and learn under expert supervision.</p>
           </div>
@@ -1511,7 +1526,7 @@ const faqData = [
           <span className="icon">
           <img src="/images/teach.svg" alt="Teach Icon" />
           </span>
-          <img src="/images/yogateach.svg" alt="Teach Icon" className="icon1" />
+          <img src={lotus_200_card}  alt="Teach Icon" className="icon1" />
             <h3>Certification</h3>
             <p>Practice and learn under expert supervision.</p>
           </div>
@@ -1519,7 +1534,7 @@ const faqData = [
           <span className="icon">
           <img src="/images/teach.svg" alt="Teach Icon" />
           </span>
-          <img src="/images/yogateach.svg" alt="Teach Icon" className="icon1" />
+          <img src={lotus_200_card}  alt="Teach Icon" className="icon1" />
             <h3>Certification</h3>
             <p>Practice and learn under expert supervision.</p>
           </div>
@@ -1527,7 +1542,7 @@ const faqData = [
           <span className="icon">
           <img src="/images/teach.svg" alt="Teach Icon" />
           </span>
-          <img src="/images/yogateach.svg" alt="Teach Icon" className="icon1" />
+          <img src={lotus_200_card}  alt="Teach Icon" className="icon1" />
             <h3>Certification</h3>
             <p>Practice and learn under expert supervision.</p>
           </div>
@@ -1542,7 +1557,7 @@ const faqData = [
           <p className="available-text">Available Batches</p>
           <h2 className="choose-text">Choose Your Ideal Batch</h2>
           <p className="description-text">
-            Our flexible course schedule allows you to find a batch that fits your availability.
+            Our flexible course schedule allows you to find a batch that fits your availability.<br />
             Get started on your path to becoming a certified yoga instructor today.
           </p>
         </div>
@@ -1863,7 +1878,7 @@ const faqData = [
     </div>
 
       {/* Footer */}
-      <footer className="footer">
+      {/* <footer className="footer">
       <div className="footer-container">
         <div className="footer-left">
           <img src="/images/logo.svg" alt="The Yoga Institute" className="logo" />
@@ -1872,11 +1887,7 @@ const faqData = [
             center of yoga in the world.
           </p>
           <div className="social-icons">
-            {/* <FaFacebookF /> */}
-            {/* <FaTwitter /> */}
-            {/* <FaInstagram /> */}
-            {/* <FaLinkedinIn /> */}
-            {/* <FaYoutube /> */}
+           
           </div>
         </div>
 
@@ -1922,7 +1933,8 @@ const faqData = [
           <p>© 2024 The Yoga Institute. All rights reserved.</p>
         </div>
       </div>
-    </footer>
+    </footer> */}
+      <Footer />
     </div>
   );
 };
