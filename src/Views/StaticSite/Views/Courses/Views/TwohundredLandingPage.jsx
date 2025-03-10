@@ -1260,13 +1260,26 @@ import React, { useState }  from "react";
 import InnerNavComponent from "../../../Components/InnerNavComponent";
 import "./TwohundredLandingPage.scss";
 import follower_m from './images/follower_m.svg'
+import tC_icon from './images/tc_icons_2.svg'
 import lotus_200_card from './images/lotus_200_card.png'
-// import post1 from "/images/post1.svg"
+import Post_1 from "./images/Post_1.svg"
+import Post_2 from "./images/Post_2.svg"
+import Post_3 from "./images/Post_3.svg"
+import Post_4 from "./images/Post_4.svg"
 import Footer from "../../../Components/Footer";
+
 
 const TwoHundredLandingPage = () => {
   const [showModal, setShowModal] = useState(false);
   const [activeTab, setActiveTab] = useState(null);
+  const [activeButton, setActiveButton] = useState("benefits"); // Default active button
+
+  const handleClick = (id) => {
+    setActiveButton(id);
+    console.log('activeButton',activeButton);
+    
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+  };
 
   const Locate = {
     title: 'Contact us',
@@ -1422,9 +1435,60 @@ const faqData = [
   </div>
 </section>
 
+{/* Button Section */}
+
+<section className="btn-wrapper">
+
+<div className="btn_wrapper-container">
+
+  <button className={`btn_links ${activeButton === "benefits" ? "btn_link_active" : "btn_link_notactive"}`}
+        onClick={() => handleClick("benefits")}
+  // onClick={() => {
+  //   document.getElementById("benefits")?.scrollIntoView({ behavior: "smooth" });
+  // }}
+  >Student Benefits</button>
+  <button 
+  className={`btn_links ${activeButton === "available-batches" ? "btn_link_active" : "btn_link_notactive"}`}
+  onClick={() => handleClick("available-batches")}
+  // className="btn_links btn_link_active" 
+  // onClick={() => {
+  //   document.getElementById("available-batches")?.scrollIntoView({ behavior: "smooth" });
+  // }}
+  >Available batches</button>
+  <button 
+  className={`btn_links ${activeButton === "teach" ? "btn_link_active" : "btn_link_notactive"}`}
+  onClick={() => handleClick("teach")}
+  // className="btn_links" 
+  // onClick={() => {
+  //   document.getElementById("teach")?.scrollIntoView({ behavior: "smooth" });
+  // }}
+  >Teaching & Certification</button>
+  <button 
+className={`btn_links ${activeButton === "offerings" ? "btn_link_active" : "btn_link_notactive"}`}
+onClick={() => handleClick("offerings")}
+  // className="btn_links" 
+  // onClick={() => {
+  //   document.getElementById("offerings")?.scrollIntoView({ behavior: "smooth" });
+  // }}
+  >Our Unique Offerings</button>
+  <button 
+  className={`btn_links ${activeButton === "faq" ? "btn_link_active" : "btn_link_notactive"}`}
+  onClick={() => handleClick("faq")}
+  // className="btn_links" 
+  // onClick={() => {
+  //   document.getElementById("faq")?.scrollIntoView({ behavior: "smooth" });
+  // }}
+  >FAQ</button>
+
+</div>
+
+</section>
+
+{/* end button sectgion */}
+
 
       {/* Benefits Section */}
-      <section className="benefits">
+      <section className="benefits" id="benefits">
         <h2 className="section-title">
           <span className="highlight">Student Benefits</span>
           <br />
@@ -1487,7 +1551,7 @@ const faqData = [
       </section>
 
       {/* Whom Can You Teach Section */}
-      <section className="teach">
+      <section className="teach" id="teach">
         <h2 className="section-title1">
           <span className="highlight">Student Benefits</span>
           <br />
@@ -1551,7 +1615,7 @@ const faqData = [
 
   {/* Available Batches */}
 
-  <div className="available-batches">
+  <div className="available-batches" id="available-batches">
       <div className="batch-container">
         <div className="batch-header">
           <p className="available-text">Available Batches</p>
@@ -1567,19 +1631,29 @@ const faqData = [
             <div className="batch-cell logo-cell">
               <img src="/images/asatanga1.svg" alt="Yoga icon" className="yoga-icon" />
             </div>
-            {batches.map((batch) => (
-              <div key={batch.id} className="batch-cell header-cell">
-                <div className="batch-num">Batch - {batch.id}</div>
-                <div className="batch-name">{batch.title}</div>
+            {batches.map((batch) => {
+              const titleParts = batch.title.split(" "); // Split the title
+              const firstPart = titleParts.slice(0, 2).join(" "); // First two words
+              const secondPart = titleParts.slice(2).join(" "); // Remaining words
+              return (
+                <div key={batch.id} className="batch-cell header-cell">
+                <div className="batch_details_header">
+                {/* <div className="batch-num">Batch - {batch.id}</div> */}
+                <div className="batch-name">{firstPart}<br /> {secondPart}</div>
+                </div>
               </div>
-            ))}
+              )
+              
+})}
           </div>
           
           <div className="batch-row">
             <div className="batch-cell label-cell">Duration</div>
             {batches.map((batch) => (
               <div key={batch.id} className="batch-cell data-cell">
+                <div className="batch-cell_data">
                 {batch.duration}
+                </div>
               </div>
             ))}
           </div>
@@ -1691,25 +1765,25 @@ const faqData = [
       <section className="certification">
       <h2 className="section-title">
         <span className="highlight">Available Batches</span>
-        <br />
-        Teaching & Certification
+        
       </h2>
-      <p className="section-description">
+      <div className="highlight_below">Teaching & Certification</div>
+      {/* <p className="section-description">
         Our 200-hour yoga teacher training is globally recognized.
-      </p>
+      </p> */}
 
       <div className="certification-grid">
         {/* Course Attendance Criteria */}
         <div className="criteria">
           <h3>Course Attendance Criteria</h3>
           <ul>
-            <li>Students are required to have a minimum 90% attendance.</li>
+            <li className="points"><img className="tc_icon" src={tC_icon} alt="" />A student is required to have a minimum <span className="bold_points">80% attendance</span></li>
             <li>
-              After qualifying the attendance criteria, students can appear for
-              the exam (100 marks).
+            <img className="tc_icon" src={tC_icon} alt="" />
+            After qualifying the attendance criteria, students can appear for the exam 
+            (100 marks). Details below:
             </li>
-          </ul>
-          <table>
+            <table>
             <thead>
               <tr>
                 <th>Course Details</th>
@@ -1725,19 +1799,31 @@ const faqData = [
               </tr>
             </tbody>
           </table>
-          <p>
+          <li className="points"><img className="tc_icon" src={tC_icon} alt="" />On successfully passing the exam, students will be awarded a certificate – Basic Teacher Training Certificate (200 hours) by <span className="bold_points">The Yoga Institute</span></li>
+          <li className="points"><img className="tc_icon" src={tC_icon} alt="" />This Certificate is recognized by <span className="bold_points">Yoga Certification Board (AYUSH Level-1) and 
+          Yoga Alliance USA (RYT 200).</span></li>
+          </ul>
+          
+          {/* <p>
             Upon passing the exam, students will receive a{" "}
             <strong>Basic Teacher Training Certificate (200 Hours)</strong> by
             The Yoga Institute.
-          </p>
+          </p> */}
         </div>
 
         {/* Post Qualification Opportunities */}
         <div className="opportunities">
           <h3>Post Qualification Opportunities</h3>
           <div className="images">
-            {/* <img src="post1.svg" alt="Post Qualification" />
-            <img src="post2.svg" alt="Post Qualification" />
+            <div className="top_image">
+            <img src={Post_1} alt="Post Qualification" />
+            </div>
+            <div className="below_images">
+            <img src={Post_2} alt="Post Qualification" />
+            <img src={Post_3} alt="Post Qualification" />
+            <img src={Post_4} alt="Post Qualification" />
+            </div>
+            {/* <img src="post2.svg" alt="Post Qualification" />
             <img src="post3.svg" alt="Post Qualification" />
             <img src="post4.svg" alt="Post Qualification" /> */}
           </div>
@@ -1747,11 +1833,19 @@ const faqData = [
         <div className="exam-details">
           <h3>Exam Details</h3>
           <ul>
-            <li>Final exams can be taken only after completing coursework.</li>
-            <li>Students must appear for exams within 90 days of course end.</li>
-            <li>Students get a maximum of 3 attempts.</li>
-            <li>Students can register for online or on-campus exams.</li>
-            <li>Evaluations will be done on final submissions only.</li>
+          <li className="points"><img className="tc_icon" src={tC_icon} alt="" />Yoga Students will be eligible to appear for the Final certification exams only if they have completed all the required course submissions, class work and the required attendance</li>
+          <li className="points"><img className="tc_icon" src={tC_icon} alt="" />Students will have to appear for the final exams within 60 days from the course end date</li>
+          <li className="points"><img className="tc_icon" src={tC_icon} alt="" />Students will be permitted a maximum of 3 attempts, to clear the final exams, failing which they will have to repeat the course.
+          <ul>
+            
+            <li style={{listStyle: 'circle', marginLeft: '70px'}}>In the 2nd attempt, they will be exempted from either theory or practical’s, if they have cleared it in their 1st attempt.</li>
+            <li style={{listStyle: 'circle', marginLeft: '70px'}}>They will have to appear for both in case of a 3rd attempt.</li>
+            
+            </ul></li>
+          <li className="points"><img className="tc_icon" src={tC_icon} alt="" />Students can register for either online or on-campus exams.</li>
+          <li className="points"><img className="tc_icon" src={tC_icon} alt="" />Students can register for either online or on-campus exams. Once finalized, students will not be permitted to switch from online to on-campus and vice versa.</li>
+          <li className="points"><img className="tc_icon" src={tC_icon} alt="" />Examiners will evaluate students only as per the final approved list.</li>
+          
           </ul>
         </div>
 
@@ -1759,26 +1853,33 @@ const faqData = [
         <div className="exam-schedule">
           <h3>Exam Schedule</h3>
           <ul>
-            <li>
-              <strong>On-campus:</strong> Last Wednesday of the month, between
-              10 AM and 2 PM IST.
-            </li>
-            <li>
-              <strong>Online:</strong> Conducted on the 1st and 3rd Saturday of
-              the month.
-            </li>
-            <li>
-              <strong>Theory:</strong> 10 AM IST
-            </li>
-            <li>
-              <strong>Practical:</strong> 3:30 PM IST / 6:30 PM IST
-            </li>
-            <li>Mock tests are held 7-14 days before final exams.</li>
+          <li className="points"><img className="tc_icon" src={tC_icon} alt="" />On-campus Final exams (both theory and practical’s) will be conducted on the last working day of each month, or as announced (in case of exigencies), between 10 am (IST) and 2 pm IST.</li>
+          
+          <li className="points"><img className="tc_icon" src={tC_icon} alt="" />Online Final exams will be conducted on the 1st Sat and the 3rd Sat of each month or as announced (in case of exigencies), subject to a minimum quorum of 8 students.
+          <ul>
+            
+            <li style={{listStyle: 'circle', marginLeft: '70px'}}>Theory exams will be conducted online at 5pm (IST)</li>
+            <li style={{listStyle: 'circle', marginLeft: '70px'}}>Practical exams will be conducted online at 3.30 pm (IST) / 6.30 pm (IST), subject to quorum.</li>
+            
+            </ul></li>
+            <li className="points"><img className="tc_icon" src={tC_icon} alt="" />Students, after submission, can log out /leave only with the explicit permission of the examiner
+          <ul>
+            
+            <li style={{listStyle: 'circle', marginLeft: '70px'}}>For practical’s - students will have to wait till the exams of all students are completed</li>
+            <li style={{listStyle: 'circle', marginLeft: '70px'}}>The examiner may call out students at random and not necessarily in alphabetic order</li>
+            
+            </ul></li>
+          
+          <li className="points"><img className="tc_icon" src={tC_icon} alt="" />A Mock test will be held 7 -14 days prior to the course end date, to familiarise students with the exam process</li>
+          
           </ul>
         </div>
 
+      
+      </div>
+
         {/* Post Course Certification */}
-        <div className="post-certification">
+        <div className="post-certification_wrapper">
           <h3>What you will get on post course</h3>
           <div className="certificates">
             <div className="certificate-item">
@@ -1790,11 +1891,10 @@ const faqData = [
           </div>
           {/* <img src={certificateImg} alt="Certificate" className="certificate-image" /> */}
         </div>
-      </div>
     </section>
 
       {/* Unique Offerings */}
-      <section className="offerings">
+      <section className="offerings" id="offerings">
       <h2 className="section-title">
         <span className="highlight">Available Batches</span>
         <br />
@@ -1830,7 +1930,7 @@ const faqData = [
     </section>
 
       {/* FAQ Section */}
- <section className="faq">
+ <section className="faq" id="faq">
       <h3 className="faq-heading">FAQ</h3>
       <h2 className="faq-title">Frequently Asked Question</h2>
 
