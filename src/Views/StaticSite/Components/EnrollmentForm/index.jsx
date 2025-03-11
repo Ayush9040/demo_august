@@ -13,7 +13,7 @@ import { authBaseDomain, cmsBaseDomain, razorPayKey } from '../../../../Constant
 import axios from 'axios'
 import { handleCTProccedToPayment } from '../../../../CleverTap/buttonClicked'
 import { trackPageView } from '../../../../CleverTap/pageViewEvents'
-import { handleCTCoursePaymentPageVisit, handleCTPaymentCompletedCourse, handleCTPaymentFailed, setupUserProfile } from '../../../../CleverTap/buttonClicked'
+import { handleCTCoursePaymentPageVisit, handleCTPaymentCompletedCourse, handleCTPaymentFailed, setupUserProfile, triggerCourseEvent, triggerCourseEventFor21DaysCourse, triggerCourseEventFor7DaysCourse } from '../../../../CleverTap/buttonClicked'
 import EnrollmentForm from './EnrollmentForm'
 import ReactGA from 'react-ga4';
 import { fetchUserData } from '../../Views/Authentication/Auth.actions'
@@ -211,6 +211,48 @@ const Enrollment = () => {
 
 
   const handleSubmit1 = async () => {
+    const allowedUrls = [
+      "/asana-regular-classes-on-campus",
+      "/asana-regular-classes-on-campus-women",
+      "/asana-regular-classes-online",
+      "/weekend-classes",
+      "/weekend-classes-online",
+      "/childrens-regular-classes",
+      "/childrens-weekend-classes-on-campus",
+      "/advanced-regular-yoga-classes",
+      "/meditation-foundation-course-online",
+      "/regular-meditation-classes-online",
+      "/couples-classes",
+      "/IBY-course",
+      "/regular-pregnacy-classes",
+      "/department-of-rehabilitation-and-physiotherapy",
+      "/alibaug"
+    ];
+
+    const list21DaysCourse = [
+      "/21-days-better-living-course",
+      "/21-days-better-living-course-batch-2",
+      "/21-days-better-living-course-batch-3",
+    ]
+
+    const list7DaysCourse = [
+      "/7-days-camp-english",
+      "/7-days-camp",
+    ]
+    
+    // Function to check if the current URL includes any allowed URL
+    const shouldTriggerEvent = () => {
+      return allowedUrls.some(path => window.location.pathname.includes(path));
+    };
+
+    const is21DaysCourseshouldTriggerEvent = () => {
+      return list21DaysCourse.some(path => window.location.pathname.includes(path));
+    };
+
+    const is7DaysCourseshouldTriggerEvent = () => {
+      return list7DaysCourse.some(path => window.location.pathname.includes(path));
+    };
+
     // alert('RAzor')
     localStorage.setItem('courseName', currentCourse.title)
     if (!isNaN(courseFee)) {
@@ -402,6 +444,41 @@ const Enrollment = () => {
                     // medicalIssues,
                     // residentialStatus,
                   })
+
+                  if(shouldTriggerEvent()) {
+                    triggerCourseEvent({
+                      userName: formData.name, 
+                      startTime: formData.sdate != 'No date Selected' ? formData.sdate : formData.startDate, 
+                      endTime: formData.sdate != 'No date Selected' ? formData.sdate : formData.startDate, 
+                      startDate: formData.startDate, 
+                      endDate: localStorage.getItem('courseEndDate') ? localStorage.getItem('courseEndDate') : null, 
+                      selectedTime: formData.sdate != 'No date Selected' ? formData.sdate : formData.startDate, 
+                      courseName: currentCourse.title, 
+                      courseUrl: window.location.href,
+                    })
+                  }
+
+                  if(is21DaysCourseshouldTriggerEvent()) {
+                    triggerCourseEventFor21DaysCourse({
+                      userName: formData.name, 
+                      startDate: formData.sdate, 
+                      endDate: formData.sdate, 
+                      courseName: currentCourse.title, 
+                      courseUrl: window.location.href,
+                    })
+                  }
+
+                  if(is7DaysCourseshouldTriggerEvent()) {
+                    triggerCourseEventFor7DaysCourse({
+                      userName: formData.name, 
+                      startDate: formData.sdate, 
+                      endDate: formData.sdate, 
+                      courseName: currentCourse.title, 
+                      courseUrl:window.location.href
+                    })
+                  }
+
+                  
 
                   ReactGA.event('purchase', {
                     currency: 'INR',

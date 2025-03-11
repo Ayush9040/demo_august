@@ -1034,3 +1034,134 @@ export const handleCTOnUserLoginCalled = ({
 
 }
 
+export const triggerCourseEvent = ({userName, startTime, endTime, startDate, endDate, selectedTime, courseName, courseUrl}) => {
+
+
+  const convertToEpoch = (timeString) => {
+    const date = new Date(); // Get current date
+    const formattedTime = new Date(`${date.toDateString()} ${timeString}`);
+    return formattedTime.getTime(); // Returns epoch in milliseconds
+  };
+
+  // Extract start time and end time
+const [startTime2, endTime2] = startTime.split(" to ").map(time => time.trim());
+
+const startEpoch = convertToEpoch(startTime2);
+const endEpoch = convertToEpoch(endTime2);
+
+  // let startDate1 = "";
+  // let endDate1 = "";
+  // if (startDate && typeof startDate === 'string') {
+  //   const dateParts = startDate.split(' to ');
+  //   if (dateParts.length === 2) {
+  //     startDate1 = dateParts[0]?.trim() || "";  // e.g., "3rd Jun"
+  //     endDate1 = dateParts[1]?.trim() || "";    // e.g., "28th Jun 2024"
+  //   }
+  // }
+
+  const startDate1 = startDate; // DD/MM/YYYY format
+const [day, month, year] = startDate1.split("/").map(Number);
+
+const dateObject = new Date(year, month - 1, day); // Month is 0-based in JS
+const StartepochDate = dateObject.getTime();
+
+const endDate1 = endDate; // DD/MM/YYYY format
+const [day1, month1, year1] = endDate1.split("/").map(Number);
+
+const dateObject1 = new Date(year1, month1 - 1, day1); // Month is 0-based in JS
+const endepochDate = dateObject1.getTime();
+
+  window.clevertap.event.push("Course_Join_Details", {
+    "Start_Time": startEpoch, // Epoch
+    "End_Time": endEpoch, // Epoch
+    "Start_Date": StartepochDate, // Epoch
+    "End_Date": endepochDate, // Epoch
+    "Time_Selected": startEpoch, // Epoch
+    "Course_Name": courseName,
+    "Course_Url": courseUrl,
+    "User_Name": userName
+  });
+};
+
+export const triggerCourseEventFor21DaysCourse = ({userName, startDate, endDate, courseName, courseUrl}) => {
+
+
+  // let startDate1 = "";
+  // let endDate1 = "";
+  // if (startDate && typeof startDate === 'string') {
+  //   const dateParts = startDate.split(' to ');
+  //   if (dateParts.length === 2) {
+  //     startDate1 = dateParts[0]?.trim() || "";  // e.g., "3rd Jun"
+  //     endDate1 = dateParts[1]?.trim() || "";    // e.g., "28th Jun 2024"
+  //   }
+  // }
+
+  const parseDate = (dateStr) => {
+    // Remove ordinal suffixes (st, nd, rd, th)
+    let cleanedDate = dateStr.replace(/(\d+)(st|nd|rd|th)/, "$1");
+    
+    // Convert to a Date object
+    let dateObject = new Date(`${cleanedDate} 2025`); // Assuming 2025, modify as needed
+    return dateObject.getTime(); // Get epoch time in milliseconds
+  };
+
+  // Extracting start and end date
+  const dateParts = startDate.split(" to ");
+  if (dateParts.length !== 2) {
+    console.error("Invalid date format");
+    return;
+  }
+
+  const startEpoch = parseDate(dateParts[0].trim()); // Convert start date to epoch
+  const endEpoch = parseDate(dateParts[1].trim());   // Convert end date to epoch
+
+  window.clevertap.event.push("Course_Join_Details", {
+    "Start_Date": startEpoch, // Epoch
+    "End_Date": endEpoch, // Epoch
+    "Course_Name": courseName,
+    "Course_Url": courseUrl,
+    "User_Name": userName
+  });
+};
+
+export const triggerCourseEventFor7DaysCourse = ({userName, startDate, endDate, courseName, courseUrl}) => {
+
+
+  // let startDate1 = "";
+  // let endDate1 = "";
+  // if (startDate && typeof startDate === 'string') {
+  //   const dateParts = startDate.split(' to ');
+  //   if (dateParts.length === 2) {
+  //     startDate1 = dateParts[0]?.trim() || "";  // e.g., "3rd Jun"
+  //     endDate1 = dateParts[1]?.trim() || "";    // e.g., "28th Jun 2024"
+  //   }
+  // }
+
+  const parseDate = (dateStr) => {
+    // Remove ordinal suffixes (st, nd, rd, th)
+    let cleanedDate = dateStr.replace(/(\d+)(st|nd|rd|th)/, "$1");
+    
+    // Convert to a Date object
+    let dateObject = new Date(`${cleanedDate} 2025`); // Assuming 2025, modify as needed
+    return dateObject.getTime(); // Get epoch time in milliseconds
+  };
+
+  // Extracting start and end date
+  const dateParts = startDate.split(" to ");
+  if (dateParts.length !== 2) {
+    console.error("Invalid date format");
+    return;
+  }
+
+  const startEpoch = parseDate(dateParts[0].trim()); // Convert start date to epoch
+  const endEpoch = parseDate(dateParts[1].trim());   // Convert end date to epoch
+
+  window.clevertap.event.push("Course_Join_Details", {
+    "Start_Date": startEpoch, // Epoch
+    "End_Date": endEpoch, // Epoch
+    "Course_Name": courseName,
+    "Course_Url": courseUrl,
+    "User_Name": userName
+  });
+};
+
