@@ -844,7 +844,7 @@ color: #00000080;
   font-family: "Poppins", sans-serif;
   text-align: center;
   padding: 50px 20px;
-  background: #fff;
+  background: #F8F8F9;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -1438,21 +1438,37 @@ color: #00000080;
 .post-certification_wrapper {
   max-width: 1200px;
   // border: 1px solid linear-gradient(#F8A8D1, #CA4625);
-  border: 1px solid; /* Set the border width */
-border-color: linear-gradient(#F8A8D1, #CA4625) 1;
+  border: 1px solid #d55a3b; /* Set the border width */
+// border-color: linear-gradient(#F8A8D1, #CA4625) 1;
 border-radius: 20px;
 display: flex;
-align-items: center;
-justify-content: center;
+align-items: start;
+flex-direction: column;
+justify-content: start;
 margin: auto;
 width: 100%;
 margin-top: 40px;
-font-size: 20px;
-      font-weight: 600;
+font-size: 20px !important;
+      font-weight: 600 !important;
       margin-bottom: 10px;
       color: rgba(0, 0, 0, 1);
+      font-family: 'Open Sans' !important;
       font-family: 'Open Sans';
+      padding: 20px;
+      background-color: #fff;
 
+}
+
+.img_certificates-wrapper {
+  display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.first_left_wrapper {
+  // display: flex;
+  margin-top: 60px;
+  // gap: 20px;
 }
 
 // .btn-wrapper {

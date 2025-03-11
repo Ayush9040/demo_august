@@ -1266,6 +1266,9 @@ import Post_1 from "./images/Post_1.svg"
 import Post_2 from "./images/Post_2.svg"
 import Post_3 from "./images/Post_3.svg"
 import Post_4 from "./images/Post_4.svg"
+import certificate_1 from "./images/certificate_1.svg"
+import certificate_2 from "./images/certificate_2.svg"
+import certificate_3 from "./images/certificate_3.svg"
 import Footer from "../../../Components/Footer";
 
 
@@ -1880,16 +1883,25 @@ onClick={() => handleClick("offerings")}
 
         {/* Post Course Certification */}
         <div className="post-certification_wrapper">
-          <h3>What you will get on post course</h3>
-          <div className="certificates">
+          <span>What you will get on post course</span>
+          {/* <div className="certificates">
             <div className="certificate-item">
               <p>RYT - 200 Certificate</p>
             </div>
             <div className="certificate-item">
               <p>YCB Level - 3 Certificate</p>
             </div>
-          </div>
+          </div> */}
           {/* <img src={certificateImg} alt="Certificate" className="certificate-image" /> */}
+          <div className="img_certificates-wrapper">
+              <div className="first_left_wrapper">
+                <img style={{marginRight: '90px'}} src={certificate_1} alt="" />
+                <img src={certificate_2} alt="" />
+              </div>
+              <div className="first_right_wrapper">
+                <img src={certificate_3} alt="" />
+              </div>
+          </div>
         </div>
     </section>
 
