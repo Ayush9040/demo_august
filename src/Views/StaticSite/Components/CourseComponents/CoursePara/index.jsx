@@ -11,6 +11,9 @@ const CoursePara = ({ content }) => {
     }
   }
 
+  const isSatsangPage = location.pathname?.includes("/ma-yoga-shastra");
+  const isBAPage = location.pathname?.includes("/ba-yoga-shastra");
+
   return (
     <div className="course_para">
       {content?.title && (
@@ -19,7 +22,38 @@ const CoursePara = ({ content }) => {
           onClick={handleTitleClick}
           style={{ cursor: content?.title === 'Apply Now' ? 'pointer' : 'default' }}
         >
-          {content.title}
+          {(isSatsangPage || isBAPage) && content?.title === 'Apply Now' ? ' ' : content.title} 
+         
+          {isSatsangPage && content?.title === 'How to Apply' && (
+  <>
+    {" - "}
+    <a href="/enrollment/ma-yoga-shastra">Apply Now</a>
+  </>
+)}
+
+{isSatsangPage && content?.title === 'Apply Now' && (
+  <>
+  
+    <a href="/enrollment/ma-yoga-shastra">Apply Now</a>
+  </>
+)}
+
+{isBAPage && content?.title === 'How to Apply' && (
+  <>
+    {" - "}
+    <a href="/enrollment/ba-yoga-shastra">Apply Now</a>
+  </>
+)}
+
+{isBAPage && content?.title === 'Apply Now' && (
+  <>
+  
+    <a href="/enrollment/ba-yoga-shastra">Apply Now</a>
+  </>
+)}
+
+
+
         </h2>
       )}
       {content.text.map((point, i) => (

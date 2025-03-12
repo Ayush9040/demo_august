@@ -5876,6 +5876,15 @@ const ttc900hr = {
           text: ['INR. 80,000/-(Inclusive of course fee and study material)'],
         },
       },
+      {
+        type: 'paragraph',
+
+        content: {
+          title: 'Pre-requisites:',
+
+          text: ['To enroll in the 4-month Teacher Training Course, completion of the 7-Days Health Camp (On-Campus), 21-Days Better Living Course (Online/On-Campus) or 200-Hour TTC (Online/On-Campus) is required.', 'You can apply for the 4-Month TTC within three months of finishing any of these pre-requisite courses.'],
+        },
+      },
 
       // {
       //   type: 'paragraph',
@@ -16045,7 +16054,7 @@ const classes = {
     textdescription3: '',
     textdescription4: '',
     textdescription5: '',
-    title: 'MA Yoga Shastra',
+    title: 'MA Yogashastra',
     key: 'ma-yoga-shastra',
     isRegular: true,
     batch: 1,
@@ -16063,7 +16072,7 @@ const classes = {
     cardImage: `${extraImage.mayogaImg}`,
     mostPopular: false,
     metaDescription:
-      'The Master of Arts (MA) in Yoga Shastra at The Yoga Institute, Santacruz East, is a comprehensive two-year program designed to deepen your understanding and practice of yoga.',
+      'The Master of Arts (MA) in Yogashastra at The Yoga Institute, Santacruz East, is a comprehensive two-year program designed to deepen your understanding and practice of yoga.',
     rating: 5,
     colorCode: '#C48E8C',
     timing: '4:30 pm to 8:30 pm (Monday, Wednesday, Friday) 9:00 am to 3:00 pm (Saturday)',
@@ -16073,7 +16082,7 @@ const classes = {
       internationalFee: { residentialFee: 0, nonResidentialFee: 329837 },
     },
     category: 'classes',
-    dates: ['MA - 16th June 2025'],
+    dates: ['16th June 2025 - MA'],
     online: false,
     onCampus: true,
     nonResidential: true,
@@ -16093,14 +16102,14 @@ const classes = {
         content: {
           title: 'Overview',
           text: [
-            'The Master of Arts (MA) in Yoga Shastra at The Yoga Institute, Santacruz East, is a comprehensive two-year program designed to deepen your understanding and practice of yoga. Established in 1918 by Shri Yogendraji, The Yoga Institute is the worlds oldest organized yoga centre. Our institute has a rich legacy of over 100 years, promoting the ideals, wisdom, and practice of yoga and the yogic way of life. This course integrates ancient yogic wisdom with modern scientific knowledge, preparing students for advanced studies and professional practice in yoga.'
+            'The Master of Arts (MA) in Yogashastra at The Yoga Institute, Santacruz East, is a comprehensive two-year program designed to deepen your understanding and practice of yoga. Established in 1918 by Shri Yogendraji, The Yoga Institute is the worlds oldest organized yoga centre. Our institute has a rich legacy of over 100 years, promoting the ideals, wisdom, and practice of yoga and the yogic way of life. This course integrates ancient yogic wisdom with modern scientific knowledge, preparing students for advanced studies and professional practice in yoga.'
           ],
         },
       },
       {
         type: 'u-list',
         content: {
-          title: 'The MA Yoga Shastra program includes a blend of theoretical and practical components, covering a wide range of topics such as:',
+          title: 'The MA Yogashastra program includes a blend of theoretical and practical components, covering a wide range of topics such as:',
           points: [
             {
               listItem: 'Semester - I',
@@ -16149,14 +16158,14 @@ const classes = {
         type: 'paragraph',
         content: {
           title: 'Eligibility',
-          text: ['Educational Qualification: Any Bachelors degree from a recognized university.'],
+          text: ['Educational Qualification: Any Bachelors degree from a recognized university'],
         },
       },
       {
         type: 'paragraph',
         content: {
           title: 'Admission Process',
-          text: ['Application Deadline: 31st May 2025', 'Course Commencement Date: 16th June 2025', 'Selection Criteria: Based on merit and timely registration.'],
+          text: ['Application Deadline: 31st May 2025', 'Course Commencement Date: 16th June 2025', 'Selection Criteria: Based on merit and timely registration'],
         },
       },
       {
@@ -16201,7 +16210,7 @@ const classes = {
           title: 'Career Opportunities',
           points: [
             {
-              listItem: 'Graduates of the MA Yoga Shastra program can pursue careers as:',
+              listItem: 'Graduates of the MA Yogashastra program can pursue careers as:',
               subItems: ['Yoga Instructors', 'Yoga Advisors', 'Academic Professors in Yoga Studies', 'Yoga Researchers',],
             },
           ],
@@ -16212,29 +16221,95 @@ const classes = {
         content: {
           title: 'How to Apply',
           text: [
-            'Interested candidates can apply through our website or contact our admissions office at Shri Yogendra Marg, Prabhat Colony, Santacruz East, Mumbai - 400055 India',
-            'For more information, please visit our website or reach out to us at info@theyogainstitute.org or +91-22-26110506, +91-22-26103568. '
+            'Interested candidates can apply through our website or contact our admissions office at Shri Yogendra Marg, Prabhat Colony, Santacruz East, Mumbai - 400055 India.',
+            'For more information, reach out to us at info@theyogainstitute.org or +91-22-26110506, +91-22-26103568. '
           ],
         },
       },
+      // {
+      //   type: 'u-list',
+      //   content: {
+      //     title: 'Why Study MA Yoga Shastra at The Yoga Institute?',
+      //     points: [
+      //       {
+      //         listItem: 'Rich Legacy: The Yoga Institute, established in 1918, is the world`s oldest organized yoga center',
+      //         subItems: [],
+      //       },
+      //       {
+      //         listItem: 'Experienced Faculty: Learn from highly qualified and experienced yoga practitioners and scholars',
+      //         subItems: [],
+      //       },
+      //       {
+      //         listItem: 'Holistic Approach: Our program emphasizes a holistic approach to yoga, integrating physical, mental, emotional, and spiritual aspects',
+      //         subItems: [],
+      //       },
+      //       {
+      //         listItem: 'Personalized Attention: We maintain a low student-to-teacher ratio, ensuring personalized attention and guidance',
+      //         subItems: [],
+      //       },
+      //       {
+      //         listItem: 'State-of-the-Art Facilities: Enjoy access to advanced yoga studios, libraries, and research centers',
+      //         subItems: [],
+      //       },
+      //       {
+      //         listItem: 'Innovative Teaching Methods: Our faculty uses innovative teaching methods that blend traditional knowledge with modern pedagogical techniques',
+      //         subItems: [],
+      //       },
+      //       {
+      //         listItem: 'Research Opportunities: Engage in research in yoga and its applications, contributing to the growing body of scientific literature',
+      //         subItems: [],
+      //       },
+      //       {
+      //         listItem: 'Global Recognition: Our graduates are recognized globally and are in demand for their expertise and knowledge',
+      //         subItems: [],
+      //       },
+      //       {
+      //         listItem: 'Lifelong Learning: We offer lifelong learning opportunities through workshops, seminars, and advanced courses',
+      //         subItems: [],
+      //       },
+      //       {
+      //         listItem: 'Join us to embark on a transformative journey in the world of Yoga Shastra!',
+      //         subItems: [],
+      //       },
+      //     ],
+      //   },
+      // },
       {
         type: 'paragraph',
         content: {
-          title: 'Why Study MA Yoga Shastra at The Yoga Institute?',
+          title: 'Why Study MA Yogashastra at The Yoga Institute?',
           text: [
-            'Rich Legacy: The Yoga Institute, established in 1918, is the world`s oldest organized yoga center.',
-            'Experienced Faculty: Learn from highly qualified and experienced yoga practitioners and scholars.',
-            'Holistic Approach: Our program emphasizes a holistic approach to yoga, integrating physical, mental, emotional, and spiritual aspects.',
-            'Personalized Attention: We maintain a low student-to-teacher ratio, ensuring personalized attention and guidance',
-            'State-of-the-Art Facilities: Enjoy access to advanced yoga studios, libraries, and research centers.',
-            'Innovative Teaching Methods: Our faculty uses innovative teaching methods that blend traditional knowledge with modern pedagogical techniques.',
-            'Research Opportunities: Engage in research in yoga and its applications, contributing to the growing body of scientific literature.',
-            'Global Recognition: Our graduates are recognized globally and are in demand for their expertise and knowledge.',
-            'Lifelong Learning: We offer lifelong learning opportunities through workshops, seminars, and advanced courses.',
-            'Join us to embark on a transformative journey in the world of Yoga Shastra!'
+            '●	Rich Legacy: The Yoga Institute, established in 1918, is the world`s oldest organized yoga center',
+            '●	Experienced Faculty: Learn from highly qualified and experienced yoga practitioners and scholars',
+            '●	Holistic Approach: Our program emphasizes a holistic approach to yoga, integrating physical, mental, emotional, and spiritual aspects',
+            '●	Personalized Attention: We maintain a low student-to-teacher ratio, ensuring personalized attention and guidance',
+            '●	State-of-the-Art Facilities: Enjoy access to advanced yoga studios, libraries, and research centers',
+            '●	Innovative Teaching Methods: Our faculty uses innovative teaching methods that blend traditional knowledge with modern pedagogical techniques',
+            '●	Research Opportunities: Engage in research in yoga and its applications, contributing to the growing body of scientific literature',
+            '●	Global Recognition: Our graduates are recognized globally and are in demand for their expertise and knowledge',
+            '●	Lifelong Learning: We offer lifelong learning opportunities through workshops, seminars, and advanced courses',
+            'Join us to embark on a transformative journey in the world of Yogashastra!'
           ],
         },
       },
+      // {
+      //   type: 'paragraph',
+      //   content: {
+      //     title: 'Why Study MA Yoga Shastra at The Yoga Institute?',
+      //     text: [
+      //       'Rich Legacy: The Yoga Institute, established in 1918, is the world`s oldest organized yoga center.',
+      //       'Experienced Faculty: Learn from highly qualified and experienced yoga practitioners and scholars.',
+      //       'Holistic Approach: Our program emphasizes a holistic approach to yoga, integrating physical, mental, emotional, and spiritual aspects.',
+      //       'Personalized Attention: We maintain a low student-to-teacher ratio, ensuring personalized attention and guidance',
+      //       'State-of-the-Art Facilities: Enjoy access to advanced yoga studios, libraries, and research centers.',
+      //       'Innovative Teaching Methods: Our faculty uses innovative teaching methods that blend traditional knowledge with modern pedagogical techniques.',
+      //       'Research Opportunities: Engage in research in yoga and its applications, contributing to the growing body of scientific literature.',
+      //       'Global Recognition: Our graduates are recognized globally and are in demand for their expertise and knowledge.',
+      //       'Lifelong Learning: We offer lifelong learning opportunities through workshops, seminars, and advanced courses.',
+      //       'Join us to embark on a transformative journey in the world of Yoga Shastra!'
+      //     ],
+      //   },
+      // },
       {
         type: 'paragraph',
         content: {
@@ -16592,7 +16667,7 @@ const classes = {
     },
     category: 'classes',
     dates: [
-      'BA- 16th June 2025'
+      '16th June 2025 - BA'
     ],
     online: false,
     onCampus: true,
@@ -16690,7 +16765,7 @@ const classes = {
         type: 'paragraph',
         content: {
           title: 'Admission Process',
-          text: ['Application Deadline: 31st May 2025', 'Course Commencement Date: 16th June 2025', 'Selection Criteria: Based on merit and timely registration.'],
+          text: ['Application Deadline: 31st May 2025', 'Course Commencement Date: 16th June 2025', 'Selection Criteria: Based on merit and timely registration'],
         },
       },
       {
@@ -16746,7 +16821,7 @@ const classes = {
         content: {
           title: 'How to Apply',
           text: [
-            'Interested candidates can apply through our website or contact our admissions office at Shri Yogendra Marg, Prabhat Colony, Santacruz East, Mumbai - 400055 India For more information, please visit our website or reach out to us at info@theyogainstitute.org or +91-22-26110506 / +91-22-26103568'
+            'Interested candidates can apply through our website or contact our admissions office at Shri Yogendra Marg, Prabhat Colony, Santacruz East, Mumbai - 400055 India. ','For more information, reach out to us at info@theyogainstitute.org or +91-22-26110506 / +91-22-26103568'
           ],
         },
       },
@@ -16755,15 +16830,15 @@ const classes = {
         content: {
           title: 'Why Study BA Yogashastra at The Yoga Institute?',
           text: [
-            '●	Rich Legacy: The Yoga Institute, established in 1918, is the world`s oldest organized yoga center.',
-            '●	Experienced Faculty: Learn from highly qualified and experienced yoga practitioners and scholars.',
-            '●	Holistic Approach: Our program emphasizes a holistic approach to yoga, integrating physical, mental, emotional, and spiritual aspects.',
+            '●	Rich Legacy: The Yoga Institute, established in 1918, is the world`s oldest organized yoga center',
+            '●	Experienced Faculty: Learn from highly qualified and experienced yoga practitioners and scholars',
+            '●	Holistic Approach: Our program emphasizes a holistic approach to yoga, integrating physical, mental, emotional, and spiritual aspects',
             '●	Personalized Attention: We maintain a low student-to-teacher ratio, ensuring personalized attention and guidance',
-            '●	State-of-the-Art Facilities: Enjoy access to advanced yoga studios, libraries, and research centers.',
-            '●	Innovative Teaching Methods: Our faculty uses innovative teaching methods that blend traditional knowledge with modern pedagogical techniques.',
-            '●	Research Opportunities: Engage in research in yoga and its applications, contributing to the growing body of scientific literature.',
-            '●	Global Recognition: Our graduates are recognized globally and are in demand for their expertise and knowledge.',
-            '●	Lifelong Learning: We offer lifelong learning opportunities through workshops, seminars, and advanced courses.',
+            '●	State-of-the-Art Facilities: Enjoy access to advanced yoga studios, libraries, and research centers',
+            '●	Innovative Teaching Methods: Our faculty uses innovative teaching methods that blend traditional knowledge with modern pedagogical techniques',
+            '●	Research Opportunities: Engage in research in yoga and its applications, contributing to the growing body of scientific literature',
+            '●	Global Recognition: Our graduates are recognized globally and are in demand for their expertise and knowledge',
+            '●	Lifelong Learning: We offer lifelong learning opportunities through workshops, seminars, and advanced courses',
             'Join us to embark on a transformative journey in the world of Yogashastra!'
           ],
         },
@@ -17902,8 +17977,16 @@ const certificate = {
       {
         type: 'u-list',
         content: {
-          title: 'Note:',
+          title: 'Kindly Note:',
           points: [
+            {
+              listItem: 'All the sessions will be conducted in English.',
+              subItems: [],
+            },
+            {
+              listItem: 'For the hindi speaking students an extra session will be taken every Saturday 4-5pm to solve their doubts (at no additional cost)',
+              subItems: [],
+            },
             {
               listItem: 'Please note only 30 percent of the sessions will be on campus( for those opting for on campus class)',
               subItems: [],
