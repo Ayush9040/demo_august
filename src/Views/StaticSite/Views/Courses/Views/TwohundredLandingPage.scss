@@ -8,6 +8,25 @@
   margin: 0 auto;
 }
 
+@media (max-width: 1024px) {
+  .landing-page {
+    max-width: 100%;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .landing-page {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .landing-page {
+    padding: 5px;
+  }
+}
+
 /* Hero Section */
 .hero {
   // background: url("/images/hero-bg.svg") no-repeat center center/cover;
@@ -286,6 +305,92 @@
   }
 }
 
+@media screen and (max-width: 1200px) {
+  .hero {
+    height: 600px;
+  }
+  .hero-content {
+    padding-left: 60px;
+  }
+  .hero_content-span {
+    font-size: 48px;
+  }
+  .hero_content-para {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .hero {
+    height: 500px;
+  }
+  .hero-content {
+    padding-left: 40px;
+    text-align: center;
+    align-items: center;
+  }
+  .hero_content-span {
+    font-size: 42px;
+  }
+  .hero_content-para {
+    font-size: 18px;
+  }
+  .benefits-grid, .teach-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+  .benefit-item, .teach-item {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero {
+    height: 400px;
+  }
+  .hero-content {
+    padding-left: 20px;
+  }
+  .hero_content-span {
+    font-size: 36px;
+  }
+  .hero_content-para {
+    font-size: 16px;
+  }
+  .section-title, .section-title1 {
+    font-size: 18px;
+  }
+  .title2 {
+    font-size: 28px;
+  }
+  .cta-button {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .hero {
+    height: 350px;
+  }
+  .hero-content {
+    padding: 10px;
+  }
+  .hero_content-span {
+    font-size: 28px;
+  }
+  .hero_content-para {
+    font-size: 14px;
+  }
+  .cta-button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+  .benefit-item, .teach-item {
+    width: 100%;
+    padding: 15px;
+  }
+}
 
 
 /* Avilable Batches */
@@ -717,6 +822,7 @@
   text-decoration: underline;
 }
 
+
 /* Modal styling */
 .modal-overlay {
   position: fixed;
@@ -732,20 +838,48 @@
 }
 
 .modal-box {
-  background-color: white;
-  border-radius: 10px;
   width: 494px;
-  height: 296.32px;
-  max-width: 90%;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+height: 296.3203125px;
+top: 370px;
+left: 473px;
+gap: 10px;
+border-radius: 20px;
+padding-top: 20px;
+padding-right: 18px;
+padding-bottom: 20px;
+padding-left: 18px;
+background: #FFFFFF;
+box-shadow: 0px 0px 13px 0px #0000000F;
+
+box-shadow: 0px 11.58px 23px 0px #0000000D;
+
+box-shadow: 0px 16px 32px 0px #00000008;
+
+box-shadow: 0px 27px 38px 0px #00000003;
+
+box-shadow: 0px 33.5px 41px 0px #00000000;
+
+  // background-color: white;
+  // border-radius: 10px;
+  // width: 494px;
+  // height: 296.32px;
+  // max-width: 90%;
+  // box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .modal-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 20px;
-  border-bottom: 1px solid #eee;
+  width: 458px;
+height: 25px;
+justify-content: space-between;
+display: flex;
+
+// padding: 10px 10px;
+
+  // display: flex;
+  // justify-content: space-between;
+  // align-items: center;
+  // padding: 15px 20px;
+  // border-bottom: 1px solid #eee;
 }
 
 .modal-header h3 {
@@ -763,7 +897,11 @@
 }
 
 .modal-body {
-  padding: 20px;
+  width: 458px;
+height: 188px;
+gap: 19px;
+margin-top: 10px;
+  // padding: 20px;
 }
 
 .date-grid {
@@ -778,6 +916,7 @@
   padding: 12px;
   border-radius: 5px;
   font-size: 13px;
+  border: 1px solid #00000080
 }
 
 .date-line, .mode-line {
@@ -801,25 +940,53 @@ line-height: 19.07px;
 color: #00000080;
 }
 .mode{
-  width: 134px;
+  // width: 134px;
   height: 19px;
   font-size: 14px;
   font-weight: 500;
   line-height: 19.07px;
   color: #00000080;
 }
-.enroll-course-btn {
-  background-color: #e74c3c;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  padding: 10px;
-  font-size: 15px;
-  font-weight: 500;
-  cursor: pointer;
-  width: 100%;
-  margin-top: 10px;
+
+
+.enrollcourse{
+  display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 2rem;
 }
+.enroll-course-btn {
+  width: 168px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background-color: #CA4625;
+  color: #FFFFFF;
+  padding: 12px 16px;
+  border: none;
+  // background-color: #e74c3c;
+  // color: white;
+  // border: none;
+  // border-radius: 5px;
+  // padding: 10px;
+  // font-size: 15px;
+  // font-weight: 500;
+  // cursor: pointer;
+  // width: 30%;
+  // margin-top: 10px;
+}
+
+.enrollimg{
+  margin-left: 8px;
+}
+.before_date_select {
+  background-color: rgba(202, 70, 37, 0.5) !important;
+  cursor: pointer;
+  color: #fff !important;
+}
+
 
 /* Responsive styles for mobile */
 @media (max-width: 900px) {
@@ -998,6 +1165,114 @@ color: #00000080;
       border-radius: 10px;
       box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     }
+  }
+}
+@media (max-width: 1024px) {
+  .certification {
+    padding: 40px 15px;
+  }
+
+  .certification .section-title {
+    font-size: 30px;
+  }
+
+  .certification .section-description {
+    font-size: 14px;
+  }
+
+  .certification .certification-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .certification .criteria,
+  .certification .opportunities,
+  .certification .exam-details,
+  .certification .exam-schedule,
+  .certification .post-certification {
+    padding: 15px;
+  }
+
+  .certification .post-certification .certificates {
+    flex-wrap: wrap;
+  }
+
+  .certification .post-certification .certificate-item {
+    width: 120px;
+    font-size: 12px;
+  }
+
+  .certification .post-certification .certificate-image {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .certification .opportunities .images img {
+    width: 80px;
+    height: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .certification {
+    padding: 30px 10px;
+  }
+
+  .certification .section-title {
+    font-size: 26px;
+  }
+
+  .certification .certification-grid {
+    gap: 20px;
+  }
+
+  .certification .criteria,
+  .certification .opportunities,
+  .certification .exam-details,
+  .certification .exam-schedule,
+  .certification .post-certification {
+    padding: 15px;
+  }
+
+  .certification .post-certification .certificates {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .certification .opportunities .images img {
+    width: 70px;
+    height: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .certification {
+    padding: 20px 5px;
+  }
+
+  .certification .section-title {
+    font-size: 22px;
+  }
+
+  .certification .certification-grid {
+    gap: 15px;
+  }
+
+  .certification .criteria,
+  .certification .opportunities,
+  .certification .exam-details,
+  .certification .exam-schedule,
+  .certification .post-certification {
+    padding: 10px;
+  }
+
+  .certification .post-certification .certificate-image {
+    max-width: 250px;
+  }
+
+  .certification .opportunities .images img {
+    width: 60px;
+    height: 45px;
   }
 }
 
@@ -1219,7 +1494,7 @@ color: #00000080;
       max-width: 100px;
       width: 116px;
       // top: 10px;
-      right: 95px;
+      left: 84%;
       height: 42.4px;
     }
   }
@@ -1227,6 +1502,10 @@ color: #00000080;
 
 
 /* Enroll Container */
+.enroll-wrapper {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 
 .enroll-container {
   display: flex;
@@ -1269,7 +1548,7 @@ color: #00000080;
   }
 }
 
-
+}
 /* Footer */
 .footer {
   background: #111;
@@ -1521,16 +1800,20 @@ font-size: 20px !important;
   max-width: 124rem;
   padding: 4rem 1rem;
   margin: 0 auto;
+  
 }
 
 .swiper_container {
   height: 52rem;
   padding: 2rem 0;
   position: relative;
+
+
 }
 
 .swiper-slide {
   flex-shrink: 0;
+  
     width: 30% !important;
     height: 100%;
     position: relative;
@@ -1539,6 +1822,19 @@ font-size: 20px !important;
     gap: 0 !important;
     align-items: center !important;
     justify-content: center !important;
+}
+.slide-content{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  // background: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 15px;
+  width: 592px;
+height: 150px;
+gap: 8px;
+
 }
 
 @media (max-width: 500px) {

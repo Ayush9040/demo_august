@@ -1266,6 +1266,7 @@ import Post_1 from "./images/Post_1.svg"
 import Post_2 from "./images/Post_2.svg"
 import Post_3 from "./images/Post_3.svg"
 import Post_4 from "./images/Post_4.svg"
+import icon_TYI from "./images/icon_TYI.svg"
 import certificate_1 from "./images/certificate_1.svg"
 import certificate_2 from "./images/certificate_2.svg"
 import certificate_3 from "./images/certificate_3.svg"
@@ -1444,7 +1445,9 @@ const faqData = [
         <div className="info-item">English, Regional Languages</div> */}
       </div>
 
-      <button className="cta-button">See Available Batches</button>
+      <button className="cta-button">See Available Batches
+      <img src={icon_TYI} alt="Icon" />
+      </button>
     </div>
   </div>
 </section>
@@ -1761,14 +1764,28 @@ onClick={() => handleClick("offerings")}
                         <span className="calendar-icon"><img src="/images/calender.svg" alt="Calender Icon" /></span>
                         <span className="date">{date.date}</span>
                       </div>
-                      <div className="mode-line">
+                      <div className={`mode-line ${date.mode === "Online" ? "online" : "online-oncampus"}`}>
+                        <span className="computer-icon">
+                        <img src="/images/computer.svg" alt="Computer Icon" />
+                       </span>
+                      <span className="mode">{date.mode}</span>
+                      </div>
+
+                      {/* <div className="mode-line">
                         <span className="computer-icon"><img src="/images/computer.svg" alt="Computer Icon"/></span>
                         <span className="mode">{date.mode}</span>
-                      </div>
+                      </div> */}
                     </div>
                   ))}
                 </div>
-                <button className="enroll-course-btn">Enroll Course →</button>
+                <div className="enrollcourse">
+                <button class="enroll-course-btn before_date_select" disabled="">Enroll Course 
+                  <span className="enrollimg">
+                  <img src="/images/enroll_btn_icon.svg" />
+                  </span>
+                  </button>
+                  </div>
+                {/* <button className="enroll-course-btn">Enroll Course →</button> */}
               </div>
             </div>
           </div>
@@ -1954,10 +1971,10 @@ onClick={() => handleClick("offerings")}
       >
         <SwiperSlide>
           <img src={slider_1} alt="" />
-          {/* <div>
+          <div className="slide-content">
             <h2>Special Interaction with Dr. Hansaji Yogendra</h2>
             <p>Receive direct guidance and attend to your queries with spiritual Guru Dr. Hansaji Yogendra, who will be available to offer.</p>
-          </div> */}
+          </div>
         </SwiperSlide>
         <SwiperSlide>
           <img src={slider_1} alt="" />
@@ -2065,6 +2082,7 @@ onClick={() => handleClick("offerings")}
     </section>
 
     {/* Enroll Container */}
+    <section className="enroll-wrapper">
     <div className="enroll-container">
       <span className="course-title">200-Hour Yoga Teacher Training Course</span>
       <button className="enroll-button">
@@ -2072,7 +2090,7 @@ onClick={() => handleClick("offerings")}
         {/* <FiArrowRight className="arrow-icon" /> */} 
       </button>
     </div>
-
+    </section>
       {/* Footer */}
       {/* <footer className="footer">
       <div className="footer-container">
