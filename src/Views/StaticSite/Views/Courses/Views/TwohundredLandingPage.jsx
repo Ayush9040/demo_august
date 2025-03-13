@@ -1270,7 +1270,13 @@ import certificate_1 from "./images/certificate_1.svg"
 import certificate_2 from "./images/certificate_2.svg"
 import certificate_3 from "./images/certificate_3.svg"
 import Footer from "../../../Components/Footer";
-
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css'
+import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
+import 'swiper/css/effect-coverflow';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+import slider_1 from './images/slider_1.svg'
 
 const TwoHundredLandingPage = () => {
   const [showModal, setShowModal] = useState(false);
@@ -1301,6 +1307,7 @@ const TwoHundredLandingPage = () => {
       startDate: "03 Mar 2025",
       timing: "Evening: 5pm - 8pm",
       days: "Monday - Saturday",
+      bgcolor: '#F6D0C6'
     },
     {
       id: 2,
@@ -1311,6 +1318,7 @@ const TwoHundredLandingPage = () => {
       startDate: "13 Mar 2025",
       timing: "Afternoon: 1:30pm - 4pm",
       days: "Monday - Friday",
+      bgcolor: '#F6B4A4'
     },
     {
       id: 3,
@@ -1321,6 +1329,7 @@ const TwoHundredLandingPage = () => {
       startDate: "23 Mar 2025",
       timing: "Sat: 5pm - 8pm, Sun: 4pm - 8pm",
       days: "Saturday - Sunday",
+      bgcolor: '#F0A18D'
     },
     {
       id: 4,
@@ -1331,6 +1340,7 @@ const TwoHundredLandingPage = () => {
       startDate: "03 Apr 2025",
       timing: "Morn: 7am - 9am & Even: 4:30pm - 8pm",
       days: "Monday - Friday",
+      bgcolor: '#E89A87'
     },
     {
       id: 5,
@@ -1341,6 +1351,7 @@ const TwoHundredLandingPage = () => {
       startDate: "03 May 2025",
       timing: "6:30am - 8:00pm",
       days: "Monday - Saturday",
+      bgcolor: '#F68E73'
     },
   ];
 
@@ -1640,7 +1651,7 @@ onClick={() => handleClick("offerings")}
               const secondPart = titleParts.slice(2).join(" "); // Remaining words
               return (
                 <div key={batch.id} className="batch-cell header-cell">
-                <div className="batch_details_header">
+                <div className="batch_details_header" style={{ backgroundColor: batch.bgcolor}}>
                 {/* <div className="batch-num">Batch - {batch.id}</div> */}
                 <div className="batch-name">{firstPart}<br /> {secondPart}</div>
                 </div>
@@ -1654,7 +1665,7 @@ onClick={() => handleClick("offerings")}
             <div className="batch-cell label-cell">Duration</div>
             {batches.map((batch) => (
               <div key={batch.id} className="batch-cell data-cell">
-                <div className="batch-cell_data">
+                <div className="batch-cell_data" style={{ backgroundColor: batch.bgcolor}}>
                 {batch.duration}
                 </div>
               </div>
@@ -1674,7 +1685,9 @@ onClick={() => handleClick("offerings")}
             <div className="batch-cell label-cell">Language</div>
             {batches.map((batch) => (
               <div key={batch.id} className="batch-cell data-cell">
+                <div className="batch-cell_data" style={{ backgroundColor: batch.bgcolor}}>
                 {batch.language}
+                </div>
               </div>
             ))}
           </div>
@@ -1701,7 +1714,9 @@ onClick={() => handleClick("offerings")}
             <div className="batch-cell label-cell">Timings</div>
             {batches.map((batch) => (
               <div key={batch.id} className="batch-cell data-cell">
+                <div className="batch-cell_data" style={{ backgroundColor: batch.bgcolor}}>
                 {batch.timing}
+                </div>
               </div>
             ))}
           </div>
@@ -1906,16 +1921,82 @@ onClick={() => handleClick("offerings")}
     </section>
 
       {/* Unique Offerings */}
-      <section className="offerings" id="offerings">
-      <h2 className="section-title">
+      <section className="offerings container" id="offerings">
+      <h2 className="section-title" style={{ marginBottom: '0px' }}>
         <span className="highlight">Available Batches</span>
         <br />
-        Our Unique Offerings
+        
       </h2>
+      <h3 className="sec_main">Our Unique Offerings</h3>
 
-      <div className="carousel">
+      <Swiper
+        effect={'coverflow'}
+        grabCursor={true}
+        centeredSlides={true}
+        loop={true}
+        slidesPerView={'auto'}
+        coverflowEffect={
+          {
+            rotate: 0,
+            stretch: 0,
+            depth:100,
+            modifier:2.5
+          }
+        }
+        pagination={{ el: '.swiper-pagination', clickable: true }}
+        navigation={{
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+          clickable: true,
+        }}
+        modules={[EffectCoverflow, Pagination, Navigation]}
+        className="swiper_container"
+      >
+        <SwiperSlide>
+          <img src={slider_1} alt="" />
+          {/* <div>
+            <h2>Special Interaction with Dr. Hansaji Yogendra</h2>
+            <p>Receive direct guidance and attend to your queries with spiritual Guru Dr. Hansaji Yogendra, who will be available to offer.</p>
+          </div> */}
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={slider_1} alt="" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={slider_1} alt="" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={slider_1} alt="" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={slider_1} alt="" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={slider_1} alt="" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={slider_1} alt="" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={slider_1} alt="" />
+        </SwiperSlide>
+
+
+        <div className="slider-controler">
+          <div className="swiper-button-prev slider-arrow">
+            <ion-icon name="arrow-back-outline"></ion-icon>
+          </div>
+          <div className="swiper-pagination"></div>
+          <div className="swiper-button-next slider-arrow">
+            <ion-icon name="arrow-forward-outline"></ion-icon>
+          </div>
+         
+        </div>
+      </Swiper>
+
+      {/* <div className="carousel">
         <button className="carousel-button left">
-          {/* <FaChevronLeft /> */}
+         
         </button>
         <div className="carousel-track">
           {offerings.map((offering, index) => (
@@ -1925,7 +2006,7 @@ onClick={() => handleClick("offerings")}
           ))}
         </div>
         <button className="carousel-button right">
-          {/* <FaChevronRight /> */}
+         
         </button>
       </div>
 
@@ -1938,8 +2019,11 @@ onClick={() => handleClick("offerings")}
         {offerings.map((_, index) => (
           <span key={index} className={`dot ${index === 0 ? "active" : ""}`} />
         ))}
-      </div>
+      </div> */}
+
+
     </section>
+
 
       {/* FAQ Section */}
  <section className="faq" id="faq">
