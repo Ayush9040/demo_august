@@ -445,38 +445,38 @@ const Enrollment = () => {
                     // residentialStatus,
                   })
 
-                  // if(shouldTriggerEvent()) {
-                  //   triggerCourseEvent({
-                  //     userName: formData.name, 
-                  //     startTime: formData.sdate != 'No date Selected' ? formData.sdate : formData.startDate, 
-                  //     endTime: formData.sdate != 'No date Selected' ? formData.sdate : formData.startDate, 
-                  //     startDate: formData.startDate, 
-                  //     endDate: localStorage.getItem('courseEndDate') ? localStorage.getItem('courseEndDate') : null, 
-                  //     selectedTime: formData.sdate != 'No date Selected' ? formData.sdate : formData.startDate, 
-                  //     courseName: currentCourse.title, 
-                  //     courseUrl: window.location.href,
-                  //   })
-                  // }
+                  if(shouldTriggerEvent()) {
+                    triggerCourseEvent({
+                      userName: formData.name, 
+                      startTime: formData.sdate != 'No date Selected' ? formData.sdate : formData.startDate, 
+                      endTime: formData.sdate != 'No date Selected' ? formData.sdate : formData.startDate, 
+                      startDate: formData.startDate, 
+                      endDate: localStorage.getItem('courseEndDate') ? localStorage.getItem('courseEndDate') : null, 
+                      selectedTime: formData.sdate != 'No date Selected' ? formData.sdate : formData.startDate, 
+                      courseName: currentCourse.title, 
+                      courseUrl: window.location.href,
+                    })
+                  }
 
-                  // if(is21DaysCourseshouldTriggerEvent()) {
-                  //   triggerCourseEventFor21DaysCourse({
-                  //     userName: formData.name, 
-                  //     startDate: formData.sdate, 
-                  //     endDate: formData.sdate, 
-                  //     courseName: currentCourse.title, 
-                  //     courseUrl: window.location.href,
-                  //   })
-                  // }
+                  if(is21DaysCourseshouldTriggerEvent()) {
+                    triggerCourseEventFor21DaysCourse({
+                      userName: formData.name, 
+                      startDate: formData.sdate, 
+                      endDate: formData.sdate, 
+                      courseName: currentCourse.title, 
+                      courseUrl: window.location.href,
+                    })
+                  }
 
-                  // if(is7DaysCourseshouldTriggerEvent()) {
-                  //   triggerCourseEventFor7DaysCourse({
-                  //     userName: formData.name, 
-                  //     startDate: formData.sdate, 
-                  //     endDate: formData.sdate, 
-                  //     courseName: currentCourse.title, 
-                  //     courseUrl:window.location.href
-                  //   })
-                  // }
+                  if(is7DaysCourseshouldTriggerEvent()) {
+                    triggerCourseEventFor7DaysCourse({
+                      userName: formData.name, 
+                      startDate: formData.sdate, 
+                      endDate: formData.sdate, 
+                      courseName: currentCourse.title, 
+                      courseUrl:window.location.href
+                    })
+                  }
 
                   
 
