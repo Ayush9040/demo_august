@@ -1282,6 +1282,7 @@ import slider_1 from './images/slider_1.svg'
 const TwoHundredLandingPage = () => {
   const [showModal, setShowModal] = useState(false);
   const [activeTab, setActiveTab] = useState(null);
+  const [activeIndex, setActiveIndex] = useState(null);
   const [activeButton, setActiveButton] = useState("benefits"); // Default active button
 
   const handleClick = (id) => {
@@ -1446,7 +1447,7 @@ const faqData = [
       </div>
 
       <button className="cta-button">See Available Batches
-      <img src={icon_TYI} alt="Icon" />
+      <img src={icon_TYI} alt="Icon" className="TYIicon" />
       </button>
     </div>
   </div>
@@ -1759,7 +1760,12 @@ onClick={() => handleClick("offerings")}
               <div className="modal-body">
                 <div className="date-grid">
                   {upcomingDates.map((date, index) => (
-                    <div key={index} className="date-item">
+                    // <div key={index} className="date-item">
+                    <div
+                    key={index}
+                    className={`date-item ${activeIndex === index ? "active" : ""}`}
+                    onClick={() => setActiveIndex(index)}
+                  >
                       <div className="date-line">
                         <span className="calendar-icon"><img src="/images/calender.svg" alt="Calender Icon" /></span>
                         <span className="date">{date.date}</span>
@@ -1778,13 +1784,25 @@ onClick={() => handleClick("offerings")}
                     </div>
                   ))}
                 </div>
-                <div className="enrollcourse">
+                {/* Enroll Button */}
+      <div className="enrollcourse">
+        <button
+          className={`enroll-course-btn ${activeIndex !== null ? "active" : "before_date_select"}`}
+          disabled={activeIndex === null}
+        >
+          Enroll Course
+          <span className="enrollimg">
+            <img src="/images/enroll_btn_icon.svg" alt="Enroll Icon" />
+          </span>
+        </button>
+      </div>
+                {/* <div className="enrollcourse">
                 <button class="enroll-course-btn before_date_select" disabled="">Enroll Course 
                   <span className="enrollimg">
                   <img src="/images/enroll_btn_icon.svg" />
                   </span>
                   </button>
-                  </div>
+                  </div> */}
                 {/* <button className="enroll-course-btn">Enroll Course →</button> */}
               </div>
             </div>
