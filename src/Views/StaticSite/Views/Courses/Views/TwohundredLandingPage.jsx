@@ -1286,6 +1286,22 @@ const TwoHundredLandingPage = () => {
   const [activeIndex, setActiveIndex] = useState(null);
   const [activeButton, setActiveButton] = useState("benefits"); // Default active button
 
+   // Handle date selection
+   const handleDateSelect = (index) => {
+    setActiveIndex(index);
+  };
+
+
+  const scrollToAvailableBatches = () => {
+    // Find the available batches section by ID
+    const availableBatchesSection = document.getElementById('available-batches');
+    
+    // If the section exists, scroll to it
+    if (availableBatchesSection) {
+      availableBatchesSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   const handleClick = (id) => {
     setActiveButton(id);
     console.log('activeButton',activeButton);
@@ -1446,10 +1462,18 @@ const faqData = [
         {/* <div className="info-item">21 Days Duration</div>
         <div className="info-item">English, Regional Languages</div> */}
       </div>
-
+{/* 
       <button className="cta-button">See Available Batches
       <img src={icon_TYI} alt="Icon" className="TYIicon" />
-      </button>
+      </button> */}
+
+<button 
+      className="cta-button" 
+      onClick={scrollToAvailableBatches}
+    >
+      See Available Batches
+      <img src={icon_TYI} alt="Icon" className="TYIicon" />
+    </button>
     </div>
   </div>
 </section>
@@ -1633,8 +1657,8 @@ onClick={() => handleClick("offerings")}
       </section>
 
   {/* Available Batches */}
-
-  <div className="available-batches" id="available-batches">
+<section id="available-batches">
+  <div className="available-batches">
       <div className="batch-container">
         <div className="batch-header">
           <p className="available-text">Available Batches</p>
@@ -1650,28 +1674,28 @@ onClick={() => handleClick("offerings")}
             <div className="batch-cell logo-cell">
               <img src="/images/asatanga1.svg" alt="Yoga icon" className="yoga-icon" />
             </div>
+
             {batches.map((batch) => {
-              const titleParts = batch.title.split(" "); // Split the title
-              const firstPart = titleParts.slice(0, 2).join(" "); // First two words
-              const secondPart = titleParts.slice(2).join(" "); // Remaining words
+              const titleParts = batch.title.split(" ");
+              const firstPart = titleParts.slice(0, 2).join(" ");
+              const secondPart = titleParts.slice(2).join(" ");
+              
               return (
                 <div key={batch.id} className="batch-cell header-cell">
-                <div className="batch_details_header" style={{ backgroundColor: batch.bgcolor}}>
-                {/* <div className="batch-num">Batch - {batch.id}</div> */}
-                <div className="batch-name">{firstPart}<br /> {secondPart}</div>
+                  <div className="batch_details_header" style={{ backgroundColor: batch.bgcolor }}>
+                    <div className="batch-name">{firstPart}<br /> {secondPart}</div>
+                  </div>
                 </div>
-              </div>
-              )
-              
-})}
+              );
+            })}
           </div>
           
           <div className="batch-row">
             <div className="batch-cell label-cell">Duration</div>
             {batches.map((batch) => (
               <div key={batch.id} className="batch-cell data-cell">
-                <div className="batch-cell_data" style={{ backgroundColor: batch.bgcolor}}>
-                {batch.duration}
+                <div className="batch-cell_data" style={{ backgroundColor: batch.bgcolor }}>
+                  {batch.duration}
                 </div>
               </div>
             ))}
@@ -1690,8 +1714,8 @@ onClick={() => handleClick("offerings")}
             <div className="batch-cell label-cell">Language</div>
             {batches.map((batch) => (
               <div key={batch.id} className="batch-cell data-cell">
-                <div className="batch-cell_data" style={{ backgroundColor: batch.bgcolor}}>
-                {batch.language}
+                <div className="batch-cell_data" style={{ backgroundColor: batch.bgcolor }}>
+                  {batch.language}
                 </div>
               </div>
             ))}
@@ -1707,6 +1731,7 @@ onClick={() => handleClick("offerings")}
                   onClick={() => {
                     setActiveTab(batch.id);
                     setShowModal(true);
+                    setActiveIndex(null); // Reset active index when opening modal
                   }}
                 >
                   View upcoming batch
@@ -1719,8 +1744,8 @@ onClick={() => handleClick("offerings")}
             <div className="batch-cell label-cell">Timings</div>
             {batches.map((batch) => (
               <div key={batch.id} className="batch-cell data-cell">
-                <div className="batch-cell_data" style={{ backgroundColor: batch.bgcolor}}>
-                {batch.timing}
+                <div className="batch-cell_data" style={{ backgroundColor: batch.bgcolor }}>
+                  {batch.timing}
                 </div>
               </div>
             ))}
@@ -1761,57 +1786,52 @@ onClick={() => handleClick("offerings")}
               <div className="modal-body">
                 <div className="date-grid">
                   {upcomingDates.map((date, index) => (
-                    // <div key={index} className="date-item">
                     <div
-                    key={index}
-                    className={`date-item ${activeIndex === index ? "active" : ""}`}
-                    onClick={() => setActiveIndex(index)}
-                  >
+                      key={index}
+                      className={`date-item ${activeIndex === index ? "active" : ""}`}
+                      onClick={() => handleDateSelect(index)}
+                    >
                       <div className="date-line">
-                        <span className="calendar-icon"><img src="/images/calender.svg" alt="Calender Icon" /></span>
+                        <span className="calendar-icon">
+                          <img src="/images/calender.svg" alt="Calendar Icon" />
+                        </span>
                         <span className="date">{date.date}</span>
                       </div>
                       <div className={`mode-line ${date.mode === "Online" ? "online" : "online-oncampus"}`}>
                         <span className="computer-icon">
-                        <img src="/images/computer.svg" alt="Computer Icon" />
-                       </span>
-                      <span className="mode">{date.mode}</span>
-                      </div>
-
-                      {/* <div className="mode-line">
-                        <span className="computer-icon"><img src="/images/computer.svg" alt="Computer Icon"/></span>
+                          <img src="/images/computer.svg" alt="Computer Icon" />
+                        </span>
                         <span className="mode">{date.mode}</span>
-                      </div> */}
+                      </div>
                     </div>
                   ))}
                 </div>
-                {/* Enroll Button */}
-      <div className="enrollcourse">
-        <button
-          className={`enroll-course-btn ${activeIndex !== null ? "active" : "before_date_select"}`}
-          disabled={activeIndex === null}
-        >
-          Enroll Course
-          <span className="enrollimg">
-            <img src="/images/enroll_btn_icon.svg" alt="Enroll Icon" />
-          </span>
-        </button>
-      </div>
-                {/* <div className="enrollcourse">
-                <button class="enroll-course-btn before_date_select" disabled="">Enroll Course 
-                  <span className="enrollimg">
-                  <img src="/images/enroll_btn_icon.svg" />
-                  </span>
+                
+                <div className="enrollcourse">
+                  <button
+                    className={`enroll-course-btn ${activeIndex !== null ? "active" : "before_date_select"}`}
+                    disabled={activeIndex === null}
+                    onClick={() => {
+                      if (activeIndex !== null) {
+                        // Handle enrollment logic here
+                        console.log(`Enrolling for ${upcomingDates[activeIndex].date}`);
+                        // You could redirect here with window.location.href = "/enrollment-page";
+                      }
+                    }}
+                  >
+                    Enroll Course
+                    <span className="enrollimg">
+                      <img src="/images/enroll_btn_icon.svg" alt="Enroll Icon" />
+                    </span>
                   </button>
-                  </div> */}
-                {/* <button className="enroll-course-btn">Enroll Course →</button> */}
+                </div>
               </div>
             </div>
           </div>
         )}
       </div>
     </div>
-
+    </section>
 
 
 
@@ -2092,9 +2112,7 @@ onClick={() => handleClick("offerings")}
         </SwiperSlide>
       ))}
 
-      
-    </Swiper>
-    <div className="slider-controler">
+      <div className="slider-controler">
         <div className="swiper-button-prev slider-arrow">
           <ion-icon name="arrow-back-outline"></ion-icon>
         </div>
@@ -2103,6 +2121,7 @@ onClick={() => handleClick("offerings")}
           <ion-icon name="arrow-forward-outline"></ion-icon>
         </div>
       </div>
+    </Swiper>
 
       {/* <div className="carousel">
         <button className="carousel-button left">

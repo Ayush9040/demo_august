@@ -2567,3 +2567,77 @@
   margin-top: 0 !important;
   display: auto !important;
 } 
+
+
+@media (min-width: 768px) {
+  .img_certificates-wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  
+  .first_left_wrapper {
+    width: 40%;
+    margin-right: 30px;
+    margin-bottom: 0;
+    align-items: center;
+  }
+  
+  .first_right_wrapper {
+    width: 60%;
+  }
+  
+  .certificate-text-1 {
+    left: calc(25% - 30px);
+  }
+  
+  .certificate-text-2 {
+    left: calc(75% - 30px);
+  }
+}
+
+@media (max-width: 767px) {
+  .first_left_wrapper {
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 60px;
+    display: flex;
+    width: 243px;
+    height: 104px;
+  }
+  
+  .first_left_wrapper img {
+    margin: 0 30px;
+  }
+  
+  .certificate-text-1 {
+    left: calc(50% - 90px);
+  }
+  
+  .certificate-text-2 {
+    left: calc(50% + 30px);
+  }
+}
+
+@media (max-width: 480px) {
+  .first_left_wrapper img {
+    margin: 0 20px;
+    width: 80px;
+    height: 80px;
+  }
+  
+  .certificate-text {
+    font-size: 12px;
+    width: 100px;
+  }
+  
+  .certificate-text-1 {
+    left: calc(50% - 70px);
+    top: 90px;
+  }
+  
+  .certificate-text-2 {
+    left: calc(50% + 20px);
+    top: 90px;
+  }
+}
