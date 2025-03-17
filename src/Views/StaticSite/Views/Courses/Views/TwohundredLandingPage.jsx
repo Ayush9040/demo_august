@@ -1255,7 +1255,8 @@
 
 
 
-import React, { useState }  from "react";
+import React, { useState  }  from "react";
+import { useNavigate } from "react-router-dom";
 // import InnerNavComponent from '../InnerNavComponent'
 import InnerNavComponent from "../../../Components/InnerNavComponent";
 import "./TwohundredLandingPage.scss";
@@ -1270,6 +1271,7 @@ import icon_TYI from "./images/icon_TYI.svg"
 import certificate_1 from "./images/certificate_1.svg"
 import certificate_2 from "./images/certificate_2.svg"
 import certificate_3 from "./images/certificate_3.svg"
+import close from "./images/close.svg"
 import Footer from "../../../Components/Footer";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css'
@@ -1282,7 +1284,7 @@ import slider_1 from './images/slider_1.svg'
 const TwoHundredLandingPage = () => {
   const [showModal, setShowModal] = useState(false);
   const [activeTab, setActiveTab] = useState(null);
-
+  const navigate = useNavigate();
   const [activeIndex, setActiveIndex] = useState(null);
   const [activeButton, setActiveButton] = useState("benefits"); // Default active button
 
@@ -1316,9 +1318,11 @@ const TwoHundredLandingPage = () => {
     menuItems: [],
   }
 
+
   const batches = [
     {
       id: 1,
+      heading: "Batch-1",
       title: "7 Months Advanced TTC",
       duration: "07 Months",
       mode: "Online & On Campus",
@@ -1326,10 +1330,12 @@ const TwoHundredLandingPage = () => {
       startDate: "03 Mar 2025",
       timing: "Evening: 5pm - 8pm",
       days: "Monday - Saturday",
-      bgcolor: '#F6D0C6'
+      bgcolor: '#F6D0C6',
+      viewDetailsLink: "/one-month-ttc"
     },
     {
       id: 2,
+      heading: "Batch-2",
       title: "1 Year Advanced TTC",
       duration: "12 Months",
       mode: "Online & On Campus",
@@ -1337,10 +1343,12 @@ const TwoHundredLandingPage = () => {
       startDate: "13 Mar 2025",
       timing: "Afternoon: 1:30pm - 4pm",
       days: "Monday - Friday",
-      bgcolor: '#F6B4A4'
+      bgcolor: '#F6B4A4',
+      viewDetailsLink: "/200-hrs-part-time-ttc-on-campus-english"
     },
     {
       id: 3,
+      heading: "Batch-3",
       title: "2 Year Advanced TTC",
       duration: "24 Months",
       mode: "Online & On Campus",
@@ -1348,10 +1356,12 @@ const TwoHundredLandingPage = () => {
       startDate: "23 Mar 2025",
       timing: "Sat: 5pm - 8pm, Sun: 4pm - 8pm",
       days: "Saturday - Sunday",
-      bgcolor: '#F0A18D'
+      bgcolor: '#F0A18D',
+      viewDetailsLink: "/200-hrs-part-time-ttc-online-english"
     },
     {
       id: 4,
+      heading: "Batch-4",
       title: "4 Months Advanced TTC",
       duration: "04 Months",
       mode: "Online",
@@ -1359,10 +1369,12 @@ const TwoHundredLandingPage = () => {
       startDate: "03 Apr 2025",
       timing: "Morn: 7am - 9am & Even: 4:30pm - 8pm",
       days: "Monday - Friday",
-      bgcolor: '#E89A87'
+      bgcolor: '#E89A87',
+      viewDetailsLink: "/200-hrs-part-time-ttc-online"
     },
     {
       id: 5,
+      heading: "Batch-5",
       title: "3 Months Advanced TTC",
       duration: "03 Months",
       mode: "On Campus",
@@ -1370,9 +1382,69 @@ const TwoHundredLandingPage = () => {
       startDate: "03 May 2025",
       timing: "6:30am - 8:00pm",
       days: "Monday - Saturday",
-      bgcolor: '#F68E73'
+      bgcolor: '#F68E73',
+      viewDetailsLink: "/weekend-teacher-training-course"
     },
   ];
+
+  
+  // const batches = [
+  //   {
+  //     id: 1,
+  //     title: "7 Months Advanced TTC",
+  //     duration: "07 Months",
+  //     mode: "Online & On Campus",
+  //     language: "English",
+  //     startDate: "03 Mar 2025",
+  //     timing: "Evening: 5pm - 8pm",
+  //     days: "Monday - Saturday",
+  //     bgcolor: '#F6D0C6'
+  //   },
+  //   {
+  //     id: 2,
+  //     title: "1 Year Advanced TTC",
+  //     duration: "12 Months",
+  //     mode: "Online & On Campus",
+  //     language: "Hindi",
+  //     startDate: "13 Mar 2025",
+  //     timing: "Afternoon: 1:30pm - 4pm",
+  //     days: "Monday - Friday",
+  //     bgcolor: '#F6B4A4'
+  //   },
+  //   {
+  //     id: 3,
+  //     title: "2 Year Advanced TTC",
+  //     duration: "24 Months",
+  //     mode: "Online & On Campus",
+  //     language: "English",
+  //     startDate: "23 Mar 2025",
+  //     timing: "Sat: 5pm - 8pm, Sun: 4pm - 8pm",
+  //     days: "Saturday - Sunday",
+  //     bgcolor: '#F0A18D'
+  //   },
+  //   {
+  //     id: 4,
+  //     title: "4 Months Advanced TTC",
+  //     duration: "04 Months",
+  //     mode: "Online",
+  //     language: "English",
+  //     startDate: "03 Apr 2025",
+  //     timing: "Morn: 7am - 9am & Even: 4:30pm - 8pm",
+  //     days: "Monday - Friday",
+  //     bgcolor: '#E89A87'
+  //   },
+  //   {
+  //     id: 5,
+  //     title: "3 Months Advanced TTC",
+  //     duration: "03 Months",
+  //     mode: "On Campus",
+  //     language: "English",
+  //     startDate: "03 May 2025",
+  //     timing: "6:30am - 8:00pm",
+  //     days: "Monday - Saturday",
+  //     bgcolor: '#F68E73'
+  //   },
+  // ];
 
   const upcomingDates = [
     { date: "1st Sep to 30th Sep 2024", mode: "Online" },
@@ -1657,7 +1729,7 @@ onClick={() => handleClick("offerings")}
       </section>
 
   {/* Available Batches */}
-<section id="available-batches">
+{/* <section id="available-batches">
   <div className="available-batches">
       <div className="batch-container">
         <div className="batch-header">
@@ -1671,6 +1743,7 @@ onClick={() => handleClick("offerings")}
         
         <div className="batch-grid">
           <div className="batch-row header-row">
+          
             <div className="batch-cell logo-cell">
               <img src="/images/asatanga1.svg" alt="Yoga icon" className="yoga-icon" />
             </div>
@@ -1765,7 +1838,8 @@ onClick={() => handleClick("offerings")}
             {batches.map((batch) => (
               <div key={batch.id} className="batch-cell button-cell">
                 <button className="enroll-now-btn">Enroll Now →</button>
-                <button className="view-details-btn">View Details</button>
+                <button className="view-details-btn"  onClick={() => navigate("/one-month-ttc")}
+    >View Details</button>
               </div>
             ))}
           </div>
@@ -1780,7 +1854,7 @@ onClick={() => handleClick("offerings")}
                   className="close-modal" 
                   onClick={() => setShowModal(false)}
                 >
-                  ×
+                  <img src={close} alt="" />
                 </button>
               </div>
               <div className="modal-body">
@@ -1831,7 +1905,385 @@ onClick={() => handleClick("offerings")}
         )}
       </div>
     </div>
-    </section>
+    </section> */}
+
+<section id="available-batches">
+  <div className="available-batches">
+    <div className="batch-container">
+      <div className="batch-header">
+        <p className="available-text">Available Batches</p>
+        <h2 className="choose-text">Choose Your Ideal Batch</h2>
+        <p className="description-text">
+          Our flexible course schedule allows you to find a batch that fits your availability.<br />
+          Get started on your path to becoming a certified yoga instructor today.
+        </p>
+      </div>
+  {/* Adding separate div with all batch headings */}
+  <div className="all-batches-heading-container">
+        <div className="batch-logo-placeholder"></div>
+        {batches.map((batch) => (
+          // <div key={batch.id} className="batch-heading-label" style={{ backgroundColor: batch.bgcolor }}>
+          <div key={batch.id} className="batch-heading-label" style={{ backgroundColor: "#F0F0F0" }}>
+            {batch.heading}
+          </div>
+        ))}
+      </div>
+
+      <div className="batch-grid">
+        {/* Header Row with Batch Names */}
+        <div className="batch-row header-row">
+          <div className="batch-cell logo-cell">
+            <img src="/images/asatanga1.svg" alt="Yoga icon" className="yoga-icon" />
+          </div>
+
+          {batches.map((batch) => {
+            const titleParts = batch.title.split(" ");
+            const firstPart = titleParts.slice(0, 2).join(" ");
+            const secondPart = titleParts.slice(2).join(" ");
+
+            return (
+              <div key={batch.id} className="batch-cell header-cell">
+                <div className="batch_details_header" style={{ backgroundColor: batch.bgcolor }}>
+                  <div className="batch-name">{firstPart}<br /> {secondPart}</div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+
+        {/* Batch Details Rows */}
+        <div className="batch-row">
+          <div className="batch-cell label-cell">Duration</div>
+          {batches.map((batch) => (
+            <div key={batch.id} className="batch-cell data-cell">
+              <div className="batch-cell_data" style={{ backgroundColor: batch.bgcolor }}>
+                {batch.duration}
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className="batch-row">
+          <div className="batch-cell label-cell">Batch Mode</div>
+          {batches.map((batch) => (
+            <div key={batch.id} className="batch-cell data-cell">
+              {batch.mode}
+            </div>
+          ))}
+        </div>
+
+        <div className="batch-row">
+          <div className="batch-cell label-cell">Language</div>
+          {batches.map((batch) => (
+            <div key={batch.id} className="batch-cell data-cell">
+              <div className="batch-cell_data" style={{ backgroundColor: batch.bgcolor }}>
+                {batch.language}
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className="batch-row">
+          <div className="batch-cell label-cell">Starting Date</div>
+          {batches.map((batch) => (
+            <div key={batch.id} className="batch-cell data-cell">
+              {batch.startDate}
+              <span 
+                className="view-batch-link" 
+                onClick={() => {
+                  setActiveTab(batch.id);
+                  setShowModal(true);
+                  setActiveIndex(null); // Reset active index when opening modal
+                }}
+              >
+                View upcoming batch
+              </span>
+            </div>
+          ))}
+        </div>
+
+        <div className="batch-row">
+          <div className="batch-cell label-cell">Timings</div>
+          {batches.map((batch) => (
+            <div key={batch.id} className="batch-cell data-cell">
+              <div className="batch-cell_data" style={{ backgroundColor: batch.bgcolor }}>
+                {batch.timing}
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className="batch-row">
+          <div className="batch-cell label-cell">Days</div>
+          {batches.map((batch) => (
+            <div key={batch.id} className="batch-cell data-cell">
+              {batch.days}
+            </div>
+          ))}
+        </div>
+
+        <div className="batch-row">
+          <div className="batch-cell label-cell"></div>
+          {batches.map((batch) => (
+            <div key={batch.id} className="batch-cell button-cell">
+              <button className="enroll-now-btn">Enroll Now →</button>
+              <button 
+                className="view-details-btn"  
+                onClick={() => navigate(batch.viewDetailsLink)}
+              >
+                View Details
+              </button>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Modal for Upcoming Batches */}
+      {showModal && (
+        <div className="modal-overlay">
+          <div className="modal-box">
+            <div className="modal-header">
+              <h3>Upcoming Dates</h3>
+              <button 
+                className="close-modal" 
+                onClick={() => setShowModal(false)}
+              >
+                <img src={close} alt="" />
+              </button>
+            </div>
+            <div className="modal-body">
+              <div className="date-grid">
+                {upcomingDates.map((date, index) => (
+                  <div
+                    key={index}
+                    className={`date-item ${activeIndex === index ? "active" : ""}`}
+                    onClick={() => handleDateSelect(index)}
+                  >
+                    <div className="date-line">
+                      <span className="calendar-icon">
+                        <img src="/images/calender.svg" alt="Calendar Icon" />
+                      </span>
+                      <span className="date">{date.date}</span>
+                    </div>
+                    <div className={`mode-line ${date.mode === "Online" ? "online" : "online-oncampus"}`}>
+                      <span className="computer-icon">
+                        <img src="/images/computer.svg" alt="Computer Icon" />
+                      </span>
+                      <span className="mode">{date.mode}</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              
+              <div className="enrollcourse">
+                <button
+                  className={`enroll-course-btn ${activeIndex !== null ? "active" : "before_date_select"}`}
+                  disabled={activeIndex === null}
+                  onClick={() => {
+                    if (activeIndex !== null) {
+                      console.log(`Enrolling for ${upcomingDates[activeIndex].date}`);
+                    }
+                  }}
+                >
+                  Enroll Course
+                  <span className="enrollimg">
+                    <img src="/images/enroll_btn_icon.svg" alt="Enroll Icon" />
+                  </span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
+  </div>
+</section>
+
+      {/* <div className="batch-grid">
+        {/* Header Row with Batch Names */}
+        {/* <div className="batch-row header-row">
+          <div className="batch-cell logo-cell">
+            <img src="/images/asatanga1.svg" alt="Yoga icon" className="yoga-icon" />
+          </div>
+
+          {batches.map((batch) => {
+            const titleParts = batch.title.split(" ");
+            const firstPart = titleParts.slice(0, 2).join(" ");
+            const secondPart = titleParts.slice(2).join(" ");
+
+            return (
+              <div key={batch.id} className="batch-cell header-cell">
+                <div className="batch_details_header" style={{ backgroundColor: batch.bgcolor }}>
+                  <div className="batch-heading">{batch.heading}</div> {/* Adding Batch-1, Batch-2, etc. */}
+                  {/* <div className="batch-name">{firstPart}<br /> {secondPart}</div>
+                </div>
+              </div>
+            );
+          })}
+        </div> */} 
+
+        {/* Batch Details Rows */}
+        {/* <div className="batch-row">
+          <div className="batch-cell label-cell">Duration</div>
+          {batches.map((batch) => (
+            <div key={batch.id} className="batch-cell data-cell">
+              <div className="batch-cell_data" style={{ backgroundColor: batch.bgcolor }}>
+                {batch.duration}
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className="batch-row">
+          <div className="batch-cell label-cell">Batch Mode</div>
+          {batches.map((batch) => (
+            <div key={batch.id} className="batch-cell data-cell">
+              {batch.mode}
+            </div>
+          ))}
+        </div>
+
+        <div className="batch-row">
+          <div className="batch-cell label-cell">Language</div>
+          {batches.map((batch) => (
+            <div key={batch.id} className="batch-cell data-cell">
+              <div className="batch-cell_data" style={{ backgroundColor: batch.bgcolor }}>
+                {batch.language}
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className="batch-row">
+          <div className="batch-cell label-cell">Starting Date</div>
+          {batches.map((batch) => (
+            <div key={batch.id} className="batch-cell data-cell">
+              {batch.startDate}
+              <span 
+                className="view-batch-link" 
+                onClick={() => {
+                  setActiveTab(batch.id);
+                  setShowModal(true);
+                  setActiveIndex(null); // Reset active index when opening modal
+                }}
+              >
+                View upcoming batch
+              </span>
+            </div>
+          ))}
+        </div>
+
+        <div className="batch-row">
+          <div className="batch-cell label-cell">Timings</div>
+          {batches.map((batch) => (
+            <div key={batch.id} className="batch-cell data-cell">
+              <div className="batch-cell_data" style={{ backgroundColor: batch.bgcolor }}>
+                {batch.timing}
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className="batch-row">
+          <div className="batch-cell label-cell">Days</div>
+          {batches.map((batch) => (
+            <div key={batch.id} className="batch-cell data-cell">
+              {batch.days}
+            </div>
+          ))}
+        </div> */}
+
+        {/* <div className="batch-row">
+          <div className="batch-cell label-cell"></div>
+          {batches.map((batch) => (
+            <div key={batch.id} className="batch-cell button-cell">
+              <button className="enroll-now-btn">Enroll Now →</button>
+              <button className="view-details-btn" onClick={() => navigate("/one-month-ttc")}>
+                View Details
+              </button>
+            </div>
+          ))}
+        </div> */}
+
+        {/* <div className="batch-row">
+  <div className="batch-cell label-cell"></div>
+  {batches.map((batch) => (
+    <div key={batch.id} className="batch-cell button-cell">
+      <button className="enroll-now-btn">Enroll Now →</button>
+      <button 
+        className="view-details-btn"  
+        onClick={() => navigate(batch.viewDetailsLink)}
+      >
+        View Details
+      </button>
+    </div>
+  ))}
+</div>
+
+      </div> */} 
+
+
+      {/* Modal for Upcoming Batches */}
+      {/* {showModal && (
+        <div className="modal-overlay">
+          <div className="modal-box">
+            <div className="modal-header">
+              <h3>Upcoming Dates</h3>
+              <button 
+                className="close-modal" 
+                onClick={() => setShowModal(false)}
+              >
+                <img src={close} alt="" />
+              </button>
+            </div>
+            <div className="modal-body">
+              <div className="date-grid">
+                {upcomingDates.map((date, index) => (
+                  <div
+                    key={index}
+                    className={`date-item ${activeIndex === index ? "active" : ""}`}
+                    onClick={() => handleDateSelect(index)}
+                  >
+                    <div className="date-line">
+                      <span className="calendar-icon">
+                        <img src="/images/calender.svg" alt="Calendar Icon" />
+                      </span>
+                      <span className="date">{date.date}</span>
+                    </div>
+                    <div className={`mode-line ${date.mode === "Online" ? "online" : "online-oncampus"}`}>
+                      <span className="computer-icon">
+                        <img src="/images/computer.svg" alt="Computer Icon" />
+                      </span>
+                      <span className="mode">{date.mode}</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              
+              <div className="enrollcourse">
+                <button
+                  className={`enroll-course-btn ${activeIndex !== null ? "active" : "before_date_select"}`}
+                  disabled={activeIndex === null}
+                  onClick={() => {
+                    if (activeIndex !== null) {
+                      console.log(`Enrolling for ${upcomingDates[activeIndex].date}`);
+                    }
+                  }}
+                >
+                  Enroll Course
+                  <span className="enrollimg">
+                    <img src="/images/enroll_btn_icon.svg" alt="Enroll Icon" />
+                  </span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
+  </div>
+</section> */}
+
 
 
 
@@ -2090,7 +2542,7 @@ onClick={() => handleClick("offerings")}
         depth: 100,
         modifier: 2.5,
       }}
-      pagination={{ el: '.swiper-pagination', clickable: true }}
+      pagination={{ clickable: true }} // Corrected
       navigation={{
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
@@ -2104,7 +2556,7 @@ onClick={() => handleClick("offerings")}
         <SwiperSlide key={index}>
           <img src={slider_1} alt="" />
           <div className={`slide-content ${activeIndex === index ? 'visible' : 'hidden'}`}>
-            <h2>Special Interaction with Dr. Hansaji Yogendra</h2>
+            <h2>Special Interaction with <span className="slidetitle">Dr. Hansaji Yogendra</span></h2>
             <p>
               Receive direct guidance and attend to your queries with spiritual Guru Dr. Hansaji Yogendra, who will be available to offer.
             </p>
