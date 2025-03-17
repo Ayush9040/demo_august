@@ -2092,7 +2092,9 @@ onClick={() => handleClick("offerings")}
         </SwiperSlide>
       ))}
 
-      <div className="slider-controler">
+      
+    </Swiper>
+    <div className="slider-controler">
         <div className="swiper-button-prev slider-arrow">
           <ion-icon name="arrow-back-outline"></ion-icon>
         </div>
@@ -2101,7 +2103,6 @@ onClick={() => handleClick("offerings")}
           <ion-icon name="arrow-forward-outline"></ion-icon>
         </div>
       </div>
-    </Swiper>
 
       {/* <div className="carousel">
         <button className="carousel-button left">
