@@ -1331,7 +1331,8 @@ const TwoHundredLandingPage = () => {
       timing: "Evening: 5pm - 8pm",
       days: "Monday - Saturday",
       bgcolor: '#F6D0C6',
-      viewDetailsLink: "/one-month-ttc"
+      viewDetailsLink: "/one-month-ttc",
+      enrollLink: '/enrollment/one-month-ttc'
     },
     {
       id: 2,
@@ -1344,7 +1345,8 @@ const TwoHundredLandingPage = () => {
       timing: "Afternoon: 1:30pm - 4pm",
       days: "Monday - Friday",
       bgcolor: '#F6B4A4',
-      viewDetailsLink: "/200-hrs-part-time-ttc-on-campus-english"
+      viewDetailsLink: "/200-hrs-part-time-ttc-on-campus-english",
+      enrollLink: '/enrollment/200-hrs-part-time-ttc-on-campus-english'
     },
     {
       id: 3,
@@ -1357,7 +1359,8 @@ const TwoHundredLandingPage = () => {
       timing: "Sat: 5pm - 8pm, Sun: 4pm - 8pm",
       days: "Saturday - Sunday",
       bgcolor: '#F0A18D',
-      viewDetailsLink: "/200-hrs-part-time-ttc-online-english"
+      viewDetailsLink: "/200-hrs-part-time-ttc-online-english",
+      enrollLink: '/enrollment/200-hrs-part-time-ttc-on-campus-english'
     },
     {
       id: 4,
@@ -1370,7 +1373,8 @@ const TwoHundredLandingPage = () => {
       timing: "Morn: 7am - 9am & Even: 4:30pm - 8pm",
       days: "Monday - Friday",
       bgcolor: '#E89A87',
-      viewDetailsLink: "/200-hrs-part-time-ttc-online"
+      viewDetailsLink: "/200-hrs-part-time-ttc-online",
+      enrollLink: '/enrollment/200-hrs-part-time-ttc-online'
     },
     {
       id: 5,
@@ -1383,7 +1387,8 @@ const TwoHundredLandingPage = () => {
       timing: "6:30am - 8:00pm",
       days: "Monday - Saturday",
       bgcolor: '#F68E73',
-      viewDetailsLink: "/weekend-teacher-training-course"
+      viewDetailsLink: "/weekend-teacher-training-course",
+      enrollLink: '/enrollment/weekend-teacher-training-course'
     },
   ];
 
@@ -1447,10 +1452,10 @@ const TwoHundredLandingPage = () => {
   // ];
 
   const upcomingDates = [
-    { date: "1st Sep to 30th Sep 2024", mode: "Online" },
-    { date: "1st Sep to 30th Sep 2024", mode: "Online & On Campus" },
-    { date: "1st Sep to 30th Sep 2024", mode: "Online & On Campus" },
-    { date: "1st Sep to 30th Sep 2024", mode: "Online" },
+    { date: "1st Sep to 30th Sep 2024", mode: "Online", enrollLink: '/enrollment/one-month-ttc' },
+    { date: "1st Sep to 30th Sep 2024", mode: "Online & On Campus", enrollLink: '/enrollment/200-hrs-part-time-ttc-on-campus-english' },
+    { date: "1st Sep to 30th Sep 2024", mode: "Online & On Campus", enrollLink: '/enrollment/200-hrs-part-time-ttc-on-campus-english' },
+    { date: "1st Sep to 30th Sep 2024", mode: "Online", enrollLink: '/enrollment/200-hrs-part-time-ttc-online' },
   ];
 
 const offerings = [
@@ -1921,19 +1926,21 @@ onClick={() => handleClick("offerings")}
   {/* Adding separate div with all batch headings */}
   <div className="all-batches-heading-container">
         <div className="batch-logo-placeholder"></div>
-        {batches.map((batch) => (
+        {/* {batches.map((batch) => (
           // <div key={batch.id} className="batch-heading-label" style={{ backgroundColor: batch.bgcolor }}>
           <div key={batch.id} className="batch-heading-label" style={{ backgroundColor: "#F0F0F0" }}>
             {batch.heading}
           </div>
-        ))}
+        ))} */}
       </div>
 
       <div className="batch-grid">
         {/* Header Row with Batch Names */}
         <div className="batch-row header-row">
           <div className="batch-cell logo-cell">
+            <div>
             <img src="/images/asatanga1.svg" alt="Yoga icon" className="yoga-icon" />
+            </div>
           </div>
 
           {batches.map((batch) => {
@@ -1943,6 +1950,11 @@ onClick={() => handleClick("offerings")}
 
             return (
               <div key={batch.id} className="batch-cell header-cell">
+                <div key={batch.id} className="batch-heading-label">
+            <div className="batch-wrapper" style={{ backgroundColor: "#F0F0F0" }}>
+            {batch.heading}
+            </div>
+          </div>
                 <div className="batch_details_header" style={{ backgroundColor: batch.bgcolor }}>
                   <div className="batch-name">{firstPart}<br /> {secondPart}</div>
                 </div>
@@ -2026,7 +2038,7 @@ onClick={() => handleClick("offerings")}
           <div className="batch-cell label-cell"></div>
           {batches.map((batch) => (
             <div key={batch.id} className="batch-cell button-cell">
-              <button className="enroll-now-btn">Enroll Now →</button>
+              <button className="enroll-now-btn"><a href={batch.enrollLink}>Enroll Now →</a></button>
               <button 
                 className="view-details-btn"  
                 onClick={() => navigate(batch.viewDetailsLink)}
@@ -2085,10 +2097,12 @@ onClick={() => handleClick("offerings")}
                     }
                   }}
                 >
+                  <a href=''>
                   Enroll Course
                   <span className="enrollimg">
                     <img src="/images/enroll_btn_icon.svg" alt="Enroll Icon" />
                   </span>
+                  </a>
                 </button>
               </div>
             </div>
@@ -2564,16 +2578,27 @@ onClick={() => handleClick("offerings")}
         </SwiperSlide>
       ))}
 
-      <div className="slider-controler">
+
+
+      
+    </Swiper>
+
+    <div className="slider-controler">
         <div className="swiper-button-prev slider-arrow">
           <ion-icon name="arrow-back-outline"></ion-icon>
         </div>
-        <div className="swiper-pagination"></div>
+        <div className="swiper-pagination">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
         <div className="swiper-button-next slider-arrow">
           <ion-icon name="arrow-forward-outline"></ion-icon>
         </div>
       </div>
-    </Swiper>
+
+    
 
       {/* <div className="carousel">
         <button className="carousel-button left">
