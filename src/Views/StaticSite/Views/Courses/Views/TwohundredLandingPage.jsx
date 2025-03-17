@@ -1282,6 +1282,7 @@ import slider_1 from './images/slider_1.svg'
 const TwoHundredLandingPage = () => {
   const [showModal, setShowModal] = useState(false);
   const [activeTab, setActiveTab] = useState(null);
+
   const [activeIndex, setActiveIndex] = useState(null);
   const [activeButton, setActiveButton] = useState("benefits"); // Default active button
 
@@ -1964,7 +1965,7 @@ onClick={() => handleClick("offerings")}
       </h2>
       <h3 className="sec_main">Our Unique Offerings</h3>
 
-      <Swiper
+      {/* <Swiper
         effect={'coverflow'}
         grabCursor={true}
         centeredSlides={true}
@@ -1996,24 +1997,52 @@ onClick={() => handleClick("offerings")}
         </SwiperSlide>
         <SwiperSlide>
           <img src={slider_1} alt="" />
+          <div className="slide-content">
+            <h2>Special Interaction with Dr. Hansaji Yogendra</h2>
+            <p>Receive direct guidance and attend to your queries with spiritual Guru Dr. Hansaji Yogendra, who will be available to offer.</p>
+          </div>
         </SwiperSlide>
         <SwiperSlide>
           <img src={slider_1} alt="" />
+          <div className="slide-content">
+            <h2>Special Interaction with Dr. Hansaji Yogendra</h2>
+            <p>Receive direct guidance and attend to your queries with spiritual Guru Dr. Hansaji Yogendra, who will be available to offer.</p>
+          </div>
         </SwiperSlide>
         <SwiperSlide>
           <img src={slider_1} alt="" />
+          <div className="slide-content">
+            <h2>Special Interaction with Dr. Hansaji Yogendra</h2>
+            <p>Receive direct guidance and attend to your queries with spiritual Guru Dr. Hansaji Yogendra, who will be available to offer.</p>
+          </div>
         </SwiperSlide>
         <SwiperSlide>
           <img src={slider_1} alt="" />
+          <div className="slide-content">
+            <h2>Special Interaction with Dr. Hansaji Yogendra</h2>
+            <p>Receive direct guidance and attend to your queries with spiritual Guru Dr. Hansaji Yogendra, who will be available to offer.</p>
+          </div>
         </SwiperSlide>
         <SwiperSlide>
           <img src={slider_1} alt="" />
+          <div className="slide-content">
+            <h2>Special Interaction with Dr. Hansaji Yogendra</h2>
+            <p>Receive direct guidance and attend to your queries with spiritual Guru Dr. Hansaji Yogendra, who will be available to offer.</p>
+          </div>
         </SwiperSlide>
         <SwiperSlide>
           <img src={slider_1} alt="" />
+          <div className="slide-content">
+            <h2>Special Interaction with Dr. Hansaji Yogendra</h2>
+            <p>Receive direct guidance and attend to your queries with spiritual Guru Dr. Hansaji Yogendra, who will be available to offer.</p>
+          </div>
         </SwiperSlide>
         <SwiperSlide>
           <img src={slider_1} alt="" />
+          <div className="slide-content">
+            <h2>Special Interaction with Dr. Hansaji Yogendra</h2>
+            <p>Receive direct guidance and attend to your queries with spiritual Guru Dr. Hansaji Yogendra, who will be available to offer.</p>
+          </div>
         </SwiperSlide>
 
 
@@ -2027,7 +2056,52 @@ onClick={() => handleClick("offerings")}
           </div>
          
         </div>
-      </Swiper>
+      </Swiper> */}
+
+<Swiper
+      effect={'coverflow'}
+      grabCursor={true}
+      centeredSlides={true}
+      loop={true}
+      slidesPerView={'auto'}
+      coverflowEffect={{
+        rotate: 0,
+        stretch: 0,
+        depth: 100,
+        modifier: 2.5,
+      }}
+      pagination={{ el: '.swiper-pagination', clickable: true }}
+      navigation={{
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+        clickable: true,
+      }}
+      onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
+      modules={[EffectCoverflow, Pagination, Navigation]}
+      className="swiper_container"
+    >
+      {[...Array(8)].map((_, index) => (
+        <SwiperSlide key={index}>
+          <img src={slider_1} alt="" />
+          <div className={`slide-content ${activeIndex === index ? 'visible' : 'hidden'}`}>
+            <h2>Special Interaction with Dr. Hansaji Yogendra</h2>
+            <p>
+              Receive direct guidance and attend to your queries with spiritual Guru Dr. Hansaji Yogendra, who will be available to offer.
+            </p>
+          </div>
+        </SwiperSlide>
+      ))}
+
+      <div className="slider-controler">
+        <div className="swiper-button-prev slider-arrow">
+          <ion-icon name="arrow-back-outline"></ion-icon>
+        </div>
+        <div className="swiper-pagination"></div>
+        <div className="swiper-button-next slider-arrow">
+          <ion-icon name="arrow-forward-outline"></ion-icon>
+        </div>
+      </div>
+    </Swiper>
 
       {/* <div className="carousel">
         <button className="carousel-button left">

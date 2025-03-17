@@ -1135,7 +1135,7 @@
   padding: 12px;
   border-radius: 5px;
   font-size: 13px;
-  border: 1px solid #00000080
+  border: 1px solid #00000080;
 }
 
 .date-item.active {
@@ -1231,7 +1231,10 @@
 }
 
 .before_date_select {
+  // background-color: rgba(202, 70, 37, 0.5) !important;
+  // background: #CA462580;
   background-color: rgba(202, 70, 37, 0.5) !important;
+
   cursor: pointer;
   color: #fff !important;
 }
@@ -1241,6 +1244,12 @@
   /* Active state */
   cursor: pointer;
 }
+// .enroll-course-btn:disabled {
+//   pointer-events: none;
+//   opacity: 0.6;
+// }
+
+
 
 /* Responsive styles for mobile */
 @media (max-width: 900px) {
@@ -1541,6 +1550,7 @@
   text-align: center;
   padding: 50px 20px;
   background: #fff;
+  height: 670px;
 
   .section-title {
     font-size: 24px;
@@ -2476,10 +2486,63 @@
   font-family: 'Open Sans';
   font-weight: 600;
   font-size: 24px;
+  color: #000;
 }
 
 .slide-content p {
   font-family: 'Open Sans';
   font-weight: 400;
   font-size: 18px;
+  color: #000;
+}
+
+// .slide-content {
+//   opacity: 0;
+//   transition: opacity 0.5s ease-in-out;
+// }
+
+// .slide-content.visible {
+//   opacity: 1;
+// }
+
+.slide-content {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  transform: translateY(20px); /* Moves the content 20px down */
+  
+}
+
+.slide-content.visible {
+  opacity: 1;
+  transform: translateY(30px); /* Moves it slightly more down when visible */
+  // height: 670px;
+  height: auto;
+}
+
+.slide-content.hidden {
+  opacity: 0;
+}
+.swiper_container {
+  margin-top: -50px; /* Move the entire slider further up */
+  position: relative;
+}
+
+.slider-controler {
+  // margin-top: 30px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* Adjust spacing if needed */
+  
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  position: relative; /* Keep buttons aligned properly */
+  top: 10px; /* Fine-tune position */
+}
+
+.swiper-pagination {
+  position: relative;
+  top: 15px; /* Adjust to move pagination down */
 }
