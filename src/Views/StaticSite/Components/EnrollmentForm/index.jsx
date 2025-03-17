@@ -223,10 +223,12 @@ const Enrollment = () => {
       "/meditation-foundation-course-online",
       "/regular-meditation-classes-online",
       "/couples-classes",
-      "/IBY-course",
+      // "/IBY-course",
       "/regular-pregnacy-classes",
       "/department-of-rehabilitation-and-physiotherapy",
-      "/alibaug"
+      // "/healthy-weightloss-wellness-retreat",
+      // "/deep-dive-yoga-meditation-retreat",
+      // "/forest-yoga-retreat"
     ];
 
     const list21DaysCourse = [

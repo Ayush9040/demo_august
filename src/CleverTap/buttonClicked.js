@@ -1034,100 +1034,21 @@ export const handleCTOnUserLoginCalled = ({
 
 }
 
-// export const triggerCourseEvent = ({userName, startTime, endTime, startDate, endDate, selectedTime, courseName, courseUrl}) => {
 
 
-
-// const convertToISO = (timeString) => {
-//   const date = new Date();
-//   const normalizedTime = timeString.replace(/\./g, "").toUpperCase(); // Standardize format
-  
-//   const match = normalizedTime.match(/(\d{1,2}):(\d{2})\s*(AM|PM)/i);
-  
-//   if (!match) {
-//       console.error("Invalid time format:", timeString);
-//       return null; // Return null for invalid formats
-//   }
-
-//   const [_, hours, minutes, period] = match;
-
-//   let hoursInt = parseInt(hours, 10);
-//   const minutesInt = parseInt(minutes, 10);
-
-//   // Convert 12-hour format to 24-hour format
-//   if (period.toUpperCase() === "PM" && hoursInt !== 12) {
-//       hoursInt += 12;
-//   } else if (period.toUpperCase() === "AM" && hoursInt === 12) {
-//       hoursInt = 0;
-//   }
-
-//   // Set time on today's date
-//   date.setHours(hoursInt, minutesInt, 0, 0);
-
-//   return Math.floor(date.getTime() / 1000); // Convert milliseconds to seconds
-// };
-
-
-// let startISO = null;
-// let endISO = null;
-
-// // Extract start and end times safely
-// if (startTime.includes(" to ")) {
-//   const [startTime2, endTime2] = startTime.split(" to ").map(time => time.trim());
-
-//   const startISO = convertToISO(startTime2);
-//   const endISO = convertToISO(endTime2);
-
-//   console.log("Start Time:", startISO);
-//   console.log("End Time:", endISO);
-// }
-
-//   const startDate1 = startDate; // DD/MM/YYYY format
-// const [day, month, year] = startDate1.split("/").map(Number);
-
-// const dateObject = new Date(year, month - 1, day); // Month is 0-based in JS
-// const StartepochDate = dateObject.getTime();
-
-// const endDate1 = endDate; // DD/MM/YYYY format
-// const [day1, month1, year1] = endDate1.split("/").map(Number);
-
-// const dateObject1 = new Date(year1, month1 - 1, day1); // Month is 0-based in JS
-// const endepochDate = dateObject1.getTime();
-
-//   window.clevertap.event.push("Course_Join_Details", {
-//     "Start_Time": startISO, // Epoch
-//     "End_Time": endISO, // Epoch
-//     "Start_Date": StartepochDate, // Epoch
-//     "End_Date": endepochDate, // Epoch
-//     "Time_Selected": startISO, // Epoch
-//     "Course_Name": courseName,
-//     "Course_Url": courseUrl,
-//     "User_Name": userName
-//   });
-// };
-
-export const triggerCourseEvent = ({ userName, startTime, endTime, startDate, endDate, selectedTime, courseName, courseUrl }) => {
-
-  // Function to convert date (DD/MM/YYYY) to different formats
-  const formatDate = (dateString) => {
+export const triggerCourseEvent = ({ userName, startDate, endDate, selectedTime, courseName, courseUrl }) => {
+  // Function to convert date (DD/MM/YYYY) to Epoch format
+  const toEpoch = (dateString) => {
     const [day, month, year] = dateString.split("/").map(Number);
-    const dateObject = new Date(year, month - 1, day); // Month is 0-based in JS
-
-    return {
-      epoch: Math.floor(dateObject.getTime() / 1000), // UNIX Epoch in seconds
-      iso: dateObject.toISOString(), // ISO 8601 Format
-      shortDate: `${year}-${month.toString().padStart(2, "0")}-${day.toString().padStart(2, "0")} 00:00:00` // Short Date Format
-    };
+    return Math.floor(new Date(year, month - 1, day).getTime() / 1000); // Convert to seconds
   };
 
-  // Function to convert time (e.g., "7:30 AM") into multiple formats using the provided date
-  const formatTime = (timeString, dateString) => {
+  // Function to convert time (e.g., "4:00 p.m.") into Epoch format using the provided date
+  const timeToEpoch = (timeString, dateString) => {
     const [day, month, year] = dateString.split("/").map(Number);
-    const date = new Date(year, month - 1, day); // Use provided date
+    const date = new Date(year, month - 1, day);
 
-    const normalizedTime = timeString.replace(/\./g, "").toUpperCase(); // Standardize format
-    const match = normalizedTime.match(/(\d{1,2}):(\d{2})\s*(AM|PM)/i);
-
+    const match = timeString.match(/(\d{1,2}):(\d{2})\s*(a\.m\.|p\.m\.)/i);
     if (!match) {
       console.error("Invalid time format:", timeString);
       return null;
@@ -1137,70 +1058,41 @@ export const triggerCourseEvent = ({ userName, startTime, endTime, startDate, en
     let hoursInt = parseInt(hours, 10);
     const minutesInt = parseInt(minutes, 10);
 
-    // Convert 12-hour format to 24-hour format
-    if (period.toUpperCase() === "PM" && hoursInt !== 12) {
+    if (period.toLowerCase() === "p.m." && hoursInt !== 12) {
       hoursInt += 12;
-    } else if (period.toUpperCase() === "AM" && hoursInt === 12) {
+    } else if (period.toLowerCase() === "a.m." && hoursInt === 12) {
       hoursInt = 0;
     }
 
-    // Set extracted time on the provided date
     date.setHours(hoursInt, minutesInt, 0, 0);
-
-    return {
-      epoch: Math.floor(date.getTime() / 1000), // UNIX Epoch in seconds
-      iso: date.toISOString(), // ISO 8601 Format
-      shortDate: `${year}-${month.toString().padStart(2, "0")}-${day.toString().padStart(2, "0")} ${hoursInt.toString().padStart(2, "0")}:${minutes.toString().padStart(2, "0")}:00` // Short Date Format
-    };
+    return Math.floor(date.getTime() / 1000); // Convert to seconds
   };
 
-  // Convert Start and End Dates
-  const startDateFormats = formatDate(startDate);
-  const endDateFormats = formatDate(endDate);
+  // Convert Start and End Dates to Epoch
+  const startDateEpoch = `$D_${toEpoch(startDate)}`;
+  const endDateEpoch = `$D_${toEpoch(endDate)}`;
 
-  let startTimeFormats = null;
-  let endTimeFormats = null;
+  let startTimeEpoch = null;
+  let endTimeEpoch = null;
 
-  if (startTime.includes(" to ")) {
-    const [startTimeStr, endTimeStr] = startTime.split(" to ").map(time => time.trim());
-
-    startTimeFormats = formatTime(startTimeStr, startDate);
-    endTimeFormats = formatTime(endTimeStr, endDate);
+  if (selectedTime.includes(" to ")) {
+    const [startTimeStr, endTimeStr] = selectedTime.split(" to ").map(time => time.trim());
+    startTimeEpoch = `$D_${timeToEpoch(startTimeStr, startDate)}`;
+    endTimeEpoch = `$D_${timeToEpoch(endTimeStr, endDate)}`;
+  } else if (/^(Saturday|Sunday)$/i.test(selectedTime)) {
+    startTimeEpoch = selectedTime; // Keep it as a string if it's a day
+    endTimeEpoch = selectedTime;
   }
 
-  console.log("Start Time:", startTimeFormats);
-  console.log("End Time:", endTimeFormats);
-  console.log("Start Date:", startDateFormats);
-  console.log("End Date:", endDateFormats);
-
-  const epoch = (indate) => {
-    let a = indate;
-    let [month, year] = a.split('-');
-    // Create a date object for December 1, 2024
-    const dateString = `${month} 1, 20${year}`;
-    const date = new Date(dateString);
-    // Get the epoch time (milliseconds since January 1, 1970)
-    const epochTime = date.getTime();
-    return epochTime
-  }
+  // alert('ste ', startTimeEpoch, 'etp ', endTimeEpoch, 'sde ', startDateEpoch, 'ede ', endDateEpoch)
 
   // Send event to CleverTap
   window.clevertap.event.push("Course_Join_Details", {
-    // "Start_Time_Epoch": startTimeFormats?.epoch,
-    // "End_Time_Epoch": endTimeFormats?.epoch,
-    "Start_Time_ISO": startTimeFormats?.iso,
-    "End_Time_ISO": endTimeFormats?.iso,
-    // "Start_Time_Short": startTimeFormats?.shortDate,
-    // "End_Time_Short": endTimeFormats?.shortDate,
-
-    // "Start_Date_Epoch": startDateFormats.epoch,
-    // "End_Date_Epoch": endDateFormats.epoch,
-    "Start_Date_ISO": "1738406400000",
-    "End_Date_ISO": endDateFormats.iso,
-    // "Start_Date_Short": startDateFormats.shortDate,
-    // "End_Date_Short": endDateFormats.shortDate,
-
-    "Time_Selected": startTimeFormats?.epoch, // Epoch Time for selected time
+    "Start_Time": startTimeEpoch,
+    "End_Time": endTimeEpoch,
+    "Start_Date": startDateEpoch,
+    "End_Date": endDateEpoch,
+    "Time_Selected": selectedTime,
     "Course_Name": courseName,
     "Course_Url": courseUrl,
     "User_Name": userName
@@ -1209,86 +1101,67 @@ export const triggerCourseEvent = ({ userName, startTime, endTime, startDate, en
 
 
 
-
-export const triggerCourseEventFor21DaysCourse = ({userName, startDate, endDate, courseName, courseUrl}) => {
-
-
-//   // let startDate1 = "";
-//   // let endDate1 = "";
-//   // if (startDate && typeof startDate === 'string') {
-//   //   const dateParts = startDate.split(' to ');
-//   //   if (dateParts.length === 2) {
-//   //     startDate1 = dateParts[0]?.trim() || "";  // e.g., "3rd Jun"
-//   //     endDate1 = dateParts[1]?.trim() || "";    // e.g., "28th Jun 2024"
-//   //   }
-//   // }
-
+export const triggerCourseEventFor21DaysCourse = ({ userName, startDate, courseName, courseUrl }) => {
+  // Function to convert date format (e.g., "6th Apr") to Epoch
   const parseDate = (dateStr) => {
-//     // Remove ordinal suffixes (st, nd, rd, th)
-    let cleanedDate = dateStr.replace(/(\d+)(st|nd|rd|th)/, "$1");
-    
-//     // Convert to a Date object
-    let dateObject = new Date(`${cleanedDate} 2025`); // Assuming 2025, modify as needed
-    return dateObject.getTime(); // Get epoch time in milliseconds
+    let cleanedDate = dateStr.replace(/(\d+)(st|nd|rd|th)/, "$1"); // Remove ordinal suffixes
+    let [day, month] = cleanedDate.split(" ");
+    const year = 2025; // Assuming year 2025
+    const dateObject = new Date(`${month} ${day}, ${year}`);
+    return Math.floor(dateObject.getTime() / 1000); // Convert to seconds (Epoch)
   };
 
-//   // Extracting start and end date
+  // Extracting start and end date
   const dateParts = startDate.split(" to ");
   if (dateParts.length !== 2) {
     console.error("Invalid date format");
     return;
   }
 
-  const startEpoch = parseDate(dateParts[0].trim()); // Convert start date to epoch
-  const endEpoch = parseDate(dateParts[1].trim());   // Convert end date to epoch
+  const startEpoch = `$D_${parseDate(dateParts[0].trim())}`; // Convert start date to epoch
+  const endEpoch = `$D_${parseDate(dateParts[1].trim())}`;   // Convert end date to epoch
+
+  // alert("done")
 
   window.clevertap.event.push("Course_Join_Details", {
-    "Start_Date": "1710221400", // Epoch
-    "End_Date": endEpoch, // Epoch
+    "Start_Date": startEpoch, // Epoch format
+    "End_Date": endEpoch, // Epoch format
     "Course_Name": courseName,
     "Course_Url": courseUrl,
     "User_Name": userName
   });
 };
 
-export const triggerCourseEventFor7DaysCourse = ({userName, startDate, endDate, courseName, courseUrl}) => {
 
 
-//   // let startDate1 = "";
-//   // let endDate1 = "";
-//   // if (startDate && typeof startDate === 'string') {
-//   //   const dateParts = startDate.split(' to ');
-//   //   if (dateParts.length === 2) {
-//   //     startDate1 = dateParts[0]?.trim() || "";  // e.g., "3rd Jun"
-//   //     endDate1 = dateParts[1]?.trim() || "";    // e.g., "28th Jun 2024"
-//   //   }
-//   // }
-
+export const triggerCourseEventFor7DaysCourse = ({ userName, startDate, courseName, courseUrl }) => {
+  // Function to convert date format (e.g., "6th Apr") to Epoch
   const parseDate = (dateStr) => {
-//     // Remove ordinal suffixes (st, nd, rd, th)
-    let cleanedDate = dateStr.replace(/(\d+)(st|nd|rd|th)/, "$1");
-    
-//     // Convert to a Date object
-    let dateObject = new Date(`${cleanedDate} 2025`); // Assuming 2025, modify as needed
-    return dateObject.getTime(); // Get epoch time in milliseconds
+    let cleanedDate = dateStr.replace(/(\d+)(st|nd|rd|th)/, "$1"); // Remove ordinal suffixes
+    let [day, month] = cleanedDate.split(" ");
+    const year = 2025; // Assuming year 2025
+    const dateObject = new Date(`${month} ${day}, ${year}`);
+    return Math.floor(dateObject.getTime() / 1000); // Convert to seconds (Epoch)
   };
 
-//   // Extracting start and end date
+  // Extracting start and end date
   const dateParts = startDate.split(" to ");
   if (dateParts.length !== 2) {
     console.error("Invalid date format");
     return;
   }
 
-  const startEpoch = parseDate(dateParts[0].trim()); // Convert start date to epoch
-  const endEpoch = parseDate(dateParts[1].trim());   // Convert end date to epoch
+  const startEpoch = `$D_${parseDate(dateParts[0].trim())}`; // Convert start date to epoch
+  const endEpoch = `$D_${parseDate(dateParts[1].trim())}`;   // Convert end date to epoch
+  // alert("7 days")
 
   window.clevertap.event.push("Course_Join_Details", {
-    "Start_Date": startEpoch, // Epoch
-    "End_Date": endEpoch, // Epoch
+    "Start_Date": startEpoch, // Epoch format
+    "End_Date": endEpoch, // Epoch format
     "Course_Name": courseName,
     "Course_Url": courseUrl,
     "User_Name": userName
   });
 };
+
 
