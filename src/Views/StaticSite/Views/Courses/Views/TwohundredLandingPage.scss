@@ -1083,8 +1083,9 @@
 
 .modal-header h3 {
   margin: 0;
+  font-family: 'Open Sans';
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .close-modal {
@@ -1119,7 +1120,7 @@
   width: 458px;
   height: 188px;
   gap: 19px;
-  margin-top: 10px;
+  margin-top: 19px;
   // padding: 20px;
 }
 
@@ -1135,7 +1136,8 @@
   padding: 12px;
   border-radius: 5px;
   font-size: 13px;
-  border: 1px solid #00000080;
+  // border: 1px solid #00000080;
+  box-shadow: 0 0 0 2px hsl(233, 10%, 80%) inset
 }
 
 .date-item.active {
@@ -2640,4 +2642,35 @@
     left: calc(50% + 20px);
     top: 90px;
   }
+}
+
+.hero-overlay .mega-menu-container .left-menu .menu-logo, .hero-overlay .mega-menu-container .left-menu .cross {
+  text-align: left;
+}
+
+.hero-overlay .mega-menu-container ul {
+  list-style: none;
+  padding-left: 0;
+  text-align: left;
+}
+
+.hero-overlay .mega-menu-container .right-menu {
+  color: #000;
+  text-align: left;
+}
+
+@media(max-width: 768px){
+  .top_image {
+    width: 100%;
+    height: 150px !important;
+}
+.below_images {
+  flex-direction: column;
+  width: 100%;
+}
+.below_images img {
+  // flex-direction: column;
+  width: 100% !important;
+  height: 150px !important;
+}
 }
