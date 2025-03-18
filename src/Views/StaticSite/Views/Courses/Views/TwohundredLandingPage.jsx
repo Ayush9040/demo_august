@@ -1255,7 +1255,7 @@
 
 
 
-import React, { useState  }  from "react";
+import React, { useState, useEffect  }  from "react";
 import { useNavigate } from "react-router-dom";
 // import InnerNavComponent from '../InnerNavComponent'
 import InnerNavComponent from "../../../Components/InnerNavComponent";
@@ -1272,6 +1272,7 @@ import certificate_1 from "./images/certificate_1.svg"
 import certificate_2 from "./images/certificate_2.svg"
 import certificate_3 from "./images/certificate_3.svg"
 import close from "./images/close.svg"
+import enrollicon from "./images/enrollicon.svg"
 import Footer from "../../../Components/Footer";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css'
@@ -1287,6 +1288,47 @@ const TwoHundredLandingPage = () => {
   const navigate = useNavigate();
   const [activeIndex, setActiveIndex] = useState(null);
   const [activeButton, setActiveButton] = useState("benefits"); // Default active button
+  const [currentBatchDates, setCurrentBatchDates] = useState([]);
+  const [showFloatingEnroll, setShowFloatingEnroll] = useState(false);
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+
+    // Add this useEffect to handle scroll events
+    useEffect(() => {
+      const handleScroll = () => {
+        // Get the current scroll position
+        const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+        
+        // Get the hero section height
+        const heroSection = document.querySelector('.hero');
+        const heroHeight = heroSection ? heroSection.offsetHeight : 0;
+        
+        // Get the footer position
+        const footer = document.querySelector('footer');
+        const footerPosition = footer ? footer.offsetTop : 9999;
+        
+        // Set a buffer value to hide the floating section before reaching the footer
+        const buffer = 300;
+        
+        // Show the floating section after scrolling past hero but before reaching footer
+        if (scrollPosition > heroHeight && scrollPosition < footerPosition - buffer) {
+          setShowFloatingEnroll(true);
+        } else {
+          setShowFloatingEnroll(false);
+        }
+      };
+  
+      // Add scroll event listener
+      window.addEventListener('scroll', handleScroll);
+      
+      // Initial check when component mounts
+      handleScroll();
+      
+      // Clean up the event listener on component unmount
+      return () => {
+        window.removeEventListener('scroll', handleScroll);
+      };
+    }, []);
 
    // Handle date selection
    const handleDateSelect = (index) => {
@@ -1303,6 +1345,13 @@ const TwoHundredLandingPage = () => {
       availableBatchesSection.scrollIntoView({ behavior: 'smooth' });
     }
   };
+
+  // const scrollToBenefits = () => {
+  //   const benefitsSection = document.querySelector('.benefits-section');
+  //   if (benefitsSection) {
+  //     benefitsSection.scrollIntoView({ behavior: 'smooth' });
+  //   }
+  // };
 
   const handleClick = (id) => {
     setActiveButton(id);
@@ -1458,29 +1507,118 @@ const TwoHundredLandingPage = () => {
     { date: "1st Sep to 30th Sep 2024", mode: "Online", enrollLink: '/enrollment/200-hrs-part-time-ttc-online' },
   ];
 
-const offerings = [
-  {
-    image: "offering1.jpg",
-    title: "Special Interaction with Dr. Hansaji Yogendra",
-    description:
-      "Receive direct guidance and attend to your queries with spiritual Guru Dr. Hansaji Yogendra, who will be available to offer.",
-  },
-  {
-    image: "offering2.jpg",
-    title: "Live Interactive Classes",
-    description: "Engage with experienced instructors in real-time sessions.",
-  },
-  {
-    image: "offering3.jpg",
-    title: "One-on-One Mentorship",
-    description: "Personalized mentorship to guide your learning journey.",
-  },
-  {
-    image: "offering4.jpg",
-    title: "Exclusive Study Material",
-    description: "Get access to premium yoga learning resources.",
-  },
-];
+    // Function to generate dates dynamically
+    // const getUpcomingDates = (batchId) => {
+    //   const batch = batches.find(b => b.id === batchId);
+    //   if (!batch) return [];
+      
+    //   const dates = [];
+    //   const currentDate = new Date();
+      
+    //   // Generate 4 upcoming monthly batch dates
+    //   for (let i = 0; i < 4; i++) {
+    //     const startDate = new Date(currentDate);
+    //     startDate.setMonth(currentDate.getMonth() + i);
+    //     startDate.setDate(1); // First day of month
+        
+    //     const endDate = new Date(startDate);
+    //     endDate.setMonth(startDate.getMonth() + 1);
+    //     endDate.setDate(0); // Last day of month
+        
+    //     const dateString = `1st ${startDate.toLocaleString('default', { month: 'short' })} to ${endDate.getDate()}${getDaySuffix(endDate.getDate())} ${endDate.toLocaleString('default', { month: 'short' })} ${startDate.getFullYear()}`;
+        
+    //     dates.push({
+    //       date: dateString,
+    //       mode: batch.mode,
+    //       enrollLink: batch.enrollLink
+    //     });
+    //   }
+      
+    //   return dates;
+    // };
+    
+    // // Helper function to get day suffix (1st, 2nd, 3rd, etc.)
+    // const getDaySuffix = (day) => {
+    //   if (day > 3 && day < 21) return 'th';
+    //   switch (day % 10) {
+    //     case 1: return 'st';
+    //     case 2: return 'nd';
+    //     case 3: return 'rd';
+    //     default: return 'th';
+    //   }
+    // };
+  
+    // const handleDateSelect = (index) => {
+    //   setActiveIndex(index);
+    // };
+  
+    // const openBatchModal = (batchId) => {
+    //   const dates = getUpcomingDates(batchId);
+    //   setCurrentBatchDates(dates);
+    //   setActiveTab(batchId);
+    //   setShowModal(true);
+    //   setActiveIndex(null);
+    // };
+  
+
+    const offeringsData = [
+      {
+        id: 1,
+        title: "Special Interaction with Dr. Hansaji Yogendra",
+        description: "Receive direct guidance and attend to your queries with spiritual Guru Dr. Hansaji Yogendra, who will be available to offer.",
+        image: slider_1 // Replace with your actual image path
+      },
+      {
+        id: 2,
+        title: "Special Interaction with Dr. Hansaji Yogendra",
+        description: "Receive direct guidance and attend to your queries with spiritual Guru Dr. Hansaji Yogendra, who will be available to offer.",
+        image: slider_1
+      },
+      {
+        id: 3,
+        title: "Special Interaction with Dr. Hansaji Yogendra",
+        description: "Receive direct guidance and attend to your queries with spiritual Guru Dr. Hansaji Yogendra, who will be available to offer.",
+        image: slider_1
+      },
+      {
+        id: 4,
+        title: "Special Interaction with Dr. Hansaji Yogendra",
+        description: "Receive direct guidance and attend to your queries with spiritual Guru Dr. Hansaji Yogendra, who will be available to offer.",
+        image: slider_1
+      },
+      {
+        id: 5,
+        title: "Special Interaction with Dr. Hansaji Yogendra",
+        description: "Receive direct guidance and attend to your queries with spiritual Guru Dr. Hansaji Yogendra, who will be available to offer.",
+        image: slider_1
+      }
+    ];
+
+    
+
+// const offerings = [
+//   {
+//     image: "offering1.jpg",
+//     title: "Special Interaction with Dr. Hansaji Yogendra",
+//     description:
+//       "Receive direct guidance and attend to your queries with spiritual Guru Dr. Hansaji Yogendra, who will be available to offer.",
+//   },
+//   {
+//     image: "offering2.jpg",
+//     title: "Live Interactive Classes",
+//     description: "Engage with experienced instructors in real-time sessions.",
+//   },
+//   {
+//     image: "offering3.jpg",
+//     title: "One-on-One Mentorship",
+//     description: "Personalized mentorship to guide your learning journey.",
+//   },
+//   {
+//     image: "offering4.jpg",
+//     title: "Exclusive Study Material",
+//     description: "Get access to premium yoga learning resources.",
+//   },
+// ];
 
 
 const faqData = [
@@ -1554,6 +1692,9 @@ const faqData = [
     </div>
   </div>
 </section>
+
+
+
 
 {/* Button Section */}
 
@@ -1994,7 +2135,7 @@ onClick={() => handleClick("offerings")}
             </div>
           ))}
         </div>
-
+ 
         <div className="batch-row">
           <div className="batch-cell label-cell">Starting Date</div>
           {batches.map((batch) => (
@@ -2012,7 +2153,22 @@ onClick={() => handleClick("offerings")}
               </span>
             </div>
           ))}
-        </div>
+        </div> 
+
+{/* <div className="batch-row">
+              <div className="batch-cell label-cell">Starting Date</div>
+              {batches.map((batch) => (
+                <div key={batch.id} className="batch-cell data-cell">
+                  {batch.startDate}
+                  <span 
+                    className="view-batch-link" 
+                    onClick={() => openBatchModal(batch.id)}
+                  >
+                    View upcoming batch
+                  </span>
+                </div>
+              ))}
+            </div> */}
 
         <div className="batch-row">
           <div className="batch-cell label-cell">Timings</div>
@@ -2051,6 +2207,67 @@ onClick={() => handleClick("offerings")}
       </div>
 
       {/* Modal for Upcoming Batches */}
+      {/* {showModal && (
+            <div className="modal-overlay">
+              <div className="modal-box">
+                <div className="modal-header">
+                  <h3>Upcoming Dates</h3>
+                  <button 
+                    className="close-modal" 
+                    onClick={() => setShowModal(false)}
+                  >
+                    <img src={close} alt="" />
+                  </button>
+                </div>
+                <div className="modal-body">
+                  <div className="date-grid">
+                    {currentBatchDates.map((date, index) => (
+                      <div
+                        key={index}
+                        className={`date-item ${activeIndex === index ? "active" : ""}`}
+                        onClick={() => handleDateSelect(index)}
+                      >
+                        <div className="date-line">
+                          <span className="calendar-icon">
+                            <img src="/images/calender.svg" alt="Calendar Icon" />
+                          </span>
+                          <span className="date">{date.date}</span>
+                        </div>
+                        <div className={`mode-line ${date.mode === "Online" ? "online" : "online-oncampus"}`}>
+                          <span className="computer-icon">
+                            <img src="/images/computer.svg" alt="Computer Icon" />
+                          </span>
+                          <span className="mode">{date.mode}</span>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                  
+                  <div className="enrollcourse">
+                    <button
+                      className={`enroll-course-btn ${activeIndex !== null ? "active" : "before_date_select"}`}
+                      disabled={activeIndex === null}
+                      onClick={() => {
+                        if (activeIndex !== null) {
+                          window.location.href = currentBatchDates[activeIndex].enrollLink;
+                        }
+                      }}
+                    >
+                      <a href={activeIndex !== null ? currentBatchDates[activeIndex].enrollLink : ''}>
+                        Enroll Course
+                        <span className="enrollimg">
+                          <img src="/images/enroll_btn_icon.svg" alt="Enroll Icon" />
+                        </span>
+                      </a>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
+        </div>
+      </div>
+    </section> */}
       {showModal && (
         <div className="modal-overlay">
           <div className="modal-box">
@@ -2443,7 +2660,7 @@ onClick={() => handleClick("offerings")}
     </section>
 
       {/* Unique Offerings */}
-      <section className="offerings container" id="offerings">
+      {/* <section className="offerings container" id="offerings">
       <h2 className="section-title" style={{ marginBottom: '0px' }}>
         <span className="highlight">Available Batches</span>
         <br />
@@ -2543,7 +2760,7 @@ onClick={() => handleClick("offerings")}
          
         </div>
       </Swiper> */}
-
+{/* 
 <Swiper
       effect={'coverflow'}
       grabCursor={true}
@@ -2596,8 +2813,59 @@ onClick={() => handleClick("offerings")}
         <div className="swiper-button-next slider-arrow">
           <ion-icon name="arrow-forward-outline"></ion-icon>
         </div>
-      </div>
+      </div> */}
 
+ {/* <div className="carousel-container">
+      <Swiper
+        effect={'coverflow'}
+        grabCursor={true}
+        centeredSlides={true}
+        loop={true}
+        slidesPerView={'auto'}
+        coverflowEffect={{
+          rotate: 0,
+          stretch: 0,
+          depth: 100,
+          modifier: 2.5,
+        }}
+        pagination={{ 
+          el: '.swiper-pagination',
+          clickable: true,
+          dynamicBullets: true
+        }}
+        navigation={{
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        }}
+        onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
+        modules={[EffectCoverflow, Pagination, Navigation]}
+        className="swiper_container"
+      >
+        {[...Array(8)].map((_, index) => (
+          <SwiperSlide key={index}>
+            <div className={`slide-wrapper ${activeIndex === index ? 'active' : 'inactive'}`}>
+              <img src={slider_1} alt={`Slide ${index + 1}`} />
+              <div className={`slide-content ${activeIndex === index ? 'visible' : 'hidden'}`}>
+                <h2>Special Interaction with <span className="slidetitle">Dr. Hansaji Yogendra</span></h2>
+                <p>
+                  Receive direct guidance and attend to your queries with spiritual Guru Dr. Hansaji Yogendra, who will be available to offer.
+                </p>
+              </div>
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
+      
+      <div className="slider-controler">
+        <div className="swiper-button-prev slider-arrow">
+          <ion-icon name="arrow-back-outline"></ion-icon>
+        </div>
+        <div className="swiper-pagination"></div>
+        <div className="swiper-button-next slider-arrow">
+          <ion-icon name="arrow-forward-outline"></ion-icon>
+        </div>
+      </div>
+    </div> */}
     
 
       {/* <div className="carousel">
@@ -2627,9 +2895,68 @@ onClick={() => handleClick("offerings")}
         ))}
       </div> */}
 
+{/* 
+    </section>  */}
 
+
+<section className="offerings-container" id="offerings">
+      <div className="section-header">
+        <h2 className="section-title">
+          <span className="highlight">Available Batches</span>
+        </h2>
+        <h3 className="section-main-title">Our Unique Offerings</h3>
+      </div>
+      
+      <div className="carousel-container">
+        <Swiper
+          effect={'coverflow'}
+          grabCursor={true}
+          centeredSlides={true}
+          loop={true}
+          slidesPerView={'auto'}
+          coverflowEffect={{
+            rotate: 0,
+            stretch: 0,
+            depth: 100,
+            modifier: 2.5,
+          }}
+          pagination={{
+            el: '.swiper-pagination',
+            clickable: true,
+            dynamicBullets: true
+          }}
+          navigation={{
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          }}
+          modules={[EffectCoverflow, Pagination, Navigation]}
+          className="swiper-container"
+          onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
+        >
+          {offeringsData.map((offering, index) => (
+            <SwiperSlide key={offering.id}>
+              <div className={`slide-wrapper ${activeIndex === index ? 'active' : 'inactive'}`}>
+                <img src={offering.image} alt={`Yoga offering ${index + 1}`} />
+                <div className={`slide-content ${activeIndex === index ? 'visible' : 'hidden'}`}>
+                  <h2>Special Interaction with <span className="slide-title">{offering.title}</span></h2>
+                  <p>{offering.description}</p>
+                </div>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+        
+        <div className="slider-controler">
+        <div className="swiper-button-prev slider-arrow">
+            <ion-icon name="arrow-back-outline"></ion-icon>
+          </div>
+          <div className="swiper-pagination"></div>
+            <div className="swiper-button-next slider-arrow">
+          <ion-icon name="arrow-forward-outline"></ion-icon>
+        </div>
+        </div>
+      </div>
     </section>
-
 
       {/* FAQ Section */}
  <section className="faq" id="faq">
@@ -2671,15 +2998,15 @@ onClick={() => handleClick("offerings")}
     </section>
 
     {/* Enroll Container */}
-    <section className="enroll-wrapper">
+    {/* <section className="enroll-wrapper">
     <div className="enroll-container">
       <span className="course-title">200-Hour Yoga Teacher Training Course</span>
       <button className="enroll-button">
         Enroll Now 
         {/* <FiArrowRight className="arrow-icon" /> */} 
-      </button>
+      {/* </button>
     </div>
-    </section>
+    </section> */} 
       {/* Footer */}
       {/* <footer className="footer">
       <div className="footer-container">
@@ -2737,12 +3064,51 @@ onClick={() => handleClick("offerings")}
         </div>
       </div>
     </footer> */}
+     
+     {/* Floating version of the enroll section */}
+     {/* {showFloatingEnroll && (
+  <div className="enroll-wrapper floating">
+    <div className="enroll-container">
+      <span className="course-title">200-Hour Yoga Teacher Training Course</span>
+      <button className="enroll-button" onClick={() => scrollToBenefits()}>
+        Enroll Now 
+        <span className="arrow-icon">
+          <img src={enrollicon} alt="icon" className="enrollicon"></img>
+        </span>
+      </button>
+    </div>
+  </div>
+)} */}
+
+     {showFloatingEnroll && (
+        <div className="enroll-wrapper floating">
+          <div className="enroll-container">
+            <span className="course-title">200-Hour Yoga Teacher Training Course</span>
+            <button className="enroll-button" onClick={() => scrollToAvailableBatches()}>
+              Enroll Now 
+              <span className="arrow-icon">
+                <img src={enrollicon} alt="icon" className="enrollicon"></img>
+              </span>
+            </button>
+          </div>
+        </div>
+      )}
+     
+     
+      
       <Footer />
     </div>
   );
 };
 
 export default TwoHundredLandingPage;
+
+//       <Footer />
+//     </div>
+//   );
+// };
+
+// export default TwoHundredLandingPage;
 
 
 // const TwoHundredLandingPage = () => {
