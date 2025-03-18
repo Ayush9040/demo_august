@@ -2936,7 +2936,9 @@ onClick={() => handleClick("offerings")}
           {offeringsData.map((offering, index) => (
             <SwiperSlide key={offering.id}>
               <div className={`slide-wrapper ${activeIndex === index ? 'active' : 'inactive'}`}>
+                <div>
                 <img src={offering.image} alt={`Yoga offering ${index + 1}`} />
+                </div>
                 <div className={`slide-content ${activeIndex === index ? 'visible' : 'hidden'}`}>
                   <h2>Special Interaction with <span className="slide-title">{offering.title}</span></h2>
                   <p>{offering.description}</p>
