@@ -82,6 +82,7 @@ const TyiLandingPage = lazy(() => import('../Views/LandingPage/NewLandingPage/in
 const TyiLandingPage7Months = lazy(() => import('../Views/LandingPage/NewLandingPage2/index'))
 const NutriGut = lazy(() => import('../Views/LandingPage/Nutrigut/index'))
 const Hours200 = lazy(() => import('../Components/200Hours/200Hours'))
+const TwohundredLandingPage = lazy(() => import('../Views/Courses/Views/TwohundredLandingPage'))
 
 const staticSiteRoutes = [
   //Home
@@ -117,6 +118,14 @@ const staticSiteRoutes = [
     exact: true,
     id: 'statisSiteCoursesBrowse',
     routePath: '/courses/browse/:type',
+    name: 'Courses',
+  },
+  {
+    Component: TwohundredLandingPage,
+    path: '/200-allcourses',
+    exact: true,
+    id: 'statisSiteCoursesBrowse',
+    routePath: '/200-allcourses',
     name: 'Courses',
   },
   //About
