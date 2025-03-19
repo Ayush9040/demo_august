@@ -37,22 +37,28 @@ const TwoHundredLandingPage = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [selectedBatchId, setSelectedBatchId] = useState(null);
 
-  // Dynamic dates array
-  const dynamicDates = [
-    { date: "1st Mar to 31st Mar 2025", mode: "Online & On Campus", enrollLink: '/enrollment/one-month-ttc' },
-     { date: "1st Apr to 30th Apr 2025", mode: "Online & On Campus", enrollLink: '/enrollment/200-hrs-part-time-ttc-on-campus-english' },
-    { date: "1st May to 31st May 2025", mode: "Online & On Campus", enrollLink: '/enrollment/200-hrs-part-time-ttc-on-campus-english' },
-    { date: "2nd Jun to 30th Jun 2025", mode: "Online & On Campus", enrollLink: '/enrollment/200-hrs-part-time-ttc-online' },
-    { date:"1st Jul to 31st Jul 2025", mode: "Online & On Campus", },
-    { date:"1st Aug to 30th Aug 2025", mode: "Online & On Campus", },
-    { date:"1st Sep to 30th Sep 2025", mode: "Online & On Campus", },
-    { date:"1st Oct to 31st Oct 2025", mode: "Online & On Campus", },
-    { date:"1st Nov to 29th Nov 2025", mode: "Online & On Campus", },
-    { date:"1st Dec to 31st Dec 2025", mode: "Online & On Campus", },
-  ];
+  // // Dynamic dates array
+  // const dynamicDates = [
+  //   { date: "1st Mar to 31st Mar 2025", mode: "Online & On Campus", enrollLink: '/enrollment/one-month-ttc' },
+  //    { date: "1st Apr to 30th Apr 2025", mode: "Online & On Campus", enrollLink: '/enrollment/200-hrs-part-time-ttc-on-campus-english' },
+  //   { date: "1st May to 31st May 2025", mode: "Online & On Campus", enrollLink: '/enrollment/200-hrs-part-time-ttc-on-campus-english' },
+  //   { date: "2nd Jun to 30th Jun 2025", mode: "Online & On Campus", enrollLink: '/enrollment/200-hrs-part-time-ttc-online' },
+  //   { date:"1st Jul to 31st Jul 2025", mode: "Online & On Campus", },
+  //   { date:"1st Aug to 30th Aug 2025", mode: "Online & On Campus", },
+  //   { date:"1st Sep to 30th Sep 2025", mode: "Online & On Campus", },
+  //   { date:"1st Oct to 31st Oct 2025", mode: "Online & On Campus", },
+  //   { date:"1st Nov to 29th Nov 2025", mode: "Online & On Campus", },
+  //   { date:"1st Dec to 31st Dec 2025", mode: "Online & On Campus", },
+  // ];
 
   
-
+// Handle date selection
+const handleDateSelect = (index) => {
+  setActiveIndex(index);
+  // You can also store the selected date information if needed
+  const selectedDate = dynamicDates[index];
+  console.log('Selected date:', selectedDate.date, 'Mode:', selectedDate.mode);
+};
 
 
   // Add this useEffect to handle scroll events
@@ -92,10 +98,10 @@ const TwoHundredLandingPage = () => {
     };
   }, []);
 
-  // Handle date selection
-  const handleDateSelect = (index) => {
-    setActiveIndex(index);
-  };
+  // // Handle date selection
+  // const handleDateSelect = (index) => {
+  //   setActiveIndex(index);
+  // };
 
   // Open modal with batch id
   const openBatchModal = (batchId) => {
@@ -605,7 +611,7 @@ onClick={() => handleClick("offerings")}
       </div>
 
       {/* Modal for All Available Dates */}
-      {showModal && (
+      {/* {showModal && (
         <div className="modal-overlay">
           <div className="modal-box">
             <div className="modal-header">
@@ -664,7 +670,84 @@ onClick={() => handleClick("offerings")}
             </div>
           </div>
         </div>
-      )}
+      )} */}
+      {/* Modal for All Available Dates */}
+      {showModal && (
+  <div className="modal-overlay">
+    <div className="modal-box">
+      <div className="modal-header">
+        <h3>Available Course Dates</h3>
+        <button 
+          className="close-modal" 
+          onClick={() => setShowModal(false)}
+        >
+          <img src={close} alt="Close" />
+        </button>
+      </div>
+      <div className="modal-body">
+        <div className="date-grid">
+          {pageDate?.dates.map((item, index) => (
+            <div key={index} className="cards_new_popup_dates">
+              <div className="wrapper_center">
+                <label 
+                  className="item-label item_date" 
+                  style={{ width: '100%', height: '100%', borderRadius: '12px' }}
+                >
+                  <input 
+                    className="item-input"
+                    type="radio" 
+                    name="mode"
+                    value={item}
+                    aria-labelledby={`delivery-${index}-name`}
+                    aria-describedby={`delivery-${index}-shipping delivery-${index}-price`}
+                    onChange={() => handleDateSelect(index)}
+                  />
+                  <span className="item-info item_desc">
+                    <span id={`delivery-${index}-name`} className="item-name date_info">
+                      <img src='/images/dates.svg' alt="Calendar Icon" />
+                      <span className='style_dates'>{item.date}</span>
+                    </span>
+                  </span>
+                  {item.mode && (
+                    <span className="item-info item_desc item_padding">
+                      <span id={`delivery-${index}-mode`} className="item-name date_info">
+                        <img src='/images/courseMode.svg' alt="Course Mode Icon" />
+                        <span className='style_dates'>{item.mode}</span>
+                      </span>
+                    </span>
+                  )}
+                </label>
+              </div>
+            </div>
+          ))}
+        </div>
+        
+        <div className="enrollcourse">
+          <button
+            className={`enroll-course-btn ${activeIndex !== null ? "active" : "before_date_select"}`}
+            disabled={activeIndex === null}
+            onClick={() => {
+              if (activeIndex !== null && selectedBatchId) {
+                const selectedDate = pageDate.dates[activeIndex];
+                const enrollLink = selectedDate.enrollLink || getBatchEnrollLink(selectedBatchId);
+                
+                if (enrollLink) {
+                  window.location.href = `${enrollLink}?date=${encodeURIComponent(selectedDate.date)}&mode=${encodeURIComponent(selectedDate.mode)}`;
+                }
+              }
+            }}
+          >
+            Enroll Course
+            <span className="enrollimg">
+              <img src="/images/enroll_btn_icon.svg" alt="Enroll Icon" />
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+)}
+
     </div>
   </div>
 </section>
@@ -820,7 +903,7 @@ onClick={() => handleClick("offerings")}
       </div>
       
       <div className="carousel-container">
-        <Swiper
+        {/* <Swiper
           effect={'coverflow'}
           grabCursor={true}
           centeredSlides={true}
@@ -865,7 +948,48 @@ onClick={() => handleClick("offerings")}
               </div>
             </SwiperSlide>
           ))}
-        </Swiper>
+        </Swiper> */}
+
+<Swiper
+        effect={'coverflow'}
+        grabCursor={true}
+        centeredSlides={true}
+        loop={true}
+        slidesPerView={'auto'}
+        coverflowEffect={{
+          rotate: 0,
+          stretch: 0,
+          depth: 100,
+          modifier: 2.5,
+          slideShadows: false,
+        }}
+        pagination={{
+          el: '.swiper-pagination',
+          clickable: true,
+          dynamicBullets: true
+        }}
+        navigation={{
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        }}
+        modules={[EffectCoverflow, Pagination, Navigation]}
+        className="swiper-container"
+        onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
+      >
+        {offeringsData.map((offering, index) => (
+          <SwiperSlide key={offering.id}>
+            <div className={`slide-wrapper ${activeIndex === index ? 'active' : 'inactive'}`}>
+              <div className="image-container">
+                <img src={offering.image} alt={`Yoga offering ${index + 1}`} />
+              </div>
+              <div className={`slide-content ${activeIndex === index ? 'visible' : 'hidden'}`}>
+                <h2>Special Interaction with <span className="slide-title">Dr. Hansaji Yogendra</span></h2>
+                <p>{offering.description}</p>
+              </div>
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
         
         <div className="slider-controler">
         <div className="swiper-button-prev slider-arrow">
